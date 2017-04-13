@@ -17,7 +17,7 @@ ms.lasthandoff: 03/28/2017
 
 ---
 
-# <a name="whats-new-in-c"></a>C 中的新增功能# #
+# <a name="whats-new-in-c"></a>C# 中的新增功能 #
 
 
 * [C# 7](csharp-7.md)：
