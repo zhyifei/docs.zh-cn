@@ -19,7 +19,7 @@ ms.lasthandoff: 01/18/2017
 
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
-.NET 由多个主要组件组成。  它具有一个名为 .NET 标准库的标准库，该标准库是一个可随处运行的大型 API 集。  该标准库由三个 .NET 运行时实现，即 NET Framework、.NET Core 和 Mono for Xamarin。  .NET 语言还在任何 .NET 运行时上运行。  此外，还可以通过每个平台上的一些工具生成项目。  无论选择何种运行时，这些工具都相同。
+.NET 由多个主要组件组成。  它具有一个名为 .NET 标准库的标准库，该标准库是一个可随处运行的大型 API 集。  该标准库由三个 .NET 运行时实现，即 .NET Framework、.NET Core 和 Mono for Xamarin。  .NET 语言还在任何 .NET 运行时上运行。  此外，还可以通过每个平台上的一些工具生成项目。  无论选择何种运行时，这些工具都相同。
 
 此处是每个先前提及的 .NET 组件以及其组合方式的图示概述。
 
