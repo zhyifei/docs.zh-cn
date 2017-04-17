@@ -282,7 +282,7 @@ caps.handback.revision: 24
   
 <a name="Events"></a>   
 ### 事件  
- 事件定义可以响应的事情，并定义订阅、取消订阅及引发事件的方法。  事件通常用于通知其他类型的状态改变。  有关详细信息，请参阅[事件](../../../docs/standard/events/index.md)。  
+ 事件定义可以响应的事情，并定义订阅、取消订阅及引发事件的方法。  事件通常用于通知其他类型的状态改变。  有关详细信息，请参阅[事件](../../../ml/index.xml)。  
   
 <a name="NestedTypes"></a>   
 ### 嵌套类型  
@@ -323,5 +323,5 @@ caps.handback.revision: 24
   
 ## 请参阅  
  [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=217856)   
- [公共语言运行时](../../../docs/standard/clr.md)   
+ [公共语言运行时](../../../ocs/standard/clr.md)   
  [.NET Framework 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

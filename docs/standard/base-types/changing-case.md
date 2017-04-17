@@ -49,7 +49,7 @@ caps.handback.revision: 15
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 默认情况下，上述示例区分区域性；它应用当前区域性的大小写约定。  若要执行不区分区域性的大小写更改或应用特定区域性的大小写约定，请使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法重载并提供 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 对象（表示 *culture* 参数的指定区域性）。  有关演示如何使用 <xref:System.String.ToUpper%2A> 方法执行不区分区域性的大小写更改的示例，请参阅[执行不区分区域性的大小写更改](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 默认情况下，上述示例区分区域性；它应用当前区域性的大小写约定。  若要执行不区分区域性的大小写更改或应用特定区域性的大小写约定，请使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法重载并提供 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 对象（表示 *culture* 参数的指定区域性）。  有关演示如何使用 <xref:System.String.ToUpper%2A> 方法执行不区分区域性的大小写更改的示例，请参阅[执行不区分区域性的大小写更改](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## ToLower  
  <xref:System.String.ToLower%2A?displayProperty=fullName> 方法与上述方法类似，但改为将字符串中的所有字符均转换为小写。  以下示例将字符串“Hello World\!”转换为小写。  
@@ -57,7 +57,7 @@ caps.handback.revision: 15
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 默认情况下，上述示例区分区域性；它应用当前区域性的大小写约定。  若要执行不区分区域性的大小写更改或应用特定区域性的大小写约定，请使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法重载并提供 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 对象（表示 *culture* 参数的指定区域性）。  有关演示如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法执行不区分区域性的大小写更改的示例，请参阅[执行不区分区域性的大小写更改](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 默认情况下，上述示例区分区域性；它应用当前区域性的大小写约定。  若要执行不区分区域性的大小写更改或应用特定区域性的大小写约定，请使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法重载并提供 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 对象（表示 *culture* 参数的指定区域性）。  有关演示如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法执行不区分区域性的大小写更改的示例，请参阅[执行不区分区域性的大小写更改](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 将每个单词的第一个字符转换为大写并将其余字符转换为小写。  但是，全部大写的单词被假定为缩写词且不会转换。  
@@ -73,4 +73,4 @@ caps.handback.revision: 15
   
 ## 请参阅  
  [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)   
- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [执行不区分区域性的字符串操作](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

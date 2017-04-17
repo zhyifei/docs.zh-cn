@@ -102,5 +102,5 @@ caps.handback.revision: 12
   
 ## 请参阅  
  [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../docs/standard/datetime/choosing-between-datetime.md)   
+ [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../ocs/standard/datetime/choosing-between-datetime.md)   
  [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

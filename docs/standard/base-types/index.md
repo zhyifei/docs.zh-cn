@@ -40,5 +40,5 @@ caps.handback.revision: 14
  [常规类型系统](../../../docs/standard/base-types/common-type-system.md)  
  介绍 .NET Framework 使用的类型。  
   
- [日期、时间和时区](../../../docs/standard/datetime/index.md)  
+ [日期、时间和时区](../../../ml/index.xml)  
  描述如何在时区识别应用程序中处理时区和时区转换。
