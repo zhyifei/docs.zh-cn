@@ -51,4 +51,4 @@ caps.handback.revision: 15
  对于身为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 派生类的元素，可以使用等效 <xref:System.Windows.FrameworkElement.Language%2A> 依赖项属性取代 `xml:lang` 属性。 默认情况下，如果未通过属性或通过处理 `xml:lang` 属性来另外设置 <xref:System.Windows.FrameworkElement.Language%2A> 属性，则它使用“en\-US”。  
   
 ## 请参阅  
- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

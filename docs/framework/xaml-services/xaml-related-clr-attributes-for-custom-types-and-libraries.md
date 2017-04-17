@@ -134,7 +134,7 @@ caps.handback.revision: 8
   
  可将 <xref:System.ComponentModel.TypeConverterAttribute> 特性应用于您的类型，从而引用您的类型转换器实现。  可以对类、结构或接口定义 XAML 的类型转换器。  不需要为枚举提供类型转换，该转换是自然启用的。  
   
- 类型转换器应能够将用于标记中的特性或初始化文本的字符串转换为所需的目标类型。  有关更多信息，请参见 [TypeConverters 和 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ 类型转换器应能够将用于标记中的特性或初始化文本的字符串转换为所需的目标类型。  有关更多信息，请参见 [TypeConverters 和 XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
   
  可以针对特定属性确立 XAML 的类型转换器行为，而不是应用于某个类型的所有值。  在这种情况下，将 <xref:System.ComponentModel.TypeConverterAttribute> 应用于属性定义（外部定义，而不是特定的 `get` 和 `set` 定义）。  
   

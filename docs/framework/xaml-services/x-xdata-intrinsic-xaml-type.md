@@ -52,11 +52,11 @@ caps.handback.revision: 17
 ## WPF 用法说明  
  `x:XData` 对象主要用作 <xref:System.Windows.Data.XmlDataProvider> 的子对象，或者用作 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 属性的子对象（在 XAML 中，通常用属性元素语法表示）。  
   
- 通常，数据应将数据岛内的基 XML 命名空间重新定义为新的默认 XML 命名空间（设置为空字符串）。  对于简单数据岛，这是最容易的方法，因为用于引用和绑定到数据的 <xref:System.Windows.Data.Binding.XPath%2A> 表达式可以避免包含前缀。  较为复杂的数据岛可能选择为数据定义多个前缀，并为根级别的 XML 命名空间使用一个特定的前缀。  在此情况下，所有 <xref:System.Windows.Data.Binding.XPath%2A> 表达式引用都应包含相应的命名空间映射前缀。  有关更多信息，请参见[数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 通常，数据应将数据岛内的基 XML 命名空间重新定义为新的默认 XML 命名空间（设置为空字符串）。  对于简单数据岛，这是最容易的方法，因为用于引用和绑定到数据的 <xref:System.Windows.Data.Binding.XPath%2A> 表达式可以避免包含前缀。  较为复杂的数据岛可能选择为数据定义多个前缀，并为根级别的 XML 命名空间使用一个特定的前缀。  在此情况下，所有 <xref:System.Windows.Data.Binding.XPath%2A> 表达式引用都应包含相应的命名空间映射前缀。  有关更多信息，请参见[数据绑定概述](../../../ocs/framework/wpf/data/data-binding-overview.md)。  
   
  通常，`x:XData` 可用作 <xref:System.Xml.Serialization.IXmlSerializable> 类型的任何属性的内容。  但是，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 是唯一突出的实现。  
   
 ## 请参阅  
  <xref:System.Windows.Data.XmlDataProvider>   
- [数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)   
- [绑定标记扩展](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+ [数据绑定概述](../../../ocs/framework/wpf/data/data-binding-overview.md)   
+ [绑定标记扩展](../../../ocs/framework/wpf/advanced/binding-markup-extension.md)

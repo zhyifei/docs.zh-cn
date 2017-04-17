@@ -58,8 +58,8 @@ caps.handback.revision: 14
  默认情况下，根元素的分部类是公共的；但可以使用 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)使其成为非公共类。  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)也影响根元素类的实例的访问级别。  可以在根元素上同时放置 `x:Name` 和 `x:FieldModifier`，但这仅会使公共字段成为根元素的副本，真正的根元素类访问级别仍受 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)控制。  
   
 ## 请参阅  
- [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [WPF 中的代码隐藏和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [XAML 及 WPF 的自定义类](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [WPF 中的代码隐藏和 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [生成 WPF 应用程序 \(WPF\)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
+ [生成 WPF 应用程序 \(WPF\)](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

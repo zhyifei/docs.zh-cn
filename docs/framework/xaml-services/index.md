@@ -40,7 +40,7 @@ caps.handback.revision: 13
   
 -   使用 `Lookup` 或 `Invoker` 技术影响 XAML 类型系统以及计算类型后备的方式。  
   
- 如果您正在查找有关 XAML 作为一种语言的介绍性材料，则可尝试参见 [XAML 概述 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  该主题为不熟悉 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 也不会使用 XAML 标记和 XAML 语言功能的用户介绍 XAML。  另一个有用的文档为 [XAML 语言规范](http://go.microsoft.com/fwlink/?LinkId=114525)中的介绍性材料。  
+ 如果您正在查找有关 XAML 作为一种语言的介绍性材料，则可尝试参见 [XAML 概述 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)。  该主题为不熟悉 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 也不会使用 XAML 标记和 XAML 语言功能的用户介绍 XAML。  另一个有用的文档为 [XAML 语言规范](http://go.microsoft.com/fwlink/?LinkId=114525)中的介绍性材料。  
   
 ## .NET 结构中的 .NET Framework XAML 服务和 System.Xaml  
  在以前版本的 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] 中，对 XAML 语言功能的支持是由在 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]（[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 和 [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]）上生成的框架实现的，因此其行为以及使用的 API 因您所使用的具体框架而有所不同。  这包括 XAML 分析器及其对象图创建机制、XAML 语言内部函数、序列化支持等。  

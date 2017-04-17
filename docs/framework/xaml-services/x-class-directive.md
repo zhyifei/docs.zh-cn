@@ -52,14 +52,14 @@ caps.handback.revision: 26
   
  `x:Class` 指令的值必须是一个指定某个类的完全限定名称的字符串，但不含任何程序集信息（等效于 <xref:System.Type.FullName%2A?displayProperty=fullName>）。  对于简单的应用程序，如果命名空间信息与代码隐藏的构建方式相同（代码定义从类级别开始），就可以省略 CLR 命名空间信息。  
   
- 页面或应用程序定义的代码隐藏文件必须在代码文件内，而该代码文件应作为产生已编译应用程序和涉及标记编译的项目的一部分包括在该项目中。  必须遵循 CLR 类的命名规则。  有关更多信息，请参见 [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)。  默认情况下，代码隐藏类必须是 `public`；但可以通过使用 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)在其他访问级别定义它。  
+ 页面或应用程序定义的代码隐藏文件必须在代码文件内，而该代码文件应作为产生已编译应用程序和涉及标记编译的项目的一部分包括在该项目中。  必须遵循 CLR 类的命名规则。  有关更多信息，请参见 [Framework 设计准则](../../../ml/index.xml)。  默认情况下，代码隐藏类必须是 `public`；但可以通过使用 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)在其他访问级别定义它。  
   
  `x:Class` 特性的此确切解释仅适用于基于 CLR 的 XAML 实现，特别是 .NET Framework XAML 服务。  不基于 CLR 和不使用 .NET Framework XAML 服务的其他 XAML 实现可能为连接 XAML 标记和备份运行时代码使用不同的解析公式。  有关 `x:Class` 的更多常规解释的更多信息，请参见 [\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\(\[MS\-XAML\]\)。  
   
  在某种级别的结构中，`x:Class` 的性含义未在 .NET Framework XAML 服务中定义。  这是因为 .NET Framework XAML 服务不指定通过其连接 XAML 标记和备份代码的编程模型。  `x:Class` 指令的其他用法可以由使用编程模型或应用程序模型来定义如何连接 XAML 标记和基于 CLR 代码隐藏的特定框架实现。  每个框架可以都具有其自己的生成操作，该生成操作启用一些必须包含在生产环境中的行为或特定组件。  在框架中，生成操作也可由于用于代码隐藏的特定 CLR 语言的不同而不同。  
   
 ## x: Class 位于 WPF 编程模型中  
- 在 WPF 应用程序和 WPF 应用程序模型中，`x:Class` 可以声明为充当 XAML 文件的根并且正在编译（XAML 通过 `Page` 生成操作包括在 WPF 应用程序项目中）的任何元素的特性，也可以声明为已编译 WPF 应用程序的应用程序定义中的 <xref:System.Windows.Application> 根的特性。  在页面根元素或应用程序根元素之外的任何元素上，以及在未编译的 WPF XAML 文件的任何环境下声明  `x:Class` 都会在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 和 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]下的 WPF XAML 编译器引起编译时错误。  关于在 WPF 中处理的 `x:Class` 的其他方面的信息，请参见 [WPF 中的代码隐藏和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
+ 在 WPF 应用程序和 WPF 应用程序模型中，`x:Class` 可以声明为充当 XAML 文件的根并且正在编译（XAML 通过 `Page` 生成操作包括在 WPF 应用程序项目中）的任何元素的特性，也可以声明为已编译 WPF 应用程序的应用程序定义中的 <xref:System.Windows.Application> 根的特性。  在页面根元素或应用程序根元素之外的任何元素上，以及在未编译的 WPF XAML 文件的任何环境下声明  `x:Class` 都会在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 和 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]下的 WPF XAML 编译器引起编译时错误。  关于在 WPF 中处理的 `x:Class` 的其他方面的信息，请参见 [WPF 中的代码隐藏和 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
   
 ## Windows Workflow Foundation 的 x:Class  
  对于窗口基础工作流，`x:Class` 命名了完全在 XAML 中组成的自定义活动的类或通过代码隐藏为活动设计器命名 XAML 页面的部分类。  
@@ -69,6 +69,6 @@ caps.handback.revision: 26
   
 ## 请参阅  
  [x:Subclass Directive](../../../docs/framework/xaml-services/x-subclass-directive.md)   
- [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [XAML 及 WPF 的自定义类](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

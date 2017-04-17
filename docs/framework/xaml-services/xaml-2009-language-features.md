@@ -26,7 +26,7 @@ XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语�
 ## 在 WPF 和 Visual Studio 中支持 XAML 2009  
  在 WPF 中，可以使用 XAML 2009 功能，但仅针对未进行 WPF 标记编译的 XAML。 标记编译的 XAML 以及 BAML 形式的 XAML 当前不支持 XAML 2009 语言关键字和功能。  
   
- 请注意，在 WPF 中加载松散的 XAML 的现有技术也有可能受到 CLR 类型的安全和访问限制，该类型系统比标记编译的 XAML 更加严格。 有关更多信息，请参见[安全性 \(WPF\)](../../../docs/framework/wpf/security-wpf.md) 或 [WPF 安全策略 — 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)。  
+ 请注意，在 WPF 中加载松散的 XAML 的现有技术也有可能受到 CLR 类型的安全和访问限制，该类型系统比标记编译的 XAML 更加严格。 有关更多信息，请参见[安全性 \(WPF\)](../../../ocs/framework/wpf/security-wpf.md) 或 [WPF 安全策略 — 平台安全性](../../../ocs/framework/wpf/wpf-security-strategy-platform-security.md)。  
   
  XAML 2009 还引入了一些附加功能，可修改曾经的 XAML 2006 构造或修改基本标记窗体。  
   
@@ -40,4 +40,4 @@ XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语�
  对于由事件支持的特性，XAML 2006 会假定涉及到了标记编译并将事件提交给标记编译。 XAML 2009 支持类似标记扩展的标记窗体，其不同于事件布线，直至运行时解析\/加载 XAML。 但是，WPF 应用程序和 WPF UI 的 XAML 方案通常不使用此功能。 WPF 和其 XAML 2006 实现使用在 <xref:System.Windows.UIElement> 级别定义的路由事件的事件处理程序布线组合及其标记编译器步骤，用于其众多事件特性处理。 标记编译器还预处理生成操作声明用于标记编译器的 XAML 中找到任何事件属性。  
   
 ## 请参阅  
- [XAML 概述 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML 概述 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

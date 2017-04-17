@@ -40,7 +40,7 @@ caps.handback.revision: 16
   
  修改通过资源 API（如 <xref:System.Windows.FrameworkElement.FindResource%2A>）返回的对象或者直接在 <xref:System.Windows.ResourceDictionary> 内部修改对象会更改原始资源。  如果对该资源的引用是动态资源引用，则该资源的使用者将获得更改后的资源。  
   
- 如果对资源的引用是静态资源引用，则在 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 处理时间之后的资源更改是不相关的。  关于静态资源引用与动态资源引用对比的更多信息，请参见 [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ 如果对资源的引用是静态资源引用，则在 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 处理时间之后的资源更改是不相关的。  关于静态资源引用与动态资源引用对比的更多信息，请参见 [XAML 资源](../../../ocs/framework/wpf/advanced/xaml-resources.md)。  
   
  显式指定 `x:Shared="true"` 很少做，因为这已经是默认行为。  在 WPF 对象模型中，对于 `x:Shared`，没有直接的代码等效项；它只能在 XAML 用法中指定，且必须由默认 WPF 行为处理，或在加载路径上的中间 XAML 节点流中处理（如果使用 .NET Framework XAML 服务及其 XAML 读取器处理）。  
   
@@ -58,5 +58,5 @@ caps.handback.revision: 16
   
 ## 请参阅  
  <xref:System.Windows.ResourceDictionary>   
- [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [基元素](../../../docs/framework/wpf/advanced/base-elements.md)
+ [XAML 资源](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
+ [基元素](../../../ocs/framework/wpf/advanced/base-elements.md)

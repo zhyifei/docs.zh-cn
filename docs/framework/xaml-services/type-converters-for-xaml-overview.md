@@ -67,7 +67,7 @@ caps.handback.revision: 14
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是在服务查询 <xref:System.ComponentModel.TypeConverter> 实现的功能时使用的支持方法。 必须实现这些方法以便为转换器的等效转换方法支持的特定于类型的情况返回 `true`。 对于 XAML 用途，这通常意味着 <xref:System.String> 类型。  
   
 ### XAML 的区域性信息和类型转换器  
- 每个 <xref:System.ComponentModel.TypeConverter> 实现都可以唯一地解释对于转换是有效字符串的内容，它还可以使用或忽略作为参数传递的类型说明。 区域性和 XAML 类型转换的一个重要注意事项如下所示：尽管 XAML 支持使用可本地化的字符串作为特性值，但是不能使用这些可本地化的字符串作为具有特定区域性要求的类型转换器输入。 存在此限制是因为 XAML 特性值的类型转换器涉及使用 `en-US` 区域性的必定固定的语言 XAML 处理行为。 有关此限制的设计原因的详细信息，请参阅 XAML 语言规范 \([\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\) 或 [WPF 全球化和本地化概述](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)。  
+ 每个 <xref:System.ComponentModel.TypeConverter> 实现都可以唯一地解释对于转换是有效字符串的内容，它还可以使用或忽略作为参数传递的类型说明。 区域性和 XAML 类型转换的一个重要注意事项如下所示：尽管 XAML 支持使用可本地化的字符串作为特性值，但是不能使用这些可本地化的字符串作为具有特定区域性要求的类型转换器输入。 存在此限制是因为 XAML 特性值的类型转换器涉及使用 `en-US` 区域性的必定固定的语言 XAML 处理行为。 有关此限制的设计原因的详细信息，请参阅 XAML 语言规范 \([\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\) 或 [WPF 全球化和本地化概述](../../../ocs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)。  
   
  区域性可能会产生问题的一个示例是，某些区域性使用逗号而不是句点作为字符串形式的数字的小数点分隔符。 这种用法与许多现有类型转换器所具有的行为（即使用逗号作为分隔符）冲突。 在周围的 XAML 中通过 `xml:lang` 传递区域性无法解决此问题。  
   
@@ -117,4 +117,4 @@ caps.handback.revision: 14
 ## 请参阅  
  <xref:System.ComponentModel.TypeConverterAttribute>   
  [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)   
- [XAML 概述 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML 概述 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

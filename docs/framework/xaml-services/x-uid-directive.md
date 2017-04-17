@@ -46,9 +46,9 @@ caps.handback.revision: 12
  通过对定义类型应用特性 <xref:System.Windows.Markup.UidPropertyAttribute>，Frameworks 可以将其对象模型中的特定属性指定为 `x:Uid` 的别名。  如果框架指定了一个特定属性，则在同一对象上指定 `x:Uid` 和具有别名的成员是非法的。  如果指定 `x:Uid` 和别名，则该用例的 .NET 框架 XAML 服务 API 通常会引发 <xref:System.Xaml.XamlDuplicateMemberException>。  
   
 ## WPF 用法说明  
- 有关 WPF 本地化过程和 XAML 的 BAML 窗体中 `x:Uid` 的角色的更多信息，请参见 [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ 有关 WPF 本地化过程和 XAML 的 BAML 窗体中 `x:Uid` 的角色的更多信息，请参见 [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## 请参阅  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
  <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

@@ -46,7 +46,7 @@ caps.handback.revision: 11
 ## 枚举  
  枚举具有 XAML 本机类型转换行为。  针对基础枚举类型解析 XAML 中指定的枚举常量名称，并将枚举值返回给 XAML 对象编写器。  
   
- XAML 通过应用 <xref:System.FlagsAttribute> 支持枚举的标志样式用法。  有关更多信息，请参见 [XAML 语法详述](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  （[XAML 语法详述](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) 是为 WPF 用户而编写，但该主题中的大部分信息与 XAML 相关，并不针对某个特定的实现框架。）  
+ XAML 通过应用 <xref:System.FlagsAttribute> 支持枚举的标志样式用法。  有关更多信息，请参见 [XAML 语法详述](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  （[XAML 语法详述](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md) 是为 WPF 用户而编写，但该主题中的大部分信息与 XAML 相关，并不针对某个特定的实现框架。）  
   
 ## 成员定义  
  类型可定义用于 XAML 用法的成员。  类型可以定义 XAML 可用的成员，虽然特定类型不是 XAML 可用的。  这是由于存在 CLR 继承。  只要继承成员的某个类型支持 XAML 用法作为一个类型，并且该成员支持将 XAML 用法用于基础类型或具有可用的本机 XAML 语法，该成员就是 XAML 可用的。  

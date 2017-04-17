@@ -42,7 +42,7 @@ caps.handback.revision: 27
 ## 备注  
  一旦将 `x:Name` 应用于框架的支持编程模型，该名称就会与由构造函数返回的用于保存对象引用或实例的变量等效。  
   
- `x:Name` 指令用法的值必须在 XAML 名称范围内唯一。  默认情况下，在 .NET Framework XAML Services API 使用主 XAML 名称范围时，会在单个 XAML 生产的 XAML 根元素中定义它，并包括该 XAML 生产中包含的元素。  框架可定义单个 XAML 生产中可能发生的其他离散 XAML 名称范围以解决特定方案。  例如，在 WPF 中，由任意模板定义和创建的新 XAML 名称范围也在该 XAML 生产上定义。  有关 XAML 名称范围（针对 WPF 编写，但与 XAML 名称范围概念相关）的更多信息，请参见 [WPF XAML 名称范围](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ `x:Name` 指令用法的值必须在 XAML 名称范围内唯一。  默认情况下，在 .NET Framework XAML Services API 使用主 XAML 名称范围时，会在单个 XAML 生产的 XAML 根元素中定义它，并包括该 XAML 生产中包含的元素。  框架可定义单个 XAML 生产中可能发生的其他离散 XAML 名称范围以解决特定方案。  例如，在 WPF 中，由任意模板定义和创建的新 XAML 名称范围也在该 XAML 生产上定义。  有关 XAML 名称范围（针对 WPF 编写，但与 XAML 名称范围概念相关）的更多信息，请参见 [WPF XAML 名称范围](../../../ocs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
   
  通常情况下 `x:Name` 不应该应用于也使用 `x:Key` 的情况。  特定现有框架的 XAML 实现引入了 `x:Key` 和 `x:Name` 之间的替换概念，但这不是建议的做法。  处理名称\/键的信息时，.NET Framework XAML 服务不支持此类替换概念，如 <xref:System.Windows.Markup.INameScope> 或 <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>。  
   
@@ -55,9 +55,9 @@ caps.handback.revision: 27
 ## WPF 用法说明  
  在使用 XAML、分部类和代码隐藏的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 应用程序项目的标准生成配置下，指定的 `x:Name` 成为标记编译生成任务处理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 时在基础代码中创建的字段的名称，并且该字段保留对对象的引用。默认情况下，创建的字段为内部字段。  您可以通过指定 [x:FieldModifier 特性](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)来更改字段访问。  在 WPF 和 Silverlight 中，序列为标记编译定义和命名特定类中字段的顺序，但初始值为空。  然后，生成名为 `InitializeComponent` 的方法将从类构造函数进行调用。  `InitializeComponent` 包括使用每个 `x:Name` 值的 `FindName` 调用，这些值存在于 XAML 定义为输入字符串的部分局部类中。  然后将返回值分配给类似名称的字段引用，用 XAML 分析中创建的对象来填补字段。  执行 `InitializeComponent` 使通过 `x:Name` \/字段名称直接而非必须显式地调用`FindName` 在任何需要引用 XAML 定义对象的时候可以引用运行时对象图。  
   
- 对于使用  [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] 目标并包括带 `Page` XAML 文件生成操作的 WPF 文件的应用程序，会在编译期间创建一个单独的引用属性，该属性将  `WithEvents` 关键字添加到所有具有 `x:Name` 的元素，以支持事件处理程序委托的 `Handles` 语法。  该属性始终是公共的。  有关更多信息，请参见 [Visual Basic 和 WPF 事件处理](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+ 对于使用  [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] 目标并包括带 `Page` XAML 文件生成操作的 WPF 文件的应用程序，会在编译期间创建一个单独的引用属性，该属性将  `WithEvents` 关键字添加到所有具有 `x:Name` 的元素，以支持事件处理程序委托的 `Handles` 语法。  该属性始终是公共的。  有关更多信息，请参见 [Visual Basic 和 WPF 事件处理](../../../ocs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
   
- `x:Name` 由 WPF XAML 处理器用于在加载时将名称注册到 XAML 名称范围，即使在生成操作为对页面进行标记编译的情况下（例如，资源字典的宽松 XAML）也是如此。  此行为的一个原因是因为 <xref:System.Windows.Data.Binding.ElementName%2A> 绑定可能需要 `x:Name`。  有关详细信息，请参见[数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ `x:Name` 由 WPF XAML 处理器用于在加载时将名称注册到 XAML 名称范围，即使在生成操作为对页面进行标记编译的情况下（例如，资源字典的宽松 XAML）也是如此。  此行为的一个原因是因为 <xref:System.Windows.Data.Binding.ElementName%2A> 绑定可能需要 `x:Name`。  有关详细信息，请参见[数据绑定概述](../../../ocs/framework/wpf/data/data-binding-overview.md)。  
   
  如前所述，`x:Name`（或 `Name`）不应用于使用 `x:Key` 的情况。  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> 具有特别行为，即将其自身定义为 XAML 名称范围，但对 <xref:System.Windows.Markup.INameScope> API 返回“未实现”或 null 值来作为一种强制执行该行为的方法。  如果 WPF XAML 分析程序遇到 XAML 定义的 <xref:System.Windows.ResourceDictionary> 中的 `Name` 或 `x:Name`，则不会将名称添加到任何 XAML 命名空间中。  尝试从任何 XAML 名称范围和 `FindName` 方法中查找该名称将不会返回有效结果。  
   
@@ -76,4 +76,4 @@ caps.handback.revision: 27
 ## 请参阅  
  <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=fullName>   
  <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=fullName>   
- [WPF 中的树](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+ [WPF 中的树](../../../ocs/framework/wpf/advanced/trees-in-wpf.md)

@@ -79,9 +79,9 @@ caps.handback.revision: 25
   
 -   您从自定义程序集引用类型。  
   
--   您所引用的类型存在于 WPF 程序集中，但该类型所在的 CLR 命名空间未映射为 WPF 默认 XAML 命名空间的一部分。  CLR 命名空间到用于 WPF 的默认 XAML 命名空间的映射可以由多种 WPF 程序集中的定义来执行（有关此概念的详细信息，请参见 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)）。  如果 CLR 命名空间大部分由通常不用于 XAML 的类定义（如 <xref:System.Windows.Threading>）组成，则未映射的 CLR 命名空间可能存在。  
+-   您所引用的类型存在于 WPF 程序集中，但该类型所在的 CLR 命名空间未映射为 WPF 默认 XAML 命名空间的一部分。  CLR 命名空间到用于 WPF 的默认 XAML 命名空间的映射可以由多种 WPF 程序集中的定义来执行（有关此概念的详细信息，请参见 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)）。  如果 CLR 命名空间大部分由通常不用于 XAML 的类定义（如 <xref:System.Windows.Threading>）组成，则未映射的 CLR 命名空间可能存在。  
   
- 有关如何使用前缀和 WPF 的 XAML 命名空间的更多信息，请参见 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 有关如何使用前缀和 WPF 的 XAML 命名空间的更多信息，请参见 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ## 请参阅  
  [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   

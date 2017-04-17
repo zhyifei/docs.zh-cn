@@ -74,8 +74,8 @@ caps.handback.revision: 20
   
  `</x:Array>`  
   
- 对于用作数组元素的自定义类型，类还必须支持在 XAML 中作为对象元素实例化的要求。  有关更多信息，请参见 [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
+ 对于用作数组元素的自定义类型，类还必须支持在 XAML 中作为对象元素实例化的要求。  有关更多信息，请参见 [XAML 及 WPF 的自定义类](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   
 ## 请参阅  
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
+ [标记扩展和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

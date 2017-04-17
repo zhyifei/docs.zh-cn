@@ -68,7 +68,7 @@ caps.handback.revision: 27
 ## WPF 用法说明  
   
 ### 默认 XAML 命名空间和类型映射  
- 用于 WPF 编程的默认 XAML 命名空间包含大多数典型 XAML 方案需要的 XAML 类型，因此在引用 XAML 类型值时，您通常可以避免前缀。  在以下情况下可能需要映射前缀：所引用的类型来自自定义程序集，或者类型存在于 WPF 程序集内，但位于 CLR 命名空间中，而该命名空间未映射为默认 XAML 命名空间。  有关前缀、XML 命名空间和映射 CLR 命名空间的更多信息，请参见 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 用于 WPF 编程的默认 XAML 命名空间包含大多数典型 XAML 方案需要的 XAML 类型，因此在引用 XAML 类型值时，您通常可以避免前缀。  在以下情况下可能需要映射前缀：所引用的类型来自自定义程序集，或者类型存在于 WPF 程序集内，但位于 CLR 命名空间中，而该命名空间未映射为默认 XAML 命名空间。  有关前缀、XML 命名空间和映射 CLR 命名空间的更多信息，请参见 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ### 支持作为字符串的类型名的类型属性  
  WPF 支持技术使我们可以指定类型 <xref:System.Type> 的某些属性的值，而无需 `x:Type` 标记扩展用法。  相反，您可以将值指定为命名类型的字符串。  示例包括 <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> 和 <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>。  对此行为的支持不是通过类型转换器或标记扩展提供的。  相反，这是通过 <xref:System.Windows.FrameworkElementFactory> 实现的延迟行为。  
@@ -88,6 +88,6 @@ caps.handback.revision: 27
   
 ## 请参阅  
  <xref:System.Windows.Style>   
- [样式设置和模板化](../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [XAML 概述 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [样式设置和模板化](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
+ [XAML 概述 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [标记扩展和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

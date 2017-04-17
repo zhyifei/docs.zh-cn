@@ -82,6 +82,6 @@ XAML 的语言规则规定有意义的空格必须由 [!INCLUDE[TLA2#tla_xaml](.
  此外，隐含流文档模型中换行符的某些内联元素应有意不引入额外空格，即使是在空格的有意义集合中也是如此。 例如，<xref:System.Windows.Documents.LineBreak> 元素具有与 [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)] 中 \<BR\/\> 标记相同的目的，为了标记的可读性，通常通过编写的换行符将 <xref:System.Windows.Documents.LineBreak> 与任何后续文本分开。 不应标准化该换行符以使它成为后续行中的前导空格。 若要启用此行为，则 <xref:System.Windows.Documents.LineBreak> 元素的类定义需应用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，随后由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 处理器进行解释，意味着 <xref:System.Windows.Documents.LineBreak> 周围的空格始终被裁剪。  
   
 ## 请参阅  
- [XAML 概述 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [XAML 概述 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
  [XML Character Entities and XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)   
  [xml:space Handling in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
