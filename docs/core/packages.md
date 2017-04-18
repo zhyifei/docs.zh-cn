@@ -145,7 +145,7 @@ ms.lasthandoff: 03/07/2017
 
 .NET Core 应用程序 (TFM: `netcoreapp`) 框架表示 .NET Core 发行版及其提供的控制台应用程序模型附带的包和相关 API。 .NET Core 必须使用此框架，因为必须要使用其中的控制台应用程序模型。同时只运行于 .Net Core 平台的库也应使用此模型。 使用此框架后，所有应用和库将只能够在 .Net Core 上运行。 
 
-`Microsoft.NETCore.App` 元包的目标框架是 `netcoreapp`。 它提供了约&60; 个库的访问权限，其中约&40; 个由 `NETStandard.Library` 包提供，还有另外&20; 个库。 可以引用目标框架为 `netcoreapp` 或与框架（如 `netstandard`）兼容的库获得对其他 API 的访问权限。 
+`Microsoft.NETCore.App` 元包的目标框架是 `netcoreapp`。 它提供了约 60 个库的访问权限，其中约 40 个由 `NETStandard.Library` 包提供，还有另外 20 个库。 可以引用目标框架为 `netcoreapp` 或与框架（如 `netstandard`）兼容的库获得对其他 API 的访问权限。 
 
 由 `Microsoft.NETCore.App` 提供的大部分其他库还可以使用 `netstandard` 作为目标，如果其他 `netstandard` 库满足这些框架的依赖项的话。 这意味着，`netstandard` 库也可以引用这些包作为依赖项。 
 
