@@ -48,7 +48,7 @@ caps.handback.revision: 19
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ 的更多信息，请参见[Message Queuing \(MSMQ\)](http://msdn.microsoft.com/zh-cn/ff917e87-05d5-478f-9430-0f560675ece1)。  
   
 ### NetMsmqBinding  
- [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) [!INCLUDE[indigo2 是]()] [!INCLUDE[indigo2 提供的排队绑定，以便两个]()] 终结点可以使用 MSMQ 进行通信。  因此，该绑定将公开特定于 MSMQ 的属性。  然而，并非所有 MSMQ 功能和属性都在 `NetMsmqBinding` 中公开。  紧凑 `NetMsmqBinding` 设计为具有一组大多数客户都认为足够的最佳功能。  
+ [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) <!-- TODO: review token reference in CAPS [!INCLUDE[indigo2 是]()] [!INCLUDE[indigo2 提供的排队绑定，以便两个]()]  --> 终结点可以使用 MSMQ 进行通信。  因此，该绑定将公开特定于 MSMQ 的属性。  然而，并非所有 MSMQ 功能和属性都在 `NetMsmqBinding` 中公开。  紧凑 `NetMsmqBinding` 设计为具有一组大多数客户都认为足够的最佳功能。  
   
  `NetMsmqBinding` 以绑定上的属性形式阐明了迄今为止所讨论的核心队列概念。  而这些属性又向 MSMQ 传达如何传输和传递消息。  后面几节将讨论属性类别。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]更完整地描述特定属性的概念性主题。  
   
