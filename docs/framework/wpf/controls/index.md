@@ -25,7 +25,11 @@ ms.lasthandoff: 04/08/2017
 # <a name="controls"></a>控件
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 附带许多几乎在所有 Windows 应用程序中都会使用的常见 UI 组件，如              <xref:System.Windows.Controls.Button>、              <xref:System.Windows.Controls.Label>、              <xref:System.Windows.Controls.TextBox>、              <xref:System.Windows.Controls.Menu> 和              <xref:System.Windows.Controls.ListBox>。 以前，这些对象称为控件。 虽然              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK 继续使用术语“控件”泛指任何代表应用程序中可见对象的类，但请务必注意，类不必从              <xref:System.Windows.Controls.Control> 类继承即可具有可见外观。 从              <xref:System.Windows.Controls.Control> 类继承的类包含一个              <xref:System.Windows.Controls.ControlTemplate>，它允许控件的使用方在无需创建新子类的情况下从根本上改变控件的外观。  本主题讨论在              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中使用控件（包括从              <xref:System.Windows.Controls.Control> 类继承的控件以及不从该类继承的控件）的常见方式。  
   
+<<<<<<< HEAD
  
+=======
+   
+>>>>>>> d415995... fix build errors
   
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>创建控件的实例  
