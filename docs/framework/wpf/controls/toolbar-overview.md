@@ -22,7 +22,7 @@ caps.handback.revision: 27
 # ToolBar 概述
 <xref:System.Windows.Controls.ToolBar> 控件是一组通常在功能上相关的命令或控件的容器。  <xref:System.Windows.Controls.ToolBar> 通常包含用于调用命令的按钮。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="ToolBarControl"></a>   
 ## ToolBar 控件  

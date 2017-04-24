@@ -24,7 +24,7 @@ caps.handback.revision: 13
 # 绘制格式化文本
 本主题概述 <xref:System.Windows.Media.FormattedText> 对象的功能。  该对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="technology_overview"></a>   
 ## 技术概述  

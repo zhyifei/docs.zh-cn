@@ -23,7 +23,7 @@ caps.handback.revision: 12
 # TypeConverters 和 XAML
 本主题介绍从字符串进行类型转换这项常规 XAML 语言功能的用途。  在 .NET Framework 中，<xref:System.ComponentModel.TypeConverter> 类是在 XAML 特性用法中可用作属性值的托管自定义类的实现的一部分，具有特定的用途。  如果编写自定义类，并希望该类的实例可用作 XAML 可设置特性值，则可能需要向该类应用 <xref:System.ComponentModel.TypeConverterAttribute> 和\/或编写自定义 <xref:System.ComponentModel.TypeConverter> 类。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 类型转换概念  
   

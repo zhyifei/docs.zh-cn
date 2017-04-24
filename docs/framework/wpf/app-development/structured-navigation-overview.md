@@ -25,7 +25,7 @@ caps.handback.revision: 36
   
  <xref:System.Windows.Controls.Page> 类未实现对结构化导航的支持。  <xref:System.Windows.Navigation.PageFunction%601> 类派生自 <xref:System.Windows.Controls.Page>，并使用结构化导航所需的基本构造来对它进行扩展。  本主题演示如何使用 <xref:System.Windows.Navigation.PageFunction%601> 建立结构化导航。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Structured_Navigation"></a>   
 ## 结构化导航  

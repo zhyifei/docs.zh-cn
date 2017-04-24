@@ -49,7 +49,7 @@ caps.handback.revision: 13
   
  下面的示例演示 `LibraryPatron` 类，该类包含特定类型 `LibraryItem` 的集合。 第二个类定义 `LibraryItem` 类型。 第三个和第四个类（`Book` 和 `Newspaper`）从 `LibraryItem` 类继承。  
   
- [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]
+ <!-- TODO: review snippet reference [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]  -->
  [!code-vb[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#3)]  
   
  下面的代码构造一个使用 `knownTypes` 参数的序列化程序的实例。  

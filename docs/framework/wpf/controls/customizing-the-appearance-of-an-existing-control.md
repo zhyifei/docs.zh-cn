@@ -36,7 +36,7 @@ caps.handback.revision: 11
  ![一个具有红色边框的按钮。](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
 使用自定义控件模板并将鼠标指针置于上的按钮  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 系统必备  

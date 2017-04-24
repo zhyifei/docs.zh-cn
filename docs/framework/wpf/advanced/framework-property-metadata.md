@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # 框架属性元数据
 框架属性元数据选项是针对被视为位于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中的 [WPF 框架级](GTMT)的对象元素的属性报告的。  通常情况下，[WPF 框架级](GTMT)指示要求诸如呈现、数据绑定和属性系统优化之类的功能由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 演示 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可执行文件处理。  这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

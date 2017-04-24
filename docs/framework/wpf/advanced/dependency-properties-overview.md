@@ -27,7 +27,7 @@ caps.handback.revision: 29
 # 依赖项属性概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了一组服务，这些服务可用于扩展[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性的功能。  这些服务通常统称为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统。  由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统支持的属性称为[依赖项属性](GTMT)。本概述介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统以及[依赖项属性](GTMT)的功能。这包括如何在 XAML 和在代码中使用现有[依赖项属性](GTMT)。  本概述还介绍了依赖项属性所特有的方面（如依赖项属性元数据），并说明了如何在自定义类中创建自己的依赖项属性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

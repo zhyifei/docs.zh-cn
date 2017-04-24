@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # 多媒体概述
 使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的多媒体功能，可以将音频和视频集成到应用程序中，从而增强用户体验。本主题将介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的多媒体功能。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="mediaapi"></a>   
 ## 媒体 API  

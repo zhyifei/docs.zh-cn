@@ -21,7 +21,7 @@ caps.handback.revision: 18
 # 基元素概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大部分类都是从 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文档中通常称为基元素类的四个类派生而来。  这些类包括 <xref:System.Windows.UIElement>、<xref:System.Windows.FrameworkElement>、<xref:System.Windows.ContentElement> 和 <xref:System.Windows.FrameworkContentElement>。  <xref:System.Windows.DependencyObject> 也相关，因为它是 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 的公共基类。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="base_apis"></a>   
 ## WPF 类中的基元素 API  

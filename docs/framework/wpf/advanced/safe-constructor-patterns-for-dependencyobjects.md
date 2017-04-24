@@ -23,7 +23,7 @@ caps.handback.revision: 11
 # DependencyObject 的安全构造函数模式
 通常，类构造函数不应调用诸如虚方法或委托等的回调，其原因是构造函数可作为派生类构造函数的基本初始化进行调用。  输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。  但是，属性系统本身在内部调用并公开回调，作为依赖项属性系统的一部分。  类似使用 <xref:System.Windows.DependencyObject.SetValue%2A> 调用设置依赖项属性值等的简单操作就可能包含某处确认中的回调。  因此，当在构造函数体内设置依赖项属性值（如果将您的类型用作基类，这可能会有问题）时应保持谨慎。  存在一种特定的模式，用以实现可避免依赖项属性状态和内在回调特定问题的 <xref:System.Windows.DependencyObject> 构造函数，此处对其进行了说明。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## 属性系统虚方法  

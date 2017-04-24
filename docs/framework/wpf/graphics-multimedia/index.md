@@ -31,7 +31,7 @@ caps.handback.revision: 29
 > [!NOTE]
 >  强烈建议不要在 Windows 服务中使用 WPF 类型。  如果尝试在 Windows 服务中使用 WPF 类型，则服务可能无法按预期方式工作。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## WPF 4 在图形和多媒体方面的新增功能  

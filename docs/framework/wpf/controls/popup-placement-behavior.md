@@ -27,7 +27,7 @@ caps.handback.revision: 13
 > [!NOTE]
 >  <xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ContextMenu>类还定义以下五个属性和行为类似。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>定位弹出项  

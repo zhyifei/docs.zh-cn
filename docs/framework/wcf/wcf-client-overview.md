@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  例如，上述示例中所使用的 `ISampleService` 的生成的配置文件包含以下终结点信息。  
   
- [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
+ <!-- TODO: review snippet reference [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  -->  
   
  此配置文件在 `<client>` 元素中指定目标终结点。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用多个目标终结点，请参阅<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=fullName>或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=fullName>构造函数。  
   

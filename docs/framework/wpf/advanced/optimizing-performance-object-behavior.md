@@ -25,7 +25,7 @@ caps.handback.revision: 11
 # 优化性能：对象行为
 了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象的内部行为，有助于您在功能和性能之间做出一个适当的取舍。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Not_Removing_Event_Handlers"></a>   
 ## 不移除对象的事件处理程序可能会使对象保持活动状态  

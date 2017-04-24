@@ -26,7 +26,7 @@ caps.handback.revision: 33
 # 绑定声明概述
 本主题讨论声明绑定的不同方法。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prereq"></a>   
 ## 必备组件  

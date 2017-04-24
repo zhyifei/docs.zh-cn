@@ -45,7 +45,7 @@ caps.handback.revision: 18
 # 对象生存期事件
 本主题介绍表示对象生存期（创造、使用和析构）中的阶段的特定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

@@ -49,7 +49,7 @@ caps.handback.revision: 11
   
 4.  Svcutil.exe 还生成使用的客户端的配置<xref:System.ServiceModel.BasicHttpBinding>类。 使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 时，请将此文件命名为 App.config。 请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
   
-     [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  -->  
   
 5.  在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   

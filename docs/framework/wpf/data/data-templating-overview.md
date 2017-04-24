@@ -24,7 +24,7 @@ caps.handback.revision: 24
 # 数据模板化概述
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]数据模板化模型为您提供很大的灵活性来定义您的数据表示形式。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件具有内置功能，可以支持的数据表示自定义。 本主题首先演示如何定义<xref:System.Windows.DataTemplate> ，然后介绍其他数据模板化功能，例如选择了模板基于自定义逻辑和显示分层数据的支持。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>先决条件  
@@ -36,7 +36,7 @@ caps.handback.revision: 24
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>数据模板化基础知识  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  为了演示原因<xref:System.Windows.DataTemplate>是重要的是，让我们看一下数据绑定示例。 在此示例中，我们有<xref:System.Windows.Controls.ListBox>绑定到的列表`Task`对象。 每个`Task`对象具有`TaskName`（字符串）、 `Description` （字符串）、 `Priority` (int) 和一个类型的属性`TaskType`，即`Enum`面额`Home`和`Work`。  
   

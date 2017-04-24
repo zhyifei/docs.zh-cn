@@ -31,8 +31,8 @@ caps.handback.revision: 19
   
  <xref:System.Windows.Controls.Label> 控件不支持文本换行。  如果您需要一个多次换行的标签，可以嵌套一个支持文本换行的元素，并将该元素放在标签内。  下面的示例演示如何使用 <xref:System.Windows.Controls.TextBlock> 创建一个进行多次文本换行的标签。  
   
- [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]
- [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
   
  **为标签添加访问键和文本换行**  
   
@@ -42,8 +42,8 @@ caps.handback.revision: 19
   
  下面的示例演示如何创建一个具有访问键并支持文本换行的 <xref:System.Windows.Controls.Label>。  为了实现文本换行，本示例设置了 <xref:System.Windows.Controls.AccessText.TextWrapping%2A> 属性并使用下划线字符指定访问键。  （紧跟下划线字符后面的字符就是访问键。）  
   
- [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]
- [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
   
 ## 请参阅  
  [How to: Set the Target Property of a Label](http://msdn.microsoft.com/zh-cn/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

@@ -23,7 +23,7 @@ caps.handback.revision: 37
 # OpenType 字体功能
 本主题提供的一些主要功能的概述[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]中的字体技术[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字体格式  

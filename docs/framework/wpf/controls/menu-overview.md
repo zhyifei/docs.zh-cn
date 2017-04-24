@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # 菜单概述
 <xref:System.Windows.Controls.Menu>类使您可以组织与命令和在层次结构顺序中的事件处理程序关联的元素。 每个<xref:System.Windows.Controls.Menu>元素包含的集合<xref:System.Windows.Controls.MenuItem>元素。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Menu 控件  

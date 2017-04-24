@@ -27,7 +27,7 @@ caps.handback.revision: 32
 > [!NOTE]
 >  本主题中所述的资源文件是不同于资源文件中所述[WPF 应用程序资源、 内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)和不同于中所述的嵌入或链接的资源[管理应用程序资源 (.NET)](../Topic/Managing%20Application%20Resources%20\(.NET\).md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>在 XAML 中使用的资源  

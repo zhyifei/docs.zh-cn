@@ -35,7 +35,7 @@ caps.handback.revision: 33
   
  此外，务必了解启用样式和模板，可以重复使用的资源。 有关资源的详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>样式和模板化示例  

@@ -35,7 +35,7 @@ caps.handback.revision: 23
 # 标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及底层的类对象模型。  标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。  本主题专门详细论述了用于 WPF XAML 的标记扩展。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## XAML 处理器和标记扩展  

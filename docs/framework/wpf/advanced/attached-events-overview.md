@@ -26,7 +26,7 @@ caps.handback.revision: 10
 # 附加事件概述
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义了一个语言组件和称为“附加事件”的事件类型。  附加事件的概念允许您针对特定事件为任意元素（而不是为实际定义或继承该事件的元素）添加处理程序。  在这种情况下，对象既不会引发该事件，目标处理实例也不会定义或“拥有”该事件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

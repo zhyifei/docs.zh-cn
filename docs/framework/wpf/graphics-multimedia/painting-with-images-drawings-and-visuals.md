@@ -26,7 +26,7 @@ caps.handback.revision: 27
 # 使用图像、绘图和 Visual 进行绘制
 本主题描述如何借助 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush> 对象，使用 Image、<xref:System.Windows.Media.Drawing> 或 <xref:System.Windows.Media.Visual> 来绘制区域。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereqs"></a>   
 ## 必备组件  

@@ -83,8 +83,8 @@ caps.handback.revision: 8
 ## 示例  
  下面的示例既包含 HTML 源代码，也包含让用户输入日期和时间值的 ASP.NET Web 窗体的代码。  另外，还有一个客户端脚本将用户请求的本地日期和时间以及用户所在时区与 UTC 的偏移量的相关信息写入一个隐藏字段中。  随后，服务器将分析此信息，并返回显示用户输入的网页。  它还会使用用户的本地时间、服务器时间以及 UTC 显示用户请求的日期和时间。  
   
- [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
- [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  
+ <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
   
  客户端脚本调用 JavaScript `toLocaleString` 方法。  这会生成一个符合用户区域设置格式化约定的字符串，从而更有利于服务器成功分析。  
   

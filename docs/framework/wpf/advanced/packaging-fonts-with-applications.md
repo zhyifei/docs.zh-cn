@@ -27,7 +27,7 @@ caps.handback.revision: 25
 > [!NOTE]
 >  正如大多数类型的软件一样，字体文件也不是出售的，而是授予其使用许可。  用来控制字体使用的许可证因供应商而异，但一般说来，大多数许可证（包括 [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] 随应用程序和 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 提供的字体的许可证）都不允许将字体嵌入应用程序中或以其他方式重新发布。  因此，作为开发人员，您需要确保自己对于嵌入到应用程序中或者以其他方式重新发布的任何字体拥有所需的许可权。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="introduction_to_packaging_fonts"></a>   
 ## 字体打包简介  

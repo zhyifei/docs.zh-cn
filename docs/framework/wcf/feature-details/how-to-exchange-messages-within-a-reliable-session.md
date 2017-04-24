@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  创建 Web.config 文件以配置 `CalculatorService` 的终结点，该终结点将 <xref:System.ServiceModel.WSHttpBinding> 与启用的可靠会话和所需的消息有序传送一起使用。  
   
-     [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  -->  
   
 4.  创建包含以下代码行的 Service.svc 文件：  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  Svcutil.exe 还为使用 <xref:System.ServiceModel.WSHttpBinding> 类的客户端生成配置。在使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 时，应在 App.config 文件中命名此文件。  
   
-     [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  -->  
   
 5.  在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   

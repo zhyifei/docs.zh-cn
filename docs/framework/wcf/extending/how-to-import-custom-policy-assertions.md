@@ -50,9 +50,9 @@ caps.handback.revision: 8
   
 1.  导入程序将类型添加到`<extensions>`元素内的[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)客户端配置文件中的元素。  
   
-     [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]
-     [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
-     [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  
+     <!-- TODO: review snippet reference [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  -->  
   
 2.  在客户端应用程序，使用<xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName>或<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName>解析会自动调用的元数据和导入程序。  
   

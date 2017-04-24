@@ -97,7 +97,7 @@ caps.handback.revision: 25
   
 4.  使用的客户端的配置<xref:System.ServiceModel.NetTcpBinding>也通过 Svcutil.exe 生成。 在使用 Visual Studio 时，应在 App.config 文件中命名此文件。  
   
-     [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
   
 5.  在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   

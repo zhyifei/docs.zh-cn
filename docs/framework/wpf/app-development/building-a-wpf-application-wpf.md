@@ -21,7 +21,7 @@ caps.handback.revision: 42
 # 生成 WPF 应用程序 (WPF)
 可以将 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序生成为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可执行文件 \(.exe\)、库 \(.dll\) 或这两种类型的程序集的组合。  本主题介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并介绍生成过程的关键步骤。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## 生成 WPF 应用程序  

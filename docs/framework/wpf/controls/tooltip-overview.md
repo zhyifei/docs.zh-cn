@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # ToolTip 概述
 工具提示是用户将鼠标指针暂停在元素上（例如暂停在 <xref:System.Windows.Controls.Button> 上）时出现的小型弹出窗口。  本主题介绍工具提示并讨论如何创建和自定义工具提示内容。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_tooltip"></a>   
 ## 什么是工具提示？  

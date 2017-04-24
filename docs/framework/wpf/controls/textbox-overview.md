@@ -22,7 +22,7 @@ caps.handback.revision: 9
 # TextBox 概述
 使用 <xref:System.Windows.Controls.TextBox> 类可以显示或编辑非格式化文本。  <xref:System.Windows.Controls.TextBox> 的常用用途是在表单中编辑非格式化文本。  例如，如果一个表单要求输入用户姓名、电话号码等，则可以使用 <xref:System.Windows.Controls.TextBox> 控件来进行文本输入。  本主题介绍 <xref:System.Windows.Controls.TextBox> 类，并提供如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 和 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] 中使用它的示例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## 使用 TextBox 还是 RichTextBox？  

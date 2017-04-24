@@ -32,7 +32,7 @@ caps.handback.revision: 23
  <xref:System.ServiceModel.BasicHttpBinding>类主要用于与现有的 Web 服务进行互操作且的许多服务承载由 Internet 信息服务 (IIS)。 因此，此绑定的传输安全旨在实现与 IIS 站点的无缝互操作。 这通过将安全模式设置为<xref:System.ServiceModel.BasicHttpSecurityMode>，然后设置客户端凭据类型。 凭据类型值对应于 IIS 目录安全机制。 下面的代码演示如何设置模式以及如何将凭据类型设置为 Windows。 当客户端和服务器在同一个 Windows 域中时，您可以使用此配置。  
   
  [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)]
- [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
+ <!-- TODO: review snippet reference [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  -->  
   
  或在配置中：  
   

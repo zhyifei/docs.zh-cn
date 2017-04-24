@@ -26,7 +26,7 @@ caps.handback.revision: 34
   
  本地化是针对应用程序所支持的特定区域性将应用程序资源转换为本地化版本的过程。  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中进行本地化时，可使用 <xref:System.Windows.Markup.Localizer> 命名空间中的 API。这些 API 实现 [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016)（LocBaml 工具示例）命令行工具。  有关如何生成和使用 LocBaml 的信息，请参见[对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 在 WPF 中进行全球化和本地化的最佳做法  
  按照本节提供的与 UI 设计和本地化相关的提示操作，可以最大限度地利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中内置的大部分全球化和本地化功能。  

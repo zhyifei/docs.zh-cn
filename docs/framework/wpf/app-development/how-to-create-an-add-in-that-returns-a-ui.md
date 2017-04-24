@@ -36,7 +36,7 @@ caps.handback.revision: 5
 ## 示例  
  要创建能够返回 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的外接程序，需要为每个管线段、外接程序和宿主应用程序编写特定代码。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Contract"></a>   
 ## 实现协定管线段  

@@ -23,7 +23,7 @@ caps.handback.revision: 24
 # 绑定源概述
 在数据绑定中，[绑定源](GTMT)对象是指您从其获取数据的对象。  本主题讨论可用作绑定源的对象类型。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="binding_sources"></a>   
 ## 绑定源类型  

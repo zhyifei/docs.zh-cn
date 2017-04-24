@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # WPF 外接程序概述
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供了一个外接程序模型，开发人员可以用它来创建支持外接程序扩展的应用程序。  使用此外接程序模型可以创建与应用程序功能集成并对应用程序功能进行扩展的外接程序。  在某些情况下，应用程序还需要显示外接程序所提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  本主题演示 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何扩展 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 外接程序模型从而实现这些方案，演示 WPF 的体系结构、其优点及其局限。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Requirements"></a>   
 ## 必备组件  

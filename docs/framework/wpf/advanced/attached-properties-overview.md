@@ -21,7 +21,7 @@ caps.handback.revision: 27
 # 附加属性概述
 “附加属性”是由 XAML 定义的概念。  附加属性旨在用作可在任何对象上设置的一类全局属性。  在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，附加属性通常定义为依赖项属性的专用形式没有常规属性 “包装”。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

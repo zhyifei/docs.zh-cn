@@ -22,7 +22,7 @@ caps.handback.revision: 41
 # 可视化层中的命中测试
 本主题概述可视化层提供的命中测试功能。  通过命中测试支持，您可以确定某个几何图形或点值是否位于 <xref:System.Windows.Media.Visual> 的呈现内容内，从而可以实现用户界面行为（例如用于选择多个对象的选择矩形）。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="hit_testing_scenarios"></a>   
 ## 命中测试方案  

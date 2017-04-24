@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  以下各部分结合一些示例阐释如何获得双向内容的最佳显示效果，并对许多双向功能进行了说明。  其中多数示例使用的是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]，但您可以轻松地将这些概念应用于 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 或 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 代码中。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="FlowDirection"></a>   
 ## FlowDirection  

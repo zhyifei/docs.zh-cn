@@ -25,7 +25,7 @@ caps.handback.revision: 16
   
  本主题介绍了几种常见类型的批注，重点介绍便笺和突出显示，并举例说明 [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 如何通过 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 文档查看控件简化这些类型的批注在应用程序中的使用。  支持批注的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文档查看控件包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及从 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 派生的控件，如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="caf1_type_stickynotes"></a>   
 ## 便笺  

@@ -106,7 +106,7 @@ caps.handback.revision: 16
  下面的代码示例演示强制设置 `WSFederationHttpBinding` 的代码。  
   
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)]
- [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
+ <!-- TODO: review snippet reference [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  -->  
   
 ## 请参阅  
  [联合](../../../../docs/framework/wcf/feature-details/federation.md)   

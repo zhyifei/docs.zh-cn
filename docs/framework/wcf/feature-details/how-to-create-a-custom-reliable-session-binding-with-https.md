@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  创建 Web.config 文件，并使用名为“reliableSessionOverHttps”的自定义绑定（使用可靠会话和 HTTPS 传输协议）为 `CalculatorService` 配置一个终结点。  
   
-     [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
   
 4.  创建包含以下代码行的 Service.svc 文件：  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  配置一个名为“reliableSessionOverHttps”的自定义绑定以使用 HTTPS 传输和可靠的会话。  
   
-     [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
   
 5.  在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   

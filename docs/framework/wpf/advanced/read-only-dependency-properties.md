@@ -22,7 +22,7 @@ caps.handback.revision: 7
 # 只读依赖项属性
 本主题介绍只读依赖项属性，包括现有的只读依赖项属性和创建自定义只读依赖项属性的方案和方法。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

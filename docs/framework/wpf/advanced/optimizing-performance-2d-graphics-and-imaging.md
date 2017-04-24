@@ -26,7 +26,7 @@ caps.handback.revision: 7
 # 优化性能：二维图形和图像处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了多种二维图形和图像处理功能，可以针对您的应用程序要求优化这些功能。  本主题提供有关二维图形和图像处理性能优化的信息。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drawing_and_Shapes"></a>   
 ## 绘图和形状  

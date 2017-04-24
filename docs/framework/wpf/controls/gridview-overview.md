@@ -23,7 +23,7 @@ caps.handback.revision: 25
 # GridView 概述
 <xref:System.Windows.Controls.GridView> 视图模式是 <xref:System.Windows.Controls.ListView> 控件的视图模式之一。  使用 <xref:System.Windows.Controls.GridView> 类及其支持类，您以及您的用户可以查看以表的形式呈现的项集合，该表通常使用按钮作为交互式列标题。  本主题介绍 <xref:System.Windows.Controls.GridView> 类并概述它的使用。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## 什么是 GridView 视图？  

@@ -24,7 +24,7 @@ caps.handback.revision: 31
 > [!IMPORTANT]
 >  在 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect> 类已过时。  如果尝试使用 <xref:System.Windows.Media.Effects.BitmapEffect> 类，将会得到过时异常。  <xref:System.Windows.Media.Effects.BitmapEffect> 类的非过时替代项为 <xref:System.Windows.Media.Effects.Effect> 类。  在大多数情况下，<xref:System.Windows.Media.Effects.Effect> 类速度快得多。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wpf_effects"></a>   
 ## WPF 位图效果  

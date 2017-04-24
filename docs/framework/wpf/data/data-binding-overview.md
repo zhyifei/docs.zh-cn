@@ -28,7 +28,7 @@ caps.handback.revision: 75
   
  本主题首先讨论 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 数据绑定的基本概念，然后详细介绍 <xref:System.Windows.Data.Binding> 类以及数据绑定的其他功能的用法。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_data_binding"></a>   
 ## 什么是数据绑定？  
@@ -64,7 +64,7 @@ caps.handback.revision: 75
   
 <a name="basic_data_binding_concepts"></a>   
 ## 基本数据绑定概念  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  不论要绑定什么元素，不论数据源的特性是什么，每个绑定都始终遵循下图所示的模型：  
   
@@ -128,7 +128,7 @@ caps.handback.revision: 75
   
 <a name="creating_a_binding"></a>   
 ## 创建绑定  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  前面几节中讨论的一些概念可以概括为：使用 <xref:System.Windows.Data.Binding> 对象建立绑定，每个绑定通常都具有四个组件：绑定目标、目标属性、绑定源、要使用的源值的路径。  本节讨论如何设置绑定。  
   
@@ -220,7 +220,7 @@ caps.handback.revision: 75
   
 <a name="binding_to_collections"></a>   
 ## 绑定到集合  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  绑定源对象可以视为其属性包含数据的单个对象，也可以视为通常组合在一起的多态对象的数据集合（如查询数据库的结果）。  到目前为止，我们仅讨论了绑定到单个对象，但是绑定到数据集合是一个常见方案。  例如，一个常见方案是使用 <xref:System.Windows.Controls.ItemsControl>（如 <xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ListView> 或 <xref:System.Windows.Controls.TreeView>）来显示数据集合，如[什么是数据绑定？](#what_is_data_binding)一节中的应用程序。  
   
@@ -242,7 +242,7 @@ caps.handback.revision: 75
 ### 集合视图  
  一旦 <xref:System.Windows.Controls.ItemsControl> 绑定到数据集合，您可能希望对数据进行排序、筛选或分组。  若要执行此操作，可以使用集合视图，这是实现 <xref:System.ComponentModel.ICollectionView> 接口的类。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_are_collection_views"></a>   
 #### 什么是集合视图？  
@@ -369,7 +369,7 @@ caps.handback.revision: 75
   
 <a name="data_validation"></a>   
 ## 数据验证  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  接受用户输入的大多数应用程序都需要具有验证逻辑，以确保用户输入了需要的信息。  验证检查可以基于类型、范围、格式或其他应用程序特定的要求。  本节讨论了数据验证在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的工作方式。  
   

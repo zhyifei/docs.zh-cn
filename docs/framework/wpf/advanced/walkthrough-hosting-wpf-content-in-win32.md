@@ -23,7 +23,7 @@ caps.handback.revision: 20
   
  本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](http://go.microsoft.com/fwlink/?LinkID=160004)，该应用程序可在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。  你可以扩展此示例，使其可托管任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。  由于涉及混合托管代码和非托管代码，应用程序是在 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 中编写的。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## 要求  

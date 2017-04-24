@@ -24,7 +24,7 @@ caps.handback.revision: 26
 # 依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响[依赖项属性](GTMT)的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

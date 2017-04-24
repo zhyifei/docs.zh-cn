@@ -22,7 +22,7 @@ caps.handback.revision: 11
 # TileBrush 概述
 使用 <xref:System.Windows.Media.TileBrush> 对象，您可以非常自如地控制如何使用图像、<xref:System.Windows.Media.Drawing> 或 <xref:System.Windows.Media.Visual> 来绘制区域。  本主题介绍如何使用 <xref:System.Windows.Media.TileBrush> 功能来更自如地控制 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush> 绘制区域的方式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisite"></a>   
 ## 必备组件  

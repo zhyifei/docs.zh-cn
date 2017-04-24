@@ -28,7 +28,7 @@ caps.handback.revision: 24
 # 自定义依赖项属性
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序开发人员和组件作者可能希望创建自定义的[依赖项属性](GTMT)的原因，以及介绍可以提高该属性的性能、可用性或通用性的实现步骤和某些实现选项。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

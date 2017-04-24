@@ -23,7 +23,7 @@ caps.handback.revision: 32
 # TreeView 概述
 <xref:System.Windows.Controls.TreeView> 控件通过使用可折叠节点提供一种以分层结构来显示信息的方式。  本主题介绍 <xref:System.Windows.Controls.TreeView> 和 <xref:System.Windows.Controls.TreeViewItem> 控件，并提供了其用法的简单示例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Simple_TreeView_Control"></a>   
 ## 什么是 TreeView  

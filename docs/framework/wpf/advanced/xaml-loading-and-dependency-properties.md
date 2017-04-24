@@ -23,7 +23,7 @@ caps.handback.revision: 7
 # XAML 加载和依赖项属性
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 当前对其 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器的实现在本质上能够识别依赖项属性。  在加载二进制 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 并处理作为依赖项属性的特性时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器针对依赖项属性使用属性系统方法。  这会有效地跳过属性包装。  在实现自定义依赖项属性时，必须考虑此行为，而且应当避免将任何其他代码放在除属性系统方法 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 以外的属性包装中。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

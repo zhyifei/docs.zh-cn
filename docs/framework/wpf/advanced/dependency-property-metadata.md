@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # 依赖项属性元数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统包括一个元数据报告系统，该系统不局限于可以通过反射或常规[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特征报告的关于某个属性的内容。  [依赖项属性](GTMT)的元数据还可以由定义[依赖项属性](GTMT)的类来唯一地指定，可以在[依赖项属性](GTMT)添加到另一个类时进行更改，可以由所有从定义基类继承[依赖项属性](GTMT)的派生类来明确地重写。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必备组件  

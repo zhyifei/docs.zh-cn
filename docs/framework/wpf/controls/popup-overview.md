@@ -22,7 +22,7 @@ caps.handback.revision: 33
 # Popup 概述
 <xref:System.Windows.Controls.Primitives.Popup> 控件提供一种在单独窗口中显示内容的方法，该窗口相对于指定元素或屏幕坐标浮动于当前应用程序窗口之上。  本主题介绍 <xref:System.Windows.Controls.Primitives.Popup> 控件，并提供有关其用法的信息。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="What_Is_a_Popup_"></a>   
 ## 什么是 Popup？  

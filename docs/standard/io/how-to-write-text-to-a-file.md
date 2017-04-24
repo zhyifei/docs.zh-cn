@@ -35,14 +35,14 @@ caps.handback.revision: 29
 ## 示例  
  下面的示例演示如何使用 <xref:System.IO.StreamWriter> 类，一次一行同步地将文本写入新文件。 新文本文件保存到用户的“我的文档”文件夹中。 因为在 `using` 语句中已声明并实例化 <xref:System.IO.StreamWriter> 对象，所以会调用自动刷新并关闭流的 <xref:System.IO.StreamWriter.Dispose%2A> 方法。  
   
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)]
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
+ <!-- TODO: review snippet reference [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  -->  
   
 ## 示例  
  下面的示例演示如何使用 <xref:System.IO.StreamWriter> 类将文本追加到现有的文件。 它使用上一示例中的同一个文本文件。  
   
- [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)]
- [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]  
+ <!-- TODO: review snippet reference [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]  -->  
   
 ## 示例  
  下面的示例演示如何使用 <xref:System.IO.StreamWriter> 类异步地将文本写入新文件。 为了调用 <xref:System.IO.StreamWriter.WriteAsync%2A> 方法，方法调用需要在 `async` 方法内。 新文本文件保存到用户的“我的文档”文件夹中。  

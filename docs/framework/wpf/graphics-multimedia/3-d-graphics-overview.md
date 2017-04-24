@@ -22,7 +22,7 @@ caps.handback.revision: 20
 # 三维图形概述
 <a name="introduction"></a> 通过 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]功能，开发人员可以使用标记代码和程序代码对三维图形进行绘制、转换和动画处理。  开发人员可以合并[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]和[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]图形以创建丰富的控件，提供复杂的数据图解，或者增强用户对应用程序界面的体验。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]支持并非旨在提供功能齐全的游戏开发平台。本主题概述了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形系统中的[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]功能。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="threed_in_2d"></a>   
 ## 二维容器中的三维  

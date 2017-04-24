@@ -28,7 +28,7 @@ caps.handback.revision: 12
 > [!NOTE]
 >  本文档中的所有代码示例都可以在 [Advanced Text Formatting Sample](http://go.microsoft.com/fwlink/?LinkID=159965)（高级文本格式设置示例）中找到。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereq"></a>   
 ## 必备组件  

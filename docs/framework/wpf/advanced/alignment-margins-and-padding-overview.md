@@ -25,7 +25,7 @@ caps.handback.revision: 19
 # Alignment、Margin 和 Padding 概述
 <xref:System.Windows.FrameworkElement> 类公开一些用于精确定位子元素的属性。  本主题论述其中四个最重要的属性：<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、<xref:System.Windows.FrameworkElement.Margin%2A>、<xref:System.Windows.Controls.Border.Padding%2A> 和 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。  务必要了解这些属性的作用，因为这些属性是控制元素在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的位置的基础。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## 元素定位简介  

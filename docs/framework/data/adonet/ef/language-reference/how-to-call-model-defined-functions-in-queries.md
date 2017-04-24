@@ -33,7 +33,7 @@ caps.handback.revision: 3
  以下概念模型函数返回教师已聘用的年数。  有关向概念模型添加函数的信息，请参见[How to: Define Custom Functions in the Conceptual Model](http://msdn.microsoft.com/zh-cn/0dad7b8b-58f6-4271-b238-f34810d68e5f)。  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
- [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  
+ <!-- TODO: review snippet reference [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  -->  
   
 ## 示例  
  接下来，向应用程序添加以下方法，并使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 将其映射到概念模型函数：  

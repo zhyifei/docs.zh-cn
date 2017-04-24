@@ -26,7 +26,7 @@ caps.handback.revision: 33
 > [!NOTE]
 >  LocBaml 工具不是可直接用于生产的应用程序。  它表示为一个示例，该示例使用某些本地化 API 并演示编写一个本地化工具的方法。  
 >   
->  [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+>    
   
 <a name="Introduction"></a>   
 ## 概述  

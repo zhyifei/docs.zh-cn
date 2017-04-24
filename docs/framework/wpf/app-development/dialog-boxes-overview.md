@@ -38,7 +38,7 @@ caps.handback.revision: 24
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]允许您创建多种类型的对话框中，包括消息框、 公共对话框和自定义对话框。 本主题介绍了每一个，和[对话框示例](http://go.microsoft.com/fwlink/?LinkID=159984)提供匹配的示例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>消息框  

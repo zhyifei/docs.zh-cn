@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # Geometry 概述
 本概述介绍如何使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 类来描绘形状。  本主题还比较了 <xref:System.Windows.Media.Geometry> 对象与 <xref:System.Windows.Shapes.Shape> 元素之间的区别。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## 什么是 Geometry？  

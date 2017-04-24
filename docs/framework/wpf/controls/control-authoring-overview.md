@@ -22,7 +22,7 @@ caps.handback.revision: 29
 # 控件创作概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控件模型的扩展性极大减少了创建新控件的需要。  但在某些情况下，仍可能需要创建自定义控件。  本主题讨论可最大限度减少在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中创建自定义控件以及其他控件创作模型的需要的功能。  本主题还演示如何创建新控件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="when_to_write_a_new_control"></a>   
 ## 编写新控件的替代方法  

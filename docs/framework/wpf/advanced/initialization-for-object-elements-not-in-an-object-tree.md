@@ -24,7 +24,7 @@ caps.handback.revision: 14
 # 不在对象树中的对象元素的初始化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化的某些方面被推迟到通常依赖连接到[逻辑树](GTMT)或[可视化树](GTMT)的元素的进程。  本主题介绍初始化未连接到两种树之一的元素可能需要的步骤。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 元素和逻辑树  
  当在代码中创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的实例时，应注意 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的对象初始化的几个方面特意不在调用类构造函数时所执行的代码的某一部分实现。  这种情况对于控件类尤为突出，该控件的大部分可视化表示都不是由构造函数定义的，  而是由控件的模板定义的。  模板可能来自于各种源，但是最常见的情况是来自于主题样式。  模板实际上是后期绑定的；只有在相应的控件已准备好应用布局时，才会将所需的模板附加到该控件上。  并且控件只有在已附加到连接到根级别的呈现图面的逻辑树时，才能准备好应用布局。  将由根级元素启动在逻辑树中定义的所有子元素的呈现。  

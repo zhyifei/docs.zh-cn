@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  本主题指导您编写一个应用程序 [Hosting a Win32 ListBox Control in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998)（在 WPF 中承载 Win32 列表框控件示例），该应用程序承载一个 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 列表框控件。  可以对该一般性过程进行扩展以承载任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## 要求  

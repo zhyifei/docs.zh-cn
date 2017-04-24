@@ -32,7 +32,7 @@ caps.handback.revision: 18
 # WPF XAML 名称范围
 XAML 名称范围是用于标识在 XAML 定义的对象的概念。  XAML 名称范围中的名称可以用于在对象的 XAML 定义名称以及其在对象树中的实例等效项之间建立关系。  通常，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 托管代码中的 XAML 名称范围在为 XAML 应用程序加载各个 XAML 页的根时进行创建。  作为编程对象的 XAML 名称范围由 <xref:System.Windows.Markup.INameScope> 接口定义，并且还由实际类 <xref:System.Windows.NameScope> 实现。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## 加载的 XAML 应用程序中的名称范围  

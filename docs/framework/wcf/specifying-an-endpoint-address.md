@@ -48,13 +48,13 @@ caps.handback.revision: 41
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在配置中定义终结点地址  
  若要在配置文件中定义终结点，请使用[ <> \> ](http://msdn.microsoft.com/zh-cn/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
   
- [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
   
  当<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>方法被调用 （即，当宿主应用程序尝试启动服务） 时，系统将查找[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素其 name 属性，指定"UE。Samples.HelloService"。 如果[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到元素，则系统加载指定的类，并使用配置文件中提供的终结点定义创建终结点。 此机制允许你将绑定和寻址信息放置在代码之外，而用两行代码来加载和启动服务。 此方法的优点是在进行这些更改后不必重新编译或重新部署应用程序。  
   
  可选标头中声明[ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下面是用于在配置文件中指定服务终结点的元素的示例，该配置文件分为两个标头：来自 http://tempuri1.org/ 的“黄金”客户端和来自 http://tempuri2.org/ 的“标准”客户端。 调用此服务的客户端必须具有适当[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其配置文件中。  
   
- [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
   
  也可以为个别消息而不是终结点上的所有消息（如前面所示）设置标头。 这通过使用<xref:System.ServiceModel.OperationContextScope>若要在客户端应用程序以向传出消息添加自定义标头中创建新的上下文，如下面的示例中所示。  
   

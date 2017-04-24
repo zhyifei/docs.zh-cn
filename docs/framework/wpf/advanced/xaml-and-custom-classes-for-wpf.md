@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # XAML 及 WPF 的自定义类
 使用 XAML 标记， XAML 为已实现在 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] framework 支持能够定义自定义类或结构的所有 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 语言，然后访问该类。  您可以在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义的类型和您的自定义类型，通常是通过将自定义类型映射到 XAML 命名空间前缀。  本主题讨论自定义类必须满足可用作 XAML 元素的要求。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## 应用程序或程序集中的自定义类  

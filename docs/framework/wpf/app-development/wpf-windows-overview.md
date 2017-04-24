@@ -46,7 +46,7 @@ caps.handback.revision: 60
 > [!NOTE]
 >  浏览器承载的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序（包括 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 和松散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页）不提供它们自己的窗口。  而是承载于 [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] 提供的窗口中。  请参见 [WPF XAML 浏览器应用程序概述](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="TheWindowClass"></a>   
 ## 窗口类  
@@ -136,7 +136,7 @@ caps.handback.revision: 60
 ## 窗口生存期  
  和所有类一样，窗口也有生存期，在第一次实例化窗口时生存期开始，然后就可以打开、激活和停用窗口，直到最终关闭窗口。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Opening_a_Window"></a>   
 ### 打开窗口  
@@ -414,7 +414,7 @@ caps.handback.revision: 60
   
  还可以通过配置窗口的大小调整模式、窗口样式，以及窗口是否显示为桌面任务栏中的按钮，来更改非工作区边框的外观和行为。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resize_Mode"></a>   
 ### 大小调整模式  

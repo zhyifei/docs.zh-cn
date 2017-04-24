@@ -59,7 +59,7 @@ caps.handback.revision: 8
          下面的代码示例定义了一个名为 `MyResourceType` 的自定义资源类型。  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
-         [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  
+         <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  -->  
   
     3.  选择 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义的一个权限，或者为自定义权限选择一个唯一值。  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 8
          下面的代码示例创建了一个声明类型的自定义声明`http://example.org/claims/complexcustomclaim`，自定义资源类型的`MyResourceType`，且<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>右侧。  
   
      [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)]
-     [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  
+     <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  -->  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何创建一个具有基元资源类型的自定义声明和一个具有非基元资源类型的自定义声明。  

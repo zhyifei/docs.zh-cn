@@ -24,7 +24,7 @@ caps.handback.revision: 7
   
  本主题提供了一些数据绑定性能的建议。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## 如何解析数据绑定引用  

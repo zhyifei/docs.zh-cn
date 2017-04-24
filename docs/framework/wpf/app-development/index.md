@@ -35,7 +35,7 @@ caps.handback.revision: 20
   
  为了创建此组应用程序，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 实现了大量服务。  本主题概述这些服务并说明从何处可以获得更多信息。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Application_Management"></a>   
 ## 应用程序管理  

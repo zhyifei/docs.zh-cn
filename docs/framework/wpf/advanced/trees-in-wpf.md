@@ -23,7 +23,7 @@ caps.handback.revision: 19
 # WPF 中的树
 在许多技术中，元素和组件都按树结构的形式组织。在这种结构中，开发人员可以直接操作树中的对象节点来影响应用程序的呈现或行为。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也使用了若干树结构形式来定义程序元素之间的关系。  多数情况下，WPF 开发人员可以用代码创建应用程序，也可以用 XAML 定义应用程序的组成部分。与此同时，他们在概念层面上考虑对象树形式，但却要调用具体的 API 或使用特定的标记来实现对象树，而不是像在 XML DOM 中那样，使用某些常规对象树操作 API。  WPF 公开两个提供树形式视图的帮助器类：<xref:System.Windows.LogicalTreeHelper> 和 <xref:System.Windows.Media.VisualTreeHelper>。  WPF 文档中还使用了“可视化树”和“逻辑树”两个术语，它们有助于理解某些关键 WPF 功能的行为。  本主题定义可视化树和逻辑树的含义，讨论这些树与总体对象树概念之间的关系，并介绍 <xref:System.Windows.LogicalTreeHelper> 和 <xref:System.Windows.Media.VisualTreeHelper>。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="element_tree"></a>   
 ## WPF 中的树  

@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # 三维变换概述
 本主题描述如何向 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 图形系统中的三维模型应用变换。  开发人员可以借助于变换功能来对模型进行重定位、调整大小和重定向，而无需更改用来定义模型的基值。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 三维坐标空间  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的三维图形内容封装在 <xref:System.Windows.Controls.Viewport3D> 元素中，该元素可以参与二维元素结构。  该图形系统将 Viewport3D 视为一个像 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的许多其他元素一样的二维可视化元素。  Viewport3D 充当三维场景中的一个窗口（视区）。  更准确地说，它是三维场景所投影到的图面。  尽管可以将 Viewport3D 与其他二维绘图对象用在同一个场景关系图中，但是不能在 Viewport3D 中渗透二维和三维对象。  以下讨论中所描述的坐标空间包含在 Viewport3D 元素中。  

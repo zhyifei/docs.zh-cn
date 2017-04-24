@@ -22,7 +22,7 @@ caps.handback.revision: 48
 # WPF 图形呈现疑难解答
 本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。  本主题重点讲述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模型中呈现支持的 <xref:System.Windows.Media.Visual> 类的角色。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="role_of_visual_object"></a>   
 ## Visual 对象的角色  

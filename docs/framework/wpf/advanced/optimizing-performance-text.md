@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
  本主题提供的文本呈现性能的建议。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>呈现标志符号级别的文本  

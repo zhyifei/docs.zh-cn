@@ -26,7 +26,7 @@ caps.handback.revision: 18
 # 使用纯色和渐变进行绘制概述
 此主题介绍如何使用 <xref:System.Windows.Media.SolidColorBrush>、<xref:System.Windows.Media.LinearGradientBrush> 和 <xref:System.Windows.Media.RadialGradientBrush> 对象，以纯色、线性渐变和径向渐变进行绘制。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="solidcolor"></a>   
 ## 使用纯色绘制区域  

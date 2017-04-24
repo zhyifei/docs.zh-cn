@@ -22,7 +22,7 @@ caps.handback.revision: 14
 # 本地化特性和注释
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用来提供本地化规则和提示。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释中包含两组信息：可本地化特性和任意形式的本地化注释。  可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用来指示将对哪些资源进行本地化。  任意形式的本地化注释是指应用程序作者希望包括的任何信息。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Localizer_Comments_"></a>   
 ## 本地化注释  

@@ -27,7 +27,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了对图形和呈现服务的若干层访问。  在顶层，<xref:System.Windows.Shapes.Shape> 对象很容易使用，并且提供了许多有用功能，例如布局和参与 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 事件系统。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="shapes"></a>   
 ## 形状对象  

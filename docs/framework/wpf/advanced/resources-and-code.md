@@ -25,7 +25,7 @@ caps.handback.revision: 13
 # 资源和代码
 本概述主要介绍可以如何使用代码（而非[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 语法）来访问或创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 资源。  有关常规资源用法以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法角度的资源的更多信息，请参见 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="accessing"></a>   
 ## 从代码访问资源  

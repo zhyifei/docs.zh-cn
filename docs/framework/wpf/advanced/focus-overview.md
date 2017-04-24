@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  <xref:System.Windows.Input.Keyboard> 类主要与键盘焦点相关，而 <xref:System.Windows.Input.FocusManager> 则与逻辑焦点相关，但这种区别不是绝对的。  具有键盘焦点的元素也将具有逻辑焦点，但具有逻辑焦点的元素不一定具有键盘焦点。  当您使用 <xref:System.Windows.Input.Keyboard> 类来设置具有键盘焦点的元素时，这一点是很明显的，因为它还在元素上设置逻辑焦点。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Keyboard_Focus"></a>   
 ## 键盘焦点  

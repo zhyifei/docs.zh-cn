@@ -22,7 +22,7 @@ caps.handback.revision: 26
 # 部署 WPF 应用程序 (WPF)
 生成 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序后，需要对它们进行部署。  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 包含一些部署技术。  用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序类型。  本主题简要概述了每个部署技术，以及它们如何用于满足每个 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序类型的部署要求。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Deployment_Technologies"></a>   
 ## 部署技术  

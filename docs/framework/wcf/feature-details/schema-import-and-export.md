@@ -53,7 +53,7 @@ caps.handback.revision: 14
   
  例如，不能使用默认导入设置导入以下架构片段。  
   
- [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  -->  
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果架构不符合数据协定规则，请使用另一个序列化引擎。 例如， <xref:System.Xml.Serialization.XmlSerializer>使用其自己的独立架构导入机制。 另有一种特殊的导入模式，可在其中扩展所支持架构的范围。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]有关生成的部分<xref:System.Xml.Serialization.IXmlSerializable>中的类型[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   

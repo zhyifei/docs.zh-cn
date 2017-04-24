@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # 优化性能：控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包括许多公共用户界面 \(UI\) 组件，大多数 Windows 应用程序中都会用到这些组件。  本主题介绍一些改进用户界面性能的技术。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Displaying"></a>   
 ## 显示大型数据集  

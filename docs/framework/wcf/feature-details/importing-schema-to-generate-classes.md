@@ -68,7 +68,7 @@ caps.handback.revision: 15
   
  例如，考虑下面的架构。  
   
- [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  -->  
   
  下面的示例使用 `Namespaces` 属性将“http://schemas.contoso.com/carSchema”命名空间映射为“Contoso.Cars”。  
   
@@ -98,18 +98,18 @@ caps.handback.revision: 15
 ### <a name="import-options-choosing-collection-types"></a>导入选项：选择集合类型  
  XML 中存在两种特殊的模式，用于表示项集合：项列表和项与项之间的关联。 下面是一个字符串列表示例。  
   
- [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  -->  
   
  下面是一个字符串与整数（`city name` 和 `population`）之间的关联示例。  
   
- [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  -->  
   
 > [!NOTE]
 >  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 由于无法区分列表和关联，因此始终将这种模式作为列表处理，架构中出现特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的特殊批注除外。 该批注指示给定模式表示一个关联。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  通常情况下，将列表作为派生自泛型列表的集合数据协定导入，或作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组导入，具体取决于架构是否遵循集合的标准命名模式。 此进行了更详细地描述[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 关联是正常情况下为导入<xref:System.Collections.Generic.Dictionary%602>或派生自字典对象的集合数据协定。\</TKey, TValue> 例如，考虑下面的架构。  
   
- [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  -->  
   
  这将按照下面的方式导入（出于可读性目的，显示的是字段而非属性）。  
   

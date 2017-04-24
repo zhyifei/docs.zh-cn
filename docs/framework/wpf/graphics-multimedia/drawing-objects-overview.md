@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Drawing 对象概述
 本主题介绍 <xref:System.Windows.Media.Drawing> 对象，并说明如何使用它们来有效地绘制形状、位图、文本和媒体。  创建剪贴画、使用 <xref:System.Windows.Media.DrawingBrush> 绘图或者使用 <xref:System.Windows.Media.Visual> 对象时，可以使用 <xref:System.Windows.Media.Drawing> 对象。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatisadrawingsection"></a>   
 ## 什么是 Drawing 对象？  

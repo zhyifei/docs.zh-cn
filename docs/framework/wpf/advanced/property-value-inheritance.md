@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # 属性值继承
 属性值继承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的一项功能。  属性值继承使元素树中的子元素可以从父元素那里获取特定属性的值，并继承该值，就好像它是在最近的父元素中的任意位置设置的一样。  父元素还可以通过属性值继承来获得其值，因此系统有可能一直递归到页面根元素。  属性值继承不是属性系统的默认行为；属性必须用特定的元数据设置来建立，以便使该属性能够对子元素启动属性值继承。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## 属性值继承是包容继承  

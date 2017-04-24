@@ -21,7 +21,7 @@ caps.handback.revision: 52
 # 应用程序管理概述
 所有应用程序往往共享通用应用于应用程序实现和管理功能的集合。  本主题提供创建和管理应用程序提供在 <xref:System.Windows.Application> 类的功能的概述。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 应用程序类  
  在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，常见的应用程序范围的功能在 <xref:System.Windows.Application> 类中封装。  <xref:System.Windows.Application> 类包含以下功能:  
@@ -133,7 +133,7 @@ caps.handback.revision: 52
 ## 应用程序生存期  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序生存期由 <xref:System.Windows.Application> 所引发的几个事件来标记，这些事件告诉您应用程序何时启动、何时激活和停用以及何时关闭。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Splash_Screen"></a>   
 ### 初始屏幕  

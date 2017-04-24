@@ -22,7 +22,7 @@ caps.handback.revision: 22
 # PropertyPath XAML 语法
 <xref:System.Windows.PropertyPath> 对象支持复杂内联 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法以设置将 <xref:System.Windows.PropertyPath> 类型作为其值的各种属性。  本主题讨论应用于绑定的 <xref:System.Windows.PropertyPath> 语法和动画语法。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="where"></a>   
 ## PropertyPath 的使用场合  

@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
  本主题汇总了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件和类似于控件的类型的内容模型。  内容模型描述可在控件中使用的内容。本主题还列出了每个内容模型的内容属性。  内容属性是用于存储对象内容的属性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## 包含任意内容的类  

@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # ListView 概述
 <xref:System.Windows.Controls.ListView> 控件提供了一个基础结构，用于在不同的布局或视图中显示一组数据项。  例如，用户可能需要在表中显示数据项，并同时对表的列进行排序。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="WhatisaListView"></a>   
 ## 什么是 ListView？  

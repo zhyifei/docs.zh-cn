@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # ContextMenu 概述
 <xref:System.Windows.Controls.ContextMenu> 类表示使用特定于上下文的 <xref:System.Windows.Controls.Menu> 公开功能的元素。  通常，用户可以通过单击鼠标右键在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中公开 <xref:System.Windows.Controls.ContextMenu>。  本主题介绍 <xref:System.Windows.Controls.ContextMenu> 元素，并提供有关如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 和代码中使用该元素的示例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="contextmenu_control"></a>   
 ## ContextMenu 控件  

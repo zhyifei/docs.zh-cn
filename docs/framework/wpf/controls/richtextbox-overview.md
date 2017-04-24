@@ -22,7 +22,7 @@ caps.handback.revision: 10
 # RichTextBox 概述
 使用 <xref:System.Windows.Controls.RichTextBox> 控件，可以显示或编辑流内容（包括段落、图像、表等）。  本主题介绍 <xref:System.Windows.Controls.TextBox> 类，并提供如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 和 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] 中使用它的示例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## 使用 TextBox 还是 RichTextBox？  

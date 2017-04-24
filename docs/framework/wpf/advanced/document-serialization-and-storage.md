@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # 文档序列化和存储
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]为创建和显示高质量的文档提供了一个强大环境。  增强功能可支持固定文档和流文档以及高级查看控件，这些增强功能与强大的二维和三维图形功能结合在一起，提高了 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 应用程序的质量水平，增强了用户体验。  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的主要功能是能够灵活管理文档的内存中表现形式，而几乎每个应用程序都需要能够高效保存和加载数据存储区中的文档。  将文档从内部的内存中表现形式转换为外部数据存储区的过程称为[序列化](GTMT)。  反之，读取数据存储区并重新创建原始内存中实例的过程则称为反序列化。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AboutSerialization"></a>   
 ## 关于文档序列化  

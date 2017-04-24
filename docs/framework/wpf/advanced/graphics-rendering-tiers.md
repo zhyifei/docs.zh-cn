@@ -25,7 +25,7 @@ caps.handback.revision: 43
 # 图形呈现层
 呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="graphics_hardware"></a>   
 ## 图形硬件  

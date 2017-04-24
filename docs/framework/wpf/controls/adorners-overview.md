@@ -21,7 +21,7 @@ caps.handback.revision: 34
 # 装饰器概述
 装饰器是一种特殊类型的 <xref:System.Windows.FrameworkElement>，用于向用户提供可视化提示。  对于其他用户，装饰器可用于将功能控点添加到元素中或提供有关控件的状态信息。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="about_Adorners"></a>   
 ## 关于装饰器  

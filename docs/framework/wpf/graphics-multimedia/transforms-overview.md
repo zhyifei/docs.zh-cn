@@ -29,7 +29,7 @@ caps.handback.revision: 20
 # 变换概述
 本主题描述如何使用 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 类来旋转、按比例缩放、移动（平移）和扭曲 <xref:System.Windows.FrameworkElement> 对象。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatIsATransformSection"></a>   
 ## 什么是变换？  

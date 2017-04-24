@@ -30,7 +30,7 @@ caps.handback.revision: 35
   
  从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中的集合<xref:System.Collections.Concurrent>命名空间提供高效的线程安全操作，以便从多个线程访问集合项。 System.Collections.Immutable 命名空间中的不可变集合类 ([NuGet 程序包](https://www.nuget.org/packages/System.Collections.Immutable)) 是本质上是线程安全，因为操作均在原始集合的副本上，不能修改原始集合。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>常用集合功能  

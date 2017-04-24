@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # 集合类型依赖项属性
 本主题为属性类型是集合类型的情况下如何实现[依赖项属性](GTMT)提供了指导和建议的模式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## 实现集合类型依赖项属性  
@@ -36,7 +36,7 @@ caps.handback.revision: 7
   
  请看下面的示例。  下面的示例部分演示 `Aquarium` 类的定义。  该类定义集合类型依赖项属性 `AquariumObjects`，它将泛型 <xref:System.Collections.Generic.List%601> 类型与 <xref:System.Windows.FrameworkElement> 类型约束一起使用。  在对依赖项属性的 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 调用中，元数据将默认值建立为一个新的泛型 <xref:System.Collections.Generic.List%601>。  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]
+ <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
  [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
 [!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
 [!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  

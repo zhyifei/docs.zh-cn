@@ -28,7 +28,7 @@ caps.handback.revision: 8
   
  下面的代码示例演示如何使用<xref:System.ServiceModel.Description.ServiceThrottlingBehavior>设置的应用程序配置文件中的类<xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>， <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>，和<xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>属性设置为 1 作为最小示例。 实际体验确定任何特定应用程序的最佳设置。  
   
- [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  
+ <!-- TODO: review snippet reference [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  -->  
   
  确切的运行时行为取决于的值<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>和<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>属性，控制多少条消息可操作内执行的上一次以及服务的生存期<xref:System.ServiceModel.InstanceContext>有关传入通道会话，分别。  
   

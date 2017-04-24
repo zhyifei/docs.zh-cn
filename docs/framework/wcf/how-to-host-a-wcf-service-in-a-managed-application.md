@@ -64,7 +64,7 @@ caps.handback.revision: 42
 8.  创建 <xref:System.ServiceModel.ServiceHost> 类的实例，并将表示服务类型的 <xref:System.Type> 和基址统一资源标识符 \(URI\) 传递到 [ServiceHost\(Type, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>。启用元数据发布，然后调用 <xref:System.ServiceModel.ServiceHost> 上的 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 方法，以初始化服务并使其准备好接收消息。  
   
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
-     [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  
+     <!-- TODO: review snippet reference [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  -->  
   
     > [!NOTE]
     >  此示例使用默认终结点，且该服务不需要任何配置文件。如果未配置任何终结点，则运行时会为该服务实现的每个服务协定的每个基地址创建一个终结点[!INCLUDE[crabout](../../../includes/crabout-md.md)]默认终结点的更多信息，请参见[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  

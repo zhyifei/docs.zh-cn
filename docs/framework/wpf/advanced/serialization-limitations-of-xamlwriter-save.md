@@ -23,7 +23,7 @@ caps.handback.revision: 9
 # XamlWriter.Save 的序列化限制
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> 可用于将 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的内容序列化为一个[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件。  但是，对于明确序列化的内容还有一些显著的限制。  本主题论述了这些限制和某些一般注意事项。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## 运行时表示形式而非设计时表示形式  

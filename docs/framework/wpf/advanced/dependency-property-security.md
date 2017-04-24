@@ -27,7 +27,7 @@ caps.handback.revision: 7
 # 依赖项属性的安全性
 依赖项属性通常应当被视为公共属性。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统在本质上无法对依赖项属性值提供安全保证。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AccessSecurity"></a>   
 ## 包装和依赖项属性的访问和安全性  

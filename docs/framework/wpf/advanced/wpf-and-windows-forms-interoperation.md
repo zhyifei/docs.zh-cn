@@ -28,7 +28,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  关于混合控件方案，需要考虑一些特殊因素。  混合控件将一种技术中的控件嵌套于另一种技术中的控件。  这也称为“嵌套互操作”。  多级混合控件具有多个级别的混合控件嵌套。  多级嵌套互操作的一个示例是包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件，前者又包含另一个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  不支持多级混合控件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## 在 WPF 中承载 Windows 窗体控件  

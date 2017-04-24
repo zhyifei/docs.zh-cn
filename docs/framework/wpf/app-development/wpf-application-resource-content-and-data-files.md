@@ -43,7 +43,7 @@ caps.handback.revision: 21
   
  本主题介绍如何配置和使用应用程序数据文件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resource_Files"></a>   
 ## 资源文件  

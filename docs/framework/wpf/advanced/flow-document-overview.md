@@ -24,7 +24,7 @@ caps.handback.revision: 29
 # 流文档概述
 流文档旨在优化查看和可读性。  流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列文档内容，而不是设置为一个预定义的布局。  此外，流文档还提供一些高级文档功能，例如，分页和分栏。  本主题概述了流文档及其创建方式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_flow_document"></a>   
 ## 什么是流文档？  
