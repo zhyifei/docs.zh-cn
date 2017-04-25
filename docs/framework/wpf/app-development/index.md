@@ -39,11 +39,7 @@ ms.lasthandoff: 04/08/2017
   
  为了生成这样一组应用程序，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要实现众多服务。 本主题对这些服务以及在何处可以找到更多相关信息进行了概述。  
   
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> d415995... fix build errors
   
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>应用程序管理  

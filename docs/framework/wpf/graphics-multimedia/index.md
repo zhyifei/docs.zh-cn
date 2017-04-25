@@ -33,13 +33,7 @@ ms.lasthandoff: 04/08/2017
  本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的图形、动画和媒体功能，可用于向应用程序添加图形、转换效果、声音和视频。  
   
 > [!NOTE]
-<<<<<<< HEAD
 >  强烈建议不要在 Windows 服务中使用 WPF 类型。 如果尝试在 Windows 服务中使用 WPF 类型，该服务可能无法按预期工作。   
-=======
->  强烈建议不要在 Windows 服务中使用 WPF 类型。  如果尝试在 Windows 服务中使用 WPF 类型，则服务可能无法按预期方式工作。  
-  
-   
->>>>>>> d415995... fix build errors
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## <a name="whats-new-with-graphics-and-multimedia-in-wpf-4"></a>WPF 4 中的图形和多媒体新增功能  
