@@ -1,35 +1,47 @@
 ---
-title: "使用基类型"
-description: "使用基类型"
-keywords: ".NET、.NET Core"
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
+title: "在 .NET 中使用基类型 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: e53e414f-e0b6-4076-a6ab-189ba93e23cd
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- types, base
+- base types
+- type system, base types
+ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
+caps.latest.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2be90e0a3e6627152532ff607768dbbb333045d7
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: 9169510da6b6d5022b59a3a520b79933c783ce05
+ms.openlocfilehash: 490a09798518b3750ff5ae2fc19259f201ffc964
+ms.lasthandoff: 04/11/2017
 
 ---
-
-# <a name="working-with-base-types"></a>使用基类型
-
-本部分介绍 .NET 基类型操作，包括格式设置、转换和常用操作。
-
-## <a name="in-this-section"></a>本节内容
-
-[类型转换](type-conversion.md) - 介绍如何从一种类型转换为另一种类型。
-
-[格式设置类型](formatting-types.md) - 介绍如何使用字符串格式说明符对字符串设置格式。
-
-[操作字符串](manipulating-strings.md) - 介绍如何对字符串进行操作和格式设置。
-
-[分析字符串](parsing-strings.md) - 介绍如何将字符串转换为类型。
-
-[常规类型系统](common-type-system.md) - 介绍 .NET 中使用的类型。
-
+# <a name="working-with-base-types-in-net"></a>在 .NET 中使用基类型
+本部分介绍 .NET 基类型操作，包括格式设置、转换和常用操作。  
+  
+## <a name="in-this-section"></a>本节内容  
+ [.NET Framework 中的类型转换](../../../docs/standard/base-types/type-conversion.md)  
+ 介绍了如何从一种类型转换成另一种类型。  
+  
+ [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
+ 介绍了如何使用字符串格式说明符设置字符串格式。  
+  
+ [控制字符串](../../../docs/standard/base-types/manipulating-strings.md)  
+ 介绍了如何控制和设置字符串格式。  
+  
+ [分析字符串](../../../docs/standard/base-types/parsing-strings.md)  
+ 介绍了如何将字符串转换成 .NET Framework 类型。  
+  
+## <a name="related-sections"></a>相关章节  
+ [常规类型系统](../../../docs/standard/base-types/common-type-system.md)  
+ 介绍了 .NET Framework 使用的类型。  
+  
+ [日期、时间和时区](../../../docs/standard/datetime/index.md)  
+ 描述如何在时区识别应用程序中处理时区和时区转换。
