@@ -30,7 +30,7 @@ ms.lasthandoff: 04/20/2017
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>为什么创建依赖框架的部署？
 
-部署 FDD 具有很多有点：
+部署 FDD 具有很多优点：
 
 - 不需要提前定义 .NET Core 应用将在其上运行的目标操作系统。 因为无论什么操作系统，.NET Core 的可执行文件和库都是用通用的 PE 文件格式，因此，无论什么基础操作系统，.NET Core 都可执行应用。 有关 PE 文件格式的详细信息，请参阅 [.NET 程序集文件格式](../../standard/assembly-format.md)。
 
