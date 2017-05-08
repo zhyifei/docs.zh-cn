@@ -23,5 +23,6 @@
 ### [结构变量](structure-variables.md)
 ### [结构和其他编程元素](structures-and-other-programming-elements.md)
 ### [结构和类](structures-and-classes.md)
+## [元组](tuples.md)
 ## [有效使用数据类型](efficient-use-of-data-types.md)
 ## [数据类型疑难解答](troubleshooting-data-types.md)

@@ -2,7 +2,7 @@
 title: ".NET Framework 入门 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
+ms.prod: .net-framework-4.6
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,9 +18,9 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 8571258a2fa4e7bd5180301e30e0fea8117eede6
-ms.openlocfilehash: 83ffd29d4301ae8848cc01de8e7def045b24a0ca
-ms.lasthandoff: 04/15/2017
+ms.sourcegitcommit: adb9c30b6dc52ea17410423fd76c938e258549eb
+ms.openlocfilehash: 6c069db2e6138f73935a4bdd458fbe94ef57d968
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="getting-started-with-the-net-framework"></a>.NET Framework 入门
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/15/2017
   
  若要开发 .NET Framework 应用程序或组件，请执行以下操作：  
   
-1.  如果未在操作系统上预安装 .NET Framework，请安装应用程序所面向的 .NET Framework 版本。 最新的生产版本是 .NET Framework 4.7，Windows 10 创意者更新上会预安装此版本，但该版本在早期版本的 Windows 操作系统上不可用。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 提供了带外版本的其他 .NET Framework 程序包。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
+1.  如果未在操作系统上预安装 .NET Framework，请安装应用程序所面向的 .NET Framework 版本。 最新的生产版本是 .NET Framework 4.7，此版本预安装在 Windows 10 创意者更新上，并可下载到旧版 Windows 操作系统上。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 提供了带外版本的其他 .NET Framework 程序包。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
   
 2.  选择用于开发应用程序的 .NET Framework 语言。 有大量可用的语言，包括 Microsoft 中的 Visual Basic、C#、Visual F# 和 C++。 （一种用于开发 .NET Framework 应用程序的编程语言，它遵循[公共语言基础结构 (CLI) 规范](http://go.microsoft.com/fwlink/?LinkId=199862)。）  
   
@@ -92,4 +92,3 @@ ms.lasthandoff: 04/15/2017
  [新增功能](../../../docs/framework/whats-new/index.md)   
  [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkId=227195)   
  [开发指南](../../../docs/framework/development-guide.md)
-

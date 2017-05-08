@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: 3f8c62a6a3b179e146874761465ad2665c20a6dd
-ms.lasthandoff: 04/11/2017
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 5630e2202f822015437bbb1d3f2cb751825e382b
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -23,11 +23,11 @@ ms.lasthandoff: 04/11/2017
 ## <a name="building-applications-with-visual-studio-2017"></a>使用 Visual Studio 2017 生成应用程序
 
 - [生成 C# Hello World 应用程序](../../csharp/getting-started/with-visual-studio.md)
-- [调试 C# Hello World 应用程序](../../csharp/getting-started/debugging-with-visual-studio-2017.md)
-- [发布 C# Hello World 应用程序](../../csharp/getting-started/publishing-with-visual-studio-2017.md)
-- [生成 C# 类库](../../csharp/getting-started/library-with-visual-studio-2017.md)
+- [调试 C# Hello World 应用程序](../../csharp/getting-started/debugging-with-visual-studio.md)
+- [发布 C# Hello World 应用程序](../../csharp/getting-started/publishing-with-visual-studio.md)
+- [生成 C# 类库](../../csharp/getting-started/library-with-visual-studio.md)
 - [测试 C# 类库](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [通过 .NET Core 使用 C# 类库](../../csharp/getting-started/consuming-library-with-visual-studio-2017.md)
+- [通过 .NET Core 使用 C# 类库](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [在 Windows 上生成完整的 .NET Core 解决方案](using-on-windows-full-solution.md)
 - [NoSQL 教程：在 .NET Core 上构建一个 DocumentDB C# 控制台应用程序](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
 

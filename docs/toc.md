@@ -29,6 +29,8 @@
 ### [project.json 和 csproj 之间的映射](core/tools/project-json-to-csproj.md)
 ### [从 DNX 迁移](core/migration/from-dnx.md)
 ## [应用程序部署](core/deploying/index.md)
+### [使用 CLI 工具部署应用](core/deploying/deploy-with-cli.md)
+### [使用 Visual Studio 部署应用](core/deploying/deploy-with-vs.md)
 ### [使用跨平台工具创建 NuGet 包](core/deploying/creating-nuget-packages.md)
 ## [Docker](core/docker/index.md)
 ### [为 .NET Core 应用程序生成 Docker 映像](core/docker/building-net-docker-images.md)
@@ -38,7 +40,7 @@
 ### [使用 dotnet 测试和 MSTest 进行单元测试](core/testing/unit-testing-with-mstest.md)
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支持](core/versions/lts-current.md)
-### [🔧服务](core/versions/servicing.md)
+<!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [运行时 IDentifier 目录](core/rid-catalog.md)
 ## [.NET Core CLI 工具](core/tools/index.md)
 ### [遥测](core/tools/telemetry.md)
@@ -74,7 +76,7 @@
 ### [为 .NET Core 组织项目](core/porting/project-structure.md)
 ### [分析第三方依赖项](core/porting/third-party-deps.md)
 ### [移植库](core/porting/libraries.md)
-### [🔧NuGet 包](core/porting/nuget-packages.md)
+<!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [VS 2015/project.json 文档](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -90,7 +92,7 @@
 ### [桌面应用中的资源](framework/resources/)
 ### [辅助功能](framework/ui-automation/)
 ### [数据和建模](framework/data/)
-### [客户端应用程序](framework/develop-client-applications.md)
+### [客户端应用程序](framework/develop-client-apps.md)
 #### [常用的客户端技术](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows 窗体](framework/winforms/)
@@ -128,9 +130,8 @@
 ### [C# 7 中的新增功能](csharp/whats-new/csharp-7.md)
 ### [C# 6 中的新增功能](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
-## [🔧C# Interactive](csharp/interactive/)
+<!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
-## [C# 概念](csharp/concepts.md)
 ### [C# 类型系统](csharp/programming-guide/types/index.md)
 ### [命名空间](csharp/programming-guide/namespaces/index.md)
 ### [基本类型](csharp/basic-types.md)
@@ -138,7 +139,7 @@
 ### [结构](csharp/structs.md)
 ### [元组](csharp/tuples.md)
 ### [接口](csharp/programming-guide/interfaces/index.md)
-### [方法和 Lambda 表达式](csharp/methods-lambda-expressions.md)
+<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
 #### [方法](csharp/methods.md)
 #### [Lambda 表达式](csharp/lambda-expressions.md)
 ### [属性](csharp/properties.md)
@@ -156,7 +157,7 @@
 #### [区分委托和事件](csharp/distinguish-delegates-events.md)
 ### [语言集成查询 (LINQ)](csharp/linq/)
 ### [异步编程](csharp/async.md)
-### [🔧并行编程](csharp/parallel.md)
+<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [模式匹配](csharp/pattern-matching.md)
 ### [表达式树](csharp/expression-trees.md)
 #### [已解释的表达式树](csharp/expression-trees-explained.md)
@@ -167,11 +168,11 @@
 #### [翻译表达式](csharp/expression-trees-translating.md)
 #### [摘要](csharp/expression-trees-summary.md)
 ### [本机互操作性](csharp/programming-guide/interop/index.md)
-### [🔧反射和代码生成](csharp/reflection.md)
+<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [将代码文档化](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-## [使用 .NET 编译器平台🔧](csharp/roslyn/index.md)
+<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
 ## [C# 编程指南](csharp/programming-guide/)
 ## [语言参考](csharp/language-reference/)
 ## [演练](csharp/walkthroughs.md)
@@ -182,10 +183,10 @@
 
 ## [F# 教程](fsharp/tour.md)
 
-## [功能性编程的介绍](fsharp/introduction-to-functional-programming/index.md)
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
 ### [作为第一类值的函数](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
-## [教程](fsharp/tutorials/index.md)
+<!--## [Tutorials](fsharp/tutorials/index.md)-->
 ### [入门](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 入门](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
 #### [Visual Studio Code 和 Ionide 入门](fsharp/tutorials/getting-started/getting-started-vscode.md)
@@ -202,10 +203,10 @@
 #### [创建类型提供程序](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [类型提供程序安全性](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [类型提供程序疑难解答](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-### [异步和并发编程](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)
+<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
 #### [异步编程](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
-## [在 Visual Studio 中使用 F#](fsharp/using-fsharp-in-visual-studio/index.md)
+<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
 ### [Visual F# 开发环境功能](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
 ### [配置项目](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
 ### [面向 .NET 的较旧版本](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
@@ -215,7 +216,7 @@
 ### [通过 F# 实现 Azure 文件存储入门](fsharp/using-fsharp-on-azure/file-storage.md)
 ### [通过 F# 实现 Azure 队列存储入门](fsharp/using-fsharp-on-azure/queue-storage.md)
 ### [通过 F# 实现 Azure 表格存储入门](fsharp/using-fsharp-on-azure/table-storage.md)
-### [在 Azure Service Fabric 上使用 F#](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)
+<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
 ### [F# Azure 依赖项的包管理](fsharp/using-fsharp-on-azure/package-management.md)
 
 ## [F# 语言参考](fsharp/language-reference/index.md)

@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
-ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
+ms.openlocfilehash: 2ebb4a32d7898f38596ccc526a721c8f811a5951
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,10 +24,10 @@ C# 指南收录了 C# 语言的大量信息。 此网站面向许多不同的受
     - 请先阅读[教程](tutorials/index.md)部分。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 你将了解语言概念，以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读我们的 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
 
 * 对于刚开始接触 C# 的开发者： 
-    - 如果以前从事过开发工作，但是刚开始接触 C#，请阅读 [C# 语言介绍](tour-of-csharp/index.md)。 你将了解 C# 语言的基本语法和结构，并参考语言介绍将 C# 与你用过的其他语言进行比较。 还可以浏览[教程](tutorials/index.md)，尝试生成基本的 C# 程序。 或者，请参阅 [C# 概念](concepts.md)，深入了解 C# 语言的各项功能。
+    - 如果以前从事过开发工作，但是刚开始接触 C#，请阅读 [C# 语言介绍](tour-of-csharp/index.md)。 你将了解 C# 语言的基本语法和结构，并参考语言介绍将 C# 与你用过的其他语言进行比较。 还可以浏览[教程](tutorials/index.md)，尝试生成基本的 C# 程序。
 
 * 对于 C# 经验丰富的开发者：
-    - 如果之前用过 C#，应先阅读此语言最新版本中新增的功能。 请参阅 [C# 中的新增功能](whats-new/index.md)，了解当前版本中的新功能。 然后，浏览 [C# 概念](concepts.md)中想要更深入了解的内容。
+    - 如果之前用过 C#，应先阅读此语言最新版本中新增的功能。 请参阅 [C# 中的新增功能](whats-new/index.md)，了解当前版本中的新功能。
  
 ## <a name="how-the-c-guide-is-organized"></a>C# 指南的结构
 
@@ -45,15 +45,12 @@ C# 指南分为七个部分。 可以按顺序阅读，也可以直接跳到最�
 * [最新功能](whats-new/index.md)：
     - 此部分介绍了 C# 语言中的新功能。 还介绍了 C# 交互窗口 (C# REPL) 和 .NET 编译器平台 SDK 等新工具。 你将了解 C# 语言是如何不断发展的， 以及如何使用新工具提高探索语言和自动执行任务的效率。 
 
-* [C# 交互窗口](interactive/index.md)：
-    - C# 交互窗口是一种可用于探索 C# 语言的交互式读取–求值–打印循环 (REPL)。 还可用于探索不同的库和框架，具体方法是以交互方式尝试不同的操作。 在此部分中，你将了解如何安装和启动 C# 交互窗口，以及如何使用它探索 API。 还将了解如何使用 C# 交互窗口来导出已测试的类，以供日后使用。  
-
-* [C# 概念](concepts.md)：
-    - 你将了解对 C# 程序员最有用的概念。 此部分介绍了多个端到端方案，展示了不同的 C# 开发技术。 虽然将重点放在 C# 语言，但考虑到端到端方案的本质，此部分还展示了多个程序来说明属于 .NET 生态系统的不同框架和库。
-
-* [.NET 编译器平台 SDK](roslyn/index.md)：
-    - 使用 .NET 编译器平台 SDK，可以编写组件来分析代码，并对相应代码提出建议或进行改进。 在此部分中，你将了解 API 的组织方式，以及如何创建代码来向团队推行规则和最佳做法。 此部分收录了示例、端到端方案以及指向其他库的链接（其中包含使用这些 API 的更多示例）。
-
+<!--* [C# Interactive](interactive/index.md):
+    - C# Interactive is a Read-Eval-Print Loop (REPL) that you can use to interactively explore the language. It can also be used to explore different libraries and frameworks by trying different actions using an interactive approach. In this section you'll learn how to install and start C# interactive, and how to explore APIs with it. You'll also learn how to use C# interactive to export tested classes for later use.  
+-->
+<!--* [.NET Compiler Platform SDK](roslyn/index.md):
+    - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
+-->
 * [语言参考](language-reference/index.md)：
     - 此部分收录了 C# 语言参考资料。 此类资料有助于你了解 C# 语法和语义。 
 

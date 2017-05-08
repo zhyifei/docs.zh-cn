@@ -30,16 +30,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d94b01f24ea1c45ecbf6b14ecfdf164d8b8b10c
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
+ms.lasthandoff: 05/01/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Visual Studio 2015 中 Visual Basic 的重大更改](../../visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)  
+ [Visual Studio 中 Visual Basic 的重大更改](breaking-changes-in-visual-studio.md)  
  列出了此版本中可能阻止应用程序进行编译，或可能更改该应用程序的运行时行为的更改。  
   
  [为 Visual Basic 程序员提供的附加资源](../../visual-basic/getting-started/additional-resources.md)  
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/13/2017
  [了解 Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  提供指向有关学习如何在 Visual Basic 中编程的资源的链接。  
   
- [获取 Visual Basic](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)  
+ [获取 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供包含 Visual basic 支持的 Visual Studio 版本的下载链接，包含免费版。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/13/2017
  [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  介绍如何得到支持和提供反馈。  
   
- [Visual Studio](http://msdn.microsoft.com/en-us/06ddebea-2c83-4a45-bb48-6264c797ed93)  
+ [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  提供 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 文档的链接。  
   
  [C#](../../csharp/csharp.md)  

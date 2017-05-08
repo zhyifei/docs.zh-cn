@@ -131,7 +131,7 @@ SampleImplementation<Button> button = new SampleImplementation<Button>();
  扩展变体泛型接口时，必须使用 `in` 和 `out` 关键字来显式指定派生接口是否支持变体。 编译器不会根据正在扩展的接口来推断变体。 例如，考虑以下接口。  
   
 ```csharp  
-nterface ICovariant<out T> { }  
+interface ICovariant<out T> { }  
 interface IInvariant<T> : ICovariant<T> { }  
 interface IExtCovariant<out T> : ICovariant<T> { }  
 ```  
@@ -204,3 +204,4 @@ class Program
 ## <a name="see-also"></a>另请参阅  
  [泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+
