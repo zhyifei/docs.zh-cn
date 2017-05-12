@@ -19,10 +19,11 @@ caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
+ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -56,7 +57,8 @@ ms.lasthandoff: 04/08/2017
 [入门](../../docs/framework/get-started/index.md)  
 提供对 .NET Framework 的全面概述和指向其他资源的链接。  
   
-如果要将应用程序迁移到新版 .NET Framework，可以使用[迁移指南](../../docs/framework/migration-guide/index.md)获取所需的资源和更改列表。  
+[迁移指南](../../docs/framework/migration-guide/index.md)   
+如果你正在将应用程序迁移到 .NET Framework 的新版本，请提供资源和所需考虑的更改的列表。  
   
 [开发指南](../../docs/framework/development-guide.md)  
 提供了有关应用程序开发的所有关键技术区域和任务（包括创建、配置、调试、保护和部署应用程序）的指南，以及有关动态编程、互操作性、扩展性、内存管理和线程处理的信息。  
@@ -64,7 +66,8 @@ ms.lasthandoff: 04/08/2017
 [工具](../../docs/framework/tools/index.md)  
 描述有助于使用 .NET Framework 技术开发、配置和部署应用程序的工具。  
   
-[.NET Framework 类库](/dotnet/api/?view=netframework-4.7)提供了 .NET Framework 命名空间中包含的每个类的语法、代码示例和相关信息。  
+[.NET Framework 类库](/dotnet/api/?view=netframework-4.7)   
+提供 .NET Framework 命名空间中包含的每一个类的语法、代码示例和相关信息。  
   
 [其他类库和 API](../../docs/framework/additional-apis/index.md)  
 收录了非常态 (OOB) 版本中包含的类以及定位特定平台或 .NET Framework 实现代码的类的相关文档。
