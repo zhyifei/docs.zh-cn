@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
 ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/20/2017
 
 ---
@@ -86,7 +87,7 @@ ms.lasthandoff: 03/20/2017
 
 NuGet 包面向一个或多个[框架](frameworks.md)。 .NET 标准库包面向“.NET Standard”框架。 可以使用 `netstandard` [精简 TFM](frameworks.md)（例如 `netstandard1.4`）来指定 .NET Standard 框架作为目标。 如果构建的库将在多个运行时中运行，就应将此框架作为目标。 
 
-`NETStandard.Library` 元包引用定义 .NET 标准库的整套 NuGet 包。  要指定 `netstandard` 作为目标，最常见的方法是引用此元包。 它描述并提供了约&40; 个 .NET 库并与 .Net 标准库所定义的 API 相关联。 可以引用以 `netstandard` 为目标的其他包来使用其他 API。 
+`NETStandard.Library` 元包引用定义 .NET 标准库的整套 NuGet 包。  要指定 `netstandard` 作为目标，最常见的方法是引用此元包。 它描述并提供了约 40 个 .NET 库并与 .Net 标准库所定义的 API 相关联。 可以引用以 `netstandard` 为目标的其他包来使用其他 API。 
 
 ### <a name="versioning"></a>版本管理
 

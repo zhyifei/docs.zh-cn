@@ -34,9 +34,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,7 @@ catch (InvalidCastException e)
  筛选想要处理的异常的一种方式是使用 `catch` 参数。  也可以使用谓词表达式进一步检查该异常以决定是否要对其进行处理。  如果谓词表达式返回 false，则继续搜索处理程序。  
   
 ```csharp  
-catch (ArgumentException e) when (e.ParamName == “…”)  
+catch (ArgumentException e) when (e.ParamName == "…")  
 {  
 }  
 ```  
