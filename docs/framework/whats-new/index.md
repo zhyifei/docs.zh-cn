@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ec57b79f67f826dbe61aa81bb5f82e20d61db2e3
-ms.openlocfilehash: cec16529ea93773362715cac7694b451ce3dddfe
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: e36d3523a52def454e7ed0233f2179ab88ab3bcb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
@@ -528,14 +528,14 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ```xaml
 <GroupDescriptions>
      <PropertyGroupDescription 
-         PropertyName=”Age” 
+         PropertyName="Age" 
          CustomSort= 
-              ”{x:Static PropertyGroupDescription.CompareNamesAscending}”/>
+              "{x:Static PropertyGroupDescription.CompareNamesAscending}"/>
      </PropertyGroupDescription>
 </GroupDescriptions>
 
 <SortDescriptions>
-     <SortDescription PropertyName=”LastName”/>
+     <SortDescription PropertyName="LastName"/>
 </SortDescriptions>
 ```
 
@@ -553,7 +553,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 ```xml
 <runtime>
-   <AppContextSwitchOverrides value=”Switch.System.Windows.DoNotScaleForDpiChanges=false”/>
+   <AppContextSwitchOverrides value="Switch.System.Windows.DoNotScaleForDpiChanges=false"/>
 </runtime>
 ```
 
@@ -647,7 +647,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  客户需要在应用服务器或客户端计算机上安装 HSM 供应商提供的 CSP 提供程序或 CNG 密钥存储提供程序，才能访问使用存储在 HSM 中的列主密钥保护的始终加密数据。
 
- 改进了 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 连接行为：SqlClient 现在可自动提供与 AlwaysOn 可用性组 (AG) 之间的更快连接。 它以透明方式检测应用程序是否连接到不同子网上的 AlwaysOn 可用性组 (AG)，快速发现当前的活动服务器并提供与服务器之间的连接。 在此版本之前，应用程序必须将连接字符串设置为包括 `“MultisubnetFailover=true”`，以指示它已连接到 AlwaysOn 可用性组。 如果未将连接关键字设置为 `true`，则应用程序可能会在连接到 AlwaysOn 可用性组时遇到超时。 使用此版本时，应用程序*无需*再将 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 设置为 `true`。 有关对 Always On 可用性组的 SqlClient 支持的详细信息，请参阅[对高可用性、灾难恢复的 SqlClient 支持](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
+ 改进了 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 连接行为：SqlClient 现在可自动提供与 AlwaysOn 可用性组 (AG) 之间的更快连接。 它以透明方式检测应用程序是否连接到不同子网上的 AlwaysOn 可用性组 (AG)，快速发现当前的活动服务器并提供与服务器之间的连接。 在此版本之前，应用程序必须将连接字符串设置为包括 `"MultisubnetFailover=true"`，以指示它已连接到 AlwaysOn 可用性组。 如果未将连接关键字设置为 `true`，则应用程序可能会在连接到 AlwaysOn 可用性组时遇到超时。 使用此版本时，应用程序*无需*再将 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 设置为 `true`。 有关对 Always On 可用性组的 SqlClient 支持的详细信息，请参阅[对高可用性、灾难恢复的 SqlClient 支持](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
 
 <a name="WPF461"></a> 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
@@ -675,7 +675,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - 这些文件应是以字节顺序标记 (BOM) 开头的 UTF-16 LE 纯文本。
 
-- 每行应包含一个单词（位于已添加和已排除的单词列表中），或是其中用竖线（“&#124;”）分隔单词的自动更正对（位于自动更正单词列表中）。
+- 每行应包含一个单词（位于已添加和已排除的单词列表中），或是其中用竖线 ("&#124;") 分隔单词的自动更正对（位于自动更正单词列表中）。
 
 - 这些文件被视为只读，不会由系统进行修改。
 
