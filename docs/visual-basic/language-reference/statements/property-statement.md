@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 87cb32c12ab3238508a6a4bb114306909e409dda
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -237,3 +238,4 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
  [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)   
  [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)   
  [默认](../../../visual-basic/language-reference/modifiers/default.md)
+
