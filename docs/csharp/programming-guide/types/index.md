@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 61f23020b8a5dd0136d54e0a2ceb925bebca88cc
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 74604c2dfe16e6f90d5c0534fad3d72906dc07cc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
@@ -59,7 +60,7 @@ ms.lasthandoff: 03/31/2017
   
 -   允许执行的运算种类。  
   
- 编译器使用类型信息来确保在代码中执行的所有运算都是*类型安全*的。 例如，如果声明 [int](../../../csharp/language-reference/keywords/int.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](../../../csharp/language-reference/keywords/bool.md) 类型的变量执行同样的运算，则编译器会生成错误，如以下示例所示：  
+ 编译器使用类型信息来确保在代码中执行的所有操作都是*类型安全*。 例如，如果声明 [int](../../../csharp/language-reference/keywords/int.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](../../../csharp/language-reference/keywords/bool.md) 类型的变量执行同样的运算，则编译器会生成错误，如以下示例所示：  
   
  [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/31/2017
 ## <a name="the-common-type-system"></a>通用类型系统  
  对于 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中的类型系统，请务必了解以下两个基本要点：  
   
--   支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以转而派生自其他某种类型，在这种情况下，派生类型可以继承其继承层次结构中两个基类型的成员。 所有类型（包括内置数值类型，如 <xref:System.Int32?displayProperty=fullName> (C# keyword: [int](../../../csharp/language-reference/keywords/int.md))）最终都继承自一个基类型，即 <xref:System.Object?displayProperty=fullName> (C# keyword: [object](../../../csharp/language-reference/keywords/object.md))。 这样的统一类型层次结构称为[通用类型系统](http://msdn.microsoft.com/library/53c57c96-83e1-4ee3-9543-9ac832671a89) (CTS)。 若要详细了解 C# 中的继承，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
+-   支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以转而派生自其他某种类型，在这种情况下，派生类型可以继承其继承层次结构中两个基类型的成员。 所有类型（包括 <xref:System.Int32?displayProperty=fullName>C# 关键字：[int](../../../csharp/language-reference/keywords/int.md)等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object?displayProperty=fullName>（C# 关键字：[object](../../../csharp/language-reference/keywords/object.md)。 这样的统一类型层次结构称为[通用类型系统](../../../standard/base-types/common-type-system.md) (CTS)。 若要详细了解 C# 中的继承，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
 -   CTS 中的每种类型被定义为值类型或引用类型。 这包括 .NET Framework 类库中的所有自定义类型以及你自己的用户定义类型。 使用 [struct](../../../csharp/language-reference/keywords/struct.md) 关键字定义的类型是值类型；所有内置数值类型都是 `structs`。 使用 [class](../../../csharp/language-reference/keywords/class.md) 关键字定义的类型是引用类型。 引用类型和值类型遵循不同的编译时规则和运行时行为。  
   
@@ -103,7 +104,7 @@ CTS 中的值类型和引用类型
 >  你可能会发现，最常用的类型全都被整理到了 <xref:System> 命名空间中。 不过，包含类型的命名空间与类型是值类型还是引用类型没有关系。  
   
 ### <a name="value-types"></a>值类型  
- 值类型派生自 <xref:System.ValueType?displayProperty=fullName>，后者又派生自 <xref:System.Object?displayProperty=fullName>。 派生自 <xref:System.ValueType?displayProperty=fullName> 的类型在 CLR 中有特殊行为。 值类型变量直接包含值。也就是说，内存在声明变量的任何上下文中进行内联分配。 对于值类型变量，没有单独的堆分配或垃圾回收开销。  
+ 值类型派生自<xref:System.ValueType?displayProperty=fullName>（派生自 <xref:System.Object?displayProperty=fullName>）。 派生自 <xref:System.ValueType?displayProperty=fullName> 的类型在 CLR 中具有特殊行为。 值类型变量直接包含值。也就是说，内存在声明变量的任何上下文中进行内联分配。 对于值类型变量，没有单独的堆分配或垃圾回收开销。  
   
  值类型分为两类：[结构](../../../csharp/language-reference/keywords/struct.md)和[枚举](../../../csharp/language-reference/keywords/enum.md)。  
   
@@ -122,21 +123,21 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- 值类型是*密封*的。也就是说，例如，不能从 <xref:System.Int32?displayProperty=fullName> 派生类型，也不能定义结构来继承自任何用户定义类或结构，因为结构只能继承自 <xref:System.ValueType?displayProperty=fullName>。 不过，一个结构可以实现一个或多个接口。 可以将结构类型显式转换成接口类型；这就触发了*装箱*操作，将结构包装在托管堆上的引用类型对象内。 将值类型传递给需要使用 <xref:System.Object?displayProperty=fullName> 作为输入参数的方法时，将会发生装箱操作。 有关详细信息，请参阅[装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
+ 例如，值类型为“密封”，这意味着不能从 <xref:System.Int32?displayProperty=fullName> 派生类型，并且不能将结构定义为从任何用户定义的类或结构继承，因为结构只能从 <xref:System.ValueType?displayProperty=fullName> 继承。 但是，一个结构可以实现一个或多个接口。 可以将结构类型显式转换成接口类型；这就触发了*装箱*操作，将结构包装在托管堆上的引用类型对象内。 当将值类型传递到接受 <xref:System.Object?displayProperty=fullName> 作为输入参数的方法时，将发生装箱操作。 有关详细信息，请参阅[装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
   
  使用 [struct](../../../csharp/language-reference/keywords/struct.md) 关键字可以创建你自己的自定义值类型。 通常情况下，结构用作一小组相关变量的容器，如以下示例所示：  
   
  [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
   
- 有关结构的详细信息，请参阅[结构](../../../csharp/programming-guide/classes-and-structs/structs.md)。 若要详细了解 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中的值类型，请参阅[通用类型系统](http://msdn.microsoft.com/library/53c57c96-83e1-4ee3-9543-9ac832671a89)。  
+ 有关结构的详细信息，请参阅[结构](../../../csharp/programming-guide/classes-and-structs/structs.md)。 若要详细了解 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中的值类型，请参阅[通用类型系统](../../../standard/base-types/common-type-system.md)。  
   
  另一种值类型是[枚举](../../../csharp/language-reference/keywords/enum.md)。 枚举定义的是一组已命名的整型常量。 例如，.NET Framework 类库中的 <xref:System.IO.FileMode?displayProperty=fullName> 枚举包含一组已命名的常量整数，用于指定应采用的文件打开方式。 下面的示例展示了具体定义：  
  
  [!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
- `System.IO.FileMode.Create` 常量的值为 2。 不过，名称对于阅读源代码的人来说更有意义，因此，最好使用枚举，而不是常量数字文本。 有关详细信息，请参阅 <xref:System.IO.FileMode?displayProperty=fullName>。  
+ `System.IO.FileMode.Create` 常量的值为 2。 不过，名称对于阅读源代码的人来说更有意义，因此，最好使用枚举，而不是常量数字文本。 有关详细信息，请参阅<xref:System.IO.FileMode?displayProperty=fullName>。  
   
- 所有枚举均继承自 <xref:System.Enum?displayProperty=fullName>，后者又继承自 <xref:System.ValueType?displayProperty=fullName>。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../../../csharp/programming-guide/enumeration-types.md)。  
+ 所有枚举从 <xref:System.Enum?displayProperty=fullName>（继承自 <xref:System.ValueType?displayProperty=fullName>）继承。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../../../csharp/programming-guide/enumeration-types.md)。  
   
 ### <a name="reference-types"></a>引用类型  
  定义为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)、数组或[接口](../../../csharp/language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，如果声明引用类型的变量，那么在使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建对象实例或为变量分配已在其他位置使用 `new, as shown in the following example:` 创建的对象前，变量会一直包含 [null](../../../csharp/language-reference/keywords/null.md) 值，如以下示例所示：  
@@ -151,7 +152,7 @@ MyClass mc2 = mc;
 IMyInterface iface = new MyClass();  
 ```  
   
- 创建对象后，内存会在托管堆上进行分配，并且变量只保留对对象位置的引用。 对于托管堆上的类型，在分配内存和 CLR 自动内存管理功能（称为“*垃圾回收*”）回收内存时都会产生开销。 不过，垃圾回收功能也已经过高度优化，大多数情况下，都不会导致性能问题出现。 有关垃圾回收的详细信息，请参阅[自动内存管理](http://msdn.microsoft.com/library/d4850de5-fa63-4936-a250-5678d118acba)。  
+ 创建对象后，内存会在托管堆上进行分配，并且变量只保留对对象位置的引用。 对于托管堆上的类型，在分配内存和 CLR 自动内存管理功能（称为“*垃圾回收*”）回收内存时都会产生开销。 不过，垃圾回收功能也已经过高度优化，大多数情况下，都不会导致性能问题出现。 有关垃圾回收的详细信息，请参阅[自动内存管理](../../../standard/automatic-memory-management.md)。  
   
  所有数组都是引用类型，即使元素是值类型，也不例外。 虽然数组隐式派生自 <xref:System.Array?displayProperty=fullName> 类，但可以使用 C# 提供的简化语法声明和使用数组，如以下示例所示：  
   
@@ -162,12 +163,12 @@ IMyInterface iface = new MyClass();
 ## <a name="types-of-literal-values"></a>文本值的类型  
  在 C# 中，文本值可从编译器获取类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要将值 4.56 指定为应按浮点值处理，请在数字后面追加“f”或“F”：`4.56f`。 如果没有追加字母，那么编译器就会推断文本值的类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](../../../csharp/language-reference/keywords/value-types.md)中的各个类型参考页。  
   
- 由于文本值是有类型的，并且所有类型最终都派生自 <xref:System.Object?displayProperty=fullName>，因此可以编写并编译如下代码：  
+ 由于文本已类型化，且所有类型最终都是从 <xref:System.Object?displayProperty=fullName> 派生，因此可以编写和编译如下所示的代码：  
   
  [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
   
 ## <a name="generic-types"></a>泛型类型  
- 类型可使用一个或多个*类型参数*进行声明，这些参数用作客户端代码在创建类型实例时提供的实际类型（*具体类型*）的占位符。 这种类型称为*泛型类型*。 例如，.NET Framework 类型 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 有一个类型参数，按照约定，此参数名为 *T*。创建类型实例时，指定列表将包含的对象类型，例如字符串：  
+ 类型可使用一个或多个*类型参数*进行声明，这些参数用作客户端代码在创建类型实例时提供的实际类型（*具体类型*）的占位符。 这种类型称为*泛型类型*。 例如，.NET Framework 类型 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 具有一个类型参数，它按照惯例被命名为 *T*。创建类型实例时，指定列表将包含的对象类型，例如字符串：  
  
 ```csharp
 List<string> stringList = new List<string>();
@@ -209,6 +210,6 @@ stringList.Add(4);
 ## <a name="see-also"></a>另请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [XML 数据类型转换](http://msdn.microsoft.com/library/a2aa99ba-8239-4818-9281-f1d72ee40bde)   
+ [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)   
  [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)
 
