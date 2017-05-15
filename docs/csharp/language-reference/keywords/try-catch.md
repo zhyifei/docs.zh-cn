@@ -88,7 +88,7 @@ catch (IOException e)
 {  
     // Extract some information from this exception, and then   
     // throw it to the parent method.  
-    whenDo not initialize (e.Source != null)  
+    if (e.Source != null)  
         Console.WriteLine("IOException source: {0}", e.Source);  
     throw;  
 }  
@@ -107,7 +107,6 @@ catch (InvalidCastException e)
  当指定的条件为 true 时，你还可以重新引发异常，如以下示例所示。  
   
 ```csharp  
-  
 catch (InvalidCastException e)  
 {  
     if (e.Data == null)  
