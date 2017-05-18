@@ -153,7 +153,7 @@
     "dest": "_site",
     "template": [ "docs.html" ],
     "xref": [
-      "dotnet-xref/_zip/xrefmap.yml",
+      "dotnet-xref/_zip/dotnet.zip",
       "dotnet-xref/_zip/vs.110.zip",
       "dotnet-xref/_zip/vs.140.zip",
       "dotnet-xref/_zip/office15.zip",
