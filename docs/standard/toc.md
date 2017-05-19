@@ -1,4 +1,4 @@
-# [.NET 入门](getting-started.md)
+# [.NET 入门](get-started.md)
 # [.NET 教程](tour.md)
 # [.NET 体系结构组件](components.md)
 # [.NET 标准库](library.md)

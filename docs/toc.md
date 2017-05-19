@@ -6,7 +6,7 @@
 
 <!-- .NET Core Content -->
 # [.NET Core 指南](core/index.md)
-## [入门](core/getting-started.md)
+## [入门](core/get-started.md)
 ## [Windows 先决条件](core/windows-prerequisites.md)
 ## [macOS 先决条件](core/macos-prerequisites.md)
 ## [教程](core/tutorials/index.md)
