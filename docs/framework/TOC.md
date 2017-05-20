@@ -1,4 +1,4 @@
-# [.NET Framework 开发指南](development-guide.md)
+# [开发指南](development-guide.md)
 ## [应用程序要点](../standard/application-essentials.md)
 ## [数据和建模](data/index.md)
 ## [客户端应用程序](develop-client-apps.md)
@@ -15,4 +15,3 @@
 ## [面向多个平台进行开发](../standard/cross-platform/index.md)
 ## [部署](deployment/index.md)
 ## [性能](performance/index.md)
-
