@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 入门 | Microsoft 文档"
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
-ms.lasthandoff: 05/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Visual Studio 中 Visual Basic 的重大更改](breaking-changes-in-visual-studio.md)  
+
+[Visual Basic 的新增功能](whats-new.md)   
+列出 Visual Basic .NET 各版本中的新功能。
+
+[Visual Studio 中 Visual Basic 的重大更改](breaking-changes-in-visual-studio.md)  
  列出了此版本中可能阻止应用程序进行编译，或可能更改该应用程序的运行时行为的更改。  
   
  [为 Visual Basic 程序员提供的附加资源](../../visual-basic/getting-started/additional-resources.md)  
