@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4c1bab99fc1139f03e5f754cfecaee392b947171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: d974e93c3c50a61889a9ed37ad5f68f7a131a538
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
  在下面的示例中，`TaskOfT_MethodAsync` 异步方法包含返回整数的 return 语句。 因此，该方法声明必须指定 `Task<int>` 的返回类型。  
   
-```cs  
+```csharp  
 // TASK<T> EXAMPLE  
 async Task<int> TaskOfT_MethodAsync()  
 {  
@@ -64,7 +65,7 @@ async Task<int> TaskOfT_MethodAsync()
   
  以下代码调用和等待方法 `TaskOfT_MethodAsync`。 此结果分配给 `result1` 变量。  
   
-```cs  
+```csharp  
 // Call and await the Task<T>-returning async method in the same statement.  
 int result1 = await TaskOfT_MethodAsync();  
 ```  
@@ -74,7 +75,7 @@ int result1 = await TaskOfT_MethodAsync();
 > [!WARNING]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> 属性是堵塞属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 `await` 访问此值，而不是直接访问属性。  
   
-```cs  
+```csharp  
 // Call and await in separate statements.  
 Task<int> integerTask = TaskOfT_MethodAsync();  
   
@@ -86,7 +87,7 @@ int result2 = await integerTask;
   
  以下代码中的显示语句验证 `result1` 变量、`result2` 变量与 `Result` 属性的值是否相同。 请记住，`Result` 属性是锁定属性，在其任务完成之前不应访问。  
   
-```cs  
+```csharp  
 // Display the values of the result1 variable, the result2 variable, and  
 // the integerTask.Result property.  
 textBox1.Text += String.Format("\r\nValue of result1 variable:   {0}\r\n", result1);  
@@ -99,7 +100,7 @@ textBox1.Text += String.Format("Value of integerTask.Result: {0}\r\n", integerTa
   
  在下面的示例中，异步方法 `Task_MethodAsync` 不包含 return 语句。 因此，为此方法指定 `Task` 返回类型，这将启用 `Task_MethodAsync` 为等待。 `Task` 类型的定义不包括存储返回值的 `Result` 属性。  
   
-```cs  
+```csharp  
 // TASK EXAMPLE  
 async Task Task_MethodAsync()  
 {  
@@ -118,7 +119,7 @@ async Task Task_MethodAsync()
   
  以下代码调用和等待方法 `Task_MethodAsync`。  
   
-```cs  
+```csharp  
 // Call and await the Task-returning async method in the same statement.  
 await Task_MethodAsync();  
 ```  
@@ -127,7 +128,16 @@ await Task_MethodAsync();
   
  以下代码从等待 `Task_MethodAsync` 返回的任务中分离调用 `Task_MethodAsync`。  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+// Call and await in separate statements.  
+Task simpleTask = Task_MethodAsync();  
+  
+// You can do other work that does not rely on simpleTask before awaiting.  
+textBox1.Text += String.Format("\r\nApplication can continue working while the Task runs. . . .\r\n");  
+  
+await simpleTask;  
+```  
+  
 ##  <a name="BKMK_VoidReturnType"></a>返回类型为 void  
  Void 返回类型主要用在事件处理程序中，其中需要 void 返回类型。 Void 返回还可用于替代返回 void 的方法，或者用于执行可分类为"发后不理"活动的方法。 但是，你应尽可能地返回 `Task`，因为不能等待返回 void 的异步方法。 这种方法的任何调用方必须能够继续完成，而无需等待调用的异步方法完成，并且调用方必须独立于异步方法生成的任何值或异常。  
   
@@ -137,31 +147,45 @@ await Task_MethodAsync();
   
  下面的代码定义了异步事件处理程序。  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
-##  <a name="BKMK_Example"></a>完整的示例  
+```csharp  
+// VOID EXAMPLE  
+private async void button1_Click(object sender, RoutedEventArgs e)  
+{  
+    textBox1.Clear();  
+  
+    // Start the process and await its completion. DriverAsync is a   
+    // Task-returning async method.  
+    await DriverAsync();  
+  
+    // Say goodbye.  
+    textBox1.Text += "\r\nAll done, exiting button-click event handler.";  
+}  
+```  
+  
+##  <a name="BKMK_Example"></a>完整示例  
  以下 Windows Presentation Foundation (WPF) 项目包含本主题中的代码示例。  
   
  若要运行项目，请执行下列步骤：  
   
 1.  启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择“文件” ****、“新建” ****、“项目” ****。  
+2.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
      **“新建项目”** 对话框随即打开。  
   
-3.  在“模板”****类别的“已安装”****中，选择“Visual C#”，然后选择“Windows”****。 从项目类型列表中，选择“WPF 应用程序”****。  
+3.  在“模板”类别的“已安装”中，选择“Visual C#”，然后选择“Windows”。 从项目类型列表中，选择“WPF 应用程序”。  
   
-4.  输入 `AsyncReturnTypes` 作为项目名称，然后选择“确定”****按钮。  
+4.  输入 `AsyncReturnTypes` 作为项目名称，然后选择“确定”按钮。  
   
-     新项目将出现在“解决方案资源管理器”****中。  
+     新项目将出现在“解决方案资源管理器”中。  
   
 5.  在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
   
-     如果此选项卡不可见，则在“解决方案资源管理器”****中，打开 MainWindow.xaml 的快捷菜单，然后选择“打开”****。  
+     如果此选项卡不可见，则在“解决方案资源管理器”中，打开 MainWindow.xaml 的快捷菜单，然后选择“打开”。  
   
-6.  在 MainWindow.xaml 的“XAML”****窗口中，将代码替换为下面的代码。  
+6.  在 MainWindow.xaml 的“XAML”窗口中，将代码替换为下面的代码。  
   
-    ```cs  
+    ```csharp  
     <Window x:Class="AsyncReturnTypes.MainWindow"  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -175,13 +199,13 @@ await Task_MethodAsync();
   
     ```  
   
-     MainWindow.xaml 的“设计”****视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。  
+     MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。  
   
-7.  在“解决方案资源管理器”****中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”****。  
+7.  在“解决方案资源管理器”中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”。  
   
 8.  将 MainWindow.xaml.cs 中的代码替换为以下代码。  
   
-    ```cs  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Linq;  

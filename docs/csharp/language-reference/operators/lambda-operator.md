@@ -32,28 +32,52 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a75967e61d2c674e87e321de1fb6e4062cca4f19
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 287cf223b1e2fc62cdf8a73db95000337cedebef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 运算符（C# 参考）
-`=>` 标记称作 lambda 运算符。 该标记在 Lambda 表达式**中用来将左侧的输入变量与右侧的 lambda 体分离。 Lambda 表达式是类似于匿名方法的内联表达式，但更加灵活；在以方法语法表示的 LINQ 查询中广泛使用了 Lambda 表达式。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+`=>` 标记称作 lambda 运算符。 该标记在 Lambda 表达式中用来将左侧的输入变量与右侧的 lambda 体分离。 Lambda 表达式是类似于匿名方法的内联表达式，但更加灵活；在以方法语法表示的 LINQ 查询中广泛使用了 Lambda 表达式。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
  以下示例演示了 2 种在字符串数组中查找并显示最短字符串长度的方法。 本示例的第一部分将 Lambda 表达式 (`w => w.Length`) 应用于 `words` 数组的每个元素中，然后使用 <xref:System.Linq.Enumerable.Min%2A> 方法查找最小长度。 为了进行比较，本示例的第二部分演示了使用查询语法执行相同操作的较长解决方案。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+string[] words = { "cherry", "apple", "blueberry" };  
+  
+// Use method syntax to apply a lambda expression to each element  
+// of the words array.   
+int shortestWordLength = words.Min(w => w.Length);  
+Console.WriteLine(shortestWordLength);  
+  
+// Compare the following code that uses query syntax.  
+// Get the lengths of each word in the words array.  
+var query = from w in words  
+            select w.Length;  
+// Apply the Min method to execute the query and get the shortest length.  
+int shortestWordLength2 = query.Min();  
+Console.WriteLine(shortestWordLength2);  
+  
+// Output:   
+// 5  
+// 5  
+```  
+  
 ## <a name="remarks"></a>备注  
  `=>` 运算符具有与赋值运算符 (`=`) 相同的优先级，并且是右结合运算符。  
   
  可以显式指定输入变量的类型或让编译器推断类型；无论何种情况，该变量在编译时均为强类型。 指定类型时，必须用括号括住类型名称和变量名称，如下例所示。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+int shortestWordLength = words.Min((string w) => w.Length);  
+```  
+  
 ## <a name="example"></a>示例  
  以下示例演示如何为使用 2 个参数的标准查询运算符 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 的重载编写一个 Lambda 表达式。 由于 Lambda 表达式具有多个参数，因此参数必须括在括号中。 第 2 个参数 `index` 表示集合中当前元素的索引。 `Where` 表达式返回长度小于其数组中索引位置的所有字符串。  
   
-```cs  
+```csharp  
 static void Main(string[] args)  
 {  
     string[] digits = { "zero", "one", "two", "three", "four", "five",   

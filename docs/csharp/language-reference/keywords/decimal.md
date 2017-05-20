@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f104657c66e067ffe657f8387fef2178e3b2e62b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
@@ -77,7 +78,7 @@ myMoney = (decimal)x;
  有关显式数值转换的详细信息，请参阅[显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)。  
   
 ## <a name="formatting-decimal-output"></a>设置十进制输出的格式  
- 可以 `String.Format` 方法，或通过 <xref:System.Console.Write%2A?displayProperty=fullName> 方法（它会调用 `String.Format()`），对结果设置格式。 货币格式是使用标准货币格式字符串“C”或“c”指定的，如本文后面的第二个示例所示。 有关 `String.Format` 方法的详细信息，请参阅 <xref:System.String.Format%2A?displayProperty=fullName>。  
+ 你可以通过使用 `String.Format` 方法或 <xref:System.Console.Write%2A?displayProperty=fullName> 方法（其调用 `String.Format()`）来设置结果的格式。 货币格式是使用标准货币格式字符串“C”或“c”指定的，如本文后面的第二个示例所示。 有关 `String.Format` 方法的更多信息，请参见 <xref:System.String.Format%2A?displayProperty=fullName>。  
   
 ## <a name="example"></a>示例  
  下面的示例尝试添加 [double](../../../csharp/language-reference/keywords/double.md) 和 `decimal` 变量，这会导致编译器错误。  
@@ -119,4 +120,4 @@ Console.WriteLine((double)dec + dub);
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
- [标准数字格式字符串](http://msdn.microsoft.com/library/580e57eb-ac47-4ffd-bccd-3a1637c2f467)
+ [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)

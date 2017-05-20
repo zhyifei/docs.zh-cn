@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61f1ac22923ad637ba145b448f75e0f1a7e142b6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消一个异步任务或一组任务 (C#)
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/13/2017
 >  若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
 ##  <a name="BKMK_CancelaTask"></a>取消任务  
- 第一个示例将“取消”****按钮与单个下载任务关联。 如果在应用程序下载内容时选择按钮，下载将取消。  
+ 第一个示例将“取消”按钮与单个下载任务关联。 如果在应用程序下载内容时选择按钮，下载将取消。  
   
 ### <a name="downloading-the-example"></a>下载示例  
  若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序），然后遵循以下步骤。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 03/13/2017
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。  
   
-3.  在“打开项目”****对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
+3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
   
-4.  在“解决方案资源管理器”****中，打开 “CancelATask”**** 项目的快捷菜单，然后选择“设为启动项目”****。  
+4.  在“解决方案资源管理器”中，打开 “CancelATask” 项目的快捷菜单，然后选择“设为启动项目”。  
   
 5.  选择 F5 键运行该项目。  
   
@@ -54,24 +55,24 @@ ms.lasthandoff: 03/13/2017
  如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.cs 文件。  
   
 ### <a name="building-the-example"></a>生成示例  
- 下列更改将“取消”****按钮添加到下载网站的应用程序中。 如果不想下载或生成示例，则可在本主题末尾的“完整示例”部分查看最终产品。 星号标记了代码中的更改。  
+ 下列更改将“取消”按钮添加到下载网站的应用程序中。 如果不想下载或生成示例，则可在本主题末尾的“完整示例”部分查看最终产品。 星号标记了代码中的更改。  
   
- 要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“StarterCode”****而不是“CancelATask”****作为“启动项目”****。  
+ 要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“StarterCode”而不是“CancelATask”作为“启动项目”。  
   
  然后将下列更改添加到该项目的 MainWindow.xaml.cs 文件。  
   
 1.  声明一个 `CancellationTokenSource` 变量 `cts`，它作用于所有访问它的方法。  
   
-    ```cs  
+    ```csharp  
     public partial class MainWindow : Window  
     {  
         // ***Declare a System.Threading.CancellationTokenSource.  
         CancellationTokenSource cts;  
     ```  
   
-2.  为“取消”****按钮添加以下事件处理程序。 当用户请求取消时，事件处理程序使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 方法通知 `cts`。  
+2.  为“取消”按钮添加以下事件处理程序。 当用户请求取消时，事件处理程序使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 方法通知 `cts`。  
   
-    ```cs  
+    ```csharp  
     // ***Add an event handler for the Cancel button.  
     private void cancelButton_Click(object sender, RoutedEventArgs e)  
     {  
@@ -82,18 +83,18 @@ ms.lasthandoff: 03/13/2017
     }  
     ```  
   
-3.  为“启动”****按钮 `startButton_Click` 在事件处理程序中进行下列更改。  
+3.  为“启动”按钮 `startButton_Click` 在事件处理程序中进行下列更改。  
   
     -   实例化 `CancellationTokenSource`、`cts`。  
   
-        ```cs  
+        ```csharp  
         // ***Instantiate the CancellationTokenSource.  
         cts = new CancellationTokenSource();  
         ```  
   
     -   在调用下载指定网站的内容的 `AccessTheWebAsync` 时，将 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> 属性作为参数发送。 如果请求取消，则 `Token` 属性传播消息。 如果用户选择取消下载操作，请添加显示消息的 catch 块。 下列代码显示这些更改。  
   
-        ```cs  
+        ```csharp  
         try  
         {  
             // ***Send a token to carry the message if cancellation is requested.  
@@ -112,11 +113,11 @@ ms.lasthandoff: 03/13/2017
         }  
         ```  
   
-4.  在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 重载来下载网站的内容。 将 `ct`（即 `AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数来传递。 如果用户选择“取消”****按钮，则令牌携带消息。  
+4.  在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 重载来下载网站的内容。 将 `ct`（即 `AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数来传递。 如果用户选择“取消”按钮，则令牌携带消息。  
   
      下列代码显示 `AccessTheWebAsync` 中的更改。  
   
-    ```cs  
+    ```csharp  
     // ***Provide a parameter for the CancellationToken.  
     async Task<int> AccessTheWebAsync(CancellationToken ct)  
     {  
@@ -147,7 +148,7 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 158125.  
     ```  
   
-     如果在程序完成下载内容前，选择“取消”****按钮，则程序将生成以下输出。  
+     如果在程序完成下载内容前，选择“取消”按钮，则程序将生成以下输出。  
   
     ```  
     Ready to download.  
@@ -155,7 +156,7 @@ ms.lasthandoff: 03/13/2017
     ```  
   
 ##  <a name="BKMK_CancelaListofTasks"></a>取消任务列表  
- 通过将相同的 `CancellationTokenSource` 示例与每个任务关联，可以扩展先前的示例，从而取消多个任务。 如果选择“取消”****按钮，则将取消所有尚未完成的任务。  
+ 通过将相同的 `CancellationTokenSource` 示例与每个任务关联，可以扩展先前的示例，从而取消多个任务。 如果选择“取消”按钮，则将取消所有尚未完成的任务。  
   
 ### <a name="downloading-the-example"></a>下载示例  
  若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序），然后遵循以下步骤。  
@@ -164,9 +165,9 @@ ms.lasthandoff: 03/13/2017
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。  
   
-3.  在“打开项目”****对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
+3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
   
-4.  在“解决方案资源管理器”****中，打开 “CancelAListOfTasks”**** 项目的快捷菜单，然后选择“设为启动项目”****。  
+4.  在“解决方案资源管理器”中，打开 “CancelAListOfTasks” 项目的快捷菜单，然后选择“设为启动项目”。  
   
 5.  选择 F5 键运行该项目。  
   
@@ -175,11 +176,11 @@ ms.lasthandoff: 03/13/2017
  如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.cs 文件。  
   
 ### <a name="building-the-example"></a>生成示例  
- 要自行扩展示例，请按“下载示例”部分的说明逐步操作，但要选择“CancelATask”****作为“启动项目”****。 向该项目添加下列更改。 星号标记了程序中的更改。  
+ 要自行扩展示例，请按“下载示例”部分的说明逐步操作，但要选择“CancelATask”作为“启动项目”。 向该项目添加下列更改。 星号标记了程序中的更改。  
   
 1.  添加一个方法，用于创建 Web 地址的列表。  
   
-    ```cs  
+    ```csharp  
     // ***Add a method that creates a list of web addresses.  
     private List<string> SetUpURLList()  
     {  
@@ -199,14 +200,14 @@ ms.lasthandoff: 03/13/2017
   
 2.  在 `AccessTheWebAsync` 中调用方法。  
   
-    ```cs  
+    ```csharp  
     // ***Call SetUpURLList to make a list of web addresses.  
     List<string> urlList = SetUpURLList();  
     ```  
   
 3.  在 `AccessTheWebAsync` 中添加下列循环，用于处理列表中的每个 Web 地址。  
   
-    ```cs  
+    ```csharp  
     // ***Add a loop to process the list of web addresses.  
     foreach (var url in urlList)  
     {  
@@ -225,10 +226,13 @@ ms.lasthandoff: 03/13/2017
   
 4.  由于 `AccessTheWebAsync` 显示了长度，因此该方法无需返回任何内容。 删除返回语句，并将方法的返回类型更改为 <xref:System.Threading.Tasks.Task> 而不是 <xref:System.Threading.Tasks.Task%601>。  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
+    ```csharp  
+    async Task AccessTheWebAsync(CancellationToken ct)  
+    ```  
+  
      使用语句而非表达式从 `startButton_Click` 调用方法。  
   
-    ```cs  
+    ```csharp  
     await AccessTheWebAsync(cts.Token);  
     ```  
   
@@ -254,7 +258,7 @@ ms.lasthandoff: 03/13/2017
   
     ```  
   
-     如果在下载完成之前选择“取消”****按钮，则输出将包含取消前已完成下载的长度。  
+     如果在下载完成之前选择“取消”按钮，则输出将包含取消前已完成下载的长度。  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -275,7 +279,7 @@ ms.lasthandoff: 03/13/2017
 ### <a name="cancel-a-task-example"></a>取消任务示例  
  下列代码是取消单个任务示例的完整 MainWindow.xaml.cs 文件。  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -386,7 +390,7 @@ namespace CancelATask
 ### <a name="cancel-a-list-of-tasks-example"></a>取消任务列表示例  
  下列代码是取消任务列表示例的完整 MainWindow.xaml.cs 文件。  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

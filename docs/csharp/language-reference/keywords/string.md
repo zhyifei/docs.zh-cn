@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="string-c-reference"></a>string（C# 参考）
@@ -64,7 +65,7 @@ string a = "good " + "morning";
   
  这将创建包含“good morning”的字符串对象。  
   
- 字符串是不可变的**，即：字符串对象在创建后，尽管从语法上看似乎可以更改其内容，但事实上并不可行。 例如，编写此代码时，编译器实际上会创建一个新的字符串对象来保存新的字符序列，且该新对象将赋给 b。 然后，字符串“h”便可进行垃圾回收。  
+ 字符串是不可变的，即：字符串对象在创建后，尽管从语法上看似乎可以更改其内容，但事实上并不可行。 例如，编写此代码时，编译器实际上会创建一个新的字符串对象来保存新的字符序列，且该新对象将赋给 b。 然后，字符串“h”便可进行垃圾回收。  
   
 ```csharp
 string b = "h";  
@@ -100,7 +101,7 @@ Console.WriteLine(a);
 @"good morning"  // a string literal  
 ```  
   
- 逐字字符串的优点是不**处理转义序列，这样就可轻松编写完全限定的文件名等：  
+ 逐字字符串的优点是不处理转义序列，这样就可轻松编写完全限定的文件名等：  
   
 ```csharp  
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"  
@@ -125,12 +126,12 @@ Console.WriteLine(a);
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [Best Practices for Using Strings](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7) （有关使用字符串的最佳做法）  
+ [Best Practices for Using Strings](../../../standard/base-types/best-practices-strings.md) （有关使用字符串的最佳做法）  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [引用类型](../../../csharp/language-reference/keywords/reference-types.md)   
  [值类型](../../../csharp/language-reference/keywords/value-types.md)   
- [基本字符串操作](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
- [创建新字符串](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
+ [基本字符串操作](../../../standard/base-types/basic-string-operations.md)   
+ [创建新字符串](../../../standard/base-types/creating-new.md)   
  [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
 
