@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>C# 运算符
@@ -66,9 +67,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md)：函数调用。  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)：聚合对象索引。  
-  
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md)：null 条件索引。  如果左操作数为 `null`，则返回 `null`。  
-  
+   
  [x++](../../../csharp/language-reference/operators/increment-operator.md)：后缀递增。  先返回 x 值，然后用加 1（通常加整数 1）后的 x 值更新存储位置。  
   
  [x--](../../../csharp/language-reference/operators/decrement-operator.md)：后缀递减。  先返回 x 值，然后用减 1（通常减整数 1）后的 x 值更新存储位置。  
@@ -222,15 +221,15 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 ## <a name="arithmetic-overflow"></a>算术溢出  
  算术运算符（[+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[*](../../../csharp/language-reference/operators/multiplication-operator.md)、[/](../../../csharp/language-reference/operators/division-operator.md)）的计算结果可能会超出所涉数值类型的可取值范围。 详细信息应参考特定运算符的相关章节，而一般情况下：  
   
-- 整数算术溢出要么抛出 <xref:System.OverflowException>，要么放弃结果的最高有效位。 整数被零除总是引发 @System.DivideByZeroException。  
+- 整数算术溢出或者引发 <xref:System.OverflowException>，或者放弃结果的最高有效位。 整数被零除总是引发 @System.DivideByZeroException。  
 
-   发生整数溢出时，具体影响视执行上下文而定，上下文可为 [checked 或 unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)。 在 checked 上下文中，会抛出 <xref:System.OverflowException>。 在 unchecked 上下文中，放弃结果的最高有效位并继续执行。 因此，C# 让你有机会选择处理或忽略溢出。 默认情况下，算术运算发生在 *unchecked* 上下文中。 
+   发生整数溢出时，具体影响视执行上下文而定，上下文可为 [checked 或 unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)。 在 checked 上下文中引发 <xref:System.OverflowException>。 在 unchecked 上下文中，放弃结果的最高有效位并继续执行。 因此，C# 让你有机会选择处理或忽略溢出。 默认情况下，算术运算发生在 *unchecked* 上下文中。 
 
    除算术运算以外，整型类型之间的显式转换也会导致溢出（例如，将 [long](../../../csharp/language-reference/keywords/long.md) 显式转换成 [int](../../../csharp/language-reference/keywords/int.md)），并受到 checked 或 unchecked 执行的约束。 但是，位运算符和移位运算符永远不会导致溢出。  
    
 -   浮点算术溢出或被零除从不引发异常，因为浮点类型基于 IEEE 754，因此可以表示无穷大和 NaN（非数值）。  
   
--   [十进制](../../../csharp/language-reference/keywords/decimal.md)算术溢出始终抛出 <xref:System.OverflowException>。 除数为零的十进制除法始终抛出 <xref:System.DivideByZeroException>。  
+-   [小数](../../../csharp/language-reference/keywords/decimal.md)算术溢出总是引发 <xref:System.OverflowException>。 小数被零除总是引发 <xref:System.DivideByZeroException>。  
   
   
 ## <a name="see-also"></a>另请参阅  
