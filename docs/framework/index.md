@@ -20,23 +20,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
+ms.openlocfilehash: 50f027408357a5d98ef1bfe305ab675fc97abba8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
 > [!NOTE]
->  此 .NET Framework 内容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、 4.6.1、4.6.2 和 4.7 的相关信息。 若要下载 .NET Framework，请参阅[安装 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 有关 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)] 及其次要版本和 .NET Framework 4.7 的新增功能和更新列表，请参阅 [.NET Framework 中的新增功能](../../docs/framework/whats-new/index.md)。 有关受支持的平台列表，请参阅 [.NET Framework 系统要求](../../docs/framework/get-started/system-requirements.md)。  
+>  此 .NET Framework 内容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、 4.6.1、4.6.2 和 4.7 的相关信息。 若要下载 .NET Framework，请参阅[安装 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 有关 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)] 及其次要版本和 .NET Framework 4.7 的新增功能和更新列表，请参阅 [.NET Framework 中的新增功能](../../docs/framework/whats-new/index.md)。 有关受支持的平台列表，请参阅 [.NET Framework 系统要求](../../docs/framework/get-started/system-requirements.md)。 
 
-.NET Framework 提供许多服务，包括内存管理、类型和内存安全、安全功能、网络和应用程序部署。 它提供易于使用的数据结构和 API，将较低级别的 Windows 操作系统抽象化。 可在 .NET Framework 中使用各种编程语言，包括 C#、F# 和 Visual Basic。
+ .NET Framework 是用于为 Web、Windows、Windows Phone、Windows Server 和 Microsoft Azure 构建应用的开发平台。 它包含公共语言运行时 (CLR) 和 .NET Framework 类库，其中包括各种功能和对许多行业标准的支持。
 
- .NET Framework 是用于为 Windows、Windows Phone、Windows Server 和 Microsoft Azure 构建应用的开发平台。 它包含公共语言运行时 (CLR) 和 .NET Framework 类库，其中包括各种功能和对许多行业标准的支持。  
-
-.NET Framework 提供许多服务，包括内存管理、类型和内存安全、安全功能、网络和应用程序部署。 它提供易于使用的数据结构和 API，将较低级别的 Windows 操作系统抽象化。 可在 .NET Framework 中使用各种编程语言，包括 C#、F# 和 Visual Basic。
+.NET Framework 提供许多服务，包括内存管理、类型和内存安全、安全性、网络和应用程序部署。 它提供易于使用的数据结构和 API，将较低级别的 Windows 操作系统抽象化。 可在 .NET Framework 中使用各种编程语言，包括 C#、F# 和 Visual Basic。  
 
 有关适用于用户和开发人员的 .NET Framework 的常规说明，请参阅[入门](../../docs/framework/get-started/index.md)。 有关 .NET Framework 的体系结构和主要功能简介，请参阅[概述](../../docs/framework/get-started/overview.md)。  
 
@@ -71,3 +69,4 @@ ms.lasthandoff: 05/04/2017
   
 [其他类库和 API](../../docs/framework/additional-apis/index.md)  
 收录了非常态 (OOB) 版本中包含的类以及定位特定平台或 .NET Framework 实现代码的类的相关文档。
+
