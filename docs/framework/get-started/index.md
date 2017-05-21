@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 5713faed77786a87dc349a1c7e02ec9703b3700d
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
@@ -82,11 +82,11 @@ ms.lasthandoff: 05/03/2017
 |标题|说明|
 |-----------|-----------------|
 |[概述](../../../docs/framework/get-started/overview.md)|为生成面向 .NET Framework 的应用程序的开发人员提供详细信息。|
+|[安装指南](../../../docs/framework/install/index.md)|提供有关安装 .NET Framework 的信息。|  
 |[.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|描述 .NET Framework 带外版本以及如何在应用程序中使用它们。|
 |[系统要求](../../../docs/framework/get-started/system-requirements.md)|列出运行 .NET Framework 的硬件和软件要求。|
 |[.NET 核心和开放源代码](../../../docs/framework/get-started/net-core-and-open-source.md)|介绍 .NET 核心与 .NET Framework 的关系，以及如何访问开放源代码 .NET 核心项目。|
 |[.NET 核心文档](https://docs.microsoft.com/dotnet/)|.NET 核心的概念和 API 参考文档。|
-|[安装指南](../../../docs/framework/install/guide-for-developers.md)|提供有关安装 .NET Framework 的信息。|
 
 ## <a name="see-also"></a>另请参阅
  [.NET Framework 指南](../../../docs/framework/index.md)   
