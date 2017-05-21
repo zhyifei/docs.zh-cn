@@ -10,14 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-translationtype: Human Translation
-ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
-ms.openlocfilehash: a5abc801decbcedb4980b8b4992d128aa1e1bb2e
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 4ff34455c7cc6135f7324b18d3aebca576d70edf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="whats-new-in-c"></a>C 中的新增功能# #
+# <a name="whats-new-in-c"></a>C# 中的新增功能 #
 
 
 * [C# 7](csharp-7.md)：
@@ -31,6 +32,7 @@ ms.lasthandoff: 05/02/2017
 -->
 * [跨平台支持](../../core/index.md)：
     - 借助 .NET Core 支持，C# 可以在多个平台上运行。 如果希望尝试在 macOS 或许多 Linux 发行版本上使用 C#，请详细了解 .NET Core。
+
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.
@@ -40,7 +42,7 @@ ms.lasthandoff: 05/02/2017
 下面列出了在以前版本的 C# 语言和 Visual Studio.NET 中引入的主要功能。  
   
  * Visual Studio .NET 2013： 
-     - 此版本的 Visual Studio 包含 .NET 编译器平台（“Roslyn”）的 Bug 修复、性能改进和技术预览，Roslyn 是 <!--Link to ../roslyn/index.md-->.NET 编译器平台 SDK 的前身。
+     - 此版本的 Visual Studio 包含 .NET 编译器平台（“Roslyn”）的 Bug 修复、性能改进和技术预览，Roslyn 是 .NET 编译器平台 SDK 的前身<!--Link to ../roslyn/index.md-->。
 
  * C# 5，Visual Studio .NET 2012： 
      - `Async` / `await` 和[调用方信息](../programming-guide/concepts/caller-information.md)特性。
