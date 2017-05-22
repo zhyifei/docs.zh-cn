@@ -16,10 +16,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 26d5c4da21671c0f4ce37bf08c28ae82213f4374
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a8a89b8987eaff4d94f5e620c45b551b7be682d8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="asynchronous-programming-patterns"></a>异步编程模式
@@ -78,6 +79,6 @@ public class MyClass
   
 |标题|描述|  
 |-----------|-----------------|  
-|[异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|介绍使用 <xref:System.IAsyncResult> 接口提供异步行为的旧模型。 不建议新的开发使用此模型。|  
+|[异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|描述使用 <xref:System.IAsyncResult> 接口提供异步行为的旧模型。 不建议新的开发使用此模型。|  
 |[基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)|描述提供异步行为的基于事件的旧模型。 不建议新的开发使用此模型。|  
-|[基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|介绍基于 <xref:System.Threading.Tasks> 命名空间的新异步模式。 此模型是在 .NET Framework 4 及更高版本中进行异步编程的推荐使用方法。|
+|[基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述基于 <xref:System.Threading.Tasks> 命名空间的新异步模式。 此模型是在 .NET Framework 4 及更高版本中进行异步编程的推荐使用方法。|

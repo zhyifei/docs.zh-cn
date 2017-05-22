@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
-ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
-ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 50e5b333f892cf469e9f3fe57a0325ac6d8e641f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="how-to-run-the-code-samples"></a>如何运行代码示例
 
-要了解如何设置开发环境以运行代码示例，请查看[入门](getting-started.md)。  可以将代码示例从此页复制并粘贴到你的环境中以执行它们。 
+要了解如何设置开发环境以运行代码示例，请查看[入门](get-started.md)。  可以将代码示例从此页复制并粘贴到你的环境中以执行它们。 
 
 > [!NOTE]
 将来，本文档站点能够在浏览器中运行这些代码示例。
@@ -150,7 +151,7 @@ LINQ 是适用于 C# 和 VB 的强大功能集，可用于编写简单的声明�
 
 如果对 F# 功能的教程感兴趣，请参阅 [F# 教程](../fsharp/tour.md)。
 
-如果想开始自己编写代码，请参阅[入门](getting-started.md)。
+如果想开始自己编写代码，请参阅[入门](get-started.md)。
 
 要了解 .NET 的重要组件，请参阅 [.NET 体系结构组件](components.md)。
 

@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 10af942724ce0207bc6e64f1ebabfdcd2d3488bd
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="retargeting-changes-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的重定目标更改
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/18/2017
   
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
-|使用 <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 方法从剪贴板中检索 HTML 格式数据|对于定位 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 或在 .NET Framework 4.5.1 或更低版本上运行的应用程序，<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 以 ASCII 字符串的形式检索 HTML 格式数据。 因此，非 ASCII 字符（ASCII 代码大于 0x7F 的字符）由两个随机字符表示。 例如，é (0xE9) 由 Ã© (0xC3 0xA9) 表示。<br /><br /> 对于定位 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本且在 .NET Framework 4.5.2 上运行的应用程序，<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 以 UTF-8 的形式（可正确表示大于 0x7F 的字符）检索 HTML 格式数据。|如果实现了解决方法来解决 HTML 格式字符串编码问题（例如，通过将从剪贴板中检索的 HTML 字符串传递到 <xref:System.Text.UTF8Encoding.GetString%2A?displayProperty=fullName> 方法来进行显式编码），而且要将应用程序的目标从版本 4 重定为版本 4.5，应删除此解决方法。|次要|  
+|使用 <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 方法从剪贴板检索 HTML 格式的数据|对于面向 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 或者在 .NET Framework 4.5.1 或更早版本上运行的应用，<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 将 HTML 格式的数据检索为 ASCII 字符串。 因此，非 ASCII 字符（ASCII 代码大于 0x7F 的字符）由两个随机字符表示。 例如，é (0xE9) 由 Ã© (0xC3 0xA9) 表示。<br /><br /> 对于面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 更高版本且在 .NET Framework 4.5.2 上运行的应用，<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 将 HTML 格式的数据检索为 UTF-8，它可正确代表大于 0x7F 的字符。|如果你使用 HTML 格式的字符串实现了一个编码问题的解决方法（例如，通过将其传递到 <xref:System.Text.UTF8Encoding.GetString%2A?displayProperty=fullName> 方法来显示编码从剪贴板检索的 HTML 字符串），而且你要将应用的目标从版本 4 重定为 4.5，则应该删除该解决方法。|次要|  
   
 ## <a name="see-also"></a>另请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-2.md)   

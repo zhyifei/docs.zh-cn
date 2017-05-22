@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8ac37ce1a225a66069e34abedd2ee0c273b8f8a9
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 与其他 XML 技术
@@ -33,21 +34,20 @@ ms.lasthandoff: 03/13/2017
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML 与XmlReader  
  <xref:System.Xml.XmlReader> 是一种快速的只进非缓存分析器。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 在 <xref:System.Xml.XmlReader> 基础之上实现，它们紧密集成在一起。 但是，还可以单独使用 <xref:System.Xml.XmlReader>。  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 在 <xref:System.Xml.XmlReader> 基础之上实现，它们紧密集成在一起。 但是，您也可以单独使用 <xref:System.Xml.XmlReader>。  
   
- 例如，假设要生成一项 Web 服务，该服务每秒将分析几百个 XML 文档，而这些文档具有相同的结构，因此，只需编写一种代码实现即可对 XML 进行分析。 在这种情况下，则建议单独使用 <xref:System.Xml.XmlReader>。  
+ 例如，假设要生成一项 Web 服务，该服务每秒将分析几百个 XML 文档，而这些文档具有相同的结构，因此，只需编写一种代码实现即可对 XML 进行分析。 在这种情况下，您可能希望单独使用 <xref:System.Xml.XmlReader>。  
   
  相反，如果要生成一个系统，用以分析多种小型 XML 文档，而这些文档各不相同，则可能希望利用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 提高工作效率。  
   
 ## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML 与XSLT  
- 
-          [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 和 XSLT 都提供丰富的 XML 文档转换功能。 XSLT 是基于规则的声明性方法。 XSLT 高级程序员以函数编程方式编写 XSLT，这种方式强调无状态方法。 可以使用实现后无副作用的纯函数编写转换。 许多开发人员还不熟悉这种基于规则的方法（即函数方法），需要付出努力和花费大量时间来学习这项技术。  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 和 XSLT 都提供丰富的 XML 文档转换功能。 XSLT 是基于规则的声明性方法。 XSLT 高级程序员以函数编程方式编写 XSLT，这种方式强调无状态方法。 可以使用实现后无副作用的纯函数编写转换。 许多开发人员还不熟悉这种基于规则的方法（即函数方法），需要付出努力和花费大量时间来学习这项技术。  
   
  XSLT 是非常高效的系统，可以生成高性能的应用程序。 例如，一些大型 Web 公司使用 XSLT 从 XML（提取自很多数据存储区）生成 HTML。 托管 XSLT 引擎将 XSLT 编译为 CLR 代码，在某些情况下，其性能甚至比本机 XSLT 引擎还要好。  
   
  但是，XSLT 没有利用许多开发人员都具备的 C# 和 Visual Basic 知识。 它要求开发人员用一种不同的复杂编程语言来编写代码。 如果使用两种非集成开发系统，例如 C#（或 Visual Basic）和 XSLT，软件系统的开发和维护会更加困难。  
   
- 掌握 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询表达式之后，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]转换就是一项功能强大、易于使用的技术。 本质上，XML 文档是这样形成的：使用函数构造，从各种源拉取数据，动态构造 <xref:System.Xml.Linq.XElement> 对象，再将全部内容组合到一个新 XML 树中。 经过这种转换，可以生成一个全新的文档。 相对来说，在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中构造转换比较容易、直观，编写出的代码可读性也较强。 这样可以减少开发和维护成本。  
+ 掌握 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询表达式之后，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]转换就是一项功能强大、易于使用的技术。 本质上，XML 文档是这样形成的：使用函数构造，从各种源提取数据，动态构造 <xref:System.Xml.Linq.XElement> 对象，再将全部内容组合到一个新 XML 树中。 经过这种转换，可以生成一个全新的文档。 相对来说，在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中构造转换比较容易、直观，编写出的代码可读性也较强。 这样可以减少开发和维护成本。  
   
  [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 不是用来替代 XSLT 的。 对于复杂的以文档为中心的 XML 转换，XSLT 仍是很好的工具，如果文档结构的定义不完备，更是如此。  
   

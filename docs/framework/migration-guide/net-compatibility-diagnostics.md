@@ -16,7 +16,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
 ms.openlocfilehash: 06ebf87e02c8fd745d9c2f3a55eca329323a7d91
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-compatibility-diagnostics"></a>.NET 兼容性诊断
@@ -695,7 +695,7 @@ ms.lasthandoff: 04/18/2017
 |范围|次要|  
 |版本|4.6|  
 |类型|运行时|  
-|受影响的 API|<xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=fullName><br /><br /> <xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=fullName>|  
+|受影响的 API|<xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=fullName><br /><br /> <xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=fullName>|  
 |分析器|CD0078|  
   
 <a name="diagnostic82"></a>   

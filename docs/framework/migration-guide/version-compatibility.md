@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 09f682d9c3a1cf5d42bba878676d84b9328a1a81
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="version-compatibility-for-components"></a>组件的版本兼容性  
  应用程序可控制运行它的 .NET Framework 版本，但组件不能。 由于组件和类库在特定应用的上下文中加载，因此它们会自动在运行应用的 .NET Framework 版本上运行。  
   
- 由于存在此限制，因此兼容性保证对组件特别重要。 从 .NET Framework 4 开始，可以通过将 <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName> 属性应用于某个组件，指定希望该组件与多个版本的兼容程度。 工具可使用此特性来检测组件的将来版本中的兼容性保证的潜在冲突。  
+ 由于存在此限制，因此兼容性保证对组件特别重要。 从 .NET Framework 4 开始，你可以通过将 <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName> 特性应用于某个组件，来指定希望该组件与多个版本的兼容程度。 工具可使用此特性来检测组件的将来版本中的兼容性保证的潜在冲突。  
   
 ## <a name="backward-compatibility-and-the-net-framework-45"></a>向后兼容性和 .NET Framework 4.5  
  .NET Framework 4.5 及其单点版本（4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7）与使用早期版本的 .NET Framework 生成的应用向后兼容。 换句话说，使用早期版本的 .NET Framework 生成的应用程序和组件将运行，而无需在 .NET Framework 4.5 上进行修改。 但在默认情况下，应用程序在其进行开发的公共语言运行时版本上运行，因此你必须提供配置文件，使应用程序能在 .NET Framework 4.5 上运行。 有关详细信息，请参阅本文前面的[应用的版本兼容性](#Apps)一节。  

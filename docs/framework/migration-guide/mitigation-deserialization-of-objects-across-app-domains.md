@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象的反序列化
@@ -29,11 +29,11 @@ ms.lasthandoff: 04/18/2017
   
 1.  一个应用程序使用具有不同应用程序基的两个或多个应用程序域。  
   
-2.  通过调用 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 或 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName> 等方法，将一些类型显式添加到 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 中。 这些类型未标记为可序列化并且未存储在全局程序集缓存中。  
+2.  通过调用 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 等方法将某些类型明确添加到 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>。 这些类型未标记为可序列化并且未存储在全局程序集缓存中。  
   
 3.  之后，在非默认应用程序域中运行的代码尝试从配置文件中读取值，或者使用 XML 来反序列化对象。  
   
-4.  为了读取配置文件或反序列化对象，<xref:System.Xml.XmlReader> 对象尝试访问配置系统。  
+4.  为了从配置文件中读取值或反序列化对象，<xref:System.Xml.XmlReader> 对象尝试访问配置系统。  
   
 5.  如果配置系统尚未初始化，则必须完成其初始化。 这意味着，运行时环境还必须为配置系统创建稳定的路径，它的作用如下：  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="mitigation"></a>缓解操作  
  若要解决此问题，请执行以下操作：  
   
-1.  当引发异常时，查找调用堆栈中对 `get_Evidence` 的调用。 此异常可能是大部分异常中的任意一个，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
+1.  当引发异常时，查找调用堆栈中对 `get_Evidence` 的调用。 这个异常可以是异常集中的任何一个大子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
   
 2.  识别应用程序中没有向逻辑调用上下文添加应用程序的位置，然后添加以下代码：  
   

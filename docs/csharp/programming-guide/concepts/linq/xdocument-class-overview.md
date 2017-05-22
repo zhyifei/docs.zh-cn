@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f3233a634e358ee227b0adbe30cb05d1efbf8fe0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 445b7dff10e25556dabb87867144edece7fc26f9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 类概述 (C#)
@@ -31,14 +32,14 @@ ms.lasthandoff: 03/13/2017
 ## <a name="overview-of-the-xdocument-class"></a>XDocument 类概述  
  <xref:System.Xml.Linq.XDocument> 类包含有效的 XML 文档所需的信息。 其中包括 XML 声明、处理指令和注释。  
   
- 请注意，如果需要 <xref:System.Xml.Linq.XDocument> 类提供的特定功能，只需创建 <xref:System.Xml.Linq.XDocument> 对象。 在很多情况下，可以直接使用 <xref:System.Xml.Linq.XElement>。 直接使用 <xref:System.Xml.Linq.XElement> 是一种比较简单的编程模型。  
+ 请注意，如果需要 <xref:System.Xml.Linq.XDocument> 类提供的特定功能，您只需创建 <xref:System.Xml.Linq.XDocument> 对象。 在很多情况下，可以直接使用 <xref:System.Xml.Linq.XElement>。 直接使用 <xref:System.Xml.Linq.XElement> 是一种比较简单的编程模型。  
   
  <xref:System.Xml.Linq.XDocument> 派生自 <xref:System.Xml.Linq.XContainer>。 因此，它可以包含子节点。 但是，<xref:System.Xml.Linq.XDocument> 对象只能有一个子 <xref:System.Xml.Linq.XElement> 节点。 这反映了 XML 标准，即在 XML 文档中只能有一个根元素。  
   
 ## <a name="components-of-xdocument"></a>Xdocument 的组件  
  <xref:System.Xml.Linq.XDocument> 可以包含以下元素：  
   
--   一个 <xref:System.Xml.Linq.XDeclaration> 对象。 <xref:System.Xml.Linq.XDeclaration> 可用于指定 XML 声明的相关部分：XML 版本、文档的编码以及 XML 文档是否是独立的。  
+-   一个 <xref:System.Xml.Linq.XDeclaration> 对象。 <xref:System.Xml.Linq.XDeclaration> 使您能够指定 XML 声明的相关部分：XML 版本、文档的编码以及 XML 文档是否是独立的。  
   
 -   一个 <xref:System.Xml.Linq.XElement> 对象。 这是 XML 文档的根节点。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/13/2017
  如上所述，<xref:System.Xml.Linq.XElement> 类是 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 编程接口中的主类。 在很多情况下，您的应用程序不需要您创建文档。 通过使用 <xref:System.Xml.Linq.XElement> 类，可以创建 XML 树，向它添加其他 XML 树，修改 XML 树并进行保存。  
   
 ## <a name="using-xdocument"></a>使用 XDocument  
- 若要构造一个 <xref:System.Xml.Linq.XDocument>，可使用函数构造，正如构造 <xref:System.Xml.Linq.XElement> 对象那样。  
+ 若要构造一个 <xref:System.Xml.Linq.XDocument>，可使用函数构造，正如您构造 <xref:System.Xml.Linq.XElement> 对象那样。  
   
  下面的代码创建一个 <xref:System.Xml.Linq.XDocument> 对象及其关联的包含对象。  
   

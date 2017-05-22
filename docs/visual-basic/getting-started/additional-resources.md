@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ac8a0f8f3889a9de9fbb6a43241c5ab855e938ab
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 692e0a53391556c6327e493d3d45e811db4cfdb7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>为 Visual Basic 程序员提供的附加资源
@@ -94,7 +95,7 @@ ms.lasthandoff: 03/13/2017
 |术语|定义|  
 |----------|----------------|  
 |[Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?LinkID=108287)|提供对知识库 (KB) 文章、下载和更新、支持 Webcast 以及其他服务的访问。|  
-|[Microsoft Connect](http://connect.microsoft.com/)|可供你报告 Bug 或向 Microsoft 提供有关 Visual Studio 的建议。 你也可以通过在“帮助”****菜单上选择“报告 Bug”****来报告 Bug。|  
+|[Microsoft Connect](http://connect.microsoft.com/)|可供你报告 Bug 或向 Microsoft 提供有关 Visual Studio 的建议。 你也可以通过在 **“帮助”** 菜单上选择 **“报告 Bug”** 来报告 Bug。|  
   
 ## <a name="third-party-resources"></a>第三方资源  
  MSDN 网站提供了当前相关的第三方网站和新闻组的信息。 有关可用资源的最新列表，请参阅 [MSDN Visual Basic 社区网站](http://go.microsoft.com/fwlink/?LinkID=77372)。  

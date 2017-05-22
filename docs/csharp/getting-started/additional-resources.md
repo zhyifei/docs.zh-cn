@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7810948b8ee549d05d7e795f89822db2fdfd1648
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="additional-resources-for-visual-c-programmers"></a>为 Visual C# 程序员提供的附加资源
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
  提供一个供大家讨论有关 C# IDE 的论坛。  
   
  [MSDN 论坛](http://go.microsoft.com/fwlink/?LinkId=157697)  
- 提供了有关可以在其中可张贴问题和答案以及查看和搜索现有用户生成的帮助内容的论坛的信息。 也可以通过单击“帮助”****菜单上的“MSDN 论坛”****来访问 MSDN 论坛。  
+ 提供了有关可以在其中可张贴问题和答案以及查看和搜索现有用户生成的帮助内容的论坛的信息。 也可以通过单击**“帮助”**菜单上的**“MSDN 论坛”**来访问 MSDN 论坛。  
   
 ### <a name="chats-and-discussion-groups"></a>聊天和讨论组  
  [MSDN 讨论组](http://go.microsoft.com/fwlink/?LinkId=145961)  
@@ -79,7 +80,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="support"></a>支持  
  [提交 bug 或提供建议](http://go.microsoft.com/fwlink/?LinkID=79804)  
- 可供你报告 Bug 或向 Microsoft 提供有关 Visual Studio 的建议。 也可以单击“帮助”****菜单上的“报告 bug”****来报告 bug。  
+ 可供你报告 Bug 或向 Microsoft 提供有关 Visual Studio 的建议。 也可以单击**“帮助”**菜单上的**“报告 bug”**来报告 bug。  
   
 ## <a name="third-party-resources"></a>第三方资源  
  MSDN 的网站提供了有关当前相关的第三方网站和新闻组的信息。 有关可用资源的最新列表，请访问 [MSDN C# 社区网站](http://go.microsoft.com/fwlink/?LinkId=165945)。  
