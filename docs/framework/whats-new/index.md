@@ -17,31 +17,33 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: e36d3523a52def454e7ed0233f2179ab88ab3bcb
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/19/2017
 
 ---
+
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
-<a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：
+<a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：  
+ 
+[.NET Framework 4.7](#v47)   
+[.NET Framework 4.6.2](#v462)   
+[.NET Framework 4.6.1](#v461)   
+[.NET 2015 和 .NET Framework 4.6](#v46)   
+[.NET Framework 4.5.2](#v452)   
+[.NET Framework 4.5.1](#v451)   
+[.NET Framework 4.5](#core)   
 
- [.NET Framework 4.7](#v47)   
- [.NET Framework 4.6.2](#v462)   
- [.NET Framework 4.6.1](#v461)   
- [.NET 2015 和 .NET Framework 4.6](#v46)   
- [.NET Framework 4.5.2](#v452)   
- [.NET Framework 4.5.1](#v451)   
- [.NET Framework 4.5](#core)   
-
- 本文不提供有关每项新增功能的完整信息，并有可能会发生更改。 有关 .NET Framework 的常规信息，请参阅[入门](../../../docs/framework/get-started/index.md)。 有关支持的平台，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)。 有关下载链接和安装说明，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。
+本文不提供有关每项新增功能的完整信息，并有可能会发生更改。 有关 .NET Framework 的常规信息，请参阅[入门](../../../docs/framework/get-started/index.md)。 有关支持的平台，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)。 有关下载链接和安装说明，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。
 
 > [!NOTE]
->  .NET Framework 团队还发布 NuGet 带外功能以扩展平台支持并引入新功能，如不可变集合和启用了 SIMD 的矢量类型。 有关详细信息，请参阅[其他类库和 API](../additional-apis/index.md) 以及 [.NET Framework 和带外版本](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 请参阅 .NET Framework 的 [NuGet 包的完整列表](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或订阅[我们的源](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
+> .NET Framework 团队还发布 NuGet 带外功能以扩展平台支持并引入新功能，如不可变集合和启用了 SIMD 的矢量类型。 有关详细信息，请参阅[其他类库和 API](../additional-apis/index.md) 以及 [.NET Framework 和带外版本](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 请参阅 .NET Framework 的 [NuGet 包的完整列表](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或订阅[我们的源](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
 
 <a name="v47"></a> 
 ## <a name="introducing-the-net-framework-47"></a>.NET Framework 4.7 简介
- .NET Framework 4.7 在 .NET Framework 4.6 、4.6.1 和 4.6.2 的基础之上构建而成，新增了许多修补程序和功能，同时很好地保持了产品的稳定性。
+
+.NET Framework 4.7 在 .NET Framework 4.6 、4.6.1 和 4.6.2 的基础之上构建而成，新增了许多修补程序和功能，同时很好地保持了产品的稳定性。
 
 ### <a name="downloading-and-installing-the-net-framework-47"></a>下载和安装 .NET Framework 4.7
  
@@ -159,7 +161,8 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 <a name="v462"></a> 
 ## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 中的新增功能
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包括以下几个方面的新功能：
+
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包括以下几个方面的新功能：
 
 - [ASP.NET 2.0](#ASPNET462)
 
@@ -219,9 +222,9 @@ End Class
 
  然后可以创建一个资源文件 DataAnnotation.Localization.fr.resx，它的键为错误消息字符串，值为本地化的错误消息。 该文件必须位于 `App.LocalResources` 文件夹中。 例如，下面列出了键以及它在本地化法语 (fr) 错误消息中的值：
 
-|名称|值|
-|----------|-----------|
-|分级必须介于 1 和 10 之间。|La note doit être comprise entre 1 et 10.|
+| 名称                                 | 值                                     |
+| ------------------------------------ | ----------------------------------------- |
+| 分级必须介于 1 和 10 之间。 | La note doit être comprise entre 1 et 10. |
 
  然后，此文件可以
 
@@ -231,12 +234,10 @@ End Class
  ASP.NET 现允许将返回任务的方法与会话状态存储提供程序一起使用，从而允许 ASP.NET 应用获取异步的可伸缩性优势。 要使用会话状态存储提供程序支持异步操作，ASP.NET 包括一个新的接口 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>，它继承自 <xref:System.Web.IHttpModule> 并允许开发人员实现其自己的会话状态模块和异步会话存储提供程序。 接口定义如下：
 
 ```csharp
-
 public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
-
 ```
 
  此外，<xref:System.Web.SessionState.SessionStateUtility> 类包括两种新方法：<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 和 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>，可用来支持异步操作。
@@ -633,13 +634,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  下面的代码示例演示使用 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中包含的针对 ECDSA X509 证书的新支持来为字节流生成签名是多么容易。
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  这与在 .NET Framework 4.6 中生成签名所需的代码形成了鲜明对比。
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -831,13 +830,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
         - RSA API 的增强功能，常见操作不再需要转换。 例如，使用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 对象加密数据需要类似以前版本的 .NET Framework 中的以下代码。
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              可采用如下方式重写在 .NET Framework 4.6 中使用新加密 API 的代码以避免转换。
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **支持将日期和时间与 UNIX 时间相互转换**
 
