@@ -9,19 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-translationtype: Human Translation
-ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
-ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 1bef3c8b36218d0cb228e85ef2ccdffd9a2a1bd7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="unit-testing-in-net-core"></a>.NET Core 中的单元测试
 
-作者：[Steve Smith](http://ardalis.com) 和 [Bill Wagner](https://github.com/BillWagner)
-
-由于在设计 .NET Core 时考虑到了可测试性，因此为应用程序创建单元测试比以往更加简单。 本文简要介绍了单元测试（以及与其他类型测试的不同之处）。
-链接的资源演示了如何将测试项目添加到解决方案，然后使用命令行或 Visual Studio 运行单元测试。
+由于在设计 .NET Core 时考虑到了可测试性，因此为应用程序创建单元测试比以往更加简单。 本文简要介绍了单元测试（以及与其他类型测试的不同之处）。 链接的资源演示了如何将测试项目添加到解决方案，然后使用命令行或 Visual Studio 运行单元测试。
 
 ## <a name="getting-started-with-testing"></a>测试入门
  
@@ -34,9 +32,8 @@ ms.lasthandoff: 04/05/2017
 
 了解有关 .NET Core 项目中的单元测试的详细信息：
 
-请尝试[使用 xUnit 和 .NET CLI 创建单元测试的演练](unit-testing-with-dotnet-test.md)。 
-
-XUnit 团队编写了一个教程，介绍[如何通过 .NET Core 和 Visual Studio 使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
-
-如果想使用 MSTest，请尝试[演练：使用 MSTest 和 .NET CLI 创建单元测试](unit-testing-with-mstest.md)。
+* 请尝试[使用 xUnit 和 .NET CLI 创建单元测试的演练](unit-testing-with-dotnet-test.md)。 
+* XUnit 团队编写了一个教程，介绍[如何通过 .NET Core 和 Visual Studio 使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
+* 如果想使用 MSTest，请尝试[演练：使用 MSTest 和 .NET CLI 创建单元测试](unit-testing-with-mstest.md)。
+* 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
