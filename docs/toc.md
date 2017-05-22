@@ -38,6 +38,7 @@
 ## [单元测试](core/testing/index.md)
 ### [使用 dotnet 测试和 xUnit 进行单元测试](core/testing/unit-testing-with-dotnet-test.md)
 ### [使用 dotnet 测试和 MSTest 进行单元测试](core/testing/unit-testing-with-mstest.md)
+### [运行选择性单元测试](core/testing/selective-unit-tests.md)
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支持](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
@@ -84,6 +85,7 @@
 # [.NET Framework 指南](framework/index.md)
 ## [新增功能](framework/whats-new/)
 ## [入门](framework/get-started/)
+## [安装指南](framework/install/)
 ## [迁移指南](framework/migration-guide/)
 ## [Docker 上的 .NET Framework 指南](framework/docker/index.md)
 ### [在容器中运行控制台应用](framework//docker/console.md)
@@ -132,6 +134,7 @@
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
+## C# 概念
 ### [C# 类型系统](csharp/programming-guide/types/index.md)
 ### [命名空间](csharp/programming-guide/namespaces/index.md)
 ### [基本类型](csharp/basic-types.md)
@@ -183,12 +186,11 @@
 
 ## [F# 教程](fsharp/tour.md)
 
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-### [作为第一类值的函数](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
+## 教程
 ### [入门](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 入门](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+#### [Visual Studio for Mac 入门](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
 #### [Visual Studio Code 和 Ionide 入门](fsharp/tutorials/getting-started/getting-started-vscode.md)
 #### [命令行工具入门](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
@@ -203,7 +205,13 @@
 #### [创建类型提供程序](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [类型提供程序安全性](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [类型提供程序疑难解答](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
+
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## 功能编程的介绍
+### [作为第一类值的函数](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+### 异步和并发编程
 #### [异步编程](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
 <!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
