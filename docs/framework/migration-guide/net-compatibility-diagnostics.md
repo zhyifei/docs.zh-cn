@@ -479,7 +479,7 @@ ms.lasthandoff: 05/22/2017
 |范围|边缘|  
 |版本|4.5|  
 |类型|运行时|  
-|受影响的 API|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|受影响的 API|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |分析器|CD0043|  
   
 <a name="diagnostic44"></a>   
