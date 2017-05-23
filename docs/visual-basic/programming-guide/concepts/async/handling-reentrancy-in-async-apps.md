@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ TOTAL bytes returned:  890591
  下面的代码演示了这些更改（使用星号标记）。 可以将所做的更改添加到本主题末尾处的代码也可以在下载完成的应用程序从[异步示例︰.NET 桌面应用程序中的重入](http://go.microsoft.com/fwlink/?LinkId=266571)。 项目名是 DisableStartButton。  
   
 ```vb  
-  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
     ' This line is commented out to make the results clearer in the output.  
     'ResultsTextBox.Text = ""  
@@ -161,7 +161,6 @@ End Sub
   
         ' *** Declare a System.Threading.CancellationTokenSource.  
         Dim cts As CancellationTokenSource  
-  
     ```  
   
 2.  在 `StartButton_Click` 中，确定操作是否已在进行。 如果值`cts`是`Nothing`，任何操作已处于活动状态。 如果值不是`Nothing`，则取消已在运行此操作。  
@@ -171,7 +170,6 @@ End Sub
     If cts IsNot Nothing Then  
         cts.Cancel()  
     End If  
-  
     ```  
   
 3.  将 `cts` 设置为表示当前进程的不同值。  
@@ -180,7 +178,6 @@ End Sub
     ' *** Now set cts to cancel the current process if the button is chosen again.  
     Dim newCTS As CancellationTokenSource = New CancellationTokenSource()  
     cts = newCTS  
-  
     ```  
   
 4.  在末尾`StartButton_Click`，当前的过程已完成，因此设置的值`cts`回`Nothing`。  
@@ -190,7 +187,6 @@ End Sub
     If cts Is newCTS Then  
         cts = Nothing  
     End If  
-  
     ```  
   
  以下代码显示了 `StartButton_Click` 中的所有更改。 新增内容标有星号。  
@@ -226,7 +222,6 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
         cts = Nothing  
     End If  
 End Sub  
-  
 ```  
   
  在 `AccessTheWebAsync` 中，进行下列更改。  
@@ -275,7 +270,6 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ResultsTextBox.Text &=  
         String.Format(vbCrLf & vbCrLf & "TOTAL bytes returned:  " & total & vbCrLf)  
 End Function  
-  
 ```  
   
  如果您选择**启动**按钮几次运行此应用程序时，它应生成类似于下面的输出的结果。  
@@ -318,7 +312,6 @@ TOTAL bytes returned:  890591
  下面的输出显示的结果，是否用户选择**启动**按钮一次。 字母标签，A，指示该结果是从第一次**启动**选择按钮。 编号显示下载目标列表中 URL 的顺序。  
   
 ```  
-  
 #Starting group A.  
 #Task assigned for group A.  
   
@@ -390,7 +383,6 @@ C-8. msdn.microsoft.com/library/ff730837.aspx               148010
 TOTAL bytes returned:  920526  
   
 #Group C is complete.  
-  
 ```  
   
  组 B 和 C 会在组 A 完成之前开始，但是每个组的输出会分开显示。 组 A 的所有输出都显示在最前面，接着是组 B 的所有输出然后所有的输出组 c。应用程序始终按顺序显示的组，并为每个组中，始终显示有关某个特定网站的信息的 Url 的 Url 列表中将出现的顺序。  
@@ -705,3 +697,4 @@ End Function
 ## <a name="see-also"></a>请参见  
  [演练︰ 访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [异步编程使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+

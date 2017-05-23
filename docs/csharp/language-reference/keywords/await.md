@@ -50,7 +50,6 @@ ms.lasthandoff: 03/24/2017
  在下列代码中，<xref:System.Net.Http.HttpClient> 方法<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 返回 `Task\<byte[]>` 和 `getContentsTask`。 当任务完成时，任务约定生成实际字节数组。 `await` 运算符应用于 `getContentsTask` 以在 `SumPageSizesAsync` 中挂起执行，直到 `getContentsTask` 完成。 同时，控制权会返回给 `SumPageSizesAsync` 的调用方。 当 `getContentsTask` 完成之后，`await` 表达式计算为字节数组。  
   
 ```csharp  
-  
 private async Task SumPageSizesAsync()  
 {  
     // To use the HttpClient type in desktop apps, you must include a using directive and add a   
@@ -64,7 +63,6 @@ private async Task SumPageSizesAsync()
     //byte[] urlContents = await client.GetByteArrayAsync(url);  
     // . . .  
 }  
-  
 ```  
   
 > [!IMPORTANT]
@@ -78,7 +76,6 @@ TResult result = await AsyncMethodThatReturnsTaskTResult();
   
 // Keyword await used with a method that returns a Task.  
 await AsyncMethodThatReturnsTask();  
-  
 ```  
   
  `await` 表达式不阻止正在执行它的线程。 而是使编译器将剩下的异步方法注册为等待任务的延续任务。 控制权随后会返回给异步方法的调用方。 任务完成时，它会调用其延续任务，异步方法的执行会在暂停的位置处恢复。  
@@ -100,7 +97,6 @@ await AsyncMethodThatReturnsTask();
  下面的 Windows 窗体示例阐释如何在异步方法 `WaitAsynchronouslyAsync` 中使用 `await`。 将该方法的行为与 `WaitSynchronously` 的行为进行对比。 如果未向任务应用 `await` 运算符，`WaitSynchronously` 就会同步运行，而不管其定义中是否使用了 `async` 修饰符和在主体中是否调用了 <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>。  
   
 ```csharp  
-  
 private async void button1_Click(object sender, EventArgs e)  
 {  
     // Call the method that runs asynchronously.  
@@ -137,3 +133,4 @@ public async Task<string> WaitSynchronously()
  [使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)   
  [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [async](../../../csharp/language-reference/keywords/async.md)
+

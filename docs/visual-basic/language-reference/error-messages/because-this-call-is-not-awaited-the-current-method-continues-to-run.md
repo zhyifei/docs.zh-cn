@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -102,13 +103,11 @@ ms.lasthandoff: 03/13/2017
         Await Task.Delay(howLong)  
         ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."  
     End Function  
-  
     ```  
   
      在此示例中，如果选择调用 1 或调用 2，未等待的异步方法 (`CalledMethodAsync`) 将在调用方 (`CallingMethodAsync`) 和调用方的调用方 (`StartButton_Click`) 完成后完成。 以下输出的最后一行演示了调用的方法何时完成。 输出内容标示了整个示例中何时进入和退出调用 `CallingMethodAsync` 的事件处理程序。  
   
     ```  
-  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  
@@ -138,7 +137,6 @@ ms.lasthandoff: 03/13/2017
             <TextBox x:Name="ResultsTextBox" Margin="0,80,0,0" TextWrapping="Wrap" FontFamily="Lucida Console"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
      MainWindow.xaml 的“设计” **** 视图中将显示一个简单的窗口，其中包含一个按钮和一个文本框。  
@@ -148,7 +146,6 @@ ms.lasthandoff: 03/13/2017
 4.  将 MainWindow.xaml.vb 中的代码替换为以下代码。  
   
     ```vb  
-  
     Class MainWindow   
   
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -233,3 +230,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>另请参阅  
  [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)   
  [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)
+

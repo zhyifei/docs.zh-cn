@@ -42,7 +42,6 @@ ms.lasthandoff: 05/15/2017
 使用 `class` 关键字声明类，如下例中所示：  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -122,3 +121,4 @@ Console.Write(child1.name);   // Error
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
  [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+

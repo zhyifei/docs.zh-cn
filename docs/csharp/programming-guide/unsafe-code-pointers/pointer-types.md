@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 100fa20e69c9a1cd6133437c29d1d5955e871656
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ Console.ReadLine();
 //12  
 //--------  
 //12  
-  
 ```  
   
  你无法对 `void*` 类型的指针应用间接寻址运算符。 但是，你可以使用强制转换将 void 指针转换为任何其他指针类型，反之亦然。  
@@ -160,3 +160,4 @@ Console.ReadLine();
  [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
  [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+

@@ -35,11 +35,9 @@ ms.lasthandoff: 05/22/2017
 -   通过将 `<EnableMultiMonitorDisplayClipping>` 元素添加到应用程序配置文件的 `<appSettings>` 部分，你可以对在 Windows 8 或更高版本上运行的应用禁用或启用此行为。 例如，下面的配置部分禁用不经剪辑的呈现：  
   
     ```  
-  
     <appSettings>  
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>  
       </appSettings>  
-  
     ```  
   
      `<EnableMultiMonitorDisplayClipping>` 配置设置可以有两个值之一：  
@@ -52,3 +50,4 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+

@@ -48,7 +48,6 @@ ms.lasthandoff: 05/10/2017
  如果希望实数被视为 `decimal` 类型，请使用后缀 m 或 M，例如：  
   
 ```  
-  
 decimal myMoney = 300.5m;  
 ```  
   
@@ -58,14 +57,12 @@ decimal myMoney = 300.5m;
  整型将被隐式转换为 `decimal` 类型，其计算结果为 `decimal`。 因此，你可以使用整数文本初始化十进制变量而不使用后缀，如下所示：  
   
 ```  
-  
 decimal myMoney = 300;  
 ```  
   
  在浮点型和 `decimal` 类型之间不存在隐式转换；因此，必须使用强制转换以在这两个类型之间转换。 例如：  
   
 ```  
-  
       decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
@@ -92,7 +89,6 @@ Console.WriteLine(dec + dub);
 // You can fix the error by using explicit casting of either operand.  
 Console.WriteLine(dec + (decimal)dub);  
 Console.WriteLine((double)dec + dub);  
-  
 ```  
   
  其结果为以下错误：  
@@ -121,3 +117,4 @@ Console.WriteLine((double)dec + dub);
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
+
