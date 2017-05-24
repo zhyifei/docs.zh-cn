@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3cc29c37879a3edafb05b482698393f521b6c3b3
-ms.openlocfilehash: b4b0ac5a58fa37e5b39bcba262ba0fac443725e6
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/26/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/26/2017
 
 `--filter <EXPRESSION>`
 
-使用给定表达式筛选掉当前项目中的测试。 有关筛选支持的详细信息，请参阅[使用 TestCaseFilter 在 Visual Studio 中运行选择性单元测试](https://aka.ms/vstest-filtering)。
+使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -98,10 +98,46 @@ ms.lasthandoff: 03/26/2017
 
 运行 `test1` 项目中的测试：
 
-`dotnet test ~/projects/test1/test1.csproj` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>筛选选项详细信息
+
+`--filter <EXPRESSION>`
+
+`<Expression>` 格式为 `<property><operator><value>[|&<Expression>]`。
+
+`<property>` 是 `Test Case` 的特性。 下面介绍了常用单元测试框架支持的属性：
+
+| 测试框架 | 支持的属性                                                                                      |
+| :------------: | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>名称</li><li>ClassName</li><li>优先级</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特征</li></ul>                                   |
+
+`<operator>` 说明了属性和值之间的关系：
+
+| 运算符 | 函数        |
+| :------: | --------------- |
+| `=`      | 完全匹配     |
+| `!=`     | 非完全匹配 |
+| `~`      | 包含        |
+
+`<value>` 是字符串。 所有查找都不区分大小写。
+
+不含 `<operator>` 的表达式自动被视为 `FullyQualifiedName` 属性上的 `contains`（例如，`dotnet test --filter xyz` 与 `dotnet test --filter FullyQualifiedName~xyz` 相同）。
+
+表达式可与条件运算符结合使用：
+
+| 运算符 | 函数 |
+| :------: | :------: |
+| `|`      | 或       |
+| `&`      | AND      |
+
+使用条件运算符时，可以用括号将表达式括起来（例如，`(Name~TestMethod1) | (Name~TestMethod2)`）。
+
+有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 ## <a name="see-also"></a>请参阅
 
-* [目标框架](../../standard/frameworks.md)
-* [运行时标识符 (RID) 目录](../rid-catalog.md)
+[框架和目标](../../standard/frameworks.md)   
+[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
 
