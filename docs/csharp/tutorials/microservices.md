@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57c49b555d7989a27fb4a2943b72cd2c4849694b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed747cf589e1f4731d78af7cc206ff3674d666b2
+ms.openlocfilehash: b2ce10b3c079ff2c881f6dbe297ead33b8254476
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 03/13/2017
 * 如何处理传入的 HTTP 请求并生成 HTTP 响应
 * 如何使用可以为 null 的值类型
 
-可以从 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)检索相关代码。
+可以[查看或下载本主题的示例应用](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="why-docker"></a>为什么要使用 Docker？
 
@@ -145,7 +146,7 @@ lambda 表达式中的自变量是请求的 `HttpContext`。 其属性之一是 
 
 接下来，需要将字符串转换成双精度类型值。 用于将字符串转换成双精度类型值的方法是 `double.TryParse()`：
 
-```cs
+```csharp
 bool TryParse(string s, out double result);
 ```
 
@@ -173,7 +174,7 @@ bool TryParse(string s, out double result);
 
 下一个任务是生成随机天气预报。 让我们从包含天气预报所需值的数据容器入手：
 
-```cs
+```csharp
 public class WeatherReport
 {
     private static readonly string[] PossibleConditions = new string[]
@@ -285,10 +286,6 @@ docker build -t weather-microservice .
 
 此命令将根据 Dockerfile 中的所有信息生成容器映像。 `-t` 自变量提供此容器映像的标记或名称。 在上面的命令行中，Docker 容器的标记是 `weather-microservice`。 此命令完成后，就生成了一个可用于运行新服务的容器。 
 
-> [!Note]
-> 复制命令将复制所有生成资产及应用程序的源。
-> 应在生成 Docker 映像前，先从本地计算机中删除 `obj`、`bin` 和 `out` 目录。
-
 运行以下命令，启动容器和服务：
 
 ```console
@@ -343,7 +340,7 @@ docker rm hello-docker
 若要从计算机中删除未使用的映像，可以运行以下命令：
 
 ```console
-docker rmi hello-docker
+docker rmi weather-microservice
 ```
 
 ## <a name="conclusion"></a>结束语 

@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc931fe2c87620ddb073f53f7e8edccaa1e3b987
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -30,7 +31,10 @@ ms.lasthandoff: 03/13/2017
 
 将生成一个应用程序，向 GitHub 上的 REST 服务发出 HTTP 请求。 需要读取 JSON 格式的信息，并将相应的 JSON 数据包转换成 C# 对象。 最后将了解如何使用 C# 对象。
 
-此教程将介绍许多功能。 我们将逐个生成这些功能。 
+此教程将介绍许多功能。 我们将逐个生成这些功能。
+
+如果想要按照针对本主题的[最终示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)操作，可以下载它。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+
 ## <a name="prerequisites"></a>先决条件
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 ## <a name="create-the-application"></a>创建应用程序
@@ -121,7 +125,7 @@ using System.Net.Http.Headers;
 第一个版本发出 Web 请求来读取 .NET Foundation 组织下的所有存储库列表。 （.NET Foundation 的 gitHub ID 为“dotnet”）。 首先，新建一个 @System.Net.Http.HttpClient。 此对象负责处理请求和响应。 接下来的几行代码将 @System.Net.Http.HttpClient 设置为处理此请求。 在第一行中，它被配置为接受 GitHub JSON 响应。
 此格式仅为 JSON。 下一代码行将用户代理标头添加到此对象发出的所有请求中。 这两个标头均由 GitHub 服务器代码进行检查，必须使用它们，才能检索 GitHub 中的信息。
 
-配置 @System.Net.Http.HttpClient 后，发出 Web 请求并检索响应。 在第一个版本中，使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 便捷方法。 此便捷方法先执行发出 Web 请求的任务，然后当返回请求时读取响应流，并从流中提取内容。 响应正文以 @System.String 的形式返回。 此字符串在任务完成时可用。 
+配置 @System.Net.Http.HttpClient 后，发出 Web 请求并检索响应。 在此第一个版本中，将使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 便捷方法。 此便捷方法先执行发出 Web 请求的任务，然后当返回请求时读取响应流，并从流中提取内容。 响应正文以 @System.String 的形式返回。 此字符串在任务完成时可用。 
 
 此方法的最后两行代码用于等待任务完成，然后在控制台中打印输出响应。
 生成并运行应用程序。 此时，生成警告不再显示，因为 `ProcessRepositories` 现在的确包含 `await` 运算符。 将看到很长的 JSON 格式文本。   
@@ -360,7 +364,7 @@ using System.Globalization;
 Console.WriteLine(repo.LastPush);
 ```
 
-你的版本现在应与[此处](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)的已完成版本一致。
+你的版本现在应与[已完成的示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)匹配。
  
 ## <a name="conclusion"></a>结束语
 

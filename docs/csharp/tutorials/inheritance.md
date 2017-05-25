@@ -1,5 +1,5 @@
 ---
-title: "C 中的继承#"
+title: "C# 中的继承"
 description: "了解如何在 C# 库和应用程序中运用继承。"
 keywords: "继承 (C#), 基类, 派生类, 抽象基类"
 author: rpetrusha
@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c14a2ecfa4b9c9522278098d54aad258b5feb1dc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承 #
@@ -53,13 +54,13 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 - [实例构造函数](../programming-guide/classes-and-structs/constructors.md)：在创建类的新实例时调用。 每个类都必须定义自己的构造函数。
 
-- [析构函数](../programming-guide/classes-and-structs/destructors.md)：由运行时的垃圾回收器调用，用于销毁类实例。
+- [终结器](../programming-guide/classes-and-structs/destructors.md)：由运行时的垃圾回收器调用，用于销毁类实例。
 
 虽然基类的其他所有成员都可供派生类继承，但这些成员是否可见取决于它们的可访问性。 成员的可访问性决定了其是否在派生类中可见，如下所述：
 
 - 只有在基类中嵌套的派生类中，[私有](../language-reference/keywords/private.md)成员才可见。 否则，此类成员在派生类中不可见。 在以下示例中，`A.B` 是派生自 `A` 的嵌套类，而 `C` 则派生自 `A`。 私有 `A.value` 字段在 A.B 中可见。 不过，如果从 `C.GetValue` 方法中删除注释并尝试编译示例，则会生成编译器错误 CS0122：“'A.value' 不可访问，因为它具有一定的保护级别。”
 
-   [!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+   [!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
 - [受保护](../language-reference/keywords/protected.md)成员仅在派生类中可见。
 
@@ -67,7 +68,7 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 - [公共] (../language-reference/keywords/protected.md) 成员在派生类中可见，并且属于派生类的公共接口。 可以调用继承的公共成员，就像它们是在派生类中定义一样。 在以下示例中，类 `A` 定义 `Method1` 方法，类 `B` 继承自类 `A`。 然后，以下示例调用 `Method1`，就像它是 `B` 中的实例方法一样。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
 派生类还可以通过提供重写实现代码来*重写*继承的成员。 基类成员必须标记有 [virtual](../language-reference/keywords/virtual.md) 关键字，才能重写继承的成员。 默认情况下，基类成员没有 `virtual` 标记，因此无法被重写。 如果尝试重写非虚成员（如以下示例所示），则会生成编译器错误 CS0506：“<member> 无法重写继承的成员 <member>，因为继承的成员没有 virtual、abstract 或 override 标记。”
 
@@ -122,11 +123,11 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 为了说明隐式继承的具体含义，让我们来定义一个新类 `SimpleClass`，这只是一个空类定义：
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
 然后，我们可以使用反射（方便我们检查类型的元数据，从而获取此类型的相关信息），获取 `SimpleClass` 类型的成员列表。 尽管我们没有在 `SimpleClass` 类中定义任何成员，但示例输出表明它实际上有九个成员。 其中之一是由 C# 编译器自动为 `SimpleClass` 类型提供的无参数（或默认）构造函数。 另外八个是 @System.Object（.NET 类型系统中的所有类和接口最终隐式继承自的类型）成员。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 由于隐式继承自 @System.Object 类，因此 `SimpleClass` 类可以使用下面这些方法：
 
@@ -144,7 +145,7 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 由于是隐式继承，因此我们可以调用 `SimpleClass` 对象中任何继承的成员，就像它实际上是 `SimpleClass` 类中定义的成员一样。 例如，下面的示例调用 `SimpleClass` 从 @System.Object 继承而来的 `SimpleClass.ToString` 方法。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
 下表列出了可以在 C# 中创建的各种类型及其隐式继承自的类型。 每个基类型通过继承向隐式派生的类型提供一组不同的成员。
 
@@ -163,11 +164,11 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 请注意，“is a”还表示类型与其特定实例化之间的关系。 在以下示例中，`Automobile` 类包含三个唯一只读属性：`Moke`（汽车制造商）、`Model`（汽车型号）和 `Year`（汽车出厂年份）。 `Automobile` 类还有一个自变量被分配给属性值的构造函数，并将 @System.Object.ToString 方法重写为生成唯一标识 `Automobile` 实例（而不是 `Automobile` 类）的字符串。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
 在这种情况下，我们不得依赖继承来表示特定汽车品牌和型号。 例如，我们不需要定义 `Packard` 类型来表示帕卡德制造的汽车。 相反，我们可以通过创建将相应值传递给其类构造函数的 `Automobile` 对象来进行表示，如以下示例所示。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
 基于继承的“is a”关系最适用于基类和向基类添加附加成员或需要基类没有的其他功能的派生类。
 
@@ -205,7 +206,7 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 以下示例展示了 `Publication` 类的源代码，以及 `Publication.PublicationType` 属性返回的 `PublicationType` 枚举。 除了继承自 @System.Object 的成员之外，`Publication` 类还定义了以下唯一成员和成员重写：
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - 构造函数
 
@@ -248,7 +249,7 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 `Book` 类表示作为一种特定类型出版物的书籍。 下面的示例展示了 `Book` 类的源代码。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
 除了继承自 `Publication` 的成员之外，`Book` 类还定义了以下唯一成员和成员重写：
 
@@ -280,7 +281,7 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 现在，我们可以实例化 `Book` 对象，调用其唯一成员和继承的成员，并将其作为自变量传递给需要 `Publication` 或 `Book` 类型参数的方法，如以下示例所示。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="abstract"></a>设计抽象基类及其派生类 ##
 
@@ -290,17 +291,17 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 以下示例定义了 `Shape` 抽象基类，此基类又定义了两个属性：`Area` 和 `Perimeter`。 请注意，除了用 [abstract](../language-reference/keywords/abstract.md) 关键字标记类之外，还需要用 [abstract](../language-reference/keywords/abstract.md) 关键字标记每个实例成员。 在此示例中，`Shape` 还将 @System.Object.ToString 方法重写为返回类型的名称，而不是其完全限定的名称。 基类还定义了两个静态成员（`GetArea` 和 `GetPerimeter`），以便调用方可以轻松检索任何派生类实例的面积和周长。 将派生类实例传递给两个方法中的任意一个时，运行时调用的是派生类重写的方法。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
 然后，我们可以从表示特定形状的 `Shape` 派生一些类。 以下示例定义了三个类：`Triangle`、`Rectangle` 和 `Circle`。 每个类都使用特定形状的专属公式来计算面积和周长。 一些派生类还定义所表示形状的专属属性（如 `Rectangle.Diagonal` 和 `Circle.Diameter`）。
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
 以下示例使用派生自 `Shape` 的对象。 它实例化派生自 `Shape` 的一组对象，然后调用 `Shape` 类的静态方法，用于包装返回的 `Shape` 属性值。 请注意，运行时从派生类型的重写属性检索值。 以下示例还将数组中的每个 `Shape` 对象显式转换成其派生类型；如果显式转换成功，则检索 `Shape` 的特定子类的属性。 
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>另请参阅 ##
+## <a name="see-also"></a>请参阅 ##
 
 [类和对象](../tour-of-csharp/classes-and-objects.md)</br>
 [继承（C# 编程指南）](../programming-guide/classes-and-structs/inheritance.md)
