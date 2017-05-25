@@ -1,210 +1,178 @@
 ---
 title: "使用 .NET Core 命令行组织和测试项目 | Microsoft Docs"
 description: "本教程介绍如何从命令行组织和测试 .NET Core 项目。"
-keywords: ".NET、.NET Core"
+keywords: .NET, .NET Core, unit testing, .NET CLI, xUnit
 author: cartermp
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 05/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 3f401907a59d5427cbcfaa0b785931a7ed82110f
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
+ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/16/2017
 
 ---
 
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令行组织和测试项目
 
-本教程遵循[使用命令行在 Windows/Linux/macOS 上实现 .NET Core 入门](./using-with-xplat-cli.md)，演示如何超越简单的“hello world”方案，为更高级和组织更良好的应用程序做好铺垫。
+本教程遵循[使用命令行在 Windows/Linux/macOS 上实现 .NET Core 入门](using-with-xplat-cli.md)，演示如何超越简单的创建控制台应用，开发更高级和组织更良好的应用程序。 在演示如何使用文件夹来组织代码后，本教程还将说明如何使用 [xUnit](https://xunit.github.io/) 测试框架扩展控制台应用程序。
 
 ## <a name="using-folders-to-organize-code"></a>使用文件夹组织代码
 
-假设希望引入一些新类型来执行工作。 为此，可添加更多文件并确保向其提供可包含在 *Program.cs* 文件中的命名空间。
+如要要在控制台应用中引入新类型，可向该应用添加包含该类型的文件。 例如，如果向项目添加包含 `AccountInformation` 和 `MonthlyReportRecords` 类型的文件，则项目文件结构是平面的，且易于导航：
 
 ```
 /MyProject
-|__Program.cs
 |__AccountInformation.cs
 |__MonthlyReportRecords.cs
 |__MyProject.csproj
-```
-
-项目规模相对较小时，这非常有用。 但是，如果应用较大，具有许多不同的数据类型并且可能有多层，则你可能会想要进行逻辑组织。 这时就该文件夹发挥作用了。 可按照本指南介绍的 [NewTypes 示例项目](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild)执行操作，或创建自己的文件和文件夹。
-
-首先，在项目的根下创建一个新的文件夹。 此处选择 `/Model`。
-
-```
-/NewTypes
-|__/Model
 |__Program.cs
-|__NewTypes.csproj
 ```
 
-现在，将一些新类型添加到该文件夹：
+但是，仅在项目规模相对较小时，此方法才适用。 你能否想象在项目中添加 20 个类型时会发生什么？ 项目的根目录中会散落许多文件，这样的项目必然会难以导航和维护。
+
+要组织项目，请创建一个名为 Models 新文件夹，将其用于保存类型文件。 将类型文件放入 Models 文件夹中：
 
 ```
-/NewTypes
-|__/Model
+/MyProject
+|__/Models
    |__AccountInformation.cs
    |__MonthlyReportRecords.cs
+|__MyProject.csproj
 |__Program.cs
-|__NewTypes.csproj
 ```
 
-现在，就像它们是同一目录中的文件一样，为其提供相同的命名空间，以便可以将其包含在 `Program.cs` 中。
+按逻辑将文件分组到文件夹的项目易于导航和维护。 在下一节中，将创建一个更复杂的示例，它包含文件夹和单元测试。
 
-### <a name="example-pet-types"></a>示例：宠物类型
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>使用 NewTypes Pets 示例进行组织和测试
 
-此示例创建了两个新类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。
+### <a name="building-the-sample"></a>生成示例
 
-文件夹结构：
+对于下列步骤，可使用 [NewTypes Pets 示例](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild)进行相关操作，也可以创建自己的文件与文件夹进行操作。 各类型按逻辑组织为文件夹结构，允许日后加入更多类型，测试也按逻辑放置在文件夹中，允许日后加入更多测试。
+
+此示例包含两种类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。 对于 `NewTypes` 项目，目标是将与宠物相关的类型组织到 Pets 文件夹中。 如果之后添加了另一组类型（例如 WildAnimals），则将其与 Pets 文件夹一同放在 NewTypes 文件夹中。 WildAnimals 文件夹可包含不属于宠物的动物类型，如 `Squirrel` 和 `Rabbit` 类型。 按照这种方式添加类型，不会破坏项目的良好组织。 
+
+创建以下文件夹结构，并指明文件内容：
 
 ```
 /NewTypes
-|__/Pets
-   |__Dog.cs
-   |__Cat.cs
-   |__IPet.cs
-|__Program.cs
-|__NewTypes.csproj
+|__/src
+   |__/NewTypes
+      |__/Pets
+         |__Dog.cs
+         |__Cat.cs
+         |__IPet.cs
+      |__Program.cs
+      |__NewTypes.csproj
 ```
 
-`IPet.cs`：
-```csharp
-using System;
+IPet.cs:
 
-namespace Pets
-{
-    public interface IPet
-    {
-        string TalkToOwner();
-    }
-}
+[!code-csharp[IPet 接口](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+
+Dog.cs:
+
+[!code-csharp[Dog 类](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+
+Cat.cs:
+
+[!code-csharp[Cat 类](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+
+Program.cs:
+
+[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+
+NewTypes.csproj:
+
+[!code-xml[NewTypes.csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+
+执行以下命令：
+
+```console
+dotnet restore
+dotnet run
 ```
 
-`Dog.cs`：
-```csharp
-using System;
+获得以下输出：
 
-namespace Pets
-{
-    public class Dog : IPet
-    {
-        public string TalkToOwner() => "Woof!";
-    }
-}
-```
-
-`Cat.cs`：
-```csharp
-using System;
-
-namespace Pets
-{
-    public class Cat : IPet
-    {
-        public string TalkToOwner() => "Meow!";
-    }
-}
-```
-
-`Program.cs`：
-```csharp
-using System;
-using Pets;
-using System.Collections.Generic;
-
-namespace ConsoleApplication
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            List<IPet> pets = new List<IPet>
-            {
-                new Dog(),
-                new Cat()  
-            };
-            
-            foreach (var pet in pets)
-            {
-                Console.WriteLine(pet.TalkToOwner());
-            }
-        }
-    }
-}
-```
-
-`NewTypes.csproj`：
-```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-```
-
-如果运行，将出现以下结果：
-
-```
-$ dotnet restore
-$ dotnet run
+```console
 Woof!
 Meow!
 ```
 
-现在可以添加新宠物类型（例如 `Bird`），扩展此项目。
+可选练习：可通过扩展此项目添加新的宠物类型，如 `Bird`。 使鸟的 `TalkToOwner` 方法向所有者发出 `Tweet!`。 再次运行应用。 输出将包含 `Tweet!`
 
-## <a name="testing-your-console-app"></a>测试控制台应用
+### <a name="testing-the-sample"></a>测试示例
 
-可能需要在某些时候测试项目。 下面是一种执行此操作的好办法：
+`NewTypes` 项目已准备就绪，与宠物相关的类型均置于一个文件夹中，因此具有良好的组织。 接下来，创建测试项目，并使用 [xUnit](https://xunit.github.io/) 测试框架开始编写测试。 使用单元测试，可自动检查宠物类型的行为，确认其正常运行。
 
-1. 将现有项目的任何源移动到新的 `src` 文件夹。
+创建 test 文件夹，并在其中包含一个 NewTypesTests 文件夹。 在 NewTypesTests 文件夹的命令提示符中，执行 `dotnet new xunit`。 这将生成两个文件：NewTypesTests.csproj 和 UnitTest1.cs。
 
-   ```
-   /Project
-   |__/src
-   ```
+测试项目当前无法测试 `NewTypes` 中的类型，并且需要对 `NewTypes` 项目的项目引用。 要添加项目引用，请使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-2. 创建 `/test` 目录，然后将 `cd` 放入其中。
+```
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
+```
 
-   ```
-   /Project
-   |__/src
-   |__/test
-   ```
+还可以选择向 NewTypesTests.csproj 文件添加 `<ItemGroup>` 节点，手动添加项目引用：
 
-3. 使用 `dotnet new xunit` 命令初始化目录。 这将假定 xUnit，但也可通过将 `xunit` 替换为 `mstest` 来使用 MS 测试。
-   
-### <a name="example-extending-the-newtypes-project"></a>示例：扩展 NewTypes 项目
+```xml
+<ItemGroup>
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+</ItemGroup>
+```
 
-现在项目系统已就绪，可创建测试项目并开始编写测试！ 从现在开始，本指南将使用并扩展[示例 Types 项目](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild)。 此外，还将使用 [Xunit](https://xunit.github.io/) 测试框架。 可按照指南操作或创建自己的、含测试的多项目系统。
+NewTypesTests.csproj:
 
-整个项目结构应如下所示：
+[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+
+NewTypesTests.csproj 文件包含下列内容：
+
+* 对 .NET 测试基础结构 `Microsoft.NET.Test.Sdk` 的包引用
+* 对 xUnit 测试框架 `xunit` 的包引用
+* 对测试运行程序 `xunit.runner.visualstudio` 的包引用
+* 对要测试的代码 `NewTypes` 的项目引用
+
+将 UnitTest1.cs 的名称更改为 PetTests.cs，并将文件中的代码替换为下列内容：
+
+```csharp
+using System;
+using Xunit;
+using Pets;
+
+public class PetTests
+{
+    [Fact]
+    public void DogTalkToOwnerReturnsWoof()
+    {
+        string expected = "Woof!";
+        string actual = new Dog().TalkToOwner();
+        
+        Assert.NotEqual(expected, actual);
+    }
+    
+    [Fact]
+    public void CatTalkToOwnerReturnsMeow()
+    {
+        string expected = "Meow!";
+        string actual = new Cat().TalkToOwner();
+        
+        Assert.NotEqual(expected, actual);
+    }
+}
+```
+
+可选练习：如果先前向所有者添加了生成 `Tweet!` 的 `Bird` 类型，请向 PetTests.cs 文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，检查对于 `Bird` 类型，`TalkToOwner` 方法是否正常工作。
+
+> [!NOTE]
+> 尽管期望 `expected` 和 `actual` 值相等，但使用 `Assert.NotEqual` 检查的初始断言表明它们并不相等。 务必使最初创建的测试失败一次，以检查测试的逻辑是否正确。 这是测试驱动设计 (TDD) 方法中的一个重要步骤。 在确认测试失败后，调整断言使测试通过。
+
+下面演示了完整的项目结构：
 
 ```
 /NewTypes
@@ -222,102 +190,73 @@ Meow!
       |__NewTypesTests.csproj
 ```
 
-请确保测试项目中具有以下两项新内容：
-
-1. 具有以下引用的正确 *NewTypesTests.csproj* 文件：
-
-   * 对 `xunit` 的引用
-   * 对 `dotnet-test-xunit` 的引用
-   * 引用对应于测试下的代码的命名空间
-
-   这可以通过在 *NewTypesTests* 目录中的命令提示符处键入 `dotnet new xunit`，然后向 `NewTypes` 项目添加项目引用来进行生成。
-
-    `NewTypesTests/NewTypesTests.csproj`：
-    ```xml
-    <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-
-      <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>netcoreapp1.0</TargetFramework>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Compile Include="**\*.cs" />
-        <EmbeddedResource Include="**\*.resx" />
-      </ItemGroup>
-
-      <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161104-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Test.Sdk">
-          <Version>15.0.0-preview-20161024-02</Version>
-        </PackageReference>
-        <PackageReference Include="xunit">
-          <Version>2.2.0-beta3-build3402</Version>
-        </PackageReference>
-        <PackageReference Include="xunit.runner.visualstudio">
-          <Version>2.2.0-beta4-build1188</Version>
-        </PackageReference>
-        <ProjectReference Include="../../src/NewTypes/NewTypes.csproj"/>
-      </ItemGroup>
-
-      <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    </Project>
-    ```
-
-2. xUnit 测试类。
-
-    `PetTests.cs`： 
-    ```csharp
-    using System;
-    using Xunit;
-    using Pets;
-    public class PetTests
-    {
-        [Fact]
-        public void DogTalkToOwnerTest()
-        {
-            string expected = "Woof!";
-            string actual = new Dog().TalkToOwner();
-            
-            Assert.Equal(expected, actual);
-        }
-        
-        [Fact]
-        public void CatTalkToOwnerTest()
-        {
-            string expected = "Meow!";
-            string actual = new Cat().TalkToOwner();
-            
-            Assert.Equal(expected, actual);
-        }
-    }
-    ```
-   
-现在可以运行测试！ [`dotnet test`](../tools/dotnet-test.md) 命令运行在项目中指定的测试运行程序。 确保从顶级目录开始。
+在 test/NewTypesTests 目录中开始。 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原测试项目。 使用 [`dotnet test`](../tools/dotnet-test.md) 命令运行测试。 此命令启动项目文件中指定的测试运行程序。
+ 
+测试按预期失败，控制台显示以下输出：
  
 ```
-$ cd test/NewTypesTests
-$ dotnet restore
-$ dotnet test
-```
- 
-输出应如下所示：
- 
-```
-xUnit.net .NET CLI test runner (64-bit win10-x64)
-  Discovering: NewTypesTests
-  Discovered:  NewTypesTests
-  Starting:    NewTypesTests
-  Finished:    NewTypesTests
-=== TEST EXECUTION SUMMARY ===
-   NewTypesTests  Total: 2, Errors: 0, Failed: 0, Skipped: 0, Time: 0.144s
-SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
+Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:00.7271827]   Discovering: NewTypesTests
+[xUnit.net 00:00:00.8258687]   Discovered:  NewTypesTests
+[xUnit.net 00:00:00.8663545]   Starting:    NewTypesTests
+[xUnit.net 00:00:01.0109236]     PetTests.CatTalkToOwnerReturnsMeow [FAIL]
+[xUnit.net 00:00:01.0119107]       Assert.NotEqual() Failure
+[xUnit.net 00:00:01.0120278]       Expected: Not "Meow!"
+[xUnit.net 00:00:01.0120968]       Actual:   "Meow!"
+[xUnit.net 00:00:01.0130500]       Stack Trace:
+[xUnit.net 00:00:01.0141240]         C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs(22,0): at PetTests.CatTalkToOwnerReturnsMeow()
+[xUnit.net 00:00:01.0272364]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
+[xUnit.net 00:00:01.0273649]       Assert.NotEqual() Failure
+[xUnit.net 00:00:01.0274166]       Expected: Not "Woof!"
+[xUnit.net 00:00:01.0274690]       Actual:   "Woof!"
+[xUnit.net 00:00:01.0275264]       Stack Trace:
+[xUnit.net 00:00:01.0275960]         C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs(13,0): at PetTests.DogTalkToOwnerReturnsWoof()
+[xUnit.net 00:00:01.0294509]   Finished:    NewTypesTests
+Failed   PetTests.CatTalkToOwnerReturnsMeow
+Error Message:
+ Assert.NotEqual() Failure
+Expected: Not "Meow!"
+Actual:   "Meow!"
+Stack Trace:
+   at PetTests.CatTalkToOwnerReturnsMeow() in C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 22
+Failed   PetTests.DogTalkToOwnerReturnsWoof
+Error Message:
+ Assert.NotEqual() Failure
+Expected: Not "Woof!"
+Actual:   "Woof!"
+Stack Trace:
+   at PetTests.DogTalkToOwnerReturnsWoof() in C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 13
+
+Total tests: 2. Passed: 0. Failed: 2. Skipped: 0.
+Test Run Failed.
+Test execution time: 2.1371 Seconds
 ```
 
+将测试的断言从 `Assert.NotEqual` 更改为 `Assert.Equal`：
+
+[!code-csharp[PetTests 类](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+
+使用 `dotnet test` 命令重新运行测试，并获得以下输出：
+
+```
+Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:01.3882374]   Discovering: NewTypesTests
+[xUnit.net 00:00:01.4767970]   Discovered:  NewTypesTests
+[xUnit.net 00:00:01.5157667]   Starting:    NewTypesTests
+[xUnit.net 00:00:01.6408870]   Finished:    NewTypesTests
+
+Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1.6634 Seconds
+```
+
+测试通过。 在与所有者谈话时，宠物类型的方法返回正确的值。
+
+你已了解使用 xUnit 来组织和测试项目的方法。 继续使用这些方法，将它们应用于自己的项目中。 祝你编码愉快！

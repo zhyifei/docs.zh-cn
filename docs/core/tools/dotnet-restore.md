@@ -4,16 +4,17 @@ description: "了解如何使用 dotnet-restore 命令还原依赖项和特定�
 keywords: "dotnet-restore, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 92da0806eb6c365a4622668242edc28d9966ed26
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
+ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/29/2017
 
 ---
 
@@ -37,6 +38,8 @@ ms.lasthandoff: 03/22/2017
 
 对于特定于项目的工具，`dotnet restore` 首先还原打包工具所在的包，然后继续还原 project 文件中指定的工具依赖项。
 
+`dotnet restore` 命令的行为会受 Nuget.Config 文件（如果有）中某些设置的影响。 例如，在 NuGet.Config 中设置 `globalPackagesFolder` 会将还原的 NuGet 包置于指定的文件夹中。 这是在 `dotnet restore` 命令中指定 `--packages` 选项的替代方法。 有关详细信息，请参阅 [NuGet.Config reference](https://docs.microsoft.com/nuget/schema/nuget-config-file)（NuGet.Config 引用）。
+
 ## <a name="arguments"></a>参数
 
 `ROOT` 
@@ -57,7 +60,7 @@ ms.lasthandoff: 03/22/2017
 
 指定程序包还原的运行时。 这用于还原 *.csproj* 文件中的 `<RuntimeIdentifiers>` 标记中未显式列出的运行时的程序包。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 通过多次指定此选项提供多个 RID。
 
-`--packages <PACKAGES_DIRECTORY]`
+`--packages <PACKAGES_DIRECTORY>`
 
 指定还原包的目录。 
 
@@ -103,7 +106,7 @@ ms.lasthandoff: 03/22/2017
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
 
-还原当前目录中项目的依赖项和工具并仅显示输出中的错误：
+还原当前目录中项目的依赖项和工具，并仅显示最少的输出：
 
-`dotnet restore --verbosity Error`
+`dotnet restore --verbosity minimal`
 

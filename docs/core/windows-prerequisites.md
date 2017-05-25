@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: 13947fd81940c1ccb606cb4cd765dc230fe95c0f
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 582b7d7f00b939493cea6d8cb4055b6779118c14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -36,11 +37,11 @@ ms.lasthandoff: 03/20/2017
 
 ## <a name="net-core-dependencies"></a>.NET Core 依赖项
 
-在早于 Windows 10 和 Windows Server 2016 的 Windows 版本上运行 .NET Core 时，需要 Visual C++ Redistributable。 若使用 .NET Core 安装程序，将自动安装此依赖项。 但是，如果通过[安装程序脚本](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/dotnet-install-script)安装 .NET Core 或部署自包含的 .NET Core 应用程序，则需要手动安装 [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)。
+在早于 Windows 10 和 Windows Server 2016 的 Windows 版本上运行 .NET Core 时，需要 Visual C++ Redistributable。 若使用 .NET Core 安装程序，将自动安装此依赖项。 但是，如果通过[安装程序脚本](./tools/dotnet-install-script.md)安装 .NET Core 或部署独立的 .NET Core 应用程序，则需要手动安装 [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53840)。
 
 > [!NOTE]
 > <em>仅适用于 Windows 7 和 Windows Server 2008 计算机：</em><br>
-> 确保 Windows 安装是最新版本，并且包括通过 Windows 更新安装的修补程序 [KB2533623](https://support.microsoft.com/en-us/kb/2533623)。
+> 确保 Windows 安装是最新版本，并且包括通过 Windows 更新安装的修补程序 [KB2533623](https://support.microsoft.com/help/2533623)。
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 的先决条件
 
@@ -52,12 +53,11 @@ ms.lasthandoff: 03/20/2017
 若要使用 Visual Studio 2017 开发 .NET Core 应用，必须选择将 **.NET Core 跨平台开发**工具集（在“其他工具集”部分中）与最新版本的 Visual Studio 一并安装。
 ![选中“.NET Core 跨平台开发”工作负荷的 Visual Studio 2017 安装的屏幕截图](./media/windows-prerequisites/vs_workloads.jpg)
 
-Visual Studio 2017 有不同的版本。 可以免费下载 [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) 并开始使用。  若要了解有关 Visual Studio 安装过程的详细信息，请参阅[安装 Visual Studo 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)。
+Visual Studio 2017 有不同的版本。 可以免费下载 [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) 并开始使用。  若要了解有关 Visual Studio 安装过程的详细信息，请参阅[安装 Visual Studo 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio)。
 
 若要验证运行的是否是最新版本的 Visual Studio 2017，请执行以下操作：
- +
- +*在“帮助”**菜单上，选择“关于 Microsoft Visual Studio”**。+*在“关于 Microsoft Visual Studio”对话框中，版本号应该是 15.0.26228.4 或更高版本。
 
-在[发行说明](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。
+ * 在“帮助”菜单上，选择“关于 Microsoft Visual Studio”。
+ * 在“关于 Microsoft Visual Studio”对话框中，版本号应该是 15.0.26228.4 或更高版本。
 
-[sdk]: https://go.microsoft.com/fwlink/?LinkID=827546
+在[发行说明](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。
