@@ -31,7 +31,7 @@ ms.lasthandoff: 04/10/2017
 - **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 文档由 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 许可发行。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持
 
-## <a name="composition"></a>撰写
+## <a name="composition"></a>组成部分
 
 .NET Core 包括以下部分：
 
