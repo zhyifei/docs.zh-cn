@@ -11,15 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da0ed7ee7f7653e23140732a785ee73b16a150a5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: d13387c4468a5c89cbe838139c767f0f95ab418d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>在查询表达式中处理异常
 
-在查询表达式的上下文中可以调用任何方法。 但是，我们建议避免在查询表达式中调用任何会产生副作用（如修改数据源内容或引发异常）的方法。 此示例演示在查询表达式中调用方法时如何避免引发异常，而不违反有关异常处理的常规 .NET Framework 指南。 这些指南阐明，当你理解在给定上下文中为何会引发异常时，捕获到该特定异常是可以接受的。 有关详细信息，请参阅[异常的最佳做法](http://msdn.microsoft.com/library/f06da765-235b-427a-bfb6-47cd219af539)。  
+在查询表达式的上下文中可以调用任何方法。 但是，我们建议避免在查询表达式中调用任何会产生副作用（如修改数据源内容或引发异常）的方法。 此示例演示在查询表达式中调用方法时如何避免引发异常，而不违反有关异常处理的常规 .NET Framework 指南。 这些指南阐明，当你理解在给定上下文中为何会引发异常时，捕获到该特定异常是可以接受的。 有关详细信息，请参阅[异常的最佳做法](../../standard/exceptions/best-practices-for-exceptions.md)。  
   
  最后的示例演示了在执行查询期间必须引发异常时，该如何处理这种情况。  
   

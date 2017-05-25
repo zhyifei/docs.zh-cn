@@ -31,27 +31,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1b6d5bf9943c5826685b9cc72c79187c7f51364
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 5084c4af3334c39f844fec67a1ab05dd9443bf27
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
   
 ## <a name="platform-invoke"></a>平台调用  
- 平台调用**是一项服务，它使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Microsoft Win32 API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
+ 平台调用是一项服务，它使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Microsoft Win32 API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
   
- 有关详细信息，请参阅[使用非托管 DLL 函数](http://msdn.microsoft.com/library/eca7606e-ebfb-4f47-b8d9-289903fdc045)和[如何：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
+ 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[如何：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
   
 > [!NOTE]
->  [公共语言运行时](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [.NET Framework 安全性](http://go.microsoft.com/fwlink/?LinkId=37122)。  
+>  [公共语言运行时](../../../standard/clr.md) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [.NET Framework 安全性](http://go.microsoft.com/fwlink/?LinkId=37122)。  
   
 ## <a name="c-interop"></a>C++ 互操作  
  可使用 C++ interop（又称为 It Just Works (IJW)）包装本机 C++ 类，以便用 C# 或其他 .NET Framework 语言编写的代码可以使用此类。 为此，请编写 C++ 代码来包装本机 DLL 或 COM 组件。 与其他 .NET Framework 语言不同，[!INCLUDE[vcprvc](../../../csharp/programming-guide/interop/includes/vcprvc_md.md)] 具有互操作性支持，可使托管和非托管代码放置在同一个应用程序（甚至同一个文件）中。 然后使用 **/clr** 编译器开关生成托管程序集，以便生成 C++ 代码。 最后，在 C# 项目中添加一个对该程序集的引用，并像使用其他托管类那样使用被包装对象。  
   
-## <a name="exposing-com-components-to-c"></a>向 C# 公开 COM 组件#  
+## <a name="exposing-com-components-to-c"></a>向 C# 公开 COM 组件  
  可以使用 C# 项目中的 COM 组件。 常规步骤如下所示：  
   
 1.  找到要使用的 COM 组件并注册。 使用 regsvr32.exe 注册或注销 COM DLL。  

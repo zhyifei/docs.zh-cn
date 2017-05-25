@@ -1,6 +1,6 @@
 ---
 title: "byte（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,28 +30,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c522506b4541edb2a81036e93e8872711f849b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 57c4b1c7ead9386ff4067da5915a55a79f5e562e
+ms.openlocfilehash: fce94687cbf055219913758d49642c8e4a999db3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="byte-c-reference"></a>byte（C# 参考）
-`byte` 关键字表示存储下表所示值的整型类型。  
+
+`byte` 表示存储下表所示值的整型类型。  
   
 |类型|范围|大小|.NET Framework 类型|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 到 255|无符号的 8 位整数|<xref:System.Byte?displayProperty=fullName>|  
   
 ## <a name="literals"></a>文本  
- 可如下例所示声明并初始化 `byte` 变量：  
+
+ 可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `byte` 变量。 如果整数文本超出 `byte` 的范围（即，如果该值小于 <xref:System.Byte.MinValue?displayProperty=fullName> 或大于 <xref:System.Byte.MaxValue?displayProperty=fullName>，将出现编译错误。
+
+在以下示例中，等于 201、表示为十进制、十六进制和二进制文本的整数从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `byte` 值。    
   
-```  
-byte myByte = 255;  
-```  
-  
- 在以上声明中，整数文本 `255` 从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `byte`。 如果整数超出了 `byte` 的范围，将出现编译错误。  
-  
+[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
+ 
 ## <a name="conversions"></a>转换  
  存在从 `byte` 到 [short](../../../csharp/language-reference/keywords/short.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。  
   

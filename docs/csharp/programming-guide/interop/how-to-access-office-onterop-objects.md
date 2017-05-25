@@ -32,14 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa2d21352763a4becbc432766f095226ee005869
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: e793e0b7f21948d16da4dcb618d73c4c3114adcb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：通过使用 Visual C# 功能访问 Office 互操作对象（C# 编程指南）
-Visual C# 2010 引入了可以简化对 Office API 对象的访问的新功能。 这些新功能包括命名实参和可选实参、名为 `dynamic` 的新类型，以及在 COM 方法中将实参传递为引用形参（就像它们是值形参）的功能。  
+Visual C# 具有一些功能，可简化对 Office API 对象的访问。 这些新功能包括命名实参和可选实参、名为 `dynamic` 的新类型，以及在 COM 方法中将实参传递为引用形参（就像它们是值形参）的功能。  
   
  在本主题中，你将利用这些新功能来编写创建并显示 Microsoft Office Excel 工作表的代码。 然后，你将编写添加包含链接到 Excel 工作表的图标的 Office Word 文档的代码。  
   
@@ -55,29 +56,29 @@ Visual C# 2010 引入了可以简化对 Office API 对象的访问的新功能�
   
 2.  在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。 此时将出现 **“新建项目”** 对话框。  
   
-3.  在“已安装的模板”****窗格中，展开“Visual C#”****，然后单击“Windows”****。  
+3.  在“已安装的模板”窗格中，展开“Visual C#”，然后单击“Windows”。  
   
-4.  查看“新建项目”****对话框的顶部，确保“.NET Framework 4”****（或更高版本）选为目标框架。  
+4.  查看“新建项目”对话框的顶部，确保“.NET Framework 4”（或更高版本）选为目标框架。  
   
-5.  在“模板”****窗格中，单击“控制台应用程序”****。  
+5.  在“模板”窗格中，单击“控制台应用程序”。  
   
-6.  在“名称”****字段中键入项目的名称。  
+6.  在“名称”字段中键入项目的名称。  
   
 7.  单击 **“确定”**。  
   
-     新项目将出现在“解决方案资源管理器”****中。  
+     新项目将出现在“解决方案资源管理器”中。  
   
 ### <a name="to-add-references"></a>添加引用  
   
-1.  在“解决方案资源管理器”****中，右键单击你的项目名称，然后单击“添加引用”****。 此时会显示“添加引用”****对话框。  
+1.  在“解决方案资源管理器”中，右键单击你的项目名称，然后单击“添加引用”。 此时会显示“添加引用”对话框。  
   
-2.  在“程序集”****页上，在“组件名称”****列表中选择“Microsoft.Office.Interop.Word”****，然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Excel”****。  如果未看到程序集，你可能需要确保安装并显示它们（请参阅[如何：安装 Office 主互操作程序集](http://msdn.microsoft.com/library/92948fcc-76c6-4b08-ba63-cab59dd60eb1)）  
+2.  在“程序集”页上，在“组件名称”列表中选择“Microsoft.Office.Interop.Word”，然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Excel”。  如果未看到程序集，你可能需要确保安装并显示它们（请参阅[如何：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）  
   
 3.  单击 **“确定”**。  
   
 ### <a name="to-add-necessary-using-directives"></a>添加必要的 using 指令  
   
-1.  在“解决方案资源管理器”****中，右键单击“Program.cs”****文件，然后单击“查看代码”****。  
+1.  在“解决方案资源管理器”中，右键单击“Program.cs”文件，然后单击“查看代码”。  
   
 2.  将以下 `using` 指令添加到代码文件的顶部。  
   
@@ -85,7 +86,7 @@ Visual C# 2010 引入了可以简化对 Office API 对象的访问的新功能�
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>创建银行帐户列表  
   
-1.  将以下类定义粘贴到“Program.cs”****中的 `Program` 类下。  
+1.  将以下类定义粘贴到“Program.cs”中的 `Program` 类下。  
   
      [!code-cs[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
   
@@ -117,7 +118,7 @@ Visual C# 2010 引入了可以简化对 Office API 对象的访问的新功能�
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     如果程序集由 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 编译器选项引用或者如果 Excel 的“嵌入互操作类型”****属性设置为 true，则 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 及更高版本会自动将返回的 `Object` 转换为 `dynamic`。 True 是此属性的默认值。  
+     如果程序集由 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 编译器选项引用或者如果 Excel 的“嵌入互操作类型”属性设置为 true，则 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 及更高版本会自动将返回的 `Object` 转换为 `dynamic`。 True 是此属性的默认值。  
   
 ### <a name="to-run-the-project"></a>运行项目  
   
@@ -167,11 +168,11 @@ Visual C# 2010 引入了可以简化对 Office API 对象的访问的新功能�
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-2.  若要更改默认行为并使用 PIA 代替嵌入类型信息，请展开“解决方案资源管理器”****中的“引用”****节点，然后选择“Microsoft.Office.Interop.Excel”****或“Microsoft.Office.Interop.Word”****。  
+2.  若要更改默认行为并使用 PIA 代替嵌入类型信息，请展开“解决方案资源管理器”中的“引用”节点，然后选择“Microsoft.Office.Interop.Excel”或“Microsoft.Office.Interop.Word”。  
   
-3.  如果看不到“属性”****窗口，请按“F4”****。  
+3.  如果看不到“属性”窗口，请按“F4”。  
   
-4.  在属性列表中找到“嵌入互操作类型”****，将其值更改为“False”****。 同样地，你还可以通过在命令提示符下使用 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 编译器选项代替 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 进行编译。  
+4.  在属性列表中找到“嵌入互操作类型”，将其值更改为“False”。 同样地，你还可以通过在命令提示符下使用 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 编译器选项代替 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 进行编译。  
   
 ### <a name="to-add-additional-formatting-to-the-table"></a>将其他格式添加到表格  
   

@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e44ef58e85fee164ab3b8be73a35083bd44c5df1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
 >  本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
 ## <a name="method-signatures"></a>方法签名  
- 通过指定访问级别（如 `public` 或 `private`）、可选修饰符（如 `abstract` 或 `sealed`）、返回值、方法的名称以及任何方法参数，在 [class](../../../csharp/language-reference/keywords/class.md) 或 [struct](../../../csharp/language-reference/keywords/struct.md) 中声明方法。 这些部件一起构成方法的签名。  
+ 通过指定访问级别（如 [或](../../../csharp/language-reference/keywords/class.md) ）、可选修饰符（如 [或](../../../csharp/language-reference/keywords/struct.md) ）、返回值、方法的名称以及任何方法参数，在 `public` 类 `private`或 `abstract` 结构 `sealed`中声明方法。 这些部件一起构成方法的签名。  
   
 > [!NOTE]
 >  出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
   
- 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但是因为使用了引用类型，结果有所不同。 `ModifyObject` 中所做的对形参 `obj` 的 `value` 字段的修改，也会更改 `TestRefType` 方法中实参 `rt` 的 `value` 字段。 `TestRefType` 方法显示 33 作为输出。  
+ 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但是因为使用了引用类型，结果有所不同。 `ModifyObject` 中所做的对形参 `value` 的 `obj`字段的修改，也会更改 `value` 方法中实参 `rt`的 `TestRefType` 字段。 `TestRefType` 方法显示 33 作为输出。  
   
  有关如何通过引用和值传递引用类型的详细信息，请参阅[传递引用类型参数](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)和[引用类型](../../../csharp/language-reference/keywords/reference-types.md)。  
   
@@ -111,24 +112,23 @@ static void Main(string[] args)
                 }  
             }  
         }  
-  
 ```  
   
  有关详细信息，请参阅 [return](../../../csharp/language-reference/keywords/return.md)。  
   
 ## <a name="async-methods"></a>异步方法  
- 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。 [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)] 中已引入异步功能。  
+ 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。 
   
- 如果用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符标记方法，则可以在该方法中使用 [await](../../../csharp/language-reference/keywords/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。  
+ 如果用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符标记方法，则可以使用该方法中的 [await](../../../csharp/language-reference/keywords/await.md) 运算符。 当控件到达异步方法中的 await 表达式时，控件将返回到调用方，并在等待任务完成前，方法中进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。  
   
 > [!NOTE]
 >  异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。  
   
- 异步方法的返回类型可为 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 void。 Void 返回类型主要用于定义需要 void 返回类型的事件处理程序。 无法等待返回 void 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。  
+ 异步方法可以具有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 void 返回类型。 Void 返回类型主要用于定义需要 void 返回类型的事件处理程序。 无法等待返回 void 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。  
   
- 在以下示例中，`DelayAsync` 是具有 <xref:System.Threading.Tasks.Task%601> 返回类型的异步方法。 `DelayAsync` 具有返回整数的 `return` 语句。 因此，`DelayAsync` 的方法声明必须具有 `Task<int>` 的返回类型。 因为返回类型是 `Task<int>`，`DoSomethingAsync` 中 `await` 表达式的计算如以下语句所示得出整数：`int result = await delayTask`。  
+ 在以下示例中，`DelayAsync` 是具有 <xref:System.Threading.Tasks.Task%601> 返回类型的异步方法。 `DelayAsync` 具有返回整数的 `return` 语句。 因此， `DelayAsync` 的方法声明必须具有 `Task<int>`的返回类型。 因为返回类型是 `Task<int>`， `await` 中 `DoSomethingAsync` 表达式的计算如以下语句所示得出整数： `int result = await delayTask`。  
   
- `startButton_Click` 方法是具有 void 返回类型的异步方法的示例。 因为 `DoSomethingAsync` 是异步方法，调用 `DoSomethingAsync` 的任务必须等待，如以下语句所示：`await DoSomethingAsync();`。 `startButton_Click` 方法必须使用 `async` 修饰符进行定义，因为该方法具有 `await` 表达式。  
+ `startButton_Click` 方法是具有 void 返回类型的异步方法的示例。 因为 `DoSomethingAsync` 是异步方法，调用 `DoSomethingAsync` 的任务必须等待，如以下语句所示： `await DoSomethingAsync();`。 `startButton_Click` 方法必须使用 `async` 修饰符进行定义，因为该方法具有 `await` 表达式。  
   
  [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
@@ -137,7 +137,7 @@ static void Main(string[] args)
  有关异步方法的详细信息，请参阅[使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)、[异步程序中的控制流](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ## <a name="expression-body-definitions"></a>表达式主体定义  
- 具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>` 定义此类方法的语法快捷方式：  
+ 具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>`定义此类方法的语法快捷方式：  
   
 ```csharp  
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);   
@@ -148,16 +148,16 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);  
 ```  
   
- 如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读，并且不使用 `get` 访问器关键字。  
+ 如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读的，并且不使用 `get` 访问器关键字。  
   
 ## <a name="iterators"></a>迭代器  
  迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 当 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句到达时，将记住当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
   
  通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句从客户端代码调用迭代器。  
   
- 迭代器的返回类型可以为 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
+ 迭代器的返回类型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
- 有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 有关更多信息，请参见 [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
@@ -174,3 +174,4 @@ public Customer this[long id] => store.LookupCustomer(id);
  [out](../../../csharp/language-reference/keywords/out.md)   
  [ref](../../../csharp/language-reference/keywords/ref.md)   
  [传递参数](passing-parameters.md)
+

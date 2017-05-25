@@ -2,39 +2,40 @@
 title: "类 | C# 指南"
 description: "了解类类型及其创建方式"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b5614123d38ae00cb471ef85d0eb92c03c68bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: f2cfeac321860a609c21046818c36fbc6aa3c636
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 
 # <a name="classes"></a>类
-类**属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码就可以通过创建分配给变量的对象**或实例**来使用该类。 变量会一直保留在内存中，直至对变量的所有引用超出范围为止。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](https://msdn.microsoft.com/library/98f28cdx.aspx)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是实例变量**来访问它。 有关详细信息，请参阅[静态类和静态类成员](https://msdn.microsoft.com/library/79b3xss3.aspx)。  
+*类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码就可以通过创建分配给变量的*对象*或*实例*来使用该类。 变量会一直保留在内存中，直至对变量的所有引用超出范围为止。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](https://msdn.microsoft.com/library/98f28cdx.aspx)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是*实例变量*来访问它。 有关详细信息，请参阅[静态类和静态类成员](https://msdn.microsoft.com/library/79b3xss3.aspx)。  
 
 ## <a name="reference-types"></a>引用类型  
-定义为[类](https://msdn.microsoft.com/library/0b0thckt.aspx)的一个类型是引用类型**。 在运行时，当您声明引用类型的变量时，该变量会一直包含值 [null](https://msdn.microsoft.com/library/edakx9da.aspx)，直至您使用 [new](https://msdn.microsoft.com/library/51y09td4.aspx) 运算符显式创建对象的实例，或者为该变量分配已经在其他位置使用 [new](https://msdn.microsoft.com/library/51y09td4.aspx) 创建的对象，如下所示:  
+定义为[类](https://msdn.microsoft.com/library/0b0thckt.aspx)的一个类型是*引用类型*。 在运行时，当您声明引用类型的变量时，该变量会一直包含值 [null](https://msdn.microsoft.com/library/edakx9da.aspx)，直至您使用 [new](https://msdn.microsoft.com/library/51y09td4.aspx) 运算符显式创建对象的实例，或者为该变量分配已经在其他位置使用 [new](https://msdn.microsoft.com/library/51y09td4.aspx) 创建的对象，如下所示:  
 
 [!code-csharp[引用类型](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-创建对象后，内存位于托管堆上，并且变量只保留对对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为垃圾回收**）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../standard/garbagecollection/gc.md)。  
+创建对象后，内存位于托管堆上，并且变量只保留对对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为*垃圾回收*）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../standard/garbage-collection/gc.md)。  
   
-引用类型完全支持继承**，这是面向对象的编程的一个基本特点。 创建类时，可以从其他任何未定义为 [sealed](https://msdn.microsoft.com/library/88c54tsw.aspx)（密封）的接口或类继承，而其他类可以从你的类继承并重写虚拟方法。 有关详细信息，请参阅[继承](https://msdn.microsoft.com/library/ms173149.aspx)。
+引用类型完全支持*继承*，这是面向对象的编程的一个基本特点。 创建类时，可以从其他任何未定义为 [sealed](https://msdn.microsoft.com/library/88c54tsw.aspx)（密封）的接口或类继承，而其他类可以从你的类继承并重写虚拟方法。 有关详细信息，请参阅[继承](https://msdn.microsoft.com/library/ms173149.aspx)。
 
 ## <a name="declaring-classes"></a>声明类  
 使用 [class](https://msdn.microsoft.com/library/0b0thckt.aspx) 关键字可以声明类，如下例所示：  
   
 [!code-csharp[声明类](../../samples/snippets/csharp/concepts/classes/declaring-classes.cs)]  
   
-**class** 关键字前面是访问修饰符。 由于在此例中使用 [public](https://msdn.microsoft.com/library/yzh058ae.aspx)，因此任何人都可以从此类创建对象。 类的名称遵循 **class** 关键字。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为类成员**。  
+**class** 关键字前面是访问修饰符。 由于在此例中使用 [public](https://msdn.microsoft.com/library/yzh058ae.aspx)，因此任何人都可以从此类创建对象。 类的名称遵循 **class** 关键字。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为*类成员*。  
   
 ## <a name="creating-objects"></a>创建对象  
 类定义对象类型，但不是对象本身。 对象是基于类的具体实体，有时称为类的实例。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 03/13/2017
 此代码创建指向同一对象的两个对象引用。 因此，通过 `object3` 对对象所做的任何更改都将在以后使用 `object4` 时反映出来。 由于基于类的对象是通过引用来实现其引用的，因此类被称为引用类型。  
   
 ## <a name="class-inheritance"></a>类继承  
-继承**是通过使用派生来完成的，这意味着类是通过使用其数据和行为所派生自的基类**来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
+继承是通过使用*派生*来完成的，这意味着类是通过使用其数据和行为所派生自的*基类*来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
   
 [!code-csharp[继承](../../samples/snippets/csharp/concepts/classes/inheritance.cs)]  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 03/13/2017
 [类和结构成员](https://msdn.microsoft.com/library/ms173113.aspx)   
 [类和结构方法](https://msdn.microsoft.com/library/ms173114.aspx)   
 [构造函数](https://msdn.microsoft.com/library/ace5hbzh.aspx)   
-[析构函数](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
+[终结器](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
 [对象](https://msdn.microsoft.com/library/ms173110.aspx)
 
 

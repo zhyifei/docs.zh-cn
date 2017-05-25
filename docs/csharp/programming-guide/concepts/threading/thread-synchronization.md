@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31b206eb01d778b67acc1a25d3c69e2e1dfd553d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f8d51aa1c50c097577a575be9b5da4b9e0effc55
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="thread-synchronization-c"></a>线程同步 (C#)
@@ -32,15 +33,15 @@ ms.lasthandoff: 03/13/2017
   
  然而，线程的异步性质意味着必须协调对文件句柄、网络连接和内存等资源的访问。 否则，两个或多个线程可能在同一时间访问同一资源，且不能感知对方的操作。 结果是不可预知的数据损坏。  
   
- 对于整数数据类型的简单操作，可以通过 <xref:System.Threading.Interlocked> 的成员实现同步处理线程。 对于其他所有数据类型和非线程安全资源，只有使用本主题中的构造才能安全地执行多线程处理。  
+ 对于针对整数数据类型的简单操作，可以通过 <xref:System.Threading.Interlocked> 类的成员完成同步处理线程。 对于其他所有数据类型和非线程安全资源，只有使用本主题中的构造才能安全地执行多线程处理。  
   
  有关多线程编程中的背景信息，请参阅：  
   
--   [托管线程处理基本知识](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [托管线程处理基本知识](../../../../standard/threading/managed-threading-basics.md)  
   
--   [使用线程和线程处理](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [使用线程和线程处理](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [托管线程处理的最佳做法](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [托管线程处理的最佳做法](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-keyword"></a>lock 关键字  
  C# `lock` 语句可用于确保代码块运行完成，且不会被其他线程中断。 这是通过在代码块的持续时间内获得给定对象的互斥锁来实现的。  
@@ -102,13 +103,13 @@ finally
  使用 `lock` 关键字通常优先于直接使用 <xref:System.Threading.Monitor> 类，因为 `lock` 更简洁，而且即使在受保护的代码引发异常时，`lock` 也可确保基础监视器被释放。 这通过由 `finally` 关键字完成，该关键字执行其关联的代码块，不会受是否引发异常的影响。  
   
 ## <a name="synchronization-events-and-wait-handles"></a>同步事件和等待句柄  
- 使用锁或监视器有助于防止同时执行线程敏感的代码块，但这些构造不允许在线程之间传达事件。 这就需要“同步事件”**，它们是具有两种状态之一（发出信号和未发出信号）的对象，可用于激活和挂起线程。 线程可以通过等待未发出信号的同步事件来挂起，并且可以通过将事件状态改变为发出信号来激活。 如果某个线程尝试等待已经发出信号的事件，则该线程将继续执行且无延迟。  
+ 使用锁或监视器有助于防止同时执行线程敏感的代码块，但这些构造不允许在线程之间传达事件。 这就需要“同步事件”，它们是具有两种状态之一（发出信号和未发出信号）的对象，可用于激活和挂起线程。 线程可以通过等待未发出信号的同步事件来挂起，并且可以通过将事件状态改变为发出信号来激活。 如果某个线程尝试等待已经发出信号的事件，则该线程将继续执行且无延迟。  
   
- 有两种类型的同步事件：<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>。 它们唯一的差别在于：<xref:System.Threading.AutoResetEvent> 会在启动线程时自动从发出信号的状态更改为未发出信号的状态。 相反，<xref:System.Threading.ManualResetEvent> 在其发出信号状态下允许激活任意数量的线程，而且仅会在调用 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法时还原到未发出信号的状态。  
+ 存在两种类型的同步事件：<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>。 它们唯一的差别在于：<xref:System.Threading.AutoResetEvent> 会在启动线程时自动从发出信号的状态更改为未发出信号的状态。 相反，<xref:System.Threading.ManualResetEvent> 允许其信号状态激活任意数量的线程，且在调用其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法后，将仅还原到非信号状态。  
   
- 可通过调用 wait 方法让线程等待事件，如 <xref:System.Threading.WaitHandle.WaitOne%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.WaitAll%2A>。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> 将让线程等待，直到单个事件发出信号，<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> 将阻止线程，直到一个或多个指示事件发出信号，<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> 将阻止线程，直到所有指示事件发出信号。 调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法时，事件会发出信号。  
+ 可通过调用某个 wait 方法（例如 <xref:System.Threading.WaitHandle.WaitOne%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.WaitAll%2A>）让线程等待事件。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> 将导致线程等待，直到单个事件进入信号状态，<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> 将阻止线程，直到一个或多个指示的事件进入信号状态，<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> 将阻止线程，直到所有指示的事件进入信号状态。 调用某一事件的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法时，该事件会进入信号状态。  
   
- 在下例中，线程由 `Main` 函数创建和启动。 新线程使用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法等待事件。 该线程将被挂起，直到由执行 `Main` 函数的主线程对事件发出信号。 事件发出信号后，辅助线程返回。 在这种情况下，由于该事件仅用于一个线程的激活，因此可使用 <xref:System.Threading.AutoResetEvent> 或 <xref:System.Threading.ManualResetEvent> 类。  
+ 在下例中，线程由 `Main` 函数创建和启动。 新线程使用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法等待事件。 该线程将被挂起，直到由执行 `Main` 函数的主线程对事件发出信号。 事件发出信号后，辅助线程返回。 在这种情况下，因为该事件仅用于激活一个线程，因此可使用 <xref:System.Threading.AutoResetEvent> 或 <xref:System.Threading.ManualResetEvent> 类。  
   
 ```csharp  
 using System;  
@@ -145,9 +146,9 @@ class ThreadingExample
 ## <a name="mutex-object"></a>Mutex 对象  
  *mutex* 与监视器相似；它防止多个线程在某一时间同时执行某个代码块。 事实上，名称“mutex”是术语“互相排斥 (mutually exclusive)”的缩写形式。 但是，与监视器不同，mutex 可用于进程间的同步线程。 mutex 由 <xref:System.Threading.Mutex> 类表示。  
   
- 当用于进程间同步时，mutex 称为“命名 mutex”**，因为它将在另一个应用程序中使用，因此它不能通过全局变量或静态变量共享。 必须为其提供一个名称，以便两个应用程序能够访问同一个 mutex 对象。  
+ 当用于进程间同步时，mutex 称为“命名 mutex”，因为它将在另一个应用程序中使用，因此它不能通过全局变量或静态变量共享。 必须为其提供一个名称，以便两个应用程序能够访问同一个 mutex 对象。  
   
- 虽然 mutex 可用于进程内线程同步，但通常首选使用 <xref:System.Threading.Monitor>，因为监视器是为 .NET Framework 专门设计的，因此可以更好地利用资源。 与此相反，<xref:System.Threading.Mutex> 类是 Win32 构造的包装。 虽然它比监视器更强大，但 mutex 需要互操作过渡，其计算成本比<xref:System.Threading.Monitor> 类所需的成本更多。 有关使用 mutex 的示例，请参阅 [Mutexes](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)。  
+ 虽然 mutex 可用于进程内线程同步，但通常首选使用 <xref:System.Threading.Monitor>，因为监视器是为 .NET Framework 专门设计的，因此可以更好地利用资源。 与此相反，<xref:System.Threading.Mutex> 类是 Win32 构造的包装器。 虽然它比监视器更强大，但 mutex 需要互操作过渡，其计算成本比 <xref:System.Threading.Monitor> 类所需的成本更多。 有关使用 mutex 的示例，请参阅 [Mutexes](../../../../standard/threading/mutexes.md)。  
   
 ## <a name="interlocked-class"></a>Interlocked 类  
  可以使用 <xref:System.Threading.Interlocked> 类的方法来防止多个线程尝试同时更新或比较相同值时可能发生的问题。 该类的方法可从任何线程安全地递增、递减、交换和比较值。  
@@ -158,7 +159,7 @@ class ThreadingExample
 ## <a name="deadlocks"></a>死锁  
  线程同步在多线程应用程序中非常有用，但是产生 `deadlock` 总是十分危险。一旦产生了死锁，将有多个线程互相等待，从而导致应用程序暂停。 死锁类似于汽车停在十字路口一样，每个人都在等待别人先出发。 因此，避免死锁很重要；关键是要仔细规划。 开始编码之前，通常可以通过绘制多线程应用程序来预测死锁情况。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Threading.Thread>   
  <xref:System.Threading.WaitHandle.WaitOne%2A>   
  <xref:System.Threading.WaitHandle.WaitAny%2A>   
@@ -177,8 +178,8 @@ class ThreadingExample
  <xref:System.Threading.EventWaitHandle.Set%2A>   
  [多线程应用程序 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [lock 语句](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [Mutexes](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
+ [Mutexes](../../../../standard/threading/mutexes.md)   
  @System.Threading.Monitor   
- [互锁操作](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [为多线程处理同步数据](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ [互锁操作](../../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ [为多线程处理同步数据](../../../../standard/threading/synchronizing-data-for-multithreading.md)

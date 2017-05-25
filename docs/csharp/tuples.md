@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2c81b7e18f36bde5b46c0c6df5c8122cd303931
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
+ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/26/2017
 
 ---
 
 # <a name="c-tuple-types"></a>C# 元组类型 #
 
-C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的语法，基于字段数量（称为“实参数量”）和字段类型的转换规则，以及一致的副本和赋值规则。 但另一方面，元组不支持一些与继承相关的面向对象的语法。 [C# 7 中的新增功能](csharp-7.md#tuples)主题中的“元组”一节对其进行了概述。
+C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的语法，基于字段数量（称为“实参数量”）和字段类型的转换规则，以及一致的副本和赋值规则。 但另一方面，元组不支持一些与继承相关的面向对象的语法。 [C# 7 中的新增功能](whats-new/csharp-7.md#tuples)主题中的“元组”一节对其进行了概述。
 
 在本主题中，将了解用于控制 C# 7 中的元组的语言规则、这些规则的各种用法，以及有关如何使用元组的初步指导。
 
@@ -65,7 +66,7 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 ## <a name="assignment-and-tuples"></a>赋值和元组
 
-该语言支持在具有相同字段数量和相同字段类型的元组类型之间赋值。 这些元组类型在编译时必须完全匹配。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
+该语言支持某些元组类型之间的赋值，这些类型具有相同字段数，且对于每个字段的类型具有相同的隐式转换数。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
 
 注意以下示例中使用的这些变量：
 
@@ -181,7 +182,7 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 ```
 请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外使用特定类型。
 
-### <a name="deconstring-user-defined-types"></a>析构用户定义的类型
+### <a name="deconstructing-user-defined-types"></a>析构用户定义的类型
 
 如上所示，可以析构任何元组类型。 也可以对任何用户定义的类型（类、结构甚至接口）轻松启用析构。
 

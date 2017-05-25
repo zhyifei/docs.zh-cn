@@ -30,14 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9126a882984799a5c726ecc5d82b3f3db707858a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 36c9fd396914f2d958615b9f62666a0d0cc47fc1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="static-c-reference"></a>static（C# 参考）
-使用 `static` 修饰符可声明属于类型本身而不是属于特定对象的静态成员。 `static` 修饰符可用于类、字段、方法、属性、运算符、事件和构造函数，但不能用于索引器、析构函数或类以外的类型。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+使用 `static` 修饰符可声明属于类型本身而不是属于特定对象的静态成员。 `static` 修饰符可用于类、字段、方法、属性、运算符、事件和构造函数，但不能用于索引器、终结器或类以外的类型。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
 ## <a name="example"></a>示例  
  下面的类声明为 `static` 并且只含 `static` 方法：  
@@ -65,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  类和静态类可以包含静态构造函数。 在程序开始和实例化类之间的某个时刻调用静态构造函数。  
   
 > [!NOTE]
->  `static` 关键字比用于 C++ 中时受到的限制更多。 若要与 C++ 关键字进行比较，请参阅[静态](https://docs.microsoft.com/cpp/misc/static-cpp)。  
+>  `static` 关键字比用于 C++ 中时受到的限制更多。 若要与 C++ 关键字进行比较，请参阅 [Storage classes (C++)](https://docs.microsoft.com/cpp/cpp/storage-classes-cpp#static)（存储类 (C++)）。
   
  若要演示静态成员，请考虑表示公司员工的类。 假定此类包含计数员工的方法和存储员工人数的字段。 方法和字段均不属于任何实例员工。 而属于公司类。 因此，它们应声明为类的静态成员。  
   
@@ -88,3 +89,4 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)   
  [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+

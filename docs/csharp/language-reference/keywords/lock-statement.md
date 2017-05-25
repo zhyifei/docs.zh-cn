@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 020be199391789360ae9a25858bef54d8259ae56
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: ae705e7df4515cd0c7481f64fa63b2e844a7d564
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="lock-statement-c-reference"></a>“锁定”语句（C# 参考）
 `lock` 关键字将语句块标记为关键部分，方法是获取给定对象的互斥锁，执行语句，然后释放该锁。 以下示例包含一个 `lock` 语句。  
   
 ```  
-  
 class Account  
 {  
     decimal balance;  
@@ -58,7 +58,6 @@ class Account
         }  
     }  
 }  
-  
 ```  
   
  有关详细信息，请参阅[线程同步](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)。  
@@ -68,7 +67,7 @@ class Account
   
  [线程](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)一节讨论了线程处理。  
   
- `lock` 关键字在块的开始处调用 <xref:System.Threading.Monitor.Enter%2A>，而在块的结尾处调用 <xref:System.Threading.Monitor.Exit%2A>。 如果 <xref:System.Threading.Thread.Interrupt%2A> 中断等待输入 `lock` 语句的线程，将引发 <xref:System.Threading.ThreadInterruptedException>。  
+ `lock` 关键字在块的开始处调用 <xref:System.Threading.Monitor.Enter%2A>，而在块的结尾处调用 <xref:System.Threading.Monitor.Exit%2A>。 如果 <xref:System.Threading.Thread.Interrupt%2A> 中断正在等待输入 `lock` 语句的线程，将引发 <xref:System.Threading.ThreadInterruptedException>。  
   
  通常，应避免锁定 `public` 类型，否则实例将超出代码的控制范围。 常见的结构 `lock (this)`、`lock (typeof (MyType))` 和 `lock ("myLock")` 违反此准则：  
   
@@ -104,6 +103,7 @@ class Account
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
  [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)   
  @System.Threading.Monitor   
- [互锁操作](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
+ [互锁操作](../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../standard/threading/autoresetevent.md)   
  [线程同步](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)
+

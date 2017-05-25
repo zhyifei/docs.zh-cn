@@ -27,23 +27,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ca4df41897fafc5d7981c85741ae4fa1a8c641f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 1235f62f6ac0878e16387c35150764f3585bc004
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
-组件**是一种类，实现 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 接口或者直接或间接地从实现 <xref:System.ComponentModel.IComponent> 的类派生。 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
+组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
   
  组件的一个重要特性在于它们是可设计的，这意味着可以在 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，对组件的基本设计时支持已内置于 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 中；组件开发人员不必执行任何附加工作便可利用基本设计时功能。  
   
- 控件**与组件类似，二者都是可设计的。 不过，控件提供用户界面，而组件不提供。 控件必须从以下基本控件类之一派生：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
+ 控件与组件类似，二者都是可设计的。 不过，控件提供用户界面，而组件不提供。 控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
   
 ## <a name="when-to-create-a-component"></a>创建组件的时间  
  如果类将在设计图面（如 Windows 窗体设计器或 Web 窗体设计器）上使用，但没有用户界面，此类应该是一个组件并实现 <xref:System.ComponentModel.IComponent>，或者是从直接或间接实现 <xref:System.ComponentModel.IComponent> 的类派生的。  
   
- <xref:System.ComponentModel.Component> 和 <xref:System.ComponentModel.MarshalByValueComponent> 类是 <xref:System.ComponentModel.IComponent> 接口的基实现。 这两个类的主要区别是：<xref:System.ComponentModel.Component> 类由引用封送，而 <xref:System.ComponentModel.IComponent> 由值封送。 以下列表为实施者提供了全面的指南。  
+ <xref:System.ComponentModel.Component> 和 <xref:System.ComponentModel.MarshalByValueComponent> 类是 <xref:System.ComponentModel.IComponent> 接口的基实现。 这些类之间的主要区别在于 <xref:System.ComponentModel.Component> 类由引用封送，而 <xref:System.ComponentModel.IComponent> 由值封送。 以下列表为实施者提供了全面的指南。  
   
 -   如果组件需要由引用封送，请从 <xref:System.ComponentModel.Component> 派生。  
   
@@ -58,9 +59,9 @@ ms.lasthandoff: 03/13/2017
   
  核心组件类包括：  
   
--   <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> 接口的一个基实现。 此类可以实现在应用程序之间共享对象。  
+-   <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> 接口的基实现。 此类可以实现在应用程序之间共享对象。  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> 接口的一个基实现。  
+-   <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> 接口的基实现。  
   
 -   <xref:System.ComponentModel.Container>。 <xref:System.ComponentModel.IContainer> 接口的基实现。 此类封装零个或多个组件。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="related-sections"></a>相关章节  
  [类、组件和控件](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- 定义组件**和控件**，并讨论二者与类之间的区别。  
+ 定义组件和控件，并讨论二者与类之间的区别。  
   
  [组件创作](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
  组件入门路线图。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 03/13/2017
  [组件类](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
  描述什么使类成为组件、公开组件功能的方法、控制对组件的访问以及控制如何创建组件实例。  
   
- [控件和组件创作疑难解答](http://msdn.microsoft.com/library/e9c8c099-2271-4737-882f-50f336c7a55e)  
+ [控件和组件创作疑难解答](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  解释如何解决常见问题。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4de303da9215fb07ecbb6bfff78d18dcd246aad3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9565d0af978f1a1bc3744db127ac75911b519ab2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>如何：确定文件是否为程序集 (C#)
@@ -34,11 +35,11 @@ ms.lasthandoff: 03/13/2017
   
 2.  加载要测试的文件。  
   
-3.  如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。 有关详细信息，请参阅主题 [How to: View Assembly Contents](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709)（如何：查看程序集内容）。  
+3.  如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。 有关详细信息，请参阅主题 [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md)（如何：查看程序集内容）。  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以编程方式确定文件是否为程序集  
   
-1.  调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递待测文件的完整文件路径和名称。  
+1.  调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递要测试的文件的完整文件路径和名称。  
   
 2.  如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。  
   
@@ -80,9 +81,9 @@ class TestAssembly
 */  
 ```  
   
- <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法加载测试文件，然后在读取信息后将其释放。  
+ <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法加载测试文件，然后在读取信息之后释放它。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Reflection.AssemblyName>   
  [C# 编程指南](../../../../csharp/programming-guide/index.md)   
  [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

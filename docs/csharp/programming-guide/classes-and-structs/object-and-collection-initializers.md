@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34c0c1ff1c00eecc27edaff30f119e2f3dac8c1d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 66045a6902e64db394a1f5812658e25a11692027
+ms.openlocfilehash: a4d0e8f348afdf1793804a4062be45d2fb4e7e2b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>对象和集合初始值设定项（C# 编程指南）
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名类型的对象初始值设定项  
  尽管对象初始值设定项可用于任何上下文中，但它们在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查询表达式中特别有用。 查询表达式常使用只能通过使用对象初始值设定项进行初始化的[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)，如下面的声明所示。  
   
-```  
+```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```  
   
@@ -54,13 +55,13 @@ var pet = new { Age = 10, Name = "Fluffy" };
   
  执行此查询时，`productInfos` 变量将包含一系列对象，这些对象可以在 `foreach` 语句中进行访问，如下面的示例所示：  
   
-```  
+```csharp
 foreach(var p in productInfos){...}  
 ```  
   
  新的匿名类型中的每个对象都具有两个公共属性，这两个属性接收与原始对象中的属性或字段相同的名称。 你还可在创建匿名类型时重命名字段；下面的示例将 `UnitPrice` 字段重命名为 `Price`。  
   
-```  
+```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
   
@@ -68,11 +69,11 @@ select new {p.ProductName, Price = p.UnitPrice};
  使用具有可以为 null 的结构的对象初始值设定项会导致编译时错误。  
   
 ## <a name="collection-initializers"></a>集合初始值设定项  
- 集合初始值设定项允许在初始化实现 <xref:System.Collections.IEnumerable> 的集合类或初始化具有 `Add` 扩展方法的类时，指定一个或多个元素初始值设定项。 元素初始值设定项可以是简单的值、表达式或对象初始值设定项。 通过使用集合初始值设定项，你将无需在源代码中指定对该类的 `Add` 方法的多个调用；编译器将添加这些调用。  
+ 在初始化实现 <xref:System.Collections.IEnumerable> 的集合类型和初始化使用适当的签名作为实例方法或扩展方法的 `Add` 时，集合初始值设定项允许指定一个或多个元素初始值设定项。 元素初始值设定项可以是简单的值、表达式或对象初始值设定项。 通过使用集合初始值设定项，你将无需在源代码中指定对该类的 `Add` 方法的多个调用；编译器将添加这些调用。  
   
  下面的示例演示了两个简单的集合初始值设定项：  
   
-```  
+```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
 ```  
@@ -87,7 +88,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
  如果集合支持索引，可以指定索引元素。  
   
-```  
+```csharp
 var numbers = new Dictionary<int, string> {   
     [7] = "seven",   
     [9] = "nine",   
@@ -102,3 +103,4 @@ var numbers = new Dictionary<int, string> {
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+

@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 617fec7a8405116735d7a7510513adf845068f4e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: cbc19731f16d839dbd041c271821382bc4031506
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="introduction-to-linq-c"></a>LINQ 简介 (C#)
 语言集成查询 (LINQ) 是 .NET Framework 3.5 版中引入的一项创新功能，它在对象领域和数据领域之间架起了一座桥梁。  
   
- 传统上，针对数据的查询都以简单的字符串表示，而没有编译时类型检查或 IntelliSense 支持。 此外，还需要针对每种数据源学习一种不同的查询语言：SQL 数据库、XML 文档、各种 Web 服务等等。 LINQ 使查询**成为 C# 中的一流语言构造。 可以使用语言关键字和熟悉的运算符针对强类型化对象集合编写查询。  
+ 传统上，针对数据的查询都以简单的字符串表示，而没有编译时类型检查或 IntelliSense 支持。 此外，还需要针对每种数据源学习一种不同的查询语言：SQL 数据库、XML 文档、各种 Web 服务等等。 LINQ 使查询成为 C# 中的一流语言构造。 可以使用语言关键字和熟悉的运算符针对强类型化对象集合编写查询。  
   
  在 C# 中可为以下对象编写 LINQ 查询：SQL Server 数据库、XML 文档、ADO.NET 数据集以及支持 <xref:System.Collections.IEnumerable> 或泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口的任何对象集合。 此外，第三方也为许多 Web 服务和其他数据库实现提供了 LINQ 支持。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
 -   XML 文档：[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET 数据集：[LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
+-   ADO.NET 数据集：[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
 -   .NET 集合、文件、字符串等：[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
