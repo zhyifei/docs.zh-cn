@@ -1,7 +1,7 @@
 ---
 title: ".NET Framework 版本和依赖关系 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/02/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 06ffe36615212baab646198f13c897af5f0041fc
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: c51d905ab1b2dc6ca923463536ecdc19735d7643
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
@@ -39,8 +39,8 @@ ms.lasthandoff: 04/18/2017
   
 |.NET Framework 版本|CLR 版本|功能|包含在 Visual Studio 版本中|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|.NET 4.7|4|- 支持由操作系统提供的 TLS 支持级别。<br/> - 能够为 TLS1.1 或 TLS1.2 配置默认的消息安全设置。 <br /> - 提高了 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的可靠性。 <br /> - 提高了 WCF 应用程序序列化和反序列化的可靠性。 <br /> - 能够扩展 ASP.NET 对象缓存。 <br /> - 支持基于 `WM_POINTER` Windows 消息（而不是 WPF 应用程序的 Windows Ink 服务平台 (WISP)）的触控/触笔堆叠。 <br /> - 使用窗口的打印文档包 API 在 WPF 应用程序中进行打印。 | | ✓  10 创意者更新||使用 `Release` DWORD 460798 |  
-|.NET 4.6.2|4|-   加密增强功能，包括对包含 FIS 186-3 DSA 的 X509 证书的支持、对持久化密钥对称加密的支持、对 SHA-2 哈希的 <xref:System.Security.Cryptography.Xml.SignedXml> 支持以及提高了 ECDiffieHellman 密钥派生例程输入的清晰度。<br />-  对于 Windows Presentation Foundation (WPF) 应用，支持屏幕键盘和按监视器 DPI 感知。<br />-   对 TLS 1.1 和 TLS 1.2 协议的 ClickOnce 支持。<br />-   支持将 Windows 窗体和 WPF 应用转换为 UWP 应用。||✓  10 周年更新<br /><br /> + 8.1<br />+ 7|✓  2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> -   394802（Windows 10 周年更新）<br />-   394806（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
+|.NET 4.7|4|- 支持由操作系统提供的 TLS 支持级别。<br/> - 能够为 TLS1.1 或 TLS1.2 配置默认的消息安全设置。 <br /> - 提高了 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的可靠性。 <br /> - 提高了 WCF 应用程序序列化和反序列化的可靠性。 <br /> - 能够扩展 ASP.NET 对象缓存。 <br /> - 支持基于 `WM_POINTER` Windows 消息（而不是 WPF 应用程序的 Windows Ink 服务平台 (WISP)）的触控/触笔堆叠。 <br /> - 使用窗口的打印文档包 API 在 WPF 应用程序中进行打印。<br /> - 增强了对 Windows 窗体应用程序（在 Windows 10 创意者更新上运行）的高 DPI 和多监视器支持。 | | ✓  10 创意者更新 <br/> <br/> + 10 周年更新 <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 460798（Windows 10 创意者更新） <br/> - 460805（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)） |  
+|.NET 4.6.2|4|-   加密增强功能，包括对包含 FIS 186-3 DSA 的 X509 证书的支持、对持久化密钥对称加密的支持、对 SHA-2 哈希的 <xref:System.Security.Cryptography.Xml.SignedXml> 支持，提高了 ECDiffieHellman 密钥派生例程输入的清晰度。<br />-  对于 Windows Presentation Foundation (WPF) 应用，支持屏幕键盘和按监视器 DPI 感知。<br />-   对 TLS 1.1 和 TLS 1.2 协议的 ClickOnce 支持。<br />-   支持将 Windows 窗体和 WPF 应用转换为 UWP 应用。||✓  10 周年更新<br /><br /> + 8.1<br />+ 7|✓  2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> -   394802（Windows 10 周年更新）<br />-   394806（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
 |.NET 4.6.1|4|-   对包含 ECDSA 的 X509 证书的支持<br />-   对 ADO.NET 中的硬件保护密钥的始终加密支持<br />-   WPF 中的拼写检查改进<br />-   [更多...](../../../docs/framework/whats-new/index.md)||✓  10 November Update<br /><br /> + 10<br />+ 8.1<br />+ 8<br />+ 7|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> -   394254（Windows 10 十一月更新）<br />-   394271（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
 |.NET 4.6|4|-   使用 .NET Native 编译<br />-   ASP.NET Core 5<br />-   事件跟踪改进<br />-   对页面编码的支持<br />-   [更多...](../../../docs/framework/whats-new/index.md)|2015，尽管部分 .NET 库可在 [NuGet](https://www.nuget.org/) 上获取。 有关详细信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。|✓ 10<br />+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|使用 `Release` DWORD：<br /><br /> -   393295 (Windows 10)<br />-   393297（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
 |4.5.2|4|-   用于事务系统和 ASP.NET 的新 API<br />-   Windows 窗体控件中的系统 DPI 调整大小功能<br />-   分析改进<br />-   ETW 和压力日志记录改进<br />-   [更多...](../../../docs/framework/whats-new/index.md)|-|+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|使用 `Release` DWORD：379893<br />（请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
@@ -56,9 +56,9 @@ ms.lasthandoff: 04/18/2017
  通常，你不应卸载计算机上安装的 .NET Framework 的任何版本，因为你使用的应用程序可能依赖于特定版本，如果你移除该版本，则应用程序可能会中断。 你可以在一台计算机上同时加载 .NET Framework 的多个版本。 这意味着，你可以安装 .NET Framework 而无需卸载早期版本。 有关详细信息，请参阅[入门](../../../docs/framework/get-started/index.md)。  
   
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>面向并运行 .NET Framework 版本 4.5 和更高版本的应用  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是替代计算机上的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的就地更新，同样，[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1 和 4.6.2 是对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新，这意味着它们将使用相同的运行时版本，但是程序集版本会更新并包括新类型和成员。 在安装其中某个更新后，你的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)][!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 应用应继续运行，而无需重新编译。 但是，反过来则不行。 建议不要在较早版本的 .NET Framework 上运行面向更高版本的 .NET Framework 的应用。 例如，我们建议你不要在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 上运行面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用。 以下准则将适用：  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是替代计算机上的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的就地更新，同样，[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2、4.6、4.6.1、4.6.2 和 4.7 是对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新，这意味着它们将使用相同的运行时版本，但是程序集版本会更新并包括新类型和成员。 在安装其中某个更新后，你的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)][!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 应用应继续运行，而无需重新编译。 但是，反过来则不行。 建议不要在较早版本的 .NET Framework 上运行面向更高版本的 .NET Framework 的应用。 例如，我们建议你不要在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 上运行面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用。 以下准则将适用：  
   
--   在 Visual Studio 中，可以选择 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 作为项目的目标框架（这将设置 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 属性）以将项目编译为 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 程序集或可执行文件。 此程序集或可执行文件随后可用于安装了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6 或 4.6.1 的任何计算机。  
+-   在 Visual Studio 中，可以选择 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 作为项目的目标框架（这将设置 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 属性）以将项目编译为 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 程序集或可执行文件。 此程序集或可执行文件随后可用于安装了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 的任何计算机。  
   
 -   在 Visual Studio 中，可以选择 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 作为项目的目标框架（这将设置 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 属性）以将项目编译为 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 程序集或可执行文件。 此程序集或可执行文件应只在安装了 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 或 .NET Framework 更高版本的计算机上运行。 将阻止面向 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的可执行文件在仅安装了 .NET Framework 的早期版本（例如 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]）的计算机上运行，并且系统会提示用户安装 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。 此外，不应从面向 .NET Framework 的早期版本（例如 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]）的应用中调用 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 程序集。  
   
@@ -85,3 +85,4 @@ ms.lasthandoff: 04/18/2017
  [版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   
  [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)   
  [疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+

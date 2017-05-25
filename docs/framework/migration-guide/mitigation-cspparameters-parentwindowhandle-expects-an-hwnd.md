@@ -2,6 +2,7 @@
 title: "缓解：应向 CspParameters.ParentWindowHandle 分配 HWND | Microsoft Docs"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -16,10 +17,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: 22c258b06a5cc8fa3fec72665d7e413b0cdd11ee
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>缓解：应向 CspParameters.ParentWindowHandle 分配 HWND
@@ -46,7 +48,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 已确定正确值是保留 `form.Handle` 值的内存位置地址的开发者可以将 <xref:System.Security.AppContext> 开关 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 设置为 `true`，从而选择禁用此行为更改：
 
-- 以编程方式对 [AppContext](assetID:///T:System.Security.AppContext) 实例设置兼容性开关。
+- 以编程方式对 <xref:System.Security.AppContext> 实例设置兼容性开关。
 
 - 在 app.config 文件的 `<runtime>` 部分中添加下面的代码行：
    

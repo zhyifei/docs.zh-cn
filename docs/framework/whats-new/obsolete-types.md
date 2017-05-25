@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 175e46e3729190423b85296d7c7c47b136339305
+ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
+ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
@@ -93,54 +93,54 @@ ms.lasthandoff: 04/18/2017
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=fullName>|请改用 <xref:System.StringComparer?displayProperty=fullName>。|  
 |<xref:System.Collections.IHashCodeProvider?displayProperty=fullName>|请改用 <xref:System.Collections.IEqualityComparer?displayProperty=fullName>。|  
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=fullName>|<xref:System.Configuration.Assemblies.AssemblyHash> 类已弃用。|  
-|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。 改用 System.Runtime.CompilerServices 命名空间中的 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=fullName> 类。|  
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=fullName>|有一个替代 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> 自定义属性。|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=fullName>。|  
+|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。 请改用 System.Runtime.CompilerServices 命名空间中的 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=fullName> 类。|  
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=fullName>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> 自定义特性。|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=fullName> 。|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName>|此特性已弃用，并将从未来版本中移除。|  
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=fullName>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName> 已弃用。|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=fullName>。|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=fullName> 。|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=fullName>|此特性已弃用。 应用程序域不再考虑 IDispatch 调用中的激活上下文边界。|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=fullName>|改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=fullName>。|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=fullName> 。|  
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=fullName>|请改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=fullName> 。|  
 |<xref:System.Security.SecurityCriticalScope?displayProperty=fullName>|<xref:System.Security.SecurityCriticalScope> 仅用于实现 .NET 2.0 透明度兼容性。|  
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=fullName>|<xref:System.Security.SecurityTreatAsSafeAttribute> 仅用于实现 .NET 2.0 透明度兼容性。 请改用 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=fullName>。|  
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=fullName>|此类型已过时，并将从 .NET Framework 的未来版本中移除。|  
@@ -165,8 +165,8 @@ ms.lasthandoff: 04/18/2017
 |----------|-------------|  
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=fullName>|<xref:System.Data.DataSysDescriptionAttribute> 已弃用。|  
 |<xref:System.Data.PropertyAttributes?displayProperty=fullName>|<xref:System.Data.PropertyAttributes> 已弃用。|  
-|<xref:System.Data.TypedDataSetGenerator?displayProperty=fullName>|<xref:System.Data.TypedDataSetGenerator> 类将从未来版本中移除。 请改用 System.Design.dll 中的 <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=fullName>。|  
-|<xref:System.Xml.XmlDataDocument?displayProperty=fullName>|<xref:System.Xml.XmlDataDocument> 类将从未来版本中移除。|  
+|<xref:System.Data.TypedDataSetGenerator?displayProperty=fullName>|将从未来版本中移除 <xref:System.Data.TypedDataSetGenerator> 类。 请使用 System.Design.dll 中的 <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=fullName>。|  
+|<xref:System.Xml.XmlDataDocument?displayProperty=fullName>|将从未来版本中移除 <xref:System.Xml.XmlDataDocument> 类。|  
   
  [返回页首](#introduction)  
   
@@ -191,20 +191,20 @@ ms.lasthandoff: 04/18/2017
   
 |类型|消息|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=fullName>|此类已弃用。 改用 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=fullName>|不建议使用此类型，因为 DataBindings 编辑通过 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> 而不是属性网格启动。|  
-|<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=fullName>|不建议使用此类型，因为 DataBindings 编辑通过 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> 而不是属性网格启动。|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=fullName>|此类已弃用。 请改用 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=fullName> 。|  
+|<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=fullName>|建议不要使用此类型，因为 DataBindings 编辑是通过 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> 而不是属性网格启动的。|  
+|<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=fullName>|建议不要使用此类型，因为 DataBindings 编辑是通过 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> 而不是属性网格启动的。|  
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> 和 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>。|  
 |<xref:System.Web.UI.Design.IHtmlControlDesignerBehavior?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> 和 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.ITemplateEditingFrame?displayProperty=fullName>|不建议使用此类型，因为模板编辑在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理。 若要支持模板编辑，在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.IWebFormReferenceManager?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.WebFormsReferenceManager?displayProperty=fullName>。 <xref:System.Web.UI.Design.WebFormsReferenceManager> 包含其他功能并允许更大的扩展性。 若要获取 <xref:System.Web.UI.Design.WebFormsReferenceManager>，使用 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中的 `RootDesigner.ReferenceManager` 属性。|  
-|<xref:System.Web.UI.Design.IWebFormsDocumentService?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=fullName>。 <xref:System.Web.UI.Design.WebFormsRootDesigner> 包含其他功能并允许更大的扩展性。 若要获取 <xref:System.Web.UI.Design.WebFormsRootDesigner>，使用 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中的 <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> 属性。|  
-|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|不建议使用此类型，因为模板编辑在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理。 若要支持模板编辑，在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.ReadWriteControlDesigner?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=fullName>，因为它使用 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> 编辑内容。 利用设计器区域，可更好地控制正在编辑的内容。|  
-|<xref:System.Web.UI.Design.TemplateEditingService?displayProperty=fullName>|不建议使用此类型，因为模板编辑在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理。 若要支持模板编辑，在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.TemplateEditingVerb?displayProperty=fullName>|不建议使用此类型，因为模板编辑在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理。 若要支持模板编辑，在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=fullName>|建议不要使用此类型，因为 AutoFormat 对话框是由设计器宿主启动的。 可用 AutoFormats 列表在 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName> 属性的 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 上公开。|  
-|<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=fullName>，因为它使用 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> 编辑内容。 利用设计器区域，可更好地控制正在编辑的内容。|  
+|<xref:System.Web.UI.Design.ITemplateEditingFrame?displayProperty=fullName>|建议不要使用此类型，因为模板编辑是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
+|<xref:System.Web.UI.Design.IWebFormReferenceManager?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.WebFormsReferenceManager?displayProperty=fullName>。 <xref:System.Web.UI.Design.WebFormsReferenceManager> 包含其他功能并允许更大的扩展性。 若要获取 <xref:System.Web.UI.Design.WebFormsReferenceManager>，请使用 `RootDesigner.ReferenceManager` 中的 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 属性。|  
+|<xref:System.Web.UI.Design.IWebFormsDocumentService?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=fullName>。 <xref:System.Web.UI.Design.WebFormsRootDesigner> 包含其他功能并允许更大的扩展性。 若要获取 <xref:System.Web.UI.Design.WebFormsRootDesigner>，请使用 <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> 中的 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 属性。|  
+|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|建议不要使用此类型，因为模板编辑是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
+|<xref:System.Web.UI.Design.ReadWriteControlDesigner?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=fullName>，因为它使用 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> 来编辑内容。 利用设计器区域，可更好地控制正在编辑的内容。|  
+|<xref:System.Web.UI.Design.TemplateEditingService?displayProperty=fullName>|建议不要使用此类型，因为模板编辑是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
+|<xref:System.Web.UI.Design.TemplateEditingVerb?displayProperty=fullName>|建议不要使用此类型，因为模板编辑是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>。|  
+|<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=fullName>|建议不要使用此类型，因为 AutoFormat 对话框是由设计器宿主启动的。 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 属性中的 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName> 上公开了可用的 AutoFormat 的列表。|  
+|<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|建议的替代项为 <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=fullName>，因为它使用 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> 来编辑内容。 利用设计器区域，可更好地控制正在编辑的内容。|  
   
  [返回页首](#introduction)  
   
@@ -213,12 +213,12 @@ ms.lasthandoff: 04/18/2017
   
 |类型|消息|  
 |----------|-------------|  
-|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=fullName>|此接口已弃用。 改为添加 <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=fullName> 处理 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=fullName> 类型。|  
-|<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=fullName>|改用 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=fullName> 处理新的设置模型。|  
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=fullName>|此特性已弃用。 改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=fullName>。 例如，若要为 CodeDom 指定根设计器，请使用 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`。|  
+|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=fullName>|此接口已弃用。 改为将 <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=fullName> 添加到句柄类型 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=fullName>。|  
+|<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=fullName>|改用 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=fullName> 来处理新的设置模型。|  
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=fullName>|此特性已弃用。 请改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=fullName>。 例如，若要为 CodeDom 指定根设计器，请使用 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`。|  
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=fullName>|此类已弃用。|  
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=fullName>|此类已弃用。 改为通过 <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName> 类使用性能计数器。|  
-|<xref:System.Net.GlobalProxySelection?displayProperty=fullName>|此类已弃用。 请改用 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=fullName> 访问和设置全局默认代理。 使用“null”而不是 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=fullName>。|  
+|<xref:System.Net.GlobalProxySelection?displayProperty=fullName>|此类已弃用。 请改用 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=fullName> 以访问和设置全局默认代理。 使用“null”而非 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=fullName>。|  
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此类型会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|  
   
  [返回页首](#introduction)  
@@ -255,7 +255,7 @@ ms.lasthandoff: 04/18/2017
 |类型|消息|  
 |----------|-------------|  
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 对等通道功能已过时，并将在以后删除。|  
-|<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此类型已过时。 若要启用 Http <xref:System.Net.CookieContainer>，请在 Http 绑定或 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 上使用 `AllowCookies` 属性。|  
+|<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此类型已过时。 若要启用 Http <xref:System.Net.CookieContainer>，请在 Http 绑定或 `AllowCookies` 上使用 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 属性。|  
 |<xref:System.ServiceModel.Channels.PeerCustomResolverBindingElement?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 对等通道功能已过时，并将在以后删除。|  
 |<xref:System.ServiceModel.Channels.PeerTransportBindingElement?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 对等通道功能已过时，并将在以后删除。|  
 |<xref:System.ServiceModel.Configuration.NetPeerTcpBindingCollectionElement?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 对等通道功能已过时，并将在以后删除。|  
@@ -522,8 +522,8 @@ ms.lasthandoff: 04/18/2017
   
 |类型|消息|  
 |----------|-------------| 
-|System.Activities.Statements.Interop](assetId:///T:System.Activities.Statements.Interop)|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|   
+|<xref:System.Activities.Statements.Interop>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 请改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 请改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|   
 |<xref:System.Workflow.Runtime> 命名空间中的所有类型|在 .NET Framework 4.5 中首次被废弃。<br /><br /> System.Workflow.\* 类型已弃用。 请改用 <xref:System.Activities>.\* 中的新类型。|  
 |<xref:System.Workflow.Runtime.Configuration> 命名空间中的所有类型|在 .NET Framework 4.5 中首次被废弃。<br /><br /> System.Workflow.\* 类型已弃用。 请改用 <xref:System.Activities>.\* 中的新类型。|  
 |<xref:System.Workflow.Runtime.DebugEngine> 命名空间中的所有类型，<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback> 除外|在 .NET Framework 4.5 中首次被废弃。<br /><br /> System.Workflow.\* 类型已弃用。 请改用 <xref:System.Activities>.\* 中的新类型。|  
@@ -576,8 +576,8 @@ ms.lasthandoff: 04/18/2017
 |类型|消息|  
 |----------|-------------|  
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此类型会生成编译器错误。<br /><br /> 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|  
-|<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=fullName>|使用 <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> 进行架构编译和验证。|  
-|<xref:System.Xml.XmlValidatingReader?displayProperty=fullName>|改用使用适当的 <xref:System.Xml.XmlReaderSettings?displayProperty=fullName> 的 <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> 方法创建的 <xref:System.Xml.XmlReader?displayProperty=fullName>。|  
+|<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=fullName>|请使用 <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> 进行架构编译和验证。|  
+|<xref:System.Xml.XmlValidatingReader?displayProperty=fullName>|改用使用适当的 <xref:System.Xml.XmlReader?displayProperty=fullName> 的 <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> 方法创建的 <xref:System.Xml.XmlReaderSettings?displayProperty=fullName>。|  
 |<xref:System.Xml.XmlXapResolver?displayProperty=fullName>|使用此类型会生成编译器错误。 此 API 支持 .NET Framework 基础结构，但不应在代码中直接使用。|  
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=fullName>|此类已弃用。 请改用 <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=fullName>。|  
   
@@ -607,8 +607,8 @@ ms.lasthandoff: 04/18/2017
   
 |类型|消息|  
 |----------|-------------|  
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|此类已弃用。 请改用 <!--zz <xref:Microsoft.Build?displayProperty=fullName> -->``Microsoft.Build` 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>。|  
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=fullName>|此类已弃用。 请改用 <xref:Microsoft.Build?displayProperty=fullName> 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>。|  
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|此类已弃用。 请改用 Microsoft.Build 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>。|  
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=fullName>|此类已弃用。 请改用 Microsoft.Build 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>。|  
   
  [返回页首](#introduction)  
   
@@ -617,24 +617,24 @@ ms.lasthandoff: 04/18/2017
   
 |类型|消息|  
 |----------|-------------|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaStartup?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaCodeItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaEngine?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaError?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaItems?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaPersistSite?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaSite?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.JSVsaError?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.JSVsaException?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.JSVsaItemFlag?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.JSVsaItemType?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
-|<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参阅 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaStartup?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaCodeItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaEngine?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaError?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaItems?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaPersistSite?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaSite?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.JSVsaError?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.JSVsaException?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.JSVsaItemFlag?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.JSVsaItemType?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
+|<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=fullName>|建议不要使用此类型，因为此类型在 Visual Studio 2005 中已弃用；此功能将没有替代项。 有关其他帮助，请参见 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 文档。|  
   
  [返回页首](#introduction)  
   
@@ -789,3 +789,4 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>另请参阅  
  [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)   
  [过时成员](../../../docs/framework/whats-new/obsolete-members.md)
+

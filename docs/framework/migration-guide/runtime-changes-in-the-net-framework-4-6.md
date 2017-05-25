@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 77002c3d1b6553156c225b3efba9a2f29009915a
+ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
+ms.openlocfilehash: 140579db3c30221815167857466e7e7cfea95bd5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-46"></a>.NET Framework 4.6 中的运行时更改
@@ -104,4 +104,4 @@ ms.lasthandoff: 04/18/2017
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
 |64 位 JIT 编译|从 .NET Framework 4.6 开始，新的 64 位 JIT 编译器用于实时编译。 此更改不会影响 32 位 JIT 编译器。|在某些情况下，会引发意外异常，或观察到不同行为，比如使用 32 位编译器或旧的 64 位 JIT 编译器运行应用时。 **注意：**所有这些问题已在随 .NET Framework 4.6.2 发布的新 64 位编译器中得到解决。 大多数问题也已在 Windows 更新随附的 .NET Framework 4.6 和 4.6.1 的服务版本中得到解决。 <br /><br /> 有关详细信息，请参阅[缓解：新的 64 位 JIT 编译器](../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)。|边缘|  
-|异常处理（从 `try` 区域返回）|与旧版 JIT64 实时编译器不同，新版 64 位 JIT 编译器不允许在 `try` 区域中使用 IL `ret` 指令。|ECMA-335 规范不允许从 `try` 区域返回，并且没有已知的托管编译器会生成此类 IL。 但是，如果由反射发出生成，则 JIT64 编译器执行此类 IL。<br /><br /> 如果应用程序生成的 IL 在 `try` 区域中包含 `ret` 操作码，则可以：<br /><br /> -   面向 .NET Framework 4.5 或将 [\<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 元素添加到你的应用程序配置文件，使用旧的 JIT 编译器并避免更改。<br />-   将生成的 IL 更新为在 `try` 区域之后返回。<br />-|边缘|
+|异常处理（从 `try` 区域返回）|与旧版 JIT64 实时编译器不同，新版 64 位 JIT 编译器不允许在 `try` 区域中使用 IL `ret` 指令。|ECMA-335 规范不允许从 `try` 区域返回，并且没有已知的托管编译器会生成此类 IL。 但是，如果由反射发出生成，则 JIT64 编译器执行此类 IL。<br /><br /> 如果应用程序生成的 IL 在 `try` 区域中包含 `ret` 操作码，则可以：<br /><br /> -   面向 .NET Framework 4.5 或将 [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 元素添加到应用程序配置文件，使用旧的 JIT 编译器并避免更改。<br />-   将生成的 IL 更新为在 `try` 区域之后返回。<br />-|边缘|

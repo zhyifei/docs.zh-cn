@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
  `Log` 对象提供用于将信息写入应用程序的日志侦听器的方法，而 `Log` 对象的高级 `TraceSource` 属性提供详细的配置信息。 `Log` 对象由应用程序的配置文件配置。  
   
- `My.Log` 对象仅适用于 ASP.NET 应用程序。 对于客户端应用程序，请使用 `My.Application.Log`。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Logging.Log>。  
+ `My.Log` 对象仅适用于 ASP.NET 应用程序。 对于客户端应用程序，请使用 `My.Application.Log`。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Logging.Log>。  
   
 ## <a name="tasks"></a>任务  
   
