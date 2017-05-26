@@ -44,7 +44,8 @@ ms.lasthandoff: 05/15/2017
 ## <a name="example"></a>示例  
  以下代码以编程方式确定已安装在计算机上的 .NET Framework 更新。 你必须具有管理凭据才能运行此示例。  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] 
+ [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  该示例生成类似下面内容的输出：  
   
