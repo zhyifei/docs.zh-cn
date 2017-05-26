@@ -16,10 +16,11 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2881049ee490bf0abdd8b2f0651ca3703ccae76a
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fccd83571b47e3c2a6f995893c6260ae91eae517
+ms.openlocfilehash: 53c3bc41e319fe122605993d4013e6f04832c89c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="retargeting-changes-in-the-net-framework-47"></a>.NET Framework 4.7 中的重定目标更改
@@ -65,9 +66,9 @@ ms.lasthandoff: 04/18/2017
 | 功能 | 更改 | 影响 | 范围 |
 |---|---|---|---|
 | <xref:System.Windows.Controls.Grid> 控件向 *-列分配空间 | 自定位 .NET Framework 4.7 的应用程序起，WPF 替换了 <xref:System.Windows.Controls.Grid> 控件用于向 \*-columns.md 分配空间的算法。 | 对于定位 .NET Framework 4.7 及更高版本的应用程序，此更改在许多情况下影响分配给 \*-列的实际宽度。 如果不需要此更改，可以在应用程序配置文件中添加条目，从而继续应用旧算法。 有关详细信息，请参阅[缓解：网格控件向 *-列分配空间](../../../docs/framework/migration-guide/mitigation-grid-control.md)。 | 次要 |
-| <xref:System.Windows.Media.ImageSourceConverter.ConvertFrom%2A> | 在定位 .NET Framework 4.6.2 及更低版本的应用程序中，<xref:System.Windows.Media.ImageSourceConverter.ConvertFrom%2A> 方法的异常处理代码中的错误会导致 [NullReferenceException] (assetId:///T:System.NullReferenceException] 抛出，而不是预期异常（如 [DirectoryNotFoundException](assetId:///T:System.IO.DirectoryNotFoundException) 或 [FileNotFoundException](assetId:///T:System.IO.FileNotFoundException)）抛出。<br/><br/>自定位 .NET Framework 4.7 的应用程序起，将抛出正确的异常。  | 对于定位 .NET Framework 4.7 且依赖处理 [NullReferenceException](assetId:///T:System.NullReferenceException) 的应用程序，可以在 `app.config` 文件的 [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的配置设置，从而还原旧行为： <br/><br/>`<runtime>`<br/>&nbsp;&nbsp;&nbsp;`<AppContextSwitchOverrides value="Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException=true"/>`<br/>`</runtime>`| 边缘 | 
+<xref:System.Windows.Media.ImageSourceConverter.ConvertFrom%2A> | 在面向 .NET Framework 4.6.2 及更低版本的应用程序中，<xref:System.Windows.Media.ImageSourceConverter.ConvertFrom%2A> 方法的异常处理代码中的错误会引发 <xref:System.NullReferenceException>，而不是预期的异常（如 <xref:System.IO.DirectoryNotFoundException> 或 <xref:System.IO.FileNotFoundException>）。<br/><br/>自定位 .NET Framework 4.7 的应用程序起，将抛出正确的异常。  | 对于面向 .NET Framework 4.7 且依赖处理 <xref:System.NullReferenceException> 的应用程序，可以在 `app.config` 文件的 [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的配置设置，从而还原旧行为： <br/><br/>`<runtime>`<br/>&nbsp;&nbsp;&nbsp;`<AppContextSwitchOverrides value="Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException=true"/>`<br/>`</runtime>`| 边缘 | 
 | 选择启用对基于 `WM_POINTER` 的触控/触笔堆栈的支持 | 自定位 .NET Framework 4.7 的应用程序起，WPF 现已开始支持可选的基于 WM_POINTER 的触控。  | 这是一项可以在 Windows 10 创意者更新及更高版本的 Windows 系统上选择使用的功能。 未显式选择启用基于指针的触控/触笔支持的 WPF 应用程序不会受到影响。 有关详细信息，请参阅[缓解：基于指针的触控和触笔支持](../Topic/Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md)。 | 边缘 |
-| [PrintQueue](assetId:///T:System.Printing.PrintQueue) 类 | 自 .NET Framework 4.7 起，使用 [PrintQueue](assetId:///T:System.Printing.PrintQueue) 的 WPF 打印 API 默认调用 Windows 打印文档包 API，而不调用现已弃用的 XPS 打印 API。<br/><br/>在旧版 Windows 上，旧打印堆栈继续像过去一样运行。 | 用户和开发者应该都不会看到任何行为或 API 使用变化。 <br/><br/>若要在 Windows 10 创意者更新中使用旧堆栈，请将 `HKEY_CURRENT_USER\Software\Microsoft.NETFramework\Windows Presentation Foundation\Printing` 注册表项的 `UseXpsOMPrinting` `REG_DWORD` 值设置为 1。 | 边缘 | 
+| <xref:System.Printing.PrintQueue> 类 | 自 .NET Framework 4.7 起，使用 <xref:System.Printing.PrintQueue> 的 WPF 打印 API 默认调用 Windows 打印文档包 API，而不调用现已弃用的 XPS 打印 API。<br/><br/>在旧版 Windows 上，旧打印堆栈继续像过去一样运行。 | 用户和开发者应该都不会看到任何行为或 API 使用变化。 <br/><br/>若要在 Windows 10 创意者更新中使用旧堆栈，请将 `HKEY_CURRENT_USER\Software\Microsoft.NETFramework\Windows Presentation Foundation\Printing` 注册表项的 `UseXpsOMPrinting` `REG_DWORD` 值设置为 1。 | 边缘 | 
 ## <a name="see-also"></a>请参阅
 [.NET Framework 4.7 中的应用程序兼容性](Application%20Compatibility%20in%20the%20.NET%20Framework%204.7.md)
 

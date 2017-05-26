@@ -41,7 +41,7 @@
 ### [私有构造函数](private-constructors.md)
 ### [静态构造函数](static-constructors.md)
 ### [如何：编写复制构造函数](how-to-write-a-copy-constructor.md)
-## [析构函数](destructors.md)
+## [终结器](destructors.md)
 ## [对象和集合初始值设定项](object-and-collection-initializers.md)
 ### [如何：使用对象初始值设定项初始化对象](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [如何：使用集合初始值设定项初始化字典](how-to-initialize-a-dictionary-with-a-collection-initializer.md)

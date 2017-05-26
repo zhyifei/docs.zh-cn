@@ -31,14 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ca42afd69e814ce448bfea97c2dbf480830a74a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一个程序（C# 编程指南）
-以下过程创建传统“Hello World!” 程序的 C# 版本。 该程序显示字符串 `Hello World!`  
+以下过程创建传统“Hello World!”程序的 C# 版本。 该程序显示字符串 `Hello World!`  
   
  有关介绍性概念的更多示例，请参阅 [Visual C# 和 Visual Basic 入门](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。  
   
@@ -48,17 +49,17 @@ ms.lasthandoff: 03/13/2017
   
 1.  启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择“文件” ****、“新建” ****、“项目” ****。  
+2.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
      **“新建项目”** 对话框随即打开。  
   
-3.  依次展开“已安装”****、“模板”****、“Visual C#”****，然后选择“控制台应用程序”****。  
+3.  依次展开“已安装”、“模板”、“Visual C#”，然后选择“控制台应用程序”。  
   
-4.  在“名称”****框中，指定项目名称，然后选择“确定”****按钮。  
+4.  在“名称”框中，指定项目名称，然后选择“确定”按钮。  
   
-     新项目将出现在“解决方案资源管理器”****中。  
+     新项目将出现在“解决方案资源管理器”中。  
   
-5.  如果 Program.cs 未在“代码编辑器”****中打开，则在“解决方案资源管理器”****中打开“Program.cs”****的快捷菜单，然后选择“查看代码”****。  
+5.  如果 Program.cs 未在“代码编辑器”中打开，则在“解决方案资源管理器”中打开“Program.cs”的快捷菜单，然后选择“查看代码”。  
   
 6.  将 Program.cs 的内容替换为以下代码。  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 03/13/2017
  有关输入/输出方法的详细信息，请参阅 <xref:System.IO>。  
   
 ## <a name="command-line-compilation-and-execution"></a>命令行编译和执行  
- 通过使用命令行而非 Visual Studio 集成开发环境 (IDE)，可以编译“Hello World!” 程序。  
+ 通过使用命令行 而非 Visual Studio 集成开发环境 (IDE)，可以编译“Hello World!”程序。  
   
 #### <a name="to-compile-and-run-from-a-command-prompt"></a>从命令提示符中编译并运行  
   
@@ -122,11 +123,11 @@ ms.lasthandoff: 03/13/2017
   
 2.  执行以下任一步骤以打开命令提示符窗口：  
   
-    -   在 Windows 8 的“开始”****屏幕上，搜索 `Developer Command Prompt`，然后点击或选择“VS2012 开发人员命令提示”****。  
+    -   在 Windows 8 的“开始”屏幕上，搜索 `Developer Command Prompt`，然后点击或选择“VS2012 开发人员命令提示”。  
   
          将出现“开发人员命令提示”窗口。  
   
-    -   在 Windows 7 中，打开“启动”****菜单，展开当前版本的 Visual Studio 的文件夹，打开“Visual Studio Tools”****快捷菜单，然后选择“VS2012 开发人员命令提示”****。  
+    -   在 Windows 7 中，打开“启动”菜单，展开当前版本的 Visual Studio 的文件夹，打开“Visual Studio Tools”快捷菜单，然后选择“VS2012 开发人员命令提示”。  
   
          将出现“开发人员命令提示”窗口。  
   
@@ -146,12 +147,9 @@ ms.lasthandoff: 03/13/2017
   
      `Hello`  
   
- 有关 C# 编译器及其选项的详细信息，请参阅 [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)。  
+ 有关 C# 编译器及其选项的详细信息，请参阅 [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)。
   
-## <a name="featured-book-chapter"></a>重要章节  
- [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)（Visual C# 2010 入门）中的[编写 C# 程序](http://go.microsoft.com/fwlink/?LinkId=221227)  
-  
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)   
  [字符串](../../../csharp/programming-guide/strings/index.md)   

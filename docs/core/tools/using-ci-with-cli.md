@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 7ef4ce7a953265816cd36a0ad08b77c227280bde
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/07/2017
 
 对于 Windows 平台，可以使用 MSI。 
 
-可在指向最新稳定版本的 [.NET Core 入门页面](https://aka.ms/dotnetcoregs)找到所有这些二进制文件。 若要使用较新（可能不稳定）的版本或最新版本，可使用 [CLI 存储库](https://github.com/dotnet/cli)中的链接。 
+可在指向最新稳定版本的 [.NET Core 安装指南](https://aka.ms/dotnetcoregs)中找到所有这些二进制文件。 若要使用较新（可能不稳定）的版本或最新版本，可使用 [CLI 存储库](https://github.com/dotnet/cli)中的链接。 
 
 ## <a name="using-the-installer-script"></a>使用安装程序脚本
 使用安装程序脚本允许在生成服务器上进行非管理员安装。 它还允许非常简单的自动化。 脚本自己会下载所需 ZIP/tarball 文件并将其解压缩；它还会将本地计算机上的安装位置添加到 PATH，以便安装后即可为调用提供工具。 
@@ -62,12 +63,12 @@ Travis 可在生成矩阵中运行 `osx` (OS X 10.11) 和 `linux` ( Ubuntu 14.04
 
 ### <a name="appveyor"></a>AppVeyor
 
-[appveyor.com ci](https://www.appveyor.com/) 已在生成辅助角色进程映像 `Visual Studio 2015` 中安装了 .NET Core SDK preview2。
+[appveyor.com ci](https://www.appveyor.com/) 已在生成辅助角色进程映像 `Visual Studio 2017` 中安装了 .NET Core SDK 1.0.1。
 
 只需使用：
 
 ```yaml
-os: Visual Studio 2015
+os: Visual Studio 2017
 ```
 
 可安装 .NET Core SDK 的特定版本，有关详细信息，请参阅 [example appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml)（示例 appveyor.yml）。 

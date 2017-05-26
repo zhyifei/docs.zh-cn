@@ -31,17 +31,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92750040466914389abc3e8bf1de84c44bb0987c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 02491e64813f84d031debdca09161d88aab1b94c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="class-c-reference"></a>class（C# 参考）
 使用 `class` 关键字声明类，如下例中所示：  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -71,12 +71,12 @@ ms.lasthandoff: 03/13/2017
   
 -   [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [析构函数](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [常量](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
 -   [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
+-   [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+
 -   [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
@@ -116,8 +116,9 @@ Console.Write(child1.name);   // Error
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
  [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+

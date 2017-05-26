@@ -16,10 +16,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 321ec8f8293afad0f3da7fb6f907f45d404394cc
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fccd83571b47e3c2a6f995893c6260ae91eae517
+ms.openlocfilehash: e114f15adb9ed18d7ee2ba857013959b2710e70c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-47"></a>.NET Framework 4.7 中的运行时更改
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/18/2017
 
 ## <a name="a-namewpf--windows-presentation-foundation-wpf"></a><a name="WPF" />Windows Presentation Foundation (WPF)
 
-assetId:///M:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)?qualifyHint=False&autoUpgrade=True
+<xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)>
 
 | 功能 | 更改 | 影响 | 范围 |
 |---|---|---|---|

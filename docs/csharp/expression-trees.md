@@ -10,20 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 
 # <a name="expression-trees"></a>Expression Trees
 
-如果你使用过 LINQ，则会有丰富库（其中 `Func` 类型是 API 集的一部分）的经验。 （如果尚不熟悉 LINQ，则可能需要阅读 [LINQ 教程](linq/index.md)以及在此之前的有关 [lambda 表达式](lambda-expressions.md)的教程。）表达式树**提供与作为函数的参数的更丰富的交互。
+如果你使用过 LINQ，则会有丰富库（其中 `Func` 类型是 API 集的一部分）的经验。 （如果尚不熟悉 LINQ，则可能需要阅读 [LINQ 教程](linq/index.md)以及在此之前的有关 [lambda 表达式](lambda-expressions.md)的教程。）表达式树提供与作为函数的参数的更丰富的交互。
 
 在创建 LINQ 查询时，通常使用 Lambda 表达式编写函数参数。 在典型的 LINQ 查询中，这些函数参数会被转换为编译器创建的委托。 
 
-当想要进行更丰富的交互时，需要使用表达式树**。
+当想要进行更丰富的交互时，需要使用*表达式树*。
 表达式树将代码表示为可以检查、修改或执行的结构。 这些工具让你能够在运行时操作代码。 可以编写检查正在运行的算法的代码，或插入新的功能。 在更加高级的方案中，你可以修改正在运行的算法，甚至可以将 C# 表达式转换为另一种形式从而可在另一环境中执行。
 
 你可能已经编写过使用表达式树的代码。 实体框架的 LINQ API 接受表达式树，以此作为 LINQ 查询表达式模式的参数。
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
 
 4. [解释表达式](expression-trees-interpreting.md)
 
-    了解如何遍历并检查表达式树**，以理解表达式树表示的代码。
+    了解如何遍历并检查表达式树，以理解表达式树表示的代码。
 
 5. [生成表达式](expression-trees-building.md)
 

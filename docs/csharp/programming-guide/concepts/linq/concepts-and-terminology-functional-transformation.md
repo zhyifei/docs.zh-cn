@@ -14,10 +14,11 @@ ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3e4ff1807605164afc95eaebf37a131d9dddb79c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 87a8efd8e8631ac200a95069f889d6756cbd5a4a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -27,11 +28,11 @@ ms.lasthandoff: 03/13/2017
  请注意，本节中的主题并不是要透彻解释函数编程。 这些主题只是介绍函数编程的一些功能，这些功能降低了将 XML 从一种形状转换为另一种形状的难度。  
   
 ## <a name="what-is-pure-functional-transformation"></a>什么是纯函数转换？  
- 在纯函数转换**中，称为“纯函数”**的一组函数定义如何将一组结构化数据从其原始格式转换为另一种格式。 “纯”表示这些函数是可组合的**，这要求这些函数具有以下特点：  
+ 在纯函数转换中，称为“纯函数”的一组函数定义如何将一组结构化数据从其原始格式转换为另一种格式。 “纯”表示这些函数是可组合的，这要求这些函数具有以下特点：  
   
--   独立**，这样函数就可以自由排序和重新排列，而不会与程序的其他部分相互牵连和依赖。 纯转换不了解其环境，对环境也没有任何影响。 也就是说，用在转换中的函数没有负作用**。  
+-   独立，这样函数就可以自由排序和重新排列，而不会与程序的其他部分相互牵连和依赖。 纯转换不了解其环境，对环境也没有任何影响。 也就是说，用在转换中的函数没有负作用。  
   
--   无状态**，因而对相同输入执行相同的函数或特定的一组函数将始终产生相同的输出。 纯转换对于先前对它的使用没有记忆。  
+-   无状态，因而对相同输入执行相同的函数或特定的一组函数将始终产生相同的输出。 纯转换对于先前对它的使用没有记忆。  
   
 > [!IMPORTANT]
 >  在本教程的其余部分，术语“纯函数”用于概括表示编程方法，而不是具体的语言功能。  
@@ -41,14 +42,14 @@ ms.lasthandoff: 03/13/2017
 >  此外，不要将纯函数与 C++ 中的纯虚方法混淆。 后者表示包含类是抽象的，并且不提供方法体。  
   
 ### <a name="functional-programming"></a>函数编程  
- 函数编程**是一种编程方法，直接支持纯函数转换。  
+ 函数编程是一种编程方法，直接支持纯函数转换。  
   
  学术团体对诸如 ML、Scheme、Haskell 和 F# 等通用函数编程语言一直抱有浓厚的兴趣。 虽然 C# 一直可以用来编写纯函数转换，然而实际操作的困难使之对大多数程序员来说不具吸引力。 但是在最新版本的 C# 中，像 Lambda 表达式和类型推理这样的新语言构造大大降低了函数编程的难度，也提高了函数编程的效率。  
   
  有关函数编程的详细信息，请参阅[函数编程与命令式编程 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)。  
   
 #### <a name="domain-specific-fp-languages"></a>特定于域的 FP 语言  
- 虽然通用函数编程语言并未得到广泛采用，但特定于域的函数编程语言却得到了较为成功的应用。 例如，级联样式表 (CSS) 用于确定许多网页的外观，可扩展样式表转换语言 (XSLT) 样式表广泛应用于 XML 数据操作中。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)。  
+ 虽然通用函数编程语言并未得到广泛采用，但特定于域的函数编程语言却得到了较为成功的应用。 例如，级联样式表 (CSS) 用于确定许多网页的外观，可扩展样式表转换语言 (XSLT) 样式表广泛应用于 XML 数据操作中。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)。  
   
 ## <a name="terminology"></a>术语  
  下表定义了一些与函数转换相关的术语。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
  有关 Lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
  集合  
- 结构化的一组数据，通常具有统一的类型。 若要与 LINQ 兼容，集合必须实现 <xref:System.Collections.IEnumerable> 接口或 <xref:System.Linq.IQueryable> 接口（或其对应的泛型接口 <xref:System.Collections.Generic.IEnumerator%601> 或 <xref:System.Linq.IQueryable%601> 之一）。  
+ 结构化的一组数据，通常具有统一的类型。 若要与 LINQ 兼容，集合必须实现 <xref:System.Collections.IEnumerable> 接口或 <xref:System.Linq.IQueryable> 接口（或它们对应的泛型接口 <xref:System.Collections.Generic.IEnumerator%601> 或 <xref:System.Linq.IQueryable%601> 之一）。  
   
  元组（匿名类型）  
  一个数学概念，元组是一个有限的对象序列，每个对象具有特定的类型。 元组也称为有序列表。 匿名类型是此概念的语言实现，支持在声明未命名类类型的同时实例化该类型的对象。  

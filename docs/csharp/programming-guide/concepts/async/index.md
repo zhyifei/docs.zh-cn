@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 931f984b2267d0782cdbad22cb00f7a698de357e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -218,7 +219,6 @@ Task returnedTask = Task_MethodAsync();
 await returnedTask;  
 // or, in a single statement  
 await Task_MethodAsync();  
-  
 ```  
   
  每个返回的任务表示正在进行的工作。 任务可封装有关异步进程状态的信息，如果未成功，则最后会封装来自进程的最终结果或进程引发的异常。  
@@ -351,3 +351,4 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>另请参阅  
  [async](../../../../csharp/language-reference/keywords/async.md)   
  [await](../../../../csharp/language-reference/keywords/await.md)
+

@@ -1,6 +1,6 @@
 ---
 title: "ulong（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36de0add1d7fdf58745c65d231f3789c532ab69f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong（C# 参考）
+
 `ulong` 关键字表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
   
 |类型|范围|大小|.NET Framework 类型|  
@@ -44,44 +46,43 @@ ms.lasthandoff: 03/13/2017
 |`ulong`|0 到 18,446,744,073,709,551,615|无符号 64 位整数|<xref:System.UInt64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>文本  
- 可如下例所示声明并初始化 `ulong` 变量：  
+
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `ulong` 变量。  如果整数文本超出 `ulong` 的范围（即，如果该值小于 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大于 <xref:System.UInt64.MaxValue?displayProperty=fullName>，将出现编译错误。 
+
+在以下示例中，表示为十进制、十六进制和二进制文本且等于 7,934,076,125 的整数被分配给 `ulong` 值。  
   
-```  
-  
-ulong uLong = 9223372036854775808;  
-```  
-  
- 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、`ulong`。 在以上示例中，它是 `ulong` 类型。  
-  
- 还可根据以下规则使用后缀指定文本类型：  
-  
--   如果使用 L 或 l，那么根据文本整数的大小，可以判断出其类型为 [long](../../../csharp/language-reference/keywords/long.md) 或 `ulong`。  
-  
-    > [!NOTE]
-    >  也可用小写字母“l”作后缀。 但是，字母“l”容易与数字“1”混淆，因此会生成编译器警告。 为清楚起见，请使用“L”。  
-  
--   如果使用 `U` 或 `u`，那么根据文本整数的大小，可以判断出其类型为 [uint](../../../csharp/language-reference/keywords/uint.md) 或 `ulong`。  
-  
--   如果使用 UL、ul、Ul、uL、LU、lu、Lu 或 lU，则文本整数的类型为 `ulong`。  
-  
-     例如，以下三个语句的输出将为系统类型 `UInt64`，此类型对应于别名 `ulong`：  
-  
-    ```  
-    Console.WriteLine(9223372036854775808L.GetType());  
-    Console.WriteLine(123UL.GetType());  
-    Console.WriteLine((123UL + 456).GetType());  
-    ```  
+[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ 整数文本还可包含表示类型的后缀。 后缀 `UL` 或 `ul` 将数字文本明确标识为 `ulong` 值。 如果文本值超出 <xref:System.Int64.MaxValue?displayProperty=fullName>，则 `L` 后缀表示 `ulong`。 如果文本值超出 <xref:System.UInt32.MaxValue?displayProperty=fullName>，则 `U` 或 `u` 后缀表示 `ulong`。 以下示例使用 `ul` 后缀来表示长整型：
+ 
+[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+
+如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型： 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](long.md)
+4. `ulong`
+
+## <a name="compiler-overload-resolution"></a>编译器重载解析
   
  此后缀常用于调用重载方法。 以下面使用 `ulong` 和 [int](../../../csharp/language-reference/keywords/int.md) 参数的重载方法为例：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  在 `ulong` 参数后加上后缀可保证调用正确的类型，例如：  
   
-```  
+```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -91,7 +92,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  不存在从 `ulong` 到任何整型的隐式转换。 例如，如果不使用显式强制转换，以下语句会生成编译错误：  
   
-```  
+```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -99,7 +100,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  此外，不存在从浮点类型到 `ulong` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  

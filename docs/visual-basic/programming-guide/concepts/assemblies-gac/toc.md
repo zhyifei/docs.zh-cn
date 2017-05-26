@@ -1,4 +1,4 @@
-# [程序集和全局程序集缓存 (Visual Basic)](index.md)
+# [程序集和 GAC](index.md)
 ## [友元程序集](friend-assemblies.md)
 ### [如何：创建未签名的友元程序集](how-to-create-unsigned-friend-assemblies.md)
 ### [如何：创建签名的友元程序集](how-to-create-signed-friend-assemblies.md)

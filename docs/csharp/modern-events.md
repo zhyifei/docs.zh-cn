@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d750209f2d970044aac2f3b8b119412a58595171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
+ms.openlocfilehash: 8fc483fb52babd27f897958b17c0303710c6cce4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 03/13/2017
 上一篇文章讨论了最常见的事件模式。 .NET Core 的模式较为宽松。 在此版本中，`EventHandler<TEventArgs>` 定义不再要求 `TEventArgs` 必须是派生自 `System.EventArgs` 的类。
 
 这就提高了灵活性，并且还具有后向兼容性。 首先讨论灵活性。 类 System.EventArgs 引入了一个方法 `MemberwiseClone()`，该方法可创建对象的浅表副本。
-对于任何派生自 `EventArgs` 的类，该方法必须使用[反射](reflection.md)才能实现其功能。 该功能在特定的派生类中更容易创建。 实际上，这意味着派生自 System.EventArgs 的类会限制你的设计，且不会为你提供任何附加好处。
+对于任何派生自 `EventArgs` 的类，该方法必须使用反射才能实现其功能。 该功能在特定的派生类中更容易创建。 实际上，这意味着派生自 System.EventArgs 的类会限制你的设计，且不会为你提供任何附加好处。
 其实，你可以更改 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定义，使它们不从 `EventArgs` 派生。
 该程序的工作原理相同。
 

@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce73de9177d6138b9acb00f3c7d3ace8e7a064f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: da3fef282ac71de07057131069bf58d4f761ad2d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="nameof-c-and-visual-basic-reference"></a>nameof（C# 和 Visual Basic 引用）
@@ -44,8 +45,7 @@ ms.lasthandoff: 03/13/2017
   
 ```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
-WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode”  
-  
+WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"  
 ```  
   
 ## <a name="key-use-cases"></a>关键用例  
@@ -56,7 +56,6 @@ WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode”
 void f(string s) {  
     if (s == null) throw new ArgumentNullException(nameof(s));  
 }  
-  
 ```  
   
  MVC 操作链接：  
@@ -65,7 +64,6 @@ void f(string s) {
              @typeof(UserController),  
              @nameof(UserController.SignUp))  
 %>  
-  
 ```  
   
  INotifyPropertyChanged：  
@@ -74,13 +72,11 @@ int p {
     get { return this.p; }  
     set { this.p = value; PropertyChanged(this, new PropertyChangedEventArgs(nameof(this.p)); } // nameof(p) works too  
 }  
-  
 ```  
   
  XAML 依赖项属性：  
  ```csharp  
 public static DependencyProperty AgeProperty = DependencyProperty.Register(nameof(Age), typeof(int), typeof(C));  
-  
 ```  
   
  日志记录：  
@@ -88,7 +84,6 @@ public static DependencyProperty AgeProperty = DependencyProperty.Register(nameo
 void f(int i) {  
     Log(nameof(f), "method entry");  
 }  
-  
 ```  
   
  特性:  
@@ -121,11 +116,10 @@ nameof(c.Method2) -> "Method2"
 nameof(z) -> "z" // inside of Method2 ok, inside Method1 is a compiler error  
 nameof(Stuff) = "Stuff"  
 nameof(T) -> "T" // works inside of method but not in attributes on the method  
-nameof(f) -> “f”  
+nameof(f) -> "f"  
 nameof(f<T>) -> syntax error  
 nameof(f<>) -> syntax error  
-nameof(Method2()) -> error “This expression does not have a name”  
-  
+nameof(Method2()) -> error "This expression does not have a name"  
 ```  
   
  上面的很多示例都适用于 Visual Basic。  下面是一些特定的 Visual Basic 示例：  
@@ -139,7 +133,6 @@ Dim x = Nothing
 NameOf(x.ToString(2)) -> ' error  "This expression does not have a name"  
 Dim o = Nothing  
 NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of instance; instance will not be evaluated"  
-  
 ```  
   
 ## <a name="remarks"></a>备注  
@@ -147,8 +140,22 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
   
  因为在语法上参数必须为表达式，因此有很多禁用内容无需列出。  以下内容会产生错误，值得一提：预定义的类型（如 `int` 或 `void`）、可以为 null 的类型（`Point?`）、数组类型（`Customer[,]`）、指针类型 (`Buffer*`)、限定别名 (`A::B`)、未绑定的泛型类型 (`Dictionary<,>`)、预处理符号 (`DEBUG`) 和标签 (`loop:`)。  
   
- 如果需要获取完全限定名，可以将 `typeof` 表达式和 `nameof`结合使用。  
-  
+ 如果需要获取完全限定名，可以将 `typeof` 表达式和 `nameof`结合使用。  例如：
+```csharp  
+class C {
+    void f(int i) {  
+        Log($"{typeof(C)}.{nameof(f)}", "method entry");  
+    }
+}
+``` 
+
+ 遗憾的是，`typeof` 不是类似于 `nameof` 的常数表达式，因此，不能在 `nameof` 的所有相同位置将 `typeof` 和 `nameof` 结合使用。  例如，以下操作会导致 CS0182 编译错误：
+ ```csharp  
+[DebuggerDisplay("={" + typeof(C) + nameof(GetString) + "()}")]  
+class C {  
+    string GetString() { }  
+}  
+```    
  在这些示例中，显示了可使用类型名称并访问实例方法名称。  按照计算表达式的要求，无需具有类型的实例。  在某些情况下使用类型名称非常方便，因为只引用名称而不使用实例数据，因此不必构建实例变量或表达式。  
   
  你可以引用类中特性表达式的类成员。  
@@ -166,3 +173,4 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)   
  [Visual Basic 编程指南](../../../visual-basic/programming-guide/index.md)
+

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a11d48146c14f62190c45de78b52310218e79df4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 8423e19047d3c967a69566ebd863f677d11a0898
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [上一部分 -- 支持表达式树的框架类型](expression-classes.md)
 
-表达式树**是表示一些代码的数据结构。
+*表达式树*是表示一些代码的数据结构。
 它不是已编译且可执行的代码。 如果想要执行由表达式树表示的 .NET 代码，则必须将其转换为可执行的 IL 指令。 
 ## <a name="lambda-expressions-to-functions"></a>Lambda 表达式到函数
 可以将任何 LambdaExpression 或派生自 LambdaExpression 的任何类型转换为可执行的 IL。 其他表达式类型不能直接转换为代码。 此限制在实践中影响不大。 Lambda 表达式是你可通过转换为可执行的中间语言 (IL) 来执行的唯一表达式类型。 （思考直接执行 `ConstantExpression` 意味着什么。 这是否意味着任何用处？）`LamdbaExpression` 或派生自 `LambdaExpression` 的类型的任何表达式树均可转换为 IL。

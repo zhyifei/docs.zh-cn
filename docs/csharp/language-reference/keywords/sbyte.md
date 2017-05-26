@@ -1,6 +1,6 @@
 ---
 title: "sbyte（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,39 +30,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df57296bb285441aeddc596289d82d1e458dc278
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 2de7b352382f1a39ef73788c553d9bd881644019
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="sbyte-c-reference"></a>sbyte（C# 参考）
-`sbyte` 关键字表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
+
+`sbyte` 表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
   
 |类型|范围|大小|.NET Framework 类型|  
 |----------|-----------|----------|-------------------------|  
 |`sbyte`|-128 到 127|8 位带符号整数|<xref:System.SByte?displayProperty=fullName>|  
   
 ## <a name="literals"></a>文本  
- 可使用下述方法声明并初始化 `sbyte` 变量：  
+
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `sbyte` 变量。 
+
+在以下示例中，等于 -102、表示为十进制、十六进制和二进制文本的整数从 [int](../../../csharp/language-reference/keywords/int.md) 转换为 `sbyte` 值。    
   
-```  
-  
-sbyte sByte1 = 127;  
-```  
-  
- 在以上声明中，整数 127 从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `sbyte`。 如果整数超出了 `sbyte` 的范围，将出现编译错误。  
-  
+[!code-cs[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
+
+如果整数文本超出 `sbyte` 的范围（即，如果该值小于 <xref:System.SByte.MinValue?displayProperty=fullName> 或大于 <xref:System.SByte.MaxValue?displayProperty=fullName>，将出现编译错误。 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。 这意味着，在此示例中，数字文本 `0x9A` 和 `0b10011010` 被解释为值为 156 的 32 位带符号整数，该值超过了 <xref:System.SByte.MaxValue?displayProperty=fullName>。 因此，需要使用强制转换运算符，并且赋值必须在[取消选中](unchecked.md)的上下文中发生。 
+
+## <a name="compiler-overload-resolution"></a>编译器重载解析
+
  调用重载方法时必须使用强制转换。 以下面使用 `sbyte` 和 [int](../../../csharp/language-reference/keywords/int.md) 参数的重载方法为例：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(sbyte b) {}  
 ```  
   
  使用 `sbyte` 强制转换可保证调用正确的类型，例如：  
   
-```  
+```csharp 
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the sbyte parameter:  
@@ -74,39 +85,34 @@ SampleMethod((sbyte)5);
   
  不能将存储大小更大的非文本数值类型隐式转换为 `sbyte` 类型（有关整型类型的存储大小的信息，请参阅[整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)）。 以下面两个 `sbyte` 变量 `x` 和 `y` 为例：  
   
-```  
-  
+```csharp  
 sbyte x = 10, y = 20;  
 ```  
   
  以下赋值语句会生成一个编译错误，原因是赋值运算符右侧的算术表达式在默认情况下的计算结果为 [int](../../../csharp/language-reference/keywords/int.md)。  
   
-```  
-  
+```csharp  
 sbyte z = x + y;   // Error: conversion from int to sbyte  
 ```  
   
  若要更正此问题，请对该表达式执行强制转换，如以下示例所示：  
   
-```  
-  
+```csharp  
 sbyte z = (sbyte)(x + y);   // OK: explicit conversion  
 ```  
   
  但是，在目标变量具有相同或更大的存储大小时，可以使用下列语句：  
   
-```  
-  
-      sbyte x = 10, y = 20;  
+```csharp
+sbyte x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
 ```  
   
  另请注意，不存在从浮点类型到 `sbyte` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
-  
-      sbyte x = 3.0;         // Error: no implicit conversion from double  
+```csharp  
+sbyte x = 3.0;         // Error: no implicit conversion from double  
 sbyte y = (sbyte)3.0;  // OK: explicit conversion  
 ```  
   

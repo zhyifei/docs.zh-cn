@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9dd72793d23c7f6ccc208a3368c255f7cc4dbbd7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 5692bd4b2fae4c5e17d48c12e98eb2e18523ba61
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
@@ -46,23 +47,23 @@ ms.lasthandoff: 03/13/2017
 ## <a name="create-a-c-project"></a>创建 C# 项目  
   
 > [!NOTE]
->  以下说明适用于 Visual Studio。 如果使用不同的开发环境，请创建包含指向 System.Core.dll 的引用的控制台项目和 <xref:System.Linq?displayProperty=fullName> 命名空间的 `using` 指令。  
+>  以下说明适用于 Visual Studio。 如果使用其他开发环境，请创建包含对 System.Core.dll 的引用的控制台项目和用于 <xref:System.Linq?displayProperty=fullName> 命名空间的 `using` 指令。  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>在 Visual Studio 中创建项目  
   
 1.  启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择“文件” ****、“新建” ****、“项目” ****。  
+2.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
      **“新建项目”** 对话框随即打开。  
   
-3.  依次展开“已安装”****、“模板”****、“Visual C#”****，然后选择“控制台应用程序”****。  
+3.  依次展开“已安装”、“模板”、“Visual C#”，然后选择“控制台应用程序”。  
   
-4.  在“名称”****文本框中，输入不同的名称或接受默认名称，然后选择“确定”****按钮。  
+4.  在“名称”文本框中，输入不同的名称或接受默认名称，然后选择“确定”按钮。  
   
-     新项目将出现在“解决方案资源管理器”****中。  
+     新项目将出现在“解决方案资源管理器”中。  
   
-5.  注意，此项目包含指向 System.Core.dll 的引用和 <xref:System.Linq?displayProperty=fullName> 命名空间的 `using` 指令。  
+5.  注意，此项目包含对 System.Core.dll 的引用和用于 <xref:System.Linq?displayProperty=fullName> 命名空间的 `using` 指令。  
   
 ## <a name="create-an-in-memory-data-source"></a>创建内存中的数据源  
  用于查询的数据源是 `Student` 对象的简单列表。 每个 `Student` 记录都有名字、姓氏和整数数组（表示该学生在课堂上的测试分数）。 将此代码复制到项目中。 请注意下列特性：  
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/13/2017
   
     -   此变量的类型是 `Student`，并且可与查询变量 `IEnumerable<Student>` 的类型兼容。  
   
-2.  添加此代码后，生成并运行应用程序，以在“控制台”****窗口中查看结果。  
+2.  添加此代码后，生成并运行应用程序，以在“控制台”窗口中查看结果。  
   
  [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
@@ -153,7 +154,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
-3.  在“控制台”****窗口中运行应用程序并查看结果。  
+3.  在“控制台”窗口中运行应用程序并查看结果。  
   
      有关详细信息，请参阅 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
   
@@ -202,7 +203,7 @@ ms.lasthandoff: 03/13/2017
   
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   

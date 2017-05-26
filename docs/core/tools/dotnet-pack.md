@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 6bb8d618cc092131bd6a904fb66f02c4f3a9ecca
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 14c2e01ab0c30c9f1cbfdcc53ea85fe51a4d8c2e
+ms.openlocfilehash: 5a2ea69825fa336b1d8ce2283e214d02c16347e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -33,7 +34,9 @@ ms.lasthandoff: 03/22/2017
 
 将被打包项目的 NuGet 依赖项添加到 *.nuspec* 文件，以便在安装包时可以进行正确解析。 项目到项目的引用不会打包到项目内。 目前，如果具有项目到项目的依赖项，则每个项目均必须包含一个包。
 
-默认情况下，`dotnet pack` 先构建项目。 如果希望避免此行为，则传递 `--no-build` 选项。 这通常在持续集成 (CI) 生成方案中非常有用，在其中你可以知道代码是之前生成的。 
+默认情况下，`dotnet pack` 先构建项目。 如果希望避免此行为，则传递 `--no-build` 选项。 这通常在持续集成 (CI) 生成方案中非常有用，在其中你可以知道代码是之前生成的。
+
+可向 `dotnet pack` 命令提供 MSBuild 属性，用于打包进程。 有关详细信息，请参阅 [NuGet 元数据属性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 ## <a name="arguments"></a>参数
 
@@ -100,3 +103,8 @@ ms.lasthandoff: 03/22/2017
 将项目的版本后缀配置为 *.csproj* 文件中的 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，使用给定的后缀打包当前项目，并更新生成的程序包版本：
 
 `dotnet pack --version-suffix "ci-1234"`
+
+使用 `PackageVersion` MSBuild 属性将包版本设置为 `2.1.0`：
+
+`dotnet pack /p:PackageVersion=2.1.0`
+

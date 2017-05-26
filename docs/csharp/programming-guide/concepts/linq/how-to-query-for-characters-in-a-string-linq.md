@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 537a46e918ad9613f01d0c8997bbdc8589c00dab
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 86c763d8f31a7021605d82ecab0664a290934e07
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何：查询字符串中的字符 (LINQ) (C#)
@@ -31,7 +32,45 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>示例  
  以下示例查询一个字符串以确定它所包含的数字数量。 请注意，在第一次执行此查询后将“重用”此查询。 这是可能的，因为查询本身并不存储任何实际的结果。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+class QueryAString  
+{  
+    static void Main()  
+    {  
+        string aString = "ABCDE99F-J74-12-89A";  
+  
+        // Select only those characters that are numbers  
+        IEnumerable<char> stringQuery =  
+          from ch in aString  
+          where Char.IsDigit(ch)  
+          select ch;  
+  
+        // Execute the query  
+        foreach (char c in stringQuery)  
+            Console.Write(c + " ");  
+  
+        // Call the Count method on the existing query.  
+        int count = stringQuery.Count();  
+        Console.WriteLine("Count = {0}", count);  
+  
+        // Select all characters before the first '-'  
+        IEnumerable<char> stringQuery2 = aString.TakeWhile(c => c != '-');  
+  
+        // Execute the second query  
+        foreach (char c in stringQuery2)  
+            Console.Write(c);  
+  
+        Console.WriteLine(System.Environment.NewLine + "Press any key to exit");  
+        Console.ReadKey();  
+    }  
+}  
+/* Output:  
+  Output: 9 9 7 4 1 2 8 9  
+  Count = 8  
+  ABCDE99F  
+*/  
+```  
+  
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
   

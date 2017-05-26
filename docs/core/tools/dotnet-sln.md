@@ -4,16 +4,17 @@ description: "使用 dotnet-sln 命令，可以便捷地在解决方案文件中
 keywords: "dotnet-sln, CLI, CLI 命令, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7d7f0864ee1641627c4a55192d81ed76f2f44450
+ms.openlocfilehash: 0a832765d01609aebd10b13387a4317a6a246c30
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -27,9 +28,9 @@ ms.lasthandoff: 03/22/2017
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
@@ -42,13 +43,13 @@ dotnet sln [-h|--help]
 
 `add <PROJECT> ...`
 
-`add **/*`
+`add <GLOBBING_PATTERN>`
 
 将一个或多个项目添加到解决方案文件中。 基于 Unix/Linux 的终端支持[通配模式](https://en.wikipedia.org/wiki/Glob_(programming))。
 
 `remove <PROJECT> ...`
 
-`remove **/*`
+`remove <GLOBBING_PATTERN>`
 
 从解决方案文件中删除一个或多个项目。 基于 Unix/Linux 的终端支持[通配模式](https://en.wikipedia.org/wiki/Glob_(programming))。
 
@@ -70,19 +71,27 @@ dotnet sln [-h|--help]
 
 ## <a name="examples"></a>示例
 
-将一个项目添加到解决方案中：
+将一个 C# 项目添加到解决方案中：
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-将一个项目添加到当前目录中的解决方案：
-
-`dotnet sln add todo-app.csproj`
-
-从解决方案中删除一个项目：
+从解决方案中删除一个 C# 项目：
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-使用通配模式将多个项目添加到解决方案中：
+将多个 C# 项目添加到解决方案中：
 
-`dotnet sln add **/**/*.fsproj`
+`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+
+从解决方案中删除多个 C# 项目：
+
+`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+
+使用通配模式将多个 C# 项目添加到解决方案中：
+
+`dotnet sln todo.sln add **/*.csproj`
+
+使用通配模式从解决方案中删除多个 C# 项目：
+
+`dotnet sln todo.sln remove **/*.csproj`
 

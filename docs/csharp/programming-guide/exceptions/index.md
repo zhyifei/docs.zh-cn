@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95563b84f633789fb35eed64c510a11c44b3492b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 561113241f7433d8e0f7f1f1f96f0338ebe81ae3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
@@ -85,7 +86,7 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.SystemException>   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C 关键字](../../../csharp/language-reference/keywords/index.md)   
@@ -93,7 +94,7 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
- [异常](http://msdn.microsoft.com/library/f99a1d29-a2a8-47af-9707-9909f9010735)   
+ [异常](../../../standard/exceptions/index.md)   
  [异常层次结构](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [编写可靠的 .NET 代码](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [用于特定异常的小型转储](http://go.microsoft.com/fwlink/?LinkId=112408)

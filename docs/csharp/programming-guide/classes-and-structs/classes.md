@@ -29,23 +29,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a7d66be3ce0a4a24fd95d5b77787dcad5598f4d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
-类**属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码就可以通过创建分配给变量的对象**或实例**来使用该类。 变量会一直保留在内存中，直至对变量的所有引用超出范围为止。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](../../../csharp/language-reference/keywords/static.md)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是实例变量**来访问它。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+*类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码就可以通过创建分配给变量的*对象*或*实例*来使用该类。 变量会一直保留在内存中，直至对变量的所有引用超出范围为止。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](../../../csharp/language-reference/keywords/static.md)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是*实例变量*来访问它。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
- 与结构不同，类支持继承**，这是面向对象的编程的一个基本特点。 有关详细信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
+ 与结构不同，类支持*继承*，这是面向对象的编程的一个基本特点。 有关详细信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
 ## <a name="declaring-classes"></a>声明类  
  使用 [class](../../../csharp/language-reference/keywords/class.md) 关键字可以声明类，如下例所示：  
   
  [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
- `class` 关键字前面是访问级别。 由于在此例中使用 [public](../../../csharp/language-reference/keywords/public.md)，因此任何人都可以从此类创建对象。 类的名称遵循 `class` 关键字。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为类成员**。  
+ `class` 关键字前面是访问级别。 由于在此例中使用 [public](../../../csharp/language-reference/keywords/public.md)，因此任何人都可以从此类创建对象。 类的名称遵循 `class` 关键字。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为*类成员*。  
   
 ## <a name="creating-objects"></a>创建对象  
  虽然它们有时可以互换使用，但类和对象是不同的概念。 类定义对象类型，但不是对象本身。 对象是基于类的具体实体，有时称为类的实例。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  此代码创建指向同一对象的两个对象引用。 因此，通过 `object3` 对对象所做的任何更改都将在以后使用 `object4` 时反映出来。 由于基于类的对象是通过引用来实现其引用的，因此类被称为引用类型。  
   
 ## <a name="class-inheritance"></a>类继承  
- 继承**是通过使用派生来完成的，这意味着类是通过使用其数据和行为所派生自的基类**来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
+ 继承是通过使用*派生*来完成的，这意味着类是通过使用其数据和行为所派生自的*基类*来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
   
  [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
@@ -88,10 +89,10 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [面向对象的编程](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)   
+ [面向对象的编程](../concepts/object-oriented-programming.md)   
  [多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
  [成员](../../../csharp/programming-guide/classes-and-structs/members.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [析构函数](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [对象](../../../csharp/programming-guide/classes-and-structs/objects.md)

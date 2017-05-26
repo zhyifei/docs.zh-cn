@@ -32,16 +32,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6083af22fe8743a3d952138e04be90536cbd75d3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
-Lambda 表达式是一种可用于创建[委托](../../../csharp/programming-guide/delegates/using-delegates.md)或[表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)类型的[匿名函数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。 通过使用 lambda 表达式，可以写入可作为参数传递或作为函数调用值返回的本地函数。 Lambda 表达式对于编写 LINQ 查询表达式特别有用。  
+Lambda 表达式是一种可用于创建 [委托](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 或 [表达式目录树](../../../csharp/programming-guide/delegates/using-delegates.md) 类型的 [匿名函数](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 。 通过使用 lambda 表达式，可以写入可作为参数传递或作为函数调用值返回的本地函数。 Lambda 表达式对于编写 LINQ 查询表达式特别有用。  
   
- 若要创建 Lambda 表达式，请在 Lambda 运算符 [=>](../../../csharp/language-reference/operators/lambda-operator.md) 左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。 例如，lambda 表达式 `x => x * x` 指定名为 `x` 的参数并返回 `x` 的平方值。 如下面的示例所示，你可以将此表达式分配给委托类型：  
+ 若要创建 Lambda 表达式，需要在 Lambda 运算符 [=>](../../../csharp/language-reference/operators/lambda-operator.md)左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。 例如，lambda 表达式 `x => x * x` 指定名为 `x` 的参数并返回 `x` 的平方值。 如下面的示例所示，你可以将此表达式分配给委托类型：  
   
 ```csharp  
 delegate int del(int i);  
@@ -73,16 +74,16 @@ namespace ConsoleApplication1
   
  Lambda 在基于方法的 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查询中用作标准查询运算符方法（如 <xref:System.Linq.Enumerable.Where%2A>）的参数。  
   
- 使用基于方法的语法在 <xref:System.Linq.Enumerable> 类中调用 <xref:System.Linq.Enumerable.Where%2A> 方法时（如在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects 和 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中那样），参数是委托类型 <xref:System.Func%602?displayProperty=fullName>。 使用 Lambda 表达式创建该委托最为方便。 例如，在 <xref:System.Linq.Queryable?displayProperty=fullName> 类中调用相同的方法时（如在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 中那样），参数类型为 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>，其中 Func 是最多具有 16 个输入参数的任何一个 Func 委托。 同样，Lambda 表达式只是一种非常简洁的构造该表达式目录树的方式。 尽管事实上通过 Lambda 创建的对象具有不同的类型，但 Lambda 使得 `Where` 调用看起来类似。  
+ 使用基于方法的语法在 <xref:System.Linq.Enumerable.Where%2A> 类中调用 <xref:System.Linq.Enumerable> 方法时（如在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects 和 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中一样），参数是委托类型 <xref:System.Func%602?displayProperty=fullName>。 使用 Lambda 表达式创建该委托最为方便。 例如，在 <xref:System.Linq.Queryable?displayProperty=fullName> 类中调用相同的方法时（如在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 中一样），参数类型为 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>，其中 Func 是最多具有十六个输入参数的任何一个 Func 委托。 同样，Lambda 表达式只是一种非常简洁的构造该表达式目录树的方式。 尽管事实上通过 Lambda 创建的对象具有不同的类型，但 Lambda 使得 `Where` 调用看起来类似。  
   
- 在上一个示例中，请注意委托签名具有一个 `int` 类型的隐式类型输入参数，并返回 `int`。 可以将 Lambda 表达式转换为该类型的委托，因为该表达式也具有一个输入参数 (`x`)，以及一个编译器可隐式转换为 `int` 类型的返回值。 （以下几节中将对类型推理进行详细讨论。）使用输入参数 5 调用委托时，它将返回结果 25。  
+ 在上一个示例中，请注意委托签名具有一个 `int`类型的隐式类型输入参数，并返回 `int`。 可以将 Lambda 表达式转换为该类型的委托，因为该表达式也具有一个输入参数 (`x`)，以及一个编译器可隐式转换为 `int` 类型的返回值。 （以下几节中将对类型推理进行详细讨论。）使用输入参数 5 调用委托时，它将返回结果 25。  
   
  在 [is](../../../csharp/language-reference/keywords/is.md) 或 [as](../../../csharp/language-reference/keywords/as.md) 运算符的左侧不允许使用 Lambda。  
   
  适用于匿名方法的所有限制也适用于 Lambda 表达式。 有关详细信息，请参阅[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。  
   
 ## <a name="expression-lambdas"></a>表达式 lambda  
- 表达式位于 => 运算符右侧的 Lambda 表达式称为“表达式 lambda”**。 表达式 lambda 广泛用于[表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：  
+ 表达式位于 => 运算符右侧的 Lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：  
   
 ```csharp
 (input-parameters) => expression
@@ -115,14 +116,14 @@ namespace ConsoleApplication1
 
  语句 lambda 的主体可以包含任意数量的语句；但是，实际上通常不会多于两个或三个。  
   
- [StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
+[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
 
- [StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
+[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
 
  像匿名方法一样，语句 lambda 也不能用于创建表达式目录树。  
   
 ## <a name="async-lambdas"></a>异步 lambda  
- 通过使用 [async](../../../csharp/language-reference/keywords/async.md) 和 [await](../../../csharp/language-reference/keywords/await.md) 关键字，可以轻松创建包含异步处理的 Lambda 表达式和语句。 例如，下面的 Windows 窗体示例包含一个调用和等待异步方法 `ExampleMethodAsync`的事件处理程序。  
+ 通过使用 [async](../../../csharp/language-reference/keywords/async.md) 和 [await](../../../csharp/language-reference/keywords/await.md) 关键字，你可以轻松创建包含异步处理的 lambda 表达式和语句。 例如，下面的 Windows 窗体示例包含一个调用和等待异步方法 `ExampleMethodAsync`的事件处理程序。  
   
 ```csharp
 public partial class Form1 : Form  
@@ -180,14 +181,14 @@ public partial class Form1 : Form
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- 可以将委托实例化为 `Func<int,bool> myFunc`，其中 `int` 是输入参数，`bool` 是返回值。 返回值始终在最后一个类型参数中指定。 `Func<int, string, bool>` 定义包含两个输入参数（`int` 和 `string`）且返回类型为 `bool` 的委托。 当调用下面的 `Func` 委托时，该委托将返回 true 或 false 以指示输入参数是否等于 5：  
+ 可以将委托实例化为 `Func<int,bool> myFunc` ，其中 `int` 是输入参数， `bool` 是返回值。 返回值始终在最后一个类型参数中指定。 `Func<int, string, bool>` 定义包含两个输入参数（ `int` 和 `string`）且返回类型为 `bool`的委托。 当调用下面的 `Func` 委托时，该委托将返回 true 或 false 以指示输入参数是否等于 5：  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
 bool result = myFunc(4); // returns false of course  
 ```  
   
- 当参数类型为 `Expression<Func>` 时，你也可以提供 Lambda 表达式，例如在 System.Linq.Queryable 内定义的标准查询运算符中。 如果指定 `Expression<Func>` 参数，lambda 将编译为表达式目录树。  
+ 当参数类型为 `Expression<Func>`时，你也可以提供 Lambda 表达式，例如在 System.Linq.Queryable 内定义的标准查询运算符中。 如果指定 `Expression<Func>` 参数，lambda 将编译为表达式目录树。  
   
  此处显示了一个标准查询运算符，<xref:System.Linq.Enumerable.Count%2A> 方法：  
   
@@ -225,10 +226,10 @@ customers.Where(c => c.City == "London");
   
 -   Lambda 的返回值（如果有）必须能够隐式转换为委托的返回类型。  
   
- 请注意，lambda 表达式本身没有类型，因为常规类型系统没有“Lambda 表达式”这一内部概念。 但是，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 Lambda 表达式转换到的 <xref:System.Linq.Expressions.Expression> 类型。  
+ 请注意，lambda 表达式本身没有类型，因为常规类型系统没有“Lambda 表达式”这一内部概念。 但是，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 lambda 表达式所转换到的 <xref:System.Linq.Expressions.Expression> 类型。  
   
 ## <a name="variable-scope-in-lambda-expressions"></a>Lambda 表达式中的变量范围  
- 在定义 lambda 函数的方法内或包含 Lambda 表达式的类型内，Lambda 可以引用范围内的外部变量**（请参阅[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)）。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：  
+ 在定义 lambda 函数的方法内或包含 Lambda 表达式的类型内，Lambda 可以引用范围内的外部变量（请参阅[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)）。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：  
   
 ```csharp  
 delegate bool D();  
@@ -274,7 +275,6 @@ class Test
         Console.ReadKey();  
     }  
 }  
-  
 ```  
   
  下列规则适用于 lambda 表达式中的变量范围：  
@@ -300,6 +300,7 @@ class Test
  [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
- [表达式树](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
+ [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
- [Recursive lambda expressions](http://go.microsoft.com/fwlink/?LinkId=112395)（递归 Lambda 表达式）
+ [递归 lambda 表达式](http://go.microsoft.com/fwlink/?LinkId=112395)
+

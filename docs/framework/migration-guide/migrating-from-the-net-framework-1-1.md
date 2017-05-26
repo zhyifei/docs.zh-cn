@@ -17,9 +17,10 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -37,7 +38,6 @@ ms.lasthandoff: 04/18/2017
           <supportedRuntime version="v4.0"/>  
        </startup>  
     </configuration>  
-  
     ```  
   
 -   可以使用面向 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的编译器重新编译应用程序。 如果最初使用的是 Visual Studio 2003 开发和编译解决方案，可以在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 中打开解决方案，然后使用“项目兼容性”对话框将解决方案和项目文件从 Visual Studio 2003 使用的格式转换成 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 使用的 Microsoft 生成引擎 (MSBuild) 格式。  
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/18/2017
       <CompatSortNLSVersion enabled="4096"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
  但某些情况下，您可能必须修改源代码和重新编译应用程序。  
@@ -76,3 +75,4 @@ ms.lasthandoff: 04/18/2017
  弃用的类型和成员对重定目标的应用程序和重新编译的应用程序产生的影响略有不同。 使用已过时的类型和成员将不会影响重定目标的应用程序，除非已从其程序集中物理删除这些过时的类型或成员。 重新编译使用过时的类型或成员的应用程序通常会产生编译器警告而不是编译器错误。 但某些情况下会产生编译器错误，且无法成功编译使用过时的类型或成员的代码。 在此情况下，你必须先重新编写调用过时的类型或成员的源代码，然后再重新编译应用程序。 若要详细了解已过时类型和成员，请参阅[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)。  
   
  若要评估自发布 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 后弃用的类型和成员的影响，请参阅[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)。 查看 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的过时类型和成员的列表。
+

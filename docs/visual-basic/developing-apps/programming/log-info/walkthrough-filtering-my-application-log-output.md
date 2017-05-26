@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>演练：筛选 My.Application.Log 输出 (Visual Basic)
@@ -57,7 +58,7 @@ ms.lasthandoff: 03/13/2017
   
 4.  在调试器中运行该应用程序。  
   
-5.  按“Button1”****。  
+5.  按“Button1”。  
   
      应用程序将向应用程序的调试输出和日志文件中写入以下信息。  
   
@@ -72,10 +73,10 @@ ms.lasthandoff: 03/13/2017
     > [!NOTE]
     >  默认情况下，应用程序关闭时将刷新日志文件输出。  
   
-     在上例中，对 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法的第二次调用以及对 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法的调用将生成日志输出，而对 `WriteEntry` 方法的第一次和最后一次调用则不会。 这是因为 `WriteEntry` 和 `WriteException` 的严重级别为“信息”和“错误”，而 `My.Application.Log` 对象的默认日志筛选支持这两种级别。 但是，不允许严重级别为“开始”和“停止”的事件生成日志输出。  
+     在上面的示例中，对 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法的第二次调用和对 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法的调用会产生日志输出，而对 `WriteEntry` 方法的第一次和最后一次调用则不会。 这是因为 `WriteEntry` 和 `WriteException` 的严重级别为“信息”和“错误”，而 `My.Application.Log` 对象的默认日志筛选支持这两种级别。 但是，不允许严重级别为“开始”和“停止”的事件生成日志输出。  
   
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>对所有 My.Application.Log 侦听器的筛选  
- `My.Application.Log` 对象使用名为 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到侦听器。 通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举的一个值，可在应用程序的配置文件中对其进行配置。 默认情况下，其值为“信息”。  
+ `My.Application.Log` 对象使用名为 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，以控制将哪些消息从 `WriteEntry` 和 `WriteException` 方法传递到日志侦听器。 通过将 `DefaultSwitch` 的值设置为 <xref:System.Diagnostics.SourceLevels> 枚举值的其中一个，可在应用程序的配置文件中对其进行配置。 默认情况下，其值为“信息”。  
   
  此表显示了在给定的特定 `DefaultSwitch` 设置下，日志将消息写入侦听器所需的严重级别。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 03/13/2017
   
 #### <a name="to-log-only-activity-tracing-events"></a>仅记录活动跟踪事件  
   
-1.  在“解决方案资源管理器”****中右键单击 app.config，然后选择“打开”****。  
+1.  在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
   
      - 或 -  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/13/2017
   
     1.  在 **“项目”** 菜单上选择 **“添加新项”**。  
   
-    2.  在“添加新项” **** 对话框中，选择“应用程序配置文件” ****。  
+    2.  在“添加新项” 对话框中，选择“应用程序配置文件”。  
   
     3.  单击 **“添加”**。  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 03/13/2017
   
 6.  在调试器中运行该应用程序。  
   
-7.  按“Button1”****。  
+7.  按“Button1”。  
   
      应用程序将向应用程序的调试输出和日志文件中写入以下信息：  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 03/13/2017
 9. 将 `value` 属性的值改回“信息”。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 开关设置仅控制 `My.Application.Log`。 它不会更改 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug?displayProperty=fullName> 类的行为方式。  
+    >  `DefaultSwitch` 开关设置仅控制 `My.Application.Log`。 它不会更改 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]<xref:System.Diagnostics.Trace?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug?displayProperty=fullName> 类的行为方式。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>对 My.Application.Log 侦听器的单独筛选  
  上面的示例演示如何更改对所有 `My.Application.Log` 输出的筛选。 此示例演示如何筛选单个日志侦听器。 默认情况下，应用程序有两个可写入应用程序的调试输出和日志文件的侦听器。  
@@ -172,7 +173,7 @@ ms.lasthandoff: 03/13/2017
   
 #### <a name="to-log-only-activity-tracing-events"></a>仅记录活动跟踪事件  
   
-1.  在“解决方案资源管理器”****中右键单击 app.config，然后选择“打开”****。  
+1.  在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
   
      - 或 -  
   
@@ -180,11 +181,11 @@ ms.lasthandoff: 03/13/2017
   
     1.  在 **“项目”** 菜单上选择 **“添加新项”**。  
   
-    2.  在“添加新项” **** 对话框中，选择“应用程序配置文件” ****。  
+    2.  在“添加新项” 对话框中，选择“应用程序配置文件”。  
   
     3.  单击 **“添加”**。  
   
-2.  在“解决方案资源管理器”****中右键单击 app.config。 选择“打开”****。  
+2.  在“解决方案资源管理器”中右键单击 app.config。 选择“打开”。  
   
 3.  找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 03/13/2017
     </add>  
     ```  
   
-     <xref:System.Diagnostics.EventTypeFilter> 筛选器将其中的一个 <xref:System.Diagnostics.SourceLevels> 枚举值作为其 `initializeData` 属性。  
+     <xref:System.Diagnostics.EventTypeFilter> 筛选器将其中一个 <xref:System.Diagnostics.SourceLevels> 枚举值用作其 `initializeData` 属性。  
   
 7.  app.config 文件的内容应类似于下面的 XML：  
   
@@ -257,7 +258,7 @@ ms.lasthandoff: 03/13/2017
   
 8.  在调试器中运行该应用程序。  
   
-9. 按“Button1”****。  
+9. 按“Button1”。  
   
      应用程序将以下信息写入应用程序的日志文件：  
   
@@ -278,5 +279,5 @@ ms.lasthandoff: 03/13/2017
  [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [演练：创建自定义日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
  [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [跟踪开关](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [跟踪开关](../../../../framework/debug-trace-profile/trace-switches.md)   
  [记录来自应用程序的信息](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

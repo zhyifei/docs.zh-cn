@@ -15,9 +15,10 @@ ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2ea8e71acf861b93a21296c74254b3ca4d977d0a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 
@@ -43,7 +44,6 @@ Dim list1 = From el In po.Descendants("Address")
 For Each el In list1  
     Console.WriteLine(el)  
 Next  
-  
 ```  
   
  编译器将本示例中的查询表达式重新编写为基于方法的查询语法。 以下使用基于方法的查询语法编写的示例将生成与上一示例相同的结果：  
@@ -87,7 +87,6 @@ For Each n As Xml.XmlNode In nl
     Console.WriteLine(n.OuterXml)  
 Next  
 reader.Close()  
-  
 ```  
   
  此查询将返回与使用 LINQ to XML; 的示例相同的输出唯一的区别是︰ LINQ to XML 会缩进输出的 XML，而<xref:System.Xml.XmlDocument>却没有。</xref:System.Xml.XmlDocument>  
@@ -106,3 +105,4 @@ reader.Close()
   
 ## <a name="see-also"></a>另请参阅  
  [性能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

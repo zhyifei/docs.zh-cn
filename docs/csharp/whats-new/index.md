@@ -1,5 +1,5 @@
 ---
-title: "C# 中的新增功能 | C# 指南"
+title: "C# 中的新增功能 - C# 指南 | Microsoft Docs"
 description: "C# 语言是如何不断发展的"
 keywords: "C#, 最新功能, 新增功能, Roslyn"
 author: BillWagner
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-translationtype: Human Translation
-ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
-ms.openlocfilehash: 1285ea5dca29025408f7e164e425fde64323671a
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: f337a916f0a15c6e81b228ec378a34e97055f68e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 
@@ -26,22 +27,22 @@ ms.lasthandoff: 03/28/2017
 * [C# 6](csharp-6.md)：
     - 此页介绍 C# 6 中添加的功能。 这些功能可供 Windows 开发者在 Visual Studio 2015 中使用，并可供开发者在 macOS 和 Linux 上的 .NET Core 1.0 中探索 C# 时使用。
 
-* [C# 交互](../interactive/index.md)： 
-    - 此页介绍了 C# 交互，这是一种可用于探索 C# 语言的交互式读取–求值–打印循环 (REPL)。 使用 C# 交互，可以交互方式编写代码并查看即时执行结果，而无需执行任何编译或生成步骤。
-
+<!--* [C# Interactive](../interactive/index.md): 
+    - This page describes C# Interactive, an interactive Read Eval Print Loop (REPL) that you can use to explore the C# language. You can use it to write code interactively and see it execute immediately, without any compile or build step.
+-->
 * [跨平台支持](../../core/index.md)：
     - 借助 .NET Core 支持，C# 可以在多个平台上运行。 如果希望尝试在 macOS 或许多 Linux 发行版本上使用 C#，请详细了解 .NET Core。
 
-- [.NET 编译器平台 SDK](../roslyn/index.md)：
-    - 借助 .NET 编译器平台 SDK，可以编写对 C# 代码执行静态分析的代码。 可以使用这些 API 来发现潜在错误或不正确的做法，以及建议并实现修补程序。
-
-
+<!--
+- [.NET Compiler Platform SDK](../roslyn/index.md):
+    - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.
+-->
   
 ## <a name="previous-versions"></a>早期版本
 下面列出了在以前版本的 C# 语言和 Visual Studio.NET 中引入的主要功能。  
   
  * Visual Studio .NET 2013： 
-     - 此版本的 Visual Studio 包含 .NET 编译器平台（“Roslyn”）的 Bug 修复、性能改进和技术预览，Roslyn 是 [.NET 编译器平台 SDK](../roslyn/index.md) 的前身。
+     - 此版本的 Visual Studio 包含 .NET 编译器平台（“Roslyn”）的 Bug 修复、性能改进和技术预览，Roslyn 是 .NET 编译器平台 SDK 的前身<!--Link to ../roslyn/index.md-->。
 
  * C# 5，Visual Studio .NET 2012： 
      - `Async` / `await` 和[调用方信息](../programming-guide/concepts/caller-information.md)特性。
@@ -60,4 +61,3 @@ ms.lasthandoff: 03/28/2017
 
  * C# 1，Visual Studio .NET 2002： 
      - [C#](../csharp.md) 初版。   
-

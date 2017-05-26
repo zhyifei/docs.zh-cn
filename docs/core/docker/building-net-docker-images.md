@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 007d96cf7d174e7849a2b9c8439cfac893c7aa5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
  
@@ -97,7 +98,7 @@ npm install -g yo generator-aspnet generator-docker
 
 对于引用点，在容器化应用程序之前，请先在本地运行应用程序。 
 
-完成的应用程序位于 [GitHub 上的 dotnet/core-docs 存储库](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)。
+完成的应用程序位于 [GitHub 上的 dotnet/docs 存储库](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 为应用程序创建目录。
 
@@ -145,7 +146,6 @@ $ yo docker
 ❯ .NET Core
   Golang
   Node.js
-
 ```
 
 - 选择 `.NET Core` 作为项目类型

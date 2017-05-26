@@ -34,9 +34,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,7 @@ catch (InvalidCastException e)
  筛选想要处理的异常的一种方式是使用 `catch` 参数。  也可以使用谓词表达式进一步检查该异常以决定是否要对其进行处理。  如果谓词表达式返回 false，则继续搜索处理程序。  
   
 ```csharp  
-catch (ArgumentException e) when (e.ParamName == “…”)  
+catch (ArgumentException e) when (e.ParamName == "…")  
 {  
 }  
 ```  
@@ -87,7 +88,7 @@ catch (IOException e)
 {  
     // Extract some information from this exception, and then   
     // throw it to the parent method.  
-    whenDo not initialize (e.Source != null)  
+    if (e.Source != null)  
         Console.WriteLine("IOException source: {0}", e.Source);  
     throw;  
 }  
@@ -106,7 +107,6 @@ catch (InvalidCastException e)
  当指定的条件为 true 时，你还可以重新引发异常，如以下示例所示。  
   
 ```csharp  
-  
 catch (InvalidCastException e)  
 {  
     if (e.Data == null)  
@@ -194,3 +194,4 @@ static void Main()
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [如何：显式引发异常](https://msdn.microsoft.com/library/xhcbs8fz)
+

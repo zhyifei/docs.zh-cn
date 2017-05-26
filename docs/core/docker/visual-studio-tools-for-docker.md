@@ -1,41 +1,41 @@
 ---
 title: Visual Studio Tools for Docker
 description: "使用 Visual Studio Tools for Docker"
-keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio 2015
+keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio
 author: spboyer
 ms.author: shboyer
-ms.date: 09/16/2016
+ms.date: 04/27/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/01/2017
 
 ---
 
-# <a name="visual-studio-tools-for-docker"></a>Visual Studio Tools for Docker 
-在 Docker 容器中开发和调试应用程序可以看作是开始进行设置各种工具的任务仪式。 [Visual Studio Tools for Docker](https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4) 有助于跨越技术障碍并使用 F5 查找 bug，以直接在本地托管的 Docker 容器中调试应用程序。 
+# <a name="visual-studio-tools-for-docker"></a>Visual Studio Tools for Docker
 
-> [!NOTE]
->当前版本以 Linux Docker 容器为目标，并且即将推出适用于 Windows 容器的版本。
+含 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) 的 [Microsoft Visual Studio 2017](https://www.visualstudio.com/) 支持生成、调试和运行.NET Framework、.NET Core Web 以及使用 Windows 和 Linux 容器的控制台应用程序。
 
 ## <a name="prerequisites"></a>先决条件
-- [Microsoft Visual Studio 2015 Update 3](https://www.visualstudio.com/downloads/download-visual-studio-vs)
-- [.NET Core 1.0.1 - VS 2015 Tooling Preview 2](https://go.microsoft.com/fwlink/?LinkID=827546)
-- [Docker For Windows](https://www.docker.com/products/docker#/windows)：能够在本地运行 Docker 容器
+
+- [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
+- [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="installation-and-setup"></a>安装和设置
-从 [Visual Studio 库](http://visualstudiogallery.msdn.microsoft.com/)中下载并安装 [Visual Studio Tools for Docker](https://aka.ms/DockerToolsForVS)，或者可在 Visual Studio 中的**扩展和更新**中进行搜索。 
 
-所需的配置是在 Docker for Windows 中安装 **[Shared Drives](https://docs.docker.com/docker-for-windows/#/shared-drives)**。 卷映射和调试支持需要此设置。
+使用 .NET Core 工作负载安装 [Microsoft Visual Studio 2017](https://www.visualstudio.com/)。 查看 [Docker for Windows：安装须知](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install)了解相关信息，并安装 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)。
+
+所需的配置是在 Docker for Windows 中安装 **[Shared Drives](https://docs.docker.com/docker-for-windows/#shared-drives)**。 卷映射和调试支持需要此设置。
 
 右键单击系统托盘中的 Docker 图标，然后单击“设置”并选择“Shared Drives”。
 
-![Shared Drives](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png) 
+![Shared Drives](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
 ## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>创建 ASP.NET Web 应用程序并添加 Docker 支持
 
@@ -51,8 +51,8 @@ ms.lasthandoff: 03/02/2017
 
 下列文件已添加到该项目中。
 
-- **Dockerfile**：适用于 ASP.NET Core 应用程序的 Docker 文件基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore) 映像。 此映像包括 ASP.NET Core NuGet 包，已对此包进行了预实时编译，以提高启动性能。 生成 .NET Core 控制台应用程序时，Dockerfile 将引用最新的 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet) 映像。
-- **docker-compose.yml**：基本 Docker Compose 文件，用于定义要通过 docker-compose build/run 生成和运行的映像集合。  
+- **Dockerfile**：适用于 ASP.NET Core 应用程序的 Docker 文件基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore) 映像。 此映像包括 ASP.NET Core NuGet 包，已对此包进行了预实时编译，以提高启动性能。 生成 .NET Core 控制台应用程序时，Dockerfile 将引用最新的 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet) 映像。   
+- **docker-compose.yml**：基本 Docker Compose 文件，用于定义要通过 docker-compose build/run 生成和运行的映像集合。   
 - **docker compose.dev.debug.yml**：配置设置为调试时其他具有用于迭代更改的 docker-compose 文件。 Visual Studio 将调用 -f docker-compose.yml -f docker-compose.dev.debug.yml 以将它们合并到一起。 此组成文件可供 Visual Studio 开发工具使用。   
 - **docker compose.dev.release.yml**：调试发布定义的其他 Docker Compose 文件。 它将卷装载调试器，使它不会更改生产映像的内容。  
 
@@ -69,7 +69,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80"
-
 ``` 
 
 在此示例中，当应用程序以**调试**模式运行以及 `user/hellodockertools:latest` 处于**发布**模式时，`image: user/hellodockertools${TAG}` 将生成映像 `user/hellodockertools:dev`。 
@@ -77,6 +76,7 @@ services:
 如果计划要将映像推送到注册表，则需要将 `user` 更改为 Docker Hub 用户名。 如 `spboyer/hellodockertools`，或更改为私有注册 URL `privateregistry.domain.com/`，这具体取决于配置。
 
 ### <a name="debugging"></a>调试
+
 在工具栏的调试下拉列表中选择“Docker”，然后使用 F5 启动调试应用程序。 
 
 - 已获取 Microsoft/aspnetcore 映像（如果缓存中尚不存在）
@@ -102,6 +102,7 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 ```
 
 ### <a name="edit-and-continue"></a>编辑并继续
+
 对静态文件和/或 razor 模板文件 (.cshtml) 所做的更改会自动更新，无需执行编译步骤。 进行更改，保存并在浏览器中点击“刷新”以查看更新。  
 
 对代码文件的修改需要在容器内进行编译和重新启动 Kestrel。 更改后，使用 CTRL+F5 执行该过程并在容器内启动应用程序。 不可以重新生成或停止 Docker 容器；在命令行中使用 `docker ps` 命令可以看到原始容器仍与 10 分钟前一样正在运行。 
@@ -111,7 +112,8 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   10 minutes ago      Up 10 minutes       0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-### <a name="publishing-docker-images"></a>发布 Docker 映像 
+### <a name="publishing-docker-images"></a>发布 Docker 映像
+
 完成应用程序的开发和调试循环后，Visual Studio Tools for Docker 将帮助创建应用程序的生产映像。 将调试下拉列表更改为“发行”，然后生成应用程序。 此工具将生成具有 `:latest` 标签的映像，可以将其推送到私有注册表或 Docker Hub。 
 
 使用 `docker images` 可以查看映像的列表。

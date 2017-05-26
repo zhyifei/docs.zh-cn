@@ -1,6 +1,6 @@
 ---
-title: .NET Core
-description: .NET Core
+title: .NET Core | Microsoft Docs
+description: ".NET 核心"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 132551673f97142a90513d43d7690867c3d00295
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: cd99aa47233f855ac6da37ff93b981a941ee416a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 
 # <a name="net-core"></a>.NET Core
 
-> 请查看[“入门”教程](getting-started.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。
+> 请查看[“入门”教程](get-started.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。
 
 .NET Core 是一个通用开发平台，由 Microsoft 和 [GitHub](https://github.com/dotnet/core) 上的 .NET 社区共同维护。 它是跨平台的，支持 Windows、macOS 和 Linux，并且可用于设备、云和嵌入式/IoT 方案。 
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/10/2017
 - **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 文档由 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 许可发行。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持
 
-## <a name="composition"></a>组成部分
+## <a name="composition"></a>撰写
 
 .NET Core 包括以下部分：
 
@@ -152,4 +153,3 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 - **平台** -- Mono 支持很多平台和 CPU。
 - **开放源** -- Mono 和 .NET Core 两者都使用 MIT 许可证，且都属于 .NET Foundation 项目。
 - **焦点** --最近几年，Mono 的主要焦点是移动平台，而 .NET Core 的焦点是云工作负荷。
-

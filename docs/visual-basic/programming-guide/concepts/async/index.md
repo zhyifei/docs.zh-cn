@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: de78bfda263071817535157522430de080d4f6a4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -220,7 +221,6 @@ Task returnedTask = Task_MethodAsync()
 Await returnedTask  
 ' or, in a single statement  
 Await Task_MethodAsync()  
-  
 ```  
   
  每个返回的任务表示正在进行的工作。 任务可封装有关异步进程状态的信息，如果未成功，则最后会封装来自进程的最终结果或进程引发的异常。  
@@ -334,3 +334,4 @@ End Class
 ## <a name="see-also"></a>另请参阅  
  [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)   
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+

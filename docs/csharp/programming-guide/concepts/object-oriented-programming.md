@@ -16,20 +16,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74872957345de77f43f3ac649ed6f809aea5f784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 3f3e6aa047e0de279d15298408c4593c5fb17666
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
   
- “封装”**意味着将一组相关属性、方法和其他成员视为一个单元或对象。  
+ “封装”意味着将一组相关属性、方法和其他成员视为一个单元或对象。  
   
- “继承”**描述基于现有类创建新类的能力。  
+ “继承”描述基于现有类创建新类的能力。  
   
- 多形性**意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。  
+ 多形性意味着可以有多个可互换使用的类，即使每个类以不同方式实现相同属性或方法。  
   
  本节介绍下列概念：  
   
@@ -43,7 +44,7 @@ C# 提供对面向对象的编程（包括封装、继承和多形性）的完�
   
          [构造函数](#Constructors)  
   
-         [析构函数](#Destructors)  
+         [终结器](#Finalizers)  
   
          [事件](#Events)  
   
@@ -68,7 +69,7 @@ C# 提供对面向对象的编程（包括封装、继承和多形性）的完�
 -   [委托](#Delegates)  
   
 ##  <a name="Classes"></a> 类和对象  
- “类”**和“对象”**这两个术语有时互换使用，但实际上，类描述对象的“类型”**，而对象是类的可用“实例”**。 因此，创建对象的操作称为“实例化”**。 如果使用蓝图类比，类是蓝图，对象就是基于该蓝图的建筑。  
+ “类”和“对象”这两个术语有时互换使用，但实际上，类描述对象的“类型”，而对象是类的可用“实例”。 因此，创建对象的操作称为“实例化”。 如果使用蓝图类比，类是蓝图，对象就是基于该蓝图的建筑。  
   
  定义类：  
   
@@ -78,7 +79,7 @@ class SampleClass
 }  
 ```  
   
- C# 还提供了类的轻量版本，称为“结构”**。当需要创建大量对象但不希望因此占用太多内存时，可以使用此轻量版本。  
+ C# 还提供了类的轻量版本，称为“结构”。当需要创建大量对象但不希望因此占用太多内存时，可以使用此轻量版本。  
   
  定义结构：  
   
@@ -95,7 +96,7 @@ struct SampleStruct
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
 ###  <a name="Members"></a> 类成员  
- 每个类都可以具有不同的“类成员”**。类成员包括属性（用于描述类数据）、方法（用于定义类行为）和事件（用于在不同的类和对象之间提供通信）。  
+ 每个类都可以具有不同的“类成员”。类成员包括属性（用于描述类数据）、方法（用于定义类行为）和事件（用于在不同的类和对象之间提供通信）。  
   
 ####  <a name="Properties"></a> 属性和字段  
  字段和属性表示对象包含的信息。 字段类似于变量，因为可以直接读取或设置它们。  
@@ -147,7 +148,7 @@ class SampleClass
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
 ####  <a name="Methods"></a> 方法  
- “方法”**是对象可以执行的操作。  
+ “方法”是对象可以执行的操作。  
   
  定义类的方法：  
   
@@ -161,7 +162,7 @@ class SampleClass
 }  
 ```  
   
- 对于同一方法，一个类可以有多个实现，也叫“重载”**，这些实现的区别在于参数个数或参数类型的不同。  
+ 对于同一方法，一个类可以有多个实现，也叫“重载”，这些实现的区别在于参数个数或参数类型的不同。  
   
  重载方法：  
   
@@ -170,7 +171,7 @@ public int sampleMethod(string sampleParam) {};
 public int sampleMethod(int sampleParam) {}  
 ```  
   
- 大多数情况下，方法是在类定义中声明的。 但是，C# 还支持“扩展方法”**，这种方法允许你将方法添加到实际类定义之外的现有类中。  
+ 大多数情况下，方法是在类定义中声明的。 但是，C# 还支持“扩展方法”，这种方法允许你将方法添加到实际类定义之外的现有类中。  
   
  有关详细信息，请参见:  
   
@@ -197,13 +198,13 @@ public class SampleClass
   
  [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)。  
   
-####  <a name="Destructors"></a> 析构函数  
- 析构函数用于析构类的实例。 在 .NET Framework 中，垃圾回收器自动管理应用程序中托管对象的内存分配和释放。 但是，你可能仍会需要析构函数来清理应用程序创建的所有非托管资源。 一个类只能有一个析构函数。  
+####  <a name="Finalizers"></a>终结器  
+ 终结器用于析构类的实例。 在 .NET Framework 中，垃圾回收器自动管理应用程序中托管对象的内存分配和释放。 但是，你可能仍会需要终结器来清理应用程序创建的所有非托管资源。 一个类只能有一个终结器。  
   
- 有关析构函数和 .NET Framework 垃圾回收的详细信息，请参阅[垃圾回收](../../../standard/garbagecollection/index.md)。  
+ 有关终结器和 .NET Framework 垃圾回收的详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
   
 ####  <a name="Events"></a> 事件  
- 类或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发）事件的类称为“发行者”**，接收（或处理）事件的类称为“订户”**。 有关事件以及如何引发和处理事件的详细信息，请参阅[事件](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)。  
+ 类或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发）事件的类称为“发行者”，接收（或处理）事件的类称为“订户”。 有关事件以及如何引发和处理事件的详细信息，请参阅[事件](../../../standard/events/index.md)。  
   
 -   若要在类中声明事件，请使用 [event](../../../csharp/language-reference/keywords/event.md) 关键字。  
   
@@ -212,7 +213,7 @@ public class SampleClass
 -   若要订阅事件，请使用 `+=` 运算符；若要取消订阅事件，请使用 `-=` 运算符。  
   
 ####  <a name="NestedClasses"></a> 嵌套类  
- 在另一个类中定义的类称为“嵌套”**。 默认情况下，嵌套类是私有类。  
+ 在另一个类中定义的类称为“嵌套”。 默认情况下，嵌套类是私有类。  
   
 ```csharp  
 class Container  
@@ -231,7 +232,7 @@ Container.Nested nestedInstance = new Container.Nested()
 ```  
   
 ###  <a name="AccessModifiers"></a> 访问修饰符和访问级别  
- 所有类和类方法都可以使用“访问修饰符”**指定自己为其他类提供的访问级别。  
+ 所有类和类方法都可以使用“访问修饰符”指定自己为其他类提供的访问级别。  
   
  可用的访问修饰符有以下这些：  
   
@@ -311,7 +312,7 @@ var sampleObject =
  有关详细信息，请参阅：[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ##  <a name="Inheritance"></a> 继承  
- 通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”**，继承这些成员的类称为“派生类”**。 但是，C# 中的所有类都隐式继承自 <xref:System.Object> 类，该类支持 .NET 类层次结构，并为所有类提供低级别服务。  
+ 通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 但是，C# 中的所有类都隐式继承自 <xref:System.Object> 类，该类支持 .NET 类层次结构，并为所有类提供低级别服务。  
   
 > [!NOTE]
 >  C# 不支持多重继承。 即，只能为一个派生类指定一个基类。  
@@ -385,7 +386,7 @@ class SampleClass : ISampleInterface
  [接口](../../../csharp/language-reference/keywords/interface.md)  
   
 ##  <a name="Generics"></a> 泛型  
- .NET Framework 中的类、结构、接口和方法可以包括“类型参数”**，类型参数定义它们可以存储或使用的对象的类型。 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。  
+ .NET Framework 中的类、结构、接口和方法可以包括“类型参数”，类型参数定义它们可以存储或使用的对象的类型。 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。  
   
  定义泛型类：  
   
@@ -410,10 +411,10 @@ sampleObject.Field = "Sample string";
 -   [泛型](../../../csharp/programming-guide/generics/index.md)  
   
 ##  <a name="Delegates"></a> 委托  
- “委托”**是一种类型，它定义方法签名，可以提供对具有兼容签名的任何方法的引用。 你可以通过委托调用方法。 委托用于将方法作为参数传递给其他方法。  
+ “委托”是一种类型，它定义方法签名，可以提供对具有兼容签名的任何方法的引用。 你可以通过委托调用方法。 委托用于将方法作为参数传递给其他方法。  
   
 > [!NOTE]
->  事件处理程序就是通过委托调用的方法。 有关在事件处理中使用委托的详细信息，请参阅[事件](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)。  
+>  事件处理程序就是通过委托调用的方法。 有关在事件处理中使用委托的详细信息，请参阅[事件](../../../standard/events/index.md)。  
   
  创建委托：  
   

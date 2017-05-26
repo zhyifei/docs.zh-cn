@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c9759ffb68c9068c14b3aa507535e2dfb56e47b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3864089caaf24eb61a3db9a97c674dc42e40a3cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="accessing-application-settings-visual-basic"></a>访问应用程序设置 (Visual Basic)
 本部分包含描述 `My.Settings` 对象及其允许完成的任务的主题。  
   
 ## <a name="mysettings"></a>My.Settings  
- `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，请使用“项目设计器”****的“设置”****窗格。  
+ `My.Settings` 对象的属性提供对应用程序设置的访问。 若要添加或删除设置，请使用“项目设计器”的“设置”窗格。  
   
  `My.Settings` 对象的方法允许保存当前用户设置或将用户设置还原为上次保存的值。  
   

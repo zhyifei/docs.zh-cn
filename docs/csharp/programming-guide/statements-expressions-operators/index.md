@@ -1,34 +1,55 @@
 ---
-title: "语句、表达式和运算符（C# 编程指南） | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 语言, 表达式"
-  - "C# 语言, 运算符"
-  - "C# 语言, 语句"
-  - "表达式 [C#]"
-  - "运算符 [C#]"
-  - "语句 [C#]"
+title: "语句、表达式和运算符（C# 编程指南）| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- expressions [C#]
+- operators [C#]
+- C# language, statements
+- C# language, operators
+- C# language, expressions
+- statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d7c648786e7f507fe2ca58ffd2480da6b204aafa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
+
 ---
-# 语句、表达式和运算符（C# 编程指南）
-构成应用程序的 C\# 代码由包含关键字、表达式和运算符的语句组成。  本节包含关于 C\# 程序的基本元素的信息。  
+# <a name="statements-expressions-and-operators-c-programming-guide"></a>语句、表达式和运算符（C# 编程指南）
+构成应用程序的 C# 代码由关键字、表达式和运算符组成的语句所组成。 本节包含有关这些 C# 程序基本元素的信息。  
   
- 有关更多信息，请参见：  
+ 有关详细信息，请参见:  
   
 -   [语句](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
   
 -   [表达式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
+    -   [Expression-Bodied 成员](expression-bodied-members.md)
+ 
 -   [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 -   [匿名函数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
@@ -45,9 +66,9 @@ caps.handback.revision: 22
   
 -   [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
-## C\# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 语言规范  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 请参阅  
- [C\# 编程指南](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

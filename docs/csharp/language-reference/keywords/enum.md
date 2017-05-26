@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,14 +45,12 @@ ms.lasthandoff: 03/13/2017
  默认情况下，第一个枚举数具有值 0，并且每个连续枚举数的值将增加 1。 例如，在以下枚举中， `Sat` 的值为 `0`， `Sun` 的值为 `1`， `Mon` 的值为 `2`，依次类推。  
   
 ```  
-  
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  枚举数可以使用初始值设定项来替代默认值，如下面的示例中所示。  
   
 ```  
-  
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -60,7 +59,6 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  每个枚举类型都有一个基础类型，该基础类型可以是除 [char](../../../csharp/language-reference/keywords/char.md) 外的任何整型类型。 枚举元素的默认基础类型是 [int](../../../csharp/language-reference/keywords/int.md)。 若要声明另一整型类型的枚举（如 [byte](../../../csharp/language-reference/keywords/byte.md)），则请在后跟该类型的标识符后使用冒号，如以下示例所示。  
   
 ```  
-  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -76,7 +74,6 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  基础类型指定为每个枚举数分配多少存储空间。 但要将 `enum` 类型转换为整型，则必须使用显示转换。 例如，以下语句通过使用转换将 `enum` 转换为 `int`，从而将枚举器 `Sun` 赋值为 [int](../../../csharp/language-reference/keywords/int.md) 类型的变量。  
   
 ```  
-  
 int x = (int)Days.Sun;  
 ```  
   
@@ -122,3 +119,4 @@ int x = (int)Days.Sun;
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

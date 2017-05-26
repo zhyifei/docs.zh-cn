@@ -18,10 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d1ddfa9842909a491af2541c9ac770989fc2164
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/18/2017
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/platform（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|可以通过使用 **/clr:safe** 创建与平台无关的 Microsoft 中间语言 (MSIL) 应用程序。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](http://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c)。<br /><br /> Visual c++ 为每个 64 位操作系统均包括一个单独的编译器。 有关如何使用 Visual C++ 创建可在 64 位 Windows 操作系统上运行的本机应用程序的详细信息，请参阅 [64 位编程](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))。|  
+|Visual C++|可以通过使用 **/clr:safe** 创建与平台无关的 Microsoft 中间语言 (MSIL) 应用程序。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](/cpp/build/reference/clr-common-language-runtime-compilation)。<br /><br /> Visual c++ 为每个 64 位操作系统均包括一个单独的编译器。 有关如何使用 Visual C++ 创建可在 64 位 Windows 操作系统上运行的本机应用程序的详细信息，请参阅 [64 位编程](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>确定 .exe 文件或 .dll 文件的状态  
  若要确定 .exe 文件或 .dll 文件是只能在特定平台上运行还是可在 WOW64 下运行，请使用不带任何选项的 [CorFlags.exe（CorFlags 转换工具）](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 更改 .exe 文件或 .dll 文件的平台状态。 Visual Studio 程序集的 CLR 头的主运行时版本号设置为 2，次运行时版本号设置为 5。 将次运行时版本设置为 0 的应用程序会被视为旧版应用程序，且始终在 WOW64 下执行。  
   
- 若要以编程方式查询 .exe 或 .dll，以查看其是只能在特定平台上运行还是可在 WOW64 下运行，请使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> 方法。
+ 若要以编程方式查询 .exe 或 .dll，以查看其是只能在特定平台上运行还是在 WOW64 下运行，请使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> 方法。

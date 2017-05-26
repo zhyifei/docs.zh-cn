@@ -1,6 +1,6 @@
 ---
 title: "short（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,73 +30,85 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c14ae463021fbeed9de24610292fa7516a453fe
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 14f9c66bb620e2ad35513abeeba77372904cc1f3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="short-c-reference"></a>short（C# 参考）
-`short` 关键字表示一种整数数据类型，该类型根据下表显示的大小和范围存储值。  
+
+`short` 表示一种整数数据类型，该类型根据下表显示的大小和范围存储值。  
   
 |类型|范围|大小|.NET Framework 类型|  
 |----------|-----------|----------|-------------------------|  
 |`short`|-32,768 到 32,767|有符号 16 位整数|<xref:System.Int16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>文本  
- 可如下例所示声明并初始化 `short` 变量：  
+
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `short` 变量。  如果整数文本超出 `short` 的范围（即，如果该值小于 <xref:System.Int16.MinValue?displayProperty=fullName> 或大于 <xref:System.Int16.MaxValue?displayProperty=fullName>，将出现编译错误。 
+
+在以下示例中，等于 1,034、表示为十进制、十六进制和二进制文本的整数从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `short` 值。  
   
-```  
-  
-short x = 32767;  
-```  
-  
- 在以上声明中，整数文本 `32767` 从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `short`。 如果整数文本的长度超过了 `short` 存储位置的大小，则将产生编译器错误。  
-  
+[!code-cs[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Short)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>编译器重载解析
+
  调用重载方法时必须使用强制转换。 以下面使用 `short` 和 [int](../../../csharp/language-reference/keywords/int.md) 参数的重载方法为例：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(short s) {}  
 ```  
   
  使用 `short` 强制转换可保证调用正确的类型，例如：  
   
-```  
+```csharp  
 SampleMethod(5);         // Calling the method with the int parameter  
 SampleMethod((short)5);  // Calling the method with the short parameter  
 ```  
   
 ## <a name="conversions"></a>转换  
+
  存在从 `short` 到 [int](../../../csharp/language-reference/keywords/int.md)、[long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。  
   
  不能将存储大小更大的非文本数值类型隐式转换为 `short` 类型（有关整型类型的存储大小的信息，请参阅[整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)）。 以下面两个 `short` 变量 `x` 和 `y` 为例：  
   
-```  
-  
+```csharp  
 short x = 5, y = 12;  
 ```  
   
  以下赋值语句将产生一个编译器错误，原因是赋值运算符右侧的算术表达式的计算结果默认为 [int](../../../csharp/language-reference/keywords/int.md) 类型。  
   
- `short`   `z = x + y;   // Error: no conversion from int to short`  
-  
+```csharp
+short z  = x + y;        // Compiler error CS0266: no conversion from int to short
+```
+
  若要解决此问题，请使用强制转换：  
   
- `short`   `z = (`  `short`  `)(x + y);   // OK: explicit conversion`  
+```csharp
+short z  = (short)(x + y);   // Explicit conversion
+```
   
- 但是，在目标变量具有相同或更大的存储大小时，可以使用下列语句：  
+ 在目标变量具有相同或更大的存储大小时，还可以使用下列语句：  
   
-```  
+```csharp  
 int m = x + y;  
 long n = x + y;  
 ```  
   
  不存在从浮点型到 `short` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
-  
-      short x = 3.0;          // Error: no implicit conversion from double  
+```csharp  
+short x = 3.0;          // Error: no implicit conversion from double  
 short y = (short)3.0;   // OK: explicit conversion  
 ```  
   

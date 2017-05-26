@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e360794ad217784e2358967bfbcc03959cd043b1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -87,3 +88,4 @@ ms.lasthandoff: 03/13/2017
  [模块\<关键字&1;>](../../../visual-basic/language-reference/modifiers/module-keyword.md)   
  [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
  [如何：在代码中拆分和合并语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+

@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-translationtype: Human Translation
-ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
-ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
-ms.lasthandoff: 03/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
+ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/26/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 03/08/2017
 
 托管 .NET Core 运行时是高级方案，在大多数情况下，.NET Core 开发人员无需担心托管问题，因为 .NET Core 生成过程会提供默认主机来运行 .NET Core 应用程序。 虽然在某些特殊情况下，它对显式托管 .NET Core 运行时非常有用 - 无论是作为一种在本机进程中调用托管代码的方式还是为了获得对运行时工作原理更好的控制。
 
-本文概述了从本机代码启动 .NET Core 运行时、创建初始应用程序域 (@System.AppDomain) 以及在域中执行托管代码的必要步骤。
+本文概述了从本机代码启动 .NET Core 运行时、创建初始应用程序域 (<xref:System.AppDomain>) 以及在域中执行托管代码的必要步骤。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -30,11 +31,11 @@ ms.lasthandoff: 03/08/2017
 
 还将需要一个简单的 .NET Core 应用程序来测试主机，因此应安装 [.NET Core SDK](https://www.microsoft.com/net/core) 并[构建一个小型的 .NET Core 测试应用](../../csharp/getting-started/with-visual-studio.md)（例如，“Hello World”应用）。 使用通过新 .NET Core 控制台项目模板创建的“Hello World”应用就足够了。
 
-本教程及其[相关示例](https://github.com/dotnet/docs/tree/master/samples/core/hosting)会构建一个 Windows 主机，但请参阅本文结尾处有关在 Unix 上托管的说明。
+本教程及其相关示例会构建一个 Windows 主机，请参阅本文结尾处有关在 Unix 上托管的说明。
 
 ## <a name="creating-the-host"></a>创建主机
 
-用于演示本文中所述步骤的示例主机可从 [.NET Core 示例](https://github.com/dotnet/docs/tree/master/samples/core/hosting)存储库获取。 该示例的 host.cpp 文件中的注释清楚地将本教程中编了号的步骤与它们在示例中的执行位置相关联。
+用于演示本文中所述步骤的[示例主机](https://github.com/dotnet/docs/tree/master/samples/core/hosting)可从 dotnet/docs GitHub 存储库获取。 该示例的 host.cpp 文件中的注释清楚地将本教程中已编号的步骤与它们在示例中的执行位置关联。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 请记住，示例主机的用途在于提供学习指导，在纠错方面不甚严谨，其重在可读性而非效率。 更多的真实主机示例可从 [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 存储库获取。 尤其是 [CoreRun 主机](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)，它是学习者了解简单示例后用来深入学习的通用主机。
 
@@ -146,3 +147,4 @@ hr = runtimeHost->CreateDelegate(
 如果开始时操作不起作用，请再次检查 *coreclr.dll* 是否在主机预期的位置可用、是否 TPA 列表中包含了所有必需的框架库以及 CoreCLR 的位数（32 位或 64 位）是否匹配主机的构建方式。
 
 托管 .NET Core 运行时是高级方案，许多开发人员并不需要实施这一方案，但对于那些需要从本机进程启动托管代码的人员，或需要更好地控制 .NET Core 运行时的行为的人员而言，它会非常有用。 因为 .NET Core 能够与其自身并行运行，甚至可以创建主机，这些主机能够初始化和启动多个 .NET Core 运行时版本并在同一进程中执行所有这些版本上的应用。 
+

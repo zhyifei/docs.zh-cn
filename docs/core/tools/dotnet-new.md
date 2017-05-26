@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 14e6b4a2ffe5145a6d5d856c2149569b9ae39ff9
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 ---
 
@@ -97,7 +98,7 @@ dotnet new [-h|--help]
 
 `-f|--framework` - 指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1`（`Default: netcoreapp1.0`）
 
-`-au|--authentication` - 要使用的身份验证类型。 值：`None` 或 `Individual`（默认：`None`）
+`-au|--auth` - 要使用的身份验证类型。 值：`None` 或 `Individual`（默认：`None`）
 
 `-uld|--use-local-db` - 指定是否使用 LocalDB，而不是 SQLite。 值：`true` 或 `false`（默认：`false`）
 

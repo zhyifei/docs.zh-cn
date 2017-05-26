@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eca74e69b0377f85deaf4cedbdf7b9edcf1b4b87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="classes-and-objects"></a>类和对象
@@ -68,9 +69,9 @@ ms.lasthandoff: 03/13/2017
 * `protected`
     - 只能访问此类或派生自此类的类
 * `internal`
-    - 只能访问此程序
+    - 访问限于当前程序集（.exe、.dll 等）
 * `protected internal`
-    - 只能访问此程序或派生自此类的类
+    - 访问限于包含类或派生自包含类的类
 * `private`
     - 只能访问此类
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 03/13/2017
 
 ## <a name="base-classes"></a>基类
 
-类声明可能会按如下方式指定基类：在类名和类型参数后面编写冒号和基类名。 省略基类规范就像派生自类型对象一样。 在以下示例中，`Point3D` 的基类是 `Point`，`Point` 的基类是 `object`：
+类声明可能会按如下方式指定基类：在类名和类型参数后面编写冒号和基类名。 省略基类规范与从 `object` 类型派生相同。 在以下示例中，`Point3D` 的基类是 `Point`，`Point` 的基类是 `object`：
 
 [!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
@@ -127,15 +128,15 @@ ms.lasthandoff: 03/13/2017
 
 参数用于将值或变量引用传递给方法。 方法参数从调用方法时指定的*自变量*中获取其实际值。 有四类参数：值参数、引用参数、输出参数和参数数组。
 
-*值参数*用于传递输入参数。 值参数对应于局部变量，从为其传递的自变量中获取初始值。 修改值参数不会影响为其传递的自变量。 
+值参数用于传递输入自变量。 值参数对应于局部变量，从为其传递的自变量中获取初始值。 修改值参数不会影响为其传递的自变量。 
 
 可以指定默认值，从而省略相应的自变量，这样值参数就是可选的。
 
-*引用参数*用于传递输入和输出参数。 为引用参数传递的自变量必须是变量，并且在方法执行期间，引用参数指明的存储位置与自变量相同。 引用参数使用 `ref` 修饰符进行声明。 下面的示例展示了如何使用 `ref` 参数。
+引用参数用于按引用传递自变量。 为引用参数传递的自变量必须是具有明确值的变量，并且在方法执行期间，引用参数指明的存储位置与自变量相同。 引用参数使用 `ref` 修饰符进行声明。 下面的示例展示了如何使用 `ref` 参数。
 
 [!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
-*输出参数*用于传递输出参数。 输出参数与引用参数类似，不同之处在于，调用方提供的自变量的初始值并不重要。 输出参数使用 `out` 修饰符进行声明。 下面的示例展示了如何使用 `out` 参数。
+输出参数用于按引用传递自变量。 输出参数与引用参数类似，不同之处在于，不要求向调用方提供的自变量显式赋值。 输出参数使用 `out` 修饰符进行声明。 下面的示例演示如何通过 C# 7 中引入的语法使用 `out` 参数。
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
@@ -201,7 +202,7 @@ C# 要求必须先*明确赋值*局部变量，然后才能获取其值。 例�
 
 [!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
-调用 `Expression` 实例的 `Evaluate` 方法可以计算给定的表达式并生成 `double` 值。 此方法需要使用自变量 @`Dctionary`，其中包含变量名称（作为项键）和值（作为项值）。 `Evaluate` 方法是 `virtual abstract` 方法。也就是说，非抽象派生类必须重写此方法，才能提供实际的实现代码。
+调用 `Expression` 实例的 `Evaluate` 方法可以计算给定的表达式并生成 `double` 值。 此方法需要使用自变量 `Dictionary`，其中包含变量名称（作为项键）和值（作为项值）。 因为 `Evaluate` 是一个抽象方法，因此派生自 `Expression` 的非抽象类必须替代 `Evaluate`。
 
 `Constant` 的 `Evaluate` 实现代码只返回存储的常量。 `VariableReference` 实现代码查找字典中的变量名称，并返回结果值。 `Operation` 实现代码先计算左右操作数（以递归方式调用其 `Evaluate` 方法），然后执行给定的算术运算。
 

@@ -18,9 +18,10 @@ caps.latest.revision: 14
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 86dce70e92c0e424b169b6fc58e87c5652ebcb69
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -64,7 +65,6 @@ ms.lasthandoff: 04/18/2017
         <supportedRuntime version="<version>"/>  
       </startup>  
     </configuration>  
-  
     ```  
   
      其中，*\<version>* 指定与应用程序支持的 .NET Framework 版本匹配的 CLR 版本。 使用以下字符串：  
@@ -94,3 +94,4 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>另请参阅  
  [从 .NET Framework 1.1 迁移](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
  [迁移指南](../../../docs/framework/migration-guide/index.md)
+
