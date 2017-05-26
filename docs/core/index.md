@@ -153,4 +153,3 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 - **平台** -- Mono 支持很多平台和 CPU。
 - **开放源** -- Mono 和 .NET Core 两者都使用 MIT 许可证，且都属于 .NET Foundation 项目。
 - **焦点** --最近几年，Mono 的主要焦点是移动平台，而 .NET Core 的焦点是云工作负荷。
-
