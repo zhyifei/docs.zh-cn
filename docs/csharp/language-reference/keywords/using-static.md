@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c072d365b4ecffb524b57c2328217da05a8af3ed
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f111ba3db26f247cbc56ee296b652bc04efb837d
+ms.openlocfilehash: 66c68530f5684e4d75b9aaa21334e54dde5b64b6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指令（C# 参考）
@@ -46,7 +47,7 @@ using static <fully-qualified-type-name>
 
 `using static` 指令是在 C# 6 中引入的。
 
-## <a name="reamrks"></a>注解
+## <a name="remarks"></a>备注
  
 通常，调用某个静态成员时，即会提供类型名称以及成员名称。 重复输入相同的类型名称来调用该类型的成员将生成详细的晦涩代码。 例如，`Circle` 类的以下定义引用 @System.Math 类的成员数。
   

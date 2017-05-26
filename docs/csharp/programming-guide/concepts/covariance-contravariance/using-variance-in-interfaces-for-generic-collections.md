@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9bf7f107833800f5ae2843dcefcd195a8a15a1b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 44adda352b5e7d0ef13e51ed114a0f45487f52ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>在泛型集合的接口中使用变体 (C#)
@@ -35,11 +36,45 @@ ms.lasthandoff: 03/13/2017
 ## <a name="converting-generic-collections"></a>转换泛型集合  
  下例阐释了 <xref:System.Collections.Generic.IEnumerable%601> 接口中的协变支持的益处。 `PrintFullName` 方法接受 `IEnumerable<Person>` 类型的集合作为参数。 但可将该方法重用于 `IEnumerable<Employee>` 类型的集合，因为 `Employee` 继承 `Person`。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+// Simple hierarchy of classes.  
+public class Person  
+{  
+    public string FirstName { get; set; }  
+    public string LastName { get; set; }  
+}  
+  
+public class Employee : Person { }  
+  
+class Program  
+{  
+    // The method has a parameter of the IEnumerable<Person> type.  
+    public static void PrintFullName(IEnumerable<Person> persons)  
+    {  
+        foreach (Person person in persons)  
+        {  
+            Console.WriteLine("Name: {0} {1}",  
+            person.FirstName, person.LastName);  
+        }  
+    }  
+  
+    public static void Test()  
+    {  
+        IEnumerable<Employee> employees = new List<Employee>();  
+  
+        // You can pass IEnumerable<Employee>,   
+        // although the method expects IEnumerable<Person>.  
+  
+        PrintFullName(employees);  
+  
+    }  
+}  
+```  
+  
 ## <a name="comparing-generic-collections"></a>比较泛型集合  
  下例阐释了 <xref:System.Collections.Generic.IComparer%601> 接口中的逆变支持的益处。 `PersonComparer` 类实现 `IComparer<Person>` 接口。 但可以重用此类来比较 `Employee` 类型的对象序列，因为 `Employee` 继承 `Person`。  
   
-```cs  
+```csharp  
 // Simple hierarchy of classes.  
 public class Person  
 {  
