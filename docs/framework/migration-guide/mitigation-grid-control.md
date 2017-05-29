@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>缓解：网格控件向 *-列分配空间

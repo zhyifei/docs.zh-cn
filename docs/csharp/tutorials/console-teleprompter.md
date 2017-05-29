@@ -54,7 +54,7 @@ namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>读取和回显文件
-要添加的第一项功能是读取文本文件，然后在控制台中显示全部文本。 首先，让我们来添加文本文件。 将此[示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)的 GitHub 存储库中的 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 文件复制到项目目录中。 这将用作应用程序脚本。 如果需要有关如何下载本主题的示例应用的信息，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)主题中的说明。
+要添加的第一项功能是读取文本文件，然后在控制台中显示全部文本。 首先，让我们来添加文本文件。 将此[示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)的 GitHub 存储库中的 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 文件复制到项目目录中。 这将用作应用程序脚本。 如果需要有关如何下载本主题示例应用的信息，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)主题中的说明。
 
 接下来，在 Program 类中添加以下方法（就在 `Main` 方法的下方）：
 

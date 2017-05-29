@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 497f4ea3dfd175248ff733cceb691b2aa0c758e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>使用 Application 日志 (Visual Basic)
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="where-messages-are-logged"></a>记录消息的位置  
  如果程序集没有配置文件，则 `My.Application.Log` 和 `My.Log` 对象会将消息写入应用程序的调试输出（通过 <xref:System.Diagnostics.DefaultTraceListener> 类实现）。 此外，`My.Application.Log` 对象会将消息写入程序集的日志文件（通过 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 类实现），`My.Log` 对象会将消息写入 ASP.NET 网页的输出（通过 <xref:System.Web.WebPageTraceListener> 类实现）。  
   
- 当在调试模式下运行应用程序时，可以在 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 的“输出”****窗口中查看调试输出。 若要打开“输出” **** 窗口中，请单击“调试” **** 菜单项，指向“Windows” ****，然后单击“输出” ****。 在“输出” **** 窗口中，在“显示输出来源” **** 框中选择“调试” **** 。  
+ 当在调试模式下运行应用程序时，可以在 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 的“输出”窗口中查看调试输出。 若要打开“输出”  窗口中，请单击“调试” 菜单项，指向“Windows” ，然后单击“输出” 。 在“输出” 窗口中，在“显示输出来源” 框中选择“调试”。  
   
  默认情况下， `My.Application.Log` 将日志文件写入用户应用程序数据的路径。 可以通过 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 对象的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 属性获取路径。 路径的格式如下：  
   
@@ -66,12 +67,12 @@ ms.lasthandoff: 03/13/2017
   
  C:\Documents and Settings\\`username`\Application Data  
   
- `CompanyName`、 `ProductName`和 `ProductVersion` 的值来自应用程序的程序集信息。 日志文件名称的格式为 *AssemblyName*.log，其中 *AssemblyName* 是程序集的文件名称（不含扩展名）。 如果需要多个日志文件（例如，原始日志不可用或应用程序尝试写入日志时），日志文件名称的格式为 *AssemblyName*-*iteration*.log，其中 `iteration` 为一个正 `Integer`。  
+ `CompanyName`、 `ProductName`和 `ProductVersion` 的值来自应用程序的程序集信息。 日志文件名称的格式为 *AssemblyName*.log，其中 *AssemblyName* 是程序集的文件名称（不含扩展名）。 如果需要多个日志文件（如原始日志不可用或应用程序尝试写入日志时），日志文件名称的格式为 *AssemblyName*-*iteration*.log，其中 `iteration` 为一个正 `Integer`。  
   
- 可以通过添加或更改计算机和应用程序的配置文件来重写默认行为。 有关详细信息，请参阅[演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
+ 可以通过添加或更改计算机和应用程序的配置文件来重写默认行为。 有关详细信息，请参阅 [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
   
 ## <a name="configuring-log-settings"></a>配置日志设置  
- `Log` 对象具有默认的实现，即使没有应用程序配置文件 app.config 也可工作。 若要更改默认设置，必须添加包含新设置的配置文件。 有关详细信息，请参阅[演练：筛选 My.Application.Log 输出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
+ `Log` 对象具有默认的实现，即使没有应用程序配置文件 app.config 也可工作。 若要更改默认设置，必须添加包含新设置的配置文件。 有关更多信息，请参见 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
   
  日志配置部分位于 `<system.diagnostics>` 节点当中，该节点位于 app.config 文件的 `<configuration>` 节点之下。 日志信息在以下几个节点中定义：  
   
@@ -126,6 +127,6 @@ ms.lasthandoff: 03/13/2017
   
 -   **避免拒绝服务。** 如果应用程序将太多的信息写入日志，则可能填满日志或导致难以查找重要的信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [记录来自应用程序的信息](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

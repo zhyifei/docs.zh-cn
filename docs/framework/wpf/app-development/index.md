@@ -17,10 +17,11 @@ caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: aa6ebe6c4ddc9b5cdec267cb2fc114440c189f0c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="application-development"></a>应用程序开发
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/08/2017
   
 -   跟踪 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及使用导航窗口和框架的独立应用程序中的导航。  
   
- 以上功能由通过*应用程序定义*添加到应用程序中的 <xref:System.Windows.Application> 类来实现。  
+ 以上功能由通过*应用程序定义*添加到应用程序的 <xref:System.Windows.Application> 类来实现。  
   
  有关详细信息，请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
   
@@ -87,15 +88,15 @@ ms.lasthandoff: 04/08/2017
   
  <xref:System.Windows.Window> 支持用于创建被称为对话框的特殊窗口类型的功能。 可以创建两种类型的对话框，即模式和无模式对话框。  
   
- 为了方便起见，也为了享受可重用性所带来的益处并在应用程序间实现一致的用户体验，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了三种常用的 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 对话框：<xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog> 和 <xref:System.Windows.Controls.PrintDialog>。  
+ 为了方便起见，也为了享受可重用性所带来的益处，以及在应用程序间实现一致的用户体验，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了三种常用的 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 对话框：<xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog> 和 <xref:System.Windows.Controls.PrintDialog>。  
   
- 消息框是一种特殊类型的对话框，用于向用户显示重要的文本信息并询问简单的“是/否/确定/取消”问题。 可以使用 <xref:System.Windows.MessageBox> 类来创建和显示消息框。  
+ 消息框是一种特殊类型的对话框，用于向用户显示重要的文本信息并询问简单的“是/否/确定/取消”问题。 使用 <xref:System.Windows.MessageBox> 类创建并显示消息框。  
   
  有关详细信息，请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>导航  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持使用页面 (<xref:System.Windows.Controls.Page>) 和超链接 (<xref:System.Windows.Documents.Hyperlink>) 进行 Web 式导航。 导航可以通过多种方式来实现，其中包括：  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持使用页面 (<xref:System.Windows.Controls.Page>) 和超链接 (<xref:System.Windows.Documents.Hyperlink>) 进行Web 式导航。 导航可以通过多种方式来实现，其中包括：  
   
 -   在 Web 浏览器中承载的独立页面。  
   
@@ -117,10 +118,10 @@ ms.lasthandoff: 04/08/2017
   
  有关信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还支持一种被称为结构化导航的特殊导航类型。 结构化导航可用于调用一个或多个页面，这些页面能以结构化的可预测方式返回与调用函数一致的数据。 此功能基于 <xref:System.Windows.Navigation.PageFunction%601> 类；有关该类的进一步描述，请参阅[结构化导航概述](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)。 <xref:System.Windows.Navigation.PageFunction%601> 还可用于简化[导航拓扑概述](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)中所述的复杂导航拓扑的创建。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还支持一种被称为结构化导航的特殊导航类型。 结构化导航可用于调用一个或多个页面，这些页面能以结构化的可预测方式返回与调用函数一致的数据。 此功能将取决于 <xref:System.Windows.Navigation.PageFunction%601> 类；有关该类的进一步描述，请参阅[结构化导航概述](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)。 <xref:System.Windows.Navigation.PageFunction%601> 还可用于简化[导航拓扑概述](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)中所述的复杂导航拓扑的创建。  
   
 <a name="Hosting"></a>   
-## <a name="hosting"></a>Hosting  
+## <a name="hosting"></a>宿主  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以在 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)中均有涵盖。  
   
 <a name="Build_and_Deploy"></a>   
@@ -134,7 +135,7 @@ ms.lasthandoff: 04/08/2017
   
 |标题|描述|  
 |-----------|-----------------|  
-|[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)|概述 <xref:System.Windows.Application> 类，包括管理应用程序生存期、窗口、应用程序资源和导航。|  
+|[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)|简要介绍 <xref:System.Windows.Application> 类，包括管理应用程序生存期、窗口、应用程序资源和导航。|  
 |[WPF 中的窗口](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|详细介绍如何在应用程序中管理窗口，包括如何使用 <xref:System.Windows.Window> 类和对话框。|  
 |[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)|概述如何管理应用程序的各个页面间的导航。|  
 |[承载](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|概述 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。|  

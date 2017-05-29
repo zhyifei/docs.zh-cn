@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 4.6 中的重定目标更改 | Microsoft Docs"
+title: ".NET Framework 4.6 中的重定目标更改 | Microsoft 文档"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,10 +18,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 19ad80233a79a4fdef89550696c1c3d33e14b355
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="retargeting-changes-in-the-net-framework-46"></a>.NET Framework 4.6 中的重定目标更改
@@ -55,14 +56,14 @@ ms.lasthandoff: 04/18/2017
   
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
-|<xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%28System.Web.UI.HtmlTextWriterTag%29?displayProperty=fullName> 与 <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=fullName> 的 `tagKey` 值|为符合 HTML 标准，<xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%28System.Web.UI.HtmlTextWriterTag%29?displayProperty=fullName> 方法现在在 HTML 响应中将 <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=fullName> 呈现为非结束标记。|BR 标记现在会生成一个换行符。 以前，它会生成 2 个换行符。<br /><br /> 依赖于 `<BR>` 标记生成 2 个换行符的应用可以还原以前的行为，方法是通过向具有 <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=fullName> 自变量的 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%28System.Web.UI.HtmlTextWriterTag%29?displayProperty=fullName> 方法添加额外调用。|次要|  
+|具有 <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=fullName> 的 `tagKey` 值的 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%28System.Web.UI.HtmlTextWriterTag%29?displayProperty=fullName>|为符合 HTML 标准，<xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%28System.Web.UI.HtmlTextWriterTag%29?displayProperty=fullName> 方法现在 HTML 响应中将 <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=fullName> 呈现为非结束标记。|BR 标记现在会生成一个换行符。 以前，它会生成 2 个换行符。<br /><br /> 依赖于 `<BR>` 标记来生成 2 个换行符的应用，可以通过向具有 <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=fullName> 自变量的 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag%28System.Web.UI.HtmlTextWriterTag%29?displayProperty=fullName> 方法添加额外调用来还原以前的行为。|次要|  
   
 <a name="Net"></a>   
 ## <a name="networking"></a>网络  
   
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
-|<xref:System.Net.ServicePointManager?displayProperty=fullName> 和 <xref:System.Net.Security.SslStream?displayProperty=fullName>|从面向 .NET Framework 4.6 的应用开始，<xref:System.Net.ServicePointManager?displayProperty=fullName> 和 <xref:System.Net.Security.SslStream?displayProperty=fullName> 类可以使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls1.2。<br /><br /> 面向以前版本的 .NET Framework 的应用即使在 NET Framework 4.6 上运行也不会受到影响。|此更改会影响面向 .NET Framework 4.6 以及使用 SSL 与使用以下任一类型的 HTTPS 服务器或套接字服务器进行对话的任何应用：<xref:System.Net.Http.HttpClient>、<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.Mail.SmtpClient> 和 <xref:System.Net.Security.SslStream>。  有关详细信息，请参阅[缓解：TLS 协议](../../../docs/framework/migration-guide/mitigation-tls-protocols.md)。|次要|  
+|<xref:System.Net.ServicePointManager?displayProperty=fullName> 和 <xref:System.Net.Security.SslStream?displayProperty=fullName>|从面向 .NET Framework 4.6 的应用开始，<xref:System.Net.ServicePointManager?displayProperty=fullName> 和 <xref:System.Net.Security.SslStream?displayProperty=fullName> 类可以使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls 1.2。<br /><br /> 面向以前版本的 .NET Framework 的应用即使在 NET Framework 4.6 上运行也不会受到影响。|此更改会影响面向 .NET Framework 4.6 并使用 SSL 与 HTTPS 服务器或与使用以下任何类型的套接字对话的任何应用：<xref:System.Net.Http.HttpClient>、<xref:System.Net.HttpWebRequest><xref:System.Net.FtpWebRequest>、<xref:System.Net.Mail.SmtpClient> 和 <xref:System.Net.Security.SslStream>。  有关详细信息，请参阅[缓解：TLS 协议](../../../docs/framework/migration-guide/mitigation-tls-protocols.md)。|次要|  
   
 <a name="WCF"></a>   
 ## <a name="windows-communications-foundation-wcf"></a>Windows Communication Foundation (WCF)  
@@ -76,14 +77,14 @@ ms.lasthandoff: 04/18/2017
   
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
-|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName>|从面向 .NET Framework 4.6 的应用开始，<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> 方法可将带有 PNG 帧的图标成功转换为 <xref:System.Drawing.Bitmap> 对象。<br /><br /> 在面向 .NET Framework 4.5.2 及更早版本的应用中，如果 <xref:System.Drawing.Icon> 对象具有 PNG 帧，<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> 方法会引发 <xref:System.ArgumentOutOfRangeException> 异常。|此更改会影响以下应用：重新编译以面向 .NET Framework 4.6 的应用，以及对在 <xref:System.Drawing.Icon> 对象具有 PNG 帧时引发的 <xref:System.ArgumentOutOfRangeException> 异常提供特殊处理的应用。 如果不需要此行为，配置开关可还原以前的行为。 有关详细信息，请参阅[缓解：图标对象中的 PNG 帧](../../../docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md)。|次要|  
+|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName>|从面向 .NET Framework 4.6 的应用开始，<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> 方法成功将带 PNG 帧的图标转换为 <xref:System.Drawing.Bitmap> 对象。<br /><br /> 在面向 .NET Framework 4.5.2 和更早版本的应用中，<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> 方法在 <xref:System.Drawing.Icon> 对象具有 PNG 帧时引发 <xref:System.ArgumentOutOfRangeException> 异常。|此更改会影响以下应用：重新编译为面向 .NET Framework 4.6 的应用，以及对在 <xref:System.Drawing.Icon> 对象具有 PNG 帧时引发的 <xref:System.ArgumentOutOfRangeException> 异常提供特殊处理的应用。 如果不需要此行为，配置开关可还原以前的行为。 有关详细信息，请参阅[缓解：图标对象中的 PNG 帧](../../../docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md)。|次要|  
   
 <a name="WPF"></a>   
 ## <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)  
   
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
-|<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>|在面向 .NET Framework 4.6 和 .NET Framework 4.6.1 的应用中，在 <xref:System.Windows.Threading.Dispatcher> 中对 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 或 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性所做的更改在调度程序操作结束时都会丢失。 同样，在调度程序操作之外对 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 或 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 所做的更改在该操作执行时可能并不会反映出来。|对 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性的更改可能不会在 WPF UI 回叫和 WPF 应用程序的其他代码之间流动。 有关详细信息，请参阅[缓解：区域性和 WPF 应用中的调度程序操作](../../../docs/framework/migration-guide/mitigation-culture-and-dispatcher-operations-in-wpf-apps.md)。|次要|  
+|<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>|在面向 .NET Framework 4.6 和 .NET Framework 4.6.1 的应用中，在 <xref:System.Windows.Threading.Dispatcher> 中执行的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 或 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性更改，会在调度程序操作结束时丢失。 同样，在调度程序操作外对 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 或 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 所做的更改在执行该操作时可能不会反映出来。|对 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性的更改可能不会在 WPF UI 回调和 WPF 应用程序中的其他代码之间流动。 有关详细信息，请参阅[缓解：区域性和 WPF 应用中的调度程序操作](../../../docs/framework/migration-guide/mitigation-culture-and-dispatcher-operations-in-wpf-apps.md)。|次要|  
 |高 DPI 处舍入的布局|边距舍入的方式以及边框和边框内的背景已更改。|WPF 控件的布局可能稍有变化。 有关详细信息，请参阅[缓解：WPF 布局](../../../docs/framework/migration-guide/mitigation-wpf-layout.md)。|次要|  
   
 <a name="XML"></a>   
@@ -92,4 +93,4 @@ ms.lasthandoff: 04/18/2017
 |功能|更改|影响|范围|  
 |-------------|------------|------------|-----------|  
 |XSD 架构验证|从 .NET Framework 4.6 开始，如果使用复合键且有一个键为空，则 XSD 架构验证将检测是否违反唯一约束。|请参阅[缓解：XML 架构验证](../../../docs/framework/migration-guide/mitigation-xml-schema-validation.md)|次要|  
-|<xref:System.Xml.XmlWriter>|对于面向 .NET Framework 4.5.2 或以前的版本的应用程序，使用异常回退处理编写无效的代理项对并不会总是引发异常。<br /><br /> 对于面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用，尝试编写无效的代理项对会引发 <xref:System.ArgumentException> 异常。|重新编译以面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用与编写无效代理项的应用可能在之前没有引发异常时引发异常。|边缘|
+|<xref:System.Xml.XmlWriter>|对于面向 .NET Framework 4.5.2 或以前的版本的应用程序，使用异常回退处理编写无效的代理项对并不会总是引发异常。<br /><br /> 对于面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用程序，尝试编写无效的代理项对会引发 <xref:System.ArgumentException> 异常。|重新编译以面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用与编写无效代理项的应用可能在之前没有引发异常时引发异常。|边缘|
