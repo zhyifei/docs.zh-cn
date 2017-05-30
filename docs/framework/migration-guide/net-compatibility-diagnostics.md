@@ -200,7 +200,7 @@ ms.lasthandoff: 05/22/2017
 |范围|边缘|  
 |版本|4.5|  
 |类型|运行时|  
-|受影响的 API|<xref:System.Xml.Linq.LoadOptions?displayProperty=fullName>|  
+|受影响的 API|<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=fullName>|  
 |分析器|CD0019|  
   
 <a name="diagnostic20"></a>   
