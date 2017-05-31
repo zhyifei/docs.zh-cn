@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>示例  
  将调试信息放在输出文件 `app.pdb`：  
   
-```  
+```console  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   
