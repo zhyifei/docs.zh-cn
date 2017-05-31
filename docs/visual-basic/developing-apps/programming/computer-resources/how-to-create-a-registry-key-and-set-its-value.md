@@ -77,26 +77,26 @@ ms.lasthandoff: 05/22/2017
   
  将数据写入用户文件夹 (<xref:Microsoft.Win32.Registry.CurrentUser>) 比写入本地计算机 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更安全。  
   
- 创建注册表值时，需要确定该值已存在时应执行的操作。 另一进程（可能是恶意进程）可能已创建了该值，并拥有对该值的访问权。 将数据放入注册表值后，其他进程即可使用这些数据。 若要避免此情况，请使用 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 方法。 如果项不存在，则该方法返回 `Nothing`。  
+ 创建注册表值时，需要确定该值已存在时应执行的操作。 另一进程（可能是恶意进程）可能已创建了该值，并拥有对该值的访问权。 将数据放入注册表值后，其他进程即可使用这些数据。 若要防止出现这种情况，请使用 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 方法。 如果项不存在，则该方法返回 `Nothing`。  
   
  即使注册表项受 ACL（访问控制列表）保护，在注册表中以纯文本形式存储机密信息（例如密码）也不安全。  
   
  以下情况可能会导致异常：  
   
--   项的名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   用户无权创建注册表项 (<xref:System.Security.SecurityException>)。  
+-   用户没有创建注册表项的权限 (<xref:System.Security.SecurityException>)。  
   
--   项名称超过 255 字符限制 (<xref:System.ArgumentException>)。  
+-   项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。  
   
--   注册表项已关闭 (<xref:System.IO.IOException>)。  
+-   项已关闭 (<xref:System.IO.IOException>)。  
   
--   注册表项是只读的 (<xref:System.UnauthorizedAccessException>)。  
+-   注册表项为只读 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要运行此进程，程序集需要由 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权级别。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。  
+ 若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
  <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   

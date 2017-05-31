@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>如何：在 Visual Basic 中查找具有特定模式的子目录
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> 方法返回一个只读字符串集合，表示某个目录中子目录的路径名。 可以使用 `wildCards` 参数来指定特定模式。 如果要在搜索中包含子目录的内容，请将 `searchType` 参数设置为 `SearchOption.SearchAllSubDirectories`。  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> 方法返回一个只读字符串集合，这些字符串表示目录中子目录的路径名称。 可以使用 `wildCards` 参数来指定特定模式。 如果要在搜索中包含子目录的内容，请将 `searchType` 参数设置为 `SearchOption.SearchAllSubDirectories`。  
   
  如果没有找到与指定模式匹配的目录，则返回一个空集合。  
   
@@ -52,23 +52,23 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（以 \\\\.\\ 开头）(<xref:System.ArgumentException>)。  
+-   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为路径为 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   有一个或多个指定通配符是 `Nothing`、空字符串，或只包含空格 (<xref:System.ArgumentNullException>)。  
+-   有一个或多个指定通配符是 `Nothing`、空字符串，或仅为空格 (<xref:System.ArgumentNullException>)。  
   
 -   `directory` 不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   `directory` 指向现有文件 (<xref:System.IO.IOException>)。  
+-   `directory` 指向某个现有文件 (<xref:System.IO.IOException>)。  
   
--   路径超出了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+-   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的某个文件或文件夹名称包含冒号 (:) 或格式无效 (<xref:System.NotSupportedException>)。  
+-   路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
   
--   用户缺少必要的权限来查看路径 (<xref:System.Security.SecurityException>)。  
+-   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
--   用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。  
+-   该用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>   

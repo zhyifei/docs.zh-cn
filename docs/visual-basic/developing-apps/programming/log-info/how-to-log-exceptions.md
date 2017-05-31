@@ -41,7 +41,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="how-to-log-exceptions-in-visual-basic"></a>如何：在 Visual Basic 中记录异常
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生异常的信息。 这些示例演示如何使用 `My.Application.Log.WriteException` 方法来记录显式捕获的异常和未处理的异常。  
   
- 若要记录跟踪信息，请使用 `My.Application.Log.WriteEntry` 方法。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ 若要记录跟踪信息，请使用 `My.Application.Log.WriteEntry` 方法。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>。  
   
 ### <a name="to-log-a-handled-exception"></a>记录已处理的异常  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  将可能生成异常的代码置于 `Try` 块中。  
   
-     取消注释 `Dim` 和 `MsgBox` 行以引发 <xref:System.NullReferenceException> 异常。  
+     取消注释 `Dim` 和 `MsgBox` 行，导致 <xref:System.NullReferenceException> 异常。  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
@@ -69,19 +69,19 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-log-an-unhandled-exception"></a>记录未处理的异常  
   
-1.  在 “解决方案资源管理器”中选择一个项目。 在 “项目” 菜单上，选择 “属性”。  
+1.  在 “解决方案资源管理器”中选择一个项目。**** 在 “项目” 菜单上，选择 “属性”。****  
   
-2.  单击“应用程序” 选项卡。  
+2.  单击“应用程序” 选项卡。****  
   
-3.  单击“查看应用程序事件” 按钮，打开“代码编辑器”。  
+3.  单击“查看应用程序事件” 按钮，打开“代码编辑器”。****  
   
      此时将打开 ApplicationEvents.vb 文件。  
   
-4.  在“代码编辑器”中打开 ApplicationEvents.vb 文件。 在“常规”  菜单上，选择“MyApplication 事件”。  
+4.  在“代码编辑器”中打开 ApplicationEvents.vb 文件。 在“常规”  菜单上，选择“MyApplication 事件”。****  
   
 5.  在“声明”菜单上，选择“UnhandledException”。  
   
-     在主应用程序运行之前，应用程序引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。  
+     在主应用程序运行之前，应用程序将引发 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。  
   
 6.  将 `My.Application.Log.WriteException` 方法添加到 `UnhandledException` 事件处理程序。  
   

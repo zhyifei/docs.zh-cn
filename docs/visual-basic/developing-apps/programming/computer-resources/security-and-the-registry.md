@@ -48,7 +48,7 @@ ms.lasthandoff: 05/22/2017
   
  不应将注册表变量存储在某些内存位置，在这些位置，不具有 <xref:System.Security.Permissions.RegistryPermission> 的代码可访问这些变量。 同样，授予权限时，授予顺利完成操作所需的最小特权。  
   
- 注册表权限访问值由 <xref:System.Security.Permissions.RegistryPermissionAccess> 枚举定义。 下表详细说明了其成员。  
+ 通过 <xref:System.Security.Permissions.RegistryPermissionAccess> 枚举定义注册表权限访问值。 下表详细说明了其成员。  
   
 |值|对注册表变量的访问|  
 |-----------|----------------------------------|  

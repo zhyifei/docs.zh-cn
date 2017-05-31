@@ -64,25 +64,25 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（以 \\\\.\\ 开头）(<xref:System.ArgumentException>)。  
+-   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为路径为 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   路径超出了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+-   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的某个文件或文件夹名称包含冒号 (:) 或格式无效 (<xref:System.NotSupportedException>)。  
+-   路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
   
--   文件正在使用中 (<xref:System.IO.IOException>)。  
+-   该文件正在使用中 (<xref:System.IO.IOException>)。  
   
--   用户缺少必要的权限来查看路径 (<xref:System.Security.SecurityException>)。  
+-   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
--   文件不存在 (<xref:System.IO.FileNotFoundException>)。  
+-   该文件不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   用户无权删除文件，或文件是只读的 (<xref:System.UnauthorizedAccessException>)。  
+-   用户无权删除文件，或文件为只读 (<xref:System.UnauthorizedAccessException>)。  
   
--   在部分信任的情况下，用户没有足够的权限 (<xref:System.Security.SecurityException>)。  
+-   存在部分信任的情况，在此情况下用户没有足够的权限 (<xref:System.Security.SecurityException>)。  
   
--   用户取消了操作且 `onUserCancel` 已设置为 `ThrowException` (<xref:System.OperationCanceledException>)。  
+-   用户取消了该操作，并且 `onUserCancel` 设置为 `ThrowException` (<xref:System.OperationCanceledException>)。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   

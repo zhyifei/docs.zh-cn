@@ -54,17 +54,17 @@ ms.lasthandoff: 05/22/2017
   
 -   目录名称格式不正确。 例如，它包含非法字符或仅为空白 (<xref:System.ArgumentException>)。  
   
--   要创建的目录的父目录是只读的 (<xref:System.IO.IOException>)。  
+-   要创建的目录的父目录为只读 (<xref:System.IO.IOException>)。  
   
 -   目录名称为 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   目录名称太长 (<xref:System.IO.PathTooLongException>)。  
+-   目录名称过长 (<xref:System.IO.PathTooLongException>)。  
   
--   目录是一个冒号“:”(<xref:System.NotSupportedException>)。  
+-   目录名称是一个冒号“:”(<xref:System.NotSupportedException>)。  
   
 -   用户无权创建目录 (<xref:System.UnauthorizedAccessException>)。  
   
--   用户处于部分信任的情况，权限不足 (<xref:System.Security.SecurityException>)。  
+-   用户在部分信任情况下缺少权限 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   
