@@ -18,47 +18,48 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 64f5f4cb54990c3090ec5e755bbab6de34d40959
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 24a8d7b017160d5cb28b7478200b8623a1dc4818
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定安装了哪些 .NET Framework 版本
-用户可在他们的计算机上安装和运行 .NET Framework 的多个版本。 当你开发或部署应用时，你可能需要知道用户的计算机上安装了哪些 .NET Framework 版本。 请注意，.NET Framework 由两个采用不同版本的主要组件构成：
-
-- 一组程序集，它们是为应用提供功能的类型与资源的集合。 .NET Framework 和程序集使用相同的版本号。
-
-- 公共语言运行时 (CLR)，可管理并执行应用的代码。 CLR 由其自己的版本号标识（请参阅[版本和依赖关系](~/docs/framework/migration-guide/versions-and-dependencies.md)）。
-
- 若要获取计算机上安装的 .NET Framework 版本的准确列表，你可以在代码中查看注册表或查询注册表：
-
- [查看注册表（版本 1 - 4）](#net_a)
- [查看注册表（版本 4.5 和更高版本）](#net_b)
- [使用代码查询注册表（版本 1 - 4）](#net_c)
- [使用代码查询注册表（版本 4.5 和更高版本）](#net_d)
-
- 若要查找 CLR 版本，你可以使用工具或代码：
-
- [使用 Clrver 工具](#clr_a)
- [使用代码查询 System.Environment 类](#clr_b)
-
- 有关检测每个版本 .NET Framework 所安装更新的信息，请参阅[如何：确定安装了哪些 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 有关安装 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。
-
-<a name="net_a"></a> 
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>通过查看注册表来查找 .NET Framework 版本 (.NET Framework 1-4)
-
-1. 在“开始”菜单上，选择“运行”。
-
-2. 在“打开”框中，输入“regedit.exe”。
-
-     你必须具有管理凭据才能运行 regedit.exe。
-
-3. 在注册表编辑器中，打开以下子项：
-
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`
-
-     安装的版本将在 NDP 子项的下方列出。 版本号存储在“版本”项中。 对于 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，“版本”项位于客户端或完整子项下（在 NDP 下），或在这两个子项下。
+用户可在他们的计算机上安装和运行 .NET Framework 的多个版本。 当你开发或部署应用时，你可能需要知道用户的计算机上安装了哪些 .NET Framework 版本。 请注意，.NET Framework 由两个采用不同版本的主要组件构成：  
+  
+-   一组程序集，它们是为应用提供功能的类型与资源的集合。 .NET Framework 和程序集使用相同的版本号。  
+  
+-   公共语言运行时 (CLR)，可管理并执行应用的代码。 CLR 由其自己的版本号标识（请参阅[版本和依赖关系](~/docs/framework/migration-guide/versions-and-dependencies.md)）。  
+  
+ 若要获取计算机上安装的 .NET Framework 版本的准确列表，你可以在代码中查看注册表或查询注册表：  
+  
+ [查看注册表（版本 1-4）](#net_a)  
+ [查看注册表（版本 4.5 和更高版本）](#net_b)  
+ [使用代码查询注册表（版本 1-4）](#net_c)  
+ [使用代码查询注册表（版本 4.5 和更高版本）](#net_d)  
+  
+ 若要查找 CLR 版本，你可以使用工具或代码：  
+  
+ [使用 Clrver 工具](#clr_a)  
+ [使用代码查询 System.Environment 类](#clr_b)  
+  
+ 有关检测每个版本 .NET Framework 所安装更新的信息，请参阅[如何：确定安装了哪些 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 若要了解如何安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+  
+<a name="net_a"></a>   
+#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>通过查看注册表来查找 .NET Framework 版本 (.NET Framework 1-4)  
+  
+1.  在“开始”菜单上，选择“运行”。  
+  
+2.  在“打开”框中，输入“regedit.exe”。  
+  
+     你必须具有管理凭据才能运行 regedit.exe。  
+  
+3.  在注册表编辑器中，打开以下子项：  
+  
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`  
+  
+     安装的版本将在 NDP 子项的下方列出。 版本号存储在“版本”项中。 对于 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，“版本”项位于客户端或完整子项下（在 NDP 下），或在这两个子项下。  
+  
 
     > [!NOTE]
     > 注册表中的“NET Framework Setup”文件夹不会以句点开头。
@@ -108,8 +109,7 @@ ms.lasthandoff: 05/04/2017
     > [!NOTE]
     > 此代码不演示如何检测 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本。 检查 `Release` DWORD 以检测这些版本，如上一节所述。 有关检测 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本的代码，请参阅本文的下一节。
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
      该示例生成类似下面内容的输出：
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/04/2017
 <a name="net_d"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>通过在代码中查询注册表来查找 .NET Framework 版本（.NET Framework 4.5 和更高版本）
 
-1. `Release` DWORD 的存在表明该计算机上已安装 .NET Framework 4.5 或更高版本。 关键字的值表示已安装的版本。 要检查此关键字，可以使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> 类的 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> 和 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 方法访问 Windows 注册表中 HKEY_LOCAL_MACHINE 下的 Software\Microsoft\NET Framework Setup\NDP\v4\Full 子项。
+1. `Release` DWORD 的存在表明该计算机上已安装 .NET Framework 4.5 或更高版本。 关键字的值表示已安装的版本。 要检查此关键字，请使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> 类的 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> 和 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 方法访问 Windows 注册表中 HKEY_LOCAL_MACHINE 下的 Software\Microsoft\NET Framework Setup\NDP\v4\Full 子项。
 
 2. 检查 `Release` 关键字的值以确定安装的版本。 为了向前兼容，你可以检查是否有一个值大于或等于表中所列的值。 此处是 .NET Framework 版本及相关联的 `Release` 关键字。
 
@@ -146,8 +146,7 @@ ms.lasthandoff: 05/04/2017
 
      以下示例检查注册表中的 `Release` 值来确定是否已安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本的 .NET Framework。
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
-     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]   [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
      此示例遵循版本检查的建议做法：
 
@@ -173,17 +172,16 @@ ms.lasthandoff: 05/04/2017
 <a name="clr_b"></a> 
 #### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>通过在代码中查询 Environment 类来查找当前运行时版本
 
-- 查询 <xref:System.Environment.Version%2A?displayProperty=fullName> 属性以检索 <xref:System.Version> 对象，该对象可识别当前正在执行代码的运行时版本。 可以使用 <xref:System.Version.Major%2A?displayProperty=fullName> 属性获取主版本标识符（例如，版本 4.0 的“4”），使用 <xref:System.Version.Minor%2A?displayProperty=fullName> 属性获取次版本标识符（例如，版本 4.0 的“0”）或使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法获取完整版本字符串（例如，以下代码示例中的“4.0.30319.18010”）。 此属性返回一个值，该值反映当前正在执行代码的运行时的版本；它不返回程序集版本或可能已在计算机上安装的运行时的其他版本。
+- 查询 <xref:System.Environment.Version%2A?displayProperty=fullName> 属性，以检索标识当前正在执行代码的运行时版本的 <xref:System.Version> 对象。 你可以使用 <xref:System.Version.Major%2A?displayProperty=fullName> 属性获取主版本标识符（例如，4.0 版的“4”），使用 <xref:System.Version.Minor%2A?displayProperty=fullName> 属性获取次版本标识符（例如，4.0 版的“0”），或使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法获取完整版本字符串（例如“4.0.30319.18010”，如下面的代码中所示）。 此属性返回一个值，该值反映当前正在执行代码的运行时的版本；它不返回程序集版本或可能已在计算机上安装的运行时的其他版本。
 
-     对于 .NET Framework 版本 4、4.5、4.5.1 和 4.5.2，<xref:System.Environment.Version%2A?displayProperty=fullName> 属性返回字符串表示格式为 `4.0.30319.xxxxx` 的 <xref:System.Version> 对象。 对于 .NET Framework 4.6 及更高版本，形式为 `4.0.30319.42000`。
+     对于 .NET Framework 版本 4、4.5、4.5.1 和 4.5.2，<xref:System.Environment.Version%2A?displayProperty=fullName> 属性返回字符串表现形式具有窗体 `4.0.30319.xxxxx` 的 <xref:System.Version> 对象。 对于 .NET Framework 4.6 及更高版本，形式为 `4.0.30319.42000`。
 
     > [!IMPORTANT]
-    > 对于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和更高版本，不建议使用 <xref:System.Environment.Version%2A?displayProperty=fullName> 属性来检测运行时版本。 相反，我们建议查询注册表，如本文前面[通过用代码查询注册表来查找 .NET Framework 版本（.NET Framework 4.5 及更高版本）](#net_d)一节所述。
+    > 对于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和更高版本，不建议使用 <xref:System.Environment.Version%2A?displayProperty=fullName> 属性来检测运行时的版本。 相反，我们建议查询注册表，如本文前面[通过用代码查询注册表来查找 .NET Framework 版本（.NET Framework 4.5 及更高版本）](#net_d)一节所述。
 
-     下面是查询运行时版本信息的 <xref:System.Environment.Version%2A?displayProperty=fullName> 属性的一个示例：
+     以下是在 <xref:System.Environment.Version%2A?displayProperty=fullName> 属性中查询运行时版本信息的示例：
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
      该示例生成类似下面内容的输出：
 
@@ -193,5 +191,5 @@ ms.lasthandoff: 05/04/2017
 
 ## <a name="see-also"></a>另请参阅
  [如何：确定安装了哪些 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
- [安装指南](../../../docs/framework/install/guide-for-developers.md)   
+ [安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
  [版本和依赖关系](~/docs/framework/migration-guide/versions-and-dependencies.md)

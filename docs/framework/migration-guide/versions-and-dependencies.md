@@ -17,25 +17,25 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: c51d905ab1b2dc6ca923463536ecdc19735d7643
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: ec15e14b299b5bed46d8d35a8c60e5f73a1d5237
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
   
 > [!NOTE]
->  有关下载和安装 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。  
+>  若要了解如何下载和安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
  下表总结了 .NET Framework 版本历史，并将每个版本与 Visual Studio、Windows 和 Windows Server 相关联。 请注意，Visual Studio 提供了多目标功能，因此你将不会限于仅使用列出的 .NET Framework 版本。  
   
  每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 CLR 由其自己的版本号标识。 虽然 CLR 版本并不总是递增的，但 .NET Framework 版本号在每次发布时都会递增。 例如，.NET Framework 4、4.5 和更高版本包含 CLR 4，而 .NET Framework 2.0、3.0 和 3.5 包含 CLR 2.0。 （没有版本 3 的 CLR。）  
   
- 有关受支持操作系统的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关下载，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 有关确定计算机上已安装的 .NET Framework 的版本信息，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
+ 有关受支持操作系统的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关下载，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 有关确定计算机上已安装的 .NET Framework 的版本信息，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
   
- 在表中，带有标记 ✓ 的操作系统版本上安装的 .NET Framework 版本必须在[控制面板](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)中启用（适用于 Windows）或通过服务器管理器启用（适用于 Windows Server），该标记显示在“包含在/可安装在 Windows 中”和“包含在/可安装在 Windows Server 中”列。  
+ 在表中，带有标记 ✓ 的操作系统版本上安装的 .NET Framework 版本必须在[控制面板](../../../docs/framework/install/dotnet-35-windows-10.md)中启用（适用于 Windows）或通过服务器管理器启用（适用于 Windows Server），该标记显示在“包含在/可安装在 Windows 中”和“包含在/可安装在 Windows Server 中”列。  
   
 |.NET Framework 版本|CLR 版本|功能|包含在 Visual Studio 版本中|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
@@ -64,12 +64,12 @@ ms.lasthandoff: 05/15/2017
   
      此处使用的 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 和 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 仅作为示例。 此原则适用于任意满足以下条件的应用：应用所面向的 .NET framework 版本高于运行该应用的系统上的 .NET framework 版本。  
   
- .NET Framework 中的某些更改可能需要更改应用代码；请先参阅[应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)，然后再使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本运行现有应用。 有关安装当前版本的详细信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 有关对 .NET Framework 的支持的信息，请参阅 Microsoft 支持网站上的 [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)。  
+ .NET Framework 中的某些更改可能需要更改应用代码；请先参阅[应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)，然后再使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更高版本运行现有应用。 若要了解如何安装当前版本，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 有关对 .NET Framework 的支持的信息，请参阅 Microsoft 支持网站上的 [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)。  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>以针对早期版本的应用程序为目标并运行这些应用程序  
  .NET Framework 版本 2.0、3.0 和 3.5 是使用同一 CLR 版本 (CLR 2.0) 生成的。 这些版本表示单个安装的连续层。 每个版本将基于早期版本以增量方式生成。 无法在计算机上并行运行版本 2.0、3.0 和 3.5。 在安装 3.5 版时，你将自动获得 2.0 和 3.0 层，并且为版本 2.0、3.0 和 3.5 生成的应用程序均可在 3.5 版上运行。 但是，.NET Framework 4 会结束此分层方法。 从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行 CLR 的多个版本。 有关详细信息，请参阅[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
   
- 此外，如果你的应用程序面向 2.0、3.0 或 3.5 版，你的用户可能需要先在 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win81](../../../includes/win81-md.md)]计算机上启用 .NET Framework 3.5，然后才能运行应用程序。 有关详细信息，请参阅[在 Windows 8 及更高版本上安装 .NET Framework 3.5](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)。  
+ 此外，如果你的应用程序面向 2.0、3.0 或 3.5 版，你的用户可能需要先在 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win81](../../../includes/win81-md.md)]计算机上启用 .NET Framework 3.5，然后才能运行应用程序。 有关详细信息，请参阅[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
   
@@ -81,8 +81,9 @@ ms.lasthandoff: 05/15/2017
   
 -   有关确定计算机上安装了哪些版本或更新的信息，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)和[如何：确定安装了哪些 .NET Framework 更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   
- [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)   
- [疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+## <a name="see-also"></a>请参阅
+
+[版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   
+[Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 

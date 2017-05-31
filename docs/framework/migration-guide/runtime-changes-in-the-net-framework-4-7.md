@@ -41,13 +41,11 @@ ms.lasthandoff: 05/22/2017
 
 ## <a name="a-namewpf--windows-presentation-foundation-wpf"></a><a name="WPF" />Windows Presentation Foundation (WPF)
 
-<xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)>
-
 | 功能 | 更改 | 影响 | 范围 |
 |---|---|---|---|
-| <xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView%2A> 方法 | 在 .NET Framework 4.6.2 中，当启用列虚拟化但尚未确定列宽时，<xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView%2A> 方法以异步方式执行。 如果在异步操作完成之前删除列，可能会导致 <xref:System.ArgumentOutOfRangeException> 抛出。<br/></br>自 .NET Framework 4.7 起，此应用场景再也不会导致异常抛出。 | 此更改提高了方法的可靠性。 | 边缘 | 
-|<xref:System.Windows.Controls.Ribbon.RibbonGroup> 背景 | 在 .NET Framework 4.6.2 及更低版本中，本地化版本上的 <xref:System.Windows.Controls.Ribbon.RibbonGroup> 背景是使用透明画笔绘制，导致 UI 体验变得糟糕。 在 .NET Framework 4.7 中，WPF 更新了 <xref:System.Windows.Controls.Ribbon.RibbonGroup> 控件的本地化资源，这将确保选择正确的画笔。 | 若要充分利用新行为，请升级到 .NET Framework 4.7。 | 边缘 |
-| WPF 拼写检查器 | 自 .NET Framework 4.6.1 起，WPF 应用程序中的拼写检查器在应用程序关闭期间偶尔会抛出 <xref:System.ObjectDisposedException>。 <br/><br/>在 .NET Framework 4.7 中，运行时对此异常进行了妥善处理，因此可确保再也不会对应用程序造成负面影响。 应注意，在调试器控制下运行的应用程序中会继续观察到偶尔抛出的最可能异常。  | 若要充分利用新行为，请升级到 .NET Framework 4.7。   | 边缘 |
+| <xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView%2A> 方法 | 在 .NET Framework 4.6.2 中，当启用列虚拟化但尚未确定列宽时，<xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView%2A> 方法以异步方式执行。 如果在异步操作完成之前删除列，可能会出现 <xref:System.ArgumentOutOfRangeException>。<br/></br>自 .NET Framework 4.7 起，此应用场景再也不会导致异常抛出。 | 此更改提高了方法的可靠性。 | 边缘 | 
+|<xref:System.Windows.Controls.Ribbon.RibbonGroup> 背景 | 在 .NET Framework 4.6.2 及更早版本中，本地化版本上的 <xref:System.Windows.Controls.Ribbon.RibbonGroup> 背景是使用透明画笔绘制，导致 UI 体验变得糟糕。 在 .NET Framework 4.7 中，WPF 更新了 <xref:System.Windows.Controls.Ribbon.RibbonGroup> 控件的本地化资源，这将确保选择正确的画笔。 | 若要充分利用新行为，请升级到 .NET Framework 4.7。 | 边缘 |
+| WPF 拼写检查器 | 自 .NET Framework 4.6.1 起，WPF 应用程序中的拼写检查器在应用程序关闭期间偶尔会引发 <xref:System.ObjectDisposedException>。 <br/><br/>在 .NET Framework 4.7 中，运行时对此异常进行了妥善处理，因此可确保再也不会对应用程序造成负面影响。 应注意，在调试器控制下运行的应用程序中会继续观察到偶尔抛出的最可能异常。  | 若要充分利用新行为，请升级到 .NET Framework 4.7。   | 边缘 |
 
 ## <a name="see-also"></a>请参阅
 
