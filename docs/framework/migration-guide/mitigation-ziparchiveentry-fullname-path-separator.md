@@ -41,7 +41,7 @@ ms.lasthandoff: 05/22/2017
 ## <a name="mitigation"></a>缓解操作  
  如果不需要此行为，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加配置设置，从而选择禁用此行为。 下面展示了 `<runtime>` 部分和选择禁用此行为的开关。  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=true" />  
 </runtime>  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/22/2017
   
  此外，对于定位旧版 .NET Framework，但在 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更高版本上运行的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加配置设置，从而选择启用此行为。 下面展示了 `<runtime>` 部分和选择启用此行为的开关。  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=false" />  
 </runtime>  

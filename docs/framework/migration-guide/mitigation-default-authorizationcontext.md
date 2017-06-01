@@ -14,9 +14,10 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: d2cffc531efc0f0be841956d3a09e1ab253d8fbd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/18/2017
   
 -   将下面的行添加到 app.config 文件的 `<appSettings>` 部分：  
   
-    ```  
+    ```xml  
     <add key="appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext" value="true" />  
     ```  
   

@@ -59,7 +59,7 @@ ms.lasthandoff: 04/18/2017
   
 2.  在应用程序配置文件中添加如下 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素：  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

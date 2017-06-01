@@ -634,13 +634,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  下面的代码示例演示使用 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中包含的针对 ECDSA X509 证书的新支持来为字节流生成签名是多么容易。
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  这与在 .NET Framework 4.6 中生成签名所需的代码形成了鲜明对比。
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -743,7 +741,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          异步模型绑定由 `aspnet:EnableAsyncModelBinding` 配置设置控制。
 
-        ```
+        ```xml
         <appSettings>
            <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
         </appSettings>
@@ -776,7 +774,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          .NET Framework 4.5 引入了[随机字符串哈希算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 但是，由于某些 ASP.NET 功能依赖于稳定的哈希代码，因此 ASP.NET 不支持该算法。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，现在支持随机字符串哈希算法。 若要启用此功能，请使用 `aspnet:UseRandomizedStringHashAlgorithm` 配置设置。
 
-        ```
+        ```xml
         <appSettings>
            <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
         </appSettings>
@@ -832,13 +830,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
         - RSA API 的增强功能，常见操作不再需要转换。 例如，使用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 对象加密数据需要类似以前版本的 .NET Framework 中的以下代码。
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              可采用如下方式重写在 .NET Framework 4.6 中使用新加密 API 的代码以避免转换。
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **支持将日期和时间与 UNIX 时间相互转换**
 
@@ -928,7 +924,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，WPF 中的 HDPI 支持现在更好。 已对布局舍入进行了更改，以减少带边框的控件中的剪切实例。 默认情况下，仅当你的 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 设置为 .NET 4.6 时才启用此功能。  面向早期版本的 Framework 但在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 上运行的应用程序可以通过将下行添加到 app.config 文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分来选择加入该新行为。
 
-        ```
+        ```xml
         <AppContextSwitchOverrides
         value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
         />
@@ -936,7 +932,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          跨越具有不同 DPI 设置（多 DPI 设置）的多个监视器的 WPF 窗口现在完全呈现，且没有涂黑区域。 可以通过将下面的行添加到 app.config 文件的 `<appSettings>` 部分来选择退出此行为，以禁用此新行为：
 
-        ```
+        ```xml
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
@@ -956,7 +952,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          将 NetTcp 用于传输安全和客户端身份验证时，除了 SSL 3.0 和 TLS 1.0，WCF 现在还支持 SSL 版本 TLS 1.1 和 TLS 1.2。 现在可选择要使用的协议，或禁用旧的次要安全协议。 可以通过设置 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 属性或通过将以下内容添加到配置文件来完成此操作。
 
-        ```
+        ```xml
         <netTcpBinding>
            <binding>
               <security mode= "None|Transport|Message|TransportWithMessageCredential" >
@@ -981,7 +977,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
              用户还可以启用一种功能，以确保使用由不同通道工厂所创建通道发送的消息将使用不同的基础 HTTP 连接。 若要启用此功能，用户必须将以下 `appSetting` 设置为 `true`：
 
-            ```
+            ```xml
             <appSettings>
                <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
             </appSettings>
@@ -991,7 +987,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      现在可以指定当请求超时之前存在某个未完成的“非协议”书签时，工作流服务针对无序操作请求将保持的秒数。 “非协议”书签是不与未完成的“接收”活动相关的书签。 某些活动会在其实现内创建非协议书签，因此非协议书签的存在可能不太明显。 此类书签包括“状态”和“选取”。 因此，如果你拥有使用状态机实现的工作流服务，或包含“选取”活动的工作流服务，你将很可能具有非协议书签。 通过将如下所示的行添加到 app.config 文件的 `appSettings` 部分来指定时间间隔：
 
-    ```
+    ```xml
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
     ```
 
@@ -1009,7 +1005,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      你现在可以包含事务的分布式事务标识符，该事务导致了引发派生自 <xref:System.Transactions.TransactionException> 的异常。 通过将以下键添加到 app.config 文件的 `appSettings` 部分来完成此操作：
 
-    ```
+    ```xml
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
     ```
 
@@ -1041,7 +1037,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      这是一项可以选择使用的功能。 若要启用它，在应用程序配置 (app.config) 文件中将 `EnableWindowsFormsHighDpiAutoResizing` 元素设置为 `true`：
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1080,7 +1076,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      这是一项可以选择使用的功能。 若要启用它，在应用程序配置 (app.config) 文件中将 `EnableWindowsFormsHighDpiAutoResizing` 元素设置为 `true`：
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1170,7 +1166,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      若要启用此功能，请将新 \<appSettings> 元素添加到配置文件 (app.config) 并将 `EnableWindowsFormsHighDpiAutoResizing` 元素设置为 `true`：
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>

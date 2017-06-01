@@ -44,7 +44,7 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>添加和配置文件日志侦听器  
   
-1.  在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。****  
+1.  在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
   
      \- 或 -  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/22/2017
   
     1.  在 **“项目”** 菜单上选择 **“添加新项”**。  
   
-    2.  在“添加新项” 对话框中，选择“应用程序配置文件”。****  
+    2.  在“添加新项” 对话框中，选择“应用程序配置文件”。  
   
     3.  单击 **“添加”**。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  将此元素添加到该 `<listeners>` 部分：  
   
-    ```  
+    ```xml  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  将此元素添加到该 `<sharedListeners>` 部分：  
   
-    ```  
+    ```xml  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/22/2017
      将 `customlocation` 属性的值更改为日志目录。  
   
     > [!NOTE]
-    >  若要设置侦听器属性的值，请使用与该属性具有相同名称的特性，名称中的所有字母都为小写。 例如，`location` 和 `customlocation` 属性设置 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 属性的值。  
+    >  若要设置侦听器属性的值，请使用与该属性具有相同名称的特性，名称中的所有字母都为小写。 例如，`location` 和 `customlocation` 特性设置 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 属性的值。  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>将事件信息写入文件日志  
   

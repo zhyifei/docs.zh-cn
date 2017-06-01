@@ -32,7 +32,7 @@ ms.lasthandoff: 04/18/2017
   
 -   可以将应用程序的目标重定为在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 下运行。 若要重定目标，必须在应用程序配置文件中添加允许应用程序在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 控制下运行的 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 此配置文件采用以下形式：  
   
-    ```  
+    ```xml  
     <configuration>   
        <startup>  
           <supportedRuntime version="v4.0"/>  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="breaking-changes"></a>重大更改  
  发生重大更改时，解决方法可能对重定目标的应用程序和重新编译的应用程序都可用，这取决于具体的更改。 在某些情况下，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素中添加子元素，从而还原旧行为。 例如，下面的配置文件将还原 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 中使用的字符串排序和比较行为，可以将该文件与重定目标的应用程序或重新编译的应用程序一起使用。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <CompatSortNLSVersion enabled="4096"/>  
