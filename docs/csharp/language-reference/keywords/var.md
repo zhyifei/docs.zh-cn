@@ -1,39 +1,59 @@
 ---
-title: "var（C# 参考） | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "var"
-  - "var_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "var 关键字 [C#]"
+title: "var（C# 参考）| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- var
+- var_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
+ms.openlocfilehash: 90373937c309dbe4d888b7a2ec1b8b94a038e036
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/25/2017
+
 ---
-# var（C# 参考）
-从 Visual C\# 3.0 开始，在方法范围中声明的变量可以具有隐式类型 `var`。  隐式类型的本地变量是强类型变量（就好像您已经声明该类型一样），但由编译器确定类型。  下面的两个 `i` 声明在功能上是等效的：  
+# <a name="var-c-reference"></a>var（C# 参考）
+从 Visual C# 3.0 开始，在方法范围内声明的变量可以具有隐式“类型”`var`。 隐式类型本地变量为强类型，就像用户已经自行声明该类型，但编译器决定类型一样。 `i` 的以下两个声明在功能上是等效的：  
   
 ```  
 var i = 10; // implicitly typed  
 int i = 10; //explicitly typed  
 ```  
   
- 有关更多信息，请参见[隐式类型的局部变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和 [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。  
+ 有关详细信息，请参阅[隐式类型的局部变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和 [LINQ 查询操作中的类型关系](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。  
   
-## 示例  
- 下面的示例演示了两个查询表达式。  在第一个表达式中，允许但不需要使用 `var`，因为可以将查询结果的类型显式声明为 `IEnumerable<string>`。  但是，在第二个表达式中必须使用 `var`，因为结果是一个匿名类型集合，而该类型的名称只有编译器本身可以访问。  请注意，在第二个示例中，`foreach` 迭代变量 `item` 也必须转换为隐式类型。  
+## <a name="example"></a>示例  
+ 下面的示例演示两个查询表达式。 在第一个表达式中，`var` 的使用是允许的，但不是必需的，因为查询结果的类型可以明确表述为 `IEnumerable<string>`。 但是，在第二个表达式中，必须使用 `var`，因为结果是匿名类型的集合，并且该类型的名称只有编译器本身才可访问。 请注意，在示例 #2 中，`foreach` 迭代变量 `item` 必须也为隐式类型。  
   
  [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   
-## 请参阅  
- [C\# 参考](../../../csharp/language-reference/index.md)   
- [C\# 编程指南](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [隐式类型的局部变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+

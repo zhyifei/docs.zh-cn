@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 413b8c3bfbfd70c91edeebece07833874db06334
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>委托中的变体 (C#)
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/13/2017
   
  例如，思考以下代码，该代码具有两个类和两个委托：泛型和非泛型。  
   
-```cs  
+```csharp  
 public class First { }  
 public class Second : First { }  
 public delegate First SampleDelegate(Second a);  
@@ -39,7 +40,7 @@ public delegate R SampleGenericDelegate<A, R>(A a);
   
  创建 `SampleDelegate` 或 `SampleGenericDelegate<A, R>` 类型的委托时，可以将以下任一方法分配给这些委托。  
   
-```cs  
+```csharp  
 // Matching signature.  
 public static First ASecondRFirst(Second first)  
 { return new First(); }  
@@ -60,7 +61,7 @@ public static Second AFirstRSecond(First first)
   
  以下代码示例说明了方法签名与委托类型之间的隐式转换。  
   
-```cs  
+```csharp  
 // Assigning a method with a matching signature   
 // to a non-generic delegate. No conversion is necessary.  
 SampleDelegate dNonGeneric = ASecondRFirst;  
@@ -87,7 +88,7 @@ SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;
   
  以下代码示例演示了如何创建一个具有协变泛型类型参数的委托。  
   
-```cs  
+```csharp  
 // Type T is declared covariant by using the out keyword.  
 public delegate T SampleGenericDelegate <out T>();  
   
@@ -105,7 +106,7 @@ public static void Test()
   
  在以下代码示例中，`SampleGenericDelegate<String>` 不能显式转换为 `SampleGenericDelegate<Object>`，尽管 `String` 继承 `Object`。 可以使用 `out` 关键字标记 泛型参数 `T` 解决此问题。  
   
-```cs  
+```csharp  
 public delegate T SampleGenericDelegate<T>();  
   
 public static void Test()  
@@ -141,34 +142,55 @@ public static void Test()
  有关详细信息和示例，请参阅[对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>声明泛型委托中的变体类型参数  
- 如果泛型委托具有协变或逆变泛型类型参数，则该委托可被称为“变体泛型委托”**。  
+ 如果泛型委托具有协变或逆变泛型类型参数，则该委托可被称为“变体泛型委托”。  
   
  可以使用 `out` 关键字声明泛型委托中的泛型类型参数协变。 协变类型只能用作方法返回类型，而不能用作方法参数的类型。 以下代码示例演示了如何声明协变泛型委托。  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+```csharp  
+public delegate R DCovariant<out R>();  
+```  
+  
  可以使用 `in` 关键字声明泛型委托中的泛型类型参数逆变。 逆变类型只能用作方法参数的类型，而不能用作方法返回类型。 以下代码示例演示了如何声明逆变泛型委托。  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+public delegate void DContravariant<in A>(A a);  
+```  
+  
 > [!IMPORTANT]
 > C# 中的  `ref` 和 `out` 参数不能标记为变体。  
   
  可以在同一个委托中支持变体和协变，但这只适用于不同类型的参数。 这在下面的示例中显示。  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+public delegate R DVariant<in A, out R>(A a);  
+```  
+  
 ### <a name="instantiating-and-invoking-variant-generic-delegates"></a>实例化和调用变体泛型委托  
  可以像实例化和调用固定委托一样，实例化和调用变体委托。 在以下示例中，该委托通过 lambda 表达式进行实例化。  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+DVariant<String, String> dvariant = (String str) => str + " ";  
+dvariant("test");  
+```  
+  
 ### <a name="combining-variant-generic-delegates"></a>合并变体泛型委托  
  不应合并变体委托。 <xref:System.Delegate.Combine%2A> 方法不支持变体委托转换，并且要求委托的类型完全相同。 这会导致在使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 运算符合并委托时出现运行时异常，如以下代码示例中所示。  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```csharp  
+Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
+Action<string> actStr = x => Console.WriteLine("string: {0}", x);  
+// All of the following statements throw exceptions at run time.  
+// Action<string> actCombine = actStr + actObj;  
+// actStr += actObj;  
+// Delegate.Combine(actStr, actObj);  
+```  
+  
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>泛型类型参数中用于值和引用类型的变体  
  泛型类型参数的变体仅支持引用类型。 例如，`DVariant<int>` 不能隐式转换为 `DVariant<Object>` 或 `DVariant<long>`，因为整数是值类型。  
   
  以下示例演示了泛型类型参数中的变体不支持值类型。  
   
-```cs  
+```csharp  
 // The type T is covariant.  
 public delegate T DVariant<out T>();  
   

@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: c76168d1c9ae65ef0d17c55aab156a4f16ecea52
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 03/20/2017
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题演示了构建包含可重用的库和单元测试的 .NET Core 解决方案。
 
-本教程介绍了如何创建接受来自用户的搜索词和文本字符串、使用类库中的方法计算字符串中出现的搜索词的次数，并将结果返回给用户的应用程序。 该解决方案还包括针对类库的单元测试作为测试驱动开发 (TDD) 概念的介绍。 如果希望使用完整的示例学习该教程，请下载[示例解决方案](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。
+本教程介绍了如何创建接受来自用户的搜索词和文本字符串、使用类库中的方法计算字符串中出现的搜索词的次数，并将结果返回给用户的应用程序。 该解决方案还包括针对类库的单元测试作为测试驱动开发 (TDD) 概念的介绍。 如果希望使用完整的示例学习该教程，请下载[示例解决方案](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 > [!NOTE]
 > Visual Studio for Mac 是预览版软件。 与 Microsoft 产品的所有预览版一样，我们十分重视你的反馈。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
@@ -121,7 +122,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 1. 当前，Visual Studio for Mac 未将 xUnit 测试集成到其内置测试运行程序中，因此，在控制台中运行 xUnit 测试。 右键单击 `TestLibrary` 项目，然后从上下文菜单中选择“工具”>“在终端中打开”。 在命令提示符处，执行 `dotnet test`。
    
-   测试失败，这是正确的结果。 测试方法断言不会从提供给 `GetWordCount` 的方法的字符串“Jack jack”中返回 `inputString`“Jack”的两个实例。 因为已在 `GetWordCount` 方法中对单词的大小写进行了分解，所以返回了两个实例。 2 *不等于* 2 的断言失败。 这是正确的结果，且测试的逻辑良好。 将控制台窗口保持为打开状态，因为你将在下一个步骤中准备为其最终版本修改测试。
+   测试失败，这是正确的结果。 测试方法断言不会从提供给 `GetWordCount` 的方法的字符串“Jack jack”中返回 `inputString`“Jack”的两个实例。 因为已在 `GetWordCount` 方法中对单词的大小写进行了分解，所以返回了两个实例。 2  *不等于*  2 的断言失败。 这是正确的结果，且测试的逻辑良好。 将控制台窗口保持为打开状态，因为你将在下一个步骤中准备为其最终版本修改测试。
 
    ![控制台窗口中的测试失败。 总测试：1 个 通过：0 个 失败：1 个。 测试运行失败。](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
 

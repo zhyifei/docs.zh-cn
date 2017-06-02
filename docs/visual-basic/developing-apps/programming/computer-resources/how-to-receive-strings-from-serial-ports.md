@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e56646b1d8ff3b682a402b4b2fc7442c3338a49
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c535dcce1ad1b9a5fecd3c6a86d7fb522acf079e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中从串行端口接收字符串
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/13/2017
   
 2.  确定应提供字符串的串行端口。 此示例假定它是 `COM1`。  
   
-3.  使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+3.  使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
      `Try...Catch...Finally` 块允许应用程序在即使会生成异常的情况下也关闭串行端口。 操作串行端口的所有代码都应出现在此块中。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  使用 <xref:System.IO.Ports.SerialPort.ReadLine%2A> 方法可从串行端口读取下一个可用文本行。  
+5.  使用 <xref:System.IO.Ports.SerialPort.ReadLine%2A> 方法来从串行端口读取下一个可用的文本行。  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrMyComputer#37](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_8.vb)]  
   
- 此代码示例也可作为 IntelliSense 代码片段。 它位于代码片段选取器的“连接和网络”****中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 它位于代码片段选取器的“连接和网络”中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  本示例假定计算机正在使用 `COM1`。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/13/2017
   
  此示例使用 `Try...Catch...Finally` 块确保应用程序关闭端口以及捕获任何超时异常。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Devices.Ports>   
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [如何：使用连接到串行端口的调制解调器拨号](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   

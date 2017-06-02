@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 3611c8d4808c4c8096ee700d68407ed8b9fd2cfc
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 5c6382ee0de3cba950b4585b05f10b4682f9a797
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="unit-testing-with-mstest-and-net-core"></a>使用 MSTest 和 .NET Core 进行单元测试
 
-本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-mstest/)。
+本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-mstest/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="creating-the-source-project"></a>创建源项目
 
@@ -48,7 +49,7 @@ namespace Prime.Services
 
 ### <a name="creating-the-test-project"></a>创建测试项目
 
-将目录更改回 *unit-testing-using-mstest* 目录，并创建 *PrimeServices.Tests* 目录。 目录结构如下所示：
+将目录更改回 unit-testing-using-mstest 目录，并创建 PrimeService.Tests 目录。 目录结构如下所示：
 
 ```
 /unit-testing-using-mstest

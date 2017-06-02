@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8fb5101eabd95dd6574caf344a428afcd4bf648c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 6ce347ec50378590946c756b3adbf64fe855874d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="collections-c"></a>集合 (C#)
@@ -31,7 +32,7 @@ ms.lasthandoff: 03/13/2017
   
  集合是一个类，因此必须在向该集合添加元素之前，声明类的实例。  
   
- 如果集合中只包含一种数据类型的元素，则可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
+ 如果集合中只包含一种数据类型的元素，则可以使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
   
 > [!NOTE]
 >  在本主题的示例中，针对 `System.Collections.Generic` 和 `System.Linq` 命名空间包括 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令。  
@@ -80,7 +81,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye  
 ```  
   
- 如果集合中的内容是事先已知的，则可以使用集合初始值设定项**来初始化集合。 有关详细信息，请参阅[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ 如果集合中的内容是事先已知的，则可以使用集合初始值设定项来初始化集合。 有关详细信息，请参阅[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
   
  以下示例与上一示例相同，除了有一个集合初始值设定项用于将元素添加到集合。  
   
@@ -132,7 +133,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye  
 ```  
   
- 以下示例从一个泛型列表中删除元素。 使用以降序进行循环访问的 [for](../../../csharp/language-reference/keywords/for.md) 语句，而非 `foreach` 语句。 这是因为 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法将导致已删除元素后的元素索引值减小。  
+ 以下示例从一个泛型列表中删除元素。 使用以降序进行循环访问的 [for](../../../csharp/language-reference/keywords/for.md) 语句，而非 `foreach` 语句。 这是因为 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法将导致已移除的元素后的元素的索引值减小。  
   
 ```csharp  
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
@@ -156,7 +157,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8  
 ```  
   
- 对于 <xref:System.Collections.Generic.List%601> 中的元素类型，也可以定义自己的类。 在以下示例中，在代码中定义由 <xref:System.Collections.Generic.List%601> 使用的 `Galaxy` 类。  
+ 对于 <xref:System.Collections.Generic.List%601> 中的元素类型，还可以定义自己的类。 在下面的示例中，由 <xref:System.Collections.Generic.List%601> 使用的 `Galaxy` 类在代码中定义。  
   
 ```csharp  
 private static void IterateThroughList()  
@@ -206,29 +207,29 @@ public class Galaxy
   
  下表列出了 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一些常用类：  
 
-|类|描述| 
+|类|说明| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示基于键进行组织的键/值对的集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可按索引访问的对象的列表。 提供用于对列表进行搜索、排序和修改的方法。|  
 |<xref:System.Collections.Generic.Queue%601>|表示对象的先进先出 (FIFO) 集合。|  
-|<xref:System.Collections.Generic.SortedList%602>|表示基于关联的 <xref:System.Collections.Generic.IComparer%601> 实现按键进行排序的键/值对集合。|  
+|<xref:System.Collections.Generic.SortedList%602>|表示基于相关的 <xref:System.Collections.Generic.IComparer%601> 实现按键进行排序的键/值对的集合。|  
 |<xref:System.Collections.Generic.Stack%601>|表示对象的后进先出 (LIFO) 集合。|  
   
  有关其他信息，请参阅[常用集合类型](../../../standard/collections/commonly-used-collection-types.md)、[选择集合类](../../../standard/collections/selecting-a-collection-class.md)和 @System.Collections.Generic。  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 类  
- 在 .NET Framework 4 或更新版本的 <xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。  
+ 在 .NET Framework 4 或更新的版本中，<xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。  
   
- 每当多个线程并发访问集合时，应使用 <xref:System.Collections.Concurrent> 命名空间中的类，而不是 <xref:System.Collections.Generic?displayProperty=fullName> 和 <xref:System.Collections?displayProperty=fullName> 命名空间中的相应类型。 有关详细信息，请参阅[线程安全集合](../../../standard/collections/threadsafe/index.md)和 <xref:System.Collections.Concurrent>。  
+ 只要多个线程同时访问集合，就应使用 <xref:System.Collections.Concurrent> 命名空间中的类，而不是 <xref:System.Collections.Generic?displayProperty=fullName> 和 <xref:System.Collections?displayProperty=fullName> 命名空间中的相应类型。 有关详细信息，请参阅[线程安全集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。  
   
- 包含在 <xref:System.Collections.Concurrent> 命名空间中的一些类是 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
+ 包含在 <xref:System.Collections.Concurrent> 命名空间中的一些类为 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections 类  
  <xref:System.Collections?displayProperty=fullName> 命名空间中的类不会将元素作为特别类型化的对象存储，而是作为 `Object` 类型的对象存储。  
   
- 应尽可能使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合，而不是 `System.Collections` 命名空间中的旧类型。  
+ 只要可能，则应使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合，而不是 `System.Collections` 命名空间中的旧类型。  
   
  下表列出了 `System.Collections` 命名空间中的一些常用类：  
   
@@ -243,7 +244,7 @@ public class Galaxy
 
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>实现键/值对集合  
- 使用 <xref:System.Collections.Generic.Dictionary%602> 泛型集合可通过每个元素的键访问集合中的元素。 每次对字典的添加都包含一个值和与其关联的键。 通过使用键来检索值十分快捷，因为 `Dictionary` 类实现为哈希表。  
+ <xref:System.Collections.Generic.Dictionary%602> 泛型集合可通过每个元素的键访问集合中的元素。 每次对字典的添加都包含一个值和与其关联的键。 通过使用键来检索值十分快捷，因为 `Dictionary` 类实现为哈希表。  
   
  以下示例创建 `Dictionary` 集合并通过使用 `foreach` 语句循环访问字典。  
   
@@ -313,7 +314,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }  
 ```  
   
- 以下示例使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的<xref:System.Collections.Generic.Dictionary%602.Item%2A> 属性快速按键查找项。 使用 `Item` 属性可通过 C# 中的 `elements[symbol]` 来访问 `elements` 集合中的项。  
+ 以下示例使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 属性按键快速查找某个项。 使用 `Item` 属性可通过 C# 中的 `elements[symbol]` 来访问 `elements` 集合中的项。  
   
 ```csharp  
 private static void FindInDictionary(string symbol)  
@@ -332,7 +333,7 @@ private static void FindInDictionary(string symbol)
 }  
 ```  
   
- 以下示例使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法来快速按键查找项。  
+ 以下示例则使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法按键快速查找某个项。  
   
 ```csharp  
 private static void FindInDictionary2(string symbol)  
@@ -396,11 +397,11 @@ public class Element
 
 <a name="BKMK_Sorting"></a>
 ## <a name="sorting-a-collection"></a>对集合排序  
- 以下示例阐释了对集合排序的过程。 该示例对 <xref:System.Collections.Generic.List%601> 中存储的 `Car` 类的实例进行排序。 `Car` 类实现 <xref:System.IComparable%601> 接口，这要求实现 <xref:System.IComparable%601.CompareTo%2A> 方法。  
+ 以下示例阐释了对集合排序的过程。 该示例对 <xref:System.Collections.Generic.List%601> 中存储的 `Car` 类的实例进行排序。 `Car` 类实现 <xref:System.IComparable%601> 接口，此操作需要实现 <xref:System.IComparable%601.CompareTo%2A> 方法。  
   
  每次对 <xref:System.IComparable%601.CompareTo%2A> 方法的调用均会执行用于排序的单一比较。 `CompareTo` 方法中用户编写的代码针对当前对象与另一个对象的每个比较返回一个值。 如果当前对象小于另一个对象，则返回的值小于零；如果当前对象大于另一个对象，则返回的值大于零；如果当前对象等于另一个对象，则返回的值等于零。 这使你可以在代码中定义大于、小于和等于条件。  
   
- 在 `ListCars` 方法中，`cars.Sort()` 语句对列表进行排序。 对 <xref:System.Collections.Generic.List%601> 的 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的调用会导致为 `List` 中 `Car` 对象自动调用 `CompareTo` 方法。  
+ 在 `ListCars` 方法中，`cars.Sort()` 语句对列表进行排序。 对 <xref:System.Collections.Generic.List%601> 的 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的此调用将导致为 `List` 中的 `Car` 对象自动调用 `CompareTo` 方法。  
   
 ```csharp  
 private static void ListCars()  
@@ -474,13 +475,13 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>定义自定义集合  
- 可通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 有关其他信息，请参阅[如何：使用 foreach 访问集合类](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)。  
+ 可以通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 有关其他信息，请参阅[如何：使用 foreach 访问集合类](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)。  
   
  尽管可以定义自定义集合，但通常最好使用包含在 .NET Framework 中的集合，这在本主题前面的[集合类型](#BKMK_KindsOfCollections)中进行了介绍。  
   
- 以下示例定义一个名为 `AllColors` 的自定义集合类。 此类实现了 <xref:System.Collections.IEnumerable> 接口，这要求实现 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。  
+ 以下示例定义一个名为 `AllColors` 的自定义集合类。 此类实现 <xref:System.Collections.IEnumerable> 接口，此操作需要实现 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。  
   
- `GetEnumerator` 方法返回 `ColorEnumerator` 类的一个实例。 `ColorEnumerator` 实现了 <xref:System.Collections.IEnumerator> 接口，这要求实现 <xref:System.Collections.IEnumerator.Current%2A> 属性、<xref:System.Collections.IEnumerator.MoveNext%2A> 方法和 <xref:System.Collections.IEnumerator.Reset%2A> 方法。  
+ `GetEnumerator` 方法返回 `ColorEnumerator` 类的一个实例。 `ColorEnumerator` 实现 <xref:System.Collections.IEnumerator> 接口，此操作需要实现 <xref:System.Collections.IEnumerator.Current%2A> 属性、<xref:System.Collections.IEnumerator.MoveNext%2A> 方法以及 <xref:System.Collections.IEnumerator.Reset%2A> 方法。  
   
 ```csharp  
 private static void ListColors()  
@@ -555,7 +556,7 @@ public class Color
 
 <a name="BKMK_Iterators"></a> 
 ##  <a name="iterators"></a>迭代器  
- 迭代器**用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回集合的每一个元素，每次返回一个元素。  
+ 迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回集合的每一个元素，每次返回一个元素。  
   
  通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句调用迭代器。 `foreach` 循环的每次迭代都会调用迭代器。 迭代器中到达 `yield return` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
   
@@ -593,7 +594,7 @@ private static IEnumerable<int> EvenSequence(
  [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)   
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [并行 LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
+ [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
  [集合和数据结构](../../../standard/collections/index.md)   
  [创建和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
  [选择集合类](../../../standard/collections/selecting-a-collection-class.md)   

@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3a51c6778127c7d2faf9a10b799875308d2850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
@@ -150,7 +151,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-cs[csProgGuideCodingConventions#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_14.cs)]  
   
--   通过使用 C# [using 语句](../../../csharp/language-reference/keywords/using-statement.md)简化你的代码。 如果你具有 [try-finally](../../../csharp/language-reference/keywords/try-finally.md) 语句（该语句中 `finally` 块的唯一代码是对 <xref:System.IDisposable.Dispose%2A> 方法的调用），请使用 `using` 语句代替。  
+-   通过使用 C# [using 语句](../../../csharp/language-reference/keywords/using-statement.md)简化你的代码。 如果具有 [try-finally](../../../csharp/language-reference/keywords/try-finally.md) 语句（该语句中 `finally` 块的唯一代码是对 <xref:System.IDisposable.Dispose%2A> 方法的调用），请使用 `using` 语句代替。  
   
      [!code-cs[csProgGuideCodingConventions#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_15.cs)]  
   
@@ -184,7 +185,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="static-members"></a>静态成员  
   
--   通过使用类名称调用[静态](../../../csharp/language-reference/keywords/static.md)成员：ClassName.StaticMember。** 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
+-   通过使用类名称调用[静态](../../../csharp/language-reference/keywords/static.md)成员：ClassName.StaticMember。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
@@ -215,8 +216,8 @@ ms.lasthandoff: 03/13/2017
      [!code-cs[csProgGuideCodingConventions#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_26.cs)]  
   
 ## <a name="security"></a>安全性  
- 请遵循[安全编码准则](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)中的准则。  
+ 请遵循[安全编码准则](../../../standard/security/secure-coding-guidelines.md)中的准则。  
   
 ## <a name="see-also"></a>另请参阅  
  [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
- [安全编码准则](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

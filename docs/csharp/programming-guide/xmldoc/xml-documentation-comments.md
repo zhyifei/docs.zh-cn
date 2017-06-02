@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0762bd31ef7732ac6ed91a10aead9dca8050f862
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 59f8c164acba31ac76387614b5603bb518417800
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文档注释（C# 编程指南）
@@ -52,7 +53,7 @@ public class MyClass{}
   
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 选项进行编译时，编译器会在源代码中搜索所有 XML 标记，并创建一个 XML 文档文件。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 等工具。  
   
- 若要引用 XML 元素（例如，你的函数将处理你要在 XML 文档注释中描述的特定 XML 元素），你可使用标准引用机制（`<` 和 `>`）。  若要引用代码引用 (`cref`) 元素中的通用标识符，可使用转义字符（例如，`cref=”List<T>”`）或大括号 (`cref=”List{T}”`)。  作为特例，编译器会将大括号解析为尖括号以在引用通用标识符时使作者能够更轻松地进行文档注释。  
+ 若要引用 XML 元素（例如，你的函数将处理你要在 XML 文档注释中描述的特定 XML 元素），你可使用标准引用机制（`<` 和 `>`）。  若要引用代码引用 (`cref`) 元素中的通用标识符，可使用转义字符（例如，`cref="List<T>"`）或大括号 (`cref="List{T}"`)。  作为特例，编译器会将大括号解析为尖括号以在引用通用标识符时使作者能够更轻松地进行文档注释。  
   
 > [!NOTE]
 >  XML 文档注释不是元数据；它们不包括在编译的程序集中，因此无法通过反射对其进行访问。  
@@ -75,5 +76,5 @@ public class MyClass{}
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)

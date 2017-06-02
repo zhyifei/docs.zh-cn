@@ -30,16 +30,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: e5baa75c55d58a4d975fc42472f90ff4125cbb5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 在泛型类型定义中，`where` 子句用于指定对下列类型的约束：这些类型可用作泛型声明中定义的类型形参的实参。 例如，可以声明一个泛型类 `MyGenericClass`，这样，类型参数 `T` 就可以实现 <xref:System.IComparable%601> 接口：  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+public class MyGenericClass<T> where T:IComparable { }  
+```  
+  
 > [!NOTE]
 >  有关查询表达式中的 where 子句的详细信息，请参阅 [where 子句](../../../csharp/language-reference/keywords/where-clause.md)。  
   
@@ -59,13 +63,13 @@ ms.lasthandoff: 03/13/2017
   
  还可以将约束附加到泛型方法的类型参数，例如：  
   
-```  
+```csharp  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
  请注意，对于委托和方法两者来说，描述类型参数约束的语法是一样的：  
   
-```  
+```csharp  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
@@ -74,7 +78,7 @@ delegate T MyDelegate<T>() where T : new()
  有关约束的语法和用法的详细信息，请参阅[类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   

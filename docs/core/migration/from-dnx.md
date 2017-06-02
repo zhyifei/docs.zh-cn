@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e30573a60e27314466822935249e2b1b119a9259
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +106,7 @@ CLI 不支持此概念。 但是，它确实支持添加所有项目命令的这
 ```
 
 ### <a name="migrating-the-project-file"></a>迁移项目文件
-CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 项目文件的语法和语义大致相同，但根据应用场景，会略有不同。 此外还对架构做了一些更改，请参阅[架构文件](http://json.schemastore.org/project)或更便于访问的 [project.json 引用](../tools/project-json.md)。 
+CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 项目文件的语法和语义大致相同，但根据应用场景，会略有不同。 此外还对架构进行了一些更改，可在[架构文件](http://json.schemastore.org/project)中查看这些更改。
 
 如果要生成控制台应用程序，需要将以下代码段添加到项目文件：
 

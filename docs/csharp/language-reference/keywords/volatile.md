@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d31ba6dd73ec4f5abcb34dc481144b154301f1af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 801187b1fcc25a1eea1f40ec8ac4c67af42e5880
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="volatile-c-reference"></a>volatile（C# 参考）
@@ -53,7 +54,7 @@ ms.lasthandoff: 03/13/2017
   
 -   已知为引用类型的泛型类型参数。  
   
--   <xref:System.IntPtr> and <xref:System.UIntPtr>。  
+-   <xref:System.IntPtr> 和 <xref:System.UIntPtr>。  
   
  可变关键字仅可应用于类或结构的字段。 不能将局部变量声明为 `volatile`。  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何创建辅助线程，并用它与主线程并行执行处理。 有关多线程处理的背景信息，请参 [](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87)和[线程](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
+ 下面的示例演示如何创建辅助线程，并用它与主线程并行执行处理。 有关多线程处理的背景信息，请参 [线程](../../../standard/threading/index.md)和[线程](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
   
  [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   

@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ac24019390be8501e32b944fb1f9527636815eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="yield-c-reference"></a>yield（C# 参考）
@@ -41,7 +42,11 @@ ms.lasthandoff: 03/13/2017
   
  下面的示例演示了 `yield` 语句的两种形式。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+yield return <expression>;  
+yield break;  
+```  
+  
 ## <a name="remarks"></a>备注  
  使用 `yield return` 语句可一次返回一个元素。  
   
@@ -76,7 +81,14 @@ ms.lasthandoff: 03/13/2017
 ## <a name="technical-implementation"></a>技术实现  
  以下代码从迭代器方法返回 `IEnumerable<string>`，然后遍历其元素。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<string> elements = MyIteratorMethod();  
+foreach (string element in elements)  
+{  
+   ...  
+}  
+```  
+  
  调用 `MyIteratorMethod` 并不执行该方法的主体。 相反，该调用会将 `IEnumerable<string>` 返回到 `elements` 变量中。  
   
  在 `foreach` 循环迭代时，将为 `elements` 调用 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法。 此调用将执行 `MyIteratorMethod` 的主体，直至到达下一个 `yield return` 语句。 `yield return` 语句返回的表达式不仅决定了循环体使用的 `element` 变量值，还决定了元素的 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 属性（它是 `IEnumerable<string>`）。  
@@ -96,7 +108,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   

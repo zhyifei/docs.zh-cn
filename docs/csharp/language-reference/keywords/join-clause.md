@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>join 子句（C# 参考）
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>对象集合联接与关系表  
  在[!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查询表达式中，联接操作是在对象集合上执行的。 不能使用与 2 个关系表完全相同的方式“联接”对象集合。 在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 中，仅当 2 个源序列没有通过任何关系相互联系时，才需要使用显式 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 时，外键表在对象模型中表示为主表的属性。 例如，在 Northwind 数据库中，Customer 表与 Orders 表之间具有外键关系。 将这两个表映射到对象模型时，Customer 类具有一个 Orders 属性，其中包含与该 Customer 相关联的 Orders 集合。 实际上，已经为你执行了联接。  
   
- 若要深入了解如何在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 的上下文中跨相关表执行查询，请参阅[如何：映射数据库关系](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af)。  
+ 若要深入了解如何在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 的上下文中跨相关表执行查询，请参阅[如何：映射数据库关系](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
   
 ## <a name="composite-keys"></a>组合键  
  可通过使用组合键测试多个值是否相等。 有关详细信息，请参阅[如何：使用组合键进行联接](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)。 还可以在 `group` 子句中使用组合键。  
@@ -99,9 +100,9 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>备注  
- 后面未跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.Join%2A> 方法调用。 后面跟有 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法调用。  
+ 后面未跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.Join%2A> 方法调用。 后面跟 `into` 的 `join` 子句转换为 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法调用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询关键字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [联接运算](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   

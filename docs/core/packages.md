@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e0ba4886bd954c8e772a85a677775167e7c4bc53
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -37,12 +38,12 @@ ms.lasthandoff: 03/07/2017
 
 以下是 .NET Core 重要的 NuGet 包列表：
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 最基础的 .NET Core 包，包括 [Object](http://docs.microsoft.com/dotnet/core/api/System.Object)、[String](http://docs.microsoft.com/dotnet/core/api/System.String)、[Array](http://docs.microsoft.com/dotnet/core/api/System.Array)、[Action](http://docs.microsoft.com/dotnet/core/api/System.Action) 和 [IList&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1)。
-- [System.Collections](https://www.nuget.org/packages/System.Collections) - 一组（主要）泛型集合，包括 [List&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) 和 [Dictionary&lt;K,V&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2)。
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - 一组 HTTP 网络通信类型，包括 [HttpClient](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpClient) 和 [HttpResponseMessage](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpResponseMessage)。
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 一组用于读写到本地或网络磁盘存储的类型，包括 [File](http://docs.microsoft.com/dotnet/core/api/System.IO.File) 和 [Directory](http://docs.microsoft.com/dotnet/core/api/System.IO.Directory)。
-- [System.Linq](https://www.nuget.org/packages/System.Linq) - 一组对象查询类型，包括 Enumerable 和 [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2)。
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 一组用于类型加载、检查与激活的类型，包括 [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly)、[TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) 和 [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo)。
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 最基础的 .NET Core 包，包括 <xref:System.Object>、<xref:System.String>、<xref:System.Array>、<xref:System.Action> 和 <xref:System.Collections.Generic.IList%601>。
+- [System.Collections](https://www.nuget.org/packages/System.Collections) - 一组（主要）泛型集合，包括 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602>。
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - 一组 HTTP 网络通信类型，包括 <xref:System.Net.Http.HttpClient> 和 <xref:System.Net.Http.HttpResponseMessage>。
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 一组用于读写到本地或网络磁盘存储的类型，包括 <xref:System.IO.File> 和 <xref:System.IO.Directory>。
+- [System.Linq](https://www.nuget.org/packages/System.Linq) - 一组对象查询类型，包括 `Enumerable` 和 <xref:System.Linq.ILookup%602>。
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 一组用于类型加载、检查和激活的类型，包括 <xref:System.Reflection.Assembly>、<xref:System.Reflection.TypeInfo> 和 <xref:System.Reflection.MethodInfo>。
 
 通常情况下，相较于逐个地将包包含在项目中，包含*元包*会简单得多，元包是指通常配合在一起使用的一组包。 （有关元包的更多信息，请参见下一部分。）但是当需要单个包时，可以按以下示例所示的那样来包含它，此示例引用 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 包。 
 
@@ -145,7 +146,7 @@ ms.lasthandoff: 03/07/2017
 
 .NET Core 应用程序 (TFM: `netcoreapp`) 框架表示 .NET Core 发行版及其提供的控制台应用程序模型附带的包和相关 API。 .NET Core 必须使用此框架，因为必须要使用其中的控制台应用程序模型。同时只运行于 .Net Core 平台的库也应使用此模型。 使用此框架后，所有应用和库将只能够在 .Net Core 上运行。 
 
-`Microsoft.NETCore.App` 元包的目标框架是 `netcoreapp`。 它提供了约&60; 个库的访问权限，其中约&40; 个由 `NETStandard.Library` 包提供，还有另外&20; 个库。 可以引用目标框架为 `netcoreapp` 或与框架（如 `netstandard`）兼容的库获得对其他 API 的访问权限。 
+`Microsoft.NETCore.App` 元包的目标框架是 `netcoreapp`。 它提供了约 60 个库的访问权限，其中约 40 个由 `NETStandard.Library` 包提供，还有另外 20 个库。 可以引用目标框架为 `netcoreapp` 或与框架（如 `netstandard`）兼容的库获得对其他 API 的访问权限。 
 
 由 `Microsoft.NETCore.App` 提供的大部分其他库还可以使用 `netstandard` 作为目标，如果其他 `netstandard` 库满足这些框架的依赖项的话。 这意味着，`netstandard` 库也可以引用这些包作为依赖项。 
 

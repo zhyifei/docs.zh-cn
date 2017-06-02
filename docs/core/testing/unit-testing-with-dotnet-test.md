@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 3ca312509d7ba7a7759d1ac294f79cc359419c52
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: cc2e823be1a3d1c0267d98c95b25126bd7d048d4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="unit-testing-in-net-core-using-dotnet-test"></a>在 .NET Core 中使用 dotnet 测试的单元测试
 
-本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。
+本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="creating-the-source-project"></a>创建源项目
 
@@ -48,7 +49,7 @@ namespace Prime.Services
 
 ### <a name="creating-the-test-project"></a>创建测试项目
 
-将目录更改回 *unit-testing-using-dotnet-test* 目录，并创建 *PrimeServices.Tests* 目录。 目录结构如下所示：
+将目录更改回 unit-testing-using-dotnet-test 目录，并创建 PrimeService.Tests 目录。 目录结构如下所示：
 
 ```
 /unit-testing-using-dotnet-test

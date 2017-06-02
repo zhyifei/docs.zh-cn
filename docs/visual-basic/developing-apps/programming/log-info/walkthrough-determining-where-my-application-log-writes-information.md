@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ef53fb9439159c94bb3894c233977088edc8872
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>演练：确定 My.Application.Log 写入信息的位置 (Visual Basic)
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>确定 My.Application.Log 的侦听器  
   
-1.  找到程序集的配置文件。 如果正在开发程序集，则可以通过“解决方案资源管理器”****访问 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 中的 app.config。 否则，配置文件名称即为程序集的名称附加“.config”，并且与程序集位于相同的目录中。  
+1.  找到程序集的配置文件。 如果正在开发程序集，则可以通过“解决方案资源管理器”访问 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 中的 app.config。 否则，配置文件名称即为程序集的名称附加“.config”，并且与程序集位于相同的目录中。  
   
     > [!NOTE]
     >  不是每个程序集都有配置文件。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/13/2017
   
      如果这些部分不存在，则计算机的配置文件可能会配置 `My.Application.Log` 日志侦听器。 以下步骤介绍如何确定计算机配置文件定义的内容：  
   
-    1.  找到计算机的 machine.config 文件。 通常情况下，该文件位于 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目录，其中 `SystemRoot` 是操作系统目录，`frameworkVersion` 是 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 的版本。  
+    1.  找到计算机的 machine.config 文件。 通常情况下，该文件位于 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目录，其中 `SystemRoot` 是操作系统目录， `frameworkVersion` 是 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]的版本。  
   
          machine.config 中的设置可以通过应用程序的配置文件重写。  
   
@@ -78,17 +79,17 @@ ms.lasthandoff: 03/13/2017
   
 5.  对于许多类型的共享侦听器，该侦听器的初始化数据说明了侦听器写入数据的位置：  
   
-    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 侦听器写入文件日志，如简介中所述。  
+    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 侦听器将信息写入文件日志，如简介中所述。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 侦听器将信息写入 `initializeData` 参数指定的计算机事件日志。 若要查看事件日志，可以使用“服务器资源管理器” **** 或“Windows 事件查看器” ****。 有关详细信息，请参阅 [.NET Framework 中的 ETW 事件](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 侦听器将信息写入 `initializeData` 参数指定的计算机事件日志。 若要查看事件日志，可以使用**服务器资源管理器**或 **Windows 事件查看器**。 有关详细信息，请参阅 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 侦听器写入 `initializeData` 参数中指定的文件。  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 侦听器将信息写入 `initializeData` 参数指定的文件。  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 侦听器写入命令行控制台。  
+    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 侦听器将信息写入命令行控制台。  
   
     -   有关其他类型的日志侦听器写入信息的位置的信息，请参阅该类型的文档。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:System.Diagnostics.DefaultTraceListener>   
  <xref:System.Diagnostics.EventLogTraceListener>   

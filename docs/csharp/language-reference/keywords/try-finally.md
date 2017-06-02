@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3f7618aa6d4ae3535b2b6cb562349650b3eba1ed
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/13/2017
  C# 还包含 [using 语句](../../../csharp/language-reference/keywords/using-statement.md)，它以简便语法为 <xref:System.IDisposable> 对象提供类似的功能。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   

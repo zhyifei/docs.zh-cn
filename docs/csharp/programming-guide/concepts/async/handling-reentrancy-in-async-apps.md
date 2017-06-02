@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7be76ad572be522071d9e8c2ae9cf8c770fd1fd0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -319,7 +320,6 @@ TOTAL bytes returned:  890591
  下面的输出显示用户仅选择“开始”****按钮一次时的结果。 字母标签 A 指示结果来自首次选择“开始”****按钮。 编号显示下载目标列表中 URL 的顺序。  
   
 ```  
-  
 #Starting group A.  
 #Task assigned for group A.  
   
@@ -391,7 +391,6 @@ C-8. msdn.microsoft.com/library/ff730837.aspx               148010
 TOTAL bytes returned:  920526  
   
 #Group C is complete.  
-  
 ```  
   
  组 B 和 C 会在组 A 完成之前开始，但是每个组的输出会分开显示。 组 A 的所有输出会首先显示，后跟组 B 的所有输出，再然后是组 C 的所有输出。应用会始终按顺序显示组，并且对于每个组，始终按 URL 在 URL 列表中的显示顺序来显示有关各个网站的信息。  
@@ -732,3 +731,4 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 ## <a name="see-also"></a>另请参阅  
  [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+

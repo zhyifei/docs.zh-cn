@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: da75f5fd56b7ce66b2c46ef488e6e26c55a63ee2
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 9574d76564b34f500674662f2b2bb8f4d50976f5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 03/20/2017
 
 ## <a name="net-core-dependencies"></a>.NET Core 依赖项
 
-在 macOS 上运行时，.NET Core 需要 OpenSSL。 获取 OpenSSL 的一个简单方法是使用适用于 macOS 的 [Homebrew (“brew”)](http://brew.sh/) 包。 在安装 *brew* 后，通过在终端（命令）提示符处执行以下命令来安装 OpenSSL：
+在 macOS 上运行时，.NET Core 需要 OpenSSL。 获取 OpenSSL 的一个简单方法是使用适用于 macOS 的 [Homebrew (“brew”)](https://brew.sh/) 包。 在安装 *brew* 后，通过在终端（命令）提示符处执行以下命令来安装 OpenSSL：
 
 ```Terminal
 brew update
@@ -41,7 +42,7 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-安装 OpenSSL 后，获取官方 [.NET Core SDK for Mac 安装程序](https://go.microsoft.com/fwlink/?linkid=843444)。 .NET Core 1.1.1 是最新的版本。 有关长期支持版本和其他下载，请访问 [.NET 下载：所有下载](https://www.microsoft.com/net/download/core)。 如果在 macOS 上安装遇到问题，请查阅[已知问题和解决方法](https://github.com/dotnet/core/blob/master/cli/known-issues.md)。
+安装 OpenSSL 后，从 [.NET 下载](https://www.microsoft.com/net/download/core)下载并安装 .NET Core SDK。 如果在 macOS 上安装时遇到问题，请查阅[已知问题和解决方法](https://github.com/dotnet/core/blob/master/cli/known-issues.md)主题。
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 

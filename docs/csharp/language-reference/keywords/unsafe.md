@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: afedd3d99aea9f73d175fd2957a7d586ebce6d72
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,6 @@ ms.lasthandoff: 03/13/2017
  可在类型或成员的声明中使用 `unsafe` 修饰符。 因此，类型或成员的整个正文范围均被视为不安全上下文。 以下面使用 `unsafe` 修饰符声明的方法为例：  
   
 ```  
-  
       unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
@@ -52,14 +52,12 @@ ms.lasthandoff: 03/13/2017
  不安全上下文的范围从参数列表扩展到方法的结尾，因此也可在以下参数列表中使用指针：  
   
 ```  
-  
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
 ```  
   
  还可以使用不安全块从而能够使用该块内的不安全代码。 例如:   
   
 ```  
-  
       unsafe  
 {  
     // Unsafe context: can use pointers here.  
@@ -72,7 +70,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   
@@ -81,3 +79,4 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [固定大小的缓冲区](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+

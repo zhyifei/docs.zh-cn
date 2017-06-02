@@ -1,6 +1,6 @@
 ---
 title: "ushort（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort（C# 参考）
+
 `ushort` 关键字表示一种整型数据类型，该类型根据下表显示的大小和范围存储值。  
   
 |类型|范围|大小|.NET Framework 类型|  
@@ -44,25 +46,32 @@ ms.lasthandoff: 03/13/2017
 |`ushort`|0 到 65,535|无符号 16 位整数|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>文本  
- 可如下例所示声明并初始化 `ushort` 变量：  
+
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `ushort` 变量。 如果整数文本超出 `ushort` 的范围（即，如果该值小于 <xref:System.UInt16.MinValue?displayProperty=fullName> 或大于 <xref:System.UInt16.MaxValue?displayProperty=fullName>，将出现编译错误。
+
+在以下示例中，等于 65,034、表示为十进制、十六进制和二进制文本的整数从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `ushort` 值。    
   
-```  
-  
-ushort myShort = 65535;  
-```  
-  
- 在以上声明中，整数 `65535` 从 [int](../../../csharp/language-reference/keywords/int.md) 隐式转换为 `ushort`。 如果整数超出了 `ushort` 的范围，将出现编译错误。  
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>编译器重载解析
   
  调用重载方法时必须使用强制转换。 以下面使用 `ushort` 和 [int](../../../csharp/language-reference/keywords/int.md) 参数的重载方法为例：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
-  
+ 
  使用 `ushort` 强制转换可保证调用正确的类型，例如：  
   
-```  
+```csharp  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -74,35 +83,32 @@ SampleMethod((ushort)5);
   
  存在从 [byte](../../../csharp/language-reference/keywords/byte.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 到 `ushort` 的预定义隐式转换。 其他情况下必须使用强制转换来执行显式转换。 以下面两个 `ushort` 变量 `x` 和 `y` 为例：  
   
-```  
-  
+```csharp 
 ushort x = 5, y = 12;  
 ```  
   
  以下赋值语句会生成一个编译错误，原因是赋值运算符右侧的算术表达式在默认情况下的计算结果为 `int`。  
   
-```  
-  
+```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  若要解决此问题，请使用强制转换：  
   
-```  
-  
+```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  但是，在目标变量具有相同或更大的存储大小时，可以使用下列语句：  
   
-```  
+```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
  另请注意，不存在从浮点类型到 `ushort` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  

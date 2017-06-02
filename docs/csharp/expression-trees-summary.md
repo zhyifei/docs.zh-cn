@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 82d4684ed27b23afd4972da6f68d1757472d85b6
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [上一篇 - 翻译表达式](expression-trees-translating.md)
 
-在此系列中，你已了解如何使用表达式树**创建将代码解释为数据并基于该代码生成新功能的动态程序。
+在此系列中，你已了解如何使用*表达式树*创建将代码解释为数据并基于该代码生成新功能的动态程序。
 
 可以检查表达式树以了解算法的目的。 不仅可以检查该代码。 可以生成表示原始代码的修改版本的新表达式树。
 

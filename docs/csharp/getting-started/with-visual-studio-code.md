@@ -4,20 +4,21 @@ description: "了解如何使用 VS Code 创建和调试首个用 C# 编写的 .
 keywords: "C#, 入门, 获取, 安装, Visual Studio Code, 跨平台"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 5/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4550129f4e6f1eeb3521ad7fe3233f2bda49e5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="getting-started-with-visual-studio-code"></a>Visual Studio Code 入门
+# <a name="get-started-with-visual-studio-code"></a>Visual Studio Code 入门
 
 .NET Core 提供了一个快速运行的模块化平台，用于创建在 Windows、Linux 和 macOS 上运行的服务器应用程序。 带 C# 扩展的 Visual Studio Code 提供功能强大的编辑体验，完全支持 C# IntelliSense（智能代码填充）和调试。
 
@@ -34,12 +35,12 @@ ms.lasthandoff: 03/13/2017
 1. 打开项目：
 
     * 打开 VS Code。
-    * 依次单击左侧菜单上的“资源管理器”图标和“打开文件夹”****。
-    * 选择要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”****。 在我们的示例中，我们将把项目文件夹命名为“HelloWorld”。 
+    * 依次单击左侧菜单上的“资源管理器”图标和**“打开文件夹”**。
+    * 选择要在其中放置 C# 项目的文件夹，然后单击**“选择文件夹”**。 在我们的示例中，我们将把项目文件夹命名为“HelloWorld”。 
 
   ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
-    * 或者，可以在主菜单上依次选择“文件”**** > “打开文件夹”****，打开项目文件夹。
+    * 或者，可以在主菜单上依次选择**“文件”** > **“打开文件夹”**，打开项目文件夹。
 
 2. 初始化 C# 项目：
     * 键入“<kbd>CTRL</kbd>+<kbd>\`</kbd>”（反引号），在 VS Code 中打开集成终端。
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/13/2017
 
   ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
 
-2. VS Code 会提示你添加缺少的资产，以生成和调试应用程序。 选择“是”****。 
+2. VS Code 会提示你添加缺少的资产，以生成和调试应用程序。 选择**“是”**。 
 
   ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
@@ -93,7 +94,7 @@ ms.lasthandoff: 03/13/2017
 > [!TIP] 
 > 若要详细了解如何使用 OmniSharp 在 VS Code 中进行 .NET Core 调试，以及相关的故障排除提示，请参阅[有关设置 .NET Core 调试器的说明](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="see-also"></a>另请参阅
-- [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
+## <a name="see-also"></a>请参阅
+[设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
+[在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
 

@@ -1,6 +1,6 @@
 ---
 title: "uint（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe4f7fcbbadee600e0ba6de70508312173d098ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="uint-c-reference"></a>uint（C# 参考）
+
 `uint` 关键字表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
   
 |类型|范围|大小|.NET Framework 类型|  
@@ -46,46 +48,41 @@ ms.lasthandoff: 03/13/2017
  **请注意**：`uint` 类型不符合 CLS。 请尽可能使用 `int`。  
   
 ## <a name="literals"></a>文本  
- 可如下例所示声明并初始化 `uint` 类型的变量：  
+
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `uint` 变量。 如果整数文本超出范围 `uint`（即，如果该值小于 <xref:System.UInt32.MinValue?displayProperty=fullName> 或大于 <xref:System.UInt32.MaxValue?displayProperty=fullName>，将出现编译错误。
+
+在以下示例中，表示为十进制、十六进制和二进制文本且等于 3,000,000,000 的整数被分配给 `uint` 值。  
   
-```  
-  
-uint myUint = 4294967290;  
-```  
-  
- 如果整数没有后缀，则其类型为以下类型中可表示其值的第一个类型：[int](../../../csharp/language-reference/keywords/int.md)、`uint`、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)。 在此示例中，其类型为 `uint`：  
-  
-```  
-  
-uint uInt1 = 123;  
-```  
-  
- 还可以使用后缀 u 或 U，如下所示：  
-  
-```  
-  
-uint uInt2 = 123U;  
-```  
-  
- 使用后缀 `U` 或 `u` 时，将根据文本的数值确定它的类型为 `uint` 还是 `ulong`。 例如：  
-  
-```  
-Console.WriteLine(44U.GetType());  
-Console.WriteLine(323442434344U.GetType());  
-```  
-  
- 此代码显示 `System.UInt32` 和 `System.UInt64`分别是 `uint` 和 `ulong` 的基础类型），因为第二个文本太大，无法按 `uint` 类型存储。  
+[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
+ 
+ 整数文本还可包含表示类型的后缀。 后缀 `U` 或“u”表示 `uint` 或 `ulong`，具体取决于文本的数字值。 以下示例使用 `u` 后缀来表示这两种类型的无符号整数。 请注意，第一个文本是 `uint`，因为其值小于 <xref:System.UInt32.MaxValue?displayProperty=fullName>，而第二个文本是 `ulong`，因为其值大于 <xref:System.UInt32.MaxValue?displayProperty=fullName>。
+
+[!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
+ 
+如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型： 
+
+1. [int](int.md)
+2. `uint`
+3. [long](../../../csharp/language-reference/keywords/long.md)
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
   
 ## <a name="conversions"></a>转换  
  存在从 `uint` 到 [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。 例如:   
   
-```  
+```csharp  
 float myFloat = 4294967290;   // OK: implicit conversion to float  
 ```  
   
  存在从 [byte](../../../csharp/language-reference/keywords/byte.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 到 `uint` 的预定义隐式转换。 否则必须使用转换。 例如，如果不使用转换，以下赋值语句会生成编译错误：  
   
-```  
+```csharp  
 long aLong = 22;  
 // Error -- no implicit conversion from long:  
 uint uInt1 = aLong;   
@@ -95,7 +92,7 @@ uint uInt2 = (uint)aLong;
   
  另请注意，不存在从浮点类型到 `uint` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 uint x = 3.0;  
 // OK -- explicit conversion:  

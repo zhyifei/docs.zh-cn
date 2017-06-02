@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 84af19189fa3fc510c8d4f8e408cbb2a393d8b8f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 03/13/2017
   
  功能在 Visual Basic 中的 XML IntelliSense 的详细信息，请参阅[Visual Basic 中的 XML IntelliSense](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md)。 导入 XML 命名空间的详细信息，请参阅[Imports 语句 (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)或[，项目设计器 (Visual Basic 中) 引用页](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic)。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
  ![视频链接](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo")本主题的视频版本，请参阅[视频帮助︰ 在 Visual Basic 中启用 XML IntelliSense](http://go.microsoft.com/fwlink/?LinkId=102466)。 有关相关的视频演示，请参阅[启用 XML IntelliSense 和使用 XML 命名空间如何实现？](http://go.microsoft.com/fwlink/?LinkId=143035)。  
   

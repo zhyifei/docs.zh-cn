@@ -1,76 +1,95 @@
 ---
-title: "/lib (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/lib"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lib compiler option [C#]"
-  - "-lib compiler option [C#]"
-  - "/lib compiler option [C#]"
+title: "-lib（C# 编译器选项）| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /lib
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lib compiler option [C#]
+- -lib compiler option [C#]
+- /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 27bcca456a7a5c884c33de6429e06c94afc9536a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
+
 ---
-# /lib (C# Compiler Options)
-**\/lib** 选项指定通过 [\/reference \(Import Metadata\)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 选项引用的程序集的位置。  
+# <a name="lib-c-compiler-options"></a>/lib（C# 编译器选项）
+/Lib 选项指定通过 [/reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项引用的程序集的位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  `dir1`  
  在当前工作目录（调用编译器的目录）或公共语言运行时的系统目录中未找到引用的程序集时，编译器将在其中进行查找的目录。  
   
  `dir2`  
- 要在其中搜索程序集引用的一个或多个附加目录。  用逗号分隔每个附加目录的名称，中间不要有空格。  
+ 要在其中搜索程序集引用的一个或多个附加目录。 用逗号分隔每个附加目录的名称，中间不要有空格。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  编译器按以下顺序搜索未完全限定的程序集引用：  
   
-1.  当前工作目录。  该目录为从其调用编译器的目录。  
+1.  当前工作目录。 该目录为从其调用编译器的目录。  
   
 2.  公共语言运行时系统目录。  
   
-3.  由 **\/lib** 指定的目录。  
+3.  由 /lib 指定的目录。  
   
 4.  由 LIB 环境变量指定的目录。  
   
- 使用 **\/reference** 指定程序集引用。  
+ 使用 /reference 指定程序集引用。  
   
- **\/lib** 是累加的；每一次指定的值都追加到以前的值中。  
+ /lib 是累加的；每一次指定的值都追加到以前的值中。  
   
- 另一种使用 **\/lib** 的方法是，将任何所需的程序集复制到工作目录中；这使您可以仅将程序集名称传递给 **\/reference**。  然后可以从工作目录中删除这些程序集。  由于程序集清单中未指定依赖程序集的路径，因此应用程序可以在目标计算机上启动，然后查找并使用全局程序集缓存中的程序集。  
+ 另一种使用 /lib 的方法是，将任何所需的程序集复制到工作目录中；这样可以仅将程序集名称传递给 /reference。 然后可以从工作目录中删除这些程序集。 由于程序集清单中未指定依赖程序集的路径，因此应用程序可以在目标计算机上启动，然后查找并使用全局程序集缓存中的程序集。  
   
- 编译器可以引用程序集并不表示公共语言运行时可以在运行时找到并加载程序集。  有关运行时如何搜索引用的程序集的详细信息，请参见 [运行时如何定位程序集](../Topic/How%20the%20Runtime%20Locates%20Assemblies.md)。  
+ 编译器可以引用程序集并不表示公共语言运行时可以在运行时找到并加载程序集。 有关运行时如何搜索引用的程序集的详细信息，请参阅[运行时如何定位程序集](../../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  
+1.  打开项目的“属性页”  对话框。  
   
-2.  单击**“引用路径”**属性页。  
+2.  单击“引用路径”属性页。  
   
 3.  修改列表框的内容。  
   
- 有关如何以编程方式设置此编译器选项的信息，请参见 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
+ 有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
   
-## 示例  
- 编译 t2.cs 以创建 .exe 文件。  编译器将在工作目录和驱动器 C 上根目录中查找程序集引用。  
+## <a name="example"></a>示例  
+ 编译 t2.cs 以创建 .exe 文件。 编译器将在工作目录和 C 驱动器的根目录中查找程序集引用。  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   
-## 请参阅  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改项目属性和配置设置](http://msdn.microsoft.com/zh-cn/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另请参阅  
+ [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
+ [NIB 如何：修改项目属性和配置设置](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

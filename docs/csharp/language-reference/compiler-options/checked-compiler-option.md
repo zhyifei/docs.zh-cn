@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c6cfc54c2dbd3e14d874d7684fdc75a972260cc3
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="checked-c-compiler-options"></a>/checked（C# 编译器选项）
@@ -42,12 +43,12 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
 ## <a name="remarks"></a>备注  
- `checked` 或 `unchecked` 关键字范围内的整数算法语句不受“/checked”****选项的影响。  
+ `checked` 或 `unchecked` 关键字范围内的整数算法语句不受“/checked”选项的影响。  
   
  如果不在 `checked` 或 `unchecked` 关键字范围内的整数算法语句产生的值超出数据类型范围，并且编译中使用了 **/checked+** (**/checked**)，则该语句将在运行时导致异常。 如果编译中使用的是 **/checked-**，则该语句在运行时不会导致异常。  
   
@@ -55,20 +56,20 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”****页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1.  打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2.  单击“生成”****属性页。  
+2.  单击“生成”属性页。  
   
-3.  单击 **“高级”** 按钮。  
+3.  单击“高级”按钮。  
   
-4.  修改“检查算术溢出/下溢”****属性。  
+4.  修改“检查算术溢出/下溢”属性。  
   
- 有关以编程方式访问此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
+ 要以编程方式访问此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   
 ## <a name="example"></a>示例  
  以下命令编译 `t2.cs`。 命令中 `/checked` 的使用指定，任何不在 `checked` 或 `unchecked` 关键字范围内以及导致数据类型以外值的结果的文件中的整数算术语句，会在运行时引发异常。  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

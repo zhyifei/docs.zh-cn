@@ -1,69 +1,86 @@
 ---
-title: "如何：在 Visual Basic 中向文件内写入文本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "示例 [Visual Basic], 文本文件"
-  - "文件, 写入"
-  - "文本, 写入文件"
-  - "写入文件"
+title: "如何：在 Visual Basic 中向文件写入文本 | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- files, writing to
+- text, writing to files
+- writing to files
+- examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# 如何：在 Visual Basic 中向文件内写入文本
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8febfbb5d4fb9042f2d9153a81aa18bd279cf3dc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可以用于向文件中写入文本。  如果指定的文件不存在，则创建该文件。  
+---
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>如何：在 Visual Basic 中向文件内写入文本
+可使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法向文件写入文本。 如果指定的文件不存在，则会创建一个。  
   
-## 过程  
+## <a name="procedure"></a>过程  
   
-#### 向文件中写入文本  
+#### <a name="to-write-text-to-a-file"></a>向文件写入文本  
   
--   使用 `WriteAllText` 方法向文件中写入文本，同时指定要写入的文件和文本。  此示例向名为 `test.txt` 的文件中写入 `"This is new text."` 这一行，并将这行文本追加到此文件中现有的任何文本之后。  
+-   可以使用 `WriteAllText` 方法向文件写入文本，并指定要写入的文件和文本。 此示例将行 `"This is new text."` 写入名为 `test.txt` 的文件，同时将文本追加到文件中的任何现有文本。  
   
      [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
-#### 向文件中写入一系列字符串  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a>向文件写入一系列字符串  
   
--   循环通过字符串集合。  使用 `WriteAllText` 方法向文件中写入文本，同时指定目标文件以及要添加的字符串，并将 `append` 设置为 `True`。  
+-   通过字符串集合循环。 可以使用 `WriteAllText` 方法向文件写入文本，同时指定目标文件以及要添加的字符串，并将 `append` 设置为 `True`。  
   
-     此示例将 `Documents and Settings` 目录中文件的名称写入 `FileList.txt` 中，同时在每个名称之间插入一个回车符以获得更好的可读性。  
+     此示例将 `Documents and Settings` 目录中的文件名写入 `FileList.txt`，并在每个文件之间插入回车符，以增强可读性。  
   
      [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
-## 可靠编程  
+## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（开头字符为 \\\\.  \\\) \(<xref:System.ArgumentException>\).  
+-   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为它是 `Nothing` \(<xref:System.ArgumentNullException>\)。  
+-   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   `File` 指向的路径不存在（<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>）。  
+-   `File` 指向不存在的路径（<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>）。  
   
--   文件正由另一个进程使用，或者出现 I\/O 错误 \(<xref:System.IO.IOException>\)。  
+-   文件正由另一个进程使用，或者出现 I/O 错误 (<xref:System.IO.IOException>)。  
   
--   路径超过了系统定义的最大长度 \(<xref:System.IO.PathTooLongException>\)。  
+-   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的文件名或目录名包含冒号 \(:\)，或格式无效 \(<xref:System.NotSupportedException>\)。  
+-   路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
   
--   该用户缺少查看该路径所必需的权限 \(<xref:System.Security.SecurityException>\)。  
+-   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
--   磁盘已满，并且对 `WriteAllText` 的调用失败 \(<xref:System.IO.IOException>\)。  
+-   磁盘已满，且对 `WriteAllText` 的调用失败 (<xref:System.IO.IOException>)。  
   
- 如果在部分信任的上下文中运行，则代码可能会因特权不足而引发异常。  有关更多信息，请参见 [代码访问安全性基础知识](../Topic/Code%20Access%20Security%20Basics.md)。  
+ 如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
  [如何：读取文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

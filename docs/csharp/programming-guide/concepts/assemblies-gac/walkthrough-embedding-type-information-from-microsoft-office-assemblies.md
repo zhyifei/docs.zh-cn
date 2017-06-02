@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b698372d28198cfcd34aef69043334e3fc50ce6d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)
 如果在引用 COM 对象的应用程序中嵌入类型信息，则无需使用主互操作程序集 (PIA)。 此外，利用嵌入的类型信息可实现应用程序的版本独立性。 也就是说，可将程序编写为使用多个 COM 库版本中的类型，而无需使用每个版本的特定 PIA。 对于使用 Microsoft Office 库中对象的应用程序，这是一种常用方案。 通过嵌入类型信息，程序的同一个生成可以使用不同计算机上的不同 Microsoft Office 版本，而无需为 Microsoft Office 的每个版本重新部署该程序或 PIA。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>先决条件  
  本演练需要如下内容：  

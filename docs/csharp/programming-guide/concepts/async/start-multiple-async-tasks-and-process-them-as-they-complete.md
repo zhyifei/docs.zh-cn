@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ae131d70af5e4f469b99e2544b8de220fbf92a26
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0ab1c8d117327c9f5805d184b263a0932ab0bc3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
@@ -40,9 +41,9 @@ ms.lasthandoff: 03/13/2017
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。  
   
-3.  在“打开项目”****对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
+3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。  
   
-4.  在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。************  
+4.  在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。  
   
 5.  选择 F5 键运行该项目。  
   
@@ -55,31 +56,42 @@ ms.lasthandoff: 03/13/2017
 ## <a name="building-the-example"></a>生成示例  
  本示例对[在一个任务完成后取消剩余异步任务 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Cancel Remaining Async Tasks after One Is Complete](http://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76)（在一个任务完成后取消剩余异步任务）中开发的代码进行了补充，并使用相同的 UI。  
   
- 若要自行生成示例，请按“下载示例”部分的说明逐步操作，但选择“CancelAfterOneTask”****作为“启动项目”****。 将此主题中的更改添加到项目中的 `AccessTheWebAsync` 方法。 这些更改标有星号。  
+ 若要自行生成示例，请按“下载示例”部分的说明逐步操作，但选择“CancelAfterOneTask”作为“启动项目”。 将此主题中的更改添加到项目中的 `AccessTheWebAsync` 方法。 这些更改标有星号。  
   
  **CancelAfterOneTask** 项目已包含一个查询，执行此查询时，将创建任务集合。 在以下代码中，每次调用 `ProcessURLAsync` 都将返回一个 <xref:System.Threading.Tasks.Task%601>，其中 `TResult` 是整数。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<Task<int>> downloadTasksQuery =  
+    from url in urlList select ProcessURL(url, client, ct);  
+```  
+  
  在项目的 MainWindow.xaml.cs 文件中，对 `AccessTheWebAsync` 方法进行以下更改。  
   
 -   通过应用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 而不是 <xref:System.Linq.Enumerable.ToArray%2A>，执行查询。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
+    ```  
+  
 -   添加 while 循环，针对集合中的每个任务执行以下步骤。  
   
     1.  等待调用 `WhenAny`，以标识集合中首个完成下载的任务。  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+        ```csharp  
+        Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
+        ```  
+  
     2.  从集合中移除任务。  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+        ```csharp  
+        downloadTasks.Remove(firstFinishedTask);  
+        ```  
+  
     3.  等待 `firstFinishedTask`，由对 `ProcessURLAsync` 的调用返回。 `firstFinishedTask` 变量是一个 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整数。 任务已完成，但需等待它检索已下载网站的长度，如以下示例所示。  
   
-        ```cs  
+        ```csharp  
         int length = await firstFinishedTask;  
         resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);  
-        VBCopy Code  
-        Dim length = Await firstFinishedTask  
         ```  
   
  应多次运行此项目以验证并不总是以相同顺序显示已下载的长度。  
@@ -94,7 +106,7 @@ ms.lasthandoff: 03/13/2017
   
  可以从 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）下载这些项目。  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -230,7 +242,7 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Threading.Tasks.Task.WhenAny%2A>   
  [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   

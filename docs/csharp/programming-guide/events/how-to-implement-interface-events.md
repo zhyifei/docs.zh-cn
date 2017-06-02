@@ -1,27 +1,46 @@
 ---
-title: "如何：实现接口事件（C# 编程指南） | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "事件 [C#], 接口中"
-  - "接口 [C#], 类中的事件实现"
+title: "如何：实现接口事件（C# 编程指南）| Microsoft 文档"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- interfaces [C#], event implementation in classes
+- events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: 4a5b5b862a88d7008049e411e6dc0f020952cc5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
+
 ---
-# 如何：实现接口事件（C# 编程指南）
-[接口](../../../csharp/language-reference/keywords/interface.md)可声明[事件](../../../csharp/language-reference/keywords/event.md)。  下面的示例演示如何在类中实现接口事件。  实现接口事件的规则与实现任何接口方法或属性的规则基本相同。  
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>如何：实现接口事件（C# 编程指南）
+[接口](../../../csharp/language-reference/keywords/interface.md)可以声明[事件](../../../csharp/language-reference/keywords/event.md)。 下面的示例演示如何在类中实现接口事件。 这些规则基本上都与实现任何接口方法或属性时的相同。  
   
-### 在类中实现接口事件  
+### <a name="to-implement-interface-events-in-a-class"></a>在类中实现接口事件  
   
--   在类中声明事件，然后在适当的区域调用该事件。  
+-   在类中声明事件，然后在相应区域中调用它。  
   
     ```  
     namespace ImplementInterfaceEvents  
@@ -57,15 +76,15 @@ caps.handback.revision: 21
     }  
     ```  
   
-## 示例  
- 下面的示例演示如何处理以下的不常见情况：您的类是从两个以上的接口继承的，每个接口都含有同名事件）。  在这种情况下，您至少要为其中一个事件提供显式接口实现。  为事件编写显式接口实现时，必须编写 `add` 和 `remove` 事件访问器。  这两个事件访问器通常由编译器提供，但在这种情况下编译器不能提供。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何处理不太常见的情况：类继承自两个或多个接口，且每个接口都具有相同名称的事件。 在这种情况下，你必须为至少其中一个事件提供显式接口实现。 为事件编写显式接口实现时，还必须编写 `add` 和 `remove` 事件访问器。 通常这些访问器由编译器提供，但在这种情况下编译器不提供它们。  
   
- 您可以提供自己的访问器，以便指定这两个事件是由您的类中的同一事件表示，还是由不同事件表示。  例如，根据接口规范，如果事件应在不同时间引发，则可以将每个事件与类中的一个单独实现关联。  在下面的示例中，订户将形状引用强制转换为 `IShape` 或 `IDrawingObject`，从而确定自己将会接收哪个 `OnDraw` 事件。  
+ 通过提供自己的访问器，可以指定两个事件是由类中的同一个事件表示，还是由不同事件表示。 例如，如果根据接口规范应在不同时间引发事件，可以在类中将每个事件与单独实现关联。 在下面的示例中，订阅服务器确定它们通过将形状引用转换为 `IShape` 或 `IDrawingObject` 接收哪个 `OnDraw` 事件。  
   
  [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
-## 请参阅  
- [C\# 编程指南](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [事件](../../../csharp/programming-guide/events/index.md)   
  [委托](../../../csharp/programming-guide/delegates/index.md)   
  [显式接口实现](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)   

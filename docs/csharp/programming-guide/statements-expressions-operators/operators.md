@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bb97ce3d794c092473f9496ee052c6f790c77fa4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 45f474983747f3b14fac85b8ed00e01fb50853e4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
-在 C# 中，运算符 ** 是应用于表达式或语句中的一个或多个操作数 ** 的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
+在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
   
  下面的 C# 语句包含一个一元运算符和一个操作数。 递增运算符 `++` 修改操作数 `y` 的值。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>运算符、计算和运算符优先级  
- 操作数可以是由任何长度的代码组成的有效表达式，且可包含任意数量的子表达式。 在包含多个运算符的表达式中，运算符的应用顺序由运算符优先级 **、关联性 **和括号确定。  
+ 操作数可以是由任何长度的代码组成的有效表达式，且可包含任意数量的子表达式。 在包含多个运算符的表达式中，运算符的应用顺序由运算符优先级 、关联性 和括号确定。  
   
  每个运算符都具有已定义的优先级。 在包含具有不同优先级级别的多个运算符的表达式中，运算符的优先级确定运算符的计算顺序。 例如，下列语句将 3 赋给 `n1`。  
   
@@ -186,7 +187,7 @@ a = (b = c);
 |`a = (b + c) * (d - e)`|a、b、c、+、d、e、-、*、=|  
   
 ## <a name="operator-overloading"></a>运算符重载  
- 对于自定义类和结构，你可以更改运算符的行为。 此过程称为“运算符重载” **。 有关详细信息，请参阅[可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。  
+ 对于自定义类和结构，你可以更改运算符的行为。 此过程称为“运算符重载” 。 有关详细信息，请参阅[可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。  
   
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参阅[运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)和 [C# 运算符](../../../csharp/language-reference/operators/index.md)。  

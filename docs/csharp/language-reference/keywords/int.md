@@ -1,6 +1,6 @@
 ---
 title: "int（C# 参考）| Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,40 +30,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 910b23cb0048d5d9f21c9c32e8f34219a425622a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 48283ce80bbbff4182362ea9ae6258d31e175e0d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="int-c-reference"></a>int（C# 参考）
-`int` 关键字表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
+
+`int` 表示一种整型类型，该类型根据下表显示的大小和范围存储值。  
   
 |类型|范围|大小|.NET Framework 类型|默认值|  
 |----------|-----------|----------|-------------------------|-------------------|  
 |`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|<xref:System.Int32?displayProperty=fullName>|0|  
   
 ## <a name="literals"></a>文本  
- 可如下例所示声明并初始化 `int` 类型的变量：  
+ 
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `int` 变量。  如果整数文本超出 `int` 的范围（即，如果该值小于 <xref:System.Int32.MinValue?displayProperty=fullName> 或大于 <xref:System.Int32.MaxValue?displayProperty=fullName>，将出现编译错误。 
+
+在下例中，等于 16,342（表示为十进制、十六进制和二进制文本）的整数被分配给 `int` 值。  
   
-```  
-  
-int i = 123;  
-```  
-  
- 如果整数没有后缀，则其类型为以下类型中可表示其值的第一个类型：`int`、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)。 此例中为 `int` 类型。  
+[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
+
+> [!NOTE] 
+> 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
+
+从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+
+[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
+ 
+ 整数文本还可以包括一个表示类型的后缀，尽管没有表示 `int` 类型的后缀。 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型： 
+
+1. `int`
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](../../../csharp/language-reference/keywords/long.md)
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+ 
+在这些示例中，文本 90946 属于类型 `int`。
   
 ## <a name="conversions"></a>转换  
  存在从 `int` 到 [long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 的预定义隐式转换。 例如:   
   
-```  
+```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
 float f = 123;  
 ```  
   
  存在从 [sbyte](../../../csharp/language-reference/keywords/sbyte.md)、[byte](../../../csharp/language-reference/keywords/byte.md)、[short](../../../csharp/language-reference/keywords/short.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 到 `int` 的预定义隐式转换。 例如，如果不使用转换，以下赋值语句会生成编译错误：  
   
-```  
+```csharp  
 long aLong = 22;  
 int i1 = aLong;       // Error: no implicit conversion from long.  
 int i2 = (int)aLong;  // OK: explicit conversion.  
@@ -71,9 +87,8 @@ int i2 = (int)aLong;  // OK: explicit conversion.
   
  另请注意，不存在从浮点类型到 `int` 类型的隐式转换。 例如，除非使用显式强制转换，否则以下语句将生成编译器错误：  
   
-```  
-  
-      int x = 3.0;         // Error: no implicit conversion from double.  
+```csharp  
+int x = 3.0;         // Error: no implicit conversion from double.  
 int y = (int)3.0;    // OK: explicit conversion.  
 ```  
   

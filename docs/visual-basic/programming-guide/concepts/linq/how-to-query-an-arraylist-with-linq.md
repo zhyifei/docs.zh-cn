@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -30,10 +31,8 @@ ms.lasthandoff: 03/13/2017
 当使用 LINQ 来查询非泛型<xref:System.Collections.IEnumerable>这类的集合<xref:System.Collections.ArrayList>，所以必须显式声明的范围变量，以反映在集合中的对象的特定类型的类型。</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> 例如，如果您有<xref:System.Collections.ArrayList>的`Student`对象，您[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)应如下所示︰</xref:System.Collections.ArrayList>  
   
 ```  
-  
 Dim query = From student As Student In arrList   
 ...  
-  
 ```  
   
  通过指定的范围变量的类型，您要强制转换中的每项<xref:System.Collections.ArrayList>到`Student`。</xref:System.Collections.ArrayList>  
@@ -97,3 +96,4 @@ End Module
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+

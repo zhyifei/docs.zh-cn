@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4916c7bc3fc60b25dba8386294f11d07346cb358
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5670e930324740ca1ef16b3d27b0dee0e934d284
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中使用连接到串行端口的调制解调器拨号
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  确定调制解调器连接到的串行端口。 此示例假定调制解调器在 COM1 上。  
   
-2.  使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+2.  使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
      `Using` 块允许应用程序在即使会生成异常的情况下也关闭串行端口。 操作串行端口的所有代码都应出现在此块中，或者出现在 `Try...Catch...Finally` 块中。  
   
@@ -64,10 +65,10 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrMyComputer#27](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-dial-modems-attached-to-serial-ports_4.vb)]  
   
- 此代码示例也可作为 IntelliSense 代码片段。 它位于代码片段选取器的“连接和网络”****中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 它位于代码片段选取器的“连接和网络”中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 此示例需要引用 <xref:System?displayProperty=fullName> 命名空间。  
+ 该示例需要引用 <xref:System?displayProperty=fullName> 命名空间。  
   
 ## <a name="robust-programming"></a>可靠编程  
  此示例假定调制解调器已连接 COM1。 建议使代码允许用户从可用端口列表中选择所需串行端口。 有关详细信息，请参阅[如何：显示可用的串行端口](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 03/13/2017
   
  在本例中，应用程序拨打调制解调器后断开了串行端口。 实际上，需要将数据传入和传出调制解调器。 有关详细信息，请参阅[如何：从串行端口接收字符串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Devices.Ports>   
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [如何：将字符串发送到串行端口](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   

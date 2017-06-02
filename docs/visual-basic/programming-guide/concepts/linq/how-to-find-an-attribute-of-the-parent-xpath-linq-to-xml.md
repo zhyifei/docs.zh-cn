@@ -15,9 +15,10 @@ ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: adaece829b167e432963980f7fb4cbc326b0cfda
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 
@@ -51,7 +52,6 @@ Else
     Console.WriteLine("Results differ")  
 End If  
 Console.WriteLine(att1)  
-  
 ```  
   
  该示例产生下面的输出：  
@@ -63,3 +63,4 @@ id="bk101"
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27c39f8c67a3f8288883a37025797a461c50f940
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -112,9 +113,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果答案为“是”，则你的工作是 **CPU 绑定**。
     
-如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`**（而不使用 `Task.Run`）。  不应使用任务并行库**。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
+如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`（而不使用 `Task.Run`）。  不应使用任务并行库。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
 
-如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。**  如果该工作同时适用于并发和并行，则应考虑使用任务并行库。
+如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。  如果该工作同时适用于并发和并行，则应考虑使用任务并行库。
 
 此外，应始终对代码的执行进行测量。  例如，你可能会遇到这样的情况：多线程处理时，上下文切换的开销高于 CPU 绑定工作的开销。  每种选择都有折衷，应根据自身情况选择正确的折衷方案。
 
@@ -225,11 +226,11 @@ public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
 
 尽管异步编程相对简单，但应记住一些可避免意外行为的要点。
 
-*  `async`**方法需在其主体中具有**`await`**关键字，否则它们将永不暂停！**
+*  `async` **方法需在其主体中具有** `await` **关键字，否则它们将永不暂停！**
 
 这一点需牢记在心。  如果 `await` 未用在 `async` 方法的主体中，C# 编译器将生成一个警告，但此代码将会以类似普通方法的方式进行编译和运行。  请注意这会导致效率低下，因为由 C# 编译器为异步方法生成的状态机将不会完成任何任务。
 
-*   **应将“Async”作为后缀添加到每个所编写的异步方法名称中。**
+*   应将“Async”作为后缀添加到所编写的每个异步方法名称中。
 
 这是 .NET 中的惯例，以便更轻松区分同步和异步方法。 请注意，未由代码显式调用的某些方法（如事件处理程序或 Web 控制器方法）并不一定适用。 由于它们未由代码显式调用，因此对其显式命名并不重要。
 

@@ -1,29 +1,48 @@
 ---
-title: "cref 特性（C# 编程指南） | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "cref [C#]"
+title: "cref 属性（C# 编程指南）| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 781efb81acab79dfbcd72c24761aa3dfdd79940c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
+
 ---
-# cref 特性（C# 编程指南）
-XML 文档标记中的 `cref` 特性表示“代码引用”。它指定标记的内部文本是代码元素，如类型、方法或属性。  诸如 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 这样的文档工具使用 `cref` 特性，自动生成指向所记录类型或成员的页面的超链接。  
+# <a name="cref-attribute-c-programming-guide"></a>cref 特性（C# 编程指南）
+XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 文档工具（例如 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061)）使用 `cref` 属性自动生成指向记录类型或成员的页面的超链接。  
   
-## 示例  
- 以下示例显示用在 [\<see\>](../../../csharp/programming-guide/xmldoc/see.md) 标记中的 `cref` 属性。  
+## <a name="example"></a>示例  
+ 下面的示例演示了在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 标记中使用的 `cref` 属性。  
   
  [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- 程序编译时，产生以下 XML 文件。  例如，请注意，`GetZero` 的 `cref` 特性已由编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。  “M:”前缀表示“方法”，这是 Sandcastle 等文档工具可识别的约定。  有关前缀的完整列表，请参见[处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
+ 在编译时，该程序生成以下 XML 文件。 请注意，例如 `GetZero` 方法的 `cref` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。 “M:”前缀表示“方法”，并且是一种由文档工具（例如 Sandcastle）识别的约定。 有关前缀的完整列表，请参阅[处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
   
 ```  
 <?xml version="1.0"?>  
@@ -39,12 +58,12 @@ XML 文档标记中的 `cref` 特性表示“代码引用”。它指定标记�
         </member>  
         <member name="M:TestNamespace.TestClass.#ctor">  
             <summary>  
-            This sample shows how to specify the <see cref="T:TestNamespace.TestClass"/> constructor as a cref attribute.   
+            This sample shows how to specify the <see cref="T:TestNamespace.TestClass"/> constructor as a cref attribute.   
             </summary>  
         </member>  
         <member name="M:TestNamespace.TestClass.#ctor(System.Int32)">  
             <summary>  
-            This sample shows how to specify the <see cref="M:TestNamespace.TestClass.#ctor(System.Int32)"/> constructor as a cref attribute.   
+            This sample shows how to specify the <see cref="M:TestNamespace.TestClass.#ctor(System.Int32)"/> constructor as a cref attribute.   
             </summary>  
         </member>  
         <member name="M:TestNamespace.TestClass.GetZero">  
@@ -122,6 +141,7 @@ XML 文档标记中的 `cref` 特性表示“代码引用”。它指定标记�
 </doc>  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

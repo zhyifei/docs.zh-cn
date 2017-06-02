@@ -16,14 +16,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe482e4db15ce621e74bdacf9313a3d31ade51b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
-迭代器**可用于逐步迭代集合，例如列表和数组。  
+迭代器可用于逐步迭代集合，例如列表和数组。  
   
  迭代器方法或 `get` 访问器可对集合执行自定义迭代。 迭代器方法使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句时，会记住当前在代码中的位置。 下次调用迭代器函数时，将从该位置重新开始执行。  
   
@@ -50,7 +51,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 }  
 ```  
   
- 迭代器方法或 `get` 访问器的返回类型可以为 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
+ 迭代器方法或 `get` 访问器的返回类型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
  可以使用 `yield break` 语句来终止迭代。  
   
@@ -102,7 +103,7 @@ public static System.Collections.Generic.IEnumerable<int>
 ```  
   
 ##  <a name="BKMK_CollectionClass"></a>创建集合类  
- 在下例中，`DaysOfTheWeek` 类实现了 <xref:System.Collections.IEnumerable> 接口，这要求使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 编译器隐式调用 `GetEnumerator` 方法，此方法返回 <xref:System.Collections.IEnumerator>。  
+ 在以下示例中，`DaysOfTheWeek` 类实现 <xref:System.Collections.IEnumerable> 接口，此操作需要 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 编译器隐式调用 `GetEnumerator` 方法，此方法返回 <xref:System.Collections.IEnumerator>。  
   
  `GetEnumerator` 方法通过使用 `yield return` 语句每次返回 1 个字符串。  
   
@@ -231,9 +232,9 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a>对泛型列表使用迭代器  
- 下例使用 `Stack(Of T)` 泛型类实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口。 `Push` 方法将值分配给类型为 `T` 的数组。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法通过使用 `yield return` 语句返回数组值。  
+ 在以下示例中，`Stack(Of T)` 泛型类实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口。 `Push` 方法将值分配给类型为 `T` 的数组。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法通过使用 `yield return` 语句返回数组值。  
   
- 除泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法以外，还必须实现非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 这是因为 <xref:System.Collections.Generic.IEnumerable%601> 继承自 <xref:System.Collections.IEnumerable>。 非泛型实现遵从泛型实现的规则。  
+ 除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，还必须实现非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。 这是因为从 <xref:System.Collections.IEnumerable> 继承了 <xref:System.Collections.Generic.IEnumerable%601>。 非泛型实现遵从泛型实现的规则。  
   
  本示例使用命名迭代器来支持通过各种方法循环访问同一数据集合。 这些命名迭代器为 `TopToBottom` 和 `BottomToTop` 属性，以及 `TopN` 方法。  
   
@@ -348,7 +349,7 @@ public class Stack<T> : IEnumerable<T>
 ```  
   
 ##  <a name="BKMK_SyntaxInformation"></a>语法信息  
- 迭代器可用作一种方法，或一个 `get` 访问器。 不能在事件、实例构造函数、静态构造函数或静态析构函数中使用迭代器。  
+ 迭代器可用作一种方法，或一个 `get` 访问器。 不能在事件、实例构造函数、静态构造函数或静态终结器中使用迭代器。  
   
  `yield return` 语句中必须存在从表达式类型到迭代器返回类型的隐式转换。  
   
@@ -374,11 +375,11 @@ public class Stack<T> : IEnumerable<T>
   
 -   在第一次 `foreach` 循环迭代之后，修改列表序列。  
   
--   避免在 `foreach` 循环的第一次迭代之前完全加载大型列表。 一个示例是用于加载一批表格行的分页提取。 另一个示例是在 .NET Framework 内实现迭代器的 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法。  
+-   避免在 `foreach` 循环的第一次迭代之前完全加载大型列表。 一个示例是用于加载一批表格行的分页提取。 另一个示例关于 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，该方法在 .NET Framework 中实现迭代器。  
   
 -   在迭代器中封装生成列表。 使用迭代器方法，可生成该列表，然后在循环中产出每个结果。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Collections.Generic>   
  <xref:System.Collections.Generic.IEnumerable%601>   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   

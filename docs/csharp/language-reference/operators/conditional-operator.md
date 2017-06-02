@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3e60516d1f443528c357eb12612b6149f34c1f7e
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="-operator-c-reference"></a>?: 运算符（C# 参考）
@@ -54,7 +55,6 @@ condition ? first_expression : second_expression;
  你可通过使用条件运算符表达可能更确切地要求 `if-else` 构造的计算。 例如，以下代码首先使用 `if` 语句，然后使用条件运算符将整数分类为正整数或负整数。  
   
 ```  
-  
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -66,7 +66,6 @@ else
   
 // ?: conditional operator.  
 classify = (input > 0) ? "positive" : "negative";  
-  
 ```  
   
  条件运算符为右联运算符。 表达式 `a ? b : c ? d : e` 作为 `a ? b : (c ? d : e)` 而非 `(a ? b : c) ? d : e` 进行计算。  
@@ -83,3 +82,4 @@ classify = (input > 0) ? "positive" : "negative";
  [if-else](../../../csharp/language-reference/keywords/if-else.md)   
  [?. 和 ? 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)   
  [??运算符](../../../csharp/language-reference/operators/null-conditional-operator.md)
+

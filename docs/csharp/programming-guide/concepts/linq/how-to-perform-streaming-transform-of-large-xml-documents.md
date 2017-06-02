@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 02919c2e1e76991a3b37533da57b5c3ce4ded3c6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: fc8716c2190ac42b66ba8d76ccfec152ea804c4a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>如何：执行大型 XML 文档的流式转换 (C#)
 有时，你必须转换任意大的 XML 文件并在编写你的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
   
- 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符（如 <xref:System.Linq.Enumerable.OrderBy%2A>）可以循环访问其源、收集所有数据、对数据进行排序，最后生成序列中的第一项。 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会使应用程序保持小的内存需求量。  
+ 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符（如 <xref:System.Linq.Enumerable.OrderBy%2A>）可以循环访问其源、收集所有数据、对数据排序，最后生成序列中的第一项。 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会使应用程序保持小的内存需求量。  
   
  即使使用[如何：流处理可访问标头信息的 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中说明的技术，在试图装配包含转换的文档的 XML 树时，内存占用量也会过大。  
   
- 主要方法有两种。 一种方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延迟处理特性。 另一种方法是创建 <xref:System.Xml.XmlWriter>，并使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 的功能将元素写入 <xref:System.Xml.XmlWriter>。 本主题演示这两种方法。  
+ 主要方法有两种。 一种方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延迟处理特性。 另一种方法是创建一个 <xref:System.Xml.XmlWriter> 并使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 的功能将元素写入 <xref:System.Xml.XmlWriter>。 本主题演示这两种方法。  
   
 ## <a name="example"></a>示例  
  以下示例在[如何：流处理可访问标头信息的 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的示例基础上建立。  
@@ -213,7 +214,7 @@ static void Main(string[] args)
   
  本示例与本主题中的前一示例使用同一个源文档 Source.xml。 它也生成完全相同的输出。  
   
- 使用 <xref:System.Xml.Linq.XStreamingElement> 流式处理输出 XML 要优于写入 <xref:System.Xml.XmlWriter>。  
+ 使用 <xref:System.Xml.Linq.XStreamingElement> 对输出 XML 进行流式处理胜于写入到 <xref:System.Xml.XmlWriter>。  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  

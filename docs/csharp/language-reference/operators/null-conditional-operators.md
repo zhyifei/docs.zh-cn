@@ -25,10 +25,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0ecdf3c610bb09d1ecdf01e25b75c8f01802e852
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 61a093677354ba3a960fb5714963a1205d24ed06
+ms.openlocfilehash: 876b7c99ca9249e0a2b9cbd036c38e368228ac9f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/25/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>NULL 条件运算符（C# 和 Visual Basic）
@@ -38,22 +39,24 @@ ms.lasthandoff: 03/13/2017
 int? length = customers?.Length; // null if customers is null   
 Customer first = customers?[0];  // null if customers is null  
 int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
-  
 ```  
   
 ```vb  
-Dim length = customers?.Length  ‘’ null if customers is null  
-Dim first as Customer = customers?(0);  ‘’ null if customers is null  
-Dim count as Integer? = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
-  
+Dim length = customers?.Length  ' null if customers is null  
+Dim first as Customer = customers?(0)  ' null if customers is null  
+Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
  最后一个示例演示 NULL 条件运算符会短路。  如果条件成员访问和索引操作链中的某个操作返回 NULL，则该链其余部分的执行将停止。  表达式中优先级较低的其他操作将继续。  例如，以下的示例中的 `E` 将始终执行，`??` 和 `==` 操作将执行。  
   
-```vb-c#  
+```csharp
 A?.B?.C?[0] ?? E  
 A?.B?.C?[0] == E  
-  
+```
+
+```vb
+A?.B?.C?(0) ?? E  
+A?.B?.C?(0) == E  
 ```  
   
  NULL 条件成员访问的另一个用途是使用非常少的代码以线程安全的方式调用委托。  旧方法需要如下所示的代码：  
@@ -61,30 +64,31 @@ A?.B?.C?[0] == E
 ```csharp  
 var handler = this.PropertyChanged;  
 if (handler != null)  
-    handler(…)  
-  
+    handler(…);
 ```  
   
 ```vb  
 Dim handler = AddressOf(Me.PropertyChanged)  
 If handler IsNot Nothing  
     Call handler(…)  
-  
 ```  
   
  新的方法是要简单得多：  
   
-```vb-c#  
+```csharp
 PropertyChanged?.Invoke(e)  
-  
+```  
+
+```vb
+PropertyChanged?.Invoke(e)
 ```  
   
- 新方法是线程安全的，因为编译器生成代码以评估 `PropertyChanged`（仅一次），从而使结果保持在临时变量中。  
+ 新方法是线程安全的，因为编译器生成的代码仅评估 `PropertyChanged` 一次，从而使结果保持在临时变量中。  
   
  你需要显式调用 `Invoke` 方法，因为不存在 NULL 条件委托调用语法 `PropertyChanged?(e)`。  有太多不明确的分析情况来允许它。  
   
 ## <a name="language-specifications"></a>语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
  有关详细信息，请参阅 [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)。  
   
@@ -94,3 +98,4 @@ PropertyChanged?.Invoke(e)
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)   
  [Visual Basic 编程指南](../../../visual-basic/programming-guide/index.md)
+

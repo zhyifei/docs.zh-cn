@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,6 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
     /**   
      * <summary>text</summary>   
     */  
-  
     ```  
   
 -   编译器识别出第二和第三行开头的共同模式“*”。 此模式不包括在输出中。  
@@ -105,3 +105,4 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
  [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

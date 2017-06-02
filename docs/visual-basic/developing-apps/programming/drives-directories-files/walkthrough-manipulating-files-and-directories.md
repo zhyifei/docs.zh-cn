@@ -41,30 +41,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89137b3c927a7ac8ed126f2be3695c4aa72a85fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>演练：在 Visual Basic 中操作文件和目录
 本演练简单介绍 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中文件 I/O 的基础知识。 描述如何创建列出并检查目录中文本文件的小型应用程序。 对于所选的每个文本文件，该应用程序都会提供文件属性和内容的第一行。 可以选择将信息写入日志文件中。  
   
- 本演练使用 `My.Computer.FileSystem Object` 的成员，这些成员可从 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中获得。 有关详细信息，请参阅 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本演练末尾提供等效示例，该示例使用来自 <xref:System.IO> 命名空间的类。  
+ 本演练使用 `My.Computer.FileSystem Object` 的成员，这些成员可从 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中获得。 有关更多信息，请参见<xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本演练结尾部分提供等效示例，该示例使用来自 <xref:System.IO> 命名空间的类。  
   
 [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
 ### <a name="to-create-the-project"></a>创建项目  
   
-1.  在“文件”****菜单上，单击“新建项目”****。  
+1.  在“文件”菜单上，单击“新建项目”。  
   
-     此时将出现 **“新建项目”** 对话框。  
+     此时将出现 “新建项目” 对话框。  
   
-2.  在“已安装的模板”****窗格中，展开“Visual Basic”****，然后单击“Windows”****。 在中间的“模板”****窗格中，单击“Windows 窗体应用程序”****。  
+2.  在“已安装的模板”窗格中，展开“Visual Basic”，然后单击“Windows”。 在中间的“模板”窗格中，单击“Windows 窗体应用程序”。  
   
-3.  在“名称”****框中，键入 `FileExplorer` 以设置项目名称，然后单击“确定”****。  
+3.  在“名称”框中，键入 `FileExplorer` 以设置项目名称，然后单击“确定”。  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 会将项目添加到“解决方案资源管理器”****中，并打开 Windows 窗体设计器。  
+     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 会将项目添加到“解决方案资源管理器”中，并打开 Windows 窗体设计器。  
   
 4.  将下表中的控件添加到窗体，并设置控件属性相应的值。  
   
@@ -84,19 +85,19 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     `FolderBrowserDialog1.ShowDialog` 调用将打开“浏览文件夹”****对话框。 用户单击“确定”****后，将 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 属性作为参数发送给下一步中添加的 `ListFiles` 方法。  
+     `FolderBrowserDialog1.ShowDialog` 调用将打开“浏览文件夹”对话框。 用户单击“确定”后，<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 属性作为参数发送给在下一步中添加的 `ListFiles` 方法。  
   
 3.  添加以下 `ListFiles` 方法。  
   
      [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
-     此代码首先会清除“ListBox”****。  
+     此代码首先会清除“ListBox”。  
   
-     然后 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 方法将检索该目录中每个文件的字符串集合。 `GetFiles` 方法接受一个搜索模式参数来检索与特定模式匹配的文件。 在此示例中，仅返回具有 .txt 扩展名的文件。  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 方法然后检索字符串集合，一个字符串对应目录中的一个文件。 `GetFiles` 方法接受一个搜索模式参数来检索与特定模式匹配的文件。 在此示例中，仅返回具有 .txt 扩展名的文件。  
   
-     通过 `GetFiles` 方法返回的字符串随后将添加到“ListBox”****中。  
+     通过 `GetFiles` 方法返回的字符串随后将添加到“ListBox”中。  
   
-4.  运行该应用程序。 单击“浏览”****按钮。 在“浏览文件夹”****对话框中，浏览到包含 .txt 文件的文件夹，然后选择该文件夹，并单击“确定”****。  
+4.  运行该应用程序。 单击“浏览”按钮。 在“浏览文件夹”对话框中，浏览到包含 .txt 文件的文件夹，然后选择该文件夹，并单击“确定”。  
   
      `ListBox` 包含所选文件夹中 .txt 文件的列表。  
   
@@ -112,19 +113,19 @@ ms.lasthandoff: 03/13/2017
   
      该代码验证是否在 `ListBox` 中选中某项。 然后，将从 `ListBox` 获取文件路径项。 <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 方法用于检查文件是否仍然存在。  
   
-     该文件路径作为参数发送给下一步中添加的 `GetTextForOutput` 方法。 此方法返回一个包含文件信息字符串。 该文件信息将出现在“MessageBox”****中。  
+     该文件路径作为参数发送给下一步中添加的 `GetTextForOutput` 方法。 此方法返回一个包含文件信息字符串。 该文件信息将出现在“MessageBox”中。  
   
 3.  添加以下 `GetTextForOutput` 方法。  
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     该代码使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法来获取文件参数。 该文件参数将添加到 <xref:System.Text.StringBuilder>。  
+     该代码使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法来获取文件参数。 文件参数添加到 <xref:System.Text.StringBuilder>。  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法会将文件内容读取到 <xref:System.IO.StreamReader>。 该内容的第一行是从 `StreamReader` 获取的，然后将添加到 `StringBuilder`。  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法将文件内容读取到 <xref:System.IO.StreamReader>。 该内容的第一行是从 `StreamReader` 获取的，然后将添加到 `StringBuilder`。  
   
-4.  运行该应用程序。 单击“浏览”****，然后浏览到包含 .txt 文件的文件夹。 单击“确定”****。  
+4.  运行该应用程序。 单击“浏览”，然后浏览到包含 .txt 文件的文件夹。 单击“确定”。  
   
-     在 `ListBox` 中选择一个文件，然后单击“检查”****。 `MessageBox` 显示文件信息。  
+     在 `ListBox` 中选择一个文件，然后单击“检查”。 `MessageBox` 显示文件信息。  
   
 5.  停止运行该应用程序。  
   
@@ -136,9 +137,9 @@ ms.lasthandoff: 03/13/2017
   
      该代码设置日志文件路径以便将日志文件放在与所选文件相同的目录中。 日志项目的文本设置为当前日期和文件信息后的时间。  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法用于创建日志条目，其中 `append` 参数设置为 `True`。  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法，其 `append` 参数设置为 `True`，用于创建日志条目。  
   
-2.  运行该应用程序。 浏览到一个文本文件，在 `ListBox` 中选中它，选择“保存结果”****复选框，然后再单击“检查”****。 验证日志条目是否写入 `log.txt` 文件。  
+2.  运行该应用程序。 浏览到一个文本文件，在 `ListBox` 中选中它，选择“保存结果”复选框，然后再单击“检查”。 验证日志条目是否写入 `log.txt` 文件。  
   
 3.  停止运行该应用程序。  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 03/13/2017
   
      此代码将文件夹浏览器的默认目录设置为当前目录。  
   
-3.  运行该应用程序。 第一次单击“浏览”****时，“浏览文件夹”****对话框将打开到当前目录。  
+3.  运行该应用程序。 第一次单击“浏览”时，“浏览文件夹”对话框将打开到当前目录。  
   
 4.  停止运行该应用程序。  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 03/13/2017
   
 5.  在 `Form1_Load` 事件处理程序末尾添加对 `SetEnabled` 的调用。  
   
-6.  运行该应用程序。 如果在 `ListBox` 中未选中任何项，将禁用“保存结果”****复选框和“检查”****按钮。  
+6.  运行该应用程序。 如果在 `ListBox` 中未选中任何项，将禁用“保存结果”复选框和“检查”按钮。  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整示例  
  以下是完整示例。  
@@ -184,7 +185,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.IO>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   

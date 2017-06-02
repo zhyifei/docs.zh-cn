@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 67b30a93fd046a76dca4cc6abe273426d818aaf5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9aaf49c685498bce451eb53a35a56d8a8fde928c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-async-for-file-access-c"></a>使用异步进行文件访问 (C#)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
 -   异步任务可以轻松地并行运行。  
   
 ## <a name="running-the-examples"></a>运行示例  
- 若要运行本主题中的示例，可创建“WPF 应用程序”****或“Windows 窗体应用程序”****，然后添加一个“按钮”****。 在按钮的 `Click` 事件中，添加对每个示例的第一个方法的调用。  
+ 若要运行本主题中的示例，可创建“WPF 应用程序”或“Windows 窗体应用程序”，然后添加一个“按钮”。 在按钮的 `Click` 事件中，添加对每个示例的第一个方法的调用。  
   
  在下面的示例中，包括以下 `using` 语句。  
   
@@ -57,7 +58,7 @@ using System.Threading.Tasks;
 ## <a name="use-of-the-filestream-class"></a>使用 FileStream 类  
  本主题中的示例使用 <xref:System.IO.FileStream> 类，该类包含可导致在操作系统级别出现异步 I/O 的选项。 使用此选项可避免在许多情况下阻止 ThreadPool 线程。 若要启用此选项，可在构造函数调用中指定 `useAsync=true` 或 `options=FileOptions.Asynchronous` 参数。  
   
- 如果通过指定文件路径直接打开 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>，则不能将此选项用于二者。 但是，如果为这二者提供 <xref:System.IO.FileStream> 类打开的 <xref:System.IO.Stream>，则可以使用此选项。 请注意，即使 ThreadPool 线程受到阻止，UI 应用中的异步调用仍然更快，因为 UI 线程在等待期间不会受到阻止。  
+ 如果通过指定文件路径直接打开 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>，则无法将此选项与这二者配合使用。 但是，如果为二者提供已由 <xref:System.IO.FileStream> 类打开的 <xref:System.IO.Stream>，则可以使用此选项。 请注意，即使 ThreadPool 线程受到阻止，UI 应用中的异步调用仍然更快，因为 UI 线程在等待期间不会受到阻止。  
   
 ## <a name="writing-text"></a>编写文本  
  下面的示例将文本写入文件。 在每个 await 语句中，该方法会立即退出。 文件 I/O 完成后，该方法将在 await 语句后面的语句中继续。 请注意，async 修饰符在使用 await 语句的方法的定义中。  
@@ -94,7 +95,7 @@ await theTask;
  第一条语句返回任务，并会导致文件处理启动。 具有 await 的第二条语句将使方法立即退出并返回一个不同的任务。 文件处理稍后完成后，执行将返回到 await 后面的语句中。 有关详细信息，请参阅[异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
   
 ## <a name="reading-text"></a>读取文本  
- 下面的示例读取文件中的文本。 在此情况中，文本将会缓冲并被放入 <xref:System.Text.StringBuilder>。 与前一示例不同，await 的计算将生成一个值。 <xref:System.IO.Stream.ReadAsync%2A> 方法将返回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此当操作完成后，await 的计算将生成一个 `Int32` 值 (`numRead`)。 有关详细信息，请参阅[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+ 下面的示例读取文件中的文本。 将会缓冲文本，并且在此情况下，会将其放入 <xref:System.Text.StringBuilder>。 与前一示例不同，await 的计算将生成一个值。 <xref:System.IO.Stream.ReadAsync%2A> 方法返回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在操作完成后 await 的评估会得出 `Int32` 值 (`numRead`)。 有关详细信息，请参阅[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ```csharp  
 public async void ProcessRead()  
@@ -188,7 +189,7 @@ public async void ProcessWriteMult()
 }  
 ```  
   
- 可在使用 <xref:System.IO.Stream.WriteAsync%2A> 和<xref:System.IO.Stream.ReadAsync%2A> 方法时指定 <xref:System.Threading.CancellationToken>，后者可用于取消操作的中间流。 有关详细信息，请参阅[微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) 和 [Cancellation in Managed Threads](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3)（托管线程中的取消）。  
+ 当使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法时，可以指定可用于取消操作中间流的 <xref:System.Threading.CancellationToken>。 有关详细信息，请参阅[微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) 和 [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md)（托管线程中的取消）。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   

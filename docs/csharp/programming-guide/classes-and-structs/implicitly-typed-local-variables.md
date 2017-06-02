@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59bb61d8dd530e87f342d38acb131fab5e25febf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
+ms.openlocfilehash: 21180ce100f81e38b327347e548929a47a2e029d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型的局部变量（C# 编程指南）
-可以向局部变量提供 `var` 的推断“类型”而不是显式类型。 `var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。 推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。 有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
+可声明局部变量而无需提供显式类型。 `var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。 推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。 有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
   
  以下示例演示使用 `var` 声明局部变量的各种方式：  
   
@@ -107,3 +108,4 @@ ms.lasthandoff: 03/13/2017
  [for](../../../csharp/language-reference/keywords/for.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
+

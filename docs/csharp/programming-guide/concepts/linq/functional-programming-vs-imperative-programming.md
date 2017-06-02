@@ -14,10 +14,11 @@ ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f15f1b6b55a4cb7d036a89d1636aab166740037d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9e16daec1c830f4541229beaa10b079e683914fe
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -25,9 +26,9 @@ ms.lasthandoff: 03/13/2017
 本主题对函数编程和更传统的命令性（过程性）编程进行比较。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>函数编程与命令式编程  
- 为支持使用纯函数方法解决问题，特此创建了函数编程**范例。 函数编程是一种声明性编程**形式。 相比之下，大多数主流语言，包括面向对象的编程 (OOP) 语言（如 C#、Visual Basic、C++ 和 Java）主要都是为支持命令性**（过程性）编程而设计的。  
+ 为支持使用纯函数方法解决问题，特此创建了函数编程范例。 函数编程是一种声明性编程形式。 相比之下，大多数主流语言，包括面向对象的编程 (OOP) 语言（如 C#、Visual Basic、C++ 和 Java）主要都是为支持命令性（过程性）编程而设计的。  
   
- 使用命令性方法时，开发人员编写的代码应严格细致地说明计算机为完成目标而必须执行的步骤。 这有时称为算法**编程。 相比之下，函数方法涉及将问题编成一组要执行的函数。 您要仔细地定义每个函数的输入值和每个函数的返回值。 下表说明了这两种方法之间的一些总体差别。  
+ 使用命令性方法时，开发人员编写的代码应严格细致地说明计算机为完成目标而必须执行的步骤。 这有时称为算法编程。 相比之下，函数方法涉及将问题编成一组要执行的函数。 您要仔细地定义每个函数的输入值和每个函数的返回值。 下表说明了这两种方法之间的一些总体差别。  
   
 |特征|命令性方法|函数方法|  
 |--------------------|-------------------------|-------------------------|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/13/2017
  虽然多数语言旨在支持特定编程范例，但许多通用语言具有很高的灵活性，能够支持多个范例。 例如，包含函数指针的多数语言都可用于可靠地支持函数编程。 此外，C# 包含显式语言扩展以支持函数编程，包括 lambda 表达式和类型推理。 LINQ 技术是一种声明性函数编程形式。  
   
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的函数编程  
- 很多 XSLT 开发人员熟悉纯函数方法。 开发 XSLT 样式表的最有效方式是将每个模板视为一个独立的、可组合的转换。 执行顺序完全不重要。 XSLT 不允许副作用（但用于执行过程代码的转义机制除外，它可能引入可导致功能不纯的副作用）。 不过，虽然 XSLT 是一个有效的工具，但其某些特性并不是最佳的。 例如，在 XML 中表示编程构造会使代码相对繁琐，因此难于维护。 而且，流控制对递归的依赖性很强，因此会使代码的可读性较差。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)。  
+ 很多 XSLT 开发人员熟悉纯函数方法。 开发 XSLT 样式表的最有效方式是将每个模板视为一个独立的、可组合的转换。 执行顺序完全不重要。 XSLT 不允许副作用（但用于执行过程代码的转义机制除外，它可能引入可导致功能不纯的副作用）。 不过，虽然 XSLT 是一个有效的工具，但其某些特性并不是最佳的。 例如，在 XML 中表示编程构造会使代码相对繁琐，因此难于维护。 而且，流控制对递归的依赖性很强，因此会使代码的可读性较差。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)。  
   
  但 XSLT 在使用纯函数方法将 XML 从一种形状转换为另一种形状方面确有其自身的价值。 使用 LINQ to XML 的纯函数编程在许多方面与 XSLT 类似。 但 LINQ to XML 和 C# 中引入的编程构造允许你编写比 XSLT 更具可读性且更容易维护的纯函数转换。  
   
@@ -64,5 +65,5 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另请参阅  
  [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT 转换](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
+ [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)   
  [重构为纯函数 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

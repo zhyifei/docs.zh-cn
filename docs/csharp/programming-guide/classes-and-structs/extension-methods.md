@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b12c4b20f65f8cd2b68a55c5d2548b289a560c3c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d65b4050287289df419685127cdbbb18f52ec719
+ms.openlocfilehash: a214f129424fd458decf473ef94ec3c5ed6eed3c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>扩展方法（C# 编程指南）
 扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。 扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。 对于用 C# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法之间没有明显的差异。  
   
- 最常见的扩展方法是将查询功能添加到现有 <xref:System.Collections.IEnumerable?displayProperty=fullName> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 类型的 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 标准查询运算符。 若要使用标准查询运算符，请先使用 `using System.Linq` 指令将它们置于范围中。 然后，实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型似乎具有实例方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 当在 <xref:System.Collections.Generic.IEnumerable%601> 类型（例如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>）的实例后键入“dot”时，可以在 IntelliSense 语句完成中看到这些附加方法。  
+ 最常见的扩展方法是 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 标准查询运算符，它将查询功能添加到现有的 <xref:System.Collections.IEnumerable?displayProperty=fullName> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 类型。 若要使用标准查询运算符，请先使用 `using System.Linq` 指令将它们置于范围中。 然后，任何实现了 <xref:System.Collections.Generic.IEnumerable%601> 的类型看起来都具有 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等实例方法。 在 <xref:System.Collections.Generic.IEnumerable%601> 类型的实例（如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>）后键入“dot”时，可以在 IntelliSense 语句完成中看到这些附加方法。  
   
  下面的示例演示如何对一个整数数组调用标准查询运算符 `OrderBy` 方法。 括号里面的表达式是一个 lambda 表达式。 很多标准查询运算符采用 Lambda 表达式作为参数，但这不是扩展方法的必要条件。 有关详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
   
  扩展方法被定义为静态方法，但它们是通过实例方法语法进行调用的。 它们的第一个参数指定该方法作用于哪个类型，并且该参数以 [this](../../../csharp/language-reference/keywords/this.md) 修饰符为前缀。 仅当你使用 `using` 指令将命名空间显式导入到源代码中之后，扩展方法才位于范围中。  
   
- 下面的示例演示为 <xref:System.String?displayProperty=fullName> 类定义的扩展方法。 请注意，它是在非嵌套的、非泛型静态类内部定义的：  
+ 下面的示例演示为 <xref:System.String?displayProperty=fullName> 类定义的一个扩展方法。 请注意，它是在非嵌套的、非泛型静态类内部定义的：  
   
  [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
@@ -95,7 +96,7 @@ using System.Linq;
   
  在使用扩展方法来扩展你无法更改其源代码的类型时，你需要承受该类型实现中的更改会导致扩展方法失效的风险。  
   
- 如果你确实为给定类型实现了扩展方法，请记住以下几点：  
+ 如果确实为给定类型实现了扩展方法，请记住以下几点：  
   
 -   如果扩展方法与该类型中定义的方法具有相同的签名，则扩展方法永远不会被调用。  
   
@@ -112,3 +113,4 @@ using System.Linq;
  [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386) （语言间扩展方法的互操作性）  
  [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387) （扩展方法和扩充委托）  
  [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388)（扩展方法绑定和错误报告）
+

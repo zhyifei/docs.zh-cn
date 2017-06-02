@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5c3012ce057387497f97e713eb625ac2f2a7d1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
+ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="c-reference"></a>C# 参考
@@ -64,9 +65,10 @@ ms.lasthandoff: 03/13/2017
  提供指向 Microsoft Word 格式中的 C# 语言规范的最新版本的指针。  
   
 ## <a name="related-sections"></a>相关章节  
+<!--
  [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
- 在 C# 开发人员中心提供不断增多的 C# 常见问题列表。  
-  
+ Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
+-->  
  [Microsoft 知识库中的 C# 知识库文章](http://go.microsoft.com/fwlink/?LinkId=70368)  
  打开 Microsoft 搜索页面，以搜索 MSDN 上提供的知识库文章。  
   
@@ -78,3 +80,4 @@ ms.lasthandoff: 03/13/2017
   
  [C# 编程指南](../../csharp/programming-guide/index.md)  
  包括有关如何使用 C# 编程语言的信息。
+

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df6e493f4dfb72ac59951832773cc818627f4c2f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 7fea22be3b98c3218d173e5d80f1f22ef7ecf7e2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -29,6 +30,8 @@ ms.lasthandoff: 03/13/2017
 + 创建数据管道，以便数据通过迭代器方法在管道中有效流动。
 
 C# 语言提供了适用于这两种方案的功能。 本文概述了这些功能。
+
+在此教程中，将执行多步操作。 执行每步操作后，都可以运行应用程序，并查看进度。 还可以[查看或下载本主题的已完成示例](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 执行循环访问
 
@@ -47,7 +50,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>使用迭代器方法的枚举源
 
-借助 C# 语言的另一个强大功能，能够生成创建枚举源的方法。 这些方法称为“迭代器方法”**。 迭代器方法用于定义请求时如何在序列中生成对象。 使用 `yield return` 上下文关键字定义迭代器方法。 
+借助 C# 语言的另一个强大功能，能够生成创建枚举源的方法。 这些方法称为“迭代器方法”。 迭代器方法用于定义请求时如何在序列中生成对象。 使用 `yield return` 上下文关键字定义迭代器方法。 
 
 可编写此方法以生成从 0 到 9 的整数序列：
 

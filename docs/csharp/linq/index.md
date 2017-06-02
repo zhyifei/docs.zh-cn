@@ -1,6 +1,6 @@
 ---
-title: "语言集成查询 (LINQ)"
-description: "介绍了 C 中的语言集成查询 (LINQ)#"
+title: "语言集成查询 (LINQ) | Microsoft Docs"
+description: "介绍了 C# 中的语言集成查询 (LINQ)"
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 099775f5849eefca98a83d2986c5ecbb92b88782
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 21e4420d385bff07173b265782dd23f89f61e797
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 
@@ -41,16 +42,16 @@ ms.lasthandoff: 03/13/2017
   
 -   通常，我们建议在编写 LINQ 查询时尽量使用查询语法，并在必要时尽可能使用方法语法。 这两种不同的形式在语义或性能上毫无差异。 查询表达式通常比使用方法语法编写的等同表达式更具可读性。  
   
--   一些查询操作（如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>）没有等同的查询表达式子句，因此必须表示为方法调用。 可以各种方式结合使用方法语法和查询语法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
+-   一些查询操作（如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>）没有等效的查询表达式子句，因此必须表示为方法调用。 可以各种方式结合使用方法语法和查询语法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
   
--   查询表达式可被编译成表达式树或委托，具体视应用查询的类型而定。 <xref:System.Collections.Generic.IEnumerable%601> 查询被编译成委托。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查询被编译成表达式树。 有关详细信息，请参阅[表达式树](../expression-trees.md)。  
+-   查询表达式可被编译成表达式树或委托，具体视应用查询的类型而定。 <xref:System.Collections.Generic.IEnumerable%601> 查询编译为委托。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查询编译为表达式树。 有关详细信息，请参阅[表达式树](../expression-trees.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 
 若要详细了解 LINQ，请先自行熟悉[查询表达式基础知识](query-expression-basics.md)中的一些基本概念，然后再阅读感兴趣的 LINQ 技术的相关文档：   
 -   XML 文档：[LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET 实体框架：[LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d)  
+-   ADO.NET 实体框架：[LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
 -   .NET 集合、文件、字符串等：[LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
 

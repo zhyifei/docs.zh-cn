@@ -14,10 +14,11 @@ ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a47129d3c84d7bfb49929529a50b064c8424b4c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: bcd325d72ac14f2b33860fbc9e2662c33ca2703d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/13/2017
  有两个返回元素集合、名称为 `Elements` 的轴：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法。 可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。  
   
 ## <a name="example"></a>示例  
- 此示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 来查找所有 `PurchaseOrder` 元素中的所有 `Name` 元素中的 `Address` 元素。  
+ 本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。  
   
  本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
@@ -45,7 +46,7 @@ foreach (XElement e in names)
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
 <Name>Cristian Osorio</Name>  
@@ -54,7 +55,7 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- 此操作的原理是将 `Elements` 轴的其中一个实现作为 <xref:System.Xml.Linq.XContainer> 的 <xref:System.Collections.Generic.IEnumerable%601> 上的扩展方法。 <xref:System.Xml.Linq.XElement> 派生自 <xref:System.Xml.Linq.XContainer>，因此你可以针对 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法的调用结果调用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法。  
+ 此方法有效是因为其中有一个 `Elements` 轴实现充当 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XContainer> 的扩展方法。 <xref:System.Xml.Linq.XElement> 是从 <xref:System.Xml.Linq.XContainer> 派生的，因此可以对调用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法的结果调用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法。  
   
 ## <a name="example"></a>示例  
  有时，当可能存在或不存在间隔上级时，您希望在特定的元素深度，检索所有的元素。 例如，在下面的文档中，您可能要检索属于 `ConfigParameter` 元素的子元素的所有 `Customer` 元素，而不是属于 `ConfigParameter` 元素的子元素的 `Root`。  
@@ -81,7 +82,7 @@ foreach (XElement e in names)
 </Root>  
 ```  
   
- 若要实现此目的，可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 轴，如下所示：  
+ 若要执行此操作，您可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 轴，如下所示：  
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
@@ -94,7 +95,7 @@ foreach (XElement cp in configParameters)
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
 <ConfigParameter>SecondConfigParameter</ConfigParameter>  
 ```  
@@ -119,7 +120,7 @@ foreach (XElement e in names)
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Tai Yee</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Cristian Osorio</aw:Name>  

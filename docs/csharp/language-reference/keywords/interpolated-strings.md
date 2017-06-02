@@ -26,17 +26,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>内插字符串（C# 参考）
 
-用于构造字符串。  内插字符串类似于包含内插表达式**的模板字符串。  内插字符串返回的字符串可替换内插表达式并且包含其字符串表示形式。  
+用于构造字符串。  内插字符串类似于包含内插表达式的模板字符串。  内插字符串返回的字符串可替换内插表达式并且包含其字符串表示形式。  
 
-与[复合格式字符串](../../../standard/base-types/composite-format.md#composite-format-string)相比，内插字符串的参数更易于理解。  例如，内插字符串  
+与[复合格式字符串](../../../standard/base-types/composite-formatting.md#composite-format-string)相比，内插字符串的参数更易于理解。  例如，内插字符串  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 
@@ -57,7 +58,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text>
 
 - *field-width* 是一个带符号整数，表示字段中的字符数。 如果为正数，则字段右对齐；如果为负数，则左对齐。 
 
-- “格式字符串”**是适合正在设置格式的对象类型的格式字符串。 例如，对于 @System.DateTime 值，它可能是标准的日期和时间格式字符串，例如“D”或“d”。
+- “格式字符串”是适合正在设置格式的对象类型的格式字符串。 例如，对于 @System.DateTime 值，它可能是标准的日期和时间格式字符串，例如“D”或“d”。
 
  可以在可使用字符串的任何位置使用内插字符串。  每次执行带内插字符串的代码时，都会计算内插字符串。 这有助于分隔内插字符串的定义和计算结果。  
   
@@ -77,22 +78,22 @@ $"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text>
 
    这是字符串解释的最终结果。 出现的所有双大括号（“{{”和“}}”）都转换为单大括号。 
 
-2. 将内插字符串转换为 <xref:System.IFormattable> 变量，使用此变量可通过单个<xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。 对于包括诸如各区域性的正确数字和日期格式之类的内容，这种转换很有用。  出现的所有双大括号（“{{”和“}}”）仍保留为双大括号，直至通过显式或隐式调用 @System.Object.ToString 方法格式化字符串。  包含的所有内插表达式都转换为 {0}、{1} 等等。  
+2. 将内插字符串转换为 <xref:System.IFormattable> 变量，使用此变量可通过单个 <xref:System.IFormattable> 实例创建多个包含区域性特定内容的结果字符串。 对于包括诸如各区域性的正确数字和日期格式之类的内容，这种转换很有用。  出现的所有双大括号（“{{”和“}}”）仍保留为双大括号，直至通过显式或隐式调用 @System.Object.ToString 方法格式化字符串。  包含的所有内插表达式都转换为 {0}、{1} 等等。  
 
-   下例使用反射来显示内插字符串中所创建 <xref:System.IFormattable> 变量的成员以及字段和属性值。 并将 <xref:System.IFormattable> 变量传递给 @System.Console(System.String) 方法。
+   以下示例使用反射来显示内插字符串中所创建的 <xref:System.IFormattable> 变量的成员以及字段和属性值。 并将 <xref:System.IFormattable> 变量传递给 @System.Console(System.String) 方法。
 
    [!code-cs[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
 
    请注意，只能通过使用反射来检查内插字符串。 如果将其传递给字符串格式设置方法，例如 @System.Console.WriteLine(System.String)，则会解析其格式项并返回结果字符串。 
 
-3. 将内插字符串转换为表示复合格式字符串的 <xref:System.FormattableString> 变量。 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。  此外，<xref:System.FormattableString> 还包括 <xref:System.FormattableString.ToString> 重载，可为 @System.Globalization.InvariantCulture 和 @System.Globalization.CurrentCulture 生成结果字符串。  在设置格式之前，出现在所有双大括号（“{{”和“}}”）保留为双括号。  包含的所有内插表达式都转换为 {0}、{1} 等等。  
+3. 将内插字符串转换为表示复合格式字符串的 <xref:System.FormattableString> 变量。 例如，检查复合格式字符串及其呈现为结果字符串的方式可能有助于在生成查询时防止注入攻击。  <xref:System.FormattableString> 还包括 <xref:System.FormattableString.ToString> 重载，可为 @System.Globalization.InvariantCulture 和 @System.Globalization.CurrentCulture 生成结果字符串。  出现的所有双大括号（“{{”和“}}”）都保留为双大括号，直至格式化。  包含的所有内插表达式都转换为 {0}、{1} 等等。  
 
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 
 ## <a name="language-specification"></a>语言规范  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.IFormattable?displayProperty=fullName>   
  <xref:System.FormattableString?displayProperty=fullName>   
  [C# 参考](../../../csharp/language-reference/index.md)   

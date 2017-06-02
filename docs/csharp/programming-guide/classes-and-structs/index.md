@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6023f09a9a355c9ab00252f9e2ac6cc45abf42ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>类和结构（C# 编程指南）
@@ -76,9 +77,9 @@ ms.lasthandoff: 03/13/2017
   
 -   [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [析构函数](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [事件](../../../csharp/programming-guide/events/index.md)  
+  
+-   [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [索引器](../../../csharp/programming-guide/indexers/index.md)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/13/2017
  一些方法和属性可供类或结构外部的代码（称为“*客户端代码*”）调用或访问。 另一些方法和属性只能在类或结构本身中使用。 请务必限制代码的可访问性，仅供预期的客户端代码进行访问。 使用访问修饰符 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、`protected internal` 和 [private](../../../csharp/language-reference/keywords/private.md) 可指定类型及其成员对客户端代码的可访问性。 可访问性的默认值为 `private`。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
 ### <a name="inheritance"></a>继承  
- 类（而非结构）支持继承的概念。 派生自另一个类（*基类*）的类自动包含基类的所有公共、受保护和内部成员（构造函数和析构函数除外）。 有关详细信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)和[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+ 类（而非结构）支持继承的概念。 派生自另一个类（基类）的类自动包含基类的所有公共、受保护和内部成员（其构造函数和终结器除外）。 有关详细信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)和[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
   
  可以将类声明为 [abstract](../../../csharp/language-reference/keywords/abstract.md)，即一个或多个方法没有实现代码。 尽管抽象类无法直接实例化，但可以作为提供缺少实现代码的其他类的基类。 类还可以声明为 [sealed](../../../csharp/language-reference/keywords/sealed.md)，以阻止其他类继承。 有关详细信息，请参阅[抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 03/13/2017
  类和结构可以继承多个接口。 继承自接口意味着类型实现接口中定义的所有方法。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ### <a name="generic-types"></a>泛型类型  
- 类和结构可以使用一个或多个类型参数进行定义。 客户端代码在创建类型实例时提供类型。 例如，<xref:System.Collections.Generic> 命名空间中的 <xref:System.Collections.Generic.List%601> 类就是使用一个类型参数定义的。 客户端代码创建 `List<string>` 或 `List<int>` 的实例来指定列表将包含的类型。 有关详细信息，请参阅[泛型](../../../csharp/programming-guide/generics/index.md)。  
+ 类和结构可以使用一个或多个类型参数进行定义。 客户端代码在创建类型实例时提供类型。 例如，<xref:System.Collections.Generic> 命名空间中的 <xref:System.Collections.Generic.List%601> 类就是用一个类型参数进行定义的。 客户端代码创建 `List<string>` 或 `List<int>` 的实例来指定列表将包含的类型。 有关详细信息，请参阅[泛型](../../../csharp/programming-guide/generics/index.md)。  
   
 ### <a name="static-types"></a>静态类型  
  类（而非结构）可以声明为 [static](../../../csharp/language-reference/keywords/static.md)。 静态类只能包含静态成员，不能使用新的关键字进行实例化。 在程序加载时，类的一个副本会加载到内存中，而其成员则可通过类名进行访问。 类和结构都能包含静态成员。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
@@ -122,7 +123,7 @@ ms.lasthandoff: 03/13/2017
  在类或结构方法中，可以使用隐式类型指示编译器在编译时确定正确的类型。 有关详细信息，请参阅[隐式类型局部变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)

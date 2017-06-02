@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8734f639e45f12ddd987a1c34e7f3ac38aa7d73f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: e7f4cfa81de3c4db41d9303abf65cfd0edc926a4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/01/2017
 
 ---
 # <a name="async-c-reference"></a>async（C# 参考）
@@ -64,7 +65,7 @@ string contents = await contentsTask;
  下面的示例展示了异步事件处理程序 `StartButton_Click` 和异步方法 `ExampleMethodAsync` 之间的控制结构和流程。 此异步方法得到的结果是一个下载网站的长度。 此代码适用于在 Visual Studio 中创建的 Windows Presentation Foundation (WPF) 应用或 Windows 应用商店应用；请参见有关设置应用的代码注释。  
   
 ```csharp  
-// You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
+// You can run this code in Visual Studio as a WPF app or a Windows Store app.  
 // You need a button (StartButton) and a textbox (ResultsTextBox).  
 // Remember to set the names and handler so that you have something like this:  
 // <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  

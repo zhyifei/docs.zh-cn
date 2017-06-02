@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d61870e6d2d8f905c56f86bbb6e6d99d5dae80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 47103d13a68c5250c33dbca3e89de2f1f3e13449
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用构造函数（C# 编程指南）
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
- 不带任何参数的构造函数称为“默认构造函数”**。 每当使用 `new` 运算符实例化对象且不为 `new` 提供任何参数时，会调用默认构造函数。 有关详细信息，请参阅[实例构造函数](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
+ 不带任何参数的构造函数称为“默认构造函数”。 每当使用 `new` 运算符实例化对象且不为 `new` 提供任何参数时，会调用默认构造函数。 有关详细信息，请参阅[实例构造函数](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
   
  除非类是[静态](../../../csharp/language-reference/keywords/static.md)的，否则 C# 编译器将为无构造函数的类提供一个公共的默认构造函数，以便该类可以实例化。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
@@ -110,10 +111,10 @@ Console.WriteLine("{0}, {1}", a, b);
  可使用 [static](../../../csharp/language-reference/keywords/static.md) 关键字将构造函数声明为静态构造函数。 在访问任何静态字段之前，都将自动调用静态构造函数，它们通常用于初始化静态类成员。 有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [析构函数](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)

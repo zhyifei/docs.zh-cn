@@ -14,15 +14,16 @@ ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2e324029a4951f1cb05507d580db73caea2d3f7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0b7cc79a10cc2c8288c048fdb98717e61a3f3463
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/30/2017
 
 
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>XName 对象的预原子化 (LINQ to XML) (C#)
-提高 LINQ to XML 中的性能的一种方法是预原子化 <xref:System.Xml.Linq.XName> 对象。 预原子化表示在使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 类的构造函数创建 XML 树之前，将字符串分配给 <xref:System.Xml.Linq.XName> 对象。 然后传递初始化的 <xref:System.Xml.Linq.XName> 对象，而不是将字符串传递给构造函数（此过程将使用从字符串到 <xref:System.Xml.Linq.XName> 的隐式转换）。  
+提高 LINQ to XML 中的性能的一种方法是预原子化 <xref:System.Xml.Linq.XName> 对象。 预原子化是指在通过使用 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XElement> 类的构造函数创建 XML 树之前，先将字符串分配给 <xref:System.Xml.Linq.XAttribute> 对象。 然后传递初始化的 <xref:System.Xml.Linq.XName> 对象，而不是将字符串传递给构造函数（此过程将使用从字符串到 <xref:System.Xml.Linq.XName> 的隐式转换）。  
   
  当创建其中重复出现特定名称的大型 XML 树时，这样可以提高性能。 为此，请在构造 XML 树之前声明和初始化 <xref:System.Xml.Linq.XName> 对象，然后使用 <xref:System.Xml.Linq.XName> 对象，而不是指定元素和属性名称的字符串。 当创建大量具有相同名称的元素（或属性）时，此技术可以显著提高性能。  
   

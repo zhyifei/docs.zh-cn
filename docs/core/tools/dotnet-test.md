@@ -4,16 +4,17 @@ description: "`dotnet test` 命令用于执行给定项目中的单元测试。"
 keywords: "dotnet-test, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
 ---
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令用于执行给定项目中的单元测试。 单元测试是包含单元测试框架（例如，MSText、NUnit 或 xUnit）和该单元测试框架的 dotnet 测试运行程序上的依赖项的类库项目。 单元测试打包为 NuGet 包并还原为该项目的普通依赖项。
+`dotnet test` 命令用于执行给定项目中的单元测试。 单元测试是控制台应用程序项目，它包含单元测试框架（如 MSTest、NUnit 或 xUnit）和该框架的 dotnet 测试运行程序上的依赖项。 单元测试打包为 NuGet 包并还原为该项目的普通依赖项。
 
 测试项目还必须指定测试运行程序。 使用普通 `<PackageReference>` 元素指定，如下方示例项目文件所示：
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 03/22/2017
 
 `--filter <EXPRESSION>`
 
-使用给定表达式筛选掉当前项目中的测试。 有关筛选支持的详细信息，请参阅[使用 TestCaseFilter 在 Visual Studio 中运行选择性单元测试](https://aka.ms/vstest-filtering)。
+使用给定表达式筛选掉当前项目中的测试。 有关详细信息，请参阅[筛选选项详细信息](#filter-option-details)部分。 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -97,9 +98,46 @@ ms.lasthandoff: 03/22/2017
 
 运行 `test1` 项目中的测试：
 
-`dotnet test ~/projects/test1/test1.csproj` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>筛选选项详细信息
+
+`--filter <EXPRESSION>`
+
+`<Expression>` 格式为 `<property><operator><value>[|&<Expression>]`。
+
+`<property>` 是 `Test Case` 的特性。 下面介绍了常用单元测试框架支持的属性：
+
+| 测试框架 | 支持的属性                                                                                      |
+| :------------: | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>名称</li><li>ClassName</li><li>优先级</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特征</li></ul>                                   |
+
+`<operator>` 说明了属性和值之间的关系：
+
+| 运算符 | 函数        |
+| :------: | --------------- |
+| `=`      | 完全匹配     |
+| `!=`     | 非完全匹配 |
+| `~`      | 包含        |
+
+`<value>` 是字符串。 所有查找都不区分大小写。
+
+不含 `<operator>` 的表达式自动被视为 `FullyQualifiedName` 属性上的 `contains`（例如，`dotnet test --filter xyz` 与 `dotnet test --filter FullyQualifiedName~xyz` 相同）。
+
+表达式可与条件运算符结合使用：
+
+| 运算符 | 函数 |
+| :------: | :------: |
+| `|`      | 或       |
+| `&`      | AND      |
+
+使用条件运算符时，可以用括号将表达式括起来（例如，`(Name~TestMethod1) | (Name~TestMethod2)`）。
+
+有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 ## <a name="see-also"></a>请参阅
 
-* [目标框架](../../standard/frameworks.md)
-* [运行时标识符 (RID) 目录](../rid-catalog.md)
+[框架和目标](../../standard/frameworks.md)   
+[.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+

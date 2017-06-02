@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c6b9da6d94bd402e720db48d5c7a2977344f05
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: d421f0115642efa73dbeb893dba912b96d5f4dc6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
@@ -46,7 +47,7 @@ int i;
 i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
 ```  
   
- 但有时可能需要将值复制到其他类型的变量或方法参数中。 例如，可能需要将一个整数变量传递给参数类型化为 `double` 的方法。 或者可能需要将类变量分配给接口类型的变量。 这些类型的操作称为类型转换。** 在 C# 中，可以执行以下几种类型的转换：  
+ 但有时可能需要将值复制到其他类型的变量或方法参数中。 例如，可能需要将一个整数变量传递给参数类型化为 `double` 的方法。 或者可能需要将类变量分配给接口类型的变量。 这些类型的操作称为类型转换。 在 C# 中，可以执行以下几种类型的转换：  
   
 -   **隐式转换**：由于该转换是一种类型安全的转换，不会导致数据丢失，因此不需要任何特殊的语法。 示例包括从较小整数类型到较大整数类型的转换以及从派生类到基类的转换。  
   
@@ -71,7 +72,7 @@ Base b = d; // Always OK.
 ```  
   
 ## <a name="explicit-conversions"></a>显式转换  
- 但是，如果进行转换可能会导致信息丢失，则编译器会要求执行显式转换，显式转换也称为强制转换。** 强制转换是显式告知编译器你打算进行转换且你知道可能会发生数据丢失的一种方式。 若要执行强制转换，请在要转换的值或变量前面的括号中指定要强制转换到的类型。 下面的程序将 [double](../../../csharp/language-reference/keywords/double.md) 强制转换为 [int](../../../csharp/language-reference/keywords/int.md)。 如不强制转换则该程序不会进行编译。  
+ 但是，如果进行转换可能会导致信息丢失，则编译器会要求执行显式转换，显式转换也称为强制转换。 强制转换是显式告知编译器你打算进行转换且你知道可能会发生数据丢失的一种方式。 若要执行强制转换，请在要转换的值或变量前面的括号中指定要强制转换到的类型。 下面的程序将 [double](../../../csharp/language-reference/keywords/double.md) 强制转换为 [int](../../../csharp/language-reference/keywords/int.md)。 如不强制转换则该程序不会进行编译。  
   
  [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
@@ -103,12 +104,9 @@ Giraffe g2 = (Giraffe) a;
  C# 提供 [is](../../../csharp/language-reference/keywords/is.md) 和 [as](../../../csharp/language-reference/keywords/as.md) 运算符，使你可以在实际执行强制转换之前测试兼容性。 有关详细信息，请参阅[如何：使用 as 和 is 运算符安全地进行强制转换](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
-  
-## <a name="featured-book-chapter"></a>重要章节  
- [Visual C# 2010 入门](http://go.microsoft.com/fwlink/?LinkId=221214)中的[变量的详细信息](http://go.microsoft.com/fwlink/?LinkId=221230)  
-  
-## <a name="see-also"></a>另请参阅  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [类型](../../../csharp/programming-guide/types/index.md)   
  [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)   

@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25c2bf8830d80f0f41855d0fa9e292b0edcbe052
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 9a580d0426038036f2e64167de8c540041c0a6b4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
@@ -43,19 +44,19 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
- 实现 <xref:System.IEquatable%601> 接口的任何类或结构都必须包含与此接口指定的签名匹配的 <xref:System.IEquatable%601.Equals%2A> 方法的定义。 因此，可以依靠实现 `IEquatable<T>` 的类来包含 `Equals` 方法，类的实例可以通过该方法确定它是否等于相同类的另一个实例。  
+ 实现 <xref:System.IEquatable%601> 接口的任何类或结构都必须包含与该接口指定的签名匹配的 <xref:System.IEquatable%601.Equals%2A> 方法的定义。 因此，可以依靠实现 `IEquatable<T>` 的类来包含 `Equals` 方法，类的实例可以通过该方法确定它是否等于相同类的另一个实例。  
   
  `IEquatable<T>` 的定义不为 `Equals` 提供实现。 该接口仅定义签名。 这样，C# 中的接口便类似于其中所有方法都是抽象方法的抽象类。 但是，类或结构可以实现多个接口，但是类只能继承单个类（抽象或不抽象）。 因此，使用接口可以在类中包括来自多个源的行为。  
   
  有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
- 接口可以包含方法、属性、事件、索引器或这四种成员类型的任意组合。 有关示例的链接，请参阅[相关部分](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections)。 接口不能包含常量、字段、运算符、实例构造函数、析构函数或类型。 接口成员会自动成为公共成员，不能包含任何访问修饰符。 成员也不能是[静态](../../../csharp/language-reference/keywords/static.md)成员。  
+ 接口可以包含方法、属性、事件、索引器或这四种成员类型的任意组合。 有关示例的链接，请参阅[相关部分](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections)。 接口不能包含常量、字段、运算符、实例构造函数、终结器或类型。 接口成员会自动成为公共成员，不能包含任何访问修饰符。 成员也不能是[静态](../../../csharp/language-reference/keywords/static.md)成员。  
   
  若要实现接口成员，实现类的对应成员必须是公共、非静态，并且具有与接口成员相同的名称和签名。  
   
  当类或结构实现接口时，类或结构必须为该接口定义的所有成员提供实现。 接口本身不提供类或结构可以通过继承基类功能的方式来继承的任何功能。 但是，如果基类实现接口，则从基类派生的任何类都会继承该实现。  
   
- 下面的示例展示了 IEquatable<T\> 接口的实现代码。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现代码。  
+ 下面的示例展示了 IEquatable<T\> 接口的实现代码。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现。  
   
  [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   

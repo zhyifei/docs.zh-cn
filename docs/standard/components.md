@@ -13,7 +13,7 @@ ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
 ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
 ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
-ms.lasthandoff: 01/18/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -49,7 +49,7 @@ Microsoft 积极开发和维护的主要 .NET 运行时有 3 个：.NET Core、.
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework 是自 2002 年就已存在的历史 .NET 运行时。  它是现有的 .NET 开发人员经常使用的 .NET Framework。  它实现 .NET 标准库，这意味着任何面向 .NET 标准的代码都可在 NET Framework 上运行。  它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。  .NET Framework 非常适合用于生成 Windows 桌面应用程序。
+.NET Framework 是自 2002 年就已存在的历史 .NET 运行时。  它是现有的 .NET 开发人员经常使用的 .NET Framework。  它实现 .NET 标准库，这意味着任何面向 .NET 标准的代码都可在 .NET Framework 上运行。  它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。  .NET Framework 非常适合用于生成 Windows 桌面应用程序。
 
 若要了解有关 .NET Framework 的详细信息，请参阅 [.NET Framework 指南](../framework/index.md)。
 

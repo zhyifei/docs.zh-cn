@@ -1,5 +1,5 @@
 ---
-title: "C# 介绍 | C# 指南"
+title: "C# 介绍 - C# 指南 | Microsoft Docs"
 description: "刚开始接触 C#？ 了解 C# 语言的基础知识。"
 keywords: ".NET, .NET Core, C#, C# Primer, C# 指南"
 author: BillWagner
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7249f1bed4395671cc294d5db83e83844782736a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: f122f59dd6f194facd98f4c6fa7f84c658c02a90
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 

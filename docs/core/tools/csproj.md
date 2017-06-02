@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
+ms.openlocfilehash: 154f60d8f4c0f45d335c6125d5e6a106688dc8db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -21,12 +22,22 @@ ms.lasthandoff: 03/15/2017
 本文档概述了作为从 *project.json* 移动到 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 的一部分，添加到项目文件的更改。 有关常规项目文件的语法和引用的详细信息，请参阅 [MSBuild 项目文件](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference)文档。  
 
 ## <a name="implicit-package-references"></a>隐式包引用
-现在是基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。 如果目标框架是 `netcoreap1.x`，则引用正确版本的 `Microsoft.NETCore.App` 元包。 如果目标框架是 `netstandard1.x`，则引用正确版本的 `NetStandard.Library` 元包。
+基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。 如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。
 
-就其余的行为而言，工具将按预期方式工作，且大多数手势保持不变（例如，`dotnet restore`）。 
+```xml
+ <PropertyGroup>
+   <TargetFramework>netcoreapp1.1</TargetFramework>
+ </PropertyGroup>
+ ```
+ 
+ ```xml
+ <PropertyGroup>
+   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+ </PropertyGroup>
+ ```
 
 ### <a name="recommendations"></a>建议
-由于现在是隐式引用 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：
+由于隐式引用了 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：
 
 * 绝不通过项目文件中的 `<PackageReference>` 属性，对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包进行显示引用。
 * 如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。

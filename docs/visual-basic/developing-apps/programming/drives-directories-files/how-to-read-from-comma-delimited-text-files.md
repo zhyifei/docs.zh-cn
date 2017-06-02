@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f894aa1dce23d5c8da7287275123349739152f04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 011e92f1d3c4aa7fae5a1022815dfe83b313685f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取逗号分隔的文本文件
@@ -68,17 +69,17 @@ ms.lasthandoff: 03/13/2017
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   无法使用指定的格式分析某行 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 此异常消息指定导致发生异常的行，同时为 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配该行中包含的文本。  
+-   无法使用指定的格式 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>) 分析行。 此异常消息指定导致发生异常的行，同时将 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配给该行中包含的文本。  
   
 -   指定的文件不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   在部分信任的情况下，用户没有足够的权限访问文件。 (<xref:System.Security.SecurityException>)。  
+-   在部分信任的情况下，用户没有足够的权限访问文件。 (<xref:System.Security.SecurityException>).  
   
--   路径太长 (<xref:System.IO.PathTooLongException>)。  
+-   路径过长 (<xref:System.IO.PathTooLongException>)。  
   
 -   用户没有足够的权限访问文件 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   
  [如何：读取固定宽度的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
  [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
