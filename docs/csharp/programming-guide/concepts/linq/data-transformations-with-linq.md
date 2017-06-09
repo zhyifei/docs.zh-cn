@@ -88,7 +88,7 @@ ms.lasthandoff: 05/10/2017
  有关详细信息，请参阅[对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)和[匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>将内存中对象转换为 XML  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查询可以方便地在内存中数据结构、SQL 数据库、[!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] 数据集和 XML 流或文档之间转换数据。 以下示例将内存中数据结构中的对象转换为 XML 元素。  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查询可以方便地在内存中数据结构、SQL 数据库、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 数据集和 XML 流或文档之间转换数据。 以下示例将内存中数据结构中的对象转换为 XML 元素。  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   

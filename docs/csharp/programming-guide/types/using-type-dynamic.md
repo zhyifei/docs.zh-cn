@@ -73,7 +73,7 @@ ms.lasthandoff: 05/10/2017
  [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
 ## <a name="dynamic-language-runtime"></a>动态语言运行时  
- 动态语言运行时 (DLR) 是 [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net_v40_short_md.md)] 中的一个新 API。 它提供了支持 C# 中 `dynamic` 类型的基础结构，还提供了 IronPython 和 IronRuby 等动态编程语言的实现。 有关 DLR 的详细信息，请参阅[动态语言运行时概述](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
+ 动态语言运行时 (DLR) 是 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 中的一个新 API。 它提供了支持 C# 中 `dynamic` 类型的基础结构，还提供了 IronPython 和 IronRuby 等动态编程语言的实现。 有关 DLR 的详细信息，请参阅[动态语言运行时概述](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
 ## <a name="com-interop"></a>COM 互操作  
  [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 包括若干功能，这些功能改善了与 COM API（例如 Office 自动化 API）的互操作体验。 这些改进之处包括 `dynamic` 类型以及[命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)的用法。  

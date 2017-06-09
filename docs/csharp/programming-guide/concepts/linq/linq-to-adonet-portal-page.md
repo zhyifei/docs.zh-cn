@@ -27,7 +27,7 @@ ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
-通过 [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)]，你可以使用 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 编程模型针对 [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] 中的任何可枚举对象进行查询。  
+通过 [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)]，你可以使用 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 编程模型针对 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中的任何可枚举对象进行查询。  
   
 > [!NOTE]
 >  [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)] 文档位于 .NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/10/2017
  有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 技术：[!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)]、[!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 和 [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)]。 [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)] 提供针对 <xref:System.Data.DataSet> 的形式多样的优化查询，[!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 使你可直接查询 [!INCLUDE[ssNoVersion](../../../../csharp/programming-guide/concepts/linq/includes/ssnoversion_md.md)] 数据库架构，而 [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)] 允许你查询 [!INCLUDE[adonet_edm](../../../../csharp/programming-guide/concepts/linq/includes/adonet_edm_md.md)]。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> 是 [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] 中使用最广泛的组件之一，也是断开连接的编程模型的关键元素，该模型是构建 [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] 的基础。 <xref:System.Data.DataSet> 虽然具有突出的优点，但其查询功能也存在限制。  
+ <xref:System.Data.DataSet> 是 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中使用最广泛的组件之一，也是断开连接的编程模型的关键元素，该模型是构建 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 的基础。 <xref:System.Data.DataSet> 虽然具有突出的优点，但其查询功能也存在限制。  
   
  [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)] 让你可通过使用为其他多种数据源提供的相同查询功能，在 <xref:System.Data.DataSet> 中加入更丰富的查询功能。  
   
