@@ -124,7 +124,7 @@ public async Task<int> ExampleMethodAsync()
 ## <a name="return-types"></a>返回类型  
  异步方法的返回类型可为 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 [void](../../../csharp/language-reference/keywords/void.md)。 方法不能声明任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 参数，但是可以调用具有这类参数的方法。  
   
- 如果异步方法的 [](../../../csharp/language-reference/keywords/return.md) 语句指定一个 `TResult` 类型的操作数，则应指定 `Task<TResult>` 作为方法的返回类型。 如果当方法完成时未返回有意义的值，则应使用 `Task`。 即，对方法的调用将返回一个 `Task`，但是当 `Task` 完成时，任何等待 `await` 的所有 `Task` 表达式的计算结果都为 `void`。  
+ 如果异步方法的 语句指定一个 类型的操作数，则应指定 `Task<TResult>` 作为方法的[返回](../../../csharp/language-reference/keywords/return.md)类型`TResult`。 如果当方法完成时未返回有意义的值，则应使用 `Task`。 即，对方法的调用将返回一个 `Task`，但是当 `Task` 完成时，任何等待 `await` 的所有 `Task` 表达式的计算结果都为 `void`。  
   
  你应主要使用 `void` 返回类型来定义事件处理程序，这些处理程序需要此返回类型。 `void` 返回异步方法的调用方不能等待，并且无法捕获该方法引发的异常。  
   
