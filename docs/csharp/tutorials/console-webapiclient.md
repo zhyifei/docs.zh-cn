@@ -172,7 +172,7 @@ var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-请注意，现在使用的是 @System.Net.Http.HttpClient.GetStreamAsync(System.String)，而不是 @System.Net.Http.HttpClient.GetStringAsync(System.String)。 序列化程序使用流（而不是字符串）作为其源。 让我们来看看上面第二行代码所使用的两项 C# 语言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的自变量是 `await` 表达式。 Await 表达式可以出现在代码中的几乎任何位置，尽管到目前为止，你只在赋值语句中看到过它们。
+请注意，现在使用的是 @System.Net.Http.HttpClient.GetStreamAsync (System.String)，而不是 @System.Net.Http.HttpClient.GetStringAsync (System.String)。 序列化程序使用流（而不是字符串）作为其源。 让我们来看看上面第二行代码所使用的两项 C# 语言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的自变量是 `await` 表达式。 Await 表达式可以出现在代码中的几乎任何位置，尽管到目前为止，你只在赋值语句中看到过它们。
 
 其次，`as` 运算符将编译时类型 `object` 转换成 `List<repo>`。 声明 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 即声明其返回 <xref:System.Object?displayProperty=fullName> 类型的对象。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 将返回你在构造它时指定的类型（在此教程中，为 `List<repo>`）。 如果转换失败，那么 `as` 运算符的计算结果为 `null`，而不是抛出异常。
 
