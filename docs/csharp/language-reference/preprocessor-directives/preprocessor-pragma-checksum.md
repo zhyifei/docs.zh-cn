@@ -1,5 +1,5 @@
 ---
-title: "#杂注校验和（C# 参考）| Microsoft Docs"
+title: "#<a name=\"pragma-checksum-c-reference--microsoft-docs\"></a>杂注校验和（C# 参考）| Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/15/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/15/2017
   
 ## <a name="example"></a>示例  
   
-```  
+```csharp
 class TestClass  
 {  
     static int Main()  
@@ -80,3 +80,4 @@ class TestClass
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+

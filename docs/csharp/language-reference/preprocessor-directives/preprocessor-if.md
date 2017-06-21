@@ -1,5 +1,5 @@
 ---
-title: "#if（C# 参考）| Microsoft 文档"
+title: "#<a name=\"if-c-reference--microsoft-docs\"></a>if（C# 参考）| Microsoft 文档"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="if-c-reference"></a>#if（C# 参考）
 如果 C# 编译器遇到 `#if` 指令，最终是 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 指令，仅当定义指定的符号时，它才编译这些指令之间的代码。  与 C 和 C++ 不同的是，不能将数字的值分配给一个符号；C# 中的 #if 语句是一个布尔值，并仅测试是否定义该符号。 例如，  
   
-```  
+```csharp
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="example"></a>示例  
   
-```  
+```csharp
 // preprocessor_if.cs  
 #define DEBUG#define MYTEST  
 using System;  
@@ -90,3 +90,4 @@ public class MyClass
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+
