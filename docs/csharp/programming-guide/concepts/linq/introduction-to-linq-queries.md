@@ -38,7 +38,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查询简介 (C#)
@@ -62,13 +62,13 @@ ms.lasthandoff: 06/15/2017
  ![完整的 LINQ 查询操作](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
   
 ## <a name="the-data-source"></a>数据源  
- 在前面的示例中，因为数据源是一个数组，因此它隐式支持泛型<xref:System.Collections.Generic.IEnumerable%601>接口。 这一事实意味着该数据源可以用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 进行查询。 在执行查询`foreach`语句，和`foreach`需要<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>。 类型支持<xref:System.Collections.Generic.IEnumerable%601>或派生的接口如通用<xref:System.Linq.IQueryable%601>称为*可查询类型*。  
+ 上例中，数据源是一个数组，因此它隐式支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口。 这一事实意味着该数据源可以用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 进行查询。 查询在 `foreach` 语句中执行，且 `foreach` 需要 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 支持 <xref:System.Collections.Generic.IEnumerable%601> 或派生接口（如泛型 <xref:System.Linq.IQueryable%601>）的类型称为可查询类型。  
   
- 可查询类型不需要进行修改或特殊处理就可以用作 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源。 如果源数据还没有作为可查询类型出现在内存中，则 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序必须以此方式表示源数据。 例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]将 XML 文档加载到可查询<xref:System.Xml.Linq.XElement>类型：  
+ 可查询类型不需要进行修改或特殊处理就可以用作 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源。 如果源数据还没有作为可查询类型出现在内存中，则 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序必须以此方式表示源数据。 例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将 XML 文档加载到可查询的 <xref:System.Xml.Linq.XElement> 类型中：  
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- 借助 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，首先在 Visual Studio 中手动或使用 [Visual Studio 中的 LINQ to SQL 工具](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)在设计时创建对象关系映射。 针对这些对象编写查询，然后由 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 在运行时处理与数据库的通信。 在下面的示例中，`Customers`表示数据库和查询结果的类型中的特定表<xref:System.Linq.IQueryable%601>，派生自<xref:System.Collections.Generic.IEnumerable%601>。  
+ 借助 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，首先在 Visual Studio 中手动或使用 [Visual Studio 中的 LINQ to SQL 工具](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)在设计时创建对象关系映射。 针对这些对象编写查询，然后由 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 在运行时处理与数据库的通信。 下例中，`Customers` 表示数据库中的特定表，而查询结果的类型 <xref:System.Linq.IQueryable%601> 派生自 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -80,10 +80,10 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- 有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。 但是，基本规则是非常简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源是支持泛型的任何对象<xref:System.Collections.Generic.IEnumerable%601>接口或从其继承的接口。  
+ 有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。 但基本规则很简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源是支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口或从中继承的接口的任意对象。  
   
 > [!NOTE]
->  类型，如<xref:System.Collections.ArrayList>支持非泛型<xref:System.Collections.IEnumerable>接口也可以用作[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。  
+>  支持非泛型 <xref:System.Collections.IEnumerable> 接口的类型（如 <xref:System.Collections.ArrayList>）还可用作 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。  
   
 ##  <a name="query"></a> 查询  
  查询指定要从数据源中检索的信息。 查询还可以指定在返回这些信息之前如何对其进行排序、分组和结构化。 查询存储在查询变量中，并用查询表达式进行初始化。 为使编写查询的工作变得更加容易，C# 引入了新的查询语法。  
@@ -109,7 +109,7 @@ IQueryable<Customer> custQuery =
   
  [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
- 若要强制立即执行的任何查询并缓存其结果，可以调用<xref:System.Linq.Enumerable.ToList%2A>或<xref:System.Linq.Enumerable.ToArray%2A>方法。  
+ 要强制立即执行任何查询并缓存其结果，可调用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法。  
   
  [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
