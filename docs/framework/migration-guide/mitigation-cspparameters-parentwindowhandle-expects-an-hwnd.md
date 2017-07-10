@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>缓解：应向 CspParameters.ParentWindowHandle 分配 HWND
@@ -46,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>缓解操作
 
-已确定正确值是保留 `form.Handle` 值的内存位置地址的开发者可以将 <xref:System.Security.AppContext> 开关 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 设置为 `true`，从而选择禁用此行为更改：
+已确定正确值是保留 `form.Handle` 值的内存位置地址的开发者可以将 <xref:System.AppContext> 开关 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 设置为 `true`，从而选择禁用此行为更改：
 
-- 以编程方式对 <xref:System.Security.AppContext> 实例设置兼容性开关。
+- 以编程方式对 <xref:System.AppContext> 实例设置兼容性开关。
 
 - 在 app.config 文件的 `<runtime>` 部分中添加下面的代码行：
    
@@ -58,7 +58,7 @@ cspParameters.ParentWindowHandle = form.Handle;
    </runtime>
    ```
 
-相反，希望为在 .NET Framework 4.7 控制下运行，但面向旧版 .NET Framework 的应用程序选择启用新行为的用户可以将 <xref:System.Security.AppContext> 开关设置为 `false`。
+相反，希望为在 .NET Framework 4.7 控制下运行，但面向旧版 .NET Framework 的应用程序选择启用新行为的用户可以将 <xref:System.AppContext> 开关设置为 `false`。
  
 ## <a name="see-also"></a>请参阅
 

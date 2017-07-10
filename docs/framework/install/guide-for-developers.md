@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 348ef65fdb6c1a54abf379278d79ed1a9f626780
+ms.sourcegitcommit: 0248602661b93eb0372e12fbea1055515a9abca3
+ms.openlocfilehash: b7b7cb8d8f10d8d7f437b7bcf91f99237003ca74
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 
@@ -151,7 +151,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 <a name="standalone_language_packs"></a>   
 ## <a name="to-install-language-packs"></a>安装语言包
 
- 语言包是包含受支持语言的本地化资源（例如，翻译后的错误消息和 UI 文本）的可执行文件。 如果你不安装语言包，则会用英语显示 .NET Framework 错误消息和其他文本。  请注意，Web 安装程序会自动安装与你的操作系统相匹配的语言包，但是你可以将其他语言包下载到你的计算机。 脱机安装程序不包含任何语言包。 此外，语言包在 .NET Framework 4.7 中不可用。
+ 语言包是包含受支持语言的本地化资源（例如，翻译后的错误消息和 UI 文本）的可执行文件。 如果你不安装语言包，则会用英语显示 .NET Framework 错误消息和其他文本。  请注意，Web 安装程序会自动安装与你的操作系统相匹配的语言包，但是你可以将其他语言包下载到你的计算机。 脱机安装程序不包含任何语言包。 
   
 > [!IMPORTANT]
 > 语言包不包含运行应用程序所需的 .NET Framework 组件，因此，你必须在安装语言包之前运行 Web 安装程序或脱机安装程序。 如果已安装语言包，请将其卸载，安装 .NET Framework，然后重新安装语言包。  

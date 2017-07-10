@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -59,7 +60,7 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
  介绍了 Visual Basic 语言和编译器的相关信息。  
 
  [使用 Visual Basic 开发应用程序](../visual-basic/developing-apps/index.md)  
- 介绍了使用 Visual Basic 开发应用程序的各个方面，安全性、异常处理、调试和使用 [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] 类库。
+ 介绍了使用 Visual Basic 开发应用程序的各个方面，安全性、异常处理、调试和使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库。
 
  [COM 互操作](../visual-basic/programming-guide/com-interop/index.md)  
  阐明了与使用 Visual Basic 创建和使用组件对象模型 (COM) 对象相关联的互操作性问题。  
@@ -75,4 +76,4 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
  提供帮助你了解 Visual Studio 基本知识的链接。  
   
  [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
- 介绍由 Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] SKD 中包含的类、接口和值类型组成的库。
+ 介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。
