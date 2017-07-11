@@ -1,5 +1,5 @@
 ---
-title: "C# 表达式 | C# 语言介绍"
+title: "C# 表达式 - C# 语言介绍 | Microsoft Docs"
 description: "表达式、操作数和运算符是 C# 语言的构建基块"
 keywords: ".NET, C#, 表达式, 运算符, 操作数"
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce5f71ab3e797015a26dddbf0579c84dec580750
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="expressions"></a>表达式
+<a id="expressions" class="xliff"></a>
+
+# 表达式
 
 *表达式*是在*操作数*和*运算符*的基础之上构造而成。 表达式的运算符指明了向操作数应用的运算。 运算符的示例包括 `+`、`-`、`*`、`/` 和 `new`。 操作数的示例包括文本、字段、局部变量和表达式。
 
