@@ -1,6 +1,6 @@
 ---
 title: "dotnet-test 命令 - .NET Core CLI | Microsoft Docs"
-description: "`dotnet test` 命令用于执行给定项目中的单元测试。"
+description: "“dotnet test”命令用于执行给定项目中的单元测试。"
 keywords: "dotnet-test, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
@@ -11,24 +11,32 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+<a id="dotnet-test" class="xliff"></a>
 
-## <a name="name"></a>名称
+#dotnet-test
+
+<a id="name" class="xliff"></a>
+
+## 名称
 
 `dotnet-test` - 用于执行单元测试的 .NET 测试驱动程序。
 
-## <a name="synopsis"></a>摘要
+<a id="synopsis" class="xliff"></a>
+
+## 摘要
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-## <a name="description"></a>描述
+<a id="description" class="xliff"></a>
+
+## 描述
 
 `dotnet test` 命令用于执行给定项目中的单元测试。 单元测试是控制台应用程序项目，它包含单元测试框架（如 MSTest、NUnit 或 xUnit）和该框架的 dotnet 测试运行程序上的依赖项。 单元测试打包为 NuGet 包并还原为该项目的普通依赖项。
 
@@ -36,7 +44,9 @@ ms.lasthandoff: 05/18/2017
 
 [!code-xml[XUnit 基本模板](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>选项
+<a id="options" class="xliff"></a>
+
+## 选项
 
 `PROJECT`
     
@@ -90,7 +100,9 @@ ms.lasthandoff: 05/18/2017
 
 设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-## <a name="examples"></a>示例
+<a id="examples" class="xliff"></a>
+
+## 示例
 
 运行当前目录所含项目中的测试：
 
@@ -100,7 +112,9 @@ ms.lasthandoff: 05/18/2017
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-## <a name="filter-option-details"></a>筛选选项详细信息
+<a id="filter-option-details" class="xliff"></a>
+
+## 筛选选项详细信息
 
 `--filter <EXPRESSION>`
 
@@ -129,14 +143,16 @@ ms.lasthandoff: 05/18/2017
 
 | 运算符 | 函数 |
 | :------: | :------: |
-| `|`      | 或       |
+| <code>&#124;</code>      | 或       |
 | `&`      | AND      |
 
 使用条件运算符时，可以用括号将表达式括起来（例如，`(Name~TestMethod1) | (Name~TestMethod2)`）。
 
 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
-## <a name="see-also"></a>请参阅
+<a id="see-also" class="xliff"></a>
+
+## 请参阅
 
 [框架和目标](../../standard/frameworks.md)   
 [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
