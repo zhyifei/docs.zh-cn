@@ -1,27 +1,51 @@
 ---
-title: "事件（C# 编程指南） | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "类 [C#], 事件"
-  - "C# 语言, 事件"
-  - "事件 [C#]"
+title: "事件（C# 编程指南）| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- classes [C#], events
+- C# language, events
+- events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: 43
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 43
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: b3f4673eccdbd568fa8ab042023a4b3bd8230bb3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/26/2017
+
 ---
+<a id="events-c-programming-guide" class="xliff"></a>
+
 # 事件（C# 编程指南）
-[类](../../../csharp/language-reference/keywords/class.md)或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或*引发*）事件的类称为“发行者”，接收（或*处理*）事件的类称为“订户”。  
+[类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
   
- 在典型的 C\# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] 集成的开发环境 \(IDE\) 来浏览控件发布的事件，并选择想要处理的事件。 IDE 将自动添加空白事件处理程序方法和订阅该事件的代码。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
+ 在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 集成的开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 IDE 将自动添加空白事件处理程序方法和订阅该事件的代码。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
   
+<a id="events-overview" class="xliff"></a>
+
 ## 事件概述  
  事件具有以下属性：  
   
@@ -33,10 +57,12 @@ caps.handback.revision: 43
   
 -   事件通常用于表示用户操作，例如单击按钮或图形用户界面中的菜单选项。  
   
--   当事件具有多个订户时，引发该事件时会同步调用事件处理程序。 若要异步调用事件，请参阅 [Calling Synchronous Methods Asynchronously](../Topic/Calling%20Synchronous%20Methods%20Asynchronously.md)。  
+-   当事件具有多个订户时，引发该事件时会同步调用事件处理程序。 若要异步调用事件，请参阅 [Calling Synchronous Methods Asynchronously](https://msdn.microsoft.com/library/2e08f6yc)。  
   
--   在 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
+-   在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
   
+<a id="related-sections" class="xliff"></a>
+
 ## 相关章节  
  有关详细信息，请参见:  
   
@@ -48,23 +74,29 @@ caps.handback.revision: 43
   
 -   [如何：实现接口事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
   
--   [线程同步](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)  
+-   [线程同步](../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
   
 -   [如何：使用字典存储事件实例](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
 -   [如何：实现自定义事件访问器](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
-## C\# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+<a id="c-language-specification" class="xliff"></a>
+
+## C# 语言规范  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
+<a id="featured-book-chapters" class="xliff"></a>
+
 ## 重要章节  
- [C\# 3.0 手册，第三版：为 C\# 3.0 程序员提供的 250 多个解决方案](http://go.microsoft.com/fwlink/?LinkId=195369)中的[委托、事件和 Lambda 表达式](http://go.microsoft.com/fwlink/?LinkId=195395)  
+ [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](http://go.microsoft.com/fwlink/?LinkId=195395) 中的 [委托、事件和 Lambda 表达式](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
- [Learning C\# 3.0: Master the Fundamentals of C\# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)（学习 C\# 3.0：掌握 C\# 3.0 的基本知识）中的[委托和事件](http://go.microsoft.com/fwlink/?LinkId=195418)  
+ [Learning C# 3.0: Master the Fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195418) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
-## 请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  <xref:System.EventHandler>   
- [C\# 编程指南](../../../csharp/programming-guide/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [委托](../../../csharp/programming-guide/delegates/index.md)   
- [在 Windows 窗体中创建事件处理程序](../Topic/Creating%20Event%20Handlers%20in%20Windows%20Forms.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../Topic/Multithreaded%20Programming%20with%20the%20Event-based%20Asynchronous%20Pattern.md)
+ [在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)   
+ [使用基于事件的异步模式进行多线程编程](https://msdn.microsoft.com/library/hkasytyf)

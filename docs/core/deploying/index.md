@@ -10,14 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: 31503e39d8a96092dbce03c17397e1adfec6421e
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
+<a id="net-core-application-deployment" class="xliff"></a>
+
+# .NET Core 应用程序部署
 
 可以为 .NET Core 应用程序创建两种部署：
 
@@ -25,11 +27,15 @@ ms.lasthandoff: 05/13/2017
 
 - 独立部署。 与 FDD 不同，独立部署 (SCD) 不依赖目标系统上存在的共享组件。 所有组件（包括 .NET Core 库和 .NET Core 运行时）都包含在应用程序中，并且独立于其他 .NET Core 应用程序。 SCD 包括一个可执行文件（如 Windows 平台上名为 `app` 的应用程序的 *app.exe*），它是特定于平台的 .NET Core 主机的重命名版本，还包括一个 .*.dll* 文件（如 *app.dll*），而它是实际的应用程序。
 
-## <a name="framework-dependent-deployments-fdd"></a>依赖框架的部署 (FDD)
+<a id="framework-dependent-deployments-fdd" class="xliff"></a>
+
+## 依赖框架的部署 (FDD)
 
 对于 FDD，仅部署应用和任何第三方依赖项。 不需要部署 .NET Core，因为应用将使用目标系统上存在的 .NET Core 版本。 这是 .NET Core 应用的默认部署模型。
 
-### <a name="why-create-a-framework-dependent-deployment"></a>为什么创建依赖框架的部署？
+<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
+
+### 为什么创建依赖框架的部署？
 
 部署 FDD 具有很多有点：
 
@@ -45,11 +51,15 @@ ms.lasthandoff: 05/13/2017
 
 - 如果不了解将来版本，.NET Core 运行时和库可能发生更改。 在极少数情况下，这可能会更改应用的行为。
 
-## <a name="self-contained-deployments-scd"></a>独立部署 (SCD)
+<a id="self-contained-deployments-scd" class="xliff"></a>
 
-对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 的本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)（例如，macOS 上的 OpenSSL），因此运行应用前这些依赖项必须已存在。
+## 独立部署 (SCD)
 
-### <a name="why-deploy-a-self-contained-deployment"></a>为什么要部署独立部署？
+对于独立部署，可以部署应用和所需的第三方依赖项以及生成应用所使用的 .NET Core 版本。 创建 SCD 不包括各种平台上的 [.NET Core 本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，因此运行应用前这些依赖项必须已存在。
+
+<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+
+### 为什么要部署独立部署？
 
 部署独立部署主要有两个优点：
 
@@ -65,7 +75,9 @@ ms.lasthandoff: 05/13/2017
 
 - 向系统部署大量独立的 .NET Core 应用可能会使用大量磁盘空间，因为每个应用都会复制 .NET Core 文件。
 
-## <a name="step-by-step-examples"></a>分步示例
+<a id="step-by-step-examples" class="xliff"></a>
+
+## 分步示例
 
 有关使用 CLI 工具部署 .NET Core 应用的分步示例，请参阅[使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)。 有关使用 Visual Studio 部署 .NET Core 应用的分步示例，请参阅 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)。 每个主题都包括以下部署的示例：
 
@@ -74,7 +86,9 @@ ms.lasthandoff: 05/13/2017
 - 独立部署
 - 包含第三方依赖项的独立部署
 
-# <a name="see-also"></a>请参阅
+<a id="see-also" class="xliff"></a>
+
+# 请参阅
 
 [使用 CLI 工具部署 .NET Core 应用](deploy-with-cli.md)   
 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)   
