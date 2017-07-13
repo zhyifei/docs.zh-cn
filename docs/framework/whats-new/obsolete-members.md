@@ -19,13 +19,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: 3a6101e6e2c99ff8321e90dd616230636753d844
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d7f9c49fbe771e7ac7a5f346129e04c3b4932e3d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
+# .NET Framework 中的过时成员
+<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
 本文中的表列出了              [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] \(及其单点版本（例如              [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \(及其单点版本\)）中按程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅              [过时类型](../../../docs/framework/whats-new/obsolete-types.md)。  
   
 -   [系统程序集中的过时成员](#SystemMembers)  
@@ -95,25 +96,27 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-## <a name="obsolete-members-in-system-assemblies"></a>系统程序集中的过时成员  
+## 系统程序集中的过时成员
+<a id="obsolete-members-in-system-assemblies" class="xliff"></a>  
  下表列出了系统程序集中的过时成员。 这些程序集用于面向 .NET Framework 的通用\-应用程序开发。  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>程序集：mscorlib.dll  
+### 程序集：mscorlib.dll
+<a id="assembly-mscorlibdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Win32.Registry?displayProperty=fullName>|<xref:Microsoft.Win32.Registry.DynData>|                                       <xref:Microsoft.Win32.Registry.DynData> 注册表项仅适用于 Win9x，CLR 将不再支持。 请改为在基于 NT 的操作系统上，使用                                         <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=fullName> 注册表项或 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=fullName> 注册表代理。|  
-|<xref:System.Activator?displayProperty=fullName>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.Activator?displayProperty=fullName>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.Activator?displayProperty=fullName>|<xref:System.Activator.CreateInstance%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.Activator?displayProperty=fullName>|<xref:System.Activator.CreateInstanceFrom%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.Activator?displayProperty=fullName>|<xref:System.Activator.CreateInstanceFrom%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.AppendPrivatePath%2A>|<xref:System.AppDomain.AppendPrivatePath%2A> 已弃用。 请改为调查                                          <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 的使用。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ClearPrivatePath%2A>|<xref:System.AppDomain.ClearPrivatePath%2A> 已弃用。 请改为调查                                          <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 的使用。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.AppendPrivatePath%2A>|<xref:System.AppDomain.AppendPrivatePath%2A> 已弃用。 请改为调查                                         <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 的使用。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ClearPrivatePath%2A>|<xref:System.AppDomain.ClearPrivatePath%2A> 已弃用。 请改为调查                                         <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 的使用。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ClearShadowCopyPath%2A>|<xref:System.AppDomain.ClearShadowCopyPath%2A> 已弃用。 请改为调查                                          <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName> 的使用。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstance%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.CreateInstance%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceAndUnwrap%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceFrom%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstance%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.CreateInstance%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceAndUnwrap%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceFrom%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceFromAndUnwrap%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.CreateInstanceFromAndUnwrap%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.Security.Policy.Evidence%29>|程序集级别声明性安全已过时，默认情况下不再由 CLR 强制实施。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.Security.Policy.Evidence%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%29>|程序集级别声明性安全已过时，默认情况下不再由 CLR 强制实施。|  
@@ -123,11 +126,11 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.Policy.Evidence%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Boolean%29>|程序集级别声明性安全已过时，默认情况下不再由 CLR 强制实施。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.Policy.Evidence%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Boolean%2CSystem.Collections.Generic.IEnumerable%7BSystem.Reflection.Emit.CustomAttributeBuilder%7D%29>|程序集级别声明性安全已过时，默认情况下不再由 CLR 强制实施。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%29>|程序集级别声明性安全已过时，默认情况下不再由 CLR 强制实施。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|[\], Byte\<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 的重载。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 的重载。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                          <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 的重载。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.GetCurrentThreadId%2A>|<xref:System.AppDomain.GetCurrentThreadId%2A> 已弃用，因为当托管线程在纤程（又称轻量级线程）上运行时，其无法提供稳定的 ID。 若要获得托管线程的稳定标识符，请使用                                          <xref:System.Threading.Thread.ManagedThreadId%2A?displayProperty=fullName> 属性。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.Load%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%29>|对沙盒使用证据的方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.AppDomain.Load%2A?displayProperty=fullName> 的重载。|  
@@ -138,8 +141,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetDynamicBase%2A>|<xref:System.AppDomain.SetDynamicBase%2A> 已弃用。 请改为调查                                         <xref:System.AppDomainSetup.DynamicBase%2A?displayProperty=fullName> 的使用。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetShadowCopyFiles%2A>|<xref:System.AppDomain.SetShadowCopyFiles%2A> 已弃用。 请改为调查                                         <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=fullName> 的使用。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetShadowCopyPath%2A>|<xref:System.AppDomain.SetShadowCopyPath%2A> 已弃用。 请改为调查                                          <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName> 的使用。|  
-|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%28System.IFormatProvider%29>|                                         `provider` 自变量未使用。 请使用                                          <xref:System.Enum.ToString?displayProperty=fullName>。|  
-|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%28System.String%2CSystem.IFormatProvider%29>|                                         `provider` 自变量未使用。 请使用                                          <xref:System.Enum.ToString?displayProperty=fullName>。|  
+|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString(System.IFormatProvider)>|                                         `provider` 自变量未使用。 请使用                                          <xref:System.Enum.ToString%2A?displayProperty=fullName>。|  
+|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%2A>|                                         `provider` 自变量未使用。 请使用                                          <xref:System.Enum.ToString%2A?displayProperty=fullName>。|  
 |<xref:System.LoaderOptimization?displayProperty=fullName>|<xref:System.LoaderOptimization>|此方法已被否决。 请改用                                          <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>。|  
 |<xref:System.LoaderOptimization?displayProperty=fullName>|<xref:System.LoaderOptimization>|此方法已被否决。 请改用                                          <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>。|  
 |<xref:System.Collections.Hashtable?displayProperty=fullName>|<xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|请改用                                          <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IEqualityComparer%29?displayProperty=fullName>。|  
@@ -196,8 +199,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|                                      <xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> 方法已弃用，并将从未来版本中移除。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|                                      <xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> 方法已弃用。 若要执行此操作，请使用托管 API。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetTypeInfoName%28System.Runtime.InteropServices.UCOMITypeInfo%29>|请改用                                        <xref:System.Runtime.InteropServices.Marshal.GetTypeInfoName%28System.Runtime.InteropServices.ComTypes.ITypeInfo%29?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibGuid%28System.Runtime.InteropServices.UCOMITypeLib%29>|请改用                                        <xref:System.Runtime.InteropServices.Marshal.GetTypeLibGuid%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=fullName>。|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibLcid%28System.Runtime.InteropServices.UCOMITypeLib%29>|请改用                                        <xref:System.Runtime.InteropServices.Marshal.GetTypeLibLcid%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=fullName>。|  
+|<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibGuid%28System.Runtime.InteropServices.UCOMITypeLib%29>|请改用                                         <xref:System.Runtime.InteropServices.Marshal.GetTypeLibGuid%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=fullName>。|  
+|<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibLcid%28System.Runtime.InteropServices.UCOMITypeLib%29>|请改用                                         <xref:System.Runtime.InteropServices.Marshal.GetTypeLibLcid%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=fullName>。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibName%28System.Runtime.InteropServices.UCOMITypeLib%29>|请改用                                        <xref:System.Runtime.InteropServices.Marshal.GetTypeLibName%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=fullName>。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.GetUnmanagedThunkForManagedMethodPtr%2A>|                                       <xref:System.Runtime.InteropServices.Marshal.GetUnmanagedThunkForManagedMethodPtr%2A> 方法已弃用，并将从未来版本中移除。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>|<xref:System.Runtime.InteropServices.Marshal.ReleaseThreadCache%2A>|此 API 未执行任何操作，并将从 CLR 的未来版本中删除。|  
@@ -265,7 +268,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|改用                                         <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName> 属性。|  
   
 <a name="PresentationCore"></a>   
-### <a name="assembly-presentationcoredll"></a>程序集：PresentationCore.dll  
+### 程序集：PresentationCore.dll
+<a id="assembly-presentationcoredll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -300,7 +304,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用                                         <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName>。|  
   
 <a name="PresFW"></a>   
-### <a name="assembly-presentationframeworkdll"></a>程序集：PresentationFramework.dll  
+### 程序集：PresentationFramework.dll
+<a id="assembly-presentationframeworkdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -310,7 +315,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|替换为                                         <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>。|  
   
 <a name="Act"></a>   
-### <a name="assembly-systemactivitiesdll"></a>程序集：System.Activities.dll  
+### 程序集：System.Activities.dll
+<a id="assembly-systemactivitiesdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -318,22 +324,24 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 不要使用此构造函数。 请改用                                         <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> 或                                         <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>。|  
   
 <a name="ActPres"></a>   
-### <a name="assembly-systemactivitiespresentationdll"></a>程序集：System.Activities.Presentation.dll  
+### 程序集：System.Activities.Presentation.dll
+<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请改用 <!--zz <xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Collections.Generic.IEnumerable%7BSystem.Activities.Presentation.WorkflowViewElement%7D%2CSystem.Windows.Point%29> -->`System.Activities.Presentation.DragDropHelper.DoDragMove`。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|此方法不支持拖动多个项。|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请改用                                         <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请考虑改用                                         <xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements%28System.Windows.DragEventArgs%2CSystem.Collections.Generic.IEnumerable%7BSystem.Activities.Presentation.WorkflowViewElement%7D%29>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItem%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请改用                                         <xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItems%2A>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDroppedObject%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请改用                                         <xref:System.Activities.Presentation.DragDropHelper.GetDroppedObjects%2A>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请考虑改用 <!--zz <xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements%2A> -->`xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements`。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects%2A>|此方法不支持拖动多个项。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItem%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请改用 <xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItems%2A>。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDroppedObject%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此方法不支持拖动多个项。 请改用 <xref:System.Activities.Presentation.DragDropHelper.GetDroppedObjects%2A>。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects%2A>|此方法不支持拖动多个项。|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsAdded%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 不要使用此属性。 请改用                                         <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsRemoved%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 不要使用此属性。 请改用                                         <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 不要使用此属性。 请改用                                         <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
   
 <a name="core"></a>   
-### <a name="assembly-systemcoredll"></a>程序集：System.Core.dll  
+### 程序集：System.Core.dll
+<a id="assembly-systemcoredll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -376,7 +384,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>程序集：System.Data.dll  
+### 程序集：System.Data.dll
+<a id="assembly-systemdatadll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -398,7 +407,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> 已弃用。 请使用                                         <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>。|  
   
 <a name="entity"></a>   
-### <a name="assembly-systemdataentitydll"></a>程序集：System.Data.Entity.dll  
+### 程序集：System.Data.Entity.dll
+<a id="assembly-systemdataentitydll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -408,7 +418,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|请改用                                         <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>。|  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>程序集：System.Data.OracleClient.dll  
+### 程序集：System.Data.OracleClient.dll
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -417,7 +428,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> 已弃用。 请使用                                         <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>。|  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>程序集：System.Design.dll  
+### 程序集：System.Design.dll
+<a id="assembly-systemdesigndll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -441,41 +453,42 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|建议的替代项为处理                                          `HtmlControlDesigner.DataBindings.Changed` 事件。                                        <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=fullName> 属性返回的                                         <xref:System.Web.UI.DataBindingCollection> 集合允许在更大程度上控制与该控件关联的数据绑定。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.HtmlControlDesigner.ShouldCodeSerialize%2A>|建议不要使用此属性，因为不支持代码序列化。|  
 |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ActiveTemplateEditingFrame%2A>|建议不要使用此属性，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.CreateTemplateEditingFrame%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetCachedTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataSource%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.CreateTemplateEditingFrame%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetCachedTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataSource%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplatePropertyParentType%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.InTemplateMode%2A>|建议的替代项为                                          <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A?displayProperty=fullName>。|  
 |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.OnBehaviorAttached%2A>|建议的替代项为                                          <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.GetTemplateContainerDataSource%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.OnAutoFormat%2A>|不建议使用此方法，因为                                         **AutoFormat** 对话框由设计器宿主启动。                                        <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName> 属性公开了可用的 AutoFormat 的列表。|  
 |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.CreateTemplateEditingFrame%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetCachedTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplatePropertyParentType%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.SetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.CreateTemplateEditingFrame%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetCachedTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContainerDataItemProperty%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
-|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplatePropertyParentType%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.SetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.CreateTemplateEditingFrame%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetCachedTemplateEditingVerbs%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContainerDataItemProperty%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
+|<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                         `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.SetTemplateContent%2A>|建议不要使用此方法，因为模板编辑是在                                         <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 中处理的。 若要支持模板编辑，请在                                         <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 属性中公开模板数据，并调用                                          `ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`。|  
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|<xref:System.Web.UI.Design.WebControls.PanelDesigner.OnBehaviorAttached%2A>|建议的替代项为                                          <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=fullName>。|  
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|此方法已被否决。 请改用                                         <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>。|  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>程序集：System.dll  
+### 程序集：System.dll
+<a id="assembly-systemdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=fullName>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。|  
-|<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=fullName>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用此方法。|  
+|<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=fullName>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。|  
 |<xref:Microsoft.VisualBasic.VBCodeProvider?displayProperty=fullName>|<xref:Microsoft.VisualBasic.VBCodeProvider.CreateCompiler%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。|  
 |<xref:Microsoft.VisualBasic.VBCodeProvider?displayProperty=fullName>|<xref:Microsoft.VisualBasic.VBCodeProvider.CreateGenerator%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用此方法。|  
 |<xref:Microsoft.Win32.SystemEvents?displayProperty=fullName>|<xref:Microsoft.Win32.SystemEvents.LowMemory>|此事件已弃用。|  
@@ -492,7 +505,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Uri?displayProperty=fullName>|<xref:System.Uri.%23ctor%28System.String%2CSystem.Boolean%29>|此构造函数已弃用。 请使用                                         <xref:System.Uri.%23ctor%28System.String%29>。                                          `dontEscape` 参数已弃用，并且始终为                                          `false`。|  
 |<xref:System.Uri?displayProperty=fullName>|<xref:System.Uri.%23ctor%28System.Uri%2CSystem.String%2CSystem.Boolean%29>|此构造函数已弃用。 请使用                                         <xref:System.Uri.%23ctor%28System.Uri%2CSystem.String%29>。                                          `dontEscape` 参数已弃用，并且始终为                                          `false`。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。 从                                         <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
-|<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。 从                                         <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
+|<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。 从                                         <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|调用方不应使用                                         <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=fullName> 接口，并应改为直接在                                         <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 类上使用这些方法。 从                                         <xref:System.CodeDom.Compiler.CodeDomProvider> 的继承必须还要实现此接口，并应该排除此警告，或淘汰此方法。|  
 |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 策略已过时，并将从 .NET Framework 的未来版本中移除。 有关详细信息，请参阅                                          [.NET Framework 4 中的安全性更改](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
 |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 策略已过时，并将从 .NET Framework 的未来版本中移除。 有关详细信息，请参阅                                          [.NET Framework 4 中的安全性更改](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
@@ -582,7 +595,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 使用                                         <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName> 向                                         <xref:System.Security.Claims.ClaimsIdentity> 添加声明。|  
   
 <a name="drawing"></a>   
-### <a name="assembly-systemdrawingdll"></a>程序集：System.Drawing.dll  
+### 程序集：System.Drawing.dll
+<a id="assembly-systemdrawingdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -590,7 +604,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此构造函数已弃用。 请使用                                         <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>。|  
   
 <a name="messaging"></a>   
-### <a name="assembly-systemmessagingdll"></a>程序集：System.Messaging.dll  
+### 程序集：System.Messaging.dll
+<a id="assembly-systemmessagingdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -598,7 +613,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|此方法以错误方式返回实现                                         <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName> 方法系列的                                         <xref:System.Messaging.MessageEnumerator?displayProperty=fullName>。 请改用                                          <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>。|  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>程序集：System.ServiceModel.dll  
+### 程序集：System.ServiceModel.dll
+<a id="assembly-systemservicemodeldll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -610,7 +626,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|此属性已弃用，并且仅为向后兼容性而维护。 本地计算机策略将用于确定是否应使用 NTLM。|  
   
 <a name="smDisc"></a>   
-### <a name="assembly-systemservicemodeldiscoverydll"></a>程序集：System.ServiceModel.Discovery.dll  
+### 程序集：System.ServiceModel.Discovery.dll
+<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -618,14 +635,16 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br />                                        <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> 属性已过时。 请考虑使用                                         <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName> 来设置传输属性。|  
   
 <a name="datavisualization"></a>   
-### <a name="assembly-systemwebdatavisualizationdll"></a>程序集：System.Web.DataVisualization.dll  
+### 程序集：System.Web.DataVisualization.dll
+<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> 已弃用。 请改为调查                                         <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>。|  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>程序集：System.Web.dll  
+### 程序集：System.Web.dll
+<a id="assembly-systemwebdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -660,20 +679,22 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|建议的替代项为                                         <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName> 属性。 创建一个                                         <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName> 并调用                                         <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName> 来创建一个                                         <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>。|  
   
 <a name="dynamicdata"></a>   
-### <a name="assembly-systemwebdynamicdatadll"></a>程序集：System.Web.DynamicData.dll  
+### 程序集：System.Web.DynamicData.dll
+<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|在数据绑定控件（如                                         <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> 或                                         <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>）上使用                                         `EnablePersistedSelection` 属性。|  
   
 <a name="extensions"></a>   
-### <a name="assembly-systemwebextensionsdll"></a>程序集：System.Web.Extensions.dll  
+### 程序集：System.Web.Extensions.dll
+<a id="assembly-systemwebextensionsdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=fullName>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|请使用                                         <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|此属性已过时。 改为在每个单个                                         <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 上设置                                         <!--zz <xref:System.Web.UI.ScriptReference.Path%2A>--> `System.Web.UI.ScriptReference.Path` 属性。|  
-|<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|此属性已过时。 不使用                                         <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName>，而是在每个                                         <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 上设置                                         <xref:System.Web.UI.ScriptReference.Path%2A> 属性。|  
+|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|此属性已过时。 改为对每个 <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 设置 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 属性。|  
+|<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|此属性已过时。 不使用 <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName>，改为对每个 <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 设置 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 属性。|  
 |<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|请使用                                         <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>。|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|请使用                                         <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=fullName>。|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|脚本引用不再需要 <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>。|  
@@ -681,7 +702,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|此属性已过时。 请改用                                         <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>。|  
   
 <a name="services"></a>   
-### <a name="assembly-systemwebservicesdll"></a>程序集：System.Web.Services.dll  
+### 程序集：System.Web.Services.dll
+<a id="assembly-systemwebservicesdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -689,7 +711,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|此属性将从未来版本中移除。 将不再强制要求在 SOAP 消息中显示特定标头。|  
   
 <a name="forms"></a>   
-### <a name="assembly-systemwindowsformsdll"></a>程序集：System.Windows.Forms.dll  
+### 程序集：System.Windows.Forms.dll
+<a id="assembly-systemwindowsformsdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -706,7 +729,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|此属性已弃用。 请改用                                         <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName> 属性。|  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>程序集：System.Xaml.dll  
+### 程序集：System.Xaml.dll
+<a id="assembly-systemxamldll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -714,7 +738,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 分析器不使用                                          `expressionType` 自变量。 若要指定预期的返回类型，请使用                                         <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>。 若要指定表达式类型的自定义处理，请使用                                         <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>。|  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>程序集：System.Xml.dll  
+### 程序集：System.Xml.dll
+<a id="assembly-systemxmldll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -736,22 +761,26 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|此方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName> 的重载。|  
   
 <a name="MicrosoftMembers"></a>   
-## <a name="obsolete-members-in-microsoft-assemblies"></a>Microsoft 程序集中的过时成员  
+## Microsoft 程序集中的过时成员
+<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>  
  下表列出了 Microsoft 程序集中的过时成员。 这些是特殊用途的程序集，包括面向单一语言（如 Microsoft.VisualBasic.dll）或生成系统（如 Microsoft.Build.Engine.dll）的程序集。  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>程序集：IEHost.dll 和 IEExec.exe  
+### 程序集：IEHost.dll 和 IEExec.exe
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
  IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有类型和成员已过时，且在                          [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中不受支持。 这些程序集过去用于承载 Windows 窗体控件和在 Internet Explorer 中运行可执行文件。 该技术的替代项包括 ClickOnce、XAML 浏览器应用程序 (XBAP) 和 Microsoft Silverlight。  
   
 <a name="isymwrapper"></a>   
-### <a name="assembly-isymwrapperdll"></a>程序集：ISymWrapper.dll  
+### 程序集：ISymWrapper.dll
+<a id="assembly-isymwrapperdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建议的替代项为                                          <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>。                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName> 将导入程序接口指针视为                                         <xref:System.IntPtr?displayProperty=fullName> 而不是                                         <xref:System.Int32?displayProperty=fullName>，因此可以同时在 32 位和 64 位体系结构上工作。|  
   
 <a name="conversion"></a>   
-### <a name="assembly-microsoftbuildconversionv40dll"></a>程序集：Microsoft.Build.Conversion.v4.0.dll  
+### 程序集：Microsoft.Build.Conversion.v4.0.dll
+<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -761,7 +790,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|改用无参数                                         <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName> 方法。|  
   
 <a name="engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>程序集：Microsoft.Build.Engine.dll  
+### 程序集：Microsoft.Build.Engine.dll
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -769,28 +799,32 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|如果仅作为                                         <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> 传入 .NET Framework 位置，则只要更改为无参数                                         <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 构造函数即可。 否则，你可以在注册表或配置文件中定义自定义工具集，或将元素添加到引擎的                                         <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName>。 然后改用                                         <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 或                                         <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName> 构造函数。|  
   
 <a name="BuildFW"></a>   
-### <a name="assembly-microsoftbuildframeworkdll"></a>程序集：Microsoft.Build.Framework.dll  
+### 程序集：Microsoft.Build.Framework.dll
+<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 改用                                         <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName> 属性。|  
   
 <a name="BuildUtil4"></a>   
-### <a name="assembly-microsoftbuildutilitiesv40dll"></a>程序集：Microsoft.Build.Utilities.v4.0.dll  
+### 程序集：Microsoft.Build.Utilities.v4.0.dll
+<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|使用                                         <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName> 属性。|  
   
 <a name="data_entity_tasks"></a>   
-### <a name="assembly-microsoftdataentitybuildtasksdll"></a>程序集：Microsoft.Data.Entity.Build.Tasks.dll  
+### 程序集：Microsoft.Data.Entity.Build.Tasks.dll
+<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 仅用于 3.5 版的向后兼容性。|  
   
 <a name="visualbasic"></a>   
-### <a name="assembly-microsoftvisualbasicdll"></a>程序集：Microsoft.VisualBasic.dll  
+### 程序集：Microsoft.VisualBasic.dll
+<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -807,6 +841,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|                                         `DynData` 注册表项仅适用于 Win9x，此版本的 .NET Framework 不支持该注册表项。 改用                                          `PerformanceData` 注册表项。 此属性将从 Framework 的未来版本中移除。|  
   
-## <a name="see-also"></a>另请参阅  
+## 另请参阅
+<a id="see-also" class="xliff"></a>  
  [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)   
  [过时类型](../../../docs/framework/whats-new/obsolete-types.md)
