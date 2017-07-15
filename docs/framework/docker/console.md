@@ -1,5 +1,5 @@
 ---
-title: "在 Docker 中运行控制台应用程序"
+title: "在 Docker 中运行控制台应用 | Microsoft Docs"
 description: "了解如何利用现有 .NET Framework 控制台应用程序并在 Windows Docker 容器中运行该程序。"
 author: spboyer
 keywords: ".NET, 容器, 控制台, 应用程序"
@@ -10,14 +10,15 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 
-# <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
+# 在 Windows 容器中运行控制台应用程序
+<a id="running-console-applications-in-windows-containers" class="xliff"></a>
 
 控制台应用程序具有多种用途；从简单的状态查询到长时间运行的文档图像处理任务。 在任何情况下，启动和缩放这些应用程序的能力始终在硬件购置、启动时间或运行多个实例方面受限。
 
@@ -48,7 +49,8 @@ Docker 映像的一个重要特性是映像由基本映像组合而成。 每个
 1. [创建映像的 Dockerfile](#creating-the-dockerfile)
 1. [生成并运行 Docker 容器的过程](#creating-the-image)
 
-## <a name="prerequisites"></a>先决条件
+## 先决条件
+<a id="prerequisites" class="xliff"></a>
 [Windows 10 周年更新](https://www.microsoft.com/en-us/software-download/windows10/) 或 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) 支持 Windows 容器。
 
 > [!NOTE]
@@ -58,7 +60,8 @@ Docker 映像的一个重要特性是映像由基本映像组合而成。 每个
 
 ![Windows 容器](./media/console/SwitchContainer.png)
 
-## <a name="building-the-application"></a>生成应用程序
+## 生成应用程序
+<a id="building-the-application" class="xliff"></a>
 通常，通过安装程序、FTP 或文件共享部署分配控制台应用程序。 部署到容器时，需要编译资产并将其暂存到创建 Docker 映像时可以使用的位置。
 
 在 *build.ps1* 中，脚本使用 [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) 编译应用程序以完成生成资产的任务。 有几个传递到 MSBuild 来完成所需资产的参数。 要编译的项目文件或解决方案的名称、输出位置，最后是配置（版本或调试）。
@@ -73,7 +76,8 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
 Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
 ```
 
-## <a name="creating-the-dockerfile"></a>创建 Dockerfile
+## 创建 Dockerfile
+<a id="creating-the-dockerfile" class="xliff"></a>
 用于控制台 .NET Framework 应用程序的基本映像是 [Docker 中心](https://hub.docker.com/r/microsoft/windowsservercore/)上正式推出的 `microsoft/windowsservercore`。 该基本映像包含 Windows Server 2016、.NET Framework 4.6.2 的最小安装，并充当 Windows 容器的基本 OS 映像。
 
 ```
@@ -83,10 +87,11 @@ ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
 Dockerfile 中的首行使用 [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) 指令指定基本映像。 接下来，文件中的 [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) 将应用程序资产从 **publish** 文件夹复制到容器的根文件夹；最后，设置映像的 [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint)，表明这是将在容器启动时运行的命令或应用程序。 
 
-## <a name="creating-the-image"></a>创建映像
+## 创建映像
+<a id="creating-the-image" class="xliff"></a>
 为创建 Docker 映像，将以下代码添加到 *build.ps1* 脚本。 运行脚本时，使用从 MSBuild（在[生成应用程序](#building-the-application)部分定义）编译的资产创建 `console-random-answer-generator` 映像。
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {
@@ -106,7 +111,8 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 console-random-answer-generator   latest              8f7c807db1b5        8 seconds ago       7.33 GB
 ```
 
-## <a name="running-the-container"></a>运行容器
+## 运行容器
+<a id="running-the-container" class="xliff"></a>
 可以使用 Docker 命令从命令行启动该容器。
 
 ```
@@ -134,7 +140,8 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 运行带有此选项的命令，然后查看 `docker ps -a` 命令的输出；请注意，容器 ID (`Environment.MachineName`) 不在列表中。
 
-### <a name="running-the-container-using-powershell"></a>使用 PowerShell 运行容器
+### 使用 PowerShell 运行容器
+<a id="running-the-container-using-powershell" class="xliff"></a>
 示例项目文件中还包含 *run.ps1*，这是如何使用 PowerShell 来运行接受参数的应用程序的示例。
 
 若要运行，请打开 PowerShell，然后使用以下命令：
@@ -143,6 +150,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 .\run.ps1 "Is this easy or what?"
 ```
 
-## <a name="summary"></a>摘要
+## 摘要
+<a id="summary" class="xliff"></a>
 无需对应用程序代码进行任何更改，只需通过添加 Dockerfile 并发布应用程序，即可容器化 .NET Framework 控制台应用程序、立即利用运行多个实例的优势、洁净启动和停止，以及使用更多 Windows Server 2016 功能。
 
