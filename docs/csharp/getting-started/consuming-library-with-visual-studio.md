@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 调用 .NET Core 类库"
+title: "使用 Visual Studio 2017 调用 .NET Core 类库 | Microsoft Docs"
 description: "了解如何使用 Visual Studio 2017 调用类库中的成员。"
 keywords: ".NET Core, .NET Core 类库, .NET 标准, .NET 标准类库分发"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 调用 .NET Core 类库
+# 使用 Visual Studio 2017 调用 .NET Core 类库
+<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
 如果已按照[使用 Visual Studio 2017 生成 C# .NET Core 类库](./library-with-visual-studio.md)和[使用 Visual Studio 2017 测试 .NET Core 类库](testing-library-with-visual-studio.md)中的步骤操作生成和测试类库，并且已生成类库的发布版本，下一步就是使其可供调用方使用。 可以通过以下两种方式执行此操作：
 
@@ -26,7 +27,8 @@ ms.lasthandoff: 05/03/2017
 
 * 如果类库将供更多调用方使用，可以 NuGet 包的形式分发它。
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>将类库以项目的形式添加到解决方案中
+## 将类库以项目的形式添加到解决方案中
+<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
 
 就像将单元测试和类库添加到同一解决方案中一样，可以将应用程序添加到同一解决方案中。 例如，可在控制台应用程序中使用类库，此应用程序将提示用户输入字符串，并报告第一个字符是否为大写：
 
@@ -62,7 +64,8 @@ ms.lasthandoff: 05/03/2017
 
 可以按照[使用 Visual Studio 2017 调试 C# Hello World 应用程序](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 发布 Hello World 应用程序](publishing-with-visual-studio.md)中的步骤操作，调试并发布使用此库的应用程序。
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>以 NuGet 包的形式分发类库
+## 以 NuGet 包的形式分发类库
+<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
 
 可采用 NuGet 包的形式发布类库，让类库可供更多调用方使用。 Visual Studio 不支持创建 NuGet 包。 若要创建 NuGet 包，请使用 [`dotnet` 命令行实用工具](../../core/tools/dotnet.md)：
 

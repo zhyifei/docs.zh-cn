@@ -1,5 +1,5 @@
 ---
-title: "C# 语句 | C# 语言介绍"
+title: "C# 语句 - C# 语言介绍 | Microsoft Docs"
 description: "使用语句创建 C# 程序操作"
 keywords: ".NET, C#, 语句, 语法"
 author: BillWagner
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b5849264844a28ba02fb1f539de06b207be9cd26
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: a6389d041fd9e464a40a86c4c7a4075086d05e9b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="statements"></a>语句
+# 语句
+<a id="statements" class="xliff"></a>
 
 程序操作使用*语句*进行表示。 C# 支持几种不同的语句，其中许多语句是从嵌入语句的角度来定义的。
 

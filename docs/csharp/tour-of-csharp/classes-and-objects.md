@@ -1,5 +1,5 @@
 ---
-title: "C# 类和对象| C# 语言介绍"
+title: "C# 中的类和对象 - C# 语言介绍 | Microsoft Docs"
 description: "刚开始接触 C#？ 请阅读这篇概述类、对象和继承的文章"
 keywords: ".NET, C#, 类, 实例, 对象, 继承, 多形性"
 author: BillWagner
@@ -11,13 +11,14 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
-ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: e4af598747b991757912880102cb18bf1835cc56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="classes-and-objects"></a>类和对象
+# 类和对象
+<a id="classes-and-objects" class="xliff"></a>
 
 *类*是最基本的 C# 类型。 类是一种数据结构，可在一个单元中就将状态（字段）和操作（方法和其他函数成员）结合起来。 类为动态创建的类*实例*（亦称为“*对象*”）提供了定义。 类支持*继承*和*多形性*，即*派生类*可以扩展和专门针对*基类*的机制。
 
@@ -33,7 +34,8 @@ ms.lasthandoff: 05/05/2017
 
 当无法再访问对象时，对象占用的内存会被自动回收。 既没必要，也无法在 C# 中显式解除分配对象。
 
-## <a name="members"></a>成员
+## 成员
+<a id="members" class="xliff"></a>
 
 类成员要么是静态成员，要么是实例成员。 静态成员属于类，而实例成员则属于对象（类实例）。
 
@@ -60,7 +62,8 @@ ms.lasthandoff: 05/05/2017
 * 类型
     - 类声明的嵌套类型
 
-## <a name="accessibility"></a>可访问性
+## 可访问性
+<a id="accessibility" class="xliff"></a>
 
 每个类成员都有关联的可访问性，用于控制能够访问成员的程序文本区域。 可访问性有五种可能的形式。 总结如下。
 
@@ -75,7 +78,8 @@ ms.lasthandoff: 05/05/2017
 * `private`
     - 只能访问此类
 
-## <a name="type-parameters"></a>类型参数
+## 类型参数
+<a id="type-parameters" class="xliff"></a>
 
 类定义可能会按如下方式指定一组类型参数：在类名后面用尖括号括住类型参数名称列表。 然后，可以在类声明的主体中使用类型参数来定义类成员。 在以下示例中，`Pair` 的类型参数是 `TFirst` 和 `TSecond`：
 
@@ -88,7 +92,8 @@ ms.lasthandoff: 05/05/2017
 
 包含类型自变量的泛型类型（如上面的 `Pair<int,string>`）被称为*构造泛型类型*。
 
-## <a name="base-classes"></a>基类
+## 基类
+<a id="base-classes" class="xliff"></a>
 
 类声明可能会按如下方式指定基类：在类名和类型参数后面编写冒号和基类名。 省略基类规范与从 `object` 类型派生相同。 在以下示例中，`Point3D` 的基类是 `Point`，`Point` 的基类是 `object`：
 
@@ -100,7 +105,8 @@ ms.lasthandoff: 05/05/2017
 
 [!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## <a name="fields"></a>字段
+## 字段
+<a id="fields" class="xliff"></a>
 
 *字段*是与类或类实例相关联的变量。
 
@@ -114,7 +120,8 @@ ms.lasthandoff: 05/05/2017
 
 如上面的示例所示，可以使用 `readonly` 修饰符声明*只读字段*。 只能在字段声明期间或在同一个类的构造函数中向 `readonly` 字段赋值。
 
-## <a name="methods"></a>方法
+## 方法
+<a id="methods" class="xliff"></a>
 
 *方法*是实现对象或类可执行的计算或操作的成员。 *静态方法*是通过类进行访问。 *实例方法*是通过类实例进行访问。
 
@@ -124,7 +131,8 @@ ms.lasthandoff: 05/05/2017
 
 在声明方法的类中，方法的*签名*必须是唯一的。 方法签名包含方法名称、类型参数数量及其参数的数量、修饰符和类型。 方法签名不包含返回类型。
 
-### <a name="parameters"></a>参数
+### 参数
+<a id="parameters" class="xliff"></a>
 
 参数用于将值或变量引用传递给方法。 方法参数从调用方法时指定的*自变量*中获取其实际值。 有四类参数：值参数、引用参数、输出参数和参数数组。
 
@@ -152,7 +160,8 @@ ms.lasthandoff: 05/05/2017
 
 [!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
-### <a name="method-body-and-local-variables"></a>方法主体和局部变量
+### 方法主体和局部变量
+<a id="method-body-and-local-variables" class="xliff"></a>
 
 方法主体指定了在调用方法时执行的语句。
 
@@ -164,7 +173,8 @@ C# 要求必须先*明确赋值*局部变量，然后才能获取其值。 例�
 
 方法可以使用 `return` 语句将控制权返回给调用方。 在返回 `void` 的方法中，`return` 语句无法指定表达式。 在不返回 void 的方法中，`return` 语句必须包括用于计算返回值的表达式。
 
-### <a name="static-and-instance-methods"></a>静态和实例方法
+### 静态和实例方法
+<a id="static-and-instance-methods" class="xliff"></a>
 
 使用静态修饰符声明的方法是*静态方法*。 静态方法不对特定的实例起作用，只能直接访问静态成员。
 
@@ -184,7 +194,8 @@ C# 要求必须先*明确赋值*局部变量，然后才能获取其值。 例�
 
 请注意，`SetNextSerialNo` 和 `GetNextSerialNo` 静态方法是在类中调用，而 `GetSerialNo` 实例方法则是在类实例中调用。
 
-### <a name="virtual-override-and-abstract-methods"></a>虚方法、重写方法和抽象方法
+### 虚方法、重写方法和抽象方法
+<a id="virtual-override-and-abstract-methods" class="xliff"></a>
 
 如果实例方法声明中有 `virtual` 修饰符，可以将实例方法称为“*虚方法*”。 如果没有 virtual 修饰符，可以将实例方法称为“*非虚方法*”。
 
@@ -210,7 +221,8 @@ C# 要求必须先*明确赋值*局部变量，然后才能获取其值。 例�
 
 [!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
-### <a name="method-overloading"></a>方法重载
+### 方法重载
+<a id="method-overloading" class="xliff"></a>
 
 借助方法*重载*，同一类中可以有多个同名的方法，只要这些方法具有唯一签名即可。 编译如何调用重载的方法时，编译器使用*重载决策*来确定要调用的特定方法。 重载决策查找与自变量最匹配的方法；如果找不到最佳匹配项，则会报告错误。 下面的示例展示了重载决策的实际工作方式。 `Main` 方法中每个调用的注释指明了实际调用的方法。
 
@@ -218,7 +230,8 @@ C# 要求必须先*明确赋值*局部变量，然后才能获取其值。 例�
 
 如示例所示，可以随时将自变量显式转换成确切的参数类型，并/或显式提供类型自变量，从而选择特定的方法。
 
-## <a name="other-function-members"></a>其他函数成员
+## 其他函数成员
+<a id="other-function-members" class="xliff"></a>
 
 包含可执行代码的成员统称为类的*函数成员*。 上一部分介绍了作为主要函数成员类型的方法。 此部分将介绍 C# 支持的其他类型函数成员：构造函数、属性、索引器、事件、运算符和终结器。
 
@@ -226,7 +239,8 @@ C# 要求必须先*明确赋值*局部变量，然后才能获取其值。 例�
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
-### <a name="constructors"></a>构造函数
+### 构造函数
+<a id="constructors" class="xliff"></a>
 
 C# 支持实例和静态构造函数。 *实例构造函数*是实现初始化类实例所需执行的操作的成员。 *静态构造函数*是实现在首次加载类时初始化类本身所需执行的操作的成员。
 
@@ -238,7 +252,8 @@ C# 支持实例和静态构造函数。 *实例构造函数*是实现初始化�
 
 与其他成员不同，实例构造函数不能被继承，且类中只能包含实际已声明的实例构造函数。 如果没有为类提供实例构造函数，则会自动提供不含参数的空实例构造函数。
 
-### <a name="properties"></a>属性
+### 属性
+<a id="properties" class="xliff"></a>
 
 *属性*是字段的自然扩展。 两者都是包含关联类型的已命名成员，用于访问字段和属性的语法也是一样的。 不过，与字段不同的是，属性不指明存储位置。 相反，属性包含*访问器*，用于指定在读取或写入属性值时要执行的语句。
 
@@ -256,7 +271,8 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 
 属性的访问器可以是虚的。 如果属性声明包含 `virtual`、`abstract` 或 `override` 修饰符，则适用于属性的访问器。
 
-### <a name="indexers"></a>索引器
+### 索引器
+<a id="indexers" class="xliff"></a>
 
 借助*索引器*成员，可以将对象编入索引（像处理数组一样）。 索引器的声明方式与属性类似，不同之处在于，索引器成员名称格式为后跟分隔符 `[` 和 `]`，其中写入参数列表。 这些参数在索引器的访问器中可用。 类似于属性，索引器分为读写、只读和只写索引器，且索引器的访问器可以是虚的。
 
@@ -266,7 +282,8 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 
 索引器可以进行重载。也就是说，类可以声明多个索引器，只要其参数的数量或类型不同即可。
 
-### <a name="events"></a>事件
+### 事件
+<a id="events" class="xliff"></a>
 
 借助*事件*成员，类或对象可以提供通知。 事件的声明方式与字段类似，不同之处在于，事件声明包括事件关键字，且类型必须是委托类型。
 
@@ -280,7 +297,8 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 
 对于需要控制事件的基础存储的高级方案，事件声明可以显式提供 `add` 和 `remove` 访问器，这在某种程度上与属性的 `set` 访问器类似。
 
-### <a name="operators"></a>运算符
+### 运算符
+<a id="operators" class="xliff"></a>
 
 *运算符*是定义向类实例应用特定表达式运算符的含义的成员。 可以定义三种类型的运算符：一元运算符、二元运算符和转换运算符。 所有运算符都必须声明为 `public` 和 `static`。
 
@@ -290,7 +308,8 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 
 第一个 `Console.WriteLine` 输出 `True`，因为两个列表包含的对象不仅数量相同，而且值和顺序也相同。 如果 `List<T>` 未定义 `operator ==`，那么第一个 `Console.WriteLine` 会输出 `False`，因为 `a` 和 `b` 引用不同的 `List<int>` 实例。
 
-### <a name="finalizers"></a>终结器
+### 终结器
+<a id="finalizers" class="xliff"></a>
 
 *终结器*是实现完成类实例所需的操作的成员。 终结器既不能包含参数和可访问性修饰符，也不能进行显式调用。 实例的终结器在垃圾回收期间自动调用。
 

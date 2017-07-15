@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 测试 .NET Core 类库"
+title: "使用 Visual Studio 2017 测试 .NET Core 类库 | Microsoft Docs"
 description: "了解如何使用 Visual Studio 2017 测试用 C# 编写的类库"
 keywords: ".NET Core, .NET Standard 类库, Visual Studio 2017, 单元测试"
 author: BillWagner
@@ -11,22 +11,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 629af913bb5172b890161bb82f45a65e6bb6498d
+ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
+ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
+# 使用 Visual Studio 2017 测试 .NET Core 类库
+<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
 在[使用 Visual Studio 2017 生成 C# 和 .NET Core 类库](library-with-visual-studio.md)中，创建了一个简单的类库，用于向 @System.String 类添加扩展方法。 现在，将创建一个单元测试，用于确保此类库能够按预期运行。 向在上一主题中创建的解决方案添加单元测试项目。
 
-## <a name="creating-a-unit-test-project"></a>创建单元测试项目
+## 创建单元测试项目
+<a id="creating-a-unit-test-project" class="xliff"></a>
 
 若要创建单元测试项目，请执行以下操作：
 
-1. 在“解决方案资源管理器”中，打开“ClassLibraryProject”解决方案节点的上下文菜单，然后选择“添加” > “新项目”。
+1. 在“解决方案资源管理器”中，打开“ClassLibraryProjects”解决方案节点的上下文菜单，再依次选择“添加” > “新项目”。
 
    <!-- Need a VS 2017 version  [!NOTE] In addition to a Unit Test project, you can also use Visual Studio to create an xUnit test project for .NET Core. For a walkthrough that includes an xUnit test project, see [Getting started with .NET Core on Windows, using Visual Studio 2015](../../core/tutorials/using-on-windows.md). --> 
 
@@ -54,7 +56,8 @@ ms.lasthandoff: 05/03/2017
 
    ![引用管理器](./media/testing-library-with-visual-studio/referencemanager.png)
 
-## <a name="adding-and-running-unit-test-methods"></a>添加并运行单元测试方法
+## 添加并运行单元测试方法
+<a id="adding-and-running-unit-test-methods" class="xliff"></a>
 
 运行单元测试时，Visual Studio 执行单元测试类（对其应用了 [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) 属性的类）中标记有 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 属性的所有方法。 当第一次遇到测试不通过或测试方法中的所有测试均已成功通过时，测试方法终止。
 
@@ -98,7 +101,8 @@ ms.lasthandoff: 05/03/2017
 
    ![测试资源管理器窗口](./media/testing-library-with-visual-studio/firsttest.png)
 
-## <a name="handling-test-failures"></a>处理未通过的测试
+## 处理未通过的测试
+<a id="handling-test-failures" class="xliff"></a>
 
 由于运行的测试均通过，因此需进行少量改动，以使其中一个测试方法失败：
 
@@ -119,7 +123,8 @@ ms.lasthandoff: 05/03/2017
 
 1. 删除添加的代码 (`"Error", `)，然后重新运行测试。 测试将通过。
 
-## <a name="testing-the-release-version-of-the-library"></a>测试库的发行版本
+## 测试库的发行版本
+<a id="testing-the-release-version-of-the-library" class="xliff"></a>
 
 现已测试库的调试版本。 至此，测试已全部通过，且已充分测试库，应对库的发布版本再运行一次这些测试。 许多因素（包括编译器优化）有时可能会导致调试版本和发行版本出现行为差异。
 

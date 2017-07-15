@@ -1,5 +1,5 @@
 ---
-title: "C# 结构 | C# 语言介绍"
+title: "C# 结构 - C# 语言介绍 | Microsoft Docs"
 description: "了解 C# 值类型（称为“结构”）的基础知识"
 keywords: ".NET, C#, 结构, 值类型"
 author: BillWagner
@@ -11,16 +11,17 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 38ce3cdf3aaa033d84bb2c1a421cb04c6f928ab4
-ms.openlocfilehash: 04b1784b461961496856d62aa6cb70b5978e2437
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="structs"></a>结构
+# 结构
+<a id="structs" class="xliff"></a>
 
-***结构***是可以包含数据成员和函数成员的数据结构，这一点与类一样；与类不同的是，结构是值类型，无需进行堆分配。 结构类型的变量直接存储结构数据，而类类型的变量存储对动态分配的对象的引用。 结构类型不支持用户指定的继承，并且所有结构类型均隐式继承自类型 <xref:System.ValueType>，而后者隐式继承自 `object`。
+***结构***是可以包含数据成员和函数成员的数据结构，这一点与类一样；与类不同的是，结构是值类型，无需进行堆分配。 结构类型的变量直接存储结构数据，而类类型的变量存储对动态分配的对象的引用。 结构类型不支持用户指定的继承，并且所有结构类型均隐式继承自类型 <xref:System.ValueType>，后者又隐式继承自 `object`。
 
 结构对包含值语义的小型数据结构特别有用。 复数、坐标系中的点或字典中的键值对都是结构的典型示例。 对小型数据结构使用结构（而不是类）在应用程序执行的内存分配次数上存在巨大差异。 例如，以下程序创建并初始化包含 100 个点的数组。 通过将 `Point` 实现为类，可单独实例化 101 个对象，一个对象用于数组，其他所有对象分别用于 100 个元素。
 
