@@ -53,4 +53,5 @@ ms.lasthandoff: 07/03/2017
   
 ## <a name="see-also"></a>请参阅  
  [LINQ 和 ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)   
+
  [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

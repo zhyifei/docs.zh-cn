@@ -47,6 +47,7 @@ ms.lasthandoff: 03/13/2017
  若要使用 `ref` 参数，方法定义和调用方法均必须显式使用 `ref` 关键字，如下面的示例所示。  
   
  [!code-cs[csrefKeywordsMethodParams#6](../../../samples/snippets/csharp/language-reference/keywords/ref/ref_1.cs)]  
+
   
  传递到 `ref` 形参的实参必须先经过初始化，然后才能传递。 这与 `out` 形参不同，在传递之前，不需要显式初始化该形参的实参。 有关详细信息，请参阅 [out](../../../csharp/language-reference/keywords/out.md)。  
   
@@ -57,6 +58,7 @@ ms.lasthandoff: 03/13/2017
  但是，当一个方法具有 `ref` 或 `out` 参数，另一个方法具有值参数时，则可以完成重载，如下面的示例所示。  
   
  [!code-cs[csrefKeywordsMethodParams#7](../../../samples/snippets/csharp/language-reference/keywords/ref/ref_3.cs)]  
+
   
  在其他要求签名匹配的情况下（如隐藏或重写），`ref` 和 `out` 是签名的一部分，相互之间不匹配。  
   
@@ -74,6 +76,7 @@ ms.lasthandoff: 03/13/2017
  前面的示例演示当通过引用传递值类型时会发生什么情况。 你还可以使用 `ref` 关键字传递引用类型。 通过引用传递引用类型可以使所调用方法将调用方法中的对象替换为引用参数所引用的对象。 对象的存储位置按引用参数的值传递到方法。 如果更改参数存储位置中的值（以指向新对象），你还可以将存储位置更改为调用方所引用的位置。 下面的示例将引用类型的实例作为 `ref` 参数传递。 有关如何通过值和引用传递引用类型的详细信息，请参阅[传递引用类型参数](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)。  
   
  [!code-cs[csrefKeywordsMethodParams#8](../../../samples/snippets/csharp/language-reference/keywords/ref/ref_4.cs)]  
+
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

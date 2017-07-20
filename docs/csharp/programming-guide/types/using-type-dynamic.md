@@ -91,4 +91,5 @@ ms.lasthandoff: 07/03/2017
 |[动态](../../../csharp/language-reference/keywords/dynamic.md)|描述 `dynamic` 关键字的用法。|  
 |[动态语言运行时概述](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供有关 DLR 的概述，DLR 是一种运行时环境，它将一组适用于动态语言的服务添加到公共语言运行时 (CLR)。|  
 |[演练：创建和使用动态对象](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|提供有关如何创建自定义动态对象以及创建访问 `IronPython` 库的对象的分步说明。|  
+
 |[如何：通过使用 Visual C# 功能访问 Office 互操作对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|演示如何创建一个项目，该项目使用命名参数和可选参数、`dynamic` 类型以及可简化对 Office API 对象的访问的其他增强功能。|
