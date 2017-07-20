@@ -1,5 +1,5 @@
 ---
-title: "C# 中的继承"
+title: "C# 中的继承 | Microsoft Docs"
 description: "了解如何在 C# 库和应用程序中运用继承。"
 keywords: "继承 (C#), 基类, 派生类, 抽象基类"
 author: rpetrusha
@@ -12,23 +12,27 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承 #
+# C# 和 .NET 中的继承
+<a id="inheritance-in-c-and-net" class="xliff"></a> #
 
-## <a name="introduction"></a>介绍 ##
+## 介绍
+<a id="introduction" class="xliff"></a> ##
 
 此教程将介绍 C# 中的继承。 继承是面向对象的编程语言的一项功能，可方便你定义提供特定功能（数据和行为）的基类，并定义继承或重写此功能的派生类。
 
-## <a name="prerequisites"></a>先决条件 ##
+## 先决条件
+<a id="prerequisites" class="xliff"></a> ##
 
 阅读此教程的前提是，你已安装 .NET Core。 有关安装说明，请参阅 [.NET Core 安装指南](https://www.microsoft.com/net/core)。 还需要安装代码编辑器。 此教程使用 [Visual Studio Code](https://code.visualstudio.com)，但你可以选择使用任何代码编辑器。
 
-## <a name="running-the-examples"></a>运行示例 ##
+## 运行示例
+<a id="running-the-examples" class="xliff"></a> ##
 
 若要创建并运行此教程中的示例，请通过命令行使用 [dotnet](../../core/tools/dotnet.md) 实用工具。 对于每个示例，请按照以下步骤操作：
 
@@ -42,7 +46,8 @@ ms.lasthandoff: 05/15/2017
 
 1. 输入 [dotnet run](../../core/tools/dotnet-run.md) 命令，编译并执行示例。
 
-## <a name="background-what-is-inheritance"></a>背景知识：什么是继承？ ##
+## 背景知识：什么是继承？
+<a id="background-what-is-inheritance" class="xliff"></a> ##
 
 *继承*是面向对象的编程的一种基本特性。 借助继承，能够定义可重用（继承）、扩展或修改父类行为的子类。 成员被继承的类称为*基类*。 继承基类成员的类称为*派生类*。
 
@@ -117,7 +122,8 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
    }
    ```
 
-## <a name="implicit-inheritance"></a>隐式继承 ##
+## 隐式继承
+<a id="implicit-inheritance" class="xliff"></a> ##
 
 .NET 类型系统中的所有类型除了可以通过单一继承进行继承之外，还可以隐式继承自 @System.Object 或其派生的类型。 这就确保了常见功能可用于任何类型。
 
@@ -156,7 +162,8 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 | enum | @System.Enum、System.ValueType、@System.Object |
 | 委托 | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>继承和“is a”关系 ##
+## 继承和“is a”关系
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a> ##
 
 通常情况下，继承用于表示基类和一个或多个派生类之间的“is a”关系，其中派生类是基类的特定版本；派生类是基类的具体类型。 例如，`Publication` 类表示任何类型的出版物，`Book` 和 `Magazine` 类表示出版物的具体类型。
 
@@ -172,11 +179,13 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 基于继承的“is a”关系最适用于基类和向基类添加附加成员或需要基类没有的其他功能的派生类。
 
-## <a name="designing-the-base-class-and-derived-classes"></a>设计基类及其派生类 ##
+## 设计基类及其派生类
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a> ##
 
 让我们来看看如何设计基类及其派生类。 在此部分中，我们将定义一个基类 `Publication`，用于表示任何类型的出版物，如书籍、杂志、报纸、期刊、文章等。我们还将定义一个从 `Publication` 派生的 `Book` 类。 我们可以将示例轻松扩展为定义其他派生类，如 `Magazine`、`Journal`、`Newspaper` 和 `Article`。
 
-### <a name="the-base-publication-class"></a>`Publication` 基类 ###
+### `Publication` 基类
+<a id="the-base-publication-class" class="xliff"></a> ###
 
 设计 `Publication` 类时，我们需要做出下面几项设计决策：
 
@@ -245,7 +254,8 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 ![Object 和 Publication 类](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>`Book` 类 ###
+### `Book` 类
+<a id="the-book-class" class="xliff"></a> ###
 
 `Book` 类表示作为一种特定类型出版物的书籍。 下面的示例展示了 `Book` 类的源代码。
 
@@ -301,7 +311,8 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 [!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>请参阅 ##
+## 请参阅
+<a id="see-also" class="xliff"></a> ##
 
 [类和对象](../tour-of-csharp/classes-and-objects.md)</br>
 [继承（C# 编程指南）](../programming-guide/classes-and-structs/inheritance.md)

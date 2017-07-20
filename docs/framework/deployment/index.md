@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3dbadeec14ce9c023af39ae4ff95d0183826e7c1
-ms.openlocfilehash: eb0f0636abb39eabb387388fcdd39df8aca88c34
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
@@ -57,13 +57,13 @@ ms.lasthandoff: 05/02/2017
   
     -   [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [阻止安装和卸载 .NET Framework 疑难解答](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [安装和卸载 .NET Framework 受阻疑难解答](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   部署客户端应用程序中的 .NET Framework（适用于开发人员）：  
   
-    -   在安装和部署项目中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield)  
+    -   在安装和部署项目中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)  
   
-    -   [使用 Visual Studio ClickOnce 应用程序](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
+    -   [使用 Visual Studio ClickOnce 应用程序](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
   
     -   [创建 WiX 安装包](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -171,12 +171,12 @@ ms.lasthandoff: 05/02/2017
 |标题|描述|  
 |-----------|-----------------|  
 |[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|  
-|[适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|讨论如何避免可能导致 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他错误的类型标识问题。|  
+|[适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|  
 |[在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|  
 |[面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)|说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。|  
 |[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)|说明开发人员如何在其计算机的应用程序中安装 .NET Framework。|  
 |[部署应用程序、服务和组件](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。| 
-|[发布 ClickOnce 应用程序](http://msdn.microsoft.com/library/eb6dfe79-f54c-4331-8e36-073688e70973)|描述打包 Windows 窗体应用程序以及使用 ClickOnce 将其部署到连网的客户端计算机上的方法。|  
+|[发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)|描述打包 Windows 窗体应用程序以及使用 ClickOnce 将其部署到连网的客户端计算机上的方法。|  
 |[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用于打包和部署资源的中心辐射模型，包括资源命名约定、后备进程和打包替代项。|  
 |[部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)|说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。|  
 |[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|  

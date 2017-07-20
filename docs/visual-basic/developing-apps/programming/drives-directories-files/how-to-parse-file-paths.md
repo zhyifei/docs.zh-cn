@@ -40,19 +40,19 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>如何：在 Visual Basic 中分析文件路径
-在分析文件路径时，<xref:Microsoft.VisualBasic.FileIO.FileSystem> 对象提供了多个有用的方法。  
+分析文件路径时，<xref:Microsoft.VisualBasic.FileIO.FileSystem> 对象提供多种有用的方法。  
   
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> 方法采用了两个路径，并返回格式正确的组合路径。  
+-   <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> 方法采用两个路径并返回格式正确的组合路径。  
   
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> 方法返回提供的路径的父级的绝对路径。  
+-   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> 方法将返回所提供的路径的父级的绝对路径。  
   
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法返回一个 <xref:System.IO.FileInfo> 对象，可以查询该对象来确定文件的属性，如其名称和路径。  
+-   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法将返回一个 <xref:System.IO.FileInfo> 对象，查询该对象可确定文件的属性，例如文件名和路径。  
   
  不要根据文件的扩展名来判断文件的内容。 例如，文件 Form1.vb 可能不是 Visual Basic 源文件。  
   
 ### <a name="to-determine-a-files-name-and-path"></a>确定文件的名称和路径  
   
--   使用 <xref:System.IO.FileInfo> 对象的 <xref:System.IO.FileInfo.DirectoryName%2A> 和 <xref:System.IO.FileInfo.Name%2A> 属性确定文件的名称和路径。 此示例确定了名称和路径，并将其显示了出来。  
+-   使用 <xref:System.IO.FileInfo> 对象的 <xref:System.IO.FileInfo.DirectoryName%2A> 和 <xref:System.IO.FileInfo.Name%2A> 属性可确定文件的名称和路径。 此示例确定了名称和路径，并将其显示了出来。  
   
      [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   

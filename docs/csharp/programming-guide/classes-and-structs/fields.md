@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1e5b1880e6821b2fd4595baad31f7a1bd5599ac4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/13/2017
  可以将字段声明为[只读](../../../csharp/language-reference/keywords/readonly.md)。 只能在初始化期间或在构造函数中为只读字段赋值。 `static``readonly` 字段非常类似于常量，只不过 C# 编译器在编译时不具有对静态只读字段的值的访问权限，而只有在运行时才具有访问权限。 有关详细信息，请参阅[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)   

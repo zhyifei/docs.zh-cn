@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 60443456be4b4fbb13dad6cb9c372a1af332c2fd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6c6f15772f098618d63a48ada122b1e98ef5e62d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>如何：使用集合初始值设定项初始化字典（C# 编程指南）
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
  请注意，集合中的每个元素有两对大括号。 最内层的大括号中的是 `StudentName` 的对象初始值设定项，最外层的大括号中的是要添加到 `students`<xref:System.Collections.Generic.Dictionary`2> 的键/值对的初始值设定项。 最后，字典的整个集合初始值设定项被括在大括号中。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要运行此代码，请将该类复制并粘贴到已经在 [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)] 中创建的 Visual C# 控制台应用程序项目中。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 using 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。   
+ 若要运行此代码，请将该类复制并粘贴到已经在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中创建的 Visual C# 控制台应用程序项目中。 默认情况下，此项目面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版，并且具有对 System.Core.dll 的引用和一个用于 System.Linq 的 using 指令。 如果项目中缺少其中一个或多个要求，则可以手动添加它们。   
   
 ## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)   

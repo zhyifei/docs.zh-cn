@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 60a6322f8e120c6a443638b4f6e409acdfa0b235
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  可以通过使用[虚拟](../../../csharp/language-reference/keywords/virtual.md)关键字将事件标记为虚事件。 这可使派生类使用[重写](../../../csharp/language-reference/keywords/override.md)关键字重写事件行为。 有关详细信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。 重写虚拟事件的事件也可以为[密封](../../../csharp/language-reference/keywords/sealed.md)，指定对于派生类，它不再是虚拟的。 最后，可以声明事件为[抽象](../../../csharp/language-reference/keywords/abstract.md)，这意味着编译器将不会生成 `add` 和 `remove` 事件访问器块。 因此，派生类必须提供其自己的实现。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   

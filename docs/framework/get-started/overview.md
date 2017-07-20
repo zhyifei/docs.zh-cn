@@ -19,13 +19,15 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: bed74cee6db01a38bc0bc3c6eeffa33b682bbd80
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="overview-of-the-net-framework"></a>.NET Framework 概述
+# .NET Framework 概述
+<a id="overview-of-the-net-framework" class="xliff"></a>
 .NET Framework 是一种技术，该技术支持生成和运行下一代应用程序和 XML Web Services。 .NET Framework 旨在实现下列目标：  
   
 -   提供一个一致的面向对象的编程环境，而无论对象代码是在本地存储和执行，还是在本地执行但在 Internet 上分布，或者是在远程执行的。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 04/18/2017
 -   按照工业标准生成所有通信，以确保基于 .NET Framework 的代码可与任何其他代码集成。  
   
 > [!NOTE]
->  有关适用于用户和开发人员的 .NET Framework 的常规说明，请参阅[入门](../../../docs/framework/get-started/index.md)。 若要下载 .NET Framework，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。  
+>  有关适用于用户和开发人员的 .NET Framework 的常规说明，请参阅[入门](../../../docs/framework/get-started/index.md)。  
   
  .NET Framework 包括公共语言运行时和 .NET Framework 类库。 公共语言运行时是 .NET Framework 的基础。 您可以将运行时看作一个在执行时管理代码的代理，它提供内存管理、线程管理和远程处理等核心服务，并且还强制实施严格的类型安全以及可提高安全性和可靠性的其他形式的代码准确性。 事实上，代码管理的概念是运行时的基本原则。 以运行时为目标的代码称为托管代码，而不以运行时为目标的代码称为非托管代码。 类库是一个综合性的面向对象的可重用类型集合，您可以使用它来开发多种应用程序，这些应用程序包括传统的命令行或图形用户界面 (GUI) 应用程序，还包括基于 ASP.NET 提供的最新创新的应用程序（如 Web 窗体和 XML Web Services）。  
   
@@ -58,7 +60,8 @@ ms.lasthandoff: 04/18/2017
   
  以下各节更详细地描述 .NET Framework 的主要功能。  
   
-## <a name="features-of-the-common-language-runtime"></a>公共语言运行时的功能  
+## 公共语言运行时的功能
+<a id="features-of-the-common-language-runtime" class="xliff"></a>  
  公共语言运行时管理内存、线程执行、代码执行、代码安全验证、编译以及其他系统服务。 这些功能是在公共语言运行时上运行的托管代码所固有的。  
   
  至于安全性，取决于包括托管组件的来源（如 Internet、企业网络或本地计算机）在内的一些因素，托管组件被赋予不同程度的信任。 这意味着即使用在同一活动应用程序中，托管组件既可能能够执行文件访问操作、注册表访问操作或其他须小心使用的功能，也可能不能够执行这些功能。  
@@ -77,7 +80,8 @@ ms.lasthandoff: 04/18/2017
   
  最后，运行时可由高性能的服务器端应用程序（如 Microsoft SQL Server 和 Internet Information Services (IIS)）承载。 此基础结构使您在享受支持运行时承载的行业最佳企业服务器的优越性能的同时，能够使用托管代码编写业务逻辑。  
   
-## <a name="net-framework-class-library"></a>.NET Framework 类库  
+## .NET Framework 类库
+<a id="net-framework-class-library" class="xliff"></a>  
  .NET Framework 类库是一个与公共语言运行时紧密集成的可重用的类型集合。 该类库是面向对象的，并提供您自己的托管代码可从中导出功能的类型。 这不但使 .NET Framework 类型易于使用，而且还减少了学习 .NET Framework 的新功能所需要的时间。 此外，第三方组件可与 .NET Framework 中的类无缝集成。  
   
  例如，.NET Framework 集合类实现一组可用于开发您自己的集合类的接口。 您的集合类将与 .NET Framework 中的类无缝地混合。  
@@ -100,9 +104,10 @@ ms.lasthandoff: 04/18/2017
   
  例如，Windows 窗体类是一组综合性的可重用的类型，它们大大简化了 Windows GUI 的开发。 如果要编写 ASP.NET Web 窗体应用程序，可使用 Web 窗体类。  
   
-## <a name="see-also"></a>另请参阅  
+## 另请参阅
+<a id="see-also" class="xliff"></a>  
  [系统要求](../../../docs/framework/get-started/system-requirements.md)   
- [安装指南](../../../docs/framework/install/guide-for-developers.md)   
+ [安装指南](../../../docs/framework/install/index.md)   
  [开发指南](../../../docs/framework/development-guide.md)   
  [工具](../../../docs/framework/tools/index.md)   
  [.NET Framework 示例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   

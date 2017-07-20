@@ -1,5 +1,5 @@
 ---
-title: "保持 Visual Studio (Visual Basic 中) 中的对象 |Microsoft 文档"
+title: "在 Visual Studio 中暂留对象 (Visual Basic) | Microsoft 文档"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,39 +20,40 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0ff6320aee65850b8b445f445f80b4bbe2c9c254
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练︰ 保持在 Visual Studio (Visual Basic 中) 中的对象
-虽然可以在设计时对象的属性设置为默认值，但是在运行时输入的所有值都都将丢失时销毁该对象。 您可以使用序列化对象的实例之间保持数据，这样就可以将值存储并实例化该对象在下次检索它们。  
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练：在 Visual Studio 中暂留对象 (Visual Basic)
+虽然可在设计时将对象的属性设置为默认值，但销毁对象时，运行时输入的任何值都将丢失。 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。  
   
 > [!NOTE]
->  在 Visual Basic 中，存储简单数据，如名称或编号，您可以使用`My.Settings`对象。 有关详细信息，请参阅[My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+>  在 Visual Basic 中，要存储简单数据（如名称或编号），可以使用 `My.Settings` 对象。 有关详细信息，请参阅 [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
- 在本演练中，您将创建一个简单`Loan`对象，并将其数据写入文件。 然后重新创建对象时，将从文件中检索数据。  
-  
-> [!IMPORTANT]
->  此示例创建一个新文件，如果该文件不存在。 如果应用程序必须创建一个文件，该应用程序必须`Create`文件夹的权限。 通过使用访问控制列表设置权限。 如果该文件已存在，该应用程序仅需要`Write`权限时，较小者的权限。 如有可能，会在部署期间，创建该文件，并仅授予更安全`Read`到单个文件 （而不是对文件夹具有创建权限） 的权限。 此外，它是更安全，将数据写入到比到根文件夹或 Program Files 文件夹的用户文件夹。  
+ 本演练将创建一个简单的 `Loan` 对象，并将其值保留在文件中。 当重新创建该对象时，将检索文件中的数据。  
   
 > [!IMPORTANT]
->  此示例将数据存储二进制文件中。 这些格式不应该用于敏感数据，如密码或信用卡信息。  
+>  此示例在文件尚未存在时创建新文件。 如果应用程序必须创建文件，则该应用程序必须对文件夹具有 `Create` 权限。 可使用访问控制列表设置权限。 如果文件已存在，则该应用程序只需要 `Write` 权限（这是较弱的权限）。 如有可能，较安全的做法是在部署过程中创建文件并仅向单个文件授予 `Read` 权限（而不是授予文件夹的“创建”权限）。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。  
+  
+> [!IMPORTANT]
+>  此示例将数据存储为二进制格式。 不应将这些格式用于敏感数据，如密码或信用卡信息。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="creating-the-loan-object"></a>创建贷款对象  
- 第一步是创建`Loan`类以及测试应用程序使用的类。  
+## <a name="creating-the-loan-object"></a>创建 Loan 对象  
+ 第一步是创建 `Loan` 类和使用该类的测试应用程序。  
   
-### <a name="to-create-the-loan-class"></a>若要创建 Loan 类  
+### <a name="to-create-the-loan-class"></a>创建 Loan 类  
   
-1.  创建一个新的类库项目并将其命名为"LoanClass"。 有关详细信息，请参阅[创建解决方案和项目](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
+1.  新建“类库”项目，并将其命名为“LoanClass”。 有关详细信息，请参阅[创建解决方案和项目](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
   
-2.  在**解决方案资源管理器**，打开 Class1 文件的快捷菜单并选择**重命名**。 文件重命名为`Loan`，然后按 enter 键。 重命名该文件也进行重命名为该类`Loan`。  
+2.  在“解决方案资源管理器”中，打开 Class1 文件的快捷菜单，选择“重命名”。 将文件重命名为 `Loan`，然后按 Enter。 重命名文件也会将类重命名为 `Loan`。  
   
-3.  向类中添加以下公共成员︰  
+3.  将以下公共成员添加到该类中：  
   
     ```vb  
     Public Class Loan  
@@ -90,25 +91,25 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
- 您还需要创建一个简单的应用程序使用`Loan`类。  
+ 还需要创建一个使用 `Loan` 类的简单应用程序。  
   
-### <a name="to-create-a-test-application"></a>若要创建的测试应用程序  
+### <a name="to-create-a-test-application"></a>创建测试应用程序  
   
-1.  若要在将 Windows 窗体应用程序项目添加到您的解决方案，**文件**菜单上，选择**添加**，**新项目**。  
+1.  若要将 Windows 窗体应用程序项目添加到解决方案，请在“文件”菜单上依次选择“添加”、“新建项目”。  
   
-2.  在**添加新项目**对话框框中，选择**Windows 窗体应用程序**，然后输入`LoanApp`作为名称的项目，然后再单击**确定**以关闭对话框。  
+2.  在“添加新项目”对话框中，选择“Windows 窗体应用程序”，然后输入 `LoanApp` 作为项目名称，然后单击“确定”关闭对话框。  
   
-3.  在**解决方案资源管理器**，选择 LoanApp 项目。  
+3.  在“解决方案资源管理器”中，选择 LoanApp 项目。  
   
-4.  在**项目**菜单上，选择**设为启动项目**。  
+4.  在“项目”菜单上，选择“设为启动项目”。  
   
-5.  在“项目” **** 菜单上，选择“添加引用” ****。  
+5.  在“项目”菜单上，选择“添加引用” 。  
   
-6.  在**添加引用**对话框框中，选择**项目**选项卡，然后选择 LoanClass 项目。  
+6.  在“添加引用”对话框中，选择“项目”选项卡，然后选择 LoanClass 项目。  
   
-7.  单击“确定” **** 关闭对话框。  
+7.  单击“确定”关闭对话框。  
   
-8.  在设计器中，添加了四个<xref:System.Windows.Forms.TextBox>控件添加到窗体。</xref:System.Windows.Forms.TextBox>  
+8.  在设计器中，向窗体添加四个 <xref:System.Windows.Forms.TextBox> 控件。  
   
 9. 在代码编辑器中，添加以下代码：  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-10. 添加事件处理程序`PropertyChanged`事件到该窗体使用下面的代码︰  
+10. 使用以下代码将 `PropertyChanged` 事件的事件处理程序添加到窗体：  
   
     ```vb  
     Public Sub CustomerPropertyChanged(  
@@ -135,27 +136,27 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
- 此时，您可以生成并运行该应用程序。 请注意，默认值从`Loan`类显示在文本框中。 尝试从 7.5 利率值更改为 7.1 中，然后关闭该应用程序并再次运行 — 值会恢复为默认值为 7.5。  
+ 此时可以生成并运行应用程序。 请注意，`Loan` 类中的默认值将显示在文本框中。 尝试将利率值从 7.5 更改到 7.1，然后关闭该应用程序并再次运行 - 值会还原为默认值 7.5。  
   
- 在现实生活中，利率更改定期，但并不一定每次运行该应用程序。 而不是让用户在每次应用程序运行时都更新利率，则最好保持最新的应用程序实例之间的利率。 在下一步，您将执行就是这样通过向贷款类中添加序列化。  
+ 在现实生活中，利率会定期更改，但不必在每次运行应用程序时都更改利率。 与其让用户在每次运行应用程序时更新利率，不如在应用程序的实例之间保留最近的利率。 下一步是通过向 Loan 类添加序列化来执行此操作。  
   
-## <a name="using-serialization-to-persist-the-object"></a>使用序列化对象进行持久化  
- 才能持久地保存贷款类的值，则必须先将标记的类具有`Serializable`属性。  
+## <a name="using-serialization-to-persist-the-object"></a>使用序列化保持对象  
+ 为了保持 Loan 类的值，必须首先使用 `Serializable` 属性标记该类。  
   
-### <a name="to-mark-a-class-as-serializable"></a>若要将标记为可序列化类  
+### <a name="to-mark-a-class-as-serializable"></a>将类标记为可序列化  
   
--   更改 Loan 类的类声明，如下所示︰  
+-   更改 Loan 类的类声明，如下所示：  
   
     ```vb  
     <Serializable()>  
     Public Class Loan  
     ```  
   
- `Serializable`特性告知编译器，在类中的所有内容都可以保存到文件。 因为`PropertyChanged`事件处理由 Windows 窗体对象，它不能被序列化。 `NonSerialized`属性可以用来标记不应持久化的类成员。  
+ `Serializable` 属性通知编译器可将类中的所有内容保持到文件中。 `PropertyChanged` 事件由 Windows 窗体对象处理，因此不能将其序列化。 可使用 `NonSerialized` 属性标记不应保持的类成员。  
   
-### <a name="to-prevent-a-member-from-being-serialized"></a>若要防止成员正在序列化  
+### <a name="to-prevent-a-member-from-being-serialized"></a>阻止对成员进行序列化  
   
--   更改的声明`PropertyChanged`事件，如下所示︰  
+-   更改 `PropertyChanged` 事件的声明，如下所示：  
   
     ```vb  
     <NonSerialized()>  
@@ -163,30 +164,30 @@ ms.lasthandoff: 03/13/2017
       Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged  
     ```  
   
- 下一步是将序列化代码添加到 LoanApp 应用程序。 为了将该类序列化并将其写入到文件，将使用<xref:System.IO>和<xref:System.Xml.Serialization>命名空间。</xref:System.Xml.Serialization> </xref:System.IO> 为了避免键入完全限定的名称，可以添加对必要的类库的引用。  
+ 下一步是向 LoanApp 应用程序添加序列化代码。 为了将该类序列化并将其写入到文件，将使用 <xref:System.IO> 和 <xref:System.Xml.Serialization> 命名空间。 为了避免键入完全限定的名称，可以添加对必要类库的引用。  
   
-### <a name="to-add-references-to-namespaces"></a>若要添加到命名空间的引用  
+### <a name="to-add-references-to-namespaces"></a>添加对命名空间的引用  
   
--   将以下语句添加到顶部`Form1`类︰  
+-   将下面的语句添加到 `Form1` 类的顶部：  
   
     ```vb  
     Imports System.IO  
     Imports System.Runtime.Serialization.Formatters.Binary  
     ```  
   
-     在这种情况下，将使用二进制格式化程序将对象保存为二进制格式。  
+     在这种情况下，将使用二进制格式化程序以二进制格式保存对象。  
   
- 下一步是添加代码以创建对象时，从该文件对象反序列化。  
+ 下一步是添加代码，在创建对象时对文件中的对象进行反序列化。  
   
 ### <a name="to-deserialize-an-object"></a>反序列化对象  
   
-1.  将一个常量添加到序列化的数据文件的名称的类。  
+1.  向序列化数据的文件名的类中添加一个常量。  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  修改中的代码`Form1_Load`事件过程，如下所示︰  
+2.  修改 `Form1_Load` 事件过程中的代码，如下所示：  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -208,13 +209,13 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-     请注意，首先必须检查该文件存在。 如果存在，则创建<xref:System.IO.Stream>类来读取二进制文件和一个<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>类将转换该文件。</xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> </xref:System.IO.Stream> 您还需要从流类型转换为贷款对象类型。  
+     请注意，首先必须检查该文件是否存在。 如果存在，则创建 <xref:System.IO.Stream> 类来读取二进制文件和 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 类，以转换该文件。 还需将流类型转换为 Loan 对象类型。  
   
- 接下来，您必须添加代码以在文本框中输入的数据保存`Loan`类，并且你必须序列化到文件的类。  
+ 接下来，必须添加代码以将本文框中输入的数据保存到 `Loan` 类，然后必须将类序列化到文件中。  
   
-### <a name="to-save-the-data-and-serialize-the-class"></a>若要保存的数据和序列化类  
+### <a name="to-save-the-data-and-serialize-the-class"></a>保存数据并对类进行序列化  
   
--   添加以下代码到`Form1_FormClosing`事件过程︰  
+-   将以下代码添加到 `Form1_FormClosing` 事件过程中：  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  
@@ -230,8 +231,8 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
- 此时，您可以再次生成并运行该应用程序。 最初，默认值显示在文本框中。 尝试更改的值并在第四个文本框中输入的名称。 关闭该应用程序，然后再次运行它。 请注意，新值现在显示在文本框中。  
+ 此时可再次生成并运行应用程序。 最初，默认值在文本框中显示。 尝试更改这些值并在第四个文本框中输入名称。 关闭该应用程序，然后重新运行。 请注意，现在文本框中将显示新值。  
   
 ## <a name="see-also"></a>另请参阅  
- [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
+ 序列化 (Visual Basic)[](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)

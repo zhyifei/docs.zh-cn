@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 发布 Hello World 应用程序"
+title: "使用 Visual Studio 2017 发布 Hello World 应用 | Microsoft Docs"
 description: "发布应用程序会创建运行应用程序所需的一组文件。"
 keywords: ".NET, .NET Core, 控制台应用程序, 发布, 部署"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 1c4fbefb23fc47cf035085f76ec1c10d5422a6f5
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 49fdae2ada3473463dcb120a35cfc8649a38a14d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="publishing-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 发布 Hello World 应用程序
+# 使用 Visual Studio 2017 发布 Hello World 应用程序
+<a id="publishing-your-hello-world-application-with-visual-studio-2017" class="xliff"></a>
 
 在[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](with-visual-studio.md)中，生成了 Hello World 控制台应用程序。 在[使用 Visual Studio 2017 调试 C# Hello World 应用程序](debugging-with-visual-studio.md)中，使用 Visual Studio 调试器对其进行了测试。 至此，你已确定应用程序能够按预期运行，可以发布它以供其他用户运行了。 发布应用程序会创建运行应用程序所需的一组文件；可以通过将这些文件复制到目标计算机来进行部署。
 
@@ -52,3 +53,4 @@ ms.lasthandoff: 05/03/2017
 发布过程中会生成依赖于框架的部署，在此类部署中，若系统上安装了 .NET Core，已发布的应用程序可在 .NET Core 支持的任何平台上运行。 用户可以通过在控制台窗口中发出 `dotnet HelloWorld.dll` 命令来运行应用程序。
 
 若要详细了解如何发布和部署 .NET Core 应用程序，请参阅 [.NET Core 应用程序部署](../../core/deploying/index.md)。
+

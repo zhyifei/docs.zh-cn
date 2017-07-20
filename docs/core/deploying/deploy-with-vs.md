@@ -102,11 +102,11 @@ ms.lasthandoff: 05/13/2017
 
    例如，以下示例表明应用在 64 位 Windows 10 操作系统和 64 位 OS X 10.11 版本的操作系统上运行。
 
-       ```xml
-        <PropertyGroup>
-          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-        </PropertyGroup>
-       ```
+```xml
+<PropertyGroup>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
    请注意，`<RuntimeIdentifiers>` 元素可能会进入 csproj 文件的任何 `<PropertyGroup>` 中。 本节后面部分将显示完整的示例 csproj 文件。
 
 1. 创建应用的调试版本。

@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>如何：在 Visual Basic 中上传文件
-可以使用 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法上传文件，并将其存储到远程位置。 如果 `ShowUI` 参数设置为 `True`，则显示一个对话框，该对话框显示下载进度并允许用户取消该操作。  
+可使用 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法上传文件并将文件存储到远程位置。 如果 `ShowUI` 参数设置为 `True`，则显示一个对话框，该对话框显示下载进度并允许用户取消该操作。  
   
 ### <a name="to-upload-a-file"></a>上传文件  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/22/2017
   
 -   身份验证失败 (<xref:System.Security.SecurityException>)。  
   
--   连接已超时 (<xref:System.TimeoutException>)。  
+-   连接超时 (<xref:System.TimeoutException>)。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   

@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 入门
@@ -61,22 +61,22 @@ ms.lasthandoff: 05/15/2017
  提供指向一些页面的链接，这些页面介绍面向对象的编程并描述如何创建您自己的对象以及如何使用对象来简化代码过程。  
   
  [示例](../../visual-basic/sample-applications.md)  
- 提供指向 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中的代码示例的链接。  
+ 提供指向 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的代码示例的链接。  
   
  [演练](../../visual-basic/walkthroughs.md)  
- 提供阐示 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 语言的各个方面的帮助页的列表。  
+ 提供阐示 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言的各个方面的帮助页的列表。  
   
  [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  介绍如何得到支持和提供反馈。  
   
  [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
- 提供 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 文档的链接。  
+ 提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文档的链接。  
   
  [C#](../../csharp/csharp.md)  
- 提供文档链接，该文档描述有关使用 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 进行应用程序开发的信息。  
+ 提供文档链接，该文档描述有关使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 进行应用程序开发的信息。  
   
  [Visual C++](https://docs.microsoft.com/cpp/)  
  提供 Visual C++ 文档的链接。  
   
  [Office 和 SharePoint 开发](https://msdn.microsoft.com/library/d2tx7z6d)  
- 提供有关将 Microsoft Office 和 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 用作业务应用程序一部分的信息。
+ 提供有关将 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 用作业务应用程序一部分的信息。

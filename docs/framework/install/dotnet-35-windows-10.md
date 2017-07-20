@@ -1,25 +1,25 @@
 ---
-title: "在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5"
+title: "在 Windows 10、Windows 8.1 或 Windows 8 上安装 .NET Framework 3.5 | Microsoft Docs"
 description: "了解如何在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5"
 author: rlander
 keywords: ".NET Framework, 安装"
-ms.date: 03/28/2017
+ms.date: 04/20/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: 1d775f0633caa7c097caf084f58aaaa4c1a7d61e
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 137436a073c050ed431b231204a3aca31c98c01a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5
 
-必须安装 .NET Framework 3.5，才能在 Windows 10、Windows 8.1 和 Windows 8 上运行应用程序。 可以按照以下说明操作，这些说明可能会对你有所帮助。 对于旧版 Windows，也可以按照以下说明操作。
+必须安装 .NET Framework 3.5，才能在 Windows 10、Windows 8.1 和 Windows 8 上运行应用程序。 对于旧版 Windows，也可以按照以下说明操作。
 
 ## <a name="install-the-net-framework-35-on-demand"></a>按需安装.NET Framework 3.5
 
@@ -31,10 +31,11 @@ ms.lasthandoff: 05/11/2017
 
 可以通过 Windows 控制面板启用 .NET Framework 3.5。 此选项需要 Internet 连接。
 
-1. 按键盘上的 Windows 键 ![Windows 徽标](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)，键入 Windows 功能，然后按 Enter。 这将显示“打开或关闭 Windows 功能”  对话框。
-2. 如果弹出提示，选择“.NET Framework 3.5（包括 .NET 2.0 和 3.0）”  复选框，按“确定”，然后重启计算机。
+1. 按键盘上的 Windows 键 ![Windows 徽标](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)，键入“Windows 功能”，然后按 Enter。 随即显示“打开或关闭 Windows 功能”对话框。
 
-![使用控制面板安装 .NET](./media/dotnet-control-panel.png)
+2. 如果弹出提示，选择“.NET Framework 3.5 (包括 .NET 2.0 和 3.0)” 复选框，选择“确定”，然后重启计算机。
 
-无需选择 Windows Communication Foundation (WCF) HTTP 激活的子项，除非是需要使用此功能的开发者或服务器管理员。
+   ![使用控制面板安装 .NET](./media/dotnet-control-panel.png)
+
+   无需选择“Windows Communication Foundation (WCF) HTTP 激活”和“Windows Communication Foundation (WCF) 非 HTTP 激活”的子项，除非是需要使用此功能的开发者或服务器管理员。
 

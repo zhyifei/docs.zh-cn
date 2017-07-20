@@ -81,10 +81,10 @@ ms.lasthandoff: 05/22/2017
 group person by new {name = person.surname, city = person.city};  
 ```  
   
- 如果必须将查询变量传递给其他方法，请使用命名类型。 使用自动实现的属性作为键来创建一个特殊类，然后替代 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 还可以使用结构，在此情况下，并不严格要求替代这些方法。 有关详细信息，请参阅[如何：使用自动实现的属性实现轻量类](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查询目录树中的重复文件 (LINQ)](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 后一个主题包含的代码示例演示了如何将复合键与命名类型结合使用。  
+ 如果必须将查询变量传递给其他方法，请使用命名类型。 使用键的自动实现的属性创建一个特殊类，然后替代 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 还可以使用结构，在此情况下，并不严格要求替代这些方法。 有关详细信息，请参阅[如何：使用自动实现的属性实现轻量类](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查询目录树中的重复文件 (LINQ)](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 后一个主题包含的代码示例演示了如何将复合键与命名类型结合使用。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示在没有向组应用附加查询逻辑时，将源数据按顺序放入组中的标准模式。 这称为不带延续的分组。 字符串数组中的元素按照它们的首字母进行分组。 查询结果是 <xref:System.Linq.IGrouping%602> 类型，其中包含一个 `char` 类型的公共 `Key` 属性，以及一个包含分组中每个项的 <xref:System.Collections.Generic.IEnumerable%601> 集合。  
+ 下面的示例演示在没有向组应用附加查询逻辑时，将源数据按顺序放入组中的标准模式。 这称为不带延续的分组。 字符串数组中的元素按照它们的首字母进行分组。 查询的结果是 <xref:System.Linq.IGrouping%602> 类型（包含一个 `char` 类型的公共 `Key` 属性）和一个 <xref:System.Collections.Generic.IEnumerable%601> 集合（在分组中包含每个项）。  
   
  `group` 子句的结果是由序列组成的序列。 因此，若要访问返回的每个组中的单个元素，请在循环访问组键的循环内使用嵌套的 `foreach` 循环，如以下示例所示。  
   
@@ -96,7 +96,7 @@ group person by new {name = person.surname, city = person.city};
  [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## <a name="remarks"></a>备注  
- 编译时，`group` 子句转换为对 <xref:System.Linq.Enumerable.GroupBy%2A> 方法的调用。  
+ 在编译时，`group` 子句转换为对 <xref:System.Linq.Enumerable.GroupBy%2A> 方法的调用。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Linq.IGrouping%602>   

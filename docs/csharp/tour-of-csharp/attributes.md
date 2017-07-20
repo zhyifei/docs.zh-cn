@@ -1,6 +1,6 @@
 ---
-title: "C# 特性 | C# 语言介绍"
-description: "了解 C 中使用特性的声明性编程#"
+title: "C# 属性 - C# 语言介绍 | Microsoft Docs"
+description: "了解在 C# 中使用属性的声明性编程"
 keywords: .NET, C#
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ef8b93bf0a2cf98c5251b888b61db9ab12d9a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="attributes"></a>特性
+# 特性
+<a id="attributes" class="xliff"></a>
 
 C# 程序中的类型、成员和其他实体支持使用修饰符来控制其行为的某些方面。 例如，方法的可访问性是由 `public`、`protected`、`internal` 和 `private` 修饰符控制。 C# 整合了这种能力，以便可以将用户定义类型的声明性信息附加到程序实体，并在运行时检索此类信息。 程序通过定义和使用***特性***来指定此类额外的声明性信息。
 

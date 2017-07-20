@@ -60,7 +60,7 @@ ms.lasthandoff: 05/22/2017
 
 [!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
 
-如果整数文本超出 `sbyte` 的范围（即，如果该值小于 <xref:System.SByte.MinValue?displayProperty=fullName> 或大于 <xref:System.SByte.MaxValue?displayProperty=fullName>，将出现编译错误。 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。 这意味着，在此示例中，数字文本 `0x9A` 和 `0b10011010` 被解释为值为 156 的 32 位带符号整数，该值超过了 <xref:System.SByte.MaxValue?displayProperty=fullName>。 因此，需要使用强制转换运算符，并且赋值必须在[取消选中](unchecked.md)的上下文中发生。 
+如果整数文本在 `sbyte` 范围之外（即，如果它小于 <xref:System.SByte.MinValue?displayProperty=fullName> 或大于 <xref:System.SByte.MaxValue?displayProperty=fullName>），会发生编译错误。 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。 这意味着，在此示例中，数字文本 `0x9A` 和 `0b10011010` 被解释为值为 156 的 32 位带符号整数，该值超过了 <xref:System.SByte.MaxValue?displayProperty=fullName>。 因此，需要使用强制转换运算符，并且赋值必须在[取消选中](unchecked.md)的上下文中发生。 
 
 ## <a name="compiler-overload-resolution"></a>编译器重载解析
 

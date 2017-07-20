@@ -1,26 +1,45 @@
 ---
-title: "#if（C# 参考） | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#if"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#if 指令 [C#]"
+title: "#<a name=\"if-c-reference--microsoft-docs\"></a>if（C# 参考）| Microsoft 文档"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#if'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: 4fc51446d297015d9e492703c9b1868c3b513c53
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
+
 ---
-# #if（C# 参考）
-如果 C\# 编译器遇到最后面跟有 [\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 指令的  `#if` 指令，则仅当指定的符号已定义时，它才会编译这两个指令之间的代码。  与 C 和 C\+\+ 不同，您不能对符号赋予数值；C\# 中的 \#if 语句是 Boolean，仅测试符号是否已定义。  例如，  
+# <a name="if-c-reference"></a>#if（C# 参考）
+如果 C# 编译器遇到 `#if` 指令，最终是 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 指令，仅当定义指定的符号时，它才编译这些指令之间的代码。  与 C 和 C++ 不同的是，不能将数字的值分配给一个符号；C# 中的 #if 语句是一个布尔值，并仅测试是否定义该符号。 例如，  
   
-```  
+```csharp
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -28,26 +47,26 @@ caps.handback.revision: 17
 #endif  
 ```  
   
- 使用运算符 [\=\=](../../../csharp/language-reference/operators/equality-comparison-operator.md)（相等）和 [\!\=](../../../csharp/language-reference/operators/not-equal-operator.md)（不相等）只能测试出结果为 [true](../../../csharp/language-reference/keywords/true.md) 还是 [false](../../../csharp/language-reference/keywords/false.md)。  True 表示符号已定义。  语句 `#if DEBUG` 与 `#if (DEBUG == true)` 的含义相同。  可以使用运算符[&&](../../../csharp/language-reference/operators/conditional-and-operator.md) \(and\)、[&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) \(or\) 和 [\!](../../../csharp/language-reference/operators/logical-negation-operator.md)\(无\) 计算多个符号是否定义了。  还可以用括号将符号和运算符分组。  
+ 仅可以使用运算符 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md)（相等）、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)（不相等）测试 [true](../../../csharp/language-reference/keywords/true.md) 或 [false](../../../csharp/language-reference/keywords/false.md)。 True 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用运算符 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) (and)、[&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (or) 和 [!](../../../csharp/language-reference/operators/logical-negation-operator.md) (not) 评估是否已经定义了多个符号。 还可以用括号对符号和运算符进行分组。  
   
-## 备注  
- 结合使用 `#if` 与 [\#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)、[\#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)、[\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)、[\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 和 [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 指令，可以根据一个或多个符号是否存在来包含或排除代码。  在编译调试版本的代码或针对特定配置进行编译时，这会很有用。  
+## <a name="remarks"></a>备注  
+ `#if` 以及 [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)、[#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)、[#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)、[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 和 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 指令，允许基于是否存在一个或多个符号包括或排除代码。 这在编译调试版本的代码或编译特定配置的代码时会很有用。  
   
- 以 `#if` 指令开始的条件指令必须用 `#endif` 指令显式终止。  
+ 以 `#if` 指令开头的条件指令必须以 `#endif` 指令显式终止。  
   
- `#define` 使您可以定义一个符号，通过将该符号用作传递给 `#if` 指令的表达式，使该表达式计算为 `true`。  
+ `#define` 允许你定义一个符号，这样一来，通过将该符号用作传递给 `#if` 指令的表达式，该表达式的计算结果为 `true`。  
   
- 也可以用 [\/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 编译器选项来定义符号。  可以用 [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 来取消定义符号。  
+ 还可以通过 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 编译器选项来定义符号。 可以通过 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 取消定义符号。  
   
- 用 `/define` 或 `#define` 定义的符号与具有同一名称的变量不冲突。  即，不应将变量名传递到预处理器指令，并且只能用预处理器指令计算符号。  
+ 使用 `/define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。 也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。  
   
- 用 `#define` 创建的符号的范围是在其中定义该符号的文件。  
+ 使用 `#define` 创建的符号的作用域是在其中定义它的文件。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```csharp
 // preprocessor_if.cs  
-#define DEBUG #define MYTEST  
+#define DEBUG#define MYTEST  
 using System;  
 public class MyClass   
 {  
@@ -66,8 +85,9 @@ public class MyClass
 }  
 ```  
   
-  **定义 DEBUG 和 MYTEST**   
-## 请参阅  
- [C\# 参考](../../../csharp/language-reference/index.md)   
- [C\# 编程指南](../../../csharp/programming-guide/index.md)   
- [C\# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+ **DEBUG 和 MYTEST 已定义**   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)   
+ [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+

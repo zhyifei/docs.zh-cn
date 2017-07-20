@@ -49,28 +49,28 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_1.vb)]  
   
--   对于大型二进制文件，可以使用 <xref:System.IO.FileStream> 对象的 <xref:System.IO.FileStream.Read%2A> 方法从文件中一次只读取指定数量的内容。 然后，可以限制每次读取操作将文件加载进内存的数量。 以下代码示例将复制文件，并允许调用方指定每次读取操作将文件读入内存的数量。  
+-   对于大型二进制文件，可以使用 <xref:System.IO.FileStream.Read%2A> 对象的 <xref:System.IO.FileStream> 方法从文件中一次只读取指定数量的内容。 然后，可以限制每次读取操作将文件加载进内存的数量。 以下代码示例将复制文件，并允许调用方指定每次读取操作将文件读入内存的数量。  
   
      [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_2.vb)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径 (<xref:System.ArgumentException>)。  
+-   路径由于以下原因之一而无效：它是零长度字符串；它仅包含空白；它包含无效字符；或者它是一个设备路径 (<xref:System.ArgumentException>)。  
   
--   路径无效，因为路径为 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   文件不存在 (<xref:System.IO.FileNotFoundException>)。  
+-   该文件不存在 (<xref:System.IO.FileNotFoundException>)。  
   
 -   文件正由另一个进程使用，或者出现 I/O 错误 (<xref:System.IO.IOException>)。  
   
--   路径超出了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+-   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的某个文件或目录名称包含冒号 (:) 或格式无效 (<xref:System.NotSupportedException>)。  
+-   路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
   
 -   内存不足，无法将字符串写入缓冲区 (<xref:System.OutOfMemoryException>)。  
   
--   用户缺少必要的权限来查看路径 (<xref:System.Security.SecurityException>)。  
+-   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
  不要根据文件的名称来判断文件的内容。 例如，文件 Form1.vb 可能不是 Visual Basic 源文件。  
   

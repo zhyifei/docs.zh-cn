@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
  如果找不到具有请求的进程标识符的应用程序，则会引发 <xref:System.ArgumentException> 异常。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 调用 `Shell` 函数需要完全信任（<xref:System.Security.SecurityException> 类）。  
+ 对 `Shell` 函数的调用需要完全信任（<xref:System.Security.SecurityException> 类）。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   

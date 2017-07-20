@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a>若要确定代码中日志对象的日志侦听器  
   
-1.  在代码文件开头导入 <xref:System.Diagnostics> 命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+1.  在代码文件的开头导入 <xref:System.Diagnostics> 命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
      [!code-vb[VbVbalrMyApplicationLog#13](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_1.vb)]  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
   
-     有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
+     有关详细信息，请参阅<xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

@@ -4,24 +4,28 @@ description: "了解在 Windows 计算机上开发和运行 .NET Core 应用程�
 keywords: ".NET Core、Windows、先决条件、依赖项、Visual Studio"
 author: mairaw
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 582b7d7f00b939493cea6d8cb4055b6779118c14
+ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
+ms.openlocfilehash: 22f7acab3ffbe2d3af587f7af2bfaad204f8e259
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 06/29/2017
 
 ---
 
-# <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
+<a id="prerequisites-for-net-core-on-windows" class="xliff"></a>
+
+# Windows 上 .NET Core 的先决条件
 
 本文展示了在 Windows 计算机上部署和运行 .NET Core 应用程序并使用 Visual Studio 进行开发时所需的依赖项。
 
-## <a name="supported-windows-versions"></a>受支持的 Windows 版本
+<a id="supported-windows-versions" class="xliff"></a>
+
+## 受支持的 Windows 版本
 
 以下 Windows 版本均支持 .NET Core：
 
@@ -30,20 +34,24 @@ ms.lasthandoff: 04/10/2017
 * Windows 10
 * Windows Server 2008 R2 SP1（完全服务器或服务器核心）
 * Windows Server 2012 SP1（完全服务器或服务器核心）
-* Windows Server 2012 R2 SP1（完全服务器或服务器核心）
+* Windows Server 2012 R2（完全服务器或服务器核心）
 * Windows Server 2016（完全服务器、服务器核心或 Nano Server）
 
 在 [.NET Core 发行说明](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)中查看一系列完整的受支持的操作系统。
 
-## <a name="net-core-dependencies"></a>.NET Core 依赖项
+<a id="net-core-dependencies" class="xliff"></a>
 
-在早于 Windows 10 和 Windows Server 2016 的 Windows 版本上运行 .NET Core 时，需要 Visual C++ Redistributable。 若使用 .NET Core 安装程序，将自动安装此依赖项。 但是，如果通过[安装程序脚本](./tools/dotnet-install-script.md)安装 .NET Core 或部署独立的 .NET Core 应用程序，则需要手动安装 [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53840)。
+## .NET Core 依赖项
+
+在早于 Windows 10 和 Windows Server 2016 的 Windows 版本上运行 .NET Core 时，需要 Visual C++ Redistributable。 若使用 .NET Core 安装程序，将自动安装此依赖项。 但是，如果通过[安装程序脚本](./tools/dotnet-install-script.md)安装 .NET Core 或部署独立的 .NET Core 应用程序，则需要手动安装 [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685)。
 
 > [!NOTE]
 > <em>仅适用于 Windows 7 和 Windows Server 2008 计算机：</em><br>
 > 确保 Windows 安装是最新版本，并且包括通过 Windows 更新安装的修补程序 [KB2533623](https://support.microsoft.com/help/2533623)。
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 的先决条件
+<a id="prerequisites-with-visual-studio-2017" class="xliff"></a>
+
+## Visual Studio 2017 的先决条件
 
 可以使用所选择的任何编辑器，使用 .NET Core SDK 开发 .NET Core 应用程序。 但是，若要在集成的开发环境中的 Windows 上开发 .NET Core 应用程序，可以使用 [Visual Studio 2017](#visual-studio-2017)。
 
@@ -61,3 +69,4 @@ Visual Studio 2017 有不同的版本。 可以免费下载 [Visual Studio Commu
  * 在“关于 Microsoft Visual Studio”对话框中，版本号应该是 15.0.26228.4 或更高版本。
 
 在[发行说明](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。
+

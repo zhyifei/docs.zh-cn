@@ -43,7 +43,7 @@ ms.lasthandoff: 05/22/2017
   
  有关介绍性概念的更多示例，请参阅 [Visual C# 和 Visual Basic 入门](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-and-run-a-console-application"></a>创建并运行控制台应用程序  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 05/22/2017
  在调试模式下运行程序时，对 `Main` 方法末尾处 <xref:System.Console.ReadKey%2A> 的调用可以防止在有可能读取输出内容之前控制台窗口关闭，具体方法是按 F5 键。  
   
 ## <a name="input-and-output"></a>输入和输出  
- C# 程序通常使用由 .NET Framework 的运行时库提供的输入/输出服务。 `System.Console.WriteLine("Hello World!");` 语句使用 <xref:System.Console.WriteLine%2A> 方法。 这是运行时库中 <xref:System.Console> 类的输出方法之一。 该方法将在标准输出流中显示其字符串参数，后接新行。 其他 <xref:System.Console> 方法可用于不同的输入和输出操作。 如果程序开头包含 `using System;` 指令，则可以直接使用 <xref:System> 类和方法，而不必进行完全限定。 例如，可以调用 `Console.WriteLine`，而非 `System.Console.WriteLine`：  
+ C# 程序通常使用由 .NET Framework 的运行时库提供的输入/输出服务。 语句 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。 这是运行时库中 <xref:System.Console> 类的输出方法之一。 该方法将在标准输出流中显示其字符串参数，后接新行。 其他 <xref:System.Console> 方法可用于不同的输入和输出操作。 如果程序开头包含 `using System;` 指令，则可以直接使用 <xref:System> 类和方法，而不必进行完全限定。 例如，可以调用 `Console.WriteLine`，而非 `System.Console.WriteLine`：  
   
  [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   

@@ -92,7 +92,7 @@ ms.lasthandoff: 05/22/2017
  演示如何检查强密码特性，及如何更新提供有关检查密码失败的特性的信息的字符串参数。  
   
  [在 Visual Basic 中对字符串进行加密和解密](../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- 演示如何使用 <xref:System.Security.Cryptography.DESCryptoServiceProvider> 类对字符串进行加密和解密。  
+ 演示如何使用 <xref:System.Security.Cryptography.DESCryptoServiceProvider> 类加密和解密字符串。  
   
  [在 Visual Basic 中操作文件和文件夹](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  演示如何使用 [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 函数确定文件信息、在文件中搜索字符串以及对文件进行写入操作。  

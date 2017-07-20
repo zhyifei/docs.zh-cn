@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 03/13/2017
   
  可以通过将共享相同的主表节点从的明细项目显示相关的数据**数据源**窗口拖到<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 例如，如果您有了 Customers 表和相关的 Orders 表的数据源，您看到这两个表为在树视图中的顶级节点**数据源**窗口。 展开客户节点，以便您可以看到的列。 请注意，在列表中的最后一列表示订单表的可展开节点。 此节点表示客户的相关的订单。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-display-related-data-in-two-datarepeater-controls"></a>若要在两个 DataRepeater 控件中显示相关的数据  
   

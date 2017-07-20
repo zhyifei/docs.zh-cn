@@ -1,5 +1,5 @@
 ---
-title: "使用 LINQ"
+title: "使用 LINQ | Microsoft Docs"
 description: "此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,18 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="working-with-linq"></a>使用 LINQ
+# 使用 LINQ
+<a id="working-with-linq" class="xliff"></a>
 
-## <a name="introduction"></a>介绍
+## 介绍
+<a id="introduction" class="xliff"></a>
 
 此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
 
@@ -36,17 +38,20 @@ ms.lasthandoff: 05/22/2017
 
 在此教程中，将执行多步操作。 执行每步操作后，都可以运行应用程序，并查看进度。 还可参阅 dotnet/docs GitHub 库中的[完整示例](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>先决条件
+## 先决条件
+<a id="prerequisites" class="xliff"></a>
 
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Ubuntu Linux、OS X 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
-## <a name="create-the-application"></a>创建应用程序
+## 创建应用程序
+<a id="create-the-application" class="xliff"></a>
 
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
 
 如果之前从未用过 C#，请参阅[这篇教程](console-teleprompter.md)，其中介绍了 C# 程序的结构。 可以阅读相应的内容，然后回到此教程详细了解 LINQ。 
 
-## <a name="creating-the-data-set"></a>创建数据集
+## 创建数据集
+<a id="creating-the-data-set" class="xliff"></a>
 
 首先，我们要创建一副纸牌。 为此，请使用包含两个源（一个用于四套花色，另一个用于十三个值）的 LINQ 查询。 将这些源合并成一副纸牌（52 张）。 `foreach` 循环内的 `Console.WriteLine` 语句会显示纸牌。
 
@@ -100,7 +105,8 @@ static IEnumerable<string> Ranks()
 
 ![显示应用输出 52 张纸牌的控制台窗口](./media/working-with-linq/console.png)
 
-## <a name="manipulating-the-order"></a>控制顺序
+## 控制顺序
+<a id="manipulating-the-order" class="xliff"></a>
 
 接下来，让我们来生成一个可执行洗牌操作的实用工具方法。 第一步是将一副纸牌分成两半。 LINQ API 包含的 `Take()` 和 `Skip()` 方法提供了这种功能：
 
@@ -173,7 +179,8 @@ public static void Main(string[] args)
 }
 ```
 
-## <a name="comparisons"></a>比较
+## 比较
+<a id="comparisons" class="xliff"></a>
 
 让我们来看看进行多少次洗牌才能恢复一副纸牌的原始顺序。 需要编写用于确定两个序列是否相等的方法。 编写好此方法后，需要循环执行用于洗牌的代码，看看一副纸牌何时才能恢复原始顺序。
 
@@ -207,7 +214,8 @@ Console.WriteLine(times);
 
 运行此示例，看看一副纸牌在每次洗牌时是如何重新排列的（纸牌在进行 8 次迭代后恢复原始配置）。
 
-## <a name="optimizations"></a>优化
+## 优化
+<a id="optimizations" class="xliff"></a>
 
 你已生成的示例执行的是*向内洗牌*，即每次洗牌时第一张和最后一张纸牌保持不变。 让我们来做出一处改变，执行*向外洗牌*，改变所有 52 张纸牌的位置。 向外洗牌是指，交错一副纸牌时，将后一半中的第一张纸牌变成一副纸牌中的第一张纸牌。 也就是说，上半部分中的最后一张纸牌变成一副纸牌中的最后一张纸牌。 只需更改一行代码即可。 将对 shuffle 的调用更新为，更改一副纸牌的上半部分和下半部分的顺序：
 
@@ -285,7 +293,8 @@ public static void Main(string[] args)
 
 在实践中，一些算法的效果优于使用及早计算，另一些算法的效果优于使用惰性计算。 （通常情况下，如果数据源为单独进程（如数据库引擎），更好的选择是使用惰性计算。 在这种情况下，使用惰性计算，更复杂的查询可以只对数据库进程执行一次往返。）LINQ 支持同时使用惰性计算和及早计算。 请进行衡量，做出最佳选择。
 
-## <a name="preparing-for-new-features"></a>为添加新功能做好准备
+## 为添加新功能做好准备
+<a id="preparing-for-new-features" class="xliff"></a>
 
 为此示例编写的代码展示了如何创建简单的有效原型。 这样可以很好地探索问题空间；对于许多功能来说，这可能是最佳永久性解决方案。 已将*匿名类型*用于纸牌，每张纸牌均由字符串表示。
 
@@ -329,7 +338,8 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 编译并再次运行。 输出更加清晰，代码更加清楚，扩展起来也更加容易。
 
-## <a name="conclusion"></a>结束语
+## 结束语
+<a id="conclusion" class="xliff"></a>
 
 此示例展示了在 LINQ 中使用的一些方法，以及如何创建你自己的方法与支持 LINQ 的代码轻松结合使用。 还展示了惰性计算和及早计算的区别，以及决定使用哪种计算对性能产生的影响。
 

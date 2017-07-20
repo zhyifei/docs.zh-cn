@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8580acf6fd23f9de264d3fed47d268898d498a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 06a97ffe88fdae344b07d04b6ce560d4c163d431
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>将数据存储到剪贴板以及从剪贴板读取数据 (Visual Basic)
@@ -49,25 +50,25 @@ ms.lasthandoff: 03/13/2017
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
- 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 窗体应用程序”>“剪贴板”****中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 窗体应用程序”>“剪贴板”中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
- 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> 方法检索剪贴板中的图像。 本示例先检查剪贴板中是否存在图像，然后再检索图像并将其分配给 `PictureBox1`。  
+ 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> 方法从剪贴板检索图像。 本示例先检查剪贴板中是否存在图像，然后再检索图像并将其分配给 `PictureBox1`。  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
- 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 窗体应用程序”>“剪贴板”****中。有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 窗体应用程序”>“剪贴板”中。有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
  即使在关闭应用程序后，剪贴板中存储的项仍将保留。  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>确定存储在剪贴板中的文件类型  
- 剪贴板中的数据可以采用多种形式，如文本、音频文件或图像。 可以使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> 和 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> 等方法确定剪贴板中的文件类型。 如果拥有要查看的自定义格式，可使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> 方法。  
+ 剪贴板中的数据可以采用多种形式，如文本、音频文件或图像。 若要确定哪种文件位于剪贴板中，可以使用如 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>、<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> 和 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> 的方法。 如果有想要检查的自定义格式，可以使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> 方法。  
   
  使用 `ContainsImage` 函数可确定剪贴板中的数据是否为图像。 下面的代码检查数据是否为图像并相应地进行报告。  
   
  [!code-vb[VbResourceTasks#13](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_3.vb)]  
   
 ## <a name="clearing-the-clipboard"></a>清除剪贴板  
- 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> 方法可清除剪贴板。 由于剪贴板被其他进程共享，清除它可能会影响这些进程。  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.Clear%2A> 方法可以清除剪贴板。 由于剪贴板被其他进程共享，清除它可能会影响这些进程。  
   
  下面的代码演示如何使用 `Clear` 方法。  
   

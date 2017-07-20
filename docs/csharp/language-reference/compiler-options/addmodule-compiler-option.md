@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 /addmodule:file[;file2]  
 ```  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>示例  
  编译源文件 `input.cs`，并从 `metad1.netmodule` 和 `metad2.netmodule` 添加元数据以生成 `out.exe`：  
   
-```  
+```console  
 csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
 ```  
   

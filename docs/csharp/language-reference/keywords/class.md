@@ -114,7 +114,7 @@ Console.Write(child1.name);   // Error
  最后要注意的是，默认情况下，对于使用默认构造函数 (`child3`) 创建的对象，age 字段初始化为零。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   

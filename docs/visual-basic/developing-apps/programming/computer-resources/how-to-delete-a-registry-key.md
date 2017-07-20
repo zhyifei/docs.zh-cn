@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中删除注册表项
-可以使用 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法删除注册表项。  
+<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法可以用于删除注册表项。  
   
 ## <a name="procedure"></a>过程  
   
@@ -60,13 +60,13 @@ ms.lasthandoff: 05/22/2017
   
  以下情况可能会导致异常：  
   
--   项的名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   用户无权删除注册表项 (<xref:System.Security.SecurityException>)。  
+-   用户没有删除注册表项的权限 (<xref:System.Security.SecurityException>)。  
   
--   项名称超过 255 字符限制 (<xref:System.ArgumentException>)。  
+-   项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。  
   
--   注册表项是只读的 (<xref:System.UnauthorizedAccessException>)。  
+-   注册表项为只读 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如果未授予足够的运行时权限 (<xref:System.Security.Permissions.RegistryPermission>) 或用户没有用于创建或写入设置的适当访问权限（由 ACL 确定），则注册表调用将失败。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。  

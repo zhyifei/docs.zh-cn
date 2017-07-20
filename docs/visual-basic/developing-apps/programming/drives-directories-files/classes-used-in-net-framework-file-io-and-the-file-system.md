@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6bf3902995531768b8b065aca70790c16d77b0ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="classes-used-to-create-streams"></a>用于创建流的类  
  下表列出并说明了用于创建流的主类。  
   
-|类|说明|  
+|类|描述|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=fullName>|将缓冲层添加到另一个流上的读取和写入操作。|  
 |<xref:System.IO.FileStream?displayProperty=fullName>|支持通过文件的 <xref:System.IO.FileStream.Seek%2A> 方法对其进行随机访问。 默认情况下 <xref:System.IO.FileStream> 同步打开文件，但也支持异步操作。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 03/13/2017
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=fullName>|从 <xref:System.IO.FileStream> 读取编码字符串和基元数据类型。|  
 |<xref:System.IO.BinaryWriter?displayProperty=fullName>|将编码字符串和基元数据类型写入 <xref:System.IO.FileStream>。|  
-|<xref:System.IO.StreamReader?displayProperty=fullName>|从 <xref:System.IO.FileStream> 读取字符，使用 <xref:System.IO.StreamReader.CurrentEncoding%2A> 将字符转换为字节，或将字节转换为字符。 对于给定的流，<xref:System.IO.StreamReader> 的构造函数基于特定的 <xref:System.IO.StreamReader.CurrentEncoding%2A> 报头的存在，尝试确定正确的 <xref:System.IO.StreamReader.CurrentEncoding%2A>，如字节顺序标记。|  
+|<xref:System.IO.StreamReader?displayProperty=fullName>|从 <xref:System.IO.FileStream> 读取字符，使用 <xref:System.IO.StreamReader.CurrentEncoding%2A> 将字符转换为字节，或将字节转换为字符。 对于给定的流，<xref:System.IO.StreamReader> 的构造函数基于特定 <xref:System.IO.StreamReader.CurrentEncoding%2A> 报头的状态，尝试确定正确的 <xref:System.IO.StreamReader.CurrentEncoding%2A>，如字节顺序标记。|  
 |<xref:System.IO.StreamWriter?displayProperty=fullName>|将字符写入 `FileStream`，使用 <xref:System.IO.StreamWriter.Encoding%2A> 将字符转换为字节。|  
 |<xref:System.IO.StringReader?displayProperty=fullName>|从 `String` 读取字符。 输出可以是任意编码中的流或 `String`。|  
 |<xref:System.IO.StringWriter?displayProperty=fullName>|将字符写入 `String`。 输出可以是任意编码中的流或 `String`。|  

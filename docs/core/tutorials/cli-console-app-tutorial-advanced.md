@@ -1,5 +1,5 @@
 ---
-title: "使用 CLI 工具编写 .NET Core 控制台应用：高级分步指南"
+title: "使用 CLI 工具编写 .NET Core 控制台应用：高级分步指南 | Microsoft Docs"
 description: "使用 CLI 工具编写 .NET Core 控制台应用：高级分步指南"
 keywords: .NET, .NET Core
 ms.date: 06/20/2016
@@ -8,11 +8,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
-redirect_url: /dotnet/articles/core/tutorials/index
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f802ecbc81238197fc759e9e1f1343e4b0e3f2df
-ms.lasthandoff: 03/02/2017
+redirect_url: /dotnet/core/tutorials/index
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 008a128110c98f8d4262348b343931b510d1aac1
+ms.openlocfilehash: 23d10dd16abda77a1c545acde56ae63930c2b38a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/24/2017
 
 ---
 

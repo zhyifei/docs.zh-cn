@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b2d59f347df075e3f8c4f952b62e8ad7fa1643f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 59efea23743d126e9b1d5a842fc7655ad3350acd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>如何：在 Visual Basic 中将一个目录复制到另一个目录
@@ -50,16 +51,16 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，该代码段位于“文件系统 - 处理驱动器、文件夹和文件”****。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+     此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，该代码段位于“文件系统 - 处理驱动器、文件夹和文件”。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
 -   为目录指定的新名称包含冒号 (:) 和斜杠（\ 或 /）(<xref:System.ArgumentException>)。  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（以 \\\\.\\ 开头）(<xref:System.ArgumentException>)。  
+-   路径由于以下原因之一无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为路径为 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
 -   `destinationDirectoryName` 为 `Nothing` 或空字符串 (<xref:System.ArgumentNullException>)  
   
@@ -75,17 +76,17 @@ ms.lasthandoff: 03/13/2017
   
 -   操作是循环的 (<xref:System.InvalidOperationException>)。  
   
--   路径包含冒号 (:) (<xref:System.NotSupportedException>)。  
+-   路径包含一个冒号 (:) (<xref:System.NotSupportedException>)。  
   
--   路径超出了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+-   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的某个文件或文件夹名称包含冒号 (:) 或格式无效 (<xref:System.NotSupportedException>)。  
+-   路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
   
--   用户缺少必要的权限来查看路径 (<xref:System.Security.SecurityException>)。  
+-   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
 -   目标文件存在，但不能访问 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   
  [如何：查找具有特定模式的子目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
  [如何：获取目录中的文件集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

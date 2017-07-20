@@ -48,7 +48,7 @@ ms.lasthandoff: 03/31/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/31/2017
   
  这将设置外部别名“GridV1”和“GridV2”，将在程序中通过外部语句使用它们：  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  完成此操作后，可以通过在控件名称前添加 GridV1 前缀来引用 grid.dll 中的网格控件，如下所示：  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  此外，可以通过在控件名称前添加 GridV2 前缀来引用 grid20.dll 中的网格控件，如下所示：  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

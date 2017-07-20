@@ -46,7 +46,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```console  
 /linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
@@ -76,14 +76,14 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>示例  
  编译 `in.cs` 并链接到资源文件 `rf.resource`：  
   
-```  
+```console  
 csc /linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>示例  
  将 `A.cs` 编译为 DLL，链接到本机 DLL N.dll，并将输出文件放在全局程序集缓存 (GAC) 中。 在此示例中，A.dll 和 N.dll 都存在于 GAC 中。  
   
-```  
+```console  
 csc /linkresource:N.dll /t:library A.cs  
 gacutil -i A.dll  
 ```  
@@ -91,7 +91,7 @@ gacutil -i A.dll
 ## <a name="example"></a>示例  
  此示例执行的操作与上一示例相同，但使用程序集链接器选项执行。  
   
-```  
+```console  
 csc /t:module A.cs  
 al /out:A.dll A.netmodule /link:N.dll   
 gacutil -i A.dll  

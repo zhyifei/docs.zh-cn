@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17fab50b0f95bacd12d7044ec95c6cef2453d250
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 533492c030188307f1596b24f1c2fa81940ebfe7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>如何：在 Visual Basic 中创建用户设置的属性网格
@@ -45,16 +46,16 @@ ms.lasthandoff: 03/13/2017
 > [!NOTE]
 >  若要使此示例正确运行，应用程序必须配置用户设置。 有关详细信息，请参阅[管理应用程序设置 (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)。  
   
- `My.Settings` 对象将每个设置公开为一个属性。 属性名称就是设置的名称，属性类型就是设置类型。 设置的“范围”****确定属性是否为只读；“应用程序”****范围设置的属性为只读，而“用户”****范围设置的属性为读写。 有关详细信息，请参阅 [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+ `My.Settings` 对象将每个设置公开为一个属性。 属性名称就是设置的名称，属性类型就是设置类型。 设置的“范围”确定属性是否为只读；“应用程序”范围设置的属性为只读，而“用户”范围设置的属性为读写。 有关详细信息，请参阅 [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
 > [!NOTE]
->  不能在运行时更改或保存应用程序范围设置的值。 只有在创建应用程序（通过“项目设计器”****）或编辑应用程序的配置文件时才能更改应用程序范围设置。 有关详细信息，请参阅[管理应用程序设置 (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)。  
+>  不能在运行时更改或保存应用程序范围设置的值。 只有在创建应用程序（通过“项目设计器”）或编辑应用程序的配置文件时才能更改应用程序范围设置。 有关详细信息，请参阅[管理应用程序设置 (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)。  
   
- 此示例使用 <xref:System.Windows.Forms.PropertyGrid> 控件访问 `My.Settings` 对象的用户设置属性。 默认情况下，<xref:System.Windows.Forms.PropertyGrid> 显示 `My.Settings` 对象的所有属性。 但用户设置属性具有 <xref:System.Configuration.UserScopedSettingAttribute> 特性。 此示例将 <xref:System.Windows.Forms.PropertyGrid> 的 <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> 属性设置为 <xref:System.Configuration.UserScopedSettingAttribute>，以便只显示用户设置属性。  
+ 此示例使用 <xref:System.Windows.Forms.PropertyGrid> 控件访问 `My.Settings` 对象的用户设置属性。 默认情况下，<xref:System.Windows.Forms.PropertyGrid> 显示 `My.Settings` 对象的所有属性。 但是，用户设置属性具有 <xref:System.Configuration.UserScopedSettingAttribute> 特性。 此示例将 <xref:System.Windows.Forms.PropertyGrid> 的 <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> 属性设置为 <xref:System.Configuration.UserScopedSettingAttribute>，以仅显示用户设置属性。  
   
 ### <a name="to-add-a-user-setting-property-grid"></a>添加用户设置属性网格  
   
-1.  将“PropertyGrid”****控件从“工具箱”****添加到应用程序的设计图面上（假定此处为 `Form1`）。  
+1.  将“PropertyGrid”控件从“工具箱”添加到应用程序的设计图面上（假定此处为 `Form1`）。  
   
      属性网格控件的默认名称为 `PropertyGrid1`。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 03/13/2017
      [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_2.vb)]  
   
     > [!NOTE]
-    >  若要只显示应用程序范围设置，请使用 <xref:System.Configuration.ApplicationScopedSettingAttribute> 属性而不是 <xref:System.Configuration.UserScopedSettingAttribute>。  
+    >  若要只显示应用程序范围设置，请使用 <xref:System.Configuration.ApplicationScopedSettingAttribute> 特性而不是 <xref:System.Configuration.UserScopedSettingAttribute>。  
   
 ## <a name="robust-programming"></a>可靠编程  
  应用程序在关闭时会保存用户设置。 若要立即保存设置，请调用 `My.Settings.Save` 方法。 有关详细信息，请参阅[如何：在 Visual Basic 中保存用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)。  

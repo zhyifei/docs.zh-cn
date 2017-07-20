@@ -1,6 +1,6 @@
 ---
-title: "C# 枚举 | C# 语言介绍"
-description: "了解 C 中的枚举，即离散的已命名常量#"
+title: "C# 枚举 - C# 语言介绍 | Microsoft Docs"
+description: "了解 C# 中的枚举，即离散的已命名常量"
 keywords: .NET, C#
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 677fd5fb931cca704fa6a0550a229ebb2fccdd7a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: b317f399fcbb5c1e91976defba3532bf5533b539
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
     
-# <a name="enums"></a>枚举
+# 枚举
+<a id="enums" class="xliff"></a>
 
 ***枚举类型***是包含一组已命名常量的独特值类型。 需要定义包含一组离散值的类型时，可以定义枚举。 枚举使用一种整型值类型作为其基础存储， 并提供离散值的语义含义。
 

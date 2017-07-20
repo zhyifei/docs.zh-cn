@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 561113241f7433d8e0f7f1f1f96f0338ebe81ae3
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e9faf744717980468afb995eceeb31bda93443b9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
@@ -84,9 +84,9 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 -   [如何：使用 finally 执行清理代码](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.SystemException>   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C 关键字](../../../csharp/language-reference/keywords/index.md)   

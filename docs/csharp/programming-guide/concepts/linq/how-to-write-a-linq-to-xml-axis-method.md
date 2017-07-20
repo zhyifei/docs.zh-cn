@@ -14,10 +14,11 @@ ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d85a92fc4d9f1d2ed53ff01e23c20877b3952b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: afaaaa497a16c1dbf0f3e0e81351f5c614732d44
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/30/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
 你可以编写自己的轴方法以便从 XML 树中检索集合。 执行此操作的最佳方式之一是编写可返回元素或属性集合的扩展方法。 您可以基于应用程序的需求编写扩展方法以返回元素或属性的特定子集。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用两个扩展方法。 第一个扩展方法 `GetXPath` 在 <xref:System.Xml.Linq.XObject> 上操作并返回一个 XPath 表达式，在计算该表达式时，将返回节点或属性。 第二个扩展方法 `Find` 在 <xref:System.Xml.Linq.XElement> 上操作。 它返回包含某些指定文本的 <xref:System.Xml.Linq.XAttribute> 对象和 <xref:System.Xml.Linq.XElement> 对象的集合。  
+ 下面的示例使用两个扩展方法。 第一个扩展方法 `GetXPath` 在 <xref:System.Xml.Linq.XObject> 上操作并返回一个 XPath 表达式，在计算该表达式时，将返回节点或属性。 第二个扩展方法 `Find` 在 <xref:System.Xml.Linq.XElement> 上操作。 它返回 <xref:System.Xml.Linq.XAttribute> 对象和包含某些指定文本的 <xref:System.Xml.Linq.XElement> 对象的集合。  
   
  本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   

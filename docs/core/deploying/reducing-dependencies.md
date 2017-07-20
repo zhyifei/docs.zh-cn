@@ -1,5 +1,5 @@
 ---
-title: "使用 project.json 减少包依赖项"
+title: "使用 project.json 减少包依赖项 | Microsoft Docs"
 description: "使用 project.json 减少包依赖项"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,24 +9,31 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
+<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
+
+# 使用 project.json 减少包依赖项
 
 本文介绍创作 `project.json` 库时减少包依赖项需要了解的内容。 本文结束后，用户将了解如何撰写库，使其仅使用所需的依赖项。 
 
-## <a name="why-its-important"></a>为什么这十分重要
+<a id="why-its-important" class="xliff"></a>
+
+## 为什么这十分重要
 
 .NET Core 是由 NuGet 包组成的产品。  基本包为 [.NET 标准库元包](https://www.nuget.org/packages/NETStandard.Library)，它是由其他包组成的 NuGet 包。  它提供保证可在多个 .NET 实现（例如，.NET Framework、.NET Core 和 Xamarin/Mono）上正常工作的包集。
 
 但是，很有可能库将不会使用它所包含的每个包。  当创作库并通过 NuGet 进行分发时，最佳做法是将依赖项“修剪”为仅实际使用的包。  这会使 NuGet 包的总体内存占用变小。
 
-## <a name="how-to-do-it"></a>如何执行此操作
+<a id="how-to-do-it" class="xliff"></a>
+
+## 如何执行此操作
 
 当前，没有任何可修剪包引用的正式 `dotnet` 命令。  相反，需要手动进行此操作。  一般过程如下所示：
 
@@ -42,7 +49,9 @@ ms.lasthandoff: 03/02/2017
 1. 试用和错误。  这包括删除包、还原以及查看库是否仍在编译，并重复此过程。
 2. 使用如 [ILSpy](http://ilspy.net) 或 [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) 等工具快速浏览引用，以查看代码实际使用的内容。  然后，可以删除与正在使用的类型不相对应的包。
 
-## <a name="example"></a>示例 
+<a id="example" class="xliff"></a>
+
+## 示例 
 
 假设编写了一个为泛型集合类型提供其他功能的库。  此类库需要依赖于如 `System.Collections` 的包，但可能根本不会依赖于如 `System.Net.Http` 的包。  因此，将包依赖项修剪为只剩该库所需的依赖项是个好办法！
 

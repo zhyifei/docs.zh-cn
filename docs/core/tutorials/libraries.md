@@ -1,5 +1,5 @@
 ---
-title: "使用跨平台工具开发库"
+title: "使用跨平台工具开发库| Microsoft Docs"
 description: "使用跨平台工具开发库"
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,11 +42,11 @@ ms.lasthandoff: 05/02/2017
 
 ## <a name="how-to-target-the-net-standard"></a>如何以 .NET Standard 为目标
 
-如果对 .NET Standard 不是很熟悉，请参阅 [.NET 标准库](../../standard/library.md)了解详细信息。
+如果对 .NET Standard 不是很熟悉，请参阅 [.NET 标准库](../../standard/net-standard.md)了解详细信息。
 
 在该文中，提供有一个将 .NET Standard 版本映射到各种实现的表格：
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 以下是此表格对于创建库的意义：
 
@@ -319,12 +319,13 @@ let doWork data = async {
 这样的使用方案意味着被访问的 API 必须具有用于 C# 和 F# 的不同结构。  通常的方法是将库的所有逻辑因子转化到核心项目中，C# 和 F# 项目定义调用到核心项目的 API 层。  该部分的其余部分将使用以下名称：
 
 * **AwesomeLibrary.Core** - 核心项目，其中包含库的所有逻辑
-* **AwesomeLibrary.CSharp** - 具有打算在 C 中使用的公共 API 的项目#
-* **AwesomeLibrary.FSharp** - 具有打算在 F 中使用的公共 API 的项目#
+* **AwesomeLibrary.CSharp** - 具有打算在 C# 中使用的公共 API 的项目
+* **AwesomeLibrary.FSharp** - 具有打算在 F# 中使用的公共 API 的项目
 
 可在终端运行下列命令，生成与下列指南相同的结构：
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 这将添加上述三个项目和将它们链接在一起的解决方案文件。  创建解决方案文件并链接项目后，可从顶级还原和生成项目。
@@ -344,7 +345,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
 引用项目的最佳方式是使用 .NET CLI 添加项目引用。  在 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 项目目录中，可运行下列命令：
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 的项目文件现在需要将 AwesomeLibrary.Core 作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：
@@ -360,3 +361,4 @@ AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 的项目文件现在需要将 A
 ### <a name="structuring-a-solution"></a>结构化解决方案
 
 多项目解决方案的另一个重要方面是建立良好的整体项目结构。 可根据自己的喜好随意组织代码，只要使用 `dotnet sln add` 将每个项目链接到解决方案文件，就可在解决方案级别运行 `dotnet restore` 和 `dotnet build`。
+

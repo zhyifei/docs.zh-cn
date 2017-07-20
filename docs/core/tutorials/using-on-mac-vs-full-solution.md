@@ -4,20 +4,22 @@ description: "本主题演示了构建包含可重用的库和单元测试的 .N
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 03/16/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: a54100a4eda6997b73b60d88b583e290973acb8e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
+<a id="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac" class="xliff"></a>
+
+# 使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题演示了构建包含可重用的库和单元测试的 .NET Core 解决方案。
 
@@ -28,21 +30,23 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 > * 在 Visual Studio for Mac 中，从菜单选择“帮助 > 报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。
 > * 若要提出建议，从菜单中选择“帮助 > 提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac UserVoice 网页](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。
 
-## <a name="prerequisites"></a>先决条件
+<a id="prerequisites" class="xliff"></a>
 
-[.NET Core 和 OpenSSL](https://www.microsoft.com/net/core#macos)
+## 先决条件
 
 有关先决条件的详细信息，请参阅 [Mac 上的 .NET Core 的先决条件](../../core/macos-prerequisites.md)。
 
-## <a name="getting-started"></a>入门
+<a id="getting-started" class="xliff"></a>
+
+## 入门
 
 如果已安装先决条件和 Visual Studio for Mac，请跳过此部分，并继续[构件库](#building-a-library)。 请按照以下步骤安装先决条件和 Visual Studio for Mac：
 
-1. 下载并安装 [.NET Core 和 OpenSSL](https://www.microsoft.com/net/core#macos)。
+下载 [Visual Studio for Mac 安装程序](https://www.visualstudio.com/vs/visual-studio-mac/)。 运行安装程序。 阅读并同意许可协议。 在安装过程中，为你提供安装 Xamarin（一个跨平台移动应用开发技术）的机会。 安装 Xamarin 及其相关组件对于 .NET Core 开发而言是可选项。 有关 Visual Studio for Mac 安装过程的分步介绍，请参阅 [Visual Studio for Mac 简介](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安装完成后，启动 Visual Studio for Mac IDE。
 
-1. 下载 [Visual Studio for Mac 安装程序](https://www.visualstudio.com/vs/visual-studio-mac/)。 运行安装程序。 阅读并同意许可协议。 在安装过程中，为你提供安装 Xamarin（一个跨平台移动应用开发技术）的机会。 安装 Xamarin 及其相关组件对于 .NET Core 开发而言是可选项。 有关 Visual Studio for Mac 安装过程的分步介绍，请参阅 [Visual Studio for Mac 简介](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安装完成后，启动 Visual Studio for Mac IDE。
+<a id="building-a-library" class="xliff"></a>
 
-## <a name="building-a-library"></a>生成库
+## 生成库
 
 1. 在欢迎屏幕上，选择“新建项目”。 在“多平台”节点下的“新建项目”对话框中，选择“.NET 标准库”模板。 选择“下一步”。
 
@@ -70,7 +74,9 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![错误面板的生成输出面板显示生成成功消息](./media/using-on-mac-vs-full-solution/vsmacfull04.png)
 
-## <a name="creating-a-test-project"></a>创建测试项目
+<a id="creating-a-test-project" class="xliff"></a>
+
+## 创建测试项目
 
 单元测试在开发和发布期间提供自动化的软件测试。 本教程中使用的测试框架是 [xUnit](https://xunit.github.io/)。
 
@@ -158,7 +164,9 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![控制台窗口中的测试通过。 总测试：4 个 通过：4 个 失败：0 个。 测试运行通过。](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
 
-## <a name="adding-a-console-app"></a>添加控制台应用
+<a id="adding-a-console-app" class="xliff"></a>
+
+## 添加控制台应用
 
 1. 在“解决方案”边栏中，右键单击 `WordCounter` 解决方案。 通过从“.NET Core”>“应用” 模板中选择模板来添加新的**控制台应用程序**。 选择“下一步”。 将项目命名为 **WordCounterApp**。 选择“创建”以在解决方案中创建项目。
 
@@ -194,7 +202,9 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    ![搜索词计数在应用的输出中更改为值 999](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
 
-## <a name="next-steps"></a>后续步骤
+<a id="next-steps" class="xliff"></a>
+
+## 后续步骤
 
 * 在 Xamarin 开发人员网站上的[Visual Studio for Mac 简介](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)中探索 Visual Studio for Mac 的其他功能。
 * 有关 Visual Studio for Mac 的功能的更深入介绍，请参阅 [Xamarin Studio 教程](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/ide-tour/)指南。

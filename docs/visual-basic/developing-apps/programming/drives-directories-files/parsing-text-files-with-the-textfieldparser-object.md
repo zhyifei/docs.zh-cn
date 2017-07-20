@@ -1,5 +1,5 @@
 ---
-title: "使用 TextFieldParser 对象分析文本文件 (Visual Basic) | Microsoft Docs"
+title: "使用 TextFieldParser 对象分析文本文件 (Visual Basic) | Microsoft 文档"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 570a5218ce2d750eb5f3a1a1b57e1e05f7fc0cbd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a686058d97d499b3baf32b20b56834162200f346
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>使用 TextFieldParser 对象分析文本文件 (Visual Basic)
@@ -52,12 +53,12 @@ ms.lasthandoff: 03/13/2017
   
  定义格式之后，即可使用 `ReadFields` 方法依次处理各行来循环访问文件。  
   
- 如果字段与指定的格式不匹配，则引发 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> 异常。 引发此类异常时，`ErrorLine` 和 `ErrorLineNumber` 属性将分别包含导致此异常的文本以及该文本所在的行号。  
+ 如果字段与指定的格式不符，则会引发 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> 异常。 引发此类异常时，`ErrorLine` 和 `ErrorLineNumber` 属性将分别包含导致此异常的文本以及该文本所在的行号。  
   
 ## <a name="parsing-files-with-multiple-formats"></a>分析具有多种格式的文件  
  在读取各字段之前，可以使用 `TextFieldParser` 对象的 `PeekChars`方法来检查字段，这样可以为字段定义多种格式并采取相应的操作。 有关详细信息，请参阅[如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>   

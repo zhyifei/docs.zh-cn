@@ -25,7 +25,8 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
+# .NET Framework 中的过时类型
+<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
 <a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](../../../docs/framework/whats-new/obsolete-members.md)。  
   
 -   [系统程序集中的过时类型](#obsolete_types_in_system_assemblies)  
@@ -81,11 +82,13 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## <a name="obsolete-types-in-system-assemblies"></a>系统程序集中的过时类型  
+## 系统程序集中的过时类型
+<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
  以下各表列出了系统程序集中已声明为过时的类型。 这些程序集用于面向 .NET Framework 的通用\-应用程序开发。  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>程序集：mscorlib.dll  
+### 程序集：mscorlib.dll
+<a id="assembly-mscorlibdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -150,7 +153,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="Core"></a>   
-### <a name="assembly-systemcoredll"></a>程序集：System.Core.dll  
+### 程序集：System.Core.dll
+<a id="assembly-systemcoredll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -159,7 +163,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>程序集：System.Data.dll  
+### 程序集：System.Data.dll
+<a id="assembly-systemdatadll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -171,7 +176,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>程序集：System.Data.OracleClient.dll  
+### 程序集：System.Data.OracleClient.dll
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -187,7 +193,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>程序集：System.Design.dll  
+### 程序集：System.Design.dll
+<a id="assembly-systemdesigndll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -209,7 +216,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>程序集：System.dll  
+### 程序集：System.dll
+<a id="assembly-systemdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -224,7 +232,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>程序集：System.EnterpriseServices.dll  
+### 程序集：System.EnterpriseServices.dll
+<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -233,7 +242,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="net"></a>   
-### <a name="assembly-systemnetdll"></a>程序集：System.Net.dll  
+### 程序集：System.Net.dll
+<a id="assembly-systemnetdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -250,7 +260,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>程序集：System.ServiceModel.dll  
+### 程序集：System.ServiceModel.dll
+<a id="assembly-systemservicemodeldll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -266,7 +277,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>程序集：System.Web.dll  
+### 程序集：System.Web.dll
+<a id="assembly-systemwebdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -287,7 +299,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>程序集：System.Web.Mobile.dll  
+### 程序集：System.Web.Mobile.dll
+<a id="assembly-systemwebmobiledll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -487,7 +500,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="workflow_activities"></a>   
-### <a name="assembly-systemworkflowactivitiesdll"></a>程序集：System.Workflow.Activities.dll  
+### 程序集：System.Workflow.Activities.dll
+<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -500,7 +514,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>程序集：System.Workflow.ComponentModel.dll  
+### 程序集：System.Workflow.ComponentModel.dll
+<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -518,7 +533,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### <a name="assembly-systemworkflowruntimedll"></a>程序集：System.Workflow.Runtime.dll  
+### 程序集：System.Workflow.Runtime.dll
+<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------| 
@@ -533,7 +549,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="workflowservices"></a>   
-### <a name="assembly-systemworkflowservicesdll"></a>程序集：System.WorkflowServices.dll  
+### 程序集：System.WorkflowServices.dll
+<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -562,7 +579,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>程序集：System.Xaml.dll  
+### 程序集：System.Xaml.dll
+<a id="assembly-systemxamldll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -571,7 +589,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>程序集：System.Xml.dll  
+### 程序集：System.Xml.dll
+<a id="assembly-systemxmldll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -584,7 +603,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="WindowsBase"></a>   
-### <a name="assembly-windowsbasedll"></a>程序集：WindowsBase.dll  
+### 程序集：WindowsBase.dll
+<a id="assembly-windowsbasedll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -593,17 +613,20 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## <a name="obsolete-types-in-microsoft-assemblies"></a>Microsoft 程序集中的过时类型  
+## Microsoft 程序集中的过时类型
+<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
  以下各节列出了 Microsoft 程序集中的过时类型。 这些程序集是具有特殊用途的程序集，如面向单一语言的程序集（如 Microsoft.JScript.dll 或 Microsoft.VisualC.dll）。  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>程序集：IEHost.dll 和 IEExec.exe  
+### 程序集：IEHost.dll 和 IEExec.exe
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
  IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有类型和成员已过时，且从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始已不支持它们。 这些程序集过去用于承载 Windows 窗体控件和在 Internet Explorer 中运行可执行文件。 建议的替代项包括 ClickOnce、XAML 浏览器应用程序 (XBAP) 和 Microsoft Silverlight。  
   
  [返回页首](#introduction)  
   
 <a name="Engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>程序集：Microsoft.Build.Engine.dll  
+### 程序集：Microsoft.Build.Engine.dll
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -613,7 +636,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="jscript"></a>   
-### <a name="assembly-microsoftjscriptdll"></a>程序集：Microsoft.JScript.dll  
+### 程序集：Microsoft.JScript.dll
+<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -639,7 +663,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="VBCompat"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>程序集：Microsoft.VisualBasic.Compatibility.dll  
+### 程序集：Microsoft.VisualBasic.Compatibility.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -714,7 +739,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="VBCompatData"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>程序集：Microsoft.VisualBasic.Compatibility.Data.dll  
+### 程序集：Microsoft.VisualBasic.Compatibility.Data.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -771,7 +797,8 @@ ms.lasthandoff: 05/22/2017
  [返回页首](#introduction)  
   
 <a name="visualc"></a>   
-### <a name="assembly-microsoftvisualcdll"></a>程序集：Microsoft.VisualC.dll  
+### 程序集：Microsoft.VisualC.dll
+<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
   
 |类型|消息|  
 |----------|-------------|  
@@ -786,7 +813,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Microsoft.VisualC.dll 是已过时的程序集，仅出于向后兼容目的而存在。|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Microsoft.VisualC.dll 是已过时的程序集，仅出于向后兼容目的而存在。|  
   
-## <a name="see-also"></a>另请参阅  
+## 另请参阅
+<a id="see-also" class="xliff"></a>  
  [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)   
  [过时成员](../../../docs/framework/whats-new/obsolete-members.md)
 

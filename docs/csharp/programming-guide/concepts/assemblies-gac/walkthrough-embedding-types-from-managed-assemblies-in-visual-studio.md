@@ -63,7 +63,7 @@ ms.lasthandoff: 05/10/2017
   
 -   运行客户端程序，查看正在使用的运行时程序集新版本，而不必重新编译该客户端程序。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-an-interface"></a>创建接口  
   

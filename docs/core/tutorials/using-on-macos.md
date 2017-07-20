@@ -10,33 +10,39 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 6c08f16690a8c081ac17484c6bc7a331d9041356
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
+<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
+
+# 在 macOS 上入门 .NET Core
 
 本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。 了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。
 
 > [!NOTE]
 > 本文在 macOS 上使用 [Visual Studio Code](http://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>先决条件
+<a id="prerequisites" class="xliff"></a>
+
+## 先决条件
 
 获取 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包括最新版本的 .NET Core 框架和运行时。
 
-安装 [Visual Studio Code](http://code.visualstudio.com)。 在本文进行的过程中，还会安装改进 .NET Core 开发体验的 VS Code 扩展。
+安装 [Visual Studio Code](http://code.visualstudio.com)。 在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。
 
-打开 VS Code，然后按 <kbd>F1</kbd> 打开 VS Code 调色板，以便安装 VS Code C# 扩展。 键入 ext install ，查看扩展列表。 选择 C# 扩展。 重启 VS Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+打开 Visual Studio Code，并按 <kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。 键入 ext install ，查看扩展列表。 选择 C# 扩展。 重启 Visual Studio Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="getting-started"></a>入门
+<a id="getting-started" class="xliff"></a>
+
+## 入门
 
 在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 对于此主题，可以在 GitHub 的 dotnet/docs 存储库中[查看或下载源](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中选择“视图”>“集成终端”，在 VS Code 中打开嵌入的终端。 如果要在 VS Code 外部进行工作，仍可以使用资源管理器的“在命令提示符中打开”（在 Mac 或 Linux 上为“在终端中打开”）命令打开外部 shell。
+启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中依次选择“视图”>“集成终端”，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”（在 Mac 或 Linux 上，为“在终端中打开”）命令打开外部 shell。
 
 首先创建一个解决方案文件，它将用作一个或多个 .NET Core 项目的容器。 在终端中，创建 golden 文件夹并将其打开。 此文件夹是解决方案的根目录。 运行 [`dotnet new`](../tools/dotnet-new.md) 命令，创建新的解决方案 golden.sln：
 
@@ -111,7 +117,9 @@ namespace Library
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a>创建测试项目
+<a id="create-the-test-project" class="xliff"></a>
+
+## 创建测试项目
 
 生成针对库的测试项目。 在 golden 文件夹中，创建一个新测试项目：
 
@@ -174,7 +182,9 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a>创建控制台应用
+<a id="create-the-console-app" class="xliff"></a>
+
+## 创建控制台应用
 
 通过以下步骤创建的控制台应用依赖于之前创建的库项目，并在运行时调用其库方法。 使用此开发模式，可了解如何创建多个项目的可重用库。
 
@@ -215,13 +225,15 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a>调试应用程序
+<a id="debug-the-application" class="xliff"></a>
+
+## 调试应用程序
 
 在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。 要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。 代码行旁边的边缘中将出现一个红色圆圈。 到达断点时，将在执行断点行前停止执行代码。
 
-要打开调试器选项卡，请在 VS Code 工具栏中选择调试图标，然后从菜单栏中选择“视图”>“调试”，或使用键盘快捷方式 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
+若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”>“调试”，或使用键盘快捷方式 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
 
-![VS Code 调试器](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code 调试程序](./media/using-on-macos/vscodedebugger.png)
 
 按“开始”按钮，在调试器下启动应用程序。 应用开始执行，运行到断点处停止。 单步执行 `Get` 方法，确保已传入正确的参数。 确认答案是 42。
 

@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio Code 入门 | C# 指南"
-description: "了解如何使用 VS Code 创建和调试首个用 C# 编写的 .NET Core 应用程序。"
+title: "Visual Studio Code 入门 - C# 指南 | Microsoft Docs"
+description: "了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。"
 keywords: "C#, 入门, 获取, 安装, Visual Studio Code, 跨平台"
 author: kendrahavens
 ms.author: mairaw
@@ -11,30 +11,33 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
-ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="get-started-with-visual-studio-code"></a>Visual Studio Code 入门
+# Visual Studio Code 入门
+<a id="get-started-with-visual-studio-code" class="xliff"></a>
 
 .NET Core 提供了一个快速运行的模块化平台，用于创建在 Windows、Linux 和 macOS 上运行的服务器应用程序。 带 C# 扩展的 Visual Studio Code 提供功能强大的编辑体验，完全支持 C# IntelliSense（智能代码填充）和调试。
 
-## <a name="prerequisites"></a>先决条件
+## 先决条件
+<a id="prerequisites" class="xliff"></a>
 
 1. 安装 [Visual Studio Code](https://code.visualstudio.com/)。
 2. 获取 [.NET Core SDK](https://www.microsoft.com/net/download/core)。
 3. 从 Visual Studio Code 应用商店安装 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。
 
-## <a name="hello-world"></a>Hello World
+## Hello World
+<a id="hello-world" class="xliff"></a>
 
 让我们从 .NET Core 上的一个简单“Hello World”程序入手：
 
 1. 打开项目：
 
-    * 打开 VS Code。
+    * 打开 Visual Studio Code。
     * 依次单击左侧菜单上的“资源管理器”图标和**“打开文件夹”**。
     * 选择要在其中放置 C# 项目的文件夹，然后单击**“选择文件夹”**。 在我们的示例中，我们将把项目文件夹命名为“HelloWorld”。 
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 05/14/2017
     * 或者，可以在主菜单上依次选择**“文件”** > **“打开文件夹”**，打开项目文件夹。
 
 2. 初始化 C# 项目：
-    * 键入“<kbd>CTRL</kbd>+<kbd>\`</kbd>”（反引号），在 VS Code 中打开集成终端。
+    * 键入“<kbd>CTRL</kbd>+<kbd>\`</kbd>”（反引号），在 Visual Studio Code 中打开集成终端。
     * 在终端窗口中，键入“`dotnet new console`”。
     * 这会在已编写“Hello World”简单程序的文件夹中创建 `Program.cs` 文件，以及 `HelloWorld.csproj` C# 项目文件。
 
@@ -63,12 +66,13 @@ ms.lasthandoff: 05/14/2017
 
 还可以观看简短的视频教程，以获取更多关于在 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 或 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) 上进行安装的帮助。
 
-## <a name="debug"></a>调试
-1. 单击打开 *Program.cs*。 在 VS Code 中首次打开 C# 文件时，将在编辑器中加载 [OmniSharp](http://www.omnisharp.net/)。
+## 调试
+<a id="debug" class="xliff"></a>
+1. 单击打开 *Program.cs*。 在 Visual Studio Code 中首次打开 C# 文件时，将在编辑器中加载 [OmniSharp](http://www.omnisharp.net/)。
 
   ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
 
-2. VS Code 会提示你添加缺少的资产，以生成和调试应用程序。 选择**“是”**。 
+2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择**“是”**。 
 
   ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
@@ -92,9 +96,10 @@ ms.lasthandoff: 05/14/2017
 7. 选择最上面的绿色箭头继续调试，或按红色方块停止调试。
 
 > [!TIP] 
-> 若要详细了解如何使用 OmniSharp 在 VS Code 中进行 .NET Core 调试，以及相关的故障排除提示，请参阅[有关设置 .NET Core 调试器的说明](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+> 若要详细了解如何使用 OmniSharp 在 Visual Studio Code 中进行 .NET Core 调试，以及相关的疑难解答提示，请参阅[有关设置 .NET Core 调试器的说明](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="see-also"></a>请参阅
+## 请参阅
+<a id="see-also" class="xliff"></a>
 [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
 [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
 

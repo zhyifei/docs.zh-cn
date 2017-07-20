@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>枚举类型（C# 编程指南）
@@ -96,14 +96,14 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- 有关使用 <xref:System.FlagsAttribute?displayProperty=fullName> 属性定义枚举类型时应考虑的事项的详细信息，请参阅 <xref:System.Enum?displayProperty=fullName>。  
+ 有关使用 <xref:System.FlagsAttribute?displayProperty=fullName> 特性定义枚举类型时应考虑事项的详细信息，请参阅 <xref:System.Enum?displayProperty=fullName>。  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>使用 System.Enum 方法来发现和操作枚举值  
  所有枚举都是 <xref:System.Enum?displayProperty=fullName> 类型的实例。 不能从 <xref:System.Enum?displayProperty=fullName> 中派生新类，但可以使用它的方法来发现有关枚举实例中操作值的信息。  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
- 有关详细信息，请参阅 <xref:System.Enum?displayProperty=fullName>。  
+ 有关更多信息，请参见<xref:System.Enum?displayProperty=fullName>。  
   
  还可以使用扩展方法创建枚举的新方法。 有关详细信息，请参阅[如何：为枚举创建新方法](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。  
 

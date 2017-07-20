@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>错误消息 (Visual Basic)
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/17/2017
  若要了解如何排查特定错误，请参阅[为 Visual Basic 程序员提供的附加资源](../../../visual-basic/getting-started/additional-resources.md)。  
   
 ## <a name="run-time-errors"></a>运行时错误  
- 如果 Visual Basic 应用程序试图执行系统无法执行的操作，则会生成运行时错误，并且 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 会抛出 `Exception` 对象。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 可以使用 `Throw` 语句生成任何数据类型的自定义错误，包括 `Exception` 对象。 应用程序可以通过显示捕获到的异常的错误号和消息来识别错误。 如果未捕获到错误，应用程序会结束。  
+ 如果 Visual Basic 应用程序试图执行系统无法执行的操作，则会生成运行时错误，并且 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会抛出 `Exception` 对象。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 可以使用 `Throw` 语句生成任何数据类型的自定义错误，包括 `Exception` 对象。 应用程序可以通过显示捕获到的异常的错误号和消息来识别错误。 如果未捕获到错误，应用程序会结束。  
   
  代码可用于捕获和检查运行时错误。 如果将生成错误的代码封闭在 `Try` 代码块中，则可以在匹配的 `Catch` 代码块中捕获抛出的任何错误。 若要了解如何在运行时捕获错误并在代码中响应错误，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   

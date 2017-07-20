@@ -60,11 +60,11 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（以 \\\\.\\ 开头）(<xref:System.ArgumentException>)。  
+-   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
 -   系统无法检索绝对路径 (<xref:System.ArgumentException>)。  
   
--   路径无效，因为路径为 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
 -   源文件无效或不存在 (<xref:System.IO.FileNotFoundException>)。  
   
@@ -76,17 +76,17 @@ ms.lasthandoff: 05/22/2017
   
 -   目标文件夹中的同名文件正在使用中 (<xref:System.IO.IOException>)。  
   
--   路径中的某个文件或文件夹名称包含冒号 (:) 或格式无效 (<xref:System.NotSupportedException>)。  
+-   路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
   
 -   `ShowUI` 设置为 `True`、`onUserCancel` 设置为 `ThrowException`，并且用户已取消操作 (<xref:System.OperationCanceledException>)。  
   
--   `ShowUI` 设置为 `True`、`onUserCancel` 设置为 `ThrowException`，并且出现了未指定的 I/O 错误 (<xref:System.OperationCanceledException>)。  
+-   `ShowUI` 设置为 `True`、`onUserCancel` 设置为 `ThrowException`，并出现未指定的 I/O 错误 (<xref:System.OperationCanceledException>)。  
   
--   路径超出了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+-   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   用户没有所需权限 (<xref:System.UnauthorizedAccessException>)。  
+-   用户没有必需的权限 (<xref:System.UnauthorizedAccessException>)。  
   
--   用户缺少必要的权限来查看路径 (<xref:System.Security.SecurityException>)。  
+-   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   

@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 242c8b79cbe1329b6f53e9fd4e5495d4a157e08c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>如何：从文件、字符串或流加载 XML (Visual Basic)
 您可以创建[XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)并使用几种方法从外部数据源如文件、 字符串或流的内容填充这些组。 在下面的示例演示了这些方法。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-load-xml-from-a-file"></a>若要从文件加载 XML  
   

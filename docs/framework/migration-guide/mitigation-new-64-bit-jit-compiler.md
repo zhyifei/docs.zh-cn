@@ -35,9 +35,9 @@ ms.lasthandoff: 05/22/2017
 > [!IMPORTANT]
 >  所有这些已知问题已在随 .NET Framework 4.6.2 一起发布的新版 64 位编译器中得到了解决。 大多数问题也已在 Windows 更新随附的 .NET Framework 4.6 和 4.6.1 的服务版本中得到解决。 若要消除这些问题，请确保 Windows 是最新版本，或升级到 .NET Framework 4.6.2。  
   
--   在某些情况下，在启用优化的发布版本中，取消装箱操作可能会导致 <xref:System.NullReferenceException> 抛出。  
+-   在某些情况下，在启用优化的发布版本中，取消装箱操作可能会引发 <xref:System.NullReferenceException>。  
   
--   在某些情况下，在大型方法主体中执行生产代码可能会导致 <xref:System.StackOverflowException> 抛出。  
+-   在某些情况下，在大型方法主体中执行生产代码可能会引发 <xref:System.StackOverflowException>。  
   
 -   在某些情况下，传递给方法的结构在发布版本中被视为引用类型，而不是值类型。 此问题的表现形式之一是，集合中各个项的显示顺序出现异常。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
   
 -   在某些情况下，尤其是在初始化数组值时，通过 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 指令执行的内存初始化可能会使用不正确的值初始化内存。 这可能会导致未经处理的异常抛出或输出不正确。  
   
--   在某些极少数情况下，如果启用了编译器优化，条件位测试可能会返回错误的 <xref:System.Boolean> 值或抛出异常。  
+-   在某些极少数情况下，如果启用了编译器优化，条件位测试可能会返回错误的 <xref:System.Boolean> 值或引发异常。  
   
 -   在某些情况下，如果 `if` 语句用于在进入 `try` 块之前和从 `try` 块中退出之前测试条件，且在 `catch` 或 `finally` 块中计算的条件相同，那么新版 64 位 JIT 编译器会在优化代码时从 `catch` 或 `finally` 块中删除 `if` 条件。 因此，`catch` 或 `finally` 块中的 `if` 语句代码会无条件地执行。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
   
 -   升级到 .NET Framework 4.6.2。 .NET Framework 4.6.2 随附的新版 64 位编译器解决了上面列出的所有已知问题。  
   
--   运行 Windows 更新，以确保 Windows 是最新版本。 .NET Framework 4.6 和 4.6.1 服务更新可解决上面列出的所有已知问题，取消装箱操作抛出的 <xref:System.NullReferenceException> 除外。  
+-   运行 Windows 更新，以确保 Windows 是最新版本。 .NET Framework 4.6 和 4.6.1 服务更新可解决以上问题，取消装箱操作中的 <xref:System.NullReferenceException> 除外。  
   
 -   使用旧版 64 位 JIT 编译器进行编译。 请参阅[其他问题的缓解措施](#Other)部分，详细了解如何执行此操作。  
   

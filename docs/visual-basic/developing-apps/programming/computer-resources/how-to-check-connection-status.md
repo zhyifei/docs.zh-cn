@@ -33,16 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81386ee1f8c8cefbcd34a05d594277b9de772b8d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4163a16e7c338c5e55751a9567fc85109867cfda
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>如何：在 Visual Basic 中检查连接状态
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A> 属性可用于确定计算机是否具有有效的网络连接或 Internet 连接。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-check-whether-a-computer-has-a-working-connection"></a>检查计算机是否具有有效的网络连接  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
   
-     此代码示例也可作为 IntelliSense 代码片段。 它位于代码片段选取器的“连接和网络”****中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+     此代码示例也可作为 IntelliSense 代码片段。 它位于代码片段选取器的“连接和网络”中。 有关详细信息，请参阅[代码片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   
