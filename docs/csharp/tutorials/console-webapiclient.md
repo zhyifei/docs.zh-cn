@@ -18,11 +18,9 @@ ms.lasthandoff: 05/23/2017
 
 ---
 
-# REST 客户端
-<a id="rest-client" class="xliff"></a>
+# <a name="rest-client"></a>REST 客户端
 
-## 介绍
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>介绍
 此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
 *    .NET Core 命令行接口 (CLI) 的基础知识。
 *   C# 语言功能概述。
@@ -37,19 +35,16 @@ ms.lasthandoff: 05/23/2017
 
 如果想要按照针对本主题的[最终示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)操作，可以下载它。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## 先决条件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>先决条件
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
-## 创建应用程序
-<a id="create-the-application" class="xliff"></a>
+## <a name="create-the-application"></a>创建应用程序
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
 
 在开始进行修改之前，我们先来逐步了解一下如何运行简单的 Hello World 应用程序。 创建应用程序之后，在命令提示符处键入 `dotnet restore`。 此命令将运行 NuGet 包还原进程。 NuGet 是 .NET 程序包管理器。 此命令会下载项目缺少的所有依赖项。 由于这是一个新项目，尚无任何依赖项，因此首次运行只会下载 .NET Core 框架。 执行这一初始步骤后，只需运行 `dotnet restore`，即可添加新的依赖项包，或更新任意依赖项的版本。  
 
 还原包后，运行 `dotnet build`。 这将运行生成引擎，并创建应用程序。 最后，执行 `dotnet run` 来运行应用程序。
 
-## 添加新的依赖项
-<a id="adding-new-dependencies" class="xliff"></a>
+## <a name="adding-new-dependencies"></a>添加新的依赖项
 .NET Core 的主要设计目标之一是，最大限度地减少 .NET 框架安装大小。 .NET Core 应用程序框架只包含 .NET 完整框架的最常用元素。 如果应用程序需要使用其他库来生成某些功能，请将这些依赖项添加到 C# 项目 (*.csproj) 文件中。 对于我们的示例，将需要添加 `System.Runtime.Serialization.Json` 包，以便应用程序可以处理 JSON 响应。
 
 打开 `csproj` 项目文件。 此文件的第一行应如下所示：
@@ -69,8 +64,7 @@ ms.lasthandoff: 05/23/2017
 
 进行这些更改之后，应该再次运行 `dotnet restore`，以便在系统上安装包。
 
-## 发出 Web 请求
-<a id="making-web-requests" class="xliff"></a>
+## <a name="making-web-requests"></a>发出 Web 请求
 现在，可以开始检索 Web 数据了。 在此应用程序中，需要读取 [GitHub API](https://developer.github.com/v3/) 返回的信息。 让我们在 [.NET Foundation](http://www.dotnetfoundation.org/) 的保护下读取项目信息。 先向 GitHub API 发出请求，以检索项目信息。 将用到终结点 [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 由于要检索这些项目的所有信息，因此将发出 HTTP GET 请求。
 此外，浏览器也使用 HTTP GET 请求，以便你可以将相应的 URL 粘贴到浏览器，查看将要收到并处理的信息。
 
@@ -136,8 +130,7 @@ using System.Net.Http.Headers;
 此方法的最后两行代码用于等待任务完成，然后在控制台中打印输出响应。
 生成并运行应用程序。 此时，生成警告不再显示，因为 `ProcessRepositories` 现在的确包含 `await` 运算符。 将看到很长的 JSON 格式文本。   
 
-## 处理 JSON 结果
-<a id="processing-the-json-result" class="xliff"></a>
+## <a name="processing-the-json-result"></a>处理 JSON 结果
 
 此时，你已编写用于检索来自 Web 服务器的响应，并显示响应文本的代码。 接下来，让我们将相应的 JSON 响应转换成 C# 对象。
 
@@ -179,7 +172,7 @@ var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-请注意，现在使用的是 @System.Net.Http.HttpClient.GetStreamAsync (System.String)，而不是 @System.Net.Http.HttpClient.GetStringAsync (System.String)。 序列化程序使用流（而不是字符串）作为其源。 让我们来看看上面第二行代码所使用的两项 C# 语言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的自变量是 `await` 表达式。 Await 表达式可以出现在代码中的几乎任何位置，尽管到目前为止，你只在赋值语句中看到过它们。
+请注意，现在使用的是 @System.Net.Http.HttpClient.GetStreamAsync (System.String) ，而不是 @System.Net.Http.HttpClient.GetStringAsync (System.String) 。 序列化程序使用流（而不是字符串）作为其源。 让我们来看看上面第二行代码所使用的两项 C# 语言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的自变量是 `await` 表达式。 Await 表达式可以出现在代码中的几乎任何位置，尽管到目前为止，你只在赋值语句中看到过它们。
 
 其次，`as` 运算符将编译时类型 `object` 转换成 `List<repo>`。 声明 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 即声明其返回 <xref:System.Object?displayProperty=fullName> 类型的对象。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 将返回你在构造它时指定的类型（在此教程中，为 `List<repo>`）。 如果转换失败，那么 `as` 运算符的计算结果为 `null`，而不是抛出异常。
 
@@ -199,8 +192,7 @@ foreach (var repo in repositories)
 
 编译并运行该应用程序。 将打印输出属于 .NET Foundation 的存储库的名称。
 
-## 控制序列化
-<a id="controlling-serialization" class="xliff"></a>
+## <a name="controlling-serialization"></a>控制序列化
 
 在添加更多功能之前，让我们来处理一下 `repo` 类型，使其更加遵循标准的 C# 约定。 为此，使用可控制 JSON 序列化程序的工作方式的*特性*对 `repo` 类型添加批注。 在此示例中，将使用这些特性来定义 JSON 键名和 C# 类名及成员名称之间的映射。 使用 `DataContract` 和 `DataMember` 这两个特性。 按照约定，所有特性类均以后缀 `Attribute` 结尾。 不过，在应用特性时无需使用此后缀。 
 
@@ -297,8 +289,7 @@ public static void Main(string[] args)
 
 只有在任务完成后，才能访问任务的 `Result` 属性。 通常情况下，在 `ProcessRepositories` 方法中，你倾向于 `await`（等待）任务完成，但在 `Main` 方法中这是不允许的。
 
-## 读取详细信息
-<a id="reading-more-information" class="xliff"></a>
+## <a name="reading-more-information"></a>读取详细信息
 
 最后，让我们来处理 GitHub API 发送的 JSON 数据包中的其他一些属性。 虽然你不想面面俱到，但添加其他一些属性将展示更多的 C# 语言功能。
 
@@ -375,8 +366,7 @@ Console.WriteLine(repo.LastPush);
 
 你的版本现在应与[已完成的示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)匹配。
  
-## 结束语
-<a id="conclusion" class="xliff"></a>
+## <a name="conclusion"></a>结束语
 
 此教程介绍了如何发出 Web 请求、分析结果，以及如何显示这些结果的属性。 你也已经在项目中将新的包添加为依赖项， 并已了解一些支持面向对象的技术的 C# 语言功能。
 
