@@ -1,5 +1,5 @@
 ---
-title: "控制台应用 | Microsoft Docs"
+title: "控制台应用程序"
 description: "此教程将介绍 .NET Core 和 C# 语言的许多功能。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,33 +11,29 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 7e8cc0ed7093a90a51d1b0c50123adb73ca968aa
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 控制台应用程序
-<a id="console-application" class="xliff"></a>
+# <a name="console-application"></a>控制台应用程序
 
-## 介绍
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>介绍
 此教程将介绍 .NET Core 和 C# 语言的许多功能。 你将了解：
-*    .NET Core 命令行接口 (CLI) 的基础知识
-*    C# 控制台应用程序的结构
-*    控制台 I/O
-*    .NET Core 中文件 I/O API 的基础知识
-*    .NET Core 中任务异步编程模型的基础知识
+*   .NET Core 命令行接口 (CLI) 的基础知识
+*   C# 控制台应用程序的结构
+*   控制台 I/O
+*   .NET Core 中文件 I/O API 的基础知识
+*   .NET Core 中任务异步编程模型的基础知识
 
 你将生成一个应用程序，用于读取文本文件，然后将文本文件的内容回显到控制台。 将按配速大声朗读控制台输出。 可以按“<”或“>”键加速或减速显示。
 
 此教程将介绍许多功能。 我们将逐个生成这些功能。 
-## 先决条件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>先决条件
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。 可以在 Windows、Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 
-## 创建应用程序
-<a id="create-the-application" class="xliff"></a>
+## <a name="create-the-application"></a>创建应用程序
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
 
 在开始进行修改之前，我们先来逐步了解一下如何运行简单的 Hello World 应用程序。 创建应用程序之后，在命令提示符处键入 `dotnet restore`。 此命令将运行 NuGet 包还原进程。 NuGet 是 .NET 程序包管理器。 此命令会下载项目缺少的所有依赖项。 由于这是一个新项目，尚无任何依赖项，因此首次运行只会下载 .NET Core 框架。 执行这一初始步骤后，只需运行 `dotnet restore`，即可添加新的依赖项包，或更新任意依赖项的版本。 此进程还会在项目目录中创建项目锁定文件 (project.lock.json)。 此文件有助于管理项目依赖项。 其中包含所有项目依赖项的本地位置。 无需将文件置于源控件中；它将在 `dotnet restore` 运行时生成。 
@@ -57,8 +53,7 @@ using System;
 namespace TeleprompterConsole
 ```
 
-## 读取和回显文件
-<a id="reading-and-echoing-the-file" class="xliff"></a>
+## <a name="reading-and-echoing-the-file"></a>读取和回显文件
 要添加的第一项功能是读取文本文件，然后在控制台中显示全部文本。 首先，让我们来添加文本文件。 将此[示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)的 GitHub 存储库中的 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 文件复制到项目目录中。 这将用作应用程序脚本。 如果需要有关如何下载本主题示例应用的信息，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)主题中的说明。
 
 接下来，在 Program 类中添加以下方法（就在 `Main` 方法的下方）：
@@ -104,8 +99,7 @@ foreach (var line in lines)
 
 使用 `dotnet run` 运行程序，可以看到控制台中打印输出所有文本行。  
 
-## 添加延迟和设置输出格式
-<a id="adding-delays-and-formatting-output" class="xliff"></a>
+## <a name="adding-delays-and-formatting-output"></a>添加延迟和设置输出格式
 现在的问题是，输出显示过快，无法大声朗读。 此时，需要为输出添加延迟。 首先，将生成一些可实现异步处理的核心代码。 不过，在执行这些初始步骤时，将遵循一些反面模式。 反面模式会在你添加代码时在注释中指出，代码将在后面的步骤中进行更新。
 
 这部分包含两步操作。 首先，将迭代器方法更新为返回单个字词，而不是整行文本。 为此，执行下面这些修改。 用以下代码替换 `yield return line;` 语句：
@@ -158,8 +152,7 @@ if (lineLength > 70)
  
 运行此示例，将能够按预配速大声朗读文本。
 
-## 异步任务
-<a id="async-tasks" class="xliff"></a>
+## <a name="async-tasks"></a>异步任务
 最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加速或减速文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。
 第一步是创建异步 @System.Threading.Tasks.Task 返回方法，用于表示已创建的用于读取和显示文件的代码。
 
@@ -319,8 +312,7 @@ public void SetDone()
 }
 ```
 
-## 结束语
-<a id="conclusion" class="xliff"></a>
+## <a name="conclusion"></a>结束语
 此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。
 可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程模型的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core 命令行接口和工具。
  
