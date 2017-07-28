@@ -1,5 +1,5 @@
 ---
-title: "COM 互操作 (Visual Basic) | Microsoft Docs"
+title: "COM 互操作 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6aaa083c7d668659d2e68638b677a20ce22fa214
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="com-interop-visual-basic" class="xliff"></a>
-
-# COM 互操作 (Visual Basic)
+# <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
 组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 此部分介绍了一些与通过 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建和使用 COM 对象相关的问题。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  概述了 COM 互操作性。  
   
@@ -76,9 +72,7 @@ ms.lasthandoff: 05/26/2017
  [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  介绍了如何将现有 COM 对象用作新对象的基础。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [与非托管代码交互操作](https://msdn.microsoft.com/library/sd10k43k)  
  描述由公共语言运行时提供的互操作性服务。  
   
@@ -90,3 +84,4 @@ ms.lasthandoff: 05/26/2017
   
  [应用互操作属性](https://msdn.microsoft.com/library/d4w8x20h)  
  介绍了在使用非托管代码时可以使用的属性。
+

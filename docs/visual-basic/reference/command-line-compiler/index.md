@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 命令行编译器 | Microsoft Docs"
+title: "Visual Basic 命令行编译器"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7c62eb47ba748cb119855e9a3987cab8c6a5b74b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 850aac4098dc22bacd377362f7886fa70219d365
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-command-line-compiler" class="xliff"></a>
-
-# Visual Basic 命令行编译器
+# <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令行编译器
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器提供了一种编译来自 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 内的程序的替代方法。 本节包含了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器选项的说明。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
  介绍 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器，该编译器用作一种编译来自 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE 内的程序的替代方法。  
   
@@ -57,11 +53,10 @@ ms.lasthandoff: 05/26/2017
  [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
  显示功能组中的编译器选项。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [NIB：使用项目设计器管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
  讨论如何使用项目设计器来指定项目的全局设置。  
   
  [Visual Basic](../../../visual-basic/index.md)  
  开始了解 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 帮助。
+

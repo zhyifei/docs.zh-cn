@@ -1,5 +1,5 @@
 ---
-title: "在持续集成 (CI) 中使用 .NET Core SDK 和工具| Microsoft Docs"
+title: "在持续集成 (CI) 中使用 .NET Core SDK 和工具"
 description: "了解如何在生成服务器上使用 .NET Core SDK 及其工具。"
 keywords: ".NET, .NET Core, 持续集成, ci, 生成, 自动化, Travis CI, AppVeyor, Visual Studio Team Services, vsts"
 author: guardrex
@@ -10,31 +10,23 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5af11b469f906b7c074f127704eb338a78a62b34
-ms.openlocfilehash: a13f6b80248a659bda23baece3638e33a166b5df
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67c08dd9804f6b51961be250033161427159e66e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="using-net-core-sdk-and-tools-in-continuous-integration-ci" class="xliff"></a>
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
 
-# 在持续集成 (CI) 中使用 .NET Core SDK 和工具
-
-<a id="overview" class="xliff"></a>
-
-## 概述
+## <a name="overview"></a>概述
 
 本文档概述了如何在生成服务器上使用 .NET Core SDK 及其工具。 .NET Core 工具集既可以交互方式运行（当开发者在命令提示符处键入命令时），也可以自动运行（当持续集成 (CI) 服务器运行生成脚本时）。 命令、选项、输入和输出都相同，可通过提供的唯一内容来获取用于生成应用的工具和系统。 本文档重点介绍了 CI 工具获取方案，并提供了有关如何设计和构建生成脚本的建议。
 
-<a id="installation-options-for-ci-build-servers" class="xliff"></a>
+## <a name="installation-options-for-ci-build-servers"></a>CI 生成服务器的安装选项
 
-## CI 生成服务器的安装选项
-
-<a id="using-the-native-installers" class="xliff"></a>
-
-### 使用本机安装程序
+### <a name="using-the-native-installers"></a>使用本机安装程序
 
 本机安装程序适用于 macOS、Linux 和 Windows。 安装程序需要拥有对生成服务器的管理员 (sudo) 访问权限。 使用本机安装程序的优势在于，可以安装运行工具所需的全部本机依赖项。 本机安装程序还可以在整个系统内安装 SDK。
 
@@ -42,9 +34,7 @@ macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于�
 
 有关最新的稳定二进制文件，请参阅 [.NET Core 入门](https://aka.ms/dotnetcoregs)。 若要使用最新（但可能不稳定）的预览版工具，请使用 [dotnet/cli GitHub 存储库](https://github.com/dotnet/cli#installers-and-binaries)中提供的链接。 对于 Linux 发行版本，可以使用 `tar.gz` 存档（亦称为 `tarballs`）；使用存档中的安装脚本来安装 .NET Core。
 
-<a id="using-the-installer-script" class="xliff"></a>
-
-### 使用安装程序脚本
+### <a name="using-the-installer-script"></a>使用安装程序脚本
 
 使用安装程序脚本，可以在生成服务器上执行非管理员安装，并能轻松实现自动化，以便获取工具。 安装程序脚本负责下载并将工具提取到默认或指定位置，以供使用。 还可以指定要安装的工具版本，以及是要安装整个 SDK，还是仅安装共享运行时。
 
@@ -53,15 +43,11 @@ macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于�
 > [!NOTE]
 > 使用安装程序脚本时，不会自动安装本机依赖项。 如果操作系统没有本机依赖项，必须手动安装。 请参阅 [.NET Core 本机先决条件](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)主题中的先决条件列表。
 
-<a id="ci-setup-examples" class="xliff"></a>
-
-## CI 安装示例
+## <a name="ci-setup-examples"></a>CI 安装示例
 
 此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Visual Studio Team Services 生成](https://www.visualstudio.com/docs/build/overview)。
 
-<a id="manual-setup" class="xliff"></a>
-
-### 手动安装
+### <a name="manual-setup"></a>手动安装
 
 每个 SaaS 服务都有自己的生成进程创建和配置方法。 如果使用与所列不同的 SaaS 解决方案，或需要超越预封装支持范围的自定义设置，至少必须执行一些手动配置。
 
@@ -143,17 +129,13 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 # Run the build process now. Implement your build script here.
 ```
 
-<a id="travis-ci" class="xliff"></a>
-
-### Travis CI
+### <a name="travis-ci"></a>Travis CI
 
 可以将 [Travis CI](https://travis-ci.org/) 配置为使用 `csharp` 语言和 `dotnet` 键安装 .NET Core SDK。 有关详细信息，请参阅 Travis CI 官方文档[生成 C#、F# 或 Visual Basic 项目](https://docs.travis-ci.com/user/languages/csharp/)。 请注意，访问 Travis CI 信息时，社区维护的 `language: csharp` 语言标识符适用于所有 .NET 语言，包括 F# 和 Mono。
 
 Travis CI 可同时在生成矩阵中运行 macOS（OS X 10.11、OS X 10.12）和 Linux (Ubuntu 14.04) 作业。在生成矩阵中，可以指定运行时、环境和排除项/包含项的组合，从而涵盖应用的生成组合。 有关详细信息，请参阅 Travis CI 文档 [.travis.yml 示例](https://github.com/dotnet/docs/blob/master/.travis.yml)文件和[自定义生成](https://docs.travis-ci.com/user/customizing-the-build)。 基于 MSBuild 的工具在包中添加 LTS (1.0.x) 和最新 (1.1.x) 运行时；因此，通过安装 SDK，可以收到执行生成所需的一切。
 
-<a id="appveyor" class="xliff"></a>
-
-### AppVeyor
+### <a name="appveyor"></a>AppVeyor
 
 [AppVeyor](https://www.appveyor.com/) 使用 `Visual Studio 2017` 生成辅助角色映像安装 .NET Core 1.0.1 SDK。 可以使用其他包含不同版本 .NET Core SDK 的生成映像；有关详细信息，请参阅 AppVeyor 文档中的 [appveyor.yml 示例](https://github.com/dotnet/docs/blob/master/appveyor.yml)和[生成辅助角色映像](https://www.appveyor.com/docs/build-environment/#build-worker-images)主题。
 
@@ -169,9 +151,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-<a id="visual-studio-team-services-vsts" class="xliff"></a>
-
-### Visual Studio Team Services (VSTS)
+### <a name="visual-studio-team-services-vsts"></a>Visual Studio Team Services (VSTS)
 
 将 Visual Studio Team Services (VSTS) 配置为使用以下方法之一生成 .NET Core 项目：
 
@@ -198,17 +178,13 @@ install:
 
    ![指定要运行的 PowerShell 脚本](./media/using-ci-with-cli/screen4.png)
 
-<a id="orchestrating-the-build" class="xliff"></a>
-
-## 安排生成
+## <a name="orchestrating-the-build"></a>安排生成
 
 本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [VSTS](https://www.visualstudio.com/docs/build/overview) 文档集中提供的资源和示例，详细了解如何使用每种技术安排生成。
 
 使用 .NET Core 工具构建 .NET Core 代码生成进程的两种常规方法是，直接使用 MSBuild 或使用 .NET Core 命令行命令。 应采用哪种方法取决于对方法的熟悉程度和复杂性取舍。 使用 MSBuild，可以将生成进程表达为任务和目标，但需要学习 MSBuild 项目文件语法，这增加了复杂性。 使用 .NET Core 命令行工具可能更为简单，但需要在 `bash` 或 PowerShell 等脚本语言中编写业务流程逻辑。
 
-<a id="see-also" class="xliff"></a>
-
-## 请参阅
+## <a name="see-also"></a>请参阅
 
 [Ubuntu 获取步骤](https://www.microsoft.com/net/core#linuxubuntu)   
 

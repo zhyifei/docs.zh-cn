@@ -1,5 +1,5 @@
 ---
-title: "Main() 和命令行自变量（C# 编程指南）| Microsoft 文档"
+title: "Main() 和命令行参数（C# 编程指南）"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,25 +35,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: eb1d380ee4dfd64081d8fe36880a06e3a450f639
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="main-and-command-line-arguments-c-programming-guide" class="xliff"></a>
-
-# Main() 和命令行参数（C# 编程指南）
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 `Main` 方法是 C# 控制台应用程序或 Windows 应用程序的入口点 （库和服务不要求使用 `Main` 方法作为入口点）。 `Main` 方法是应用程序启动后调用的第一个方法。  
   
  C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 **/main** 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [/main（C# 编译器选项）](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。  
   
  [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
-<a id="overview" class="xliff"></a>
-
-## 概述  
+## <a name="overview"></a>概述  
   
 -   `Main` 方法是 .exe 程序的入口点，也是程序控制开始和结束的位置。  
   
@@ -63,9 +59,7 @@ ms.lasthandoff: 05/26/2017
   
 -   使用或不使用包含命令行自变量的 `string[]` 参数声明 `Main` 方法都行。 使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 创建 Windows 窗体应用时，可以手动添加此参数，也可以使用 <xref:System.Environment> 类来获取命令行参数。 参数被读取为从零开始编制索引的命令行自变量。 与 C 和 C++ 不同，程序的名称不被视为第一个命令行自变量。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [命令行参数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
   
@@ -75,16 +69,13 @@ ms.lasthandoff: 05/26/2017
   
 -   [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 语言规范  
+## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 csc.exe 通过命令行生成内容](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [C# 程序内部探究](../../../csharp/programming-guide/inside-a-program/index.md)   
  [\<paveover>C# 示例应用程序](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+

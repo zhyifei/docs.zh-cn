@@ -1,5 +1,5 @@
 ---
-title: "C# 语言和 .NET Framework 介绍 | Microsoft 文档"
+title: "C# 语言和 .NET Framework 介绍"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
@@ -64,7 +64,7 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
   
  可参阅下面的其他 C# 资源：  
   
--   有关语言的实用概述，请参阅 [C# 语言规范](../../csharp/language-reference/language-specification.md)的第 1 章。  
+-   有关语言的实用概述，请参阅 [C# 语言规范](../../csharp/language-reference/language-specification/index.md)的第 1 章。  
   
 -   有关 C# 语言特定方面的详细信息，请参阅 [C# 参考](../../csharp/language-reference/index.md)。  
   
@@ -89,4 +89,5 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
   
 ## <a name="see-also"></a>另请参阅  
  [C#](../../csharp/csharp.md)   
- [Visual C# 和 Visual Basic 入门](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

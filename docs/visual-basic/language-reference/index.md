@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 语言参考 | Microsoft Docs"
+title: "Visual Basic 语言参考"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Visual Basic 语言参考
+# <a name="visual-basic-language-reference"></a>Visual Basic 语言参考
 此部分提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的参考信息。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [版式和代码约定](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  概述了关键字、占位符和其他语言元素在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 文档中的格式设置方式。  
   
@@ -108,11 +104,10 @@ ms.lasthandoff: 05/26/2017
  [错误消息](../../visual-basic/language-reference/error-messages/index.md)  
  提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器和运行时错误消息列表，以及如何处理这些错误消息的相关帮助。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [Visual Basic](../../visual-basic/index.md)  
  提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的综合帮助。  
   
  [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
  介绍了如何将命令行编译器用作一种替代方法，从而在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 中编译程序。
+

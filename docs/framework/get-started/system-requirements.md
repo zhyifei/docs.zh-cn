@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 系统要求 | Microsoft Docs"
+title: ".NET Framework 系统要求"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,23 +20,21 @@ caps.latest.revision: 95
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b48b2d7b8b6256c2395cee069d7705001258a0a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Framework 系统要求
-<a id="net-framework-system-requirements" class="xliff"></a>
+# <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 本主题中的表格提供 .NET Framework 4.5 及其单点版本（4.5.1 和 4.5.2）、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其单点版本（4.6.1 和 4.6.2）和 .NET Framework 4.7 的硬件、操作系统及软件要求。 允许你开发 .NET Framework 的应用程序的开发环境具有单独的一套需求。
 
  有关下载信息和链接，请参阅[安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
 
  有关 .NET Framework 版本的支持生命周期的信息，请参阅 [Microsoft 支持生命周期](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)。
 
-## 硬件要求
-<a id="hardware-requirements" class="xliff"></a>
+## <a name="hardware-requirements"></a>硬件要求
 
 |||
 |-|-|
@@ -46,13 +44,11 @@ ms.lasthandoff: 06/20/2017
 |32 位|4.5 GB|
 |64 位|4.5 GB|
 
-## 安装要求
-<a id="installation-requirements" class="xliff"></a>
+## <a name="installation-requirements"></a>安装要求
 
 - 需要具有管理员权限才能安装 .NET Framework。 如果你在要安装 .NET Framework 的计算机上不具有管理员权限，请联系你的网络管理员。
 
-## 支持的客户端操作系统
-<a id="supported-client-operating-systems" class="xliff"></a>
+## <a name="supported-client-operating-systems"></a>支持的客户端操作系统
 
 |操作系统|支持的版本|随 OS 预安装|可安装单独|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -78,8 +74,7 @@ ms.lasthandoff: 06/20/2017
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 
-## 支持的服务器操作系统
-<a id="supported-server-operating-systems" class="xliff"></a>
+## <a name="supported-server-operating-systems"></a>支持的服务器操作系统
 
 |操作系统|支持的版本|随 OS 预安装|可安装单独|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -101,8 +96,7 @@ ms.lasthandoff: 06/20/2017
 
 - 在 64 位操作系统上，.NET Framework 支持 WOW64（在 64 位计算机上进行 32 位处理）和本机 64 位处理。
 
-## 另请参阅
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>另请参阅
  [安装指南](../../../docs/framework/install/index.md)   
  [入门](../../../docs/framework/get-started/index.md)   
  [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

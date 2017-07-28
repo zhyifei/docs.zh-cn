@@ -1,5 +1,5 @@
 ---
-title: "集合初始值设定项 (Visual Basic) | Microsoft Docs"
+title: "集合初始值设定项 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,16 +32,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: 4b0abe2c6356370584356dce1c6fc5731d735810
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="collection-initializers-visual-basic" class="xliff"></a>
-
-# 集合初始值设定项 (Visual Basic)
+# <a name="collection-initializers-visual-basic"></a>集合初始值设定项 (Visual Basic)
 集合初始值设定项提供了用于创建集合并在其中填充一组初始值的缩短语法。 若要通过一组已知值（例如，菜单选项或类别列表、一组初始数字值、字符串（如日期或月份名称）或地理位置（如用于验证的州或省/自治区/直辖市列表）静态列表）创建集合，将会发现集合初始值设定项非常有用。  
   
  有关集合的详细信息，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
@@ -53,9 +51,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  C# 也提供集合初始值设定项。 C# 集合初始值设定项的功能与 Visual Basic 集合初始值设定项相同。 有关 C# 集合初始值设定项的详细信息，请参阅[对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
   
-<a id="syntax" class="xliff"></a>
-
-## 语法  
+## <a name="syntax"></a>语法  
  集合初始值设定项先是包含 `From` 关键字，后跟用大括号 (`{}`) 括住的逗号分隔值列表，如以下代码所示。  
   
  [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]  
@@ -67,9 +63,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  不能合并集合初始值设定项和对象初始值设定项来初始化同一集合对象。 可以使用对象初始值设定项来初始化集合初始值设定项中的对象。  
   
-<a id="creating-a-collection-by-using-a-collection-intializer" class="xliff"></a>
-
-## 使用集合初始值设定项创建集合  
+## <a name="creating-a-collection-by-using-a-collection-intializer"></a>使用集合初始值设定项创建集合  
  使用集合初始值设定项创建集合时，集合初始值设定项中提供的每个值都会传递到集合的相应 `Add` 方法中。 例如，如果使用集合初始值设定项创建 <xref:System.Collections.Generic.List%601>，那么集合初始值设定项中的每个字符串值都会传递到 <xref:System.Collections.Generic.List%601.Add%2A> 方法中。 若要使用集合初始值设定项创建集合，指定的类型必须是有效的集合类型。 有效的集合类型示例包括实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或继承 <xref:System.Collections.CollectionBase> 类的类。 指定的类型还必须公开满足以下条件的 `Add` 方法。  
   
 -   `Add` 方法必须可通过其中调用了集合初始值设定项的作用域获取。 若要在可以访问集合内非公开方法的方案中使用集合初始值设定项，不一定要公开 `Add` 方法。  
@@ -88,9 +82,7 @@ ms.lasthandoff: 07/03/2017
   
  如果集合内的 `Add` 方法包含与 `Customer` 对象的构造函数相匹配的参数，可以在集合初始值设定项内嵌套 `Add` 方法的参数值，如下一部分所述。 如果集合没有此类 `Add` 方法，可以创建一个作为扩展方法。 有关如何创建 `Add` 方法作为集合扩展方法的示例，请参阅[如何：创建集合初始值设定项使用的 Add 扩展方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)。 有关如何创建可用于集合初始值设定项的自定义集合的示例，请参阅[如何：创建集合初始值设定项使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)。  
   
-<a id="nesting-collection-initializers" class="xliff"></a>
-
-## 嵌套集合初始值设定项  
+## <a name="nesting-collection-initializers"></a>嵌套集合初始值设定项  
  可以在集合初始值设定项中嵌套值，从而标识要创建的集合的 `Add` 方法重载。 传递给 `Add` 方法的值必须用逗号隔开，并用大括号 (`{}`) 括住，就像在数组文本或集合初始值设定项中一样。  
   
  使用嵌套值创建集合时，嵌套值的每个元素都会作为参数传递到与元素类型匹配的 `Add` 方法中。 例如，下面的代码示例创建 <xref:System.Collections.Generic.Dictionary%602>，其中键类型为 `Integer`，值类型为 `String`。 每个嵌套值列表与 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 方法匹配。  
@@ -103,18 +95,14 @@ ms.lasthandoff: 07/03/2017
   
  只有来自第一级嵌套的嵌套值列表会发送给集合类型的 `Add` 方法。 深层次的嵌套会被视为数组文本，并且嵌套值列表不与任何集合的 `Add` 方法匹配。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相关主题  
+## <a name="related-topics"></a>相关主题  
   
 |标题|描述|  
 |---|---|  
 |[如何：创建集合初始值设定项所使用的 Add 扩展方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|展示了如何创建 `Add` 扩展方法，以便在集合中填充集合初始值设定项中的值。|  
 |[如何：创建集合初始值设定项所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|展示了如何在实现 `IEnumerable` 的集合类中添加 `Add` 方法，从而启用集合初始值设定项。|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
  [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
  [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   

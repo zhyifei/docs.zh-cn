@@ -1,5 +1,5 @@
 ---
-title: "早期绑定和晚期绑定 (Visual Basic) | Microsoft 文档"
+title: "早期绑定和后期绑定 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -39,16 +39,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 54b7e96c8b7cab8fba3dc295dfe124fcf3847118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="early-and-late-binding-visual-basic" class="xliff"></a>
-
-# 早期绑定和后期绑定 (Visual Basic)
+# <a name="early-and-late-binding-visual-basic"></a>早期绑定和后期绑定 (Visual Basic)
 在对象被分配给对象变量时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器会执行 `binding` 过程。 如果对象被分配给声明为特定对象类型的变量，就是*早期绑定*对象。 借助早期绑定对象，编译器可以在应用程序执行前分配内存并执行其他优化。 例如，下面的代码片段将变量声明为类型 <xref:System.IO.FileStream>：  
   
  [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
@@ -59,17 +57,14 @@ ms.lasthandoff: 05/26/2017
   
  [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
-<a id="advantages-of-early-binding" class="xliff"></a>
-
-## 早期绑定的优点  
+## <a name="advantages-of-early-binding"></a>早期绑定的优点  
  应尽量使用早期绑定对象，因为这样编译器可以执行重要优化，从而大大提升应用程序的工作效率。 早期绑定对象的速度远超晚期绑定对象，并明确指出在使用的对象类型，使得代码更易于阅读和维护。 早期绑定的另一个优点是，可启用自动代码填充和动态帮助等实用功能，因为 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 可明确确定你在编辑代码时使用的对象类型。 早期绑定降低了运行时错误的数量和严重性，因为它允许编译器在编译程序时报告错误。  
   
 > [!NOTE]
 >  晚期绑定只能用于访问声明为 `Public` 的类型成员。 访问声明为 `Friend` 或 `Protected Friend` 的成员会导致生成运行时错误。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
  [对象生存期：如何创建和销毁对象](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
  [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+

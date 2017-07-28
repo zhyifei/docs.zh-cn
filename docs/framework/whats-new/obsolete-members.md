@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中的过时成员 | Microsoft Docs"
+title: ".NET Framework 中的过时成员"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,15 +18,14 @@ caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
-ms.openlocfilehash: d7f9c49fbe771e7ac7a5f346129e04c3b4932e3d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80de2914b9fefc5705853faffa283bdde6a4fe1c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Framework 中的过时成员
-<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
+# <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
 本文中的表列出了              [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] \(及其单点版本（例如              [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \(及其单点版本\)）中按程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅              [过时类型](../../../docs/framework/whats-new/obsolete-types.md)。  
   
 -   [系统程序集中的过时成员](#SystemMembers)  
@@ -96,13 +95,11 @@ ms.lasthandoff: 05/23/2017
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-## 系统程序集中的过时成员
-<a id="obsolete-members-in-system-assemblies" class="xliff"></a>  
+## <a name="obsolete-members-in-system-assemblies"></a>系统程序集中的过时成员  
  下表列出了系统程序集中的过时成员。 这些程序集用于面向 .NET Framework 的通用\-应用程序开发。  
   
 <a name="mscorlib"></a>   
-### 程序集：mscorlib.dll
-<a id="assembly-mscorlibdll" class="xliff"></a>  
+### <a name="assembly-mscorlibdll"></a>程序集：mscorlib.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -268,8 +265,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|改用                                         <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName> 属性。|  
   
 <a name="PresentationCore"></a>   
-### 程序集：PresentationCore.dll
-<a id="assembly-presentationcoredll" class="xliff"></a>  
+### <a name="assembly-presentationcoredll"></a>程序集：PresentationCore.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -304,8 +300,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用                                         <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName>。|  
   
 <a name="PresFW"></a>   
-### 程序集：PresentationFramework.dll
-<a id="assembly-presentationframeworkdll" class="xliff"></a>  
+### <a name="assembly-presentationframeworkdll"></a>程序集：PresentationFramework.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -315,8 +310,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|替换为                                         <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>。|  
   
 <a name="Act"></a>   
-### 程序集：System.Activities.dll
-<a id="assembly-systemactivitiesdll" class="xliff"></a>  
+### <a name="assembly-systemactivitiesdll"></a>程序集：System.Activities.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -324,8 +318,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 不要使用此构造函数。 请改用                                         <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> 或                                         <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>。|  
   
 <a name="ActPres"></a>   
-### 程序集：System.Activities.Presentation.dll
-<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>  
+### <a name="assembly-systemactivitiespresentationdll"></a>程序集：System.Activities.Presentation.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -340,8 +333,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 不要使用此属性。 请改用                                         <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
   
 <a name="core"></a>   
-### 程序集：System.Core.dll
-<a id="assembly-systemcoredll" class="xliff"></a>  
+### <a name="assembly-systemcoredll"></a>程序集：System.Core.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -384,8 +376,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
   
 <a name="data"></a>   
-### 程序集：System.Data.dll
-<a id="assembly-systemdatadll" class="xliff"></a>  
+### <a name="assembly-systemdatadll"></a>程序集：System.Data.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -407,8 +398,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> 已弃用。 请使用                                         <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>。|  
   
 <a name="entity"></a>   
-### 程序集：System.Data.Entity.dll
-<a id="assembly-systemdataentitydll" class="xliff"></a>  
+### <a name="assembly-systemdataentitydll"></a>程序集：System.Data.Entity.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -418,8 +408,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|请改用                                         <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>。|  
   
 <a name="oracleclient"></a>   
-### 程序集：System.Data.OracleClient.dll
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
+### <a name="assembly-systemdataoracleclientdll"></a>程序集：System.Data.OracleClient.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -428,8 +417,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> 已弃用。 请使用                                         <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>。|  
   
 <a name="design"></a>   
-### 程序集：System.Design.dll
-<a id="assembly-systemdesigndll" class="xliff"></a>  
+### <a name="assembly-systemdesigndll"></a>程序集：System.Design.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -482,8 +470,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|此方法已被否决。 请改用                                         <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>。|  
   
 <a name="system"></a>   
-### 程序集：System.dll
-<a id="assembly-systemdll" class="xliff"></a>  
+### <a name="assembly-systemdll"></a>程序集：System.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -595,8 +582,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 使用                                         <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName> 向                                         <xref:System.Security.Claims.ClaimsIdentity> 添加声明。|  
   
 <a name="drawing"></a>   
-### 程序集：System.Drawing.dll
-<a id="assembly-systemdrawingdll" class="xliff"></a>  
+### <a name="assembly-systemdrawingdll"></a>程序集：System.Drawing.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -604,8 +590,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 此构造函数已弃用。 请使用                                         <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>。|  
   
 <a name="messaging"></a>   
-### 程序集：System.Messaging.dll
-<a id="assembly-systemmessagingdll" class="xliff"></a>  
+### <a name="assembly-systemmessagingdll"></a>程序集：System.Messaging.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -613,8 +598,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|此方法以错误方式返回实现                                         <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName> 方法系列的                                         <xref:System.Messaging.MessageEnumerator?displayProperty=fullName>。 请改用                                          <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>。|  
   
 <a name="servicemodel"></a>   
-### 程序集：System.ServiceModel.dll
-<a id="assembly-systemservicemodeldll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldll"></a>程序集：System.ServiceModel.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -626,8 +610,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|此属性已弃用，并且仅为向后兼容性而维护。 本地计算机策略将用于确定是否应使用 NTLM。|  
   
 <a name="smDisc"></a>   
-### 程序集：System.ServiceModel.Discovery.dll
-<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldiscoverydll"></a>程序集：System.ServiceModel.Discovery.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -635,16 +618,14 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br />                                        <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> 属性已过时。 请考虑使用                                         <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName> 来设置传输属性。|  
   
 <a name="datavisualization"></a>   
-### 程序集：System.Web.DataVisualization.dll
-<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>  
+### <a name="assembly-systemwebdatavisualizationdll"></a>程序集：System.Web.DataVisualization.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> 已弃用。 请改为调查                                         <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>。|  
   
 <a name="web"></a>   
-### 程序集：System.Web.dll
-<a id="assembly-systemwebdll" class="xliff"></a>  
+### <a name="assembly-systemwebdll"></a>程序集：System.Web.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -679,16 +660,14 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|建议的替代项为                                         <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName> 属性。 创建一个                                         <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName> 并调用                                         <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName> 来创建一个                                         <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>。|  
   
 <a name="dynamicdata"></a>   
-### 程序集：System.Web.DynamicData.dll
-<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>  
+### <a name="assembly-systemwebdynamicdatadll"></a>程序集：System.Web.DynamicData.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|在数据绑定控件（如                                         <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> 或                                         <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>）上使用                                         `EnablePersistedSelection` 属性。|  
   
 <a name="extensions"></a>   
-### 程序集：System.Web.Extensions.dll
-<a id="assembly-systemwebextensionsdll" class="xliff"></a>  
+### <a name="assembly-systemwebextensionsdll"></a>程序集：System.Web.Extensions.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -702,8 +681,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|此属性已过时。 请改用                                         <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>。|  
   
 <a name="services"></a>   
-### 程序集：System.Web.Services.dll
-<a id="assembly-systemwebservicesdll" class="xliff"></a>  
+### <a name="assembly-systemwebservicesdll"></a>程序集：System.Web.Services.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -711,8 +689,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|此属性将从未来版本中移除。 将不再强制要求在 SOAP 消息中显示特定标头。|  
   
 <a name="forms"></a>   
-### 程序集：System.Windows.Forms.dll
-<a id="assembly-systemwindowsformsdll" class="xliff"></a>  
+### <a name="assembly-systemwindowsformsdll"></a>程序集：System.Windows.Forms.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -729,8 +706,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|此属性已弃用。 请改用                                         <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName> 属性。|  
   
 <a name="xaml"></a>   
-### 程序集：System.Xaml.dll
-<a id="assembly-systemxamldll" class="xliff"></a>  
+### <a name="assembly-systemxamldll"></a>程序集：System.Xaml.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -738,8 +714,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 分析器不使用                                          `expressionType` 自变量。 若要指定预期的返回类型，请使用                                         <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>。 若要指定表达式类型的自定义处理，请使用                                         <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>。|  
   
 <a name="xml"></a>   
-### 程序集：System.Xml.dll
-<a id="assembly-systemxmldll" class="xliff"></a>  
+### <a name="assembly-systemxmldll"></a>程序集：System.Xml.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -761,26 +736,22 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|此方法已过时，并将从 .NET Framework 的未来版本中移除。 请使用不采用                                         <xref:System.Security.Policy.Evidence?displayProperty=fullName> 参数的                                         <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName> 的重载。|  
   
 <a name="MicrosoftMembers"></a>   
-## Microsoft 程序集中的过时成员
-<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>  
+## <a name="obsolete-members-in-microsoft-assemblies"></a>Microsoft 程序集中的过时成员  
  下表列出了 Microsoft 程序集中的过时成员。 这些是特殊用途的程序集，包括面向单一语言（如 Microsoft.VisualBasic.dll）或生成系统（如 Microsoft.Build.Engine.dll）的程序集。  
   
 <a name="IEHost"></a>   
-### 程序集：IEHost.dll 和 IEExec.exe
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>程序集：IEHost.dll 和 IEExec.exe  
  IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有类型和成员已过时，且在                          [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中不受支持。 这些程序集过去用于承载 Windows 窗体控件和在 Internet Explorer 中运行可执行文件。 该技术的替代项包括 ClickOnce、XAML 浏览器应用程序 (XBAP) 和 Microsoft Silverlight。  
   
 <a name="isymwrapper"></a>   
-### 程序集：ISymWrapper.dll
-<a id="assembly-isymwrapperdll" class="xliff"></a>  
+### <a name="assembly-isymwrapperdll"></a>程序集：ISymWrapper.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建议的替代项为                                          <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>。                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName> 将导入程序接口指针视为                                         <xref:System.IntPtr?displayProperty=fullName> 而不是                                         <xref:System.Int32?displayProperty=fullName>，因此可以同时在 32 位和 64 位体系结构上工作。|  
   
 <a name="conversion"></a>   
-### 程序集：Microsoft.Build.Conversion.v4.0.dll
-<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildconversionv40dll"></a>程序集：Microsoft.Build.Conversion.v4.0.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -790,8 +761,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|改用无参数                                         <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName> 方法。|  
   
 <a name="engine"></a>   
-### 程序集：Microsoft.Build.Engine.dll
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildenginedll"></a>程序集：Microsoft.Build.Engine.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -799,32 +769,28 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|如果仅作为                                         <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> 传入 .NET Framework 位置，则只要更改为无参数                                         <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 构造函数即可。 否则，你可以在注册表或配置文件中定义自定义工具集，或将元素添加到引擎的                                         <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName>。 然后改用                                         <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 或                                         <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName> 构造函数。|  
   
 <a name="BuildFW"></a>   
-### 程序集：Microsoft.Build.Framework.dll
-<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildframeworkdll"></a>程序集：Microsoft.Build.Framework.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 使用此成员会生成编译器错误。<br /><br /> 改用                                         <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName> 属性。|  
   
 <a name="BuildUtil4"></a>   
-### 程序集：Microsoft.Build.Utilities.v4.0.dll
-<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildutilitiesv40dll"></a>程序集：Microsoft.Build.Utilities.v4.0.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|使用                                         <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName> 属性。|  
   
 <a name="data_entity_tasks"></a>   
-### 程序集：Microsoft.Data.Entity.Build.Tasks.dll
-<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>  
+### <a name="assembly-microsoftdataentitybuildtasksdll"></a>程序集：Microsoft.Data.Entity.Build.Tasks.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 仅用于 3.5 版的向后兼容性。|  
   
 <a name="visualbasic"></a>   
-### 程序集：Microsoft.VisualBasic.dll
-<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasicdll"></a>程序集：Microsoft.VisualBasic.dll  
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
@@ -841,7 +807,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|                                         `DynData` 注册表项仅适用于 Win9x，此版本的 .NET Framework 不支持该注册表项。 改用                                          `PerformanceData` 注册表项。 此属性将从 Framework 的未来版本中移除。|  
   
-## 另请参阅
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另请参阅  
  [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)   
  [过时类型](../../../docs/framework/whats-new/obsolete-types.md)
+

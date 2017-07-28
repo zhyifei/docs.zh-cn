@@ -1,5 +1,5 @@
 ---
-title: "在 macOS 上实现 .NET Core 入门 | Microsoft Docs"
+title: "在 macOS 上入门 .NET Core"
 description: "本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。"
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
@@ -9,26 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
-
-# 在 macOS 上入门 .NET Core
+# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
 
 本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。 了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。
 
 > [!NOTE]
 > 本文在 macOS 上使用 [Visual Studio Code](http://code.visualstudio.com)。
 
-<a id="prerequisites" class="xliff"></a>
-
-## 先决条件
+## <a name="prerequisites"></a>先决条件
 
 获取 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包括最新版本的 .NET Core 框架和运行时。
 
@@ -36,9 +32,7 @@ ms.lasthandoff: 05/27/2017
 
 打开 Visual Studio Code，并按 <kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。 键入 ext install ，查看扩展列表。 选择 C# 扩展。 重启 Visual Studio Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-<a id="getting-started" class="xliff"></a>
-
-## 入门
+## <a name="getting-started"></a>入门
 
 在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 对于此主题，可以在 GitHub 的 dotnet/docs 存储库中[查看或下载源](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
@@ -117,9 +111,7 @@ namespace Library
 dotnet build
 ```
 
-<a id="create-the-test-project" class="xliff"></a>
-
-## 创建测试项目
+## <a name="create-the-test-project"></a>创建测试项目
 
 生成针对库的测试项目。 在 golden 文件夹中，创建一个新测试项目：
 
@@ -182,9 +174,7 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-<a id="create-the-console-app" class="xliff"></a>
-
-## 创建控制台应用
+## <a name="create-the-console-app"></a>创建控制台应用
 
 通过以下步骤创建的控制台应用依赖于之前创建的库项目，并在运行时调用其库方法。 使用此开发模式，可了解如何创建多个项目的可重用库。
 
@@ -225,9 +215,7 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-<a id="debug-the-application" class="xliff"></a>
-
-## 调试应用程序
+## <a name="debug-the-application"></a>调试应用程序
 
 在 `Main` 方法中的 `WriteLine` 语句处设置一个断点。 要实现此操作，可在光标位于 `WriteLine` 行之上时按 <kbd>F9</kbd> 键，也可在想要设置断点的行的左侧边缘中单击鼠标。 代码行旁边的边缘中将出现一个红色圆圈。 到达断点时，将在执行断点行前停止执行代码。
 

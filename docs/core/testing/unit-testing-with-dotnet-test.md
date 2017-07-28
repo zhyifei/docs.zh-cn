@@ -1,5 +1,5 @@
 ---
-title: "使用 .NET 测试和 xUnit 的 .NET Core 单元测试 | Microsoft Docs"
+title: "使用 .NET 测试和 xUnit 的 .NET Core 单元测试"
 description: "在 .NET Core 中使用 dotnet 测试的单元测试"
 keywords: .NET, .NET Core
 author: ardalis
@@ -9,22 +9,18 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 06e1ecc181847f87df9ed3a527638008ca6857fc
-ms.openlocfilehash: b5c6d162adf363da41c4c60fdd9fe38e1d58d27a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6bb539231e7c0101755193d612e15893f9637fe1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="unit-testing-in-net-core-using-dotnet-test-and-xunit" class="xliff"></a>
-
-# 使用 .NET 测试和 xUnit 的 .NET Core 单元测试
+# <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>使用 .NET 测试和 xUnit 的 .NET Core 单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-<a id="creating-the-source-project" class="xliff"></a>
-
-### 创建源项目
+### <a name="creating-the-source-project"></a>创建源项目
 
 打开 shell 窗口。 创建一个名为 *unit-testing-using-dotnet-test* 的目录，以保留该解决方案。 在此新目录中，创建一个 *PrimeService* 目录。 目录结构目前如下所示：
 
@@ -50,9 +46,7 @@ namespace Prime.Services
 }
 ```
 
-<a id="creating-the-test-project" class="xliff"></a>
-
-### 创建测试项目
+### <a name="creating-the-test-project"></a>创建测试项目
 
 将目录更改回 unit-testing-using-dotnet-test 目录，并创建 PrimeService.Tests 目录。 目录结构如下所示：
 
@@ -102,9 +96,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-<a id="creating-the-first-test" class="xliff"></a>
-
-## 创建第一个测试
+## <a name="creating-the-first-test"></a>创建第一个测试
 
 在构建库或测试前，执行 *PrimeService.Tests* 目录中的 [`dotnet restore`](../tools/dotnet-restore.md)。 此命令将为每个项目还原所有必要的 NuGet 包。
 
@@ -153,9 +145,7 @@ public bool IsPrime(int candidate)
 
 在 *PrimeService.Tests* 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
-<a id="adding-more-features" class="xliff"></a>
-
-### 添加更多功能
+### <a name="adding-more-features"></a>添加更多功能
 
 你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将其添加为具有 `[Fact]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `[Theory]` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `[InlineData]` 属性来指定这些输入的值。 
  

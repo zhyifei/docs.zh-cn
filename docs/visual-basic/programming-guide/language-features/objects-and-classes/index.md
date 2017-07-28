@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的对象和类 | Microsoft Docs"
+title: "Visual Basic 中的对象和类"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b71219fff8354497f34930232952262008f6cc78
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的对象和类
@@ -281,3 +281,4 @@ End Sub
 
  [如何：推断匿名类型声明中的属性名和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  介绍了如何推断匿名类型声明中的属性名称和类型。 收录了推理成功和失败的示例。
+

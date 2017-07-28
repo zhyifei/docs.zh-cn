@@ -1,5 +1,5 @@
 ---
-title: "事件（C# 编程指南）| Microsoft Docs"
+title: "事件（C# 编程指南）"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,23 +30,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: b3f4673eccdbd568fa8ab042023a4b3bd8230bb3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a913a615de8185bb358376def1e2a051bdaa951
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="events-c-programming-guide" class="xliff"></a>
-
-# 事件（C# 编程指南）
+# <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
   
  在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 集成的开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 IDE 将自动添加空白事件处理程序方法和订阅该事件的代码。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
   
-<a id="events-overview" class="xliff"></a>
-
-## 事件概述  
+## <a name="events-overview"></a>事件概述  
  事件具有以下属性：  
   
 -   发行者确定何时引发事件；订户确定对事件作出何种响应。  
@@ -61,9 +57,7 @@ ms.lasthandoff: 05/26/2017
   
 -   在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  有关详细信息，请参见:  
   
 -   [如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
@@ -80,23 +74,18 @@ ms.lasthandoff: 05/26/2017
   
 -   [如何：实现自定义事件访问器](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 语言规范  
+## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="featured-book-chapters" class="xliff"></a>
-
-## 重要章节  
+## <a name="featured-book-chapters"></a>重要章节  
  [C# 3.0 手册，第三版：为 C# 3.0 程序员提供的 250 多个解决方案](http://go.microsoft.com/fwlink/?LinkId=195395) 中的 [委托、事件和 Lambda 表达式](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
  [Learning C# 3.0: Master the Fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195418) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.EventHandler>   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [委托](../../../csharp/programming-guide/delegates/index.md)   
  [在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)   
  [使用基于事件的异步模式进行多线程编程](https://msdn.microsoft.com/library/hkasytyf)
+

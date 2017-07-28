@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 入门 | Microsoft Docs"
+title: ".NET Framework 入门"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f5c2441148ba869629a88ab2fcc83131f5205493
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
@@ -86,10 +86,11 @@ ms.lasthandoff: 05/19/2017
 |[.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|描述 .NET Framework 带外版本以及如何在应用程序中使用它们。|
 |[系统要求](../../../docs/framework/get-started/system-requirements.md)|列出运行 .NET Framework 的硬件和软件要求。|
 |[.NET 核心和开放源代码](../../../docs/framework/get-started/net-core-and-open-source.md)|介绍 .NET 核心与 .NET Framework 的关系，以及如何访问开放源代码 .NET 核心项目。|
-|[.NET 核心文档](https://docs.microsoft.com/dotnet/)|.NET 核心的概念和 API 参考文档。|
+|[.NET 核心文档](/dotnet/)|.NET 核心的概念和 API 参考文档。|
 
 ## <a name="see-also"></a>另请参阅
  [.NET Framework 指南](../../../docs/framework/index.md)   
  [新增功能](../../../docs/framework/whats-new/index.md)   
  [.NET API 浏览器](/dotnet/api/)   
  [开发指南](../../../docs/framework/development-guide.md)
+

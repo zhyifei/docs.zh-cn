@@ -1,5 +1,5 @@
 ---
-title: "字符串（C# 编程指南）| Microsoft Docs"
+title: "字符串（C# 编程指南）"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,26 +28,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4f1f23bd4d95e617fadc64f4d3a30c5fa1fda85b
-ms.openlocfilehash: 699e9291400797ed1bedcb3686fdfe7848305726
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e41a7b68d890aa7a96aeddd660e0dca90596d998
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-c-programming-guide" class="xliff"></a>
-
-# 字符串（C# 编程指南）
+# <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
   
-<a id="string-vs-systemstring" class="xliff"></a>
-
-## string 与System.String  
+## <a name="string-vs-systemstring"></a>string 与System.String  
  在 C# 中，`string` 关键字是 <xref:System.String> 的别名。 因此，`String` 和 `string` 是等效的，你可以使用你所喜欢的任何一种命名约定。 `String` 类提供了安全创建、操作和比较字符串的多种方法。 此外，C# 语言重载了部分运算符，以简化常见字符串操作。 有关关键字的详细信息，请参阅 [string](../../../csharp/language-reference/keywords/string.md)。 有关类型及其方法的详细信息，请参阅 <xref:System.String>。  
   
-<a id="declaring-and-initializing-strings" class="xliff"></a>
-
-## 声明和初始化字符串  
+## <a name="declaring-and-initializing-strings"></a>声明和初始化字符串  
  可以使用各种方法声明和初始化字符串，如以下示例中所示：  
   
  [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
@@ -56,9 +50,7 @@ ms.lasthandoff: 05/30/2017
   
  使用 <xref:System.String.Empty> 常量值初始化字符串，以新建字符串长度为零的 <xref:System.String> 对象。 长度为零的字符串文本表示法是“”。 通过使用 <xref:System.String.Empty> 值（而不是 [null](../../../csharp/language-reference/keywords/null.md)）初始化字符串，可以减少 <xref:System.NullReferenceException> 发生的可能性。 尝试访问字符串前，先使用静态 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法验证字符串的值。  
   
-<a id="immutability-of-string-objects" class="xliff"></a>
-
-## 字符串对象的不可变性  
+## <a name="immutability-of-string-objects"></a>字符串对象的不可变性  
  字符串对象是“不可变的”：它们在创建后无法更改。 看起来是在修改字符串的所有 <xref:System.String> 方法和 C# 运算符实际上都是在新的字符串对象中返回结果。 在下面的示例中，当 `s1` 和 `s2` 的内容被串联在一起以形成单个字符串时，两个原始字符串没有被修改。 `+=` 运算符创建一个新的字符串，其中包含组合的内容。 这个新对象被分配给变量 `s1`，而分配给 `s1` 的原始对象被释放，以供垃圾回收，因为没有任何其他变量包含对它的引用。  
   
  [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
@@ -69,9 +61,7 @@ ms.lasthandoff: 05/30/2017
   
  有关如何创建基于修改的新字符串的详细信息，例如原始字符串上的搜索和替换操作，请参阅[如何：修改字符串内容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
   
-<a id="regular-and-verbatim-string-literals" class="xliff"></a>
-
-## 常规和逐字字符串文本  
+## <a name="regular-and-verbatim-string-literals"></a>常规和逐字字符串文本  
  在必须嵌入 C# 提供的转义字符时，使用常规字符串文本，如以下示例所示：  
   
  [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
@@ -80,9 +70,7 @@ ms.lasthandoff: 05/30/2017
   
  [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
   
-<a id="string-escape-sequences" class="xliff"></a>
-
-## 字符串转义序列  
+## <a name="string-escape-sequences"></a>字符串转义序列  
   
 |转义序列|字符名称|Unicode 编码|  
 |---------------------|--------------------|----------------------|  
@@ -104,25 +92,19 @@ ms.lasthandoff: 05/30/2017
 > [!NOTE]
 >  在编译时，逐字字符串被转换为普通字符串，并具有所有相同的转义序列。 因此，如果在调试器监视窗口中查看逐字字符串，将看到由编译器添加的转义字符，而不是来自你的源代码的逐字字符串版本。 例如，逐字字符串 @"C:\files.txt" 在监视窗口中显示为 "C:\\\files.txt"。  
   
-<a id="format-strings" class="xliff"></a>
-
-## 格式字符串  
+## <a name="format-strings"></a>格式字符串  
  格式字符串是可以在运行时以动态方式确定其内容的字符串。 使用静态 <xref:System.String.Format%2A> 方法，并在大括号中嵌入将在运行时被其他值替换的占位符，从而创建格式字符串。 下面的示例使用格式字符串来输出每个循环迭代的结果：  
   
  [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
   
  <xref:System.Console.WriteLine%2A> 方法的一个重载将格式字符串用作参数。 因此，可以仅嵌入格式字符串文本，而无需显式调用该方法。 不过，如果使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法在 Visual Studio“输出”窗口中显示调试输出，必须显式调用 <xref:System.String.Format%2A> 方法，因为 <xref:System.Diagnostics.Trace.WriteLine%2A> 仅接受字符串，而不接受格式字符串。 有关格式字符串的详细信息，请参阅[格式设置类型](../../../standard/base-types/formatting-types.md)。  
   
-<a id="substrings" class="xliff"></a>
-
-## 子字符串  
+## <a name="substrings"></a>子字符串  
  子字符串是包含在字符串中的任何字符序列。 使用 <xref:System.String.Substring%2A> 方法可以通过原始字符串的一部分新建字符串。 可以使用 <xref:System.String.IndexOf%2A> 方法搜索一次或多次出现的子字符串。 使用 <xref:System.String.Replace%2A> 方法可以将出现的所有指定子字符串替换为新字符串。 与 <xref:System.String.Substring%2A> 方法一样，<xref:System.String.Replace%2A> 实际返回的是新字符串，且不修改原始字符串。 有关详细信息，请参阅[如何：使用字符串方法搜索字符串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)和[如何：修改字符串内容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
   
  [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
-<a id="accessing-individual-characters" class="xliff"></a>
-
-## 访问单个字符  
+## <a name="accessing-individual-characters"></a>访问单个字符  
  可以使用包含索引值的数组表示法来获取对单个字符的只读访问权限，如下面的示例中所示：  
   
  [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
@@ -131,9 +113,7 @@ ms.lasthandoff: 05/30/2017
   
  [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
   
-<a id="null-strings-and-empty-strings" class="xliff"></a>
-
-## Null 字符串和空字符串  
+## <a name="null-strings-and-empty-strings"></a>Null 字符串和空字符串  
  空字符串是包含零个字符的 <xref:System.String?displayProperty=fullName> 对象实例。 空字符串常用在各种编程方案中，表示空文本字段。 可以对空字符串调用方法，因为它们是有效的 <xref:System.String?displayProperty=fullName> 对象。 对空字符串进行了初始化，如下所示：  
   
 ```  
@@ -144,9 +124,7 @@ string s = String.Empty;
   
  [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
   
-<a id="using-stringbuilder-for-fast-string-creation" class="xliff"></a>
-
-## 使用 StringBuilder 快速创建字符串  
+## <a name="using-stringbuilder-for-fast-string-creation"></a>使用 StringBuilder 快速创建字符串  
  .NET 中的字符串操作进行了高度的优化，在大多数情况下不会显著影响性能。 但是，在某些情况下（例如，执行数百次或数千次的紧密循环），字符串操作可能影响性能。 <xref:System.Text.StringBuilder> 类创建字符串缓冲区，用于在程序执行多个字符串操控时提升性能。 使用 <xref:System.Text.StringBuilder> 字符串，还可以重新分配各个字符，而内置字符串数据类型则不支持这样做。 例如，此代码更改字符串的内容，而无需创建新的字符串：  
   
  [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
@@ -155,14 +133,10 @@ string s = String.Empty;
   
  [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
-<a id="strings-extension-methods-and-linq" class="xliff"></a>
-
-## 字符串、扩展方法和 LINQ  
+## <a name="strings-extension-methods-and-linq"></a>字符串、扩展方法和 LINQ  
  由于 <xref:System.String> 类型实现 <xref:System.Collections.Generic.IEnumerable%601>，因此可以对字符串使用 <xref:System.Linq.Enumerable> 类中定义的扩展方法。 为了避免视觉干扰，这些方法已从 <xref:System.String> 类型的 IntelliSense 中排除，但它们仍然可用。 此外，还可以使用字符串上的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 有关详细信息，请参阅 [LINQ 和字符串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相关主题  
+## <a name="related-topics"></a>相关主题  
   
 |主题|描述|  
 |-----------|-----------------|  

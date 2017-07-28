@@ -1,5 +1,5 @@
 ---
-title: "欢迎使用 .NET | Microsoft Docs"
+title: "欢迎使用 .NET"
 description: ".NET 系列技术入门。"
 keywords: ".NET, .NET Core, 入门, 资讯"
 author: richlander
@@ -9,25 +9,21 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="welcome-to-net" class="xliff"></a>
-
-# 欢迎使用 .NET
+# <a name="welcome-to-net"></a>欢迎使用 .NET
 
 若要了解如何创建 .NET Core 应用，请参阅 [.NET Core 入门](core/get-started.md)。
 
 可使用免费的跨平台工具生成各种 .NET 应用，如云、IoT 和游戏应用。 应用可以在 Android、iOS、Linux、macOS 和 Windows 上运行。 请将应用部署到服务器或桌面，然后发布到应用商店中，以供在移动设备上部署。 .NET 可供学生和爱好者使用，欢迎所有人积极参与生机勃勃的国际开发者社区，并对各种 .NET 技术的发展做出直接贡献。
 
-<a id="news" class="xliff"></a>
-
-## 新闻
+## <a name="news"></a>新闻
 
 - [.NET Standard 简介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
 - [宣布发布 .NET Core 2.0 预览版 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)
@@ -44,9 +40,7 @@ ms.lasthandoff: 07/06/2017
 - [.NET 一周要闻](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
 - [Channel 9 上的 Build 2017 大会 - 关于 Microsoft 最新技术和资讯的视频！](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
-<a id="documentation" class="xliff"></a>
-
-## 文档
+## <a name="documentation"></a>文档
 
 本文列出了涉及使用 .NET 的多种平台和语言。  可通过下列任意一节开始了解 .NET 及其语言：
 
@@ -57,11 +51,9 @@ ms.lasthandoff: 07/06/2017
 - [F# 指南](fsharp/index.md)
 - [Visual Basic 指南](visual-basic/index.md)
 
-此外，还可以浏览 [.NET API 引用](https://docs.microsoft.com/dotnet/api)。
+此外，还可以浏览 [.NET API 引用](/dotnet/api)。
 
-<a id="open-source" class="xliff"></a>
-
-## 打开源
+## <a name="open-source"></a>打开源
 
 此文档是完全[开源](https://github.com/dotnet/docs)的。  可通过任何方式参与此文档，如创建问题、编写文档等。  此外，许多 .NET 本身也是开源的：
 
