@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 入门 | Microsoft Docs"
+title: ".NET Core 入门"
 description: "查找相关资源，了解如何在 Windows、Linux 和 macOS 上生成 .NET Core 应用程序。"
 keywords: ".NET、.NET Core"
 author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 890e6af3095866608e9c91ea26b4d0edb6d81e29
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-net-core" class="xliff"></a>
-
-# .NET Core 入门
+# <a name="get-started-with-net-core"></a>.NET Core 入门
 
 .NET Core 可以在 [Windows](#windows)、[Linux](#linux) 和 [macOS/OS X](#os-x--macos) 上运行。
 
-<a id="windows" class="xliff"></a>
-
-## Windows
+## <a name="windows"></a>Windows
 
 在 [Windows](https://www.microsoft.com/net/core#windows) 上安装 .NET Core。 
 
@@ -39,9 +35,7 @@ ms.lasthandoff: 05/27/2017
 
 有关受支持的 Windows 版本列表，请参阅 [Windows 开发的先决条件](windows-prerequisites.md)主题。 
 
-<a id="linux" class="xliff"></a>
-
-## Linux
+## <a name="linux"></a>Linux
 
 在发行版/版本上安装 .NET Core：
 
@@ -59,9 +53,7 @@ ms.lasthandoff: 05/27/2017
 
 上述安装链接列出的 Linux 发行版和版本均支持 .NET Core。
 
-<a id="os-x--macos" class="xliff"></a>
-
-## OS X/macOS
+## <a name="os-x--macos"></a>OS X/macOS
 
 安装适用于 [macOS](https://www.microsoft.com/net/core#macos) 的 .NET Core。 .NET Core 可在 OS X El Capitan（版本 10.11）和 macOS Sierra（版本 10.12）上使用。
 

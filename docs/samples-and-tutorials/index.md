@@ -1,5 +1,5 @@
 ---
-title: "示例和教程 | Microsoft Docs"
+title: "示例和教程"
 description: "有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语言的示例和教程信息。"
 keywords: ".NET、.NET core、ASP.NET、C#、示例、教程"
 author: BillWagner
@@ -9,35 +9,27 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 65c55837d6ccb93373b84aa4bdef416bdf4fa75a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="samples-and-tutorials" class="xliff"></a>
-
-# 示例和教程
+# <a name="samples-and-tutorials"></a>示例和教程
 
 .NET 文档包含指导用户如何使用 .NET 的一系列示例和教程。 本主题介绍如何查找、查看和下载 .NET Core、ASP.NET Core 和 C# 示例和教程。 可在 [F# 基础站点](http://fsharp.org/learn.html)找到学习 F# 编程语言的资源。 如果对使用在线代码编辑器探索 C# 感兴趣，可尝试这些[交互式教程](http://go.microsoft.com/fwlink/p/?LinkId=817234)。 有关如何查看和下载示例代码的说明，请参阅[查看和下载示例](#viewing-and-downloading-samples)部分。
 
-<a id="net-core" class="xliff"></a>
+## <a name="net-core"></a>.NET Core
 
-## .NET Core
-
-<a id="samples" class="xliff"></a>
-
-### 示例
+### <a name="samples"></a>示例
 
 **[在 .NET Core 中使用 dotnet 测试的单元测试](../core/testing/unit-testing-with-dotnet-test.md)**
 
 本指南演示如何创建 ASP.NET Core Web 应用和关联的单元测试。 首先创建一个简单的 Web 服务应用，然后添加测试。 然后继续创建更多测试来指导新功能的实现。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test)。
 
-<a id="tutorials" class="xliff"></a>
-
-### 教程
+### <a name="tutorials"></a>教程
 
 **[使用 CLI 工具编写 .NET Core 控制台应用：分步指南](../core/tutorials/using-with-xplat-cli.md)**
 
@@ -47,19 +39,13 @@ ms.lasthandoff: 05/23/2017
 
 本示例介绍如何使用跨平台 CLI 工具编写 .NET 的库。 这些工具提供可跨任何支持的操作系统工作的高效率、低级别体验。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library)。
 
-<a id="aspnet-core" class="xliff"></a>
+## <a name="aspnet-core"></a>ASP.NET Core
 
-## ASP.NET Core
+请参阅 [ASP.NET Core 教程](/aspnet/core/tutorials/)。 ASP.NET Core 文档中的许多文章都提供了为其编写的示例的链接。
 
-请参阅 [ASP.NET Core 教程](https://docs.microsoft.com/aspnet/core/tutorials/)。 ASP.NET Core 文档中的许多文章都提供了为其编写的示例的链接。
+## <a name="c-language"></a>C# 语言
 
-<a id="c-language" class="xliff"></a>
-
-## C# 语言
-
-<a id="samples" class="xliff"></a>
-
-### 示例
+### <a name="samples"></a>示例
 
 **[迭代器](../csharp/iterators.md)**
 
@@ -81,9 +67,7 @@ ms.lasthandoff: 05/23/2017
 
 这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp)。
 
-<a id="tutorials" class="xliff"></a>
-
-### 教程
+### <a name="tutorials"></a>教程
 
 **[控制台应用程序](../csharp/tutorials/console-teleprompter.md)**
 
@@ -109,9 +93,7 @@ ms.lasthandoff: 05/23/2017
 
 本教程演示了如何构建包含可重用的库和单元测试的的完整 .NET Core 解决方案。
 
-<a id="deploying-to-containers" class="xliff"></a>
-
-## 部署到容器
+## <a name="deploying-to-containers"></a>部署到容器
 
 **[在 Windows Docker 容器中运行 ASP.NET MVC 应用程序](../framework/docker/aspnetmvc.md)**
 
@@ -121,9 +103,7 @@ ms.lasthandoff: 05/23/2017
 
 本教程演示如何在 Windows 容器中部署现有控制台应用。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)。
 
-<a id="viewing-and-downloading-samples" class="xliff"></a>
-
-## 查看和下载示例
+## <a name="viewing-and-downloading-samples"></a>查看和下载示例
 
 许多主题显示了可从 GitHub 查看或下载的源代码和示例。 要查看示例，只需点击示例链接即可。 要下载代码，请按照以下说明进行操作：
 

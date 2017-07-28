@@ -1,5 +1,5 @@
 ---
-title: "C# 入门 | Microsoft 文档"
+title: "C# 入门"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>C# 入门
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/26/2017
  提供指向可帮助你找到常见问题答案的网站和新闻组的链接。  
   
 ## <a name="related-sections"></a>相关章节  
- [使用 Visual Studio C# 开发环境](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [使用 Visual Studio C# 开发环境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  提供使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 集成开发环境的指南。  
   
  [C# 编程指南](../../csharp/programming-guide/index.md)  
@@ -56,12 +56,13 @@ ms.lasthandoff: 05/26/2017
  [C# 参考](../../csharp/language-reference/index.md)  
  提供关于 C# 关键字、运算符、预处理器指令、编译器选项以及编译器错误与警告的详细参考信息。  
   
- [Visual Studio 示例](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)  
+ [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)  
  提供有关如何访问联机示例的信息。  
   
  [演练](../../csharp/walkthroughs.md)  
  提供指向使用 C# 的编程演练和每个演练的简要概述的链接。  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual C# 和 Visual Basic 入门](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [初学开发者学习中心](http://go.microsoft.com/fwlink/?LinkId=123826)
+
