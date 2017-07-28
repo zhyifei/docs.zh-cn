@@ -1,5 +1,5 @@
 ---
-title: "在 Docker 中运行控制台应用 | Microsoft Docs"
+title: "在 Docker 中运行控制台应用程序"
 description: "了解如何利用现有 .NET Framework 控制台应用程序并在 Windows Docker 容器中运行该程序。"
 author: spboyer
 keywords: ".NET, 容器, 控制台, 应用程序"
@@ -10,10 +10,10 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 

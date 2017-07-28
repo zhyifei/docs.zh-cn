@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 调试 C# Hello World 应用 | Microsoft Docs"
+title: "使用 Visual Studio 2017 调试 C# Hello World 应用程序"
 description: "了解如何使用 Visual Studio 2017 调试用 C# 编写的 Hello World 应用程序。"
 keywords: ".NET Core, .NET Core 控制台应用程序, .NET Core 调试"
 author: BillWagner
@@ -11,20 +11,18 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 026158029bfc843bd6cd171933091dc9ac6d4dbe
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3ed6572d0c8f64f89f77527aa21df454b30982c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 使用 Visual Studio 2017 调试 C# Hello World 应用程序
-<a id="debugging-your-c-hello-world-application-with-visual-studio-2017" class="xliff"></a>
+# <a name="debugging-your-c-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 调试 C# Hello World 应用程序
 
 至此，已按照[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](.\with-visual-studio.md)中的步骤操作，创建和运行简单的控制台应用程序。 编写和编译应用程序后，可以开始进行测试。 Visual Studio 提供一整套调试工具，方便你在测试和排除应用程序故障时使用。
 
-## 在调试模式下调试
-<a id="debugging-in-debug-mode" class="xliff"></a>
+## <a name="debugging-in-debug-mode"></a>在调试模式下调试
 
 “调试”和“发布”是 Visual Studio 的两种默认生成配置。 当前的生成配置显示在工具栏上。 下面的工具栏图像显示 Visual Studio 配置为在“调试”模式下编译应用程序。
 
@@ -32,8 +30,7 @@ ms.lasthandoff: 05/23/2017
 
 一开始应始终在调试模式下测试程序。 调试模式会禁用大多数编译器优化，并在生成过程中提供更丰富的信息。
 
-## 设置断点
-<a id="setting-a-breakpoint" class="xliff"></a>
+## <a name="setting-a-breakpoint"></a>设置断点
 
 在调试模式下运行程序，并尝试一些调试功能：
 
@@ -65,8 +62,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 按任意键，退出应用程序并结束调试模式。
 
-## 设置条件断点
-<a id="setting-a-conditional-breakpoint" class="xliff"></a>
+## <a name="setting-a-conditional-breakpoint"></a>设置条件断点
 
 程序显示用户输入的字符串。 如果用户没有输入任何内容，情况又如何呢？ 可使用实用的调试功能“条件断点”来测试这种情况，该功能可在满足一个或多个条件时中断程序执行。
 
@@ -108,8 +104,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 单击代码窗口左侧边缘上的点，或选中该行，选择“调试”>“切换断点”菜单项，从而清除断点。
 
-## 单步执行程序
-<a id="stepping-through-a-program" class="xliff"></a>
+## <a name="stepping-through-a-program"></a>单步执行程序
 
 使用 Visual Studio，还可以单步执行程序，并监视其执行情况。 通常可以设置断点，并使用此功能单步执行程序流，尽管是一小部分程序代码。 因为程序很小，因此可以通过执行以下操作来单步执行整个程序：
 
@@ -137,8 +132,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 按任意键，关闭控制台窗口并退出调试模式。
 
-## 生成发布版本
-<a id="building-a-release-version" class="xliff"></a>
+## <a name="building-a-release-version"></a>生成发布版本
 
 测试应用程序的调试版本后，还应该编译并测试发布版本。 发布版本包含编译器优化，有时可能会对应用程序的行为产生不良影响。 例如，旨在提升性能的编译器优化可能会在异步或多线程应用程序中创建争用条件。
 
