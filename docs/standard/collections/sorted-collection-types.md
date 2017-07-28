@@ -1,5 +1,5 @@
 ---
-title: "已排序的集合类型 | Microsoft Docs"
+title: "已排序的集合类型"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,15 +19,14 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 375babff42f13c41852651811f92f6bdda91b1e2
-ms.openlocfilehash: 7b4a762e3021e80a15d66b15589eec2e269a2888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# 已排序的集合类型
-<a id="sorted-collection-types" class="xliff"></a>
+# <a name="sorted-collection-types"></a>已排序的集合类型
 <xref:System.Collections.SortedList?displayProperty=fullName> 类、<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> 泛型类和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> 泛型类与 <xref:System.Collections.Hashtable> 类和 <xref:System.Collections.Generic.Dictionary%602> 泛型类的相似之处在于均实现 <xref:System.Collections.IDictionary> 接口，不同之处在于它们让元素一直按键的排序顺序排列，并且不具备哈希表的 O(1) 插入和检索特性。 这三个类具有若干共性：  
   
 -   这三个类全都实现 <xref:System.Collections.IDictionary?displayProperty=fullName> 接口。 两个泛型类还实现 <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName> 泛型接口。  
@@ -57,8 +56,7 @@ ms.lasthandoff: 06/15/2017
   
  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，<xref:System.Collections.Generic.SortedSet%601> 类提供在执行插入、删除和搜索操作之后让数据一直按排序顺序排列的自平衡树。 此类和 <xref:System.Collections.Generic.HashSet%601> 类实现 <xref:System.Collections.Generic.ISet%601> 接口。  
   
-## 另请参阅
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Collections.IDictionary?displayProperty=fullName>   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
