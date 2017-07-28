@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的 XML | Microsoft Docs"
+title: "Visual Basic 中的 XML"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5dd44fb1d3efe53ce37d17d91d522aeed7442ef9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7cfa2abbc5ec68f26561813552d491a4131d54b0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="xml-in-visual-basic" class="xliff"></a>
-
-# Visual Basic 中的 XML
+# <a name="xml-in-visual-basic"></a>Visual Basic 中的 XML
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供了集成语言支持，以便能够与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行交互。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  此部分中的主题介绍了如何将 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与 Visual Basic 结合使用。  
   
 |主题|描述|  
@@ -56,10 +52,9 @@ ms.lasthandoff: 05/26/2017
 |[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|介绍了 XML 轴属性，以及用于访问 XML 元素和属性的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方法。|  
 |[Visual Basic 中的 XML IntelliSense](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md)|介绍了 Visual Basic 随附的 IntelliSense 功能。|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Xml.Linq>   
  [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)   
  [XML 轴属性](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+

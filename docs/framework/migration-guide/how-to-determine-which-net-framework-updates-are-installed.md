@@ -1,5 +1,5 @@
 ---
-title: "如何：确定安装了哪些 .NET Framework 更新 | Microsoft Docs"
+title: "如何：确定安装了哪些 .NET Framework 更新"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,21 +17,19 @@ caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 6a6e4c9c2bdacc01f82d3a53aec706809bcfaa5a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# 如何：确定安装了哪些 .NET Framework 更新
-<a id="how-to-determine-which-net-framework-updates-are-installed" class="xliff"></a>
+# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>如何：确定安装了哪些 .NET Framework 更新
 安装在计算机上的各个版本 .NET Framework 已安装的更新都列在 Windows 注册表中。 可以使用注册表编辑器 (regedit.exe) 查看此信息。  
   
  在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 若要了解如何检测已安装的版本号，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 若要了解如何安装 .NET Framework，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
-### 若要查找已安装的更新
-<a id="to-find-installed-updates" class="xliff"></a>  
+### <a name="to-find-installed-updates"></a>若要查找已安装的更新  
   
 1.  打开程序 **regedit.exe**。 在 Windows 8 和更高版本上打开“开始”屏幕，并键入的名称。 在旧版 Windows 中，选择“开始”菜单上的“运行”，然后在“打开”框中输入“regedit.exe”。  
   
@@ -43,8 +41,7 @@ ms.lasthandoff: 05/23/2017
   
      已安装的更新在标识适用的 .NET Framework 版本的子项下方列出。 每个更新均由知识库 (KB) 编号进行标识。  
   
-## 示例
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>示例  
  以下代码以编程方式确定已安装在计算机上的 .NET Framework 更新。 你必须具有管理凭据才能运行此示例。  
   
  [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
@@ -77,8 +74,7 @@ Microsoft .NET Framework 4 Extended
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
 ```  
   
-## 请参阅
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>请参阅
 
 [如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [安装 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   

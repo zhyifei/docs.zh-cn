@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 入门 | Microsoft 文档"
+title: "Visual Basic 入门"
 ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 入门
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/26/2017
  [了解 Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  提供指向有关学习如何在 Visual Basic 中编程的资源的链接。  
   
- [获取 Visual Basic](https://www.visualstudio.com/downloads/)  
+ [获得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供包含 Visual basic 支持的 Visual Studio 版本的下载链接，包含免费版。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -66,17 +66,18 @@ ms.lasthandoff: 05/26/2017
  [演练](../../visual-basic/walkthroughs.md)  
  提供阐示 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言的各个方面的帮助页的列表。  
   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
+ [与我们交流](/visualstudio/ide/talk-to-us)  
  介绍如何得到支持和提供反馈。  
   
- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
+ [Visual Studio](/visualstudio/)  
  提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文档的链接。  
   
  [C#](../../csharp/csharp.md)  
  提供文档链接，该文档描述有关使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 进行应用程序开发的信息。  
   
- [Visual C++](https://docs.microsoft.com/cpp/)  
+ [Visual C++](/cpp/)  
  提供 Visual C++ 文档的链接。  
   
  [Office 和 SharePoint 开发](https://msdn.microsoft.com/library/d2tx7z6d)  
  提供有关将 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 用作业务应用程序一部分的信息。
+

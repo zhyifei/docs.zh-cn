@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的运算符和表达式 | Microsoft Docs"
+title: "Visual Basic 中的运算符和表达式"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,23 +36,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 069178fe753c3e09116c8a4845f96faf13eb72ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3675af3ac8a0a80b5fb5f208c1679dc28ab77acf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="operators-and-expressions-in-visual-basic" class="xliff"></a>
-
-# Visual Basic 中的运算符和表达式
+# <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的运算符和表达式
 运算符是对包含值的一个或多个代码元素执行运算的代码元素。 值元素包括变量、常量、文本、属性、`Function` 和 `Operator` 过程的返回结果以及表达式。  
   
  表达式是一系列与运算符结合使用的值元素，将生成新值。 运算符通过执行计算、比较或其他运算来处理值元素。  
   
-<a id="types-of-operators" class="xliff"></a>
-
-## 运算符类型  
+## <a name="types-of-operators"></a>运算符类型  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供以下类型的运算符：  
   
 -   [算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)：对数字值执行常见计算，包括更改位模式。  
@@ -65,9 +61,7 @@ ms.lasthandoff: 05/26/2017
   
  与运算符合并的值元素称为相应运算符的操作数。 运算符与值元素共同构成了表达式，构成语句的赋值运算符除外。 有关详细信息，请参阅[语句](../../../../visual-basic/programming-guide/language-features/statements.md)。  
   
-<a id="evaluation-of-expressions" class="xliff"></a>
-
-## 表达式计算  
+## <a name="evaluation-of-expressions"></a>表达式计算  
  表达式的最终结果表示采用常见数据类型（如 `Boolean`、`String` 或数字类型）的值。  
   
  下面展示了表达式示例。  
@@ -96,9 +90,8 @@ ms.lasthandoff: 05/26/2017
   
  有关详细信息和示例，请参阅 [Visual Basic 2005 中的运算符重载](http://go.microsoft.com/fwlink/?LinkId=101703)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符](../../../../visual-basic/language-reference/operators/index.md)   
  [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
  [语句](../../../../visual-basic/language-reference/statements/index.md)
+

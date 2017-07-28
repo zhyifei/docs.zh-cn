@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中的应用程序兼容性 | Microsoft Docs"
+title: ".NET Framework 中的应用程序兼容性"
 ms.custom: 
 ms.date: 05/19/2017
 ms.prod: .net-framework
@@ -19,41 +19,37 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d0d39f1d6d15dc2757387ea83d3a0f868f6ec17
-ms.openlocfilehash: 9169b8ec118ed0d9ab3f05eec47317cf68551754
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# .NET Framework 中的应用程序兼容性
-<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
+# <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
 
-## 介绍
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>介绍
+
 兼容性是每版 .NET 要实现的非常重要的目标。 兼容性可确保每个版本都具有累加特征，以便旧版本仍能正常使用。 然而，更改旧功能（以便提升性能、解决安全问题或修复 bug）可能会导致在更高版本 .NET 上运行的现有代码或应用出现兼容性问题。 .NET Framework 可识别重定目标更改和运行时更改。 重定目标更改会影响定位特定版本的 .NET Framework、但在更高版本 .NET 上运行的应用。 运行时更改会影响在特定版本 .NET 上运行的所有应用。
 
 每个应用都定位特定版本的 .NET Framework，这可以通过下列方式指定：
 
-* 在 Visual Studio 中定义目标框架。
-* 在项目文件中指定目标框架。
-* 向源代码应用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>。
+- 在 Visual Studio 中定义目标框架。
+- 在项目文件中指定目标框架。
+- 向源代码应用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>。
 
 如果应用在比目标 .NET 版本更高的版本上运行，.NET Framework 会通过怪异的行为来模拟旧版目标版本。 也就是说，应用虽然在更高版本的 Framework 上运行，但行为就像在旧版本 .NET 上运行一样。 .NET Framework 各版本之间的许多兼容性问题都是通过这种怪异的模型进行缓解。
 
-## 运行时更改
-<a id="runtime-changes" class="xliff"></a>
+## <a name="runtime-changes"></a>运行时更改
 
 运行时问题是指当新的运行时出现在计算机上、运行的二进制文件相同、但行为不同时出现的问题。 如果二进制文件的编译目标为 .NET Framework 4.0，它将在 4.5 或更高版本上的 .NET Framework 4.0 兼容性模式下运行。 许多影响 4.5 的更改将不会影响编译目标为 4.0 的二进制文件。 这是 AppDomain 才会出现的问题，具体视输入程序集的设置而定。
 
-## 重定目标更改
-<a id="retargeting-changes" class="xliff"></a>
+## <a name="retargeting-changes"></a>重定目标更改
 
 重定目标问题是指当原本定位 4.0 的程序集现在设为定位 4.5 时出现的问题。 此时，程序集启用新功能，并存在与旧功能的潜在兼容性问题。 再强调一遍，这取决于输入程序集，同样也取决于使用此程序集的控制台应用或引用此程序集的网站。
 
-## .NET 兼容性诊断
-<a id="net-compatibility-diagnostics" class="xliff"></a>
+## <a name="net-compatibility-diagnostics"></a>.NET 兼容性诊断
 
 .NET 兼容性诊断是 Roslyn 提供技术支持的分析器，有助于确定 .NET Framework 不同版本之间的应用程序兼容性问题。 此列表包含所有可用的分析器，尽管仅部分分析器适用于任何具体的迁移。 这些分析器可确定计划迁移会发生的问题，并仅显示这些问题。
 
@@ -85,18 +81,17 @@ ms.lasthandoff: 05/31/2017
 
 -   可用诊断的 ID
 
-## 用法
-<a id="usage" class="xliff"></a>
+## <a name="usage"></a>用法
+
 首先，从下面选择一种兼容性更改类型：
 
-* [重定目标更改](./retargeting/index.md)
-* [运行时更改](./runtime/index.md)
+- [重定目标更改](./retargeting/index.md)
+- [运行时更改](./runtime/index.md)
 
 
-## 另请参阅
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>请参阅
 
-* [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [新增功能](../../../docs/framework/whats-new/index.md)
-* [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
+[版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
+[新增功能](../../../docs/framework/whats-new/index.md)   
+[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
 

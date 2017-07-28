@@ -1,5 +1,5 @@
 ---
-title: "对象 (Visual Basic) | Microsoft Docs"
+title: "对象 (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -28,21 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6d4ed7e551c9a0d039f0206a86fa3a748dd728ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98503c5764690d6dea90bf46a229e9ee2fd81df7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="objects-visual-basic" class="xliff"></a>
-
-# 对象 (Visual Basic)
+# <a name="objects-visual-basic"></a>对象 (Visual Basic)
 本主题收录了记录 Visual Basic 运行时对象的其他主题的链接，并包含这些对象的成员过程、属性和事件表。  
   
-<a id="visual-basic-run-time-objects" class="xliff"></a>
-
-## Visual Basic 运行时对象  
+## <a name="visual-basic-run-time-objects"></a>Visual Basic 运行时对象  
   
 |||  
 |---|---|  
@@ -73,8 +69,7 @@ ms.lasthandoff: 05/26/2017
 |[My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)|提供了用于创建和访问当前项目引用的每个 Web 服务实例的属性。|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|提供分析结构化文本文件的方法和属性。|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)   
  [Visual Basic](../../../visual-basic/index.md)
+

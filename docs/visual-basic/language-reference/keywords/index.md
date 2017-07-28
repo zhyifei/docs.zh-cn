@@ -1,5 +1,5 @@
 ---
-title: "关键字 (Visual Basic) | Microsoft Docs"
+title: "关键字 (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# 关键字 (Visual Basic)
+# <a name="keywords-visual-basic"></a>关键字 (Visual Basic)
 下表列出了所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言关键字。  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## 保留的关键字  
+## <a name="reserved-keywords"></a>保留的关键字  
  已保留下面的关键字。也就是说，无法将这些关键字用作编程元素（如变量或过程）的名称。 可以用括号 (`[``]`) 括住名称，从而忽略此限制。 有关详细信息，请参阅[已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的“转义后名称”。  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ ms.lasthandoff: 05/26/2017
 > [!NOTE]
 >  `EndIf`、`GoSub`、`Variant` 和 `Wend` 为保留的关键字，尽管不能再用于 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 `Let` 关键字的含义已更改。 `Let` 现用于 LINQ 查询。 有关详细信息，请参阅 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## 未保留的关键字  
+## <a name="unreserved-keywords"></a>未保留的关键字  
  未保留下面的关键字。也就是说，可以将这些关键字用作编程元素的名称。 不过，不建议使用这样做，因为这可能会导致代码难以读取，并且出现难以发现的细微错误。  
   
 |||||  
@@ -126,9 +120,7 @@ ms.lasthandoff: 05/26/2017
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相关主题  
+## <a name="related-topics"></a>相关主题  
   
 |标题|描述|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ ms.lasthandoff: 05/26/2017
 |[注册表摘要](../../../visual-basic/language-reference/keywords/registry-summary.md)|列出了用于读取、保存和删除程序设置的函数。|  
 |[字符串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出了用于操控字符串的函数。|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)
 

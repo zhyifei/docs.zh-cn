@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的字符串 | Microsoft Docs"
+title: "字符串 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3bfb94cf3b3e40164ccd9ff6021e1b624c963039
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05cb6db768779895ebf3e57a0feb7bb58c65fc2a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-in-visual-basic" class="xliff"></a>
-
-# 字符串 (Visual Basic)
+# <a name="strings-in-visual-basic"></a>字符串 (Visual Basic)
 此部分介绍了有关如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用字符串的基本概念。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  列出了介绍有关如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用字符串的基本概念的主题。  
   
@@ -64,7 +60,6 @@ ms.lasthandoff: 05/26/2017
  [演练：在 Visual Basic 中加密和解密字符串](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  展示了如何使用加密服务提供程序版本的三重数据加密标准算法来加密和解密字符串。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Basic 语言功能](../../../../visual-basic/programming-guide/language-features/index.md)
+

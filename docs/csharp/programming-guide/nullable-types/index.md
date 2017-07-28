@@ -1,5 +1,5 @@
 ---
-title: "可以为 null 的类型（C# 编程指南）| Microsoft 文档"
+title: "可以为 null 的类型（C# 编程指南）"
 ms.date: 2017-05-15
 ms.prod: .net
 ms.technology:
@@ -29,25 +29,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: 2d13fdbef24ee16855261a3c1e26d7fca4f986f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="nullable-types-c-programming-guide" class="xliff"></a>
-
-# 可以为 null 的类型（C# 编程指南）
+# <a name="nullable-types-c-programming-guide"></a>可以为 null 的类型（C# 编程指南）
 可以为 null 的类型是 <xref:System.Nullable%601?displayProperty=fullName> 结构的实例。 可以为 null 的类型可以表示基础值类型正常范围内的值，再加上一个 `null` 值。 例如，`Nullable<Int32>` 读作“可以为 null 的 Int32”，可以将 -2147483648 到 2147483647 之间的任意值赋值给它，也可以将 `null` 赋值给它。 可以将 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 赋值给 `Nullable<bool>`。 处理数据库和其他包含不可赋值的元素的数据类型时，能够将 `null` 赋值给数值类型和布尔类型会特别有用。 例如，数据库中的布尔字段可以存储值 `true` 或 `false`，也可以处于未定义状态。 
   
 [!code-cs[可以为 null 的类型](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 有关更多示例，请参阅[使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
-<a id="nullable-types-overview" class="xliff"></a>
-
-## 可以为 null 的类型概述  
+## <a name="nullable-types-overview"></a>可以为 null 的类型概述  
  可以为 null 的类型具有以下特征：  
   
 -   可以为 null 的类型表示可以向其赋值 `null` 的值类型变量。 不能根据引用类型创建可以为 null 的类型 （引用类型已支持 `null` 值）。  
@@ -72,9 +68,7 @@ ms.lasthandoff: 06/13/2017
   
 -   不得嵌套可以为 null 的类型。 无法编译下面的一行代码：`Nullable<Nullable<int>> n;`  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  更多相关信息：  
   
 -   [使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
@@ -83,14 +77,10 @@ ms.lasthandoff: 06/13/2017
   
 -   [??运算符](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 语言规范  
+## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Nullable>   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C#](../../../csharp/csharp.md)   

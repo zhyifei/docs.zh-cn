@@ -1,5 +1,5 @@
 ---
-title: "线程处理 (Visual Basic) | Microsoft Docs"
+title: "线程处理 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,16 +20,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 0c9cf36aeee43afc710dd3261f5d012ba53c02e5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 840cc7df20250acb67bd09a8d39b353c772e82da
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="threading-visual-basic" class="xliff"></a>
-
-# 线程处理 (Visual Basic)
+# <a name="threading-visual-basic"></a>线程处理 (Visual Basic)
 通过线程处理，Visual Basic 程序可以执行并发处理，从而能够一次执行多项操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
   
  线程具有以下属性：  
@@ -53,9 +51,7 @@ ms.lasthandoff: 05/26/2017
 > [!NOTE]
 >  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 类、[并行 LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688)、<xref:System.Collections.Concurrent?displayProperty=fullName> 命名空间中的新并发集合类，以及基于任务（而非线程）概念的新编程模型，多线程编程得到了大幅简化。 有关详细信息，请参阅[并行编程](https://msdn.microsoft.com/library/dd460693)。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相关主题  
+## <a name="related-topics"></a>相关主题  
   
 |标题|描述|  
 |-----------|-----------------|  
@@ -67,3 +63,4 @@ ms.lasthandoff: 05/26/2017
 |[线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|描述如何使用由系统托管的工作线程池。|  
 |[如何：使用线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|展示线程池中多线程的同步使用。|  
 |[线程处理](https://msdn.microsoft.com/library/3e8s7xdd)|描述如何在 .NET Framework 中实现线程处理。|
+
