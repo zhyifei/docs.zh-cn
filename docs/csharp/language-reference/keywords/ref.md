@@ -37,6 +37,7 @@ ms.openlocfilehash: 353abf8a0c852acbbb2949f9640c1465dec8593b
 ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
+
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 `ref` 关键字通过引用（而非值）传递参数。 通过引用传递的效果是，对所调用方法中的参数进行的任何更改都反映在调用方法中。 例如，如果调用方传递本地变量表达式或数组元素访问表达式，所调用方法会将对象替换为 ref 参数引用的对象，然后调用方的本地变量或数组元素将开始引用新对象。  
