@@ -85,7 +85,7 @@
   ],
   "branch_target_mapping": {
     "master": [
-      "Publish",
+      "Publish"
     ]
   },
   "need_generate_pdf_url_template": false,
