@@ -1,5 +1,5 @@
 ---
-title: "如何：将事件信息写入文本文件 (Visual Basic) | Microsoft Docs"
+title: "如何：将事件信息写入文本文件 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: ac7256c333c375a0deb8ffe5c31c02fdca09f9b6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8008f25198928e0bf2bd7e1c0caee8118b8fec9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：将事件信息写入文本文件 (Visual Basic)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/26/2017
   
     1.  在 **“项目”** 菜单上选择 **“添加新项”**。  
   
-    2.  在“添加新项” 对话框中，选择“应用程序配置文件”。  
+    2.  在“添加新项”  对话框中，选择“应用程序配置文件” 。  
   
     3.  单击 **“添加”**。  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/26/2017
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
  [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+

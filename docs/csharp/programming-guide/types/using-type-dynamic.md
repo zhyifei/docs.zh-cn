@@ -1,5 +1,5 @@
 ---
-title: "使用类型 dynamic（C# 编程指南）| Microsoft Docs"
+title: "使用类型 dynamic（C# 编程指南）"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf8206e856a31882f5f30ee61d965ad5672f518e
-ms.openlocfilehash: 4bc2cd0e4fc165ef68338c2cda3b8c57c1bf18b2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36e10ef6a63aae2e901be50b9286370caec50e6a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用类型 dynamic（C# 编程指南）
@@ -91,5 +91,5 @@ ms.lasthandoff: 07/03/2017
 |[动态](../../../csharp/language-reference/keywords/dynamic.md)|描述 `dynamic` 关键字的用法。|  
 |[动态语言运行时概述](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供有关 DLR 的概述，DLR 是一种运行时环境，它将一组适用于动态语言的服务添加到公共语言运行时 (CLR)。|  
 |[演练：创建和使用动态对象](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|提供有关如何创建自定义动态对象以及创建访问 `IronPython` 库的对象的分步说明。|  
-
 |[如何：通过使用 Visual C# 功能访问 Office 互操作对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|演示如何创建一个项目，该项目使用命名参数和可选参数、`dynamic` 类型以及可简化对 Office API 对象的访问的其他增强功能。|
+
