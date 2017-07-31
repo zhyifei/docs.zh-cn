@@ -1,5 +1,5 @@
 ---
-title: "可重载运算符（C# 编程指南）| Microsoft Docs"
+title: "可重载运算符（C# 编程指南）"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 1d3f942dca761c4425ed8c2129b752dec349a40f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c7b5515e60060727b6f5c34ae34bbead4c70a376
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可重载运算符（C# 编程指南）
@@ -43,7 +43,7 @@ C# 通过使用 [operator](../../../csharp/language-reference/keywords/operator.
 |[+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[!](../../../csharp/language-reference/operators/logical-negation-operator.md)、[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)、[++](../../../csharp/language-reference/operators/increment-operator.md)、[--](../../../csharp/language-reference/operators/decrement-operator.md)、[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md)|这些一元运算符可以进行重载。|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md), [%](../../../csharp/language-reference/operators/modulus-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md), [^](../../../csharp/language-reference/operators/xor-operator.md), [<\<](../../../csharp/language-reference/operators/left-shift-operator.md), [>>](../../../csharp/language-reference/operators/right-shift-operator.md)|这些二元运算符可以进行重载。|  
 |[==](../../../csharp/language-reference/operators/equality-comparison-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [\<](../../../csharp/language-reference/operators/less-than-operator.md), [>](../../../csharp/language-reference/operators/greater-than-operator.md), [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md), [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md)|比较运算符可以进行重载（但是请参阅此表后面的备注）。|  
-|[&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)|条件逻辑运算符无法进行重载，但是它们使用 `&` 和 `&#124;`（可以进行重载）来计算。|  
+|[&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)|条件逻辑运算符无法进行重载，但是它们使用 `&` 和 <code>&#124;</code>（可以进行重载）来计算。|  
 |[&#91;&#93;](../../../csharp/language-reference/operators/index-operator.md)|数组索引运算符无法进行重载，但是可以定义索引器。|  
 |[(T)x](../../../csharp/language-reference/operators/invocation-operator.md)|强制转换运算符无法进行重载，但是可以定义新转换运算符（请参阅 [explicit](../../../csharp/language-reference/keywords/explicit.md) 和 [implicit](../../../csharp/language-reference/keywords/implicit.md)）。|  
 |[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|赋值运算符无法进行重载，但是 `+=`（举例）使用 `+`（可以进行重载）来计算。|  
@@ -57,7 +57,7 @@ C# 通过使用 [operator](../../../csharp/language-reference/keywords/operator.
 ```csharp  
 public static Complex operator +(Complex c1, Complex c2)  
     {  
-        Return new Complex(c1.real + c2.real, c1.imaginary + c2.imaginary);  
+        return new Complex(c1.real + c2.real, c1.imaginary + c2.imaginary);  
     }  
 ```  
   
