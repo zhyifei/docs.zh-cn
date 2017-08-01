@@ -1,5 +1,5 @@
 ---
-title: "使用 C# 交互窗口进行探索和试验 - C# 指南 | Microsoft Docs"
+title: "使用 C# 交互窗口进行探索和试验 - C# 指南"
 description: "C# 交互窗口是一个非常方便你了解 API 的环境。 可以快速地进行交互式探索。"
 keywords: "C#, 入门, 跨平台, REPL, 交互"
 ms.date: 08/24/2016
@@ -9,11 +9,11 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 13b5c1b7-d3f1-4c96-910c-4890162866c1
 redirect_url: /dotnet/csharp/tutorials/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f6175f2a870f793f76cae436003567c6a0f3f45e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c1f020c98a1ad2b955399b0d7734b9cfa57e060
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "C# 结构 - C# 语言介绍 | Microsoft Docs"
+title: "C# 结构 - C# 语言介绍"
 description: "了解 C# 值类型（称为“结构”）的基础知识"
 keywords: ".NET, C#, 结构, 值类型"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 结构
-<a id="structs" class="xliff"></a>
+# <a name="structs"></a>结构
 
 ***结构***是可以包含数据成员和函数成员的数据结构，这一点与类一样；与类不同的是，结构是值类型，无需进行堆分配。 结构类型的变量直接存储结构数据，而类类型的变量存储对动态分配的对象的引用。 结构类型不支持用户指定的继承，并且所有结构类型均隐式继承自类型 <xref:System.ValueType>，后者又隐式继承自 `object`。
 

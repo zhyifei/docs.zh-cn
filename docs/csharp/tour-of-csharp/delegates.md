@@ -1,5 +1,5 @@
 ---
-title: "C# 委托 - C# 语言介绍 | Microsoft Docs"
+title: "C# 委托 - C# 语言介绍"
 description: "了解包含 C# 委托的晚期绑定"
 keywords: ".NET, C#, 委托, lambda, 晚期绑定"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 217fd974f547a4a84b328979ee94ee634038b213
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bb304b2e5c762a44aab931b5e8f7fe9c99805eba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 委托
-<a id="delegates" class="xliff"></a>
+# <a name="delegates"></a>委托
 
 ***委托类型***表示对具有特定参数列表和返回类型的方法的引用。 通过委托，可以将方法视为可分配给变量并可作为参数传递的实体。 委托类似于其他一些语言中的函数指针概念，但与函数指针不同的是，委托不仅面向对象，还类型安全。
 

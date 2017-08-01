@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Code 入门 - C# 指南 | Microsoft Docs"
+title: "Visual Studio Code 入门 - C# 指南"
 description: "了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。"
 keywords: "C#, 入门, 获取, 安装, Visual Studio Code, 跨平台"
 author: kendrahavens
@@ -10,28 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e1e9ce39b2de05478a2bf010584e2e7fd8eb02f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Visual Studio Code 入门
-<a id="get-started-with-visual-studio-code" class="xliff"></a>
+# <a name="get-started-with-visual-studio-code"></a>Visual Studio Code 入门
 
 .NET Core 提供了一个快速运行的模块化平台，用于创建在 Windows、Linux 和 macOS 上运行的服务器应用程序。 带 C# 扩展的 Visual Studio Code 提供功能强大的编辑体验，完全支持 C# IntelliSense（智能代码填充）和调试。
 
-## 先决条件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>先决条件
 
 1. 安装 [Visual Studio Code](https://code.visualstudio.com/)。
 2. 获取 [.NET Core SDK](https://www.microsoft.com/net/download/core)。
 3. 从 Visual Studio Code 应用商店安装 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。
 
-## Hello World
-<a id="hello-world" class="xliff"></a>
+## <a name="hello-world"></a>Hello World
 
 让我们从 .NET Core 上的一个简单“Hello World”程序入手：
 
@@ -66,8 +63,7 @@ ms.lasthandoff: 05/27/2017
 
 还可以观看简短的视频教程，以获取更多关于在 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 或 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) 上进行安装的帮助。
 
-## 调试
-<a id="debug" class="xliff"></a>
+## <a name="debug"></a>调试
 1. 单击打开 *Program.cs*。 在 Visual Studio Code 中首次打开 C# 文件时，将在编辑器中加载 [OmniSharp](http://www.omnisharp.net/)。
 
   ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
@@ -98,8 +94,7 @@ ms.lasthandoff: 05/27/2017
 > [!TIP] 
 > 若要详细了解如何使用 OmniSharp 在 Visual Studio Code 中进行 .NET Core 调试，以及相关的疑难解答提示，请参阅[有关设置 .NET Core 调试器的说明](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## 请参阅
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>请参阅
 [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
 [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
 
