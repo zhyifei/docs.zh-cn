@@ -1,5 +1,5 @@
 ---
-title: "属性 - C# | Microsoft Docs"
+title: "属性 - C#"
 description: "了解特性在 C# 中的工作方式。"
 keywords: ".NET, .NET Core, C#, 特性"
 author: mgroves
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 512a222a727e3e6a032848b87463dda0ae8f7362
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cc8f38d96f7f1c41f04d64c2acc2f53805b6b012
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 在 C# 中使用属性
-<a id="using-attributes-in-c" class="xliff"></a> #
+# <a name="using-attributes-in-c"></a>在 C# 中使用属性 #
 
 使用特性，可以声明的方式将信息与代码相关联。 特性还可以提供能够应用于各种目标的可重用元素。
 
@@ -27,13 +26,11 @@ ms.lasthandoff: 05/23/2017
 
 此教程将介绍如何将特性添加到代码中、如何创建和使用你自己的特性，以及如何使用一些内置到 .NET Core 中的特性。
 
-## 先决条件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>先决条件
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
 可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
-## 创建应用程序
-<a id="create-the-application" class="xliff"></a>
+## <a name="create-the-application"></a>创建应用程序
 
 至此，你已安装所有工具，是时候新建 .NET Core 应用程序了。 若要使用命令行生成器，请在常用的命令行管理程序中执行以下命令：
 
@@ -43,8 +40,7 @@ ms.lasthandoff: 05/23/2017
 
 若要运行程序，请使用 `dotnet run`。 此时，应该可以在控制台中看到“Hello, World”输出。
 
-## 如何将特性添加到代码中
-<a id="how-to-add-attributes-to-code" class="xliff"></a>
+## <a name="how-to-add-attributes-to-code"></a>如何将特性添加到代码中
 
 在 C# 中，特性是继承自 `Attribute` 基类的类。 所有继承自 `Attribute` 的类都可以用作其他代码块的一种“标记”。
 例如，有一个名为 `ObsoleteAttribute` 的特性。 它用于示意代码已过时，不得再使用。 可以将此特性应用于类（比如说，使用方括号）。
@@ -63,8 +59,7 @@ ms.lasthandoff: 05/23/2017
 只能向特性构造函数传递以下简单类型/文本类型参数：`bool, int, double, string, Type, enums, etc`和这些类型的数组。
 不能使用表达式或变量。 可以使用任何位置参数或已命名参数。
 
-## 如何创建你自己的特性
-<a id="how-to-create-your-own-attribute" class="xliff"></a>
+## <a name="how-to-create-your-own-attribute"></a>如何创建你自己的特性
 
 创建特性与从 `Attribute` 基类继承一样简单。
 
@@ -86,8 +81,7 @@ ms.lasthandoff: 05/23/2017
 
 上述做法会导致生成编译器错误，如 `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
-## 如何限制特性使用
-<a id="how-to-restrict-attribute-usage" class="xliff"></a>
+## <a name="how-to-restrict-attribute-usage"></a>如何限制特性使用
 
 特性可用于多个“目标”。 上述示例展示了特性在类上的使用情况，而特性还可用于：
 
@@ -115,8 +109,7 @@ ms.lasthandoff: 05/23/2017
 
 [!code-csharp[使用你自己的特性](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
-## 如何使用附加到代码元素的特性
-<a id="how-to-use-attributes-attached-to-a-code-element" class="xliff"></a>
+## <a name="how-to-use-attributes-attached-to-a-code-element"></a>如何使用附加到代码元素的特性
 
 特性只作元数据之用。 不借助一些外在力量，特性其实什么用也没有。
 
@@ -140,8 +133,7 @@ ms.lasthandoff: 05/23/2017
 请务必注意，这些 `Attribute` 对象的实例化有延迟。 也就是说，只有使用 `GetCustomAttribute` 或 `GetCustomAttributes`，它们才会实例化。
 这些对象每次都会实例化。 连续两次调用 `GetCustomAttributes` 将返回两个不同的 `ObsoleteAttribute` 实例。
 
-## 基类库 (BCL) 中的常见特性
-<a id="common-attributes-in-the-base-class-library-bcl" class="xliff"></a>
+## <a name="common-attributes-in-the-base-class-library-bcl"></a>基类库 (BCL) 中的常见特性
 
 许多工具和框架都会使用特性。 NUnit 和 NUnit 测试运行程序都使用 `[Test]` 和 `[TestFixture]` 之类的特性。 ASP.NET MVC 使用 `[Authorize]` 之类的特性，并提供可密切关注 MVC 操作的操作筛选器框架。 [PostSharp](https://www.postsharp.net) 使用特性语法，支持在 C# 中进行面向特性的编程。
 
@@ -158,8 +150,7 @@ ms.lasthandoff: 05/23/2017
 
 在上面的代码中，无需使用文本类型 `"Name"` 字符串。 这样既有助于防止出现与拼写错误相关的 bug，也可以让重构/重命名操作变得更加顺畅。
 
-## 摘要
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>摘要
 
 特性将声明性功能引入 C#。 但它们只是代码形式的元数据，不会自发起作用。
 

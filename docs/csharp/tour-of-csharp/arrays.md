@@ -1,5 +1,5 @@
 ---
-title: "C# 数组 - C# 语言介绍 | Microsoft Docs"
+title: "C# 数组 - C# 语言介绍"
 description: "数组是 C# 语言中最基本的集合类型"
 keywords: ".NET, C#, 数组, 集合"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 8816ac61cda27a086746fe2734d62f395058acd5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 82362a3675c431423a99d3d728fb8dd1da58c9c7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 数组
-<a id="arrays" class="xliff"></a>
+# <a name="arrays"></a>数组
 
 ***数组***是一种数据结构，其中包含许多通过计算索引访问的变量。 数组中的变量（亦称为数组的***元素***）均为同一种类型，我们将这种类型称为数组的***元素类型***。
 

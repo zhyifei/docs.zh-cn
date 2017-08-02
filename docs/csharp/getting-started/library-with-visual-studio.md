@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 生成 C# .NET Core 类库 | Microsoft Docs"
+title: "使用 Visual Studio 2017 生成 C# .NET Core 类库"
 description: "了解如何使用 Visual Studio 2017 生成用 C# 编写的类库"
 keywords: ".NET Core, .NET 标准类库, Visual Studio 2017"
 author: BillWagner
@@ -10,26 +10,24 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c29c4d2d1332fbf9e9e162e671200384a930aff1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 709b05dc9baeae1e99481a37287b91730b395f63
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 使用 Visual Studio 2017 生成 C# .NET Core 类库
-<a id="building-a-class-library-with-c-and-net-core-in-visual-studio-2017" class="xliff"></a>
+# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 C# .NET Core 类库
 
-类库定义的是可以由应用程序调用的类型和方法。 使用 .NET Core 开发的类库支持 .NET 标准库，这样任何支持相应版本 .NET 标准库的 .NET 平台都可以调用你的库。 完成类库时，可以决定是要将其作为第三方组件进行分布，还是要将其作为与一个或多个应用程序捆绑在一起的组件进行添加。
+类库定义的是可以由应用程序调用的类型和方法。 使用 .NET Core 开发的类库支持 .NET 标准，这样任何支持相应版本 .NET 标准的 .NET 平台都可以调用库。 完成类库时，可以决定是要将其作为第三方组件进行分布，还是要将其作为与一个或多个应用程序捆绑在一起的组件进行添加。
 
 > [!NOTE]
 > 有关 .NET Standard 版本及其支持的平台列表，请参阅 [.NET Standard](../../standard/net-standard.md)。
 
 在本主题中，将创建包含一个字符串处理方法的简单实用工具库。 我们将把它作为[扩展方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)进行实现，这样就可以把它作为 @System.String 类成员进行调用。
 
-## 创建类库解决方案
-<a id="creating-a-class-library-solution" class="xliff"></a>
+## <a name="creating-a-class-library-solution"></a>创建类库解决方案
 
 首先为类库项目及其相关项目创建解决方案。 Visual Studio 解决方案只用作一个或多个项目的容器。 若要创建解决方案，请执行以下操作：
 
@@ -39,8 +37,7 @@ ms.lasthandoff: 06/20/2017
 
    ![“新建项目”对话框](./media/library-with-visual-studio/newproject.png)
 
-## 创建类库项目
-<a id="creating-the-class-library-project" class="xliff"></a>
+## <a name="creating-the-class-library-project"></a>创建类库项目
 
 创建类库项目：
 
@@ -62,8 +59,7 @@ ms.lasthandoff: 06/20/2017
 
    ![显示生成成功的输出窗格](./media/library-with-visual-studio/buildsucceeds.png)
 
-## 下一步
-<a id="next-step" class="xliff"></a>
+## <a name="next-step"></a>下一步
 
 已成功生成库。 由于尚未调用库的任何方法，因此还不知道它能否按预期运行。 开发库的下一步是使用 [C# 单元测试项目](testing-library-with-visual-studio.md)来测试库。
 
