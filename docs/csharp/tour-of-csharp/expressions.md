@@ -1,5 +1,5 @@
 ---
-title: "C# 表达式 - C# 语言介绍 | Microsoft Docs"
+title: "C# 表达式 - C# 语言介绍"
 description: "表达式、操作数和运算符是 C# 语言的构建基块"
 keywords: ".NET, C#, 表达式, 运算符, 操作数"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="expressions" class="xliff"></a>
-
-# 表达式
+# <a name="expressions"></a>表达式
 
 *表达式*是在*操作数*和*运算符*的基础之上构造而成。 表达式的运算符指明了向操作数应用的运算。 运算符的示例包括 `+`、`-`、`*`、`/` 和 `new`。 操作数的示例包括文本、字段、局部变量和表达式。
 
@@ -28,8 +26,8 @@ ms.lasthandoff: 05/23/2017
 
 如果操作数两边的两个运算符的优先级相同，那么运算符的*结合性*决定了运算的执行顺序：
 
-*    除了赋值运算符之外，所有二元运算符均为*左结合*运算符，即从左向右执行运算。 例如，`x + y + z` 将计算为 `(x + y) + z`。
-*    赋值运算符和条件运算符 (`?:`) 为*右结合*运算符，即从右向左执行运算。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+*   除了赋值运算符之外，所有二元运算符均为*左结合*运算符，即从左向右执行运算。 例如，`x + y + z` 将计算为 `(x + y) + z`。
+*   赋值运算符和条件运算符 (`?:`) 为*右结合*运算符，即从右向左执行运算。 例如，`x = y = z` 将计算为 `x = (y = z)`。
 
 可以使用括号控制优先级和结合性。 例如，`x + y * z` 先计算 `y` 乘 `z`，并将结果与 `x` 相加，而 `(x + y) * z` 则先计算 `x` 加 `y`，然后将结果与 `z` 相乘。
 
@@ -43,7 +41,7 @@ ms.lasthandoff: 05/23/2017
     - `x[...]`：数组和索引器访问
     - `x++`：后置递增
     - `x--`：后置递减
-    - `new T(...)`：对象和委托创建
+    - `new T(...)`：创建对象和委托
     - `new T(...){...}`：使用初始值设定项的对象创建
     - `new {...}`：匿名对象初始值设定项
     - `new T[...]`：数组创建
