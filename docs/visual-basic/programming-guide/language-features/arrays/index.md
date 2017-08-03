@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的数组 | Microsoft 文档"
+title: "Visual Basic 中的数组"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
@@ -112,7 +112,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 -   元素中包含的值表示每个年级的学生数量。  
   
- ![图：显示学生人数的数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool")  
+ ![显示学生人数的数组图片](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexampleschool.gif " ArrayExampleSchool ")  
 “学生”数组中的元素  
   
  下面的示例演示了如何引用数组 `students`的第一、第二和最后一个元素。  
@@ -235,13 +235,13 @@ Dim sales()() As Double = New Double(11)() {}
   
  下面的示例声明了一个三维数组。  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   
  变量 `prices` 中数组的总大小为 (3 + 1) x (4 + 1) x (5 + 1) = 120。  
   
- 可以通过使用 <xref:System.Array.Length%2A> 属性查找数组大小。 可以通过使用 <xref:System.Array.GetLength%2A> 方法查找多维数组的每个维度的长度。  
+ 可以通过使用 <xref:System.Array.Length%2A> 属性查找数组大小。 可以通过使用 <xref:System.Array.GetLength%2A> 方法查找多维数组的每个维度长度。  
   
  可以通过向数组变量分配新数组对象或使用 `ReDim` 语句来调整它的大小。  
   
@@ -263,9 +263,9 @@ Dim prices(3, 4, 5) As Long
   
 -   你可以调用变量上的 <xref:System.Object.GetType%2A?displayProperty=fullName> 方法来接收此变量的运行时类型的 <xref:System.Type> 对象。 <xref:System.Type> 对象可在其属性和方法中保存大量信息。  
   
--   你可以将该变量传递到 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函数来接收包含运行时类型名称的 `String`。  
+-   你可以将该变量传递到 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函数来接收包含运行时类型名称的 `String` 。  
   
--   你可以将该变量传递到 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函数来接收表示该变量的类型分类的 `VariantType` 值。  
+-   你可以将该变量传递到 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函数来接收 `VariantType` 值，该值表示该变量的类型分类。  
   
  下面的示例调用 `TypeName` 函数来确定数组的类型和数组中元素的类型。 数组类型是 `Integer(,)` 而数组中的元素的类型是 `Integer`。  
   
@@ -278,7 +278,7 @@ Dim prices(3, 4, 5) As Long
   
  对于某些集合，你可以为放入集合中的任何对象分配一个密钥，这样你便可以使用该密钥快速检索此对象。  
   
- 如果集合中只包含一种数据类型的元素，则可以使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
+ 如果你的集合中只包含一种数据类型的元素，你可以使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
   
  有关集合的详细信息，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
   

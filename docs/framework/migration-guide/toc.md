@@ -8,3 +8,4 @@
 ### [如何：确定安装了哪些 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
 ## [如何：将应用程序配置为支持 .NET Framework 4 或 4.5](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 ## [从 .NET Framework 1.1 迁移](migrating-from-the-net-framework-1-1.md)
+## [.NET Framework 4 迁移问题](net-framework-4-migration-issues.md)

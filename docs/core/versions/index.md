@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 版本控制 | Microsoft Docs"
-description: ".NET Core 版本控制"
+title: ".NET Core 版本控制"
+description: "了解 .NET Core 的版本控制方案。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,39 +9,31 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 9ee687feebdd96022ca5a59443fb8118714e3fa4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-versioning" class="xliff"></a>
-
-# .NET Core 版本控制
+# <a name="net-core-versioning"></a>.NET Core 版本控制
 
 .NET Core 是 [NuGet 包](../packages.md)和框架的平台，作为单元分布。 每个平台层都可单独进行版本控制，以实现产品敏捷性并准确描述产品更改。 虽然有巨大的版本控制灵活性，但需要将平台作为单元进行版本控制以使产品更易于理解。
 
 通过包管理器 (NuGet) 进行描述并交付为包，产品在某些方面具有唯一性。 虽然通常将 .NET Core 作为独立的 SDK获取，SDK 在很大程度上是比 NuGet 包更方便的体验，因此与包没有不同之处。 因此，版本控制对包而言是首要且最重要的，其他版本控制体验以此为基础。
 
-<a id="semantic-versioning" class="xliff"></a>
-
-## 语义版本控制
+## <a name="semantic-versioning"></a>语义版本控制
 
 .NET Core 使用[语义版本控制 (SemVer)](http://semver.org/)，采用 major.minor.patch 版本控制，通过版本号的各部分来描述更改程度和类型。
 
 以下版本控制模板通常适用于 .NET Core。 在一些情况下，已通过调整来适应现有版本控制。 本文档稍后会介绍此类情况。 例如，框架仅用于表示平台和 API 功能，这符合主要/次要版本控制。
 
-<a id="versioning-form" class="xliff"></a>
-
-### 版本控制窗体
+### <a name="versioning-form"></a>版本控制窗体
 
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
-<a id="decision-tree" class="xliff"></a>
-
-### 决策树
+### <a name="decision-tree"></a>决策树
 
 以下情况为 MAJOR：
   - 放弃对平台的支持
@@ -62,9 +54,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 确定增加内容时若有多个更改，请选择最高类型的更改。
 
-<a id="versioning-scheme" class="xliff"></a>
-
-## 版本控制方案
+## <a name="versioning-scheme"></a>版本控制方案
 
 .NET Core 将通过以下方式定义并进行版本控制：
 
@@ -72,9 +62,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 - 将细粒度包作为版本控制单元引用的一组元包。 从包单独对元包进行版本控制。
 - 表示逐渐变大的 API 集的一组框架（如 `netstandard`），如一组版本控制快照中所述。
 
-<a id="packages" class="xliff"></a>
-
-### 包
+### <a name="packages"></a>包
 
 库包单独发展，并单独进行版本控制。 与 .NET Framework System.\* 程序集重叠的程序包通常使用 4.x 版本，这符合 .NET Framework 4.x 版本控制（历史选择）。 不与 .NET Framework 库重叠的包（如 [System.Reflection.Metadata](https://www.nuget.org/packages/System.Reflection.Metadata)）通常从 1.0 开始并由此增加。
 
@@ -83,9 +71,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 - NETStandard.Library 包通常作为集进行版本控制，因为其之间具有实现级依赖项。
 - API 将仅作为主要或次要 .NET Core 版本的一部分添加到 NETStandard.Library 包，因为这样做需要添加新的 `netstandard` 版本。 这是 SemVer 要求之外的要求。
 
-<a id="metapackages" class="xliff"></a>
-
-### 元包
+### <a name="metapackages"></a>元包
 
 .NET Core 元包的版本控制基于其映射的框架。 元包采用在包关闭中其映射框架的最高版本号（如 netstandard1.6）。 
 
@@ -107,17 +93,13 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 注意：[`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) 是另一个 .NET Core 元包。 它不映射到特殊框架，因此其版本控制与包相同。
 
-<a id="frameworks" class="xliff"></a>
-
-### 框架
+### <a name="frameworks"></a>框架
 
 添加新 API 时，会更新框架版本。 它们没有修补程序版本的概念，因为其表示 API 形状，不表示实现问题。 主要和次要版本控制将按照之前指定的 SemVer 规则进行。
 
 `netcoreapp` 框架已关联到 .NET Core 分发。 它将遵循由 .NET Core 使用的版本号。 例如，发布 .NET Core 2.0 时，它将面向 `netcoreapp2.0`。 考虑到其对所有 .NET 运行时均同样适用，`netstandard` 框架不匹配任何 .NET 运行时的版本控制方案。
 
-<a id="versioning-in-practice" class="xliff"></a>
-
-## 版本控制实践
+## <a name="versioning-in-practice"></a>版本控制实践
 
 每天，在 GitHub 上的 .NET Core 存储库中都有提交和 PR，因此会新生成许多库。 为每个更改创建 .NET Core 的新公共版本是不切实际的。 在制作新的公共稳定 .NET Core 版本前，将在一些松散定义的时期（如周或月）聚合更改。
 
@@ -127,9 +109,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 - 各种框架的新版本，假定添加新 API。
 - .NET Core 分发的新版本。
 
-<a id="shipping-a-patch-release" class="xliff"></a>
-
-### 传送修补程序版本
+### <a name="shipping-a-patch-release"></a>传送修补程序版本
 
 传送 .NET Core v1.0.0 稳定版本后，对 .NET Core 库进行修补程序级别更改以修复 bug 并改进性能和可靠性。 更新各种元包以引用更新的 .NET Core 库包。 将元包作为修补程序更新 (x.y.z) 进行版本控制。 不更新框架。 发布新的 .NET Core 分发，其具有与 `Microsoft.NETCore.App` 元包匹配的版本号。
 
@@ -146,9 +126,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 }
 ```
 
-<a id="shipping-a-minor-release" class="xliff"></a>
-
-### 传送次要发布
+### <a name="shipping-a-minor-release"></a>传送次要发布
 
 传送 .NET Core v1.0.0 稳定版本后，将新的 API 添加到 .NET Core 库以启用新方案。 更新各种元包以引用更新的 .NET Core 库包。 将元包作为修补程序更新 (x.y) 进行版本控制，以匹配更高的框架版本。 更新各种框架以描述新的 API。 发布新的 .NET Core 分发，其具有与 `Microsoft.NETCore.App` 元包匹配的版本号。
 
@@ -162,9 +140,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 </Project>
 ```
 
-<a id="shipping-a-major-release" class="xliff"></a>
-
-### 传送主要发布
+### <a name="shipping-a-major-release"></a>传送主要发布
 
 给定 .NET Core v1.y.z 稳定版本，将新的 API 添加到 .NET Core 库以启用主要新方案。 也许，已放弃对平台的支持。 更新各种元包以引用更新的 .NET Core 库包。 `Microsoft.NETCore.App` 元包和 `netcore` 框架作为主要更新 (x.) 进行版本控制。 `NETStandard.Library` 元包可能作为次要更新 (x.y) 进行版本控制，因为其适用于多个 .NET 实现。 将发布新的 .NET Core 分发，其具有与 `Microsoft.NETCore.App` 元包匹配的版本号。
 
