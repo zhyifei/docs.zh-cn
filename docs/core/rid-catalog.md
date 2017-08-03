@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 运行时标识符 (RID) 目录 | Microsoft Docs"
-description: ".NET Core 运行时标识符 (RID) 目录"
+title: ".NET Core 运行时标识符 (RID) 目录"
+description: "了解运行时标识符 (RID) 及如何在 .NET Core 中使用 RID。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -9,21 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 904b9be05cd2e5337272ce7ddce15b1075fbefeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3490fb639efd223dc36190324bdf3a06bc23c10e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-runtime-identifier-rid-catalog" class="xliff"></a>
+# <a name="net-core-runtime-identifier-rid-catalog"></a>.NET Core 运行时标识符 (RID) 目录
 
-# .NET Core 运行时标识符 (RID) 目录
-
-<a id="what-are-rids" class="xliff"></a>
-
-## RID 是什么？
+## <a name="what-are-rids"></a>RID 是什么？
 RID 是运行时标识符的缩写。 RID 用于标识其中将运行应用程序或资产（即程序集）的目标操作系统。 其外观类似如下：“ubuntu.14.04-x64”、“win7-x64”、“osx.10.11-x64”。 对于具有本机依赖项的包，它将指定在其中可以还原包的平台。 
 
 请务必注意 RID 实际上是不透明字符串。 这意味着它们需要与使用它们的操作完全匹配。 例如，让我们设想这样的情况，[Elementary OS](https://elementary.io/) 是 Ubuntu 14.04 的简单克隆。 虽然 .NET Core 和 CLI 基于该版本的 Ubuntu 工作，但如果尝试不进行任何修改就在 Elementary OS 上使用它们，则任何包的还原操作都将失败。 这是因为当前不具有将 Elementary OS 指定为一种平台的 RID。 
@@ -64,17 +60,13 @@ RID 图形是在名为 `runtime.json` 的文件中名为 `Microsoft.NETCore.Plat
 * 需要使用已针对平台定义的 RID，并且此文档表明
 * RID 需要具体化，因此不用假定来自实际 RID 值的任何内容；请参阅此文档以确定给定平台需要哪个 RID
 
-<a id="using-rids" class="xliff"></a>
-
-## 使用 RID
+## <a name="using-rids"></a>使用 RID
 若要使用 RID，必须知道有哪些 RID。 新的 RID 将定期添加到该平台。 有关最新版本，请查看 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
 
 > [!NOTE]
 > 我们正致力于以更具交互性的形式提供此信息。 届时，此页面将更新为指向该工具和/或其使用情况文档。 
 
-<a id="windows-rids" class="xliff"></a>
-
-## Windows RID
+## <a name="windows-rids"></a>Windows RID
 
 * Windows 7 / Windows Server 2008 R2
     * `win7-x64`
@@ -93,9 +85,7 @@ RID 图形是在名为 `runtime.json` 的文件中名为 `Microsoft.NETCore.Plat
     * `win10-arm`
     * `win10-arm64`
 
-<a id="linux-rids" class="xliff"></a>
-
-## Linux RID
+## <a name="linux-rids"></a>Linux RID
 
 * Red Hat Enterprise Linux
     * `rhel.7-x64`
@@ -128,9 +118,7 @@ RID 图形是在名为 `runtime.json` 的文件中名为 `Microsoft.NETCore.Plat
     * `linuxmint.17.3-x64`
     * `linuxmint.18-x64`
 
-<a id="os-x-rids" class="xliff"></a>
-
-## OS X RID
+## <a name="os-x-rids"></a>OS X RID
 
 * `osx.10.10-x64`
 * `osx.10.11-x64`
