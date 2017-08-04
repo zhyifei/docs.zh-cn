@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 教程 | Microsoft Docs"
-description: ".NET Core 教程"
+title: ".NET Core 教程"
+description: "请按照教程学习了解 .NET Core 以在 Mac、Linux 和 Windows 上生成应用和库。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/23/2017
 - [测试 C# 类库](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [通过 .NET Core 使用 C# 类库](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [在 Windows 上生成完整的 .NET Core 解决方案](using-on-windows-full-solution.md)
-- [NoSQL 教程：在 .NET Core 上构建一个 DocumentDB C# 控制台应用程序](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [NoSQL 教程：在 .NET Core 上构建一个 DocumentDB C# 控制台应用程序](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 生成应用程序
 
@@ -55,5 +55,5 @@ ms.lasthandoff: 05/23/2017
 - [如何管理 .NET Core 1.0 的包依赖项版本](managing-package-dependency-versions.md)
 - [从本机代码承载 .NET Core](netcore-hosting.md)
 
-有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](https://docs.microsoft.com/aspnet/core/)。
+有关开发 ASP.NET Core Web 应用程序的教程，请参阅 [ASP.NET Core 文档](/aspnet/core/)。
 

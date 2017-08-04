@@ -1,5 +1,5 @@
 ---
-title: "类型（C# 编程指南）| Microsoft 文档"
+title: "类型（C# 编程指南）"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,19 +35,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31fb07eba1cb40e36861227e3e692677b02e3dd5
-ms.openlocfilehash: ad61ccff0503617f21780d2af7cd806c47da2500
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5b8b7951c01ac5a82c79a0942fdc99368c2d0175
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="types-c-programming-guide" class="xliff"></a>
-
-# 类型（C# 编程指南）
-<a id="types-variables-and-values" class="xliff"></a>
-
-## 类型、变量和值  
+# <a name="types-c-programming-guide"></a>类型（C# 编程指南）
+## <a name="types-variables-and-values"></a>类型、变量和值  
  C# 是一种强类型语言。 每个变量和常量都有一个类型，每个求值的表达式也是如此。 每个方法签名指定了每个输入参数和返回值的类型。 .NET Framework 类库定义了一组内置数值类型以及表示各种逻辑构造的更复杂类型（如文件系统、网络连接、对象的集合和数组以及日期）。 典型的 C# 程序使用类库中的类型，以及对程序问题域的专属概念进行建模的用户定义类型。  
   
  类型中可存储以下信息：  
@@ -73,9 +69,7 @@ ms.lasthandoff: 07/01/2017
   
  编译器将类型信息作为元数据嵌入可执行文件中。 公共语言运行时 (CLR) 在运行时使用相应的元数据，从而在分配和回收内存时进一步保证类型安全性。  
   
-<a id="specifying-types-in-variable-declarations" class="xliff"></a>
-
-### 在变量声明中指定类型  
+### <a name="specifying-types-in-variable-declarations"></a>在变量声明中指定类型  
  在程序中声明变量或常量时，必须指定其类型，或使用 [var](../../../csharp/language-reference/keywords/var.md) 关键字，以便编译器能够推断出其类型。 下面的示例展示了一些指定了内置数值类型和用户定义复杂类型的变量声明：  
   
  [!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
@@ -88,19 +82,13 @@ ms.lasthandoff: 07/01/2017
   
  有关详细信息，请参阅[显式转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
   
-<a id="built-in-types" class="xliff"></a>
-
-## 内置类型  
+## <a name="built-in-types"></a>内置类型  
  C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他类型数据。 还有内置的 `string` 和 `object` 类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的详细信息，请参阅[类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)。  
   
-<a id="custom-types" class="xliff"></a>
-
-## 自定义类型  
+## <a name="custom-types"></a>自定义类型  
  可以使用[结构](../../../csharp/language-reference/keywords/struct.md)、[类](../../../csharp/language-reference/keywords/class.md)、[接口](../../../csharp/language-reference/keywords/interface.md)和[枚举](../../../csharp/language-reference/keywords/enum.md)构造来创建你自己的自定义类型。 .NET Framework 类库本身就是 Microsoft 提供的一组自定义类型，以供你在自己的应用程序中使用。 默认情况下，类库中最常用的类型在任何 C# 程序中均可用。 对于其他类型，只有在显式添加对定义这些类型的程序集的项目引用时才可用。 在编译器获取对程序集的引用后，便可以在源代码中声明在此程序集中声明的类型的变量（和常量）。 有关详细信息，请参阅 [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=217856)。  
   
-<a id="the-common-type-system" class="xliff"></a>
-
-## 通用类型系统  
+## <a name="the-common-type-system"></a>通用类型系统  
  对于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的类型系统，请务必了解以下两个基本要点：  
   
 -   支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以转而派生自其他某种类型，在这种情况下，派生类型可以继承其继承层次结构中两个基类型的成员。 所有类型（包括 <xref:System.Int32?displayProperty=fullName>C# 关键字：[int](../../../csharp/language-reference/keywords/int.md)等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object?displayProperty=fullName>（C# 关键字：[object](../../../csharp/language-reference/keywords/object.md)。 这样的统一类型层次结构称为[通用类型系统](../../../standard/base-types/common-type-system.md) (CTS)。 若要详细了解 C# 中的继承，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
@@ -115,9 +103,7 @@ CTS 中的值类型和引用类型
 > [!NOTE]
 >  你可能会发现，最常用的类型全都被整理到了 <xref:System> 命名空间中。 不过，包含类型的命名空间与类型是值类型还是引用类型没有关系。  
   
-<a id="value-types" class="xliff"></a>
-
-### 值类型  
+### <a name="value-types"></a>值类型  
  值类型派生自<xref:System.ValueType?displayProperty=fullName>（派生自 <xref:System.Object?displayProperty=fullName>）。 派生自 <xref:System.ValueType?displayProperty=fullName> 的类型在 CLR 中具有特殊行为。 值类型变量直接包含值。也就是说，内存在声明变量的任何上下文中进行内联分配。 对于值类型变量，没有单独的堆分配或垃圾回收开销。  
   
  值类型分为两类：[结构](../../../csharp/language-reference/keywords/struct.md)和[枚举](../../../csharp/language-reference/keywords/enum.md)。  
@@ -153,9 +139,7 @@ char c = 'Z';
   
  所有枚举从 <xref:System.Enum?displayProperty=fullName>（继承自 <xref:System.ValueType?displayProperty=fullName>）继承。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../../../csharp/programming-guide/enumeration-types.md)。  
   
-<a id="reference-types" class="xliff"></a>
-
-### 引用类型  
+### <a name="reference-types"></a>引用类型  
  定义为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)、数组或[接口](../../../csharp/language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，如果声明引用类型的变量，那么在使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建对象实例或为变量分配已在其他位置使用 `new, as shown in the following example:` 创建的对象前，变量会一直包含 [null](../../../csharp/language-reference/keywords/null.md) 值，如以下示例所示：  
   
 ```csharp  
@@ -176,18 +160,14 @@ IMyInterface iface = new MyClass();
   
  引用类型完全支持继承。 创建类时，可以继承自其他任何未定义为[密封](../../../csharp/language-reference/keywords/sealed.md)的接口或类，而其他类也可以继承自你的类并重写你的虚方法。 若要详细了解如何创建你自己的类，请参阅[类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)。 有关继承和虚方法的详细信息，请参阅[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
-<a id="types-of-literal-values" class="xliff"></a>
-
-## 文本值的类型  
+## <a name="types-of-literal-values"></a>文本值的类型  
  在 C# 中，文本值可从编译器获取类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要将值 4.56 指定为应按浮点值处理，请在数字后面追加“f”或“F”：`4.56f`。 如果没有追加字母，那么编译器就会推断文本值的类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](../../../csharp/language-reference/keywords/value-types.md)中的各个类型参考页。  
   
  由于文本已类型化，且所有类型最终都是从 <xref:System.Object?displayProperty=fullName> 派生，因此可以编写和编译如下所示的代码：  
   
  [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
   
-<a id="generic-types" class="xliff"></a>
-
-## 泛型类型  
+## <a name="generic-types"></a>泛型类型  
  类型可使用一个或多个*类型参数*进行声明，这些参数用作客户端代码在创建类型实例时提供的实际类型（*具体类型*）的占位符。 这种类型称为*泛型类型*。 例如，.NET Framework 类型 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 具有一个类型参数，它按照惯例被命名为 *T*。创建类型实例时，指定列表将包含的对象类型，例如字符串：  
  
 ```csharp
@@ -198,18 +178,14 @@ stringList.Add(4);
 ```
  使用类型参数，可以重用同一个类来保留任何类型的元素，而无需将每个元素转换成[对象](../../../csharp/language-reference/keywords/object.md)。 泛型集合类称为*强类型集合*，因为编译器知道集合元素的具体类型，并能在编译时抛出错误，例如当尝试向上面示例中的 `strings` 对象添加整数时。 有关详细信息，请参阅[泛型](../../../csharp/programming-guide/generics/index.md)。  
   
-<a id="implicit-types-anonymous-types-and-nullable-types" class="xliff"></a>
-
-## 隐式类型、匿名类型和可以为 null 的类型  
+## <a name="implicit-types-anonymous-types-and-nullable-types"></a>隐式类型、匿名类型和可以为 null 的类型  
  如上所述，可以使用 [var](../../../csharp/language-reference/keywords/var.md) 关键字隐式键入局部变量（但不是类成员）。 变量仍可在编译时获取类型，但类型是由编译器提供。 有关详细信息，请参阅[隐式类型局部变量](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
  在某些情况下，为不打算在方法边界外存储或传递的各组简单的相关值创建已命名的类型并不方便。 因此，可以创建*匿名类型*。 有关详细信息，请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
  普通值类型不能包含值 [null](../../../csharp/language-reference/keywords/null.md)。 不过，可以在类型后面附加 `?`，创建可以为 null 的值类型。 例如，`int?` 是还可以包含值 [null](../../../csharp/language-reference/keywords/null.md) 的 `int` 类型。 在 CTS 中，可以为 null 的类型是泛型结构类型 <xref:System.Nullable%601?displayProperty=fullName> 的实例。 将数据传入数据库和从中传出数据（数值可能为 null）时，可以为 null 的类型就特别有用。 有关详细信息，请参阅[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  有关详细信息，请参阅下列主题：  
   
 -   [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
@@ -228,14 +204,10 @@ stringList.Add(4);
   
 -   [泛型](../../../csharp/programming-guide/generics/index.md)  
 
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 语言规范  
+## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)   

@@ -1,6 +1,6 @@
 ---
-title: ".NET Core SDK 概述 | Microsoft Docs"
-description: ".NET Core SDK 概述"
+title: ".NET Core SDK 概述"
+description: "查看有关 .NET Core SDK 的信息，其是一组用于创建 .NET Core 项目的库和工具。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,21 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1b05b7e1a2d274f02cd1222c0a90a59583d37e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-sdk-overview" class="xliff"></a>
+# <a name="net-core-sdk-overview"></a>.NET Core SDK 概述 
 
-# .NET Core SDK 概述 
-
-<a id="introduction" class="xliff"></a>
-
-## 介绍
+## <a name="introduction"></a>介绍
 .NET Core 软件开发工具包 (SDK) 是一组库和工具，使开发人员能够创建 .NET Core 应用程序和库。 这是开发人员最可能获取的包。 
 
 它包含下列组件：
@@ -34,9 +30,7 @@ ms.lasthandoff: 05/23/2017
 3. `dotnet` 驱动程序，用于运行 [CLI 命令](tools/index.md)和应用程序
 
 
-<a id="acquiring-the-net-core-sdk" class="xliff"></a>
-
-## 获取 .NET Core SDK
+## <a name="acquiring-the-net-core-sdk"></a>获取 .NET Core SDK
 与任何工具一样，首先应将工具安装到计算机上。 根据具体情况，可以使用本机安装程序安装 SDK 或使用 shell 脚本安装。
 
 本机安装程序主要用于开发人员的计算机。 可以使用所有受支持的平台的本机安装机制发布 SDK，例如 Ubuntu 上的 DEB 或 Windows 上的 MSI 包。 这些安装程序将根据需要为用户安装并设置环境，以便在安装完成后可立即使用 SDK。 但是，这些安装程序也需要对计算机的管理权限。 可以在 [.NET Core 安装指南](https://aka.ms/dotnetcoregs)中查看安装说明。

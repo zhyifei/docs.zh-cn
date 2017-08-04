@@ -1,5 +1,5 @@
 ---
-title: "移植到 .NET Core - 分析第三方依赖项 | Microsoft Docs"
+title: "移植到 .NET Core - 分析第三方依赖项"
 description: "移植到 .NET Core - 分析第三方依赖项"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,29 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
-
-# 移植到 .NET Core - 分析第三方依赖项
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>移植到 .NET Core - 分析第三方依赖项
 
 移植过程的第一步是了解第三方依赖项。  需要找出尚未在 .NET Core 上运行的依赖项（如果有），并为这些没有在 .Net Core 上运行的依赖项制定应变计划。
 
-<a id="prerequisites" class="xliff"></a>
-
-## 先决条件
+## <a name="prerequisites"></a>先决条件
 
 今天，本文假定使用 Windows 和 Visual Studio，并拥有在 .NET Framework 上运行的代码。
 
-<a id="analyzing-nuget-packages" class="xliff"></a>
-
-## 分析 NuGet 包
+## <a name="analyzing-nuget-packages"></a>分析 NuGet 包
 
 分析 NuGet 包的可移植性非常简单。  因为 NuGet 包本身是一组包含特定于平台的程序集的文件夹，因此仅需检查确认是否存在包含 .NET Core 程序集的文件夹即可。
 
@@ -61,7 +55,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-这些是映射到 [.NET 标准库](../../standard/net-standard.md)版本的目标框架名字对象 (TFM) 以及与 .NET Core 兼容的传统可移植类库 (PCL) 配置文件。  请注意，兼容的 `netcoreapp1.0` 适用于应用程序，而非库。  尽管使用基于 `netcoreapp1.0` 的库没有任何不妥，但该库可能不适用于*不是*由其他 `netcoreapp1.0` 应用程序所使用的任何内容。
+这些是映射到 [.NET Standard](../../standard/net-standard.md) 版本的目标框架名字对象 (TFM) 以及与 .NET Core 兼容的传统可移植类库 (PCL) 配置文件。  请注意，兼容的 `netcoreapp1.0` 适用于应用程序，而非库。  尽管使用基于 `netcoreapp1.0` 的库没有任何不妥，但该库可能不适用于*不是*由其他 `netcoreapp1.0` 应用程序所使用的任何内容。
 
 .NET Core 预发行版本中使用的某些旧 TFM 也可能兼容：
 
@@ -80,9 +74,7 @@ dotnet5.5
 > [!NOTE]
 > 若要使用以传统 PCL 或预发行的 .NET Core 目标为目标的包，必须使用 `project.json` 文件中的 `imports` 指令。
 
-<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
-
-### NuGet 包依赖项未在.NET Core 上运行时应执行的操作
+### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 包依赖项未在.NET Core 上运行时应执行的操作
 
 如果所依赖的 NuGet 包无法在 .NET Core 上运行，可以执行以下几项操作。
 
@@ -98,15 +90,11 @@ dotnet5.5
 
 .NET 团队需要了解下次使用.NET Core 时哪些是需要支持的最重要的库。 还可发送邮件到 dotnet@microsoft.com，告知我们希望使用的库。
 
-<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
-
-## 分析不是 NuGet 包的依赖项
+## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>分析不是 NuGet 包的依赖项
 
 用户可能拥有不是 NuGet 包的依赖项，如文件系统中的 DLL。  因此确定依赖项是否可移植的唯一方法是运行 [ApiPort 工具](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)。
 
-<a id="next-steps" class="xliff"></a>
-
-## 后续步骤
+## <a name="next-steps"></a>后续步骤
 
 若要移植库，请参阅 [Porting your Libraries](libraries.md)（移植库）。
 

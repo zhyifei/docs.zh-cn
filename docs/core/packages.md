@@ -1,6 +1,6 @@
 ---
-title: "包、元包和框架 | Microsoft Docs"
-description: "包、元包和框架"
+title: "包、元包和框架"
+description: "了解包、元包和框架的术语。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,25 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 6a8f57de57e3470b0312b0d248d91d14f613ae94
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="packages-metapackages-and-frameworks" class="xliff"></a>
-
-# 包、元包和框架
+# <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
 .NET Core 是一种由 NuGet 包组成的平台。 有些产品体验受益于包的细粒度定义，而另一些受益于粗粒度的定义。 为了适应这种二元定义，一款好的产品应该作为一组细粒度的包发布，然后在更粗的粒度组块中进行描述，单个包的正式的名字叫做“元包”。
 
 每个 .Net Core 包都支持运行于多种 .Net 运行时中，这些运行时被称为“框架”。 其中有些框架是传统框架，例如表示 .NET Framework 的 `net46`。 而另一些则是新框架，可视为是“基于包的框架”，这种是框架的另外一种新的定义模型。 这些基于包的框架整个都是由包组成的，它们自身也被定义成包，这就在包与框架之间形成了一种比较密切的关系。
 
-<a id="packages" class="xliff"></a>
-
-## 包
+## <a name="packages"></a>包
 
 .NET Core 被分成一组包，它们提供了基元类型，以及更高层的数据类型，应用组合类型和通用实用工具。 每一个包都代表着单独的同名程序集。 例如，[System.Runtime](https://www.nuget.org/packages/System.Runtime) 这个包就包含了 System.Runtime.dll 程序集。 
 
@@ -62,9 +58,7 @@ ms.lasthandoff: 06/20/2017
 </Project>
 ```
 
-<a id="metapackages" class="xliff"></a>
-
-## 元包
+## <a name="metapackages"></a>元包
 
 元包就是一个 NuGet 包约定，描述了一组意义相关的包。 开发团队利用依赖项来描述这一组包。 他们通过这一组包来描述一个框架，然后有选择地发布出去。 
 
@@ -77,18 +71,16 @@ ms.lasthandoff: 06/20/2017
 - 在引用大量细粒度包方面，提供了一种方便的用户体验。 
 - 定义了一组经过充分测试且运行良好的包（包括指定的各种版本）。
 
-.NET 标准库元包为：
+.NET Standard 元包为：
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - 描述了属于“.Net 标准库”一部分的各种库。 适用于所有支持 .NET 标准库的 .NET 实现（例如，.NET Framework、.NET Core 和 Mono）。 也就是“netstandard”框架。
+- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - 描述了属于“.NET Standard”一部分的各种库。 适用于所有支持 .NET Standard 的 .NET 实现（例如，.NET Framework、.NET Core 和 Mono）。 也就是“netstandard”框架。
 
 重要的 .NET Core 元包有：
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - 描述了属于 .NET Core 发行版的部分库。 也就是 [`.NETCoreApp` 框架](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)。 它依赖于更小的 `NETStandard.Library`。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - 一组兼容外观，使基于 mscorlib 的可移植类库(PCL) 得以在 .Net Core上运行。
 
-<a id="frameworks" class="xliff"></a>
-
-## 框架
+## <a name="frameworks"></a>框架
 
 每个 .NET Core 包支持一组运行时框架。 框架描述了一组可用的 API（以及潜在的其他特性），所以你可以在指定一个目标框架时使用这些功能。 添加新的 API 时，它们就会进入版本控制流程。
 
@@ -104,9 +96,7 @@ ms.lasthandoff: 06/20/2017
 
 `.NETStandard,Version=1.3` 框架是一个基于包的框架。 它依赖基于框架的包，来定义和公开与框架有关的 API。
 
-<a id="package-based-frameworks" class="xliff"></a>
-
-## 基于包的框架
+## <a name="package-based-frameworks"></a>基于包的框架
 
 框架和包之间是一种双向关系。 首先是为一个给定的框架定义了 API，例如 `netstandard1.3`。 以 `netstandard1.3` 为目标的包（或兼容的框架，如 `netstandard1.0`）定义了适用于 `netstandard1.3` 的 API。 听起来像是循环定义，然而并不是。 从“基于包的”这个词本身的角度来讲，框架的 API 定义是来自于包的。 框架本身并不定义任何 API。
 
@@ -121,13 +111,11 @@ ms.lasthandoff: 06/20/2017
 - `netstandard`
 - `netcoreapp`
 
-<a id="net-standard" class="xliff"></a>
+### <a name="net-standard"></a>.NET Standard
 
-### .NET Standard
+.NET Standard（目标框架名字对象：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET 标准的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。
 
-.NET Standard（目标框架名字对象：`netstandard`）框架表示在 [.NET Standard](../standard/net-standard.md) 基础之上生成并由其定义的 API。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 这样便可在任何一种兼容 .NET 标准的运行时上受支持，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 每个运行时都支持一组 .NET Standard 版本，具体取决于实现的 API。 
-
-`netstandard` 框架隐式引用 `NETStandard.Library` 元包。 例如，以下 MSBuild 项目文件指示项目以 `netstandard1.6` 为目标，`netstandard1.6` 引用 .NET Standard 库 1.6 版元包。 
+`netstandard` 框架隐式引用 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 元包。 例如，以下 MSBuild 项目文件指示项目以 `netstandard1.6` 为目标，其引用 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)元包。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -154,9 +142,7 @@ ms.lasthandoff: 06/20/2017
 
 反之，把 `netstandard1.6` 设为目标，却使用 1.3.0 版的 `NETStandard.Library` 也是无效的。 你不能把更高版本的框架设为目标，却使用更低版本的元包，因为更低版本的元包不会公开任何更高版本框架的资产。 元包资产的版本控制方案与描述框架的最高版本匹配。 借助于版本控制方案，`NETStandard.Library` 的第一个版本是 v1.6.0，因为它包含 `netstandard1.6` 资产。 而上例中的 v1.3.0 版本，只是为了举例方便，实际上并不存在。
 
-<a id="net-core-application" class="xliff"></a>
-
-### .NET Core 应用程序
+### <a name="net-core-application"></a>.NET Core 应用程序
 
 .NET Core 应用程序 (TFM: `netcoreapp`) 框架表示 .NET Core 发行版及其提供的控制台应用程序模型附带的包和相关 API。 .NET Core 必须使用此框架，因为必须要使用其中的控制台应用程序模型。同时只运行于 .Net Core 平台的库也应使用此模型。 使用此框架后，所有应用和库将只能够在 .Net Core 上运行。 
 

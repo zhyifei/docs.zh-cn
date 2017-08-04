@@ -1,5 +1,5 @@
 ---
-title: "C# 编程指南 | Microsoft 文档"
+title: "C# 编程指南"
 ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
@@ -32,33 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 073c0600840ccc802b0481bf0023a6099821bec3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="c-programming-guide" class="xliff"></a>
-
-# C# 编程指南
+# <a name="c-programming-guide"></a>C# 编程指南
 此部分详细介绍了 C# 语言主要功能，以及通过 .NET Framework 可以在 C# 中使用的功能。  
   
- 阅读此部分的大部分内容的前提是，你已对 C# 和一般编程概念有一定的了解。 如果是完完全全的编程或 C# 初学者，不妨访问 [C# 开发者中心](http://go.microsoft.com/fwlink/?linkid=95125)，其中收录了许多教程、示例和视频，可帮助你入门。  
+ 阅读此部分的大部分内容的前提是，你已对 C# 和一般编程概念有一定的了解。 如果你完全是编程或 C# 的初学者，请先参阅 [C# 入门](https://www.microsoft.com/net/tutorials/csharp/getting-started)互动教程，此教程不需要具备任何编程知识。  
   
- 若要了解特定的关键字、运算符和预处理器指令，请参阅 [C# 参考](../../csharp/language-reference/index.md)。 若要了解 C# 语言规范，请参阅 [C# 语言规范](../../csharp/language-reference/language-specification.md)。  
+ 若要了解特定的关键字、运算符和预处理器指令，请参阅 [C# 参考](../../csharp/language-reference/index.md)。 若要了解 C# 语言规范，请参阅 [C# 语言规范](../../csharp/language-reference/language-specification/index.md)。  
   
-<a id="program-sections" class="xliff"></a>
-
-## 程序部分
+## <a name="program-sections"></a>程序部分
 
 [在 C# 程序内部](../../csharp/programming-guide/inside-a-program/index.md)  
   
 [Main() 和命令行参数](../../csharp/programming-guide/main-and-command-args/index.md)  
  
-<a id="language-sections" class="xliff"></a>
-
-## 语言部分  
+## <a name="language-sections"></a>语言部分  
 [语句、表达式和运算符](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
  [类型](../../csharp/programming-guide/types/index.md)  
@@ -97,9 +91,7 @@ ms.lasthandoff: 06/13/2017
   
  [XML 文档注释](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-<a id="platform-sections" class="xliff"></a>
-
-## 平台部分  
+## <a name="platform-sections"></a>平台部分  
  [应用程序域（C# 和 Visual Basic）](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [程序集和全局程序集缓存](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
@@ -116,8 +108,7 @@ ms.lasthandoff: 06/13/2017
   
  [反射](../../csharp/programming-guide/concepts/reflection.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [C# 参考](../../csharp/language-reference/index.md)   
  [C#](../../csharp/csharp.md)
+

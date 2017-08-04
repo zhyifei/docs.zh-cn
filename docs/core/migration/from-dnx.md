@@ -1,7 +1,7 @@
 ---
-title: "从 DNX 迁移到 .NET Core CLI | Microsoft Docs"
-description: "从 DNX 迁移到 .NET Core CLI"
-keywords: ".NET、.NET Core"
+title: "从 DNX 迁移到 .NET Core CLI"
+description: "从使用 DNX 工具迁移到 .NET Core CLI 工具。"
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,21 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 0deb251b672fdc09a9bca09e5ae52c9eaaa9ae8d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e94ab83bb6638438e0a98020a5b42755322af5da
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="migrating-from-dnx-to-net-core-cli-projectjson" class="xliff"></a>
+# <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>从 DNX 迁移到 .NET Core CLI (project.json)
 
-# 从 DNX 迁移到 .NET Core CLI (project.json)
-
-<a id="overview" class="xliff"></a>
-
-## 概述
+## <a name="overview"></a>概述
 .NET Core 和 ASP.NET Core 1.0 RC1 版本中推出了 DNX 工具。 .NET Core 和 ASP.NET Core 1.0 RC2 版本从 DNX 移动到了 .NET Core CLI。
 
 温故知新，我们简单复习下 DNX 是什么。 DNX 是用于生成 .NET Core（更具体点，是用于生成 ASP.NET Core 1.0 应用程序）的运行时和工具集。 它主要由 3 个部分组成：
@@ -36,14 +32,10 @@ ms.lasthandoff: 06/20/2017
 
 本迁移指南就介绍了关于如何将项目从 DNX 迁移到 .NET Core CLI 的基础知识。 如果你才刚刚开始在 .NET Core 上从头创建项目，可选择跳过此文档。 
 
-<a id="main-changes-in-the-tooling" class="xliff"></a>
-
-## 工具的主要更改
+## <a name="main-changes-in-the-tooling"></a>工具的主要更改
 首先将概述工具中存在的一般性更改。 
 
-<a id="no-more-dnvm" class="xliff"></a>
-
-### 不再具有 DNVM
+### <a name="no-more-dnvm"></a>不再具有 DNVM
 DNVM（DotNet 版本管理器的简称），是用于在计算机上安装 DNX 的 bash/PowerShell 脚本。 它有助于用户从指定的数据源（或默认数据源）获得需要的 DNX，以及将某个 DNX 标记为“活动”，从而将其置于给定会话的 $PATH 中。 这使你能够使用各种工具。
 
 DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的更改变得冗余。
@@ -57,9 +49,7 @@ DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的
 
 将某个版本的包添加到依赖项，可以引用 `project.json` 中的运行时。 正因有此更改，应用程序将能够使用新的运行时数据。 将这些数据引入计算机与安装 CLI 方法一样：通过其支持的本机安装程序之一或通过其安装脚本安装运行时。 
 
-<a id="different-commands" class="xliff"></a>
-
-### 命令不同
+### <a name="different-commands"></a>命令不同
 如果使用的是 DNX，则使用某些来自其三个部件（DNX、DNU 或 DNVM）之一的命令。 借助 CLI，其中的某些命令发生了改变，有些命令不再适用，有些保持不变，但语义稍有不同。 
 
 下表显示了 DNX/DNU 命令及其 CLI 对应项之间的映射。
@@ -79,42 +69,30 @@ DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的
 
 (\*) - 按照设计，CLI 中不支持这些功能。 
 
-<a id="dnx-features-that-are-not-supported" class="xliff"></a>
-
-## 不支持 DNX 功能
+## <a name="dnx-features-that-are-not-supported"></a>不支持 DNX 功能
 如上表所示，CLI 中不支持（至少暂时不支持）来自 DNX 领域的某些功能。 本部分将介绍最重要的这部分内容，并概述不支持它们的根本原因，以及如果确实需要某些功能时相应的解决办法。
 
-<a id="global-commands" class="xliff"></a>
-
-### 全局命令
+### <a name="global-commands"></a>全局命令
 DNU 附带称为“全局命令”的概念。 从本质上来说，这些都是打包成 NuGet 包的控制台应用程序，其中 shell 脚本可以调用指定用于运行应用程序的 DNX。 
 
 CLI 不支持此概念。 但是，它确实支持添加所有项目命令的这一概念，这些命令可以使用熟悉的 `dotnet <command>` 语法调用。
 
-<a id="installing-dependencies" class="xliff"></a>
-
-### 安装依赖项
+### <a name="installing-dependencies"></a>安装依赖项
 自 v1 起，.NET Core CLI 工具就没有用于安装依赖项的 `install` 命令。 为了从 NuGet 安装包，需要将其作为依赖项添加到 `project.json` 文件，然后运行 `dotnet restore`。 
 
-<a id="running-your-code" class="xliff"></a>
-
-### 运行代码
+### <a name="running-your-code"></a>运行代码
 运行代码主要有两种方法。 一种是从源中使用 `dotnet run` 运行。 与 `dnx run` 不同，这种方法不能执行任何内存中编译。 实际上，它将调用 `dotnet build` 生成代码，然后运行生成的二进制文件。 
 
 另一种是使用 `dotnet` 自身运行代码。 可通过提供程序集路径实现：`dotnet path/to/an/assembly.dll`。 
 
-<a id="migrating-your-dnx-project-to-net-core-cli" class="xliff"></a>
-
-## 将 DNX 项目迁移到 .NET Core CLI
+## <a name="migrating-your-dnx-project-to-net-core-cli"></a>将 DNX 项目迁移到 .NET Core CLI
 使用代码时，除了使用新的命令，从 DNX 迁移还剩三件主要的事情：
 
 1. 若要使其能够使用 CLI，请迁移 `global.json` 文件。
 2. 将项目文件 (`project.json`) 本身迁移到 CLI 工具。
 3. 将任何 DNX API 迁移到 BCL 对应项。 
 
-<a id="changing-the-globaljson-file" class="xliff"></a>
-
-### 更改 global.json 文件
+### <a name="changing-the-globaljson-file"></a>更改 global.json 文件
 对于 RC1 和 RC2（或更高版本）项目，`global.json` 文件充当两者的解决方案文件。 为了在 RC1 和更高版本间区分 CLI 工具（以及 Visual Studio），可以使用 `"sdk": { "version" }` 属性来区分哪个项目是 RC1 或更高版本。 如果 `global.json` 根本无此节点，则假定为最新版本。 
 
 为了更新 `global.json` 文件，可以删除此属性或将其设置为想要使用的工具的确切版本，在本示例中为 **1.0.0-preview2-003121**：
@@ -127,9 +105,7 @@ CLI 不支持此概念。 但是，它确实支持添加所有项目命令的这
 }
 ```
 
-<a id="migrating-the-project-file" class="xliff"></a>
-
-### 迁移项目文件
+### <a name="migrating-the-project-file"></a>迁移项目文件
 CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 项目文件的语法和语义大致相同，但根据应用场景，会略有不同。 此外还对架构进行了一些更改，可在[架构文件](http://json.schemastore.org/project)中查看这些更改。
 
 如果要生成控制台应用程序，需要将以下代码段添加到项目文件：
@@ -144,14 +120,14 @@ CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 
 
 如果 `project.json` 中有“命令”部分，可将其删除。 过去作为 DNU 命令（例如，实体框架 CLI 命令）存在的某些命令，将作为每个项目的扩展移植到 CLI。 如果生成了自己正在项目中使用的命令，需要使用 CLI 扩展将其替换。 在这种情况下，`project.json` 中的 `commands` 节点需要替换为 `tools` 节点，并且需要列出工具依赖项。 
 
-完成这些操作后，需要决定希望应用使用的可移植性类型。 借助 .NET Core，我们在提供一系列可从中进行选择的可移植性选项方面投入了大量工作。 例如，可能想要一个完全可移植的应用程序或者想要一个独立的应用程序。 可移植应用程序选项工作原理更像 .NET Framework 应用程序的工作原理：它需要共享组件才能在目标计算机 (.NET Core) 上执行。 独立应用程序不需要在目标上安装 .NET Core，但需要为每个要支持的 OS 生成一个应用程序。 有关这些可移植性类型等内容，请参阅 [应用程序可移植性类型](../deploying/index.md)文档。 
+完成这些操作后，需要决定希望应用使用的可移植性类型。 借助 .NET Core，我们在提供一系列可从中进行选择的可移植性选项方面投入了大量工作。 例如，可能想要一个完全可移植的应用程序或者想要一个独立的应用程序。 可移植应用程序选项工作原理更像 .NET Framework 应用程序的工作原理：它需要共享组件才能在目标计算机 (.NET Core) 上执行。 独立应用程序不需要在目标上安装 .NET Core，但需要为每个要支持的 OS 生成一个应用程序。 有关这些可移植性类型等内容，请参阅[应用程序可移植性类型](../deploying/index.md)文档。 
 
-调用想要的可移植性类型后，需要更改目标框架。 如果是为 .NET Core 编写应用程序，很可能要使用 `dnxcore50` 作为目标框架。 鉴于 CLI 和全新 [.NET Standard](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/net-platform-standard.md) 引入的变化，框架需要为下列之一：
+调用想要的可移植性类型后，需要更改目标框架。 如果是为 .NET Core 编写应用程序，很可能要使用 `dnxcore50` 作为目标框架。 鉴于 CLI 和全新 [.NET Standard](../../standard/net-standard.md) 引入的变化，框架需要为下列之一：
 
 1. `netcoreapp1.0` - 如果要在 .NET Core 上编写应用程序（包括 ASP.NET Core 应用程序）
 2. `netstandard1.6` - 如果要为 .NET Core 编写类库
 
-如果要使用其他 `dnx` 目标，如 `dnx451`，则还需要更改这些内容。 `dnx451` 应更改为 `net451`。 有关详细信息，请参阅 [.NET 标准库文档](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/net-platform-standard.md)。 
+如果要使用其他 `dnx` 目标，如 `dnx451`，则还需要更改这些内容。 `dnx451` 应更改为 `net451`。 有关详细信息，请参阅 [.NET Standard](../../standard/net-standard.md) 主题。 
 
 `project.json` 现已差不多准备就绪。 需要浏览依赖项列表并将依赖项更新至最新版本，尤其在使用 ASP.NET Core 依赖项时。 如果使用的是 BCL API 的单独包，可使用运行时包，如[应用程序可移植性类型](../deploying/index.md)文档中所述。 
 

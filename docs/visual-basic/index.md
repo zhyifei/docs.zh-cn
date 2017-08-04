@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic | Microsoft 文档"
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -47,8 +47,7 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
  [入门](../visual-basic/getting-started/index.md)   
  通过列出各产品版本中的新功能和可用内容，帮助用户开始工作。  
    
- [编程概念](../visual-basic/programming-guide/concepts/index.md) 
- 介绍了对 Visual Basic 程序员最有用的语言概念。
+ [编程概念](../visual-basic/programming-guide/concepts/index.md) 介绍对 Visual Basic 程序员最有用的语言概念。
 
  [程序结构和代码约定](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  收录了有关 Visual Basic 基本结构和代码约定（如命名约定、代码注释和 Visual Basic 限制）的文档。  
@@ -72,8 +71,9 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
  提供常见方案的分步说明链接。  
   
 ## <a name="related-sections"></a>相关章节  
- [Visual Studio 开发入门](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Visual Studio 开发入门](/visualstudio/ide/get-started-developing-with-visual-studio)  
  提供帮助你了解 Visual Studio 基本知识的链接。  
   
  [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
  介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。
+
