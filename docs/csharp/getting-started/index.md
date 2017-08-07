@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 09415f996c9dd03c34a74cfe2d2d030f2b4b6fe8
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="get-started-with-c"></a>C# 入门 #
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/28/2017
 
    使用类库，可以定义能够从另一应用程序调用的类型和类型成员。 此主题介绍了如何创建类库，其中包含一个用于确定字符串是否以大写字母开头的方法。 生成完类库后，便可以开发[单元测试](testing-library-with-visual-studio.md)来确保类库按预期运行，然后就是使其可供[要使用它的应用程序](consuming-library-with-visual-studio.md)使用。
 
-- [Visual Studio Code 入门](with-visual-studio-code.md)
+- [C# 和 Visual Studio Code 入门](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code 是免费的代码编辑器，已针对构建和调试现代 Web 和云应用程序而优化。 它支持 IntelliSense，并可在 Linux、macOS 和 Windows 上使用。
 

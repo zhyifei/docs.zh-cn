@@ -116,5 +116,6 @@
 ### [建议的标记](../../../../_vblang/spec/documentation-comments.md#recommended-tags)
 ### [ID 字符串](../../../../_vblang/spec/documentation-comments.md#id-strings)
 ### [文档注释示例](../../../../_vblang/spec/documentation-comments.md#documentation-comments-example)
-## 语法： [vb.html](http://ljw1004.github.io/vbspec/vb.html)。 或下载 ANTLR 格式： [vb.g4](vb.g4?raw=true)。
-
+## 语法
+### [vb.html](http://ljw1004.github.io/vbspec/vb.html)
+### [vb.g4 - ANTLR 格式](http://ljw1004.github.io/vbspec/vb.g4?raw=true)
