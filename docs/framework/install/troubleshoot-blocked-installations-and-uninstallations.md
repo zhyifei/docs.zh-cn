@@ -1,7 +1,7 @@
 ---
 title: "安装和卸载 .NET Framework 受阻疑难解答"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -90,5 +90,4 @@ ms.lasthandoff: 07/28/2017
 [安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
 [如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-
 
