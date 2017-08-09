@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40930b572b385c5407d309ddcacdcc86097a9919
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 07/28/2017
 
 以下是非常有用的工具的简短列表：
 
-* NuGet - [Nuget 客户端](https://dist.nuget.org/index.html) 或 [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)，是 Microsoft 针对 .NET 平台的包管理器。
+* NuGet - [Nuget 客户端](https://dist.nuget.org/index.html)或 [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)，是 Microsoft 针对 .NET 实现的包管理器。
 * Api Portability Analyzer - [命令行工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 扩展](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)，可生成有关 .NET Framework 和 .NET Core 之间代码移植性的报表的工具链，并且带有程序集到程序集的问题细目。  有关详细信息，请参阅 [Tooling to help you on the process](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)（过程中使用的帮助工具）。
 * Reverse Package Search - 一个[有用的 Web 服务](https://packagesearch.azurewebsites.net)，能够实现搜索某一类型并找到包含该类型的包。
 

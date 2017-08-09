@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7197f2453367e4613b4d44f0d84be5984525a5a
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f922abca6898e91748158ee16f89ca7f57a81bf7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -703,7 +703,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - **ASP.NET 5**
 
-     .NET 2015 包括 ASP.NET 5，是一个用于生成基于云的现代应用的精益 .NET 平台。 这是一个模块化的平台，你可以仅包含应用程序所需的那些功能。 其可承载于 IIS 上或自承载于自定义过程中，并且你可以在同一服务器上运行具有不同版本 .NET Framework 的应用。 它包括为云部署而设计的新环境配置系统。
+     .NET 2015 包括 ASP.NET 5，是一个用于生成基于云的新式应用的精益 .NET 实现。 ASP.NET 5 是模块化的，因此你可以仅包括应用程序所需的那些功能。 其可承载于 IIS 上或自承载于自定义过程中，并且你可以在同一服务器上运行具有不同版本 .NET Framework 的应用。 它包括为云部署而设计的新环境配置系统。
 
      MVC、Web API 和 Web Pages 统一至称为 MVC 6 的单个 Framework。 通过 Visual Studio 2015 中的新工具生成 ASP.NET 5 应用。 现有应用程序将在新 .NET Framework 上工作；但是，若要生成使用 MVC 6 或 SignalR 3 的应用，你必须使用 Visual Studio 2015 中的项目系统。
 

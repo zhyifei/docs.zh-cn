@@ -13,8 +13,8 @@
 | Windows Phone Silverlight                 | 8.0   |        |       |       |       |        |        |       |
 
 - 列表示 .NET Standard 版本。 每个标题单元格都是一个文档链接，其中介绍了相应版本的 .NET Standard 中新增了哪些 API。
-- 行表示不同的 .NET 平台。
-- 各单元格中的版本号指名了为定向到此 .NET Standard 版本所需的最低平台版本。
+- 行表示不同的 .NET 实现。
+- 各单元格中的版本号指示要定向到此 .NET Standard 版本所需的最低实现版本。
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md
