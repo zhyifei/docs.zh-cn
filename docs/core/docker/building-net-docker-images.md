@@ -11,10 +11,10 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 252b67a528b9cc666a5353b7c4a4c7e2c488e7af
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
  
@@ -53,7 +53,7 @@ ms.lasthandoff: 07/28/2017
 
 - `microsoft/dotnet:<version>-onbuild`：即 **microsoft/dotnet:1.0.0-preview2-onbuild**，其中包含 [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild) 触发器。 生成将 [COPY](https://docs.docker.com/engine/reference/builder/#/copy)（复制）应用程序，运行 `dotnet restore` 并创建 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` 指令，以在运行 Docker 映像时运行该应用程序。 在使用未针对生产进行优化的映像时，某些用户可能发现只将源代码复制到映像中并运行它会很有帮助。 
 
-- `microsoft/dotnet:<version>-core-deps`：即 **microsoft/dotnet:1.0.0-core-deps**，请在希望运行独立应用程序时使用此映像。 它包括具有 .NET Core 所需的所有本机依赖项的操作系统。 此映像也可用作自己自定义 CoreFX 或 CoreCLR 版本的基本映像。 虽然 **onbuild** 变体已优化为只需将代码放置在映像中并运行它，但此映像已优化为只有运行 .NET Core 应用所需的操作系统依赖项，并打包了 .NET 运行时和应用程序。 通常，优化此映像不是为了在同一主机上运行多个 .NET Core 容器，因为每个映像在应用程序内都具有 .NET Core 运行时，映像分层则不会带来益处。   
+- `microsoft/dotnet:<version>-core-deps`：即 **microsoft/dotnet:1.0.0-core-deps**，请在希望运行独立应用程序时使用此映像。 它包括具有 .NET Core 所需的所有本机依赖项的操作系统。 此映像也可用作自己自定义 CoreFX 或 CoreCLR 版本的基本映像。 虽然 onbuild 变量已优化为只将代码放入映像并运行它，但此映像已优化为只包含运行 .NET Core 应用程序（将 .NET 运行时与应用程序一起打包）所需的操作系统依赖项。 通常，优化此映像不是为了在同一主机上运行多个 .NET Core 容器，因为每个映像在应用程序内都具有 .NET Core 运行时，映像分层则不会带来益处。   
 
 每个变体的最新版本：
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 07/28/2017
 - `microsoft/dotnet:core`
 - `microsoft/dotnet:core-deps`
 
-以下是开发计算机上使用 `docker pull <imagename>` 命令后出现的映像列表，其中显示多个映像的大小。 请注意，其中开发/生成变体 `microsoft/dotnet:1.0.0-preview2-sdk` 较大，因为它包含用于开发和生成应用程序的 SDK。 生产变体 `microsoft/dotnet:core` 较小，因为它仅包含 .NET Core 运行时。 能够在 Linux 上使用的最小映像 `core-deps` 相比之下则小多了，但是应用程序仍需使用它复制 .NET 运行时的私有副本。 由于容器已是私有的隔离屏障，因此运行多个基于 dotnet 的容器时优化会失效。 
+以下是开发计算机上使用 `docker pull <imagename>` 命令后出现的映像列表，其中显示多个映像的大小。 请注意，其中开发/生成变体 `microsoft/dotnet:1.0.0-preview2-sdk` 较大，因为它包含用于开发和生成应用程序的 SDK。 生产变体 `microsoft/dotnet:core` 较小，因为它仅包含 .NET Core 运行时。 虽然能够在 Linux 上使用的最小映像 `core-deps` 较小，但应用程序仍需要使用它复制 .NET 运行时的私有副本。 由于容器已是私有的隔离屏障，因此运行多个基于 dotnet 的容器时优化会失效。 
 
 ```
 REPOSITORY          TAG                     IMAGE ID            SIZE
