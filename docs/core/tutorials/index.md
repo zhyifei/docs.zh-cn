@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 生成应用程序
 
-- [通过使用 Visual Studio Code 开始使用 C#](../../csharp/getting-started/with-visual-studio-code.md)
+- [C# 和 Visual Studio Code 入门](with-visual-studio-code.md)
 - [在 macOS 上实现 .NET Core 入门](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 构建应用程序

@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 
 .NET Core 是一种由 NuGet 包组成的平台。 有些产品体验受益于包的细粒度定义，而另一些受益于粗粒度的定义。 为了适应这种二元定义，一款好的产品应该作为一组细粒度的包发布，然后在更粗的粒度组块中进行描述，单个包的正式的名字叫做“元包”。
 
-每个 .Net Core 包都支持运行于多种 .Net 运行时中，这些运行时被称为“框架”。 其中有些框架是传统框架，例如表示 .NET Framework 的 `net46`。 而另一些则是新框架，可视为是“基于包的框架”，这种是框架的另外一种新的定义模型。 这些基于包的框架整个都是由包组成的，它们自身也被定义成包，这就在包与框架之间形成了一种比较密切的关系。
+每个 .Net Core 包都支持以框架形式通过多个 .Net 实现代码运行。 其中有些框架是传统框架，例如表示 .NET Framework 的 `net46`。 而另一些则是新框架，可视为是“基于包的框架”，这种是框架的另外一种新的定义模型。 这些基于包的框架整个都是由包组成的，它们自身也被定义成包，这就在包与框架之间形成了一种比较密切的关系。
 
 ## <a name="packages"></a>包
 

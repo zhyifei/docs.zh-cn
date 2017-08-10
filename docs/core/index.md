@@ -1,5 +1,5 @@
 ---
-title: .NET Core
+title: ".NET Core 指南"
 description: ".NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的模块式高性能的 .NET 实现。 了解 .NET Core 以开始使用。"
 keywords: .NET, .NET Core
 author: richlander
@@ -10,14 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a>.NET Core 指南
 
 > 请查看[“入门”教程](get-started.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。
 
@@ -124,13 +124,13 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 - 考虑到每个 OS 上的存储和加密 API 具有显著差异，[System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定于平台的。 
 - 考虑到它们是通过数据结构创建和操作，[System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是与平台无关的。
 
-## <a name="comparisons-to-other-net-platforms"></a>与其他 .NET 平台比较
+## <a name="comparisons-to-other-net-implementations"></a>与其他 .NET 实现比较
 
-将 .NET Core 与现有平台进行比较，这可能是了解其大小和形状最简单的方法了。 
+将 .NET Core 与现有的 .NET 实现进行比较，这可能是了解其大小和形状最简单的方法。 
 
 ### <a name="comparison-with-net-framework"></a>与 .NET Framework 比较
 
-.NET 平台由 Microsoft 于 2000 年首次发布，而后发展至今。 15 年多以来，.NET Framework 一直是 Microsoft 生产的主要 .NET 产品。 
+.NET 由 Microsoft 于 2000 年首次发布，而后发展至今。 15 年多以来，.NET Framework 一直是 Microsoft 出品的主要 .NET 实现。 
 
 .NET Core 和 .NET Framework 的主要差异在于： 
 
@@ -140,7 +140,7 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 - **平台** -- .NET Framework 支持 Windows 和 Windows Server，而 NET Core 还支持 macOS 和 Linux。
 - **开放源** -- .NET Core 属于开放源，而 [.NET Framework 的只读子集](https://github.com/microsoft/referencesource)属于开放源。
 
-虽然 .NET Core 是唯一的且与 .NET Framework 和其他 .NET 平台大不相同，但使用源或二进制共享技术分享代码仍很简单。 
+虽然 .NET Core 是唯一的且与 .NET Framework 和其他 .NET 实现大不相同，但使用源或二进制共享技术分享代码仍很简单。 
 
 ### <a name="comparison-with-mono"></a>与 Mono 比较
 

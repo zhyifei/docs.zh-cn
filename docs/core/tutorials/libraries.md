@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d95d281655c33927030666f101570da2d3e42ca
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/28/2017
 
 以下是此表格对于创建库的意义：
 
-所选择的 .NET Platform Standard 版本将在对最新 API 的访问权限与面向更多 .NET 平台和 Framework 版本的能力之间进行权衡。 通过选择 `netstandardX.X` 版本（其中 `X.X` 是版本号）并将其添加到项目文件（`.csproj` 或 `.fsproj`），控制可面向的平台和版本范围。
+选择 .NET Standard 版本时，需要在能够访问最新 API 与能够定位更多 .NET 实现代码和 .NET Standard 版本之间进行权衡。 通过选择 `netstandardX.X` 版本（其中 `X.X` 是版本号）并将其添加到项目文件（`.csproj` 或 `.fsproj`），控制可面向的平台和版本范围。
 
 面向 .NET Standard 时，有三种主要选项，具体取决于你的需求。
 

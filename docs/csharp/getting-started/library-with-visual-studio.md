@@ -11,16 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 709b05dc9baeae1e99481a37287b91730b395f63
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 96a6a936ad1dbd412bfa07bc642eef975dd80e6c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 C# .NET Core 类库
 
-类库定义的是可以由应用程序调用的类型和方法。 使用 .NET Core 开发的类库支持 .NET 标准，这样任何支持相应版本 .NET 标准的 .NET 平台都可以调用库。 完成类库时，可以决定是要将其作为第三方组件进行分布，还是要将其作为与一个或多个应用程序捆绑在一起的组件进行添加。
+类库定义的是可以由应用程序调用的类型和方法。 使用 .NET Core 开发的类库支持 .NET Standard，这样任何支持相应版本 .NET Standard 的 .NET 实现代码都可以调用库。 完成类库时，可以决定是要将其作为第三方组件进行分布，还是要将其作为与一个或多个应用程序捆绑在一起的组件进行添加。
 
 > [!NOTE]
 > 有关 .NET Standard 版本及其支持的平台列表，请参阅 [.NET Standard](../../standard/net-standard.md)。

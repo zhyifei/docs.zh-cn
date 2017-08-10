@@ -36,10 +36,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b8b7951c01ac5a82c79a0942fdc99368c2d0175
+ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
+ms.openlocfilehash: 906fa362c249c3e5abbd6f2ed3ba879a81334aeb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
@@ -140,7 +140,7 @@ char c = 'Z';
  所有枚举从 <xref:System.Enum?displayProperty=fullName>（继承自 <xref:System.ValueType?displayProperty=fullName>）继承。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../../../csharp/programming-guide/enumeration-types.md)。  
   
 ### <a name="reference-types"></a>引用类型  
- 定义为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)、数组或[接口](../../../csharp/language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，如果声明引用类型的变量，那么在使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建对象实例或为变量分配已在其他位置使用 `new, as shown in the following example:` 创建的对象前，变量会一直包含 [null](../../../csharp/language-reference/keywords/null.md) 值，如以下示例所示：  
+ 定义为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)、数组或[接口](../../../csharp/language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，当声明引用类型的变量时，该变量会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直至使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建对象的实例，或者为该变量分配已经在其他位置使用 `new` 创建的对象，如下所示：
   
 ```csharp  
 MyClass mc = new MyClass();  

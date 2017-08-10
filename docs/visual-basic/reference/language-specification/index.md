@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 语言规范"
-ms.date: 2015-07-20
+ms.date: 2017-08-02
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e35bb15d75b715c4137c2bca5ea94697dbbe340
+ms.sourcegitcommit: a16c50310dc45f231d921bce0ae6549864652951
+ms.openlocfilehash: eb8260d1c7349e2a1402f92a54ee118eb2d9ca7d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 语言规范
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
   
  此规范可在 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=188623)下载使用。  
   
-此站点包含 [VB 11 规范](../../../../_vblang/spec/introduction.md)。 它基于 [dotnet/vblang GitHub 存储库](https://github.com/dotnet/vb/blob/master/spec/README.md)中包含的 Markdown 文件构建而成。
+此站点包含 [VB 11 规范](../../../../_vblang/spec/introduction.md)。 它基于 [dotnet/vblang GitHub 存储库](https://github.com/dotnet/vblang/blob/master/spec/README.md)中包含的 Markdown 文件构建而成。
 
 应在 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 存储库中创建规范的相关问题。 或者，如果有兴趣修复自己所发现的任何错误，则可向同一存储库提交[拉取请求](https://github.com/dotnet/vblang/pulls)。
 
@@ -50,4 +50,3 @@ ms.lasthandoff: 07/28/2017
 
 >[!div class="step-by-step"]
 [下一篇](../../../../_vblang/spec/introduction.md)
-

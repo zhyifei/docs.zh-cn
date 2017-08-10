@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 4708abcbd14f47089859ea1dba143a6648c845e5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -83,7 +83,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 - 自 .NET Core 1.0 的 v1.6 开始（这些版本通常不匹配或不特意匹配）。
 - 映射到 `netstandard` 框架。 
-- 描述被视为新式应用开发所需，且 .NET 平台必须实现以被视为 [.NET Standard](../../standard/net-standard.md) 平台的包。
+- 描述被视为新式应用开发所需，且 .NET 实现必须实现以被视为 [.NET Standard](../../standard/net-standard.md) 平台的包。
 
 **Microsoft.NETCore.App**
 
@@ -97,7 +97,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 添加新 API 时，会更新框架版本。 它们没有修补程序版本的概念，因为其表示 API 形状，不表示实现问题。 主要和次要版本控制将按照之前指定的 SemVer 规则进行。
 
-`netcoreapp` 框架已关联到 .NET Core 分发。 它将遵循由 .NET Core 使用的版本号。 例如，发布 .NET Core 2.0 时，它将面向 `netcoreapp2.0`。 考虑到其对所有 .NET 运行时均同样适用，`netstandard` 框架不匹配任何 .NET 运行时的版本控制方案。
+`netcoreapp` 框架已关联到 .NET Core 分发。 它将遵循由 .NET Core 使用的版本号。 例如，发布 .NET Core 2.0 时，它将面向 `netcoreapp2.0`。 考虑到其对所有 .NET 实现均同样适用，`netstandard` 框架不匹配任何 .NET 实现的版本控制方案。
 
 ## <a name="versioning-in-practice"></a>版本控制实践
 

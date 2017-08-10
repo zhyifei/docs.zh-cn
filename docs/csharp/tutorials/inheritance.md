@@ -12,16 +12,13 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3004d84e9a87fcf86737b18fe58bb200eefd33b
+ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
+ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
-
-## <a name="introduction"></a>介绍
 
 此教程将介绍 C# 中的继承。 继承是面向对象的编程语言的一项功能，可方便你定义提供特定功能（数据和行为）的基类，并定义继承或重写此功能的派生类。
 
@@ -122,13 +119,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-然后，我们可以使用反射（方便我们检查类型的元数据，从而获取此类型的相关信息），获取 `SimpleClass` 类型的成员列表。 尽管我们没有在 `SimpleClass` 类中定义任何成员，但示例输出表明它实际上有九个成员。 其中之一是由 C# 编译器自动为 `SimpleClass` 类型提供的无参数（或默认）构造函数。 另外八个是 <xref:System.Object>（.NET 类型系统中的所有类和接口最终隐式继承自的类型）成员。
+然后，我们可以使用反射（方便我们检查类型的元数据，从而获取此类型的相关信息），获取 `SimpleClass` 类型的成员列表。 尽管我们没有在 `SimpleClass` 类中定义任何成员，但示例输出表明它实际上有九个成员。 其中之一是由 C# 编译器自动为 `SimpleClass` 类型提供的无参数（或默认）构造函数。 剩余八个是 <xref:System.Object>（.NET 类型系统中的所有类和接口最终隐式继承自的类型）的成员。
 
 [!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 由于隐式继承自 <xref:System.Object> 类，因此 `SimpleClass` 类可以使用下面这些方法：
 
-- 公共 `ToString` 方法：将 `SimpleClass` 对象转换成其字符串表示形式，即完全限定的类型名称。 在这种情况下，`ToString` 方法返回字符串“SimpleClass”。
+- 公共 `ToString` 方法将 `SimpleClass` 对象转换为字符串表示形式，返回完全限定的类型名称。 在这种情况下，`ToString` 方法返回字符串“SimpleClass”。
 
 - 三个用于测试两个对象是否相等的方法：公共实例 `Equals(Object)` 方法、公共静态 `Equals(Object, Object)` 方法和公共静态 `ReferenceEquals(Object, Object)` 方法。 默认情况下，这三个方法测试的是引用相等性；也就是说，两个对象变量必须引用同一个对象，才算相等。
 
@@ -160,7 +157,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 > [!NOTE]
 > 一个类或结构可以实现一个或多个接口。 虽然接口实现代码通常用作单一继承的解决方法或对结构使用继承的方法，但它旨在表示接口与其实现类型之间的不同关系（即“can do”关系），而不是继承关系。 接口定义了其向实现类型提供的一部分功能（如测试相等性、比较或排序对象，或支持区域性敏感的分析和格式设置）。
 
-请注意，“is a”还表示类型与其特定实例化之间的关系。 在以下示例中，`Automobile` 类包含三个唯一只读属性：`Moke`（汽车制造商）、`Model`（汽车型号）和 `Year`（汽车出厂年份）。 `Automobile` 类还有一个自变量被分配给属性值的构造函数，并将 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法重写为生成唯一标识 `Automobile` 实例（而不是 `Automobile` 类）的字符串。
+请注意，“is a”还表示类型与其特定实例化之间的关系。 在以下示例中，`Automobile` 类包含三个唯一只读属性：`Make`（汽车制造商）、`Model`（汽车型号）和 `Year`（汽车出厂年份）。 `Automobile` 类还有一个自变量被分配给属性值的构造函数，并将 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法重写为生成唯一标识 `Automobile` 实例（而不是 `Automobile` 类）的字符串。
 
 [!code-csharp[继承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 

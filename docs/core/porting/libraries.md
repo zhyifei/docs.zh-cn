@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ ms.lasthandoff: 07/28/2017
 还应熟悉下列主题的内容：
 
 [.NET Standard](~/docs/standard/net-standard.md)   
-此主题介绍了旨在所有 .NET 运行时上适用的 .NET API 的正式规范。
+此主题介绍了适用于所有 .NET 实现代码的 .NET API 正式规范。
 
 [包、元包和框架](~/docs/core/packages.md)   
-本文介绍了 .NET Core 如何定义和使用包以及包如何支持代码在多个 .NET 运行时上运行。
+这篇文章介绍了 .NET Core 如何定义和使用包，以及包如何支持多个 .NET 实现代码。
 
 [使用跨平台工具开发库](~/docs/core/tutorials/libraries.md)   
 此主题介绍了如何使用跨平台 CLI 工具编写 .NET 的库。
