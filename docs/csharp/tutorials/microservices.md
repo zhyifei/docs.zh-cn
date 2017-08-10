@@ -101,7 +101,7 @@ dotnet build
 dotnet run
 ```
 
-默认配置侦听的是 http://localhost:5000。 可以打开浏览器并转到相应页面，看到的是“Hello World!” 消息。
+默认配置侦听的是 http://localhost:5000 。 可以打开浏览器并转到相应页面，看到的是“Hello World!” 消息。
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 应用程序剖析
 
