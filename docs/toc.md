@@ -382,7 +382,7 @@
 # [Visual Basic 指南](visual-basic/index.md)
 ## [入门](visual-basic/getting-started/index.md)
 ### [Visual Basic 的新增功能](visual-basic/getting-started/whats-new.md)
-### [Visual Studio 2015 中 Visual Basic 的重大更改](visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)
+### [Visual Studio 中 Visual Basic 的重大更改](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [为 Visual Basic 程序员提供的附加资源](visual-basic/getting-started/additional-resources.md)
 
 ## [开发应用程序](visual-basic/developing-apps/index.md)
