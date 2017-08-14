@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一个程序（C# 编程指南）
@@ -123,11 +123,11 @@ ms.lasthandoff: 07/28/2017
   
 2.  执行以下任一步骤以打开命令提示符窗口：  
   
-    -   在 Windows 8 的“开始”屏幕上，搜索 `Developer Command Prompt`，然后点击或选择“VS2012 开发人员命令提示”。  
+    -   在 Windows 10 的“开始”菜单上，搜索 `Developer Command Prompt`，然后点击或选择“VS 2017 开发人员命令提示”。  
   
          将出现“开发人员命令提示”窗口。  
   
-    -   在 Windows 7 中，打开“启动”菜单，展开当前版本的 Visual Studio 的文件夹，打开“Visual Studio Tools”快捷菜单，然后选择“VS2012 开发人员命令提示”。  
+    -   在 Windows 7 中，打开“启动”菜单，展开当前版本的 Visual Studio 的文件夹，打开“Visual Studio Tools”快捷菜单，然后选择“VS 2017 开发人员命令提示”。  
   
          将出现“开发人员命令提示”窗口。  
   
