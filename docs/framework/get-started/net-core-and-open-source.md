@@ -15,10 +15,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="net-core-and-open-source"></a>.NET 核心和开放源代码
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/28/2017
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>.NET 核心是什么？  
- .NET 核心是 .NET 平台的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET 核心是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET 核心实现主要由 ASP.NET 核心工作负载驱动，但同时也由拥有一个更现代的运行时这种需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
+ .NET Core 是 .NET 标准的常规用途、模块化、跨平台和开放源代码实现。 它包含 .NET Framework 这样的许多相同 API（但 .NET Core 是较小的集）并包括支持不同操作系统和芯片目标的运行时、框架、编译器和工具组件。 .NET Core 实现主要由 ASP.NET 核心工作负载驱动，但同时也由拥有一个更现代的实现这一需求和愿望驱动。 它可以用于设备、云和嵌入式/IoT 方案。  
   
  若要开始使用 .NET 核心，请访问 [.NET 核心主页](https://www.microsoft.com/net/core)。  
   

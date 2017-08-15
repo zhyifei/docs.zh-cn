@@ -2,18 +2,17 @@
 title: "修复 .NET Framework"
 description: "了解如何修复 .NET Framework"
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, 安装"
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
 ms.devlang: dotnet
-ms.assetid: 87cdb1d5-c5g8-8af9-93e8-5f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43c1880fd5d363fbd6e36e3b18890d494c6d819d
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: c362c6f2fdde64f97271920e8856af730db37da2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -23,5 +22,5 @@ ms.lasthandoff: 07/28/2017
 
 可以使用 [.NET Framework 修复工具](http://download.microsoft.com/download/2/B/D/2BDE5459-2225-48B8-830C-AE19CAF038F1/NetFxRepairTool.exe)修复 .NET Framework 安装。
 
-如果应用在修复 .NET Framework 后仍无法启动，则应用程序可能有问题。 在这种情况下，应联系应用程序发行者。
+如果应用在修复 .NET Framework 后仍无法启动，则应用可能有问题。 在这种情况下，应联系应用发行者。
 
