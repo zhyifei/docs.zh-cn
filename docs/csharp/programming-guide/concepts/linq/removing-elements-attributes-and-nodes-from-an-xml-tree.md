@@ -1,5 +1,5 @@
 ---
-title: "从 XML 树中删除元素、属性和节点 (C#) | Microsoft Docs"
+title: "从 XML 树中删除元素、属性和节点 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23091224f314582908438f29340b811498d4c90e
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>从 XML 树中删除元素、属性和节点 (C#)
@@ -32,13 +32,13 @@ ms.lasthandoff: 03/13/2017
   
 |方法|描述|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|从其父级移除 <xref:System.Xml.Linq.XAttribute>。|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|从 <xref:System.Xml.Linq.XContainer> 移除子节点。|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|从 <xref:System.Xml.Linq.XElement> 移除内容和属性。|  
+|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|从父节点中移除 <xref:System.Xml.Linq.XAttribute>。|  
+|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|从 <xref:System.Xml.Linq.XContainer> 中移除子节点。|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|从 <xref:System.Xml.Linq.XElement> 中移除内容和属性。|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|移除 <xref:System.Xml.Linq.XElement> 的属性。|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|如果传递 `null` 作为值，则移除该属性。|  
 |<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName>|如果传递 `null` 作为值，则移除该子元素。|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|从其父级移除 <xref:System.Xml.Linq.XNode>。|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|从父节点中移除 <xref:System.Xml.Linq.XNode>。|  
 |<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName>|从父元素中移除源集合中的每个属性或元素。|  
   
 ## <a name="example"></a>示例  
@@ -92,3 +92,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>请参阅  
  [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+
