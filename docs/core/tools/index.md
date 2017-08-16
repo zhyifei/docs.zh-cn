@@ -4,20 +4,19 @@ description: "命令行接口 (CLI) 工具和功能的概述。"
 keywords: "CLI, CLI 工具, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.sourcegitcommit: 61dedb132a34cf97894e77bb20d47694b2c0c104
+ms.openlocfilehash: adde2922a6e98cc4ced7ea7313fa8eb702932471
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/13/2017
 
 ---
-
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
 .NET Core 命令行接口 (CLI) 工具是用于开发 .NET 应用程序的新型跨平台工具链。 CLI 是更高级别的工具（如集成开发环境 (IDE)、编辑器和生成协调程序）可以驻留的基础。
@@ -48,6 +47,7 @@ ms.lasthandoff: 07/28/2017
 * [migrate](dotnet-migrate.md)
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
+* [store](dotnet-store.md) - 可用于 .NET Core 2.0 SDK 和更高版本。
 
 ### <a name="project-modification-commands"></a>项目修改命令
 
