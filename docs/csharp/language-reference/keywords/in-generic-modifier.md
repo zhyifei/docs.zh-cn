@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in（泛型修饰符）（C# 参考）
@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  可以向逆变委托分配相同类型的其他委托，不过要使用派生程度更小的泛型类型参数。  
   
- 有关详细信息，请参阅[协变和逆变](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)。  
+ 有关详细信息，请参阅[协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何声明、扩展和实现逆变泛型接口。 它还演示如何对实现此接口的类使用隐式转换。  
@@ -63,6 +63,6 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>请参阅  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [协变和逆变](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
+ [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)   
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
 

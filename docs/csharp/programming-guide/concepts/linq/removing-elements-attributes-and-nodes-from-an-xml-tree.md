@@ -1,10 +1,7 @@
 ---
 title: "从 XML 树中删除元素、属性和节点 (C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
@@ -15,10 +12,10 @@ caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>从 XML 树中删除元素、属性和节点 (C#)
@@ -32,8 +29,8 @@ ms.lasthandoff: 07/28/2017
   
 |方法|描述|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|从父节点中移除 <xref:System.Xml.Linq.XAttribute>。|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|从 <xref:System.Xml.Linq.XContainer> 中移除子节点。|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|从父节点中移除 <xref:System.Xml.Linq.XAttribute>。|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|从 <xref:System.Xml.Linq.XContainer> 中移除子节点。|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|从 <xref:System.Xml.Linq.XElement> 中移除内容和属性。|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|移除 <xref:System.Xml.Linq.XElement> 的属性。|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|如果传递 `null` 作为值，则移除该属性。|  
