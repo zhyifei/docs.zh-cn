@@ -1,6 +1,6 @@
 ---
 title: "本地函数与 Lambda 表达式"
-description: "为什么选择本地函数可能比选择 Lambda 表达式更好"
+description: "了解为什么选择本地函数比选择 Lambda 表达式更好。"
 keywords: "C#, .NET, .NET Core, 最新功能, 新增功能, 本地函数, Lambda 表达式"
 author: BillWagner
 ms.author: wiwagn
@@ -11,16 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 315d4c5ee1f16c4fe59599c3a37437b112b784f6
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 366d7465433f2786960e22418b8aa46ba10e1fd1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 
 ### <a name="local-functions-compared-to-lambda-expressions"></a>本地函数与 Lambda 表达式比较
 
-乍看之下，[本地函数](programming-guide/classes-and/structs/local-functions.md)和 [lambda 表达式](lambda-expressions.md)非常相似。
+乍看之下，[本地函数](programming-guide/classes-and-structs/local-functions.md)和 [lambda 表达式](lambda-expressions.md)非常相似。
 根据需要，本地函数可能是更好、更简单的解决方案。
 
 让我们检查一下阶乘算法的本地函数实现和 lambda 表达式实现之间的差异。 首先使用本地函数的版本：
