@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 4609c30a03c835b9b1338ea6bc9672f7445cfd25
-ms.openlocfilehash: ebbfb5818c8f2a07df7a8cb4724e99b1b9268b03
+ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
+ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
@@ -100,7 +100,7 @@ switch (caseSwitch)
   
  [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
- 在具有与匹配表达式匹配的 case 标签的开关部分中执行语句列表时，将首先执行第一个语句，然后执行整个语句列表，通常直到到达一个跳转语句为止，如 `break`、`goto case`、`return` 或 `throw`。 此时，控件在 `switch` 语句之外进行传输或传输到另一个 case 标签。  
+ 在 case 标签与匹配表达式匹配的开关部分中执行语句列表时，先执行第一个语句，再执行整个语句列表，通常执行到跳转语句（如 `break`、`goto case`、`goto label`、`return` 或 `throw`）为止。 此时，控件在 `switch` 语句之外进行传输或传输到另一个 case 标签。 如果使用 `goto` 语句，必须将控制权移交给常数标签。 此限制是必要的，因为尝试将控制权移交给非常数标签可能会产生不良的副作用，如将控制权移交给代码中的意外位置，或创建无限循环。
 
 ## <a name="case-labels"></a>Case 标签
 
