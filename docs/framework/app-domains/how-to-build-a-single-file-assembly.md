@@ -1,5 +1,5 @@
 ---
-title: "如何：生成单文件程序集 | Microsoft Docs"
+title: "如何：生成单文件程序集"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,18 +22,18 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0ddf25f1d588c0972381a54ee0da4b35e3c0dc33
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：生成单文件程序集
 单文件程序集（最简单的程序集类型）包含类型信息和实现，以及[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)。 可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 创建单文件程序集。 默认情况下，编译器创建扩展名为 .exe 的程序集文件。  
   
 > [!NOTE]
-> 适用于 C# 和 Visual Basic 的  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 只能用于创建单文件程序集。 如果要创建多文件程序集，则必须使用命令行编译器或用于 Visual C++ 的 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]。  
+>  适用于 C# 和 Visual Basic 的 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 只能用于创建单文件程序集。 如果要创建多文件程序集，则必须使用命令行编译器或用于 Visual C++ 的 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]。  
   
  以下步骤说明如何使用命令行编译器创建单文件程序集。  
   
@@ -99,3 +99,4 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
  [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

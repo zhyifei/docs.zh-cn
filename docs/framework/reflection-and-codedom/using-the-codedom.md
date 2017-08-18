@@ -1,5 +1,5 @@
 ---
-title: "使用 CodeDOM | Microsoft Docs"
+title: "使用 CodeDom"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -28,11 +28,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d1712b3f06f9131b1e55ca34a1e40e83b63f280b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd594e9087a158ab8d5372ad72019cf3e04c38af
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-the-codedom"></a>使用 CodeDom
@@ -118,3 +118,4 @@ CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个�
  有关各种 CodeDOM 类型的文档，请参阅 <xref:System.CodeDom> 命名空间的参考文档。  
   
  有关用于查找表示特定代码元素类型的 CodeDOM 元素的快速图表，请参阅 [CodeDOM 快速参考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。
+
