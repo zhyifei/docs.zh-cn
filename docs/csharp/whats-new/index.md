@@ -11,15 +11,19 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3ea221cfe71256ac44238f99f272c55c5810d0c3
+ms.sourcegitcommit: 195b2206eec0a8f070454aed1ddefe56ee92adc9
+ms.openlocfilehash: 7b7cb235e2ba5bc3c9a21603058eb20475766ea7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>C# 中的新增功能 #
 
+本页介绍了 C# 语言每个主要版本中新增功能的路线图。 若要详细了解每个版本中增加的主要功能，请单击下面的链接。
+
+> [!IMPORTANT]
+> 为了提供一些功能，C# 语言依赖标准库中的类型和方法。 例如，异常处理。 为了确保引发的对象派生自 @System.Exception，将会检查每个 `throw` 语句或表达式。 同样，还会检查每个 `catch`，以确保捕获的类型派生自 @System.Exception。 每个版本都可能会新增要求。 若要在旧版环境中使用最新语言功能，可能需要安装特定库。 每个特定版本的页面中记录了这些库。 若要了解此依赖项的背景信息，可以详细了解[语言与库的关系](relationships-between-language-and-library.md)。 
 
 * [C# 7](csharp-7.md)：
     - 此页介绍了 C# 语言的最新功能。 这包括 [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) 中目前可用的 C# 7 功能。
