@@ -1,5 +1,5 @@
 ---
-title: "创建桌面应用的附属程序集| Microsoft Docs"
+title: "创建桌面应用程序的附属程序集"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b4ae5474ebf910389148745105adbe9a0ae608bb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/02/2017
   
  下图显示未安装在[全局程序集缓存](../../../docs/framework/app-domains/gac.md)中的应用程序的示例目录结构和位置要求。 具有 .txt 和 .resources 扩展名的项不会随附在最终应用程序中。 这些是用于创建最终附属资源程序集的中间资源文件。 在此示例中，可以将 .txt 文件替换为 .resx 文件。 有关详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  
   
- ![Satellite assemblies](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
+ ![附属程序集](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 附属程序集目录  
   
 ## <a name="compiling-satellite-assemblies"></a>编译附属程序集  

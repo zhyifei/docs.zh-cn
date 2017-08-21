@@ -1,13 +1,9 @@
 ---
-title: "创建和使用具有强名称的程序集 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: "创建和使用具有强名称的程序集"
+ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -24,17 +20,17 @@ caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7c694fc26d65fee277c7a6873494c8d1900408b2
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 <a name="top"></a>强名称是由程序集的标识加上公钥和数字签名组成的。其中，程序集的标识包括简单文本名称、版本号和区域性信息（如果提供的话）。 它使用相应私钥从程序集文件生成。 （程序集文件包含程序集清单，该清单包含组成程序集的所有文件的名称和哈希。）  
   
- 具有强名称的程序集只能使用其他具有强名称的程序集的类型。 否则，将会危害具有强名称的程序集的安全性。  
+ 具有强名称的程序集只能使用其他具有强名称的程序集的类型。 否则，将会危害强名称程序集的完整性。  
   
  本概述包含以下几节：  
   
@@ -61,7 +57,7 @@ ms.lasthandoff: 06/02/2017
 4.  当程序集放置在全局程序集缓存中时，公共语言运行时验证强名称签名。 在运行时按强名称绑定时，公共语言运行时会将存储在程序集 B 的清单中的密钥与为程序集 A 生成强名称的密钥进行比较。如果 .NET Framework 安全检查通过且绑定成功，程序集 B 就可保证程序集 A 的位未被篡改，且这些位确实来自程序集 A 的开发人员。  
   
 > [!NOTE]
->  此方案不解决信任问题。 除强名称外，程序集可携带完整的 Microsoft Authenticode 签名。 Authenticode 签名包括建立信任的证书。 请务必注意强名称不要求代码以这种方式进行签名。 事实上，用于生成强名称签名的密钥不需要与用于生成 Authenticode 签名的密钥相同。  
+>  此方案不解决信任问题。 除强名称外，程序集可携带完整的 Microsoft Authenticode 签名。 Authenticode 签名包括建立信任的证书。 请务必注意强名称不要求代码以这种方式进行签名。 强名称仅提供唯一的标识。  
   
  [返回页首](#top)  
   
@@ -94,6 +90,7 @@ ms.lasthandoff: 06/02/2017
 |[如何：引用具有强名称的程序集](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|介绍如何在编译时或运行时引用具有强名称的程序集中的类型或资源。|  
 |[如何：禁用强名称跳过功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|描述如何禁用跳过强名称签名验证的功能。 可为所有或特定应用程序禁用此功能。|  
 |[创建程序集](../../../docs/framework/app-domains/create-assemblies.md)|提供单个文件和多文件程序集的概述。|  
-|[NIB：如何：延迟对程序集的签名 (Visual Studio)](http://msdn.microsoft.com/en-us/cab63b7a-591e-4674-b236-d77cd29a79ea)|说明如何在创建程序集后对具有强名称的程序集进行签名。|  
+|[如何在 Visual Studio 中延迟对程序集的签名](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|说明如何在创建程序集后对具有强名称的程序集进行签名。|  
 |[Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|介绍 .NET Framework 中包含的可帮助创建具有强名称的程序集的工具。 此工具提供有关密钥管理、签名生成和签名验证的选项。|  
 |[Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)|介绍 .NET Framework 中包含的一种工具，该工具可生成具有模块或资源文件的程序集清单的文件。|
+

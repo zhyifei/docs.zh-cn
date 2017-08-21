@@ -1,5 +1,5 @@
 ---
-title: "在 XNA 应用程序中使用操作和惯性 | Microsoft Docs"
+title: "在 XNA 应用程序中使用操作和惯性"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6f58c4ff726e297e1ec64ceb74f957496f58f065
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7d623a8c2276811ae443a4d745faffeeb79ffc6f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>在 XNA 应用程序中使用操作和惯性
@@ -44,3 +44,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Windows.Input.Manipulations>   
  [控制和惯性概述](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)
+

@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
+ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
+ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -162,7 +162,7 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-在 macOS 上，可以将此脚本另存为 `dotnet-hello` 并使用 `chmod +x dotnet-hello` 设置其可执行位。 然后，可以使用命令 `ln -s dotnet-hello /usr/local/bin/` 在 `/usr/local/bin` 中创建其符号链接。 这样，就可以使用 `dotnet hello` 语法调用命令。
+在 macOS 上，可以将此脚本另存为 `dotnet-hello` 并使用 `chmod +x dotnet-hello` 设置其可执行位。 然后，可以使用命令 `ln -s <full_path>/dotnet-hello /usr/local/bin/` 在 `/usr/local/bin` 中创建其符号链接。 这样，就可以使用 `dotnet hello` 语法调用命令。
 
 在 Windows 上，可将此脚本另存为 `dotnet-hello.cmd`，并放在系统路径中（也可以将其添加到已位于该路径中的文件夹内）。 然后，只需使用 `dotnet hello` 即可运行此示例。
 

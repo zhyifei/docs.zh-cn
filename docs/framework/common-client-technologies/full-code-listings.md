@@ -1,5 +1,5 @@
 ---
-title: "完整代码清单 | Microsoft Docs"
+title: "完整代码清单"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 6
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5007f73d8a971a69c37ff1fd4ac1f83940b70935
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5db052fc49bded26da9eefaddd5ade6b6bb463f1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="full-code-listings"></a>完整代码清单
@@ -45,3 +45,4 @@ ms.lasthandoff: 06/02/2017
  [创建 GamePiece 类](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
  [创建 GamePieceCollection 类](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
  [创建 Game1 类](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+

@@ -1,13 +1,9 @@
 ---
-title: "延迟为程序集签名 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: "延迟为程序集签名"
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>延迟为程序集签名
@@ -62,8 +58,8 @@ ms.lasthandoff: 06/02/2017
   
      通过 –Vr 或 –Vk 选项，可以选择是否包括 .snk 文件以测试密钥签名。  
   
-    > [!CAUTION]
-    >  仅在开发阶段使用 -Vr 或 –Vk 选项。 将程序集添加到跳过验证列表会产生安全漏洞。 如果将某程序集添加到跳过验证列表中，则恶意程序集可以使用该程序集的完全指定程序集名称来隐藏身份，完全指定程序集名称由程序集名称、版本、区域性和公钥标记组成。 这使恶意程序集也可以跳过验证。  
+    > [!WARNING]
+    > 不要依赖于通过强名称实现安全性。 它们仅提供唯一的标识。
   
     > [!NOTE]
     >  如果在 64 位电脑上使用 Visual Studio 进行开发时使用延迟签名，并且编译“任何 CPU”的程序集，可能需要两次应用 -Vr 选项。 （在 Visual Studio 中，“任何 CPU”是平台目标生成属性的一个值；从命令行中编译时，它是默认值。）若要在命令行或文件资源管理器中运行应用程序，请使用 64 位版本的 [Sn.exe（强签名工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)对程序集应用 -Vr 选项。 若要在设计时将程序集加载到 Visual Studio（例如，如果程序集包含应用程序中其他程序集使用的组件），请使用 32 位版本的强名称工具。 这是因为从命令行中运行程序集时，实时 (JIT) 编译器会将程序集编译为 64 位本机代码，而将程序集加载到设计时环境时，会将其编译为 32 位本机代码。  
@@ -81,3 +77,4 @@ ms.lasthandoff: 06/02/2017
  [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

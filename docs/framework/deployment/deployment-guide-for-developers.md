@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 部署指南（适用于开发人员）| Microsoft Docs"
+title: ".NET Framework 部署指南（针对开发人员）"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,14 +22,14 @@ caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（适用于开发人员）
+# <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 或 .NET Framework 4.7 的开发人员提供相关信息。
 
 有关下载链接，请参见[可再发行组件包](#redistributable-packages)部分。 你还可从这些 Microsoft 下载中心页面下载可再发行组件包和语言包：
@@ -76,9 +76,9 @@ ms.lasthandoff: 06/02/2017
 
 |你的应用的部署策略|可用的部署方法|要使用的 .NET Framework 可再发行组件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|从 Web 安装|- [InstallShield](#installshield-deployment)<br />- [WiX 工具集](#wix)<br />- [手动安装](#installing_manually)|[Web 安装程序](#redistributable-packages)|
-|从磁盘安装|- [InstallShield](#installshield-deployment)<br />- [WiX 工具集](#wix)<br />- [手动安装](#installing_manually)|[脱机安装程序](#redistributable-packages)|
-|从局域网安装（适用于企业应用）|- [ClickOnce](#clickonce-deployment)|[Web 安装程序](#redistributable-packages)（请参阅 [ClickOnce](#clickonce-deployment) 了解有关限制的信息）或[脱机安装程序](#redistributable-packages)|
+|从 Web 安装|- [InstallShield](#installshield-deployment)<br />- [WiX 工具集](#wix)<br />- [手动安装](#installing_manually)|[Web installer](#redistributable-packages)|
+|从磁盘安装|- [InstallShield](#installshield-deployment)<br />- [WiX 工具集](#wix)<br />- [手动安装](#installing_manually)|[Offline installer](#redistributable-packages)|
+|从局域网安装（适用于企业应用）|- [ClickOnce](#clickonce-deployment)|[Web 安装程序](#redistributable-packages) （有关限制，请参见 [ClickOnce](#clickonce-deployment) ）或 [脱机安装程序](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>可再发行组件包
  .NET framework 通过两种可再发行组件包提供：Web 安装程序（引导程序）和脱机安装程序（独立的可再发行组件）。 下表对两种组件包进行了比较。
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/02/2017
 |部署方法|支持所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手动安装](#installing_manually)<br />- [自定义安装（链接）](#chaining)|支持所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手动安装](#installing_manually)<br />- [自定义安装（链接）](#chaining)|
 |ClickOnce 部署的下载位置|Microsoft 下载中心：<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|你自己的服务器或 Microsoft 下载中心：<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
- \* 因为脱机安装程序包含面向所有目标平台的组件，因此它更大。 当运行完安装程序后，Windows 操作系统仅会缓存已用的安装程序。 如果安装后删除脱机安装程序，则所使用的磁盘空间与 Web 安装程序使用的空间相同。 如果用来创建应用安装程序的工具（例如 [InstallShield](#installshield-deployment)）提供一个会在安装后移除的安装文件文件夹，则将脱机安装程序放入此安装文件夹即可自动将其删除。
+ \* 因为脱机安装程序包含面向所有目标平台的组件，因此它更大。 当运行完安装程序后，Windows 操作系统仅会缓存已用的安装程序。 如果安装后删除脱机安装程序，则所使用的磁盘空间与 Web 安装程序使用的空间相同。 如果你用来创建应用安装程序的工具（例如， [InstallShield](#installshield-deployment)）提供一个会在安装后移除的安装文件文件夹，则通过将脱机安装程序放入此安装文件夹可自动将其删除。
 
  ** 如果使用支持自定义安装的 Web 安装程序，则可以使用基于用户的多语言用户界面 (MUI) 的默认语言设置，或使用命令行上的 `/LCID` 选项指定其他语言包。 有关示例，请参见 [使用默认 .NET Framework UI 进行链接](#chaining_default) 一节。
 
@@ -101,9 +101,9 @@ ms.lasthandoff: 06/02/2017
 
 - 可以设置一个对 .NET Framework 的依赖项。 使用下列方法之一，你可以将 .NET Framework 指定为应用安装程序中的一个必备组件：
 
-    - 使用 [ClickOnce 部署](#clickonce-deployment)（适用于 Visual Studio）
+    - 使用 [ClickOnce 部署](#clickonce-deployment) （适用于 Visual Studio）
 
-    - 创建 [InstallShield 项目](#installshield-deployment)（适用于 Visual Studio）
+    - 创建 [InstallShield 项目](#installshield-deployment) （适用于 Visual Studio）
 
     - 使用 [Windows Installer XML (WiX) 工具集](#wix)
 
@@ -217,9 +217,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!NOTE]
     > 不同的语言包可能具有不同的发布日期。 如果下载中心不提供你所指定的语言包，则安装程序将安装不带语言包的 .NET Framework。 如果用户计算机中已安装 .NET Framework，则安装程序将仅安装语言包。
 
- 有关选项的完整列表，请参阅[命令行选项](#command-line-options)部分。
+ 有关选项的完整列表，请参见 [命名行选项](#command-line-options) 一节。
 
- 有关常见的返回代码，请参阅[返回代码](#return-codes)部分。
+ 有关常见的返回代码，请参见 [返回代码](#return-codes) 一节。
 
 <a name="chaining_custom"></a>
 ### <a name="chaining-by-using-a-custom-ui"></a>使用自定义 UI 进行链接
@@ -232,13 +232,13 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!IMPORTANT]
     > 确定是否安装了 .NET Framework 的正确版本时，应检查安装的是目标版本 *还是* 更高版本，而不是确定是否安装了目标版本。 换而言之，应检查从注册表中检索的版本密钥是否大于或等于目标版本的版本密钥，而 *不是* 检查其是否等于目标版本的版本密钥。
 
-- [检测](#detecting-the-language-packs)用户计算机中是否已安装语言包。
+- [检测](#detecting-the-language-packs) 用户计算机中是否已安装语言包。
 
 - 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅 [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)）。
 
 - 如果要部署脱机安装程序，则 [单独链接语言包](#chain_langpack)。
 
-- 使用[命令行选项](#command-line-options)自定义部署。 例如，如果要链接 .NET Framework Web 安装程序，但是想重写默认语言包，请使用 `/LCID` 选项（如上一节中所述）。
+- 使用 [命令行选项](#command-line-options)自定义部署。 例如，如果要链接 .NET Framework Web 安装程序，但是想重写默认语言包，请使用 `/LCID` 选项（如上一节中所述）。
 
 - [疑难解答](#troubleshooting)。
 
@@ -298,7 +298,7 @@ Type: DWORD
 > [!IMPORTANT]
 > 语言包不包含运行应用所需的 .NET Framework 组件；你必须在安装语言包之前使用 Web 或脱机安装程序安装 .NET Framework。
 
- 从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 开始，包名称采用以下形式 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe，其中 `version` 是 .NET Framework 的版本号，`number` 是 Microsoft 知识库文章编号，`culture` 则指定[国家/地区](#supported-languages)。 例如， `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`就是其中一个安装包。 包名称详见本文前面的[可再发行组件包](#redistributable-packages)部分。
+ 从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 开始，包名称采用以下形式 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe，其中 `version` 是 .NET Framework 的版本号，`number` 是 Microsoft 知识库文章编号，`culture` 则指定[国家/地区](#supported-languages)。 例如， `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`就是其中一个安装包。 包名称详见本文前面的 [Redistributable Packages](#redistributable-packages) 一节。
 
  若要随 .NET framework 脱机安装程序一起安装语言包，你必须将其链接到应用的安装程序。 例如，若要部署带有日语语言包的 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 脱机安装程序，请使用下列命令：
 
@@ -308,7 +308,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
  如果使用 Web 安装程序，则不必链接语言包；安装程序将安装与用户的 MUI 设置匹配的语言包。 如果要安装其他语言，则可以使用 `/LCID` 选项指定语言包。
 
- 有关命令行选项的完整列表，请参阅[命令行选项](#command-line-options)部分。
+ 有关命名行选项的完整列表，请参见 [命名行选项](#command-line-options) 一节。
 
 ### <a name="troubleshooting"></a>疑难解答
 
@@ -348,18 +348,18 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
 ## <a name="appendix"></a>附录
 
-### <a name="command-line-options"></a>命令行选项
+### <a name="command-line-options"></a>命名行选项
  下表列出了将 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行组件链接到应用安装程序时可以包括的选项。
 
 |选项|描述|
 |------------|-----------------|
 |**/CEIPConsent**|覆盖默认行为并向 Microsoft 发送匿名反馈以改善将来的部署体验。 仅当安装程序询问你是否同意安装并且用户授权向 Microsoft 发送匿名反馈时，才可以使用此选项。|
 |**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"**。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](http://go.microsoft.com/fwlink/?LinkId=181926) 。|
-|**/LCID**  `LCID`<br /><br /> 其中 `LCID` 指定一个区域设置标识符（请参见[支持的语言](#supported-languages)）|安装由 `LCID` 指定的语言包，并强制使用此语言显示 UI（除非设置为安静模式）。<br /><br /> 对于 Web 安装程序，此选项将从 Web 链接并安装语言包。 **注意：**只能与 Web 安装程序一起使用此选项。|
+|**/LCID**  `LCID`<br /><br /> 其中 `LCID` 指定一个区域设置标识符（请参见 [支持的语言](#supported-languages)）|安装由 `LCID` 指定的语言包，并强制使用此语言显示 UI（除非设置为安静模式）。<br /><br /> 对于 Web 安装程序，此选项将从 Web 链接并安装语言包。 **注意：**只能与 Web 安装程序一起使用此选项。|
 |**/log** `file` &#124; `folder`|指定日志文件的位置。 默认为过程的临时文件夹，默认文件名基于安装包。 如果文件扩展名为 .txt，则生成文本日志。 如果指定其他扩展名或不指定扩展名，则创建 HTML 日志。|
 |**/msioptions**|指定要为 .msi 和 .msp 项传递的选项；例如： `/msioptions "PROPERTY1='Value'"`。|
 |**/norestart**|防止安装程序自动重新启动。 如果使用此选项，则链接应用必须捕获返回代码并处理重新启动操作（请参阅 MSDN 库中的 [从安装包获取进度信息](http://go.microsoft.com/fwlink/?LinkId=179606) ）。|
-|**/passive**|设置被动模式。 显示用于指示安装正在进行的进度栏，但不向用户显示任何提示或错误消息。 在此模式下，当链接包被安装程序链接时，它必须处理[返回代码](#return-codes)。|
+|**/passive**|设置被动模式。 显示用于指示安装正在进行的进度栏，但不向用户显示任何提示或错误消息。 在此模式下，当链接包被安装程序链接时，它必须处理 [返回代码](#return-codes)。|
 |**/pipe**|创建一个信道，使链接包可以获取进度。|
 |**/promptrestart**|仅在被动模式下，如果安装程序需要重新启动，则会提示用户。 如果需要重新启动，则此选项会要求用户进行交互。|
 |**/q**|设置安静模式。|
@@ -405,3 +405,4 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
  [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)   
  [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

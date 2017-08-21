@@ -1,5 +1,5 @@
 ---
-title: "以编程方式处理 .resx 文件 | Microsoft Docs"
+title: "以编程方式使用 .resx 文件"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,31 +17,31 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c74a79b06503e105dd9ba47cc8079019e038b11f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 361559ab3ea5b09e5568a94692ca6cf374fe5ecf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET Framework 类库中的类型和成员以编程方式创建 .resx 文件。 你还可以使用 .NET Framework 类库来检索存储在 .resx 文件中的资源。 本主题说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。  
   
- 请注意本文讨论的是如何操作包含资源的 XML (.resx) 文件。 有关处理已嵌入程序集中的二进制资源文件的信息，请参阅 <xref:System.Resources.ResourceManager> 主题。  
+ 请注意本文讨论的是如何操作包含资源的 XML (.resx) 文件。 有关操作嵌入程序集中的二进制资源文件的信息，请参阅 <xref:System.Resources.ResourceManager> 主题。  
   
 > [!WARNING]
 >  除编程方式以外还可以使用其他方式操作 .resx 文件。 如果将资源文件添加到 Visual Studio 项目，那么 Visual Studio 会提供一个用于创建和维护 .resx 文件的接口，并且在编译时自动将 .resx 文件转换为 .resources 文件。 你还可以使用文本编辑器来直接操作 .resx 文件。 但是，若要避免破坏文件，请注意不要修改存储在文件中的任何二进制信息。  
   
 ## <a name="creating-a-resx-file"></a>创建 .resx 文件  
- 可使用 <xref:System.Resources.ResXResourceWriter?displayProperty=fullName> 类以编程方式创建 .resx 文件，步骤如下：  
+ 你可以使用 <xref:System.Resources.ResXResourceWriter?displayProperty=fullName> 类以编程方式创建 .resx 文件，步骤如下：  
   
-1.  通过调用 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=fullName> 方法和提供 .resx 文件的名称实例化 <xref:System.Resources.ResXResourceWriter> 对象。 此文件名必须包括 .resx 扩展名。 如果实例化位于 `using` 块中的 <xref:System.Resources.ResXResourceWriter> 对象，则无需在步骤 3 中显式调用 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法。  
+1.  通过调用 <xref:System.Resources.ResXResourceWriter> 方法和提供 .resx 文件的名称实例化 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=fullName> 对象。 此文件名必须包括 .resx 扩展名。 如果实例化位于 <xref:System.Resources.ResXResourceWriter> 块中的 `using` 对象，则无需在步骤 3 中显式调用 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法。  
   
 2.  为每个要添加到此文件中的资源调用 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 方法。 使用此方法的重载添加字符串、 对象和二进制（字节数组）数据。 如果资源是一个对象，则它必须是可序列化的。  
   
-3.  调用 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法，生成资源文件并释放所有资源。 如果 <xref:System.Resources.ResXResourceWriter> 对象创建于 `using` 块中，资源将写入 .resx 文件，并且在 `using` 块的末尾释放 <xref:System.Resources.ResXResourceWriter> 对象所使用的资源。  
+3.  调用 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法以生成资源文件并释放所有资源。 如果 <xref:System.Resources.ResXResourceWriter> 对象是在 `using` 块中创建的，那么资源将写入 .resx 文件，并且在 <xref:System.Resources.ResXResourceWriter> 块的末尾释放 `using` 对象所使用的资源。  
   
- 生成的 .resx 文件具有相应的标头，并且由 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 方法添加的每个资源都有一个 `data` 标记。  
+ 生成的 .resx 文件具有相应的标头，并且由 `data` 方法添加的每个资源都有一个 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 标记。  
   
 > [!WARNING]
 >  请勿使用资源文件存储密码、 安全敏感信息或私人数据。  
@@ -56,14 +56,14 @@ ms.lasthandoff: 06/02/2017
  你无法将 .resx 文件嵌入运行时可执行文件中或将其编译到附属程序集。 必须使用 [资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将 .resx 文件转换为二进制资源 (.resources) 文件 。 然后可以将生成的 .resources 文件嵌入应用程序集或附属程序集。 有关详细信息，请参阅 [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
   
 ## <a name="enumerating-resources"></a>枚举资源  
- 在某些情况下，你可能想要从 .resx 文件中检索所有资源，而不是某个特定资源。 若要执行此操作，可以使用 <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 类，该类为 .resx 文件中的所有资源提供枚举器。 <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 类将实现 <xref:System.Collections.IDictionaryEnumerator>，这会返回 <xref:System.Collections.DictionaryEntry> 对象，该对象代表用于循环的每个迭代的特定资源。 此对象的 <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=fullName> 属性返回资源的键，<xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=fullName> 属性返回资源的值。  
+ 在某些情况下，你可能想要从 .resx 文件中检索所有资源，而不是某个特定资源。 若要执行此操作，可以使用 <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 类，该类为 .resx 文件中的所有资源提供枚举器。 <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 类将实现 <xref:System.Collections.IDictionaryEnumerator>，并返回 <xref:System.Collections.DictionaryEntry> 对象，该对象代表用于循环的每个迭代的特定资源。 此对象的 <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=fullName> 属性返回资源的键， <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=fullName> 属性返回资源的值。  
   
- 以下示例为之前示例中创建的 CarResources.resx 文件创建 <xref:System.Resources.ResXResourceReader> 对象，并在整个资源文件中进行迭代。 该示例将资源文件中定义的两个 `Automobile` 对象添加到 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 对象，并将六个字符串中的五个添加到 <xref:System.Collections.SortedList> 对象。 <xref:System.Collections.SortedList> 对象中的值将转换为一个参数数组，该参数数组用于向控制台显示列标题。 还将向控制台显示 `Automobile` 属性值。  
+ 下面的示例为前面的示例中创建的 CarResources.resx 文件创建 <xref:System.Resources.ResXResourceReader> 对象，并在整个资源文件中进行迭代。 该示例将资源文件中定义的两个 `Automobile` 对象添加到 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 对象，以及将六个字符串中的五个添加到 <xref:System.Collections.SortedList> 对象。 <xref:System.Collections.SortedList> 对象中的值将转换为一个参数数组，该参数数组用于向控制台显示列标题。 还将向控制台显示 `Automobile` 属性值。  
   
  [!code-csharp[Conceptual.Resources.ResX#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/enumerate1.cs#2)] [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]  
   
 ## <a name="retrieving-a-specific-resource"></a>检索特定的资源  
- 除了枚举 .resx 文件中的项外，还可使用 <xref:System.Resources.ResXResourceSet?displayProperty=fullName> 类按名称检索特定资源。 <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=fullName> 方法检索命名字符串资源的值。 <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=fullName> 方法检索命名对象或二进制数据的值。 该方法返回的对象之后必须转换为（C# 中的 cast 或 Visual Basic 中的 convert）相应类型的对象。  
+ 除了枚举 .resx 文件中的项，你可以使用 <xref:System.Resources.ResXResourceSet?displayProperty=fullName> 类按名称检索特定资源。 <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=fullName> 方法用于检索命名字符串资源的值。 <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=fullName> 方法用于检索命名对象或二进制数据的值。 该方法返回的对象之后必须转换为（C# 中的 cast 或 Visual Basic 中的 convert）相应类型的对象。  
   
  以下示例按资源名称检索窗体的标题字符串和图标， 还检索之前示例中使用的应用程序定义的 `Automobile` 对象，并在 <xref:System.Windows.Forms.DataGridView> 控件中显示这些对象。  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 06/02/2017
  [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
  [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)   
  [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+

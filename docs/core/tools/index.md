@@ -1,23 +1,19 @@
 ---
 title: ".NET Core 命令行接口 (CLI) 工具"
-description: "命令行接口 (CLI) 工具和功能的概述。"
-keywords: "CLI, CLI 工具, .NET, .NET Core"
-author: blackdwarf
+description: "概述了 .NET Core 命令行接口 (CLI) 工具和功能。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
 .NET Core 命令行接口 (CLI) 工具是用于开发 .NET 应用程序的新型跨平台工具链。 CLI 是更高级别的工具（如集成开发环境 (IDE)、编辑器和生成协调程序）可以驻留的基础。
@@ -35,7 +31,43 @@ ms.lasthandoff: 07/28/2017
 
 默认安装以下命令：
 
-### <a name="basic-commands"></a>基本命令
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+**基本命令**
+
+* [new](dotnet-new.md)
+* [restore](dotnet-restore.md)
+* [build](dotnet-build.md)
+* [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
+* [vstest](dotnet-vstest.md)
+* [pack](dotnet-pack.md)
+* [migrate](dotnet-migrate.md)
+* [clean](dotnet-clean.md)
+* [sln](dotnet-sln.md)
+* [help](dotnet-help.md)
+* [store](dotnet-store.md)
+
+**项目修改命令**
+
+* [add package](dotnet-add-package.md)
+* [add reference](dotnet-add-reference.md)
+* [remove package](dotnet-remove-package.md)
+* [remove reference](dotnet-remove-reference.md)
+* [list reference](dotnet-list-reference.md)
+
+**高级命令**
+
+* [nuget delete](dotnet-nuget-delete.md)
+* [nuget locals](dotnet-nuget-locals.md)
+* [nuget push](dotnet-nuget-push.md)
+* [msbuild](dotnet-msbuild.md)
+* [dotnet install script](dotnet-install-script.md)
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**基本命令**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
@@ -49,7 +81,7 @@ ms.lasthandoff: 07/28/2017
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 
-### <a name="project-modification-commands"></a>项目修改命令
+**项目修改命令**
 
 * [add package](dotnet-add-package.md)
 * [add reference](dotnet-add-reference.md)
@@ -57,7 +89,7 @@ ms.lasthandoff: 07/28/2017
 * [remove reference](dotnet-remove-reference.md)
 * [list reference](dotnet-list-reference.md)
 
-### <a name="advanced-commands"></a>高级命令
+**高级命令**
 
 * [nuget delete](dotnet-nuget-delete.md)
 * [nuget locals](dotnet-nuget-locals.md)
@@ -65,11 +97,23 @@ ms.lasthandoff: 07/28/2017
 * [msbuild](dotnet-msbuild.md)
 * [dotnet install script](dotnet-install-script.md)
 
+---
+
 CLI 采用可使你为项目指定其他工具的扩展性模型。 有关详细信息，请参阅 [.NET Core CLI 扩展性模型](extensibility.md)主题。
 
 ## <a name="command-structure"></a>命令结构
 
 CLI 命令结构包含[驱动程序（“dotnet”）](#driver)、[命令（或“谓词”）](#command-verb)，或可能的命令[参数](#arguments)和[选项](#options)。 在大部分 CLI 操作中可看到此模式，例如创建新控制台应用并从命令行运行该应用，因为从名为 *my_app* 的目录中执行时，显示以下命令：
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```console
+dotnet new console
+dotnet build --output /build_output
+dotnet /build_output/my_app.dll
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -78,17 +122,19 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+---
+
 ### <a name="driver"></a>驱动程序
 
 驱动程序名为 [dotnet](dotnet.md)，并具有两项职责，即运行[依赖于框架的应用](../deploying/index.md)或执行命令。 唯一一次在不使用命令的情况下使用 `dotnet` 是在将其用于启动应用程序时。
 
 若要运行依赖于框架的应用，请在驱动程序后指定应用，例如，`dotnet /path/to/my_app.dll`。 从应用的 DLL 驻留的文件夹执行命令时，只需执行 `dotnet my_app.dll` 即可。
 
-为驱动程序提供命令时，`dotnet.exe` 启动 CLI 命令执行过程。 首先，驱动程序确定要使用的工具的版本。 如果在命令选项中未指定版本，则驱动程序使用可用的最新版本。 若要指定某个版本，而不是最新安装的版本，请使用 `--fx-version <VERSION>` 选项（请参阅 [dotnet 命令](dotnet.md) 引用）。 确定 SDK 版本后，驱动程序执行命令。
+为驱动程序提供命令时，`dotnet.exe` 启动 CLI 命令执行过程。 首先，驱动程序确定要使用的 SDK 版本。 如果在命令选项中未指定版本，则驱动程序使用可用的最新版本。 若要指定某个版本，而不是最新安装的版本，请使用 `--fx-version <VERSION>` 选项（请参阅 [dotnet 命令](dotnet.md) 引用）。 确定 SDK 版本后，驱动程序执行命令。
 
 ### <a name="command-verb"></a>命令（“谓词”）
 
-命令（或“谓词”）仅仅是执行操作的命令。 例如，`dotnet build` 生成代码。 `dotnet publish` 发布代码。 使用 `dotnet-{verb}` 约定将命令作为控制台应用程序实现。 
+命令（或“谓词”）仅仅是执行操作的命令。 例如，`dotnet build` 生成代码。 `dotnet publish` 发布代码。 使用 `dotnet {verb}` 约定将命令作为控制台应用程序实现。
 
 ### <a name="arguments"></a>参数
 
@@ -102,8 +148,7 @@ dotnet /build_output/my_app.dll
 
 如果使用预览版 2 工具生成基于 *project.json* 的项目，请查阅 [dotnet 迁移](dotnet-migrate.md)主题，了解将你的项目迁移到 MSBuild/*.csproj* 以使用版本工具的信息。 对于预览版 2 工具版本之前所创建的 .NET Core 项目，按照[从 DNX 迁移到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指南手动更新项目，然后使用 `dotnet migrate` 或直接升级项目。
 
-## <a name="additional-resources"></a>其他资源
+## <a name="see-also"></a>请参阅
 
-* [dotnet/CLI GitHub 存储库](https://github.com/dotnet/cli/)
-* [.NET Core 安装指南](https://aka.ms/dotnetcoregs)
-
+ [dotnet/CLI GitHub 存储库](https://github.com/dotnet/cli/)   
+ [.NET Core 安装指南](https://aka.ms/dotnetcoregs)   

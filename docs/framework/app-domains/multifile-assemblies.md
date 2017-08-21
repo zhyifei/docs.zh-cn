@@ -1,5 +1,5 @@
 ---
-title: "多文件程序集 | Microsoft Docs"
+title: "多文件程序集"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0521e3bcfc7ed4e58434bacf36b43840647ddf50
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multifile-assemblies"></a>多文件程序集
@@ -53,3 +53,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>另请参阅  
  [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

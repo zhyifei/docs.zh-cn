@@ -1,5 +1,5 @@
 ---
-title: "Winres.exe（Windows 窗体资源编辑器）| Microsoft Docs"
+title: "Winres.exe（Windows 窗体资源编辑器）"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe（Windows 窗体资源编辑器）
@@ -146,7 +146,7 @@ winres /?
   
 4.  若要保存 .resx 或 .resources 文件的本地化版本，请单击“保存”图标或“文件”菜单中的相同命令。 该工具会显示“选择区域性”窗口。  
   
-5.  选择相应的区域性和文件模式，然后单击“确定”。 该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 [CultureInfo 类](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)。  
+5.  选择相应的区域性和文件模式，然后单击“确定”。 该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 <xref:System.Globalization.CultureInfo> 类。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -157,3 +157,4 @@ winres /?
  [工具](../../../docs/framework/tools/index.md)   
  [桌面应用中的资源](../../../docs/framework/resources/index.md)   
  [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
+

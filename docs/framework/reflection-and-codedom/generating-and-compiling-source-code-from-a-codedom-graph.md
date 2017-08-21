@@ -1,5 +1,5 @@
 ---
-title: "在 CodeDOM 图中生成和编译源代码 | Microsoft Docs"
+title: "在 CodeDOM 图中生成和编译源代码"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -34,11 +34,11 @@ caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6805c4a98c1a3f4d62984435da708a813f92dde4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b01517d7d8c12d9a0191293fb52f429bb83bf40
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>在 CodeDOM 图中生成和编译源代码
@@ -98,3 +98,4 @@ ms.lasthandoff: 06/02/2017
  <xref:System.CodeDom.Compiler>   
  [动态源代码生成和编译](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   
  [CodeDOM 快速参考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+

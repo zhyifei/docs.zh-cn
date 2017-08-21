@@ -1,5 +1,5 @@
 ---
-title: "从应用程序域中检索安装信息 | Microsoft Docs"
+title: "从应用程序域中检索安装信息"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: bd7f9a673d94085277023a4abd9db901fb5709b8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 865ae7b5cb005a5fc4fef283d63527b028253ad6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>从应用程序域中检索安装信息
@@ -41,3 +41,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>另请参阅  
  [对应用程序域进行编程](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [使用应用程序域](../../../docs/framework/app-domains/use.md)
+
