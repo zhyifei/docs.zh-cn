@@ -1,5 +1,5 @@
 ---
-title: "运行时如何定位程序集 | Microsoft Docs"
+title: "运行时如何定位程序集"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 78805f7139bff90127885af267c8ade9090fbd62
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
@@ -42,13 +42,13 @@ ms.lasthandoff: 06/02/2017
 >  可使用 [中附带的](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)程序集绑定日志查看器 (Fuslogvw.exe) [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]查看日志文件中的绑定信息。  
   
 ## <a name="initiating-the-bind"></a>启动绑定  
- 在运行时尝试解析其他程序集的引用时，开始查找和绑定到程序集的进程。 此引用可为静态，也可为动态。 编译器在生成时记录程序集清单的元数据中的静态引用。 由于调用各种方法（如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>），因此将即时构造动态引用。  
+ 在运行时尝试解析其他程序集的引用时，开始查找和绑定到程序集的进程。 此引用可为静态，也可为动态。 编译器在生成时记录程序集清单的元数据中的静态引用。 由于调用各种方法（如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>），所以将及时构造动态引用。  
   
  引用程序集的首选方式是使用完整引用，包括程序集名称、版本、区域性和公钥标记（若有）。 运行时按照本节稍后描述的步骤使用此信息查找程序集。 无论引用针对的程序集是静态还是动态，运行时均使用相同的解析进程。  
   
- 还可通过仅向调用方法提供程序集的部分信息（例如，仅指定程序集名称）动态引用程序集。 在这种情况下，仅搜索程序集的应用程序目录，不进行其他检查。 通过使用任一方法加载程序集（<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.AppDomain.Load%2A?displayProperty=fullName>），可执行部分引用。  
+ 还可通过仅向调用方法提供程序集的部分信息（例如，仅指定程序集名称）动态引用程序集。 在这种情况下，仅搜索程序集的应用程序目录，不进行其他检查。 通过使用任一方式加载程序集（ <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.AppDomain.Load%2A?displayProperty=fullName>），可执行部分引用。  
   
- 最后，可使用 [System.Reflection.Assembly.Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) 等方法执行动态引用并只提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。  
+ 最后，可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> 等方法执行动态引用并仅提供部分信息；然后在应用程序配置文件中用 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素限定该引用。 借助此元素，你可以提供应用程序配置文件（而不是代码）中的完全引用信息（名称、版本、区域性和公钥标记（若适用））。 如果想要完全限定应用程序目录之外的程序集引用，或者如果想要引用全局程序集缓存中的程序集且轻松指定配置文件（而不是代码）中的完全引用，可使用此技术。  
   
 > [!NOTE]
 >  多个应用程序间共享的程序集不应使用此类型的部分引用。 因为配置设置是基于每个应用程序（而非每个程序集）应用的，所以使用此类部分引用的共享程序集需要使用共享程序集的每个应用程序的配置文件中都具有限定信息。  
@@ -193,7 +193,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   名称，即被引用的程序集的名称。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomain.AppendPrivatePath%2A> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath`，然后探测应用程序配置文件中指定的路径。  
+-   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomain.AppendPrivatePath%2A> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>探测应用程序基和区域性目录  
  运行时始终先探测应用程序基，它可能是计算机的 URL 或应用程序根目录。 如果应用程序基中不存在引用的程序集且未提供区域性信息，则运行时将搜索具有程序集名称的所有子目录。 探测的目录包括：  
@@ -258,10 +258,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>探测的其他位置  
- 还可使用当前的绑定上下文来确定程序集的位置。 在 COM 互操作方案中使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法时，最常使用此操作。 如果某个程序集使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法引用其他程序集，调用程序集的位置被视为可提示引用的程序集的位置。 如果找到匹配项，则加载此程序集。 如果未找到匹配项，则运行时将继续执行搜索语义，然后查询 Windows Installer 以提供程序集。 如果未提供与绑定请求匹配的程序集，则将引发异常。 如果引用了类型，则此异常为托管代码中的 <xref:System.TypeLoadException>如果找不到正在加载的程序集，则为 <xref:System.IO.FileNotFoundException>。  
+ 还可使用当前的绑定上下文来确定程序集的位置。 在 COM 互操作方案中使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法时，最常使用此操作。 如果某个程序集使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法引用其他程序集，调用程序集的位置被视为可提示引用的程序集的位置。 如果找到匹配项，则加载此程序集。 如果未找到匹配项，则运行时将继续执行搜索语义，然后查询 Windows Installer 以提供程序集。 如果未提供与绑定请求匹配的程序集，则将引发异常。 如果引用了类型，则此异常为托管代码中的 <xref:System.TypeLoadException> 如果找不到正在加载的程序集，则为 <xref:System.IO.FileNotFoundException> 。  
   
  例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 http://www.code.microsoft.com/utils 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后，运行时在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [部署](../../../docs/framework/deployment/index.md)
+

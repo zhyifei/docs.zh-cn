@@ -1,5 +1,5 @@
 ---
-title: "检索桌面应用中的资源 | Microsoft Docs"
+title: "检索桌面应用程序中的资源"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: ad3d323968e2c75d1e347bd56bc2762a99da4d9a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f4c2527b7ef1e673d578f8c1e9a30fdacdea4046
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
@@ -41,9 +41,9 @@ ms.lasthandoff: 06/02/2017
 ## <a name="retrieving-resources-from-assemblies"></a>从程序集中检索资源  
  <xref:System.Resources.ResourceManager> 类提供对运行时资源的访问权限。 使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName> 方法检索字符串资源和 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName> 或使用 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=fullName> 方法检索非字符串资源。 每个方法都有两种重载：  
   
--   单一参数是包含资源名称的字符串的重载。 该方法尝试为当前线程区域性检索资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、<xref:System.Resources.ResourceManager.GetObject%28System.String%29> 和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
+-   单一参数是包含资源名称的字符串的重载。 该方法尝试为当前线程区域性检索资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
   
--   具有两个参数的重载：一个字符串包含资源名称，一个 <xref:System.Globalization.CultureInfo> 对象表示要对其检索资源的区域性。 如果找不到该区域性的资源集，资源管理器将使用回退规则检索相应的资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、<xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> 和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
+-   具有两个参数的重载：一个字符串包含资源名称，一个 <xref:System.Globalization.CultureInfo> 对象表示要对其检索资源的区域性。 如果找不到该区域性的资源集，资源管理器将使用回退规则检索相应的资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
  资源管理器使用资源回退进程控制应用检索区域性特定资源的方式。 有关详细信息，请参阅 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中的“资源回退进程”一节。 有关实例化 <xref:System.Resources.ResourceManager> 对象的详细信息，请参阅 <xref:System.Resources.ResourceManager> 类主题中的“实例化 ResourceManager 对象”一节。  
   
@@ -109,7 +109,7 @@ resgen AppResources.resx
 csc GetStream.cs /resource:AppResources.resources  
 ```  
   
- 下面的示例使用 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=fullName> 方法反序列化一个自定义对象。 该示例包含一个名为 UIElements.cs （对于 Visual Basic 则为 UIElements.vb）的源代码文件，用于定义以下名为 `PersonTable` 的结构。 此结构应由显示表列的本地化名称的常规表显示例程使用。 请注意，`PersonTable` 结构标有 <xref:System.SerializableAttribute> 属性。  
+ 下面的示例使用 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=fullName> 方法反序列化一个自定义对象。 该示例包含一个名为 UIElements.cs （对于 Visual Basic 则为 UIElements.vb）的源代码文件，用于定义以下名为 `PersonTable`的结构。 此结构应由显示表列的本地化名称的常规表显示例程使用。 请注意，`PersonTable` 结构标有 <xref:System.SerializableAttribute> 属性。  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)] [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
   
@@ -135,7 +135,7 @@ GetObject.exe
 ```  
   
 ## <a name="versioning-support-for-satellite-assemblies"></a>附属程序集的版本控制支持  
- 默认情况下，<xref:System.Resources.ResourceManager> 对象检索请求的资源时，会寻找版本号与主程序集版本号相匹配的附属程序集。 部署应用后，建议更新主程序集或特定资源附属程序集。 .NET Framework 提供对主程序集和附属程序集的版本控制支持。  
+ 默认情况下， <xref:System.Resources.ResourceManager> 对象检索请求的资源时，会寻找版本号与主程序集版本号相匹配的附属程序集。 部署应用后，建议更新主程序集或特定资源附属程序集。 .NET Framework 提供对主程序集和附属程序集的版本控制支持。  
   
  <xref:System.Resources.SatelliteContractVersionAttribute> 属性提供对主程序集的版本控制支持。 在应用的主程序集上指定此属性，无需更新主程序集的附属程序集即可更新和重新部署主程序集。 更新主程序集后，递增主程序集的版本号，但附属协定版本号保持不变。 资源管理器检索请求的资源时，会加载此属性指定的附属程序集版本。  
   
@@ -156,12 +156,12 @@ GetObject.exe
 .resources 文件的目录结构和命名约定  
   
 ### <a name="using-the-resource-manager"></a>使用资源管理器  
- 创建资源并将其放置在相应的目录中后，通过调用 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 方法创建 <xref:System.Resources.ResourceManager> 对象以使用资源。 第一个参数指定应用的默认 .resources 文件的根名称（在上一节的示例中为 "strings"）。 第二个参数指定的资源的位置（上一个示例中为 "Resources"）。 第三个参数指定要使用的 <xref:System.Resources.ResourceSet> 实现。 如果第三个参数为 `null`，则使用默认运行时 <xref:System.Resources.ResourceSet>。  
+ 创建资源并将其放置在相应的目录中后，通过调用 <xref:System.Resources.ResourceManager> 方法创建 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 对象以使用资源。 第一个参数指定应用的默认 .resources 文件的根名称（在上一节的示例中为 "strings"）。 第二个参数指定的资源的位置（上一个示例中为 "Resources"）。 第三个参数指定要使用的 <xref:System.Resources.ResourceSet> 实现。 如果第三个参数为 `null`，则使用默认运行时 <xref:System.Resources.ResourceSet> 。  
   
 > [!NOTE]
 >  请勿使用独立 .resources 文件部署 ASP.NET 应用。 这可能会导致锁定问题并破坏 XCOPY 部署。 建议部署附属程序集中的 ASP.NET 资源。 有关更多信息，请参见 [ASP.NET Web Page Resources Overview](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
   
- 实例化 <xref:System.Resources.ResourceManager> 对象后，使用前文所述的 <xref:System.Resources.ResourceManager.GetString%2A>、<xref:System.Resources.ResourceManager.GetObject%2A> 和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索资源。 但是，直接从 .resources 文件中检索资源与从程序集中检索嵌入的资源有所不同。 从 .resources 文件中检索资源时，<xref:System.Resources.ResourceManager.GetString%28System.String%29>、<xref:System.Resources.ResourceManager.GetObject%28System.String%29> 和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法总是忽略当前区域性检索默认区域性的资源。 若要检索应用的当前区域性资源或指定区域性的资源，必须调用 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、<xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法并指定要检索资源的区域性。 若要检索当前区域性的资源，请将 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性的值指定为 `culture` 参数。 如果资源管理器无法检索 `culture` 的资源，则使用标准资源回退规则检索相应的资源。  
+ 实例化 <xref:System.Resources.ResourceManager> 对象后，使用前文所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索资源。 但是，直接从 .resources 文件中检索资源与从程序集中检索嵌入的资源有所不同。 从 .resources 文件中检索资源时， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法总是忽略当前区域性检索默认区域性的资源。 若要检索应用的当前区域性资源或指定区域性的资源，必须调用 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法并指定要检索资源的区域性。 若要检索当前区域性的资源，请将 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性的值指定为 `culture` 参数。 如果资源管理器无法检索 `culture`的资源，则使用标准资源回退规则检索相应的资源。  
   
 ### <a name="an-example"></a>示例  
  下面的示例说明资源管理器如何直接从 .resources 文件中检索资源。 此示例由三个基于文本的资源文件组成，区域性分别为英语（美国）、法语（法国）和俄语（俄罗斯）。 英语（美国）为示例的默认区域性。 其资源存储在以下名为 Strings.txt 的文件中：  

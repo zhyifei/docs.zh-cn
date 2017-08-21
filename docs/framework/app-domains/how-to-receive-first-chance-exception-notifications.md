@@ -1,5 +1,5 @@
 ---
-title: "如何：接收最可能发生的异常通知 | Microsoft Docs"
+title: "如何：接收第一机会异常通知"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d5d3cd1e19d8a8156c4ee7968cb06770dcae58d0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd906fa2d45331082b9dc86c972e5630361e2653
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  默认应用程序域的名称与可执行文件的名称相同。  
   
- 如果将 <xref:System.AppDomain.FirstChanceException> 事件的处理程序添加到默认应用程序域，则在默认应用程序域处理异常之前，系统将引发并处理该事件。 为此，请将 C# 代码 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;`（在 Visual Basic 中为 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`n）添加到 `Main()` 的开头。  
+ 如果将 <xref:System.AppDomain.FirstChanceException> 事件的处理程序添加到默认应用程序域，则在默认应用程序域处理异常之前，系统将引发并处理该事件。 为此，请将 C# 代码 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;`（在 Visual Basic 中为 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`）添加到 `Main()` 的开头。  
   
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)][!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
   
@@ -101,3 +101,4 @@ ms.lasthandoff: 06/02/2017
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.AppDomain.FirstChanceException>
+
