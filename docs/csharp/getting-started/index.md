@@ -1,6 +1,6 @@
 ---
 title: "入门 - C# 指南"
-description: "C# 入门"
+description: "查看简短教程，快速了解介绍性 C# 概念并编写 .NET Core 应用程序。"
 keywords: "C#, 入门, 获取, 安装"
 author: rpetrusha
 ms.author: ronpet
@@ -9,12 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="get-started-with-c"></a>C# 入门 #
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/14/2017
 
    使用类库，可以定义能够从另一应用程序调用的类型和类型成员。 此主题介绍了如何创建类库，其中包含一个用于确定字符串是否以大写字母开头的方法。 生成完类库后，便可以开发[单元测试](../../core/tutorials/testing-library-with-visual-studio.md)来确保类库按预期运行，然后就是使其可供[要使用它的应用程序](../../core/tutorials/consuming-library-with-visual-studio.md)使用。
 
-- [C# 和 Visual Studio Code 入门](../../core/tutorials/with-visual-studio-code.md)
+* [C# 和 Visual Studio Code 入门](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code 是免费的代码编辑器，已针对构建和调试现代 Web 和云应用程序而优化。 它支持 IntelliSense，并可在 Linux、macOS 和 Windows 上使用。
 
