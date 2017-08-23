@@ -22,7 +22,7 @@ ms.lasthandoff: 08/04/2017
 
 Lambda 表达式是作为对象处理的代码块（表达式或语句块）。 它可作为参数传递给方法，也可通过方法调用返回。 Lambda 表达式广泛用于：
 
-- 将要执行的代码传递给异步方法，例如 @System.Threading.Tasks.Task.Run(System.Action)。
+- 将要执行的代码传递给异步方法，例如 @System.Threading.Tasks.Task.Run (System.Action)。
 
 - 编写 [LINQ 查询表达式](linq/index.md)。
 
