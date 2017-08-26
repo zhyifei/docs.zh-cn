@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿语言规范
@@ -47,7 +47,8 @@ C# 语言规范是 C# 语法和用法的权威来源。 此规范包含有关语
 应在 [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) 存储库中创建草稿规范的相关问题。 或者，如果有兴趣修复自己所发现的任何错误，则可向同一存储库提交[拉取请求](https://github.com/dotnet/csharplang/pulls)。
 
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../language-reference/index.md) [C# 编程指南](../../programming-guide/index.md)
+ [C# 参考](../../language-reference/index.md)  
+ [C# 编程指南](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [下一篇](../../../../_csharplang/spec/lexical-structure.md)
