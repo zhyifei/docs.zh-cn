@@ -193,16 +193,18 @@ static void DoIfAorB()
   
  若要使用 AND 运算符实现逻辑链接符号的效果，可以定义串行条件方法。 例如，仅当同时定义了 `A` 和 `B` 时才会执行下面的第二个方法：  
   
-```csharp  
-<Conditional("A")>   
-Shared Sub DoIfA()  
-    DoIfAandB()  
-End Sub  
+```csharp
+[Conditional("A")]  
+static void DoIfA()  
+{  
+    DoIfAandB();  
+}  
   
-<Conditional("B")>   
-Shared Sub DoIfAandB()  
-    ' Code to execute when both A and B are defined...  
-End Sub  
+[Conditional("B")]  
+static void DoIfAandB()  
+{  
+    // Code to execute when both A and B are defined...  
+}  
 ```  
   
 ### <a name="using-conditional-with-attribute-classes"></a>将 Conditional 用于特性类  
