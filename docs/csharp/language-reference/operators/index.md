@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 2ec2f07dda8979ca6def0648aae1ef23a8df6369
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="c-operators"></a>C# 运算符
@@ -80,7 +80,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md)：对整数运算禁用溢出检查。  这是默认的编译器行为。  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md)：返回类型 T 的默认初始值，引用类型的默认初始值为 `null`，数值类型的默认初始值为 0，结构类型成员的默认初始填充值为 0/`null`。  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md)：返回类型 T 的默认值，引用类型的默认值为 `null`，数值类型的默认值为 0，结构类型成员的默认填充值为 0/`null`。  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)：声明并返回委托实例。  
   
