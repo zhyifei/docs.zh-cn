@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="discards---c-guide"></a>放弃 - C# 指南
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/16/2017
 - 对具有 `out` 参数的方法的调用。
 - 当范围内没有 `_` 时，独立的 `_`。
 
-当 `_` 是有效放弃时，尝试检索其值或在赋值操作中使用它时会生成编译器错误 CS0301：“当前上下文中不存在名称 ‘_’”。 这是因为 `_` 未赋值，甚至可能未分配存储位置。 如果它是一个实际变量，则不能像之前的示例那样放弃多个值。
+当 `_` 是有效放弃时，尝试检索其值或在赋值操作中使用它时会生成编译器错误 CS0301：当前上下文中不存在名称 "\_"。 这是因为 `_` 未赋值，甚至可能未分配存储位置。 如果它是一个实际变量，则不能像之前的示例那样放弃多个值。
 
 ## <a name="tuple-and-object-deconstruction"></a>元组和对象析构
 

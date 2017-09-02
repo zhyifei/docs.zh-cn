@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -128,7 +128,7 @@ calculateButton.Clicked += async (o, e) =>
 此代码片段从 www.dotnetfoundation.org 下载 HTML，并对 HTML 中出现字符串“.NET”的次数计数。  它使用 ASP.NET MVC 定义执行此任务的 Web 控制器方法，以便返回数字。
 
 > [!NOTE]
-> 如果你打算进行实际的 HTML 分析，则不应使用正则表达式。  如果这是你在生成代码中的目标，请使用分析库。
+> 如果打算在生产代码中进行 HTML 分析，则不要使用正则表达式。 改为使用分析库。
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
