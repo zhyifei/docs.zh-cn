@@ -40,9 +40,9 @@ ms.lasthandoff: 07/28/2017
 # <a name="c-compiler-errors"></a>C# 编译器错误
 一些 C# 编译器错误有对应的主题，其中介绍了导致错误生成的原因，在某些情况下还介绍了错误修复方法。 请执行下列操作之一，查看是否有特定错误消息的相关帮助资料。  
   
--   在“输出窗口”[](/visualstudio/ide/reference/output-window)中查找错误号（例如 CS0029），然后在 MSDN 中进行搜索。  
+-   在[“输出窗口”](/visualstudio/ide/reference/output-window)中查找错误号（例如 CS0029），然后在 MSDN 中进行搜索。  
   
--   在“输出窗口”[](/visualstudio/ide/reference/output-window)中选择错误号（例如 CS0029），然后按 F1 键。  
+-   在[“输出窗口”](/visualstudio/ide/reference/output-window)中选择错误号（例如 CS0029），然后按 F1 键。  
   
 -   在“索引”的“查找”框中输入错误号。  
   
