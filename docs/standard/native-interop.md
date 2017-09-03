@@ -1,7 +1,7 @@
 ---
 title: "本机互操作性"
-description: "本机互操作性"
-keywords: .NET, .NET Core
+description: "了解如何与 .NET 中的本机组件交互。"
+keywords: ".NET、.NET Core"
 author: blackdwarf
 ms.author: ronpet
 ms.date: 06/20/2016
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="native-interoperability"></a>本机互操作性
 
-在本文档中，我们将略为深入地探讨 .NET 平台上提供的“本机互操作性”的所有三种方式。
+在本文档中，我们将略为深入地探讨使用 .NET 可实现“本机互操作性”的所有三种方式。
 
 调用本机代码的原因有以下几种：
 
@@ -53,7 +54,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 上述示例非常简单，但确实演示了从托管代码调用非托管函数需要做些什么。 让我们逐步分析该示例：
@@ -84,7 +84,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 当然，在 Linux 上也可以使用类似的示例。 函数名称是相同的，因为 `getpid(2)` 是 [POSIX](https://en.wikipedia.org/wiki/POSIX) 系统调用。
@@ -107,7 +106,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>从非托管代码调用托管代码
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,7 +142,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 在演练示例之前，最好是回顾一下所要使用的非托管函数的签名。 要调用以枚举所有窗口的函数具有以下签名：`BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -208,7 +205,6 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 macOS 示例使用相同的函数，唯一的差别在于 `DllImport` 特性的自变量，因为 macOS 将 `libc` 保留在不同的位置。
@@ -261,7 +257,6 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
 上面两个示例都依赖于参数，在这两种情况下，参数是作为托管类型提供的。 运行时将采取“适当的措施”，在另一个平台上将这些代码处理成等效的代码。 由于此过程对于编写优质本机互操作代码非常重要，接下来让我们看看运行时在_封送_类型时会发生什么情况。
@@ -270,12 +265,11 @@ namespace PInvokeSamples {
 
 **封送**是当类型需要跨越托管边界进入本机代码（或反之）时转换类型的过程。
 
-需要封送的原因是托管代码与非托管代码中的类型并不相同。 例如，在托管代码中，可以指定 `String`。但在非托管环境中，字符串类型可以是 Unicode（“宽型”）、非 Unicode、null 结尾、ASCII，等等。默认情况下，P/Invoke 子系统会根据默认行为尽量采取适当的措施。相关信息请参阅 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx)。 但是，如果需要额外的控制，可以使用 `MarshalAs` 特性指定要在非托管端上使用哪种预期类型。 例如，如果要将字符串作为以 null 结尾的 ANSI 字符串发送，可以执行类似于下面的操作：
+需要封送的原因是托管代码与非托管代码中的类型并不相同。 例如，在托管代码中，可指定 `String`。但在非托管环境中，字符串类型可以是 Unicode（“宽型”）、非 Unicode、null 结尾、ASCII 等。默认情况下，P/Invoke 子系统会根据默认行为尽量采取适当的措施。相关信息请参阅 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx)。 但是，如果需要额外的控制，可以使用 `MarshalAs` 特性指定要在非托管端上使用哪种预期类型。 例如，如果要将字符串作为以 null 结尾的 ANSI 字符串发送，可以执行类似于下面的操作：
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>封送类和结构
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-上面这个简单的示例演示了如何调用 `GetSystemTime()` 函数。 值得注意的部分是第 4 行。\.该特性指定应该按顺序将类的字段映射到另一端（非托管端）上的结构。 这意味着，字段的命名并不重要，唯一重要的是字段顺序，因为这种顺序需对应于非托管结构，如下所示：
+上面这个简单的示例演示了如何调用 `GetSystemTime()` 函数。 值得注意的部分是第 4 行。 该属性指定应按顺序将类的字段映射到另一端（非托管端）上的结构。 这意味着，字段的命名并不重要，唯一重要的是字段顺序，因为这种顺序需对应于非托管结构，如下所示：
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,7 +312,6 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 前一示例中已经演示了如何在 Linux 和 macOS 上执行此过程。 下面再演示一次。
@@ -341,7 +333,6 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 `StatClass` 类表示 UNIX 系统上的 `stat` 系统调用返回的结构。 它显示有关给定文件的信息。 上面的类是托管代码中的 stat 结构表示形式。 同样，该类中的字段顺序必须与本机结构相同（可以在偏好的 UNIX 实现上的手册页中找到相关信息），并且这些字段的基础类型必须相同。

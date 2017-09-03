@@ -1,7 +1,7 @@
 ---
 title: "LINQ（语言集成查询）"
-description: "LINQ（语言集成查询）"
-keywords: .NET, .NET Core
+description: "了解 LINQ 如何向 C# 和 VB 中提供语言级查询功能和 API，以便能够编写具有表达力度的声明性代码。"
+keywords: ".NET、.NET Core"
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 6d9c163255939c3732177ecccb373479ab610447
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -29,7 +30,6 @@ LINQ 在 C# 和 VB 中提供语言级查询功能和[高阶函数](https://en.wi
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
-
 ```
 
 同一个示例使用 `IEnumerable<T>` API 的情况：
@@ -37,7 +37,6 @@ var linqExperts = from p in programmers
 ```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
-
 ```
 
 ## <a name="linq-is-expressive"></a>LINQ 具有很高的表达力度
@@ -53,7 +52,6 @@ foreach (var pet in pets)
 {
     petLookup.Add(pet.RFID, pet);
 }
-
 ```
 
 代码的意图不是创建新的 `Dictionary<int, Pet>` 并通过循环在其中添加条目，而是将现有列表转换为字典！ LINQ 维持这种意图，而命令性代码则不会。
@@ -62,7 +60,6 @@ foreach (var pet in pets)
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
-
 ```
 
 使用 LINQ 的代码非常有效，因为在程序员的推理过程中，LINQ 能够在意图与代码之间找到合理的平衡。 另一个好处就是精简代码。 想像一下，如果能够像上面一样将大部分的基本代码减掉 1/3，情况会怎样？ 很爽，对吧？
@@ -81,7 +78,6 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
            where (string)el.Element(attributeName) == value
            select el;
 }
-
 ```
 
 为了执行此任务而编写代码来手动遍历 XML 文档会带来重重困难。
@@ -94,7 +90,6 @@ LINQ 提供程序的作用不仅仅是与 XML 交互。 [Linq to SQL](https://ms
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
-
 ```
 
 要比下面的代码简洁得多：
@@ -103,7 +98,6 @@ var filteredItems = myItems.Where(item => item.Foo);
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
-
 ```
 
 难道 API 语法不比查询语法更简洁吗？
@@ -151,7 +145,6 @@ var queryCats = from dog in dogs
 // Summing then lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
-
 ```
 
 *   平展列表的列表：
@@ -159,7 +152,6 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
-
 ```
 
 *   两个集之间的联合（使用自定义比较运算符）：
@@ -195,7 +187,6 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 
 // Gets all the short-haired dogs between two different kennels
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
-
 ```
 
 *   两个集之间的交集：
@@ -204,7 +195,6 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
-
 ```
 
 *   排序：
@@ -214,7 +204,6 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
               .ThenBy(direction => direction.EstimatedTime);
-
 ```
 
 *   最后，我们演示一个更高级的示例：确定相同类型的两个实例的属性值是否相等（该示例摘自[此 StackOverflow 文章](http://stackoverflow.com/a/844855)，不过已做修改）：
@@ -239,7 +228,6 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
     return self == to;
 }
-
 ```
 
 ## <a name="plinq"></a>PLINQ
@@ -260,7 +248,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
     return facebookUsers.AsParallel()
                         .Aggregate(seed, threadAccumulator, threadResultAccumulator, resultSelector);
 }
-
 ```
 
 此代码将会根据需要在系统线程之间将 `facebookUsers` 分区，累加每个并行线程上的类似项总计，累加每个线程计算的结果，然后将该结果投影为一个合理的字符串。

@@ -1,26 +1,26 @@
 ---
 title: "语言独立性和与语言无关的组件"
-description: "语言独立性和与语言无关的组件"
+description: "了解如何使用 .NET 中支持的众多语言之一（如 C#、C++/CLI、F#、IronPython、VB、Visual COBOL 和 PowerShell）进行开发。"
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/10/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
-.NET 平台与语言无关。 这意味着，开发人员可以使用面向 .NET 平台的多种语言之一（例如 C#、F# 和 Visual Basic）进行开发。 可以访问针对 .NET 平台开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果你是组件开发人员，无论组件采用哪种语言，均可由任何 .NET 应用程序访问。
+.NET 是独立的语言。 这意味着，开发人员可使用面向 .NET 实现的多种语言之一（例如 C#、F# 和 Visual Basic）进行开发。 可访问针对 .NET 实现开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果你是组件开发人员，无论组件采用哪种语言，均可由任何 .NET 应用程序访问。
 
 > [!NOTE]
 > 本文的第一部分讨论如何创建独立于语言的组件（即以任何语言编写的应用均可以使用的组件）。 还可以从用多种语言编写的源代码创建单个组件或应用；请参阅本文第二部分的[跨语言互操作性](#cross-language-interoperability)。 
@@ -347,7 +347,7 @@ End Class
  
  .NET Framework 类库或任何其他类库可能包含不符合 CLS 的其他类型；例如： 
  
- * 装箱的值类型。 下面的 C# 示例创建一个具有名为 `Value` 的 `int` *类型的公共属性的类。由于 `int`* 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。
+ * 装箱的值类型。 下面的 C# 示例创建一个具有名为 `Value` 的 `int`* 类型的公共属性的类。 由于 `int`* 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。
 
   ```csharp
   using System;
@@ -1110,7 +1110,7 @@ End Structure
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>接口
 
@@ -1626,9 +1626,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-泛型类型名称采用 *name*'*n* 格式进行编码，其中 *name* 是类型名称，*`* 是字符文本，*n* 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。 
+泛型类型名称采用 name'n 格式进行编码，其中 name 是类型名称，` 是字符文本，n 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。 
 
-如果将约束应用于泛型类型，则任何用作约束的类型也必须符合 CLS。 下面的示例定义一个名为 `BaseClass` 的不符合 CLS 的类和一个其类型参数必须派生自 `BaseCollection` 的名为 `BaseClass` 的泛型类。 但由于 `BaseClass` 不符合 CLS，编译器会发出警告。 
+如果将约束应用于泛型类型，则任何用作约束的类型也必须符合 CLS。 下面的示例定义一个名为 `BaseClass` 的不符合 CLS 的类和一个其类型参数必须派生自 `BaseCollection` 的名为 `BaseClass` 的泛型类。 但由于 `BaseClass` 不符合 CLS，因此编译器会发出警告。 
 
 ```csharp
 using System;
@@ -1660,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 如果泛型类型派生自泛型基本类型，则其必须重新声明所有约束，以确保也满足对基本类型的约束。 下面的示例定义可表示任何数值类型的 `Number<T>`。 它还定义表示浮点值的 `FloatingPoint<T>` 类。 但是，源代码无法编译，因为它未将 `Number<T>` 上（T 必须是值类型）的约束应用于 `FloatingPoint<T>`。
@@ -1938,7 +1937,7 @@ End Class
 
 * 派生类的构造函数必须先调用其基类的实例构造函数，然后才能访问继承的实例数据。 存在此要求是因为基类构造函数并不由它们的派生类继承。 此规则不适用于不支持直接继承的结构。 
 
-  通常，编译器独立地强制实施 CLS 遵从性的此规则，如下面的示例所示。 它创建派生自 `Person` 类的 `Doctor` 类，但 `Doctor` 类无法调用 `Person` 类构造函数来初始化继承的实例字段。 
+  通常，编译器独立地强制实施 CLS 遵从性的此规则，如下面的示例所示。 它创建派生自 `Doctor` 类的 `Person` 类，但 `Doctor` 类无法调用 `Person` 类构造函数来初始化继承的实例字段。 
 
     ```csharp
     using System;
