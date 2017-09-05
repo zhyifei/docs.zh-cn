@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
-ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="get-started-with-visual-basic-and-net-core"></a>Visual Basic 和.NET Core 入门
+
+[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用程序](../../core/tutorials/vb-with-visual-studio.md)
+
+[使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>其他信息
 
 [Visual Basic 的新增功能](whats-new.md)   
 列出 Visual Basic .NET 各版本中的新功能。
@@ -49,7 +55,13 @@ ms.lasthandoff: 08/11/2017
   
 [为 Visual Basic 程序员提供的附加资源](additional-resources.md)  
 提供网站和新闻组列表，它们能够帮助您找到常见问题的答案。  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>使用 Visual Basic 开发 .NET Core 应用程序
+
+[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用](../../core/tutorials/vb-with-visual-studio.md) 
+
+[使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>请参阅
  [获得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供包含 Visual basic 支持的 Visual Studio 版本的下载链接，包含免费版。  
