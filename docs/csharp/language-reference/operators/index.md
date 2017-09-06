@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: 2ec2f07dda8979ca6def0648aae1ef23a8df6369
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-operators"></a>C# 运算符
@@ -235,7 +235,6 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 ## <a name="see-also"></a>另请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
- [可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C#](../../../csharp/index.md) [可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 
