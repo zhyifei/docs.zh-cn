@@ -1,40 +1,45 @@
 ---
-title: "NTLM 和 Kerberos 身份验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "身份验证 [.NET Framework]，NTLM"
-  - "身份验证 [.NET Framework]，Kerberos"
-  - "用户身份验证，Kerberos"
-  - "用户身份验证，NTLM"
-  - "Kerberos 身份验证"
-  - "接收数据，身份验证"
-  - "NTLM 身份验证"
-  - "Internet，身份验证"
-  - "客户端身份验证，Kerberos"
-  - "发送数据，身份验证"
-  - "网络资源，身份验证"
-  - "类 [.NET Framework]，身份验证"
-  - "客户端身份验证，NTLM"
+title: "NTLM 和 Kerberos 身份验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- authentication [.NET Framework], NTLM
+- authentication [.NET Framework], Kerberos
+- user authentication, Kerberos
+- user authentication, NTLM
+- Kerberos authentication
+- receiving data, authentication
+- NTLM authentication
+- Internet, authentication
+- client authentication, Kerberos
+- sending data, authentication
+- network resources, authentication
+- classes [.NET Framework], authentication
+- client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb52a70aa34e1011f12a77ea32ec5077f92c127
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# NTLM 和 Kerberos 身份验证
-默认NTLM身份验证，而Kerberos Microsoft Windows NT用户凭据与调用应用程序尝试与服务器的身份验证的身份验证。  如下面的示例所示，当使用非默认的NTLM身份验证时，应用程序设置身份验证类型为NTLM并使用 <xref:System.Net.NetworkCredential> 对象将用户名、密码和字段添加到宿主，。  
+# <a name="ntlm-and-kerberos-authentication"></a>NTLM 和 Kerberos 身份验证
+默认 NTLM 身份验证和 Kerberos 身份验证使用与调用应用程序关联的 Microsoft Windows NT 用户凭据来尝试通过服务器进行身份验证。 使用非默认 NTLM 身份验证时，应用程序会将认证类型设置为 NTLM，并使用 <xref:System.Net.NetworkCredential> 对象将用户名、密码和域传递给主机，如下例所示。  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -50,7 +55,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- 需要连接到Internet服务使用应用程序用户的凭据，如下面的示例所示的应用程序可能会执行与用户的默认凭据，。  
+ 需要使用应用程序用户凭据连接到 Internet 服务的应用程序可以使用用户默认凭据进行此操作，如以下示例所示。  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -64,11 +69,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- 协调身份验证模块确定远程服务器是否使用NTLM或Kerberos身份验证，并将相应的响应。  
+ 协商身份验证模块确定远程服务器使用 NTLM 身份验证还是 Kerberos 身份验证，并发送相应响应。  
   
 > [!NOTE]
->  NTLM身份验证不会通过代理服务器工作。  
+>  无法通过代理服务器进行 NTLM 身份验证。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [基本和摘要式身份验证](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
  [Internet 身份验证](../../../docs/framework/network-programming/internet-authentication.md)
+

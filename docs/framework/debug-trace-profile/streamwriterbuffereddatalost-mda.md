@@ -1,46 +1,51 @@
 ---
-title: "streamWriterBufferedDataLost MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "StreamWriter class, data buffering problems"
-  - "managed debugging assistants (MDAs), StreamWriter data buffering"
-  - "buffers, StreamWriter problems"
-  - "MDAs (managed debugging assistants), StreamWriter data buffering"
-  - "StreamWriter buffered data lost"
-  - "data buffering problems"
-  - "streamWriterBufferedDataLost MDA"
+title: streamWriterBufferedDataLost MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- StreamWriter class, data buffering problems
+- managed debugging assistants (MDAs), StreamWriter data buffering
+- buffers, StreamWriter problems
+- MDAs (managed debugging assistants), StreamWriter data buffering
+- StreamWriter buffered data lost
+- data buffering problems
+- streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3903e2814cc15ac2678a0a5102046445d332ce75
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# streamWriterBufferedDataLost MDA
-当对 <xref:System.IO.StreamWriter> 执行写入，但是随后未在销毁 <xref:System.IO.StreamWriter> 的实例之前调用 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法时，将激活 `streamWriterBufferedDataLost` 托管调试助手 \(MDA\)。  当启用此 MDA 时，运行时将确定 <xref:System.IO.StreamWriter> 中是否仍然存在任何缓冲数据。  如果不存在缓冲数据，则激活该 MDA。  调用 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以强制终结器运行。  否则终结器似乎将在任意时间运行，并且可能在进程退出时根本就不运行。  在启用此 MDA 的情况下显式运行终结器将有助于更可靠地重现此类问题。  
+# <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
+写入 <xref:System.IO.StreamWriter> 时，将激活 `streamWriterBufferedDataLost` 托管调试助手 (MDA)，但随后，在销毁 <xref:System.IO.StreamWriter> 的实例前不再调用 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法。 启用此 MDA 时，运行时确定 <xref:System.IO.StreamWriter> 内是否仍然有任何缓冲数据。 如果缓冲数据确实存在，则将激活 MDA。 调用 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以强制运行终结器。 否则，终结器将似乎在任意时刻运行，并且在进程退出时可能根本没有运行。 在启用了此 MDA 的情况下显式运行终结器将有助于更可靠地重现此类问题。  
   
-## 症状  
- <xref:System.IO.StreamWriter> 未将最后 1 至 4 KB 数据写到文件。  
+## <a name="symptoms"></a>症状  
+ <xref:System.IO.StreamWriter> 不会将最后 1-4 KB 的数据写入文件。  
   
-## 原因  
- <xref:System.IO.StreamWriter> 在内部缓冲数据，这需要调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A> 方法将缓冲数据写到基础数据存储区。  如果没有适当地调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A>，<xref:System.IO.StreamWriter> 实例中缓冲的数据可能不会按预期写出。  
+## <a name="cause"></a>原因  
+ <xref:System.IO.StreamWriter> 内部缓冲数据，这要求调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A> 方法将缓冲数据写入基础数据存储。 如果没有恰当调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A>，则可能未按预期方式写入 <xref:System.IO.StreamWriter> 实例中缓冲的数据。  
   
- 下面是此 MDA 应该捕获的编写得很糟糕的代码的示例。  
+ 以下示例为此 MDA 应捕获的编写欠佳的代码。  
   
-```  
+```csharp  
 // Poorly written code.  
 void Write()   
 {  
@@ -50,26 +55,26 @@ void Write()
 }  
 ```  
   
- 如果触发垃圾回收，然后将其挂起直至终结器完成，则上面的代码将更可靠地激活此 MDA。  若要跟踪此类问题，可以在调试版本中将下面的代码添加到上面的方法的结尾处。  这样将有助于可靠地激活 MDA，不过它并未解决此类问题的根源。  
+ 如果触发垃圾回收，则上述代码将更可靠地激活此 MDA，然后暂停，直到终结器完成操作。 要追踪此类问题，可在调试版本中将以下代码添加到上述方法的末尾。 这将有助于稳定地激活 MDA，但当然，这不能解决问题的根源。  
   
-```  
+```csharp
 GC.Collect();  
 GC.WaitForPendingFinalizers();  
 ```  
   
-## 解决方法  
- 在关闭具有 <xref:System.IO.StreamWriter> 的实例的应用程序或任何代码块之前，确保调用 <xref:System.IO.StreamWriter> 的 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A>。  达到此目的的最佳机制之一是用 C\# `using` 块（在 Visual Basic 中为 `Using`）创建该实例，这样将确保调用编写器的 <xref:System.IO.StreamWriter.Dispose%2A> 方法，从而正确关闭该实例。  
+## <a name="resolution"></a>解决方法  
+ 在关闭应用程序或具有 <xref:System.IO.StreamWriter> 实例的代码块之前，请确保在 <xref:System.IO.StreamWriter> 上调用 <xref:System.IO.StreamWriter.Close%2A> 或 <xref:System.IO.StreamWriter.Flush%2A>。 实现此操作的最佳机制之一是使用 C# `using` 块（Visual Basic 中为 `Using`）创建实例，这将确保调用编写器的 <xref:System.IO.StreamWriter.Dispose%2A> 方法，从而正确关闭实例。  
   
-```  
+```csharp
 using(StreamWriter sw = new StreamWriter("file.txt"))   
 {  
     sw.WriteLine("Data");  
 }  
 ```  
   
- 下面的代码演示能达到相同效果的解决方案，不过它使用的是 `try/finally` 而不是 `using`。  
+ 以下代码显示使用 `try/finally`而非 `using`）的相同解决方案。  
   
-```  
+```csharp
 StreamWriter sw;  
 try   
 {  
@@ -83,9 +88,9 @@ finally
 }  
 ```  
   
- 如果不能使用这其中任一种方案（例如，如果 <xref:System.IO.StreamWriter> 存储在静态变量中，并且在其生存期结束时很难运行代码），那么在最后使用 <xref:System.IO.StreamWriter> 之后调用其上的 <xref:System.IO.StreamWriter.Flush%2A>，或者在第一次使用它之前将 <xref:System.IO.StreamWriter.AutoFlush%2A> 属性设置为 `true`，应该会避免此问题。  
+ 如果这两个解决方案都不能使用（例如，如果 <xref:System.IO.StreamWriter> 存储在静态变量中，并且无法在其生命周期结束时轻松运行代码），则通过以下方式避免此问题：在最后一次使用 <xref:System.IO.StreamWriter> 上的 <xref:System.IO.StreamWriter.Flush%2A> 之后调用它，或者将 <xref:System.IO.StreamWriter.AutoFlush%2A> 属性设置为 `true`。  
   
-```  
+```csharp
 private static StreamWriter log;  
 // static class constructor.  
 static WriteToFile()   
@@ -98,15 +103,15 @@ static WriteToFile()
 }  
 ```  
   
-## 对运行时的影响  
- 此 MDA 对运行时没有影响。  
+## <a name="effect-on-the-runtime"></a>对运行时的影响  
+ 此 MDA 对运行时无任何影响。  
   
-## Output  
- 指示发生此冲突的消息。  
+## <a name="output"></a>输出  
+ 指示发生了此冲突的消息。  
   
-## 配置  
+## <a name="configuration"></a>配置  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <streamWriterBufferedDataLost />  
@@ -114,6 +119,7 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.IO.StreamWriter>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

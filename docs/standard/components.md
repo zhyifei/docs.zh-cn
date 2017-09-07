@@ -1,86 +1,102 @@
 ---
 title: ".NET 体系结构组件"
-description: "描述主要的 .NET 体系结构组件，例如 .NET 标准库、.NET 运行时和工具。"
-keywords: ".NET, .NET 标准库, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 编译器"
+description: "描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现和工具。"
+keywords: ".NET, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 编译器"
 author: cartermp
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
-ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 14522f165b22a7b1bb2a717a7c9f293a265f4eb0
+ms.openlocfilehash: 8934febe77b30fb318b06e4d8d297282368438a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
-.NET 由多个主要组件组成。  它具有一个名为 .NET 标准库的标准库，该标准库是一个可随处运行的大型 API 集。  该标准库由三个 .NET 运行时实现，即 .NET Framework、.NET Core 和 Mono for Xamarin。  .NET 语言还在任何 .NET 运行时上运行。  此外，还可以通过每个平台上的一些工具生成项目。  无论选择何种运行时，这些工具都相同。
+.NET 应用开发用于并运行于一个或多个 .NET 实现。  .NET 实现包括 .NET Framework、.NET Core 和 Mono。 .NET 的所有实现都有一个名为 .NET Standard 的通用 API 规范。 本文简要介绍了每个概念。
 
-此处是每个先前提及的 .NET 组件以及其组合方式的图示概述。
+## <a name="net-standard"></a>.NET Standard
 
-![所有 .NET 体系结构组件组合在一起](media/components.png)
+.NET Standard 是一组由 .NET 实现的基类库实现的 API。 更正式地说，它是构成协定统一集（这些协定是编写代码的依据）的特定 .NET API 组。 这些协定在每个 .NET 实现中实现。 这可实现不同 .NET 实现间的可移植性，有效地使代码可在任何位置运行。
 
-然后是上面所示的每个主要组件的简要说明。  
+.NET Standard 也是一个[目标框架](glossary.md#target-framework)。 如果代码面向 .NET Standard 版本，则它可在支持该 .NET Standard 版本的任何 .NET 实现上运行。
 
-## <a name="net-standard-library"></a>.NET 标准库
+若要详细了解 .NET Standard 以及如何将其作为目标，请参阅 [.NET Standard](net-standard.md) 主题。
 
-.NET 标准库是一组由 .NET 运行时实现的 API。
+## <a name="net-implementations"></a>.NET 实现
 
-更正式地说，它是构成协定统一集（这些协定是编写代码的依据）的特定 .NET API 组。  这些协定对每个 .NET 运行时都具有基础实现。  这可跨不同的 .NET 运行时实现可移植性，以使代码可有效地“随处运行”。
+.NET 的每个实现都具有以下组件：
 
-.NET 标准库还是一个生成目标，这时被称作 .NET 标准。  当前可面向 .NET Standard 1.0-1.6。  如果代码面向 .NET Standard 版本，则可确保其可在实现该版本的任意 .NET 运行时上运行。
+- 一个或多个运行时。 示例：用于 .NET Framework 的 CLR、CoreCLR 和用于 .NET Core 的 CoreRT。
+- 实现 .NET Standard 并且可实现其他 API 的类库。 示例：.NET Framework 基类库、.NET Core 基类库。
+- 可选择包含一个或多个应用程序框架。 示例： [ASP.NET](https://www.asp.net/)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 包含在 .NET Framework 中。
+- 可包含开发工具。 某些开发工具在多个实现之间共享。
 
-若要了解有关 .NET 标准库和面向 .NET 标准的详细信息，请参阅 [.NET 标准库](library.md)。
-
-## <a name="net-runtimes"></a>.NET 运行时
-
-Microsoft 积极开发和维护的主要 .NET 运行时有 3 个：.NET Core、.NET Framework 和 Mono for Xamarin。
+Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET Framework、Mono 和 UWP。
 
 ### <a name="net-core"></a>.NET 核心
 
-.NET Core 是一个经优化用于服务器工作负荷的跨平台运行时。  它实现 .NET 标准库，这意味着任何面向 .NET 标准的代码都可在 .NET Core 上运行。  它是 ASP.NET Core 和通用 Windows 平台 (UWP) 所使用的运行时。  它新式、高效，专用于处理大规模的服务器和云工作负荷。
+.NET Core 是一个经优化用于服务器工作负荷的跨平台实现。 它新式、高效，专用于处理大规模的服务器和云工作负荷。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 ASP.NET Core 在 .NET Core 上运行。
 
 若要了解有关 .NET Core 的详细信息，请参阅 [.NET Core 指南](../core/index.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework 是自 2002 年就已存在的历史 .NET 运行时。  它是现有的 .NET 开发人员经常使用的 .NET Framework。  它实现 .NET 标准库，这意味着任何面向 .NET 标准的代码都可在 .NET Framework 上运行。  它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。  .NET Framework 非常适合用于生成 Windows 桌面应用程序。
+.Net Framework 是自 2002 年起就已存在的原始 .NET 实现。 它是当前 .NET 开发人员经常使用的 .NET Framework。 4.5 版以及更高版本实现 .NET Standard，因此面向 .NET Standard 的代码都可在这些版本的 .NET Framework 上运行。 它还包含一些特定于 Windows 的 API，如通过 Windows 窗体和 WPF 进行 Windows 桌面开发的 API。 .NET Framework 非常适合用于生成 Windows 桌面应用程序。
 
 若要了解有关 .NET Framework 的详细信息，请参阅 [.NET Framework 指南](../framework/index.md)。
 
-### <a name="mono-for-xamarin"></a>Mono for Xamarin
+### <a name="mono"></a>Mono
 
-Mono 是 Xamarin 应用所使用的运行时。  它实现 .NET 标准库，这意味着任何面向 .NET 标准的代码都可在 Xamarin 应用上运行。  它包含其他适用于 iOS、Android、Xamarin.Forms 和 Xamarin.Mac 的 API。  Mono for Xamarin 非常适合生成 iOS 和 Android 移动应用程序。
+Mono 是主要在需要小型运行时使用的 .NET 实现。 它是在 Android、Mac、iOS、tvOS 和 watchOS 上驱动 Xamarin 应用程序的运行时，且主要针对小内存占用。
+
+它支持所有当前已发布的 .NET Standard 版本。
+
+以前，Mono 实现更大的 .NET Framework API 并模拟一些 Unix 上最常用的功能。 有时使用它运行依赖 Unix 上的这些功能的 .NET 应用程序。
+
+Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平台使用的完整静态编译器（预先编译）。
 
 若要了解有关 Mono 的详细信息，请参阅 [Mono 文档](http://www.mono-project.com/docs/)。
 
+### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
+
+UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件的 .NET 实现。 它旨在统一可能想要以其为目标的不同类型的设备，包括电脑、平板电脑、平板手机、电话，甚至 Xbox。 UWP 提供许多服务，如集中式应用商店、执行环境 (AppContainer) 和一组 Windows API（用于代替 Win32 (WinRT)）。 应用可采用 C++、C#、VB.NET 和 JavaScript 编写。 使用 C# 和 VB.NET 时，.NET API 由 .NET Core 提供。
+
+若要详细了解 UWP，请参阅[通用 Windows 平台简介](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)。
+
+## <a name="net-runtimes"></a>.NET 运行时
+
+运行时是用于托管程序的执行环境。 OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
+ 
+ - .NET Framework 公共语言运行时 (CLR)
+ - .NET Core 核心公共语言运行时 (CoreCLR)
+ - 适用于通用 Windows 平台的 .NET Native 
+ - 用于 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面框架的 Mono 运行时
+
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和常见基础结构
 
-.NET 工具在每个 .NET 实现中也很常见。  其中包括（但不限于）：
+可访问一整套适用于每种 .NET 实现的工具和基础结构组件。 包括（但不限于）以下几种：
 
-* .NET 语言及其编译器
-* 运行时组件，例如 JIT 和垃圾回收器
-* .NET 项目系统（有时称为“csproj”、“vbproj”或“fsproj”）
-* MSBuild（用于生成项目的生成引擎）
-* NuGet（适用于.NET 的 Microsoft 程序包管理器）
-* .NET CLI（用于生成 .NET 项目的跨平台命令行接口）
-* 开放源生成业务流程工具，例如 CAKE 和 FAKE
+- .NET 语言及其编译器
+- .NET 项目系统（基于 .csproj.vbproj 和 .fsproj 文件）
+- [MSBuild](/visualstudio/msbuild/msbuild)（用于生成项目的生成引擎）
+- [NuGet](/nuget/)（适用于.NET 的 Microsoft 程序包管理器）
+- 开放源生成业务流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
-此处的要点应该是有大量的工具和基础结构可满足选择用来生成应用的任何“风格”的 .NET。
+## <a name="see-also"></a>请参阅
 
-## <a name="next-steps"></a>后续步骤
+[.NET Standard](net-standard.md)  
+[.NET Core 指南](../core/index.md)  
+[.NET Framework 指南](../framework/index.md)  
+[C# 指南](../csharp/index.md)  
+[F# 指南](../fsharp/index.md)  
+[VB.NET 指南](../visual-basic/index.md)  
 
-有关详细信息，请参阅以下内容：
-
-* [.NET 标准库](library.md)
-* [.NET Core 指南](../core/index.md)
-* [.NET Framework 指南](../framework/index.md)
-* [C# 指南](../csharp/index.md)
-* [F# 指南](../fsharp/index.md)
-* [VB.NET 指南](../visual-basic/index.md)
 

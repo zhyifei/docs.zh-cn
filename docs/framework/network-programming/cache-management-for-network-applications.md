@@ -1,50 +1,56 @@
 ---
-title: "网络应用程序的缓存管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "缓存 [.NET Framework]，网络应用程序"
-  - "网络资源，缓存"
-  - "Internet，缓存"
+title: "网络应用程序的缓存管理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- cache [.NET Framework], network applications
+- network resources, caching
+- Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bdd1416de418dfb9b8b5c68da205817ae6d6225b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 网络应用程序的缓存管理
-本主题及其相关子主题描述如何使用 <xref:System.Net.WebClient>、 <xref:System.Net.WebRequest>、 <xref:System.Net.HttpWebRequest>和 <xref:System.Net.FtpWebRequest> 选件类获取资源的缓存。  
+# <a name="cache-management-for-network-applications"></a>网络应用程序的缓存管理
+本主题及其相关的副主题描述针对使用 <xref:System.Net.WebClient>、<xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 类获取的资源的缓存。  
   
- 缓存为应用程序已请求的资源提供临时存储。  如果应用程序多次请求同一资源，该资源可以从缓存返回，避免开销再次请求它从服务器。  缓存可通过减少获取改进应用程序性能的请求的资源。  缓存可以通过减少行程降低数或减小网络通信量到服务器。  当缓存提高性能时，它会增加该资源返回到应用程序已过时的风险，这意味着它与将服务器发送的资源是不同的，如果缓存未被使用。  
+ 缓存为已由应用程序请求的资源提供临时存储。 如果应用程序多次请求同一资源，则可以从此缓存中返回此资源，避免了重复向服务器发出请求的开销。 缓存可以通过减少获取请求的资源所需的时间，以提高应用程序性能。 缓存还可以通过减少对服务器的访问次数，以减少网络流量。 虽然缓存提高了性能，但会增加返回到应用程序的资源已过时的风险，这意味着如果未使用缓存，返回到应用程序的资源则与由服务器发送的资源不同。  
   
- 缓存可允许未经授权的用户或进程读取敏感数据。  缓存的一种验证的响应能从缓存中检索，不使用一种附加权限。  如果启用了缓存，转到 <xref:System.Net.WebRequest.CachePolicy%2A> 到 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.RequestCacheLevel> 到此请求中禁用缓存。  
+ 缓存可以允许未经授权的用户或进程读取敏感数据。 在无需进行额外授权的情况下，可以从缓存中检索缓存的已经过身份验证的响应。 如果已启用缓存，请将 <xref:System.Net.WebRequest.CachePolicy%2A> 更改为 <xref:System.Net.Cache.RequestCacheLevel.BypassCache> 或 <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> 以针对此请求禁用缓存。  
   
- 由于安全问题，缓存用于中间层方案建议的 **not** 。  
+ 出于安全考虑，不建议将缓存用于中间层方案。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
- 解释什么缓存策略以及定义一个。  
+ 说明什么是缓存策略以及如何定义一个缓存策略。  
   
  [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- 定义了基于位置的缓存策略的每种类型可用于超文本传输协议\(HTTP和https\)的资源。  
+ 定义基于位置的缓存策略的每个类型，此策略可用于超文本传输协议（http 和 https）资源。  
   
  [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  描述可用于自定义基于时间的缓存策略的条件。  
   
- [配置网络应用程序中的缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- 描述如何以编程方式创建缓存策略并请求使用缓存。  
+ [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ 描述如何以编程方式创建缓存策略以及使用缓存的请求。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Net.Cache>  
- 定义用于的类型和枚举定义使用 <xref:System.Net.WebRequest>、 <xref:System.Net.HttpWebRequest>和 <xref:System.Net.FtpWebRequest> 选件类获取资源的缓存策略。
+ 定义类型和枚举，这些类型和枚举用于为使用 <xref:System.Net.WebRequest><xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 类获取的资源定义缓存策略。
+

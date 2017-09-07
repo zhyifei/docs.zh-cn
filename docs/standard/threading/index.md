@@ -1,5 +1,5 @@
 ---
-title: "托管线程 | Microsoft Docs"
+title: "托管线程处理"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,11 +16,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f2a8792818e837f019403aa84c2c2e98db0b2b89
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="managed-threading"></a>托管线程处理
@@ -70,3 +70,4 @@ ms.lasthandoff: 05/22/2017
   
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
  介绍了为利用多个处理器而并行运行查询的系统。
+

@@ -1,57 +1,62 @@
 ---
-title: "jitCompilationStart MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "JIT compilation"
-  - "MDAs (managed debugging assistants), JIT compilation"
-  - "JitCompilationStart MDA"
-  - "managed debugging assistants (MDAs), JIT compilation"
+title: jitCompilationStart MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- JIT compilation
+- MDAs (managed debugging assistants), JIT compilation
+- JitCompilationStart MDA
+- managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb6a36b9427c7d55aceba226a865cd51d076f448
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# jitCompilationStart MDA
-在实时 \(JIT\) 编译器开始编译函数时，将激活 `jitCompilationStart` 托管调试助手 \(MDA\) 来报告此情况。  
+# <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
+激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。  
   
-## 症状  
- 因为已将 mscorjit.dll 加载到进程中，所以将为本机图像格式的程序增大工作集大小。  
+## <a name="symptoms"></a>症状  
+ 由于 mscorjit.dll 加载到此进程中，对于已采用本机映像格式的程序，工作集大小增加。  
   
-## 原因  
- 尚未将该程序依赖的所有程序集都生成为本机格式，或者已经生成为本机格式的程序集未正确注册。  
+## <a name="cause"></a>原因  
+ 并非程序依靠的所有程序集均已生成为本机格式，或已生成为本机格式的程序集未正确注册。  
   
-## 解决方法  
- 使用此 MDA，您可以确定哪个函数正在进行 JIT 编译。  确定包含该函数的程序集是否已生成为本机格式以及是否已正确注册。  
+## <a name="resolution"></a>解决方法  
+ 通过启用此 MDA，可确定哪一个函数正在进行 JIT 编译。 确定包含此函数的程序集是否生成为本机格式并且正确注册。  
   
-## 对运行时的影响  
- 此 MDA 在 JIT 编译一个方法之前会记录一条消息，所以启用此 MDA 将对性能产生重大影响。  请注意，如果方法是内联的，则此 MDA 将不会另外生成一条消息。  
+## <a name="effect-on-the-runtime"></a>对运行时的影响  
+ 此 MDA 在方法进行 JIT 编译前记录消息，因此启用此 MDA 会对性能产生重大影响。 请注意，如果方法是内联的，此 MDA 不会生成单独的消息。  
   
-## Output  
- 下面的代码示例演示示例输出。  在此例中，该输出显示：在程序集“测试”中，类“ns2.CO”上的方法“m”已经过 JIT 编译。  
+## <a name="output"></a>输出  
+ 下面的代码示例显示了示例输出。 在此情况下，输出显示在程序集测试中，类“ns2.CO”上的方法“m”是 JIT 编译。  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
-## 配置  
- 下面的配置文件显示了多种筛选器，这些筛选器可用于筛选首次经 JIT 编译时报告哪些方法。  通过将名称特性的值设置为 \*，您可以指定报告所有方法。  
+## <a name="configuration"></a>配置  
+ 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 通过将名称属性的值设置为 *，可指定报告所有方法。  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <jitCompilationStart>  
@@ -69,8 +74,8 @@ method name="Test!ns2.C0::m"
 </mdaConfig>  
 ```  
   
-## 示例  
- 下面的代码示例适合与前面的配置文件一起使用。  
+## <a name="example"></a>示例  
+ 以下示例代码用于上述配置文件。  
   
 ```  
 using System;  
@@ -167,7 +172,8 @@ namespace ns2
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
  [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+

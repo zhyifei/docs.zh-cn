@@ -1,39 +1,45 @@
 ---
-title: "IPv6 自动配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "IPv6 自动配置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# IPv6 自动配置
-IPv6的一个重要的目标是支持即插即用的节点。  即插入节点到IPv6网络并将其自动配置，而无需任何人工干预应是可能的。  
+# <a name="ipv6-auto-configuration"></a>IPv6 自动配置
+IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以将节点插入 IPv6 网络，让其自动进行配置，无需任何人为干预。  
   
-## 自动配置的类型  
- IPv6支持自动配置的以下类型:  
+## <a name="type-of-auto-configuration"></a>自动配置类型  
+ IPv6 支持以下自动配置类型：  
   
--   **Stateful auto\-configuration**。  此配置要求人工干预的某个特定级别，因为它需要IPv6 \(DHCPv6\)服务器的项宿主动态配置协议节点的安装和管理的。  DHCPv6服务器保留它提供配置信息的节点列表。  它还维护状态信息，这样服务器了解每个地址处于正在使用，，以及何时可能适用于重新分配。  
+-   有状态自动配置。 这种类型的配置需要一定程度的人为干预，因其需要 IPv6 动态主机配置协议 (DHCPv6) 服务器来安装和管理节点。 DHCPv6 服务器保存向其提供配置信息的节点列表。 它还维护状态信息，这样服务器知道每个地址的使用时间，以及何时可用于重新分配。  
   
--   **Stateless auto\-configuration**。  此配置适用于小型组织和个人。  在此情况下，每个宿主确定其地址从接收的路由器广告内容。  使用定义IEEE EUI\-64的标准该地址的网络ID部分，假定主机地址的唯一性在链接的是合理的。  
+-   无状态自动配置。 这种配置类型适用于小型组织和个人。 这种情况下，每个主机通过接收的路由器播发的内容确定其地址。 使用 IEEE EUI-64 标准来定义地址的网络 ID 部分，可以合理地假定链接上主机地址的唯一性。  
   
- 无论该地址如何确定的，节点必须验证其潜在的地址到本地链接是唯一的。  这是通过发送周围垦请信息完成上载的潜在的地址。  如果该节点接收任何答复;它知道该地址已被使用，并且必须确定另一个地址。  
+ 无论如何确定地址，节点必须验证可能的地址对于本地链接是否唯一。 通过向可能的地址发送邻居请求消息可完成此操作。 如果节点收到任何响应，就知道该地址已在使用，并且必须确定其他地址。  
   
-## IPv6移动性  
- 移动设备的增殖引入了新的要求:计算机必须能够随意更改IPv6 Internet的位置和保持现有连接。  为了提供此功能，移动节点分配它总能达到home地址。  当移动节点"主页"时，它连接到主页链接并使用其home地址。  当移动节点是从主页"，家庭代理，通常是一路由器、中转消息在节点之间移动和节点它进行通信。  
+## <a name="ipv6-mobility"></a>IPv6 移动性  
+ 移动设备的激增引入了新的要求：设备必须能够随意改变 IPv6 Internet 上的位置，但是仍然保持现有连接。 为实现此功能，向移动节点分配一个始终可以到达的主地址。 当移动节点在其中时，它连接到主链接并使用其主地址。 当移动节点离开时，主代理（通常是路由器）在移动节点和其正与之通信的节点之间中继消息。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [套接字](../../../docs/framework/network-programming/sockets.md)
+

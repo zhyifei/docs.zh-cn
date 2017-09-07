@@ -1,44 +1,50 @@
 ---
-title: "了解 WebRequest 问题和异常 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "了解 WebRequest 问题和异常"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 918528e99396bd71f8c44dadcef7f6dfa6a7a47e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 了解 WebRequest 问题和异常
-<xref:System.Net.WebRequest> 及其派生类\(<xref:System.Net.HttpWebRequest>、 <xref:System.Net.FtpWebRequest>和 <xref:System.Net.FileWebRequest>\)引发异常触发异常状态。  有时这些问题的解决方法不是透明的。  
+# <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 问题和异常
+<xref:System.Net.WebRequest> 及其派生类（<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FileWebRequest>）引发异常以指示异常状态。 有时这些问题的解决方法并不明显。  
   
-## 解决方案  
- 检查 <xref:System.Net.WebException> 的 <xref:System.Net.WebException.Status%2A> 属性确定问题。  下表显示多个状态值和一些可能的解决方法。  
+## <a name="solutions"></a>解决方案  
+ 检查 <xref:System.Net.WebException> 的 <xref:System.Net.WebException.Status%2A> 属性以确定问题。 下表展示了几种状态值和某些可能的解决方法。  
   
 |状态|详细信息|解决方案|  
-|--------|----------|----------|  
-|<xref:System.Net.WebExceptionStatus><br /><br /> \- 或 \-<br /><br /> <xref:System.Net.WebExceptionStatus>|具有基础套接字的问题。  可以重置连接。|重新连接并重新发送请求。<br /><br /> 确定安装最新的Service Pack。<br /><br /> 增加 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=fullName> 属性的值。<br /><br /> 将 <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=fullName> 设置为 `false`。<br /><br /> 增加最大连接数的数目。 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性。<br /><br /> 检查代理配置。<br /><br /> 如果使用SSL，请确保服务器进程有权访问的证书存储区。<br /><br /> 如果发送大量数据，设置 <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> 到 `false`。|  
-|<xref:System.Net.WebExceptionStatus>|服务器证书未能验证。|使用Internet Explorer，尝试打开URI。  解决IE显示的所有安全警报。  如果无法解决安全警报，则可以创建实现 <xref:System.Net.ICertificatePolicy> 返回 `true`，并将其传递给 <xref:System.Net.ServicePointManager.CertificatePolicy%2A>的证书策略选件类。<br /><br /> 请参见 [http:\/\/support.microsoft.com\/?id\=823177](http://go.microsoft.com/fwlink/?LinkID=179653)。<br /><br /> 确保服务器证书签名证书颁发机构的证书在Internet Explorer中添加到受信任的证书颁发机构列表。<br /><br /> 确保URL中的主机名与服务器证书的通用名称。|  
-|<xref:System.Net.WebExceptionStatus>|错误在SSL事务生成的，或者具有证书问题。|.NET Framework 1.1版只支持SSL 3.0版。  如果服务器使用TLS 1.0版或仅SSL 2.0版，将引发异常。  升级到.NET Framework 2.0版中，并将 <xref:System.Net.ServicePointManager.SecurityProtocol%2A> 与服务器。<br /><br /> 客户端证书由服务器不信任的证书颁发机构\(CA\)签名。  安装CA证书在服务器。  请参见 [http:\/\/support.microsoft.com\/?id\=332077](http://go.microsoft.com/fwlink/?LinkID=179654)。<br /><br /> 确保您具有最新的Service Pack安装。|  
-|<xref:System.Net.WebExceptionStatus>|连接失败。|firewall或proxy块连接。  修改该firewall或代理允许连接。<br /><br /> 通过调用 <xref:System.Net.WebProxy> 构造函数显式指定在客户端应用程序中 <xref:System.Net.WebProxy> \(WebServiceProxyClass.Proxy \= new WebProxy \([http:\/\/server:80](http://server/)， true\)。<br /><br /> 运行Filemon或确保的Regmon辅助进程标识具有必要的权限访问WSPWSP.dll、HKLM \\ SYSTEM \\ CurrentControlSet \\ services \\ DnsCache或HKLM \\ SYSTEM \\ CurrentControlSet \\ services \\ WinSock2。|  
-|<xref:System.Net.WebExceptionStatus>|域名服务无法解析主机名。|正确配置代理。  请参见 [http:\/\/support.microsoft.com\/?id\=318140](http://go.microsoft.com/fwlink/?LinkID=179655)。<br /><br /> 确保任何安装的防病毒软件或firewall不阻止连接。|  
-|<xref:System.Net.WebExceptionStatus>|<xref:System.Net.WebRequest.Abort%2A> 调用，或者发生错误。|此问题可能由客户端或服务器上重新生成。  减少加载。<br /><br /> 增加 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 设置。<br /><br /> 请参见 [http:\/\/support.microsoft.com\/?id\=821268](http://go.microsoft.com/fwlink/?LinkID=179656) 修改Web服务性能设置。|  
-|<xref:System.Net.WebExceptionStatus>|应用程序尝试写入已关闭的套接字。|重载客户端或服务器。  减少加载。<br /><br /> 增加 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 设置。<br /><br /> 请参见 [http:\/\/support.microsoft.com\/?id\=821268](http://go.microsoft.com/fwlink/?LinkID=179656) 修改Web服务性能设置。|  
-|<xref:System.Net.WebExceptionStatus>|在信息长度设置的\(<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>\)限制超过了。|增加 <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A> 属性的值。|  
-|<xref:System.Net.WebExceptionStatus>|域名服务无法解析代理主机名。|正确配置代理。  请参见 [http:\/\/support.microsoft.com\/?id\=318140](http://go.microsoft.com/fwlink/?LinkID=179655)。<br /><br /> 不要强制 <xref:System.Net.HttpWebRequest> 通过设置 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性使用代理到 `null`。|  
-|<xref:System.Net.WebExceptionStatus>|来自服务器的响应不是有效的HTTP响应。  发生此问题，在将.NET Framework检测服务器响应不符合HTTP 1.1 RFC。  ，则会出现此问题。响应包含不正确标头时或不正确标头delimiters.RFC 2616定义HTTP 1.1和响应的格式有效从服务器。  有关更多信息，请参见 [http:\/\/www.ietf.org](http://go.microsoft.com/fwlink/?LinkID=147388)。|获取事务的网络跟踪并在响应中标头。<br /><br /> 如果应用程序需要服务器响应，而不分析\(这可能存在安全问题\)，将 `useUnsafeHeaderParsing` 对配置文件的 `true` 。  请参见 [\<httpWebRequest\> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)。|  
+|------------|-------------|--------------|  
+|<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> - 或 -<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|基础套接字有问题。 可能已重置连接。|重新连接并重新发送该请求。<br /><br /> 确保安装了最新服务包。<br /><br /> 增大 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=fullName> 属性的值。<br /><br /> 将 <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=fullName> 设置为 `false`。<br /><br /> 增加与 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性的最大连接数。<br /><br /> 检查代理配置。<br /><br /> 如果使用 SSL，请确保服务器进程有权访问证书存储。<br /><br /> 如果发送大量数据，请将 <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> 设置为 `false`。|  
+|<xref:System.Net.WebExceptionStatus.TrustFailure>|无法验证服务器证书。|尝试使用 Internet Explorer 打开 URI。 解决 IE 显示的任何安全警报。 如果无法解决安全警报，则可创建一个证书策略类，该类执行返回 `true` 的 <xref:System.Net.ICertificatePolicy>，并将其传递给 <xref:System.Net.ServicePointManager.CertificatePolicy%2A>。<br /><br /> 请参阅 [http://support.microsoft.com/?id=823177](http://go.microsoft.com/fwlink/?LinkID=179653)。<br /><br /> 确保已将签署服务器证书的证书颁发机构的证书添加到 Internet Explorer 的“受信任的证书颁发机构”列表。<br /><br /> 确保 URL 中的主机名与服务器证书上的公用名称相匹配。|  
+|<xref:System.Net.WebExceptionStatus.SecureChannelFailure>|SSL 事务中出现错误，或有证书问题。|.NET Framework 1.1 版仅支持 SSL 3.0 版。 如果服务器仅使用 TLS 1.0 版或 SSL 2.0 版，则会引发异常。 升级到 .NET Framework 2.0 版，并设置 <xref:System.Net.ServicePointManager.SecurityProtocol%2A> 以匹配服务器。<br /><br /> 客户端证书由服务器不信任的证书颁发机构 (CA) 签署。 在服务器上安装 CA 证书。 请参阅 [http://support.microsoft.com/?id=332077](http://go.microsoft.com/fwlink/?LinkID=179654)。<br /><br /> 确保已安装最新服务包。|  
+|<xref:System.Net.WebExceptionStatus.ConnectFailure>|连接失败。|防火墙或代理正在阻止连接。 修改防火墙或代理以允许连接。<br /><br /> 通过调用 <xref:System.Net.WebProxy> 构造函数 (WebServiceProxyClass.Proxy = new WebProxy ([http://server:80](http://server/), true)) 在客户端应用程序中明确指定 <xref:System.Net.WebProxy>。<br /><br /> 运行 Filemon 或 Regmon 以确保工作进程标识具有访问 WSPWSP.dll、HKLM\System\CurrentControlSet\Services\DnsCache 或 HKLM\System\CurrentControlSet\Services\WinSock2 的必要权限。|  
+|<xref:System.Net.WebExceptionStatus.NameResolutionFailure>|域名服务无法解析主机名。|正确配置代理。 请参阅 [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655)。<br /><br /> 确保任何已安装的防病毒软件或防火墙未阻止连接。|  
+|<xref:System.Net.WebExceptionStatus.RequestCanceled>|已调用 <xref:System.Net.WebRequest.Abort%2A>，或出现错误。|此问题可能是由于客户端或服务器上负载过大引起的。 请减小负载。<br /><br /> 增大 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 设置。<br /><br /> 请参阅 [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656) 修改 Web 服务性能设置。|  
+|<xref:System.Net.WebExceptionStatus.ConnectionClosed>|应用程序尝试写入已关闭的套接字。|客户端或服务器重载。 请减小负载。<br /><br /> 增大 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 设置。<br /><br /> 请参阅 [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656) 修改 Web 服务性能设置。|  
+|<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|已超出对消息长度设置的限制 (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>)。|增大 <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A> 属性的值。|  
+|<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|域名服务无法解析代理主机名。|正确配置代理。 请参阅 [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655)。<br /><br /> 将 <xref:System.Net.HttpWebRequest.Proxy%2A> 属性设置为 `null`，强制 <xref:System.Net.HttpWebRequest> 不使用任何代理。|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|来自服务器的响应不是有效的 HTTP 响应。 .NET Framework 检测到服务器响应不符合 HTTP 1.1 RFC 时，会出现此问题。 如果响应包含错误标头或标头分隔符时，可能会出现此问题。RFC 2616 定义 HTTP 1.1 和来自服务器响应的有效格式。 有关详细信息，请参阅 [http://www.ietf.org](http://go.microsoft.com/fwlink/?LinkID=147388)。|获取事务网络跟踪并检查响应中的标头。<br /><br /> 如果应用程序需要服务器响应，而无需解析（这可能是一个安全问题），请在配置文件中将 `useUnsafeHeaderParsing` 设置为 `true`。 请参阅 [\<httpWebRequest> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Net.HttpWebRequest>   
  <xref:System.Net.HttpWebResponse>   
  <xref:System.Net.Dns>
+

@@ -8,7 +8,6 @@
 ## [泛型方法](generic-methods.md)
 ## [泛型和数组](generics-and-arrays.md)
 ## [泛型委托](generic-delegates.md)
-## [泛型代码中的 default 关键字](default-keyword-in-generic-code.md)
 ## [C++ 模板和 C# 泛型之间的区别](differences-between-cpp-templates-and-csharp-generics.md)
 ## [运行时中的泛型](generics-in-the-run-time.md)
 ## [.NET Framework 类库中的泛型](generics-in-the-net-framework-class-library.md)

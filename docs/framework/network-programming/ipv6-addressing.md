@@ -1,87 +1,93 @@
 ---
-title: "IPv6 寻址 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet 协议版本 6，地址"
-  - "邻居发现"
-  - "IPv6，启用"
-  - "IPv6，移动性和"
-  - "Internet 协议版本 6，任意广播地址"
-  - "IPv6，邻居发现"
-  - "Internet 协议版本 6，自动配置"
-  - "Internet 协议版本 6，启用"
-  - "IPv6，单播地址"
-  - "IPv6，自动配置"
-  - "Internet 协议版本 6，路由"
-  - "IPv6，RFC 文档"
-  - "IPv6，路由"
-  - "Internet 协议版本 6，禁用"
-  - "Internet 协议版本 6，单播地址"
-  - "IPv6，多播地址"
-  - "Internet 协议版本 6，移动性和"
-  - "Internet 协议版本 6，RFC 文档"
-  - "Internet 协议版本 6，邻居发现"
-  - "IPv6，任意广播地址"
-  - "Internet 协议版本 6，多播地址"
-  - "IPv6，地址"
-  - "IPv6，禁用"
+title: "IPv6 寻址"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet Protocol version 6, addresses in
+- Neighbor Discovery
+- IPv6, enabling
+- IPv6, mobility and
+- Internet Protocol version 6, anycast addresses
+- IPv6, Neighbor Discovery
+- Internet Protocol version 6, auto-configuring
+- Internet Protocol version 6, enabling
+- IPv6, unicast addresses
+- IPv6, auto-configuring
+- Internet Protocol version 6, routing
+- IPv6, RFC documents
+- IPv6, routing
+- Internet Protocol version 6, disabling
+- Internet Protocol version 6, unicast addresses
+- IPv6, multicast addresses
+- Internet Protocol version 6, mobility and
+- Internet Protocol version 6, RFC documents
+- Internet Protocol version 6, Neighbor Discovery
+- IPv6, anycast addresses
+- Internet Protocol version 6, multicast addresses
+- IPv6, addresses in
+- IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# IPv6 寻址
-在internet协议版本6 \(IPv6\)，则address长度为128位。  这样一个用地址空间中的一个原因是分解可用地址到的路由字段层次结构反映Internet的拓扑。  另一个原因是映射的网络适配器\(或接口\)地址计算机连接到网络。  IPv6以固有功能的功能解决地址在其最低级别，在网络接口级别，并具有自动配置功能。  
+# <a name="ipv6-addressing"></a>IPv6 寻址
+在 Internet 协议版本 6（IPv6）中，地址长度为 128 位。 地址空间如此之大的一个原因是将可用地址细分为可以反映 Internet 拓扑的路由域的层次结构。 另一个原因是映射将设备连接到网络的网络适配器（或接口）的地址。 IPv6 有可以解析最低级别的地址（即网络接口级别的地址）的固有功能以及自动配置功能。  
   
-## 文本表示形式  
- 下面是用于的三个约定窗体表示 IPv6 地址作为文本字符串:  
+## <a name="text-representation"></a>文本表示形式  
+ 以下是用于将 IPv6 地址表示为文本字符串的三种常规形式：  
   
--   **Colon\-hexadecimal form**。  这是一个首选窗体 n:n:n:n:n:n:n:n。  每个n表示十六进制值的地址的八个16位组件之一。  例如：`3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`。  
+-   冒号十六进制形式。 这是首选形式 n:n:n:n:n:n:n:n。 每个 n 表示地址的 8 个 16 位元素之一的十六进制值。 例如：`3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`。  
   
--   **Compressed form**。  由于地址长度，通常会包含零的长字符串地址。  为了简化编写这些地址，请使用压缩的窗体，一个连续顺序0块由双冒号符号表示\(::\)。  此符号只能出现一次于地址。  例如，多路广播地址 `FFED:0:0:0:0:BA98:3210:4562` 以压缩的形式是 `FFED::BA98:3210:4562`。  unicast地址 `3FFE:FFFF:0:0:8:800:20C4:0` 以压缩的形式是 `3FFE:FFFF::8:800:20C4:0`。  启用地址 `0:0:0:0:0:0:0:1` 以压缩的形式是 `::`1。  未指定的地址 `0:0:0:0:0:0:0:0` 以压缩的形式是 `::`。  
+-   压缩形式。 由于地址长度，有些地址通常包含一长串的零。 若要简化这些地址的编写，可使用压缩形式，其中 0 块的单个相邻的序列由双冒号 (::) 表示。 该符号在地址中只能出现一次。 例如，多播地址 `FFED:0:0:0:0:BA98:3210:4562` 的压缩形式是 `FFED::BA98:3210:4562`。 单播地址 `3FFE:FFFF:0:0:8:800:20C4:0` 的压缩形式是 `3FFE:FFFF::8:800:20C4:0`。 环回地址 `0:0:0:0:0:0:0:1` 的压缩形式是 `::` 1。 未指定地址 `0:0:0:0:0:0:0:0` 的压缩形式是 `::`。  
   
--   **Mixed form**。  此窗体将IPv4和 IPv6 地址。  在这种情况下，地址格式为 n:n:n:n:n:n:d.d.d.d，每个 n 表示六个 IPv6 高 16 位地址元素的十六进制值，每个 d 表示 IPv4 地址的十进制值。  
+-   **混合形式**。 此形式合并了 IPv4 和 IPv6 地址。 在这种情况下，地址格式为 n:n:n:n:n:n:d.d.d.d，其中每个 n 表示六个 IPv6 高序位 16 位地址元素的十六进制值，每个 d 表示一个 IPv4 地址的十进制值。  
   
-## 地址类型  
- 在地址上的前导位定义特定 IPv6 地址类型。  包含这些驱动的位的可变长度字段调用窗体的标题\(FP\)。  
+## <a name="address-types"></a>地址类型  
+ 地址中的前导位定义了特定 IPv6 地址类型。 包含这些前导位的可变长度字段称为格式前缀 (FP)。  
   
- IPv6 unicast地址分为两部分。  第一部分包含地址，前缀，第二部分包含接口标识符。  一个简洁方式表示 IPv6 地址\/前缀组合如下所示: IPv6 地址\/前缀长。  
+ IPv6 的单播地址分为两个部分。 第一部分包含地址前缀，第二部分包含接口标识符。 表示 IPv6 地址/前缀组合的简洁方法如下：ipv6-address/prefix-length。  
   
- 下面是一个地址的示例使用64位标题。  
+ 以下是具有 64 位前缀的地址示例。  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`。  
   
- 在此示例中的标题由 `3FFE:FFFF:0:CD30`。  该地址可能还会写入速率压缩的形式，作为 `3FFE:FFFF:0:CD30::/64`。  
+ 本示例中的前缀是 `3FFE:FFFF:0:CD30`。 此地址也可以采用压缩形式编写为 `3FFE:FFFF:0:CD30::/64`。  
   
- IPv6定义以下地址类型:  
+ IPv6 定义以下地址类型：  
   
--   **Unicast address**。  单个接口的标识符。  数据包发送到该地址被传递给标识的接口。  unicast当从多路广播地址是已知的。高位八位字节的值。  多路广播地址的高位八位字节具有FF的十六进制值。  此八位字节的其他值标识一个unicast地址。  下面是unicast地址的不同类型:  
+-   单播地址。 单个接口的标识符。 发送到此地址的数据包将会发送到已标识接口。 可通过高序位八进制数的值，区分单播地址和多播地址。 多播地址的高序位八进制数具有 FF 的十六进制值。 此八进制数的任何其他值标识单播地址。 以下是不同类型的单播地址：  
   
-    -   **Link\-local addresses**。  这些地址在单个链接使用它具有以下格式:FE80::*InterfaceID*。  链接本地地址使用在链接的节点之间的自动地址配置，周围查看，或者，在路由器不存在。  链接本地地址使用主要在启动，因此，当系统没有获得更大的范围地址。  
+    -   链接本地地址。 这些地址在单个链接上使用，并且具有以下格式：FE80::InterfaceID。 链接本地地址用于链接的节点之间以实现自动地址配置、邻居发现，或者用于不存在路由器的情况。 链接本地地址主要用于启动时，以及系统尚未获取较大范围地址时。  
   
-    -   **Site\-local addresses**。  这些地址在一个网站使用它具有以下格式:FEC0::*SubnetID*:*InterfaceID*。  站点本地地址为解决使用站点内，而无需进行全局前缀。  
+    -   站点本地地址。 这些地址用于单个站点，具有以下格式：FEC0::SubnetID:InterfaceID。 站点本地地址用于在站点内寻址，无需全局前缀。  
   
-    -   **Global IPv6 unicast addresses**。  这些地址可以通过Internet使用和具有以下格式:010 \(FP， 3位\) TLA ID \(13位\)保留了\(8位\) NLA ID \(24位\) SLA ID \(16位\) *InterfaceID* \(64位\)。  
+    -   全局 IPv6 单播地址。 这些地址可以在 Internet 中使用，具有以下格式：010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) InterfaceID (64 bits)。  
   
--   **Multicast address**。  中的标识符设置接口\(通常为属于不同的节点\)。  数据包发送到该地址被传递给该地址确定的所有接口。  多路广播地址类型取代IPv4广播地址。  
+-   多播地址。 一组接口（通常属于不同节点）的标识符。 发送到此地址的数据包将发送到由该地址标识的所有接口。 多播地址类型取代了 IPv4 广播地址。  
   
--   **Anycast address**。  中的标识符设置接口\(通常为属于不同的节点\)。  数据包发送到该地址只发送到该地址确定的接口。  这是最新的接口标识的由路由指标。  Anycast当从unicast地址空间中采用并不是语法上的可区分。  作为其配置功能，解析的接口实现unicast和anycast地址之间的差异。  
+-   任播地址。 一组接口（通常属于不同节点）的标识符。 发送到此地址的数据包将发送到由该地址标识的仅一个接口。 这是路由指标标识的最近接口。 任播地址取自单播地址空间，无法从语法上进行区分。 寻址的接口根据其配置区分单播和任播地址。  
   
- 通常，节点始终有一个链接本地地址。  它可能有站点本地地址和一个或多个全局地址。  
+ 通常，节点始终具有链接本地地址。 它可能具有站点本地地址和一个或多个全局地址。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [套接字](../../../docs/framework/network-programming/sockets.md)
+

@@ -1,58 +1,68 @@
 ---
-title: "对等名称发布和解析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "对等名称发布和解析"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43f7a2220725bc251e476312654a070502171983
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 对等名称发布和解析
-## 发布对等类名称  
- 若要发布一个新PNRP ID，对等类执行以下操作:  
+# <a name="peer-name-publication-and-resolution"></a>对等名称发布和解析
+## <a name="publishing-a-peer-name"></a>发布对等名称  
+ 若要发布新 PNRP ID，对等机需执行以下操作：  
   
--   发送PNRP发布信息。注册了最低级别的PNRP ID缓存\)的其缓存空间量\(对等类为其缓存。  
+-   将 PNRP 发布消息发送到缓存邻居（在缓存的最低级别中注册了 PNRP ID 的对等机）来播种缓存。  
   
--   选择不是其相邻元素中的朵云的任意节点并将其发送PNRP名称解析请求自己的P2P ID.  发生的终点确定处理种子缓存在云的任意节点与发布对等类的PNRP ID。  
+-   在云中选择不是其邻居的随机节点，并为其 P2P ID 发送 PNRP 名称解析请求。 生成的终结点确定进程使用发布对等机的 PNRP ID 对云中随机节点的缓存进行种子化。  
   
- ，如果只有解决其他P2P ID， PNRP版本2节点不发布PNRP ID。  HKEY\_LOCAL\_MACHINE \\ SOFTWARE \\ Microsoft \\ Windows NT \\ CurrentVersion \\ PeerNet \\ PNRP \\ IPV6全局\\ SearchOnly\=1注册表值\(REG\_DWORD类型\)用于名称释放指定对等类只有使用PNRP用于名称转换，从未。  此注册表值可以通过组策略还配置。  
+-  
   
-## 解决对等类名称  
- 找到其他同级PNRP网络或云是过程由两个阶段组成:  
+ 若 PNRP 版本 2 节点只解析其他 P2P ID，则不发布 PNRP ID。 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 注册表值 （REG_DWORD 类型）指定对等机仅使用 PNRP 进行名称解析，绝不进行名称发布。 也可通过组策略配置此注册表值。  
+  
+## <a name="resolving-a-peer-name"></a>解析对等名称  
+ 在 PNRP 网络或云中查找其他对等是一个包含两个阶段的过程：  
   
 1.  终结点确定  
   
-2.  PNRP ID解析  
+2.  PNRP ID 解析  
   
- 在终结点确定阶段，尝试解析对等类某项服务的PNRP ID在另一台计算机上确定该远程对等类 IPv6 地址。  远程对等类要发布的一个，或者与关联，计算机的PNRP ID或服务。  
+ 在终结点确定阶段，尝试解析另一台计算机上的服务 PNRP ID 的对等机确定该远程对等机的 IPv6 地址。  远程对等机是发布计算机或服务的 PNRP ID 或与之相关联的对等机。  
   
- 在确认之后该远程终结点注册到PNRP云， PNRP ID解析阶段的请求的对等类发送一个请求到所需服务的PNRP ID的该对等类终结点。  该终结点发送确认请求的对等类可以用于以后的通信要使用的服务、注释和4 KB的PNRP ID的答复附加信息。  例如，因此，如果所需的终点是赌博服务器，则附加对等类名称记录数据可能包含有关游戏的信息，效果的秩和玩家的当前项数。  
+ 确认远程终结点已注册到 PNRP 云中后，PNRP ID 解析阶段中的请求对等机向该对等机终结点发送请求以获取所需服务的 PNRP ID 。 终结点发送确认该服务的 PNRP ID 回复、注释，以及最多 4 KB 的附加信息，请求对等机可将该信息用于将来的通信。 例如，如果所需终结点是游戏服务器，附加对等名称记录数据可能包含有关游戏、游戏级别和当前玩家数量的信息。  
   
- 在终结点确定阶段， PNRP使用一个迭代的说明发布PNRP ID，执行解析的节点到与节点连接负责连续更接近目标PNRP ID.的环境的节点处理  
+ 在终结点确定阶段中，PNRP 使用迭代过程来查找发布 PNRP ID 的节点，其中执行解析的节点负责联系更接近目标 PNRP ID 的节点。  
   
- 若要执行名称将PNRP，对等类在其与目标PNRP ID.项的自己的缓存检查项  如果找到，对等类发送PNRP请求消息。对等类并等待响应。  如果找不到PNRP ID的项，对等类发送PNRP请求信息到对应于项都有一个PNRP ID一个与目标PNRP ID.对等类  接收PNRP请求消息的节点检查自己的缓存并执行以下操作:  
+ 若要在 PNRP 中执行名称解析，对等机需检查其缓存中的条目，查找与目标 PNRP ID 匹配的条目。 找到后，对等机向对等机发送 PNRP 请求消息，并等待响应。 如果未找到该 PNRP ID 的条目，对等机会向具有 PNRP ID（最接近目标 PNRP ID）的条目相对应的对等机发送 PNRP 请求消息。 接收 PNRP 请求消息的节点检查其缓存，并执行以下操作：  
   
--   如果找到PNRP ID，请求的终点对等类答案直接请求的对等类。  
+-   找到该 PNRP ID 后，所请求的终结点对等机直接回复请求对等机。  
   
--   如果找不到PNRP ID，并且一PNRP ID在缓存更接近目标PNRP ID的环境，请求的对等类发送到包含使用PNRP ID表示项对等类的 IPv6 地址的请求的对等类的响应最匹配目标PNRP ID.  使用在响应的IP地址，请求的节点发送另一PNRP请求信息为 IPv6 地址响应或检查其缓存。  
+-   如果未找到该 PNRP ID 且缓存中的 PNRP ID 更接近目标 PNRP ID，则所请求的对等机向请求对等机发送响应，其中包含表示具有更接近目标 PNRP ID 的 PNRP ID 条目的对等机的 IPv6 地址。 在响应中使用 IP 地址，请求节点向 IPv6 地址发送另一个 PNRP 请求消息，以响应或检查其缓存。  
   
--   如果找不到PNRP ID，并且不PNRP ID在更接近目标PNRP ID的环境的其缓存，请求的对等类发送请求的对等类指示此情况的响应。  请求的对等类然后选择最NeXT关闭的PNRP ID.  
+-   如果未找到该 PNRP ID 且缓存中没有更接近目标 PNRP ID 的 PNRP ID，则所请求的对等机向请求对等机发送表明此情况的响应。 然后请求对等机选择下一个最接近的 PNRP ID。  
   
- 请求的对等类继续此过程的后续迭代，最终找到注册PNRP ID.的节点  
+-  
   
- 在 <xref:System.Net.PeerToPeer> 命名空间中，包含终结点和PNRP云或网格它们进行通信的 <xref:System.Net.PeerToPeer.PeerName> 记录之间的多对多关系。  当有重复或时使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 选件类，过时项或多个节点具有相同的对等类名称， PNRP节点可获取当前信息。  <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用一个对等类名称简化了透视图到一个对等类对多对等类名称记录与同一一对等类为与云。  这与使用相关表执行的查询连接。  在成功完成，解析器对象返回指定的对等类名称的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection> 。  例如，对等类名称在集合中的所有对等类名称日志将发生，按照云。  这些是支持数据可能由基于PNRP的应用程序请求对等类名称的实例。  
+ 请求对等机通过连续迭代继续此过程，最终查找已注册该 PNRP ID 的节点。  
   
-## 请参阅  
+ 在 <xref:System.Net.PeerToPeer> 命名空间中，<xref:System.Net.PeerToPeer.PeerName> 记录之间存在多对多的关系，这些关系包含终结点和 PNRP 云或用于通信的对等网格。 有重复或过时条目，或具有相同对等名称的多个节点时，PNRP 节点可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 类获取当前信息。 <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用单一对等名称，将透视简化为一对多对等名称记录和相同的一对多对等机和云的名称记录。 这类似于使用关系表联接执行的查询。 成功完成后，解析程序对象返回指定对等名称的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。  例如，集合中所有对等名称记录中将会出现由云排序的对等名称。 这些是对等名称实例，基于 PNRP 的应用程序可能请求这些支持数据。  
+  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Net.PeerToPeer>
+

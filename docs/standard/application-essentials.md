@@ -1,24 +1,28 @@
 ---
-title: ".NET Framework 应用程序要点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 开发"
+title: ".NET Framework 应用程序要点"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET Framework 应用程序要点
+# <a name="net-framework-application-essentials"></a>.NET Framework 应用程序要点
 .NET Framework 文档的此部分提供了有关 .NET Framework 中的基本应用程序开发任务的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
@@ -40,19 +44,19 @@ caps.handback.revision: 19
  [异常](../../docs/standard/exceptions/index.md)  
  描述 .NET Framework 提供的错误处理以及处理异常的基本原则。  
   
- [文件和流我-O](../../docs/standard/io/index.md)  
+ [文件和流 I-O](../../docs/standard/io/index.md)  
  解释如何执行同步和异步文件和数据流访问以及如何用于独立存储。  
   
- [日期、 时间和时区](../../docs/standard/datetime/index.md)  
+ [日期、时间和时区](../../docs/standard/datetime/index.md)  
  描述如何在时区识别应用程序中处理时区和时区转换。  
   
  [应用程序域和程序集](../../docs/framework/app-domains/index.md)  
  描述如何创建和使用程序集和应用程序域。  
   
- [序列化](../../docs/framework/serialization/index.md)  
+ [序列化](../../docs/standard/serialization/index.md)  
  讨论将对象状态转换为可保存或传输的形式的过程。  
   
- [桌面应用程序中的资源](../../docs/framework/resources/index.md)  
+ [桌面应用中的资源](../../docs/framework/resources/index.md)  
  描述 .NET Framework 对创建和存储资源的支持。 本部分还描述了对本地化资源以及用于打包和部署这些本地化资源的附属程序资源模型的支持。  
   
  [全球化和本地化](../../docs/standard/globalization-localization/index.md)  
@@ -71,5 +75,6 @@ caps.handback.revision: 19
  [开发指南](../../docs/framework/development-guide.md)  
  提供了有关应用程序开发的所有关键技术区域和任务（包括创建、配置、调试、保护和部署应用程序）的指南，以及有关动态编程、互操作性、扩展性、内存管理和线程处理的信息。  
   
- [安全](../../docs/standard/security/index.md)  
+ [安全性](../../docs/standard/security/index.md)  
  提供有关公共语言运行时和 .NET Framework 中有助于安全应用程序开发的类与服务的信息。
+

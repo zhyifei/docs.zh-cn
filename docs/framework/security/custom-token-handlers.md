@@ -1,28 +1,34 @@
 ---
-title: "自定义令牌处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义令牌处理程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 自定义令牌处理程序
-本主题讨论在WIF标记处理程序，以及如何使用这些处理标记。  主题还包括什么是需要创建默认情况下在WIF不支持的标记类型的自定义标记处理程序。  
+# <a name="custom-token-handlers"></a>自定义令牌处理程序
+本主题讨论 WIF 中的令牌处理程序，以及如何使用它们处理令牌。 还介绍为 WIF 中默认不支持的令牌类型创建自定义令牌处理程序所需的内容。  
   
-## 标记处理程序介绍WIF的  
- WIF依赖于安全标记处理程序创建，读取，编写，并验证该依赖方\(RP\)应用程序或安全标记服务的\(STS\)标记。  标记处理程序是扩展性点以便可以添加WIF管线的自定义标记处理程序，或自定义现有标记处理程序管理标记的方法。  WIF提供可修改或完全重写根据需要更改函数的九内置安全标记处理程序。  
+## <a name="introduction-to-token-handlers-in-wif"></a>WIF 中的令牌处理程序简介  
+ WIF 依赖安全令牌处理程序为信赖方 (RP) 应用程序或安全令牌服务 (STS) 创建、读取、写入和验证令牌。 令牌处理程序是扩展点，用于在 WIF 管道中添加自定义令牌处理程序，或自定义现有令牌处理程序管理令牌的方式。 为了根据需要更改功能，WIF 提供九个可以修改或完全替代的内置安全令牌处理程序。  
   
-## 内置WIF的安全标记处理程序  
- WIF 4.5包含从抽象基类 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>派生的九安全标记处理程序选件类:  
+## <a name="built-in-security-token-handlers-in-wif"></a>WIF 中的内置安全令牌处理程序  
+ WIF 4.5 包括九个从抽象基类 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 派生的安全令牌处理程序类：  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -42,14 +48,14 @@ caps.handback.revision: 4
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## 添加自定义标记处理程序  
- 这些标记类型，如简单的Web标记\(SWT\)和JSON Web标记\(JWT\)没有WIF提供的内置标记处理程序。  对于这些标记类型并且没有内置处理程序的其他的，需要执行以下步骤以创建自定义标记处理程序。  
+## <a name="adding-a-custom-token-handler"></a>添加自定义令牌处理程序  
+ 一些令牌类型（例如，简单 Web 令牌 (SWT) 和 JSON Web 令牌 (JWT)）没有 WIF 提供的内置令牌处理程序。 对于这些令牌类型以及其他没有内置处理程序的令牌类型，必须执行以下步骤来创建自定义令牌处理程序。  
   
-#### 添加自定义标记处理程序  
+#### <a name="adding-a-custom-token-handler"></a>添加自定义令牌处理程序  
   
-1.  创建从 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>派生的新选件类。  
+1.  创建一个从 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 派生的新类。  
   
-2.  重写以下方法并提供自己的实现:  
+2.  重写以下方法，提供自己的实现：  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -63,9 +69,9 @@ caps.handback.revision: 4
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  添加对 *Web.config或* App.configfile的新自定义标记处理程序 *，* 在应用于WIF的 **\<system.identityModel\>** 节中。  例如，以下配置标记指定的位置 **CustomToken** 命名空间的新标记名为的处理程序 **MyCustomTokenHandler**。  
+3.  在应用于 WIF 的 \<system.identityModel> 部分内的 Web.config 或 App.config 文件中，添加对新自定义令牌处理程序的引用。 例如，以下配置标记指定了位于 CustomToken 命名空间中名为 MyCustomTokenHandler 的新令牌处理程序。  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
@@ -75,15 +81,16 @@ caps.handback.revision: 4
     </system.identityModel>  
     ```  
   
-     请注意，如果提供您的标记处理程序处理已具有固定标记处理程序中的一个标记类型，需要添加 **\<remove\>** 元素删除默认处理程序和使用自定义处理程序。  例如，以下配置具有自定义标记处理程序替换默认 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> :  
+     请注意，如果提供自己的令牌处理程序来处理已有内置令牌处理程序的令牌类型，必须添加 \<remove> 元素，才能删除默认处理程序和改用自定义处理程序。 例如，以下配置将使用自定义令牌处理程序替换默认 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>：  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type=”System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789”>  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  
     </system.identityModel>  
     ```
+

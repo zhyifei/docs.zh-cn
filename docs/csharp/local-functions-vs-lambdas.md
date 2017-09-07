@@ -6,7 +6,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: visual-studio-dev-15
+ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
@@ -17,8 +17,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/16/2017
 
 ---
-
-### <a name="local-functions-compared-to-lambda-expressions"></a>本地函数与 Lambda 表达式比较
+# <a name="local-functions-compared-to-lambda-expressions"></a>本地函数与 Lambda 表达式比较
 
 乍看之下，[本地函数](programming-guide/classes-and-structs/local-functions.md)和 [lambda 表达式](lambda-expressions.md)非常相似。
 根据需要，本地函数可能是更好、更简单的解决方案。

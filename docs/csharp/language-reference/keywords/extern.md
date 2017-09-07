@@ -96,7 +96,7 @@ public class MainClass
  3. 从 Visual Studio 安装目录打开一个 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过键入以下内容来编译 `cm.cs` 文件：  
   
 > **csc cm.cs**（针对 x64 命令提示符）   
->  - 或 -  
+>  -或-  
 > **csc /platform:x86 cm.cs**（针对 x32 命令提示符）  
   
  这将创建可执行文件 `cm.exe`。  

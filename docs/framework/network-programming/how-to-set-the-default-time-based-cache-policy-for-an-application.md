@@ -1,41 +1,46 @@
 ---
-title: "如何：为应用程序设置默认基于时间的缓存策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "基于时间的缓存策略"
-  - "缓存 [.NET Framework]，基于时间的策略"
-  - "默认基于时间的缓存策略"
+title: "如何：为应用程序设置默认基于时间的缓存策略"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- cache [.NET Framework], time-based policies
+- default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462c55919025b92014a99d73b9a6b779465f98e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：为应用程序设置默认基于时间的缓存策略
-默认基于时间的缓存策略允许应用程序具有标头定义其缓存行为发送的已缓存的资源和中定义的缓存行为的第13节和第14部分RFC 2616，在 [http:\/\/www.ietf.org](http://www.ietf.org/)中可用。  这是大多数应用程序中合适的缓存行为。  
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：为应用程序设置默认基于时间的缓存策略
+默认基于时间的缓存策略允许应用程序将标头定义的缓存行为与缓存资源和 RFC 2616 的第 13 和 14 节（可在 [http://www.ietf.org](http://www.ietf.org/) 中找到）中定义的缓存行为一起发送。这是适用于大多数应用程序的缓存行为。  
   
-### 设置应用程序的默认自动策略  
+### <a name="to-set-the-default-automatic-policy-for-an-application"></a>为应用程序设置默认自动策略  
   
-1.  创建一个默认基于时间的策略对象。  
+1.  创建默认基于时间的策略对象。  
   
-2.  设置策略对象作为应用程序域的默认值。  
+2.  将策略对象设置为应用程序域的默认对象。  
   
-## 示例  
- 本节中的两个示例产生相同的策略。  
+## <a name="example"></a>示例  
+ 此部分中的两个示例生成相同的策略。  
   
- 下面的示例创建一个默认基于时间的策略并将其设置为应用程序域的默认值。  
+ 以下示例创建默认基于时间的策略，并为应用程序域将其设置为默认。  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy ()  
@@ -52,7 +57,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy ()
 End Sub  
 ```  
   
- 如下面的示例所示，还可以创建默认基于时间的缓存策略使用 <xref:System.Net.Cache.RequestCachePolicy> 选件类:  
+ 也可使用 <xref:System.Net.Cache.RequestCachePolicy> 类创建默认基于时间的缓存策略，如以下示例所示：  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy2()  
@@ -67,12 +72,12 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
     Dim policy As New RequestCachePolicy()  
     HttpWebRequest.DefaultCachePolicy = policy  
 End Sub  
-  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [缓存策略](../../../docs/framework/network-programming/cache-policy.md)   
  [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

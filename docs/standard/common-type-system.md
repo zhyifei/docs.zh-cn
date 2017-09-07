@@ -1,7 +1,7 @@
 ---
 title: "常规类型系统和公共语言规范"
-description: "常规类型系统和公共语言规范"
-keywords: ".NET、.NET Core"
+description: "了解通用类型系统 (CTS) 和公共语言规范 (CLS) 如何使 .NET 可支持多种语言。"
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -10,25 +10,26 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 1680934b40c3055d2c33ed7457d8734dccbd0a8c
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="common-type-system--common-language-specification"></a>常规类型系统和公共语言规范
 
-再次介绍 .NET 领域内大量使用的两个术语，对于理解 .NET 平台如何能够允许多语言开发及其工作原理，这两个术语至关重要。
+再次介绍 .NET 领域内大量使用的两个术语，对于理解 .NET 实现如何能够允许多语言开发及其工作原理，这两个术语至关重要。
 
 ## <a name="common-type-system"></a>常规类型系统
 
-首先，请记住 .NET 平台对语言不可知。 这不仅意味着程序员可以使用可编译为 IL 的任意语言编写代码。 还意味着程序员需要能够与使用 .NET 平台上可用的其他语言编写的代码进行交互。
+首先，请记住 .NET 实现对语言不可知。 这不仅意味着程序员可以使用可编译为 IL 的任意语言编写代码。 还意味着程序员需要能够与使用 .NET 实现上可用的其他语言编写的代码进行交互。
 
 为透明地执行此操作，必须使用某种通用方式描所有受支持类型。 这正是通用类型系统 (CTS) 的职责。 其功能如下：
 
 *   建立用于跨语言执行的框架。
-*   提供面向对象的模型，支持在 .NET 平台上实现各种语言。
+*   提供面向对象的模型，支持在 .NET 实现上实现各种语言。
 *   定义处理类型时所有语言都必须遵守的一组规则。
 *   提供包含应用程序开发中使用的基本基元数据类型（如 `Boolean`、`Byte`、`Char` 等）的库。
 
@@ -50,9 +51,9 @@ CTS 还将定义类型的所有其他属性，例如访问修饰符、有效的�
 
 ## <a name="common-language-specification"></a>公共语言规范
 
-为实现完全互操作性情景，代码中创建的所有对象都必须依赖于使用它的语言（即其调用方）的某些共性。 由于存在多种不同语言，因此 .NET 平台在 **公共语言规范** (CLS) 中指定了这些共性。 CLS 定义了许多常见应用程序所需的一组功能。 对于在 .NET 平台上实施的语言，它还就语言需要支持的内容提供了一组脚本。
+为实现完全互操作性情景，代码中创建的所有对象都必须依赖于使用它的语言（即其调用方）的某些共性。 由于存在多种不同语言，因此 .NET 在公共语言规范 (CLS) 中指定了这些共性。 CLS 定义了许多常见应用程序所需的一组功能。 对于在 .NET 上实现的语言，它还就语言需要支持的内容提供了一组脚本。
 
-CLS 是 CTS 的子集。 这意味着，CTS 中的所有规则也适用于 CLS，除非 CLS 规则更严格。 如果仅使用 CLS 中的规则生成组件（即在其 API 中仅公开 CLS 功能），则将该组件视为**符合 CLS**。 例如，`<framework-librares>` 完全符合 CLS，因为它们需要对 .NET 平台支持的所有语言有效。
+CLS 是 CTS 的子集。 这意味着，CTS 中的所有规则也适用于 CLS，除非 CLS 规则更严格。 如果仅使用 CLS 中的规则生成组件（即在其 API 中仅公开 CLS 功能），则将该组件视为**符合 CLS**。 例如，`<framework-librares>` 完全符合 CLS，因为它们需要对 .NET 支持的所有语言有效。
 
 可参阅下方[更多资源](#more-resources)部分中的文档，大致了解 CLS 中的所有功能。
 

@@ -1,7 +1,7 @@
 ---
 title: ".NET 类库"
-description: ".NET 类库"
-keywords: ".NET、.NET Core"
+description: "了解如何通过 .NET 类库，将实用功能组合为可供多个应用程序使用的模块。"
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
-ms.lasthandoff: 03/03/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -29,31 +30,31 @@ ms.lasthandoff: 03/03/2017
 
 ## <a name="platform-specific-class-libraries"></a>平台特定的类库
 
-平台特定的类库绑定到单个 .NET 平台（例如，Windows 上的 .NET Framework），因此它可以在已知的执行环境上接收重要的依赖项。 此类环境会公开一组已知 API（.NET 和 OS API），维护并公开预期状态（例如，Windows 注册表）。
+平台特定的类库绑定到单个 .NET 实现（例如，Windows 上的 .NET Framework），因此它可以在已知的执行环境上接收重要的依赖项。 此类环境会公开一组已知 API（.NET 和 OS API），维护并公开预期状态（例如，Windows 注册表）。
 
 创建平台特定的库的开发人员可充分利用基础平台。 该库只会在给定平台上运行，因此不需要平台检查和其他形式的条件代码（针对多个平台取模单个源代码）。
 
-平台特定的库一直是 .NET Framework 的主要类库类型。 即使出现了其他 .NET 平台，平台特定的库也仍然是最主要的类库类型。
+平台特定的库一直是 .NET Framework 的主要类库类型。 即使出现了其他 .NET 实现，平台特定的库也仍然是最主要的类库类型。
 
 ## <a name="portable-class-libraries"></a>可移植类库
 
-可移植库支持多个 .NET 平台。 该库仍可在已知执行环境上接收依赖项，不过该环境是一种合成环境，由一组具体 .NET 平台的交集生成。 这意味着，公开的 API 和平台假设是平台特定的库可用的子集。
+可移植库支持多个 .NET 实现。 该库仍可在已知执行环境上接收依赖项，不过该环境是一种合成环境，由一组具体 .NET 实现的交集生成。 这意味着，公开的 API 和平台假设是平台特定的库可用的子集。
 
 创建可移植库时，需选择平台配置。 这些是需要支持的各个平台（例如，.NET Framework 4.5+、Windows Phone 8.0+）。 要支持的平台越多，可生成的 API 和平台假设就越少，公分母越小。 这一特性可能最初会令人感到疑惑，因为人们常认为“越多越好”，但却发现更多的支持平台总导致可用 API 更少。
 
 许多库开发人员已经从由一个源开发多个平台特定的库（使用条件编译指令）转向开发可移植库。 有[多种方法](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)可在可移植库中访问平台特定的功能，其中[诱饵替换](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)是目前最广为接受的方法。
 
-### <a name="net-core-class-libraries"></a>.NET Core 类库
+### <a name="net-standard-class-libraries"></a>.NET Standard 类库
 
-.NET Core 库是平台特定的库和可移植库概念的替代。 .NET Core 库可从基础平台公开所有功能（无合成平台或平台交集），就此而言，它是平台特定的库。 该库可在所有支持平台上运行，就此而言，它是可移植库。
+.NET Standard 库是平台特定的库和可移植库概念的替代。 .NET Core 库可从基础平台公开所有功能（无合成平台或平台交集），就此而言，它是平台特定的库。 该库可在所有支持平台上运行，就此而言，它是可移植库。
 
-.NET Core 公开一组库协定。 .NET 平台必须完全支持每个协定，否则就全都不支持。 因此，每个平台都支持一组 .NET Core 协定。 得出的必然结果是，.NET Core 类库在支持其协定依赖项的平台上受到支持。
+.NET Standard 公开一组库协定。 .NET 实现必须完全支持每个协定，否则就全都不支持。 因此，每个实现都支持一组 .NET Standard 协定。 得出的必然结果是，.NET Standard 类库在支持其协定依赖项的平台上受到支持。
 
-.NET Core 协定不公开整个 .NET Framework 的功能（也不将此作为目标），但相比可移植类库，其公开的 API 更多。 随着时间推移，将添加更多的 API。
+.NET Standard 不公开整个 .NET Framework 的功能（也不将此作为目标），但相比可移植类库，其公开的 API 更多。 随着时间推移，将添加更多的 API。
 
-下列平台支持 .NET Core 类库：
+下列平台支持 .NET Standard 库：
 
-*   .NET Core
+*   .NET 核心
 *   ASP.NET Core
 *   .NET Framework 4.5+
 *   Windows 应用商店应用

@@ -1,81 +1,85 @@
 ---
-title: "Enhancing Debugging with the Debugger Display Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "debugger, display attributes"
-  - "DebuggerTypeProxyAttribute attribute"
-  - "debugging [.NET Framework], debugger display attributes"
-  - "DebuggerDisplayAttribute attribute"
-  - "display attributes for debugger"
-  - "DebuggerBrowsableAttribute attribute"
+title: "使用调试器显示特性增强调试"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- debugger, display attributes
+- DebuggerTypeProxyAttribute attribute
+- debugging [.NET Framework], debugger display attributes
+- DebuggerDisplayAttribute attribute
+- display attributes for debugger
+- DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dbc4c9a7e0c0fb43802c594934a683546f87a5b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# Enhancing Debugging with the Debugger Display Attributes
-调试器显示特性允许类型的开发人员（他们指定并且最理解该类型的运行时行为）同时指定该类型显示在调试器中时的外观。  此外，用户无需知道源代码即可在程序集级别应用提供 `Target` 属性的调试器显示特性。  <xref:System.Diagnostics.DebuggerDisplayAttribute> 特性控制如何在调试器变量窗口中显示类型或成员。  <xref:System.Diagnostics.DebuggerBrowsableAttribute> 特性确定是否以及如何在调试器变量窗口中显示某个字段或属性。  <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 特性指定某个类型的替代类型或代理，并更改在调试器窗口中显示该类型的方式。  在查看具有代理或替代类型的变量时，该代理在调试器显示窗口中代表原始类型。调试器变量窗口仅显示代理类型的公共成员。  不会显示私有成员。  
+# <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用调试器显示特性增强调试
+最了解且可指定类型运行时行为的类型开发人员还可以使用调试器显示属性指定类型在调试器中的显示外观。 此外，即使不了解源代码，用户也可将提供 `Target` 属性的调试器显示属性应用于程序集级别。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性控制类型或成员在调试器变量窗口中的显示方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性决定是否在调试器变量窗口中显示字段或属性，若要显示，则决定其显示方式。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性指定类型的替代类型或代理，并更改类型在调试器窗口中的显示方式。 查看具有代理或替代类型的变量时，代理将代替调试器显示窗口中的原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
   
-## 使用 DebuggerDisplayAttribute  
- <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> 构造函数具有单个参数：要在类型实例的值列中显示的字符串。  此字符串可以包含大括号（{ 和 }）。  大括号对中的文本按表达式进行求值。  例如，当选择加号 \(\+\) 展开 `MyHashtable` 的实例的调试器显示时，下面的 C\# 代码导致“Count \= 4”被显示出来。  
+## <a name="using-the-debuggerdisplayattribute"></a>使用 DebuggerDisplayAttribute  
+ <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> 构造函数有一个参数，此参数是一个字符串，将在类型实例的值列中显示。 此字符串可以包含大括号（{ 和 }）。 一对大括号之间的文本将作为表达式进行计算。 例如，选择加号 (+) 以展开 `MyHashtable` 实例的调试器显示时，以下 C# 代码将显示“Count = 4”。  
   
-```  
+```csharp
 [DebuggerDisplay("Count = {count}")]  
 class MyHashtable  
 {  
     public int count = 4;  
 }  
-```  
+```
   
- 应用于表达式中引用的属性的特性未被处理。  对于 C\# 编译器，允许使用常规表达式，这些表达式只能对目标类型的当前实例的 this 引用进行隐式访问。  该表达式是受限制的，不存在对别名、局部变量或指针的访问。  在 C\# 代码中，可以在大括号之间使用常规表达式，它们只能对目标类型的当前实例的 `this` 指针进行隐式访问。  
+ 不会处理应用于表达式中所引用属性的特性。 对于 C# 编译器，允许只能隐式访问当前目标类型实例引用的常规表达式。 该表达式受限，不能访问别名、局部变量或指针。 在 C# 代码中，可在大括号中使用只能隐式访问当前目标类型实例的 `this` 指针的常规表达式。  
   
- 例如，如果 C\# 对象重写了 `ToString()`，则调试器将调用该重写，并显示其结果而不是显示标准的 `{<typeName>}.`。因此，如果重写了 `ToString()`，则不需要使用 <xref:System.Diagnostics.DebuggerDisplayAttribute>。  在同时使用这两者时，<xref:System.Diagnostics.DebuggerDisplayAttribute> 特性将优先于 `ToString()` 重写。  
+ 例如，如果 C# 对象有重写的 `ToString()`，则调试器将调用该重写并显示重写的结果而不是标准 `{<typeName>}.`。因此，如果有重写的 `ToString()`，用户无需使用 <xref:System.Diagnostics.DebuggerDisplayAttribute>。 在同时使用这两者时，<xref:System.Diagnostics.DebuggerDisplayAttribute> 特性将优先于 `ToString()` 重写。  
   
-## 使用 DebuggerBrowsableAttribute  
- 将 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 应用于某个字段或属性，以指定如何在调试器窗口中显示该字段或属性。  此特性的构造函数采用 <xref:System.Diagnostics.DebuggerBrowsableState> 枚举值之一，该值指定下列状态之一：  
+## <a name="using-the-debuggerbrowsableattribute"></a>使用 DebuggerBrowsableAttribute  
+ 将 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 应用于字段或属性，指定字段或属性在调试器窗口中的显示方式。 此属性的构造函数采用一个 <xref:System.Diagnostics.DebuggerBrowsableState> 枚举值，指定以下任一状态：  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState> 指示数据窗口中不显示该成员。例如，将此值用于某字段的 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 将从层次结构中移除该字段；当您通过单击类型实例的加号 \(\+\) 来展开封闭类型时，不会显示该字段。  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Never> 表示未在数据窗口中显示成员。  例如，将此值用于字段上的 <xref:System.Diagnostics.DebuggerBrowsableAttribute>，则会从层次结构中删除该字段，单击类型实例的加号 (+) 展开封闭类型时，不会显示该字段。  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState> 指示将显示成员但默认情况下不展开。这是默认行为。  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 表示显示成员，但默认情况下不展开。  这是默认行为。  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState> 指示不显示该成员自身，但是如果它是数组或集合，则显示其构成对象。  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 表示不显示成员本身，但如果成员是一个数组或集合，则会显示其组成对象。  
   
 > [!NOTE]
->  .NET Framework 2.0 版中的 Visual Basic 不支持 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。  
+>  在 .NET Framework 2.0 中，Visual Basic 不支持 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。  
   
- 下面的代码示例演示如何使用 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 阻止它后面的属性出现在类的调试窗口中。  
+ 以下代码示例显示如何使用 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 防止其后面的属性出现在该类的调试窗口中。  
   
-```  
+```csharp
 [DebuggerBrowsable(DebuggerBrowsableState.Never)]  
 public static string y = "Test String";  
 ```  
   
-## 使用 DebuggerTypeProxy  
- 在需要显著或根本性地更改类型的调试视图但是不更改类型自身时，应使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 特性。  <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 特性用于指定类型的显示代理，允许开发人员定制类型的视图。此特性与 <xref:System.Diagnostics.DebuggerDisplayAttribute> 类似，可以在程序集级别使用，在这种情况下，<xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> 属性指定将为其使用代理的类型。  建议的用法是此特性指定一个私有嵌套类型，它出现在该特性所应用到的类型中。显示类型时，支持类型查看器的表达式计算器将对此特性进行检查。  如果找到该特性，表达式计算器就会替换应用该特性的类型的显示代理类型。  
+## <a name="using-the-debuggertypeproxy"></a>使用 DebuggerTypeProxy  
+ 如需从根本上大幅更改某个类型的调试视图，但不改变类型本身，请使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性用于为类型指定显示代理，允许开发人员为类型定制视图。  该属性与 <xref:System.Diagnostics.DebuggerDisplayAttribute> 类似，可以在程序集级别使用，在这种情况下，<xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> 属性指定将使用代理的类型。 建议使用该属性指定在应用属性的类型内发生的私有嵌套类型。  显示类型时，支持类型查看器的表达式计算器将检查此属性。 如果找到该属性，表达式计算器会将显示代理类型替换为应用该属性的类型。  
   
- 如果存在 <xref:System.Diagnostics.DebuggerTypeProxyAttribute>，调试器变量窗口将仅显示代理类型的公共成员，  不会显示私有成员。  特性增强的视图不会更改数据窗口的行为。  
+ 显示 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 时，调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。 属性增强视图不会改变数据窗口的行为。  
   
- 为了避免不必要的性能损失，显示代理的特性将在展开对象（可通过用户在数据窗口中单击类型旁的加号 \(\+\)，或通过应用 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 特性）之后处理。  因此，建议不要将任何特性应用于显示类型。  特性可以并且应该在显示类型的代码体中应用。  
+ 为避免不必要的性能损失，不会处理显示代理的属性，直到对象展开，无论是用户单击数据窗口中类型旁的加号 (+) 展开，还是通过应用 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性展开。 因此，建议不要对显示类型应用任何属性。 可以且应该在显示类型的正文中应用属性。  
   
- 下面的代码示例演示如何使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 指定将用作调试器显示代理的类型。  
+ 以下代码示例显示了如何使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 指定要用作调试器显示代理的类型。  
   
-```  
-  
+```csharp
 [DebuggerTypeProxy(typeof(HashtableDebugView))]  
 class MyHashtable : Hashtable  
 {  
@@ -98,17 +102,16 @@ class MyHashtable : Hashtable
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 可以在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中查看下面的代码示例以确定应用 <xref:System.Diagnostics.DebuggerDisplayAttribute>、<xref:System.Diagnostics.DebuggerBrowsableAttribute> 和 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 特性的结果。  
+### <a name="description"></a>描述  
+ 可在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中查看以下代码示例，以查看应用 <xref:System.Diagnostics.DebuggerDisplayAttribute>、<xref:System.Diagnostics.DebuggerBrowsableAttribute> 和 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性的结果。  
   
-### 代码  
- [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)]
- [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
- [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
+### <a name="code"></a>代码  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)] [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)] [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Diagnostics.DebuggerDisplayAttribute>   
  <xref:System.Diagnostics.DebuggerBrowsableAttribute>   
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute>
+

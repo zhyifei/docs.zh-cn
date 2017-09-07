@@ -1,6 +1,6 @@
 ---
-title: "什么是“托管代码”？"
-description: "什么是“托管代码”？"
+title: "什么是托管代码？"
+description: "了解托管代码为何是其执行由运行时（公共语言运行时 (CLR)）管理的代码。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,22 +10,23 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-translationtype: Human Translation
-ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
-ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
-ms.lasthandoff: 01/26/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="what-is-managed-code"></a>什么是“托管代码”？
 
-在使用.NET Framework 的过程中，我们经常会看到“托管代码”这个术语。 本文档解释这个术语的含义及其更多相关信息。
+使用 .NET Framework 时，我们经常会遇到“托管代码”这个术语。 本文档解释这个术语的含义及其更多相关信息。
 
 简而言之，托管代码就是执行过程交由运行时管理的代码。 在这种情况下，相关的运行时称为**公共语言运行时** (CLR)，不管使用的是哪种实现（[Mono](http://www.mono-project.com/)、.NET Framework 或.NET Core）。 CLR 负责提取托管代码、将其编译成机器代码，然后执行它。 除此之外，运行时还提供多个重要服务，例如自动内存管理、安全边界、类型安全，等等。
 
 相反，如果运行 C/C++ 程序，则运行的代码也称为“非托管代码”。 在非托管环境中，程序员需要亲自负责处理相当多的事情。 实际的程序在本质上是操作系统 (OS) 载入内存，然后启动的二进制代码。 其他任何工作 - 从内存管理到安全考虑因素 - 对于程序员来说是一个不小的负担。
 
-托管代码是使用可在 .NET 平台顶层运行的一种高级语言（例如 C#、Visual Basic、F# 等等）编写的。 使用相应的编译器编译以这些语言编写的代码时，无法获得机器代码， 而是获得**中间语言**代码，然后运行时会对其进行编译并将其执行。 C++ 是这条规则的一个例外，因为它也能够生成可在 Windows 上运行的本机非托管二进制代码。
+托管代码是使用可在 .NET 上运行的一种高级语言（例如 C#、Visual Basic、F# 等）编写的。 使用相应的编译器编译以这些语言编写的代码时，无法获得机器代码， 而是获得**中间语言**代码，然后运行时会对其进行编译并将其执行。 C++ 是这条规则的一个例外，因为它也能够生成可在 Windows 上运行的本机非托管二进制代码。
 
 ## <a name="intermediate-language--execution"></a>中间语言和执行
 

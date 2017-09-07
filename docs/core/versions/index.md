@@ -3,16 +3,16 @@ title: ".NET Core 版本控制"
 description: "了解 .NET Core 版本控制的工作原理。"
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
@@ -103,7 +103,7 @@ dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb               # SDK tools
 
 ##### <a name="preview-versions"></a>预览版
 
-包维护人员可以决定包含运行时和 SDK 的预览版。 请勿将这些预览版包含在未进行版本控制的 `dotnet-sdk` 包中，但是可将其发布为已进行版本控制的包，并将额外的预览标记追加到该名称的主要和次要版本中。 例如，可以有 `dotnet-sdk-2.0-preview-1-final` 包。
+包维护人员可以决定包含运行时和 SDK 的预览版。 请勿将这些预览版包含在未进行版本控制的 `dotnet-sdk` 包中，但是可将其发布为已进行版本控制的包，并将额外的预览标记追加到该名称的主要和次要版本中。 例如，可以有 `dotnet-sdk-2.0-preview1-final` 包。
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>预览版
 
-预览版向版本中追加了 `-preview-[number]-([build]|"final")`。 例如 `2.0.0-preview-1-final`。
+预览版向版本中追加了 `-preview[number]-([build]|"final")`。 例如 `2.0.0-preview1-final`。
 
 ### <a name="servicing-versions"></a>服务版本
 

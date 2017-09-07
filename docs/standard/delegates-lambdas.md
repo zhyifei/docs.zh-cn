@@ -1,7 +1,7 @@
 ---
 title: "委托和 lambda"
-description: "委托和 lambda"
-keywords: ".NET、.NET Core"
+description: "了解委托定义某种类型的方式，该类型可指定特定的方法签名，而后者又可直接调用或传递到另一种方法进行调用。"
+keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -39,7 +40,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   在第 4 行，创建特定签名的委托类型，在本例中即接受字符串参数并返回字符串参数的方法。
@@ -71,10 +71,9 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
-对于这个简单的示例而言，在 Main() 方法外定义方法似乎有些多余。 因此 .NET Framework 2.0 引入了**匿名委托**的概念。 在其支持下，可以创建“内联”委托，而无需指定任何其他类型或方法。 只需在所需位置内联委托的定义即可。
+对于这个简单的示例而言，在 Main() 方法外定义方法似乎有些多余。 因此 .NET Framework 2.0 引入了**匿名委托**的概念。 在其支持下，可创建“内联”委托，而无需指定任何其他类型或方法。 只需在所需位置内联委托的定义即可。
 
 例如，要进行切换并使用匿名委托筛选出只有偶数的列表，然后将其打印到控制台。
 
@@ -104,14 +103,13 @@ public class Program
     }
   }
 }
-
 ```
 
 请注意突出显示的行。 如你所见，该委托的正文只是一组表达式，其他所有委托也是如此。 但它并非单独定义，而是临时引入对 `List<T>` 类型 `FindAll()` 方法的调用的。
 
 但是，即使使用此方法，仍有许多可以丢弃的代码。 此时就需要使用 **lambda 表达式**。
 
-lambda 表达式（或简称“lambda”）是在 C# 3.0 中作为语言集成查询的 (LINQ) 核心构建基块首次引入的。 这种表达式只是使用委托的更方便的语法。 它们将声明签名和方法正文，但在分配到委托之前没有自己的正式标识。 与委托不同，可将其作为事件注册的左侧或在各种 Linq 子句和方法中直接分配。
+lambda 表达式（或简称“lambda”）在 C# 3.0 中作为语言集成查询的 (LINQ) 核心构建基块被首次引入。 这种表达式只是使用委托的更方便的语法。 它们将声明签名和方法正文，但在分配到委托之前没有自己的正式标识。 与委托不同，可将其作为事件注册的左侧或在各种 Linq 子句和方法中直接分配。
 
 由于 lambda 表达式只是指定委托的另一种方式，因此应可重新编写上述示例，令其使用 lambda 表达式而不是匿名委托。
 
@@ -136,7 +134,6 @@ public class Program
     }
   }
 }
-
 ```
 
 查看突出显示的行，即可了解 lambda 表达式的外观。 再次强调，它只是使用委托的一种**非常**方便的语法，因此其实际行为与使用匿名委托时相同。
@@ -153,7 +150,6 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>其他阅读材料和资源

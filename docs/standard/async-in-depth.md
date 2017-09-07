@@ -1,6 +1,6 @@
 ---
 title: "深入了解异步"
-description: "详细说明异步代码在 .NET 中的工作方式"
+description: "了解如何使用基于 .NET 任务的异步模型直接编写绑定 I/O 和 CPU 的异步代码。"
 keywords: ".NET、.NET Core、.NET Standard"
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: 88492a5db66977f3b914123aa8489c079aff59c5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="async-in-depth"></a>深入了解异步
 
-使用基于 .NET 任务的异步模型可直接编写绑定 I/O 和 CPU 的异步代码。 该模型由 `Task` 和 `Task<T>` 类型以及 `async` 和 `await` 语言关键字公开。 本文解释如何使用 .NET 异步，并深入介绍其中使用的异步框架。
+使用基于 .NET 任务的异步模型可直接编写绑定 I/O 和 CPU 的异步代码。 该模型由 `Task` 和 `Task<T>` 类型以及 C# 和 Visual Basic 中的 `async` 和 `await` 关键字公开。 （有关特定语言的资源，请参见[另请参阅](#see-also)部分。）本文解释如何使用 .NET 异步，并深入介绍其中使用的异步框架。
 
 ## <a name="task-and-tasklttgt"></a>任务和 Task&lt;T&gt;
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/10/2017
 
 任务运行时，使用 `await` 在任务完成前将控制让步于其调用方，可让应用程序和服务执行有用工作。 任务完成后代码无需依靠回调或时间便可继续执行。 语言和任务 API 集成会为你完成此操作。 如果正在使用 `Task<T>`，任务完成时，`await` 关键字还将“打开”返回的值。  下面进一步详细介绍了此工作原理。
 
-可在[基于任务的异步模式 (TAP) 文章](https://msdn.microsoft.com/library/hh873175.aspx)中了解有关任务以及与任务交互的不同方法的详细信息。
+可在[基于任务的异步模式 (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主题中了解有关任务以及与任务交互的不同方法的详细信息。
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>深入了解针对绑定 I/O 的操作的任务
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/10/2017
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -147,3 +148,10 @@ public async Task<int> CalculateResult(InputData data)
 ### <a name="why-does-async-help-here"></a>异步为什么在此处会起作用？
 
 `async` 和 `await` 是在需要可响应性时管理绑定 CPU 的工作的最佳实践。 存在多个可将异步用于绑定 CPU 的工作的模式。 请务必注意，使用异步成本有少许费用，不推荐紧凑循环使用它。  如何编写此新功能的代码完全取决于你。
+
+## <a name="see-also"></a>请参阅
+
+[C# 中的异步编程](~/docs/csharp/async.md)   
+[F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+[使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

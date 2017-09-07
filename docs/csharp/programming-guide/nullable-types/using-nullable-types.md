@@ -120,7 +120,7 @@ ms.lasthandoff: 07/28/2017
   
  下表列出了这些运算符的结果：  
   
-|X|y|x 和 y|x|y|  
+|X|y|x 和 y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|false|false|true|  

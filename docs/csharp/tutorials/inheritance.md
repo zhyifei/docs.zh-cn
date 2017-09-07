@@ -5,17 +5,17 @@ keywords: "继承 (C#), 基类, 派生类, 抽象基类"
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
@@ -216,13 +216,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 两个与出版物相关的属性
 
-  `Title` 是只读 <xref:System.String> 属性，值是通过调用将值存储在 `pubTitle` 私有字段中的 `Publication` 构造函数来提供。
+  `Title` 是只读 <xref:System.String> 属性，其值通过调用 `Publication` 构造函数提供。
 
   `Pages` 是读写 <xref:System.Int32> 属性，用于指明出版物的总页数。 值存储在 `totalPages` 私有字段中。 值必须为正数，否则会抛出 <xref:System.ArgumentOutOfRangeException>。
 
 - 与出版商相关的成员
 
-  两个只读属性（`Publisher` 和 `Type`）用于返回私有字段 `pubName` 和 `pubType` 的值。 值最初是通过调用 `Publication` 类构造函数来提供。
+  两个只读属性：`Publisher` 和 `Type`。 值最初是通过调用 `Publication` 类构造函数来提供。
 
 - 与出版相关的成员
 
@@ -230,7 +230,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 与版权相关的成员
 
-  `Copyright` 方法需要将版权所有者的姓名和版权授予年份用作自变量，并将它们分配给私有字段 `copyrName` 和 `copyrDate`。 可以从 `CopyrightName` 和 `CopyrightDate` 属性检索这些值。
+  `Copyright` 方法需要将版权所有者的姓名和版权授予年份用作参数，并将它们分配给属性 `CopyrightName` 和 `CopyrightDate`。
 
 - 重写 `ToString` 方法
 
@@ -250,13 +250,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 两个构造函数
 
-  两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在 `authorName` 私有字段中。 其中一个构造函数包含存储在 `id` 私有字段中的 *isbn* 参数。
+  两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在 `authorName` 私有字段中。 其中一个构造函数包含存储在 `ISBN` 自动属性中的 isbn 参数。
 
-  第一个构造函数使用 [this](../language-reference/keywords/this.md) 关键字来调用另一个构造函数。 这是常见的构造函数定义模式；调用参数最多的构造函数时，由参数较少的构造函数提供默认值。
+  第一个构造函数使用 [this](../language-reference/keywords/this.md) 关键字来调用另一个构造函数。 这是常见的构造函数定义模式。 调用参数最多的构造函数时，由参数较少的构造函数提供默认值。
 
   第二个构造函数使用 [base](../language-reference/keywords/base.md) 关键字，将标题和出版商名称传递给基类构造函数。 如果没有在源代码中显式调用基类构造函数，那么 C# 编译器会自动提供对基类的默认或无参数构造函数的调用。
 
-- 只读 `ISBN` 属性，用于返回 `Book` 对象的国际标准书号，即 10 位或 13 位的专属编号。 ISBN 作为自变量提供给 `Book` 构造函数之一，并存储在 `id` 私有字段中。
+- 只读 `ISBN` 属性，用于返回 `Book` 对象的国际标准书号，即 10 位或 13 位的专属编号。 ISBN 作为参数提供给 `Book` 构造函数之一。 ISBN 存储在私有支持字段中，由编译器自动生成。
 
 - 只读 `Author` 属性。 作者姓名作为自变量提供给两个 `Book` 构造函数，并存储在 `authorName` 私有字段中。
 

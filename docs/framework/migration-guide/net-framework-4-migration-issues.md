@@ -13,10 +13,10 @@ author: rpetrusha
 ms.author: mariaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2766edd72d7f0ebb03692ef50be96ffc3c676270
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: b70c0a7291cf8569781ffc6b67632f93c5627e8b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 
@@ -262,8 +262,8 @@ ms.lasthandoff: 07/28/2017
 | ------- | ------------------------ | ------------------- |
 | **绑定命令实例** | 为了提供一种机制，用于将基于视图模型的命令实例绑定到基于视图的输入笔势，<xref:System.Windows.Input.InputBinding> 类现从 <xref:System.Windows.Freezable> 而非 <xref:System.Windows.DependencyObject> 继承。 以下属性现为依赖项属性：<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>此更改产生以下结果：<br><br>* 注册之后，<xref:System.Windows.Input.InputBinding> 对象现处于冻结状态，而不是仍可变。<br>* 无法从多个线程访问实例级别的 <xref:System.Windows.Input.InputBinding> 对象，因为存在 <xref:System.Windows.DependencyObject> 类的限制。<br>* 无法在注册类级别的输入绑定后对其进行转换，因为存在 <xref:System.Windows.Freezable> 类的限制。<br>* 无法对视图模型中创建的命令实例指定输入绑定。 | 如果绑定可变，则在单独的线程上创建 <xref:System.Windows.Input.InputBinding> 类的单独实例，否则请冻结这些绑定。 不要在注册类级别静态 <xref:System.Windows.Input.InputBinding> 后更改它。 |
 | **浏览器应用程序** | WPF 浏览器应用程序 (.XBAP) 现使用与独立 WPF 应用程序相同的方式处理键事件，以便对象以正确顺序接收路由键事件。 | 无。 |
-| **语音符号键组合** | WPF 会对语音符号键进行模糊处理，这不会生成任何可见字符，而是指示该键将与下一个字母键组合使用以生成一个字符。 通过将 <xref:System.Windows.Input.KeyEventArgs.Key> 属性设置为 <xref:System.Windows.Input.Key> 值，键输入事件（例如 [KeyDown](https://msdn.microsoft.com/library/system.windows.input.keyboard.keydown(v=vs.100).aspx) 事件）会在键成为语音符号键时进行报告。 这通常属于预期行为，因为应用程序一般不会对创建组合字符的键盘输入做出响应。 | 期望读取组合字符组成键的应用程序可通过使用 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 属性，获取现经过模糊处理的键。 |
-| **焦点管理器** | 如果向 [FocusManager::GetFocusedElement](https://msdn.microsoft.com/library/ms604088(v=vs.100).aspx) 方法传递 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope(v=vs.100).aspx) 附加属性设置为 `true` 的元素，则当且仅当返回的元素与传递给该方法的元素属于同一 <xref:System.Windows.PresentationSource> 对象时，该方法返回的元素才是该焦点范围内的上一个键盘焦点元素。 | 无。 |
+| **语音符号键组合** | WPF 会对语音符号键进行模糊处理，这不会生成任何可见字符，而是指示该键将与下一个字母键组合使用以生成一个字符。 通过将 <xref:System.Windows.Input.KeyEventArgs.Key> 属性设置为 <xref:System.Windows.Input.Key> 值，键输入事件（如 <xref:System.Windows.Input.Keyboard.KeyDownEvent> 事件）会在键成为语音符号键时进行报告。 这通常属于预期行为，因为应用程序一般不会对创建组合字符的键盘输入做出响应。 | 期望读取组合字符组成键的应用程序可通过使用 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 属性，获取现经过模糊处理的键。 |
+| **焦点管理器** | 如果向 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> 方法传递将 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 附加属性设置为 `true` 的元素，那么当且仅当返回的元素与传递给此方法的元素属于同一 <xref:System.Windows.PresentationSource> 对象时，此方法返回的元素才是相应焦点范围内的上一个键盘焦点元素。 | 无。 |
 
 ### <a name="ui-automation"></a>UI 自动化
 
@@ -298,7 +298,7 @@ ms.lasthandoff: 07/28/2017
 | 功能 | 与 3.5 SP1 的差异 |
 | ------- | ------------------------ |
 | **Chameleon 架构** | 为了防止数据损坏，当 Chameleon 架构随附于多个架构，现可正确克隆。<br><br>Chameleon 架构是一些不具有目标命名空间的架构，当这些架构包含在另一个 XSD 中时，它们采用导入架构的目标命名空间。 它们通常用于将一般类型包含在架构中。 |
-| **ID 函数** | 向 XLST 传递 <xref:System.Xml.XmlReader> 对象时，XSLT [id 函数](https://msdn.microsoft.com/library/ms190915.aspx)现在返回正确的值而不是 Null。<br><br>如果用户使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 方法从 LINQ to XML 类创建了 <xref:System.Xml.XmlReader> 对象，且已将此 <xref:System.Xml.XmlReader> 对象传递给 XSLT，则 XSLT 中 `id` 函数的任何实例先前返回了 Null。 此值不是 `id` 函数允许的返回值。 |
+| **ID 函数** | 向 XLST 传递 <xref:System.Xml.XmlReader> 对象时，XSLT [id 函数](/sql/xquery/functions-on-sequences-id)现在返回正确的值而不是 Null。<br><br>如果用户使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 方法从 LINQ to XML 类创建了 <xref:System.Xml.XmlReader> 对象，且已将此 <xref:System.Xml.XmlReader> 对象传递给 XSLT，则 XSLT 中 `id` 函数的任何实例先前返回了 Null。 此值不是 `id` 函数允许的返回值。 |
 | **命名空间特性** | 为了防止数据损坏，<xref:System.Xml.XPath.XPathNavigator> 对象现正确返回 `x:xmlns` 特性的本地名称。 |
 | **命名空间声明** | 子树中的 <xref:System.Xml.XmlReader> 对象不再在单个 XML 元素中创建重复的命名空间声明。 |
 | **架构验证** | 为了阻止错误的架构验证，<xref:System.Xml.Schema.XmlSchemaSet> 类确保 XSD 架构编译的正确性和一致性。 这些架构可包含其他架构；例如，`A.xsd` 可包含 `B.xsd`，而后者又可包含 `C.xsd`。 编译上述任意架构会导致遍历依赖项图。 |

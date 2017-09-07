@@ -1,79 +1,85 @@
 ---
-title: "WSTrustChannelFactory 和 WSTrustChannel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WSTrustChannelFactory 和 WSTrustChannel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e400d68924f1ed57ea1e71892e52f5aae2f5eebc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# WSTrustChannelFactory 和 WSTrustChannel
-如果您已经熟悉 Windows Communication Foundation \(WCF\)，则可以断定 WCF 客户已识别的联合。  通过配置具有 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定的一个 WCF 客户端上，可以启用的联合为身份验证服务。  
+# <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
+如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。  
   
- WCF 获取由安全令牌服务 \(STS\) 在幕后发出的标记并使用此标记验证到服务。  对此方法的主要限制不可见性与客户端的服务器通信。  WCF 自动生成请求安全令牌 \(RST\) 为基于发出的标记 STS 参数的绑定。  这意味着客户不能更改 RST 参数随请求，检查请求安全令牌响应 \(RSTR\) 获取信息如显示声明或缓存标记后使用。  
+ WCF 获取由后台安全令牌服务 (STS) 颁发的令牌，并使用此令牌对服务进行身份验证。 此方法的主要限制在于无法查看客户端与服务器之间的通信。 WCF 基于在绑定上颁发的令牌参数，自动生成 STS 的请求安全令牌 (RST)。 这意味着客户端不能改变每个请求的 RST 参数、无法通过检查请求安全令牌响应 (RSTR) 获取显示声明等信息，也不能缓存令牌供将来使用。  
   
- 目前，WCF 客户适合基关联的方案。  但是，Windows 标识基础 \(WIF\) 支持的一个主要方案需要对 RST 的控制在 WCF 轻松不允许的级别。  WIF 因此，将使您能够更多控制与通信的 STS 的功能。  
+ 目前，WCF 客户端适用于基本联合方案。 然而，Windows Identity Foundation (WIF) 支持的其中一个主要方案需要对 RST 拥有 WCF 不轻易允许的级别的控制。 因此，WIF 添加了针对与 STS 的通信提供更强控制的功能。  
   
- WIF 联合支持以下方案：  
+ WIF 支持以下联合方案：  
   
--   使用无身份验证的任何 WIF 依赖，将一个 WCF 客户为联合的服务  
+-   在没有任何 WIF 依赖项的情况下使用 WCF 客户端对联合服务进行身份验证  
   
--   使 WCF 客户端的 ActAs WIF 插入或 OnBehalfOf 元素到 RST 到 STS  
+-   在 WCF 客户端上启用 WIF，将 ActAs 或 OnBehalfOf 元素插入 STS 的 RST 中  
   
--   使用单独的 STS WIF 然后使从获取的标记 WCF 客户端验证使用该标记。  有关更多信息，请参见 [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) 中的示例。  
+-   仅使用 WIF 从 STS 获取令牌，然后启用 WCF 客户端，以便使用此令牌进行身份验证。 有关详细信息，请参阅 [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) 示例。  
   
- 第一种是截然不同的：现有 WCF 客户端继续与 WIF 关系方和 STSs 一起使用。  本主题讨论的其余两种情况。  
+ 第一个方案很容易理解：现有的 WCF 客户端将继续适用于 WIF 信赖方和 STS。 本主题讨论剩余的两个方案。  
   
-## 引发一 ActAs\/OnBehalfOf 的现有 WCF 客户  
- 在典型的方案中，客户端服务标识委托调用中间层，然后调用一后端服务。  中间层服务充当或操作，代表客户。  
+## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>通过 ActAs/OnBehalfOf 增强现有的 WCF 客户端  
+ 在典型的标识委派方案中，客户端调用中间层服务，该服务随后调用后端服务。 中间层服务充当客户端或代表客户端执行操作。  
   
 > [!TIP]
->  ActAs 和 OnBehalfOf 具有的差异？  
+>  ActAs 和 OnBehalfOf 有何区别？  
 >   
->  从 procotol WS\-Trust 位置：  
+>  从 WS-Trust 协议的角度来看：  
 >   
->  1.  ActAs 元素指示 RST 请求者让包含有关声明两个不同的实体的标记：请求者以及在 ActAs 元素的标记表示实体的外部。  
-> 2.  OnBehalfOf 元素指示 RST 请求者希望只有包含元素声明为实体的标记：在 OnBehalfOf 元素的标记表示实体的外部。  
+>  1.  ActAs RST 元素指示请求者想要的令牌包含有关两个不同实体的声明，这两个实体分别是请求者和由 ActAs 元素中的令牌表示的外部实体。  
+> 2.  OnBehalfOf RST 元素指示请求者想要的令牌包含仅与一个实体有关的声明，这个实体是由 OnBehalfOf 元素中的令牌表示的外部实体。  
 >   
->  ActAs 功能通常用在需要委托，发出最终标记复合的接收者可以检查整个链委托以及查看不仅客户，但所有中间的方案。  这让其执行基于整个标识将字符串和其他相关活动的访问控制和审核。  ActAs 功能通常在多层的系统验证和传递有关的标识信息。层之间，而无需将此信息在应用程序或业务逻辑层。  
+>  ActAs 功能通常用于需要复合委派的方案，其中所颁发令牌的最终接收方可以检查整个委派链，可以查看客户端和所有中介。 这样，它可以基于整个标识委派链执行访问控制、审核和其他相关活动。 ActAs 功能通常用于在多层系统中进行身份验证以及在层之间传递有关标识的信息（无需在应用程序/业务逻辑层传递此信息）。  
 >   
->  OnBehalfOf 功能最初仅在客户标识重要并有效与标识模拟功能可用窗口中的方案。  当使用时 OnBehalfOf，发出的是最终只能看到有关原始客户端声明，并且，中间不保留有关的信息。  OnBehalfOf 功能使用的常见模式是客户端无法访问 STS 直接，而的代理模式通过代理网关进行通信。  代理网关验证调用方并使调用方有关的信息放入然后路由到处理的实际 STS RST 信息的 OnBehalfOf 元素。  得到的标记包含只有声明与的客户代理，使代理能够完全透明的颁发的接收器。WIF 请注意不支持 \<wsse:SecurityTokenReference\> 或 \<wsa:EndpointReferences\> 作为 \<wst:OnBehalfOf\> 的子。  WS\-Trust 规范中是允许三种方式标识原始请求 \(代表用户代理操作\)。  这些是：  
+>  OnBehalfOf 功能用于仅原始客户端的标识重要并且与 Windows 中可用的标识模拟功能同样高效的情况。 使用 OnBehalfOf 时，所颁发令牌的最终接收方只能查看有关原始客户端的声明，未保留有关中介的信息。 使用 OnBehalfOf 功能的常见模式是代理模式，在此模式中，客户端无法直接访问 STS，但可以通过代理网关通信。 代理网关对调用方进行身份验证并将有关调用方的信息放入 RST 消息的 OnBehalfOf 元素中，然后将该消息发送到真正的 STS 中以供处理。 生成的令牌仅包含与代理的客户端有关的声明，因此此代理对所颁发令牌的接收方来说完全透明。请注意，WIF 不支持 \<wsse:SecurityTokenReference> 或 \<wsa:EndpointReferences> 作为 \<wst:OnBehalfOf> 的子级。 WS-Trust 规范允许三种标识原始请求者（代理代表其执行操作）的方法。 这些是：  
 >   
->  -   安全标记引用。  对标记的引用，在消息或能检索到带的外部\)。  
-> -   终结点引用。  用于键，搜索数据，再从带区外部。  
-> -   安全标记。  直接以标识初始请求。  
+>  -   安全令牌引用。 对令牌的引用（消息中的引用，或者可能是带外检索的引用）。  
+> -   终结点引用。 作为查找数据的密钥使用（仍为带外）。  
+> -   安全令牌。 直接标识原始请求方。  
 >   
->  WIF 只支持安全令牌，加密或未加密，以 wst 一个 \<wst:OnBehalfOf\> 直接子元素。  
+>  WIF 仅支持安全令牌（加密或未加密）作为 \<wst:OnBehalfOf> 的直接子元素。  
   
- 使用在 RST，的 ActAs 和 OnBehalfOf 标记元素中传达此信息。WS\-Trust 发出者。  
+ 使用 RST 中的 ActAs 和 OnBehalfOf 令牌元素将此信息传达给 WS-Trust 颁发者。  
   
- WCF 公开允许任意 XML 元素添加到 RST 绑定的一个扩展性点。  但是，因为扩展点附加到绑定，需要的情况 RST 内容每调用更改必须再次创建每次调用的客户，会降低性能。  WIF 使用 `ChannelFactory` 类的扩展方法允许开发人员获取从附加 RST 的条带外部的任何标记。  下面的代码示例演示如何将表示客户的 X.509 \(如标记、用户名或安全断言 Markup Language \(SAML\) \-标记\) 并将其附加到 RST 的发出者发送到。  
+ WCF 在允许将任意 XML 元素添加到 RST 的绑定上公开扩展点。 然而，因为扩展点与该绑定关联，所以每次调用都需要改变 RST 内容的方案必须在每次调用时重新创建客户端，这将降低性能。 WIF 使用 `ChannelFactory` 类上的扩展方法，因此开发人员可以将带外获取的任何令牌附加到 RST。 下方的代码示例演示如何获取表示客户端（例如 X.509、用户名或安全断言标记语言 (SAML) 令牌）的令牌并将它附加到发送给颁发者的 RST。  
   
 ```  
 IHelloService serviceChannel = channelFactory.CreateChannelActingAs<IHelloService>( clientSamlToken );  
-serviceChannel.Hello(“Hi!”);  
+serviceChannel.Hello("Hi!");  
 ```  
   
- WIF 提供以下优点：  
+ WIF 提供如下优点：  
   
--   RST 可以每个通道修改；中间层服务，因此无需重新创建各个客户端上的通道工厂，从而提高性能。  
+-   可以按通道修改 RST；因此，中间层服务不需要为每个客户端重新创建通道工厂，从而提高性能。  
   
--   这样做与现有 WCF 客户，使一种的升级路径就可以为现有中间层若要启用 WCF 服务标识委托语义。  
+-   这适用于现有的 WCF 客户端，可能为要启用标识委派语义的现有 WCF 中间层服务提供简单的升级路径。  
   
- 但是，仍没有可见性。STS 客户的通信。  我们将查看这一点。第三个方案。  
+ 然而，仍看不到客户端与 STS 之间的通信。 我们将在第三个方案中查看此问题。  
   
-## 通信直接与发出者和使用发出的标记验证  
- 对于一些高级方案，引发 WCF 客户不足够。  通常使用 WCF 消息仅使用在\/消息协定并手动处理客户端发出者分析响应的开发人员。  
+## <a name="communicating-directly-with-an-issuer-and-using-the-issued-token-to-authenticate"></a>与颁发者直接通信并使用颁发的令牌进行身份验证  
+ 对于某些高级方案，增强 WCF 客户端是不够的。 仅使用 WCF 的开发人员通常使用 Message In/Message Out 协定，手动处理颁发者响应的客户端分析。  
   
- WIF 介绍 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类使客户直接与 WS\-Trust 发出者进行通信。  <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类支持到流的强类型的 RST 和对象 RSTR 在客户端发出者和之间，如下面的代码示例所示。  
+ WIF 引入了 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类，使客户端直接与 WS-Trust 颁发者通信。 通过 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类，强类型 RST 和 RSTR 对象可在客户端和颁发者之间流动，如以下代码示例所示。  
   
 ```  
 WSTrustChannelFactory trustChannelFactory = new WSTrustChannelFactory( stsBinding, stsAddress );  
@@ -84,25 +90,26 @@ RequestSecurityTokenResponse rstr = null;
 SecurityToken token = channel.Issue(rst, out rstr);  
 ```  
   
- 请注意 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法的 `out` 参数可为 RSTR 的访问客户端检查的。  
+ 请注意，<xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法上的 `out` 参数允许访问 RSTR 进行客户端检查。  
   
- 到目前为止，我们仅看到了获取标记。  从返回 <xref:System.ServiceModel.Security.WSTrustChannel> 对象的标记。包含任何信息用于进行身份验证是必需的。关系方的 `GenericXmlSecurityToken`。  下面的代码示例演示如何使用此标记。  
+ 至此，我们仅了解到如何获取令牌。 从 <xref:System.ServiceModel.Security.WSTrustChannel> 对象返回的令牌是 `GenericXmlSecurityToken`，其中包含对信赖方进行身份验证所需的所有信息。 下方的代码示例演示如何使用此令牌。  
   
 ```  
-IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token ); serviceChannel.Hello(“Hi!”);  
+IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token ); serviceChannel.Hello("Hi!");  
 ```  
   
- 在 `ChannelFactory` 对象上调用 <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> 扩展方法向指示 WIF 您获得一标记从带外部，因此，有时应停止常规调用 WCF 的颁发者和使用验证关系方获取到的标记。  这具有以下优点：  
+ `ChannelFactory` 对象上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> 扩展方法会让 WIF 知道你已在带外获取令牌，且它应该停止对颁发者的常规 WCF 调用，而改用你所获取的令牌对信赖方进行身份验证。 这具有如下优点：  
   
--   为您对标记发布过程的完全控制。  
+-   可以完全控制令牌颁发进程。  
   
--   它通过直接设置在发出的 RST 的属性支持 ActAs\/OnBehalfOf 方案。  
+-   通过直接在传出 RST 上设置这些属性来支持 ActAs/OnBehalfOf 方案。  
   
--   其启用动态客户端计算机的信任决定使基于 RSTR 的内容。  
+-   可以基于 RSTR 的内容做出动态客户端信任决策。  
   
--   它允许您缓存和重用从 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法返回的标记。  
+-   可以缓存并重新使用从 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法返回的令牌。  
   
--   <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 都允许通道缓存、错误和语义恢复控件根据 WCF 最佳做法。  
+-   可根据 WCF 最佳做法通过 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 控制通道缓存、错误和恢复语义。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [WIF 功能](../../../docs/framework/security/wif-features.md)
+

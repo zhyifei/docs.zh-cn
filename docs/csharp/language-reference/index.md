@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-reference"></a>C# 参考
@@ -72,8 +72,7 @@ ms.lasthandoff: 07/28/2017
  [Microsoft 知识库中的 C# 知识库文章](http://go.microsoft.com/fwlink/?LinkId=70368)  
  打开 Microsoft 搜索页面，以搜索 MSDN 上提供的知识库文章。  
   
- [C#](../../csharp/csharp.md)  
- 提供 Visual C# 文档的入口。  
+ [C#](../../csharp/index.md) 提供 Visual C# 文档的入口。  
   
  [使用 Visual Studio C# 开发环境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  提供指向介绍 IDE 和编辑器的概念性和任务主题的链接。  
