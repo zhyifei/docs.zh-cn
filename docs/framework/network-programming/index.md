@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4b63aeadb795e5457266bd75d1f2bf0e695eac7f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
