@@ -1,73 +1,79 @@
 ---
-title: "如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
-## 适用于  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
+## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows®标识基础\(WIF\)  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web窗体  
+-   ASP.NET® Web 窗体  
   
-## 摘要  
- 本帮助主题提供创建简单的声明感知ASP.NET Web窗体应用程序提供了详细的分步过程。  它说明如何测试对联合的身份验证的成功实现简单的声明感知ASP.NET Web窗体应用程序还提供命令。  本帮助主题没有创建的安全标记服务\(STS\)详细说明，并假定您已配置了STS。  
+## <a name="summary"></a>摘要  
+ 本操作说明提供了创建简单的声明感知 ASP.NET Web 窗体应用程序的详细分步过程。 还提供关于如何测试简单声明感知 ASP.NET Web 窗体应用程序以确保成功实现联合身份验证的说明。 本操作说明不包括如何创建安全令牌服务 (STS) 的详细说明，且假定你已配置 STS。  
   
-## 内容  
+## <a name="contents"></a>内容  
   
--   用途  
+-   目标  
   
 -   步骤摘要  
   
--   步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
+-   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤2 \-配置ASP.NET Web到基于声明的身份验证的窗体应用程序  
+-   第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
   
--   步骤3 \-测试您的解决方案  
+-   步骤 3 - 测试你的解决方案  
   
-## 用途  
+## <a name="objectives"></a>目标  
   
--   配置ASP.NET Web到基于声明的身份验证的窗体应用程序  
+-   为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
   
--   测试成功的声明感知ASP.NET Web窗体应用程序  
+-   测试成功的声明感知 ASP.NET Web 窗体应用程序  
   
-## 步骤摘要  
+## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤1 \-创建简单的ASP.NET Web窗体应用程序  
+-   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤2 \-配置ASP.NET Web到联合的身份验证的窗体应用程序  
+-   步骤 2 – 为联合身份验证配置 ASP.NET Web 窗体应用程序  
   
--   步骤3 \-测试您的解决方案  
+-   步骤 3 - 测试你的解决方案  
   
-## 步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
- 在此步骤中，您将创建一个新ASP.NET Web窗体应用程序。  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+ 在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。  
   
-#### 创建一个简单的ASP.NET应用程序  
+#### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序  
   
-1.  启动Visual Studio并单击 **文件**、 **新建**然后 **项目**。  
+1.  启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
   
-2.  在 **新建项目** 窗口中，单击 **ASP.NET Web窗体应用程序**。  
+2.  在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
   
-3.  在 **名称**，输入 `TestApp` 并按 **确定**。  
+3.  在“名称”中，输入 `TestApp`，然后按“确定”。  
   
-## 步骤2 \-配置ASP.NET Web到基于声明的身份验证的窗体应用程序  
- 此步骤将添加配置条目添加到ASP.NET Web窗体应用程序 *Web.config* 配置文件使其声明感知。  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
+ 在此步骤中，将配置条目添加到 ASP.NET Web 窗体应用程序的 Web.config 配置文件中，以使其可感知声明。  
   
-#### 配置为基于声明的身份验证的ASP.NET应用程序  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>为基于声明的身份验证配置 ASP.NET Web 应用程序  
   
-1.  添加以下配置节项添加 **\<configuration\>** 到起始元素后的 *Web.config* 配置文件:  
+1.  将以下配置节条目紧随添加到 Web.config 配置文件中的 \<configuration> 起始元素后：  
   
     ```xml  
     <configSections>  
@@ -76,7 +82,7 @@ caps.handback.revision: 7
     </configSections>  
     ```  
   
-2.  添加启用对应用程序的联邦元数据访问的一个 **\<location\>** 元素:  
+2.  添加 \<location> 元素，用于启用对应用程序的联合元数据的访问权限：  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -88,7 +94,7 @@ caps.handback.revision: 7
     </location>  
     ```  
   
-3.  将 **\<system.web\>** 元素中的以下配置条目拒绝用户，禁用本机身份验证，并使WIF管理身份验证。  
+3.  在 \<system.web> 元素内添加以下配置条目以拒绝用户、禁用本机身份验证并启用 WIF 来管理身份验证。  
   
     ```xml  
     <authorization>  
@@ -97,9 +103,9 @@ caps.handback.revision: 7
     <authentication mode="None" />  
     ```  
   
-4.  添加定义联合的身份验证模块的一个 **\<system.webServer\>** 元素。  请注意 *此时该* 属性必须为 **\<configSections\>** 项的 *PublicKeyToken* 属性前面添加的相同:  
+4.  添加 \<system.webServer> 元素，用于为联合身份验证定义模块。 请注意，PublicKeyToken 特性必须与之前为 \<configSections > 条目添加的 PublicKeyToken 特性相同：  
   
-    ```  
+    ```xml  
     <system.webServer>  
       <modules>  
         <add name="WSFederationAuthenticationModule" type="System.IdentityModel.Services.WSFederationAuthenticationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler" />  
@@ -108,7 +114,7 @@ caps.handback.revision: 7
     </system.webServer>  
     ```  
   
-5.  添加以下Windows标识基础相关的配置项并确保您的ASP.NET应用程序的URL和端口号与 **\<audienceUris\>** 项、 **\<wsFederation\>** 元素的 **字段** 属性和 **\<wsFederation\>** 元素的 **答案** 属性的值。  还要确保 **颁发机构** 值适合您的安全标记服务\(STS\) URL。  
+5.  添加以下 Windows Identity Foundation 相关配置条目，并确保 ASP.NET 应用程序的 URL 和端口号与 \<audienceUris> 条目、\<wsFederation> 元素的“realm”特性和 \<wsFederation> 元素的“reply”特性中的值相匹配。 还需确保“issuer”值与安全令牌服务 (STS) URL 相适应。  
   
     ```xml  
     <system.identityModel>  
@@ -132,16 +138,16 @@ caps.handback.revision: 7
     </system.identityModel.services>  
     ```  
   
-6.  添加对 [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True) 程序集。  
+6.  将引用添加到 <xref:System.IdentityModel> 程序集。  
   
-7.  生成解决方案确定存在错误。  
+7.  编译此解决方案，确保没有任何错误。  
   
-## 步骤3 \-测试您的解决方案  
- 此步骤将测试配置的ASP.NET Web窗体应用程序对基于声明的身份验证。  若要执行基本测试，您将添加代码以在安全标记服务发出的标记的显示声明\(STS\)。  
+## <a name="step-3--test-your-solution"></a>步骤 3 - 测试你的解决方案  
+ 在此步骤中，将测试为基于声明的身份验证配置的 ASP.NET Web 窗体应用程序。 若要执行基本测试，需添加用于在安全令牌服务 (STS) 颁发的令牌中显示声明的代码。  
   
-#### 若要测试您的ASP.NET Web窗体对基于声明的身份验证的应用程序  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>为基于声明的身份验证测试 ASP.NET Web 窗体应用程序  
   
-1.  打开 **Default.aspx** 文件在 **TestApp** 项目之下并用以下标记替换为现有标记:  
+1.  打开 TestApp 项目下的 Default.aspx 文件，并将现有标记替换为以下标记：  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -163,12 +169,12 @@ caps.handback.revision: 7
     </html>  
     ```  
   
-2.  保存 **Default.aspx**，则文件名为 **Default.aspx.cs**稍后再打开其代码。  
+2.  保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。  
   
     > [!NOTE]
-    >  **Default.aspx.cs** 可以在 **Default.aspx** 下隐藏在解决方案资源管理器中。  如果 **Default.aspx.cs** 不可见，请单击展开 **Default.aspx** 在该三角形在其旁边。  
+    >  在解决方案资源管理器中，Default.aspx.cs 文件可能隐藏在 Default.aspx 文件下。 如果 Default.aspx.cs 文件不可见，请单击文件旁边的三角形，展开 Default.aspx。  
   
-3.  用下面的代码替换该 **Default.aspx.cs** **Page\_Load** 方案中的代码:  
+3.  将 Default.aspx.cs 的 Page_Load 方法中的现有代码替换为以下代码：  
   
     ```csharp  
     using System;  
@@ -207,8 +213,9 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  保存 **Default.aspx.cs**，生成解决方案。  
+4.  保存 Default.aspx.cs，并生成解决方案。  
   
-5.  解决方案按 **F5** 键来运行。  
+5.  按 F5 键运行解决方案。  
   
-6.  您应关注与显示在标记中声明问题可由安全标记服务的页。
+6.  应当会看到在安全令牌服务颁发给你的令牌中显示声明的页面。
+

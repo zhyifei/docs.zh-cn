@@ -1,46 +1,51 @@
 ---
-title: "使用安全套接字层 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "网络"
-  - "SSL"
-  - "安全套接字层"
-  - "从 Internet 请求数据，安全套接字层"
-  - "发送数据，安全套接字层"
-  - "网络资源"
-  - "数据请求，安全套接字层"
-  - "接收数据，安全套接字层"
-  - "Internet，安全套接字层"
+title: "使用安全套接字层"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- SSL
+- Secure Sockets Layer
+- requesting data from Internet, Secure Sockets Layer
+- sending data, Secure Sockets Layer
+- Network Resources
+- data requests, Secure Sockets Layer
+- receiving data, Secure Sockets Layer
+- Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb625971f0c0b52bcdcfc9b41d4c0f88814aef08
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用安全套接字层
-<xref:System.Net> 选件类使用安全套接字层\(SSL\)加密几种网络协议的连接。  
+# <a name="using-secure-sockets-layer"></a>使用安全套接字层
+<xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。  
   
- 对HTTP连接， <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 选件类使用SSL与支持SSL的WEB宿主通信。  使用SSL的决策由赋予它的 <xref:System.Net.WebRequest> 选件类进行，具体取决于URI。  如果URI从“https开头为: ”，使用SSL;如果URI从“HTTP开始: ”，使用未加密的连接。  
+ 对于 HTTP 连接，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类使用 SSL 与支持 SSL 的 Web 主机进行通信。 根据为其给定的 URI，<xref:System.Net.WebRequest> 类决定是否使用 SSL。 如果 URI 以“https:”开头，则使用 SSL；如果 URI 以“http:”开头，则使用未加密的连接。  
   
- 若要使用文件传输协议\(FTP\)的SSL，请设置 <xref:System.Net.FtpWebRequest.EnableSsl> 属性在调用 <xref:System.Net.FtpWebRequest.GetResponse>之前为true。  同样，应用于具有简单邮件传输协议\(SMTP\)的使用SSL，请设置 <xref:System.Net.Mail.SmtpClient.EnableSsl> 属性在将电子邮件发送到之前为true。  
+ 若要将 SSL 用于文件传输协议 (FTP)，请在调用 <xref:System.Net.FtpWebRequest.GetResponse> 前将 <xref:System.Net.FtpWebRequest.EnableSsl> 属性设置为 true。 同样，要将 SSL 用于简单邮件传输协议 (SMTP)，请在发送电子邮件前将 <xref:System.Net.Mail.SmtpClient.EnableSsl> 属性设置为 true。  
   
- <xref:System.Net.Security.SslStream> 选件类为SSL提供基于流的抽象，并且提供了许多方式配置SSL握手。  
+ <xref:System.Net.Security.SslStream> 类为 SSL 提供基于流的抽象，并且提供多种配置 SSL 握手的方法。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -64,12 +69,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## 编译代码  
+## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 **System.Net** 命名空间。  
+-   引用 System.Net 命名空间。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)   
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)   
  [证书选择和验证](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+

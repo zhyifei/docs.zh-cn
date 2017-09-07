@@ -1,48 +1,53 @@
 ---
-title: "在网络上使用流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "从 Internet 请求数据，流"
-  - "网络"
-  - "响应 Internet 请求，流"
-  - "网络资源，流功能"
-  - "接收数据，流功能"
-  - "网络资源"
-  - "发送数据，流功能"
-  - "下载 Internet 资源，流"
-  - "流，功能"
-  - "Internet，流"
-  - "流"
+title: "在网络上使用流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, streams
+- Networking
+- response to Internet request, streams
+- network resources, stream capabilities
+- receiving data, stream capabilities
+- Network Resources
+- sending data, stream capabilities
+- downloading Internet resources, streams
+- streams, capabilities
+- Internet, streams
+- streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 在网络上使用流
-网络资源。.NET Framework表示为流。  通过将被视为流泛型， .NET Framework提供以下功能:  
+# <a name="using-streams-on-the-network"></a>在网络上使用流
+网络资源在 .NET Framework 中表示为流。 通过对流进行一般处理，.NET Framework 提供下列功能：  
   
--   一种常用方法发送和接收Web数据。  哪些文件\(HTML， XML或另一个的实际内容—应用程序中使用 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 和 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 发送和接收数据。  
+-   发送和接收 Web 数据的通用方法。 无论文件的实际内容是什么（HTML、XML 或任何其他内容），应用程序都将使用 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 和 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 发送和接收数据。  
   
--   与流的兼容性在.NET Framework中。  流使用在.NET Framework中，已处理的它们丰富的基础结构。  例如，您可以修改读取 <xref:System.IO.FileStream> 的XML数据通过更改代码仅几行读取 <xref:System.Net.Sockets.NetworkStream> 的数据初始化流的应用程序。  **NetworkStream** 选件类和其他流之间的主要差异在于 **NetworkStream** 不seekable， <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 属性始终返回 **false**，并且， <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法引发 <xref:System.NotSupportedException>。  
+-   跨 .NET Framework 的流兼容性。 流在 .NET Framework 中遍及使用，其具有丰富的基础结构来处理流。 例如，通过仅更改初始化流的几行代码，便可修改从 <xref:System.IO.FileStream> 中读取 XML 数据的应用程序而使其改为从 <xref:System.Net.Sockets.NetworkStream> 中读取数据。 NetworkStream 类和其他流之间的主要区别在于：NetworkStream 是不可查找的，<xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 属性始终返回 false，且 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法将引发 <xref:System.NotSupportedException>。  
   
--   处理数据，到达。  流提供对数据，当从网络到达，而不是强制您的应用程序等待设置的整个数据下载。  
+-   在数据到达时处理数据。 流在数据从网络到达目标时便提供对数据的访问，而不会强制应用程序等待整个数据集下载完成。  
   
- <xref:System.Net.Sockets> 命名空间包含具体实现 <xref:System.IO.Stream> 选件类用于网络资源的 **NetworkStream** 选件类。  在 <xref:System.Net.Sockets> 命名空间的选件类使用 **NetworkStream** 选件类表示流。  
+ <xref:System.Net.Sockets> 命名空间包含一个 NetworkStream 类，该类实现专用于网络资源的 <xref:System.IO.Stream> 类。 <xref:System.Net.Sockets> 命名空间中的类使用 NetworkStream 类表示流。  
   
- 使用返回的流，若要将数据发送到网络，调用您的 <xref:System.Net.WebRequest>的 <xref:System.Net.WebRequest.GetRequestStream%2A> 。  **WebRequest** 将发送请求标头到服务器，然后可以将数据发送到网络资源通过调用 <xref:System.IO.Stream.BeginWrite%2A>、 <xref:System.IO.Stream.EndWrite%2A>或 <xref:System.IO.Stream.Write%2A> 方法在返回的流。  这些协议，如HTTP，可能要求您在发送数据之前设置协议特殊化属性。  下面的代码示例演示如何设置发送的数据HTTP特定特性。  假定，可变 `sendData` 包含数据发送，而变量的 `sendLength` 是字节数发送的数据。  
+ 若要使用返回的流向网络发送数据，请对 <xref:System.Net.WebRequest> 调用 <xref:System.Net.WebRequest.GetRequestStream%2A>。 WebRequest 会将请求标头发送到服务器；然后你可以通过对返回的流调用 <xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A> 或 <xref:System.IO.Stream.Write%2A> 方法，将数据发送到网络资源。 某些协议（如 HTTP）可能要求在发送数据之前设置协议特定的属性。 下面的代码示例演示如何设置 HTTP 特定的属性以发送数据。 该示例假定变量 `sendData` 包含要发送的数据，变量 `sendLength` 为要发送的数据的字节数。  
   
 ```csharp  
 HttpWebRequest request =   
@@ -59,7 +64,6 @@ catch
 {  
    // Handle errors . . .  
 }  
-  
 ```  
   
 ```vb  
@@ -76,19 +80,19 @@ Catch
 End Try  
 ```  
   
- 若要接收来自网络的数据，请调用您的 <xref:System.Net.WebResponse>的 <xref:System.Net.WebResponse.GetResponseStream%2A> 。  通过调用 <xref:System.IO.Stream.BeginRead%2A>、 <xref:System.IO.Stream.EndRead%2A>或 <xref:System.IO.Stream.Read%2A> 方法随后读取网络资源的数据返回到中的流。  
+ 若要从网络接收数据，请对 <xref:System.Net.WebResponse> 调用 <xref:System.Net.WebResponse.GetResponseStream%2A>。 然后可以通过对返回的流调用 <xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A> 或 <xref:System.IO.Stream.Read%2A> 方法，从网络资源读取数据。  
   
- 在使用从网络资源的流，请注意以下几点:  
+ 使用来自网络资源的流时，请留心以下几点：  
   
--   ，因为 **NetworkStream** 选件类不能更改在流，的位置 **CanSeek** 属性始终返回 **false** 。  **Seek** 和 **位置** 方法引发 **NotSupportedException**。  
+-   CanSeek 属性将始终返回 false，因为 NetworkStream 类无法更改流中的位置。 Seek 和 Position 方法引发 NotSupportedException。  
   
--   当您使用 **WebRequest** 和 **WebResponse**时，调用创建的流实例 **GetResponseStream** 只读，并调用创建的流实例 **GetRequestStream** 只读。  
+-   当使用 WebRequest 和 WebResponse 时，通过调用 GetResponseStream 创建的流实例是只读的，而通过调用 GetRequestStream 创建的流实例是只写的。  
   
--   使用 <xref:System.IO.StreamReader> 选件类使编码更加轻松。  下面的代码示例使用 **StreamReader** 读取 **WebResponse** 的ASCII编码流\(此示例不显示创建该请求\)。  
+-   使用 <xref:System.IO.StreamReader> 类可使编码更容易。 下面的代码示例使用 StreamReader 从 WebResponse 读取用 ASCII 编码的流（此示例不显示创建请求的过程）。  
   
--   ，如果网络资源不可用，对 **GetResponse** 的调用会阻塞。  应考虑使用 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法的异步请求。  
+-   如果网络资源不可用，则对 GetResponse 的调用可能受到阻止。 应考虑利用 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法使用异步请求。  
   
--   ，当与服务器的连接之后，对 **GetRequestStream** 的调用会阻塞。  应考虑使用异步请求与 <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 和 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法的流。  
+-   在创建与服务器的连接时，对 GetRequestStream 的调用可能受到阻止。 应考虑利用 <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 和 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法对流使用异步请求。  
   
 ```csharp  
 // Create a response object.  
@@ -110,6 +114,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## 请参阅  
- [如何使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
- [正在请求数据...](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>另请参阅  
+ [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+

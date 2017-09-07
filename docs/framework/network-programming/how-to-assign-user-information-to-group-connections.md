@@ -1,30 +1,35 @@
 ---
-title: "如何：将用户信息分配给组连接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "如何：将用户信息分配给组连接"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：将用户信息分配给组连接
-[代码示例](#tskhowtoassignuserinformationtogroupconnectionsanchor1)  
+# <a name="how-to-assign-user-information-to-group-connections"></a>如何：将用户信息分配给组连接
+
   
- 下面的示例演示如何将用户分配到组信息连接，假定，应用程序设置变量 *用户名*、 *SecurelyStoredPassword*和 *字段* ，代码中的此部分调用之前，并且 *用户名* 是唯一的。  
+ 以下示例演示如何将用户信息分配给组连接，其假定应用程序在调用此部分的代码之前设置了变量“UserName”、“SecurelyStoredPassword”和“域”，且“UserName”唯一。  
   
-### 将用户分配到组连接信息  
+### <a name="to-assign-user-information-to-a-group-connection"></a>将用户信息分配给组连接  
   
 1.  创建连接组名称。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  创建对特定URL。  例如，下面的代码创建一个需要URL `http://www.contoso.com.`  
+2.  为特定的 URL 创建请求。 例如，以下代码为 URL `http://www.contoso.com.` 创建请求  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  设置凭据和连接Web请求的GroupName，并调用 **GetResponse** 检索 **WebResponse** 对象。  
+3.  为 Web 请求设置凭据和连接组名称，并调用 GetResponse 以检索 WebResponse 对象。  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -64,14 +69,12 @@ caps.handback.revision: 8
     myWebRequest.ConnectionGroupName = secureGroupName  
   
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
-  
     ```  
   
-4.  在使用WebRespose对象后关闭响应流。  
+4.  使用 WebRespose 对象后关闭响应流。  
   
     ```csharp  
     MyWebResponse.Close();  
-  
     ```  
   
     ```vb  
@@ -97,7 +100,6 @@ WebResponse myWebResponse=myWebRequest.GetResponse();
 // Insert the code that uses myWebResponse.  
   
 MyWebResponse.Close();  
-  
 ```  
   
 ```vb  
@@ -118,6 +120,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理连接](../../../docs/framework/network-programming/managing-connections.md)   
  [连接分组](../../../docs/framework/network-programming/connection-grouping.md)
+

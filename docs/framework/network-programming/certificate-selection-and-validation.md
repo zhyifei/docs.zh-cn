@@ -1,67 +1,73 @@
 ---
-title: "证书选择和验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "证书选择和验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6c926968b9cc5e5b0bf8db0c6bac88e676f45375
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 证书选择和验证
-<xref:System.Net> 选件类支持多种方式使用安全套接字层\(SSL\)连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 。  客户端可以选择一个或多个证书验证到服务器。  服务器可能需要客户端证书包含身份验证的一个或多个特定特性。  
+# <a name="certificate-selection-and-validation"></a>证书选择和验证
+<xref:System.Net> 类支持多种针对安全套接字层 (SSL) 连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 的方法。 客户端可以选择一个或多个证书对服务器自身的客户端进行身份验证。 服务器可以要求客户端证书具有一个或多个用于身份验证的特定属性。  
   
-## 定义  
- 证书是包含一个公钥、属性的ASCII字节流\(例如版本号、号码和截止日期\)以及证书颁发机构的数字签名。  证书用于生成加密的连接或验证客户端到服务器。  
+## <a name="definition"></a>定义  
+ 证书是 ASCII 字节流，包含公钥、属性（如版本号、序列号和到期日期）以及来自证书颁发机构的数字签名。 证书用于建立加密连接，或对服务器的客户端进行身份验证。  
   
-## 客户端证书选择和验证  
- 客户端可以为给定的SSL连接选择一个或多个证书。  客户端证书可以与与web服务器或SMTP邮件服务器的SSL连接。  客户端添加证书。 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 选件类对象的集合。  使用电子邮件例如，证书集合是 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection>的实例\)与 <xref:System.Net.Mail.SmtpClient> 选件类的 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 属性。  <xref:System.Net.HttpWebRequest> 选件类有一个类似的 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 属性。  
+## <a name="client-certificate-selection-and-validation"></a>客户端证书选择和验证  
+ 客户端可以选择一个或多个用于特定 SSL 连接的证书。 客户端证书可以与 Web 服务器或 SMTP 邮件服务器的 SSL 连接相关联。 客户端将证书添加到 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类对象集合。 以电子邮件为例，证书集合是一个与 <xref:System.Net.Mail.SmtpClient> 类的 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 属性相关联的 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 实例。 <xref:System.Net.HttpWebRequest> 类具有类似的 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 属性。  
   
- <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 选件类之间的主要区别在于私钥必须位于 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 选件类的证书存储区。  
+ <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类的主要区别是私钥需要保存在 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 类的证书存储中。  
   
- 即使证书添加到集合并与特定SSL连接，证书不会被发送到服务器，除非服务器请求它们。  如果多个客户端证书在连接设置，将使用最佳一个基于考虑在证书颁发者列表服务器提供的和客户端证书颁发者名称之间的匹配算法。  
+ 即使证书添加到集合并与特定 SSL 连接相关联，也不会向服务器发送任何证书，除非服务器作出请求。 如果某个连接上设置了多个客户端证书，则将根据算法使用连接性能最好的一个，该算法会考虑由服务器提供的证书颁发者列表与客户端证书颁发者名称之间的匹配。  
   
- <xref:System.Net.Security.SslStream> 选件类提供对SSL的更握手控件。  客户端可以指定要使用的客户端证书的委托选择。  
+ <xref:System.Net.Security.SslStream> 类甚至对 SSL 握手提供了更多控制。 客户端可以指定委托选取要使用的客户端证书。  
   
- 远程服务器可以验证客户端证书有效，当前和签名由相应证书颁发机构。  可以将委托添加到 <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A> 强制证书验证。  
+ 远程服务器可以验证客户端证书是否有效、是否为最新，以及是否由适当的证书颁发机构签名。 委托可以添加到 <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A> 以强制执行证书验证。  
   
-## 客户端证书选择  
- .NET Framework选择客户端证书按以下方式提供给服务器:  
+## <a name="client-certificate-selection"></a>客户端证书选择  
+ NET Framework 按以下方式选择将提供给服务器的客户端证书：  
   
-1.  如果客户端证书以前存在到服务器时，缓存证书，当首次呈现和对于后续的客户端证书请求重复使用。  
+1.  如果之前已向服务器提供客户端证书，首次提供时，证书将被缓存，并且重复用于后续客户端证书请求。  
   
-2.  如果委托存在，请始终使用从委托的结果用作客户端证书选择。  尝试使用已缓存的证书，如果可能，但是，不要使用缓存的匿名凭据，如果委托返回null，并且证书集合不为null。  
+2.  如果存在委托，请始终使用委托的结果作为客户端证书的选择。 若可能，请尝试使用已缓存的证书，但如果委托已返回 NULL，且证书集合不为空，请勿使用已缓存的匿名凭据。  
   
-3.  如果这是客户端证书的第一个挑战，结构枚举 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 的证书或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 选件类对象与连接，查找在证书颁发者列表服务器提供的和客户端证书颁发者名称之间的匹配。  匹配的第一个证书发送到服务器。  如果证书不匹配或证书集合为空，则匿名凭据发送到服务器。  
+3.  如果这是对客户端证书的第一次质询，Framework 将枚举与连接关联的 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类对象中的证书，查找由服务器提供的证书颁布者列表与客户端证书颁布者名称之间的匹配。 匹配的第一个证书将被发送到服务器。 如果没有证书匹配或证书集合为空，则向服务器发送匿名凭据。  
   
-## 用于证书配置的工具  
- 许多工具进行客户端和服务器证书配置可用。  
+## <a name="tools-for-certificate-configuration"></a>证书配置工具  
+ 许多工具都可用于配置客户端和服务器证书。  
   
- *Winhttpcertcfg.exe* 工具可用于配置客户端证书。  *Winhttpcertcfg.exe* 附带的工具为某个工具Windows Server 2003 Resource Kit。  此工具也可用作下载作为Windows Server 2003 Resource Kit工具的一部分在www.microsoft.com。  
+ Winhttpcertcfg.exe 工具可用于配置客户端证书。 Winhttpcertcfg.exe 工具作为 Windows Server 2003 Resource Kit 的工具之一提供。 该工具在 www.microsoft.com 上也是作为 Windows Server 2003 Resource Kit 工具的部件可供下载。  
   
- *HttpCfg.exe* 工具可用于配置 <xref:System.Net.HttpListener> 选件类的服务器证书。  *HttpCfg.exe* 工具提供作为参数之一为Windows Server 2003和Windows XP Service Pack 2.的支持工具。  默认情况下*HttpCfg.exe* 和其他在Windows Server 2003或Windows XP支持工具未安装。  在Windows Server 2003。  支持工具在Windows Server 2003 CD\-ROM单独安装将以下文件夹和文件:  
+ HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器证书。 HttpCfg.exe 工具作为 Windows Server 2003 和 Windows XP Service Pack 2 的支持工具之一提供。 默认情况下，Windows Server 2003 或 Windows XP 上都未安装 HttpCfg.exe 和其他支持工具。 在 Windows Server 2003 上， 支持工具单独安装在 Windows Server 2003 CD-ROM 上的以下文件夹和文件中：  
   
- \\支持\\ tools \\ Suptools.msi  
+ \Support\Tools\Suptools.msi  
   
- 用于Windows XP Service Pack 2的使用， Windows XP支持工具可用作从www.microsoft.com中下载。  
+ 若要使用 Windows XP Service Pack 2，可访问 www.microsoft.com 下载 Windows XP 支持工具。  
   
- 为 *HttpCfg.exe* 工具版本的源代码还提供作为示例Windows server SDK。  为以下文件夹下，的Windows SDK的一部分。 *HttpCfg.exe* 示例的默认情况下源代码安装与网络连接示例:  
+ HttpCfg.exe 工具版本的源代码也可用作 Windows Server SDK 的示例。 HttpCfg.exe 示例的源代码使用网络示例作为 Windows SDK 的部件在以下文件夹中默认安装：  
   
- *C:\\Program Files\\Microsoft SDKs \\ Windows \\ v1.0 \\ samples \\ NetDS \\ HTTP \\ serviceconfig*  
+ C:\Program Files\Microsoft SDKs\Windows\v1.0\Samples\NetDS\http\serviceconfig  
   
- 除了这些工具外， <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 选件类用于加载证书提供方法从文件系统。  
+ 除了这些工具， <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类还提供从文件系统加载证书的方法。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)   
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
+

@@ -1,47 +1,53 @@
 ---
-title: "HTTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "协议，HTTP"
-  - "发送数据，HTTP"
-  - "HttpWebResponse 类，发送和接收数据"
-  - "HTTP"
-  - "接收数据，HTTP"
-  - "应用程序协议，HTTP"
-  - "Internet，HTTP"
-  - "网络资源，HTTP"
-  - "HTTP，关于 HTTP"
-  - "HttpWebRequest 类，发送和接收数据"
+title: HTTP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- protocols, HTTP
+- sending data, HTTP
+- HttpWebResponse class, sending and receiving data
+- HTTP
+- receiving data, HTTP
+- application protocols, HTTP
+- Internet, HTTP
+- network resources, HTTP
+- HTTP, about HTTP
+- HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 124e383efbe6cf6bb459d013b9689bf5da287cf1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# HTTP
-.NET Framework提供全面的HTTP协议支持，构成多数人所有Internet通信，与<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 选件类。  这些选件类，从派生 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，返回默认情况下，只要该静态方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 从“HTTP”或“https启动”遇到URI。  在大多数情况下， **WebRequest** 和 **WebResponse** 选件类提供所有需要发出请求，，但是，如果需要对作为属性公开的HTTP特定功能的访问，可以强制转换这些选件类。 **HttpWebRequest** 或 **HttpWebResponse**。  
+# <a name="http"></a>HTTP
+.NET Framework 使用 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 类提供对 HTTP 协议的全面支持，这构成所有 Internet 通信的主体。 这些类派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，默认情况下将被返回，无论静态方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 遇到以“http”还是“https”开头的 URI。 大多数情况下，WebRequest 和 WebResponse 类提供发出请求的所有必需项，但如果需要访问作为属性公开的特定于 HTTP 的功能，可以将这些类转换为 HttpWebRequest 或 HttpWebResponse 类型。  
   
- **HttpWebRequest** 和 **HttpWebResponse** 封装一个标准HTTP请求和响应事务并提供对常见HTTP标头。  这些选件类还支持大多数HTTP 1.1功能，包括流水线处理?，发送和接收以增加的数据，身份验证， preauthentication，加密，代理支持，服务器证书验证和连接管理。  可以存储自定义通过属性没有提供的标头和标头并将 **标头** 属性访问。  
+ HttpWebRequest 和 HttpWebResponse 封装标准 HTTP 请求和响应事务，并提供对通用 HTTP 标头的访问。 这些类还支持大多数 HTTP 1.1 功能，包括管道、在区块中发送和接收数据、身份验证、预身份验证、加密、代理支持、服务器证书验证和连接管理。 自定义标头和未通过属性提供的标头可以存储在 Headers 属性并通过该属性进行访问。  
   
- ，然后才能通过URI到 **WebRequest.Create** 方法之前，**HttpWebRequest** 是 **WebRequest** 使用的默认选件类，并不需要注册。  
+ HttpWebRequest 是 WebRequest 使用的默认类，并且无需注册即可将 URI 传递到 WebRequest.Create 方法。  
   
- 可以使应用程序遵循HTTP通过设置 <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> 属性自动重定向到 **true** \(默认值\)。  应用程序请求重定向，并且， **HttpWebResponse**[ResponseURI](frlrfsystemnethttpwebresponseclassresponseuritopic) 属性将包含响应请求的实际Web资源。  如果设置 **AllowAutoRedirect** 到 **false**，应用程序必须能够处理重定向用作HTTP协议错误。  
+ 可以通过将 <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> 属性设置为 true（默认值）来使应用程序自动遵循 HTTP 重定向。 应用程序将重定向请求，并且 HttpWebResponse 的 <xref:System.Net.HttpWebResponse.ResponseUri%2A> 属性将包含响应请求的实际 Web 资源。 如果将 AllowAutoRedirect 设置为 false，则需要应用程序能将重定向处理为 HTTP 协议错误。  
   
- 应用程序通过捕捉 <xref:System.Net.WebException> 接收HTTP协议错误和 <xref:System.Net.WebException.Status%2A> 设置为 [WebExceptionStatus.ProtocolError](frlrfsystemnetwebexceptionstatusclasstopic)。  <xref:System.Net.WebException.Response%2A> 属性包含服务器发送的 **WebResponse** 并指示遇到的实际HTTP错误。  
+ 应用程序通过捕获 <xref:System.Net.WebException>（其中 <xref:System.Net.WebException.Status%2A> 设置为 <xref:System.Net.WebExceptionStatus>）来接收 HTTP 协议错误。 <xref:System.Net.WebException.Response%2A> 属性包含由服务器发送的 WebResponse，并指示遇到的实际 HTTP 错误。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
  [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)   
  [如何：访问 HTTP 特定的属性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+

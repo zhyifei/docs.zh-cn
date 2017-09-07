@@ -1,30 +1,35 @@
 ---
-title: "异步服务器套接字示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "套接字，异步服务器套接字"
-  - "套接字，代码示例"
-  - "异步服务器套接字"
+title: "异步服务器套接字示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 异步服务器套接字示例
-下面的示例程序创建接收来自客户端的连接请求的服务器。  服务器以异步套接字生成，因此，服务器应用程序的执行不会挂起，它在等待从客户端时的连接。  应用程序收到来自客户端的字符串，在控制台上显示字符串，然后回显该字符串返回给客户端。  从客户端的字符串必须包含字符串“\<EOF\>”用于通知消息的结尾。  
+# <a name="asynchronous-server-socket-example"></a>异步服务器套接字示例
+以下示例程序创建从客户端接收连接请求的服务器。 该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。 应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。 来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
  [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+

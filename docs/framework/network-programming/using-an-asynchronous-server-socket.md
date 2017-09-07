@@ -1,42 +1,47 @@
 ---
-title: "使用异步服务器套接字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序协议，套接字"
-  - "发送数据，套接字"
-  - "Socket 类，异步服务器套接字"
-  - "数据请求，套接字"
-  - "套接字，异步服务器套接字"
-  - "从 Internet 请求数据，套接字"
-  - "服务器套接字"
-  - "接收数据，套接字"
-  - "异步服务器套接字"
-  - "协议，套接字"
-  - "Internet，套接字"
+title: "使用异步服务器套接字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- Socket class, asynchronous server sockets
+- data requests, sockets
+- sockets, asynchronous server sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- asynchronous server sockets
+- protocols, sockets
+- Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用异步服务器套接字
-异步服务器套接字使用.NET Framework异步编程模型处理网络服务请求。  <xref:System.Net.Sockets.Socket> 选件类遵循标准.NET Framework异步模式;名称例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
+# <a name="using-an-asynchronous-server-socket"></a>使用异步服务器套接字
+异步服务器套接字使用 .NET Framework 异步编程模型处理网络服务请求。 <xref:System.Net.Sockets.Socket> 类遵循标准 .NET Framework 异步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
   
- 异步服务器套接字需要一个方案开始接受来自网络、回调方法以处理连接请求和开始接收数据从网络和回调方法的连接请求结束接收数据。  所有这些方法都进一步本节讨论。  
+ 异步服务器套接字需要一个开始接受网络连接请求的方法、一个处理连接请求并开始接收网络数据的回调方法，以及一个结束接收数据的回调方法。 本部分将进一步讨论所有这些方法。  
   
- 在下面的示例中，启动接受来自网络的连接请求，方法 `StartListening` 初始化 **套接字** 然后使用 **BeginAccept** 开始方法接受新连接。  ，在一个新的连接请求在套接字时，可以接受回调方法调用。  为获取将处理连接和传递该 **套接字** 到线程将处理请求的 **套接字** 实例负责。  接受回调方法实现 <xref:System.AsyncCallback> 委托;它返回void并采用类型 <xref:System.IAsyncResult>的单个参数。  下面的示例是接受回调方法的shell。  
+ 在下面的示例中，要开始接受来自网络的连接请求，`StartListening` 方法会初始化 Socket ，然后使用 BeginAccept 方法开始接受新的连接。 当套接字上接收到新的连接请求时，将调用接受回调方法。 它负责获取将要处理连接的 Socket 实例，并将该 Socket 提交给将处理请求的线程。 接受回调方法实现 <xref:System.AsyncCallback> 委托；它返回 void，并取一个 <xref:System.IAsyncResult> 类型的参数。 下面的示例是接受回调方法的 shell。  
   
 ```vb  
 Sub acceptCallback(ar As IAsyncResult)  
@@ -50,7 +55,7 @@ void acceptCallback( IAsyncResult ar) {
 }  
 ```  
   
- **BeginAccept** 方法采用两个参数，指向接受回调方法和对象用于对回调方法传递状态信息的 **AsyncCallback** 委托。  在下面的示例中，收听的 **套接字** 传递给回调方法 *状态* 参数。  此示例创建一个 **AsyncCallback** 委托并启动接受来自网络的连接。  
+ BeginAccept 方法取两个参数：一个指向接受回调方法的 AsyncCallback 委托和一个用于将状态信息传递给回调方法的对象。 在下面的示例中，侦听 Socket 通过 state 参数传递给回调方法。 此示例会创建一个 AsyncCallback 委托并开始接受来自网络的连接。  
   
 ```vb  
 listener.BeginAccept( _  
@@ -64,9 +69,9 @@ listener.BeginAccept(
     listener);  
 ```  
   
- 来自系统的异步套接字使用线程池线程处理传入连接。  一个线程对接受连接负责，另一个线程用于处理每个传入连接，并且，另一个线程用于接收从连接的数据负责。  这些可以是同一线程，线程由线程池分配。  在下面的示例中，的，它在执行时无法继续时， <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 选件类挂起主线程和信号的执行。  
+ 异步套接字使用系统线程池中的线程处理传入的连接。 一个线程负责接受连接，另一个线程则用于处理每个传入的连接，还有一个线程负责接收来自连接的数据。 这些线程可以是同一个线程，具体取决于线程池分配了哪一个线程。 在下面的示例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 类将挂起主线程的执行并在执行可以继续时发出信号。  
   
- 下面的示例演示在本地计算机上创建一个异步TCP\/IP套接字并启动接受连接的异步方法。  假定，有一个名为 `allDone`的全局 **ManualResetEvent** ，方法是名为 `SocketListener`的选件类的成员，并且，名为 `acceptCallback` 的回调方法中定义。  
+ 下面的示例演示在本地计算机上创建异步 TCP/IP 套接字并开始接受连接的异步方法。 它假定存在一个名为 `allDone` 的全局 ManualResetEvent，该方法是名为 `SocketListener` 的类的成员，并且假定定义了一个名为 `acceptCallback` 的回调方法。  
   
 ```vb  
 Public Sub StartListening()  
@@ -97,7 +102,6 @@ Public Sub StartListening()
     End Try  
     Console.WriteLine("Closing the listener...")  
 End Sub 'StartListening  
-  
 ```  
   
 ```csharp  
@@ -132,7 +136,7 @@ public void StartListening() {
 }  
 ```  
   
- 接受回调方法\(在前面的示例中的`acceptCallback` \)来终止主应用程序线程来继续处理，生成与客户端的连接并启动异步读取客户端的数据。  下面的示例是 `acceptCallback` 实现方法的第一部分。  方法信号的此部分主应用程序线程继续处理和生成与客户端的连接。  假定名为 `allDone`的全局 **ManualResetEvent** 。  
+ 接受回调方法（即前例中的 `acceptCallback`）负责向主应用程序线程发出信号，使其继续处理、建立与客户端的连接并开始异步读取客户端数据。 下面的示例是 `acceptCallback` 方法的实现的第一部分。 这部分方法向主应用程序线程发出信号，使其继续处理并建立与客户端的连接。 它假定一个名为 `allDone` 的全局 ManualResetEvent。  
   
 ```vb  
 Public Sub acceptCallback(ar As IAsyncResult)  
@@ -156,7 +160,7 @@ public void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- 读取客户端套接字的数据将要求值在异步调用之间的状态对象。  下面的示例实现接收一个字符串的状态对象从该远程客户端。  它包含客户端套接字、一个数据缓冲区接收的数据和 <xref:System.Text.StringBuilder> 的字段创建的客户端发送的数据字符串。  将这些字段在状态对象授予的值跨多个保持调用读取客户端套接字的数据。  
+ 从客户端套接字读取数据需要一个在异步调用之间传递值的状态对象。 以下示例实现一个用于从远程客户端接收字符串的状态对象。 它包含以下各项的字段：客户端套接字、用于接收数据的数据缓冲区，和用于创建客户端发送的数据字符串的 <xref:System.Text.StringBuilder>。 将这些字段放入该状态对象中，使这些字段的值在多个调用之间得以保留，以便从客户端套接字读取数据。  
   
 ```vb  
 Public Class StateObject  
@@ -176,9 +180,9 @@ public class StateObject {
 }  
 ```  
   
- 启动首先接收数据从客户端套接字 `acceptCallback` 方案的一部分初始化 `StateObject` 选件类的实例并调用 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 方法开始读取客户端套接字的数据异步。  
+ `acceptCallback` 方法的这部分（即开始从客户端套接字接收数据的部分）首先初始化 `StateObject` 类的实例，然后调用 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 方法开始从客户端套接字异步读取数据。  
   
- 下面的示例演示完整 `acceptCallback` 方法。  假定，有一个名为 `allDone,` 的全局 **ManualResetEvent**`StateObject` 选件类中定义，并且， `readCallback` 方法在选件类中定义名为 `SocketListener`。  
+ 以下示例显示完整的 `acceptCallback` 方法。 它假定存在一个名为 `allDone,` 且定义了 `StateObject` 类的全局 ManualResetEvent，并且假定在名为 `SocketListener` 的类中定义了 `readCallback` 方法。  
   
 ```vb  
 Public Shared Sub acceptCallback(ar As IAsyncResult)  
@@ -195,7 +199,6 @@ Public Shared Sub acceptCallback(ar As IAsyncResult)
     handler.BeginReceive(state.buffer, 0, state.BufferSize, 0, _  
         AddressOf AsynchronousSocketListener.readCallback, state)  
 End Sub 'acceptCallback  
-  
 ```  
   
 ```csharp  
@@ -215,9 +218,9 @@ public static void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- 需要为异步套接字服务器执行最终的方法是返回客户端发送的数据的读取的回调方法。  与接受回调方法，该方法读取的回调方法是 **AsyncCallback** 委托。  此方法读取客户端套接字的一个或多个字节到数据区域然后再次调用 **BeginReceive** 方法，直到客户端发送的数据完成。  对于所有消息从客户端读取，该字符串在控制台中显示，并处理与客户端的服务器套接字连接已关闭。  
+ 需要为异步套接字服务器实现的最终方法是返回客户端发送的数据的读取回调方法。 与接受回调方法一样，读取回调方法也是 AsyncCallback 委托。 此方法将来自客户端套接字的一个或多个字节读入数据缓冲区，然后再次调用 BeginReceive 方法，直到客户端完成数据发送为止。 从客户端读取了整个消息后，将在控制台上显示字符串，且会关闭处理客户端连接的服务器套接字。  
   
- 下面的示例执行 `readCallback` 方法。  假定， `StateObject` 选件类中定义的。  
+ 下面的示例实现 `readCallback` 方法。 它假定定义了 `StateObject` 类。  
   
 ```vb  
 Public Shared Sub readCallback(ar As IAsyncResult)  
@@ -242,7 +245,6 @@ Public Shared Sub readCallback(ar As IAsyncResult)
         End If  
     End If  
 End Sub 'readCallback  
-  
 ```  
   
 ```csharp  
@@ -271,8 +273,9 @@ public static void readCallback(IAsyncResult ar) {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Threading](../../../docs/standard/threading/index.md)   
+ [线程处理](../../../docs/standard/threading/index.md)   
  [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
+

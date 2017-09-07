@@ -1,42 +1,48 @@
 ---
-title: "创建 Internet 请求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest 类，发送和接收数据"
-  - "网络"
-  - "HttpWebResponse 类，发送和接收数据"
-  - "从 Internet 请求数据，创建请求"
-  - "网络资源"
-  - "Internet，请求数据"
-  - "数据请求，创建请求"
+title: "创建 Internet 请求"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, sending and receiving data
+- Networking
+- HttpWebResponse class, sending and receiving data
+- requesting data from Internet, creating requests
+- Network Resources
+- Internet, requesting data
+- data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5bc99f08542718ccd449c069c91082d8227f9a4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 创建 Internet 请求
-应用程序通过 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法创建 <xref:System.Net.WebRequest> 实例。  这是创建从 **WebRequest** 派生的类选件基于URI方案传递给它的静态方法。  
+# <a name="creating-internet-requests"></a>创建 Internet 请求
+应用程序通过 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法创建 <xref:System.Net.WebRequest> 实例。 这是一种基于传递给它的 URI 方案创建从 WebRequest 派生的类的静态方法。  
   
-## Web、文件和FTP请求  
- .NET Framework提供 <xref:System.Net.HttpWebRequest> 选件类，从 **WebRequest**派生，处理HTTP和HTTPS请求。  在大多数情况下， **WebRequest** 选件类提供您所请求的所有属性;但是，如果需要，您可以将 **WebRequest.Create** 方法创建的 **WebRequest** 对象。 **HttpWebRequest** 类型访问该请求的HTTP特定特性。  同样， **HttpWebResponse** 对象处理从HTTP和HTTPS请求的响应。  访问 **HttpWebResponse** 对象，您的HTTP特定属性需要转换为 **HttpWebResponse** 类型的 **WebResponse** 对象。  
+## <a name="web-file-and-ftp-requests"></a>Web、文件和 FTP 请求  
+ .NET Framework 提供从 WebRequest 派生的 <xref:System.Net.HttpWebRequest> 类，用以处理 HTTP 和 HTTPS 请求。 在大多数情况下，WebRequest 类提供提出请求所需的所有属性；但是，如有必要，将 WebRequest.Create 方法创建的 WebRequest 对象转换为 HttpWebRequest 类型，即可访问该请求特定于 HTTP 的属性。 同样，HttpWebResponse 对象可处理来自 HTTP 和 HTTPS 请求的响应。 要访问 HttpWebResponse 对象特定于 HTTP 的属性，需将 WebResponse 对象转换为 HttpWebResponse 类型。  
   
- .NET Framework还提供 <xref:System.Net.FileWebRequest> ，并处理的 <xref:System.Net.FileWebResponse> 选件类请求使用“文件的资源: ” URI方案。  同样， <xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FtpWebResponse> 选件类提供处理请求时使用“FTP的资源: ”模式。  如果您的请求针对使用这些模式中的任何一个的资源，可以使用 **WebRequest.Create** 方法获取对请求对象。  
+ .NET Framework 还提供 <xref:System.Net.FileWebRequest> 和 <xref:System.Net.FileWebResponse> 类来处理使用“file:”URI 方案的资源请求。 同样，提供的 <xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FtpWebResponse> 类可处理使用“ftp:”方案的资源请求。 如果请求的是使用上述任一方案的资源，则可使用 WebRequest.Create 方法获取用于发出请求的对象。  
   
- 处理请求的其他应用程序级协议，您需要实现从 **WebRequest** 和 **WebResponse**派生的协议特殊化选件类。  有关更多信息，请参见 [编程的可插入协议](../../../docs/framework/network-programming/programming-pluggable-protocols.md)。  
+ 要处理使用其他应用程序级协议的请求，需实现从 WebRequest 和 WebResponse 派生的协议特定的类。 有关详细信息，请参阅[对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)。  
   
-## 请参阅  
- [如何使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
- [正在请求数据...](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>另请参阅  
+ [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+

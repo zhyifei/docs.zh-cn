@@ -1,56 +1,61 @@
 ---
-title: "发出异步请求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet，异步访问"
-  - "网络"
-  - "异步请求，Internet 资源"
-  - "网络资源"
-  - "WebRequest 类，异步访问"
+title: "发出异步请求"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, asynchronous access
+- Networking
+- asynchronous requests, Internet resources
+- Network Resources
+- WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 发出异步请求
-<xref:System.Net> 选件类为Internet资源的异步访问使用.NET framework的标准异步编程模型。  <xref:System.Net.WebRequest> 选件类开始的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法和完成异步请求Internet资源。  
+# <a name="making-asynchronous-requests"></a>发出异步请求
+<xref:System.Net> 类为异步访问 Internet 资源使用 .NET Framework 的标准异步编程模型。 <xref:System.Net.WebRequest> 类的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法启动和完成 Internet 资源的异步请求。  
   
 > [!NOTE]
->  使用同步在异步回调方法调用会导致严重影响性能。  在 **WebRequest** 做的Internet请求及其子代必须使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> 读取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> 方法返回的流。  
+>  在异步回调方法中使用同步调用会导致严重的性能损失。 用 WebRequest 提出的 Internet 请求及其后代必须使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> 读取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> 方法返回的流。  
   
- 下面的代码示例演示如何使用异步调用与 **WebRequest** 选件类。  此示例是来自命令行的URI的控制台程序，请求资源在URI，然后打印到控制台，因为它从Internet接收。  
+ 以下示例代码演示如何将异步调用与 WebRequest 类一起使用。 此示例是一个控制台程序从命令行获取 URI，请求位于 URI 处的资源，然后打印控制台的数据（数据是从 Internet 接收的）。  
   
- 程序定义了自己使用的， **RequestState** 选件类两选件类，通过在异步中的数据调用和 **ClientGetAsync** 选件类，实现了异步请求访问Internet资源。  
+ 程序定义了两个类以供自己使用：RequestState 和 ClientGetAsync，前者跨异步调用传递数据，后者实现对 Internet 资源的异步请求。  
   
- **RequestState** 选件类保留该请求的状态调用异步方法该服务请求。  它包含 **WebRequest** 和作为响应合理包含当前请求用于接收缓冲区包含从Internet资源当前正在接收的数据和 <xref:System.Text.StringBuilder> 的资源和流包含完整的响应的 <xref:System.IO.Stream> 实例。  ，当 <xref:System.AsyncCallback> 方法向 **WebRequest.BeginGetResponse**注册之后， **RequestState**将作为 *状态* 参数。  
+ RequestState 类跨异步方法（这些方法为请求提供服务）调用，保留请求的状态。 它包含 WebRequest 和 <xref:System.IO.Stream> 实例（含对资源的当前请求和在响应中接收的数据流）、一个缓冲区（含当前从 Internet 资源接收的数据）和一个 <xref:System.Text.StringBuilder> 实例（含完整响应）。 使用 WebRequest.BeginGetResponse 注册了 <xref:System.AsyncCallback> 方法时，将 RequestState 作为状态参数传递。  
   
- **ClientGetAsync** 选件类实现异步请求到Internet资源和写入控制台的生成的响应。  它包含方法，并在下面描述的属性列表。  
+ ClientGetAsync 类实现 Internet 资源的异步请求，并将所得的响应写入控制台。 它包含以下列表中描述的方法和属性。  
   
--   `allDone` 属性包含该 <xref:System.Threading.ManualResetEvent> 的选件类的实例通知请求的完成。  
+-   `allDone` 属性包含 <xref:System.Threading.ManualResetEvent> 类的实例，它指示请求完成。  
   
--   `Main()` 方法读取命令行并启动需要指定的Internet资源。  它创建 **WebRequest**`wreq` 和 **RequestState**`rs`，调用 **BeginGetResponse** 开始处理请求，然后调用 `allDone.WaitOne()`方法，以便应用程序不会退出，直到回调完成。  在响应来自Internet资源、 `Main()` 将它写入控制台和应用程序结束后读取。  
+-   `Main()` 方法读取命令行并启动对指定 Internet 资源的请求。 它创建 WebRequest `wreq` 和 RequestState `rs`，调用 BeginGetResponse 开始处理请求，然后调用 `allDone.WaitOne()` 方法，以便应用程序不会在回调完成前退出。 在从 Internet 资源读取响应后，`Main()` 将该响应写入到控制台，应用程序结束。  
   
--   `showusage()` 方法编写在控制台的示例命令行。  ，当URI在命令行中，未提供它由 `Main()` 调用。  
+-   `showusage()` 方法在控制台上写入一个示例命令行。 命令行上未提供 URI 时，由 `Main()` 调用它。  
   
--   `RespCallBack()` 方法执行Internet请求的异步回调方法。  它创建包含从Internet资源的 **WebResponse** 实例响应，获取响应流，然后开始读取流的数据异步。  
+-   `RespCallBack()` 方法实现 Internet 请求的异步回调方法。 该方法创建包含来自 Internet 资源的响应的 WebResponse 实例，获取响应流，然后开始从该流异步读取数据。  
   
--   `ReadCallBack()` 方法执行读取响应流异步回调方法。  它从Internet资源传输数据接收到 **RequestState** 实例的 **ResponseData** 属性，然后启动另一个异步读取响应流，直到没有其他不返回任何数据。  对于所有数据读取， `ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法指示整个响应存在 **ResponseData**。  
+-   `ReadCallBack()` 方法实现用于读取响应流的异步调用方法。 它将从 Internet 资源接收到的数据传输到 RequestState 实例的  ResponseData 属性中，然后开始对响应流的另一次异步读取，直到不再返回数据。 已读取全部数据后，`ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法，指示整个响应存在于 ResponseData 中。  
   
     > [!NOTE]
-    >  重要的任何网络流关闭。  如果不关闭每个请求和响应流，应用程序将耗尽所有与服务器的连接并无法处理其他的请求。  
+    >  所有网络流均已关闭，这一点非常重要。 如果未关闭每个请求和响应流，应用程序将耗尽与服务器的连接，无法处理其他请求。  
   
 ```csharp  
 using System;  
@@ -341,5 +346,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## 请参阅  
- [正在请求数据...](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>另请参阅  
+ [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+

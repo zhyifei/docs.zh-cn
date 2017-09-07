@@ -1,30 +1,35 @@
 ---
-title: "异步客户端套接字示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "异步客户端套接字"
-  - "套接字，代码示例"
-  - "套接字，异步客户端套接字"
+title: "异步客户端套接字示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- asynchronous client sockets
+- sockets, code examples
+- sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 异步客户端套接字示例
-下面的示例程序创建连接到服务器的客户端。  客户端使用异步套接字生成，因此，客户端应用程序的执行不会挂起，当服务器返回响应时。  应用程序将字符串发送到服务器并显示在控制台的服务器返回的字符串。  
+# <a name="asynchronous-client-socket-example"></a>异步客户端套接字示例
+以下示例程序创建连接到服务器的客户端。 该客户端是使用异步套接字构建的，因此当服务器返回响应时，不会挂起客户端应用程序的执行。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  
   
 ```vb  
 Imports System  
@@ -328,7 +333,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
  [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+
