@@ -23,16 +23,16 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a3ac4cbdee87e71f9a0de8aae701d84bfc96137
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: dfdfea20aeb8d0002ef22b9649afc09f80caeae2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合类型
 集合类型是数据集合（如哈希表、队列、堆栈、包、字典和列表）的常见变体。  
   
- 集合基于 <xref:System.Collections.ICollection> 接口、 <xref:System.Collections.IList> 接口、<xref:System.Collections.IDictionary> 接口或它们对应的泛型集合。 <xref:System.Collections.IList> 接口和 <xref:System.Collections.IDictionary> 接口都派生自 <xref:System.Collections.ICollection> 接口：因此，所有集合都直接或间接基于 <xref:System.Collections.ICollection> 接口。 在基于 <xref:System.Collections.IList> 接口（比如 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>）或直接基于 <xref:System.Collections.ICollection> 接口（比如 <xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>）的集合里，每个元素都只有一个值。 在基于 <xref:System.Collections.IDictionary> 接口（比如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 类，<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类）或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类的集合中，每个元素都有一个键和一个值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 类是唯一的，因为它是值中嵌键的值的列表，因此，它的行为类似列表和字典。  
+ 集合基于 <xref:System.Collections.ICollection> 接口、 <xref:System.Collections.IList> 接口、<xref:System.Collections.IDictionary> 接口或它们对应的泛型集合。 <xref:System.Collections.IList> 接口和 <xref:System.Collections.IDictionary> 接口都派生自 <xref:System.Collections.ICollection> 接口：因此，所有集合都直接或间接基于 <xref:System.Collections.ICollection> 接口。 在基于 <xref:System.Collections.IList> 接口（比如 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>）或直接基于 <xref:System.Collections.ICollection> 接口（比如 <xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>）的集合里，每个元素都只有一个值。 在基于 <xref:System.Collections.IDictionary> 接口（比如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 类，<xref:System.Collections.Generic.Dictionary%602> 和<xref:System.Collections.Generic.SortedList%602> 泛型类）或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类的集合中，每个元素都有一个键和一个值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 类是唯一的，因为它是值中嵌键的值的列表，因此，它的行为类似列表和字典。  
   
  泛型集合都是强类型的最佳解决方案。 但，如果你的语言不支持泛型，那么 <xref:System.Collections> 命名空间包含基集合，如 <xref:System.Collections.CollectionBase>、<xref:System.Collections.ReadOnlyCollectionBase> 和 <xref:System.Collections.DictionaryBase>，这些集合都是可扩展以创建强类型集合类的抽象基类。 需要高效的多线程集合访问时，请使用 <xref:System.Collections.Concurrent> 命名空间中的泛型集合。  
   
