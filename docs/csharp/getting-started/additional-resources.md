@@ -1,5 +1,6 @@
 ---
 title: "为 Visual C# 程序员提供的附加资源"
+description: "有助于了解 C# 和 .NET 的更多资源"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,14 +34,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f843abd4ec891a7da17151140fc524acee72a346
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: dce2b9cbcc0e594f345e2a33ce7579f8546257d7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="additional-resources-for-visual-c-programmers"></a>为 Visual C# 程序员提供的附加资源
-可通过以下网站查找常见问题的解答。  
+可通过以下网站查找常见问题的解答。
   
 ## <a name="microsoft-resources"></a>Microsoft 资源  
   
@@ -86,8 +87,7 @@ ms.lasthandoff: 07/28/2017
  MSDN 的网站提供了有关当前相关的第三方网站和新闻组的信息。 有关可用资源的最新列表，请访问 [MSDN C# 社区网站](http://go.microsoft.com/fwlink/?LinkId=165945)。  
   
 ## <a name="see-also"></a>另请参阅  
- [C#](../../csharp/csharp.md)   
- [C# 入门](../../csharp/getting-started/getting-started-with-csharp.md)   
+ [C#](../../csharp/index.md) [C# 入门](index.md)   
  [自定义编辑器](/visualstudio/ide/customizing-the-editor)   
  [如何：融入开发者社区](http://msdn.microsoft.com/library/f1503d98-7a64-41b6-a6c7-0e42a533e9c5)   
  [如何：发送反馈](http://msdn.microsoft.com/library/c9f1dd8f-bcb6-40ac-b896-1e9eca0bb209)   
