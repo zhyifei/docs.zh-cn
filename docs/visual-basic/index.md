@@ -30,13 +30,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Visual Basic 指南
+
 Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Visual Basic 使开发人员能够以 Windows、Web 和移动设备为目标。 与所有面向 Microsoft .NET Framework 的语言一样，安全性和语言互操作性让使用 Visual Basic 编写的程序大大受益。  
   
  这一代 Visual Basic 将延续传统，继续方便你快速轻松地创建 .NET Framework 应用程序。  
