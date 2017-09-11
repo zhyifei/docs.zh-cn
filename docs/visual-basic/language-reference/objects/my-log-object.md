@@ -28,23 +28,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5150568b9f57640adf3ad959362df6a4059f6bf9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ae8941c6c52ad707481d13085b1d514163ad238
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="mylog-object"></a>My.Log 对象
-提供的属性和方法用于将事件和异常信息写入应用程序的日志侦听器。  
+# <a name="mylog-object"></a><span data-ttu-id="6b42a-102">My.Log 对象</span><span class="sxs-lookup"><span data-stu-id="6b42a-102">My.Log Object</span></span>
+<span data-ttu-id="6b42a-103">提供的属性和方法用于将事件和异常信息写入应用程序的日志侦听器。</span><span class="sxs-lookup"><span data-stu-id="6b42a-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
   
-## <a name="remarks"></a>备注  
- 有关信息的方法和属性`My.Log`对象，请参阅<xref:Microsoft.VisualBasic.Logging.AspLog>。</xref:Microsoft.VisualBasic.Logging.AspLog>  
+## <a name="remarks"></a><span data-ttu-id="6b42a-104">备注</span><span class="sxs-lookup"><span data-stu-id="6b42a-104">Remarks</span></span>  
+ <span data-ttu-id="6b42a-105">有关信息的方法和属性`My.Log`对象，请参阅<xref:Microsoft.VisualBasic.Logging.AspLog>。</xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="6b42a-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
   
- `My.Log`对象是适用于 ASP.NET 应用程序。 对于客户端应用程序使用[My.Application.Log 对象](../../../visual-basic/language-reference/objects/my-application-log-object.md)。  
+ <span data-ttu-id="6b42a-106">`My.Log`对象是适用于 ASP.NET 应用程序。</span><span class="sxs-lookup"><span data-stu-id="6b42a-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="6b42a-107">对于客户端应用程序使用[My.Application.Log 对象](../../../visual-basic/language-reference/objects/my-application-log-object.md)。</span><span class="sxs-lookup"><span data-stu-id="6b42a-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
   
-## <a name="requirements"></a>要求  
- **Namespace:**<xref:Microsoft.VisualBasic.Logging></xref:Microsoft.VisualBasic.Logging>  
+## <a name="requirements"></a><span data-ttu-id="6b42a-108">要求</span><span class="sxs-lookup"><span data-stu-id="6b42a-108">Requirements</span></span>  
+ <span data-ttu-id="6b42a-109">**Namespace:**<xref:Microsoft.VisualBasic.Logging></xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="6b42a-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
   
- **类︰**<xref:Microsoft.VisualBasic.Logging.AspLog></xref:Microsoft.VisualBasic.Logging.AspLog>  
+ <span data-ttu-id="6b42a-110">**类︰**<xref:Microsoft.VisualBasic.Logging.AspLog></xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="6b42a-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
   
- **程序集︰**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]
+ <span data-ttu-id="6b42a-111">**程序集︰**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b42a-111">**Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span></span>

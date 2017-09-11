@@ -17,16 +17,16 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-using-c-interactive-to-explore-and-experiment"></a>🔧 使用 C# 交互窗口进行探索和试验
+# <a name="-using-c-interactive-to-explore-and-experiment"></a><span data-ttu-id="3aa45-105">🔧 使用 C# 交互窗口进行探索和试验</span><span class="sxs-lookup"><span data-stu-id="3aa45-105">🔧 Using C# Interactive to explore and experiment</span></span>
 
-> **注意**
+> <span data-ttu-id="3aa45-106">**注意**</span><span class="sxs-lookup"><span data-stu-id="3aa45-106">**Note**</span></span>
 > 
-> 尚未编写此主题！ 
+> <span data-ttu-id="3aa45-107">尚未编写此主题！</span><span class="sxs-lookup"><span data-stu-id="3aa45-107">This topic hasn’t been written yet!</span></span> 
 >
-> 欢迎提供建议，以帮助我们确定范围和方法。 可在 GitHub 处跟踪有关此[问题](https://github.com/dotnet/docs/issues/949)的状态并提供相关建议。
+> <span data-ttu-id="3aa45-108">欢迎提供建议，以帮助我们确定范围和方法。</span><span class="sxs-lookup"><span data-stu-id="3aa45-108">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="3aa45-109">可在 GitHub 处跟踪有关此[问题](https://github.com/dotnet/docs/issues/949)的状态并提供相关建议。</span><span class="sxs-lookup"><span data-stu-id="3aa45-109">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/949) at GitHub.</span></span>
 > 
-> 如果想要查看此主题的早期草稿和概述，请就此问题留下包含联系信息的备注。
+> <span data-ttu-id="3aa45-110">如果想要查看此主题的早期草稿和概述，请就此问题留下包含联系信息的备注。</span><span class="sxs-lookup"><span data-stu-id="3aa45-110">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> 了解如何参与 [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) 的详细信息。
+> <span data-ttu-id="3aa45-111">了解如何参与 [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) 的详细信息。</span><span class="sxs-lookup"><span data-stu-id="3aa45-111">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

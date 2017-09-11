@@ -15,24 +15,25 @@ ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 321fd6aba7b8ab40b29eb0708039cb5c0f8a964d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2cf3f0dae9f110407003a46df4cbbad1464046ae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>如何︰ 筛选特性 (XPATH-LINQ to XML) (Visual Basic)
-本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="42014-102">如何︰ 筛选特性 (XPATH-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42014-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="42014-103">本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。</span><span class="sxs-lookup"><span data-stu-id="42014-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- XPath 表达式为：  
+ <span data-ttu-id="42014-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="42014-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a>示例  
- 本示例查找名称为 `Address`，`Type`、并具有一个带“Shipping”值的属性的子代元素。  
+## <a name="example"></a><span data-ttu-id="42014-105">示例</span><span class="sxs-lookup"><span data-stu-id="42014-105">Example</span></span>  
+ <span data-ttu-id="42014-106">本示例查找名称为 `Address`，`Type`、并具有一个带“Shipping”值的属性的子代元素。</span><span class="sxs-lookup"><span data-stu-id="42014-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ <span data-ttu-id="42014-107">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="42014-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -58,7 +59,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="42014-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="42014-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -88,5 +89,5 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="42014-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="42014-109">See Also</span></span>  
+ [<span data-ttu-id="42014-110">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42014-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

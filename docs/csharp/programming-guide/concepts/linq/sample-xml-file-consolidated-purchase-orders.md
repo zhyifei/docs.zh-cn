@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>示例 XML 文件：合并的采购订单
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是一组来自多家公司、具有不同形状的采购订单。 每家公司的采购订单位于单独的命名空间中。  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="bafd7-102">示例 XML 文件：合并的采购订单</span><span class="sxs-lookup"><span data-stu-id="bafd7-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="bafd7-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="bafd7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bafd7-104">此文件是一组来自多家公司、具有不同形状的采购订单。</span><span class="sxs-lookup"><span data-stu-id="bafd7-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="bafd7-105">每家公司的采购订单位于单独的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="bafd7-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="bafd7-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="bafd7-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -161,6 +161,6 @@ ms.lasthandoff: 07/28/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bafd7-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="bafd7-107">See Also</span></span>  
+ [<span data-ttu-id="bafd7-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bafd7-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -28,24 +28,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1b74a8eb3983b4e6a96233e95250d86d4d38c51
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 52c852003acd327b5cae9d888dac42824dfd8460
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="registry-summary-visual-basic"></a>注册表摘要 (Visual Basic)
-[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]语言关键字和运行时库成员按目的组织和用途。  
+# <a name="registry-summary-visual-basic"></a><span data-ttu-id="75779-102">注册表摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75779-102">Registry Summary (Visual Basic)</span></span>
+[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]<span data-ttu-id="75779-103">语言关键字和运行时库成员按目的组织和用途。</span><span class="sxs-lookup"><span data-stu-id="75779-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
- 使用`My`功能为您提供了提高工作效率和注册表操作比使用这些元素中的性能。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。</xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <span data-ttu-id="75779-104">使用`My`功能为您提供了提高工作效率和注册表操作比使用这些元素中的性能。</span><span class="sxs-lookup"><span data-stu-id="75779-104">Using the `My` feature provides you with greater productivity and performance in registry operations than these elements.</span></span> <span data-ttu-id="75779-105">有关详细信息，请参阅<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。</xref:Microsoft.VisualBasic.MyServices.RegistryProxy></span><span class="sxs-lookup"><span data-stu-id="75779-105">For more information, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
   
-|**操作**|**语言元素**|  
+|<span data-ttu-id="75779-106">**操作**</span><span class="sxs-lookup"><span data-stu-id="75779-106">**Action**</span></span>|<span data-ttu-id="75779-107">**语言元素**</span><span class="sxs-lookup"><span data-stu-id="75779-107">**Language element**</span></span>|  
 |----------------|--------------------------|  
-|删除程序设置。|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|读取程序设置。|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>,<xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>|  
-|保存程序设置。|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|<span data-ttu-id="75779-108">删除程序设置。</span><span class="sxs-lookup"><span data-stu-id="75779-108">Delete program settings.</span></span>|<span data-ttu-id="75779-109"><xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></span><span class="sxs-lookup"><span data-stu-id="75779-109"><xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></span></span>|  
+|<span data-ttu-id="75779-110">读取程序设置。</span><span class="sxs-lookup"><span data-stu-id="75779-110">Read program settings.</span></span>|<span data-ttu-id="75779-111"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>,<xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetSetting%2A></span><span class="sxs-lookup"><span data-stu-id="75779-111"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></span></span>|  
+|<span data-ttu-id="75779-112">保存程序设置。</span><span class="sxs-lookup"><span data-stu-id="75779-112">Save program settings.</span></span>|<span data-ttu-id="75779-113"><xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></span><span class="sxs-lookup"><span data-stu-id="75779-113"><xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 运行时库成员](../../../visual-basic/language-reference/runtime-library-members.md)   
- [读取和写入注册表](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a><span data-ttu-id="75779-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="75779-114">See Also</span></span>  
+ <span data-ttu-id="75779-115">[关键字](../../../visual-basic/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="75779-115">[Keywords](../../../visual-basic/language-reference/keywords/index.md) </span></span>  
+<span data-ttu-id="75779-116"> [Visual Basic 运行时库成员](../../../visual-basic/language-reference/runtime-library-members.md) </span><span class="sxs-lookup"><span data-stu-id="75779-116"> [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md) </span></span>  
+<span data-ttu-id="75779-117"> [读取和写入注册表](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)</span><span class="sxs-lookup"><span data-stu-id="75779-117"> [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)</span></span>

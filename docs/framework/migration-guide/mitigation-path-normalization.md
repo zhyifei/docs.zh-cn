@@ -22,40 +22,40 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-path-normalization"></a>缓解：路径规范化
-自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，.NET Framework 中的路径规范化已更改。  
+# <a name="mitigation-path-normalization"></a><span data-ttu-id="14c8f-102">缓解：路径规范化</span><span class="sxs-lookup"><span data-stu-id="14c8f-102">Mitigation: Path Normalization</span></span>
+<span data-ttu-id="14c8f-103">自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，.NET Framework 中的路径规范化已更改。</span><span class="sxs-lookup"><span data-stu-id="14c8f-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  
   
-## <a name="what-is-path-normalization"></a>什么是路径规范化？  
- 路径规范化涉及修改用于标识路径或文件的字符串，使其与目标操作系统上的有效路径一致。 路径规范化通常涉及以下操作：  
+## <a name="what-is-path-normalization"></a><span data-ttu-id="14c8f-104">什么是路径规范化？</span><span class="sxs-lookup"><span data-stu-id="14c8f-104">What is path normalization?</span></span>  
+ <span data-ttu-id="14c8f-105">路径规范化涉及修改用于标识路径或文件的字符串，使其与目标操作系统上的有效路径一致。</span><span class="sxs-lookup"><span data-stu-id="14c8f-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="14c8f-106">路径规范化通常涉及以下操作：</span><span class="sxs-lookup"><span data-stu-id="14c8f-106">Normalization typically involves:</span></span>  
   
--   规范化处理组件和目录分隔符。  
+-   <span data-ttu-id="14c8f-107">规范化处理组件和目录分隔符。</span><span class="sxs-lookup"><span data-stu-id="14c8f-107">Canonicalizing component and directory separators.</span></span>  
   
--   将当前目录应用到相对路径。  
+-   <span data-ttu-id="14c8f-108">将当前目录应用到相对路径。</span><span class="sxs-lookup"><span data-stu-id="14c8f-108">Applying the current directory to a relative path.</span></span>  
   
--   评估路径中的相对目录 (`.`) 或父目录 (`..`)。  
+-   <span data-ttu-id="14c8f-109">评估路径中的相对目录 (`.`) 或父目录 (`..`)。</span><span class="sxs-lookup"><span data-stu-id="14c8f-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
   
--   删减指定字符。  
+-   <span data-ttu-id="14c8f-110">删减指定字符。</span><span class="sxs-lookup"><span data-stu-id="14c8f-110">Trimming specified characters.</span></span>  
   
-## <a name="the-changes"></a>更改  
- 自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，路径规范化在以下几个方面进行了更改：  
+## <a name="the-changes"></a><span data-ttu-id="14c8f-111">更改</span><span class="sxs-lookup"><span data-stu-id="14c8f-111">The changes</span></span>  
+ <span data-ttu-id="14c8f-112">自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，路径规范化在以下几个方面进行了更改：</span><span class="sxs-lookup"><span data-stu-id="14c8f-112">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization has changed in the following ways:</span></span>  
   
--   运行时在规范化处理路径时以操作系统的 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) 函数为准。  
+-   <span data-ttu-id="14c8f-113">运行时在规范化处理路径时以操作系统的 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) 函数为准。</span><span class="sxs-lookup"><span data-stu-id="14c8f-113">The runtime defers to the operating system's [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) function to normalize paths.</span></span>  
   
--   路径规范化再也不用删减目录部分的末尾内容（如目录名称末尾的空格）。  
+-   <span data-ttu-id="14c8f-114">路径规范化再也不用删减目录部分的末尾内容（如目录名称末尾的空格）。</span><span class="sxs-lookup"><span data-stu-id="14c8f-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
   
--   支持完全信任形式的设备路径语法，包括 `\\.\` 和 `\\?\`（对于 mscorlib.dll 中的文件 I/O API）。  
+-   <span data-ttu-id="14c8f-115">支持完全信任形式的设备路径语法，包括 `\\.\` 和 `\\?\`（对于 mscorlib.dll 中的文件 I/O API）。</span><span class="sxs-lookup"><span data-stu-id="14c8f-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
   
--   运行时不会验证设备语法路径。  
+-   <span data-ttu-id="14c8f-116">运行时不会验证设备语法路径。</span><span class="sxs-lookup"><span data-stu-id="14c8f-116">The runtime does not validate device syntax paths.</span></span>  
   
--   支持使用设备语法来访问备用数据流。  
+-   <span data-ttu-id="14c8f-117">支持使用设备语法来访问备用数据流。</span><span class="sxs-lookup"><span data-stu-id="14c8f-117">The use of device syntax to access alternate data streams is supported.</span></span>  
   
-## <a name="impact"></a>影响  
- 对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，这些更改默认启用。 这些更改应该会提升性能，同时允许方法访问之前无法访问的路径。  
+## <a name="impact"></a><span data-ttu-id="14c8f-118">影响</span><span class="sxs-lookup"><span data-stu-id="14c8f-118">Impact</span></span>  
+ <span data-ttu-id="14c8f-119">对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，这些更改默认启用。</span><span class="sxs-lookup"><span data-stu-id="14c8f-119">For apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later, these changes are on  by default.</span></span> <span data-ttu-id="14c8f-120">这些更改应该会提升性能，同时允许方法访问之前无法访问的路径。</span><span class="sxs-lookup"><span data-stu-id="14c8f-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
   
- 定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序不会受此更改影响。  
+ <span data-ttu-id="14c8f-121">定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序不会受此更改影响。</span><span class="sxs-lookup"><span data-stu-id="14c8f-121">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and earlier versions but are running under the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later are unaffected by this change.</span></span>  
   
-## <a name="mitigation"></a>缓解操作  
- 对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而选择禁用此更改并使用旧版路径规范化：  
+## <a name="mitigation"></a><span data-ttu-id="14c8f-122">缓解操作</span><span class="sxs-lookup"><span data-stu-id="14c8f-122">Mitigation</span></span>  
+ <span data-ttu-id="14c8f-123">对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而选择禁用此更改并使用旧版路径规范化：</span><span class="sxs-lookup"><span data-stu-id="14c8f-123">Apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -63,7 +63,7 @@ ms.lasthandoff: 07/28/2017
 </runtime>  
 ```  
   
- 对于定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本，但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而启用路径规范化更改：  
+ <span data-ttu-id="14c8f-124">对于定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本，但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而启用路径规范化更改：</span><span class="sxs-lookup"><span data-stu-id="14c8f-124">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] or earlier but are running on the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -71,6 +71,6 @@ ms.lasthandoff: 07/28/2017
 </runtime>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a><span data-ttu-id="14c8f-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="14c8f-125">See Also</span></span>  
+ [<span data-ttu-id="14c8f-126">重定目标更改</span><span class="sxs-lookup"><span data-stu-id="14c8f-126">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
 

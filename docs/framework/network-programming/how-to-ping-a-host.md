@@ -1,30 +1,35 @@
 ---
-title: "如何：Ping 主机 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Ping"
+title: "如何：Ping 主机"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：Ping 主机
-此示例演示如何ping远程主机。  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="53b44-102">如何：Ping 主机</span><span class="sxs-lookup"><span data-stu-id="53b44-102">How to: Ping a Host</span></span>
+<span data-ttu-id="53b44-103">此示例演示如何 ping 远程主机。</span><span class="sxs-lookup"><span data-stu-id="53b44-103">This sample shows how to ping a remote host.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="53b44-104">示例</span><span class="sxs-lookup"><span data-stu-id="53b44-104">Example</span></span>  
   
 ```  
 using System;  
@@ -130,7 +135,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## 编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="53b44-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="53b44-105">Compiling the Code</span></span>  
+ <span data-ttu-id="53b44-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="53b44-106">This example requires:</span></span>  
   
--   对 **System.Net** 命名空间。
+-   <span data-ttu-id="53b44-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="53b44-107">References to the **System.Net** namespace.</span></span>
+

@@ -1,66 +1,72 @@
 ---
-title: "类型等效性和嵌入的互操作类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "嵌入的互操作类型"
-  - "NoPIA"
-  - "主互操作程序集, 在 CLR 版本 4 中不是必需的"
-  - "类型等效性"
+title: "类型等效性和嵌入的互操作类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- type equivalence
+- embedded interop types
+- primary interop assemblies,not necessary in CLR version 4
+- NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e9a7b39047edcd8e2c770e17a33dd73e75ee5083
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 类型等效性和嵌入的互操作类型
-从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]开始，公共语言运行时支持将 COM 类型的类型信息直接嵌入到托管程序集中，而不是要求托管程序集从互操作程序集中获取 COM 类型的类型信息。  由于嵌入的类型信息只包含托管程序集实际所使用的类型和成员，因此两个托管程序集可能会具有相同 COM 类型的截然不同的视图。  每个托管程序集使用不同的 <xref:System.Type> 对象来表示各自的 COM 类型视图。  公共语言运行时支持这些不同视图之间的类型等效性，这些类型包括接口、结构、枚举和委托。  
+# <a name="type-equivalence-and-embedded-interop-types"></a><span data-ttu-id="f3ad1-102">类型等效性和嵌入的互操作类型</span><span class="sxs-lookup"><span data-stu-id="f3ad1-102">Type Equivalence and Embedded Interop Types</span></span>
+<span data-ttu-id="f3ad1-103">从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，公共语言运行时支持将 COM 类型的类型信息直接嵌入到托管程序集中，而不要求托管程序集从 Interop 程序集中获取 COM 类型的类型信息。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-103">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the common language runtime supports embedding type information for COM types directly into managed assemblies, instead of requiring the managed assemblies to obtain type information for COM types from interop assemblies.</span></span> <span data-ttu-id="f3ad1-104">由于嵌入式类型信息仅包含托管程序集实际使用的类型和成员，因此两个托管程序集可能具有相同 COM 类型的不同视图。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-104">Because the embedded type information includes only the types and members that are actually used by a managed assembly, two managed assemblies might have very different views of the same COM type.</span></span> <span data-ttu-id="f3ad1-105">每个托管程序集都有不同的 <xref:System.Type> 对象来表示其 COM 类型视图。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-105">Each managed assembly has a different <xref:System.Type> object to represent its view of the COM type.</span></span> <span data-ttu-id="f3ad1-106">公共语言运行时支持接口、结构、枚举和委托等不同视图之间的类型等效性。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-106">The common language runtime supports type equivalence between these different views for interfaces, structures, enumerations, and delegates.</span></span>  
   
- 类型等效性意味着，在两个托管程序集之间传递的 COM 对象在接收程序集中可以转换为适当的托管类型。  
+ <span data-ttu-id="f3ad1-107">类型等效性意味着从一个托管程序集传递到另一个托管程序集的 COM 对象可以转换为接收程序集中适当的托管类型。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-107">Type equivalence means that a COM object that is passed from one managed assembly to another can be cast to the appropriate managed type in the receiving assembly.</span></span>  
   
 > [!NOTE]
->  类型等效性和嵌入的互操作类型可简化使用 COM 组件的应用程序和外接程序的部署过程，这是因为不需要使用应用程序来部署互操作程序集。  共享 COM 组件的开发人员若想使其组件可供早期版本的 .NET Framework 使用，则他们仍然必须创建主互操作程序集 \(PIA\)。  
+>  <span data-ttu-id="f3ad1-108">类型等效性和嵌入式互操作类型简化了使用 COM 组件的应用程序和加载项的部署，因为无需与应用程序一起部署互操作程序集。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-108">Type equivalence and embedded interop types simplify the deployment of applications and add-ins that use COM components, because it is not necessary to deploy interop assemblies with the applications.</span></span> <span data-ttu-id="f3ad1-109">如果共享 COM 组件的开发人员希望较早版本的 .NET Framework 使用其组件，他们仍须创建主互操作程序集 (PIA)。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-109">Developers of shared COM components still have to create primary interop assemblies (PIAs) if they want their components to be used by earlier versions of the .NET Framework.</span></span>  
   
-## 类型等效性  
- COM 类型等效性支持的类型包括接口、结构、枚举和委托。  如果满足下面的所有条件，则 COM 类型符合等效要求：  
+## <a name="type-equivalence"></a><span data-ttu-id="f3ad1-110">类型等效性</span><span class="sxs-lookup"><span data-stu-id="f3ad1-110">Type Equivalence</span></span>  
+ <span data-ttu-id="f3ad1-111">COM 类型的等效性支持接口、结构、枚举和委托。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-111">Equivalence of COM types is supported for interfaces, structures, enumerations, and delegates.</span></span> <span data-ttu-id="f3ad1-112">如果满足以下所有条件，则 COM 类型符合等效条件：</span><span class="sxs-lookup"><span data-stu-id="f3ad1-112">COM types qualify as equivalent if all of the following are true:</span></span>  
   
--   两个类型同时为接口、结构、枚举或委托。  
+-   <span data-ttu-id="f3ad1-113">类型是两个接口、两个结构、两个枚举或两个委托。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-113">The types are both interfaces, or both structures, or both enumerations, or both delegates.</span></span>  
   
--   两个类型具有相同的标识，如下一节中所述。  
+-   <span data-ttu-id="f3ad1-114">类型具有相同标识，如下节所述。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-114">The types have the same identity, as described in the next section.</span></span>  
   
--   两个类型符合类型等效性要求，如[针对类型等效性标记 COM 类型](#type_equiv)一节中所述。  
+-   <span data-ttu-id="f3ad1-115">两种类型都符合类型等效性，如[针对类型等效性标记 COM 类型](#type_equiv)部分所述。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-115">Both types are eligible for type equivalence, as described in the [Marking COM Types for Type Equivalence](#type_equiv) section.</span></span>  
   
-### 类型标识  
- 当两个类型的范围和标识相匹配时，确定这两个类型具有相同的标识；也就是说，如果两个类型中的每个类型都具有 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 特性，则这两个特性具有匹配的 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 和 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 属性。  <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 的比较不区分大小写。  
+### <a name="type-identity"></a><span data-ttu-id="f3ad1-116">类型标识</span><span class="sxs-lookup"><span data-stu-id="f3ad1-116">Type Identity</span></span>  
+ <span data-ttu-id="f3ad1-117">范围和标识匹配时，确定两种类型具有相同标识，换句话说，如果它们各自具有 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 属性，并且两个属性都具有匹配的 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 和 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-117">Two types are determined to have the same identity when their scopes and identities match, in other words, if they each have the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute, and the two attributes have matching <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> and <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> properties.</span></span> <span data-ttu-id="f3ad1-118"><xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 的比较不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-118">The comparison for <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> is case-insensitive.</span></span>  
   
- 如果某个类型不具有 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 特性，或者具有未指定范围和标识符的 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 特性，则仍可以将该类型视为符合等效性，如下所示：  
+ <span data-ttu-id="f3ad1-119">如果一个类型不具有 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 属性，或者如果它有一个不指定范围和标识符的 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 属性，仍可将该类型视为等效性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f3ad1-119">If a type does not have the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute, or if it has a <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute that does not specify scope and identifier, the type can still be considered for equivalence as follows:</span></span>  
   
--   对于接口，使用 <xref:System.Runtime.InteropServices.GuidAttribute> 的值来代替使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName> 属性，并使用 <xref:System.Type.FullName%2A?displayProperty=fullName> 属性（即，包括命名空间的类型名称）来代替使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName> 属性。  
+-   <span data-ttu-id="f3ad1-120">对于接口，使用 <xref:System.Runtime.InteropServices.GuidAttribute> 的值而不使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName> 属性，使用 <xref:System.Type.FullName%2A?displayProperty=fullName> 属性（即类型名称，包括命名空间），而不使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName> 属性。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-120">For interfaces, the value of the <xref:System.Runtime.InteropServices.GuidAttribute> is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName> property, and the <xref:System.Type.FullName%2A?displayProperty=fullName> property (that is, the type name, including the namespace) is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName> property.</span></span>  
   
--   对于结构、枚举和委托，使用包含程序集的 <xref:System.Runtime.InteropServices.GuidAttribute> 来代替使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 属性，并使用 <xref:System.Type.FullName%2A?displayProperty=fullName> 属性来代替使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 属性。  
+-   <span data-ttu-id="f3ad1-121">对于结构、枚举和委托，使用包含程序集的 <xref:System.Runtime.InteropServices.GuidAttribute> 而不使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 属性，使用 <xref:System.Type.FullName%2A?displayProperty=fullName> 属性而不使用 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-121">For structures, enumerations, and delegates, the <xref:System.Runtime.InteropServices.GuidAttribute> of the containing assembly is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> property, and the <xref:System.Type.FullName%2A?displayProperty=fullName> property is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> property.</span></span>  
   
 <a name="type_equiv"></a>   
-### 针对类型等效性标记 COM 类型  
- 可以通过以下两种方式将一个类型标记为符合类型等效性：  
+### <a name="marking-com-types-for-type-equivalence"></a><span data-ttu-id="f3ad1-122">针对类型等效性标记 COM 类型</span><span class="sxs-lookup"><span data-stu-id="f3ad1-122">Marking COM Types for Type Equivalence</span></span>  
+ <span data-ttu-id="f3ad1-123">可通过两种方式将类型标记为符合类型等效性：</span><span class="sxs-lookup"><span data-stu-id="f3ad1-123">You can mark a type as eligible for type equivalence in two ways:</span></span>  
   
--   将 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 特性应用于类型。  
+-   <span data-ttu-id="f3ad1-124">将 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 属性应用于该类型。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-124">Apply the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute to the type.</span></span>  
   
--   将类型标记为 COM 导入类型。  一个接口如果具有 <xref:System.Runtime.InteropServices.ComImportAttribute> 特性，则表示它为 COM 导入类型。  一个接口、结构、枚举或委托如果是在具有 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 特性的程序集中定义的，则表示它为 COM 导入类型。  
+-   <span data-ttu-id="f3ad1-125">将该类型设为 COM 导入类型。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-125">Make the type a COM import type.</span></span> <span data-ttu-id="f3ad1-126">若接口有 <xref:System.Runtime.InteropServices.ComImportAttribute> 属性，则它是 COM 导入类型。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-126">An interface is a COM import type if it has the <xref:System.Runtime.InteropServices.ComImportAttribute> attribute.</span></span> <span data-ttu-id="f3ad1-127">如果定义了其程序集具有 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 属性，则接口、结构、枚举或委托是 COM 导入类型。</span><span class="sxs-lookup"><span data-stu-id="f3ad1-127">An interface, structure, enumeration, or delegate is a COM import type if the assembly in which it is defined has the <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> attribute.</span></span>  
   
-## 请参阅  
- <xref:System.Type.IsEquivalentTo%2A>   
- [Using COM Types in Managed Code](http://msdn.microsoft.com/zh-cn/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+## <a name="see-also"></a><span data-ttu-id="f3ad1-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f3ad1-128">See Also</span></span>  
+ <span data-ttu-id="f3ad1-129"><xref:System.Type.IsEquivalentTo%2A></span><span class="sxs-lookup"><span data-stu-id="f3ad1-129"><xref:System.Type.IsEquivalentTo%2A></span></span>   
+ <span data-ttu-id="f3ad1-130">[在托管代码中使用 COM 类型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) </span><span class="sxs-lookup"><span data-stu-id="f3ad1-130">[Using COM Types in Managed Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) </span></span>  
+ [<span data-ttu-id="f3ad1-131">将类型库作为程序集导入</span><span class="sxs-lookup"><span data-stu-id="f3ad1-131">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+

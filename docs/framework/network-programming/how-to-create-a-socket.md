@@ -1,41 +1,46 @@
 ---
-title: "如何：创建套接字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序协议，套接字"
-  - "网络"
-  - "发送数据，套接字"
-  - "数据请求，套接字"
-  - "从 Internet 请求数据，套接字"
-  - "套接字类，创建套接字"
-  - "网络资源"
-  - "接收数据，套接字"
-  - "协议，套接字"
-  - "Internet，套接字"
-  - "套接字，创建"
+title: "如何：创建套接字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- Networking
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- Socket class, creating sockets
+- Network Resources
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：创建套接字
-在使用套接字与远程计算机通信之前，必须先初始化套接字与协议和网络地址信息。  <xref:System.Net.Sockets.Socket> 选件类的构造函数具有指定地址族、套接字类型和协议类型套接字使用的连接的参数。  
+# <a name="how-to-create-a-socket"></a><span data-ttu-id="d6b2f-102">如何：创建套接字</span><span class="sxs-lookup"><span data-stu-id="d6b2f-102">How to: Create a Socket</span></span>
+<span data-ttu-id="d6b2f-103">必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="d6b2f-104"><xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
   
-## 示例  
- 下面的示例创建在基于TCP\/IP的网络可用于通信的一个存储，例如Internet。  
+## <a name="example"></a><span data-ttu-id="d6b2f-105">示例</span><span class="sxs-lookup"><span data-stu-id="d6b2f-105">Example</span></span>  
+ <span data-ttu-id="d6b2f-106">下例创建的套接字可用于与基于 TCP/IP 的网络（例如 Internet）进行通信。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-106">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -45,10 +50,9 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Stream, ProtocolType.Tcp)  
-  
 ```  
   
- 若要使用UDP而不是TCP，请更改协议类型，如下面的示例所示:  
+ <span data-ttu-id="d6b2f-107">使用 UDP 而不是 TCP更改协议类型，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="d6b2f-107">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -58,17 +62,17 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Dgram, ProtocolType.Udp)  
-  
 ```  
   
- <xref:System.Net.Sockets.AddressFamily> 枚举指定 **套接字** 选件类用于的标准地址族解决网络地址\(例如， **AddressFamily.InterNetwork** 成员指定IP地址版本4系列\)。  
+ <span data-ttu-id="d6b2f-108"><xref:System.Net.Sockets.AddressFamily> 枚举指定 Socket 类用其解析网络地址的标准地址系列（例如，AddressFamily.InterNetwork 成员指定 IP 版本 4 地址系列）。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-108">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
   
- <xref:System.Net.Sockets.SocketType> 枚举指定套接字的类型\(例如， **SocketType.Stream** 成员指示发送和接收数据的标准套接字与流控件\)。  
+ <span data-ttu-id="d6b2f-109"><xref:System.Net.Sockets.SocketType> 枚举指定套接字的类型（例如，SocketType.Stream 成员指定用流控制来发送和接收数据的标准套接字）。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-109">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
   
- <xref:System.Net.Sockets.ProtocolType> 枚举时指定网络协议使用进行通信。 **套接字** \(例如， **ProtocolType.Tcp** 指示套接字使用TCP; **ProtocolType.Udp** 指示套接字使用UDP\)。  
+ <span data-ttu-id="d6b2f-110"><xref:System.Net.Sockets.ProtocolType> 枚举指定通信时套接字使用的网络协议（例如：ProtocolType.Tcp 表示套接字使用 TCP；ProtocolType.Udp 表示套接字使用 UDP）。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-110">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
   
- 在 **套接字** 创建后，它可能首次与远程终结点的连接或接收从远程计算机的连接。  
+ <span data-ttu-id="d6b2f-111">套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接。</span><span class="sxs-lookup"><span data-stu-id="d6b2f-111">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
   
-## 请参阅  
- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)   
- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a><span data-ttu-id="d6b2f-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d6b2f-112">See Also</span></span>  
+ <span data-ttu-id="d6b2f-113">[使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md) </span><span class="sxs-lookup"><span data-stu-id="d6b2f-113">[Using Client Sockets](../../../docs/framework/network-programming/using-client-sockets.md) </span></span>  
+ [<span data-ttu-id="d6b2f-114">使用套接字侦听</span><span class="sxs-lookup"><span data-stu-id="d6b2f-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)
+

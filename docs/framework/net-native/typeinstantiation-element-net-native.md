@@ -1,28 +1,32 @@
 ---
-title: "&lt;类型实例化&gt;元素 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;类型实例化&gt;元素 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;类型实例化&gt;元素 (.NET Native)
-将运行时反射策略应用到一个构造泛型类型。  
+# <a name="lttypeinstantiationgt-element-net-native"></a><span data-ttu-id="9d4f9-102">&lt;类型实例化&gt;元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="9d4f9-102">&lt;TypeInstantiation&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="9d4f9-103">将运行时反射策略应用到一个构造泛型类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-103">Applies runtime reflection policy to a constructed generic type.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="9d4f9-104">语法</span><span class="sxs-lookup"><span data-stu-id="9d4f9-104">Syntax</span></span>  
   
 ```xml  
-  
 <TypeInstantiation Name="type_name"  
                    Arguments="type_arguments"  
                    Activate="policy_type"  
@@ -35,85 +39,83 @@ caps.handback.revision: 21
                    MarshalObject="policy_setting"  
                    MarshalDelegate="policy_setting"  
                    MarshalStructure="policy_setting" />  
-  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9d4f9-105">特性和元素</span><span class="sxs-lookup"><span data-stu-id="9d4f9-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="9d4f9-106">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a><span data-ttu-id="9d4f9-107">特性</span><span class="sxs-lookup"><span data-stu-id="9d4f9-107">Attributes</span></span>  
   
-|特性|特性类型|说明|  
+|<span data-ttu-id="9d4f9-108">特性</span><span class="sxs-lookup"><span data-stu-id="9d4f9-108">Attribute</span></span>|<span data-ttu-id="9d4f9-109">特性类型</span><span class="sxs-lookup"><span data-stu-id="9d4f9-109">Attribute type</span></span>|<span data-ttu-id="9d4f9-110">描述</span><span class="sxs-lookup"><span data-stu-id="9d4f9-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|常规|必需的特性。 指定类型名称。|  
-|`Arguments`|常规|必需的特性。 指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。|  
-|`Activate`|映像|可选特性。 控制运行时对构造函数的访问，以启用实例激活。|  
-|`Browse`|映像|可选特性。 控制对有关程序元素信息的查询，但并不启用任何运行时访问。|  
-|`Dynamic`|映像|可选特性。 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。|  
-|`Serialize`|序列化|可选特性。 控制运行时对构造函数、字段和属性的访问，使类型实例得到序列化和反序列化处理，这是通过库进行的，例如 Newtonsoft JSON 序列化程序。|  
-|`DataContractSerializer`|序列化|可选特性。 控制使用的序列化策略<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>类。|  
-|`DataContractJsonSerializer`|序列化|可选特性。 控制使用的 JSON 序列化策略<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>类。|  
-|`XmlSerializer`|序列化|可选特性。 控制使用的 XML 序列化策略<xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>类。|  
-|`MarshalObject`|Interop|可选特性。 控制封送引用类型到 Windows 运行时和 COM 的策略。|  
-|`MarshalDelegate`|Interop|可选特性。 控制将委托类型作为函数指针封送到本机代码的策略。|  
-|`MarshalStructure`|Interop|可选特性。 控制封送结构到本机代码的策略。|  
+|`Name`|<span data-ttu-id="9d4f9-111">常规</span><span class="sxs-lookup"><span data-stu-id="9d4f9-111">General</span></span>|<span data-ttu-id="9d4f9-112">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-112">Required attribute.</span></span> <span data-ttu-id="9d4f9-113">指定类型名称。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-113">Specifies the type name.</span></span>|  
+|`Arguments`|<span data-ttu-id="9d4f9-114">常规</span><span class="sxs-lookup"><span data-stu-id="9d4f9-114">General</span></span>|<span data-ttu-id="9d4f9-115">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-115">Required attribute.</span></span> <span data-ttu-id="9d4f9-116">指定泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-116">Specifies the generic type arguments.</span></span> <span data-ttu-id="9d4f9-117">如果存在多个自变量，它们之间用逗号分割。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-117">If multiple arguments are present, they are separated by commas.</span></span>|  
+|`Activate`|<span data-ttu-id="9d4f9-118">映像</span><span class="sxs-lookup"><span data-stu-id="9d4f9-118">Reflection</span></span>|<span data-ttu-id="9d4f9-119">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-119">Optional attribute.</span></span> <span data-ttu-id="9d4f9-120">控制运行时对构造函数的访问，以启用实例激活。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-120">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="9d4f9-121">映像</span><span class="sxs-lookup"><span data-stu-id="9d4f9-121">Reflection</span></span>|<span data-ttu-id="9d4f9-122">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-122">Optional attribute.</span></span> <span data-ttu-id="9d4f9-123">控制对有关程序元素信息的查询，但并不启用任何运行时访问。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-123">Controls querying for information about program elements, but does not enable any runtime access.</span></span>|  
+|`Dynamic`|<span data-ttu-id="9d4f9-124">映像</span><span class="sxs-lookup"><span data-stu-id="9d4f9-124">Reflection</span></span>|<span data-ttu-id="9d4f9-125">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-125">Optional attribute.</span></span> <span data-ttu-id="9d4f9-126">控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-126">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="9d4f9-127">序列化</span><span class="sxs-lookup"><span data-stu-id="9d4f9-127">Serialization</span></span>|<span data-ttu-id="9d4f9-128">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-128">Optional attribute.</span></span> <span data-ttu-id="9d4f9-129">控制运行时对构造函数、字段和属性的访问，使类型实例得到序列化和反序列化处理，这是通过库进行的，例如 Newtonsoft JSON 序列化程序。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-129">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="9d4f9-130">序列化</span><span class="sxs-lookup"><span data-stu-id="9d4f9-130">Serialization</span></span>|<span data-ttu-id="9d4f9-131">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-131">Optional attribute.</span></span> <span data-ttu-id="9d4f9-132">控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 类的序列化策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-132">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="9d4f9-133">序列化</span><span class="sxs-lookup"><span data-stu-id="9d4f9-133">Serialization</span></span>|<span data-ttu-id="9d4f9-134">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-134">Optional attribute.</span></span> <span data-ttu-id="9d4f9-135">控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> 类的 JSON 序列化策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-135">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="9d4f9-136">序列化</span><span class="sxs-lookup"><span data-stu-id="9d4f9-136">Serialization</span></span>|<span data-ttu-id="9d4f9-137">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-137">Optional attribute.</span></span> <span data-ttu-id="9d4f9-138">控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 类的 XML 序列化策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-138">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="9d4f9-139">Interop</span><span class="sxs-lookup"><span data-stu-id="9d4f9-139">Interop</span></span>|<span data-ttu-id="9d4f9-140">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-140">Optional attribute.</span></span> <span data-ttu-id="9d4f9-141">控制封送引用类型到 Windows 运行时和 COM 的策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-141">Controls policy for marshaling reference types to Windows Runtime and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="9d4f9-142">Interop</span><span class="sxs-lookup"><span data-stu-id="9d4f9-142">Interop</span></span>|<span data-ttu-id="9d4f9-143">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-143">Optional attribute.</span></span> <span data-ttu-id="9d4f9-144">控制将委托类型作为函数指针封送到本机代码的策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-144">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="9d4f9-145">Interop</span><span class="sxs-lookup"><span data-stu-id="9d4f9-145">Interop</span></span>|<span data-ttu-id="9d4f9-146">可选特性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-146">Optional attribute.</span></span> <span data-ttu-id="9d4f9-147">控制封送结构到本机代码的策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-147">Controls policy for marshaling structures to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Name 特性  
+## <a name="name-attribute"></a><span data-ttu-id="9d4f9-148">Name 特性</span><span class="sxs-lookup"><span data-stu-id="9d4f9-148">Name attribute</span></span>  
   
-|值|描述|  
+|<span data-ttu-id="9d4f9-149">值</span><span class="sxs-lookup"><span data-stu-id="9d4f9-149">Value</span></span>|<span data-ttu-id="9d4f9-150">描述</span><span class="sxs-lookup"><span data-stu-id="9d4f9-150">Description</span></span>|  
 |-----------|-----------------|  
-|*类型 _ 名称*|类型名称。 如果此`<TypeInstantiation>`元素是子[ <> \> ](../../../docs/framework/net-native/namespace-element-net-native.md)元素， [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)元素，或另一个`<TypeInstantiation>`元素， *type_name*可以指定而无需其命名空间类型的名称。 否则为*类型 _ 名称*必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于<xref:System.Collections.Generic.List%601?displayProperty=fullName>对象，`<TypeInstantiation>`元素可能会出现，如下所示︰<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|<span data-ttu-id="9d4f9-151">type_name</span><span class="sxs-lookup"><span data-stu-id="9d4f9-151">*type_name*</span></span>|<span data-ttu-id="9d4f9-152">类型名称。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-152">The type name.</span></span> <span data-ttu-id="9d4f9-153">如果该 `<TypeInstantiation>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素或另一个 `<TypeInstantiation>` 元素的子元素，type_name 可以指定类型名称而不包括其命名空间。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-153">If this `<TypeInstantiation>` element is the child of a [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) element, a [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) element, or another `<TypeInstantiation>` element, *type_name* can specify the name of the type without its namespace.</span></span> <span data-ttu-id="9d4f9-154">否则，type_name 必须包含完全限定的类型名称。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-154">Otherwise, *type_name* must include the fully qualified type name.</span></span> <span data-ttu-id="9d4f9-155">该类型名称没有经过修饰。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-155">The type name isn't decorated.</span></span> <span data-ttu-id="9d4f9-156">例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 对象，`<TypeInstantiation>` 元素可能显示如下：</span><span class="sxs-lookup"><span data-stu-id="9d4f9-156">For example, for a <xref:System.Collections.Generic.List%601?displayProperty=fullName> object, the `<TypeInstantiation>` element might appear as follows:</span></span><br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
-## <a name="arguments-attribute"></a>自变量特性  
+## <a name="arguments-attribute"></a><span data-ttu-id="9d4f9-157">参数特性</span><span class="sxs-lookup"><span data-stu-id="9d4f9-157">Arguments attribute</span></span>  
   
-|值|描述|  
+|<span data-ttu-id="9d4f9-158">值</span><span class="sxs-lookup"><span data-stu-id="9d4f9-158">Value</span></span>|<span data-ttu-id="9d4f9-159">描述</span><span class="sxs-lookup"><span data-stu-id="9d4f9-159">Description</span></span>|  
 |-----------|-----------------|  
-|*type_argument*|指定泛型类型参数。 如果存在多个参数，它们之间用逗号分割。 每个参数必须包含一个完全限定的类型名称。|  
+|<span data-ttu-id="9d4f9-160">type_argument</span><span class="sxs-lookup"><span data-stu-id="9d4f9-160">*type_argument*</span></span>|<span data-ttu-id="9d4f9-161">指定泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-161">Specifies the generic type arguments.</span></span> <span data-ttu-id="9d4f9-162">如果存在多个参数，它们之间用逗号分割。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-162">If multiple arguments are present, they are separated by commas.</span></span> <span data-ttu-id="9d4f9-163">每个参数必须包含一个完全限定的类型名称。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-163">Each argument must consist of the fully qualified type name.</span></span>|  
   
-## <a name="all-other-attributes"></a>所有其他特性  
+## <a name="all-other-attributes"></a><span data-ttu-id="9d4f9-164">所有其他特性</span><span class="sxs-lookup"><span data-stu-id="9d4f9-164">All other attributes</span></span>  
   
-|值|说明|  
+|<span data-ttu-id="9d4f9-165">值</span><span class="sxs-lookup"><span data-stu-id="9d4f9-165">Value</span></span>|<span data-ttu-id="9d4f9-166">描述</span><span class="sxs-lookup"><span data-stu-id="9d4f9-166">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|该设置将应用到这个构造泛型类型的策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|<span data-ttu-id="9d4f9-167">policy_setting</span><span class="sxs-lookup"><span data-stu-id="9d4f9-167">*policy_setting*</span></span>|<span data-ttu-id="9d4f9-168">该设置将应用到这个构造泛型类型的策略类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-168">The setting to apply to this policy type for the constructed generic type.</span></span> <span data-ttu-id="9d4f9-169">可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-169">Possible values are `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="9d4f9-170">有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-170">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a><span data-ttu-id="9d4f9-171">子元素</span><span class="sxs-lookup"><span data-stu-id="9d4f9-171">Child Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="9d4f9-172">元素</span><span class="sxs-lookup"><span data-stu-id="9d4f9-172">Element</span></span>|<span data-ttu-id="9d4f9-173">描述</span><span class="sxs-lookup"><span data-stu-id="9d4f9-173">Description</span></span>|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|  
-|[<>\>](../../../docs/framework/net-native/field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|  
-|[<>\>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果该策略已应用到以包含 `<TypeInstantiation>` 元素为代表的类型，将该策略应用到一个类型。|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|  
-|[<>\>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|  
-|[<>\>](../../../docs/framework/net-native/property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一个嵌套类型。|  
-|`<TypeInstantiation>`|将反射策略应用到一个嵌套的构造泛型类型。|  
+|[<span data-ttu-id="9d4f9-174">\<Event></span><span class="sxs-lookup"><span data-stu-id="9d4f9-174">\<Event></span></span>](../../../docs/framework/net-native/event-element-net-native.md)|<span data-ttu-id="9d4f9-175">将反射策略应用到属于这种类型的一个事件。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-175">Applies reflection policy to an event belonging to this type.</span></span>|  
+|[<span data-ttu-id="9d4f9-176">\<Field></span><span class="sxs-lookup"><span data-stu-id="9d4f9-176">\<Field></span></span>](../../../docs/framework/net-native/field-element-net-native.md)|<span data-ttu-id="9d4f9-177">将反射策略应用到属于这种类型的一个字段。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-177">Applies reflection policy to a field belonging to this type.</span></span>|  
+|[<span data-ttu-id="9d4f9-178">\<ImpliesType></span><span class="sxs-lookup"><span data-stu-id="9d4f9-178">\<ImpliesType></span></span>](../../../docs/framework/net-native/impliestype-element-net-native.md)|<span data-ttu-id="9d4f9-179">如果该策略已应用到以包含 `<TypeInstantiation>` 元素为代表的类型，将该策略应用到一个类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-179">Applies policy to a type, if that policy has been applied to the type represented by the containing `<TypeInstantiation>` element.</span></span>|  
+|[<span data-ttu-id="9d4f9-180">\<Method></span><span class="sxs-lookup"><span data-stu-id="9d4f9-180">\<Method></span></span>](../../../docs/framework/net-native/method-element-net-native.md)|<span data-ttu-id="9d4f9-181">将反射策略应用到属于这种类型的一个方法。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-181">Applies reflection policy to a method belonging to this type.</span></span>|  
+|[<span data-ttu-id="9d4f9-182">\<MethodInstantiation></span><span class="sxs-lookup"><span data-stu-id="9d4f9-182">\<MethodInstantiation></span></span>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|<span data-ttu-id="9d4f9-183">将反射策略应用到属于这种类型的一个构造泛型方法。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-183">Applies reflection policy to a constructed generic method belonging to this type.</span></span>|  
+|[<span data-ttu-id="9d4f9-184">\<Property></span><span class="sxs-lookup"><span data-stu-id="9d4f9-184">\<Property></span></span>](../../../docs/framework/net-native/property-element-net-native.md)|<span data-ttu-id="9d4f9-185">将反射策略应用到属于这种类型的一个属性。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-185">Applies reflection policy to a property belonging to this type.</span></span>|  
+|[<span data-ttu-id="9d4f9-186">\<Type></span><span class="sxs-lookup"><span data-stu-id="9d4f9-186">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="9d4f9-187">将反射策略应用到一个嵌套类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-187">Applies reflection policy to a nested type.</span></span>|  
+|`<TypeInstantiation>`|<span data-ttu-id="9d4f9-188">将反射策略应用到一个嵌套的构造泛型类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-188">Applies reflection policy to a nested constructed generic type.</span></span>|  
   
-### <a name="parent-elements"></a>父元素  
+### <a name="parent-elements"></a><span data-ttu-id="9d4f9-189">父元素</span><span class="sxs-lookup"><span data-stu-id="9d4f9-189">Parent Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="9d4f9-190">元素</span><span class="sxs-lookup"><span data-stu-id="9d4f9-190">Element</span></span>|<span data-ttu-id="9d4f9-191">描述</span><span class="sxs-lookup"><span data-stu-id="9d4f9-191">Description</span></span>|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|  
-|[<>\>](../../../docs/framework/net-native/assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|  
-|[<>\>](../../../docs/framework/net-native/library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。|  
-|[<>\>](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|`<TypeInstantiation>`|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[<span data-ttu-id="9d4f9-192">\<Application></span><span class="sxs-lookup"><span data-stu-id="9d4f9-192">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="9d4f9-193">作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-193">Serves as a container for application-wide types and type members whose metadata is available for reflection at run time.</span></span>|  
+|[<span data-ttu-id="9d4f9-194">\<Assembly></span><span class="sxs-lookup"><span data-stu-id="9d4f9-194">\<Assembly></span></span>](../../../docs/framework/net-native/assembly-element-net-native.md)|<span data-ttu-id="9d4f9-195">将反射策略应用到指定程序集中的所有类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-195">Applies reflection policy to all the types in a specified assembly.</span></span>|  
+|[<span data-ttu-id="9d4f9-196">\<Library></span><span class="sxs-lookup"><span data-stu-id="9d4f9-196">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="9d4f9-197">定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-197">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>|  
+|[<span data-ttu-id="9d4f9-198">\<Namespace></span><span class="sxs-lookup"><span data-stu-id="9d4f9-198">\<Namespace></span></span>](../../../docs/framework/net-native/namespace-element-net-native.md)|<span data-ttu-id="9d4f9-199">将反射策略应用到命名空间中的所有类型。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-199">Applies reflection policy to all the types in a namespace.</span></span>|  
+|[<span data-ttu-id="9d4f9-200">\<Type></span><span class="sxs-lookup"><span data-stu-id="9d4f9-200">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="9d4f9-201">将反射策略应用到一种类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-201">Applies reflection policy to a type and all its members.</span></span>|  
+|`<TypeInstantiation>`|<span data-ttu-id="9d4f9-202">将反射策略应用到一种构造泛型类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-202">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
   
-## <a name="remarks"></a>备注  
- 反射、序列化和互操作特性都是可选项。 然而，至少一个特性必须存在。  
+## <a name="remarks"></a><span data-ttu-id="9d4f9-203">备注</span><span class="sxs-lookup"><span data-stu-id="9d4f9-203">Remarks</span></span>  
+ <span data-ttu-id="9d4f9-204">反射、序列化和互操作特性都是可选项。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-204">The reflection, serialization, and interop attributes are all optional.</span></span> <span data-ttu-id="9d4f9-205">然而，至少一个特性必须存在。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-205">However, at least one must be present.</span></span>  
   
- 如果`<TypeInstantiation>`元素是子[ <> \</> \> ](../../../docs/framework/net-native/assembly-element-net-native.md)， [ <> \</> \> ](../../../docs/framework/net-native/namespace-element-net-native.md)，或[ <> \</> \> ](../../../docs/framework/net-native/type-element-net-native.md)，元素，它会替代由父元素定义的策略设置。 如果[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)元素定义一个相应的泛型类型定义，`<TypeInstantiation>`元素会替代仅为指定的构造泛型类型的实例化的运行时反射策略。  
+ <span data-ttu-id="9d4f9-206">如果 `<TypeInstantiation>` 元素是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，它会重写由父元素定义的策略设置。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-206">If a `<TypeInstantiation>` element is the child of an [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), or [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), element, it overrides the policy settings defined by the parent element.</span></span> <span data-ttu-id="9d4f9-207">如果 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素定义了相应的泛型类型定义，`<TypeInstantiation>` 元素只为指定构造泛型类型的实例化重写运行时反射策略。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-207">If a [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) element defines a corresponding generic type definition, the `<TypeInstantiation>` element overrides runtime reflection policy only for instantiations of the specified constructed generic type.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例使用反射来检索从一个构造泛型类型定义<xref:System.Collections.Generic.Dictionary%602>对象。</TKey, TValue> 它还使用反射来展示有关<xref:System.Type>这些对象表示构造的泛型类型和泛型类型定义。 该变量`b`在示例中是[TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)控件。  
+## <a name="example"></a><span data-ttu-id="9d4f9-208">示例</span><span class="sxs-lookup"><span data-stu-id="9d4f9-208">Example</span></span>  
+ <span data-ttu-id="9d4f9-209">以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-209">The following example uses reflection to retrieve the generic type definition from a constructed <xref:System.Collections.Generic.Dictionary%602> object.</span></span> <span data-ttu-id="9d4f9-210">它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-210">It also uses reflection to display information about <xref:System.Type> objects that represent constructed generic types and generic type definitions.</span></span> <span data-ttu-id="9d4f9-211">示例中的变量 `b` 是 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-211">The variable `b` in the example is a [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) control.</span></span>  
   
- [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
+ <span data-ttu-id="9d4f9-212">[!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]</span><span class="sxs-lookup"><span data-stu-id="9d4f9-212">[!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]</span></span>  
   
- 编译后[!INCLUDE[net_native](../../../includes/net-native-md.md)]工具链之中，本示例将引发[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)异常调用的行上<xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName>方法。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
+ <span data-ttu-id="9d4f9-213">在同 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链进行编译后，该示例在调用 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName> 方法的行中引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。</span><span class="sxs-lookup"><span data-stu-id="9d4f9-213">After compilation with the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain, the example throws a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception on the line that calls the <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName> method.</span></span> <span data-ttu-id="9d4f9-214">你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：</span><span class="sxs-lookup"><span data-stu-id="9d4f9-214">You can eliminate the exception and provide the necessary metadata by adding the following `<TypeInstantiation>` element to the runtime directives file:</span></span>  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
   <Application>  
     <Assembly Name="*Application*" Dynamic="Required All" />  
@@ -122,10 +124,10 @@ caps.handback.revision: 21
                         Dynamic="Required Public" />  
   </Application>  
 </Directives>  
-  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a><span data-ttu-id="9d4f9-215">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9d4f9-215">See Also</span></span>  
+ <span data-ttu-id="9d4f9-216">[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span><span class="sxs-lookup"><span data-stu-id="9d4f9-216">[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span></span>  
+ <span data-ttu-id="9d4f9-217">[运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md) </span><span class="sxs-lookup"><span data-stu-id="9d4f9-217">[Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md) </span></span>  
+ [<span data-ttu-id="9d4f9-218">运行时指令策略设置</span><span class="sxs-lookup"><span data-stu-id="9d4f9-218">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

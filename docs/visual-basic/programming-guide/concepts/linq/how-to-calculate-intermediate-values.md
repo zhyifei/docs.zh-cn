@@ -16,20 +16,20 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 58c93ad2de0f4292dde2ee60e60588bbe2cbaa60
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 033f813bdfa84eda68ac0edd0b38da2bb72158ee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>如何︰ 计算中间值 (Visual Basic)
-本示例演示如何计算可用于进行排序、筛选和选择的中间值。  
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a><span data-ttu-id="c0fed-102">如何︰ 计算中间值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0fed-102">How to: Calculate Intermediate Values (Visual Basic)</span></span>
+<span data-ttu-id="c0fed-103">本示例演示如何计算可用于进行排序、筛选和选择的中间值。</span><span class="sxs-lookup"><span data-stu-id="c0fed-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例使用 `Let` 子句。  
+## <a name="example"></a><span data-ttu-id="c0fed-104">示例</span><span class="sxs-lookup"><span data-stu-id="c0fed-104">Example</span></span>  
+ <span data-ttu-id="c0fed-105">下面的示例使用 `Let` 子句。</span><span class="sxs-lookup"><span data-stu-id="c0fed-105">The following example uses the `Let` clause.</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ <span data-ttu-id="c0fed-106">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="c0fed-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -44,7 +44,7 @@ For Each ex As Decimal In extensions
 Next  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="c0fed-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="c0fed-107">This code produces the following output:</span></span>  
   
 ```  
 55.92  
@@ -54,10 +54,10 @@ Next
 435.00  
 ```  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="c0fed-108">示例</span><span class="sxs-lookup"><span data-stu-id="c0fed-108">Example</span></span>  
+ <span data-ttu-id="c0fed-109">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="c0fed-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="c0fed-110">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="c0fed-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 数值数据，Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。  
+ <span data-ttu-id="c0fed-111">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 数值数据，Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="c0fed-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -78,7 +78,7 @@ Module Module1
 End Module  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="c0fed-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="c0fed-112">This code produces the following output:</span></span>  
   
 ```  
 55.92  
@@ -88,6 +88,6 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a>请参见  
- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c0fed-113">请参见</span><span class="sxs-lookup"><span data-stu-id="c0fed-113">See Also</span></span>  
+ [<span data-ttu-id="c0fed-114">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0fed-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

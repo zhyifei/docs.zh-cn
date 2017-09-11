@@ -1,60 +1,66 @@
 ---
-title: "System.Uri 中的国际资源标识符支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "System.Uri 中的国际资源标识符支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bb81ee9db5c4c8dc7dfa9a7a193adf47ee37b604
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# System.Uri 中的国际资源标识符支持
-<xref:System.Uri?displayProperty=fullName> 选件类扩展了与国际资源标识符\(IRI\)，和国际化域名\(IDN\)支持。  这些增强功能可在.NET Framework 3.5， 3.0 SP1、2.0 SP1。  
+# <a name="international-resource-identifier-support-in-systemuri"></a><span data-ttu-id="32d07-102">System.Uri 中的国际资源标识符支持</span><span class="sxs-lookup"><span data-stu-id="32d07-102">International Resource Identifier Support in System.Uri</span></span>
+<span data-ttu-id="32d07-103"><xref:System.Uri?displayProperty=fullName> 类在国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持下已得到扩展。</span><span class="sxs-lookup"><span data-stu-id="32d07-103">The <xref:System.Uri?displayProperty=fullName> class has been extended with International Resource Identifier (IRI) and Internationalized Domain Names (IDN) support.</span></span> <span data-ttu-id="32d07-104">NET Framework 3.5、3.0 SP1 和 2.0 SP1 提供了这些增强功能。</span><span class="sxs-lookup"><span data-stu-id="32d07-104">These enhancements are available in .NET Framework 3.5, 3.0 SP1, and 2.0 SP1.</span></span>  
   
-## IRI和IDN支持  
- Web地址通常表示使用包含一个非常有限的字符集的统一资源标识符\(uri\) \(URI\):  
+## <a name="iri-and-idn-support"></a><span data-ttu-id="32d07-105">IRI 和 IDN 支持</span><span class="sxs-lookup"><span data-stu-id="32d07-105">IRI and IDN Support</span></span>  
+ <span data-ttu-id="32d07-106">Web 地址通常使用由一组非常有限的字符组成的统一资源标识符 (URI) 来表示：</span><span class="sxs-lookup"><span data-stu-id="32d07-106">Web addresses are typically expressed using Uniform Resource Identifiers (URI) that consist of a very restricted set of characters:</span></span>  
   
--   英语字母表中的大写和小写 ASCII 字母。  
+-   <span data-ttu-id="32d07-107">英文字母表中的大小写 ASCII 字母。</span><span class="sxs-lookup"><span data-stu-id="32d07-107">Upper and lower case ASCII letters from the English alphabet.</span></span>  
   
--   数字 0 到 9。  
+-   <span data-ttu-id="32d07-108">从 0 到 9 的数字。</span><span class="sxs-lookup"><span data-stu-id="32d07-108">Digits from 0 to 9.</span></span>  
   
--   少量其他 ASCII 符号。  
+-   <span data-ttu-id="32d07-109">少量的其他 ASCII 符号。</span><span class="sxs-lookup"><span data-stu-id="32d07-109">A small number of other ASCII symbols.</span></span>  
   
- Internet 工程任务组 \(IETF\) 发布的 RFC 2396 和 RFC 3986 中说明了 URI 规范。  
+ <span data-ttu-id="32d07-110">Internet 工程任务组发布 (IETF) 的 RFC 2396 和 RFC 3986 中记录了 URL 的规格。</span><span class="sxs-lookup"><span data-stu-id="32d07-110">The specifications for URIs are documented in RFC 2396 and RFC 3986 published by the Internet Engineering Task Force (IETF).</span></span>  
   
- 随着 Internet 的发展，越来越需要使用除英语以外的其他语言来标识资源。  能够满足这一需要并允许使用非 ASCII 字符（Unicode\/ISO 10646 字符集中的字符）的标识符称为国际资源标识符 \(IRI\)。  IETF 发布的 RFC 3987 中对 IRI 规范进行了说明。  使用 IRI 可以在 URL 中包含 Unicode 字符。  
+ <span data-ttu-id="32d07-111">随着 Internet 的发展，越来越需要使用英语以外的语言识别资源。</span><span class="sxs-lookup"><span data-stu-id="32d07-111">With the growth of the Internet, there is a growing need to identify resources using languages other than English.</span></span> <span data-ttu-id="32d07-112">标识符满足了这种需求，并且使得非 ASCII 字符（Unicode 中的字符/ISO 10646 字符集）被称为国际资源标识符（IRI）。</span><span class="sxs-lookup"><span data-stu-id="32d07-112">Identifiers which facilitate this need and allow non-ASCII characters (characters in the Unicode/ISO 10646 character set) are known as International Resource Identifiers (IRIs).</span></span> <span data-ttu-id="32d07-113">IETF 发布的 RFC 3987 记录了 IRI 的规格。</span><span class="sxs-lookup"><span data-stu-id="32d07-113">The specifications for IRIs are documented in RFC 3987 published by IETF.</span></span> <span data-ttu-id="32d07-114">使用 IRI 允许 URL 包含 Unicode 字符。</span><span class="sxs-lookup"><span data-stu-id="32d07-114">Using IRIs allows a URL to contain Unicode characters.</span></span>  
   
- 现有 <xref:System.Uri?displayProperty=fullName> 选件类扩展提供IRI支持基于RFC 3987。  除非特地启用了 IRI，否则当前用户不会看到 .NET Framework 2.0 的行为发生任何变化。  这确保了应用程序与以前版本的 .NET Framework 的兼容性。  
+ <span data-ttu-id="32d07-115">现有的 <xref:System.Uri?displayProperty=fullName> 类已扩展为在 RFC 3987 基础上为 IRI 提供支持。</span><span class="sxs-lookup"><span data-stu-id="32d07-115">The existing <xref:System.Uri?displayProperty=fullName> class has been extended to provide IRI support based on RFC 3987.</span></span> <span data-ttu-id="32d07-116">除非当前用户专门启用 IRI，否则他们看不到任何 NET Framework 2.0 行为的改变。</span><span class="sxs-lookup"><span data-stu-id="32d07-116">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI.</span></span> <span data-ttu-id="32d07-117">这确保了 NET Framework 以前版本的应用程序兼容性。</span><span class="sxs-lookup"><span data-stu-id="32d07-117">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- 应用程序是否可以指定使用国际化域名\(IDN\)分析应用于域名，以及是否应该应用IRI分析规则。的。  这可以在 machine.config 或 app.config 文件中完成。  
+ <span data-ttu-id="32d07-118">应用程序可指定是否使用应用于域名的国际化域名（IDN）分析，以及是否应该应用 IRI 分析规则。</span><span class="sxs-lookup"><span data-stu-id="32d07-118">An application can specify whether to use Internationalized Domain Name (IDN) parsing applied to domain names and whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="32d07-119">这可以在 machine.config 或应用配置文件中完成。</span><span class="sxs-lookup"><span data-stu-id="32d07-119">This can be done in the machine.config or in the app.config file.</span></span>  
   
- 启用 IDN 会将域名中的所有 Unicode 标签转换为它们的 Punycode 等效项。  Punycode 名称仅包含 ASCII 字符，并且总是以 xn\-\- 前缀开头。  这样做是为了支持 Internet 中现有的 DNS 服务器，因为大多数 DNS 服务器仅支持 ASCII 字符（请参见 RFC 3940）。  
+ <span data-ttu-id="32d07-120">启用 IDN 可以将域名中所有 Unicode 标签转换成标签的 Punycode 等同项。</span><span class="sxs-lookup"><span data-stu-id="32d07-120">Enabling IDN will convert all Unicode labels in a domain name to their Punycode equivalents.</span></span> <span data-ttu-id="32d07-121">Punycode 名称只包含 ASCII 字符，并且始终以 xn-- 前缀开头。</span><span class="sxs-lookup"><span data-stu-id="32d07-121">Punycode names contain only ASCII characters and always start with the xn-- prefix.</span></span> <span data-ttu-id="32d07-122">这样是为了支持 Internet 上的 DNS 服务器，因为大部分 DNS 服务器仅支持 ASCII 字符（参见 RFC 3940）。</span><span class="sxs-lookup"><span data-stu-id="32d07-122">The reason for this is to support existing DNS servers on the Internet, since most DNS servers only support ASCII characters (see RFC 3940).</span></span>  
   
- 启用 IRI 和 IDN 会影响 <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName> 属性的值。  启用 IRI 和 IDN 还可能更改 <xref:System.Uri.Equals%2A?displayProperty=fullName>、<xref:System.Uri.OriginalString%2A?displayProperty=fullName>、<xref:System.Uri.GetComponents%2A?displayProperty=fullName> 和 <xref:System.Uri.IsWellFormedOriginalString%2A> 方法的行为。  
+ <span data-ttu-id="32d07-123">启用 IRI 和 IDN 会影响 <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="32d07-123">Enabling IRI and IDN affects the value of the <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName> property.</span></span> <span data-ttu-id="32d07-124">启用 IRI 和 IDN 还可能更改 <xref:System.Uri.Equals%2A?displayProperty=fullName>、<xref:System.Uri.OriginalString%2A?displayProperty=fullName>、<xref:System.Uri.GetComponents%2A?displayProperty=fullName> 和 <xref:System.Uri.IsWellFormedOriginalString%2A> 方法的行为。</span><span class="sxs-lookup"><span data-stu-id="32d07-124">Enabling IRI and IDN can also change the behavior of the <xref:System.Uri.Equals%2A?displayProperty=fullName>, <xref:System.Uri.OriginalString%2A?displayProperty=fullName>, <xref:System.Uri.GetComponents%2A?displayProperty=fullName>, and <xref:System.Uri.IsWellFormedOriginalString%2A> methods.</span></span>  
   
- <xref:System.GenericUriParser?displayProperty=fullName> 类也已经进行了扩展，以便创建支持 IRI 和 IDN 的可自定义的分析器。  通过向 <xref:System.GenericUriParser?displayProperty=fullName> 构造函数传递 <xref:System.GenericUriParserOptions?displayProperty=fullName> 枚举中提供的值的按位组合，可以指定 <xref:System.GenericUriParser?displayProperty=fullName> 对象的行为。  <xref:System.GenericUriParserOptions?displayProperty=fullName> 类型指示分析器支持 RFC 3987 中指定的国际资源标识符 \(IRI\) 语法分析规则。  是否实际使用IRI取决于，如果启用IRI。  
+ <span data-ttu-id="32d07-125"><xref:System.GenericUriParser?displayProperty=fullName> 类已得到扩展，允许创建支持 IRI 和 IDN 的自定义分析。</span><span class="sxs-lookup"><span data-stu-id="32d07-125">The <xref:System.GenericUriParser?displayProperty=fullName> class has also been extended to allow creating a customizable parser that supports IRI and IDN.</span></span> <span data-ttu-id="32d07-126">通过将枚举中可用值的按位组合传递给 <xref:System.GenericUriParserOptions?displayProperty=fullName> 构造函数 <xref:System.GenericUriParser?displayProperty=fullName> 来指定 <xref:System.GenericUriParser?displayProperty=fullName> 对象的行为。</span><span class="sxs-lookup"><span data-stu-id="32d07-126">The behavior of a <xref:System.GenericUriParser?displayProperty=fullName> object is specified by passing a bitwise combination of the values available in the <xref:System.GenericUriParserOptions?displayProperty=fullName> enumeration to the <xref:System.GenericUriParser?displayProperty=fullName> constructor.</span></span> <span data-ttu-id="32d07-127"><xref:System.GenericUriParserOptions.IriParsing?displayProperty=fullName> 类型表示分析程序支持 RFC 3987 中为国际资源标识符 (IRI) 指定的分析规则。</span><span class="sxs-lookup"><span data-stu-id="32d07-127">The <xref:System.GenericUriParserOptions.IriParsing?displayProperty=fullName> type indicates the parser supports the parsing rules specified in RFC 3987 for International Resource Identifiers (IRI).</span></span> <span data-ttu-id="32d07-128">是否实际使用 IRI 取决于是否启用 IRI。</span><span class="sxs-lookup"><span data-stu-id="32d07-128">Whether IRI is actually used depends on if IRI is enabled.</span></span>  
   
- <xref:System.GenericUriParserOptions?displayProperty=fullName> 类型指示分析器支持对主机名进行国际化域名 \(IDN\) 语法分析。  是否实际使用IDN取决于，如果IDN启用。  
+ <span data-ttu-id="32d07-129"><xref:System.GenericUriParserOptions.Idn?displayProperty=fullName> 类型表示分析程序支持主机名的国际化域名 (IDN) 分析。</span><span class="sxs-lookup"><span data-stu-id="32d07-129">The <xref:System.GenericUriParserOptions.Idn?displayProperty=fullName> type indicates the parser supports Internationalized Domain Name (IDN) parsing (IDN) of host names.</span></span> <span data-ttu-id="32d07-130">是否实际使用 IDN 取决于是否启用 IDN。</span><span class="sxs-lookup"><span data-stu-id="32d07-130">Whether IDN is actually used depends on if IDN is enabled.</span></span>  
   
- 启用IRI分析将执行检查根据RFC 3987中的最新IRI规则的规范化和字符。  默认值是为IRI分析禁用，因此规范化和字符检查按照RFC 2396和RFC 3986完成。  
+ <span data-ttu-id="32d07-131">启用 IRI 分析后将根据 RFC 3987 中最后的 IRI 规则执行规范化和字符检查。</span><span class="sxs-lookup"><span data-stu-id="32d07-131">Enabling IRI parsing will do normalization and character checking according to the latest IRI rules in RFC 3987.</span></span> <span data-ttu-id="32d07-132">默认值用于禁用 IRI 分析，所以规范化和字符检查会根据 RFC 2396 和 RFC 3986 完成。</span><span class="sxs-lookup"><span data-stu-id="32d07-132">The default value is for IRI parsing to be disabled so normalization and character checking are done according to RFC 2396 and RFC 3986.</span></span>  
   
- 处理在 <xref:System.Uri?displayProperty=fullName> 选件类IRI和IDN也可以控制来设置选件类的 <xref:System.Configuration.IriParsingElement?displayProperty=fullName> 和 <xref:System.Configuration.IdnElement?displayProperty=fullName> 配置。  <xref:System.Configuration.IriParsingElement?displayProperty=fullName> 设置可以启用或禁用 <xref:System.Uri?displayProperty=fullName> 类中的 IRI 处理。  <xref:System.Configuration.IdnElement?displayProperty=fullName> 设置可以启用或禁用 <xref:System.Uri> 类中的 IDN 处理。  <xref:System.Configuration.IriParsingElement?displayProperty=fullName> 设置还可以间接控制 IDN。  若要进行 IDN 处理，必须启用 IRI 处理。  如果禁用了 IRI 处理，则 IDN 处理将设置为默认设置，在此情况下，将使用 .NET Framework 2.0 行为以确保兼容且不使用 IDN 名称。  
+ <span data-ttu-id="32d07-133"><xref:System.Uri?displayProperty=fullName> 类中的 IRI 和 IDN 处理也可以通过使用 <xref:System.Configuration.IriParsingElement?displayProperty=fullName> 和 <xref:System.Configuration.IdnElement?displayProperty=fullName> 配置集类进行控制。</span><span class="sxs-lookup"><span data-stu-id="32d07-133">IRI and IDN processing in the <xref:System.Uri?displayProperty=fullName> class can also be controlled using the <xref:System.Configuration.IriParsingElement?displayProperty=fullName> and <xref:System.Configuration.IdnElement?displayProperty=fullName> configuration setting classes.</span></span> <span data-ttu-id="32d07-134"><xref:System.Configuration.IriParsingElement?displayProperty=fullName> 设置启用或禁用 <xref:System.Uri?displayProperty=fullName> 类中的 IRI 处理。</span><span class="sxs-lookup"><span data-stu-id="32d07-134">The <xref:System.Configuration.IriParsingElement?displayProperty=fullName> setting enables or disables IRI processing in the <xref:System.Uri?displayProperty=fullName> class.</span></span> <span data-ttu-id="32d07-135"><xref:System.Configuration.IdnElement?displayProperty=fullName> 设置启用或禁用 <xref:System.Uri> 类中的 IDN 处理。</span><span class="sxs-lookup"><span data-stu-id="32d07-135">The <xref:System.Configuration.IdnElement?displayProperty=fullName> setting enables or disables IDN processing in the <xref:System.Uri> class.</span></span> <span data-ttu-id="32d07-136"><xref:System.Configuration.IriParsingElement?displayProperty=fullName> 也可间接控制 IDN。</span><span class="sxs-lookup"><span data-stu-id="32d07-136">The <xref:System.Configuration.IriParsingElement?displayProperty=fullName> setting also indirectly controls IDN.</span></span> <span data-ttu-id="32d07-137">必须启用 IRI 处理才能进行 IDN 处理。</span><span class="sxs-lookup"><span data-stu-id="32d07-137">IRI processing must be enabled for IDN processing to be possible.</span></span> <span data-ttu-id="32d07-138">如果禁用 IRI，IDN 处理将被设置为默认值，这时 NET Framework 2.0 行为用于兼容性，并且 IDN 名称不可用。</span><span class="sxs-lookup"><span data-stu-id="32d07-138">If IRI processing is disabled, then IDN processing will be set to the default setting where the .NET Framework 2.0 behavior is used for compatibility and IDN names are not used.</span></span>  
   
- ，当第一个 <xref:System.Uri?displayProperty=fullName> 选件类构造，设置为 <xref:System.Configuration.IriParsingElement?displayProperty=fullName> 和 <xref:System.Configuration.IdnElement?displayProperty=fullName> 配置选件类的配置一次将读取。  之后进行的配置设置更改将被忽略。  
+ <span data-ttu-id="32d07-139">构造第一个 <xref:System.Uri?displayProperty=fullName> 类后，将立即读取 <xref:System.Configuration.IriParsingElement?displayProperty=fullName> 和 <xref:System.Configuration.IdnElement?displayProperty=fullName> 配置类的配置设置。</span><span class="sxs-lookup"><span data-stu-id="32d07-139">The configuration setting for the <xref:System.Configuration.IriParsingElement?displayProperty=fullName> and <xref:System.Configuration.IdnElement?displayProperty=fullName> configuration classes will be read once when the first <xref:System.Uri?displayProperty=fullName> class is constructed.</span></span> <span data-ttu-id="32d07-140">忽略时间后更改为默认设置。</span><span class="sxs-lookup"><span data-stu-id="32d07-140">Changes to configuration settings after that time are ignored.</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="32d07-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="32d07-141">See Also</span></span>  
  <xref:System.Configuration.IdnElement?displayProperty=fullName>   
  <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
  <xref:System.Uri?displayProperty=fullName>   
  <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName>
+

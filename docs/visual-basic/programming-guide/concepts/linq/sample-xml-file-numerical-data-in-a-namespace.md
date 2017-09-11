@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f3ea94c23ae1c8a565c8d457791ae0ed0d52f61d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 96039a8f425d5af1b5875557c16f8decab6cc7a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>示例 XML 文件：命名空间中的数值数据
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。 此文件包含数值数据，用于求和、求平均值和分组。 该 XML 在某个命名空间中。  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="3db7b-102">示例 XML 文件：命名空间中的数值数据</span><span class="sxs-lookup"><span data-stu-id="3db7b-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="3db7b-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="3db7b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="3db7b-104">此文件包含数值数据，用于求和、求平均值和分组。</span><span class="sxs-lookup"><span data-stu-id="3db7b-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="3db7b-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="3db7b-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a>数据  
+## <a name="data"></a><span data-ttu-id="3db7b-106">数据</span><span class="sxs-lookup"><span data-stu-id="3db7b-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -72,5 +73,5 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="3db7b-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3db7b-107">See Also</span></span>  
+ [<span data-ttu-id="3db7b-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="3db7b-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

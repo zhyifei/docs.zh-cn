@@ -1,28 +1,33 @@
 ---
-title: "如何：访问 HTTP 特定的属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "如何：访问 HTTP 特定的属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a0c5a2c3a159e4d10da03a584b29e4b77720534
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：访问 HTTP 特定的属性
-此示例演示如何关闭HTTP **Keep\-alive** 行为和从Web服务器获取的协议版本号。  
+# <a name="how-to-access-http-specific-properties"></a><span data-ttu-id="1d0b0-102">如何：访问 HTTP 特定的属性</span><span class="sxs-lookup"><span data-stu-id="1d0b0-102">How to: Access HTTP-Specific Properties</span></span>
+<span data-ttu-id="1d0b0-103">此示例演示如何关闭 HTTP 保持的连接行为并从 Web 服务器获取协议版本号。</span><span class="sxs-lookup"><span data-stu-id="1d0b0-103">This sample shows how to turn off the HTTP **Keep-alive** behavior and get the protocol version number from the Web server.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="1d0b0-104">示例</span><span class="sxs-lookup"><span data-stu-id="1d0b0-104">Example</span></span>  
   
 ```vb  
 Dim HttpWReq As HttpWebRequest= _  
@@ -51,12 +56,13 @@ String ver = HttpWResp.ProtocolVersion.ToString();
 HttpWResp.Close();  
 ```  
   
-## 编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="1d0b0-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="1d0b0-105">Compiling the Code</span></span>  
+ <span data-ttu-id="1d0b0-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="1d0b0-106">This example requires:</span></span>  
   
--   对 **System.Net** 命名空间。  
+-   <span data-ttu-id="1d0b0-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="1d0b0-107">References to the **System.Net** namespace.</span></span>  
   
-## 请参阅  
- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)   
- [HTTP](../../../docs/framework/network-programming/http.md)
+## <a name="see-also"></a><span data-ttu-id="1d0b0-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1d0b0-108">See Also</span></span>  
+ <span data-ttu-id="1d0b0-109">[通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md) </span><span class="sxs-lookup"><span data-stu-id="1d0b0-109">[Accessing the Internet Through a Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md) </span></span>  
+ <span data-ttu-id="1d0b0-110">[使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md) </span><span class="sxs-lookup"><span data-stu-id="1d0b0-110">[Using Application Protocols](../../../docs/framework/network-programming/using-application-protocols.md) </span></span>  
+ [<span data-ttu-id="1d0b0-111">HTTP</span><span class="sxs-lookup"><span data-stu-id="1d0b0-111">HTTP</span></span>](../../../docs/framework/network-programming/http.md)
+

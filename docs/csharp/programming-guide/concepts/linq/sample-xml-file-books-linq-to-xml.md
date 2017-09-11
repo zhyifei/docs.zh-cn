@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>示例 XML 文件：书籍 (LINQ to XML)
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 该文件包含有关图书的信息。  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="4f94a-102">示例 XML 文件：书籍 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4f94a-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="4f94a-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="4f94a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="4f94a-104">该文件包含有关图书的信息。</span><span class="sxs-lookup"><span data-stu-id="4f94a-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a>books.xml  
+## <a name="booksxml"></a><span data-ttu-id="4f94a-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="4f94a-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.lasthandoff: 07/28/2017
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="4f94a-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="4f94a-106">See Also</span></span>  
+ [<span data-ttu-id="4f94a-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4f94a-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

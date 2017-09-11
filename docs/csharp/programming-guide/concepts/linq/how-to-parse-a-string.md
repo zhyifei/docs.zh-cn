@@ -26,11 +26,11 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-parse-a-string-c"></a>如何：分析字符串 (C#)
-本主题演示如何分析字符串，以在 C# 中创建 XML 树。  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="5e46c-102">如何：分析字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e46c-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="5e46c-103">本主题演示如何分析字符串，以在 C# 中创建 XML 树。</span><span class="sxs-lookup"><span data-stu-id="5e46c-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的 C# 代码演示如何分析字符串。  
+## <a name="example"></a><span data-ttu-id="5e46c-104">示例</span><span class="sxs-lookup"><span data-stu-id="5e46c-104">Example</span></span>  
+ <span data-ttu-id="5e46c-105">下面的 C# 代码演示如何分析字符串。</span><span class="sxs-lookup"><span data-stu-id="5e46c-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -62,6 +62,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="5e46c-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="5e46c-106">See Also</span></span>  
+ [<span data-ttu-id="5e46c-107">分析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="5e46c-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
 

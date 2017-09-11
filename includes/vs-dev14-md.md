@@ -1,1 +1,1 @@
-Visual Studio 2015
+<span data-ttu-id="16d5a-101">Visual Studio 2015</span><span class="sxs-lookup"><span data-stu-id="16d5a-101">Visual Studio 2015</span></span>

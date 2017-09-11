@@ -37,15 +37,15 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="true-c-reference"></a>true（C# 参考）
-用作重载运算符或文本：  
+# <a name="true-c-reference"></a><span data-ttu-id="6c609-102">true（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6c609-102">true (C# Reference)</span></span>
+<span data-ttu-id="6c609-103">用作重载运算符或文本：</span><span class="sxs-lookup"><span data-stu-id="6c609-103">Used as an overloaded operator or as a literal:</span></span>  
   
- [true 运算符](../../../csharp/language-reference/keywords/true-operator.md)  
+ [<span data-ttu-id="6c609-104">true 运算符</span><span class="sxs-lookup"><span data-stu-id="6c609-104">true Operator</span></span>](../../../csharp/language-reference/keywords/true-operator.md)  
   
- [true 字面常数](../../../csharp/language-reference/keywords/true-literal.md)  
+ [<span data-ttu-id="6c609-105">true 字面常数</span><span class="sxs-lookup"><span data-stu-id="6c609-105">true Literal</span></span>](../../../csharp/language-reference/keywords/true-literal.md)  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="6c609-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6c609-106">See Also</span></span>  
+ <span data-ttu-id="6c609-107">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="6c609-107">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="6c609-108">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="6c609-108">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="6c609-109">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="6c609-109">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

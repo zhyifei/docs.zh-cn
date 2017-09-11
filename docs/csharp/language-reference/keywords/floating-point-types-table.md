@@ -36,21 +36,21 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="floating-point-types-table-c-reference"></a>浮点型表（C# 参考）
-下表显示了浮点类型的精度和大致范围。  
+# <a name="floating-point-types-table-c-reference"></a><span data-ttu-id="bf0d5-102">浮点型表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="bf0d5-102">Floating-Point Types Table (C# Reference)</span></span>
+<span data-ttu-id="bf0d5-103">下表显示了浮点类型的精度和大致范围。</span><span class="sxs-lookup"><span data-stu-id="bf0d5-103">The following table shows the precision and approximate ranges for the floating-point types.</span></span>  
   
-|类型|大致范围|精度|  
+|<span data-ttu-id="bf0d5-104">类型</span><span class="sxs-lookup"><span data-stu-id="bf0d5-104">Type</span></span>|<span data-ttu-id="bf0d5-105">大致范围</span><span class="sxs-lookup"><span data-stu-id="bf0d5-105">Approximate range</span></span>|<span data-ttu-id="bf0d5-106">精度</span><span class="sxs-lookup"><span data-stu-id="bf0d5-106">Precision</span></span>|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|±1.5e−45 到 ±3.4e38|7 位|  
-|[double](double.md)|±5.0e−324 到 ±1.7e308|15-16 位|  
+|[<span data-ttu-id="bf0d5-107">float</span><span class="sxs-lookup"><span data-stu-id="bf0d5-107">float</span></span>](float.md)|<span data-ttu-id="bf0d5-108">±1.5e−45 到 ±3.4e38</span><span class="sxs-lookup"><span data-stu-id="bf0d5-108">±1.5e−45 to ±3.4e38</span></span>|<span data-ttu-id="bf0d5-109">7 位</span><span class="sxs-lookup"><span data-stu-id="bf0d5-109">7 digits</span></span>|  
+|[<span data-ttu-id="bf0d5-110">double</span><span class="sxs-lookup"><span data-stu-id="bf0d5-110">double</span></span>](double.md)|<span data-ttu-id="bf0d5-111">±5.0e−324 到 ±1.7e308</span><span class="sxs-lookup"><span data-stu-id="bf0d5-111">±5.0e−324 to ±1.7e308</span></span>|<span data-ttu-id="bf0d5-112">15-16 位</span><span class="sxs-lookup"><span data-stu-id="bf0d5-112">15-16 digits</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [默认值表](default-values-table.md)   
- [内置类型表](built-in-types-table.md)   
- [整型类型表](integral-types-table.md)   
- [设置数值结果表的格式](formatting-numeric-results-table.md)   
- [类型参考表](reference-tables-for-types.md)   
- [小数](decimal.md)
+## <a name="see-also"></a><span data-ttu-id="bf0d5-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bf0d5-113">See Also</span></span>  
+ <span data-ttu-id="bf0d5-114">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="bf0d5-115">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="bf0d5-116">[默认值表](default-values-table.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-116">[Default Values Table](default-values-table.md) </span></span>  
+ <span data-ttu-id="bf0d5-117">[内置类型表](built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-117">[Built-In Types Table](built-in-types-table.md) </span></span>  
+ <span data-ttu-id="bf0d5-118">[整型类型表](integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-118">[Integral Types Table](integral-types-table.md) </span></span>  
+ <span data-ttu-id="bf0d5-119">[设置数值结果表的格式](formatting-numeric-results-table.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-119">[Formatting Numeric Results Table](formatting-numeric-results-table.md) </span></span>  
+ <span data-ttu-id="bf0d5-120">[类型参考表](reference-tables-for-types.md) </span><span class="sxs-lookup"><span data-stu-id="bf0d5-120">[Reference Tables for Types](reference-tables-for-types.md) </span></span>  
+ [<span data-ttu-id="bf0d5-121">小数</span><span class="sxs-lookup"><span data-stu-id="bf0d5-121">decimal</span></span>](decimal.md)
 

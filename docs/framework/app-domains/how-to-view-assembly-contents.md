@@ -29,27 +29,27 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-view-assembly-contents"></a>如何：查看程序集内容
-可使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)查看文件中的 Microsoft 中间语言 (MSIL) 信息。 如果要检查的文件是程序集，此信息可包括程序集的属性以及对其他模块和程序集的引用。 此信息有助于确定文件是程序集还是程序集的一部分，以及文件是否具有对其他模块或程序集的引用。  
+# <a name="how-to-view-assembly-contents"></a><span data-ttu-id="6893a-102">如何：查看程序集内容</span><span class="sxs-lookup"><span data-stu-id="6893a-102">How to: View Assembly Contents</span></span>
+<span data-ttu-id="6893a-103">可使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)查看文件中的 Microsoft 中间语言 (MSIL) 信息。</span><span class="sxs-lookup"><span data-stu-id="6893a-103">You can use the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) information in a file.</span></span> <span data-ttu-id="6893a-104">如果要检查的文件是程序集，此信息可包括程序集的属性以及对其他模块和程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="6893a-104">If the file being examined is an assembly, this information can include the assembly's attributes, as well as references to other modules and assemblies.</span></span> <span data-ttu-id="6893a-105">此信息有助于确定文件是程序集还是程序集的一部分，以及文件是否具有对其他模块或程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="6893a-105">This information can be helpful in determining whether a file is an assembly or part of an assembly, and whether the file has references to other modules or assemblies.</span></span>  
   
-### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>使用 Ildasm.exe 显示程序集的内容  
+### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a><span data-ttu-id="6893a-106">使用 Ildasm.exe 显示程序集的内容</span><span class="sxs-lookup"><span data-stu-id="6893a-106">To display the contents of an assembly using Ildasm.exe</span></span>  
   
-1.  在命令提示符处键入 ildasm \<assembly name>。 例如，以下命令反汇编 `Hello.exe` 程序集。  
+1.  <span data-ttu-id="6893a-107">在命令提示符处键入 ildasm \<assembly name>。</span><span class="sxs-lookup"><span data-stu-id="6893a-107">Type **ildasm** \<*assembly name*> at the command prompt.</span></span> <span data-ttu-id="6893a-108">例如，以下命令反汇编 `Hello.exe` 程序集。</span><span class="sxs-lookup"><span data-stu-id="6893a-108">For example, the following command disassembles the `Hello.exe` assembly.</span></span>  
   
     ```  
     ildasm Hello.exe  
     ```  
   
-### <a name="to-view-assembly-manifest-information"></a>查看程序集清单信息  
+### <a name="to-view-assembly-manifest-information"></a><span data-ttu-id="6893a-109">查看程序集清单信息</span><span class="sxs-lookup"><span data-stu-id="6893a-109">To view assembly manifest information</span></span>  
   
-1.  在“MSIL 反汇编程序”窗口双击“清单”图标。  
+1.  <span data-ttu-id="6893a-110">在“MSIL 反汇编程序”窗口双击“清单”图标。</span><span class="sxs-lookup"><span data-stu-id="6893a-110">Double-click the MANIFEST icon in the MSIL Disassembler window.</span></span>  
   
-## <a name="example"></a>示例  
- 下例以基本的“Hello, World”程序开始。 编译该程序后，使用 Ildasm.exe 反汇编 Hello.exe 程序集并查看程序集清单。  
+## <a name="example"></a><span data-ttu-id="6893a-111">示例</span><span class="sxs-lookup"><span data-stu-id="6893a-111">Example</span></span>  
+ <span data-ttu-id="6893a-112">下例以基本的“Hello, World”程序开始。</span><span class="sxs-lookup"><span data-stu-id="6893a-112">The following example starts with a basic "Hello, World" program.</span></span> <span data-ttu-id="6893a-113">编译该程序后，使用 Ildasm.exe 反汇编 Hello.exe 程序集并查看程序集清单。</span><span class="sxs-lookup"><span data-stu-id="6893a-113">After compiling the program, use Ildasm.exe to disassemble the Hello.exe assembly and view the assembly manifest.</span></span>  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ <span data-ttu-id="6893a-114">[!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]</span><span class="sxs-lookup"><span data-stu-id="6893a-114">[!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]</span></span>  
   
- 在 Hello.exe 程序集上运行 ildasm.exe 命令，然后在 IL DASM 窗口中双击“清单”图标生成以下输出：  
+ <span data-ttu-id="6893a-115">在 Hello.exe 程序集上运行 ildasm.exe 命令，然后在 IL DASM 窗口中双击“清单”图标生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="6893a-115">Running the command ildasm.exe on the Hello.exe assembly and double-clicking the MANIFEST icon in the IL DASM window produces the following output:</span></span>  
   
 ```  
 // Metadata version: v4.0.30319  
@@ -76,24 +76,24 @@ ms.lasthandoff: 07/28/2017
 // Image base: 0x00600000  
 ```  
   
- 下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令。  
+ <span data-ttu-id="6893a-116">下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令。</span><span class="sxs-lookup"><span data-stu-id="6893a-116">The following table describes each directive in the assembly manifest of the Hello.exe assembly used in the example.</span></span>  
   
-|指令|描述|  
+|<span data-ttu-id="6893a-117">指令</span><span class="sxs-lookup"><span data-stu-id="6893a-117">Directive</span></span>|<span data-ttu-id="6893a-118">描述</span><span class="sxs-lookup"><span data-stu-id="6893a-118">Description</span></span>|  
 |---------------|-----------------|  
-|.assembly extern \< assembly name >|指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。|  
-|.publickeytoken \< token >|指定引用程序集的实际密钥的标记。|  
-|.ver \< version number >|指定引用程序集的版本号。|  
-|.assembly \< assembly name >|指定程序集名称。|  
-|.hash algorithm \< int32 value >|指定使用的哈希算法。|  
-|.ver \< version number >|指定程序集的版本号。|  
-|.module \< file name >|指定组成程序集的模块名称。 在此示例中，程序集只包含一个文件。|  
-|.subsystem \< value >|指定程序要求的应用程序环境。 在此示例中，值 3 表示该可执行文件从控制台运行。|  
-|.corflags|当前是元数据中的一个保留字段。|  
+|<span data-ttu-id="6893a-119">.assembly extern \< assembly name ></span><span class="sxs-lookup"><span data-stu-id="6893a-119">**.assembly extern \<** *assembly name* **>**</span></span>|<span data-ttu-id="6893a-120">指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。</span><span class="sxs-lookup"><span data-stu-id="6893a-120">Specifies another assembly that contains items referenced by the current module (in this example, `mscorlib`).</span></span>|  
+|<span data-ttu-id="6893a-121">.publickeytoken \< token ></span><span class="sxs-lookup"><span data-stu-id="6893a-121">**.publickeytoken \<** *token* **>**</span></span>|<span data-ttu-id="6893a-122">指定引用程序集的实际密钥的标记。</span><span class="sxs-lookup"><span data-stu-id="6893a-122">Specifies the token of the actual key of the referenced assembly.</span></span>|  
+|<span data-ttu-id="6893a-123">.ver \< version number ></span><span class="sxs-lookup"><span data-stu-id="6893a-123">**.ver \<** *version number* **>**</span></span>|<span data-ttu-id="6893a-124">指定引用程序集的版本号。</span><span class="sxs-lookup"><span data-stu-id="6893a-124">Specifies the version number of the referenced assembly.</span></span>|  
+|<span data-ttu-id="6893a-125">.assembly \< assembly name ></span><span class="sxs-lookup"><span data-stu-id="6893a-125">**.assembly \<** *assembly name* **>**</span></span>|<span data-ttu-id="6893a-126">指定程序集名称。</span><span class="sxs-lookup"><span data-stu-id="6893a-126">Specifies the assembly name.</span></span>|  
+|<span data-ttu-id="6893a-127">.hash algorithm \< int32 value ></span><span class="sxs-lookup"><span data-stu-id="6893a-127">**.hash algorithm \<** *int32 value* **>**</span></span>|<span data-ttu-id="6893a-128">指定使用的哈希算法。</span><span class="sxs-lookup"><span data-stu-id="6893a-128">Specifies the hash algorithm used.</span></span>|  
+|<span data-ttu-id="6893a-129">.ver \< version number ></span><span class="sxs-lookup"><span data-stu-id="6893a-129">**.ver \<** *version number* **>**</span></span>|<span data-ttu-id="6893a-130">指定程序集的版本号。</span><span class="sxs-lookup"><span data-stu-id="6893a-130">Specifies the version number of the assembly.</span></span>|  
+|<span data-ttu-id="6893a-131">.module \< file name ></span><span class="sxs-lookup"><span data-stu-id="6893a-131">**.module \<** *file name* **>**</span></span>|<span data-ttu-id="6893a-132">指定组成程序集的模块名称。</span><span class="sxs-lookup"><span data-stu-id="6893a-132">Specifies the name of the modules that make up the assembly.</span></span> <span data-ttu-id="6893a-133">在此示例中，程序集只包含一个文件。</span><span class="sxs-lookup"><span data-stu-id="6893a-133">In this example, the assembly consists of only one file.</span></span>|  
+|<span data-ttu-id="6893a-134">.subsystem \< value ></span><span class="sxs-lookup"><span data-stu-id="6893a-134">**.subsystem \<** *value* **>**</span></span>|<span data-ttu-id="6893a-135">指定程序要求的应用程序环境。</span><span class="sxs-lookup"><span data-stu-id="6893a-135">Specifies the application environment required for the program.</span></span> <span data-ttu-id="6893a-136">在此示例中，值 3 表示该可执行文件从控制台运行。</span><span class="sxs-lookup"><span data-stu-id="6893a-136">In this example, the value 3 indicates that this executable is run from a console.</span></span>|  
+|<span data-ttu-id="6893a-137">.corflags</span><span class="sxs-lookup"><span data-stu-id="6893a-137">**.corflags**</span></span>|<span data-ttu-id="6893a-138">当前是元数据中的一个保留字段。</span><span class="sxs-lookup"><span data-stu-id="6893a-138">Currently a reserved field in the metadata.</span></span>|  
   
- 根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II: Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III: CIL Instruction Set”（第 3 部分：CIL 指令集）。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](http://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。  
+ <span data-ttu-id="6893a-139">根据程序集的内容，程序集清单可包含许多不同的指令。</span><span class="sxs-lookup"><span data-stu-id="6893a-139">An assembly manifest can contain a number of different directives, depending on the contents of the assembly.</span></span> <span data-ttu-id="6893a-140">有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II: Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III: CIL Instruction Set”（第 3 部分：CIL 指令集）。</span><span class="sxs-lookup"><span data-stu-id="6893a-140">For an extensive list of the directives in the assembly manifest, see the ECMA documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set".</span></span> <span data-ttu-id="6893a-141">可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](http://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。</span><span class="sxs-lookup"><span data-stu-id="6893a-141">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [应用程序域和程序集](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
- [应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
- [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+## <a name="see-also"></a><span data-ttu-id="6893a-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6893a-142">See Also</span></span>  
+ <span data-ttu-id="6893a-143">[应用程序域和程序集](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346) </span><span class="sxs-lookup"><span data-stu-id="6893a-143">[Application Domains and Assemblies](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346) </span></span>  
+ <span data-ttu-id="6893a-144">[应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md) </span><span class="sxs-lookup"><span data-stu-id="6893a-144">[Application Domains and Assemblies How-to Topics](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md) </span></span>  
+ [<span data-ttu-id="6893a-145">Ildasm.exe（IL 反汇编程序）</span><span class="sxs-lookup"><span data-stu-id="6893a-145">Ildasm.exe (IL Disassembler)</span></span>](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
 

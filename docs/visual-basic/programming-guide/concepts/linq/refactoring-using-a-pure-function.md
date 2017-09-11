@@ -15,22 +15,23 @@ ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a60f55513aa30e4f221c45f4be506d6f0507406
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cf797a3b2437a8191d3c5b9831ba51db687c4fd0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>使用纯函数 (Visual Basic) 重构
-下面的示例重构上例中，[使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，若要在此示例中，若要查找的段落文本移动到纯静态方法的代码中使用纯函数`ParagraphText`。  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="a51de-102">使用纯函数 (Visual Basic) 重构</span><span class="sxs-lookup"><span data-stu-id="a51de-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
+<span data-ttu-id="a51de-103">下面的示例重构上例中，[使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，若要在此示例中，若要查找的段落文本移动到纯静态方法的代码中使用纯函数`ParagraphText`。</span><span class="sxs-lookup"><span data-stu-id="a51de-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a>示例  
- 本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 它还标识每个段落的样式。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了重构的代码。  
+## <a name="example"></a><span data-ttu-id="a51de-104">示例</span><span class="sxs-lookup"><span data-stu-id="a51de-104">Example</span></span>  
+ <span data-ttu-id="a51de-105">本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。</span><span class="sxs-lookup"><span data-stu-id="a51de-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="a51de-106">它还标识每个段落的样式。</span><span class="sxs-lookup"><span data-stu-id="a51de-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="a51de-107">本示例以本教程中前面的一些示例为基础构建。</span><span class="sxs-lookup"><span data-stu-id="a51de-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="a51de-108">下面代码中的注释标识出了重构的代码。</span><span class="sxs-lookup"><span data-stu-id="a51de-108">The refactored code is called out in comments in the code below.</span></span>  
   
- 用于创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ <span data-ttu-id="a51de-109">用于创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="a51de-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="a51de-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="a51de-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="a51de-111">它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="a51de-111">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +161,7 @@ Module Module1
 End Module   
 ```  
   
- 此示例生成与重构前相同的输出：  
+ <span data-ttu-id="a51de-112">此示例生成与重构前相同的输出：</span><span class="sxs-lookup"><span data-stu-id="a51de-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -180,12 +181,12 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>后续步骤  
- 下面的示例演示如何将 XML 投影到一个不同的形状：  
+### <a name="next-steps"></a><span data-ttu-id="a51de-113">后续步骤</span><span class="sxs-lookup"><span data-stu-id="a51de-113">Next Steps</span></span>  
+ <span data-ttu-id="a51de-114">下面的示例演示如何将 XML 投影到一个不同的形状：</span><span class="sxs-lookup"><span data-stu-id="a51de-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [将 XML 投影为不同的形状 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [<span data-ttu-id="a51de-115">将 XML 投影为不同的形状 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a51de-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>另请参阅  
- [教程︰ 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
- [重构为纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a51de-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a51de-116">See Also</span></span>  
+ <span data-ttu-id="a51de-117">[教程︰ 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) </span><span class="sxs-lookup"><span data-stu-id="a51de-117">[Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) </span></span>  
+<span data-ttu-id="a51de-118"> [使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) </span><span class="sxs-lookup"><span data-stu-id="a51de-118"> [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) </span></span>  
+<span data-ttu-id="a51de-119"> [重构为纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)</span><span class="sxs-lookup"><span data-stu-id="a51de-119"> [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)</span></span>

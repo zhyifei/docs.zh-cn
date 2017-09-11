@@ -36,30 +36,30 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
-终结器用于析构类的实例。  
+# <a name="finalizers-c-programming-guide"></a><span data-ttu-id="0860c-102">终结器（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="0860c-102">Finalizers (C# Programming Guide)</span></span>
+<span data-ttu-id="0860c-103">终结器用于析构类的实例。</span><span class="sxs-lookup"><span data-stu-id="0860c-103">Finalizers are used to destruct instances of classes.</span></span>  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a><span data-ttu-id="0860c-104">备注</span><span class="sxs-lookup"><span data-stu-id="0860c-104">Remarks</span></span>  
   
--   无法在结构中定义终结器。 它们仅用于类。  
+-   <span data-ttu-id="0860c-105">无法在结构中定义终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-105">Finalizers cannot be defined in structs.</span></span> <span data-ttu-id="0860c-106">它们仅用于类。</span><span class="sxs-lookup"><span data-stu-id="0860c-106">They are only used with classes.</span></span>  
   
--   一个类只能有一个终结器。  
+-   <span data-ttu-id="0860c-107">一个类只能有一个终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-107">A class can only have one finalizer.</span></span>  
   
--   不能继承或重载终结器。  
+-   <span data-ttu-id="0860c-108">不能继承或重载终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-108">Finalizers cannot be inherited or overloaded.</span></span>  
   
--   不能手动调用终结器。 可以自动调用它们。  
+-   <span data-ttu-id="0860c-109">不能手动调用终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-109">Finalizers cannot be called.</span></span> <span data-ttu-id="0860c-110">可以自动调用它们。</span><span class="sxs-lookup"><span data-stu-id="0860c-110">They are invoked automatically.</span></span>  
   
--   终结器不使用修饰符或参数。  
+-   <span data-ttu-id="0860c-111">终结器不使用修饰符或参数。</span><span class="sxs-lookup"><span data-stu-id="0860c-111">A finalizer does not take modifiers or have parameters.</span></span>  
   
- 例如，以下是类 `Car` 的终结器声明。
+ <span data-ttu-id="0860c-112">例如，以下是类 `Car` 的终结器声明。</span><span class="sxs-lookup"><span data-stu-id="0860c-112">For example, the following is a declaration of a finalizer for the `Car` class.</span></span>
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ <span data-ttu-id="0860c-113">[!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="0860c-113">[!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]</span></span>  
 
-终结器也可以作为表达式主体定义实现，如下面的示例所示。
+<span data-ttu-id="0860c-114">终结器也可以作为表达式主体定义实现，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="0860c-114">A finalizer can also be implemented as an expression body definition, as the following example shows.</span></span>
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+<span data-ttu-id="0860c-115">[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="0860c-115">[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]</span></span>  
   
- 终结器隐式调用对象基类上的 <xref:System.Object.Finalize%2A>。 因此，对终结器的调用会隐式转换为以下代码：  
+ <span data-ttu-id="0860c-116">终结器隐式调用对象基类上的 <xref:System.Object.Finalize%2A>。</span><span class="sxs-lookup"><span data-stu-id="0860c-116">The finalizer implicitly calls <xref:System.Object.Finalize%2A> on the base class of the object.</span></span> <span data-ttu-id="0860c-117">因此，对终结器的调用会隐式转换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="0860c-117">Therefore, a call to a finalizer is implicitly translated to the following code:</span></span>  
   
 ```csharp  
 protected override void Finalize()  
@@ -75,40 +75,40 @@ protected override void Finalize()
 }  
 ```  
   
- 这意味着，对继承链（从派生程度最高到派生程度最低）中的所有实例以递归方式调用 `Finalize` 方法。  
+ <span data-ttu-id="0860c-118">这意味着，对继承链（从派生程度最高到派生程度最低）中的所有实例以递归方式调用 `Finalize` 方法。</span><span class="sxs-lookup"><span data-stu-id="0860c-118">This means that the `Finalize` method is called recursively for all instances in the inheritance chain, from the most-derived to the least-derived.</span></span>  
   
 > [!NOTE]
->  不应使用空终结器。 如果类包含终结器，会在 `Finalize` 队列中创建一个条目。 调用终结器时，会调用垃圾回收器来处理该队列。 空终结器只会导致不必要的性能损失。  
+>  <span data-ttu-id="0860c-119">不应使用空终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-119">Empty finalizers should not be used.</span></span> <span data-ttu-id="0860c-120">如果类包含终结器，会在 `Finalize` 队列中创建一个条目。</span><span class="sxs-lookup"><span data-stu-id="0860c-120">When a class contains a finalizer, an entry is created in the `Finalize` queue.</span></span> <span data-ttu-id="0860c-121">调用终结器时，会调用垃圾回收器来处理该队列。</span><span class="sxs-lookup"><span data-stu-id="0860c-121">When the finalizer is called, the garbage collector is invoked to process the queue.</span></span> <span data-ttu-id="0860c-122">空终结器只会导致不必要的性能损失。</span><span class="sxs-lookup"><span data-stu-id="0860c-122">An empty finalizer just causes a needless loss of performance.</span></span>  
   
- 程序员无法控制何时调用终结器，因为这由垃圾回收器决定。 垃圾回收器检查应用程序不再使用的对象。 如果它认为某个对象符合终止条件，则调用终结器（如果有），并回收用来存储此对象的内存。 还可在程序退出后调用终结器。  
+ <span data-ttu-id="0860c-123">程序员无法控制何时调用终结器，因为这由垃圾回收器决定。</span><span class="sxs-lookup"><span data-stu-id="0860c-123">The programmer has no control over when the finalizer is called because this is determined by the garbage collector.</span></span> <span data-ttu-id="0860c-124">垃圾回收器检查应用程序不再使用的对象。</span><span class="sxs-lookup"><span data-stu-id="0860c-124">The garbage collector checks for objects that are no longer being used by the application.</span></span> <span data-ttu-id="0860c-125">如果它认为某个对象符合终止条件，则调用终结器（如果有），并回收用来存储此对象的内存。</span><span class="sxs-lookup"><span data-stu-id="0860c-125">If it considers an object eligible for finalization, it calls the finalizer (if any) and reclaims the memory used to store the object.</span></span> <span data-ttu-id="0860c-126">还可在程序退出后调用终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-126">Finalizers are also called when the program exits.</span></span>  
   
- 可以通过调用 <xref:System.GC.Collect%2A> 强制进行垃圾回收，但多数情况下应避免此操作，因为它可能会造成性能问题。  
+ <span data-ttu-id="0860c-127">可以通过调用 <xref:System.GC.Collect%2A> 强制进行垃圾回收，但多数情况下应避免此操作，因为它可能会造成性能问题。</span><span class="sxs-lookup"><span data-stu-id="0860c-127">It is possible to force garbage collection by calling <xref:System.GC.Collect%2A>, but most of the time, this should be avoided because it may create performance issues.</span></span>  
   
-## <a name="using-finalizers-to-release-resources"></a>使用终结器释放资源  
- 一般来说，C# 所占用的内存管理空间比使用不面向带有垃圾回收机制的运行时的语言进行开发时所使用的内存管理空间要少。 这是因为 .NET Framework 垃圾回收器会隐式管理对象的内存分配和释放。 但是，如果应用程序封装非托管的资源，例如窗口、文件和网络连接，则应使用终结器释放这些资源。 当对象符合终止条件时，垃圾回收器会运行对象的 `Finalize` 方法。  
+## <a name="using-finalizers-to-release-resources"></a><span data-ttu-id="0860c-128">使用终结器释放资源</span><span class="sxs-lookup"><span data-stu-id="0860c-128">Using Finalizers to Release Resources</span></span>  
+ <span data-ttu-id="0860c-129">一般来说，C# 所占用的内存管理空间比使用不面向带有垃圾回收机制的运行时的语言进行开发时所使用的内存管理空间要少。</span><span class="sxs-lookup"><span data-stu-id="0860c-129">In general, C# does not require as much memory management as is needed when you develop with a language that does not target a runtime with garbage collection.</span></span> <span data-ttu-id="0860c-130">这是因为 .NET Framework 垃圾回收器会隐式管理对象的内存分配和释放。</span><span class="sxs-lookup"><span data-stu-id="0860c-130">This is because the .NET Framework garbage collector implicitly manages the allocation and release of memory for your objects.</span></span> <span data-ttu-id="0860c-131">但是，如果应用程序封装非托管的资源，例如窗口、文件和网络连接，则应使用终结器释放这些资源。</span><span class="sxs-lookup"><span data-stu-id="0860c-131">However, when your application encapsulates unmanaged resources such as windows, files, and network connections, you should use finalizers to free those resources.</span></span> <span data-ttu-id="0860c-132">当对象符合终止条件时，垃圾回收器会运行对象的 `Finalize` 方法。</span><span class="sxs-lookup"><span data-stu-id="0860c-132">When the object is eligible for finalization, the garbage collector runs the `Finalize` method of the object.</span></span>  
   
-## <a name="explicit-release-of-resources"></a>显式释放资源  
- 如果应用程序正在使用昂贵的外部资源，我们还建议在垃圾回收器释放对象前显式释放资源。 若要实现此操作，可从执行必要的对象清除的 <xref:System.IDisposable> 接口实现 `Dispose` 方法。 这样可大大提高应用程序的性能。 如果调用 `Dispose` 方法失败，那么即使拥有对资源的显式控制，终结器也会成为清除资源的一个保障。  
+## <a name="explicit-release-of-resources"></a><span data-ttu-id="0860c-133">显式释放资源</span><span class="sxs-lookup"><span data-stu-id="0860c-133">Explicit Release of Resources</span></span>  
+ <span data-ttu-id="0860c-134">如果应用程序正在使用昂贵的外部资源，我们还建议在垃圾回收器释放对象前显式释放资源。</span><span class="sxs-lookup"><span data-stu-id="0860c-134">If your application is using an expensive external resource, we also recommend that you provide a way to explicitly release the resource before the garbage collector frees the object.</span></span> <span data-ttu-id="0860c-135">若要实现此操作，可从执行必要的对象清除的 <xref:System.IDisposable> 接口实现 `Dispose` 方法。</span><span class="sxs-lookup"><span data-stu-id="0860c-135">You do this by implementing a `Dispose` method from the <xref:System.IDisposable> interface that performs the necessary cleanup for the object.</span></span> <span data-ttu-id="0860c-136">这样可大大提高应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="0860c-136">This can considerably improve the performance of the application.</span></span> <span data-ttu-id="0860c-137">如果调用 `Dispose` 方法失败，那么即使拥有对资源的显式控制，终结器也会成为清除资源的一个保障。</span><span class="sxs-lookup"><span data-stu-id="0860c-137">Even with this explicit control over resources, the finalizer becomes a safeguard to clean up resources if the call to the `Dispose` method failed.</span></span>  
   
- 有关清除资源的详细信息，请参阅下列主题：  
+ <span data-ttu-id="0860c-138">有关清除资源的详细信息，请参阅下列主题：</span><span class="sxs-lookup"><span data-stu-id="0860c-138">For more details about cleaning up resources, see the following topics:</span></span>  
   
--   [Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
+-   <span data-ttu-id="0860c-139">[Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）</span><span class="sxs-lookup"><span data-stu-id="0860c-139">[Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md)</span></span>  
   
--   [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
+-   [<span data-ttu-id="0860c-140">实现 Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="0860c-140">Implementing a Dispose Method</span></span>](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using 语句](../../../csharp/language-reference/keywords/using-statement.md)  
+-   [<span data-ttu-id="0860c-141">using 语句</span><span class="sxs-lookup"><span data-stu-id="0860c-141">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)  
   
-## <a name="example"></a>示例  
- 以下示例创建了三个类，并且这三个类构成了一个继承链。 类 `First` 是基类，`Second` 派生自 `First`，`Third` 派生自 `Second`。 这三个类都具有终结器。 在 `Main` 中，已创建派生程度最高的类的一个实例。 程序运行时，请注意，将按顺序（从派生程度最高到派生程度最低）自动调用这三个类的终结器。  
+## <a name="example"></a><span data-ttu-id="0860c-142">示例</span><span class="sxs-lookup"><span data-stu-id="0860c-142">Example</span></span>  
+ <span data-ttu-id="0860c-143">以下示例创建了三个类，并且这三个类构成了一个继承链。</span><span class="sxs-lookup"><span data-stu-id="0860c-143">The following example creates three classes that make a chain of inheritance.</span></span> <span data-ttu-id="0860c-144">类 `First` 是基类，`Second` 派生自 `First`，`Third` 派生自 `Second`。</span><span class="sxs-lookup"><span data-stu-id="0860c-144">The class `First` is the base class, `Second` is derived from `First`, and `Third` is derived from `Second`.</span></span> <span data-ttu-id="0860c-145">这三个类都具有终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-145">All three have finalizers.</span></span> <span data-ttu-id="0860c-146">在 `Main` 中，已创建派生程度最高的类的一个实例。</span><span class="sxs-lookup"><span data-stu-id="0860c-146">In `Main`, an instance of the most-derived class is created.</span></span> <span data-ttu-id="0860c-147">程序运行时，请注意，将按顺序（从派生程度最高到派生程度最低）自动调用这三个类的终结器。</span><span class="sxs-lookup"><span data-stu-id="0860c-147">When the program runs, notice that the finalizers for the three classes are called automatically, and in order, from the most-derived to the least-derived.</span></span>  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ <span data-ttu-id="0860c-148">[!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="0860c-148">[!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="0860c-149">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="0860c-149">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.IDisposable>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [垃圾回收](../../../standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="0860c-150">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0860c-150">See Also</span></span>  
+ <span data-ttu-id="0860c-151"><xref:System.IDisposable></span><span class="sxs-lookup"><span data-stu-id="0860c-151"><xref:System.IDisposable></span></span>   
+ <span data-ttu-id="0860c-152">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="0860c-152">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="0860c-153">[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md) </span><span class="sxs-lookup"><span data-stu-id="0860c-153">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md) </span></span>  
+ [<span data-ttu-id="0860c-154">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="0860c-154">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
 

@@ -1,1 +1,1 @@
-文件资源管理器
+<span data-ttu-id="0915a-101">文件资源管理器</span><span class="sxs-lookup"><span data-stu-id="0915a-101">File Explorer</span></span>

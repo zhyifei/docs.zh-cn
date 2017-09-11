@@ -33,124 +33,124 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
-SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
+# <a name="sqlmetalexe-code-generation-tool"></a><span data-ttu-id="34dc2-102">SqlMetal.exe（代码生成工具）</span><span class="sxs-lookup"><span data-stu-id="34dc2-102">SqlMetal.exe (Code Generation Tool)</span></span>
+<span data-ttu-id="34dc2-103">SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。</span><span class="sxs-lookup"><span data-stu-id="34dc2-103">The SqlMetal command-line tool generates code and mapping for the [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] component of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="34dc2-104">通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：</span><span class="sxs-lookup"><span data-stu-id="34dc2-104">By applying options that appear later in this topic, you can instruct SqlMetal to perform several different actions that include the following:</span></span>  
   
--   从数据库生成源代码和映射特性或映射文件。  
+-   <span data-ttu-id="34dc2-105">从数据库生成源代码和映射特性或映射文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-105">From a database, generate source code and mapping attributes or a mapping file.</span></span>  
   
--   从数据库生成供自定义使用的中间数据库标记语言 (.dbml) 文件。  
+-   <span data-ttu-id="34dc2-106">从数据库生成供自定义使用的中间数据库标记语言 (.dbml) 文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-106">From a database, generate an intermediate database markup language (.dbml) file for customization.</span></span>  
   
--   从 .dbml 文件生成代码和映射特性或映射文件。  
+-   <span data-ttu-id="34dc2-107">从 .dbml 文件生成代码和映射特性或映射文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-107">From a .dbml file, generate code and mapping attributes or a mapping file.</span></span>  
   
- 此工具会自动随 Visual Studio 一起安装。 默认情况下，此文件位于 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin 下。 如果没有安装 Visual Studio，也可以通过下载 [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225)获取 SQLMetal 文件。  
+ <span data-ttu-id="34dc2-108">此工具会自动随 Visual Studio 一起安装。</span><span class="sxs-lookup"><span data-stu-id="34dc2-108">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="34dc2-109">默认情况下，此文件位于 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin 下。</span><span class="sxs-lookup"><span data-stu-id="34dc2-109">By default, the file is located at `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin.</span></span> <span data-ttu-id="34dc2-110">如果没有安装 Visual Studio，也可以通过下载 [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225)获取 SQLMetal 文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-110">If you do not install Visual Studio, you can also get the SQLMetal file by downloading the [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225).</span></span>  
   
 > [!NOTE]
->  使用 Visual Studio 的开发人员还可以使用 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 生成实体类。 对于大型数据库，这种命令行方法具有很好的扩展性。 由于 SqlMetal 是一个命令行工具，因此可以在生成过程中使用它。  
+>  <span data-ttu-id="34dc2-111">使用 Visual Studio 的开发人员还可以使用 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 生成实体类。</span><span class="sxs-lookup"><span data-stu-id="34dc2-111">Developers who use Visual Studio can also use the [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] to generate entity classes.</span></span> <span data-ttu-id="34dc2-112">对于大型数据库，这种命令行方法具有很好的扩展性。</span><span class="sxs-lookup"><span data-stu-id="34dc2-112">The command-line approach scales well for large databases.</span></span> <span data-ttu-id="34dc2-113">由于 SqlMetal 是一个命令行工具，因此可以在生成过程中使用它。</span><span class="sxs-lookup"><span data-stu-id="34dc2-113">Because SqlMetal is a command-line tool, you can use it in a build process.</span></span>  
   
- 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示符处，键入以下内容：  
+ <span data-ttu-id="34dc2-114">若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="34dc2-114">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="34dc2-115">有关详细信息，请参阅[命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="34dc2-115">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="34dc2-116">语法</span><span class="sxs-lookup"><span data-stu-id="34dc2-116">Syntax</span></span>  
   
 ```  
 sqlmetal [options] [<input file>]  
 ```  
   
-## <a name="options"></a>选项  
- 要查看最新的选项列表，请在安装位置的命令提示符处键入 `sqlmetal /?` 。  
+## <a name="options"></a><span data-ttu-id="34dc2-117">选项</span><span class="sxs-lookup"><span data-stu-id="34dc2-117">Options</span></span>  
+ <span data-ttu-id="34dc2-118">要查看最新的选项列表，请在安装位置的命令提示符处键入 `sqlmetal /?` 。</span><span class="sxs-lookup"><span data-stu-id="34dc2-118">To view the most current option list, type `sqlmetal /?` at a command prompt from the installed location.</span></span>  
   
- **连接选项**  
+ <span data-ttu-id="34dc2-119">**连接选项**</span><span class="sxs-lookup"><span data-stu-id="34dc2-119">**Connection Options**</span></span>  
   
-|选项|描述|  
+|<span data-ttu-id="34dc2-120">选项</span><span class="sxs-lookup"><span data-stu-id="34dc2-120">Option</span></span>|<span data-ttu-id="34dc2-121">描述</span><span class="sxs-lookup"><span data-stu-id="34dc2-121">Description</span></span>|  
 |------------|-----------------|  
-|/server: \<name>|指定数据库服务器名称。|  
-|/database: \<name>|指定服务器上的数据库目录。|  
-|/user: \<name>|指定登录用户 ID。 默认值：使用 Windows 身份验证。|  
-|/password: \<password>|指定登录密码。 默认值：使用 Windows 身份验证。|  
-|/conn: \<connection string>|指定数据库连接字符串。 不能与 **/server**、 **/database**、 **/user**或 **/password** 选项一起使用。<br /><br /> 不要在连接字符串中包含文件名， 而应将文件名作为输入文件添加到命令行中。 例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
-|/timeout: \<seconds>|指定 SqlMetal 访问数据库时的超时值。 默认值：0（即没有时间限制）。|  
+|<span data-ttu-id="34dc2-122">/server: \<name></span><span class="sxs-lookup"><span data-stu-id="34dc2-122">**/server:** *\<name>*</span></span>|<span data-ttu-id="34dc2-123">指定数据库服务器名称。</span><span class="sxs-lookup"><span data-stu-id="34dc2-123">Specifies database server name.</span></span>|  
+|<span data-ttu-id="34dc2-124">/database: \<name></span><span class="sxs-lookup"><span data-stu-id="34dc2-124">**/database:** *\<name>*</span></span>|<span data-ttu-id="34dc2-125">指定服务器上的数据库目录。</span><span class="sxs-lookup"><span data-stu-id="34dc2-125">Specifies database catalog on server.</span></span>|  
+|<span data-ttu-id="34dc2-126">/user: \<name></span><span class="sxs-lookup"><span data-stu-id="34dc2-126">**/user:** *\<name>*</span></span>|<span data-ttu-id="34dc2-127">指定登录用户 ID。</span><span class="sxs-lookup"><span data-stu-id="34dc2-127">Specifies logon user id.</span></span> <span data-ttu-id="34dc2-128">默认值：使用 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="34dc2-128">Default value: Use Windows authentication.</span></span>|  
+|<span data-ttu-id="34dc2-129">/password: \<password></span><span class="sxs-lookup"><span data-stu-id="34dc2-129">**/password:** *\<password>*</span></span>|<span data-ttu-id="34dc2-130">指定登录密码。</span><span class="sxs-lookup"><span data-stu-id="34dc2-130">Specifies logon password.</span></span> <span data-ttu-id="34dc2-131">默认值：使用 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="34dc2-131">Default value: Use Windows authentication.</span></span>|  
+|<span data-ttu-id="34dc2-132">/conn: \<connection string></span><span class="sxs-lookup"><span data-stu-id="34dc2-132">**/conn:** *\<connection string>*</span></span>|<span data-ttu-id="34dc2-133">指定数据库连接字符串。</span><span class="sxs-lookup"><span data-stu-id="34dc2-133">Specifies database connection string.</span></span> <span data-ttu-id="34dc2-134">不能与 **/server**、 **/database**、 **/user**或 **/password** 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="34dc2-134">Cannot be used with **/server**, **/database**, **/user**, or **/password** options.</span></span><br /><br /> <span data-ttu-id="34dc2-135">不要在连接字符串中包含文件名，</span><span class="sxs-lookup"><span data-stu-id="34dc2-135">Do not include the file name in the connection string.</span></span> <span data-ttu-id="34dc2-136">而应将文件名作为输入文件添加到命令行中。</span><span class="sxs-lookup"><span data-stu-id="34dc2-136">Instead, add the file name to the command line as the input file.</span></span> <span data-ttu-id="34dc2-137">例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。</span><span class="sxs-lookup"><span data-stu-id="34dc2-137">For example, the following line specifies "c:\northwnd.mdf" as the input file: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.</span></span>|  
+|<span data-ttu-id="34dc2-138">/timeout: \<seconds></span><span class="sxs-lookup"><span data-stu-id="34dc2-138">**/timeout:** *\<seconds>*</span></span>|<span data-ttu-id="34dc2-139">指定 SqlMetal 访问数据库时的超时值。</span><span class="sxs-lookup"><span data-stu-id="34dc2-139">Specifies time-out value when SqlMetal accesses the database.</span></span> <span data-ttu-id="34dc2-140">默认值：0（即没有时间限制）。</span><span class="sxs-lookup"><span data-stu-id="34dc2-140">Default value: 0 (that is, no time limit).</span></span>|  
   
- **提取选项**  
+ <span data-ttu-id="34dc2-141">**提取选项**</span><span class="sxs-lookup"><span data-stu-id="34dc2-141">**Extraction options**</span></span>  
   
-|选项|描述|  
+|<span data-ttu-id="34dc2-142">选项</span><span class="sxs-lookup"><span data-stu-id="34dc2-142">Option</span></span>|<span data-ttu-id="34dc2-143">描述</span><span class="sxs-lookup"><span data-stu-id="34dc2-143">Description</span></span>|  
 |------------|-----------------|  
-|**/views**|提取数据库视图。|  
-|**/functions**|提取数据库函数。|  
-|**/sprocs**|提取存储过程。|  
+|<span data-ttu-id="34dc2-144">**/views**</span><span class="sxs-lookup"><span data-stu-id="34dc2-144">**/views**</span></span>|<span data-ttu-id="34dc2-145">提取数据库视图。</span><span class="sxs-lookup"><span data-stu-id="34dc2-145">Extracts database views.</span></span>|  
+|<span data-ttu-id="34dc2-146">**/functions**</span><span class="sxs-lookup"><span data-stu-id="34dc2-146">**/functions**</span></span>|<span data-ttu-id="34dc2-147">提取数据库函数。</span><span class="sxs-lookup"><span data-stu-id="34dc2-147">Extracts database functions.</span></span>|  
+|<span data-ttu-id="34dc2-148">**/sprocs**</span><span class="sxs-lookup"><span data-stu-id="34dc2-148">**/sprocs**</span></span>|<span data-ttu-id="34dc2-149">提取存储过程。</span><span class="sxs-lookup"><span data-stu-id="34dc2-149">Extracts stored procedures.</span></span>|  
   
- **输出选项**  
+ <span data-ttu-id="34dc2-150">**输出选项**</span><span class="sxs-lookup"><span data-stu-id="34dc2-150">**Output options**</span></span>  
   
-|选项|描述|  
+|<span data-ttu-id="34dc2-151">选项</span><span class="sxs-lookup"><span data-stu-id="34dc2-151">Option</span></span>|<span data-ttu-id="34dc2-152">描述</span><span class="sxs-lookup"><span data-stu-id="34dc2-152">Description</span></span>|  
 |------------|-----------------|  
-|**/dbml** *[:file]*|采用 .dbml 格式发送输出。 不能与 **/map** 选项一起使用。|  
-|**/code** *[:file]*|以源代码形式发送输出。 不能与 **/dbml** 选项一起使用。|  
-|**/map** *[:file]*|生成 XML 映射文件而不是特性。 不能与 **/dbml** 选项一起使用。|  
+|<span data-ttu-id="34dc2-153">**/dbml** *[:file]*</span><span class="sxs-lookup"><span data-stu-id="34dc2-153">**/dbml** *[:file]*</span></span>|<span data-ttu-id="34dc2-154">采用 .dbml 格式发送输出。</span><span class="sxs-lookup"><span data-stu-id="34dc2-154">Sends output as .dbml.</span></span> <span data-ttu-id="34dc2-155">不能与 **/map** 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="34dc2-155">Cannot be used with **/map** option.</span></span>|  
+|<span data-ttu-id="34dc2-156">**/code** *[:file]*</span><span class="sxs-lookup"><span data-stu-id="34dc2-156">**/code** *[:file]*</span></span>|<span data-ttu-id="34dc2-157">以源代码形式发送输出。</span><span class="sxs-lookup"><span data-stu-id="34dc2-157">Sends output as source code.</span></span> <span data-ttu-id="34dc2-158">不能与 **/dbml** 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="34dc2-158">Cannot be used with **/dbml** option.</span></span>|  
+|<span data-ttu-id="34dc2-159">**/map** *[:file]*</span><span class="sxs-lookup"><span data-stu-id="34dc2-159">**/map** *[:file]*</span></span>|<span data-ttu-id="34dc2-160">生成 XML 映射文件而不是特性。</span><span class="sxs-lookup"><span data-stu-id="34dc2-160">Generates an XML mapping file instead of attributes.</span></span> <span data-ttu-id="34dc2-161">不能与 **/dbml** 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="34dc2-161">Cannot be used with **/dbml** option.</span></span>|  
   
- **杂项**  
+ <span data-ttu-id="34dc2-162">**杂项**</span><span class="sxs-lookup"><span data-stu-id="34dc2-162">**Miscellaneous**</span></span>  
   
-|选项|描述|  
+|<span data-ttu-id="34dc2-163">选项</span><span class="sxs-lookup"><span data-stu-id="34dc2-163">Option</span></span>|<span data-ttu-id="34dc2-164">描述</span><span class="sxs-lookup"><span data-stu-id="34dc2-164">Description</span></span>|  
 |------------|-----------------|  
-|/language: \<language>|指定源代码语言。<br /><br /> 有效 \<language>：vb、csharp。<br /><br /> 默认值：从代码文件的扩展名派生。|  
-|/namespace: \<name>|为生成的代码指定命名空间。 默认值：无命名空间。|  
-|/context: \<type>|指定数据上下文类的名称。 默认值：从数据库名称派生。|  
-|/entitybase: \<type>|指定生成的代码中的实体类的基类。 默认值：实体没有基类。|  
-|**/pluralize**|自动为类和成员名称应用复数或单数形式。<br /><br /> 此选项仅在美国可用。英文版。|  
-|/serialization: \<option>|生成可序列化类。<br /><br /> 有效 \<option>：None、Unidirectional。 默认值：None。<br /><br /> 有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|<span data-ttu-id="34dc2-165">/language: \<language></span><span class="sxs-lookup"><span data-stu-id="34dc2-165">**/language:** *\<language>*</span></span>|<span data-ttu-id="34dc2-166">指定源代码语言。</span><span class="sxs-lookup"><span data-stu-id="34dc2-166">Specifies source code language.</span></span><br /><br /> <span data-ttu-id="34dc2-167">有效 \<language>：vb、csharp。</span><span class="sxs-lookup"><span data-stu-id="34dc2-167">Valid *\<language>*: vb, csharp.</span></span><br /><br /> <span data-ttu-id="34dc2-168">默认值：从代码文件的扩展名派生。</span><span class="sxs-lookup"><span data-stu-id="34dc2-168">Default value: Derived from extension on code file name.</span></span>|  
+|<span data-ttu-id="34dc2-169">/namespace: \<name></span><span class="sxs-lookup"><span data-stu-id="34dc2-169">**/namespace:** *\<name>*</span></span>|<span data-ttu-id="34dc2-170">为生成的代码指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="34dc2-170">Specifies namespace of the generated code.</span></span> <span data-ttu-id="34dc2-171">默认值：无命名空间。</span><span class="sxs-lookup"><span data-stu-id="34dc2-171">Default value: no namespace.</span></span>|  
+|<span data-ttu-id="34dc2-172">/context: \<type></span><span class="sxs-lookup"><span data-stu-id="34dc2-172">**/context:** *\<type>*</span></span>|<span data-ttu-id="34dc2-173">指定数据上下文类的名称。</span><span class="sxs-lookup"><span data-stu-id="34dc2-173">Specifies name of data context class.</span></span> <span data-ttu-id="34dc2-174">默认值：从数据库名称派生。</span><span class="sxs-lookup"><span data-stu-id="34dc2-174">Default value: Derived from database name.</span></span>|  
+|<span data-ttu-id="34dc2-175">/entitybase: \<type></span><span class="sxs-lookup"><span data-stu-id="34dc2-175">**/entitybase:** *\<type>*</span></span>|<span data-ttu-id="34dc2-176">指定生成的代码中的实体类的基类。</span><span class="sxs-lookup"><span data-stu-id="34dc2-176">Specifies the base class of the entity classes in the generated code.</span></span> <span data-ttu-id="34dc2-177">默认值：实体没有基类。</span><span class="sxs-lookup"><span data-stu-id="34dc2-177">Default value: Entities have no base class.</span></span>|  
+|<span data-ttu-id="34dc2-178">**/pluralize**</span><span class="sxs-lookup"><span data-stu-id="34dc2-178">**/pluralize**</span></span>|<span data-ttu-id="34dc2-179">自动为类和成员名称应用复数或单数形式。</span><span class="sxs-lookup"><span data-stu-id="34dc2-179">Automatically pluralizes or singularizes class and member names.</span></span><br /><br /> <span data-ttu-id="34dc2-180">此选项仅在美国可用。英文版。</span><span class="sxs-lookup"><span data-stu-id="34dc2-180">This option is available only in the U.S. English version.</span></span>|  
+|<span data-ttu-id="34dc2-181">/serialization: \<option></span><span class="sxs-lookup"><span data-stu-id="34dc2-181">**/serialization:** *\<option>*</span></span>|<span data-ttu-id="34dc2-182">生成可序列化类。</span><span class="sxs-lookup"><span data-stu-id="34dc2-182">Generates serializable classes.</span></span><br /><br /> <span data-ttu-id="34dc2-183">有效 \<option>：None、Unidirectional。</span><span class="sxs-lookup"><span data-stu-id="34dc2-183">Valid *\<option>*: None, Unidirectional.</span></span> <span data-ttu-id="34dc2-184">默认值：None。</span><span class="sxs-lookup"><span data-stu-id="34dc2-184">Default value: None.</span></span><br /><br /> <span data-ttu-id="34dc2-185">有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="34dc2-185">For more information, see [Serialization](../../../docs/framework/data/adonet/sql/linq/serialization.md).</span></span>|  
   
- **输入文件**  
+ <span data-ttu-id="34dc2-186">**输入文件**</span><span class="sxs-lookup"><span data-stu-id="34dc2-186">**Input File**</span></span>  
   
-|选项|描述|  
+|<span data-ttu-id="34dc2-187">选项</span><span class="sxs-lookup"><span data-stu-id="34dc2-187">Option</span></span>|<span data-ttu-id="34dc2-188">描述</span><span class="sxs-lookup"><span data-stu-id="34dc2-188">Description</span></span>|  
 |------------|-----------------|  
-|\<input file>|指定 SQL Server Express .mdf 文件、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 文件或 .dbml 中间文件。|  
+|<span data-ttu-id="34dc2-189">\<input file></span><span class="sxs-lookup"><span data-stu-id="34dc2-189">**\<input file>**</span></span>|<span data-ttu-id="34dc2-190">指定 SQL Server Express .mdf 文件、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 文件或 .dbml 中间文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-190">Specifies a SQL Server Express .mdf file, a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf file, or a .dbml intermediate file.</span></span>|  
   
-## <a name="remarks"></a>备注  
- SqlMetal 功能实际涉及两个步骤：  
+## <a name="remarks"></a><span data-ttu-id="34dc2-191">备注</span><span class="sxs-lookup"><span data-stu-id="34dc2-191">Remarks</span></span>  
+ <span data-ttu-id="34dc2-192">SqlMetal 功能实际涉及两个步骤：</span><span class="sxs-lookup"><span data-stu-id="34dc2-192">SqlMetal functionality actually involves two steps:</span></span>  
   
--   将数据库的元数据提取到一个 .dbml 文件中。  
+-   <span data-ttu-id="34dc2-193">将数据库的元数据提取到一个 .dbml 文件中。</span><span class="sxs-lookup"><span data-stu-id="34dc2-193">Extracting the metadata of the database into a .dbml file.</span></span>  
   
--   生成一个代码输出文件。  
+-   <span data-ttu-id="34dc2-194">生成一个代码输出文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-194">Generating a code output file.</span></span>  
   
-     通过使用适当的命令行选项，可以生成 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或 C# 源代码，也可以生成 XML 映射文件。  
+     <span data-ttu-id="34dc2-195">通过使用适当的命令行选项，可以生成 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或 C# 源代码，也可以生成 XML 映射文件。</span><span class="sxs-lookup"><span data-stu-id="34dc2-195">By using the appropriate command-line options, you can produce [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or C# source code, or you can produce an XML mapping file.</span></span>  
   
- 若要从 .mdf 文件中提取元数据，必须在所有其他选项后指定 .mdf 文件的名称。  
+ <span data-ttu-id="34dc2-196">若要从 .mdf 文件中提取元数据，必须在所有其他选项后指定 .mdf 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="34dc2-196">To extract the metadata from an .mdf file, you must specify the name of the .mdf file after all other options.</span></span>  
   
- 如果没有指定 **/server** ，则假定为 **localhost/sqlexpress** 。  
+ <span data-ttu-id="34dc2-197">如果没有指定 **/server** ，则假定为 **localhost/sqlexpress** 。</span><span class="sxs-lookup"><span data-stu-id="34dc2-197">If no **/server** is specified, **localhost/sqlexpress** is assumed.</span></span>  
   
- 如果存在下列一种或多种情况，[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 将引发异常：  
+ <span data-ttu-id="34dc2-198">如果存在下列一种或多种情况，[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 将引发异常：</span><span class="sxs-lookup"><span data-stu-id="34dc2-198">[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] throws an exception if one or more of the following conditions are true:</span></span>  
   
--   SqlMetal 尝试提取进行自我调用的存储过程。  
+-   <span data-ttu-id="34dc2-199">SqlMetal 尝试提取进行自我调用的存储过程。</span><span class="sxs-lookup"><span data-stu-id="34dc2-199">SqlMetal tries to extract a stored procedure that calls itself.</span></span>  
   
--   存储过程、函数或视图的嵌套级别超过 32。  
+-   <span data-ttu-id="34dc2-200">存储过程、函数或视图的嵌套级别超过 32。</span><span class="sxs-lookup"><span data-stu-id="34dc2-200">The nesting level of a stored procedure, function, or view exceeds 32.</span></span>  
   
-     SqlMetal 将捕获此异常并将其报告为警告。  
+     <span data-ttu-id="34dc2-201">SqlMetal 将捕获此异常并将其报告为警告。</span><span class="sxs-lookup"><span data-stu-id="34dc2-201">SqlMetal catches this exception and reports it as a warning.</span></span>  
   
- 若要指定一个输入文件名，请将该名称作为输入文件添加到命令行。 不支持在连接字符串中包含文件名（使用 **/conn** 选项）。  
+ <span data-ttu-id="34dc2-202">若要指定一个输入文件名，请将该名称作为输入文件添加到命令行。</span><span class="sxs-lookup"><span data-stu-id="34dc2-202">To specify an input file name, add the name to the command line as the input file.</span></span> <span data-ttu-id="34dc2-203">不支持在连接字符串中包含文件名（使用 **/conn** 选项）。</span><span class="sxs-lookup"><span data-stu-id="34dc2-203">Including the file name in the connection string (using the **/conn** option) is not supported.</span></span>  
   
-## <a name="examples"></a>示例  
- 生成一个包含提取的 SQL 元数据的 .dbml 文件：  
+## <a name="examples"></a><span data-ttu-id="34dc2-204">示例</span><span class="sxs-lookup"><span data-stu-id="34dc2-204">Examples</span></span>  
+ <span data-ttu-id="34dc2-205">生成一个包含提取的 SQL 元数据的 .dbml 文件：</span><span class="sxs-lookup"><span data-stu-id="34dc2-205">Generate a .dbml file that includes extracted SQL metadata:</span></span>  
   
- **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  
+ <span data-ttu-id="34dc2-206">**sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**</span><span class="sxs-lookup"><span data-stu-id="34dc2-206">**sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**</span></span>  
   
- 使用 SQL Server Express 生成一个包含从 .mdf 文件中提取的 SQL 元数据的 .dbml 文件：  
+ <span data-ttu-id="34dc2-207">使用 SQL Server Express 生成一个包含从 .mdf 文件中提取的 SQL 元数据的 .dbml 文件：</span><span class="sxs-lookup"><span data-stu-id="34dc2-207">Generate a .dbml file that includes extracted SQL metadata from an .mdf file by using SQL Server Express:</span></span>  
   
- **sqlmetal /dbml:mymeta.dbml mydbfile.mdf**  
+ <span data-ttu-id="34dc2-208">**sqlmetal /dbml:mymeta.dbml mydbfile.mdf**</span><span class="sxs-lookup"><span data-stu-id="34dc2-208">**sqlmetal /dbml:mymeta.dbml mydbfile.mdf**</span></span>  
   
- 生成一个包含从 SQL Server Express 中提取的 SQL 元数据的 .dbml 文件：  
+ <span data-ttu-id="34dc2-209">生成一个包含从 SQL Server Express 中提取的 SQL 元数据的 .dbml 文件：</span><span class="sxs-lookup"><span data-stu-id="34dc2-209">Generate a .dbml file that includes extracted SQL metadata from SQL Server Express:</span></span>  
   
- **sqlmetal /server:.\sqlexpress /dbml:mymeta.dbml /database:northwind**  
+ <span data-ttu-id="34dc2-210">**sqlmetal /server:.\sqlexpress /dbml:mymeta.dbml /database:northwind**</span><span class="sxs-lookup"><span data-stu-id="34dc2-210">**sqlmetal /server:.\sqlexpress /dbml:mymeta.dbml /database:northwind**</span></span>  
   
- 从 .dbml 元数据文件生成源代码：  
+ <span data-ttu-id="34dc2-211">从 .dbml 元数据文件生成源代码：</span><span class="sxs-lookup"><span data-stu-id="34dc2-211">Generate source code from a .dbml metadata file:</span></span>  
   
- **sqlmetal /namespace:nwind /code:nwind.cs /language:csharp mymetal.dbml**  
+ <span data-ttu-id="34dc2-212">**sqlmetal /namespace:nwind /code:nwind.cs /language:csharp mymetal.dbml**</span><span class="sxs-lookup"><span data-stu-id="34dc2-212">**sqlmetal /namespace:nwind /code:nwind.cs /language:csharp mymetal.dbml**</span></span>  
   
- 直接从 SQL 元数据生成源代码：  
+ <span data-ttu-id="34dc2-213">直接从 SQL 元数据生成源代码：</span><span class="sxs-lookup"><span data-stu-id="34dc2-213">Generate source code from SQL metadata directly:</span></span>  
   
- **sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
+ <span data-ttu-id="34dc2-214">**sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**</span><span class="sxs-lookup"><span data-stu-id="34dc2-214">**sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**</span></span>  
   
 > [!NOTE]
->  如果对 Northwind 示例数据库应用 **/pluralize** 选项，请注意以下行为。 如果 SqlMetal 为表创建了行类型的名称，表名将采用单数形式。 如果它为表创建了 <xref:System.Data.Linq.DataContext> 属性，则表名将采用复数形式。 巧合的是，Northwind 示例数据库中的表名已采用复数形式。 因此，你将看不到这种效果。 尽管数据库表普遍命名为单数形式，但在 .NET 中，将集合命名为复数形式也是一种常见的做法。  
+>  <span data-ttu-id="34dc2-215">如果对 Northwind 示例数据库应用 **/pluralize** 选项，请注意以下行为。</span><span class="sxs-lookup"><span data-stu-id="34dc2-215">When you use the **/pluralize** option with the Northwind sample database, note the following behavior.</span></span> <span data-ttu-id="34dc2-216">如果 SqlMetal 为表创建了行类型的名称，表名将采用单数形式。</span><span class="sxs-lookup"><span data-stu-id="34dc2-216">When SqlMetal makes row-type names for tables, the table names are singular.</span></span> <span data-ttu-id="34dc2-217">如果它为表创建了 <xref:System.Data.Linq.DataContext> 属性，则表名将采用复数形式。</span><span class="sxs-lookup"><span data-stu-id="34dc2-217">When it makes <xref:System.Data.Linq.DataContext> properties for tables, the table names are plural.</span></span> <span data-ttu-id="34dc2-218">巧合的是，Northwind 示例数据库中的表名已采用复数形式。</span><span class="sxs-lookup"><span data-stu-id="34dc2-218">Coincidentally, the tables in the Northwind sample database are already plural.</span></span> <span data-ttu-id="34dc2-219">因此，你将看不到这种效果。</span><span class="sxs-lookup"><span data-stu-id="34dc2-219">Therefore, you do not see that part working.</span></span> <span data-ttu-id="34dc2-220">尽管数据库表普遍命名为单数形式，但在 .NET 中，将集合命名为复数形式也是一种常见的做法。</span><span class="sxs-lookup"><span data-stu-id="34dc2-220">Although it is common practice to name database tables singular, it is also a common practice in .NET to name collections plural.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
- [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
- [外部映射](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+## <a name="see-also"></a><span data-ttu-id="34dc2-221">另请参阅</span><span class="sxs-lookup"><span data-stu-id="34dc2-221">See Also</span></span>  
+ <span data-ttu-id="34dc2-222">[如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md) </span><span class="sxs-lookup"><span data-stu-id="34dc2-222">[How to: Generate the Object Model in Visual Basic or C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md) </span></span>  
+ <span data-ttu-id="34dc2-223">[LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md) </span><span class="sxs-lookup"><span data-stu-id="34dc2-223">[Code Generation in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md) </span></span>  
+ [<span data-ttu-id="34dc2-224">外部映射</span><span class="sxs-lookup"><span data-stu-id="34dc2-224">External Mapping</span></span>](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 

@@ -18,19 +18,19 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="query-a-collection-of-objects"></a>查询对象的集合
-此示例演示如何对一系列 `Student` 对象执行简单查询。 每个 `Student` 对象均包含一些关于学生的基本信息和表示学生在四门考试中的分数的列表。  
+# <a name="query-a-collection-of-objects"></a><span data-ttu-id="66284-104">查询对象的集合</span><span class="sxs-lookup"><span data-stu-id="66284-104">Query a collection of objects</span></span>
+<span data-ttu-id="66284-105">此示例演示如何对一系列 `Student` 对象执行简单查询。</span><span class="sxs-lookup"><span data-stu-id="66284-105">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="66284-106">每个 `Student` 对象均包含一些关于学生的基本信息和表示学生在四门考试中的分数的列表。</span><span class="sxs-lookup"><span data-stu-id="66284-106">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  
   
- 该应用程序充当本部分中使用相同 `students` 数据源的许多其他示例的框架。  
+ <span data-ttu-id="66284-107">该应用程序充当本部分中使用相同 `students` 数据源的许多其他示例的框架。</span><span class="sxs-lookup"><span data-stu-id="66284-107">This application serves as the framework for many other examples in this section that use the same `students` data source.</span></span>  
   
-## <a name="example"></a>示例  
- 以下查询将返回在第一堂考试中得分为 90 或更高的学生。  
+## <a name="example"></a><span data-ttu-id="66284-108">示例</span><span class="sxs-lookup"><span data-stu-id="66284-108">Example</span></span>  
+ <span data-ttu-id="66284-109">以下查询将返回在第一堂考试中得分为 90 或更高的学生。</span><span class="sxs-lookup"><span data-stu-id="66284-109">The following query returns the students who received a score of 90 or greater on their first exam.</span></span>  
   
- [!code-cs[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-query-a-collection-of-objects_1.cs)]  
+ <span data-ttu-id="66284-110">[!code-cs[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-query-a-collection-of-objects_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="66284-110">[!code-cs[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-query-a-collection-of-objects_1.cs)]</span></span>  
   
- 该查询有意简单，以使你可以进行实验。 例如，你可以在 `where` 子句中尝试其他条件或使用 `orderby` 子句对结果进行排序。  
+ <span data-ttu-id="66284-111">该查询有意简单，以使你可以进行实验。</span><span class="sxs-lookup"><span data-stu-id="66284-111">This query is intentionally simple to enable you to experiment.</span></span> <span data-ttu-id="66284-112">例如，你可以在 `where` 子句中尝试其他条件或使用 `orderby` 子句对结果进行排序。</span><span class="sxs-lookup"><span data-stu-id="66284-112">For example, you can try more conditions in the `where` clause, or use an `orderby` clause to sort the results.</span></span>  
   
 
-## <a name="see-also"></a>请参阅  
- [LINQ 查询表达式](index.md)
+## <a name="see-also"></a><span data-ttu-id="66284-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="66284-113">See also</span></span>  
+ [<span data-ttu-id="66284-114">LINQ 查询表达式</span><span class="sxs-lookup"><span data-stu-id="66284-114">LINQ Query Expressions</span></span>](index.md)
 

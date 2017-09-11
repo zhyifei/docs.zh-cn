@@ -21,15 +21,15 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>如何：查找命名空间中的元素 (XPath-LINQ to XML) (C#)
-XPath 表达式可以在特定命名空间中查找节点。 XPath 表达式使用命名空间前缀来指定命名空间。 若要分析包含命名空间前缀的 XPath 表达式，必须向实现 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法传递一个对象。 本示例使用 <xref:System.Xml.XmlNamespaceManager>。  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="e8ff6-102">如何：查找命名空间中的元素 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e8ff6-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="e8ff6-103">XPath 表达式可以在特定命名空间中查找节点。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="e8ff6-104">XPath 表达式使用命名空间前缀来指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="e8ff6-105">若要分析包含命名空间前缀的 XPath 表达式，必须向实现 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法传递一个对象。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="e8ff6-106">本示例使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- XPath 表达式为：  
+ <span data-ttu-id="e8ff6-107">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="e8ff6-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a>示例  
- 下面的示例读取包含两个命名空间的 XML 树。 它使用 <xref:System.Xml.XmlReader> 来读取 XML 文档。 然后获取 <xref:System.Xml.XmlNameTable> 中的 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlNamespaceManager> 中的 <xref:System.Xml.XmlNameTable>。 示例在选择元素时使用 <xref:System.Xml.XmlNamespaceManager>。  
+## <a name="example"></a><span data-ttu-id="e8ff6-108">示例</span><span class="sxs-lookup"><span data-stu-id="e8ff6-108">Example</span></span>  
+ <span data-ttu-id="e8ff6-109">下面的示例读取包含两个命名空间的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="e8ff6-110">它使用 <xref:System.Xml.XmlReader> 来读取 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="e8ff6-111">然后获取 <xref:System.Xml.XmlNameTable> 中的 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlNamespaceManager> 中的 <xref:System.Xml.XmlNameTable>。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="e8ff6-112">示例在选择元素时使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="e8ff6-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -51,7 +51,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="e8ff6-113">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="e8ff6-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -86,6 +86,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="e8ff6-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8ff6-114">See Also</span></span>  
+ [<span data-ttu-id="e8ff6-115">针对 XPath 用户的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="e8ff6-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

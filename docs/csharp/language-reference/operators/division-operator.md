@@ -37,19 +37,19 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>/ 运算符（C# 参考）
-除法运算符 (`/`) 将其第一操作数除以第二操作数。 所有数值类型都具有预定义的除法运算符。  
+# <a name="-operator-c-reference"></a><span data-ttu-id="9c657-102">/ 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="9c657-102">/ Operator (C# Reference)</span></span>
+<span data-ttu-id="9c657-103">除法运算符 (`/`) 将其第一操作数除以第二操作数。</span><span class="sxs-lookup"><span data-stu-id="9c657-103">The division operator (`/`) divides its first operand by its second operand.</span></span> <span data-ttu-id="9c657-104">所有数值类型都具有预定义的除法运算符。</span><span class="sxs-lookup"><span data-stu-id="9c657-104">All numeric types have predefined division operators.</span></span>  
   
-## <a name="remarks"></a>备注  
- 用户定义的类型可以重载 `/` 运算符（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。 重载 `/` 运算符将隐式地重载 [/= operator](division-assignment-operator.md)。  
+## <a name="remarks"></a><span data-ttu-id="9c657-105">备注</span><span class="sxs-lookup"><span data-stu-id="9c657-105">Remarks</span></span>  
+ <span data-ttu-id="9c657-106">用户定义的类型可以重载 `/` 运算符（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="9c657-106">User-defined types can overload the `/` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="9c657-107">重载 `/` 运算符将隐式地重载 [/= operator](division-assignment-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="9c657-107">An overload of the `/` operator implicitly overloads the [/= operator](division-assignment-operator.md).</span></span>  
   
- 两个整数相除，其结果始终为整数。 例如，7 除以 3 得 2。 要确定 7 除以 3 的余数，请使用余数运算符 ([%](../../../csharp/language-reference/operators/modulus-operator.md))。 要获得有理数或分数形式的商，请将被除数或除数设为类型 `float` 或类型 `double`。 如果通过将数字置于小数点右侧的方式以十进制表示被除数或除数，则可以隐式地分配类型，如以下示例所示。  
+ <span data-ttu-id="9c657-108">两个整数相除，其结果始终为整数。</span><span class="sxs-lookup"><span data-stu-id="9c657-108">When you divide two integers, the result is always an integer.</span></span> <span data-ttu-id="9c657-109">例如，7 除以 3 得 2。</span><span class="sxs-lookup"><span data-stu-id="9c657-109">For example, the result of 7 / 3 is 2.</span></span> <span data-ttu-id="9c657-110">要确定 7 除以 3 的余数，请使用余数运算符 ([%](../../../csharp/language-reference/operators/modulus-operator.md))。</span><span class="sxs-lookup"><span data-stu-id="9c657-110">To determine the remainder of 7 / 3, use the remainder operator ([%](../../../csharp/language-reference/operators/modulus-operator.md)).</span></span> <span data-ttu-id="9c657-111">要获得有理数或分数形式的商，请将被除数或除数设为类型 `float` 或类型 `double`。</span><span class="sxs-lookup"><span data-stu-id="9c657-111">To obtain a quotient as a rational number or fraction, give the dividend or divisor type `float` or type `double`.</span></span> <span data-ttu-id="9c657-112">如果通过将数字置于小数点右侧的方式以十进制表示被除数或除数，则可以隐式地分配类型，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="9c657-112">You can assign the type implicitly if you express the dividend or divisor as a decimal by putting a digit to the right side of the decimal point, as the following example shows.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="9c657-113">示例</span><span class="sxs-lookup"><span data-stu-id="9c657-113">Example</span></span>  
+ <span data-ttu-id="9c657-114">[!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="9c657-114">[!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="9c657-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9c657-115">See Also</span></span>  
+ <span data-ttu-id="9c657-116">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9c657-116">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9c657-117">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9c657-117">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="9c657-118">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="9c657-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

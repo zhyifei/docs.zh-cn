@@ -21,11 +21,11 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-eventsourcewriteevent-method-calls"></a>迁移：EventSource.WriteEvent 方法调用
-[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 强制在从 <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> 派生的类中的 ETW 事件方法与其基类的 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法之间实施协定。 ETW 事件方法必须向 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法传递事件 ID，后跟传递给该事件方法的相同参数。  
+# <a name="mitigation-eventsourcewriteevent-method-calls"></a><span data-ttu-id="03ebe-102">迁移：EventSource.WriteEvent 方法调用</span><span class="sxs-lookup"><span data-stu-id="03ebe-102">Mitigation: EventSource.WriteEvent Method Calls</span></span>
+<span data-ttu-id="03ebe-103">[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 强制在从 <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> 派生的类中的 ETW 事件方法与其基类的 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法之间实施协定。</span><span class="sxs-lookup"><span data-stu-id="03ebe-103">The [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] enforces a contract between an ETW event method in a class that is derived from <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> and  the <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method of its base class.</span></span> <span data-ttu-id="03ebe-104">ETW 事件方法必须向 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法传递事件 ID，后跟传递给该事件方法的相同参数。</span><span class="sxs-lookup"><span data-stu-id="03ebe-104">The ETW event method must pass the <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method the event ID followed by the same arguments that were passed to the event method.</span></span>  
   
-## <a name="impact"></a>影响  
- 按以下方式定义的 ETW 事件方法会使协定中断：  
+## <a name="impact"></a><span data-ttu-id="03ebe-105">影响</span><span class="sxs-lookup"><span data-stu-id="03ebe-105">Impact</span></span>  
+ <span data-ttu-id="03ebe-106">按以下方式定义的 ETW 事件方法会使协定中断：</span><span class="sxs-lookup"><span data-stu-id="03ebe-106">An ETW event method defined in the following way breaks the contract:</span></span>  
   
 ```  
 [Event(2, Level = EventLevel.Informational)]  
@@ -35,9 +35,9 @@ public void Info2(string message)
 }  
 ```  
   
- 如果 <xref:System.IndexOutOfRangeException> 对象正在读取 <xref:System.Diagnostics.Tracing.EventListener> 数据，则违反此协定时，会引发 <xref:System.Diagnostics.Tracing.EventSource> 异常。  
+ <span data-ttu-id="03ebe-107">如果 <xref:System.IndexOutOfRangeException> 对象正在读取 <xref:System.Diagnostics.Tracing.EventListener> 数据，则违反此协定时，会引发 <xref:System.Diagnostics.Tracing.EventSource> 异常。</span><span class="sxs-lookup"><span data-stu-id="03ebe-107">When this contract is violated, an <xref:System.IndexOutOfRangeException> exception is thrown at run time if an <xref:System.Diagnostics.Tracing.EventListener> object reads <xref:System.Diagnostics.Tracing.EventSource> data in process.</span></span>  
   
- 此 ETW 事件方法的定义应遵循以下模式：  
+ <span data-ttu-id="03ebe-108">此 ETW 事件方法的定义应遵循以下模式：</span><span class="sxs-lookup"><span data-stu-id="03ebe-108">The definition for this ETW event method should follow this pattern:</span></span>  
   
 ```  
 [Event(2, Level = EventLevel.Informational)]  
@@ -47,10 +47,10 @@ public void Info2(string message)
 }  
 ```  
   
-## <a name="mitigation"></a>缓解操作  
- 必须修改现有代码以符合所需模式。  
+## <a name="mitigation"></a><span data-ttu-id="03ebe-109">缓解操作</span><span class="sxs-lookup"><span data-stu-id="03ebe-109">Mitigation</span></span>  
+ <span data-ttu-id="03ebe-110">必须修改现有代码以符合所需模式。</span><span class="sxs-lookup"><span data-stu-id="03ebe-110">You must modify existing code to conform to the required pattern.</span></span>  
   
- 可以通过定义两个方法来调用 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法，来最大程度减少必须更改的代码量，如下所示：  
+ <span data-ttu-id="03ebe-111">可以通过定义两个方法来调用 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法，来最大程度减少必须更改的代码量，如下所示：</span><span class="sxs-lookup"><span data-stu-id="03ebe-111">You can minimize the amount of code that you have to change by defining two methods for calling the <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method, as follows:</span></span>  
   
 ```  
 [NonEvent]  
@@ -65,6 +65,6 @@ public void Info2Internal(string message, string prefix)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+## <a name="see-also"></a><span data-ttu-id="03ebe-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="03ebe-112">See Also</span></span>  
+ [<span data-ttu-id="03ebe-113">运行时更改</span><span class="sxs-lookup"><span data-stu-id="03ebe-113">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
 

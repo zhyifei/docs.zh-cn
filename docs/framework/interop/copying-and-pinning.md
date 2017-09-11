@@ -1,94 +1,100 @@
 ---
-title: "复制和锁定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "复制, 互操作封送处理"
-  - "互操作封送处理, 复制"
-  - "互操作封送处理, 钉住"
-  - "钉住, 互操作封送处理"
+title: "复制和锁定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- pinning, interop marshaling
+- copying, interop marshaling
+- interop marshaling, copying
+- interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 复制和锁定
-封送数据时，Interop 封送拆收器可以复制或锁定正在封送的数据。  复制数据时将一个内存位置中的数据的副本放置到另一个内存位置中。  下面的插图显示从托管内存向非托管内存复制值类型和复制通过引用传递的类型之间的差异。  
+# <a name="copying-and-pinning"></a><span data-ttu-id="20f9c-102">复制和锁定</span><span class="sxs-lookup"><span data-stu-id="20f9c-102">Copying and Pinning</span></span>
+<span data-ttu-id="20f9c-103">封送数据时，互操作封送拆收器可以复制或锁定正在封送的数据。</span><span class="sxs-lookup"><span data-stu-id="20f9c-103">When marshaling data, the interop marshaler can copy or pin the data being marshaled.</span></span> <span data-ttu-id="20f9c-104">复制数据会将数据副本放置从一个内存位置放到另一个内存位置。</span><span class="sxs-lookup"><span data-stu-id="20f9c-104">Copying the data places a copy of data from one memory location in another memory location.</span></span> <span data-ttu-id="20f9c-105">下图显示从托管内存向非托管内存复制值类型和复制按引用传递的类型之间的差异。</span><span class="sxs-lookup"><span data-stu-id="20f9c-105">The following illustration shows the differences between copying a value type and copying a type passed by reference from managed to unmanaged memory.</span></span>  
   
- ![按值和按引用传递的值类型](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
-通过值传递的值类型和通过引用传递的值类型  
+ <span data-ttu-id="20f9c-106">![按值和按引用传递的值类型](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")</span><span class="sxs-lookup"><span data-stu-id="20f9c-106">![Value types passed by value and by reference](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")</span></span>  
+<span data-ttu-id="20f9c-107">按值和按引用传递的值类型</span><span class="sxs-lookup"><span data-stu-id="20f9c-107">Value types passed by value and by reference</span></span>  
   
- 通过值传递的方法参数被作为堆栈上的值封送到非托管代码。  复制过程是直接的。  通过引用传递的参数作为堆栈上的指针传递。  引用类型也通过值和通过引用传递。  如下面的插图所示，通过值传递的引用类型被复制或锁定。  
+ <span data-ttu-id="20f9c-108">按值传递的方法参数作为堆栈上的值封送到非托管代码。</span><span class="sxs-lookup"><span data-stu-id="20f9c-108">Method arguments passed by value are marshaled to unmanaged code as values on the stack.</span></span> <span data-ttu-id="20f9c-109">直接进行复制。</span><span class="sxs-lookup"><span data-stu-id="20f9c-109">The copying process is direct.</span></span> <span data-ttu-id="20f9c-110">按引用传递的参数作为堆栈上的指针传递。</span><span class="sxs-lookup"><span data-stu-id="20f9c-110">Arguments passed by reference are passed as pointers on the stack.</span></span> <span data-ttu-id="20f9c-111">引用类型也按值和按引用传递。</span><span class="sxs-lookup"><span data-stu-id="20f9c-111">Reference types are also passed by value and by reference.</span></span> <span data-ttu-id="20f9c-112">如下图所示，复制或锁定按值传递的引用类型。</span><span class="sxs-lookup"><span data-stu-id="20f9c-112">As the following illustration shows, reference types passed by value are either copied or pinned.</span></span>  
   
- ![COM 互操作](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
-通过值传递的引用类型和通过引用传递的引用类型  
+ <span data-ttu-id="20f9c-113">![COM 互操作](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")</span><span class="sxs-lookup"><span data-stu-id="20f9c-113">![COM interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")</span></span>  
+<span data-ttu-id="20f9c-114">按值和按引用传递的引用类型</span><span class="sxs-lookup"><span data-stu-id="20f9c-114">Reference types passed by value and by reference</span></span>  
   
- 锁定操作将数据暂时锁定在其当前内存位置中，从而阻止公共语言运行时的垃圾回收器将其重定位。  封送拆收器锁定数据以减小复制的系统开销并提高性能。  数据的类型确定在封送处理过程中它是被复制还是被锁定。  锁定操作在封送诸如 <xref:System.String> 之类的对象的过程中自动执行。然而，您也可以使用 <xref:System.Runtime.InteropServices.GCHandle> 类手动锁定内存。  
+ <span data-ttu-id="20f9c-115">锁定操作将数据暂时锁定在其当前内存位置，从而阻止公共语言运行时的垃圾回收器将其重定位。</span><span class="sxs-lookup"><span data-stu-id="20f9c-115">Pinning temporarily locks the data in its current memory location, thus keeping it from being relocated by the common language runtime's garbage collector.</span></span> <span data-ttu-id="20f9c-116">封送拆收器锁定数据可减小复制的开销并提高性能。</span><span class="sxs-lookup"><span data-stu-id="20f9c-116">The marshaler pins data to reduce the overhead of copying and enhance performance.</span></span> <span data-ttu-id="20f9c-117">数据的类型确定在封送处理过程中是复制数据，还是锁定数据。</span><span class="sxs-lookup"><span data-stu-id="20f9c-117">The type of the data determines whether it is copied or pinned during the marshaling process.</span></span>  <span data-ttu-id="20f9c-118">在封送 <xref:System.String> 等对象的过程中自动执行锁定操作；然而，也可使用 <xref:System.Runtime.InteropServices.GCHandle> 类手动锁定内存。</span><span class="sxs-lookup"><span data-stu-id="20f9c-118">Pinning is automatically performed during marshaling for objects such as <xref:System.String>, however you can also manually pin memory using the <xref:System.Runtime.InteropServices.GCHandle> class.</span></span>  
   
-## 可直接复制到本机结构中的格式化类  
- [可直接复制到本机结构中的](../../../docs/framework/interop/blittable-and-non-blittable-types.md)格式化类具有固定布局（格式化）以及在托管和非托管内存中的公共数据表示形式。  当这些类型需要封送处理时，指向堆中的对象的指针被直接传递给被调用方。  被调用方可以更改该指针所引用的内存位置的内容。  
+## <a name="formatted-blittable-classes"></a><span data-ttu-id="20f9c-119">已设置格式的 Blittable 类</span><span class="sxs-lookup"><span data-stu-id="20f9c-119">Formatted Blittable Classes</span></span>  
+ <span data-ttu-id="20f9c-120">在托管和非托管内存中，已设置格式的 [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式）以及通用数据表示形式。</span><span class="sxs-lookup"><span data-stu-id="20f9c-120">Formatted [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) classes have fixed layout (formatted) and common data representation in both managed and unmanaged memory.</span></span> <span data-ttu-id="20f9c-121">当这些类型需要封送处理时，指向堆中对象的指针被直接传递给被调用方。</span><span class="sxs-lookup"><span data-stu-id="20f9c-121">When these types require marshaling, a pointer to the object in the heap is passed to the callee directly.</span></span> <span data-ttu-id="20f9c-122">被调用方可以更改该指针所引用的内存位置的内容。</span><span class="sxs-lookup"><span data-stu-id="20f9c-122">The callee can change the contents of the memory location being referenced by the pointer.</span></span>  
   
 > [!NOTE]
->  如果参数标记为 Out 或 In\/Out，则被调用方可以更改内存内容。  与此相对，当参数被设置为作为 In 参数封送时，被调用方应当避免更改内存内容。需要说明的是，参数作为 In 参数封送是可直接复制到本机结构中的格式化类型的默认设置。  在将同一个类导出到类型库并使用其进行跨单元调用时，修改 In 对象将导致问题。  
+>  <span data-ttu-id="20f9c-123">如果参数标记为 Out 或 In/Out，则被调用方可以更改内存内容。相反，当参数设置为作为 In（已设置格式的 blittable 类型的默认值）封送时，被调用方应当避免更改内存内容。</span><span class="sxs-lookup"><span data-stu-id="20f9c-123">The callee can change the memory contents if the parameter is marked Out or In/Out. In contrast, the callee should avoid changing the contents when the parameter is set to marshal as In, which is the default for formatted blittable types.</span></span> <span data-ttu-id="20f9c-124">在将同一类导出到类型库并用于进行跨单元调用时，修改 In 对象将产生问题。</span><span class="sxs-lookup"><span data-stu-id="20f9c-124">Modifying an In object generates problems when the same class is exported to a type library and used to make cross-apartment calls.</span></span>  
   
-## 非直接复制到本机结构中的格式化类  
- [非直接复制到本机结构中的](../../../docs/framework/interop/blittable-and-non-blittable-types.md)格式化类具有固定布局（格式化），但数据表示形式在托管和非托管内存中是不同的。  数据在下列条件下可能需要转换：  
+## <a name="formatted-non-blittable-classes"></a><span data-ttu-id="20f9c-125">已设置格式的非 Blittable 类</span><span class="sxs-lookup"><span data-stu-id="20f9c-125">Formatted Non-Blittable Classes</span></span>  
+ <span data-ttu-id="20f9c-126">在托管和非托管内存中，已设置格式的[ blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式），但数据表示形式不同。</span><span class="sxs-lookup"><span data-stu-id="20f9c-126">Formatted [non-blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) classes have fixed layout (formatted) but the data representation is different in managed and unmanaged memory.</span></span> <span data-ttu-id="20f9c-127">在以下情况下，数据可能需要转换：</span><span class="sxs-lookup"><span data-stu-id="20f9c-127">The data can require transformation under the following conditions:</span></span>  
   
--   如果按值封送非直接复制到本机结构中的类，则被调用方接收指向该数据结构的副本的指针。  
+-   <span data-ttu-id="20f9c-128">如果按值封送非 blittable 类，则被调用方接收指向该数据结构副本的指针。</span><span class="sxs-lookup"><span data-stu-id="20f9c-128">If a non-blittable class is marshaled by value, the callee receives a pointer to a copy of the data structure.</span></span>  
   
--   如果按引用封送非直接复制到本机结构中的类，则被调用方接收该数据结构的副本的指针的指针。  
+-   <span data-ttu-id="20f9c-129">如果按引用封送非 blittable 类，则被调用方接收指向数据结构副本的指针的指针。</span><span class="sxs-lookup"><span data-stu-id="20f9c-129">If a non-blittable class is marshaled by reference, the callee receives a pointer to a pointer to a copy of the data structure.</span></span>  
   
--   如果设置了 <xref:System.Runtime.InteropServices.InAttribute> 特性，则始终用实例的状态初始化此副本，并在必要时进行封送处理。  
+-   <span data-ttu-id="20f9c-130">如果设置了 <xref:System.Runtime.InteropServices.InAttribute> 属性，则始终通过实例的状态初始化此副本，并在必要时进行封送处理。</span><span class="sxs-lookup"><span data-stu-id="20f9c-130">If the <xref:System.Runtime.InteropServices.InAttribute> attribute is set, this copy is always initialized with the instance's state, marshaling as necessary.</span></span>  
   
--   如果设置了 <xref:System.Runtime.InteropServices.OutAttribute> 特性，则始终在返回时将状态复制回实例，并在必要时进行封送处理。  
+-   <span data-ttu-id="20f9c-131">如果设置了 <xref:System.Runtime.InteropServices.OutAttribute> 属性，则始终在返回时将状态复制回实例，并在必要时进行封送处理。</span><span class="sxs-lookup"><span data-stu-id="20f9c-131">If the <xref:System.Runtime.InteropServices.OutAttribute> attribute is set, the state is always copied back to the instance on return, marshaling as necessary.</span></span>  
   
--   如果同时设置了 **InAttribute** 和 **OutAttribute**，则两个副本都需要。  如果忽略了其中一个特性，则封送拆收器可以通过消除其中一个副本进行优化。  
+-   <span data-ttu-id="20f9c-132">如果同时设置了 InAttribute 和 OutAttribute，则两个副本都需要。</span><span class="sxs-lookup"><span data-stu-id="20f9c-132">If both **InAttribute** and **OutAttribute** are set, both copies are required.</span></span> <span data-ttu-id="20f9c-133">如果省略了其中任一个属性，则封送拆收器可以通过删掉其中一个副本进行优化。</span><span class="sxs-lookup"><span data-stu-id="20f9c-133">If either attribute is omitted, the marshaler can optimize by eliminating either copy.</span></span>  
   
-## 引用类型  
- 引用类型可以通过值或通过引用传递。  当它们通过值传递时，指向该类型的指针在堆栈上传递。  当通过引用传递时，该类型的指针的指针在堆栈上传递。  
+## <a name="reference-types"></a><span data-ttu-id="20f9c-134">引用类型</span><span class="sxs-lookup"><span data-stu-id="20f9c-134">Reference Types</span></span>  
+ <span data-ttu-id="20f9c-135">可按值或按引用传递引用类型。</span><span class="sxs-lookup"><span data-stu-id="20f9c-135">Reference types can be passed by value or by reference.</span></span> <span data-ttu-id="20f9c-136">按值传递时，在堆栈上传递指向类型的指针。</span><span class="sxs-lookup"><span data-stu-id="20f9c-136">When they are passed by value, a pointer to the type is passed on the stack.</span></span> <span data-ttu-id="20f9c-137">按引用传递时，在堆栈上传递指向类型指针的指针。</span><span class="sxs-lookup"><span data-stu-id="20f9c-137">When passed by reference, a pointer to a pointer to the type is passed on the stack.</span></span>  
   
- 引用类型具有下列有条件的行为：  
+ <span data-ttu-id="20f9c-138">引用类型具有以下条件性行为：</span><span class="sxs-lookup"><span data-stu-id="20f9c-138">Reference types have the following conditional behavior:</span></span>  
   
--   如果引用类型通过值传递且具有非直接复制到本机结构中的类型的成员，则将类型转换两次：  
+-   <span data-ttu-id="20f9c-139">如果引用类型按值传递且具有非 blittable 类型的成员，则将类型转换两次：</span><span class="sxs-lookup"><span data-stu-id="20f9c-139">If a reference type is passed by value and it has members of non-blittable types, the types are converted twice:</span></span>  
   
-    -   参数传递到非托管端时转换一次。  
+    -   <span data-ttu-id="20f9c-140">参数传递到非托管端时转换一次。</span><span class="sxs-lookup"><span data-stu-id="20f9c-140">When an argument is passed to the unmanaged side.</span></span>  
   
-    -   从调用返回时转换一次。  
+    -   <span data-ttu-id="20f9c-141">从调用返回时转换一次。</span><span class="sxs-lookup"><span data-stu-id="20f9c-141">On return from the call.</span></span>  
   
-     为了避免不必要的复制和转换，这些类型被作为 In 参数封送。  若要使调用方能够看见被调用方所做的更改，必须显式地将 **InAttribute** 和 **OutAttribute** 特性应用于参数。  
+     <span data-ttu-id="20f9c-142">为避免不必要的复制和转换，将这些类型作为 In 参数封送。</span><span class="sxs-lookup"><span data-stu-id="20f9c-142">To avoid unnecessarily copying and conversion, these types are marshaled as In parameters.</span></span> <span data-ttu-id="20f9c-143">若要使调用方能够看见被调用方所做的更改，必须将 InAttribute 和 OutAttribute 属性显式应用于参数。</span><span class="sxs-lookup"><span data-stu-id="20f9c-143">You must explicitly apply the **InAttribute** and **OutAttribute** attributes to an argument for the caller to see changes made by the callee.</span></span>  
   
--   如果引用类型通过值传递且只具有可直接复制到本机结构中的类型的成员，则可在封送处理期间将其锁定，而调用方可看见被调用方对类型的成员所做的所有更改。  如果需要该行为，请显式应用 **InAttribute** 和 **OutAttribute**。  如果没有这些方向特性，Interop 封送拆收器就不会将方向信息导出到类型库（默认情况下它作为 In 导出），这在进行 COM 跨单元封送处理时会导致问题。  
+-   <span data-ttu-id="20f9c-144">如果引用类型按值传递且只具有 blittable 类型的成员，则可在封送处理期间将其锁定，且调用方可看见被调用方对类型成员所做的所有更改。</span><span class="sxs-lookup"><span data-stu-id="20f9c-144">If a reference type is passed by value and it has only members of blittable types, it can be pinned during marshaling and any changes made to the members of the type by the callee are seen by the caller.</span></span> <span data-ttu-id="20f9c-145">如果需要该行为，请显式应用 InAttribute 和 OutAttribute。</span><span class="sxs-lookup"><span data-stu-id="20f9c-145">Apply **InAttribute** and **OutAttribute** explicitly if you want this behavior.</span></span> <span data-ttu-id="20f9c-146">如果没有这些方向属性，互操作封送拆收器就不会将方向信息导出到类型库（默认情况下作为 In 导出），这会造成 COM 跨单元封送处理方面的问题。</span><span class="sxs-lookup"><span data-stu-id="20f9c-146">Without these directional attributes, the interop marshaler does not export directional information to the type library (it exports as In, which is the default) and this can cause problems with COM cross-apartment marshaling.</span></span>  
   
--   如果引用类型通过引用传递，默认情况下它将作为 In\/Out 封送。  
+-   <span data-ttu-id="20f9c-147">如果引用类型按引用传递，则默认将它作为 In/Out 封送。</span><span class="sxs-lookup"><span data-stu-id="20f9c-147">If a reference type is passed by reference, it will be marshaled as In/Out by default.</span></span>  
   
-## System.String 和 System.Text.StringBuilder  
- 当通过值或通过引用将数据封送到非托管代码时，封送拆收器通常将数据复制到辅助缓冲区（可能在复制期间转换字符集），并将对缓冲区的引用传递给被调用方。  除非引用是用 **SysAllocString** 分配的 **BSTR**，否则将始终用 **CoTaskMemAlloc** 分配该引用。  
+## <a name="systemstring-and-systemtextstringbuilder"></a><span data-ttu-id="20f9c-148">System.String 和 System.Text.StringBuilder</span><span class="sxs-lookup"><span data-stu-id="20f9c-148">System.String and System.Text.StringBuilder</span></span>  
+ <span data-ttu-id="20f9c-149">按值或按引用将数据封送到非托管代码时，封送拆收器通常将数据复制到辅助缓冲区（可能在复制期间转换字符集），并将对缓冲区的引用传递给被调用方。</span><span class="sxs-lookup"><span data-stu-id="20f9c-149">When data is marshaled to unmanaged code by value or by reference, the marshaler typically copies the data to a secondary buffer (possibly converting character sets during the copy) and passes a reference to the buffer to the callee.</span></span> <span data-ttu-id="20f9c-150">除非引用是用 SysAllocString 分配的 BSTR，否则将始终用 CoTaskMemAlloc 分配引用。</span><span class="sxs-lookup"><span data-stu-id="20f9c-150">Unless the reference is a **BSTR** allocated with **SysAllocString**, the reference is always allocated with **CoTaskMemAlloc**.</span></span>  
   
- 作为其中一个字符串类型通过值（如 Unicode 字符串）封送时的优化，封送拆收器将指向内部 Unicode 缓冲区中的托管字符串的直接指针传递给被调用方，而不是将其复制到新缓冲区。  
+ <span data-ttu-id="20f9c-151">作为其中一个字符串类型按值（如 Unicode 字符串）封送时的一种优化，封送拆收器将指向内部 Unicode 缓冲区中托管字符串的直接指针传递给被调用方，而不是将其复制到新缓冲区。</span><span class="sxs-lookup"><span data-stu-id="20f9c-151">As an optimization when either string type is marshaled by value (such as a Unicode character string), the marshaler passes the callee a direct pointer to managed strings in the internal Unicode buffer instead of copying it to a new buffer.</span></span>  
   
 > [!CAUTION]
->  当字符串通过值传递时，被调用方绝不能改变封送拆收器所传递的引用。  这样做可能会损坏托管堆。  
+>  <span data-ttu-id="20f9c-152">按值传递字符串时，被调用方绝不能改变封送拆收器传递的引用。</span><span class="sxs-lookup"><span data-stu-id="20f9c-152">When a string is passed by value, the callee must never alter the reference passed by the marshaler.</span></span> <span data-ttu-id="20f9c-153">这样做会损坏托管堆。</span><span class="sxs-lookup"><span data-stu-id="20f9c-153">Doing so can corrupt the managed heap.</span></span>  
   
- 当通过引用传递 <xref:System.String?displayProperty=fullName> 时，封送拆收器在进行调用之前将字符串的内容复制到辅助缓冲区。  然后，在从调用返回时将该缓冲区的内容复制到新字符串中。  这种技术确保不可变的托管字符串保持不变。  
+ <span data-ttu-id="20f9c-154">按引用传递 <xref:System.String?displayProperty=fullName> 时，封送拆收器将字符串内容复制到辅助缓冲区，再进行调用。</span><span class="sxs-lookup"><span data-stu-id="20f9c-154">When a <xref:System.String?displayProperty=fullName> is passed by reference, the marshaler copies the contents the string to a secondary buffer before making the call.</span></span> <span data-ttu-id="20f9c-155">在从调用返回时，再将该缓冲区内容复制到新字符串中。</span><span class="sxs-lookup"><span data-stu-id="20f9c-155">It then copies the contents of the buffer into a new string on return from the call.</span></span> <span data-ttu-id="20f9c-156">这种技术确保不可变托管字符串保持不变。</span><span class="sxs-lookup"><span data-stu-id="20f9c-156">This technique ensures that the immutable managed string remains unaltered.</span></span>  
   
- 当通过值传递 <xref:System.Text.StringBuilder?displayProperty=fullName> 时，封送拆收器将对 **StringBuilder** 的内部缓冲区的引用直接传递给调用方。  调用方和被调用方必须就缓冲区的大小达成一致。  调用方负责创建具有足够长度的 **StringBuilder**。  被调用方必须采取必要措施确保缓冲区不溢出。  对于在默认情况下将通过值传递的引用类型作为 In 参数传递的规则，**StringBuilder** 是一个例外。  它始终作为 In\/Out 传递。  
+ <span data-ttu-id="20f9c-157">按值传递 <xref:System.Text.StringBuilder?displayProperty=fullName> 时，封送拆收器将对 StringBuilder 的内部缓冲区的引用直接传递给调用方。</span><span class="sxs-lookup"><span data-stu-id="20f9c-157">When a <xref:System.Text.StringBuilder?displayProperty=fullName> is passed by value, the marshaler passes a reference to the internal buffer of the **StringBuilder** directly to the caller.</span></span> <span data-ttu-id="20f9c-158">调用方和被调用方必须就缓冲区大小达成一致。</span><span class="sxs-lookup"><span data-stu-id="20f9c-158">The caller and callee must agree on the size of the buffer.</span></span> <span data-ttu-id="20f9c-159">调用方负责创建具有足够长度的 StringBuilder。</span><span class="sxs-lookup"><span data-stu-id="20f9c-159">The caller is responsible for creating a **StringBuilder** of adequate length.</span></span> <span data-ttu-id="20f9c-160">被调用方必须采取必要措施确保不溢出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="20f9c-160">The callee must take the necessary precautions to ensure that the buffer is not overrun.</span></span> <span data-ttu-id="20f9c-161">对于默认将按值传递的引用类型作为 In 参数传递的规则，StringBuilder 是一个例外。</span><span class="sxs-lookup"><span data-stu-id="20f9c-161">**StringBuilder** is an exception to the rule that reference types passed by value are passed as In parameters by default.</span></span> <span data-ttu-id="20f9c-162">它始终作为 In/Out 传递。</span><span class="sxs-lookup"><span data-stu-id="20f9c-162">It is always passed as In/Out.</span></span>  
   
-## 请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Memory Management with the Interop Marshaler](http://msdn.microsoft.com/zh-cn/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [Directional Attributes](http://msdn.microsoft.com/zh-cn/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a><span data-ttu-id="20f9c-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20f9c-163">See Also</span></span>  
+ <span data-ttu-id="20f9c-164">[默认的封送行为](../../../docs/framework/interop/default-marshaling-behavior.md) </span><span class="sxs-lookup"><span data-stu-id="20f9c-164">[Default Marshaling Behavior](../../../docs/framework/interop/default-marshaling-behavior.md) </span></span>  
+ <span data-ttu-id="20f9c-165">[使用互操作封送拆收器进行内存管理](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee) </span><span class="sxs-lookup"><span data-stu-id="20f9c-165">[Memory Management with the Interop Marshaler](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee) </span></span>  
+ <span data-ttu-id="20f9c-166">[方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2) </span><span class="sxs-lookup"><span data-stu-id="20f9c-166">[Directional Attributes](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2) </span></span>  
+ [<span data-ttu-id="20f9c-167">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="20f9c-167">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+

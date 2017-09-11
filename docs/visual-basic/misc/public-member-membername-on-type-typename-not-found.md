@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aef57e597233e6179bc1a00b28182b46bb53cc59
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 57de9f91b695dfd63bb3e69204272e657e887345
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a>公共成员 '&lt;membername&gt;on type&lt;typename&gt;找不到
-找不到你尝试访问的成员。 访问后期绑定对象的非公共成员时，可能出现此错误。  
+# <a name="public-member-39ltmembernamegt39-on-type-39lttypenamegt39-not-found"></a><span data-ttu-id="7bb46-102">公共成员 '&lt;membername&gt;on type&lt;typename&gt;找不到</span><span class="sxs-lookup"><span data-stu-id="7bb46-102">Public member &#39;&lt;membername&gt;&#39; on type &#39;&lt;typename&gt;&#39; not found</span></span>
+<span data-ttu-id="7bb46-103">找不到你尝试访问的成员。</span><span class="sxs-lookup"><span data-stu-id="7bb46-103">The member you are trying to access cannot be found.</span></span> <span data-ttu-id="7bb46-104">访问后期绑定对象的非公共成员时，可能出现此错误。</span><span class="sxs-lookup"><span data-stu-id="7bb46-104">This error can occur when accessing non-public members of late-bound objects.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7bb46-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="7bb46-105">To correct this error</span></span>  
   
-1.  如果该成员存在，请确保它被声明为 `Public`。  
+1.  <span data-ttu-id="7bb46-106">如果该成员存在，请确保它被声明为 `Public`。</span><span class="sxs-lookup"><span data-stu-id="7bb46-106">If the member exists, ensure that it is declared as `Public`.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [公共](../../visual-basic/language-reference/modifiers/public.md)   
- [早期绑定和后期绑定](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a><span data-ttu-id="7bb46-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7bb46-107">See Also</span></span>  
+ <span data-ttu-id="7bb46-108">[公共](../../visual-basic/language-reference/modifiers/public.md) </span><span class="sxs-lookup"><span data-stu-id="7bb46-108">[Public](../../visual-basic/language-reference/modifiers/public.md) </span></span>  
+<span data-ttu-id="7bb46-109"> [早期绑定和后期绑定](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)</span><span class="sxs-lookup"><span data-stu-id="7bb46-109"> [Early and Late Binding](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)</span></span>

@@ -20,18 +20,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2b512695052485e6c19f44d3e53cd14b04d0f07
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何︰ 组合和比较字符串集合 (LINQ) (Visual Basic)
-此示例演示如何合并文件，包含的文本行，然后对结果进行排序。 具体而言，它演示如何在两个文本行集上执行简单的串联、 联合和交集。  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="5902e-102">如何︰ 组合和比较字符串集合 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5902e-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="5902e-103">此示例演示如何合并文件，包含的文本行，然后对结果进行排序。</span><span class="sxs-lookup"><span data-stu-id="5902e-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="5902e-104">具体而言，它演示如何在两个文本行集上执行简单的串联、 联合和交集。</span><span class="sxs-lookup"><span data-stu-id="5902e-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>若要设置项目和文本的文件  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="5902e-105">若要设置项目和文本的文件</span><span class="sxs-lookup"><span data-stu-id="5902e-105">To set up the project and the text files</span></span>  
   
-1.  将这些名称复制到名为 names1.txt 的文本文件，并将其保存在项目文件夹中︰  
+1.  <span data-ttu-id="5902e-106">将这些名称复制到名为 names1.txt 的文本文件，并将其保存在项目文件夹中︰</span><span class="sxs-lookup"><span data-stu-id="5902e-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  将这些名称复制到名为 names2.txt 的文本文件，并将其保存在项目文件夹中。 请注意，这两个文件都有一些名称共同点。  
+2.  <span data-ttu-id="5902e-107">将这些名称复制到名为 names2.txt 的文本文件，并将其保存在项目文件夹中。</span><span class="sxs-lookup"><span data-stu-id="5902e-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="5902e-108">请注意，这两个文件都有一些名称共同点。</span><span class="sxs-lookup"><span data-stu-id="5902e-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/13/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="5902e-109">示例</span><span class="sxs-lookup"><span data-stu-id="5902e-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -179,9 +180,9 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="5902e-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="5902e-110">Compiling the Code</span></span>  
+ <span data-ttu-id="5902e-111">创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。</span><span class="sxs-lookup"><span data-stu-id="5902e-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="5902e-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5902e-112">See Also</span></span>  
+ <span data-ttu-id="5902e-113">[LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="5902e-113">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="5902e-114"> [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="5902e-114"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

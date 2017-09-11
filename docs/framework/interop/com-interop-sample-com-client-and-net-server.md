@@ -1,34 +1,39 @@
 ---
-title: "COM 互操作示例：COM 客户端和 .NET 服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, 示例"
-  - "与非托管代码间的互操作, 示例"
+title: "COM 互操作示例：COM 客户端和 .NET 服务器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM 互操作示例：COM 客户端和 .NET 服务器
-此示例演示 [COM 客户端](#cpconcominteropsamplecomclientnetserveranchor1)与执行抵押贷款计算的 [.NET 服务器](#cpconcominteropsamplecomclientnetserveranchor2)的互操作。  在本示例中，客户端将创建并调用托管 `Loan` 类的一个实例，将四个参数（其中一个等于零）传递给该实例，然后显示计算结果。  此处将用整节的篇幅来显示该示例的代码示例。  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="c525d-102">COM 互操作示例：COM 客户端和 .NET 服务器</span><span class="sxs-lookup"><span data-stu-id="c525d-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="c525d-103">此示例演示 [COM 客户端](#cpconcominteropsamplecomclientnetserveranchor1) 和执行抵押计算的 [.NET 服务器](#cpconcominteropsamplecomclientnetserveranchor2)的互操作。</span><span class="sxs-lookup"><span data-stu-id="c525d-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="c525d-104">在本示例中，客户端创建并调用托管 `Loan` 类的实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。</span><span class="sxs-lookup"><span data-stu-id="c525d-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="c525d-105">本示例中的代码例子将贯穿本节。</span><span class="sxs-lookup"><span data-stu-id="c525d-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## COM 客户端  
+## <a name="com-client"></a><span data-ttu-id="c525d-106">COM 客户端</span><span class="sxs-lookup"><span data-stu-id="c525d-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -95,7 +100,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## .NET 服务器  
+## <a name="net-server"></a><span data-ttu-id="c525d-107">.NET 服务器</span><span class="sxs-lookup"><span data-stu-id="c525d-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -270,7 +275,6 @@ Namespace LoanLib
     End Class  
   
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -397,5 +401,6 @@ namespace LoanLib {
 }  
 ```  
   
-## 请参阅  
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a><span data-ttu-id="c525d-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c525d-108">See Also</span></span>  
+ [<span data-ttu-id="c525d-109">向 COM 公开 .NET Framework 组件</span><span class="sxs-lookup"><span data-stu-id="c525d-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+

@@ -37,121 +37,121 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
-在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
+# <a name="operators-c-programming-guide"></a><span data-ttu-id="df9c9-102">运算符（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="df9c9-102">Operators (C# Programming Guide)</span></span>
+<span data-ttu-id="df9c9-103">在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。</span><span class="sxs-lookup"><span data-stu-id="df9c9-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="df9c9-104">接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。</span><span class="sxs-lookup"><span data-stu-id="df9c9-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="df9c9-105">接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。</span><span class="sxs-lookup"><span data-stu-id="df9c9-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="df9c9-106">条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。</span><span class="sxs-lookup"><span data-stu-id="df9c9-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  
   
- 下面的 C# 语句包含一个一元运算符和一个操作数。 递增运算符 `++` 修改操作数 `y` 的值。  
+ <span data-ttu-id="df9c9-107">下面的 C# 语句包含一个一元运算符和一个操作数。</span><span class="sxs-lookup"><span data-stu-id="df9c9-107">The following C# statement contains a single unary operator and a single operand.</span></span> <span data-ttu-id="df9c9-108">递增运算符 `++` 修改操作数 `y` 的值。</span><span class="sxs-lookup"><span data-stu-id="df9c9-108">The increment operator, `++`, modifies the value of the operand `y`.</span></span>  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ <span data-ttu-id="df9c9-109">[!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="df9c9-109">[!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]</span></span>  
   
- 下面的 C# 语句包含两个二元运算符，它们分别有两个操作数。 赋值运算符 `=` 将一个整数变量 `y` 和一个表达式 `2 + 3` 作为操作数。 表达式 `2 + 3` 本身由加法运算符和两个操作数 `2` 和 `3` 组成。  
+ <span data-ttu-id="df9c9-110">下面的 C# 语句包含两个二元运算符，它们分别有两个操作数。</span><span class="sxs-lookup"><span data-stu-id="df9c9-110">The following C# statement contains two binary operators, each with two operands.</span></span> <span data-ttu-id="df9c9-111">赋值运算符 `=` 将一个整数变量 `y` 和一个表达式 `2 + 3` 作为操作数。</span><span class="sxs-lookup"><span data-stu-id="df9c9-111">The assignment operator, `=`, has the integer variable `y` and the expression `2 + 3` as operands.</span></span> <span data-ttu-id="df9c9-112">表达式 `2 + 3` 本身由加法运算符和两个操作数 `2` 和 `3` 组成。</span><span class="sxs-lookup"><span data-stu-id="df9c9-112">The expression `2 + 3` itself consists of the addition operator and two operands, `2` and `3`.</span></span>  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ <span data-ttu-id="df9c9-113">[!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="df9c9-113">[!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]</span></span>  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>运算符、计算和运算符优先级  
- 操作数可以是由任何长度的代码组成的有效表达式，且可包含任意数量的子表达式。 在包含多个运算符的表达式中，运算符的应用顺序由运算符优先级 、关联性 和括号确定。  
+## <a name="operators-evaluation-and-operator-precedence"></a><span data-ttu-id="df9c9-114">运算符、计算和运算符优先级</span><span class="sxs-lookup"><span data-stu-id="df9c9-114">Operators, Evaluation, and Operator Precedence</span></span>  
+ <span data-ttu-id="df9c9-115">操作数可以是由任何长度的代码组成的有效表达式，且可包含任意数量的子表达式。</span><span class="sxs-lookup"><span data-stu-id="df9c9-115">An operand can be a valid expression that is composed of any length of code, and it can comprise any number of sub expressions.</span></span> <span data-ttu-id="df9c9-116">在包含多个运算符的表达式中，运算符的应用顺序由运算符优先级 、关联性 和括号确定。</span><span class="sxs-lookup"><span data-stu-id="df9c9-116">In an expression that contains multiple operators, the order in which the operators are applied is determined by *operator precedence*, *associativity*, and parentheses.</span></span>  
   
- 每个运算符都具有已定义的优先级。 在包含具有不同优先级级别的多个运算符的表达式中，运算符的优先级确定运算符的计算顺序。 例如，下列语句将 3 赋给 `n1`。  
+ <span data-ttu-id="df9c9-117">每个运算符都具有已定义的优先级。</span><span class="sxs-lookup"><span data-stu-id="df9c9-117">Each operator has a defined precedence.</span></span> <span data-ttu-id="df9c9-118">在包含具有不同优先级级别的多个运算符的表达式中，运算符的优先级确定运算符的计算顺序。</span><span class="sxs-lookup"><span data-stu-id="df9c9-118">In an expression that contains multiple operators that have different precedence levels, the precedence of the operators determines the order in which the operators are evaluated.</span></span> <span data-ttu-id="df9c9-119">例如，下列语句将 3 赋给 `n1`。</span><span class="sxs-lookup"><span data-stu-id="df9c9-119">For example, the following statement assigns 3 to `n1`.</span></span>  
   
  `n1 = 11 - 2 * 4;`  
   
- 因为乘法的优先级高于减法，所以首先执行乘法。  
+ <span data-ttu-id="df9c9-120">因为乘法的优先级高于减法，所以首先执行乘法。</span><span class="sxs-lookup"><span data-stu-id="df9c9-120">The multiplication is executed first because multiplication takes precedence over subtraction.</span></span>  
   
- 下表根据运算符执行的操作类型将它们划分到不同的类别中。 类别按优先级顺序列出。  
+ <span data-ttu-id="df9c9-121">下表根据运算符执行的操作类型将它们划分到不同的类别中。</span><span class="sxs-lookup"><span data-stu-id="df9c9-121">The following table separates the operators into categories based on the type of operation they perform.</span></span> <span data-ttu-id="df9c9-122">类别按优先级顺序列出。</span><span class="sxs-lookup"><span data-stu-id="df9c9-122">The categories are listed in order of precedence.</span></span>  
   
- **主要运算符**  
+ <span data-ttu-id="df9c9-123">**主要运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-123">**Primary Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-124">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-124">Expression</span></span>|<span data-ttu-id="df9c9-125">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-125">Description</span></span>|  
 |----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|成员访问<br /><br /> 条件成员访问|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|方法和委托调用|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|数组和索引器访问<br /><br /> 条件数组和索引器访问|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|后递增|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|后递减|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|对象和委托创建|  
-|`new` T(...){...}|具有初始值设定项的对象创建。 请参阅[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。|  
-|`new` {...}|匿名对象初始值设定项。 请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。|  
-|`new` T[...]|数组创建。 请参阅[数组](../../../csharp/programming-guide/arrays/index.md)。|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|获取 T 的 System.Type 对象|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|在已检查的上下文中计算表达式|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|在未检查的上下文中计算表达式|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|获取类型 T 的默认值|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|匿名函数（匿名方法）|  
+|<span data-ttu-id="df9c9-126">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span><span class="sxs-lookup"><span data-stu-id="df9c9-126">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span></span><br /><br /> <span data-ttu-id="df9c9-127">x?.y</span><span class="sxs-lookup"><span data-stu-id="df9c9-127">x?.y</span></span>|<span data-ttu-id="df9c9-128">成员访问</span><span class="sxs-lookup"><span data-stu-id="df9c9-128">Member access</span></span><br /><br /> <span data-ttu-id="df9c9-129">条件成员访问</span><span class="sxs-lookup"><span data-stu-id="df9c9-129">Conditional member access</span></span>|  
+|<span data-ttu-id="df9c9-130">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-130">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span></span>|<span data-ttu-id="df9c9-131">方法和委托调用</span><span class="sxs-lookup"><span data-stu-id="df9c9-131">Method and delegate invocation</span></span>|  
+|<span data-ttu-id="df9c9-132">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-132">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span></span><br /><br /> <span data-ttu-id="df9c9-133">a?[x]</span><span class="sxs-lookup"><span data-stu-id="df9c9-133">a?[x]</span></span>|<span data-ttu-id="df9c9-134">数组和索引器访问</span><span class="sxs-lookup"><span data-stu-id="df9c9-134">Array and indexer access</span></span><br /><br /> <span data-ttu-id="df9c9-135">条件数组和索引器访问</span><span class="sxs-lookup"><span data-stu-id="df9c9-135">Conditional array and indexer access</span></span>|  
+|<span data-ttu-id="df9c9-136">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-136">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span></span>|<span data-ttu-id="df9c9-137">后递增</span><span class="sxs-lookup"><span data-stu-id="df9c9-137">Post-increment</span></span>|  
+|<span data-ttu-id="df9c9-138">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-138">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span></span>|<span data-ttu-id="df9c9-139">后递减</span><span class="sxs-lookup"><span data-stu-id="df9c9-139">Post-decrement</span></span>|  
+|<span data-ttu-id="df9c9-140">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span><span class="sxs-lookup"><span data-stu-id="df9c9-140">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span></span>|<span data-ttu-id="df9c9-141">对象和委托创建</span><span class="sxs-lookup"><span data-stu-id="df9c9-141">Object and delegate creation</span></span>|  
+|<span data-ttu-id="df9c9-142">`new` T(...){...}</span><span class="sxs-lookup"><span data-stu-id="df9c9-142">`new` T(...){...}</span></span>|<span data-ttu-id="df9c9-143">具有初始值设定项的对象创建。</span><span class="sxs-lookup"><span data-stu-id="df9c9-143">Object creation with initializer.</span></span> <span data-ttu-id="df9c9-144">请参阅[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。</span><span class="sxs-lookup"><span data-stu-id="df9c9-144">See [Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>|  
+|<span data-ttu-id="df9c9-145">`new` {...}</span><span class="sxs-lookup"><span data-stu-id="df9c9-145">`new` {...}</span></span>|<span data-ttu-id="df9c9-146">匿名对象初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="df9c9-146">Anonymous object initializer.</span></span> <span data-ttu-id="df9c9-147">请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="df9c9-147">See [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>|  
+|<span data-ttu-id="df9c9-148">`new` T[...]</span><span class="sxs-lookup"><span data-stu-id="df9c9-148">`new` T[...]</span></span>|<span data-ttu-id="df9c9-149">数组创建。</span><span class="sxs-lookup"><span data-stu-id="df9c9-149">Array creation.</span></span> <span data-ttu-id="df9c9-150">请参阅[数组](../../../csharp/programming-guide/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="df9c9-150">See [Arrays](../../../csharp/programming-guide/arrays/index.md).</span></span>|  
+|<span data-ttu-id="df9c9-151">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span><span class="sxs-lookup"><span data-stu-id="df9c9-151">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span></span>|<span data-ttu-id="df9c9-152">获取 T 的 System.Type 对象</span><span class="sxs-lookup"><span data-stu-id="df9c9-152">Obtain System.Type object for T</span></span>|  
+|<span data-ttu-id="df9c9-153">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="df9c9-153">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span></span>|<span data-ttu-id="df9c9-154">在已检查的上下文中计算表达式</span><span class="sxs-lookup"><span data-stu-id="df9c9-154">Evaluate expression in checked context</span></span>|  
+|<span data-ttu-id="df9c9-155">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="df9c9-155">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span></span>|<span data-ttu-id="df9c9-156">在未检查的上下文中计算表达式</span><span class="sxs-lookup"><span data-stu-id="df9c9-156">Evaluate expression in unchecked context</span></span>|  
+|<span data-ttu-id="df9c9-157">[default](../../../csharp/language-reference/keywords/default.md) (T)</span><span class="sxs-lookup"><span data-stu-id="df9c9-157">[default](../../../csharp/language-reference/keywords/default.md) (T)</span></span>|<span data-ttu-id="df9c9-158">获取类型 T 的默认值</span><span class="sxs-lookup"><span data-stu-id="df9c9-158">Obtain default value of type T</span></span>|  
+|<span data-ttu-id="df9c9-159">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span><span class="sxs-lookup"><span data-stu-id="df9c9-159">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span></span>|<span data-ttu-id="df9c9-160">匿名函数（匿名方法）</span><span class="sxs-lookup"><span data-stu-id="df9c9-160">Anonymous function (anonymous method)</span></span>|  
   
- **一元运算符**  
+ <span data-ttu-id="df9c9-161">**一元运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-161">**Unary Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-162">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-162">Expression</span></span>|<span data-ttu-id="df9c9-163">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-163">Description</span></span>|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|标识|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|求反|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|逻辑求反|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|按位求反|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|前递增|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|前递减|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|将 x 显式转换为类型 T|  
+|<span data-ttu-id="df9c9-164">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-164">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span></span>|<span data-ttu-id="df9c9-165">标识</span><span class="sxs-lookup"><span data-stu-id="df9c9-165">Identity</span></span>|  
+|<span data-ttu-id="df9c9-166">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-166">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span></span>|<span data-ttu-id="df9c9-167">求反</span><span class="sxs-lookup"><span data-stu-id="df9c9-167">Negation</span></span>|  
+|[!]<span data-ttu-id="df9c9-168">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-168">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span></span>|<span data-ttu-id="df9c9-169">逻辑求反</span><span class="sxs-lookup"><span data-stu-id="df9c9-169">Logical negation</span></span>|  
+|<span data-ttu-id="df9c9-170">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-170">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span></span>|<span data-ttu-id="df9c9-171">按位求反</span><span class="sxs-lookup"><span data-stu-id="df9c9-171">Bitwise negation</span></span>|  
+|<span data-ttu-id="df9c9-172">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-172">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span></span>|<span data-ttu-id="df9c9-173">前递增</span><span class="sxs-lookup"><span data-stu-id="df9c9-173">Pre-increment</span></span>|  
+|<span data-ttu-id="df9c9-174">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-174">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span></span>|<span data-ttu-id="df9c9-175">前递减</span><span class="sxs-lookup"><span data-stu-id="df9c9-175">Pre-decrement</span></span>|  
+|<span data-ttu-id="df9c9-176">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="df9c9-176">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span></span>|<span data-ttu-id="df9c9-177">将 x 显式转换为类型 T</span><span class="sxs-lookup"><span data-stu-id="df9c9-177">Explicitly convert x to type T</span></span>|  
   
- **乘法运算符**  
+ <span data-ttu-id="df9c9-178">**乘法运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-178">**Multiplicative Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-179">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-179">Expression</span></span>|<span data-ttu-id="df9c9-180">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-180">Description</span></span>|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|乘法|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|除号|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|余数|  
+|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|<span data-ttu-id="df9c9-181">乘法</span><span class="sxs-lookup"><span data-stu-id="df9c9-181">Multiplication</span></span>|  
+|[/](../../../csharp/language-reference/operators/division-operator.md)|<span data-ttu-id="df9c9-182">除号</span><span class="sxs-lookup"><span data-stu-id="df9c9-182">Division</span></span>|  
+|[%](../../../csharp/language-reference/operators/modulus-operator.md)|<span data-ttu-id="df9c9-183">余数</span><span class="sxs-lookup"><span data-stu-id="df9c9-183">Remainder</span></span>|  
   
- **相加运算符**  
+ <span data-ttu-id="df9c9-184">**相加运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-184">**Additive Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-185">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-185">Expression</span></span>|<span data-ttu-id="df9c9-186">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-186">Description</span></span>|  
 |----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|相加、字符串串联、委托组合|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|相减、委托移除|  
+|<span data-ttu-id="df9c9-187">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-187">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span></span>|<span data-ttu-id="df9c9-188">相加、字符串串联、委托组合</span><span class="sxs-lookup"><span data-stu-id="df9c9-188">Addition, string concatenation, delegate combination</span></span>|  
+|<span data-ttu-id="df9c9-189">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-189">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span></span>|<span data-ttu-id="df9c9-190">相减、委托移除</span><span class="sxs-lookup"><span data-stu-id="df9c9-190">Subtraction, delegate removal</span></span>|  
   
- **移位运算符**  
+ <span data-ttu-id="df9c9-191">**移位运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-191">**Shift Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-192">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-192">Expression</span></span>|<span data-ttu-id="df9c9-193">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-193">Description</span></span>|  
 |----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
+|<span data-ttu-id="df9c9-194">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-194">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span></span>|<span data-ttu-id="df9c9-195">左移</span><span class="sxs-lookup"><span data-stu-id="df9c9-195">Shift left</span></span>|  
+|<span data-ttu-id="df9c9-196">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-196">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span></span>|<span data-ttu-id="df9c9-197">右移</span><span class="sxs-lookup"><span data-stu-id="df9c9-197">Shift right</span></span>|  
   
- **关系和类型运算符**  
+ <span data-ttu-id="df9c9-198">**关系和类型运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-198">**Relational and Type Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-199">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-199">Expression</span></span>|<span data-ttu-id="df9c9-200">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-200">Description</span></span>|  
 |----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|小于|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|大于|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|小于或等于|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|大于或等于|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|如果 x 为 T，则返回 True；否则返回 False。|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|返回类型为 T 的 x，如果 x 不是 T，则返回 null|  
+|<span data-ttu-id="df9c9-201">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-201">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span></span>|<span data-ttu-id="df9c9-202">小于</span><span class="sxs-lookup"><span data-stu-id="df9c9-202">Less than</span></span>|  
+|<span data-ttu-id="df9c9-203">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-203">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span></span>|<span data-ttu-id="df9c9-204">大于</span><span class="sxs-lookup"><span data-stu-id="df9c9-204">Greater than</span></span>|  
+|<span data-ttu-id="df9c9-205">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-205">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span></span>|<span data-ttu-id="df9c9-206">小于或等于</span><span class="sxs-lookup"><span data-stu-id="df9c9-206">Less than or equal</span></span>|  
+|<span data-ttu-id="df9c9-207">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-207">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span></span>|<span data-ttu-id="df9c9-208">大于或等于</span><span class="sxs-lookup"><span data-stu-id="df9c9-208">Greater than or equal</span></span>|  
+|<span data-ttu-id="df9c9-209">x [is](../../../csharp/language-reference/keywords/is.md) T</span><span class="sxs-lookup"><span data-stu-id="df9c9-209">x [is](../../../csharp/language-reference/keywords/is.md) T</span></span>|<span data-ttu-id="df9c9-210">如果 x 为 T，则返回 True；否则返回 False。</span><span class="sxs-lookup"><span data-stu-id="df9c9-210">Return true if x is a T, false otherwise</span></span>|  
+|<span data-ttu-id="df9c9-211">x [as](../../../csharp/language-reference/keywords/as.md) T</span><span class="sxs-lookup"><span data-stu-id="df9c9-211">x [as](../../../csharp/language-reference/keywords/as.md) T</span></span>|<span data-ttu-id="df9c9-212">返回类型为 T 的 x，如果 x 不是 T，则返回 null</span><span class="sxs-lookup"><span data-stu-id="df9c9-212">Return x typed as T, or null if x is not a T</span></span>|  
   
- **相等运算符**  
+ <span data-ttu-id="df9c9-213">**相等运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-213">**Equality Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-214">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-214">Expression</span></span>|<span data-ttu-id="df9c9-215">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-215">Description</span></span>|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|等于|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|不等于|  
+|<span data-ttu-id="df9c9-216">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-216">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span></span>|<span data-ttu-id="df9c9-217">等于</span><span class="sxs-lookup"><span data-stu-id="df9c9-217">Equal</span></span>|  
+|<span data-ttu-id="df9c9-218">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-218">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span></span>|<span data-ttu-id="df9c9-219">不等于</span><span class="sxs-lookup"><span data-stu-id="df9c9-219">Not equal</span></span>|  
   
- **逻辑、条件和 Null 运算符**  
+ <span data-ttu-id="df9c9-220">**逻辑、条件和 Null 运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-220">**Logical, Conditional, and Null Operators**</span></span>  
   
-|类别|Expression|描述|  
+|<span data-ttu-id="df9c9-221">类别</span><span class="sxs-lookup"><span data-stu-id="df9c9-221">Category</span></span>|<span data-ttu-id="df9c9-222">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-222">Expression</span></span>|<span data-ttu-id="df9c9-223">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-223">Description</span></span>|  
 |--------------|----------------|-----------------|  
-|逻辑“与”|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整型按位“与”，布尔型逻辑“与”|  
-|逻辑 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整型按位 XOR，布尔型逻辑 XOR|  
-|逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整型按位“或”，布尔型逻辑“或”|  
-|条件“与”|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|仅当 x 为 True 时计算 y|  
-|条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|仅当 x 为 False 时计算 y|  
-|null 合并|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|如果 x 为 Null，则计算结果为 y，否则计算结果为 x|  
-|条件运算|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 为 True，则计算结果为 y；如果 x 为 False 则计算结果为 z|  
+|<span data-ttu-id="df9c9-224">逻辑“与”</span><span class="sxs-lookup"><span data-stu-id="df9c9-224">Logical AND</span></span>|<span data-ttu-id="df9c9-225">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-225">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span></span>|<span data-ttu-id="df9c9-226">整型按位“与”，布尔型逻辑“与”</span><span class="sxs-lookup"><span data-stu-id="df9c9-226">Integer bitwise AND, Boolean logical AND</span></span>|  
+|<span data-ttu-id="df9c9-227">逻辑 XOR</span><span class="sxs-lookup"><span data-stu-id="df9c9-227">Logical XOR</span></span>|<span data-ttu-id="df9c9-228">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-228">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span></span>|<span data-ttu-id="df9c9-229">整型按位 XOR，布尔型逻辑 XOR</span><span class="sxs-lookup"><span data-stu-id="df9c9-229">Integer bitwise XOR, boolean logical XOR</span></span>|  
+|<span data-ttu-id="df9c9-230">逻辑“或”</span><span class="sxs-lookup"><span data-stu-id="df9c9-230">Logical OR</span></span>|<span data-ttu-id="df9c9-231">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-231">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span></span>|<span data-ttu-id="df9c9-232">整型按位“或”，布尔型逻辑“或”</span><span class="sxs-lookup"><span data-stu-id="df9c9-232">Integer bitwise OR, boolean logical OR</span></span>|  
+|<span data-ttu-id="df9c9-233">条件“与”</span><span class="sxs-lookup"><span data-stu-id="df9c9-233">Conditional AND</span></span>|<span data-ttu-id="df9c9-234">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-234">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span></span>|<span data-ttu-id="df9c9-235">仅当 x 为 True 时计算 y</span><span class="sxs-lookup"><span data-stu-id="df9c9-235">Evaluates y only if x is true</span></span>|  
+|<span data-ttu-id="df9c9-236">条件“或”</span><span class="sxs-lookup"><span data-stu-id="df9c9-236">Conditional OR</span></span>|<span data-ttu-id="df9c9-237">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-237">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span></span>|<span data-ttu-id="df9c9-238">仅当 x 为 False 时计算 y</span><span class="sxs-lookup"><span data-stu-id="df9c9-238">Evaluates y only if x is false</span></span>|  
+|<span data-ttu-id="df9c9-239">null 合并</span><span class="sxs-lookup"><span data-stu-id="df9c9-239">Null coalescing</span></span>|<span data-ttu-id="df9c9-240">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-240">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span></span> <span data-ttu-id="df9c9-241">y</span><span class="sxs-lookup"><span data-stu-id="df9c9-241">y</span></span>|<span data-ttu-id="df9c9-242">如果 x 为 Null，则计算结果为 y，否则计算结果为 x</span><span class="sxs-lookup"><span data-stu-id="df9c9-242">Evaluates to y if x is null, to x otherwise</span></span>|  
+|<span data-ttu-id="df9c9-243">条件运算</span><span class="sxs-lookup"><span data-stu-id="df9c9-243">Conditional</span></span>|<span data-ttu-id="df9c9-244">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-244">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span></span> <span data-ttu-id="df9c9-245">y : z</span><span class="sxs-lookup"><span data-stu-id="df9c9-245">y : z</span></span>|<span data-ttu-id="df9c9-246">如果 x 为 True，则计算结果为 y；如果 x 为 False 则计算结果为 z</span><span class="sxs-lookup"><span data-stu-id="df9c9-246">Evaluates to y if x is true, z if x is false</span></span>|  
   
- **赋值和匿名运算符**  
+ <span data-ttu-id="df9c9-247">**赋值和匿名运算符**</span><span class="sxs-lookup"><span data-stu-id="df9c9-247">**Assignment and Anonymous Operators**</span></span>  
   
-|Expression|描述|  
+|<span data-ttu-id="df9c9-248">Expression</span><span class="sxs-lookup"><span data-stu-id="df9c9-248">Expression</span></span>|<span data-ttu-id="df9c9-249">描述</span><span class="sxs-lookup"><span data-stu-id="df9c9-249">Description</span></span>|  
 |----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|赋值|  
-|x op= y|复合赋值。 支持以下这些运算符：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名函数（lambda 表达式）|  
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|<span data-ttu-id="df9c9-250">赋值</span><span class="sxs-lookup"><span data-stu-id="df9c9-250">Assignment</span></span>|  
+|<span data-ttu-id="df9c9-251">x op= y</span><span class="sxs-lookup"><span data-stu-id="df9c9-251">x op= y</span></span>|<span data-ttu-id="df9c9-252">复合赋值。</span><span class="sxs-lookup"><span data-stu-id="df9c9-252">Compound assignment.</span></span> <span data-ttu-id="df9c9-253">支持以下这些运算符：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="df9c9-253">Supports these operators: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="df9c9-254">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="df9c9-254">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span></span>|<span data-ttu-id="df9c9-255">匿名函数（lambda 表达式）</span><span class="sxs-lookup"><span data-stu-id="df9c9-255">Anonymous function (lambda expression)</span></span>|  
   
-## <a name="associativity"></a>结合性  
- 当表达式中出现两个或两个以上具有相同优先级的运算符时，将根据结合性计算它们。 左结合运算符按从左到右的顺序计算。 例如，`x * y / z` 将计算为 `(x * y) / z`。 右结合运算符按从右到左的顺序计算。 例如，赋值运算符是右关联的。 如果不是，下面的代码将导致错误。  
+## <a name="associativity"></a><span data-ttu-id="df9c9-256">结合性</span><span class="sxs-lookup"><span data-stu-id="df9c9-256">Associativity</span></span>  
+ <span data-ttu-id="df9c9-257">当表达式中出现两个或两个以上具有相同优先级的运算符时，将根据结合性计算它们。</span><span class="sxs-lookup"><span data-stu-id="df9c9-257">When two or more operators that have the same precedence are present in an expression, they are evaluated based on associativity.</span></span> <span data-ttu-id="df9c9-258">左结合运算符按从左到右的顺序计算。</span><span class="sxs-lookup"><span data-stu-id="df9c9-258">Left-associative operators are evaluated in order from left to right.</span></span> <span data-ttu-id="df9c9-259">例如，`x * y / z` 将计算为 `(x * y) / z`。</span><span class="sxs-lookup"><span data-stu-id="df9c9-259">For example, `x * y / z` is evaluated as `(x * y) / z`.</span></span> <span data-ttu-id="df9c9-260">右结合运算符按从右到左的顺序计算。</span><span class="sxs-lookup"><span data-stu-id="df9c9-260">Right-associative operators are evaluated in order from right to left.</span></span> <span data-ttu-id="df9c9-261">例如，赋值运算符是右关联的。</span><span class="sxs-lookup"><span data-stu-id="df9c9-261">For example, the assignment operator is right associative.</span></span> <span data-ttu-id="df9c9-262">如果不是，下面的代码将导致错误。</span><span class="sxs-lookup"><span data-stu-id="df9c9-262">If it were not, the following code would result in an error.</span></span>  
   
 ```csharp  
 int a, b, c;  
@@ -164,35 +164,35 @@ a = (b = c);
 //(a = b) = c;  
 ```  
   
- 再举一个例子，三元运算符 ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) 是右结合运算符。 大多数的二元运算符是左结合运算符。  
+ <span data-ttu-id="df9c9-263">再举一个例子，三元运算符 ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) 是右结合运算符。</span><span class="sxs-lookup"><span data-stu-id="df9c9-263">As another example the ternary operator ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) is right associative.</span></span> <span data-ttu-id="df9c9-264">大多数的二元运算符是左结合运算符。</span><span class="sxs-lookup"><span data-stu-id="df9c9-264">Most binary operators are left associative.</span></span>  
   
- 无论表达式中的运算符是左结合运算符还是右结合运算符，都将先从左至右评估各表达式的操作数。 以下示例显示运算符和操作数的计算顺序。  
+ <span data-ttu-id="df9c9-265">无论表达式中的运算符是左结合运算符还是右结合运算符，都将先从左至右评估各表达式的操作数。</span><span class="sxs-lookup"><span data-stu-id="df9c9-265">Whether the operators in an expression are left associative or right associative, the operands of each expression are evaluated first, from left to right.</span></span> <span data-ttu-id="df9c9-266">以下示例显示运算符和操作数的计算顺序。</span><span class="sxs-lookup"><span data-stu-id="df9c9-266">The following examples illustrate the order of evaluation of operators and operands.</span></span>  
   
-|语句|计算顺序|  
+|<span data-ttu-id="df9c9-267">语句</span><span class="sxs-lookup"><span data-stu-id="df9c9-267">Statement</span></span>|<span data-ttu-id="df9c9-268">计算顺序</span><span class="sxs-lookup"><span data-stu-id="df9c9-268">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = b`|a、b、=|  
-|`a = b + c`|a、b、c、+、=|  
-|`a = b + c * d`|a、b、c、d、*、+、=|  
-|`a = b * c + d`|a、b、c、*、d、+、=|  
-|`a = b - c + d`|a、b、c、-、d、+、=|  
-|`a += b -= c`|a、b、c、-=、+=|  
+|`a = b`|<span data-ttu-id="df9c9-269">a、b、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-269">a, b, =</span></span>|  
+|`a = b + c`|<span data-ttu-id="df9c9-270">a、b、c、+、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-270">a, b, c, +, =</span></span>|  
+|`a = b + c * d`|<span data-ttu-id="df9c9-271">a、b、c、d、*、+、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-271">a, b, c, d, *, +, =</span></span>|  
+|`a = b * c + d`|<span data-ttu-id="df9c9-272">a、b、c、*、d、+、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-272">a, b, c, *, d, +, =</span></span>|  
+|`a = b - c + d`|<span data-ttu-id="df9c9-273">a、b、c、-、d、+、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-273">a, b, c, -, d, +, =</span></span>|  
+|`a += b -= c`|<span data-ttu-id="df9c9-274">a、b、c、-=、+=</span><span class="sxs-lookup"><span data-stu-id="df9c9-274">a, b, c, -=, +=</span></span>|  
   
-## <a name="adding-parentheses"></a>添加括号  
- 可通过使用圆括号更改运算符优先级和相关性。 例如，`2 + 3 * 2` 通常计算结果为 8，因为乘法运算符的优先级高于加法运算符。 但是，如果你将表达式编写为 `(2 + 3) * 2`，则先计算加法，再计算乘法，且结果为 10。 以下示例显示括号表达式中的计算顺序。 如前面的示例中所示，计算操作数之前会应用运算符。  
+## <a name="adding-parentheses"></a><span data-ttu-id="df9c9-275">添加括号</span><span class="sxs-lookup"><span data-stu-id="df9c9-275">Adding Parentheses</span></span>  
+ <span data-ttu-id="df9c9-276">可通过使用圆括号更改运算符优先级和相关性。</span><span class="sxs-lookup"><span data-stu-id="df9c9-276">You can change the order imposed by operator precedence and associativity by using parentheses.</span></span> <span data-ttu-id="df9c9-277">例如，`2 + 3 * 2` 通常计算结果为 8，因为乘法运算符的优先级高于加法运算符。</span><span class="sxs-lookup"><span data-stu-id="df9c9-277">For example, `2 + 3 * 2` ordinarily evaluates to 8, because multiplicative operators take precedence over additive operators.</span></span> <span data-ttu-id="df9c9-278">但是，如果你将表达式编写为 `(2 + 3) * 2`，则先计算加法，再计算乘法，且结果为 10。</span><span class="sxs-lookup"><span data-stu-id="df9c9-278">However, if you write the expression as `(2 + 3) * 2`, the addition is evaluated before the multiplication, and the result is 10.</span></span> <span data-ttu-id="df9c9-279">以下示例显示括号表达式中的计算顺序。</span><span class="sxs-lookup"><span data-stu-id="df9c9-279">The following examples illustrate the order of evaluation in parenthesized expressions.</span></span> <span data-ttu-id="df9c9-280">如前面的示例中所示，计算操作数之前会应用运算符。</span><span class="sxs-lookup"><span data-stu-id="df9c9-280">As in previous examples, the operands are evaluated before the operator is applied.</span></span>  
   
-|语句|计算顺序|  
+|<span data-ttu-id="df9c9-281">语句</span><span class="sxs-lookup"><span data-stu-id="df9c9-281">Statement</span></span>|<span data-ttu-id="df9c9-282">计算顺序</span><span class="sxs-lookup"><span data-stu-id="df9c9-282">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = (b + c) * d`|a、b、c、+、d、*、=|  
-|`a = b - (c + d)`|a、b、c、d、+、-、=|  
-|`a = (b + c) * (d - e)`|a、b、c、+、d、e、-、*、=|  
+|`a = (b + c) * d`|<span data-ttu-id="df9c9-283">a、b、c、+、d、*、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-283">a, b, c, +, d, *, =</span></span>|  
+|`a = b - (c + d)`|<span data-ttu-id="df9c9-284">a、b、c、d、+、-、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-284">a, b, c, d, +, -, =</span></span>|  
+|`a = (b + c) * (d - e)`|<span data-ttu-id="df9c9-285">a、b、c、+、d、e、-、*、=</span><span class="sxs-lookup"><span data-stu-id="df9c9-285">a, b, c, +, d, e, -, *, =</span></span>|  
   
-## <a name="operator-overloading"></a>运算符重载  
- 对于自定义类和结构，你可以更改运算符的行为。 此过程称为“运算符重载” 。 有关详细信息，请参阅[可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。  
+## <a name="operator-overloading"></a><span data-ttu-id="df9c9-286">运算符重载</span><span class="sxs-lookup"><span data-stu-id="df9c9-286">Operator Overloading</span></span>  
+ <span data-ttu-id="df9c9-287">对于自定义类和结构，你可以更改运算符的行为。</span><span class="sxs-lookup"><span data-stu-id="df9c9-287">You can change the behavior of operators for custom classes and structs.</span></span> <span data-ttu-id="df9c9-288">此过程称为“运算符重载” 。</span><span class="sxs-lookup"><span data-stu-id="df9c9-288">This process is referred to as *operator overloading*.</span></span> <span data-ttu-id="df9c9-289">有关详细信息，请参阅[可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="df9c9-289">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- 有关详细信息，请参阅[运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)和 [C# 运算符](../../../csharp/language-reference/operators/index.md)。  
+## <a name="related-sections"></a><span data-ttu-id="df9c9-290">相关章节</span><span class="sxs-lookup"><span data-stu-id="df9c9-290">Related Sections</span></span>  
+ <span data-ttu-id="df9c9-291">有关详细信息，请参阅[运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)和 [C# 运算符](../../../csharp/language-reference/operators/index.md)。</span><span class="sxs-lookup"><span data-stu-id="df9c9-291">For more information, see [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md) and [C# Operators](../../../csharp/language-reference/operators/index.md).</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="df9c9-292">请参阅</span><span class="sxs-lookup"><span data-stu-id="df9c9-292">See Also</span></span>  
+ <span data-ttu-id="df9c9-293">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="df9c9-293">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="df9c9-294">语句、表达式和运算符</span><span class="sxs-lookup"><span data-stu-id="df9c9-294">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)
 

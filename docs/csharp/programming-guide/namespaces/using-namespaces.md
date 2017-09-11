@@ -37,84 +37,84 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-namespaces-c-programming-guide"></a>使用命名空间（C# 编程指南）
-在 C# 编程中，命名空间在两个方面被大量使用。 首先，.NET Framework 类使用命名空间来组织它的众多类。 其次，在较大的编程项目中，声明自己的命名空间可以帮助控制类名称和方法名称的范围。  
+# <a name="using-namespaces-c-programming-guide"></a><span data-ttu-id="6dc06-102">使用命名空间（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="6dc06-102">Using Namespaces (C# Programming Guide)</span></span>
+<span data-ttu-id="6dc06-103">在 C# 编程中，命名空间在两个方面被大量使用。</span><span class="sxs-lookup"><span data-stu-id="6dc06-103">Namespaces are heavily used within C# programs in two ways.</span></span> <span data-ttu-id="6dc06-104">首先，.NET Framework 类使用命名空间来组织它的众多类。</span><span class="sxs-lookup"><span data-stu-id="6dc06-104">Firstly, the .NET Framework classes use namespaces to organize its many classes.</span></span> <span data-ttu-id="6dc06-105">其次，在较大的编程项目中，声明自己的命名空间可以帮助控制类名称和方法名称的范围。</span><span class="sxs-lookup"><span data-stu-id="6dc06-105">Secondly, declaring your own namespaces can help control the scope of class and method names in larger programming projects.</span></span>  
   
-## <a name="accessing-namespaces"></a>访问命名空间  
- 大多数 C# 应用程序以 `using` 指令开头。 本部分列出了应用程序将频繁使用的命名空间，使程序员避免在每次使用包含在命名空间中的方法时都要指定完全限定名称。  
+## <a name="accessing-namespaces"></a><span data-ttu-id="6dc06-106">访问命名空间</span><span class="sxs-lookup"><span data-stu-id="6dc06-106">Accessing Namespaces</span></span>  
+ <span data-ttu-id="6dc06-107">大多数 C# 应用程序以 `using` 指令开头。</span><span class="sxs-lookup"><span data-stu-id="6dc06-107">Most C# applications begin with a section of `using` directives.</span></span> <span data-ttu-id="6dc06-108">本部分列出了应用程序将频繁使用的命名空间，使程序员避免在每次使用包含在命名空间中的方法时都要指定完全限定名称。</span><span class="sxs-lookup"><span data-stu-id="6dc06-108">This section lists the namespaces that the application will be using frequently, and saves the programmer from specifying a fully qualified name every time that a method that is contained within is used.</span></span>  
   
- 例如，通过包括行：  
+ <span data-ttu-id="6dc06-109">例如，通过包括行：</span><span class="sxs-lookup"><span data-stu-id="6dc06-109">For example, by including the line:</span></span>  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
+ <span data-ttu-id="6dc06-110">[!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-110">[!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]</span></span>  
   
- 在程序的开始，程序员可以使用代码：  
+ <span data-ttu-id="6dc06-111">在程序的开始，程序员可以使用代码：</span><span class="sxs-lookup"><span data-stu-id="6dc06-111">At the start of a program, the programmer can use the code:</span></span>  
   
- [!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
+ <span data-ttu-id="6dc06-112">[!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-112">[!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]</span></span>  
   
- 而不是：  
+ <span data-ttu-id="6dc06-113">而不是：</span><span class="sxs-lookup"><span data-stu-id="6dc06-113">Instead of:</span></span>  
   
- [!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
+ <span data-ttu-id="6dc06-114">[!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-114">[!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]</span></span>  
   
-## <a name="namespace-aliases"></a>命名空间别名  
- [Using 指令](../../../csharp/language-reference/keywords/using-directive.md)还可用于创建[命名空间](../../../csharp/language-reference/keywords/namespace.md)的别名。 例如，如果使用之前编写的含嵌套命名空间的命名空间，建议你声明一个别名，特别提供一种快速的引用方法，如以下示例所示：  
+## <a name="namespace-aliases"></a><span data-ttu-id="6dc06-115">命名空间别名</span><span class="sxs-lookup"><span data-stu-id="6dc06-115">Namespace Aliases</span></span>  
+ <span data-ttu-id="6dc06-116">[Using 指令](../../../csharp/language-reference/keywords/using-directive.md)还可用于创建[命名空间](../../../csharp/language-reference/keywords/namespace.md)的别名。</span><span class="sxs-lookup"><span data-stu-id="6dc06-116">The [using Directive](../../../csharp/language-reference/keywords/using-directive.md) can also be used to create an alias for a [namespace](../../../csharp/language-reference/keywords/namespace.md).</span></span> <span data-ttu-id="6dc06-117">例如，如果使用之前编写的含嵌套命名空间的命名空间，建议你声明一个别名，特别提供一种快速的引用方法，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="6dc06-117">For example, if you are using a previously written namespace that contains nested namespaces, you might want to declare an alias to provide a shorthand way of referencing one in particular, as in the following example:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
+ <span data-ttu-id="6dc06-118">[!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-118">[!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]</span></span>  
   
-## <a name="using-namespaces-to-control-scope"></a>使用命名空间控制范围  
- `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [。运算符](../../../csharp/language-reference/operators/member-access-operator.md) 用于区分调用的方法。  
+## <a name="using-namespaces-to-control-scope"></a><span data-ttu-id="6dc06-119">使用命名空间控制范围</span><span class="sxs-lookup"><span data-stu-id="6dc06-119">Using Namespaces to control scope</span></span>  
+ <span data-ttu-id="6dc06-120">`namespace` 关键字用于声明范围。</span><span class="sxs-lookup"><span data-stu-id="6dc06-120">The `namespace` keyword is used to declare a scope.</span></span> <span data-ttu-id="6dc06-121">在项目内创建范围有助于整理代码，并允许创建全局唯一类型。</span><span class="sxs-lookup"><span data-stu-id="6dc06-121">The ability to create scopes within your project helps organize code and lets you create globally-unique types.</span></span> <span data-ttu-id="6dc06-122">在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。</span><span class="sxs-lookup"><span data-stu-id="6dc06-122">In the following example, a class titled `SampleClass` is defined in two namespaces, one nested inside the other.</span></span> <span data-ttu-id="6dc06-123">[。运算符](../../../csharp/language-reference/operators/member-access-operator.md) 用于区分调用的方法。</span><span class="sxs-lookup"><span data-stu-id="6dc06-123">The [. Operator](../../../csharp/language-reference/operators/member-access-operator.md) is used to differentiate which method gets called.</span></span>  
   
- [!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
+ <span data-ttu-id="6dc06-124">[!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-124">[!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]</span></span>  
   
-## <a name="fully-qualified-names"></a>完全限定名  
- 命名空间和类型具有指示逻辑层次结构的完全限定名称所描述的唯一标题。 例如，语句 `A.B` 意味着 `A` 是命名空间或类型的名称，而 `B` 嵌套在其中。  
+## <a name="fully-qualified-names"></a><span data-ttu-id="6dc06-125">完全限定名</span><span class="sxs-lookup"><span data-stu-id="6dc06-125">Fully Qualified Names</span></span>  
+ <span data-ttu-id="6dc06-126">命名空间和类型具有指示逻辑层次结构的完全限定名称所描述的唯一标题。</span><span class="sxs-lookup"><span data-stu-id="6dc06-126">Namespaces and types have unique titles described by fully qualified names that indicate a logical hierarchy.</span></span> <span data-ttu-id="6dc06-127">例如，语句 `A.B` 意味着 `A` 是命名空间或类型的名称，而 `B` 嵌套在其中。</span><span class="sxs-lookup"><span data-stu-id="6dc06-127">For example, the statement `A.B` implies that `A` is the name of the namespace or type, and `B` is nested inside it.</span></span>  
   
- 以下示例中具有嵌套的类和命名空间。 完全限定名称表示为跟随每个实体的注释。  
+ <span data-ttu-id="6dc06-128">以下示例中具有嵌套的类和命名空间。</span><span class="sxs-lookup"><span data-stu-id="6dc06-128">In the following example, there are nested classes and namespaces.</span></span> <span data-ttu-id="6dc06-129">完全限定名称表示为跟随每个实体的注释。</span><span class="sxs-lookup"><span data-stu-id="6dc06-129">The fully qualified name is indicated as a comment following each entity.</span></span>  
   
- [!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
+ <span data-ttu-id="6dc06-130">[!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-130">[!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]</span></span>  
   
- 在前面的代码片段中：  
+ <span data-ttu-id="6dc06-131">在前面的代码片段中：</span><span class="sxs-lookup"><span data-stu-id="6dc06-131">In the previous code segment:</span></span>  
   
--   命名空间 `N1` 是全局命名空间的成员。 其完全限定名称为 `N1`。  
+-   <span data-ttu-id="6dc06-132">命名空间 `N1` 是全局命名空间的成员。</span><span class="sxs-lookup"><span data-stu-id="6dc06-132">The namespace `N1` is a member of the global namespace.</span></span> <span data-ttu-id="6dc06-133">其完全限定名称为 `N1`。</span><span class="sxs-lookup"><span data-stu-id="6dc06-133">Its fully qualified name is `N1`.</span></span>  
   
--   命名空间 `N2` 是 `N1` 的成员。 其完全限定名称为 `N1.N2`。  
+-   <span data-ttu-id="6dc06-134">命名空间 `N2` 是 `N1` 的成员。</span><span class="sxs-lookup"><span data-stu-id="6dc06-134">The namespace `N2` is a member of `N1`.</span></span> <span data-ttu-id="6dc06-135">其完全限定名称为 `N1.N2`。</span><span class="sxs-lookup"><span data-stu-id="6dc06-135">Its fully qualified name is `N1.N2`.</span></span>  
   
--   类 `C1` 是 `N1` 的成员。 其完全限定名称为 `N1.C1`。  
+-   <span data-ttu-id="6dc06-136">类 `C1` 是 `N1` 的成员。</span><span class="sxs-lookup"><span data-stu-id="6dc06-136">The class `C1` is a member of `N1`.</span></span> <span data-ttu-id="6dc06-137">其完全限定名称为 `N1.C1`。</span><span class="sxs-lookup"><span data-stu-id="6dc06-137">Its fully qualified name is `N1.C1`.</span></span>  
   
--   类名 `C2` 在此代码中使用了两次。 但完全限定名称是唯一的。 `C2` 的第一个实例在 `C1` 中声明；因此，其完全限定名称是：`N1.C1.C2`。 `C2` 的第二个实例在命名空间 `N2` 中声明；因此，其完全限定名称是 `N1.N2.C2`。  
+-   <span data-ttu-id="6dc06-138">类名 `C2` 在此代码中使用了两次。</span><span class="sxs-lookup"><span data-stu-id="6dc06-138">The class name `C2` is used two times in this code.</span></span> <span data-ttu-id="6dc06-139">但完全限定名称是唯一的。</span><span class="sxs-lookup"><span data-stu-id="6dc06-139">However, the fully qualified names are unique.</span></span> <span data-ttu-id="6dc06-140">`C2` 的第一个实例在 `C1` 中声明；因此，其完全限定名称是：`N1.C1.C2`。</span><span class="sxs-lookup"><span data-stu-id="6dc06-140">The first instance of `C2` is declared inside `C1`; therefore, its fully qualified name is: `N1.C1.C2`.</span></span> <span data-ttu-id="6dc06-141">`C2` 的第二个实例在命名空间 `N2` 中声明；因此，其完全限定名称是 `N1.N2.C2`。</span><span class="sxs-lookup"><span data-stu-id="6dc06-141">The second instance of `C2` is declared inside a namespace `N2`; therefore, its fully qualified name is `N1.N2.C2`.</span></span>  
   
- 使用前面的代码段，可向命名空间 `N1.N2` 添加新的类成员 `C3`，如下所示：  
+ <span data-ttu-id="6dc06-142">使用前面的代码段，可向命名空间 `N1.N2` 添加新的类成员 `C3`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="6dc06-142">Using the previous code segment, you can add a new class member, `C3`, to the namespace `N1.N2` as follows:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
+ <span data-ttu-id="6dc06-143">[!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-143">[!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]</span></span>  
   
- 一般情况下，使用 `::` 来引用命名空间别名，或使用 `global::` 来引用全局命名空间，以及使用 `.` 来限定类型或成员。  
+ <span data-ttu-id="6dc06-144">一般情况下，使用 `::` 来引用命名空间别名，或使用 `global::` 来引用全局命名空间，以及使用 `.` 来限定类型或成员。</span><span class="sxs-lookup"><span data-stu-id="6dc06-144">In general, use `::` to reference a namespace alias or `global::` to reference the global namespace and `.` to qualify types or members.</span></span>  
   
- 将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。 例如:   
+ <span data-ttu-id="6dc06-145">将 `::` 与引用类型而非引用命名空间的别名一起使用是错误的。</span><span class="sxs-lookup"><span data-stu-id="6dc06-145">It is an error to use `::` with an alias that references a type instead of a namespace.</span></span> <span data-ttu-id="6dc06-146">例如: </span><span class="sxs-lookup"><span data-stu-id="6dc06-146">For example:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
+ <span data-ttu-id="6dc06-147">[!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-147">[!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]</span></span>  
   
- [!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
+ <span data-ttu-id="6dc06-148">[!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-148">[!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]</span></span>  
   
- 请记住，单词 `global` 不是预定义的别名；因此，`global.X` 不具有任何特殊含义。 仅当将其与 `::` 一起使用时，它才具有特殊意义。  
+ <span data-ttu-id="6dc06-149">请记住，单词 `global` 不是预定义的别名；因此，`global.X` 不具有任何特殊含义。</span><span class="sxs-lookup"><span data-stu-id="6dc06-149">Remember that the word `global` is not a predefined alias; therefore, `global.X` does not have any special meaning.</span></span> <span data-ttu-id="6dc06-150">仅当将其与 `::` 一起使用时，它才具有特殊意义。</span><span class="sxs-lookup"><span data-stu-id="6dc06-150">It acquires a special meaning only when it is used with `::`.</span></span>  
   
- 定义名为 global 的别名时将生成编译器警告 CS0440，因为 `global::` 始终引用全局命名空间而非别名。 例如，以下行将生成该警告：  
+ <span data-ttu-id="6dc06-151">定义名为 global 的别名时将生成编译器警告 CS0440，因为 `global::` 始终引用全局命名空间而非别名。</span><span class="sxs-lookup"><span data-stu-id="6dc06-151">Compiler warning CS0440 is generated if you define an alias named global because `global::` always references the global namespace and not an alias.</span></span> <span data-ttu-id="6dc06-152">例如，以下行将生成该警告：</span><span class="sxs-lookup"><span data-stu-id="6dc06-152">For example, the following line generates the warning:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
+ <span data-ttu-id="6dc06-153">[!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-153">[!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]</span></span>  
   
- 将 `::` 与别名一起使用是一个不错的主意，可防止意外引入其他类型。 例如，请考虑以下示例：  
+ <span data-ttu-id="6dc06-154">将 `::` 与别名一起使用是一个不错的主意，可防止意外引入其他类型。</span><span class="sxs-lookup"><span data-stu-id="6dc06-154">Using `::` with aliases is a good idea and protects against the unexpected introduction of additional types.</span></span> <span data-ttu-id="6dc06-155">例如，请考虑以下示例：</span><span class="sxs-lookup"><span data-stu-id="6dc06-155">For example, consider this example:</span></span>  
   
- [!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
+ <span data-ttu-id="6dc06-156">[!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-156">[!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]</span></span>  
   
- [!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
+ <span data-ttu-id="6dc06-157">[!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]</span><span class="sxs-lookup"><span data-stu-id="6dc06-157">[!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]</span></span>  
   
- 这是可行的，但如果随后要引入名为 `Alias` 的类型，`Alias.` 将改为绑定到该类型。 使用 `Alias::Exception` 确保 `Alias` 被视为命名空间别名，而不被误解为类型。  
+ <span data-ttu-id="6dc06-158">这是可行的，但如果随后要引入名为 `Alias` 的类型，`Alias.` 将改为绑定到该类型。</span><span class="sxs-lookup"><span data-stu-id="6dc06-158">This works, but if a type named `Alias` were to subsequently be introduced, `Alias.` would bind to that type instead.</span></span> <span data-ttu-id="6dc06-159">使用 `Alias::Exception` 确保 `Alias` 被视为命名空间别名，而不被误解为类型。</span><span class="sxs-lookup"><span data-stu-id="6dc06-159">Using `Alias::Exception` insures that `Alias` is treated as a namespace alias and not mistaken for a type.</span></span>  
   
- 有关 `global` 别名的详细信息，请参阅主题[如何：使用全局命名空间别名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。  
+ <span data-ttu-id="6dc06-160">有关 `global` 别名的详细信息，请参阅主题[如何：使用全局命名空间别名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。</span><span class="sxs-lookup"><span data-stu-id="6dc06-160">See the topic [How to: Use the Global Namespace Alias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) for more information regarding the `global` alias.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)   
- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)   
- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a><span data-ttu-id="6dc06-161">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6dc06-161">See Also</span></span>  
+ <span data-ttu-id="6dc06-162">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="6dc06-162">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="6dc06-163">[命名空间](../../../csharp/programming-guide/namespaces/index.md) </span><span class="sxs-lookup"><span data-stu-id="6dc06-163">[Namespaces](../../../csharp/programming-guide/namespaces/index.md) </span></span>  
+ <span data-ttu-id="6dc06-164">[命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="6dc06-164">[Namespace Keywords](../../../csharp/language-reference/keywords/namespace-keywords.md) </span></span>  
+ <span data-ttu-id="6dc06-165">[。运算符](../../../csharp/language-reference/operators/member-access-operator.md) </span><span class="sxs-lookup"><span data-stu-id="6dc06-165">[. Operator](../../../csharp/language-reference/operators/member-access-operator.md) </span></span>  
+ <span data-ttu-id="6dc06-166">[:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md) </span><span class="sxs-lookup"><span data-stu-id="6dc06-166">[:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md) </span></span>  
+ [<span data-ttu-id="6dc06-167">extern</span><span class="sxs-lookup"><span data-stu-id="6dc06-167">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)
 

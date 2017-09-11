@@ -34,23 +34,23 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="exception-handling-statements-c-reference"></a>异常处理语句（C# 参考）
-C# 提供用于处理反常情况（称为异常，可能会在执行程序的过程中发生）的内置支持。 这些异常由正常控制流之外的代码进行处理。  
+# <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="38131-102">异常处理语句（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="38131-102">Exception Handling Statements (C# Reference)</span></span>
+<span data-ttu-id="38131-103">C# 提供用于处理反常情况（称为异常，可能会在执行程序的过程中发生）的内置支持。</span><span class="sxs-lookup"><span data-stu-id="38131-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="38131-104">这些异常由正常控制流之外的代码进行处理。</span><span class="sxs-lookup"><span data-stu-id="38131-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  
   
- 本部分中介绍了以下异常处理主题：  
+ <span data-ttu-id="38131-105">本部分中介绍了以下异常处理主题：</span><span class="sxs-lookup"><span data-stu-id="38131-105">The following exception handling topics are explained in this section:</span></span>  
   
--   [throw](../../../csharp/language-reference/keywords/throw.md)  
+-   [<span data-ttu-id="38131-106">throw</span><span class="sxs-lookup"><span data-stu-id="38131-106">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
   
--   [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+-   [<span data-ttu-id="38131-107">try-catch</span><span class="sxs-lookup"><span data-stu-id="38131-107">try-catch</span></span>](../../../csharp/language-reference/keywords/try-catch.md)  
   
--   [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+-   [<span data-ttu-id="38131-108">try-finally</span><span class="sxs-lookup"><span data-stu-id="38131-108">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
   
--   [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+-   [<span data-ttu-id="38131-109">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="38131-109">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)   
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)
+## <a name="see-also"></a><span data-ttu-id="38131-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="38131-110">See Also</span></span>  
+ <span data-ttu-id="38131-111">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="38131-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="38131-112">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="38131-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="38131-113">[C# 关键字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="38131-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="38131-114">[语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="38131-114">[Statement Keywords](../../../csharp/language-reference/keywords/statement-keywords.md) </span></span>  
+ [<span data-ttu-id="38131-115">异常和异常处理</span><span class="sxs-lookup"><span data-stu-id="38131-115">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)
 

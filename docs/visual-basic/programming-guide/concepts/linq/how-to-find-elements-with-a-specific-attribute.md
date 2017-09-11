@@ -16,22 +16,22 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5f052084651fe96d2bdcb2a86f8c3d23ac246e1
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 2819f0e9789218d3c2658d7c46c2d97f065ac23b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>如何︰ 查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)
-有时需要查找具有特定属性的所有元素。 您并不关心属性的内容， 而是根据属性是否存在进行选择。  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="c9faf-102">如何︰ 查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9faf-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="c9faf-103">有时需要查找具有特定属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="c9faf-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="c9faf-104">您并不关心属性的内容，</span><span class="sxs-lookup"><span data-stu-id="c9faf-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="c9faf-105">而是根据属性是否存在进行选择。</span><span class="sxs-lookup"><span data-stu-id="c9faf-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- XPath 表达式为：  
+ <span data-ttu-id="c9faf-106">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="c9faf-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a>示例  
- 下面的代码选择具有 `Select` 属性的所有元素。  
+## <a name="example"></a><span data-ttu-id="c9faf-107">示例</span><span class="sxs-lookup"><span data-stu-id="c9faf-107">Example</span></span>  
+ <span data-ttu-id="c9faf-108">下面的代码选择具有 `Select` 属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="c9faf-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```vb  
 Dim doc As XElement = _   
@@ -65,7 +65,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="c9faf-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="c9faf-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,6 +73,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="c9faf-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c9faf-110">See Also</span></span>  
+ [<span data-ttu-id="c9faf-111">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9faf-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

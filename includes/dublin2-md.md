@@ -1,1 +1,1 @@
-承载功能
+<span data-ttu-id="ec51b-101">承载功能</span><span class="sxs-lookup"><span data-stu-id="ec51b-101">hosting features</span></span>

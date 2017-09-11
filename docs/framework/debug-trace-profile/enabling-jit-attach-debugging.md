@@ -1,51 +1,57 @@
 ---
-title: "Enabling JIT-Attach Debugging | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "JIT-attach debugging"
-  - "debugging [.NET Framework], JIT-attach debugging"
+title: "启用 JIT 附加调试"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- JIT-attach debugging
+- debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ca6d1e6ec5c19f690ab862b13783b9db05ac2a9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# Enabling JIT-Attach Debugging
-JIT 附加调试是用于描述如何在发生错误时将调试器附加到进程的词组，它也可以由特定的方法或函数触发。  
+# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="e5e68-102">启用 JIT 附加调试</span><span class="sxs-lookup"><span data-stu-id="e5e68-102">Enabling JIT-Attach Debugging</span></span>
+<span data-ttu-id="e5e68-103">JIT 附加调试是用于描述如何在发生错误时将调试器附加到进程的词组，它也可以由特定的方法或函数触发。</span><span class="sxs-lookup"><span data-stu-id="e5e68-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
   
- 在以下错误情况下，使用 JIT 附加调试：  
+ <span data-ttu-id="e5e68-104">JIT 附加调试用于以下错误情况：</span><span class="sxs-lookup"><span data-stu-id="e5e68-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
   
--   未经处理的异常（在本机代码和托管代码中）。  
+-   <span data-ttu-id="e5e68-105">未经处理的异常（在本机代码和托管代码中）。</span><span class="sxs-lookup"><span data-stu-id="e5e68-105">Unhandled exceptions (in both native and managed code).</span></span>  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=fullName> 方法或 [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) 函数 \(Windows 7 系列\)。  
+-   <span data-ttu-id="e5e68-106"><xref:System.Environment.FailFast%2A?displayProperty=fullName> 方法或 [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) 函数（Windows 7 系列）。</span><span class="sxs-lookup"><span data-stu-id="e5e68-106"><xref:System.Environment.FailFast%2A?displayProperty=fullName> method or [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
   
--   运行时错误。  
+-   <span data-ttu-id="e5e68-107">运行时灾难性错误。</span><span class="sxs-lookup"><span data-stu-id="e5e68-107">Runtime fatal errors.</span></span>  
   
- 也可以通过调用以下方法和函数来触发 JIT 附加调试：  
+ <span data-ttu-id="e5e68-108">也可通过调用以下方法和函数来触发 JIT 附加调试：</span><span class="sxs-lookup"><span data-stu-id="e5e68-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=fullName> 方法。  
+-   <span data-ttu-id="e5e68-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=fullName> 方法。</span><span class="sxs-lookup"><span data-stu-id="e5e68-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=fullName> method.</span></span>  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=fullName> 方法。  
+-   <span data-ttu-id="e5e68-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=fullName> 方法。</span><span class="sxs-lookup"><span data-stu-id="e5e68-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=fullName> method.</span></span>  
   
--   [DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) 函数 \(Win32\)。  
+-   <span data-ttu-id="e5e68-111">[DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) 函数 (Win32)。</span><span class="sxs-lookup"><span data-stu-id="e5e68-111">[DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]之前的 .NET Framework 提供单独的注册表项来控制本机调试器和托管调试器的行为。  从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，此类控制合并到了一个注册表项下：HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\Current Version\\AeDebug。  您可以为该注册表项设置值来确定是否调用调试器，如果调用，则还要确定是否使用需要用户交互的对话框来调用调试器。  有关设置此注册表项的信息，请参见 MSDN Library中的[配置自动调试](http://go.microsoft.com/fwlink/?LinkId=181767) 。  
+ <span data-ttu-id="e5e68-112">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的 .NET Framework 提供单独的注册表项来控制本机调试器和托管调试器的行为。</span><span class="sxs-lookup"><span data-stu-id="e5e68-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="e5e68-113">从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，控制合并到了一个注册表项下：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。</span><span class="sxs-lookup"><span data-stu-id="e5e68-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="e5e68-114">用户可为该注册表项设置值来确定是否调用调试器，如果调用，则确定是否使用需用户交互的对话框来调用。</span><span class="sxs-lookup"><span data-stu-id="e5e68-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="e5e68-115">有关设置此注册表项的设置信息，请参阅 MSDN 库中的 [Configuring Automatic Debugging](http://go.microsoft.com/fwlink/?LinkId=181767)（配置自动调试）。</span><span class="sxs-lookup"><span data-stu-id="e5e68-115">For information about setting this registry key, see [Configuring Automatic Debugging](http://go.microsoft.com/fwlink/?LinkId=181767) in the MSDN Library.</span></span>  
   
-## 请参阅  
- [Debugging, Tracing, and Profiling](../../../docs/framework/debug-trace-profile/index.md)   
- [令映像更易于调试](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)   
- [Enabling Profiling](http://msdn.microsoft.com/zh-cn/3b669676-f0e0-4ebf-8674-68986dd2020d)
+## <a name="see-also"></a><span data-ttu-id="e5e68-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e5e68-116">See Also</span></span>  
+ <span data-ttu-id="e5e68-117">[调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md) </span><span class="sxs-lookup"><span data-stu-id="e5e68-117">[Debugging, Tracing, and Profiling](../../../docs/framework/debug-trace-profile/index.md) </span></span>  
+ <span data-ttu-id="e5e68-118">[使映像更易于调试](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md) </span><span class="sxs-lookup"><span data-stu-id="e5e68-118">[Making an Image Easier to Debug](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md) </span></span>  
+ [<span data-ttu-id="e5e68-119">启用分析</span><span class="sxs-lookup"><span data-stu-id="e5e68-119">Enabling Profiling</span></span>](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+

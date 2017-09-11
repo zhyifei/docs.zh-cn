@@ -21,19 +21,19 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="finding-the-default-paragraph-style-c"></a>查找默认段落样式 (C#)
-在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
+# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="c0ed0-102">查找默认段落样式 (C#)</span><span class="sxs-lookup"><span data-stu-id="c0ed0-102">Finding the Default Paragraph Style (C#)</span></span>
+<span data-ttu-id="c0ed0-103">在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="c0ed0-104">示例</span><span class="sxs-lookup"><span data-stu-id="c0ed0-104">Example</span></span>  
   
-### <a name="description"></a>描述  
- 下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。 有关 Office Open XML 文档包及其构成包的信息，请参阅 [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。  
+### <a name="description"></a><span data-ttu-id="c0ed0-105">描述</span><span class="sxs-lookup"><span data-stu-id="c0ed0-105">Description</span></span>  
+ <span data-ttu-id="c0ed0-106">下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="c0ed0-107">有关 Office Open XML 文档包及其构成包的信息，请参阅 [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
   
- 查询将查找名为 `w:style` 的节点，该节点具有值为“paragraph”的名为 `w:type` 的属性和值为“1”的名为 `w:default` 的属性。 由于将只有一个 XML 节点具有这些属性，因此查询使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> 运算符将集合转换为单一实例。 然后，它获取名为 `w:styleId` 的属性的值。  
+ <span data-ttu-id="c0ed0-108">查询将查找名为 `w:style` 的节点，该节点具有值为“paragraph”的名为 `w:type` 的属性和值为“1”的名为 `w:default` 的属性。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="c0ed0-109">由于将只有一个 XML 节点具有这些属性，因此查询使用 <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> 运算符将集合转换为单一实例。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="c0ed0-110">然后，它获取名为 `w:styleId` 的属性的值。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空间中的类型。  
+ <span data-ttu-id="c0ed0-111">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="c0ed0-112">它使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="c0ed0-112">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="c0ed0-113">代码</span><span class="sxs-lookup"><span data-stu-id="c0ed0-113">Code</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -88,18 +88,18 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a>注释  
- 该示例产生下面的输出：  
+### <a name="comments"></a><span data-ttu-id="c0ed0-114">注释</span><span class="sxs-lookup"><span data-stu-id="c0ed0-114">Comments</span></span>  
+ <span data-ttu-id="c0ed0-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="c0ed0-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a>后续步骤  
- 下一个示例中将创建一个类似的查询，查找文档中的所有段落及其样式：  
+## <a name="next-steps"></a><span data-ttu-id="c0ed0-116">后续步骤</span><span class="sxs-lookup"><span data-stu-id="c0ed0-116">Next Steps</span></span>  
+ <span data-ttu-id="c0ed0-117">下一个示例中将创建一个类似的查询，查找文档中的所有段落及其样式：</span><span class="sxs-lookup"><span data-stu-id="c0ed0-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
--   [检索段落及其样式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+-   [<span data-ttu-id="c0ed0-118">检索段落及其样式 (C#)</span><span class="sxs-lookup"><span data-stu-id="c0ed0-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>另请参阅  
- [教程：操作 WordprocessingML 文档中的内容](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+## <a name="see-also"></a><span data-ttu-id="c0ed0-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c0ed0-119">See Also</span></span>  
+ [<span data-ttu-id="c0ed0-120">教程：操作 WordprocessingML 文档中的内容</span><span class="sxs-lookup"><span data-stu-id="c0ed0-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
 

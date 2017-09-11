@@ -1,51 +1,57 @@
 ---
-title: "调用 DLL 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, 平台调用"
-  - "DLL 函数"
-  - "与非托管代码间的互操作, 平台调用"
-  - "平台调用, 调用非托管函数"
-  - "非托管函数"
-  - "非托管函数, 调用"
+title: "调用 DLL 函数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- unmanaged functions, calling
+- unmanaged functions
+- COM interop, platform invoke
+- platform invoke, calling unmanaged functions
+- interoperation with unmanaged code, platform invoke
+- DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b676599513b923ae46d6ec27d7506435d9cbfcd2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 调用 DLL 函数
-虽然调用非托管 DLL 函数与调用其他托管代码基本相同，但仍有一些差异会使 DLL 函数初看起来颇为费解。  本节包括以下主题，它们将说明某些与异常调用相关的问题。  
+# <a name="calling-a-dll-function"></a><span data-ttu-id="d97e8-102">调用 DLL 函数</span><span class="sxs-lookup"><span data-stu-id="d97e8-102">Calling a DLL Function</span></span>
+<span data-ttu-id="d97e8-103">尽管调用非托管 DLL 函数与调用其他托管代码几乎完全相同，但有一些差异会使 DLL 函数一开始令人感到迷惑。</span><span class="sxs-lookup"><span data-stu-id="d97e8-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="d97e8-104">本部分介绍的主题描述了与一些与调用相关的异常问题。</span><span class="sxs-lookup"><span data-stu-id="d97e8-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  
   
- 从平台调用返回的结构必须为在托管和非托管代码中具有相同表示形式的数据类型。  因为这些类型不需要转换，因此称为“可直接复制到本机结构中的类型”（参见[可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)）。  若要调用将非直接复制到本机结构中的结构作为其返回类型的函数，可以定义一个与非直接复制到本机结构中的类型具有相同大小的可直接复制到本机结构中的帮助器类型，并在此函数返回后转换数据。  
+ <span data-ttu-id="d97e8-105">从平台调用返回的结构必须是在托管代码和非托管代码中表示形式相同的数据类型。</span><span class="sxs-lookup"><span data-stu-id="d97e8-105">Structures that are returned from platform invoke calls must be data types that have the same representation in managed and unmanaged code.</span></span> <span data-ttu-id="d97e8-106">这些类型称为 blittable 类型，因为它们不需要转换（请参阅 [Blittable 类型和非 Blittable 类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)）。</span><span class="sxs-lookup"><span data-stu-id="d97e8-106">Such types are called *blittable types* because they do not require conversion (see [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)).</span></span> <span data-ttu-id="d97e8-107">若要调用返回类型为 non-blittable 结构的函数，可定义与 non-blittable 类型大小相同的 blittable 帮助程序类型，并在函数返回后转换数据。</span><span class="sxs-lookup"><span data-stu-id="d97e8-107">To call a function that has a non-blittable structure as its return type, you can define a blittable helper type of the same size as the non-blittable type and convert the data after the function returns.</span></span>  
   
-## 本节内容  
- [传递结构](../../../docs/framework/interop/passing-structures.md)  
- 说明用已定义的布局传送数据结构时的问题。  
+## <a name="in-this-section"></a><span data-ttu-id="d97e8-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="d97e8-108">In This Section</span></span>  
+ [<span data-ttu-id="d97e8-109">传递结构</span><span class="sxs-lookup"><span data-stu-id="d97e8-109">Passing Structures</span></span>](../../../docs/framework/interop/passing-structures.md)  
+ <span data-ttu-id="d97e8-110">确定使用预定义布局传递数据结构的问题。</span><span class="sxs-lookup"><span data-stu-id="d97e8-110">Identifies the issues of passing data structures with a predefined layout.</span></span>  
   
- [回调函数](../../../docs/framework/interop/callback-functions.md)  
- 提供关于回调函数的基本信息。  
+ [<span data-ttu-id="d97e8-111">回调函数</span><span class="sxs-lookup"><span data-stu-id="d97e8-111">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
+ <span data-ttu-id="d97e8-112">提供有关回调函数的基本信息。</span><span class="sxs-lookup"><span data-stu-id="d97e8-112">Provides basic information about callback functions.</span></span>  
   
- [如何：实现回调函数](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
- 描述如何实现托管代码中的回调函数。  
+ [<span data-ttu-id="d97e8-113">如何：实现回调函数</span><span class="sxs-lookup"><span data-stu-id="d97e8-113">How to: Implement Callback Functions</span></span>](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
+ <span data-ttu-id="d97e8-114">描述如何在托管代码中实现回调函数。</span><span class="sxs-lookup"><span data-stu-id="d97e8-114">Describes how to implement callback functions in managed code.</span></span>  
   
-## 相关章节  
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- 描述如何使用平台调用来调用非托管的 DLL 函数。  
+## <a name="related-sections"></a><span data-ttu-id="d97e8-115">相关章节</span><span class="sxs-lookup"><span data-stu-id="d97e8-115">Related Sections</span></span>  
+ [<span data-ttu-id="d97e8-116">使用非托管 DLL 函数</span><span class="sxs-lookup"><span data-stu-id="d97e8-116">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ <span data-ttu-id="d97e8-117">描述如何使用平台调用调用非托管 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="d97e8-117">Describes how to call unmanaged DLL functions using platform invoke.</span></span>  
   
- [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- 描述如何声明方法参数以及将变量传递给由非托管库导出的函数。
+ [<span data-ttu-id="d97e8-118">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="d97e8-118">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
+ <span data-ttu-id="d97e8-119">描述如何声明方法参数以及如何将自变量传递给由非托管库导出的函数。</span><span class="sxs-lookup"><span data-stu-id="d97e8-119">Describes how to declare method parameters and pass arguments to functions exported by unmanaged libraries.</span></span>
+

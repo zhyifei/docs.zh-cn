@@ -1,1 +1,1 @@
-Microsoft 后台智能传输服务 (BITS)
+<span data-ttu-id="d8e55-101">Microsoft 后台智能传输服务 (BITS)</span><span class="sxs-lookup"><span data-stu-id="d8e55-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

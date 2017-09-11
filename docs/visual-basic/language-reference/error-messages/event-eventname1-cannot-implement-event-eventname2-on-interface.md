@@ -32,26 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6253b3e9ad07c3715c55a8cfd0891792b45a452
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 340547d3673b651e988a6c1167bf7043360b04e4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a>事件&lt;eventname1&gt;'不能实现事件&lt;eventname2&gt;on 接口&lt;接口&gt;因为它们的委托类型&lt;delegate1&gt;'和'&lt;delegate2&gt;' 不匹配
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]不能实现一个事件，因为该事件的委托类型与接口中事件的委托类型不匹配。 如果在接口中定义了多个事件，然后试图用一个事件同时实现这些事件，则可能发生此错误。 只有当所有要实现的事件都使用 `As` 语法进行声明并指定相同的委托类型时，事件才能实现两个或更多个事件。  
+# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a><span data-ttu-id="ef7f8-102">事件&lt;eventname1&gt;'不能实现事件&lt;eventname2&gt;on 接口&lt;接口&gt;因为它们的委托类型&lt;delegate1&gt;'和'&lt;delegate2&gt;' 不匹配</span><span class="sxs-lookup"><span data-stu-id="ef7f8-102">Event &#39;&lt;eventname1&gt;&#39; cannot implement event &#39;&lt;eventname2&gt;&#39; on interface &#39;&lt;interface&gt;&#39; because their delegate types &#39;&lt;delegate1&gt;&#39; and &#39;&lt;delegate2&gt;&#39; do not match</span></span>
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="ef7f8-103">不能实现一个事件，因为该事件的委托类型与接口中事件的委托类型不匹配。</span><span class="sxs-lookup"><span data-stu-id="ef7f8-103"> cannot implement an event because the delegate type of the event does not match the delegate type of the event in the interface.</span></span> <span data-ttu-id="ef7f8-104">如果在接口中定义了多个事件，然后试图用一个事件同时实现这些事件，则可能发生此错误。</span><span class="sxs-lookup"><span data-stu-id="ef7f8-104">This error can occur when you define multiple events in an interface and then attempt to implement them together with the same event.</span></span> <span data-ttu-id="ef7f8-105">只有当所有要实现的事件都使用 `As` 语法进行声明并指定相同的委托类型时，事件才能实现两个或更多个事件。</span><span class="sxs-lookup"><span data-stu-id="ef7f8-105">An event can implement two or more events only if all implemented events are declared using the `As` syntax and specify the same delegate type.</span></span>  
   
- **错误 ID:** BC31423  
+ <span data-ttu-id="ef7f8-106">**错误 ID:** BC31423</span><span class="sxs-lookup"><span data-stu-id="ef7f8-106">**Error ID:** BC31423</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ef7f8-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="ef7f8-107">To correct this error</span></span>  
   
--   单独实现事件。  
+-   <span data-ttu-id="ef7f8-108">单独实现事件。</span><span class="sxs-lookup"><span data-stu-id="ef7f8-108">Implement the events separately.</span></span>  
   
-     - 或 -  
+     <span data-ttu-id="ef7f8-109">- 或 -</span><span class="sxs-lookup"><span data-stu-id="ef7f8-109">—or—</span></span>  
   
--   在接口中使用定义的事件`As`语法，并指定相同的委托类型。  
+-   <span data-ttu-id="ef7f8-110">在接口中使用定义的事件`As`语法，并指定相同的委托类型。</span><span class="sxs-lookup"><span data-stu-id="ef7f8-110">Define the events in the interface using the `As` syntax and specify the same delegate type.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="ef7f8-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ef7f8-111">See Also</span></span>  
+ <span data-ttu-id="ef7f8-112">[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md) </span><span class="sxs-lookup"><span data-stu-id="ef7f8-112">[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) </span></span>  
+<span data-ttu-id="ef7f8-113"> [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md) </span><span class="sxs-lookup"><span data-stu-id="ef7f8-113"> [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) </span></span>  
+<span data-ttu-id="ef7f8-114"> [事件](../../../visual-basic/programming-guide/language-features/events/index.md)</span><span class="sxs-lookup"><span data-stu-id="ef7f8-114"> [Events](../../../visual-basic/programming-guide/language-features/events/index.md)</span></span>

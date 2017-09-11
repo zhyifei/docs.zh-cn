@@ -35,87 +35,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: abadaa8e035bfa4c92acc30ab633d6a7e958676c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cc56d90db9a732928773fa549cb1456d368e1dbe
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="parameter-list-visual-basic"></a>参数列表 (Visual Basic)
-指定过程需要被调用时的参数。 由逗号分隔多个参数。 下面是一个参数的语法。  
+# <a name="parameter-list-visual-basic"></a><span data-ttu-id="b12a1-102">参数列表 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b12a1-102">Parameter List (Visual Basic)</span></span>
+<span data-ttu-id="b12a1-103">指定过程需要被调用时的参数。</span><span class="sxs-lookup"><span data-stu-id="b12a1-103">Specifies the parameters a procedure expects when it is called.</span></span> <span data-ttu-id="b12a1-104">由逗号分隔多个参数。</span><span class="sxs-lookup"><span data-stu-id="b12a1-104">Multiple parameters are separated by commas.</span></span> <span data-ttu-id="b12a1-105">下面是一个参数的语法。</span><span class="sxs-lookup"><span data-stu-id="b12a1-105">The following is the syntax for one parameter.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="b12a1-106">语法</span><span class="sxs-lookup"><span data-stu-id="b12a1-106">Syntax</span></span>  
   
 ```  
 [ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
 parametername[( )] [ As parametertype ] [ = defaultvalue ]  
 ```  
   
-## <a name="parts"></a>部件  
+## <a name="parts"></a><span data-ttu-id="b12a1-107">部件</span><span class="sxs-lookup"><span data-stu-id="b12a1-107">Parts</span></span>  
  `attributelist`  
- 可选。 将应用到此参数的属性列表。 必须将括[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)在尖括号 ("`<`"和"`>`")。  
+ <span data-ttu-id="b12a1-108">可选。</span><span class="sxs-lookup"><span data-stu-id="b12a1-108">Optional.</span></span> <span data-ttu-id="b12a1-109">将应用到此参数的属性列表。</span><span class="sxs-lookup"><span data-stu-id="b12a1-109">List of attributes that apply to this parameter.</span></span> <span data-ttu-id="b12a1-110">必须将括[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)在尖括号 ("`<`"和"`>`")。</span><span class="sxs-lookup"><span data-stu-id="b12a1-110">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>  
   
  `Optional`  
- 可选。 指定此参数不需要调用该过程时。  
+ <span data-ttu-id="b12a1-111">可选。</span><span class="sxs-lookup"><span data-stu-id="b12a1-111">Optional.</span></span> <span data-ttu-id="b12a1-112">指定此参数不需要调用该过程时。</span><span class="sxs-lookup"><span data-stu-id="b12a1-112">Specifies that this parameter is not required when the procedure is called.</span></span>  
   
  `ByVal`  
- 可选。 指定该过程不能替换或重新分配下调用的代码中的对应参数的变量元素。  
+ <span data-ttu-id="b12a1-113">可选。</span><span class="sxs-lookup"><span data-stu-id="b12a1-113">Optional.</span></span> <span data-ttu-id="b12a1-114">指定该过程不能替换或重新分配下调用的代码中的对应参数的变量元素。</span><span class="sxs-lookup"><span data-stu-id="b12a1-114">Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.</span></span>  
   
  `ByRef`  
- 可选。 指定该过程可以用相同的方式与调用代码本身可以修改调用代码中的基础变量元素。  
+ <span data-ttu-id="b12a1-115">可选。</span><span class="sxs-lookup"><span data-stu-id="b12a1-115">Optional.</span></span> <span data-ttu-id="b12a1-116">指定该过程可以用相同的方式与调用代码本身可以修改调用代码中的基础变量元素。</span><span class="sxs-lookup"><span data-stu-id="b12a1-116">Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.</span></span>  
   
  `ParamArray`  
- 可选。 指定的参数列表中的最后一个参数是一个指定的数据类型的元素的可选数组。 这样将任意数量的参数传递给过程的调用代码。  
+ <span data-ttu-id="b12a1-117">可选。</span><span class="sxs-lookup"><span data-stu-id="b12a1-117">Optional.</span></span> <span data-ttu-id="b12a1-118">指定的参数列表中的最后一个参数是一个指定的数据类型的元素的可选数组。</span><span class="sxs-lookup"><span data-stu-id="b12a1-118">Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type.</span></span> <span data-ttu-id="b12a1-119">这样将任意数量的参数传递给过程的调用代码。</span><span class="sxs-lookup"><span data-stu-id="b12a1-119">This lets the calling code pass an arbitrary number of arguments to the procedure.</span></span>  
   
  `parametername`  
- 必需。 表示参数的本地变量的名称。  
+ <span data-ttu-id="b12a1-120">必需。</span><span class="sxs-lookup"><span data-stu-id="b12a1-120">Required.</span></span> <span data-ttu-id="b12a1-121">表示参数的本地变量的名称。</span><span class="sxs-lookup"><span data-stu-id="b12a1-121">Name of the local variable representing the parameter.</span></span>  
   
  `parametertype`  
- 如果使用`Option Strict`是`On`。 表示参数的本地变量的数据类型。  
+ <span data-ttu-id="b12a1-122">如果使用`Option Strict`是`On`。</span><span class="sxs-lookup"><span data-stu-id="b12a1-122">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="b12a1-123">表示参数的本地变量的数据类型。</span><span class="sxs-lookup"><span data-stu-id="b12a1-123">Data type of the local variable representing the parameter.</span></span>  
   
  `defaultvalue`  
- 所需的`Optional`参数。 任何常量或常量表达式的计算结果为该参数的数据类型。 如果类型为`Object`，或类、 接口、 数组或结构，默认值只能是`Nothing`。  
+ <span data-ttu-id="b12a1-124">所需的`Optional`参数。</span><span class="sxs-lookup"><span data-stu-id="b12a1-124">Required for `Optional` parameters.</span></span> <span data-ttu-id="b12a1-125">任何常量或常量表达式的计算结果为该参数的数据类型。</span><span class="sxs-lookup"><span data-stu-id="b12a1-125">Any constant or constant expression that evaluates to the data type of the parameter.</span></span> <span data-ttu-id="b12a1-126">如果类型为`Object`，或类、 接口、 数组或结构，默认值只能是`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="b12a1-126">If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.</span></span>  
   
-## <a name="remarks"></a>备注  
- 参数是用括号括起来，并且用逗号隔开。 可以使用任何数据类型声明参数。 如果未指定`parametertype`，它将默认为`Object`。  
+## <a name="remarks"></a><span data-ttu-id="b12a1-127">备注</span><span class="sxs-lookup"><span data-stu-id="b12a1-127">Remarks</span></span>  
+ <span data-ttu-id="b12a1-128">参数是用括号括起来，并且用逗号隔开。</span><span class="sxs-lookup"><span data-stu-id="b12a1-128">Parameters are surrounded by parentheses and separated by commas.</span></span> <span data-ttu-id="b12a1-129">可以使用任何数据类型声明参数。</span><span class="sxs-lookup"><span data-stu-id="b12a1-129">A parameter can be declared with any data type.</span></span> <span data-ttu-id="b12a1-130">如果未指定`parametertype`，它将默认为`Object`。</span><span class="sxs-lookup"><span data-stu-id="b12a1-130">If you do not specify `parametertype`, it defaults to `Object`.</span></span>  
   
- 当调用的代码调用该过程时，它将传递*参数*向每个所需的参数。 有关详细信息，请参阅[差异之间形参和实参](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。  
+ <span data-ttu-id="b12a1-131">当调用的代码调用该过程时，它将传递*参数*向每个所需的参数。</span><span class="sxs-lookup"><span data-stu-id="b12a1-131">When the calling code calls the procedure, it passes an *argument* to each required parameter.</span></span> <span data-ttu-id="b12a1-132">有关详细信息，请参阅[差异之间形参和实参](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。</span><span class="sxs-lookup"><span data-stu-id="b12a1-132">For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).</span></span>  
   
- 调用代码将传递给每个参数的参数是指向中调用代码的基础元素的指针。 如果此元素为*不可变元素*（常量、 文字、 枚举或表达式），它是不可能将其更改任何代码。 如果它是*变量*元素 （声明的变量、 字段、 属性、 数组元素或结构元素），调用代码可以对其进行更改。 有关详细信息，请参阅[差异之间可修改和不可修改参数](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)。  
+ <span data-ttu-id="b12a1-133">调用代码将传递给每个参数的参数是指向中调用代码的基础元素的指针。</span><span class="sxs-lookup"><span data-stu-id="b12a1-133">The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code.</span></span> <span data-ttu-id="b12a1-134">如果此元素为*不可变元素*（常量、 文字、 枚举或表达式），它是不可能将其更改任何代码。</span><span class="sxs-lookup"><span data-stu-id="b12a1-134">If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it.</span></span> <span data-ttu-id="b12a1-135">如果它是*变量*元素 （声明的变量、 字段、 属性、 数组元素或结构元素），调用代码可以对其进行更改。</span><span class="sxs-lookup"><span data-stu-id="b12a1-135">If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it.</span></span> <span data-ttu-id="b12a1-136">有关详细信息，请参阅[差异之间可修改和不可修改参数](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)。</span><span class="sxs-lookup"><span data-stu-id="b12a1-136">For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).</span></span>  
   
- 如果传递的变量元素`ByRef`，该过程它也可以进行更改。 有关详细信息，请参阅[差异之间传递的参数值和通过引用来](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)。  
+ <span data-ttu-id="b12a1-137">如果传递的变量元素`ByRef`，该过程它也可以进行更改。</span><span class="sxs-lookup"><span data-stu-id="b12a1-137">If a variable element is passed `ByRef`, the procedure can change it as well.</span></span> <span data-ttu-id="b12a1-138">有关详细信息，请参阅[差异之间传递的参数值和通过引用来](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="b12a1-138">For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).</span></span>  
   
-## <a name="rules"></a>规则  
+## <a name="rules"></a><span data-ttu-id="b12a1-139">规则</span><span class="sxs-lookup"><span data-stu-id="b12a1-139">Rules</span></span>  
   
--   **括号。** 如果指定的参数列表，则必须将其括在括号中。 如果没有任何参数，您仍然可以使用括号内包含一个空列表。 这将通过清晰化元素一个过程提高代码的可读性。  
+-   <span data-ttu-id="b12a1-140">**括号。**</span><span class="sxs-lookup"><span data-stu-id="b12a1-140">**Parentheses.**</span></span> <span data-ttu-id="b12a1-141">如果指定的参数列表，则必须将其括在括号中。</span><span class="sxs-lookup"><span data-stu-id="b12a1-141">If you specify a parameter list, you must enclose it in parentheses.</span></span> <span data-ttu-id="b12a1-142">如果没有任何参数，您仍然可以使用括号内包含一个空列表。</span><span class="sxs-lookup"><span data-stu-id="b12a1-142">If there are no parameters, you can still use parentheses enclosing an empty list.</span></span> <span data-ttu-id="b12a1-143">这将通过清晰化元素一个过程提高代码的可读性。</span><span class="sxs-lookup"><span data-stu-id="b12a1-143">This improves the readability of your code by clarifying that the element is a procedure.</span></span>  
   
--   **可选参数。** 如果您使用`Optional`参数修饰符，列表中的所有后续参数也必须为可选和使用声明`Optional`修饰符。  
+-   <span data-ttu-id="b12a1-144">**可选参数。**</span><span class="sxs-lookup"><span data-stu-id="b12a1-144">**Optional Parameters.**</span></span> <span data-ttu-id="b12a1-145">如果您使用`Optional`参数修饰符，列表中的所有后续参数也必须为可选和使用声明`Optional`修饰符。</span><span class="sxs-lookup"><span data-stu-id="b12a1-145">If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.</span></span>  
   
-     每个可选参数声明必须提供`defaultvalue`子句。  
+     <span data-ttu-id="b12a1-146">每个可选参数声明必须提供`defaultvalue`子句。</span><span class="sxs-lookup"><span data-stu-id="b12a1-146">Every optional parameter declaration must supply the `defaultvalue` clause.</span></span>  
   
-     有关详细信息，请参阅[可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。  
+     <span data-ttu-id="b12a1-147">有关详细信息，请参阅[可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。</span><span class="sxs-lookup"><span data-stu-id="b12a1-147">For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).</span></span>  
   
--   **参数数组。** 必须指定`ByVal`为`ParamArray`参数。  
+-   <span data-ttu-id="b12a1-148">**参数数组。**</span><span class="sxs-lookup"><span data-stu-id="b12a1-148">**Parameter Arrays.**</span></span> <span data-ttu-id="b12a1-149">必须指定`ByVal`为`ParamArray`参数。</span><span class="sxs-lookup"><span data-stu-id="b12a1-149">You must specify `ByVal` for a `ParamArray` parameter.</span></span>  
   
-     您不能同时使用`Optional`和`ParamArray`在相同的参数列表中。  
+     <span data-ttu-id="b12a1-150">您不能同时使用`Optional`和`ParamArray`在相同的参数列表中。</span><span class="sxs-lookup"><span data-stu-id="b12a1-150">You cannot use both `Optional` and `ParamArray` in the same parameter list.</span></span>  
   
-     有关详细信息，请参阅[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
+     <span data-ttu-id="b12a1-151">有关详细信息，请参阅[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。</span><span class="sxs-lookup"><span data-stu-id="b12a1-151">For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).</span></span>  
   
--   **传递机制。** 每个参数的默认机制是`ByVal`，这意味着该过程不能更改基础变量元素。 但是，如果该元素是引用类型，该过程可以修改内容或成员的基础对象，即使它不能替换或重新分配对象本身。  
+-   <span data-ttu-id="b12a1-152">**传递机制。**</span><span class="sxs-lookup"><span data-stu-id="b12a1-152">**Passing Mechanism.**</span></span> <span data-ttu-id="b12a1-153">每个参数的默认机制是`ByVal`，这意味着该过程不能更改基础变量元素。</span><span class="sxs-lookup"><span data-stu-id="b12a1-153">The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element.</span></span> <span data-ttu-id="b12a1-154">但是，如果该元素是引用类型，该过程可以修改内容或成员的基础对象，即使它不能替换或重新分配对象本身。</span><span class="sxs-lookup"><span data-stu-id="b12a1-154">However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.</span></span>  
   
--   **参数名称。** 如果参数的数据类型是一个数组，请按照`parametername`紧跟括号。 参数名称的详细信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+-   <span data-ttu-id="b12a1-155">**参数名称。**</span><span class="sxs-lookup"><span data-stu-id="b12a1-155">**Parameter Names.**</span></span> <span data-ttu-id="b12a1-156">如果参数的数据类型是一个数组，请按照`parametername`紧跟括号。</span><span class="sxs-lookup"><span data-stu-id="b12a1-156">If the parameter's data type is an array, follow `parametername` immediately by parentheses.</span></span> <span data-ttu-id="b12a1-157">参数名称的详细信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="b12a1-157">For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例演示`Function`定义两个参数的过程。  
+## <a name="example"></a><span data-ttu-id="b12a1-158">示例</span><span class="sxs-lookup"><span data-stu-id="b12a1-158">Example</span></span>  
+ <span data-ttu-id="b12a1-159">下面的示例演示`Function`定义两个参数的过程。</span><span class="sxs-lookup"><span data-stu-id="b12a1-159">The following example shows a `Function` procedure that defines two parameters.</span></span>  
   
- [!code-vb[VbVbalrStatements #&2;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
+ <span data-ttu-id="b12a1-160">[!code-vb[VbVbalrStatements #&2;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="b12a1-160">[!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
- [如何：在代码中拆分和合并语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a><span data-ttu-id="b12a1-161">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b12a1-161">See Also</span></span>  
+ <span data-ttu-id="b12a1-162"><xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute></span><span class="sxs-lookup"><span data-stu-id="b12a1-162"><xref:System.Runtime.InteropServices.DllImportAttribute></span></span>   
+<span data-ttu-id="b12a1-163"> [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md) </span><span class="sxs-lookup"><span data-stu-id="b12a1-163"> [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) </span></span>  
+<span data-ttu-id="b12a1-164"> [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md) </span><span class="sxs-lookup"><span data-stu-id="b12a1-164"> [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md) </span></span>  
+<span data-ttu-id="b12a1-165"> [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md) </span><span class="sxs-lookup"><span data-stu-id="b12a1-165"> [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) </span></span>  
+<span data-ttu-id="b12a1-166"> [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md) </span><span class="sxs-lookup"><span data-stu-id="b12a1-166"> [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) </span></span>  
+<span data-ttu-id="b12a1-167"> [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md) </span><span class="sxs-lookup"><span data-stu-id="b12a1-167"> [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) </span></span>  
+<span data-ttu-id="b12a1-168"> [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md) </span><span class="sxs-lookup"><span data-stu-id="b12a1-168"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md) </span></span>  
+<span data-ttu-id="b12a1-169"> [如何：在代码中拆分和合并语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)</span><span class="sxs-lookup"><span data-stu-id="b12a1-169"> [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)</span></span>

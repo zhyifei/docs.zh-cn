@@ -1,1 +1,1 @@
-统一资源标识符 (URI)
+<span data-ttu-id="b3a0b-101">统一资源标识符 (URI)</span><span class="sxs-lookup"><span data-stu-id="b3a0b-101">uniform resource identifier (URI)</span></span>

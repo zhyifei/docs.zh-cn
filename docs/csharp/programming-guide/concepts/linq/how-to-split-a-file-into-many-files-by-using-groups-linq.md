@@ -26,12 +26,12 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)
-此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="e1ed1-102">如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e1ed1-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="e1ed1-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="e1ed1-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a>创建数据文件  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="e1ed1-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="e1ed1-104">To create the data files</span></span>  
   
-1.  将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
+1.  <span data-ttu-id="e1ed1-105">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="e1ed1-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
     Garcia, Debra  
     ```  
   
-2.  将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：注意这两个文件有一些共同的姓名。  
+2.  <span data-ttu-id="e1ed1-106">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：注意这两个文件有一些共同的姓名。</span><span class="sxs-lookup"><span data-stu-id="e1ed1-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/28/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="e1ed1-107">示例</span><span class="sxs-lookup"><span data-stu-id="e1ed1-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -139,12 +139,12 @@ class SplitWithGroups
  */  
 ```  
   
- 对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。  
+ <span data-ttu-id="e1ed1-108">对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。</span><span class="sxs-lookup"><span data-stu-id="e1ed1-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="e1ed1-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="e1ed1-109">Compiling the Code</span></span>  
+ <span data-ttu-id="e1ed1-110">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="e1ed1-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="e1ed1-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="e1ed1-111">See Also</span></span>  
+ <span data-ttu-id="e1ed1-112">[LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="e1ed1-112">[LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+ [<span data-ttu-id="e1ed1-113">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="e1ed1-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

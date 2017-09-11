@@ -37,15 +37,15 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="on-c-reference"></a>on（C# 参考）
-`on` 上下文关键字用于在查询表达式的[ join 子句](../../../csharp/language-reference/keywords/join-clause.md)中指定联接条件。  
+# <a name="on-c-reference"></a><span data-ttu-id="bf07b-102">on（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="bf07b-102">on (C# Reference)</span></span>
+<span data-ttu-id="bf07b-103">`on` 上下文关键字用于在查询表达式的[ join 子句](../../../csharp/language-reference/keywords/join-clause.md)中指定联接条件。</span><span class="sxs-lookup"><span data-stu-id="bf07b-103">The `on` contextual keyword is used in the [join clause](../../../csharp/language-reference/keywords/join-clause.md) of a query expression to specify the join condition.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例说明了 `on` 在 `join` 子句中的用法。  
+## <a name="example"></a><span data-ttu-id="bf07b-104">示例</span><span class="sxs-lookup"><span data-stu-id="bf07b-104">Example</span></span>  
+ <span data-ttu-id="bf07b-105">下面的示例说明了 `on` 在 `join` 子句中的用法。</span><span class="sxs-lookup"><span data-stu-id="bf07b-105">The following example shows the use of `on` in a `join` clause.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]  
+ <span data-ttu-id="bf07b-106">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="bf07b-106">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="bf07b-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bf07b-107">See Also</span></span>  
+ <span data-ttu-id="bf07b-108">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bf07b-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="bf07b-109">LINQ 查询表达式</span><span class="sxs-lookup"><span data-stu-id="bf07b-109">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
 

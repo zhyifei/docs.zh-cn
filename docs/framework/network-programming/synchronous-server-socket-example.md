@@ -1,30 +1,35 @@
 ---
-title: "同步服务器套接字示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "同步服务器套接字"
-  - "套接字，代码示例"
-  - "套接字，同步服务器套接字"
+title: "同步服务器套接字示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- synchronous server sockets
+- sockets, code examples
+- sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 同步服务器套接字示例
-下面的示例程序创建接收来自客户端的连接请求的服务器。  服务器使用一个同步套接字生成，因此，服务器应用程序的执行挂起，它在等待从客户端时的连接。  应用程序收到来自客户端的字符串，在控制台上显示字符串，然后回显该字符串返回给客户端。  从客户端的字符串必须包含字符串“\<EOF\>”用于通知消息的结尾。  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="e21e4-102">同步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="e21e4-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="e21e4-103">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="e21e4-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="e21e4-104">服务器使用同步套接字构建，因此在等待客户端的连接时，暂停执行服务器应用程序。</span><span class="sxs-lookup"><span data-stu-id="e21e4-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="e21e4-105">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="e21e4-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="e21e4-106">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="e21e4-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -86,7 +91,6 @@ Public Class SynchronousSocketListener
     End Sub  
   
 End Class 'SynchronousSocketListener  
-  
 ```  
   
 ```csharp  
@@ -165,7 +169,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## 请参阅  
- [同步客户端套接字示例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="e21e4-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e21e4-107">See Also</span></span>  
+ <span data-ttu-id="e21e4-108">[同步客户端套接字示例](../../../docs/framework/network-programming/synchronous-client-socket-example.md) </span><span class="sxs-lookup"><span data-stu-id="e21e4-108">[Synchronous Client Socket Example](../../../docs/framework/network-programming/synchronous-client-socket-example.md) </span></span>  
+ <span data-ttu-id="e21e4-109">[使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md) </span><span class="sxs-lookup"><span data-stu-id="e21e4-109">[Using a Synchronous Server Socket](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md) </span></span>  
+ [<span data-ttu-id="e21e4-110">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="e21e4-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+

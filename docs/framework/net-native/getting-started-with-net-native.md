@@ -1,127 +1,133 @@
 ---
-title: ".NET Native 入门 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ".NET Native 入门"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 caps.latest.revision: 29
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 29
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c9618213569766a6ae355a936a4b1f71a5046ef6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET Native 入门
-无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：  
+# <a name="getting-started-with-net-native"></a><span data-ttu-id="436e3-102">.NET Native 入门</span><span class="sxs-lookup"><span data-stu-id="436e3-102">Getting Started with .NET Native</span></span>
+<span data-ttu-id="436e3-103">无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。</span><span class="sxs-lookup"><span data-stu-id="436e3-103">Whether you are writing a new Windows app for Windows 10 or you are migrating an existing Windows Store app, you can follow the same set of procedures.</span></span> <span data-ttu-id="436e3-104">若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：</span><span class="sxs-lookup"><span data-stu-id="436e3-104">To create a [!INCLUDE[net_native](../../../includes/net-native-md.md)] app, follow these steps:</span></span>  
   
-1.  [开发面向 Windows 10 的通用 Windows 平台 \(UWP\) 应用](#Step1)，测试应用的调试版本以确保其正常工作。  
+1.  <span data-ttu-id="436e3-105">[开发面向 Windows 10 的通用 Windows 平台 (UWP) 应用](#Step1)，测试应用的调试版本以确保其正常工作。</span><span class="sxs-lookup"><span data-stu-id="436e3-105">[Develop a Universal Windows Platform (UWP) app that targets Windows 10](#Step1), and test the debug builds of your app to ensure that it works properly.</span></span>  
   
-2.  [处理额外的反射和序列化用法](#Step4)。  
+2.  <span data-ttu-id="436e3-106">[处理额外的反射和序列化用法](#Step2)。</span><span class="sxs-lookup"><span data-stu-id="436e3-106">[Handle additional reflection and serialization usage](#Step2).</span></span>  
   
-3.  [部署和测试应用的发布版本](#Step5)。  
+3.  <span data-ttu-id="436e3-107">[部署和测试应用的发布版本](#Step3)。</span><span class="sxs-lookup"><span data-stu-id="436e3-107">[Deploy and test the release builds of your app](#Step3).</span></span>  
   
-4.  [手动解决丢失的元数据](#Step6)，并重复[步骤 3](#Step5) 直到所有问题都得到解决。  
+4.  <span data-ttu-id="436e3-108">[手动解决丢失的元数据](#Step4)，并重复[步骤 3](#Step3)，直到所有问题都得到解决为止。</span><span class="sxs-lookup"><span data-stu-id="436e3-108">[Manually resolve missing metadata](#Step4), and repeat [step 3](#Step3) until all issues are resolved.</span></span>  
   
 > [!NOTE]
->  如果你正在将现有 Windows 应用商店应用迁移到 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，请确保要查看 [将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。  
+>  <span data-ttu-id="436e3-109">如果你正在将现有 Windows 应用商店应用迁移到 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，请确保要查看 [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。</span><span class="sxs-lookup"><span data-stu-id="436e3-109">If you are migrating an existing Windows Store app to [!INCLUDE[net_native](../../../includes/net-native-md.md)], be sure to review [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).</span></span>  
   
 <a name="Step1"></a>   
-## 步骤 1：开发和测试 UWP 应用的调试版本  
- 不管是开发新的应用还是迁移现有应用，均遵循用于任何 Windows 应用的同一流程进行操作。  
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a><span data-ttu-id="436e3-110">步骤 1：开发和测试 UWP 应用的调试版本</span><span class="sxs-lookup"><span data-stu-id="436e3-110">Step 1: Develop and test debug builds of your UWP app</span></span>  
+ <span data-ttu-id="436e3-111">不管是开发新的应用还是迁移现有应用，均遵循用于任何 Windows 应用的同一流程进行操作。</span><span class="sxs-lookup"><span data-stu-id="436e3-111">Whether you are developing a new app or migrating an existing one, you follow the same process as for any Windows app.</span></span>  
   
-1.  通过使用针对 Visual C\# 或 Visual Basic 的通用 Windows 应用模板，在 Visual Studio 中创建新的 UWP 项目。 默认情况下，所有 UWP 应用程序均以 CoreCLR 为目标，且其发布版本通过使用 .NET Native 工具链进行编译。  
+1.  <span data-ttu-id="436e3-112">通过使用针对 Visual C# 或 Visual Basic 的通用 Windows 应用模板，在 Visual Studio 中创建新的 UWP 项目。</span><span class="sxs-lookup"><span data-stu-id="436e3-112">Create a new UWP project in Visual Studio by using the Universal Windows app template for Visual C# or Visual Basic.</span></span> <span data-ttu-id="436e3-113">默认情况下，所有 UWP 应用程序均以 CoreCLR 为目标，且其发布版本通过使用 .NET Native 工具链进行编译。</span><span class="sxs-lookup"><span data-stu-id="436e3-113">By default, all UWP applications target the CoreCLR and their release builds are compiled by using the .NET Native tool chain.</span></span>  
   
-2.  请注意，使用 .NET Native 工具链和不使用它来编译 UWP 应用项目之间存在一些已知的兼容性问题。 有关更多信息，请参阅[迁移指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。  
+2.  <span data-ttu-id="436e3-114">请注意，使用 .NET Native 工具链和不使用它来编译 UWP 应用项目之间存在一些已知的兼容性问题。</span><span class="sxs-lookup"><span data-stu-id="436e3-114">Note that there are some known compatibility issues between compiling UWP app projects with the .NET Native tool chain and without it.</span></span> <span data-ttu-id="436e3-115">有关更多信息，请参阅 [迁移指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。</span><span class="sxs-lookup"><span data-stu-id="436e3-115">Refer to the [migration guide](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) for more information.</span></span>  
   
- 现在可针对在本地系统上（或在模拟器中）运行的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 表面区域编写 C\# 或 Visual Basic 代码。  
+ <span data-ttu-id="436e3-116">现在可针对在本地系统上（或在模拟器中）运行的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 表面区域编写 C# 或 Visual Basic 代码。</span><span class="sxs-lookup"><span data-stu-id="436e3-116">You can now write C# or Visual Basic code against the [!INCLUDE[net_native](../../../includes/net-native-md.md)] surface area that runs on the local system (or in the simulator).</span></span>  
   
 > [!IMPORTANT]
->  开发你的应用时，在代码中用任何序列化或反射时都应提起注意。  
+>  <span data-ttu-id="436e3-117">开发你的应用时，在代码中用任何序列化或反射时都应提起注意。</span><span class="sxs-lookup"><span data-stu-id="436e3-117">As you develop your app, note any use of serialization or reflection in your code.</span></span>  
   
- 默认情况下，调试版本均为 JIT 编译以启用快速 F5 部署，而发布版本使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 预编译技术进行编译。 这意味着在使用 .NET Native 工具链来编译应用的调试版本之前，应生成和测试它们以确保其正常工作。  
+ <span data-ttu-id="436e3-118">默认情况下，调试版本均为 JIT 编译以启用快速 F5 部署，而发布版本使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 预编译技术进行编译。</span><span class="sxs-lookup"><span data-stu-id="436e3-118">By default, debug builds are JIT-compiled to enable rapid F5 deployment, while release builds are compiled by using the [!INCLUDE[net_native](../../../includes/net-native-md.md)] pre-compilation technology.</span></span> <span data-ttu-id="436e3-119">这意味着在使用 .NET Native 工具链来编译应用的调试版本之前，应生成和测试它们以确保其正常工作。</span><span class="sxs-lookup"><span data-stu-id="436e3-119">This means you should build and test the debug builds of your app to ensure that they work normally before compiling them with the .NET Native tool chain.</span></span>  
+  
+<a name="Step2"></a>   
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a><span data-ttu-id="436e3-120">步骤 2：处理其他反射和序列化用法</span><span class="sxs-lookup"><span data-stu-id="436e3-120">Step 2: Handle additional reflection and serialization usage</span></span>  
+ <span data-ttu-id="436e3-121">创建运行时指令文件 Default.rd.xml 时，会将其自动添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="436e3-121">A runtime directives file, Default.rd.xml, is automatically added to your project when you create it.</span></span> <span data-ttu-id="436e3-122">如果在 C# 中进行开发，则该文件位于项目的 **“属性”** 文件夹中。</span><span class="sxs-lookup"><span data-stu-id="436e3-122">If you develop in C#, it is found in your project's **Properties** folder.</span></span> <span data-ttu-id="436e3-123">如果在 Visual Basic 中进行开发，则该文件位于项目的 **“我的项目”** 文件夹中。</span><span class="sxs-lookup"><span data-stu-id="436e3-123">If you develop in Visual Basic, it is found in your project's **My Project** folder.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="436e3-124">有关提供为何需要运行时指令文件的背景的 .NET 本机编译过程的概述，请参阅 [.NET 本机和编译](../../../docs/framework/net-native/net-native-and-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="436e3-124">For an overview of the .NET Native compilation process that provides background on why a runtime directives file is needed, see [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md).</span></span>  
+  
+ <span data-ttu-id="436e3-125">运行时指令文件用于定义应用在运行时所需的元数据。</span><span class="sxs-lookup"><span data-stu-id="436e3-125">The runtime directives file is used to define the metadata that your app needs at run time.</span></span> <span data-ttu-id="436e3-126">某些情况下，文件的默认版本可能是够用的。</span><span class="sxs-lookup"><span data-stu-id="436e3-126">In some cases, the default version of the file may be adequate.</span></span> <span data-ttu-id="436e3-127">然而，一些依赖于序列化或反射的代码可能需要运行时指令文件中的其他条目。</span><span class="sxs-lookup"><span data-stu-id="436e3-127">However, some code that relies on serialization or reflection may require additional entries in the runtime directives file.</span></span>  
+  
+ <span data-ttu-id="436e3-128">**序列化**</span><span class="sxs-lookup"><span data-stu-id="436e3-128">**Serialization**</span></span>  
+ <span data-ttu-id="436e3-129">有两类序列化程序，并且每一类可能都要求在运行时指令文件中有额外的条目：</span><span class="sxs-lookup"><span data-stu-id="436e3-129">There are two categories of serializers, and both may require additional entries in the runtime directives file:</span></span>  
+  
+-   <span data-ttu-id="436e3-130">非基于反射的序列化程序。</span><span class="sxs-lookup"><span data-stu-id="436e3-130">Non-reflection based serializers.</span></span> <span data-ttu-id="436e3-131">在 .NET Framework 类库中找到的序列化程序，比如 <xref:System.Runtime.Serialization.DataContractSerializer>\ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 <xref:System.Xml.Serialization.XmlSerializer> 类，不依赖反射。</span><span class="sxs-lookup"><span data-stu-id="436e3-131">The serializers found in the .NET Framework class library, such as the <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, and <xref:System.Xml.Serialization.XmlSerializer> classes, do not rely on reflection.</span></span> <span data-ttu-id="436e3-132">然而，它们需要在基于对象的基础生成的代码得到序列化或反序列化。</span><span class="sxs-lookup"><span data-stu-id="436e3-132">However, they do require that code be generated based on the object to be serialized or deserialized.</span></span>  <span data-ttu-id="436e3-133">有关更多信息，请参阅 [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md)中的“Microsoft 序列化程序”部分。</span><span class="sxs-lookup"><span data-stu-id="436e3-133">For more information, see the "Microsoft Serializers" section in [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).</span></span>  
+  
+-   <span data-ttu-id="436e3-134">第三方序列化程序。</span><span class="sxs-lookup"><span data-stu-id="436e3-134">Third-party serializers.</span></span> <span data-ttu-id="436e3-135">第三方序列化程序库（其中最常见的是 Newtonsoft JSON 序列化程序）通常是基于反射的并且需要在 *.rd.xml 文件中有条目以支持对象序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="436e3-135">Third-party serialization libraries, the most common of which is the Newtonsoft JSON serializer, are generally reflection-based and require entries in the *.rd.xml file to support object serialization and deserialization.</span></span> <span data-ttu-id="436e3-136">有关更多信息，请参阅 [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md)中的“第三方序列化程序”部分。</span><span class="sxs-lookup"><span data-stu-id="436e3-136">For more information, see the "Third-Party Serializers" section in [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).</span></span>  
+  
+ <span data-ttu-id="436e3-137">**依赖反射的方法**</span><span class="sxs-lookup"><span data-stu-id="436e3-137">**Methods that rely on reflection**</span></span>  
+ <span data-ttu-id="436e3-138">在某些情况下，代码中对反射的使用是不明显的。</span><span class="sxs-lookup"><span data-stu-id="436e3-138">In some cases, the use of reflection in code is not obvious.</span></span> <span data-ttu-id="436e3-139">一些常见的 API 或编程模式不被视为是反射 API 的一部分，但依赖反射成功执行。</span><span class="sxs-lookup"><span data-stu-id="436e3-139">Some common APIs or programming patterns aren't considered part of the reflection API but rely on reflection to execute successfully.</span></span> <span data-ttu-id="436e3-140">这包括以下类型实例化和方法构造方法：</span><span class="sxs-lookup"><span data-stu-id="436e3-140">This includes the following type instantiation and method construction methods:</span></span>  
+  
+-   <span data-ttu-id="436e3-141"><xref:System.Type.MakeGenericType%2A?displayProperty=fullName> 方法</span><span class="sxs-lookup"><span data-stu-id="436e3-141">The <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> method</span></span>  
+  
+-   <span data-ttu-id="436e3-142"><xref:System.Array.CreateInstance%2A?displayProperty=fullName> 和 <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> 方法</span><span class="sxs-lookup"><span data-stu-id="436e3-142">The <xref:System.Array.CreateInstance%2A?displayProperty=fullName> and <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> methods</span></span>  
+  
+-   <span data-ttu-id="436e3-143"><xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName> 方法。</span><span class="sxs-lookup"><span data-stu-id="436e3-143">The <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName> method.</span></span>  
+  
+ <span data-ttu-id="436e3-144">有关详细信息，请参阅 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="436e3-144">For more information, see [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="436e3-145">运行时指令文件中使用的类型名称必须是完全限定的。</span><span class="sxs-lookup"><span data-stu-id="436e3-145">Type names used in runtime directives files must be fully qualified.</span></span> <span data-ttu-id="436e3-146">例如，该文件必须指定“System.String”而不是“String”。</span><span class="sxs-lookup"><span data-stu-id="436e3-146">For example, the file must specify "System.String" instead of "String".</span></span>  
+  
+<a name="Step3"></a>   
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a><span data-ttu-id="436e3-147">步骤 3：部署和测试应用的发布版本</span><span class="sxs-lookup"><span data-stu-id="436e3-147">Step 3: Deploy and test the release builds of your app</span></span>  
+ <span data-ttu-id="436e3-148">在更新运行时指令文件之后，你可以重新生成和部署应用的发布版本。</span><span class="sxs-lookup"><span data-stu-id="436e3-148">After you’ve updated the runtime directives file, you can rebuild and deploy release builds of your app.</span></span> <span data-ttu-id="436e3-149">.NET Native 二进制文件位于目录的 ILC.out 子目录中，此目录是在“编译”选项卡下，项目的“属性”对话框的“生成输出路径”文本框中指定的。不在这个文件夹下的二进制代码还没有使用 .NET Native 进行汇编。</span><span class="sxs-lookup"><span data-stu-id="436e3-149">.NET Native binaries are placed in the ILC.out subdirectory of the directory specified in the **Build output path** text box of  the project's **Properties** dialog box, **Compile** tab. Binaries that aren't in this folder haven't been compiled with .NET Native.</span></span> <span data-ttu-id="436e3-150">彻底测试你的应用，并在其各个目标平台上测试所有方案（包括失败方案）。</span><span class="sxs-lookup"><span data-stu-id="436e3-150">Test your app thoroughly, and test all scenarios, including failure scenarios, on each of its target platforms.</span></span>  
+  
+ <span data-ttu-id="436e3-151">如果应用无法正常工作（尤其是在运行时引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 或 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 异常的情况下），请按照下一部分的指令进行操作，即[步骤 4：手动解决丢失的元数据](#Step4)。</span><span class="sxs-lookup"><span data-stu-id="436e3-151">If your app doesn’t work properly (particularly in cases where it throws [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) or [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) exceptions at run time), follow the instructions in the next section, [Step 4: Manually resolve missing metadata](#Step4).</span></span> <span data-ttu-id="436e3-152">启用最可能的异常可能会帮助发现这些 bug。</span><span class="sxs-lookup"><span data-stu-id="436e3-152">Enabling first-chance exceptions may help you find these bugs.</span></span>  
+  
+ <span data-ttu-id="436e3-153">当你已检测和调试了应用的调试版本，并且确信已消除 [丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 异常后，你应该将你的应用作为一个已得到优化的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用来检测。</span><span class="sxs-lookup"><span data-stu-id="436e3-153">When you’ve tested and debugged the debug builds of your app and you’re confident that you’ve eliminated the [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) and [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) exceptions, you should test your app as an optimized [!INCLUDE[net_native](../../../includes/net-native-md.md)] app.</span></span> <span data-ttu-id="436e3-154">为此，请将活动项目配置从“调试”改为“发布”。</span><span class="sxs-lookup"><span data-stu-id="436e3-154">To do this, change your active project configuration from **Debug** to **Release**.</span></span>  
   
 <a name="Step4"></a>   
-## 步骤 2：处理其他反射和序列化用法  
- 创建运行时指令文件 Default.rd.xml 时，会将其自动添加到项目中。 如果在 C\# 中进行开发，则该文件位于项目的**“属性”**文件夹中。 如果在 Visual Basic 中进行开发，则该文件位于项目的**“我的项目”**文件夹中。  
-  
-> [!NOTE]
->  有关提供为何需要运行时指令文件的背景的 .NET 本机编译过程的概述，请参阅 [.NET 本机和编译](../../../docs/framework/net-native/net-native-and-compilation.md)。  
-  
- 运行时指令文件用于定义应用在运行时所需的元数据。 某些情况下，文件的默认版本可能是够用的。 然而，一些依赖于序列化或反射的代码可能需要运行时指令文件中的其他条目。  
-  
- **序列化**  
- 有两类序列化程序，并且每一类可能都要求在运行时指令文件中有额外的条目：  
-  
--   非基于反射的序列化程序。 在 .NET Framework 类库中找到的序列化程序，比如 <xref:System.Runtime.Serialization.DataContractSerializer>\\[DataContractJsonSerializer](assetId:///T:System.Runtime.Serialization.Json.DataContractJsonSerializer?qualifyHint=False&autoUpgrade=True) 和 <xref:System.Xml.Serialization.XmlSerializer> 类，不依赖反射。 然而，它们需要在基于对象的基础生成的代码得到序列化或反序列化。  有关更多信息，请参阅[序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md)中的“Microsoft 序列化程序”部分。  
-  
--   第三方序列化程序。 第三方序列化程序库（其中最常见的是 Newtonsoft JSON 序列化程序）通常是基于反射的并且需要在 \*.rd.xml 文件中有条目以支持对象序列化和反序列化。 有关更多信息，请参阅[序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md)中的“第三方序列化程序”部分。  
-  
- **依赖反射的方法**  
- 在某些情况下，代码中对反射的使用是不明显的。 一些常见的 API 或编程模式不被视为是反射 API 的一部分，但依赖反射成功执行。 这包括以下类型实例化和方法构造方法：  
-  
--   <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> 方法  
-  
--   <xref:System.Array.CreateInstance%2A?displayProperty=fullName> 和 <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> 方法  
-  
--   <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName> 方法。  
-  
- 有关详细信息，请参阅[利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。  
-  
-> [!NOTE]
->  运行时指令文件中使用的类型名称必须是完全限定的。 例如，该文件必须指定“System.String”而不是“String”。  
-  
-<a name="Step5"></a>   
-## 步骤 3：部署和测试应用的发布版本  
- 在更新运行时指令文件之后，你可以重新生成和部署应用的发布版本。 .NET Native 二进制代码位于目录的 ILC.out 子目录中，是在“汇编”选项卡下，项目的“属性”对话框的“版本输出路径”文本框中指定的。 不在这个文件夹下的二进制代码还没有使用 .NET Native 进行汇编。 彻底测试你的应用，并在其各个目标平台上测试所有方案（包括失败方案）。  
-  
- 如果应用运行不正常（尤其是在运行时引发[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)或[丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)异常的情况下），请遵循下一部分的指令操作，即[步骤 5：手动解决丢失的元数据](#Step6)。 启用最可能的异常可能会帮助发现这些 bug。  
-  
- 当你已检测和调试了应用的调试版本，并且确信已消除[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和[丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)异常后，你应该将你的应用作为一个已得到优化的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用来检测。 为此，将你的活动项目配置从“调试”改为“发布”。  
-  
-<a name="Step6"></a>   
-## 步骤 4：手动解决丢失的元数据  
- 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 上会碰到的你在桌面上不会碰到的最常见失败是[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、[丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)或[丢失运行时项目异常](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)异常。 在某些情况下，元数据的丢失在不可预测的行为中或甚至在应用失败的情况下可以自行显露。 此部分讨论了你该如何通过将指令添加到运行时指令文件来调试和解决这些异常。 有关运行时指令格式的信息，请参阅[运行时指令 \(rd.xml\) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 添加运行时指令后，你应该再次[部署并检测你的应用](#Step5)并解决任何新的[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、[丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)和[丢失运行时项目异常](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)异常，直到你停止遇到任何异常。  
+## <a name="step-4-manually-resolve-missing-metadata"></a><span data-ttu-id="436e3-155">步骤 4：手动解决丢失的元数据</span><span class="sxs-lookup"><span data-stu-id="436e3-155">Step 4: Manually resolve missing metadata</span></span>  
+ <span data-ttu-id="436e3-156">在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 上会碰到的你在桌面上不会碰到的最常见失败是 [丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)或 [丢失运行时项目异常](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常。</span><span class="sxs-lookup"><span data-stu-id="436e3-156">The most common failure you'll encounter with [!INCLUDE[net_native](../../../includes/net-native-md.md)] that you don't encounter on the desktop is a runtime [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), or [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exception.</span></span> <span data-ttu-id="436e3-157">在某些情况下，元数据的丢失在不可预测的行为中或甚至在应用失败的情况下可以自行显露。</span><span class="sxs-lookup"><span data-stu-id="436e3-157">In some cases, the absence of metadata can manifest itself in unpredictable behavior or even in app failures.</span></span> <span data-ttu-id="436e3-158">此部分讨论了你该如何通过将指令添加到运行时指令文件来调试和解决这些异常。</span><span class="sxs-lookup"><span data-stu-id="436e3-158">This section discusses how you can debug and resolve these exceptions by adding directives to the runtime directives file.</span></span> <span data-ttu-id="436e3-159">有关运行时指令的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="436e3-159">For information about the format of runtime directives, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="436e3-160">添加运行时指令后，应该再次[部署并测试应用](#Step3)并解决任何新的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常，直到不再遇到任何异常为止。</span><span class="sxs-lookup"><span data-stu-id="436e3-160">After you’ve added runtime directives, you should [deploy and test your app](#Step3) again and resolve any new [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), and  [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exceptions until you encounter no more exceptions.</span></span>  
   
 > [!TIP]
->  在更高级别上指定你的运行时指令，使你的应用能够适应代码变化。  我们推荐在命名空间和类型级别而不在成员级别添加运行时指令。 注意，你可能需要在弹性和编译时间较长的较大二进制代码之间做一个权衡。  
+>  <span data-ttu-id="436e3-161">在更高级别上指定你的运行时指令，使你的应用能够适应代码变化。</span><span class="sxs-lookup"><span data-stu-id="436e3-161">Specify the runtime directives at a high level to enable your app to be resilient to code changes.</span></span>  <span data-ttu-id="436e3-162">我们推荐在命名空间和类型级别而不在成员级别添加运行时指令。</span><span class="sxs-lookup"><span data-stu-id="436e3-162">We recommend adding runtime directives at the namespace and type levels rather than the member level.</span></span> <span data-ttu-id="436e3-163">注意，你可能需要在弹性和编译时间较长的较大二进制代码之间做一个权衡。</span><span class="sxs-lookup"><span data-stu-id="436e3-163">Note that there may be a tradeoff between resiliency and larger binaries with longer compile times.</span></span>  
   
- 当处理一个丢失元数据异常时，请考虑以下问题：  
+ <span data-ttu-id="436e3-164">当处理一个丢失元数据异常时，请考虑以下问题：</span><span class="sxs-lookup"><span data-stu-id="436e3-164">When addressing a missing metadata exception, consider these issues:</span></span>  
   
--   应用在发生异常之前正在执行什么操作？  
+-   <span data-ttu-id="436e3-165">应用在发生异常之前正在执行什么操作？</span><span class="sxs-lookup"><span data-stu-id="436e3-165">What was the app trying to do before the exception?</span></span>  
   
-    -   例如，它是正在绑定、序列化或反序列化数据？还是正在直接使用反射 API？  
+    -   <span data-ttu-id="436e3-166">例如，它是正在绑定、序列化或反序列化数据？还是正在直接使用反射 API？</span><span class="sxs-lookup"><span data-stu-id="436e3-166">For example, was it data binding, serializing or deserializing data, or directly using the reflection API?</span></span>  
   
--   这是一个孤立情形吗？或者你是否认为针对其他类型时也会遇到同样的问题？  
+-   <span data-ttu-id="436e3-167">这是一个孤立情形吗？或者你是否认为针对其他类型时也会遇到同样的问题？</span><span class="sxs-lookup"><span data-stu-id="436e3-167">Is this an isolated case, or do you believe you'll encounter the same issue for other types?</span></span>  
   
-    -   例如，当在应用的对象模型中序列化一个类型时，引发了[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)异常。  如果你知道其他要得到序列化的类型，可以同时为这些类型（或者为它们包含的命名空间，这要视代码的组织情况而定）添加运行指令。  
+    -   <span data-ttu-id="436e3-168">例如，当在应用的对象模型中序列化一个类型时，引发了 [丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。</span><span class="sxs-lookup"><span data-stu-id="436e3-168">For example, a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception is thrown when serializing a type in the app’s object model.</span></span>  <span data-ttu-id="436e3-169">如果你知道其他要得到序列化的类型，可以同时为这些类型（或者为它们包含的命名空间，这要视代码的组织情况而定）添加运行指令。</span><span class="sxs-lookup"><span data-stu-id="436e3-169">If you know other types that will be serialized, you can add runtime directives for those types (or for their containing namespaces, depending on how well the code is organized) at the same time.</span></span>  
   
--   你可以重写代码，不让它使用反射吗？  
+-   <span data-ttu-id="436e3-170">你可以重写代码，不让它使用反射吗？</span><span class="sxs-lookup"><span data-stu-id="436e3-170">Can you rewrite the code so it doesn’t use reflection?</span></span>  
   
-    -   例如，当你知道使用什么类型时代码是否使用了 `dynamic` 关键字？  
+    -   <span data-ttu-id="436e3-171">例如，当你知道使用什么类型时代码是否使用了 `dynamic` 关键字？</span><span class="sxs-lookup"><span data-stu-id="436e3-171">For example, does the code use the `dynamic` keyword when you know what type to expect?</span></span>  
   
-    -   当有更好的选择时，代码是否调用了一个依赖反射的方法？  
+    -   <span data-ttu-id="436e3-172">当有更好的选择时，代码是否调用了一个依赖反射的方法？</span><span class="sxs-lookup"><span data-stu-id="436e3-172">Does the code call a method that depends on reflection when some better alternative is available?</span></span>  
   
 > [!NOTE]
->  若要深入了解如何处理因反射中的差异以及桌面应用和 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中的元数据可用性导致的问题，请参阅[利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。  
+>  <span data-ttu-id="436e3-173">若要深入了解如何处理因反射中的差异以及桌面应用和 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中的元数据可用性导致的问题，请参阅 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="436e3-173">For additional information about handling problems that stem from differences in reflection and the availability of metadata in desktop apps and [!INCLUDE[net_native](../../../includes/net-native-md.md)], see [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).</span></span>  
   
- 要了解处理在检测应用的过程中发生的异常和其他问题的特定实例，请参阅：  
+ <span data-ttu-id="436e3-174">要了解处理在检测应用的过程中发生的异常和其他问题的特定实例，请参阅：</span><span class="sxs-lookup"><span data-stu-id="436e3-174">For some specific examples of handling exceptions and other issues that occur when testing your app, see:</span></span>  
   
--   [实例：处理绑定数据时出现的异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [<span data-ttu-id="436e3-175">示例：处理绑定数据时出现的异常</span><span class="sxs-lookup"><span data-stu-id="436e3-175">Example: Handling Exceptions When Binding Data</span></span>](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [<span data-ttu-id="436e3-176">示例：故障诊断动态编程</span><span class="sxs-lookup"><span data-stu-id="436e3-176">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET 本机应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [<span data-ttu-id="436e3-177">.NET Native 应用中的运行时异常</span><span class="sxs-lookup"><span data-stu-id="436e3-177">Runtime Exceptions in .NET Native Apps</span></span>](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
-## 请参阅  
- [运行时指令 \(rd.xml\) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [NIB：.NET Native 安装和配置](http://msdn.microsoft.com/zh-cn/7c9bc375-8b87-4c33-bede-72d513e362ec)   
- [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)   
- [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
- [利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)   
- [序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md)   
- [将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+## <a name="see-also"></a><span data-ttu-id="436e3-178">另请参阅</span><span class="sxs-lookup"><span data-stu-id="436e3-178">See Also</span></span>  
+ <span data-ttu-id="436e3-179">[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span><span class="sxs-lookup"><span data-stu-id="436e3-179">[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span></span>  
+ <span data-ttu-id="436e3-180">[NIB：.NET Native 安装和配置](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec) </span><span class="sxs-lookup"><span data-stu-id="436e3-180">[NIB: .NET Native Setup and Configuration](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec) </span></span>  
+ <span data-ttu-id="436e3-181">[.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md) </span><span class="sxs-lookup"><span data-stu-id="436e3-181">[.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md) </span></span>  
+ <span data-ttu-id="436e3-182">[反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) </span><span class="sxs-lookup"><span data-stu-id="436e3-182">[Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) </span></span>  
+ <span data-ttu-id="436e3-183">[依赖反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md) </span><span class="sxs-lookup"><span data-stu-id="436e3-183">[APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md) </span></span>  
+ <span data-ttu-id="436e3-184">[序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md) </span><span class="sxs-lookup"><span data-stu-id="436e3-184">[Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md) </span></span>  
+ [<span data-ttu-id="436e3-185">将 Windows 应用商店应用迁移到 .NET Native</span><span class="sxs-lookup"><span data-stu-id="436e3-185">Migrating Your Windows Store App to .NET Native</span></span>](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+

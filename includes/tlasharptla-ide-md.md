@@ -1,1 +1,1 @@
-集成开发环境 (IDE)
+<span data-ttu-id="9eeb9-101">集成开发环境 (IDE)</span><span class="sxs-lookup"><span data-stu-id="9eeb9-101">Integrated Development Environment (IDE)</span></span>

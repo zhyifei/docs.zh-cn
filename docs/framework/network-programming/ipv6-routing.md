@@ -1,48 +1,54 @@
 ---
-title: "IPv6 路由 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "IPv6 路由"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5cbd5188bb33fd6d38633ca4670689a94f110a2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# IPv6 路由
-一个灵活的路由机制是IPv6的优点。  由于IPv4网络ID和分配的方法，用course表需要由是在Internet主干线的路由器维护。  这些路由器必须知道所有路由为了向前可能会处理在Internet上的所有节点的数据包。  与其功能复合地址， IPv6允许灵活解决和极大地减少course表的大小。  在此新解决的体系结构方面，中间路由器必须只保留跟踪其网络上的本地部分为了能正确转发消息。  
+# <a name="ipv6-routing"></a><span data-ttu-id="a0ccc-102">IPv6 路由</span><span class="sxs-lookup"><span data-stu-id="a0ccc-102">IPv6 Routing</span></span>
+<span data-ttu-id="a0ccc-103">灵活的路由机制是 IPv6 的优势之一。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-103">A flexible routing mechanism is a benefit of IPv6.</span></span> <span data-ttu-id="a0ccc-104">由于 IPv4 网络 ID 以前和现在的分配方式，需要由 Internet 主干网上的路由器来维护大型路由表。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-104">Due to the way in which IPv4 network IDs were and are allocated, large routing tables need to be maintained by the routers that are on the Internet backbones.</span></span> <span data-ttu-id="a0ccc-105">这些路由器必须了解所有路由，才能转发可能定向到 Internet 任何节点的数据包。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-105">These routers must know all the routes in order to forward packets that are potentially directed to any node on the Internet.</span></span> <span data-ttu-id="a0ccc-106">借助聚合地址的功能，IPv6 可以灵活寻址，并且大大减小路由表的大小。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-106">With its ability to aggregate addresses, IPv6 allows flexible addressing and drastically reduces the size of routing tables.</span></span> <span data-ttu-id="a0ccc-107">在这种新型寻址体系结构中，中间路由器必须仅跟踪网络中的本地部分，才能恰当地转发消息。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-107">In this new addressing architecture, intermediate routers must keep track only of the local portion of their network in order to forward the messages appropriately.</span></span>  
   
-## 周围看到  
- 周围看到提供某些功能是:  
+## <a name="neighbor-discovery"></a><span data-ttu-id="a0ccc-108">邻居发现</span><span class="sxs-lookup"><span data-stu-id="a0ccc-108">Neighbor Discovery</span></span>  
+ <span data-ttu-id="a0ccc-109">邻居发现提供的一些功能是：</span><span class="sxs-lookup"><span data-stu-id="a0ccc-109">Some of the features provided by Neighbor Discovery are:</span></span>  
   
--   路由器发现。  这允许宿主标识本地路由器。  
+-   <span data-ttu-id="a0ccc-110">路由器发现。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-110">Router discovery.</span></span> <span data-ttu-id="a0ccc-111">这允许主机识别本地路由器。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-111">This allows hosts to identify local routers.</span></span>  
   
--   地址转换。  这允许节点解决相应的NeXT跳跃地址\(地址转换协议的 \[ARP\] 一个链接层地址\)。  
+-   <span data-ttu-id="a0ccc-112">地址解析。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-112">Address resolution.</span></span> <span data-ttu-id="a0ccc-113">这允许节点解析相应的下一跃点地址的链接层地址（地址解析协议 [ARP] 的替换）。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-113">This allows nodes to resolve a link-layer address for a corresponding next-hop address (a replacement for Address Resolution Protocol [ARP]).</span></span>  
   
--   地址自动配置。  这允许宿主自动配置站点本地和全局地址。  
+-   <span data-ttu-id="a0ccc-114">地址自动配置。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-114">Address auto-configuration.</span></span> <span data-ttu-id="a0ccc-115">这允许主机自动配置站点本地和全局地址。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-115">This allows hosts to automatically configure site-local and global addresses.</span></span>  
   
- 周围看到针对IPv6 \(ICMPv6\)包含的消息使用internet协议\(smtp\)控件信息:  
+ <span data-ttu-id="a0ccc-116">邻居发现使用 IPv6 的 Internet 控制消息协议 (ICMPv6) 消息，包括：</span><span class="sxs-lookup"><span data-stu-id="a0ccc-116">Neighbor Discovery uses Internet Control Message Protocol for IPv6 (ICMPv6) messages that include:</span></span>  
   
--   路由器广告。  发送由路由器基于一个虚拟时间基类型或响应路由器垦请使用。  IPv6路由器使用对它们的可用性、地址标题和其他参数播发的路由器广告。  
+-   <span data-ttu-id="a0ccc-117">路由器播发。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-117">Router advertisement.</span></span> <span data-ttu-id="a0ccc-118">由路由器在伪周期基础上发送或作为路由器招标的响应发送。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-118">Sent by a router on a pseudo-periodic basis or in response to a router solicitation.</span></span> <span data-ttu-id="a0ccc-119">IPv6 路由器使用路由器播发来播发其可用性、地址前缀和其他参数。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-119">IPv6 routers use router advertisements to advertise their availability, address prefixes, and other parameters.</span></span>  
   
--   请看垦。  发送由宿主请求该链接的路由器立即发送一个路由器广告。  
+-   <span data-ttu-id="a0ccc-120">路由器招标。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-120">Router solicitation.</span></span> <span data-ttu-id="a0ccc-121">由主机发送以请求链接上的路由器立即发送路由器播发。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-121">Sent by a host to request that routers on the link send a router advertisement immediately.</span></span>  
   
--   周围垦请使用。  发送由地址转换的节点，请重复地址检测，或验证相邻元素进行访问。  
+-   <span data-ttu-id="a0ccc-122">邻居招标。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-122">Neighbor solicitation.</span></span> <span data-ttu-id="a0ccc-123">由节点发送，以进行地址解析、重复地址检测或验证邻居是否仍可以访问。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-123">Sent by nodes for address resolution, duplicate address detection, or to verify that a neighbor is still reachable.</span></span>  
   
--   周围广告。  发送按节点响应周围垦请或通知一个不同的邻近在链接层地址上的。  
+-   <span data-ttu-id="a0ccc-124">邻居播发。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-124">Neighbor advertisement.</span></span> <span data-ttu-id="a0ccc-125">由节点发送，以响应邻居招标或通知邻居链接层地址的更改。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-125">Sent by nodes to respond to a neighbor solicitation or to notify neighbors of a change in link-layer address.</span></span>  
   
--   重定向。  发送由路由器指示一种更好的NeXT跳跃地址到一个发送的节点的特定目标。  
+-   <span data-ttu-id="a0ccc-126">重定向。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-126">Redirect.</span></span> <span data-ttu-id="a0ccc-127">由路由器发送，以指示特定目标的下一个更好的跃点地址，用于发送节点。</span><span class="sxs-lookup"><span data-stu-id="a0ccc-127">Sent by routers to indicate a better next-hop address to a particular destination for a sending node.</span></span>  
   
-## 请参阅  
- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [套接字](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a><span data-ttu-id="a0ccc-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a0ccc-128">See Also</span></span>  
+ <span data-ttu-id="a0ccc-129">[Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md) </span><span class="sxs-lookup"><span data-stu-id="a0ccc-129">[Internet Protocol Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md) </span></span>  
+ [<span data-ttu-id="a0ccc-130">套接字</span><span class="sxs-lookup"><span data-stu-id="a0ccc-130">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)
+

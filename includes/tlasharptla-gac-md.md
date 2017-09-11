@@ -1,1 +1,1 @@
-全局程序集缓存 (GAC)
+<span data-ttu-id="33df5-101">全局程序集缓存 (GAC)</span><span class="sxs-lookup"><span data-stu-id="33df5-101">global assembly cache (GAC)</span></span>

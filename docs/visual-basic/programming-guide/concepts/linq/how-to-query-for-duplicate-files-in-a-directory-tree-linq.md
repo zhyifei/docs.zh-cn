@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9773f1fc5a17957cb77a0f14e12a2f61e67d73c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3f4ddab6129e7d05851553e544b9813951415a45
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何︰ 查询目录树 (LINQ) (Visual Basic 中) 中的重复文件
-有时具有相同名称的文件可能位于多个文件夹。 例如，在 Visual Studio 安装文件夹中，多个文件夹具有 readme.htm 文件。 此示例演示如何查询此类重复名称的文件名在指定的根文件夹下。 第二个示例显示如何查询文件的大小和创建时间也匹配。  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a><span data-ttu-id="9f086-102">如何︰ 查询目录树 (LINQ) (Visual Basic 中) 中的重复文件</span><span class="sxs-lookup"><span data-stu-id="9f086-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="9f086-103">有时具有相同名称的文件可能位于多个文件夹。</span><span class="sxs-lookup"><span data-stu-id="9f086-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="9f086-104">例如，在 Visual Studio 安装文件夹中，多个文件夹具有 readme.htm 文件。</span><span class="sxs-lookup"><span data-stu-id="9f086-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="9f086-105">此示例演示如何查询此类重复名称的文件名在指定的根文件夹下。</span><span class="sxs-lookup"><span data-stu-id="9f086-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="9f086-106">第二个示例显示如何查询文件的大小和创建时间也匹配。</span><span class="sxs-lookup"><span data-stu-id="9f086-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="9f086-107">示例</span><span class="sxs-lookup"><span data-stu-id="9f086-107">Example</span></span>  
   
 ```vb  
 Module QueryDuplicateFileNames  
@@ -115,11 +116,11 @@ Module QueryDuplicateFileNames
 End Module  
 ```  
   
- 第一个查询使用一个简单的键以确定匹配;这将查找的文件具有相同的名称，但其内容可能会有所不同。 第二个查询使用的复合键匹配的三个属性<xref:System.IO.FileInfo>对象。</xref:System.IO.FileInfo> 此查询，则更有可能找到具有相同的名称和内容类似或相同的文件。  
+ <span data-ttu-id="9f086-108">第一个查询使用一个简单的键以确定匹配;这将查找的文件具有相同的名称，但其内容可能会有所不同。</span><span class="sxs-lookup"><span data-stu-id="9f086-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="9f086-109">第二个查询使用的复合键匹配的三个属性<xref:System.IO.FileInfo>对象。</xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="9f086-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="9f086-110">此查询，则更有可能找到具有相同的名称和内容类似或相同的文件。</span><span class="sxs-lookup"><span data-stu-id="9f086-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="9f086-111">编译代码</span><span class="sxs-lookup"><span data-stu-id="9f086-111">Compiling the Code</span></span>  
+ <span data-ttu-id="9f086-112">创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。</span><span class="sxs-lookup"><span data-stu-id="9f086-112">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="9f086-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9f086-113">See Also</span></span>  
+ <span data-ttu-id="9f086-114">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="9f086-114">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="9f086-115"> [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="9f086-115"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

@@ -1,49 +1,55 @@
 ---
-title: "PNRP 缓存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "PNRP 缓存"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b468a8cfd050943513cbe858c3ba985ee922b23f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# PNRP 缓存
-对等类名称解析协议\(PNRP\)缓存是在对等类维护的算法选定的对等类终结点的本地集合。  
+# <a name="pnrp-caches"></a><span data-ttu-id="625cb-102">PNRP 缓存</span><span class="sxs-lookup"><span data-stu-id="625cb-102">PNRP Caches</span></span>
+<span data-ttu-id="625cb-103">对等名称解析协议 (PNRP) 缓存是对等机上维护的算法选择的对等终结点的本地集合。</span><span class="sxs-lookup"><span data-stu-id="625cb-103">Peer Name Resolution Protocol (PNRP) caches are local collections of algorithmically selected peer endpoints maintained on the peer.</span></span>  
   
-## PNRP缓存初始化  
- 若要初始化PNRP缓存或同级名称记录集合，那么，当对等类节点开始时，节点可以使用下列方法:  
+## <a name="pnrp-cache-initialization"></a><span data-ttu-id="625cb-104">PNRP 缓存初始化</span><span class="sxs-lookup"><span data-stu-id="625cb-104">PNRP Cache Initialization</span></span>  
+ <span data-ttu-id="625cb-105">若要初始化 PNRP 缓存或对等名称记录集合，当对等节点启动时节点可以使用以下方法：</span><span class="sxs-lookup"><span data-stu-id="625cb-105">To initialize the PNRP cache, or Peer Name Record Collection, when a peer node starts up, a node can use the following methods:</span></span>  
   
--   存在不可变的缓存项;如果该节点已关闭从硬盘存储加载。  
+-   <span data-ttu-id="625cb-106">从硬盘存储中加载节点关闭时出现的持久性缓存条目。</span><span class="sxs-lookup"><span data-stu-id="625cb-106">Persistent cache entries that were present when the node was shut down are loaded from hard disk storage.</span></span>  
   
--   如果应用程序使用P2P协作基础结构，协作信息可在交际管理者软件为该节点。  
+-   <span data-ttu-id="625cb-107">如果应用程序使用 P2P 协作基础结构，将在该节点的联系人管理器中提供协作信息。</span><span class="sxs-lookup"><span data-stu-id="625cb-107">If an application uses the P2P collaboration infrastructure, collaboration information is available in the Contact Manager for that node.</span></span>  
   
-## 缩放具有多个缓存的对等类名称转换  
- 若要使PNRP缓存的大小小，同级节点将一多个缓存，每个级别包含项的最大数目。  每个级别缓存中表示PNRP ID号空间\(2\)<sup>256</sup>的十分之一小部分。  数字上是请关闭它的最低级别缓存中包含局部注册的PNRP ID和其他PNRP ID。  当缓存的级别填充最多20项，新的底部创建。  级别的最大数在缓存大约记录10\(PNRP ID的总数。云\)。  例如，对于使用100个PNRP ID的一朵全局云，不能多于8 \(\=log10\(100,000,000\)\)在缓存和解决PNRP ID的跳跃的类似数字的级别。名称转换为时。  此结构允许任意PNRP ID可转发PNRP到最NeXT关闭对等的请求消息解决的分布式的哈希表，直至找到具有相应的CPA对等。  
+## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a><span data-ttu-id="625cb-108">使用多级别缓存缩放对等名称解析</span><span class="sxs-lookup"><span data-stu-id="625cb-108">Scaling Peer Name Resolution with a Multi-Level Cache</span></span>  
+ <span data-ttu-id="625cb-109">若要保持较小的 PNRP 缓存大小，对等节点将使用多级别缓存，其中每个级别包含最大数目的条目。</span><span class="sxs-lookup"><span data-stu-id="625cb-109">To keep the sizes of the PNRP caches small, peer nodes use a multi-level cache, in which each level contains a maximum number of entries.</span></span> <span data-ttu-id="625cb-110">缓存中的每个级别代表 PNRP ID 数值空间 (2<sup>256</sup>) 的十分之一较小部分。</span><span class="sxs-lookup"><span data-stu-id="625cb-110">Each level in the cache represents a one tenth smaller portion of the PNRP ID number space (2<sup>256</sup>).</span></span> <span data-ttu-id="625cb-111">缓存中最低的级别包含本地注册的 PNRP ID 和其他数字上相近的 PNRP ID。</span><span class="sxs-lookup"><span data-stu-id="625cb-111">The lowest level in the cache contains a locally registered PNRP ID and other PNRP IDs that are numerically close to it.</span></span> <span data-ttu-id="625cb-112">当缓存级别填充了多达 20 个条目时，会创建新的较低级别。</span><span class="sxs-lookup"><span data-stu-id="625cb-112">As a level of the cache is filled with a maximum of 20 entries, a new lower level is created.</span></span> <span data-ttu-id="625cb-113">缓存中级别的最大数目近似于 log10(云中 PNRP ID 的总数)。</span><span class="sxs-lookup"><span data-stu-id="625cb-113">The maximum number of levels in the cache is on the order of log10(Total number of PNRP IDs in the cloud).</span></span> <span data-ttu-id="625cb-114">例如，对于有 1 亿 PNRP ID 的全局云，存在不超过 8 (=log10(100,000,000)) 个的缓存级别，以及相似数量的跃点以在名称解析期间解析 PNRP ID。</span><span class="sxs-lookup"><span data-stu-id="625cb-114">For example, for a global cloud with 100 million PNRP IDs, there are no more than 8 (=log10(100,000,000)) levels in the cache and a similar number of hops to resolve a PNRP ID during name resolution.</span></span> <span data-ttu-id="625cb-115">这一机制允许分布式哈希表，可为此哈希表通过以下方式解析任意 PNRP ID：将 PNRP 请求消息转发到下个最近的对等机，直到找到具有相应 CPA 的对等机。</span><span class="sxs-lookup"><span data-stu-id="625cb-115">This mechanism allows for a distributed hash table for which an arbitrary PNRP ID can be resolved by forwarding PNRP Request messages to the next-closest peer until the peer with the corresponding CPA is found.</span></span>  
   
- 若要确保解决方案可以完成，，每次节点将项添加到最低级别其缓存，它涌向项的复制到缓存中的最后一层的所有节点。  
+ <span data-ttu-id="625cb-116">若要确保解析的完成，每次节点将条目添加到其缓存的最低级别时，都将条目的副本传到缓存的最后级别中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="625cb-116">To ensure that resolution can complete, each time a node adds an entry to the lowest level of its cache, it floods a copy of the entry to all the nodes within the last level of the cache.</span></span>  
   
- 在刷新缓存项。  已过时的缓存项从缓存中移除。  结果是PNRP ID分配的哈希表根据有效的终结点，不同的解决DNS记录和DNS协议不提供节点与该地址实际上是在网络上保证。  
+ <span data-ttu-id="625cb-117">缓存条目随着时间推移进行刷新。</span><span class="sxs-lookup"><span data-stu-id="625cb-117">The cache entries are refreshed over time.</span></span> <span data-ttu-id="625cb-118">陈旧条目会从缓存中移除。</span><span class="sxs-lookup"><span data-stu-id="625cb-118">Cache entries that are stale are removed from the cache.</span></span> <span data-ttu-id="625cb-119">结果是 PNRP ID 的分布式哈希表基于活动的终结点，不像 DNS 中地址记录和 DNS 协议不保障与地址相关的节点活跃在网络上。</span><span class="sxs-lookup"><span data-stu-id="625cb-119">The result is that the distributed hash table of PNRP IDs is based on active endpoints, unlike DNS in which address records and the DNS protocol provide no guarantee that the node associated with the address is actively on the network.</span></span>  
   
-## 其他PNRP缓存  
- 另一个不可变数据存储区是本地缓存。  除了为PNRP事件所需的其他对象外，还可以包括记录与安全地进行发布和同步在这朵云之间的所有成员的PNRP云或协作会话。  此复制的存储组表示数据的视图，应是相同所有组成员。  技术上讲，是在其自身而言不记录，，而是应用程序、呈现和对象数据中进行的这些对象到本地缓存。  为PNRP云的用于确保传播对象对协作会话或PNRP云的所有节点。  在云成员之间的记录重复使用SSL提供加密和数据的完整性。  
+## <a name="other-pnrp-caches"></a><span data-ttu-id="625cb-120">其他 PNRP 缓存</span><span class="sxs-lookup"><span data-stu-id="625cb-120">Other PNRP Caches</span></span>  
+ <span data-ttu-id="625cb-121">另一个永久性数据存储是本地缓存。</span><span class="sxs-lookup"><span data-stu-id="625cb-121">Another persistent data store is the local cache.</span></span>  <span data-ttu-id="625cb-122">除了 PNRP 活动需要的其他对象，它可包括与 PNRP 云或协作会话相关联的记录，这些记录在云的所有成员间安全地进行发布和同步。</span><span class="sxs-lookup"><span data-stu-id="625cb-122">In addition to the other objects needed for PNRP activity, it may include the records associated with a PNRP cloud or collaboration session that is securely published and synchronized between all the members of the cloud.</span></span> <span data-ttu-id="625cb-123">这一复制的存储代表了组数据的视图，它应在所有组成员间保持相同。</span><span class="sxs-lookup"><span data-stu-id="625cb-123">This replicated store represents the view of the group data, which should be the same for all group members.</span></span> <span data-ttu-id="625cb-124">从技术上来讲，这些对象本质上不是记录，而是去往本地缓存的应用程序、状态和对象数据。</span><span class="sxs-lookup"><span data-stu-id="625cb-124">Technically, these objects are not records per se, but rather application, presence, and object data destined for a local cache.</span></span> <span data-ttu-id="625cb-125">使用 PNRP 云确保对象传播到协作会话或 PNRP 云中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="625cb-125">Use of the PNRP cloud ensures that objects are propagated to all nodes in the collaboration session or PNRP cloud.</span></span>  <span data-ttu-id="625cb-126">云成员间的记录副本使用 SSL 提供加密和数据完整性。</span><span class="sxs-lookup"><span data-stu-id="625cb-126">Record replication between cloud members uses SSL to provide encryption and data integrity.</span></span>  
   
- 当对等类连接云时，它们不会自动从它们收到附加的宿主对等类的本地缓存数据;它们必须订阅宿主对等类接收到应用程序、呈现和对象数据的更新。  在初始同步后，对等类定期重新同步其复制的存储确保所有组成员始终会具有相同视图。  协作会话或应用程序在协作会话中也可以执行相同的功能。  
+ <span data-ttu-id="625cb-127">当对等机加入云时，它们不会自动接收来自其附加于的主机对等机的本地缓存数据，它们必须订阅主机对等机以接收应用程序、状态和对象数据中的更新。</span><span class="sxs-lookup"><span data-stu-id="625cb-127">When a peer joins a cloud, they do not automatically receive local cache data from the host peer to which they attach; they have to subscribe to the host peer to receive updates in application, presence, and object data.</span></span> <span data-ttu-id="625cb-128">初始同步后，对等机定期重新同步其复制的存储，确保所有组成员始终有相同的视图。</span><span class="sxs-lookup"><span data-stu-id="625cb-128">After the initial synchronization, peers periodically resynchronize their replicated stores to ensure that all group members consistently have the same view.</span></span>  <span data-ttu-id="625cb-129">协作会话或协作会话中的应用程序也可执行相同的功能。</span><span class="sxs-lookup"><span data-stu-id="625cb-129">The collaboration session or applications within the collaboration session may also perform the same function.</span></span>  
   
- 在协作会话用于云后启动后，应用程序可以注册对等类可以访问并启动其使用安全的信息由云范围内定义的发布。  当对等类连接云时，将朵云的安全机制会应用于对等类，它参与的大小。  在这朵云的范围内，其记录可以安全地然后发布。  请注意云范围可以与协作应用程序范围。  
+ <span data-ttu-id="625cb-130">协作会话为云启动后，应用程序可以使用云范围定义的安全性注册对等机并开始发布其信息。</span><span class="sxs-lookup"><span data-stu-id="625cb-130">After a collaboration session has begun for a cloud, applications can register peers and begin publishing their information using the security defined by the cloud scope.</span></span> <span data-ttu-id="625cb-131">对等机加入云时，云的安全性机制会应用到对等机，为其提供要加入的范围。</span><span class="sxs-lookup"><span data-stu-id="625cb-131">When a peer joins a cloud, the security mechanisms for the cloud are applied to the peer, giving it a scope in which to participate.</span></span>  <span data-ttu-id="625cb-132">然后它的记录可以在云的范围内安全发布。</span><span class="sxs-lookup"><span data-stu-id="625cb-132">Its records can then be published securely within the scope of the cloud.</span></span> <span data-ttu-id="625cb-133">请注意云范围可能和协作应用程序范围不相同。</span><span class="sxs-lookup"><span data-stu-id="625cb-133">Note that cloud scope may not be the same as collaboration application scope.</span></span>  
   
- 对等类在接收对象上可以注册感兴趣访问其他对等类。  当对象更新时，协作应用程序得到通知，并且新的对象传递给应用程序的所有用户。  例如，一个对等类该组中接收应用程序信息中聊天应用程序可以注册感兴趣，将其发送给所有聊天记录为应用程序数据。  这使它监视聊天在这朵云中的事件。  
+ <span data-ttu-id="625cb-134">对等机可以登记从其他对等机接收对象的偏好。</span><span class="sxs-lookup"><span data-stu-id="625cb-134">Peers can register interest in receiving objects from other peers.</span></span> <span data-ttu-id="625cb-135">当对象更新时，协作应用程序收到通知，新的对象传递给应用程序的所有订阅者。</span><span class="sxs-lookup"><span data-stu-id="625cb-135">When an object is updated, the collaboration application is notified and the new object is passed to all subscribers of the application.</span></span> <span data-ttu-id="625cb-136">例如，组聊天应用程序中的对等程序可以登记接收应用程序信息的偏好，这会向其发送所有聊天记录作为应用程序数据。</span><span class="sxs-lookup"><span data-stu-id="625cb-136">For example, a peer in a group chat application can register interest in receiving application information, which will send it all chat records as application data.</span></span>  <span data-ttu-id="625cb-137">这使得它可以监视云内的聊天活动。</span><span class="sxs-lookup"><span data-stu-id="625cb-137">This allows it to monitor chat activity within the cloud.</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="625cb-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="625cb-138">See Also</span></span>  
  <xref:System.Net.PeerToPeer>
+

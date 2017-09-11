@@ -38,13 +38,13 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="out-c-reference"></a>out（C# 参考）
-可以在以下两种上下文中使用 `out` 上下文关键字：
+# <a name="out-c-reference"></a><span data-ttu-id="1701a-102">out（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="1701a-102">out (C# Reference)</span></span>
+<span data-ttu-id="1701a-103">可以在以下两种上下文中使用 `out` 上下文关键字：</span><span class="sxs-lookup"><span data-stu-id="1701a-103">You can use the `out` contextual keyword in two contexts:</span></span>
 
-- 作为[参数修饰符](../../../csharp/language-reference/keywords/out-parameter-modifier.md)，它允许按引用而不是按值向方法传递参数。
+- <span data-ttu-id="1701a-104">作为[参数修饰符](../../../csharp/language-reference/keywords/out-parameter-modifier.md)，它允许按引用而不是按值向方法传递参数。</span><span class="sxs-lookup"><span data-stu-id="1701a-104">As a [parameter modifier](../../../csharp/language-reference/keywords/out-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
 
-- 接口和委托的[泛型类型参数声明](../../../csharp/language-reference/keywords/out-generic-modifier.md)中，该声明指定类型参数为协变。
+- <span data-ttu-id="1701a-105">接口和委托的[泛型类型参数声明](../../../csharp/language-reference/keywords/out-generic-modifier.md)中，该声明指定类型参数为协变。</span><span class="sxs-lookup"><span data-stu-id="1701a-105">In [generic type parameter declarations](../../../csharp/language-reference/keywords/out-generic-modifier.md) for interfaces and delegates, which specifies that a type parameter is covariant.</span></span>
    
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="1701a-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="1701a-106">See Also</span></span>  
+ [<span data-ttu-id="1701a-107">C# 参考</span><span class="sxs-lookup"><span data-stu-id="1701a-107">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 

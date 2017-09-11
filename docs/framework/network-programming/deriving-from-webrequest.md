@@ -1,106 +1,112 @@
 ---
-title: "从 WebRequest 派生 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest 类，可插入协议"
-  - "特定于协议的请求处理程序"
-  - "发送数据，可插入协议"
-  - "可插入协议，类条件"
-  - "Internet，可插入协议"
-  - "接收数据，可插入协议"
-  - "协议，可插入"
+title: "从 WebRequest 派生"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, pluggable protocols
+- protocol-specific request handler
+- sending data, pluggable protocols
+- pluggable protocols, class criteria
+- Internet, pluggable protocols
+- receiving data, pluggable protocols
+- protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 从 WebRequest 派生
-<xref:System.Net.WebRequest> 选件类是创建一个协议特殊化请求处理程序提供基本的方法和属性是.NET Framework可插入协议模型的抽象基类。  使用 **WebRequest** 选件类的应用程序可以请求数据使用任何支持的协议，而无需指定要使用的协议。  
+# <a name="deriving-from-webrequest"></a><span data-ttu-id="ef5ab-102">从 WebRequest 派生</span><span class="sxs-lookup"><span data-stu-id="ef5ab-102">Deriving from WebRequest</span></span>
+<span data-ttu-id="ef5ab-103"><xref:System.Net.WebRequest> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的请求处理程序提供基本方法和属性。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-103">The <xref:System.Net.WebRequest> class is an abstract base class that provides the basic methods and properties for creating a protocol-specific request handler that fits the .NET Framework pluggable protocol model.</span></span> <span data-ttu-id="ef5ab-104">使用 WebRequest 类的应用程序可使用任何支持的协议请求数据，而无需指定所使用的协议。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-104">Applications that use the **WebRequest** class can request data using any supported protocol without needing to specify the protocol used.</span></span>  
   
- 必须满足两个条件为可插入协议中使用的协议特殊化选件类:选件类必须实现接口， <xref:System.Net.IWebRequestCreate> ，它必须具有 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 方法进行注册。  选件类必须重写 **WebRequest** 所有抽象方法和属性提供可插入的接口。  
+ <span data-ttu-id="ef5ab-105">必须满足两个条件才能将协议特定的类用作可插入协议：该类必须实现 <xref:System.Net.IWebRequestCreate> 接口，并且必须使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 方法注册。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-105">Two criteria must be met in order for a protocol-specific class to be used as a pluggable protocol: The class must implement the <xref:System.Net.IWebRequestCreate> interface, and it must register with the <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> method.</span></span> <span data-ttu-id="ef5ab-106">该类必须覆盖 WebRequest 的所有抽象方法和属性，才能提供可插入接口。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-106">The class must override all the abstract methods and properties of **WebRequest** to provide the pluggable interface.</span></span>  
   
- **WebRequest** 实例供一次性使用;如果要使另一个请求，则创建一个新的 **WebRequest**。  **WebRequest** 支持 <xref:System.Runtime.Serialization.ISerializable> 接口允许开发人员序列化模板 **WebRequest** 然后重新生成附加请求的模板。  
+ <span data-ttu-id="ef5ab-107">WebRequest 实例是一次性的，如果想再发出请求，请创建一个新的 WebRequest。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-107">**WebRequest** instances are intended for one-time use; if you want to make another request, create a new **WebRequest**.</span></span> <span data-ttu-id="ef5ab-108">WebRequest 支持 <xref:System.Runtime.Serialization.ISerializable> 接口，使开发人员能够序列化模板 WebRequest，然后针对其他请求重新构建模板。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-108">**WebRequest** supports the <xref:System.Runtime.Serialization.ISerializable> interface to enable developers to serialize a template **WebRequest** and then reconstruct the template for additional requests.</span></span>  
   
-## IWebRequest创建方法  
- <xref:System.Net.IWebRequestCreate.Create%2A> 方法以初始化协议特殊化选件类的新实例负责。  在新 **WebRequest** 创建时， <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法对请求的URI以URI前缀将向 **RegisterPrefix** 方法中注册。  相应的协议特殊化后代的 **创建** 方法必须返回该后代的初始化的实例的执行协议的一个标准请求\/响应事务不需要修改的任何协议特殊化字段。  
+## <a name="iwebrequest-create-method"></a><span data-ttu-id="ef5ab-109">IWebRequest Create 方法</span><span class="sxs-lookup"><span data-stu-id="ef5ab-109">IWebRequest Create Method</span></span>  
+ <span data-ttu-id="ef5ab-110"><xref:System.Net.IWebRequestCreate.Create%2A> 方法负责初始化协议特定的类的新实例。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-110">The <xref:System.Net.IWebRequestCreate.Create%2A> method is responsible for initializing a new instance of the protocol-specific class.</span></span> <span data-ttu-id="ef5ab-111">创建新 WebRequest 后，<xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法会将请求的 URI 与使用 RegisterPrefix 方法注册的 URI 前缀进行匹配。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-111">When a new **WebRequest** is created, the <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> method matches the requested URI with the URI prefixes registered with the **RegisterPrefix** method.</span></span> <span data-ttu-id="ef5ab-112">正确的协议特定后代的 Create 方法必须返回该后代的初始化实例，该实例能够为协议执行标准请求/响应事务，且不需要修改任何协议特定的字段。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-112">The **Create** method of the proper protocol-specific descendant must return an initialized instance of the descendant capable of performing a standard request/response transaction for the protocol without needing any protocol-specific fields modified.</span></span>  
   
-## ConnectionGroupName属性  
- <xref:System.Net.WebRequest.ConnectionGroupName%2A> 属性用于命名连接的一组的资源，以便多个请求可以在单个连接。  若要实现连接共享，因此您必须使用合并和分配连接一个协议特殊化方法。  例如，提供的 <xref:System.Net.ServicePointManager> 选件类实现共享功能 <xref:System.Net.HttpWebRequest> 选件类的连接。  为每个连接组提供与特定的服务器的连接的 **ServicePointManager** 选件类创建 <xref:System.Net.ServicePoint> 。  
+## <a name="connectiongroupname-property"></a><span data-ttu-id="ef5ab-113">ConnectionGroupName 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-113">ConnectionGroupName Property</span></span>  
+ <span data-ttu-id="ef5ab-114"><xref:System.Net.WebRequest.ConnectionGroupName%2A> 属性用于命名一组资源连接，以便可通过单个连接发出多个请求。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-114">The <xref:System.Net.WebRequest.ConnectionGroupName%2A> property is used to name a group of connections to a resource so that multiple requests can be made over a single connection.</span></span> <span data-ttu-id="ef5ab-115">若要实现连接共享，必须使用协议特定的方法来集中和分配连接。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-115">To implement connection-sharing, you must use a protocol-specific method of pooling and assigning connections.</span></span> <span data-ttu-id="ef5ab-116">例如，提供的 <xref:System.Net.ServicePointManager> 类实现 <xref:System.Net.HttpWebRequest> 类的连接共享。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-116">For example, the provided <xref:System.Net.ServicePointManager> class implements connection sharing for the <xref:System.Net.HttpWebRequest> class.</span></span> <span data-ttu-id="ef5ab-117">ServicePointManager 类创建可为每个连接组提供特定服务器连接的 <xref:System.Net.ServicePoint>。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-117">The **ServicePointManager** class creates a <xref:System.Net.ServicePoint> that provides a connection to a specific server for each connection group.</span></span>  
   
-## ContentLength属性  
- <xref:System.Net.WebRequest.ContentLength%2A> 属性指定字节数将发送到服务器时，上载数据中的数据。  
+## <a name="contentlength-property"></a><span data-ttu-id="ef5ab-118">ContentLength 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-118">ContentLength Property</span></span>  
+ <span data-ttu-id="ef5ab-119"><xref:System.Net.WebRequest.ContentLength%2A> 属性指定上传数据时将发送到服务器的数据的字节数。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-119">The <xref:System.Net.WebRequest.ContentLength%2A> property specifies the number of bytes of data that will be sent to the server when uploading data.</span></span>  
   
- 通常必须设置 <xref:System.Net.WebRequest.Method%2A> 属性指示上载时，会发生 **ContentLength** 属性相对于零时设置为值大于。  
+ <span data-ttu-id="ef5ab-120">通常，当 ContentLength 属性设置为大于零的值时，必须将 <xref:System.Net.WebRequest.Method%2A> 属性设置为表示正在上传。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-120">Typically the <xref:System.Net.WebRequest.Method%2A> property must be set to indicate that an upload is taking place when the **ContentLength** property is set to a value greater than zero.</span></span>  
   
-## ContentType属性  
- <xref:System.Net.WebRequest.ContentType%2A> 属性提供任何特定的信息。协议要求您发送到服务器识别正在发送内容的类型。  这通常是上载的所有数据的MIME内容类型。  
+## <a name="contenttype-property"></a><span data-ttu-id="ef5ab-121">ContentType 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-121">ContentType Property</span></span>  
+ <span data-ttu-id="ef5ab-122"><xref:System.Net.WebRequest.ContentType%2A> 属性提供协议要求用户发送至服务器的所有特殊信息，以确定发送的内容的类型。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-122">The <xref:System.Net.WebRequest.ContentType%2A> property provides any special information that your protocol requires you to send to the server to identify the type of content that you are sending.</span></span> <span data-ttu-id="ef5ab-123">这通常是所有上传数据的 MIME 内容类型。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-123">Typically this is the MIME content type of any data uploaded.</span></span>  
   
-## 凭据属性  
- <xref:System.Net.WebRequest.Credentials%2A> 属性包含必需的信息验证与服务器的请求。  您必须实现的详细信息为您的协议身份验证过程。  <xref:System.Net.AuthenticationManager> 选件类为验证请求和提供身份验证令牌负责。  提供自己的协议使用的凭据的选件类必须实现 <xref:System.Net.ICredentials> 接口。  
+## <a name="credentials-property"></a><span data-ttu-id="ef5ab-124">Credentials 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-124">Credentials Property</span></span>  
+ <span data-ttu-id="ef5ab-125"><xref:System.Net.WebRequest.Credentials%2A> 属性包含服务器对请求进行身份验证所需的信息。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-125">The <xref:System.Net.WebRequest.Credentials%2A> property contains information needed to authenticate the request with the server.</span></span> <span data-ttu-id="ef5ab-126">用户必须实现协议的身份验证过程的详细信息。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-126">You must implement the details of the authentication process for your protocol.</span></span> <span data-ttu-id="ef5ab-127"><xref:System.Net.AuthenticationManager> 类负责对请求进行身份验证和提供身份验证令牌。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-127">The <xref:System.Net.AuthenticationManager> class is responsible for authenticating requests and providing an authentication token.</span></span> <span data-ttu-id="ef5ab-128">提供协议使用的凭据的类必须实现 <xref:System.Net.ICredentials> 接口。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-128">The class that provides the credentials used by your protocol must implement the <xref:System.Net.ICredentials> interface.</span></span>  
   
-## 标头属性  
- <xref:System.Net.WebRequest.Headers%2A> 属性包含名称\/值的任意集合对元数据与该请求。  可以表示为名称\/值的协议要求的所有元数据在 **标头** 属性对可以包含。  通常必须在调用 <xref:System.Net.WebRequest.GetRequestStream%2A> 或 <xref:System.Net.WebRequest.GetResponse%2A> 方法之前设置此信息;一次该请求，元数据被视为只读。  
+## <a name="headers-property"></a><span data-ttu-id="ef5ab-129">Headers 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-129">Headers Property</span></span>  
+ <span data-ttu-id="ef5ab-130"><xref:System.Net.WebRequest.Headers%2A> 属性包含与请求相关联的元数据的名称/值对的任意集合。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-130">The <xref:System.Net.WebRequest.Headers%2A> property contains an arbitrary collection of name/value pairs of metadata associated with the request.</span></span> <span data-ttu-id="ef5ab-131">协议所需的任何可表示为名称/值对的元数据都可以包含在 Headers 属性中。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-131">Any metadata needed by the protocol that can be expressed as a name/value pair can be included in the **Headers** property.</span></span> <span data-ttu-id="ef5ab-132">通常，在调用 <xref:System.Net.WebRequest.GetRequestStream%2A> 或 <xref:System.Net.WebRequest.GetResponse%2A> 方法之前必须先设置此信息；一旦发出请求，元数据就会被视为只读。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-132">Typically this information must be set before calling the <xref:System.Net.WebRequest.GetRequestStream%2A> or <xref:System.Net.WebRequest.GetResponse%2A> methods; once the request has been made, the metadata is considered read-only.</span></span>  
   
- 您无需使用 **标头** 属性使用标头元数据。  协议特殊化元数据都显示为属性;例如， <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> 属性公开 **User\-Agent** HTTP标头。  当显示标头元数据作为属性时，使用 **标头** 属性，则不应允许同一属性设置。  
+ <span data-ttu-id="ef5ab-133">用户无需使用 Headers 属性即可使用标头元数据。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-133">You are not required to use the **Headers** property to use header metadata.</span></span> <span data-ttu-id="ef5ab-134">协议特定的元数据可作为属性公开，例如，<xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> 属性公开了 User-Agent HTTP 标头。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-134">Protocol-specific metadata can be exposed as properties; for example, the <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> property exposes the **User-Agent** HTTP header.</span></span> <span data-ttu-id="ef5ab-135">将标头元数据作为属性公开时，应禁止使用 Headers 属性设置相同的属性。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-135">When you expose header metadata as a property, you should not allow the same property to be set using the **Headers** property.</span></span>  
   
-## 方案属性  
- <xref:System.Net.WebRequest.Method%2A> 属性包含该谓词或操作请求需要服务器执行。  **方法** 属性的默认值必须启用标准请求\/响应事件不需要任何协议特殊化属性设置为。  例如， [HttpWebResponse](frlrfSystemNetHttpWebResponseClassMethodTopic) 方法默认访问，从Web服务器请求的资源并返回响应。  
+## <a name="method-property"></a><span data-ttu-id="ef5ab-136">Method 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-136">Method Property</span></span>  
+ <span data-ttu-id="ef5ab-137"><xref:System.Net.WebRequest.Method%2A> 属性包含请求要求服务器执行的动作或操作。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-137">The <xref:System.Net.WebRequest.Method%2A> property contains the verb or action that the request is asking the server to perform.</span></span> <span data-ttu-id="ef5ab-138">Method 属性的默认值必须启用标准请求/响应操作，无需设置任何协议特定的属性。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-138">The default for the **Method** property must enable a standard request/response action without requiring any protocol-specific properties to be set.</span></span> <span data-ttu-id="ef5ab-139">例如，<xref:System.Net.HttpWebResponse.Method%2A> 方法默认为 GET，该方法从 Web 服务器请求资源并返回响应。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-139">For example, the <xref:System.Net.HttpWebResponse.Method%2A> method defaults to GET, which requests a resource from a Web server and returns the response.</span></span>  
   
- 通常比零必须设置 **ContentLength** 属性设置为值，当 **方法** 属性设置为以指示的谓词或操作时上载发生。  
+ <span data-ttu-id="ef5ab-140">通常，当 Method 属性设置为表明正在进行上传的动作或操作时，ContentLength 属性的值必须大于零。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-140">Typically the **ContentLength** property must be set to a value greater than zero when the **Method** property is set to a verb or action that indicates that an upload is taking place.</span></span>  
   
-## PreAuthenticate属性  
- 应用程序设置 <xref:System.Net.WebRequest.PreAuthenticate%2A> 属性指示应该将身份验证信息与初始请求而不是等待身份验证难题。  ，如果协议支持身份验证凭据发送的初始请求， **预先进行身份验证** 属性仅是有意义的。  
+## <a name="preauthenticate-property"></a><span data-ttu-id="ef5ab-141">PreAuthenticate 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-141">PreAuthenticate Property</span></span>  
+ <span data-ttu-id="ef5ab-142">应用程序设置 <xref:System.Net.WebRequest.PreAuthenticate%2A> 属性以指示应随初始请求一起发送身份验证信息，而不应等待身份验证质询。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-142">Applications set the <xref:System.Net.WebRequest.PreAuthenticate%2A> property to indicate that authentication information should be sent with the initial request rather than waiting for an authentication challenge.</span></span> <span data-ttu-id="ef5ab-143">仅当协议支持随初始请求一起发送的身份验证凭据时，PreAuthenticate 属性才有意义。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-143">The **PreAuthenticate** property is only meaningful if the protocol supports authentication credentials sent with the initial request.</span></span>  
   
-## 代理属性  
- <xref:System.Net.WebRequest.Proxy%2A> 属性包含用于访问所请求资源的一 <xref:System.Net.IWebProxy> 接口。  ，仅当您的协议支持proxied请求， **代理** 属性是有意义的。  ，如果您的协议，需要一个必须设置默认代理。  
+## <a name="proxy-property"></a><span data-ttu-id="ef5ab-144">Proxy 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-144">Proxy Property</span></span>  
+ <span data-ttu-id="ef5ab-145"><xref:System.Net.WebRequest.Proxy%2A> 属性包含用于访问所请求资源的 <xref:System.Net.IWebProxy> 接口。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-145">The <xref:System.Net.WebRequest.Proxy%2A> property contains an <xref:System.Net.IWebProxy> interface that is used to access the requested resource.</span></span> <span data-ttu-id="ef5ab-146">仅当协议支持代理请求时，Proxy 属性才有意义。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-146">The **Proxy** property is meaningful only if your protocol supports proxied requests.</span></span> <span data-ttu-id="ef5ab-147">如果协议需要代理，则必须设置默认代理。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-147">You must set the default proxy if one is required by your protocol.</span></span>  
   
- 在某些环境下，例如在公司firewall后，可能需要您的协议使用代理。  在这种情况下，必须实现接口 **IWebProxy** 创建专为协议将运行的代理选件类。  
+ <span data-ttu-id="ef5ab-148">在某些环境中，例如公司防火墙后，可能会要求协议使用代理。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-148">In some environments, such as behind a corporate firewall, your protocol might be required to use a proxy.</span></span> <span data-ttu-id="ef5ab-149">在这种情况下，必须实现 IWebProxy 接口以创建可用于协议的代理类。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-149">In that case, you must implement the **IWebProxy** interface to create a proxy class that will work for your protocol.</span></span>  
   
-## RequestUri属性  
- 传递给 **WebRequest.Create** 方法的 <xref:System.Net.WebRequest.RequestUri%2A> 属性包含URI。  ，在 **WebRequest** 创建的，它是只读的，不能更改。  如果您的协议支持重定向，响应可能来自其他URI标识的资源。  如果需要提供对响应的URI，必须提供包含该URI的附加属性。  
+## <a name="requesturi-property"></a><span data-ttu-id="ef5ab-150">RequestUri 属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-150">RequestUri Property</span></span>  
+ <span data-ttu-id="ef5ab-151"><xref:System.Net.WebRequest.RequestUri%2A> 属性包含传递给 WebRequest.Create 方法的 URI。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-151">The <xref:System.Net.WebRequest.RequestUri%2A> property contains the URI that was passed to the **WebRequest.Create** method.</span></span> <span data-ttu-id="ef5ab-152">创建 WebRequest 后，它就为只读且不能更改。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-152">It is read-only and cannot be changed once the **WebRequest** has been created.</span></span> <span data-ttu-id="ef5ab-153">如果协议支持重定向，则可由其他 URI 所标识的资源发出响应。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-153">If your protocol supports redirection, the response can come from a resource identified by a different URI.</span></span> <span data-ttu-id="ef5ab-154">如需提供对响应 URI 的访问权限，则必须提供一个包含该 URI 的其他属性。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-154">If you need to provide access to the URI that responded, you must provide an additional property containing that URI.</span></span>  
   
-## 超时属性  
- <xref:System.Net.WebRequest.Timeout%2A> 属性以毫秒为单位包含时间长度，，在发出请求之前等待时间并引发异常。  **超时** 仅适用于使用 <xref:System.Net.WebRequest.GetResponse%2A> 方法所做的同步请求;异步请求必须使用 <xref:System.Net.WebRequest.Abort%2A> 方法取消挂起的请求。  
+## <a name="timeout-property"></a><span data-ttu-id="ef5ab-155">超时属性</span><span class="sxs-lookup"><span data-stu-id="ef5ab-155">Timeout Property</span></span>  
+ <span data-ttu-id="ef5ab-156"><xref:System.Net.WebRequest.Timeout%2A> 属性包含请求超时并引发异常前等待的时长（以毫秒为单位）。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-156">The <xref:System.Net.WebRequest.Timeout%2A> property contains the length of time, in milliseconds, to wait before the request times out and throws an exception.</span></span> <span data-ttu-id="ef5ab-157">Timeout 仅适用于使用 <xref:System.Net.WebRequest.GetResponse%2A> 方法发出的同步请求，异步请求必须使用 <xref:System.Net.WebRequest.Abort%2A> 方法取消挂起的请求。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-157">**Timeout** applies only to synchronous requests made with the <xref:System.Net.WebRequest.GetResponse%2A> method; asynchronous requests must use the <xref:System.Net.WebRequest.Abort%2A> method to cancel a pending request.</span></span>  
   
- ，仅当协议特殊化选件类实现超时进程，设置 **超时** 属性是有意义的。  
+ <span data-ttu-id="ef5ab-158">仅当协议特定的类实现超时过程时，设置 Timeout 属性才有意义。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-158">Setting the **Timeout** property is meaningful only if the protocol-specific class implements a time-out process.</span></span>  
   
-## 中止方法  
- <xref:System.Net.WebRequest.Abort%2A> 方法取消挂起的异步请求到服务器。  在请求取消后，调用 **GetResponse**， **BeginGetResponse**、 **EndGetResponse**、 **GetRequestStream**、 **BeginGetRequestStream**或 **EndGetRequestStream** 将引发以及 <xref:System.Net.WebException.Status%2A> 属性的 <xref:System.Net.WebException> 设置为 [RequestCanceled](frlrfSystemNetWebExceptionStatusClassTopic)。  
+## <a name="abort-method"></a><span data-ttu-id="ef5ab-159">Abort 方法</span><span class="sxs-lookup"><span data-stu-id="ef5ab-159">Abort Method</span></span>  
+ <span data-ttu-id="ef5ab-160"><xref:System.Net.WebRequest.Abort%2A> 方法取消服务器的挂起异步请求。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-160">The <xref:System.Net.WebRequest.Abort%2A> method cancels a pending asynchronous request to a server.</span></span> <span data-ttu-id="ef5ab-161">取消请求后，调用 GetResponse、BeginGetResponse、EndGetResponse、GetRequestStream、BeginGetRequestStream 或 EndGetRequestStream 将引发 <xref:System.Net.WebException>，且<xref:System.Net.WebException.Status%2A> 属性被设置为 <xref:System.Net.WebExceptionStatus>。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-161">After the request has been canceled, calling **GetResponse**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**, **BeginGetRequestStream**, or **EndGetRequestStream** will throw a <xref:System.Net.WebException> with the <xref:System.Net.WebException.Status%2A> property set to <xref:System.Net.WebExceptionStatus>.</span></span>  
   
-## BeginGetRequestStream和EndGetRequestStream方法  
- <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 方法启动异步请求使用对服务器、数据的流。  <xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法完成该异步请求并返回请求的流。  使用标准.NET Framework异步模式，这些方法执行 **GetRequestStream** 方法。  
+## <a name="begingetrequeststream-and-endgetrequeststream-methods"></a><span data-ttu-id="ef5ab-162">BeginGetRequestStream 和 EndGetRequestStream 方法</span><span class="sxs-lookup"><span data-stu-id="ef5ab-162">BeginGetRequestStream and EndGetRequestStream Methods</span></span>  
+ <span data-ttu-id="ef5ab-163"><xref:System.Net.WebRequest.BeginGetRequestStream%2A> 方法为用于将数据上传到服务器的流启动异步请求。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-163">The <xref:System.Net.WebRequest.BeginGetRequestStream%2A> method starts an asynchronous request for the stream that is used to upload data to the server.</span></span> <span data-ttu-id="ef5ab-164"><xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法完成异步请求并返回所请求的流。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-164">The <xref:System.Net.WebRequest.EndGetRequestStream%2A> method completes the asynchronous request and returns the requested stream.</span></span> <span data-ttu-id="ef5ab-165">这些方法使用标准 .NET Framework 异步模式实现 GetRequestStream 方法。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-165">These methods implement the **GetRequestStream** method using the standard .NET Framework asynchronous pattern.</span></span>  
   
-## BeginGetResponse和EndGetResponse方法  
- <xref:System.Net.WebRequest.BeginGetResponse%2A> 方法启动异步请求到服务器。  <xref:System.Net.WebRequest.EndGetResponse%2A> 方法完成该异步请求并返回请求的响应。  使用标准.NET Framework异步模式，这些方法执行 **GetResponse** 方法。  
+## <a name="begingetresponse-and-endgetresponse-methods"></a><span data-ttu-id="ef5ab-166">BeginGetResponse 和 EndGetResponse 方法</span><span class="sxs-lookup"><span data-stu-id="ef5ab-166">BeginGetResponse and EndGetResponse Methods</span></span>  
+ <span data-ttu-id="ef5ab-167"><xref:System.Net.WebRequest.BeginGetResponse%2A> 方法启动服务器的异步请求。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-167">The <xref:System.Net.WebRequest.BeginGetResponse%2A> method starts an asynchronous request to a server.</span></span> <span data-ttu-id="ef5ab-168"><xref:System.Net.WebRequest.EndGetResponse%2A> 方法完成异步请求并返回请求的响应。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-168">The <xref:System.Net.WebRequest.EndGetResponse%2A> method completes the asynchronous request and returns the requested response.</span></span> <span data-ttu-id="ef5ab-169">这些方法使用标准 .NET Framework 异步模式实现 GetResponse 方法。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-169">These methods implement the **GetResponse** method using the standard .NET Framework asynchronous pattern.</span></span>  
   
-## GetRequestStream方法  
- <xref:System.Net.WebRequest.GetRequestStream%2A> 方法返回使用到所请求的服务器上写入数据的流。  返回的流应不希望的只读流;旨在用作到服务器编写的单向数据流。  流返回错误 <xref:System.IO.Stream.CanRead%2A> 和 <xref:System.IO.Stream.CanSeek%2A> 属性并为 <xref:System.IO.Stream.CanWrite%2A> 属性设置为true。  
+## <a name="getrequeststream-method"></a><span data-ttu-id="ef5ab-170">GetRequestStream 方法</span><span class="sxs-lookup"><span data-stu-id="ef5ab-170">GetRequestStream Method</span></span>  
+ <span data-ttu-id="ef5ab-171"><xref:System.Net.WebRequest.GetRequestStream%2A> 方法返回用于将数据写入请求的服务器的流。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-171">The <xref:System.Net.WebRequest.GetRequestStream%2A> method returns a stream that is used to write data to the requested server.</span></span> <span data-ttu-id="ef5ab-172">返回的流应为只写流，不会进行查找，它作为写入服务器的单向数据流。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-172">The stream returned should be a write-only stream that does not seek; it is intended as a one-way stream of data that is written to the server.</span></span> <span data-ttu-id="ef5ab-173">该流针对 <xref:System.IO.Stream.CanRead%2A> 和 <xref:System.IO.Stream.CanSeek%2A> 属性返回 false，针对 <xref:System.IO.Stream.CanWrite%2A> 属性返回 true。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-173">The stream returns false for the <xref:System.IO.Stream.CanRead%2A> and <xref:System.IO.Stream.CanSeek%2A> properties and true for the <xref:System.IO.Stream.CanWrite%2A> property.</span></span>  
   
- **GetRequestStream** 方法在返回流之前通常会打开与服务器的连接，因此，发送，指示的标题信息数据发送到服务器。  由于 **GetRequestStream** 启动该请求，将任何 **标头** 属性或 **ContentLength** 属性不在调用 **GetRequestStream**后通常允许。  
+ <span data-ttu-id="ef5ab-174">返回流之前，GetRequestStream 方法通常会与服务器建立连接，并发送指示正在将数据发送到服务器的标头信息。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-174">The **GetRequestStream** method typically opens a connection to the server and, before returning the stream, sends header information that indicates that data is being sent to the server.</span></span> <span data-ttu-id="ef5ab-175">由于 GetRequestStream 开始请求，因此在调用 GetRequestStream 后，通常不允许设置任何 Header 属性或 ContentLength 属性。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-175">Because **GetRequestStream** begins the request, setting any **Header** properties or the **ContentLength** property is typically not allowed after calling **GetRequestStream**.</span></span>  
   
-## GetResponse方法  
- <xref:System.Net.WebRequest.GetResponse%2A> 方法返回表示来自服务器的响应 <xref:System.Net.WebResponse> 选件类的一个协议特殊化子代。  除非 **GetRequestStream** 方法已启动了请求， **GetResponse** 方法创建与 **RequestUri**标识的资源的连接，发送指示请求的类型标头信息进行，然后接收来自资源的答案。  
+## <a name="getresponse-method"></a><span data-ttu-id="ef5ab-176">GetResponse 方法</span><span class="sxs-lookup"><span data-stu-id="ef5ab-176">GetResponse Method</span></span>  
+ <span data-ttu-id="ef5ab-177"><xref:System.Net.WebRequest.GetResponse%2A> 方法返回 <xref:System.Net.WebResponse> 类的协议特定的后代，表示来自服务器的响应。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-177">The <xref:System.Net.WebRequest.GetResponse%2A> method returns a protocol-specific descendant of the <xref:System.Net.WebResponse> class that represents the response from the server.</span></span> <span data-ttu-id="ef5ab-178">除非请求已经由 GetRequestStream 方法启动，否则 GetResponse 方法会与 RequestUri 标识的资源建立连接，发送标头信息，指示发出的请求的类型，然后从资源接收响应。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-178">Unless the request has already been initiated by the **GetRequestStream** method, the **GetResponse** method creates a connection to the resource identified by **RequestUri**, sends header information indicating the type of request being made, and then receives the response from the resource.</span></span>  
   
- 在 **GetResponse** 方法调用，应考虑所有属性是只读的。  **WebRequest** 实例供一次性使用;如果要使另一个请求，则应创建新的 **WebRequest**。  
+ <span data-ttu-id="ef5ab-179">调用 GetResponse 方法后，所有属性都应该被视为只读。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-179">Once the **GetResponse** method is called, all properties should be considered read-only.</span></span> <span data-ttu-id="ef5ab-180">WebRequest 实例是一次性的；如果想再发出请求，应创建一个新的 WebRequest。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-180">**WebRequest** instances are intended for one-time use; if you want to make another request, you should create a new **WebRequest**.</span></span>  
   
- **GetResponse** 方法将创建一个适当的 **WebResponse** 子代负责包含传入响应。  
+ <span data-ttu-id="ef5ab-181">GetResponse 方法负责创建适当的 WebResponse 后代来包含传入的响应。</span><span class="sxs-lookup"><span data-stu-id="ef5ab-181">The **GetResponse** method is responsible for creating an appropriate **WebResponse** descendant to contain the incoming response.</span></span>  
   
-## 请参阅  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
- [从 WebResponse 派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a><span data-ttu-id="ef5ab-182">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ef5ab-182">See Also</span></span>  
+ <span data-ttu-id="ef5ab-183"><xref:System.Net.WebRequest></span><span class="sxs-lookup"><span data-stu-id="ef5ab-183"><xref:System.Net.WebRequest></span></span>   
+ <span data-ttu-id="ef5ab-184"><xref:System.Net.HttpWebRequest></span><span class="sxs-lookup"><span data-stu-id="ef5ab-184"><xref:System.Net.HttpWebRequest></span></span>   
+ <span data-ttu-id="ef5ab-185"><xref:System.Net.FileWebRequest></span><span class="sxs-lookup"><span data-stu-id="ef5ab-185"><xref:System.Net.FileWebRequest></span></span>   
+ <span data-ttu-id="ef5ab-186">[对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md) </span><span class="sxs-lookup"><span data-stu-id="ef5ab-186">[Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) </span></span>  
+ [<span data-ttu-id="ef5ab-187">从 WebResponse 派生</span><span class="sxs-lookup"><span data-stu-id="ef5ab-187">Deriving from WebResponse</span></span>](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+

@@ -1,85 +1,91 @@
 ---
-title: "如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序
-## 适用于  
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a><span data-ttu-id="ed256-102">如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-102">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>
+## <a name="applies-to"></a><span data-ttu-id="ed256-103">适用于</span><span class="sxs-lookup"><span data-stu-id="ed256-103">Applies To</span></span>  
   
--   Microsoft® Windows®标识基础\(WIF\)  
+-   <span data-ttu-id="ed256-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="ed256-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   ASP.NET® Web窗体  
+-   <span data-ttu-id="ed256-105">ASP.NET® Web 窗体</span><span class="sxs-lookup"><span data-stu-id="ed256-105">ASP.NET® Web Forms</span></span>  
   
-## 摘要  
- 本帮助主题提供创建使用Windows身份验证的简单声明感知ASP.NET Web窗体应用程序提供了详细的分步过程。  它说明如何测试应用程序还提供命令验证存在声明使用Windows身份验证时，那么，当用户登录。  
+## <a name="summary"></a><span data-ttu-id="ed256-106">摘要</span><span class="sxs-lookup"><span data-stu-id="ed256-106">Summary</span></span>  
+ <span data-ttu-id="ed256-107">本操作说明提供了创建使用 Windows 身份验证的简单声明感知 ASP.NET Web 窗体应用程序的详细分步过程。</span><span class="sxs-lookup"><span data-stu-id="ed256-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Windows authentication.</span></span> <span data-ttu-id="ed256-108">还提供关于如何测试应用程序以验证用户使用 Windows 身份验证登录时是否呈现声明的说明。</span><span class="sxs-lookup"><span data-stu-id="ed256-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in using Windows authentication.</span></span>  
   
-## 内容  
+## <a name="contents"></a><span data-ttu-id="ed256-109">内容</span><span class="sxs-lookup"><span data-stu-id="ed256-109">Contents</span></span>  
   
--   用途  
+-   <span data-ttu-id="ed256-110">目标</span><span class="sxs-lookup"><span data-stu-id="ed256-110">Objectives</span></span>  
   
--   概述  
+-   <span data-ttu-id="ed256-111">概述</span><span class="sxs-lookup"><span data-stu-id="ed256-111">Overview</span></span>  
   
--   步骤摘要  
+-   <span data-ttu-id="ed256-112">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="ed256-112">Summary of Steps</span></span>  
   
--   步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
+-   <span data-ttu-id="ed256-113">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   步骤2 \-使用Windows身份验证，ASP.NET配置Web到声明的窗体应用程序  
+-   <span data-ttu-id="ed256-114">步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
   
--   步骤3 \-测试您的解决方案  
+-   <span data-ttu-id="ed256-115">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="ed256-115">Step 3 – Test Your Solution</span></span>  
   
-## 用途  
+## <a name="objectives"></a><span data-ttu-id="ed256-116">目标</span><span class="sxs-lookup"><span data-stu-id="ed256-116">Objectives</span></span>  
   
--   使用Windows身份验证，该控件配置为要求的ASP.NET Web窗体应用程序  
+-   <span data-ttu-id="ed256-117">为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-117">Configure an ASP.NET Web Forms application for claims using Windows authentication</span></span>  
   
--   测试ASP.NET Web窗体应用程序以查看其是否正常工作  
+-   <span data-ttu-id="ed256-118">测试 ASP.NET Web 窗体应用程序，了解它是否正常工作</span><span class="sxs-lookup"><span data-stu-id="ed256-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
   
-## 概述  
- .NET 4.5中，WIF及其基于要求的权限包括为framework的一部分。  以前，因此，如果要从ASP.NET用户的声明，需要安装WIF，然后转换为接口访问主体对象例如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User`。  现在，声明由这些主体对象自动提供服务。  
+## <a name="overview"></a><span data-ttu-id="ed256-119">概述</span><span class="sxs-lookup"><span data-stu-id="ed256-119">Overview</span></span>  
+ <span data-ttu-id="ed256-120">在 .NET 4.5 中，已将 WIF 及其基于声明的授权作为 Framework 的重要组成部分包括在内。</span><span class="sxs-lookup"><span data-stu-id="ed256-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="ed256-121">以前，如果想要来自 ASP.NET 用户的声明，需要安装 WIF，然后将接口转换为如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User` 的主体对象。</span><span class="sxs-lookup"><span data-stu-id="ed256-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="ed256-122">现在，声明由这些主体对象自动提供。</span><span class="sxs-lookup"><span data-stu-id="ed256-122">Now, claims are served automatically by these Principal objects.</span></span>  
   
- 因为Windows凭据验证的所有用户就自动具有声明与它们关联，Windows身份验证受益于.NET 4.5的WIF的中。  您可以开始使用这些声明立即在使用Windows身份验证的ASP.NET应用程序，因为此帮助主题演示。  
+ <span data-ttu-id="ed256-123">Windows 身份验证受益于 .NET 4.5 对 WIF 的纳入，因为所有通过 Windows 凭据进行身份验证的用户会自动拥有与之关联的声明。</span><span class="sxs-lookup"><span data-stu-id="ed256-123">Windows authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Windows credentials automatically have claims associated with them.</span></span> <span data-ttu-id="ed256-124">如本操作说明所示，可在使用 Windows 身份验证的 ASP.NET 应用程序中开始立即使用这些声明。</span><span class="sxs-lookup"><span data-stu-id="ed256-124">You can begin using these claims immediately in an ASP.NET application that uses Windows authentication, as this How-To demonstrates.</span></span>  
   
-## 步骤摘要  
+## <a name="summary-of-steps"></a><span data-ttu-id="ed256-125">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="ed256-125">Summary of Steps</span></span>  
   
--   步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
+-   <span data-ttu-id="ed256-126">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   步骤2 \-使用Windows身份验证，ASP.NET配置Web到声明的窗体应用程序  
+-   <span data-ttu-id="ed256-127">步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
   
--   步骤3 \-测试您的解决方案  
+-   <span data-ttu-id="ed256-128">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="ed256-128">Step 3 – Test Your Solution</span></span>  
   
-## 步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
- 在此步骤中，您将创建一个新ASP.NET Web窗体应用程序。  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="ed256-129">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="ed256-130">在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="ed256-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### 创建一个简单的ASP.NET应用程序  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="ed256-131">创建一个简单 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-131">To create a simple ASP.NET application</span></span>  
   
-1.  启动Visual Studio，然后单击 **文件**、 **新建**然后 **项目**。  
+1.  <span data-ttu-id="ed256-132">启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。</span><span class="sxs-lookup"><span data-stu-id="ed256-132">Start Visual Studio, then click **File**, **New**, and then **Project**.</span></span>  
   
-2.  在 **新建项目** 窗口中，单击 **ASP.NET Web窗体应用程序**。  
+2.  <span data-ttu-id="ed256-133">在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。</span><span class="sxs-lookup"><span data-stu-id="ed256-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  在 **名称**，输入 `TestApp` 并按 **确定**。  
+3.  <span data-ttu-id="ed256-134">在“名称”中，输入 `TestApp`，然后按“确定”。</span><span class="sxs-lookup"><span data-stu-id="ed256-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  在 **TestApp** 创建项目之后，请单击它在 **解决方案资源管理器**。  项目的属性将出现在 **属性** 窗格中 **解决方案资源管理器**下。  设置 **Windows 身份验证** 属性设置为 **已启用**。  
+4.  <span data-ttu-id="ed256-135">创建 TestApp 项目后，在“解决方案资源管理器”中单击它。</span><span class="sxs-lookup"><span data-stu-id="ed256-135">After the **TestApp** project has been created, click on it in **Solution Explorer**.</span></span> <span data-ttu-id="ed256-136">项目的属性会在“解决方案资源管理器”下的“属性面板”窗格中显示。</span><span class="sxs-lookup"><span data-stu-id="ed256-136">The project’s properties will appear in the **Properties** pane below **Solution Explorer**.</span></span> <span data-ttu-id="ed256-137">将“Windows 身份验证”属性设置为“启用”。</span><span class="sxs-lookup"><span data-stu-id="ed256-137">Set the **Windows Authentication** property to **Enabled**.</span></span>  
   
     > [!WARNING]
-    >  默认情况下Windows身份验证在新的ASP.NET应用程序禁用，因此，必须手动启用它。  
+    >  <span data-ttu-id="ed256-138">新的 ASP.NET 应用程序中默认禁用 Windows 身份验证，因此必须手动启用它。</span><span class="sxs-lookup"><span data-stu-id="ed256-138">Windows authentication is disabled by default in new ASP.NET applications, so you must manually enable it.</span></span>  
   
-## 步骤2 \-使用Windows身份验证，ASP.NET配置Web到声明的窗体应用程序  
- 此步骤将添加配置条目添加到 *Web.config* 配置文件并修改 *Default.aspx* 文件显示帐户的声明信息。  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a><span data-ttu-id="ed256-139">步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-139">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Windows Authentication</span></span>  
+ <span data-ttu-id="ed256-140">在此步骤中，将配置条目添加到 Web.config 配置文件，并修改 Default.aspx 文件以显示帐户的声明信息。</span><span class="sxs-lookup"><span data-stu-id="ed256-140">In this step you will add a configuration entry to the *Web.config* configuration file and modify the *Default.aspx* file to display claims information for an account.</span></span>  
   
-#### 使用Windows身份验证，该控件配置为要求的ASP.NET应用程序  
+#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a><span data-ttu-id="ed256-141">为使用 Windows 身份验证的声明配置 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-141">To configure ASP.NET application for claims using Windows authentication</span></span>  
   
-1.  在 **TestApp** 项目的 *Default.aspx文件*，用以下代码替换现有标记:  
+1.  <span data-ttu-id="ed256-142">在 TestApp 项目的 Default.aspx 文件中，将现有标记替换为以下内容：</span><span class="sxs-lookup"><span data-stu-id="ed256-142">In the **TestApp** project’s *Default.aspx* file, replace the existing markup with the following:</span></span>  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -97,12 +103,11 @@ caps.handback.revision: 5
             </asp:GridView>  
         </p>  
     </asp:Content>  
-  
     ```  
   
-     此步骤将一个GridView控件将填充Windows身份验证检索的声明的 *Default.aspx页*。  
+     <span data-ttu-id="ed256-143">此步骤将 GridView 控件添加到“Default.aspx”页，该页将填充从 Windows 身份验证中检索的声明。</span><span class="sxs-lookup"><span data-stu-id="ed256-143">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Windows authentication.</span></span>  
   
-2.  保存 *Default.aspx* 文件，然后打开其代码隐藏文件名为 *Default.aspx.cs*。  用下面的代码替换现有的代码:  
+2.  <span data-ttu-id="ed256-144">保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。</span><span class="sxs-lookup"><span data-stu-id="ed256-144">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="ed256-145">将现有代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="ed256-145">Replace the existing code with the following:</span></span>  
   
     ```csharp  
     using System;  
@@ -123,25 +128,26 @@ caps.handback.revision: 5
     }  
     ```  
   
-     上面的代码将显示有关验证的用户的声明。  
+     <span data-ttu-id="ed256-146">上方的代码将显示有关已经过身份验证的用户的声明。</span><span class="sxs-lookup"><span data-stu-id="ed256-146">The above code will display claims about an authenticated user.</span></span>  
   
-3.  若要更改应用程序的身份验证类型，请修改 **\<authentication\>** 块在项目的根 *Web.config文件的* **\<system.web\>** 部分，使其只包含以下配置:  
+3.  <span data-ttu-id="ed256-147">若要更改应用程序的身份验证类型，请修改项目的 Web.config 根文件的 \<system.web> 节中的 \<authentication> 块，使其只包括以下配置条目：</span><span class="sxs-lookup"><span data-stu-id="ed256-147">To change the application’s authentication type, modify the **\<authentication>** block in the **\<system.web>** section of the project’s root *Web.config* file so that it only includes the following configuration entry:</span></span>  
   
-    ```  
+    ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  最后，修改 **\<authorization\>** 块在同一个 *Web.config文件的* 节 **\<system.web\>** 强制身份验证:  
+4.  <span data-ttu-id="ed256-148">最后，修改同一 Web.config 文件的 \<system.web> 节中的 \<authorization> 块以强制身份验证：</span><span class="sxs-lookup"><span data-stu-id="ed256-148">Finally, modify the **\<authorization>** block in the **\<system.web>** section of the same *Web.config* file to force authentication:</span></span>  
   
-    ```  
+    ```xml  
     <authorization>  
         <deny users="?" />  
     </authorization>  
     ```  
   
-## 步骤3 \-测试您的解决方案  
- 此步骤将测试ASP.NET Web窗体应用程序，并验证是否存在声明，当用户登录使用Windows身份验证。  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="ed256-149">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="ed256-149">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="ed256-150">此步骤中将测试 ASP.NET Web 窗体应用程序，并验证用户使用 Windows 身份验证登录时是否呈现声明。</span><span class="sxs-lookup"><span data-stu-id="ed256-150">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Windows authentication.</span></span>  
   
-#### 使用Windows身份验证，测试对声明的ASP.NET Web窗体应用程序  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a><span data-ttu-id="ed256-151">为使用 Windows 身份验证的声明测试 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="ed256-151">To test your ASP.NET Web Forms application for claims using Windows authentication</span></span>  
   
-1.  按 **F5** 生成并运行该应用程序。  您应关注与 *Default.aspx，并且，*如果您的Windows帐户名\(包括域名\)应已经显示为页的右上角的验证的用户。  页的内容应包含查询结果从您的Windows帐户检索的声明。
+1.  <span data-ttu-id="ed256-152">按 F5 生成并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="ed256-152">Press **F5** to build and run the application.</span></span> <span data-ttu-id="ed256-153">应当会显示 Default.aspx，且你的 Windows 帐户名（包括域名）应在页面的右上角显示为已经过身份验证的用户。</span><span class="sxs-lookup"><span data-stu-id="ed256-153">You should be presented with *Default.aspx*, and your Windows account name (including domain name) should already appear as the authenticated user in the top right of the page.</span></span> <span data-ttu-id="ed256-154">页面内容应包括一个表，其中填充有从你的 Windows 帐户检索的声明。</span><span class="sxs-lookup"><span data-stu-id="ed256-154">The page’s content should include a table filled with claims retrieved from your Windows account.</span></span>
+

@@ -21,13 +21,13 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>如何：从 CSV 文件生成 XML (C#)
-本示例演示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 从逗号分隔值 (CSV) 文件生成 XML 文件。  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="b8ee6-102">如何：从 CSV 文件生成 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b8ee6-102">How to: Generate XML from CSV Files (C#)</span></span>
+<span data-ttu-id="b8ee6-103">本示例演示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 从逗号分隔值 (CSV) 文件生成 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="b8ee6-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码对字符串数组执行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询。  
+## <a name="example"></a><span data-ttu-id="b8ee6-104">示例</span><span class="sxs-lookup"><span data-stu-id="b8ee6-104">Example</span></span>  
+ <span data-ttu-id="b8ee6-105">下面的代码对字符串数组执行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询。</span><span class="sxs-lookup"><span data-stu-id="b8ee6-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
- 该查询使用 `let` 子句将每个字符串分隔成字段数组。  
+ <span data-ttu-id="b8ee6-106">该查询使用 `let` 子句将每个字符串分隔成字段数组。</span><span class="sxs-lookup"><span data-stu-id="b8ee6-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -60,7 +60,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="b8ee6-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="b8ee6-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -119,6 +119,6 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b8ee6-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="b8ee6-108">See Also</span></span>  
+ [<span data-ttu-id="b8ee6-109">投影和转换 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8ee6-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

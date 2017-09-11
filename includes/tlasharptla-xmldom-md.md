@@ -1,1 +1,1 @@
-XML 文档对象模型 (DOM)
+<span data-ttu-id="3e95c-101">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="3e95c-101">XML Document Object Model (DOM)</span></span>

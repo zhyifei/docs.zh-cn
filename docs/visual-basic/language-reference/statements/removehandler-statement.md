@@ -34,39 +34,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d35de576bd9e267800acc2a9bfd5761dd977622f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6e614a1dce4894dcd18509854f3cae149665cbf0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="removehandler-statement"></a>RemoveHandler 语句
-删除的事件和事件处理程序之间的关联。  
+# <a name="removehandler-statement"></a><span data-ttu-id="2ad39-102">RemoveHandler 语句</span><span class="sxs-lookup"><span data-stu-id="2ad39-102">RemoveHandler Statement</span></span>
+<span data-ttu-id="2ad39-103">删除的事件和事件处理程序之间的关联。</span><span class="sxs-lookup"><span data-stu-id="2ad39-103">Removes the association between an event and an event handler.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="2ad39-104">语法</span><span class="sxs-lookup"><span data-stu-id="2ad39-104">Syntax</span></span>  
   
 ```  
 RemoveHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a>部件  
+## <a name="parts"></a><span data-ttu-id="2ad39-105">部件</span><span class="sxs-lookup"><span data-stu-id="2ad39-105">Parts</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="2ad39-106">术语</span><span class="sxs-lookup"><span data-stu-id="2ad39-106">Term</span></span>|<span data-ttu-id="2ad39-107">定义</span><span class="sxs-lookup"><span data-stu-id="2ad39-107">Definition</span></span>|  
 |---|---|  
-|`event`|正在处理的事件的名称。|  
-|`eventhandler`|当前正在处理该事件的过程的名称。|  
+|`event`|<span data-ttu-id="2ad39-108">正在处理的事件的名称。</span><span class="sxs-lookup"><span data-stu-id="2ad39-108">The name of the event being handled.</span></span>|  
+|`eventhandler`|<span data-ttu-id="2ad39-109">当前正在处理该事件的过程的名称。</span><span class="sxs-lookup"><span data-stu-id="2ad39-109">The name of the procedure currently handling the event.</span></span>|  
   
-## <a name="remarks"></a>备注  
- `AddHandler`和`RemoveHandler`语句可用于启动和停止程序执行期间随时特定事件的事件处理。  
+## <a name="remarks"></a><span data-ttu-id="2ad39-110">备注</span><span class="sxs-lookup"><span data-stu-id="2ad39-110">Remarks</span></span>  
+ <span data-ttu-id="2ad39-111">`AddHandler`和`RemoveHandler`语句可用于启动和停止程序执行期间随时特定事件的事件处理。</span><span class="sxs-lookup"><span data-stu-id="2ad39-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
   
 > [!NOTE]
->  对于自定义事件`RemoveHandler`语句调用的事件`RemoveHandler`取值函数。 自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
+>  <span data-ttu-id="2ad39-112">对于自定义事件`RemoveHandler`语句调用的事件`RemoveHandler`取值函数。</span><span class="sxs-lookup"><span data-stu-id="2ad39-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="2ad39-113">自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="2ad39-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a>示例  
- [!code-vb[VbVbalrEvents #&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
+## <a name="example"></a><span data-ttu-id="2ad39-114">示例</span><span class="sxs-lookup"><span data-stu-id="2ad39-114">Example</span></span>  
+ <span data-ttu-id="2ad39-115">[!code-vb[VbVbalrEvents #&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="2ad39-115">[!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [句柄](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)   
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="2ad39-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2ad39-116">See Also</span></span>  
+ <span data-ttu-id="2ad39-117">[AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span><span class="sxs-lookup"><span data-stu-id="2ad39-117">[AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span></span>  
+<span data-ttu-id="2ad39-118"> [句柄](../../../visual-basic/language-reference/statements/handles-clause.md) </span><span class="sxs-lookup"><span data-stu-id="2ad39-118"> [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) </span></span>  
+<span data-ttu-id="2ad39-119"> [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md) </span><span class="sxs-lookup"><span data-stu-id="2ad39-119"> [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) </span></span>  
+<span data-ttu-id="2ad39-120"> [事件](../../../visual-basic/programming-guide/language-features/events/index.md)</span><span class="sxs-lookup"><span data-stu-id="2ad39-120"> [Events](../../../visual-basic/programming-guide/language-features/events/index.md)</span></span>

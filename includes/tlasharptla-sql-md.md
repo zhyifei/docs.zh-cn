@@ -1,1 +1,1 @@
-结构化查询语言 (SQL)
+<span data-ttu-id="3e5ab-101">结构化查询语言 (SQL)</span><span class="sxs-lookup"><span data-stu-id="3e5ab-101">Structured Query Language (SQL)</span></span>

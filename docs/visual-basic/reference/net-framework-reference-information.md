@@ -29,30 +29,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df8355ec3ca2bdedf3d483ee70be7598a5a08e33
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: fa008b3400326bce2edd7c08c8d527f61b6359c2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 参考信息 (Visual Basic)
-本主题提供了指向有关如何使用信息[!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]类库。  
+# <a name="net-framework-reference-information-visual-basic"></a><span data-ttu-id="506ab-102">.NET Framework 参考信息 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="506ab-102">.NET Framework Reference Information (Visual Basic)</span></span>
+<span data-ttu-id="506ab-103">本主题提供了指向有关如何使用信息[!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]类库。</span><span class="sxs-lookup"><span data-stu-id="506ab-103">This topic provides links to information about how to work with the [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] class library.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- [入门](http://msdn.microsoft.com/library/c693fd34-88fe-4d90-b332-19eeadf3b7e7)  
- 提供对 .NET Framework 的全面概述和指向其他资源的链接。  
+## <a name="related-sections"></a><span data-ttu-id="506ab-104">相关章节</span><span class="sxs-lookup"><span data-stu-id="506ab-104">Related Sections</span></span>  
+ [<span data-ttu-id="506ab-105">入门</span><span class="sxs-lookup"><span data-stu-id="506ab-105">Getting Started</span></span>](http://msdn.microsoft.com/library/c693fd34-88fe-4d90-b332-19eeadf3b7e7)  
+ <span data-ttu-id="506ab-106">提供对 .NET Framework 的全面概述和指向其他资源的链接。</span><span class="sxs-lookup"><span data-stu-id="506ab-106">Provides a comprehensive overview of the .NET Framework and links to additional resources.</span></span>  
   
- [类库概述](https://msdn.microsoft.com/library/hfa3fa08)  
- 引入了类、 接口和值类型，它们有助于加快和优化开发过程并提供对系统功能的访问。  
+ [<span data-ttu-id="506ab-107">类库概述</span><span class="sxs-lookup"><span data-stu-id="506ab-107">Class Library Overview</span></span>](https://msdn.microsoft.com/library/hfa3fa08)  
+ <span data-ttu-id="506ab-108">引入了类、 接口和值类型，它们有助于加快和优化开发过程并提供对系统功能的访问。</span><span class="sxs-lookup"><span data-stu-id="506ab-108">Introduces the classes, interfaces, and value types that help expedite and optimize the development process and provide access to system functionality.</span></span>  
   
- [开发指南](https://msdn.microsoft.com/library/hh156542)  
- 对应用程序开发，包括创建、 配置、 调试、 保护和部署应用程序提供的所有关键技术区域和任务的指南。 本主题还提供有关动态编程、 互操作性、 扩展性、 内存管理和线程处理的信息。  
+ [<span data-ttu-id="506ab-109">开发指南</span><span class="sxs-lookup"><span data-stu-id="506ab-109">Development Guide</span></span>](https://msdn.microsoft.com/library/hh156542)  
+ <span data-ttu-id="506ab-110">对应用程序开发，包括创建、 配置、 调试、 保护和部署应用程序提供的所有关键技术区域和任务的指南。</span><span class="sxs-lookup"><span data-stu-id="506ab-110">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application.</span></span> <span data-ttu-id="506ab-111">本主题还提供有关动态编程、 互操作性、 扩展性、 内存管理和线程处理的信息。</span><span class="sxs-lookup"><span data-stu-id="506ab-111">This topic also provides information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
   
- [工具](https://msdn.microsoft.com/library/d9kh6s92)  
- 介绍可用于开发、 配置和部署应用程序使用.NET Framework 技术的工具。  
+ [<span data-ttu-id="506ab-112">工具</span><span class="sxs-lookup"><span data-stu-id="506ab-112">Tools</span></span>](https://msdn.microsoft.com/library/d9kh6s92)  
+ <span data-ttu-id="506ab-113">介绍可用于开发、 配置和部署应用程序使用.NET Framework 技术的工具。</span><span class="sxs-lookup"><span data-stu-id="506ab-113">Describes the tools that you can use to develop, configure, and deploy applications by using .NET Framework technologies.</span></span>  
   
- [.NET Framework 示例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
- 提供指向演示.NET Framework 技术的示例应用程序。  
+ [<span data-ttu-id="506ab-114">.NET Framework 示例</span><span class="sxs-lookup"><span data-stu-id="506ab-114">.NET Framework Samples</span></span>](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ <span data-ttu-id="506ab-115">提供指向演示.NET Framework 技术的示例应用程序。</span><span class="sxs-lookup"><span data-stu-id="506ab-115">Provides links to sample applications that demonstrate .NET Framework technologies.</span></span>  
   
- [.NET framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
- 提供了语法、 代码示例和.NET Framework 命名空间中每个类的相关的信息。
+ [<span data-ttu-id="506ab-116">.NET framework 类库</span><span class="sxs-lookup"><span data-stu-id="506ab-116">.NET Framework Class Library</span></span>](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ <span data-ttu-id="506ab-117">提供了语法、 代码示例和.NET Framework 命名空间中每个类的相关的信息。</span><span class="sxs-lookup"><span data-stu-id="506ab-117">Provides syntax, code examples, and related information for each class in the .NET Framework namespaces.</span></span>

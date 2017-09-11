@@ -1,56 +1,62 @@
 ---
-title: "如何：从类型库生成互操作程序集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, 导入类型库"
-  - "导入类型库"
-  - "互操作程序集, 生成"
-  - "类型库"
-  - "类型库导入程序"
+title: "如何：从类型库生成互操作程序集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- importing type library
+- interop assemblies, generating
+- Type Library Importer
+- type libraries
+- COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ff406fb14a21b0425444d04e98bbaca127d3687b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：从类型库生成互操作程序集
-[类型库导入程序 \(Tlbimp.exe\)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 是一种命令行工具，它可以将包含在 COM 类型库中的 coclass 和接口转换为元数据。  此工具将自动为类型信息创建互操作程序集和命名空间。  当类的元数据变为可用时，托管客户端可以创建 COM 类型的实例并调用其方法，就像它是 .NET 实例一样。  Tlbimp.exe 一次将整个类型库转换为元数据，它不能为类型库中所定义的类型的子集生成类型信息。  
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a><span data-ttu-id="2d9e3-102">如何：从类型库生成互操作程序集</span><span class="sxs-lookup"><span data-stu-id="2d9e3-102">How to: Generate Interop Assemblies from Type Libraries</span></span>
+<span data-ttu-id="2d9e3-103">[类型库导入程序 (Tlbexp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 是一个命令行工具，可将 COM 类型库中包含的组件类和接口转换为元数据。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-103">The [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) is a command-line tool that converts the coclasses and interfaces contained in a COM type library to metadata.</span></span> <span data-ttu-id="2d9e3-104">此工具会自动为类型信息创建互操作程序集和命名空间。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-104">This tool creates an interop assembly and namespace for the type information automatically.</span></span> <span data-ttu-id="2d9e3-105">类的元数据可用之后，托管客户端可创建 COM 类型的实例并调用其方法，就像它是 .NET 实例一样。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-105">After the metadata of a class is available, managed clients can create instances of the COM type and call its methods, just as if it were a .NET instance.</span></span> <span data-ttu-id="2d9e3-106">Tlbimp.exe 同时将整个类型库转换为元数据，而且无法生成类型库中定义的类型子集的类型信息。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-106">Tlbimp.exe converts an entire type library to metadata at once and cannot generate type information for a subset of the types defined in a type library.</span></span>  
   
-### 从类型库生成互操作程序集  
+### <a name="to-generate-an-interop-assembly-from-a-type-library"></a><span data-ttu-id="2d9e3-107">从类型库生成的互操作程序集</span><span class="sxs-lookup"><span data-stu-id="2d9e3-107">To generate an interop assembly from a type library</span></span>  
   
-1.  使用以下命令：  
+1.  <span data-ttu-id="2d9e3-108">使用以下命令：</span><span class="sxs-lookup"><span data-stu-id="2d9e3-108">Use the following command:</span></span>  
   
-     **tlbimp** \<*类型库文件*\>  
+     <span data-ttu-id="2d9e3-109">tlbimp \<type-library-file></span><span class="sxs-lookup"><span data-stu-id="2d9e3-109">**tlbimp** \<*type-library-file*></span></span>  
   
-     如果添加 **\/out:** 开关，将生成一个名称已更改的互操作程序集（如 LOANLib.dll）。  更改互操作程序集名称有助于将它同初始的 COM DLL 区分开来，并避免可能因重名而导致的问题。  
+     <span data-ttu-id="2d9e3-110">添加 /out: 开关会生成具有已更改名称的互操作程序集，如 LOANLib.dll。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-110">Adding the **/out:** switch produces an interop assembly with an altered name, such as LOANLib.dll.</span></span> <span data-ttu-id="2d9e3-111">更改互操作程序集名称有助于将它与原始 COM DLL 区分开来，并防止因为具有重复名称而可能发生的问题。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-111">Altering the interop assembly name can help distinguish it from the original COM DLL and prevent problems that can occur from having duplicate names.</span></span>  
   
-## 示例  
- 以下命令在 `Loanlib` 命名空间中生成 Loanlib.dll 程序集。  
+## <a name="example"></a><span data-ttu-id="2d9e3-112">示例</span><span class="sxs-lookup"><span data-stu-id="2d9e3-112">Example</span></span>  
+ <span data-ttu-id="2d9e3-113">以下命令在 `Loanlib` 命名空间中生成 Loanlib.dll 程序集。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-113">The following command produces the Loanlib.dll assembly in the `Loanlib` namespace.</span></span>  
   
 ```  
 tlbimp Loanlib.dll  
 ```  
   
- 以下命令生成具有经过变动的名称 \(LOANLib.dll\) 的互操作程序集。  
+ <span data-ttu-id="2d9e3-114">以下命令生成具有已更改名称的互操作程序集 (LOANLib.dll)。</span><span class="sxs-lookup"><span data-stu-id="2d9e3-114">The following command produces an interop assembly with an altered name (LOANLib.dll).</span></span>  
   
 ```  
 tlbimp LoanLib.dll /out: LOANLib.dll  
 ```  
   
-## 请参阅  
- [将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a><span data-ttu-id="2d9e3-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d9e3-115">See Also</span></span>  
+ <span data-ttu-id="2d9e3-116">[将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) </span><span class="sxs-lookup"><span data-stu-id="2d9e3-116">[Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) </span></span>  
+ [<span data-ttu-id="2d9e3-117">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="2d9e3-117">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+

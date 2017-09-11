@@ -26,20 +26,21 @@ caps.latest.revision: 97
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d12492626a57fd4f09c25f97fb5a12c8bbf22ea1
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 47f68a3410eda53c2f5505b17aa319d516df335d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 ---
-# <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Visual Studio 2015 中的 Windows Presentation Foundation (WPF) 向开发人员提供了一个统一的编程模型，用于在 Windows 上构建现代业务线桌面应用程序。  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="b6c02-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b6c02-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="b6c02-103">Visual Studio 2015 中的 Windows Presentation Foundation (WPF) 向开发人员提供了一个统一的编程模型，用于在 Windows 上构建现代业务线桌面应用程序。</span><span class="sxs-lookup"><span data-stu-id="b6c02-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  Mozilla Firefox 浏览器禁用 Microsoft Framework Assistant 扩展。 请参阅[如何删除适用于 Firefox 的 .NET Framework Assistant](https://support.microsoft.com/en-us/kb/963707)，了解如何从 Firefox 中删除此扩展。  
+>  <span data-ttu-id="b6c02-104">Mozilla Firefox 浏览器禁用 Microsoft Framework Assistant 扩展。</span><span class="sxs-lookup"><span data-stu-id="b6c02-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="b6c02-105">请参阅[如何删除适用于 Firefox 的 .NET Framework Assistant](https://support.microsoft.com/en-us/kb/963707)，了解如何从 Firefox 中删除此扩展。</span><span class="sxs-lookup"><span data-stu-id="b6c02-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [使用 Windows Presentation Foundation 创建现代桌面应用程序](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
+ [<span data-ttu-id="b6c02-106">使用 Windows Presentation Foundation 创建现代桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="b6c02-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
   
- [在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
+ [<span data-ttu-id="b6c02-107">在 Visual Studio 和 Blend for Visual Studio 中设计 XAML</span><span class="sxs-lookup"><span data-stu-id="b6c02-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
   
- [获取 Visual Studio](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="b6c02-108">获取 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b6c02-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

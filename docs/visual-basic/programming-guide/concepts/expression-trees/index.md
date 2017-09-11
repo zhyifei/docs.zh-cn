@@ -27,31 +27,31 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="expression-trees-visual-basic"></a>表达式树 (Visual Basic)
-表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。  
+# <a name="expression-trees-visual-basic"></a><span data-ttu-id="6d101-102">表达式树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6d101-102">Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="6d101-103">表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。</span><span class="sxs-lookup"><span data-stu-id="6d101-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  
   
- 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 有关 LINQ 中表达式树的详细信息，请参阅[如何：使用表达式树生成动态查询 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。  
+ <span data-ttu-id="6d101-104">你可以对表达式树中的代码进行编辑和运算。</span><span class="sxs-lookup"><span data-stu-id="6d101-104">You can compile and run code represented by expression trees.</span></span> <span data-ttu-id="6d101-105">这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。</span><span class="sxs-lookup"><span data-stu-id="6d101-105">This enables dynamic modification of executable code, the execution of LINQ queries in various databases, and the creation of dynamic queries.</span></span> <span data-ttu-id="6d101-106">有关 LINQ 中表达式树的详细信息，请参阅[如何：使用表达式树生成动态查询 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="6d101-106">For more information about expression trees in LINQ, see [How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).</span></span>  
   
- 表达式树还能用于动态语言运行时 (DLR) 以提供动态语言和 .NET Framework 之间的互操作性，同时保证编译器编写员能够发射表达式树而非 Microsoft 中间语言 (MSIL)。 有关 DLR 的详细信息，请参阅[动态语言运行时概述](https://msdn.microsoft.com/library/dd233052)。  
+ <span data-ttu-id="6d101-107">表达式树还能用于动态语言运行时 (DLR) 以提供动态语言和 .NET Framework 之间的互操作性，同时保证编译器编写员能够发射表达式树而非 Microsoft 中间语言 (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="6d101-107">Expression trees are also used in the dynamic language runtime (DLR) to provide interoperability between dynamic languages and the .NET Framework and to enable compiler writers to emit expression trees instead of Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="6d101-108">有关 DLR 的详细信息，请参阅[动态语言运行时概述](https://msdn.microsoft.com/library/dd233052)。</span><span class="sxs-lookup"><span data-stu-id="6d101-108">For more information about the DLR, see [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052).</span></span>  
   
- 你可以基于匿名 lambda 表达式通过 C# 或者 Visual Basic 编译器创建表达式树，或者通过 <xref:System.Linq.Expressions> 名称空间手动创建。  
+ <span data-ttu-id="6d101-109">你可以基于匿名 lambda 表达式通过 C# 或者 Visual Basic 编译器创建表达式树，或者通过 <xref:System.Linq.Expressions> 名称空间手动创建。</span><span class="sxs-lookup"><span data-stu-id="6d101-109">You can have the C# or Visual Basic compiler create an expression tree for you based on an anonymous lambda expression, or you can create expression trees manually by using the <xref:System.Linq.Expressions> namespace.</span></span>  
   
-## <a name="creating-expression-trees-from-lambda-expressions"></a>根据 Lambda 表达式创建表达式树  
- 若 lambda 表达式被分配给 <xref:System.Linq.Expressions.Expression%601> 类型的变量，则编译器可以发射代码以创建表示该 lambda 表达式的表达式树。  
+## <a name="creating-expression-trees-from-lambda-expressions"></a><span data-ttu-id="6d101-110">根据 Lambda 表达式创建表达式树</span><span class="sxs-lookup"><span data-stu-id="6d101-110">Creating Expression Trees from Lambda Expressions</span></span>  
+ <span data-ttu-id="6d101-111">若 lambda 表达式被分配给 <xref:System.Linq.Expressions.Expression%601> 类型的变量，则编译器可以发射代码以创建表示该 lambda 表达式的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-111">When a lambda expression is assigned to a variable of type <xref:System.Linq.Expressions.Expression%601>, the compiler emits code to build an expression tree that represents the lambda expression.</span></span>  
   
- Visual Basic 编译器只能从表达式 Lambda（或单行 Lambda）生成表达式树。 它无法解析语句 lambda （或多行 lambda）。 有关 Visual Basic 中 Lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+ <span data-ttu-id="6d101-112">Visual Basic 编译器只能从表达式 Lambda（或单行 Lambda）生成表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-112">The Visual Basic compiler can generate expression trees only from expression lambdas (or single-line lambdas).</span></span> <span data-ttu-id="6d101-113">它无法解析语句 lambda （或多行 lambda）。</span><span class="sxs-lookup"><span data-stu-id="6d101-113">It cannot parse statement lambdas (or multi-line lambdas).</span></span> <span data-ttu-id="6d101-114">有关 Visual Basic 中 Lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="6d101-114">For more information about lambda expressions in Visual Basic, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
- 下列代码示例展示如何通过 Visual Basic 编译器创建表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。  
+ <span data-ttu-id="6d101-115">下列代码示例展示如何通过 Visual Basic 编译器创建表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-115">The following code examples demonstrate how to have the Visual Basic compiler create an expression tree that represents the lambda expression `Function(num) num < 5`.</span></span>  
   
 ```vb  
 Dim lambda As Expression(Of Func(Of Integer, Boolean)) =  
     Function(num) num < 5  
 ```  
   
-## <a name="creating-expression-trees-by-using-the-api"></a>通过 API 创建表达式树  
- 通过 API 创建表达式树需要使用 <xref:System.Linq.Expressions.Expression> 类。 类包含创建特定类型表达式树节点的静态工厂方法，比如表示参数变量的 <xref:System.Linq.Expressions.ParameterExpression>，或者是表示方法调用的 <xref:System.Linq.Expressions.MethodCallExpression>。 <xref:System.Linq.Expressions.ParameterExpression> 名称空间还解释了 <xref:System.Linq.Expressions.MethodCallExpression>、<xref:System.Linq.Expressions>和另一种具体表达式类型。 这些类型来源于抽象类型 <xref:System.Linq.Expressions.Expression>。  
+## <a name="creating-expression-trees-by-using-the-api"></a><span data-ttu-id="6d101-116">通过 API 创建表达式树</span><span class="sxs-lookup"><span data-stu-id="6d101-116">Creating Expression Trees by Using the API</span></span>  
+ <span data-ttu-id="6d101-117">通过 API 创建表达式树需要使用 <xref:System.Linq.Expressions.Expression> 类。</span><span class="sxs-lookup"><span data-stu-id="6d101-117">To create expression trees by using the API, use the <xref:System.Linq.Expressions.Expression> class.</span></span> <span data-ttu-id="6d101-118">类包含创建特定类型表达式树节点的静态工厂方法，比如表示参数变量的 <xref:System.Linq.Expressions.ParameterExpression>，或者是表示方法调用的 <xref:System.Linq.Expressions.MethodCallExpression>。</span><span class="sxs-lookup"><span data-stu-id="6d101-118">This class contains static factory methods that create expression tree nodes of specific types, for example, <xref:System.Linq.Expressions.ParameterExpression>, which represents a variable or parameter, or <xref:System.Linq.Expressions.MethodCallExpression>, which represents a method call.</span></span> <span data-ttu-id="6d101-119"><xref:System.Linq.Expressions.ParameterExpression> 名称空间还解释了 <xref:System.Linq.Expressions.MethodCallExpression>、<xref:System.Linq.Expressions>和另一种具体表达式类型。</span><span class="sxs-lookup"><span data-stu-id="6d101-119"><xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>, and the other expression-specific types are also defined in the <xref:System.Linq.Expressions> namespace.</span></span> <span data-ttu-id="6d101-120">这些类型来源于抽象类型 <xref:System.Linq.Expressions.Expression>。</span><span class="sxs-lookup"><span data-stu-id="6d101-120">These types derive from the abstract type <xref:System.Linq.Expressions.Expression>.</span></span>  
   
- 下列代码示例展示如何使用 API 创建表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。  
+ <span data-ttu-id="6d101-121">下列代码示例展示如何使用 API 创建表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-121">The following code example demonstrates how to create an expression tree that represents the lambda expression `Function(num) num < 5` by using the API.</span></span>  
   
 ```vb  
 ' Import the following namespace to your project: System.Linq.Expressions  
@@ -66,7 +66,7 @@ Dim lambda1 As Expression(Of Func(Of Integer, Boolean)) =
         New ParameterExpression() {numParam})  
 ```  
   
- 在 .NET Framework 4 或更高版本中，表达式树 API 还支持赋值表达式和控制流表达式，例如循环、条件块和 `try-catch` 块等。 相对于通过 Visual Basic 编译器和 Lambda 表达式创建表达式树，还可利用 API 创建更加复杂的表达式树。 下列示例展示如何创建计算数字阶乘的表达式树。  
+ <span data-ttu-id="6d101-122">在 .NET Framework 4 或更高版本中，表达式树 API 还支持赋值表达式和控制流表达式，例如循环、条件块和 `try-catch` 块等。</span><span class="sxs-lookup"><span data-stu-id="6d101-122">In .NET Framework 4 or later, the expression trees API also supports assignments and control flow expressions such as loops, conditional blocks, and `try-catch` blocks.</span></span> <span data-ttu-id="6d101-123">相对于通过 Visual Basic 编译器和 Lambda 表达式创建表达式树，还可利用 API 创建更加复杂的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-123">By using the API, you can create expression trees that are more complex than those that can be created from lambda expressions by the Visual Basic compiler.</span></span> <span data-ttu-id="6d101-124">下列示例展示如何创建计算数字阶乘的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-124">The following example demonstrates how to create an expression tree that calculates the factorial of a number.</span></span>  
   
 ```vb  
 ' Creating a parameter expression.  
@@ -103,10 +103,10 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](http://go.microsoft.com/fwlink/p/?LinkId=169513)，该方法也适用于 Visual Studio 的更高版本。
+<span data-ttu-id="6d101-125">有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](http://go.microsoft.com/fwlink/p/?LinkId=169513)，该方法也适用于 Visual Studio 的更高版本。</span><span class="sxs-lookup"><span data-stu-id="6d101-125">For more information, see [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513), which also applies to later versions of Visual Studio.</span></span>
   
-## <a name="parsing-expression-trees"></a>解析表达式树  
- 下列代码示例展示如何分解表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。  
+## <a name="parsing-expression-trees"></a><span data-ttu-id="6d101-126">解析表达式树</span><span class="sxs-lookup"><span data-stu-id="6d101-126">Parsing Expression Trees</span></span>  
+ <span data-ttu-id="6d101-127">下列代码示例展示如何分解表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-127">The following code example demonstrates how the expression tree that represents the lambda expression `Function(num) num < 5` can be decomposed into its parts.</span></span>  
   
 ```vb  
 ' Import the following namespace to your project: System.Linq.Expressions  
@@ -128,13 +128,13 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
 ' Decomposed expression: num => num LessThan 5  
 ```  
   
-## <a name="immutability-of-expression-trees"></a>表达式树永久性  
- 表达式树应具有永久性。 这意味着如果你想修改某个表达式树，则必须复制该表达式树然后替换其中的节点来创建一个新的表达式树。 你可以使用表达式树访问者遍历现有表达式树。 有关详细信息，请参阅[如何：修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)。  
+## <a name="immutability-of-expression-trees"></a><span data-ttu-id="6d101-128">表达式树永久性</span><span class="sxs-lookup"><span data-stu-id="6d101-128">Immutability of Expression Trees</span></span>  
+ <span data-ttu-id="6d101-129">表达式树应具有永久性。</span><span class="sxs-lookup"><span data-stu-id="6d101-129">Expression trees should be immutable.</span></span> <span data-ttu-id="6d101-130">这意味着如果你想修改某个表达式树，则必须复制该表达式树然后替换其中的节点来创建一个新的表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-130">This means that if you want to modify an expression tree, you must construct a new expression tree by copying the existing one and replacing nodes in it.</span></span> <span data-ttu-id="6d101-131">你可以使用表达式树访问者遍历现有表达式树。</span><span class="sxs-lookup"><span data-stu-id="6d101-131">You can use an expression tree visitor to traverse the existing expression tree.</span></span> <span data-ttu-id="6d101-132">有关详细信息，请参阅[如何：修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="6d101-132">For more information, see [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).</span></span>  
   
-## <a name="compiling-expression-trees"></a>编译表达式树  
- <xref:System.Linq.Expressions.Expression%601> 类型提供了 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 方法以将表达式树表示的代码编译成可执行委托。  
+## <a name="compiling-expression-trees"></a><span data-ttu-id="6d101-133">编译表达式树</span><span class="sxs-lookup"><span data-stu-id="6d101-133">Compiling Expression Trees</span></span>  
+ <span data-ttu-id="6d101-134"><xref:System.Linq.Expressions.Expression%601> 类型提供了 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 方法以将表达式树表示的代码编译成可执行委托。</span><span class="sxs-lookup"><span data-stu-id="6d101-134">The <xref:System.Linq.Expressions.Expression%601> type provides the <xref:System.Linq.Expressions.Expression%601.Compile%2A> method that compiles the code represented by an expression tree into an executable delegate.</span></span>  
   
- 下列代码示例展示如何编译表达式树并运行结果代码。  
+ <span data-ttu-id="6d101-135">下列代码示例展示如何编译表达式树并运行结果代码。</span><span class="sxs-lookup"><span data-stu-id="6d101-135">The following code example demonstrates how to compile an expression tree and run the resulting code.</span></span>  
   
 ```vb  
 ' Creating an expression tree.  
@@ -157,13 +157,13 @@ Console.WriteLine(expr.Compile()(4))
 ' Also prints True.  
 ```  
   
- 有关详细信息，请参阅[如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。  
+ <span data-ttu-id="6d101-136">有关详细信息，请参阅[如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。</span><span class="sxs-lookup"><span data-stu-id="6d101-136">For more information, see [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Linq.Expressions>   
- [如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [如何：修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)   
- [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [动态语言运行时概述](https://msdn.microsoft.com/library/dd233052)   
- [编程概念 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a><span data-ttu-id="6d101-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6d101-137">See Also</span></span>  
+ <span data-ttu-id="6d101-138"><xref:System.Linq.Expressions></span><span class="sxs-lookup"><span data-stu-id="6d101-138"><xref:System.Linq.Expressions></span></span>   
+ <span data-ttu-id="6d101-139">[如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md) </span><span class="sxs-lookup"><span data-stu-id="6d101-139">[How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md) </span></span>  
+ <span data-ttu-id="6d101-140">[如何：修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md) </span><span class="sxs-lookup"><span data-stu-id="6d101-140">[How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md) </span></span>  
+ <span data-ttu-id="6d101-141">[Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="6d101-141">[Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="6d101-142">[动态语言运行时概述](https://msdn.microsoft.com/library/dd233052) </span><span class="sxs-lookup"><span data-stu-id="6d101-142">[Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052) </span></span>  
+ [<span data-ttu-id="6d101-143">编程概念 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6d101-143">Programming Concepts (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
 

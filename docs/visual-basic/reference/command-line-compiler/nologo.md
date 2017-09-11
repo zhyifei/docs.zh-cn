@@ -32,34 +32,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a0e309a80082f19fb47ccbbb43c00f22c8addd3b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: fe03c36f46717248269c9aaec13b40569161b0e0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="nologo-visual-basic"></a>/nologo (Visual Basic)
-在编译期间取消显示版权标志和信息性消息。  
+# <a name="nologo-visual-basic"></a><span data-ttu-id="dc1d7-102">/nologo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc1d7-102">/nologo (Visual Basic)</span></span>
+<span data-ttu-id="dc1d7-103">在编译期间取消显示版权标志和信息性消息。</span><span class="sxs-lookup"><span data-stu-id="dc1d7-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="dc1d7-104">语法</span><span class="sxs-lookup"><span data-stu-id="dc1d7-104">Syntax</span></span>  
   
 ```  
 /nologo  
 ```  
   
-## <a name="remarks"></a>备注  
- 如果指定`/nologo`，编译器将不显示版权标志。 默认情况，`/nologo` 是无效的。  
+## <a name="remarks"></a><span data-ttu-id="dc1d7-105">备注</span><span class="sxs-lookup"><span data-stu-id="dc1d7-105">Remarks</span></span>  
+ <span data-ttu-id="dc1d7-106">如果指定`/nologo`，编译器将不显示版权标志。</span><span class="sxs-lookup"><span data-stu-id="dc1d7-106">If you specify `/nologo`, the compiler does not display a copyright banner.</span></span> <span data-ttu-id="dc1d7-107">默认情况，`/nologo` 是无效的。</span><span class="sxs-lookup"><span data-stu-id="dc1d7-107">By default, `/nologo` is not in effect.</span></span>  
   
 > [!NOTE]
->  `/nologo`选项不是在 Visual Studio 开发环境中可用; 只有当从命令行进行编译，它才可用。  
+>  <span data-ttu-id="dc1d7-108">`/nologo`选项不是在 Visual Studio 开发环境中可用; 只有当从命令行进行编译，它才可用。</span><span class="sxs-lookup"><span data-stu-id="dc1d7-108">The `/nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`并且不显示版权标志。  
+## <a name="example"></a><span data-ttu-id="dc1d7-109">示例</span><span class="sxs-lookup"><span data-stu-id="dc1d7-109">Example</span></span>  
+ <span data-ttu-id="dc1d7-110">下面的代码编译`T2.vb`并且不显示版权标志。</span><span class="sxs-lookup"><span data-stu-id="dc1d7-110">The following code compiles `T2.vb` and does not display a copyright banner.</span></span>  
   
 ```  
 vbc /nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="dc1d7-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dc1d7-111">See Also</span></span>  
+ <span data-ttu-id="dc1d7-112">[Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="dc1d7-112">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="dc1d7-113"> [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="dc1d7-113"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

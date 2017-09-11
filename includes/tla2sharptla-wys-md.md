@@ -1,1 +1,1 @@
-WYSIWYG
+<span data-ttu-id="d3f6a-101">WYSIWYG</span><span class="sxs-lookup"><span data-stu-id="d3f6a-101">WYSIWYG</span></span>

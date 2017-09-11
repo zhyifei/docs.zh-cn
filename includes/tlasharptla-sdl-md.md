@@ -1,1 +1,1 @@
-Microsoft 安全开发生命周期 (SDL)
+<span data-ttu-id="a9184-101">Microsoft 安全开发生命周期 (SDL)</span><span class="sxs-lookup"><span data-stu-id="a9184-101">Microsoft Security Development Lifecycle (SDL)</span></span>

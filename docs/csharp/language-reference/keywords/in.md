@@ -37,15 +37,15 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="in-c-reference"></a>in（C# 参考）
-在三种上下文中使用 `in` 上下文关键字：  
+# <a name="in-c-reference"></a><span data-ttu-id="c254b-102">in（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c254b-102">in (C# Reference)</span></span>
+<span data-ttu-id="c254b-103">在三种上下文中使用 `in` 上下文关键字：</span><span class="sxs-lookup"><span data-stu-id="c254b-103">The `in` contextual keyword is used in three contexts:</span></span>  
   
--   [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句  
+-   <span data-ttu-id="c254b-104">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句</span><span class="sxs-lookup"><span data-stu-id="c254b-104">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) statements</span></span>  
   
--   查询表达式中的 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)  
+-   <span data-ttu-id="c254b-105">查询表达式中的 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)</span><span class="sxs-lookup"><span data-stu-id="c254b-105">[join clauses](../../../csharp/language-reference/keywords/join-clause.md) in query expressions</span></span>  
   
--   泛型接口和委托中的[泛型类型参数](../../../csharp/language-reference/keywords/in-generic-modifier.md)。  
+-   <span data-ttu-id="c254b-106">泛型接口和委托中的[泛型类型参数](../../../csharp/language-reference/keywords/in-generic-modifier.md)。</span><span class="sxs-lookup"><span data-stu-id="c254b-106">[generic type parameters](../../../csharp/language-reference/keywords/in-generic-modifier.md) in generic interfaces and delegates.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="c254b-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c254b-107">See Also</span></span>  
+ [<span data-ttu-id="c254b-108">C# 参考</span><span class="sxs-lookup"><span data-stu-id="c254b-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 

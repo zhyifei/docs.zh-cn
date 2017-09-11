@@ -40,32 +40,32 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中将字符串发送到串行端口
-本主题介绍在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中如何使用 `My.Computer.Ports` 将字符串发送到计算机的串行端口。  
+# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a><span data-ttu-id="39c84-102">如何：在 Visual Basic 中将字符串发送到串行端口</span><span class="sxs-lookup"><span data-stu-id="39c84-102">How to: Send Strings to Serial Ports in Visual Basic</span></span>
+<span data-ttu-id="39c84-103">本主题介绍在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中如何使用 `My.Computer.Ports` 将字符串发送到计算机的串行端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-103">This topic describes how to use `My.Computer.Ports` to send strings to the computer's serial ports in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="example"></a>示例  
- 本示例将字符串发送到 COM1 串行端口。 你可能需要使用计算机上的其他串行端口。  
+## <a name="example"></a><span data-ttu-id="39c84-104">示例</span><span class="sxs-lookup"><span data-stu-id="39c84-104">Example</span></span>  
+ <span data-ttu-id="39c84-105">本示例将字符串发送到 COM1 串行端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-105">This example sends a string to the COM1 serial port.</span></span> <span data-ttu-id="39c84-106">你可能需要使用计算机上的其他串行端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-106">You may need to use a different serial port on your computer.</span></span>  
   
- 使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+ <span data-ttu-id="39c84-107">使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。</span><span class="sxs-lookup"><span data-stu-id="39c84-107">Use the `My.Computer.Ports.OpenSerialPort` method to obtain a reference to the port.</span></span> <span data-ttu-id="39c84-108">有关详细信息，请参阅<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。</span><span class="sxs-lookup"><span data-stu-id="39c84-108">For more information, see <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.</span></span>  
   
- `Using` 块允许应用程序在即使会生成异常的情况下也关闭串行端口。 操作串行端口的所有代码都应出现在此块中，或者出现在 `Try...Catch...Finally` 块中。  
+ <span data-ttu-id="39c84-109">`Using` 块允许应用程序在即使会生成异常的情况下也关闭串行端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-109">The `Using` block allows the application to close the serial port even if it generates an exception.</span></span> <span data-ttu-id="39c84-110">操作串行端口的所有代码都应出现在此块中，或者出现在 `Try...Catch...Finally` 块中。</span><span class="sxs-lookup"><span data-stu-id="39c84-110">All code that manipulates the serial port should appear within this block or within a `Try...Catch...Finally` block.</span></span>  
   
- <xref:System.IO.Ports.SerialPort.WriteLine%2A> 方法将数据发送到串行端口。  
+ <span data-ttu-id="39c84-111"><xref:System.IO.Ports.SerialPort.WriteLine%2A> 方法将数据发送到串行端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-111">The <xref:System.IO.Ports.SerialPort.WriteLine%2A> method sends the data to the serial port.</span></span>  
   
- [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]  
+ <span data-ttu-id="39c84-112">[!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="39c84-112">[!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="39c84-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="39c84-113">Compiling the Code</span></span>  
   
--   本示例假定计算机正在使用 `COM1`。  
+-   <span data-ttu-id="39c84-114">本示例假定计算机正在使用 `COM1`。</span><span class="sxs-lookup"><span data-stu-id="39c84-114">This example assumes the computer is using `COM1`.</span></span>  
   
-## <a name="robust-programming"></a>可靠编程  
- 本示例假定计算机正在使用 `COM1`；为了获得更大的灵活性，代码应允许用户从可用端口列表中选择所需的串行端口。 有关详细信息，请参阅[如何：显示可用的串行端口](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
+## <a name="robust-programming"></a><span data-ttu-id="39c84-115">可靠编程</span><span class="sxs-lookup"><span data-stu-id="39c84-115">Robust Programming</span></span>  
+ <span data-ttu-id="39c84-116">本示例假定计算机正在使用 `COM1`；为了获得更大的灵活性，代码应允许用户从可用端口列表中选择所需的串行端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-116">This example assumes the computer is using `COM1`; for more flexibility, the code should allow the user to select the desired serial port from a list of available ports.</span></span> <span data-ttu-id="39c84-117">有关详细信息，请参阅[如何：显示可用的串行端口](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。</span><span class="sxs-lookup"><span data-stu-id="39c84-117">For more information, see [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).</span></span>  
   
- 本示例使用 `Using` 块来确保应用程序在即使会引发异常的情况下也关闭端口。 有关详细信息，请参阅 [Using 语句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
+ <span data-ttu-id="39c84-118">本示例使用 `Using` 块来确保应用程序在即使会引发异常的情况下也关闭端口。</span><span class="sxs-lookup"><span data-stu-id="39c84-118">This example uses a `Using` block to make sure that the application closes the port even if it throws an exception.</span></span> <span data-ttu-id="39c84-119">有关详细信息，请参阅 [Using 语句](../../../../visual-basic/language-reference/statements/using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="39c84-119">For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
- [如何：使用连接到串行端口的调制解调器拨号](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
- [如何：显示可用的串行端口](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a><span data-ttu-id="39c84-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="39c84-120">See Also</span></span>  
+ <span data-ttu-id="39c84-121"><xref:Microsoft.VisualBasic.Devices.Ports></span><span class="sxs-lookup"><span data-stu-id="39c84-121"><xref:Microsoft.VisualBasic.Devices.Ports></span></span>   
+ <span data-ttu-id="39c84-122"><xref:System.IO.Ports.SerialPort?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="39c84-122"><xref:System.IO.Ports.SerialPort?displayProperty=fullName></span></span>   
+ <span data-ttu-id="39c84-123">[如何：使用连接到串行端口的调制解调器拨号](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md) </span><span class="sxs-lookup"><span data-stu-id="39c84-123">[How to: Dial Modems Attached to Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md) </span></span>  
+ [<span data-ttu-id="39c84-124">如何：显示可用的串行端口</span><span class="sxs-lookup"><span data-stu-id="39c84-124">How to: Show Available Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
 

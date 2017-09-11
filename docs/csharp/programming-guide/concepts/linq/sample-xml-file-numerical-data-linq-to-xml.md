@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>示例 XML 文件：数值数据 (LINQ to XML)
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含数值数据，用于求和、求平均值和分组。  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="acc36-102">示例 XML 文件：数值数据 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="acc36-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="acc36-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="acc36-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="acc36-104">此文件包含数值数据，用于求和、求平均值和分组。</span><span class="sxs-lookup"><span data-stu-id="acc36-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a>Data.xml  
+## <a name="dataxml"></a><span data-ttu-id="acc36-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="acc36-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -72,6 +72,6 @@ ms.lasthandoff: 07/28/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="acc36-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="acc36-106">See Also</span></span>  
+ [<span data-ttu-id="acc36-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="acc36-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

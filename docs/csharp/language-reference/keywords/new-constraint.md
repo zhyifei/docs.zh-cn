@@ -34,29 +34,29 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="new-constraint-c-reference"></a>new 约束（C# 参考）
-`new` 约束指定泛型类声明中的任何类型实参都必须有公共的无形参构造函数。 若要使用 new 约束，则该类型不能为抽象类型。  
+# <a name="new-constraint-c-reference"></a><span data-ttu-id="df854-102">new 约束（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="df854-102">new Constraint (C# Reference)</span></span>
+<span data-ttu-id="df854-103">`new` 约束指定泛型类声明中的任何类型实参都必须有公共的无形参构造函数。</span><span class="sxs-lookup"><span data-stu-id="df854-103">The `new` constraint specifies that any type argument in a generic class declaration must have a public parameterless constructor.</span></span> <span data-ttu-id="df854-104">若要使用 new 约束，则该类型不能为抽象类型。</span><span class="sxs-lookup"><span data-stu-id="df854-104">To use the new constraint, the type cannot be abstract.</span></span>  
   
-## <a name="example"></a>示例  
- 当泛型类创建类型的新实例时，请将 `new` 约束应用于类型参数，如下面的示例所示：  
+## <a name="example"></a><span data-ttu-id="df854-105">示例</span><span class="sxs-lookup"><span data-stu-id="df854-105">Example</span></span>  
+ <span data-ttu-id="df854-106">当泛型类创建类型的新实例时，请将 `new` 约束应用于类型参数，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="df854-106">Apply the `new` constraint to a type parameter when your generic class creates new instances of the type, as shown in the following example:</span></span>  
   
- [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
+ <span data-ttu-id="df854-107">[!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="df854-107">[!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]</span></span>  
   
-## <a name="example"></a>示例  
- 当与其他约束一起使用时，`new()` 约束必须最后指定：  
+## <a name="example"></a><span data-ttu-id="df854-108">示例</span><span class="sxs-lookup"><span data-stu-id="df854-108">Example</span></span>  
+ <span data-ttu-id="df854-109">当与其他约束一起使用时，`new()` 约束必须最后指定：</span><span class="sxs-lookup"><span data-stu-id="df854-109">When you use the `new()` constraint with other constraints, it must be specified last:</span></span>  
   
- [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
+ <span data-ttu-id="df854-110">[!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="df854-110">[!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]</span></span>  
   
- 有关详细信息，请参阅[类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。  
+ <span data-ttu-id="df854-111">有关详细信息，请参阅[类型参数的约束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。</span><span class="sxs-lookup"><span data-stu-id="df854-111">For more information, see [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="df854-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="df854-112">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Generic>   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [泛型](../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a><span data-ttu-id="df854-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="df854-113">See Also</span></span>  
+ <span data-ttu-id="df854-114"><xref:System.Collections.Generic></span><span class="sxs-lookup"><span data-stu-id="df854-114"><xref:System.Collections.Generic></span></span>   
+ <span data-ttu-id="df854-115">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="df854-115">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="df854-116">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="df854-116">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="df854-117">[C# 关键字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="df854-117">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="df854-118">[运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="df854-118">[Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md) </span></span>  
+ [<span data-ttu-id="df854-119">泛型</span><span class="sxs-lookup"><span data-stu-id="df854-119">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)
 

@@ -21,13 +21,13 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何：对多个键上的元素进行排序 (C#)
-本主题演示如何对多个键进行排序。  
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="76f14-102">如何：对多个键上的元素进行排序 (C#)</span><span class="sxs-lookup"><span data-stu-id="76f14-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
+<span data-ttu-id="76f14-103">本主题演示如何对多个键进行排序。</span><span class="sxs-lookup"><span data-stu-id="76f14-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a>示例  
- 在本示例中，首先按运输邮政编码，然后再按订单日期对结果进行排序。  
+## <a name="example"></a><span data-ttu-id="76f14-104">示例</span><span class="sxs-lookup"><span data-stu-id="76f14-104">Example</span></span>  
+ <span data-ttu-id="76f14-105">在本示例中，首先按运输邮政编码，然后再按订单日期对结果进行排序。</span><span class="sxs-lookup"><span data-stu-id="76f14-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ <span data-ttu-id="76f14-106">本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="76f14-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -46,7 +46,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="76f14-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="76f14-107">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -73,10 +73,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="76f14-108">示例</span><span class="sxs-lookup"><span data-stu-id="76f14-108">Example</span></span>  
+ <span data-ttu-id="76f14-109">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="76f14-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="76f14-110">有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="76f14-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的客户和订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。  
+ <span data-ttu-id="76f14-111">本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的客户和订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="76f14-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");  
@@ -97,7 +97,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="76f14-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="76f14-112">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -124,6 +124,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="76f14-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="76f14-113">See Also</span></span>  
+ [<span data-ttu-id="76f14-114">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="76f14-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

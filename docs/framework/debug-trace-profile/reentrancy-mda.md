@@ -1,62 +1,67 @@
 ---
-title: "reentrancy MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "unmanaged code, debugging"
-  - "transitioning threads unmanaged to managed code"
-  - "reentrancy MDA"
-  - "reentrancy without an orderly transition"
-  - "managed debugging assistants (MDAs), reentrancy"
-  - "illegal reentrancy"
-  - "MDAs (managed debugging assistants), reentrancy"
-  - "threading [.NET Framework], managed debugging assistants"
-  - "managed code, debugging"
-  - "native debugging, MDAs"
+title: "重入 MDA"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- unmanaged code, debugging
+- transitioning threads unmanaged to managed code
+- reentrancy MDA
+- reentrancy without an orderly transition
+- managed debugging assistants (MDAs), reentrancy
+- illegal reentrancy
+- MDAs (managed debugging assistants), reentrancy
+- threading [.NET Framework], managed debugging assistants
+- managed code, debugging
+- native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: beefdb130c953c30d50d948ef9add7ad9d867e45
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# reentrancy MDA
-在先前未通过有序转换执行从托管代码到本机代码的切换的情况下，如果尝试执行从本机代码到托管代码的转换，则会激活 `reentrancy` 托管调试助手 \(MDA\)。  
+# <a name="reentrancy-mda"></a><span data-ttu-id="f69d2-102">重入 MDA</span><span class="sxs-lookup"><span data-stu-id="f69d2-102">reentrancy MDA</span></span>
+<span data-ttu-id="f69d2-103">先前未通过有序转换执行从托管代码到本机代码的转换的情况下，如果尝试执行从本机代码到托管代码的转换，会激活 `reentrancy` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="f69d2-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
   
-## 症状  
- 在从本机代码转换到托管代码时对象堆被破坏或发生其他严重错误。  
+## <a name="symptoms"></a><span data-ttu-id="f69d2-104">症状</span><span class="sxs-lookup"><span data-stu-id="f69d2-104">Symptoms</span></span>  
+ <span data-ttu-id="f69d2-105">从本机转换到托管代码时，对象堆已损坏或发生其他严重错误。</span><span class="sxs-lookup"><span data-stu-id="f69d2-105">The object heap is corrupted or other serious errors are occurring when transitioning from native to managed code.</span></span>  
   
- 沿任一方向在本机代码和托管代码之间进行切换的线程必须执行有序转换。  但是，操作系统中的某些底层扩展性点（例如向量异常处理程序）允许从托管代码切换到本机代码而无需执行有序转换。这些切换受操作系统控制，而不是受公共语言运行时 \(CLR\) 的控制。在这些扩展性点内执行的任何本机代码都必须避免回调入托管代码。  
+ <span data-ttu-id="f69d2-106">沿任一方向在本机代码和托管代码之间进行切换的线程必须执行有序转换。</span><span class="sxs-lookup"><span data-stu-id="f69d2-106">Threads that switch between native and managed code in either direction must perform an orderly transition.</span></span> <span data-ttu-id="f69d2-107">但是，操作系统中的某些底层扩展性点（例如向量异常处理程序）可从托管代码切换到本机代码而无需执行有序转换。</span><span class="sxs-lookup"><span data-stu-id="f69d2-107">However, certain low-level extensibility points in the operating system, such as the vectored exception handler, allow switches from managed to native code without performing an orderly transition.</span></span>  <span data-ttu-id="f69d2-108">这些转换由操作系统控制，而不是公共语言运行时 (CLR) 控制。</span><span class="sxs-lookup"><span data-stu-id="f69d2-108">These switches are under operating system control, rather than under common language runtime (CLR) control.</span></span>  <span data-ttu-id="f69d2-109">在这些扩展性点内执行的任何本机代码都必须避免回调入托管代码。</span><span class="sxs-lookup"><span data-stu-id="f69d2-109">Any native code that executes inside these extensibility points must avoid calling back into managed code.</span></span>  
   
-## 原因  
- 在执行托管代码时激活了某个底层操作系统扩展性点，例如向量异常处理程序。通过该扩展性点调用的应用程序代码正在尝试回调入托管代码。  
+## <a name="cause"></a><span data-ttu-id="f69d2-110">原因</span><span class="sxs-lookup"><span data-stu-id="f69d2-110">Cause</span></span>  
+ <span data-ttu-id="f69d2-111">执行托管代码时激活了某个底层操作系统扩展性点，例如向量异常处理程序。</span><span class="sxs-lookup"><span data-stu-id="f69d2-111">A low-level operating system extensibility point, such as the vectored exception handler, has activated while executing managed code.</span></span>  <span data-ttu-id="f69d2-112">通过该扩展性点调用的应用程序代码正在尝试回调入托管代码。</span><span class="sxs-lookup"><span data-stu-id="f69d2-112">The application code that is invoked through that extensibility point is attempting to call back into managed code.</span></span>  
   
- 此问题总是由应用程序代码引起。  
+ <span data-ttu-id="f69d2-113">此问题通常是由应用程序代码引起的。</span><span class="sxs-lookup"><span data-stu-id="f69d2-113">This problem is always caused by application code.</span></span>  
   
-## 解决方法  
- 检查堆栈跟踪以确定激活此 MDA 的线程。该线程正在尝试非法调入托管代码。堆栈跟踪应该显示使用此扩展性点的应用程序代码、提供此扩展性点的操作系统代码和被该扩展性点中断的托管代码。  
+## <a name="resolution"></a><span data-ttu-id="f69d2-114">解决方法</span><span class="sxs-lookup"><span data-stu-id="f69d2-114">Resolution</span></span>  
+ <span data-ttu-id="f69d2-115">检查堆栈跟踪，确定激活此 MDA 的线程。</span><span class="sxs-lookup"><span data-stu-id="f69d2-115">Examine the stack trace for the thread that has activated this MDA.</span></span>  <span data-ttu-id="f69d2-116">线程正在尝试非法调入托管代码。</span><span class="sxs-lookup"><span data-stu-id="f69d2-116">The thread is attempting to illegally call into managed code.</span></span>  <span data-ttu-id="f69d2-117">堆栈跟踪应该展示使用此扩展性点的应用程序代码、提供此扩展性点的操作系统代码和此扩展性点中断的托管代码。</span><span class="sxs-lookup"><span data-stu-id="f69d2-117">The stack trace should reveal the application code using this extensibility point, the operating system code that provides this extensibility point, and the managed code that was interrupted by the extensibility point.</span></span>  
   
- 例如，在尝试从向量异常处理程序内部调用托管代码时，您将看到该 MDA 被激活了。在堆栈上，您将看到操作系统异常处理代码和一些触发诸如 <xref:System.DivideByZeroException> 或 <xref:System.AccessViolationException> 等异常的托管代码。  
+ <span data-ttu-id="f69d2-118">例如，尝试从矢量异常处理程序中调用托管代码时会看到 MDA 激活。</span><span class="sxs-lookup"><span data-stu-id="f69d2-118">For example, you will see the MDA activated in an attempt to call managed code from inside a vectored exception handler.</span></span>  <span data-ttu-id="f69d2-119">堆栈上会看到操作系统异常处理代码和某些触发 <xref:System.DivideByZeroException> 或 <xref:System.AccessViolationException> 等异常的托管代码。</span><span class="sxs-lookup"><span data-stu-id="f69d2-119">On the stack you will see the operating system exception handling code and some managed code triggering an exception such as a <xref:System.DivideByZeroException> or an <xref:System.AccessViolationException>.</span></span>  
   
- 在此示例中，正确的解决办法是完全以非托管代码实现向量异常处理程序。  
+ <span data-ttu-id="f69d2-120">在此示例中，正确的解决方法是完全以非托管代码实现向量异常处理程序。</span><span class="sxs-lookup"><span data-stu-id="f69d2-120">In this example, the correct resolution is to implement the vectored exception handler completely in unmanaged code.</span></span>  
   
-## 对运行时的影响  
- 此 MDA 对 CLR 无任何影响。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="f69d2-121">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="f69d2-121">Effect on the Runtime</span></span>  
+ <span data-ttu-id="f69d2-122">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="f69d2-122">This MDA has no effect on the CLR.</span></span>  
   
-## Output  
- 该 MDA 报告正在尝试非法重入。请检查线程的堆栈以确定发生此问题的原因以及如何更正问题。  下面是示例输出。  
+## <a name="output"></a><span data-ttu-id="f69d2-123">输出</span><span class="sxs-lookup"><span data-stu-id="f69d2-123">Output</span></span>  
+ <span data-ttu-id="f69d2-124">MDA 报告正在尝试非法重入。</span><span class="sxs-lookup"><span data-stu-id="f69d2-124">The MDA reports that illegal reentrancy is being attempted.</span></span>  <span data-ttu-id="f69d2-125">检查线程的堆栈以确定发生原因和如何更正此问题。</span><span class="sxs-lookup"><span data-stu-id="f69d2-125">Examine the thread's stack to determine why this is happening and how to correct the problem.</span></span> <span data-ttu-id="f69d2-126">下面是示例输出。</span><span class="sxs-lookup"><span data-stu-id="f69d2-126">The following is sample output.</span></span>  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -66,9 +71,9 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## 配置  
+## <a name="configuration"></a><span data-ttu-id="f69d2-127">配置</span><span class="sxs-lookup"><span data-stu-id="f69d2-127">Configuration</span></span>  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <reentrancy />  
@@ -76,8 +81,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## 示例  
- 下面的代码示例导致引发 <xref:System.AccessViolationException>。在支持向量异常处理程序的 Windows 版本上，此异常将导致调用托管向量异常处理程序。如果启用了 `reentrancy` MDA，该 MDA 将在尝试从操作系统的向量异常处理支持代码调用 `MyHandler` 期间激活。  
+## <a name="example"></a><span data-ttu-id="f69d2-128">示例</span><span class="sxs-lookup"><span data-stu-id="f69d2-128">Example</span></span>  
+ <span data-ttu-id="f69d2-129">以下代码示例引发 <xref:System.AccessViolationException>。</span><span class="sxs-lookup"><span data-stu-id="f69d2-129">The following code example causes an <xref:System.AccessViolationException> to be thrown.</span></span>  <span data-ttu-id="f69d2-130">支持矢量异常处理的 Windows 版本中，这会调用托管向量异常处理程序。</span><span class="sxs-lookup"><span data-stu-id="f69d2-130">On versions of Windows that support vectored exception handling, this will cause the managed vectored exception handler to be called.</span></span>  <span data-ttu-id="f69d2-131">如果启用 `reentrancy` MDA，MDA 将在尝试从操作系统矢量异常处理支持代码调用到 `MyHandler` 时激活。</span><span class="sxs-lookup"><span data-stu-id="f69d2-131">If the `reentrancy` MDA is enabled, the MDA will activate during the attempted call to `MyHandler` from the operating system's vectored exception handling support code.</span></span>  
   
 ```  
 using System;  
@@ -114,5 +119,6 @@ public class Reenter
 }  
 ```  
   
-## 请参阅  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="f69d2-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f69d2-132">See Also</span></span>  
+ [<span data-ttu-id="f69d2-133">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="f69d2-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

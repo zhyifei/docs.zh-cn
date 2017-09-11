@@ -55,112 +55,112 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00d5d0e83a88a0c7ac3ade92d09c584fce64fcd8
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 049ab1e82bac6c9f94bc411cd3e7c859e334d739
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="dim-statement-visual-basic"></a>Dim 语句 (Visual Basic)
-声明，并为一个或多个变量分配存储空间。  
+# <a name="dim-statement-visual-basic"></a><span data-ttu-id="43539-102">Dim 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43539-102">Dim Statement (Visual Basic)</span></span>
+<span data-ttu-id="43539-103">声明，并为一个或多个变量分配存储空间。</span><span class="sxs-lookup"><span data-stu-id="43539-103">Declares and allocates storage space for one or more variables.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="43539-104">语法</span><span class="sxs-lookup"><span data-stu-id="43539-104">Syntax</span></span>  
   
 ```  
 [ <attributelist> ] [ accessmodifier ] [[ Shared ] [ Shadows ] | [ Static ]] [ ReadOnly ]   
 Dim [ WithEvents ] variablelist  
 ```  
   
-## <a name="parts"></a>部件  
+## <a name="parts"></a><span data-ttu-id="43539-105">部件</span><span class="sxs-lookup"><span data-stu-id="43539-105">Parts</span></span>  
   
 -   `attributelist`  
   
-     可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+     <span data-ttu-id="43539-106">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-106">Optional.</span></span> <span data-ttu-id="43539-107">请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-107">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>  
   
 -   `accessmodifier`  
   
-     可选。 可以是以下各项之一：  
+     <span data-ttu-id="43539-108">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-108">Optional.</span></span> <span data-ttu-id="43539-109">可以是以下各项之一：</span><span class="sxs-lookup"><span data-stu-id="43539-109">Can be one of the following:</span></span>  
   
-    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [<span data-ttu-id="43539-110">Public</span><span class="sxs-lookup"><span data-stu-id="43539-110">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [<span data-ttu-id="43539-111">Protected</span><span class="sxs-lookup"><span data-stu-id="43539-111">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
   
-    -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+    -   [<span data-ttu-id="43539-112">Friend</span><span class="sxs-lookup"><span data-stu-id="43539-112">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [<span data-ttu-id="43539-113">Private</span><span class="sxs-lookup"><span data-stu-id="43539-113">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
-     请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     <span data-ttu-id="43539-114">请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-114">See [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
 -   `Shared`  
   
-     可选。 请参阅[共享](../../../visual-basic/language-reference/modifiers/shared.md)。  
+     <span data-ttu-id="43539-115">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-115">Optional.</span></span> <span data-ttu-id="43539-116">请参阅[共享](../../../visual-basic/language-reference/modifiers/shared.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-116">See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span>  
   
 -   `Shadows`  
   
-     可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+     <span data-ttu-id="43539-117">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-117">Optional.</span></span> <span data-ttu-id="43539-118">请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>  
   
 -   `Static`  
   
-     可选。 请参阅[静态](../../../visual-basic/language-reference/modifiers/static.md)。  
+     <span data-ttu-id="43539-119">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-119">Optional.</span></span> <span data-ttu-id="43539-120">请参阅[静态](../../../visual-basic/language-reference/modifiers/static.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-120">See [Static](../../../visual-basic/language-reference/modifiers/static.md).</span></span>  
   
 -   `ReadOnly`  
   
-     可选。 请参阅[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+     <span data-ttu-id="43539-121">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-121">Optional.</span></span> <span data-ttu-id="43539-122">请参阅[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-122">See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
   
 -   `WithEvents`  
   
-     可选。 指定它们的对象变量的引用可以引发事件的类的实例。 请参阅[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。  
+     <span data-ttu-id="43539-123">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-123">Optional.</span></span> <span data-ttu-id="43539-124">指定它们的对象变量的引用可以引发事件的类的实例。</span><span class="sxs-lookup"><span data-stu-id="43539-124">Specifies that these are object variables that refer to instances of a class that can raise events.</span></span> <span data-ttu-id="43539-125">请参阅[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-125">See [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).</span></span>  
   
 -   `variablelist`  
   
-     必需。 此语句中声明的变量的列表。  
+     <span data-ttu-id="43539-126">必需。</span><span class="sxs-lookup"><span data-stu-id="43539-126">Required.</span></span> <span data-ttu-id="43539-127">此语句中声明的变量的列表。</span><span class="sxs-lookup"><span data-stu-id="43539-127">List of variables being declared in this statement.</span></span>  
   
      `variable [ , variable ... ]`  
   
-     每个 `variable` 都具有以下语法和部件：  
+     <span data-ttu-id="43539-128">每个 `variable` 都具有以下语法和部件：</span><span class="sxs-lookup"><span data-stu-id="43539-128">Each `variable` has the following syntax and parts:</span></span>  
   
-     `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
+     <span data-ttu-id="43539-129">`variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`</span><span class="sxs-lookup"><span data-stu-id="43539-129">`variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`</span></span>  
   
-    |部件|描述|  
+    |<span data-ttu-id="43539-130">部件</span><span class="sxs-lookup"><span data-stu-id="43539-130">Part</span></span>|<span data-ttu-id="43539-131">描述</span><span class="sxs-lookup"><span data-stu-id="43539-131">Description</span></span>|  
     |---|---|  
-    |`variablename`|必需。 变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-    |`boundslist`|可选。 列出每个维度的一个数组变量的界限。|  
-    |`New`|可选。 创建类的新实例时`Dim`语句在运行时。|  
-    |`datatype`|可选。 变量的数据类型。|  
-    |`With`|可选。 引入了对象初始值设定项列表。|  
-    |`propertyname`|可选。 在类中属性的名称将会创建的实例。|  
-    |`propinitializer`|需要在之后`propertyname`=。 表达式，计算并将其分配给属性名称。|  
-    |`initializer`|可选如果`New`未指定。 计算并将其创建时分配给变量的表达式。|  
+    |`variablename`|<span data-ttu-id="43539-132">必需。</span><span class="sxs-lookup"><span data-stu-id="43539-132">Required.</span></span> <span data-ttu-id="43539-133">变量的名称。</span><span class="sxs-lookup"><span data-stu-id="43539-133">Name of the variable.</span></span> <span data-ttu-id="43539-134">请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-134">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+    |`boundslist`|<span data-ttu-id="43539-135">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-135">Optional.</span></span> <span data-ttu-id="43539-136">列出每个维度的一个数组变量的界限。</span><span class="sxs-lookup"><span data-stu-id="43539-136">List of bounds of each dimension of an array variable.</span></span>|  
+    |`New`|<span data-ttu-id="43539-137">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-137">Optional.</span></span> <span data-ttu-id="43539-138">创建类的新实例时`Dim`语句在运行时。</span><span class="sxs-lookup"><span data-stu-id="43539-138">Creates a new instance of the class when the `Dim` statement runs.</span></span>|  
+    |`datatype`|<span data-ttu-id="43539-139">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-139">Optional.</span></span> <span data-ttu-id="43539-140">变量的数据类型。</span><span class="sxs-lookup"><span data-stu-id="43539-140">Data type of the variable.</span></span>|  
+    |`With`|<span data-ttu-id="43539-141">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-141">Optional.</span></span> <span data-ttu-id="43539-142">引入了对象初始值设定项列表。</span><span class="sxs-lookup"><span data-stu-id="43539-142">Introduces the object initializer list.</span></span>|  
+    |`propertyname`|<span data-ttu-id="43539-143">可选。</span><span class="sxs-lookup"><span data-stu-id="43539-143">Optional.</span></span> <span data-ttu-id="43539-144">在类中属性的名称将会创建的实例。</span><span class="sxs-lookup"><span data-stu-id="43539-144">The name of a property in the class you are making an instance of.</span></span>|  
+    |`propinitializer`|<span data-ttu-id="43539-145">需要在之后`propertyname`=。</span><span class="sxs-lookup"><span data-stu-id="43539-145">Required after `propertyname` =.</span></span> <span data-ttu-id="43539-146">表达式，计算并将其分配给属性名称。</span><span class="sxs-lookup"><span data-stu-id="43539-146">The expression that is evaluated and assigned to the property name.</span></span>|  
+    |`initializer`|<span data-ttu-id="43539-147">可选如果`New`未指定。</span><span class="sxs-lookup"><span data-stu-id="43539-147">Optional if `New` is not specified.</span></span> <span data-ttu-id="43539-148">计算并将其创建时分配给变量的表达式。</span><span class="sxs-lookup"><span data-stu-id="43539-148">Expression that is evaluated and assigned to the variable when it is created.</span></span>|  
   
-## <a name="remarks"></a>备注  
- Visual Basic 编译器使用`Dim`语句来确定变量的数据类型和其他信息，例如哪些代码可以访问变量。 下面的示例声明一个变量以保存`Integer`值。  
+## <a name="remarks"></a><span data-ttu-id="43539-149">备注</span><span class="sxs-lookup"><span data-stu-id="43539-149">Remarks</span></span>  
+ <span data-ttu-id="43539-150">Visual Basic 编译器使用`Dim`语句来确定变量的数据类型和其他信息，例如哪些代码可以访问变量。</span><span class="sxs-lookup"><span data-stu-id="43539-150">The Visual Basic compiler uses the `Dim` statement to determine the variable's data type and other information, such as what code can access the variable.</span></span> <span data-ttu-id="43539-151">下面的示例声明一个变量以保存`Integer`值。</span><span class="sxs-lookup"><span data-stu-id="43539-151">The following example declares a variable to hold an `Integer` value.</span></span>  
   
 ```vb  
 Dim numberOfStudents As Integer  
 ```  
   
- 您可以指定任何数据类型或枚举、 结构、 类或接口的名称。  
+ <span data-ttu-id="43539-152">您可以指定任何数据类型或枚举、 结构、 类或接口的名称。</span><span class="sxs-lookup"><span data-stu-id="43539-152">You can specify any data type or the name of an enumeration, structure, class, or interface.</span></span>  
   
 ```vb  
 Dim finished As Boolean  
 Dim monitorBox As System.Windows.Forms.Form  
 ```  
   
- 对于引用类型，您使用`New`关键字来创建类的新实例或结构的指定数据类型。 如果您使用`New`，不使用初始值设定项表达式。 相反，如果它们是必需的要从其创建该变量的类的构造函数提供参数。  
+ <span data-ttu-id="43539-153">对于引用类型，您使用`New`关键字来创建类的新实例或结构的指定数据类型。</span><span class="sxs-lookup"><span data-stu-id="43539-153">For a reference type, you use the `New` keyword to create a new instance of the class or structure that is specified by the data type.</span></span> <span data-ttu-id="43539-154">如果您使用`New`，不使用初始值设定项表达式。</span><span class="sxs-lookup"><span data-stu-id="43539-154">If you use `New`, you do not use an initializer expression.</span></span> <span data-ttu-id="43539-155">相反，如果它们是必需的要从其创建该变量的类的构造函数提供参数。</span><span class="sxs-lookup"><span data-stu-id="43539-155">Instead, you supply arguments, if they are required, to the constructor of the class from which you are creating the variable.</span></span>  
   
 ```vb  
 Dim bottomLabel As New System.Windows.Forms.Label  
 ```  
   
- 您可以声明过程、 块、 类、 结构或模块中的变量。 不能声明源文件、 命名空间或接口中的变量。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ <span data-ttu-id="43539-156">您可以声明过程、 块、 类、 结构或模块中的变量。</span><span class="sxs-lookup"><span data-stu-id="43539-156">You can declare a variable in a procedure, block, class, structure, or module.</span></span> <span data-ttu-id="43539-157">不能声明源文件、 命名空间或接口中的变量。</span><span class="sxs-lookup"><span data-stu-id="43539-157">You cannot declare a variable in a source file, namespace, or interface.</span></span> <span data-ttu-id="43539-158">有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-158">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 在模块级别，在任何过程外部声明的变量是*成员变量*或*字段*。 成员变量是在其类、 结构或模块整个范围内。 在过程级别声明的变量是*局部变量*。 本地变量是仅在它们的过程或块的作用域中。  
+ <span data-ttu-id="43539-159">在模块级别，在任何过程外部声明的变量是*成员变量*或*字段*。</span><span class="sxs-lookup"><span data-stu-id="43539-159">A variable that is declared at module level, outside any procedure, is a *member variable* or *field*.</span></span> <span data-ttu-id="43539-160">成员变量是在其类、 结构或模块整个范围内。</span><span class="sxs-lookup"><span data-stu-id="43539-160">Member variables are in scope throughout their class, structure, or module.</span></span> <span data-ttu-id="43539-161">在过程级别声明的变量是*局部变量*。</span><span class="sxs-lookup"><span data-stu-id="43539-161">A variable that is declared at procedure level is a *local variable*.</span></span> <span data-ttu-id="43539-162">本地变量是仅在它们的过程或块的作用域中。</span><span class="sxs-lookup"><span data-stu-id="43539-162">Local variables are in scope only within their procedure or block.</span></span>  
   
- 下面的访问修饰符用于声明变量的过程之外︰ `Public`， `Protected`， `Friend`， `Protected Friend`，和`Private`。 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="43539-163">下面的访问修饰符用于声明变量的过程之外︰ `Public`， `Protected`， `Friend`， `Protected Friend`，和`Private`。</span><span class="sxs-lookup"><span data-stu-id="43539-163">The following access modifiers are used to declare variables outside a procedure: `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private`.</span></span> <span data-ttu-id="43539-164">有关详细信息，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-164">For more information, see [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
- `Dim`关键字是可选的通常省略如果指定任何以下修饰符︰ `Public`， `Protected`， `Friend`， `Protected Friend`， `Private`， `Shared`， `Shadows`， `Static`， `ReadOnly`，或`WithEvents`。  
+ <span data-ttu-id="43539-165">`Dim`关键字是可选的通常省略如果指定任何以下修饰符︰ `Public`， `Protected`， `Friend`， `Protected Friend`， `Private`， `Shared`， `Shadows`， `Static`， `ReadOnly`，或`WithEvents`。</span><span class="sxs-lookup"><span data-stu-id="43539-165">The `Dim` keyword is optional and usually omitted if you specify any of the following modifiers: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, or `WithEvents`.</span></span>  
   
 ```vb  
 Public maximumAllowed As Double  
@@ -169,17 +169,17 @@ Private salary As Decimal
 Static runningTotal As Integer  
 ```  
   
- 如果`Option Explicit`是 （默认设置），则编译器会为您使用每个变量要求声明。 有关详细信息，请参阅[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)。  
+ <span data-ttu-id="43539-166">如果`Option Explicit`是 （默认设置），则编译器会为您使用每个变量要求声明。</span><span class="sxs-lookup"><span data-stu-id="43539-166">If `Option Explicit` is on (the default), the compiler requires a declaration for every variable you use.</span></span> <span data-ttu-id="43539-167">有关详细信息，请参阅[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-167">For more information, see [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md).</span></span>  
   
-## <a name="specifying-an-initial-value"></a>指定一个初始值  
- 创建时，可以将一个值分配给一个变量。 对于值类型，您使用*初始值设定项*来提供要分配给该变量的表达式。 该表达式的计算结果必须为一个常量，它可以在编译时计算。  
+## <a name="specifying-an-initial-value"></a><span data-ttu-id="43539-168">指定一个初始值</span><span class="sxs-lookup"><span data-stu-id="43539-168">Specifying an Initial Value</span></span>  
+ <span data-ttu-id="43539-169">创建时，可以将一个值分配给一个变量。</span><span class="sxs-lookup"><span data-stu-id="43539-169">You can assign a value to a variable when it is created.</span></span> <span data-ttu-id="43539-170">对于值类型，您使用*初始值设定项*来提供要分配给该变量的表达式。</span><span class="sxs-lookup"><span data-stu-id="43539-170">For a value type, you use an *initializer* to supply an expression to be assigned to the variable.</span></span> <span data-ttu-id="43539-171">该表达式的计算结果必须为一个常量，它可以在编译时计算。</span><span class="sxs-lookup"><span data-stu-id="43539-171">The expression must evaluate to a constant that can be calculated at compile time.</span></span>  
   
 ```vb  
 Dim quantity As Integer = 10  
 Dim message As String = "Just started"  
 ```  
   
- 如果指定一个初始值设定项和数据类型中未指定`As`子句，*类型推理*用于推断通过初始值设定项的数据类型。 在下面的示例中，同时`num1`和`num2`强类型化为整数。 在第二个声明中，类型推断推断出类型 3 的值。  
+ <span data-ttu-id="43539-172">如果指定一个初始值设定项和数据类型中未指定`As`子句，*类型推理*用于推断通过初始值设定项的数据类型。</span><span class="sxs-lookup"><span data-stu-id="43539-172">If an initializer is specified and a data type is not specified in an `As` clause, *type inference* is used to infer the data type from the initializer.</span></span> <span data-ttu-id="43539-173">在下面的示例中，同时`num1`和`num2`强类型化为整数。</span><span class="sxs-lookup"><span data-stu-id="43539-173">In the following example, both `num1` and `num2` are strongly typed as integers.</span></span> <span data-ttu-id="43539-174">在第二个声明中，类型推断推断出类型 3 的值。</span><span class="sxs-lookup"><span data-stu-id="43539-174">In the second declaration, type inference infers the type from the value 3.</span></span>  
   
 ```vb  
 ' Use explicit typing.  
@@ -189,56 +189,56 @@ Dim num1 As Integer = 3
 Dim num2 = 3  
 ```  
   
- 类型推理适用于过程级。 它不适用于在类、 结构、 模块或接口中的过程之外。 类型推理的详细信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+ <span data-ttu-id="43539-175">类型推理适用于过程级。</span><span class="sxs-lookup"><span data-stu-id="43539-175">Type inference applies at the procedure level.</span></span> <span data-ttu-id="43539-176">它不适用于在类、 结构、 模块或接口中的过程之外。</span><span class="sxs-lookup"><span data-stu-id="43539-176">It does not apply outside a procedure in a class, structure, module, or interface.</span></span> <span data-ttu-id="43539-177">类型推理的详细信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-177">For more information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span>  
   
- 如果未指定数据类型或初始值设定项，则会发生什么情况的信息，请参阅[默认数据类型和值](../../../visual-basic/language-reference/statements/dim-statement.md#default)本主题中更高版本。  
+ <span data-ttu-id="43539-178">如果未指定数据类型或初始值设定项，则会发生什么情况的信息，请参阅[默认数据类型和值](../../../visual-basic/language-reference/statements/dim-statement.md#default)本主题中更高版本。</span><span class="sxs-lookup"><span data-stu-id="43539-178">For information about what happens when a data type or initializer is not specified, see [Default Data Types and Values](../../../visual-basic/language-reference/statements/dim-statement.md#default) later in this topic.</span></span>  
   
- 您可以使用*对象初始值设定项*声明命名和匿名类型的实例。 下面的代码创建的实例`Student`类，并使用对象初始值设定项来初始化属性。  
+ <span data-ttu-id="43539-179">您可以使用*对象初始值设定项*声明命名和匿名类型的实例。</span><span class="sxs-lookup"><span data-stu-id="43539-179">You can use an *object initializer* to declare instances of named and anonymous types.</span></span> <span data-ttu-id="43539-180">下面的代码创建的实例`Student`类，并使用对象初始值设定项来初始化属性。</span><span class="sxs-lookup"><span data-stu-id="43539-180">The following code creates an instance of a `Student` class and uses an object initializer to initialize properties.</span></span>  
   
 ```vb  
 Dim student1 As New Student With {.First = "Michael",   
                                   .Last = "Tucker"}  
 ```  
   
- 有关对象初始值设定项的详细信息，请参阅[如何︰ 使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)，[对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)，和[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+ <span data-ttu-id="43539-181">有关对象初始值设定项的详细信息，请参阅[如何︰ 使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)，[对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)，和[匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-181">For more information about object initializers, see [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-## <a name="declaring-multiple-variables"></a>声明多个变量  
- 您可以声明多个变量在一个声明语句中，使用括号指定变量的名称为每个，并在每个数组名。 以逗号分隔多个变量。  
+## <a name="declaring-multiple-variables"></a><span data-ttu-id="43539-182">声明多个变量</span><span class="sxs-lookup"><span data-stu-id="43539-182">Declaring Multiple Variables</span></span>  
+ <span data-ttu-id="43539-183">您可以声明多个变量在一个声明语句中，使用括号指定变量的名称为每个，并在每个数组名。</span><span class="sxs-lookup"><span data-stu-id="43539-183">You can declare several variables in one declaration statement, specifying the variable name for each one, and following each array name with parentheses.</span></span> <span data-ttu-id="43539-184">以逗号分隔多个变量。</span><span class="sxs-lookup"><span data-stu-id="43539-184">Multiple variables are separated by commas.</span></span>  
   
 ```vb  
 Dim lastTime, nextTime, allTimes() As Date  
 ```  
   
- 如果要声明多个变量与一个`As`子句中，不能提供该组的变量的初始值设定项。  
+ <span data-ttu-id="43539-185">如果要声明多个变量与一个`As`子句中，不能提供该组的变量的初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="43539-185">If you declare more than one variable with one `As` clause, you cannot supply an initializer for that group of variables.</span></span>  
   
- 您可以指定不同的数据类型为不同的变量使用单独的`As`子句为每个声明的变量。 每个变量将在第一个指定的数据类型`As`子句后遇到其`variablename`部件。  
+ <span data-ttu-id="43539-186">您可以指定不同的数据类型为不同的变量使用单独的`As`子句为每个声明的变量。</span><span class="sxs-lookup"><span data-stu-id="43539-186">You can specify different data types for different variables by using a separate `As` clause for each variable you declare.</span></span> <span data-ttu-id="43539-187">每个变量将在第一个指定的数据类型`As`子句后遇到其`variablename`部件。</span><span class="sxs-lookup"><span data-stu-id="43539-187">Each variable takes the data type specified in the first `As` clause encountered after its `variablename` part.</span></span>  
   
 ```vb  
 Dim a, b, c As Single, x, y As Double, i As Integer  
 ' a, b, and c are all Single; x and y are both Double  
 ```  
   
-## <a name="arrays"></a>数组  
- 您可以声明一个变量以保存*数组*，后者可以容纳多个值。 若要指定的变量保留了一个数组，请按照其`variablename`后面紧跟一对括号。 有关数组的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+## <a name="arrays"></a><span data-ttu-id="43539-188">数组</span><span class="sxs-lookup"><span data-stu-id="43539-188">Arrays</span></span>  
+ <span data-ttu-id="43539-189">您可以声明一个变量以保存*数组*，后者可以容纳多个值。</span><span class="sxs-lookup"><span data-stu-id="43539-189">You can declare a variable to hold an *array*, which can hold multiple values.</span></span> <span data-ttu-id="43539-190">若要指定的变量保留了一个数组，请按照其`variablename`后面紧跟一对括号。</span><span class="sxs-lookup"><span data-stu-id="43539-190">To specify that a variable holds an array, follow its `variablename` immediately with parentheses.</span></span> <span data-ttu-id="43539-191">有关数组的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-191">For more information about arrays, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
- 您可以指定的下限和上限，每个维度的数组。 若要执行此操作，包括`boundslist`在括号内。 为每个维度`boundslist`指定上限和下限 （可选）。 无论您指定下限值始终为零。 每个索引可能会不同于通过其上界值为零。  
+ <span data-ttu-id="43539-192">您可以指定的下限和上限，每个维度的数组。</span><span class="sxs-lookup"><span data-stu-id="43539-192">You can specify the lower and upper bound of each dimension of an array.</span></span> <span data-ttu-id="43539-193">若要执行此操作，包括`boundslist`在括号内。</span><span class="sxs-lookup"><span data-stu-id="43539-193">To do this, include a `boundslist` inside the parentheses.</span></span> <span data-ttu-id="43539-194">为每个维度`boundslist`指定上限和下限 （可选）。</span><span class="sxs-lookup"><span data-stu-id="43539-194">For each dimension, the `boundslist` specifies the upper bound and optionally the lower bound.</span></span> <span data-ttu-id="43539-195">无论您指定下限值始终为零。</span><span class="sxs-lookup"><span data-stu-id="43539-195">The lower bound is always zero, whether you specify it or not.</span></span> <span data-ttu-id="43539-196">每个索引可能会不同于通过其上界值为零。</span><span class="sxs-lookup"><span data-stu-id="43539-196">Each index can vary from zero through its upper bound value.</span></span>  
   
- 下面的两个语句是等效的。 每个语句声明数组 21`Integer`元素。 当您访问该数组时，该索引可能会不同于 0 到 20。  
+ <span data-ttu-id="43539-197">下面的两个语句是等效的。</span><span class="sxs-lookup"><span data-stu-id="43539-197">The following two statements are equivalent.</span></span> <span data-ttu-id="43539-198">每个语句声明数组 21`Integer`元素。</span><span class="sxs-lookup"><span data-stu-id="43539-198">Each statement declares an array of 21 `Integer` elements.</span></span> <span data-ttu-id="43539-199">当您访问该数组时，该索引可能会不同于 0 到 20。</span><span class="sxs-lookup"><span data-stu-id="43539-199">When you access the array, the index can vary from 0 through 20.</span></span>  
   
 ```vb  
 Dim totals(20) As Integer  
 Dim totals(0 To 20) As Integer  
 ```  
   
- 下面的语句声明类型的二维数组`Double`。 数组所具有 6 列 (5 + 1) 每个 4 的行 (3 + 1)。 请注意，上限表示索引中，不维的长度的最大可能值。 维度的长度为上界加一。  
+ <span data-ttu-id="43539-200">下面的语句声明类型的二维数组`Double`。</span><span class="sxs-lookup"><span data-stu-id="43539-200">The following statement declares a two-dimensional array of type `Double`.</span></span> <span data-ttu-id="43539-201">数组所具有 6 列 (5 + 1) 每个 4 的行 (3 + 1)。</span><span class="sxs-lookup"><span data-stu-id="43539-201">The array has 4 rows (3 + 1) of 6 columns (5 + 1) each.</span></span> <span data-ttu-id="43539-202">请注意，上限表示索引中，不维的长度的最大可能值。</span><span class="sxs-lookup"><span data-stu-id="43539-202">Note that an upper bound represents the highest possible value for the index, not the length of the dimension.</span></span> <span data-ttu-id="43539-203">维度的长度为上界加一。</span><span class="sxs-lookup"><span data-stu-id="43539-203">The length of the dimension is the upper bound plus one.</span></span>  
   
 ```vb  
 Dim matrix2(3, 5) As Double  
 ```  
   
- 数组可以包含 1 到 32 个维。  
+ <span data-ttu-id="43539-204">数组可以包含 1 到 32 个维。</span><span class="sxs-lookup"><span data-stu-id="43539-204">An array can have from 1 to 32 dimensions.</span></span>  
   
- 您可以将所有的边界中的数组声明留空。 如果这样做，则数组包含您指定的维度数，但不会被初始化。 它具有值`Nothing`至少初始化之前的某些元素。 `Dim`语句都必须指定边界的所有维度或任何维度。  
+ <span data-ttu-id="43539-205">您可以将所有的边界中的数组声明留空。</span><span class="sxs-lookup"><span data-stu-id="43539-205">You can leave all the bounds blank in an array declaration.</span></span> <span data-ttu-id="43539-206">如果这样做，则数组包含您指定的维度数，但不会被初始化。</span><span class="sxs-lookup"><span data-stu-id="43539-206">If you do this, the array has the number of dimensions you specify, but it is uninitialized.</span></span> <span data-ttu-id="43539-207">它具有值`Nothing`至少初始化之前的某些元素。</span><span class="sxs-lookup"><span data-stu-id="43539-207">It has a value of `Nothing` until you initialize at least some of its elements.</span></span> <span data-ttu-id="43539-208">`Dim`语句都必须指定边界的所有维度或任何维度。</span><span class="sxs-lookup"><span data-stu-id="43539-208">The `Dim` statement must specify bounds either for all dimensions or for no dimensions.</span></span>  
   
 ```vb  
 ' Declare an array with blank array bounds.  
@@ -247,107 +247,107 @@ Dim messages() As String
 ReDim messages(4)  
 ```  
   
- 如果数组具有多个维度，必须包含以逗号分隔括号来表示的维度数。  
+ <span data-ttu-id="43539-209">如果数组具有多个维度，必须包含以逗号分隔括号来表示的维度数。</span><span class="sxs-lookup"><span data-stu-id="43539-209">If the array has more than one dimension, you must include commas between the parentheses to indicate the number of dimensions.</span></span>  
   
 ```vb  
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte  
 ```  
   
- 您可以声明*长度为零的数组*通过声明一个数组的维数为-1。 保存一个零长度的数组的变量不具有值`Nothing`。 长度为零的数组所需的某些公共语言运行时函数。 如果您尝试访问此类数组时，会发生运行时异常。 有关详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ <span data-ttu-id="43539-210">您可以声明*长度为零的数组*通过声明一个数组的维数为-1。</span><span class="sxs-lookup"><span data-stu-id="43539-210">You can declare a *zero-length array* by declaring one of the array's dimensions to be -1.</span></span> <span data-ttu-id="43539-211">保存一个零长度的数组的变量不具有值`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="43539-211">A variable that holds a zero-length array does not have the value `Nothing`.</span></span> <span data-ttu-id="43539-212">长度为零的数组所需的某些公共语言运行时函数。</span><span class="sxs-lookup"><span data-stu-id="43539-212">Zero-length arrays are required by certain common language runtime functions.</span></span> <span data-ttu-id="43539-213">如果您尝试访问此类数组时，会发生运行时异常。</span><span class="sxs-lookup"><span data-stu-id="43539-213">If you try to access such an array, a runtime exception occurs.</span></span> <span data-ttu-id="43539-214">有关详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-214">For more information, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
- 可以通过使用数组文本初始化数组的值。 若要执行此操作，环绕具有大括号初始化值 (`{}`)。  
+ <span data-ttu-id="43539-215">可以通过使用数组文本初始化数组的值。</span><span class="sxs-lookup"><span data-stu-id="43539-215">You can initialize the values of an array by using an array literal.</span></span> <span data-ttu-id="43539-216">若要执行此操作，环绕具有大括号初始化值 (`{}`)。</span><span class="sxs-lookup"><span data-stu-id="43539-216">To do this, surround the initialization values with braces (`{}`).</span></span>  
   
 ```vb  
 Dim longArray() As Long = {0, 1, 2, 3}  
 ```  
   
- 对于多维数组，初始化的每个单独的维度包含在外部维度中的括号中。 其元素被指定按行优先的顺序。  
+ <span data-ttu-id="43539-217">对于多维数组，初始化的每个单独的维度包含在外部维度中的括号中。</span><span class="sxs-lookup"><span data-stu-id="43539-217">For multidimensional arrays, the initialization for each separate dimension is enclosed in braces in the outer dimension.</span></span> <span data-ttu-id="43539-218">其元素被指定按行优先的顺序。</span><span class="sxs-lookup"><span data-stu-id="43539-218">The elements are specified in row-major order.</span></span>  
   
 ```vb  
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}  
 ```  
   
- 数组文本的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ <span data-ttu-id="43539-219">数组文本的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-219">For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-##  <a name="default"></a>默认数据类型和值  
- 下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。  
+##  <span data-ttu-id="43539-220"><a name="default"></a>默认数据类型和值</span><span class="sxs-lookup"><span data-stu-id="43539-220"><a name="default"></a> Default Data Types and Values</span></span>  
+ <span data-ttu-id="43539-221">下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。</span><span class="sxs-lookup"><span data-stu-id="43539-221">The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.</span></span>  
   
-|是否指定数据类型？|是否指定初始值设定项？|示例|结果|  
+|<span data-ttu-id="43539-222">是否指定数据类型？</span><span class="sxs-lookup"><span data-stu-id="43539-222">Data type specified?</span></span>|<span data-ttu-id="43539-223">是否指定初始值设定项？</span><span class="sxs-lookup"><span data-stu-id="43539-223">Initializer specified?</span></span>|<span data-ttu-id="43539-224">示例</span><span class="sxs-lookup"><span data-stu-id="43539-224">Example</span></span>|<span data-ttu-id="43539-225">结果</span><span class="sxs-lookup"><span data-stu-id="43539-225">Result</span></span>|  
 |---|---|---|---|  
-|否|No|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)为 off （默认），则变量设置为`Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|  
-|否|是|`Dim qty = 5`|如果[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)处于打开状态 （默认值），则变量采用数据类型的初始值设定项。 请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|  
-|是|否|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 请参阅本节后面的表。|  
-|是|是|`Dim qty  As Integer = 5`|如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。|  
+|<span data-ttu-id="43539-226">否</span><span class="sxs-lookup"><span data-stu-id="43539-226">No</span></span>|<span data-ttu-id="43539-227">No</span><span class="sxs-lookup"><span data-stu-id="43539-227">No</span></span>|`Dim qty`|<span data-ttu-id="43539-228">如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)为 off （默认），则变量设置为`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="43539-228">If [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) is off (the default), the variable is set to `Nothing`.</span></span><br /><br /> <span data-ttu-id="43539-229">如果 `Option Strict` 处于打开状态，则发生编译时错误。</span><span class="sxs-lookup"><span data-stu-id="43539-229">If `Option Strict` is on, a compile-time error occurs.</span></span>|  
+|<span data-ttu-id="43539-230">否</span><span class="sxs-lookup"><span data-stu-id="43539-230">No</span></span>|<span data-ttu-id="43539-231">是</span><span class="sxs-lookup"><span data-stu-id="43539-231">Yes</span></span>|`Dim qty = 5`|<span data-ttu-id="43539-232">如果[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)处于打开状态 （默认值），则变量采用数据类型的初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="43539-232">If [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) is on (the default), the variable takes the data type of the initializer.</span></span> <span data-ttu-id="43539-233">请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-233">See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span><br /><br /> <span data-ttu-id="43539-234">如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。</span><span class="sxs-lookup"><span data-stu-id="43539-234">If `Option Infer` is off and `Option Strict` is off, the variable takes the data type of `Object`.</span></span><br /><br /> <span data-ttu-id="43539-235">如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。</span><span class="sxs-lookup"><span data-stu-id="43539-235">If `Option Infer` is off and `Option Strict` is on, a compile-time error occurs.</span></span>|  
+|<span data-ttu-id="43539-236">是</span><span class="sxs-lookup"><span data-stu-id="43539-236">Yes</span></span>|<span data-ttu-id="43539-237">否</span><span class="sxs-lookup"><span data-stu-id="43539-237">No</span></span>|`Dim qty As Integer`|<span data-ttu-id="43539-238">将变量初始化为数据类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="43539-238">The variable is initialized to the default value for the data type.</span></span> <span data-ttu-id="43539-239">请参阅本节后面的表。</span><span class="sxs-lookup"><span data-stu-id="43539-239">See the table later in this section.</span></span>|  
+|<span data-ttu-id="43539-240">是</span><span class="sxs-lookup"><span data-stu-id="43539-240">Yes</span></span>|<span data-ttu-id="43539-241">是</span><span class="sxs-lookup"><span data-stu-id="43539-241">Yes</span></span>|`Dim qty  As Integer = 5`|<span data-ttu-id="43539-242">如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。</span><span class="sxs-lookup"><span data-stu-id="43539-242">If the data type of the initializer is not convertible to the specified data type, a compile-time error occurs.</span></span>|  
   
- 如果你指定的数据类型，但不是指定初始值设定项，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]将变量初始化为其数据类型的默认值。 下表显示的默认初始化值。  
+ <span data-ttu-id="43539-243">如果你指定的数据类型，但不是指定初始值设定项，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]将变量初始化为其数据类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="43539-243">If you specify a data type but do not specify an initializer, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] initializes the variable to the default value for its data type.</span></span> <span data-ttu-id="43539-244">下表显示的默认初始化值。</span><span class="sxs-lookup"><span data-stu-id="43539-244">The following table shows the default initialization values.</span></span>  
   
-|数据类型|默认值|  
+|<span data-ttu-id="43539-245">数据类型</span><span class="sxs-lookup"><span data-stu-id="43539-245">Data type</span></span>|<span data-ttu-id="43539-246">默认值</span><span class="sxs-lookup"><span data-stu-id="43539-246">Default value</span></span>|  
 |---|---|  
-|所有数值类型 (包括`Byte`和`SByte`)|0|  
-|`Char`|二进制 0|  
-|所有引用类型 (包括`Object`， `String`，和所有数组)|`Nothing`|  
+|<span data-ttu-id="43539-247">所有数值类型 (包括`Byte`和`SByte`)</span><span class="sxs-lookup"><span data-stu-id="43539-247">All numeric types (including `Byte` and `SByte`)</span></span>|<span data-ttu-id="43539-248">0</span><span class="sxs-lookup"><span data-stu-id="43539-248">0</span></span>|  
+|`Char`|<span data-ttu-id="43539-249">二进制 0</span><span class="sxs-lookup"><span data-stu-id="43539-249">Binary 0</span></span>|  
+|<span data-ttu-id="43539-250">所有引用类型 (包括`Object`， `String`，和所有数组)</span><span class="sxs-lookup"><span data-stu-id="43539-250">All reference types (including `Object`, `String`, and all arrays)</span></span>|`Nothing`|  
 |`Boolean`|`False`|  
-|`Date`|1 年 1 月 1 日的上午 12:00 (01/01/0001 12:00:00 AM)|  
+|`Date`|<span data-ttu-id="43539-251">1 年 1 月 1 日的上午 12:00 (01/01/0001 12:00:00 AM)</span><span class="sxs-lookup"><span data-stu-id="43539-251">12:00 AM of January 1 of the year 1 (01/01/0001 12:00:00 AM)</span></span>|  
   
- 像它是一个单独的变量初始化结构的每个元素。 如果您声明数组的长度，但不是初始化它的元素，每个元素将初始化像它是一个单独的变量。  
+ <span data-ttu-id="43539-252">像它是一个单独的变量初始化结构的每个元素。</span><span class="sxs-lookup"><span data-stu-id="43539-252">Each element of a structure is initialized as if it were a separate variable.</span></span> <span data-ttu-id="43539-253">如果您声明数组的长度，但不是初始化它的元素，每个元素将初始化像它是一个单独的变量。</span><span class="sxs-lookup"><span data-stu-id="43539-253">If you declare the length of an array but do not initialize its elements, each element is initialized as if it were a separate variable.</span></span>  
   
-## <a name="static-local-variable-lifetime"></a>静态局部变量生存期  
- 一个`Static`局部变量具有较长的生存期比在其中声明该过程。 变量的生存期边界取决于声明该过程，以及是否有`Shared`。  
+## <a name="static-local-variable-lifetime"></a><span data-ttu-id="43539-254">静态局部变量生存期</span><span class="sxs-lookup"><span data-stu-id="43539-254">Static Local Variable Lifetime</span></span>  
+ <span data-ttu-id="43539-255">一个`Static`局部变量具有较长的生存期比在其中声明该过程。</span><span class="sxs-lookup"><span data-stu-id="43539-255">A `Static` local variable has a longer lifetime than that of the procedure in which it is declared.</span></span> <span data-ttu-id="43539-256">变量的生存期边界取决于声明该过程，以及是否有`Shared`。</span><span class="sxs-lookup"><span data-stu-id="43539-256">The boundaries of the variable's lifetime depend on where the procedure is declared and whether it is `Shared`.</span></span>  
   
-|过程声明|初始化变量|变量停止存在|  
+|<span data-ttu-id="43539-257">过程声明</span><span class="sxs-lookup"><span data-stu-id="43539-257">Procedure declaration</span></span>|<span data-ttu-id="43539-258">初始化变量</span><span class="sxs-lookup"><span data-stu-id="43539-258">Variable initialized</span></span>|<span data-ttu-id="43539-259">变量停止存在</span><span class="sxs-lookup"><span data-stu-id="43539-259">Variable stops existing</span></span>|  
 |---|---|---|  
-|在模块中|第一次调用该过程|当您的程序停止执行|  
-|在类或结构中，过程都是`Shared`|第一次调用该过程的特定实例或对类或结构本身|当您的程序停止执行|  
-|在类或结构中，过程不是`Shared`|第一次特定实例调用该过程|当垃圾回收 (GC) 释放该实例|  
+|<span data-ttu-id="43539-260">在模块中</span><span class="sxs-lookup"><span data-stu-id="43539-260">In a module</span></span>|<span data-ttu-id="43539-261">第一次调用该过程</span><span class="sxs-lookup"><span data-stu-id="43539-261">The first time the procedure is called</span></span>|<span data-ttu-id="43539-262">当您的程序停止执行</span><span class="sxs-lookup"><span data-stu-id="43539-262">When your program stops execution</span></span>|  
+|<span data-ttu-id="43539-263">在类或结构中，过程都是`Shared`</span><span class="sxs-lookup"><span data-stu-id="43539-263">In a class or structure, procedure is `Shared`</span></span>|<span data-ttu-id="43539-264">第一次调用该过程的特定实例或对类或结构本身</span><span class="sxs-lookup"><span data-stu-id="43539-264">The first time the procedure is called either on a specific instance or on the class or structure itself</span></span>|<span data-ttu-id="43539-265">当您的程序停止执行</span><span class="sxs-lookup"><span data-stu-id="43539-265">When your program stops execution</span></span>|  
+|<span data-ttu-id="43539-266">在类或结构中，过程不是`Shared`</span><span class="sxs-lookup"><span data-stu-id="43539-266">In a class or structure, procedure isn't `Shared`</span></span>|<span data-ttu-id="43539-267">第一次特定实例调用该过程</span><span class="sxs-lookup"><span data-stu-id="43539-267">The first time the procedure is called on a specific instance</span></span>|<span data-ttu-id="43539-268">当垃圾回收 (GC) 释放该实例</span><span class="sxs-lookup"><span data-stu-id="43539-268">When the instance is released for garbage collection (GC)</span></span>|  
   
-## <a name="attributes-and-modifiers"></a>特性和修饰符  
- 可以将特性应用于成员变量，不适用于本地变量。 特性提供信息对程序集的元数据，这并没有意义的临时存储 （如本地变量）。  
+## <a name="attributes-and-modifiers"></a><span data-ttu-id="43539-269">特性和修饰符</span><span class="sxs-lookup"><span data-stu-id="43539-269">Attributes and Modifiers</span></span>  
+ <span data-ttu-id="43539-270">可以将特性应用于成员变量，不适用于本地变量。</span><span class="sxs-lookup"><span data-stu-id="43539-270">You can apply attributes only to member variables, not to local variables.</span></span> <span data-ttu-id="43539-271">特性提供信息对程序集的元数据，这并没有意义的临时存储 （如本地变量）。</span><span class="sxs-lookup"><span data-stu-id="43539-271">An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local variables.</span></span>  
   
- 在模块级别，不能使用`Static`修饰符可以声明成员变量。 在过程级别，不能使用`Shared`， `Shadows`， `ReadOnly`， `WithEvents`，或任何访问修饰符来声明本地变量。  
+ <span data-ttu-id="43539-272">在模块级别，不能使用`Static`修饰符可以声明成员变量。</span><span class="sxs-lookup"><span data-stu-id="43539-272">At module level, you cannot use the `Static` modifier to declare member variables.</span></span> <span data-ttu-id="43539-273">在过程级别，不能使用`Shared`， `Shadows`， `ReadOnly`， `WithEvents`，或任何访问修饰符来声明本地变量。</span><span class="sxs-lookup"><span data-stu-id="43539-273">At procedure level, you cannot use `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, or any access modifiers to declare local variables.</span></span>  
   
- 您可以指定哪些代码可以访问的变量通过提供`accessmodifier`。 类和模块成员变量 （任何过程之外） 默认为私有访问，而结构成员变量默认为公共访问权限。 您可以调整它们的访问级别使用的访问修饰符。 不能使用访问修饰符 （过程） 中的本地变量上。  
+ <span data-ttu-id="43539-274">您可以指定哪些代码可以访问的变量通过提供`accessmodifier`。</span><span class="sxs-lookup"><span data-stu-id="43539-274">You can specify what code can access a variable by supplying an `accessmodifier`.</span></span> <span data-ttu-id="43539-275">类和模块成员变量 （任何过程之外） 默认为私有访问，而结构成员变量默认为公共访问权限。</span><span class="sxs-lookup"><span data-stu-id="43539-275">Class and module member variables (outside any procedure) default to private access, and structure member variables default to public access.</span></span> <span data-ttu-id="43539-276">您可以调整它们的访问级别使用的访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="43539-276">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="43539-277">不能使用访问修饰符 （过程） 中的本地变量上。</span><span class="sxs-lookup"><span data-stu-id="43539-277">You cannot use access modifiers on local variables (inside a procedure).</span></span>  
   
- 您可以指定`WithEvents`仅对成员变量上，而不在过程内的局部变量。 如果指定`WithEvents`，该变量的数据类型必须是特定的类类型，不`Object`。 不能声明与数组`WithEvents`。 有关事件的详细信息，请参阅[事件](../../../visual-basic/programming-guide/language-features/events/index.md)。  
+ <span data-ttu-id="43539-278">您可以指定`WithEvents`仅对成员变量上，而不在过程内的局部变量。</span><span class="sxs-lookup"><span data-stu-id="43539-278">You can specify `WithEvents` only on member variables, not on local variables inside a procedure.</span></span> <span data-ttu-id="43539-279">如果指定`WithEvents`，该变量的数据类型必须是特定的类类型，不`Object`。</span><span class="sxs-lookup"><span data-stu-id="43539-279">If you specify `WithEvents`, the data type of the variable must be a specific class type, not `Object`.</span></span> <span data-ttu-id="43539-280">不能声明与数组`WithEvents`。</span><span class="sxs-lookup"><span data-stu-id="43539-280">You cannot declare an array with `WithEvents`.</span></span> <span data-ttu-id="43539-281">有关事件的详细信息，请参阅[事件](../../../visual-basic/programming-guide/language-features/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-281">For more information about events, see [Events](../../../visual-basic/programming-guide/language-features/events/index.md).</span></span>  
   
 > [!NOTE]
->  代码类之外，结构或模块必须限定成员变量的名称替换该类、 结构或模块的名称。 过程或块不能引用该过程或块内的任何局部变量之外的代码。  
+>  <span data-ttu-id="43539-282">代码类之外，结构或模块必须限定成员变量的名称替换该类、 结构或模块的名称。</span><span class="sxs-lookup"><span data-stu-id="43539-282">Code outside a class, structure, or module must qualify a member variable's name with the name of that class, structure, or module.</span></span> <span data-ttu-id="43539-283">过程或块不能引用该过程或块内的任何局部变量之外的代码。</span><span class="sxs-lookup"><span data-stu-id="43539-283">Code outside a procedure or block cannot refer to any local variables within that procedure or block.</span></span>  
   
-## <a name="releasing-managed-resources"></a>释放托管的资源  
- .NET Framework 垃圾回收器释放托管资源而无需您采取任何额外的编码。 但是，您可以强制将托管资源而不是等待垃圾回收器处置。  
+## <a name="releasing-managed-resources"></a><span data-ttu-id="43539-284">释放托管的资源</span><span class="sxs-lookup"><span data-stu-id="43539-284">Releasing Managed Resources</span></span>  
+ <span data-ttu-id="43539-285">.NET Framework 垃圾回收器释放托管资源而无需您采取任何额外的编码。</span><span class="sxs-lookup"><span data-stu-id="43539-285">The .NET Framework garbage collector disposes of managed resources without any extra coding on your part.</span></span> <span data-ttu-id="43539-286">但是，您可以强制将托管资源而不是等待垃圾回收器处置。</span><span class="sxs-lookup"><span data-stu-id="43539-286">However, you can force the disposal of a managed resource instead of waiting for the garbage collector.</span></span>  
   
- 如果一个类占用特别是有价值和稀缺资源 （例如数据库连接或文件句柄），可能不希望等到下一步的垃圾回收，来清理不再使用的类实例。 类可以实现<xref:System.IDisposable>接口，以提供一种方法来释放垃圾回收之前的资源。</xref:System.IDisposable> 实现该接口的类公开`Dispose`可以调用来强制立即释放重要资源的方法。  
+ <span data-ttu-id="43539-287">如果一个类占用特别是有价值和稀缺资源 （例如数据库连接或文件句柄），可能不希望等到下一步的垃圾回收，来清理不再使用的类实例。</span><span class="sxs-lookup"><span data-stu-id="43539-287">If a class holds onto a particularly valuable and scarce resource (such as a database connection or file handle), you might not want to wait until the next garbage collection to clean up a class instance that's no longer in use.</span></span> <span data-ttu-id="43539-288">类可以实现<xref:System.IDisposable>接口，以提供一种方法来释放垃圾回收之前的资源。</xref:System.IDisposable></span><span class="sxs-lookup"><span data-stu-id="43539-288">A class may implement the <xref:System.IDisposable> interface to provide a way to release resources before a garbage collection.</span></span> <span data-ttu-id="43539-289">实现该接口的类公开`Dispose`可以调用来强制立即释放重要资源的方法。</span><span class="sxs-lookup"><span data-stu-id="43539-289">A class that implements that interface exposes a `Dispose` method that can be called to force valuable resources to be released immediately.</span></span>  
   
- `Using`语句可自动执行获取资源，执行一组语句，然后释放的资源的过程。 但是，该资源必须实现<xref:System.IDisposable>接口。</xref:System.IDisposable> 有关详细信息，请参阅[Using 语句](../../../visual-basic/language-reference/statements/using-statement.md)。  
+ <span data-ttu-id="43539-290">`Using`语句可自动执行获取资源，执行一组语句，然后释放的资源的过程。</span><span class="sxs-lookup"><span data-stu-id="43539-290">The `Using` statement automates the process of acquiring a resource, executing a set of statements, and then disposing of the resource.</span></span> <span data-ttu-id="43539-291">但是，该资源必须实现<xref:System.IDisposable>接口。</xref:System.IDisposable></span><span class="sxs-lookup"><span data-stu-id="43539-291">However, the resource must implement the <xref:System.IDisposable> interface.</span></span> <span data-ttu-id="43539-292">有关详细信息，请参阅[Using 语句](../../../visual-basic/language-reference/statements/using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="43539-292">For more information, see [Using Statement](../../../visual-basic/language-reference/statements/using-statement.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例通过声明变量`Dim`带有不同选项的语句。  
+## <a name="example"></a><span data-ttu-id="43539-293">示例</span><span class="sxs-lookup"><span data-stu-id="43539-293">Example</span></span>  
+ <span data-ttu-id="43539-294">下面的示例通过声明变量`Dim`带有不同选项的语句。</span><span class="sxs-lookup"><span data-stu-id="43539-294">The following example declares variables by using the `Dim` statement with various options.</span></span>  
   
- [!code-vb[VbVbalrStatements #&141;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ <span data-ttu-id="43539-295">[!code-vb[VbVbalrStatements #&141;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="43539-295">[!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]</span></span>  
   
-## <a name="example"></a>示例  
- 以下示例列出 1 到 30 之间的素数。 本地变量的作用域是在代码注释中所述。  
+## <a name="example"></a><span data-ttu-id="43539-296">示例</span><span class="sxs-lookup"><span data-stu-id="43539-296">Example</span></span>  
+ <span data-ttu-id="43539-297">以下示例列出 1 到 30 之间的素数。</span><span class="sxs-lookup"><span data-stu-id="43539-297">The following example lists the prime numbers between 1 and 30.</span></span> <span data-ttu-id="43539-298">本地变量的作用域是在代码注释中所述。</span><span class="sxs-lookup"><span data-stu-id="43539-298">The scope of local variables is described in code comments.</span></span>  
   
- [!code-vb[VbVbalrStatements #&142;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ <span data-ttu-id="43539-299">[!code-vb[VbVbalrStatements #&142;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="43539-299">[!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]</span></span>  
   
-## <a name="example"></a>示例  
- 在下面的示例中，`speedValue`在类级别声明变量。 `Private`关键字用于声明变量。 中的任何过程可以访问此变量`Car`类。  
+## <a name="example"></a><span data-ttu-id="43539-300">示例</span><span class="sxs-lookup"><span data-stu-id="43539-300">Example</span></span>  
+ <span data-ttu-id="43539-301">在下面的示例中，`speedValue`在类级别声明变量。</span><span class="sxs-lookup"><span data-stu-id="43539-301">In the following example, the `speedValue` variable is declared at the class level.</span></span> <span data-ttu-id="43539-302">`Private`关键字用于声明变量。</span><span class="sxs-lookup"><span data-stu-id="43539-302">The `Private` keyword is used to declare the variable.</span></span> <span data-ttu-id="43539-303">中的任何过程可以访问此变量`Car`类。</span><span class="sxs-lookup"><span data-stu-id="43539-303">The variable can be accessed by any procedure in the `Car` class.</span></span>  
   
- [!code-vb[VbVbalrStatements #&144;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ <span data-ttu-id="43539-304">[!code-vb[VbVbalrStatements #&144;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="43539-304">[!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]</span></span>  
   
- [!code-vb[VbVbalrStatements #&145;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+ <span data-ttu-id="43539-305">[!code-vb[VbVbalrStatements #&145;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="43539-305">[!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)   
- [ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md)   
- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [“项目设计器”->“编译”页 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)   
- [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [如何︰ 使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)   
- [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a><span data-ttu-id="43539-306">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43539-306">See Also</span></span>  
+ <span data-ttu-id="43539-307">[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md) </span><span class="sxs-lookup"><span data-stu-id="43539-307">[Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) </span></span>  
+<span data-ttu-id="43539-308"> [ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md) </span><span class="sxs-lookup"><span data-stu-id="43539-308"> [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) </span></span>  
+<span data-ttu-id="43539-309"> [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md) </span><span class="sxs-lookup"><span data-stu-id="43539-309"> [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md) </span></span>  
+<span data-ttu-id="43539-310"> [Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md) </span><span class="sxs-lookup"><span data-stu-id="43539-310"> [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) </span></span>  
+<span data-ttu-id="43539-311"> [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md) </span><span class="sxs-lookup"><span data-stu-id="43539-311"> [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) </span></span>  
+<span data-ttu-id="43539-312"> [“项目设计器”->“编译”页 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) </span><span class="sxs-lookup"><span data-stu-id="43539-312"> [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) </span></span>  
+<span data-ttu-id="43539-313"> [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md) </span><span class="sxs-lookup"><span data-stu-id="43539-313"> [Variable Declaration](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md) </span></span>  
+<span data-ttu-id="43539-314"> [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="43539-314"> [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+<span data-ttu-id="43539-315"> [对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="43539-315"> [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) </span></span>  
+<span data-ttu-id="43539-316"> [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="43539-316"> [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) </span></span>  
+<span data-ttu-id="43539-317"> [对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="43539-317"> [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) </span></span>  
+<span data-ttu-id="43539-318"> [如何︰ 使用对象初始值设定项声明对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md) </span><span class="sxs-lookup"><span data-stu-id="43539-318"> [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md) </span></span>  
+<span data-ttu-id="43539-319"> [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)</span><span class="sxs-lookup"><span data-stu-id="43539-319"> [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)</span></span>
 

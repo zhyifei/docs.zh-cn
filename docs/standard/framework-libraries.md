@@ -18,51 +18,51 @@ ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="framework-libraries"></a>框架库
+# <a name="framework-libraries"></a><span data-ttu-id="26c59-104">框架库</span><span class="sxs-lookup"><span data-stu-id="26c59-104">Framework Libraries</span></span>
 
-.NET 提供广泛的标准类库集，称为基类库（核心集）或框架类库（完整集）。 这些库为许多通用类型和应用特定的类型、算法及实用工具功能提供实现。 商用库和社区库都构建在框架类库的顶层，可让用户针对各种计算任务轻松使用现成的库。
+<span data-ttu-id="26c59-105">.NET 提供广泛的标准类库集，称为基类库（核心集）或框架类库（完整集）。</span><span class="sxs-lookup"><span data-stu-id="26c59-105">.NET has an expansive standard set of class libraries, referred to as either the base class libraries (core set) or framework class libraries (complete set).</span></span> <span data-ttu-id="26c59-106">这些库为许多通用类型和应用特定的类型、算法及实用工具功能提供实现。</span><span class="sxs-lookup"><span data-stu-id="26c59-106">These libraries provide implementations for many general and app-specific types, algorithms and utility functionality.</span></span> <span data-ttu-id="26c59-107">商用库和社区库都构建在框架类库的顶层，可让用户针对各种计算任务轻松使用现成的库。</span><span class="sxs-lookup"><span data-stu-id="26c59-107">Both commercial and community libraries build on top of the framework class libraries, providing easy to use off-the-shelf libraries for a wide set of computing tasks.</span></span>
 
-每个 .NET 实现随附了这些库的子集。 任何 .NET 实现预期都要使用基类库 (BCL) API，原因有两种：开发人员需要这些 API，流行的库需要这些 API 才能运行。 位于 BCL 上层的应用特定的库（例如 ASP.NET）并不能在所有 .NET 实现中使用。
+<span data-ttu-id="26c59-108">每个 .NET 实现随附了这些库的子集。</span><span class="sxs-lookup"><span data-stu-id="26c59-108">A subset of these libraries are provided with each .NET implementation.</span></span> <span data-ttu-id="26c59-109">任何 .NET 实现预期都要使用基类库 (BCL) API，原因有两种：开发人员需要这些 API，流行的库需要这些 API 才能运行。</span><span class="sxs-lookup"><span data-stu-id="26c59-109">Base Class Library (BCL) APIs are expected with any .NET implementation, both because developers will want them and because popular libraries will need them to run.</span></span> <span data-ttu-id="26c59-110">位于 BCL 上层的应用特定的库（例如 ASP.NET）并不能在所有 .NET 实现中使用。</span><span class="sxs-lookup"><span data-stu-id="26c59-110">App-specific libraries above the BCL, such as ASP.NET, will not be available on all .NET implementations.</span></span>
 
-## <a name="base-class-libraries"></a>基类库
+## <a name="base-class-libraries"></a><span data-ttu-id="26c59-111">基类库</span><span class="sxs-lookup"><span data-stu-id="26c59-111">Base Class Libraries</span></span>
 
-BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库的基础。 BCL 旨在提供极其通用的实现，对所有工作负荷一视同仁。 性能始终是一个重要的考虑因素，因为应用可能会优先使用特定的策略，例如，优先考虑低延迟而不是高吞吐量，或者优先考虑低内存而不是低 CPU 使用率。 这些库在总体上可以保证高性能，同时会根据不同的性能考虑因素采取折衷方案。 对于大多数应用而言，这种方案相当成功。
+<span data-ttu-id="26c59-112">BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库的基础。</span><span class="sxs-lookup"><span data-stu-id="26c59-112">The BCL provides the most foundational types and utility functionality and are the base of all other .NET class libraries.</span></span> <span data-ttu-id="26c59-113">BCL 旨在提供极其通用的实现，对所有工作负荷一视同仁。</span><span class="sxs-lookup"><span data-stu-id="26c59-113">They aim to provide very general implementations without any bias to any workload.</span></span> <span data-ttu-id="26c59-114">性能始终是一个重要的考虑因素，因为应用可能会优先使用特定的策略，例如，优先考虑低延迟而不是高吞吐量，或者优先考虑低内存而不是低 CPU 使用率。</span><span class="sxs-lookup"><span data-stu-id="26c59-114">Performance is always an important consideration, since apps might prefer a particular policy, such as low-latency to high-throughput or low-memory to low-CPU usage.</span></span> <span data-ttu-id="26c59-115">这些库在总体上可以保证高性能，同时会根据不同的性能考虑因素采取折衷方案。</span><span class="sxs-lookup"><span data-stu-id="26c59-115">These libraries are intended to be high-performance generally, and take a middle-ground approach according to these various performance concerns.</span></span> <span data-ttu-id="26c59-116">对于大多数应用而言，这种方案相当成功。</span><span class="sxs-lookup"><span data-stu-id="26c59-116">For most apps, this approach has been quite successful.</span></span>
 
-## <a name="primitive-types"></a>基元类型
+## <a name="primitive-types"></a><span data-ttu-id="26c59-117">基元类型</span><span class="sxs-lookup"><span data-stu-id="26c59-117">Primitive Types</span></span>
 
-.NET 包含一组基元类型，所有程序都使用这些类型（使用程度或大或小）。 这些类型包含数据，例如数字、字符串、字节和任意对象。 C# 语言包括这些类型的关键字。 下面列出了这些类型的一组示例，以及匹配的 C# 关键字。
+<span data-ttu-id="26c59-118">.NET 包含一组基元类型，所有程序都使用这些类型（使用程度或大或小）。</span><span class="sxs-lookup"><span data-stu-id="26c59-118">.NET includes a set of primitive types, which are used (to varying degrees) in all programs.</span></span> <span data-ttu-id="26c59-119">这些类型包含数据，例如数字、字符串、字节和任意对象。</span><span class="sxs-lookup"><span data-stu-id="26c59-119">These types contain data, such as numbers, strings, bytes and arbitrary objects.</span></span> <span data-ttu-id="26c59-120">C# 语言包括这些类型的关键字。</span><span class="sxs-lookup"><span data-stu-id="26c59-120">The C# language includes keywords for these types.</span></span> <span data-ttu-id="26c59-121">下面列出了这些类型的一组示例，以及匹配的 C# 关键字。</span><span class="sxs-lookup"><span data-stu-id="26c59-121">A sample set of these types is listed below, with the matching C# keywords.</span></span>
 
-* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)) - CLR 类型系统中的最基本基类。 它位于类型层次结构的根级别。
-* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)) - 16 位带符号整数类型。 也存在无符号 <xref:System.UInt16>。
-* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)) - 32 位带符号整数类型。 也存在无符号 [UInt32](../csharp/language-reference/keywords/uint.md)。
-* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)) - 32 位浮点类型。
-* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)) -128 位十进制类型。
-* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)) - 表示内存字节的无符号 8 位整数。
-* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)) - 表示 `true` 或 `false` 的布尔类型。
-* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)) - 表示 Unicode 字符的 16 位数字类型。
-* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)) -表示一系列字符。 与 `char[]` 不同，但会针对 `string` 中的每个 `char` 启用索引。
+* <span data-ttu-id="26c59-122"><xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)) - CLR 类型系统中的最基本基类。</span><span class="sxs-lookup"><span data-stu-id="26c59-122"><xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)) - The ultimate base class in the CLR type system.</span></span> <span data-ttu-id="26c59-123">它位于类型层次结构的根级别。</span><span class="sxs-lookup"><span data-stu-id="26c59-123">It is the root of the type hierarchy.</span></span>
+* <span data-ttu-id="26c59-124"><xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)) - 16 位带符号整数类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-124"><xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)) - A 16-bit signed integer type.</span></span> <span data-ttu-id="26c59-125">也存在无符号 <xref:System.UInt16>。</span><span class="sxs-lookup"><span data-stu-id="26c59-125">The unsigned <xref:System.UInt16> also exists.</span></span>
+* <span data-ttu-id="26c59-126"><xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)) - 32 位带符号整数类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-126"><xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)) - A 32-bit signed integer type.</span></span> <span data-ttu-id="26c59-127">也存在无符号 [UInt32](../csharp/language-reference/keywords/uint.md)。</span><span class="sxs-lookup"><span data-stu-id="26c59-127">The unsigned [UInt32](../csharp/language-reference/keywords/uint.md) also exists.</span></span>
+* <span data-ttu-id="26c59-128"><xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)) - 32 位浮点类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-128"><xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)) - A 32-bit floating-point type.</span></span>
+* <span data-ttu-id="26c59-129"><xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)) -128 位十进制类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-129"><xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)) - A 128-bit decimal type.</span></span>
+* <span data-ttu-id="26c59-130"><xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)) - 表示内存字节的无符号 8 位整数。</span><span class="sxs-lookup"><span data-stu-id="26c59-130"><xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)) - An unsigned 8-bit integer that represents a byte of memory.</span></span>
+* <span data-ttu-id="26c59-131"><xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)) - 表示 `true` 或 `false` 的布尔类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-131"><xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)) - A boolean type that represents `true` or `false`.</span></span>
+* <span data-ttu-id="26c59-132"><xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)) - 表示 Unicode 字符的 16 位数字类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-132"><xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)) - A 16-bit numeric type that represents a Unicode character.</span></span>
+* <span data-ttu-id="26c59-133"><xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)) -表示一系列字符。</span><span class="sxs-lookup"><span data-stu-id="26c59-133"><xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)) - Represents a series of characters.</span></span> <span data-ttu-id="26c59-134">与 `char[]` 不同，但会针对 `string` 中的每个 `char` 启用索引。</span><span class="sxs-lookup"><span data-stu-id="26c59-134">Different than a `char[]`, but enables indexing into each individual `char` in the `string`.</span></span>
 
-## <a name="data-structures"></a>数据结构
+## <a name="data-structures"></a><span data-ttu-id="26c59-135">数据结构</span><span class="sxs-lookup"><span data-stu-id="26c59-135">Data Structures</span></span>
 
-.NET 包含一组数据结构，这些结构是几乎所有 .NET 应用的工作主力。 它们主要是集合，不过也包括其他类型。
+<span data-ttu-id="26c59-136">.NET 包含一组数据结构，这些结构是几乎所有 .NET 应用的工作主力。</span><span class="sxs-lookup"><span data-stu-id="26c59-136">.NET includes a set of data structures that are the workhorses of almost any .NET apps.</span></span> <span data-ttu-id="26c59-137">它们主要是集合，不过也包括其他类型。</span><span class="sxs-lookup"><span data-stu-id="26c59-137">These are mostly collections, but also include other types.</span></span>
 
-*   <xref:System.Array>- 表示可通过索引访问的强类型对象的数组。 具有与构造相符的固定大小。
-*   <xref:System.Collections.Generic.List%601> - 表示可通过索引访问的对象的强类型列表。 可根据需要自动调整大小。
-*   <xref:System.Collections.Generic.Dictionary%602> -表示根据键编制索引的值的集合。 可以通过键访问值。 可根据需要自动调整大小。
-*   <xref:System.Uri> - 提供统一资源标识符 (URI) 的对象表示形式和对 URI 各部分的轻松访问。
-*   <xref:System.DateTime> - 表示时间上的一刻，通常以日期和当天的时间表示。
+*   <span data-ttu-id="26c59-138"><xref:System.Array>- 表示可通过索引访问的强类型对象的数组。</span><span class="sxs-lookup"><span data-stu-id="26c59-138"><xref:System.Array> - Represents an array of strongly types objects that can be accessed by index.</span></span> <span data-ttu-id="26c59-139">具有与构造相符的固定大小。</span><span class="sxs-lookup"><span data-stu-id="26c59-139">Has a fixed size, per its construction.</span></span>
+*   <span data-ttu-id="26c59-140"><xref:System.Collections.Generic.List%601> - 表示可通过索引访问的对象的强类型列表。</span><span class="sxs-lookup"><span data-stu-id="26c59-140"><xref:System.Collections.Generic.List%601> - Represents a strongly typed list of objects that can be accessed by index.</span></span> <span data-ttu-id="26c59-141">可根据需要自动调整大小。</span><span class="sxs-lookup"><span data-stu-id="26c59-141">Is automatically resized as needed.</span></span>
+*   <span data-ttu-id="26c59-142"><xref:System.Collections.Generic.Dictionary%602> -表示根据键编制索引的值的集合。</span><span class="sxs-lookup"><span data-stu-id="26c59-142"><xref:System.Collections.Generic.Dictionary%602> - Represents a collection of values that are indexed by a key.</span></span> <span data-ttu-id="26c59-143">可以通过键访问值。</span><span class="sxs-lookup"><span data-stu-id="26c59-143">Values can be accessed via key.</span></span> <span data-ttu-id="26c59-144">可根据需要自动调整大小。</span><span class="sxs-lookup"><span data-stu-id="26c59-144">Is automatically resized as needed.</span></span>
+*   <span data-ttu-id="26c59-145"><xref:System.Uri> - 提供统一资源标识符 (URI) 的对象表示形式和对 URI 各部分的轻松访问。</span><span class="sxs-lookup"><span data-stu-id="26c59-145"><xref:System.Uri> - Provides an object representation of a uniform resource identifier (URI) and easy access to the parts of the URI.</span></span>
+*   <span data-ttu-id="26c59-146"><xref:System.DateTime> - 表示时间上的一刻，通常以日期和当天的时间表示。</span><span class="sxs-lookup"><span data-stu-id="26c59-146"><xref:System.DateTime> - Represents an instant in time, typically expressed as a date and time of day.</span></span>
 
-## <a name="utility-apis"></a>实用工具 API
+## <a name="utility-apis"></a><span data-ttu-id="26c59-147">实用工具 API</span><span class="sxs-lookup"><span data-stu-id="26c59-147">Utility APIs</span></span>
 
-.NET 包含一组可为许多重要任务提供功能的实用工具 API。
+<span data-ttu-id="26c59-148">.NET 包含一组可为许多重要任务提供功能的实用工具 API。</span><span class="sxs-lookup"><span data-stu-id="26c59-148">.NET includes a set of utility APIs that provide functionality for many important tasks.</span></span>
 
-*   <xref:System.Net.Http.HttpClient> - 用于发送 HTTP 请求以及从 URI 所标识资源接收 HTTP 响应的 API。
-*   <xref:System.Xml.Linq.XDocument> - 用于配合 LINQ 加载和查询 XML 文档的 API。
-*   <xref:System.IO.StreamReader> - 用于读取文件的 API。<xref:System.IO.StringWriter> 可用于写入文件。
+*   <span data-ttu-id="26c59-149"><xref:System.Net.Http.HttpClient> - 用于发送 HTTP 请求以及从 URI 所标识资源接收 HTTP 响应的 API。</span><span class="sxs-lookup"><span data-stu-id="26c59-149"><xref:System.Net.Http.HttpClient> - An API for sending HTTP requests and receiving HTTP responses from a resource identified by a URI.</span></span>
+*   <span data-ttu-id="26c59-150"><xref:System.Xml.Linq.XDocument> - 用于配合 LINQ 加载和查询 XML 文档的 API。</span><span class="sxs-lookup"><span data-stu-id="26c59-150"><xref:System.Xml.Linq.XDocument> - An API for loading, and querying XML documents with LINQ.</span></span>
+*   <span data-ttu-id="26c59-151"><xref:System.IO.StreamReader> - 用于读取文件的 API。<xref:System.IO.StringWriter> 可用于写入文件。</span><span class="sxs-lookup"><span data-stu-id="26c59-151"><xref:System.IO.StreamReader> - An API for reading files (<xref:System.IO.StringWriter>) Can be used to write files.</span></span>
 
-## <a name="app-model-apis"></a>应用模型 API
+## <a name="app-model-apis"></a><span data-ttu-id="26c59-152">应用模型 API</span><span class="sxs-lookup"><span data-stu-id="26c59-152">App-Model APIs</span></span>
 
-某些公司提供了可与 .NET 配合使用的多个应用模型。
+<span data-ttu-id="26c59-153">某些公司提供了可与 .NET 配合使用的多个应用模型。</span><span class="sxs-lookup"><span data-stu-id="26c59-153">There are many app-models that can be used with .NET, provided by several companies.</span></span>
 
-*   [ASP.NET](http://asp.net) - 提供用于构建网站和服务的 Web 框架。 受 Windows、Linux 和 macOS 的支持（取决于 ASP.NET 版本）。
+*   <span data-ttu-id="26c59-154">[ASP.NET](http://asp.net) - 提供用于构建网站和服务的 Web 框架。</span><span class="sxs-lookup"><span data-stu-id="26c59-154">[ASP.NET](http://asp.net) - Provides a web framework for building Web sites and services.</span></span> <span data-ttu-id="26c59-155">受 Windows、Linux 和 macOS 的支持（取决于 ASP.NET 版本）。</span><span class="sxs-lookup"><span data-stu-id="26c59-155">Supported on Windows, Linux and macOS (depends on ASP.NET version).</span></span>
 

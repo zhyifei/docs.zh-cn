@@ -1,28 +1,34 @@
 ---
-title: "自定义令牌处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义令牌处理程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 自定义令牌处理程序
-本主题讨论在WIF标记处理程序，以及如何使用这些处理标记。  主题还包括什么是需要创建默认情况下在WIF不支持的标记类型的自定义标记处理程序。  
+# <a name="custom-token-handlers"></a><span data-ttu-id="817e2-102">自定义令牌处理程序</span><span class="sxs-lookup"><span data-stu-id="817e2-102">Custom Token Handlers</span></span>
+<span data-ttu-id="817e2-103">本主题讨论 WIF 中的令牌处理程序，以及如何使用它们处理令牌。</span><span class="sxs-lookup"><span data-stu-id="817e2-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="817e2-104">还介绍为 WIF 中默认不支持的令牌类型创建自定义令牌处理程序所需的内容。</span><span class="sxs-lookup"><span data-stu-id="817e2-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  
   
-## 标记处理程序介绍WIF的  
- WIF依赖于安全标记处理程序创建，读取，编写，并验证该依赖方\(RP\)应用程序或安全标记服务的\(STS\)标记。  标记处理程序是扩展性点以便可以添加WIF管线的自定义标记处理程序，或自定义现有标记处理程序管理标记的方法。  WIF提供可修改或完全重写根据需要更改函数的九内置安全标记处理程序。  
+## <a name="introduction-to-token-handlers-in-wif"></a><span data-ttu-id="817e2-105">WIF 中的令牌处理程序简介</span><span class="sxs-lookup"><span data-stu-id="817e2-105">Introduction to Token Handlers in WIF</span></span>  
+ <span data-ttu-id="817e2-106">WIF 依赖安全令牌处理程序为信赖方 (RP) 应用程序或安全令牌服务 (STS) 创建、读取、写入和验证令牌。</span><span class="sxs-lookup"><span data-stu-id="817e2-106">WIF relies on security token handlers to create, read, write, and validate tokens for a relying party (RP) application or a security token service (STS).</span></span> <span data-ttu-id="817e2-107">令牌处理程序是扩展点，用于在 WIF 管道中添加自定义令牌处理程序，或自定义现有令牌处理程序管理令牌的方式。</span><span class="sxs-lookup"><span data-stu-id="817e2-107">Token handlers are extensibility points for you to add a custom token handler in the WIF pipeline, or to customize the way that an existing token handler manages tokens.</span></span> <span data-ttu-id="817e2-108">为了根据需要更改功能，WIF 提供九个可以修改或完全替代的内置安全令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="817e2-108">WIF provides nine built-in security token handlers that can be modified or entirely overridden to change the functionality as necessary.</span></span>  
   
-## 内置WIF的安全标记处理程序  
- WIF 4.5包含从抽象基类 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>派生的九安全标记处理程序选件类:  
+## <a name="built-in-security-token-handlers-in-wif"></a><span data-ttu-id="817e2-109">WIF 中的内置安全令牌处理程序</span><span class="sxs-lookup"><span data-stu-id="817e2-109">Built-In Security Token Handlers in WIF</span></span>  
+ <span data-ttu-id="817e2-110">WIF 4.5 包括九个从抽象基类 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 派生的安全令牌处理程序类：</span><span class="sxs-lookup"><span data-stu-id="817e2-110">WIF 4.5 includes nine security token handler classes that derive from the abstract base class <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span></span>  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -42,14 +48,14 @@ caps.handback.revision: 4
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## 添加自定义标记处理程序  
- 这些标记类型，如简单的Web标记\(SWT\)和JSON Web标记\(JWT\)没有WIF提供的内置标记处理程序。  对于这些标记类型并且没有内置处理程序的其他的，需要执行以下步骤以创建自定义标记处理程序。  
+## <a name="adding-a-custom-token-handler"></a><span data-ttu-id="817e2-111">添加自定义令牌处理程序</span><span class="sxs-lookup"><span data-stu-id="817e2-111">Adding a Custom Token Handler</span></span>  
+ <span data-ttu-id="817e2-112">一些令牌类型（例如，简单 Web 令牌 (SWT) 和 JSON Web 令牌 (JWT)）没有 WIF 提供的内置令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="817e2-112">Some token types, such as Simple Web Tokens (SWT) and JSON Web Tokens (JWT) do not have built-in token handlers provided by WIF.</span></span> <span data-ttu-id="817e2-113">对于这些令牌类型以及其他没有内置处理程序的令牌类型，必须执行以下步骤来创建自定义令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="817e2-113">For these token types and for others that do not have a built-in handler, you need to perform the following steps to create a custom token handler.</span></span>  
   
-#### 添加自定义标记处理程序  
+#### <a name="adding-a-custom-token-handler"></a><span data-ttu-id="817e2-114">添加自定义令牌处理程序</span><span class="sxs-lookup"><span data-stu-id="817e2-114">Adding a custom token handler</span></span>  
   
-1.  创建从 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>派生的新选件类。  
+1.  <span data-ttu-id="817e2-115">创建一个从 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 派生的新类。</span><span class="sxs-lookup"><span data-stu-id="817e2-115">Create a new class that derives from <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span></span>  
   
-2.  重写以下方法并提供自己的实现:  
+2.  <span data-ttu-id="817e2-116">重写以下方法，提供自己的实现：</span><span class="sxs-lookup"><span data-stu-id="817e2-116">Override the following methods and provide your own implementation:</span></span>  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -63,9 +69,9 @@ caps.handback.revision: 4
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  添加对 *Web.config或* App.configfile的新自定义标记处理程序 *，* 在应用于WIF的 **\<system.identityModel\>** 节中。  例如，以下配置标记指定的位置 **CustomToken** 命名空间的新标记名为的处理程序 **MyCustomTokenHandler**。  
+3.  <span data-ttu-id="817e2-117">在应用于 WIF 的 \<system.identityModel> 部分内的 Web.config 或 App.config 文件中，添加对新自定义令牌处理程序的引用。</span><span class="sxs-lookup"><span data-stu-id="817e2-117">Add a reference to the new custom token handler in the *Web.config* or *App.config* file, within the **\<system.identityModel>** section that applies to WIF.</span></span> <span data-ttu-id="817e2-118">例如，以下配置标记指定了位于 CustomToken 命名空间中名为 MyCustomTokenHandler 的新令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="817e2-118">For example, the following configuration markup specifies a new token handler named **MyCustomTokenHandler** that resides in the **CustomToken** namespace.</span></span>  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
@@ -75,15 +81,16 @@ caps.handback.revision: 4
     </system.identityModel>  
     ```  
   
-     请注意，如果提供您的标记处理程序处理已具有固定标记处理程序中的一个标记类型，需要添加 **\<remove\>** 元素删除默认处理程序和使用自定义处理程序。  例如，以下配置具有自定义标记处理程序替换默认 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> :  
+     <span data-ttu-id="817e2-119">请注意，如果提供自己的令牌处理程序来处理已有内置令牌处理程序的令牌类型，必须添加 \<remove> 元素，才能删除默认处理程序和改用自定义处理程序。</span><span class="sxs-lookup"><span data-stu-id="817e2-119">Note that if you are providing your own token handler to handle a token type that already has a built-in token handler, you need to add a **\<remove>** element to drop the default handler and use your custom handler instead.</span></span> <span data-ttu-id="817e2-120">例如，以下配置将使用自定义令牌处理程序替换默认 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>：</span><span class="sxs-lookup"><span data-stu-id="817e2-120">For example, the following configuration replaces the default <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> with the custom token handler:</span></span>  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type=”System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789”>  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  
     </system.identityModel>  
     ```
+

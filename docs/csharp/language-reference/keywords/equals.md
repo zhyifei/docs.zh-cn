@@ -37,14 +37,14 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="equals-c-reference"></a>equals（C# 参考）
-`equals` 上下文关键字用于在查询表达式的 `join` 子句中比较两个序列的元素。 有关详细信息，请参阅 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)。  
+# <a name="equals-c-reference"></a><span data-ttu-id="283f6-102">equals（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="283f6-102">equals (C# Reference)</span></span>
+<span data-ttu-id="283f6-103">`equals` 上下文关键字用于在查询表达式的 `join` 子句中比较两个序列的元素。</span><span class="sxs-lookup"><span data-stu-id="283f6-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="283f6-104">有关详细信息，请参阅 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="283f6-104">For more information, see [join clause](../../../csharp/language-reference/keywords/join-clause.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例说明 `equals` 关键字在 `join` 子句中的用法。  
+## <a name="example"></a><span data-ttu-id="283f6-105">示例</span><span class="sxs-lookup"><span data-stu-id="283f6-105">Example</span></span>  
+ <span data-ttu-id="283f6-106">下面的示例说明 `equals` 关键字在 `join` 子句中的用法。</span><span class="sxs-lookup"><span data-stu-id="283f6-106">The following example shows the use of the `equals` keyword in a `join` clause.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]  
+ <span data-ttu-id="283f6-107">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="283f6-107">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="283f6-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="283f6-108">See Also</span></span>  
+ [<span data-ttu-id="283f6-109">LINQ 查询表达式</span><span class="sxs-lookup"><span data-stu-id="283f6-109">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
 

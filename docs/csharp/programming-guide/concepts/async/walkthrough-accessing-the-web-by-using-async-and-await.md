@@ -26,110 +26,110 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 Async 和 Await 访问 Web (C#)
-使用 async/await 功能可以更轻松直观地编写异步程序。 你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。  
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="33e5a-102">演练：使用 Async 和 Await 访问 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="33e5a-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
+<span data-ttu-id="33e5a-103">使用 async/await 功能可以更轻松直观地编写异步程序。</span><span class="sxs-lookup"><span data-stu-id="33e5a-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="33e5a-104">你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。</span><span class="sxs-lookup"><span data-stu-id="33e5a-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  
   
- 有关 Async 功能的详细信息，请参阅[使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。  
+ <span data-ttu-id="33e5a-105">有关 Async 功能的详细信息，请参阅[使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="33e5a-105">For more information about the Async feature, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>  
   
- 本演练从对网站列表中的字节数进行求和的同步 Windows Presentation Foundation (WPF) 应用程序入手， 然后使用新功能将该应用程序转换为异步解决方案。  
+ <span data-ttu-id="33e5a-106">本演练从对网站列表中的字节数进行求和的同步 Windows Presentation Foundation (WPF) 应用程序入手，</span><span class="sxs-lookup"><span data-stu-id="33e5a-106">This walkthrough starts with a synchronous Windows Presentation Foundation (WPF) application that sums the number of bytes in a list of websites.</span></span> <span data-ttu-id="33e5a-107">然后使用新功能将该应用程序转换为异步解决方案。</span><span class="sxs-lookup"><span data-stu-id="33e5a-107">The walkthrough then converts the application to an asynchronous solution by using the new features.</span></span>  
   
- 如果不想自行生成应用程序，可以从[开发人员代码示例](http://go.microsoft.com/fwlink/?LinkId=255191)下载“Async 示例：访问 Web 演练（C# 和 Visual Basic）”。  
+ <span data-ttu-id="33e5a-108">如果不想自行生成应用程序，可以从[开发人员代码示例](http://go.microsoft.com/fwlink/?LinkId=255191)下载“Async 示例：访问 Web 演练（C# 和 Visual Basic）”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-108">If you don't want to build the applications yourself, you can download "Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)" from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191).</span></span>  
   
- 在本演练中，你将完成下列任务：  
+ <span data-ttu-id="33e5a-109">在本演练中，你将完成下列任务：</span><span class="sxs-lookup"><span data-stu-id="33e5a-109">In this walkthrough, you complete the following tasks:</span></span>  
   
--   [创建 WPF 应用程序](#CreateWPFApp)  
+-   [<span data-ttu-id="33e5a-110">创建 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="33e5a-110">To create a WPF application</span></span>](#CreateWPFApp)  
   
--   [设计简单的 WPF MainWindow](#MainWindow)  
+-   [<span data-ttu-id="33e5a-111">设计简单的 WPF MainWindow</span><span class="sxs-lookup"><span data-stu-id="33e5a-111">To design a simple WPF MainWindow</span></span>](#MainWindow)  
   
--   [添加引用](#AddRef)  
+-   [<span data-ttu-id="33e5a-112">添加引用</span><span class="sxs-lookup"><span data-stu-id="33e5a-112">To add a reference</span></span>](#AddRef)  
   
--   [添加必要的 using 指令](#usingDir)  
+-   [<span data-ttu-id="33e5a-113">添加必要的 using 指令</span><span class="sxs-lookup"><span data-stu-id="33e5a-113">To add necessary using directives</span></span>](#usingDir)  
   
--   [创建同步应用程序](#synchronous)  
+-   [<span data-ttu-id="33e5a-114">创建同步应用程序</span><span class="sxs-lookup"><span data-stu-id="33e5a-114">To create a synchronous application</span></span>](#synchronous)  
   
--   [测试同步解决方案](#testSynch)  
+-   [<span data-ttu-id="33e5a-115">测试同步解决方案</span><span class="sxs-lookup"><span data-stu-id="33e5a-115">To test the synchronous solution</span></span>](#testSynch)  
   
--   [将 GetURLContents 转换为异步方法](#GetURLContents)  
+-   [<span data-ttu-id="33e5a-116">将 GetURLContents 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="33e5a-116">To convert GetURLContents to an asynchronous method</span></span>](#GetURLContents)  
   
--   [将 SumPageSizes 转换为异步方法](#SumPageSizes)  
+-   [<span data-ttu-id="33e5a-117">将 SumPageSizes 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="33e5a-117">To convert SumPageSizes to an asynchronous method</span></span>](#SumPageSizes)  
   
--   [将 startButton_Click 转换为异步方法](#startButton)  
+-   [<span data-ttu-id="33e5a-118">将 startButton_Click 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="33e5a-118">To convert startButton_Click to an asynchronous method</span></span>](#startButton)  
   
--   [测试异步解决方案](#testAsynch)  
+-   [<span data-ttu-id="33e5a-119">测试异步解决方案</span><span class="sxs-lookup"><span data-stu-id="33e5a-119">To test the asynchronous solution</span></span>](#testAsynch)  
   
--   [使用 .NET Framework 方法替换方法 GetURLContentsAsync](#GetURLContentsAsync)  
+-   [<span data-ttu-id="33e5a-120">使用 .NET Framework 方法替换方法 GetURLContentsAsync</span><span class="sxs-lookup"><span data-stu-id="33e5a-120">To replace method GetURLContentsAsync with a .NET Framework method</span></span>](#GetURLContentsAsync)  
   
--   [示例](#BKMK_CompleteCodeExamples)  
+-   [<span data-ttu-id="33e5a-121">示例</span><span class="sxs-lookup"><span data-stu-id="33e5a-121">Example</span></span>](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>先决条件  
- 计算机上必须安装 Visual Studio 2012 或更高版本。 有关详细信息，请访问 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=235233)。  
+## <a name="prerequisites"></a><span data-ttu-id="33e5a-122">先决条件</span><span class="sxs-lookup"><span data-stu-id="33e5a-122">Prerequisites</span></span>  
+ <span data-ttu-id="33e5a-123">计算机上必须安装 Visual Studio 2012 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="33e5a-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="33e5a-124">有关详细信息，请访问 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=235233)。</span><span class="sxs-lookup"><span data-stu-id="33e5a-124">For more information, see the [Microsoft website](http://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <a name="CreateWPFApp"></a> 创建 WPF 应用程序  
+###  <span data-ttu-id="33e5a-125"><a name="CreateWPFApp"></a> 创建 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="33e5a-125"><a name="CreateWPFApp"></a> To create a WPF application</span></span>  
   
-1.  启动 Visual Studio。  
+1.  <span data-ttu-id="33e5a-126">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="33e5a-126">Start Visual Studio.</span></span>  
   
-2.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
+2.  <span data-ttu-id="33e5a-127">在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。</span><span class="sxs-lookup"><span data-stu-id="33e5a-127">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     **“新建项目”** 对话框随即打开。  
+     <span data-ttu-id="33e5a-128">**“新建项目”** 对话框随即打开。</span><span class="sxs-lookup"><span data-stu-id="33e5a-128">The **New Project** dialog box opens.</span></span>  
   
-3.  在“已安装的模板”窗格中，选择“Visual C#”，然后从项目类型列表选择“WPF 应用程序”。  
+3.  <span data-ttu-id="33e5a-129">在“已安装的模板”窗格中，选择“Visual C#”，然后从项目类型列表选择“WPF 应用程序”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-129">In the **Installed Templates** pane, choose Visual C#, and then choose **WPF Application** from the list of project types.</span></span>  
   
-4.  在“名称”文本框中，输入 `AsyncExampleWPF`，然后选择“确定”按钮。  
+4.  <span data-ttu-id="33e5a-130">在“名称”文本框中，输入 `AsyncExampleWPF`，然后选择“确定”按钮。</span><span class="sxs-lookup"><span data-stu-id="33e5a-130">In the **Name** text box, enter `AsyncExampleWPF`, and then choose the **OK** button.</span></span>  
   
-     新项目将出现在“解决方案资源管理器”中。  
+     <span data-ttu-id="33e5a-131">新项目将出现在“解决方案资源管理器”中。</span><span class="sxs-lookup"><span data-stu-id="33e5a-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> 设计简单的 WPF MainWindow  
+###  <span data-ttu-id="33e5a-132"><a name="MainWindow"></a> 设计简单的 WPF MainWindow</span><span class="sxs-lookup"><span data-stu-id="33e5a-132"><a name="MainWindow"></a> To design a simple WPF MainWindow</span></span>  
   
-1.  在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
+1.  <span data-ttu-id="33e5a-133">在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。</span><span class="sxs-lookup"><span data-stu-id="33e5a-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-2.  如果“工具箱”窗口不可见，则打开“视图”菜单，然后选择“工具箱”。  
+2.  <span data-ttu-id="33e5a-134">如果“工具箱”窗口不可见，则打开“视图”菜单，然后选择“工具箱”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-134">If the **Toolbox** window isn’t visible, open the **View** menu, and then choose **Toolbox**.</span></span>  
   
-3.  向“MainWindow”窗口添加一个“Button”控件和一个“TextBox”控件。  
+3.  <span data-ttu-id="33e5a-135">向“MainWindow”窗口添加一个“Button”控件和一个“TextBox”控件。</span><span class="sxs-lookup"><span data-stu-id="33e5a-135">Add a **Button** control and a **TextBox** control to the **MainWindow** window.</span></span>  
   
-4.  突出显示“TextBox”控件，在“属性”窗口中，设置下列值：  
+4.  <span data-ttu-id="33e5a-136">突出显示“TextBox”控件，在“属性”窗口中，设置下列值：</span><span class="sxs-lookup"><span data-stu-id="33e5a-136">Highlight the **TextBox** control and, in the **Properties** window, set the following values:</span></span>  
   
-    -   将“名称”属性设置为 `resultsTextBox`。  
+    -   <span data-ttu-id="33e5a-137">将“名称”属性设置为 `resultsTextBox`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-137">Set the **Name** property to `resultsTextBox`.</span></span>  
   
-    -   将“高度”属性设置为 250。  
+    -   <span data-ttu-id="33e5a-138">将“高度”属性设置为 250。</span><span class="sxs-lookup"><span data-stu-id="33e5a-138">Set the **Height** property to 250.</span></span>  
   
-    -   将“宽度”属性设置为 500。  
+    -   <span data-ttu-id="33e5a-139">将“宽度”属性设置为 500。</span><span class="sxs-lookup"><span data-stu-id="33e5a-139">Set the **Width** property to 500.</span></span>  
   
-    -   在“文本”选项卡中，指定等宽字体，例如 Lucida Console 或 Global Monospace。  
+    -   <span data-ttu-id="33e5a-140">在“文本”选项卡中，指定等宽字体，例如 Lucida Console 或 Global Monospace。</span><span class="sxs-lookup"><span data-stu-id="33e5a-140">On the **Text** tab, specify a monospaced font, such as Lucida Console or Global Monospace.</span></span>  
   
-5.  突出显示“Button”控件，在“属性”窗口中，设置下列值：  
+5.  <span data-ttu-id="33e5a-141">突出显示“Button”控件，在“属性”窗口中，设置下列值：</span><span class="sxs-lookup"><span data-stu-id="33e5a-141">Highlight the **Button** control and, in the **Properties** window, set the following values:</span></span>  
   
-    -   将“名称”属性设置为 `startButton`。  
+    -   <span data-ttu-id="33e5a-142">将“名称”属性设置为 `startButton`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-142">Set the **Name** property to `startButton`.</span></span>  
   
-    -   将“内容”属性的值从“Button”更改为“Start”。  
+    -   <span data-ttu-id="33e5a-143">将“内容”属性的值从“Button”更改为“Start”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-143">Change the value of the **Content** property from **Button** to **Start**.</span></span>  
   
-6.  确定文本框和按钮的位置，以便它们都在“MainWindow”窗口中显示。  
+6.  <span data-ttu-id="33e5a-144">确定文本框和按钮的位置，以便它们都在“MainWindow”窗口中显示。</span><span class="sxs-lookup"><span data-stu-id="33e5a-144">Position the text box and the button so that both appear in the **MainWindow** window.</span></span>  
   
-     有关 WPF XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。  
+     <span data-ttu-id="33e5a-145">有关 WPF XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="33e5a-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a>添加引用  
+###  <span data-ttu-id="33e5a-146"><a name="AddRef"></a>添加引用</span><span class="sxs-lookup"><span data-stu-id="33e5a-146"><a name="AddRef"></a> To add a reference</span></span>  
   
-1.  在“解决方案资源管理器”中，突出显示项目的名称。  
+1.  <span data-ttu-id="33e5a-147">在“解决方案资源管理器”中，突出显示项目的名称。</span><span class="sxs-lookup"><span data-stu-id="33e5a-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
-2.  在菜单栏上，依次选择“项目”、“添加引用”。  
+2.  <span data-ttu-id="33e5a-148">在菜单栏上，依次选择“项目”、“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-148">On the menu bar, choose **Project**, **Add Reference**.</span></span>  
   
-     此时将显示“引用管理器”对话框。  
+     <span data-ttu-id="33e5a-149">此时将显示“引用管理器”对话框。</span><span class="sxs-lookup"><span data-stu-id="33e5a-149">The **Reference Manager** dialog box appears.</span></span>  
   
-3.  在对话框顶部，验证项目是否以 .NET Framework 4.5 或更高版本为目标。  
+3.  <span data-ttu-id="33e5a-150">在对话框顶部，验证项目是否以 .NET Framework 4.5 或更高版本为目标。</span><span class="sxs-lookup"><span data-stu-id="33e5a-150">At the top of the dialog box, verify that your project is targeting the .NET Framework 4.5 or higher.</span></span>  
   
-4.  在“程序集”区域，选择“Framework”（如果尚未选择它）。  
+4.  <span data-ttu-id="33e5a-151">在“程序集”区域，选择“Framework”（如果尚未选择它）。</span><span class="sxs-lookup"><span data-stu-id="33e5a-151">In the **Assemblies** area, choose **Framework** if it isn’t already chosen.</span></span>  
   
-5.  在名称列表中，选中“System.Net.Http”复选框。  
+5.  <span data-ttu-id="33e5a-152">在名称列表中，选中“System.Net.Http”复选框。</span><span class="sxs-lookup"><span data-stu-id="33e5a-152">In the list of names, select the **System.Net.Http** check box.</span></span>  
   
-6.  选择“确定”按钮关闭对话框。  
+6.  <span data-ttu-id="33e5a-153">选择“确定”按钮关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="33e5a-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="usingDir"></a> 添加必要的 using 指令  
+###  <span data-ttu-id="33e5a-154"><a name="usingDir"></a> 添加必要的 using 指令</span><span class="sxs-lookup"><span data-stu-id="33e5a-154"><a name="usingDir"></a> To add necessary using directives</span></span>  
   
-1.  在“解决方案资源管理器”中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”。  
+1.  <span data-ttu-id="33e5a-155">在“解决方案资源管理器”中，打开 MainWindow.xaml.cs 的快捷菜单，然后选择“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
   
-2.  将下列 `using` 指令添加到代码文件的顶部（如果它们尚不存在）。  
+2.  <span data-ttu-id="33e5a-156">将下列 `using` 指令添加到代码文件的顶部（如果它们尚不存在）。</span><span class="sxs-lookup"><span data-stu-id="33e5a-156">Add the following `using` directives at the top of the code file if they’re not already present.</span></span>  
   
     ```csharp  
     using System.Net.Http;  
@@ -138,11 +138,11 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> 创建同步应用程序  
+###  <span data-ttu-id="33e5a-157"><a name="synchronous"></a> 创建同步应用程序</span><span class="sxs-lookup"><span data-stu-id="33e5a-157"><a name="synchronous"></a> To create a synchronous application</span></span>  
   
-1.  在设计窗口 MainWindow.xaml 中，双击“启动”按钮以在 MainWindow.xaml.cs 中创建 `startButton_Click` 事件处理程序。  
+1.  <span data-ttu-id="33e5a-158">在设计窗口 MainWindow.xaml 中，双击“启动”按钮以在 MainWindow.xaml.cs 中创建 `startButton_Click` 事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="33e5a-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.cs.</span></span>  
   
-2.  在 MainWindow.xaml.cs 中，将下列代码复制到 `startButton_Click` 的正文中：  
+2.  <span data-ttu-id="33e5a-159">在 MainWindow.xaml.cs 中，将下列代码复制到 `startButton_Click` 的正文中：</span><span class="sxs-lookup"><span data-stu-id="33e5a-159">In MainWindow.xaml.cs, copy the following code into the body of `startButton_Click`:</span></span>  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -150,19 +150,19 @@ ms.lasthandoff: 07/28/2017
     resultsTextBox.Text += "\r\nControl returned to startButton_Click.";  
     ```  
   
-     代码调用驱动应用程序 `SumPageSizes` 的方法，并在控件返回到 `startButton_Click` 时显示一条消息。  
+     <span data-ttu-id="33e5a-160">代码调用驱动应用程序 `SumPageSizes` 的方法，并在控件返回到 `startButton_Click` 时显示一条消息。</span><span class="sxs-lookup"><span data-stu-id="33e5a-160">The code calls the method that drives the application, `SumPageSizes`, and displays a message when control returns to `startButton_Click`.</span></span>  
   
-3.  该同步解决方案的代码包含以下四个方法：  
+3.  <span data-ttu-id="33e5a-161">该同步解决方案的代码包含以下四个方法：</span><span class="sxs-lookup"><span data-stu-id="33e5a-161">The code for the synchronous solution contains the following four methods:</span></span>  
   
-    -   `SumPageSizes`，从 `SetUpURLList` 获取网页 URL 列表并随后调用 `GetURLContents` 和 `DisplayResults` 以处理每个 URL。  
+    -   <span data-ttu-id="33e5a-162">`SumPageSizes`，从 `SetUpURLList` 获取网页 URL 列表并随后调用 `GetURLContents` 和 `DisplayResults` 以处理每个 URL。</span><span class="sxs-lookup"><span data-stu-id="33e5a-162">`SumPageSizes`, which gets a list of webpage URLs from `SetUpURLList` and then calls `GetURLContents` and `DisplayResults` to process each URL.</span></span>  
   
-    -   `SetUpURLList`，生成并返回 Web 地址列表。  
+    -   <span data-ttu-id="33e5a-163">`SetUpURLList`，生成并返回 Web 地址列表。</span><span class="sxs-lookup"><span data-stu-id="33e5a-163">`SetUpURLList`, which makes and returns a list of web addresses.</span></span>  
   
-    -   `GetURLContents`，下载每个网站的内容并将内容作为字节数组返回。  
+    -   <span data-ttu-id="33e5a-164">`GetURLContents`，下载每个网站的内容并将内容作为字节数组返回。</span><span class="sxs-lookup"><span data-stu-id="33e5a-164">`GetURLContents`, which downloads the contents of each website and returns the contents as a byte array.</span></span>  
   
-    -   `DisplayResults`，显示每个 URL 的字节数组中的字节数。  
+    -   <span data-ttu-id="33e5a-165">`DisplayResults`，显示每个 URL 的字节数组中的字节数。</span><span class="sxs-lookup"><span data-stu-id="33e5a-165">`DisplayResults`, which displays  the number of bytes in the byte array for each URL.</span></span>  
   
-     复制以下四个方法，然后将它们粘贴在 MainWindow.xaml.cs 中的 `startButton_Click` 事件处理程序下：  
+     <span data-ttu-id="33e5a-166">复制以下四个方法，然后将它们粘贴在 MainWindow.xaml.cs 中的 `startButton_Click` 事件处理程序下：</span><span class="sxs-lookup"><span data-stu-id="33e5a-166">Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.cs:</span></span>  
   
     ```csharp  
     private void SumPageSizes()  
@@ -243,11 +243,11 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> 测试同步解决方案  
+###  <span data-ttu-id="33e5a-167"><a name="testSynch"></a> 测试同步解决方案</span><span class="sxs-lookup"><span data-stu-id="33e5a-167"><a name="testSynch"></a> To test the synchronous solution</span></span>  
   
-1.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
+1.  <span data-ttu-id="33e5a-168">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="33e5a-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     此时应显示类似于下列列表的输出。  
+     <span data-ttu-id="33e5a-169">此时应显示类似于下列列表的输出。</span><span class="sxs-lookup"><span data-stu-id="33e5a-169">Output that resembles the following list should appear.</span></span>  
   
     ```  
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832  
@@ -266,56 +266,56 @@ ms.lasthandoff: 07/28/2017
     Control returned to startButton_Click.  
     ```  
   
-     请注意，显示计数需要几秒钟时间。 与此同时，在等待请求的资源下载时，UI 线程处于被阻止状态。 因此，选择“启动”按钮后，将无法移动、最大化、最小化显示窗口，甚至也无法关闭显示窗口。 在字节计数开始显示之前，这些操作都会失败。 如果网站没有响应，将不会指示哪个网站失败。 甚至停止等待和关闭程序也会很困难。  
+     <span data-ttu-id="33e5a-170">请注意，显示计数需要几秒钟时间。</span><span class="sxs-lookup"><span data-stu-id="33e5a-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="33e5a-171">与此同时，在等待请求的资源下载时，UI 线程处于被阻止状态。</span><span class="sxs-lookup"><span data-stu-id="33e5a-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="33e5a-172">因此，选择“启动”按钮后，将无法移动、最大化、最小化显示窗口，甚至也无法关闭显示窗口。</span><span class="sxs-lookup"><span data-stu-id="33e5a-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="33e5a-173">在字节计数开始显示之前，这些操作都会失败。</span><span class="sxs-lookup"><span data-stu-id="33e5a-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="33e5a-174">如果网站没有响应，将不会指示哪个网站失败。</span><span class="sxs-lookup"><span data-stu-id="33e5a-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="33e5a-175">甚至停止等待和关闭程序也会很困难。</span><span class="sxs-lookup"><span data-stu-id="33e5a-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> 将 GetURLContents 转换为异步方法  
+###  <span data-ttu-id="33e5a-176"><a name="GetURLContents"></a> 将 GetURLContents 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="33e5a-176"><a name="GetURLContents"></a> To convert GetURLContents to an asynchronous method</span></span>  
   
-1.  要将同步解决方案转换为异步解决方案，最佳着手点在 `GetURLContents` 中，因为对 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 的调用以及对 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 的调用是应用程序访问 Web 的位置。 .NET Framework 提供两种方法的异步版本，这让转换变得轻松。  
+1.  <span data-ttu-id="33e5a-177">要将同步解决方案转换为异步解决方案，最佳着手点在 `GetURLContents` 中，因为对 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 的调用以及对 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 的调用是应用程序访问 Web 的位置。</span><span class="sxs-lookup"><span data-stu-id="33e5a-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="33e5a-178">.NET Framework 提供两种方法的异步版本，这让转换变得轻松。</span><span class="sxs-lookup"><span data-stu-id="33e5a-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
-     有关 `GetURLContents` 中使用的方法的详细信息，请参阅 <xref:System.Net.WebRequest>。  
+     <span data-ttu-id="33e5a-179">有关 `GetURLContents` 中使用的方法的详细信息，请参阅 <xref:System.Net.WebRequest>。</span><span class="sxs-lookup"><span data-stu-id="33e5a-179">For more information about the methods that are used in `GetURLContents`, see <xref:System.Net.WebRequest>.</span></span>  
   
     > [!NOTE]
-    >  在你按照本演练中的步骤进行操作的过程中，将出现多个编译器错误。 你可以忽略这些错误并继续演练。  
+    >  <span data-ttu-id="33e5a-180">在你按照本演练中的步骤进行操作的过程中，将出现多个编译器错误。</span><span class="sxs-lookup"><span data-stu-id="33e5a-180">As you follow the steps in this walkthrough, several compiler errors appear.</span></span> <span data-ttu-id="33e5a-181">你可以忽略这些错误并继续演练。</span><span class="sxs-lookup"><span data-stu-id="33e5a-181">You can ignore them and continue with the walkthrough.</span></span>  
   
-     将在 `GetURLContents` 的第三行中调用的方法从 `GetResponse` 更改为基于任务的异步 <xref:System.Net.WebRequest.GetResponseAsync%2A> 方法。  
+     <span data-ttu-id="33e5a-182">将在 `GetURLContents` 的第三行中调用的方法从 `GetResponse` 更改为基于任务的异步 <xref:System.Net.WebRequest.GetResponseAsync%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="33e5a-182">Change the method that's called in the third line of `GetURLContents` from `GetResponse` to the asynchronous, task-based <xref:System.Net.WebRequest.GetResponseAsync%2A> method.</span></span>  
   
     ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync` 返回 <xref:System.Threading.Tasks.Task%601>。 在这种情况下，任务返回变量 `TResult` 具有类型 <xref:System.Net.WebResponse>。 该任务是在请求的任务已下载且任务已完成运行后，生成实际 `WebResponse` 对象的承诺。  
+2.  <span data-ttu-id="33e5a-183">`GetResponseAsync` 返回 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="33e5a-183">`GetResponseAsync` returns a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="33e5a-184">在这种情况下，任务返回变量 `TResult` 具有类型 <xref:System.Net.WebResponse>。</span><span class="sxs-lookup"><span data-stu-id="33e5a-184">In this case, the *task return variable*, `TResult`, has type <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="33e5a-185">该任务是在请求的任务已下载且任务已完成运行后，生成实际 `WebResponse` 对象的承诺。</span><span class="sxs-lookup"><span data-stu-id="33e5a-185">The task is a promise to produce an actual `WebResponse` object after the requested data has been downloaded and the task has run to completion.</span></span>  
   
-     要从任务检索 `WebResponse` 值，请将 [await](../../../../csharp/language-reference/keywords/await.md) 运算符应用到对 `GetResponseAsync` 的调用，如下列代码所示。  
+     <span data-ttu-id="33e5a-186">要从任务检索 `WebResponse` 值，请将 [await](../../../../csharp/language-reference/keywords/await.md) 运算符应用到对 `GetResponseAsync` 的调用，如下列代码所示。</span><span class="sxs-lookup"><span data-stu-id="33e5a-186">To retrieve the `WebResponse` value from the task, apply an [await](../../../../csharp/language-reference/keywords/await.md) operator to the call to `GetResponseAsync`, as the following code shows.</span></span>  
   
     ```csharp  
     using (WebResponse response = await webReq.GetResponseAsync())  
     ```  
   
-     `await` 运算符将当前方法 `GetURLContents` 的执行挂起，直到完成等待的任务为止。 同时，控制权返回给当前方法的调用方。 在此示例中，当前方法是 `GetURLContents`，调用方是 `SumPageSizes`。 任务完成时，承诺的 `WebResponse` 对象作为等待的任务的值生成，并分配给变量 `response`。  
+     <span data-ttu-id="33e5a-187">`await` 运算符将当前方法 `GetURLContents` 的执行挂起，直到完成等待的任务为止。</span><span class="sxs-lookup"><span data-stu-id="33e5a-187">The `await` operator suspends the execution of the current method, `GetURLContents`, until the awaited task is complete.</span></span> <span data-ttu-id="33e5a-188">同时，控制权返回给当前方法的调用方。</span><span class="sxs-lookup"><span data-stu-id="33e5a-188">In the meantime, control returns to the caller of the current method.</span></span> <span data-ttu-id="33e5a-189">在此示例中，当前方法是 `GetURLContents`，调用方是 `SumPageSizes`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-189">In this example, the current method is `GetURLContents`, and the caller is `SumPageSizes`.</span></span> <span data-ttu-id="33e5a-190">任务完成时，承诺的 `WebResponse` 对象作为等待的任务的值生成，并分配给变量 `response`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-190">When the task is finished, the promised `WebResponse` object is produced as the value of the awaited task and assigned to the variable `response`.</span></span>  
   
-     上一条语句可以分为以下两条语句，以阐明所发生的情况。  
+     <span data-ttu-id="33e5a-191">上一条语句可以分为以下两条语句，以阐明所发生的情况。</span><span class="sxs-lookup"><span data-stu-id="33e5a-191">The previous statement can be separated into the following two statements to clarify what happens.</span></span>  
   
     ```csharp  
     //Task<WebResponse> responseTask = webReq.GetResponseAsync();  
     //using (WebResponse response = await responseTask)  
     ```  
   
-     对 `webReq.GetResponseAsync` 的调用返回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 然后，await 运算符将应用于任务以检索 `WebResponse` 值。  
+     <span data-ttu-id="33e5a-192">对 `webReq.GetResponseAsync` 的调用返回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-192">The call to `webReq.GetResponseAsync` returns a `Task(Of WebResponse)` or `Task<WebResponse>`.</span></span> <span data-ttu-id="33e5a-193">然后，await 运算符将应用于任务以检索 `WebResponse` 值。</span><span class="sxs-lookup"><span data-stu-id="33e5a-193">Then an await operator is applied to the task to retrieve the `WebResponse` value.</span></span>  
   
-     如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 `await` 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。 有关示例，请参阅[如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 和[如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+     <span data-ttu-id="33e5a-194">如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 `await` 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。</span><span class="sxs-lookup"><span data-stu-id="33e5a-194">If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the `await` operator is applied.</span></span> <span data-ttu-id="33e5a-195">有关示例，请参阅[如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 和[如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。</span><span class="sxs-lookup"><span data-stu-id="33e5a-195">For examples, see [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
   
-3.  因为在上一步中添加了 `await` 运算符，所以会发生编译器错误。 该运算符仅可在使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符标记的方法中使用。 当你重复转换步骤以使用对 `CopyToAsync` 的调用替换对 `CopyTo` 的调用时，请忽略该错误。  
+3.  <span data-ttu-id="33e5a-196">因为在上一步中添加了 `await` 运算符，所以会发生编译器错误。</span><span class="sxs-lookup"><span data-stu-id="33e5a-196">Because you added the `await` operator in the previous step, a compiler error occurs.</span></span> <span data-ttu-id="33e5a-197">该运算符仅可在使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符标记的方法中使用。</span><span class="sxs-lookup"><span data-stu-id="33e5a-197">The operator can be used only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="33e5a-198">当你重复转换步骤以使用对 `CopyToAsync` 的调用替换对 `CopyTo` 的调用时，请忽略该错误。</span><span class="sxs-lookup"><span data-stu-id="33e5a-198">Ignore the error while you repeat the conversion steps to replace the call to `CopyTo` with a call to `CopyToAsync`.</span></span>  
   
-    -   更改被调用到 <xref:System.IO.Stream.CopyToAsync%2A> 的方法的名称。  
+    -   <span data-ttu-id="33e5a-199">更改被调用到 <xref:System.IO.Stream.CopyToAsync%2A> 的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="33e5a-199">Change the name of the method that’s called to <xref:System.IO.Stream.CopyToAsync%2A>.</span></span>  
   
-    -   `CopyTo` 或 `CopyToAsync` 方法复制字节到其参数 `content`，并且不返回有意义的值。 在同步版本中，对 `CopyTo` 的调用是不返回值的简单语句。 异步版本 `CopyToAsync` 返回 <xref:System.Threading.Tasks.Task>。 任务函数类似“Task(void)”，并让该方法能够等待。 应用 `Await` 或 `await` 到对 `CopyToAsync` 的调用，如下列代码所示。  
+    -   <span data-ttu-id="33e5a-200">`CopyTo` 或 `CopyToAsync` 方法复制字节到其参数 `content`，并且不返回有意义的值。</span><span class="sxs-lookup"><span data-stu-id="33e5a-200">The `CopyTo` or `CopyToAsync` method copies bytes to its argument, `content`, and doesn’t return a meaningful value.</span></span> <span data-ttu-id="33e5a-201">在同步版本中，对 `CopyTo` 的调用是不返回值的简单语句。</span><span class="sxs-lookup"><span data-stu-id="33e5a-201">In the synchronous version, the call to `CopyTo` is a simple statement that doesn't return a value.</span></span> <span data-ttu-id="33e5a-202">异步版本 `CopyToAsync` 返回 <xref:System.Threading.Tasks.Task>。</span><span class="sxs-lookup"><span data-stu-id="33e5a-202">The asynchronous version, `CopyToAsync`, returns a <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="33e5a-203">任务函数类似“Task(void)”，并让该方法能够等待。</span><span class="sxs-lookup"><span data-stu-id="33e5a-203">The task functions like "Task(void)" and enables the method to be awaited.</span></span> <span data-ttu-id="33e5a-204">应用 `Await` 或 `await` 到对 `CopyToAsync` 的调用，如下列代码所示。</span><span class="sxs-lookup"><span data-stu-id="33e5a-204">Apply `Await` or `await` to the call to `CopyToAsync`, as the following code shows.</span></span>  
   
         ```csharp  
         await responseStream.CopyToAsync(content);  
         ```  
   
-         上一条语句缩写以下两行代码。  
+         <span data-ttu-id="33e5a-205">上一条语句缩写以下两行代码。</span><span class="sxs-lookup"><span data-stu-id="33e5a-205">The previous statement abbreviates the following two lines of code.</span></span>  
   
         ```csharp  
         // CopyToAsync returns a Task, not a Task<T>.  
@@ -326,46 +326,46 @@ ms.lasthandoff: 07/28/2017
         //await copyTask;  
         ```  
   
-4.  `GetURLContents` 中仍需要完成的操作是调整方法签名。 仅可在使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符标记的方法中使用 `await` 运算符。 添加修饰符以将方法标记为*异步方法*，如下列代码所示。  
+4.  <span data-ttu-id="33e5a-206">`GetURLContents` 中仍需要完成的操作是调整方法签名。</span><span class="sxs-lookup"><span data-stu-id="33e5a-206">All that remains to be done in `GetURLContents` is to adjust the method signature.</span></span> <span data-ttu-id="33e5a-207">仅可在使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符标记的方法中使用 `await` 运算符。</span><span class="sxs-lookup"><span data-stu-id="33e5a-207">You can use the `await` operator only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="33e5a-208">添加修饰符以将方法标记为*异步方法*，如下列代码所示。</span><span class="sxs-lookup"><span data-stu-id="33e5a-208">Add the modifier to mark the method as an *async method*, as the following code shows.</span></span>  
   
     ```csharp  
     private async byte[] GetURLContents(string url)  
     ```  
   
-5.  异步方法的返回类型在 C# 中只能为 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 通常情况下，`void` 的返回类型仅可在异步事件处理程序中使用，其中需要 `void`。 在其他情况下，如果完成的方法具有返回 T 类型的值的 [return](../../../../csharp/language-reference/keywords/return.md) 语句，则使用 `Task(T)`；如果完成的方法不返回有意义的值，则使用 `Task`。 可以将 `Task` 返回类型视为表示“Task(void)”。  
+5.  <span data-ttu-id="33e5a-209">异步方法的返回类型在 C# 中只能为 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-209">The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, or `void` in C#.</span></span> <span data-ttu-id="33e5a-210">通常情况下，`void` 的返回类型仅可在异步事件处理程序中使用，其中需要 `void`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-210">Typically, a return type of `void` is used only in an async event handler, where `void` is required.</span></span> <span data-ttu-id="33e5a-211">在其他情况下，如果完成的方法具有返回 T 类型的值的 [return](../../../../csharp/language-reference/keywords/return.md) 语句，则使用 `Task(T)`；如果完成的方法不返回有意义的值，则使用 `Task`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-211">In other cases, you use `Task(T)` if the completed method has a [return](../../../../csharp/language-reference/keywords/return.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.</span></span> <span data-ttu-id="33e5a-212">可以将 `Task` 返回类型视为表示“Task(void)”。</span><span class="sxs-lookup"><span data-stu-id="33e5a-212">You can think of the `Task` return type as meaning "Task(void)."</span></span>  
   
-     有关详细信息，请参阅[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+     <span data-ttu-id="33e5a-213">有关详细信息，请参阅[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。</span><span class="sxs-lookup"><span data-stu-id="33e5a-213">For more information, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-     方法 `GetURLContents` 具有 return 语句，且该语句返回字节数组。 因此，异步版本的返回类型为 Task(T)，其中 T 为字节数组。 在方法签名中进行下列更改：  
+     <span data-ttu-id="33e5a-214">方法 `GetURLContents` 具有 return 语句，且该语句返回字节数组。</span><span class="sxs-lookup"><span data-stu-id="33e5a-214">Method `GetURLContents` has a return statement, and the statement returns a byte array.</span></span> <span data-ttu-id="33e5a-215">因此，异步版本的返回类型为 Task(T)，其中 T 为字节数组。</span><span class="sxs-lookup"><span data-stu-id="33e5a-215">Therefore, the return type of the async version is Task(T), where T is a byte array.</span></span> <span data-ttu-id="33e5a-216">在方法签名中进行下列更改：</span><span class="sxs-lookup"><span data-stu-id="33e5a-216">Make the following changes in the method signature:</span></span>  
   
-    -   将返回类型更改为 `Task<byte[]>`。  
+    -   <span data-ttu-id="33e5a-217">将返回类型更改为 `Task<byte[]>`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-217">Change the return type to `Task<byte[]>`.</span></span>  
   
-    -   按照约定，异步方法的名称以“Async”结尾，因此，请重命名方法 `GetURLContentsAsync`。  
+    -   <span data-ttu-id="33e5a-218">按照约定，异步方法的名称以“Async”结尾，因此，请重命名方法 `GetURLContentsAsync`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-218">By convention, asynchronous methods have names that end in "Async," so rename the method `GetURLContentsAsync`.</span></span>  
   
-     下列代码显示这些更改。  
+     <span data-ttu-id="33e5a-219">下列代码显示这些更改。</span><span class="sxs-lookup"><span data-stu-id="33e5a-219">The following code shows these changes.</span></span>  
   
     ```csharp  
     private async Task<byte[]> GetURLContentsAsync(string url)  
     ```  
   
-     进行这几处更改后，`GetURLContents` 到异步方法的转换完成。  
+     <span data-ttu-id="33e5a-220">进行这几处更改后，`GetURLContents` 到异步方法的转换完成。</span><span class="sxs-lookup"><span data-stu-id="33e5a-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> 将 SumPageSizes 转换为异步方法  
+###  <span data-ttu-id="33e5a-221"><a name="SumPageSizes"></a> 将 SumPageSizes 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="33e5a-221"><a name="SumPageSizes"></a> To convert SumPageSizes to an asynchronous method</span></span>  
   
-1.  为 `SumPageSizes` 重复之前过程中的步骤。 首先，将对 `GetURLContents` 的调用更改为异步调用。  
+1.  <span data-ttu-id="33e5a-222">为 `SumPageSizes` 重复之前过程中的步骤。</span><span class="sxs-lookup"><span data-stu-id="33e5a-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="33e5a-223">首先，将对 `GetURLContents` 的调用更改为异步调用。</span><span class="sxs-lookup"><span data-stu-id="33e5a-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
-    -   将调用的方法的名称从 `GetURLContents` 更改为 `GetURLContentsAsync`（如果尚未执行此操作）。  
+    -   <span data-ttu-id="33e5a-224">将调用的方法的名称从 `GetURLContents` 更改为 `GetURLContentsAsync`（如果尚未执行此操作）。</span><span class="sxs-lookup"><span data-stu-id="33e5a-224">Change the name of the method that’s called from `GetURLContents` to `GetURLContentsAsync`, if you haven't already done so.</span></span>  
   
-    -   将 `await` 应用到 `GetURLContentsAsync` 返回的任务，以便获取字节数组值。  
+    -   <span data-ttu-id="33e5a-225">将 `await` 应用到 `GetURLContentsAsync` 返回的任务，以便获取字节数组值。</span><span class="sxs-lookup"><span data-stu-id="33e5a-225">Apply `await` to the task that `GetURLContentsAsync` returns to obtain the byte array value.</span></span>  
   
-     下列代码显示这些更改。  
+     <span data-ttu-id="33e5a-226">下列代码显示这些更改。</span><span class="sxs-lookup"><span data-stu-id="33e5a-226">The following code shows these changes.</span></span>  
   
     ```csharp  
     byte[] urlContents = await GetURLContentsAsync(url);  
     ```  
   
-     上一个分配缩写以下两行代码。  
+     <span data-ttu-id="33e5a-227">上一个分配缩写以下两行代码。</span><span class="sxs-lookup"><span data-stu-id="33e5a-227">The previous assignment abbreviates the following two lines of code.</span></span>  
   
     ```csharp  
     // GetURLContentsAsync returns a Task<T>. At completion, the task  
@@ -374,32 +374,32 @@ ms.lasthandoff: 07/28/2017
     //byte[] urlContents = await getContentsTask;  
     ```  
   
-2.  在方法签名中进行下列更改：  
+2.  <span data-ttu-id="33e5a-228">在方法签名中进行下列更改：</span><span class="sxs-lookup"><span data-stu-id="33e5a-228">Make the following changes in the method's signature:</span></span>  
   
-    -   使用 `async` 修饰符标记方法。  
+    -   <span data-ttu-id="33e5a-229">使用 `async` 修饰符标记方法。</span><span class="sxs-lookup"><span data-stu-id="33e5a-229">Mark the method with the `async` modifier.</span></span>  
   
-    -   将“Async”添加到方法名称。  
+    -   <span data-ttu-id="33e5a-230">将“Async”添加到方法名称。</span><span class="sxs-lookup"><span data-stu-id="33e5a-230">Add "Async" to the method name.</span></span>  
   
-    -   这一次没有任务返回变量 T，因为 `SumPageSizesAsync` 不返回 T 的值。（该方法没有 `return` 语句。）但是，该方法必须返回 `Task` 才能进行等待。 因此，将该方法的返回类型从 `void` 更改为 `Task`。  
+    -   <span data-ttu-id="33e5a-231">这一次没有任务返回变量 T，因为 `SumPageSizesAsync` 不返回 T 的值。（该方法没有 `return` 语句。）但是，该方法必须返回 `Task` 才能进行等待。</span><span class="sxs-lookup"><span data-stu-id="33e5a-231">There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `return` statement.) However, the method must return a `Task` to be awaitable.</span></span> <span data-ttu-id="33e5a-232">因此，将该方法的返回类型从 `void` 更改为 `Task`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-232">Therefore, change the return type of the method from `void` to `Task`.</span></span>  
   
-     下列代码显示这些更改。  
+     <span data-ttu-id="33e5a-233">下列代码显示这些更改。</span><span class="sxs-lookup"><span data-stu-id="33e5a-233">The following code shows these changes.</span></span>  
   
     ```csharp  
     private async Task SumPageSizesAsync()  
     ```  
   
-     从 `SumPageSizes` 到 `SumPageSizesAsync` 的转换完成。  
+     <span data-ttu-id="33e5a-234">从 `SumPageSizes` 到 `SumPageSizesAsync` 的转换完成。</span><span class="sxs-lookup"><span data-stu-id="33e5a-234">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> 将 startButton_Click 转换为异步方法  
+###  <span data-ttu-id="33e5a-235"><a name="startButton"></a> 将 startButton_Click 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="33e5a-235"><a name="startButton"></a> To convert startButton_Click to an asynchronous method</span></span>  
   
-1.  在事件处理程序中，将调用的方法的名称从 `SumPageSizes` 更改为 `SumPageSizesAsync`（如果尚未执行此操作）。  
+1.  <span data-ttu-id="33e5a-236">在事件处理程序中，将调用的方法的名称从 `SumPageSizes` 更改为 `SumPageSizesAsync`（如果尚未执行此操作）。</span><span class="sxs-lookup"><span data-stu-id="33e5a-236">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
-2.  由于 `SumPageSizesAsync` 是异步方法，请更改事件处理程序中的代码以等待结果。  
+2.  <span data-ttu-id="33e5a-237">由于 `SumPageSizesAsync` 是异步方法，请更改事件处理程序中的代码以等待结果。</span><span class="sxs-lookup"><span data-stu-id="33e5a-237">Because `SumPageSizesAsync` is an async method, change the code in the event handler to await the result.</span></span>  
   
-     对 `SumPageSizesAsync` 的调用反射对 `GetURLContentsAsync` 中的 `CopyToAsync` 的调用。 调用返回的是 `Task`，而不是 `Task(T)`。  
+     <span data-ttu-id="33e5a-238">对 `SumPageSizesAsync` 的调用反射对 `GetURLContentsAsync` 中的 `CopyToAsync` 的调用。</span><span class="sxs-lookup"><span data-stu-id="33e5a-238">The call to `SumPageSizesAsync` mirrors the call to `CopyToAsync` in `GetURLContentsAsync`.</span></span> <span data-ttu-id="33e5a-239">调用返回的是 `Task`，而不是 `Task(T)`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-239">The call returns a `Task`, not a `Task(T)`.</span></span>  
   
-     与之前的过程一样，你可以使用一条语句或两条语句转换调用。 下列代码显示这些更改。  
+     <span data-ttu-id="33e5a-240">与之前的过程一样，你可以使用一条语句或两条语句转换调用。</span><span class="sxs-lookup"><span data-stu-id="33e5a-240">As in previous procedures, you can convert the call by using one statement or two statements.</span></span> <span data-ttu-id="33e5a-241">下列代码显示这些更改。</span><span class="sxs-lookup"><span data-stu-id="33e5a-241">The following code shows these changes.</span></span>  
   
     ```csharp  
     // One-step async call.  
@@ -410,49 +410,49 @@ ms.lasthandoff: 07/28/2017
     //await sumTask;  
     ```  
   
-3.  要防止意外重新进入操作，请在 `startButton_Click` 顶部添加下列语句，以禁用“启动”按钮。  
+3.  <span data-ttu-id="33e5a-242">要防止意外重新进入操作，请在 `startButton_Click` 顶部添加下列语句，以禁用“启动”按钮。</span><span class="sxs-lookup"><span data-stu-id="33e5a-242">To prevent accidentally reentering the operation, add the following statement at the top of `startButton_Click` to disable the **Start** button.</span></span>  
   
     ```csharp  
     // Disable the button until the operation is complete.  
     startButton.IsEnabled = false;  
     ```  
   
-     可以重新启用事件处理程序末尾的按钮。  
+     <span data-ttu-id="33e5a-243">可以重新启用事件处理程序末尾的按钮。</span><span class="sxs-lookup"><span data-stu-id="33e5a-243">You can reenable the button at the end of the event handler.</span></span>  
   
     ```csharp  
     // Reenable the button in case you want to run the operation again.  
     startButton.IsEnabled = true;  
     ```  
   
-     有关重新进入的详细信息，请参阅[处理异步应用中的重新进入 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)。  
+     <span data-ttu-id="33e5a-244">有关重新进入的详细信息，请参阅[处理异步应用中的重新进入 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="33e5a-244">For more information about reentrancy, see [Handling Reentrancy in Async Apps (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span></span>  
   
-4.  最后，将 `async` 修饰符添加到声明，以便事件处理程序可以等待 `SumPagSizesAsync`。  
+4.  <span data-ttu-id="33e5a-245">最后，将 `async` 修饰符添加到声明，以便事件处理程序可以等待 `SumPagSizesAsync`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-245">Finally, add the `async` modifier to the declaration so that the event handler can await `SumPagSizesAsync`.</span></span>  
   
     ```csharp  
     private async void startButton_Click(object sender, RoutedEventArgs e)  
     ```  
   
-     通常情况下，事件处理程序的名称不会更改。 返回类型没有更改为 `Task`，因为事件处理程序必须返回 `void`。  
+     <span data-ttu-id="33e5a-246">通常情况下，事件处理程序的名称不会更改。</span><span class="sxs-lookup"><span data-stu-id="33e5a-246">Typically, the names of event handlers aren’t changed.</span></span> <span data-ttu-id="33e5a-247">返回类型没有更改为 `Task`，因为事件处理程序必须返回 `void`。</span><span class="sxs-lookup"><span data-stu-id="33e5a-247">The return type isn’t changed to `Task` because event handlers must return `void`.</span></span>  
   
-     项目从同步处理到异步处理的转换完成。  
+     <span data-ttu-id="33e5a-248">项目从同步处理到异步处理的转换完成。</span><span class="sxs-lookup"><span data-stu-id="33e5a-248">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> 测试异步解决方案  
+###  <span data-ttu-id="33e5a-249"><a name="testAsynch"></a> 测试异步解决方案</span><span class="sxs-lookup"><span data-stu-id="33e5a-249"><a name="testAsynch"></a> To test the asynchronous solution</span></span>  
   
-1.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
+1.  <span data-ttu-id="33e5a-250">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="33e5a-250">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-2.  此时应显示类似于同步解决方案的输出的输出。 但是，请注意下列差异。  
+2.  <span data-ttu-id="33e5a-251">此时应显示类似于同步解决方案的输出的输出。</span><span class="sxs-lookup"><span data-stu-id="33e5a-251">Output that resembles the output of the synchronous solution should appear.</span></span> <span data-ttu-id="33e5a-252">但是，请注意下列差异。</span><span class="sxs-lookup"><span data-stu-id="33e5a-252">However, notice the following differences.</span></span>  
   
-    -   处理完成后，所有结果不会同时出现。 例如，两个程序都在 `startButton_Click` 中包含一行可以清除文本框的代码。 目的在于，在一组结果显示后，第二次选择“启动”按钮时，可以清除运行之间的文本框。 在同步版本中，下载完成且 UI 线程可以自由完成其他工作时，文本框在计数第二次显示之前即被清除。 在异步版本中，选择“启动”按钮后立即清除文本框。  
+    -   <span data-ttu-id="33e5a-253">处理完成后，所有结果不会同时出现。</span><span class="sxs-lookup"><span data-stu-id="33e5a-253">The results don’t all occur at the same time, after the processing is complete.</span></span> <span data-ttu-id="33e5a-254">例如，两个程序都在 `startButton_Click` 中包含一行可以清除文本框的代码。</span><span class="sxs-lookup"><span data-stu-id="33e5a-254">For example, both programs contain a line in `startButton_Click` that clears the text box.</span></span> <span data-ttu-id="33e5a-255">目的在于，在一组结果显示后，第二次选择“启动”按钮时，可以清除运行之间的文本框。</span><span class="sxs-lookup"><span data-stu-id="33e5a-255">The intent is to clear the text box between runs if you choose the **Start** button for a second time, after one set of results has appeared.</span></span> <span data-ttu-id="33e5a-256">在同步版本中，下载完成且 UI 线程可以自由完成其他工作时，文本框在计数第二次显示之前即被清除。</span><span class="sxs-lookup"><span data-stu-id="33e5a-256">In the synchronous version, the text box is cleared just before the counts appear for the second time, when the downloads are completed and the UI thread is free to do other work.</span></span> <span data-ttu-id="33e5a-257">在异步版本中，选择“启动”按钮后立即清除文本框。</span><span class="sxs-lookup"><span data-stu-id="33e5a-257">In the asynchronous version, the text box clears immediately after you choose the **Start** button.</span></span>  
   
-    -   最重要的是，UI 线程在下载过程中未被阻止。 在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。 如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。  
+    -   <span data-ttu-id="33e5a-258">最重要的是，UI 线程在下载过程中未被阻止。</span><span class="sxs-lookup"><span data-stu-id="33e5a-258">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="33e5a-259">在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。</span><span class="sxs-lookup"><span data-stu-id="33e5a-259">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="33e5a-260">如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。</span><span class="sxs-lookup"><span data-stu-id="33e5a-260">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> 使用 .NET Framework 方法替换方法 GetURLContentsAsync  
+###  <span data-ttu-id="33e5a-261"><a name="GetURLContentsAsync"></a> 使用 .NET Framework 方法替换方法 GetURLContentsAsync</span><span class="sxs-lookup"><span data-stu-id="33e5a-261"><a name="GetURLContentsAsync"></a> To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
-1.  .NET Framework 4.5 提供可供你使用的许多异步方法。 其中一个是 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>，它可以执行本演练所需的操作。 你可以使用它来替代你在早前过程中创建的 `GetURLContentsAsync` 方法。  
+1.  <span data-ttu-id="33e5a-262">.NET Framework 4.5 提供可供你使用的许多异步方法。</span><span class="sxs-lookup"><span data-stu-id="33e5a-262">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="33e5a-263">其中一个是 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>，它可以执行本演练所需的操作。</span><span class="sxs-lookup"><span data-stu-id="33e5a-263">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="33e5a-264">你可以使用它来替代你在早前过程中创建的 `GetURLContentsAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="33e5a-264">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
-     第一步是在方法 `SumPageSizesAsync` 中创建 `HttpClient` 对象。 在方法的开头添加下列声明。  
+     <span data-ttu-id="33e5a-265">第一步是在方法 `SumPageSizesAsync` 中创建 `HttpClient` 对象。</span><span class="sxs-lookup"><span data-stu-id="33e5a-265">The first step is to create an `HttpClient` object in method `SumPageSizesAsync`.</span></span> <span data-ttu-id="33e5a-266">在方法的开头添加下列声明。</span><span class="sxs-lookup"><span data-stu-id="33e5a-266">Add the following declaration at the start of the method.</span></span>  
   
     ```csharp  
     // Declare an HttpClient object and increase the buffer size. The  
@@ -461,20 +461,20 @@ ms.lasthandoff: 07/28/2017
         new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
     ```  
   
-2.  在 `SumPageSizesAsync,` 中，使用对 `HttpClient` 方法的调用替换对 `GetURLContentsAsync` 方法的调用。  
+2.  <span data-ttu-id="33e5a-267">在 `SumPageSizesAsync,` 中，使用对 `HttpClient` 方法的调用替换对 `GetURLContentsAsync` 方法的调用。</span><span class="sxs-lookup"><span data-stu-id="33e5a-267">In `SumPageSizesAsync,` replace the call to your `GetURLContentsAsync` method with a call to the `HttpClient` method.</span></span>  
   
     ```csharp  
     byte[] urlContents = await client.GetByteArrayAsync(url);  
     ```  
   
-3.  删除或注释禁用你编写的 `GetURLContentsAsync` 方法。  
+3.  <span data-ttu-id="33e5a-268">删除或注释禁用你编写的 `GetURLContentsAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="33e5a-268">Remove or comment out the `GetURLContentsAsync` method that you wrote.</span></span>  
   
-4.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
+4.  <span data-ttu-id="33e5a-269">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="33e5a-269">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     此版本的项目的行为应与“测试异步解决方案”过程描述的行为匹配，且你的工作量应该更少。  
+     <span data-ttu-id="33e5a-270">此版本的项目的行为应与“测试异步解决方案”过程描述的行为匹配，且你的工作量应该更少。</span><span class="sxs-lookup"><span data-stu-id="33e5a-270">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> 示例  
- 下列代码包含使用你编写的异步 `GetURLContentsAsync` 方法从同步解决方案转换为异步解决方案的完整示例。 请注意，它与原始同步解决方案十分类似。  
+##  <span data-ttu-id="33e5a-271"><a name="BKMK_CompleteCodeExamples"></a> 示例</span><span class="sxs-lookup"><span data-stu-id="33e5a-271"><a name="BKMK_CompleteCodeExamples"></a> Example</span></span>  
+ <span data-ttu-id="33e5a-272">下列代码包含使用你编写的异步 `GetURLContentsAsync` 方法从同步解决方案转换为异步解决方案的完整示例。</span><span class="sxs-lookup"><span data-stu-id="33e5a-272">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="33e5a-273">请注意，它与原始同步解决方案十分类似。</span><span class="sxs-lookup"><span data-stu-id="33e5a-273">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```csharp  
 using System;  
@@ -623,7 +623,7 @@ namespace AsyncExampleWPF
 }  
 ```  
   
- 下列代码包含使用 `HttpClient` 方法 `GetByteArrayAsync` 的解决方案的完整示例。  
+ <span data-ttu-id="33e5a-274">下列代码包含使用 `HttpClient` 方法 `GetByteArrayAsync` 的解决方案的完整示例。</span><span class="sxs-lookup"><span data-stu-id="33e5a-274">The following code contains the full example of the solution that uses the `HttpClient` method, `GetByteArrayAsync`.</span></span>  
   
 ```csharp  
 using System;  
@@ -740,13 +740,13 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) （异步示例：访问 Web 演练（C# 和 Visual Basic））  
- [Async](../../../../csharp/language-reference/keywords/async.md)   
- [Await](../../../../csharp/language-reference/keywords/await.md)   
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
- [基于任务的异步编程 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)   
- [如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)   
- [如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a><span data-ttu-id="33e5a-275">请参阅</span><span class="sxs-lookup"><span data-stu-id="33e5a-275">See Also</span></span>  
+ <span data-ttu-id="33e5a-276">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) （异步示例：访问 Web 演练（C# 和 Visual Basic））</span><span class="sxs-lookup"><span data-stu-id="33e5a-276">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) </span></span>  
+ <span data-ttu-id="33e5a-277">[Async](../../../../csharp/language-reference/keywords/async.md) </span><span class="sxs-lookup"><span data-stu-id="33e5a-277">[async](../../../../csharp/language-reference/keywords/async.md) </span></span>  
+ <span data-ttu-id="33e5a-278">[Await](../../../../csharp/language-reference/keywords/await.md) </span><span class="sxs-lookup"><span data-stu-id="33e5a-278">[await](../../../../csharp/language-reference/keywords/await.md) </span></span>  
+ <span data-ttu-id="33e5a-279">[使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md) </span><span class="sxs-lookup"><span data-stu-id="33e5a-279">[Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md) </span></span>  
+ <span data-ttu-id="33e5a-280">[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) </span><span class="sxs-lookup"><span data-stu-id="33e5a-280">[Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) </span></span>  
+ <span data-ttu-id="33e5a-281">[基于任务的异步编程 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847) </span><span class="sxs-lookup"><span data-stu-id="33e5a-281">[Task-based Asynchronous Programming (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847) </span></span>  
+ <span data-ttu-id="33e5a-282">[如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) </span><span class="sxs-lookup"><span data-stu-id="33e5a-282">[How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) </span></span>  
+ [<span data-ttu-id="33e5a-283">如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)</span><span class="sxs-lookup"><span data-stu-id="33e5a-283">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
 

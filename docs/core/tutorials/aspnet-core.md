@@ -17,7 +17,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门    
+# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="bd5d6-104">ASP.NET Core 入门</span><span class="sxs-lookup"><span data-stu-id="bd5d6-104">Getting started with ASP.NET Core</span></span>    
     
-有关开发 ASP.NET Core Web 应用程序的教程，建议参阅 [ASP.NET Core documentation](/aspnet/core/)（ASP.NET Core 文档）。
+<span data-ttu-id="bd5d6-105">有关开发 ASP.NET Core Web 应用程序的教程，建议参阅 [ASP.NET Core documentation](/aspnet/core/)（ASP.NET Core 文档）。</span><span class="sxs-lookup"><span data-stu-id="bd5d6-105">For tutorials about developing ASP.NET Core web applications, we suggest you head over to [ASP.NET Core documentation](/aspnet/core/).</span></span>
 

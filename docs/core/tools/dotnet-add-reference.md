@@ -18,19 +18,19 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="dotnet-add-reference"></a>dotnet-add reference
+# <a name="dotnet-add-reference"></a><span data-ttu-id="49978-104">dotnet-add reference</span><span class="sxs-lookup"><span data-stu-id="49978-104">dotnet-add reference</span></span>
 
-## <a name="name"></a>名称
+## <a name="name"></a><span data-ttu-id="49978-105">名称</span><span class="sxs-lookup"><span data-stu-id="49978-105">Name</span></span>
 
-`dotnet-add reference` - 添加项目到项目 (P2P) 引用。
+<span data-ttu-id="49978-106">`dotnet-add reference` - 添加项目到项目 (P2P) 引用。</span><span class="sxs-lookup"><span data-stu-id="49978-106">`dotnet-add reference` - Adds project-to-project (P2P) references.</span></span>
 
-## <a name="synopsis"></a>摘要
+## <a name="synopsis"></a><span data-ttu-id="49978-107">摘要</span><span class="sxs-lookup"><span data-stu-id="49978-107">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a><span data-ttu-id="49978-108">描述</span><span class="sxs-lookup"><span data-stu-id="49978-108">Description</span></span>
 
-使用 `dotnet add reference` 命令可方便地向项目添加项目引用。 运行该命令后，会将 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素添加到项目文件。
+<span data-ttu-id="49978-109">使用 `dotnet add reference` 命令可方便地向项目添加项目引用。</span><span class="sxs-lookup"><span data-stu-id="49978-109">The `dotnet add reference` command provides a convenient option to add project references to a project.</span></span> <span data-ttu-id="49978-110">运行该命令后，会将 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素添加到项目文件。</span><span class="sxs-lookup"><span data-stu-id="49978-110">After running the command, the [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) elements are added to the project file.</span></span>
 
 ```xml
 <ItemGroup>
@@ -40,37 +40,37 @@ ms.lasthandoff: 07/28/2017
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a><span data-ttu-id="49978-111">参数</span><span class="sxs-lookup"><span data-stu-id="49978-111">Arguments</span></span>
 
 `PROJECT`
 
-指定项目文件。 如果未指定，此命令会搜索当前目录，以获取解决方案文件。
+<span data-ttu-id="49978-112">指定项目文件。</span><span class="sxs-lookup"><span data-stu-id="49978-112">Specifies the project file.</span></span> <span data-ttu-id="49978-113">如果未指定，此命令会搜索当前目录，以获取解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="49978-113">If not specified, the command will search the current directory for one.</span></span>
 
 `PROJECT_REFERENCES`
 
-要添加的项目到项目 (P2P) 引用。 指定一个或多个项目。 基于 Unix/Linux 的系统支持 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。
+<span data-ttu-id="49978-114">要添加的项目到项目 (P2P) 引用。</span><span class="sxs-lookup"><span data-stu-id="49978-114">Project-to-project (P2P) references to add.</span></span> <span data-ttu-id="49978-115">指定一个或多个项目。</span><span class="sxs-lookup"><span data-stu-id="49978-115">Specify one or more projects.</span></span> <span data-ttu-id="49978-116">基于 Unix/Linux 的系统支持 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="49978-116">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux-based systems.</span></span>
 
-## <a name="options"></a>选项
+## <a name="options"></a><span data-ttu-id="49978-117">选项</span><span class="sxs-lookup"><span data-stu-id="49978-117">Options</span></span>
 
 `-h|--help`
 
-打印出有关命令的简短帮助。
+<span data-ttu-id="49978-118">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="49978-118">Prints out a short help for the command.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。
+<span data-ttu-id="49978-119">仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。</span><span class="sxs-lookup"><span data-stu-id="49978-119">Adds project references only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
-## <a name="examples"></a>示例
+## <a name="examples"></a><span data-ttu-id="49978-120">示例</span><span class="sxs-lookup"><span data-stu-id="49978-120">Examples</span></span>
 
-添加项目引用：
+<span data-ttu-id="49978-121">添加项目引用：</span><span class="sxs-lookup"><span data-stu-id="49978-121">Add a project reference:</span></span>
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-添加多个项目引用：
+<span data-ttu-id="49978-122">添加多个项目引用：</span><span class="sxs-lookup"><span data-stu-id="49978-122">Add multiple project references:</span></span>
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 
-使用 glob 模式在 Linux/Unix 上添加多个项目引用：
+<span data-ttu-id="49978-123">使用 glob 模式在 Linux/Unix 上添加多个项目引用：</span><span class="sxs-lookup"><span data-stu-id="49978-123">Add multiple project references using a globbing pattern on Linux/Unix:</span></span>
 
 `dotnet add app/app.csproj reference **/*.csproj`
 

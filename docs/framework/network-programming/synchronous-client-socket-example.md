@@ -1,30 +1,35 @@
 ---
-title: "同步客户端套接字示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "套接字，代码示例"
-  - "同步客户端套接字"
-  - "套接字，同步客户端套接字"
+title: "同步客户端套接字示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, code examples
+- synchronous client sockets
+- sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 759585d1029742f6f45e9f7253282af05accc82e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 同步客户端套接字示例
-下面的示例程序创建连接到服务器的客户端。  客户端使用一个同步套接字生成，因此，客户端应用程序的执行挂起，直到服务器返回响应。  应用程序将字符串发送到服务器并显示在控制台的服务器返回的字符串。  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="a269b-102">同步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="a269b-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="a269b-103">以下示例程序创建连接到服务器的客户端。</span><span class="sxs-lookup"><span data-stu-id="a269b-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="a269b-104">客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。</span><span class="sxs-lookup"><span data-stu-id="a269b-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="a269b-105">应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="a269b-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -92,7 +97,7 @@ public class SynchronousSocketClient {
         try {  
             // Establish the remote endpoint for the socket.  
             // This example uses port 11000 on the local computer.  
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName())  
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
@@ -142,7 +147,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## 请参阅  
- [同步服务器套接字示例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="a269b-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a269b-106">See Also</span></span>  
+ <span data-ttu-id="a269b-107">[同步服务器套接字示例](../../../docs/framework/network-programming/synchronous-server-socket-example.md) </span><span class="sxs-lookup"><span data-stu-id="a269b-107">[Synchronous Server Socket Example](../../../docs/framework/network-programming/synchronous-server-socket-example.md) </span></span>  
+ <span data-ttu-id="a269b-108">[使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md) </span><span class="sxs-lookup"><span data-stu-id="a269b-108">[Using a Synchronous Client Socket](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md) </span></span>  
+ [<span data-ttu-id="a269b-109">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="a269b-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+

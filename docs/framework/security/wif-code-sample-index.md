@@ -1,38 +1,45 @@
 ---
-title: "WIF 代码示例索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 代码示例索引"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5ec81864fca8ec9c83fd294f722e890f002e510
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
-# WIF 代码示例索引
-下面是 Windows 标识基础 4.5 的代码示例：  
+# <a name="wif-code-sample-index"></a><span data-ttu-id="9a458-102">WIF 代码示例索引</span><span class="sxs-lookup"><span data-stu-id="9a458-102">WIF Code Sample Index</span></span>
+<span data-ttu-id="9a458-103">以下是 Windows Identity Foundation 4.5 的代码示例：</span><span class="sxs-lookup"><span data-stu-id="9a458-103">The following are code samples for Windows Identity Foundation 4.5:</span></span>  
   
--   [ClaimsAwareWebApp](http://go.microsoft.com/fwlink/?LinkID=248405) \-此示例演示 （以本地测试安全令牌服务的身份和访问工具从 Visual Studio 11） 使用基本身份验证 externalization 上传统的 ASP。NET （相对于 web 站点） 的应用程序。  
+-   <span data-ttu-id="9a458-104">[ClaimsAwareWebApp](http://go.microsoft.com/fwlink/?LinkID=248405) - 此示例演示经典 ASP.NET 应用程序（相对于网站而言）上的身份验证外化（从用于 Visual Studio 11 的标识和访问工具到本地测试安全令牌服务）的基本用法。</span><span class="sxs-lookup"><span data-stu-id="9a458-104">[ClaimsAwareWebApp](http://go.microsoft.com/fwlink/?LinkID=248405) - this sample demonstrates basic use of authentication externalization (to the local test Security Token Service from the Identity and Access Tool for Visual Studio 11) on a classic ASP.NET application (as opposed to a web site).</span></span>  
   
--   [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) \-此示例演示基本身份验证 externalization 上传统的 WCF 服务使用。  
+-   <span data-ttu-id="9a458-105">[ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) - 此示例演示经典 WCF 服务上身份验证外化的基本用法。</span><span class="sxs-lookup"><span data-stu-id="9a458-105">[ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) - this sample demonstrates basic use of authentication externalization on a classic WCF service.</span></span>  
   
--   [ClaimsAwareMvcApplication](http://go.microsoft.com/fwlink/?LinkID=248407) \-此示例演示如何将 WIF 集成使用 MVC，包括非总保护并尊重 forms 身份验证的代码将重定向的登录控制器。  
+-   <span data-ttu-id="9a458-106">[ClaimsAwareMvcApplication](http://go.microsoft.com/fwlink/?LinkID=248407) - 此示例演示如何集成 WIF 和 MVC，包括非覆盖层保护和遵守 Forms 身份验证从登录控制器中重定向的代码。</span><span class="sxs-lookup"><span data-stu-id="9a458-106">[ClaimsAwareMvcApplication](http://go.microsoft.com/fwlink/?LinkID=248407) - this sample demonstrates how to integrate WIF with MVC, including non-blanket protection and code which honors the forms authentication redirects out of the LogOn controller.</span></span>  
   
--   [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) \-此示例演示场准备会话高速缓存 （相对于 tokenreplycache），以便您可以使用通过引用，而不是交换大 cookie 的会话。  它还演示了保护服务器场中的 cookie 的更简单的方法。  
+-   <span data-ttu-id="9a458-107">[ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) - 此示例演示场就绪会话缓存（相对于 tokenreplycache 而言），以便可以通过引用（而不是交换大型 cookie）使用会话。</span><span class="sxs-lookup"><span data-stu-id="9a458-107">[ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) - this sample demonstrates a farm ready session cache (as opposed to a tokenreplycache) so that you can use sessions by reference instead of exchanging big cookies.</span></span> <span data-ttu-id="9a458-108">它还演示一种保护场中 cookie 的更简单的方法。</span><span class="sxs-lookup"><span data-stu-id="9a458-108">It also demonstrates an easier way of securing cookies in a farm.</span></span>  
   
--   [ClaimsAwareFormsAuthentication](http://go.microsoft.com/fwlink/?LinkID=248409) \-此非常简单的示例演示了在中。您可以在您承担者，无论您如何验证您的用户获得索赔 NET 4.5。  
+-   <span data-ttu-id="9a458-109">[ClaimsAwareFormsAuthentication](http://go.microsoft.com/fwlink/?LinkID=248409) - 这是一个非常简单的示例，演示 .NET 4.5 中，不管如何验证用户身份都在主体中获取声明。</span><span class="sxs-lookup"><span data-stu-id="9a458-109">[ClaimsAwareFormsAuthentication](http://go.microsoft.com/fwlink/?LinkID=248409) - this very simple sample demonstrates that in .NET 4.5 you get claims in your principals regardless of how you authenticate your users.</span></span>  
   
--   [ClaimsBasedAuthorization](http://go.microsoft.com/fwlink/?LinkID=248410)\-此示例演示如何使用 CLaimsAuthorizationManager 类和 ClaimsAuthorizationModule 应用您自己的授权策略。  
+-   <span data-ttu-id="9a458-110">[ClaimsBasedAuthorization](http://go.microsoft.com/fwlink/?LinkID=248410) - 此示例演示如何使用 CLaimsAuthorizationManager 类和 ClaimsAuthorizationModule 来应用自己的授权策略。</span><span class="sxs-lookup"><span data-stu-id="9a458-110">[ClaimsBasedAuthorization](http://go.microsoft.com/fwlink/?LinkID=248410)- this samples shows how to use your CLaimsAuthorizationManager class and the ClaimsAuthorizationModule for applying your own authorization policies.</span></span>  
   
--   [FederationMetadata](http://go.microsoft.com/fwlink/?LinkID=248411) – 此示例演示 （取决于自定义的 STS） 动态生成和动态消耗量 （依赖方应用程序） 的元数据文档。  
+-   <span data-ttu-id="9a458-111">[FederationMetadata](http://go.microsoft.com/fwlink/?LinkID=248411) - 此示例演示元数据文档的动态生成（自定义 STS 上）和动态消耗（依赖方应用上）。</span><span class="sxs-lookup"><span data-stu-id="9a458-111">[FederationMetadata](http://go.microsoft.com/fwlink/?LinkID=248411) – this sample demonstrates both dynamic generation (on a custom STS) and dynamic consumption (on a relying party application) of metadata documents.</span></span>  
   
--   [CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) – 此示例演示如何创建自定义的简单 Web 标记 （SWT） 标记类型。  
+-   <span data-ttu-id="9a458-112">[CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) - 此示例演示如何生成自定义简单 Web 令牌 (SWT) 令牌类型。</span><span class="sxs-lookup"><span data-stu-id="9a458-112">[CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) – this sample demonstrates how to build a custom Simple Web Token (SWT) token type.</span></span>  
   
-## 请参阅  
- [Windows Identity Foundation](../../../docs/framework/security/windows-identity-foundation.md)
+## <a name="see-also"></a><span data-ttu-id="9a458-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9a458-113">See Also</span></span>  
+ [<span data-ttu-id="9a458-114">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="9a458-114">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
+

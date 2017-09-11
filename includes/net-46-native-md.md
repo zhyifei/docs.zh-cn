@@ -1,1 +1,1 @@
-自 4.6 之后可用，仅限 .NET Native
+<span data-ttu-id="7eb03-101">自 4.6 之后可用，仅限 .NET Native</span><span class="sxs-lookup"><span data-stu-id="7eb03-101">Available since 4.6, .NET Native only</span></span>

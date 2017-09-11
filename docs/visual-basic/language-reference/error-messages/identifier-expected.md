@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795b1d47c2fef7246d23260b5a866ede8f4cadb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 01152cdbce5db3379f25b58cb39e6c9c8446562b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="identifier-expected"></a>应输入标识符
-不是可识别的已声明的元素名称的编程元素出现在上下文要求元素名称的位置。 一个可能原因是以外的某处指定了一个属性声明的开头。  
+# <a name="identifier-expected"></a><span data-ttu-id="2d02e-102">应输入标识符</span><span class="sxs-lookup"><span data-stu-id="2d02e-102">Identifier expected</span></span>
+<span data-ttu-id="2d02e-103">不是可识别的已声明的元素名称的编程元素出现在上下文要求元素名称的位置。</span><span class="sxs-lookup"><span data-stu-id="2d02e-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="2d02e-104">一个可能原因是以外的某处指定了一个属性声明的开头。</span><span class="sxs-lookup"><span data-stu-id="2d02e-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- **错误 ID:** BC30203  
+ <span data-ttu-id="2d02e-105">**错误 ID:** BC30203</span><span class="sxs-lookup"><span data-stu-id="2d02e-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2d02e-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="2d02e-106">To correct this error</span></span>  
   
--   验证在语句中的任何属性的所有位于语句的开头。  
+-   <span data-ttu-id="2d02e-107">验证在语句中的任何属性的所有位于语句的开头。</span><span class="sxs-lookup"><span data-stu-id="2d02e-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
--   验证语句中的所有元素名称都拼写正确。  
+-   <span data-ttu-id="2d02e-108">验证语句中的所有元素名称都拼写正确。</span><span class="sxs-lookup"><span data-stu-id="2d02e-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="2d02e-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d02e-109">See Also</span></span>  
+ <span data-ttu-id="2d02e-110">[已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span><span class="sxs-lookup"><span data-stu-id="2d02e-110">[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span></span>  
+<span data-ttu-id="2d02e-111"> [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span><span class="sxs-lookup"><span data-stu-id="2d02e-111"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span></span>
  

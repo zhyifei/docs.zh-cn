@@ -38,31 +38,31 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltpermissiongt-c-programming-guide"></a>&lt;permission&gt;（C# 编程指南）
-## <a name="syntax"></a>语法  
+# <a name="ltpermissiongt-c-programming-guide"></a><span data-ttu-id="30de7-102">&lt;permission&gt;（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="30de7-102">&lt;permission&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="30de7-103">语法</span><span class="sxs-lookup"><span data-stu-id="30de7-103">Syntax</span></span>  
   
 ```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>参数  
- cref = " `member`"  
- 对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的代码元素，并将 `member` 转换为输出 XML 中规范的元素名称。 成员必须出现在双引号 (" ") 内。  
+#### <a name="parameters"></a><span data-ttu-id="30de7-104">参数</span><span class="sxs-lookup"><span data-stu-id="30de7-104">Parameters</span></span>  
+ <span data-ttu-id="30de7-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="30de7-105">cref = " `member`"</span></span>  
+ <span data-ttu-id="30de7-106">对可从当前编译环境调用的成员或字段的引用。</span><span class="sxs-lookup"><span data-stu-id="30de7-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="30de7-107">编译器检查是否存在给定的代码元素，并将 `member` 转换为输出 XML 中规范的元素名称。</span><span class="sxs-lookup"><span data-stu-id="30de7-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="30de7-108">成员必须出现在双引号 (" ") 内。</span><span class="sxs-lookup"><span data-stu-id="30de7-108">*member* must appear within double quotation marks (" ").</span></span>  
   
- 有关如何创建对泛型类型的 cref 引用的信息，请参阅 [\<see>](../../../csharp/programming-guide/xmldoc/see.md)。  
+ <span data-ttu-id="30de7-109">有关如何创建对泛型类型的 cref 引用的信息，请参阅 [\<see>](../../../csharp/programming-guide/xmldoc/see.md)。</span><span class="sxs-lookup"><span data-stu-id="30de7-109">For information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
   
  `description`  
- 对成员访问权限的说明。  
+ <span data-ttu-id="30de7-110">对成员访问权限的说明。</span><span class="sxs-lookup"><span data-stu-id="30de7-110">A description of the access to the member.</span></span>  
   
-## <a name="remarks"></a>备注  
- 使用 \<permission> 可以记录成员访问权限 <xref:System.Security.PermissionSet> 类可指定对成员的访问权限。  
+## <a name="remarks"></a><span data-ttu-id="30de7-111">备注</span><span class="sxs-lookup"><span data-stu-id="30de7-111">Remarks</span></span>  
+ <span data-ttu-id="30de7-112">使用 \<permission> 可以记录成员访问权限</span><span class="sxs-lookup"><span data-stu-id="30de7-112">The \<permission> tag lets you document the access of a member.</span></span> <span data-ttu-id="30de7-113"><xref:System.Security.PermissionSet> 类可指定对成员的访问权限。</span><span class="sxs-lookup"><span data-stu-id="30de7-113">The <xref:System.Security.PermissionSet> class lets you specify access to a member.</span></span>  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ <span data-ttu-id="30de7-114">使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="30de7-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
+## <a name="example"></a><span data-ttu-id="30de7-115">示例</span><span class="sxs-lookup"><span data-stu-id="30de7-115">Example</span></span>  
+ <span data-ttu-id="30de7-116">[!code-cs[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="30de7-116">[!code-cs[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="30de7-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="30de7-117">See Also</span></span>  
+ <span data-ttu-id="30de7-118">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="30de7-118">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="30de7-119">建议的文档注释标记</span><span class="sxs-lookup"><span data-stu-id="30de7-119">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

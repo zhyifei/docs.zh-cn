@@ -35,55 +35,55 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="instance-constructors-c-programming-guide"></a>实例构造函数（C# 编程指南）
-使用 [new](../../../csharp/language-reference/keywords/new.md) 表达式创建[类](../../../csharp/language-reference/keywords/class.md)的对象时，实例构造函数可用于创建和初始化任意实例成员变量。 若要初始化[静态](../../../csharp/language-reference/keywords/static.md)类或非静态类中的静态变量，必须定义静态构造函数。 有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+# <a name="instance-constructors-c-programming-guide"></a><span data-ttu-id="06f77-102">实例构造函数（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="06f77-102">Instance Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="06f77-103">使用 [new](../../../csharp/language-reference/keywords/new.md) 表达式创建[类](../../../csharp/language-reference/keywords/class.md)的对象时，实例构造函数可用于创建和初始化任意实例成员变量。</span><span class="sxs-lookup"><span data-stu-id="06f77-103">Instance constructors are used to create and initialize any instance member variables when you use the [new](../../../csharp/language-reference/keywords/new.md) expression to create an object of a [class](../../../csharp/language-reference/keywords/class.md).</span></span> <span data-ttu-id="06f77-104">若要初始化[静态](../../../csharp/language-reference/keywords/static.md)类或非静态类中的静态变量，必须定义静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="06f77-104">To initialize a [static](../../../csharp/language-reference/keywords/static.md) class, or static variables in a non-static class, you must define a static constructor.</span></span> <span data-ttu-id="06f77-105">有关详细信息，请参阅[静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="06f77-105">For more information, see [Static Constructors](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span></span>  
   
- 下面的示例演示了实例构造函数：  
+ <span data-ttu-id="06f77-106">下面的示例演示了实例构造函数：</span><span class="sxs-lookup"><span data-stu-id="06f77-106">The following example shows an instance constructor:</span></span>  
   
- [!code-cs[csProgGuideObjects#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_1.cs)]  
+ <span data-ttu-id="06f77-107">[!code-cs[csProgGuideObjects#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-107">[!code-cs[csProgGuideObjects#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_1.cs)]</span></span>  
   
 > [!NOTE]
->  为清楚起见，此类包含公共字段。 建议在编程时不要使用公共字段，因为这种做法会使程序中任何位置的任何方法都可以不受限制、不经验证地访问对象的内部组件。 数据成员通常应当为私有的，并且只应通过类方法和属性来访问。  
+>  <span data-ttu-id="06f77-108">为清楚起见，此类包含公共字段。</span><span class="sxs-lookup"><span data-stu-id="06f77-108">For clarity, this class contains public fields.</span></span> <span data-ttu-id="06f77-109">建议在编程时不要使用公共字段，因为这种做法会使程序中任何位置的任何方法都可以不受限制、不经验证地访问对象的内部组件。</span><span class="sxs-lookup"><span data-stu-id="06f77-109">The use of public fields is not a recommended programming practice because it allows any method anywhere in a program unrestricted and unverified access to an object's inner workings.</span></span> <span data-ttu-id="06f77-110">数据成员通常应当为私有的，并且只应通过类方法和属性来访问。</span><span class="sxs-lookup"><span data-stu-id="06f77-110">Data members should generally be private, and should be accessed only through class methods and properties.</span></span>  
   
- 只要创建基于 `CoOrds` 类的对象，就会调用此实例构造函数。 诸如此类不带参数的构造函数称为“默认构造函数”。 然而，提供其他构造函数通常十分有用。 例如，可以将构造函数添加到 `CoOrds` 类，以便可以为数据成员指定初始值：  
+ <span data-ttu-id="06f77-111">只要创建基于 `CoOrds` 类的对象，就会调用此实例构造函数。</span><span class="sxs-lookup"><span data-stu-id="06f77-111">This instance constructor is called whenever an object based on the `CoOrds` class is created.</span></span> <span data-ttu-id="06f77-112">诸如此类不带参数的构造函数称为“默认构造函数”。</span><span class="sxs-lookup"><span data-stu-id="06f77-112">A constructor like this one, which takes no arguments, is called a *default constructor*.</span></span> <span data-ttu-id="06f77-113">然而，提供其他构造函数通常十分有用。</span><span class="sxs-lookup"><span data-stu-id="06f77-113">However, it is often useful to provide additional constructors.</span></span> <span data-ttu-id="06f77-114">例如，可以将构造函数添加到 `CoOrds` 类，以便可以为数据成员指定初始值：</span><span class="sxs-lookup"><span data-stu-id="06f77-114">For example, we can add a constructor to the `CoOrds` class that allows us to specify the initial values for the data members:</span></span>  
   
- [!code-cs[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]  
+ <span data-ttu-id="06f77-115">[!code-cs[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-115">[!code-cs[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]</span></span>  
   
- 这样便可以用默认或特定的初始值创建 `CoOrd` 对象，如下所示：  
+ <span data-ttu-id="06f77-116">这样便可以用默认或特定的初始值创建 `CoOrd` 对象，如下所示：</span><span class="sxs-lookup"><span data-stu-id="06f77-116">This allows `CoOrd` objects to be created with default or specific initial values, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]  
+ <span data-ttu-id="06f77-117">[!code-cs[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-117">[!code-cs[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]</span></span>  
   
- 如果某个类没有构造函数，则会自动生成一个默认构造函数，并使用默认值来初始化对象字段。 例如，[int](../../../csharp/language-reference/keywords/int.md) 初始化为 0。 有关默认值的详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。 由于 `CoOrds` 类的默认构造函数将所有数据成员都初始化为零，因此可以将它完全移除，而不会更改类的工作方式。 本主题稍后部分的示例 1 中提供了使用多个构造函数的完整示例，示例 2 中提供了自动生成的构造函数的示例。  
+ <span data-ttu-id="06f77-118">如果某个类没有构造函数，则会自动生成一个默认构造函数，并使用默认值来初始化对象字段。</span><span class="sxs-lookup"><span data-stu-id="06f77-118">If a class does not have a constructor, a default constructor is automatically generated and default values are used to initialize the object fields.</span></span> <span data-ttu-id="06f77-119">例如，[int](../../../csharp/language-reference/keywords/int.md) 初始化为 0。</span><span class="sxs-lookup"><span data-stu-id="06f77-119">For example, an [int](../../../csharp/language-reference/keywords/int.md) is initialized to 0.</span></span> <span data-ttu-id="06f77-120">有关默认值的详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。</span><span class="sxs-lookup"><span data-stu-id="06f77-120">For more information on default values, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> <span data-ttu-id="06f77-121">由于 `CoOrds` 类的默认构造函数将所有数据成员都初始化为零，因此可以将它完全移除，而不会更改类的工作方式。</span><span class="sxs-lookup"><span data-stu-id="06f77-121">Therefore, because the `CoOrds` class default constructor initializes all data members to zero, it can be removed altogether without changing how the class works.</span></span> <span data-ttu-id="06f77-122">本主题稍后部分的示例 1 中提供了使用多个构造函数的完整示例，示例 2 中提供了自动生成的构造函数的示例。</span><span class="sxs-lookup"><span data-stu-id="06f77-122">A complete example using multiple constructors is provided in Example 1 later in this topic, and an example of an automatically generated constructor is provided in Example 2.</span></span>  
   
- 也可以用实例构造函数来调用基类的实例构造函数。 类构造函数可通过初始值设定项来调用基类的构造函数，如下所示：  
+ <span data-ttu-id="06f77-123">也可以用实例构造函数来调用基类的实例构造函数。</span><span class="sxs-lookup"><span data-stu-id="06f77-123">Instance constructors can also be used to call the instance constructors of base classes.</span></span> <span data-ttu-id="06f77-124">类构造函数可通过初始值设定项来调用基类的构造函数，如下所示：</span><span class="sxs-lookup"><span data-stu-id="06f77-124">The class constructor can invoke the constructor of the base class through the initializer, as follows:</span></span>  
   
- [!code-cs[csProgGuideObjects#78](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_4.cs)]  
+ <span data-ttu-id="06f77-125">[!code-cs[csProgGuideObjects#78](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-125">[!code-cs[csProgGuideObjects#78](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_4.cs)]</span></span>  
   
- 在此示例中，`Circle` 类将半径和高度的值传递给 `Shape`（`Circle` 从它派生而来）提供的构造函数。 使用 `Shape` 和 `Circle` 的完整示例完整示例请见本主题中的示例 3。  
+ <span data-ttu-id="06f77-126">在此示例中，`Circle` 类将半径和高度的值传递给 `Shape`（`Circle` 从它派生而来）提供的构造函数。</span><span class="sxs-lookup"><span data-stu-id="06f77-126">In this example, the `Circle` class passes values representing radius and height to the constructor provided by `Shape` from which `Circle` is derived.</span></span> <span data-ttu-id="06f77-127">使用 `Shape` 和 `Circle` 的完整示例完整示例请见本主题中的示例 3。</span><span class="sxs-lookup"><span data-stu-id="06f77-127">A complete example using `Shape` and `Circle` appears in this topic as Example 3.</span></span>  
   
-## <a name="example-1"></a>示例 1  
- 下面的示例说明包含两个类构造函数的类：一个类构造函数不带参数，另一个带有两个参数。  
+## <a name="example-1"></a><span data-ttu-id="06f77-128">示例 1</span><span class="sxs-lookup"><span data-stu-id="06f77-128">Example 1</span></span>  
+ <span data-ttu-id="06f77-129">下面的示例说明包含两个类构造函数的类：一个类构造函数不带参数，另一个带有两个参数。</span><span class="sxs-lookup"><span data-stu-id="06f77-129">The following example demonstrates a class with two class constructors, one without arguments and one with two arguments.</span></span>  
   
- [!code-cs[csProgGuideObjects#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_5.cs)]  
+ <span data-ttu-id="06f77-130">[!code-cs[csProgGuideObjects#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-130">[!code-cs[csProgGuideObjects#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_5.cs)]</span></span>  
   
-## <a name="example-2"></a>示例 2  
- 在此示例中，`Person` 没有任何构造函数；在这种情况下，将自动提供默认构造函数，同时将字段初始化为它们的默认值。  
+## <a name="example-2"></a><span data-ttu-id="06f77-131">示例 2</span><span class="sxs-lookup"><span data-stu-id="06f77-131">Example 2</span></span>  
+ <span data-ttu-id="06f77-132">在此示例中，`Person` 没有任何构造函数；在这种情况下，将自动提供默认构造函数，同时将字段初始化为它们的默认值。</span><span class="sxs-lookup"><span data-stu-id="06f77-132">In this example, the class `Person` does not have any constructors, in which case, a default constructor is automatically provided and the fields are initialized to their default values.</span></span>  
   
- [!code-cs[csProgGuideObjects#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_6.cs)]  
+ <span data-ttu-id="06f77-133">[!code-cs[csProgGuideObjects#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-133">[!code-cs[csProgGuideObjects#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_6.cs)]</span></span>  
   
- 请注意，`age` 的默认值为 `0`，`name` 的默认值为`null`。 有关默认值的详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。  
+ <span data-ttu-id="06f77-134">请注意，`age` 的默认值为 `0`，`name` 的默认值为`null`。</span><span class="sxs-lookup"><span data-stu-id="06f77-134">Notice that the default value of `age` is `0` and the default value of `name` is `null`.</span></span> <span data-ttu-id="06f77-135">有关默认值的详细信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。</span><span class="sxs-lookup"><span data-stu-id="06f77-135">For more information on default values, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
   
-## <a name="example-3"></a>示例 3  
- 下面的示例说明使用基类初始值设定项。 `Circle` 类派生自常规类 `Shape`，`Cylinder` 类派生自 `Circle` 类。 每个派生类的构造函数都使用其基类的初始值设定项。  
+## <a name="example-3"></a><span data-ttu-id="06f77-136">示例 3</span><span class="sxs-lookup"><span data-stu-id="06f77-136">Example 3</span></span>  
+ <span data-ttu-id="06f77-137">下面的示例说明使用基类初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="06f77-137">The following example demonstrates using the base class initializer.</span></span> <span data-ttu-id="06f77-138">`Circle` 类派生自常规类 `Shape`，`Cylinder` 类派生自 `Circle` 类。</span><span class="sxs-lookup"><span data-stu-id="06f77-138">The `Circle` class is derived from the general class `Shape`, and the `Cylinder` class is derived from the `Circle` class.</span></span> <span data-ttu-id="06f77-139">每个派生类的构造函数都使用其基类的初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="06f77-139">The constructor on each derived class is using its base class initializer.</span></span>  
   
- [!code-cs[csProgGuideObjects#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_7.cs)]  
+ <span data-ttu-id="06f77-140">[!code-cs[csProgGuideObjects#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="06f77-140">[!code-cs[csProgGuideObjects#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_7.cs)]</span></span>  
   
- 有关调用基类构造函数的更多示例，请参阅 [virtual](../../../csharp/language-reference/keywords/virtual.md)、[override](../../../csharp/language-reference/keywords/override.md) 和 [base](../../../csharp/language-reference/keywords/base.md)。  
+ <span data-ttu-id="06f77-141">有关调用基类构造函数的更多示例，请参阅 [virtual](../../../csharp/language-reference/keywords/virtual.md)、[override](../../../csharp/language-reference/keywords/override.md) 和 [base](../../../csharp/language-reference/keywords/base.md)。</span><span class="sxs-lookup"><span data-stu-id="06f77-141">For more examples on invoking the base class constructors, see [virtual](../../../csharp/language-reference/keywords/virtual.md), [override](../../../csharp/language-reference/keywords/override.md), and [base](../../../csharp/language-reference/keywords/base.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [static](../../../csharp/language-reference/keywords/static.md)
+## <a name="see-also"></a><span data-ttu-id="06f77-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="06f77-142">See Also</span></span>  
+ <span data-ttu-id="06f77-143">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="06f77-143">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="06f77-144">[类和结构](../../../csharp/programming-guide/classes-and-structs/index.md) </span><span class="sxs-lookup"><span data-stu-id="06f77-144">[Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) </span></span>  
+ <span data-ttu-id="06f77-145">[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md) </span><span class="sxs-lookup"><span data-stu-id="06f77-145">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md) </span></span>  
+ <span data-ttu-id="06f77-146">[终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md) </span><span class="sxs-lookup"><span data-stu-id="06f77-146">[Finalizers](../../../csharp/programming-guide/classes-and-structs/destructors.md) </span></span>  
+ [<span data-ttu-id="06f77-147">static</span><span class="sxs-lookup"><span data-stu-id="06f77-147">static</span></span>](../../../csharp/language-reference/keywords/static.md)
 

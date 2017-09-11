@@ -1,33 +1,39 @@
 ---
-title: "应用程序开发中的 PNRP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "应用程序开发中的 PNRP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f20dd62b5b872b932639a10df1e1636798ba963
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 应用程序开发中的 PNRP
-在Windows vista中，网络连接应用程序通过简化的PNRP应用程序编程接口\(API\)可以访问名称、发布解析函数访问。  
+# <a name="pnrp-in-application-development"></a><span data-ttu-id="20402-102">应用程序开发中的 PNRP</span><span class="sxs-lookup"><span data-stu-id="20402-102">PNRP in Application Development</span></span>
+<span data-ttu-id="20402-103">Windows Vista 中，网络应用程序可以通过简化的 PNRP 应用程序编程接口 (API) 访问名称发布和解析函数。</span><span class="sxs-lookup"><span data-stu-id="20402-103">In Windows Vista, networking applications can access name publication and resolution functions through a simplified PNRP application programming interface (API).</span></span>  
   
-## 实现对等类名称解析协议  
- 简化的PNRP API，云未显式指定注册名称和地址;PNRP元素自动确定适当云连接和地址发布在云中。  
+## <a name="implementing-the-peer-name-resolution-protocol"></a><span data-ttu-id="20402-104">执行对等名称解析协议</span><span class="sxs-lookup"><span data-stu-id="20402-104">Implementing the Peer Name Resolution Protocol</span></span>  
+ <span data-ttu-id="20402-105">借助简化的 PNRP API，无需显式指定云注册名称和地址，PNRP 组件自动决定要加入的合适的云以及要在云中发布的地址。</span><span class="sxs-lookup"><span data-stu-id="20402-105">With the simplified PNRP API, clouds are not explicitly specified to register the name and addresses; the PNRP component automatically determines the appropriate clouds to join and the addresses to publish within the clouds.</span></span>  
   
- 对于Windows vista的高度简化的PNRP名称转换， PNRP名称现在集成getaddrinfo\(\) Windows套接字功能。  若要使用PNRP解决名称到 IPv6 地址，应用程序可以使用 getaddrinfo\(\)函数解析为完全限定域名\(FQDN\) name.prnp。  net，名称是对等类的名字。  pnrp。  net字段是在Windows vista中保留字段PNRP名称转换。  
+ <span data-ttu-id="20402-106">对于 Windows Vista 中高度简化的 PNRP 名称解析, PNRP 名称现已集成到 getaddrinfo() Windows 套接字函数。</span><span class="sxs-lookup"><span data-stu-id="20402-106">For highly simplified PNRP name resolution in Windows Vista, PNRP names are now integrated into the getaddrinfo() Windows Sockets function.</span></span> <span data-ttu-id="20402-107">若要使用 PNRP 将名称解析为 IPv6 地址，应用程序可以使用 getaddrinfo() 函数解析完全限定的域名 (FQDN) name.prnp.net，其中名称是正在解析的对等名称。</span><span class="sxs-lookup"><span data-stu-id="20402-107">To use PNRP to resolve a name to an IPv6 address, applications can use the getaddrinfo() function to resolve the Fully Qualified Domain Name (FQDN) name.prnp.net, in which name is peer name being resolved.</span></span> <span data-ttu-id="20402-108">pnrp.net 域是 Windows Vista 中保留用于 PNRP 名称解析的域。</span><span class="sxs-lookup"><span data-stu-id="20402-108">The pnrp.net domain is a reserved domain in Windows Vista for PNRP name resolution.</span></span>  
   
- 通过在对应用程序之间的消息由基础结构仍在处理例如PeerChannel和WCF [用数据和流](http://go.microsoft.com/fwlink/?LinkID=179652)。  
+ <span data-ttu-id="20402-109">PeerToPeer 应用程序之间传递的消息仍由基础体系结构处理，例如 PeerChannel 和 WCF [大型数据和流](http://go.microsoft.com/fwlink/?LinkID=179652)。</span><span class="sxs-lookup"><span data-stu-id="20402-109">Message passing between PeerToPeer applications is still handled by underlying architectures such as PeerChannel and WCF [Large Data and Streaming](http://go.microsoft.com/fwlink/?LinkID=179652).</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="20402-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20402-110">See Also</span></span>  
  <xref:System.Net.PeerToPeer>
+

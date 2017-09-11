@@ -45,22 +45,22 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何：为 Visual Studio 命令行设置环境变量
-vsvars32.bat 文件设置适当的环境变量以启用命令行生成。 有关 vsvars32.bat 的详细信息，请参阅[知识库文章 Q248802](http://go.microsoft.com/fwlink/?LinkId=225042)。  
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="f227e-102">如何：为 Visual Studio 命令行设置环境变量</span><span class="sxs-lookup"><span data-stu-id="f227e-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
+<span data-ttu-id="f227e-103">vsvars32.bat 文件设置适当的环境变量以启用命令行生成。</span><span class="sxs-lookup"><span data-stu-id="f227e-103">The vsvars32.bat file sets the appropriate environment variables to enable command-line builds.</span></span> <span data-ttu-id="f227e-104">有关 vsvars32.bat 的详细信息，请参阅[知识库文章 Q248802](http://go.microsoft.com/fwlink/?LinkId=225042)。</span><span class="sxs-lookup"><span data-stu-id="f227e-104">For more information about vsvars32.bat, see [Knowledge Base article Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).</span></span>  
   
- 如果安装了当前版本 Visual Studio 的计算机上也安装了 Visual Studio 的早期版本，则你不应该在同一命令提示符窗口中运行不同版本的 vsvars32.bat 或 vcvars32.bat。  
+ <span data-ttu-id="f227e-105">如果安装了当前版本 Visual Studio 的计算机上也安装了 Visual Studio 的早期版本，则你不应该在同一命令提示符窗口中运行不同版本的 vsvars32.bat 或 vcvars32.bat。</span><span class="sxs-lookup"><span data-stu-id="f227e-105">If the current version of Visual Studio is installed on a computer that also has an earlier version of Visual Studio, you should not run vsvars32.bat or vcvars32.bat from different versions in the same Command Prompt window.</span></span>  
   
-### <a name="to-run-vsvars32bat"></a>若要运行 VSVARS32.BAT  
+### <a name="to-run-vsvars32bat"></a><span data-ttu-id="f227e-106">若要运行 VSVARS32.BAT</span><span class="sxs-lookup"><span data-stu-id="f227e-106">To run VSVARS32.BAT</span></span>  
   
-1.  从“开始”菜单，打开“VS2012 开发者命令提示”。  
+1.  <span data-ttu-id="f227e-107">从“开始”菜单，打开“VS2012 开发者命令提示”。</span><span class="sxs-lookup"><span data-stu-id="f227e-107">From the **Start** menu, open the **Developer Command Prompt for VS2012**.</span></span>  
   
-2.  更改为安装目录的 Program Files\Microsoft Visual Studio *Version*\Common7\Tools 或 Program Files (x86)\Microsoft Visual Studio *Version*\Common7\Tools 子目录。  
+2.  <span data-ttu-id="f227e-108">更改为安装目录的 Program Files\Microsoft Visual Studio *Version*\Common7\Tools 或 Program Files (x86)\Microsoft Visual Studio *Version*\Common7\Tools 子目录。</span><span class="sxs-lookup"><span data-stu-id="f227e-108">Change to the Program Files\Microsoft Visual Studio *Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio *Version*\Common7\Tools subdirectory of your installation.</span></span>  
   
-3.  通过键入 VSVARS32 运行 **VSVARS32.bat**。  
+3.  <span data-ttu-id="f227e-109">通过键入 VSVARS32 运行 **VSVARS32.bat**。</span><span class="sxs-lookup"><span data-stu-id="f227e-109">Run VSVARS32.bat by typing **VSVARS32**.</span></span>  
   
     > [!CAUTION]
-    >  VSVARS32.bat 在各个计算机间可能大不相同。 不要使用另一台计算机中的 VSVARS32.bat 替换丢失或损坏的 VSVARS32.bat 文件。 而是应重新运行安装程序以替换丢失的文件。  
+    >  <span data-ttu-id="f227e-110">VSVARS32.bat 在各个计算机间可能大不相同。</span><span class="sxs-lookup"><span data-stu-id="f227e-110">VSVARS32.bat can vary from computer to computer.</span></span> <span data-ttu-id="f227e-111">不要使用另一台计算机中的 VSVARS32.bat 替换丢失或损坏的 VSVARS32.bat 文件。</span><span class="sxs-lookup"><span data-stu-id="f227e-111">Do not replace a missing or damaged VSVARS32.bat file with a VSVARS32.bat from another computer.</span></span> <span data-ttu-id="f227e-112">而是应重新运行安装程序以替换丢失的文件。</span><span class="sxs-lookup"><span data-stu-id="f227e-112">Instead, rerun setup to replace the missing file.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="f227e-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f227e-113">See Also</span></span>  
+ [<span data-ttu-id="f227e-114">在命令行上使用 csc.exe 生成</span><span class="sxs-lookup"><span data-stu-id="f227e-114">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 

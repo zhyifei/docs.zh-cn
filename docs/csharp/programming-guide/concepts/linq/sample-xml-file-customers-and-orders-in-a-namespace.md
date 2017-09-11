@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>示例 XML 文件：命名空间中的客户和订单
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件包含客户和订单。 该 XML 在某个命名空间中。  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="9d2d7-102">示例 XML 文件：命名空间中的客户和订单</span><span class="sxs-lookup"><span data-stu-id="9d2d7-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="9d2d7-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="9d2d7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="9d2d7-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="9d2d7-104">This file contains customers and orders.</span></span> <span data-ttu-id="9d2d7-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="9d2d7-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="9d2d7-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="9d2d7-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -447,6 +447,6 @@ ms.lasthandoff: 07/28/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9d2d7-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="9d2d7-107">See Also</span></span>  
+ [<span data-ttu-id="9d2d7-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9d2d7-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

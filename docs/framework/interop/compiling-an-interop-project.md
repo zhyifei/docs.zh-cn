@@ -1,57 +1,63 @@
 ---
-title: "编译互操作项目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, 编译"
-  - "COM 互操作, 公开 COM 组件"
-  - "编译互操作项目"
-  - "向 .NET Framework 公开 COM 组件"
-  - "与非托管代码间的互操作, 编译"
-  - "与非托管代码间的互操作, 公开 COM 组件"
+title: "编译互操作项目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, compiling
+- COM interop, compiling
+- exposing COM components to .NET Framework
+- compiling interop projects
+- interoperation with unmanaged code, exposing COM components
+- COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9851366aeb485f056f801251a488d6e8399bf5a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 编译互操作项目
-如果 COM 互操作 项目引用一个或多个包含导入 COM 类型的程序集，则可以像其他任何托管项目一样进行编译。  您可以在诸如 Visual Studio 的开发环境中引用互操作程序集，也可以在使用命令行编译器时引用互操作程序集。  在这两种情况下，若要正确地进行编译，互操作程序集必须与其他项目文件位于同一个目录中。  
+# <a name="compiling-an-interop-project"></a><span data-ttu-id="33d42-102">编译互操作项目</span><span class="sxs-lookup"><span data-stu-id="33d42-102">Compiling an Interop Project</span></span>
+<span data-ttu-id="33d42-103">如果 COM 互操作项目引用一个或多个包含导入 COM 类型的程序集，则可以像其他任何托管项目一样进行编译。</span><span class="sxs-lookup"><span data-stu-id="33d42-103">COM interop projects that reference one or more assemblies containing imported COM types are compiled like any other managed project.</span></span> <span data-ttu-id="33d42-104">可以在 Visual Studio 等开发环境中或使用命令行编译器时引用互操作程序集。</span><span class="sxs-lookup"><span data-stu-id="33d42-104">You can reference interop assemblies in a development environment such as Visual Studio, or you can reference them when you use a command-line compiler.</span></span> <span data-ttu-id="33d42-105">无论哪种情况，若要正确编译，互操作程序集必须与其他项目文件位于同一个目录中。</span><span class="sxs-lookup"><span data-stu-id="33d42-105">In either case, to compile properly, the interop assembly must be in the same directory as the other project files.</span></span>  
   
- 可以通过以下两种方式引用互操作程序集：  
+ <span data-ttu-id="33d42-106">可以通过以下两种方式引用互操作程序集：</span><span class="sxs-lookup"><span data-stu-id="33d42-106">There are two ways to reference interop assemblies:</span></span>  
   
--   嵌入互操作类型：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]和 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 开始，您可以指示编译器将互操作程序集中的类型信息嵌入到可执行文件中。  这是推荐采用的方法。  
+-   <span data-ttu-id="33d42-107">嵌入互操作类型：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 和 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 开始，可以指示编译器将类型信息从互操作程序集嵌入到可执行文件中。</span><span class="sxs-lookup"><span data-stu-id="33d42-107">Embedded interop types: Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] and [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], you can instruct the compiler to embed type information from an interop assembly into your executable.</span></span> <span data-ttu-id="33d42-108">这是推荐采用的方法。</span><span class="sxs-lookup"><span data-stu-id="33d42-108">This is the recommended technique.</span></span>  
   
--   部署互操作程序集：您可以创建一个对互操作程序集的标准引用。  在本例中，互操作程序集必须与您的应用程序一起部署。  
+-   <span data-ttu-id="33d42-109">部署互操作程序集：创建对互操作程序集的标准引用。</span><span class="sxs-lookup"><span data-stu-id="33d42-109">Deploying interop assemblies: You can create a standard reference to an interop assembly.</span></span> <span data-ttu-id="33d42-110">这种情况下，互操作程序集必须与应用程序一起部署。</span><span class="sxs-lookup"><span data-stu-id="33d42-110">In this case, the interop assembly must be deployed with your application.</span></span>  
   
- 这两项技术之间的差异在[Using COM Types in Managed Code](http://msdn.microsoft.com/zh-cn/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)中有更详细的讨论。  
+ <span data-ttu-id="33d42-111">这两种方法之间的差异在[在托管代码中使用 COM 类型 ](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)中有更详细的讨论。</span><span class="sxs-lookup"><span data-stu-id="33d42-111">The differences between these two techniques are discussed in greater detail in [Using COM Types in Managed Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).</span></span>  
   
- [演练：嵌入 Microsoft Office 程序集中的类型信息](../Topic/Walkthrough:%20Embedding%20Type%20Information%20from%20Microsoft%20Office%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)和[演练：嵌入托管程序集中的类型](../Topic/Walkthrough:%20Embedding%20Types%20from%20Managed%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)中演示了如何通过 Visual Studio 嵌入互操作类型。  
+ <span data-ttu-id="33d42-112">[演练：嵌入 Microsoft Office 程序集中的类型信息](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)和[演练：嵌入托管程序集中的类型 ](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)中演示了如何通过 Visual Studio 嵌入互操作类型。</span><span class="sxs-lookup"><span data-stu-id="33d42-112">Embedding interop types with Visual Studio is demonstrated in [Walkthrough: Embedding Type Information from Microsoft Office Assemblies](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) and [Walkthrough: Embedding Types from Managed Assemblies](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).</span></span>  
   
- 若要使用命令行编译器引用互操作程序集并将类型信息嵌入到可执行文件中，请使用 [\/link \(Link to COM Assembly\)](../Topic/-link%20\(C%23%20Compiler%20Options\).md)或 [\/link](../Topic/-link%20\(Visual%20Basic\).md) 编译器开关并指定互操作程序集的名称。  
+ <span data-ttu-id="33d42-113">若要使用命令行编译器引用互操作程序集，并将类型信息嵌入可执行文件中，请使用 [/link（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md)或 [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) 编译器开关并指定互操作程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="33d42-113">To reference an interop assembly with a command-line compiler and embed type information in your executables, use the [/link (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) or the [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) compiler switch and specify the name of the interop assembly.</span></span>  
   
 > [!NOTE]
->  虽然 Visual C\+\+ 应用程序无法嵌入类型信息，但是这些应用程序可以与执行嵌入操作的应用程序或外接程序进行交互操作。  
+>  <span data-ttu-id="33d42-114">Visual C++ 应用程序无法嵌入类型信息，但它们可以与应用程序或加载项进行互操作。</span><span class="sxs-lookup"><span data-stu-id="33d42-114">Visual C++ applications cannot embed type information, but they can interoperate with applications or add-ins that do.</span></span>  
   
- 若要编译在部署时包括主互操作程序集的应用程序，请使用 **\/reference** 编译器开关并指定互操作程序集的名称。  
+ <span data-ttu-id="33d42-115">若要编译部署时包括主互操作程序集的应用程序，请使用“/reference”编译器开关并指定互操作程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="33d42-115">To compile an application that includes a primary interop assembly when it is deployed, use the **/reference** compiler switch and specify the name of the interop assembly.</span></span>  
   
-## 请参阅  
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)   
- [语言独立性和与语言无关的组件](../../../docs/standard/language-independence-and-language-independent-components.md)   
- [Using COM Types in Managed Code](http://msdn.microsoft.com/zh-cn/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [演练：嵌入 Microsoft Office 程序集中的类型信息](../Topic/Walkthrough:%20Embedding%20Type%20Information%20from%20Microsoft%20Office%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [演练：嵌入托管程序集中的类型](../Topic/Walkthrough:%20Embedding%20Types%20from%20Managed%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)   
- [将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+## <a name="see-also"></a><span data-ttu-id="33d42-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="33d42-116">See Also</span></span>  
+ <span data-ttu-id="33d42-117">[向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md) </span><span class="sxs-lookup"><span data-stu-id="33d42-117">[Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md) </span></span>  
+ <span data-ttu-id="33d42-118">[语言独立性和与语言无关的组件](../../../docs/standard/language-independence-and-language-independent-components.md) </span><span class="sxs-lookup"><span data-stu-id="33d42-118">[Language Independence and Language-Independent Components](../../../docs/standard/language-independence-and-language-independent-components.md) </span></span>  
+ <span data-ttu-id="33d42-119">[在托管代码中使用 COM 类型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) </span><span class="sxs-lookup"><span data-stu-id="33d42-119">[Using COM Types in Managed Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) </span></span>  
+ <span data-ttu-id="33d42-120">[演练：嵌入 Microsoft Office 程序集中的类型信息](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) </span><span class="sxs-lookup"><span data-stu-id="33d42-120">[Walkthrough: Embedding Type Information from Microsoft Office Assemblies](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) </span></span>  
+ <span data-ttu-id="33d42-121">[演练：嵌入托管程序集中的类型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21) </span><span class="sxs-lookup"><span data-stu-id="33d42-121">[Walkthrough: Embedding Types from Managed Assemblies](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21) </span></span>  
+ [<span data-ttu-id="33d42-122">将类型库作为程序集导入</span><span class="sxs-lookup"><span data-stu-id="33d42-122">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+

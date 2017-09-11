@@ -26,21 +26,21 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="generation-operations-c"></a>生成运算 (C#)
-生成是指创建新的值序列。  
+# <a name="generation-operations-c"></a><span data-ttu-id="1713c-102">生成运算 (C#)</span><span class="sxs-lookup"><span data-stu-id="1713c-102">Generation Operations (C#)</span></span>
+<span data-ttu-id="1713c-103">生成是指创建新的值序列。</span><span class="sxs-lookup"><span data-stu-id="1713c-103">Generation refers to creating a new sequence of values.</span></span>  
   
- 下面一节列出了执行生成的标准查询运算符方法。  
+ <span data-ttu-id="1713c-104">下面一节列出了执行生成的标准查询运算符方法。</span><span class="sxs-lookup"><span data-stu-id="1713c-104">The standard query operator methods that perform generation are listed in the following section.</span></span>  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="1713c-105">方法</span><span class="sxs-lookup"><span data-stu-id="1713c-105">Methods</span></span>  
   
-|方法名|描述|C# 查询表达式语法|详细信息|  
+|<span data-ttu-id="1713c-106">方法名</span><span class="sxs-lookup"><span data-stu-id="1713c-106">Method Name</span></span>|<span data-ttu-id="1713c-107">描述</span><span class="sxs-lookup"><span data-stu-id="1713c-107">Description</span></span>|<span data-ttu-id="1713c-108">C# 查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="1713c-108">C# Query Expression Syntax</span></span>|<span data-ttu-id="1713c-109">详细信息</span><span class="sxs-lookup"><span data-stu-id="1713c-109">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|DefaultIfEmpty|用默认值单一实例集合替换空集合。|不适用。|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
-|空|返回一个空集合。|不适用。|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|范围|生成包含数字序列的集合。|不适用。|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Repeat|生成包含一个重复值的集合。|不适用。|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|<span data-ttu-id="1713c-110">DefaultIfEmpty</span><span class="sxs-lookup"><span data-stu-id="1713c-110">DefaultIfEmpty</span></span>|<span data-ttu-id="1713c-111">用默认值单一实例集合替换空集合。</span><span class="sxs-lookup"><span data-stu-id="1713c-111">Replaces an empty collection with a default valued singleton collection.</span></span>|<span data-ttu-id="1713c-112">不适用。</span><span class="sxs-lookup"><span data-stu-id="1713c-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
+|<span data-ttu-id="1713c-113">空</span><span class="sxs-lookup"><span data-stu-id="1713c-113">Empty</span></span>|<span data-ttu-id="1713c-114">返回一个空集合。</span><span class="sxs-lookup"><span data-stu-id="1713c-114">Returns an empty collection.</span></span>|<span data-ttu-id="1713c-115">不适用。</span><span class="sxs-lookup"><span data-stu-id="1713c-115">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
+|<span data-ttu-id="1713c-116">范围</span><span class="sxs-lookup"><span data-stu-id="1713c-116">Range</span></span>|<span data-ttu-id="1713c-117">生成包含数字序列的集合。</span><span class="sxs-lookup"><span data-stu-id="1713c-117">Generates a collection that contains a sequence of numbers.</span></span>|<span data-ttu-id="1713c-118">不适用。</span><span class="sxs-lookup"><span data-stu-id="1713c-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
+|<span data-ttu-id="1713c-119">Repeat</span><span class="sxs-lookup"><span data-stu-id="1713c-119">Repeat</span></span>|<span data-ttu-id="1713c-120">生成包含一个重复值的集合。</span><span class="sxs-lookup"><span data-stu-id="1713c-120">Generates a collection that contains one repeated value.</span></span>|<span data-ttu-id="1713c-121">不适用。</span><span class="sxs-lookup"><span data-stu-id="1713c-121">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Linq>   
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1713c-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1713c-122">See Also</span></span>  
+ <span data-ttu-id="1713c-123"><xref:System.Linq></span><span class="sxs-lookup"><span data-stu-id="1713c-123"><xref:System.Linq></span></span>   
+ [<span data-ttu-id="1713c-124">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="1713c-124">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 

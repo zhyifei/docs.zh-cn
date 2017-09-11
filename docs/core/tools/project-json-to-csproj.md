@@ -18,17 +18,17 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="4574f-104">project.json 和 csproj 属性之间的映射</span><span class="sxs-lookup"><span data-stu-id="4574f-104">A mapping between project.json and csproj properties</span></span>
 
-作者 [Nate McMaster](https://github.com/natemcmaster)
+<span data-ttu-id="4574f-105">作者 [Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="4574f-105">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
 
-.NET Core 工具的开发过程中实施了一项重要的设计更改，即不再支持 *project.json* 文件，而是将 .NET Core 项目转移到 MSBuild/csproj 格式。
+<span data-ttu-id="4574f-106">.NET Core 工具的开发过程中实施了一项重要的设计更改，即不再支持 *project.json* 文件，而是将 .NET Core 项目转移到 MSBuild/csproj 格式。</span><span class="sxs-lookup"><span data-stu-id="4574f-106">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
 
-本文介绍 *project.json* 中的设置如何以 MSBuild/csproj 格式表示，以便用户可学习如何使用新格式，并了解将项目升级到最新版本的工具时由迁移工具做出的更改。 
+<span data-ttu-id="4574f-107">本文介绍 *project.json* 中的设置如何以 MSBuild/csproj 格式表示，以便用户可学习如何使用新格式，并了解将项目升级到最新版本的工具时由迁移工具做出的更改。</span><span class="sxs-lookup"><span data-stu-id="4574f-107">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span> 
  
-## <a name="the-csproj-format"></a>csproj 格式
+## <a name="the-csproj-format"></a><span data-ttu-id="4574f-108">csproj 格式</span><span class="sxs-lookup"><span data-stu-id="4574f-108">The csproj format</span></span>
 
-新格式 \*.csproj 是一种基于 XML 的格式。 以下示例演示使用 `Microsoft.NET.Sdk` 的 .NET Core 项目的根节点。 对于 Web 项目，所使用的 SDK 是 `Microsoft.NET.Sdk.Web`。
+<span data-ttu-id="4574f-109">新格式 \*.csproj 是一种基于 XML 的格式。</span><span class="sxs-lookup"><span data-stu-id="4574f-109">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="4574f-110">以下示例演示使用 `Microsoft.NET.Sdk` 的 .NET Core 项目的根节点。</span><span class="sxs-lookup"><span data-stu-id="4574f-110">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="4574f-111">对于 Web 项目，所使用的 SDK 是 `Microsoft.NET.Sdk.Web`。</span><span class="sxs-lookup"><span data-stu-id="4574f-111">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -36,18 +36,18 @@ ms.lasthandoff: 07/28/2017
 </Project>
 ```
 
-## <a name="common-top-level-properties"></a>常见顶级属性
+## <a name="common-top-level-properties"></a><span data-ttu-id="4574f-112">常见顶级属性</span><span class="sxs-lookup"><span data-stu-id="4574f-112">Common top-level properties</span></span>
 
-### <a name="name"></a>name
+### <a name="name"></a><span data-ttu-id="4574f-113">name</span><span class="sxs-lookup"><span data-stu-id="4574f-113">name</span></span>
 ```json
 {
   "name": "MyProjectName"
 }
 ```
 
-不再支持。 在 csproj 中，这取决于项目文件名（由目录名称定义）。 例如 `MyProjectName.csproj`。
+<span data-ttu-id="4574f-114">不再支持。</span><span class="sxs-lookup"><span data-stu-id="4574f-114">No longer supported.</span></span> <span data-ttu-id="4574f-115">在 csproj 中，这取决于项目文件名（由目录名称定义）。</span><span class="sxs-lookup"><span data-stu-id="4574f-115">In csproj, this is determined by the project filename, which is defined by the directory name.</span></span> <span data-ttu-id="4574f-116">例如 `MyProjectName.csproj`。</span><span class="sxs-lookup"><span data-stu-id="4574f-116">For example, `MyProjectName.csproj`.</span></span>
 
-默认情况下，项目文件名还指定 `<AssemblyName>` 和 `<PackageId>` 属性的值。 
+<span data-ttu-id="4574f-117">默认情况下，项目文件名还指定 `<AssemblyName>` 和 `<PackageId>` 属性的值。</span><span class="sxs-lookup"><span data-stu-id="4574f-117">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span> 
 
 ```xml
 <PropertyGroup>
@@ -56,16 +56,16 @@ ms.lasthandoff: 07/28/2017
 </PropertyGroup>
 ```
 
-如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。 有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。
+<span data-ttu-id="4574f-118">如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。</span><span class="sxs-lookup"><span data-stu-id="4574f-118">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span> <span data-ttu-id="4574f-119">有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。</span><span class="sxs-lookup"><span data-stu-id="4574f-119">For more information, see [Other common build options](#other-common-build-options).</span></span>
 
-### <a name="version"></a>版本
+### <a name="version"></a><span data-ttu-id="4574f-120">版本</span><span class="sxs-lookup"><span data-stu-id="4574f-120">version</span></span>
 
 ```json
 {
   "version": "1.0.0-alpha-*"
 }
 ```
-使用 `VersionPrefix` 和 `VersionSuffix` 属性：
+<span data-ttu-id="4574f-121">使用 `VersionPrefix` 和 `VersionSuffix` 属性：</span><span class="sxs-lookup"><span data-stu-id="4574f-121">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -74,7 +74,7 @@ ms.lasthandoff: 07/28/2017
 </PropertyGroup>
 ```
 
-还可以使用 `Version` 属性，但这可能会在打包过程中替代版本设置：
+<span data-ttu-id="4574f-122">还可以使用 `Version` 属性，但这可能会在打包过程中替代版本设置：</span><span class="sxs-lookup"><span data-stu-id="4574f-122">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -82,7 +82,7 @@ ms.lasthandoff: 07/28/2017
 </PropertyGroup>
 ```
 
-### <a name="other-common-root-level-options"></a>其他常用根级别选项
+### <a name="other-common-root-level-options"></a><span data-ttu-id="4574f-123">其他常用根级别选项</span><span class="sxs-lookup"><span data-stu-id="4574f-123">Other common root-level options</span></span>
 
 ```json
 {
@@ -109,9 +109,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="frameworks"></a>框架
+## <a name="frameworks"></a><span data-ttu-id="4574f-124">框架</span><span class="sxs-lookup"><span data-stu-id="4574f-124">frameworks</span></span>
 
-### <a name="one-target-framework"></a>一个目标框架
+### <a name="one-target-framework"></a><span data-ttu-id="4574f-125">一个目标框架</span><span class="sxs-lookup"><span data-stu-id="4574f-125">One target framework</span></span>
 ```json
 {
   "frameworks": {
@@ -126,7 +126,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="multiple-target-frameworks"></a>多个目标框架
+### <a name="multiple-target-frameworks"></a><span data-ttu-id="4574f-126">多个目标框架</span><span class="sxs-lookup"><span data-stu-id="4574f-126">Multiple target frameworks</span></span>
 
 ```json
 {
@@ -137,7 +137,7 @@ And it's really great!</Description>
 }
 ```
 
-使用 `TargetFrameworks` 属性定义目标框架的列表。 使用分号来分隔多个框架值。 
+<span data-ttu-id="4574f-127">使用 `TargetFrameworks` 属性定义目标框架的列表。</span><span class="sxs-lookup"><span data-stu-id="4574f-127">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="4574f-128">使用分号来分隔多个框架值。</span><span class="sxs-lookup"><span data-stu-id="4574f-128">Use semi-colon to separate multiple framework values.</span></span> 
 
 ```xml
 <PropertyGroup>
@@ -145,12 +145,12 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a>依赖项
+## <a name="dependencies"></a><span data-ttu-id="4574f-129">依赖项</span><span class="sxs-lookup"><span data-stu-id="4574f-129">dependencies</span></span>
 
 > [!IMPORTANT]
-> 如果依赖项是一个**项目**而不是包，则格式不同。 有关详细信息，请参阅[依赖项类型](#dependency-type)部分。
+> <span data-ttu-id="4574f-130">如果依赖项是一个**项目**而不是包，则格式不同。</span><span class="sxs-lookup"><span data-stu-id="4574f-130">If the dependency is a **project** and not a package, the format is different.</span></span> <span data-ttu-id="4574f-131">有关详细信息，请参阅[依赖项类型](#dependency-type)部分。</span><span class="sxs-lookup"><span data-stu-id="4574f-131">For more information, see the [dependency type](#dependency-type) section.</span></span>
 
-### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library 元包
+### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="4574f-132">NETStandard.Library 元包</span><span class="sxs-lookup"><span data-stu-id="4574f-132">NETStandard.Library metapackage</span></span>
 
 ```json
 {
@@ -166,7 +166,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="microsoftnetcoreapp-metapackage"></a>Microsoft.NETCore.App 元包
+### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="4574f-133">Microsoft.NETCore.App 元包</span><span class="sxs-lookup"><span data-stu-id="4574f-133">Microsoft.NETCore.App metapackage</span></span>
 
 ```json
 {
@@ -182,9 +182,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-请注意，迁移项目中的 `<RuntimeFrameworkVersion>` 值由已安装的 SDK 版本确定。
+<span data-ttu-id="4574f-134">请注意，迁移项目中的 `<RuntimeFrameworkVersion>` 值由已安装的 SDK 版本确定。</span><span class="sxs-lookup"><span data-stu-id="4574f-134">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
 
-### <a name="top-level-dependencies"></a>顶级依赖项
+### <a name="top-level-dependencies"></a><span data-ttu-id="4574f-135">顶级依赖项</span><span class="sxs-lookup"><span data-stu-id="4574f-135">Top-level dependencies</span></span>
 ```json
 {
   "dependencies": {
@@ -199,7 +199,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="per-framework-dependencies"></a>依赖项（按框架）
+### <a name="per-framework-dependencies"></a><span data-ttu-id="4574f-136">依赖项（按框架）</span><span class="sxs-lookup"><span data-stu-id="4574f-136">Per-framework dependencies</span></span>
 ```json
 {
   "framework": {
@@ -227,7 +227,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="imports"></a>导入
+### <a name="imports"></a><span data-ttu-id="4574f-137">导入</span><span class="sxs-lookup"><span data-stu-id="4574f-137">imports</span></span>
 
 ```json
 {
@@ -254,9 +254,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="dependency-type"></a>依赖项类型
+### <a name="dependency-type"></a><span data-ttu-id="4574f-138">依赖项类型</span><span class="sxs-lookup"><span data-stu-id="4574f-138">dependency type</span></span>
 
-#### <a name="type-project"></a>类型：项目
+#### <a name="type-project"></a><span data-ttu-id="4574f-139">类型：项目</span><span class="sxs-lookup"><span data-stu-id="4574f-139">type: project</span></span>
 ```json
 {
   "dependencies": {
@@ -276,10 +276,10 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> 这将打破 `dotnet pack --version-suffix $suffix` 确定项目引用的依赖项版本的方式。
+> <span data-ttu-id="4574f-140">这将打破 `dotnet pack --version-suffix $suffix` 确定项目引用的依赖项版本的方式。</span><span class="sxs-lookup"><span data-stu-id="4574f-140">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
 
 
-#### <a name="type-build"></a>类型：生成
+#### <a name="type-build"></a><span data-ttu-id="4574f-141">类型：生成</span><span class="sxs-lookup"><span data-stu-id="4574f-141">type: build</span></span>
 ```json
 {
   "dependencies": {
@@ -297,7 +297,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-#### <a name="type-platform"></a>类型：平台
+#### <a name="type-platform"></a><span data-ttu-id="4574f-142">类型：平台</span><span class="sxs-lookup"><span data-stu-id="4574f-142">type: platform</span></span>
 ```json
 {
   "dependencies": {
@@ -309,9 +309,9 @@ And it's really great!</Description>
 }
 ```
 
-csproj 中没有等效项。 
+<span data-ttu-id="4574f-143">csproj 中没有等效项。</span><span class="sxs-lookup"><span data-stu-id="4574f-143">There is no equivalent in csproj.</span></span> 
 
-## <a name="runtimes"></a>runtimes
+## <a name="runtimes"></a><span data-ttu-id="4574f-144">runtimes</span><span class="sxs-lookup"><span data-stu-id="4574f-144">runtimes</span></span>
 ```json
 {
   "runtimes": {
@@ -328,15 +328,15 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-### <a name="standalone-apps-self-contained-deployment"></a>独立应用（独立部署）
-在 project.json 中，定义 `runtimes` 部分意味着应用在生成和发布期间独立。
-在 MSBuild 中，生成期间所有项目均*可移植*，但可发布为独立。
+### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="4574f-145">独立应用（独立部署）</span><span class="sxs-lookup"><span data-stu-id="4574f-145">Standalone apps (self-contained deployment)</span></span>
+<span data-ttu-id="4574f-146">在 project.json 中，定义 `runtimes` 部分意味着应用在生成和发布期间独立。</span><span class="sxs-lookup"><span data-stu-id="4574f-146">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
+<span data-ttu-id="4574f-147">在 MSBuild 中，生成期间所有项目均*可移植*，但可发布为独立。</span><span class="sxs-lookup"><span data-stu-id="4574f-147">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-有关详细信息，请参阅[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。
+<span data-ttu-id="4574f-148">有关详细信息，请参阅[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。</span><span class="sxs-lookup"><span data-stu-id="4574f-148">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span>
 
-## <a name="tools"></a>工具
+## <a name="tools"></a><span data-ttu-id="4574f-149">工具</span><span class="sxs-lookup"><span data-stu-id="4574f-149">tools</span></span>
 ```json
 {
   "tools": {
@@ -352,13 +352,13 @@ csproj 中没有等效项。
 ```
 
 > [!NOTE]
-> csproj 中不支持工具上的 `imports`。 需要导入的工具无法用于新的 `Microsoft.NET.Sdk`。
+> <span data-ttu-id="4574f-150">csproj 中不支持工具上的 `imports`。</span><span class="sxs-lookup"><span data-stu-id="4574f-150">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="4574f-151">需要导入的工具无法用于新的 `Microsoft.NET.Sdk`。</span><span class="sxs-lookup"><span data-stu-id="4574f-151">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
 
-## <a name="buildoptions"></a>buildOptions
+## <a name="buildoptions"></a><span data-ttu-id="4574f-152">buildOptions</span><span class="sxs-lookup"><span data-stu-id="4574f-152">buildOptions</span></span>
 
-另请参阅[文件](#files)。
+<span data-ttu-id="4574f-153">另请参阅[文件](#files)。</span><span class="sxs-lookup"><span data-stu-id="4574f-153">See also [Files](#files).</span></span>
 
-### <a name="emitentrypoint"></a>emitEntryPoint
+### <a name="emitentrypoint"></a><span data-ttu-id="4574f-154">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="4574f-154">emitEntryPoint</span></span>
 
 ```json
 {
@@ -374,7 +374,7 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-如果 `emitEntryPoint` 为 `false`，`OutputType` 的值会转换为 `Library`（这是默认值）：
+<span data-ttu-id="4574f-155">如果 `emitEntryPoint` 为 `false`，`OutputType` 的值会转换为 `Library`（这是默认值）：</span><span class="sxs-lookup"><span data-stu-id="4574f-155">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
 
 ```json
 {
@@ -391,7 +391,7 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-### <a name="keyfile"></a>keyFile
+### <a name="keyfile"></a><span data-ttu-id="4574f-156">keyFile</span><span class="sxs-lookup"><span data-stu-id="4574f-156">keyFile</span></span>
 
 ```json
 {
@@ -401,7 +401,7 @@ csproj 中没有等效项。
 }
 ```
 
-`keyFile` 元素在 MSBuild 中扩展为三个属性：
+<span data-ttu-id="4574f-157">`keyFile` 元素在 MSBuild 中扩展为三个属性：</span><span class="sxs-lookup"><span data-stu-id="4574f-157">The `keyFile` element expands to three properties in MSBuild:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -411,7 +411,7 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-### <a name="other-common-build-options"></a>其他常用生成选项
+### <a name="other-common-build-options"></a><span data-ttu-id="4574f-158">其他常用生成选项</span><span class="sxs-lookup"><span data-stu-id="4574f-158">Other common build options</span></span>
 
 ```json
 {
@@ -441,11 +441,11 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-## <a name="packoptions"></a>packOptions
+## <a name="packoptions"></a><span data-ttu-id="4574f-159">packOptions</span><span class="sxs-lookup"><span data-stu-id="4574f-159">packOptions</span></span>
 
-另请参阅[文件](#files)。
+<span data-ttu-id="4574f-160">另请参阅[文件](#files)。</span><span class="sxs-lookup"><span data-stu-id="4574f-160">See also [Files](#files).</span></span>
 
-### <a name="common-pack-options"></a>常用包选项
+### <a name="common-pack-options"></a><span data-ttu-id="4574f-161">常用包选项</span><span class="sxs-lookup"><span data-stu-id="4574f-161">Common pack options</span></span>
 
 ```json
 {
@@ -481,9 +481,9 @@ csproj 中没有等效项。
 </PropertyGroup>
 ```
 
-MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MSBuild `<Description>` 属性 - 即使 `summary` 的值未自动迁移到该属性，因为该属性已映射到 [`description`](#-other-common-root-level-options) 元素。
+<span data-ttu-id="4574f-162">MSBuild 中没有 `owners` 元素的等效项。</span><span class="sxs-lookup"><span data-stu-id="4574f-162">There is no equivalent for the `owners` element in MSBuild.</span></span> <span data-ttu-id="4574f-163">对于 `summary`，可使用 MSBuild `<Description>` 属性 - 即使 `summary` 的值未自动迁移到该属性，因为该属性已映射到 [`description`](#-other-common-root-level-options) 元素。</span><span class="sxs-lookup"><span data-stu-id="4574f-163">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#-other-common-root-level-options) element.</span></span>
 
-## <a name="scripts"></a>脚本
+## <a name="scripts"></a><span data-ttu-id="4574f-164">脚本</span><span class="sxs-lookup"><span data-stu-id="4574f-164">scripts</span></span>
 
 ```json
 {
@@ -494,7 +494,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 }
 ```
 
-它们在 MSBuild 中的等效项是[目标](/visualstudio/msbuild/msbuild-targets)：
+<span data-ttu-id="4574f-165">它们在 MSBuild 中的等效项是[目标](/visualstudio/msbuild/msbuild-targets)：</span><span class="sxs-lookup"><span data-stu-id="4574f-165">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -508,7 +508,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 ```
 
 
-## <a name="runtimeoptions"></a>runtimeOptions
+## <a name="runtimeoptions"></a><span data-ttu-id="4574f-166">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="4574f-166">runtimeOptions</span></span>
 
 ```json
 {
@@ -524,7 +524,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 }
 ```
 
-此组中除“System.GC.Server”属性以外的所有设置与迁移过程中提升为根对象的选项一并被置于项目文件夹中名为 *runtimeconfig.template.json* 的文件中：
+<span data-ttu-id="4574f-167">此组中除“System.GC.Server”属性以外的所有设置与迁移过程中提升为根对象的选项一并被置于项目文件夹中名为 *runtimeconfig.template.json* 的文件中：</span><span class="sxs-lookup"><span data-stu-id="4574f-167">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
 
 ```json
 {
@@ -537,14 +537,14 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 }
 ```
 
-已将“System.GC.Server”属性迁移到 csproj 文件：
+<span data-ttu-id="4574f-168">已将“System.GC.Server”属性迁移到 csproj 文件：</span><span class="sxs-lookup"><span data-stu-id="4574f-168">The "System.GC.Server" property is migrated into the csproj file:</span></span>
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
 </PropertyGroup>
 ```
 
-但可以在 csproj 以及 MSBuild 属性中设置所有这些值：
+<span data-ttu-id="4574f-169">但可以在 csproj 以及 MSBuild 属性中设置所有这些值：</span><span class="sxs-lookup"><span data-stu-id="4574f-169">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -555,19 +555,19 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>共享
+## <a name="shared"></a><span data-ttu-id="4574f-170">共享</span><span class="sxs-lookup"><span data-stu-id="4574f-170">shared</span></span>
 ```json
 {
   "shared": "shared/**/*.cs"
 }
 ```
 
-在 csproj 中不支持。 而必须在 *.nuspec* 文件中创建要包含的内容文件。 有关详细信息，请参阅[包含内容文件](/nuget/schema/nuspec#including-content-files)。
+<span data-ttu-id="4574f-171">在 csproj 中不支持。</span><span class="sxs-lookup"><span data-stu-id="4574f-171">Not supported in csproj.</span></span> <span data-ttu-id="4574f-172">而必须在 *.nuspec* 文件中创建要包含的内容文件。</span><span class="sxs-lookup"><span data-stu-id="4574f-172">You must instead create include content files in your *.nuspec* file.</span></span> <span data-ttu-id="4574f-173">有关详细信息，请参阅[包含内容文件](/nuget/schema/nuspec#including-content-files)。</span><span class="sxs-lookup"><span data-stu-id="4574f-173">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
 
-## <a name="files"></a>文件
+## <a name="files"></a><span data-ttu-id="4574f-174">文件</span><span class="sxs-lookup"><span data-stu-id="4574f-174">files</span></span>
 
-在 *project.json* 中，可将生成和打包操作扩展为从不同的文件夹进行编译和嵌入。
-在 MSBuild 中，使用[项](/visualstudio/msbuild/common-msbuild-project-items)实现此操作。 以下示例是一个常见转换：
+<span data-ttu-id="4574f-175">在 *project.json* 中，可将生成和打包操作扩展为从不同的文件夹进行编译和嵌入。</span><span class="sxs-lookup"><span data-stu-id="4574f-175">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
+<span data-ttu-id="4574f-176">在 MSBuild 中，使用[项](/visualstudio/msbuild/common-msbuild-project-items)实现此操作。</span><span class="sxs-lookup"><span data-stu-id="4574f-176">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="4574f-177">以下示例是一个常见转换：</span><span class="sxs-lookup"><span data-stu-id="4574f-177">The following example is a common conversion:</span></span>
 
 ```json
 {
@@ -613,20 +613,20 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 ```
 
 > [!NOTE]
-> 许多默认 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))由 .NET Core SDK 自动添加。
-> 有关更多信息，请参见[默认编译项值](https://aka.ms/sdkimplicititems)。
+> <span data-ttu-id="4574f-178">许多默认 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))由 .NET Core SDK 自动添加。</span><span class="sxs-lookup"><span data-stu-id="4574f-178">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
+> <span data-ttu-id="4574f-179">有关更多信息，请参见[默认编译项值](https://aka.ms/sdkimplicititems)。</span><span class="sxs-lookup"><span data-stu-id="4574f-179">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
 
-所有 MSBuild `ItemGroup` 元素都支持`Include`、`Exclude` 和 `Remove`。
+<span data-ttu-id="4574f-180">所有 MSBuild `ItemGroup` 元素都支持`Include`、`Exclude` 和 `Remove`。</span><span class="sxs-lookup"><span data-stu-id="4574f-180">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
 
-可使用 `PackagePath="path"` 修改 .nupkg 内的包布局。
+<span data-ttu-id="4574f-181">可使用 `PackagePath="path"` 修改 .nupkg 内的包布局。</span><span class="sxs-lookup"><span data-stu-id="4574f-181">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
 
-除 `Content` 外，大多数项组需要显式添加要包括在包中的 `Pack="true"`。 `Content` 将被置于包中的 *content* 文件夹，因为 `<IncludeContentInPack>` 属性默认设置为 `true`。 有关详细信息，请参阅[在包中包含内容](/nuget/schema/msbuild-targets#including-content-in-a-package)。
+<span data-ttu-id="4574f-182">除 `Content` 外，大多数项组需要显式添加要包括在包中的 `Pack="true"`。</span><span class="sxs-lookup"><span data-stu-id="4574f-182">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="4574f-183">`Content` 将被置于包中的 *content* 文件夹，因为 `<IncludeContentInPack>` 属性默认设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="4574f-183">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span> <span data-ttu-id="4574f-184">有关详细信息，请参阅[在包中包含内容](/nuget/schema/msbuild-targets#including-content-in-a-package)。</span><span class="sxs-lookup"><span data-stu-id="4574f-184">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
 
-`PackagePath="%(Identity)"` 是一种将包路径设置为项目相对文件路径的快捷方法。
+<span data-ttu-id="4574f-185">`PackagePath="%(Identity)"` 是一种将包路径设置为项目相对文件路径的快捷方法。</span><span class="sxs-lookup"><span data-stu-id="4574f-185">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
 
-## <a name="testrunner"></a>testRunner
+## <a name="testrunner"></a><span data-ttu-id="4574f-186">testRunner</span><span class="sxs-lookup"><span data-stu-id="4574f-186">testRunner</span></span>
 
-### <a name="xunit"></a>xUnit
+### <a name="xunit"></a><span data-ttu-id="4574f-187">xUnit</span><span class="sxs-lookup"><span data-stu-id="4574f-187">xUnit</span></span>
 
 ```json
 {
@@ -645,7 +645,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 </ItemGroup>
 ```
 
-### <a name="mstest"></a>MSTest
+### <a name="mstest"></a><span data-ttu-id="4574f-188">MSTest</span><span class="sxs-lookup"><span data-stu-id="4574f-188">MSTest</span></span>
 
 ```json
 {
@@ -664,7 +664,7 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a><span data-ttu-id="4574f-189">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4574f-189">See Also</span></span>
 
-[CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)
+[<span data-ttu-id="4574f-190">CLI 中更改的简要概述</span><span class="sxs-lookup"><span data-stu-id="4574f-190">High-level overview of changes in CLI</span></span>](../tools/cli-msbuild-architecture.md)
 

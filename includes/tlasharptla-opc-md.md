@@ -1,1 +1,1 @@
-开放式打包约定 (OPC)
+<span data-ttu-id="20cd5-101">开放式打包约定 (OPC)</span><span class="sxs-lookup"><span data-stu-id="20cd5-101">Open Packaging Conventions (OPC)</span></span>

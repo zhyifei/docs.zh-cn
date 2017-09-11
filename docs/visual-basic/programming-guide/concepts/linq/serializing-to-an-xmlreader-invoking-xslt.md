@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bca1e63bbe5b3ccd13f183c3cc6081917624ad94
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7e1af87fceb9f3f7eae6af6f917037ba80908827
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>序列化为 XmlReader (调用 XSLT) (Visual Basic)
-当您使用<xref:System.Xml?displayProperty=fullName>的互操作功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，可用于<xref:System.Xml.Linq.XNode.CreateReader%2A>创建<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.CreateReader%2A> </xref:System.Xml?displayProperty=fullName> 从此读取的模块<xref:System.Xml.XmlReader>从 XML 树读取节点并相应地处理这些消息。</xref:System.Xml.XmlReader>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a><span data-ttu-id="32eb0-102">序列化为 XmlReader (调用 XSLT) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="32eb0-102">Serializing to an XmlReader (Invoking XSLT) (Visual Basic)</span></span>
+<span data-ttu-id="32eb0-103">当您使用<xref:System.Xml?displayProperty=fullName>的互操作功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，可用于<xref:System.Xml.Linq.XNode.CreateReader%2A>创建<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.CreateReader%2A> </xref:System.Xml?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="32eb0-103">When you use the <xref:System.Xml?displayProperty=fullName> interoperability capabilities of [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="32eb0-104">从此读取的模块<xref:System.Xml.XmlReader>从 XML 树读取节点并相应地处理这些消息。</xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="32eb0-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
   
-## <a name="invoking-an-xslt-transformation"></a>调用 XSLT 转换  
- 此方法可能在调用 XSLT 转换时使用。 您可以创建 XML 树，创建<xref:System.Xml.XmlReader>从 XML 树中，创建一个新文档，然后再创建<xref:System.Xml.XmlWriter>要写入到新文档。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 然后，可以调用 XSLT 转换，传入<xref:System.Xml.XmlReader>和<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 在转换成功完成后，使用转换的结果，填充新的 XML 树。  
+## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="32eb0-105">调用 XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="32eb0-105">Invoking an XSLT Transformation</span></span>  
+ <span data-ttu-id="32eb0-106">此方法可能在调用 XSLT 转换时使用。</span><span class="sxs-lookup"><span data-stu-id="32eb0-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="32eb0-107">您可以创建 XML 树，创建<xref:System.Xml.XmlReader>从 XML 树中，创建一个新文档，然后再创建<xref:System.Xml.XmlWriter>要写入到新文档。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="32eb0-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="32eb0-108">然后，可以调用 XSLT 转换，传入<xref:System.Xml.XmlReader>和<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="32eb0-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="32eb0-109">在转换成功完成后，使用转换的结果，填充新的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="32eb0-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -68,7 +69,7 @@ End Using
 Console.WriteLine(newTree)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="32eb0-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="32eb0-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,5 +78,5 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [序列化 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="32eb0-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="32eb0-111">See Also</span></span>  
+ [<span data-ttu-id="32eb0-112">序列化 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="32eb0-112">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

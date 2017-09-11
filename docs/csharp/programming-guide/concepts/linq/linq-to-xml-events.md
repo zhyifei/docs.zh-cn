@@ -26,34 +26,34 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="linq-to-xml-events-c"></a>LINQ to XML 事件 (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件使你可以在 XML 树发生改变时得到通知。  
+# <a name="linq-to-xml-events-c"></a><span data-ttu-id="80aaa-102">LINQ to XML 事件 (C#)</span><span class="sxs-lookup"><span data-stu-id="80aaa-102">LINQ to XML Events (C#)</span></span>
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="80aaa-103"> 事件使你可以在 XML 树发生改变时得到通知。</span><span class="sxs-lookup"><span data-stu-id="80aaa-103"> events enable you to be notified when an XML tree is altered.</span></span>  
   
- 可以将事件添加到任何 <xref:System.Xml.Linq.XObject> 的实例。 事件处理程序然后将接收对该 <xref:System.Xml.Linq.XObject> 及其所有子代进行修改的事件。 例如，可以将事件处理程序添加到树根，然后从该事件处理程序中处理对树进行的所有修改。  
+ <span data-ttu-id="80aaa-104">可以将事件添加到任何 <xref:System.Xml.Linq.XObject> 的实例。</span><span class="sxs-lookup"><span data-stu-id="80aaa-104">You can add events to an instance of any <xref:System.Xml.Linq.XObject>.</span></span> <span data-ttu-id="80aaa-105">事件处理程序然后将接收对该 <xref:System.Xml.Linq.XObject> 及其所有子代进行修改的事件。</span><span class="sxs-lookup"><span data-stu-id="80aaa-105">The event handler will then receive events for modifications to that <xref:System.Xml.Linq.XObject> and any of its descendants.</span></span> <span data-ttu-id="80aaa-106">例如，可以将事件处理程序添加到树根，然后从该事件处理程序中处理对树进行的所有修改。</span><span class="sxs-lookup"><span data-stu-id="80aaa-106">For example, you can add an event handler to the root of the tree, and handle all modifications to the tree from that event handler.</span></span>  
   
- 有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件的示例，请参阅 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed>。  
+ <span data-ttu-id="80aaa-107">有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件的示例，请参阅 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed>。</span><span class="sxs-lookup"><span data-stu-id="80aaa-107">For examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events, see <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed>.</span></span>  
   
-## <a name="types-and-events"></a>类型和事件  
- 在处理事件时使用下面的类型：  
+## <a name="types-and-events"></a><span data-ttu-id="80aaa-108">类型和事件</span><span class="sxs-lookup"><span data-stu-id="80aaa-108">Types and Events</span></span>  
+ <span data-ttu-id="80aaa-109">在处理事件时使用下面的类型：</span><span class="sxs-lookup"><span data-stu-id="80aaa-109">You use the following types when working with events:</span></span>  
   
-|类型|描述|  
+|<span data-ttu-id="80aaa-110">类型</span><span class="sxs-lookup"><span data-stu-id="80aaa-110">Type</span></span>|<span data-ttu-id="80aaa-111">描述</span><span class="sxs-lookup"><span data-stu-id="80aaa-111">Description</span></span>|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|当 <xref:System.Xml.Linq.XObject> 发生事件时指定事件类型。|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|提供有关 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed> 事件的数据。|  
+|<xref:System.Xml.Linq.XObjectChange>|<span data-ttu-id="80aaa-112">当 <xref:System.Xml.Linq.XObject> 发生事件时指定事件类型。</span><span class="sxs-lookup"><span data-stu-id="80aaa-112">Specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.</span></span>|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<span data-ttu-id="80aaa-113">提供有关 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed> 事件的数据。</span><span class="sxs-lookup"><span data-stu-id="80aaa-113">Provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.</span></span>|  
   
- 修改 XML 树时将引发以下事件：  
+ <span data-ttu-id="80aaa-114">修改 XML 树时将引发以下事件：</span><span class="sxs-lookup"><span data-stu-id="80aaa-114">The following events are raised when you modify an XML tree:</span></span>  
   
-|Event|描述|  
+|<span data-ttu-id="80aaa-115">Event</span><span class="sxs-lookup"><span data-stu-id="80aaa-115">Event</span></span>|<span data-ttu-id="80aaa-116">描述</span><span class="sxs-lookup"><span data-stu-id="80aaa-116">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|在此 <xref:System.Xml.Linq.XObject> 或它的任何子代即将发生更改之前发生。|  
-|<xref:System.Xml.Linq.XObject.Changed>|在 <xref:System.Xml.Linq.XObject> 或它的任何子代已经更改时发生。|  
+|<xref:System.Xml.Linq.XObject.Changing>|<span data-ttu-id="80aaa-117">在此 <xref:System.Xml.Linq.XObject> 或它的任何子代即将发生更改之前发生。</span><span class="sxs-lookup"><span data-stu-id="80aaa-117">Occurs just before this <xref:System.Xml.Linq.XObject> or any of its descendants is going to change.</span></span>|  
+|<xref:System.Xml.Linq.XObject.Changed>|<span data-ttu-id="80aaa-118">在 <xref:System.Xml.Linq.XObject> 或它的任何子代已经更改时发生。</span><span class="sxs-lookup"><span data-stu-id="80aaa-118">Occurs when an <xref:System.Xml.Linq.XObject> has changed or any of its descendants have changed.</span></span>|  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="80aaa-119">示例</span><span class="sxs-lookup"><span data-stu-id="80aaa-119">Example</span></span>  
   
-### <a name="description"></a>描述  
- 当您希望在 XML 树中保留一些聚合信息时事件非常有用。 例如，您可能想保留一份发票合计，计算发票上各个项目的总和。 本示例使用事件来维护复杂元素 `Items` 之下所有子元素的总和。  
+### <a name="description"></a><span data-ttu-id="80aaa-120">描述</span><span class="sxs-lookup"><span data-stu-id="80aaa-120">Description</span></span>  
+ <span data-ttu-id="80aaa-121">当您希望在 XML 树中保留一些聚合信息时事件非常有用。</span><span class="sxs-lookup"><span data-stu-id="80aaa-121">Events are useful when you want to maintain some aggregate information in an XML tree.</span></span> <span data-ttu-id="80aaa-122">例如，您可能想保留一份发票合计，计算发票上各个项目的总和。</span><span class="sxs-lookup"><span data-stu-id="80aaa-122">For example, you may want maintain an invoice total that is the sum of the line items of the invoice.</span></span> <span data-ttu-id="80aaa-123">本示例使用事件来维护复杂元素 `Items` 之下所有子元素的总和。</span><span class="sxs-lookup"><span data-stu-id="80aaa-123">This example uses events to maintain the total of all of the child elements under the complex element `Items`.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="80aaa-124">代码</span><span class="sxs-lookup"><span data-stu-id="80aaa-124">Code</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -92,8 +92,8 @@ Console.WriteLine("Total:{0}", (int)total);
 Console.WriteLine(root);  
 ```  
   
-### <a name="comments"></a>注释  
- 此代码生成以下输出：  
+### <a name="comments"></a><span data-ttu-id="80aaa-125">注释</span><span class="sxs-lookup"><span data-stu-id="80aaa-125">Comments</span></span>  
+ <span data-ttu-id="80aaa-126">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="80aaa-126">This code produces the following output:</span></span>  
   
 ```  
 Changed System.Xml.Linq.XElement Add  
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="80aaa-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="80aaa-127">See Also</span></span>  
+ [<span data-ttu-id="80aaa-128">高级 LINQ to XML 编程 (C#)</span><span class="sxs-lookup"><span data-stu-id="80aaa-128">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
 

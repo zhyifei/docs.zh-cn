@@ -1,46 +1,51 @@
 ---
-title: "使用异步客户端套接字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序协议，套接字"
-  - "发送数据，套接字"
-  - "数据请求，套接字"
-  - "异步客户端套接字"
-  - "Socket 类，异步客户端套接字"
-  - "从 Internet 请求数据，套接字"
-  - "套接字，异步客户端套接字"
-  - "接收数据，套接字"
-  - "协议，套接字"
-  - "Internet，套接字"
-  - "客户端套接字"
+title: "使用异步客户端套接字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- asynchronous client sockets
+- Socket class, asynchronous client sockets
+- requesting data from Internet, sockets
+- sockets, asynchronous client sockets
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用异步客户端套接字
-异步客户端套接字不会应用程序，当等待网络操作完成。  相反，那么，当应用程序在原始线程时，继续运行它使用标准.NET Framework异步编程模型处理在一个线程的网络连接。  异步套接字对于大量使用网络或不能等待网络操作在继续操作之前完成的应用程序需要的。  
+# <a name="using-an-asynchronous-client-socket"></a><span data-ttu-id="932fe-102">使用异步客户端套接字</span><span class="sxs-lookup"><span data-stu-id="932fe-102">Using an Asynchronous Client Socket</span></span>
+<span data-ttu-id="932fe-103">异步客户端套接字在等待网络操作完成时不会挂起应用程序。</span><span class="sxs-lookup"><span data-stu-id="932fe-103">An asynchronous client socket does not suspend the application while waiting for network operations to complete.</span></span> <span data-ttu-id="932fe-104">相反，它使用标准 .NET Framework 异步编程模型在一个线程上处理网络连接，而应用程序继续在原始线程上运行。</span><span class="sxs-lookup"><span data-stu-id="932fe-104">Instead, it uses the standard .NET Framework asynchronous programming model to process the network connection on one thread while the application continues to run on the original thread.</span></span> <span data-ttu-id="932fe-105">异步套接字适用于大量使用网络或不宜等待网络操作完成（才可继续运作）的应用程序。</span><span class="sxs-lookup"><span data-stu-id="932fe-105">Asynchronous sockets are appropriate for applications that make heavy use of the network or that cannot wait for network operations to complete before continuing.</span></span>  
   
- <xref:System.Net.Sockets.Socket> 选件类采用异步方法的.NET Framework命名模式;例如，同步 <xref:System.Net.Sockets.Socket.Receive%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 和 <xref:System.Net.Sockets.Socket.EndReceive%2A> 方法。  
+ <span data-ttu-id="932fe-106"><xref:System.Net.Sockets.Socket> 类遵循异步方法的 .NET Framework 命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Receive%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 和 <xref:System.Net.Sockets.Socket.EndReceive%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="932fe-106">The <xref:System.Net.Sockets.Socket> class follows the .NET Framework naming pattern for asynchronous methods; for example, the synchronous <xref:System.Net.Sockets.Socket.Receive%2A> method corresponds to the asynchronous <xref:System.Net.Sockets.Socket.BeginReceive%2A> and <xref:System.Net.Sockets.Socket.EndReceive%2A> methods.</span></span>  
   
- 异步操作需要回调方法返回操作的结果。  如果应用程序不需要知道该结果，则不需要回调方法。  本节中的代码示例演示如何使用方法启动连接到网络设备和回调方法完成连接、方法启动发送数据和回调方法完成发送和方法添加到接收数据的开头和回调方法以接收数据的末尾。  
+ <span data-ttu-id="932fe-107">异步操作要求使用回调方法返回操作结果。</span><span class="sxs-lookup"><span data-stu-id="932fe-107">Asynchronous operations require a callback method to return the result of the operation.</span></span> <span data-ttu-id="932fe-108">如果应用程序不需要知道结果，则不需要任何回调方法。</span><span class="sxs-lookup"><span data-stu-id="932fe-108">If your application does not need to know the result, then no callback method is required.</span></span> <span data-ttu-id="932fe-109">本节中的示例代码阐释如何使用某个方法开始连接到网络设备并使用回调方法完成此连接、如何使用某个方法开始发送数据并使用回调方法完成此次发送，以及如何使用某个方法开始接收数据并使用回调方法结束接收数据。</span><span class="sxs-lookup"><span data-stu-id="932fe-109">The example code in this section demonstrates using a method to start connecting to a network device and a callback method to complete the connection, a method to start sending data and a callback method to complete the send, and a method to start receiving data and a callback method to end receiving data.</span></span>  
   
- 异步回该系统套接字使用多个线程池线程处理网络连接。  一个线程以启动发送或接收负责数据;其他线程仅使用网络设备的连接并发送或接收数据。  在下面的示例中，的，它在执行时无法继续时， <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 选件类的实例用于挂起主线程和信号的执行。  
+ <span data-ttu-id="932fe-110">异步套接字使用系统线程池中的多个线程处理网络连接。</span><span class="sxs-lookup"><span data-stu-id="932fe-110">Asynchronous sockets use multiple threads from the system thread pool to process network connections.</span></span> <span data-ttu-id="932fe-111">一个线程负责发起数据的发送或接收；其他线程完成与网络设备的连接以及发送或接收数据。</span><span class="sxs-lookup"><span data-stu-id="932fe-111">One thread is responsible for initiating the sending or receiving of data; other threads complete the connection to the network device and send or receive the data.</span></span> <span data-ttu-id="932fe-112">在以下示例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 类的实例用于挂起主线程的执行并在执行可以继续时发出信号。</span><span class="sxs-lookup"><span data-stu-id="932fe-112">In the following examples, instances of the <xref:System.Threading.ManualResetEvent?displayProperty=fullName> class are used to suspend execution of the main thread and signal when execution can continue.</span></span>  
   
- 在下面的示例中，连接异步套接字到网络设备， `Connect`方法初始化 **套接字** 然后调用 [BeginConnect](frlrfsystemnetsocketssocketclassconnecttopic) 方法，并传递表示网络设备，连接回调方法，并且，状态对象的远程终结点\(客户端 **套接字**\)，用于将在异步之间的状态信息调用。  该示例实现 `Connect` 方法来指定的 **套接字** 到指定的终点。  假定名为 `connectDone`的全局 **ManualResetEvent** 。  
+ <span data-ttu-id="932fe-113">在下面的示例中，为了将异步套接字连接到网络设备，`Connect` 方法会初始化 Socket，然后调用 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName> 方法（传递表示网络设备的远程终结点）、连接回调方法和状态对象（即客户端 Socket，用于在异步调用之间传递状态信息）。</span><span class="sxs-lookup"><span data-stu-id="932fe-113">In the following example, to connect an asynchronous socket to a network device, the `Connect` method initializes a **Socket** and then calls the <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName> method, passing a remote endpoint that represents the network device, the connect callback method, and a state object (the client **Socket**), which is used to pass state information between asynchronous calls.</span></span> <span data-ttu-id="932fe-114">该示例实现 `Connect` 方法，将指定的 Socket 连接到指定的终结点。</span><span class="sxs-lookup"><span data-stu-id="932fe-114">The example implements the `Connect` method to connect the specified **Socket** to the specified endpoint.</span></span> <span data-ttu-id="932fe-115">它假定一个名为 `connectDone` 的全局 ManualResetEvent。</span><span class="sxs-lookup"><span data-stu-id="932fe-115">It assumes a global **ManualResetEvent** named `connectDone`.</span></span>  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -60,7 +65,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- 连接回调方法 `ConnectCallback` 实现 <xref:System.AsyncCallback> 委托。  它连接到远程计算机，如果远程计算机可用然后信号应用程序线程时连接通过设置 **ManualResetEvent**`connectDone`完成。  下面的代码执行 `ConnectCallback` 方法。  
+ <span data-ttu-id="932fe-116">连接回调方法 `ConnectCallback` 实现 <xref:System.AsyncCallback> 委托。</span><span class="sxs-lookup"><span data-stu-id="932fe-116">The connect callback method `ConnectCallback` implements the <xref:System.AsyncCallback> delegate.</span></span> <span data-ttu-id="932fe-117">它在远程设备可用时连接到远程设备，然后通过设置 ManualResetEvent `connectDone` 向应用程序线程发出连接完成的信号。</span><span class="sxs-lookup"><span data-stu-id="932fe-117">It connects to the remote device when the remote device is available and then signals the application thread that the connection is complete by setting the **ManualResetEvent** `connectDone`.</span></span> <span data-ttu-id="932fe-118">下面的代码实现 `ConnectCallback` 方法。</span><span class="sxs-lookup"><span data-stu-id="932fe-118">The following code implements the `ConnectCallback` method.</span></span>  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -80,7 +85,6 @@ Private Shared Sub ConnectCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ConnectCallback  
-  
 ```  
   
 ```csharp  
@@ -103,7 +107,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- 示例方案 `Send` 输入指定的数据以ASCII格式并将其发送异步到指定的套接字表示的网络设备。  下面的示例执行 `Send` 方法。  
+ <span data-ttu-id="932fe-119">示例方法 `Send` 以 ASCII 格式对指定的字符串数据进行编码，并将其异步发送到指定套接字所表示的网络设备。</span><span class="sxs-lookup"><span data-stu-id="932fe-119">The example method `Send` encodes the specified string data in ASCII format and sends it asynchronously to the network device represented by the specified socket.</span></span> <span data-ttu-id="932fe-120">以下示例实现 `Send` 方法。</span><span class="sxs-lookup"><span data-stu-id="932fe-120">The following example implements the `Send` method.</span></span>  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -114,7 +118,6 @@ Private Shared Sub Send(client As Socket, data As [String])
     client.BeginSend(byteData, 0, byteData.Length, SocketFlags.None, _  
         AddressOf SendCallback, client)  
 End Sub 'Send  
-  
 ```  
   
 ```csharp  
@@ -128,7 +131,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- 发送回调方法 `SendCallback` 实现 <xref:System.AsyncCallback> 委托。  ，当网络设备准备收到时，它发送数据。  下面的示例演示 `SendCallback` 方法的实现。  假定名为 `sendDone`的全局 **ManualResetEvent** 。  
+ <span data-ttu-id="932fe-121">发送回调方法 `SendCallback` 实现 <xref:System.AsyncCallback> 委托。</span><span class="sxs-lookup"><span data-stu-id="932fe-121">The send callback method `SendCallback` implements the <xref:System.AsyncCallback> delegate.</span></span> <span data-ttu-id="932fe-122">它在网络设备准备好接收时发送数据。</span><span class="sxs-lookup"><span data-stu-id="932fe-122">It sends the data when the network device is ready to receive.</span></span> <span data-ttu-id="932fe-123">下面的示例演示 `SendCallback` 方法的实现。</span><span class="sxs-lookup"><span data-stu-id="932fe-123">The following example shows the implementation of the `SendCallback` method.</span></span> <span data-ttu-id="932fe-124">它假定一个名为 `sendDone` 的全局 ManualResetEvent。</span><span class="sxs-lookup"><span data-stu-id="932fe-124">It assumes a global **ManualResetEvent** named `sendDone`.</span></span>  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -146,7 +149,6 @@ Private Shared Sub SendCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'SendCallback  
-  
 ```  
   
 ```csharp  
@@ -167,7 +169,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- 读取客户端套接字的数据将要求值在异步调用之间的状态对象。  下面选件类是接收数据的示例状态对象从客户端套接字。  它包含客户端套接字的字段，接收数据的缓冲区和 <xref:System.Text.StringBuilder> 保存传入数据的字符串。  将这些字段在状态对象授予的值跨多个保持调用读取客户端套接字的数据。  
+ <span data-ttu-id="932fe-125">从客户端套接字读取数据需要一个在异步调用之间传递值的状态对象。</span><span class="sxs-lookup"><span data-stu-id="932fe-125">Reading data from a client socket requires a state object that passes values between asynchronous calls.</span></span> <span data-ttu-id="932fe-126">下面的类是一个用于从客户端套接字接收数据的示例状态对象。</span><span class="sxs-lookup"><span data-stu-id="932fe-126">The following class is an example state object for receiving data from a client socket.</span></span> <span data-ttu-id="932fe-127">它包含以下各项的字段：客户端套接字、已接收数据的缓冲区，和用于保留传入数据字符串的 <xref:System.Text.StringBuilder>。</span><span class="sxs-lookup"><span data-stu-id="932fe-127">It contains a field for the client socket, a buffer for the received data, and a <xref:System.Text.StringBuilder> to hold the incoming data string.</span></span> <span data-ttu-id="932fe-128">将这些字段放入该状态对象中，使这些字段的值在多个调用之间得以保留，以便从客户端套接字读取数据。</span><span class="sxs-lookup"><span data-stu-id="932fe-128">Placing these fields in the state object allows their values to be preserved across multiple calls to read data from the client socket.</span></span>  
   
 ```vb  
 Public Class StateObject  
@@ -180,7 +182,6 @@ Public Class StateObject
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
-  
 ```  
   
 ```csharp  
@@ -196,7 +197,7 @@ public class StateObject {
 }  
 ```  
   
- 示例 `Receive` 方法设置状态对象并调用 **BeginReceive** 方法读取客户端套接字的数据异步。  下面的示例执行 `Receive` 方法。  
+ <span data-ttu-id="932fe-129">`Receive` 方法示例设置状态对象，然后调用 BeginReceive 方法从客户端套接字异步读取数据。</span><span class="sxs-lookup"><span data-stu-id="932fe-129">The example `Receive` method sets up the state object and then calls the **BeginReceive** method to read the data from the client socket asynchronously.</span></span> <span data-ttu-id="932fe-130">以下示例实现 `Receive` 方法。</span><span class="sxs-lookup"><span data-stu-id="932fe-130">The following example implements the `Receive` method.</span></span>  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -212,7 +213,6 @@ Private Shared Sub Receive(client As Socket)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'Receive  
-  
 ```  
   
 ```csharp  
@@ -231,9 +231,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- 接收回调方法 `ReceiveCallback` 实现 **AsyncCallback** 委托。  它接收来自网络设备的数据并生成消息字符串。  它读取一个或多个字节从网络的数据到数据区域然后再次调用 **BeginReceive** 方法，直到客户端发送的数据完成。  对于所有数据从客户端读取， `ReceiveCallback` 信号应用程序线程数据会通过设置 **ManualResetEvent** `sendDone`完成。  
+ <span data-ttu-id="932fe-131">接收回调方法 `ReceiveCallback` 实现 AsyncCallback 委托。</span><span class="sxs-lookup"><span data-stu-id="932fe-131">The receive callback method `ReceiveCallback` implements the **AsyncCallback** delegate.</span></span> <span data-ttu-id="932fe-132">它接收来自网络设备的数据并生成消息字符串。</span><span class="sxs-lookup"><span data-stu-id="932fe-132">It receives the data from the network device and builds a message string.</span></span> <span data-ttu-id="932fe-133">它将来自网络的一个或多个数据字节读入数据缓冲区，然后再次调用 BeginReceive 方法，直到客户端完成数据发送为止。</span><span class="sxs-lookup"><span data-stu-id="932fe-133">It reads one or more bytes of data from the network into the data buffer and then calls the **BeginReceive** method again until the data sent by the client is complete.</span></span> <span data-ttu-id="932fe-134">从客户端读取所有数据后，`ReceiveCallback` 通过设置 ManualResetEvent `sendDone` 向应用程序线程发出数据完成的信号。</span><span class="sxs-lookup"><span data-stu-id="932fe-134">Once all the data is read from the client, `ReceiveCallback` signals the application thread that the data is complete by setting the **ManualResetEvent** `sendDone`.</span></span>  
   
- 下面的代码示例执行 `ReceiveCallback`方法。  假定到名为 `receiveDone`的进行接收的字符串和全局 **ManualResetEvent** 负名为 `response` 的全局字符串。  服务器必须正常关闭客户端套接字网络关闭会话。  
+ <span data-ttu-id="932fe-135">下面的示例代码实现 `ReceiveCallback` 方法。</span><span class="sxs-lookup"><span data-stu-id="932fe-135">The following example code implements the `ReceiveCallback` method.</span></span> <span data-ttu-id="932fe-136">它假定一个名为 `response` 的全局字符串（该字符串保留接收的字符串）和一个名为 `receiveDone` 的全局 ManualResetEvent。</span><span class="sxs-lookup"><span data-stu-id="932fe-136">It assumes a global string named `response` that holds the received string and a global **ManualResetEvent** named `receiveDone`.</span></span> <span data-ttu-id="932fe-137">服务器必须正常关闭客户端套接字才能结束网络会话。</span><span class="sxs-lookup"><span data-stu-id="932fe-137">The server must shut down the client socket gracefully to end the network session.</span></span>  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
@@ -266,7 +266,6 @@ Private Shared Sub ReceiveCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ReceiveCallback  
-  
 ```  
   
 ```csharp  
@@ -298,7 +297,8 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## 请参阅  
- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)   
- [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+## <a name="see-also"></a><span data-ttu-id="932fe-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="932fe-138">See Also</span></span>  
+ <span data-ttu-id="932fe-139">[使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md) </span><span class="sxs-lookup"><span data-stu-id="932fe-139">[Using a Synchronous Client Socket](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md) </span></span>  
+ <span data-ttu-id="932fe-140">[使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md) </span><span class="sxs-lookup"><span data-stu-id="932fe-140">[Listening with Sockets](../../../docs/framework/network-programming/listening-with-sockets.md) </span></span>  
+ [<span data-ttu-id="932fe-141">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="932fe-141">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+

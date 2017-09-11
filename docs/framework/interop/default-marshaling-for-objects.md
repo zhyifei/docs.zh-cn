@@ -1,62 +1,67 @@
 ---
-title: "对象的默认封送处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "互操作封送处理, 对象"
-  - "对象, 互操作封送处理"
+title: "对象的默认封送处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- objects, interop marshaling
+- interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67d05a21d537bfca92bc76473fb6f6048865ef8c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 对象的默认封送处理
-可以将类型化为 <xref:System.Object?displayProperty=fullName> 的参数和字段作为下列类型之一向非托管代码公开：  
+# <a name="default-marshaling-for-objects"></a><span data-ttu-id="4051a-102">对象的默认封送处理</span><span class="sxs-lookup"><span data-stu-id="4051a-102">Default Marshaling for Objects</span></span>
+<span data-ttu-id="4051a-103">可将类型化为 <xref:System.Object?displayProperty=fullName> 的参数和字段作为下列任一类型向非托管代码公开：</span><span class="sxs-lookup"><span data-stu-id="4051a-103">Parameters and fields typed as <xref:System.Object?displayProperty=fullName> can be exposed to unmanaged code as one of the following types:</span></span>  
   
--   Variant，当对象为参数时。  
+-   <span data-ttu-id="4051a-104">对象为参数时，作为变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-104">A variant when the object is a parameter.</span></span>  
   
--   接口，当对象是结构字段时。  
+-   <span data-ttu-id="4051a-105">对象为结构字段时，作为接口。</span><span class="sxs-lookup"><span data-stu-id="4051a-105">An interface when the object is a structure field.</span></span>  
   
- 只有 COM 互操作支持对对象类型的封送处理。  默认行为是将对象封送到 COM Variant。  这些规则只适用于 **Object** 类型，而不适用于从 **Object** 类派生的强类型对象。  
+ <span data-ttu-id="4051a-106">仅 COM 互操作支持对象类型的封送处理。</span><span class="sxs-lookup"><span data-stu-id="4051a-106">Only COM interop supports marshaling for object types.</span></span> <span data-ttu-id="4051a-107">默认行为是将对象封送到 COM 变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-107">The default behavior is to marshal objects to COM variants.</span></span> <span data-ttu-id="4051a-108">这些规则只适用于 Object 类型，不适用于从 Object 类派生的强类型对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-108">These rules apply only to the type **Object** and do not apply to strongly typed objects that derive from the **Object** class.</span></span>  
   
- 本主题提供下列有关封送对象类型的附加信息：  
+ <span data-ttu-id="4051a-109">本主题提供有关封送对象类型的以下附加信息：</span><span class="sxs-lookup"><span data-stu-id="4051a-109">This topic provides the following additional information about marshaling object types:</span></span>  
   
--   [封送处理选项](#cpcondefaultmarshalingforobjectsanchor7)  
+-   [<span data-ttu-id="4051a-110">封送选项</span><span class="sxs-lookup"><span data-stu-id="4051a-110">Marshaling Options</span></span>](#cpcondefaultmarshalingforobjectsanchor7)  
   
--   [将对象封送到接口](#cpcondefaultmarshalingforobjectsanchor2)  
+-   [<span data-ttu-id="4051a-111">将对象封送到接口</span><span class="sxs-lookup"><span data-stu-id="4051a-111">Marshaling Object to Interface</span></span>](#cpcondefaultmarshalingforobjectsanchor2)  
   
--   [将对象封送到变量](#cpcondefaultmarshalingforobjectsanchor3)  
+-   [<span data-ttu-id="4051a-112">将对象封送到变体</span><span class="sxs-lookup"><span data-stu-id="4051a-112">Marshaling Object to Variant</span></span>](#cpcondefaultmarshalingforobjectsanchor3)  
   
--   [将变量封送到对象](#cpcondefaultmarshalingforobjectsanchor4)  
+-   [<span data-ttu-id="4051a-113">将变体封送到对象</span><span class="sxs-lookup"><span data-stu-id="4051a-113">Marshaling Variant to Object</span></span>](#cpcondefaultmarshalingforobjectsanchor4)  
   
--   [封送 ByRef 变量](#cpcondefaultmarshalingforobjectsanchor6)  
+-   [<span data-ttu-id="4051a-114">封送 ByRef 变体</span><span class="sxs-lookup"><span data-stu-id="4051a-114">Marshaling ByRef Variants</span></span>](#cpcondefaultmarshalingforobjectsanchor6)  
   
 <a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
-## 封送处理选项  
- 下表显示 **Object** 数据类型的封送处理选项。  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性提供了若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值来封送对象。  
+## <a name="marshaling-options"></a><span data-ttu-id="4051a-115">封送处理选项</span><span class="sxs-lookup"><span data-stu-id="4051a-115">Marshaling Options</span></span>  
+ <span data-ttu-id="4051a-116">下表显示 Object 数据类型的封送处理选项。</span><span class="sxs-lookup"><span data-stu-id="4051a-116">The following table shows the marshaling options for the **Object** data type.</span></span> <span data-ttu-id="4051a-117"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值来封送对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-117">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal objects.</span></span>  
   
-|枚举类型|非托管格式的说明|  
-|----------|--------------|  
-|**UnmanagedType.Struct**<br /><br /> （参数的默认值）|COM 样式变量。|  
-|**UnmanagedType.Interface**|如果可能，为 **IDispatch** 接口；否则为 **IUnknown** 接口。|  
-|**UnmanagedType.IUnknown**<br /><br /> （字段的默认值）|**IUnknown** 接口。|  
-|**UnmanagedType.IDispatch**|一个 **IDispatch** 接口。|  
+|<span data-ttu-id="4051a-118">枚举类型</span><span class="sxs-lookup"><span data-stu-id="4051a-118">Enumeration type</span></span>|<span data-ttu-id="4051a-119">非托管格式说明</span><span class="sxs-lookup"><span data-stu-id="4051a-119">Description of unmanaged format</span></span>|  
+|----------------------|-------------------------------------|  
+|<span data-ttu-id="4051a-120">UnmanagedType.Struct</span><span class="sxs-lookup"><span data-stu-id="4051a-120">**UnmanagedType.Struct**</span></span><br /><br /> <span data-ttu-id="4051a-121">（参数默认值）</span><span class="sxs-lookup"><span data-stu-id="4051a-121">(default for parameters)</span></span>|<span data-ttu-id="4051a-122">COM 样式的变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-122">A COM-style variant.</span></span>|  
+|<span data-ttu-id="4051a-123">UnmanagedType.Interface</span><span class="sxs-lookup"><span data-stu-id="4051a-123">**UnmanagedType.Interface**</span></span>|<span data-ttu-id="4051a-124">如果可能，为 IDispatch 接口；否则为 IUnknown 接口。</span><span class="sxs-lookup"><span data-stu-id="4051a-124">An **IDispatch** interface, if possible; otherwise, an **IUnknown** interface.</span></span>|  
+|<span data-ttu-id="4051a-125">UnmanagedType.IUnknown</span><span class="sxs-lookup"><span data-stu-id="4051a-125">**UnmanagedType.IUnknown**</span></span><br /><br /> <span data-ttu-id="4051a-126">（字段默认值）</span><span class="sxs-lookup"><span data-stu-id="4051a-126">(default for fields)</span></span>|<span data-ttu-id="4051a-127">IUnknown 接口。</span><span class="sxs-lookup"><span data-stu-id="4051a-127">An **IUnknown** interface.</span></span>|  
+|<span data-ttu-id="4051a-128">UnmanagedType.IDispatch</span><span class="sxs-lookup"><span data-stu-id="4051a-128">**UnmanagedType.IDispatch**</span></span>|<span data-ttu-id="4051a-129">IDispatch 接口。</span><span class="sxs-lookup"><span data-stu-id="4051a-129">An **IDispatch** interface.</span></span>|  
   
- 下面的示例显示 `MarshalObject` 的托管接口定义。  
+ <span data-ttu-id="4051a-130">以下示例显示了 `MarshalObject` 的托管接口定义。</span><span class="sxs-lookup"><span data-stu-id="4051a-130">The following example shows the managed interface definition for `MarshalObject`.</span></span>  
   
 ```vb  
 Interface MarshalObject  
@@ -73,7 +78,6 @@ Interface MarshalObject
       As Object)  
    Function GetIUnknown() As <MarshalAs(UnmanagedType.IUnknown)> Object  
 End Interface  
-  
 ```  
   
 ```csharp  
@@ -91,7 +95,7 @@ interface MarshalObject {
 }  
 ```  
   
- 下面的代码将 `MarshalObject` 接口导出到类型库。  
+ <span data-ttu-id="4051a-131">以下代码将 `MarshalObject` 接口导出到类型库。</span><span class="sxs-lookup"><span data-stu-id="4051a-131">The following code exports the `MarshalObject` interface to a type library.</span></span>  
   
 ```  
 interface MarshalObject {  
@@ -108,16 +112,15 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  Interop 封送拆收器在调用后自动释放变量内的任何已分配对象。  
+>  <span data-ttu-id="4051a-132">互操作封送拆收器在调用后自动释放变体内所有已分配的对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-132">The interop marshaler automatically frees any allocated object inside the variant after the call.</span></span>  
   
- 下面的示例显示格式化的值类型。  
+ <span data-ttu-id="4051a-133">以下示例显示已设置格式的值类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-133">The following example shows a formatted value type.</span></span>  
   
 ```vb  
 Public Structure ObjectHolder  
    Dim o1 As Object  
    <MarshalAs(UnmanagedType.IDispatch)> Public o2 As Object  
 End Structure  
-  
 ```  
   
 ```csharp  
@@ -127,7 +130,7 @@ public struct ObjectHolder {
 }  
 ```  
   
- 下面的代码将格式化的类型导出到类型库。  
+ <span data-ttu-id="4051a-134">以下代码将已设置格式的类型导出到类型库。</span><span class="sxs-lookup"><span data-stu-id="4051a-134">The following code exports the formatted type to a type library.</span></span>  
   
 ```  
 struct ObjectHolder {  
@@ -137,50 +140,50 @@ struct ObjectHolder {
 ```  
   
 <a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
-## 将对象封送到接口  
- 当对象作为接口向 COM 公开时，该接口是托管类型 <xref:System.Object> 的类接口（即 **\_Object** 接口）。  该接口被类型化为 **IDispatch** \([UnmanagedType.IDispatch](frlrfSystemRuntimeInteropServicesUnmanagedTypeClassTopic)\) 或得到的类型库中的 **IUnknown** \(**UnmanagedType.IUnknown**\)。  通过 **\_Object** 接口，COM 客户端可以动态调用该托管类的成员或由该托管类的派生类实现的任何成员。  客户端还可以调用 **QueryInterface** 以获取由该托管类型显式实现的任何其他接口。  
+## <a name="marshaling-object-to-interface"></a><span data-ttu-id="4051a-135">将对象封送到接口</span><span class="sxs-lookup"><span data-stu-id="4051a-135">Marshaling Object to Interface</span></span>  
+ <span data-ttu-id="4051a-136">将对象作为接口向 COM 公开时，该接口是托管类型 <xref:System.Object> 的类接口（即 _Object 接口）。</span><span class="sxs-lookup"><span data-stu-id="4051a-136">When an object is exposed to COM as an interface, that interface is the class interface for the managed type <xref:System.Object> (the **_Object** interface).</span></span> <span data-ttu-id="4051a-137">该接口被类型化为 IDispatch (<xref:System.Runtime.InteropServices.UnmanagedType>) 或所得类型库中的 IUnknown (UnmanagedType.IUnknown)。</span><span class="sxs-lookup"><span data-stu-id="4051a-137">This interface is typed as an **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) or an **IUnknown** (**UnmanagedType.IUnknown**) in the resulting type library.</span></span> <span data-ttu-id="4051a-138">通过 _Object 接口，COM 客户端可动态调用托管类的成员或由该托管类的派生类实现的任何成员。</span><span class="sxs-lookup"><span data-stu-id="4051a-138">COM clients can dynamically invoke the members of the managed class or any members implemented by its derived classes through the **_Object** interface.</span></span> <span data-ttu-id="4051a-139">客户端还可调用 QueryInterface 获取由托管类型显式实现的任何其他接口。</span><span class="sxs-lookup"><span data-stu-id="4051a-139">The client can also call **QueryInterface** to obtain any other interface explicitly implemented by the managed type.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
-## 将对象封送到变量  
- 将对象封送到变量时，内部变量类型将在运行时根据下列规则确定：  
+## <a name="marshaling-object-to-variant"></a><span data-ttu-id="4051a-140">将对象封送到变体</span><span class="sxs-lookup"><span data-stu-id="4051a-140">Marshaling Object to Variant</span></span>  
+ <span data-ttu-id="4051a-141">将对象封送到变体时，在运行时根据以下规则确定内部变体类型：</span><span class="sxs-lookup"><span data-stu-id="4051a-141">When an object is marshaled to a variant, the internal variant type is determined at run time, based on the following rules:</span></span>  
   
--   如果对象引用为 null（在 Visual Basic 中为 **Nothing**），则将对象封送到 **VT\_EMPTY** 类型的变量。  
+-   <span data-ttu-id="4051a-142">如果对象引用为 null（Visual Basic 中为 Nothing），则将对象封送到 VT_EMPTY 类型的变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-142">If the object reference is null (**Nothing** in Visual Basic), the object is marshaled to a variant of type **VT_EMPTY**.</span></span>  
   
--   如果对象是下表中列出的任何类型的实例，则得到的变量类型由内置在封送拆收器中的规则确定，并显示在表中。  
+-   <span data-ttu-id="4051a-143">如果对象是下表中列出的任何类型的实例，则得到的变体类型由封送拆收器内置的规则确定，并且显示在下表中。</span><span class="sxs-lookup"><span data-stu-id="4051a-143">If the object is an instance of any type listed in the following table, the resulting variant type is determined by the rules built into the marshaler and shown in the table.</span></span>  
   
--   需要显式控制封送处理行为的其他对象可以实现 <xref:System.IConvertible> 接口。  在这种情况下，变量类型由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 方法返回的类型代码确定。  否则，将对象作为 **VT\_UNKNOWN** 类型的变量封送。  
+-   <span data-ttu-id="4051a-144">需要显式控制封送行为的其他对象可实现 <xref:System.IConvertible> 接口。</span><span class="sxs-lookup"><span data-stu-id="4051a-144">Other objects that need to explicitly control the marshaling behavior can implement the <xref:System.IConvertible> interface.</span></span> <span data-ttu-id="4051a-145">在这种情况下，变体类型由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 方法返回的类型代码确定。</span><span class="sxs-lookup"><span data-stu-id="4051a-145">In that case, the variant type is determined by the type code returned from the <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> method.</span></span> <span data-ttu-id="4051a-146">否则，将对象作为 VT_UNKNOWN 类型的变体封送。</span><span class="sxs-lookup"><span data-stu-id="4051a-146">Otherwise, the object is marshaled as a variant of type **VT_UNKNOWN**.</span></span>  
   
-### 将系统类型封送到变量  
- 下表显示托管对象类型及其对应的 COM Variant 类型。  只有被调用方法的签名属于 <xref:System.Object?displayProperty=fullName> 类型时才转换这些类型。  
+### <a name="marshaling-system-types-to-variant"></a><span data-ttu-id="4051a-147">将系统类型封送到变体</span><span class="sxs-lookup"><span data-stu-id="4051a-147">Marshaling System Types to Variant</span></span>  
+ <span data-ttu-id="4051a-148">下表显示托管对象类型及其相应的 COM 变体类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-148">The following table shows managed object types and their corresponding COM variant types.</span></span> <span data-ttu-id="4051a-149">仅当所调用方法的签名属于 <xref:System.Object?displayProperty=fullName> 类型时，才转换这些类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-149">These types are converted only when the signature of the method being called is of type <xref:System.Object?displayProperty=fullName>.</span></span>  
   
-|对象类型|COM Variant 类型|  
-|----------|--------------------|  
-|null 对象引用（在 Visual Basic 中为 **Nothing**）。|**VT\_EMPTY**|  
-|<xref:System.DBNull?displayProperty=fullName>|**VT\_NULL**|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|**VT\_ERROR**|  
-|<xref:System.Reflection.Missing?displayProperty=fullName>|带有 **E\_PARAMNOTFOUND** 的 **VT\_ERROR**|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|**VT\_DISPATCH**|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|**VT\_UNKNOWN**|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|**VT\_CY**|  
-|<xref:System.Boolean?displayProperty=fullName>|**VT\_BOOL**|  
-|<xref:System.SByte?displayProperty=fullName>|**VT\_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**VT\_UI1**|  
-|<xref:System.Int16?displayProperty=fullName>|**VT\_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**VT\_UI2**|  
-|<xref:System.Int32?displayProperty=fullName>|**VT\_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**VT\_UI4**|  
-|<xref:System.Int64?displayProperty=fullName>|**VT\_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**VT\_UI8**|  
-|<xref:System.Single?displayProperty=fullName>|**VT\_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**VT\_R8**|  
-|<xref:System.Decimal?displayProperty=fullName>|**VT\_DECIMAL**|  
-|<xref:System.DateTime?displayProperty=fullName>|**VT\_DATE**|  
-|<xref:System.String?displayProperty=fullName>|**VT\_BSTR**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**VT\_INT**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**VT\_UINT**|  
-|<xref:System.Array?displayProperty=fullName>|**VT\_ARRAY**|  
+|<span data-ttu-id="4051a-150">对象类型</span><span class="sxs-lookup"><span data-stu-id="4051a-150">Object type</span></span>|<span data-ttu-id="4051a-151">COM 变体类型</span><span class="sxs-lookup"><span data-stu-id="4051a-151">COM variant type</span></span>|  
+|-----------------|----------------------|  
+|<span data-ttu-id="4051a-152">Null 对象引用（在 Visual Basic 中为 Nothing）。</span><span class="sxs-lookup"><span data-stu-id="4051a-152">Null object reference (**Nothing** in Visual Basic).</span></span>|<span data-ttu-id="4051a-153">VT_EMPTY</span><span class="sxs-lookup"><span data-stu-id="4051a-153">**VT_EMPTY**</span></span>|  
+|<xref:System.DBNull?displayProperty=fullName>|<span data-ttu-id="4051a-154">VT_NULL</span><span class="sxs-lookup"><span data-stu-id="4051a-154">**VT_NULL**</span></span>|  
+|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|<span data-ttu-id="4051a-155">VT_ERROR</span><span class="sxs-lookup"><span data-stu-id="4051a-155">**VT_ERROR**</span></span>|  
+|<xref:System.Reflection.Missing?displayProperty=fullName>|<span data-ttu-id="4051a-156">带 E_PARAMNOTFOUND 的 VT_ERROR</span><span class="sxs-lookup"><span data-stu-id="4051a-156">**VT_ERROR** with **E_PARAMNOTFOUND**</span></span>|  
+|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|<span data-ttu-id="4051a-157">VT_DISPATCH</span><span class="sxs-lookup"><span data-stu-id="4051a-157">**VT_DISPATCH**</span></span>|  
+|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|<span data-ttu-id="4051a-158">VT_UNKNOWN</span><span class="sxs-lookup"><span data-stu-id="4051a-158">**VT_UNKNOWN**</span></span>|  
+|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|<span data-ttu-id="4051a-159">VT_CY</span><span class="sxs-lookup"><span data-stu-id="4051a-159">**VT_CY**</span></span>|  
+|<xref:System.Boolean?displayProperty=fullName>|<span data-ttu-id="4051a-160">VT_BOOL</span><span class="sxs-lookup"><span data-stu-id="4051a-160">**VT_BOOL**</span></span>|  
+|<xref:System.SByte?displayProperty=fullName>|<span data-ttu-id="4051a-161">VT_I1</span><span class="sxs-lookup"><span data-stu-id="4051a-161">**VT_I1**</span></span>|  
+|<xref:System.Byte?displayProperty=fullName>|<span data-ttu-id="4051a-162">VT_UI1</span><span class="sxs-lookup"><span data-stu-id="4051a-162">**VT_UI1**</span></span>|  
+|<xref:System.Int16?displayProperty=fullName>|<span data-ttu-id="4051a-163">VT_I2</span><span class="sxs-lookup"><span data-stu-id="4051a-163">**VT_I2**</span></span>|  
+|<xref:System.UInt16?displayProperty=fullName>|<span data-ttu-id="4051a-164">VT_UI2</span><span class="sxs-lookup"><span data-stu-id="4051a-164">**VT_UI2**</span></span>|  
+|<xref:System.Int32?displayProperty=fullName>|<span data-ttu-id="4051a-165">VT_I4</span><span class="sxs-lookup"><span data-stu-id="4051a-165">**VT_I4**</span></span>|  
+|<xref:System.UInt32?displayProperty=fullName>|<span data-ttu-id="4051a-166">VT_UI4</span><span class="sxs-lookup"><span data-stu-id="4051a-166">**VT_UI4**</span></span>|  
+|<xref:System.Int64?displayProperty=fullName>|<span data-ttu-id="4051a-167">VT_I8</span><span class="sxs-lookup"><span data-stu-id="4051a-167">**VT_I8**</span></span>|  
+|<xref:System.UInt64?displayProperty=fullName>|<span data-ttu-id="4051a-168">VT_UI8</span><span class="sxs-lookup"><span data-stu-id="4051a-168">**VT_UI8**</span></span>|  
+|<xref:System.Single?displayProperty=fullName>|<span data-ttu-id="4051a-169">VT_R4</span><span class="sxs-lookup"><span data-stu-id="4051a-169">**VT_R4**</span></span>|  
+|<xref:System.Double?displayProperty=fullName>|<span data-ttu-id="4051a-170">VT_R8</span><span class="sxs-lookup"><span data-stu-id="4051a-170">**VT_R8**</span></span>|  
+|<xref:System.Decimal?displayProperty=fullName>|<span data-ttu-id="4051a-171">VT_DECIMAL</span><span class="sxs-lookup"><span data-stu-id="4051a-171">**VT_DECIMAL**</span></span>|  
+|<xref:System.DateTime?displayProperty=fullName>|<span data-ttu-id="4051a-172">VT_DATE</span><span class="sxs-lookup"><span data-stu-id="4051a-172">**VT_DATE**</span></span>|  
+|<xref:System.String?displayProperty=fullName>|<span data-ttu-id="4051a-173">VT_BSTR</span><span class="sxs-lookup"><span data-stu-id="4051a-173">**VT_BSTR**</span></span>|  
+|<xref:System.IntPtr?displayProperty=fullName>|<span data-ttu-id="4051a-174">VT_INT</span><span class="sxs-lookup"><span data-stu-id="4051a-174">**VT_INT**</span></span>|  
+|<xref:System.UIntPtr?displayProperty=fullName>|<span data-ttu-id="4051a-175">VT_UINT</span><span class="sxs-lookup"><span data-stu-id="4051a-175">**VT_UINT**</span></span>|  
+|<xref:System.Array?displayProperty=fullName>|<span data-ttu-id="4051a-176">VT_ARRAY</span><span class="sxs-lookup"><span data-stu-id="4051a-176">**VT_ARRAY**</span></span>|  
   
- 使用在前面的示例中定义的 `MarshalObject` 接口，下面的代码示例说明如何将各种类型的变量传递给 COM 服务器。  
+ <span data-ttu-id="4051a-177">以下代码示例使用前一示例中定义的 `MarshalObject` 接口，演示如何将各种类型的变体传递给 COM 服务器。</span><span class="sxs-lookup"><span data-stu-id="4051a-177">Using the `MarshalObject` interface defined in the previous example, the following code example demonstrates how to pass various types of variants to a COM server.</span></span>  
   
 ```vb  
 Dim mo As New MarshalObject()  
@@ -190,7 +193,6 @@ mo.SetVariant(CInt(27))        ' Marshal as variant of type VT_I2.
 mo.SetVariant(CLng(27))        ' Marshal as variant of type VT_I4.  
 mo.SetVariant(CSng(27.0))      ' Marshal as variant of type VT_R4.  
 mo.SetVariant(CDbl(27.0))      ' Marshal as variant of type VT_R8.  
-  
 ```  
   
 ```csharp  
@@ -203,7 +205,7 @@ mo.SetVariant((single)27.0);   // Marshal as variant of type VT_R4.
 mo.SetVariant((double)27.0);   // Marshal as variant of type VT_R8.  
 ```  
   
- 不具有相应托管类型的 COM 类型可以使用 <xref:System.Runtime.InteropServices.ErrorWrapper>、<xref:System.Runtime.InteropServices.DispatchWrapper>、<xref:System.Runtime.InteropServices.UnknownWrapper> 和 <xref:System.Runtime.InteropServices.CurrencyWrapper> 等包装类进行封送。  下面的代码示例说明如何使用这些包装将各种类型的变量传递给 COM 服务器。  
+ <span data-ttu-id="4051a-178">可使用 <xref:System.Runtime.InteropServices.ErrorWrapper>、<xref:System.Runtime.InteropServices.DispatchWrapper>、<xref:System.Runtime.InteropServices.UnknownWrapper> 和 <xref:System.Runtime.InteropServices.CurrencyWrapper> 等包装类封送不具有相应托管类型的 COM 类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-178">COM types that do not have corresponding managed types can be marshaled using wrapper classes such as <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper>, and <xref:System.Runtime.InteropServices.CurrencyWrapper>.</span></span> <span data-ttu-id="4051a-179">以下代码示例演示如何使用这些包装类将各种类型的变体传递给 COM 服务器。</span><span class="sxs-lookup"><span data-stu-id="4051a-179">The following code example demonstrates how to use these wrappers to pass various types of variants to a COM server.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -215,7 +217,6 @@ mo.SetVariant(New DispatchWrapper(inew))
 mo.SetVariant(New ErrorWrapper(&H80054002))  
 ' Pass a value as a variant of type VT_CURRENCY interface.  
 mo.SetVariant(New CurrencyWrapper(New Decimal(5.25)))  
-  
 ```  
   
 ```csharp  
@@ -230,119 +231,120 @@ mo.SetVariant(new ErrorWrapper(0x80054002));
 mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));  
 ```  
   
- 包装类是在 <xref:System.Runtime.InteropServices> 命名空间中定义的。  
+ <span data-ttu-id="4051a-180">包装类在 <xref:System.Runtime.InteropServices> 命名空间中定义。</span><span class="sxs-lookup"><span data-stu-id="4051a-180">The wrapper classes are defined in the <xref:System.Runtime.InteropServices> namespace.</span></span>  
   
-### 将 IConvertible 接口封送到变量  
- 对于除了上一节中列出的那些类型以外的其他类型，可以通过实现 <xref:System.IConvertible> 接口来控制封送它们的方式。  如果对象实现 **IConvertible** 接口，则 COM Variant 类型将在运行时由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 方法返回的 <xref:System.TypeCode> 枚举的值决定。  
+### <a name="marshaling-the-iconvertible-interface-to-variant"></a><span data-ttu-id="4051a-181">将 IConvertible 接口封送到变体</span><span class="sxs-lookup"><span data-stu-id="4051a-181">Marshaling the IConvertible Interface to Variant</span></span>  
+ <span data-ttu-id="4051a-182">类型（上一节中列出的类型除外）可通过实现 <xref:System.IConvertible> 接口来控制封送处理它们的方式。</span><span class="sxs-lookup"><span data-stu-id="4051a-182">Types other than those listed in the previous section can control how they are marshaled by implementing the <xref:System.IConvertible> interface.</span></span> <span data-ttu-id="4051a-183">如果对象实现 IConvertible 接口，则 COM 变体类型将在运行时由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 方法返回的 <xref:System.TypeCode> 枚举值确定。</span><span class="sxs-lookup"><span data-stu-id="4051a-183">If the object implements the **IConvertible** interface, the COM variant type is determined at run time by the value of the <xref:System.TypeCode> enumeration returned from the <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> method.</span></span>  
   
- 下表显示 **TypeCode** 枚举的可能值以及每个值的相应 COM Variant 类型。  
+ <span data-ttu-id="4051a-184">下表显示 TypeCode 枚举可能的值以及每个值相应的 COM 变体类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-184">The following table shows the possible values for the **TypeCode** enumeration and the corresponding COM variant type for each value.</span></span>  
   
-|TypeCode|COM Variant 类型|  
-|--------------|--------------------|  
-|**TypeCode.Empty**|**VT\_EMPTY**|  
-|**TypeCode.Object**|**VT\_UNKNOWN**|  
-|**TypeCode.DBNull**|**VT\_NULL**|  
-|**TypeCode.Boolean**|**VT\_BOOL**|  
-|**TypeCode.Char**|**VT\_UI2**|  
-|**TypeCode.Sbyte**|**VT\_I1**|  
-|**TypeCode.Byte**|**VT\_UI1**|  
-|**TypeCode.Int16**|**VT\_I2**|  
-|**TypeCode.UInt16**|**VT\_UI2**|  
-|**TypeCode.Int32**|**VT\_I4**|  
-|**TypeCode.UInt32**|**VT\_UI4**|  
-|**TypeCode.Int64**|**VT\_I8**|  
-|**TypeCode.UInt64**|**VT\_UI8**|  
-|**TypeCode.Single**|**VT\_R4**|  
-|**TypeCode.Double**|**VT\_R8**|  
-|**TypeCode.Decimal**|**VT\_DECIMAL**|  
-|**TypeCode.DateTime**|**VT\_DATE**|  
-|**TypeCode.String**|**VT\_BSTR**|  
-|不支持。|**VT\_INT**|  
-|不支持。|**VT\_UINT**|  
-|不支持。|**VT\_ARRAY**|  
-|不支持。|**VT\_RECORD**|  
-|不支持。|**VT\_CY**|  
-|不支持。|**VT\_VARIANT**|  
+|<span data-ttu-id="4051a-185">TypeCode</span><span class="sxs-lookup"><span data-stu-id="4051a-185">TypeCode</span></span>|<span data-ttu-id="4051a-186">COM 变体类型</span><span class="sxs-lookup"><span data-stu-id="4051a-186">COM variant type</span></span>|  
+|--------------|----------------------|  
+|<span data-ttu-id="4051a-187">TypeCode.Empty</span><span class="sxs-lookup"><span data-stu-id="4051a-187">**TypeCode.Empty**</span></span>|<span data-ttu-id="4051a-188">VT_EMPTY</span><span class="sxs-lookup"><span data-stu-id="4051a-188">**VT_EMPTY**</span></span>|  
+|<span data-ttu-id="4051a-189">TypeCode.Object</span><span class="sxs-lookup"><span data-stu-id="4051a-189">**TypeCode.Object**</span></span>|<span data-ttu-id="4051a-190">VT_UNKNOWN</span><span class="sxs-lookup"><span data-stu-id="4051a-190">**VT_UNKNOWN**</span></span>|  
+|<span data-ttu-id="4051a-191">TypeCode.DBNull</span><span class="sxs-lookup"><span data-stu-id="4051a-191">**TypeCode.DBNull**</span></span>|<span data-ttu-id="4051a-192">VT_NULL</span><span class="sxs-lookup"><span data-stu-id="4051a-192">**VT_NULL**</span></span>|  
+|<span data-ttu-id="4051a-193">TypeCode.Boolean</span><span class="sxs-lookup"><span data-stu-id="4051a-193">**TypeCode.Boolean**</span></span>|<span data-ttu-id="4051a-194">VT_BOOL</span><span class="sxs-lookup"><span data-stu-id="4051a-194">**VT_BOOL**</span></span>|  
+|<span data-ttu-id="4051a-195">TypeCode.Char</span><span class="sxs-lookup"><span data-stu-id="4051a-195">**TypeCode.Char**</span></span>|<span data-ttu-id="4051a-196">VT_UI2</span><span class="sxs-lookup"><span data-stu-id="4051a-196">**VT_UI2**</span></span>|  
+|<span data-ttu-id="4051a-197">TypeCode.Sbyte</span><span class="sxs-lookup"><span data-stu-id="4051a-197">**TypeCode.Sbyte**</span></span>|<span data-ttu-id="4051a-198">VT_I1</span><span class="sxs-lookup"><span data-stu-id="4051a-198">**VT_I1**</span></span>|  
+|<span data-ttu-id="4051a-199">TypeCode.Byte</span><span class="sxs-lookup"><span data-stu-id="4051a-199">**TypeCode.Byte**</span></span>|<span data-ttu-id="4051a-200">VT_UI1</span><span class="sxs-lookup"><span data-stu-id="4051a-200">**VT_UI1**</span></span>|  
+|<span data-ttu-id="4051a-201">TypeCode.Int16</span><span class="sxs-lookup"><span data-stu-id="4051a-201">**TypeCode.Int16**</span></span>|<span data-ttu-id="4051a-202">VT_I2</span><span class="sxs-lookup"><span data-stu-id="4051a-202">**VT_I2**</span></span>|  
+|<span data-ttu-id="4051a-203">TypeCode.UInt16</span><span class="sxs-lookup"><span data-stu-id="4051a-203">**TypeCode.UInt16**</span></span>|<span data-ttu-id="4051a-204">VT_UI2</span><span class="sxs-lookup"><span data-stu-id="4051a-204">**VT_UI2**</span></span>|  
+|<span data-ttu-id="4051a-205">TypeCode.Int32</span><span class="sxs-lookup"><span data-stu-id="4051a-205">**TypeCode.Int32**</span></span>|<span data-ttu-id="4051a-206">VT_I4</span><span class="sxs-lookup"><span data-stu-id="4051a-206">**VT_I4**</span></span>|  
+|<span data-ttu-id="4051a-207">TypeCode.UInt32</span><span class="sxs-lookup"><span data-stu-id="4051a-207">**TypeCode.UInt32**</span></span>|<span data-ttu-id="4051a-208">VT_UI4</span><span class="sxs-lookup"><span data-stu-id="4051a-208">**VT_UI4**</span></span>|  
+|<span data-ttu-id="4051a-209">TypeCode.Int64</span><span class="sxs-lookup"><span data-stu-id="4051a-209">**TypeCode.Int64**</span></span>|<span data-ttu-id="4051a-210">VT_I8</span><span class="sxs-lookup"><span data-stu-id="4051a-210">**VT_I8**</span></span>|  
+|<span data-ttu-id="4051a-211">TypeCode.UInt64</span><span class="sxs-lookup"><span data-stu-id="4051a-211">**TypeCode.UInt64**</span></span>|<span data-ttu-id="4051a-212">VT_UI8</span><span class="sxs-lookup"><span data-stu-id="4051a-212">**VT_UI8**</span></span>|  
+|<span data-ttu-id="4051a-213">TypeCode.Single</span><span class="sxs-lookup"><span data-stu-id="4051a-213">**TypeCode.Single**</span></span>|<span data-ttu-id="4051a-214">VT_R4</span><span class="sxs-lookup"><span data-stu-id="4051a-214">**VT_R4**</span></span>|  
+|<span data-ttu-id="4051a-215">TypeCode.Double</span><span class="sxs-lookup"><span data-stu-id="4051a-215">**TypeCode.Double**</span></span>|<span data-ttu-id="4051a-216">VT_R8</span><span class="sxs-lookup"><span data-stu-id="4051a-216">**VT_R8**</span></span>|  
+|<span data-ttu-id="4051a-217">TypeCode.Decimal</span><span class="sxs-lookup"><span data-stu-id="4051a-217">**TypeCode.Decimal**</span></span>|<span data-ttu-id="4051a-218">VT_DECIMAL</span><span class="sxs-lookup"><span data-stu-id="4051a-218">**VT_DECIMAL**</span></span>|  
+|<span data-ttu-id="4051a-219">TypeCode.DateTime</span><span class="sxs-lookup"><span data-stu-id="4051a-219">**TypeCode.DateTime**</span></span>|<span data-ttu-id="4051a-220">VT_DATE</span><span class="sxs-lookup"><span data-stu-id="4051a-220">**VT_DATE**</span></span>|  
+|<span data-ttu-id="4051a-221">TypeCode.String</span><span class="sxs-lookup"><span data-stu-id="4051a-221">**TypeCode.String**</span></span>|<span data-ttu-id="4051a-222">VT_BSTR</span><span class="sxs-lookup"><span data-stu-id="4051a-222">**VT_BSTR**</span></span>|  
+|<span data-ttu-id="4051a-223">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-223">Not supported.</span></span>|<span data-ttu-id="4051a-224">VT_INT</span><span class="sxs-lookup"><span data-stu-id="4051a-224">**VT_INT**</span></span>|  
+|<span data-ttu-id="4051a-225">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-225">Not supported.</span></span>|<span data-ttu-id="4051a-226">VT_UINT</span><span class="sxs-lookup"><span data-stu-id="4051a-226">**VT_UINT**</span></span>|  
+|<span data-ttu-id="4051a-227">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-227">Not supported.</span></span>|<span data-ttu-id="4051a-228">VT_ARRAY</span><span class="sxs-lookup"><span data-stu-id="4051a-228">**VT_ARRAY**</span></span>|  
+|<span data-ttu-id="4051a-229">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-229">Not supported.</span></span>|<span data-ttu-id="4051a-230">VT_RECORD</span><span class="sxs-lookup"><span data-stu-id="4051a-230">**VT_RECORD**</span></span>|  
+|<span data-ttu-id="4051a-231">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-231">Not supported.</span></span>|<span data-ttu-id="4051a-232">VT_CY</span><span class="sxs-lookup"><span data-stu-id="4051a-232">**VT_CY**</span></span>|  
+|<span data-ttu-id="4051a-233">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-233">Not supported.</span></span>|<span data-ttu-id="4051a-234">VT_VARIANT</span><span class="sxs-lookup"><span data-stu-id="4051a-234">**VT_VARIANT**</span></span>|  
   
- COM 变量的值通过调用 **IConvertible.To** *Type* 接口来确定，其中 **To** *Type* 是对应于从 **IConvertible.GetTypeCode** 返回的类型的转换例程。  例如，从 **IConvertible.GetTypeCode** 返回 **TypeCode.Double** 的对象被封送为 **VT\_R8** 类型的 COM 变量。  可以通过强制转换为 **IConvertible** 接口并调用 <xref:System.IConvertible.ToDouble%2A> 方法来获取变量的值（它存储在 COM Variant 的 **dblVal** 字段中）。  
+ <span data-ttu-id="4051a-235">通过调用 IConvertible.To Type 接口确定 COM 变体的值，其中 To Type 是转换例程，它对应于从 IConvertible.GetTypeCode 返回的类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-235">The value of the COM variant is determined by calling the **IConvertible.To** *Type* interface, where **To** *Type* is the conversion routine that corresponds to the type that was returned from **IConvertible.GetTypeCode**.</span></span> <span data-ttu-id="4051a-236">例如，将从 IConvertible.GetTypeCode 返回 TypeCode.Double 的对象作为 VT_R8 类型的 COM 变体封送。</span><span class="sxs-lookup"><span data-stu-id="4051a-236">For example, an object that returns **TypeCode.Double** from **IConvertible.GetTypeCode** is marshaled as a COM variant of type **VT_R8**.</span></span> <span data-ttu-id="4051a-237">通过强制转换为 IConvertible 接口并调用 <xref:System.IConvertible.ToDouble%2A> 方法，可获取变体值（存储在 COM 变体的 dblVal 字段中）。</span><span class="sxs-lookup"><span data-stu-id="4051a-237">You can obtain the value of the variant (stored in the **dblVal** field of the COM variant) by casting to the **IConvertible** interface and calling the <xref:System.IConvertible.ToDouble%2A> method.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
-## 将变量封送到对象  
- 将变量封送到对象时，被封送变量的类型（有时还有值）确定产生的对象的类型。  下表标识每个变量类型以及在将变量从 COM 传递给 .NET Framework 时封送拆收器所创建的相应对象类型。  
+## <a name="marshaling-variant-to-object"></a><span data-ttu-id="4051a-238">将变体封送到对象</span><span class="sxs-lookup"><span data-stu-id="4051a-238">Marshaling Variant to Object</span></span>  
+ <span data-ttu-id="4051a-239">将变体封送到对象时，所封送变体的类型（有时是值）确定生成的对象类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-239">When marshaling a variant to an object, the type, and sometimes the value, of the marshaled variant determines the type of object produced.</span></span> <span data-ttu-id="4051a-240">下表标识每个变体类型以及变体从 COM 传递给 .NET Framework 时封送拆收器所创建的相应对象类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-240">The following table identifies each variant type and the corresponding object type that the marshaler creates when a variant is passed from COM to the .NET Framework.</span></span>  
   
-|COM Variant 类型|对象类型|  
-|--------------------|----------|  
-|**VT\_EMPTY**|null 对象引用（在 Visual Basic 中为 **Nothing**）。|  
-|**VT\_NULL**|<xref:System.DBNull?displayProperty=fullName>|  
-|**VT\_DISPATCH**|**System.\_\_ComObject**；如果 \(pdispVal \=\= null\) 则为 null|  
-|**VT\_UNKNOWN**|**System.\_\_ComObject**；如果 \(punkVal \=\= null\) 则为 null|  
-|**VT\_ERROR**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT\_BOOL**|<xref:System.Boolean?displayProperty=fullName>|  
-|**VT\_I1**|<xref:System.SByte?displayProperty=fullName>|  
-|**VT\_UI1**|<xref:System.Byte?displayProperty=fullName>|  
-|**VT\_I2**|<xref:System.Int16?displayProperty=fullName>|  
-|**VT\_UI2**|<xref:System.UInt16?displayProperty=fullName>|  
-|**VT\_I4**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT\_UI4**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT\_I8**|<xref:System.Int64?displayProperty=fullName>|  
-|**VT\_UI8**|<xref:System.UInt64?displayProperty=fullName>|  
-|**VT\_R4**|<xref:System.Single?displayProperty=fullName>|  
-|**VT\_R8**|<xref:System.Double?displayProperty=fullName>|  
-|**VT\_DECIMAL**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT\_DATE**|<xref:System.DateTime?displayProperty=fullName>|  
-|**VT\_BSTR**|<xref:System.String?displayProperty=fullName>|  
-|**VT\_INT**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT\_UINT**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT\_ARRAY** &#124; **VT\_\***|<xref:System.Array?displayProperty=fullName>|  
-|**VT\_CY**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT\_RECORD**|相应的装箱值类型。|  
-|**VT\_VARIANT**|不支持。|  
+|<span data-ttu-id="4051a-241">COM 变体类型</span><span class="sxs-lookup"><span data-stu-id="4051a-241">COM variant type</span></span>|<span data-ttu-id="4051a-242">对象类型</span><span class="sxs-lookup"><span data-stu-id="4051a-242">Object type</span></span>|  
+|----------------------|-----------------|  
+|<span data-ttu-id="4051a-243">VT_EMPTY</span><span class="sxs-lookup"><span data-stu-id="4051a-243">**VT_EMPTY**</span></span>|<span data-ttu-id="4051a-244">Null 对象引用（在 Visual Basic 中为 Nothing）。</span><span class="sxs-lookup"><span data-stu-id="4051a-244">Null object reference (**Nothing** in Visual Basic).</span></span>|  
+|<span data-ttu-id="4051a-245">VT_NULL</span><span class="sxs-lookup"><span data-stu-id="4051a-245">**VT_NULL**</span></span>|<xref:System.DBNull?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-246">VT_DISPATCH</span><span class="sxs-lookup"><span data-stu-id="4051a-246">**VT_DISPATCH**</span></span>|<span data-ttu-id="4051a-247">System.__ComObject；如果 (pdispVal == null)，则为 null</span><span class="sxs-lookup"><span data-stu-id="4051a-247">**System.__ComObject** or null if (pdispVal == null)</span></span>|  
+|<span data-ttu-id="4051a-248">VT_UNKNOWN</span><span class="sxs-lookup"><span data-stu-id="4051a-248">**VT_UNKNOWN**</span></span>|<span data-ttu-id="4051a-249">System.__ComObject；如果 (punkVal == null)，则为 null</span><span class="sxs-lookup"><span data-stu-id="4051a-249">**System.__ComObject** or null if (punkVal == null)</span></span>|  
+|<span data-ttu-id="4051a-250">VT_ERROR</span><span class="sxs-lookup"><span data-stu-id="4051a-250">**VT_ERROR**</span></span>|<xref:System.UInt32?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-251">VT_BOOL</span><span class="sxs-lookup"><span data-stu-id="4051a-251">**VT_BOOL**</span></span>|<xref:System.Boolean?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-252">VT_I1</span><span class="sxs-lookup"><span data-stu-id="4051a-252">**VT_I1**</span></span>|<xref:System.SByte?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-253">VT_UI1</span><span class="sxs-lookup"><span data-stu-id="4051a-253">**VT_UI1**</span></span>|<xref:System.Byte?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-254">VT_I2</span><span class="sxs-lookup"><span data-stu-id="4051a-254">**VT_I2**</span></span>|<xref:System.Int16?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-255">VT_UI2</span><span class="sxs-lookup"><span data-stu-id="4051a-255">**VT_UI2**</span></span>|<xref:System.UInt16?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-256">VT_I4</span><span class="sxs-lookup"><span data-stu-id="4051a-256">**VT_I4**</span></span>|<xref:System.Int32?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-257">VT_UI4</span><span class="sxs-lookup"><span data-stu-id="4051a-257">**VT_UI4**</span></span>|<xref:System.UInt32?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-258">VT_I8</span><span class="sxs-lookup"><span data-stu-id="4051a-258">**VT_I8**</span></span>|<xref:System.Int64?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-259">VT_UI8</span><span class="sxs-lookup"><span data-stu-id="4051a-259">**VT_UI8**</span></span>|<xref:System.UInt64?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-260">VT_R4</span><span class="sxs-lookup"><span data-stu-id="4051a-260">**VT_R4**</span></span>|<xref:System.Single?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-261">VT_R8</span><span class="sxs-lookup"><span data-stu-id="4051a-261">**VT_R8**</span></span>|<xref:System.Double?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-262">VT_DECIMAL</span><span class="sxs-lookup"><span data-stu-id="4051a-262">**VT_DECIMAL**</span></span>|<xref:System.Decimal?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-263">VT_DATE</span><span class="sxs-lookup"><span data-stu-id="4051a-263">**VT_DATE**</span></span>|<xref:System.DateTime?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-264">VT_BSTR</span><span class="sxs-lookup"><span data-stu-id="4051a-264">**VT_BSTR**</span></span>|<xref:System.String?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-265">VT_INT</span><span class="sxs-lookup"><span data-stu-id="4051a-265">**VT_INT**</span></span>|<xref:System.Int32?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-266">VT_UINT</span><span class="sxs-lookup"><span data-stu-id="4051a-266">**VT_UINT**</span></span>|<xref:System.UInt32?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-267">VT_ARRAY | VT_\*</span><span class="sxs-lookup"><span data-stu-id="4051a-267">**VT_ARRAY** &#124; **VT_\***</span></span>|<xref:System.Array?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-268">VT_CY</span><span class="sxs-lookup"><span data-stu-id="4051a-268">**VT_CY**</span></span>|<xref:System.Decimal?displayProperty=fullName>|  
+|<span data-ttu-id="4051a-269">VT_RECORD</span><span class="sxs-lookup"><span data-stu-id="4051a-269">**VT_RECORD**</span></span>|<span data-ttu-id="4051a-270">对应装箱的值类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-270">Corresponding boxed value type.</span></span>|  
+|<span data-ttu-id="4051a-271">VT_VARIANT</span><span class="sxs-lookup"><span data-stu-id="4051a-271">**VT_VARIANT**</span></span>|<span data-ttu-id="4051a-272">不支持。</span><span class="sxs-lookup"><span data-stu-id="4051a-272">Not supported.</span></span>|  
   
- 从 COM 传递给托管代码，然后再传回到 COM 的变量类型可能无法在调用的持续时间内保持为同样的变量类型。  请考虑将 **VT\_DISPATCH** 类型的变量从 COM 传递到 .NET Framework 时会发生什么。  在封送处理期间，变量转换为 <xref:System.Object?displayProperty=fullName>。  之后，如果将 **Object** 传回到 COM，则它将被封送回到 **VT\_UNKNOWN** 类型的变量。  不能保证将对象从托管代码封送到 COM 时所产生的变量将与最初用于产生该对象的变量为同一类型。  
+ <span data-ttu-id="4051a-273">变体类型从 COM 传递给托管代码、再传回 COM，这样的变体类型在调用期间可能不会保留同一变体类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-273">Variant types passed from COM to managed code and then back to COM might not retain the same variant type for the duration of the call.</span></span> <span data-ttu-id="4051a-274">请考虑将 VT_DISPATCH 类型的变体从 COM 传递到 .NET Framework 时会发生的情况。</span><span class="sxs-lookup"><span data-stu-id="4051a-274">Consider what happens when a variant of type **VT_DISPATCH** is passed from COM to the .NET Framework.</span></span> <span data-ttu-id="4051a-275">在封送处理期间，变体转换为 <xref:System.Object?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="4051a-275">During marshaling, the variant is converted to a <xref:System.Object?displayProperty=fullName>.</span></span> <span data-ttu-id="4051a-276">如果随后对象传回 COM，则将它封送回 VT_UNKNOWN 类型的变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-276">If the **Object** is then passed back to COM, it is marshaled back to a variant of type **VT_UNKNOWN**.</span></span> <span data-ttu-id="4051a-277">将对象从托管代码封送到 COM 时，无法保证产生的变体与最初用于产生该对象的变体为同一类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-277">There is no guarantee that the variant produced when an object is marshaled from managed code to COM will be the same type as the variant initially used to produce the object.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
-## 封送 ByRef 变量  
- 虽然变量本身可以通过值或引用传递，但是 **VT\_BYREF** 标志也可以与任何变量类型一起使用以指示变量的内容通过引用而不是通过值传递。  按引用封送变量与封送设置了 **VT\_BYREF** 标志的变量之间的差异可能是令人费解的。  下面的插图阐明这些差异。  
+## <a name="marshaling-byref-variants"></a><span data-ttu-id="4051a-278">封送 ByRef 变体</span><span class="sxs-lookup"><span data-stu-id="4051a-278">Marshaling ByRef Variants</span></span>  
+ <span data-ttu-id="4051a-279">虽然变体本身可以按值或按引用传递，但 VT_BYREF 标志也可用于任何变体类型，指示变体的内容按引用传递，而不是按值传递。</span><span class="sxs-lookup"><span data-stu-id="4051a-279">Although variants themselves can be passed by value or by reference, the **VT_BYREF** flag can also be used with any variant type to indicate that the contents of the variant are being passed by reference instead of by value.</span></span> <span data-ttu-id="4051a-280">对于按引用封送变体与使用设置的 VT_BYREF 标志封送变体，人们容易混淆这二者之间的差异。</span><span class="sxs-lookup"><span data-stu-id="4051a-280">The difference between marshaling variants by reference and marshaling a variant with the **VT_BYREF** flag set can be confusing.</span></span> <span data-ttu-id="4051a-281">下图阐明了这些差异。</span><span class="sxs-lookup"><span data-stu-id="4051a-281">The following illustration clarifies the differences.</span></span>  
   
- ![在堆栈上传递的变量](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
-通过值和通过引用传递的变量  
+ <span data-ttu-id="4051a-282">![堆栈上传递的变体](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")</span><span class="sxs-lookup"><span data-stu-id="4051a-282">![Variant passed on the stack](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")</span></span>  
+<span data-ttu-id="4051a-283">按值和按引用传递的变体</span><span class="sxs-lookup"><span data-stu-id="4051a-283">Variants passed by value and by reference</span></span>  
   
- **按值封送对象和变量的默认行为**  
+ <span data-ttu-id="4051a-284">**值封送对象和变体的默认行为**</span><span class="sxs-lookup"><span data-stu-id="4051a-284">**Default behavior for marshaling objects and variants by value**</span></span>  
   
--   将对象从托管代码传递给 COM 时，对象的内容将使用在[将对象封送到变量](#cpcondefaultmarshalingforobjectsanchor3)中定义的规则复制到由封送拆收器创建的新变量中。  对非托管端的变量所做的更改将不会在从调用返回时传播回原始对象。  
+-   <span data-ttu-id="4051a-285">将对象从托管代码传递给 COM 时，使用在[将对象封送到变体](#cpcondefaultmarshalingforobjectsanchor3)中定义的规则，将对象内容复制到封送拆收器创建的新变体中。</span><span class="sxs-lookup"><span data-stu-id="4051a-285">When passing objects from managed code to COM, the contents of the object are copied into a new variant created by the marshaler, using the rules defined in [Marshaling Object to Variant](#cpcondefaultmarshalingforobjectsanchor3).</span></span> <span data-ttu-id="4051a-286">对非托管端的变体所做的更改不会在从调用返回时传回起始对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-286">Changes made to the variant on the unmanaged side are not propagated back to the original object on return from the call.</span></span>  
   
--   将变量从 COM 传递给托管代码时，变量的内容将使用在[将变量封送到对象](#cpcondefaultmarshalingforobjectsanchor4)中定义的规则复制到新创建的对象。  对托管端的对象所做的更改将不会在从调用返回时传播回原始变量。  
+-   <span data-ttu-id="4051a-287">将变体从 COM 传递给托管代码时，使用[将变体封送到对象](#cpcondefaultmarshalingforobjectsanchor4)中定义的规则，将变体内容复制到新创建的对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-287">When passing variants from COM to managed code, the contents of the variant are copied to a newly created object, using the rules defined in [Marshaling Variant to Object](#cpcondefaultmarshalingforobjectsanchor4).</span></span> <span data-ttu-id="4051a-288">对托管端的对象所做的更改不会在从调用返回时传回起始变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-288">Changes made to the object on the managed side are not propagated back to the original variant on return from the call.</span></span>  
   
- **按引用封送对象和变量的默认行为**  
+ <span data-ttu-id="4051a-289">**按引用封送对象和变体的默认行为**</span><span class="sxs-lookup"><span data-stu-id="4051a-289">**Default behavior for marshaling objects and variants by reference**</span></span>  
   
- 若要将更改传播回调用方，参数必须通过引用传递。  例如，可以使用 C\# 中的 **ref**（或 Visual Basic 托管代码中的 **ByRef**）关键字通过引用传递参数。  在 COM 中，引用参数是使用指针（如 **variant \***）传递的。  
+ <span data-ttu-id="4051a-290">要将更改传回调用方，必须按引用传递参数。</span><span class="sxs-lookup"><span data-stu-id="4051a-290">To propagate changes back to the caller, the parameters must be passed by reference.</span></span> <span data-ttu-id="4051a-291">例如，可使用 C# 中的 ref 关键字（或 Visual Basic 托管代码中的 ByRef），按引用传递参数。</span><span class="sxs-lookup"><span data-stu-id="4051a-291">For example, you can use the **ref** keyword in C# (or **ByRef** in Visual Basic managed code) to pass parameters by reference.</span></span> <span data-ttu-id="4051a-292">在 COM 中，使用指针（例如 variant \*）传递引用参数。</span><span class="sxs-lookup"><span data-stu-id="4051a-292">In COM, reference parameters are passed using a pointer such as a **variant \***.</span></span>  
   
--   将对象通过引用传递给 COM 时，封送拆收器创建一个新变量并在进行调用之前将对象引用的内容复制到变量中。  变量被传递给用户可随意更改变量的内容的非托管函数。  从调用返回时，对非托管端的变量所做的任何更改都将传播回原始对象。  如果变量的类型与传递给调用的变量的类型不同，则更改将被传播回另一类型的对象。  也就是说，传递到调用中的对象的类型可以不同于从调用返回的对象的类型。  
+-   <span data-ttu-id="4051a-293">将对象按引用传递给 COM 时，封送拆收器创建一个新变体，并在调用前将对象引用内容复制到变体中。</span><span class="sxs-lookup"><span data-stu-id="4051a-293">When passing an object to COM by reference, the marshaler creates a new variant and copies the contents of the object reference into the variant before the call is made.</span></span> <span data-ttu-id="4051a-294">变体被传递给未托管的函数，用户可在其中随意更改变体的内容。</span><span class="sxs-lookup"><span data-stu-id="4051a-294">The variant is passed to the unmanaged function where the user is free to change the contents of the variant.</span></span> <span data-ttu-id="4051a-295">从调用返回时，对非托管端的变体所做的更改会传回起始对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-295">On return from the call, any changes made to the variant on the unmanaged side are propagated back to the original object.</span></span> <span data-ttu-id="4051a-296">如果变体类型与传递给调用的变体类型不同，则更改会传回另一类型的对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-296">If the type of the variant differs from the type of the variant passed to the call, then the changes are propagated back to an object of a different type.</span></span> <span data-ttu-id="4051a-297">也就是说，传递给调用的对象类型可以不同于从调用返回的对象类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-297">That is, the type of the object passed into the call can differ from the type of the object returned from the call.</span></span>  
   
--   将变量通过引用传递给托管代码时，封送拆收器创建一个新对象，并在进行调用之前将变量的内容复制到对象中。  对该对象的引用被传递给用户可以随意更改该对象的托管函数。  从调用返回时，对被引用的对象所做的任何更改都将传播回原始变量。  如果对象的类型与传入调用中的对象的类型不同，则原始变量的类型将被更改而且值将被传播回变量中。  同样，传入调用中的变量的类型可以不同于从调用返回的变量的类型。  
+-   <span data-ttu-id="4051a-298">按引用将变体传递给托管代码时，封送拆收器创建一个新对象，并在调用前将变体内容复制到对象中。</span><span class="sxs-lookup"><span data-stu-id="4051a-298">When passing a variant to managed code by reference, the marshaler creates a new object and copies the contents of the variant into the object before making the call.</span></span> <span data-ttu-id="4051a-299">对对象的引用被传递给托管函数，用户可在其中随意更改该对象。</span><span class="sxs-lookup"><span data-stu-id="4051a-299">A reference to the object is passed to the managed function, where the user is free to change the object.</span></span> <span data-ttu-id="4051a-300">从调用返回时，对引用的对象所做的任何更改都将传回起始变体。</span><span class="sxs-lookup"><span data-stu-id="4051a-300">On return from the call, any changes made to the referenced object are propagated back to the original variant.</span></span> <span data-ttu-id="4051a-301">如果对象类型与传入调用的对象类型不同，则起始变体的类型发生更改，值传回变体中。</span><span class="sxs-lookup"><span data-stu-id="4051a-301">If the type of the object differs from the type of the object passed in to the call, the type of the original variant is changed and the value is propagated back into the variant.</span></span> <span data-ttu-id="4051a-302">同样，传入调用的变体类型可以不同于从调用返回的变体类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-302">Again, the type of the variant passed into the call can differ from the type of the variant returned from the call.</span></span>  
   
- **封送设置了 VT\_BYREF 标志的变量的默认行为**  
+ <span data-ttu-id="4051a-303">**使用设置的 VT_BYREF 标志封送变体的默认行为**</span><span class="sxs-lookup"><span data-stu-id="4051a-303">**Default behavior for marshaling a variant with the VT_BYREF flag set**</span></span>  
   
--   通过值传递给托管代码的变量可以设置 **VT\_BYREF** 标志以指示该变量包含引用而不是值。  在这种情况下，仍然将变量封送到对象，原因是变量正通过值传递。  封送拆收器自动取消对变量内容的引用，并在进行调用前将其复制到新创建的对象中。  然后，对象将被传递到托管函数中；但是，在从调用返回时，该对象不会被传播回原始变量中。  对托管对象所做的更改将丢失。  
+-   <span data-ttu-id="4051a-304">按值传递给托管代码的变体可设置 VT_BYREF 标志，用于指示该变体包含引用而不是值。</span><span class="sxs-lookup"><span data-stu-id="4051a-304">A variant being passed to managed code by value can have the **VT_BYREF** flag set to indicate that the variant contains a reference instead of a value.</span></span> <span data-ttu-id="4051a-305">在这种情况下，仍会将变体封送到对象，因为变体是按值传递的。</span><span class="sxs-lookup"><span data-stu-id="4051a-305">In this case, the variant is still marshaled to an object because the variant is being passed by value.</span></span> <span data-ttu-id="4051a-306">封送拆收器自动取消对变体内容的引用，并在调用前将其复制到新创建的对象中。</span><span class="sxs-lookup"><span data-stu-id="4051a-306">The marshaler automatically dereferences the contents of the variant and copies it into a newly created object before making the call.</span></span> <span data-ttu-id="4051a-307">然后，将对象传入托管函数中；但是，在从调用返回时，不会将该对象传回起始变体中。</span><span class="sxs-lookup"><span data-stu-id="4051a-307">The object is then passed into the managed function; however, on return from the call, the object is not propagated back into the original variant.</span></span> <span data-ttu-id="4051a-308">对托管对象所做的更改丢失。</span><span class="sxs-lookup"><span data-stu-id="4051a-308">Changes made to the managed object are lost.</span></span>  
   
     > [!CAUTION]
-    >  即使变量设置了 **VT\_BYREF** 标志，也无法更改通过值传递的变量的值。  
+    >  <span data-ttu-id="4051a-309">即使变体设置了 VT_BYREF 标志，也无法更改按值传递的变体的值。</span><span class="sxs-lookup"><span data-stu-id="4051a-309">There is no way to change the value of a variant passed by value, even if the variant has the **VT_BYREF** flag set.</span></span>  
   
--   通过引用传递给托管代码的变量也可以设置 **VT\_BYREF** 标志以指示该变量包含另一个引用。  如果它这样做，则会将该变量封送到 **ref** 对象，原因是该变量是通过引用传递的。  封送拆收器自动取消对变量内容的引用，并在进行调用前将其复制到新创建的对象中。  从调用返回时，仅当对象与传入的对象是同一类型时，才将对象的值传播回原始变量中的引用。  也就是说，传播不会更改设置了 **VT\_BYREF** 标志的变量的类型。  如果在调用期间更改了对象的类型，则在从调用返回时将发生 <xref:System.InvalidCastException>。  
+-   <span data-ttu-id="4051a-310">按引用传递给托管代码的变体也可设置 VT_BYREF 标志，用于指示该变体包含另一个引用。</span><span class="sxs-lookup"><span data-stu-id="4051a-310">A variant being passed to managed code by reference can also have the **VT_BYREF** flag set to indicate that the variant contains another reference.</span></span> <span data-ttu-id="4051a-311">如果采用此做法，则会将该变体封送到 ref 对象，因为变体是按引用传递的。</span><span class="sxs-lookup"><span data-stu-id="4051a-311">If it does, the variant is marshaled to a **ref** object because the variant is being passed by reference.</span></span> <span data-ttu-id="4051a-312">封送拆收器自动取消对变体内容的引用，并在调用前将其复制到新创建的对象中。</span><span class="sxs-lookup"><span data-stu-id="4051a-312">The marshaler automatically dereferences the contents of the variant and copies it into a newly created object before making the call.</span></span> <span data-ttu-id="4051a-313">从调用返回时，仅当对象与传入的对象是同一类型时，才会将对象的值传回起始变体内的引用。</span><span class="sxs-lookup"><span data-stu-id="4051a-313">On return from the call, the value of the object is propagated back to the reference within the original variant only if the object is the same type as the object passed in.</span></span> <span data-ttu-id="4051a-314">也就是说，传播不会更改设置了 VT_BYREF 标志的变体的类型。</span><span class="sxs-lookup"><span data-stu-id="4051a-314">That is, propagation does not change the type of a variant with the **VT_BYREF** flag set.</span></span> <span data-ttu-id="4051a-315">如果在调用期间对象类型发生变化，则在从调用返回时将发生 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="4051a-315">If the type of the object is changed during the call, an <xref:System.InvalidCastException> occurs on return from the call.</span></span>  
   
- 下表汇总了变量和对象的传播规则。  
+ <span data-ttu-id="4051a-316">下表总结了变体和对象的传播规则。</span><span class="sxs-lookup"><span data-stu-id="4051a-316">The following table summarizes the propagation rules for variants and objects.</span></span>  
   
-|发件人|若要|传播回更改|  
-|---------|--------|-----------|  
-|**Variant**  *v*|**Object**  *o*|从不|  
-|**Object**  *o*|**Variant**  *v*|从不|  
-|**Variant**   ***\****  *pv*|**Ref Object**  *o*|始终|  
-|**Ref object**  *o*|**Variant**   ***\****  *pv*|始终|  
-|**Variant**  *v* **\(VT\_BYREF** *&#124;*  **VT\_\*\)**|**Object**  *o*|从不|  
-|**Variant**  *v* **\(VT\_BYREF** *&#124;*  **VT\_\)**|**Ref Object**  *o*|仅当类型尚未更改时。|  
+|<span data-ttu-id="4051a-317">From</span><span class="sxs-lookup"><span data-stu-id="4051a-317">From</span></span>|<span data-ttu-id="4051a-318">到</span><span class="sxs-lookup"><span data-stu-id="4051a-318">To</span></span>|<span data-ttu-id="4051a-319">传回的更改</span><span class="sxs-lookup"><span data-stu-id="4051a-319">Changes propagated back</span></span>|  
+|----------|--------|-----------------------------|  
+|<span data-ttu-id="4051a-320">变体 v</span><span class="sxs-lookup"><span data-stu-id="4051a-320">**Variant**  *v*</span></span>|<span data-ttu-id="4051a-321">对象 o</span><span class="sxs-lookup"><span data-stu-id="4051a-321">**Object**  *o*</span></span>|<span data-ttu-id="4051a-322">Never</span><span class="sxs-lookup"><span data-stu-id="4051a-322">Never</span></span>|  
+|<span data-ttu-id="4051a-323">对象 o</span><span class="sxs-lookup"><span data-stu-id="4051a-323">**Object**  *o*</span></span>|<span data-ttu-id="4051a-324">变体 v</span><span class="sxs-lookup"><span data-stu-id="4051a-324">**Variant**  *v*</span></span>|<span data-ttu-id="4051a-325">Never</span><span class="sxs-lookup"><span data-stu-id="4051a-325">Never</span></span>|  
+|<span data-ttu-id="4051a-326">变体 \* pv</span><span class="sxs-lookup"><span data-stu-id="4051a-326">**Variant**   ***\****  *pv*</span></span>|<span data-ttu-id="4051a-327">Ref 对象 o</span><span class="sxs-lookup"><span data-stu-id="4051a-327">**Ref Object**  *o*</span></span>|<span data-ttu-id="4051a-328">Always</span><span class="sxs-lookup"><span data-stu-id="4051a-328">Always</span></span>|  
+|<span data-ttu-id="4051a-329">Ref 对象 o</span><span class="sxs-lookup"><span data-stu-id="4051a-329">**Ref object**  *o*</span></span>|<span data-ttu-id="4051a-330">变体 \* pv</span><span class="sxs-lookup"><span data-stu-id="4051a-330">**Variant**   ***\****  *pv*</span></span>|<span data-ttu-id="4051a-331">Always</span><span class="sxs-lookup"><span data-stu-id="4051a-331">Always</span></span>|  
+|<span data-ttu-id="4051a-332">变体  v (VT_BYREF | VT_)**\***</span><span class="sxs-lookup"><span data-stu-id="4051a-332">**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**</span></span>|<span data-ttu-id="4051a-333">对象 o</span><span class="sxs-lookup"><span data-stu-id="4051a-333">**Object**  *o*</span></span>|<span data-ttu-id="4051a-334">Never</span><span class="sxs-lookup"><span data-stu-id="4051a-334">Never</span></span>|  
+|<span data-ttu-id="4051a-335">变体 v (VT_BYREF | VT_)</span><span class="sxs-lookup"><span data-stu-id="4051a-335">**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**</span></span>|<span data-ttu-id="4051a-336">Ref 对象 o</span><span class="sxs-lookup"><span data-stu-id="4051a-336">**Ref Object**  *o*</span></span>|<span data-ttu-id="4051a-337">仅类型未发生更改时。</span><span class="sxs-lookup"><span data-stu-id="4051a-337">Only if the type has not changed.</span></span>|  
   
-## 请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Directional Attributes](http://msdn.microsoft.com/zh-cn/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a><span data-ttu-id="4051a-338">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4051a-338">See Also</span></span>  
+ <span data-ttu-id="4051a-339">[默认的封送行为](../../../docs/framework/interop/default-marshaling-behavior.md) </span><span class="sxs-lookup"><span data-stu-id="4051a-339">[Default Marshaling Behavior](../../../docs/framework/interop/default-marshaling-behavior.md) </span></span>  
+ <span data-ttu-id="4051a-340">[Blittable 和非 Blittable 类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md) </span><span class="sxs-lookup"><span data-stu-id="4051a-340">[Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md) </span></span>  
+ <span data-ttu-id="4051a-341">[方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2) </span><span class="sxs-lookup"><span data-stu-id="4051a-341">[Directional Attributes](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2) </span></span>  
+ [<span data-ttu-id="4051a-342">复制和锁定</span><span class="sxs-lookup"><span data-stu-id="4051a-342">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)
+

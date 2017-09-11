@@ -1,1 +1,1 @@
-Windows 运行时
+<span data-ttu-id="f9109-101">Windows 运行时</span><span class="sxs-lookup"><span data-stu-id="f9109-101">Windows Runtime</span></span>

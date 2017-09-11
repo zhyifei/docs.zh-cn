@@ -32,48 +32,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0160165d3df9755481b89570b4cd135b3a990a2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 016c808145f7faba26a288cd5075f10d7f5279d5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="relaxed-delegate-conversion-visual-basic"></a>宽松委托转换 (Visual Basic)
-宽松的委托转换，您将子例程和函数分配给委托或处理程序，甚至当它们的签名不一致时。 因此，绑定到委托将与已允许的方法调用的绑定一致。  
+# <a name="relaxed-delegate-conversion-visual-basic"></a><span data-ttu-id="d1e7a-102">宽松委托转换 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1e7a-102">Relaxed Delegate Conversion (Visual Basic)</span></span>
+<span data-ttu-id="d1e7a-103">宽松的委托转换，您将子例程和函数分配给委托或处理程序，甚至当它们的签名不一致时。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-103">Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical.</span></span> <span data-ttu-id="d1e7a-104">因此，绑定到委托将与已允许的方法调用的绑定一致。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-104">Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.</span></span>  
   
-## <a name="parameters-and-return-type"></a>参数和返回类型  
- 替代签名完全匹配松散的转换需要满足以下条件时`Option Strict`设置为`On`:  
+## <a name="parameters-and-return-type"></a><span data-ttu-id="d1e7a-105">参数和返回类型</span><span class="sxs-lookup"><span data-stu-id="d1e7a-105">Parameters and Return Type</span></span>  
+ <span data-ttu-id="d1e7a-106">替代签名完全匹配松散的转换需要满足以下条件时`Option Strict`设置为`On`:</span><span class="sxs-lookup"><span data-stu-id="d1e7a-106">In place of exact signature match, relaxed conversion requires that the following conditions be met when `Option Strict` is set to `On`:</span></span>  
   
--   扩大转换为所分配函数的相应参数的数据类型必须存在从每个委托参数的数据类型或`Sub`。 在下面的示例中，该委托`Del1`具有一个参数、 `Integer`。 参数`m`在分配的 lambda 表达式必须具有从扩大转换的数据类型`Integer`，如`Long`或`Double`。  
+-   <span data-ttu-id="d1e7a-107">扩大转换为所分配函数的相应参数的数据类型必须存在从每个委托参数的数据类型或`Sub`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-107">A widening conversion must exist from the data type of each delegate parameter to the data type of the corresponding parameter of the assigned function or `Sub`.</span></span> <span data-ttu-id="d1e7a-108">在下面的示例中，该委托`Del1`具有一个参数、 `Integer`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-108">In the following example, the delegate `Del1` has one parameter, an `Integer`.</span></span> <span data-ttu-id="d1e7a-109">参数`m`在分配的 lambda 表达式必须具有从扩大转换的数据类型`Integer`，如`Long`或`Double`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-109">Parameter `m` in the assigned lambda expressions must have a data type for which there is a widening conversion from `Integer`, such as `Long` or `Double`.</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates #&1;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+     <span data-ttu-id="d1e7a-110">[!code-vb[VbVbalrRelaxedDelegates #&1;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-110">[!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates #&2;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
+     <span data-ttu-id="d1e7a-111">[!code-vb[VbVbalrRelaxedDelegates #&2;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-111">[!code-vb[VbVbalrRelaxedDelegates#2](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]</span></span>  
   
-     仅当允许收缩转换`Option Strict`设置为`Off`。  
+     <span data-ttu-id="d1e7a-112">仅当允许收缩转换`Option Strict`设置为`Off`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-112">Narrowing conversions are permitted only when `Option Strict` is set to `Off`.</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates #&8;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
+     <span data-ttu-id="d1e7a-113">[!code-vb[VbVbalrRelaxedDelegates #&8;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-113">[!code-vb[VbVbalrRelaxedDelegates#8](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]</span></span>  
   
--   扩大转换中必须存在以相反方向从所分配函数的返回类型或`Sub`到委托的返回类型。 在下面的示例中，每个已分配的 lambda 表达式的主体必须计算结果为数据类型扩展到`Integer`因为的返回类型`del1`是`Integer`。  
+-   <span data-ttu-id="d1e7a-114">扩大转换中必须存在以相反方向从所分配函数的返回类型或`Sub`到委托的返回类型。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-114">A widening conversion must exist in the opposite direction from the return type of the assigned function or `Sub` to the return type of the delegate.</span></span> <span data-ttu-id="d1e7a-115">在下面的示例中，每个已分配的 lambda 表达式的主体必须计算结果为数据类型扩展到`Integer`因为的返回类型`del1`是`Integer`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-115">In the following examples, the body of each assigned lambda expression must evaluate to a data type that widens to `Integer` because the return type of `del1` is `Integer`.</span></span>  
   
-     [!code-vb[VbVbalrRelaxedDelegates #&3;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
+     <span data-ttu-id="d1e7a-116">[!code-vb[VbVbalrRelaxedDelegates #&3;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-116">[!code-vb[VbVbalrRelaxedDelegates#3](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]</span></span>  
   
- 如果`Option Strict`设置为`Off`、 扩大限制中两个方向将被删除。  
+ <span data-ttu-id="d1e7a-117">如果`Option Strict`设置为`Off`、 扩大限制中两个方向将被删除。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-117">If `Option Strict` is set to `Off`, the widening restriction is removed in both directions.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&4;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
+ <span data-ttu-id="d1e7a-118">[!code-vb[VbVbalrRelaxedDelegates #&4;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-118">[!code-vb[VbVbalrRelaxedDelegates#4](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]</span></span>  
   
-## <a name="omitting-parameter-specifications"></a>忽略参数规范  
- 宽松的委托还允许您将能够完全省略中分配的方法的参数规范︰  
+## <a name="omitting-parameter-specifications"></a><span data-ttu-id="d1e7a-119">忽略参数规范</span><span class="sxs-lookup"><span data-stu-id="d1e7a-119">Omitting Parameter Specifications</span></span>  
+ <span data-ttu-id="d1e7a-120">宽松的委托还允许您将能够完全省略中分配的方法的参数规范︰</span><span class="sxs-lookup"><span data-stu-id="d1e7a-120">Relaxed delegates also allow you to completely omit parameter specifications in the assigned method:</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&5;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
+ <span data-ttu-id="d1e7a-121">[!code-vb[VbVbalrRelaxedDelegates #&5;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-121">[!code-vb[VbVbalrRelaxedDelegates#5](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&6;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
+ <span data-ttu-id="d1e7a-122">[!code-vb[VbVbalrRelaxedDelegates #&6;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-122">[!code-vb[VbVbalrRelaxedDelegates#6](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]</span></span>  
   
- 请注意，你不能指定某些参数，而忽略其他人。  
+ <span data-ttu-id="d1e7a-123">请注意，你不能指定某些参数，而忽略其他人。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-123">Note that you cannot specify some parameters and omit others.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&15;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
+ <span data-ttu-id="d1e7a-124">[!code-vb[VbVbalrRelaxedDelegates #&15;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-124">[!code-vb[VbVbalrRelaxedDelegates#15](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]</span></span>  
   
- 能够省略参数是在如定义一个事件处理程序，其中包含一些复杂参数的情况下很有帮助。 不使用某些事件处理程序的参数。 相反，该处理程序直接访问该事件在其注册，并忽略这些参数的控件的状态。 宽松的委托允许你忽略不产生多义性时此类声明中的参数。 在下面的示例中，完全指定的方法`OnClick`可以重写为`RelaxedOnClick`。  
+ <span data-ttu-id="d1e7a-125">能够省略参数是在如定义一个事件处理程序，其中包含一些复杂参数的情况下很有帮助。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-125">The ability to omit parameters is helpful in a situation such as defining an event handler, where several complex parameters are involved.</span></span> <span data-ttu-id="d1e7a-126">不使用某些事件处理程序的参数。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-126">The arguments to some event handlers are not used.</span></span> <span data-ttu-id="d1e7a-127">相反，该处理程序直接访问该事件在其注册，并忽略这些参数的控件的状态。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-127">Instead, the handler directly accesses the state of the control on which the event is registered, and ignores the arguments.</span></span> <span data-ttu-id="d1e7a-128">宽松的委托允许你忽略不产生多义性时此类声明中的参数。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-128">Relaxed delegates allow you to omit the arguments in such declarations when no ambiguities result.</span></span> <span data-ttu-id="d1e7a-129">在下面的示例中，完全指定的方法`OnClick`可以重写为`RelaxedOnClick`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-129">In the following example, the fully specified method `OnClick` can be rewritten as `RelaxedOnClick`.</span></span>  
   
 ```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
@@ -85,32 +86,32 @@ Sub RelaxedOnClick() Handles b.Click
 End Sub  
 ```  
   
-## <a name="addressof-examples"></a>AddressOf 示例  
- 在前面的示例使用 lambda 表达式以便可以方便地查看类型关系。 但是，同一松弛法允许使用的委托分配`AddressOf`， `Handles`，或`AddHandler`。  
+## <a name="addressof-examples"></a><span data-ttu-id="d1e7a-130">AddressOf 示例</span><span class="sxs-lookup"><span data-stu-id="d1e7a-130">AddressOf Examples</span></span>  
+ <span data-ttu-id="d1e7a-131">在前面的示例使用 lambda 表达式以便可以方便地查看类型关系。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-131">Lambda expressions are used in the previous examples to make the type relationships easy to see.</span></span> <span data-ttu-id="d1e7a-132">但是，同一松弛法允许使用的委托分配`AddressOf`， `Handles`，或`AddHandler`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-132">However, the same relaxations are permitted for delegate assignments that use `AddressOf`, `Handles`, or `AddHandler`.</span></span>  
   
- 在下面的示例中，函数`f1`， `f2`， `f3`，和`f4`都可以分配到`Del1`。  
+ <span data-ttu-id="d1e7a-133">在下面的示例中，函数`f1`， `f2`， `f3`，和`f4`都可以分配到`Del1`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-133">In the following example, functions `f1`, `f2`, `f3`, and `f4` can all be assigned to `Del1`.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&1;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+ <span data-ttu-id="d1e7a-134">[!code-vb[VbVbalrRelaxedDelegates #&1;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-134">[!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&7;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
+ <span data-ttu-id="d1e7a-135">[!code-vb[VbVbalrRelaxedDelegates #&7;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-135">[!code-vb[VbVbalrRelaxedDelegates#7](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&9;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
+ <span data-ttu-id="d1e7a-136">[!code-vb[VbVbalrRelaxedDelegates #&9;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-136">[!code-vb[VbVbalrRelaxedDelegates#9](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]</span></span>  
   
- 下面的示例是仅当`Option Strict`设置为`Off`。  
+ <span data-ttu-id="d1e7a-137">下面的示例是仅当`Option Strict`设置为`Off`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-137">The following example is valid only when `Option Strict` is set to `Off`.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&14;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
+ <span data-ttu-id="d1e7a-138">[!code-vb[VbVbalrRelaxedDelegates #&14;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-138">[!code-vb[VbVbalrRelaxedDelegates#14](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]</span></span>  
   
-## <a name="dropping-function-returns"></a>删除函数返回值  
- 宽松的委托转换使您能够分配到一个函数`Sub`委托时，有效地忽略该函数的返回值。 但是，不能分配`Sub`到一个函数委托。 在下面的示例中，函数的地址`doubler`分配给`Sub`委托`Del3`。  
+## <a name="dropping-function-returns"></a><span data-ttu-id="d1e7a-139">删除函数返回值</span><span class="sxs-lookup"><span data-stu-id="d1e7a-139">Dropping Function Returns</span></span>  
+ <span data-ttu-id="d1e7a-140">宽松的委托转换使您能够分配到一个函数`Sub`委托时，有效地忽略该函数的返回值。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-140">Relaxed delegate conversion enables you to assign a function to a `Sub` delegate, effectively ignoring the return value of the function.</span></span> <span data-ttu-id="d1e7a-141">但是，不能分配`Sub`到一个函数委托。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-141">However, you cannot assign a `Sub` to a function delegate.</span></span> <span data-ttu-id="d1e7a-142">在下面的示例中，函数的地址`doubler`分配给`Sub`委托`Del3`。</span><span class="sxs-lookup"><span data-stu-id="d1e7a-142">In the following example, the address of function `doubler` is assigned to `Sub` delegate `Del3`.</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&10;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
+ <span data-ttu-id="d1e7a-143">[!code-vb[VbVbalrRelaxedDelegates #&10;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-143">[!code-vb[VbVbalrRelaxedDelegates#10](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]</span></span>  
   
- [!code-vb[VbVbalrRelaxedDelegates #&11;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
+ <span data-ttu-id="d1e7a-144">[!code-vb[VbVbalrRelaxedDelegates #&11;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]</span><span class="sxs-lookup"><span data-stu-id="d1e7a-144">[!code-vb[VbVbalrRelaxedDelegates#11](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [如何︰ 将过程传递给在 Visual Basic 中的另一个过程](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)   
- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d1e7a-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d1e7a-145">See Also</span></span>  
+ <span data-ttu-id="d1e7a-146">[Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="d1e7a-146">[Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+<span data-ttu-id="d1e7a-147"> [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="d1e7a-147"> [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span></span>  
+<span data-ttu-id="d1e7a-148"> [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md) </span><span class="sxs-lookup"><span data-stu-id="d1e7a-148"> [Delegates](../../../../visual-basic/programming-guide/language-features/delegates/index.md) </span></span>  
+<span data-ttu-id="d1e7a-149"> [如何︰ 将过程传递给在 Visual Basic 中的另一个过程](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md) </span><span class="sxs-lookup"><span data-stu-id="d1e7a-149"> [How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md) </span></span>  
+<span data-ttu-id="d1e7a-150"> [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) </span><span class="sxs-lookup"><span data-stu-id="d1e7a-150"> [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) </span></span>  
+<span data-ttu-id="d1e7a-151"> [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d1e7a-151"> [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)</span></span>

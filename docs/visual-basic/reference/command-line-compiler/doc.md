@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1054eb256eb7670ee0454b02fc094e0306c1218d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 974c41ba6ba4104a7fe17146390e14ccfbb7a521
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="doc"></a>/doc
-将文档注释处理到一个 XML 文件中。  
+# <a name="doc"></a><span data-ttu-id="fe7fd-102">/doc</span><span class="sxs-lookup"><span data-stu-id="fe7fd-102">/doc</span></span>
+<span data-ttu-id="fe7fd-103">将文档注释处理到一个 XML 文件中。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-103">Processes documentation comments to an XML file.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="fe7fd-104">语法</span><span class="sxs-lookup"><span data-stu-id="fe7fd-104">Syntax</span></span>  
   
 ```  
 /doc[+ | -]  
@@ -48,35 +49,35 @@ ms.lasthandoff: 03/13/2017
 /doc:file  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="fe7fd-105">参数</span><span class="sxs-lookup"><span data-stu-id="fe7fd-105">Arguments</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="fe7fd-106">术语</span><span class="sxs-lookup"><span data-stu-id="fe7fd-106">Term</span></span>|<span data-ttu-id="fe7fd-107">定义</span><span class="sxs-lookup"><span data-stu-id="fe7fd-107">Definition</span></span>|  
 |---|---|  
-|`+` &#124; `-`|可选。 指定 +，或只是`/doc`，使编译器生成文档信息，并将其放在一个 XML 文件。 指定`-`等同于未指定`/doc`，导致不创建任何文档信息。|  
-|`file`|如果使用 `/doc:`，则是必需的。 指定输出 XML 文件中，填入编译源代码文件中的注释。 如果文件名包含空格，将名称括起来加上引号 ("")。|  
+|<span data-ttu-id="fe7fd-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="fe7fd-108">`+` &#124; `-`</span></span>|<span data-ttu-id="fe7fd-109">可选。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-109">Optional.</span></span> <span data-ttu-id="fe7fd-110">指定 +，或只是`/doc`，使编译器生成文档信息，并将其放在一个 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-110">Specifying +, or just `/doc`, causes the compiler to generate documentation information and place it in an XML file.</span></span> <span data-ttu-id="fe7fd-111">指定`-`等同于未指定`/doc`，导致不创建任何文档信息。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-111">Specifying `-` is the equivalent of not specifying `/doc`, causing no documentation information to be created.</span></span>|  
+|`file`|<span data-ttu-id="fe7fd-112">如果使用 `/doc:`，则是必需的。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-112">Required if `/doc:` is used.</span></span> <span data-ttu-id="fe7fd-113">指定输出 XML 文件中，填入编译源代码文件中的注释。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-113">Specifies the output XML file, which is populated with the comments from the source-code files of the compilation.</span></span> <span data-ttu-id="fe7fd-114">如果文件名包含空格，将名称括起来加上引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-114">If the file name contains a space, surround the name with quotation marks (" ").</span></span>|  
   
-## <a name="remarks"></a>备注  
- `/doc`选项控制是否编译器生成包含文档注释的 XML 文件。 如果您使用`/doc:``file`语法中，`file`参数指定的 XML 文件的名称。 如果您使用`/doc`或`/doc+`，编译器将从可执行文件或该编译器创建的库中获取 XML 文件名称。 如果您使用`/doc-`或不指定`/doc`选项时，编译器不会创建一个 XML 文件。  
+## <a name="remarks"></a><span data-ttu-id="fe7fd-115">备注</span><span class="sxs-lookup"><span data-stu-id="fe7fd-115">Remarks</span></span>  
+ <span data-ttu-id="fe7fd-116">`/doc`选项控制是否编译器生成包含文档注释的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-116">The `/doc` option controls whether the compiler generates an XML file containing the documentation comments.</span></span> <span data-ttu-id="fe7fd-117">如果您使用`/doc:``file`语法中，`file`参数指定的 XML 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-117">If you use the `/doc:``file` syntax, the `file` parameter specifies the name of the XML file.</span></span> <span data-ttu-id="fe7fd-118">如果您使用`/doc`或`/doc+`，编译器将从可执行文件或该编译器创建的库中获取 XML 文件名称。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-118">If you use `/doc` or `/doc+`, the compiler takes the XML file name from the executable file or library that the compiler is creating.</span></span> <span data-ttu-id="fe7fd-119">如果您使用`/doc-`或不指定`/doc`选项时，编译器不会创建一个 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-119">If you use `/doc-` or do not specify the `/doc` option, the compiler does not create an XML file.</span></span>  
   
- 在源代码文件中，文档注释之前可以放置以下定义︰  
+ <span data-ttu-id="fe7fd-120">在源代码文件中，文档注释之前可以放置以下定义︰</span><span class="sxs-lookup"><span data-stu-id="fe7fd-120">In source-code files, documentation comments can precede the following definitions:</span></span>  
   
--   用户定义类型，如[类](../../../visual-basic/language-reference/statements/class-statement.md)或[接口](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   <span data-ttu-id="fe7fd-121">用户定义类型，如[类](../../../visual-basic/language-reference/statements/class-statement.md)或[接口](../../../visual-basic/language-reference/statements/interface-statement.md)</span><span class="sxs-lookup"><span data-stu-id="fe7fd-121">User-defined types, such as a [class](../../../visual-basic/language-reference/statements/class-statement.md) or [interface](../../../visual-basic/language-reference/statements/interface-statement.md)</span></span>  
   
--   成员，一个字段，例如[事件](../../../visual-basic/language-reference/statements/event-statement.md)，[属性](../../../visual-basic/language-reference/statements/property-statement.md)，[函数](../../../visual-basic/language-reference/statements/function-statement.md)，或[子例程](../../../visual-basic/language-reference/statements/sub-statement.md)。  
+-   <span data-ttu-id="fe7fd-122">成员，一个字段，例如[事件](../../../visual-basic/language-reference/statements/event-statement.md)，[属性](../../../visual-basic/language-reference/statements/property-statement.md)，[函数](../../../visual-basic/language-reference/statements/function-statement.md)，或[子例程](../../../visual-basic/language-reference/statements/sub-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-122">Members, such as a field, [event](../../../visual-basic/language-reference/statements/event-statement.md), [property](../../../visual-basic/language-reference/statements/property-statement.md), [function](../../../visual-basic/language-reference/statements/function-statement.md), or [subroutine](../../../visual-basic/language-reference/statements/sub-statement.md).</span></span>  
   
- 若要使用生成的 XML 文件和[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] [IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense)功能，但可让你想要支持的程序集相同的 XML 文件的文件名。 请确保 XML 文件与程序集的相同目录中，以便当中引用的程序集[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]项目中，.xml 文件也可以找到。 XML 文档文件则不需要发挥作用的代码在一个项目或项目引用的项目中的 intellisense。  
+ <span data-ttu-id="fe7fd-123">若要使用生成的 XML 文件和[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] [IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense)功能，但可让你想要支持的程序集相同的 XML 文件的文件名。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-123">To use the generated XML file with the [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] [IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense) feature, let the file name of the XML file be the same as the assembly you want to support.</span></span> <span data-ttu-id="fe7fd-124">请确保 XML 文件与程序集的相同目录中，以便当中引用的程序集[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]项目中，.xml 文件也可以找到。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-124">Make sure the XML file is in the same directory as the assembly so that when the assembly is referenced in the [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] project, the .xml file is found as well.</span></span> <span data-ttu-id="fe7fd-125">XML 文档文件则不需要发挥作用的代码在一个项目或项目引用的项目中的 intellisense。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-125">XML documentation files are not required for IntelliSense to work for code within a project or within projects referenced by a project.</span></span>  
   
- 除非在编译时使用`/target:module`，XML 文件包含标记`<assembly></assembly>`。 这些标记指定包含编译输出文件的程序集清单的文件的名称。  
+ <span data-ttu-id="fe7fd-126">除非在编译时使用`/target:module`，XML 文件包含标记`<assembly></assembly>`。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-126">Unless you compile with `/target:module`, the XML file contains the tags `<assembly></assembly>`.</span></span> <span data-ttu-id="fe7fd-127">这些标记指定包含编译输出文件的程序集清单的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-127">These tags specify the name of the file containing the assembly manifest for the output file of the compilation.</span></span>  
   
- 请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)从您的代码中的注释生成文档的方法。  
+ <span data-ttu-id="fe7fd-128">请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)从您的代码中的注释生成文档的方法。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-128">See [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md) for ways to generate documentation from comments in your code.</span></span>  
   
-|在 Visual Studio 中设置 /doc 集成开发环境|  
+|<span data-ttu-id="fe7fd-129">在 Visual Studio 中设置 /doc 集成开发环境</span><span class="sxs-lookup"><span data-stu-id="fe7fd-129">To set /doc in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击“编译”****选项卡。<br />3.中的值设置**生成 XML 文档文件**框。|  
+|<span data-ttu-id="fe7fd-130">1.在 **“解决方案资源管理器”**中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-130">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="fe7fd-131">在**项目**菜单上，单击**属性**。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-131">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="fe7fd-132">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-132">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span><br /><span data-ttu-id="fe7fd-133">2.单击“编译”****选项卡。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-133">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="fe7fd-134">3.中的值设置**生成 XML 文档文件**框。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-134">3.  Set the value in the **Generate XML documentation file** box.</span></span>|  
   
-## <a name="example"></a>示例  
- 请参阅[使用 XML 编制文档您代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)有关的示例。  
+## <a name="example"></a><span data-ttu-id="fe7fd-135">示例</span><span class="sxs-lookup"><span data-stu-id="fe7fd-135">Example</span></span>  
+ <span data-ttu-id="fe7fd-136">请参阅[使用 XML 编制文档您代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)有关的示例。</span><span class="sxs-lookup"><span data-stu-id="fe7fd-136">See [Documenting Your Code with XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) for a sample.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+## <a name="see-also"></a><span data-ttu-id="fe7fd-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fe7fd-137">See Also</span></span>  
+ <span data-ttu-id="fe7fd-138">[Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="fe7fd-138">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="fe7fd-139"> [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)</span><span class="sxs-lookup"><span data-stu-id="fe7fd-139"> [Documenting Your Code with XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)</span></span>

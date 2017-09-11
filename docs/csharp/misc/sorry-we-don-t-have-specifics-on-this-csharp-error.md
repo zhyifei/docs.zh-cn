@@ -897,32 +897,33 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>很抱歉，我们没有具体信息关于此 C# 错误
-很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="00a86-102">很抱歉，我们没有具体信息关于此 C# 错误</span><span class="sxs-lookup"><span data-stu-id="00a86-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
+<span data-ttu-id="00a86-103">很抱歉，我们没有关于此错误的任何具体信息。</span><span class="sxs-lookup"><span data-stu-id="00a86-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="00a86-104">你可以在 Web 中搜索错误号和消息文本，以找到相关信息。</span><span class="sxs-lookup"><span data-stu-id="00a86-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="00a86-105">或者，还可使用以下论坛之一咨询其他开发人员：</span><span class="sxs-lookup"><span data-stu-id="00a86-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Visual C# 语言](http://go.microsoft.com/fwlink/?LinkId=146921)  
- 提供针对 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。  
+ [<span data-ttu-id="00a86-106">Visual C# 语言</span><span class="sxs-lookup"><span data-stu-id="00a86-106">Visual C# Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ <span data-ttu-id="00a86-107">提供针对 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。</span><span class="sxs-lookup"><span data-stu-id="00a86-107">Provides a forum for questions about and general discussions of the [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] language syntax and compiler.</span></span>  
   
- [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
- 提供针对如何在 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 环境中工作的问题的论坛。  
+ [<span data-ttu-id="00a86-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="00a86-108">Visual C# IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ <span data-ttu-id="00a86-109">提供针对如何在 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 环境中工作的问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="00a86-109">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] environment.</span></span>  
   
- [Visual C# 常规](http://go.microsoft.com/fwlink/?LinkId=146920)  
- 提供针对其他论坛中未涉及的 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 相关问题的论坛。  
+ [<span data-ttu-id="00a86-110">Visual C# 常规</span><span class="sxs-lookup"><span data-stu-id="00a86-110">Visual C# General</span></span>](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ <span data-ttu-id="00a86-111">提供针对其他论坛中未涉及的 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 相关问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="00a86-111">Provides a forum for questions about and issues with [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] that are not discussed in other forums.</span></span>  
   
- [堆栈溢出](http://stackoverflow.com/questions/tagged/c%23)  
- 提供一个供大家讨论有关 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 的问题的论坛。  
+ [<span data-ttu-id="00a86-112">堆栈溢出</span><span class="sxs-lookup"><span data-stu-id="00a86-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="00a86-113">提供一个供大家讨论有关 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 的问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="00a86-113">Provides a forum for questions about and issues with [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].</span></span>  
   
- 另请参见：  
- [有关 Visual C# 程序员提供的其他资源](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="00a86-114">另请参见：</span><span class="sxs-lookup"><span data-stu-id="00a86-114">Also see:</span></span>  
+<span data-ttu-id="00a86-115"> [有关 Visual C# 程序员提供的其他资源](../../csharp/getting-started/additional-resources.md)</span><span class="sxs-lookup"><span data-stu-id="00a86-115"> [Additional Resources for Visual C# Programmers](../../csharp/getting-started/additional-resources.md)</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../csharp/programming-guide/index.md)   
- [C# 参考](../../csharp/language-reference/index.md)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="00a86-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00a86-116">See Also</span></span>  
+ <span data-ttu-id="00a86-117">[C# 编程指南](../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="00a86-117">[C# Programming Guide](../../csharp/programming-guide/index.md) </span></span>  
+<span data-ttu-id="00a86-118"> [C# 参考](../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="00a86-118"> [C# Reference](../../csharp/language-reference/index.md) </span></span>  
+<span data-ttu-id="00a86-119"> [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us) </span><span class="sxs-lookup"><span data-stu-id="00a86-119"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) </span></span>  
+<span data-ttu-id="00a86-120"> [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="00a86-120"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

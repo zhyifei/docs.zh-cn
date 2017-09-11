@@ -1,75 +1,57 @@
 ---
-title: "如何：枚举计算机上存在的时区 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "枚举时区 [.NET Framework]"
-  - "时区 [.NET Framework], 枚举"
-ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+title: "如何：枚举计算机上存在的时区"
+description: "如何枚举计算机上存在的时区"
+keywords: ".NET、.NET Core"
+author: stevehoag
+ms.author: shoag
+ms.date: 08/15/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.devlang: dotnet
+ms.assetid: c5ae4a6c-1790-4355-b5b1-879aaf956129
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f30ba2a483ff7e5867417969946c2774175d5e3d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/02/2017
+
 ---
-# 如何：枚举计算机上存在的时区
-若要成功使用指定的时区，系统需要能获得有关该时区的信息。  Windows XP 和 Windows Vista 操作系统将此信息存储在注册表中。  不过，虽然世界上存在的时区总数很大，但注册表只包含有关它们中的一部分的信息。  此外，注册表本身是一个动态结构，其内容可能会被有意或无意更改。  因此，应用程序不能始终假定系统上已定义并存在某个特定的时区。  对于使用时区信息的很多应用程序，第一步都是要确定本地系统上是否存在所需的时区，或者是为用户提供一个时区列表以供其选择。  这都要求应用程序枚举本地系统上定义的时区。  
-  
-> [!NOTE]
->  如果应用程序依赖的特定时区可能没有在本地系统上定义，该应用程序可通过序列化和反序列化有关该时区的信息来确保存在该时区。  随后，可以将该时区添加到某个 List 控件中，以供应用程序用户选择。  有关详细信息，请参见[如何：将时区保存到嵌入的资源中](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。  
-  
-### 枚举本地系统上存在的时区  
-  
-1.  调用 <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=fullName> 方法。  该方法返回 <xref:System.TimeZoneInfo> 对象的泛型集合 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>。  集合中的条目按其 <xref:System.TimeZoneInfo.DisplayName%2A> 属性排序。  例如：  
-  
-     [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
-     [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]  
-  
-2.  使用 `foreach` 循环（在 C\# 中）或 `For Each`…`Next` 循环（在 Visual Basic 中）枚举集合中的各个 <xref:System.TimeZoneInfo> 对象，然后对每个对象执行任何必需的处理。  例如，下面的代码枚举步骤 1 中返回的 <xref:System.TimeZoneInfo> 对象的 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 集合，并在控制台上列出每个时区的显示名称。  
-  
-     [!code-csharp[System.TimeZone2.Concepts#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#12)]
-     [!code-vb[System.TimeZone2.Concepts#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#12)]  
-  
-### 为用户提供本地系统上存在的时区的列表  
-  
-1.  调用 <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=fullName> 方法。  该方法返回 <xref:System.TimeZoneInfo> 对象的泛型集合 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>。  
-  
-2.  将步骤 1 中返回的集合分配给 Windows 窗体或 ASP.NET List 控件的 `DataSource` 属性。  
-  
-3.  检索用户选定的 <xref:System.TimeZoneInfo> 对象。  
-  
- 该示例演示一个 Windows 应用程序。  
-  
-## 示例  
- 该示例首先启动一个在列表框中显示系统上定义的时区的 Windows 应用程序。  随后，该示例显示一个对话框，其中包含用户所选时区对象的 <xref:System.TimeZoneInfo.DisplayName%2A> 属性值。  
-  
- [!code-csharp[System.TimeZone2.Concepts#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#2)]
- [!code-vb[System.TimeZone2.Concepts#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#2)]  
-  
- 大多数 List 控件（例如 <xref:System.Windows.Forms.ListBox?displayProperty=fullName> 或 <xref:System.Web.UI.WebControls.BulletedList?displayProperty=fullName> 控件）都允许将某个对象变量的集合分配给它们的 `DataSource` 属性，条件是该集合实现 <xref:System.Collections.IEnumerable> 接口（泛型类 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 可执行此操作）。为了显示集合中的单个对象，该控件会调用该对象的 `ToString` 方法以提取用于表示该对象的字符串。  对于 <xref:System.TimeZoneInfo> 对象，`ToString` 方法会返回 <xref:System.TimeZoneInfo> 对象的显示名称（其 <xref:System.TimeZoneInfo.DisplayName%2A> 属性值）。  
-  
-> [!NOTE]
->  由于 List 控件会调用对象的 `ToString` 方法，因此可以将 <xref:System.TimeZoneInfo> 对象的集合分配给该控件，以便让该控件为每个对象显示一个有意义的名称并检索用户选定的 <xref:System.TimeZoneInfo> 对象。  这样便不再需要执行如下过程：提取集合中每个对象的字符串，将该字符串分配给某个集合，然后又将该集合分配给控件的 `DataSource` 属性，检索用户选定的字符串，然后使用此字符串提取它所描述的对象。  
-  
-## 编译代码  
- 此示例需要：  
-  
--   在项目中添加一个对 System.Core.dll 的引用。  
-  
--   导入下列命名空间：  
-  
-     <xref:System>（在 C\# 代码中）  
-  
-     <xref:System.Collections.ObjectModel>  
-  
-## 请参阅  
- [日期、时间和时区](../../../docs/standard/datetime/index.md)   
- [如何：将时区保存到嵌入的资源中](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)   
- [如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a><span data-ttu-id="a3431-104">如何：枚举计算机上存在的时区</span><span class="sxs-lookup"><span data-stu-id="a3431-104">How to: enumerate time zones present on a computer</span></span>
+
+<span data-ttu-id="a3431-105">若要成功使用指定的时区，需要该时区的相关信息可供系统使用。</span><span class="sxs-lookup"><span data-stu-id="a3431-105">Successfully working with a designated time zone requires that information about that time zone be available to the system.</span></span> <span data-ttu-id="a3431-106">例如，Windows 操作系统将此信息存储在注册表中。</span><span class="sxs-lookup"><span data-stu-id="a3431-106">For example, the Windows operating system stores this information in the registry.</span></span> <span data-ttu-id="a3431-107">但是，尽管世界上存在的时区总数非常大，但注册表包含的信息只是其中的一个子集。</span><span class="sxs-lookup"><span data-stu-id="a3431-107">However, although the total number of time zones that exist throughout the world is large, the registry contains information about only a subset of them.</span></span> <span data-ttu-id="a3431-108">此外，注册表本身是一个动态结构，其内容可能发生有意或无意的更改。</span><span class="sxs-lookup"><span data-stu-id="a3431-108">In addition, the registry itself is a dynamic structure whose contents are subject to both deliberate and accidental change.</span></span> <span data-ttu-id="a3431-109">因此，应用程序无法保证系统上始终存在已定义且可用的特定时区。</span><span class="sxs-lookup"><span data-stu-id="a3431-109">As a result, an application cannot always assume that a particular time zone is defined and available on a system.</span></span> <span data-ttu-id="a3431-110">对于使用时区信息应用程序的许多应用程序来说，第一步是确定所需时区在本地系统上是否可用，或者向用户提供可供选择的时区列表。</span><span class="sxs-lookup"><span data-stu-id="a3431-110">The first step for many applications that use time zone information applications is to determine whether required time zones are available on the local system, or to give the user a list of time zones from which to select.</span></span> <span data-ttu-id="a3431-111">这要求应用程序枚举本地系统上定义的时区。</span><span class="sxs-lookup"><span data-stu-id="a3431-111">This requires that an application enumerate the time zones defined on a local system.</span></span> 
+
+## <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a><span data-ttu-id="a3431-112">枚举本地系统上存在的时区</span><span class="sxs-lookup"><span data-stu-id="a3431-112">To enumerate the time zones present on the local system</span></span>
+
+1. <span data-ttu-id="a3431-113">请调用 [TimeZoneInfo.GetSystemTimeZones](xref:System.TimeZoneInfo.GetSystemTimeZones) 方法。</span><span class="sxs-lookup"><span data-stu-id="a3431-113">Call the [TimeZoneInfo.GetSystemTimeZones](xref:System.TimeZoneInfo.GetSystemTimeZones) method.</span></span> <span data-ttu-id="a3431-114">该方法会返回 [TimeZoneInfo](xref:System.TimeZoneInfo) 对象的泛型 [ReadOnlyCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ReadOnlyCollection%601) 集合。</span><span class="sxs-lookup"><span data-stu-id="a3431-114">The method returns a generic [ReadOnlyCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ReadOnlyCollection%601) collection of [TimeZoneInfo](xref:System.TimeZoneInfo) objects.</span></span> <span data-ttu-id="a3431-115">集合中的项按其 [DisplayName](xref:System.TimeZoneInfo.DisplayName) 属性排序。</span><span class="sxs-lookup"><span data-stu-id="a3431-115">The entries in the collection are sorted by their [DisplayName](xref:System.TimeZoneInfo.DisplayName) property.</span></span> <span data-ttu-id="a3431-116">例如: </span><span class="sxs-lookup"><span data-stu-id="a3431-116">For example:</span></span>
+
+    ```csharp
+    ReadOnlyCollection<TimeZoneInfo> tzCollection;
+    tzCollection = TimeZoneInfo.GetSystemTimeZones();
+    ```
+
+    ```vb
+    Dim tzCollection As ReadOnlyCollection(Of TimeZoneInfo) = TimeZoneInfo.GetSystemTimeZones
+    ```
+
+2. <span data-ttu-id="a3431-117">使用 `foreach` 循环（C# 中）或 `For Each…Next` 循环（Visual Basic 中）枚举集合中的各个 [TimeZoneInfo](xref:System.TimeZoneInfo) 对象，并对每个对象执行任何必要的处理。</span><span class="sxs-lookup"><span data-stu-id="a3431-117">Enumerate the individual [TimeZoneInfo](xref:System.TimeZoneInfo) objects in the collection by using a `foreach` loop (in C#) or a `For Each…Next` loop (in Visual Basic), and perform any necessary processing on each object.</span></span> <span data-ttu-id="a3431-118">例如，以下代码枚举步骤 1 中所返回 [TimeZoneInfo](xref:System.TimeZoneInfo) 对象的 [ReadOnlyCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ReadOnlyCollection%601) 集合，并在控制台上列出每个时区的显示名称。</span><span class="sxs-lookup"><span data-stu-id="a3431-118">For example, the following code enumerates the [ReadOnlyCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ReadOnlyCollection%601) collection of [TimeZoneInfo](xref:System.TimeZoneInfo) objects returned in step 1 and lists the display name of each time zone on the console.</span></span>
+
+    ```csharp
+    foreach (TimeZoneInfo timeZone in tzCollection)
+    Console.WriteLine("   {0}: {1}", timeZone.Id, timeZone.DisplayName);
+    ```
+
+    ```vb
+    For Each timeZone As TimeZoneInfo In tzCollection
+        Console.WriteLine("   {0}: {1}", timeZone.Id, timeZone.DisplayName)
+    Next
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="a3431-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a3431-119">See Also</span></span>
+
+[<span data-ttu-id="a3431-120">日期、时间和时区</span><span class="sxs-lookup"><span data-stu-id="a3431-120">Dates, times, and time zones</span></span>](index.md)
+
+[<span data-ttu-id="a3431-121">查找本地系统上定义的时区</span><span class="sxs-lookup"><span data-stu-id="a3431-121">Finding the time zones defined on a local system</span></span>](finding-the-time-zones-on-local-system.md)
+
+

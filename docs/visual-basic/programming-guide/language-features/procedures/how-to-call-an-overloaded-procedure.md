@@ -34,37 +34,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0da83aa63bf013d841f2a01a535726f3b03497a1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 777df0cc81a4e0518773a0e8cc98d590d1c0cf0d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>如何：调用重载过程 (Visual Basic)
-重载过程的优点是在调用更灵活。 调用代码可以获取传递给过程，然后调用单个过程名，无论它传递的哪些参数所需的信息。  
+# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a><span data-ttu-id="b1539-102">如何：调用重载过程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1539-102">How to: Call an Overloaded Procedure (Visual Basic)</span></span>
+<span data-ttu-id="b1539-103">重载过程的优点是在调用更灵活。</span><span class="sxs-lookup"><span data-stu-id="b1539-103">The advantage of overloading a procedure is in the flexibility of the call.</span></span> <span data-ttu-id="b1539-104">调用代码可以获取传递给过程，然后调用单个过程名，无论它传递的哪些参数所需的信息。</span><span class="sxs-lookup"><span data-stu-id="b1539-104">The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.</span></span>  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>若要调用具有定义的多个版本的过程  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a><span data-ttu-id="b1539-105">若要调用具有定义的多个版本的过程</span><span class="sxs-lookup"><span data-stu-id="b1539-105">To call a procedure that has more than one version defined</span></span>  
   
-1.  在调用代码中，确定要传递给过程的数据。  
+1.  <span data-ttu-id="b1539-106">在调用代码中，确定要传递给过程的数据。</span><span class="sxs-lookup"><span data-stu-id="b1539-106">In the calling code, determine which data to pass to the procedure.</span></span>  
   
-2.  以正常方式表示的参数列表中的数据写入过程调用。 请确保参数匹配的参数列表中为过程定义的版本之一。  
+2.  <span data-ttu-id="b1539-107">以正常方式表示的参数列表中的数据写入过程调用。</span><span class="sxs-lookup"><span data-stu-id="b1539-107">Write the procedure call in the normal way, presenting the data in the argument list.</span></span> <span data-ttu-id="b1539-108">请确保参数匹配的参数列表中为过程定义的版本之一。</span><span class="sxs-lookup"><span data-stu-id="b1539-108">Be sure the arguments match the parameter list in one of the versions defined for the procedure.</span></span>  
   
-3.  无需确定要调用的过程的哪个版本。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]将控制权传递给参数列表匹配的版本。  
+3.  <span data-ttu-id="b1539-109">无需确定要调用的过程的哪个版本。</span><span class="sxs-lookup"><span data-stu-id="b1539-109">You do not have to determine which version of the procedure to call.</span></span> [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="b1539-110">将控制权传递给参数列表匹配的版本。</span><span class="sxs-lookup"><span data-stu-id="b1539-110"> passes control to the version matching your argument list.</span></span>  
   
-     下面的示例调用`post`过程中声明[如何︰ 定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)。 它会获取客户标识，确定它是否是`String`或`Integer`，然后在任一情况下调用相同的过程。  
+     <span data-ttu-id="b1539-111">下面的示例调用`post`过程中声明[如何︰ 定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)。</span><span class="sxs-lookup"><span data-stu-id="b1539-111">The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md).</span></span> <span data-ttu-id="b1539-112">它会获取客户标识，确定它是否是`String`或`Integer`，然后在任一情况下调用相同的过程。</span><span class="sxs-lookup"><span data-stu-id="b1539-112">It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&56;](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
+     <span data-ttu-id="b1539-113">[!code-vb[VbVbcnProcedures #&56;](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="b1539-113">[!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&57;](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
+     <span data-ttu-id="b1539-114">[!code-vb[VbVbcnProcedures #&57;](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="b1539-114">[!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [过程](./index.md)   
- [过程参数和变量](./procedure-parameters-and-arguments.md)   
- [过程重载](./procedure-overloading.md)   
- [故障排除过程](./troubleshooting-procedures.md)   
- [如何︰ 定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)   
- [如何︰ 重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [如何︰ 重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [重载过程注意事项](./considerations-in-overloading-procedures.md)   
- [重载决策](./overload-resolution.md)   
- [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a><span data-ttu-id="b1539-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b1539-115">See Also</span></span>  
+ <span data-ttu-id="b1539-116">[过程](./index.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-116">[Procedures](./index.md) </span></span>  
+<span data-ttu-id="b1539-117"> [过程参数和变量](./procedure-parameters-and-arguments.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-117"> [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md) </span></span>  
+<span data-ttu-id="b1539-118"> [过程重载](./procedure-overloading.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-118"> [Procedure Overloading](./procedure-overloading.md) </span></span>  
+<span data-ttu-id="b1539-119"> [故障排除过程](./troubleshooting-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-119"> [Troubleshooting Procedures](./troubleshooting-procedures.md) </span></span>  
+<span data-ttu-id="b1539-120"> [如何︰ 定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-120"> [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md) </span></span>  
+<span data-ttu-id="b1539-121"> [如何︰ 重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-121"> [How to: Overload a Procedure that Takes Optional Parameters](./how-to-overload-a-procedure-that-takes-optional-parameters.md) </span></span>  
+<span data-ttu-id="b1539-122"> [如何︰ 重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-122"> [How to: Overload a Procedure that Takes an Indefinite Number of Parameters](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md) </span></span>  
+<span data-ttu-id="b1539-123"> [重载过程注意事项](./considerations-in-overloading-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-123"> [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md) </span></span>  
+<span data-ttu-id="b1539-124"> [重载决策](./overload-resolution.md) </span><span class="sxs-lookup"><span data-stu-id="b1539-124"> [Overload Resolution](./overload-resolution.md) </span></span>  
+<span data-ttu-id="b1539-125"> [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)</span><span class="sxs-lookup"><span data-stu-id="b1539-125"> [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)</span></span>

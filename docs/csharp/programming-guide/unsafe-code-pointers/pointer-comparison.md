@@ -34,31 +34,31 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pointer-comparison-c-programming-guide"></a>指针比较（C# 编程指南）
-可以应用以下运算符比较任何类型的指针：  
+# <a name="pointer-comparison-c-programming-guide"></a><span data-ttu-id="aa56f-102">指针比较（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="aa56f-102">Pointer Comparison (C# Programming Guide)</span></span>
+<span data-ttu-id="aa56f-103">可以应用以下运算符比较任何类型的指针：</span><span class="sxs-lookup"><span data-stu-id="aa56f-103">You can apply the following operators to compare pointers of any type:</span></span>  
   
- **==   !=   \<   >   \<=   >=**  
+ <span data-ttu-id="aa56f-104">**==   !=   \<   >   \<=   >=**</span><span class="sxs-lookup"><span data-stu-id="aa56f-104">**==   !=   \<   >   \<=   >=**</span></span>  
   
- 比较运算符比较两个操作数的地址，如同它们是无符号整数。  
+ <span data-ttu-id="aa56f-105">比较运算符比较两个操作数的地址，如同它们是无符号整数。</span><span class="sxs-lookup"><span data-stu-id="aa56f-105">The comparison operators compare the addresses of the two operands as if they are unsigned integers.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]  
+## <a name="example"></a><span data-ttu-id="aa56f-106">示例</span><span class="sxs-lookup"><span data-stu-id="aa56f-106">Example</span></span>  
+ <span data-ttu-id="aa56f-107">[!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="aa56f-107">[!code-cs[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]</span></span>  
   
- [!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]  
+ <span data-ttu-id="aa56f-108">[!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="aa56f-108">[!code-cs[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]</span></span>  
   
-## <a name="sample-output"></a>示例输出  
+## <a name="sample-output"></a><span data-ttu-id="aa56f-109">示例输出</span><span class="sxs-lookup"><span data-stu-id="aa56f-109">Sample Output</span></span>  
  `True`  
   
  `False`  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [C# 运算符](../../../csharp/language-reference/operators/index.md)   
- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)   
- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [类型](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a><span data-ttu-id="aa56f-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa56f-110">See Also</span></span>  
+ <span data-ttu-id="aa56f-111">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="aa56f-112">[指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-112">[Pointer Expressions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span></span>  
+ <span data-ttu-id="aa56f-113">[C# 运算符](../../../csharp/language-reference/operators/index.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-113">[C# Operators](../../../csharp/language-reference/operators/index.md) </span></span>  
+ <span data-ttu-id="aa56f-114">[操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-114">[Manipulating Pointers](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md) </span></span>  
+ <span data-ttu-id="aa56f-115">[指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-115">[Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span></span>  
+ <span data-ttu-id="aa56f-116">[类型](../../../csharp/language-reference/keywords/types.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-116">[Types](../../../csharp/language-reference/keywords/types.md) </span></span>  
+ <span data-ttu-id="aa56f-117">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-117">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span></span>  
+ <span data-ttu-id="aa56f-118">[fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md) </span><span class="sxs-lookup"><span data-stu-id="aa56f-118">[fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) </span></span>  
+ [<span data-ttu-id="aa56f-119">stackalloc</span><span class="sxs-lookup"><span data-stu-id="aa56f-119">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
 

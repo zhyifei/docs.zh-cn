@@ -35,19 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db38c0c2a4f8b74a6b862f86f426b4d8837f4424
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 571731ae7066ba7ec52d4a2413b4d948f3f35bfe
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="troubleshooting-arrays-visual-basic"></a>数组疑难解答 (Visual Basic)
-此页列出与数组一起使用时可能会出现一些常见问题。  
+# <a name="troubleshooting-arrays-visual-basic"></a><span data-ttu-id="a7e13-102">数组疑难解答 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7e13-102">Troubleshooting Arrays (Visual Basic)</span></span>
+<span data-ttu-id="a7e13-103">此页列出与数组一起使用时可能会出现一些常见问题。</span><span class="sxs-lookup"><span data-stu-id="a7e13-103">This page lists some common problems that can occur when working with arrays.</span></span>  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>编译错误声明和初始化数组  
- 因误解而声明、 创建和初始化数组的规则，将产生编译错误。 错误的最常见原因如下所示︰  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a><span data-ttu-id="a7e13-104">编译错误声明和初始化数组</span><span class="sxs-lookup"><span data-stu-id="a7e13-104">Compilation Errors Declaring and Initializing an Array</span></span>  
+ <span data-ttu-id="a7e13-105">因误解而声明、 创建和初始化数组的规则，将产生编译错误。</span><span class="sxs-lookup"><span data-stu-id="a7e13-105">Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays.</span></span> <span data-ttu-id="a7e13-106">错误的最常见原因如下所示︰</span><span class="sxs-lookup"><span data-stu-id="a7e13-106">The most common causes of errors are the following:</span></span>  
   
--   提供[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)子句后在数组变量声明中指定维的长度。 下面的代码行显示了这种类型的无效声明。  
+-   <span data-ttu-id="a7e13-107">提供[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)子句后在数组变量声明中指定维的长度。</span><span class="sxs-lookup"><span data-stu-id="a7e13-107">Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration.</span></span> <span data-ttu-id="a7e13-108">下面的代码行显示了这种类型的无效声明。</span><span class="sxs-lookup"><span data-stu-id="a7e13-108">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -55,15 +56,15 @@ ms.lasthandoff: 03/13/2017
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   为多个顶级数组交错数组的指定维的长度。 下面的代码行将演示这种类型的无效的声明。  
+-   <span data-ttu-id="a7e13-109">为多个顶级数组交错数组的指定维的长度。</span><span class="sxs-lookup"><span data-stu-id="a7e13-109">Specifying dimension lengths for more than the top-level array of a jagged array.</span></span> <span data-ttu-id="a7e13-110">下面的代码行将演示这种类型的无效的声明。</span><span class="sxs-lookup"><span data-stu-id="a7e13-110">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   省略`New`关键字时指定的元素值。 下面的代码行将演示这种类型的无效的声明。  
+-   <span data-ttu-id="a7e13-111">省略`New`关键字时指定的元素值。</span><span class="sxs-lookup"><span data-stu-id="a7e13-111">Omitting the `New` keyword when specifying the element values.</span></span> <span data-ttu-id="a7e13-112">下面的代码行将演示这种类型的无效的声明。</span><span class="sxs-lookup"><span data-stu-id="a7e13-112">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   提供`New`子句时没有使用大括号 (`{}`)。 下面的代码行显示了这种类型的无效声明。  
+-   <span data-ttu-id="a7e13-113">提供`New`子句时没有使用大括号 (`{}`)。</span><span class="sxs-lookup"><span data-stu-id="a7e13-113">Supplying a `New` clause without braces (`{}`).</span></span> <span data-ttu-id="a7e13-114">下面的代码行显示了这种类型的无效声明。</span><span class="sxs-lookup"><span data-stu-id="a7e13-114">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -73,15 +74,15 @@ ms.lasthandoff: 03/13/2017
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>访问超出界限的数组  
- 初始化数组的过程将分配给每个维度的一个上限和下限。 每次访问该数组的元素必须指定有效的索引或下标，对于每个维度。 如果任何索引低于其下限或高于其上限<xref:System.IndexOutOfRangeException>异常结果。</xref:System.IndexOutOfRangeException> 编译器无法检测到这样的错误，因此在运行时就会出错。  
+## <a name="accessing-an-array-out-of-bounds"></a><span data-ttu-id="a7e13-115">访问超出界限的数组</span><span class="sxs-lookup"><span data-stu-id="a7e13-115">Accessing an Array Out of Bounds</span></span>  
+ <span data-ttu-id="a7e13-116">初始化数组的过程将分配给每个维度的一个上限和下限。</span><span class="sxs-lookup"><span data-stu-id="a7e13-116">The process of initializing an array assigns an upper bound and a lower bound to each dimension.</span></span> <span data-ttu-id="a7e13-117">每次访问该数组的元素必须指定有效的索引或下标，对于每个维度。</span><span class="sxs-lookup"><span data-stu-id="a7e13-117">Every access to an element of the array must specify a valid index, or subscript, for every dimension.</span></span> <span data-ttu-id="a7e13-118">如果任何索引低于其下限或高于其上限<xref:System.IndexOutOfRangeException>异常结果。</xref:System.IndexOutOfRangeException></span><span class="sxs-lookup"><span data-stu-id="a7e13-118">If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results.</span></span> <span data-ttu-id="a7e13-119">编译器无法检测到这样的错误，因此在运行时就会出错。</span><span class="sxs-lookup"><span data-stu-id="a7e13-119">The compiler cannot detect such an error, so an error occurs at run time.</span></span>  
   
-### <a name="determining-bounds"></a>确定边界  
- 如果另一个组件将数组传递给您的代码，例如作为过程参数，您不知道该数组的大小或它的维的长度。 您应首先确定每个维度的数组上界，然后再尝试访问任何元素。 如果数组已创建通过某种方式以外[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]`New`子句，下限可能不是 0，并且是最安全的方式确定该下限。  
+### <a name="determining-bounds"></a><span data-ttu-id="a7e13-120">确定边界</span><span class="sxs-lookup"><span data-stu-id="a7e13-120">Determining Bounds</span></span>  
+ <span data-ttu-id="a7e13-121">如果另一个组件将数组传递给您的代码，例如作为过程参数，您不知道该数组的大小或它的维的长度。</span><span class="sxs-lookup"><span data-stu-id="a7e13-121">If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions.</span></span> <span data-ttu-id="a7e13-122">您应首先确定每个维度的数组上界，然后再尝试访问任何元素。</span><span class="sxs-lookup"><span data-stu-id="a7e13-122">You should always determine the upper bound for every dimension of an array before you attempt to access any elements.</span></span> <span data-ttu-id="a7e13-123">如果数组已创建通过某种方式以外[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]`New`子句，下限可能不是 0，并且是最安全的方式确定该下限。</span><span class="sxs-lookup"><span data-stu-id="a7e13-123">If the array has been created by some means other than a [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.</span></span>  
   
-### <a name="specifying-the-dimension"></a>指定维度  
- 在确定多维数组的边界时，请注意如何指定的维度。 `dimension`参数<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法都是从 0 开始时`Rank`参数[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函数是从 1 开始。</xref:Microsoft.VisualBasic.Information.UBound%2A> </xref:Microsoft.VisualBasic.Information.LBound%2A> </xref:System.Array.GetUpperBound%2A> </xref:System.Array.GetLowerBound%2A>  
+### <a name="specifying-the-dimension"></a><span data-ttu-id="a7e13-124">指定维度</span><span class="sxs-lookup"><span data-stu-id="a7e13-124">Specifying the Dimension</span></span>  
+ <span data-ttu-id="a7e13-125">在确定多维数组的边界时，请注意如何指定的维度。</span><span class="sxs-lookup"><span data-stu-id="a7e13-125">When determining the bounds of a multidimensional array, take care how you specify the dimension.</span></span> <span data-ttu-id="a7e13-126">`dimension`参数<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法都是从 0 开始时`Rank`参数[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函数是从 1 开始。</xref:Microsoft.VisualBasic.Information.UBound%2A> </xref:Microsoft.VisualBasic.Information.LBound%2A> </xref:System.Array.GetUpperBound%2A> </xref:System.Array.GetLowerBound%2A></span><span class="sxs-lookup"><span data-stu-id="a7e13-126">The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [如何︰ 初始化数组变量在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a><span data-ttu-id="a7e13-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a7e13-127">See Also</span></span>  
+ <span data-ttu-id="a7e13-128">[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="a7e13-128">[Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+<span data-ttu-id="a7e13-129"> [如何︰ 初始化数组变量在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)</span><span class="sxs-lookup"><span data-stu-id="a7e13-129"> [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)</span></span>

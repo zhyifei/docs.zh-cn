@@ -1,1 +1,1 @@
-语言集成查询 (LINQ)
+<span data-ttu-id="9efc4-101">语言集成查询 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="9efc4-101">Language-Integrated Query (LINQ)</span></span>

@@ -37,8 +37,8 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="private-c-reference"></a>private（C# 参考）
-`private` 关键字是一个成员访问修饰符。 私有访问是允许的最低访问级别。 私有成员只有在声明它们的类和结构体中才是可访问的，如以下示例所示：  
+# <a name="private-c-reference"></a><span data-ttu-id="e09b8-102">private（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="e09b8-102">private (C# Reference)</span></span>
+<span data-ttu-id="e09b8-103">`private` 关键字是一个成员访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="e09b8-103">The `private` keyword is a member access modifier.</span></span> <span data-ttu-id="e09b8-104">私有访问是允许的最低访问级别。</span><span class="sxs-lookup"><span data-stu-id="e09b8-104">Private access is the least permissive access level.</span></span> <span data-ttu-id="e09b8-105">私有成员只有在声明它们的类和结构体中才是可访问的，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="e09b8-105">Private members are accessible only within the body of the class or the struct in which they are declared, as in this example:</span></span>  
   
 ```  
 class Employee  
@@ -48,28 +48,28 @@ class Employee
 }  
 ```  
   
- 同一体中的嵌套类型也可以访问那些私有成员。  
+ <span data-ttu-id="e09b8-106">同一体中的嵌套类型也可以访问那些私有成员。</span><span class="sxs-lookup"><span data-stu-id="e09b8-106">Nested types in the same body can also access those private members.</span></span>  
   
- 在声明私有成员的类或结构外引用它会导致编译时错误。  
+ <span data-ttu-id="e09b8-107">在声明私有成员的类或结构外引用它会导致编译时错误。</span><span class="sxs-lookup"><span data-stu-id="e09b8-107">It is a compile-time error to reference a private member outside the class or the struct in which it is declared.</span></span>  
   
- 有关 `private` 和其他访问修饰符的比较，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)和[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ <span data-ttu-id="e09b8-108">有关 `private` 和其他访问修饰符的比较，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)和[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="e09b8-108">For a comparison of `private` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) and [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-## <a name="example"></a>示例  
- 在此示例中，`Employee` 类包含两个私有数据成员 `name` 和 `salary`。 作为私有成员，它们只能通过成员方法来访问。 添加名为 `GetName` 和 `Salary` 的公共方法，以便可以对私有成员进行受控的访问。 通过公共方法访问 `name` 成员，而通过公共只读属性访问 `salary` 成员。 （有关详细信息，请参阅[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)。）  
+## <a name="example"></a><span data-ttu-id="e09b8-109">示例</span><span class="sxs-lookup"><span data-stu-id="e09b8-109">Example</span></span>  
+ <span data-ttu-id="e09b8-110">在此示例中，`Employee` 类包含两个私有数据成员 `name` 和 `salary`。</span><span class="sxs-lookup"><span data-stu-id="e09b8-110">In this example, the `Employee` class contains two private data members, `name` and `salary`.</span></span> <span data-ttu-id="e09b8-111">作为私有成员，它们只能通过成员方法来访问。</span><span class="sxs-lookup"><span data-stu-id="e09b8-111">As private members, they cannot be accessed except by member methods.</span></span> <span data-ttu-id="e09b8-112">添加名为 `GetName` 和 `Salary` 的公共方法，以便可以对私有成员进行受控的访问。</span><span class="sxs-lookup"><span data-stu-id="e09b8-112">Public methods named `GetName` and `Salary` are added to allow controlled access to the private members.</span></span> <span data-ttu-id="e09b8-113">通过公共方法访问 `name` 成员，而通过公共只读属性访问 `salary` 成员。</span><span class="sxs-lookup"><span data-stu-id="e09b8-113">The `name` member is accessed by way of a public method, and the `salary` member is accessed by way of a public read-only property.</span></span> <span data-ttu-id="e09b8-114">（有关详细信息，请参阅[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)。）</span><span class="sxs-lookup"><span data-stu-id="e09b8-114">(See [Properties](../../../csharp/programming-guide/classes-and-structs/properties.md) for more information.)</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
+ <span data-ttu-id="e09b8-115">[!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e09b8-115">[!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="e09b8-116">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="e09b8-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [内部](../../../csharp/language-reference/keywords/internal.md)
+## <a name="see-also"></a><span data-ttu-id="e09b8-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="e09b8-117">See Also</span></span>  
+ <span data-ttu-id="e09b8-118">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-118">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="e09b8-119">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-119">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="e09b8-120">[C# 关键字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-120">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="e09b8-121">[访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-121">[Access Modifiers](../../../csharp/language-reference/keywords/access-modifiers.md) </span></span>  
+ <span data-ttu-id="e09b8-122">[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-122">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) </span></span>  
+ <span data-ttu-id="e09b8-123">[修饰符](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-123">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ <span data-ttu-id="e09b8-124">[public](../../../csharp/language-reference/keywords/public.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-124">[public](../../../csharp/language-reference/keywords/public.md) </span></span>  
+ <span data-ttu-id="e09b8-125">[protected](../../../csharp/language-reference/keywords/protected.md) </span><span class="sxs-lookup"><span data-stu-id="e09b8-125">[protected](../../../csharp/language-reference/keywords/protected.md) </span></span>  
+ [<span data-ttu-id="e09b8-126">内部</span><span class="sxs-lookup"><span data-stu-id="e09b8-126">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
 

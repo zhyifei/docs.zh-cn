@@ -37,27 +37,27 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="do-c-reference"></a>do（C# 参考）
-`do` 语句重复执行一个语句或语句块，直到指定的表达式计算为 `false` 值。 循环体必须括在大括号 `{}` 内，除非它由单个语句组成。 在这种情况下，大括号是可选的。  
+# <a name="do-c-reference"></a><span data-ttu-id="ab748-102">do（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="ab748-102">do (C# Reference)</span></span>
+<span data-ttu-id="ab748-103">`do` 语句重复执行一个语句或语句块，直到指定的表达式计算为 `false` 值。</span><span class="sxs-lookup"><span data-stu-id="ab748-103">The `do` statement executes a statement or a block of statements repeatedly until a specified expression evaluates to `false`.</span></span> <span data-ttu-id="ab748-104">循环体必须括在大括号 `{}` 内，除非它由单个语句组成。</span><span class="sxs-lookup"><span data-stu-id="ab748-104">The body of the loop must be enclosed in braces, `{}`, unless it consists of a single statement.</span></span> <span data-ttu-id="ab748-105">在这种情况下，大括号是可选的。</span><span class="sxs-lookup"><span data-stu-id="ab748-105">In that case, the braces are optional.</span></span>  
   
-## <a name="example"></a>示例  
- 在下面的示例中，只要变量 `x` 小于 5，`do-while` 循环语句就开始执行。  
+## <a name="example"></a><span data-ttu-id="ab748-106">示例</span><span class="sxs-lookup"><span data-stu-id="ab748-106">Example</span></span>  
+ <span data-ttu-id="ab748-107">在下面的示例中，只要变量 `x` 小于 5，`do-while` 循环语句就开始执行。</span><span class="sxs-lookup"><span data-stu-id="ab748-107">In the following example, the `do-while` loop statements execute as long as the variable `x` is less than 5.</span></span>  
   
- [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
+ <span data-ttu-id="ab748-108">[!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ab748-108">[!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]</span></span>  
   
- 与 [while](../../../csharp/language-reference/keywords/while.md) 语句不同的是，`do-while` 循环会在计算条件表达式之前执行一次。  
+ <span data-ttu-id="ab748-109">与 [while](../../../csharp/language-reference/keywords/while.md) 语句不同的是，`do-while` 循环会在计算条件表达式之前执行一次。</span><span class="sxs-lookup"><span data-stu-id="ab748-109">Unlike the [while](../../../csharp/language-reference/keywords/while.md) statement, a `do-while` loop is executed one time before the conditional expression is evaluated.</span></span>  
   
- 在 `do-while` 块中的任何点，都可使用 [break](../../../csharp/language-reference/keywords/break.md) 语句跳出循环。 可通过使用 [continue](../../../csharp/language-reference/keywords/continue.md) 语句直接步入 `while` 表达式计算语句。 如果 `while` 表达式计算结果为 true，则继续执行循环中的第一个语句。 如果表达式的计算结果为 false，则继续执行 `do-while` 循环后的第一个语句。  
+ <span data-ttu-id="ab748-110">在 `do-while` 块中的任何点，都可使用 [break](../../../csharp/language-reference/keywords/break.md) 语句跳出循环。</span><span class="sxs-lookup"><span data-stu-id="ab748-110">At any point in the `do-while` block, you can break out of the loop using the [break](../../../csharp/language-reference/keywords/break.md) statement.</span></span> <span data-ttu-id="ab748-111">可通过使用 [continue](../../../csharp/language-reference/keywords/continue.md) 语句直接步入 `while` 表达式计算语句。</span><span class="sxs-lookup"><span data-stu-id="ab748-111">You can step directly to the `while` expression evaluation statement by using the [continue](../../../csharp/language-reference/keywords/continue.md) statement.</span></span> <span data-ttu-id="ab748-112">如果 `while` 表达式计算结果为 true，则继续执行循环中的第一个语句。</span><span class="sxs-lookup"><span data-stu-id="ab748-112">If the `while` expression evaluates to true, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="ab748-113">如果表达式的计算结果为 false，则继续执行 `do-while` 循环后的第一个语句。</span><span class="sxs-lookup"><span data-stu-id="ab748-113">If the expression evaluates to false, execution continues at the first statement after the `do-while` loop.</span></span>  
   
- `do-while` 循环还可以通过 [goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 语句退出。  
+ <span data-ttu-id="ab748-114">`do-while` 循环还可以通过 [goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 语句退出。</span><span class="sxs-lookup"><span data-stu-id="ab748-114">A `do-while` loop can also be exited by the [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statements.</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="ab748-115">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="ab748-115">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [do-while 语句 (C++)](/cpp/cpp/do-while-statement-cpp)   
- [迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
+## <a name="see-also"></a><span data-ttu-id="ab748-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="ab748-116">See Also</span></span>  
+ <span data-ttu-id="ab748-117">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ab748-117">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ab748-118">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ab748-118">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ab748-119">[C# 关键字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="ab748-119">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="ab748-120">[do-while 语句 (C++)](/cpp/cpp/do-while-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="ab748-120">[do-while Statement (C++)](/cpp/cpp/do-while-statement-cpp) </span></span>  
+ [<span data-ttu-id="ab748-121">迭代语句</span><span class="sxs-lookup"><span data-stu-id="ab748-121">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
 

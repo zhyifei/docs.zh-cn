@@ -15,20 +15,21 @@ ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af216e734c85806056e37d92733a3e4d49f8b73c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2a77a16f1f0fc75636cea3ea5872948e9a81cc10
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>如何︰ 更改整个 XML 树 (Visual Basic 中) Namespace
-有时需要以编程方式更改元素或属性的命名空间。 LINQ to XML 可简化此任务。 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>可以设置属性。</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>无法设置属性，但您可以轻松地将复制到的属性<xref:System.Collections.Generic.List%601?displayProperty=fullName>，删除现有属性，然后添加位于新命名空间中的新属性。</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a><span data-ttu-id="b5649-102">如何︰ 更改整个 XML 树 (Visual Basic 中) Namespace</span><span class="sxs-lookup"><span data-stu-id="b5649-102">How to: Change the Namespace for an Entire XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="b5649-103">有时需要以编程方式更改元素或属性的命名空间。</span><span class="sxs-lookup"><span data-stu-id="b5649-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="b5649-104">LINQ to XML 可简化此任务。</span><span class="sxs-lookup"><span data-stu-id="b5649-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="b5649-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>可以设置属性。</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="b5649-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> property can be set.</span></span> <span data-ttu-id="b5649-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>无法设置属性，但您可以轻松地将复制到的属性<xref:System.Collections.Generic.List%601?displayProperty=fullName>，删除现有属性，然后添加位于新命名空间中的新属性。</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="b5649-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=fullName>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ <span data-ttu-id="b5649-107">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="b5649-107">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码创建两个不在命名空间中的 XML 树。 然后更改每个树的命名空间，再将它们合并到一个树中。  
+## <a name="example"></a><span data-ttu-id="b5649-108">示例</span><span class="sxs-lookup"><span data-stu-id="b5649-108">Example</span></span>  
+ <span data-ttu-id="b5649-109">下面的代码创建两个不在命名空间中的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="b5649-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="b5649-110">然后更改每个树的命名空间，再将它们合并到一个树中。</span><span class="sxs-lookup"><span data-stu-id="b5649-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```vb  
 Dim tree1 As XElement = _  
@@ -76,7 +77,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="b5649-111">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="b5649-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -89,5 +90,5 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b5649-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b5649-112">See Also</span></span>  
+ [<span data-ttu-id="b5649-113">修改 XML 树 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b5649-113">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

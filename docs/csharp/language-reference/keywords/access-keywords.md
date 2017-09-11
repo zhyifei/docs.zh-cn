@@ -34,20 +34,20 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="access-keywords-c-reference"></a>访问关键字（C# 参考）
-本部分介绍以下访问关键字：  
+# <a name="access-keywords-c-reference"></a><span data-ttu-id="89e4c-102">访问关键字（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="89e4c-102">Access Keywords (C# Reference)</span></span>
+<span data-ttu-id="89e4c-103">本部分介绍以下访问关键字：</span><span class="sxs-lookup"><span data-stu-id="89e4c-103">This section introduces the following access keywords:</span></span>  
   
--   [base](../../../csharp/language-reference/keywords/base.md)  
+-   [<span data-ttu-id="89e4c-104">base</span><span class="sxs-lookup"><span data-stu-id="89e4c-104">base</span></span>](../../../csharp/language-reference/keywords/base.md)  
   
-     访问基类成员。  
+     <span data-ttu-id="89e4c-105">访问基类成员。</span><span class="sxs-lookup"><span data-stu-id="89e4c-105">Accesses the members of the base class.</span></span>  
   
--   [this](../../../csharp/language-reference/keywords/this.md)  
+-   [<span data-ttu-id="89e4c-106">this</span><span class="sxs-lookup"><span data-stu-id="89e4c-106">this</span></span>](../../../csharp/language-reference/keywords/this.md)  
   
-     引用类的当前实例。  
+     <span data-ttu-id="89e4c-107">引用类的当前实例。</span><span class="sxs-lookup"><span data-stu-id="89e4c-107">Refers to the current instance of the class.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="89e4c-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="89e4c-108">See Also</span></span>  
+ <span data-ttu-id="89e4c-109">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="89e4c-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="89e4c-110">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="89e4c-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="89e4c-111">[访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="89e4c-111">[Access Modifiers](../../../csharp/language-reference/keywords/access-modifiers.md) </span></span>  
+ [<span data-ttu-id="89e4c-112">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="89e4c-112">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

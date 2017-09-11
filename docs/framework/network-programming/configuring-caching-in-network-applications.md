@@ -1,41 +1,47 @@
 ---
-title: "配置网络应用程序中的缓存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "缓存 [.NET Framework]，配置"
+title: "配置网络应用程序中的缓存"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ea36db46b79c890b0b26cfc39e2aab5bc0e88e03
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 配置网络应用程序中的缓存
-若要配置缓存，必须指定缓存策略在应用程序或 <xref:System.Net.WebRequest> 级别。  下列主题提供阐释配置应用程序和请求使用缓存的代码示例。  
+# <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="398ea-102">配置网络应用程序中的缓存</span><span class="sxs-lookup"><span data-stu-id="398ea-102">Configuring Caching in Network Applications</span></span>
+<span data-ttu-id="398ea-103">若要配置缓存，需要在应用程序级别或 <xref:System.Net.WebRequest> 级别指定缓存策略。</span><span class="sxs-lookup"><span data-stu-id="398ea-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="398ea-104">以下主题提供代码示例，演示如何配置应用程序和请求来使用缓存。</span><span class="sxs-lookup"><span data-stu-id="398ea-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  
   
--   [如何:设置应用程序的基于位置的缓存策略](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="398ea-105">如何：为应用程序设置基于位置的缓存策略</span><span class="sxs-lookup"><span data-stu-id="398ea-105">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
--   [如何:设置应用程序的默认基于时间的缓存策略](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="398ea-106">如何：为应用程序设置默认基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="398ea-106">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
--   [如何:自定义基于时间的缓存策略](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+-   [<span data-ttu-id="398ea-107">如何：自定义基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="398ea-107">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
   
--   [如何:为请求设置的缓存策略](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+-   [<span data-ttu-id="398ea-108">如何：为请求设置缓存策略</span><span class="sxs-lookup"><span data-stu-id="398ea-108">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- 使用应用程序或计算机配置文件，也可以配置缓存策略。  有关更多信息，请参见&#124; [\<requestCaching\> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+ <span data-ttu-id="398ea-109">也可使用应用程序或计算机配置文件配置缓存策略。</span><span class="sxs-lookup"><span data-stu-id="398ea-109">You can also configure cache policy using application or machine configuration files.</span></span> <span data-ttu-id="398ea-110">有关详细信息，请参阅 &#124; [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="398ea-110">For more information, see &#124; [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
   
-## 请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)   
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
+## <a name="see-also"></a><span data-ttu-id="398ea-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="398ea-111">See Also</span></span>  
+ <span data-ttu-id="398ea-112">[网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md) </span><span class="sxs-lookup"><span data-stu-id="398ea-112">[Cache Management for Network Applications](../../../docs/framework/network-programming/cache-management-for-network-applications.md) </span></span>  
+ <span data-ttu-id="398ea-113">[缓存策略](../../../docs/framework/network-programming/cache-policy.md) </span><span class="sxs-lookup"><span data-stu-id="398ea-113">[Cache Policy](../../../docs/framework/network-programming/cache-policy.md) </span></span>  
+ <span data-ttu-id="398ea-114">[基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md) </span><span class="sxs-lookup"><span data-stu-id="398ea-114">[Location-Based Cache Policies](../../../docs/framework/network-programming/location-based-cache-policies.md) </span></span>  
+ [<span data-ttu-id="398ea-115">基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="398ea-115">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
+

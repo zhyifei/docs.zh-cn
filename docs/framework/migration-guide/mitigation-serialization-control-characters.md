@@ -24,25 +24,25 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>缓解：使用 DataContractJsonSerializer 对控制字符进行序列化
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a><span data-ttu-id="dfc6f-102">缓解：使用 DataContractJsonSerializer 对控制字符进行序列化</span><span class="sxs-lookup"><span data-stu-id="dfc6f-102">Mitigation: Serialization of Control Characters with the DataContractJsonSerializer</span></span>
 
-自 .NET Framework 4.7 起，使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 对控制字符进行序列化的方式已更改为与 ECMAScript V6 和 V8 兼容。 
+<span data-ttu-id="dfc6f-103">自 .NET Framework 4.7 起，使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 对控制字符进行序列化的方式已更改为与 ECMAScript V6 和 V8 兼容。</span><span class="sxs-lookup"><span data-stu-id="dfc6f-103">Starting with the .NET Framework 4.7, the way in which control characters are serialized with the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> has changed to conform to ECMAScript V6 and V8.</span></span> 
  
-## <a name="impact"></a>影响
+## <a name="impact"></a><span data-ttu-id="dfc6f-104">影响</span><span class="sxs-lookup"><span data-stu-id="dfc6f-104">Impact</span></span>
 
-在 .NET framework 4.6.2 及更低版本中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 未按与 ECMAScript V6 和 V8 标准兼容的方式对一些特殊控制字符（如 `\b`、`\f` 和 `\t`）进行序列化。
+<span data-ttu-id="dfc6f-105">在 .NET framework 4.6.2 及更低版本中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 未按与 ECMAScript V6 和 V8 标准兼容的方式对一些特殊控制字符（如 `\b`、`\f` 和 `\t`）进行序列化。</span><span class="sxs-lookup"><span data-stu-id="dfc6f-105">In the .NET framework 4.6.2 and earlier versions, the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> did not serialize some special control characters, such as `\b`, `\f`, and `\t`, in a way that was compatible with the ECMAScript V6 and V8 standards.</span></span>
 
-对于定位 .NET Framework 4.7 及更高版本的应用程序，这些控制字符的序列化与 ECMAScript V6 和 V8 兼容。 以下 API 受到影响：
+<span data-ttu-id="dfc6f-106">对于定位 .NET Framework 4.7 及更高版本的应用程序，这些控制字符的序列化与 ECMAScript V6 和 V8 兼容。</span><span class="sxs-lookup"><span data-stu-id="dfc6f-106">For apps that target versions of the .NET Framework starting with the .NET Framework 4.7, serialization of these control characters is compatible with ECMAScript V6 and V8.</span></span> <span data-ttu-id="dfc6f-107">以下 API 受到影响：</span><span class="sxs-lookup"><span data-stu-id="dfc6f-107">The following APIs are affected:</span></span>
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
-## <a name="mitigation"></a>缓解操作
+## <a name="mitigation"></a><span data-ttu-id="dfc6f-108">缓解操作</span><span class="sxs-lookup"><span data-stu-id="dfc6f-108">Mitigation</span></span>
 
-对于定位 .NET Framework 4.7 及更高版本的应用程序，此行为默认启用。
+<span data-ttu-id="dfc6f-109">对于定位 .NET Framework 4.7 及更高版本的应用程序，此行为默认启用。</span><span class="sxs-lookup"><span data-stu-id="dfc6f-109">For apps that target versions of the .NET Framework starting with the .NET Framework 4.7, this behavior is enabled by default.</span></span>
 
-如果不需要此行为，可以在 app.config 或 web.config 文件的 `<runtime>` 部分中添加下面的代码行，从而选择禁用此功能：
+<span data-ttu-id="dfc6f-110">如果不需要此行为，可以在 app.config 或 web.config 文件的 `<runtime>` 部分中添加下面的代码行，从而选择禁用此功能：</span><span class="sxs-lookup"><span data-stu-id="dfc6f-110">If this behavior is not desirable, you can opt out of this feature by adding the following line to the `<runtime>` section of the app.config or web.config file:</span></span>
 
 ```xml
 <runtime>
@@ -50,6 +50,6 @@ ms.lasthandoff: 07/28/2017
 </runtime>
 ```
  
-## <a name="see-also"></a>请参阅
-[.NET Framework 4.7 中的重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+## <a name="see-also"></a><span data-ttu-id="dfc6f-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfc6f-111">See also</span></span>
+[<span data-ttu-id="dfc6f-112">.NET Framework 4.7 中的重定目标更改</span><span class="sxs-lookup"><span data-stu-id="dfc6f-112">Retargeting Changes in the .NET Framework 4.7</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
 

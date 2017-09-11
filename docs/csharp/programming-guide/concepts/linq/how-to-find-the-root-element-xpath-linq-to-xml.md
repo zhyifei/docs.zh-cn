@@ -21,17 +21,17 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>如何：查找根元素 (XPath-LINQ to XML) (C#)
-本主题演示如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 获取根元素。  
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a><span data-ttu-id="6362a-102">如何：查找根元素 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="6362a-102">How to: Find the Root Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="6362a-103">本主题演示如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 获取根元素。</span><span class="sxs-lookup"><span data-stu-id="6362a-103">This topic shows how to get the root element with XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- XPath 表达式为：  
+ <span data-ttu-id="6362a-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="6362a-104">The XPath expression is:</span></span>  
   
  `/PurchaseOrders`  
   
-## <a name="example"></a>示例  
- 此示例查找根元素。  
+## <a name="example"></a><span data-ttu-id="6362a-105">示例</span><span class="sxs-lookup"><span data-stu-id="6362a-105">Example</span></span>  
+ <span data-ttu-id="6362a-106">此示例查找根元素。</span><span class="sxs-lookup"><span data-stu-id="6362a-106">This example finds the root element.</span></span>  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ <span data-ttu-id="6362a-107">本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="6362a-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -49,13 +49,13 @@ else
 Console.WriteLine(el1.Name);  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="6362a-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="6362a-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="6362a-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="6362a-109">See Also</span></span>  
+ [<span data-ttu-id="6362a-110">针对 XPath 用户的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="6362a-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

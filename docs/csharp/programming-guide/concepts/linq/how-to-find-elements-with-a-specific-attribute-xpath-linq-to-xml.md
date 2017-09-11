@@ -21,15 +21,15 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何：查找具有特定属性的元素 (XPath-LINQ to XML) (C#)
-有时需要查找具有特定属性的所有元素。 您并不关心属性的内容， 而是根据属性是否存在进行选择。  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="ea1a9-102">如何：查找具有特定属性的元素 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ea1a9-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="ea1a9-103">有时需要查找具有特定属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="ea1a9-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="ea1a9-104">您并不关心属性的内容，</span><span class="sxs-lookup"><span data-stu-id="ea1a9-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="ea1a9-105">而是根据属性是否存在进行选择。</span><span class="sxs-lookup"><span data-stu-id="ea1a9-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- XPath 表达式为：  
+ <span data-ttu-id="ea1a9-106">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="ea1a9-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a>示例  
- 下面的代码选择具有 `Select` 属性的所有元素。  
+## <a name="example"></a><span data-ttu-id="ea1a9-107">示例</span><span class="sxs-lookup"><span data-stu-id="ea1a9-107">Example</span></span>  
+ <span data-ttu-id="ea1a9-108">下面的代码选择具有 `Select` 属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="ea1a9-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -60,7 +60,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="ea1a9-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="ea1a9-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -68,6 +68,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="ea1a9-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="ea1a9-110">See Also</span></span>  
+ [<span data-ttu-id="ea1a9-111">针对 XPath 用户的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ea1a9-111">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

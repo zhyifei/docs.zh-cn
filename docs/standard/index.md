@@ -10,73 +10,74 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
 ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
-ms.lasthandoff: 04/06/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 ---
 
-# <a name="net-platform-guide"></a>.NET 平台指南
+# <a name="net-platform-guide"></a><span data-ttu-id="f0588-104">.NET 平台指南</span><span class="sxs-lookup"><span data-stu-id="f0588-104">.NET Platform Guide</span></span>
 
 > [!NOTE]
-> 请查看[“.NET Core 入门”教程](../core/getting-started.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。
+> <span data-ttu-id="f0588-105">请查看[“.NET Core 入门”教程](../core/getting-started.md)，了解如何创建简单的 .NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="f0588-105">Check out the ["Getting Started with .NET Core" tutorials](../core/getting-started.md) to learn how to create a simple .NET Core application.</span></span> <span data-ttu-id="f0588-106">只需几分钟即可生成并运行第一个应用。</span><span class="sxs-lookup"><span data-stu-id="f0588-106">It only takes a few minutes to get your first app up and running.</span></span>
 
-.NET 是一个通用开发平台。 在使用通用解决方案的任何类型的应用或工作负荷中，都可以使用 .NET。 .NET 提供很多开发人员都会感兴趣的一些重要功能，包括自动内存管理和现代编程语言，可方便开发人员有效构建优质应用程序。 .NET 允许具有许多便利功能的高级编程环境，同时提供对本机内存和 API 的底层访问。
+<span data-ttu-id="f0588-107">.NET 是一个通用开发平台。</span><span class="sxs-lookup"><span data-stu-id="f0588-107">.NET is a general purpose development platform.</span></span> <span data-ttu-id="f0588-108">在使用通用解决方案的任何类型的应用或工作负荷中，都可以使用 .NET。</span><span class="sxs-lookup"><span data-stu-id="f0588-108">It can be used for any kind of app type or workload where general purpose solutions are used.</span></span> <span data-ttu-id="f0588-109">.NET 提供很多开发人员都会感兴趣的一些重要功能，包括自动内存管理和现代编程语言，可方便开发人员有效构建优质应用程序。</span><span class="sxs-lookup"><span data-stu-id="f0588-109">It has several key features that are attractive to many developers, including automatic memory management and modern programming languages, that make it easier to efficiently build high-quality applications.</span></span> <span data-ttu-id="f0588-110">.NET 允许具有许多便利功能的高级编程环境，同时提供对本机内存和 API 的底层访问。</span><span class="sxs-lookup"><span data-stu-id="f0588-110">.NET enables a high-level programming environment with many convenience features, while providing low-level access to native memory and APIs.</span></span>
 
-C#、F# 和 Visual Basic 是面向并依赖 .NET 平台的热门语言。 .NET 语言因其异步编程模型、语言集成查询、泛型类型和类型系统反射等主要功能而闻名。 该语言也是面向对象和功能性编程范例的不错选择。
+<span data-ttu-id="f0588-111">C#、F# 和 Visual Basic 是面向并依赖 .NET 平台的热门语言。</span><span class="sxs-lookup"><span data-stu-id="f0588-111">C#, F# and Visual Basic are popular languages that target and rely on the .NET platform.</span></span> <span data-ttu-id="f0588-112">.NET 语言因其异步编程模型、语言集成查询、泛型类型和类型系统反射等主要功能而闻名。</span><span class="sxs-lookup"><span data-stu-id="f0588-112">The .NET languages are known for key features such as their asynchronous programming model, language-integrated query, generic types and type system reflection.</span></span> <span data-ttu-id="f0588-113">该语言也是面向对象和功能性编程范例的不错选择。</span><span class="sxs-lookup"><span data-stu-id="f0588-113">The languages also provide great options for both object-oriented and functional programming paradigms.</span></span>
 
-这些语言在理念和语法，以及共享类型系统所提供的对称方面存在诸多差异。 此类型系统由基础运行时环境提供。 .NET 围绕“公共语言运行时”理念设计，支持多种语言要求（例如，动态和静态类型的语言），并可实现语言间的互操作性。 例如，可以在语言之间传递 `People` 对象集合，且不丢失语义或功能。
+<span data-ttu-id="f0588-114">这些语言在理念和语法，以及共享类型系统所提供的对称方面存在诸多差异。</span><span class="sxs-lookup"><span data-stu-id="f0588-114">There is great diversity across these languages, in philosophy and syntax, but also symmetry provided by a shared type system.</span></span> <span data-ttu-id="f0588-115">此类型系统由基础运行时环境提供。</span><span class="sxs-lookup"><span data-stu-id="f0588-115">This type system is provided by the underlying runtime environment.</span></span> <span data-ttu-id="f0588-116">.NET 围绕“公共语言运行时”理念设计，支持多种语言要求（例如，动态和静态类型的语言），并可实现语言间的互操作性。</span><span class="sxs-lookup"><span data-stu-id="f0588-116">.NET was designed around the idea of a "common language runtime" that could support the requirements of diverse languages -- for example, dynamic and statically typed languages -- and enable interoperability between them.</span></span> <span data-ttu-id="f0588-117">例如，可以在语言之间传递 `People` 对象集合，且不丢失语义或功能。</span><span class="sxs-lookup"><span data-stu-id="f0588-117">For example, it's possible to pass a collection of `People` objects between languages with no loss in semantics or capability.</span></span>
 
-.NET 基于指定平台的基本要素的开放式 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)，提供多种 [.NET 实现和产品](components.md)。 这些实现和产品已针对不同的应用程序类型（例如桌面、移动、游戏和云）进行单独优化，支持多种芯片（例如 x86/x64 和 ARM）和操作系统（例如 Windows、Linux、iOS、Android 和 macOS）。 开放源代码也是 .NET 生态系统的重要组成部分，其中包含多种 .NET 实现和许多的库，购买 OSI 批准的许可证后即可使用这些库。
+<span data-ttu-id="f0588-118">.NET 基于指定平台的基本要素的开放式 [.NET 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)，提供多种 [.NET 实现和产品](components.md)。</span><span class="sxs-lookup"><span data-stu-id="f0588-118">Multiple [.NET implementations and products](components.md) are available, based on open [.NET Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) that specify the fundamentals of the platform.</span></span> <span data-ttu-id="f0588-119">这些实现和产品已针对不同的应用程序类型（例如桌面、移动、游戏和云）进行单独优化，支持多种芯片（例如 x86/x64 和 ARM）和操作系统（例如 Windows、Linux、iOS、Android 和 macOS）。</span><span class="sxs-lookup"><span data-stu-id="f0588-119">They are separately optimized for different application types (for example, desktop, mobile, gaming, cloud) and support many chips (for example, x86/x64, ARM) and operating systems (for example, Windows, Linux, iOS, Android, macOS).</span></span> <span data-ttu-id="f0588-120">开放源代码也是 .NET 生态系统的重要组成部分，其中包含多种 .NET 实现和许多的库，购买 OSI 批准的许可证后即可使用这些库。</span><span class="sxs-lookup"><span data-stu-id="f0588-120">Open source is also an important part of the .NET ecosystem, with multiple .NET implementations and many libraries available under OSI-approved licenses.</span></span>
 
-- 了解 [C#](../csharp/index.md)
-- 了解 [F#](../fsharp/index.md)
-- 浏览 [.NET API 库](../../api/index.md)
-- [公共语言运行时简介](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
+- <span data-ttu-id="f0588-121">了解 [C#](../csharp/index.md)</span><span class="sxs-lookup"><span data-stu-id="f0588-121">Learn about [C#](../csharp/index.md)</span></span>
+- <span data-ttu-id="f0588-122">了解 [F#](../fsharp/index.md)</span><span class="sxs-lookup"><span data-stu-id="f0588-122">Learn about [F#](../fsharp/index.md)</span></span>
+- <span data-ttu-id="f0588-123">浏览 [.NET API 库](../../api/index.md)</span><span class="sxs-lookup"><span data-stu-id="f0588-123">Browse the [.NET API Library](../../api/index.md)</span></span>
+- [<span data-ttu-id="f0588-124">公共语言运行时简介</span><span class="sxs-lookup"><span data-stu-id="f0588-124">Introduction to the Common Language Runtime</span></span>](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
 
-<a name="fundamentals"></a>基础知识
+<a name="fundamentals"></a><span data-ttu-id="f0588-125">基础知识</span><span class="sxs-lookup"><span data-stu-id="f0588-125">Fundamentals</span></span>
 ------------
 
-**多语言** - .NET 提供可由多种语言使用的明确定义的类型系统、文件格式、运行时、框架和工具，目的是为了实现自身执行，同时与使用共享货币所用的 .NET 组件的语言进行互操作。
+<span data-ttu-id="f0588-126">**多语言** - .NET 提供可由多种语言使用的明确定义的类型系统、文件格式、运行时、框架和工具，目的是为了实现自身执行，同时与使用共享货币所用的 .NET 组件的语言进行互操作。</span><span class="sxs-lookup"><span data-stu-id="f0588-126">**Multi-Language** -- .NET provides a well-defined type system, file formats, runtime, framework and tools that can be used by multiple languages, both for their own execution and also to interoperate with other languages using those same components of .NET as their shared currency.</span></span>
 
-**托管内存** - .NET 通过垃圾回收器自动为你管理内存。 确保你能始终引用活动对象，保证避免缓冲区溢出和访问冲突等棘手问题。 这包括数组边界检查。
+<span data-ttu-id="f0588-127">**托管内存** - .NET 通过垃圾回收器自动为你管理内存。</span><span class="sxs-lookup"><span data-stu-id="f0588-127">**Managed Memory** -- .NET automatically manages memory for you via a garbage collector.</span></span> <span data-ttu-id="f0588-128">确保你能始终引用活动对象，保证避免缓冲区溢出和访问冲突等棘手问题。</span><span class="sxs-lookup"><span data-stu-id="f0588-128">It ensures that you always reference live objects, guaranteeing that you avoid nasty problems like buffer overruns and access violations.</span></span> <span data-ttu-id="f0588-129">这包括数组边界检查。</span><span class="sxs-lookup"><span data-stu-id="f0588-129">This includes array bounds checking.</span></span>
 
-**类型安全性** -- 功能和内存表现形式的主 .NET 模型为“类型”。 类型可定义形状和行为（可选）。 运行时确保调用代码根据其定义和指定的成员可见性，仅对类型执行操作，从而提供一致、可靠、安全的结果。
+<span data-ttu-id="f0588-130">**类型安全性** -- 功能和内存表现形式的主 .NET 模型为“类型”。</span><span class="sxs-lookup"><span data-stu-id="f0588-130">**Type Safety** -- The primary .NET model for functionality and memory representation is "types".</span></span> <span data-ttu-id="f0588-131">类型可定义形状和行为（可选）。</span><span class="sxs-lookup"><span data-stu-id="f0588-131">Types define shape and optionally behavior.</span></span> <span data-ttu-id="f0588-132">运行时确保调用代码根据其定义和指定的成员可见性，仅对类型执行操作，从而提供一致、可靠、安全的结果。</span><span class="sxs-lookup"><span data-stu-id="f0588-132">The runtime ensures that calling code can only operate on types according to their definition and specified visibility of members, providing consistent, reliable and secure results.</span></span>
 
-<a name="features"></a>功能
+<a name="features"></a><span data-ttu-id="f0588-133">功能</span><span class="sxs-lookup"><span data-stu-id="f0588-133">Features</span></span>
 --------
 
-**用户定义的值类型** - 值类型是类型的实用类别，因为它们提供“按值传递”而非“按引用传递”的语义，与类的情况类似。 值类型对于数值数据特别有用。 .NET 允许基元类型（如整数）和用户定义的类型使用值类型。
+<span data-ttu-id="f0588-134">**用户定义的值类型** - 值类型是类型的实用类别，因为它们提供“按值传递”而非“按引用传递”的语义，与类的情况类似。</span><span class="sxs-lookup"><span data-stu-id="f0588-134">**User-defined Value Types** -- Value types are a useful category of types since they offer the semantic of "pass by value" instead of "pass by reference", as is the case for classes.</span></span> <span data-ttu-id="f0588-135">值类型对于数值数据特别有用。</span><span class="sxs-lookup"><span data-stu-id="f0588-135">Value types are most obviously usefully for numeric data.</span></span> <span data-ttu-id="f0588-136">.NET 允许基元类型（如整数）和用户定义的类型使用值类型。</span><span class="sxs-lookup"><span data-stu-id="f0588-136">.NET enables value types for both primitive types, like integers, and user-defined types.</span></span>
 
-**泛型类型** - 泛型类型是包含一个或多个类型参数的类型，具体情况可根据每次实例化进行指定。 这可用于多种类型，在其他情况下，还会将内容公开为 Object 类型或需要多个类型定义。 例如，集合类型的给定实例化可能特定于人员、GPS 位置或字符串。
+<span data-ttu-id="f0588-137">**泛型类型** - 泛型类型是包含一个或多个类型参数的类型，具体情况可根据每次实例化进行指定。</span><span class="sxs-lookup"><span data-stu-id="f0588-137">**Generic types** -- Generic types are types with one or more type parameters that can be specified on a per-instantiation basis.</span></span> <span data-ttu-id="f0588-138">这可用于多种类型，在其他情况下，还会将内容公开为 Object 类型或需要多个类型定义。</span><span class="sxs-lookup"><span data-stu-id="f0588-138">This is useful for many types, which otherwise would  expose contents as the Object type or require multiple type definitions.</span></span> <span data-ttu-id="f0588-139">例如，集合类型的给定实例化可能特定于人员、GPS 位置或字符串。</span><span class="sxs-lookup"><span data-stu-id="f0588-139">For example, a given instantiation of a collection type can be made specific to People, GPS locations or strings.</span></span>
 
-**反射** - .NET 定义元数据格式，该格式用于描述二进制文件中的类型。 反射子系统使用此数据公开在运行时读取和实例化类型的 API。 此功能非常适用于不方便预先了解某程序的确切实现的动态方案。
+<span data-ttu-id="f0588-140">**反射** - .NET 定义元数据格式，该格式用于描述二进制文件中的类型。</span><span class="sxs-lookup"><span data-stu-id="f0588-140">**Reflection** -- .NET defines a metadata format that describes the types within a binary.</span></span> <span data-ttu-id="f0588-141">反射子系统使用此数据公开在运行时读取和实例化类型的 API。</span><span class="sxs-lookup"><span data-stu-id="f0588-141">The reflection subsystem uses this data, exposing APIs for both reading and instantiating types at runtime.</span></span> <span data-ttu-id="f0588-142">此功能非常适用于不方便预先了解某程序的确切实现的动态方案。</span><span class="sxs-lookup"><span data-stu-id="f0588-142">This facility is very useful for dynamic scenarios where it is not convenient to know the exact implementation of a program ahead of time.</span></span>
 
-**灵活的代码生成** - .NET 不指定将 .NET 二进制文件转换为机器码的特定方法。 已成功使用多种方法，包括转译、实时 (JIT) 编译以及有/无实时回退的预编译。 以上每种策略都很有用，并存在共同使用这些策略的情况。
+<span data-ttu-id="f0588-143">**灵活的代码生成** - .NET 不指定将 .NET 二进制文件转换为机器码的特定方法。</span><span class="sxs-lookup"><span data-stu-id="f0588-143">**Flexible code generation** -- .NET does not prescribe a specific approach to transforming .NET binaries into machine code.</span></span> <span data-ttu-id="f0588-144">已成功使用多种方法，包括转译、实时 (JIT) 编译以及有/无实时回退的预编译。</span><span class="sxs-lookup"><span data-stu-id="f0588-144">Many approaches have been used successfully, including interpretation, just-in-time (JIT) compilation, ahead-of-time (AOT) compilation with JIT fallback and AOT compilation with no JIT fallback.</span></span> <span data-ttu-id="f0588-145">以上每种策略都很有用，并存在共同使用这些策略的情况。</span><span class="sxs-lookup"><span data-stu-id="f0588-145">Each of these strategies can be valuable and there are opportunities for using them together.</span></span>
 
-**跨平台** - .NET 自推出之日起便已支持跨平台。 二进制格式和指令集包括操作系统、CPU 并与指针大小无关。 2000 年生成的在 32 位 Windows 计算机上运行的给定 .NET 二进制文件无需修改即可在 2016 ARM64 iOS 设备上运行。
+<span data-ttu-id="f0588-146">**跨平台** - .NET 自推出之日起便已支持跨平台。</span><span class="sxs-lookup"><span data-stu-id="f0588-146">**Cross-platform** -- .NET was intended to be cross platform from its inception.</span></span> <span data-ttu-id="f0588-147">二进制格式和指令集包括操作系统、CPU 并与指针大小无关。</span><span class="sxs-lookup"><span data-stu-id="f0588-147">The binary format and the instruction set are operating system, CPU and pointer-size agnostic.</span></span> <span data-ttu-id="f0588-148">2000 年生成的在 32 位 Windows 计算机上运行的给定 .NET 二进制文件无需修改即可在 2016 ARM64 iOS 设备上运行。</span><span class="sxs-lookup"><span data-stu-id="f0588-148">A given .NET binary built in 2000 to run on a 32-bit Windows machine can run on the ARM64 iOS device on 2016 without modification.</span></span>
 
-<a name="open-source"></a>打开源
+<a name="open-source"></a><span data-ttu-id="f0588-149">打开源</span><span class="sxs-lookup"><span data-stu-id="f0588-149">Open source</span></span>
 -----------
 
-.NET 的 [.NET Core](https://github.com/dotnet/core) 和 [Mono](https://github.com/mono/mono) 实现是使用 MIT 许可证的开放源代码。 文档使用[知识共享 CC-BY](https://creativecommons.org/licenses/by/4.0/)许可证。 .NET Core 和 Mono 由 Microsoft 提供赞助，并拥有许多来自社区的参与者。 
+<span data-ttu-id="f0588-150">.NET 的 [.NET Core](https://github.com/dotnet/core) 和 [Mono](https://github.com/mono/mono) 实现是使用 MIT 许可证的开放源代码。</span><span class="sxs-lookup"><span data-stu-id="f0588-150">The [.NET Core](https://github.com/dotnet/core) and [Mono](https://github.com/mono/mono) implementations of .NET are open source, using the MIT license.</span></span> <span data-ttu-id="f0588-151">文档使用[知识共享 CC-BY](https://creativecommons.org/licenses/by/4.0/)许可证。</span><span class="sxs-lookup"><span data-stu-id="f0588-151">Documentation uses the [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/) license.</span></span> <span data-ttu-id="f0588-152">.NET Core 和 Mono 由 Microsoft 提供赞助，并拥有许多来自社区的参与者。</span><span class="sxs-lookup"><span data-stu-id="f0588-152">.NET Core and Mono are sponsored by Microsoft and have many contributors from the community.</span></span> 
 
-这些通用运行时可用作学术研究、教学/学习或者商业产品的基础。 其开放性还意味着只要产品存在 bug 或用户渴求新功能，任何人都可以向上游产品代码提供反馈。
+<span data-ttu-id="f0588-153">这些通用运行时可用作学术研究、教学/学习或者商业产品的基础。</span><span class="sxs-lookup"><span data-stu-id="f0588-153">These general purpose runtimes can be used as the basis of academic research or teaching/learning or commercial products.</span></span> <span data-ttu-id="f0588-154">其开放性还意味着只要产品存在 bug 或用户渴求新功能，任何人都可以向上游产品代码提供反馈。</span><span class="sxs-lookup"><span data-stu-id="f0588-154">Their open nature also means that anyone can contribute back to the upstream product code given a bug or the desire for a new feature.</span></span>
 
-<a name="projects"></a>项目
+<a name="projects"></a><span data-ttu-id="f0588-155">项目</span><span class="sxs-lookup"><span data-stu-id="f0588-155">Projects</span></span>
 --------
 
-- [CoreCLR](https://github.com/dotnet/coreclr) - .NET 运行时，适用于 .NET Core。
-- [Mono](https://github.com/mono/mono) - .NET 运行时，适用于 Xamarin 和其他环境。
-- [CoreFX](https://github.com/dotnet/coreclr) - .NET 类库，适用于 .NET Core 和 Mono（Mono 在某种程度上通过源共享使用）。
-- [Roslyn](https://github.com/dotnet/roslyn) - C# 和 Visual Basic 编译器，适用于大多数 .NET 平台和工具。 公开用于读取、编写和分析源代码的 API。
-- [F#](https://github.com/microsoft/visualfsharp) - F# 编译器。
-- [Xamarin SDK](http://open.xamarin.com) - 采用 C# 和 F# 编写 Android、iOS 和 macOS 所需的工具和库。
+- <span data-ttu-id="f0588-156">[CoreCLR](https://github.com/dotnet/coreclr) - .NET 运行时，适用于 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="f0588-156">[CoreCLR](https://github.com/dotnet/coreclr) - .NET runtime, used by .NET Core.</span></span>
+- <span data-ttu-id="f0588-157">[Mono](https://github.com/mono/mono) - .NET 运行时，适用于 Xamarin 和其他环境。</span><span class="sxs-lookup"><span data-stu-id="f0588-157">[Mono](https://github.com/mono/mono) - .NET runtime, used by Xamarin and others.</span></span>
+- <span data-ttu-id="f0588-158">[CoreFX](https://github.com/dotnet/coreclr) - .NET 类库，适用于 .NET Core 和 Mono（Mono 在某种程度上通过源共享使用）。</span><span class="sxs-lookup"><span data-stu-id="f0588-158">[CoreFX](https://github.com/dotnet/coreclr) - .NET class libraries, used by .NET Core and to a degree by Mono via source sharing.</span></span>
+- <span data-ttu-id="f0588-159">[Roslyn](https://github.com/dotnet/roslyn) - C# 和 Visual Basic 编译器，适用于大多数 .NET 平台和工具。</span><span class="sxs-lookup"><span data-stu-id="f0588-159">[Roslyn](https://github.com/dotnet/roslyn) - C# and Visual Basic compilers, used by most .NET platforms and tools.</span></span> <span data-ttu-id="f0588-160">公开用于读取、编写和分析源代码的 API。</span><span class="sxs-lookup"><span data-stu-id="f0588-160">Exposes APIs for reading, writing and analyzing source code.</span></span>
+- <span data-ttu-id="f0588-161">[F#](https://github.com/microsoft/visualfsharp) - F# 编译器。</span><span class="sxs-lookup"><span data-stu-id="f0588-161">[F#](https://github.com/microsoft/visualfsharp) - F# compiler.</span></span>
+- <span data-ttu-id="f0588-162">[Xamarin SDK](http://open.xamarin.com) - 采用 C# 和 F# 编写 Android、iOS 和 macOS 所需的工具和库。</span><span class="sxs-lookup"><span data-stu-id="f0588-162">[Xamarin SDK](http://open.xamarin.com) - Tools and libraries needed to write Android, iOS and macOS in C# and F#.</span></span>
 
-<a name="standardized"></a>标准化
+<a name="standardized"></a><span data-ttu-id="f0588-163">标准化</span><span class="sxs-lookup"><span data-stu-id="f0588-163">Standardized</span></span>
 ------------
 
-通过打开 [ECMA 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)指定 .NET，该标准概述了其功能，并可用于开发新实现。 还有其他 .NET 实现，除了 Microsoft 实现外，最热门的是 Mono 和 Unity。
+<span data-ttu-id="f0588-164">通过打开 [ECMA 标准](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)指定 .NET，该标准概述了其功能，并可用于开发新实现。</span><span class="sxs-lookup"><span data-stu-id="f0588-164">.NET is specified via open [ECMA standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) that outline its capabilities and that can be used to make a new implementation.</span></span> <span data-ttu-id="f0588-165">还有其他 .NET 实现，除了 Microsoft 实现外，最热门的是 Mono 和 Unity。</span><span class="sxs-lookup"><span data-stu-id="f0588-165">There are other .NET implementations, with Mono and Unity being the most popular beyond the Microsoft ones.</span></span>
 
 

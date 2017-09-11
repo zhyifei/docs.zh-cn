@@ -36,12 +36,12 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="undef-c-reference"></a>#undef（C# 参考）
-`#undef` 允许你定义一个符号，这样一来，通过将该符号用作 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指令中的表达式，表达式将计算为 `false`。  
+# <a name="undef-c-reference"></a><span data-ttu-id="804c6-102">#undef（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="804c6-102">#undef (C# Reference)</span></span>
+<span data-ttu-id="804c6-103">`#undef` 允许你定义一个符号，这样一来，通过将该符号用作 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指令中的表达式，表达式将计算为 `false`。</span><span class="sxs-lookup"><span data-stu-id="804c6-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
   
- 可使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 指令或 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 编译器选项来定义符号。 文件中必须先出现 `#undef` 指令，才能使用任何非指令的语句。  
+ <span data-ttu-id="804c6-104">可使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 指令或 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 编译器选项来定义符号。</span><span class="sxs-lookup"><span data-stu-id="804c6-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="804c6-105">文件中必须先出现 `#undef` 指令，才能使用任何非指令的语句。</span><span class="sxs-lookup"><span data-stu-id="804c6-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="804c6-106">示例</span><span class="sxs-lookup"><span data-stu-id="804c6-106">Example</span></span>  
   
 ```csharp
 // preprocessor_undef.cs  
@@ -61,9 +61,9 @@ class MyClass
 }  
 ```  
   
- 未定义 DEBUG   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+ <span data-ttu-id="804c6-107">未定义 DEBUG</span><span class="sxs-lookup"><span data-stu-id="804c6-107">**DEBUG is not defined**</span></span>   
+## <a name="see-also"></a><span data-ttu-id="804c6-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="804c6-108">See Also</span></span>  
+ <span data-ttu-id="804c6-109">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="804c6-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="804c6-110">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="804c6-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="804c6-111">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="804c6-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

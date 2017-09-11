@@ -1,1 +1,1 @@
-Microsoft XPS 文档编写器
+<span data-ttu-id="b149f-101">Microsoft XPS 文档编写器</span><span class="sxs-lookup"><span data-stu-id="b149f-101">Microsoft XPS Document Writer</span></span>

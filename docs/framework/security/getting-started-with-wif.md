@@ -21,11 +21,11 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="getting-started-with-wif"></a>WIF 入门
--   [生成我的第一个声明感知 ASP.NET Web 应用程序](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+# <a name="getting-started-with-wif"></a><span data-ttu-id="6c9d4-102">WIF 入门</span><span class="sxs-lookup"><span data-stu-id="6c9d4-102">Getting Started With WIF</span></span>
+-   [<span data-ttu-id="6c9d4-103">生成我的第一个声明感知 ASP.NET Web 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c9d4-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
--   [生成我的第一个声明感知 WCF 服务](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+-   [<span data-ttu-id="6c9d4-104">生成我的第一个声明感知 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="6c9d4-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
-## <a name="see-also"></a>另请参阅  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="6c9d4-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6c9d4-105">See Also</span></span>  
+ [<span data-ttu-id="6c9d4-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="6c9d4-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
 

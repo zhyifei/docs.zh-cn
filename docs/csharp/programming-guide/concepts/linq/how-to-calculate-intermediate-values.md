@@ -21,13 +21,13 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>如何：计算中间值 (C#)
-本示例演示如何计算可用于进行排序、筛选和选择的中间值。  
+# <a name="how-to-calculate-intermediate-values-c"></a><span data-ttu-id="cdcd3-102">如何：计算中间值 (C#)</span><span class="sxs-lookup"><span data-stu-id="cdcd3-102">How to: Calculate Intermediate Values (C#)</span></span>
+<span data-ttu-id="cdcd3-103">本示例演示如何计算可用于进行排序、筛选和选择的中间值。</span><span class="sxs-lookup"><span data-stu-id="cdcd3-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例使用 `Let` 子句。  
+## <a name="example"></a><span data-ttu-id="cdcd3-104">示例</span><span class="sxs-lookup"><span data-stu-id="cdcd3-104">Example</span></span>  
+ <span data-ttu-id="cdcd3-105">下面的示例使用 `Let` 子句。</span><span class="sxs-lookup"><span data-stu-id="cdcd3-105">The following example uses the `Let` clause.</span></span>  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ <span data-ttu-id="cdcd3-106">本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="cdcd3-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +41,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="cdcd3-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cdcd3-107">This code produces the following output:</span></span>  
   
 ```  
 55.92  
@@ -51,10 +51,10 @@ foreach (decimal ex in extensions)
 435.00  
 ```  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="cdcd3-108">示例</span><span class="sxs-lookup"><span data-stu-id="cdcd3-108">Example</span></span>  
+ <span data-ttu-id="cdcd3-109">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="cdcd3-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="cdcd3-110">有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="cdcd3-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。  
+ <span data-ttu-id="cdcd3-111">本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的数值数据](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="cdcd3-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -69,7 +69,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="cdcd3-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cdcd3-112">This code produces the following output:</span></span>  
   
 ```  
 55.92  
@@ -79,6 +79,6 @@ foreach (decimal ex in extensions)
 435.00  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cdcd3-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cdcd3-113">See Also</span></span>  
+ [<span data-ttu-id="cdcd3-114">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="cdcd3-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

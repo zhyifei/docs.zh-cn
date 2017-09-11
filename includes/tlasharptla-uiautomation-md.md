@@ -1,1 +1,1 @@
-Microsoft UI 自动化
+<span data-ttu-id="eedb3-101">Microsoft UI 自动化</span><span class="sxs-lookup"><span data-stu-id="eedb3-101">Microsoft UI Automation</span></span>

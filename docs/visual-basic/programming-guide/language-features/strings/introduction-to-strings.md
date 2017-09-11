@@ -30,24 +30,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 604aa2f91bb2a25ba59dc75d5d73314bc7bf2343
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 49f8be86d7ec86152b0d4cfc74dd9e13e6814d32
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="introduction-to-strings-in-visual-basic"></a>字符串介绍 (Visual Basic)
-本部分介绍使用中的字符串背后的基本概念[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+# <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="3fe90-102">字符串介绍 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fe90-102">Introduction to Strings in Visual Basic</span></span>
+<span data-ttu-id="3fe90-103">本部分介绍使用中的字符串背后的基本概念[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3fe90-103">This section describes the basic concepts behind using strings in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
- [字符串基础](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- 引入了使用字符串和字符串变量背后的基本概念。  
+## <a name="in-this-section"></a><span data-ttu-id="3fe90-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="3fe90-104">In This Section</span></span>  
+ [<span data-ttu-id="3fe90-105">字符串基础</span><span class="sxs-lookup"><span data-stu-id="3fe90-105">String Basics</span></span>](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ <span data-ttu-id="3fe90-106">引入了使用字符串和字符串变量背后的基本概念。</span><span class="sxs-lookup"><span data-stu-id="3fe90-106">Introduces the basic concepts behind using strings and string variables.</span></span>  
   
- [在 Visual Basic 中的字符串操作方法的类型](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- 引入了多种不同的方式来分析和操作字符串。  
+ [<span data-ttu-id="3fe90-107">在 Visual Basic 中的字符串操作方法的类型</span><span class="sxs-lookup"><span data-stu-id="3fe90-107">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ <span data-ttu-id="3fe90-108">引入了多种不同的方式来分析和操作字符串。</span><span class="sxs-lookup"><span data-stu-id="3fe90-108">Introduces several different ways to analyze and manipulate strings.</span></span>  
   
- [区域性对在 Visual Basic 中的字符串的影响](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- 讨论如何[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]使用区域性信息来执行字符串转换和比较。  
+ [<span data-ttu-id="3fe90-109">区域性对在 Visual Basic 中的字符串的影响</span><span class="sxs-lookup"><span data-stu-id="3fe90-109">How Culture Affects Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ <span data-ttu-id="3fe90-110">讨论如何[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]使用区域性信息来执行字符串转换和比较。</span><span class="sxs-lookup"><span data-stu-id="3fe90-110">Discusses how [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] uses culture information to perform string conversions and comparisons.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [字符串](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="3fe90-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3fe90-111">See Also</span></span>  
+ [<span data-ttu-id="3fe90-112">字符串</span><span class="sxs-lookup"><span data-stu-id="3fe90-112">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)

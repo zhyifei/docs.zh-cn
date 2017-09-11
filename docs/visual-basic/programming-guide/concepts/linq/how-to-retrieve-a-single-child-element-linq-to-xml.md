@@ -16,26 +16,26 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e96e2e2270f16364b0a26a0b4f17c0d96d7c38b
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 006a6afbb07ceea64b8fcc6cdab1d4fd31ae3c87
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>如何︰ 检索单个子元素 (LINQ to XML) (Visual Basic)
-本主题说明如何在给定子元素名称的情况下检索单个子元素。 如果知道子元素的名称并且只有一个元素具有此名称，则只检索一个元素而不是一个集合会很方便。  
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a><span data-ttu-id="62afc-102">如何︰ 检索单个子元素 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62afc-102">How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="62afc-103">本主题说明如何在给定子元素名称的情况下检索单个子元素。</span><span class="sxs-lookup"><span data-stu-id="62afc-103">This topic explains how to retrieve a single child element, given the name of the child element.</span></span> <span data-ttu-id="62afc-104">如果知道子元素的名称并且只有一个元素具有此名称，则只检索一个元素而不是一个集合会很方便。</span><span class="sxs-lookup"><span data-stu-id="62afc-104">When you know the name of the child element and that there is only one element that has this name, it can be convenient to retrieve just one element, instead of a collection.</span></span>  
   
- <xref:System.Xml.Linq.XContainer.Element%2A>方法将返回第一个子<xref:System.Xml.Linq.XElement>以指定<xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XContainer.Element%2A>  
+ <span data-ttu-id="62afc-105"><xref:System.Xml.Linq.XContainer.Element%2A>方法将返回第一个子<xref:System.Xml.Linq.XElement>以指定<xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XContainer.Element%2A></span><span class="sxs-lookup"><span data-stu-id="62afc-105">The <xref:System.Xml.Linq.XContainer.Element%2A> method returns the first child <xref:System.Xml.Linq.XElement> with the specified <xref:System.Xml.Linq.XName>.</span></span>  
   
- 如果想要在 Visual Basic 中检索单个子元素，常用的方法是使用 XML 属性，然后使用数组索引器表示法检索第一个元素。  
+ <span data-ttu-id="62afc-106">如果想要在 Visual Basic 中检索单个子元素，常用的方法是使用 XML 属性，然后使用数组索引器表示法检索第一个元素。</span><span class="sxs-lookup"><span data-stu-id="62afc-106">If you want to retrieve a single child element in Visual Basic, a common approach is to use the XML property, and then retrieve the first element using array indexer notation.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用<xref:System.Xml.Linq.XContainer.Element%2A>方法。</xref:System.Xml.Linq.XContainer.Element%2A> 本示例采用名为 `po` 的 XML 树并查找名为 `Comment` 的第一个元素。  
+## <a name="example"></a><span data-ttu-id="62afc-107">示例</span><span class="sxs-lookup"><span data-stu-id="62afc-107">Example</span></span>  
+ <span data-ttu-id="62afc-108">下面的示例演示如何使用<xref:System.Xml.Linq.XContainer.Element%2A>方法。</xref:System.Xml.Linq.XContainer.Element%2A></span><span class="sxs-lookup"><span data-stu-id="62afc-108">The following example demonstrates the use of the <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span> <span data-ttu-id="62afc-109">本示例采用名为 `po` 的 XML 树并查找名为 `Comment` 的第一个元素。</span><span class="sxs-lookup"><span data-stu-id="62afc-109">This example takes the XML tree named `po` and finds the first element named `Comment`.</span></span>  
   
- Visual Basic 示例演示如何使用数组索引器表示法来检索单个元素。  
+ <span data-ttu-id="62afc-110">Visual Basic 示例演示如何使用数组索引器表示法来检索单个元素。</span><span class="sxs-lookup"><span data-stu-id="62afc-110">The Visual Basic example shows using array indexer notation to retrieve a single element.</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ <span data-ttu-id="62afc-111">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="62afc-111">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -43,16 +43,16 @@ Dim e As XElement = po.<DeliveryNotes>(0)
 Console.WriteLine(e)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="62afc-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="62afc-112">This example produces the following output:</span></span>  
   
 ```xml  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 使用相同的代码。 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="62afc-113">示例</span><span class="sxs-lookup"><span data-stu-id="62afc-113">Example</span></span>  
+ <span data-ttu-id="62afc-114">下面的示例演示如何对命名空间中的 XML 使用相同的代码。</span><span class="sxs-lookup"><span data-stu-id="62afc-114">The following example shows the same code for XML that is in a namespace.</span></span> <span data-ttu-id="62afc-115">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="62afc-115">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 典型采购订单中 Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ <span data-ttu-id="62afc-116">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 典型采购订单中 Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="62afc-116">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -66,12 +66,12 @@ Module Module1
 End Module  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="62afc-117">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="62afc-117">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:DeliveryNotes xmlns:aw="http://www.adventure-works.com">Please leave packages in shed by driveway.</aw:DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="62afc-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="62afc-118">See Also</span></span>  
+ [<span data-ttu-id="62afc-119">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62afc-119">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
 

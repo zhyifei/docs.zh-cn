@@ -38,23 +38,23 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="passing-parameters-c-programming-guide"></a>传递参数（C# 编程指南）
-在 C# 中，实参可以按值或按引用传递给形参。 按引用传递使函数成员、方法、属性、索引器、运算符和构造函数可以更改参数的值，并让该更改在调用环境中保持。 若要按引用传递参数，请使用 `ref` 或 `out` 关键字。 为简单起见，本主题的示例中只使用 `ref` 关键字。 有关 `ref` 与 `out` 之间的差异的详细信息，请参阅 [ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out.md) 和 [使用 ref 和 out 传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)。  
+# <a name="passing-parameters-c-programming-guide"></a><span data-ttu-id="29b1e-102">传递参数（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="29b1e-102">Passing Parameters (C# Programming Guide)</span></span>
+<span data-ttu-id="29b1e-103">在 C# 中，实参可以按值或按引用传递给形参。</span><span class="sxs-lookup"><span data-stu-id="29b1e-103">In C#, arguments can be passed to parameters either by value or by reference.</span></span> <span data-ttu-id="29b1e-104">按引用传递使函数成员、方法、属性、索引器、运算符和构造函数可以更改参数的值，并让该更改在调用环境中保持。</span><span class="sxs-lookup"><span data-stu-id="29b1e-104">Passing by reference enables function members, methods, properties, indexers, operators, and constructors to change the value of the parameters and have that change persist in the calling environment.</span></span> <span data-ttu-id="29b1e-105">若要按引用传递参数，请使用 `ref` 或 `out` 关键字。</span><span class="sxs-lookup"><span data-stu-id="29b1e-105">To pass a parameter by reference, use the `ref` or `out` keyword.</span></span> <span data-ttu-id="29b1e-106">为简单起见，本主题的示例中只使用 `ref` 关键字。</span><span class="sxs-lookup"><span data-stu-id="29b1e-106">For simplicity, only the `ref` keyword is used in the examples in this topic.</span></span> <span data-ttu-id="29b1e-107">有关 `ref` 与 `out` 之间的差异的详细信息，请参阅 [ref](../../../csharp/language-reference/keywords/ref.md)、[out](../../../csharp/language-reference/keywords/out.md) 和 [使用 ref 和 out 传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)。</span><span class="sxs-lookup"><span data-stu-id="29b1e-107">For more information about the difference between `ref` and `out`, see [ref](../../../csharp/language-reference/keywords/ref.md), [out](../../../csharp/language-reference/keywords/out.md), and [Passing Arrays Using ref and out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).</span></span>  
   
- 以下示例演示值与引用参数之间的差异。  
+ <span data-ttu-id="29b1e-108">以下示例演示值与引用参数之间的差异。</span><span class="sxs-lookup"><span data-stu-id="29b1e-108">The following example illustrates the difference between value and reference parameters.</span></span>  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
+ <span data-ttu-id="29b1e-109">[!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="29b1e-109">[!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]</span></span>  
   
- 有关详细信息，请参阅下列主题：  
+ <span data-ttu-id="29b1e-110">有关详细信息，请参阅下列主题：</span><span class="sxs-lookup"><span data-stu-id="29b1e-110">For more information, see the following topics:</span></span>  
   
--   [传递值类型参数](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
+-   [<span data-ttu-id="29b1e-111">传递值类型参数</span><span class="sxs-lookup"><span data-stu-id="29b1e-111">Passing Value-Type Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
   
--   [传递引用类型参数](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
+-   [<span data-ttu-id="29b1e-112">传递引用类型参数</span><span class="sxs-lookup"><span data-stu-id="29b1e-112">Passing Reference-Type Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="29b1e-113">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="29b1e-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a><span data-ttu-id="29b1e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="29b1e-114">See Also</span></span>  
+ <span data-ttu-id="29b1e-115">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="29b1e-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="29b1e-116">方法</span><span class="sxs-lookup"><span data-stu-id="29b1e-116">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
 

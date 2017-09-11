@@ -1,46 +1,50 @@
 ---
-title: "使用同步客户端套接字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序协议，套接字"
-  - "发送数据，套接字"
-  - "数据请求，套接字"
-  - "从 Internet 请求数据，套接字"
-  - "同步客户端套接字"
-  - "套接字类，同步客户端套接字"
-  - "接收数据，套接字"
-  - "套接字，同步客户端套接字"
-  - "协议，套接字"
-  - "Internet，套接字"
-  - "客户端套接字"
+title: "使用同步客户端套接字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- synchronous client sockets
+- Socket class, synchronous client sockets
+- receiving data, sockets
+- sockets, synchronous client sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8562670aad8a20a28eddcd2ebbe434a0402aff59
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用同步客户端套接字
-，当网络操作完成时，一个同步客户端套接字挂起应用程序。  同步套接字不适用于大量使用它们的操作的网络的应用程序，但是，它们可以启用对web服务的简单访问其他应用程序中。  
+# <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="b1249-102">使用同步客户端套接字</span><span class="sxs-lookup"><span data-stu-id="b1249-102">Using a Synchronous Client Socket</span></span>
+<span data-ttu-id="b1249-103">网络操作完成过程中，同步客户端套接字会挂起应用程序。</span><span class="sxs-lookup"><span data-stu-id="b1249-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="b1249-104">同步套接字不适用于在操作中大量使用网络的应用程序，但它们可以为其他应用程序启用对网络服务的简单访问。</span><span class="sxs-lookup"><span data-stu-id="b1249-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  
   
- 若要将数据发送，请将该字节数组到某个 <xref:System.Net.Sockets.Socket> 选件类的数据发送方法\(<xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.SendTo%2A>\)。  使用 **发送** 方法，下面的示例输入一个字符串到字节数组缓冲区 <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName> 使用属性来传达缓冲区传递给网络设备。  **发送** 方法返回字节数发送到网络设备。  
+ <span data-ttu-id="b1249-105">若要发送数据，请将字节数组传递到 <xref:System.Net.Sockets.Socket> 类的数据发送方法之一（<xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.SendTo%2A>）。</span><span class="sxs-lookup"><span data-stu-id="b1249-105">To send data, pass a byte array to one of the <xref:System.Net.Sockets.Socket> class's send-data methods (<xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.SendTo%2A>).</span></span> <span data-ttu-id="b1249-106">下面的示例使用 <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName> 属性将字符串编码到字节数组缓冲区，然后使用 Send 方法将该缓冲区传输到网络设备。</span><span class="sxs-lookup"><span data-stu-id="b1249-106">The following example encodes a string into a byte array buffer using the <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName> property and then transmits the buffer to the network device using the **Send** method.</span></span> <span data-ttu-id="b1249-107">Send 方法返回发送到网络设备的字节数。</span><span class="sxs-lookup"><span data-stu-id="b1249-107">The **Send** method returns the number of bytes sent to the network device.</span></span>  
   
 ```vb  
 Dim msg As Byte() = _  
     System.Text.Encoding.ASCII.GetBytes("This is a test.")  
 Dim bytesSent As Integer = s.Send(msg)  
-  
 ```  
   
 ```csharp  
@@ -48,16 +52,15 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- **发送** 方法从缓冲区移除字节并排入队列。与要发送的网络接口到网络设备。  网络接口可能无法立即发送数据，但是，它将最终将其发送，因此，只要连接通常会关闭与 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法。  
+ <span data-ttu-id="b1249-108">Send 方法从缓冲区移除字节，并用网络接口将这些字节排队以便发送到网络设备。</span><span class="sxs-lookup"><span data-stu-id="b1249-108">The **Send** method removes the bytes from the buffer and queues them with the network interface to be sent to the network device.</span></span> <span data-ttu-id="b1249-109">网络接口可能不会立即发送数据，但它最终将发送，只要使用 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法正常关闭连接。</span><span class="sxs-lookup"><span data-stu-id="b1249-109">The network interface might not send the data immediately, but it will send it eventually, as long as the connection is closed normally with the <xref:System.Net.Sockets.Socket.Shutdown%2A> method.</span></span>  
   
- 若要接收来自网络设备的数据，请将缓冲区某个 **套接字** 选件类接收数据方法\(<xref:System.Net.Sockets.Socket.Receive%2A> 和 <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>\)。  同步套接字将挂起应用程序，直至字节从网络接收或，直到套接字已关闭。  下面的示例接收来自网络的数据然后将其显示在控制台。  此示例假定，来自网络的数据是ASCII编码文本。  **Receive** 方法返回从网络接收字节数。  
+ <span data-ttu-id="b1249-110">若要从网络设备接收数据，请将缓冲区传递到 Socket 类的数据接收方法之一（<xref:System.Net.Sockets.Socket.Receive%2A> 和 <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>）。 </span><span class="sxs-lookup"><span data-stu-id="b1249-110">To receive data from a network device, pass a buffer to one of the **Socket** class's receive-data methods (<xref:System.Net.Sockets.Socket.Receive%2A> and <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span></span> <span data-ttu-id="b1249-111">同步套接字将挂起应用程序，直到从网络收到字节或者套接字关闭。</span><span class="sxs-lookup"><span data-stu-id="b1249-111">Synchronous sockets will suspend the application until bytes are received from the network or until the socket is closed.</span></span> <span data-ttu-id="b1249-112">下面的示例接收来自网络的数据，然后将其显示在控制台上。</span><span class="sxs-lookup"><span data-stu-id="b1249-112">The following example receives data from the network and then displays it on the console.</span></span> <span data-ttu-id="b1249-113">该示例假定来自网络的数据是用 ASCII 编码的文本。</span><span class="sxs-lookup"><span data-stu-id="b1249-113">The example assumes that the data coming from the network is ASCII-encoded text.</span></span> <span data-ttu-id="b1249-114">Receive 方法返回从网络接收的字节数。</span><span class="sxs-lookup"><span data-stu-id="b1249-114">The **Receive** method returns the number of bytes received from the network.</span></span>  
   
 ```vb  
 Dim bytes(1024) As Byte  
 Dim bytesRec = s.Receive(bytes)  
 Console.WriteLine("Echoed text = {0}", _  
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec))  
-  
 ```  
   
 ```csharp  
@@ -67,7 +70,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- 当套接字不再需要时，需要通过调用 <xref:System.Net.Sockets.Socket.Shutdown%2A> 然后调用方法 **关闭** 方法释放。  下面的示例释放 **套接字**。  <xref:System.Net.Sockets.SocketShutdown> 枚举定义的常数指示套接字是否应关闭的用于发送，来接收，也有两个。  
+ <span data-ttu-id="b1249-115">不再需要套接字时需将其释放，方法是调用 <xref:System.Net.Sockets.Socket.Shutdown%2A> 方法，再调用 Close 方法。</span><span class="sxs-lookup"><span data-stu-id="b1249-115">When the socket is no longer needed, you need to release it by calling the <xref:System.Net.Sockets.Socket.Shutdown%2A> method and then calling the **Close** method.</span></span> <span data-ttu-id="b1249-116">下面的示例释放套接字。</span><span class="sxs-lookup"><span data-stu-id="b1249-116">The following example releases a **Socket**.</span></span> <span data-ttu-id="b1249-117"><xref:System.Net.Sockets.SocketShutdown> 枚举定义常数以指示应该关闭套接字用于发送，还是用于接收，或者用于两者。</span><span class="sxs-lookup"><span data-stu-id="b1249-117">The <xref:System.Net.Sockets.SocketShutdown> enumeration defines constants that indicate whether the socket should be closed for sending, for receiving, or for both.</span></span>  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  
@@ -79,7 +82,8 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## 请参阅  
- [使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)   
- [同步客户端套接字示例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+## <a name="see-also"></a><span data-ttu-id="b1249-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b1249-118">See Also</span></span>  
+ <span data-ttu-id="b1249-119">[使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md) </span><span class="sxs-lookup"><span data-stu-id="b1249-119">[Using an Asynchronous Client Socket](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md) </span></span>  
+ <span data-ttu-id="b1249-120">[使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md) </span><span class="sxs-lookup"><span data-stu-id="b1249-120">[Listening with Sockets](../../../docs/framework/network-programming/listening-with-sockets.md) </span></span>  
+ [<span data-ttu-id="b1249-121">同步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="b1249-121">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+

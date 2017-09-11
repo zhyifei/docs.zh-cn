@@ -33,79 +33,80 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64aab045538461d86946c870fa428bf8ad4ec15e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3e16ea51d0f766fcb5866cde89e5384a153ac050
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
-一个[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]从标准构建基块构建程序。 一个*解决方案*由一个或多个项目组成。 一个*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 一个*源文件*提供的定义和实现的类、 结构、 模块和接口，最终包含了所有代码。  
+# <a name="structure-of-a-visual-basic-program"></a><span data-ttu-id="966e1-102">Visual Basic 程序的结构</span><span class="sxs-lookup"><span data-stu-id="966e1-102">Structure of a Visual Basic Program</span></span>
+<span data-ttu-id="966e1-103">一个[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]从标准构建基块构建程序。</span><span class="sxs-lookup"><span data-stu-id="966e1-103">A [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] program is built up from standard building blocks.</span></span> <span data-ttu-id="966e1-104">一个*解决方案*由一个或多个项目组成。</span><span class="sxs-lookup"><span data-stu-id="966e1-104">A *solution* comprises one or more projects.</span></span> <span data-ttu-id="966e1-105">一个*项目*又可以包含一个或多个程序集。</span><span class="sxs-lookup"><span data-stu-id="966e1-105">A *project* in turn can contain one or more assemblies.</span></span> <span data-ttu-id="966e1-106">每个*程序集*从一个或多个源代码文件编译。</span><span class="sxs-lookup"><span data-stu-id="966e1-106">Each *assembly* is compiled from one or more source files.</span></span> <span data-ttu-id="966e1-107">一个*源文件*提供的定义和实现的类、 结构、 模块和接口，最终包含了所有代码。</span><span class="sxs-lookup"><span data-stu-id="966e1-107">A *source file* provides the definition and implementation of classes, structures, modules, and interfaces, which ultimately contain all your code.</span></span>  
   
- 有关这些构建基块[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]程序中，请参阅[解决方案和项目](https://docs.microsoft.com/visualstudio/ide/solutions-and-projects-in-visual-studio)和[程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
+ <span data-ttu-id="966e1-108">有关这些构建基块[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]程序中，请参阅[解决方案和项目](https://docs.microsoft.com/visualstudio/ide/solutions-and-projects-in-visual-studio)和[程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。</span><span class="sxs-lookup"><span data-stu-id="966e1-108">For more information about these building blocks of a [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] program, see [Solutions and Projects](https://docs.microsoft.com/visualstudio/ide/solutions-and-projects-in-visual-studio) and [Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).</span></span>  
   
-## <a name="file-level-programming-elements"></a>文件级的编程元素  
- 当您启动项目或文件，并打开代码编辑器中时，您会看到一些代码已存在并按正确的顺序。 您编写任何代码应遵循以下顺序︰  
+## <a name="file-level-programming-elements"></a><span data-ttu-id="966e1-109">文件级的编程元素</span><span class="sxs-lookup"><span data-stu-id="966e1-109">File-Level Programming Elements</span></span>  
+ <span data-ttu-id="966e1-110">当您启动项目或文件，并打开代码编辑器中时，您会看到一些代码已存在并按正确的顺序。</span><span class="sxs-lookup"><span data-stu-id="966e1-110">When you start a project or file and open the code editor, you see some code already in place and in the correct order.</span></span> <span data-ttu-id="966e1-111">您编写任何代码应遵循以下顺序︰</span><span class="sxs-lookup"><span data-stu-id="966e1-111">Any code that you write should follow the following sequence:</span></span>  
   
-1.  `Option`语句  
+1.  <span data-ttu-id="966e1-112">`Option`语句</span><span class="sxs-lookup"><span data-stu-id="966e1-112">`Option` statements</span></span>  
   
-2.  `Imports`语句  
+2.  <span data-ttu-id="966e1-113">`Imports`语句</span><span class="sxs-lookup"><span data-stu-id="966e1-113">`Imports` statements</span></span>  
   
-3.  `Namespace`语句和命名空间级别元素  
+3.  <span data-ttu-id="966e1-114">`Namespace`语句和命名空间级别元素</span><span class="sxs-lookup"><span data-stu-id="966e1-114">`Namespace` statements and namespace-level elements</span></span>  
   
- 如果在不同的顺序输入语句，则可能导致编译错误。  
+ <span data-ttu-id="966e1-115">如果在不同的顺序输入语句，则可能导致编译错误。</span><span class="sxs-lookup"><span data-stu-id="966e1-115">If you enter statements in a different order, compilation errors can result.</span></span>  
   
- 程序还可以包含条件编译语句。 你可以交错这些在前一序列的语句之间的源文件中。  
+ <span data-ttu-id="966e1-116">程序还可以包含条件编译语句。</span><span class="sxs-lookup"><span data-stu-id="966e1-116">A program can also contain conditional compilation statements.</span></span> <span data-ttu-id="966e1-117">你可以交错这些在前一序列的语句之间的源文件中。</span><span class="sxs-lookup"><span data-stu-id="966e1-117">You can intersperse these in the source file among the statements of the preceding sequence.</span></span>  
   
-### <a name="option-statements"></a>选项语句  
- `Option`语句建立后面的代码，以防止语法和逻辑错误的基本规则。 [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)可确保所有变量声明并拼写是否正确，这减少了调试时间。 [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)帮助不同的数据类型的变量之间工作时可能发生的逻辑错误和数据丢失降到最低。 [选项比较语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)指定字符串的方式比较到对方中的任一个其`Binary`或`Text`值。  
+### <a name="option-statements"></a><span data-ttu-id="966e1-118">选项语句</span><span class="sxs-lookup"><span data-stu-id="966e1-118">Option Statements</span></span>  
+ <span data-ttu-id="966e1-119">`Option`语句建立后面的代码，以防止语法和逻辑错误的基本规则。</span><span class="sxs-lookup"><span data-stu-id="966e1-119">`Option` statements establish ground rules for subsequent code, helping prevent syntax and logic errors.</span></span> <span data-ttu-id="966e1-120">[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)可确保所有变量声明并拼写是否正确，这减少了调试时间。</span><span class="sxs-lookup"><span data-stu-id="966e1-120">The [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md) ensures that all variables are declared and spelled correctly, which reduces debugging time.</span></span> <span data-ttu-id="966e1-121">[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)帮助不同的数据类型的变量之间工作时可能发生的逻辑错误和数据丢失降到最低。</span><span class="sxs-lookup"><span data-stu-id="966e1-121">The [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) helps to minimize logic errors and data loss that can occur when you work between variables of different data types.</span></span> <span data-ttu-id="966e1-122">[选项比较语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)指定字符串的方式比较到对方中的任一个其`Binary`或`Text`值。</span><span class="sxs-lookup"><span data-stu-id="966e1-122">The [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) specifies the way strings are compared to each other, based on either their `Binary` or `Text` values.</span></span>  
   
-### <a name="imports-statements"></a>Imports 语句  
- 您可以包括[Imports 语句 （.NET Namespace 和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)要导入您的项目外部定义的名称。 `Imports`语句允许您的代码以引用的类和定义中导入的命名空间，而不必限定它们的其他类型。 可以使用任意多个`Imports`根据语句。 有关详细信息，请参阅[引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)。  
+### <a name="imports-statements"></a><span data-ttu-id="966e1-123">Imports 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-123">Imports Statements</span></span>  
+ <span data-ttu-id="966e1-124">您可以包括[Imports 语句 （.NET Namespace 和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)要导入您的项目外部定义的名称。</span><span class="sxs-lookup"><span data-stu-id="966e1-124">You can include an [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import names defined outside your project.</span></span> <span data-ttu-id="966e1-125">`Imports`语句允许您的代码以引用的类和定义中导入的命名空间，而不必限定它们的其他类型。</span><span class="sxs-lookup"><span data-stu-id="966e1-125">An `Imports` statement allows your code to refer to classes and other types defined within the imported namespace, without having to qualify them.</span></span> <span data-ttu-id="966e1-126">可以使用任意多个`Imports`根据语句。</span><span class="sxs-lookup"><span data-stu-id="966e1-126">You can use as many `Imports` statements as appropriate.</span></span> <span data-ttu-id="966e1-127">有关详细信息，请参阅[引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="966e1-127">For more information, see [References and the Imports Statement](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).</span></span>  
   
-### <a name="namespace-statements"></a>Namespace 语句  
- 命名空间可帮助组织和分类以便于进行分组和访问编程元素。 您使用[Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)进行分类特定命名空间内的以下语句。 有关详细信息，请参阅[在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
+### <a name="namespace-statements"></a><span data-ttu-id="966e1-128">Namespace 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-128">Namespace Statements</span></span>  
+ <span data-ttu-id="966e1-129">命名空间可帮助组织和分类以便于进行分组和访问编程元素。</span><span class="sxs-lookup"><span data-stu-id="966e1-129">Namespaces help you organize and classify your programming elements for ease of grouping and accessing.</span></span> <span data-ttu-id="966e1-130">您使用[Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)进行分类特定命名空间内的以下语句。</span><span class="sxs-lookup"><span data-stu-id="966e1-130">You use the [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md) to classify the following statements within a particular namespace.</span></span> <span data-ttu-id="966e1-131">有关详细信息，请参阅[在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="966e1-131">For more information, see [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
-### <a name="conditional-compilation-statements"></a>条件编译语句  
- 条件编译语句可以出现在源文件中的几乎任何地方。 它们会导致您的代码以包括或排除在编译时根据特定条件的部分。 您可以将它们用于调试应用程序中，因为在调试模式下仅运行的条件代码。 有关详细信息，请参阅[条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)。  
+### <a name="conditional-compilation-statements"></a><span data-ttu-id="966e1-132">条件编译语句</span><span class="sxs-lookup"><span data-stu-id="966e1-132">Conditional Compilation Statements</span></span>  
+ <span data-ttu-id="966e1-133">条件编译语句可以出现在源文件中的几乎任何地方。</span><span class="sxs-lookup"><span data-stu-id="966e1-133">Conditional compilation statements can appear almost anywhere in your source file.</span></span> <span data-ttu-id="966e1-134">它们会导致您的代码以包括或排除在编译时根据特定条件的部分。</span><span class="sxs-lookup"><span data-stu-id="966e1-134">They cause parts of your code to be included or excluded at compile time depending on certain conditions.</span></span> <span data-ttu-id="966e1-135">您可以将它们用于调试应用程序中，因为在调试模式下仅运行的条件代码。</span><span class="sxs-lookup"><span data-stu-id="966e1-135">You can also use them for debugging your application, because conditional code runs in debugging mode only.</span></span> <span data-ttu-id="966e1-136">有关详细信息，请参阅[条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="966e1-136">For more information, see [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).</span></span>  
   
-## <a name="namespace-level-programming-elements"></a>Namespace 级编程元素  
- 类、 结构和模块包含在源文件中的所有代码。 它们是*命名空间级别*元素可出现在一个命名空间或文件级别的源的文件。 它们保留所有其他编程元素的声明。 接口，即定义元素签名，但不提供实现，也出现在模块级别。 模块级元素的详细信息，请参阅︰  
+## <a name="namespace-level-programming-elements"></a><span data-ttu-id="966e1-137">Namespace 级编程元素</span><span class="sxs-lookup"><span data-stu-id="966e1-137">Namespace-Level Programming Elements</span></span>  
+ <span data-ttu-id="966e1-138">类、 结构和模块包含在源文件中的所有代码。</span><span class="sxs-lookup"><span data-stu-id="966e1-138">Classes, structures, and modules contain all the code in your source file.</span></span> <span data-ttu-id="966e1-139">它们是*命名空间级别*元素可出现在一个命名空间或文件级别的源的文件。</span><span class="sxs-lookup"><span data-stu-id="966e1-139">They are *namespace-level* elements, which can appear within a namespace or at the source file level.</span></span> <span data-ttu-id="966e1-140">它们保留所有其他编程元素的声明。</span><span class="sxs-lookup"><span data-stu-id="966e1-140">They hold the declarations of all other programming elements.</span></span> <span data-ttu-id="966e1-141">接口，即定义元素签名，但不提供实现，也出现在模块级别。</span><span class="sxs-lookup"><span data-stu-id="966e1-141">Interfaces, which define element signatures but provide no implementation, also appear at module level.</span></span> <span data-ttu-id="966e1-142">模块级元素的详细信息，请参阅︰</span><span class="sxs-lookup"><span data-stu-id="966e1-142">For more information on the module-level elements, see the following:</span></span>  
   
--   [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [<span data-ttu-id="966e1-143">Class 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-143">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [<span data-ttu-id="966e1-144">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-144">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [<span data-ttu-id="966e1-145">Module 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-145">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [<span data-ttu-id="966e1-146">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-146">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- 命名空间级别的数据元素是枚举和委托。  
+ <span data-ttu-id="966e1-147">命名空间级别的数据元素是枚举和委托。</span><span class="sxs-lookup"><span data-stu-id="966e1-147">Data elements at namespace level are enumerations and delegates.</span></span>  
   
-## <a name="module-level-programming-elements"></a>模块级别的编程元素  
- 过程、 运算符、 属性和事件是唯一可以保存可执行代码 （在运行时执行操作的语句） 的编程元素。 它们是*模块级*的程序元素。 过程级别元素的详细信息，请参阅︰  
+## <a name="module-level-programming-elements"></a><span data-ttu-id="966e1-148">模块级别的编程元素</span><span class="sxs-lookup"><span data-stu-id="966e1-148">Module-Level Programming Elements</span></span>  
+ <span data-ttu-id="966e1-149">过程、 运算符、 属性和事件是唯一可以保存可执行代码 （在运行时执行操作的语句） 的编程元素。</span><span class="sxs-lookup"><span data-stu-id="966e1-149">Procedures, operators, properties, and events are the only programming elements that can hold executable code (statements that perform actions at run time).</span></span> <span data-ttu-id="966e1-150">它们是*模块级*的程序元素。</span><span class="sxs-lookup"><span data-stu-id="966e1-150">They are the *module-level* elements of your program.</span></span> <span data-ttu-id="966e1-151">过程级别元素的详细信息，请参阅︰</span><span class="sxs-lookup"><span data-stu-id="966e1-151">For more information on the procedure-level elements, see the following:</span></span>  
   
--   [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [<span data-ttu-id="966e1-152">Function 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-152">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [<span data-ttu-id="966e1-153">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-153">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [<span data-ttu-id="966e1-154">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-154">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [<span data-ttu-id="966e1-155">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="966e1-155">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [<span data-ttu-id="966e1-156">Property 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-156">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [<span data-ttu-id="966e1-157">Event 语句</span><span class="sxs-lookup"><span data-stu-id="966e1-157">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- 在模块级别的数据元素是变量、 常量、 枚举和委托。  
+ <span data-ttu-id="966e1-158">在模块级别的数据元素是变量、 常量、 枚举和委托。</span><span class="sxs-lookup"><span data-stu-id="966e1-158">Data elements at module level are variables, constants, enumerations, and delegates.</span></span>  
   
-## <a name="procedure-level-programming-elements"></a>过程级别编程元素  
- 内容的大多数*过程级*元素都是可执行语句，它们组成您的程序的运行时代码。 在某些过程中必须是所有可执行代码 (`Function`， `Sub`， `Operator`， `Get`， `Set`， `AddHandler`， `RemoveHandler`， `RaiseEvent`)。 有关详细信息，请参阅[语句](../../../visual-basic/programming-guide/language-features/statements.md)。  
+## <a name="procedure-level-programming-elements"></a><span data-ttu-id="966e1-159">过程级别编程元素</span><span class="sxs-lookup"><span data-stu-id="966e1-159">Procedure-Level Programming Elements</span></span>  
+ <span data-ttu-id="966e1-160">内容的大多数*过程级*元素都是可执行语句，它们组成您的程序的运行时代码。</span><span class="sxs-lookup"><span data-stu-id="966e1-160">Most of the contents of *procedure-level* elements are executable statements, which constitute the run-time code of your program.</span></span> <span data-ttu-id="966e1-161">在某些过程中必须是所有可执行代码 (`Function`， `Sub`， `Operator`， `Get`， `Set`， `AddHandler`， `RemoveHandler`， `RaiseEvent`)。</span><span class="sxs-lookup"><span data-stu-id="966e1-161">All executable code must be in some procedure (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`).</span></span> <span data-ttu-id="966e1-162">有关详细信息，请参阅[语句](../../../visual-basic/programming-guide/language-features/statements.md)。</span><span class="sxs-lookup"><span data-stu-id="966e1-162">For more information, see [Statements](../../../visual-basic/programming-guide/language-features/statements.md).</span></span>  
   
- 过程级的数据元素仅限于本地变量和常量。  
+ <span data-ttu-id="966e1-163">过程级的数据元素仅限于本地变量和常量。</span><span class="sxs-lookup"><span data-stu-id="966e1-163">Data elements at procedure level are limited to local variables and constants.</span></span>  
   
-## <a name="the-main-procedure"></a>主要过程  
- `Main`过程是用于您的应用程序在加载时运行的第一个代码。 `Main`可作为起始点和应用程序的总体控制。 有四种变化形式`Main`:  
+## <a name="the-main-procedure"></a><span data-ttu-id="966e1-164">主要过程</span><span class="sxs-lookup"><span data-stu-id="966e1-164">The Main Procedure</span></span>  
+ <span data-ttu-id="966e1-165">`Main`过程是用于您的应用程序在加载时运行的第一个代码。</span><span class="sxs-lookup"><span data-stu-id="966e1-165">The `Main` procedure is the first code to run when your application has been loaded.</span></span> <span data-ttu-id="966e1-166">`Main`可作为起始点和应用程序的总体控制。</span><span class="sxs-lookup"><span data-stu-id="966e1-166">`Main` serves as the starting point and overall control for your application.</span></span> <span data-ttu-id="966e1-167">有四种变化形式`Main`:</span><span class="sxs-lookup"><span data-stu-id="966e1-167">There are four varieties of `Main`:</span></span>  
   
 -   `Sub Main()`  
   
@@ -115,9 +116,9 @@ ms.lasthandoff: 03/13/2017
   
 -   `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- 此过程的最常见类型是`Sub Main()`。 有关详细信息，请参阅[在 Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。  
+ <span data-ttu-id="966e1-168">此过程的最常见类型是`Sub Main()`。</span><span class="sxs-lookup"><span data-stu-id="966e1-168">The most common variety of this procedure is `Sub Main()`.</span></span> <span data-ttu-id="966e1-169">有关详细信息，请参阅[在 Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。</span><span class="sxs-lookup"><span data-stu-id="966e1-169">For more information, see [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在 Visual Basic 中的 main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)   
- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Visual Basic 限制](../../../visual-basic/programming-guide/program-structure/limitations.md)
+## <a name="see-also"></a><span data-ttu-id="966e1-170">另请参阅</span><span class="sxs-lookup"><span data-stu-id="966e1-170">See Also</span></span>  
+ <span data-ttu-id="966e1-171">[在 Visual Basic 中的 main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md) </span><span class="sxs-lookup"><span data-stu-id="966e1-171">[Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) </span></span>  
+<span data-ttu-id="966e1-172"> [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md) </span><span class="sxs-lookup"><span data-stu-id="966e1-172"> [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md) </span></span>  
+<span data-ttu-id="966e1-173"> [Visual Basic 限制](../../../visual-basic/programming-guide/program-structure/limitations.md)</span><span class="sxs-lookup"><span data-stu-id="966e1-173"> [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)</span></span>

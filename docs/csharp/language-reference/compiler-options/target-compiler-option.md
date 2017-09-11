@@ -39,38 +39,38 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="target-c-compiler-options"></a>/target（C# 编译器选项）
-**/target** 编译器选项可指定为以下四种形式之一：  
+# <a name="target-c-compiler-options"></a><span data-ttu-id="9cf60-102">/target（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="9cf60-102">/target (C# Compiler Options)</span></span>
+<span data-ttu-id="9cf60-103">**/target** 编译器选项可指定为以下四种形式之一：</span><span class="sxs-lookup"><span data-stu-id="9cf60-103">The **/target** compiler option can be specified in one of four forms:</span></span>  
   
- [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- 创建 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]应用的 .exe 文件。  
+ [<span data-ttu-id="9cf60-104">/target:appcontainerexe</span><span class="sxs-lookup"><span data-stu-id="9cf60-104">/target:appcontainerexe</span></span>](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
+ <span data-ttu-id="9cf60-105">创建 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]应用的 .exe 文件。</span><span class="sxs-lookup"><span data-stu-id="9cf60-105">To create an .exe file for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps.</span></span>  
   
- [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
- 创建 .exe 文件。  
+ [<span data-ttu-id="9cf60-106">/target:exe</span><span class="sxs-lookup"><span data-stu-id="9cf60-106">/target:exe</span></span>](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
+ <span data-ttu-id="9cf60-107">创建 .exe 文件。</span><span class="sxs-lookup"><span data-stu-id="9cf60-107">To create an .exe file.</span></span>  
   
- [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
- 创建代码库。  
+ [<span data-ttu-id="9cf60-108">/target:library</span><span class="sxs-lookup"><span data-stu-id="9cf60-108">/target:library</span></span>](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
+ <span data-ttu-id="9cf60-109">创建代码库。</span><span class="sxs-lookup"><span data-stu-id="9cf60-109">To create a code library.</span></span>  
   
- [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
- 创建模块。  
+ [<span data-ttu-id="9cf60-110">/target:module</span><span class="sxs-lookup"><span data-stu-id="9cf60-110">/target:module</span></span>](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
+ <span data-ttu-id="9cf60-111">创建模块。</span><span class="sxs-lookup"><span data-stu-id="9cf60-111">To create a module.</span></span>  
   
- [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
- 创建 Windows 程序。  
+ [<span data-ttu-id="9cf60-112">/target:winexe</span><span class="sxs-lookup"><span data-stu-id="9cf60-112">/target:winexe</span></span>](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+ <span data-ttu-id="9cf60-113">创建 Windows 程序。</span><span class="sxs-lookup"><span data-stu-id="9cf60-113">To create a Windows program.</span></span>  
   
- [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
- 创建一个 .winmdobj 中间文件。  
+ [<span data-ttu-id="9cf60-114">/target:winmdobj</span><span class="sxs-lookup"><span data-stu-id="9cf60-114">/target:winmdobj</span></span>](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
+ <span data-ttu-id="9cf60-115">创建一个 .winmdobj 中间文件。</span><span class="sxs-lookup"><span data-stu-id="9cf60-115">To create an intermediate .winmdobj file.</span></span>  
   
- 如果不指定 **/target:module**，**/target** 会将 .NET Framework 程序集清单放入输出文件中。 有关详细信息，请参阅[公共语言运行时中的程序集](https://msdn.microsoft.com/library/k3677y81)和[公共特性](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b)。  
+ <span data-ttu-id="9cf60-116">如果不指定 **/target:module**，**/target** 会将 .NET Framework 程序集清单放入输出文件中。</span><span class="sxs-lookup"><span data-stu-id="9cf60-116">Unless you specify **/target:module**, **/target** causes a .NET Framework assembly manifest to be placed in an output file.</span></span> <span data-ttu-id="9cf60-117">有关详细信息，请参阅[公共语言运行时中的程序集](https://msdn.microsoft.com/library/k3677y81)和[公共特性](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b)。</span><span class="sxs-lookup"><span data-stu-id="9cf60-117">For more information, see [Assemblies in the Common Language Runtime](https://msdn.microsoft.com/library/k3677y81) and [Common Attributes](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b).</span></span>  
   
- 程序集清单放置在编译中的第一个 .exe 输出文件中，如果没有 .exe 输出文件，会放置在第一个 DLL 中。 例如，在以下的命令行中，清单将放置在 `1.exe` 中：  
+ <span data-ttu-id="9cf60-118">程序集清单放置在编译中的第一个 .exe 输出文件中，如果没有 .exe 输出文件，会放置在第一个 DLL 中。</span><span class="sxs-lookup"><span data-stu-id="9cf60-118">The assembly manifest is placed in the first .exe output file in the compilation or in the first DLL, if there is no .exe output file.</span></span> <span data-ttu-id="9cf60-119">例如，在以下的命令行中，清单将放置在 `1.exe` 中：</span><span class="sxs-lookup"><span data-stu-id="9cf60-119">For example, in the following command line, the manifest will be placed in `1.exe`:</span></span>  
   
 ```console  
 csc /out:1.exe t1.cs /out:2.netmodule t2.cs  
 ```  
   
- 编译器每次编译只创建一个程序集清单。 关于编译中所有文件的信息都放在程序集清单中。 除用 **/target:module** 创建的文件之外，所有输出文件都可包含程序集清单。 在命令行生成多个输出文件时，只能创建一个程序集清单，且该清单必须放置在命令行上指定的第一个输出文件中。 无论第一个输出文件是什么（**/target:exe**、**/target:winexe**、**/target:library** 或 **/target:module**），在同一编译中生成的任何其他输出文件都必须是模块 (**/target:module**)。  
+ <span data-ttu-id="9cf60-120">编译器每次编译只创建一个程序集清单。</span><span class="sxs-lookup"><span data-stu-id="9cf60-120">The compiler creates only one assembly manifest per compilation.</span></span> <span data-ttu-id="9cf60-121">关于编译中所有文件的信息都放在程序集清单中。</span><span class="sxs-lookup"><span data-stu-id="9cf60-121">Information about all files in a compilation is placed in the assembly manifest.</span></span> <span data-ttu-id="9cf60-122">除用 **/target:module** 创建的文件之外，所有输出文件都可包含程序集清单。</span><span class="sxs-lookup"><span data-stu-id="9cf60-122">All output files except those created with **/target:module** can contain an assembly manifest.</span></span> <span data-ttu-id="9cf60-123">在命令行生成多个输出文件时，只能创建一个程序集清单，且该清单必须放置在命令行上指定的第一个输出文件中。</span><span class="sxs-lookup"><span data-stu-id="9cf60-123">When producing multiple output files at the command line, only one assembly manifest can be created and it must go into the first output file specified on the command line.</span></span> <span data-ttu-id="9cf60-124">无论第一个输出文件是什么（**/target:exe**、**/target:winexe**、**/target:library** 或 **/target:module**），在同一编译中生成的任何其他输出文件都必须是模块 (**/target:module**)。</span><span class="sxs-lookup"><span data-stu-id="9cf60-124">No matter what the first output file is (**/target:exe**, **/target:winexe**, **/target:library** or **/target:module**), any other output files produced in the same compilation must be modules (**/target:module**).</span></span>  
   
- 如果创建了一个程序集，则可以用 <xref:System.CLSCompliantAttribute> 属性指示全部或部分代码是符合 CLS 的。  
+ <span data-ttu-id="9cf60-125">如果创建了一个程序集，则可以用 <xref:System.CLSCompliantAttribute> 属性指示全部或部分代码是符合 CLS 的。</span><span class="sxs-lookup"><span data-stu-id="9cf60-125">If you create an assembly, you can indicate that all or part of your code is CLS compliant with the <xref:System.CLSCompliantAttribute> attribute.</span></span>  
   
 ```csharp  
 // target_clscompliant.cs  
@@ -83,10 +83,10 @@ public class TestClass
 }  
 ```  
   
- 有关如何以编程方式设置此编译器选项的详细信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ <span data-ttu-id="9cf60-126">有关如何以编程方式设置此编译器选项的详细信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。</span><span class="sxs-lookup"><span data-stu-id="9cf60-126">For more information about setting this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)   
- [/subsystemversion（C# 编译器选项）](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+## <a name="see-also"></a><span data-ttu-id="9cf60-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9cf60-127">See Also</span></span>  
+ <span data-ttu-id="9cf60-128">[（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="9cf60-128">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ <span data-ttu-id="9cf60-129">[管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties) </span><span class="sxs-lookup"><span data-stu-id="9cf60-129">[Managing Project and Solution Properties](/visualstudio/ide/managing-project-and-solution-properties) </span></span>  
+ [<span data-ttu-id="9cf60-130">/subsystemversion（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="9cf60-130">/subsystemversion (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
 

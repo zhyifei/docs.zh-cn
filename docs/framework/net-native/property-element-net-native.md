@@ -1,77 +1,79 @@
 ---
-title: "&lt;属性&gt;元素 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;属性&gt;元素 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1df3d7368597abdb991facc399bcedf7412d4fdb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;属性&gt;元素 (.NET Native)
-将运行时反射策略应用到一个属性。  
+# <a name="ltpropertygt-element-net-native"></a><span data-ttu-id="bec3b-102">&lt;属性&gt;元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="bec3b-102">&lt;Property&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="bec3b-103">将运行时反射策略应用到一个属性。</span><span class="sxs-lookup"><span data-stu-id="bec3b-103">Applies runtime reflection policy to a property.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="bec3b-104">语法</span><span class="sxs-lookup"><span data-stu-id="bec3b-104">Syntax</span></span>  
   
 ```xml  
-  
 <Property Name="property_name"  
           Browse="policy_type"  
           Dynamic="policy_type"  
           Serialize="policy_type" />  
-  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bec3b-105">特性和元素</span><span class="sxs-lookup"><span data-stu-id="bec3b-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="bec3b-106">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="bec3b-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a><span data-ttu-id="bec3b-107">特性</span><span class="sxs-lookup"><span data-stu-id="bec3b-107">Attributes</span></span>  
   
-|特性|特性类型|描述|  
+|<span data-ttu-id="bec3b-108">特性</span><span class="sxs-lookup"><span data-stu-id="bec3b-108">Attribute</span></span>|<span data-ttu-id="bec3b-109">特性类型</span><span class="sxs-lookup"><span data-stu-id="bec3b-109">Attribute type</span></span>|<span data-ttu-id="bec3b-110">描述</span><span class="sxs-lookup"><span data-stu-id="bec3b-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|常规|必需的特性。 指定属性名称。|  
-|`Browse`|映像|可选特性。 制对该属性信息的查询或列举该属性，但并不在运行时间启用任何动态访问。|  
-|`Dynamic`|映像|可选特性。 控制运行时对该属性的访问，以启用动态编程。 该策略确保一个属性可在运行时间内得到设置或动态检索。|  
-|`Serialize`|序列化|可选特性。 控制运行时对一个属性的访问以启用类型实例，使其通过程序库得到序列化，例如通过 Newtonsoft JSON 序列化程序，或被用于绑定数据。|  
+|`Name`|<span data-ttu-id="bec3b-111">常规</span><span class="sxs-lookup"><span data-stu-id="bec3b-111">General</span></span>|<span data-ttu-id="bec3b-112">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="bec3b-112">Required attribute.</span></span> <span data-ttu-id="bec3b-113">指定属性名称。</span><span class="sxs-lookup"><span data-stu-id="bec3b-113">Specifies the property name.</span></span>|  
+|`Browse`|<span data-ttu-id="bec3b-114">映像</span><span class="sxs-lookup"><span data-stu-id="bec3b-114">Reflection</span></span>|<span data-ttu-id="bec3b-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="bec3b-115">Optional attribute.</span></span> <span data-ttu-id="bec3b-116">制对该属性信息的查询或列举该属性，但并不在运行时间启用任何动态访问。</span><span class="sxs-lookup"><span data-stu-id="bec3b-116">Controls querying for information about or enumerating the property but does not enable any dynamic access at run time.</span></span>|  
+|`Dynamic`|<span data-ttu-id="bec3b-117">映像</span><span class="sxs-lookup"><span data-stu-id="bec3b-117">Reflection</span></span>|<span data-ttu-id="bec3b-118">可选特性。</span><span class="sxs-lookup"><span data-stu-id="bec3b-118">Optional attribute.</span></span> <span data-ttu-id="bec3b-119">控制运行时对该属性的访问，以启用动态编程。</span><span class="sxs-lookup"><span data-stu-id="bec3b-119">Controls runtime access to the property to enable dynamic programming.</span></span> <span data-ttu-id="bec3b-120">该策略确保一个属性可在运行时间内得到设置或动态检索。</span><span class="sxs-lookup"><span data-stu-id="bec3b-120">This policy ensures that a property can be set or retrieved dynamically at run time.</span></span>|  
+|`Serialize`|<span data-ttu-id="bec3b-121">序列化</span><span class="sxs-lookup"><span data-stu-id="bec3b-121">Serialization</span></span>|<span data-ttu-id="bec3b-122">可选特性。</span><span class="sxs-lookup"><span data-stu-id="bec3b-122">Optional attribute.</span></span> <span data-ttu-id="bec3b-123">控制运行时对一个属性的访问以启用类型实例，使其通过程序库得到序列化，例如通过 Newtonsoft JSON 序列化程序，或被用于绑定数据。</span><span class="sxs-lookup"><span data-stu-id="bec3b-123">Controls runtime access to a property to enable type instances to be serialized by libraries such as the Newtonsoft JSON serializer or to be used for data binding.</span></span>|  
   
-## <a name="name-attribute"></a>Name 特性  
+## <a name="name-attribute"></a><span data-ttu-id="bec3b-124">Name 特性</span><span class="sxs-lookup"><span data-stu-id="bec3b-124">Name attribute</span></span>  
   
-|值|描述|  
+|<span data-ttu-id="bec3b-125">值</span><span class="sxs-lookup"><span data-stu-id="bec3b-125">Value</span></span>|<span data-ttu-id="bec3b-126">描述</span><span class="sxs-lookup"><span data-stu-id="bec3b-126">Description</span></span>|  
 |-----------|-----------------|  
-|*method_name*|属性名称。 属性的类型定义由容器的父[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)或[ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)元素。|  
+|<span data-ttu-id="bec3b-127">method_name</span><span class="sxs-lookup"><span data-stu-id="bec3b-127">*method_name*</span></span>|<span data-ttu-id="bec3b-128">属性名称。</span><span class="sxs-lookup"><span data-stu-id="bec3b-128">The property name.</span></span> <span data-ttu-id="bec3b-129">该属性的类型由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义。</span><span class="sxs-lookup"><span data-stu-id="bec3b-129">The type of the property is defined by the parent [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) or [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element.</span></span>|  
   
-## <a name="all-other-attributes"></a>所有其他特性  
+## <a name="all-other-attributes"></a><span data-ttu-id="bec3b-130">所有其他特性</span><span class="sxs-lookup"><span data-stu-id="bec3b-130">All other attributes</span></span>  
   
-|值|描述|  
+|<span data-ttu-id="bec3b-131">值</span><span class="sxs-lookup"><span data-stu-id="bec3b-131">Value</span></span>|<span data-ttu-id="bec3b-132">描述</span><span class="sxs-lookup"><span data-stu-id="bec3b-132">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|该设置将应用到这个属性的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|<span data-ttu-id="bec3b-133">policy_setting</span><span class="sxs-lookup"><span data-stu-id="bec3b-133">*policy_setting*</span></span>|<span data-ttu-id="bec3b-134">该设置将应用到这个属性的策略类型。</span><span class="sxs-lookup"><span data-stu-id="bec3b-134">The setting to apply to this policy type for the property.</span></span> <span data-ttu-id="bec3b-135">可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。</span><span class="sxs-lookup"><span data-stu-id="bec3b-135">Possible values are `Auto`, `Excluded`, `Included`, and `Required`.</span></span> <span data-ttu-id="bec3b-136">有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="bec3b-136">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="bec3b-137">子元素</span><span class="sxs-lookup"><span data-stu-id="bec3b-137">Child Elements</span></span>  
+ <span data-ttu-id="bec3b-138">无。</span><span class="sxs-lookup"><span data-stu-id="bec3b-138">None.</span></span>  
   
-### <a name="parent-elements"></a>父元素  
+### <a name="parent-elements"></a><span data-ttu-id="bec3b-139">父元素</span><span class="sxs-lookup"><span data-stu-id="bec3b-139">Parent Elements</span></span>  
   
-|元素|说明|  
+|<span data-ttu-id="bec3b-140">元素</span><span class="sxs-lookup"><span data-stu-id="bec3b-140">Element</span></span>|<span data-ttu-id="bec3b-141">描述</span><span class="sxs-lookup"><span data-stu-id="bec3b-141">Description</span></span>|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[<span data-ttu-id="bec3b-142">\<Type></span><span class="sxs-lookup"><span data-stu-id="bec3b-142">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="bec3b-143">将反射策略应用到一种类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="bec3b-143">Applies reflection policy to a type and all its members.</span></span>|  
+|[<span data-ttu-id="bec3b-144">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="bec3b-144">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="bec3b-145">将反射策略应用到一种构造泛型类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="bec3b-145">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
   
-## <a name="remarks"></a>备注  
- 如果一个属性的策略没有得到显式定义，它将继承其父元素的运行时间策略。  
+## <a name="remarks"></a><span data-ttu-id="bec3b-146">备注</span><span class="sxs-lookup"><span data-stu-id="bec3b-146">Remarks</span></span>  
+ <span data-ttu-id="bec3b-147">如果一个属性的策略没有得到显式定义，它将继承其父元素的运行时间策略。</span><span class="sxs-lookup"><span data-stu-id="bec3b-147">If a property's policy is not explicitly defined, it inherits the runtime policy of its parent element.</span></span>  
   
-## <a name="example"></a>示例  
- 以下实例使用反射实例化了一个 `Book` 对象并显示了其属性值。 该项目的原始 default.rd.xml 文件显示如下：  
+## <a name="example"></a><span data-ttu-id="bec3b-148">示例</span><span class="sxs-lookup"><span data-stu-id="bec3b-148">Example</span></span>  
+ <span data-ttu-id="bec3b-149">以下实例使用反射实例化了一个 `Book` 对象并显示了其属性值。</span><span class="sxs-lookup"><span data-stu-id="bec3b-149">The following example uses reflection to instantiate a `Book` object and display its property values.</span></span> <span data-ttu-id="bec3b-150">该项目的原始 default.rd.xml 文件显示如下：</span><span class="sxs-lookup"><span data-stu-id="bec3b-150">The original default.rd.xml file for the project appears as follows:</span></span>  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <Application>  
       <Namespace Name="LibraryApplications"  Browse="Required Public" >  
@@ -79,23 +81,21 @@ caps.handback.revision: 16
       </Namespace>  
    </Application>  
 </Directives>  
-  
 ```  
   
- 该文件将 `All` 值应用到允许通过反射访问类构造函数的 `Activate` 的类的 `Book` 策略。 `Browse` 类的 `Book` 策略是从其父命名空间继承的。 这已设置为 `Required Public`，这使得元数据在运行时可用。  
+ <span data-ttu-id="bec3b-151">该文件将 `All` 值应用到允许通过反射访问类构造函数的 `Activate` 的类的 `Book` 策略。</span><span class="sxs-lookup"><span data-stu-id="bec3b-151">The file applies the `All` value to the `Activate` policy for the `Book` class, which allows access to class constructors through reflection.</span></span> <span data-ttu-id="bec3b-152">`Browse` 类的 `Book` 策略是从其父命名空间继承的。</span><span class="sxs-lookup"><span data-stu-id="bec3b-152">The `Browse` policy for the `Book` class is inherited from its parent namespace.</span></span> <span data-ttu-id="bec3b-153">这已设置为 `Required Public`，这使得元数据在运行时可用。</span><span class="sxs-lookup"><span data-stu-id="bec3b-153">This is set to `Required Public`, which makes metadata available at runtime.</span></span>  
   
- 以下是该实例的源代码。 `outputBlock`变量表示[TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx)控件。  
+ <span data-ttu-id="bec3b-154">以下是该实例的源代码。</span><span class="sxs-lookup"><span data-stu-id="bec3b-154">The following is the source code for the example.</span></span> <span data-ttu-id="bec3b-155">`outputBlock` 变量表示 [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控件。</span><span class="sxs-lookup"><span data-stu-id="bec3b-155">The `outputBlock` variable represents a [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) control.</span></span>  
   
- [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
+ <span data-ttu-id="bec3b-156">[!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]</span><span class="sxs-lookup"><span data-stu-id="bec3b-156">[!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]</span></span>  
   
- 然而，编译和执行这个实例引发[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)异常。 尽管我们已经使 `Book` 类型的元数据变得可用，我们却未使属性获取者的实施变得动态可用。 我们可通过以下方法之一纠正这个错误：  
+ <span data-ttu-id="bec3b-157">然而，编译和执行此示例将引发 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常。</span><span class="sxs-lookup"><span data-stu-id="bec3b-157">However, compiling and executing this example throws a [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exception.</span></span> <span data-ttu-id="bec3b-158">尽管我们已经使 `Book` 类型的元数据变得可用，我们却未使属性获取者的实施变得动态可用。</span><span class="sxs-lookup"><span data-stu-id="bec3b-158">Although we've made metadata for the `Book` type available, we've failed to make the implementations of the property getters available dynamically.</span></span> <span data-ttu-id="bec3b-159">我们可通过以下方法之一纠正这个错误：</span><span class="sxs-lookup"><span data-stu-id="bec3b-159">We can correct this error by either in one of two ways:</span></span>  
   
--   通过定义`Dynamic`策略`Book`中键入其[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)元素。  
+-   <span data-ttu-id="bec3b-160">通过在其 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素中为 `Book` 类型定义 `Dynamic` 策略。</span><span class="sxs-lookup"><span data-stu-id="bec3b-160">by defining the `Dynamic` policy for the `Book` type in its [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) element.</span></span>  
   
--   通过添加嵌套[ <> \> ](../../../docs/framework/net-native/property-element-net-native.md)我们想要调用，如以下 default.rd.xml 文件其 getter 的每个属性的元素。  
+-   <span data-ttu-id="bec3b-161">通过为我们想要调用其 getter 的每个属性添加一个嵌套 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 元素，如以下 default.rd.xml 文件所示。</span><span class="sxs-lookup"><span data-stu-id="bec3b-161">By adding a nested [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) element for each property whose getter we'd like to invoke, as the following default.rd.xml file does.</span></span>  
   
-    ```  
-  
+    ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
        <Application>  
           <Namespace Name="LibraryApplications"  Browse="Required Public" >  
@@ -107,10 +107,10 @@ caps.handback.revision: 16
           </Namespace>  
        </Application>  
     </Directives>  
-  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a><span data-ttu-id="bec3b-162">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bec3b-162">See Also</span></span>  
+ <span data-ttu-id="bec3b-163">[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span><span class="sxs-lookup"><span data-stu-id="bec3b-163">[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span></span>  
+ <span data-ttu-id="bec3b-164">[运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md) </span><span class="sxs-lookup"><span data-stu-id="bec3b-164">[Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md) </span></span>  
+ [<span data-ttu-id="bec3b-165">运行时指令策略设置</span><span class="sxs-lookup"><span data-stu-id="bec3b-165">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

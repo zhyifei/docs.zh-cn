@@ -18,68 +18,68 @@ ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
+# <a name="language-independence-and-language-independent-components"></a><span data-ttu-id="f4894-104">语言独立性和与语言无关的组件</span><span class="sxs-lookup"><span data-stu-id="f4894-104">Language independence and language-independent components</span></span>
 
-.NET 是独立的语言。 这意味着，开发人员可使用面向 .NET 实现的多种语言之一（例如 C#、F# 和 Visual Basic）进行开发。 可访问针对 .NET 实现开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果你是组件开发人员，无论组件采用哪种语言，均可由任何 .NET 应用程序访问。
-
-> [!NOTE]
-> 本文的第一部分讨论如何创建独立于语言的组件（即以任何语言编写的应用均可以使用的组件）。 还可以从用多种语言编写的源代码创建单个组件或应用；请参阅本文第二部分的[跨语言互操作性](#cross-language-interoperability)。 
-
-若要与使用任何语言编写的其他对象完全交互，对象必须只向调用方公开那些所有语言共有的功能。 此组通用功能由公共语言规范 (CLS) 定义，后者是一组适用于生成的程序集的规则。 公共语言规范在 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 7 条至第 11 条中进行了定义。 
-
-如果你的组件符合公共语言规范，则保证其符合 CLS 并可通过支持 CLS 的任何编程语言编写的程序集中的代码对其进行访问。 可以通过将 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性应用于源代码来确定自己的组件在编译时是否符合公共语言规范。 有关详细信息，请参阅 [CLSCompliantAttribute 特性](#the-clscompliantattribute-attribute)。
-
-本文内容：
-
-* [CLS 遵从性规则](#cls-compliance-rules)
-
-    * [类型和类型成员签名](#types-and-type-member-signatures)
-
-    * [命名约定](#naming-conventions)
-    
-    * [类型转换](#type-conversion)
-    
-    * [阵列](#arrays)
-    
-    * [接口](#interfaces)
-    
-    * [枚举](#enumerations)
-    
-    * [类型成员概述](#type-members-in-general)
-    
-    * [成员可访问性](#member-accessibility)
-    
-    * [泛型类型和成员](#generic-types-and-members)
-    
-    * [构造函数](#constructors)
-    
-    * [属性](#properties)
-    
-    * [事件](#events)
-    
-    * [重载](#overloads)
-    
-    * [异常](#exceptions)
-    
-    * [特性](#attributes)
-    
-* [CLSCompliantAttribute 特性](#the-clscompliantattribute-attribute)
-
-* [跨语言互操作性](#cross-language-interoperability)
-
-## <a name="cls-compliance-rules"></a>CLS 遵从性规则
-
-本节讨论用于创建符合 CLS 的组件的规则。 有关规则的完整列表，请参阅 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 11 条。
+<span data-ttu-id="f4894-105">.NET 是独立的语言。</span><span class="sxs-lookup"><span data-stu-id="f4894-105">.NET is language independent.</span></span> <span data-ttu-id="f4894-106">这意味着，开发人员可使用面向 .NET 实现的多种语言之一（例如 C#、F# 和 Visual Basic）进行开发。</span><span class="sxs-lookup"><span data-stu-id="f4894-106">This means that, as a developer, you can develop in one of the many languages that target .NET implementations, such as C#, F#, and Visual Basic.</span></span> <span data-ttu-id="f4894-107">可访问针对 .NET 实现开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。</span><span class="sxs-lookup"><span data-stu-id="f4894-107">You can access the types and members of class libraries developed for .NET implementations without having to know the language in which they were originally written and without having to follow any of the original language's conventions.</span></span> <span data-ttu-id="f4894-108">如果你是组件开发人员，无论组件采用哪种语言，均可由任何 .NET 应用程序访问。</span><span class="sxs-lookup"><span data-stu-id="f4894-108">If you are a component developer, your component can be accessed by any .NET app regardless of its language.</span></span>
 
 > [!NOTE]
-> 公共语言规范讨论 CLS 遵从性的每个规则，因为它应用于使用者（以编程方式访问符合 CLS 的组件的开发人员）、框架（使用语言编译器创建符合 CLS 的库的开发人员）和扩展人员（创建可创建符合 CLS 的组件的语言编译器或代码分析器等工具的开发人员）。 本文重点介绍适用于框架的规则。 但请注意，一些适用于扩展程序的规则也适用于使用 [Reflection.Emit](xref:System.Reflection.Emit) 创建的程序集。 
+> <span data-ttu-id="f4894-109">本文的第一部分讨论如何创建独立于语言的组件（即以任何语言编写的应用均可以使用的组件）。</span><span class="sxs-lookup"><span data-stu-id="f4894-109">This first part of this article discusses creating language-independent components - that is, components that can be consumed by apps that are written in any language.</span></span> <span data-ttu-id="f4894-110">还可以从用多种语言编写的源代码创建单个组件或应用；请参阅本文第二部分的[跨语言互操作性](#cross-language-interoperability)。</span><span class="sxs-lookup"><span data-stu-id="f4894-110">You can also create a single component or app from source code written in multiple languages; see [Cross-Language Interoperability](#cross-language-interoperability) in the second part of this article.</span></span> 
 
-若要设计独立于语言的组件，您只需将 CLS 遵从性的规则应用于组件的公共接口即可。 您的私有实现不必符合规范。 
+<span data-ttu-id="f4894-111">若要与使用任何语言编写的其他对象完全交互，对象必须只向调用方公开那些所有语言共有的功能。</span><span class="sxs-lookup"><span data-stu-id="f4894-111">To fully interact with other objects written in any language, objects must expose to callers only those features that are common to all languages.</span></span> <span data-ttu-id="f4894-112">此组通用功能由公共语言规范 (CLS) 定义，后者是一组适用于生成的程序集的规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-112">This common set of features is defined by the Common Language Specification (CLS), which is a set of rules that apply to generated assemblies.</span></span> <span data-ttu-id="f4894-113">公共语言规范在 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 7 条至第 11 条中进行了定义。</span><span class="sxs-lookup"><span data-stu-id="f4894-113">The Common Language Specification is defined in Partition I, Clauses 7 through 11 of the [ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span> 
+
+<span data-ttu-id="f4894-114">如果你的组件符合公共语言规范，则保证其符合 CLS 并可通过支持 CLS 的任何编程语言编写的程序集中的代码对其进行访问。</span><span class="sxs-lookup"><span data-stu-id="f4894-114">If your component conforms to the Common Language Specification, it is guaranteed to be CLS-compliant and can be accessed from code in assemblies written in any programming language that supports the CLS.</span></span> <span data-ttu-id="f4894-115">可以通过将 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性应用于源代码来确定自己的组件在编译时是否符合公共语言规范。</span><span class="sxs-lookup"><span data-stu-id="f4894-115">You can determine whether your component conforms to the Common Language Specification at compile time by applying the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute to your source code.</span></span> <span data-ttu-id="f4894-116">有关详细信息，请参阅 [CLSCompliantAttribute 特性](#the-clscompliantattribute-attribute)。</span><span class="sxs-lookup"><span data-stu-id="f4894-116">For more information, see The [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute).</span></span>
+
+<span data-ttu-id="f4894-117">本文内容：</span><span class="sxs-lookup"><span data-stu-id="f4894-117">In this article:</span></span>
+
+* [<span data-ttu-id="f4894-118">CLS 遵从性规则</span><span class="sxs-lookup"><span data-stu-id="f4894-118">CLS compliance rules</span></span>](#cls-compliance-rules)
+
+    * [<span data-ttu-id="f4894-119">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-119">Types and type member signatures</span></span>](#types-and-type-member-signatures)
+
+    * [<span data-ttu-id="f4894-120">命名约定</span><span class="sxs-lookup"><span data-stu-id="f4894-120">Naming conventions</span></span>](#naming-conventions)
+    
+    * [<span data-ttu-id="f4894-121">类型转换</span><span class="sxs-lookup"><span data-stu-id="f4894-121">Type conversion</span></span>](#type-conversion)
+    
+    * [<span data-ttu-id="f4894-122">阵列</span><span class="sxs-lookup"><span data-stu-id="f4894-122">Arrays</span></span>](#arrays)
+    
+    * [<span data-ttu-id="f4894-123">接口</span><span class="sxs-lookup"><span data-stu-id="f4894-123">Interfaces</span></span>](#interfaces)
+    
+    * [<span data-ttu-id="f4894-124">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-124">Enumerations</span></span>](#enumerations)
+    
+    * [<span data-ttu-id="f4894-125">类型成员概述</span><span class="sxs-lookup"><span data-stu-id="f4894-125">Type members in general</span></span>](#type-members-in-general)
+    
+    * [<span data-ttu-id="f4894-126">成员可访问性</span><span class="sxs-lookup"><span data-stu-id="f4894-126">Member accessibility</span></span>](#member-accessibility)
+    
+    * [<span data-ttu-id="f4894-127">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-127">Generic types and members</span></span>](#generic-types-and-members)
+    
+    * [<span data-ttu-id="f4894-128">构造函数</span><span class="sxs-lookup"><span data-stu-id="f4894-128">Constructors</span></span>](#constructors)
+    
+    * [<span data-ttu-id="f4894-129">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-129">Properties</span></span>](#properties)
+    
+    * [<span data-ttu-id="f4894-130">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-130">Events</span></span>](#events)
+    
+    * [<span data-ttu-id="f4894-131">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-131">Overloads</span></span>](#overloads)
+    
+    * [<span data-ttu-id="f4894-132">异常</span><span class="sxs-lookup"><span data-stu-id="f4894-132">Exceptions</span></span>](#exceptions)
+    
+    * [<span data-ttu-id="f4894-133">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-133">Attributes</span></span>](#attributes)
+    
+* [<span data-ttu-id="f4894-134">CLSCompliantAttribute 特性</span><span class="sxs-lookup"><span data-stu-id="f4894-134">CLSCompliantAttribute attribute</span></span>](#the-clscompliantattribute-attribute)
+
+* [<span data-ttu-id="f4894-135">跨语言互操作性</span><span class="sxs-lookup"><span data-stu-id="f4894-135">Cross-Language Interoperability</span></span>](#cross-language-interoperability)
+
+## <a name="cls-compliance-rules"></a><span data-ttu-id="f4894-136">CLS 遵从性规则</span><span class="sxs-lookup"><span data-stu-id="f4894-136">CLS compliance rules</span></span>
+
+<span data-ttu-id="f4894-137">本节讨论用于创建符合 CLS 的组件的规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-137">This section discusses the rules for creating a CLS-compliant component.</span></span> <span data-ttu-id="f4894-138">有关规则的完整列表，请参阅 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 11 条。</span><span class="sxs-lookup"><span data-stu-id="f4894-138">For a complete list of rules, see Partition I, Clause 11 of the [ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="f4894-139">公共语言规范讨论 CLS 遵从性的每个规则，因为它应用于使用者（以编程方式访问符合 CLS 的组件的开发人员）、框架（使用语言编译器创建符合 CLS 的库的开发人员）和扩展人员（创建可创建符合 CLS 的组件的语言编译器或代码分析器等工具的开发人员）。</span><span class="sxs-lookup"><span data-stu-id="f4894-139">The Common Language Specification discusses each rule for CLS compliance as it applies to consumers (developers who are programmatically accessing a component that is CLS-compliant), frameworks (developers who are using a language compiler to create CLS-compliant libraries), and extenders (developers who are creating a tool such as a language compiler or a code parser that creates CLS-compliant components).</span></span> <span data-ttu-id="f4894-140">本文重点介绍适用于框架的规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-140">This article focuses on the rules as they apply to frameworks.</span></span> <span data-ttu-id="f4894-141">但请注意，一些适用于扩展程序的规则也适用于使用 [Reflection.Emit](xref:System.Reflection.Emit) 创建的程序集。</span><span class="sxs-lookup"><span data-stu-id="f4894-141">Note, though, that some of the rules that apply to extenders may also apply to assemblies that are created using [Reflection.Emit](xref:System.Reflection.Emit).</span></span> 
+
+<span data-ttu-id="f4894-142">若要设计独立于语言的组件，您只需将 CLS 遵从性的规则应用于组件的公共接口即可。</span><span class="sxs-lookup"><span data-stu-id="f4894-142">To design a component that is language independent, you only need to apply the rules for CLS compliance to your component's public interface.</span></span> <span data-ttu-id="f4894-143">您的私有实现不必符合规范。</span><span class="sxs-lookup"><span data-stu-id="f4894-143">Your private implementation does not have to conform to the specification.</span></span> 
 
 > [!IMPORTANT]
-> CLS 遵从性的规则仅适用于组件的公共接口，而非其私有实现。 
+> <span data-ttu-id="f4894-144">CLS 遵从性的规则仅适用于组件的公共接口，而非其私有实现。</span><span class="sxs-lookup"><span data-stu-id="f4894-144">The rules for CLS compliance apply only to a component's public interface, not to its private implementation.</span></span> 
 
-例如，[Byte](xref:System.Byte) 之外的无符号整数不符合 CLS。 由于以下示例中的 `Person` 类公开了 [UInt16](xref:System.UInt16) 类型的 `Age` 属性，因此下面的代码显示编译器警告。
+<span data-ttu-id="f4894-145">例如，[Byte](xref:System.Byte) 之外的无符号整数不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-145">For example, unsigned integers other than [Byte](xref:System.Byte) are not CLS-compliant.</span></span> <span data-ttu-id="f4894-146">由于以下示例中的 `Person` 类公开了 [UInt16](xref:System.UInt16) 类型的 `Age` 属性，因此下面的代码显示编译器警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-146">Because the `Person` class in the following example exposes an `Age` property of type [UInt16](xref:System.UInt16), the following code displays a compiler warning.</span></span>
 
 ```csharp
 using System;
@@ -116,7 +116,7 @@ End Class
 '                                ~~~
 ```
 
-可以通过将 `Age` 属性的类型从 `UInt16` 更改为 [Int16](xref:System.Int16) 来将 Person 类设置为符合 CLS，即一个符合 CLS 的 16 位带符号整数。 您无需更改私有 `personAge` 字段的类型。 
+<span data-ttu-id="f4894-147">可以通过将 `Age` 属性的类型从 `UInt16` 更改为 [Int16](xref:System.Int16) 来将 Person 类设置为符合 CLS，即一个符合 CLS 的 16 位带符号整数。</span><span class="sxs-lookup"><span data-stu-id="f4894-147">You can make the Person class CLS-compliant by changing the type of `Age` property from `UInt16` to [Int16](xref:System.Int16), which is a CLS-compliant, 16-bit signed integer.</span></span> <span data-ttu-id="f4894-148">您无需更改私有 `personAge` 字段的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-148">You do not have to change the type of the private `personAge` field.</span></span> 
 
 ```csharp
 using System;
@@ -146,71 +146,71 @@ Public Class Person
 End Class
 ```
 
-库的公共接口包括：
+<span data-ttu-id="f4894-149">库的公共接口包括：</span><span class="sxs-lookup"><span data-stu-id="f4894-149">A library's public interface consists of the following:</span></span>
 
-* 公共类的定义。
+* <span data-ttu-id="f4894-150">公共类的定义。</span><span class="sxs-lookup"><span data-stu-id="f4894-150">Definitions of public classes.</span></span>
 
-* 公共类中公共成员的定义，以及派生类可以访问的成员（即受保护的成员）的定义。 
+* <span data-ttu-id="f4894-151">公共类中公共成员的定义，以及派生类可以访问的成员（即受保护的成员）的定义。</span><span class="sxs-lookup"><span data-stu-id="f4894-151">Definitions of the public members of public classes, and definitions of members accessible to derived classes (that is, protected members).</span></span> 
 
-* 公共类中公共方法的参数和返回类型，以及派生类可以访问的方法的参数和返回类型。 
+* <span data-ttu-id="f4894-152">公共类中公共方法的参数和返回类型，以及派生类可以访问的方法的参数和返回类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-152">Parameters and return types of public methods of public classes, and parameters and return types of methods accessible to derived classes.</span></span> 
 
-下表中将列出 CLS 遵从性规则。 规则的文本摘自 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)（版权所有 2012，Ecma International）。 有关这些规则的详细信息，请参阅以下各节。 
+<span data-ttu-id="f4894-153">下表中将列出 CLS 遵从性规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-153">The rules for CLS compliance are listed in the following table.</span></span> <span data-ttu-id="f4894-154">规则的文本摘自 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)（版权所有 2012，Ecma International）。</span><span class="sxs-lookup"><span data-stu-id="f4894-154">The text of the rules is taken verbatim from the [ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm), which is Copyright 2012 by Ecma International.</span></span> <span data-ttu-id="f4894-155">有关这些规则的详细信息，请参阅以下各节。</span><span class="sxs-lookup"><span data-stu-id="f4894-155">More detailed information about these rules is found in the following sections.</span></span> 
 
-类别 | 请参阅 | 规则 | 规则编号
+<span data-ttu-id="f4894-156">类别</span><span class="sxs-lookup"><span data-stu-id="f4894-156">Category</span></span> | <span data-ttu-id="f4894-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="f4894-157">See</span></span> | <span data-ttu-id="f4894-158">规则</span><span class="sxs-lookup"><span data-stu-id="f4894-158">Rule</span></span> | <span data-ttu-id="f4894-159">规则编号</span><span class="sxs-lookup"><span data-stu-id="f4894-159">Rule Number</span></span>
 -------- | --- | ---- | -----------
-可访问性 | [成员可访问性](#member-accessibility) | 重写继承的方法时，可访问性应不会更改（重写一个继承自其他具有可访问性 `family-or-assembly` 的程序集的方法除外）。 在此情况下，重写应具有可访问性 `family`。 | 10
-可访问性 | [成员可访问性](#member-accessibility) | 类型和成员的可见性和可访问性应是这样的：只要任何成员是可见的且可访问的，则该成员签名中的类型应是可见且可访问的。 例如，在其程序集外部可见的公共方法不应具有其类型仅在程序集内可见的参数。 只要任何成员是可见且可访问的，则构成该成员签名中使用的实例化泛型类型的类型应是可见且可访问的。 例如，一个在其程序集外部可见的成员签名中出现的实例化泛型类型不应具有其类型仅在程序集内可见的泛型实参。 | 12
-阵列 | [阵列](#arrays) | 数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。 各重载间只需区别：项是数组还是数组的元素类型。 当重载基于两个或更多数组类型时，元素类型应为命名类型。 | 16
-特性 | [特性](#attributes) | 特性应为 [System.Attribute](xref:System.Attribute) 类型或继承自该类型。 | 41
-特性 | [特性](#attributes) | CLS 只允许自定义特性编码的子集。 这些编码中仅应显示的类型（请参阅第 IV 部分）：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double) 以及基于符合 CLS 的基整数类型的任何枚举类型。 | 34
-特性 | [特性](#attributes) | CLS 不允许公开可见的所需修饰符（`modreq`，请参阅第 II 部分)，但允许其不了解的可选修饰符（`modopt`，请参阅第 II 部分）。 | 35
-构造函数 | [构造函数](#constructors) | 在访问继承的实例数据之前，对象构造函数应调用其基类的某个实例构造函数。 （这不适用于不需要构造函数的值类型。)  | 21
-构造函数 | [构造函数](#constructors) | 对象构造函数只能在创建对象的过程中调用，并且不应将对象初始化两次。 | 22
-枚举 | [枚举](#enumerations) | 枚举的基础类型应是内置的 CLS 整数类型，字段的名称应为“value__”，并且应将该字段标记为 `RTSpecialName`。 |  7
-枚举 | [枚举](#enumerations) | 有两种不同的枚举，二者由是否存在 [System.FlagsAttribute](xref:System.FlagsAttribute)（请参阅第 IV 部分库）自定义特性指示。 一个表示命名的整数值；另一个表示命名的位标记（可合并以生成一个未命名的值）。 `enum` 的值不仅限于指定的值。 |  8
-枚举 | [枚举](#enumerations) | 枚举的文本静态字段需具有枚举本身的类型。 |  9
-事件 | [事件](#events) | 实现事件的方法将在元数据中标记为 `SpecialName`。 |29
-事件 | [事件](#events) | 事件及其访问器的可访问性应相同。 |30
-事件 | [事件](#events) | 事件的 `add` 和 `remove` 方法应同时存在或不存在。 |31
-事件 | [事件](#events) | 事件的 `add` 和 `remove` 方法均应采用一个参数，该参数的类型定义了事件的类型，且应派生自 [System.Delegate](xref:System.Delegate)。 |32
-事件 | [事件](#events) | 事件应遵循特定的命名模式。 CLS 规则 29 中引用的 SpecialName 特性将在适当名称比较中被忽略，且应遵循标识符规则。  |33
-异常 | [异常](#exceptions) | 引发的对象应为 [System.Exception](xref:System.Exception) 类型或从该类型继承的类型。 但是，阻止其他类型的异常的传播无需符合 CLS 的方法。 | 40
-常规 | [CLS 遵从性规则](#cls-compliance-rules) | CLS 规则仅适用于类型中在定义程序集之外可访问或可显示的部分。 | 1
-常规 | [CLS 遵从性规则](#cls-compliance-rules) | 不应将不符合 CLS 的类型的成员标记为符合 CLS。 | 2
-泛型 | [泛型类型和成员](#generic-types-and-members) | 嵌套类型拥有的泛型形参的数目至少应与封闭类型的一样多。 嵌套类型中的泛型参数在位置上与其封闭类型中的泛型参数对应。  | 42
-泛型 | [泛型类型和成员](#generic-types-and-members) | 根据上面定义的规则，泛型类型的名称将对非嵌套类型上声明的或新引入到类型（如果嵌套）中的类型参数的数量进行编码。 | 43
-泛型 | [泛型类型和成员](#generic-types-and-members) | 泛型类型应该重新声明足够多的约束，以确保对基类型或接口的任何约束能够满足泛型类型约束的需要。 | 44
-泛型 | [泛型类型和成员](#generic-types-and-members) | 用作对泛型参数的约束的类型本身应符合 CLS。 | 45
-泛型 | [泛型类型和成员](#generic-types-and-members) | 实例化泛型类型中的成员（包括嵌套类型）的可见性和可访问性应被认为限制在特定的实例化中，而不是限制在整个泛型类型声明中。 作出以下假定：CLS 规则 12 的可见性和可访问性仍适用。 | 46
-泛型 | [泛型类型和成员](#generic-types-and-members) | 对于每个抽象或虚拟泛型方法，应该有默认的具体（非抽象）实现 | 47
-接口 | [接口](#interfaces) | 符合 CLS 的接口不需要不符合 CLS 的方法的定义即可实现这些方法。 | 18
-接口 | [接口](#interfaces) | 符合 CLS 的接口不应定义静态方法，也不应定义字段。 | 19
-成员 | [类型成员概述](#type-members-in-general) | 全局静态字段和方法不符合 CLS。 | 36
-成员 | -- | 通过使用字段初始化元数据指定文本静态值。 符合 CLS 的文本必须在类型与文本（或基本类型，如果文本为 `enum`）完全相同的字段初始化元数据中指定值。 | 13
-成员 | [类型成员概述](#type-members-in-general) | vararg 约束不属于 CLS，并且 CLS 支持的唯一调用约定是标准托管调用约定。 | 15
-命名约定 | [命名约定](#naming-conventions) | 程序集应遵守用于管理允许启用且包含在标识符中的字符集的 Unicode 标准 3.0 的技术报告 15 的附件 7（可通过 [Unicode 范式](http://www.unicode.org/unicode/reports/tr15/tr15-18.html)在线获得）。 标识符应是由 Unicode 范式 C 定义的规范格式。对于 CLS，如果两个标识符的小写映射（由不区分区域设置的 Unicode、一对一小写映射指定）相同，则它们也相同。 也就是说，对于要在 CLS 下视为不同的两个标识符，它们应以大小写之外的差别进行区分。 但是，若要重写继承的定义，CLI 需要对使用的原始声明进行准确编码。 | 4
-重载 | [命名约定](#naming-conventions) | 在符合 CLS 的范围中引入的所有名称都应是明显独立的类型，除非名称完全相同且通过重载解析。 也就是说，CTS 允许单个类型对方法和字段使用相同的名称，但 CLS 不允许。 | 5
-重载 | [命名约定](#naming-conventions) | 即使 CTS 允许区分不同的签名，但字段和嵌套类型只能由标识符比较区分。 （标识符比较后）具有相同名称的方法、属性和事件应在除返回类型不同之外还具有其他差异，CLS 规则 39 中指定的差异除外。 | 6
-重载 | [重载](#overloads) | 只可重载属性和方法。 | 37
-重载 | [重载](#overloads) |属性和方法仅可基于其参数的数目和类型进行重载，名为 `op_Implicit` 和 `op_Explicit` 的转换运算符除外，这两种转换运算符也可基于其返回类型进行重载。 | 38
-重载 | -- | 如果类型中声明的两种或更多符合 CLS 的方法都具有相同的名称，并且对于特定的类型实例化集而言，它们具有相同的参数和返回类型，则所有这些方法在这些类型实例化时都应在语义上保持等效。 | 48
-属性 | [属性](#properties) | 实现属性的 getter 和 setter 方法的方法应在元数据中标记为 `SpecialName`。 | 24
-属性 | [属性](#properties) | 属性的访问器必须同为静态、同为虚拟或同为实例。 | 26
-属性 | [属性](#properties) | 属性的类型应该是 getter 的返回类型和 setter 的最后一个自变量的类型。 属性参数的类型应是对应于 getter 的参数的类型和 setter 的除最后一个参数之外所有参数的类型。 所有这些类型都应该符合 CLS，并且不应是托管指针（也就是说，不应该被引用传递）。 | 27
-属性 | [属性](#properties) | 属性应遵循特定的命名模式。 CLS 规则 24 中引用的 `SpecialName` 特性将在适当名称比较中被忽略，且应遵循标识符规则。 属性应具有 getter 和/或 setter 方法。 | 28
-类型转换 | [类型转换](#type-conversion) | 如果提供 op_Implicit 或 op_Explicit，则必须提供实现强制转换的替代方法。 | 39
-类型 | [类型和类型成员签名](#types-and-type-member-signatures) | 装箱的值类型不符合 CLS。 | 3
-类型 | [类型和类型成员签名](#types-and-type-member-signatures) | 显示在签名中的所有类型应符合 CLS。 构成实例化泛型类型的所有类型应符合 CLS。 | 11
-类型 | [类型和类型成员签名](#types-and-type-member-signatures) | 类型化的引用是不符合 CLS 的。 | 14
-类型 | [类型和类型成员签名](#types-and-type-member-signatures) | 非托管的指针类型不符合 CLS。 | 17
-类型 | [类型和类型成员签名](#types-and-type-member-signatures) | 符合 CLS 的类、值类型和接口不应要求实现不符合 CLS 的成员 | 20
-类型 | [类型和类型成员签名](#types-and-type-member-signatures) | [System.Object](xref:System.Object) 符合 CLS。 任何其他符合 CLS 的类应从符合 CLS 的类继承。 | 23
+<span data-ttu-id="f4894-160">可访问性</span><span class="sxs-lookup"><span data-stu-id="f4894-160">Accessibility</span></span> | [<span data-ttu-id="f4894-161">成员可访问性</span><span class="sxs-lookup"><span data-stu-id="f4894-161">Member accessibility</span></span>](#member-accessibility) | <span data-ttu-id="f4894-162">重写继承的方法时，可访问性应不会更改（重写一个继承自其他具有可访问性 `family-or-assembly` 的程序集的方法除外）。</span><span class="sxs-lookup"><span data-stu-id="f4894-162">Accessibility shall not be changed when overriding inherited methods, except when overriding a method inherited from a different assembly with accessibility `family-or-assembly`.</span></span> <span data-ttu-id="f4894-163">在此情况下，重写应具有可访问性 `family`。</span><span class="sxs-lookup"><span data-stu-id="f4894-163">In this case, the override shall have accessibility `family`.</span></span> | <span data-ttu-id="f4894-164">10</span><span class="sxs-lookup"><span data-stu-id="f4894-164">10</span></span>
+<span data-ttu-id="f4894-165">可访问性</span><span class="sxs-lookup"><span data-stu-id="f4894-165">Accessibility</span></span> | [<span data-ttu-id="f4894-166">成员可访问性</span><span class="sxs-lookup"><span data-stu-id="f4894-166">Member accessibility</span></span>](#member-accessibility) | <span data-ttu-id="f4894-167">类型和成员的可见性和可访问性应是这样的：只要任何成员是可见的且可访问的，则该成员签名中的类型应是可见且可访问的。</span><span class="sxs-lookup"><span data-stu-id="f4894-167">The visibility and accessibility of types and members shall be such that types in the signature of any member shall be visible and accessible whenever the member itself is visible and accessible.</span></span> <span data-ttu-id="f4894-168">例如，在其程序集外部可见的公共方法不应具有其类型仅在程序集内可见的参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-168">For example, a public method that is visible outside its assembly shall not have an argument whose type is visible only within the assembly.</span></span> <span data-ttu-id="f4894-169">只要任何成员是可见且可访问的，则构成该成员签名中使用的实例化泛型类型的类型应是可见且可访问的。</span><span class="sxs-lookup"><span data-stu-id="f4894-169">The visibility and accessibility of types composing an instantiated generic type used in the signature of any member shall be visible and accessible whenever the member itself is visible and accessible.</span></span> <span data-ttu-id="f4894-170">例如，一个在其程序集外部可见的成员签名中出现的实例化泛型类型不应具有其类型仅在程序集内可见的泛型实参。</span><span class="sxs-lookup"><span data-stu-id="f4894-170">For example, an instantiated generic type present in the signature of a member that is visible outside its assembly shall not have a generic argument whose type is visible only within the assembly.</span></span> | <span data-ttu-id="f4894-171">12</span><span class="sxs-lookup"><span data-stu-id="f4894-171">12</span></span>
+<span data-ttu-id="f4894-172">阵列</span><span class="sxs-lookup"><span data-stu-id="f4894-172">Arrays</span></span> | [<span data-ttu-id="f4894-173">阵列</span><span class="sxs-lookup"><span data-stu-id="f4894-173">Arrays</span></span>](#arrays) | <span data-ttu-id="f4894-174">数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。</span><span class="sxs-lookup"><span data-stu-id="f4894-174">Arrays shall have elements with a CLS-compliant type, and all dimensions of the array shall have lower bounds of zero.</span></span> <span data-ttu-id="f4894-175">各重载间只需区别：项是数组还是数组的元素类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-175">Only the fact that an item is an array and the element type of the array shall be required to distinguish between overloads.</span></span> <span data-ttu-id="f4894-176">当重载基于两个或更多数组类型时，元素类型应为命名类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-176">When overloading is based on two or more array types the element types shall be named types.</span></span> | <span data-ttu-id="f4894-177">16</span><span class="sxs-lookup"><span data-stu-id="f4894-177">16</span></span>
+<span data-ttu-id="f4894-178">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-178">Attributes</span></span> | [<span data-ttu-id="f4894-179">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-179">Attributes</span></span>](#attributes) | <span data-ttu-id="f4894-180">特性应为 [System.Attribute](xref:System.Attribute) 类型或继承自该类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-180">Attributes shall be of type [System.Attribute](xref:System.Attribute), or a type inheriting from it.</span></span> | <span data-ttu-id="f4894-181">41</span><span class="sxs-lookup"><span data-stu-id="f4894-181">41</span></span>
+<span data-ttu-id="f4894-182">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-182">Attributes</span></span> | [<span data-ttu-id="f4894-183">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-183">Attributes</span></span>](#attributes) | <span data-ttu-id="f4894-184">CLS 只允许自定义特性编码的子集。</span><span class="sxs-lookup"><span data-stu-id="f4894-184">The CLS only allows a subset of the encodings of custom attributes.</span></span> <span data-ttu-id="f4894-185">这些编码中仅应显示的类型（请参阅第 IV 部分）：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double) 以及基于符合 CLS 的基整数类型的任何枚举类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-185">The only types that shall appear in these encodings are (see Partition IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double), and any enumeration type based on a CLS-compliant base integer type.</span></span> | <span data-ttu-id="f4894-186">34</span><span class="sxs-lookup"><span data-stu-id="f4894-186">34</span></span>
+<span data-ttu-id="f4894-187">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-187">Attributes</span></span> | [<span data-ttu-id="f4894-188">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-188">Attributes</span></span>](#attributes) | <span data-ttu-id="f4894-189">CLS 不允许公开可见的所需修饰符（`modreq`，请参阅第 II 部分)，但允许其不了解的可选修饰符（`modopt`，请参阅第 II 部分）。</span><span class="sxs-lookup"><span data-stu-id="f4894-189">The CLS does not allow publicly visible required modifiers (`modreq`, see Partition II), but does allow optional modifiers (`modopt`, see Partition II) it does not understand.</span></span> | <span data-ttu-id="f4894-190">35</span><span class="sxs-lookup"><span data-stu-id="f4894-190">35</span></span>
+<span data-ttu-id="f4894-191">构造函数</span><span class="sxs-lookup"><span data-stu-id="f4894-191">Constructors</span></span> | [<span data-ttu-id="f4894-192">构造函数</span><span class="sxs-lookup"><span data-stu-id="f4894-192">Constructors</span></span>](#constructors) | <span data-ttu-id="f4894-193">在访问继承的实例数据之前，对象构造函数应调用其基类的某个实例构造函数。</span><span class="sxs-lookup"><span data-stu-id="f4894-193">An object constructor shall call some instance constructor of its base class before any access occurs to inherited instance data.</span></span> <span data-ttu-id="f4894-194">（这不适用于不需要构造函数的值类型。)</span><span class="sxs-lookup"><span data-stu-id="f4894-194">(This does not apply to value types, which need not have constructors.)</span></span>  | <span data-ttu-id="f4894-195">21</span><span class="sxs-lookup"><span data-stu-id="f4894-195">21</span></span>
+<span data-ttu-id="f4894-196">构造函数</span><span class="sxs-lookup"><span data-stu-id="f4894-196">Constructors</span></span> | [<span data-ttu-id="f4894-197">构造函数</span><span class="sxs-lookup"><span data-stu-id="f4894-197">Constructors</span></span>](#constructors) | <span data-ttu-id="f4894-198">对象构造函数只能在创建对象的过程中调用，并且不应将对象初始化两次。</span><span class="sxs-lookup"><span data-stu-id="f4894-198">An object constructor shall not be called except as part of the creation of an object, and an object shall not be initialized twice.</span></span> | <span data-ttu-id="f4894-199">22</span><span class="sxs-lookup"><span data-stu-id="f4894-199">22</span></span>
+<span data-ttu-id="f4894-200">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-200">Enumerations</span></span> | [<span data-ttu-id="f4894-201">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-201">Enumerations</span></span>](#enumerations) | <span data-ttu-id="f4894-202">枚举的基础类型应是内置的 CLS 整数类型，字段的名称应为“value__”，并且应将该字段标记为 `RTSpecialName`。</span><span class="sxs-lookup"><span data-stu-id="f4894-202">The underlying type of an enum shall be a built-in CLS integer type, the name of the field shall be "value__", and that field shall be marked `RTSpecialName`.</span></span> |  <span data-ttu-id="f4894-203">7</span><span class="sxs-lookup"><span data-stu-id="f4894-203">7</span></span>
+<span data-ttu-id="f4894-204">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-204">Enumerations</span></span> | [<span data-ttu-id="f4894-205">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-205">Enumerations</span></span>](#enumerations) | <span data-ttu-id="f4894-206">有两种不同的枚举，二者由是否存在 [System.FlagsAttribute](xref:System.FlagsAttribute)（请参阅第 IV 部分库）自定义特性指示。</span><span class="sxs-lookup"><span data-stu-id="f4894-206">There are two distinct kinds of enums, indicated by the presence or absence of the [System.FlagsAttribute](xref:System.FlagsAttribute) (see Partition IV Library) custom attribute.</span></span> <span data-ttu-id="f4894-207">一个表示命名的整数值；另一个表示命名的位标记（可合并以生成一个未命名的值）。</span><span class="sxs-lookup"><span data-stu-id="f4894-207">One represents named integer values; the other represents named bit flags that can be combined to generate an unnamed value.</span></span> <span data-ttu-id="f4894-208">`enum` 的值不仅限于指定的值。</span><span class="sxs-lookup"><span data-stu-id="f4894-208">The value of an `enum` is not limited to the specified values.</span></span> |  <span data-ttu-id="f4894-209">8</span><span class="sxs-lookup"><span data-stu-id="f4894-209">8</span></span>
+<span data-ttu-id="f4894-210">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-210">Enumerations</span></span> | [<span data-ttu-id="f4894-211">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-211">Enumerations</span></span>](#enumerations) | <span data-ttu-id="f4894-212">枚举的文本静态字段需具有枚举本身的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-212">Literal static fields of an enum shall have the type of the enum itself.</span></span> |  <span data-ttu-id="f4894-213">9</span><span class="sxs-lookup"><span data-stu-id="f4894-213">9</span></span>
+<span data-ttu-id="f4894-214">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-214">Events</span></span> | [<span data-ttu-id="f4894-215">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-215">Events</span></span>](#events) | <span data-ttu-id="f4894-216">实现事件的方法将在元数据中标记为 `SpecialName`。</span><span class="sxs-lookup"><span data-stu-id="f4894-216">The methods that implement an event shall be marked `SpecialName` in the metadata.</span></span> |<span data-ttu-id="f4894-217">29</span><span class="sxs-lookup"><span data-stu-id="f4894-217">29</span></span>
+<span data-ttu-id="f4894-218">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-218">Events</span></span> | [<span data-ttu-id="f4894-219">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-219">Events</span></span>](#events) | <span data-ttu-id="f4894-220">事件及其访问器的可访问性应相同。</span><span class="sxs-lookup"><span data-stu-id="f4894-220">The accessibility of an event and of its accessors shall be identical.</span></span> |<span data-ttu-id="f4894-221">30</span><span class="sxs-lookup"><span data-stu-id="f4894-221">30</span></span>
+<span data-ttu-id="f4894-222">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-222">Events</span></span> | [<span data-ttu-id="f4894-223">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-223">Events</span></span>](#events) | <span data-ttu-id="f4894-224">事件的 `add` 和 `remove` 方法应同时存在或不存在。</span><span class="sxs-lookup"><span data-stu-id="f4894-224">The `add` and `remove` methods for an event shall both either be present or absent.</span></span> |<span data-ttu-id="f4894-225">31</span><span class="sxs-lookup"><span data-stu-id="f4894-225">31</span></span>
+<span data-ttu-id="f4894-226">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-226">Events</span></span> | [<span data-ttu-id="f4894-227">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-227">Events</span></span>](#events) | <span data-ttu-id="f4894-228">事件的 `add` 和 `remove` 方法均应采用一个参数，该参数的类型定义了事件的类型，且应派生自 [System.Delegate](xref:System.Delegate)。</span><span class="sxs-lookup"><span data-stu-id="f4894-228">The `add` and `remove` methods for an event shall each take one parameter whose type defines the type of the event and that shall be derived from [System.Delegate](xref:System.Delegate).</span></span> |<span data-ttu-id="f4894-229">32</span><span class="sxs-lookup"><span data-stu-id="f4894-229">32</span></span>
+<span data-ttu-id="f4894-230">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-230">Events</span></span> | [<span data-ttu-id="f4894-231">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-231">Events</span></span>](#events) | <span data-ttu-id="f4894-232">事件应遵循特定的命名模式。</span><span class="sxs-lookup"><span data-stu-id="f4894-232">Events shall adhere to a specific naming pattern.</span></span> <span data-ttu-id="f4894-233">CLS 规则 29 中引用的 SpecialName 特性将在适当名称比较中被忽略，且应遵循标识符规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-233">The SpecialName attribute referred to in CLS rule 29 shall be ignored in appropriate name comparisons and shall adhere to identifier rules.</span></span>  |<span data-ttu-id="f4894-234">33</span><span class="sxs-lookup"><span data-stu-id="f4894-234">33</span></span>
+<span data-ttu-id="f4894-235">异常</span><span class="sxs-lookup"><span data-stu-id="f4894-235">Exceptions</span></span> | [<span data-ttu-id="f4894-236">异常</span><span class="sxs-lookup"><span data-stu-id="f4894-236">Exceptions</span></span>](#exceptions) | <span data-ttu-id="f4894-237">引发的对象应为 [System.Exception](xref:System.Exception) 类型或从该类型继承的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-237">Objects that are thrown shall be of type [System.Exception](xref:System.Exception) or a type inheriting from it.</span></span> <span data-ttu-id="f4894-238">但是，阻止其他类型的异常的传播无需符合 CLS 的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-238">Nonetheless, CLS-compliant methods are not required to block the propagation of other types of exceptions.</span></span> | <span data-ttu-id="f4894-239">40</span><span class="sxs-lookup"><span data-stu-id="f4894-239">40</span></span>
+<span data-ttu-id="f4894-240">常规</span><span class="sxs-lookup"><span data-stu-id="f4894-240">General</span></span> | [<span data-ttu-id="f4894-241">CLS 遵从性规则</span><span class="sxs-lookup"><span data-stu-id="f4894-241">CLS compliance rules</span></span>](#cls-compliance-rules) | <span data-ttu-id="f4894-242">CLS 规则仅适用于类型中在定义程序集之外可访问或可显示的部分。</span><span class="sxs-lookup"><span data-stu-id="f4894-242">CLS rules apply only to those parts of a type that are accessible or visible outsideof the defining assembly.</span></span> | <span data-ttu-id="f4894-243">1</span><span class="sxs-lookup"><span data-stu-id="f4894-243">1</span></span>
+<span data-ttu-id="f4894-244">常规</span><span class="sxs-lookup"><span data-stu-id="f4894-244">General</span></span> | [<span data-ttu-id="f4894-245">CLS 遵从性规则</span><span class="sxs-lookup"><span data-stu-id="f4894-245">CLS compliance rules</span></span>](#cls-compliance-rules) | <span data-ttu-id="f4894-246">不应将不符合 CLS 的类型的成员标记为符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-246">Members of non-CLS compliant types shall not be marked CLS-compliant.</span></span> | <span data-ttu-id="f4894-247">2</span><span class="sxs-lookup"><span data-stu-id="f4894-247">2</span></span>
+<span data-ttu-id="f4894-248">泛型</span><span class="sxs-lookup"><span data-stu-id="f4894-248">Generics</span></span> | [<span data-ttu-id="f4894-249">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-249">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="f4894-250">嵌套类型拥有的泛型形参的数目至少应与封闭类型的一样多。</span><span class="sxs-lookup"><span data-stu-id="f4894-250">Nested types shall have at least as many generic parameters as the enclosing type.</span></span> <span data-ttu-id="f4894-251">嵌套类型中的泛型参数在位置上与其封闭类型中的泛型参数对应。</span><span class="sxs-lookup"><span data-stu-id="f4894-251">Generic parameters in a nested type correspond by position to the generic parameters in its enclosing type.</span></span>  | <span data-ttu-id="f4894-252">42</span><span class="sxs-lookup"><span data-stu-id="f4894-252">42</span></span>
+<span data-ttu-id="f4894-253">泛型</span><span class="sxs-lookup"><span data-stu-id="f4894-253">Generics</span></span> | [<span data-ttu-id="f4894-254">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-254">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="f4894-255">根据上面定义的规则，泛型类型的名称将对非嵌套类型上声明的或新引入到类型（如果嵌套）中的类型参数的数量进行编码。</span><span class="sxs-lookup"><span data-stu-id="f4894-255">The name of a generic type shall encode the number of type parameters declared on the non-nested type, or newly introduced to the type if nested, according to the rules defined above.</span></span> | <span data-ttu-id="f4894-256">43</span><span class="sxs-lookup"><span data-stu-id="f4894-256">43</span></span>
+<span data-ttu-id="f4894-257">泛型</span><span class="sxs-lookup"><span data-stu-id="f4894-257">Generics</span></span> | [<span data-ttu-id="f4894-258">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-258">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="f4894-259">泛型类型应该重新声明足够多的约束，以确保对基类型或接口的任何约束能够满足泛型类型约束的需要。</span><span class="sxs-lookup"><span data-stu-id="f4894-259">A generic type shall redeclare sufficient constraints to guarantee that any constraints on the base type, or interfaces would be satisfied by the generic type constraints.</span></span> | <span data-ttu-id="f4894-260">44</span><span class="sxs-lookup"><span data-stu-id="f4894-260">44</span></span>
+<span data-ttu-id="f4894-261">泛型</span><span class="sxs-lookup"><span data-stu-id="f4894-261">Generics</span></span> | [<span data-ttu-id="f4894-262">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-262">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="f4894-263">用作对泛型参数的约束的类型本身应符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-263">Types used as constraints on generic parameters shall themselves be CLS-compliant.</span></span> | <span data-ttu-id="f4894-264">45</span><span class="sxs-lookup"><span data-stu-id="f4894-264">45</span></span>
+<span data-ttu-id="f4894-265">泛型</span><span class="sxs-lookup"><span data-stu-id="f4894-265">Generics</span></span> | [<span data-ttu-id="f4894-266">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-266">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="f4894-267">实例化泛型类型中的成员（包括嵌套类型）的可见性和可访问性应被认为限制在特定的实例化中，而不是限制在整个泛型类型声明中。</span><span class="sxs-lookup"><span data-stu-id="f4894-267">The visibility and accessibility of members (including nested types) in an instantiated generic type shall be considered to be scoped to the specific instantiation rather than the generic type declaration as a whole.</span></span> <span data-ttu-id="f4894-268">作出以下假定：CLS 规则 12 的可见性和可访问性仍适用。</span><span class="sxs-lookup"><span data-stu-id="f4894-268">Assuming this, the visibility and accessibility rules of CLS rule 12 still apply.</span></span> | <span data-ttu-id="f4894-269">46</span><span class="sxs-lookup"><span data-stu-id="f4894-269">46</span></span>
+<span data-ttu-id="f4894-270">泛型</span><span class="sxs-lookup"><span data-stu-id="f4894-270">Generics</span></span> | [<span data-ttu-id="f4894-271">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-271">Generic types and members</span></span>](#generic-types-and-members) | <span data-ttu-id="f4894-272">对于每个抽象或虚拟泛型方法，应该有默认的具体（非抽象）实现</span><span class="sxs-lookup"><span data-stu-id="f4894-272">For each abstract or virtual generic method, there shall be a default concrete (nonabstract) implementation</span></span> | <span data-ttu-id="f4894-273">47</span><span class="sxs-lookup"><span data-stu-id="f4894-273">47</span></span>
+<span data-ttu-id="f4894-274">接口</span><span class="sxs-lookup"><span data-stu-id="f4894-274">Interfaces</span></span> | [<span data-ttu-id="f4894-275">接口</span><span class="sxs-lookup"><span data-stu-id="f4894-275">Interfaces</span></span>](#interfaces) | <span data-ttu-id="f4894-276">符合 CLS 的接口不需要不符合 CLS 的方法的定义即可实现这些方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-276">CLS-compliant interfaces shall not require the definition of non-CLS compliantmethods in order to implement them.</span></span> | <span data-ttu-id="f4894-277">18</span><span class="sxs-lookup"><span data-stu-id="f4894-277">18</span></span>
+<span data-ttu-id="f4894-278">接口</span><span class="sxs-lookup"><span data-stu-id="f4894-278">Interfaces</span></span> | [<span data-ttu-id="f4894-279">接口</span><span class="sxs-lookup"><span data-stu-id="f4894-279">Interfaces</span></span>](#interfaces) | <span data-ttu-id="f4894-280">符合 CLS 的接口不应定义静态方法，也不应定义字段。</span><span class="sxs-lookup"><span data-stu-id="f4894-280">CLS-compliant interfaces shall not define static methods, nor shall they define fields.</span></span> | <span data-ttu-id="f4894-281">19</span><span class="sxs-lookup"><span data-stu-id="f4894-281">19</span></span>
+<span data-ttu-id="f4894-282">成员</span><span class="sxs-lookup"><span data-stu-id="f4894-282">Members</span></span> | [<span data-ttu-id="f4894-283">类型成员概述</span><span class="sxs-lookup"><span data-stu-id="f4894-283">Type members in general</span></span>](#type-members-in-general) | <span data-ttu-id="f4894-284">全局静态字段和方法不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-284">Global static fields and methods are not CLS-compliant.</span></span> | <span data-ttu-id="f4894-285">36</span><span class="sxs-lookup"><span data-stu-id="f4894-285">36</span></span>
+<span data-ttu-id="f4894-286">成员</span><span class="sxs-lookup"><span data-stu-id="f4894-286">Members</span></span> | -- | <span data-ttu-id="f4894-287">通过使用字段初始化元数据指定文本静态值。</span><span class="sxs-lookup"><span data-stu-id="f4894-287">The value of a literal static is specified through the use of field initialization metadata.</span></span> <span data-ttu-id="f4894-288">符合 CLS 的文本必须在类型与文本（或基本类型，如果文本为 `enum`）完全相同的字段初始化元数据中指定值。</span><span class="sxs-lookup"><span data-stu-id="f4894-288">A CLS-compliant literal must have a value specified in field initialization metadata that is of exactly the same type as the literal (or of the underlying type, if that literal is an `enum`).</span></span> | <span data-ttu-id="f4894-289">13</span><span class="sxs-lookup"><span data-stu-id="f4894-289">13</span></span>
+<span data-ttu-id="f4894-290">成员</span><span class="sxs-lookup"><span data-stu-id="f4894-290">Members</span></span> | [<span data-ttu-id="f4894-291">类型成员概述</span><span class="sxs-lookup"><span data-stu-id="f4894-291">Type members in general</span></span>](#type-members-in-general) | <span data-ttu-id="f4894-292">vararg 约束不属于 CLS，并且 CLS 支持的唯一调用约定是标准托管调用约定。</span><span class="sxs-lookup"><span data-stu-id="f4894-292">The vararg constraint is not part of the CLS, and the only calling convention supported by the CLS is the standard managed calling convention.</span></span> | <span data-ttu-id="f4894-293">15</span><span class="sxs-lookup"><span data-stu-id="f4894-293">15</span></span>
+<span data-ttu-id="f4894-294">命名约定</span><span class="sxs-lookup"><span data-stu-id="f4894-294">Naming conventions</span></span> | [<span data-ttu-id="f4894-295">命名约定</span><span class="sxs-lookup"><span data-stu-id="f4894-295">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="f4894-296">程序集应遵守用于管理允许启用且包含在标识符中的字符集的 Unicode 标准 3.0 的技术报告 15 的附件 7（可通过 [Unicode 范式](http://www.unicode.org/unicode/reports/tr15/tr15-18.html)在线获得）。</span><span class="sxs-lookup"><span data-stu-id="f4894-296">Assemblies shall follow Annex 7 of Technical Report 15 of the Unicode Standard3.0 governing the set of characters permitted to start and be included in identifiers, available online at [Unicode Normalization Forms](http://www.unicode.org/unicode/reports/tr15/tr15-18.html).</span></span> <span data-ttu-id="f4894-297">标识符应是由 Unicode 范式 C 定义的规范格式。对于 CLS，如果两个标识符的小写映射（由不区分区域设置的 Unicode、一对一小写映射指定）相同，则它们也相同。</span><span class="sxs-lookup"><span data-stu-id="f4894-297">Identifiers shall be in the canonical format defined by Unicode Normalization Form C. For CLS purposes, two identifiersare the same if their lowercase mappings (as specified by the Unicode locale-insensitive, one-to-one lowercase mappings) are the same.</span></span> <span data-ttu-id="f4894-298">也就是说，对于要在 CLS 下视为不同的两个标识符，它们应以大小写之外的差别进行区分。</span><span class="sxs-lookup"><span data-stu-id="f4894-298">That is, for two identifiers to be considered different under the CLS they shall differ in more than simply their case.</span></span> <span data-ttu-id="f4894-299">但是，若要重写继承的定义，CLI 需要对使用的原始声明进行准确编码。</span><span class="sxs-lookup"><span data-stu-id="f4894-299">However, in order to override an inherited definition the CLI requires the precise encoding of the original declaration be used.</span></span> | <span data-ttu-id="f4894-300">4</span><span class="sxs-lookup"><span data-stu-id="f4894-300">4</span></span>
+<span data-ttu-id="f4894-301">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-301">Overloading</span></span> | [<span data-ttu-id="f4894-302">命名约定</span><span class="sxs-lookup"><span data-stu-id="f4894-302">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="f4894-303">在符合 CLS 的范围中引入的所有名称都应是明显独立的类型，除非名称完全相同且通过重载解析。</span><span class="sxs-lookup"><span data-stu-id="f4894-303">All names introduced in a CLS-compliant scope shall be distinct independent of kind, except where the names are identical and resolved via overloading.</span></span> <span data-ttu-id="f4894-304">也就是说，CTS 允许单个类型对方法和字段使用相同的名称，但 CLS 不允许。</span><span class="sxs-lookup"><span data-stu-id="f4894-304">That is, while the CTS allows a single type to use the same name for a method and a field, the CLS does not.</span></span> | <span data-ttu-id="f4894-305">5</span><span class="sxs-lookup"><span data-stu-id="f4894-305">5</span></span>
+<span data-ttu-id="f4894-306">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-306">Overloading</span></span> | [<span data-ttu-id="f4894-307">命名约定</span><span class="sxs-lookup"><span data-stu-id="f4894-307">Naming conventions</span></span>](#naming-conventions) | <span data-ttu-id="f4894-308">即使 CTS 允许区分不同的签名，但字段和嵌套类型只能由标识符比较区分。</span><span class="sxs-lookup"><span data-stu-id="f4894-308">Fields and nested types shall be distinct by identifier comparison alone, eventhough the CTS allows distinct signatures to be distinguished.</span></span> <span data-ttu-id="f4894-309">（标识符比较后）具有相同名称的方法、属性和事件应在除返回类型不同之外还具有其他差异，CLS 规则 39 中指定的差异除外。</span><span class="sxs-lookup"><span data-stu-id="f4894-309">Methods, properties, and events that have the same name (by identifier comparison) shall differ by more than just the return type,except as specified in CLS Rule 39</span></span> | <span data-ttu-id="f4894-310">6</span><span class="sxs-lookup"><span data-stu-id="f4894-310">6</span></span>
+<span data-ttu-id="f4894-311">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-311">Overloading</span></span> | [<span data-ttu-id="f4894-312">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-312">Overloads</span></span>](#overloads) | <span data-ttu-id="f4894-313">只可重载属性和方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-313">Only properties and methods can be overloaded.</span></span> | <span data-ttu-id="f4894-314">37</span><span class="sxs-lookup"><span data-stu-id="f4894-314">37</span></span>
+<span data-ttu-id="f4894-315">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-315">Overloading</span></span> | [<span data-ttu-id="f4894-316">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-316">Overloads</span></span>](#overloads) |<span data-ttu-id="f4894-317">属性和方法仅可基于其参数的数目和类型进行重载，名为 `op_Implicit` 和 `op_Explicit` 的转换运算符除外，这两种转换运算符也可基于其返回类型进行重载。</span><span class="sxs-lookup"><span data-stu-id="f4894-317">Properties and methods can be overloaded based only on the number and types of their parameters, except the conversion operators named `op_Implicit` and `op_Explicit`, which can also be overloaded based on their return type.</span></span> | <span data-ttu-id="f4894-318">38</span><span class="sxs-lookup"><span data-stu-id="f4894-318">38</span></span>
+<span data-ttu-id="f4894-319">重载</span><span class="sxs-lookup"><span data-stu-id="f4894-319">Overloading</span></span> | -- | <span data-ttu-id="f4894-320">如果类型中声明的两种或更多符合 CLS 的方法都具有相同的名称，并且对于特定的类型实例化集而言，它们具有相同的参数和返回类型，则所有这些方法在这些类型实例化时都应在语义上保持等效。</span><span class="sxs-lookup"><span data-stu-id="f4894-320">If two or more CLS-compliant methods declared in a type have the same nameand, for a specific set of type instantiations, they have the same parameter and return types, then all these methods shall be semantically equivalent at those type instantiations.</span></span> | <span data-ttu-id="f4894-321">48</span><span class="sxs-lookup"><span data-stu-id="f4894-321">48</span></span>
+<span data-ttu-id="f4894-322">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-322">Properties</span></span> | [<span data-ttu-id="f4894-323">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-323">Properties</span></span>](#properties) | <span data-ttu-id="f4894-324">实现属性的 getter 和 setter 方法的方法应在元数据中标记为 `SpecialName`。</span><span class="sxs-lookup"><span data-stu-id="f4894-324">The methods that implement the getter and setter methods of a property shall be marked `SpecialName` in the metadata.</span></span> | <span data-ttu-id="f4894-325">24</span><span class="sxs-lookup"><span data-stu-id="f4894-325">24</span></span>
+<span data-ttu-id="f4894-326">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-326">Properties</span></span> | [<span data-ttu-id="f4894-327">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-327">Properties</span></span>](#properties) | <span data-ttu-id="f4894-328">属性的访问器必须同为静态、同为虚拟或同为实例。</span><span class="sxs-lookup"><span data-stu-id="f4894-328">A property’s accessors shall all be static, all be virtual, or all be instance.</span></span> | <span data-ttu-id="f4894-329">26</span><span class="sxs-lookup"><span data-stu-id="f4894-329">26</span></span>
+<span data-ttu-id="f4894-330">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-330">Properties</span></span> | [<span data-ttu-id="f4894-331">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-331">Properties</span></span>](#properties) | <span data-ttu-id="f4894-332">属性的类型应该是 getter 的返回类型和 setter 的最后一个自变量的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-332">The type of a property shall be the return type of the getter and the type of the last argument of the setter.</span></span> <span data-ttu-id="f4894-333">属性参数的类型应是对应于 getter 的参数的类型和 setter 的除最后一个参数之外所有参数的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-333">The types of the parameters of the property shall be the types of the parameters to the getter and the types of all but the final parameter of the setter.</span></span> <span data-ttu-id="f4894-334">所有这些类型都应该符合 CLS，并且不应是托管指针（也就是说，不应该被引用传递）。</span><span class="sxs-lookup"><span data-stu-id="f4894-334">All of these types shall be CLS-compliant, and shall not be managed pointers (that is, shall not be passed by reference).</span></span> | <span data-ttu-id="f4894-335">27</span><span class="sxs-lookup"><span data-stu-id="f4894-335">27</span></span>
+<span data-ttu-id="f4894-336">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-336">Properties</span></span> | [<span data-ttu-id="f4894-337">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-337">Properties</span></span>](#properties) | <span data-ttu-id="f4894-338">属性应遵循特定的命名模式。</span><span class="sxs-lookup"><span data-stu-id="f4894-338">Properties shall adhere to a specific naming pattern.</span></span> <span data-ttu-id="f4894-339">CLS 规则 24 中引用的 `SpecialName` 特性将在适当名称比较中被忽略，且应遵循标识符规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-339">The `SpecialName` attribute referred to in CLS rule 24 shall be ignored in appropriate name comparisons and shall adhere to identifier rules.</span></span> <span data-ttu-id="f4894-340">属性应具有 getter 和/或 setter 方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-340">A property shall have a getter method, a setter method, or both.</span></span> | <span data-ttu-id="f4894-341">28</span><span class="sxs-lookup"><span data-stu-id="f4894-341">28</span></span>
+<span data-ttu-id="f4894-342">类型转换</span><span class="sxs-lookup"><span data-stu-id="f4894-342">Type conversion</span></span> | [<span data-ttu-id="f4894-343">类型转换</span><span class="sxs-lookup"><span data-stu-id="f4894-343">Type conversion</span></span>](#type-conversion) | <span data-ttu-id="f4894-344">如果提供 op_Implicit 或 op_Explicit，则必须提供实现强制转换的替代方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-344">If either op_Implicit or op_Explicit is provided, an alternate means of providing the coercion shall be provided.</span></span> | <span data-ttu-id="f4894-345">39</span><span class="sxs-lookup"><span data-stu-id="f4894-345">39</span></span>
+<span data-ttu-id="f4894-346">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-346">Types</span></span> | [<span data-ttu-id="f4894-347">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-347">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="f4894-348">装箱的值类型不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-348">Boxed value types are not CLS-compliant.</span></span> | <span data-ttu-id="f4894-349">3</span><span class="sxs-lookup"><span data-stu-id="f4894-349">3</span></span>
+<span data-ttu-id="f4894-350">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-350">Types</span></span> | [<span data-ttu-id="f4894-351">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-351">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="f4894-352">显示在签名中的所有类型应符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-352">All types appearing in a signature shall be CLS-compliant.</span></span> <span data-ttu-id="f4894-353">构成实例化泛型类型的所有类型应符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-353">All types composing an instantiated generic type shall be CLS-compliant.</span></span> | <span data-ttu-id="f4894-354">11</span><span class="sxs-lookup"><span data-stu-id="f4894-354">11</span></span>
+<span data-ttu-id="f4894-355">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-355">Types</span></span> | [<span data-ttu-id="f4894-356">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-356">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="f4894-357">类型化的引用是不符合 CLS 的。</span><span class="sxs-lookup"><span data-stu-id="f4894-357">Typed references are not CLS-compliant.</span></span> | <span data-ttu-id="f4894-358">14</span><span class="sxs-lookup"><span data-stu-id="f4894-358">14</span></span>
+<span data-ttu-id="f4894-359">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-359">Types</span></span> | [<span data-ttu-id="f4894-360">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-360">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="f4894-361">非托管的指针类型不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-361">Unmanaged pointer types are not CLS-compliant.</span></span> | <span data-ttu-id="f4894-362">17</span><span class="sxs-lookup"><span data-stu-id="f4894-362">17</span></span>
+<span data-ttu-id="f4894-363">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-363">Types</span></span> | [<span data-ttu-id="f4894-364">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-364">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="f4894-365">符合 CLS 的类、值类型和接口不应要求实现不符合 CLS 的成员</span><span class="sxs-lookup"><span data-stu-id="f4894-365">CLS-compliant classes, value types, and interfaces shall not require the implementation of non-CLS-compliant members</span></span> | <span data-ttu-id="f4894-366">20</span><span class="sxs-lookup"><span data-stu-id="f4894-366">20</span></span>
+<span data-ttu-id="f4894-367">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-367">Types</span></span> | [<span data-ttu-id="f4894-368">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-368">Types and type member signatures</span></span>](#types-and-type-member-signatures) | <span data-ttu-id="f4894-369">[System.Object](xref:System.Object) 符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-369">[System.Object](xref:System.Object) is CLS-compliant.</span></span> <span data-ttu-id="f4894-370">任何其他符合 CLS 的类应从符合 CLS 的类继承。</span><span class="sxs-lookup"><span data-stu-id="f4894-370">Any other CLS-compliant class shall inherit from a CLS-compliant class.</span></span> | <span data-ttu-id="f4894-371">23</span><span class="sxs-lookup"><span data-stu-id="f4894-371">23</span></span>
 
-### <a name="types-and-type-member-signatures"></a>类型和类型成员签名
+### <a name="types-and-type-member-signatures"></a><span data-ttu-id="f4894-372">类型和类型成员签名</span><span class="sxs-lookup"><span data-stu-id="f4894-372">Types and type member signatures</span></span>
 
-[System.Object](xref:System.Object) 类型符合 CLS，是 .NET Framework 类型系统中所有对象类型的基础类型。 .NET Framework 中的继承要么是隐式的（例如，[String](xref:System.String) 类从 `Object` 类隐式继承），要么是显式的（例如，[CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) 类从 [ArgumentException](xref:System.ArgumentException) 类显式继承，后者又从 [Exception](xref:System.Exception) 类显式继承。 对于要符合 CLS 的派生类型，其基本类型也必须符合 CLS。 
+<span data-ttu-id="f4894-373">[System.Object](xref:System.Object) 类型符合 CLS，是 .NET Framework 类型系统中所有对象类型的基础类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-373">The [System.Object](xref:System.Object) type is CLS-compliant and is the base type of all object types in the .NET Framework type system.</span></span> <span data-ttu-id="f4894-374">.NET Framework 中的继承要么是隐式的（例如，[String](xref:System.String) 类从 `Object` 类隐式继承），要么是显式的（例如，[CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) 类从 [ArgumentException](xref:System.ArgumentException) 类显式继承，后者又从 [Exception](xref:System.Exception) 类显式继承。</span><span class="sxs-lookup"><span data-stu-id="f4894-374">Inheritance in the .NET Framework is either implicit (for example, the [String](xref:System.String) class implicitly inherits from the `Object` class) or explicit (for example, the [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) class explicitly inherits from the [ArgumentException](xref:System.ArgumentException) class, which explicitly inherits from the [Exception](xref:System.Exception) class.</span></span> <span data-ttu-id="f4894-375">对于要符合 CLS 的派生类型，其基本类型也必须符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-375">For a derived type to be CLS compliant, its base type must also be CLS-compliant.</span></span> 
 
-下面的示例显示基本类型不符合 CLS 的派生类型。 它定义使用无符号 32 位整数作为计数器的基本 `Counter` 类。 由于类通过对无符号整数进行换行来提供计数器功能，因此类标记为不符合 CLS。 因此，派生类 `NonZeroCounter` 也不符合 CLS。 
+<span data-ttu-id="f4894-376">下面的示例显示基本类型不符合 CLS 的派生类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-376">The following example shows a derived type whose base type is not CLS-compliant.</span></span> <span data-ttu-id="f4894-377">它定义使用无符号 32 位整数作为计数器的基本 `Counter` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-377">It defines a base `Counter` class that uses an unsigned 32-bit integer as a counter.</span></span> <span data-ttu-id="f4894-378">由于类通过对无符号整数进行换行来提供计数器功能，因此类标记为不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-378">Because the class provides counter functionality by wrapping an unsigned integer, the class is marked as non-CLS-compliant.</span></span> <span data-ttu-id="f4894-379">因此，派生类 `NonZeroCounter` 也不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-379">As a result, a derived class, `NonZeroCounter`, is also not CLS-compliant.</span></span> 
 
 ```csharp
 using System;
@@ -311,43 +311,43 @@ End Class
 '                 ~~~~~~~~~~~~~~
 ```
 
-成员签名中出现的所有类型（包括方法的返回类型或属性类型）必须符合 CLS。 此外，对于泛型类型： 
+<span data-ttu-id="f4894-380">成员签名中出现的所有类型（包括方法的返回类型或属性类型）必须符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-380">All types that appear in member signatures, including a method's return type or a property type, must be CLS-compliant.</span></span> <span data-ttu-id="f4894-381">此外，对于泛型类型：</span><span class="sxs-lookup"><span data-stu-id="f4894-381">In addition, for generic types:</span></span> 
 
-* 构成实例化泛型类型的所有类型必须符合 CLS。
+* <span data-ttu-id="f4894-382">构成实例化泛型类型的所有类型必须符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-382">All types that compose an instantiated generic type must be CLS-compliant.</span></span>
 
-* 所有用作针对泛型参数的约束的类型必须符合 CLS。 
+* <span data-ttu-id="f4894-383">所有用作针对泛型参数的约束的类型必须符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-383">All types used as constraints on generic parameters must be CLS-compliant.</span></span> 
 
-.NET [通用类型系统](common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集的元数据编码的内置类型。 在这些内部类型中，下表中所列的类型都符合 CLS。 
+<span data-ttu-id="f4894-384">.NET [通用类型系统](common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集的元数据编码的内置类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-384">The .NET [common type system](common-type-system.md) includes a number of built-in types that are supported directly by the common language runtime and are specially encoded in an assembly's metadata.</span></span> <span data-ttu-id="f4894-385">在这些内部类型中，下表中所列的类型都符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-385">Of these intrinsic types, the types listed in the following table are CLS-compliant.</span></span> 
 
 
-符合 CLS 的类型 | 描述
+<span data-ttu-id="f4894-386">符合 CLS 的类型</span><span class="sxs-lookup"><span data-stu-id="f4894-386">CLS-compliant type</span></span> | <span data-ttu-id="f4894-387">描述</span><span class="sxs-lookup"><span data-stu-id="f4894-387">Description</span></span>
 ------------------ | -----------
-[Byte](xref:System.Byte) | 8 位无符号整数 
-[Int16](xref:System.Int16) | 16 位带符号整数 
-[Int32](xref:System.Int32) | 32 位带符号整数 
-[Int64](xref:System.Int64) | 64 位带符号整数
-[单精度](xref:System.Single) | 单精度浮点值
-[双精度](xref:System.Double) | 双精度浮点值
-[布尔值](xref:System.Boolean) | true 或 false 值类型 
-[Char](xref:System.Char) | UTF 16 编码单元
-[小数](xref:System.Decimal) | 非浮点十进制数字
-[IntPtr](xref:System.IntPtr) | 平台定义的大小的指针或句柄
-[字符串](xref:System.String) | 零个、一个或多个 Char 对象的集合 
+[<span data-ttu-id="f4894-388">Byte</span><span class="sxs-lookup"><span data-stu-id="f4894-388">Byte</span></span>](xref:System.Byte) | <span data-ttu-id="f4894-389">8 位无符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-389">8-bit unsigned integer</span></span> 
+[<span data-ttu-id="f4894-390">Int16</span><span class="sxs-lookup"><span data-stu-id="f4894-390">Int16</span></span>](xref:System.Int16) | <span data-ttu-id="f4894-391">16 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-391">16-bit signed integer</span></span> 
+[<span data-ttu-id="f4894-392">Int32</span><span class="sxs-lookup"><span data-stu-id="f4894-392">Int32</span></span>](xref:System.Int32) | <span data-ttu-id="f4894-393">32 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-393">32-bit signed integer</span></span> 
+[<span data-ttu-id="f4894-394">Int64</span><span class="sxs-lookup"><span data-stu-id="f4894-394">Int64</span></span>](xref:System.Int64) | <span data-ttu-id="f4894-395">64 位带符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-395">64-bit signed integer</span></span>
+[<span data-ttu-id="f4894-396">单精度</span><span class="sxs-lookup"><span data-stu-id="f4894-396">Single</span></span>](xref:System.Single) | <span data-ttu-id="f4894-397">单精度浮点值</span><span class="sxs-lookup"><span data-stu-id="f4894-397">Single-precision floating-point value</span></span>
+[<span data-ttu-id="f4894-398">双精度</span><span class="sxs-lookup"><span data-stu-id="f4894-398">Double</span></span>](xref:System.Double) | <span data-ttu-id="f4894-399">双精度浮点值</span><span class="sxs-lookup"><span data-stu-id="f4894-399">Double-precision floating-point value</span></span>
+[<span data-ttu-id="f4894-400">布尔值</span><span class="sxs-lookup"><span data-stu-id="f4894-400">Boolean</span></span>](xref:System.Boolean) | <span data-ttu-id="f4894-401">true 或 false 值类型</span><span class="sxs-lookup"><span data-stu-id="f4894-401">true or false value type</span></span> 
+[<span data-ttu-id="f4894-402">Char</span><span class="sxs-lookup"><span data-stu-id="f4894-402">Char</span></span>](xref:System.Char) | <span data-ttu-id="f4894-403">UTF 16 编码单元</span><span class="sxs-lookup"><span data-stu-id="f4894-403">UTF-16 encoded code unit</span></span>
+[<span data-ttu-id="f4894-404">小数</span><span class="sxs-lookup"><span data-stu-id="f4894-404">Decimal</span></span>](xref:System.Decimal) | <span data-ttu-id="f4894-405">非浮点十进制数字</span><span class="sxs-lookup"><span data-stu-id="f4894-405">Non-floating-point decimal number</span></span>
+[<span data-ttu-id="f4894-406">IntPtr</span><span class="sxs-lookup"><span data-stu-id="f4894-406">IntPtr</span></span>](xref:System.IntPtr) | <span data-ttu-id="f4894-407">平台定义的大小的指针或句柄</span><span class="sxs-lookup"><span data-stu-id="f4894-407">Pointer or handle of a platform-defined size</span></span>
+[<span data-ttu-id="f4894-408">字符串</span><span class="sxs-lookup"><span data-stu-id="f4894-408">String</span></span>](xref:System.String) | <span data-ttu-id="f4894-409">零个、一个或多个 Char 对象的集合</span><span class="sxs-lookup"><span data-stu-id="f4894-409">Collection of zero, one, or more Char objects</span></span> 
  
-下表中所列的内部类型不符合 CLS。
+<span data-ttu-id="f4894-410">下表中所列的内部类型不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-410">The intrinsic types listed in the following table are not CLS-Compliant.</span></span>
 
 
-不符合类型 | 描述 | 符合 CLS 的替代方法
+<span data-ttu-id="f4894-411">不符合类型</span><span class="sxs-lookup"><span data-stu-id="f4894-411">Non-compliant type</span></span> | <span data-ttu-id="f4894-412">描述</span><span class="sxs-lookup"><span data-stu-id="f4894-412">Description</span></span> | <span data-ttu-id="f4894-413">符合 CLS 的替代方法</span><span class="sxs-lookup"><span data-stu-id="f4894-413">CLS-compliant alternative</span></span>
 ------------------ | ----------- | -------------------------
-[SByte](xref:System.SByte) | 8 位带符号整数数据类型 | [Int16](xref:System.Int16)
-[UInt16](xref:System.UInt16) | 16 位无符号整数 | [Int32](xref:System.Int32)
-[UInt32](xref:System.UInt32) | 32 位无符号整数 | [Int64](xref:System.Int64)
-[UInt64](xref:System.UInt64) | 64 位无符号整数 | [Int64](xref:System.Int64)（可能溢出）、[BigInteger](xref:System.Numerics.BigInteger) 或 [Double](xref:System.Double)
-[UIntPtr](xref:System.UIntPtr) | 未签名的指针或句柄 | [IntPtr](xref:System.IntPtr)
+[<span data-ttu-id="f4894-414">SByte</span><span class="sxs-lookup"><span data-stu-id="f4894-414">SByte</span></span>](xref:System.SByte) | <span data-ttu-id="f4894-415">8 位带符号整数数据类型</span><span class="sxs-lookup"><span data-stu-id="f4894-415">8-bit signed integer data type</span></span> | [<span data-ttu-id="f4894-416">Int16</span><span class="sxs-lookup"><span data-stu-id="f4894-416">Int16</span></span>](xref:System.Int16)
+[<span data-ttu-id="f4894-417">UInt16</span><span class="sxs-lookup"><span data-stu-id="f4894-417">UInt16</span></span>](xref:System.UInt16) | <span data-ttu-id="f4894-418">16 位无符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-418">16-bit unsigned integer</span></span> | [<span data-ttu-id="f4894-419">Int32</span><span class="sxs-lookup"><span data-stu-id="f4894-419">Int32</span></span>](xref:System.Int32)
+[<span data-ttu-id="f4894-420">UInt32</span><span class="sxs-lookup"><span data-stu-id="f4894-420">UInt32</span></span>](xref:System.UInt32) | <span data-ttu-id="f4894-421">32 位无符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-421">32-bit unsigned integer</span></span> | [<span data-ttu-id="f4894-422">Int64</span><span class="sxs-lookup"><span data-stu-id="f4894-422">Int64</span></span>](xref:System.Int64)
+[<span data-ttu-id="f4894-423">UInt64</span><span class="sxs-lookup"><span data-stu-id="f4894-423">UInt64</span></span>](xref:System.UInt64) | <span data-ttu-id="f4894-424">64 位无符号整数</span><span class="sxs-lookup"><span data-stu-id="f4894-424">64-bit unsigned integer</span></span> | <span data-ttu-id="f4894-425">[Int64](xref:System.Int64)（可能溢出）、[BigInteger](xref:System.Numerics.BigInteger) 或 [Double](xref:System.Double)</span><span class="sxs-lookup"><span data-stu-id="f4894-425">[Int64](xref:System.Int64) (may overflow), [BigInteger](xref:System.Numerics.BigInteger), or [Double](xref:System.Double)</span></span>
+[<span data-ttu-id="f4894-426">UIntPtr</span><span class="sxs-lookup"><span data-stu-id="f4894-426">UIntPtr</span></span>](xref:System.UIntPtr) | <span data-ttu-id="f4894-427">未签名的指针或句柄</span><span class="sxs-lookup"><span data-stu-id="f4894-427">Unsigned pointer or handle</span></span> | [<span data-ttu-id="f4894-428">IntPtr</span><span class="sxs-lookup"><span data-stu-id="f4894-428">IntPtr</span></span>](xref:System.IntPtr)
  
- .NET Framework 类库或任何其他类库可能包含不符合 CLS 的其他类型；例如： 
+ <span data-ttu-id="f4894-429">.NET Framework 类库或任何其他类库可能包含不符合 CLS 的其他类型；例如：</span><span class="sxs-lookup"><span data-stu-id="f4894-429">The .NET Framework Class Library or any other class library may include other types that aren't CLS-compliant; for example:</span></span> 
  
- * 装箱的值类型。 下面的 C# 示例创建一个具有名为 `Value` 的 `int`* 类型的公共属性的类。 由于 `int`* 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。
+ * <span data-ttu-id="f4894-430">装箱的值类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-430">Boxed value types.</span></span> <span data-ttu-id="f4894-431">下面的 C# 示例创建一个具有名为 `Value` 的 `int`* 类型的公共属性的类。</span><span class="sxs-lookup"><span data-stu-id="f4894-431">The following C# example creates a class that has a public property of type `int`* named `Value`.</span></span> <span data-ttu-id="f4894-432">由于 `int`* 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-432">Because an `int`* is a boxed value type, the compiler flags it as non-CLS-compliant.</span></span>
 
   ```csharp
   using System;
@@ -371,11 +371,11 @@ End Class
   //        warning CS3003: Type of 'TestClass.Value' is not CLS-compliant
   ```
 
-* 类型化的引用是一个特殊构造，它包含一个对对象的引用和一个对类型的引用。
+* <span data-ttu-id="f4894-433">类型化的引用是一个特殊构造，它包含一个对对象的引用和一个对类型的引用。</span><span class="sxs-lookup"><span data-stu-id="f4894-433">Typed references, which are special constructs that contain a reference to an object and a reference to a type.</span></span>
 
-如果类型不符合 CLS，则需对其应用 *isCompliant* 值为 `false` 的 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性。 有关详细信息，请参阅 [CLSCompliantAttribute 特性](#the-clscompliantattribute-attribute)部分。  
+<span data-ttu-id="f4894-434">如果类型不符合 CLS，则需对其应用 *isCompliant* 值为 `false` 的 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性。</span><span class="sxs-lookup"><span data-stu-id="f4894-434">If a type is not CLS-compliant, you should apply the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute with an *isCompliant* parameter with a value of `false` to it.</span></span> <span data-ttu-id="f4894-435">有关详细信息，请参阅 [CLSCompliantAttribute 特性](#the-clscompliantattribute-attribute)部分。</span><span class="sxs-lookup"><span data-stu-id="f4894-435">For more information, see the [CLSCompliantAttribute attribute](#the-clscompliantattribute-attribute) section.</span></span>  
 
-下面的示例说明了方法签名和泛型类型实例化中 CLS 遵从性的问题。 它定义一个具有类型为 [UInt32](xref:System.UInt32) 的属性和类型为 [Nullable(Of UInt32)](xref:System.Nullable%601) 的属性的 `InvoiceItem` 类，以及一个具有类型为 `UInt32` 和 `Nullable(Of UInt32)` 的参数的构造函数。 您尝试编译此示例时会收到四个编译器警告。
+<span data-ttu-id="f4894-436">下面的示例说明了方法签名和泛型类型实例化中 CLS 遵从性的问题。</span><span class="sxs-lookup"><span data-stu-id="f4894-436">The following example illustrates the problem of CLS compliance in a method signature and in generic type instantiation.</span></span> <span data-ttu-id="f4894-437">它定义一个具有类型为 [UInt32](xref:System.UInt32) 的属性和类型为 [Nullable(Of UInt32)](xref:System.Nullable%601) 的属性的 `InvoiceItem` 类，以及一个具有类型为 `UInt32` 和 `Nullable(Of UInt32)` 的参数的构造函数。</span><span class="sxs-lookup"><span data-stu-id="f4894-437">It defines an `InvoiceItem` class with a property of type [UInt32](xref:System.UInt32), a property of type [Nullable(Of UInt32)](xref:System.Nullable%601), and a constructor with parameters of type `UInt32` and `Nullable(Of UInt32)`.</span></span> <span data-ttu-id="f4894-438">您尝试编译此示例时会收到四个编译器警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-438">You get four compiler warnings when you try to compile this example.</span></span>
 
 ```csharp
 using System;
@@ -463,7 +463,7 @@ End Class
 '       Public Property InvoiceId As UInteger
 ```
 
-若要消除编译器警告，请将 `InvoiceItem` 公共接口中不符合 CLS 的类型替换为符合 CLS 的类型：
+<span data-ttu-id="f4894-439">若要消除编译器警告，请将 `InvoiceItem` 公共接口中不符合 CLS 的类型替换为符合 CLS 的类型：</span><span class="sxs-lookup"><span data-stu-id="f4894-439">To eliminate the compiler warnings, replace the non-CLS-compliant types in the `InvoiceItem` public interface with compliant types:</span></span>
 
 ```csharp
 using System;
@@ -539,7 +539,7 @@ Public Class InvoiceItem
 End Class
 ```
 
-除了列出的特定类型之外，某些类型的类别也不符合 CLS。 其中包括非托管指针类型和函数指针类型。 下面的示例将生成一个编译器警告，因为它使用指向整数的指针来创建整数数组。 
+<span data-ttu-id="f4894-440">除了列出的特定类型之外，某些类型的类别也不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-440">In addition to the specific types listed, some categories of types are not CLS compliant.</span></span> <span data-ttu-id="f4894-441">其中包括非托管指针类型和函数指针类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-441">These include unmanaged pointer types and function pointer types.</span></span> <span data-ttu-id="f4894-442">下面的示例将生成一个编译器警告，因为它使用指向整数的指针来创建整数数组。</span><span class="sxs-lookup"><span data-stu-id="f4894-442">The following example generates a compiler warning because it uses a pointer to an integer to create an array of integers.</span></span> 
 
 ```csharp
 using System;
@@ -587,11 +587,11 @@ public class ArrayHelper
 //    UnmanagedPtr1.cs(8,57): warning CS3001: Argument type 'int*' is not CLS-compliant
 ```
 
-对于符合 CLS 的抽象类（即在 C# 中标记为 `abstract` 的类），该类的所有成员也必须符合 CLS。 
+<span data-ttu-id="f4894-443">对于符合 CLS 的抽象类（即在 C# 中标记为 `abstract` 的类），该类的所有成员也必须符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-443">For CLS-compliant abstract classes (that is, classes marked as `abstract` in C#), all members of the class must also be CLS-compliant.</span></span> 
 
-### <a name="naming-conventions"></a>命名约定
+### <a name="naming-conventions"></a><span data-ttu-id="f4894-444">命名约定</span><span class="sxs-lookup"><span data-stu-id="f4894-444">Naming conventions</span></span>
 
-由于一些编程语言不区分大小写，因此标识符（例如，命名空间、类型和成员的名称）必须不仅限于大小写不同。 如果两个标识符的小写映射是相同的，则这两个标识符被视为等效。 下面的 C# 示例定义两个公共类：`Person` 和 `person`。 由于它们只是大小写不同，因此 C# 编译器会将其标记为不符合 CLS。 
+<span data-ttu-id="f4894-445">由于一些编程语言不区分大小写，因此标识符（例如，命名空间、类型和成员的名称）必须不仅限于大小写不同。</span><span class="sxs-lookup"><span data-stu-id="f4894-445">Because some programming languages are case-insensitive, identifiers (such as the names of namespaces, types, and members) must differ by more than case.</span></span> <span data-ttu-id="f4894-446">如果两个标识符的小写映射是相同的，则这两个标识符被视为等效。</span><span class="sxs-lookup"><span data-stu-id="f4894-446">Two identifiers are considered equivalent if their lowercase mappings are the same.</span></span> <span data-ttu-id="f4894-447">下面的 C# 示例定义两个公共类：`Person` 和 `person`。</span><span class="sxs-lookup"><span data-stu-id="f4894-447">The following C# example defines two public classes, `Person` and `person`.</span></span> <span data-ttu-id="f4894-448">由于它们只是大小写不同，因此 C# 编译器会将其标记为不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-448">Because they differ only by case, the C# compiler flags them as not CLS-compliant.</span></span> 
 
 ```csharp
 using System;
@@ -613,13 +613,13 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-编程语言识别符（例如，命名空间、类型和成员的名称）必须遵照 [Unicode 标准 3.0、技术报告 15 和附件 7](http://www.unicode.org/reports/tr15/tr15-18.html)。 这表示：
+<span data-ttu-id="f4894-449">编程语言识别符（例如，命名空间、类型和成员的名称）必须遵照 [Unicode 标准 3.0、技术报告 15 和附件 7](http://www.unicode.org/reports/tr15/tr15-18.html)。</span><span class="sxs-lookup"><span data-stu-id="f4894-449">Programming language identifiers, such as the names of namespaces, types, and members, must conform to the [Unicode Standard 3.0, Technical Report 15, Annex 7](http://www.unicode.org/reports/tr15/tr15-18.html).</span></span> <span data-ttu-id="f4894-450">这表示：</span><span class="sxs-lookup"><span data-stu-id="f4894-450">This means that:</span></span>
 
-* 标识符的第一个字符可以是任何 Unicode 大写字母、小写字母、标题大小写字母、修饰符字母、其他字母或字母数字。 有关 Unicode 字符类别的信息，请参阅 [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) 枚举。 
+* <span data-ttu-id="f4894-451">标识符的第一个字符可以是任何 Unicode 大写字母、小写字母、标题大小写字母、修饰符字母、其他字母或字母数字。</span><span class="sxs-lookup"><span data-stu-id="f4894-451">The first character of an identifier can be any Unicode uppercase letter, lowercase letter, title case letter, modifier letter, other letter, or letter number.</span></span> <span data-ttu-id="f4894-452">有关 Unicode 字符类别的信息，请参阅 [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) 枚举。</span><span class="sxs-lookup"><span data-stu-id="f4894-452">For information on Unicode character categories, see the [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) enumeration.</span></span> 
 
-* 后继字符可以作为第一个字符来自任何类别，还可以包含无间隔标记、间距组合标记、十进制数字、连接器标点符号以及格式设置代码。 
+* <span data-ttu-id="f4894-453">后继字符可以作为第一个字符来自任何类别，还可以包含无间隔标记、间距组合标记、十进制数字、连接器标点符号以及格式设置代码。</span><span class="sxs-lookup"><span data-stu-id="f4894-453">Subsequent characters can be from any of the categories as the first character, and can also include non-spacing marks, spacing combining marks, decimal numbers, connector punctuations, and formatting codes.</span></span> 
 
-在比较标识符之前，应筛选格式设置代码，并将标识符转换为 Unicode 范式 C，因为单个字符可由多个 UTF 16 编码的代码单位表示。 在 Unicode 范式 C 中生成相同代码单位的字符序列不符合 CLS。 下面的示例定义一个名为 `Å` 的属性（包含字符 ANGSTROM SIGN (U+212B)）和另一个名为 `Å` 的属性（包含字符 LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5)）。 C# 编译器将源代码标记为不符合 CLS。
+<span data-ttu-id="f4894-454">在比较标识符之前，应筛选格式设置代码，并将标识符转换为 Unicode 范式 C，因为单个字符可由多个 UTF 16 编码的代码单位表示。</span><span class="sxs-lookup"><span data-stu-id="f4894-454">Before you compare identifiers, you should filter out formatting codes and convert the identifiers to Unicode Normalization Form C, because a single character can be represented by multiple UTF-16-encoded code units.</span></span> <span data-ttu-id="f4894-455">在 Unicode 范式 C 中生成相同代码单位的字符序列不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-455">Character sequences that produce the same code units in Unicode Normalization Form C are not CLS-compliant.</span></span> <span data-ttu-id="f4894-456">下面的示例定义一个名为 `Å` 的属性（包含字符 ANGSTROM SIGN (U+212B)）和另一个名为 `Å` 的属性（包含字符 LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5)）。</span><span class="sxs-lookup"><span data-stu-id="f4894-456">The following example defines a property named `Å`, which consists of the character ANGSTROM SIGN (U+212B), and a second property named `Å` which consists of the character LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5).</span></span> <span data-ttu-id="f4894-457">C# 编译器将源代码标记为不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-457">The C# compiler flags the source code as non-CLS-compliant.</span></span>
 
 ```csharp
 public class Size
@@ -683,13 +683,13 @@ End Class
 '                       ~
 ```
 
-特定范围内的成员名称（如程序集中的命名空间、命名空间中的类型或某类型中的成员）必须是唯一的，通过重载解析的名称除外。 此要求比常规类型系统的要求更加严格，后者允许一个范围内的多个成员在作为不同类型的成员（例如，一个是方法，一个是字段时）时，可以具有相同的名称。 具体而言，对于类型成员： 
+<span data-ttu-id="f4894-458">特定范围内的成员名称（如程序集中的命名空间、命名空间中的类型或某类型中的成员）必须是唯一的，通过重载解析的名称除外。</span><span class="sxs-lookup"><span data-stu-id="f4894-458">Member names within a particular scope (such as the namespaces within an assembly, the types within a namespace, or the members within a type) must be unique except for names that are resolved through overloading.</span></span> <span data-ttu-id="f4894-459">此要求比常规类型系统的要求更加严格，后者允许一个范围内的多个成员在作为不同类型的成员（例如，一个是方法，一个是字段时）时，可以具有相同的名称。</span><span class="sxs-lookup"><span data-stu-id="f4894-459">This requirement is more stringent than that of the common type system, which allows multiple members within a scope to have identical names as long as they are different kinds of members (for example, one is a method and one is a field).</span></span> <span data-ttu-id="f4894-460">具体而言，对于类型成员：</span><span class="sxs-lookup"><span data-stu-id="f4894-460">In particular, for type members:</span></span> 
 
-* 字段和嵌套类型只能通过名称区分。 
+* <span data-ttu-id="f4894-461">字段和嵌套类型只能通过名称区分。</span><span class="sxs-lookup"><span data-stu-id="f4894-461">Fields and nested types are distinguished by name alone.</span></span> 
 
-* 具有相同名称的方法、属性和事件必须具有除返回类型不同之外的其他不同之处。 
+* <span data-ttu-id="f4894-462">具有相同名称的方法、属性和事件必须具有除返回类型不同之外的其他不同之处。</span><span class="sxs-lookup"><span data-stu-id="f4894-462">Methods, properties, and events that have the same name must differ by more than just return type.</span></span> 
 
-下面的示例说明了成员名称在其范围内必须是唯一的要求。 它定义了一个名为 `Converter` 的类，该类包括四个名为 `Conversion` 的成员。 其中三个是方法，一个是属性。 包含 `Int64` 参数的方法具有唯一名称，但是，具有 `Int32` 参数的两个方法不是，因为返回值不被视为成员签名的一部分。 由于属性不能具有与重载方法相同的名称，因此 `Conversion` 属性也违反了此要求。 
+<span data-ttu-id="f4894-463">下面的示例说明了成员名称在其范围内必须是唯一的要求。</span><span class="sxs-lookup"><span data-stu-id="f4894-463">The following example illustrates the requirement that member names must be unique within their scope.</span></span> <span data-ttu-id="f4894-464">它定义了一个名为 `Converter` 的类，该类包括四个名为 `Conversion` 的成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-464">It defines a class named `Converter` that includes four members named `Conversion`.</span></span> <span data-ttu-id="f4894-465">其中三个是方法，一个是属性。</span><span class="sxs-lookup"><span data-stu-id="f4894-465">Three are methods, and one is a property.</span></span> <span data-ttu-id="f4894-466">包含 `Int64` 参数的方法具有唯一名称，但是，具有 `Int32` 参数的两个方法不是，因为返回值不被视为成员签名的一部分。</span><span class="sxs-lookup"><span data-stu-id="f4894-466">The method that includes an `Int64` parameter is uniquely named, but the two methods with an `Int32` parameter are not, because return value is not considered a part of a member's signature.</span></span> <span data-ttu-id="f4894-467">由于属性不能具有与重载方法相同的名称，因此 `Conversion` 属性也违反了此要求。</span><span class="sxs-lookup"><span data-stu-id="f4894-467">The `Conversion` property also violates this requirement, because properties cannot have the same name as overloaded methods.</span></span> 
 
 ```csharp
 using System;
@@ -763,7 +763,7 @@ End Class
 '                                ~~~~~~~~~~
 ```
 
-各种语言都包含唯一关键字，因此面向公共语言运行时的语言还必须提供一些机制，以便引用与关键字相符的标识符（例如，类型名称）。 例如，`case` 是 C# 和 Visual Basic 两者中的关键字。 但是，下面的 Visual Basic 示例可以通过使用左大括号和右大括号将名为 `case` 的类从 `case` 关键字中消除。 否则，该示例将生成错误消息“关键字无法用作标识符”，并且编译将失败。 
+<span data-ttu-id="f4894-468">各种语言都包含唯一关键字，因此面向公共语言运行时的语言还必须提供一些机制，以便引用与关键字相符的标识符（例如，类型名称）。</span><span class="sxs-lookup"><span data-stu-id="f4894-468">Individual languages include unique keywords, so languages that target the common language runtime must also provide some mechanism for referencing identifiers (such as type names) that coincide with keywords.</span></span> <span data-ttu-id="f4894-469">例如，`case` 是 C# 和 Visual Basic 两者中的关键字。</span><span class="sxs-lookup"><span data-stu-id="f4894-469">For example, `case` is a keyword in both C# and Visual Basic.</span></span> <span data-ttu-id="f4894-470">但是，下面的 Visual Basic 示例可以通过使用左大括号和右大括号将名为 `case` 的类从 `case` 关键字中消除。</span><span class="sxs-lookup"><span data-stu-id="f4894-470">However, the following Visual Basic example is able to disambiguate a class named `case` from the `case` keyword by using opening and closing braces.</span></span> <span data-ttu-id="f4894-471">否则，该示例将生成错误消息“关键字无法用作标识符”，并且编译将失败。</span><span class="sxs-lookup"><span data-stu-id="f4894-471">Otherwise, the example would produce the error message, "Keyword is not valid as an identifier," and fail to compile.</span></span> 
 
 ```vb
 Public Class [case]
@@ -783,7 +783,7 @@ Public Class [case]
 End Class
 ```
 
-以下 C# 示例可以通过使用 @ 符号从语言关键字中消除标识符来实例化 `case` 类。 如果没有该符号，C# 编译器会显示两条错误消息：“应为类型”和“无效表达式术语‘case’”。 
+<span data-ttu-id="f4894-472">以下 C# 示例可以通过使用 @ 符号从语言关键字中消除标识符来实例化 `case` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-472">The following C# example is able to instantiate the `case` class by using the @ symbol to disambiguate the identifier from the language keyword.</span></span> <span data-ttu-id="f4894-473">如果没有该符号，C# 编译器会显示两条错误消息：“应为类型”和“无效表达式术语‘case’”。</span><span class="sxs-lookup"><span data-stu-id="f4894-473">Without it, the C# compiler would display two error messages, "Type expected" and "Invalid expression term 'case'."</span></span> 
 
 ```csharp
 using System;
@@ -798,17 +798,17 @@ public class Example
 }
 ```
 
-### <a name="type-conversion"></a>类型转换
+### <a name="type-conversion"></a><span data-ttu-id="f4894-474">类型转换</span><span class="sxs-lookup"><span data-stu-id="f4894-474">Type conversion</span></span>
 
-公共语言规范定义了两个转换运算符：
+<span data-ttu-id="f4894-475">公共语言规范定义了两个转换运算符：</span><span class="sxs-lookup"><span data-stu-id="f4894-475">The Common Language Specification defines two conversion operators:</span></span>
 
-* `op_Implicit` 用于扩大转换，不会丢失数据或精度。 例如，[Decimal](xref:System.Decimal) 结构包含一个已重载的 `op_Implicit` 运算符，将整数类型值和 [Char](xref:System.Char) 值转换为 `Decimal` 值。 
+* <span data-ttu-id="f4894-476">`op_Implicit` 用于扩大转换，不会丢失数据或精度。</span><span class="sxs-lookup"><span data-stu-id="f4894-476">`op_Implicit`, which is used for widening conversions that do not result in loss of data or precision.</span></span> <span data-ttu-id="f4894-477">例如，[Decimal](xref:System.Decimal) 结构包含一个已重载的 `op_Implicit` 运算符，将整数类型值和 [Char](xref:System.Char) 值转换为 `Decimal` 值。</span><span class="sxs-lookup"><span data-stu-id="f4894-477">For example, the [Decimal](xref:System.Decimal) structure includes an overloaded `op_Implicit` operator to convert values of integral types and [Char](xref:System.Char) values to `Decimal` values.</span></span> 
 
-* `op_Explicit` 用于收缩可能导致丢失量级（将一个值转换为一个范围更小的值）或精度的转换。 例如，`Decimal` 结构包含一个已重载的 `op_Explicit` 运算符，将 [Double](xref:System.Double) 和 [Single](xref:System.Single) 值转换为 `Decimal`，将 `Decimal` 值转换为整数值：`Double`、`Single` 和 `Char`。 
+* <span data-ttu-id="f4894-478">`op_Explicit` 用于收缩可能导致丢失量级（将一个值转换为一个范围更小的值）或精度的转换。</span><span class="sxs-lookup"><span data-stu-id="f4894-478">`op_Explicit`, which is used for narrowing conversions that can result in loss of magnitude (a value is converted to a value that has a smaller range) or precision.</span></span> <span data-ttu-id="f4894-479">例如，`Decimal` 结构包含一个已重载的 `op_Explicit` 运算符，将 [Double](xref:System.Double) 和 [Single](xref:System.Single) 值转换为 `Decimal`，将 `Decimal` 值转换为整数值：`Double`、`Single` 和 `Char`。</span><span class="sxs-lookup"><span data-stu-id="f4894-479">For example, the `Decimal` structure includes an overloaded `op_Explicit` operator to convert [Double](xref:System.Double) and [Single](xref:System.Single) values to `Decimal` and to convert `Decimal` values to integral values, `Double`, `Single`, and `Char`.</span></span> 
 
-但是，并非所有语言都支持运算符重载或定义自定义运算符。 如果选择实现这些转换运算符，您还应提供另一种执行转换的方法。 我们建议提供 `From`Xxx 和 `To`Xxx 方法。 
+<span data-ttu-id="f4894-480">但是，并非所有语言都支持运算符重载或定义自定义运算符。</span><span class="sxs-lookup"><span data-stu-id="f4894-480">However, not all languages support operator overloading or the definition of custom operators.</span></span> <span data-ttu-id="f4894-481">如果选择实现这些转换运算符，您还应提供另一种执行转换的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-481">If you choose to implement these conversion operators, you should also provide an alternate way to perform the conversion.</span></span> <span data-ttu-id="f4894-482">我们建议提供 `From`Xxx 和 `To`Xxx 方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-482">We recommend that you provide `From`Xxx and `To`Xxx methods.</span></span> 
 
-下面的示例定义符合 CLS 的隐式和显式转换。 它创建表示带符号的双精度浮点数字的 `UDouble` 类。 它提供从 `UDouble` 到 `Double` 的隐式转换和从 `UDouble` 到 `Single`、从 `Double` 到 `UDouble` 以及从 `Single` 到 `UDouble` 的显式转换。 它还将 `ToDouble` 方法定义为隐式转换运算符的替代方法，并将 `ToSingle`、`FromDouble` 和 `FromSingle` 方法定义为显式转换运算符的替代方法。 
+<span data-ttu-id="f4894-483">下面的示例定义符合 CLS 的隐式和显式转换。</span><span class="sxs-lookup"><span data-stu-id="f4894-483">The following example defines CLS-compliant implicit and explicit conversions.</span></span> <span data-ttu-id="f4894-484">它创建表示带符号的双精度浮点数字的 `UDouble` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-484">It creates a `UDouble` class that represents an signed double-precision, floating-point number.</span></span> <span data-ttu-id="f4894-485">它提供从 `UDouble` 到 `Double` 的隐式转换和从 `UDouble` 到 `Single`、从 `Double` 到 `UDouble` 以及从 `Single` 到 `UDouble` 的显式转换。</span><span class="sxs-lookup"><span data-stu-id="f4894-485">It provides for implicit conversions from `UDouble` to `Double` and for explicit conversions from `UDouble` to `Single`, `Double` to `UDouble`, and `Single` to `UDouble`.</span></span> <span data-ttu-id="f4894-486">它还将 `ToDouble` 方法定义为隐式转换运算符的替代方法，并将 `ToSingle`、`FromDouble` 和 `FromSingle` 方法定义为显式转换运算符的替代方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-486">It also defines a `ToDouble` method as an alternative to the implicit conversion operator and the `ToSingle`, `FromDouble`, and `FromSingle` methods as alternatives to the explicit conversion operators.</span></span> 
 
 ```csharp
 using System;
@@ -951,11 +951,11 @@ Public Structure UDouble
 End Structure
 ```
 
-### <a name="arrays"></a>数组
+### <a name="arrays"></a><span data-ttu-id="f4894-487">数组</span><span class="sxs-lookup"><span data-stu-id="f4894-487">Arrays</span></span>
 
-符合 CLS 的数组符合以下规则： 
+<span data-ttu-id="f4894-488">符合 CLS 的数组符合以下规则：</span><span class="sxs-lookup"><span data-stu-id="f4894-488">CLS-compliant arrays conform to the following rules:</span></span> 
 
-* 数组的所有维度必须具有零下限。 下面的示例创建一个不符合 CLS 的数组，其下限为 1。 请注意，无论是否存在 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性，编译器都不检测由 `Numbers.GetTenPrimes` 方法返回的数组是否符合 CLS。 
+* <span data-ttu-id="f4894-489">数组的所有维度必须具有零下限。</span><span class="sxs-lookup"><span data-stu-id="f4894-489">All dimensions of an array must have a lower bound of zero.</span></span> <span data-ttu-id="f4894-490">下面的示例创建一个不符合 CLS 的数组，其下限为 1。</span><span class="sxs-lookup"><span data-stu-id="f4894-490">The following example creates a non-CLS-compliant array with a lower bound of one.</span></span> <span data-ttu-id="f4894-491">请注意，无论是否存在 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性，编译器都不检测由 `Numbers.GetTenPrimes` 方法返回的数组是否符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-491">Note that, despite the presence of the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute, the compiler does not detect that the array returned by the `Numbers.GetTenPrimes` method is not CLS-compliant.</span></span> 
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -1002,7 +1002,7 @@ End Structure
   End Class
   ```
 
-* 所有数组元素必须包括符合 CLS 的类型。 下面的示例定义返回不符合 CLS 的数组的两种方法。 第一个返回 [UInt32](xref:System.UInt32) 值的数组。 第二个返回包括 [Int32](xref:System.Int32) 和 `UInt32` 值的 [Object](xref:System.Object) 数组。 虽然编译器因第一个数组是 `UInt32` 类型而将其标识为不合规，但无法识别第二个包含不符合 CLS 元素的数组。 
+* <span data-ttu-id="f4894-492">所有数组元素必须包括符合 CLS 的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-492">All array elements must consist of CLS-compliant types.</span></span> <span data-ttu-id="f4894-493">下面的示例定义返回不符合 CLS 的数组的两种方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-493">The following example defines two methods that return non-CLS-compliant arrays.</span></span> <span data-ttu-id="f4894-494">第一个返回 [UInt32](xref:System.UInt32) 值的数组。</span><span class="sxs-lookup"><span data-stu-id="f4894-494">The first returns an array of [UInt32](xref:System.UInt32) values.</span></span> <span data-ttu-id="f4894-495">第二个返回包括 [Int32](xref:System.Int32) 和 `UInt32` 值的 [Object](xref:System.Object) 数组。</span><span class="sxs-lookup"><span data-stu-id="f4894-495">The second returns an [Object](xref:System.Object) array that includes [Int32](xref:System.Int32) and `UInt32` values.</span></span> <span data-ttu-id="f4894-496">虽然编译器因第一个数组是 `UInt32` 类型而将其标识为不合规，但无法识别第二个包含不符合 CLS 元素的数组。</span><span class="sxs-lookup"><span data-stu-id="f4894-496">Although the compiler identifies the first array as non-compliant because of its `UInt32` type, it fails to recognize that the second array includes non-CLS-compliant elements.</span></span> 
 
   ```csharp
   using System;
@@ -1044,7 +1044,7 @@ End Structure
   '    warning BC40027: Return type of function 'GetTenPrimes' is not CLS-compliant.
   ```                             
 
-* 具有数组参数的方法的重载决策基于它们是否为数组及它们的元素类型。 因此，以下对重载的 `GetSquares` 方法的定义符合 CLS。 
+* <span data-ttu-id="f4894-497">具有数组参数的方法的重载决策基于它们是否为数组及它们的元素类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-497">Overload resolution for methods that have array parameters is based on the fact that they are arrays and on their element type.</span></span> <span data-ttu-id="f4894-498">因此，以下对重载的 `GetSquares` 方法的定义符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-498">For this reason, the following definition of an overloaded `GetSquares` method is CLS-compliant.</span></span> 
 
   ```csharp
   using System;
@@ -1112,15 +1112,15 @@ End Structure
   End Module
   ```
 
-### <a name="interfaces"></a>接口
+### <a name="interfaces"></a><span data-ttu-id="f4894-499">接口</span><span class="sxs-lookup"><span data-stu-id="f4894-499">Interfaces</span></span>
 
-符合 CLS 的接口可以定义属性、事件和虚拟方法（没有实现的方法）。 符合 CLS 的接口不能有： 
+<span data-ttu-id="f4894-500">符合 CLS 的接口可以定义属性、事件和虚拟方法（没有实现的方法）。</span><span class="sxs-lookup"><span data-stu-id="f4894-500">CLS-compliant interfaces can define properties, events, and virtual methods (methods with no implementation).</span></span> <span data-ttu-id="f4894-501">符合 CLS 的接口不能有：</span><span class="sxs-lookup"><span data-stu-id="f4894-501">A CLS-compliant interface cannot have any of the following:</span></span> 
 
-* 静态方法或静态字段。 如果在接口中定义静态成员，C# 编译器将生成编译器错误。 
+* <span data-ttu-id="f4894-502">静态方法或静态字段。</span><span class="sxs-lookup"><span data-stu-id="f4894-502">Static methods or static fields.</span></span> <span data-ttu-id="f4894-503">如果在接口中定义静态成员，C# 编译器将生成编译器错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-503">The C# compiler generatse compiler errors if you define a static member in an interface.</span></span> 
 
-* 字段。 如果在接口中定义字段，C# 编译器将生成编译器错误。
+* <span data-ttu-id="f4894-504">字段。</span><span class="sxs-lookup"><span data-stu-id="f4894-504">Fields.</span></span> <span data-ttu-id="f4894-505">如果在接口中定义字段，C# 编译器将生成编译器错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-505">The C# acompiler generates compiler errors if you define a field in an interface.</span></span>
 
-* 不符合 CLS 的方法。 例如，下面的接口定义包括方法 `INumber.GetUnsigned`，该方法标记为不符合 CLS。 此示例生成编译器警告。 
+* <span data-ttu-id="f4894-506">不符合 CLS 的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-506">Methods that are not CLS-compliant.</span></span> <span data-ttu-id="f4894-507">例如，下面的接口定义包括方法 `INumber.GetUnsigned`，该方法标记为不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-507">For example, the following interface definition includes a method, `INumber.GetUnsigned`, that is marked as non-CLS-compliant.</span></span> <span data-ttu-id="f4894-508">此示例生成编译器警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-508">This example generates a compiler warning.</span></span> 
 
   ```csharp
   using System;
@@ -1152,9 +1152,9 @@ End Structure
     '                                      ~~~~~~~~~~~
   ```
 
-  由于存在此规则，因此符合 CLS 的类型不需要实现不符合 CLS 的成员。 如果一个符合 CLS 的框架公开实现不符合 CLS 接口的类，则其还应提供所有不符合 CLS 的成员的具体实现。 
+  <span data-ttu-id="f4894-509">由于存在此规则，因此符合 CLS 的类型不需要实现不符合 CLS 的成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-509">Because of this rule, CLS-compliant types are not required to implement non-CLS-compliant members.</span></span> <span data-ttu-id="f4894-510">如果一个符合 CLS 的框架公开实现不符合 CLS 接口的类，则其还应提供所有不符合 CLS 的成员的具体实现。</span><span class="sxs-lookup"><span data-stu-id="f4894-510">If a CLS-compliant framework does expose a class that implements a non-CLS compliant interface, it should also provide concrete implementations of all non-CLS-compliant members.</span></span> 
 
-符合 CLS 的语言编译器还必须允许类提供在多个接口中具有相同名称和签名的成员的单独实现。 C# 支持使用显式接口实现来提供同名方法的不同实现。 下面的示例通过定义一个将 `Temperature` 和 `ICelsius` 接口作为显式接口实现的 `IFahrenheit` 类来说明此方案。 
+<span data-ttu-id="f4894-511">符合 CLS 的语言编译器还必须允许类提供在多个接口中具有相同名称和签名的成员的单独实现。</span><span class="sxs-lookup"><span data-stu-id="f4894-511">CLS-compliant language compilers must also allow a class to provide separate implementations of members that have the same name and signature in multiple interfaces.</span></span> <span data-ttu-id="f4894-512">C# 支持使用显式接口实现来提供同名方法的不同实现。</span><span class="sxs-lookup"><span data-stu-id="f4894-512">C# supports explicit interface implementations to provide different implementations of identically named methods.</span></span> <span data-ttu-id="f4894-513">下面的示例通过定义一个将 `Temperature` 和 `ICelsius` 接口作为显式接口实现的 `IFahrenheit` 类来说明此方案。</span><span class="sxs-lookup"><span data-stu-id="f4894-513">The following example illustrates this scenario by defining a `Temperature` class that implements the `ICelsius` and `IFahrenheit` interfaces as explicit interface implementations.</span></span> 
 
 ```csharp
 using System;
@@ -1253,11 +1253,11 @@ End Module
 '       Temperature in Fahrenheit: 212.0 degrees
 ```
 
-### <a name="enumerations"></a>枚举
+### <a name="enumerations"></a><span data-ttu-id="f4894-514">枚举</span><span class="sxs-lookup"><span data-stu-id="f4894-514">Enumerations</span></span>
 
-符合 CLS 的枚举必须遵循下列规则： 
+<span data-ttu-id="f4894-515">符合 CLS 的枚举必须遵循下列规则：</span><span class="sxs-lookup"><span data-stu-id="f4894-515">CLS-compliant enumerations must follow these rules:</span></span> 
 
-* 枚举的基础类型必须是符合 CLS 的内部整数（[Byte](xref:System.Byte)、[Int16](xref:System.Int16)、[Int32](xref:System.Int32) 或 [Int64](xref:System.Int64)）。 例如，下面的代码尝试定义基础类型为 [UInt32](xref:System.UInt32) 的枚举并生成编译器警告。 
+* <span data-ttu-id="f4894-516">枚举的基础类型必须是符合 CLS 的内部整数（[Byte](xref:System.Byte)、[Int16](xref:System.Int16)、[Int32](xref:System.Int32) 或 [Int64](xref:System.Int64)）。</span><span class="sxs-lookup"><span data-stu-id="f4894-516">The underlying type of the enumeration must be an intrinsic CLS-compliant integer ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32), or [Int64](xref:System.Int64)).</span></span> <span data-ttu-id="f4894-517">例如，下面的代码尝试定义基础类型为 [UInt32](xref:System.UInt32) 的枚举并生成编译器警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-517">For example, the following code tries to define an enumeration whose underlying type is [UInt32](xref:System.UInt32) and generates a compiler warning.</span></span> 
 
     ```csharp
     using System;
@@ -1307,31 +1307,31 @@ End Module
     '                ~~~~
     ```
 
-* 枚举类型必须具有名为 `Value__` 且标有 `FieldAttributes.RTSpecialName` 特性的单个实例字段。 这使得您可以隐式引用字段值。 
+* <span data-ttu-id="f4894-518">枚举类型必须具有名为 `Value__` 且标有 `FieldAttributes.RTSpecialName` 特性的单个实例字段。</span><span class="sxs-lookup"><span data-stu-id="f4894-518">An enumeration type must have a single instance field named `Value__` that is marked with the `FieldAttributes.RTSpecialName` attribute.</span></span> <span data-ttu-id="f4894-519">这使得您可以隐式引用字段值。</span><span class="sxs-lookup"><span data-stu-id="f4894-519">This enables you to reference the field value implicitly.</span></span> 
 
-* 枚举包括文本静态字段，该字段的类型与枚举本身的类型匹配。 例如，如果您用 `State` 和 `State.On` 的值定义 `State.Off` 枚举，则 `State.On` 和 `State.Off` 都是文本静态字段，其类型为 `State`。 
+* <span data-ttu-id="f4894-520">枚举包括文本静态字段，该字段的类型与枚举本身的类型匹配。</span><span class="sxs-lookup"><span data-stu-id="f4894-520">An enumeration includes literal static fields whose types match the type of the enumeration itself.</span></span> <span data-ttu-id="f4894-521">例如，如果您用 `State` 和 `State.On` 的值定义 `State.Off` 枚举，则 `State.On` 和 `State.Off` 都是文本静态字段，其类型为 `State`。</span><span class="sxs-lookup"><span data-stu-id="f4894-521">For example, if you define a `State` enumeration with values of `State.On` and `State.Off`, `State.On` and `State.Off` are both literal static fields whose type is `State`.</span></span> 
 
-* 有两种枚举： 
+* <span data-ttu-id="f4894-522">有两种枚举：</span><span class="sxs-lookup"><span data-stu-id="f4894-522">There are two kinds of enumerations:</span></span> 
     
-    * 一种表示一组互斥的命名整数值的枚举。 这种类型的枚举由缺少 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。
+    * <span data-ttu-id="f4894-523">一种表示一组互斥的命名整数值的枚举。</span><span class="sxs-lookup"><span data-stu-id="f4894-523">An enumeration that represents a set of mutually exclusive, named integer values.</span></span> <span data-ttu-id="f4894-524">这种类型的枚举由缺少 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。</span><span class="sxs-lookup"><span data-stu-id="f4894-524">This type of enumeration is indicated by the absence of the [System.FlagsAttribute](xref:System.FlagsAttribute) custom attribute.</span></span>
     
-    * 一种表示可结合用来生成未命名值的一组位标志的枚举。 这种类型的枚举由存在 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。
+    * <span data-ttu-id="f4894-525">一种表示可结合用来生成未命名值的一组位标志的枚举。</span><span class="sxs-lookup"><span data-stu-id="f4894-525">An enumeration that represents a set of bit flags that can combine to generate an unnamed value.</span></span> <span data-ttu-id="f4894-526">这种类型的枚举由存在 [System.FlagsAttribute](xref:System.FlagsAttribute) 自定义特性表示。</span><span class="sxs-lookup"><span data-stu-id="f4894-526">This type of enumeration is indicated by the presence of the [System.FlagsAttribute](xref:System.FlagsAttribute) custom attribute.</span></span>
     
- 有关详细信息，请参阅 [Enum](xref:System.Enum) 结构的文档。 
+ <span data-ttu-id="f4894-527">有关详细信息，请参阅 [Enum](xref:System.Enum) 结构的文档。</span><span class="sxs-lookup"><span data-stu-id="f4894-527">For more information, see the documentation for the [Enum](xref:System.Enum) structure.</span></span> 
 
-* 枚举的值不限于其指定值的范围。 换言之，枚举中的值的范围是其基础值的范围。 您可以使用 `Enum.IsDefined` 方法来确定指定的值是否为枚举成员。 
+* <span data-ttu-id="f4894-528">枚举的值不限于其指定值的范围。</span><span class="sxs-lookup"><span data-stu-id="f4894-528">The value of an enumeration is not limited to the range of its specified values.</span></span> <span data-ttu-id="f4894-529">换言之，枚举中的值的范围是其基础值的范围。</span><span class="sxs-lookup"><span data-stu-id="f4894-529">In other words, the range of values in an enumeration is the range of its underlying value.</span></span> <span data-ttu-id="f4894-530">您可以使用 `Enum.IsDefined` 方法来确定指定的值是否为枚举成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-530">You can use the `Enum.IsDefined` method to determine whether a specified value is a member of an enumeration.</span></span> 
 
-### <a name="type-members-in-general"></a>类型成员概述
+### <a name="type-members-in-general"></a><span data-ttu-id="f4894-531">类型成员概述</span><span class="sxs-lookup"><span data-stu-id="f4894-531">Type members in general</span></span>
 
-公共语言规范要求将所有字段和方法作为特定类的成员进行访问。 因此，全局静态字段和方法（即，除类型外定义的静态字段或方法）不符合 CLS。 如果尝试在源代码中包括全局字段或方法，C# 编译器将生成编译器错误。 
+<span data-ttu-id="f4894-532">公共语言规范要求将所有字段和方法作为特定类的成员进行访问。</span><span class="sxs-lookup"><span data-stu-id="f4894-532">The Common Language Specification requires all fields and methods to be accessed as members of a particular class.</span></span> <span data-ttu-id="f4894-533">因此，全局静态字段和方法（即，除类型外定义的静态字段或方法）不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-533">Therefore, global static fields and methods (that is, static fields or methods that are defined apart from a type) are not CLS-compliant.</span></span> <span data-ttu-id="f4894-534">如果尝试在源代码中包括全局字段或方法，C# 编译器将生成编译器错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-534">If you try to include a global field or method in your source code, the C# compiler generates a compiler error.</span></span> 
 
-公共语言规范仅支持标准托管调用约定。 它不支持非托管调用约定和带使用 `varargs` 关键字标记的变量参数列表的方法。 对于符合标准托管调用约定的变量自变量列表，请使用 [ParamArrayAttribute](xref:System.ParamArrayAttribute) 特性或单个语言的实现，如 C# 中的 `params` 关键字和 Visual Basic 中的 `ParamArray` 关键字。 
+<span data-ttu-id="f4894-535">公共语言规范仅支持标准托管调用约定。</span><span class="sxs-lookup"><span data-stu-id="f4894-535">The Common Language Specification supports only the standard managed calling convention.</span></span> <span data-ttu-id="f4894-536">它不支持非托管调用约定和带使用 `varargs` 关键字标记的变量参数列表的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-536">It doesn't support unmanaged calling conventions and methods with variable argument lists marked with the `varargs` keyword.</span></span> <span data-ttu-id="f4894-537">对于符合标准托管调用约定的变量自变量列表，请使用 [ParamArrayAttribute](xref:System.ParamArrayAttribute) 特性或单个语言的实现，如 C# 中的 `params` 关键字和 Visual Basic 中的 `ParamArray` 关键字。</span><span class="sxs-lookup"><span data-stu-id="f4894-537">For variable argument lists that are compatible with the standard managed calling convention, use the [ParamArrayAttribute](xref:System.ParamArrayAttribute) attribute or the individual language's implementation, such as the `params` keyword in C# and the `ParamArray` keyword in Visual Basic.</span></span> 
 
-### <a name="member-accessibility"></a>成员可访问性
+### <a name="member-accessibility"></a><span data-ttu-id="f4894-538">成员可访问性</span><span class="sxs-lookup"><span data-stu-id="f4894-538">Member accessibility</span></span>
 
-重写继承成员不能更改该成员的可访问性。 例如，无法在派生类中通过私有方法重写基类中的公共方法。 有一个例外：由其他程序集中的类型重写的程序集中的 `protected internal`（在 C# 中）或 `Protected Friend`（在 Visual Basic 中）成员。  在该示例中，重写的可访问性是 `Protected`。 
+<span data-ttu-id="f4894-539">重写继承成员不能更改该成员的可访问性。</span><span class="sxs-lookup"><span data-stu-id="f4894-539">Overriding an inherited member cannot change the accessibility of that member.</span></span> <span data-ttu-id="f4894-540">例如，无法在派生类中通过私有方法重写基类中的公共方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-540">For example, a public method in a base class cannot be overridden by a private method in a derived class.</span></span> <span data-ttu-id="f4894-541">有一个例外：由其他程序集中的类型重写的程序集中的 `protected internal`（在 C# 中）或 `Protected Friend`（在 Visual Basic 中）成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-541">There is one exception: a `protected internal` (in C#) or `Protected Friend` (in Visual Basic) member in one assembly that is overridden by a type in a different assembly.</span></span>  <span data-ttu-id="f4894-542">在该示例中，重写的可访问性是 `Protected`。</span><span class="sxs-lookup"><span data-stu-id="f4894-542">In that case, the accessibility of the override is `Protected`.</span></span> 
 
-下面的示例说明了当 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性设置为 `true`，并且 `Person`（它是派生自 `Animal` 的类）尝试将 `Species` 属性的可访问性从公开更改为私有时生成的错误。 如果该示例的可访问性更改为公共，则其编译成功。 
+<span data-ttu-id="f4894-543">下面的示例说明了当 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性设置为 `true`，并且 `Person`（它是派生自 `Animal` 的类）尝试将 `Species` 属性的可访问性从公开更改为私有时生成的错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-543">The following example illustrates the error that is generated when the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute is set to `true`, and `Person`, which is a class derived from `Animal`, tries to change the accessibility of the `Species` property from public to private.</span></span> <span data-ttu-id="f4894-544">如果该示例的可访问性更改为公共，则其编译成功。</span><span class="sxs-lookup"><span data-stu-id="f4894-544">The example compiles successfully if its accessibility is changed to public.</span></span> 
 
 ```csharp
 using System;
@@ -1457,7 +1457,7 @@ End Module
 '         Private Overrides ReadOnly Property Species As String
 ```
 
-如果某个成员是可访问的，则该成员签名中的类型必须是可访问的。 例如，这意味着公共成员不能包含类型是私有的、受保护的或内部的参数。 下面的示例说明了当 `StringWrapper` 类构造函数公开一个用于确定如何包装字符串值的内部 `StringOperationType` 枚举值时出现的编译器错误。 
+<span data-ttu-id="f4894-545">如果某个成员是可访问的，则该成员签名中的类型必须是可访问的。</span><span class="sxs-lookup"><span data-stu-id="f4894-545">Types in the signature of a member must be accessible whenever that member is accessible.</span></span> <span data-ttu-id="f4894-546">例如，这意味着公共成员不能包含类型是私有的、受保护的或内部的参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-546">For example, this means that a public member cannot include a parameter whose type is private, protected, or internal.</span></span> <span data-ttu-id="f4894-547">下面的示例说明了当 `StringWrapper` 类构造函数公开一个用于确定如何包装字符串值的内部 `StringOperationType` 枚举值时出现的编译器错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-547">The following example illustrates the compiler error that results when a `StringWrapper` class constructor exposes an internal `StringOperationType` enumeration value that determines how a string value should be wrapped.</span></span> 
 
 ```csharp
 using System;
@@ -1525,11 +1525,11 @@ End Enum
 '                              ~~~~~~~~~~~~~~~~~~~
 ```
 
-### <a name="generic-types-and-members"></a>泛型类型和成员
+### <a name="generic-types-and-members"></a><span data-ttu-id="f4894-548">泛型类型和成员</span><span class="sxs-lookup"><span data-stu-id="f4894-548">Generic types and members</span></span>
 
-嵌套类型拥有的泛型参数数目总是至少与封闭类型的一样多。 它们按位置对应于封闭类型中的泛型参数。 泛型类型还可以包括新的泛型参数。 
+<span data-ttu-id="f4894-549">嵌套类型拥有的泛型参数数目总是至少与封闭类型的一样多。</span><span class="sxs-lookup"><span data-stu-id="f4894-549">Nested types always have at least as many generic parameters as their enclosing type.</span></span> <span data-ttu-id="f4894-550">它们按位置对应于封闭类型中的泛型参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-550">These correspond by position to the generic parameters in the enclosing type.</span></span> <span data-ttu-id="f4894-551">泛型类型还可以包括新的泛型参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-551">The generic type can also include new generic parameters.</span></span> 
 
-一个包含类型及其嵌套类型的泛型类型参数之间的关系可能由各种语言的语法隐藏。 在下面的示例中，泛型类型 `Outer<T>` 包含两个嵌套的类：`Inner1A` 和 `Inner1B<U>`。 对于每个类从 `ToString` 继承的 `Object.ToString` 方法的调用，表示每个嵌套的类包括其包含的类的类型参数。 
+<span data-ttu-id="f4894-552">一个包含类型及其嵌套类型的泛型类型参数之间的关系可能由各种语言的语法隐藏。</span><span class="sxs-lookup"><span data-stu-id="f4894-552">The relationship between the generic type parameters of a containing type and its nested types may be hidden by the syntax of individual languages.</span></span> <span data-ttu-id="f4894-553">在下面的示例中，泛型类型 `Outer<T>` 包含两个嵌套的类：`Inner1A` 和 `Inner1B<U>`。</span><span class="sxs-lookup"><span data-stu-id="f4894-553">In the following example, a generic type `Outer<T>` contains two nested classes, `Inner1A` and `Inner1B<U>`.</span></span> <span data-ttu-id="f4894-554">对于每个类从 `ToString` 继承的 `Object.ToString` 方法的调用，表示每个嵌套的类包括其包含的类的类型参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-554">The calls to the `ToString` method, which each class inherits from `Object.ToString`, show that each nested class includes the type parameters of its containing class.</span></span> 
 
 ```csharp
 using System;
@@ -1626,9 +1626,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-泛型类型名称采用 name'n 格式进行编码，其中 name 是类型名称，` 是字符文本，n 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。 
+<span data-ttu-id="f4894-555">泛型类型名称采用 name'n 格式进行编码，其中 name 是类型名称，\` 是字符文本，n 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。</span><span class="sxs-lookup"><span data-stu-id="f4894-555">Generic type names are encoded in the form *name*'*n*, where *name* is the type name, *\`* is a character literal, and *n* is the number of parameters declared on the type, or, for nested generic types, the number of newly introduced type parameters.</span></span> <span data-ttu-id="f4894-556">此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。</span><span class="sxs-lookup"><span data-stu-id="f4894-556">This encoding of generic type names is primarily of interest to developers who use reflection to access CLS-complaint generic types in a library.</span></span> 
 
-如果将约束应用于泛型类型，则任何用作约束的类型也必须符合 CLS。 下面的示例定义一个名为 `BaseClass` 的不符合 CLS 的类和一个其类型参数必须派生自 `BaseCollection` 的名为 `BaseClass` 的泛型类。 但由于 `BaseClass` 不符合 CLS，因此编译器会发出警告。 
+<span data-ttu-id="f4894-557">如果将约束应用于泛型类型，则任何用作约束的类型也必须符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-557">If constraints are applied to a generic type, any types used as constraints must also be CLS-compliant.</span></span> <span data-ttu-id="f4894-558">下面的示例定义一个名为 `BaseClass` 的不符合 CLS 的类和一个其类型参数必须派生自 `BaseCollection` 的名为 `BaseClass` 的泛型类。</span><span class="sxs-lookup"><span data-stu-id="f4894-558">The following example defines a class named `BaseClass` that is not CLS-compliant and a generic class named `BaseCollection` whose type parameter must derive from `BaseClass`.</span></span> <span data-ttu-id="f4894-559">但由于 `BaseClass` 不符合 CLS，因此编译器会发出警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-559">But because `BaseClass` is not CLS-compliant, the compiler emits a warning.</span></span> 
 
 ```csharp
 using System;
@@ -1662,7 +1662,7 @@ End Class
 '                                        ~~~~~~~~~
 ```
 
-如果泛型类型派生自泛型基本类型，则其必须重新声明所有约束，以确保也满足对基本类型的约束。 下面的示例定义可表示任何数值类型的 `Number<T>`。 它还定义表示浮点值的 `FloatingPoint<T>` 类。 但是，源代码无法编译，因为它未将 `Number<T>` 上（T 必须是值类型）的约束应用于 `FloatingPoint<T>`。
+<span data-ttu-id="f4894-560">如果泛型类型派生自泛型基本类型，则其必须重新声明所有约束，以确保也满足对基本类型的约束。</span><span class="sxs-lookup"><span data-stu-id="f4894-560">If a generic type is derived from a generic base type, it must redeclare any constraints so that it can guarantee that constraints on the base type are also satisfied.</span></span> <span data-ttu-id="f4894-561">下面的示例定义可表示任何数值类型的 `Number<T>`。</span><span class="sxs-lookup"><span data-stu-id="f4894-561">The following example defines a `Number<T>` that can represent any numeric type.</span></span> <span data-ttu-id="f4894-562">它还定义表示浮点值的 `FloatingPoint<T>` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-562">It also defines a `FloatingPoint<T>` class that represents a floating point value.</span></span> <span data-ttu-id="f4894-563">但是，源代码无法编译，因为它未将 `Number<T>` 上（T 必须是值类型）的约束应用于 `FloatingPoint<T>`。</span><span class="sxs-lookup"><span data-stu-id="f4894-563">However, the source code fails to compile, because it does not apply the constraint on `Number<T>` (that T must be a value type) to `FloatingPoint<T>`.</span></span>
 
 ```csharp
 using System;
@@ -1763,7 +1763,7 @@ End Class
 '                                                          ~
 ```
 
-如果将此约束添加到 `FloatingPoint<T>` 类中，则该示例成功编译。
+<span data-ttu-id="f4894-564">如果将此约束添加到 `FloatingPoint<T>` 类中，则该示例成功编译。</span><span class="sxs-lookup"><span data-stu-id="f4894-564">The example compiles successfully if the constraint is added to the `FloatingPoint<T>` class.</span></span>
 
 ```csharp
 using System;
@@ -1856,9 +1856,9 @@ Public Class FloatingPoint(Of T As Structure) : Inherits Number(Of T)
 End Class
 ```
 
-公共语言规范对嵌套类型和受保护成员规定了一个保守的按实例化模型。 开放式泛型类型不能公开具有包含嵌套的、受保护的泛型类型的特定实例化的签名的字段或成员。 扩大泛型基类或接口的特定实例化的非泛型类型不能公开带签名的字段或成员，此类字段或成员包含嵌套的、受保护的泛型类型的不同实例化。
+<span data-ttu-id="f4894-565">公共语言规范对嵌套类型和受保护成员规定了一个保守的按实例化模型。</span><span class="sxs-lookup"><span data-stu-id="f4894-565">The Common Language Specification imposes a conservative per-instantiation model for nested types and protected members.</span></span> <span data-ttu-id="f4894-566">开放式泛型类型不能公开具有包含嵌套的、受保护的泛型类型的特定实例化的签名的字段或成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-566">Open generic types cannot expose fields or members with signatures that contain a specific instantiation of a nested, protected generic type.</span></span> <span data-ttu-id="f4894-567">扩大泛型基类或接口的特定实例化的非泛型类型不能公开带签名的字段或成员，此类字段或成员包含嵌套的、受保护的泛型类型的不同实例化。</span><span class="sxs-lookup"><span data-stu-id="f4894-567">Non-generic types that extend a specific instantiation of a generic base class or interface cannot expose fields or members with signatures that contain a different instantiation of a nested, protected generic type.</span></span>
 
-下面的示例定义一个泛型类型 `C1<T>` 和一个受保护的类 `C1<T>.N`。 `C1<T>` 有两种方法：`M1` 和 `M2`。 但是，`M1` 并不符合 CLS，因为它尝试从 `C1<T>` 返回 `C1<int>.N` 对象。 另一个名为 `C2` 的类派生自 `C1<long>`。 它有两种方法：`M3` 和 `M4`。 `M3` 不符合 CLS，因为它尝试从 `C1<long>` 的子类中返回 `C1<int>.N` 对象。 请注意，语言编译器可具有更高限制。 在此示例中，Visual Basic 在尝试编译 `M4` 时显示错误。 
+<span data-ttu-id="f4894-568">下面的示例定义一个泛型类型 `C1<T>` 和一个受保护的类 `C1<T>.N`。</span><span class="sxs-lookup"><span data-stu-id="f4894-568">The following example defines a generic type, `C1<T>`, and a protected class, `C1<T>.N`.</span></span> <span data-ttu-id="f4894-569">`C1<T>` 有两种方法：`M1` 和 `M2`。</span><span class="sxs-lookup"><span data-stu-id="f4894-569">`C1<T>` has two methods, `M1` and `M2`.</span></span> <span data-ttu-id="f4894-570">但是，`M1` 并不符合 CLS，因为它尝试从 `C1<T>` 返回 `C1<int>.N` 对象。</span><span class="sxs-lookup"><span data-stu-id="f4894-570">However, `M1` is not CLS-compliant because it tries to return a `C1<int>.N` object from `C1<T>`.</span></span> <span data-ttu-id="f4894-571">另一个名为 `C2` 的类派生自 `C1<long>`。</span><span class="sxs-lookup"><span data-stu-id="f4894-571">A second class, `C2`, is derived from `C1<long>`.</span></span> <span data-ttu-id="f4894-572">它有两种方法：`M3` 和 `M4`。</span><span class="sxs-lookup"><span data-stu-id="f4894-572">It has two methods, `M3` and `M4`.</span></span> <span data-ttu-id="f4894-573">`M3` 不符合 CLS，因为它尝试从 `C1<long>` 的子类中返回 `C1<int>.N` 对象。</span><span class="sxs-lookup"><span data-stu-id="f4894-573">`M3` is not CLS-compliant because it tries to return a `C1<int>.N` object from a subclass of `C1<long>`.</span></span> <span data-ttu-id="f4894-574">请注意，语言编译器可具有更高限制。</span><span class="sxs-lookup"><span data-stu-id="f4894-574">Note that language compilers can be even more restrictive.</span></span> <span data-ttu-id="f4894-575">在此示例中，Visual Basic 在尝试编译 `M4` 时显示错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-575">In this example, Visual Basic displays an error when it tries to compile `M4`.</span></span> 
 
 ```csharp
 using System;
@@ -1931,13 +1931,13 @@ End Class
 '                             ~~~~~~~~~~~~~
 ```
 
-### <a name="constructors"></a>构造函数
+### <a name="constructors"></a><span data-ttu-id="f4894-576">构造函数</span><span class="sxs-lookup"><span data-stu-id="f4894-576">Constructors</span></span>
 
-符合 CLS 的类和结构中的构造函数必须遵循下列规则： 
+<span data-ttu-id="f4894-577">符合 CLS 的类和结构中的构造函数必须遵循下列规则：</span><span class="sxs-lookup"><span data-stu-id="f4894-577">Constructors in CLS-compliant classes and structures must follow these rules:</span></span> 
 
-* 派生类的构造函数必须先调用其基类的实例构造函数，然后才能访问继承的实例数据。 存在此要求是因为基类构造函数并不由它们的派生类继承。 此规则不适用于不支持直接继承的结构。 
+* <span data-ttu-id="f4894-578">派生类的构造函数必须先调用其基类的实例构造函数，然后才能访问继承的实例数据。</span><span class="sxs-lookup"><span data-stu-id="f4894-578">A constructor of a derived class must call the instance constructor of its base class before it accesses inherited instance data.</span></span> <span data-ttu-id="f4894-579">存在此要求是因为基类构造函数并不由它们的派生类继承。</span><span class="sxs-lookup"><span data-stu-id="f4894-579">This requirement is due to the fact that base class constructors are not inherited by their derived classes.</span></span> <span data-ttu-id="f4894-580">此规则不适用于不支持直接继承的结构。</span><span class="sxs-lookup"><span data-stu-id="f4894-580">This rule does not apply to structures, which do not support direct inheritance.</span></span> 
 
-  通常，编译器独立地强制实施 CLS 遵从性的此规则，如下面的示例所示。 它创建派生自 `Doctor` 类的 `Person` 类，但 `Doctor` 类无法调用 `Person` 类构造函数来初始化继承的实例字段。 
+  <span data-ttu-id="f4894-581">通常，编译器独立地强制实施 CLS 遵从性的此规则，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="f4894-581">Typically, compilers enforce this rule independently of CLS compliance, as the following example shows.</span></span> <span data-ttu-id="f4894-582">它创建派生自 `Doctor` 类的 `Person` 类，但 `Doctor` 类无法调用 `Person` 类构造函数来初始化继承的实例字段。</span><span class="sxs-lookup"><span data-stu-id="f4894-582">It creates a `Doctor` class that is derived from a `Person` class, but the `Doctor` class fails to call the `Person` class constructor to initialize inherited instance fields.</span></span> 
 
     ```csharp
     using System;
@@ -2056,34 +2056,34 @@ End Class
     '                  ~~~
     ````
     
-* 只有在创建对象时才能调用对象构造函数。 此外，不能将一个对象初始化两次。 例如，这意味着 `Object.MemberwiseClone` 不得调用构造函数。  
+* <span data-ttu-id="f4894-583">只有在创建对象时才能调用对象构造函数。</span><span class="sxs-lookup"><span data-stu-id="f4894-583">An object constructor cannot be called except to create an object.</span></span> <span data-ttu-id="f4894-584">此外，不能将一个对象初始化两次。</span><span class="sxs-lookup"><span data-stu-id="f4894-584">In addition, an object cannot be initialized twice.</span></span> <span data-ttu-id="f4894-585">例如，这意味着 `Object.MemberwiseClone` 不得调用构造函数。</span><span class="sxs-lookup"><span data-stu-id="f4894-585">For example, this means that `Object.MemberwiseClone` must not call constructors.</span></span>  
 
-### <a name="properties"></a>属性
+### <a name="properties"></a><span data-ttu-id="f4894-586">属性</span><span class="sxs-lookup"><span data-stu-id="f4894-586">Properties</span></span>
 
-符合 CLS 的类型的属性必须遵循下列规则：
+<span data-ttu-id="f4894-587">符合 CLS 的类型的属性必须遵循下列规则：</span><span class="sxs-lookup"><span data-stu-id="f4894-587">Properties in CLS-compliant types must follow these rules:</span></span>
 
-* 属性必须具有 setter 和/或 getter。 在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法。getter 命名为 `get`\_*propertyname*，setter 是元数据中的 `set*\_*propertyname*) marked as `SpecialName`。 C# 编译器会自动实施此规则，无需应用 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性。 
+* <span data-ttu-id="f4894-588">属性必须具有 setter 和/或 getter。</span><span class="sxs-lookup"><span data-stu-id="f4894-588">A property must have a setter, a getter, or both.</span></span> <span data-ttu-id="f4894-589">在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法。getter 命名为 `get`\_*propertyname*，setter 是元数据中的 `set*\_*propertyname*) marked as `SpecialName\`。</span><span class="sxs-lookup"><span data-stu-id="f4894-589">In an assembly, these are implemented as special methods, which means that they will appear as separate methods (the getter is named `get`\_*propertyname* and the setter is `set*\_*propertyname*) marked as `SpecialName\` in the assembly's metadata.</span></span> <span data-ttu-id="f4894-590">C# 编译器会自动实施此规则，无需应用 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性。</span><span class="sxs-lookup"><span data-stu-id="f4894-590">The C# compiler enforces this rule automatically without the need to apply the [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute.</span></span> 
 
-* 属性的类型是属性 getter 的返回类型和 setter 的最后一个自变量。 这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。 
+* <span data-ttu-id="f4894-591">属性的类型是属性 getter 的返回类型和 setter 的最后一个自变量。</span><span class="sxs-lookup"><span data-stu-id="f4894-591">A property's type is the return type of the property getter and the last argument of the setter.</span></span> <span data-ttu-id="f4894-592">这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。</span><span class="sxs-lookup"><span data-stu-id="f4894-592">These types must be CLS compliant, and arguments cannot be assigned to the property by reference (that is, they cannot be managed pointers).</span></span> 
 
-* 如果属性包含 getter 和 setter 两者，则它们必须都是虚拟的、静态的或实例。 C# 编译器通过它们的属性定义语法自动实施此规则。 
+* <span data-ttu-id="f4894-593">如果属性包含 getter 和 setter 两者，则它们必须都是虚拟的、静态的或实例。</span><span class="sxs-lookup"><span data-stu-id="f4894-593">If a property has both a getter and a setter, they must both be virtual, both static, or both instance.</span></span> <span data-ttu-id="f4894-594">C# 编译器通过它们的属性定义语法自动实施此规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-594">The C# compiler automatically enforces this rule through property definition syntax.</span></span> 
 
-### <a name="events"></a>事件
+### <a name="events"></a><span data-ttu-id="f4894-595">事件</span><span class="sxs-lookup"><span data-stu-id="f4894-595">Events</span></span>
 
-事件由其名称和类型定义。 事件类型是用于指示事件的委托。 例如，`DbConnection.StateChange` 事件的类型为 `StateChangeEventHandler`。 除事件本身外，带有基于事件名称的名称的三种方法提供事件的实现并在程序集的元数据中标记为 `SpecialName`： 
+<span data-ttu-id="f4894-596">事件由其名称和类型定义。</span><span class="sxs-lookup"><span data-stu-id="f4894-596">An event is defined by its name and its type.</span></span> <span data-ttu-id="f4894-597">事件类型是用于指示事件的委托。</span><span class="sxs-lookup"><span data-stu-id="f4894-597">The event type is a delegate that is used to indicate the event.</span></span> <span data-ttu-id="f4894-598">例如，`DbConnection.StateChange` 事件的类型为 `StateChangeEventHandler`。</span><span class="sxs-lookup"><span data-stu-id="f4894-598">For example, the `DbConnection.StateChange` event is of type `StateChangeEventHandler`.</span></span> <span data-ttu-id="f4894-599">除事件本身外，带有基于事件名称的名称的三种方法提供事件的实现并在程序集的元数据中标记为 `SpecialName`：</span><span class="sxs-lookup"><span data-stu-id="f4894-599">In addition to the event itself, three methods with names based on the event name provide the event's implementation and are marked as `SpecialName` in the assembly's metadata:</span></span> 
 
-* 用于添加事件处理程序的名为 `add`_*EventName* 的方法。 例如，`DbConnection.StateChange` 事件的事件订阅方法名为 `add_StateChange`。 
+* <span data-ttu-id="f4894-600">用于添加事件处理程序的名为 `add`_*EventName* 的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-600">A method for adding an event handler, named `add`_*EventName*.</span></span> <span data-ttu-id="f4894-601">例如，`DbConnection.StateChange` 事件的事件订阅方法名为 `add_StateChange`。</span><span class="sxs-lookup"><span data-stu-id="f4894-601">For example, the event subscription method for the `DbConnection.StateChange` event is named `add_StateChange`.</span></span> 
 
-* 用于移除事件处理程序的名为 `remove`_*EventName* 的方法。 例如，`DbConnection.StateChange` 事件的移除方法名为 `remove_StateChange`。
+* <span data-ttu-id="f4894-602">用于移除事件处理程序的名为 `remove`_*EventName* 的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-602">A method for removing an event handler, named `remove`_*EventName*.</span></span> <span data-ttu-id="f4894-603">例如，`DbConnection.StateChange` 事件的移除方法名为 `remove_StateChange`。</span><span class="sxs-lookup"><span data-stu-id="f4894-603">For example, the removal method for the `DbConnection.StateChange` event is named `remove_StateChange`.</span></span>
 
-* 用于指示事件已发生的名为 `raise`_*EventName* 的方法。 
+* <span data-ttu-id="f4894-604">用于指示事件已发生的名为 `raise`_*EventName* 的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-604">A method for indicating that the event has occurred, named `raise`_*EventName*.</span></span> 
 
 > [!NOTE]
-> 大多数关于事件的公共语言规范的规则都通过语言编译器实施，且对组件开发人员是透明的。 
+> <span data-ttu-id="f4894-605">大多数关于事件的公共语言规范的规则都通过语言编译器实施，且对组件开发人员是透明的。</span><span class="sxs-lookup"><span data-stu-id="f4894-605">Most of the Common Language Specification's rules regarding events are implemented by language compilers and are transparent to component developers.</span></span> 
 
-用于添加、移除和引发事件的方法必须拥有相同的可访问性。 它们还必须都为静态、实例或虚拟的。 用于添加和移除事件的方法具有一个类型为事件委托类型的参数。 添加和移除方法必须同时存在或同时不存在。 
+<span data-ttu-id="f4894-606">用于添加、移除和引发事件的方法必须拥有相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="f4894-606">The methods for adding, removing, and raising the event must have the same accessibility.</span></span> <span data-ttu-id="f4894-607">它们还必须都为静态、实例或虚拟的。</span><span class="sxs-lookup"><span data-stu-id="f4894-607">They must also all be static, instance, or virtual.</span></span> <span data-ttu-id="f4894-608">用于添加和移除事件的方法具有一个类型为事件委托类型的参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-608">The methods for adding and removing an event have one parameter whose type is the event delegate type.</span></span> <span data-ttu-id="f4894-609">添加和移除方法必须同时存在或同时不存在。</span><span class="sxs-lookup"><span data-stu-id="f4894-609">The add and remove methods must both be present or both be absent.</span></span> 
 
-如果两个读取之间的温度更改等于或超过阈值，则下面的示例将定义一个名为 `Temperature` 的类，该类会引发 `TemperatureChanged` 事件且符合 CLS。 `Temperature` 类显式定义 `raise_TemperatureChanged` 方法，以便其可以有选择地执行事件处理程序。
+<span data-ttu-id="f4894-610">如果两个读取之间的温度更改等于或超过阈值，则下面的示例将定义一个名为 `Temperature` 的类，该类会引发 `TemperatureChanged` 事件且符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-610">The following example defines a CLS-compliant class named `Temperature` that raises a `TemperatureChanged` event if the change in temperature between two readings equals or exceeds a threshold value.</span></span> <span data-ttu-id="f4894-611">`Temperature` 类显式定义 `raise_TemperatureChanged` 方法，以便其可以有选择地执行事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="f4894-611">The `Temperature` class explicitly defines a `raise_TemperatureChanged` method so that it can selectively execute event handlers.</span></span>
 
 ```csharp
 using System;
@@ -2346,22 +2346,22 @@ Public Class Example
 End Class
 ```
 
-### <a name="overloads"></a>Overloads
+### <a name="overloads"></a><span data-ttu-id="f4894-612">Overloads</span><span class="sxs-lookup"><span data-stu-id="f4894-612">Overloads</span></span>
 
-公共语言规范对重载成员有下列要求： 
+<span data-ttu-id="f4894-613">公共语言规范对重载成员有下列要求：</span><span class="sxs-lookup"><span data-stu-id="f4894-613">The Common Language Specification imposes the following requirements on overloaded members:</span></span> 
 
-* 成员可以根据参数数量和任何参数的类型进行重载。 在重载间进行区分时，不考虑应用于方法或其参数的调用约定、返回类型、自定义修饰符，也不考虑是按照值还是引用传递参数。 有关示例，请参阅[命名约定](#naming-conventions)部分中名称在范围内必须是唯一的代码需求。 
+* <span data-ttu-id="f4894-614">成员可以根据参数数量和任何参数的类型进行重载。</span><span class="sxs-lookup"><span data-stu-id="f4894-614">Members can be overloaded based on the number of parameters and the type of any parameter.</span></span> <span data-ttu-id="f4894-615">在重载间进行区分时，不考虑应用于方法或其参数的调用约定、返回类型、自定义修饰符，也不考虑是按照值还是引用传递参数。</span><span class="sxs-lookup"><span data-stu-id="f4894-615">Calling convention, return type, custom modifiers applied to the method or its parameter, and whether parameters are passed by value or by reference are not considered when differentiating between overloads.</span></span> <span data-ttu-id="f4894-616">有关示例，请参阅[命名约定](#naming-conventions)部分中名称在范围内必须是唯一的代码需求。</span><span class="sxs-lookup"><span data-stu-id="f4894-616">For an example, see the code for the requirement that names must be unique within a scope in the [Naming conventions](#naming-conventions) section.</span></span> 
 
-* 只可重载属性和方法。 无法重载字段和事件。 
+* <span data-ttu-id="f4894-617">只可重载属性和方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-617">Only properties and methods can be overloaded.</span></span> <span data-ttu-id="f4894-618">无法重载字段和事件。</span><span class="sxs-lookup"><span data-stu-id="f4894-618">Fields and events cannot be overloaded.</span></span> 
 
-* 泛型方法可以基于其泛型参数的数目进行重载。 
+* <span data-ttu-id="f4894-619">泛型方法可以基于其泛型参数的数目进行重载。</span><span class="sxs-lookup"><span data-stu-id="f4894-619">Generic methods can be overloaded based on the number of their generic parameters.</span></span> 
 
 > [!NOTE]
->`op_Explicit` 和 `op_Implicit` 运算符是返回值不被视为重载决策的方法签名的一部分的规则的例外情况。 可以基于这两个运算符的参数和返回值对其进行重载。 
+><span data-ttu-id="f4894-620">`op_Explicit` 和 `op_Implicit` 运算符是返回值不被视为重载决策的方法签名的一部分的规则的例外情况。</span><span class="sxs-lookup"><span data-stu-id="f4894-620">The `op_Explicit` and `op_Implicit` operators are exceptions to the rule that return value is not considered part of a method signature for overload resolution.</span></span> <span data-ttu-id="f4894-621">可以基于这两个运算符的参数和返回值对其进行重载。</span><span class="sxs-lookup"><span data-stu-id="f4894-621">These two operators can be overloaded based on both their parameters and their return value.</span></span> 
 
-### <a name="exceptions"></a>异常
+### <a name="exceptions"></a><span data-ttu-id="f4894-622">异常</span><span class="sxs-lookup"><span data-stu-id="f4894-622">Exceptions</span></span>
 
-异常对象必须从 [System.Exception](xref:System.Exception) 派生，或从派生自 `System.Exception` 的另一个类型派生。 下面的示例说明了当名为 `ErrorClass` 的自定义类用于异常处理时产生的编译器错误。
+<span data-ttu-id="f4894-623">异常对象必须从 [System.Exception](xref:System.Exception) 派生，或从派生自 `System.Exception` 的另一个类型派生。</span><span class="sxs-lookup"><span data-stu-id="f4894-623">Exception objects must derive from [System.Exception](xref:System.Exception) or from another type derived from `System.Exception`.</span></span> <span data-ttu-id="f4894-624">下面的示例说明了当名为 `ErrorClass` 的自定义类用于异常处理时产生的编译器错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-624">The following example illustrates the compiler error that results when a custom class named `ErrorClass` is used for exception handling.</span></span>
 
 ```csharp
 using System;
@@ -2438,7 +2438,7 @@ End Module
 '             ~~~~~~~~~~~~~~
 ```
 
-若要更正此错误，`ErrorClass` 类必须继承自 `System.Exception`。 此外，必须重写 Message 属性。 下面的示例更正这些错误以定义符合 CLS 的 `ErrorClass` 类。  
+<span data-ttu-id="f4894-625">若要更正此错误，`ErrorClass` 类必须继承自 `System.Exception`。</span><span class="sxs-lookup"><span data-stu-id="f4894-625">To correct this error, the `ErrorClass` class must inherit from `System.Exception`.</span></span> <span data-ttu-id="f4894-626">此外，必须重写 Message 属性。</span><span class="sxs-lookup"><span data-stu-id="f4894-626">In addition, the Message property must be overridden.</span></span> <span data-ttu-id="f4894-627">下面的示例更正这些错误以定义符合 CLS 的 `ErrorClass` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-627">The following example corrects these errors to define an `ErrorClass` class that is CLS-compliant.</span></span>  
 
 ```csharp
 using System;
@@ -2507,11 +2507,11 @@ Public Module StringUtilities
 End Module
 ```
 
-### <a name="attributes"></a>特性
+### <a name="attributes"></a><span data-ttu-id="f4894-628">特性</span><span class="sxs-lookup"><span data-stu-id="f4894-628">Attributes</span></span>
 
-在 .NET Framework 程序集中，自定义特性提供了一个可扩展机制，用于存储自定义特性和检索有关编程对象（如程序集、类型、成员和方法参数）的元数据。 自定义特性必须从 [System.Attribute](xref:System.Attribute) 派生或从派生自 `System.Attribute` 的类型派生。
+<span data-ttu-id="f4894-629">在 .NET Framework 程序集中，自定义特性提供了一个可扩展机制，用于存储自定义特性和检索有关编程对象（如程序集、类型、成员和方法参数）的元数据。</span><span class="sxs-lookup"><span data-stu-id="f4894-629">In.NET Framework assemblies, custom attributes provide an extensible mechanism for storing custom attributes and retrieving metadata about programming objects, such as assemblies, types, members, and method parameters.</span></span> <span data-ttu-id="f4894-630">自定义特性必须从 [System.Attribute](xref:System.Attribute) 派生或从派生自 `System.Attribute` 的类型派生。</span><span class="sxs-lookup"><span data-stu-id="f4894-630">Custom attributes must derive from [System.Attribute](xref:System.Attribute) or from a type derived from `System.Attribute`.</span></span>
 
-下面的示例与此规则冲突。 它定义了不是从 `NumericAttribute` 派生的 `System.Attribute` 类。 请注意，编译器错误仅当应用不符合 CLS 的特性时会出现，而在定义类时不会出现。 
+<span data-ttu-id="f4894-631">下面的示例与此规则冲突。</span><span class="sxs-lookup"><span data-stu-id="f4894-631">The following example violates this rule.</span></span> <span data-ttu-id="f4894-632">它定义了不是从 `NumericAttribute` 派生的 `System.Attribute` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-632">It defines a `NumericAttribute` class that does not derive from `System.Attribute`.</span></span> <span data-ttu-id="f4894-633">请注意，编译器错误仅当应用不符合 CLS 的特性时会出现，而在定义类时不会出现。</span><span class="sxs-lookup"><span data-stu-id="f4894-633">Note that a compiler error results only when the non-CLS-compliant attribute is applied, not when the class is defined.</span></span> 
 
 ```csharp
 using System;
@@ -2572,31 +2572,31 @@ End Structure
 '     ~~~~~~~~~~~~~
 ```
 
-构造函数或符合 CLS 的特性的属性只能公开以下类型：
+<span data-ttu-id="f4894-634">构造函数或符合 CLS 的特性的属性只能公开以下类型：</span><span class="sxs-lookup"><span data-stu-id="f4894-634">The constructor or the properties of a CLS-compliant attribute can expose only the following types:</span></span>
 
-* [布尔值](xref:System.Boolean)
+* [<span data-ttu-id="f4894-635">布尔值</span><span class="sxs-lookup"><span data-stu-id="f4894-635">Boolean</span></span>](xref:System.Boolean)
 
-* [Byte](xref:System.Byte)
+* [<span data-ttu-id="f4894-636">Byte</span><span class="sxs-lookup"><span data-stu-id="f4894-636">Byte</span></span>](xref:System.Byte)
 
-* [Char](xref:System.Char)
+* [<span data-ttu-id="f4894-637">Char</span><span class="sxs-lookup"><span data-stu-id="f4894-637">Char</span></span>](xref:System.Char)
 
-* [双精度](xref:System.Double)
+* [<span data-ttu-id="f4894-638">双精度</span><span class="sxs-lookup"><span data-stu-id="f4894-638">Double</span></span>](xref:System.Double)
 
-* [Int16](xref:System.Int16)
+* [<span data-ttu-id="f4894-639">Int16</span><span class="sxs-lookup"><span data-stu-id="f4894-639">Int16</span></span>](xref:System.Int16)
 
-* [Int32](xref:System.Int32)
+* [<span data-ttu-id="f4894-640">Int32</span><span class="sxs-lookup"><span data-stu-id="f4894-640">Int32</span></span>](xref:System.Int32)
 
-* [Int64](xref:System.Int64)
+* [<span data-ttu-id="f4894-641">Int64</span><span class="sxs-lookup"><span data-stu-id="f4894-641">Int64</span></span>](xref:System.Int64)
 
-* [单精度](xref:System.Single)
+* [<span data-ttu-id="f4894-642">单精度</span><span class="sxs-lookup"><span data-stu-id="f4894-642">Single</span></span>](xref:System.Single)
 
-* [字符串](xref:System.String)
+* [<span data-ttu-id="f4894-643">字符串</span><span class="sxs-lookup"><span data-stu-id="f4894-643">String</span></span>](xref:System.String)
 
-* [类型](xref:System.Type)
+* [<span data-ttu-id="f4894-644">类型</span><span class="sxs-lookup"><span data-stu-id="f4894-644">Type</span></span>](xref:System.Type)
 
-* 基础类型为 `Byte`、`Int16`、`Int32` 或 `Int64` 的任意枚举类型。 
+* <span data-ttu-id="f4894-645">基础类型为 `Byte`、`Int16`、`Int32` 或 `Int64` 的任意枚举类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-645">Any enumeration type whose underlying type is `Byte`, `Int16`, `Int32`, or `Int64`.</span></span> 
 
-下面的示例定义了从 [Attribute](xref:System.Attribute) 派生的 `DescriptionAttribute` 类。 类构造函数具有 `Descriptor` 类型的参数，因此，该类不符合 CLS。 请注意，C# 编译器会发出警告，但编译成功。 
+<span data-ttu-id="f4894-646">下面的示例定义了从 [Attribute](xref:System.Attribute) 派生的 `DescriptionAttribute` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-646">The following example defines a `DescriptionAttribute` class that derives from [Attribute](xref:System.Attribute).</span></span> <span data-ttu-id="f4894-647">类构造函数具有 `Descriptor` 类型的参数，因此，该类不符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-647">The class constructor has a parameter of type `Descriptor`, so the class is not CLS-compliant.</span></span> <span data-ttu-id="f4894-648">请注意，C# 编译器会发出警告，但编译成功。</span><span class="sxs-lookup"><span data-stu-id="f4894-648">Note that the C# compiler emits a warning but compiles successfully.</span></span> 
 
 ```csharp
 using System;
@@ -2658,42 +2658,42 @@ Public Class DescriptionAttribute : Inherits Attribute
 End Class
 ```
 
-## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 特性
+## <a name="the-clscompliantattribute-attribute"></a><span data-ttu-id="f4894-649">CLSCompliantAttribute 特性</span><span class="sxs-lookup"><span data-stu-id="f4894-649">The CLSCompliantAttribute attribute</span></span>
 
-[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性用于指示程序元素是否使用公共语言规范进行编译。 `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` 构造函数包含一个必需的参数 *isCompliant*，此参数指示该程序元素是否符合 CLS。 
+<span data-ttu-id="f4894-650">[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性用于指示程序元素是否使用公共语言规范进行编译。</span><span class="sxs-lookup"><span data-stu-id="f4894-650">The [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) attribute is used to indicate whether a program element complies with the Common Language Specification.</span></span> <span data-ttu-id="f4894-651">`CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` 构造函数包含一个必需的参数 *isCompliant*，此参数指示该程序元素是否符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-651">The `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` constructor includes a single required parameter, *isCompliant*, that indicates whether the program element is CLS-compliant.</span></span> 
 
-编译时，编译器检测到假定为符合 CLS 的不合规元素，并发出警告。 编译器不会对显式声明为不符合标准的类型或成员发出警告。 
+<span data-ttu-id="f4894-652">编译时，编译器检测到假定为符合 CLS 的不合规元素，并发出警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-652">At compile time, the compiler detects non-compliant elements that are presumed to be CLS-compliant and emits a warning.</span></span> <span data-ttu-id="f4894-653">编译器不会对显式声明为不符合标准的类型或成员发出警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-653">The compiler does not emit warnings for types or members that are explicitly declared to be non-compliant.</span></span> 
 
-组件开发人员可以通过两种方法使用 `CLSCompliantAttribute` 特性： 
+<span data-ttu-id="f4894-654">组件开发人员可以通过两种方法使用 `CLSCompliantAttribute` 特性：</span><span class="sxs-lookup"><span data-stu-id="f4894-654">Component developers can use the `CLSCompliantAttribute` attribute in two ways:</span></span> 
 
-* 定义由组件公开的公共接口的符合 CLS 的部件以及不符合 CLS 的部件。 如果特性用于将特定程序元素标记为符合 CLS，则使用该特性可保证能通过面向 .NET Framework 的所有语言和工具访问这些元素。 
+* <span data-ttu-id="f4894-655">定义由组件公开的公共接口的符合 CLS 的部件以及不符合 CLS 的部件。</span><span class="sxs-lookup"><span data-stu-id="f4894-655">To define the parts of the public interface exposed by a component that are CLS-compliant and the parts that are not CLS-compliant.</span></span> <span data-ttu-id="f4894-656">如果特性用于将特定程序元素标记为符合 CLS，则使用该特性可保证能通过面向 .NET Framework 的所有语言和工具访问这些元素。</span><span class="sxs-lookup"><span data-stu-id="f4894-656">When the attribute is used to mark particular program elements as CLS-compliant, its use guarantees that those elements are accessible from all languages and tools that target the .NET Framework.</span></span> 
 
-* 确保组件库的公共接口仅公开符合 CLS 的程序元素。 如果元素不符合 CLS，则编译器通常会发出一个警告。
+* <span data-ttu-id="f4894-657">确保组件库的公共接口仅公开符合 CLS 的程序元素。</span><span class="sxs-lookup"><span data-stu-id="f4894-657">To ensure that the component library's public interface exposes only program elements that are CLS-compliant.</span></span> <span data-ttu-id="f4894-658">如果元素不符合 CLS，则编译器通常会发出一个警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-658">If elements are not CLS-compliant, compilers will generally issue a warning.</span></span>
 
 > [!WARNING]
-> 在某些情况下，语言编译器执行符合 CLS 的规则，而不管是否使用 `CLSCompliantAttribute` 特性。 例如，在接口中定义 `*static` 成员会违反 CLS 规则。 但是，如果在接口中定义 `*static` 成员，C# 编译器会显示错误消息且无法编译应用。
+> <span data-ttu-id="f4894-659">在某些情况下，语言编译器执行符合 CLS 的规则，而不管是否使用 `CLSCompliantAttribute` 特性。</span><span class="sxs-lookup"><span data-stu-id="f4894-659">In some cases, language compilers enforce CLS-compliant rules regardless of whether the `CLSCompliantAttribute` attribute is used.</span></span> <span data-ttu-id="f4894-660">例如，在接口中定义 `*static` 成员会违反 CLS 规则。</span><span class="sxs-lookup"><span data-stu-id="f4894-660">For example, defining a `*static` member in an interface violates a CLS rule.</span></span> <span data-ttu-id="f4894-661">但是，如果在接口中定义 `*static` 成员，C# 编译器会显示错误消息且无法编译应用。</span><span class="sxs-lookup"><span data-stu-id="f4894-661">However, if you define a `*static` member in an interface, the C# compiler displays an error message and fails to compile the app.</span></span>
 
-`CLSCompliantAttribute` 特性标记为具有 `AttributeTargets.All` 值的 [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) 特性。 利用此值，您可以将 `CLSCompliantAttribute` 特性应用于任何程序元素，包括程序集、模块、类型（类、结构、枚举、接口和委托）、类型成员（构造函数、方法、属性、字段和事件）、参数、泛型参数和返回值。 但实际上，您只应将该特性应用于程序集、类型和类型成员。 否则，编译器在库的公共接口中遇到不符合标准的参数、泛型参数或返回值时，将忽略此特性并继续生成编译器警告。  
+<span data-ttu-id="f4894-662">`CLSCompliantAttribute` 特性标记为具有 `AttributeTargets.All` 值的 [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) 特性。</span><span class="sxs-lookup"><span data-stu-id="f4894-662">The `CLSCompliantAttribute` attribute is marked with an [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) attribute that has a value of `AttributeTargets.All`.</span></span> <span data-ttu-id="f4894-663">利用此值，您可以将 `CLSCompliantAttribute` 特性应用于任何程序元素，包括程序集、模块、类型（类、结构、枚举、接口和委托）、类型成员（构造函数、方法、属性、字段和事件）、参数、泛型参数和返回值。</span><span class="sxs-lookup"><span data-stu-id="f4894-663">This value allows you to apply the `CLSCompliantAttribute` attribute to any program element, including assemblies, modules, types (classes, structures, enumerations, interfaces, and delegates), type members (constructors, methods, properties, fields, and events), parameters, generic parameters, and return values.</span></span> <span data-ttu-id="f4894-664">但实际上，您只应将该特性应用于程序集、类型和类型成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-664">However, in practice, you should apply the attribute only to assemblies, types, and type members.</span></span> <span data-ttu-id="f4894-665">否则，编译器在库的公共接口中遇到不符合标准的参数、泛型参数或返回值时，将忽略此特性并继续生成编译器警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-665">Otherwise, compilers ignore the attribute and continue to generate compiler warnings whenever they encounter a non-compliant parameter, generic parameter, or return value in your library's public interface.</span></span>  
 
-`CLSCompliantAttribute` 特性的值由包含的程序元素继承。 例如，如果程序集标记为符合 CLS，则其类型也符合 CLS。 如果类型标记为符合 CLS，则其嵌套的类型和成员也符合 CLS。 
+<span data-ttu-id="f4894-666">`CLSCompliantAttribute` 特性的值由包含的程序元素继承。</span><span class="sxs-lookup"><span data-stu-id="f4894-666">The value of the `CLSCompliantAttribute` attribute is inherited by contained program elements.</span></span> <span data-ttu-id="f4894-667">例如，如果程序集标记为符合 CLS，则其类型也符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-667">For example, if an assembly is marked as CLS-compliant, its types are also CLS-compliant.</span></span> <span data-ttu-id="f4894-668">如果类型标记为符合 CLS，则其嵌套的类型和成员也符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-668">If a type is marked as CLS-compliant, its nested types and members are also CLS-compliant.</span></span> 
 
-您可以通过将 `CLSCompliantAttribute` 特性应用到包含的编程元素来显式重写继承的遵从性。 例如，可以使用具有 *isCompliant* 值为 `false` 的 `CLSCompliantAttribute` 特性来定义符合标准的程序集中的不符合标准的类型，还可以使用 *isComplian* 值为 `true` 的特性来定义不符合标准的程序集中的符合标准的类型。 您还可以在符合标准的类型中定义不符合标准的成员。 但是，不符合标准的类型无法拥有符合标准的成员，因此无法使用 *isCompliant* 值为 `true` 的特性从一个不符合标准的类型重写继承。 
+<span data-ttu-id="f4894-669">您可以通过将 `CLSCompliantAttribute` 特性应用到包含的编程元素来显式重写继承的遵从性。</span><span class="sxs-lookup"><span data-stu-id="f4894-669">You can explicitly override the inherited compliance by applying the `CLSCompliantAttribute` attribute to a contained program element.</span></span> <span data-ttu-id="f4894-670">例如，可以使用具有 *isCompliant* 值为 `false` 的 `CLSCompliantAttribute` 特性来定义符合标准的程序集中的不符合标准的类型，还可以使用 *isComplian* 值为 `true` 的特性来定义不符合标准的程序集中的符合标准的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-670">For example, you can use the `CLSCompliantAttribute` attribute with an *isCompliant* value of `false` to define a non-compliant type in a compliant assembly, and you can use the attribute with an *isComplian* value of `true` to define a compliant type in a non-compliant assembly.</span></span> <span data-ttu-id="f4894-671">您还可以在符合标准的类型中定义不符合标准的成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-671">You can also define non-compliant members in a compliant type.</span></span> <span data-ttu-id="f4894-672">但是，不符合标准的类型无法拥有符合标准的成员，因此无法使用 *isCompliant* 值为 `true` 的特性从一个不符合标准的类型重写继承。</span><span class="sxs-lookup"><span data-stu-id="f4894-672">However, a non-compliant type cannot have compliant members, so you cannot use the attribute with an *isCompliant* value of `true` to override inheritance from a non-compliant type.</span></span> 
 
-在开发组件时，应始终使用 `CLSCompliantAttribute` 特性来指示您的程序集、其类型及其成员是否符合 CLS。 
+<span data-ttu-id="f4894-673">在开发组件时，应始终使用 `CLSCompliantAttribute` 特性来指示您的程序集、其类型及其成员是否符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-673">When you are developing components, you should always use the `CLSCompliantAttribute` attribute to indicate whether your assembly, its types, and its members are CLS-compliant.</span></span> 
 
-创建符合 CLS 的组件： 
+<span data-ttu-id="f4894-674">创建符合 CLS 的组件：</span><span class="sxs-lookup"><span data-stu-id="f4894-674">To create CLS-compliant components:</span></span> 
 
-1. 使用 `CLSCompliantAttribute` 将程序集标记为符合 CLS。
+1. <span data-ttu-id="f4894-675">使用 `CLSCompliantAttribute` 将程序集标记为符合 CLS。</span><span class="sxs-lookup"><span data-stu-id="f4894-675">Use the `CLSCompliantAttribute` to mark you assembly as CLS-compliant.</span></span>
 
-2. 将程序集中不符合 CLS 的所有公开的类型标记为不符合标准。 
+2. <span data-ttu-id="f4894-676">将程序集中不符合 CLS 的所有公开的类型标记为不符合标准。</span><span class="sxs-lookup"><span data-stu-id="f4894-676">Mark any publicly exposed types in the assembly that are not CLS-compliant as non-compliant.</span></span> 
 
-3. 将符合 CLS 的类型中的所有公开的成员标记为不符合标准。 
+3. <span data-ttu-id="f4894-677">将符合 CLS 的类型中的所有公开的成员标记为不符合标准。</span><span class="sxs-lookup"><span data-stu-id="f4894-677">Mark any publicly exposed members in CLS-compliant types as non-compliant.</span></span> 
 
-4. 为不符合 CLS 的成员提供符合 CLS 的替代项。 
+4. <span data-ttu-id="f4894-678">为不符合 CLS 的成员提供符合 CLS 的替代项。</span><span class="sxs-lookup"><span data-stu-id="f4894-678">Provide a CLS-compliant alternative for non-CLS-compliant members.</span></span> 
 
-如果已成功标记所有不符合标准的类型和成员，您的编译器不会发出任何不符合警告。 但是，您应指出哪些成员不符合 CLS 并在产品文档中列出其不符合 CLS 的替代项。 
+<span data-ttu-id="f4894-679">如果已成功标记所有不符合标准的类型和成员，您的编译器不会发出任何不符合警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-679">If you've successfully marked all your non-compliant types and members, your compiler should not emit any non-compliance warnings.</span></span> <span data-ttu-id="f4894-680">但是，您应指出哪些成员不符合 CLS 并在产品文档中列出其不符合 CLS 的替代项。</span><span class="sxs-lookup"><span data-stu-id="f4894-680">However, you should indicate which members are not CLS-compliant and list their CLS-compliant alternatives in your product documentation.</span></span> 
 
-下面的示例使用 `CLSCompliantAttribute` 特性定义符合 CLS 的程序集和类型 `CharacterUtilities`，该类型具有两个不符合 CLS 的成员。 由于这两个成员标记有 `CLSCompliant(false)` 特性，因此编译器不生成任何警告。 该类还为两种方法提供符合 CLS 的替代项。 通常，我们只向 `ToUTF16` 方法添加两个重载，以便提供符合 CLS 的替代项。 但是，由于无法基于返回值重载这些方法，因此符合 CLS 的方法的名称不同于不符合标准的方法的名称。  
+<span data-ttu-id="f4894-681">下面的示例使用 `CLSCompliantAttribute` 特性定义符合 CLS 的程序集和类型 `CharacterUtilities`，该类型具有两个不符合 CLS 的成员。</span><span class="sxs-lookup"><span data-stu-id="f4894-681">The following example uses the `CLSCompliantAttribute` attribute to define a CLS-compliant assembly and a type, `CharacterUtilities`, that has two non-CLS-compliant members.</span></span> <span data-ttu-id="f4894-682">由于这两个成员标记有 `CLSCompliant(false)` 特性，因此编译器不生成任何警告。</span><span class="sxs-lookup"><span data-stu-id="f4894-682">Because both members are tagged with the `CLSCompliant(false)` attribute, the compiler produces no warnings.</span></span> <span data-ttu-id="f4894-683">该类还为两种方法提供符合 CLS 的替代项。</span><span class="sxs-lookup"><span data-stu-id="f4894-683">The class also provides a CLS-compliant alternative for both methods.</span></span> <span data-ttu-id="f4894-684">通常，我们只向 `ToUTF16` 方法添加两个重载，以便提供符合 CLS 的替代项。</span><span class="sxs-lookup"><span data-stu-id="f4894-684">Ordinarily, we would just add two overloads to the `ToUTF16` method to provide CLS-compliant alternatives.</span></span> <span data-ttu-id="f4894-685">但是，由于无法基于返回值重载这些方法，因此符合 CLS 的方法的名称不同于不符合标准的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="f4894-685">However, because methods cannot be overloaded based on return value, the names of the CLS-compliant methods are different from the names of the non-compliant methods.</span></span>  
 
 ```csharp
 using System;
@@ -2814,13 +2814,13 @@ Public Class CharacterUtilities
 End Class
 ```
 
-如果您开发的是应用程序而不是库（即，如果不公开可由其他应用程序开发人员使用的类型或成员），则只有在您的语言不支持程序元素时，您的应用程序使用的程序元素的 CLS 遵从性才会引起关注。 在这种情况下，当您尝试使用不符合 CLS 的元素时，您的语言编译器将生成错误。 
+<span data-ttu-id="f4894-686">如果您开发的是应用程序而不是库（即，如果不公开可由其他应用程序开发人员使用的类型或成员），则只有在您的语言不支持程序元素时，您的应用程序使用的程序元素的 CLS 遵从性才会引起关注。</span><span class="sxs-lookup"><span data-stu-id="f4894-686">If you are developing an app rather than a library (that is, if you aren't exposing types or members that can be consumed by other app developers), the CLS compliance of the program elements that your app consumes are of interest only if your language does not support them.</span></span> <span data-ttu-id="f4894-687">在这种情况下，当您尝试使用不符合 CLS 的元素时，您的语言编译器将生成错误。</span><span class="sxs-lookup"><span data-stu-id="f4894-687">In that case, your language compiler will generate an error when you try to use a non-CLS-compliant element.</span></span> 
 
-## <a name="cross-language-interoperability"></a>跨语言互操作性
+## <a name="cross-language-interoperability"></a><span data-ttu-id="f4894-688">跨语言互操作性</span><span class="sxs-lookup"><span data-stu-id="f4894-688">Cross-Language Interoperability</span></span>
 
-语言独立性可能有许多含义。 其中一种含义涉及到从使用一种语言编写的应用取用以另一种语言编写的类型。 本文介绍第二个含义，涉及将用多种语言编写的代码组合到一个 .NET Framework 程序集。 
+<span data-ttu-id="f4894-689">语言独立性可能有许多含义。</span><span class="sxs-lookup"><span data-stu-id="f4894-689">Language independence has a number of possible meanings.</span></span> <span data-ttu-id="f4894-690">其中一种含义涉及到从使用一种语言编写的应用取用以另一种语言编写的类型。</span><span class="sxs-lookup"><span data-stu-id="f4894-690">One meaning involves seamlessly consuming types written in one language from an app written in another language.</span></span> <span data-ttu-id="f4894-691">本文介绍第二个含义，涉及将用多种语言编写的代码组合到一个 .NET Framework 程序集。</span><span class="sxs-lookup"><span data-stu-id="f4894-691">A second meaning, which is the focus of this article, involves combining code written in multiple languages into a single .NET Framework assembly.</span></span> 
 
-以下示例通过创建一个名为 Utilities.dll 的包含两个类（`NumericLib` 和 `StringLib`）的类库演示了跨语言互操作性。 `NumericLib` 类用 C# 编写类，`StringLib` 类用 Visual Basic 编写。 以下是 `StringUtil.vb` 的源代码，该源代码在其 `StringLib` 类中包含单个成员 `ToTitleCase`。
+<span data-ttu-id="f4894-692">以下示例通过创建一个名为 Utilities.dll 的包含两个类（`NumericLib` 和 `StringLib`）的类库演示了跨语言互操作性。</span><span class="sxs-lookup"><span data-stu-id="f4894-692">The following example illustrates cross-language interoperability by creating a class library named Utilities.dll that includes two classes, `NumericLib` and `StringLib`.</span></span> <span data-ttu-id="f4894-693">`NumericLib` 类用 C# 编写类，`StringLib` 类用 Visual Basic 编写。</span><span class="sxs-lookup"><span data-stu-id="f4894-693">The `NumericLib` class is written in C#, and the `StringLib` class is written in Visual Basic.</span></span> <span data-ttu-id="f4894-694">以下是 `StringUtil.vb` 的源代码，该源代码在其 `StringLib` 类中包含单个成员 `ToTitleCase`。</span><span class="sxs-lookup"><span data-stu-id="f4894-694">Here's the source code for `StringUtil.vb`, which includes a single member, `ToTitleCase`, in its `StringLib` class.</span></span>
 
 ```vb
 Imports System.Collections.Generic
@@ -2857,7 +2857,7 @@ Public Module StringLib
 End Module
 ```
 
-以下是 NumberUtil.cs 的源代码，定义具有 `NumericLib` 和 `IsEven` 两个成员的 `NearZero` 类。
+<span data-ttu-id="f4894-695">以下是 NumberUtil.cs 的源代码，定义具有 `NumericLib` 和 `IsEven` 两个成员的 `NearZero` 类。</span><span class="sxs-lookup"><span data-stu-id="f4894-695">Here's the source code for NumberUtil.cs, which defines a `NumericLib` class that has two members, `IsEven` and `NearZero`.</span></span>
 
 ```csharp
 using System;
@@ -2887,25 +2887,25 @@ public static class NumericLib
 }
 ```
 
-若要将两个类打包到单个程序集中，必须将它们编译到模块中。 要将 Visual Basic 源代码文件编译到模块，请使用此命令： 
+<span data-ttu-id="f4894-696">若要将两个类打包到单个程序集中，必须将它们编译到模块中。</span><span class="sxs-lookup"><span data-stu-id="f4894-696">To package the two classes in a single assembly, you must compile them into modules.</span></span> <span data-ttu-id="f4894-697">要将 Visual Basic 源代码文件编译到模块，请使用此命令：</span><span class="sxs-lookup"><span data-stu-id="f4894-697">To compile the Visual Basic source code file into a module, use this command:</span></span> 
 
 ```
 vbc /t:module StringUtil.vb 
 ```
 
-要将 C# 源代码文件编译到模块，请使用此命令：
+<span data-ttu-id="f4894-698">要将 C# 源代码文件编译到模块，请使用此命令：</span><span class="sxs-lookup"><span data-stu-id="f4894-698">To compile the C# source code file into a module, use this command:</span></span>
 
 ```
 csc /t:module NumberUtil.cs
 ```
 
-然后，使用链接工具 (Link.exe) 将两个模块编译到一个程序集： 
+<span data-ttu-id="f4894-699">然后，使用链接工具 (Link.exe) 将两个模块编译到一个程序集：</span><span class="sxs-lookup"><span data-stu-id="f4894-699">You then use the Link tool (Link.exe) to compile the two modules into an assembly:</span></span> 
 
 ```
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 ```
 
-然后以下实例调用 `NumericLib.NearZero` 和 `StringLib.ToTitleCase` 方法。 请注意 Visual Basic 代码和 C# 代码都能够访问这两个类中的方法。
+<span data-ttu-id="f4894-700">然后以下实例调用 `NumericLib.NearZero` 和 `StringLib.ToTitleCase` 方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-700">The following example then calls the `NumericLib.NearZero` and `StringLib.ToTitleCase` methods.</span></span> <span data-ttu-id="f4894-701">请注意 Visual Basic 代码和 C# 代码都能够访问这两个类中的方法。</span><span class="sxs-lookup"><span data-stu-id="f4894-701">Note that both the Visual Basic code and the C# code are able to access the methods in both classes.</span></span>
 
 ```csharp
 using System;
@@ -2941,13 +2941,13 @@ End Module
 '       War and Peace
 ```
 
-要编译 Visual Basic 代码，请使用此命令：
+<span data-ttu-id="f4894-702">要编译 Visual Basic 代码，请使用此命令：</span><span class="sxs-lookup"><span data-stu-id="f4894-702">To compile the Visual Basic code, use this command:</span></span>
 
 ```
 vbc example.vb /r:UtilityLib.dll
 ```
 
-要使用 C# 进行编译，请将编译器的名称从 vbc 更改为 csc，将文件扩展名从 .vb 更改为 .cs：
+<span data-ttu-id="f4894-703">要使用 C# 进行编译，请将编译器的名称从 vbc 更改为 csc，将文件扩展名从 .vb 更改为 .cs：</span><span class="sxs-lookup"><span data-stu-id="f4894-703">To compile with C#, change the name of the compiler from vbc to csc, and change the file extension from .vb to .cs:</span></span>
 
 ```
 csc example.cs /r:UtilityLib.dll

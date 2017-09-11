@@ -37,39 +37,39 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>如何：使用平台调用播放波形文件（C# 编程指南）
-下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放波形声音文件。  
+# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a><span data-ttu-id="33269-102">如何：使用平台调用播放波形文件（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="33269-102">How to: Use Platform Invoke to Play a Wave File (C# Programming Guide)</span></span>
+<span data-ttu-id="33269-103">下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放波形声音文件。</span><span class="sxs-lookup"><span data-stu-id="33269-103">The following C# code example illustrates how to use platform invoke services to play a wave sound file on the Windows operating system.</span></span>  
   
-## <a name="example"></a>示例  
- 此示例代码使用 `DllImport` 将 `winmm.dll` 的 `PlaySound` 方法入口点导入为 `Form1 PlaySound()`。 本示例具有一个带按钮的简单 Windows 窗体。 单击该按钮将打开一个标准的 Windows <xref:System.Windows.Forms.OpenFileDialog> 对话框，以便你可以打开要播放的文件。 选中波形文件后，该文件将使用 winmm.DLL 程序集方法的 `PlaySound()` 方法播放。 有关 winmm.dll 的 `PlaySound` 方法的详细信息，请参阅[使用 PlaySound 功能处理波形音频文件](http://go.microsoft.com/fwlink/?LinkId=148553)。 浏览并选择具有 .wav 扩展名的文件，然后单击“打开”以使用平台调用播放波形文件。 文本框中显示所选文件的完整路径。  
+## <a name="example"></a><span data-ttu-id="33269-104">示例</span><span class="sxs-lookup"><span data-stu-id="33269-104">Example</span></span>  
+ <span data-ttu-id="33269-105">此示例代码使用 `DllImport` 将 `winmm.dll` 的 `PlaySound` 方法入口点导入为 `Form1 PlaySound()`。</span><span class="sxs-lookup"><span data-stu-id="33269-105">This example code uses `DllImport` to import `winmm.dll`'s `PlaySound` method entry point as `Form1 PlaySound()`.</span></span> <span data-ttu-id="33269-106">本示例具有一个带按钮的简单 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="33269-106">The example has a simple Windows Form with a button.</span></span> <span data-ttu-id="33269-107">单击该按钮将打开一个标准的 Windows <xref:System.Windows.Forms.OpenFileDialog> 对话框，以便你可以打开要播放的文件。</span><span class="sxs-lookup"><span data-stu-id="33269-107">Clicking the button opens a standard windows <xref:System.Windows.Forms.OpenFileDialog> dialog box so that you can open a file to play.</span></span> <span data-ttu-id="33269-108">选中波形文件后，该文件将使用 winmm.DLL 程序集方法的 `PlaySound()` 方法播放。</span><span class="sxs-lookup"><span data-stu-id="33269-108">When a wave file is selected, it is played by using the `PlaySound()` method of the winmm.DLL assembly method.</span></span> <span data-ttu-id="33269-109">有关 winmm.dll 的 `PlaySound` 方法的详细信息，请参阅[使用 PlaySound 功能处理波形音频文件](http://go.microsoft.com/fwlink/?LinkId=148553)。</span><span class="sxs-lookup"><span data-stu-id="33269-109">For more information about winmm.dll's `PlaySound` method, see [Using the PlaySound function with Waveform-Audio Files](http://go.microsoft.com/fwlink/?LinkId=148553).</span></span> <span data-ttu-id="33269-110">浏览并选择具有 .wav 扩展名的文件，然后单击“打开”以使用平台调用播放波形文件。</span><span class="sxs-lookup"><span data-stu-id="33269-110">Browse and select a file that has a .wav extension, and then click **Open** to play the wave file by using platform invoke.</span></span> <span data-ttu-id="33269-111">文本框中显示所选文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="33269-111">A text box shows the full path of the file selected.</span></span>  
   
- 通过筛选器设置对“打开文件”对话框进行筛选，以仅显示扩展名为 .wav 的文件：  
+ <span data-ttu-id="33269-112">通过筛选器设置对“打开文件”对话框进行筛选，以仅显示扩展名为 .wav 的文件：</span><span class="sxs-lookup"><span data-stu-id="33269-112">The **Open Files** dialog box is filtered to show only files that have a .wav extension through the filter settings:</span></span>  
   
- [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
+ <span data-ttu-id="33269-113">[!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="33269-113">[!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]</span></span>  
   
- [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
+ <span data-ttu-id="33269-114">[!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="33269-114">[!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="33269-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="33269-115">Compiling the Code</span></span>  
   
-### <a name="to-compile-the-code"></a>编译代码  
+### <a name="to-compile-the-code"></a><span data-ttu-id="33269-116">编译代码</span><span class="sxs-lookup"><span data-stu-id="33269-116">To compile the code</span></span>  
   
-1.  在 Visual Studio 中创建新的 C# Windows 应用程序项目，然后将其命名为“WinSound”。  
+1.  <span data-ttu-id="33269-117">在 Visual Studio 中创建新的 C# Windows 应用程序项目，然后将其命名为“WinSound”。</span><span class="sxs-lookup"><span data-stu-id="33269-117">Create a new C# Windows Application project in Visual Studio and name it **WinSound**.</span></span>  
   
-2.  复制上面的代码，然后将其粘贴到 `Form1.cs` 文件的内容上。  
+2.  <span data-ttu-id="33269-118">复制上面的代码，然后将其粘贴到 `Form1.cs` 文件的内容上。</span><span class="sxs-lookup"><span data-stu-id="33269-118">Copy the code above, and paste it over the contents of the `Form1.cs` file.</span></span>  
   
-3.  复制以下代码，然后用 `InitializeComponent()` 方法将其粘贴到 `Form1.Designer.cs` 文件中任何现有代码之后。  
+3.  <span data-ttu-id="33269-119">复制以下代码，然后用 `InitializeComponent()` 方法将其粘贴到 `Form1.Designer.cs` 文件中任何现有代码之后。</span><span class="sxs-lookup"><span data-stu-id="33269-119">Copy the following code, and paste it in the `Form1.Designer.cs` file, in the `InitializeComponent()` method, after any existing code.</span></span>  
   
-     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
+     <span data-ttu-id="33269-120">[!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="33269-120">[!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]</span></span>  
   
-4.  编译并运行该代码。  
+4.  <span data-ttu-id="33269-121">编译并运行该代码。</span><span class="sxs-lookup"><span data-stu-id="33269-121">Compile and run the code.</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 有关详细信息，请参阅 [.NET Framework 安全性](http://go.microsoft.com/fwlink/?LinkId=37122)。  
+## <a name="net-framework-security"></a><span data-ttu-id="33269-122">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="33269-122">.NET Framework Security</span></span>  
+ <span data-ttu-id="33269-123">有关详细信息，请参阅 [.NET Framework 安全性](http://go.microsoft.com/fwlink/?LinkId=37122)。</span><span class="sxs-lookup"><span data-stu-id="33269-123">For more information, see [.NET Framework Security](http://go.microsoft.com/fwlink/?LinkId=37122).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)   
- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)   
- [平台调用详解](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)   
- [用平台调用封送数据](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a><span data-ttu-id="33269-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="33269-124">See Also</span></span>  
+ <span data-ttu-id="33269-125">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="33269-125">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="33269-126">[互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md) </span><span class="sxs-lookup"><span data-stu-id="33269-126">[Interoperability Overview](../../../csharp/programming-guide/interop/interoperability-overview.md) </span></span>  
+ <span data-ttu-id="33269-127">[互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md) </span><span class="sxs-lookup"><span data-stu-id="33269-127">[Interoperability Overview](../../../csharp/programming-guide/interop/interoperability-overview.md) </span></span>  
+ <span data-ttu-id="33269-128">[平台调用详解](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243) </span><span class="sxs-lookup"><span data-stu-id="33269-128">[A Closer Look at Platform Invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243) </span></span>  
+ [<span data-ttu-id="33269-129">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="33269-129">Marshaling Data with Platform Invoke</span></span>](../../../framework/interop/marshaling-data-with-platform-invoke.md)
 

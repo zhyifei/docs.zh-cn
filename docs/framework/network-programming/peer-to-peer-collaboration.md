@@ -1,51 +1,61 @@
 ---
-title: "对等协作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "对等协作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 对等协作
-对网络连接位于Internet边缘更多的基于客户端的计算任务相对强大的计算机\(PC\)的使用率。  现代PC \(PC\)具有非常快处理器、浩大的内存和一个大硬盘，不完全使用任何一个，当执行常见计算的任务\(如扫描时的电子邮件和的Web。  现代PC可以轻松地为客户端和服务器\(对等项\)应用程序的许多类型的。  
+# <a name="peer-to-peer-collaboration"></a><span data-ttu-id="20fb5-102">对等协作</span><span class="sxs-lookup"><span data-stu-id="20fb5-102">Peer-to-Peer Collaboration</span></span>
+<span data-ttu-id="20fb5-103">对等网络服务利用存在于 Internet 边缘的相对强大的计算机（个人计算机）完成各项任务，不仅仅是基于客户端的计算任务。</span><span class="sxs-lookup"><span data-stu-id="20fb5-103">Peer-to-peer networking is the utilization of the relatively powerful computers (personal computers) that exist at the edge of the Internet for more than just client-based computing tasks.</span></span> <span data-ttu-id="20fb5-104">现代个人计算机 (PC) 具有超快处理器、大量存储和大型硬盘，在执行诸如电子邮件和 Web 浏览等常见计算任务时，并未充分利用这些优势。</span><span class="sxs-lookup"><span data-stu-id="20fb5-104">The modern personal computer (PC) has a very fast processor, vast memory, and a large hard disk, none of which are being fully utilized when performing common computing tasks such as e-mail and Web browsing.</span></span> <span data-ttu-id="20fb5-105">现代 PC 可以轻松地充当许多类型的应用程序的客户端和服务器（对等机）。</span><span class="sxs-lookup"><span data-stu-id="20fb5-105">The modern PC can easily act as both a client and server (a peer) for many types of applications.</span></span>  
   
--   对协作基础结构是在Windows vista和更高版本平台利用网络邻近services Microsoft Windows对基础结构的一个简化的实现。  它最适用于在网络邻近服务操作的子网中的对等类启用的应用程序使用，不过，它可以internet服务终结点或与。  它包含Live Messenger和其他活动识别应用程序使用确定联系人终结点、可用性和存在的常见交际管理者软件。  
+-   <span data-ttu-id="20fb5-106">对等协作基础架构是 Microsoft Windows 对等基础架构的简化实现，它利用了 Windows Vista 及更高版本平台中的网络邻居服务。</span><span class="sxs-lookup"><span data-stu-id="20fb5-106">The Peer-to-Peer Collaboration Infrastructure is a simplified implementation of the Microsoft Windows Peer-to-Peer Infrastructure that leverages the People Near Me service in Windows Vista and later platforms.</span></span> <span data-ttu-id="20fb5-107">它最适用于网络邻居服务运行的子网内启用了对等的应用程序，尽管它也可为 Internet 终结点或联系人提供服务。</span><span class="sxs-lookup"><span data-stu-id="20fb5-107">It is best used for peer-enabled applications within a subnet for which the People Near Me service operates, although it can service internet endpoints or contacts as well.</span></span> <span data-ttu-id="20fb5-108">它集成了 Live Messenger 和其他 Live 感知应用程序使用的常见联系人管理器，以确定联系人终结点、可用性和状态。</span><span class="sxs-lookup"><span data-stu-id="20fb5-108">It incorporates the common Contact Manager that is used by Live Messenger and other Live-aware applications to determine contact endpoints, availability, and presence.</span></span>  
   
-## 协作应用程序  
- 典型的对协作应用程序包括以下步骤:  
+-  
   
--   对等类确定是承载协作会话希望对等类的标识  
+## <a name="collaboration-applications"></a><span data-ttu-id="20fb5-109">协作应用程序</span><span class="sxs-lookup"><span data-stu-id="20fb5-109">Collaboration Applications</span></span>  
+ <span data-ttu-id="20fb5-110">典型的对等协作应用程序包含以下步骤：</span><span class="sxs-lookup"><span data-stu-id="20fb5-110">A typical peer-to-peer collaboration application is comprised of the following steps:</span></span>  
   
--   发送请求承载会话，在某种程度上，因此，宿主对等类授予管理协作事件。  
+-   <span data-ttu-id="20fb5-111">对等机确定有兴趣托管协作会话的对等机身份</span><span class="sxs-lookup"><span data-stu-id="20fb5-111">Peer determines the identity of a peer who is interested in hosting a collaboration session</span></span>  
   
--   宿主邀请在子网的联系人（包括申请者）到会话。  
+-   <span data-ttu-id="20fb5-112">以某种方式发送托管会话请求，主机对等机同意管理协作活动。</span><span class="sxs-lookup"><span data-stu-id="20fb5-112">A request to host a session is sent, somehow, and the host peer agrees to manage collaboration activity.</span></span>  
   
--   若要协作的所有对等类可以将宿主到其交际管理者软件。  
+-   <span data-ttu-id="20fb5-113">主机邀请子网联系人（包括请求者）参与会话。</span><span class="sxs-lookup"><span data-stu-id="20fb5-113">The host invites contacts on the subnet (including the requestor) to a session.</span></span>  
   
--   大多数对等类是否将发送此响应，接受或拒绝，立即回主对等类。  
+-   <span data-ttu-id="20fb5-114">希望协作的所有对等机均可将主机添加到其联系人管理器。</span><span class="sxs-lookup"><span data-stu-id="20fb5-114">All peers who want to collaborate may add the host to their contact managers.</span></span>  
   
--   若要协作的所有对等类将订阅到宿主对等类。  
+-   <span data-ttu-id="20fb5-115">无论接受还是拒绝，大多数对等机将及时向主机对等机发回邀请回复。</span><span class="sxs-lookup"><span data-stu-id="20fb5-115">Most peers will send invitation responses, whether accepted or declined, back to the host peer in a timely fashion.</span></span>  
   
--   当对等类执行其初始协作事件时，宿主对等类可以添加远程对等类到其交际管理者软件。  它还处理所有邀请响应确定谁接受的，拒绝，因此，未响应。  它可以取消此调用到非答案的人员，或者执行一些其他操作。  
+-   <span data-ttu-id="20fb5-116">所有希望协作的对等机都将订阅主机对等机。</span><span class="sxs-lookup"><span data-stu-id="20fb5-116">All peers who want to collaborate will subscribe to the host peer.</span></span>  
   
--   此时，宿主对等类可以开始使用任何受邀请对等类或注册的协作会话与协作基础结构的应用程序。  P2P应用程序使用对协作基础结构和 <xref:System.Net.PeerToPeer.Collaboration> 命名空间协调游戏、公告板、会话和其他serverless存在应用程序的通信。  
+-   <span data-ttu-id="20fb5-117">当对等机正在执行其初始协作活动时，主机对等机可向其联系人管理器添加远程对等机。</span><span class="sxs-lookup"><span data-stu-id="20fb5-117">While the peers are performing their initial collaboration activity, the host peer may add remote peers to its contact manager.</span></span> <span data-ttu-id="20fb5-118">它还处理所有邀请回复，以确定接受者、拒绝者、未答复者。</span><span class="sxs-lookup"><span data-stu-id="20fb5-118">It also processes all invitation responses to determine who has accepted, who has declined, and who has not answered.</span></span>  <span data-ttu-id="20fb5-119">它可能会取消邀请那些尚未答复或执行一些其他活动的人。</span><span class="sxs-lookup"><span data-stu-id="20fb5-119">It may cancel invitations to those who have not answered, or perform some other activity.</span></span>  
   
-## 对网络安全  
- 使用Kerberos，在Active Directory域，则域控制器提供身份验证服务。  在一个serverless对等类环境中，对等类必须提供自己的身份验证。  为对网络连接，所有节点可用作CA，移除根证书的要求在每对等类受信任的根存储区。  使用自签名证书，身份验证提供，格式化为X.509证书。  这些是使用私钥，由每对等类创建，生成公钥\/私钥对和证书签名的证书。  自签名证书进行身份验证使用并提供有关对实体的信息。  与X.509身份验证，对等类网络身份验证取决于跟踪回信任的公钥的证书链。  
+-   <span data-ttu-id="20fb5-120">此时，主机对等机可与所有受邀对等机开始协作会话，或向协作基础架构注册应用程序。</span><span class="sxs-lookup"><span data-stu-id="20fb5-120">At this point, the host peer can start a collaboration session with all invited peers, or register an application with the collaboration infrastructure.</span></span>  <span data-ttu-id="20fb5-121">P2P 应用程序使用对等协作基础架构和 <xref:System.Net.PeerToPeer.Collaboration> 命名空间来协调游戏、公告牌、会议和其他无服务器状态应用程序的通信。</span><span class="sxs-lookup"><span data-stu-id="20fb5-121">P2P applications use the Peer-to-Peer Collaboration Infrastructure and the <xref:System.Net.PeerToPeer.Collaboration> namespace to coordinate communications for games, bulletin boards, conferencing, and other serverless presence applications.</span></span>  
   
-## 请参阅  
- <xref:System.Net.PeerToPeer.Collaboration>   
- [关于 System.Net.PeerToPeer.Collaboration 命名空间](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+-  
+  
+## <a name="peer-to-peer-networking-security"></a><span data-ttu-id="20fb5-122">对等网络安全</span><span class="sxs-lookup"><span data-stu-id="20fb5-122">Peer-to-Peer Networking Security</span></span>  
+ <span data-ttu-id="20fb5-123">在 Active Directory 域中，域控制器使用 Kerberos 提供身份验证服务。</span><span class="sxs-lookup"><span data-stu-id="20fb5-123">In an Active Directory domain, domain controllers provide authentication services using Kerberos.</span></span> <span data-ttu-id="20fb5-124">在无服务器对等环境中，对等机必须提供其自身的身份验证。</span><span class="sxs-lookup"><span data-stu-id="20fb5-124">In a serverless peer environment, the peers must provide their own authentication.</span></span> <span data-ttu-id="20fb5-125">对于对等网络，任何节点都可充当 CA，无需要求每个对等机受信任根存储中存在根证书。</span><span class="sxs-lookup"><span data-stu-id="20fb5-125">For Peer-to-Peer Networking, any node can act as a CA, removing the requirement of a root certificate in each peer's trusted root store.</span></span> <span data-ttu-id="20fb5-126">使用自签名证书提供身份验证，格式为 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="20fb5-126">Authentication is provided using self-signed certificates, formatted as X.509 certificates.</span></span> <span data-ttu-id="20fb5-127">这些是由每个对等机创建的证书，其生成公钥/私钥对以及使用私钥签名的证书。</span><span class="sxs-lookup"><span data-stu-id="20fb5-127">These are certificates that are created by each peer, which generates the public key/private key pair and the certificate that is signed using the private key.</span></span> <span data-ttu-id="20fb5-128">自签名证书用于身份验证，并提供有关对等机实体的信息。</span><span class="sxs-lookup"><span data-stu-id="20fb5-128">The self-signed certificate is used for authentication and to provide information about the peer entity.</span></span> <span data-ttu-id="20fb5-129">如 X.509 身份验证一样，对等机网络身份验证依赖于一系列追溯受信任公钥的证书。</span><span class="sxs-lookup"><span data-stu-id="20fb5-129">Like X.509 authentication, peer networking authentication relies upon a chain of certificates tracing back to a public key that is trusted.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="20fb5-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20fb5-130">See Also</span></span>  
+ <span data-ttu-id="20fb5-131"><xref:System.Net.PeerToPeer.Collaboration></span><span class="sxs-lookup"><span data-stu-id="20fb5-131"><xref:System.Net.PeerToPeer.Collaboration></span></span>   
+ [<span data-ttu-id="20fb5-132">关于 System.Net.PeerToPeer.Collaboration 命名空间</span><span class="sxs-lookup"><span data-stu-id="20fb5-132">About the System.Net.PeerToPeer.Collaboration Namespace</span></span>](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+

@@ -1,63 +1,69 @@
 ---
-title: "部署互操作应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, 部署应用程序"
-  - "COM 互操作, 公开 COM 组件"
-  - "部署应用程序 [.NET Framework], 互操作"
-  - "向 .NET Framework 公开 COM 组件"
-  - "与非托管代码间的互操作, 部署应用程序"
-  - "与非托管代码间的互操作, 公开 COM 组件"
-  - "专用程序集"
-  - "共享程序集"
-  - "签名的程序集"
-  - "具有强名称的程序集, 互操作应用程序"
-  - "未签名的程序集"
+title: "部署互操作应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- deploying applications [.NET Framework], interop
+- strong-named assemblies, interop applications
+- unsigned assemblies
+- private assemblies
+- exposing COM components to .NET Framework
+- interoperation with unmanaged code, deploying applications
+- shared assemblies
+- COM interop, deploying applications
+- interoperation with unmanaged code, exposing COM components
+- signed assemblies
+- COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e969535342c9952630947dfff8e0d3104e3a5f80
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 部署互操作应用程序
-Interop 应用程序通常包括一个 .NET 客户端程序集、一个或多个表示唯一 COM 类型库的互操作程序集，以及一个或多个已注册的 COM 组件。  Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供了用于将类型库导入并转换到互操作程序集的工具，如[将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)中所述。  可以通过以下两种方式部署互操作应用程序：  
+# <a name="deploying-an-interop-application"></a><span data-ttu-id="eaaae-102">部署互操作应用程序</span><span class="sxs-lookup"><span data-stu-id="eaaae-102">Deploying an Interop Application</span></span>
+<span data-ttu-id="eaaae-103">互操作应用程序通常包括 .NET 客户端程序集，表示不同 COM 类型库的一个或多个互操作程序集，以及一个或多个已注册的 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="eaaae-103">An interop application typically includes a .NET client assembly, one or more interop assemblies representing distinct COM type libraries, and one or more registered COM components.</span></span> <span data-ttu-id="eaaae-104">Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供用于将类型库导入并转换为互操作程序集的工具，如[将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)中所述。</span><span class="sxs-lookup"><span data-stu-id="eaaae-104">Visual Studio and the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] provide tools to import and convert a type library to an interop assembly, as discussed in [Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md).</span></span> <span data-ttu-id="eaaae-105">可以通过以下两种方式部署互操作应用程序：</span><span class="sxs-lookup"><span data-stu-id="eaaae-105">There are two ways to deploy an interop application:</span></span>  
   
--   使用嵌入的互操作类型：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]开始，您可以指示编译器将互操作程序集中的类型信息嵌入到可执行文件中。  编译器只嵌入您的应用程序所使用的类型信息。  无需将互操作程序集与您的应用程序一起部署。  这是推荐采用的方法。  
+-   <span data-ttu-id="eaaae-106">使用嵌入的互操作类型：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可指示编译器将类型信息从互操作程序集嵌入到可执行文件中。</span><span class="sxs-lookup"><span data-stu-id="eaaae-106">By using embedded interop types: Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can instruct the compiler to embed type information from an interop assembly into your executable.</span></span> <span data-ttu-id="eaaae-107">编译器只嵌入应用程序使用的类型信息。</span><span class="sxs-lookup"><span data-stu-id="eaaae-107">The compiler embeds only the type information that your application uses.</span></span> <span data-ttu-id="eaaae-108">无需将互操作程序集与应用程序一起部署。</span><span class="sxs-lookup"><span data-stu-id="eaaae-108">You do not have to deploy the interop assembly with your application.</span></span> <span data-ttu-id="eaaae-109">这是推荐采用的方法。</span><span class="sxs-lookup"><span data-stu-id="eaaae-109">This is the recommended technique.</span></span>  
   
--   通过部署互操作程序集：您可以创建一个对互操作程序集的标准引用。  在本例中，互操作程序集必须与您的应用程序一起部署。  如果使用此方法，且不使用专用 COM 组件，而是要将某个 COM 组件集成到托管代码中，请始终引用该组件的作者所发布的主互操作程序集 \(PIA\)。  有关生成和使用主互操作程序集的更多信息，请参见[主互操作程序集](http://msdn.microsoft.com/zh-cn/b977a8be-59a0-40a0-a806-b11ffba5c080)。  
+-   <span data-ttu-id="eaaae-110">部署互操作程序集：可通过这种方式创建对互操作程序集的标准引用。</span><span class="sxs-lookup"><span data-stu-id="eaaae-110">By deploying interop assemblies: You can create a standard reference to an interop assembly.</span></span> <span data-ttu-id="eaaae-111">这种情况下，互操作程序集必须与应用程序一起部署。</span><span class="sxs-lookup"><span data-stu-id="eaaae-111">In this case, the interop assembly must be deployed with your application.</span></span> <span data-ttu-id="eaaae-112">如果使用此方法且不使用专有 COM 组件，请始终引用由打算并入托管代码中的 COM 组件的创建者发布的主互操作程序集 (PIA)。</span><span class="sxs-lookup"><span data-stu-id="eaaae-112">If you employ this technique, and you are not using a private COM component, always reference the primary interop assembly (PIA) published by the author of the COM component you intend to incorporate in your managed code.</span></span> <span data-ttu-id="eaaae-113">有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)。</span><span class="sxs-lookup"><span data-stu-id="eaaae-113">For more information about producing and using primary interop assemblies, see [Primary Interop Assemblies](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).</span></span>  
   
- 如果使用嵌入的互操作类型，则部署过程将既简单又直观。  您不需要执行任何特别的操作。  本文的其余部分将介绍将互操作程序集与您的应用程序一起部署的方案。  
+ <span data-ttu-id="eaaae-114">如果使用嵌入的互操作类型，则部署过程将既简单又直观。</span><span class="sxs-lookup"><span data-stu-id="eaaae-114">If you use embedded interop types, deployment is simple and straightforward.</span></span> <span data-ttu-id="eaaae-115">无需执行任何特殊操作。</span><span class="sxs-lookup"><span data-stu-id="eaaae-115">There is nothing special you need to do.</span></span> <span data-ttu-id="eaaae-116">本文的其余部分将介绍将应用程序与互操作程序集一起部署的方案。</span><span class="sxs-lookup"><span data-stu-id="eaaae-116">The rest of this article describes the scenarios for deploying interop assemblies with your application.</span></span>  
   
-## 部署互操作程序集  
- 程序集可以具有强名称。  具有强名称的程序集包括发行者的公钥，它用于提供唯一的标识。  [类型库导入程序 \(Tlbimp.exe\)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 生成的程序集可以由发行者使用 **\/keyfile** 选项来进行签名。  您可以将签名的程序集安装到全局程序集缓存中。  未签名的程序集必须作为专用程序集安装在用户的计算机上。  
+## <a name="deploying-interop-assemblies"></a><span data-ttu-id="eaaae-117">部署互操作程序集</span><span class="sxs-lookup"><span data-stu-id="eaaae-117">Deploying Interop Assemblies</span></span>  
+ <span data-ttu-id="eaaae-118">程序集可以具有强名称。</span><span class="sxs-lookup"><span data-stu-id="eaaae-118">Assemblies can have strong names.</span></span> <span data-ttu-id="eaaae-119">具有强名称的程序集包括发布者的公钥，它提供一个唯一标识。</span><span class="sxs-lookup"><span data-stu-id="eaaae-119">A strong-named assembly includes the publisher's public key, which provides a unique identity.</span></span> <span data-ttu-id="eaaae-120">通过[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 生成的程序集可由发行者使用 /keyfile 选项签名。</span><span class="sxs-lookup"><span data-stu-id="eaaae-120">Assemblies that are produced by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) can be signed by the publisher by using the **/keyfile** option.</span></span> <span data-ttu-id="eaaae-121">可将已签名的程序集安装到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="eaaae-121">You can install signed assemblies into the global assembly cache.</span></span> <span data-ttu-id="eaaae-122">未签名程序集必须作为专用程序集安装在用户计算机上。</span><span class="sxs-lookup"><span data-stu-id="eaaae-122">Unsigned assemblies must be installed on the user's machine as private assemblies.</span></span>  
   
-### 专用程序集  
- 若要安装专用的程序集，必须在同一目录结构中安装应用程序可执行文件和包含导入的 COM 类型的互操作程序集。  下图显示了将由 Client1.exe 和 Client2.exe（它们位于不同的应用程序目录中）专用的未签名互操作程序集。  此示例中名为 LOANLib.dll 的互操作程序集将安装两次。  
+### <a name="private-assemblies"></a><span data-ttu-id="eaaae-123">私有程序集</span><span class="sxs-lookup"><span data-stu-id="eaaae-123">Private Assemblies</span></span>  
+ <span data-ttu-id="eaaae-124">要安装私用程序集，必须在同一目录结构中安装应用程序可执行文件和包含导入的 COM 类型的互操作程序集。</span><span class="sxs-lookup"><span data-stu-id="eaaae-124">To install an assembly to be used privately, both the application executable and the interop assembly that contains imported COM types must be installed in the same directory structure.</span></span> <span data-ttu-id="eaaae-125">下图显示由 Client1.exe 和 Client2.exe 私用的未签名互操作程序集，二者位于不同的应用程序目录中。</span><span class="sxs-lookup"><span data-stu-id="eaaae-125">The following illustration shows an unsigned interop assembly to be used privately by Client1.exe and Client2.exe, which reside in separate application directories.</span></span> <span data-ttu-id="eaaae-126">此示例中名为 LOANLib.dll 的互操作程序集安装了两次。</span><span class="sxs-lookup"><span data-stu-id="eaaae-126">The interop assembly, which is called LOANLib.dll in this example, is installed twice.</span></span>  
   
- ![目录结构和 Windows 注册表](../../../docs/framework/interop/media/comdeployprivate.gif "comdeployprivate")  
-专用部署的目录结构和注册表项  
+ <span data-ttu-id="eaaae-127">![目录结构和 Windows 注册表](../../../docs/framework/interop/media/comdeployprivate.gif "comdeployprivate")</span><span class="sxs-lookup"><span data-stu-id="eaaae-127">![Directory structure and Windows registry](../../../docs/framework/interop/media/comdeployprivate.gif "comdeployprivate")</span></span>  
+<span data-ttu-id="eaaae-128">私有部署的目录结构和注册表项</span><span class="sxs-lookup"><span data-stu-id="eaaae-128">Directory structure and registry entries for a private deployment</span></span>  
   
- 与应用程序关联的所有 COM 组件都必须安装在 Windows 注册表中。  如果图中的 Client1.exe 和 Client2.exe 安装在不同的计算机上，则必须在这两台计算机上注册 COM 组件。  
+ <span data-ttu-id="eaaae-129">与应用程序关联的所有 COM 组件都必须安装在 Windows 注册表中。</span><span class="sxs-lookup"><span data-stu-id="eaaae-129">All COM components associated with the application must be installed in the Windows registry.</span></span> <span data-ttu-id="eaaae-130">如果图中的 Client1.exe 和 Client2.exe 安装在不同计算机上，则必须在这两台计算机上注册 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="eaaae-130">If Client1.exe and Client2.exe in the illustration are installed on different computers, you must register the COM components on both computers.</span></span>  
   
-### 共享程序集  
- 多个应用程序共享的程序集应安装在一个称作“全局程序集缓存”的集中储存库中。  对于在全局程序集缓存中签名并安装的互操作程序集，多个 .NET 客户端可以访问该程序集的同一副本。  有关生成和使用主互操作程序集的更多信息，请参见[主互操作程序集](http://msdn.microsoft.com/zh-cn/b977a8be-59a0-40a0-a806-b11ffba5c080)。  
+### <a name="shared-assemblies"></a><span data-ttu-id="eaaae-131">共享程序集</span><span class="sxs-lookup"><span data-stu-id="eaaae-131">Shared Assemblies</span></span>  
+ <span data-ttu-id="eaaae-132">多个应用程序共享的程序集应安装在一个称作全局程序集缓存的集中储存库中。</span><span class="sxs-lookup"><span data-stu-id="eaaae-132">Assemblies that are shared by multiple applications should be installed in a centralized repository called the global assembly cache.</span></span> <span data-ttu-id="eaaae-133">多个 .NET 客户端可访问互操作程序集的同一副本，此程序集在全局程序集缓存中签名并安装在其中。</span><span class="sxs-lookup"><span data-stu-id="eaaae-133">.NET clients can access the same copy of the interop assembly, which is signed and installed in the global assembly cache.</span></span> <span data-ttu-id="eaaae-134">有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)。</span><span class="sxs-lookup"><span data-stu-id="eaaae-134">For more information about producing and using primary interop assemblies, see [Primary Interop Assemblies](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).</span></span>  
   
-## 请参阅  
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)   
- [将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [Using COM Types in Managed Code](http://msdn.microsoft.com/zh-cn/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [编译互操作项目](../../../docs/framework/interop/compiling-an-interop-project.md)
+## <a name="see-also"></a><span data-ttu-id="eaaae-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="eaaae-135">See Also</span></span>  
+ <span data-ttu-id="eaaae-136">[向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md) </span><span class="sxs-lookup"><span data-stu-id="eaaae-136">[Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md) </span></span>  
+ <span data-ttu-id="eaaae-137">[将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) </span><span class="sxs-lookup"><span data-stu-id="eaaae-137">[Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) </span></span>  
+ <span data-ttu-id="eaaae-138">[在托管代码中使用 COM 类型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) </span><span class="sxs-lookup"><span data-stu-id="eaaae-138">[Using COM Types in Managed Code](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66) </span></span>  
+ [<span data-ttu-id="eaaae-139">编译互操作项目</span><span class="sxs-lookup"><span data-stu-id="eaaae-139">Compiling an Interop Project</span></span>](../../../docs/framework/interop/compiling-an-interop-project.md)
+

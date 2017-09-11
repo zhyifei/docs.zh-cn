@@ -35,33 +35,33 @@ ms.lasthandoff: 08/03/2017
 
 ---
 
-# <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
+# <a name="main-return-values-c-programming-guide"></a><span data-ttu-id="88ff5-102">Main() 返回值（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="88ff5-102">Main() return values (C# Programming Guide)</span></span>
 
-`Main` 方法可以返回 `void`：
+<span data-ttu-id="88ff5-103">`Main` 方法可以返回 `void`：</span><span class="sxs-lookup"><span data-stu-id="88ff5-103">The `Main` method can return `void`:</span></span>
 
-[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+<span data-ttu-id="88ff5-104">[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="88ff5-104">[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]</span></span>
 
-还可以返回 `int`：
+<span data-ttu-id="88ff5-105">还可以返回 `int`：</span><span class="sxs-lookup"><span data-stu-id="88ff5-105">It can also return an `int`:</span></span>
 
-[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+<span data-ttu-id="88ff5-106">[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="88ff5-106">[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]</span></span>
 
-如果未使用 `Main` 的返回值，则返回 `void` 可以使代码变得略微简单。 但是，返回整数可使程序将状态信息传递给调用可执行文件的其他程序或脚本。 来自 `Main` 的返回值视为进程的退出代码。 以下示例演示了如何访问 `Main` 的返回值。
+<span data-ttu-id="88ff5-107">如果未使用 `Main` 的返回值，则返回 `void` 可以使代码变得略微简单。</span><span class="sxs-lookup"><span data-stu-id="88ff5-107">If the return value from `Main` is not used, returning `void` allows for slightly simpler code.</span></span> <span data-ttu-id="88ff5-108">但是，返回整数可使程序将状态信息传递给调用可执行文件的其他程序或脚本。</span><span class="sxs-lookup"><span data-stu-id="88ff5-108">However, returning an integer enables the program to communicate status information to other programs or scripts that invoke the executable file.</span></span> <span data-ttu-id="88ff5-109">来自 `Main` 的返回值视为进程的退出代码。</span><span class="sxs-lookup"><span data-stu-id="88ff5-109">The return value from `Main` is treated as the exit code for the process.</span></span> <span data-ttu-id="88ff5-110">以下示例演示了如何访问 `Main` 的返回值。</span><span class="sxs-lookup"><span data-stu-id="88ff5-110">The following example shows how the return value from `Main` can be accessed.</span></span>
 
-## <a name="example"></a>示例
+## <a name="example"></a><span data-ttu-id="88ff5-111">示例</span><span class="sxs-lookup"><span data-stu-id="88ff5-111">Example</span></span>
 
-此示例使用 [.NET Core](../../../core/index.md) 命令行工具。 如果不熟悉 .NET Core 命令行工具，可通过本[入门主题](../../../core/tutorials/using-with-xplat-cli.md)进行了解。
+<span data-ttu-id="88ff5-112">此示例使用 [.NET Core](../../../core/index.md) 命令行工具。</span><span class="sxs-lookup"><span data-stu-id="88ff5-112">This example uses [.NET Core](../../../core/index.md) command line tools.</span></span> <span data-ttu-id="88ff5-113">如果不熟悉 .NET Core 命令行工具，可通过本[入门主题](../../../core/tutorials/using-with-xplat-cli.md)进行了解。</span><span class="sxs-lookup"><span data-stu-id="88ff5-113">If you are unfamilar with .NET Core command line tools, you can learn about them in this [Get started topic](../../../core/tutorials/using-with-xplat-cli.md).</span></span>
 
-修改 program.cs 中的 `Main` 方法，如下所示：
+<span data-ttu-id="88ff5-114">修改 program.cs 中的 `Main` 方法，如下所示：</span><span class="sxs-lookup"><span data-stu-id="88ff5-114">Modify the `Main` method in *program.cs* as follows:</span></span>
 
-[!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+<span data-ttu-id="88ff5-115">[!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="88ff5-115">[!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]</span></span>
 
-在 Windows 中执行程序时，从 `Main` 函数返回的任何值都存储在环境变量中。 可使用批处理文件中的 `ERRORLEVEL` 或 PowerShell 中的 `$LastExitCode` 来检索此环境变量。
+<span data-ttu-id="88ff5-116">在 Windows 中执行程序时，从 `Main` 函数返回的任何值都存储在环境变量中。</span><span class="sxs-lookup"><span data-stu-id="88ff5-116">When a program is executed in Windows, any value returned from the `Main` function is stored in an environment variable.</span></span> <span data-ttu-id="88ff5-117">可使用批处理文件中的 `ERRORLEVEL` 或 PowerShell 中的 `$LastExitCode` 来检索此环境变量。</span><span class="sxs-lookup"><span data-stu-id="88ff5-117">This environment variable can be retrieved using `ERRORLEVEL` from a batch file, or `$LastExitCode` from powershell.</span></span>
 
-可使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`命令构建应用程序。
+<span data-ttu-id="88ff5-118">可使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`命令构建应用程序。</span><span class="sxs-lookup"><span data-stu-id="88ff5-118">You can build the application using the [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` command.</span></span>
 
-接下来，创建一个 Powershell 脚本来运行应用程序并显示结果。 将以下代码粘贴到文本文件中，并在包含该项目的文件夹中将其另存为 `test.ps1`。 可通过在 PowerShell 提示符下键入 `test.ps1` 来运行 PowerShell 脚本。
+<span data-ttu-id="88ff5-119">接下来，创建一个 Powershell 脚本来运行应用程序并显示结果。</span><span class="sxs-lookup"><span data-stu-id="88ff5-119">Next, create a Powershell script to run the application and display the result.</span></span> <span data-ttu-id="88ff5-120">将以下代码粘贴到文本文件中，并在包含该项目的文件夹中将其另存为 `test.ps1`。</span><span class="sxs-lookup"><span data-stu-id="88ff5-120">Paste the following code into a text file and save it as `test.ps1` in the folder that contains the project.</span></span> <span data-ttu-id="88ff5-121">可通过在 PowerShell 提示符下键入 `test.ps1` 来运行 PowerShell 脚本。</span><span class="sxs-lookup"><span data-stu-id="88ff5-121">Run the powershell script by typing `test.ps1` at the powershell prompt.</span></span>
 
-因为代码返回零，所以批处理文件将报告成功。 但是，如果将 MainReturnValTest.cs 更改为返回非零值，然后重新编译程序，则 PowerShell 脚本的后续执行将报告失败。
+<span data-ttu-id="88ff5-122">因为代码返回零，所以批处理文件将报告成功。</span><span class="sxs-lookup"><span data-stu-id="88ff5-122">Because the code returns zero, the batch file will report success.</span></span> <span data-ttu-id="88ff5-123">但是，如果将 MainReturnValTest.cs 更改为返回非零值，然后重新编译程序，则 PowerShell 脚本的后续执行将报告失败。</span><span class="sxs-lookup"><span data-stu-id="88ff5-123">However, if you change MainReturnValTest.cs to return a non-zero value and then re-compile the program, subsequent execution of the powershell script will report failure.</span></span>
 
 ```powershell
 dotnet run
@@ -74,16 +74,16 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>示例输出
+## <a name="sample-output"></a><span data-ttu-id="88ff5-124">示例输出</span><span class="sxs-lookup"><span data-stu-id="88ff5-124">Sample output</span></span>
 
 ```txt
 Execution succeeded
 Return value = 0
 ```
 
-## <a name="async-main-return-values"></a>Async Main 返回值
+## <a name="async-main-return-values"></a><span data-ttu-id="88ff5-125">Async Main 返回值</span><span class="sxs-lookup"><span data-stu-id="88ff5-125">Async Main return values</span></span>
 
-Async Main 返回值将在 `Main` 中调用异步方法时所需的样本代码移动到编译器生成的代码中。 以前，需要编写此结构来调用异步代码并确保程序运行至异步操作完成：
+<span data-ttu-id="88ff5-126">Async Main 返回值将在 `Main` 中调用异步方法时所需的样本代码移动到编译器生成的代码中。</span><span class="sxs-lookup"><span data-stu-id="88ff5-126">Async Main return values move the boilerplate code necessary for calling asynchronous methods in `Main` to code generated by the compiler.</span></span> <span data-ttu-id="88ff5-127">以前，需要编写此结构来调用异步代码并确保程序运行至异步操作完成：</span><span class="sxs-lookup"><span data-stu-id="88ff5-127">Previously, you would need to write this construct to call asynchronous code and ensure your program ran until the asynchronous operation completed:</span></span>
 
 ```csharp
 public static void Main()
@@ -98,28 +98,32 @@ private static async Task<int> AsyncConsoleWork()
 }
 ```
 
-现在，可以将其替代为：
+<span data-ttu-id="88ff5-128">现在，可以将其替代为：</span><span class="sxs-lookup"><span data-stu-id="88ff5-128">Now, this can be replaced by:</span></span>
 
-[!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
+<span data-ttu-id="88ff5-129">[!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]</span><span class="sxs-lookup"><span data-stu-id="88ff5-129">[!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]</span></span>
 
-新语法的优点是编译器始终生成正确的代码。
+<span data-ttu-id="88ff5-130">新语法的优点是编译器始终生成正确的代码。</span><span class="sxs-lookup"><span data-stu-id="88ff5-130">The advantage of the new syntax is that the compiler always generates the correct code.</span></span>
 
-## <a name="compiler-generated-code"></a>编译器生成的代码
+## <a name="compiler-generated-code"></a><span data-ttu-id="88ff5-131">编译器生成的代码</span><span class="sxs-lookup"><span data-stu-id="88ff5-131">Compiler generated code</span></span>
 
-当应用程序入口点返回 `Task` 或 `Task<int>` 时，编译器生成一个新的入口点，该入口点调用应用程序代码中声明的入口点方法。 假设此入口点名为 `$GeneratedMain`，编译器将为这些入口点生成以下代码：
+<span data-ttu-id="88ff5-132">当应用程序入口点返回 `Task` 或 `Task<int>` 时，编译器生成一个新的入口点，该入口点调用应用程序代码中声明的入口点方法。</span><span class="sxs-lookup"><span data-stu-id="88ff5-132">When the application entry point returns a `Task` or `Task<int>`, the compiler generates a new entry point that calls the entry point method declared in the application code.</span></span> <span data-ttu-id="88ff5-133">假设此入口点名为 `$GeneratedMain`，编译器将为这些入口点生成以下代码：</span><span class="sxs-lookup"><span data-stu-id="88ff5-133">Assuming that this entry point is called `$GeneratedMain`, the compiler generates the following code for these entry points:</span></span>
 
-- `static Task Main()` 导致编译器发出 `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();` 的等效项
-- `static Task Main(string[])` 导致编译器发出 `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的等效项
-- `static Task<int> Main()` 导致编译器发出 `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();` 的等效项
-- `static Task<int> Main(string[])` 导致编译器发出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的等效项
+- <span data-ttu-id="88ff5-134">`static Task Main()` 导致编译器发出 `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();` 的等效项</span><span class="sxs-lookup"><span data-stu-id="88ff5-134">`static Task Main()` results in the compiler emitting the equivalent of `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="88ff5-135">`static Task Main(string[])` 导致编译器发出 `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的等效项</span><span class="sxs-lookup"><span data-stu-id="88ff5-135">`static Task Main(string[])` results in the compiler emitting the equivalent of `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="88ff5-136">`static Task<int> Main()` 导致编译器发出 `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();` 的等效项</span><span class="sxs-lookup"><span data-stu-id="88ff5-136">`static Task<int> Main()` results in the compiler emitting the equivalent of `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="88ff5-137">`static Task<int> Main(string[])` 导致编译器发出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的等效项</span><span class="sxs-lookup"><span data-stu-id="88ff5-137">`static Task<int> Main(string[])` results in the compiler emitting the equivalent of `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span></span>
 
 > [!NOTE]
->如果示例在 `Main` 方法上使用 `async` 修饰符，则编译器将生成相同的代码。
+><span data-ttu-id="88ff5-138">如果示例在 `Main` 方法上使用 `async` 修饰符，则编译器将生成相同的代码。</span><span class="sxs-lookup"><span data-stu-id="88ff5-138">If the examples used `async` modifier on the `Main` method, the compiler would generate the same code.</span></span>
 
-## <a name="see-also"></a>请参阅
-[C# 编程指南](../../programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="88ff5-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="88ff5-139">See also</span></span>
+<span data-ttu-id="88ff5-140">[C# 编程指南](../../programming-guide/index.md)
 [C# 参考](../index.md)
 [Main() 和命令行参数](index.md)
 [如何：显示命令行参数](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-[如何：使用 foreach 访问命令行参数](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+[如何：使用 foreach 访问命令行参数](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)</span><span class="sxs-lookup"><span data-stu-id="88ff5-140">[C# Programming Guide](../../programming-guide/index.md)
+[C# Reference](../index.md)
+[Main() and Command-Line Arguments](index.md)
+[How to: Display Command Line Arguments](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+[How to: Access Command-Line Arguments Using foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)</span></span>
 

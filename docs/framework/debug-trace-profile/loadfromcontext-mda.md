@@ -1,60 +1,65 @@
 ---
-title: "loadFromContext MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), LoadFrom context"
-  - "managed debugging assistants (MDAs), LoadFrom context"
-  - "LoadFrom context"
-  - "LoadFromContext MDA"
+title: loadFromContext MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), LoadFrom context
+- managed debugging assistants (MDAs), LoadFrom context
+- LoadFrom context
+- LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d693272adeb0b1bcfea196edb1a23e8b448516cb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# loadFromContext MDA
-如果向 `LoadFrom` 上下文中加载了一个程序集，则将激活 `loadFromContext` 托管调试助手 \(MDA\)。  调用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 或其他的类似方法时会发生这种情况。  
+# <a name="loadfromcontext-mda"></a><span data-ttu-id="3c55e-102">loadFromContext MDA</span><span class="sxs-lookup"><span data-stu-id="3c55e-102">loadFromContext MDA</span></span>
+<span data-ttu-id="3c55e-103">如果程序集加载到 `LoadFrom` 上下文，将激活 `loadFromContext` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="3c55e-103">The `loadFromContext` managed debugging assistant (MDA) is activated if an assembly is loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="3c55e-104">这种情况可能由于调用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 或其他类似方法而发生。</span><span class="sxs-lookup"><span data-stu-id="3c55e-104">This situation can occur as a result of calling <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> or other similar methods.</span></span>  
   
-## 症状  
- 使用某些加载程序方法可能会导致向 `LoadFrom` 上下文中加载程序集。  使用此上下文可导致序列化、强制转换和依赖项解析出现意外行为。  通常，建议将程序集加载到 `Load` 上下文中以避免出现这些问题。  如果不使用此 MDA，则很难确定程序集加载到了哪个上下文中。  
+## <a name="symptoms"></a><span data-ttu-id="3c55e-105">症状</span><span class="sxs-lookup"><span data-stu-id="3c55e-105">Symptoms</span></span>  
+ <span data-ttu-id="3c55e-106">使用某些加载器方法可能导致在 `LoadFrom` 上下文中加载程序集。</span><span class="sxs-lookup"><span data-stu-id="3c55e-106">The use of some loader methods can result in assemblies being loaded in the `LoadFrom` context.</span></span> <span data-ttu-id="3c55e-107">使用此上下文可能导致序列化、转换和依赖项解析出现意外的行为。</span><span class="sxs-lookup"><span data-stu-id="3c55e-107">The use of this context can result in unexpected behavior for serialization, casting, and dependency resolution.</span></span> <span data-ttu-id="3c55e-108">通常，建议将程序集加载到 `Load` 上下文来避免这些问题。</span><span class="sxs-lookup"><span data-stu-id="3c55e-108">In general, it is recommended that assemblies be loaded into the `Load` context to avoid these problems.</span></span> <span data-ttu-id="3c55e-109">如果没有此 MDA，很难确定程序集加载到了哪个上下文。</span><span class="sxs-lookup"><span data-stu-id="3c55e-109">It is difficult to determine which context an assembly has been loaded into without this MDA.</span></span>  
   
-## 原因  
- 通常，如果从 `Load` 上下文之外的路径（如全局程序集缓存或 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> 属性）加载程序集，则程序集会被加载到 `LoadFrom` 上下文中。  
+## <a name="cause"></a><span data-ttu-id="3c55e-110">原因</span><span class="sxs-lookup"><span data-stu-id="3c55e-110">Cause</span></span>  
+ <span data-ttu-id="3c55e-111">通常，如果从 `Load` 上下文外部的路径加载程序集（例如全局程序集缓存或 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> 属性），则会将程序集加载到 `LoadFrom` 上下文。</span><span class="sxs-lookup"><span data-stu-id="3c55e-111">Generally, an assembly was loaded into the `LoadFrom` context if it was loaded from a path outside the `Load` context, such as the global assembly cache or the <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> property.</span></span>  
   
-## 解决方法  
- 配置应用程序使其不再需要 <xref:System.Reflection.Assembly.LoadFrom%2A> 调用。  您可以使用以下技术来实现此目的：  
+## <a name="resolution"></a><span data-ttu-id="3c55e-112">解决方法</span><span class="sxs-lookup"><span data-stu-id="3c55e-112">Resolution</span></span>  
+ <span data-ttu-id="3c55e-113">配置应用程序使其不再需要 <xref:System.Reflection.Assembly.LoadFrom%2A> 调用。</span><span class="sxs-lookup"><span data-stu-id="3c55e-113">Configure applications such that <xref:System.Reflection.Assembly.LoadFrom%2A> calls are no longer needed.</span></span> <span data-ttu-id="3c55e-114">可以使用以下技术进行此操作：</span><span class="sxs-lookup"><span data-stu-id="3c55e-114">You can use the following techniques for doing so:</span></span>  
   
--   在全局程序集缓存中安装程序集。  
+-   <span data-ttu-id="3c55e-115">在全局程序集缓存中安装程序集。</span><span class="sxs-lookup"><span data-stu-id="3c55e-115">Install assemblies in the global assembly cache.</span></span>  
   
--   将程序集放置在 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 目录中。  对于默认域，<xref:System.AppDomainSetup.ApplicationBase%2A> 目录是启动进程的可执行文件所在的目录。  如果不能方便地移动程序集，则可能还需要创建一个新的 <xref:System.AppDomain>。  
+-   <span data-ttu-id="3c55e-116">将程序集放在 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 目录。</span><span class="sxs-lookup"><span data-stu-id="3c55e-116">Place assemblies in the <xref:System.AppDomainSetup.ApplicationBase%2A> directory for the <xref:System.AppDomain>.</span></span> <span data-ttu-id="3c55e-117">如果采用默认域，<xref:System.AppDomainSetup.ApplicationBase%2A> 目录是包含启动该进程的可执行文件的目录。</span><span class="sxs-lookup"><span data-stu-id="3c55e-117">In the case of the default domain, the <xref:System.AppDomainSetup.ApplicationBase%2A> directory is the one that contains the executable file that started the process.</span></span> <span data-ttu-id="3c55e-118">如果不方便移动程序集，可能还需要创建新的 <xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="3c55e-118">This might also require creating a new <xref:System.AppDomain> if it is not convenient to move the assembly.</span></span>  
   
--   如果依赖程序集位于相对于可执行文件的子目录中，则应向您的应用程序配置 \(.config\) 文件或辅助应用程序域添加一个探测路径。  
+-   <span data-ttu-id="3c55e-119">将探测路径添加到应用程序配置 (.config) 文件，如果依赖程序集位于可执行文件相对的子目录，则添加到辅助应用程序域。</span><span class="sxs-lookup"><span data-stu-id="3c55e-119">Add a probing path to your application configuration (.config) file or to secondary  application domains if dependent assemblies are in child directories relative to the executable.</span></span>  
   
- 在每种情况下，都可以更改代码以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法。  
+ <span data-ttu-id="3c55e-120">每种情况下，均可将代码更改为使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法。</span><span class="sxs-lookup"><span data-stu-id="3c55e-120">In each case, the code can be changed to use the <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> method.</span></span>  
   
-## 对运行时的影响  
- 此 MDA 对 CLR 无任何影响。  它会报告因加载请求而使用的上下文。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="3c55e-121">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="3c55e-121">Effect on the Runtime</span></span>  
+ <span data-ttu-id="3c55e-122">MDA 对 CLR 没有任何影响。</span><span class="sxs-lookup"><span data-stu-id="3c55e-122">The MDA does not have any effect on the CLR.</span></span> <span data-ttu-id="3c55e-123">它报告由于加载请求而使用的上下文。</span><span class="sxs-lookup"><span data-stu-id="3c55e-123">It reports the context that was used as a result of a load request.</span></span>  
   
-## Output  
- 此 MDA 会报告已将程序集加载到 `LoadFrom` 上下文中。  它指定该程序集的简单名称和路径。  它还建议进行迁移以避免使用 `LoadFrom` 上下文。  
+## <a name="output"></a><span data-ttu-id="3c55e-124">输出</span><span class="sxs-lookup"><span data-stu-id="3c55e-124">Output</span></span>  
+ <span data-ttu-id="3c55e-125">MDA 报告程序集已加载到 `LoadFrom` 上下文。</span><span class="sxs-lookup"><span data-stu-id="3c55e-125">The MDA reports that the assembly was loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="3c55e-126">它指定程序集的简单名称和路径。</span><span class="sxs-lookup"><span data-stu-id="3c55e-126">It specifies the simple name of the assembly and the path.</span></span> <span data-ttu-id="3c55e-127">它还建议避免使用 `LoadFrom` 上下文来减轻风险。</span><span class="sxs-lookup"><span data-stu-id="3c55e-127">It also suggests mitigations to avoid using the `LoadFrom` context.</span></span>  
   
-## 配置  
+## <a name="configuration"></a><span data-ttu-id="3c55e-128">配置</span><span class="sxs-lookup"><span data-stu-id="3c55e-128">Configuration</span></span>  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <loadFromContext />  
@@ -62,8 +67,8 @@ caps.handback.revision: 8
 </mdaConfig>  
 ```  
   
-## 示例  
- 下面的代码示例演示一种可激活此 MDA 的情况：  
+## <a name="example"></a><span data-ttu-id="3c55e-129">示例</span><span class="sxs-lookup"><span data-stu-id="3c55e-129">Example</span></span>  
+ <span data-ttu-id="3c55e-130">以下代码示例展示了一种可激活该 MDA 的情况：</span><span class="sxs-lookup"><span data-stu-id="3c55e-130">The following code example demonstrates a situation that can activate this MDA:</span></span>  
   
 ```  
 using System.Reflection;  
@@ -82,5 +87,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## 请参阅  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="3c55e-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3c55e-131">See Also</span></span>  
+ [<span data-ttu-id="3c55e-132">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="3c55e-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

@@ -1,54 +1,60 @@
 ---
-title: ".NET 性能提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "C# 语言, 性能"
-  - "性能 [C#]"
-  - "性能 [Visual Basic]"
-  - "Visual Basic, 性能"
+title: ".NET 性能提示"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- C# language, performance
+- performance [C#]
+- Visual Basic, performance
+- performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 caps.latest.revision: 36
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
-caps.handback.revision: 36
+author: BillWagner
+ms.author: wiwagn
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 625e772ff603f6454012606902f2fde53c8be327
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET 性能提示
-术语“性能”通常指程序的执行速度。  有时候，通过遵循源代码中的一些基本规则便可以提高执行速度。  在某些程序中，仔细检查代码并使用探查器确保程序可以尽可能快地运行非常重要。  在另一些程序中，由于在编写时代码运行得足够快，因此不必进行此类优化。  本文列出了性能可能受损的常见区域，并提供了改进方法以及其他性能主题的链接。  有关性能的计划和衡量的详细信息，请参阅 [Performance](../../../docs/framework/performance/index.md)  
+# <a name="net-performance-tips"></a><span data-ttu-id="5204a-102">.NET 性能提示</span><span class="sxs-lookup"><span data-stu-id="5204a-102">.NET Performance Tips</span></span>
+<span data-ttu-id="5204a-103">术语“性能”通常指程序的执行速度。</span><span class="sxs-lookup"><span data-stu-id="5204a-103">The term *performance* generally refers to the execution speed of a program.</span></span> <span data-ttu-id="5204a-104">有时通过遵循源代码中的一些基本规则便可以提高执行速度。</span><span class="sxs-lookup"><span data-stu-id="5204a-104">You can sometimes increase execution speed by following certain basic rules in your source code.</span></span> <span data-ttu-id="5204a-105">在某些程序中，十分重要的一点是需要仔细检查代码并使用探查器确保程序尽可能快地运行。</span><span class="sxs-lookup"><span data-stu-id="5204a-105">In some programs, it is important to examine code closely and use profilers to make sure that it is running as fast as possible.</span></span> <span data-ttu-id="5204a-106">而在其他程序中，由于代码在编写时便运行得足够快，因此不必执行此类优化。</span><span class="sxs-lookup"><span data-stu-id="5204a-106">In other programs, you do not have to perform such optimization because the code is running acceptably fast as it is written.</span></span> <span data-ttu-id="5204a-107">本文列出了一些性能可能遭受影响的常见领域以及相关改进建议，并提供其他性能主题的链接。</span><span class="sxs-lookup"><span data-stu-id="5204a-107">This article lists some common areas where performance can suffer and tips for improving it as well as links to additional performance topics.</span></span> <span data-ttu-id="5204a-108">有关规划和测量性能的详细信息，请参阅[性能](../../../docs/framework/performance/index.md)</span><span class="sxs-lookup"><span data-stu-id="5204a-108">For more information about planning and measuring for performance, see [Performance](../../../docs/framework/performance/index.md)</span></span>  
   
-## 装箱和取消装箱  
- 如果必须频繁地将值类型装箱，则最好避免使用值类型，例如在非泛型集合类（如 <xref:System.Collections.ArrayList?displayProperty=fullName>）中。  可以通过使用泛型集合（例如 <xref:System.Collections.Generic.List%601?displayProperty=fullName>）来避免将值类型装箱。  装箱和取消装箱都是需要大量运算的过程。  对值类型进行装箱时，必须创建一个全新的对象。  此操作所需时间可比简单的引用赋值操作长 20 倍。  取消装箱时，强制转换过程所需时间可达赋值操作的四倍。  有关更多信息，请参见[装箱和取消装箱](../Topic/Boxing%20and%20Unboxing%20\(C%23%20Programming%20Guide\).md)。  
+## <a name="boxing-and-unboxing"></a><span data-ttu-id="5204a-109">装箱和取消装箱</span><span class="sxs-lookup"><span data-stu-id="5204a-109">Boxing and Unboxing</span></span>  
+ <span data-ttu-id="5204a-110">如果值类型必须被频繁装箱，那么在这些情况下最好避免使用值类型（例如在诸如 <xref:System.Collections.ArrayList?displayProperty=fullName> 的非泛型集合类中）。</span><span class="sxs-lookup"><span data-stu-id="5204a-110">It is best to avoid using value types in situations where they must be boxed a high number of times, for example in non-generic collections classes such as <xref:System.Collections.ArrayList?displayProperty=fullName>.</span></span> <span data-ttu-id="5204a-111">可通过使用泛型集合（例如 <xref:System.Collections.Generic.List%601?displayProperty=fullName>）来避免装箱值类型。</span><span class="sxs-lookup"><span data-stu-id="5204a-111">You can avoid boxing of value types by using generic collections such as <xref:System.Collections.Generic.List%601?displayProperty=fullName>.</span></span> <span data-ttu-id="5204a-112">装箱和取消装箱过程需要进行大量的计算。</span><span class="sxs-lookup"><span data-stu-id="5204a-112">Boxing and unboxing are computationally expensive processes.</span></span> <span data-ttu-id="5204a-113">对值类型进行装箱时，必须创建一个全新的对象。</span><span class="sxs-lookup"><span data-stu-id="5204a-113">When a value type is boxed, an entirely new object must be created.</span></span> <span data-ttu-id="5204a-114">这可能比简单的引用赋值用时最多长 20 倍。</span><span class="sxs-lookup"><span data-stu-id="5204a-114">This can take up to 20 times longer than a simple reference assignment.</span></span> <span data-ttu-id="5204a-115">取消装箱的过程所需时间可达赋值操作的四倍。</span><span class="sxs-lookup"><span data-stu-id="5204a-115">When unboxing, the casting process can take four times as long as an assignment.</span></span> <span data-ttu-id="5204a-116">有关详细信息，请参阅[装箱和取消装箱](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)。</span><span class="sxs-lookup"><span data-stu-id="5204a-116">For more information, see [Boxing and Unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>  
   
-## Strings  
- 在连接大量字符串变量时，例如在紧凑循环中，请使用 <xref:System.Text.StringBuilder?displayProperty=fullName> 而不是 C\# [\+ 运算符](../Topic/+%20Operator%20\(C%23%20Reference\).md)或 Visual Basic [串联运算符](../Topic/Concatenation%20Operators%20\(Visual%20Basic\).md)。  有关更多信息，请参见[如何：串联多个字符串](../Topic/How%20to:%20Concatenate%20Multiple%20Strings%20\(C%23%20Programming%20Guide\).md)和[串联运算符 \(Visual Basic\)](../Topic/Concatenation%20Operators%20in%20Visual%20Basic.md)。  
+## <a name="strings"></a><span data-ttu-id="5204a-117">字符串</span><span class="sxs-lookup"><span data-stu-id="5204a-117">Strings</span></span>  
+ <span data-ttu-id="5204a-118">在连接大量字符串变量时，例如在紧凑循环中，请使用 <xref:System.Text.StringBuilder?displayProperty=fullName> 而不是 C# [+ 运算符](~/docs/csharp/language-reference/operators/addition-operator.md)或 Visual Basic [串联运算符](~/docs/visual-basic/language-reference/operators/concatenation-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="5204a-118">When you concatenate a large number of string variables, for example in a tight loop, use <xref:System.Text.StringBuilder?displayProperty=fullName> instead of the C# [+ operator](~/docs/csharp/language-reference/operators/addition-operator.md) or the Visual Basic [Concatenation Operators](~/docs/visual-basic/language-reference/operators/concatenation-operators.md).</span></span> <span data-ttu-id="5204a-119">有关详细信息，请参阅[如何连接多个字符串](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)和 [Visual Basic 中的串联运算符](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="5204a-119">For more information, see [How to: Concatenate Multiple Strings](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).</span></span>  
   
-## 析构函数  
- 不应使用空析构函数。  如果类包含析构函数，Finalize 队列中则会创建一个项。  调用析构函数时，将调用垃圾回收器来处理该队列。  如果析构函数为空，只会导致性能降低。  有关更多信息，请参见[析构函数](../Topic/Destructors%20\(C%23%20Programming%20Guide\).md)和[对象生存期：如何创建和销毁对象](../Topic/Object%20Lifetime:%20How%20Objects%20Are%20Created%20and%20Destroyed%20\(Visual%20Basic\).md)。  
+## <a name="destructors"></a><span data-ttu-id="5204a-120">析构函数</span><span class="sxs-lookup"><span data-stu-id="5204a-120">Destructors</span></span>  
+ <span data-ttu-id="5204a-121">不应使用空的析构函数。</span><span class="sxs-lookup"><span data-stu-id="5204a-121">Empty destructors should not be used.</span></span> <span data-ttu-id="5204a-122">如果类包含析构函数，则 Finalize 队列中会创建一个条目。</span><span class="sxs-lookup"><span data-stu-id="5204a-122">When a class contains a destructor, an entry is created in the Finalize queue.</span></span> <span data-ttu-id="5204a-123">调用析构函数时，将调用垃圾回收器来处理此队列。</span><span class="sxs-lookup"><span data-stu-id="5204a-123">When the destructor is called, the garbage collector is invoked to process the queue.</span></span> <span data-ttu-id="5204a-124">如果析构函数为空，只会导致性能损失。</span><span class="sxs-lookup"><span data-stu-id="5204a-124">If the destructor is empty, this simply results in a loss of performance.</span></span> <span data-ttu-id="5204a-125">有关详细信息，请参阅[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)和[对象生存期：如何创建和销毁对象](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。</span><span class="sxs-lookup"><span data-stu-id="5204a-125">For more information, see [Destructors](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) and [Object Lifetime: How Objects Are Created and Destroyed](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>  
   
-## 其他资源  
+## <a name="other-resources"></a><span data-ttu-id="5204a-126">其他资源</span><span class="sxs-lookup"><span data-stu-id="5204a-126">Other Resources</span></span>  
   
--   [编写更快的托管代码：了解开销](http://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [<span data-ttu-id="5204a-127">编写更快的托管代码：了解代价</span><span class="sxs-lookup"><span data-stu-id="5204a-127">Writing Faster Managed Code: Know What Things Cost</span></span>](http://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [编写高性能托管应用程序：入门](http://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [<span data-ttu-id="5204a-128">编写高性能的托管应用程序：入门</span><span class="sxs-lookup"><span data-stu-id="5204a-128">Writing High-Performance Managed Applications: A Primer</span></span>](http://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [垃圾回收器基础知识和性能提示](http://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [<span data-ttu-id="5204a-129">垃圾回收器基础知识和性能提示</span><span class="sxs-lookup"><span data-stu-id="5204a-129">Garbage Collector Basics and Performance Hints</span></span>](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [.NET 应用程序的性能提示和技巧](http://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [<span data-ttu-id="5204a-130">.NET 应用程序的性能提示和技巧</span><span class="sxs-lookup"><span data-stu-id="5204a-130">Performance Tips and Tricks in .NET Applications</span></span>](http://go.microsoft.com/fwlink/?LinkId=99297)  
   
--   [.NET 的内部诊断工具](http://go.microsoft.com/fwlink/?LinkId=112407)  
+-   [<span data-ttu-id="5204a-131">了解用于 .NET 的诊断工具</span><span class="sxs-lookup"><span data-stu-id="5204a-131">Inside Diagnostic Tools for .NET</span></span>](http://go.microsoft.com/fwlink/?LinkId=112407)  
   
--   [Rico Mariani 关于性能问题的见解](http://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [<span data-ttu-id="5204a-132">Rico Mariani 关于性能问题的见解</span><span class="sxs-lookup"><span data-stu-id="5204a-132">Rico Mariani's Performance Tidbits</span></span>](http://go.microsoft.com/fwlink/?LinkId=115679)  
   
-## 请参阅  
- [Performance](../../../docs/framework/performance/index.md)   
- [编程概念](../Topic/Programming%20Concepts.md)   
- [Visual Basic 编程指南](../Topic/Visual%20Basic%20Programming%20Guide.md)   
- [C\# 编程指南](../Topic/C%23%20Programming%20Guide.md)
+## <a name="see-also"></a><span data-ttu-id="5204a-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5204a-133">See Also</span></span>  
+ <span data-ttu-id="5204a-134">[性能](../../../docs/framework/performance/index.md) </span><span class="sxs-lookup"><span data-stu-id="5204a-134">[Performance](../../../docs/framework/performance/index.md) </span></span>  
+ <span data-ttu-id="5204a-135">[编程概念](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6) </span><span class="sxs-lookup"><span data-stu-id="5204a-135">[Programming Concepts](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6) </span></span>  
+ <span data-ttu-id="5204a-136">[Visual Basic 编程指南](../../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="5204a-136">[Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="5204a-137">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="5204a-137">C# Programming Guide</span></span>](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+

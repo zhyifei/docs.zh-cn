@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9829a0270d1969121f02bf6e46779b0e447cbb80
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2606dd913e7c28c46a9667a6121d01810bebf08
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>事件不能用具有返回类型的委托类型声明
-Function 过程为指定的委托。  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="6bccd-102">事件不能用具有返回类型的委托类型声明</span><span class="sxs-lookup"><span data-stu-id="6bccd-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="6bccd-103">Function 过程为指定的委托。</span><span class="sxs-lookup"><span data-stu-id="6bccd-103">A delegate was specified for a function procedure.</span></span>  
   
- **错误 ID:** BC31084  
+ <span data-ttu-id="6bccd-104">**错误 ID:** BC31084</span><span class="sxs-lookup"><span data-stu-id="6bccd-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6bccd-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6bccd-105">To correct this error</span></span>  
   
--   指定的委托`Sub`过程。  
+-   <span data-ttu-id="6bccd-106">指定的委托`Sub`过程。</span><span class="sxs-lookup"><span data-stu-id="6bccd-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="6bccd-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6bccd-107">See Also</span></span>  
+ [<span data-ttu-id="6bccd-108">事件</span><span class="sxs-lookup"><span data-stu-id="6bccd-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

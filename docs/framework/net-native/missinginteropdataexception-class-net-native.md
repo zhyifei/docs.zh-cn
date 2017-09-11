@@ -1,87 +1,92 @@
 ---
-title: "缺少互操作数据异常类 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "缺少互操作数据异常类 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 540ffc4aba7150c8ccac31b23162f35fec416f44
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 缺少互操作数据异常类 (.NET Native)
-**仅适用于 Windows 10、[!INCLUDE[net_native](../../../includes/net-native-md.md)] 的用于 Windows 应用的 .NET**  
+# <a name="missinginteropdataexception-class-net-native"></a><span data-ttu-id="12dbb-102">缺少互操作数据异常类 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="12dbb-102">MissingInteropDataException Class (.NET Native)</span></span>
+<span data-ttu-id="12dbb-103">**适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**</span><span class="sxs-lookup"><span data-stu-id="12dbb-103">**.NET for Windows apps for Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] only**</span></span>  
   
- 当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。  
+ <span data-ttu-id="12dbb-104">当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-104">The exception that is thrown when a manual marshaling method is called, but metadata for a type isn't found by static analysis or in a runtime directives file.</span></span>  
   
- **命名空间：**System.Runtime.CompilerServices  
-  
-> [!IMPORTANT]
->  `MissingInteropDataException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。  它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。  相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。  有关详细信息，请参阅“备注”部分。  
-  
-## 语法  
- [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
- [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
-  
- `MissingInteropDataException` 类包含以下成员：  
-  
-## 构造函数  
-  
-|构造函数|说明|  
-|----------|--------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|通过使用系统提供的消息（该消息描述错误以及缺少数据的类型）的 ID 初始化 `MissingInteropDataException` 类的新实例。  该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。|  
-  
-## 属性  
-  
-|属性|描述|  
-|--------|--------|  
-|`public IDictionary Data { get; }`|获取提供有关异常的其他用户定义信息的键\/值对集合。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string HelpLink { get; set; }`|获取或设置指向与此异常关联的帮助文件链接。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public int HResult { get; protected set; }`|获取或设置分配给特定异常的编码数值 `HRESULT`。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public Exception InnerException { get; }`|获取导致当前异常的异常。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string Message { get; }`|获取描述当前异常的消息。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public Type MissingType { get; private set; }`|获取或设置丢失数据的类型。|  
-|`public string Source { get; set; }`|获取或设置引起错误的应用或对象名。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string StackTrace { get; }`|获取调用堆栈上的即时框架字符串表示形式。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public MethodBase TargetSite { get; }`|获取引发当前异常的方法。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-  
-## 方法  
-  
-|方法|说明|  
-|--------|--------|  
-|`public bool Equals(Object obj)`|确定指定的对象是否等于当前对象。  （从 <xref:System.Object> 继承。）|  
-|`protected void Finalize()`|在垃圾回收将某一对象回收前允许该对象尝试释放资源并执行其他清理操作。  （从 <xref:System.Object> 继承。）|  
-|`public Exception GetBaseException()`|返回是一个或多个后续异常的根源的异常。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public int GetHashCode()`|为 `MissingInteropDataException` 实例返回一个哈希代码。  （从 <xref:System.Object> 继承。）|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|设置一个包含有关异常信息的 <xref:System.Runtime.Serialization.SerializationInfo> 对象。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public Type GetType()`|获取当前实例的运行时类型。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`protected Object MemberwiseClone()`|创建当前对象的卷影副本。  （从 <xref:System.Object> 继承。）|  
-|`public string ToString()`|返回当前异常的字符串表示形式。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-  
-## 事件  
-  
-|Event|说明|  
-|-----------|--------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|当异常被序列化用来创建包含有关该异常的徐列出数据的异常状态对象时会出现该问题。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-  
-## 使用详情  
- 由于类型信息无效而导致无法成功调用 COM 或 Windows 运行时组件时会引发 `MissingInteropDataException` 异常。  
-  
- 在运行时间一个应用可使用的元数据由运行时指令（XML 配置）文件、\*.rd.xml 来定义。  为防止应用发生此异常，你必须修改该文件，以定义运行时必须存在的元数据。  通常会通过将 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 属性添加到运行时指令文件中的相应程序元素来解决该错误。  有关此文件格式的信息，请参阅 [运行时指令 \(rd.xml\) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ <span data-ttu-id="12dbb-105">命名空间：System.Runtime.CompilerServices</span><span class="sxs-lookup"><span data-stu-id="12dbb-105">**Namespace:** System.Runtime.CompilerServices</span></span>  
   
 > [!IMPORTANT]
->  由于此异常表示你的应用程序需要的元数据在运行时间不可用，因此你不该在 `try`\/`catch` 数据块中处理此异常。  相反，你应该诊断引起此异常的原因并通过将适当的条目添加到运行时指令文件消除异常。  
+>  <span data-ttu-id="12dbb-106">`MissingInteropDataException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。</span><span class="sxs-lookup"><span data-stu-id="12dbb-106">The `MissingInteropDataException` class is intended solely for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="12dbb-107">它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-107">It is not intended for use in third-party code, nor should you handle the exception in your application code.</span></span> <span data-ttu-id="12dbb-108">相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-108">Instead, you eliminate the exception by adding entries to your [runtime directives file](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="12dbb-109">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="12dbb-109">For more information, see the Remarks section.</span></span>  
   
- `MissingInteropDataException` 类包含单个唯一成员，即 `MissingType` 属性，它表示一种类型，而如果想成功完成方法调用需使用到该类型的元数据。  所有剩余成员均继承自基类 <xref:System.Exception?displayProperty=fullName>。  
+## <a name="syntax"></a><span data-ttu-id="12dbb-110">语法</span><span class="sxs-lookup"><span data-stu-id="12dbb-110">Syntax</span></span>  
+ <span data-ttu-id="12dbb-111">[!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)] [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]</span><span class="sxs-lookup"><span data-stu-id="12dbb-111">[!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)] [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]</span></span>  
   
-## 请参阅  
- <xref:System.Exception?displayProperty=fullName>   
- [丢失元数据异常类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)   
- [运行时指令 \(rd.xml\) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+ <span data-ttu-id="12dbb-112">`MissingInteropDataException` 类包含以下成员：</span><span class="sxs-lookup"><span data-stu-id="12dbb-112">The `MissingInteropDataException` class has the following members:</span></span>  
+  
+## <a name="constructors"></a><span data-ttu-id="12dbb-113">构造函数</span><span class="sxs-lookup"><span data-stu-id="12dbb-113">Constructors</span></span>  
+  
+|<span data-ttu-id="12dbb-114">构造函数</span><span class="sxs-lookup"><span data-stu-id="12dbb-114">Constructor</span></span>|<span data-ttu-id="12dbb-115">描述</span><span class="sxs-lookup"><span data-stu-id="12dbb-115">Description</span></span>|  
+|-----------------|-----------------|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|<span data-ttu-id="12dbb-116">通过使用系统提供的消息（该消息描述错误以及缺少数据的类型）的 ID 初始化 `MissingInteropDataException` 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="12dbb-116">Initializes a new instance of the `MissingInteropDataException` class by using the ID of a system-supplied message that describes the error and the type whose data is missing.</span></span> <span data-ttu-id="12dbb-117">该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。</span><span class="sxs-lookup"><span data-stu-id="12dbb-117">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span>|  
+  
+## <a name="properties"></a><span data-ttu-id="12dbb-118">属性</span><span class="sxs-lookup"><span data-stu-id="12dbb-118">Properties</span></span>  
+  
+|<span data-ttu-id="12dbb-119">属性</span><span class="sxs-lookup"><span data-stu-id="12dbb-119">Property</span></span>|<span data-ttu-id="12dbb-120">描述</span><span class="sxs-lookup"><span data-stu-id="12dbb-120">Description</span></span>|  
+|--------------|-----------------|  
+|`public IDictionary Data { get; }`|<span data-ttu-id="12dbb-121">获取提供有关异常的其他用户定义信息的键/值对集合。</span><span class="sxs-lookup"><span data-stu-id="12dbb-121">Gets a collection of key/value pairs that provide additional user-defined information about the exception.</span></span> <span data-ttu-id="12dbb-122">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-122">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public string HelpLink { get; set; }`|<span data-ttu-id="12dbb-123">获取或设置指向与此异常关联的帮助文件链接。</span><span class="sxs-lookup"><span data-stu-id="12dbb-123">Gets or sets a link to the help file associated with this exception.</span></span> <span data-ttu-id="12dbb-124">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-124">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public int HResult { get; protected set; }`|<span data-ttu-id="12dbb-125">获取或设置分配给特定异常的编码数值 `HRESULT`。</span><span class="sxs-lookup"><span data-stu-id="12dbb-125">Gets or sets the `HRESULT`, which is a coded numeric value that is assigned to a specific exception.</span></span> <span data-ttu-id="12dbb-126">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-126">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public Exception InnerException { get; }`|<span data-ttu-id="12dbb-127">获取导致当前异常的异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-127">Gets the exception that caused the current exception.</span></span> <span data-ttu-id="12dbb-128">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-128">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public string Message { get; }`|<span data-ttu-id="12dbb-129">获取描述当前异常的消息。</span><span class="sxs-lookup"><span data-stu-id="12dbb-129">Gets a message that describes the current exception.</span></span> <span data-ttu-id="12dbb-130">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-130">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public Type MissingType { get; private set; }`|<span data-ttu-id="12dbb-131">获取或设置丢失数据的类型。</span><span class="sxs-lookup"><span data-stu-id="12dbb-131">Gets or sets the type whose data is missing.</span></span>|  
+|`public string Source { get; set; }`|<span data-ttu-id="12dbb-132">获取或设置引起错误的应用或对象名。</span><span class="sxs-lookup"><span data-stu-id="12dbb-132">Gets or sets the name of the app or object that caused the error.</span></span> <span data-ttu-id="12dbb-133">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-133">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public string StackTrace { get; }`|<span data-ttu-id="12dbb-134">获取调用堆栈上的即时框架字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="12dbb-134">Gets a string representation of the immediate frames on the call stack.</span></span> <span data-ttu-id="12dbb-135">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-135">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public MethodBase TargetSite { get; }`|<span data-ttu-id="12dbb-136">获取引发当前异常的方法。</span><span class="sxs-lookup"><span data-stu-id="12dbb-136">Gets the method that threw the current exception.</span></span> <span data-ttu-id="12dbb-137">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-137">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+  
+## <a name="methods"></a><span data-ttu-id="12dbb-138">方法</span><span class="sxs-lookup"><span data-stu-id="12dbb-138">Methods</span></span>  
+  
+|<span data-ttu-id="12dbb-139">方法</span><span class="sxs-lookup"><span data-stu-id="12dbb-139">Method</span></span>|<span data-ttu-id="12dbb-140">描述</span><span class="sxs-lookup"><span data-stu-id="12dbb-140">Description</span></span>|  
+|------------|-----------------|  
+|`public bool Equals(Object obj)`|<span data-ttu-id="12dbb-141">确定指定的对象是否等于当前对象。</span><span class="sxs-lookup"><span data-stu-id="12dbb-141">Determines whether the specified object is equal to the current object.</span></span>  <span data-ttu-id="12dbb-142">（从 <xref:System.Object> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-142">(Inherited from <xref:System.Object>.)</span></span>|  
+|`protected void Finalize()`|<span data-ttu-id="12dbb-143">在垃圾回收将某一对象回收前允许该对象尝试释放资源并执行其他清理操作。</span><span class="sxs-lookup"><span data-stu-id="12dbb-143">Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</span></span> <span data-ttu-id="12dbb-144">（从 <xref:System.Object> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-144">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public Exception GetBaseException()`|<span data-ttu-id="12dbb-145">返回是一个或多个后续异常的根源的异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-145">Returns the exception that is the root cause of one or more subsequent exceptions.</span></span> <span data-ttu-id="12dbb-146">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-146">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public int GetHashCode()`|<span data-ttu-id="12dbb-147">为 `MissingInteropDataException` 实例返回一个哈希代码。</span><span class="sxs-lookup"><span data-stu-id="12dbb-147">Returns a hash code for a `MissingInteropDataException` instance.</span></span>   <span data-ttu-id="12dbb-148">（从 <xref:System.Object> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-148">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|<span data-ttu-id="12dbb-149">设置一个包含有关异常信息的 <xref:System.Runtime.Serialization.SerializationInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="12dbb-149">Sets a <xref:System.Runtime.Serialization.SerializationInfo> object with information about the exception.</span></span>  <span data-ttu-id="12dbb-150">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-150">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`public Type GetType()`|<span data-ttu-id="12dbb-151">获取当前实例的运行时类型。</span><span class="sxs-lookup"><span data-stu-id="12dbb-151">Gets the runtime type of the current instance.</span></span> <span data-ttu-id="12dbb-152">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-152">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+|`protected Object MemberwiseClone()`|<span data-ttu-id="12dbb-153">创建当前对象的卷影副本。</span><span class="sxs-lookup"><span data-stu-id="12dbb-153">Creates a shallow copy of the current object.</span></span> <span data-ttu-id="12dbb-154">（从 <xref:System.Object> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-154">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public string ToString()`|<span data-ttu-id="12dbb-155">返回当前异常的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="12dbb-155">Returns the string representation of the current exception.</span></span> <span data-ttu-id="12dbb-156">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-156">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+  
+## <a name="events"></a><span data-ttu-id="12dbb-157">事件</span><span class="sxs-lookup"><span data-stu-id="12dbb-157">Events</span></span>  
+  
+|<span data-ttu-id="12dbb-158">Event</span><span class="sxs-lookup"><span data-stu-id="12dbb-158">Event</span></span>|<span data-ttu-id="12dbb-159">描述</span><span class="sxs-lookup"><span data-stu-id="12dbb-159">Description</span></span>|  
+|-----------|-----------------|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|<span data-ttu-id="12dbb-160">当异常被序列化用来创建包含有关该异常的徐列出数据的异常状态对象时会出现该问题。</span><span class="sxs-lookup"><span data-stu-id="12dbb-160">Occurs when an exception is serialized to create an exception state object that contains serialized data about the exception.</span></span> <span data-ttu-id="12dbb-161">（从 <xref:System.Exception?displayProperty=fullName> 继承。）</span><span class="sxs-lookup"><span data-stu-id="12dbb-161">(Inherited from <xref:System.Exception?displayProperty=fullName>.)</span></span>|  
+  
+## <a name="usage-details"></a><span data-ttu-id="12dbb-162">使用详情</span><span class="sxs-lookup"><span data-stu-id="12dbb-162">Usage Details</span></span>  
+ <span data-ttu-id="12dbb-163">由于类型信息无效而导致无法成功调用 COM 或 Windows 运行时组件时会引发 `MissingInteropDataException` 异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-163">The `MissingInteropDataException` exception is thrown when a method call to a COM or Windows Runtime component cannot be made successfully because type information isn't available.</span></span>  
+  
+ <span data-ttu-id="12dbb-164">在运行时间一个应用可使用的元数据由运行时指令（XML 配置）文件、*.rd.xml 来定义。</span><span class="sxs-lookup"><span data-stu-id="12dbb-164">The metadata that is available to an app at run time is defined by the runtime directives (XML configuration) file, *.rd.xml.</span></span> <span data-ttu-id="12dbb-165">为防止应用发生此异常，你必须修改该文件，以定义运行时必须存在的元数据。</span><span class="sxs-lookup"><span data-stu-id="12dbb-165">To prevent your app from throwing this exception, you must modify this file to define the metadata that must be present at run time.</span></span> <span data-ttu-id="12dbb-166">通常会通过将 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 属性添加到运行时指令文件中的相应程序元素来解决该错误。</span><span class="sxs-lookup"><span data-stu-id="12dbb-166">Most commonly, you address this error by adding a `MarshalObject`, `MarshalDelegate`, or `MarshalStructure` attribute to an appropriate program element in the runtime directives file.</span></span> <span data-ttu-id="12dbb-167">有关本文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="12dbb-167">For information about the format of this file, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="12dbb-168">由于此异常表示应用程序需要的元数据在运行时间不可用，因此不应在 `try`/`catch` 块中处理此异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-168">Because this exception indicates that metadata needed by your application isn’t available at run time, you shouldn’t handle this exception in a `try`/`catch` block.</span></span> <span data-ttu-id="12dbb-169">相反，你应该诊断引起此异常的原因并通过将适当的条目添加到运行时指令文件消除异常。</span><span class="sxs-lookup"><span data-stu-id="12dbb-169">Instead, you should diagnose the cause of the exception and eliminate it by adding the appropriate entry to a runtime directives file.</span></span>  
+  
+ <span data-ttu-id="12dbb-170">`MissingInteropDataException` 类包含单个唯一成员，即 `MissingType` 属性，它表示一种类型，而如果想成功完成方法调用需使用到该类型的元数据。</span><span class="sxs-lookup"><span data-stu-id="12dbb-170">The `MissingInteropDataException` class contains a single unique member, the `MissingType` property, that indicates the type whose metadata is needed for a successful method call.</span></span> <span data-ttu-id="12dbb-171">所有剩余成员均继承自基类 <xref:System.Exception?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="12dbb-171">All remaining members are inherited from the base class, <xref:System.Exception?displayProperty=fullName>.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="12dbb-172">另请参阅</span><span class="sxs-lookup"><span data-stu-id="12dbb-172">See Also</span></span>  
+ <span data-ttu-id="12dbb-173"><xref:System.Exception?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="12dbb-173"><xref:System.Exception?displayProperty=fullName></span></span>   
+ <span data-ttu-id="12dbb-174">[MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) </span><span class="sxs-lookup"><span data-stu-id="12dbb-174">[MissingMetadataException Class](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) </span></span>  
+ [<span data-ttu-id="12dbb-175">运行时指令 (rd.xml) 配置文件参考</span><span class="sxs-lookup"><span data-stu-id="12dbb-175">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+

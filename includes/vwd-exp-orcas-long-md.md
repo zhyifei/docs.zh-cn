@@ -1,1 +1,1 @@
-Visual Web Developer 2008 速成版
+<span data-ttu-id="c6e6a-101">Visual Web Developer 2008 速成版</span><span class="sxs-lookup"><span data-stu-id="c6e6a-101">Visual Web Developer 2008 Express Edition</span></span>

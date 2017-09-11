@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81cbcb066d60851ba83bd4d783d34f8dd3bd1fac
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9c86a75b1c9b4dc25e29d8323d23f89232b8de80
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>克隆与附加 (Visual Basic)
-添加时<xref:System.Xml.Linq.XNode>(包括<xref:System.Xml.Linq.XElement>) 或<xref:System.Xml.Linq.XAttribute>对象到新树中，如果新内容没有父级，这些对象简单地附加到 XML 树。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode> 如果新内容已经有父级，并且是另一 XML 树的一部分，则克隆新内容。 然后将新克隆的内容附加到 XML 树中。  
+# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="9776b-102">克隆与附加 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9776b-102">Cloning vs. Attaching (Visual Basic)</span></span>
+<span data-ttu-id="9776b-103">添加时<xref:System.Xml.Linq.XNode>(包括<xref:System.Xml.Linq.XElement>) 或<xref:System.Xml.Linq.XAttribute>对象到新树中，如果新内容没有父级，这些对象简单地附加到 XML 树。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode></span><span class="sxs-lookup"><span data-stu-id="9776b-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="9776b-104">如果新内容已经有父级，并且是另一 XML 树的一部分，则克隆新内容。</span><span class="sxs-lookup"><span data-stu-id="9776b-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="9776b-105">然后将新克隆的内容附加到 XML 树中。</span><span class="sxs-lookup"><span data-stu-id="9776b-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码演示将有父级的元素添加到树中，以及将没有父级的元素添加到树中时的行为。  
+## <a name="example"></a><span data-ttu-id="9776b-106">示例</span><span class="sxs-lookup"><span data-stu-id="9776b-106">Example</span></span>  
+ <span data-ttu-id="9776b-107">下面的代码演示将有父级的元素添加到树中，以及将没有父级的元素添加到树中时的行为。</span><span class="sxs-lookup"><span data-stu-id="9776b-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -60,12 +61,12 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9776b-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9776b-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="9776b-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9776b-109">See Also</span></span>  
+ [<span data-ttu-id="9776b-110">创建 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9776b-110">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

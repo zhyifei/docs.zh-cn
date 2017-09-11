@@ -15,26 +15,27 @@ ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 041e99f4fd70008208a8f661f6763159ac7f4479
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 22d97c95a1dec52c0290555daeedce51c5a567e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>查找默认段落样式 (Visual Basic)
-在 WordprocessingML 文档的教程中的操作信息的第一个任务是在文档中查找默认段落样式。  
+# <a name="finding-the-default-paragraph-style-visual-basic"></a><span data-ttu-id="dce86-102">查找默认段落样式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dce86-102">Finding the Default Paragraph Style (Visual Basic)</span></span>
+<span data-ttu-id="dce86-103">在 WordprocessingML 文档的教程中的操作信息的第一个任务是在文档中查找默认段落样式。</span><span class="sxs-lookup"><span data-stu-id="dce86-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="dce86-104">示例</span><span class="sxs-lookup"><span data-stu-id="dce86-104">Example</span></span>  
   
-### <a name="description"></a>描述  
- 下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。 有关 Office Open XML 文档包和它们包含的部件的信息，请参阅[详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。  
+### <a name="description"></a><span data-ttu-id="dce86-105">描述</span><span class="sxs-lookup"><span data-stu-id="dce86-105">Description</span></span>  
+ <span data-ttu-id="dce86-106">下面的示例打开一个 Office Open XML WordprocessingML 文档，查找文档和包的样式部分，然后执行查找默认样式名称的查询。</span><span class="sxs-lookup"><span data-stu-id="dce86-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="dce86-107">有关 Office Open XML 文档包和它们包含的部件的信息，请参阅[详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)。</span><span class="sxs-lookup"><span data-stu-id="dce86-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
   
- 查询将查找名为 `w:style` 的节点，该节点具有值为“paragraph”的名为 `w:type` 的属性和值为“1”的名为 `w:default` 的属性。 由于将只有一个 XML 节点具有这些属性，因此查询使用<xref:System.Linq.Enumerable.First%2A?displayProperty=fullName>运算符将集合转换为单一实例。</xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> 然后，它获取名为 `w:styleId` 的属性的值。  
+ <span data-ttu-id="dce86-108">查询将查找名为 `w:style` 的节点，该节点具有值为“paragraph”的名为 `w:type` 的属性和值为“1”的名为 `w:default` 的属性。</span><span class="sxs-lookup"><span data-stu-id="dce86-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="dce86-109">由于将只有一个 XML 节点具有这些属性，因此查询使用<xref:System.Linq.Enumerable.First%2A?displayProperty=fullName>运算符将集合转换为单一实例。</xref:System.Linq.Enumerable.First%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="dce86-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="dce86-110">然后，它获取名为 `w:styleId` 的属性的值。</span><span class="sxs-lookup"><span data-stu-id="dce86-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="dce86-111">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="dce86-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="dce86-112">它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="dce86-112">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="dce86-113">代码</span><span class="sxs-lookup"><span data-stu-id="dce86-113">Code</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -92,17 +93,17 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>注释  
- 该示例产生下面的输出：  
+### <a name="comments"></a><span data-ttu-id="dce86-114">注释</span><span class="sxs-lookup"><span data-stu-id="dce86-114">Comments</span></span>  
+ <span data-ttu-id="dce86-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="dce86-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a>后续步骤  
- 在下一个示例中，您将创建一个类似的查询，查找文档和其样式中所有段落︰  
+## <a name="next-steps"></a><span data-ttu-id="dce86-116">后续步骤</span><span class="sxs-lookup"><span data-stu-id="dce86-116">Next Steps</span></span>  
+ <span data-ttu-id="dce86-117">在下一个示例中，您将创建一个类似的查询，查找文档和其样式中所有段落︰</span><span class="sxs-lookup"><span data-stu-id="dce86-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
--   [检索段落及其样式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+-   [<span data-ttu-id="dce86-118">检索段落及其样式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dce86-118">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a>另请参阅  
- [教程︰ 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="dce86-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dce86-119">See Also</span></span>  
+ [<span data-ttu-id="dce86-120">教程︰ 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容</span><span class="sxs-lookup"><span data-stu-id="dce86-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

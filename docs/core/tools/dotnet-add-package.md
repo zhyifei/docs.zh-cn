@@ -18,21 +18,21 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="dotnet-add-package"></a>dotnet-add package
+# <a name="dotnet-add-package"></a><span data-ttu-id="66078-104">dotnet-add package</span><span class="sxs-lookup"><span data-stu-id="66078-104">dotnet-add package</span></span>
 
-## <a name="name"></a>名称
+## <a name="name"></a><span data-ttu-id="66078-105">名称</span><span class="sxs-lookup"><span data-stu-id="66078-105">Name</span></span>
 
-`dotnet-add package` - 向项目文件添加包引用。
+<span data-ttu-id="66078-106">`dotnet-add package` - 向项目文件添加包引用。</span><span class="sxs-lookup"><span data-stu-id="66078-106">`dotnet-add package` - Adds a package reference to a project file.</span></span>
 
-## <a name="synopsis"></a>摘要
+## <a name="synopsis"></a><span data-ttu-id="66078-107">摘要</span><span class="sxs-lookup"><span data-stu-id="66078-107">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a><span data-ttu-id="66078-108">描述</span><span class="sxs-lookup"><span data-stu-id="66078-108">Description</span></span>
 
-使用 `dotnet add package` 命令可方便地向项目文件添加包引用。 运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。 如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。
+<span data-ttu-id="66078-109">使用 `dotnet add package` 命令可方便地向项目文件添加包引用。</span><span class="sxs-lookup"><span data-stu-id="66078-109">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="66078-110">运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。</span><span class="sxs-lookup"><span data-stu-id="66078-110">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="66078-111">如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。</span><span class="sxs-lookup"><span data-stu-id="66078-111">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
 
-例如，将 `Newtonsoft.Json` 添加到 *ToDo.csproj* 会生成如下输出：
+<span data-ttu-id="66078-112">例如，将 `Newtonsoft.Json` 添加到 *ToDo.csproj* 会生成如下输出：</span><span class="sxs-lookup"><span data-stu-id="66078-112">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following:</span></span>
 
 ```
 Microsoft (R) Build Engine version 15.1.545.13942
@@ -49,59 +49,59 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
 ```
 
-*ToDo.csproj* 文件现包含用于引用的包的 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 元素。
+<span data-ttu-id="66078-113">*ToDo.csproj* 文件现包含用于引用的包的 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 元素。</span><span class="sxs-lookup"><span data-stu-id="66078-113">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a><span data-ttu-id="66078-114">参数</span><span class="sxs-lookup"><span data-stu-id="66078-114">Arguments</span></span>
 
 `PROJECT`
 
-指定项目文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。
+<span data-ttu-id="66078-115">指定项目文件。</span><span class="sxs-lookup"><span data-stu-id="66078-115">Specifies the project file.</span></span> <span data-ttu-id="66078-116">如果未指定，此命令会搜索当前目录来获取一个项目文件。</span><span class="sxs-lookup"><span data-stu-id="66078-116">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-要添加的包引用。
+<span data-ttu-id="66078-117">要添加的包引用。</span><span class="sxs-lookup"><span data-stu-id="66078-117">The package reference to add.</span></span>
 
-## <a name="options"></a>选项
+## <a name="options"></a><span data-ttu-id="66078-118">选项</span><span class="sxs-lookup"><span data-stu-id="66078-118">Options</span></span>
 
 `-h|--help`
 
-打印出有关命令的简短帮助。
+<span data-ttu-id="66078-119">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="66078-119">Prints out a short help for the command.</span></span>
 
 `-v|--version <VERSION>`
 
-包的版本。
+<span data-ttu-id="66078-120">包的版本。</span><span class="sxs-lookup"><span data-stu-id="66078-120">Version of the package.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-仅在以特定[框架](../../standard/frameworks.md)为目标时添加包引用。
+<span data-ttu-id="66078-121">仅在以特定[框架](../../standard/frameworks.md)为目标时添加包引用。</span><span class="sxs-lookup"><span data-stu-id="66078-121">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 `-n|--no-restore`
 
-在不执行还原预览和兼容性检查的情况下添加包引用。
+<span data-ttu-id="66078-122">在不执行还原预览和兼容性检查的情况下添加包引用。</span><span class="sxs-lookup"><span data-stu-id="66078-122">Adds a package reference without performing a restore preview and compatibility check.</span></span>
 
 `-s|--source <SOURCE>`
 
-使用还原操作期间的特定 NuGet 包源。
+<span data-ttu-id="66078-123">使用还原操作期间的特定 NuGet 包源。</span><span class="sxs-lookup"><span data-stu-id="66078-123">Uses a specific NuGet package source during the restore operation.</span></span>
 
 `--package-directory <PACKAGE_DIRECTORY>`
 
-将包还原到指定的目录。
+<span data-ttu-id="66078-124">将包还原到指定的目录。</span><span class="sxs-lookup"><span data-stu-id="66078-124">Restores the package to the specified directory.</span></span>
 
-## <a name="examples"></a>示例
+## <a name="examples"></a><span data-ttu-id="66078-125">示例</span><span class="sxs-lookup"><span data-stu-id="66078-125">Examples</span></span>
 
-将 `Newtonsoft.Json` NuGet 包添加到项目：
+<span data-ttu-id="66078-126">将 `Newtonsoft.Json` NuGet 包添加到项目：</span><span class="sxs-lookup"><span data-stu-id="66078-126">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
 
 `dotnet add package Newtonsoft.Json`
 
-向项目添加特定版本的包：
+<span data-ttu-id="66078-127">向项目添加特定版本的包：</span><span class="sxs-lookup"><span data-stu-id="66078-127">Add a specific version of a package to a project:</span></span>
 
 `dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0`
 
-使用特定的 NuGet 源添加包：
+<span data-ttu-id="66078-128">使用特定的 NuGet 源添加包：</span><span class="sxs-lookup"><span data-stu-id="66078-128">Add a package using a specific NuGet source:</span></span>
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
 

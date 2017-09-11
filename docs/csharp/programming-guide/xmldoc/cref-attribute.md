@@ -34,15 +34,15 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cref-attribute-c-programming-guide"></a>cref 特性（C# 编程指南）
-XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 文档工具（例如 [Sandcastle](https://github.com/EWSoftware/SHFB)）使用 `cref` 属性自动生成指向记录类型或成员的页面的超链接。  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="183a4-102">cref 特性（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="183a4-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="183a4-103">XML 文档标记中的 `cref` 属性是指“代码引用”。</span><span class="sxs-lookup"><span data-stu-id="183a4-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="183a4-104">它指定标记的内部文本是一个代码元素，例如类型、方法或属性。</span><span class="sxs-lookup"><span data-stu-id="183a4-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="183a4-105">文档工具（例如 [Sandcastle](https://github.com/EWSoftware/SHFB)）使用 `cref` 属性自动生成指向记录类型或成员的页面的超链接。</span><span class="sxs-lookup"><span data-stu-id="183a4-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例演示了在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 标记中使用的 `cref` 属性。  
+## <a name="example"></a><span data-ttu-id="183a4-106">示例</span><span class="sxs-lookup"><span data-stu-id="183a4-106">Example</span></span>  
+ <span data-ttu-id="183a4-107">下面的示例演示了在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 标记中使用的 `cref` 属性。</span><span class="sxs-lookup"><span data-stu-id="183a4-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ <span data-ttu-id="183a4-108">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="183a4-108">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]</span></span>  
   
- 在编译时，该程序生成以下 XML 文件。 请注意，例如 `GetZero` 方法的 `cref` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。 “M:”前缀表示“方法”，并且是一种由文档工具（例如 Sandcastle）识别的约定。 有关前缀的完整列表，请参阅[处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
+ <span data-ttu-id="183a4-109">在编译时，该程序生成以下 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="183a4-109">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="183a4-110">请注意，例如 `GetZero` 方法的 `cref` 属性已被编译器转换为 `"M:TestNamespace.TestClass.GetZero"`。</span><span class="sxs-lookup"><span data-stu-id="183a4-110">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="183a4-111">“M:”前缀表示“方法”，并且是一种由文档工具（例如 Sandcastle）识别的约定。</span><span class="sxs-lookup"><span data-stu-id="183a4-111">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="183a4-112">有关前缀的完整列表，请参阅[处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。</span><span class="sxs-lookup"><span data-stu-id="183a4-112">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -141,7 +141,7 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
 </doc>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="183a4-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="183a4-113">See Also</span></span>  
+ <span data-ttu-id="183a4-114">[XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md) </span><span class="sxs-lookup"><span data-stu-id="183a4-114">[XML Documentation Comments](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md) </span></span>  
+ [<span data-ttu-id="183a4-115">建议的文档注释标记</span><span class="sxs-lookup"><span data-stu-id="183a4-115">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

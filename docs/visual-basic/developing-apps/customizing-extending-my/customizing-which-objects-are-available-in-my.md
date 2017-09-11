@@ -28,78 +28,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6791398270e4348adf356eb36a385bfbefde873c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3dbb1c32783d11a3f72805113f4ae2846a247d6e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自定义 My 中可用的对象 (Visual Basic)
-本主题介绍如何控制哪些`My`通过设置项目的情况下启用对象`_MYTYPE`条件编译常数。 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]集成开发环境 (IDE) 保留`_MYTYPE`项目的类型与同步的项目的条件编译常数。  
+# <a name="customizing-which-objects-are-available-in-my-visual-basic"></a><span data-ttu-id="5ebd8-102">自定义 My 中可用的对象 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ebd8-102">Customizing Which Objects are Available in My (Visual Basic)</span></span>
+<span data-ttu-id="5ebd8-103">本主题介绍如何控制哪些`My`通过设置项目的情况下启用对象`_MYTYPE`条件编译常数。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-103">This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="5ebd8-104">[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]集成开发环境 (IDE) 保留`_MYTYPE`项目的类型与同步的项目的条件编译常数。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-104">The [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.</span></span>  
   
-## <a name="predefined-mytype-values"></a>预定义的 _MYTYPE 值  
- 必须使用`/define`编译器选项来设置`_MYTYPE`条件编译常数。 指定您自己的值时`_MYTYPE`常量，您必须括起来的字符串值反斜杠/英文引号连用 (\\") 序列。 例如，您可以使用︰  
+## <a name="predefined-mytype-values"></a><span data-ttu-id="5ebd8-105">预定义的 _MYTYPE 值</span><span class="sxs-lookup"><span data-stu-id="5ebd8-105">Predefined _MYTYPE Values</span></span>  
+ <span data-ttu-id="5ebd8-106">必须使用`/define`编译器选项来设置`_MYTYPE`条件编译常数。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-106">You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="5ebd8-107">指定您自己的值时`_MYTYPE`常量，您必须括起来的字符串值反斜杠/英文引号连用 (\\") 序列。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-107">When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences.</span></span> <span data-ttu-id="5ebd8-108">例如，您可以使用︰</span><span class="sxs-lookup"><span data-stu-id="5ebd8-108">For example, you could use:</span></span>  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- 下表显示哪些`_MYTYPE`条件编译常量设置为几种项目类型。  
+ <span data-ttu-id="5ebd8-109">下表显示哪些`_MYTYPE`条件编译常量设置为几种项目类型。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-109">This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.</span></span>  
   
-|项目类型|_MYTYPE 值|  
+|<span data-ttu-id="5ebd8-110">项目类型</span><span class="sxs-lookup"><span data-stu-id="5ebd8-110">Project type</span></span>|<span data-ttu-id="5ebd8-111">_MYTYPE 值</span><span class="sxs-lookup"><span data-stu-id="5ebd8-111">_MYTYPE value</span></span>|  
 |------------------|--------------------|  
-|类库|"Windows"|  
-|控制台应用程序|"控制台"|  
-|Web|"Web"|  
-|Web 控件库|"WebControl"|  
-|Windows 应用程序|"WindowsForms"|  
-|Windows 应用程序，开始着手解决自定义时`Sub Main`|"WindowsFormsWithCustomSubMain"|  
-|Windows 控件库|"Windows"|  
-|Windows 服务|"控制台"|  
-|空|"空"|  
+|<span data-ttu-id="5ebd8-112">类库</span><span class="sxs-lookup"><span data-stu-id="5ebd8-112">Class Library</span></span>|<span data-ttu-id="5ebd8-113">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-113">"Windows"</span></span>|  
+|<span data-ttu-id="5ebd8-114">控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="5ebd8-114">Console Application</span></span>|<span data-ttu-id="5ebd8-115">"控制台"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-115">"Console"</span></span>|  
+|<span data-ttu-id="5ebd8-116">Web</span><span class="sxs-lookup"><span data-stu-id="5ebd8-116">Web</span></span>|<span data-ttu-id="5ebd8-117">"Web"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-117">"Web"</span></span>|  
+|<span data-ttu-id="5ebd8-118">Web 控件库</span><span class="sxs-lookup"><span data-stu-id="5ebd8-118">Web Control Library</span></span>|<span data-ttu-id="5ebd8-119">"WebControl"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-119">"WebControl"</span></span>|  
+|<span data-ttu-id="5ebd8-120">Windows 应用程序</span><span class="sxs-lookup"><span data-stu-id="5ebd8-120">Windows Application</span></span>|<span data-ttu-id="5ebd8-121">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-121">"WindowsForms"</span></span>|  
+|<span data-ttu-id="5ebd8-122">Windows 应用程序，开始着手解决自定义时`Sub Main`</span><span class="sxs-lookup"><span data-stu-id="5ebd8-122">Windows Application, when starting with custom `Sub Main`</span></span>|<span data-ttu-id="5ebd8-123">"WindowsFormsWithCustomSubMain"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-123">"WindowsFormsWithCustomSubMain"</span></span>|  
+|<span data-ttu-id="5ebd8-124">Windows 控件库</span><span class="sxs-lookup"><span data-stu-id="5ebd8-124">Windows Control Library</span></span>|<span data-ttu-id="5ebd8-125">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-125">"Windows"</span></span>|  
+|<span data-ttu-id="5ebd8-126">Windows 服务</span><span class="sxs-lookup"><span data-stu-id="5ebd8-126">Windows Service</span></span>|<span data-ttu-id="5ebd8-127">"控制台"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-127">"Console"</span></span>|  
+|<span data-ttu-id="5ebd8-128">空</span><span class="sxs-lookup"><span data-stu-id="5ebd8-128">Empty</span></span>|<span data-ttu-id="5ebd8-129">"空"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-129">"Empty"</span></span>|  
   
 > [!NOTE]
->  所有条件编译字符串比较都都区分大小写，而不考虑如何`Option Compare`语句设置。  
+>  <span data-ttu-id="5ebd8-130">所有条件编译字符串比较都都区分大小写，而不考虑如何`Option Compare`语句设置。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-130">All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.</span></span>  
   
-## <a name="dependent-my-compilation-constants"></a>相关 _MY 编译常数  
- `_MYTYPE`条件编译常数，反过来，控制的其他几个值`_MY`编译常量︰  
+## <a name="dependent-my-compilation-constants"></a><span data-ttu-id="5ebd8-131">相关 _MY 编译常数</span><span class="sxs-lookup"><span data-stu-id="5ebd8-131">Dependent _MY Compilation Constants</span></span>  
+ <span data-ttu-id="5ebd8-132">`_MYTYPE`条件编译常数，反过来，控制的其他几个值`_MY`编译常量︰</span><span class="sxs-lookup"><span data-stu-id="5ebd8-132">The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:</span></span>  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|<span data-ttu-id="5ebd8-133">_MYTYPE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-133">_MYTYPE</span></span>|<span data-ttu-id="5ebd8-134">_MYAPPLICATIONTYPE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-134">_MYAPPLICATIONTYPE</span></span>|<span data-ttu-id="5ebd8-135">_MYCOMPUTERTYPE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-135">_MYCOMPUTERTYPE</span></span>|<span data-ttu-id="5ebd8-136">_MYFORMS</span><span class="sxs-lookup"><span data-stu-id="5ebd8-136">_MYFORMS</span></span>|<span data-ttu-id="5ebd8-137">_MYUSERTYPE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-137">_MYUSERTYPE</span></span>|<span data-ttu-id="5ebd8-138">_MYWEBSERVICES</span><span class="sxs-lookup"><span data-stu-id="5ebd8-138">_MYWEBSERVICES</span></span>|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"控制台"|"控制台"|"Windows"|未定义|"Windows"|TRUE|  
-|"自定义"|未定义|未定义|未定义|未定义|未定义|  
-|"空"|未定义|未定义|未定义|未定义|未定义|  
-|"Web"|未定义|"Web"|FALSE|"Web"|FALSE|  
-|"WebControl"|未定义|"Web"|FALSE|"Web"|TRUE|  
-|"Windows"或""|"Windows"|"Windows"|未定义|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"控制台"|"Windows"|TRUE|"Windows"|TRUE|  
+|<span data-ttu-id="5ebd8-139">"控制台"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-139">"Console"</span></span>|<span data-ttu-id="5ebd8-140">"控制台"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-140">"Console"</span></span>|<span data-ttu-id="5ebd8-141">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-141">"Windows"</span></span>|<span data-ttu-id="5ebd8-142">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-142">Undefined</span></span>|<span data-ttu-id="5ebd8-143">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-143">"Windows"</span></span>|<span data-ttu-id="5ebd8-144">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-144">TRUE</span></span>|  
+|<span data-ttu-id="5ebd8-145">"自定义"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-145">"Custom"</span></span>|<span data-ttu-id="5ebd8-146">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-146">Undefined</span></span>|<span data-ttu-id="5ebd8-147">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-147">Undefined</span></span>|<span data-ttu-id="5ebd8-148">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-148">Undefined</span></span>|<span data-ttu-id="5ebd8-149">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-149">Undefined</span></span>|<span data-ttu-id="5ebd8-150">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-150">Undefined</span></span>|  
+|<span data-ttu-id="5ebd8-151">"空"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-151">"Empty"</span></span>|<span data-ttu-id="5ebd8-152">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-152">Undefined</span></span>|<span data-ttu-id="5ebd8-153">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-153">Undefined</span></span>|<span data-ttu-id="5ebd8-154">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-154">Undefined</span></span>|<span data-ttu-id="5ebd8-155">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-155">Undefined</span></span>|<span data-ttu-id="5ebd8-156">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-156">Undefined</span></span>|  
+|<span data-ttu-id="5ebd8-157">"Web"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-157">"Web"</span></span>|<span data-ttu-id="5ebd8-158">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-158">Undefined</span></span>|<span data-ttu-id="5ebd8-159">"Web"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-159">"Web"</span></span>|<span data-ttu-id="5ebd8-160">FALSE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-160">FALSE</span></span>|<span data-ttu-id="5ebd8-161">"Web"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-161">"Web"</span></span>|<span data-ttu-id="5ebd8-162">FALSE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-162">FALSE</span></span>|  
+|<span data-ttu-id="5ebd8-163">"WebControl"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-163">"WebControl"</span></span>|<span data-ttu-id="5ebd8-164">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-164">Undefined</span></span>|<span data-ttu-id="5ebd8-165">"Web"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-165">"Web"</span></span>|<span data-ttu-id="5ebd8-166">FALSE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-166">FALSE</span></span>|<span data-ttu-id="5ebd8-167">"Web"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-167">"Web"</span></span>|<span data-ttu-id="5ebd8-168">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-168">TRUE</span></span>|  
+|<span data-ttu-id="5ebd8-169">"Windows"或""</span><span class="sxs-lookup"><span data-stu-id="5ebd8-169">"Windows" or ""</span></span>|<span data-ttu-id="5ebd8-170">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-170">"Windows"</span></span>|<span data-ttu-id="5ebd8-171">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-171">"Windows"</span></span>|<span data-ttu-id="5ebd8-172">未定义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-172">Undefined</span></span>|<span data-ttu-id="5ebd8-173">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-173">"Windows"</span></span>|<span data-ttu-id="5ebd8-174">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-174">TRUE</span></span>|  
+|<span data-ttu-id="5ebd8-175">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-175">"WindowsForms"</span></span>|<span data-ttu-id="5ebd8-176">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-176">"WindowsForms"</span></span>|<span data-ttu-id="5ebd8-177">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-177">"Windows"</span></span>|<span data-ttu-id="5ebd8-178">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-178">TRUE</span></span>|<span data-ttu-id="5ebd8-179">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-179">"Windows"</span></span>|<span data-ttu-id="5ebd8-180">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-180">TRUE</span></span>|  
+|<span data-ttu-id="5ebd8-181">"WindowsFormsWithCustomSubMain"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-181">"WindowsFormsWithCustomSubMain"</span></span>|<span data-ttu-id="5ebd8-182">"控制台"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-182">"Console"</span></span>|<span data-ttu-id="5ebd8-183">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-183">"Windows"</span></span>|<span data-ttu-id="5ebd8-184">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-184">TRUE</span></span>|<span data-ttu-id="5ebd8-185">"Windows"</span><span class="sxs-lookup"><span data-stu-id="5ebd8-185">"Windows"</span></span>|<span data-ttu-id="5ebd8-186">TRUE</span><span class="sxs-lookup"><span data-stu-id="5ebd8-186">TRUE</span></span>|  
   
- 默认情况下，未定义的条件编译常数解析为`FALSE`。 在编译您的项目以重写默认行为时，可以指定未定义的常数的值。  
+ <span data-ttu-id="5ebd8-187">默认情况下，未定义的条件编译常数解析为`FALSE`。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-187">By default, undefined conditional-compilation constants resolve to `FALSE`.</span></span> <span data-ttu-id="5ebd8-188">在编译您的项目以重写默认行为时，可以指定未定义的常数的值。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-188">You can specify values for the undefined constants when compiling your project to override the default behavior.</span></span>  
   
 > [!NOTE]
->  当`_MYTYPE`设置为"Custom"的项目包含`My`命名空间，但它不包含任何对象。 但是，将设置`_MYTYPE`到"空"，则将阻止编译器从添加`My`命名空间及其对象。  
+>  <span data-ttu-id="5ebd8-189">当`_MYTYPE`设置为"Custom"的项目包含`My`命名空间，但它不包含任何对象。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-189">When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects.</span></span> <span data-ttu-id="5ebd8-190">但是，将设置`_MYTYPE`到"空"，则将阻止编译器从添加`My`命名空间及其对象。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-190">However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.</span></span>  
   
- 下表描述预定义值的效果`_MY`编译常量。  
+ <span data-ttu-id="5ebd8-191">下表描述预定义值的效果`_MY`编译常量。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-191">This table describes the effects of the predefined values of the `_MY` compilation constants.</span></span>  
   
-|常量|含义|  
+|<span data-ttu-id="5ebd8-192">常量</span><span class="sxs-lookup"><span data-stu-id="5ebd8-192">Constant</span></span>|<span data-ttu-id="5ebd8-193">含义</span><span class="sxs-lookup"><span data-stu-id="5ebd8-193">Meaning</span></span>|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|使`My.Application`，该常量是"控制台"窗口，如果"或"WindowsForms":<br /><br /> 的从<xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>。</xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>派生而来"控制台"版本 并且具有比"Windows"的版本较少的成员。<br />-"Windows"版本派生自<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>以及具有比"WindowsForms"版本较少的成员。</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase><br />-的版本"WindowsForms"`My.Application`从<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>派生而来 如果`TARGET`常量被定义为"winexe"，则此类包括`Sub Main`方法。|  
-|`_MYCOMPUTERTYPE`|使`My.Computer`，如果该常量是"Web"或"Windows":<br /><br /> -"Web"版本派生自<xref:Microsoft.VisualBasic.Devices.ServerComputer>，并且具有比"Windows"的版本较少的成员。</xref:Microsoft.VisualBasic.Devices.ServerComputer><br />-的版本"Windows"`My.Computer`从<xref:Microsoft.VisualBasic.Devices.Computer>。</xref:Microsoft.VisualBasic.Devices.Computer>派生而来|  
-|`_MYFORMS`|使`My.Forms`，如果该常量是`TRUE`。|  
-|`_MYUSERTYPE`|使`My.User`，如果该常量是"Web"或"Windows":<br /><br /> -的版本"Web"`My.User`与当前 HTTP 请求的用户标识相关联。<br />-的版本"Windows"`My.User`与线程的当前主体相关联。|  
-|`_MYWEBSERVICES`|使`My.WebServices`，如果该常量是`TRUE`。|  
-|`_MYTYPE`|使`My.Log`， `My.Request`，和`My.Response`，如果该常量是"Web"。|  
+|`_MYAPPLICATIONTYPE`|<span data-ttu-id="5ebd8-194">使`My.Application`，该常量是"控制台"窗口，如果"或"WindowsForms":</span><span class="sxs-lookup"><span data-stu-id="5ebd8-194">Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":</span></span><br /><br /> <span data-ttu-id="5ebd8-195">的从<xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>。</xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>派生而来"控制台"版本</span><span class="sxs-lookup"><span data-stu-id="5ebd8-195">-   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.</span></span> <span data-ttu-id="5ebd8-196">并且具有比"Windows"的版本较少的成员。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-196">and has fewer members than the "Windows" version.</span></span><br /><span data-ttu-id="5ebd8-197">-"Windows"版本派生自<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>以及具有比"WindowsForms"版本较少的成员。</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></span><span class="sxs-lookup"><span data-stu-id="5ebd8-197">-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.</span></span><br /><span data-ttu-id="5ebd8-198">-的版本"WindowsForms"`My.Application`从<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>派生而来</span><span class="sxs-lookup"><span data-stu-id="5ebd8-198">-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.</span></span> <span data-ttu-id="5ebd8-199">如果`TARGET`常量被定义为"winexe"，则此类包括`Sub Main`方法。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-199">If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.</span></span>|  
+|`_MYCOMPUTERTYPE`|<span data-ttu-id="5ebd8-200">使`My.Computer`，如果该常量是"Web"或"Windows":</span><span class="sxs-lookup"><span data-stu-id="5ebd8-200">Enables `My.Computer`, if the constant is "Web" or "Windows":</span></span><br /><br /> <span data-ttu-id="5ebd8-201">-"Web"版本派生自<xref:Microsoft.VisualBasic.Devices.ServerComputer>，并且具有比"Windows"的版本较少的成员。</xref:Microsoft.VisualBasic.Devices.ServerComputer></span><span class="sxs-lookup"><span data-stu-id="5ebd8-201">-   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.</span></span><br /><span data-ttu-id="5ebd8-202">-的版本"Windows"`My.Computer`从<xref:Microsoft.VisualBasic.Devices.Computer>。</xref:Microsoft.VisualBasic.Devices.Computer>派生而来</span><span class="sxs-lookup"><span data-stu-id="5ebd8-202">-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.</span></span>|  
+|`_MYFORMS`|<span data-ttu-id="5ebd8-203">使`My.Forms`，如果该常量是`TRUE`。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-203">Enables `My.Forms`, if the constant is `TRUE`.</span></span>|  
+|`_MYUSERTYPE`|<span data-ttu-id="5ebd8-204">使`My.User`，如果该常量是"Web"或"Windows":</span><span class="sxs-lookup"><span data-stu-id="5ebd8-204">Enables `My.User`, if the constant is "Web" or "Windows":</span></span><br /><br /> <span data-ttu-id="5ebd8-205">-的版本"Web"`My.User`与当前 HTTP 请求的用户标识相关联。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-205">-   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.</span></span><br /><span data-ttu-id="5ebd8-206">-的版本"Windows"`My.User`与线程的当前主体相关联。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-206">-   The "Windows" version of `My.User` is associated with the thread's current principal.</span></span>|  
+|`_MYWEBSERVICES`|<span data-ttu-id="5ebd8-207">使`My.WebServices`，如果该常量是`TRUE`。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-207">Enables `My.WebServices`, if the constant is `TRUE`.</span></span>|  
+|`_MYTYPE`|<span data-ttu-id="5ebd8-208">使`My.Log`， `My.Request`，和`My.Response`，如果该常量是"Web"。</span><span class="sxs-lookup"><span data-stu-id="5ebd8-208">Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".</span></span>|  
   
-## <a name="see-also"></a>请参见  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [我如何取决于项目类型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)   
- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)   
- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md)   
- [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)   
- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="5ebd8-209">请参见</span><span class="sxs-lookup"><span data-stu-id="5ebd8-209">See Also</span></span>  
+ <span data-ttu-id="5ebd8-210"><xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></span><span class="sxs-lookup"><span data-stu-id="5ebd8-210"><xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></span></span>   
+ <span data-ttu-id="5ebd8-211"><xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer></span><span class="sxs-lookup"><span data-stu-id="5ebd8-211"><xref:Microsoft.VisualBasic.Devices.Computer></span></span>   
+ <span data-ttu-id="5ebd8-212"><xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log></span><span class="sxs-lookup"><span data-stu-id="5ebd8-212"><xref:Microsoft.VisualBasic.Logging.Log></span></span>   
+ <span data-ttu-id="5ebd8-213"><xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User></span><span class="sxs-lookup"><span data-stu-id="5ebd8-213"><xref:Microsoft.VisualBasic.ApplicationServices.User></span></span>   
+<span data-ttu-id="5ebd8-214"> [我如何取决于项目类型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md) </span><span class="sxs-lookup"><span data-stu-id="5ebd8-214"> [How My Depends on Project Type](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md) </span></span>  
+<span data-ttu-id="5ebd8-215"> [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) </span><span class="sxs-lookup"><span data-stu-id="5ebd8-215"> [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) </span></span>  
+<span data-ttu-id="5ebd8-216"> [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md) </span><span class="sxs-lookup"><span data-stu-id="5ebd8-216"> [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md) </span></span>  
+<span data-ttu-id="5ebd8-217"> [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md) </span><span class="sxs-lookup"><span data-stu-id="5ebd8-217"> [My.Forms Object](../../../visual-basic/language-reference/objects/my-forms-object.md) </span></span>  
+<span data-ttu-id="5ebd8-218"> [My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md) </span><span class="sxs-lookup"><span data-stu-id="5ebd8-218"> [My.Request Object](../../../visual-basic/language-reference/objects/my-request-object.md) </span></span>  
+<span data-ttu-id="5ebd8-219"> [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md) </span><span class="sxs-lookup"><span data-stu-id="5ebd8-219"> [My.Response Object](../../../visual-basic/language-reference/objects/my-response-object.md) </span></span>  
+<span data-ttu-id="5ebd8-220"> [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)</span><span class="sxs-lookup"><span data-stu-id="5ebd8-220"> [My.WebServices Object](../../../visual-basic/language-reference/objects/my-webservices-object.md)</span></span>

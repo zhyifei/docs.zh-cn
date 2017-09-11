@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>示例 XML 文件：测试配置 (LINQ to XML)
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="cef27-102">示例 XML 文件：测试配置 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cef27-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="cef27-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="cef27-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cef27-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="cef27-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="cef27-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="cef27-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +73,6 @@ ms.lasthandoff: 07/28/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cef27-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="cef27-106">See Also</span></span>  
+ [<span data-ttu-id="cef27-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cef27-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

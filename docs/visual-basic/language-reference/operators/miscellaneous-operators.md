@@ -30,26 +30,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f576084f662f369d5de8483bd4e58a0ed80fa8c1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6989cd451cfee35d73132cf9e0205f258aa59364
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="miscellaneous-operators-visual-basic"></a>其他运算符 (Visual Basic)
-以下是定义中的其他运算符[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+# <a name="miscellaneous-operators-visual-basic"></a><span data-ttu-id="00985-102">其他运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="00985-102">Miscellaneous Operators (Visual Basic)</span></span>
+<span data-ttu-id="00985-103">以下是定义中的其他运算符[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。</span><span class="sxs-lookup"><span data-stu-id="00985-103">The following are miscellaneous operators defined in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="00985-104">AddressOf 运算符</span><span class="sxs-lookup"><span data-stu-id="00985-104">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="00985-105">Await 运算符</span><span class="sxs-lookup"><span data-stu-id="00985-105">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [GetType 运算符](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [<span data-ttu-id="00985-106">GetType 运算符</span><span class="sxs-lookup"><span data-stu-id="00985-106">GetType Operator</span></span>](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [函数表达式](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [<span data-ttu-id="00985-107">函数表达式</span><span class="sxs-lookup"><span data-stu-id="00985-107">Function Expression</span></span>](../../../visual-basic/language-reference/operators/function-expression.md)  
   
- [If 运算符](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [<span data-ttu-id="00985-108">If 运算符</span><span class="sxs-lookup"><span data-stu-id="00985-108">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [TypeOf 运算符](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [<span data-ttu-id="00985-109">TypeOf 运算符</span><span class="sxs-lookup"><span data-stu-id="00985-109">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
-## <a name="see-also"></a>另请参阅  
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="00985-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00985-110">See Also</span></span>  
+ [<span data-ttu-id="00985-111">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="00985-111">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

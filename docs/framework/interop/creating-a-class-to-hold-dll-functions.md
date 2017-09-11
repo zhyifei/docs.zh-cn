@@ -1,53 +1,59 @@
 ---
-title: "创建用于容纳 DLL 函数的类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, DLL 函数"
-  - "COM 互操作, 平台调用"
-  - "DLL 函数"
-  - "与非托管代码间的互操作, DLL 函数"
-  - "与非托管代码间的互操作, 平台调用"
-  - "平台调用, 为函数创建类"
-  - "非托管函数"
+title: "创建用于容纳 DLL 函数的类"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- COM interop, DLL functions
+- unmanaged functions
+- COM interop, platform invoke
+- interoperation with unmanaged code, DLL functions
+- interoperation with unmanaged code, platform invoke
+- platform invoke, creating class for functions
+- DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: abf5c47e843801d47bb2d47c8686db7f81f42698
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 创建用于容纳 DLL 函数的类
-要封装平台功能，一种有效的方法是将常用的 DLL 函数包装在托管类中。  虽然不必在每种情形下都这样做，但由于定义 DLL 函数可能会相当麻烦并且容易出错，所以提供类包装是一种很方便的方法。  如果您使用 Visual Basic 或 C\# 进行编程，则必须在一个类或 Visual Basic 模块中声明 DLL 函数。  
+# <a name="creating-a-class-to-hold-dll-functions"></a><span data-ttu-id="35d81-102">创建用于容纳 DLL 函数的类</span><span class="sxs-lookup"><span data-stu-id="35d81-102">Creating a Class to Hold DLL Functions</span></span>
+<span data-ttu-id="35d81-103">将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。</span><span class="sxs-lookup"><span data-stu-id="35d81-103">Wrapping a frequently used DLL function in a managed class is an effective approach to encapsulate platform functionality.</span></span> <span data-ttu-id="35d81-104">虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。</span><span class="sxs-lookup"><span data-stu-id="35d81-104">Although it is not mandatory to do so in every case, providing a class wrapper is convenient because defining DLL functions can be cumbersome and error-prone.</span></span> <span data-ttu-id="35d81-105">如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="35d81-105">If you are programming in Visual Basic or C#, you must declare DLL functions within a class or Visual Basic module.</span></span>  
   
- 在一个类中，为每个要调用的 DLL 函数定义静态方法。  定义中可以包括一些附加信息，如在传递方法参数时使用的字符集或调用约定；如果省略这些信息，将选择默认设置。  有关声明选项及其默认设置的完整列表，请参见[在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
+ <span data-ttu-id="35d81-106">在一个类中，为每个要调用的 DLL 函数定义静态方法。</span><span class="sxs-lookup"><span data-stu-id="35d81-106">Within a class, you define a static method for each DLL function you want to call.</span></span> <span data-ttu-id="35d81-107">定义中可以包括附加信息，例如传递方法参数使用的字符集或调用约定；如果省略这些信息，则选择默认设置。</span><span class="sxs-lookup"><span data-stu-id="35d81-107">The definition can include additional information, such as the character set or the calling convention used in passing method arguments; by omitting this information, you select the default settings.</span></span> <span data-ttu-id="35d81-108">有关声明选项及其默认设置的完整列表，请参阅[在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。</span><span class="sxs-lookup"><span data-stu-id="35d81-108">For a complete list of declaration options and their default settings, see [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
   
- 包装之后，就可以按照对其他任何静态函数调用方法的相同方式来对该函数调用方法。  平台调用将自动处理底层的导出函数。  
+ <span data-ttu-id="35d81-109">包装之后，就可按照调用任何其他静态函数上的方法的方式来调用该函数上的方法。</span><span class="sxs-lookup"><span data-stu-id="35d81-109">Once wrapped, you can call methods on the function as you call methods on any other static function.</span></span> <span data-ttu-id="35d81-110">平台调用自动处理基础导出函数。</span><span class="sxs-lookup"><span data-stu-id="35d81-110">Platform invoke handles the underlying exported function automatically.</span></span>  
   
- 为平台调用设计托管类时，应考虑类和 DLL 函数之间的关系。  例如，您可以：  
+ <span data-ttu-id="35d81-111">为平台调用设计托管类时，应考虑类和 DLL 函数之间的关系。</span><span class="sxs-lookup"><span data-stu-id="35d81-111">When designing a managed class for platform invoke, consider the relationships between classes and DLL functions.</span></span> <span data-ttu-id="35d81-112">例如，你可以：</span><span class="sxs-lookup"><span data-stu-id="35d81-112">For example, you can:</span></span>  
   
--   在现有类内声明 DLL 函数。  
+-   <span data-ttu-id="35d81-113">在现有类内声明 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="35d81-113">Declare DLL functions within an existing class.</span></span>  
   
--   分别为每个 DLL 函数创建一个类，以便使函数相互隔离，易于查找。  
+-   <span data-ttu-id="35d81-114">分别为每个 DLL 函数创建一个类，使函数相互独立，易于查找。</span><span class="sxs-lookup"><span data-stu-id="35d81-114">Create an individual class for each DLL function, keeping functions isolated and easy to find.</span></span>  
   
--   为一组相关的 DLL 函数创建一个类，以形成逻辑分组并减少系统开销。  
+-   <span data-ttu-id="35d81-115">为一组相关 DLL 函数创建一个类，形成逻辑分组并减少开销。</span><span class="sxs-lookup"><span data-stu-id="35d81-115">Create one class for a set of related DLL functions to form logical groupings and reduce overhead.</span></span>  
   
- 您可以将该类及其方法命名为任意名称。  有关说明如何构造用于平台调用的基于 .NET 的声明的示例，请参见[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
+ <span data-ttu-id="35d81-116">可对该类及其方法随意命名。</span><span class="sxs-lookup"><span data-stu-id="35d81-116">You can name the class and its methods as you please.</span></span> <span data-ttu-id="35d81-117">有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。</span><span class="sxs-lookup"><span data-stu-id="35d81-117">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## 请参阅  
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)   
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="35d81-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="35d81-118">See Also</span></span>  
+ <span data-ttu-id="35d81-119">[使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md) </span><span class="sxs-lookup"><span data-stu-id="35d81-119">[Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md) </span></span>  
+ <span data-ttu-id="35d81-120">[标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md) </span><span class="sxs-lookup"><span data-stu-id="35d81-120">[Identifying Functions in DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md) </span></span>  
+ <span data-ttu-id="35d81-121">[在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md) </span><span class="sxs-lookup"><span data-stu-id="35d81-121">[Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md) </span></span>  
+ [<span data-ttu-id="35d81-122">调用 DLL 函数</span><span class="sxs-lookup"><span data-stu-id="35d81-122">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+

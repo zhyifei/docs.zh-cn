@@ -1,2 +1,2 @@
 > [!WARNING]
-> 二进制序列化可能会十分危险。 请不要从不受信任的源反序列化数据，也不要将序列化数据往返到不受控制的系统。
+> <span data-ttu-id="2fff8-101">二进制序列化可能会十分危险。</span><span class="sxs-lookup"><span data-stu-id="2fff8-101">Binary serialization can be dangerous.</span></span> <span data-ttu-id="2fff8-102">请不要从不受信任的源反序列化数据，也不要将序列化数据往返到不受控制的系统。</span><span class="sxs-lookup"><span data-stu-id="2fff8-102">Never deserialize data from an untrusted source and never round-trip serialized data to systems not under your control.</span></span>

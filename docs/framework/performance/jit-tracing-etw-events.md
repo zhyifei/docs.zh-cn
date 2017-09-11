@@ -1,158 +1,164 @@
 ---
-title: "JIT 跟踪 ETW 事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ETW, JIT 跟踪事件 (CLR)"
-  - "JIT 跟踪事件 [.NET Framework]"
+title: "JIT 跟踪 ETW 事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JIT tracing events [.NET Framework]
+- ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b33a86eb235524ed9cbe5e07dd6625fedf884411
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# JIT 跟踪 ETW 事件
-<a name="top"></a> 这些事件可收集有关实时 \(JIT\) 内联和 JIT 尾调用成功或失败的信息。  
+# <a name="jit-tracing-etw-events"></a><span data-ttu-id="2fce1-102">JIT 跟踪 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-102">JIT Tracing ETW Events</span></span>
+<span data-ttu-id="2fce1-103"><a name="top"></a> 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。</span><span class="sxs-lookup"><span data-stu-id="2fce1-103"><a name="top"></a> These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
   
- JIT 跟踪事件包含以下两个类别：  
+ <span data-ttu-id="2fce1-104">JIT 跟踪事件包含以下两个类别：</span><span class="sxs-lookup"><span data-stu-id="2fce1-104">JIT tracing events consist of the following two categories:</span></span>  
   
--   [JIT 内联事件](#jit_inlining_events)  
+-   [<span data-ttu-id="2fce1-105">JIT 内联事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-105">JIT Inlining Events</span></span>](#jit_inlining_events)  
   
--   [JIT 尾调用事件](#jit_tail_call_events)  
+-   [<span data-ttu-id="2fce1-106">JIT 尾调用事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-106">JIT Tail Call Events</span></span>](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
-## JIT 内联事件  
+## <a name="jit-inlining-events"></a><span data-ttu-id="2fce1-107">JIT 内联事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-107">JIT Inlining Events</span></span>  
   
-### MethodJitInliningFailed 事件  
- 下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW 关键字和级别](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+### <a name="methodjitinliningfailed-event"></a><span data-ttu-id="2fce1-108">MethodJitInliningFailed 事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-108">MethodJitInliningFailed Event</span></span>  
+ <span data-ttu-id="2fce1-109">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="2fce1-109">The following table shows the keyword and level.</span></span> <span data-ttu-id="2fce1-110">（有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）</span><span class="sxs-lookup"><span data-stu-id="2fce1-110">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|引发事件的关键字|级别|  
-|--------------|--------|  
-|`JITTracingKeyword` \(0x10\)|详细级别 \(5\)|  
+|<span data-ttu-id="2fce1-111">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="2fce1-111">Keyword for raising the event</span></span>|<span data-ttu-id="2fce1-112">级别</span><span class="sxs-lookup"><span data-stu-id="2fce1-112">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="2fce1-113">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="2fce1-113">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="2fce1-114">详细级别 (5)</span><span class="sxs-lookup"><span data-stu-id="2fce1-114">Verbose (5)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="2fce1-115">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="2fce1-115">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|在发生以下情况时引发|  
-|-----------|-----------|----------------|  
-|`MethodJitInliningFailed`|186|JIT 内联失败。|  
+|<span data-ttu-id="2fce1-116">Event</span><span class="sxs-lookup"><span data-stu-id="2fce1-116">Event</span></span>|<span data-ttu-id="2fce1-117">事件 ID</span><span class="sxs-lookup"><span data-stu-id="2fce1-117">Event ID</span></span>|<span data-ttu-id="2fce1-118">在发生以下情况时引发</span><span class="sxs-lookup"><span data-stu-id="2fce1-118">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`MethodJitInliningFailed`|<span data-ttu-id="2fce1-119">186</span><span class="sxs-lookup"><span data-stu-id="2fce1-119">186</span></span>|<span data-ttu-id="2fce1-120">JIT 内联失败。</span><span class="sxs-lookup"><span data-stu-id="2fce1-120">The JIT inlining failed.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="2fce1-121">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="2fce1-121">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
-|---------|----------|--------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|正在编译的方法的命名空间。|  
-|MethodBeingCompiledName|win:UnicodeString|正在编译的方法的名称。|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|正在编译的方法的签名。|  
-|InlinerNamespace|win:UnicodeString|JIT 编译器正在尝试为其生成代码的方法的命名空间。|  
-|InlinerName|win:UnicodeString|编译器正在尝试为其生成代码的方法的名称。 如果编译器正在尝试将代码内联到 `MethodBeingCompiledName`，而不是生成对 `InlinerName` 的调用，则此名称可能会与 `MethodBeingCompiledName` 不相同。|  
-|InlinerNameSignature|win:UnicodeString|内联方的签名。|  
-|InlineeNamespace|win:UnicodeString|被内联方的命名空间。|  
-|InlineeName|win:UnicodeString|编译器正在尝试内联的方法（不生成对此方法的调用）。|  
-|InlineeNameSignature|win:UnicodeString|被内联方的签名。|  
-|FailAlways|win:Boolean|提示 JIT 编译器针对被内联方的内联操作将始终失败。|  
-|FailReason|win:UnicodeString|INLINE\_NEVER 表示前一个内联尝试确定了内联操作因某些其他原因将永远不会成功；否则为任意形式的文本。|  
-|ClrInstanceID|win:UnicodeString|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="2fce1-122">字段名</span><span class="sxs-lookup"><span data-stu-id="2fce1-122">Field name</span></span>|<span data-ttu-id="2fce1-123">数据类型</span><span class="sxs-lookup"><span data-stu-id="2fce1-123">Data type</span></span>|<span data-ttu-id="2fce1-124">说明</span><span class="sxs-lookup"><span data-stu-id="2fce1-124">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="2fce1-125">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="2fce1-125">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="2fce1-126">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-126">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-127">正在编译的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-127">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-128">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="2fce1-128">MethodBeingCompiledName</span></span>|<span data-ttu-id="2fce1-129">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-129">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-130">正在编译的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-130">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-131">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-131">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="2fce1-132">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-132">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-133">正在编译的方法的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-133">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-134">InlinerNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-134">InlinerNamespace</span></span>|<span data-ttu-id="2fce1-135">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-135">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-136">JIT 编译器正在尝试为其生成代码的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-136">The namespace of the method the JIT compiler is trying to generate code for.</span></span>|  
+|<span data-ttu-id="2fce1-137">InlinerName</span><span class="sxs-lookup"><span data-stu-id="2fce1-137">InlinerName</span></span>|<span data-ttu-id="2fce1-138">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-138">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-139">编译器正在尝试为其生成代码的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-139">The name of the method the compiler is attempting to generate code for.</span></span> <span data-ttu-id="2fce1-140">如果编译器正在尝试将代码内联到 `MethodBeingCompiledName` ，而不是生成对 `MethodBeingCompiledName` 的调用，则此名称可能会与 `InlinerName`不相同。</span><span class="sxs-lookup"><span data-stu-id="2fce1-140">This might not be the same as `MethodBeingCompiledName` if the compiler is attempting to inline code into `MethodBeingCompiledName` instead of generating a call to `InlinerName`.</span></span>|  
+|<span data-ttu-id="2fce1-141">InlinerNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-141">InlinerNameSignature</span></span>|<span data-ttu-id="2fce1-142">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-142">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-143">内联方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-143">The signature for the inliner.</span></span>|  
+|<span data-ttu-id="2fce1-144">InlineeNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-144">InlineeNamespace</span></span>|<span data-ttu-id="2fce1-145">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-145">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-146">被内联方的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-146">The namespace of the inlinee.</span></span>|  
+|<span data-ttu-id="2fce1-147">InlineeName</span><span class="sxs-lookup"><span data-stu-id="2fce1-147">InlineeName</span></span>|<span data-ttu-id="2fce1-148">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-148">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-149">编译器正在尝试内联的方法（不生成对此方法的调用）。</span><span class="sxs-lookup"><span data-stu-id="2fce1-149">The method the compiler is trying to inline (not generate a call to).</span></span>|  
+|<span data-ttu-id="2fce1-150">InlineeNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-150">InlineeNameSignature</span></span>|<span data-ttu-id="2fce1-151">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-151">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-152">被内联方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-152">The signature for the inlinee.</span></span>|  
+|<span data-ttu-id="2fce1-153">FailAlways</span><span class="sxs-lookup"><span data-stu-id="2fce1-153">FailAlways</span></span>|<span data-ttu-id="2fce1-154">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="2fce1-154">win:Boolean</span></span>|<span data-ttu-id="2fce1-155">提示 JIT 编译器针对被内联方的内联操作将始终失败。</span><span class="sxs-lookup"><span data-stu-id="2fce1-155">A hint to the JIT compiler that inlining will always fail for the inlinee.</span></span>|  
+|<span data-ttu-id="2fce1-156">FailReason</span><span class="sxs-lookup"><span data-stu-id="2fce1-156">FailReason</span></span>|<span data-ttu-id="2fce1-157">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-157">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-158">INLINE_NEVER 表示前一个内联尝试确定了内联操作因某些其他原因将永远不会成功；否则为任意形式的文本。</span><span class="sxs-lookup"><span data-stu-id="2fce1-158">INLINE_NEVER means a previous inlining attempt determined that inlining will never succeed for some other reason; otherwise, free-form text.</span></span>|  
+|<span data-ttu-id="2fce1-159">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2fce1-159">ClrInstanceID</span></span>|<span data-ttu-id="2fce1-160">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-160">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-161">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="2fce1-161">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### MethodJitInliningSucceeded 事件  
- 下表显示了关键字和级别。  
+### <a name="methodjitinliningsucceeded-event"></a><span data-ttu-id="2fce1-162">MethodJitInliningSucceeded 事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-162">MethodJitInliningSucceeded Event</span></span>  
+ <span data-ttu-id="2fce1-163">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="2fce1-163">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|级别|  
-|--------------|--------|  
-|`JITTracingKeyword` \(0x10\)|详细级别 \(5\)|  
+|<span data-ttu-id="2fce1-164">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="2fce1-164">Keyword for raising the event</span></span>|<span data-ttu-id="2fce1-165">级别</span><span class="sxs-lookup"><span data-stu-id="2fce1-165">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="2fce1-166">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="2fce1-166">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="2fce1-167">详细级别 (5)</span><span class="sxs-lookup"><span data-stu-id="2fce1-167">Verbose (5)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="2fce1-168">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="2fce1-168">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|在发生以下情况时引发|  
-|-----------|-----------|----------------|  
-|`MethodJitInliningSucceeded`|185|方法内联成功。|  
+|<span data-ttu-id="2fce1-169">Event</span><span class="sxs-lookup"><span data-stu-id="2fce1-169">Event</span></span>|<span data-ttu-id="2fce1-170">事件 ID</span><span class="sxs-lookup"><span data-stu-id="2fce1-170">Event ID</span></span>|<span data-ttu-id="2fce1-171">在发生以下情况时引发</span><span class="sxs-lookup"><span data-stu-id="2fce1-171">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`MethodJitInliningSucceeded`|<span data-ttu-id="2fce1-172">185</span><span class="sxs-lookup"><span data-stu-id="2fce1-172">185</span></span>|<span data-ttu-id="2fce1-173">方法内联成功。</span><span class="sxs-lookup"><span data-stu-id="2fce1-173">The method inlining succeeded.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="2fce1-174">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="2fce1-174">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
-|---------|----------|--------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|正在编译的方法的命名空间。|  
-|MethodBeingCompiledName|win:UnicodeString|正在编译的方法的名称。|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|正在编译的方法的签名。|  
-|InlinerNamespace|win:UnicodeString|JIT 编译器正在尝试为其生成代码的方法的命名空间。|  
-|InlinerName|win:UnicodeString|编译器正在尝试为其生成代码的方法的名称。 如果编译器正在尝试将代码内联到 `MethodBeingCompiledName`，而不是生成对 `InlinerName` 的调用，则此名称可能会与 `MethodBeingCompiledName` 不相同。|  
-|InlinerNameSignature|win:UnicodeString|内联方的签名。|  
-|InlineeNamespace|win:UnicodeString|被内联方的命名空间。|  
-|InlineeName|win:UnicodeString|编译器正在尝试内联的方法（不生成对此方法的调用）。|  
-|InlineeNameSignature|win:UnicodeString|被内联方的签名。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="2fce1-175">字段名</span><span class="sxs-lookup"><span data-stu-id="2fce1-175">Field name</span></span>|<span data-ttu-id="2fce1-176">数据类型</span><span class="sxs-lookup"><span data-stu-id="2fce1-176">Data type</span></span>|<span data-ttu-id="2fce1-177">说明</span><span class="sxs-lookup"><span data-stu-id="2fce1-177">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="2fce1-178">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="2fce1-178">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="2fce1-179">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-179">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-180">正在编译的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-180">The namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-181">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="2fce1-181">MethodBeingCompiledName</span></span>|<span data-ttu-id="2fce1-182">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-182">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-183">正在编译的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-183">The name of the method being that is compiled.</span></span>|  
+|<span data-ttu-id="2fce1-184">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-184">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="2fce1-185">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-185">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-186">正在编译的方法的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-186">The signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-187">InlinerNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-187">InlinerNamespace</span></span>|<span data-ttu-id="2fce1-188">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-188">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-189">JIT 编译器正在尝试为其生成代码的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-189">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="2fce1-190">InlinerName</span><span class="sxs-lookup"><span data-stu-id="2fce1-190">InlinerName</span></span>|<span data-ttu-id="2fce1-191">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-191">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-192">编译器正在尝试为其生成代码的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-192">The name of the method the compiler is attempting to generate code for.</span></span> <span data-ttu-id="2fce1-193">如果编译器正在尝试将代码内联到 `MethodBeingCompiledName` ，而不是生成对 `MethodBeingCompiledName` 的调用，则此名称可能会与 `InlinerName`不相同。</span><span class="sxs-lookup"><span data-stu-id="2fce1-193">This might not be the same as `MethodBeingCompiledName` if the compiler is attempting to inline code into `MethodBeingCompiledName` instead of generating a call to `InlinerName`.</span></span>|  
+|<span data-ttu-id="2fce1-194">InlinerNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-194">InlinerNameSignature</span></span>|<span data-ttu-id="2fce1-195">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-195">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-196">内联方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-196">The signature for the inliner.</span></span>|  
+|<span data-ttu-id="2fce1-197">InlineeNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-197">InlineeNamespace</span></span>|<span data-ttu-id="2fce1-198">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-198">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-199">被内联方的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-199">The namespace of the inlinee.</span></span>|  
+|<span data-ttu-id="2fce1-200">InlineeName</span><span class="sxs-lookup"><span data-stu-id="2fce1-200">InlineeName</span></span>|<span data-ttu-id="2fce1-201">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-201">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-202">编译器正在尝试内联的方法（不生成对此方法的调用）。</span><span class="sxs-lookup"><span data-stu-id="2fce1-202">The method the compiler is trying to inline (not generate a call to).</span></span>|  
+|<span data-ttu-id="2fce1-203">InlineeNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-203">InlineeNameSignature</span></span>|<span data-ttu-id="2fce1-204">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-204">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-205">被内联方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-205">The signature for the inlinee.</span></span>|  
+|<span data-ttu-id="2fce1-206">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2fce1-206">ClrInstanceID</span></span>|<span data-ttu-id="2fce1-207">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2fce1-207">win:UInt16</span></span>|<span data-ttu-id="2fce1-208">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="2fce1-208">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="2fce1-209">返回页首</span><span class="sxs-lookup"><span data-stu-id="2fce1-209">Back to top</span></span>](#top)  
   
 <a name="jit_tail_call_events"></a>   
-## JIT 尾调用事件  
+## <a name="jit-tail-call-events"></a><span data-ttu-id="2fce1-210">JIT 尾调用事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-210">JIT Tail Call Events</span></span>  
   
-### MethodJITTailCallFailed 事件  
- 下表显示了关键字和级别。  
+### <a name="methodjittailcallfailed-event"></a><span data-ttu-id="2fce1-211">MethodJITTailCallFailed 事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-211">MethodJITTailCallFailed Event</span></span>  
+ <span data-ttu-id="2fce1-212">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="2fce1-212">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|级别|  
-|--------------|--------|  
-|`JITTracingKeyword` \(0x10\)|详细级别 \(5\)|  
+|<span data-ttu-id="2fce1-213">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="2fce1-213">Keyword for raising the event</span></span>|<span data-ttu-id="2fce1-214">级别</span><span class="sxs-lookup"><span data-stu-id="2fce1-214">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="2fce1-215">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="2fce1-215">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="2fce1-216">详细级别 (5)</span><span class="sxs-lookup"><span data-stu-id="2fce1-216">Verbose (5)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="2fce1-217">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="2fce1-217">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|在发生以下情况时引发|  
-|-----------|-----------|----------------|  
-|`MethodJitTailCallFailed`|189|方法尾调用失败。|  
+|<span data-ttu-id="2fce1-218">Event</span><span class="sxs-lookup"><span data-stu-id="2fce1-218">Event</span></span>|<span data-ttu-id="2fce1-219">事件 ID</span><span class="sxs-lookup"><span data-stu-id="2fce1-219">Event ID</span></span>|<span data-ttu-id="2fce1-220">在发生以下情况时引发</span><span class="sxs-lookup"><span data-stu-id="2fce1-220">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`MethodJitTailCallFailed`|<span data-ttu-id="2fce1-221">189</span><span class="sxs-lookup"><span data-stu-id="2fce1-221">189</span></span>|<span data-ttu-id="2fce1-222">方法尾调用失败。</span><span class="sxs-lookup"><span data-stu-id="2fce1-222">The method tail call failed.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="2fce1-223">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="2fce1-223">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
-|---------|----------|--------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|正在编译的方法的命名空间。|  
-|MethodBeingCompiledName|win:UnicodeString|正在编译的方法的名称。|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|正在编译的方法的签名。|  
-|CallerNamespace|win:UnicodeString|JIT 编译器正在尝试为其生成代码的方法的命名空间。|  
-|CallerName|win:UnicodeString|编译器正在尝试为其生成代码的方法的名称。|  
-|CallerNameSignature|win:UnicodeString|调用方的签名。|  
-|CalleeNamespace|win:UnicodeString|被调用方的命名空间。|  
-|CalleeName|win:UnicodeString|编译器正在尝试尾调用的方法（不生成对此方法的调用）。|  
-|CalleeNameSignature|win:UnicodeString|被调用方的签名。|  
-|TailPrefix|win:Boolean|尾调用的前缀|  
-|FailReason|win:UnicodeString|尾调用失败的原因。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="2fce1-224">字段名</span><span class="sxs-lookup"><span data-stu-id="2fce1-224">Field name</span></span>|<span data-ttu-id="2fce1-225">数据类型</span><span class="sxs-lookup"><span data-stu-id="2fce1-225">Data type</span></span>|<span data-ttu-id="2fce1-226">说明</span><span class="sxs-lookup"><span data-stu-id="2fce1-226">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="2fce1-227">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="2fce1-227">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="2fce1-228">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-228">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-229">正在编译的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-229">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-230">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="2fce1-230">MethodBeingCompiledName</span></span>|<span data-ttu-id="2fce1-231">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-231">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-232">正在编译的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-232">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-233">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-233">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="2fce1-234">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-234">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-235">正在编译的方法的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-235">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-236">CallerNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-236">CallerNamespace</span></span>|<span data-ttu-id="2fce1-237">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-237">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-238">JIT 编译器正在尝试为其生成代码的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-238">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="2fce1-239">CallerName</span><span class="sxs-lookup"><span data-stu-id="2fce1-239">CallerName</span></span>|<span data-ttu-id="2fce1-240">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-240">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-241">编译器正在尝试为其生成代码的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-241">The name of the method the compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="2fce1-242">CallerNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-242">CallerNameSignature</span></span>|<span data-ttu-id="2fce1-243">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-243">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-244">调用方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-244">The signature for the caller.</span></span>|  
+|<span data-ttu-id="2fce1-245">CalleeNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-245">CalleeNamespace</span></span>|<span data-ttu-id="2fce1-246">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-246">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-247">被调用方的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-247">The namespace of the callee.</span></span>|  
+|<span data-ttu-id="2fce1-248">CalleeName</span><span class="sxs-lookup"><span data-stu-id="2fce1-248">CalleeName</span></span>|<span data-ttu-id="2fce1-249">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-249">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-250">编译器正在尝试尾调用的方法（不生成对此方法的调用）。</span><span class="sxs-lookup"><span data-stu-id="2fce1-250">The method the compiler is trying to tail call (not generate a call to).</span></span>|  
+|<span data-ttu-id="2fce1-251">CalleeNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-251">CalleeNameSignature</span></span>|<span data-ttu-id="2fce1-252">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-252">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-253">被调用方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-253">The signature for the callee.</span></span>|  
+|<span data-ttu-id="2fce1-254">TailPrefix</span><span class="sxs-lookup"><span data-stu-id="2fce1-254">TailPrefix</span></span>|<span data-ttu-id="2fce1-255">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="2fce1-255">win:Boolean</span></span>|<span data-ttu-id="2fce1-256">尾调用的前缀</span><span class="sxs-lookup"><span data-stu-id="2fce1-256">The prefix for the tail call</span></span>|  
+|<span data-ttu-id="2fce1-257">FailReason</span><span class="sxs-lookup"><span data-stu-id="2fce1-257">FailReason</span></span>|<span data-ttu-id="2fce1-258">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-258">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-259">尾调用失败的原因。</span><span class="sxs-lookup"><span data-stu-id="2fce1-259">The reason the tail call failed.</span></span>|  
+|<span data-ttu-id="2fce1-260">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2fce1-260">ClrInstanceID</span></span>|<span data-ttu-id="2fce1-261">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2fce1-261">win:UInt16</span></span>|<span data-ttu-id="2fce1-262">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="2fce1-262">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### MethodJITTailCallSucceeded 事件  
- 下表显示了关键字和级别。  
+### <a name="methodjittailcallsucceeded-event"></a><span data-ttu-id="2fce1-263">MethodJITTailCallSucceeded 事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-263">MethodJITTailCallSucceeded Event</span></span>  
+ <span data-ttu-id="2fce1-264">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="2fce1-264">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|级别|  
-|--------------|--------|  
-|`JITTracingKeyword` \(0x10\)|详细级别 \(5\)|  
+|<span data-ttu-id="2fce1-265">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="2fce1-265">Keyword for raising the event</span></span>|<span data-ttu-id="2fce1-266">级别</span><span class="sxs-lookup"><span data-stu-id="2fce1-266">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="2fce1-267">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="2fce1-267">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="2fce1-268">详细级别 (5)</span><span class="sxs-lookup"><span data-stu-id="2fce1-268">Verbose (5)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="2fce1-269">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="2fce1-269">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|在发生以下情况时引发|  
-|-----------|-----------|----------------|  
-|`MethodJitTailCallSucceeded`|188|方法尾调用成功。|  
+|<span data-ttu-id="2fce1-270">Event</span><span class="sxs-lookup"><span data-stu-id="2fce1-270">Event</span></span>|<span data-ttu-id="2fce1-271">事件 ID</span><span class="sxs-lookup"><span data-stu-id="2fce1-271">Event ID</span></span>|<span data-ttu-id="2fce1-272">在发生以下情况时引发</span><span class="sxs-lookup"><span data-stu-id="2fce1-272">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`MethodJitTailCallSucceeded`|<span data-ttu-id="2fce1-273">188</span><span class="sxs-lookup"><span data-stu-id="2fce1-273">188</span></span>|<span data-ttu-id="2fce1-274">方法尾调用成功。</span><span class="sxs-lookup"><span data-stu-id="2fce1-274">The method tail call succeeded.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="2fce1-275">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="2fce1-275">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
-|---------|----------|--------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|正在编译的方法的命名空间。|  
-|MethodBeingCompiledName|win:UnicodeString|正在编译的方法的名称。|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|正在编译的方法的签名。|  
-|CallerNamespace|win:UnicodeString|JIT 编译器正在尝试为其生成代码的方法的命名空间。|  
-|CallerName|win:UnicodeString|编译器正在尝试为其生成代码的方法的名称。|  
-|CallerNameSignature|win:UnicodeString|调用方的签名。|  
-|CalleeNamespace|win:UnicodeString|被调用方的命名空间。|  
-|CalleeName|win:UnicodeString|编译器正在尝试尾调用的方法（不生成对此方法的调用）。|  
-|CalleeNameSignature|win:UnicodeString|被调用方的签名。|  
-|TailPrefix|win:Boolean|尾调用的前缀。|  
-|TailCallType|win:UnicodeString|尾调用的类型。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="2fce1-276">字段名</span><span class="sxs-lookup"><span data-stu-id="2fce1-276">Field name</span></span>|<span data-ttu-id="2fce1-277">数据类型</span><span class="sxs-lookup"><span data-stu-id="2fce1-277">Data type</span></span>|<span data-ttu-id="2fce1-278">说明</span><span class="sxs-lookup"><span data-stu-id="2fce1-278">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="2fce1-279">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="2fce1-279">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="2fce1-280">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-280">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-281">正在编译的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-281">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-282">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="2fce1-282">MethodBeingCompiledName</span></span>|<span data-ttu-id="2fce1-283">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-283">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-284">正在编译的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-284">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-285">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-285">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="2fce1-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-286">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-287">正在编译的方法的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-287">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="2fce1-288">CallerNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-288">CallerNamespace</span></span>|<span data-ttu-id="2fce1-289">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-289">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-290">JIT 编译器正在尝试为其生成代码的方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-290">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="2fce1-291">CallerName</span><span class="sxs-lookup"><span data-stu-id="2fce1-291">CallerName</span></span>|<span data-ttu-id="2fce1-292">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-292">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-293">编译器正在尝试为其生成代码的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="2fce1-293">The name of the method the compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="2fce1-294">CallerNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-294">CallerNameSignature</span></span>|<span data-ttu-id="2fce1-295">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-295">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-296">调用方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-296">The signature for the caller.</span></span>|  
+|<span data-ttu-id="2fce1-297">CalleeNamespace</span><span class="sxs-lookup"><span data-stu-id="2fce1-297">CalleeNamespace</span></span>|<span data-ttu-id="2fce1-298">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-298">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-299">被调用方的命名空间。</span><span class="sxs-lookup"><span data-stu-id="2fce1-299">The namespace of the callee.</span></span>|  
+|<span data-ttu-id="2fce1-300">CalleeName</span><span class="sxs-lookup"><span data-stu-id="2fce1-300">CalleeName</span></span>|<span data-ttu-id="2fce1-301">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-301">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-302">编译器正在尝试尾调用的方法（不生成对此方法的调用）。</span><span class="sxs-lookup"><span data-stu-id="2fce1-302">The method the compiler is trying to tail call (not generate a call to).</span></span>|  
+|<span data-ttu-id="2fce1-303">CalleeNameSignature</span><span class="sxs-lookup"><span data-stu-id="2fce1-303">CalleeNameSignature</span></span>|<span data-ttu-id="2fce1-304">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-304">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-305">被调用方的签名。</span><span class="sxs-lookup"><span data-stu-id="2fce1-305">The signature for the callee.</span></span>|  
+|<span data-ttu-id="2fce1-306">TailPrefix</span><span class="sxs-lookup"><span data-stu-id="2fce1-306">TailPrefix</span></span>|<span data-ttu-id="2fce1-307">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="2fce1-307">win:Boolean</span></span>|<span data-ttu-id="2fce1-308">尾调用的前缀。</span><span class="sxs-lookup"><span data-stu-id="2fce1-308">The prefix for the tail call.</span></span>|  
+|<span data-ttu-id="2fce1-309">TailCallType</span><span class="sxs-lookup"><span data-stu-id="2fce1-309">TailCallType</span></span>|<span data-ttu-id="2fce1-310">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2fce1-310">win:UnicodeString</span></span>|<span data-ttu-id="2fce1-311">尾调用的类型。</span><span class="sxs-lookup"><span data-stu-id="2fce1-311">The type of the tail call.</span></span>|  
+|<span data-ttu-id="2fce1-312">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2fce1-312">ClrInstanceID</span></span>|<span data-ttu-id="2fce1-313">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2fce1-313">win:UInt16</span></span>|<span data-ttu-id="2fce1-314">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="2fce1-314">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## 请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a><span data-ttu-id="2fce1-315">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2fce1-315">See Also</span></span>  
+ [<span data-ttu-id="2fce1-316">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="2fce1-316">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)
+

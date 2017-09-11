@@ -36,8 +36,8 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="endregion-c-reference"></a>#endregion（C# 参考）
-`#endregion` 标记 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 块的结尾。 例如:   
+# <a name="endregion-c-reference"></a><span data-ttu-id="c739a-102">#endregion（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c739a-102">#endregion (C# Reference)</span></span>
+<span data-ttu-id="c739a-103">`#endregion` 标记 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 块的结尾。</span><span class="sxs-lookup"><span data-stu-id="c739a-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="c739a-104">例如: </span><span class="sxs-lookup"><span data-stu-id="c739a-104">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -50,8 +50,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="c739a-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c739a-105">See Also</span></span>  
+ <span data-ttu-id="c739a-106">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="c739a-106">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="c739a-107">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="c739a-107">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="c739a-108">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="c739a-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

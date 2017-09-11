@@ -21,10 +21,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-c"></a>链接的查询的性能 (LINQ to XML) (C#)
-LINQ（以及 LINQ to XML）的一个最重要优点是，链接查询的执行性能与单个更大更复杂的查询一样好。  
+# <a name="performance-of-chained-queries-linq-to-xml-c"></a><span data-ttu-id="f7e50-102">链接的查询的性能 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f7e50-102">Performance of Chained Queries (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="f7e50-103">LINQ（以及 LINQ to XML）的一个最重要优点是，链接查询的执行性能与单个更大更复杂的查询一样好。</span><span class="sxs-lookup"><span data-stu-id="f7e50-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  
   
- 链接查询是一种将另一个查询作为其源的查询。 例如，在下面的简单代码中，`query2` 使用 `query1` 作为其源：  
+ <span data-ttu-id="f7e50-104">链接查询是一种将另一个查询作为其源的查询。</span><span class="sxs-lookup"><span data-stu-id="f7e50-104">A chained query is a query that uses another query as its source.</span></span> <span data-ttu-id="f7e50-105">例如，在下面的简单代码中，`query2` 使用 `query1` 作为其源：</span><span class="sxs-lookup"><span data-stu-id="f7e50-105">For example, in the following simple code, `query2` has `query1` as its source:</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -46,28 +46,28 @@ foreach (var i in query2)
     Console.WriteLine("{0}", (int)i);  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="f7e50-106">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f7e50-106">This example produces the following output:</span></span>  
   
 ```  
 4  
 ```  
   
- 此链接查询提供与循环访问链接列表相同的性能配置文件。  
+ <span data-ttu-id="f7e50-107">此链接查询提供与循环访问链接列表相同的性能配置文件。</span><span class="sxs-lookup"><span data-stu-id="f7e50-107">This chained query provides the same performance profile as iterating through a linked list.</span></span>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A> 轴具有与循环访问链接列表基本相同的性能。 <xref:System.Xml.Linq.XContainer.Elements%2A> 作为具有延迟执行功能的迭代器实现。 这意味着它除了循环访问链接列表外还执行一些操作，例如分配迭代器对象和跟踪执行状态。 此项工作可以分为两类：设置迭代器时完成的工作和每次迭代过程中完成的工作。 设置工作是固定的少量工作，而每次迭代过程中完成的工作与源集合中的项数成正比。  
+-   <span data-ttu-id="f7e50-108"><xref:System.Xml.Linq.XContainer.Elements%2A> 轴具有与循环访问链接列表基本相同的性能。</span><span class="sxs-lookup"><span data-stu-id="f7e50-108">The <xref:System.Xml.Linq.XContainer.Elements%2A> axis has essentially the same performance as iterating through a linked list.</span></span> <span data-ttu-id="f7e50-109"><xref:System.Xml.Linq.XContainer.Elements%2A> 作为具有延迟执行功能的迭代器实现。</span><span class="sxs-lookup"><span data-stu-id="f7e50-109"><xref:System.Xml.Linq.XContainer.Elements%2A> is implemented as an iterator with deferred execution.</span></span> <span data-ttu-id="f7e50-110">这意味着它除了循环访问链接列表外还执行一些操作，例如分配迭代器对象和跟踪执行状态。</span><span class="sxs-lookup"><span data-stu-id="f7e50-110">This means that it does some work in addition to iterating through the linked list, such as allocating the iterator object and keeping track of execution state.</span></span> <span data-ttu-id="f7e50-111">此项工作可以分为两类：设置迭代器时完成的工作和每次迭代过程中完成的工作。</span><span class="sxs-lookup"><span data-stu-id="f7e50-111">This work can be divided into two categories: the work that is done at the time the iterator is set up, and the work that is done during each iteration.</span></span> <span data-ttu-id="f7e50-112">设置工作是固定的少量工作，而每次迭代过程中完成的工作与源集合中的项数成正比。</span><span class="sxs-lookup"><span data-stu-id="f7e50-112">The setup work is a small, fixed amount of work and the work done during each iteration is proportional to the number of items in the source collection.</span></span>  
   
--   在 `query1` 中，`where` 子句将使查询调用 <xref:System.Linq.Enumerable.Where%2A> 方法。 此方法也作为迭代器实现。 设置工作包括实例化将引用 lambda 表达式的委托和对迭代器的常规设置。 每次迭代时，都将调用该委托以执行谓词。 设置工作和每次迭代过程中完成的工作类似于循环访问轴期间完成的工作。  
+-   <span data-ttu-id="f7e50-113">在 `query1` 中，`where` 子句将使查询调用 <xref:System.Linq.Enumerable.Where%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f7e50-113">In `query1`, the `where` clause causes the query to call the <xref:System.Linq.Enumerable.Where%2A> method.</span></span> <span data-ttu-id="f7e50-114">此方法也作为迭代器实现。</span><span class="sxs-lookup"><span data-stu-id="f7e50-114">This method is also implemented as an iterator.</span></span> <span data-ttu-id="f7e50-115">设置工作包括实例化将引用 lambda 表达式的委托和对迭代器的常规设置。</span><span class="sxs-lookup"><span data-stu-id="f7e50-115">The setup work consists of instantiating the delegate that will reference the lambda expression, plus the normal setup for an iterator.</span></span> <span data-ttu-id="f7e50-116">每次迭代时，都将调用该委托以执行谓词。</span><span class="sxs-lookup"><span data-stu-id="f7e50-116">With each iteration, the delegate is called to execute the predicate.</span></span> <span data-ttu-id="f7e50-117">设置工作和每次迭代过程中完成的工作类似于循环访问轴期间完成的工作。</span><span class="sxs-lookup"><span data-stu-id="f7e50-117">The setup work and the work done during each iteration is the similar to the work done while iterating through the axis.</span></span>  
   
--   在 `query1` 中，select 子句将使查询调用 <xref:System.Linq.Enumerable.Select%2A> 方法。 此方法与 <xref:System.Linq.Enumerable.Where%2A> 方法具有相同的性能配置文件。  
+-   <span data-ttu-id="f7e50-118">在 `query1` 中，select 子句将使查询调用 <xref:System.Linq.Enumerable.Select%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f7e50-118">In `query1`, the select clause causes the query to call the <xref:System.Linq.Enumerable.Select%2A> method.</span></span> <span data-ttu-id="f7e50-119">此方法与 <xref:System.Linq.Enumerable.Where%2A> 方法具有相同的性能配置文件。</span><span class="sxs-lookup"><span data-stu-id="f7e50-119">This method has the same performance profile as the <xref:System.Linq.Enumerable.Where%2A> method.</span></span>  
   
--   `query2` 中的 `where` 子句和 `select` 子句与 `query1` 中的相应语句具有相同的性能配置文件。  
+-   <span data-ttu-id="f7e50-120">`query2` 中的 `where` 子句和 `select` 子句与 `query1` 中的相应语句具有相同的性能配置文件。</span><span class="sxs-lookup"><span data-stu-id="f7e50-120">In `query2`, both the `where` clause and the `select` clause have the same performance profile as in `query1`.</span></span>  
   
- 因此，通过 `query2` 执行的迭代与第一个查询源中的项数（即，线形时间）成正比。 相应的 Visual Basic 示例将具有相同的性能配置文件。  
+ <span data-ttu-id="f7e50-121">因此，通过 `query2` 执行的迭代与第一个查询源中的项数（即，线形时间）成正比。</span><span class="sxs-lookup"><span data-stu-id="f7e50-121">The iteration through `query2` is therefore directly proportional to the number of items in the source of the first query, in other words, linear time.</span></span> <span data-ttu-id="f7e50-122">相应的 Visual Basic 示例将具有相同的性能配置文件。</span><span class="sxs-lookup"><span data-stu-id="f7e50-122">A corresponding Visual Basic example would have the same performance profile.</span></span>  
   
- 有关迭代器的详细信息，请参阅 [yield](../../../../csharp/language-reference/keywords/yield.md)。  
+ <span data-ttu-id="f7e50-123">有关迭代器的详细信息，请参阅 [yield](../../../../csharp/language-reference/keywords/yield.md)。</span><span class="sxs-lookup"><span data-stu-id="f7e50-123">For more information on iterators, see [yield](../../../../csharp/language-reference/keywords/yield.md).</span></span>  
   
- 有关将查询链接在一起的更详细教程，请参阅[教程：将查询链接在一起](http://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c)。  
+ <span data-ttu-id="f7e50-124">有关将查询链接在一起的更详细教程，请参阅[教程：将查询链接在一起](http://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c)。</span><span class="sxs-lookup"><span data-stu-id="f7e50-124">For a more detailed tutorial on chaining queries together, see [Tutorial: Chaining Queries Together](http://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [性能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f7e50-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="f7e50-125">See Also</span></span>  
+ [<span data-ttu-id="f7e50-126">性能 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f7e50-126">Performance (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
 

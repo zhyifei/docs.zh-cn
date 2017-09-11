@@ -1,1 +1,1 @@
-Microsoft Windows Media 照片
+<span data-ttu-id="30394-101">Microsoft Windows Media 照片</span><span class="sxs-lookup"><span data-stu-id="30394-101">Microsoft Windows Media Photo</span></span>

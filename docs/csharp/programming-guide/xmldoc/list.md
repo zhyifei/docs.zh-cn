@@ -42,8 +42,8 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltlistgt-c-programming-guide"></a>&lt;列表&gt;（C# 编程指南）
-## <a name="syntax"></a>语法  
+# <a name="ltlistgt-c-programming-guide"></a><span data-ttu-id="1c4a3-102">&lt;列表&gt;（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="1c4a3-102">&lt;list&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="1c4a3-103">语法</span><span class="sxs-lookup"><span data-stu-id="1c4a3-103">Syntax</span></span>  
   
 ```xml  
 <list type="bullet" | "number" | "table">  
@@ -58,26 +58,26 @@ ms.lasthandoff: 07/28/2017
 </list>  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="1c4a3-104">参数</span><span class="sxs-lookup"><span data-stu-id="1c4a3-104">Parameters</span></span>  
  `term`  
- 要定义的术语，将在 `description` 中进行定义。  
+ <span data-ttu-id="1c4a3-105">要定义的术语，将在 `description` 中进行定义。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-105">A term to define, which will be defined in `description`.</span></span>  
   
  `description`  
- 项目符号或编号列表中的项或 `term` 的定义。  
+ <span data-ttu-id="1c4a3-106">项目符号或编号列表中的项或 `term` 的定义。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-106">Either an item in a bullet or numbered list or the definition of a `term`.</span></span>  
   
-## <a name="remarks"></a>备注  
- \<listheader> 块用于定义表或定义列表的标题行。 定义表时，只需提供标题中的术语的项。  
+## <a name="remarks"></a><span data-ttu-id="1c4a3-107">备注</span><span class="sxs-lookup"><span data-stu-id="1c4a3-107">Remarks</span></span>  
+ <span data-ttu-id="1c4a3-108">\<listheader> 块用于定义表或定义列表的标题行。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-108">The \<listheader> block is used to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="1c4a3-109">定义表时，只需提供标题中的术语的项。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-109">When defining a table, you only need to supply an entry for term in the heading.</span></span>  
   
- 列表中的每个项均使用 \<item> 块指定。 创建定义列表时，需要同时指定 `term` 和 `description`。 但是，对于表、项目符号列表或编号列表，只需提供 `description` 的项。  
+ <span data-ttu-id="1c4a3-110">列表中的每个项均使用 \<item> 块指定。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-110">Each item in the list is specified with an \<item> block.</span></span> <span data-ttu-id="1c4a3-111">创建定义列表时，需要同时指定 `term` 和 `description`。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-111">When creating a definition list, you will need to specify both `term` and `description`.</span></span> <span data-ttu-id="1c4a3-112">但是，对于表、项目符号列表或编号列表，只需提供 `description` 的项。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-112">However, for a table, bulleted list, or numbered list, you only need to supply an entry for `description`.</span></span>  
   
- 列表或表可根据需要具有多个 \<item> 块。  
+ <span data-ttu-id="1c4a3-113">列表或表可根据需要具有多个 \<item> 块。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-113">A list or table can have as many \<item> blocks as needed.</span></span>  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ <span data-ttu-id="1c4a3-114">使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="1c4a3-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
+## <a name="example"></a><span data-ttu-id="1c4a3-115">示例</span><span class="sxs-lookup"><span data-stu-id="1c4a3-115">Example</span></span>  
+ <span data-ttu-id="1c4a3-116">[!code-cs[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="1c4a3-116">[!code-cs[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="1c4a3-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1c4a3-117">See Also</span></span>  
+ <span data-ttu-id="1c4a3-118">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="1c4a3-118">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="1c4a3-119">建议的文档注释标记</span><span class="sxs-lookup"><span data-stu-id="1c4a3-119">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

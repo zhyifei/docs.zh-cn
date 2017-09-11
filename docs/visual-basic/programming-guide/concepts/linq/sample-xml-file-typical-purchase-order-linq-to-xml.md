@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b553c8553437ccd7ccf715bea515c1733b6549c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cfe21c3e203fd8f255634314eeac72fc802bd9db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>示例 XML 文件：典型采购订单 (LINQ to XML)
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。 此文件是典型的采购单。  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="7a317-102">示例 XML 文件：典型采购订单 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7a317-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="7a317-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="7a317-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="7a317-104">此文件是典型的采购单。</span><span class="sxs-lookup"><span data-stu-id="7a317-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
+## <a name="purchaseorderxml"></a><span data-ttu-id="7a317-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="7a317-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -68,5 +69,5 @@ ms.lasthandoff: 03/13/2017
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7a317-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7a317-106">See Also</span></span>  
+ [<span data-ttu-id="7a317-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7a317-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

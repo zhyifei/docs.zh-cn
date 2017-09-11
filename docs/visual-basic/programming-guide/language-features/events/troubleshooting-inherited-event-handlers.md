@@ -34,24 +34,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0dae6b48b1885a52b99ae3e7328340cac7b2d7d4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f64395975821226d42664bbf78b04120d49a38bc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>有关 Visual Basic 中继承的事件处理程序的疑难解答
-本主题列出了使用继承的组件中的事件处理程序时出现的常见问题。  
+# <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a><span data-ttu-id="0ce12-102">有关 Visual Basic 中继承的事件处理程序的疑难解答</span><span class="sxs-lookup"><span data-stu-id="0ce12-102">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>
+<span data-ttu-id="0ce12-103">本主题列出了使用继承的组件中的事件处理程序时出现的常见问题。</span><span class="sxs-lookup"><span data-stu-id="0ce12-103">This topic lists common issues that arise with event handlers in inherited components.</span></span>  
   
-## <a name="procedures"></a>过程  
+## <a name="procedures"></a><span data-ttu-id="0ce12-104">过程</span><span class="sxs-lookup"><span data-stu-id="0ce12-104">Procedures</span></span>  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>对于每次调用两次执行事件处理程序中的代码  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a><span data-ttu-id="0ce12-105">对于每次调用两次执行事件处理程序中的代码</span><span class="sxs-lookup"><span data-stu-id="0ce12-105">Code in Event Handler Executes Twice for Every Call</span></span>  
   
--   继承的事件处理程序中不能包含[处理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句。 方法在基类中的已有与事件相关联，并将相应地激发。 删除`Handles`子句从继承的方法。  
+-   <span data-ttu-id="0ce12-106">继承的事件处理程序中不能包含[处理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句。</span><span class="sxs-lookup"><span data-stu-id="0ce12-106">An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause.</span></span> <span data-ttu-id="0ce12-107">方法在基类中的已有与事件相关联，并将相应地激发。</span><span class="sxs-lookup"><span data-stu-id="0ce12-107">The method in the base class is already associated with the event and will fire accordingly.</span></span> <span data-ttu-id="0ce12-108">删除`Handles`子句从继承的方法。</span><span class="sxs-lookup"><span data-stu-id="0ce12-108">Remove the `Handles` clause from the inherited method.</span></span>  
   
-     [!code-vb[VbVbalrEvents #&32;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
+     <span data-ttu-id="0ce12-109">[!code-vb[VbVbalrEvents #&32;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="0ce12-109">[!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]</span></span>  
   
--   如果继承的方法没有`Handles`关键字，验证您的代码不包含额外[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)或任何其他方法，用于处理同一个事件。  
+-   <span data-ttu-id="0ce12-110">如果继承的方法没有`Handles`关键字，验证您的代码不包含额外[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)或任何其他方法，用于处理同一个事件。</span><span class="sxs-lookup"><span data-stu-id="0ce12-110">If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="0ce12-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0ce12-111">See Also</span></span>  
+ [<span data-ttu-id="0ce12-112">事件</span><span class="sxs-lookup"><span data-stu-id="0ce12-112">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)

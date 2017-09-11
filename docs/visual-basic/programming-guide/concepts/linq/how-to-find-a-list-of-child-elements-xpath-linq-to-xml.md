@@ -16,22 +16,22 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f56490f307f623453bb5e658d1e55241c9ac4201
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 23e35e339f7330815980216b525bb1727f60cbfc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>如何︰ 查找子元素 (XPATH-LINQ to XML) 的列表 (Visual Basic)
-本主题将 XPath 子元素轴与比较[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<xref:System.Xml.Linq.XContainer.Elements%2A>轴。</xref:System.Xml.Linq.XContainer.Elements%2A>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="c7a02-102">如何︰ 查找子元素 (XPATH-LINQ to XML) 的列表 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7a02-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="c7a02-103">本主题将 XPath 子元素轴与比较[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<xref:System.Xml.Linq.XContainer.Elements%2A>轴。</xref:System.Xml.Linq.XContainer.Elements%2A></span><span class="sxs-lookup"><span data-stu-id="c7a02-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- XPath 表达式为：`./*`  
+ <span data-ttu-id="c7a02-104">XPath 表达式为：`./*`</span><span class="sxs-lookup"><span data-stu-id="c7a02-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a>示例  
- 本示例查找 `Address` 元素的所有子元素。  
+## <a name="example"></a><span data-ttu-id="c7a02-105">示例</span><span class="sxs-lookup"><span data-stu-id="c7a02-105">Example</span></span>  
+ <span data-ttu-id="c7a02-106">本示例查找 `Address` 元素的所有子元素。</span><span class="sxs-lookup"><span data-stu-id="c7a02-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ <span data-ttu-id="c7a02-107">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="c7a02-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -54,7 +54,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="c7a02-108">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="c7a02-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -66,6 +66,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="c7a02-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c7a02-109">See Also</span></span>  
+ [<span data-ttu-id="c7a02-110">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7a02-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

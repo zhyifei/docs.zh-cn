@@ -1,42 +1,48 @@
 ---
-title: "WIF 和 Web 场 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 和 Web 场"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0bb682c6eaebf7e1a0c2c2de5b584c28e4c192c5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# WIF 和 Web 场
-当您使用 Windows 身份基础 \(WIF\) 安全的应用程序部署到 web 群中的依赖方 \(RP\) 资源时，必须采取特定的步骤，以确保 WIF 可以处理令牌从 RP 应用程序在服务器场中的不同计算机上运行的实例。  此处理包括验证会话令牌签名、 加密和解密的会话令牌、 缓存会话令牌和检测重播安全令牌。  
+# <a name="wif-and-web-farms"></a><span data-ttu-id="452c1-102">WIF 和 Web 场</span><span class="sxs-lookup"><span data-stu-id="452c1-102">WIF and Web Farms</span></span>
+<span data-ttu-id="452c1-103">使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。</span><span class="sxs-lookup"><span data-stu-id="452c1-103">When you use Windows Identity Foundation (WIF) to secure the resources of a relying party (RP) application that is deployed in a web farm, you must take specific steps to ensure that WIF can process tokens from instances of the RP application running on different computers in the farm.</span></span> <span data-ttu-id="452c1-104">处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。</span><span class="sxs-lookup"><span data-stu-id="452c1-104">This processing includes validating session token signatures, encrypting and decrypting session tokens, caching session tokens, and detecting replayed security tokens.</span></span>  
   
- 在典型的情况下，保护资源的 RP 应用程序\-\-使用 WIF 时是否运行在一台计算机上或在 web 场\-RP 与基于安全令牌从安全令牌服务 \(STS\) 获得的客户建立会话。  这是为了避免强制客户端以进行身份验证在使用 WIF 受保护的每个应用程序资源 STS。  有关 WIF 如何处理会话的详细信息，请参阅[WIF 会话管理](../../../docs/framework/security/wif-session-management.md)。  
+ <span data-ttu-id="452c1-105">通常情况下，使用 WIF 保护信赖方应用程序的资源时 – 无论 RP 是在单一计算机上运行还是在 Web 场中运行 – 都会基于从安全令牌服务 (STS) 获取的安全令牌与客户端创建一个会话。</span><span class="sxs-lookup"><span data-stu-id="452c1-105">In the typical case, when WIF is used to secure resources of an RP application – whether the RP is running on a single computer or in a web farm -- a session is established with the client based on the security token that was obtained from the security token service (STS).</span></span> <span data-ttu-id="452c1-106">这是为了避免强制客户端在 STS 对每个使用 WIF 保护的应用程序资源进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="452c1-106">This is to avoid forcing the client to have to authenticate at the STS for every application resource that is secured using WIF.</span></span> <span data-ttu-id="452c1-107">有关 WIF 如何处理会话的详细信息，请参阅 [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)。</span><span class="sxs-lookup"><span data-stu-id="452c1-107">For more information about how WIF handles sessions, see [WIF Session Management](../../../docs/framework/security/wif-session-management.md).</span></span>  
   
- 当使用默认设置时，WIF 具有以下功能：  
+ <span data-ttu-id="452c1-108">使用默认设置时，WIF 会执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="452c1-108">When default settings are used, WIF does the following:</span></span>  
   
--   它使用的实例<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>类读取和写入会话令牌 （实例的<xref:System.IdentityModel.Tokens.SessionSecurityToken>类） 的执行的声明和其他有关安全令牌身份验证所使用的信息，以及有关其自身会话的信息。  会话令牌进行包装和存储在会话 cookie 中。  默认情况下，由<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>使用<xref:System.IdentityModel.ProtectedDataCookieTransform>类，该类用于数据保护 API \(DPAPI\) 保护的会话令牌。  DPAPI 通过使用用户或计算机凭据提供保护，并在用户配置文件中存储密钥数据。  
+-   <span data-ttu-id="452c1-109">它使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 类的实例读取和写入会话令牌（<xref:System.IdentityModel.Tokens.SessionSecurityToken> 类的实例），此会话令牌传送声明、其他用于身份验证的安全令牌的相关信息和关于会话自身的信息。</span><span class="sxs-lookup"><span data-stu-id="452c1-109">It uses an instance of the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class to read and write a session token (an instance of the <xref:System.IdentityModel.Tokens.SessionSecurityToken> class) that carries the claims and other information about the security token that was used for authentication as well as information about the session itself.</span></span> <span data-ttu-id="452c1-110">会话令牌打包并存储在会话 cookie 中。</span><span class="sxs-lookup"><span data-stu-id="452c1-110">The session token is packaged and stored in a session cookie.</span></span> <span data-ttu-id="452c1-111">默认情况下，<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 使用 <xref:System.IdentityModel.ProtectedDataCookieTransform> 类，使用数据保护 API (DPAPI) 保护会话令牌。</span><span class="sxs-lookup"><span data-stu-id="452c1-111">By default, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> uses the <xref:System.IdentityModel.ProtectedDataCookieTransform> class, which uses the Data Protection API (DPAPI), to protect the session token.</span></span> <span data-ttu-id="452c1-112">DPAPI 使用用户或计算机凭据提供保护并将关键数据存储在用户配置文件中。</span><span class="sxs-lookup"><span data-stu-id="452c1-112">The DPAPI provides protection by using the user or machine credentials and stores the key data in the user profile.</span></span>  
   
--   它使用默认设置内存中实施的<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>类存储和处理的会话令牌。  
+-   <span data-ttu-id="452c1-113">它使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 类的默认内存中实现来存储和处理会话令牌。</span><span class="sxs-lookup"><span data-stu-id="452c1-113">It uses a default, in-memory implementation of the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> class to store and process the session token.</span></span>  
   
- 这些默认设置工作的方案，在其中 RP 应用程序部署在一台计算机。 但是，部署在 web 场中，可能会发送到每个 HTTP 请求，并处理由 RP 应用程序运行在另一台计算机上的其他实例。  在此方案中，因为保护令牌和令牌缓存依赖于特定的计算机将无法工作上面描述的默认 WIF 设置。  
+ <span data-ttu-id="452c1-114">这些默认设置在信赖方应用程序部署于单台计算机上的方案中工作，但部署在 Web 场中时 ，每个 HTTP 请求都可能发送到不同计算机上运行的信赖方应用程序的不同实例并由这些实例处理。</span><span class="sxs-lookup"><span data-stu-id="452c1-114">These default settings work in scenarios in which the RP application is deployed on a single computer; however, when deployed in a web farm, each HTTP request may be sent to and processed by a different instance of the RP application running on a different computer.</span></span> <span data-ttu-id="452c1-115">在此方案中，以上所示的默认 WIF 设置将不会工作，因为令牌保护和令牌都依赖于特定的计算机。</span><span class="sxs-lookup"><span data-stu-id="452c1-115">In this scenario, the default WIF settings described above will not work because both token protection and token caching are dependent on a specific computer.</span></span>  
   
- 若要部署 web 场中的 RP 应用程序，必须确保处理的会话令牌 （以及乱令牌的） 并不依赖于特定计算机上运行的应用程序。  若要执行此操作的一种方法是实现 RP 应用程序，以使其使用 ASP 所提供的功能。NET `<machineKey>`配置元素，并提供了用于处理会话令牌分布式缓存和重播标记。  `<machineKey>`元素使您可以指定验证、 加密和解密在配置文件中，从而使您能够在 web 场中的不同计算机上指定了相同的密钥令牌所需的密钥。  WIF 提供了专用的会话令牌处理程序， <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>，这通过使用中指定的密钥保护令牌`<machineKey>`元素。  若要实现此策略，您可以遵循以下准则：  
+ <span data-ttu-id="452c1-116">若要在 Web 场中部署信赖方应用程序，必须确保会话令牌（以及重播令牌）的处理不依赖于特定计算机上运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="452c1-116">To deploy an RP application in a web farm, you must ensure that the processing of session tokens (as well as of replayed tokens) is not dependent on the application running on a specific computer.</span></span> <span data-ttu-id="452c1-117">一种方法是实现信赖方应用程序，以便它使用 ASP.NET `<machineKey>` 配置元素提供的功能并提供分布式缓存处理会话令牌和重播令牌。</span><span class="sxs-lookup"><span data-stu-id="452c1-117">One way to do this is to implement your RP application so that it uses the functionality provided by the ASP.NET `<machineKey>` configuration element and provides distributed caching for processing session tokens and replayed tokens.</span></span> <span data-ttu-id="452c1-118">通过 `<machineKey>` 元素可以在配置文件中指定需要验证、加密和解密令牌的密钥，可在 Web 场中的不同计算机上指定相同的密钥。</span><span class="sxs-lookup"><span data-stu-id="452c1-118">The `<machineKey>` element allows you to specify the keys needed to validate, encrypt, and decrypt tokens in a configuration file, which enables you to specify the same keys on different computers in the web farm.</span></span> <span data-ttu-id="452c1-119">WIF 提供专用的会话令牌处理程序 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>该处理程序使用 `<machineKey>` 元素中指定的密钥保护令牌。</span><span class="sxs-lookup"><span data-stu-id="452c1-119">WIF provides a specialized session token handler, the <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, that protects tokens by using the keys specified in the `<machineKey>` element.</span></span> <span data-ttu-id="452c1-120">若要实现此策略，请遵循这些指导：</span><span class="sxs-lookup"><span data-stu-id="452c1-120">To implement this strategy, you can follow these guidelines:</span></span>  
   
--   使用 ASP。NET `<machineKey>`中显式指定可以在服务器场中的计算机之间使用的签名和加密密钥的配置元素。  下面的 XML 说明的规范`<machineKey>`元素下的`<system.web>`配置文件中的元素。  
+-   <span data-ttu-id="452c1-121">使用配置中的 ASP.NET `<machineKey>` 元素显式指定可以在场中不同计算机上使用的签名和加密密钥。</span><span class="sxs-lookup"><span data-stu-id="452c1-121">Use the ASP.NET `<machineKey>` element in configuration to explicitly specify signing and encryption keys that can be used across computers in the farm.</span></span> <span data-ttu-id="452c1-122">以下 XML 显示配置文件中 `<system.web>` 元素下的 `<machineKey>` 元素的规范。</span><span class="sxs-lookup"><span data-stu-id="452c1-122">The following XML shows the specification of the `<machineKey>` element under the `<system.web>` element in a configuration file.</span></span>  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   配置应用程序使用<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>通过将其添加到标记处理程序集合。  您必须首先删除<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> （从派生的任何处理程序或<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>类） 是否存在此类处理程序标记处理程序集合中。  <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>使用<xref:System.IdentityModel.Services.MachineKeyTransform>类中，通过使用指定的加密材料保护的会话 cookie 数据的`<machineKey>`元素。  下面的 XML 说明如何添加<xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>标记处理程序集合。  
+-   <span data-ttu-id="452c1-123">配置应用程序使用 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>，方法是将它添加到令牌处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="452c1-123">Configure the application to use the <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> by adding it to the token handler collection.</span></span> <span data-ttu-id="452c1-124">如果此类处理程序存在，必须先从令牌处理程序集合中删除 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>（或者任何派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 类的处理程序）。</span><span class="sxs-lookup"><span data-stu-id="452c1-124">You must first remove the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (or any handler derived from the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class) from the token handler collection if such a handler is present.</span></span> <span data-ttu-id="452c1-125"><xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 使用 <xref:System.IdentityModel.Services.MachineKeyTransform> 类，通过使用 `<machineKey>` 元素中指定的加密材料保护会话 cookie 数据。</span><span class="sxs-lookup"><span data-stu-id="452c1-125">The <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> uses the <xref:System.IdentityModel.Services.MachineKeyTransform> class, which protects the session cookie data by using the cryptographic material specified in the `<machineKey>` element.</span></span> <span data-ttu-id="452c1-126">以下 XML 显示如何添加 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 到令牌处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="452c1-126">The following XML shows how to add the <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> to a token handler collection.</span></span>  
   
     ```xml  
     <securityTokenHandlers>  
@@ -45,7 +51,7 @@ caps.handback.revision: 9
     </securityTokenHandlers>  
     ```  
   
--   从派生<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>和实现分布式缓存，即，可从 RP 可能运行的服务器场中的所有计算机访问缓存。  配置要通过指定使用分布式的缓存 RP [\<sessionSecurityTokenCache\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)配置文件中的元素。  您可以重写<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName>在派生类实现的子元素的方法`<sessionSecurityTokenCache>`元素，如果需要。  
+-   <span data-ttu-id="452c1-127">派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。</span><span class="sxs-lookup"><span data-stu-id="452c1-127">Derive from <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> and implement distributed caching, that is, a cache that is accessible from all computers in the farm on which the RP might run.</span></span> <span data-ttu-id="452c1-128">通过指定配置文件中的 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。</span><span class="sxs-lookup"><span data-stu-id="452c1-128">Configure the RP to use your distributed cache by specifying the [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) element in the configuration file.</span></span> <span data-ttu-id="452c1-129">可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="452c1-129">You can override the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> method in your derived class to implement child elements of the `<sessionSecurityTokenCache>` element if they are required.</span></span>  
   
     ```xml  
     <caches>  
@@ -55,19 +61,19 @@ caps.handback.revision: 9
     </caches>  
     ```  
   
-     实现分布式缓存的一种方法是为您的自定义缓存提供的 WCF 前端。  有关实现 WCF 缓存服务的详细信息，请参阅[WCF 缓存服务](#BKMK_TheWCFCachingService)。  有关实现 RP 应用程序可以调用缓存服务使用 WCF 客户端的详细信息，请参阅[WCF 缓存客户端](#BKMK_TheWCFClient)。  
+     <span data-ttu-id="452c1-130">实现分布式缓存的方法之一是为自定义缓存提供 WCF 前端。</span><span class="sxs-lookup"><span data-stu-id="452c1-130">One way to implement distributed caching is to provide a WCF front end for your custom cache.</span></span> <span data-ttu-id="452c1-131">有关实现 WCF 缓存服务的详细信息，请参阅 [WCF 缓存服务](#BKMK_TheWCFCachingService)。</span><span class="sxs-lookup"><span data-stu-id="452c1-131">For more information about implementing a WCF caching service, see [The WCF Caching Service](#BKMK_TheWCFCachingService).</span></span> <span data-ttu-id="452c1-132">有关实现信赖方应用程序可用于调用缓存服务的 WCF 客户端的详细信息，请参阅 [WCF 缓存客户端](#BKMK_TheWCFClient)。</span><span class="sxs-lookup"><span data-stu-id="452c1-132">For more information about implementing a WCF client that the RP application can use to call the caching service, see [The WCF Caching Client](#BKMK_TheWCFClient).</span></span>  
   
--   如果您的应用程序检测到重播的标记必须遵循类似分布式缓存标记重放高速缓存的策略，通过从派生<xref:System.IdentityModel.Tokens.TokenReplayCache>和指向您的令牌重放在高速缓存服务[\<tokenReplayCache\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)配置元素。  
-  
-> [!IMPORTANT]
->  所有的示例 XML 和本主题中的代码取自[ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) \) （英文）？LinkID \= 248408） 的示例。  
+-   <span data-ttu-id="452c1-133">如果应用程序检测到重播令牌，则必须为令牌重播缓存采用相似的分布式缓存策略，方法是从 <xref:System.IdentityModel.Tokens.TokenReplayCache> 派生并在 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 配置元素中指向令牌重播缓存服务。</span><span class="sxs-lookup"><span data-stu-id="452c1-133">If your application detects replayed tokens you must follow a similar distributed caching strategy for the token replay cache by deriving from <xref:System.IdentityModel.Tokens.TokenReplayCache> and pointing to your token replay caching service in the [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) configuration element.</span></span>  
   
 > [!IMPORTANT]
->  本主题中的示例作为提供的是，不适合用在生产代码，而无需修改。  
+>  <span data-ttu-id="452c1-134">本主题中的所有 XML 和代码示例摘自 [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) 示例。</span><span class="sxs-lookup"><span data-stu-id="452c1-134">All of the example XML and code in this topic is taken from the [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) sample.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="452c1-135">本主题中的示例按原样提供，不建议在生产代码中不经修改直接使用。</span><span class="sxs-lookup"><span data-stu-id="452c1-135">The examples in this topic are provided as-is and are not intended to be used in production code without modification.</span></span>  
   
 <a name="BKMK_TheWCFCachingService"></a>   
-## WCF 缓存服务  
- 下面的接口定义缓存 WCF 服务和与其通讯的依赖方应用程序使用 WCF 客户端之间的协定。  它实质上是公开的方法<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>服务操作的类。  
+## <a name="the-wcf-caching-service"></a><span data-ttu-id="452c1-136">WCF 缓存服务</span><span class="sxs-lookup"><span data-stu-id="452c1-136">The WCF Caching Service</span></span>  
+ <span data-ttu-id="452c1-137">以下接口定义 WCF 缓存服务和信赖方应用程序用来通信的 WCF 客户端之间的协定。</span><span class="sxs-lookup"><span data-stu-id="452c1-137">The following interface defines the contract between the WCF caching service and the WCF client used by the relying party application to communicate with it.</span></span> <span data-ttu-id="452c1-138">它实质上公开作为服务操作的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 类的方法。</span><span class="sxs-lookup"><span data-stu-id="452c1-138">It essentially exposes the methods of the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> class as service operations.</span></span>  
   
 ```  
 [ServiceContract()]  
@@ -93,7 +99,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- 下面的代码演示如何实现 WCF 服务的缓存。  在此示例中，默认情况下，使用内存中的会话令牌缓存通过 WIF 来实现。  或者，您可以实现持久缓存数据库作为后盾。  `ISessionSecurityTokenCacheService`定义的接口，如上所示。  在此示例中，所需实现接口方法不是所有显示为简洁起见。  
+ <span data-ttu-id="452c1-139">下面的代码演示 WCF 缓存服务的实现。</span><span class="sxs-lookup"><span data-stu-id="452c1-139">The following code shows the implementation of the WCF caching service.</span></span> <span data-ttu-id="452c1-140">此示例中使用由 WIF 实现的默认的内存中会话令牌缓存。</span><span class="sxs-lookup"><span data-stu-id="452c1-140">In this example, the default, in-memory session token cache implemented by WIF is used.</span></span> <span data-ttu-id="452c1-141">此外，可以实现数据库提供支持的持久缓存。</span><span class="sxs-lookup"><span data-stu-id="452c1-141">Alternatively, you could implement a durable cache backed by a database.</span></span> <span data-ttu-id="452c1-142">`ISessionSecurityTokenCacheService` 定义上述接口。</span><span class="sxs-lookup"><span data-stu-id="452c1-142">`ISessionSecurityTokenCacheService` defines the interface shown above.</span></span> <span data-ttu-id="452c1-143">此示例中，为简洁起见，未演示实现接口所需的所有方法。</span><span class="sxs-lookup"><span data-stu-id="452c1-143">In this example, not all of the methods required to implement the interface are shown for brevity.</span></span>  
   
 ```  
 using System;  
@@ -141,10 +147,10 @@ namespace WcfSessionSecurityTokenCacheService
 ```  
   
 <a name="BKMK_TheWCFClient"></a>   
-## WCF 缓存客户端  
- 此部分将显示一个从派生的类的实现<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>和高速缓存的服务来调用的委托。  您可以使用此类通过 RP 应用程序配置[\<sessionSecurityTokenCache\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)作为在下面的 XML 元素  
+## <a name="the-wcf-caching-client"></a><span data-ttu-id="452c1-144">WCF 缓存客户端</span><span class="sxs-lookup"><span data-stu-id="452c1-144">The WCF Caching Client</span></span>  
+ <span data-ttu-id="452c1-145">此部分演示派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并委托调用缓存服务的类的实现。</span><span class="sxs-lookup"><span data-stu-id="452c1-145">This section shows the implementation of a class that derives from <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> and that delegates calls to the caching service.</span></span> <span data-ttu-id="452c1-146">通过 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置信赖方应用程序以使用此类，如下 XML 所示</span><span class="sxs-lookup"><span data-stu-id="452c1-146">You configure the RP application to use this class through the [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) element as in the following XML</span></span>  
   
-```  
+```xml  
 <caches>  
   <sessionSecurityTokenCache type="CacheLibrary.SharedSessionSecurityTokenCache, CacheLibrary">  
     <!--cacheServiceAddress points to the centralized session security token cache service running in the web farm.-->  
@@ -153,7 +159,7 @@ namespace WcfSessionSecurityTokenCacheService
 </caches>  
 ```  
   
- 类重写<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A>方法来获取服务终结点从自定义`<cacheServiceAddress>`的子元素`<sessionSecurityTokenCache>`元素。  它使用该终结点来初始化`ISessionSecurityTokenCacheService` ，它可以与服务通信的通道。  在此示例中，所有的方法才能实现<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>类显示为简洁起见。  
+ <span data-ttu-id="452c1-147">此类替代 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> 方法以从 `<sessionSecurityTokenCache>` 元素的自定义 `<cacheServiceAddress>` 子元素中获取服务终结点。</span><span class="sxs-lookup"><span data-stu-id="452c1-147">The class overrides the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> method to get the service endpoint from the custom `<cacheServiceAddress>` child element of the `<sessionSecurityTokenCache>` element.</span></span> <span data-ttu-id="452c1-148">它使用此终结点初始化用来与服务通信的 `ISessionSecurityTokenCacheService` 通道。</span><span class="sxs-lookup"><span data-stu-id="452c1-148">It uses this endpoint to initialize an `ISessionSecurityTokenCacheService` channel over which it can communicate with the service.</span></span>  <span data-ttu-id="452c1-149">此示例中，为简洁起见，未演示实现 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 类所需的所有方法。</span><span class="sxs-lookup"><span data-stu-id="452c1-149">In this example, not all of the methods required to implement the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> class are shown for brevity.</span></span>  
   
 ```  
 using System;  
@@ -255,8 +261,9 @@ namespace CacheLibrary
 }  
 ```  
   
-## 请参阅  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>   
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>   
- [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)
+## <a name="see-also"></a><span data-ttu-id="452c1-150">另请参阅</span><span class="sxs-lookup"><span data-stu-id="452c1-150">See Also</span></span>  
+ <span data-ttu-id="452c1-151"><xref:System.IdentityModel.Tokens.SessionSecurityTokenCache></span><span class="sxs-lookup"><span data-stu-id="452c1-151"><xref:System.IdentityModel.Tokens.SessionSecurityTokenCache></span></span>   
+ <span data-ttu-id="452c1-152"><xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler></span><span class="sxs-lookup"><span data-stu-id="452c1-152"><xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler></span></span>   
+ <span data-ttu-id="452c1-153"><xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler></span><span class="sxs-lookup"><span data-stu-id="452c1-153"><xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler></span></span>   
+ [<span data-ttu-id="452c1-154">WIF 会话管理</span><span class="sxs-lookup"><span data-stu-id="452c1-154">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)
+

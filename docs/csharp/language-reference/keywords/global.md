@@ -37,14 +37,14 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="global-c-reference"></a>global（C# 参考）
-`global` 上下文关键字位于 [:: 运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md) 之前时引用全局命名空间（即任何 C# 程序的默认命名空间，否则其未被命名）。 有关详细信息，请参阅[如何：使用全局命名空间别名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。  
+# <a name="global-c-reference"></a><span data-ttu-id="3db29-102">global（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="3db29-102">global (C# Reference)</span></span>
+<span data-ttu-id="3db29-103">`global` 上下文关键字位于 [:: 运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md) 之前时引用全局命名空间（即任何 C# 程序的默认命名空间，否则其未被命名）。</span><span class="sxs-lookup"><span data-stu-id="3db29-103">The `global` contextual keyword, when it comes before the [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), refers to the global namespace, which is the default namespace for any C# program and is otherwise unnamed.</span></span> <span data-ttu-id="3db29-104">有关详细信息，请参阅[如何：使用全局命名空间别名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。</span><span class="sxs-lookup"><span data-stu-id="3db29-104">For more information, see [How to: Use the Global Namespace Alias](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).</span></span>  
   
-## <a name="example"></a>示例  
- 如下示例演示如何使用 `global` 上下文关键字来指定在全局命名空间中定义类 `TestApp`：  
+## <a name="example"></a><span data-ttu-id="3db29-105">示例</span><span class="sxs-lookup"><span data-stu-id="3db29-105">Example</span></span>  
+ <span data-ttu-id="3db29-106">如下示例演示如何使用 `global` 上下文关键字来指定在全局命名空间中定义类 `TestApp`：</span><span class="sxs-lookup"><span data-stu-id="3db29-106">The following example shows how to use the `global` contextual keyword to specify that the class `TestApp` is defined in the global namespace:</span></span>  
   
- [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
+ <span data-ttu-id="3db29-107">[!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="3db29-107">[!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="3db29-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3db29-108">See Also</span></span>  
+ [<span data-ttu-id="3db29-109">命名空间</span><span class="sxs-lookup"><span data-stu-id="3db29-109">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
 

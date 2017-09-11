@@ -34,19 +34,19 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="literal-keywords-c-reference"></a>文字关键字（C# 参考）
-C# 包含以下文本关键字：  
+# <a name="literal-keywords-c-reference"></a><span data-ttu-id="0aded-102">文字关键字（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="0aded-102">Literal Keywords (C# Reference)</span></span>
+<span data-ttu-id="0aded-103">C# 包含以下文本关键字：</span><span class="sxs-lookup"><span data-stu-id="0aded-103">C# has the following literal keywords:</span></span>  
   
--   [null](../../../csharp/language-reference/keywords/null.md)  
+-   [<span data-ttu-id="0aded-104">null</span><span class="sxs-lookup"><span data-stu-id="0aded-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
   
--   [true](../../../csharp/language-reference/keywords/true.md)  
+-   [<span data-ttu-id="0aded-105">true</span><span class="sxs-lookup"><span data-stu-id="0aded-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
   
--   [false](../../../csharp/language-reference/keywords/false.md)  
+-   [<span data-ttu-id="0aded-106">false</span><span class="sxs-lookup"><span data-stu-id="0aded-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
   
--   [default](../../../csharp/language-reference/keywords/default.md)  
+-   [<span data-ttu-id="0aded-107">default</span><span class="sxs-lookup"><span data-stu-id="0aded-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="0aded-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0aded-108">See Also</span></span>  
+ <span data-ttu-id="0aded-109">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="0aded-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="0aded-110">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="0aded-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="0aded-111">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="0aded-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

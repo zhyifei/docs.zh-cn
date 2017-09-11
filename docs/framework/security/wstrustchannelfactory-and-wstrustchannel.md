@@ -1,79 +1,85 @@
 ---
-title: "WSTrustChannelFactory 和 WSTrustChannel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WSTrustChannelFactory 和 WSTrustChannel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e400d68924f1ed57ea1e71892e52f5aae2f5eebc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# WSTrustChannelFactory 和 WSTrustChannel
-如果您已经熟悉 Windows Communication Foundation \(WCF\)，则可以断定 WCF 客户已识别的联合。  通过配置具有 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定的一个 WCF 客户端上，可以启用的联合为身份验证服务。  
+# <a name="wstrustchannelfactory-and-wstrustchannel"></a><span data-ttu-id="a071a-102">WSTrustChannelFactory 和 WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="a071a-102">WSTrustChannelFactory and WSTrustChannel</span></span>
+<span data-ttu-id="a071a-103">如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。</span><span class="sxs-lookup"><span data-stu-id="a071a-103">If you are already familiar with Windows Communication Foundation (WCF), you know that a WCF client is already federation aware.</span></span> <span data-ttu-id="a071a-104">通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。</span><span class="sxs-lookup"><span data-stu-id="a071a-104">By configuring a WCF client with a <xref:System.ServiceModel.WSFederationHttpBinding> or similar custom binding, you can enable federated authentication to a service.</span></span>  
   
- WCF 获取由安全令牌服务 \(STS\) 在幕后发出的标记并使用此标记验证到服务。  对此方法的主要限制不可见性与客户端的服务器通信。  WCF 自动生成请求安全令牌 \(RST\) 为基于发出的标记 STS 参数的绑定。  这意味着客户不能更改 RST 参数随请求，检查请求安全令牌响应 \(RSTR\) 获取信息如显示声明或缓存标记后使用。  
+ <span data-ttu-id="a071a-105">WCF 获取由后台安全令牌服务 (STS) 颁发的令牌，并使用此令牌对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="a071a-105">WCF obtains the token that is issued by the security token service (STS) behind the scenes and uses this token to authenticate to the service.</span></span> <span data-ttu-id="a071a-106">此方法的主要限制在于无法查看客户端与服务器之间的通信。</span><span class="sxs-lookup"><span data-stu-id="a071a-106">The main limitation to this approach is that there is no visibility into the client’s communications with the server.</span></span> <span data-ttu-id="a071a-107">WCF 基于在绑定上颁发的令牌参数，自动生成 STS 的请求安全令牌 (RST)。</span><span class="sxs-lookup"><span data-stu-id="a071a-107">WCF automatically generates the request security token (RST) to the STS based on the issued token parameters on the binding.</span></span> <span data-ttu-id="a071a-108">这意味着客户端不能改变每个请求的 RST 参数、无法通过检查请求安全令牌响应 (RSTR) 获取显示声明等信息，也不能缓存令牌供将来使用。</span><span class="sxs-lookup"><span data-stu-id="a071a-108">This means that the client cannot vary the RST parameters per request, inspect the request security token response (RSTR) to get information such as display claims, or cache the token for future use.</span></span>  
   
- 目前，WCF 客户适合基关联的方案。  但是，Windows 标识基础 \(WIF\) 支持的一个主要方案需要对 RST 的控制在 WCF 轻松不允许的级别。  WIF 因此，将使您能够更多控制与通信的 STS 的功能。  
+ <span data-ttu-id="a071a-109">目前，WCF 客户端适用于基本联合方案。</span><span class="sxs-lookup"><span data-stu-id="a071a-109">Currently, the WCF client is suitable for basic federation scenarios.</span></span> <span data-ttu-id="a071a-110">然而，Windows Identity Foundation (WIF) 支持的其中一个主要方案需要对 RST 拥有 WCF 不轻易允许的级别的控制。</span><span class="sxs-lookup"><span data-stu-id="a071a-110">However, one of the major scenarios that Windows Identity Foundation (WIF) supports requires control over the RST at a level that WCF does not easily allow.</span></span> <span data-ttu-id="a071a-111">因此，WIF 添加了针对与 STS 的通信提供更强控制的功能。</span><span class="sxs-lookup"><span data-stu-id="a071a-111">Therefore, WIF adds features that give you more control over communication with the STS.</span></span>  
   
- WIF 联合支持以下方案：  
+ <span data-ttu-id="a071a-112">WIF 支持以下联合方案：</span><span class="sxs-lookup"><span data-stu-id="a071a-112">WIF supports the following federation scenarios:</span></span>  
   
--   使用无身份验证的任何 WIF 依赖，将一个 WCF 客户为联合的服务  
+-   <span data-ttu-id="a071a-113">在没有任何 WIF 依赖项的情况下使用 WCF 客户端对联合服务进行身份验证</span><span class="sxs-lookup"><span data-stu-id="a071a-113">Using a WCF client without any WIF dependencies to authenticate to a federated service</span></span>  
   
--   使 WCF 客户端的 ActAs WIF 插入或 OnBehalfOf 元素到 RST 到 STS  
+-   <span data-ttu-id="a071a-114">在 WCF 客户端上启用 WIF，将 ActAs 或 OnBehalfOf 元素插入 STS 的 RST 中</span><span class="sxs-lookup"><span data-stu-id="a071a-114">Enabling WIF on a WCF client to insert an ActAs or OnBehalfOf element into the RST to the STS</span></span>  
   
--   使用单独的 STS WIF 然后使从获取的标记 WCF 客户端验证使用该标记。  有关更多信息，请参见 [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) 中的示例。  
+-   <span data-ttu-id="a071a-115">仅使用 WIF 从 STS 获取令牌，然后启用 WCF 客户端，以便使用此令牌进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="a071a-115">Using WIF alone to obtain a token from the STS and then enable a WCF client to authenticate with this token.</span></span> <span data-ttu-id="a071a-116">有关详细信息，请参阅 [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) 示例。</span><span class="sxs-lookup"><span data-stu-id="a071a-116">For more information, see [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) sample.</span></span>  
   
- 第一种是截然不同的：现有 WCF 客户端继续与 WIF 关系方和 STSs 一起使用。  本主题讨论的其余两种情况。  
+ <span data-ttu-id="a071a-117">第一个方案很容易理解：现有的 WCF 客户端将继续适用于 WIF 信赖方和 STS。</span><span class="sxs-lookup"><span data-stu-id="a071a-117">The first scenario is self-explanatory: Existing WCF clients will continue to work with WIF relying parties and STSs.</span></span> <span data-ttu-id="a071a-118">本主题讨论剩余的两个方案。</span><span class="sxs-lookup"><span data-stu-id="a071a-118">This topic discusses the remaining two scenarios.</span></span>  
   
-## 引发一 ActAs\/OnBehalfOf 的现有 WCF 客户  
- 在典型的方案中，客户端服务标识委托调用中间层，然后调用一后端服务。  中间层服务充当或操作，代表客户。  
+## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a><span data-ttu-id="a071a-119">通过 ActAs/OnBehalfOf 增强现有的 WCF 客户端</span><span class="sxs-lookup"><span data-stu-id="a071a-119">Enhancing an Existing WCF Client with ActAs / OnBehalfOf</span></span>  
+ <span data-ttu-id="a071a-120">在典型的标识委派方案中，客户端调用中间层服务，该服务随后调用后端服务。</span><span class="sxs-lookup"><span data-stu-id="a071a-120">In a typical identity delegation scenario, a client calls a middle-tier service, which then calls a back-end service.</span></span> <span data-ttu-id="a071a-121">中间层服务充当客户端或代表客户端执行操作。</span><span class="sxs-lookup"><span data-stu-id="a071a-121">The middle-tier service acts as, or acts on behalf of, the client.</span></span>  
   
 > [!TIP]
->  ActAs 和 OnBehalfOf 具有的差异？  
+>  <span data-ttu-id="a071a-122">ActAs 和 OnBehalfOf 有何区别？</span><span class="sxs-lookup"><span data-stu-id="a071a-122">What is the difference between ActAs and OnBehalfOf?</span></span>  
 >   
->  从 procotol WS\-Trust 位置：  
+>  <span data-ttu-id="a071a-123">从 WS-Trust 协议的角度来看：</span><span class="sxs-lookup"><span data-stu-id="a071a-123">From the WS-Trust procotol standpoint:</span></span>  
 >   
->  1.  ActAs 元素指示 RST 请求者让包含有关声明两个不同的实体的标记：请求者以及在 ActAs 元素的标记表示实体的外部。  
-> 2.  OnBehalfOf 元素指示 RST 请求者希望只有包含元素声明为实体的标记：在 OnBehalfOf 元素的标记表示实体的外部。  
+>  1.  <span data-ttu-id="a071a-124">ActAs RST 元素指示请求者想要的令牌包含有关两个不同实体的声明，这两个实体分别是请求者和由 ActAs 元素中的令牌表示的外部实体。</span><span class="sxs-lookup"><span data-stu-id="a071a-124">An ActAs RST element indicates that the requestor wants a token that contains claims about two distinct entities: the requestor, and an external entity represented by the token in the ActAs element.</span></span>  
+> 2.  <span data-ttu-id="a071a-125">OnBehalfOf RST 元素指示请求者想要的令牌包含仅与一个实体有关的声明，这个实体是由 OnBehalfOf 元素中的令牌表示的外部实体。</span><span class="sxs-lookup"><span data-stu-id="a071a-125">An OnBehalfOf RST element indicates that the requestor wants a token that contains claims only about one entity: the external entity represented by the token in the OnBehalfOf element.</span></span>  
 >   
->  ActAs 功能通常用在需要委托，发出最终标记复合的接收者可以检查整个链委托以及查看不仅客户，但所有中间的方案。  这让其执行基于整个标识将字符串和其他相关活动的访问控制和审核。  ActAs 功能通常在多层的系统验证和传递有关的标识信息。层之间，而无需将此信息在应用程序或业务逻辑层。  
+>  <span data-ttu-id="a071a-126">ActAs 功能通常用于需要复合委派的方案，其中所颁发令牌的最终接收方可以检查整个委派链，可以查看客户端和所有中介。</span><span class="sxs-lookup"><span data-stu-id="a071a-126">The ActAs feature is typically used in scenarios that require composite delegation, where the final recipient of the issued token can inspect the entire delegation chain and see not just the client, but all intermediaries.</span></span> <span data-ttu-id="a071a-127">这样，它可以基于整个标识委派链执行访问控制、审核和其他相关活动。</span><span class="sxs-lookup"><span data-stu-id="a071a-127">This lets it perform access control, auditing and other related activities based on the entire identity delegation chain.</span></span> <span data-ttu-id="a071a-128">ActAs 功能通常用于在多层系统中进行身份验证以及在层之间传递有关标识的信息（无需在应用程序/业务逻辑层传递此信息）。</span><span class="sxs-lookup"><span data-stu-id="a071a-128">The ActAs feature is commonly used in multi-tiered systems to authenticate and pass information about identities between the tiers without having to pass this information at the application/business logic layer.</span></span>  
 >   
->  OnBehalfOf 功能最初仅在客户标识重要并有效与标识模拟功能可用窗口中的方案。  当使用时 OnBehalfOf，发出的是最终只能看到有关原始客户端声明，并且，中间不保留有关的信息。  OnBehalfOf 功能使用的常见模式是客户端无法访问 STS 直接，而的代理模式通过代理网关进行通信。  代理网关验证调用方并使调用方有关的信息放入然后路由到处理的实际 STS RST 信息的 OnBehalfOf 元素。  得到的标记包含只有声明与的客户代理，使代理能够完全透明的颁发的接收器。WIF 请注意不支持 \<wsse:SecurityTokenReference\> 或 \<wsa:EndpointReferences\> 作为 \<wst:OnBehalfOf\> 的子。  WS\-Trust 规范中是允许三种方式标识原始请求 \(代表用户代理操作\)。  这些是：  
+>  <span data-ttu-id="a071a-129">OnBehalfOf 功能用于仅原始客户端的标识重要并且与 Windows 中可用的标识模拟功能同样高效的情况。</span><span class="sxs-lookup"><span data-stu-id="a071a-129">The OnBehalfOf feature is used in scenarios where only the identity of the original client is important and is effectively the same as the identity impersonation feature available in Windows.</span></span> <span data-ttu-id="a071a-130">使用 OnBehalfOf 时，所颁发令牌的最终接收方只能查看有关原始客户端的声明，未保留有关中介的信息。</span><span class="sxs-lookup"><span data-stu-id="a071a-130">When OnBehalfOf is used, the final recipient of the issued token can only see claims about the original client, and the information about intermediaries is not preserved.</span></span> <span data-ttu-id="a071a-131">使用 OnBehalfOf 功能的常见模式是代理模式，在此模式中，客户端无法直接访问 STS，但可以通过代理网关通信。</span><span class="sxs-lookup"><span data-stu-id="a071a-131">One common pattern where the OnBehalfOf feature is used is the proxy pattern where the client cannot access the STS directly but instead communicates through a proxy gateway.</span></span> <span data-ttu-id="a071a-132">代理网关对调用方进行身份验证并将有关调用方的信息放入 RST 消息的 OnBehalfOf 元素中，然后将该消息发送到真正的 STS 中以供处理。</span><span class="sxs-lookup"><span data-stu-id="a071a-132">The proxy gateway authenticates the caller and puts information about the caller into the OnBehalfOf element of the RST message that it then sends to the real STS for processing.</span></span> <span data-ttu-id="a071a-133">生成的令牌仅包含与代理的客户端有关的声明，因此此代理对所颁发令牌的接收方来说完全透明。请注意，WIF 不支持 \<wsse:SecurityTokenReference> 或 \<wsa:EndpointReferences> 作为 \<wst:OnBehalfOf> 的子级。</span><span class="sxs-lookup"><span data-stu-id="a071a-133">The resulting token contains only claims related to the client of the proxy, making the proxy completely transparent to the receiver of the issued token.Note that WIF does not support \<wsse:SecurityTokenReference> or \<wsa:EndpointReferences> as a child of \<wst:OnBehalfOf>.</span></span> <span data-ttu-id="a071a-134">WS-Trust 规范允许三种标识原始请求者（代理代表其执行操作）的方法。</span><span class="sxs-lookup"><span data-stu-id="a071a-134">The WS-Trust specification allows for three ways to identify the original requestor (on behalf of whom the proxy is acting).</span></span> <span data-ttu-id="a071a-135">这些是：</span><span class="sxs-lookup"><span data-stu-id="a071a-135">These are:</span></span>  
 >   
->  -   安全标记引用。  对标记的引用，在消息或能检索到带的外部\)。  
-> -   终结点引用。  用于键，搜索数据，再从带区外部。  
-> -   安全标记。  直接以标识初始请求。  
+>  -   <span data-ttu-id="a071a-136">安全令牌引用。</span><span class="sxs-lookup"><span data-stu-id="a071a-136">Security token reference.</span></span> <span data-ttu-id="a071a-137">对令牌的引用（消息中的引用，或者可能是带外检索的引用）。</span><span class="sxs-lookup"><span data-stu-id="a071a-137">A reference to a token, either in the message, or possibly retrieved out of band).</span></span>  
+> -   <span data-ttu-id="a071a-138">终结点引用。</span><span class="sxs-lookup"><span data-stu-id="a071a-138">Endpoint reference.</span></span> <span data-ttu-id="a071a-139">作为查找数据的密钥使用（仍为带外）。</span><span class="sxs-lookup"><span data-stu-id="a071a-139">Used as a key to look up data, again out of band.</span></span>  
+> -   <span data-ttu-id="a071a-140">安全令牌。</span><span class="sxs-lookup"><span data-stu-id="a071a-140">Security token.</span></span> <span data-ttu-id="a071a-141">直接标识原始请求方。</span><span class="sxs-lookup"><span data-stu-id="a071a-141">Identifies the original requestor directly.</span></span>  
 >   
->  WIF 只支持安全令牌，加密或未加密，以 wst 一个 \<wst:OnBehalfOf\> 直接子元素。  
+>  <span data-ttu-id="a071a-142">WIF 仅支持安全令牌（加密或未加密）作为 \<wst:OnBehalfOf> 的直接子元素。</span><span class="sxs-lookup"><span data-stu-id="a071a-142">WIF supports only security tokens, either encrypted or unencrypted, as a direct child element of \<wst:OnBehalfOf>.</span></span>  
   
- 使用在 RST，的 ActAs 和 OnBehalfOf 标记元素中传达此信息。WS\-Trust 发出者。  
+ <span data-ttu-id="a071a-143">使用 RST 中的 ActAs 和 OnBehalfOf 令牌元素将此信息传达给 WS-Trust 颁发者。</span><span class="sxs-lookup"><span data-stu-id="a071a-143">This information is conveyed to a WS-Trust issuer using the ActAs and OnBehalfOf token elements in the RST.</span></span>  
   
- WCF 公开允许任意 XML 元素添加到 RST 绑定的一个扩展性点。  但是，因为扩展点附加到绑定，需要的情况 RST 内容每调用更改必须再次创建每次调用的客户，会降低性能。  WIF 使用 `ChannelFactory` 类的扩展方法允许开发人员获取从附加 RST 的条带外部的任何标记。  下面的代码示例演示如何将表示客户的 X.509 \(如标记、用户名或安全断言 Markup Language \(SAML\) \-标记\) 并将其附加到 RST 的发出者发送到。  
+ <span data-ttu-id="a071a-144">WCF 在允许将任意 XML 元素添加到 RST 的绑定上公开扩展点。</span><span class="sxs-lookup"><span data-stu-id="a071a-144">WCF exposes an extensibility point on the binding that allows arbitrary XML elements to be added to the RST.</span></span> <span data-ttu-id="a071a-145">然而，因为扩展点与该绑定关联，所以每次调用都需要改变 RST 内容的方案必须在每次调用时重新创建客户端，这将降低性能。</span><span class="sxs-lookup"><span data-stu-id="a071a-145">However, because the extensibility point is tied to the binding, scenarios that require the RST contents to vary per call must re-create the client for every call, which decreases performance.</span></span> <span data-ttu-id="a071a-146">WIF 使用 `ChannelFactory` 类上的扩展方法，因此开发人员可以将带外获取的任何令牌附加到 RST。</span><span class="sxs-lookup"><span data-stu-id="a071a-146">WIF uses extension methods on the `ChannelFactory` class to allow developers to attach any token that is obtained out of band to the RST.</span></span> <span data-ttu-id="a071a-147">下方的代码示例演示如何获取表示客户端（例如 X.509、用户名或安全断言标记语言 (SAML) 令牌）的令牌并将它附加到发送给颁发者的 RST。</span><span class="sxs-lookup"><span data-stu-id="a071a-147">The following code example shows how to take a token that represents the client (such as an X.509, username, or Security Assertion Markup Language (SAML) token) and attach it to the RST that is sent to the issuer.</span></span>  
   
 ```  
 IHelloService serviceChannel = channelFactory.CreateChannelActingAs<IHelloService>( clientSamlToken );  
-serviceChannel.Hello(“Hi!”);  
+serviceChannel.Hello("Hi!");  
 ```  
   
- WIF 提供以下优点：  
+ <span data-ttu-id="a071a-148">WIF 提供如下优点：</span><span class="sxs-lookup"><span data-stu-id="a071a-148">WIF provides the following benefits:</span></span>  
   
--   RST 可以每个通道修改；中间层服务，因此无需重新创建各个客户端上的通道工厂，从而提高性能。  
+-   <span data-ttu-id="a071a-149">可以按通道修改 RST；因此，中间层服务不需要为每个客户端重新创建通道工厂，从而提高性能。</span><span class="sxs-lookup"><span data-stu-id="a071a-149">The RST can be modified per channel; therefore, middle-tier services do not have to re-create the channel factory for each client, which improves performance.</span></span>  
   
--   这样做与现有 WCF 客户，使一种的升级路径就可以为现有中间层若要启用 WCF 服务标识委托语义。  
+-   <span data-ttu-id="a071a-150">这适用于现有的 WCF 客户端，可能为要启用标识委派语义的现有 WCF 中间层服务提供简单的升级路径。</span><span class="sxs-lookup"><span data-stu-id="a071a-150">This works with existing WCF clients, which makes an easy upgrade path possible for existing WCF middle-tier services that want to enable identity delegation semantics.</span></span>  
   
- 但是，仍没有可见性。STS 客户的通信。  我们将查看这一点。第三个方案。  
+ <span data-ttu-id="a071a-151">然而，仍看不到客户端与 STS 之间的通信。</span><span class="sxs-lookup"><span data-stu-id="a071a-151">However, there is still no visibility into the client’s communication with the STS.</span></span> <span data-ttu-id="a071a-152">我们将在第三个方案中查看此问题。</span><span class="sxs-lookup"><span data-stu-id="a071a-152">We’ll examine this in the third scenario.</span></span>  
   
-## 通信直接与发出者和使用发出的标记验证  
- 对于一些高级方案，引发 WCF 客户不足够。  通常使用 WCF 消息仅使用在\/消息协定并手动处理客户端发出者分析响应的开发人员。  
+## <a name="communicating-directly-with-an-issuer-and-using-the-issued-token-to-authenticate"></a><span data-ttu-id="a071a-153">与颁发者直接通信并使用颁发的令牌进行身份验证</span><span class="sxs-lookup"><span data-stu-id="a071a-153">Communicating Directly with an Issuer and Using the Issued Token to Authenticate</span></span>  
+ <span data-ttu-id="a071a-154">对于某些高级方案，增强 WCF 客户端是不够的。</span><span class="sxs-lookup"><span data-stu-id="a071a-154">For some advanced scenarios, enhancing a WCF client is not enough.</span></span> <span data-ttu-id="a071a-155">仅使用 WCF 的开发人员通常使用 Message In/Message Out 协定，手动处理颁发者响应的客户端分析。</span><span class="sxs-lookup"><span data-stu-id="a071a-155">Developers who use only WCF typically use Message In / Message Out contracts and handle client-side parsing of the issuer response manually.</span></span>  
   
- WIF 介绍 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类使客户直接与 WS\-Trust 发出者进行通信。  <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类支持到流的强类型的 RST 和对象 RSTR 在客户端发出者和之间，如下面的代码示例所示。  
+ <span data-ttu-id="a071a-156">WIF 引入了 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类，使客户端直接与 WS-Trust 颁发者通信。</span><span class="sxs-lookup"><span data-stu-id="a071a-156">WIF introduces the <xref:System.ServiceModel.Security.WSTrustChannelFactory> and <xref:System.ServiceModel.Security.WSTrustChannel> classes to let the client communicate directly with a WS-Trust issuer.</span></span> <span data-ttu-id="a071a-157">通过 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 类，强类型 RST 和 RSTR 对象可在客户端和颁发者之间流动，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="a071a-157">The <xref:System.ServiceModel.Security.WSTrustChannelFactory> and <xref:System.ServiceModel.Security.WSTrustChannel> classes enable strongly typed RST and RSTR objects to flow between the client and issuer, as shown in the following code example.</span></span>  
   
 ```  
 WSTrustChannelFactory trustChannelFactory = new WSTrustChannelFactory( stsBinding, stsAddress );  
@@ -84,25 +90,26 @@ RequestSecurityTokenResponse rstr = null;
 SecurityToken token = channel.Issue(rst, out rstr);  
 ```  
   
- 请注意 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法的 `out` 参数可为 RSTR 的访问客户端检查的。  
+ <span data-ttu-id="a071a-158">请注意，<xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法上的 `out` 参数允许访问 RSTR 进行客户端检查。</span><span class="sxs-lookup"><span data-stu-id="a071a-158">Note that the `out` parameter on the <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> method allows access to the RSTR for client-side inspection.</span></span>  
   
- 到目前为止，我们仅看到了获取标记。  从返回 <xref:System.ServiceModel.Security.WSTrustChannel> 对象的标记。包含任何信息用于进行身份验证是必需的。关系方的 `GenericXmlSecurityToken`。  下面的代码示例演示如何使用此标记。  
+ <span data-ttu-id="a071a-159">至此，我们仅了解到如何获取令牌。</span><span class="sxs-lookup"><span data-stu-id="a071a-159">So far, we’ve only seen how to obtain a token.</span></span> <span data-ttu-id="a071a-160">从 <xref:System.ServiceModel.Security.WSTrustChannel> 对象返回的令牌是 `GenericXmlSecurityToken`，其中包含对信赖方进行身份验证所需的所有信息。</span><span class="sxs-lookup"><span data-stu-id="a071a-160">The token that is returned from the <xref:System.ServiceModel.Security.WSTrustChannel> object is a `GenericXmlSecurityToken` that contains all of the information that is necessary for authentication to a relying party.</span></span> <span data-ttu-id="a071a-161">下方的代码示例演示如何使用此令牌。</span><span class="sxs-lookup"><span data-stu-id="a071a-161">The following code example shows how to use this token.</span></span>  
   
 ```  
-IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token ); serviceChannel.Hello(“Hi!”);  
+IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token ); serviceChannel.Hello("Hi!");  
 ```  
   
- 在 `ChannelFactory` 对象上调用 <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> 扩展方法向指示 WIF 您获得一标记从带外部，因此，有时应停止常规调用 WCF 的颁发者和使用验证关系方获取到的标记。  这具有以下优点：  
+ <span data-ttu-id="a071a-162">`ChannelFactory` 对象上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> 扩展方法会让 WIF 知道你已在带外获取令牌，且它应该停止对颁发者的常规 WCF 调用，而改用你所获取的令牌对信赖方进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="a071a-162">The <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> extension method on the `ChannelFactory` object indicates to WIF that you have obtained a token out of band, and that it should stop the normal WCF call to the issuer and instead use the token that you obtained to authenticate to the relying party.</span></span> <span data-ttu-id="a071a-163">这具有如下优点：</span><span class="sxs-lookup"><span data-stu-id="a071a-163">This has the following benefits:</span></span>  
   
--   为您对标记发布过程的完全控制。  
+-   <span data-ttu-id="a071a-164">可以完全控制令牌颁发进程。</span><span class="sxs-lookup"><span data-stu-id="a071a-164">It gives you complete control over the token issuance process.</span></span>  
   
--   它通过直接设置在发出的 RST 的属性支持 ActAs\/OnBehalfOf 方案。  
+-   <span data-ttu-id="a071a-165">通过直接在传出 RST 上设置这些属性来支持 ActAs/OnBehalfOf 方案。</span><span class="sxs-lookup"><span data-stu-id="a071a-165">It supports ActAs / OnBehalfOf scenarios by directly setting these properties on the outgoing RST.</span></span>  
   
--   其启用动态客户端计算机的信任决定使基于 RSTR 的内容。  
+-   <span data-ttu-id="a071a-166">可以基于 RSTR 的内容做出动态客户端信任决策。</span><span class="sxs-lookup"><span data-stu-id="a071a-166">It enables dynamic client-side trust decisions to be made based on the contents of the RSTR.</span></span>  
   
--   它允许您缓存和重用从 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法返回的标记。  
+-   <span data-ttu-id="a071a-167">可以缓存并重新使用从 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法返回的令牌。</span><span class="sxs-lookup"><span data-stu-id="a071a-167">It lets you cache and reuse the token that is returned from the <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> method.</span></span>  
   
--   <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 都允许通道缓存、错误和语义恢复控件根据 WCF 最佳做法。  
+-   <span data-ttu-id="a071a-168">可根据 WCF 最佳做法通过 <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 控制通道缓存、错误和恢复语义。</span><span class="sxs-lookup"><span data-stu-id="a071a-168"><xref:System.ServiceModel.Security.WSTrustChannelFactory> and <xref:System.ServiceModel.Security.WSTrustChannel> allow for control of channel caching, fault, and recovery semantics according to WCF best practices.</span></span>  
   
-## 请参阅  
- [WIF 功能](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a><span data-ttu-id="a071a-169">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a071a-169">See Also</span></span>  
+ [<span data-ttu-id="a071a-170">WIF 功能</span><span class="sxs-lookup"><span data-stu-id="a071a-170">WIF Features</span></span>](../../../docs/framework/security/wif-features.md)
+

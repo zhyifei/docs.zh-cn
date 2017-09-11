@@ -1,1 +1,1 @@
-IntelliSense
+<span data-ttu-id="65da7-101">IntelliSense</span><span class="sxs-lookup"><span data-stu-id="65da7-101">IntelliSense</span></span>

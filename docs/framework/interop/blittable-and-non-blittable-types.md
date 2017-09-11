@@ -1,35 +1,40 @@
 ---
-title: "可直接复制到本机结构中的类型和非直接复制到本机结构中的类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "能直接复制到本机结构中的类型, 互操作封送处理"
-  - "互操作封送处理, 能直接复制到本机结构中的类型"
+title: "可直接复制到本机结构中的类型和非直接复制到本机结构中的类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interop marshaling, blittable types
+- blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fa97ee1df14b5e08faa944265675264c0b6d95a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
-大多数数据类型在托管和非托管内存中都有公共的表示形式，而不需要 Interop 封送拆收器的特殊处理。  因为这些类型在托管和非托管代码之间传递时不需要转换，因此称为“可直接复制到本机结构中的类型”。  
+# <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="2e5fb-102">可直接复制到本机结构中的类型和非直接复制到本机结构中的类型</span><span class="sxs-lookup"><span data-stu-id="2e5fb-102">Blittable and Non-Blittable Types</span></span>
+<span data-ttu-id="2e5fb-103">大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="2e5fb-104">这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  
   
- 从平台调用返回的结构必须为可直接复制到本机结构中的类型。  平台调用不支持将非直接复制到本机结构中的结构作为返回类型。  
+ <span data-ttu-id="2e5fb-105">从平台调用返回的结构必须是 blittable 类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-105">Structures that are returned from platform invoke calls must be blittable types.</span></span> <span data-ttu-id="2e5fb-106">平台调用不支持返回类型为 non-blittable 结构。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-106">Platform invoke does not support non-blittable structures as return types.</span></span>  
   
- 下列来自 <xref:System> 命名空间的类型为可直接复制到本机结构中的类型：  
+ <span data-ttu-id="2e5fb-107">以下 <xref:System> 命名空间中的类型即是 blittable 类型：</span><span class="sxs-lookup"><span data-stu-id="2e5fb-107">The following types from the <xref:System> namespace are blittable types:</span></span>  
   
 -   <xref:System.Byte?displayProperty=fullName>  
   
@@ -55,33 +60,34 @@ caps.handback.revision: 23
   
 -   <xref:System.Double?displayProperty=fullName>  
   
- 下列复杂类型也是可直接复制到本机结构中的类型：  
+ <span data-ttu-id="2e5fb-108">下面的复杂类型也是 blittable 类型：</span><span class="sxs-lookup"><span data-stu-id="2e5fb-108">The following complex types are also blittable types:</span></span>  
   
--   可直接复制到本机结构中的类型的一维数组，如整数数组。  但是，包含可直接复制到本机结构中的类型的变量数组的类型本身不可直接复制到本机结构中。  
+-   <span data-ttu-id="2e5fb-109">所有 blittable 类型的一维数组，如整数数组。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-109">One-dimensional arrays of blittable types, such as an array of integers.</span></span> <span data-ttu-id="2e5fb-110">但是，包含 blittable 类型变量数组的类型本身不是 blittable 类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-110">However, a type that contains a variable array of blittable types is not itself blittable.</span></span>  
   
--   只包含可直接复制到本机结构中的类型（如果它们被作为格式化类型封送，则还包含类）的格式化值类型。  有关格式化值类型的更多信息，请参见[Default Marshaling for Value Types](http://msdn.microsoft.com/zh-cn/4d9a876c-e05a-40ba-bd85-bd22877f984a)。  
+-   <span data-ttu-id="2e5fb-111">所有只包含 blittable 类型（和作为格式化类型进行封送的类）的格式化的值类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-111">Formatted value types that contain only blittable types (and classes if they are marshaled as formatted types).</span></span> <span data-ttu-id="2e5fb-112">有关格式化的值类型的详细信息，请参阅[值类型的默认封送处理](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a)。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-112">For more information about formatted value types, see [Default Marshaling for Value Types](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a).</span></span>  
   
- 对象引用不可直接复制到本机结构中。  其中包含一组对象引用，它们本身可直接复制到本机结构中。  例如，您可以定义一个可直接复制到本机结构中的结构，但是您不能定义包含对这些结构的一组引用的可直接复制到本机结构中的类型。  
+ <span data-ttu-id="2e5fb-113">对象引用不是 blittable 类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-113">Object references are not blittable.</span></span> <span data-ttu-id="2e5fb-114">这包括本身是 blittable 的对象的引用数组。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-114">This includes an array of references to objects that are blittable by themselves.</span></span> <span data-ttu-id="2e5fb-115">例如，可以定义一个属于 blittable 类型的结构，但不能定义包含这些结构的引用数组的 blittable 类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-115">For example, you can define a structure that is blittable, but you cannot define a blittable type that contains an array of references to those structures.</span></span>  
   
- 作为一种优化方式，在进行封送处理的过程中，可直接复制到本机结构中的类型的数组和只包含可直接复制到本机结构中的成员的类被[锁定](../../../docs/framework/interop/copying-and-pinning.md)，而不是被复制。  在调用方和被调用方位于同一单元中时，这些类型可能看上去是被作为 In\/Out 参数封送的。  但是，这些类型实际上是作为 In 形参封送的，而如果要将实参作为 In\/Out 形参封送，则必须应用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 特性。  
+ <span data-ttu-id="2e5fb-116">作为一种优化方式，所有 blittable 类型数组和只包含 blittable 成员的类都是[固定的](../../../docs/framework/interop/copying-and-pinning.md)，因此无需在封送处理期间进行复制。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-116">As an optimization, arrays of blittable types and classes that contain only blittable members are [pinned](../../../docs/framework/interop/copying-and-pinning.md) instead of copied during marshaling.</span></span> <span data-ttu-id="2e5fb-117">若调用方和被调用方位于同一单元中，这些类型会显示为作为 In/Out 参数被封送。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-117">These types can appear to be marshaled as In/Out parameters when the caller and callee are in the same apartment.</span></span> <span data-ttu-id="2e5fb-118">但是，这些类型实际上是作为 In 形参进行封送的，而且，如果要将实参作为 In/Out 形参进行封送，则必须应用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-118">However, these types are actually marshaled as In parameters, and you must apply the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes if you want to marshal the argument as an In/Out parameter.</span></span>  
   
- 某些托管数据类型在非托管环境中需要采用一种不同的表示形式。  必须将这些非直接复制到本机结构中的数据类型转换为可进行封送的格式。  例如，托管字符串是非直接复制到本机结构中的类型，这是因为它们必须转换为字符串对象才能进行封送。  
+ <span data-ttu-id="2e5fb-119">在非托管环境中，某些托管数据类型要求具有不同的表示形式。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-119">Some managed data types require a different representation in an unmanaged environment.</span></span> <span data-ttu-id="2e5fb-120">必须将这些 non-blittable 数据类型转换为可以封送的形式。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-120">These non-blittable data types must be converted into a form that can be marshaled.</span></span> <span data-ttu-id="2e5fb-121">例如，托管字符串就是 non-blittable 类型，因为这些字符串必须转换为字符串对象后才能进行封送。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-121">For example, managed strings are non-blittable types because they must be converted into string objects before they can be marshaled.</span></span>  
   
- 下表列出了 <xref:System> 命名空间中的非直接复制到本机结构中的类型。  [委托](http://msdn.microsoft.com/zh-cn/d176ee76-f982-494b-b03d-92e4118896e2)（它是引用静态方法或类实例的数据结构）也是非直接复制到本机结构中的。  
+ <span data-ttu-id="2e5fb-122">下表列出了 <xref:System> 命名空间中的 non-blittable 类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-122">The following table lists non-blittable types from the <xref:System> namespace.</span></span> <span data-ttu-id="2e5fb-123">[委托](http://msdn.microsoft.com/en-us/d176ee76-f982-494b-b03d-92e4118896e2)是引用静态方法或类实例的数据结构，也是 non-blittable 类型。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-123">[Delegates](http://msdn.microsoft.com/en-us/d176ee76-f982-494b-b03d-92e4118896e2), which are data structures that refer to a static method or to a class instance, are also non-blittable.</span></span>  
   
-|非直接复制到本机结构中的类型|说明|  
-|--------------------|--------|  
-|[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
-|[System.Boolean](http://msdn.microsoft.com/zh-cn/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|转换为 1、2 或 4 字节的值，值为 `true` 时为 1 或 \-1。|  
-|[System.Char](http://msdn.microsoft.com/zh-cn/cecc87c1-075e-4cde-aa56-33d189f66feb)|转换为 Unicode 或 ANSI 字符。|  
-|[System.Class](http://msdn.microsoft.com/zh-cn/fe334af5-0123-43d8-be84-26f6f023ddb6)|转换为类接口。|  
-|[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|转换为变量或接口。|  
-|[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
-|[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|转换为以 null 引用或 BSTR 引用终止的字符串。|  
-|[System.Valuetype](http://msdn.microsoft.com/zh-cn/4d9a876c-e05a-40ba-bd85-bd22877f984a)|转换为具有固定内存布局的结构。|  
-|[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
+|<span data-ttu-id="2e5fb-124">Non-blittable 类型</span><span class="sxs-lookup"><span data-stu-id="2e5fb-124">Non-blittable type</span></span>|<span data-ttu-id="2e5fb-125">描述</span><span class="sxs-lookup"><span data-stu-id="2e5fb-125">Description</span></span>|  
+|-------------------------|-----------------|  
+|[<span data-ttu-id="2e5fb-126">System.Array</span><span class="sxs-lookup"><span data-stu-id="2e5fb-126">System.Array</span></span>](../../../docs/framework/interop/default-marshaling-for-arrays.md)|<span data-ttu-id="2e5fb-127">转换为 C 样式数组或 `SAFEARRAY`。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-127">Converts to a C-style array or a `SAFEARRAY`.</span></span>|  
+|[<span data-ttu-id="2e5fb-128">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="2e5fb-128">System.Boolean</span></span>](http://msdn.microsoft.com/en-us/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|<span data-ttu-id="2e5fb-129">转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-129">Converts to a 1, 2, or 4-byte value with `true` as 1 or -1.</span></span>|  
+|[<span data-ttu-id="2e5fb-130">System.Char</span><span class="sxs-lookup"><span data-stu-id="2e5fb-130">System.Char</span></span>](http://msdn.microsoft.com/en-us/cecc87c1-075e-4cde-aa56-33d189f66feb)|<span data-ttu-id="2e5fb-131">转换为 Unicode 或 ANSI 字符。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-131">Converts to a Unicode or ANSI character.</span></span>|  
+|[<span data-ttu-id="2e5fb-132">System.Class</span><span class="sxs-lookup"><span data-stu-id="2e5fb-132">System.Class</span></span>](http://msdn.microsoft.com/en-us/fe334af5-0123-43d8-be84-26f6f023ddb6)|<span data-ttu-id="2e5fb-133">转换为类接口。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-133">Converts to a class interface.</span></span>|  
+|[<span data-ttu-id="2e5fb-134">System.Object</span><span class="sxs-lookup"><span data-stu-id="2e5fb-134">System.Object</span></span>](../../../docs/framework/interop/default-marshaling-for-objects.md)|<span data-ttu-id="2e5fb-135">转换为变量或接口。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-135">Converts to a variant or an interface.</span></span>|  
+|[<span data-ttu-id="2e5fb-136">System.Mdarray</span><span class="sxs-lookup"><span data-stu-id="2e5fb-136">System.Mdarray</span></span>](../../../docs/framework/interop/default-marshaling-for-arrays.md)|<span data-ttu-id="2e5fb-137">转换为 C 样式数组或 `SAFEARRAY`。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-137">Converts to a C-style array or a `SAFEARRAY`.</span></span>|  
+|[<span data-ttu-id="2e5fb-138">System.String</span><span class="sxs-lookup"><span data-stu-id="2e5fb-138">System.String</span></span>](../../../docs/framework/interop/default-marshaling-for-strings.md)|<span data-ttu-id="2e5fb-139">转换为空引用中的终止字符串或转换为 BSTR。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-139">Converts to a string terminating in a null reference or to a BSTR.</span></span>|  
+|[<span data-ttu-id="2e5fb-140">System.Valuetype</span><span class="sxs-lookup"><span data-stu-id="2e5fb-140">System.Valuetype</span></span>](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a)|<span data-ttu-id="2e5fb-141">转换为具有固定内存布局的结构。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-141">Converts to a structure with a fixed memory layout.</span></span>|  
+|[<span data-ttu-id="2e5fb-142">System.Szarray</span><span class="sxs-lookup"><span data-stu-id="2e5fb-142">System.Szarray</span></span>](../../../docs/framework/interop/default-marshaling-for-arrays.md)|<span data-ttu-id="2e5fb-143">转换为 C 样式数组或 `SAFEARRAY`。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-143">Converts to a C-style array or a `SAFEARRAY`.</span></span>|  
   
- 类和对象类型只受 COM 互操作支持。  有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C\# 和 C\+\+ 中的相应类型，请参见 [类库概述](../../../docs/standard/class-library-overview.md)。  
+ <span data-ttu-id="2e5fb-144">类和对象类型仅受 COM 互操作支持。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-144">Class and object types are supported only by COM interop.</span></span> <span data-ttu-id="2e5fb-145">有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../../docs/standard/class-library-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="2e5fb-145">For corresponding types in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Class Library Overview](../../../docs/standard/class-library-overview.md).</span></span>  
   
-## 请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="2e5fb-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2e5fb-146">See Also</span></span>  
+ [<span data-ttu-id="2e5fb-147">默认封送处理行为</span><span class="sxs-lookup"><span data-stu-id="2e5fb-147">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)
+

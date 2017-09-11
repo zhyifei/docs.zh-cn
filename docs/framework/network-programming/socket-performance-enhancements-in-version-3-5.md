@@ -1,52 +1,58 @@
 ---
-title: "版本 3.5 中的套接字性能增强 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "版本 3.5 中的套接字性能增强"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3e0e648fb14e07b62f70c614af84a98a256f6095
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 版本 3.5 中的套接字性能增强
-<xref:System.Net.Sockets.Socket?displayProperty=fullName> 选件类在3.5版中引发了供使用异步网络I\/O完成高性能的应用程序。  一系列新选件类中添加为的一部分提供另一种异步模式可由专用的高性能套接字应用程序使用的设置的增强功能。 <xref:System.Net.Sockets.Socket> 选件类。  这些增强功能需要高性能的网络服务系统应用程序而设计。  应用程序在其应用程序针对的高放射性区域可以完全仅使用该增强的异步模式或\(例如在收到大量数据，时\)。  
+# <a name="socket-performance-enhancements-in-version-35"></a><span data-ttu-id="a26eb-102">版本 3.5 中的套接字性能增强</span><span class="sxs-lookup"><span data-stu-id="a26eb-102">Socket Performance Enhancements in Version 3.5</span></span>
+<span data-ttu-id="a26eb-103">版本 3.5 中增强了 <xref:System.Net.Sockets.Socket?displayProperty=fullName> 类，以供使用异步网络 I/O 实现最高性能的应用程序使用。</span><span class="sxs-lookup"><span data-stu-id="a26eb-103">The <xref:System.Net.Sockets.Socket?displayProperty=fullName> class has been enhanced in Version 3.5 for use by applications that use asynchronous network I/O to achieve the highest performance.</span></span> <span data-ttu-id="a26eb-104">已添加了一系列新类，作为 <xref:System.Net.Sockets.Socket> 类的一组增强功能的一部分，这些增强功能提供了一种可供专用高性能套接字应用程序使用的替代异步模式。</span><span class="sxs-lookup"><span data-stu-id="a26eb-104">A series of new classes have been added as part of a set of enhancements to the <xref:System.Net.Sockets.Socket> class that provide an alternative asynchronous pattern that can be used by specialized high-performance socket applications.</span></span> <span data-ttu-id="a26eb-105">这些增强功能专为需要高性能的网络服务器应用程序而设计。</span><span class="sxs-lookup"><span data-stu-id="a26eb-105">These enhancements were specifically designed for network server applications that require high performance.</span></span> <span data-ttu-id="a26eb-106">应用程序可以独占方式使用增强型异步模式，或仅在其应用程序的目标热区域（例如，接收大量数据时）使用。</span><span class="sxs-lookup"><span data-stu-id="a26eb-106">An application can use the enhanced asynchronous pattern exclusively, or only in targeted hot areas of their application (when receiving large amounts of data, for example).</span></span>  
   
-## 选件类提高  
- 这些增强功能的主要特点是可以避免在异步套接字 I\/O 量非常大时发生重复的对象分配和同步。  套接字异步I\/O的 <xref:System.Net.Sockets.Socket> 选件类当前实现的begin\/end设计模式要求一 <xref:System.IAsyncResult?displayProperty=fullName> 对象为每个异步套接字操作分配。  
+## <a name="class-enhancements"></a><span data-ttu-id="a26eb-107">类增强功能</span><span class="sxs-lookup"><span data-stu-id="a26eb-107">Class Enhancements</span></span>  
+ <span data-ttu-id="a26eb-108">这些增强功能的主要功能是避免在大容量异步套接字 I/O 期间重复分配和同步对象。</span><span class="sxs-lookup"><span data-stu-id="a26eb-108">The main feature of these enhancements is the avoidance of the repeated allocation and synchronization of objects during high-volume asynchronous socket I/O.</span></span> <span data-ttu-id="a26eb-109">当前由异步套接字 I/O 的 <xref:System.Net.Sockets.Socket> 类实现的 Begin/End 设计模式需要为每个异步套接字操作分配一个 <xref:System.IAsyncResult?displayProperty=fullName> 对象。</span><span class="sxs-lookup"><span data-stu-id="a26eb-109">The Begin/End design pattern currently implemented by the <xref:System.Net.Sockets.Socket> class for asynchronous socket I/O requires a <xref:System.IAsyncResult?displayProperty=fullName> object be allocated for each asynchronous socket operation.</span></span>  
   
- 在新 <xref:System.Net.Sockets.Socket> 选件类的改进，套接字异步操作由应用程序分配和维护的可重用 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName> 选件类对象进行描述。  高性能套接字应用程序非常清楚地知道必须保持的重叠的套接字操作的量。  应用程序可以根据自身需要创建任意多的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 对象。  例如，因此，如果服务器应用程序需要包含15套接字始终接受未处理的操作支持传入的客户端连接速度，它能提前分配15可重用 <xref:System.Net.Sockets.SocketAsyncEventArgs> 对象实现此目的。  
+ <span data-ttu-id="a26eb-110">在新的 <xref:System.Net.Sockets.Socket> 类增强功能中，异步套接字操作由应用程序分配和维护的可重用 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName> 类对象描述。</span><span class="sxs-lookup"><span data-stu-id="a26eb-110">In the new <xref:System.Net.Sockets.Socket> class enhancements, asynchronous socket operations are described by reusable <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName> class objects allocated and maintained by the application.</span></span> <span data-ttu-id="a26eb-111">高性能套接字应用程序非常清楚必须维持的重叠套接字操作的数量。</span><span class="sxs-lookup"><span data-stu-id="a26eb-111">High-performance socket applications know best the amount of overlapped socket operations that must be sustained.</span></span> <span data-ttu-id="a26eb-112">该应用程序可创建所需的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 对象数量。</span><span class="sxs-lookup"><span data-stu-id="a26eb-112">The application can create as many of the <xref:System.Net.Sockets.SocketAsyncEventArgs> objects that it needs.</span></span> <span data-ttu-id="a26eb-113">例如，如果服务器应用程序始终需要 15 个套接字接受操作，以支持传入的客户端连接速率，则可以预先为此分配 15 个可重用的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 对象。</span><span class="sxs-lookup"><span data-stu-id="a26eb-113">For example, if a server application needs to have 15 socket accept operations outstanding at all times to support incoming client connection rates, it can allocate 15 reusable <xref:System.Net.Sockets.SocketAsyncEventArgs> objects in advance for that purpose.</span></span>  
   
- 使用此类执行异步套接字操作的模式包含以下步骤：  
+ <span data-ttu-id="a26eb-114">使用此类执行异步套接字操作的模式包括以下步骤：</span><span class="sxs-lookup"><span data-stu-id="a26eb-114">The pattern for performing an asynchronous socket operation with this class consists of the following steps:</span></span>  
   
-1.  分配一个新的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 上下文对象，或者从应用程序池中获取一个空闲的此类对象。  
+1.  <span data-ttu-id="a26eb-115">分配一个新的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 上下文对象，或从应用程序池中获取一个空闲对象。</span><span class="sxs-lookup"><span data-stu-id="a26eb-115">Allocate a new <xref:System.Net.Sockets.SocketAsyncEventArgs> context object, or get a free one from an application pool.</span></span>  
   
-2.  设置在上下文对象的属性设置为要执行的操作\(例如回调委托方法和数据缓冲区，\)。  
+2.  <span data-ttu-id="a26eb-116">将上下文对象的属性设置为要执行的操作（例如，回调代理方法和数据缓冲区）。</span><span class="sxs-lookup"><span data-stu-id="a26eb-116">Set properties on the context object to the operation about to be performed (the callback delegate method and data buffer, for example).</span></span>  
   
-3.  调用适当的套接字方法 \(xxxAsync\) 以启动异步操作。  
+3.  <span data-ttu-id="a26eb-117">调用适当的套接字方法 (xxxAsync) 以启动异步操作。</span><span class="sxs-lookup"><span data-stu-id="a26eb-117">Call the appropriate socket method (xxxAsync) to initiate the asynchronous operation.</span></span>  
   
-4.  如果异步套接字方法\(xxxAsync\)返回true在回调，请查询完成状态的上下文属性。  
+4.  <span data-ttu-id="a26eb-118">如果异步套接字方法 (xxxAsync) 在回调中返回 true，请查询完成状态的上下文属性。</span><span class="sxs-lookup"><span data-stu-id="a26eb-118">If the asynchronous socket method (xxxAsync) returns true in the callback, query the context properties for completion status.</span></span>  
   
-5.  如果异步套接字方法\(xxxAsync\)返回错误在回调，同步完成的操作。  可以查询上下文属性来获取操作结果。  
+5.  <span data-ttu-id="a26eb-119">如果异步套接字方法 (xxxAsync) 在回调中返回 false，则已同步完成该操作。</span><span class="sxs-lookup"><span data-stu-id="a26eb-119">If the asynchronous socket method (xxxAsync) returns false in the callback, the operation completed synchronously.</span></span> <span data-ttu-id="a26eb-120">可查询上下文属性获取操作结果。</span><span class="sxs-lookup"><span data-stu-id="a26eb-120">The context properties may be queried for the operation result.</span></span>  
   
-6.  将该上下文重用于另一个操作，将它放回到应用程序池中，或者将它丢弃。  
+6.  <span data-ttu-id="a26eb-121">重新使用上下文进行另一项操作，将其放回池中，或放弃它。</span><span class="sxs-lookup"><span data-stu-id="a26eb-121">Reuse the context for another operation, put it back in the pool, or discard it.</span></span>  
   
- 在应用程序代码确定新异步套接字操作上下文对象的生存期引用，并且异步I\/O引用。  在对异步套接字操作上下文对象的引用作为一个参数提交给某个异步套接字操作方法之后，应用程序不必保留该引用。  在完成回调返回之前将一直引用该对象。  而是有利的以便应用程序可以保留对上下文对象，以便可以为将来的异步套接字操作中重用。  
+ <span data-ttu-id="a26eb-122">新的异步套接字操作上下文对象的生存期由应用程序代码中的引用和异步 I/O 引用确定。</span><span class="sxs-lookup"><span data-stu-id="a26eb-122">The lifetime of the new asynchronous socket operation context object is determined by references in the application code and asynchronous I/O references.</span></span> <span data-ttu-id="a26eb-123">作为参数提交给异步套接字操作方法之一后，应用程序不必保留对异步套接字操作上下文对象的引用。</span><span class="sxs-lookup"><span data-stu-id="a26eb-123">It is not necessary for the application to retain a reference to an asynchronous socket operation context object after it is submitted as a parameter to one of the asynchronous socket operation methods.</span></span> <span data-ttu-id="a26eb-124">完成回调返回之前，应用程序会继续引用它。</span><span class="sxs-lookup"><span data-stu-id="a26eb-124">It will remain referenced until the completion callback returns.</span></span> <span data-ttu-id="a26eb-125">然而，应用程序保留对上下文对象的引用是有利的，这样可将其重新用于将来的异步套接字操作。</span><span class="sxs-lookup"><span data-stu-id="a26eb-125">However it is advantageous for the application to retain the reference to the context object so that it can be reused for a future asynchronous socket operation.</span></span>  
   
-## 请参阅  
- <xref:System.Net.Sockets.Socket?displayProperty=fullName>   
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=fullName>   
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)   
- [存储性能技术示例](http://go.microsoft.com/fwlink/?LinkID=179570)
+## <a name="see-also"></a><span data-ttu-id="a26eb-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a26eb-126">See Also</span></span>  
+ <span data-ttu-id="a26eb-127"><xref:System.Net.Sockets.Socket?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="a26eb-127"><xref:System.Net.Sockets.Socket?displayProperty=fullName></span></span>   
+ <span data-ttu-id="a26eb-128"><xref:System.Net.Sockets.SendPacketsElement?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="a26eb-128"><xref:System.Net.Sockets.SendPacketsElement?displayProperty=fullName></span></span>   
+ <span data-ttu-id="a26eb-129"><xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="a26eb-129"><xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName></span></span>   
+ <span data-ttu-id="a26eb-130"><xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="a26eb-130"><xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=fullName></span></span>   
+ <span data-ttu-id="a26eb-131">[网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md) </span><span class="sxs-lookup"><span data-stu-id="a26eb-131">[Network Programming Samples](../../../docs/framework/network-programming/network-programming-samples.md) </span></span>  
+ [<span data-ttu-id="a26eb-132">套接字性能技术示例</span><span class="sxs-lookup"><span data-stu-id="a26eb-132">Socket Performance Technology Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179570)
+

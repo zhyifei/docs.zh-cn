@@ -1,71 +1,75 @@
 ---
-title: "&lt;事件&gt;元素 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;事件&gt;元素 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3ea3a4233ca0b01cd4b6ebd328387fea1dd189de
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;事件&gt;元素 (.NET Native)
-将运行时反射策略应用到一个事件。  
+# <a name="lteventgt-element-net-native"></a><span data-ttu-id="010e0-102">&lt;事件&gt;元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="010e0-102">&lt;Event&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="010e0-103">将运行时反射策略应用到一个事件。</span><span class="sxs-lookup"><span data-stu-id="010e0-103">Applies runtime reflection policy to an event.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="010e0-104">语法</span><span class="sxs-lookup"><span data-stu-id="010e0-104">Syntax</span></span>  
   
 ```xml  
-  
 <Event Name="event_name"   
        Browse="policy_type"   
        Dynamic="policy_type" />  
-  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="010e0-105">特性和元素</span><span class="sxs-lookup"><span data-stu-id="010e0-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="010e0-106">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="010e0-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a><span data-ttu-id="010e0-107">特性</span><span class="sxs-lookup"><span data-stu-id="010e0-107">Attributes</span></span>  
   
-|特性|特性类型|描述|  
+|<span data-ttu-id="010e0-108">特性</span><span class="sxs-lookup"><span data-stu-id="010e0-108">Attribute</span></span>|<span data-ttu-id="010e0-109">特性类型</span><span class="sxs-lookup"><span data-stu-id="010e0-109">Attribute type</span></span>|<span data-ttu-id="010e0-110">描述</span><span class="sxs-lookup"><span data-stu-id="010e0-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|常规|必需的特性。 指定事件名称。|  
-|`Browse`|映像|可选特性。 控制对该事件信息的查询或列举该事件，但并不在运行时间启用任何动态访问。|  
-|`Dynamic`|映像|可选特性。 控制运行时对该事件的访问，以启用动态编程。 该策略确保一个事件可在运行时间内得到处理。|  
+|`Name`|<span data-ttu-id="010e0-111">常规</span><span class="sxs-lookup"><span data-stu-id="010e0-111">General</span></span>|<span data-ttu-id="010e0-112">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="010e0-112">Required attribute.</span></span> <span data-ttu-id="010e0-113">指定事件名称。</span><span class="sxs-lookup"><span data-stu-id="010e0-113">Specifies the event name.</span></span>|  
+|`Browse`|<span data-ttu-id="010e0-114">映像</span><span class="sxs-lookup"><span data-stu-id="010e0-114">Reflection</span></span>|<span data-ttu-id="010e0-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="010e0-115">Optional attribute.</span></span> <span data-ttu-id="010e0-116">控制对该事件信息的查询或列举该事件，但并不在运行时间启用任何动态访问。</span><span class="sxs-lookup"><span data-stu-id="010e0-116">Controls querying for information about or enumerating the event but does not enable any dynamic access at run time.</span></span>|  
+|`Dynamic`|<span data-ttu-id="010e0-117">映像</span><span class="sxs-lookup"><span data-stu-id="010e0-117">Reflection</span></span>|<span data-ttu-id="010e0-118">可选特性。</span><span class="sxs-lookup"><span data-stu-id="010e0-118">Optional attribute.</span></span> <span data-ttu-id="010e0-119">控制运行时对该事件的访问，以启用动态编程。</span><span class="sxs-lookup"><span data-stu-id="010e0-119">Controls runtime access to the event to enable dynamic programming.</span></span> <span data-ttu-id="010e0-120">该策略确保一个事件可在运行时间内得到处理。</span><span class="sxs-lookup"><span data-stu-id="010e0-120">This policy ensures that an event can be handled dynamically at run time.</span></span>|  
   
-## <a name="name-attribute"></a>Name 特性  
+## <a name="name-attribute"></a><span data-ttu-id="010e0-121">Name 特性</span><span class="sxs-lookup"><span data-stu-id="010e0-121">Name attribute</span></span>  
   
-|值|说明|  
+|<span data-ttu-id="010e0-122">值</span><span class="sxs-lookup"><span data-stu-id="010e0-122">Value</span></span>|<span data-ttu-id="010e0-123">描述</span><span class="sxs-lookup"><span data-stu-id="010e0-123">Description</span></span>|  
 |-----------|-----------------|  
-|*method_name*|事件名称。 该事件的类型定义由容器的父[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)或[ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)元素。|  
+|<span data-ttu-id="010e0-124">method_name</span><span class="sxs-lookup"><span data-stu-id="010e0-124">*method_name*</span></span>|<span data-ttu-id="010e0-125">事件名称。</span><span class="sxs-lookup"><span data-stu-id="010e0-125">The event name.</span></span> <span data-ttu-id="010e0-126">该事件的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。</span><span class="sxs-lookup"><span data-stu-id="010e0-126">The type of the event is defined by the parent [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) or [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element.</span></span>|  
   
-## <a name="all-other-attributes"></a>所有其他特性  
+## <a name="all-other-attributes"></a><span data-ttu-id="010e0-127">所有其他特性</span><span class="sxs-lookup"><span data-stu-id="010e0-127">All other attributes</span></span>  
   
-|值|说明|  
+|<span data-ttu-id="010e0-128">值</span><span class="sxs-lookup"><span data-stu-id="010e0-128">Value</span></span>|<span data-ttu-id="010e0-129">描述</span><span class="sxs-lookup"><span data-stu-id="010e0-129">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|该设置将应用到这个事件的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|<span data-ttu-id="010e0-130">policy_setting</span><span class="sxs-lookup"><span data-stu-id="010e0-130">*policy_setting*</span></span>|<span data-ttu-id="010e0-131">该设置将应用到这个事件的策略类型。</span><span class="sxs-lookup"><span data-stu-id="010e0-131">The setting to apply to this policy type for the event.</span></span> <span data-ttu-id="010e0-132">可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。</span><span class="sxs-lookup"><span data-stu-id="010e0-132">Possible values are `Auto`, `Excluded`, `Included`, and `Required`.</span></span> <span data-ttu-id="010e0-133">有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="010e0-133">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="010e0-134">子元素</span><span class="sxs-lookup"><span data-stu-id="010e0-134">Child Elements</span></span>  
+ <span data-ttu-id="010e0-135">无。</span><span class="sxs-lookup"><span data-stu-id="010e0-135">None.</span></span>  
   
-### <a name="parent-elements"></a>父元素  
+### <a name="parent-elements"></a><span data-ttu-id="010e0-136">父元素</span><span class="sxs-lookup"><span data-stu-id="010e0-136">Parent Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="010e0-137">元素</span><span class="sxs-lookup"><span data-stu-id="010e0-137">Element</span></span>|<span data-ttu-id="010e0-138">描述</span><span class="sxs-lookup"><span data-stu-id="010e0-138">Description</span></span>|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
+|[<span data-ttu-id="010e0-139">\<Type></span><span class="sxs-lookup"><span data-stu-id="010e0-139">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="010e0-140">将反射策略应用到一种类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="010e0-140">Applies reflection policy to a type and all its members.</span></span>|  
+|[<span data-ttu-id="010e0-141">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="010e0-141">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="010e0-142">将反射策略应用到一种构造泛型类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="010e0-142">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
   
-## <a name="remarks"></a>备注  
- 如果一个事件的策略没有得到显式定义，它将继承其父元素的运行时策略。  
+## <a name="remarks"></a><span data-ttu-id="010e0-143">备注</span><span class="sxs-lookup"><span data-stu-id="010e0-143">Remarks</span></span>  
+ <span data-ttu-id="010e0-144">如果一个事件的策略没有得到显式定义，它将继承其父元素的运行时策略。</span><span class="sxs-lookup"><span data-stu-id="010e0-144">If an event's policy is not explicitly defined, it inherits the runtime policy of its parent element.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a><span data-ttu-id="010e0-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="010e0-145">See Also</span></span>  
+ <span data-ttu-id="010e0-146">[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span><span class="sxs-lookup"><span data-stu-id="010e0-146">[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) </span></span>  
+ <span data-ttu-id="010e0-147">[运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md) </span><span class="sxs-lookup"><span data-stu-id="010e0-147">[Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md) </span></span>  
+ [<span data-ttu-id="010e0-148">运行时指令策略设置</span><span class="sxs-lookup"><span data-stu-id="010e0-148">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

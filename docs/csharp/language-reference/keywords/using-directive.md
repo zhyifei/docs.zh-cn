@@ -34,33 +34,33 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-directive-c-reference"></a>using 指令（C# 参考）
-`using` 指令有三种用途：  
+# <a name="using-directive-c-reference"></a><span data-ttu-id="43846-102">using 指令（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="43846-102">using Directive (C# Reference)</span></span>
+<span data-ttu-id="43846-103">`using` 指令有三种用途：</span><span class="sxs-lookup"><span data-stu-id="43846-103">The `using` directive has three uses:</span></span>  
   
--   允许在命名空间中使用类型，这样无需在该命名空间中限定某个类型的使用：  
+-   <span data-ttu-id="43846-104">允许在命名空间中使用类型，这样无需在该命名空间中限定某个类型的使用：</span><span class="sxs-lookup"><span data-stu-id="43846-104">To allow the use of types in a namespace so that you do not have to qualify the use of a type in that namespace:</span></span>  
   
     ```csharp  
     using System.Text;  
     ```  
   
--   允许访问类型的静态成员，而无需限定使用类型名称进行访问。 
+-   <span data-ttu-id="43846-105">允许访问类型的静态成员，而无需限定使用类型名称进行访问。</span><span class="sxs-lookup"><span data-stu-id="43846-105">To allow you to access static members of a type without having to qualify the access with the type name.</span></span> 
   
     ```csharp  
     using static System.Math;  
     ```  
      
-    有关详细信息，请参阅 [using static 指令](using-static.md)。
+    <span data-ttu-id="43846-106">有关详细信息，请参阅 [using static 指令](using-static.md)。</span><span class="sxs-lookup"><span data-stu-id="43846-106">For more information, see the [using static directive](using-static.md).</span></span>
 
--   为命名空间或类型创建别名。 这称为 *using 别名指令*。  
+-   <span data-ttu-id="43846-107">为命名空间或类型创建别名。</span><span class="sxs-lookup"><span data-stu-id="43846-107">To create an alias for a namespace or a type.</span></span> <span data-ttu-id="43846-108">这称为 *using 别名指令*。</span><span class="sxs-lookup"><span data-stu-id="43846-108">This is called a *using alias directive*.</span></span>  
   
     ```csharp  
     using Project = PC.MyCompany.Project;  
     ```  
   
- `using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）。 有关详细信息，请参阅 [using 语句](../../../csharp/language-reference/keywords/using-statement.md)。  
+ <span data-ttu-id="43846-109">`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）。</span><span class="sxs-lookup"><span data-stu-id="43846-109">The `using` keyword is also used to create *using statements*, which help ensure that <xref:System.IDisposable> objects such as files and fonts are handled correctly.</span></span> <span data-ttu-id="43846-110">有关详细信息，请参阅 [using 语句](../../../csharp/language-reference/keywords/using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="43846-110">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md) for more information.</span></span>  
   
-## <a name="using-static-type"></a>Using Static 类型  
- 你可以访问类型的静态成员，而无需限定使用类型名称进行访问：  
+## <a name="using-static-type"></a><span data-ttu-id="43846-111">Using Static 类型</span><span class="sxs-lookup"><span data-stu-id="43846-111">Using Static Type</span></span>  
+ <span data-ttu-id="43846-112">你可以访问类型的静态成员，而无需限定使用类型名称进行访问：</span><span class="sxs-lookup"><span data-stu-id="43846-112">You can access static members of a type without having to qualify the access with the type name:</span></span>  
   
 ```csharp  
 using static System.Console;   
@@ -74,40 +74,40 @@ class Program
 }  
 ```  
   
-## <a name="remarks"></a>备注  
- `using` 指令的范围限于显示它的文件。  
+## <a name="remarks"></a><span data-ttu-id="43846-113">备注</span><span class="sxs-lookup"><span data-stu-id="43846-113">Remarks</span></span>  
+ <span data-ttu-id="43846-114">`using` 指令的范围限于显示它的文件。</span><span class="sxs-lookup"><span data-stu-id="43846-114">The scope of a `using` directive is limited to the file in which it appears.</span></span>  
   
- 创建 `using` 别名，以便更易于将标识符限定为命名空间或类型。 using 别名指令的右侧必须始终是一个完全限定类型，而与前面的 using 指令无关。  
+ <span data-ttu-id="43846-115">创建 `using` 别名，以便更易于将标识符限定为命名空间或类型。</span><span class="sxs-lookup"><span data-stu-id="43846-115">Create a `using` alias to make it easier to qualify an identifier to a namespace or type.</span></span> <span data-ttu-id="43846-116">using 别名指令的右侧必须始终是一个完全限定类型，而与前面的 using 指令无关。</span><span class="sxs-lookup"><span data-stu-id="43846-116">The right side of a using alias directive must always be a fully-qualified type regardless of the using directives that come before it.</span></span>  
   
- 创建 `using` 指令，以便在命名空间中使用类型而不必指定命名空间。 `using` 指令不为你提供对嵌套在指定命名空间中的任何命名空间的访问权限。  
+ <span data-ttu-id="43846-117">创建 `using` 指令，以便在命名空间中使用类型而不必指定命名空间。</span><span class="sxs-lookup"><span data-stu-id="43846-117">Create a `using` directive to use the types in a namespace without having to specify the namespace.</span></span> <span data-ttu-id="43846-118">`using` 指令不为你提供对嵌套在指定命名空间中的任何命名空间的访问权限。</span><span class="sxs-lookup"><span data-stu-id="43846-118">A `using` directive does not give you access to any namespaces that are nested in the namespace you specify.</span></span>  
   
- 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 有关系统定义的命名空间的列表，请参阅 [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)。  
+ <span data-ttu-id="43846-119">命名空间分为两类：用户定义的命名空间和系统定义的命名空间。</span><span class="sxs-lookup"><span data-stu-id="43846-119">Namespaces come in two categories: user-defined and system-defined.</span></span> <span data-ttu-id="43846-120">用户定义的命名空间是在代码中定义的命名空间。</span><span class="sxs-lookup"><span data-stu-id="43846-120">User-defined namespaces are namespaces defined in your code.</span></span> <span data-ttu-id="43846-121">有关系统定义的命名空间的列表，请参阅 [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)。</span><span class="sxs-lookup"><span data-stu-id="43846-121">For a list of the system-defined namespaces, see [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195).</span></span>  
   
- 有关引用其他程序集中的方法的示例，请参阅[创建和使用 C# DLL](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
+ <span data-ttu-id="43846-122">有关引用其他程序集中的方法的示例，请参阅[创建和使用 C# DLL](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。</span><span class="sxs-lookup"><span data-stu-id="43846-122">For examples on referencing methods in other assemblies, see [Creating and Using C# DLLs](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).</span></span>  
   
-## <a name="example-1"></a>示例 1  
+## <a name="example-1"></a><span data-ttu-id="43846-123">示例 1</span><span class="sxs-lookup"><span data-stu-id="43846-123">Example 1</span></span>  
   
- 下面的示例显示如何为命名空间定义和使用 `using` 别名：  
+ <span data-ttu-id="43846-124">下面的示例显示如何为命名空间定义和使用 `using` 别名：</span><span class="sxs-lookup"><span data-stu-id="43846-124">The following example shows how to define and use a `using` alias for a namespace:</span></span>  
   
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
+ <span data-ttu-id="43846-125">[!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="43846-125">[!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]</span></span>  
   
- using 别名指令的右侧不能有开放式泛型类型。 例如，不能为 List\<T> 创建 using 别名，但可以为 List\<int> 创建。  
+ <span data-ttu-id="43846-126">using 别名指令的右侧不能有开放式泛型类型。</span><span class="sxs-lookup"><span data-stu-id="43846-126">A using alias directive cannot have an open generic type on the right hand side.</span></span> <span data-ttu-id="43846-127">例如，不能为 List\<T> 创建 using 别名，但可以为 List\<int> 创建。</span><span class="sxs-lookup"><span data-stu-id="43846-127">For example, you cannot create a using alias for a List\<T>, but you can create one for a List\<int>.</span></span>  
   
-## <a name="example-2"></a>示例 2  
+## <a name="example-2"></a><span data-ttu-id="43846-128">示例 2</span><span class="sxs-lookup"><span data-stu-id="43846-128">Example 2</span></span>  
   
- 下面的示例显示如何为类定义 `using` 指令和 `using` 别名：  
+ <span data-ttu-id="43846-129">下面的示例显示如何为类定义 `using` 指令和 `using` 别名：</span><span class="sxs-lookup"><span data-stu-id="43846-129">The following example shows how to define a `using` directive and a `using` alias for a class:</span></span>  
   
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
+ <span data-ttu-id="43846-130">[!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="43846-130">[!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="43846-131">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="43846-131">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [Using 命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)   
- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="43846-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="43846-132">See Also</span></span>  
+ <span data-ttu-id="43846-133">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="43846-133">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="43846-134">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="43846-134">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="43846-135">[Using 命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md) </span><span class="sxs-lookup"><span data-stu-id="43846-135">[Using Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md) </span></span>  
+ <span data-ttu-id="43846-136">[C# 关键字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="43846-136">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="43846-137">[命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="43846-137">[Namespace Keywords](../../../csharp/language-reference/keywords/namespace-keywords.md) </span></span>  
+ <span data-ttu-id="43846-138">[命名空间](../../../csharp/programming-guide/namespaces/index.md) </span><span class="sxs-lookup"><span data-stu-id="43846-138">[Namespaces](../../../csharp/programming-guide/namespaces/index.md) </span></span>  
+ [<span data-ttu-id="43846-139">using 语句</span><span class="sxs-lookup"><span data-stu-id="43846-139">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)
 

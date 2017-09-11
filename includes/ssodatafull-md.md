@@ -1,1 +1,1 @@
-开放式数据协议 (OData)
+<span data-ttu-id="b2072-101">开放式数据协议 (OData)</span><span class="sxs-lookup"><span data-stu-id="b2072-101">Open Data Protocol (OData)</span></span>

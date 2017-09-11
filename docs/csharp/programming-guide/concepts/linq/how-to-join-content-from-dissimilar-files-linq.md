@@ -26,12 +26,12 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何：联接不同文件的内容 (LINQ) (C#)
-本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。 如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。 可以修改此示例以用于任何类型的结构化文本。  
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="ebc7b-102">如何：联接不同文件的内容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="ebc7b-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+<span data-ttu-id="ebc7b-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="ebc7b-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="ebc7b-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a>创建数据文件  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="ebc7b-106">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="ebc7b-106">To create the data files</span></span>  
   
-1.  将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。 此文件表示电子表格数据。 第 1 列是学生的 ID，第 2 至 5 列是测验分数。  
+1.  <span data-ttu-id="ebc7b-107">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="ebc7b-108">此文件表示电子表格数据。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="ebc7b-109">第 1 列是学生的 ID，第 2 至 5 列是测验分数。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +48,7 @@ ms.lasthandoff: 07/28/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。 此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。  
+2.  <span data-ttu-id="ebc7b-110">将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="ebc7b-111">此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -65,7 +65,7 @@ ms.lasthandoff: 07/28/2017
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="ebc7b-112">示例</span><span class="sxs-lookup"><span data-stu-id="ebc7b-112">Example</span></span>  
   
 ```csharp  
 class JoinStrings  
@@ -136,10 +136,10 @@ Zabokritski, 96, 85, 91, 60
  */  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="ebc7b-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="ebc7b-113">Compiling the Code</span></span>  
+ <span data-ttu-id="ebc7b-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="ebc7b-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ebc7b-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="ebc7b-115">See Also</span></span>  
+ <span data-ttu-id="ebc7b-116">[LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="ebc7b-116">[LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+ [<span data-ttu-id="ebc7b-117">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="ebc7b-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

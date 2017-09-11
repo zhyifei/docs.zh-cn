@@ -36,17 +36,17 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="conversion-keywords-c-reference"></a>转换关键字（C# 参考）
-本部分介绍类型转换中使用的关键字：  
+# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="82b87-102">转换关键字（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="82b87-102">Conversion Keywords (C# Reference)</span></span>
+<span data-ttu-id="82b87-103">本部分介绍类型转换中使用的关键字：</span><span class="sxs-lookup"><span data-stu-id="82b87-103">This section describes keywords used in type conversions:</span></span>  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+-   [<span data-ttu-id="82b87-104">explicit</span><span class="sxs-lookup"><span data-stu-id="82b87-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+-   [<span data-ttu-id="82b87-105">implicit</span><span class="sxs-lookup"><span data-stu-id="82b87-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [operator](../../../csharp/language-reference/keywords/operator.md)  
+-   [<span data-ttu-id="82b87-106">operator</span><span class="sxs-lookup"><span data-stu-id="82b87-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="82b87-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="82b87-107">See Also</span></span>  
+ <span data-ttu-id="82b87-108">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="82b87-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="82b87-109">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="82b87-109">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="82b87-110">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="82b87-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

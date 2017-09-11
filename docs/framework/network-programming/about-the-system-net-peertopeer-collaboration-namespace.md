@@ -1,53 +1,59 @@
 ---
-title: "关于 System.Net.PeerToPeer.Collaboration 命名空间 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "关于 System.Net.PeerToPeer.Collaboration 命名空间"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f446e20f37a83e9effd2a378ce576640bca99763
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 关于 System.Net.PeerToPeer.Collaboration 命名空间
-<xref:System.Net.PeerToPeer.Collaboration> 命名空间提供使用对协作基础结构，用于实现对等类协作事件的选件类和API。  
+# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a><span data-ttu-id="5ff8b-102">关于 System.Net.PeerToPeer.Collaboration 命名空间</span><span class="sxs-lookup"><span data-stu-id="5ff8b-102">About the System.Net.PeerToPeer.Collaboration Namespace</span></span>
+<span data-ttu-id="5ff8b-103"><xref:System.Net.PeerToPeer.Collaboration> 命名空间提供用于通过对等协作基础结构实现对等协作活动的类和 API。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-103">The <xref:System.Net.PeerToPeer.Collaboration> namespace provides classes and APIs that are used to implement peer collaboration activities using the Peer-to-Peer Collaboration Infrastructure.</span></span>  
   
-## 类  
- 用于对等协作事件的实现的主类是:  
+## <a name="classes"></a><span data-ttu-id="5ff8b-104">类</span><span class="sxs-lookup"><span data-stu-id="5ff8b-104">Classes</span></span>  
+ <span data-ttu-id="5ff8b-105">在对等协作活动的实现中所使用的主要类包括：</span><span class="sxs-lookup"><span data-stu-id="5ff8b-105">The main classes used in the implementation of a Peer-to-Peer Collaboration activity are:</span></span>  
   
--   <xref:System.Net.PeerToPeer.Collaboration.ContactManager>，可用于存储对等类联系人。  
+-   <span data-ttu-id="5ff8b-106"><xref:System.Net.PeerToPeer.Collaboration.ContactManager>，可用于存储对等联系人。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-106">The <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, which can be used to store peer contacts.</span></span>  
   
--   协作，例如游戏，请聊天客户端的 <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> 或会话解决方案。  
+-   <span data-ttu-id="5ff8b-107"><xref:System.Net.PeerToPeer.Collaboration.PeerApplication>，可在其中进行协作，如游戏、聊天客户端或会议解决方案。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-107">The <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> in which to collaborate, such as a game, chat client, or conferencing solution.</span></span>  
   
--   在事件协作的对等类。  这些对等类可以表示为 <xref:System.Net.PeerToPeer.Collaboration.PeerContact>、 <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>或 <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> 对象。  
+-   <span data-ttu-id="5ff8b-108">将在活动中进行协作的对等机。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-108">The peers that will be collaborating in an activity.</span></span>  <span data-ttu-id="5ff8b-109">这些对等机可以表示为 <xref:System.Net.PeerToPeer.Collaboration.PeerContact>、<xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> 或 <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> 对象。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-109">These peers can be represented as <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, or <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> objects.</span></span>  
   
--   静态 <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> 选件类，指定要应用程序可用，哪些对等类参与它们。  
+-   <span data-ttu-id="5ff8b-110"><xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> 静态类本身，用于指定可用的应用程序和参与其中的对等机。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-110">The static <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> class itself, which specifies which applications are available and which peers are participating in them.</span></span>  
   
- <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> 方法用于邀请对等类到协作会话。  调用对等类可以订阅通知更新对应用程序、对象或现有信息参与与协作会话的事件的另一对等类。  存在选件类指定 <xref:System.Net.PeerToPeer.Collaboration.Peer> 是否为协作可用，并且， <xref:System.Net.PeerToPeer.Collaboration.PeerScope> 选件类用于指定要参与允许对等类: <xref:System.Net.PeerToPeer.Collaboration.PeerScope> \(全局\)， <xref:System.Net.PeerToPeer.Collaboration.PeerScope>， \(子网\)或 <xref:System.Net.PeerToPeer.Collaboration.PeerScope>。  
+ <span data-ttu-id="5ff8b-111"><xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> 方法用于将对等机邀请至协作会话。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-111">The <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> methods are used to invite peers to a collaboration session.</span></span>  <span data-ttu-id="5ff8b-112">针对向与协作会话关联的应用程序、对象或状态信息发送更新信号的事件，调用对等机可订阅另一个对等机。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-112">A calling peer can subscribe to another peer for events that signal updates to application, object, or presence information affiliated with the collaboration session.</span></span> <span data-ttu-id="5ff8b-113">状态类指定 <xref:System.Net.PeerToPeer.Collaboration.Peer> 是否可用于协作，<xref:System.Net.PeerToPeer.Collaboration.PeerScope> 类用于指定对等机可允许的参与程度：<xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet>（全局）、<xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>（子网）或 <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-113">Presence classes specify whether a <xref:System.Net.PeerToPeer.Collaboration.Peer> is available for collaboration, and the <xref:System.Net.PeerToPeer.Collaboration.PeerScope> class is used to specify how much participation is allowed for a peer:  <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (global), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>, (subnet) or <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.</span></span>  
   
- 协作会话由四个步骤:  
+ <span data-ttu-id="5ff8b-114">协作会话由四个步骤组成：</span><span class="sxs-lookup"><span data-stu-id="5ff8b-114">A collaboration session is comprised of four steps:</span></span>  
   
--   发现。  查看或发布应用程序、对等类并显示信息。  例如，找到具有相同的游戏安装本地子网的其他人员。  
+-   <span data-ttu-id="5ff8b-115">发现。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-115">Discovery.</span></span> <span data-ttu-id="5ff8b-116">发现或发布应用程序、对等机和状态信息。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-116">Discover or publish applications, peers, and presence information.</span></span>  <span data-ttu-id="5ff8b-117">例如，在本地子网上查找安装了相同游戏的其他人。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-117">For instance, find other people on the local subnet that have the same games installed.</span></span>  
   
--   邀请。  发送并接受远程对等类的安全邀请启动或连接 <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> 会话。  
+-   <span data-ttu-id="5ff8b-118">邀请。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-118">Invitation.</span></span> <span data-ttu-id="5ff8b-119">发送和接受远程对等机的安全邀请以启动或加入 <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> 会话。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-119">Send and accept secure invitations for remote peer(s) to start or join <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> sessions.</span></span>  
   
--   联系人管理。  添加发现了对等类作为联系人到 <xref:System.Net.PeerToPeer.Collaboration.ContactManager>。  
+-   <span data-ttu-id="5ff8b-120">联系人管理。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-120">Contact Management.</span></span> <span data-ttu-id="5ff8b-121">将发现的对等机作为联系人添加到 <xref:System.Net.PeerToPeer.Collaboration.ContactManager>。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-121">Add discovered peers as a contact to a <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.</span></span>  
   
--   通信。  当通信建立时，请使用 <xref:System.Net> API， <xref:System.Net.PeerToPeer> API，或Windows communication foundation对等类必须为多一方的通信类别。  
+-   <span data-ttu-id="5ff8b-122">通信。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-122">Communication.</span></span> <span data-ttu-id="5ff8b-123">建立通信后，请使用 <xref:System.Net> API、<xref:System.Net.PeerToPeer> API 或 Windows Communication Foundation 对等通道类来进行多方通信。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-123">When communication is established, use the <xref:System.Net> APIs, the <xref:System.Net.PeerToPeer> API, or the Windows Communication Foundation Peer Channel classes for multiparty communications.</span></span>  
   
- 例如，宿主对等类启动协作会话，并使用 <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> 方法添加远程对等类和一个本地对等类到宿主对等类的交际管理者软件。  三个用户随后将参与它们的私有协作会话。  
+ <span data-ttu-id="5ff8b-124">例如，主机对等机启动协作会话并利用 <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> 方法将远程对等机和其中一个本地对等机添加到主机对等机的联系人管理中。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-124">For example, the host peer starts a collaboration session, and utilizes the <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> method to add a remote peer and one of its local peers to the Contact Manager of the host peer.</span></span>  <span data-ttu-id="5ff8b-125">这三位用户随后便可参与到他们自己的专用协作会话。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-125">The three users will then participate in their own private collaboration session.</span></span>  
   
- 典型的P2P应用程序是:为协作说明采用confidence或whiteboarding， serverless聊天应用程序、interactive广告和联机赌博会话。  
+ <span data-ttu-id="5ff8b-126">典型的 P2P 应用程序包括：用于协作进行笔记或白板记录的电话会议、无服务器的聊天应用程序、交互式播发和联机游戏会话。</span><span class="sxs-lookup"><span data-stu-id="5ff8b-126">Typical P2P applications are: conference calls for collaborative note-taking or whiteboarding, serverless chat applications, interactive advertisements, and online gaming sessions.</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="5ff8b-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5ff8b-127">See Also</span></span>  
  <xref:System.Net.PeerToPeer.Collaboration>
+

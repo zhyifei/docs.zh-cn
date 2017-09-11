@@ -38,42 +38,42 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>如何：在 Visual Basic 中创建文件
-此示例使用 <xref:System.IO.File> 类中的 <xref:System.IO.File.Create%2A> 方法在指定的路径中创建一个空文本文件。  
+# <a name="how-to-create-a-file-in-visual-basic"></a><span data-ttu-id="81605-102">如何：在 Visual Basic 中创建文件</span><span class="sxs-lookup"><span data-stu-id="81605-102">How to: Create a File in Visual Basic</span></span>
+<span data-ttu-id="81605-103">此示例使用 <xref:System.IO.File> 类中的 <xref:System.IO.File.Create%2A> 方法在指定的路径中创建一个空文本文件。</span><span class="sxs-lookup"><span data-stu-id="81605-103">This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
+## <a name="example"></a><span data-ttu-id="81605-104">示例</span><span class="sxs-lookup"><span data-stu-id="81605-104">Example</span></span>  
+ <span data-ttu-id="81605-105">[!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="81605-105">[!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 使用 `file` 变量写入文件。  
+## <a name="compiling-the-code"></a><span data-ttu-id="81605-106">编译代码</span><span class="sxs-lookup"><span data-stu-id="81605-106">Compiling the Code</span></span>  
+ <span data-ttu-id="81605-107">使用 `file` 变量写入文件。</span><span class="sxs-lookup"><span data-stu-id="81605-107">Use the `file` variable to write to the file.</span></span>  
   
-## <a name="robust-programming"></a>可靠编程  
- 如果该文件已存在，则替换它。  
+## <a name="robust-programming"></a><span data-ttu-id="81605-108">可靠编程</span><span class="sxs-lookup"><span data-stu-id="81605-108">Robust Programming</span></span>  
+ <span data-ttu-id="81605-109">如果该文件已存在，则替换它。</span><span class="sxs-lookup"><span data-stu-id="81605-109">If the file already exists, it is replaced.</span></span>  
   
- 以下情况可能会导致异常：  
+ <span data-ttu-id="81605-110">以下情况可能会导致异常：</span><span class="sxs-lookup"><span data-stu-id="81605-110">The following conditions may cause an exception:</span></span>  
   
--   路径名称格式不正确。 例如，它包含非法字符或仅为空白 (<xref:System.ArgumentException>)。  
+-   <span data-ttu-id="81605-111">路径名称格式不正确。</span><span class="sxs-lookup"><span data-stu-id="81605-111">The path name is malformed.</span></span> <span data-ttu-id="81605-112">例如，它包含非法字符或仅为空白 (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="81605-112">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).</span></span>  
   
--   路径是只读的 (<xref:System.IO.IOException>)。  
+-   <span data-ttu-id="81605-113">路径是只读的 (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="81605-113">The path is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   路径名称为 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   <span data-ttu-id="81605-114">路径名称为 `Nothing` (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="81605-114">The path name is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   路径名称过长 (<xref:System.IO.PathTooLongException>)。  
+-   <span data-ttu-id="81605-115">路径名称过长 (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="81605-115">The path name is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   路径无效 (<xref:System.IO.DirectoryNotFoundException>)。  
+-   <span data-ttu-id="81605-116">路径无效 (<xref:System.IO.DirectoryNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="81605-116">The path is invalid (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   路径仅为冒号“:”(<xref:System.NotSupportedException>)。  
+-   <span data-ttu-id="81605-117">路径仅为冒号“:”(<xref:System.NotSupportedException>)。</span><span class="sxs-lookup"><span data-stu-id="81605-117">The path is only a colon ":" (<xref:System.NotSupportedException>).</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 在部分信任的环境中可能引发 <xref:System.Security.SecurityException>。  
+## <a name="net-framework-security"></a><span data-ttu-id="81605-118">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="81605-118">.NET Framework Security</span></span>  
+ <span data-ttu-id="81605-119">在部分信任的环境中可能引发 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="81605-119">A <xref:System.Security.SecurityException> may be thrown in partial-trust environments.</span></span>  
   
- 调用 <xref:System.IO.File.Create%2A> 方法需要 <xref:System.Security.Permissions.FileIOPermission>。  
+ <span data-ttu-id="81605-120">调用 <xref:System.IO.File.Create%2A> 方法需要 <xref:System.Security.Permissions.FileIOPermission>。</span><span class="sxs-lookup"><span data-stu-id="81605-120">The call to the <xref:System.IO.File.Create%2A> method requires <xref:System.Security.Permissions.FileIOPermission>.</span></span>  
   
- 如果用户无权创建文件，将引发 <xref:System.UnauthorizedAccessException>。  
+ <span data-ttu-id="81605-121">如果用户无权创建文件，将引发 <xref:System.UnauthorizedAccessException>。</span><span class="sxs-lookup"><span data-stu-id="81605-121">An <xref:System.UnauthorizedAccessException> is thrown if the user does not have permission to create the file.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.IO>   
- <xref:System.IO.File.Create%2A>   
- [通过部分受信任的代码使用库](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)   
- [代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)
+## <a name="see-also"></a><span data-ttu-id="81605-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="81605-122">See Also</span></span>  
+ <span data-ttu-id="81605-123"><xref:System.IO></span><span class="sxs-lookup"><span data-stu-id="81605-123"><xref:System.IO></span></span>   
+ <span data-ttu-id="81605-124"><xref:System.IO.File.Create%2A></span><span class="sxs-lookup"><span data-stu-id="81605-124"><xref:System.IO.File.Create%2A></span></span>   
+ <span data-ttu-id="81605-125">[通过部分受信任的代码使用库](../../../../framework/misc/using-libraries-from-partially-trusted-code.md) </span><span class="sxs-lookup"><span data-stu-id="81605-125">[Using Libraries from Partially Trusted Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md) </span></span>  
+ [<span data-ttu-id="81605-126">代码访问安全性基础知识</span><span class="sxs-lookup"><span data-stu-id="81605-126">Code Access Security Basics</span></span>](https://msdn.microsoft.com/library/33tceax8)
 

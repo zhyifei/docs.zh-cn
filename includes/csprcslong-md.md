@@ -1,1 +1,1 @@
-Visual C# 2005
+<span data-ttu-id="cb861-101">Visual C# 2005</span><span class="sxs-lookup"><span data-stu-id="cb861-101">Visual C# 2005</span></span>

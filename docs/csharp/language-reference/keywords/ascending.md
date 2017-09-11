@@ -37,16 +37,16 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ascending-c-reference"></a>ascending（C# 参考）
-查询表达式中的 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md) 中使用 `ascending` 上下文关键字指定排序顺序为从小到大。 由于 `ascending` 为默认排序顺序，因此无需加以指定。  
+# <a name="ascending-c-reference"></a><span data-ttu-id="f42fc-102">ascending（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="f42fc-102">ascending (C# Reference)</span></span>
+<span data-ttu-id="f42fc-103">查询表达式中的 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md) 中使用 `ascending` 上下文关键字指定排序顺序为从小到大。</span><span class="sxs-lookup"><span data-stu-id="f42fc-103">The `ascending` contextual keyword is used in the [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md) in query expressions to specify that the sort order is from smallest to largest.</span></span> <span data-ttu-id="f42fc-104">由于 `ascending` 为默认排序顺序，因此无需加以指定。</span><span class="sxs-lookup"><span data-stu-id="f42fc-104">Because `ascending` is the default sort order, you do not have to specify it.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例说明 `ascending` 在 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md)中的用法。  
+## <a name="example"></a><span data-ttu-id="f42fc-105">示例</span><span class="sxs-lookup"><span data-stu-id="f42fc-105">Example</span></span>  
+ <span data-ttu-id="f42fc-106">下面的示例说明 `ascending` 在 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md)中的用法。</span><span class="sxs-lookup"><span data-stu-id="f42fc-106">The following example shows the use of `ascending` in an [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md).</span></span>  
   
- [!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]  
+ <span data-ttu-id="f42fc-107">[!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f42fc-107">[!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [descending](../../../csharp/language-reference/keywords/descending.md)
+## <a name="see-also"></a><span data-ttu-id="f42fc-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f42fc-108">See Also</span></span>  
+ <span data-ttu-id="f42fc-109">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="f42fc-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="f42fc-110">[LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="f42fc-110">[LINQ Query Expressions](../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ [<span data-ttu-id="f42fc-111">descending</span><span class="sxs-lookup"><span data-stu-id="f42fc-111">descending</span></span>](../../../csharp/language-reference/keywords/descending.md)
 

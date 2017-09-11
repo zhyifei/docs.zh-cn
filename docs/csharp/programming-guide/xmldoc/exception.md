@@ -38,33 +38,33 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltexceptiongt-c-programming-guide"></a>&lt;exception&gt;（C# 编程指南）
-## <a name="syntax"></a>语法  
+# <a name="ltexceptiongt-c-programming-guide"></a><span data-ttu-id="7d97b-102">&lt;exception&gt;（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="7d97b-102">&lt;exception&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="7d97b-103">语法</span><span class="sxs-lookup"><span data-stu-id="7d97b-103">Syntax</span></span>  
   
 ```xml  
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>参数  
- cref = " `member`"  
- 对当前编译环境中出现的一个异常的引用。 编译器检查是否存在给定的异常，并将 `member` 转换为输出 XML 中的规范的元素名称。 `member` 必须出现在双引号 (" ") 内。  
+#### <a name="parameters"></a><span data-ttu-id="7d97b-104">参数</span><span class="sxs-lookup"><span data-stu-id="7d97b-104">Parameters</span></span>  
+ <span data-ttu-id="7d97b-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="7d97b-105">cref = " `member`"</span></span>  
+ <span data-ttu-id="7d97b-106">对当前编译环境中出现的一个异常的引用。</span><span class="sxs-lookup"><span data-stu-id="7d97b-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="7d97b-107">编译器检查是否存在给定的异常，并将 `member` 转换为输出 XML 中的规范的元素名称。</span><span class="sxs-lookup"><span data-stu-id="7d97b-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="7d97b-108">`member` 必须出现在双引号 (" ") 内。</span><span class="sxs-lookup"><span data-stu-id="7d97b-108">`member` must appear within double quotation marks (" ").</span></span>  
   
- 有关如何创建对泛型类型的 cref 引用的详细信息，请参阅[\<查看>](../../../csharp/programming-guide/xmldoc/see.md)。  
+ <span data-ttu-id="7d97b-109">有关如何创建对泛型类型的 cref 引用的详细信息，请参阅[\<查看>](../../../csharp/programming-guide/xmldoc/see.md)。</span><span class="sxs-lookup"><span data-stu-id="7d97b-109">For more information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
   
  `description`  
- 异常的说明。  
+ <span data-ttu-id="7d97b-110">异常的说明。</span><span class="sxs-lookup"><span data-stu-id="7d97b-110">A description of the exception.</span></span>  
   
-## <a name="remarks"></a>备注  
- \<exception> 标记让你指定可引发的异常。 此标记可应用于方法、属性、事件和索引器的定义。  
+## <a name="remarks"></a><span data-ttu-id="7d97b-111">备注</span><span class="sxs-lookup"><span data-stu-id="7d97b-111">Remarks</span></span>  
+ <span data-ttu-id="7d97b-112">\<exception> 标记让你指定可引发的异常。</span><span class="sxs-lookup"><span data-stu-id="7d97b-112">The \<exception> tag lets you specify which exceptions can be thrown.</span></span> <span data-ttu-id="7d97b-113">此标记可应用于方法、属性、事件和索引器的定义。</span><span class="sxs-lookup"><span data-stu-id="7d97b-113">This tag can be applied to definitions for methods, properties, events, and indexers.</span></span>  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ <span data-ttu-id="7d97b-114">使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="7d97b-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
- 有关异常处理的详细信息，请参阅[异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)。  
+ <span data-ttu-id="7d97b-115">有关异常处理的详细信息，请参阅[异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)。</span><span class="sxs-lookup"><span data-stu-id="7d97b-115">For more information about exception handling, see [Exceptions and Exception Handling](../../../csharp/programming-guide/exceptions/index.md).</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
+## <a name="example"></a><span data-ttu-id="7d97b-116">示例</span><span class="sxs-lookup"><span data-stu-id="7d97b-116">Example</span></span>  
+ <span data-ttu-id="7d97b-117">[!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="7d97b-117">[!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="7d97b-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7d97b-118">See Also</span></span>  
+ <span data-ttu-id="7d97b-119">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="7d97b-119">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="7d97b-120">建议的文档注释标记</span><span class="sxs-lookup"><span data-stu-id="7d97b-120">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

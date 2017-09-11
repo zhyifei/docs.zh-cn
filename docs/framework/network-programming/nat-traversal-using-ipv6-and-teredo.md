@@ -1,60 +1,65 @@
 ---
-title: "使用 IPv6 和 Teredo 的 NAT 遍历 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "使用 IPv6 和 Teredo 的 NAT 遍历"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d1730e5af0ee3f837f46071992c80e81b118af1e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用 IPv6 和 Teredo 的 NAT 遍历
-提供的网络地址转换\(NAT\)遍历支持的改进来。  这些更改旨在用于IPv6或teredo的使用，但是，同样适用于其他IP隧道技术的它们。  这些增强功能会影响 <xref:System.Net> 和相关命名空间的选件类。  
+# <a name="nat-traversal-using-ipv6-and-teredo"></a><span data-ttu-id="edb2c-102">使用 IPv6 和 Teredo 的 NAT 遍历</span><span class="sxs-lookup"><span data-stu-id="edb2c-102">NAT Traversal using IPv6 and Teredo</span></span>
+<span data-ttu-id="edb2c-103">增强了功能：为网络地址转换 (NAT) 遍历提供支持。</span><span class="sxs-lookup"><span data-stu-id="edb2c-103">Enhancements were made that provide support for Network Address Translation (NAT) traversal.</span></span> <span data-ttu-id="edb2c-104">这些更改旨在用于 IPv6 和 Teredo，但也同样适用于其他 IP 隧道技术。</span><span class="sxs-lookup"><span data-stu-id="edb2c-104">These changes are designed for use with IPv6 and Teredo, but they are also applicable to other IP tunneling technologies.</span></span> <span data-ttu-id="edb2c-105">这些增强功能会影响 <xref:System.Net> 和相关命名空间中的类。</span><span class="sxs-lookup"><span data-stu-id="edb2c-105">These enhancements affect classes in the <xref:System.Net> and related namespaces.</span></span>  
   
- 这些更改会影响计划使用隧道技术的IP的客户端和服务器应用程序。  
+ <span data-ttu-id="edb2c-106">这些更改会影响客户端和计划使用 IP 隧道技术的服务器应用程序。</span><span class="sxs-lookup"><span data-stu-id="edb2c-106">These changes can affect client and server applications that plan to use IP tunneling technologies.</span></span>  
   
- 支持NAT遍历的更改仅可用于应用程序。使用.NET Framework版本4.版。  这些功能不可用在.NET Framework的早期版本。  
+ <span data-ttu-id="edb2c-107">支持 NAT 遍历的更改仅可用于使用 .NET Framework 版本 4 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="edb2c-107">The changes to support NAT traversal are available only for applications using .NET Framework version 4.</span></span> <span data-ttu-id="edb2c-108">这些功能不可用于 .NET Framework 的早期版本。</span><span class="sxs-lookup"><span data-stu-id="edb2c-108">These features are not available on earlier versions of the .NET Framework.</span></span>  
   
-## 概述  
- internet协议版本4 \(IPv4\)长定义一个IPv4地址转换为32位。  因此， IPv4支持大约40亿个IP地址\(2^32\)。  为该计算机和网络计算机的数量在20\+世纪\+90\+年代扩展的Internet， IPv4地址空间的限制变得非常明显。  
+## <a name="overview"></a><span data-ttu-id="edb2c-109">概述</span><span class="sxs-lookup"><span data-stu-id="edb2c-109">Overview</span></span>  
+ <span data-ttu-id="edb2c-110">Internet 协议版本 4 (IPv4) 将 IPv4 地址的长度定义为 32 位。</span><span class="sxs-lookup"><span data-stu-id="edb2c-110">The Internet Protocol version 4 (IPv4) defined an IPv4 address as 32 bits long.</span></span> <span data-ttu-id="edb2c-111">因此，IPv4 支持大约 40 亿个唯一 IP 地址（2^32）。</span><span class="sxs-lookup"><span data-stu-id="edb2c-111">As a result, IPv4 supports approximately 4 billion unique IP addresses (2^32).</span></span> <span data-ttu-id="edb2c-112">20 世纪 90 年代，随着 Internet 上计算机和网络设备数量的增加，IPv4 地址空间的限制变得明显起来。</span><span class="sxs-lookup"><span data-stu-id="edb2c-112">As the number of computers and network devices on the Internet expanded in the 1990s, the limits of the IPv4 address space became apparent.</span></span>  
   
- 使用的几种方法之一来扩展生存期IPv4是部署NAT允许一个公共IP地址表示大量的私有IP地址\(专用Intranet\)。  在NAT计算机后的私有IP地址共享一个公共IPv4地址。  NAT计算机可以是私有的硬件设备\(如成本较低的无线访问点和路由器\)，或者运行服务的计算机提供NAT。  计算机或服务该公共IP地址的转换IP网络数据包在公共Internet和Intranet私有之间。  
+ <span data-ttu-id="edb2c-113">有几种技术可延长 IPv4 的生存期，其中一种是通过部署 NAT，使单个唯一公共 IP 地址可以表示大量专用 IP 地址（专用 Intranet）。</span><span class="sxs-lookup"><span data-stu-id="edb2c-113">One of several techniques used to extend the lifetime of IPv4 has been to deploy NAT to allow a single unique public IP address to represent a large number of private IP addresses (private Intranet).</span></span> <span data-ttu-id="edb2c-114">NAT 设备后的多个专用 IP 地址共享一个公共 IPv4 地址。</span><span class="sxs-lookup"><span data-stu-id="edb2c-114">The private IP addresses behind the NAT device share the single public IPv4 address.</span></span> <span data-ttu-id="edb2c-115">NAT 设备可能是一个专用的硬件设备（例如，成本较低的无线接入点和路由器），或者是运行设备以便提供 NAT 的计算机。</span><span class="sxs-lookup"><span data-stu-id="edb2c-115">The NAT device may be a dedicated hardware device (an inexpensive Wireless Access Point and router, for example) or a computer running a service to provide NAT.</span></span> <span data-ttu-id="edb2c-116">这种公共 IP 地址的设备或服务转换公共 Internet 和专用 Intranet 之间的 IP 网络数据包。</span><span class="sxs-lookup"><span data-stu-id="edb2c-116">A device or service for this public IP address translates IP network packets between the public Internet and the private Intranet.</span></span>  
   
- 此模式用于将请求发送到其他IP地址运行在私有Intranet的客户端应用程序非常适合\(通常服务器\)在Internet。  ，当响应在何处返回它知道发送响应时， NAT计算机或服务器可能会保留映射客户端请求。  但是，此模式使若要提供服务，侦听数据包，并响应运行在私有Intranet中的应用程序的问题。NAT计算机之后。  这是对应用程序的特殊情况。  
+ <span data-ttu-id="edb2c-117">此方案非常适用于在专用 Intranet 上运行的客户端应用程序，该应用程序将请求发送到 Internet 上的其他 IP 地址（通常为服务器）。</span><span class="sxs-lookup"><span data-stu-id="edb2c-117">This scheme works well for client applications running on the private Intranet that send requests to other IP addresses (usually servers) on the Internet.</span></span> <span data-ttu-id="edb2c-118">NAT 设备或服务器可以保留客户端请求的映射，因此响应返回后，它知道要将响应发送到什么位置。</span><span class="sxs-lookup"><span data-stu-id="edb2c-118">The NAT device or server can keep a mapping of client requests so when a response is returned it knows where to send the response.</span></span> <span data-ttu-id="edb2c-119">但是，对于在 NAT 设备后的专用 Intranet 上运行且需要提供服务、侦听数据包和做出响应的应用程序，这一方案也带来了一些问题。</span><span class="sxs-lookup"><span data-stu-id="edb2c-119">But this scheme poses problems for applications running in the private Intranet behind the NAT device that want to provide services, listen for packets, and respond.</span></span> <span data-ttu-id="edb2c-120">对于对等应用程序而言，尤为如此。</span><span class="sxs-lookup"><span data-stu-id="edb2c-120">This is particularly the case for peer-to-peer applications.</span></span>  
   
- IPv6协议长定义一个IPv4地址转换为128位。  因此， IPv6支持非常大型IP地址空间3.2 x 10^38唯一地址\(2^128\)。  此范围地址空间，为每个设备可能会连接到将给定的Internet一个地址。  但是，有问题。  许多the world仍只使用IPv4。  具体而言，许多现有路由器和小公司、组织和家庭使用的无线访问点不支持IPv6。  对于这些客户服务的某些Internet服务提供商不支持还未配置为IPv6支持。  
+ <span data-ttu-id="edb2c-121">IPv6 协议将 IPv4 地址的长度定义为 128 位。</span><span class="sxs-lookup"><span data-stu-id="edb2c-121">The IPv6 protocol defined an IPv4 address as 128 bits long.</span></span> <span data-ttu-id="edb2c-122">因此，IPv6 支持具有 3.2 x 10^38 个唯一地址（2^128）的超大 IP 地址空间。</span><span class="sxs-lookup"><span data-stu-id="edb2c-122">As a result, IPv6 supports very a large IP address space of 3.2 x 10^38 unique addresses (2^128).</span></span> <span data-ttu-id="edb2c-123">凭借这一大小的地址空间，便能为每台连接到 Internet 的设备提供一个唯一的地址。</span><span class="sxs-lookup"><span data-stu-id="edb2c-123">With an address space of this size, it is possible for every device connected to the Internet to be given a unique address.</span></span> <span data-ttu-id="edb2c-124">但是还存在一些问题。</span><span class="sxs-lookup"><span data-stu-id="edb2c-124">But there are problems.</span></span> <span data-ttu-id="edb2c-125">世界上许多地方仍然只使用 IPv4。</span><span class="sxs-lookup"><span data-stu-id="edb2c-125">Much of the world is still using only IPv4.</span></span> <span data-ttu-id="edb2c-126">特别是一些小型公司、组织和家庭使用的现有路由器和无线接入点，它们不支持 IPv6。</span><span class="sxs-lookup"><span data-stu-id="edb2c-126">In particular, many of the existing routers and wireless access points used by small companies, organizations, and households do not support IPv6.</span></span> <span data-ttu-id="edb2c-127">此外，一些为客户提供服务的 Internet 服务提供商也不支持 IPv6 或尚未配置对 IPv6 的支持。</span><span class="sxs-lookup"><span data-stu-id="edb2c-127">Also some Internet service providers that serve these customers either do not support or have not configured support for IPv6.</span></span>  
   
- 若干IPv6转换技术进行开发隧道IPv6在IPv4数据包的地址。  这些方法包括6to4， ISATAP，并且，对于unicast IPv6通信地址分配和宿主能够为宿主自动隧道路由凿船虫隧道，当IPv6宿主必须穿程IP4网络到达其他IPv6网络时。  IPv6发送数据包隧道作为IPv4数据包。  的若干隧道方法是一NAT设备允许 IPv6 地址的NAT遍历使用。  
+ <span data-ttu-id="edb2c-128">已开发多个 IPv6 转换技术，用于在 IPv4 数据包中挖掘 IPv6 隧道地址。</span><span class="sxs-lookup"><span data-stu-id="edb2c-128">Several IPv6 transition technologies have been developed to tunnel IPv6 addresses in an IPv4 packet.</span></span> <span data-ttu-id="edb2c-129">这些技术包括 6to4、ISATAP 和 Teredo 隧道，在 IPv6 主机必须遍历 IP4 网络来连接其他 IPv6 网络时，为单播 IPv6 流量提供地址分配和主机到主机的自动隧道。</span><span class="sxs-lookup"><span data-stu-id="edb2c-129">These technologies include 6to4, ISATAP, and Teredo tunnels that provide address assignment and host-to-host automatic tunneling for unicast IPv6 traffic when IPv6 hosts must traverse IP4 networks to reach other IPv6 networks.</span></span> <span data-ttu-id="edb2c-130">IPv6 数据包将隧道作为 IPv4 数据包发送。</span><span class="sxs-lookup"><span data-stu-id="edb2c-130">IPv6 packets are sent tunneled as IPv4 packets.</span></span> <span data-ttu-id="edb2c-131">正在使用多个隧道技术通过 NAT 设备实现 IPv6 地址的 NAT 遍历。</span><span class="sxs-lookup"><span data-stu-id="edb2c-131">Several tunneling techniques are being used that allow NAT traversal for IPv6 addresses through a NAT device.</span></span>  
   
- 凿船虫是对IPv4网络组合IPv6连接的某IPv6转换技术。  凿船虫在internet工程特殊工作组4380文档发布的RFC \(IETF\)。  Windows XP SP2和更高版本提供可提供以大小为2001:0的公共 IPv6 地址:的虚拟凿船虫适配器支持: \/32.  此 IPv6 地址用于侦听来自Internet的传入连接，并且可以提供给IPv6希望连接到侦听的服务启用客户端。  使用其IPv6凿船虫地址，，，因为应用程序可以连接到它将从担心释放一应用程序如何解决在一NAT计算机后的计算机。  
+ <span data-ttu-id="edb2c-132">Teredo 是 IPv6 转换技术之一，使 IPv6 连接到 IPv4 网络。</span><span class="sxs-lookup"><span data-stu-id="edb2c-132">Teredo is one of the IPv6 transition technologies which brings IPv6 connectivity to IPv4 networks.</span></span> <span data-ttu-id="edb2c-133">Internet 工程任务组发布的 RFC 4380 中记录了这一技术。</span><span class="sxs-lookup"><span data-stu-id="edb2c-133">Teredo is documented in RFC 4380 published by the Internet Engineering Task Force (IETF).</span></span> <span data-ttu-id="edb2c-134">Windows XP SP2 及更高版本为能够在 2001:0::/32 范围内提供公共 IPv6 地址的虚拟 Teredo 适配器提供支持。</span><span class="sxs-lookup"><span data-stu-id="edb2c-134">Windows XP SP2 and later provide support for a virtual Teredo adapter which can provide a public IPv6 address in the range 2001:0::/32.</span></span> <span data-ttu-id="edb2c-135">此 IPv6 地址可用于侦听从 Internet 传入的连接，并且可以提供给支持 IPv6、需要连接到侦听服务的客户端。</span><span class="sxs-lookup"><span data-stu-id="edb2c-135">This IPv6 address can be used to listen for incoming connections from the Internet and can be provided to IPv6 enabled clients that wish to connect to the listening service.</span></span> <span data-ttu-id="edb2c-136">应用程序可以只使用计算机的 IPv6 Teredo 地址连接计算机，因此，无需再担心应用程序如何为 NAT 设备下的计算机寻址。</span><span class="sxs-lookup"><span data-stu-id="edb2c-136">This frees an application from worrying about how to address a computer behind a NAT device, since the application can just connect to it using its IPv6 Teredo address.</span></span>  
   
-## 支持NAT遍历或teredo的改进  
- 使用IPv6或teredo，提高添加到 <xref:System.Net>、 <xref:System.Net.NetworkInformation>和 <xref:System.Net.Sockets> 命名空间支持的NAT遍历。  
+## <a name="enhancements-to-support-nat-traversal-and-teredo"></a><span data-ttu-id="edb2c-137">支持 NAT 遍历和 Teredo 的增强功能</span><span class="sxs-lookup"><span data-stu-id="edb2c-137">Enhancements to Support NAT Traversal and Teredo</span></span>  
+ <span data-ttu-id="edb2c-138">向 <xref:System.Net>、<xref:System.Net.NetworkInformation>和 <xref:System.Net.Sockets> 命名空间添加了增强功能，这些增强功能支持使用 IPv6 和 Teredo 进行 NAT 遍历。</span><span class="sxs-lookup"><span data-stu-id="edb2c-138">Enhancements are added to the <xref:System.Net>, <xref:System.Net.NetworkInformation>, and <xref:System.Net.Sockets> namespaces for supporting NAT traversal using IPv6 and Teredo.</span></span>  
   
- 几个方法添加到 <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> 选件类获取unicast IP地址的主机上。  <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> 方法启动异步请求检索本地计算机的稳定unicast IP地址表。  <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> 方法结束挂起的异步请求检索本地计算机的稳定unicast IP地址表。  <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> 方法是一个同步请求检索本地计算机的稳定unicast IP地址表，等待，直到地址表如果需要，稳定。  
+ <span data-ttu-id="edb2c-139">向 <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> 类添加了几种方法，用于获取主机上的单播 IP 地址列表。</span><span class="sxs-lookup"><span data-stu-id="edb2c-139">Several methods are added to the <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> class to get the list of unicast IP addresses on the host.</span></span> <span data-ttu-id="edb2c-140"><xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> 方法发起一个异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。</span><span class="sxs-lookup"><span data-stu-id="edb2c-140">The <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> method begins an asynchronous request to retrieve the stable unicast IP address table on the local computer.</span></span> <span data-ttu-id="edb2c-141"><xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> 方法结束挂起的异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。</span><span class="sxs-lookup"><span data-stu-id="edb2c-141">The <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> method ends a pending asynchronous request to retrieve the stable unicast IP address table on the local computer.</span></span> <span data-ttu-id="edb2c-142"><xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> 方法是一来检索本地计算机上稳定的单播 IP 地址的异步请求，它根据需要等待，直到地址表稳定。</span><span class="sxs-lookup"><span data-stu-id="edb2c-142">The <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> method is a synchronous request to retrieve the stable unicast IP address table on the local computer, waiting until the address table stabilizes if necessary.</span></span>  
   
- <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> 属性可用于确定 <xref:System.Net.IPAddress> 是否IPv6凿船虫地址。  
+ <span data-ttu-id="edb2c-143"><xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> 属性可以用于确定 <xref:System.Net.IPAddress> 是否为 IPv6 Teredo 地址。</span><span class="sxs-lookup"><span data-stu-id="edb2c-143">The <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> property can be used to determine if an <xref:System.Net.IPAddress> is an IPv6 Teredo address.</span></span>  
   
- 使用这些新 <xref:System.Net.NetworkInformation.IPGlobalProperties> 与 <xref:System.Net.IPAddress.IsIPv6Teredo%2A> 属性的组合选件类方法允许应用程序轻松查找凿船虫地址。  ，则将此信息到远程应用程序，应用程序通常只需要知道本地凿船虫地址。  例如，某位应用程序可能发送其所有 IPv6 地址到然后可以转发到其他对等类启用直接通信的做媒服务器。  
+ <span data-ttu-id="edb2c-144">联合使用这些新 <xref:System.Net.NetworkInformation.IPGlobalProperties> 类方法和 <xref:System.Net.IPAddress.IsIPv6Teredo%2A> 属性可让应用程序轻松查找 Teredo 地址。</span><span class="sxs-lookup"><span data-stu-id="edb2c-144">Using these new <xref:System.Net.NetworkInformation.IPGlobalProperties> class methods in combination with the <xref:System.Net.IPAddress.IsIPv6Teredo%2A> property allows an application to easily find the Teredo address.</span></span> <span data-ttu-id="edb2c-145">如果应用程序将本地 Teredo 地址传达给远程应用程序，则它只需知道该信息即可。</span><span class="sxs-lookup"><span data-stu-id="edb2c-145">An application normally only needs to know the local Teredo address if it is communicating this information to remote applications.</span></span> <span data-ttu-id="edb2c-146">例如，一个对等应用程序可能会将其所有 IPv6 地址发送给匹配服务器，该服务器再将这些地址转发给其他对等机，从而实现直接通信。</span><span class="sxs-lookup"><span data-stu-id="edb2c-146">For example, a peer-to-peer application might send all of its IPv6 addresses to a matchmaking server which can then forward them to others peers to enable direct communication.</span></span>  
   
- 应用程序在 <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> 通常应将其侦听的服务侦听而不是在本地凿船虫地址。  因此，如果远程客户端或对等类有一个直接IPv6路由到侦听的服务主机，客户端或同级可以直接连接使用IPv6而不必使用凿船虫隧道数据包。  
+ <span data-ttu-id="edb2c-147">应用程序通常应将其侦听服务设置为在 <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> 上侦听，而不是在本地 Teredo 地址上侦听。</span><span class="sxs-lookup"><span data-stu-id="edb2c-147">An application should normally set its listening service to listen on <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> rather than on the local Teredo address.</span></span> <span data-ttu-id="edb2c-148">因此，如果远程客户端或对等机具有侦听服务主机的直接 IPv6 路由，该客户端或对等机可以使用 IPv6（而无需使用 Teredo）直接连接到隧道数据包。</span><span class="sxs-lookup"><span data-stu-id="edb2c-148">So if a remote client or peer has a direct IPv6 route to the host of the listening service, the client or peer can connect directly using IPv6 and not have to use Teredo to tunnel packets.</span></span>  
   
- 对于TCP应用程序， <xref:System.Net.Sockets.TcpListener?displayProperty=fullName> 选件类具有启用一个 <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> 的方法NAT遍历。  对于UDP应用程序， <xref:System.Net.Sockets.UdpClient?displayProperty=fullName> 选件类具有启用一个 <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> 的方法NAT遍历。  
+ <span data-ttu-id="edb2c-149">对于 TCP 应用程序，<xref:System.Net.Sockets.TcpListener?displayProperty=fullName> 类具有 <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> 方法，该方法可启用 NAT 遍历。</span><span class="sxs-lookup"><span data-stu-id="edb2c-149">For TCP applications, the <xref:System.Net.Sockets.TcpListener?displayProperty=fullName> class has an <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> method to enable NAT traversal.</span></span> <span data-ttu-id="edb2c-150">对于 UDP 应用程序，<xref:System.Net.Sockets.UdpClient?displayProperty=fullName> 类具有 <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> 方法，该方法可启用 NAT 遍历。</span><span class="sxs-lookup"><span data-stu-id="edb2c-150">For UDP applications, the <xref:System.Net.Sockets.UdpClient?displayProperty=fullName> class has an <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> method to enable NAT traversal.</span></span>  
   
- 对于使用 <xref:System.Net.Sockets.Socket?displayProperty=fullName> ，并且相关选件类、 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 和 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 方法可用于以 <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 套接字选项查询的应用程序，启用或禁用NAT遍历。  
+ <span data-ttu-id="edb2c-151">对于使用 <xref:System.Net.Sockets.Socket?displayProperty=fullName> 和相关类的应用程序，可将 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 和 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 方法与 <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=fullName> 套接字选项一起使用，用于查询、启用或禁用 NAT 遍历。</span><span class="sxs-lookup"><span data-stu-id="edb2c-151">For applications that use the <xref:System.Net.Sockets.Socket?displayProperty=fullName> and related classes, the <xref:System.Net.Sockets.Socket.GetSocketOption%2A> and <xref:System.Net.Sockets.Socket.SetSocketOption%2A> methods can be used with the <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=fullName> socket option to query, enable, or disable NAT traversal.</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="edb2c-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="edb2c-152">See Also</span></span>  
  <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName>   
  <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=fullName>   
  <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=fullName>   
@@ -63,3 +68,4 @@ caps.handback.revision: 6
  <xref:System.Net.Sockets.Socket.SetIPProtectionLevel%2A?displayProperty=fullName>   
  <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A?displayProperty=fullName>   
  <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A?displayProperty=fullName>
+

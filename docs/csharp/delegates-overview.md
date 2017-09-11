@@ -18,41 +18,41 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="introduction-to-delegates"></a>委托简介
+# <a name="introduction-to-delegates"></a><span data-ttu-id="965c6-104">委托简介</span><span class="sxs-lookup"><span data-stu-id="965c6-104">Introduction to Delegates</span></span>
 
-[上一篇](delegates-events.md)
+[<span data-ttu-id="965c6-105">上一篇</span><span class="sxs-lookup"><span data-stu-id="965c6-105">Previous</span></span>](delegates-events.md)
 
-在 .NET 中委托提供*后期绑定*机制。 后期绑定意味着调用方在你所创建的算法中至少提供一个方法来实现算法的一部分。
+<span data-ttu-id="965c6-106">在 .NET 中委托提供*后期绑定*机制。</span><span class="sxs-lookup"><span data-stu-id="965c6-106">Delegates provide a *late binding* mechanism in .NET.</span></span> <span data-ttu-id="965c6-107">后期绑定意味着调用方在你所创建的算法中至少提供一个方法来实现算法的一部分。</span><span class="sxs-lookup"><span data-stu-id="965c6-107">Late Binding means that you create an algorithm where the caller also supplies at least one method that implements part of the algorithm.</span></span>
 
-例如，在天文应用程序中对恒星列表进行排序。
-你可以选择按照恒星与地球的距离、恒星的大小或者可以感知的亮度来对它们进行排序。
+<span data-ttu-id="965c6-108">例如，在天文应用程序中对恒星列表进行排序。</span><span class="sxs-lookup"><span data-stu-id="965c6-108">For example, consider sorting a list of stars in an astronomy application.</span></span>
+<span data-ttu-id="965c6-109">你可以选择按照恒星与地球的距离、恒星的大小或者可以感知的亮度来对它们进行排序。</span><span class="sxs-lookup"><span data-stu-id="965c6-109">You may choose to sort those stars by their distance from the earth, or the magnitude of the star, or their perceived brightness.</span></span>
 
-在所有这些情况下，Sort() 方法本质上执行的是同一操作：基于某种比较方法对列表中的项目进行排序。 对于每个排序顺序，比较两种恒星的代码是不同的。
+<span data-ttu-id="965c6-110">在所有这些情况下，Sort() 方法本质上执行的是同一操作：基于某种比较方法对列表中的项目进行排序。</span><span class="sxs-lookup"><span data-stu-id="965c6-110">In all those cases, the Sort() method does essentially the same thing: arranges the items in the list based on some comparison.</span></span> <span data-ttu-id="965c6-111">对于每个排序顺序，比较两种恒星的代码是不同的。</span><span class="sxs-lookup"><span data-stu-id="965c6-111">The code that compares two stars is different for each of the sort orderings.</span></span>
 
-这些类型的解决方案已在软件中使用了半个世纪。
-C# 语言的委托概念提供一流的语言支持和以此概念为中心的类型安全性。
+<span data-ttu-id="965c6-112">这些类型的解决方案已在软件中使用了半个世纪。</span><span class="sxs-lookup"><span data-stu-id="965c6-112">These kinds of solutions have been used in software for half a century.</span></span>
+<span data-ttu-id="965c6-113">C# 语言的委托概念提供一流的语言支持和以此概念为中心的类型安全性。</span><span class="sxs-lookup"><span data-stu-id="965c6-113">The C# language delegate concept provides first class language support, and type safety around the concept.</span></span>
 
-正如你稍后将在此系列文章中看到的，为与此类似的算法编写的 C# 代码是类型安全的，它利用语言和编译器来确保类型与参数匹配，并返回类型。
+<span data-ttu-id="965c6-114">正如你稍后将在此系列文章中看到的，为与此类似的算法编写的 C# 代码是类型安全的，它利用语言和编译器来确保类型与参数匹配，并返回类型。</span><span class="sxs-lookup"><span data-stu-id="965c6-114">As you'll see later in this series, the C# code you write for algorithms like this is type safe, and leverages the language and the compiler to ensure that the types match for arguments and return types.</span></span>
 
-## <a name="language-design-goals-for-delegates"></a>委托的语言设计目标
+## <a name="language-design-goals-for-delegates"></a><span data-ttu-id="965c6-115">委托的语言设计目标</span><span class="sxs-lookup"><span data-stu-id="965c6-115">Language Design Goals for Delegates</span></span>
 
-语言设计人员针对最终成为委托的功能列举了一些目标。
+<span data-ttu-id="965c6-116">语言设计人员针对最终成为委托的功能列举了一些目标。</span><span class="sxs-lookup"><span data-stu-id="965c6-116">The language designers enumerated several goals for the feature that eventually became delegates.</span></span>
 
-团队想要拥有可用于任何后期绑定算法的公共语言构造。 这促使开发人员学习一个概念，并在许多不同的软件问题中使用这同一概念。
+<span data-ttu-id="965c6-117">团队想要拥有可用于任何后期绑定算法的公共语言构造。</span><span class="sxs-lookup"><span data-stu-id="965c6-117">The team wanted a common language construct that could be used for any late binding algorithms.</span></span> <span data-ttu-id="965c6-118">这促使开发人员学习一个概念，并在许多不同的软件问题中使用这同一概念。</span><span class="sxs-lookup"><span data-stu-id="965c6-118">That enables developers to learn one concept, and use that same concept across many different software problems.</span></span>
 
-其次，团队想要支持单播和多播方法调用。 多播委托是将多种方法连在一起的委托。 稍后你可以在[本系列文章](delegate-class.md)中查看示例。 
+<span data-ttu-id="965c6-119">其次，团队想要支持单播和多播方法调用。</span><span class="sxs-lookup"><span data-stu-id="965c6-119">Second, the team wanted to support both single and multi-cast method calls.</span></span> <span data-ttu-id="965c6-120">多播委托是将多种方法连在一起的委托。</span><span class="sxs-lookup"><span data-stu-id="965c6-120">(Multicast delegates are delegates where multiple methods have been chained together.</span></span> <span data-ttu-id="965c6-121">稍后你可以在[本系列文章](delegate-class.md)中查看示例。</span><span class="sxs-lookup"><span data-stu-id="965c6-121">You'll see examples [later in this series](delegate-class.md).</span></span> 
 
-团队想要委托在所有 C# 构造中支持开发人员所预期的相同的类型安全性。 
+<span data-ttu-id="965c6-122">团队想要委托在所有 C# 构造中支持开发人员所预期的相同的类型安全性。</span><span class="sxs-lookup"><span data-stu-id="965c6-122">The team wanted delegates to support the same type safety that developers expect from all C# constructs.</span></span> 
 
-最后，团队认识到事件模式是一个特定模式，委托或任何后期绑定算法在其中非常有用。 团队想要确保委托的代码可以为 .NET 事件模式提供基础。
+<span data-ttu-id="965c6-123">最后，团队认识到事件模式是一个特定模式，委托或任何后期绑定算法在其中非常有用。</span><span class="sxs-lookup"><span data-stu-id="965c6-123">Finally, the team recognized that an event pattern is one specific pattern where delegates, or any late binding algorithm) is very useful.</span></span> <span data-ttu-id="965c6-124">团队想要确保委托的代码可以为 .NET 事件模式提供基础。</span><span class="sxs-lookup"><span data-stu-id="965c6-124">The team wanted to ensure that the code for delegates could provide the basis for the .NET event pattern.</span></span>
 
-所有这些工作的结果是 C# 和 .NET 中的委托和事件支持。 本部分的剩余文章将介绍语言功能、库支持和使用委托时使用的通用语法结构。
+<span data-ttu-id="965c6-125">所有这些工作的结果是 C# 和 .NET 中的委托和事件支持。</span><span class="sxs-lookup"><span data-stu-id="965c6-125">The result of all that work was the delegate and event support in C# and .NET.</span></span> <span data-ttu-id="965c6-126">本部分的剩余文章将介绍语言功能、库支持和使用委托时使用的通用语法结构。</span><span class="sxs-lookup"><span data-stu-id="965c6-126">The remaining articles in this section will cover the language features, the library support, and the common idioms that are used when you work with delegates.</span></span>
 
-你将了解 `delegate` 关键字和它所生成的代码。 你将了解 `System.Delegate` 类中的功能，以及如何使用这些功能。 你将了解如何创建类型安全的委托，以及如何创建可以通过委托调用的方法。 你还将了解如何使用 Lambda 表达式来处理委托和事件。 你将看到作为 LINQ 的构建基块的委托的用途。 你将了解委托如何成为 .NET 事件模式的基础，以及委托和事件之间的区别。
+<span data-ttu-id="965c6-127">你将了解 `delegate` 关键字和它所生成的代码。</span><span class="sxs-lookup"><span data-stu-id="965c6-127">You'll learn about the `delegate` keyword and what code it generates.</span></span> <span data-ttu-id="965c6-128">你将了解 `System.Delegate` 类中的功能，以及如何使用这些功能。</span><span class="sxs-lookup"><span data-stu-id="965c6-128">You'll learn about the features in the `System.Delegate` class, and how those features are used.</span></span> <span data-ttu-id="965c6-129">你将了解如何创建类型安全的委托，以及如何创建可以通过委托调用的方法。</span><span class="sxs-lookup"><span data-stu-id="965c6-129">You'll learn how to create type safe delegates, and how to create methods that can be invoked through delegates.</span></span> <span data-ttu-id="965c6-130">你还将了解如何使用 Lambda 表达式来处理委托和事件。</span><span class="sxs-lookup"><span data-stu-id="965c6-130">You'll also learn how to work with delegates and events by using Lambda expressions.</span></span> <span data-ttu-id="965c6-131">你将看到作为 LINQ 的构建基块的委托的用途。</span><span class="sxs-lookup"><span data-stu-id="965c6-131">You'll see where delegates become one of the building blocks for LINQ.</span></span> <span data-ttu-id="965c6-132">你将了解委托如何成为 .NET 事件模式的基础，以及委托和事件之间的区别。</span><span class="sxs-lookup"><span data-stu-id="965c6-132">You'll learn how delegates are the basis for the .NET event pattern, and how they are different.</span></span>
 
-总之，你将看到委托如何成为 .NET 编程和使用框架 API 的重要组成部分。
+<span data-ttu-id="965c6-133">总之，你将看到委托如何成为 .NET 编程和使用框架 API 的重要组成部分。</span><span class="sxs-lookup"><span data-stu-id="965c6-133">Overall, you'll see how delegates are an integral part of programming in .NET and working with the framework APIs.</span></span>
 
-让我们开始吧。
+<span data-ttu-id="965c6-134">让我们开始吧。</span><span class="sxs-lookup"><span data-stu-id="965c6-134">Let's get started.</span></span>
 
-[下一篇](delegate-class.md)
+[<span data-ttu-id="965c6-135">下一篇</span><span class="sxs-lookup"><span data-stu-id="965c6-135">Next</span></span>](delegate-class.md)
 

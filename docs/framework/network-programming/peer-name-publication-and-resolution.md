@@ -1,58 +1,68 @@
 ---
-title: "对等名称发布和解析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "对等名称发布和解析"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43f7a2220725bc251e476312654a070502171983
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 对等名称发布和解析
-## 发布对等类名称  
- 若要发布一个新PNRP ID，对等类执行以下操作:  
+# <a name="peer-name-publication-and-resolution"></a><span data-ttu-id="f2d6a-102">对等名称发布和解析</span><span class="sxs-lookup"><span data-stu-id="f2d6a-102">Peer Name Publication and Resolution</span></span>
+## <a name="publishing-a-peer-name"></a><span data-ttu-id="f2d6a-103">发布对等名称</span><span class="sxs-lookup"><span data-stu-id="f2d6a-103">Publishing a Peer Name</span></span>  
+ <span data-ttu-id="f2d6a-104">若要发布新 PNRP ID，对等机需执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="f2d6a-104">To publish a new PNRP ID, a peer performs the following:</span></span>  
   
--   发送PNRP发布信息。注册了最低级别的PNRP ID缓存\)的其缓存空间量\(对等类为其缓存。  
+-   <span data-ttu-id="f2d6a-105">将 PNRP 发布消息发送到缓存邻居（在缓存的最低级别中注册了 PNRP ID 的对等机）来播种缓存。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-105">Sends PNRP publication messages to its cache neighbors (the peers that have registered PNRP IDs in the lowest level of the cache) to seed their caches.</span></span>  
   
--   选择不是其相邻元素中的朵云的任意节点并将其发送PNRP名称解析请求自己的P2P ID.  发生的终点确定处理种子缓存在云的任意节点与发布对等类的PNRP ID。  
+-   <span data-ttu-id="f2d6a-106">在云中选择不是其邻居的随机节点，并为其 P2P ID 发送 PNRP 名称解析请求。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-106">Chooses random nodes in the cloud that are not its neighbors and sends them PNRP name resolution requests for its own P2P ID.</span></span> <span data-ttu-id="f2d6a-107">生成的终结点确定进程使用发布对等机的 PNRP ID 对云中随机节点的缓存进行种子化。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-107">The resulting endpoint determination process seeds the caches of random nodes in the cloud with the PNRP ID of the publishing peer.</span></span>  
   
- ，如果只有解决其他P2P ID， PNRP版本2节点不发布PNRP ID。  HKEY\_LOCAL\_MACHINE \\ SOFTWARE \\ Microsoft \\ Windows NT \\ CurrentVersion \\ PeerNet \\ PNRP \\ IPV6全局\\ SearchOnly\=1注册表值\(REG\_DWORD类型\)用于名称释放指定对等类只有使用PNRP用于名称转换，从未。  此注册表值可以通过组策略还配置。  
+-  
   
-## 解决对等类名称  
- 找到其他同级PNRP网络或云是过程由两个阶段组成:  
+ <span data-ttu-id="f2d6a-108">若 PNRP 版本 2 节点只解析其他 P2P ID，则不发布 PNRP ID。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-108">PNRP version 2 nodes do not publish PNRP IDs if they are only resolving other P2P IDs.</span></span> <span data-ttu-id="f2d6a-109">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 注册表值 （REG_DWORD 类型）指定对等机仅使用 PNRP 进行名称解析，绝不进行名称发布。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-109">The HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 registry value (REG_DWORD type) specifies that peers only use PNRP for name resolution, never for name publication.</span></span> <span data-ttu-id="f2d6a-110">也可通过组策略配置此注册表值。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-110">This registry value can also be configured through Group Policy.</span></span>  
   
-1.  终结点确定  
+## <a name="resolving-a-peer-name"></a><span data-ttu-id="f2d6a-111">解析对等名称</span><span class="sxs-lookup"><span data-stu-id="f2d6a-111">Resolving a Peer Name</span></span>  
+ <span data-ttu-id="f2d6a-112">在 PNRP 网络或云中查找其他对等是一个包含两个阶段的过程：</span><span class="sxs-lookup"><span data-stu-id="f2d6a-112">Locating other peers in a PNRP network or cloud is a process comprised of two phases:</span></span>  
   
-2.  PNRP ID解析  
+1.  <span data-ttu-id="f2d6a-113">终结点确定</span><span class="sxs-lookup"><span data-stu-id="f2d6a-113">Endpoint Determination</span></span>  
   
- 在终结点确定阶段，尝试解析对等类某项服务的PNRP ID在另一台计算机上确定该远程对等类 IPv6 地址。  远程对等类要发布的一个，或者与关联，计算机的PNRP ID或服务。  
+2.  <span data-ttu-id="f2d6a-114">PNRP ID 解析</span><span class="sxs-lookup"><span data-stu-id="f2d6a-114">PNRP ID Resolution</span></span>  
   
- 在确认之后该远程终结点注册到PNRP云， PNRP ID解析阶段的请求的对等类发送一个请求到所需服务的PNRP ID的该对等类终结点。  该终结点发送确认请求的对等类可以用于以后的通信要使用的服务、注释和4 KB的PNRP ID的答复附加信息。  例如，因此，如果所需的终点是赌博服务器，则附加对等类名称记录数据可能包含有关游戏的信息，效果的秩和玩家的当前项数。  
+ <span data-ttu-id="f2d6a-115">在终结点确定阶段，尝试解析另一台计算机上的服务 PNRP ID 的对等机确定该远程对等机的 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-115">In the endpoint determination phase, a peer that is attempting to resolve the PNRP ID of a service on another computer determines the IPv6 address of that remote peer.</span></span>  <span data-ttu-id="f2d6a-116">远程对等机是发布计算机或服务的 PNRP ID 或与之相关联的对等机。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-116">The remote peer is the one that published, or is associated with, the PNRP ID of the computer or service.</span></span>  
   
- 在终结点确定阶段， PNRP使用一个迭代的说明发布PNRP ID，执行解析的节点到与节点连接负责连续更接近目标PNRP ID.的环境的节点处理  
+ <span data-ttu-id="f2d6a-117">确认远程终结点已注册到 PNRP 云中后，PNRP ID 解析阶段中的请求对等机向该对等机终结点发送请求以获取所需服务的 PNRP ID 。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-117">After confirming that the remote endpoint has been registered into the PNRP cloud, the requesting peer in the PNRP ID resolution phase sends a request to that peer endpoint for the PNRP ID of the desired service.</span></span> <span data-ttu-id="f2d6a-118">终结点发送确认该服务的 PNRP ID 回复、注释，以及最多 4 KB 的附加信息，请求对等机可将该信息用于将来的通信。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-118">The endpoint sends a reply confirming the PNRP ID of the service, a comment, and up to 4 kilobytes of additional information that the requesting peer can use for future communication.</span></span> <span data-ttu-id="f2d6a-119">例如，如果所需终结点是游戏服务器，附加对等名称记录数据可能包含有关游戏、游戏级别和当前玩家数量的信息。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-119">For example, if the desired endpoint is a gaming server, the additional peer name record data can contain information about the game, the level of play, and the current number of players.</span></span>  
   
- 若要执行名称将PNRP，对等类在其与目标PNRP ID.项的自己的缓存检查项  如果找到，对等类发送PNRP请求消息。对等类并等待响应。  如果找不到PNRP ID的项，对等类发送PNRP请求信息到对应于项都有一个PNRP ID一个与目标PNRP ID.对等类  接收PNRP请求消息的节点检查自己的缓存并执行以下操作:  
+ <span data-ttu-id="f2d6a-120">在终结点确定阶段中，PNRP 使用迭代过程来查找发布 PNRP ID 的节点，其中执行解析的节点负责联系更接近目标 PNRP ID 的节点。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-120">In the endpoint determination phase, PNRP uses an iterative process for locating the node that published the PNRP ID, in which the node performing the resolution is responsible for contacting nodes that are successively closer to the target PNRP ID.</span></span>  
   
--   如果找到PNRP ID，请求的终点对等类答案直接请求的对等类。  
+ <span data-ttu-id="f2d6a-121">若要在 PNRP 中执行名称解析，对等机需检查其缓存中的条目，查找与目标 PNRP ID 匹配的条目。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-121">To perform name resolution in PNRP, the peer examines the entries in its own cache for an entry that matches the target PNRP ID.</span></span> <span data-ttu-id="f2d6a-122">找到后，对等机向对等机发送 PNRP 请求消息，并等待响应。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-122">If found, the peer sends a PNRP Request message to the peer and waits for a response.</span></span> <span data-ttu-id="f2d6a-123">如果未找到该 PNRP ID 的条目，对等机会向具有 PNRP ID（最接近目标 PNRP ID）的条目相对应的对等机发送 PNRP 请求消息。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-123">If an entry for the PNRP ID is not found, the peer sends a PNRP Request message to the peer that corresponds to the entry that has a PNRP ID that most closely matches the target PNRP ID.</span></span> <span data-ttu-id="f2d6a-124">接收 PNRP 请求消息的节点检查其缓存，并执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="f2d6a-124">The node that receives the PNRP Request message examines its own cache and does the following:</span></span>  
   
--   如果找不到PNRP ID，并且一PNRP ID在缓存更接近目标PNRP ID的环境，请求的对等类发送到包含使用PNRP ID表示项对等类的 IPv6 地址的请求的对等类的响应最匹配目标PNRP ID.  使用在响应的IP地址，请求的节点发送另一PNRP请求信息为 IPv6 地址响应或检查其缓存。  
+-   <span data-ttu-id="f2d6a-125">找到该 PNRP ID 后，所请求的终结点对等机直接回复请求对等机。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-125">If the PNRP ID is found, the requested endpoint peer replies directly to the requesting peer.</span></span>  
   
--   如果找不到PNRP ID，并且不PNRP ID在更接近目标PNRP ID的环境的其缓存，请求的对等类发送请求的对等类指示此情况的响应。  请求的对等类然后选择最NeXT关闭的PNRP ID.  
+-   <span data-ttu-id="f2d6a-126">如果未找到该 PNRP ID 且缓存中的 PNRP ID 更接近目标 PNRP ID，则所请求的对等机向请求对等机发送响应，其中包含表示具有更接近目标 PNRP ID 的 PNRP ID 条目的对等机的 IPv6 地址。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-126">If the PNRP ID is not found and a PNRP ID in the cache is closer to the target PNRP ID, the requested peer sends a response to the requesting peer containing the IPv6 address of the peer that represents the entry with a PNRP ID that more closely matches the target PNRP ID.</span></span> <span data-ttu-id="f2d6a-127">在响应中使用 IP 地址，请求节点向 IPv6 地址发送另一个 PNRP 请求消息，以响应或检查其缓存。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-127">Using the IP address in the response, the requesting node sends another PNRP Request message to the IPv6 address to respond or examine its cache.</span></span>  
   
- 请求的对等类继续此过程的后续迭代，最终找到注册PNRP ID.的节点  
+-   <span data-ttu-id="f2d6a-128">如果未找到该 PNRP ID 且缓存中没有更接近目标 PNRP ID 的 PNRP ID，则所请求的对等机向请求对等机发送表明此情况的响应。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-128">If the PNRP ID is not found and there is no PNRP ID in its cache that is closer to the target PNRP ID, the requested peer sends the requesting peer a response that indicates this condition.</span></span> <span data-ttu-id="f2d6a-129">然后请求对等机选择下一个最接近的 PNRP ID。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-129">The requesting peer then chooses the next-closest PNRP ID.</span></span>  
   
- 在 <xref:System.Net.PeerToPeer> 命名空间中，包含终结点和PNRP云或网格它们进行通信的 <xref:System.Net.PeerToPeer.PeerName> 记录之间的多对多关系。  当有重复或时使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 选件类，过时项或多个节点具有相同的对等类名称， PNRP节点可获取当前信息。  <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用一个对等类名称简化了透视图到一个对等类对多对等类名称记录与同一一对等类为与云。  这与使用相关表执行的查询连接。  在成功完成，解析器对象返回指定的对等类名称的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection> 。  例如，对等类名称在集合中的所有对等类名称日志将发生，按照云。  这些是支持数据可能由基于PNRP的应用程序请求对等类名称的实例。  
+-  
   
-## 请参阅  
+ <span data-ttu-id="f2d6a-130">请求对等机通过连续迭代继续此过程，最终查找已注册该 PNRP ID 的节点。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-130">The requesting peer continues this process with successive iterations, eventually locating the node that registered the PNRP ID.</span></span>  
+  
+ <span data-ttu-id="f2d6a-131">在 <xref:System.Net.PeerToPeer> 命名空间中，<xref:System.Net.PeerToPeer.PeerName> 记录之间存在多对多的关系，这些关系包含终结点和 PNRP 云或用于通信的对等网格。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-131">Within the <xref:System.Net.PeerToPeer> namespace, there is a many-to-many relationship between the <xref:System.Net.PeerToPeer.PeerName> records that contain endpoints and PNRP clouds or meshes in which they communicate.</span></span> <span data-ttu-id="f2d6a-132">有重复或过时条目，或具有相同对等名称的多个节点时，PNRP 节点可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 类获取当前信息。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-132">When there are duplicate or stale entries, or multiple nodes with the same peer name, PNRP nodes can obtain current information using the <xref:System.Net.PeerToPeer.PeerNameResolver> class.</span></span> <span data-ttu-id="f2d6a-133"><xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用单一对等名称，将透视简化为一对多对等名称记录和相同的一对多对等机和云的名称记录。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-133">The <xref:System.Net.PeerToPeer.PeerNameResolver> methods use a single peer name to simplify the perspective to one peer-to-many peer name records and the same one peer to many clouds.</span></span> <span data-ttu-id="f2d6a-134">这类似于使用关系表联接执行的查询。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-134">This is similar to a query performed using a relational-table join.</span></span> <span data-ttu-id="f2d6a-135">成功完成后，解析程序对象返回指定对等名称的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-135">Upon successful completion, the Resolver object returns a <xref:System.Net.PeerToPeer.PeerNameRecordCollection> for the specified peer name.</span></span>  <span data-ttu-id="f2d6a-136">例如，集合中所有对等名称记录中将会出现由云排序的对等名称。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-136">For example, a peer name would occur in all the peer name records in the collection, ordered by cloud.</span></span> <span data-ttu-id="f2d6a-137">这些是对等名称实例，基于 PNRP 的应用程序可能请求这些支持数据。</span><span class="sxs-lookup"><span data-stu-id="f2d6a-137">These are the instances of the peer name whose supporting data may be requested by a PNRP-based application.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f2d6a-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f2d6a-138">See Also</span></span>  
  <xref:System.Net.PeerToPeer>
+

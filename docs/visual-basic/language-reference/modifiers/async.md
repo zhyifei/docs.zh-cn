@@ -29,21 +29,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa15daee8f3b6ddcc137356896a20cf82e0cc1d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 009b4ab71c185aec0cf54bb2360dcd897cdf7850
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="async-visual-basic"></a>Async (Visual Basic)
-`Async`修饰符指示该方法或[lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是异步的它会修改。 此类方法称为*async 方法*。  
+# <a name="async-visual-basic"></a><span data-ttu-id="4fd22-102">Async (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4fd22-102">Async (Visual Basic)</span></span>
+<span data-ttu-id="4fd22-103">`Async`修饰符指示该方法或[lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是异步的它会修改。</span><span class="sxs-lookup"><span data-stu-id="4fd22-103">The `Async` modifier indicates that the method or [lambda expression](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) that it modifies is asynchronous.</span></span> <span data-ttu-id="4fd22-104">此类方法称为*async 方法*。</span><span class="sxs-lookup"><span data-stu-id="4fd22-104">Such methods are referred to as *async methods*.</span></span>  
   
- 异步方法提供了一种简便方式来完成可能需要长时间运行的工作，而不必阻止调用方的线程。 异步方法的调用方可以继续工作，而无需等待 async 方法完成。  
+ <span data-ttu-id="4fd22-105">异步方法提供了一种简便方式来完成可能需要长时间运行的工作，而不必阻止调用方的线程。</span><span class="sxs-lookup"><span data-stu-id="4fd22-105">An async method provides a convenient way to do potentially long-running work without blocking the caller's thread.</span></span> <span data-ttu-id="4fd22-106">异步方法的调用方可以继续工作，而无需等待 async 方法完成。</span><span class="sxs-lookup"><span data-stu-id="4fd22-106">The caller of an async method can resume its work without waiting for the async method to finish.</span></span>  
   
 > [!NOTE]
->  `Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。 有关异步编程的介绍，请参阅[使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)。  
+>  <span data-ttu-id="4fd22-107">`Async` 和 `Await` 关键字是在 Visual Studio 2012 中引入的。</span><span class="sxs-lookup"><span data-stu-id="4fd22-107">The `Async` and `Await` keywords were introduced in Visual Studio 2012.</span></span> <span data-ttu-id="4fd22-108">有关异步编程的介绍，请参阅[使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4fd22-108">For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
   
- 下面的示例显示一个异步方法的结构。 按照约定，异步方法名的结尾为“Async”。  
+ <span data-ttu-id="4fd22-109">下面的示例显示一个异步方法的结构。</span><span class="sxs-lookup"><span data-stu-id="4fd22-109">The following example shows the structure of an async method.</span></span> <span data-ttu-id="4fd22-110">按照约定，异步方法名的结尾为“Async”。</span><span class="sxs-lookup"><span data-stu-id="4fd22-110">By convention, async method names end in "Async."</span></span>  
   
 ```vb  
   
@@ -64,21 +65,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- 通常情况下，一种方法修改`Async`关键字至少包含一个[Await](../../../visual-basic/language-reference/modifiers/async.md)表达式或语句。 方法同步运行，直至到达第一个 `Await`，此时暂停，直到等待的任务完成。 同时，控制权返回给方法的调用方。 如果方法不包含 `Await` 表达式或语句，则不会像同步方法一样挂起并执行。 编译器警告将通知您的不包含任何异步方法`Await`因为这种情况下可能表示存在错误。 有关详细信息，请参阅[编译器错误](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)。  
+ <span data-ttu-id="4fd22-111">通常情况下，一种方法修改`Async`关键字至少包含一个[Await](../../../visual-basic/language-reference/modifiers/async.md)表达式或语句。</span><span class="sxs-lookup"><span data-stu-id="4fd22-111">Typically, a method modified by the `Async` keyword contains at least one [Await](../../../visual-basic/language-reference/modifiers/async.md) expression or statement.</span></span> <span data-ttu-id="4fd22-112">方法同步运行，直至到达第一个 `Await`，此时暂停，直到等待的任务完成。</span><span class="sxs-lookup"><span data-stu-id="4fd22-112">The method runs synchronously until it reaches the first `Await`, at which point it suspends until the awaited task completes.</span></span> <span data-ttu-id="4fd22-113">同时，控制权返回给方法的调用方。</span><span class="sxs-lookup"><span data-stu-id="4fd22-113">In the meantime, control is returned to the caller of the method.</span></span> <span data-ttu-id="4fd22-114">如果方法不包含 `Await` 表达式或语句，则不会像同步方法一样挂起并执行。</span><span class="sxs-lookup"><span data-stu-id="4fd22-114">If the method doesn’t contain an `Await` expression or statement, the method isn’t suspended and executes as a synchronous method does.</span></span> <span data-ttu-id="4fd22-115">编译器警告将通知您的不包含任何异步方法`Await`因为这种情况下可能表示存在错误。</span><span class="sxs-lookup"><span data-stu-id="4fd22-115">A compiler warning alerts you to any async methods that don't contain `Await` because that situation might indicate an error.</span></span> <span data-ttu-id="4fd22-116">有关详细信息，请参阅[编译器错误](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)。</span><span class="sxs-lookup"><span data-stu-id="4fd22-116">For more information, see the [compiler error](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).</span></span>  
   
- `Async` 关键字是一个非保留的关键字。 在修饰方法或 lambda 表达式时，它是关键字。 在所有其他上下文中，都会将其解释为标识符。  
+ <span data-ttu-id="4fd22-117">`Async` 关键字是一个非保留的关键字。</span><span class="sxs-lookup"><span data-stu-id="4fd22-117">The `Async` keyword is an unreserved keyword.</span></span> <span data-ttu-id="4fd22-118">在修饰方法或 lambda 表达式时，它是关键字。</span><span class="sxs-lookup"><span data-stu-id="4fd22-118">It is a keyword when it modifies a method or a lambda expression.</span></span> <span data-ttu-id="4fd22-119">在所有其他上下文中，都会将其解释为标识符。</span><span class="sxs-lookup"><span data-stu-id="4fd22-119">In all other contexts, it is interpreted as an identifier.</span></span>  
   
-## <a name="return-types"></a>返回类型  
- 异步方法是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)的过程中，或[函数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)具有返回类型为<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601></xref:System.Threading.Tasks.Task>过程 该方法不能声明任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)参数。  
+## <a name="return-types"></a><span data-ttu-id="4fd22-120">返回类型</span><span class="sxs-lookup"><span data-stu-id="4fd22-120">Return Types</span></span>  
+ <span data-ttu-id="4fd22-121">异步方法是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)的过程中，或[函数](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)具有返回类型为<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601></xref:System.Threading.Tasks.Task>过程</span><span class="sxs-lookup"><span data-stu-id="4fd22-121">An async method is either a [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedure, or a [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedure that has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="4fd22-122">该方法不能声明任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)参数。</span><span class="sxs-lookup"><span data-stu-id="4fd22-122">The method cannot declare any [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parameters.</span></span>  
   
- 您指定`Task(Of TResult)`异步方法的返回类型如果[返回](../../../visual-basic/language-reference/statements/return-statement.md)的方法的语句具有 TResult 类型的操作数。 如果当方法完成时未返回有意义的值，则应使用 `Task`。 即对方法的调用返回 `Task`，但 `Task` 完成时，等待 `Await` 的任何 `Task` 语句不会产生结果值。  
+ <span data-ttu-id="4fd22-123">您指定`Task(Of TResult)`异步方法的返回类型如果[返回](../../../visual-basic/language-reference/statements/return-statement.md)的方法的语句具有 TResult 类型的操作数。</span><span class="sxs-lookup"><span data-stu-id="4fd22-123">You specify `Task(Of TResult)` for the return type of an async method if the [Return](../../../visual-basic/language-reference/statements/return-statement.md) statement of the method has an operand of type TResult.</span></span> <span data-ttu-id="4fd22-124">如果当方法完成时未返回有意义的值，则应使用 `Task`。</span><span class="sxs-lookup"><span data-stu-id="4fd22-124">You use `Task` if no meaningful value is returned when the method is completed.</span></span> <span data-ttu-id="4fd22-125">即对方法的调用返回 `Task`，但 `Task` 完成时，等待 `Await` 的任何 `Task` 语句不会产生结果值。</span><span class="sxs-lookup"><span data-stu-id="4fd22-125">That is, a call to the method returns a `Task`, but when the `Task` is completed, any `Await` statement that's awaiting the `Task` doesn’t produce a result value.</span></span>  
   
- 异步子例程主要用于定义需要 `Sub` 程序的事件处理程序。 异步子程序的调用方不能等待它，并且无法捕获该方法引发的异常。  
+ <span data-ttu-id="4fd22-126">异步子例程主要用于定义需要 `Sub` 程序的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="4fd22-126">Async subroutines are used primarily to define event handlers where a `Sub` procedure is required.</span></span> <span data-ttu-id="4fd22-127">异步子程序的调用方不能等待它，并且无法捕获该方法引发的异常。</span><span class="sxs-lookup"><span data-stu-id="4fd22-127">The caller of an async subroutine can't await it and can't catch exceptions that the method throws.</span></span>  
   
- 有关详细信息和示例，请参阅[异步返回类型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
+ <span data-ttu-id="4fd22-128">有关详细信息和示例，请参阅[异步返回类型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。</span><span class="sxs-lookup"><span data-stu-id="4fd22-128">For more information and examples, see [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例显示一个异步事件处理程序、一个异步 lambda 表达式和一个异步方法。 有关使用这些元素的完整示例，请参阅[演练︰ 访问通过使用 Async 和 Await Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以下载演练代码从[开发人员代码示例](http://go.microsoft.com/fwlink/?LinkId=255191)。  
+## <a name="example"></a><span data-ttu-id="4fd22-129">示例</span><span class="sxs-lookup"><span data-stu-id="4fd22-129">Example</span></span>  
+ <span data-ttu-id="4fd22-130">下面的示例显示一个异步事件处理程序、一个异步 lambda 表达式和一个异步方法。</span><span class="sxs-lookup"><span data-stu-id="4fd22-130">The following examples show an async event handler, an async lambda expression, and an async method.</span></span> <span data-ttu-id="4fd22-131">有关使用这些元素的完整示例，请参阅[演练︰ 访问通过使用 Async 和 Await Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。</span><span class="sxs-lookup"><span data-stu-id="4fd22-131">For a full example that uses these elements, see [Walkthrough: Accessing the Web by Using Async and Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="4fd22-132">您可以下载演练代码从[开发人员代码示例](http://go.microsoft.com/fwlink/?LinkId=255191)。</span><span class="sxs-lookup"><span data-stu-id="4fd22-132">You can download the walkthrough code from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191).</span></span>  
   
 ```vb  
   
@@ -127,8 +128,8 @@ End Function
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute></xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)   
- [异步编程使用 Async 和 Await](../../../visual-basic/programming-guide/concepts/async/index.md)   
- [演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a><span data-ttu-id="4fd22-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4fd22-133">See Also</span></span>  
+ <span data-ttu-id="4fd22-134"><xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute></xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute></span><span class="sxs-lookup"><span data-stu-id="4fd22-134"><xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute></span></span>   
+<span data-ttu-id="4fd22-135"> [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md) </span><span class="sxs-lookup"><span data-stu-id="4fd22-135"> [Await Operator](../../../visual-basic/language-reference/operators/await-operator.md) </span></span>  
+<span data-ttu-id="4fd22-136"> [异步编程使用 Async 和 Await](../../../visual-basic/programming-guide/concepts/async/index.md) </span><span class="sxs-lookup"><span data-stu-id="4fd22-136"> [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md) </span></span>  
+<span data-ttu-id="4fd22-137"> [演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)</span><span class="sxs-lookup"><span data-stu-id="4fd22-137"> [Walkthrough: Accessing the Web by Using Async and Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)</span></span>

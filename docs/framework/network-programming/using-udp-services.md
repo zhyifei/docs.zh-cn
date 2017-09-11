@@ -1,52 +1,57 @@
 ---
-title: "使用 UDP 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "协议，UDP"
-  - "网络资源，UDP"
-  - "从 Internet 请求数据，UDP"
-  - "UDP"
-  - "接收数据，UDP"
-  - "Internet，UDP"
-  - "将消息广播到多个地址"
-  - "数据请求，UDP"
-  - "UdpClient 类，关于 UdpClient 类"
-  - "发送数据，UDP"
-  - "应用程序协议，UDP"
+title: "使用 UDP 服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- protocols, UDP
+- network resources, UDP
+- requesting data from Internet, UDP
+- UDP
+- receiving data, UDP
+- Internet, UDP
+- broadcasting messages to multiple addresses
+- data requests, UDP
+- UdpClient class, about UdpClient class
+- sending data, UDP
+- application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2986feda76b035e3651712609364b4194378a64c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用 UDP 服务
-使用UDP， <xref:System.Net.Sockets.UdpClient> 选件类与web服务通信。  使用UDP， <xref:System.Net.Sockets.UdpClient> 的属性和方法类将创建请求和接收的数据 <xref:System.Net.Sockets.Socket> 详细信息。  
+# <a name="using-udp-services"></a><span data-ttu-id="37c21-102">使用 UDP 服务</span><span class="sxs-lookup"><span data-stu-id="37c21-102">Using UDP Services</span></span>
+<span data-ttu-id="37c21-103"><xref:System.Net.Sockets.UdpClient> 类使用 UDP与网络服务通信。</span><span class="sxs-lookup"><span data-stu-id="37c21-103">The <xref:System.Net.Sockets.UdpClient> class communicates with network services using UDP.</span></span> <span data-ttu-id="37c21-104"><xref:System.Net.Sockets.UdpClient> 类的属性和方法概要说明了使用 UDP 创建 <xref:System.Net.Sockets.Socket> 以请求和接收数据的详情。</span><span class="sxs-lookup"><span data-stu-id="37c21-104">The properties and methods of the <xref:System.Net.Sockets.UdpClient> class abstract the details of creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using UDP.</span></span>  
   
- 用户数据协议\(UDP\)是使一种最佳工作提供数据对远程主机的简单协议。  但是，在中，因为UDP协议\(ftp\)是未连接的协议， UDP数据进行发送给远程终结点不能保证到达，也不是它们确保达到其发送的同一序列。  使用UDP应用程序必须准备处理缺失，副本并不按顺序运行数据。  
+ <span data-ttu-id="37c21-105">用户数据报协议 (UDP) 是一种简单协议，非常适合用于将数据传递到远程主机。</span><span class="sxs-lookup"><span data-stu-id="37c21-105">User Datagram Protocol (UDP) is a simple protocol that makes a best effort to deliver data to a remote host.</span></span> <span data-ttu-id="37c21-106">但由于 UDP 协议是一种无连接协议，因此发送到远程终结点的 UDP 数据报不一定可到达，也无法保证其能以发送的相同顺序到达。</span><span class="sxs-lookup"><span data-stu-id="37c21-106">However, because the UDP protocol is a connectionless protocol, UDP datagrams sent to the remote endpoint are not guaranteed to arrive, nor are they guaranteed to arrive in the same sequence in which they are sent.</span></span> <span data-ttu-id="37c21-107">使用 UDP 的应用程序必须准备好处理丢失的、重复的和乱序的数据报。</span><span class="sxs-lookup"><span data-stu-id="37c21-107">Applications that use UDP must be prepared to handle missing, duplicate, and out-of-sequence datagrams.</span></span>  
   
- 使用UDP，若要将数据发送运行，必须知道网络设备的网络地址承载需要和UDP端口号服务使用通信的服务。  internet指定号码适当\(Iana\)定义常用的服务的端口号\(请参见www.iana.org\/assignments\/port\-numbers\)。  services未在Iana列表可以具有在1,024到65,535范围内的端口号。  
+ <span data-ttu-id="37c21-108">要使用 UDP 发送数据报，必须知道承载所需服务的网络设备的网络地址以及该服务用来通信的 UDP 端口号。</span><span class="sxs-lookup"><span data-stu-id="37c21-108">To send a datagram using UDP, you must know the network address of the network device hosting the service you need and the UDP port number that the service uses to communicate.</span></span> <span data-ttu-id="37c21-109">Internet 编号分配机构 (IANA) 定义公共服务的端口号（请参阅 www.iana.org/assignments/port-numbers）。</span><span class="sxs-lookup"><span data-stu-id="37c21-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="37c21-110">不在 IANA 列表上的服务可使用 1,024 到 65,535 范围内的端口号。</span><span class="sxs-lookup"><span data-stu-id="37c21-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
   
- 特定网络地址用于支持UDP在基于IP的网络的广播的消息。  下面的讨论使用在Internet例如使用的IP 4版地址族。  
+ <span data-ttu-id="37c21-111">特殊网络地址用于支持基于 IP 的网络上的 UDP 广播消息。</span><span class="sxs-lookup"><span data-stu-id="37c21-111">Special network addresses are used to support UDP broadcast messages on IP-based networks.</span></span> <span data-ttu-id="37c21-112">下面的讨论以 Internet 上使用的 IP 版本 4 地址系列作为示例。</span><span class="sxs-lookup"><span data-stu-id="37c21-112">The following discussion uses the IP version 4 address family used on the Internet as an example.</span></span>  
   
- IP地址版本4使用32位指定网络地址。  对于使用255.255.255.0 netmask的选件类C地址，这些位分为四个八位字节。  在小数点表示，四个八位字节构成熟悉虚线四核表示形式，例如192.168.100.2。  前两个八位字节\(192.168在此示例中\)以形成网络号码，第三个八位字节\(100\)定义子网和\(2\)是宿主标识符的最终八位字节。  
+ <span data-ttu-id="37c21-113">IP 版本 4 地址使用 32 位指定网络地址。</span><span class="sxs-lookup"><span data-stu-id="37c21-113">IP version 4 addresses use 32 bits to specify a network address.</span></span> <span data-ttu-id="37c21-114">对于使用 255.255.255.0 网络掩码的 C 类地址，这些数位被分为四个八进制数。</span><span class="sxs-lookup"><span data-stu-id="37c21-114">For class C addresses using a netmask of 255.255.255.0, these bits are separated into four octets.</span></span> <span data-ttu-id="37c21-115">当以十进制数表示时，这四个八进制数构成我们熟悉的以点分隔的四部分表示法，如 192.168.100.2。</span><span class="sxs-lookup"><span data-stu-id="37c21-115">When expressed in decimal, the four octets form the familiar dotted-quad notation, such as 192.168.100.2.</span></span> <span data-ttu-id="37c21-116">前两个八进制数（此示例中的 192.168）构成网络号码，第三个八进制数 (100) 定义子网，最后一个八进制数 (2) 则是主机标识符。</span><span class="sxs-lookup"><span data-stu-id="37c21-116">The first two octets (192.168 in this example) form the network number, the third octet (100) defines the subnet, and the final octet (2) is the host identifier.</span></span>  
   
- 设置IP地址的所有位到一个或255.255.255.255，窗体有限广播地址。  发送UDP数据进行到此地址消息到本地网络段的所有虚拟机。  由于路由器从未转发" help " \(发送到该地址，在网络段的仅宿主接收广播的消息。  
+ <span data-ttu-id="37c21-117">将 IP 地址的所有数位均设置为同一个（即 255.255.255.255），可构成有限的广播地址。</span><span class="sxs-lookup"><span data-stu-id="37c21-117">Setting all the bits of an IP address to one, or 255.255.255.255, forms the limited broadcast address.</span></span> <span data-ttu-id="37c21-118">将 UDP 数据报发送到此地址会将消息传递到本地网络段上的任何主机。</span><span class="sxs-lookup"><span data-stu-id="37c21-118">Sending a UDP datagram to this address delivers the message to any host on the local network segment.</span></span> <span data-ttu-id="37c21-119">由于路由器不会转发发送到此地址的消息，因此只有网络段上的主机会接收到广播消息。</span><span class="sxs-lookup"><span data-stu-id="37c21-119">Because routers never forward messages sent to this address, only hosts on the network segment receive the broadcast message.</span></span>  
   
- broadcasts可以处理到网络的特定部分通过将宿主标识符的所有位。  例如，发送的广播到IP地址确定的网络上的任何宿主从开始192.168.1，请使用该地址192.168.1.255。  
+ <span data-ttu-id="37c21-120">通过设置主机标识符的所有数位，可以将广播定向到网络的特定部分。</span><span class="sxs-lookup"><span data-stu-id="37c21-120">Broadcasts can be directed to specific portions of a network by setting all bits of the host identifier.</span></span> <span data-ttu-id="37c21-121">例如，若要将广播发送到以 192.168.1 开头的 IP 地址标识的网络上的所有主机，请使用地址 192.168.1.255。</span><span class="sxs-lookup"><span data-stu-id="37c21-121">For example, to send a broadcast to all hosts on the network identified by IP addresses starting with 192.168.1, use the address 192.168.1.255.</span></span>  
   
- 下面的代码示例使用 <xref:System.Net.Sockets.UdpClient> 侦听UDP数据进行发送到在端口11,000上处理的广播地址192.168.1.255。  客户端收到消息字符串和消息写入到控制台。  
+ <span data-ttu-id="37c21-122">下面的代码示例使用 <xref:System.Net.Sockets.UdpClient> 侦听发送到端口 11,000 上的定向广播地址 192.168.1.255 的 UDP 数据报。</span><span class="sxs-lookup"><span data-stu-id="37c21-122">The following code example uses a <xref:System.Net.Sockets.UdpClient> to listen for UDP datagrams sent to the directed broadcast address 192.168.1.255 on port 11,000.</span></span> <span data-ttu-id="37c21-123">客户端将接收消息字符串并将消息写入控制台。</span><span class="sxs-lookup"><span data-stu-id="37c21-123">The client receives a message string and writes the message to the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -134,7 +139,7 @@ public class UDPListener
 }  
 ```  
   
- 使用端口11,000，下面的代码示例使用 <xref:System.Net.Sockets.UdpClient> 发送UDP数据进行到进程中的广播地址， 192.168.1.255。  客户端发送在命令行上指定的消息字符串。  
+ <span data-ttu-id="37c21-124">下面的代码示例使用 <xref:System.Net.Sockets.UdpClient> 将 UDP 数据报用端口 11,000 发送到定向广播地址 192.168.1.255。</span><span class="sxs-lookup"><span data-stu-id="37c21-124">The following code example uses a <xref:System.Net.Sockets.UdpClient> to send UDP datagrams to the directed broadcast address 192.168.1.255, using port 11,000.</span></span> <span data-ttu-id="37c21-125">客户端将发送在命令行上指定的消息字符串。</span><span class="sxs-lookup"><span data-stu-id="37c21-125">The client sends the message string specified on the command line.</span></span>  
   
 ```vb  
 Imports System  
@@ -181,7 +186,8 @@ class Program
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="37c21-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="37c21-126">See Also</span></span>  
  <xref:System.Net.Sockets.UdpClient>   
  <xref:System.Net.IPAddress>   
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+ 
+

@@ -21,30 +21,30 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>向 XML 树添加元素、属性和节点 (C#)
-可以向现有的 XML 树中添加内容（包括元素、属性、注释、处理指令、文本和 CDATA）。  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a><span data-ttu-id="93b5e-102">向 XML 树添加元素、属性和节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="93b5e-102">Adding Elements, Attributes, and Nodes to an XML Tree (C#)</span></span>
+<span data-ttu-id="93b5e-103">可以向现有的 XML 树中添加内容（包括元素、属性、注释、处理指令、文本和 CDATA）。</span><span class="sxs-lookup"><span data-stu-id="93b5e-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
   
-## <a name="methods-for-adding-content"></a>添加内容的方法  
- 下面的方法将子内容添加到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 中：  
+## <a name="methods-for-adding-content"></a><span data-ttu-id="93b5e-104">添加内容的方法</span><span class="sxs-lookup"><span data-stu-id="93b5e-104">Methods for Adding Content</span></span>  
+ <span data-ttu-id="93b5e-105">下面的方法将子内容添加到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 中：</span><span class="sxs-lookup"><span data-stu-id="93b5e-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|方法|描述|  
+|<span data-ttu-id="93b5e-106">方法</span><span class="sxs-lookup"><span data-stu-id="93b5e-106">Method</span></span>|<span data-ttu-id="93b5e-107">描述</span><span class="sxs-lookup"><span data-stu-id="93b5e-107">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|在 <xref:System.Xml.Linq.XContainer> 的子内容的末尾添加内容。|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|在 <xref:System.Xml.Linq.XContainer> 的子内容的开头添加内容。|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="93b5e-108">在 <xref:System.Xml.Linq.XContainer> 的子内容的末尾添加内容。</span><span class="sxs-lookup"><span data-stu-id="93b5e-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="93b5e-109">在 <xref:System.Xml.Linq.XContainer> 的子内容的开头添加内容。</span><span class="sxs-lookup"><span data-stu-id="93b5e-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
   
- 下面的方法将内容添加为 <xref:System.Xml.Linq.XNode> 的同级节点。 向其中添加同级内容的最常见的节点是 <xref:System.Xml.Linq.XElement>，不过你也可以将有效的同级内容添加到其他类型的节点，例如 <xref:System.Xml.Linq.XText> 或 <xref:System.Xml.Linq.XComment>。  
+ <span data-ttu-id="93b5e-110">下面的方法将内容添加为 <xref:System.Xml.Linq.XNode> 的同级节点。</span><span class="sxs-lookup"><span data-stu-id="93b5e-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="93b5e-111">向其中添加同级内容的最常见的节点是 <xref:System.Xml.Linq.XElement>，不过你也可以将有效的同级内容添加到其他类型的节点，例如 <xref:System.Xml.Linq.XText> 或 <xref:System.Xml.Linq.XComment>。</span><span class="sxs-lookup"><span data-stu-id="93b5e-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
   
-|方法|描述|  
+|<span data-ttu-id="93b5e-112">方法</span><span class="sxs-lookup"><span data-stu-id="93b5e-112">Method</span></span>|<span data-ttu-id="93b5e-113">描述</span><span class="sxs-lookup"><span data-stu-id="93b5e-113">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|在 <xref:System.Xml.Linq.XNode> 后面添加内容。|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|在 <xref:System.Xml.Linq.XNode> 前面添加内容。|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="93b5e-114">在 <xref:System.Xml.Linq.XNode> 后面添加内容。</span><span class="sxs-lookup"><span data-stu-id="93b5e-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="93b5e-115">在 <xref:System.Xml.Linq.XNode> 前面添加内容。</span><span class="sxs-lookup"><span data-stu-id="93b5e-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="93b5e-116">示例</span><span class="sxs-lookup"><span data-stu-id="93b5e-116">Example</span></span>  
   
-### <a name="description"></a>描述  
- 下面的示例创建两个 XML 树，然后修改其中一个树。  
+### <a name="description"></a><span data-ttu-id="93b5e-117">描述</span><span class="sxs-lookup"><span data-stu-id="93b5e-117">Description</span></span>  
+ <span data-ttu-id="93b5e-118">下面的示例创建两个 XML 树，然后修改其中一个树。</span><span class="sxs-lookup"><span data-stu-id="93b5e-118">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="93b5e-119">代码</span><span class="sxs-lookup"><span data-stu-id="93b5e-119">Code</span></span>  
   
 ```csharp  
 XElement srcTree = new XElement("Root",   
@@ -73,8 +73,8 @@ xmlTree.Add(srcTree.Element("Child9"));
 Console.WriteLine(xmlTree);  
 ```  
   
-### <a name="comments"></a>注释  
- 此代码生成以下输出：  
+### <a name="comments"></a><span data-ttu-id="93b5e-120">注释</span><span class="sxs-lookup"><span data-stu-id="93b5e-120">Comments</span></span>  
+ <span data-ttu-id="93b5e-121">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="93b5e-121">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -89,6 +89,6 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="93b5e-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="93b5e-122">See Also</span></span>  
+ [<span data-ttu-id="93b5e-123">修改 XML 树 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="93b5e-123">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
 

@@ -37,26 +37,26 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
-`#pragma warning` 可以启用或禁用特定警告。  
+# <a name="pragma-warning-c-reference"></a><span data-ttu-id="d3679-102">#pragma warning（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="d3679-102">#pragma warning (C# Reference)</span></span>
+<span data-ttu-id="d3679-103">`#pragma warning` 可以启用或禁用特定警告。</span><span class="sxs-lookup"><span data-stu-id="d3679-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="d3679-104">语法</span><span class="sxs-lookup"><span data-stu-id="d3679-104">Syntax</span></span>  
   
 ```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="d3679-105">参数</span><span class="sxs-lookup"><span data-stu-id="d3679-105">Parameters</span></span>  
  `warning-list`  
- 以逗号分隔的警告编号的列表。 “CS”前缀是可选的。  
+ <span data-ttu-id="d3679-106">以逗号分隔的警告编号的列表。</span><span class="sxs-lookup"><span data-stu-id="d3679-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="d3679-107">“CS”前缀是可选的。</span><span class="sxs-lookup"><span data-stu-id="d3679-107">The "CS" prefix is optional.</span></span>  
   
- 未指定警告编号时，`disable` 会禁用所有警告，`restore` 会启用所有警告。  
+ <span data-ttu-id="d3679-108">未指定警告编号时，`disable` 会禁用所有警告，`restore` 会启用所有警告。</span><span class="sxs-lookup"><span data-stu-id="d3679-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
   
 > [!NOTE]
->  若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”窗口中查找警告编号。  
+>  <span data-ttu-id="d3679-109">若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”窗口中查找警告编号。</span><span class="sxs-lookup"><span data-stu-id="d3679-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="d3679-110">示例</span><span class="sxs-lookup"><span data-stu-id="d3679-110">Example</span></span>  
   
 ```csharp
 // pragma_warning.cs  
@@ -82,9 +82,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a><span data-ttu-id="d3679-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d3679-111">See Also</span></span>  
+ <span data-ttu-id="d3679-112">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="d3679-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="d3679-113">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="d3679-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="d3679-114">[C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md) </span><span class="sxs-lookup"><span data-stu-id="d3679-114">[C# Preprocessor Directives](../../../csharp/language-reference/preprocessor-directives/index.md) </span></span>  
+ [<span data-ttu-id="d3679-115">C# 编译器错误</span><span class="sxs-lookup"><span data-stu-id="d3679-115">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
 

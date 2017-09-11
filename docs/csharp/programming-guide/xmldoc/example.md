@@ -38,26 +38,26 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt;（C# 编程指南）
-## <a name="syntax"></a>语法  
+# <a name="ltexamplegt-c-programming-guide"></a><span data-ttu-id="ea72c-102">&lt;example&gt;（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="ea72c-102">&lt;example&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="ea72c-103">语法</span><span class="sxs-lookup"><span data-stu-id="ea72c-103">Syntax</span></span>  
   
 ```xml  
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="ea72c-104">参数</span><span class="sxs-lookup"><span data-stu-id="ea72c-104">Parameters</span></span>  
  `description`  
- 代码示例的说明。  
+ <span data-ttu-id="ea72c-105">代码示例的说明。</span><span class="sxs-lookup"><span data-stu-id="ea72c-105">A description of the code sample.</span></span>  
   
-## <a name="remarks"></a>备注  
- 借助 \<example> 标记，可以指定如何使用方法或其他库成员的示例。 这通常涉及到使用 [\<code>](../../../csharp/programming-guide/xmldoc/code.md) 标记。  
+## <a name="remarks"></a><span data-ttu-id="ea72c-106">备注</span><span class="sxs-lookup"><span data-stu-id="ea72c-106">Remarks</span></span>  
+ <span data-ttu-id="ea72c-107">借助 \<example> 标记，可以指定如何使用方法或其他库成员的示例。</span><span class="sxs-lookup"><span data-stu-id="ea72c-107">The \<example> tag lets you specify an example of how to use a method or other library member.</span></span> <span data-ttu-id="ea72c-108">这通常涉及到使用 [\<code>](../../../csharp/programming-guide/xmldoc/code.md) 标记。</span><span class="sxs-lookup"><span data-stu-id="ea72c-108">This commonly involves using the [\<code>](../../../csharp/programming-guide/xmldoc/code.md) tag.</span></span>  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ <span data-ttu-id="ea72c-109">使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="ea72c-109">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]  
+## <a name="example"></a><span data-ttu-id="ea72c-110">示例</span><span class="sxs-lookup"><span data-stu-id="ea72c-110">Example</span></span>  
+ <span data-ttu-id="ea72c-111">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea72c-111">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/example_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="ea72c-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ea72c-112">See Also</span></span>  
+ <span data-ttu-id="ea72c-113">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ea72c-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="ea72c-114">建议的文档注释标记</span><span class="sxs-lookup"><span data-stu-id="ea72c-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

@@ -26,18 +26,18 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="getting-started-linq-to-xml"></a>入门 (LINQ to XML)
-以下主题介绍 LINQ to XML。  
+# <a name="getting-started-linq-to-xml"></a><span data-ttu-id="383da-102">入门 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="383da-102">Getting Started (LINQ to XML)</span></span>
+<span data-ttu-id="383da-103">以下主题介绍 LINQ to XML。</span><span class="sxs-lookup"><span data-stu-id="383da-103">The following topics introduce LINQ to XML.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="383da-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="383da-104">In This Section</span></span>  
   
-|主题|描述|  
+|<span data-ttu-id="383da-105">主题</span><span class="sxs-lookup"><span data-stu-id="383da-105">Topic</span></span>|<span data-ttu-id="383da-106">描述</span><span class="sxs-lookup"><span data-stu-id="383da-106">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML 概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)|提供 LINQ to XML 技术的概述。|  
-|[LINQ to XML 与DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|将 LINQ to XML 与文档对象模型 (DOM) 进行比较。|  
-|[LINQ to XML 与其他 XML 技术](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|将 LINQ to XML 与其他 XML 分析和操作技术进行比较：XmlReader、XSLT、MSXML 和 XmlLite。|  
+|[<span data-ttu-id="383da-107">LINQ to XML 概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="383da-107">LINQ to XML Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)|<span data-ttu-id="383da-108">提供 LINQ to XML 技术的概述。</span><span class="sxs-lookup"><span data-stu-id="383da-108">Provides an overview of the LINQ to XML technology.</span></span>|  
+|[<span data-ttu-id="383da-109">LINQ to XML 与DOM (C#)</span><span class="sxs-lookup"><span data-stu-id="383da-109">LINQ to XML vs. DOM (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|<span data-ttu-id="383da-110">将 LINQ to XML 与文档对象模型 (DOM) 进行比较。</span><span class="sxs-lookup"><span data-stu-id="383da-110">Compares LINQ to XML to the Document Object Model (DOM).</span></span>|  
+|[<span data-ttu-id="383da-111">LINQ to XML 与其他 XML 技术</span><span class="sxs-lookup"><span data-stu-id="383da-111">LINQ to XML vs. Other XML Technologies</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|<span data-ttu-id="383da-112">将 LINQ to XML 与其他 XML 分析和操作技术进行比较：XmlReader、XSLT、MSXML 和 XmlLite。</span><span class="sxs-lookup"><span data-stu-id="383da-112">Compares LINQ to XML to other XML parsing and manipulation technologies: XmlReader, XSLT, MSXML, and XmlLite.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [参考 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="383da-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="383da-113">See Also</span></span>  
+ <span data-ttu-id="383da-114">[参考 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="383da-114">[Reference (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md) </span></span>  
+ [<span data-ttu-id="383da-115">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="383da-115">LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
 

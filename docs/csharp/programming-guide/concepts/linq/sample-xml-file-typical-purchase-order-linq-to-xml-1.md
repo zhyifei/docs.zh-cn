@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>示例 XML 文件：典型采购订单 (LINQ to XML)
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是典型的采购单。  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="8bdc6-102">示例 XML 文件：典型采购订单 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8bdc6-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="8bdc6-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="8bdc6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8bdc6-104">此文件是典型的采购单。</span><span class="sxs-lookup"><span data-stu-id="8bdc6-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
+## <a name="purchaseorderxml"></a><span data-ttu-id="8bdc6-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="8bdc6-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -68,6 +68,6 @@ ms.lasthandoff: 07/28/2017
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8bdc6-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8bdc6-106">See Also</span></span>  
+ [<span data-ttu-id="8bdc6-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8bdc6-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

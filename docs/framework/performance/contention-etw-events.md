@@ -1,46 +1,52 @@
 ---
-title: "争用 ETW 事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "争用事件 [.NET Framework]"
-  - "ETW, 争用事件 (CLR)"
+title: "争用 ETW 事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contention events [.NET Framework]
+- ETW, contention events (CLR)
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 931a3f7d5cbc441a3cae2b7359d129dff02afd44
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 争用 ETW 事件
-只要运行时使用的 <xref:System.Threading.Monitor?displayProperty=fullName> 锁或本机锁出现争用情况，就会引发争用事件。  当一个线程正在等待另一个线程拥有的锁时将发生争用。  
+# <a name="contention-etw-events"></a><span data-ttu-id="89c42-102">争用 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="89c42-102">Contention ETW Events</span></span>
+<span data-ttu-id="89c42-103">只要运行时使用的 <xref:System.Threading.Monitor?displayProperty=fullName> 锁或本机锁出现争用情况，就会引发争用事件。</span><span class="sxs-lookup"><span data-stu-id="89c42-103">Contention events are raised whenever there is contention for <xref:System.Threading.Monitor?displayProperty=fullName> locks or native locks used by the runtime.</span></span> <span data-ttu-id="89c42-104">一个线程等待的锁被另一线程占有时将发生争用。</span><span class="sxs-lookup"><span data-stu-id="89c42-104">Contention occurs when a thread is waiting for a lock while another thread possesses the lock.</span></span>  
   
- 下表显示用于引发争用事件的关键字和事件的级别。（有关详细信息，请参阅 [CLR ETW 关键字和级别](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ <span data-ttu-id="89c42-105">下表显示了引发争用事件的关键字以及事件的级别。</span><span class="sxs-lookup"><span data-stu-id="89c42-105">The following table shows the keyword under which contention events are raised, and the level of the events.</span></span> <span data-ttu-id="89c42-106">（有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）</span><span class="sxs-lookup"><span data-stu-id="89c42-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|用于引发事件的关键字|级别|  
-|----------------|--------|  
-|`ContentionKeyword` \(0x4000\)|信息性 \(4\)|  
+|<span data-ttu-id="89c42-107">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="89c42-107">Keyword for raising the event</span></span>|<span data-ttu-id="89c42-108">级别</span><span class="sxs-lookup"><span data-stu-id="89c42-108">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="89c42-109">`ContentionKeyword` (0x4000)</span><span class="sxs-lookup"><span data-stu-id="89c42-109">`ContentionKeyword` (0x4000)</span></span>|<span data-ttu-id="89c42-110">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="89c42-110">Informational (4)</span></span>|  
   
- 下表显示事件信息。  
+ <span data-ttu-id="89c42-111">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="89c42-111">The following table shows event information.</span></span>  
   
-|Event|事件 ID|在以下情况下引发|  
-|-----------|-----------|--------------|  
-|`ContentionStart_V1`|81|争用开始。  此事件不包括线程等待获取锁之前的旋转时间；此事件只有在线程等待获取锁时才会引发。|  
-|`ContentionStop`|81|争用结束。|  
+|<span data-ttu-id="89c42-112">Event</span><span class="sxs-lookup"><span data-stu-id="89c42-112">Event</span></span>|<span data-ttu-id="89c42-113">事件 ID</span><span class="sxs-lookup"><span data-stu-id="89c42-113">Event ID</span></span>|<span data-ttu-id="89c42-114">在发生以下情况时引发</span><span class="sxs-lookup"><span data-stu-id="89c42-114">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`ContentionStart_V1`|<span data-ttu-id="89c42-115">81</span><span class="sxs-lookup"><span data-stu-id="89c42-115">81</span></span>|<span data-ttu-id="89c42-116">争用开始。</span><span class="sxs-lookup"><span data-stu-id="89c42-116">Contention starts.</span></span> <span data-ttu-id="89c42-117">此事件不包括线程等待获取锁之前的旋转时间；仅在线程等待获取锁时引发此事件。</span><span class="sxs-lookup"><span data-stu-id="89c42-117">This event does not include the amount of spinning time before a thread waits to acquire a lock; it is raised only when the thread waits to acquire a lock.</span></span>|  
+|`ContentionStop`|<span data-ttu-id="89c42-118">81</span><span class="sxs-lookup"><span data-stu-id="89c42-118">81</span></span>|<span data-ttu-id="89c42-119">争用结束。</span><span class="sxs-lookup"><span data-stu-id="89c42-119">Contention ends.</span></span>|  
   
- 下表显示事件数据。  
+ <span data-ttu-id="89c42-120">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="89c42-120">The following table shows event data.</span></span>  
   
-|字段名|数据类型|说明|  
-|---------|----------|--------|  
-|Flags|win:UInt8|0 表示托管；1 表示本机。|  
-|ClrInstanceID|win:UInt16|CLR 实例的唯一 ID。|  
+|<span data-ttu-id="89c42-121">字段名</span><span class="sxs-lookup"><span data-stu-id="89c42-121">Field name</span></span>|<span data-ttu-id="89c42-122">数据类型</span><span class="sxs-lookup"><span data-stu-id="89c42-122">Data type</span></span>|<span data-ttu-id="89c42-123">描述</span><span class="sxs-lookup"><span data-stu-id="89c42-123">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="89c42-124">Flags</span><span class="sxs-lookup"><span data-stu-id="89c42-124">Flags</span></span>|<span data-ttu-id="89c42-125">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="89c42-125">win:UInt8</span></span>|<span data-ttu-id="89c42-126">0 表示托管；1 表示本机。</span><span class="sxs-lookup"><span data-stu-id="89c42-126">0 for managed; 1 for native.</span></span>|  
+|<span data-ttu-id="89c42-127">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="89c42-127">ClrInstanceID</span></span>|<span data-ttu-id="89c42-128">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="89c42-128">win:UInt16</span></span>|<span data-ttu-id="89c42-129">CLR 实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="89c42-129">Unique ID for the instance of CLR.</span></span>|  
   
-## 请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a><span data-ttu-id="89c42-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="89c42-130">See Also</span></span>  
+ [<span data-ttu-id="89c42-131">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="89c42-131">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)
+

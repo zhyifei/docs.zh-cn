@@ -38,38 +38,38 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>。 运算符（C# 参考）
-点运算符 (`.`) 用于成员访问。 点运算符指定类型或命名空间的成员。 例如，点运算符用于访问 .NET Framework 类库中的特定方法：  
+# <a name="-operator-c-reference"></a><span data-ttu-id="702a4-103">。</span><span class="sxs-lookup"><span data-stu-id="702a4-103">.</span></span> <span data-ttu-id="702a4-104">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="702a4-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="702a4-105">点运算符 (`.`) 用于成员访问。</span><span class="sxs-lookup"><span data-stu-id="702a4-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="702a4-106">点运算符指定类型或命名空间的成员。</span><span class="sxs-lookup"><span data-stu-id="702a4-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="702a4-107">例如，点运算符用于访问 .NET Framework 类库中的特定方法：</span><span class="sxs-lookup"><span data-stu-id="702a4-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
   
- [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
+ <span data-ttu-id="702a4-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span></span>  
   
- 例如，请考虑以下类：  
+ <span data-ttu-id="702a4-109">例如，请考虑以下类：</span><span class="sxs-lookup"><span data-stu-id="702a4-109">For example, consider the following class:</span></span>  
   
- [!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
+ <span data-ttu-id="702a4-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span></span>  
   
- [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
+ <span data-ttu-id="702a4-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span></span>  
   
- 变量 `s` 具有两个成员（`a` 和 `b`）；若要对其进行访问，请使用点运算符：  
+ <span data-ttu-id="702a4-112">变量 `s` 具有两个成员（`a` 和 `b`）；若要对其进行访问，请使用点运算符：</span><span class="sxs-lookup"><span data-stu-id="702a4-112">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
   
- [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
+ <span data-ttu-id="702a4-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span></span>  
   
- 点还用于构成限定名称，即为指定它们所属的命名空间或接口等的名称。  
+ <span data-ttu-id="702a4-114">点还用于构成限定名称，即为指定它们所属的命名空间或接口等的名称。</span><span class="sxs-lookup"><span data-stu-id="702a4-114">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
   
- [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
+ <span data-ttu-id="702a4-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span></span>  
   
- using 指令使某些名称限定变成可选：  
+ <span data-ttu-id="702a4-116">using 指令使某些名称限定变成可选：</span><span class="sxs-lookup"><span data-stu-id="702a4-116">The using directive makes some name qualification optional:</span></span>  
   
- [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
+ <span data-ttu-id="702a4-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span></span>  
   
- 但如果标识符不明确，则必须对其进行限定：  
+ <span data-ttu-id="702a4-118">但如果标识符不明确，则必须对其进行限定：</span><span class="sxs-lookup"><span data-stu-id="702a4-118">But when an identifier is ambiguous, it must be qualified:</span></span>  
   
- [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
+ <span data-ttu-id="702a4-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="702a4-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="702a4-120">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="702a4-120">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="702a4-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="702a4-121">See Also</span></span>  
+ <span data-ttu-id="702a4-122">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="702a4-122">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="702a4-123">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="702a4-123">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="702a4-124">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="702a4-124">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

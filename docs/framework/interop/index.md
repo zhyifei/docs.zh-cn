@@ -1,64 +1,70 @@
 ---
-title: "与非托管代码交互操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - ".NET Framework, 与非托管代码间的互操作"
-  - "组件 [.NET Framework], 与非托管代码间的互操作"
-  - "与非托管代码间的互操作"
-  - "与非托管代码间的互操作, 关于互操作"
-  - "托管代码, 与非托管代码间的互操作"
-  - "非托管代码"
-  - "非托管代码, 互操作"
+title: "与非托管代码交互操作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- unmanaged code, interoperation
+- managed code, interoperation with unmanaged code
+- .NET Framework, interoperation with unmanaged code
+- unmanaged code
+- interoperation with unmanaged code
+- interoperation with unmanaged code, about interoperation
+- components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ff86b062efddde6f97555efb97247f60a6e1db98
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
-# 与非托管代码交互操作
-.NET Framework 将促进与 COM 组件、COM\+ 服务、外部类型库和许多操作系统服务的交互操作。  在托管和非托管对象模型之间，数据类型、方法签名和错误处理机制都存在差异。  为了简化 .NET Framework 组件和非托管代码之间的互用并便于进行迁移，公共语言运行时将从客户端和服务器中隐藏这两种对象模型之间的差异。  
+# <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="9f143-102">与非托管代码交互操作</span><span class="sxs-lookup"><span data-stu-id="9f143-102">Interoperating with Unmanaged Code</span></span>
+<span data-ttu-id="9f143-103">.NET Framework 提升与 COM 组件、COM+ 服务、外部类型库和许多操作系统服务的交互。</span><span class="sxs-lookup"><span data-stu-id="9f143-103">The .NET Framework promotes interaction with COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="9f143-104">托管和非托管对象模型之间的数据类型、方法签名和错误处理机制有所不同。</span><span class="sxs-lookup"><span data-stu-id="9f143-104">Data types, method signatures, and error-handling mechanisms vary between managed and unmanaged object models.</span></span> <span data-ttu-id="9f143-105">要简化 .NET Framework 组件和非托管代码之间的互操作并简化迁移路径，公共语言运行时需对客户端和服务器隐藏这些对象模型中的差异。</span><span class="sxs-lookup"><span data-stu-id="9f143-105">To simplify interoperation between .NET Framework components and unmanaged code and to ease the migration path, the common language runtime conceals from both clients and servers the differences in these object models.</span></span>  
   
- 在运行时控制下执行的代码称作托管代码。  相反，在运行时之外运行的代码称作非托管代码。  COM 组件、ActiveX 接口和 Win32 API 函数都是非托管代码的示例。  
+ <span data-ttu-id="9f143-106">在运行时控制下执行的代码称为托管代码。</span><span class="sxs-lookup"><span data-stu-id="9f143-106">Code that executes under the control of the runtime is called managed code.</span></span> <span data-ttu-id="9f143-107">反之，在运行时以外运行的代码称为非托管代码。</span><span class="sxs-lookup"><span data-stu-id="9f143-107">Conversely, code that runs outside the runtime is called unmanaged code.</span></span> <span data-ttu-id="9f143-108">COM 组件、ActiveX 接口和 Win32 API 函数都是非托管代码的示例。</span><span class="sxs-lookup"><span data-stu-id="9f143-108">COM components, ActiveX interfaces, and Win32 API functions are examples of unmanaged code.</span></span>  
   
-## 本节内容  
- [Interoperating with Unmanaged Code How\-to Topics](http://msdn.microsoft.com/zh-cn/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
- 提供指向在有关与非托管代码进行互操作的概念性文档中找到的所有帮助主题的链接。  
+## <a name="in-this-section"></a><span data-ttu-id="9f143-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="9f143-109">In This Section</span></span>  
+ [<span data-ttu-id="9f143-110">与非托管代码交互操作帮助主题</span><span class="sxs-lookup"><span data-stu-id="9f143-110">Interoperating with Unmanaged Code How-to Topics</span></span>](http://msdn.microsoft.com/en-us/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
+ <span data-ttu-id="9f143-111">提供了与非托管代码交互操作相关的概念性文档中的所有帮助主题的链接。</span><span class="sxs-lookup"><span data-stu-id="9f143-111">Provides links to all How-to topics found in the conceptual documentation for interoperating with unmanaged code.</span></span>  
   
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)  
- 描述如何从 .NET Framework 应用程序使用 COM 组件。  
+ [<span data-ttu-id="9f143-112">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="9f143-112">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)  
+ <span data-ttu-id="9f143-113">描述如何使用 .NET Framework 应用程序的 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="9f143-113">Describes how to use COM components from .NET Framework applications.</span></span>  
   
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- 描述如何从 COM 应用程序使用 .NET Framework 组件。  
+ [<span data-ttu-id="9f143-114">向 COM 公开 .NET Framework 组件</span><span class="sxs-lookup"><span data-stu-id="9f143-114">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ <span data-ttu-id="9f143-115">描述如何使用 COM 应用程序的 .NET Framework 组件。</span><span class="sxs-lookup"><span data-stu-id="9f143-115">Describes how to use .NET Framework components from COM applications.</span></span>  
   
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- 描述如何使用平台调用来调用非托管的 DLL 函数。  
+ [<span data-ttu-id="9f143-116">使用非托管 DLL 函数</span><span class="sxs-lookup"><span data-stu-id="9f143-116">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ <span data-ttu-id="9f143-117">描述如何使用平台调用调用非托管 DLL 函数。</span><span class="sxs-lookup"><span data-stu-id="9f143-117">Describes how to call unmanaged DLL functions using platform invoke.</span></span>  
   
- [互操作的设计注意事项](http://msdn.microsoft.com/zh-cn/b59637f6-fe35-40d6-ae72-901e7a707689)  
- 提供有关编写集成 COM 组件的提示。  
+ [<span data-ttu-id="9f143-118">互操作的设计注意事项</span><span class="sxs-lookup"><span data-stu-id="9f143-118">Design Considerations for Interoperation</span></span>](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
+ <span data-ttu-id="9f143-119">提供有关编写集成 COM 组件的提示。</span><span class="sxs-lookup"><span data-stu-id="9f143-119">Provides tips for writing integrated COM components.</span></span>  
   
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)  
- 描述如何对 COM 互操作和平台调用进行封送处理。  
+ [<span data-ttu-id="9f143-120">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="9f143-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
+ <span data-ttu-id="9f143-121">描述 COM 互操作和平台调用的封送处理。</span><span class="sxs-lookup"><span data-stu-id="9f143-121">Describes marshaling for COM interop and platform invoke.</span></span>  
   
- [如何：映射 HRESULT 和异常](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
- 描述异常和 HRESULT 之间的映射。  
+ [<span data-ttu-id="9f143-122">如何：映射 HRESULT 和异常</span><span class="sxs-lookup"><span data-stu-id="9f143-122">How to: Map HRESULTs and Exceptions</span></span>](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
+ <span data-ttu-id="9f143-123">描述异常和 HRESULT 之间的映射。</span><span class="sxs-lookup"><span data-stu-id="9f143-123">Describes the mapping between exceptions and HRESULTs.</span></span>  
   
- [Interoperating Using Generic Types](http://msdn.microsoft.com/zh-cn/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
- 描述泛型类型在用于 COM 互操作时的行为。  
+ [<span data-ttu-id="9f143-124">使用泛型类型进行交互操作</span><span class="sxs-lookup"><span data-stu-id="9f143-124">Interoperating Using Generic Types</span></span>](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
+ <span data-ttu-id="9f143-125">描述用于 COM 互操作时的泛型类型行为。</span><span class="sxs-lookup"><span data-stu-id="9f143-125">Describes the behavior of generic types when used in COM interop.</span></span>  
   
-## 相关章节  
- [Advanced COM Interoperability](http://msdn.microsoft.com/zh-cn/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- 提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的更多信息。
+## <a name="related-sections"></a><span data-ttu-id="9f143-126">相关章节</span><span class="sxs-lookup"><span data-stu-id="9f143-126">Related Sections</span></span>  
+ [<span data-ttu-id="9f143-127">高级 COM 互操作性</span><span class="sxs-lookup"><span data-stu-id="9f143-127">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ <span data-ttu-id="9f143-128">提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。</span><span class="sxs-lookup"><span data-stu-id="9f143-128">Provides links to more information about incorporating COM components into your .NET Framework application.</span></span>
+

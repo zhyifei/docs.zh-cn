@@ -31,38 +31,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89f41527703df781f32015f386bf87c1383d9769
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 45361fb1dca34f2cdc849184d0e316b27d9545b6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="utf8output-visual-basic"></a>/utf8output (Visual Basic)
-显示使用 UTF-8 编码的编译器输出。  
+# <a name="utf8output-visual-basic"></a><span data-ttu-id="e683b-102">/utf8output (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e683b-102">/utf8output (Visual Basic)</span></span>
+<span data-ttu-id="e683b-103">显示使用 UTF-8 编码的编译器输出。</span><span class="sxs-lookup"><span data-stu-id="e683b-103">Displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="e683b-104">语法</span><span class="sxs-lookup"><span data-stu-id="e683b-104">Syntax</span></span>  
   
 ```  
 /utf8output[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
- `+` &#124; `-`  
- 可选。 此选项的默认值是`/utf8output-`，这意味着编译器输出未使用 utf-8 编码。 指定`/utf8output`相当于将指定`/utf8output+`。  
+## <a name="arguments"></a><span data-ttu-id="e683b-105">参数</span><span class="sxs-lookup"><span data-stu-id="e683b-105">Arguments</span></span>  
+ <span data-ttu-id="e683b-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="e683b-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="e683b-107">可选。</span><span class="sxs-lookup"><span data-stu-id="e683b-107">Optional.</span></span> <span data-ttu-id="e683b-108">此选项的默认值是`/utf8output-`，这意味着编译器输出未使用 utf-8 编码。</span><span class="sxs-lookup"><span data-stu-id="e683b-108">The default for this option is `/utf8output-`, which means compiler output does not use UTF-8 encoding.</span></span> <span data-ttu-id="e683b-109">指定`/utf8output`相当于将指定`/utf8output+`。</span><span class="sxs-lookup"><span data-stu-id="e683b-109">Specifying `/utf8output` is the same as specifying `/utf8output+`.</span></span>  
   
-## <a name="remarks"></a>备注  
- 在某些国际配置编译器输出不能在控制台中正确显示。 在这种情况下，使用`/utf8output`和编译器输出重定向到一个文件。  
+## <a name="remarks"></a><span data-ttu-id="e683b-110">备注</span><span class="sxs-lookup"><span data-stu-id="e683b-110">Remarks</span></span>  
+ <span data-ttu-id="e683b-111">在某些国际配置编译器输出不能在控制台中正确显示。</span><span class="sxs-lookup"><span data-stu-id="e683b-111">In some international configurations, compiler output cannot be displayed correctly in the console.</span></span> <span data-ttu-id="e683b-112">在这种情况下，使用`/utf8output`和编译器输出重定向到一个文件。</span><span class="sxs-lookup"><span data-stu-id="e683b-112">In such situations, use `/utf8output` and redirect compiler output to a file.</span></span>  
   
 > [!NOTE]
->  `/utf8output`选项不是在 Visual Studio 开发环境中可用; 只有当从命令行进行编译，它才可用。  
+>  <span data-ttu-id="e683b-113">`/utf8output`选项不是在 Visual Studio 开发环境中可用; 只有当从命令行进行编译，它才可用。</span><span class="sxs-lookup"><span data-stu-id="e683b-113">The `/utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码编译`In.vb`并指示编译器显示输出使用 utf-8 编码。  
+## <a name="example"></a><span data-ttu-id="e683b-114">示例</span><span class="sxs-lookup"><span data-stu-id="e683b-114">Example</span></span>  
+ <span data-ttu-id="e683b-115">下面的代码编译`In.vb`并指示编译器显示输出使用 utf-8 编码。</span><span class="sxs-lookup"><span data-stu-id="e683b-115">The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.</span></span>  
   
 ```  
 vbc /utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="e683b-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e683b-116">See Also</span></span>  
+ <span data-ttu-id="e683b-117">[Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="e683b-117">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="e683b-118"> [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="e683b-118"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

@@ -1,113 +1,118 @@
 ---
-title: ".NET Native 和编译 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ".NET Native 和编译"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 5
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET Native 和编译
-面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 \(IL\)。  在运行时，实时 \(JIT\) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。  与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。  本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  
+# <a name="net-native-and-compilation"></a><span data-ttu-id="2c86b-102">.NET Native 和编译</span><span class="sxs-lookup"><span data-stu-id="2c86b-102">.NET Native and Compilation</span></span>
+<span data-ttu-id="2c86b-103">面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。</span><span class="sxs-lookup"><span data-stu-id="2c86b-103">Windows 8.1 applications and Windows Desktop applications that target the.NET Framework are written in a particular programming language and compiled into intermediate language (IL).</span></span> <span data-ttu-id="2c86b-104">在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。</span><span class="sxs-lookup"><span data-stu-id="2c86b-104">At runtime, a just-in-time (JIT) compiler is responsible for compiling the IL into native code for the local machine just before a method is executed for the first time.</span></span> <span data-ttu-id="2c86b-105">与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-105">In contrast, the .NET Native tool chain converts source code to native code at compile time.</span></span> <span data-ttu-id="2c86b-106">本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。</span><span class="sxs-lookup"><span data-stu-id="2c86b-106">This topic compares .NET Native with other compilation technologies available for .NET Framework apps, and also provides a practical overview of how .NET Native produces native code that can help you understand why exceptions that occur in code compiled with .NET Native do not occur in JIT-compiled code.</span></span>  
   
-## .NET 本机：生成本机二进制文件  
- 面向 .NET Framework 且未使用 .NET 本机工具链编译的应用程序包含应用程序的程序集，其中包括以下内容：  
+## <a name="net-native-generating-native-binaries"></a><span data-ttu-id="2c86b-107">.NET 本机：生成本机二进制文件</span><span class="sxs-lookup"><span data-stu-id="2c86b-107">.NET Native: Generating native binaries</span></span>  
+ <span data-ttu-id="2c86b-108">面向 .NET Framework 且未使用 .NET 本机工具链编译的应用程序包含应用程序的程序集，其中包括以下内容：</span><span class="sxs-lookup"><span data-stu-id="2c86b-108">An application that targets the .NET Framework and that is not compiled by using the .NET Native tool chain consists of your application assembly, which includes the following:</span></span>  
   
--   用于描述程序集、其依赖项、其包含的类型和其中成员的元数据。  元数据用于反射和后期绑定访问，在一些情况下也可用于编译器和生成工具。  
+-   <span data-ttu-id="2c86b-109">用于描述程序集、其依赖项、其包含的类型和其中成员的[元数据](../../../docs/standard/metadata-and-self-describing-components.md)。</span><span class="sxs-lookup"><span data-stu-id="2c86b-109">[Metadata](../../../docs/standard/metadata-and-self-describing-components.md) that describes the assembly, its dependencies, the types it contains, and their members.</span></span> <span data-ttu-id="2c86b-110">元数据用于反射和后期绑定访问，在一些情况下也可用于编译器和生成工具。</span><span class="sxs-lookup"><span data-stu-id="2c86b-110">The metadata is used for reflection and late-bound access, and in some cases by compiler and build tools as well.</span></span>  
   
--   实现代码。  这包括中间语言 \(IL\) 操作码。  在运行时，实时 \(JIT\) 编译器将它转换为目标平台的本机代码。  
+-   <span data-ttu-id="2c86b-111">实现代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-111">Implementation code.</span></span> <span data-ttu-id="2c86b-112">这包括中间语言 (IL) 操作码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-112">This consists of intermediate language (IL) opcodes.</span></span> <span data-ttu-id="2c86b-113">在运行时，实时 (JIT) 编译器将它转换为目标平台的本机代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-113">At runtime, the just-in-time (JIT) compiler translates it into native code for the target platform.</span></span>  
   
- 除了主应用程序集，应用程序还需要存在以下内容：  
+ <span data-ttu-id="2c86b-114">除了主应用程序集，应用程序还需要存在以下内容：</span><span class="sxs-lookup"><span data-stu-id="2c86b-114">In addition to your main application assembly, an app requires that the following be present:</span></span>  
   
--   应用程序所需的任何其他类库或第三方程序集。  这些程序集同样包括描述程序集、其类型和其中成员的元数据，以及实现所有类型成员的 IL。  
+-   <span data-ttu-id="2c86b-115">应用程序所需的任何其他类库或第三方程序集。</span><span class="sxs-lookup"><span data-stu-id="2c86b-115">Any additional class libraries or third-party assemblies that are required by your app.</span></span> <span data-ttu-id="2c86b-116">这些程序集同样包括描述程序集、其类型和其中成员的元数据，以及实现所有类型成员的 IL。</span><span class="sxs-lookup"><span data-stu-id="2c86b-116">These assemblies similarly include metadata that describes the assembly, its types, and their members, as well as the IL that implements all type members.</span></span>  
   
--   .NET Framework 类库。  这是与 .NET Framework 一同安装在本地系统上的程序集的集合。  .NET Framework 类库中附带的程序集包括整套元数据和实现代码。  
+-   <span data-ttu-id="2c86b-117">.NET Framework 类库。</span><span class="sxs-lookup"><span data-stu-id="2c86b-117">The .NET Framework Class Library.</span></span> <span data-ttu-id="2c86b-118">这是与 .NET Framework 一同安装在本地系统上的程序集的集合。</span><span class="sxs-lookup"><span data-stu-id="2c86b-118">This is a collection of assemblies that is installed on the local system with the .NET Framework installation.</span></span> <span data-ttu-id="2c86b-119">.NET Framework 类库中附带的程序集包括整套元数据和实现代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-119">The assemblies included in the .NET Framework Class Library include a complete set of metadata and implementation code.</span></span>  
   
--   公共语言运行时。  这是动态链接库的集合，执行程序集上载、内存管理和垃圾回收、异常处理、实时编译、远程处理和互操作等服务。  和类库一样，运行时与 .NET Framework 一同安装在本地系统中。  
+-   <span data-ttu-id="2c86b-120">公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="2c86b-120">The common language runtime.</span></span> <span data-ttu-id="2c86b-121">这是动态链接库的集合，执行程序集上载、内存管理和垃圾回收、异常处理、实时编译、远程处理和互操作等服务。</span><span class="sxs-lookup"><span data-stu-id="2c86b-121">This is a collection of dynamic link libraries that perform such services as assembly loading, memory management and garbage collection, exception handling, just-in-time compilation, remoting, and interop.</span></span> <span data-ttu-id="2c86b-122">和类库一样，运行时与 .NET Framework 一同安装在本地系统中。</span><span class="sxs-lookup"><span data-stu-id="2c86b-122">Like the class library, the runtime is installed on the local system as part of the .NET Framework installation.</span></span>  
   
- 请注意，若要应用程序成功执行，必须存在整个公共语言运行时、应用程序特定的程序集中的元数据和 IL、第三方程序集以及系统程序集。  
+ <span data-ttu-id="2c86b-123">请注意，若要应用程序成功执行，必须存在整个公共语言运行时、应用程序特定的程序集中的元数据和 IL、第三方程序集以及系统程序集。</span><span class="sxs-lookup"><span data-stu-id="2c86b-123">Note that the entire common language runtime, as well as metadata and IL for all types in application-specific assemblies, third-party assemblies, and system assemblies must be present for the app to execute successfully.</span></span>  
   
-## .NET 本机和实时编译  
- .NET 本机工具链的输入是指 C\# 或 Visual Basic 编译器生成的 Windows 应用商店应用。  换言之，.NET 本机工具链在语言编译器完成 Windows 应用商店应用的编译时开始执行。  
+## <a name="net-native-and-just-in-time-compilation"></a><span data-ttu-id="2c86b-124">.NET 本机和实时编译</span><span class="sxs-lookup"><span data-stu-id="2c86b-124">.NET Native and just-in-time compilation</span></span>  
+ <span data-ttu-id="2c86b-125">.NET 本机工具链的输入是指 C# 或 Visual Basic 编译器生成的 Windows 应用商店应用。</span><span class="sxs-lookup"><span data-stu-id="2c86b-125">The input for the .NET Native tool chain is the Windows store app built by the C# or Visual Basic compiler.</span></span> <span data-ttu-id="2c86b-126">换言之，.NET 本机工具链在语言编译器完成 Windows 应用商店应用的编译时开始执行。</span><span class="sxs-lookup"><span data-stu-id="2c86b-126">In other words, the .NET Native tool chain begins execution when the language compiler has finished compilation of a Windows Store app.</span></span>  
   
 > [!TIP]
->  由于 .NET 本机的输入是写入托管程序集的 IL 和元数据，因此仍然可以通过使用预生成（或后期生成）的事件或通过修改 MSBuild 项目文件执行自定义代码生成或其他自定义操作。  
+>  <span data-ttu-id="2c86b-127">由于 .NET 本机的输入是写入托管程序集的 IL 和元数据，因此仍然可以通过使用预生成（或后期生成）的事件或通过修改 MSBuild 项目文件执行自定义代码生成或其他自定义操作。</span><span class="sxs-lookup"><span data-stu-id="2c86b-127">Because the input to .NET Native is the IL and metadata written to managed assemblies, you can still perform custom code generation or other custom operations by using pre-build or post-build events or by modifying the MSBuild project file.</span></span>  
 >   
->  然而，不支持修改 IL 进而阻止 .NET 工具链分析应用 IL 的工具的类别。  模糊处理程序是此类型中最值得注意的工具。  
+>  <span data-ttu-id="2c86b-128">然而，不支持修改 IL 进而阻止 .NET 工具链分析应用 IL 的工具的类别。</span><span class="sxs-lookup"><span data-stu-id="2c86b-128">However, categories of tools that modify IL and thereby prevent the .NET tool chain from analyzing an app's IL are not supported.</span></span> <span data-ttu-id="2c86b-129">模糊处理程序是此类型中最值得注意的工具。</span><span class="sxs-lookup"><span data-stu-id="2c86b-129">Obfuscators are the most notable tools of this type.</span></span>  
   
- 在将应用程序从 IL 转换为本机代码的过程中，.NET 本机工具链执行如下所示的操作：  
+ <span data-ttu-id="2c86b-130">在将应用程序从 IL 转换为本机代码的过程中，.NET 本机工具链执行如下所示的操作：</span><span class="sxs-lookup"><span data-stu-id="2c86b-130">In the course of converting an app from IL to native code, the .NET Native tool chain performs operations like the following:</span></span>  
   
--   对于某些代码路径，它将依靠反射和元数据的代码替换为静态本机代码。  例如，如果值类型未重写 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法，默认的相等性测试将使用反射来检索表示值类型字段的 <xref:System.Reflection.FieldInfo> 对象，然后将两个实例的字段值进行比较。  编译为本机代码时，.NET 本机工具链将反射代码和元数据替换为字段值的静态比较。  
+-   <span data-ttu-id="2c86b-131">对于某些代码路径，它将依靠反射和元数据的代码替换为静态本机代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-131">For certain code paths, it replaces code that relies on reflection and metadata with static native code.</span></span> <span data-ttu-id="2c86b-132">例如，如果值类型未重写 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法，默认的相等性测试将使用反射来检索表示值类型字段的 <xref:System.Reflection.FieldInfo> 对象，然后将两个实例的字段值进行比较。</span><span class="sxs-lookup"><span data-stu-id="2c86b-132">For example, if a value type does not override the <xref:System.ValueType.Equals%2A?displayProperty=fullName> method, the default test for equality uses reflection to retrieve <xref:System.Reflection.FieldInfo> objects that represent the value type's fields, then compares the field values of two instances.</span></span> <span data-ttu-id="2c86b-133">编译为本机代码时，.NET 本机工具链将反射代码和元数据替换为字段值的静态比较。</span><span class="sxs-lookup"><span data-stu-id="2c86b-133">When compiling to native code, the .NET Native tool chain replaces the reflection code and metadata with a static comparison of the field values.</span></span>  
   
--   如果可能，它会尝试消除所有元数据。  
+-   <span data-ttu-id="2c86b-134">如果可能，它会尝试消除所有元数据。</span><span class="sxs-lookup"><span data-stu-id="2c86b-134">Where possible, it attempts to eliminate all metadata.</span></span>  
   
--   它只将实际由应用程序调用的实现代码包含在最终应用程序集中。  这尤其会对第三方库和 .NET Framework 类库中的代码产生影响。  因此，应用程序不再依赖第三方库或完整的 .NET Framework 类库；相反，对应用程序而言，当前第三方和 .NET Framework 类库中的代码都是本地的。  
+-   <span data-ttu-id="2c86b-135">它只将实际由应用程序调用的实现代码包含在最终应用程序集中。</span><span class="sxs-lookup"><span data-stu-id="2c86b-135">It includes in the final app assemblies only the implementation code that is actually invoked by the app.</span></span> <span data-ttu-id="2c86b-136">这尤其会对第三方库和 .NET Framework 类库中的代码产生影响。</span><span class="sxs-lookup"><span data-stu-id="2c86b-136">This particularly affects code in third-party libraries and in the .NET Framework Class Library.</span></span> <span data-ttu-id="2c86b-137">因此，应用程序不再依赖第三方库或完整的 .NET Framework 类库；相反，对应用程序而言，当前第三方和 .NET Framework 类库中的代码都是本地的。</span><span class="sxs-lookup"><span data-stu-id="2c86b-137">As a result, an application no longer depends on either third-party libraries or the full .NET Framework Class Library; instead, code in third-party and .NET Framework class libraries is now local to the app.</span></span>  
   
--   它将完整的 CLR 替换为主要包含垃圾回收器的重构运行时。  重构运行时位于应用程序中名为 mrt100\_app.dll 本地库，且其大小仅为几百千字节。  这可能是因为静态链接不再需要公共语言运行时执行多个服务。  
+-   <span data-ttu-id="2c86b-138">它将完整的 CLR 替换为主要包含垃圾回收器的重构运行时。</span><span class="sxs-lookup"><span data-stu-id="2c86b-138">It replaces the full CLR with a refactored runtime that primarily contains the garbage collector.</span></span> <span data-ttu-id="2c86b-139">重构运行时位于应用程序中名为 mrt100_app.dll 本地库，且其大小仅为几百千字节。</span><span class="sxs-lookup"><span data-stu-id="2c86b-139">The refactored runtime is found in a library named mrt100_app.dll that is local to the app and is only a few hundred kilobytes in size.</span></span> <span data-ttu-id="2c86b-140">这可能是因为静态链接不再需要公共语言运行时执行多个服务。</span><span class="sxs-lookup"><span data-stu-id="2c86b-140">This is possible because static linking eliminates the need for many of the services performed by the common language runtime.</span></span>  
   
     > [!NOTE]
-    >  .NET 本机使用的垃圾回收器与标准公共语言运行时使用的相同。  在 .NET 本机垃圾回收器中，默认启用后台垃圾回收。  有关垃圾回收的详细信息，请参阅[Fundamentals of Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md)。  
+    >  <span data-ttu-id="2c86b-141">.NET 本机使用的垃圾回收器与标准公共语言运行时使用的相同。</span><span class="sxs-lookup"><span data-stu-id="2c86b-141">.NET Native uses the same garbage collector as the standard common language runtime.</span></span> <span data-ttu-id="2c86b-142">在 .NET Native 垃圾回收器中，默认启用后台垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="2c86b-142">In the .NET Native garbage collector, background garbage collection is enabled by default.</span></span> <span data-ttu-id="2c86b-143">有关垃圾回收的详细信息，请参阅[垃圾回收的基础知识](../../../docs/standard/garbage-collection/fundamentals.md)。</span><span class="sxs-lookup"><span data-stu-id="2c86b-143">For more information about garbage collection, see [Fundamentals of Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md).</span></span>  
   
 > [!IMPORTANT]
->  .NET 本机将整个应用程序编译到本机应用程序。  它不允许将包含类库的单个程序集编译为本机代码，所以可独立于托管代码进行调用。  
+>  <span data-ttu-id="2c86b-144">.NET 本机将整个应用程序编译到本机应用程序。</span><span class="sxs-lookup"><span data-stu-id="2c86b-144">.NET Native compiles an entire application to a native application.</span></span> <span data-ttu-id="2c86b-145">它不允许将包含类库的单个程序集编译为本机代码，所以可独立于托管代码进行调用。</span><span class="sxs-lookup"><span data-stu-id="2c86b-145">It does not allow you to compile a single assembly that contains a class library to native code so that it can be called independently from managed code.</span></span>  
   
- .NET 本机工具链生成的应用程序的写入位置如下：项目目录下 Debug 或 Release 目录中名为 ilc.out 的目录。  它包含以下文件：  
+ <span data-ttu-id="2c86b-146">.NET 本机工具链生成的应用程序的写入位置如下：项目目录下 Debug 或 Release 目录中名为 ilc.out 的目录。</span><span class="sxs-lookup"><span data-stu-id="2c86b-146">The resulting app that is produced by the .NET Native tool chain is written to a directory named ilc.out in the Debug or Release directory of your project directory.</span></span> <span data-ttu-id="2c86b-147">它包含以下文件：</span><span class="sxs-lookup"><span data-stu-id="2c86b-147">It consists of the following files:</span></span>  
   
--   *\<应用程序名\>*.exe，指仅将控件传输到 *\<应用程序名\>*.dll 中特定 `Main` 导出的存根可执行文件。  
+-   <span data-ttu-id="2c86b-148">*\<appName>*.exe，指仅将控件传输到 *\<appName>*.dll 中特定 `Main` 导出的存根可执行文件。</span><span class="sxs-lookup"><span data-stu-id="2c86b-148">*\<appName>*.exe, a stub executable that simply transfers control to a special `Main` export in *\<appName>*.dll.</span></span>  
   
--   *\<应用程序名\>*.dll，指包含所有应用程序代码以及所依赖的 .NET Framework 类库和任何第三方库中的代码的 Windows 动态链接库。  还包含支持代码，例如与 Windows 互操作和序列化应用程序中的对象的必要代码。  
+-   <span data-ttu-id="2c86b-149">*\<appName>*.dll，指包含所有应用程序代码以及所依赖的 .NET Framework 类库和任何第三方库中的代码的 Windows 动态链接库。</span><span class="sxs-lookup"><span data-stu-id="2c86b-149">*\<appName>*.dll, a Windows dynamic link library that contains all your application code, as well as code from the .NET Framework Class Library and any third-party libraries that you have a dependency on.</span></span>  <span data-ttu-id="2c86b-150">还包含支持代码，例如与 Windows 互操作和序列化应用程序中的对象的必要代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-150">It also contains support code, such as the code necessary to interoperate with Windows and to serialize objects in your app.</span></span>  
   
--   mrt100\_app.dll，指提供运行时服务（如垃圾回收）的重构运行时。  
+-   <span data-ttu-id="2c86b-151">mrt100_app.dll，指提供运行时服务（如垃圾回收）的重构运行时。</span><span class="sxs-lookup"><span data-stu-id="2c86b-151">mrt100_app.dll, a refactored runtime that provides runtime services such as garbage collection.</span></span>  
   
- 所有依赖项均由应用程序的 APPX 清单捕获。  除了在 appx 包中直接绑定的应用程序 exe、dll 和 mrt100\_app.dll，还包括以下两个文件：  
+ <span data-ttu-id="2c86b-152">所有依赖项均由应用程序的 APPX 清单捕获。</span><span class="sxs-lookup"><span data-stu-id="2c86b-152">All dependencies are captured by the app's APPX manifest.</span></span>  <span data-ttu-id="2c86b-153">除了在 appx 包中直接绑定的应用程序 exe、dll 和 mrt100_app.dll，还包括以下两个文件：</span><span class="sxs-lookup"><span data-stu-id="2c86b-153">In addition to the application exe, dll, and mrt100_app.dll, which are bundled directly in the appx package, this includes two more files:</span></span>  
   
--   mrt100\_app.dll 使用的 C 运行时 \(CRT\) 库 msvcr140\_app.dll。  它由架构引用包含在程序包内。  
+-   <span data-ttu-id="2c86b-154">mrt100_app.dll 使用的 C 运行时 (CRT) 库 msvcr140_app.dll。</span><span class="sxs-lookup"><span data-stu-id="2c86b-154">msvcr140_app.dll, the C run-time (CRT) library used by mrt100_app.dll.</span></span> <span data-ttu-id="2c86b-155">它由架构引用包含在程序包内。</span><span class="sxs-lookup"><span data-stu-id="2c86b-155">It is included by a framework reference in the package.</span></span>  
   
--   mrt100.dll。  此库包含可提高 mrt100\_app.dll 性能的函数，但没有此库，mrt100\_app.dll 也可正常运行。  如果此库存在，可从本地计算机上的 system32 目录加载它。  
+-   <span data-ttu-id="2c86b-156">mrt100.dll。</span><span class="sxs-lookup"><span data-stu-id="2c86b-156">mrt100.dll.</span></span> <span data-ttu-id="2c86b-157">此库包含可提高 mrt100_app.dll 性能的函数，但没有此库，mrt100_app.dll 也可正常运行。</span><span class="sxs-lookup"><span data-stu-id="2c86b-157">This library includes functions that can improve the performance of mrt100_app.dll, although its absence does not prevent mrt100_app.dll from functioning.</span></span> <span data-ttu-id="2c86b-158">如果此库存在，可从本地计算机上的 system32 目录加载它。</span><span class="sxs-lookup"><span data-stu-id="2c86b-158">It is loaded from the system32 directory on the local machine, if it is present.</span></span>  
   
- 因为 .NET 本机工具链只在获知应用程序实际调用了实现代码时才会将它链接到应用程序中，所以应用程序中可能不包含以下方案中所需的元数据或实现代码：  
+ <span data-ttu-id="2c86b-159">因为 .NET 本机工具链只在获知应用程序实际调用了实现代码时才会将它链接到应用程序中，所以应用程序中可能不包含以下方案中所需的元数据或实现代码：</span><span class="sxs-lookup"><span data-stu-id="2c86b-159">Because the .NET Native tool chain links implementation code into your app only if it knows that your app actually invokes that code, either the metadata or the implementation code required in the following scenarios may not be included with your app:</span></span>  
   
--   反射。  
+-   <span data-ttu-id="2c86b-160">反射。</span><span class="sxs-lookup"><span data-stu-id="2c86b-160">Reflection.</span></span>  
   
--   动态或后期绑定调用。  
+-   <span data-ttu-id="2c86b-161">动态或后期绑定调用。</span><span class="sxs-lookup"><span data-stu-id="2c86b-161">Dynamic or late-bound invocation.</span></span>  
   
--   序列化和反序列化。  
+-   <span data-ttu-id="2c86b-162">序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="2c86b-162">Serialization and deserialization.</span></span>  
   
--   COM 互操作。  
+-   <span data-ttu-id="2c86b-163">COM 互操作。</span><span class="sxs-lookup"><span data-stu-id="2c86b-163">COM interop.</span></span>  
   
- 如果在运行时缺少必需的元数据或实现代码，.NET 本机运行时将引发异常。  可通过使用[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)（即，可指定其元数据或实现代码必须在运行时可用的程序元素并向其分配运行时策略的 XML 文件），防止这些异常并确保 .NET 本机工具链包含所需的元数据和实现代码。  下面是添加到 .NET 本机工具链编译的 Windows 应用商店项目中的默认运行时指令文件：  
+ <span data-ttu-id="2c86b-164">如果在运行时缺少必需的元数据或实现代码，.NET Native 运行时将引发异常。</span><span class="sxs-lookup"><span data-stu-id="2c86b-164">If the necessary metadata or implementation code is absent at runtime, the .NET Native runtime throws an exception.</span></span> <span data-ttu-id="2c86b-165">可通过使用[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)（即，可指定其元数据或实现代码必须在运行时可用的程序元素并向其分配运行时策略的 XML 文件），防止这些异常并确保 .NET Native 工具链包含所需的元数据和实现代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-165">You can prevent these exceptions, and ensure that the .NET Native tool chain includes the required metadata and implementation code, by using a [runtime directives file](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md), an XML file that designates the program elements whose metadata or implementation code must be available at runtime and assigns a runtime policy to them.</span></span> <span data-ttu-id="2c86b-166">下面是添加到 .NET 本机工具链编译的 Windows 应用商店项目中的默认运行时指令文件：</span><span class="sxs-lookup"><span data-stu-id="2c86b-166">The following is the default runtime directives file that is added to a Windows Store project that is compiled by the .NET Native tool chain:</span></span>  
   
-```  
-  
+```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
   <Application>  
     <Assembly Name="*Application*" Dynamic="Required All" />  
   </Application>  
 </Directives>  
-  
 ```  
   
- 通过它，应用程序包中所有程序集的所有类型和所有成员都可执行反射和动态调用。  然而，.NET Framework 类库程序集中的类型无法借此执行反射或动态激活。  在很多情况下，这已足够。  
+ <span data-ttu-id="2c86b-167">通过它，应用程序包中所有程序集的所有类型和所有成员都可执行反射和动态调用。</span><span class="sxs-lookup"><span data-stu-id="2c86b-167">This enables all the types, as well as all their members, in all the assemblies in your app package for reflection and dynamic invocation.</span></span> <span data-ttu-id="2c86b-168">然而，.NET Framework 类库程序集中的类型无法借此执行反射或动态激活。</span><span class="sxs-lookup"><span data-stu-id="2c86b-168">However, it does not enable reflection or dynamic activation of types in .NET Framework Class Library assemblies.</span></span> <span data-ttu-id="2c86b-169">在很多情况下，这已足够。</span><span class="sxs-lookup"><span data-stu-id="2c86b-169">In many cases, this is adequate.</span></span>  
   
-## .NET 本机和 NGEN  
- [本机映像生成器](../../../docs/framework/tools/ngen-exe-native-image-generator.md) \(NGEN\) 将程序集编译为本机代码，并将其安装在本地计算机的本机映像缓存中。  然而，尽管 NGEN 与 .NET 本机一样都生成本机代码，但在一些重要方面它又与 .NET 本机不同：  
+## <a name="net-native-and-ngen"></a><span data-ttu-id="2c86b-170">.NET 本机和 NGEN</span><span class="sxs-lookup"><span data-stu-id="2c86b-170">.NET Native and NGEN</span></span>  
+ <span data-ttu-id="2c86b-171">[本机映像生成器](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) 将程序集编译为本机代码，并将其安装在本地计算机的本机映像缓存中。</span><span class="sxs-lookup"><span data-stu-id="2c86b-171">The [(Native Image Generator](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) compiles assemblies to native code and installs them in the native image cache on the local computer.</span></span> <span data-ttu-id="2c86b-172">然而，尽管 NGEN 与 .NET Native 一样都生成本机代码，但在一些重要方面它又与 .NET Native 不同：</span><span class="sxs-lookup"><span data-stu-id="2c86b-172">However, although NGEN, like .NET Native, produces native code, it differs from .NET Native in some significant ways:</span></span>  
   
--   如果特定方法中没有可用的本机映像，NGEN 将转而使用 JITing 代码。  这意味着本机映像必须继续在 NGEN 需要回退到 JIT 编译的事件中包括元数据和 IL。  与此相反，.NET 本机仅生成本机映像并且不会回退到 JIT 编译。  因此，仅必须保留某些反射、序列化和互操作方案所需的元数据。  
+-   <span data-ttu-id="2c86b-173">如果特定方法中没有可用的本机映像，NGEN 将转而使用 JITing 代码。</span><span class="sxs-lookup"><span data-stu-id="2c86b-173">If no native image is available for a particular method, NGEN falls back to JITing code.</span></span> <span data-ttu-id="2c86b-174">这意味着本机映像必须继续在 NGEN 需要回退到 JIT 编译的事件中包括元数据和 IL。</span><span class="sxs-lookup"><span data-stu-id="2c86b-174">This means that native images must continue to include metadata and IL in the event that NGEN needs to fall back to JIT compilation.</span></span> <span data-ttu-id="2c86b-175">与此相反，.NET 本机仅生成本机映像并且不会回退到 JIT 编译。</span><span class="sxs-lookup"><span data-stu-id="2c86b-175">In contrast, .NET Native produces only native images and does not fall back to JIT compilation.</span></span> <span data-ttu-id="2c86b-176">因此，仅必须保留某些反射、序列化和互操作方案所需的元数据。</span><span class="sxs-lookup"><span data-stu-id="2c86b-176">As a result, only metadata required for some reflection, serialization, and interop scenarios must be preserved.</span></span>  
   
--   NGEN 继续依赖完整公共语言运行时来执行程序集加载、远程处理、互操作、内存管理、垃圾回收以及 JIT 编译（若必要）等服务。  在 .NET 本机中，其中很多服务都是不必要的（如 JIT 编译），或者已在生成时进行解析并纳入应用程序集。  其余服务（其中最重要的是垃圾回收）均包含在名为 mrt100\_app.dll 的较小重构运行时中。  
+-   <span data-ttu-id="2c86b-177">NGEN 继续依赖完整公共语言运行时来执行程序集加载、远程处理、互操作、内存管理、垃圾回收以及 JIT 编译（若必要）等服务。</span><span class="sxs-lookup"><span data-stu-id="2c86b-177">NGEN continues to rely on the full common language runtime for services such as assembly loading, remoting, interop, memory management, garbage collection, and, if necessary, JIT compilation.</span></span> <span data-ttu-id="2c86b-178">在 .NET 本机中，其中很多服务都是不必要的（如 JIT 编译），或者已在生成时进行解析并纳入应用程序集。</span><span class="sxs-lookup"><span data-stu-id="2c86b-178">In .NET Native, many of these services are either unnecessary (JIT compilation) or are resolved at build-time and incorporated in the app assembly.</span></span> <span data-ttu-id="2c86b-179">其余服务（其中最重要的是垃圾回收）均包含在名为 mrt100_app.dll 的较小重构运行时中。</span><span class="sxs-lookup"><span data-stu-id="2c86b-179">The remaining services, the most important of which is garbage collection, are included in a much smaller, refactored runtime named mrt100_app.dll.</span></span>  
   
--   NGEN 映像往往非常脆弱。  例如，如果修补或更改了依赖项，通常需要使用它的程序集也重新执行 NGEN 操作。  对于 .NET Framework 类库中的系统程序集尤其如此。  相反，.NET 本机允许独立提供应用程序。  
+-   <span data-ttu-id="2c86b-180">NGEN 映像往往非常脆弱。</span><span class="sxs-lookup"><span data-stu-id="2c86b-180">NGEN images tend to be fragile.</span></span> <span data-ttu-id="2c86b-181">例如，如果修补或更改了依赖项，通常需要使用它的程序集也重新执行 NGEN 操作。</span><span class="sxs-lookup"><span data-stu-id="2c86b-181">For example, a patch or change to a dependency typically requires that the assemblies that use it also be re-NGENed.</span></span> <span data-ttu-id="2c86b-182">对于 .NET Framework 类库中的系统程序集尤其如此。</span><span class="sxs-lookup"><span data-stu-id="2c86b-182">This is particularly true of system assemblies in the .NET Framework Class Library.</span></span> <span data-ttu-id="2c86b-183">相反，.NET 本机允许独立提供应用程序。</span><span class="sxs-lookup"><span data-stu-id="2c86b-183">In contrast, .NET Native allows applications to be served independently of one another.</span></span>  
   
-## 请参阅  
- [Inside .NET 本机（Channel 9 视频）](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)   
- [反射和 .NET 本机](../../../docs/framework/net-native/reflection-and-net-native.md)   
- [.NET 本机一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+## <a name="see-also"></a><span data-ttu-id="2c86b-184">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2c86b-184">See Also</span></span>  
+ <span data-ttu-id="2c86b-185">[元数据和自描述组件](../../../docs/standard/metadata-and-self-describing-components.md) </span><span class="sxs-lookup"><span data-stu-id="2c86b-185">[Metadata and Self-Describing Components](../../../docs/standard/metadata-and-self-describing-components.md) </span></span>  
+ <span data-ttu-id="2c86b-186">[内部 .NET Native（第 9 频道视频）](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native) </span><span class="sxs-lookup"><span data-stu-id="2c86b-186">[Inside .NET Native (Channel 9 Video)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native) </span></span>  
+ <span data-ttu-id="2c86b-187">[反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) </span><span class="sxs-lookup"><span data-stu-id="2c86b-187">[Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) </span></span>  
+ [<span data-ttu-id="2c86b-188">.NET Native 一般疑难解答</span><span class="sxs-lookup"><span data-stu-id="2c86b-188">.NET Native General Troubleshooting</span></span>](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+

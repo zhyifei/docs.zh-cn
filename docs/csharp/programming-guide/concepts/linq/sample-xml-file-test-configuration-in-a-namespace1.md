@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：测试命名空间中的配置
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。 该 XML 在某个命名空间中。  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="4a564-102">示例 XML 文件：测试命名空间中的配置</span><span class="sxs-lookup"><span data-stu-id="4a564-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="4a564-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="4a564-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="4a564-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="4a564-104">This is a test configuration file.</span></span> <span data-ttu-id="4a564-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="4a564-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="4a564-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="4a564-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +73,6 @@ ms.lasthandoff: 07/28/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="4a564-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="4a564-107">See Also</span></span>  
+ [<span data-ttu-id="4a564-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4a564-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

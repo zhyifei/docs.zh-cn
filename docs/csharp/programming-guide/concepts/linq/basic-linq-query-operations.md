@@ -51,85 +51,85 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
-本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
+# <a name="basic-linq-query-operations-c"></a><span data-ttu-id="7babb-102">基本 LINQ 查询操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="7babb-102">Basic LINQ Query Operations (C#)</span></span>
+<span data-ttu-id="7babb-103">本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。</span><span class="sxs-lookup"><span data-stu-id="7babb-103">This topic gives a brief introduction to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions and some of the typical kinds of operations that you perform in a query.</span></span> <span data-ttu-id="7babb-104">下面各主题中提供了更具体的信息：</span><span class="sxs-lookup"><span data-stu-id="7babb-104">More detailed information is in the following topics:</span></span>  
   
- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [<span data-ttu-id="7babb-105">LINQ 查询表达式</span><span class="sxs-lookup"><span data-stu-id="7babb-105">LINQ Query Expressions</span></span>](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
   
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="7babb-106">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="7babb-106">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
   
- [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-  
-> [!NOTE]
->  如果你已熟悉查询语言（如 SQL 或 XQuery），则可以跳过本主题的大部分内容。 请参阅下一节中的“`from` 子句”部分，了解 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的子句顺序。  
-  
-## <a name="obtaining-a-data-source"></a>获取数据源  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)。  
-  
- [!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
-  
- 范围变量就像 `foreach` 循环中的迭代变量，但查询表达式中不会真正发生迭代。 当执行查询时，范围变量将充当对 `customers` 中每个连续的元素的引用。 由于编译器可以推断 `cust` 的类型，因此无需显式指定它。 可通过 `let` 子句引入其他范围变量。 有关详细信息，请参阅 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
+ [<span data-ttu-id="7babb-107">演练：用 C# 编写查询</span><span class="sxs-lookup"><span data-stu-id="7babb-107">Walkthrough: Writing Queries in C#</span></span>](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  对于非泛型数据源（例如 <xref:System.Collections.ArrayList>），必须显式键入范围变量。 有关详细信息，请参阅[如何：使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) 和 [From 子句](../../../../csharp/language-reference/keywords/from-clause.md)查询 ArrayList。  
+>  <span data-ttu-id="7babb-108">如果你已熟悉查询语言（如 SQL 或 XQuery），则可以跳过本主题的大部分内容。</span><span class="sxs-lookup"><span data-stu-id="7babb-108">If you already are familiar with a query language such as SQL or XQuery, you can skip most of this topic.</span></span> <span data-ttu-id="7babb-109">请参阅下一节中的“`from` 子句”部分，了解 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的子句顺序。</span><span class="sxs-lookup"><span data-stu-id="7babb-109">Read about the "`from` clause" in the next section to learn about the order of clauses in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span>  
   
-## <a name="filtering"></a>筛选  
- 或许，最常见的查询操作是以布尔表达式的形式应用筛选器。 筛选器使查询仅返回表达式为 true 的元素。 将通过使用 `where` 子句生成结果。 筛选器实际指定要从源序列排除哪些元素。 在下列示例中，仅返回地址位于“London”的 `customers`。  
+## <a name="obtaining-a-data-source"></a><span data-ttu-id="7babb-110">获取数据源</span><span class="sxs-lookup"><span data-stu-id="7babb-110">Obtaining a Data Source</span></span>  
+ <span data-ttu-id="7babb-111">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定数据源。</span><span class="sxs-lookup"><span data-stu-id="7babb-111">In a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, the first step is to specify the data source.</span></span> <span data-ttu-id="7babb-112">和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。</span><span class="sxs-lookup"><span data-stu-id="7babb-112">In C# as in most programming languages a variable must be declared before it can be used.</span></span> <span data-ttu-id="7babb-113">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)。</span><span class="sxs-lookup"><span data-stu-id="7babb-113">In a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, the `from` clause comes first in order to introduce the data source (`customers`) and the *range variable* (`cust`).</span></span>  
   
- [!code-cs[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
+ <span data-ttu-id="7babb-114">[!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-114">[!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]</span></span>  
   
- 可使用熟悉的 C# 逻辑 `AND` 和 `OR` 运算符，在 `where` 子句中根据需要应用尽可能多的筛选器表达式。 例如，若要仅返回来自“London”的客户 `AND` 该客户名称为“Devon”，可编写以下代码：  
+ <span data-ttu-id="7babb-115">范围变量就像 `foreach` 循环中的迭代变量，但查询表达式中不会真正发生迭代。</span><span class="sxs-lookup"><span data-stu-id="7babb-115">The range variable is like the iteration variable in a `foreach` loop except that no actual iteration occurs in a query expression.</span></span> <span data-ttu-id="7babb-116">当执行查询时，范围变量将充当对 `customers` 中每个连续的元素的引用。</span><span class="sxs-lookup"><span data-stu-id="7babb-116">When the query is executed, the range variable will serve as a reference to each successive element in `customers`.</span></span> <span data-ttu-id="7babb-117">由于编译器可以推断 `cust` 的类型，因此无需显式指定它。</span><span class="sxs-lookup"><span data-stu-id="7babb-117">Because the compiler can infer the type of `cust`, you do not have to specify it explicitly.</span></span> <span data-ttu-id="7babb-118">可通过 `let` 子句引入其他范围变量。</span><span class="sxs-lookup"><span data-stu-id="7babb-118">Additional range variables can be introduced by a `let` clause.</span></span> <span data-ttu-id="7babb-119">有关详细信息，请参阅 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="7babb-119">For more information, see [let clause](../../../../csharp/language-reference/keywords/let-clause.md).</span></span>  
   
- [!code-cs[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
+> [!NOTE]
+>  <span data-ttu-id="7babb-120">对于非泛型数据源（例如 <xref:System.Collections.ArrayList>），必须显式键入范围变量。</span><span class="sxs-lookup"><span data-stu-id="7babb-120">For non-generic data sources such as <xref:System.Collections.ArrayList>, the range variable must be explicitly typed.</span></span> <span data-ttu-id="7babb-121">有关详细信息，请参阅[如何：使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) 和 [From 子句](../../../../csharp/language-reference/keywords/from-clause.md)查询 ArrayList。</span><span class="sxs-lookup"><span data-stu-id="7babb-121">For more information, see [How to: Query an ArrayList with LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) and [from clause](../../../../csharp/language-reference/keywords/from-clause.md).</span></span>  
   
- 要返回来自 London 或 Paris 的客户，可编写以下代码：  
+## <a name="filtering"></a><span data-ttu-id="7babb-122">筛选</span><span class="sxs-lookup"><span data-stu-id="7babb-122">Filtering</span></span>  
+ <span data-ttu-id="7babb-123">或许，最常见的查询操作是以布尔表达式的形式应用筛选器。</span><span class="sxs-lookup"><span data-stu-id="7babb-123">Probably the most common query operation is to apply a filter in the form of a Boolean expression.</span></span> <span data-ttu-id="7babb-124">筛选器使查询仅返回表达式为 true 的元素。</span><span class="sxs-lookup"><span data-stu-id="7babb-124">The filter causes the query to return only those elements for which the expression is true.</span></span> <span data-ttu-id="7babb-125">将通过使用 `where` 子句生成结果。</span><span class="sxs-lookup"><span data-stu-id="7babb-125">The result is produced by using the `where` clause.</span></span> <span data-ttu-id="7babb-126">筛选器实际指定要从源序列排除哪些元素。</span><span class="sxs-lookup"><span data-stu-id="7babb-126">The filter in effect specifies which elements to exclude from the source sequence.</span></span> <span data-ttu-id="7babb-127">在下列示例中，仅返回地址位于“London”的 `customers`。</span><span class="sxs-lookup"><span data-stu-id="7babb-127">In the following example, only those `customers` who have an address in London are returned.</span></span>  
   
- [!code-cs[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
+ <span data-ttu-id="7babb-128">[!code-cs[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-128">[!code-cs[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]</span></span>  
   
- 有关详细信息，请参阅 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。  
+ <span data-ttu-id="7babb-129">可使用熟悉的 C# 逻辑 `AND` 和 `OR` 运算符，在 `where` 子句中根据需要应用尽可能多的筛选器表达式。</span><span class="sxs-lookup"><span data-stu-id="7babb-129">You can use the familiar C# logical `AND` and `OR` operators to apply as many filter expressions as necessary in the `where` clause.</span></span> <span data-ttu-id="7babb-130">例如，若要仅返回来自“London”的客户 `AND` 该客户名称为“Devon”，可编写以下代码：</span><span class="sxs-lookup"><span data-stu-id="7babb-130">For example, to return only customers from "London" `AND` whose name is "Devon" you would write the following code:</span></span>  
   
-## <a name="ordering"></a>订购  
- 对返回的数据进行排序通常很方便。 `orderby` 子句根据要排序类型的默认比较器，对返回序列中的元素排序。 例如，基于 `Name` 属性，可将下列查询扩展为对结果排序。 由于 `Name` 是字符串，默认比较器将按字母顺序从 A 到 Z 进行排序。  
+ <span data-ttu-id="7babb-131">[!code-cs[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-131">[!code-cs[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]</span></span>  
   
- [!code-cs[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
+ <span data-ttu-id="7babb-132">要返回来自 London 或 Paris 的客户，可编写以下代码：</span><span class="sxs-lookup"><span data-stu-id="7babb-132">To return customers from London or Paris, you would write the following code:</span></span>  
   
- 要对结果进行从 Z 到 A 的逆序排序，请使用 `orderby…descending` 子句。  
+ <span data-ttu-id="7babb-133">[!code-cs[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-133">[!code-cs[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]</span></span>  
   
- 有关详细信息，请参阅 [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)。  
+ <span data-ttu-id="7babb-134">有关详细信息，请参阅 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="7babb-134">For more information, see [where clause](../../../../csharp/language-reference/keywords/where-clause.md).</span></span>  
   
-## <a name="grouping"></a>分组  
- `group` 子句用于对根据您指定的键所获得的结果进行分组。 例如，可指定按 `City` 对结果进行分组，使来自 London 或 Paris 的所有客户位于单独的组内。 在这种情况下，`cust.City` 是键。  
+## <a name="ordering"></a><span data-ttu-id="7babb-135">订购</span><span class="sxs-lookup"><span data-stu-id="7babb-135">Ordering</span></span>  
+ <span data-ttu-id="7babb-136">对返回的数据进行排序通常很方便。</span><span class="sxs-lookup"><span data-stu-id="7babb-136">Often it is convenient to sort the returned data.</span></span> <span data-ttu-id="7babb-137">`orderby` 子句根据要排序类型的默认比较器，对返回序列中的元素排序。</span><span class="sxs-lookup"><span data-stu-id="7babb-137">The `orderby` clause will cause the elements in the returned sequence to be sorted according to the default comparer for the type being sorted.</span></span> <span data-ttu-id="7babb-138">例如，基于 `Name` 属性，可将下列查询扩展为对结果排序。</span><span class="sxs-lookup"><span data-stu-id="7babb-138">For example, the following query can be extended to sort the results based on the `Name` property.</span></span> <span data-ttu-id="7babb-139">由于 `Name` 是字符串，默认比较器将按字母顺序从 A 到 Z 进行排序。</span><span class="sxs-lookup"><span data-stu-id="7babb-139">Because `Name` is a string, the default comparer performs an alphabetical sort from A to Z.</span></span>  
   
- [!code-cs[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
+ <span data-ttu-id="7babb-140">[!code-cs[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-140">[!code-cs[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]</span></span>  
   
- 使用 `group` 子句结束查询时，结果将以列表的形式列出。 列表中的每个元素都是具有 `Key` 成员的对象，列表中的元素根据该键被分组。 在循环访问生成组序列的查询时，必须使用嵌套 `foreach` 循环。 外层循环循环访问每个组，内层循环循环访问每个组的成员。  
+ <span data-ttu-id="7babb-141">要对结果进行从 Z 到 A 的逆序排序，请使用 `orderby…descending` 子句。</span><span class="sxs-lookup"><span data-stu-id="7babb-141">To order the results in reverse order, from Z to A, use the `orderby…descending` clause.</span></span>  
   
- 如果必须引用某个组操作的结果，可使用 `into` 关键字创建能被进一步查询的标识符。 下列查询仅返回包含两个以上客户的组：  
+ <span data-ttu-id="7babb-142">有关详细信息，请参阅 [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="7babb-142">For more information, see [orderby clause](../../../../csharp/language-reference/keywords/orderby-clause.md).</span></span>  
   
- [!code-cs[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
+## <a name="grouping"></a><span data-ttu-id="7babb-143">分组</span><span class="sxs-lookup"><span data-stu-id="7babb-143">Grouping</span></span>  
+ <span data-ttu-id="7babb-144">`group` 子句用于对根据您指定的键所获得的结果进行分组。</span><span class="sxs-lookup"><span data-stu-id="7babb-144">The `group` clause enables you to group your results based on a key that you specify.</span></span> <span data-ttu-id="7babb-145">例如，可指定按 `City` 对结果进行分组，使来自 London 或 Paris 的所有客户位于单独的组内。</span><span class="sxs-lookup"><span data-stu-id="7babb-145">For example you could specify that the results should be grouped by the `City` so that all customers from London or Paris are in individual groups.</span></span> <span data-ttu-id="7babb-146">在这种情况下，`cust.City` 是键。</span><span class="sxs-lookup"><span data-stu-id="7babb-146">In this case, `cust.City` is the key.</span></span>  
   
- 有关详细信息，请参阅 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
+ <span data-ttu-id="7babb-147">[!code-cs[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-147">[!code-cs[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]</span></span>  
   
-## <a name="joining"></a>联接  
- 联接操作在不同序列间创建关联，这些序列在数据源中未被显式模块化。 例如，可通过执行联接来查找所有位置相同的客户和分销商。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，`join` 子句始终作用于对象集合，而非直接作用于数据库表。  
+ <span data-ttu-id="7babb-148">使用 `group` 子句结束查询时，结果将以列表的形式列出。</span><span class="sxs-lookup"><span data-stu-id="7babb-148">When you end a query with a `group` clause, your results take the form of a list of lists.</span></span> <span data-ttu-id="7babb-149">列表中的每个元素都是具有 `Key` 成员的对象，列表中的元素根据该键被分组。</span><span class="sxs-lookup"><span data-stu-id="7babb-149">Each element in the list is an object that has a `Key` member and a list of elements that are grouped under that key.</span></span> <span data-ttu-id="7babb-150">在循环访问生成组序列的查询时，必须使用嵌套 `foreach` 循环。</span><span class="sxs-lookup"><span data-stu-id="7babb-150">When you iterate over a query that produces a sequence of groups, you must use a nested `foreach` loop.</span></span> <span data-ttu-id="7babb-151">外层循环循环访问每个组，内层循环循环访问每个组的成员。</span><span class="sxs-lookup"><span data-stu-id="7babb-151">The outer loop iterates over each group, and the inner loop iterates over each group's members.</span></span>  
   
- [!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
+ <span data-ttu-id="7babb-152">如果必须引用某个组操作的结果，可使用 `into` 关键字创建能被进一步查询的标识符。</span><span class="sxs-lookup"><span data-stu-id="7babb-152">If you must refer to the results of a group operation, you can use the `into` keyword to create an identifier that can be queried further.</span></span> <span data-ttu-id="7babb-153">下列查询仅返回包含两个以上客户的组：</span><span class="sxs-lookup"><span data-stu-id="7babb-153">The following query returns only those groups that contain more than two customers:</span></span>  
   
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，不必像在 SQL 中那样频繁使用 `join`，因为 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中的外键在对象模型中表示为包含项集合的属性。 例如 `Customer` 对象包含 `Order` 对象的集合。 不必执行联接，只需使用点表示法访问订单：  
+ <span data-ttu-id="7babb-154">[!code-cs[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-154">[!code-cs[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]</span></span>  
+  
+ <span data-ttu-id="7babb-155">有关详细信息，请参阅 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="7babb-155">For more information, see [group clause](../../../../csharp/language-reference/keywords/group-clause.md).</span></span>  
+  
+## <a name="joining"></a><span data-ttu-id="7babb-156">联接</span><span class="sxs-lookup"><span data-stu-id="7babb-156">Joining</span></span>  
+ <span data-ttu-id="7babb-157">联接操作在不同序列间创建关联，这些序列在数据源中未被显式模块化。</span><span class="sxs-lookup"><span data-stu-id="7babb-157">Join operations create associations between sequences that are not explicitly modeled in the data sources.</span></span> <span data-ttu-id="7babb-158">例如，可通过执行联接来查找所有位置相同的客户和分销商。</span><span class="sxs-lookup"><span data-stu-id="7babb-158">For example you can perform a join to find all the customers and distributors who have the same location.</span></span> <span data-ttu-id="7babb-159">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，`join` 子句始终作用于对象集合，而非直接作用于数据库表。</span><span class="sxs-lookup"><span data-stu-id="7babb-159">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] the `join` clause always works against object collections instead of database tables directly.</span></span>  
+  
+ <span data-ttu-id="7babb-160">[!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]</span><span class="sxs-lookup"><span data-stu-id="7babb-160">[!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]</span></span>  
+  
+ <span data-ttu-id="7babb-161">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，不必像在 SQL 中那样频繁使用 `join`，因为 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中的外键在对象模型中表示为包含项集合的属性。</span><span class="sxs-lookup"><span data-stu-id="7babb-161">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] you do not have to use `join` as often as you do in SQL because foreign keys in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] are represented in the object model as properties that hold a collection of items.</span></span> <span data-ttu-id="7babb-162">例如 `Customer` 对象包含 `Order` 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="7babb-162">For example, a `Customer` object contains a collection of `Order` objects.</span></span> <span data-ttu-id="7babb-163">不必执行联接，只需使用点表示法访问订单：</span><span class="sxs-lookup"><span data-stu-id="7babb-163">Rather than performing a join, you access the orders by using dot notation:</span></span>  
   
 ```  
 from order in Customer.Orders...  
 ```  
   
- 有关详细信息，请参阅 [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)。  
+ <span data-ttu-id="7babb-164">有关详细信息，请参阅 [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="7babb-164">For more information, see [join clause](../../../../csharp/language-reference/keywords/join-clause.md).</span></span>  
   
-## <a name="selecting-projections"></a>选择（投影）  
- `select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。 例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。 当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影。 使用投影转换数据是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的一种强大功能。 有关详细信息，请参阅[使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) 和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)进行数据转换。  
+## <a name="selecting-projections"></a><span data-ttu-id="7babb-165">选择（投影）</span><span class="sxs-lookup"><span data-stu-id="7babb-165">Selecting (Projections)</span></span>  
+ <span data-ttu-id="7babb-166">`select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。</span><span class="sxs-lookup"><span data-stu-id="7babb-166">The `select` clause produces the results of the query and specifies the "shape" or type of each returned element.</span></span> <span data-ttu-id="7babb-167">例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。</span><span class="sxs-lookup"><span data-stu-id="7babb-167">For example, you can specify whether your results will consist of complete `Customer` objects, just one member, a subset of members, or some completely different result type based on a computation or new object creation.</span></span> <span data-ttu-id="7babb-168">当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影。</span><span class="sxs-lookup"><span data-stu-id="7babb-168">When the `select` clause produces something other than a copy of the source element, the operation is called a *projection*.</span></span> <span data-ttu-id="7babb-169">使用投影转换数据是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的一种强大功能。</span><span class="sxs-lookup"><span data-stu-id="7babb-169">The use of projections to transform data is a powerful capability of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span> <span data-ttu-id="7babb-170">有关详细信息，请参阅[使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) 和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)进行数据转换。</span><span class="sxs-lookup"><span data-stu-id="7babb-170">For more information, see [Data Transformations with LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) and [select clause](../../../../csharp/language-reference/keywords/select-clause.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)   
- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a><span data-ttu-id="7babb-171">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7babb-171">See Also</span></span>  
+ <span data-ttu-id="7babb-172">[C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) </span><span class="sxs-lookup"><span data-stu-id="7babb-172">[Getting Started with LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) </span></span>  
+ <span data-ttu-id="7babb-173">[LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="7babb-173">[LINQ Query Expressions](../../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ <span data-ttu-id="7babb-174">[演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md) </span><span class="sxs-lookup"><span data-stu-id="7babb-174">[Walkthrough: Writing Queries in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md) </span></span>  
+ <span data-ttu-id="7babb-175">[查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="7babb-175">[Query Keywords (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md) </span></span>  
+ [<span data-ttu-id="7babb-176">匿名类型</span><span class="sxs-lookup"><span data-stu-id="7babb-176">Anonymous Types</span></span>](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 

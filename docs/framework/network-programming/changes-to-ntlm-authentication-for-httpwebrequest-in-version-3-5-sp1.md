@@ -1,66 +1,72 @@
 ---
-title: "3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
-安全更改进行了.NET Framework版本3.5 SP1和之后影响集成Windows身份验证方式。 <xref:System.Net.HttpWebRequest>、 <xref:System.Net.HttpListener>、 <xref:System.Net.Security.NegotiateStream>和相关的选件类处理在System.Net命名空间。  这些更改会影响使用这些选件类进行web请求和接收答复使用基于NTLM的集成Windows身份验证的应用程序。  此更改会影响配置为使用集成Windows身份验证的web服务器和客户端应用程序。  
+# <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a><span data-ttu-id="b1e05-102">3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改</span><span class="sxs-lookup"><span data-stu-id="b1e05-102">Changes to NTLM authentication for HttpWebRequest in Version 3.5 SP1</span></span>
+<span data-ttu-id="b1e05-103">在 .NET Framework 版本 3.5 SP1 及以上版本中做出了安全性更改，这些更改影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest>、 <xref:System.Net.HttpListener>、 <xref:System.Net.Security.NegotiateStream>以及 System.Net 命名空间中的相关类。</span><span class="sxs-lookup"><span data-stu-id="b1e05-103">Security changes were made in .NET Framework version 3.5 SP1 and later that affect how integrated Windows authentication is handled by the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, and related classes in the System.Net namespace.</span></span> <span data-ttu-id="b1e05-104">这些更改会影响使用这些类来发出 Web 请求和接收响应的应用程序，这些应用程序使用基于 NTLM 的集成式 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1e05-104">These changes can affect applications that use these classes to make web requests and receive responses where integrated Windows authentication based on NTLM is used.</span></span> <span data-ttu-id="b1e05-105">此更改会影响配置为使用集成式 Windows 身份验证的 Web 服务器和客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="b1e05-105">This change can impact web servers and client applications that are configured to use integrated Windows authentication.</span></span>  
   
-## 概述  
- 集成Windows身份验证模型允许某些凭据响应是泛型的，这意味着它们可以重用或转发的。  如果此特定设计功能不是必需的，则身份验证协议应传播目标特定信息和引导特定信息。  服务可以提供扩展保护确保凭据响应包含服务特定的信息\(如服务主体名称\(SPN\)。  在凭据交换的此信息，服务可以更好地防范可能不正确地获取了对凭据响应的恶意用途。  
+## <a name="overview"></a><span data-ttu-id="b1e05-106">概述</span><span class="sxs-lookup"><span data-stu-id="b1e05-106">Overview</span></span>  
+ <span data-ttu-id="b1e05-107">集成式 Windows 身份验证的设计能使某些凭据响应变得通用，这意味着可以重新使用或转接这些响应。</span><span class="sxs-lookup"><span data-stu-id="b1e05-107">The design of integrated Windows authentication allows for some credential responses to be universal, meaning they can be re-used or forwarded.</span></span> <span data-ttu-id="b1e05-108">如果不需要此特殊设计功能，那么身份验证协议应包含目标特定信息和通道特定信息。</span><span class="sxs-lookup"><span data-stu-id="b1e05-108">If this particular design feature is not needed, then the authentication protocols should carry target specific information as well as channel specific information.</span></span> <span data-ttu-id="b1e05-109">然后，服务可提供延伸保护，确保凭据响应包含服务主体名称 (SPN) 等服务特定信息。</span><span class="sxs-lookup"><span data-stu-id="b1e05-109">Services can then provide extended protection to ensure that credential responses contain service specific information such as a Service Principal Name (SPN).</span></span> <span data-ttu-id="b1e05-110">凭据交换中含有此信息时，服务就能更好防范恶意使用可能是通过不当方式获取的凭据响应。</span><span class="sxs-lookup"><span data-stu-id="b1e05-110">With this information in the credential exchanges, services are able to better protect against malicious use of credential responses that might have been improperly obtained.</span></span>  
   
- 在 <xref:System.Net> 和 <xref:System.Net.Security> 命名空间的多个元素委托调用的应用程序执行集成Windows身份验证。  本节介绍针对System.Net元素的更改添加到集成Windows身份验证的其用法的扩展保护。  
+ <span data-ttu-id="b1e05-111"><xref:System.Net> 和 <xref:System.Net.Security> 命名空间中的多个组件代表调用应用程序执行集成式 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1e05-111">Multiple components in the <xref:System.Net> and <xref:System.Net.Security> namespaces perform integrated Windows authentication on behalf of a calling application.</span></span> <span data-ttu-id="b1e05-112">本部分介绍为扩展 System.Net 组件在使用集成式 Windows 身份验证方面的保护对这些组件做出的更改。</span><span class="sxs-lookup"><span data-stu-id="b1e05-112">This section describes changes to System.Net components to add extended protection in their use of integrated Windows authentication.</span></span>  
   
-## 更改  
- NTLM身份验证过程使用集成Windows身份验证包括挑战由atlduck.exe目标计算机和发送回客户端计算机。  在生成自己的计算机接收问题，身份验证将失败，除非连接已启用连接\(例如IPv4地址， 127.0.0.1\)。  
+## <a name="changes"></a><span data-ttu-id="b1e05-113">更改</span><span class="sxs-lookup"><span data-stu-id="b1e05-113">Changes</span></span>  
+ <span data-ttu-id="b1e05-114">与集成式 Windows 身份验证搭配使用的 NTLM 身份验证过程包括由目标计算机发出并发送回客户端计算机的质询。</span><span class="sxs-lookup"><span data-stu-id="b1e05-114">The NTLM authentication process used with integrated Windows authentication includes a challenge issued by the destination computer and sent back to the client computer.</span></span> <span data-ttu-id="b1e05-115">计算机接收到它自己产生的质询时，身份验证将失败，除非连接为环回连接（例如 IPv4 地址 127.0.0.1）。</span><span class="sxs-lookup"><span data-stu-id="b1e05-115">When a computer receives a challenge it generated itself, the authentication will fail unless the connection is a loop back connection (IPv4 address 127.0.0.1, for example).</span></span>  
   
- 当访问运行在内部Web服务器上的服务，它访问共有的服务使用URL类似于http:\/\/contoso\/service或https:\/\/contoso\/service。  该名称“contoso”通常不是服务部署计算机的计算机名称。  使用Active Directory、DNS、NetBios、本地计算机的宿主文件\(例如通常WINDOWS \\ system32 \\ drive \\等\\宿主，\)，或本地计算机的lmhosts文件\(例如通常WINDOWS \\ system32 \\ drive \\等\\ lmhosts， <xref:System.Net> 和相关命名空间支持，\)解决名称中添加。  该名称“contoso”已解决"，以便请求发送到“contoso”发送到相应的服务器计算机。  
+ <span data-ttu-id="b1e05-116">访问在内部 Web 服务器上运行的服务时，通常使用类似于 http://contoso/service 或 https://contoso/service 的 URL 访问服务。</span><span class="sxs-lookup"><span data-stu-id="b1e05-116">When accessing a service running on an internal Web server, it is common to access the service using a URL similar to http://contoso/service or https://contoso/service.</span></span> <span data-ttu-id="b1e05-117">名称“contoso”通常不是部署了该服务的计算机的计算机名。</span><span class="sxs-lookup"><span data-stu-id="b1e05-117">The name "contoso" is often not the computer name of the computer on which the service is deployed.</span></span> <span data-ttu-id="b1e05-118"><xref:System.Net> 和相关命名空间支持使用 Active Directory、 DNS、 NetBIOS、本地计算机的主机文件（例如，通常为 WINDOWS\system32\drivers\etc\hosts），或本地计算机的 lmhosts 文件（例如，通常为 WINDOWS\system32\drivers\etc\lmhosts）将名称解析为地址。</span><span class="sxs-lookup"><span data-stu-id="b1e05-118">The <xref:System.Net> and related namespaces support using Active Directory, DNS, NetBIOS, the local computer's hosts file (typically WINDOWS\system32\drivers\etc\hosts, for example), or the local computer's lmhosts file (typically WINDOWS\system32\drivers\etc\lmhosts, for example) to resolve names to addresses.</span></span> <span data-ttu-id="b1e05-119">已解析名称“contoso”，所以发送到“contoso”的请求将发送到相应的服务器计算机。</span><span class="sxs-lookup"><span data-stu-id="b1e05-119">The name "contoso" is resolved so that requests sent to "contoso" are sent to the appropriate server computer.</span></span>  
   
- 在配置为大型部署，也很常见的做法是让一个虚拟服务器名称可以将产生与客户端应用程序和最终用户从不使用的基础设备名称的部署。  例如，可以调用在内部网络使用“contoso”的服务器， www.contoso.com，但。  此名称调用客户端web请求的宿主标头。  为指定由HTTP协议，宿主请求标头字段指定请求的资源的Internet宿主和端口号。  此信息从给定用户或引用资源\(通常HTTP URL\)的原始URI获取。  在.NET Framework 4版中，此信息可通过使用新 <xref:System.Net.HttpWebRequest.Host%2A> 属性的客户端可以设置。  
+ <span data-ttu-id="b1e05-120">为大型部署配置时，常见的情况是，将单个虚拟服务器名提供给部署，而客户端应用程序和最终用户从未使用过基础计算机名。</span><span class="sxs-lookup"><span data-stu-id="b1e05-120">When configured for large deployments, it is also common for a single virtual server name to be given to the deployment with the underlying machine names never used by client applications and end users.</span></span> <span data-ttu-id="b1e05-121">例如，可能会调用服务器 www.contoso.com，但在内部网络只需使用“contoso”。</span><span class="sxs-lookup"><span data-stu-id="b1e05-121">For example, you might call the server www.contoso.com, but on an internal network simply use "contoso".</span></span> <span data-ttu-id="b1e05-122">在客户端 Web 请求中，此名称被称为主机标头。</span><span class="sxs-lookup"><span data-stu-id="b1e05-122">This name is called the Host header in the client web request.</span></span> <span data-ttu-id="b1e05-123">根据 HTTP 协议所指定，主机请求标头字段指定所请求的资源的 Internet 主机和端口号。</span><span class="sxs-lookup"><span data-stu-id="b1e05-123">As specified by the HTTP protocol, the Host request-header field specifies the Internet host and port number of the resource being requested.</span></span> <span data-ttu-id="b1e05-124">从用户或引用资源提供的原始 URI（通常是 HTTP URL）中获取此信息。</span><span class="sxs-lookup"><span data-stu-id="b1e05-124">This information is obtained from the original URI given by the user or referring resource (generally an HTTP URL).</span></span> <span data-ttu-id="b1e05-125">在 .NET Framework 版本 4 中，此信息也可由使用新 <xref:System.Net.HttpWebRequest.Host%2A> 属性的客户端设置。</span><span class="sxs-lookup"><span data-stu-id="b1e05-125">On .NET Framework version 4, this information can also be set by the client using the new <xref:System.Net.HttpWebRequest.Host%2A> property.</span></span>  
   
- <xref:System.Net.AuthenticationManager> 选件类控件 <xref:System.Net.WebRequest> 等派生选件类和 <xref:System.Net.WebClient> 选件类使用托管身份验证元素\(“模块”\)。  <xref:System.Net.AuthenticationManager> 选件类为应用程序提供在身份验证期间使用的自定义SPN字符串提供演示 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName> 对象的属性，标记由URI字符串，。  
+ <span data-ttu-id="b1e05-126"><xref:System.Net.AuthenticationManager> 类控制由 <xref:System.Net.WebRequest> 衍生类和 <xref:System.Net.WebClient> 类使用的托管身份验证组件（“模块”）。</span><span class="sxs-lookup"><span data-stu-id="b1e05-126">The <xref:System.Net.AuthenticationManager> class controls the managed authentication components ("modules") that are used by <xref:System.Net.WebRequest> derivative classes and the <xref:System.Net.WebClient> class.</span></span> <span data-ttu-id="b1e05-127"><xref:System.Net.AuthenticationManager> 类提供一个属性，该属性公开由 URI 字符串变址的 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName> 对象，以便应用程序提供要在身份验证期间使用的自定义 SPN 字符串。</span><span class="sxs-lookup"><span data-stu-id="b1e05-127">The <xref:System.Net.AuthenticationManager> class provides a property that exposes a <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName> object, indexed by URI string, for applications to supply a custom SPN string to be used during authentication.</span></span>  
   
- 若未设置 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 属性，则默认情况下，版本 3.5 SP1 将指定在 NTLM \(NT LAN Manager\) 身份验证交换中的 SPN 的请求 URL 中使用的主机名。  在请求 URL 中使用主机名可能不同于客户端请求的 <xref:System.Net.HttpRequestHeader?displayProperty=fullName> 中指定的主机标头。  在请求 URL 中使用的主机名可能不同于服务器的实际主机名、服务器的计算机名称、计算机的 IP 地址或环回地址。  在这些情况下，Windows 将会让身份验证请求失败。  若要解决此问题，我们需要通知Windows在客户端请求\(例如“contoso”的请求URL的主机名，\)实际上是一个替代名称。本地计算机。  
+ <span data-ttu-id="b1e05-128">当 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 未设置属性时，3.5 SP1 现在默认指定在 NTLM（NT LAN 管理器）身份验证交换中 的 SPN 的请求 URL 中使用的主机名。</span><span class="sxs-lookup"><span data-stu-id="b1e05-128">Version 3.5 SP1 now defaults to specifying the host name used in the request URL in the SPN in the NTLM (NT LAN Manager) authentication exchange when the <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> property is not set.</span></span> <span data-ttu-id="b1e05-129">在请求 URL 中使用的主机名可能不同于在客户端请求中的 <xref:System.Net.HttpRequestHeader?displayProperty=fullName> 中指定的主机标头。</span><span class="sxs-lookup"><span data-stu-id="b1e05-129">The host name used in the request URL may be different from the Host header specified in the <xref:System.Net.HttpRequestHeader?displayProperty=fullName> in the client request.</span></span> <span data-ttu-id="b1e05-130">在请求 URL 中使用的主机名可能不同于服务器的实际主机名、服务器的计算机名、计算机的 IP 地址或环回地址。</span><span class="sxs-lookup"><span data-stu-id="b1e05-130">The host name used in the request URL may be different from the actual host name of the server, the machine name of the server, the computer's IP address, or the loopback address.</span></span> <span data-ttu-id="b1e05-131">在这些情况下，Windows 将无法通过身份验证请求。</span><span class="sxs-lookup"><span data-stu-id="b1e05-131">In these cases, Windows will fail the authentication request.</span></span> <span data-ttu-id="b1e05-132">要解决此问题，需要通知 Windows 客户端请求中的请求 URL 中使用的主机名（例如“contoso”）实际上是本地计算机的备用名称。</span><span class="sxs-lookup"><span data-stu-id="b1e05-132">To address the issue, we need to notify Windows that the host name used in the request URL in the client request ("contoso", for example) is actually an alternate name for the local computer.</span></span>  
   
- 具有服务器应用程序的若干种可能的方法可以在此更改处理。  该建议的方法是将映射用于请求URL的主机名对于注册表的 `BackConnectionHostNames` 键在服务器。  `BackConnectionHostNames` 注册表项通常用于映射主机名到启用地址。  步骤下面列出。  
+ <span data-ttu-id="b1e05-133">服务器应用程序有多种可行方法可暂时避开此更改所具有的问题。</span><span class="sxs-lookup"><span data-stu-id="b1e05-133">There are several possible methods for a server application to work around this change.</span></span> <span data-ttu-id="b1e05-134">建议的方法是将请求 URL 中所用主机名映射到服务器上注册表中的 `BackConnectionHostNames` 键。</span><span class="sxs-lookup"><span data-stu-id="b1e05-134">The recommended approach is to map the host name used in the request URL to the `BackConnectionHostNames` key in the registry on the server.</span></span> <span data-ttu-id="b1e05-135">`BackConnectionHostNames` 注册表项通常用于将主机名映射到环回地址。</span><span class="sxs-lookup"><span data-stu-id="b1e05-135">The `BackConnectionHostNames` registry key is normally used to map a host name to a loopback address.</span></span> <span data-ttu-id="b1e05-136">下面列出了这些步骤。</span><span class="sxs-lookup"><span data-stu-id="b1e05-136">The steps are listed below.</span></span>  
   
- 若要指定映射到启用地址，并且可以连接到本地计算机的网站的主机名，请执行以下步骤:  
+ <span data-ttu-id="b1e05-137">要指定将映射到环回地址并且可在本地计算机上连接到网站的主机名，请按以下步骤操作：</span><span class="sxs-lookup"><span data-stu-id="b1e05-137">To specify the host names that are mapped to the loopback address and can connect to Web sites on a local computer, follow these steps:</span></span>  
   
- 1.  依次单击“开始”和“运行”，键入 regedit，然后单击“确定”。  
+ 1. <span data-ttu-id="b1e05-138">单击“开始”、“运行”，键入 regedit，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="b1e05-138">Click Start, click Run, type regedit, and then click OK.</span></span>  
   
- 2.  在注册表编辑器中，找到并单击以下注册表项:  
+ 2. <span data-ttu-id="b1e05-139">在注册表编辑器中，找到以下注册表项，然后单击它：</span><span class="sxs-lookup"><span data-stu-id="b1e05-139">In Registry Editor, locate and then click the following registry key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0`  
   
- 3.  右击MSV1\_0，指向新的，然后单击多字符串值。  
+ 3. <span data-ttu-id="b1e05-140">右键单击“MSV1_0”，指向“新建”，然后单击“多字符串值”。</span><span class="sxs-lookup"><span data-stu-id="b1e05-140">Right-click MSV1_0, point to New, and then click Multi-String Value.</span></span>  
   
- 4.  键入 `BackConnectionHostNames`，然后按 Enter。  
+ 4. <span data-ttu-id="b1e05-141">键入 `BackConnectionHostNames`，然后按 Enter。</span><span class="sxs-lookup"><span data-stu-id="b1e05-141">Type `BackConnectionHostNames`, and then press ENTER.</span></span>  
   
- 5.  右击 `BackConnectionHostNames`，然后单击修改。  
+ 5. <span data-ttu-id="b1e05-142">右键单击 `BackConnectionHostNames`，然后单击“修改”。</span><span class="sxs-lookup"><span data-stu-id="b1e05-142">Right-click `BackConnectionHostNames`, and then click Modify.</span></span>  
   
- 6.  在值数据框中，键入主机名或主机名站点\(用于请求URL的主机名\)在本地计算机，然后单击"确定"。  
+ 6. <span data-ttu-id="b1e05-143">在“数值数据”框中，键入主机名或本地计算机上站点的主机名（请求 URL 中使用的主机名），然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="b1e05-143">In the Value data box, type the host name or the host names for the sites (the host name used in the request URL) that are on the local computer, and then click OK.</span></span>  
   
- 7.  出注册表编辑器，然后重新启动IISAdmin服务并运行IISReset。  
+ 7. <span data-ttu-id="b1e05-144">退出注册表编辑器，然后重新启动 IISAdmin 服务并运行 IISReset。</span><span class="sxs-lookup"><span data-stu-id="b1e05-144">Quit Registry Editor, and then restart the IISAdmin service and run IISReset.</span></span>  
   
- 较不安全工作是禁用启用检查，如中所 [http:\/\/support.microsoft.com\/kb\/896861](http://go.microsoft.com/fwlink/?LinkID=179657)述。  这将禁用保护反射攻击。  因此绑定的设置备用名称设置为希望设备实际使用的那些最好。  
+ <span data-ttu-id="b1e05-145">如 [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657) 中所述，安全级别较低的变通方法是禁用环回检查。</span><span class="sxs-lookup"><span data-stu-id="b1e05-145">A less secure work around is to disable the loop back check, as described in [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657).</span></span> <span data-ttu-id="b1e05-146">这将禁用反射攻击保护。</span><span class="sxs-lookup"><span data-stu-id="b1e05-146">This disables the protection against reflection attacks.</span></span> <span data-ttu-id="b1e05-147">因此，最好将一组备用名称限制为仅希望计算机实际使用的那些名称。</span><span class="sxs-lookup"><span data-stu-id="b1e05-147">So it is better to constrain the set of alternate names to only those you expect the machine to actually use.</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="b1e05-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b1e05-148">See Also</span></span>  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
  <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
  <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
+

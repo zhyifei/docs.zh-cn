@@ -31,27 +31,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 04103fe23ee55bb751d9604ef74614edeead8886
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c4ee57896b70d8af1a7bc245bdb45521c2442fea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>AddressOf 操作数必须是 （不带括号） 方法的名称
-`AddressOf` 运算符创建引用特定过程的过程委托实例。 语法是，如下所示。  
+# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a><span data-ttu-id="7dbd7-102">AddressOf 操作数必须是 （不带括号） 方法的名称</span><span class="sxs-lookup"><span data-stu-id="7dbd7-102">&#39;AddressOf&#39; operand must be the name of a method (without parentheses)</span></span>
+<span data-ttu-id="7dbd7-103">`AddressOf` 运算符创建引用特定过程的过程委托实例。</span><span class="sxs-lookup"><span data-stu-id="7dbd7-103">The `AddressOf` operator creates a procedure delegate instance that references a specific procedure.</span></span> <span data-ttu-id="7dbd7-104">语法是，如下所示。</span><span class="sxs-lookup"><span data-stu-id="7dbd7-104">The syntax is as follows.</span></span>  
   
- `AddressOf` `procedurename`  
+ <span data-ttu-id="7dbd7-105">`AddressOf` `procedurename`</span><span class="sxs-lookup"><span data-stu-id="7dbd7-105">`AddressOf` `procedurename`</span></span>  
   
- 插入后面的参数两边的括号`AddressOf`，这里不需要。  
+ <span data-ttu-id="7dbd7-106">插入后面的参数两边的括号`AddressOf`，这里不需要。</span><span class="sxs-lookup"><span data-stu-id="7dbd7-106">You inserted parentheses around the argument following `AddressOf`, where none are needed.</span></span>  
   
- **错误 ID:** BC30577  
+ <span data-ttu-id="7dbd7-107">**错误 ID:** BC30577</span><span class="sxs-lookup"><span data-stu-id="7dbd7-107">**Error ID:** BC30577</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7dbd7-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="7dbd7-108">To correct this error</span></span>  
   
-1.  删除后面的参数两边的括号`AddressOf`。  
+1.  <span data-ttu-id="7dbd7-109">删除后面的参数两边的括号`AddressOf`。</span><span class="sxs-lookup"><span data-stu-id="7dbd7-109">Remove the parentheses around the argument following `AddressOf`.</span></span>  
   
-2.  请确保该参数的方法名称。  
+2.  <span data-ttu-id="7dbd7-110">请确保该参数的方法名称。</span><span class="sxs-lookup"><span data-stu-id="7dbd7-110">Make sure the argument is a method name.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a><span data-ttu-id="7dbd7-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7dbd7-111">See Also</span></span>  
+ <span data-ttu-id="7dbd7-112">[AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md) </span><span class="sxs-lookup"><span data-stu-id="7dbd7-112">[AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md) </span></span>  
+<span data-ttu-id="7dbd7-113"> [委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)</span><span class="sxs-lookup"><span data-stu-id="7dbd7-113"> [Delegates](../../../visual-basic/programming-guide/language-features/delegates/index.md)</span></span>

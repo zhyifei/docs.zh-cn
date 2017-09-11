@@ -1,42 +1,47 @@
 ---
-title: "如何：为应用程序设置基于位置的缓存策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "明确定义缓存行为"
-  - "基于位置的缓存策略"
-  - "本地缓存"
-  - "请求缓存策略"
-  - "缓存 [.NET Framework]，基于位置的策略"
+title: "如何：为应用程序设置基于位置的缓存策略"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- expliciting defining cache behavior
+- location-based cache policies
+- local cache
+- request cache policies
+- cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bcfd166b108dc0cf99381869e39952b09fcfca6b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：为应用程序设置基于位置的缓存策略
-基于位置的缓存策略允许应用程序显式定义根据所请求资源的位置的缓存行为。  本主题演示如何设置缓存策略程序模型。  有关设置一个应用程序策略的信息使用配置文件，请参见 [\<requestCaching\> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="21813-102">如何：为应用程序设置基于位置的缓存策略</span><span class="sxs-lookup"><span data-stu-id="21813-102">How to: Set a Location-Based Cache Policy for an Application</span></span>
+<span data-ttu-id="21813-103">基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。</span><span class="sxs-lookup"><span data-stu-id="21813-103">Location-based cache policies allow an application to explicitly define caching behavior based on the location of the requested resource.</span></span> <span data-ttu-id="21813-104">本主题演示如何以编程方式设置缓存策略。</span><span class="sxs-lookup"><span data-stu-id="21813-104">This topic demonstrates setting the cache policy programmatically.</span></span> <span data-ttu-id="21813-105">有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="21813-105">For information on setting the policy for an application using the configuration files, see [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
   
-### 设置应用程序的基于位置的缓存策略  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a><span data-ttu-id="21813-106">为应用程序设置基于位置的缓存策略</span><span class="sxs-lookup"><span data-stu-id="21813-106">To set a location-based cache policy for an application</span></span>  
   
-1.  创建一 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象。  
+1.  <span data-ttu-id="21813-107">创建 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象。</span><span class="sxs-lookup"><span data-stu-id="21813-107">Create a <xref:System.Net.Cache.RequestCachePolicy> or <xref:System.Net.Cache.HttpRequestCachePolicy> object.</span></span>  
   
-2.  设置策略对象作为应用程序域的默认值。  
+2.  <span data-ttu-id="21813-108">将策略对象设置为应用程序域的默认对象。</span><span class="sxs-lookup"><span data-stu-id="21813-108">Set the policy object as the default for the application domain.</span></span>  
   
-### 若要设置接受的策略从缓存请求的资源  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a><span data-ttu-id="21813-109">设置获取来自缓存的请求资源的策略</span><span class="sxs-lookup"><span data-stu-id="21813-109">To set a policy that takes requested resources from a cache</span></span>  
   
--   创建如果具有接受从缓存请求的资源，因此，否则，向服务器发送请求，通过设置缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel>的策略。  请求可以由客户端和服务器之间的所有缓存执行，包括远程缓存。  
+-   <span data-ttu-id="21813-110">创建获取来自缓存的请求资源的策略（若可用），否则通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable> 向服务器发送请求。</span><span class="sxs-lookup"><span data-stu-id="21813-110">Create a policy that takes requested resources from a cache if available, and otherwise, sends requests to the server, by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>.</span></span> <span data-ttu-id="21813-111">可以由客户端和服务器之间的任何缓存实现请求，包括远程缓存。</span><span class="sxs-lookup"><span data-stu-id="21813-111">A request can be fulfilled by any cache between the client and server, including remote caches.</span></span>  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -45,7 +50,6 @@ caps.handback.revision: 10
             (HttpRequestCacheLevel.CacheIfAvailable);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
-  
     ```  
   
     ```vb  
@@ -56,9 +60,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 设置禁止所有缓存配置的资源的策略  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a><span data-ttu-id="21813-112">设置防止任何缓存提供资源的策略</span><span class="sxs-lookup"><span data-stu-id="21813-112">To set a policy that prevents any cache from supplying resources</span></span>  
   
--   创建使所有缓存提供请求的资源通过设置缓存级别。 <xref:System.Net.Cache.HttpRequestCacheLevel>的策略。  此策略级别从本地缓存中移除该资源，如果它存在并指示到远程缓存它们还应移除该资源。  
+-   <span data-ttu-id="21813-113">通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>，创建防止缓存提供请求的资源的策略。</span><span class="sxs-lookup"><span data-stu-id="21813-113">Create a policy that prevents any cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>.</span></span> <span data-ttu-id="21813-114">此策略级别从本地缓存中删除资源（如果存在），并指示远程缓存也应删除资源。</span><span class="sxs-lookup"><span data-stu-id="21813-114">This policy level removes the resource from the local cache if it is present and indicates to remote caches that they should also remove the resource.</span></span>  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -77,9 +81,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 若要设置返回的策略请求的资源，才会在本地缓存  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a><span data-ttu-id="21813-115">设置仅当请求的资源在本地缓存中时返回请求的资源的策略</span><span class="sxs-lookup"><span data-stu-id="21813-115">To set a policy that returns requested resources only if they are in the local cache</span></span>  
   
--   创建返回请求的资源的策略，才会在本地缓存通过设置缓存级别为 <xref:System.Net.Cache.HttpRequestCacheLevel>。  如果请求的资源不在缓存中， <xref:System.Net.WebException> 引发异常。  
+-   <span data-ttu-id="21813-116">通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>，创建仅当请求的资源在本地缓存中时返回请求的资源的策略。</span><span class="sxs-lookup"><span data-stu-id="21813-116">Create a policy that returns requested resources only if they are in the local cache by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>.</span></span> <span data-ttu-id="21813-117">如果请求的资源不在缓存中，将引发 <xref:System.Net.WebException> 异常。</span><span class="sxs-lookup"><span data-stu-id="21813-117">If the requested resource is not in the cache, a <xref:System.Net.WebException> exception is thrown.</span></span>  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -98,9 +102,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 设置以防止本地缓存配置的资源的策略  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a><span data-ttu-id="21813-118">设置防止本地缓存提供资源的策略</span><span class="sxs-lookup"><span data-stu-id="21813-118">To set a policy that prevents the local cache from supplying resources</span></span>  
   
--   创建防止本地缓存提供请求的资源通过设置缓存级别。 <xref:System.Net.Cache.HttpRequestCacheLevel>的策略。  如果请求的资源在中间缓存并成功，并中间缓存可提供请求的资源。  
+-   <span data-ttu-id="21813-119">通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>，创建防止本地缓存提供请求的资源的策略。</span><span class="sxs-lookup"><span data-stu-id="21813-119">Create a policy that prevents the local cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>.</span></span> <span data-ttu-id="21813-120">如果请求的资源是中间缓存并已成功重新验证，中间缓存可提供请求的资源。</span><span class="sxs-lookup"><span data-stu-id="21813-120">If the requested resource is in an intermediate cache and is successfully revalidated, the intermediate cache can supply the requested resource.</span></span>  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -119,9 +123,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 设置禁止所有缓存提供请求的资源的策略  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a><span data-ttu-id="21813-121">设置防止任何缓存提供请求的资源的策略</span><span class="sxs-lookup"><span data-stu-id="21813-121">To set a policy that prevents any cache from supplying requested resources</span></span>  
   
--   创建使所有缓存提供请求的资源通过设置缓存级别。 <xref:System.Net.Cache.HttpRequestCacheLevel>的策略。  服务器返回的资源可以存储在缓存中。  
+-   <span data-ttu-id="21813-122">通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>，创建防止缓存提供请求的资源的策略。</span><span class="sxs-lookup"><span data-stu-id="21813-122">Create a policy that prevents any cache from supplying requested resources by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>.</span></span> <span data-ttu-id="21813-123">服务器返回的资源可以存储在缓存中。</span><span class="sxs-lookup"><span data-stu-id="21813-123">The resource returned by the server can be stored in the cache.</span></span>  
   
     ```csharp  
     public static void SendToServer()  
@@ -140,9 +144,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 若要设置允许所有缓存提供的策略请求的资源，则服务器上的资源与该缓存的副本不新  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a><span data-ttu-id="21813-124">设置当服务器上的资源不比缓存副本新时，允许任何缓存提供请求的资源的策略</span><span class="sxs-lookup"><span data-stu-id="21813-124">To set a policy that allows any cache to supply requested resources if the resource on the server is not newer than the cached copy</span></span>  
   
--   创建允许所有缓存通过设置缓存级别提供请求的资源的策略，如果服务器上的资源与该缓存的副本不新。 <xref:System.Net.Cache.HttpRequestCacheLevel>。  
+-   <span data-ttu-id="21813-125">通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>，创建当服务器上的资源不比缓存副本新时，允许任何缓存提供请求的资源的策略。</span><span class="sxs-lookup"><span data-stu-id="21813-125">Create a policy that allows any cache to supply requested resources if the resource on the server is not newer than the cached copy by setting the cache level to <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.</span></span>  
   
     ```csharp  
     public static void CheckServer()  
@@ -161,9 +165,10 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-## 请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)   
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="21813-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="21813-126">See Also</span></span>  
+ <span data-ttu-id="21813-127">[网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md) </span><span class="sxs-lookup"><span data-stu-id="21813-127">[Cache Management for Network Applications](../../../docs/framework/network-programming/cache-management-for-network-applications.md) </span></span>  
+ <span data-ttu-id="21813-128">[缓存策略](../../../docs/framework/network-programming/cache-policy.md) </span><span class="sxs-lookup"><span data-stu-id="21813-128">[Cache Policy](../../../docs/framework/network-programming/cache-policy.md) </span></span>  
+ <span data-ttu-id="21813-129">[基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md) </span><span class="sxs-lookup"><span data-stu-id="21813-129">[Location-Based Cache Policies](../../../docs/framework/network-programming/location-based-cache-policies.md) </span></span>  
+ <span data-ttu-id="21813-130">[基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md) </span><span class="sxs-lookup"><span data-stu-id="21813-130">[Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) </span></span>  
+ [<span data-ttu-id="21813-131">\<requestCaching> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="21813-131">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

@@ -1,1 +1,1 @@
-适用于 Visual Studio 的 WPF 设计器
+<span data-ttu-id="35faa-101">适用于 Visual Studio 的 WPF 设计器</span><span class="sxs-lookup"><span data-stu-id="35faa-101">WPF Designer for Visual Studio</span></span>

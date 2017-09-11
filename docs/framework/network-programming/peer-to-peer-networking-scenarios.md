@@ -1,74 +1,88 @@
 ---
-title: "对等网络方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "对等网络方案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: edf493f0999dc78e6b1065176f1638b23667d9b3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 对等网络方案
-对网络连接启用或引发以下方案:  
+# <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="fb277-102">对等网络方案</span><span class="sxs-lookup"><span data-stu-id="fb277-102">Peer-to-Peer Networking Scenarios</span></span>
+<span data-ttu-id="fb277-103">对等网络实现或改进以下方案：</span><span class="sxs-lookup"><span data-stu-id="fb277-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  
   
-## 实时通信\(RTC\)  
+## <a name="real-time-communications-rtc"></a><span data-ttu-id="fb277-104">实时通信 (RTC)</span><span class="sxs-lookup"><span data-stu-id="fb277-104">Real-Time Communications (RTC)</span></span>  
   
--   Serverless即时消息\(im\)  
+-   <span data-ttu-id="fb277-105">无服务器即时消息</span><span class="sxs-lookup"><span data-stu-id="fb277-105">Serverless Instant Messaging</span></span>  
   
- RTC当前存在。  计算机用户可以今天聊天和具有语音或视频可与其对等类。  但是，许多现有程序及其通信协议依赖服务器函数。  如果您参与临时无线网络或是独立的网络节中，您将无法使用这些RTC结构。  对技术允许RTC技术扩展这些其他网络环境。  
+ <span data-ttu-id="fb277-106">RTC 目前已存在。</span><span class="sxs-lookup"><span data-stu-id="fb277-106">RTC exists today.</span></span> <span data-ttu-id="fb277-107">计算机用户可与其对等方进行语音或视频对话。</span><span class="sxs-lookup"><span data-stu-id="fb277-107">Computer users can chat and have voice or video conversations with their peers today.</span></span> <span data-ttu-id="fb277-108">但是，许多现有程序及其通信协议依赖服务器才能发挥作用。</span><span class="sxs-lookup"><span data-stu-id="fb277-108">However, many of the existing programs and their communications protocols rely on servers to function.</span></span> <span data-ttu-id="fb277-109">如果加入临时无线网络或属于独立网络，则无法使用这些 RTC 设备。</span><span class="sxs-lookup"><span data-stu-id="fb277-109">If you are participating in an ad-hoc wireless network or are a part of an isolated network, you are unable to use these RTC facilities.</span></span> <span data-ttu-id="fb277-110">对等技术允许将 RTC 技术扩展到这些其他的网络环境中。</span><span class="sxs-lookup"><span data-stu-id="fb277-110">Peer-to-peer technology allows the extension of RTC technologies to these additional networking environments.</span></span>  
   
--   实时做媒和gameplay  
+-   <span data-ttu-id="fb277-111">实时匹配和游戏</span><span class="sxs-lookup"><span data-stu-id="fb277-111">Real-time matchmaking and gameplay</span></span>  
   
- 类似于RTC，实时游戏影响当前存在。  可通过Internet解决赌博社区的许多基于web的游戏站点。  它们就能够找到包含类似的感兴趣的其他盖默、了游戏。  此问题是游戏站点在Internet仅存在于和调整拖向该世界上要使用的最佳盖默的热中盖默。  这些站点在进程跟踪并提供统计信息帮助。  但是，这些站点不允许盖默设置在友元中的一个临时游戏在各种网络环境中。  对网络连接可能提供此功能。  
+ <span data-ttu-id="fb277-112">与 RTC 一样，目前也可以实时玩游戏。</span><span class="sxs-lookup"><span data-stu-id="fb277-112">Similar to RTC, real-time game play exists today.</span></span> <span data-ttu-id="fb277-113">有许多基于 Web 的游戏网站，通过 Internet 来迎合游戏社区的需求。</span><span class="sxs-lookup"><span data-stu-id="fb277-113">There are many Web-based game sites that cater to the gaming community via the Internet.</span></span> <span data-ttu-id="fb277-114">它们使用户可以找到志趣相投的玩家并一起玩游戏。</span><span class="sxs-lookup"><span data-stu-id="fb277-114">They offer the ability to find other gamers with similar interests and play a game together.</span></span> <span data-ttu-id="fb277-115">问题在于游戏网站仅存在于 Internet 上，服务于那些想要与世界顶尖玩家对战的狂热爱好者。</span><span class="sxs-lookup"><span data-stu-id="fb277-115">The problem is that the game sites exist only on the Internet and are geared toward the avid gamer who wants to play against the best gamers in the world.</span></span> <span data-ttu-id="fb277-116">网站跟踪并提供相关统计数据，在这个过程中提供帮助。</span><span class="sxs-lookup"><span data-stu-id="fb277-116">These sites track and provide the statistics to help in the process.</span></span> <span data-ttu-id="fb277-117">然而，这些网站不能让玩家在各种网络环境下在好友间建立临时游戏。</span><span class="sxs-lookup"><span data-stu-id="fb277-117">However, these sites do not allow a gamer to set up an ad-hoc game among friends in a variety of networking environments.</span></span> <span data-ttu-id="fb277-118">而对等网络可提供这项功能。</span><span class="sxs-lookup"><span data-stu-id="fb277-118">Peer-to-peer networking can provide this capability.</span></span>  
   
-## 协作  
+## <a name="collaboration"></a><span data-ttu-id="fb277-119">协作</span><span class="sxs-lookup"><span data-stu-id="fb277-119">Collaboration</span></span>  
   
--   解决目标的项目工作区  
+-   <span data-ttu-id="fb277-120">用于实现目标的项目工作区</span><span class="sxs-lookup"><span data-stu-id="fb277-120">Project workspaces solving a goal</span></span>  
   
- 共享工作区应用程序允许临时工作组中创建并允许工作组所有者并使用将允许组解决问题的工具的共享工作区和内容。  这可能包括留言板、高效工具和文件。  
+ <span data-ttu-id="fb277-121">共享工作区应用程序允许创建临时工作组，然后工作组所有者可为共享工作区填充有助于工作组解决问题的工具和内容。</span><span class="sxs-lookup"><span data-stu-id="fb277-121">Shared workspace applications allow for the creation of ad-hoc workgroups and then allow the workgroup owners to populate the shared workspace with the tools and content that will allow the group to solve a problem.</span></span> <span data-ttu-id="fb277-122">这包括留言板、生产力工具和文件。</span><span class="sxs-lookup"><span data-stu-id="fb277-122">This could include message boards, productivity tools, and files.</span></span>  
   
--   共享文件与他人  
+-   <span data-ttu-id="fb277-123">与他人共享文件</span><span class="sxs-lookup"><span data-stu-id="fb277-123">Sharing files with others</span></span>  
   
- 项目工作区共享的子集是能够共享文件。  虽然此功能现在都Windows的最新版本，它可以通过对网络连接增强使文件内容提供了一种简单而友好方式。  允许轻松访问难以置信的财富内容在Internet的边缘或在临时计算环境中提高网络计算的值。  
+ <span data-ttu-id="fb277-124">项目工作区共享的一项功能是共享文件。</span><span class="sxs-lookup"><span data-stu-id="fb277-124">A subset of project workspace sharing is the ability to share files.</span></span> <span data-ttu-id="fb277-125">虽然 Windows 的当前版本具备这种功能，但是借助对等网络可增强该项功能，以轻松友好的方式提供文件内容。</span><span class="sxs-lookup"><span data-stu-id="fb277-125">Although this ability exists today with the current version of Windows, it can be enhanced through peer-to-peer networking to make file content available in an easy and friendly way.</span></span> <span data-ttu-id="fb277-126">允许轻松访问位于 Internet 边缘或临时计算环境中的庞大内容，这增加了网络计算的价值。</span><span class="sxs-lookup"><span data-stu-id="fb277-126">Allowing easy access to the incredible wealth of content at the edge of the Internet or in ad-hoc computing environments increases the value of network computing.</span></span>  
   
--   共享体验  
+-   <span data-ttu-id="fb277-127">共享体验</span><span class="sxs-lookup"><span data-stu-id="fb277-127">Sharing experiences</span></span>  
   
- 无线连接成为更为普遍，即对的网络连接可以联机在对等类的一组和可以共享您的体验\(例如日落、摇滚乐音乐会或休假巡航\)，并在事件发生时。  
+ <span data-ttu-id="fb277-128">随着无线连接越来越普及，对等网络允许在一组好友中保持联机，在第一时间与他人分享自己的体验（比如日落、摇滚音乐会或巡航度假）。</span><span class="sxs-lookup"><span data-stu-id="fb277-128">With wireless connectivity becoming more prevalent, peer-to-peer networking allows you to be online in a group of peers and to be able to share your experiences (such as a sunset, a rock concert, or a vacation cruise) while they are occurring.</span></span>  
   
-## 内容分发  
+## <a name="content-distribution"></a><span data-ttu-id="fb277-129">内容分发</span><span class="sxs-lookup"><span data-stu-id="fb277-129">Content Distribution</span></span>  
   
--   文本消息  
+-   <span data-ttu-id="fb277-130">文本消息</span><span class="sxs-lookup"><span data-stu-id="fb277-130">Text messages</span></span>  
   
- 对网络连接可能允许基于文本的信息、在文件或消息的形式对用户的大型组。  示例是按列表。  
+ <span data-ttu-id="fb277-131">对等网络能以文件或消息的形式，将基于文本的信息分发给一大群用户。</span><span class="sxs-lookup"><span data-stu-id="fb277-131">Peer-to-peer networking can allow for the dissemination of text-based information in the form of files or messages to a large group of users.</span></span> <span data-ttu-id="fb277-132">新闻列表就是一个例子。</span><span class="sxs-lookup"><span data-stu-id="fb277-132">An example is a news list.</span></span>  
   
--   音频和视频  
+-  
   
- 对网络连接可能还允许音频或视频的信息传播到用户的大型组，如一次用音乐会或公司会话。  今天若要将内容，必须配置高容量服务器收集和分配加载到数以百计或成千上万用户。  对网络连接，只有几对等类实际上会获取其从具有焦点的服务器的内容。  这些对等类涌向此信息以将其发送给其他一些更多方，依此类推。  将目录加载分配给朵云对等。  若要接收该目录的对等类查找最近分配的对等类并获取从其内容。  
+-   <span data-ttu-id="fb277-133">音频和视频</span><span class="sxs-lookup"><span data-stu-id="fb277-133">Audio and video</span></span>  
   
--   产品更新的分发  
+ <span data-ttu-id="fb277-134">对等网络还能将音频或视频信息（例如大型音乐会或公司会议）分发给一大群用户。</span><span class="sxs-lookup"><span data-stu-id="fb277-134">Peer-to-peer networking can also allow for the dissemination of audio or video information to a large group of users, such as a large concert or company meeting.</span></span> <span data-ttu-id="fb277-135">若要分发内容，必须配置大容量服务器来收集负载并将其分发给成千上万个用户。</span><span class="sxs-lookup"><span data-stu-id="fb277-135">To distribute the content today, you must configure high-capacity servers to collect and distribute the load to hundreds or thousands of users.</span></span> <span data-ttu-id="fb277-136">实际上只有一小部分对等机可通过对等网络从中央服务器获取其内容。</span><span class="sxs-lookup"><span data-stu-id="fb277-136">With peer-to-peer networking, only a handful of peers would actually get their content from the centralized servers.</span></span> <span data-ttu-id="fb277-137">这些对等机会将获取到的信息传播给更多人，而这些人又会将该信息发送给其他人，以此类推。</span><span class="sxs-lookup"><span data-stu-id="fb277-137">These peers would flood this information out to a few more people who send it to others, and so on.</span></span> <span data-ttu-id="fb277-138">分发内容的负载被分配至云中的各个对等机。</span><span class="sxs-lookup"><span data-stu-id="fb277-138">The load of distributing the content is distributed to the peers in the cloud.</span></span> <span data-ttu-id="fb277-139">需要接收内容的对等机会查找最近的分发对等机，从它那里获取相关内容。</span><span class="sxs-lookup"><span data-stu-id="fb277-139">A peer that wants to receive the content would find the closest distributing peer and get the content from them.</span></span>  
   
- 对网络连接可能还提供了一个高效的框架分配软件\(如产品更新\(安全更新和Service Pack\)。  与软件分发服务器的连接的对等类可以获取产品更新和传播到其团队的其他成员。  
+-  
   
-## 分散处理  
+-   <span data-ttu-id="fb277-140">产品更新分发</span><span class="sxs-lookup"><span data-stu-id="fb277-140">Distribution of product updates</span></span>  
   
--   任务的除法和分布  
+ <span data-ttu-id="fb277-141">对等网络还可提供高效机制来分发产品更新（安全更新和服务包）等软件。</span><span class="sxs-lookup"><span data-stu-id="fb277-141">Peer-to-peer networking can also provide an efficient mechanism to distribute software such as product updates (security updates and service packs).</span></span> <span data-ttu-id="fb277-142">连接到软件分发服务器的对等机可获取产品更新，并将其传送至组内的其他成员。</span><span class="sxs-lookup"><span data-stu-id="fb277-142">A peer that has a connection to a software distribution server can obtain the product update and propagate it to the other members of its group.</span></span>  
   
- 一种计算的任务会先划分为独立的较小的计算任务其非常适合对等类的计算资源。  对等类可以执行部件大量计算的任务。  然后，对网络上的组中可以分配各个任务将单独的对等类。  每对等类执行计算的任务并报告其返回到焦点的结果丛点。  
+-  
   
--   计算机资源的摘要  
+## <a name="distributed-processing"></a><span data-ttu-id="fb277-143">分布式处理</span><span class="sxs-lookup"><span data-stu-id="fb277-143">Distributed Processing</span></span>  
   
- 另一种方法用于为分散处理对网络连接将运行运行在空闲处理器时间在每对等类的程序并由中央服务器协调更大的计算任务的一部分。  通过聚合多台计算机处理器，对网络连接可以将对等类一组计算机来更改大的计算任务的大型并行处理器。  
+-   <span data-ttu-id="fb277-144">任务划分与分发</span><span class="sxs-lookup"><span data-stu-id="fb277-144">Division and distribution of a task</span></span>  
   
-## 请参阅  
+ <span data-ttu-id="fb277-145">可先将大型计算任务划分为几个较小的独立计算任务，从而与对等机的计算资源良好匹配。</span><span class="sxs-lookup"><span data-stu-id="fb277-145">A large computing task can first be divided into separate smaller computing tasks well suited to the computing resources of a peer.</span></span> <span data-ttu-id="fb277-146">对等机可对大型计算任务进行划分。</span><span class="sxs-lookup"><span data-stu-id="fb277-146">A peer could do the dividing of the large computing task.</span></span> <span data-ttu-id="fb277-147">然后对等网络可将划分后的单个任务分发给组内的各个对等机。</span><span class="sxs-lookup"><span data-stu-id="fb277-147">Then, peer-to-peer networking can distribute the individual tasks to the separate peers in the group.</span></span> <span data-ttu-id="fb277-148">各对等机执行各自的计算任务，并向集中的聚集点反馈结果。</span><span class="sxs-lookup"><span data-stu-id="fb277-148">Each peer performs its computing task and reports its result back to a centralized accumulation point.</span></span>  
+  
+-   <span data-ttu-id="fb277-149">计算机资源聚合</span><span class="sxs-lookup"><span data-stu-id="fb277-149">Aggregation of computer resources</span></span>  
+  
+ <span data-ttu-id="fb277-150">利用对等网络执行分布式处理的另一种方法是：在每个对等机上运行处理器闲置期间运行的且属于大型计算任务（由中央服务器协调）的程序。</span><span class="sxs-lookup"><span data-stu-id="fb277-150">Another way to utilize peer-to-peer networking for distributed processing is to run programs on each peer that run during idle processor times and are part of a larger computing task that is coordinated by a central server.</span></span> <span data-ttu-id="fb277-151">通过聚合多台计算机的处理器，对等网络可将一组对等计算机转变成大型并行处理器便于执行大型计算任务。</span><span class="sxs-lookup"><span data-stu-id="fb277-151">By aggregating the processors of multiple computers, peer-to-peer networking can turn a group of peer computers into a large parallel processor for large computing tasks.</span></span>  
+  
+-  
+  
+## <a name="see-also"></a><span data-ttu-id="fb277-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fb277-152">See Also</span></span>  
  <xref:System.Net.PeerToPeer.Collaboration>
+

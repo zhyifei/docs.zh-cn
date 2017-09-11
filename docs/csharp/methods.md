@@ -17,186 +17,186 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="methods"></a>方法 #
+# <a name="methods"></a><span data-ttu-id="cb308-104">方法</span><span class="sxs-lookup"><span data-stu-id="cb308-104">Methods</span></span> #
 
-方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 `Main` 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。
+<span data-ttu-id="cb308-105">方法是包含一系列语句的代码块。</span><span class="sxs-lookup"><span data-stu-id="cb308-105">A method is a code block that contains a series of statements.</span></span> <span data-ttu-id="cb308-106">程序通过调用该方法并指定任何所需的方法参数使语句得以执行。</span><span class="sxs-lookup"><span data-stu-id="cb308-106">A program causes the statements to be executed by calling the method and specifying any required method arguments.</span></span> <span data-ttu-id="cb308-107">在 C# 中，每个执行的指令均在方法的上下文中执行。</span><span class="sxs-lookup"><span data-stu-id="cb308-107">In C#, every executed instruction is performed in the context of a method.</span></span> <span data-ttu-id="cb308-108">`Main` 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。</span><span class="sxs-lookup"><span data-stu-id="cb308-108">The `Main` method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.</span></span>
 
 > [!NOTE]
-> 本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](https://msdn.microsoft.com/library/bb882516.aspx)。
+> <span data-ttu-id="cb308-109">本主题讨论命名的方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-109">This topic discusses named methods.</span></span> <span data-ttu-id="cb308-110">有关匿名函数的信息，请参阅[匿名函数](https://msdn.microsoft.com/library/bb882516.aspx)。</span><span class="sxs-lookup"><span data-stu-id="cb308-110">For information about anonymous functions, see [Anonymous Functions](https://msdn.microsoft.com/library/bb882516.aspx).</span></span>
 
-本主题包含以下各节：
+<span data-ttu-id="cb308-111">本主题包含以下各节：</span><span class="sxs-lookup"><span data-stu-id="cb308-111">This topic contains the following sections:</span></span>
 
-- [方法签名](#signatures)
-- [方法调用](#invocation)
-- [继承和重写的方法](#inherited)
-- [传递参数](#passing)
-  - [按值传递参数](#byval)
-  - [按引用传递参数](#byref)
-  - [参数数组](#paramarray)
-- [可选参数和自变量](#optional)
-- [返回值](#return)
-- [扩展方法](#extension)
-- [异步方法](#async)
-- [Expression-Bodied 成员](#expr)
-- [迭代器](#iterators)
+- [<span data-ttu-id="cb308-112">方法签名</span><span class="sxs-lookup"><span data-stu-id="cb308-112">Method signatures</span></span>](#signatures)
+- [<span data-ttu-id="cb308-113">方法调用</span><span class="sxs-lookup"><span data-stu-id="cb308-113">Method invocation</span></span>](#invocation)
+- [<span data-ttu-id="cb308-114">继承和重写的方法</span><span class="sxs-lookup"><span data-stu-id="cb308-114">Inherited and overridden methods</span></span>](#inherited)
+- [<span data-ttu-id="cb308-115">传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-115">Passing parameters</span></span>](#passing)
+  - [<span data-ttu-id="cb308-116">按值传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-116">Passing parameters by value</span></span>](#byval)
+  - [<span data-ttu-id="cb308-117">按引用传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-117">Passing parameters by reference</span></span>](#byref)
+  - [<span data-ttu-id="cb308-118">参数数组</span><span class="sxs-lookup"><span data-stu-id="cb308-118">Parameter arrays</span></span>](#paramarray)
+- [<span data-ttu-id="cb308-119">可选参数和自变量</span><span class="sxs-lookup"><span data-stu-id="cb308-119">Optional parameters and arguments</span></span>](#optional)
+- [<span data-ttu-id="cb308-120">返回值</span><span class="sxs-lookup"><span data-stu-id="cb308-120">Return values</span></span>](#return)
+- [<span data-ttu-id="cb308-121">扩展方法</span><span class="sxs-lookup"><span data-stu-id="cb308-121">Extension methods</span></span>](#extension)
+- [<span data-ttu-id="cb308-122">异步方法</span><span class="sxs-lookup"><span data-stu-id="cb308-122">Async Methods</span></span>](#async)
+- [<span data-ttu-id="cb308-123">Expression-Bodied 成员</span><span class="sxs-lookup"><span data-stu-id="cb308-123">Expression-bodied members</span></span>](#expr)
+- [<span data-ttu-id="cb308-124">迭代器</span><span class="sxs-lookup"><span data-stu-id="cb308-124">Iterators</span></span>](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>方法签名 ##
+## <a name="method-signatures"></a><span data-ttu-id="cb308-125">方法签名</span><span class="sxs-lookup"><span data-stu-id="cb308-125">Method signatures</span></span> ##
 
-通过指定在 `class` 或 `struct` 中声明方法：
+<span data-ttu-id="cb308-126">通过指定在 `class` 或 `struct` 中声明方法：</span><span class="sxs-lookup"><span data-stu-id="cb308-126">Methods are declared in a `class` or `struct` by specifying:</span></span>
 
-- 可选的访问级别，如 `public` 或 `private`。 默认值为 `private`。
-- 可选的修饰符，如 `abstract` 或 `sealed`。
-- 返回值，或 `void`（如果该方法不具有）。
-- 方法名。
-- 任何方法参数。 方法参数在括号内，并且用逗号分隔。 空括号指示方法不需要任何参数。
+- <span data-ttu-id="cb308-127">可选的访问级别，如 `public` 或 `private`。</span><span class="sxs-lookup"><span data-stu-id="cb308-127">An optional access level, such as `public` or `private`.</span></span> <span data-ttu-id="cb308-128">默认值为 `private`。</span><span class="sxs-lookup"><span data-stu-id="cb308-128">The default is `private`.</span></span>
+- <span data-ttu-id="cb308-129">可选的修饰符，如 `abstract` 或 `sealed`。</span><span class="sxs-lookup"><span data-stu-id="cb308-129">Optional modifiers such as `abstract` or `sealed`.</span></span>
+- <span data-ttu-id="cb308-130">返回值，或 `void`（如果该方法不具有）。</span><span class="sxs-lookup"><span data-stu-id="cb308-130">The return value, or `void` if the method has none.</span></span>
+- <span data-ttu-id="cb308-131">方法名。</span><span class="sxs-lookup"><span data-stu-id="cb308-131">The method name.</span></span>
+- <span data-ttu-id="cb308-132">任何方法参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-132">Any method parameters.</span></span> <span data-ttu-id="cb308-133">方法参数在括号内，并且用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="cb308-133">Method parameters are enclosed in parentheses and are separated by commas.</span></span> <span data-ttu-id="cb308-134">空括号指示方法不需要任何参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-134">Empty parentheses indicate that the method requires no parameters.</span></span>
 
-这些部分一同构成方法签名。
+<span data-ttu-id="cb308-135">这些部分一同构成方法签名。</span><span class="sxs-lookup"><span data-stu-id="cb308-135">These parts together form the method signature.</span></span>
 
 > [!NOTE]
-> 出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。
+> <span data-ttu-id="cb308-136">出于方法重载的目的，方法的返回类型不是方法签名的一部分。</span><span class="sxs-lookup"><span data-stu-id="cb308-136">A return type of a method is not part of the signature of the method for the purposes of method overloading.</span></span> <span data-ttu-id="cb308-137">但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。</span><span class="sxs-lookup"><span data-stu-id="cb308-137">However, it is part of the signature of the method when determining the compatibility between a delegate and the method that it points to.</span></span>
 
-以下实例定义了一个包含五种方法的名为 `Motorcycle` 的类：
+<span data-ttu-id="cb308-138">以下实例定义了一个包含五种方法的名为 `Motorcycle` 的类：</span><span class="sxs-lookup"><span data-stu-id="cb308-138">The following example defines a class named `Motorcycle` that contains five methods:</span></span>
 
-[!code-csharp[csSnippets.Methods#40](../../samples/snippets/csharp/concepts/methods/methods40.cs#40)]
+<span data-ttu-id="cb308-139">[!code-csharp[csSnippets.Methods#40](../../samples/snippets/csharp/concepts/methods/methods40.cs#40)]</span><span class="sxs-lookup"><span data-stu-id="cb308-139">[!code-csharp[csSnippets.Methods#40](../../samples/snippets/csharp/concepts/methods/methods40.cs#40)]</span></span>
 
-请注意，`Motorcycle` 类包括一个重载的方法 `Drive`。 两个方法具有相同的名称，但必须根据其参数类型来区分。
+<span data-ttu-id="cb308-140">请注意，`Motorcycle` 类包括一个重载的方法 `Drive`。</span><span class="sxs-lookup"><span data-stu-id="cb308-140">Note that the `Motorcycle` class includes an overloaded method, `Drive`.</span></span> <span data-ttu-id="cb308-141">两个方法具有相同的名称，但必须根据其参数类型来区分。</span><span class="sxs-lookup"><span data-stu-id="cb308-141">Two methods have the same name, but must be differentiated by their parameter types.</span></span>
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>方法调用 ##
+## <a name="method-invocation"></a><span data-ttu-id="cb308-142">方法调用</span><span class="sxs-lookup"><span data-stu-id="cb308-142">Method invocation</span></span> ##
 
-方法可以是实例的或静态的。 调用实例方法需要将对象实例化，并对该对象调用方法；实例方法可对该实例及其数据进行操作。 通过引用该方法所属类型的名称来调用静态方法；静态方法不对实例数据进行操作。 尝试通过对象实例调用静态方法会引发编译器错误。
+<span data-ttu-id="cb308-143">方法可以是实例的或静态的。</span><span class="sxs-lookup"><span data-stu-id="cb308-143">Methods can be either *instance* or *static*.</span></span> <span data-ttu-id="cb308-144">调用实例方法需要将对象实例化，并对该对象调用方法；实例方法可对该实例及其数据进行操作。</span><span class="sxs-lookup"><span data-stu-id="cb308-144">Invoking an instance method requires that you instantiate an object and call the method on that object; an instance method operates on that instance and its data.</span></span> <span data-ttu-id="cb308-145">通过引用该方法所属类型的名称来调用静态方法；静态方法不对实例数据进行操作。</span><span class="sxs-lookup"><span data-stu-id="cb308-145">You invoke a static method by referencing the name of the type to which the method belongs; static methods operate do not operate on instance data.</span></span> <span data-ttu-id="cb308-146">尝试通过对象实例调用静态方法会引发编译器错误。</span><span class="sxs-lookup"><span data-stu-id="cb308-146">Attempting to call a static method through an object instance generates a compiler error.</span></span>
 
-调用方法就像访问字段。 在对象名称（如果调用实例方法）或类型名称（如果调用 `static` 方法）后添加一个句点、方法名称和括号。 自变量列在括号里，并且用逗号分隔。
+<span data-ttu-id="cb308-147">调用方法就像访问字段。</span><span class="sxs-lookup"><span data-stu-id="cb308-147">Calling a method is like accessing a field.</span></span> <span data-ttu-id="cb308-148">在对象名称（如果调用实例方法）或类型名称（如果调用 `static` 方法）后添加一个句点、方法名称和括号。</span><span class="sxs-lookup"><span data-stu-id="cb308-148">After the object name (if you are calling an instance method) or the type name (if you are calling a `static` method), add a period, the name of the method, and parentheses.</span></span> <span data-ttu-id="cb308-149">自变量列在括号里，并且用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="cb308-149">Arguments are listed within the parentheses, and are separated by commas.</span></span>
 
-该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i 的类型为 `int` 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num 的 `int` 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
+<span data-ttu-id="cb308-150">该方法定义指定任何所需参数的名称和类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-150">The method definition specifies the names and types of any parameters that are required.</span></span> <span data-ttu-id="cb308-151">调用方调用该方法时，它为每个参数提供了称为自变量的具体值。</span><span class="sxs-lookup"><span data-stu-id="cb308-151">When a caller invokes the method, it provides concrete values, called arguments, for each parameter.</span></span> <span data-ttu-id="cb308-152">自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。</span><span class="sxs-lookup"><span data-stu-id="cb308-152">The arguments must be compatible with the parameter type, but the argument name, if one is used in the calling code, does not have to be the same as the parameter named defined in the method.</span></span> <span data-ttu-id="cb308-153">在下面示例中，`Square` 方法包含名为 i 的类型为 `int` 的单个参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-153">In the following example, the `Square` method includes a single parameter of type `int` named *i*.</span></span> <span data-ttu-id="cb308-154">第一种方法调用将向 `Square` 方法传递名为 num 的 `int` 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。</span><span class="sxs-lookup"><span data-stu-id="cb308-154">The first method call passes the `Square` method a variable of type `int` named *num*; the second, a numeric constant; and the third, an expression.</span></span>
 
-[!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
+<span data-ttu-id="cb308-155">[!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]</span><span class="sxs-lookup"><span data-stu-id="cb308-155">[!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]</span></span>
 
-方法调用最常见的形式是使用位置自变量；它会以与方法参数相同的顺序提供自变量。 因此，可在以下示例中调用 `Motorcycle` 类的方法。 例如，`Drive` 方法的调用包含两个与方法语法中的两个参数对应的自变量。 第一个成为 `miles` 参数的值，第二个成为 `speed` 参数的值。
+<span data-ttu-id="cb308-156">方法调用最常见的形式是使用位置自变量；它会以与方法参数相同的顺序提供自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-156">The most common form of method invocation used positional arguments; it supplies arguments in the same order as method parameters.</span></span> <span data-ttu-id="cb308-157">因此，可在以下示例中调用 `Motorcycle` 类的方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-157">The methods of the `Motorcycle` class can therefore be called as in the following example.</span></span> <span data-ttu-id="cb308-158">例如，`Drive` 方法的调用包含两个与方法语法中的两个参数对应的自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-158">The call to the `Drive` method, for example, includes two arguments that correspond to the two parameters in the method's syntax.</span></span> <span data-ttu-id="cb308-159">第一个成为 `miles` 参数的值，第二个成为 `speed` 参数的值。</span><span class="sxs-lookup"><span data-stu-id="cb308-159">The first becomes the value of the `miles` parameter, the second the value of the `speed` parameter.</span></span>
 
-[!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
+<span data-ttu-id="cb308-160">[!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]</span><span class="sxs-lookup"><span data-stu-id="cb308-160">[!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]</span></span>
 
-调用方法时，也可以使用命名的自变量，而不是位置自变量。 使用命名的自变量时，指定参数名，然后后跟冒号（":"）和自变量。 只要包含了所有必需的自变量，方法的自变量可以任何顺序出现。 下面的示例使用命名的自变量来调用 `TestMotorcycle.Drive` 方法。 在此示例中，命名的自变量以相反于方法参数列表中的顺序进行传递。
+<span data-ttu-id="cb308-161">调用方法时，也可以使用命名的自变量，而不是位置自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-161">You can also used *named arguments* instead of positional arguments when invoking a method.</span></span> <span data-ttu-id="cb308-162">使用命名的自变量时，指定参数名，然后后跟冒号（":"）和自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-162">When using named arguments, you specify the parameter name followed by a colon (":") and the argument.</span></span> <span data-ttu-id="cb308-163">只要包含了所有必需的自变量，方法的自变量可以任何顺序出现。</span><span class="sxs-lookup"><span data-stu-id="cb308-163">Arguments to the method can appear in any order, as long as all required arguments are present.</span></span> <span data-ttu-id="cb308-164">下面的示例使用命名的自变量来调用 `TestMotorcycle.Drive` 方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-164">The following example uses named arguments to invoke the `TestMotorcycle.Drive` method.</span></span> <span data-ttu-id="cb308-165">在此示例中，命名的自变量以相反于方法参数列表中的顺序进行传递。</span><span class="sxs-lookup"><span data-stu-id="cb308-165">In this example, the named arguments are passed in the opposite order from the method's parameter list.</span></span>
 
-[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
+<span data-ttu-id="cb308-166">[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]</span><span class="sxs-lookup"><span data-stu-id="cb308-166">[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]</span></span>
 
-可以同时使用位置自变量和命名的自变量调用方法。 但是，位置自变量不能位于命名的自变量之后。 下面的示例使用一个位置自变量和一个命名的自变量从上一个示例中调用 `TestMotorcycle.Drive` 方法。
+<span data-ttu-id="cb308-167">可以同时使用位置自变量和命名的自变量调用方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-167">You can invoke a method using both positional arguments and named arguments.</span></span> <span data-ttu-id="cb308-168">但是，位置自变量不能位于命名的自变量之后。</span><span class="sxs-lookup"><span data-stu-id="cb308-168">However, a positional argument cannot follow a named argument.</span></span> <span data-ttu-id="cb308-169">下面的示例使用一个位置自变量和一个命名的自变量从上一个示例中调用 `TestMotorcycle.Drive` 方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-169">The following example invokes the `TestMotorcycle.Drive` method from the previous example using one positional argument and one named argument.</span></span>
 
-[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
+<span data-ttu-id="cb308-170">[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]</span><span class="sxs-lookup"><span data-stu-id="cb308-170">[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]</span></span>
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>继承和重写方法 ##
+ ##<a name="inherited-and-overridden-methods"></a><span data-ttu-id="cb308-171">继承和重写方法</span><span class="sxs-lookup"><span data-stu-id="cb308-171">Inherited and overridden methods</span></span> ##
 
-除了类型中显式定义的成员，类型还继承在其基类中定义的成员。 由于托管类型系统中的所有类型都直接或间接继承自 @System.Object 类，因此所有类型都继承其成员，如 @System.Object.Equals(System.Object)、@System.Object.GetType 和 @System.Object.ToString。 下面的示例定义 `Person` 类，实例化两个 `Person` 对象，并调用 `Person.Equals` 方法来确定两个对象是否相等。 但是，`Equals` 方法不是在 `Person` 类中定义；而是继承自 @System.Object。
+<span data-ttu-id="cb308-172">除了类型中显式定义的成员，类型还继承在其基类中定义的成员。</span><span class="sxs-lookup"><span data-stu-id="cb308-172">In addition to the members that are explicitly defined in a type, a type inherits members defined in its base classes.</span></span> <span data-ttu-id="cb308-173">由于托管类型系统中的所有类型都直接或间接继承自 @System.Object 类，因此所有类型都继承其成员，如 @System.Object.Equals(System.Object)、@System.Object.GetType 和 @System.Object.ToString。</span><span class="sxs-lookup"><span data-stu-id="cb308-173">Since all types in the managed type system inherit directly or indirectly from the @System.Object class, all types inherit its members, such as @System.Object.Equals(System.Object), @System.Object.GetType, and @System.Object.ToString.</span></span> <span data-ttu-id="cb308-174">下面的示例定义 `Person` 类，实例化两个 `Person` 对象，并调用 `Person.Equals` 方法来确定两个对象是否相等。</span><span class="sxs-lookup"><span data-stu-id="cb308-174">The following example defines a `Person` class, instantiates two `Person` objects, and calls the `Person.Equals` method to determine whether the two objects are equal.</span></span> <span data-ttu-id="cb308-175">但是，`Equals` 方法不是在 `Person` 类中定义；而是继承自 @System.Object。</span><span class="sxs-lookup"><span data-stu-id="cb308-175">The `Equals` method, however, is not defined in the `Person` class; it is inherited from @System.Object.</span></span>
 
-[!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
+<span data-ttu-id="cb308-176">[!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]</span><span class="sxs-lookup"><span data-stu-id="cb308-176">[!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]</span></span>
 
-类型可以使用 `override` 关键字并提供重写方法的实现来重写继承的成员。 方法签名必须与重写的方法的签名一样。 下面的示例类似于上一个示例，只不过它重写 @Object.Equals(System.Object) 方法。 （它还重写 @Object.GetHashCode 方法，因为这两种方法用于提供一致的结果。）
+<span data-ttu-id="cb308-177">类型可以使用 `override` 关键字并提供重写方法的实现来重写继承的成员。</span><span class="sxs-lookup"><span data-stu-id="cb308-177">Types can override inherited members by using the `override` keyword and providing an implementation for the overridden method.</span></span> <span data-ttu-id="cb308-178">方法签名必须与重写的方法的签名一样。</span><span class="sxs-lookup"><span data-stu-id="cb308-178">The method signature must be the same as that of the overriden method.</span></span> <span data-ttu-id="cb308-179">下面的示例类似于上一个示例，只不过它重写 @Object.Equals(System.Object) 方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-179">The following example is like the previous one, except that it overrides the @Object.Equals(System.Object) method.</span></span> <span data-ttu-id="cb308-180">（它还重写 @Object.GetHashCode 方法，因为这两种方法用于提供一致的结果。）</span><span class="sxs-lookup"><span data-stu-id="cb308-180">(It also overrides the @Object.GetHashCode method, since the two methods are intended to provide consistent results.)</span></span>
 
-[!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
+<span data-ttu-id="cb308-181">[!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]</span><span class="sxs-lookup"><span data-stu-id="cb308-181">[!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]</span></span>
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>传递参数 ##
+## <a name="passing-parameters"></a><span data-ttu-id="cb308-182">传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-182">Passing parameters</span></span> ##
 
-C# 中的所有类型不是值类型就是引用类型。 有关内置值类型的列表，请参阅[类型和变量](./tour-of-csharp/types-and-variables.md)。 默认情况下，值类型和引用类型均按值传递给方法。
+<span data-ttu-id="cb308-183">C# 中的所有类型不是值类型就是引用类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-183">Types in C# are either *value types* or *reference types*.</span></span> <span data-ttu-id="cb308-184">有关内置值类型的列表，请参阅[类型和变量](./tour-of-csharp/types-and-variables.md)。</span><span class="sxs-lookup"><span data-stu-id="cb308-184">For a list of built-in value types, see [Types and variables](./tour-of-csharp/types-and-variables.md).</span></span> <span data-ttu-id="cb308-185">默认情况下，值类型和引用类型均按值传递给方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-185">By default, both value types and reference types are passed to a method by value.</span></span>
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>按值传递参数 ###
+### <a name="passing-parameters-by-value"></a><span data-ttu-id="cb308-186">按值传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-186">Passing parameters by value</span></span> ###
 
-值类型按值传递给方法时，传递的是对象的副本而不是对象本身。 因此，当控件返回调用方时，对已调用方法中的对象的更改对原始对象无影响。
+<span data-ttu-id="cb308-187">值类型按值传递给方法时，传递的是对象的副本而不是对象本身。</span><span class="sxs-lookup"><span data-stu-id="cb308-187">When a value type is passed to a method by value, a copy of the object instead of the object itself is passed to the method.</span></span> <span data-ttu-id="cb308-188">因此，当控件返回调用方时，对已调用方法中的对象的更改对原始对象无影响。</span><span class="sxs-lookup"><span data-stu-id="cb308-188">Therefore, changes to the object in the called method have no effect on the original object when control returns to the caller.</span></span>
 
-下面的示例按值向方法传递值类型，且调用的方法尝试更改值类型的值。 它定义属于值类型的 `int` 类型的变量，将其值初始化为 20，并将该类型传递给将变量值改为 30 的名为 `ModifyValue` 的方法。 但是，返回方法时，变量的值保持不变。
+<span data-ttu-id="cb308-189">下面的示例按值向方法传递值类型，且调用的方法尝试更改值类型的值。</span><span class="sxs-lookup"><span data-stu-id="cb308-189">The following example passes a value type to a method by value, and the called method attempts to change the value type's value.</span></span> <span data-ttu-id="cb308-190">它定义属于值类型的 `int` 类型的变量，将其值初始化为 20，并将该类型传递给将变量值改为 30 的名为 `ModifyValue` 的方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-190">It defines a variable of type `int`, which is a value type, initializes its value to 20, and passes it to a method named `ModifyValue` that changes the variable's value to 30.</span></span> <span data-ttu-id="cb308-191">但是，返回方法时，变量的值保持不变。</span><span class="sxs-lookup"><span data-stu-id="cb308-191">When the method returns, however, the variable's value remains unchanged.</span></span>
 
-[!code-csharp[csSnippets.Methods#10](../../samples/snippets/csharp/concepts/methods/byvalue10.cs#10)]
+<span data-ttu-id="cb308-192">[!code-csharp[csSnippets.Methods#10](../../samples/snippets/csharp/concepts/methods/byvalue10.cs#10)]</span><span class="sxs-lookup"><span data-stu-id="cb308-192">[!code-csharp[csSnippets.Methods#10](../../samples/snippets/csharp/concepts/methods/byvalue10.cs#10)]</span></span>
 
-引用类型的对象按值传递到方法中时，将按值传递对对象的引用。 也就是说，该方法接收的不是对象本身，而是指示该对象位置的自变量。 控件返回到调用方法时，如果通过使用此引用更改对象的成员，此更改将反映在对象中。 但是，当控件返回到调用方时，替换传递到方法的对象对原始对象无影响。
+<span data-ttu-id="cb308-193">引用类型的对象按值传递到方法中时，将按值传递对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="cb308-193">When an object of a reference type is passed to a method by value, a reference to the object is passed by value.</span></span> <span data-ttu-id="cb308-194">也就是说，该方法接收的不是对象本身，而是指示该对象位置的自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-194">That is, the method receives not the object itself, but an argument that indicates the location of the object.</span></span> <span data-ttu-id="cb308-195">控件返回到调用方法时，如果通过使用此引用更改对象的成员，此更改将反映在对象中。</span><span class="sxs-lookup"><span data-stu-id="cb308-195">If you change a member of the object by using this reference, the change is reflected in the object when control returns to the calling method.</span></span> <span data-ttu-id="cb308-196">但是，当控件返回到调用方时，替换传递到方法的对象对原始对象无影响。</span><span class="sxs-lookup"><span data-stu-id="cb308-196">However, replacing the object passed to the method has no effect on the original object when control returns to the caller.</span></span>
 
-下面的示例定义名为 `SampleRefType` 的类（属于引用类型）。 它实例化 `SampleRefType` 对象，将 44 赋予其 `value` 字段，并将该对象传递给 `ModifyObject` 方法。 该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。 但因为使用了引用类型，结果会有所不同。 `ModifyObject` 中所做的对 `obj.value` 字段的修改，也会将 `Main` 方法中的自变量 `rt` 的 `value` 字段更改为 33，如示例中的输出值所示。
+<span data-ttu-id="cb308-197">下面的示例定义名为 `SampleRefType` 的类（属于引用类型）。</span><span class="sxs-lookup"><span data-stu-id="cb308-197">The following example defines a class (which is a reference type) named `SampleRefType`.</span></span> <span data-ttu-id="cb308-198">它实例化 `SampleRefType` 对象，将 44 赋予其 `value` 字段，并将该对象传递给 `ModifyObject` 方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-198">It instantiates a `SampleRefType` object, assigns 44 to its `value` field, and passes the object to the `ModifyObject` method.</span></span> <span data-ttu-id="cb308-199">该示例执行的内容实质上与先前示例相同，均按值将自变量传递到方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-199">This example does essentially the same thing as the previous example -- it passes an argument by value to a method.</span></span> <span data-ttu-id="cb308-200">但因为使用了引用类型，结果会有所不同。</span><span class="sxs-lookup"><span data-stu-id="cb308-200">But because a reference type is used, the result is different.</span></span> <span data-ttu-id="cb308-201">`ModifyObject` 中所做的对 `obj.value` 字段的修改，也会将 `Main` 方法中的自变量 `rt` 的 `value` 字段更改为 33，如示例中的输出值所示。</span><span class="sxs-lookup"><span data-stu-id="cb308-201">The modification that is made in `ModifyObject` to the `obj.value` field also changes the `value` field of the argument, `rt`, in the `Main` method to 33, as the output from the example shows.</span></span>
 
-[!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
+<span data-ttu-id="cb308-202">[!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]</span><span class="sxs-lookup"><span data-stu-id="cb308-202">[!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]</span></span>
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>按引用传递参数 ###
+### <a name="passing-parameters-by-reference"></a><span data-ttu-id="cb308-203">按引用传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-203">Passing parameters by reference</span></span> ###
 
-如果想要更改方法中的自变量值并想要在控件返回到调用方法时反映出这一更改，请按引用传递参数。 要按引用传递参数，请使用 `ref` 或 `out` 关键字。
+<span data-ttu-id="cb308-204">如果想要更改方法中的自变量值并想要在控件返回到调用方法时反映出这一更改，请按引用传递参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-204">You pass a parameter by reference when you want to change the value of an argument in a method and want to refect that change when control returns to the calling method.</span></span> <span data-ttu-id="cb308-205">要按引用传递参数，请使用 `ref` 或 `out` 关键字。</span><span class="sxs-lookup"><span data-stu-id="cb308-205">To pass a parameter by reference, you use the `ref` or `out` keyword.</span></span>
 
-下面的示例与上一个示例完全一样，只是换成按引用将值传递给 `ModifyValue` 方法。 参数值在 `ModifyValue` 方法中修改时，值中的更改将在控件返回调用方时反映出来。
+<span data-ttu-id="cb308-206">下面的示例与上一个示例完全一样，只是换成按引用将值传递给 `ModifyValue` 方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-206">The following example is identical to the previous one, except the value is passed by reference to the `ModifyValue` method.</span></span> <span data-ttu-id="cb308-207">参数值在 `ModifyValue` 方法中修改时，值中的更改将在控件返回调用方时反映出来。</span><span class="sxs-lookup"><span data-stu-id="cb308-207">When the value of the parameter is modified in the `ModifyValue` method, the change in value is reflected when control returns to the caller.</span></span>
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref106.cs#106)]
+<span data-ttu-id="cb308-208">[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref106.cs#106)]</span><span class="sxs-lookup"><span data-stu-id="cb308-208">[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref106.cs#106)]</span></span>
 
-引用参数所使用的常见模式涉及交换变量值。 将两个变量按引用传递给一个方法，然后该方法将二者内容进行交换。 下面的示例交换整数值。
+<span data-ttu-id="cb308-209">引用参数所使用的常见模式涉及交换变量值。</span><span class="sxs-lookup"><span data-stu-id="cb308-209">A common pattern that uses by ref parameters involves swapping the values of variables.</span></span> <span data-ttu-id="cb308-210">将两个变量按引用传递给一个方法，然后该方法将二者内容进行交换。</span><span class="sxs-lookup"><span data-stu-id="cb308-210">You pass two variables to a method by reference, and the method swaps their contents.</span></span> <span data-ttu-id="cb308-211">下面的示例交换整数值。</span><span class="sxs-lookup"><span data-stu-id="cb308-211">The following example swaps integer values.</span></span>
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/swap107.cs#107)]
+<span data-ttu-id="cb308-212">[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/swap107.cs#107)]</span><span class="sxs-lookup"><span data-stu-id="cb308-212">[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/swap107.cs#107)]</span></span>
 
-通过传递引用类型的参数，可以更改引用本身的值，而不是其单个元素或字段的值。
+<span data-ttu-id="cb308-213">通过传递引用类型的参数，可以更改引用本身的值，而不是其单个元素或字段的值。</span><span class="sxs-lookup"><span data-stu-id="cb308-213">Passing a reference-type parameter allows you to change the value of the reference itself, rather than the value of its individual elements or fields.</span></span>
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>参数数组 ###
+### <a name="parameter-arrays"></a><span data-ttu-id="cb308-214">参数数组</span><span class="sxs-lookup"><span data-stu-id="cb308-214">Parameter arrays</span></span> ###
 
-有时，向方法指定精确数量的自变量这一要求是受限的。 通过使用 `params` 关键字来指示一个参数是一个参数数组，可通过可变数量的自变量来调用方法。 使用 `params` 关键字标记的参数必须为数组类型，并且必须是该方法的参数列表中的最后一个参数。
+<span data-ttu-id="cb308-215">有时，向方法指定精确数量的自变量这一要求是受限的。</span><span class="sxs-lookup"><span data-stu-id="cb308-215">Sometimes, the requirement that you specify the exact number of arguments to your method is restrictive.</span></span> <span data-ttu-id="cb308-216">通过使用 `params` 关键字来指示一个参数是一个参数数组，可通过可变数量的自变量来调用方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-216">By using the `params` keyword to indicate that a parameter is a parameter array, you allow your method to be called with a variable number of arguments.</span></span> <span data-ttu-id="cb308-217">使用 `params` 关键字标记的参数必须为数组类型，并且必须是该方法的参数列表中的最后一个参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-217">The parameter tagged with the `params` keyword must must be an array type, and it must be the last parameter in the method's parameter list.</span></span>
 
-然后，调用方可通过以下三种方式中的任一个来调用方法：
+<span data-ttu-id="cb308-218">然后，调用方可通过以下三种方式中的任一个来调用方法：</span><span class="sxs-lookup"><span data-stu-id="cb308-218">A caller can then invoke the method in either of three ways:</span></span>
 
-- 传递相应类型的数组，该类型包含所需数量的元素。
-- 向该方法传递相应类型的单独自变量的逗号分隔列表。
-- 不向参数数组提供参数。
+- <span data-ttu-id="cb308-219">传递相应类型的数组，该类型包含所需数量的元素。</span><span class="sxs-lookup"><span data-stu-id="cb308-219">By passing an array of the appropriate type that contains the desired number of elements.</span></span>
+- <span data-ttu-id="cb308-220">向该方法传递相应类型的单独自变量的逗号分隔列表。</span><span class="sxs-lookup"><span data-stu-id="cb308-220">By passing a comma-separated list of individual arguments of the appropriate type to the method.</span></span>
+- <span data-ttu-id="cb308-221">不向参数数组提供参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-221">By not providing an argument to the parameter array.</span></span>
 
-下面的示例定义名为 `DoStringOperation` 的方法，该方法执行由其第一个参数 - `StringOperation` 枚举成员指定的字符串操作。 要接受该字符串操作的字符串由参数数组定义。 `Main` 方法演示了调用方法的全部三种方式。 请注意，使用 `params` 关键字标记的方法必须随时准备好应对没有为参数数组提供任何自变量的情况，以便其值为 `null`。
+<span data-ttu-id="cb308-222">下面的示例定义名为 `DoStringOperation` 的方法，该方法执行由其第一个参数 - `StringOperation` 枚举成员指定的字符串操作。</span><span class="sxs-lookup"><span data-stu-id="cb308-222">The following example defines a method named `DoStringOperation` that performs the string operation specified by its first parameter, a `StringOperation` enumeration member.</span></span> <span data-ttu-id="cb308-223">要接受该字符串操作的字符串由参数数组定义。</span><span class="sxs-lookup"><span data-stu-id="cb308-223">The strings upon which it is to perform the operation are defined by a parameter array.</span></span> <span data-ttu-id="cb308-224">`Main` 方法演示了调用方法的全部三种方式。</span><span class="sxs-lookup"><span data-stu-id="cb308-224">The `Main` method illustrates all three ways of invoking the method.</span></span> <span data-ttu-id="cb308-225">请注意，使用 `params` 关键字标记的方法必须随时准备好应对没有为参数数组提供任何自变量的情况，以便其值为 `null`。</span><span class="sxs-lookup"><span data-stu-id="cb308-225">Note that the method tagged with the `params` keyword must be prepared to handle the case in which no argument is supplied for the parameter array, so that its value is `null`.</span></span>
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+<span data-ttu-id="cb308-226">[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]</span><span class="sxs-lookup"><span data-stu-id="cb308-226">[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]</span></span>
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>可选参数和自变量 ##
+## <a name="optional-parameters-and-arguments"></a><span data-ttu-id="cb308-227">可选参数和自变量</span><span class="sxs-lookup"><span data-stu-id="cb308-227">Optional parameters and arguments</span></span> ##
 
-方法定义可指定其参数是必需的还是可选的。 默认情况下，参数是必需的。 通过在方法定义中包含参数的默认值来指定可选参数。 调用该方法时，如果未向可选参数提供自变量，则改为使用默认值。
+<span data-ttu-id="cb308-228">方法定义可指定其参数是必需的还是可选的。</span><span class="sxs-lookup"><span data-stu-id="cb308-228">A method definition can specify that its parameters are required or that they are optional.</span></span> <span data-ttu-id="cb308-229">默认情况下，参数是必需的。</span><span class="sxs-lookup"><span data-stu-id="cb308-229">By default, parameters are required.</span></span> <span data-ttu-id="cb308-230">通过在方法定义中包含参数的默认值来指定可选参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-230">Optional parameters are specified by including the parameter's default value in the method definition.</span></span> <span data-ttu-id="cb308-231">调用该方法时，如果未向可选参数提供自变量，则改为使用默认值。</span><span class="sxs-lookup"><span data-stu-id="cb308-231">When the method is called, if no argument is supplied for an optional parameter, the default value is used instead.</span></span>
 
-参数的默认值必须由以下几种表达式中的一种来赋予：
+<span data-ttu-id="cb308-232">参数的默认值必须由以下几种表达式中的一种来赋予：</span><span class="sxs-lookup"><span data-stu-id="cb308-232">The parameter's default value must be assigned by one of the following kinds of expressions:</span></span>
 
-- 常量，例如文本字符串或数字。
-- `new ValType` 形式的表达式，其中 `ValType` 是值类型。 请注意，这会调用该值类型的隐式默认构造函数，该函数不是类型的实际成员。
-- `default(ValType)` 形式的表达式，其中 `ValType` 是值类型。
+- <span data-ttu-id="cb308-233">常量，例如文本字符串或数字。</span><span class="sxs-lookup"><span data-stu-id="cb308-233">A constant, such as a literal string or number.</span></span>
+- <span data-ttu-id="cb308-234">`new ValType` 形式的表达式，其中 `ValType` 是值类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-234">An expression of the form `new ValType`, where `ValType` is a value type.</span></span> <span data-ttu-id="cb308-235">请注意，这会调用该值类型的隐式默认构造函数，该函数不是类型的实际成员。</span><span class="sxs-lookup"><span data-stu-id="cb308-235">Note that this invokes the value type's implicit default constructor, which is not an actual member of the type.</span></span>
+- <span data-ttu-id="cb308-236">`default(ValType)` 形式的表达式，其中 `ValType` 是值类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-236">An expression of the form `default(ValType)`, where `ValType` is a value type.</span></span>
 
-如果某个方法同时包含必需的和可选的参数，则在参数列表末尾定义可选参数，即在定义完所有必需参数之后定义。
+<span data-ttu-id="cb308-237">如果某个方法同时包含必需的和可选的参数，则在参数列表末尾定义可选参数，即在定义完所有必需参数之后定义。</span><span class="sxs-lookup"><span data-stu-id="cb308-237">If a method includes both required and optional parameters, optional parameters are defined at the end of the parameter list, after all required parameters.</span></span>
 
-下面的示例定义方法 `ExampleMethod`，它具有一个必需参数和两个可选参数。
+<span data-ttu-id="cb308-238">下面的示例定义方法 `ExampleMethod`，它具有一个必需参数和两个可选参数。</span><span class="sxs-lookup"><span data-stu-id="cb308-238">The following example defines a method, `ExampleMethod`, that has one required and two optional parameters.</span></span>
 
-[!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
+<span data-ttu-id="cb308-239">[!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]</span><span class="sxs-lookup"><span data-stu-id="cb308-239">[!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]</span></span>
 
-如果使用位置自变量调用包含多个可选自变量的方法，调用方必须逐一向所有需要自变量的可选参数提供自变量。 例如，在使用 `ExampleMethod` 方法的情况下，如果调用方向 `description` 参数提供自变量，还必须向 `optionalInt` 参数提供一个自变量。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是一个有效的方法调用；`opt.ExampleMethod(2, , "Addition of 2 and 0);` 生成编译器错误“缺少自变量”。
+<span data-ttu-id="cb308-240">如果使用位置自变量调用包含多个可选自变量的方法，调用方必须逐一向所有需要自变量的可选参数提供自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-240">If a method with multiple optional arguments is invoked using positional arguments, the caller must supply an argument for all optional parameters from the first one to the last one for which an argument is supplied.</span></span> <span data-ttu-id="cb308-241">例如，在使用 `ExampleMethod` 方法的情况下，如果调用方向 `description` 参数提供自变量，还必须向 `optionalInt` 参数提供一个自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-241">In the case of the  `ExampleMethod` method, for example, if the caller supplies an argument for the `description` parameter, it must also supply one for the `optionalInt` parameter.</span></span> <span data-ttu-id="cb308-242">`opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是一个有效的方法调用；`opt.ExampleMethod(2, , "Addition of 2 and 0);` 生成编译器错误“缺少自变量”。</span><span class="sxs-lookup"><span data-stu-id="cb308-242">`opt.ExampleMethod(2, 2, "Addition of 2 and 2");` is a valid method call; `opt.ExampleMethod(2, , "Addition of 2 and 0);` generates an "Argument missing" compiler error.</span></span>
 
-如果使用命名的自变量或位置自变量和命名的自变量的组合来调用某个方法，调用方可以省略方法调用中的最后一个位置自变量后的任何自变量。
+<span data-ttu-id="cb308-243">如果使用命名的自变量或位置自变量和命名的自变量的组合来调用某个方法，调用方可以省略方法调用中的最后一个位置自变量后的任何自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-243">If a method is called using named arguments or a combination of positional and named arguments, the caller can omit any arguments that follow the last positional argument in the method call.</span></span>
 
-下面的示例三次调用了 `ExampleMethod` 方法。  前两个方法调用使用位置自变量。 第一个方法同时省略了两个可选自变量，而第二个省略了最后一个自变量。 第三个方法调用向必需的参数提供位置自变量，但使用命名的自变量向 `description` 参数提供值，同时省略 `optionalInt` 自变量。
+<span data-ttu-id="cb308-244">下面的示例三次调用了 `ExampleMethod` 方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-244">The following example calls the `ExampleMethod` method three times.</span></span>  <span data-ttu-id="cb308-245">前两个方法调用使用位置自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-245">The first two method calls use positional arguments.</span></span> <span data-ttu-id="cb308-246">第一个方法同时省略了两个可选自变量，而第二个省略了最后一个自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-246">The first omits both optional arguments, while the second omits the last argument.</span></span> <span data-ttu-id="cb308-247">第三个方法调用向必需的参数提供位置自变量，但使用命名的自变量向 `description` 参数提供值，同时省略 `optionalInt` 自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-247">The third method call supplies a positional argument for the required parameter, but uses a named argument to supply a value to the `description` parameter while omitting the `optionalInt` argument.</span></span>
 
-[!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
+<span data-ttu-id="cb308-248">[!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]</span><span class="sxs-lookup"><span data-stu-id="cb308-248">[!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]</span></span>
 
-使用可选参数会影响重载决策，或影响 C# 编译器决定方法应调用哪个特定重载时所使用的方式，如下所示：
+<span data-ttu-id="cb308-249">使用可选参数会影响重载决策，或影响 C# 编译器决定方法应调用哪个特定重载时所使用的方式，如下所示：</span><span class="sxs-lookup"><span data-stu-id="cb308-249">The use of optional parameters affects *overload resolution*, or the way in which the C# compiler determines which particular overload should be invoked by a method call, as follows:</span></span>
 
-- 如果方法、索引器或构造函数的每个参数是可选的，或按名称或位置对应于调用语句中的单个自变量，且该自变量可转换为参数的类型，则方法、索引器或构造函数为执行的候选项。
-- 如果找到多个候选项，则会将用于首选转换的重载决策规则应用于显式指定的自变量。 将忽略可选形参已省略的实参。
-- 如果两个候选项不相上下，则会将没有可选形参的候选项作为首选项，对于这些可选形参，已在调用中为其省略了实参。 这是重载决策中的常规引用的结果，该引用用于参数较少的候选项。
+- <span data-ttu-id="cb308-250">如果方法、索引器或构造函数的每个参数是可选的，或按名称或位置对应于调用语句中的单个自变量，且该自变量可转换为参数的类型，则方法、索引器或构造函数为执行的候选项。</span><span class="sxs-lookup"><span data-stu-id="cb308-250">A method, indexer, or constructor is a candidate for execution if each of its parameters either is optional or corresponds, by name or by position, to a single argument in the calling statement, and that argument can be converted to the type of the parameter.</span></span>
+- <span data-ttu-id="cb308-251">如果找到多个候选项，则会将用于首选转换的重载决策规则应用于显式指定的自变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-251">If more than one candidate is found, overload resolution rules for preferred conversions are applied to the arguments that are explicitly specified.</span></span> <span data-ttu-id="cb308-252">将忽略可选形参已省略的实参。</span><span class="sxs-lookup"><span data-stu-id="cb308-252">Omitted arguments for optional parameters are ignored.</span></span>
+- <span data-ttu-id="cb308-253">如果两个候选项不相上下，则会将没有可选形参的候选项作为首选项，对于这些可选形参，已在调用中为其省略了实参。</span><span class="sxs-lookup"><span data-stu-id="cb308-253">If two candidates are judged to be equally good, preference goes to a candidate that does not have optional parameters for which arguments were omitted in the call.</span></span> <span data-ttu-id="cb308-254">这是重载决策中的常规引用的结果，该引用用于参数较少的候选项。</span><span class="sxs-lookup"><span data-stu-id="cb308-254">This is a consequence of a general preference in overload resolution for candidates that have fewer parameters.</span></span>
 
  <a name="return"></a>
- ## <a name="return-values"></a>返回值 ##
+ ## <a name="return-values"></a><span data-ttu-id="cb308-255">返回值</span><span class="sxs-lookup"><span data-stu-id="cb308-255">Return values</span></span> ##
 
-方法可以将值返回到调用方。 如果列在方法名之前的返回类型不是 `void`，则该方法可通过使用 `return` 关键字返回值。 带 `return` 关键字且后跟与返回类型匹配的变量、常数或表达式的语句将向方法调用方返回该值。 具有非空的返回类型的方法都需要使用 `return` 关键字来返回值。 `return` 关键字还会停止执行该方法。
+<span data-ttu-id="cb308-256">方法可以将值返回到调用方。</span><span class="sxs-lookup"><span data-stu-id="cb308-256">Methods can return a value to the caller.</span></span> <span data-ttu-id="cb308-257">如果列在方法名之前的返回类型不是 `void`，则该方法可通过使用 `return` 关键字返回值。</span><span class="sxs-lookup"><span data-stu-id="cb308-257">If the return type (the type listed before the method name) is not `void`, the method can return the value by using the `return` keyword.</span></span> <span data-ttu-id="cb308-258">带 `return` 关键字且后跟与返回类型匹配的变量、常数或表达式的语句将向方法调用方返回该值。</span><span class="sxs-lookup"><span data-stu-id="cb308-258">A statement with the `return` keyword followed by a variable, constant, or expression that matches the return type will return that value to the method caller.</span></span> <span data-ttu-id="cb308-259">具有非空的返回类型的方法都需要使用 `return` 关键字来返回值。</span><span class="sxs-lookup"><span data-stu-id="cb308-259">Methods with a non-void return type are required to use the `return` keyword to return a value.</span></span> <span data-ttu-id="cb308-260">`return` 关键字还会停止执行该方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-260">The `return` keyword also stops the execution of the method.</span></span>
 
-如果返回类型为 `void`，没有值的 `return` 语句仍可用于停止执行该方法。 没有 `return` 关键字，当方法到达代码块结尾时，将停止执行。
+<span data-ttu-id="cb308-261">如果返回类型为 `void`，没有值的 `return` 语句仍可用于停止执行该方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-261">If the return type is `void`, a `return` statement without a value is still useful to stop the execution of the method.</span></span> <span data-ttu-id="cb308-262">没有 `return` 关键字，当方法到达代码块结尾时，将停止执行。</span><span class="sxs-lookup"><span data-stu-id="cb308-262">Without the `return` keyword, the method will stop executing when it reaches the end of the code block.</span></span>
 
-例如，这两种方法都使用 `return` 关键字来返回整数：
+<span data-ttu-id="cb308-263">例如，这两种方法都使用 `return` 关键字来返回整数：</span><span class="sxs-lookup"><span data-stu-id="cb308-263">For example, these two methods use the `return` keyword to return integers:</span></span>
 
-[!code-csharp[csSnippets.Methods#44](../../samples/snippets/csharp/concepts/methods/return44.cs#44)]
+<span data-ttu-id="cb308-264">[!code-csharp[csSnippets.Methods#44](../../samples/snippets/csharp/concepts/methods/return44.cs#44)]</span><span class="sxs-lookup"><span data-stu-id="cb308-264">[!code-csharp[csSnippets.Methods#44](../../samples/snippets/csharp/concepts/methods/return44.cs#44)]</span></span>
 
-若要使用从方法返回的值，调用方法可以在相同类型的值足够的地方使用该方法调用本身。 也可以将返回值分配给变量。 例如，以下两个代码示例实现了相同的目标：
+<span data-ttu-id="cb308-265">若要使用从方法返回的值，调用方法可以在相同类型的值足够的地方使用该方法调用本身。</span><span class="sxs-lookup"><span data-stu-id="cb308-265">To use a value returned from a method, the calling method can use the method call itself anywhere a value of the same type would be sufficient.</span></span> <span data-ttu-id="cb308-266">也可以将返回值分配给变量。</span><span class="sxs-lookup"><span data-stu-id="cb308-266">You can also assign the return value to a variable.</span></span> <span data-ttu-id="cb308-267">例如，以下两个代码示例实现了相同的目标：</span><span class="sxs-lookup"><span data-stu-id="cb308-267">For example, the following two code examples accomplish the same goal:</span></span>
 
-[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/return44.cs#45)]
+<span data-ttu-id="cb308-268">[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/return44.cs#45)]</span><span class="sxs-lookup"><span data-stu-id="cb308-268">[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/return44.cs#45)]</span></span>
 
-[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]
+<span data-ttu-id="cb308-269">[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]</span><span class="sxs-lookup"><span data-stu-id="cb308-269">[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]</span></span>
 
-在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。
+<span data-ttu-id="cb308-270">在这种情况下，使用本地变量 `result`存储值是可选的。</span><span class="sxs-lookup"><span data-stu-id="cb308-270">Using a local variable, in this case, `result`, to store a value is optional.</span></span> <span data-ttu-id="cb308-271">此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。</span><span class="sxs-lookup"><span data-stu-id="cb308-271">It may help the readability of the code, or it may be necessary if you need to store the original value of the argument for the entire scope of the method.</span></span>
 
-有时，需要方法返回多个值。 从 C# 7.0 开始，可以使用元组类型和元组文本轻松实现此目的。 元组类型定义元组元素的数据类型。 元组文本提供返回的元组的实际值。 在下面的示例中，`(string, string, string, int)` 定义 `GetPersonalInfo` 方法返回的元组类型。 表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。
+<span data-ttu-id="cb308-272">有时，需要方法返回多个值。</span><span class="sxs-lookup"><span data-stu-id="cb308-272">Sometimes, you want your method to return more than a single value.</span></span> <span data-ttu-id="cb308-273">从 C# 7.0 开始，可以使用元组类型和元组文本轻松实现此目的。</span><span class="sxs-lookup"><span data-stu-id="cb308-273">Starting with C# 7.0, you can do this easily by using *tuple types* and *tuple literals*.</span></span> <span data-ttu-id="cb308-274">元组类型定义元组元素的数据类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-274">The tuple type defines the data types of the tuple's elements.</span></span> <span data-ttu-id="cb308-275">元组文本提供返回的元组的实际值。</span><span class="sxs-lookup"><span data-stu-id="cb308-275">Tuple literals provide the actual values of the returned tuple.</span></span> <span data-ttu-id="cb308-276">在下面的示例中，`(string, string, string, int)` 定义 `GetPersonalInfo` 方法返回的元组类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-276">In teh following example, `(string, string, string, int)` defines the tuple type that is returned by the `GetPersonalInfo` method.</span></span> <span data-ttu-id="cb308-277">表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。</span><span class="sxs-lookup"><span data-stu-id="cb308-277">The expression `(per.FirstName, per.MiddleName, per.LastName, per.Age)` is the tuple literal; the method returns the first, middle, and last name, along with the age, of a `PersonInfo` object.</span></span>
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -209,7 +209,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 }
 ```
 
-然后调用方可通过类似以下的代码使用返回的元组：
+<span data-ttu-id="cb308-278">然后调用方可通过类似以下的代码使用返回的元组：</span><span class="sxs-lookup"><span data-stu-id="cb308-278">The caller can then consume the returned tuple with code like the following:</span></span>
 
 ```csharp
 var person = GetPersonalInfo("111111111")
@@ -217,7 +217,7 @@ if (person != null)
    Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
-还可向元组类型定义中的元组元素分配名称。 下面的示例展示 `GetPersonalInfo` 方法的替代版本，该方法使用命名的元素：
+<span data-ttu-id="cb308-279">还可向元组类型定义中的元组元素分配名称。</span><span class="sxs-lookup"><span data-stu-id="cb308-279">Names can also be assigned to the tuple elements in the tuple type definition.</span></span> <span data-ttu-id="cb308-280">下面的示例展示 `GetPersonalInfo` 方法的替代版本，该方法使用命名的元素：</span><span class="sxs-lookup"><span data-stu-id="cb308-280">The following example shows an alternate version of the `GetPersonalInfo` method that uses named elements:</span></span>
 
 ```csharp
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
@@ -230,7 +230,7 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 }
 ```
 
-然后可修改上一次对 `GetPersonInfo` 方法的调用，如下所示：
+<span data-ttu-id="cb308-281">然后可修改上一次对 `GetPersonInfo` 方法的调用，如下所示：</span><span class="sxs-lookup"><span data-stu-id="cb308-281">The previous call to the `GetPersonInfo` method can then be modified as follows:</span></span>
 
 ```csharp
 var person = GetPersonalInfo("111111111");
@@ -238,46 +238,46 @@ if (person != null)
    Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
-如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `DoubleValues` 方法中对 `values` 数组内容的更改。
+<span data-ttu-id="cb308-282">如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。</span><span class="sxs-lookup"><span data-stu-id="cb308-282">If a method is passed an array as an argument and modifies the value of individual elements, it is not necessary for the method to return the array, although you may choose to do so for good style or functional flow of values.</span></span>  <span data-ttu-id="cb308-283">这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。</span><span class="sxs-lookup"><span data-stu-id="cb308-283">This is because C# passes all reference types by value, and the value of an array reference is the pointer to the array.</span></span> <span data-ttu-id="cb308-284">在下面的示例中，引用该数组的任何代码都能观察到在 `DoubleValues` 方法中对 `values` 数组内容的更改。</span><span class="sxs-lookup"><span data-stu-id="cb308-284">In the following example, changes to the contents of the `values` array that are made in the `DoubleValues` method are observable by any code that has a reference to the array.</span></span>
 
-[!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
+<span data-ttu-id="cb308-285">[!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]</span><span class="sxs-lookup"><span data-stu-id="cb308-285">[!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]</span></span>
 
  <a name="exten"></a>
- ## <a name="extension-methods"></a>扩展方法 ##
+ ## <a name="extension-methods"></a><span data-ttu-id="cb308-286">扩展方法</span><span class="sxs-lookup"><span data-stu-id="cb308-286">Extension methods</span></span> ##
 
-通常，可以通过两种方式向现有类型添加方法：
+<span data-ttu-id="cb308-287">通常，可以通过两种方式向现有类型添加方法：</span><span class="sxs-lookup"><span data-stu-id="cb308-287">Ordinarily, there are two ways to add a method to an existing type:</span></span>
 
-- 修改该类型的源代码。 当然，如果并不拥有该类型的源代码，则无法执行该操作。 并且，如果还添加任何专用数据字段来支持该方法，这会成为一项重大更改。
-- 在派生类中定义新方法。 无法使用其他类型（如结构和枚举）的继承来通过此方式添加方法。 也不能使用此方式向封闭类“添加”方法。
+- <span data-ttu-id="cb308-288">修改该类型的源代码。</span><span class="sxs-lookup"><span data-stu-id="cb308-288">Modify the source code for that type.</span></span> <span data-ttu-id="cb308-289">当然，如果并不拥有该类型的源代码，则无法执行该操作。</span><span class="sxs-lookup"><span data-stu-id="cb308-289">You cannot do this, of course, if you do not own the type's source code.</span></span> <span data-ttu-id="cb308-290">并且，如果还添加任何专用数据字段来支持该方法，这会成为一项重大更改。</span><span class="sxs-lookup"><span data-stu-id="cb308-290">And this becomes a breaking change if you also add any private data fields to support the method.</span></span>
+- <span data-ttu-id="cb308-291">在派生类中定义新方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-291">Define the new method in a derived class.</span></span> <span data-ttu-id="cb308-292">无法使用其他类型（如结构和枚举）的继承来通过此方式添加方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-292">A method cannot be added in this way using inheritance for other types, such as structures and enumerations.</span></span> <span data-ttu-id="cb308-293">也不能使用此方式向封闭类“添加”方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-293">Nor can it be used to "add" a method to a sealed class.</span></span>
 
-使用扩展方法，可向现有类型“添加”方法，而无需修改类型本身或在继承的类型中实现新方法。 扩展方法也无需驻留在与其扩展的类型相同的程序集中。 要把扩展方法当作是定义的类型成员一样调用。
+<span data-ttu-id="cb308-294">使用扩展方法，可向现有类型“添加”方法，而无需修改类型本身或在继承的类型中实现新方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-294">Extension methods let you "add" a method to an existing type without modifying the type itself or implementing the new method in an inherited type.</span></span> <span data-ttu-id="cb308-295">扩展方法也无需驻留在与其扩展的类型相同的程序集中。</span><span class="sxs-lookup"><span data-stu-id="cb308-295">The extension method also does not have to reside in the same assembly as the type it extends.</span></span> <span data-ttu-id="cb308-296">要把扩展方法当作是定义的类型成员一样调用。</span><span class="sxs-lookup"><span data-stu-id="cb308-296">You call an extension method as if it were a defined member of a type.</span></span>
 
-有关详细信息，请参阅[扩展方法](https://msdn.microsoft.com/library/bb383977.aspx)。
+<span data-ttu-id="cb308-297">有关详细信息，请参阅[扩展方法](https://msdn.microsoft.com/library/bb383977.aspx)。</span><span class="sxs-lookup"><span data-stu-id="cb308-297">For more information, see [Extension Methods](https://msdn.microsoft.com/library/bb383977.aspx).</span></span>
 
 <a name="async"></a>
-## <a name="async-methods"></a>异步方法 ##
+## <a name="async-methods"></a><span data-ttu-id="cb308-298">异步方法</span><span class="sxs-lookup"><span data-stu-id="cb308-298">Async Methods</span></span> ##
 
-通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。
+<span data-ttu-id="cb308-299">通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。</span><span class="sxs-lookup"><span data-stu-id="cb308-299">By using the async feature, you can invoke asynchronous methods without using explicit callbacks or manually splitting your code across multiple methods or lambda expressions.</span></span>
 
-如果用 [async](https://msdn.microsoft.com/library/hh156513.aspx) 修饰符标记方法，则可以在该方法中使用 [await](https://msdn.microsoft.com/library/hh156528.aspx) 运算符。 当控件到达异步方法中的 `await` 表达式时，如果等待的任务未完成，控件将返回到调用方，并在等待任务完成前，包含 `await` 关键字的方法中的进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
+<span data-ttu-id="cb308-300">如果用 [async](https://msdn.microsoft.com/library/hh156513.aspx) 修饰符标记方法，则可以在该方法中使用 [await](https://msdn.microsoft.com/library/hh156528.aspx) 运算符。</span><span class="sxs-lookup"><span data-stu-id="cb308-300">If you mark a method with the [async](https://msdn.microsoft.com/library/hh156513.aspx) modifier, you can use the [await](https://msdn.microsoft.com/library/hh156528.aspx) operator in the method.</span></span> <span data-ttu-id="cb308-301">当控件到达异步方法中的 `await` 表达式时，如果等待的任务未完成，控件将返回到调用方，并在等待任务完成前，包含 `await` 关键字的方法中的进度将一直处于挂起状态。</span><span class="sxs-lookup"><span data-stu-id="cb308-301">When control reaches an `await` expression in the async method, control returns to the caller if the awaited task is not completed, and progress in the method with the `await` keyword is suspended until the awaited task completes.</span></span> <span data-ttu-id="cb308-302">任务完成后，可以在方法中恢复执行。</span><span class="sxs-lookup"><span data-stu-id="cb308-302">When the task is complete, execution can resume in the method.</span></span>
 
 > [!NOTE]
-> 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。
+> <span data-ttu-id="cb308-303">异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。</span><span class="sxs-lookup"><span data-stu-id="cb308-303">An async method returns to the caller when either it encounters the first awaited object that’s not yet complete or it gets to the end of the async method, whichever occurs first.</span></span>
 
-异步方法可以具有 @System.Threading.Tasks.Task<TResult>、@System.Threading.Tasks.Task 或 `void` 返回类型。 `void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。 C# 7（发布后）会放宽此限制，允许异步方法[返回任何类似于任务的类型](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。
+<span data-ttu-id="cb308-304">异步方法可以具有 @System.Threading.Tasks.Task<TResult>、@System.Threading.Tasks.Task 或 `void` 返回类型。</span><span class="sxs-lookup"><span data-stu-id="cb308-304">An async method can have a return type of @System.Threading.Tasks.Task<TResult>, @System.Threading.Tasks.Task, or `void`.</span></span> <span data-ttu-id="cb308-305">`void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="cb308-305">The `void` return type is used primarily to define event handlers, where a `void` return type is required.</span></span> <span data-ttu-id="cb308-306">无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。</span><span class="sxs-lookup"><span data-stu-id="cb308-306">An async method that returns `void` can't be awaited, and the caller of a void-returning method can't catch exceptions that the method throws.</span></span> <span data-ttu-id="cb308-307">C# 7（发布后）会放宽此限制，允许异步方法[返回任何类似于任务的类型](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。</span><span class="sxs-lookup"><span data-stu-id="cb308-307">C# 7, when it is released, will ease this restriction to allow an async method [to return any task-like type](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).</span></span>
 
-在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。 由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。 因为返回类型是 `Task<int>`，`DoSomethingAsync` 中 `await` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。
+<span data-ttu-id="cb308-308">在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。</span><span class="sxs-lookup"><span data-stu-id="cb308-308">In the following example, `DelayAsync` is an async method that has a return statement that returns an integer.</span></span> <span data-ttu-id="cb308-309">由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。</span><span class="sxs-lookup"><span data-stu-id="cb308-309">Because it is an async method, its method declaration must have a return type of `Task<int>`.</span></span> <span data-ttu-id="cb308-310">因为返回类型是 `Task<int>`，`DoSomethingAsync` 中 `await` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。</span><span class="sxs-lookup"><span data-stu-id="cb308-310">Because the return type is `Task<int>`, the evaluation of the `await` expression in `DoSomethingAsync` produces an integer, as the following `int result = await delayTask` statement demonstrates.</span></span>
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+<span data-ttu-id="cb308-311">[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]</span><span class="sxs-lookup"><span data-stu-id="cb308-311">[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]</span></span>
 
-异步方法不能声明任何 [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) 或 [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) 参数，但是可以调用具有这类参数的方法。
+<span data-ttu-id="cb308-312">异步方法不能声明任何 [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) 或 [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) 参数，但是可以调用具有这类参数的方法。</span><span class="sxs-lookup"><span data-stu-id="cb308-312">An async method can't declare any [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) or [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) parameters, but it can call methods that have such parameters.</span></span>
 
- 有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/mt674882.aspx)、[异步程序中的控制流](https://msdn.microsoft.com/library/mt674892.aspx)和[异步返回类型](https://msdn.microsoft.com/library/mt674893.aspx)。
+ <span data-ttu-id="cb308-313">有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/mt674882.aspx)、[异步程序中的控制流](https://msdn.microsoft.com/library/mt674892.aspx)和[异步返回类型](https://msdn.microsoft.com/library/mt674893.aspx)。</span><span class="sxs-lookup"><span data-stu-id="cb308-313">For more information about async methods, see [Asynchronous Programming with Async and Await](https://msdn.microsoft.com/library/mt674882.aspx), [Control Flow in Async Programs](https://msdn.microsoft.com/library/mt674892.aspx), and [Async Return Types](https://msdn.microsoft.com/library/mt674893.aspx).</span></span>
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>Expression-Bodied 成员 ##
+## <a name="expression-bodied-members"></a><span data-ttu-id="cb308-314">Expression-Bodied 成员</span><span class="sxs-lookup"><span data-stu-id="cb308-314">Expression-bodied members</span></span> ##
 
-具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>` 定义此类方法的语法快捷方式：
+<span data-ttu-id="cb308-315">具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。</span><span class="sxs-lookup"><span data-stu-id="cb308-315">It is common to have method definitions that simply return immediately with the result of an expression, or that have a single statement as the body of the method.</span></span>  <span data-ttu-id="cb308-316">以下是使用 `=>` 定义此类方法的语法快捷方式：</span><span class="sxs-lookup"><span data-stu-id="cb308-316">There is a syntax shortcut for defining such methods using `=>`:</span></span>
 
 ```csharp
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
@@ -288,25 +288,25 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
 ```
 
-如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读，并且不使用 `get` 访问器关键字。
+<span data-ttu-id="cb308-317">如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。</span><span class="sxs-lookup"><span data-stu-id="cb308-317">If the method returns `void` or is an async method, the body of the method must be a statement expression (same as with lambdas).</span></span>  <span data-ttu-id="cb308-318">对于属性和索引器，两者必须是只读，并且不使用 `get` 访问器关键字。</span><span class="sxs-lookup"><span data-stu-id="cb308-318">For properties and indexers, they must be read-only, and you do not use the `get` accessor keyword.</span></span>
 
 <a name="iterators"></a>
-## <a name="iterators"></a>迭代器 ##
+## <a name="iterators"></a><span data-ttu-id="cb308-319">迭代器</span><span class="sxs-lookup"><span data-stu-id="cb308-319">Iterators</span></span> ##
 
-迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) 语句返回元素，每次返回一个。 到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。
+<span data-ttu-id="cb308-320">迭代器对集合执行自定义迭代，如列表或数组。</span><span class="sxs-lookup"><span data-stu-id="cb308-320">An iterator performs a custom iteration over a collection, such as a list or an array.</span></span> <span data-ttu-id="cb308-321">迭代器使用 [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) 语句返回元素，每次返回一个。</span><span class="sxs-lookup"><span data-stu-id="cb308-321">An iterator uses the [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) statement to return each element one at a time.</span></span> <span data-ttu-id="cb308-322">到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。</span><span class="sxs-lookup"><span data-stu-id="cb308-322">When a `yield return` statement is reached, the current location is remembered so that the caller can request the next element in the sequence.</span></span>
 
-迭代器的返回类型可以是 @System.Collections.IEnumerable、@System.Collections.Generic.IEnumerable%601、@System.Collections.IEnumerator 或 @System.Collections.Generic.IEnumerator%601。
+<span data-ttu-id="cb308-323">迭代器的返回类型可以是 @System.Collections.IEnumerable、@System.Collections.Generic.IEnumerable%601、@System.Collections.IEnumerator 或 @System.Collections.Generic.IEnumerator%601。</span><span class="sxs-lookup"><span data-stu-id="cb308-323">The return type of an iterator can be @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator, or @System.Collections.Generic.IEnumerator%601.</span></span>
 
-有关详细信息，请参阅[迭代器](https://msdn.microsoft.com/library/mt639331.aspx)。
+<span data-ttu-id="cb308-324">有关详细信息，请参阅[迭代器](https://msdn.microsoft.com/library/mt639331.aspx)。</span><span class="sxs-lookup"><span data-stu-id="cb308-324">For more information, see [Iterators](https://msdn.microsoft.com/library/mt639331.aspx).</span></span>
 
-## <a name="see-also"></a>请参阅 ##
+## <a name="see-also"></a><span data-ttu-id="cb308-325">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb308-325">See also</span></span> ##
 
-[访问修饰符](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
-[静态类和静态类成员](https://msdn.microsoft.com/library/79b3xss3.aspx)   
-[继承](https://msdn.microsoft.com/library/ms173149.aspx)   
-[抽象类、密封类及类成员](https://msdn.microsoft.com/library/ms173150.aspx)   
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
-[传递参数](https://msdn.microsoft.com/library/0f66670z.aspx)
+<span data-ttu-id="cb308-326">[访问修饰符](https://msdn.microsoft.com/library/wxh6fsc7.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-326">[Access Modifiers](https://msdn.microsoft.com/library/wxh6fsc7.aspx) </span></span>  
+<span data-ttu-id="cb308-327">[静态类和静态类成员](https://msdn.microsoft.com/library/79b3xss3.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-327">[Static Classes and Static Class Members](https://msdn.microsoft.com/library/79b3xss3.aspx) </span></span>  
+<span data-ttu-id="cb308-328">[继承](https://msdn.microsoft.com/library/ms173149.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-328">[Inheritance](https://msdn.microsoft.com/library/ms173149.aspx) </span></span>  
+<span data-ttu-id="cb308-329">[抽象类、密封类及类成员](https://msdn.microsoft.com/library/ms173150.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-329">[Abstract and Sealed Classes and Class Members](https://msdn.microsoft.com/library/ms173150.aspx) </span></span>  
+<span data-ttu-id="cb308-330">[params](https://msdn.microsoft.com/library/w5zay9db.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-330">[params](https://msdn.microsoft.com/library/w5zay9db.aspx) </span></span>  
+<span data-ttu-id="cb308-331">[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-331">[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) </span></span>  
+<span data-ttu-id="cb308-332">[ref](https://msdn.microsoft.com/library/14akc2c7.aspx) </span><span class="sxs-lookup"><span data-stu-id="cb308-332">[ref](https://msdn.microsoft.com/library/14akc2c7.aspx) </span></span>  
+[<span data-ttu-id="cb308-333">传递参数</span><span class="sxs-lookup"><span data-stu-id="cb308-333">Passing Parameters</span></span>](https://msdn.microsoft.com/library/0f66670z.aspx)
 

@@ -20,21 +20,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a3aff4755c23664153ce1dc0ec2df58a96d29c66
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 文本简介
-本节提供有关使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 创建 XML 树的信息。  
+# <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="9e258-102">Visual Basic 中的 XML 文本简介</span><span class="sxs-lookup"><span data-stu-id="9e258-102">Introduction to XML Literals in Visual Basic</span></span>
+<span data-ttu-id="9e258-103">本节提供有关使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 创建 XML 树的信息。</span><span class="sxs-lookup"><span data-stu-id="9e258-103">This section provides information about creating XML trees in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- 有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[功能构造 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ <span data-ttu-id="9e258-104">有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[功能构造 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="9e258-104">For information about using the results of LINQ queries as the content for an XML tree, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
- 有关详细信息中的 XML 文本[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ <span data-ttu-id="9e258-105">有关详细信息中的 XML 文本[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="9e258-105">For more information on XML literals in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], see [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span></span>  
   
-## <a name="creating-xml-trees"></a>创建 XML 树  
- 下面的示例演示如何创建<xref:System.Xml.Linq.XElement>，在这种情况下`contacts`:</xref:System.Xml.Linq.XElement>  
+## <a name="creating-xml-trees"></a><span data-ttu-id="9e258-106">创建 XML 树</span><span class="sxs-lookup"><span data-stu-id="9e258-106">Creating XML Trees</span></span>  
+ <span data-ttu-id="9e258-107">下面的示例演示如何创建<xref:System.Xml.Linq.XElement>，在这种情况下`contacts`:</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="9e258-107">The following example shows how to create an <xref:System.Xml.Linq.XElement>, in this case `contacts`:</span></span>  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -52,42 +53,42 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
-### <a name="creating-an-xelement-with-simple-content"></a>创建包含简单内容的 XElement  
- 您可以创建<xref:System.Xml.Linq.XElement>包含简单内容，如下所示︰</xref:System.Xml.Linq.XElement>  
+### <a name="creating-an-xelement-with-simple-content"></a><span data-ttu-id="9e258-108">创建包含简单内容的 XElement</span><span class="sxs-lookup"><span data-stu-id="9e258-108">Creating an XElement with Simple Content</span></span>  
+ <span data-ttu-id="9e258-109">您可以创建<xref:System.Xml.Linq.XElement>包含简单内容，如下所示︰</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="9e258-109">You can create an <xref:System.Xml.Linq.XElement> that contains simple content, as follows:</span></span>  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
 Console.WriteLine(n)   
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
 ```  
   
-### <a name="creating-an-empty-element"></a>创建空元素  
- 您可以创建一个空<xref:System.Xml.Linq.XElement>、，如下所示︰</xref:System.Xml.Linq.XElement>  
+### <a name="creating-an-empty-element"></a><span data-ttu-id="9e258-111">创建空元素</span><span class="sxs-lookup"><span data-stu-id="9e258-111">Creating an Empty Element</span></span>  
+ <span data-ttu-id="9e258-112">您可以创建一个空<xref:System.Xml.Linq.XElement>、，如下所示︰</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="9e258-112">You can create an empty <xref:System.Xml.Linq.XElement>, as follows:</span></span>  
   
 ```vb  
 Dim n As XElement = <Customer/>  
 Console.WriteLine(n)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-113">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-113">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer />  
 ```  
   
-### <a name="using-embedded-expressions"></a>使用嵌入式表达式  
- XML 文本的一个重要特性是允许使用嵌入式表达式。 使用嵌入式表达式可以对表达式进行计算，并将表达式的结果插入到 XML 树中。 如果该表达式的计算结果为一种类型的<xref:System.Xml.Linq.XElement>，一个元素插入到树。</xref:System.Xml.Linq.XElement> 如果该表达式的计算结果为一种类型的<xref:System.Xml.Linq.XAttribute>，属性插入到树。</xref:System.Xml.Linq.XAttribute> 只能将元素和属性插入到它们在树中有效的位置。  
+### <a name="using-embedded-expressions"></a><span data-ttu-id="9e258-114">使用嵌入式表达式</span><span class="sxs-lookup"><span data-stu-id="9e258-114">Using Embedded Expressions</span></span>  
+ <span data-ttu-id="9e258-115">XML 文本的一个重要特性是允许使用嵌入式表达式。</span><span class="sxs-lookup"><span data-stu-id="9e258-115">An important feature of XML literals is that they allow embedded expressions.</span></span> <span data-ttu-id="9e258-116">使用嵌入式表达式可以对表达式进行计算，并将表达式的结果插入到 XML 树中。</span><span class="sxs-lookup"><span data-stu-id="9e258-116">Embedded expressions enable you to evaluate an expression and insert the results of the expression into the XML tree.</span></span> <span data-ttu-id="9e258-117">如果该表达式的计算结果为一种类型的<xref:System.Xml.Linq.XElement>，一个元素插入到树。</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="9e258-117">If the expression evaluates to a type of <xref:System.Xml.Linq.XElement>, an element is inserted into the tree.</span></span> <span data-ttu-id="9e258-118">如果该表达式的计算结果为一种类型的<xref:System.Xml.Linq.XAttribute>，属性插入到树。</xref:System.Xml.Linq.XAttribute></span><span class="sxs-lookup"><span data-stu-id="9e258-118">If the expression evaluates to a type of <xref:System.Xml.Linq.XAttribute>, an attribute is inserted into the tree.</span></span> <span data-ttu-id="9e258-119">只能将元素和属性插入到它们在树中有效的位置。</span><span class="sxs-lookup"><span data-stu-id="9e258-119">You can insert elements and attributes into the tree only where they are valid.</span></span>  
   
- 应当注意，只能将单个表达式放入嵌入式表达式。 不能嵌入多个语句。 如果表达式超过一行，必须使用行继续符。  
+ <span data-ttu-id="9e258-120">应当注意，只能将单个表达式放入嵌入式表达式。</span><span class="sxs-lookup"><span data-stu-id="9e258-120">It is important to note that only a single expression can go into an embedded expression.</span></span> <span data-ttu-id="9e258-121">不能嵌入多个语句。</span><span class="sxs-lookup"><span data-stu-id="9e258-121">You cannot embed multiple statements.</span></span> <span data-ttu-id="9e258-122">如果表达式超过一行，必须使用行继续符。</span><span class="sxs-lookup"><span data-stu-id="9e258-122">If an expression extends beyond a single line, you must use the line continuation character.</span></span>  
   
- 如果使用嵌入式表达式将现有的节点（包括元素）和属性添加到新的 XML 树中，并且如果这些现有的节点已经有父级，则会克隆这些节点。 新克隆的节点将附加到新 XML 树中。 如果现有节点没有父级，则直接将这些节点附加到新 XML 树中。 本主题最后一个示例对此进行了演示。  
+ <span data-ttu-id="9e258-123">如果使用嵌入式表达式将现有的节点（包括元素）和属性添加到新的 XML 树中，并且如果这些现有的节点已经有父级，则会克隆这些节点。</span><span class="sxs-lookup"><span data-stu-id="9e258-123">If you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree and if the existing nodes are already parented, the nodes are cloned.</span></span> <span data-ttu-id="9e258-124">新克隆的节点将附加到新 XML 树中。</span><span class="sxs-lookup"><span data-stu-id="9e258-124">The newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="9e258-125">如果现有节点没有父级，则直接将这些节点附加到新 XML 树中。</span><span class="sxs-lookup"><span data-stu-id="9e258-125">If the existing nodes are not parented, the nodes are simply attached to the new XML tree.</span></span> <span data-ttu-id="9e258-126">本主题最后一个示例对此进行了演示。</span><span class="sxs-lookup"><span data-stu-id="9e258-126">The last example in this topic demonstrates this.</span></span>  
   
- 下面的示例使用嵌入式表达式将一个元素插入到树中：  
+ <span data-ttu-id="9e258-127">下面的示例使用嵌入式表达式将一个元素插入到树中：</span><span class="sxs-lookup"><span data-stu-id="9e258-127">The following example uses an embedded expression to insert an element into the tree:</span></span>  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -101,7 +102,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-128">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-128">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -109,8 +110,8 @@ Console.WriteLine(xmlTree2)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-content"></a>使用嵌入式表达式提供内容  
- 可以使用嵌入式表达式来提供元素的内容：  
+### <a name="using-embedded-expressions-for-content"></a><span data-ttu-id="9e258-129">使用嵌入式表达式提供内容</span><span class="sxs-lookup"><span data-stu-id="9e258-129">Using Embedded Expressions for Content</span></span>  
+ <span data-ttu-id="9e258-130">可以使用嵌入式表达式来提供元素的内容：</span><span class="sxs-lookup"><span data-stu-id="9e258-130">You can use an embedded expression to supply the content of an element:</span></span>  
   
 ```vb  
 Dim str As String  
@@ -119,14 +120,14 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-131">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>Some content</Root>  
 ```  
   
-### <a name="using-a-linq-query-in-an-embedded-expression"></a>在嵌入式表达式中使用 LINQ 查询  
- 可以使用 LINQ 查询结果作为元素的内容：  
+### <a name="using-a-linq-query-in-an-embedded-expression"></a><span data-ttu-id="9e258-132">在嵌入式表达式中使用 LINQ 查询</span><span class="sxs-lookup"><span data-stu-id="9e258-132">Using a LINQ Query in an Embedded Expression</span></span>  
+ <span data-ttu-id="9e258-133">可以使用 LINQ 查询结果作为元素的内容：</span><span class="sxs-lookup"><span data-stu-id="9e258-133">You can use the results of a LINQ query for the content of an element:</span></span>  
   
 ```vb  
 Dim arr As Integer() = {1, 2, 3}  
@@ -139,7 +140,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-134">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-134">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -149,8 +150,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-node-names"></a>使用嵌入式表达式提供节点名称  
- 还可以使用嵌入式表达式计算属性名称、属性值、元素名称和元素值：  
+### <a name="using-embedded-expressions-for-node-names"></a><span data-ttu-id="9e258-135">使用嵌入式表达式提供节点名称</span><span class="sxs-lookup"><span data-stu-id="9e258-135">Using Embedded Expressions for Node Names</span></span>  
+ <span data-ttu-id="9e258-136">还可以使用嵌入式表达式计算属性名称、属性值、元素名称和元素值：</span><span class="sxs-lookup"><span data-stu-id="9e258-136">You can also use embedded expressions to calculate attribute names, attribute values, element names, and element values:</span></span>  
   
 ```vb  
 Dim eleName As String = "ele"  
@@ -166,7 +167,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-137">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-137">This example produces the following output:</span></span>  
   
 ```xml  
 <Root att="aValue">  
@@ -174,8 +175,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>克隆与附加  
- 如前面所述，如果使用嵌入式表达式将现有节点（包括元素）和属性添加到新的 XML 树中，并且如果这些现有节点已经有父级，则克隆这些节点，并将新克隆的节点附加到新的 XML 树中。 如果现有节点没有父级，则直接将这些节点附加到新 XML 树中。  
+### <a name="cloning-vs-attaching"></a><span data-ttu-id="9e258-138">克隆与附加</span><span class="sxs-lookup"><span data-stu-id="9e258-138">Cloning vs. Attaching</span></span>  
+ <span data-ttu-id="9e258-139">如前面所述，如果使用嵌入式表达式将现有节点（包括元素）和属性添加到新的 XML 树中，并且如果这些现有节点已经有父级，则克隆这些节点，并将新克隆的节点附加到新的 XML 树中。</span><span class="sxs-lookup"><span data-stu-id="9e258-139">As mentioned earlier, if you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree, if the existing nodes are already parented, the nodes are cloned and the newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="9e258-140">如果现有节点没有父级，则直接将这些节点附加到新 XML 树中。</span><span class="sxs-lookup"><span data-stu-id="9e258-140">If the existing nodes are not parented, they are simply attached to the new XML tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -205,12 +206,12 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9e258-141">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9e258-141">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="9e258-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9e258-142">See Also</span></span>  
+ [<span data-ttu-id="9e258-143">创建 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e258-143">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

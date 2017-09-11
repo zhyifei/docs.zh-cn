@@ -1,1 +1,1 @@
-可移植网络图形 (PNG)
+<span data-ttu-id="059aa-101">可移植网络图形 (PNG)</span><span class="sxs-lookup"><span data-stu-id="059aa-101">Portable Network Graphics (PNG)</span></span>

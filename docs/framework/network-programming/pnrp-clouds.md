@@ -1,46 +1,52 @@
 ---
-title: "PNRP 云 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "PNRP 云"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# PNRP 云
-PNRP “云”表示能够彼此通信通过网络的设置节点。  该术语“云”与“对等类网格”和“对关系图”是同义词的。  
+# <a name="pnrp-clouds"></a><span data-ttu-id="afd67-102">PNRP 云</span><span class="sxs-lookup"><span data-stu-id="afd67-102">PNRP Clouds</span></span>
+<span data-ttu-id="afd67-103">PNRP“云”表示通过网络相互通信的一组节点。</span><span class="sxs-lookup"><span data-stu-id="afd67-103">A PNRP "cloud" represents a set of nodes that can communicate with each other through the network.</span></span> <span data-ttu-id="afd67-104">术语“云”与“对等网格”和“对等图”同义。</span><span class="sxs-lookup"><span data-stu-id="afd67-104">The term "cloud" is synonymous with "peer mesh" and "peer-to-peer graph".</span></span>  
   
- 节点之间的通信永远不应跨群进行。  <xref:System.Net.PeerToPeer.Cloud> 实例通过其区分大小写的名称来唯一标识。  一个对等方或节点可以连接到多个群。  
+ <span data-ttu-id="afd67-105">节点之间的通信绝不能从一个云跨越至另一个云。</span><span class="sxs-lookup"><span data-stu-id="afd67-105">Communication between nodes should never cross from one cloud to another.</span></span> <span data-ttu-id="afd67-106"><xref:System.Net.PeerToPeer.Cloud> 实例由其名称（区分大小写）唯一标识。</span><span class="sxs-lookup"><span data-stu-id="afd67-106">A <xref:System.Net.PeerToPeer.Cloud> instance is uniquely identified by its name, which is case-sensitive.</span></span> <span data-ttu-id="afd67-107">单个对等机或节点可以连接到多个云。</span><span class="sxs-lookup"><span data-stu-id="afd67-107">A single peer or node may be connected to more than one cloud.</span></span>  
   
- 群与网络接口之间的连接非常紧密。  在一台通过两个网卡连接不同子网的多宿主计算机上，将返回三个群：每个接口的每个链接本地地址一个群，还有一个全局范围群。  
+ <span data-ttu-id="afd67-108">云与网络接口紧密相关。</span><span class="sxs-lookup"><span data-stu-id="afd67-108">Clouds are tied very closely to network interfaces.</span></span>  <span data-ttu-id="afd67-109">在有两个网卡附加到不同子网的一个多宿主计算机上，将返回三个云：每个接口的每个链接本地地址有一个云，还有一个全局范围云。</span><span class="sxs-lookup"><span data-stu-id="afd67-109">On a multi-homed machine with two network cards attached to different subnets, three clouds will be returned: one for each of the link local addresses per interface, and a single global scope cloud.</span></span>  
   
- PNRP使用三个云“范围”，范围是分组计算机上进行查找:  
+ <span data-ttu-id="afd67-110">PNRP 使用三个云“范围”，其中范围指一组可互相找到的计算机：</span><span class="sxs-lookup"><span data-stu-id="afd67-110">PNRP uses three cloud "scopes", in which a scope is a grouping of computers that are able to find each other:</span></span>  
   
--   全局云对应于全局 IPv6 地址范围和全局地址并表示在整个IPv6 Internet的所有计算机。  只有一朵唯一全局云。  
+-   <span data-ttu-id="afd67-111">全局云对应于全局 IPv6 地址范围和全局地址，表示整个 IPv6 Internet 上的所有计算机。</span><span class="sxs-lookup"><span data-stu-id="afd67-111">The global cloud corresponds to the global IPv6 address scope and global addresses and represents all the computers on the entire IPv6 Internet.</span></span> <span data-ttu-id="afd67-112">全局云只有一个。</span><span class="sxs-lookup"><span data-stu-id="afd67-112">There is only a single global cloud.</span></span>  
   
--   链接本地云对应于链接本地 IPv6 地址范围和链接本地地址。  链接本地云用于特定链接，通常会与附加本地子网。  可以有多个链接本地云。  
+-   <span data-ttu-id="afd67-113">链接-本地云对应于链接-本地 IPv6 地址范围和链接-本地地址。</span><span class="sxs-lookup"><span data-stu-id="afd67-113">The link-local cloud corresponds to the link-local IPv6 address scope and link-local addresses.</span></span> <span data-ttu-id="afd67-114">链接-本地云针对特定链接，通常与本地附加的子网相同。</span><span class="sxs-lookup"><span data-stu-id="afd67-114">A link-local cloud is for a specific link, which is typically the same as the locally attached subnet.</span></span> <span data-ttu-id="afd67-115">链接-本地云可以有多个。</span><span class="sxs-lookup"><span data-stu-id="afd67-115">There can be multiple link-local clouds.</span></span>  
   
- 第三朵云，则朵特定于站点云，对应于站点 IPv6 地址范围和网站本地地址。  此云已弃用，不过，它在PNRP仍支持。  
+ <span data-ttu-id="afd67-116">第三种云是站点特定的云，对应于站点 IPv6 地址范围和站点-本地地址。</span><span class="sxs-lookup"><span data-stu-id="afd67-116">A third cloud, the site-specific cloud, corresponds to the site IPv6 address scope and site-local addresses.</span></span> <span data-ttu-id="afd67-117">这类云已被弃用，尽管它仍受 PNRP 支持。</span><span class="sxs-lookup"><span data-stu-id="afd67-117">This cloud has been deprecated, although it is still supported in PNRP.</span></span>  
   
-## 云  
- PNRP云由 <xref:System.Net.PeerToPeer.Cloud> 选件类的实例表示的。  云的组使用一对等类由可枚举的 <xref:System.Net.PeerToPeer.CloudCollection> 选件类的实例表示的。  PNRP云的集合为当前对等类知道可通过调用静态 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 方法获取。  
+## <a name="clouds"></a><span data-ttu-id="afd67-118">云</span><span class="sxs-lookup"><span data-stu-id="afd67-118">Clouds</span></span>  
+ <span data-ttu-id="afd67-119">PNRP 云由 <xref:System.Net.PeerToPeer.Cloud> 类的实例表示。</span><span class="sxs-lookup"><span data-stu-id="afd67-119">PNRP clouds are represented by instances of the <xref:System.Net.PeerToPeer.Cloud> class.</span></span> <span data-ttu-id="afd67-120">对等机使用的多组云由可枚举的 <xref:System.Net.PeerToPeer.CloudCollection> 类的实例表示。</span><span class="sxs-lookup"><span data-stu-id="afd67-120">Groups of clouds used a peer are represented by instances of the enumerable <xref:System.Net.PeerToPeer.CloudCollection> class.</span></span> <span data-ttu-id="afd67-121">通过调用静态 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 方法，可以获取当前对等机已知的 PNRP 云的集合。</span><span class="sxs-lookup"><span data-stu-id="afd67-121">Collections of PNRP clouds known to the current peer can be obtained by calling the static <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> method.</span></span>  
   
- 单个云具有唯一的名称，表示为一个256个字符Unicode字符串。  这些名称，与上面的范围外，用于构造单个实例云选件类。  这些实例可用于不使用序列化并重新生成。  
+ <span data-ttu-id="afd67-122">各个云具有唯一的名称，表示为 256 个字符的 Unicode 字符串。</span><span class="sxs-lookup"><span data-stu-id="afd67-122">Individual clouds have unique names, represented as a 256 character Unicode string.</span></span> <span data-ttu-id="afd67-123">这些名称以及上面提到的范围共同用于构造 Cloud 类的唯一实例。</span><span class="sxs-lookup"><span data-stu-id="afd67-123">These names, along with the above-mentioned scope, are used to construct unique instances of the Cloud class.</span></span> <span data-ttu-id="afd67-124">可以将这些实例进行序列化和重新构造，以便永久使用。</span><span class="sxs-lookup"><span data-stu-id="afd67-124">These instances can be serialized and reconstructed for persistent usage.</span></span>  
   
- 对于云实例中创建或获取，对等类名称可以向它注册创建已知的对等类网格。  
+ <span data-ttu-id="afd67-125">创建或获取 Cloud 实例后，便可为其注册对等名称以创建已知对等网格。</span><span class="sxs-lookup"><span data-stu-id="afd67-125">Once a Cloud instance is created or obtained, peer names can be registered with it to create a mesh of known peers.</span></span>  
   
-## 请参阅  
- <xref:System.Net.PeerToPeer.Cloud>   
- [对等名称解析协议](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+## <a name="see-also"></a><span data-ttu-id="afd67-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="afd67-126">See Also</span></span>  
+ <span data-ttu-id="afd67-127"><xref:System.Net.PeerToPeer.Cloud></span><span class="sxs-lookup"><span data-stu-id="afd67-127"><xref:System.Net.PeerToPeer.Cloud></span></span>   
+ [<span data-ttu-id="afd67-128">对等名称解析协议</span><span class="sxs-lookup"><span data-stu-id="afd67-128">Peer Name Resolution Protocol</span></span>](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+

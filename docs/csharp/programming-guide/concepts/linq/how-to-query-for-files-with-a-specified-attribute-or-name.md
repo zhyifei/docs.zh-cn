@@ -26,10 +26,10 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>如何：查询具有指定特性或名称的文件 (C#)
-此示例演示了如何在指定目录树中查找具有指定文件扩展名（如“.txt”）的所有文件。 它还演示了如何基于时间在树中返回最新或最旧的文件。  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="c7e76-102">如何：查询具有指定特性或名称的文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="c7e76-102">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>
+<span data-ttu-id="c7e76-103">此示例演示了如何在指定目录树中查找具有指定文件扩展名（如“.txt”）的所有文件。</span><span class="sxs-lookup"><span data-stu-id="c7e76-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="c7e76-104">它还演示了如何基于时间在树中返回最新或最旧的文件。</span><span class="sxs-lookup"><span data-stu-id="c7e76-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="c7e76-105">示例</span><span class="sxs-lookup"><span data-stu-id="c7e76-105">Example</span></span>  
   
 ```csharp  
 class FindFileByExtension  
@@ -80,10 +80,10 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="c7e76-106">编译代码</span><span class="sxs-lookup"><span data-stu-id="c7e76-106">Compiling the Code</span></span>  
+ <span data-ttu-id="c7e76-107">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="c7e76-107">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="c7e76-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="c7e76-108">See Also</span></span>  
+ <span data-ttu-id="c7e76-109">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="c7e76-109">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+ [<span data-ttu-id="c7e76-110">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="c7e76-110">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

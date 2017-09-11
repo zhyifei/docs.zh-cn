@@ -29,29 +29,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e416f3044024f3e24b945077a350bfb2e500fd65
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6ef2963134a4897f19282b38b319d89cea923586
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="mycomputerregistry-object"></a>My.Computer.Registry 对象
-提供用于操作注册表属性和方法。  
+# <a name="mycomputerregistry-object"></a><span data-ttu-id="37ebf-102">My.Computer.Registry 对象</span><span class="sxs-lookup"><span data-stu-id="37ebf-102">My.Computer.Registry Object</span></span>
+<span data-ttu-id="37ebf-103">提供用于操作注册表属性和方法。</span><span class="sxs-lookup"><span data-stu-id="37ebf-103">Provides properties and methods for manipulating the registry.</span></span>  
   
-## <a name="remarks"></a>备注  
- 有关信息的方法和属性`My.Computer.Registry`对象，请参阅<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。</xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+## <a name="remarks"></a><span data-ttu-id="37ebf-104">备注</span><span class="sxs-lookup"><span data-stu-id="37ebf-104">Remarks</span></span>  
+ <span data-ttu-id="37ebf-105">有关信息的方法和属性`My.Computer.Registry`对象，请参阅<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。</xref:Microsoft.VisualBasic.MyServices.RegistryProxy></span><span class="sxs-lookup"><span data-stu-id="37ebf-105">For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
   
- 有关详细信息，请参阅[读取和写入注册表](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)。  
+ <span data-ttu-id="37ebf-106">有关详细信息，请参阅[读取和写入注册表](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)。</span><span class="sxs-lookup"><span data-stu-id="37ebf-106">For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span></span>  
   
 > [!NOTE]
->  您还可以通过以下方式操作注册表使用方法的<xref:Microsoft.Win32.Registry?displayProperty=fullName>类。</xref:Microsoft.Win32.Registry?displayProperty=fullName>  
+>  <span data-ttu-id="37ebf-107">您还可以通过以下方式操作注册表使用方法的<xref:Microsoft.Win32.Registry?displayProperty=fullName>类。</xref:Microsoft.Win32.Registry?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="37ebf-107">You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=fullName> class.</span></span>  
   
-## <a name="requirements"></a>要求  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices></xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a><span data-ttu-id="37ebf-108">要求</span><span class="sxs-lookup"><span data-stu-id="37ebf-108">Requirements</span></span>  
+ <span data-ttu-id="37ebf-109">**Namespace:**<xref:Microsoft.VisualBasic.MyServices></xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="37ebf-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- **类︰** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>(提供对<xref:Microsoft.Win32.Registry>）</xref:Microsoft.Win32.Registry>访问</xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <span data-ttu-id="37ebf-110">**类︰** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>(提供对<xref:Microsoft.Win32.Registry>）</xref:Microsoft.Win32.Registry>访问</xref:Microsoft.VisualBasic.MyServices.RegistryProxy></span><span class="sxs-lookup"><span data-stu-id="37ebf-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)</span></span>  
   
- **程序集︰**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ <span data-ttu-id="37ebf-111">**程序集︰**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span><span class="sxs-lookup"><span data-stu-id="37ebf-111">**Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [My.Computer 对象](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="37ebf-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="37ebf-112">See Also</span></span>  
+ [<span data-ttu-id="37ebf-113">My.Computer 对象</span><span class="sxs-lookup"><span data-stu-id="37ebf-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

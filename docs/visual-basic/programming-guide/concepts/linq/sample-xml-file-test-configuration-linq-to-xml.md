@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: addb3f40b0d995d320171cdcd5d2dd58ff5cfe0d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 192f6ca5796bb21c96b0d2f968793706749c7236
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>示例 XML 文件：测试配置 (LINQ to XML)
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。 这是一个测试配置文件。  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="7e87a-102">示例 XML 文件：测试配置 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7e87a-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="7e87a-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="7e87a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="7e87a-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="7e87a-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="7e87a-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="7e87a-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,5 +74,5 @@ ms.lasthandoff: 03/13/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7e87a-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7e87a-106">See Also</span></span>  
+ [<span data-ttu-id="7e87a-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7e87a-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72c33700766362e41df226465759797192e36e8b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4b55af9f6e7834d35ee59847e1d6e57f6c5eb5a4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>示例 XML 文件：合并的采购订单
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。 此文件是一组来自多家公司、具有不同形状的采购订单。 每家公司的采购订单位于单独的命名空间中。  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="31fb5-102">示例 XML 文件：合并的采购订单</span><span class="sxs-lookup"><span data-stu-id="31fb5-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="31fb5-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="31fb5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="31fb5-104">此文件是一组来自多家公司、具有不同形状的采购订单。</span><span class="sxs-lookup"><span data-stu-id="31fb5-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="31fb5-105">每家公司的采购订单位于单独的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="31fb5-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="31fb5-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="31fb5-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -161,5 +162,5 @@ ms.lasthandoff: 03/13/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="31fb5-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="31fb5-107">See Also</span></span>  
+ [<span data-ttu-id="31fb5-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="31fb5-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

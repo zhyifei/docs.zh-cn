@@ -35,77 +35,77 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型的局部变量（C# 编程指南）
-可声明局部变量而无需提供显式类型。 `var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。 推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。 有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
+# <a name="implicitly-typed-local-variables-c-programming-guide"></a><span data-ttu-id="dfe46-102">隐式类型的局部变量（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="dfe46-102">Implicitly Typed Local Variables (C# Programming Guide)</span></span>
+<span data-ttu-id="dfe46-103">可声明局部变量而无需提供显式类型。</span><span class="sxs-lookup"><span data-stu-id="dfe46-103">Local variables can be declared without giving an explicit type.</span></span> <span data-ttu-id="dfe46-104">`var` 关键字指示编译器通过初始化语句右侧的表达式推断变量的类型。</span><span class="sxs-lookup"><span data-stu-id="dfe46-104">The `var` keyword instructs the compiler to infer the type of the variable from the expression on the right side of the initialization statement.</span></span> <span data-ttu-id="dfe46-105">推断类型可以是内置类型、匿名类型、用户定义类型或 .NET Framework 类库中定义的类型。</span><span class="sxs-lookup"><span data-stu-id="dfe46-105">The inferred type may be a built-in type, an anonymous type, a user-defined type, or a type defined in the .NET Framework class library.</span></span> <span data-ttu-id="dfe46-106">有关如何使用 `var` 初始化数组的详细信息，请参阅[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。</span><span class="sxs-lookup"><span data-stu-id="dfe46-106">For more information about how to initialize arrays with `var`, see [Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span></span>  
   
- 以下示例演示使用 `var` 声明局部变量的各种方式：  
+ <span data-ttu-id="dfe46-107">以下示例演示使用 `var` 声明局部变量的各种方式：</span><span class="sxs-lookup"><span data-stu-id="dfe46-107">The following examples show various ways in which local variables can be declared with `var`:</span></span>  
   
- [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
+ <span data-ttu-id="dfe46-108">[!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="dfe46-108">[!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]</span></span>  
   
- 重要的是了解 `var` 关键字并不意味着“变体”，并且并不指示变量是松散类型或是后期绑定。 它只表示由编译器确定并分配最适合的类型。  
+ <span data-ttu-id="dfe46-109">重要的是了解 `var` 关键字并不意味着“变体”，并且并不指示变量是松散类型或是后期绑定。</span><span class="sxs-lookup"><span data-stu-id="dfe46-109">It is important to understand that the `var` keyword does not mean "variant" and does not indicate that the variable is loosely typed, or late-bound.</span></span> <span data-ttu-id="dfe46-110">它只表示由编译器确定并分配最适合的类型。</span><span class="sxs-lookup"><span data-stu-id="dfe46-110">It just means that the compiler determines and assigns the most appropriate type.</span></span>  
   
- 在以下上下文中，可使用 `var` 关键字：  
+ <span data-ttu-id="dfe46-111">在以下上下文中，可使用 `var` 关键字：</span><span class="sxs-lookup"><span data-stu-id="dfe46-111">The `var` keyword may be used in the following contexts:</span></span>  
   
--   在局部变量（在方法范围内声明的变量）上，如前面的示例所示。  
+-   <span data-ttu-id="dfe46-112">在局部变量（在方法范围内声明的变量）上，如前面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="dfe46-112">On local variables (variables declared at method scope) as shown in the previous example.</span></span>  
   
--   在 [for](../../../csharp/language-reference/keywords/for.md) 初始化语句中。  
+-   <span data-ttu-id="dfe46-113">在 [for](../../../csharp/language-reference/keywords/for.md) 初始化语句中。</span><span class="sxs-lookup"><span data-stu-id="dfe46-113">In a [for](../../../csharp/language-reference/keywords/for.md) initialization statement.</span></span>  
   
     ```  
     for(var x = 1; x < 10; x++)  
     ```  
   
--   在 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 初始化语句中。  
+-   <span data-ttu-id="dfe46-114">在 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 初始化语句中。</span><span class="sxs-lookup"><span data-stu-id="dfe46-114">In a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) initialization statement.</span></span>  
   
     ```  
     foreach(var item in list){...}  
     ```  
   
--   在 [using](../../../csharp/language-reference/keywords/using-statement.md) 域间中。  
+-   <span data-ttu-id="dfe46-115">在 [using](../../../csharp/language-reference/keywords/using-statement.md) 域间中。</span><span class="sxs-lookup"><span data-stu-id="dfe46-115">In a [using](../../../csharp/language-reference/keywords/using-statement.md) statement.</span></span>  
   
     ```  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   
- 有关详细信息，请参阅[如何：在查询表达式中使用隐式类型化局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。  
+ <span data-ttu-id="dfe46-116">有关详细信息，请参阅[如何：在查询表达式中使用隐式类型化局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。</span><span class="sxs-lookup"><span data-stu-id="dfe46-116">For more information, see [How to: Use Implicitly Typed Local Variables and Arrays in a Query Expression](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).</span></span>  
   
-## <a name="var-and-anonymous-types"></a>var 和匿名类型  
- 在许多情况下，使用 `var` 是可选的，只是一种语法便利。 但是，在使用匿名类型初始化变量时，如果需要在以后访问对象的属性，则必须将变量声明为 `var`。 这是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的常见方案。 有关详细信息，请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
+## <a name="var-and-anonymous-types"></a><span data-ttu-id="dfe46-117">var 和匿名类型</span><span class="sxs-lookup"><span data-stu-id="dfe46-117">var and Anonymous Types</span></span>  
+ <span data-ttu-id="dfe46-118">在许多情况下，使用 `var` 是可选的，只是一种语法便利。</span><span class="sxs-lookup"><span data-stu-id="dfe46-118">In many cases the use of `var` is optional and is just a syntactic convenience.</span></span> <span data-ttu-id="dfe46-119">但是，在使用匿名类型初始化变量时，如果需要在以后访问对象的属性，则必须将变量声明为 `var`。</span><span class="sxs-lookup"><span data-stu-id="dfe46-119">However, when a variable is initialized with an anonymous type you must declare the variable as `var` if you need to access the properties of the object at a later point.</span></span> <span data-ttu-id="dfe46-120">这是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的常见方案。</span><span class="sxs-lookup"><span data-stu-id="dfe46-120">This is a common scenario in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span> <span data-ttu-id="dfe46-121">有关详细信息，请参阅[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="dfe46-121">For more information, see [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
- 从源代码角度来看，匿名类型没有名称。 因此，如果使用 `var` 初始化了查询变量，则访问返回对象序列中的属性的唯一方法是在 `foreach` 语句中将 `var` 用作迭代变量的类型。  
+ <span data-ttu-id="dfe46-122">从源代码角度来看，匿名类型没有名称。</span><span class="sxs-lookup"><span data-stu-id="dfe46-122">From the perspective of your source code, an anonymous type has no name.</span></span> <span data-ttu-id="dfe46-123">因此，如果使用 `var` 初始化了查询变量，则访问返回对象序列中的属性的唯一方法是在 `foreach` 语句中将 `var` 用作迭代变量的类型。</span><span class="sxs-lookup"><span data-stu-id="dfe46-123">Therefore, if a query variable has been initialized with `var`, then the only way to access the properties in the returned sequence of objects is to use `var` as the type of the iteration variable in the `foreach` statement.</span></span>  
   
- [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
+ <span data-ttu-id="dfe46-124">[!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="dfe46-124">[!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]</span></span>  
   
-## <a name="remarks"></a>备注  
- 以下限制适用于隐式类型化变量声明：  
+## <a name="remarks"></a><span data-ttu-id="dfe46-125">备注</span><span class="sxs-lookup"><span data-stu-id="dfe46-125">Remarks</span></span>  
+ <span data-ttu-id="dfe46-126">以下限制适用于隐式类型化变量声明：</span><span class="sxs-lookup"><span data-stu-id="dfe46-126">The following restrictions apply to implicitly-typed variable declarations:</span></span>  
   
--   仅当局部变量在相同语句中进行声明和初始化时，才能使用 `var`；变量不能初始化为 null，也不能初始化为方法组或匿名函数。  
+-   <span data-ttu-id="dfe46-127">仅当局部变量在相同语句中进行声明和初始化时，才能使用 `var`；变量不能初始化为 null，也不能初始化为方法组或匿名函数。</span><span class="sxs-lookup"><span data-stu-id="dfe46-127">`var` can only be used when a local variable is declared and initialized in the same statement; the variable cannot be initialized to null, or to a method group or an anonymous function.</span></span>  
   
--   `var` 不能在类范围内对字段使用。  
+-   <span data-ttu-id="dfe46-128">`var` 不能在类范围内对字段使用。</span><span class="sxs-lookup"><span data-stu-id="dfe46-128">`var` cannot be used on fields at class scope.</span></span>  
   
--   使用 `var` 声明的变量不能在初始化表达式中使用。 换句话说，此表达式是合法的`: int i = (i = 20);`，但是此表达式会生成编译时错误：`var i = (i = 20);`  
+-   <span data-ttu-id="dfe46-129">使用 `var` 声明的变量不能在初始化表达式中使用。</span><span class="sxs-lookup"><span data-stu-id="dfe46-129">Variables declared by using `var` cannot be used in the initialization expression.</span></span> <span data-ttu-id="dfe46-130">换句话说，此表达式是合法的`: int i = (i = 20);`，但是此表达式会生成编译时错误：`var i = (i = 20);`</span><span class="sxs-lookup"><span data-stu-id="dfe46-130">In other words, this expression is legal`: int i = (i = 20);` but this expression produces a compile-time error: `var i = (i = 20);`</span></span>  
   
--   不能在相同语句中初始化多个隐式类型化变量。  
+-   <span data-ttu-id="dfe46-131">不能在相同语句中初始化多个隐式类型化变量。</span><span class="sxs-lookup"><span data-stu-id="dfe46-131">Multiple implicitly-typed variables cannot be initialized in the same statement.</span></span>  
   
--   如果一种名为 `var` 的类型处于范围内，则 `var` 关键字会解析为该类型名称，不会被视为隐式类型化局部变量声明的一部分。  
+-   <span data-ttu-id="dfe46-132">如果一种名为 `var` 的类型处于范围内，则 `var` 关键字会解析为该类型名称，不会被视为隐式类型化局部变量声明的一部分。</span><span class="sxs-lookup"><span data-stu-id="dfe46-132">If a type named `var` is in scope, then the `var` keyword will resolve to that type name and will not be treated as part of an implicitly typed local variable declaration.</span></span>  
   
- 你可能会发现，对于在其中难以确定查询变量的确切构造类型的查询表达式，`var` 也可能会十分有用。 这可能会针对分组和排序操作发生。  
+ <span data-ttu-id="dfe46-133">你可能会发现，对于在其中难以确定查询变量的确切构造类型的查询表达式，`var` 也可能会十分有用。</span><span class="sxs-lookup"><span data-stu-id="dfe46-133">You may find that `var` can also be useful with query expressions in which the exact constructed type of the query variable is difficult to determine.</span></span> <span data-ttu-id="dfe46-134">这可能会针对分组和排序操作发生。</span><span class="sxs-lookup"><span data-stu-id="dfe46-134">This can occur with grouping and ordering operations.</span></span>  
   
- 当变量的特定类型在键盘上键入时很繁琐、或是显而易见、或是不会提高代码的可读性时，`var` 关键字也可能非常有用。 `var` 采用此方法提供帮助的一个示例是针对嵌套泛型类型（如用于分组操作的类型）。 在下面的查询中，查询变量的类型是 `IEnumerable<IGrouping<string, Student>>`。 只要你和必须维护你的代码的其他人了解这一点，使用隐式类型化实现便利性和简便性时便不会出现问题。  
+ <span data-ttu-id="dfe46-135">当变量的特定类型在键盘上键入时很繁琐、或是显而易见、或是不会提高代码的可读性时，`var` 关键字也可能非常有用。</span><span class="sxs-lookup"><span data-stu-id="dfe46-135">The `var` keyword can also be useful when the specific type of the variable is tedious to type on the keyboard, or is obvious, or does not add to the readability of the code.</span></span> <span data-ttu-id="dfe46-136">`var` 采用此方法提供帮助的一个示例是针对嵌套泛型类型（如用于分组操作的类型）。</span><span class="sxs-lookup"><span data-stu-id="dfe46-136">One example where `var` is helpful in this manner is with nested generic types such as those used with group operations.</span></span> <span data-ttu-id="dfe46-137">在下面的查询中，查询变量的类型是 `IEnumerable<IGrouping<string, Student>>`。</span><span class="sxs-lookup"><span data-stu-id="dfe46-137">In the following query, the type of the query variable is `IEnumerable<IGrouping<string, Student>>`.</span></span> <span data-ttu-id="dfe46-138">只要你和必须维护你的代码的其他人了解这一点，使用隐式类型化实现便利性和简便性时便不会出现问题。</span><span class="sxs-lookup"><span data-stu-id="dfe46-138">As long as you and others who must maintain your code understand this, there is no problem with using implicit typing for convenience and brevity.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
+ <span data-ttu-id="dfe46-139">[!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="dfe46-139">[!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]</span></span>  
   
- 但是，使用 `var` 至少有可能使代码对其他开发人员更加难以理解。 为此，C# 文档通常只在需要时才使用 `var`。  
+ <span data-ttu-id="dfe46-140">但是，使用 `var` 至少有可能使代码对其他开发人员更加难以理解。</span><span class="sxs-lookup"><span data-stu-id="dfe46-140">However, the use of `var` does have at least the potential to make your code more difficult to understand for other developers.</span></span> <span data-ttu-id="dfe46-141">为此，C# 文档通常只在需要时才使用 `var`。</span><span class="sxs-lookup"><span data-stu-id="dfe46-141">For that reason, the C# documentation generally uses `var` only when it is required.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)   
- [如何：在查询表达式中使用隐式类型化局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)   
- [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [var](../../../csharp/language-reference/keywords/var.md)   
- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [for](../../../csharp/language-reference/keywords/for.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="dfe46-142">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfe46-142">See Also</span></span>  
+ <span data-ttu-id="dfe46-143">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-143">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="dfe46-144">[隐式类型化数组](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-144">[Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md) </span></span>  
+ <span data-ttu-id="dfe46-145">[如何：在查询表达式中使用隐式类型化局部变量和数组](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-145">[How to: Use Implicitly Typed Local Variables and Arrays in a Query Expression](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md) </span></span>  
+ <span data-ttu-id="dfe46-146">[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-146">[Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) </span></span>  
+ <span data-ttu-id="dfe46-147">[对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-147">[Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) </span></span>  
+ <span data-ttu-id="dfe46-148">[var](../../../csharp/language-reference/keywords/var.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-148">[var](../../../csharp/language-reference/keywords/var.md) </span></span>  
+ <span data-ttu-id="dfe46-149">[LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-149">[LINQ Query Expressions](../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ <span data-ttu-id="dfe46-150">[LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) </span><span class="sxs-lookup"><span data-stu-id="dfe46-150">[LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) </span></span>  
+ <span data-ttu-id="dfe46-151">[for](../../../csharp/language-reference/keywords/for.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-151">[for](../../../csharp/language-reference/keywords/for.md) </span></span>  
+ <span data-ttu-id="dfe46-152">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span><span class="sxs-lookup"><span data-stu-id="dfe46-152">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span></span>  
+ [<span data-ttu-id="dfe46-153">using 语句</span><span class="sxs-lookup"><span data-stu-id="dfe46-153">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)
 

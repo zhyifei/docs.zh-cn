@@ -1,73 +1,79 @@
 ---
-title: "如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
-## 适用于  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="c52b1-102">如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="c52b1-103">适用于</span><span class="sxs-lookup"><span data-stu-id="c52b1-103">Applies To</span></span>  
   
--   Microsoft® Windows®标识基础\(WIF\)  
+-   <span data-ttu-id="c52b1-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="c52b1-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   ASP.NET® Web窗体  
+-   <span data-ttu-id="c52b1-105">ASP.NET® Web 窗体</span><span class="sxs-lookup"><span data-stu-id="c52b1-105">ASP.NET® Web Forms</span></span>  
   
-## 摘要  
- 本帮助主题提供创建简单的声明感知ASP.NET Web窗体应用程序提供了详细的分步过程。  它说明如何测试对联合的身份验证的成功实现简单的声明感知ASP.NET Web窗体应用程序还提供命令。  本帮助主题没有创建的安全标记服务\(STS\)详细说明，并假定您已配置了STS。  
+## <a name="summary"></a><span data-ttu-id="c52b1-106">摘要</span><span class="sxs-lookup"><span data-stu-id="c52b1-106">Summary</span></span>  
+ <span data-ttu-id="c52b1-107">本操作说明提供了创建简单的声明感知 ASP.NET Web 窗体应用程序的详细分步过程。</span><span class="sxs-lookup"><span data-stu-id="c52b1-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="c52b1-108">还提供关于如何测试简单声明感知 ASP.NET Web 窗体应用程序以确保成功实现联合身份验证的说明。</span><span class="sxs-lookup"><span data-stu-id="c52b1-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="c52b1-109">本操作说明不包括如何创建安全令牌服务 (STS) 的详细说明，且假定你已配置 STS。</span><span class="sxs-lookup"><span data-stu-id="c52b1-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## 内容  
+## <a name="contents"></a><span data-ttu-id="c52b1-110">内容</span><span class="sxs-lookup"><span data-stu-id="c52b1-110">Contents</span></span>  
   
--   用途  
+-   <span data-ttu-id="c52b1-111">目标</span><span class="sxs-lookup"><span data-stu-id="c52b1-111">Objectives</span></span>  
   
--   步骤摘要  
+-   <span data-ttu-id="c52b1-112">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="c52b1-112">Summary of Steps</span></span>  
   
--   步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
+-   <span data-ttu-id="c52b1-113">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   步骤2 \-配置ASP.NET Web到基于声明的身份验证的窗体应用程序  
+-   <span data-ttu-id="c52b1-114">第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
   
--   步骤3 \-测试您的解决方案  
+-   <span data-ttu-id="c52b1-115">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="c52b1-115">Step 3 – Test Your Solution</span></span>  
   
-## 用途  
+## <a name="objectives"></a><span data-ttu-id="c52b1-116">目标</span><span class="sxs-lookup"><span data-stu-id="c52b1-116">Objectives</span></span>  
   
--   配置ASP.NET Web到基于声明的身份验证的窗体应用程序  
+-   <span data-ttu-id="c52b1-117">为基于声明的身份验证配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
   
--   测试成功的声明感知ASP.NET Web窗体应用程序  
+-   <span data-ttu-id="c52b1-118">测试成功的声明感知 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
   
-## 步骤摘要  
+## <a name="summary-of-steps"></a><span data-ttu-id="c52b1-119">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="c52b1-119">Summary of Steps</span></span>  
   
--   步骤1 \-创建简单的ASP.NET Web窗体应用程序  
+-   <span data-ttu-id="c52b1-120">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
   
--   步骤2 \-配置ASP.NET Web到联合的身份验证的窗体应用程序  
+-   <span data-ttu-id="c52b1-121">步骤 2 – 为联合身份验证配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
   
--   步骤3 \-测试您的解决方案  
+-   <span data-ttu-id="c52b1-122">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="c52b1-122">Step 3 – Test Your Solution</span></span>  
   
-## 步骤1 \-创建一个简单的ASP.NET Web窗体应用程序  
- 在此步骤中，您将创建一个新ASP.NET Web窗体应用程序。  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="c52b1-123">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="c52b1-124">在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="c52b1-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### 创建一个简单的ASP.NET应用程序  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="c52b1-125">创建一个简单 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-125">To create a simple ASP.NET application</span></span>  
   
-1.  启动Visual Studio并单击 **文件**、 **新建**然后 **项目**。  
+1.  <span data-ttu-id="c52b1-126">启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。</span><span class="sxs-lookup"><span data-stu-id="c52b1-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  在 **新建项目** 窗口中，单击 **ASP.NET Web窗体应用程序**。  
+2.  <span data-ttu-id="c52b1-127">在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。</span><span class="sxs-lookup"><span data-stu-id="c52b1-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  在 **名称**，输入 `TestApp` 并按 **确定**。  
+3.  <span data-ttu-id="c52b1-128">在“名称”中，输入 `TestApp`，然后按“确定”。</span><span class="sxs-lookup"><span data-stu-id="c52b1-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## 步骤2 \-配置ASP.NET Web到基于声明的身份验证的窗体应用程序  
- 此步骤将添加配置条目添加到ASP.NET Web窗体应用程序 *Web.config* 配置文件使其声明感知。  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="c52b1-129">第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="c52b1-130">在此步骤中，将配置条目添加到 ASP.NET Web 窗体应用程序的 Web.config 配置文件中，以使其可感知声明。</span><span class="sxs-lookup"><span data-stu-id="c52b1-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
   
-#### 配置为基于声明的身份验证的ASP.NET应用程序  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="c52b1-131">为基于声明的身份验证配置 ASP.NET Web 应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-131">To configure ASP.NET application for claims-based authentication</span></span>  
   
-1.  添加以下配置节项添加 **\<configuration\>** 到起始元素后的 *Web.config* 配置文件:  
+1.  <span data-ttu-id="c52b1-132">将以下配置节条目紧随添加到 Web.config 配置文件中的 \<configuration> 起始元素后：</span><span class="sxs-lookup"><span data-stu-id="c52b1-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -76,7 +82,7 @@ caps.handback.revision: 7
     </configSections>  
     ```  
   
-2.  添加启用对应用程序的联邦元数据访问的一个 **\<location\>** 元素:  
+2.  <span data-ttu-id="c52b1-133">添加 \<location> 元素，用于启用对应用程序的联合元数据的访问权限：</span><span class="sxs-lookup"><span data-stu-id="c52b1-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -88,7 +94,7 @@ caps.handback.revision: 7
     </location>  
     ```  
   
-3.  将 **\<system.web\>** 元素中的以下配置条目拒绝用户，禁用本机身份验证，并使WIF管理身份验证。  
+3.  <span data-ttu-id="c52b1-134">在 \<system.web> 元素内添加以下配置条目以拒绝用户、禁用本机身份验证并启用 WIF 来管理身份验证。</span><span class="sxs-lookup"><span data-stu-id="c52b1-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -97,9 +103,9 @@ caps.handback.revision: 7
     <authentication mode="None" />  
     ```  
   
-4.  添加定义联合的身份验证模块的一个 **\<system.webServer\>** 元素。  请注意 *此时该* 属性必须为 **\<configSections\>** 项的 *PublicKeyToken* 属性前面添加的相同:  
+4.  <span data-ttu-id="c52b1-135">添加 \<system.webServer> 元素，用于为联合身份验证定义模块。</span><span class="sxs-lookup"><span data-stu-id="c52b1-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="c52b1-136">请注意，PublicKeyToken 特性必须与之前为 \<configSections > 条目添加的 PublicKeyToken 特性相同：</span><span class="sxs-lookup"><span data-stu-id="c52b1-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
   
-    ```  
+    ```xml  
     <system.webServer>  
       <modules>  
         <add name="WSFederationAuthenticationModule" type="System.IdentityModel.Services.WSFederationAuthenticationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler" />  
@@ -108,7 +114,7 @@ caps.handback.revision: 7
     </system.webServer>  
     ```  
   
-5.  添加以下Windows标识基础相关的配置项并确保您的ASP.NET应用程序的URL和端口号与 **\<audienceUris\>** 项、 **\<wsFederation\>** 元素的 **字段** 属性和 **\<wsFederation\>** 元素的 **答案** 属性的值。  还要确保 **颁发机构** 值适合您的安全标记服务\(STS\) URL。  
+5.  <span data-ttu-id="c52b1-137">添加以下 Windows Identity Foundation 相关配置条目，并确保 ASP.NET 应用程序的 URL 和端口号与 \<audienceUris> 条目、\<wsFederation> 元素的“realm”特性和 \<wsFederation> 元素的“reply”特性中的值相匹配。</span><span class="sxs-lookup"><span data-stu-id="c52b1-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="c52b1-138">还需确保“issuer”值与安全令牌服务 (STS) URL 相适应。</span><span class="sxs-lookup"><span data-stu-id="c52b1-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -132,16 +138,16 @@ caps.handback.revision: 7
     </system.identityModel.services>  
     ```  
   
-6.  添加对 [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True) 程序集。  
+6.  <span data-ttu-id="c52b1-139">将引用添加到 <xref:System.IdentityModel> 程序集。</span><span class="sxs-lookup"><span data-stu-id="c52b1-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-7.  生成解决方案确定存在错误。  
+7.  <span data-ttu-id="c52b1-140">编译此解决方案，确保没有任何错误。</span><span class="sxs-lookup"><span data-stu-id="c52b1-140">Compile the solution to make sure there are no errors.</span></span>  
   
-## 步骤3 \-测试您的解决方案  
- 此步骤将测试配置的ASP.NET Web窗体应用程序对基于声明的身份验证。  若要执行基本测试，您将添加代码以在安全标记服务发出的标记的显示声明\(STS\)。  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="c52b1-141">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="c52b1-141">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="c52b1-142">在此步骤中，将测试为基于声明的身份验证配置的 ASP.NET Web 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="c52b1-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="c52b1-143">若要执行基本测试，需添加用于在安全令牌服务 (STS) 颁发的令牌中显示声明的代码。</span><span class="sxs-lookup"><span data-stu-id="c52b1-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### 若要测试您的ASP.NET Web窗体对基于声明的身份验证的应用程序  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="c52b1-144">为基于声明的身份验证测试 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c52b1-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
   
-1.  打开 **Default.aspx** 文件在 **TestApp** 项目之下并用以下标记替换为现有标记:  
+1.  <span data-ttu-id="c52b1-145">打开 TestApp 项目下的 Default.aspx 文件，并将现有标记替换为以下标记：</span><span class="sxs-lookup"><span data-stu-id="c52b1-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -163,12 +169,12 @@ caps.handback.revision: 7
     </html>  
     ```  
   
-2.  保存 **Default.aspx**，则文件名为 **Default.aspx.cs**稍后再打开其代码。  
+2.  <span data-ttu-id="c52b1-146">保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。</span><span class="sxs-lookup"><span data-stu-id="c52b1-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  **Default.aspx.cs** 可以在 **Default.aspx** 下隐藏在解决方案资源管理器中。  如果 **Default.aspx.cs** 不可见，请单击展开 **Default.aspx** 在该三角形在其旁边。  
+    >  <span data-ttu-id="c52b1-147">在解决方案资源管理器中，Default.aspx.cs 文件可能隐藏在 Default.aspx 文件下。</span><span class="sxs-lookup"><span data-stu-id="c52b1-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="c52b1-148">如果 Default.aspx.cs 文件不可见，请单击文件旁边的三角形，展开 Default.aspx。</span><span class="sxs-lookup"><span data-stu-id="c52b1-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-3.  用下面的代码替换该 **Default.aspx.cs** **Page\_Load** 方案中的代码:  
+3.  <span data-ttu-id="c52b1-149">将 Default.aspx.cs 的 Page_Load 方法中的现有代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="c52b1-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -207,8 +213,9 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  保存 **Default.aspx.cs**，生成解决方案。  
+4.  <span data-ttu-id="c52b1-150">保存 Default.aspx.cs，并生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="c52b1-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
   
-5.  解决方案按 **F5** 键来运行。  
+5.  <span data-ttu-id="c52b1-151">按 F5 键运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="c52b1-151">Run the solution by pressing the **F5** key.</span></span>  
   
-6.  您应关注与显示在标记中声明问题可由安全标记服务的页。
+6.  <span data-ttu-id="c52b1-152">应当会看到在安全令牌服务颁发给你的令牌中显示声明的页面。</span><span class="sxs-lookup"><span data-stu-id="c52b1-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>
+

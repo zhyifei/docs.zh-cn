@@ -37,77 +37,77 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="abstract-c-reference"></a>abstract（C# 参考）
-`abstract` 修饰符指示被修改内容的实现已丢失或不完整。 abstract 修饰符可用于类、方法、属性、索引和事件。 在类声明中使用 `abstract` 修饰符以指示某个类仅旨在作为其他类的基类。 标记为 abstract 的成员，或包含在抽象类中的成员，都必须由派生自抽象类的类来实现。  
+# <a name="abstract-c-reference"></a><span data-ttu-id="c4f90-102">abstract（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c4f90-102">abstract (C# Reference)</span></span>
+<span data-ttu-id="c4f90-103">`abstract` 修饰符指示被修改内容的实现已丢失或不完整。</span><span class="sxs-lookup"><span data-stu-id="c4f90-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="c4f90-104">abstract 修饰符可用于类、方法、属性、索引和事件。</span><span class="sxs-lookup"><span data-stu-id="c4f90-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="c4f90-105">在类声明中使用 `abstract` 修饰符以指示某个类仅旨在作为其他类的基类。</span><span class="sxs-lookup"><span data-stu-id="c4f90-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes.</span></span> <span data-ttu-id="c4f90-106">标记为 abstract 的成员，或包含在抽象类中的成员，都必须由派生自抽象类的类来实现。</span><span class="sxs-lookup"><span data-stu-id="c4f90-106">Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.</span></span>  
   
-## <a name="example"></a>示例  
- 在此示例中，类 `Square` 必须提供 `Area` 的实现，因为它派生自 `ShapesClass`：  
+## <a name="example"></a><span data-ttu-id="c4f90-107">示例</span><span class="sxs-lookup"><span data-stu-id="c4f90-107">Example</span></span>  
+ <span data-ttu-id="c4f90-108">在此示例中，类 `Square` 必须提供 `Area` 的实现，因为它派生自 `ShapesClass`：</span><span class="sxs-lookup"><span data-stu-id="c4f90-108">In this example, the class `Square` must provide an implementation of `Area` because it derives from `ShapesClass`:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ <span data-ttu-id="c4f90-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="c4f90-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span></span>  
   
- 抽象类具有以下功能：  
+ <span data-ttu-id="c4f90-110">抽象类具有以下功能：</span><span class="sxs-lookup"><span data-stu-id="c4f90-110">Abstract classes have the following features:</span></span>  
   
--   抽象类不能实例化。  
+-   <span data-ttu-id="c4f90-111">抽象类不能实例化。</span><span class="sxs-lookup"><span data-stu-id="c4f90-111">An abstract class cannot be instantiated.</span></span>  
   
--   抽象类可能包含抽象方法和访问器。  
+-   <span data-ttu-id="c4f90-112">抽象类可能包含抽象方法和访问器。</span><span class="sxs-lookup"><span data-stu-id="c4f90-112">An abstract class may contain abstract methods and accessors.</span></span>  
   
--   无法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修饰符来修改抽象类，因为两个修饰符具有相反的含义。 `sealed` 修饰符阻止类被继承，而 `abstract` 修饰符要求类被继承。  
+-   <span data-ttu-id="c4f90-113">无法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修饰符来修改抽象类，因为两个修饰符具有相反的含义。</span><span class="sxs-lookup"><span data-stu-id="c4f90-113">It is not possible to modify an abstract class with the [sealed](../../../csharp/language-reference/keywords/sealed.md) modifier because the two modifers have opposite meanings.</span></span> <span data-ttu-id="c4f90-114">`sealed` 修饰符阻止类被继承，而 `abstract` 修饰符要求类被继承。</span><span class="sxs-lookup"><span data-stu-id="c4f90-114">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
   
--   派生自抽象类的非抽象类，必须包含全部已继承的抽象方法和访问器的实际实现。  
+-   <span data-ttu-id="c4f90-115">派生自抽象类的非抽象类，必须包含全部已继承的抽象方法和访问器的实际实现。</span><span class="sxs-lookup"><span data-stu-id="c4f90-115">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
   
- 在方法或属性声明中使用 `abstract` 修饰符，以指示该方法或属性不包含实现。  
+ <span data-ttu-id="c4f90-116">在方法或属性声明中使用 `abstract` 修饰符，以指示该方法或属性不包含实现。</span><span class="sxs-lookup"><span data-stu-id="c4f90-116">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
   
- 抽象方法具有以下功能：  
+ <span data-ttu-id="c4f90-117">抽象方法具有以下功能：</span><span class="sxs-lookup"><span data-stu-id="c4f90-117">Abstract methods have the following features:</span></span>  
   
--   抽象方法是隐式的虚拟方法。  
+-   <span data-ttu-id="c4f90-118">抽象方法是隐式的虚拟方法。</span><span class="sxs-lookup"><span data-stu-id="c4f90-118">An abstract method is implicitly a virtual method.</span></span>  
   
--   只有抽象类中才允许抽象方法声明。  
+-   <span data-ttu-id="c4f90-119">只有抽象类中才允许抽象方法声明。</span><span class="sxs-lookup"><span data-stu-id="c4f90-119">Abstract method declarations are only permitted in abstract classes.</span></span>  
   
--   由于抽象方法声明不提供实际的实现，因此没有方法主体；方法声明仅以分号结尾，且签名后没有大括号 ({ })。 例如:   
+-   <span data-ttu-id="c4f90-120">由于抽象方法声明不提供实际的实现，因此没有方法主体；方法声明仅以分号结尾，且签名后没有大括号 ({ })。</span><span class="sxs-lookup"><span data-stu-id="c4f90-120">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="c4f90-121">例如: </span><span class="sxs-lookup"><span data-stu-id="c4f90-121">For example:</span></span>  
   
     ```  
     public abstract void MyMethod();  
     ```  
   
-     实现由替代方法 [override](../../../csharp/language-reference/keywords/override.md) 提供，它是非抽象类的成员。  
+     <span data-ttu-id="c4f90-122">实现由替代方法 [override](../../../csharp/language-reference/keywords/override.md) 提供，它是非抽象类的成员。</span><span class="sxs-lookup"><span data-stu-id="c4f90-122">The implementation is provided by an overriding method[override](../../../csharp/language-reference/keywords/override.md), which is a member of a non-abstract class.</span></span>  
   
--   在抽象方法声明中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修饰符是错误的。  
+-   <span data-ttu-id="c4f90-123">在抽象方法声明中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修饰符是错误的。</span><span class="sxs-lookup"><span data-stu-id="c4f90-123">It is an error to use the [static](../../../csharp/language-reference/keywords/static.md) or [virtual](../../../csharp/language-reference/keywords/virtual.md) modifiers in an abstract method declaration.</span></span>  
   
- 除了声明和调用语法方面不同外，抽象属性的行为与抽象方法相似。  
+ <span data-ttu-id="c4f90-124">除了声明和调用语法方面不同外，抽象属性的行为与抽象方法相似。</span><span class="sxs-lookup"><span data-stu-id="c4f90-124">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   在静态属性上使用 `abstract` 修饰符是错误的。  
+-   <span data-ttu-id="c4f90-125">在静态属性上使用 `abstract` 修饰符是错误的。</span><span class="sxs-lookup"><span data-stu-id="c4f90-125">It is an error to use the `abstract` modifier on a static property.</span></span>  
   
--   通过包含使用 [override](../../../csharp/language-reference/keywords/override.md) 修饰符的属性声明，可在派生类中重写抽象继承属性。  
+-   <span data-ttu-id="c4f90-126">通过包含使用 [override](../../../csharp/language-reference/keywords/override.md) 修饰符的属性声明，可在派生类中重写抽象继承属性。</span><span class="sxs-lookup"><span data-stu-id="c4f90-126">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](../../../csharp/language-reference/keywords/override.md) modifier.</span></span>  
   
- 有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+ <span data-ttu-id="c4f90-127">有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="c4f90-127">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- 抽象类必须为所有接口成员提供实现。  
+ <span data-ttu-id="c4f90-128">抽象类必须为所有接口成员提供实现。</span><span class="sxs-lookup"><span data-stu-id="c4f90-128">An abstract class must provide implementation for all interface members.</span></span>  
   
- 实现接口的抽象类有可能将接口方法映射到抽象方法上。 例如:   
+ <span data-ttu-id="c4f90-129">实现接口的抽象类有可能将接口方法映射到抽象方法上。</span><span class="sxs-lookup"><span data-stu-id="c4f90-129">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="c4f90-130">例如: </span><span class="sxs-lookup"><span data-stu-id="c4f90-130">For example:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ <span data-ttu-id="c4f90-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="c4f90-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span></span>  
   
-## <a name="example"></a>示例  
- 在此示例中，类 `DerivedClass` 派生自抽象类 `BaseClass`。 抽象类包含抽象方法 `AbstractMethod`，以及两个抽象属性 `X` 和 `Y`。  
+## <a name="example"></a><span data-ttu-id="c4f90-132">示例</span><span class="sxs-lookup"><span data-stu-id="c4f90-132">Example</span></span>  
+ <span data-ttu-id="c4f90-133">在此示例中，类 `DerivedClass` 派生自抽象类 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="c4f90-133">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="c4f90-134">抽象类包含抽象方法 `AbstractMethod`，以及两个抽象属性 `X` 和 `Y`。</span><span class="sxs-lookup"><span data-stu-id="c4f90-134">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ <span data-ttu-id="c4f90-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="c4f90-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span></span>  
   
- 在前面的示例中，如果你尝试通过使用如下语句来实例化抽象类：  
+ <span data-ttu-id="c4f90-136">在前面的示例中，如果你尝试通过使用如下语句来实例化抽象类：</span><span class="sxs-lookup"><span data-stu-id="c4f90-136">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
   
 ```  
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- 将遇到一个错误，告知编译器无法创建抽象类“BaseClass”的实例。  
+ <span data-ttu-id="c4f90-137">将遇到一个错误，告知编译器无法创建抽象类“BaseClass”的实例。</span><span class="sxs-lookup"><span data-stu-id="c4f90-137">you will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="c4f90-138">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="c4f90-138">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="c4f90-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4f90-139">See Also</span></span>  
+ <span data-ttu-id="c4f90-140">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="c4f90-140">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="c4f90-141">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="c4f90-141">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="c4f90-142">[修饰符](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="c4f90-142">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ <span data-ttu-id="c4f90-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span><span class="sxs-lookup"><span data-stu-id="c4f90-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span></span>  
+ <span data-ttu-id="c4f90-144">[override](../../../csharp/language-reference/keywords/override.md) </span><span class="sxs-lookup"><span data-stu-id="c4f90-144">[override](../../../csharp/language-reference/keywords/override.md) </span></span>  
+ [<span data-ttu-id="c4f90-145">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="c4f90-145">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

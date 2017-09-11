@@ -1,65 +1,71 @@
 ---
-title: "为互操作限定 .NET 类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 互操作, 公开 COM 组件"
-  - "COM 互操作, 限定 .NET 类型"
-  - "向 COM 公开 .NET Framework 组件"
-  - "与非托管代码间的互操作, 公开 .NET Framework 组件"
-  - "与非托管代码间的互操作, 限定 .NET 类型"
-  - "为互操作限定 .NET 类型"
+title: "为互操作限定 .NET 类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- exposing .NET Framework components to COM
+- COM interop, qualifying .NET types
+- qualifying .NET types for interoperation
+- interoperation with unmanaged code, qualifying .NET types
+- interoperation with unmanaged code, exposing .NET Framework components
+- COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 68ecd5e4c562f1eecb31ee539adb70d67455a584
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 为互操作限定 .NET 类型
-如果要向 COM 应用程序公开程序集中的类型，应考虑 COM 互操作在设计时的要求。  如果符合以下原则，托管类型（类、接口、结构和枚举）将与 COM 类型紧密集成：  
+# <a name="qualifying-net-types-for-interoperation"></a><span data-ttu-id="2993b-102">为互操作限定 .NET 类型</span><span class="sxs-lookup"><span data-stu-id="2993b-102">Qualifying .NET Types for Interoperation</span></span>
+<span data-ttu-id="2993b-103">若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。</span><span class="sxs-lookup"><span data-stu-id="2993b-103">If you intend to expose types in an assembly to COM applications, consider the requirements of COM interop at design time.</span></span> <span data-ttu-id="2993b-104">如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：</span><span class="sxs-lookup"><span data-stu-id="2993b-104">Managed types (class, interface, structure, and enumeration) seamlessly integrate with COM types when you adhere to the following guidelines:</span></span>  
   
--   类应显式实现接口。  
+-   <span data-ttu-id="2993b-105">类应显式实现接口。</span><span class="sxs-lookup"><span data-stu-id="2993b-105">Classes should implement interfaces explicitly.</span></span>  
   
-     虽然 COM 互操作提供了一种机制来自动生成包含类的所有成员及其基类成员的接口，但最好提供显式接口。  自动生成的接口称作类接口。  有关指南，请参见[类接口简介](http://msdn.microsoft.com/zh-cn/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
+     <span data-ttu-id="2993b-106">尽管 COM 互操作提供了一种机制，用于自动生成包含类的所有成员及其基类成员的接口，但最好还是提供显式接口。</span><span class="sxs-lookup"><span data-stu-id="2993b-106">Although COM interop provides a mechanism to automatically generate an interface containing all members of the class and the members of its base class, it is far better to provide explicit interfaces.</span></span> <span data-ttu-id="2993b-107">自动生成的接口称为类接口。</span><span class="sxs-lookup"><span data-stu-id="2993b-107">The automatically generated interface is called the class interface.</span></span> <span data-ttu-id="2993b-108">如需相关指南，请参阅[类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)。</span><span class="sxs-lookup"><span data-stu-id="2993b-108">For guidelines, see [Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).</span></span>  
   
-     可以使用 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C\# 和 C\+\+ 将接口定义合并在代码中，而不必使用接口定义语言 \(IDL\) 或其等效语言。  有关语法的详细信息，请参见您所用语言的文档。  
+     <span data-ttu-id="2993b-109">可以使用[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 将接口定义合并在代码中，而无需使用接口定义语言 (IDL) 或其等效语言。</span><span class="sxs-lookup"><span data-stu-id="2993b-109">You can use [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++ to incorporate interface definitions in your code, instead of having to use Interface Definition Language (IDL) or its equivalent.</span></span> <span data-ttu-id="2993b-110">有关语法的详细信息，请参见语言文档。</span><span class="sxs-lookup"><span data-stu-id="2993b-110">For syntax details, see your language documentation.</span></span>  
   
--   托管类型必须是公共的。  
+-   <span data-ttu-id="2993b-111">托管的类型必须是公共的。</span><span class="sxs-lookup"><span data-stu-id="2993b-111">Managed types must be public.</span></span>  
   
-     只有程序集中的公共类型才会注册并导出到类型库中。  因此，只有公共类型才对于 COM 可见。  
+     <span data-ttu-id="2993b-112">只有程序集中的公共类型才会注册并导出到类型库中。</span><span class="sxs-lookup"><span data-stu-id="2993b-112">Only public types in an assembly are registered and exported to the type library.</span></span> <span data-ttu-id="2993b-113">因此只有公共类型才对 COM 可见。</span><span class="sxs-lookup"><span data-stu-id="2993b-113">As a result, only public types are visible to COM.</span></span>  
   
-     托管类型将向其他未向 COM 公开的托管代码公开功能。  例如，参数化的构造函数、静态方法和常数字段不会向 COM 客户端公开。  此外，当运行时在类型中和类型外封送数据时，可能会复制或转换数据。  
+     <span data-ttu-id="2993b-114">托管类型会向其他未向 COM 公开的托管代码公开功能。</span><span class="sxs-lookup"><span data-stu-id="2993b-114">Managed types expose features to other managed code that might not be exposed to COM.</span></span> <span data-ttu-id="2993b-115">例如，参数化的构造函数、静态方法和常数字段不会向 COM 客户端公开。</span><span class="sxs-lookup"><span data-stu-id="2993b-115">For instance, parameterized constructors, static methods, and constant fields are not exposed to COM clients.</span></span> <span data-ttu-id="2993b-116">此外，运行时在类型中和类型外封送数据时，数据可能会被复制或转换。</span><span class="sxs-lookup"><span data-stu-id="2993b-116">Further, as the runtime marshals data in and out of a type, the data might be copied or transformed.</span></span>  
   
--   方法、属性、字段和事件必须是公共的。  
+-   <span data-ttu-id="2993b-117">方法、属性、字段和事件必须是公共的。</span><span class="sxs-lookup"><span data-stu-id="2993b-117">Methods, properties, fields, and events must be public.</span></span>  
   
-     如果要对于 COM 可见，公共类型的成员也必须是公共的。  通过应用 <xref:System.Runtime.InteropServices.ComVisibleAttribute>，可以限制程序集、公共类型或公共类型的公共成员的可见性。  默认情况下，所有公共类型和成员都是可见的。  
+     <span data-ttu-id="2993b-118">如果要对 COM 可见，公共类型的成员也必须是公共的。</span><span class="sxs-lookup"><span data-stu-id="2993b-118">Members of public types must also be public if they are to be visible to COM.</span></span> <span data-ttu-id="2993b-119">通过应用 <xref:System.Runtime.InteropServices.ComVisibleAttribute>，可以限制程序集、公共类型或公共类型的公共成员的可见性。</span><span class="sxs-lookup"><span data-stu-id="2993b-119">You can restrict the visibility of an assembly, a public type, or public members of a public type by applying the <xref:System.Runtime.InteropServices.ComVisibleAttribute>.</span></span> <span data-ttu-id="2993b-120">默认情况下，所有公共类型和成员都是可见的。</span><span class="sxs-lookup"><span data-stu-id="2993b-120">By default, all public types and members are visible.</span></span>  
   
--   类型必须有一个公共默认构造函数才能从 COM 中激活。  
+-   <span data-ttu-id="2993b-121">具备公共默认构造函数的类型才能从 COM 中激活。</span><span class="sxs-lookup"><span data-stu-id="2993b-121">Types must have a public default constructor to be activated from COM.</span></span>  
   
-     托管的公共类型对于 COM 是可见的。  但是，如果没有公共默认构造函数（无参数的构造函数），COM 客户端将无法创建该类型。  如果该类型由其他方法激活，则 COM 客户端仍可使用该类型。  
+     <span data-ttu-id="2993b-122">托管的公共类型对于 COM 是可见的。</span><span class="sxs-lookup"><span data-stu-id="2993b-122">Managed, public types are visible to COM.</span></span> <span data-ttu-id="2993b-123">但是如果没有公共默认构造函数（不带任何参数的构造函数），COM 客户端无法创建该类型。</span><span class="sxs-lookup"><span data-stu-id="2993b-123">However, without a public default constructor (a constructor with no arguments), COM clients cannot create the type.</span></span> <span data-ttu-id="2993b-124">如果该类型由其他方法激活，COM 客户端仍可使用该类型。</span><span class="sxs-lookup"><span data-stu-id="2993b-124">COM clients can still use the type if it is activated by some other means.</span></span>  
   
--   类型不能是抽象的。  
+-   <span data-ttu-id="2993b-125">类型不能是抽象的。</span><span class="sxs-lookup"><span data-stu-id="2993b-125">Types cannot be abstract.</span></span>  
   
-     COM 客户端和 .NET 客户端都不能创建抽象的类型。  
+     <span data-ttu-id="2993b-126">COM 客户端和 .NET 客户端都不能创建抽象的类型。</span><span class="sxs-lookup"><span data-stu-id="2993b-126">Neither COM clients nor .NET clients can create abstract types.</span></span>  
   
- 当导出到 COM 后，托管类型的继承层次结构将被展平。  在托管和非托管环境之间，版本控制也会有所不同。  向 COM 公开的类型不具有与其他托管类型相同的版本控制特性。  
+ <span data-ttu-id="2993b-127">导出到 COM 后，托管类型的继承层次结构将被展平。</span><span class="sxs-lookup"><span data-stu-id="2993b-127">When exported to COM, the inheritance hierarchy of a managed type is flattened.</span></span> <span data-ttu-id="2993b-128">托管和非托管环境之间的版本控制也会有所不同。</span><span class="sxs-lookup"><span data-stu-id="2993b-128">Versioning also differs between managed and unmanaged environments.</span></span> <span data-ttu-id="2993b-129">向 COM 公开的类型不具有其他托管类型相同的版本控制特性。</span><span class="sxs-lookup"><span data-stu-id="2993b-129">Types exposed to COM do not have the same versioning characteristics as other managed types.</span></span>  
   
-## 请参阅  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Introducing the Class Interface](http://msdn.microsoft.com/zh-cn/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [应用互操作特性](../../../docs/framework/interop/applying-interop-attributes.md)   
- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a><span data-ttu-id="2993b-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2993b-130">See Also</span></span>  
+ <span data-ttu-id="2993b-131"><xref:System.Runtime.InteropServices.ComVisibleAttribute></span><span class="sxs-lookup"><span data-stu-id="2993b-131"><xref:System.Runtime.InteropServices.ComVisibleAttribute></span></span>   
+ <span data-ttu-id="2993b-132">[向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md) </span><span class="sxs-lookup"><span data-stu-id="2993b-132">[Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md) </span></span>  
+ <span data-ttu-id="2993b-133">[类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024) </span><span class="sxs-lookup"><span data-stu-id="2993b-133">[Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024) </span></span>  
+ <span data-ttu-id="2993b-134">[应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md) </span><span class="sxs-lookup"><span data-stu-id="2993b-134">[Applying Interop Attributes](../../../docs/framework/interop/applying-interop-attributes.md) </span></span>  
+ [<span data-ttu-id="2993b-135">将 COM 的程序集打包</span><span class="sxs-lookup"><span data-stu-id="2993b-135">Packaging an Assembly for COM</span></span>](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+

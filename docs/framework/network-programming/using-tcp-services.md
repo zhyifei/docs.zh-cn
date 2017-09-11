@@ -1,43 +1,48 @@
 ---
-title: "使用 TCP 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "从 Internet 请求数据，TCP"
-  - "接收数据，TCP"
-  - "TcpClient 类，关于 TcpClient 类"
-  - "数据请求，TCP"
-  - "应用程序协议，TCP"
-  - "网络资源，TCP"
-  - "发送数据，TCP"
-  - "TCP"
-  - "协议，TCP"
-  - "Internet，TCP"
+title: "使用 TCP 服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, TCP
+- receiving data, TCP
+- TcpClient class, about TcpClient class
+- data requests, TCP
+- application protocols, TCP
+- network resources, TCP
+- sending data, TCP
+- TCP
+- protocols, TCP
+- Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用 TCP 服务
-使用TCP， <xref:System.Net.Sockets.TcpClient> 选件类请求Internet资源的数据。  使用TCP， **TcpClient** 方法和属性中提取创建的 <xref:System.Net.Sockets.Socket> 详细信息请求和收到的数据。  由于与远程计算机的连接表示为流，数据可以读取和写入的流处理技术的.NET Framework。  
+# <a name="using-tcp-services"></a><span data-ttu-id="ddc55-102">使用 TCP 服务</span><span class="sxs-lookup"><span data-stu-id="ddc55-102">Using TCP Services</span></span>
+<span data-ttu-id="ddc55-103"><xref:System.Net.Sockets.TcpClient> 类使用 TCP 从 Internet 资源请求数据。</span><span class="sxs-lookup"><span data-stu-id="ddc55-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="ddc55-104">TcpClient 的方法和属性会摘录为了通过 TCP 请求和接收数据而创建的 <xref:System.Net.Sockets.Socket> 的详细信息。</span><span class="sxs-lookup"><span data-stu-id="ddc55-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="ddc55-105">与远程设备的连接表示为流，因此可以使用 .NET Framework 流处理技术读取和写入数据。</span><span class="sxs-lookup"><span data-stu-id="ddc55-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
   
- TCP协议建立与远程发送和接收数据包的连接的终结点然后使用的连接。  TCP负责确保数据包发送给终结点并按正确的顺序组合而成，当到达时。  
+ <span data-ttu-id="ddc55-106">TCP 协议与远程终结点建立连接，然后使用此连接发送和接收数据包。</span><span class="sxs-lookup"><span data-stu-id="ddc55-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="ddc55-107">TCP 负责确保将数据包发送到终结点，并在数据包到达时以正确的顺序对其进行汇编。</span><span class="sxs-lookup"><span data-stu-id="ddc55-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
   
- 若要生成TCP连接，必须知道网络设备的地址承载所需的服务时，且必须知道服务使用传达的TCP端口。  internet指定号码适当\(Iana\)定义常用的服务的端口号\(请参见www.iana.org\/assignments\/port\-numbers\)。  services未在Iana列表可以具有在1,024到65,535范围内的端口号。  
+ <span data-ttu-id="ddc55-108">若要建立 TCP 连接，必须知道承载所需服务的网络设备地址以及该服务用于通信的 TCP 端口。</span><span class="sxs-lookup"><span data-stu-id="ddc55-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="ddc55-109">Internet 编号分配机构 (IANA) 定义公共服务的端口号（请参阅 www.iana.org/assignments/port-numbers）。</span><span class="sxs-lookup"><span data-stu-id="ddc55-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="ddc55-110">不在 IANA 列表上的服务可使用 1,024 到 65,535 范围内的端口号。</span><span class="sxs-lookup"><span data-stu-id="ddc55-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
   
- 下面的示例演示如何设置 **TcpClient** 连接位于TCP端口13的一个时间服务器。  
+ <span data-ttu-id="ddc55-111">以下示例演示如何设置 TcpClient 以连接到 TCP 端口 13 上的时间服务器。</span><span class="sxs-lookup"><span data-stu-id="ddc55-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
   
 ```vb  
 Imports System  
@@ -74,7 +79,6 @@ Public Class TcpTimeClient
         Return 0  
     End Function 'Main  
 End Class 'TcpTimeClient  
-  
 ```  
   
 ```csharp  
@@ -108,9 +112,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> 监视管理与客户端的连接传入请求的TCP端口然后创建 **套接字** 或 **TcpClient** 。  <xref:System.Net.Sockets.TcpListener.Start%2A> 方法允许侦听，并且， <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法禁用听完端口。  <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法接受传入连接请求并创建 **TcpClient** 处理请求，并且， <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法接受传入连接请求并创建 **套接字** 处理请求。  
+ <span data-ttu-id="ddc55-112"><xref:System.Net.Sockets.TcpListener> 用于监视 TCP 端口上的传入请求，然后创建一个 Socket 或 TcpClient 来管理与客户端的连接。</span><span class="sxs-lookup"><span data-stu-id="ddc55-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="ddc55-113"><xref:System.Net.Sockets.TcpListener.Start%2A> 方法可使用侦听，而 <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法禁用端口上的侦听。</span><span class="sxs-lookup"><span data-stu-id="ddc55-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="ddc55-114"><xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法接受传入的连接请求并创建 TcpClient 处理请求，<xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法接受传入的连接请求并创建 Socket 处理请求。</span><span class="sxs-lookup"><span data-stu-id="ddc55-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
   
- 下面的示例演示创建网络时服务器使用 **TcpListener** 监视TCP端口13。  当一个传入连接请求接受后，时间服务器响应与当前日期和时间从主机服务器。  
+ <span data-ttu-id="ddc55-115">以下示例演示如何使用 TcpListener 创建网络时间服务器以监视 TCP 端口 13。</span><span class="sxs-lookup"><span data-stu-id="ddc55-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="ddc55-116">接受传入的连接请求时，时间服务器会使用主机服务器的当前日期和时间进行响应。</span><span class="sxs-lookup"><span data-stu-id="ddc55-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
   
 ```vb  
 Imports System  
@@ -202,5 +206,6 @@ public class TcpTimeServer {
 }  
 ```  
   
-## 请参阅  
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+## <a name="see-also"></a><span data-ttu-id="ddc55-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ddc55-117">See Also</span></span>  
+ 
+

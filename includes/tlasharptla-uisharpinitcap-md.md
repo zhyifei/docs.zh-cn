@@ -1,1 +1,1 @@
-用户界面 (UI)
+<span data-ttu-id="cfd8a-101">用户界面 (UI)</span><span class="sxs-lookup"><span data-stu-id="cfd8a-101">User interface (UI)</span></span>

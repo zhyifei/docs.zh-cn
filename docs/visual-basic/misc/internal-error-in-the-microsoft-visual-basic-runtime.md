@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ce206b3d2f56a4ef4d4de66a8dc34b289c927f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1aa65a4fe67f1b159e288b1d988ace763853b1f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="internal-error-in-the-microsoft-visual-basic-runtime"></a>Microsoft Visual Basic 运行时的内部错误。
-在 Microsoft 发生内部错误[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]运行时。  
+# <a name="internal-error-in-the-microsoft-visual-basic-runtime"></a><span data-ttu-id="58664-102">Microsoft Visual Basic 运行时的内部错误。</span><span class="sxs-lookup"><span data-stu-id="58664-102">Internal error in the Microsoft Visual Basic runtime</span></span>
+<span data-ttu-id="58664-103">在 Microsoft 发生内部错误[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]运行时。</span><span class="sxs-lookup"><span data-stu-id="58664-103">An internal error has occurred in the Microsoft [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] runtime.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="58664-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="58664-104">To correct this error</span></span>  
   
--   记录发生错误的环境，并与 Microsoft 产品支持服务联系。  
+-   <span data-ttu-id="58664-105">记录发生错误的环境，并与 Microsoft 产品支持服务联系。</span><span class="sxs-lookup"><span data-stu-id="58664-105">Note the circumstances under which the error occurred, and call Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)   
- [PAVEOVER 产品支持和可访问性](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="58664-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="58664-106">See Also</span></span>  
+ <span data-ttu-id="58664-107">[错误类型](../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="58664-107">[Error Types](../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="58664-108"> [PAVEOVER 产品支持和可访问性](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span><span class="sxs-lookup"><span data-stu-id="58664-108"> [PAVEOVER Product Support and Accessibility](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span></span>

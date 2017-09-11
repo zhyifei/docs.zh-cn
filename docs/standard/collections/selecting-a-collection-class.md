@@ -21,75 +21,75 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 26467141e5f7537efddd79e0b04af6203e4a6994
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 01abb535567429780a8a0776aebecaf64307950d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="selecting-a-collection-class"></a>选择集合类
-请务必仔细选择你的集合类。 使用错误的类型可能会限制集合的使用。 一般情况下，应避免使用 <xref:System.Collections> 命名空间中的类型，除非特别面向 .NET Framework 版本 1.1。 由于集合的泛型版本和并发版本具有更高的类型安全性和其他改进，将首选这些版本。  
+# <a name="selecting-a-collection-class"></a><span data-ttu-id="9cc02-102">选择集合类</span><span class="sxs-lookup"><span data-stu-id="9cc02-102">Selecting a Collection Class</span></span>
+<span data-ttu-id="9cc02-103">请务必仔细选择你的集合类。</span><span class="sxs-lookup"><span data-stu-id="9cc02-103">Be sure to choose your collection class carefully.</span></span> <span data-ttu-id="9cc02-104">使用错误的类型可能会限制集合的使用。</span><span class="sxs-lookup"><span data-stu-id="9cc02-104">Using the wrong type can restrict your use of the collection.</span></span> <span data-ttu-id="9cc02-105">一般情况下，应避免使用 <xref:System.Collections> 命名空间中的类型，除非特别面向 .NET Framework 版本 1.1。</span><span class="sxs-lookup"><span data-stu-id="9cc02-105">In general, avoid using the types in the <xref:System.Collections> namespace unless you are specifically targeting .NET Framework version 1.1.</span></span> <span data-ttu-id="9cc02-106">由于集合的泛型版本和并发版本具有更高的类型安全性和其他改进，将首选这些版本。</span><span class="sxs-lookup"><span data-stu-id="9cc02-106">The generic and concurrent versions of the collections are to be preferred because of their greater type safety and other improvements.</span></span>  
   
- 请考虑下列问题：  
+ <span data-ttu-id="9cc02-107">请考虑下列问题：</span><span class="sxs-lookup"><span data-stu-id="9cc02-107">Consider the following questions:</span></span>  
   
--   是否需要顺序列表（其中通常在检索元素值后就将该元素丢弃）？  
+-   <span data-ttu-id="9cc02-108">是否需要顺序列表（其中通常在检索元素值后就将该元素丢弃）？</span><span class="sxs-lookup"><span data-stu-id="9cc02-108">Do you need a sequential list where the element is typically discarded after its value is retrieved?</span></span>  
   
-    -   在需要的情况下，如果需要先进先出 (FIFO) 行为，请考虑使用 <xref:System.Collections.Queue> 类或 <xref:System.Collections.Generic.Queue%601> 泛型类。 如果需要后进先出 (LIFO) 行为，请考虑使用 <xref:System.Collections.Stack> 类或 <xref:System.Collections.Generic.Stack%601> 泛型类。 对于来自多个线程的安全访问，使用并发版本 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
+    -   <span data-ttu-id="9cc02-109">在需要的情况下，如果需要先进先出 (FIFO) 行为，请考虑使用 <xref:System.Collections.Queue> 类或 <xref:System.Collections.Generic.Queue%601> 泛型类。</span><span class="sxs-lookup"><span data-stu-id="9cc02-109">If yes, consider using the <xref:System.Collections.Queue> class or the <xref:System.Collections.Generic.Queue%601> generic class if you need first-in, first-out (FIFO) behavior.</span></span> <span data-ttu-id="9cc02-110">如果需要后进先出 (LIFO) 行为，请考虑使用 <xref:System.Collections.Stack> 类或 <xref:System.Collections.Generic.Stack%601> 泛型类。</span><span class="sxs-lookup"><span data-stu-id="9cc02-110">Consider using the <xref:System.Collections.Stack> class or the <xref:System.Collections.Generic.Stack%601> generic class if you need last-in, first-out (LIFO) behavior.</span></span> <span data-ttu-id="9cc02-111">对于来自多个线程的安全访问，使用并发版本 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。</span><span class="sxs-lookup"><span data-stu-id="9cc02-111">For safe access from multiple threads, use the concurrent versions <xref:System.Collections.Concurrent.ConcurrentQueue%601> and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>  
   
-    -   如果不需要，请考虑使用其他集合。  
+    -   <span data-ttu-id="9cc02-112">如果不需要，请考虑使用其他集合。</span><span class="sxs-lookup"><span data-stu-id="9cc02-112">If not, consider using the other collections.</span></span>  
   
--   是否需要以特定顺序（如先进先出、后进先出或随机）访问元素？  
+-   <span data-ttu-id="9cc02-113">是否需要以特定顺序（如先进先出、后进先出或随机）访问元素？</span><span class="sxs-lookup"><span data-stu-id="9cc02-113">Do you need to access the elements in a certain order, such as FIFO, LIFO, or random?</span></span>  
   
-    -   <xref:System.Collections.Queue> 类和 <xref:System.Collections.Generic.Queue%601> 或 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 泛型类提供先进先出访问。 有关详细信息，请参阅[何时使用线程安全集合](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。  
+    -   <span data-ttu-id="9cc02-114"><xref:System.Collections.Queue> 类和 <xref:System.Collections.Generic.Queue%601> 或 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 泛型类提供先进先出访问。</span><span class="sxs-lookup"><span data-stu-id="9cc02-114">The <xref:System.Collections.Queue> class and the <xref:System.Collections.Generic.Queue%601> or <xref:System.Collections.Concurrent.ConcurrentQueue%601> generic class offer FIFO access.</span></span> <span data-ttu-id="9cc02-115">有关详细信息，请参阅[何时使用线程安全集合](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。</span><span class="sxs-lookup"><span data-stu-id="9cc02-115">For more information, see [When to Use a Thread-Safe Collection](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).</span></span>  
   
-    -   <xref:System.Collections.Stack> 类和 <xref:System.Collections.Generic.Stack%601> 或 <xref:System.Collections.Concurrent.ConcurrentStack%601> 泛型类提供后进先出的访问。 有关详细信息，请参阅[何时使用线程安全集合](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。  
+    -   <span data-ttu-id="9cc02-116"><xref:System.Collections.Stack> 类和 <xref:System.Collections.Generic.Stack%601> 或 <xref:System.Collections.Concurrent.ConcurrentStack%601> 泛型类提供后进先出的访问。</span><span class="sxs-lookup"><span data-stu-id="9cc02-116">The <xref:System.Collections.Stack> class and the <xref:System.Collections.Generic.Stack%601> or <xref:System.Collections.Concurrent.ConcurrentStack%601> generic class offer LIFO access.</span></span> <span data-ttu-id="9cc02-117">有关详细信息，请参阅[何时使用线程安全集合](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。</span><span class="sxs-lookup"><span data-stu-id="9cc02-117">For more information, see [When to Use a Thread-Safe Collection](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).</span></span>  
   
-    -   <xref:System.Collections.Generic.LinkedList%601> 泛型类允许从开头到末尾或从末尾到开头的顺序访问。  
+    -   <span data-ttu-id="9cc02-118"><xref:System.Collections.Generic.LinkedList%601> 泛型类允许从开头到末尾或从末尾到开头的顺序访问。</span><span class="sxs-lookup"><span data-stu-id="9cc02-118">The <xref:System.Collections.Generic.LinkedList%601> generic class allows sequential access either from the head to the tail, or from the tail to the head.</span></span>  
   
--   是否需要按索引访问每个元素？  
+-   <span data-ttu-id="9cc02-119">是否需要按索引访问每个元素？</span><span class="sxs-lookup"><span data-stu-id="9cc02-119">Do you need to access each element by index?</span></span>  
   
-    -   <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Specialized.StringCollection> 类以及 <xref:System.Collections.Generic.List%601> 泛型类按从零开始的元素索引提供对其元素的访问。  
+    -   <span data-ttu-id="9cc02-120"><xref:System.Collections.ArrayList> 和 <xref:System.Collections.Specialized.StringCollection> 类以及 <xref:System.Collections.Generic.List%601> 泛型类按从零开始的元素索引提供对其元素的访问。</span><span class="sxs-lookup"><span data-stu-id="9cc02-120">The <xref:System.Collections.ArrayList> and <xref:System.Collections.Specialized.StringCollection> classes and the <xref:System.Collections.Generic.List%601> generic class offer access to their elements by the zero-based index of the element.</span></span>  
   
-    -   <xref:System.Collections.Hashtable>、<xref:System.Collections.SortedList>、<xref:System.Collections.Specialized.ListDictionary> 和 <xref:System.Collections.Specialized.StringDictionary> 类以及 <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类按元素的键提供对其元素的访问。  
+    -   <span data-ttu-id="9cc02-121"><xref:System.Collections.Hashtable>、<xref:System.Collections.SortedList>、<xref:System.Collections.Specialized.ListDictionary> 和 <xref:System.Collections.Specialized.StringDictionary> 类以及 <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类按元素的键提供对其元素的访问。</span><span class="sxs-lookup"><span data-stu-id="9cc02-121">The <xref:System.Collections.Hashtable>, <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary>, and <xref:System.Collections.Specialized.StringDictionary> classes, and the <xref:System.Collections.Generic.Dictionary%602> and <xref:System.Collections.Generic.SortedDictionary%602> generic classes offer access to their elements by the key of the element.</span></span>  
   
-    -   <xref:System.Collections.Specialized.NameObjectCollectionBase> 和 <xref:System.Collections.Specialized.NameValueCollection> 类以及 <xref:System.Collections.ObjectModel.KeyedCollection%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类按从零开始的元素索引或元素的键提供对其元素的访问。  
+    -   <span data-ttu-id="9cc02-122"><xref:System.Collections.Specialized.NameObjectCollectionBase> 和 <xref:System.Collections.Specialized.NameValueCollection> 类以及 <xref:System.Collections.ObjectModel.KeyedCollection%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类按从零开始的元素索引或元素的键提供对其元素的访问。</span><span class="sxs-lookup"><span data-stu-id="9cc02-122">The <xref:System.Collections.Specialized.NameObjectCollectionBase> and <xref:System.Collections.Specialized.NameValueCollection> classes, and the <xref:System.Collections.ObjectModel.KeyedCollection%602> and <xref:System.Collections.Generic.SortedList%602> generic classes offer access to their elements by either the zero-based index or the key of the element.</span></span>  
   
--   是否每个元素都包含一个值、一个键和一个值的组合或一个键和多个值的组合？  
+-   <span data-ttu-id="9cc02-123">是否每个元素都包含一个值、一个键和一个值的组合或一个键和多个值的组合？</span><span class="sxs-lookup"><span data-stu-id="9cc02-123">Will each element contain one value, a combination of one key and one value, or a combination of one key and multiple values?</span></span>  
   
-    -   一个值：使用任何基于 <xref:System.Collections.IList> 接口或 <xref:System.Collections.Generic.IList%601> 泛型接口的集合。  
+    -   <span data-ttu-id="9cc02-124">一个值：使用任何基于 <xref:System.Collections.IList> 接口或 <xref:System.Collections.Generic.IList%601> 泛型接口的集合。</span><span class="sxs-lookup"><span data-stu-id="9cc02-124">One value: Use any of the collections based on the <xref:System.Collections.IList> interface or the <xref:System.Collections.Generic.IList%601> generic interface.</span></span>  
   
-    -   一个键和一个值：使用任何基于 <xref:System.Collections.IDictionary> 接口或 <xref:System.Collections.Generic.IDictionary%602> 泛型接口的集合。  
+    -   <span data-ttu-id="9cc02-125">一个键和一个值：使用任何基于 <xref:System.Collections.IDictionary> 接口或 <xref:System.Collections.Generic.IDictionary%602> 泛型接口的集合。</span><span class="sxs-lookup"><span data-stu-id="9cc02-125">One key and one value: Use any of the collections based on the <xref:System.Collections.IDictionary> interface or the <xref:System.Collections.Generic.IDictionary%602> generic interface.</span></span>  
   
-    -   带有嵌入键的一个值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类。  
+    -   <span data-ttu-id="9cc02-126">带有嵌入键的一个值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类。</span><span class="sxs-lookup"><span data-stu-id="9cc02-126">One value with embedded key: Use the <xref:System.Collections.ObjectModel.KeyedCollection%602> generic class.</span></span>  
   
-    -   一个键列和多个值：使用 <xref:System.Collections.Specialized.NameValueCollection> 类。  
+    -   <span data-ttu-id="9cc02-127">一个键列和多个值：使用 <xref:System.Collections.Specialized.NameValueCollection> 类。</span><span class="sxs-lookup"><span data-stu-id="9cc02-127">One key and multiple values: Use the <xref:System.Collections.Specialized.NameValueCollection> class.</span></span>  
   
--   是否需要以与输入方式不同的方式对元素进行排序？  
+-   <span data-ttu-id="9cc02-128">是否需要以与输入方式不同的方式对元素进行排序？</span><span class="sxs-lookup"><span data-stu-id="9cc02-128">Do you need to sort the elements differently from how they were entered?</span></span>  
   
-    -   <xref:System.Collections.Hashtable> 类按其哈希代码对其元素进行排序。  
+    -   <span data-ttu-id="9cc02-129"><xref:System.Collections.Hashtable> 类按其哈希代码对其元素进行排序。</span><span class="sxs-lookup"><span data-stu-id="9cc02-129">The <xref:System.Collections.Hashtable> class sorts its elements by their hash codes.</span></span>  
   
-    -   <xref:System.Collections.SortedList> 类以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类基于 <xref:System.Collections.IComparer> 接口和 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实施按键对元素进行排序。  
+    -   <span data-ttu-id="9cc02-130"><xref:System.Collections.SortedList> 类以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类基于 <xref:System.Collections.IComparer> 接口和 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实施按键对元素进行排序。</span><span class="sxs-lookup"><span data-stu-id="9cc02-130">The <xref:System.Collections.SortedList> class and the <xref:System.Collections.Generic.SortedDictionary%602> and <xref:System.Collections.Generic.SortedList%602> generic classes sort their elements by the key, based on implementations of the <xref:System.Collections.IComparer> interface and the <xref:System.Collections.Generic.IComparer%601> generic interface.</span></span>  
   
-    -   <xref:System.Collections.ArrayList> 提供了一种 <xref:System.Collections.ArrayList.Sort%2A> 方法，此方法采用 <xref:System.Collections.IComparer> 实现作为参数。 其泛型对应项（<xref:System.Collections.Generic.List%601> 泛型类）提供一种 <xref:System.Collections.Generic.List%601.Sort%2A> 方法，此方法采用 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实现作为参数。  
+    -   <span data-ttu-id="9cc02-131"><xref:System.Collections.ArrayList> 提供了一种 <xref:System.Collections.ArrayList.Sort%2A> 方法，此方法采用 <xref:System.Collections.IComparer> 实现作为参数。</span><span class="sxs-lookup"><span data-stu-id="9cc02-131"><xref:System.Collections.ArrayList> provides a <xref:System.Collections.ArrayList.Sort%2A> method that takes an <xref:System.Collections.IComparer> implementation as a parameter.</span></span> <span data-ttu-id="9cc02-132">其泛型对应项（<xref:System.Collections.Generic.List%601> 泛型类）提供一种 <xref:System.Collections.Generic.List%601.Sort%2A> 方法，此方法采用 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实现作为参数。</span><span class="sxs-lookup"><span data-stu-id="9cc02-132">Its generic counterpart, the <xref:System.Collections.Generic.List%601> generic class, provides a <xref:System.Collections.Generic.List%601.Sort%2A> method that takes an implementation of the <xref:System.Collections.Generic.IComparer%601> generic interface as a parameter.</span></span>  
   
--   是否需要快速搜索和信息检索？  
+-   <span data-ttu-id="9cc02-133">是否需要快速搜索和信息检索？</span><span class="sxs-lookup"><span data-stu-id="9cc02-133">Do you need fast searches and retrieval of information?</span></span>  
   
-    -   对于小集合（10 项或更少），<xref:System.Collections.Specialized.ListDictionary> 速度比 <xref:System.Collections.Hashtable> 快。 <xref:System.Collections.Generic.Dictionary%602> 泛型类提供比 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类更快的查找。 多线程的实现为 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>。 <xref:System.Collections.Concurrent.ConcurrentBag%601> 为无序数据提供快速的多线程插入。 有关这两种多线程类型的详细信息，请参阅[何时使用线程安全集合](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。  
+    -   <span data-ttu-id="9cc02-134">对于小集合（10 项或更少），<xref:System.Collections.Specialized.ListDictionary> 速度比 <xref:System.Collections.Hashtable> 快。</span><span class="sxs-lookup"><span data-stu-id="9cc02-134"><xref:System.Collections.Specialized.ListDictionary> is faster than <xref:System.Collections.Hashtable> for small collections (10 items or fewer).</span></span> <span data-ttu-id="9cc02-135"><xref:System.Collections.Generic.Dictionary%602> 泛型类提供比 <xref:System.Collections.Generic.SortedDictionary%602> 泛型类更快的查找。</span><span class="sxs-lookup"><span data-stu-id="9cc02-135">The <xref:System.Collections.Generic.Dictionary%602> generic class provides faster lookup than the <xref:System.Collections.Generic.SortedDictionary%602> generic class.</span></span> <span data-ttu-id="9cc02-136">多线程的实现为 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="9cc02-136">The multi-threaded implementation is <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.</span></span> <span data-ttu-id="9cc02-137"><xref:System.Collections.Concurrent.ConcurrentBag%601> 为无序数据提供快速的多线程插入。</span><span class="sxs-lookup"><span data-stu-id="9cc02-137"><xref:System.Collections.Concurrent.ConcurrentBag%601> provides fast multi-threaded insertion for unordered data.</span></span> <span data-ttu-id="9cc02-138">有关这两种多线程类型的详细信息，请参阅[何时使用线程安全集合](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。</span><span class="sxs-lookup"><span data-stu-id="9cc02-138">For more information about both multi-threaded types, see [When to Use a Thread-Safe Collection](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).</span></span>  
   
--   是否需要只接受字符串的集合？  
+-   <span data-ttu-id="9cc02-139">是否需要只接受字符串的集合？</span><span class="sxs-lookup"><span data-stu-id="9cc02-139">Do you need collections that accept only strings?</span></span>  
   
-    -   <xref:System.Collections.Specialized.StringCollection>（基于 <xref:System.Collections.IList>）和 <xref:System.Collections.Specialized.StringDictionary>（基于 <xref:System.Collections.IDictionary>）位于 <xref:System.Collections.Specialized> 命名空间。  
+    -   <span data-ttu-id="9cc02-140"><xref:System.Collections.Specialized.StringCollection>（基于 <xref:System.Collections.IList>）和 <xref:System.Collections.Specialized.StringDictionary>（基于 <xref:System.Collections.IDictionary>）位于 <xref:System.Collections.Specialized> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="9cc02-140"><xref:System.Collections.Specialized.StringCollection> (based on <xref:System.Collections.IList>) and <xref:System.Collections.Specialized.StringDictionary> (based on <xref:System.Collections.IDictionary>) are in the <xref:System.Collections.Specialized> namespace.</span></span>  
   
-    -   此外，通过指定其泛型类参数的 <xref:System.String> 类，可以使用 <xref:System.Collections.Generic> 命名空间中的任何泛型集合类作为强类型字符串集合。  
+    -   <span data-ttu-id="9cc02-141">此外，通过指定其泛型类参数的 <xref:System.String> 类，可以使用 <xref:System.Collections.Generic> 命名空间中的任何泛型集合类作为强类型字符串集合。</span><span class="sxs-lookup"><span data-stu-id="9cc02-141">In addition, you can use any of the generic collection classes in the <xref:System.Collections.Generic> namespace as strongly typed string collections by specifying the <xref:System.String> class for their generic type arguments.</span></span>  
   
-## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 与 PLINQ  
- LINQ to Objects 让开发人员能够使用 LINQ 查询访问内存中对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式，与标准 `foreach` 循环相比，它通常更加简洁，可读性更高，并且可提供筛选、排序和分组功能。 有关详细信息，请参阅 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。  
+## <a name="linq-to-objects-and-plinq"></a><span data-ttu-id="9cc02-142">LINQ to Objects 与 PLINQ</span><span class="sxs-lookup"><span data-stu-id="9cc02-142">LINQ to Objects and PLINQ</span></span>  
+ <span data-ttu-id="9cc02-143">LINQ to Objects 让开发人员能够使用 LINQ 查询访问内存中对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="9cc02-143">LINQ to Objects enables developers to use LINQ queries to access in-memory objects as long as the object type implements <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="9cc02-144">LINQ 查询提供了一种通用的数据访问模式，与标准 `foreach` 循环相比，它通常更加简洁，可读性更高，并且可提供筛选、排序和分组功能。</span><span class="sxs-lookup"><span data-stu-id="9cc02-144">LINQ queries provide a common pattern for accessing data, are typically more concise and readable than standard `foreach` loops, and provide filtering, ordering, and grouping capabilities.</span></span> <span data-ttu-id="9cc02-145">有关详细信息，请参阅 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。</span><span class="sxs-lookup"><span data-stu-id="9cc02-145">For more information, see [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).</span></span>  
   
- PLINQ 提供 LINQ to Objects 的并行实现，在许多情况下，可通过更有效地利用多核计算机提供更快的查询执行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ <span data-ttu-id="9cc02-146">PLINQ 提供 LINQ to Objects 的并行实现，在许多情况下，可通过更有效地利用多核计算机提供更快的查询执行。</span><span class="sxs-lookup"><span data-stu-id="9cc02-146">PLINQ provides a parallel implementation of LINQ to Objects that can offer faster query execution in many scenarios, through more efficient use of multi-core computers.</span></span> <span data-ttu-id="9cc02-147">有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="9cc02-147">For more information, see [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Collections>   
- <xref:System.Collections.Specialized>   
- <xref:System.Collections.Generic>   
- [线程安全集合](../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a><span data-ttu-id="9cc02-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9cc02-148">See Also</span></span>  
+ <span data-ttu-id="9cc02-149"><xref:System.Collections></span><span class="sxs-lookup"><span data-stu-id="9cc02-149"><xref:System.Collections></span></span>   
+ <span data-ttu-id="9cc02-150"><xref:System.Collections.Specialized></span><span class="sxs-lookup"><span data-stu-id="9cc02-150"><xref:System.Collections.Specialized></span></span>   
+ <span data-ttu-id="9cc02-151"><xref:System.Collections.Generic></span><span class="sxs-lookup"><span data-stu-id="9cc02-151"><xref:System.Collections.Generic></span></span>   
+ [<span data-ttu-id="9cc02-152">线程安全集合</span><span class="sxs-lookup"><span data-stu-id="9cc02-152">Thread-Safe Collections</span></span>](../../../docs/standard/collections/thread-safe/index.md)
 

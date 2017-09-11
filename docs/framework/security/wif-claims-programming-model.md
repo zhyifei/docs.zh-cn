@@ -1,83 +1,87 @@
 ---
-title: "WIF 声明编程模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 声明编程模型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# WIF 声明编程模型
-ASP。NET 和 Windows 资格） 开发人员通常使用的空间和 IPrincipal 接口处理用户的标识信息。  中。NET 4.5、 Windows 标识基础 \(WIF\) 已经集成的声明是现在始终存在的任何主体中，如下图所示：  
+# <a name="wif-claims-programming-model"></a><span data-ttu-id="d42c5-102">WIF 声明编程模型</span><span class="sxs-lookup"><span data-stu-id="d42c5-102">WIF Claims Programming Model</span></span>
+<span data-ttu-id="d42c5-103">ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIdentity 和 IPrincipal 接口处理用户的标识信息。</span><span class="sxs-lookup"><span data-stu-id="d42c5-103">ASP.NET and Windows Communication Foundation (WCF) developers ordinarily use the IIdentity and IPrincipal interfaces to work with the user’s identity information.</span></span> <span data-ttu-id="d42c5-104">.NET 4.5 中集成了 Windows Identity Foundation (WIF)，因此对于任何主体，声明都将始终存在，如下图所示：</span><span class="sxs-lookup"><span data-stu-id="d42c5-104">In .NET 4.5, Windows Identity Foundation (WIF) has been integrated such that claims are now always present for any principal as illustrated in the following diagram:</span></span>  
   
- ![WIF 声明编程模型](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")  
+ <span data-ttu-id="d42c5-105">![WIF 声明编程模型](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")</span><span class="sxs-lookup"><span data-stu-id="d42c5-105">![WIF Claims Programming Model](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")</span></span>  
   
- 中。NET 4.5，System.Security.Claims 包含新的 ClaimsPrincipal 和 ClaimsIdentity 类 （参见上图）。  中的所有承担者。NET 现在从 ClaimsPrincipal 派生。  内置的标识的所有类，都如 FormsIdentity asp。NET 和 WindowsIdentity 现在从 ClaimsIdentity 派生。  同样，从 ClaimsPrincipal 派生出所有内置的主体类 （如 GenericPrincipal 和 WindowsPrincipal。  
+ <span data-ttu-id="d42c5-106">在 .NET 4.5 中，System.Security.Claims 包含新的 ClaimsPrincipal 和 ClaimsIdentity 类（如上图所示）。</span><span class="sxs-lookup"><span data-stu-id="d42c5-106">In .NET 4.5, System.Security.Claims contains the new ClaimsPrincipal and ClaimsIdentity classes (see diagram above).</span></span> <span data-ttu-id="d42c5-107">.NET 中的所有主体现在均派生自 ClaimsPrincipal。</span><span class="sxs-lookup"><span data-stu-id="d42c5-107">All principals in .NET now derive from ClaimsPrincipal.</span></span> <span data-ttu-id="d42c5-108">所有内置标识类（如 ASP.NET 的 WindowsIdentity 和 FormsIdentity）现在都派生自 ClaimsIdentity。</span><span class="sxs-lookup"><span data-stu-id="d42c5-108">All built-in identity classes, like FormsIdentity for ASP.NET and WindowsIdentity now derive from ClaimsIdentity.</span></span> <span data-ttu-id="d42c5-109">同样，所有内置主体类（如 GenericPrincipal 和 WindowsPrincipal）都派生自 ClaimsPrincipal。</span><span class="sxs-lookup"><span data-stu-id="d42c5-109">Similarly, all built-in principal classes like GenericPrincipal and WindowsPrincipal derive from ClaimsPrincipal.</span></span>  
   
- 报销申请由<xref:System.Security.Claims.Claim>类。  此类具有以下重要属性：  
+ <span data-ttu-id="d42c5-110">声明由 <xref:System.Security.Claims.Claim> 类表示。</span><span class="sxs-lookup"><span data-stu-id="d42c5-110">A claim is represented by <xref:System.Security.Claims.Claim> class.</span></span> <span data-ttu-id="d42c5-111">此类具有以下重要属性：</span><span class="sxs-lookup"><span data-stu-id="d42c5-111">This class has the following important properties:</span></span>  
   
--   <xref:System.Security.Claims.Claim.Type%2A>表示的类型声明的通常是一个 URI。  例如，电子邮件地址声明表示为`http://schemas.microsoft.com/ws/2008/06/identity/claims/email`。  
+-   <span data-ttu-id="d42c5-112"><xref:System.Security.Claims.Claim.Type%2A> 表示声明的类型，通常是一个 URI。</span><span class="sxs-lookup"><span data-stu-id="d42c5-112"><xref:System.Security.Claims.Claim.Type%2A> represents the type of claim and is typically a URI.</span></span> <span data-ttu-id="d42c5-113">例如，电子邮件地址声明表示为 `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-113">For example, the e-mail address claim is represented as `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.</span></span>  
   
--   <xref:System.Security.Claims.Claim.Value%2A>包含声明的值，表示为字符串。  例如，电子邮件地址可以表示为"someone@contoso.com"。  
+-   <span data-ttu-id="d42c5-114"><xref:System.Security.Claims.Claim.Value%2A> 包含声明的值，表现形式为字符串。</span><span class="sxs-lookup"><span data-stu-id="d42c5-114"><xref:System.Security.Claims.Claim.Value%2A> contains the value of the claim and is represented as a string.</span></span> <span data-ttu-id="d42c5-115">例如，电子邮件地址可以表示为“someone@contoso.com”。</span><span class="sxs-lookup"><span data-stu-id="d42c5-115">For example, the e-mail address can be represented as "someone@contoso.com".</span></span>  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A>表示该声明值的类型，通常是一个 URI。  例如，字符串类型表示为`http://www.w3.org/2001/XMLSchema#string`。  值类型必须是 QName XML 架构。  该值的格式应为`namespace#format`启用 WIF 输出 QName 有效值。  如果命名空间不是明确定义的命名空间，生成的 XML 可能不能是架构验证，因为不会针对该命名空间已发布的 XSD 文件。  默认值类型是`http://www.w3.org/2001/XMLSchema#string`。  请参阅[http:\/\/www.w3.org\/2001\/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155)的已知值类型，您可以安全地使用。  
+-   <span data-ttu-id="d42c5-116"><xref:System.Security.Claims.Claim.ValueType%2A> 表示声明值的类型，通常是一个 URI。</span><span class="sxs-lookup"><span data-stu-id="d42c5-116"><xref:System.Security.Claims.Claim.ValueType%2A> represents the type of the claim value and is typically a URI.</span></span> <span data-ttu-id="d42c5-117">例如，字符串类型表示为 `http://www.w3.org/2001/XMLSchema#string`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-117">For example, the string type is represented as `http://www.w3.org/2001/XMLSchema#string`.</span></span> <span data-ttu-id="d42c5-118">根据 XML 架构，该值类型必须为 QName。</span><span class="sxs-lookup"><span data-stu-id="d42c5-118">The value type must be a QName according to the XML schema.</span></span> <span data-ttu-id="d42c5-119">为使 WIF 输出有效的 QName 值，值的格式必须为 `namespace#format`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-119">The value should be of the format `namespace#format` to enable WIF to output a valid QName value.</span></span> <span data-ttu-id="d42c5-120">如果命名空间不是定义完善的命名空间，生成的 XML 可能无法进行架构验证，因为没有为该命名空间发布的 XSD 文件。</span><span class="sxs-lookup"><span data-stu-id="d42c5-120">If the namespace is not a well-defined namespace, the generated XML probably cannot be schema validated, because there will not be a published XSD file for that namespace.</span></span> <span data-ttu-id="d42c5-121">默认值类型为 `http://www.w3.org/2001/XMLSchema#string`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-121">The default value type is `http://www.w3.org/2001/XMLSchema#string`.</span></span> <span data-ttu-id="d42c5-122">若要了解可安全使用的已知值类型，请参阅 [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155)。</span><span class="sxs-lookup"><span data-stu-id="d42c5-122">Please see [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) for well-known value types that you can use safely.</span></span>  
   
--   <xref:System.Security.Claims.Claim.Issuer%2A>是的安全令牌服务 \(STS\) 发出声明的标识符。  这可以表示为 URL 的 STS 或一个名称，如表示 STS， `https://sts1.contoso.com/sts`。  
+-   <span data-ttu-id="d42c5-123"><xref:System.Security.Claims.Claim.Issuer%2A> 是颁发声明的安全令牌服务 (STS) 标识符。</span><span class="sxs-lookup"><span data-stu-id="d42c5-123"><xref:System.Security.Claims.Claim.Issuer%2A> is the identifier of the security token service (STS) that issued the claim.</span></span> <span data-ttu-id="d42c5-124">这可以表示为 STS 或者代表 STS名称的 URL ，例如 `https://sts1.contoso.com/sts`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-124">This can be represented as URL of the STS or a name that represents the STS, such as `https://sts1.contoso.com/sts`.</span></span>  
   
--   <xref:System.Security.Claims.Claim.OriginalIssuer%2A>是在最初发布的报销申请，无论多少 STSs STS 的标识符是链中。  就像它表示<xref:System.Security.Claims.Claim.Issuer%2A>。  
+-   <span data-ttu-id="d42c5-125">无论链中有多少个 STS，<xref:System.Security.Claims.Claim.OriginalIssuer%2A> 是最初颁发声明的 STS 的标识符。</span><span class="sxs-lookup"><span data-stu-id="d42c5-125"><xref:System.Security.Claims.Claim.OriginalIssuer%2A> is the identifier of the STS that originally issued the claim, regardless of how many STSs are in the chain.</span></span> <span data-ttu-id="d42c5-126">它的表示形式与 <xref:System.Security.Claims.Claim.Issuer%2A> 类似。</span><span class="sxs-lookup"><span data-stu-id="d42c5-126">This is represented just like <xref:System.Security.Claims.Claim.Issuer%2A>.</span></span>  
   
--   <xref:System.Security.Claims.Claim.Subject%2A>是所要检查其身份的主题。  该方法包含 <xref:System.Security.Claims.ClaimsIdentity>。  
+-   <span data-ttu-id="d42c5-127"><xref:System.Security.Claims.Claim.Subject%2A> 是标识正在被检查的使用者。</span><span class="sxs-lookup"><span data-stu-id="d42c5-127"><xref:System.Security.Claims.Claim.Subject%2A> is the subject whose identity is being examined.</span></span> <span data-ttu-id="d42c5-128">该方法包含 <xref:System.Security.Claims.ClaimsIdentity>。</span><span class="sxs-lookup"><span data-stu-id="d42c5-128">It contains a <xref:System.Security.Claims.ClaimsIdentity>.</span></span>  
   
--   <xref:System.Security.Claims.Claim.Properties%2A>是一个字典，其中允许开发人员提供特定于应用程序的其他属性，以及网络上传输的数据，并可用于自定义验证。  
+-   <span data-ttu-id="d42c5-129"><xref:System.Security.Claims.Claim.Properties%2A> 是一个字典，开发人员可以使用它来提供应用程序特定的数据，以便与其他属性一起在线传送。此外，它还可用于自定义验证。</span><span class="sxs-lookup"><span data-stu-id="d42c5-129"><xref:System.Security.Claims.Claim.Properties%2A> is a dictionary that lets the developer provide application-specific data to be transferred on the wire together with the other properties, and can be used for custom validation.</span></span>  
   
-## 标识委派  
- 一个重要的属性<xref:System.Security.Claims.ClaimsIdentity>是<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>。  此属性使委派的凭据在多层中间层作为要对后端服务发出请求的客户端系统中。  
+## <a name="identity-delegation"></a><span data-ttu-id="d42c5-130">标识委托</span><span class="sxs-lookup"><span data-stu-id="d42c5-130">Identity Delegation</span></span>  
+ <span data-ttu-id="d42c5-131"><xref:System.Security.Claims.ClaimsIdentity> 的重要属性之一是 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A>。</span><span class="sxs-lookup"><span data-stu-id="d42c5-131">An important property of <xref:System.Security.Claims.ClaimsIdentity> is <xref:System.Security.Claims.ClaimsIdentity.Actor%2A>.</span></span> <span data-ttu-id="d42c5-132">使用此属性可在多层系统中进行凭据委派（中间层充当客户端的角色，负责向后端服务提出请求）。</span><span class="sxs-lookup"><span data-stu-id="d42c5-132">This property enables the delegation of credentials in a multi-tier system in which a middle tier acts as the client to make requests to a back-end service.</span></span>  
   
-### Thread.CurrentPrincipal 通过访问声明  
- 若要访问当前用户的组声明 RP 应用程序中，使用`Thread.CurrentPrincipal`。  
+### <a name="accessing-claims-through-threadcurrentprincipal"></a><span data-ttu-id="d42c5-133">通过 Thread.CurrentPrincipal 访问声明</span><span class="sxs-lookup"><span data-stu-id="d42c5-133">Accessing Claims through Thread.CurrentPrincipal</span></span>  
+ <span data-ttu-id="d42c5-134">若要在声明感知应用程序中访问当前用户的声明集，请使用 `Thread.CurrentPrincipal`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-134">To access the current user’s set of claims in an RP application, use `Thread.CurrentPrincipal`.</span></span>  
   
- 下面的代码示例演示此方法获取 System.Security.Claims.ClaimsIdentity 的用法：  
+ <span data-ttu-id="d42c5-135">下面的代码示例说明如何使用此方法获取 System.Security.Claims.ClaimsIdentity：</span><span class="sxs-lookup"><span data-stu-id="d42c5-135">The following code sample shows the usage of this method to get a System.Security.Claims.ClaimsIdentity:</span></span>  
   
 ```  
 ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;  
-  
 ```  
   
- 有关更多信息，请参见 <xref:System.Security.Claims>。  
+ <span data-ttu-id="d42c5-136">有关详细信息，请参阅<xref:System.Security.Claims>。</span><span class="sxs-lookup"><span data-stu-id="d42c5-136">For more information, see <xref:System.Security.Claims>.</span></span>  
   
-### 角色的声明类型  
- 配置 RP 应用程序的部分是确定您的角色声明类型应为。  System.Security.Claims.ClaimsPrincipal.IsInRole\(System.String\) 使用此声明类型。  默认的声明类型是`http://schemas.microsoft.com/ws/2008/06/identity/claims/role`。  
+### <a name="role-claim-type"></a><span data-ttu-id="d42c5-137">角色声明类型</span><span class="sxs-lookup"><span data-stu-id="d42c5-137">Role Claim Type</span></span>  
+ <span data-ttu-id="d42c5-138">配置声明感知应用程序的过程中，应确定使用的角色声明类型。</span><span class="sxs-lookup"><span data-stu-id="d42c5-138">Part of configuring your RP application is to determine what your role claim type should be.</span></span> <span data-ttu-id="d42c5-139">此声明类型由 System.Security.Claims.ClaimsPrincipal.IsInRole (System.String) 使用。</span><span class="sxs-lookup"><span data-stu-id="d42c5-139">This claim type is used by System.Security.Claims.ClaimsPrincipal.IsInRole(System.String).</span></span> <span data-ttu-id="d42c5-140">默认声明类型为 `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`。</span><span class="sxs-lookup"><span data-stu-id="d42c5-140">The default claim type is `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`.</span></span>  
   
-### 通过从不同的标记类型的 Windows 标识基础提取的报销申请  
- WIF 支持多个组合框中的身份验证机制。  下表列出了 WIF 提取从不同的标记类型的声明。  
+### <a name="claims-extracted-by-windows-identity-foundation-from-different-token-types"></a><span data-ttu-id="d42c5-141">Windows Identity Foundation 从不同令牌类型中提取的声明</span><span class="sxs-lookup"><span data-stu-id="d42c5-141">Claims Extracted by Windows Identity Foundation from Different Token Types</span></span>  
+ <span data-ttu-id="d42c5-142">WIF 支持开箱即用的几种身份验证机制组合。</span><span class="sxs-lookup"><span data-stu-id="d42c5-142">WIF supports several combinations of authentication mechanisms out of the box.</span></span> <span data-ttu-id="d42c5-143">下表列出了 WIF 从不同令牌类型中提取的声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-143">The following table lists the claims that WIF extracts from different token types.</span></span>  
   
-||||  
+|<span data-ttu-id="d42c5-144">标记类型</span><span class="sxs-lookup"><span data-stu-id="d42c5-144">Token Type</span></span>|<span data-ttu-id="d42c5-145">生成的声明</span><span class="sxs-lookup"><span data-stu-id="d42c5-145">Claim Generated</span></span>|<span data-ttu-id="d42c5-146">映射到 Windows 访问令牌</span><span class="sxs-lookup"><span data-stu-id="d42c5-146">Map To Windows Access Token</span></span>|  
 |-|-|-|  
-|标记类型|生成的报销申请|映射到 Windows 访问令牌|  
-|SAML 1.1|1.  来自 System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity\(System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope\) 的所有声明。<br />2.  `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey`包含 XML 序列化的确认码中，如果该标记包含证明令牌的报销申请。<br />3.  `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername`从颁发者的元素声明。<br />4.  AuthenticationMethod 和 AuthenticationInstant 索赔，如果该标记包含验证语句。|除了声明列入"SAML 1.1"，除声明类型的`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`，将添加声明和身份将由 WindowsClaimsIdentity 相关的 Windows 身份验证。|  
-|SAML 2.0|同"SAML 1.1"。|同"SAML 1.1 映射到 Windows 帐户"。|  
-|X509|1.  With 的索赔可分辨名称、 电子邮件名、 SimpleName、 UpnName、 UrlName，dnsName，指纹，RsaKey （这可以提取使用 RSACryptoServiceProvider.ExportParameters 方法中的 X509Certificate2.PublicKey.Key 属性）、 DsaKey （这可以提取使用 DSACryptoServiceProvider.ExportParameters 方法中的 X509Certificate2.PublicKey.Key 属性），序列号属性从 x509 证书。<br />2.  AuthenticationMethod 声明值`http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`。  此处提及的 AuthenticationInstant XmlSchema 日期时间格式验证证书的时间的值。|1.  它使用 Windows 帐户的完全合格的域名名为`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`声明值。  .<br />2.  来自 x509 证书没有映射到 Windows、 声明和来自获得通过将证书映射到 Windows 的 windows 帐户声明。|  
-|UPN|1.  声明是类似于 Windows 身份验证部分中的声明。<br />2.  AuthenticationMethod 声明值`http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`。  AuthenticationInstant 声称 XmlSchema 日期时间格式时验证密码的时间的值。||  
-|Windows （Kerberos 或 NTLM）|1.  生成的访问令牌中如索赔： PrimarySID，DenyOnlyPrimarySID，PrimaryGroupSID，DenyOnlyPrimaryGroupSID，GroupSID，DenyOnlySID，和名称<br />2.  值的 AuthenticationMethod `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`。  创建的 Windows 访问令牌时的时间值的 AuthenticationInstant XMLSchema 日期时间格式。||  
-|RSA 密钥对|1.  `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` RSAKeyValue 的值来声明。<br />2.  AuthenticationMethod 的值的报销申请`http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`。  AuthenticationInstant 报销申请的 RSA 密钥进行了身份验证时的时间值 （即，签名已经过验证） 以 XMLSchema 日期时间格式。||  
+|<span data-ttu-id="d42c5-147">SAML 1.1</span><span class="sxs-lookup"><span data-stu-id="d42c5-147">SAML 1.1</span></span>|<span data-ttu-id="d42c5-148">1.System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity (System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope) 中的所有声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-148">1.  All claims from System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity(System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope).</span></span><br /><span data-ttu-id="d42c5-149">2.包含确认密钥的 XML 序列化的 `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey` 声明（如果该令牌包含证明令牌）。</span><span class="sxs-lookup"><span data-stu-id="d42c5-149">2.  The `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey` claim that contains the XML serialization of the confirmation key, if the token contains a proof token.</span></span><br /><span data-ttu-id="d42c5-150">3.Issuer 元素中的 `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername` 声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-150">3.  The `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername` claim from the Issuer element.</span></span><br /><span data-ttu-id="d42c5-151">4.AuthenticationMethod 和 AuthenticationInstant 声明（如果该令牌包含身份验证语句）。</span><span class="sxs-lookup"><span data-stu-id="d42c5-151">4.  AuthenticationMethod and AuthenticationInstant claims, if the token contains an authentication statement.</span></span>|<span data-ttu-id="d42c5-152">除了“SAML 1.1”中列出的声明（不包括 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 类型的声明）外，还将添加 Windows 身份验证相关的声明，并由 WindowsClaimsIdentity 表示标识。</span><span class="sxs-lookup"><span data-stu-id="d42c5-152">In addition to the claims listed in "SAML 1.1", except claims of type  `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`, Windows authentication related claims will be added and the identity will be represented by WindowsClaimsIdentity.</span></span>|  
+|<span data-ttu-id="d42c5-153">SAML 2.0</span><span class="sxs-lookup"><span data-stu-id="d42c5-153">SAML 2.0</span></span>|<span data-ttu-id="d42c5-154">与“SAML 1.1”相同。</span><span class="sxs-lookup"><span data-stu-id="d42c5-154">Same as "SAML 1.1".</span></span>|<span data-ttu-id="d42c5-155">与“映射到 Windows 帐户的 SAML 1.1”相同。</span><span class="sxs-lookup"><span data-stu-id="d42c5-155">Same as "SAML 1.1 Mapped to Windows Account".</span></span>|  
+|<span data-ttu-id="d42c5-156">X509</span><span class="sxs-lookup"><span data-stu-id="d42c5-156">X509</span></span>|<span data-ttu-id="d42c5-157">1.具有 X500 可分辨名称、emailName、dnsName、SimpleName、UpnName、UrlName、thumbprint、RsaKey（可以使用 RSACryptoServiceProvider.ExportParameters 方法从 X509Certificate2.PublicKey.Key 属性提取）、DsaKey（可以使用 DSACryptoServiceProvider.ExportParameters 方法从 X509Certificate2.PublicKey.Key 属性提取）和 X509 证书中 SerialNumber 属性的声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-157">1.  Claims with the X500 distinguished name, emailName, dnsName, SimpleName, UpnName, UrlName, thumbprint, RsaKey (this can be extracted using the RSACryptoServiceProvider.ExportParameters method from the X509Certificate2.PublicKey.Key property), DsaKey (this can be extracted using the DSACryptoServiceProvider.ExportParameters method from the X509Certificate2.PublicKey.Key property), SerialNumber properties from the X509 Certificate.</span></span><br /><span data-ttu-id="d42c5-158">2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` 的 AuthenticationMethod 声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-158">2.  AuthenticationMethod claim with value `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`.</span></span> <span data-ttu-id="d42c5-159">值为证书验证时间的 AuthenticationInstant 声明，格式为 XmlSchema DateTime。</span><span class="sxs-lookup"><span data-stu-id="d42c5-159">AuthenticationInstant claim with the value of the time when the certificate was validated in XmlSchema DateTime format.</span></span>|<span data-ttu-id="d42c5-160">1.它使用 Windows 帐户完全限定的域名作为 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 声明值。</span><span class="sxs-lookup"><span data-stu-id="d42c5-160">1.  It uses the Windows account fully qualified domain name as the `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` claim value.</span></span> <span data-ttu-id="d42c5-161">。</span><span class="sxs-lookup"><span data-stu-id="d42c5-161">.</span></span><br /><span data-ttu-id="d42c5-162">2.X509 证书中未映射到 Windows 的声明，以及通过将证书映射到 Windows 而获得的 Windows 帐户中的声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-162">2.  Claims from the X509 Certificate not mapped to Windows, and claims from the windows account obtained by mapping the certificate to Windows.</span></span>|  
+|<span data-ttu-id="d42c5-163">UPN</span><span class="sxs-lookup"><span data-stu-id="d42c5-163">UPN</span></span>|<span data-ttu-id="d42c5-164">1.与 Windows 身份验证部分中的声明类似的声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-164">1.  Claims are similar to the claims in the Windows authentication section.</span></span><br /><span data-ttu-id="d42c5-165">2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` 的 AuthenticationMethod 声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-165">2.  AuthenticationMethod claim with value `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`.</span></span> <span data-ttu-id="d42c5-166">值为密码验证时间的 AuthenticationInstant 声明，格式为 XmlSchema DateTime。</span><span class="sxs-lookup"><span data-stu-id="d42c5-166">The AuthenticationInstant claim with the value of the time when the password was validated in XmlSchema DateTime format.</span></span>||  
+|<span data-ttu-id="d42c5-167">Windows（Kerberos 或 NTLM）</span><span class="sxs-lookup"><span data-stu-id="d42c5-167">Windows (Kerberos or NTLM)</span></span>|<span data-ttu-id="d42c5-168">1.从访问令牌生成的声明，例如：PrimarySID、DenyOnlyPrimarySID、PrimaryGroupSID、DenyOnlyPrimaryGroupSID、GroupSID、DenyOnlySID 和 Name</span><span class="sxs-lookup"><span data-stu-id="d42c5-168">1.  Claims generated from the access token such as: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID, and Name</span></span><br /><span data-ttu-id="d42c5-169">2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` 的 AuthenticationMethod。</span><span class="sxs-lookup"><span data-stu-id="d42c5-169">2.  AuthenticationMethod with the value `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`.</span></span> <span data-ttu-id="d42c5-170">值为 Windows 访问令牌创建时间的 AuthenticationInstant，格式为 XMLSchema DateTime。</span><span class="sxs-lookup"><span data-stu-id="d42c5-170">AuthenticationInstant with the value of the time when the Windows access token was created in the XMLSchema DateTime format.</span></span>||  
+|<span data-ttu-id="d42c5-171">RSA 密钥对</span><span class="sxs-lookup"><span data-stu-id="d42c5-171">RSA Key Pair</span></span>|<span data-ttu-id="d42c5-172">1.值为 RSAKeyValue 的 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` 声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-172">1.  The `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` claim with the value of RSAKeyValue.</span></span><br /><span data-ttu-id="d42c5-173">2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature` 的 AuthenticationMethod 声明。</span><span class="sxs-lookup"><span data-stu-id="d42c5-173">2.  AuthenticationMethod claim with the value `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`.</span></span> <span data-ttu-id="d42c5-174">值为 RSA 密钥验证（即签名验证）时间的 AuthenticationInstant 声明，格式为 XMLSchema DateTime。</span><span class="sxs-lookup"><span data-stu-id="d42c5-174">AuthenticationInstant claim with the value of the time when the RSA key was authenticated (that is, the signature was verified) in the XMLSchema DateTime format.</span></span>||  
   
-|||  
+|<span data-ttu-id="d42c5-175">身份验证类型</span><span class="sxs-lookup"><span data-stu-id="d42c5-175">Authentication Type</span></span>|<span data-ttu-id="d42c5-176">“AuthenticationMethod”声明中发出的 URI</span><span class="sxs-lookup"><span data-stu-id="d42c5-176">URI emitted in "AuthenticationMethod" claim</span></span>|  
 |-|-|  
-|身份验证类型|在"AuthenticationMethod"声明中发出的 URI|  
-|密码|`urn:oasis:names:tc:SAML:1.0:am:password`|  
-|Kerberos|`urn:ietf:rfc:1510`|  
-|SecureRemotePassword|`urn:ietf:rfc:2945`|  
-|TLSClient|`urn:ietf:rfc:2246`|  
-|X509|`urn:oasis:names:tc:SAML:1.0:am:X509-PKI`|  
-|PGP|`urn:oasis:names:tc:SAML:1.0:am:PGP`|  
-|Spki|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
-|XmlDSig|`urn:ietf:rfc:3075`|  
-|Unspecified|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
+|<span data-ttu-id="d42c5-177">Password</span><span class="sxs-lookup"><span data-stu-id="d42c5-177">Password</span></span>|`urn:oasis:names:tc:SAML:1.0:am:password`|  
+|<span data-ttu-id="d42c5-178">Kerberos</span><span class="sxs-lookup"><span data-stu-id="d42c5-178">Kerberos</span></span>|`urn:ietf:rfc:1510`|  
+|<span data-ttu-id="d42c5-179">SecureRemotePassword</span><span class="sxs-lookup"><span data-stu-id="d42c5-179">SecureRemotePassword</span></span>|`urn:ietf:rfc:2945`|  
+|<span data-ttu-id="d42c5-180">TLSClient</span><span class="sxs-lookup"><span data-stu-id="d42c5-180">TLSClient</span></span>|`urn:ietf:rfc:2246`|  
+|<span data-ttu-id="d42c5-181">X509</span><span class="sxs-lookup"><span data-stu-id="d42c5-181">X509</span></span>|`urn:oasis:names:tc:SAML:1.0:am:X509-PKI`|  
+|<span data-ttu-id="d42c5-182">PGP</span><span class="sxs-lookup"><span data-stu-id="d42c5-182">PGP</span></span>|`urn:oasis:names:tc:SAML:1.0:am:PGP`|  
+|<span data-ttu-id="d42c5-183">Spki</span><span class="sxs-lookup"><span data-stu-id="d42c5-183">Spki</span></span>|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
+|<span data-ttu-id="d42c5-184">XmlDSig</span><span class="sxs-lookup"><span data-stu-id="d42c5-184">XmlDSig</span></span>|`urn:ietf:rfc:3075`|  
+|<span data-ttu-id="d42c5-185">未指定</span><span class="sxs-lookup"><span data-stu-id="d42c5-185">Unspecified</span></span>|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
+

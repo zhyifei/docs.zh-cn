@@ -1,1 +1,1 @@
-LINQ to SQL
+<span data-ttu-id="6cf74-101">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="6cf74-101">LINQ to SQL</span></span>

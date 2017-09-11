@@ -41,19 +41,19 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xml-literals-visual-basic"></a>XML 文本 (Visual Basic)
-此部分中的主题记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的 XML 文本语法。 使用 XML 文本语法，可以将 XML 直接合并到代码中。  
+# <a name="xml-literals-visual-basic"></a><span data-ttu-id="fef07-102">XML 文本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fef07-102">XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="fef07-103">此部分中的主题记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的 XML 文本语法。</span><span class="sxs-lookup"><span data-stu-id="fef07-103">The topics in this section document the syntax of XML literals in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="fef07-104">使用 XML 文本语法，可以将 XML 直接合并到代码中。</span><span class="sxs-lookup"><span data-stu-id="fef07-104">The XML literal syntax enables you to incorporate XML directly in your code.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="fef07-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="fef07-105">In This Section</span></span>  
   
-|主题|描述|  
+|<span data-ttu-id="fef07-106">主题</span><span class="sxs-lookup"><span data-stu-id="fef07-106">Topic</span></span>|<span data-ttu-id="fef07-107">描述</span><span class="sxs-lookup"><span data-stu-id="fef07-107">Description</span></span>|  
 |-----------|-----------------|  
-|[XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|介绍了表示 <xref:System.Xml.Linq.XElement> 对象的文本语法。|  
-|[XML 文档文本](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|介绍了表示 <xref:System.Xml.Linq.XDocument> 对象的文本语法。|  
-|[XML CDATA 文本](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|介绍了表示 <xref:System.Xml.Linq.XCData> 对象的文本语法。|  
-|[XML 注释文本](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|介绍了表示 <xref:System.Xml.Linq.XComment> 对象的文本语法。|  
-|[XML 处理指令文本](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|介绍了表示 <xref:System.Xml.Linq.XProcessingInstruction> 对象的文本语法。|  
+|[<span data-ttu-id="fef07-108">XML 元素文本</span><span class="sxs-lookup"><span data-stu-id="fef07-108">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|<span data-ttu-id="fef07-109">介绍了表示 <xref:System.Xml.Linq.XElement> 对象的文本语法。</span><span class="sxs-lookup"><span data-stu-id="fef07-109">Describes the syntax for literals that represent <xref:System.Xml.Linq.XElement> objects.</span></span>|  
+|[<span data-ttu-id="fef07-110">XML 文档文本</span><span class="sxs-lookup"><span data-stu-id="fef07-110">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|<span data-ttu-id="fef07-111">介绍了表示 <xref:System.Xml.Linq.XDocument> 对象的文本语法。</span><span class="sxs-lookup"><span data-stu-id="fef07-111">Describes the syntax for literals that represent <xref:System.Xml.Linq.XDocument> objects.</span></span>|  
+|[<span data-ttu-id="fef07-112">XML CDATA 文本</span><span class="sxs-lookup"><span data-stu-id="fef07-112">XML CDATA Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|<span data-ttu-id="fef07-113">介绍了表示 <xref:System.Xml.Linq.XCData> 对象的文本语法。</span><span class="sxs-lookup"><span data-stu-id="fef07-113">Describes the syntax for literals that represent <xref:System.Xml.Linq.XCData> objects.</span></span>|  
+|[<span data-ttu-id="fef07-114">XML 注释文本</span><span class="sxs-lookup"><span data-stu-id="fef07-114">XML Comment Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<span data-ttu-id="fef07-115">介绍了表示 <xref:System.Xml.Linq.XComment> 对象的文本语法。</span><span class="sxs-lookup"><span data-stu-id="fef07-115">Describes the syntax for literals that represent <xref:System.Xml.Linq.XComment> objects.</span></span>|  
+|[<span data-ttu-id="fef07-116">XML 处理指令文本</span><span class="sxs-lookup"><span data-stu-id="fef07-116">XML Processing Instruction Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<span data-ttu-id="fef07-117">介绍了表示 <xref:System.Xml.Linq.XProcessingInstruction> 对象的文本语法。</span><span class="sxs-lookup"><span data-stu-id="fef07-117">Describes the syntax for literals that represent <xref:System.Xml.Linq.XProcessingInstruction> objects.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="fef07-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fef07-118">See Also</span></span>  
+ [<span data-ttu-id="fef07-119">XML</span><span class="sxs-lookup"><span data-stu-id="fef07-119">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
 

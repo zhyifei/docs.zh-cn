@@ -1,1 +1,1 @@
-XML 纸张规范 (XPS) 文档
+<span data-ttu-id="2537f-101">XML 纸张规范 (XPS) 文档</span><span class="sxs-lookup"><span data-stu-id="2537f-101">XML Paper Specification (XPS) document</span></span>

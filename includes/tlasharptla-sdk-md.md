@@ -1,1 +1,1 @@
-软件开发工具包 (SDK)
+<span data-ttu-id="765e7-101">软件开发工具包 (SDK)</span><span class="sxs-lookup"><span data-stu-id="765e7-101">software development kit (SDK)</span></span>

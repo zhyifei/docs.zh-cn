@@ -1,34 +1,39 @@
 ---
-title: "如何：自定义基于时间的缓存策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "基于时间的缓存策略"
-  - "自定义基于时间的缓存策略"
-  - "缓存 [.NET Framework]，基于时间的策略"
+title: "如何：自定义基于时间的缓存策略"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- customizing time-based cache policies
+- cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 24319898cba225a86fcdee3a0aaedc73d4c6220c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：自定义基于时间的缓存策略
-当创建基于时间的缓存策略时，可以通过指定值的自定义缓存行为。最大年龄、最小的新鲜度、最大不新鲜或缓存同步日期。  <xref:System.Net.Cache.HttpRequestCachePolicy> 对象提供允许您指定这些值的有效组合的若干构造函数。  
+# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="94b36-102">如何：自定义基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="94b36-102">How to: Customize a Time-Based Cache Policy</span></span>
+<span data-ttu-id="94b36-103">创建基于时间的缓存策略时，可以通过为最长使用时间、最低新鲜度、最长过期时间或缓存同步日期指定值，以自定义缓存行为。</span><span class="sxs-lookup"><span data-stu-id="94b36-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="94b36-104"><xref:System.Net.Cache.HttpRequestCachePolicy> 对象提供几个构造函数，可用于指定这些值的有效组合。</span><span class="sxs-lookup"><span data-stu-id="94b36-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
   
-### 创建一个使用缓存同步日期的基于时间的缓存策略  
+### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="94b36-105">创建使用缓存同步日期的基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="94b36-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
   
--   创建传递给 <xref:System.Net.Cache.HttpRequestCachePolicy> 构造函数的一 <xref:System.DateTime> 对象使用一个缓存同步日期的基于时间的缓存策略。  
+-   <span data-ttu-id="94b36-106">通过将 <xref:System.DateTime> 对象传递给 <xref:System.Net.Cache.HttpRequestCachePolicy> 构造函数，可创建使用缓存同步日期的基于时间的缓存策略。</span><span class="sxs-lookup"><span data-stu-id="94b36-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -50,16 +55,16 @@ caps.handback.revision: 15
     End Function  
     ```  
   
- 输出如下所示:  
+ <span data-ttu-id="94b36-107">此输出类似于以下内容：</span><span class="sxs-lookup"><span data-stu-id="94b36-107">The output is similar to the following:</span></span>  
   
 ```  
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
   
-### 创建基于最小的新鲜度的基于时间的缓存策略  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="94b36-108">创建基于最低新鲜度的基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="94b36-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
   
--   创建基于最小的新鲜度通过指定 <xref:System.Net.Cache.HttpCacheAgeControl> 作为 `cacheAgeControl` 参数值并传递到 <xref:System.Net.Cache.HttpRequestCachePolicy> 构造函数的一 <xref:System.TimeSpan> 对象的一个基于时间的缓存策略。  
+-   <span data-ttu-id="94b36-109">通过将 <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> 指定为 `cacheAgeControl` 参数值，并且将 <xref:System.TimeSpan> 对象传递给 <xref:System.Net.Cache.HttpRequestCachePolicy> 构造函数，可创建基于最低新鲜度的基于时间的缓存策略。</span><span class="sxs-lookup"><span data-stu-id="94b36-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -79,7 +84,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
     End Function  
     ```  
   
- 对以下调用:  
+ <span data-ttu-id="94b36-110">对于以下调用：</span><span class="sxs-lookup"><span data-stu-id="94b36-110">For the following invocation:</span></span>  
   
 ```  
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
@@ -87,12 +92,11 @@ CreateMinFreshPolicy(new TimeSpan(1,0,0));
   
 ```  
 Level:Default MinFresh:3600  
-  
 ```  
   
-### 创建基于最小的新鲜度和最大值年龄的基于时间的缓存策略  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="94b36-111">创建基于最低新鲜度和最长使用时间的基于时间的缓存策略</span><span class="sxs-lookup"><span data-stu-id="94b36-111">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
   
--   创建基于最小的新鲜度和最大值年龄通过指定 <xref:System.Net.Cache.HttpCacheAgeControl> 作为 `cacheAgeControl` 参数值并传递到 <xref:System.Net.Cache.HttpRequestCachePolicy> 构造函数的两 <xref:System.TimeSpan> 对象的一个基于时间的缓存策略，指定最大年龄的一个在资源和一个用于从缓存返回的对象指定允许的最小的新鲜度。  
+-   <span data-ttu-id="94b36-112">通过将 <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> 指定为 `cacheAgeControl` 参数值，并且将两个 <xref:System.TimeSpan> 对象（一个用于指定资源的最长使用时间，另一个用于指定缓存中返回对象的最低新鲜度）传递到 <xref:System.Net.Cache.HttpRequestCachePolicy> 构造函数，可创建基于最低新鲜度和最长使用时间的一个基于时间的缓存策略。</span><span class="sxs-lookup"><span data-stu-id="94b36-112">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
@@ -112,7 +116,7 @@ Level:Default MinFresh:3600
     End Function  
     ```  
   
- 对以下调用:  
+ <span data-ttu-id="94b36-113">对于以下调用：</span><span class="sxs-lookup"><span data-stu-id="94b36-113">For the following invocation:</span></span>  
   
 ```  
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
@@ -122,9 +126,10 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## 请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)   
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="94b36-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="94b36-114">See Also</span></span>  
+ <span data-ttu-id="94b36-115">[网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md) </span><span class="sxs-lookup"><span data-stu-id="94b36-115">[Cache Management for Network Applications](../../../docs/framework/network-programming/cache-management-for-network-applications.md) </span></span>  
+ <span data-ttu-id="94b36-116">[缓存策略](../../../docs/framework/network-programming/cache-policy.md) </span><span class="sxs-lookup"><span data-stu-id="94b36-116">[Cache Policy](../../../docs/framework/network-programming/cache-policy.md) </span></span>  
+ <span data-ttu-id="94b36-117">[基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md) </span><span class="sxs-lookup"><span data-stu-id="94b36-117">[Location-Based Cache Policies](../../../docs/framework/network-programming/location-based-cache-policies.md) </span></span>  
+ <span data-ttu-id="94b36-118">[基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md) </span><span class="sxs-lookup"><span data-stu-id="94b36-118">[Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) </span></span>  
+ [<span data-ttu-id="94b36-119">\<requestCaching> 元素（网络设置）</span><span class="sxs-lookup"><span data-stu-id="94b36-119">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

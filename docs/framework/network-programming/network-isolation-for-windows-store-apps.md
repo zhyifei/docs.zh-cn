@@ -1,44 +1,50 @@
 ---
-title: "Windows 应用商店应用的网络隔离 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Windows 应用商店应用的网络隔离"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# Windows 应用商店应用的网络隔离
-在 <xref:System.Net>、 <xref:System.Net.Http>和 <xref:System.Net.Http.Headers> 命名空间的选件类可用于开发Windows存储app或桌面应用程序。  当在Windows存储app，这些命名空间中的类选件受到网络隔离的一部分，应用程序安全模型影响的由 [!INCLUDE[win8](../../../includes/win8-md.md)]改用。  在必须启用相应的网络功能应用单元列表该系统上的Windows存储app的可以允许网络访问。  
+# <a name="network-isolation-for-windows-store-apps"></a><span data-ttu-id="9995c-102">Windows 应用商店应用的网络隔离</span><span class="sxs-lookup"><span data-stu-id="9995c-102">Network Isolation for Windows Store Apps</span></span>
+<span data-ttu-id="9995c-103"><xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空间中的类可用于开发 Windows 应用商店应用或桌面应用。</span><span class="sxs-lookup"><span data-stu-id="9995c-103">Classes in the <xref:System.Net>,  <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces can be used to develop Windows Store  apps  or desktop apps.</span></span> <span data-ttu-id="9995c-104">在 Windows 应用商店应用中使用时，这些命名空间中的类会受到网络隔离（[!INCLUDE[win8](../../../includes/win8-md.md)] 使用的应用程序安全模型的一部分）的影响。</span><span class="sxs-lookup"><span data-stu-id="9995c-104">When used in a Windows Store app, classes in these namespaces are affected by network isolation, part of the application security model used by the [!INCLUDE[win8](../../../includes/win8-md.md)].</span></span> <span data-ttu-id="9995c-105">必须在应用清单中为 Windows 应用商店应用启用适当的网络功能，以便系统允许网络访问。</span><span class="sxs-lookup"><span data-stu-id="9995c-105">The appropriate network capabilities must be enabled in the app manifest for a Windows Store app for the system to allow network access.</span></span>  
   
-## 网络隔离的检查表  
- 使用此检查表确定网络隔离为您的Windows存储app配置。  
+## <a name="checklist-for-network-isolation"></a><span data-ttu-id="9995c-106">网络隔离的核对清单</span><span class="sxs-lookup"><span data-stu-id="9995c-106">Checklist for Network Isolation</span></span>  
+ <span data-ttu-id="9995c-107">使用此清单以确保为 Windows 应用商店应用配置了网络隔离。</span><span class="sxs-lookup"><span data-stu-id="9995c-107">Use this checklist to be sure that network isolation is configured for your Windows Store app.</span></span>  
   
-1.  确定应用程序需要的网络访问请求的方向。  它可以是或出站客户端启动的请求或入站未请求的请求也可以是这两个web请求类型的组合。  
+1.  <span data-ttu-id="9995c-108">确定应用所需网络访问请求的方向。</span><span class="sxs-lookup"><span data-stu-id="9995c-108">Determine the direction of network access requests needed by the app.</span></span> <span data-ttu-id="9995c-109">这可以是出站客户端发起的请求或入站主动提供的请求，也可以是这两种网络请求类型的组合。</span><span class="sxs-lookup"><span data-stu-id="9995c-109">This can be either outbound client-initiated requests or inbound unsolicited requests or it could be a combination of both of these network request types.</span></span>  
   
-2.  确定的网络资源的类型该应用程序将通信。  app可能需要在家信任的资源通信或工作网络。  app可能需要在Internet的资源进行通信。  app可能需要访问网络资源的两个类型访问。  
+2.  <span data-ttu-id="9995c-110">确定该应用将与之通信的网络资源类型。</span><span class="sxs-lookup"><span data-stu-id="9995c-110">Determine the type of network resources that that app will communicate with.</span></span> <span data-ttu-id="9995c-111">应用可能需要与家庭或工作网络上受信任的资源进行通信。</span><span class="sxs-lookup"><span data-stu-id="9995c-111">An app may need to communicate with trusted resources on a Home or Work network.</span></span> <span data-ttu-id="9995c-112">应用可能需要与 Internet 上的资源进行通信。</span><span class="sxs-lookup"><span data-stu-id="9995c-112">An app might need to communicate with resources on the Internet.</span></span> <span data-ttu-id="9995c-113">应用可能需要访问两种类型的网络资源。</span><span class="sxs-lookup"><span data-stu-id="9995c-113">An app might need access to both types of network resources.</span></span>  
   
-3.  配置中最少量必需的网络隔离功能应用单元列表。  
+3.  <span data-ttu-id="9995c-114">在应用程序清单中配置最低要求的网络隔离功能。</span><span class="sxs-lookup"><span data-stu-id="9995c-114">Configure the minimum-required networking isolation capabilities in the app manifest.</span></span>  
   
-4.  部署并运行您的应用程序中测试它用于解决问题提供的网络隔离工具。  
+4.  <span data-ttu-id="9995c-115">部署并运行应用，使用为故障排除提供的网络隔离工具进行测试。</span><span class="sxs-lookup"><span data-stu-id="9995c-115">Deploy and run your app to test it using the network isolation tools provided for troubleshooting.</span></span>  
   
- 有关如何配置网络用于解决问题的网络隔离功能和隔离工具的更多信息，请参见 [如何配置网络隔离功能](http://go.microsoft.com/fwlink/?LinkID=228265) 。 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 开发人员文档。  
+ <span data-ttu-id="9995c-116">有关如何配置用于排除网络隔离的网络功能和隔离工具的详细信息，请参阅 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 开发人员文档中的[如何配置网络隔离功能](http://go.microsoft.com/fwlink/?LinkID=228265)。</span><span class="sxs-lookup"><span data-stu-id="9995c-116">For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](http://go.microsoft.com/fwlink/?LinkID=228265) in the [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] developer documentation.</span></span>  
   
-## 请参阅  
- [连接到web服务](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [准则和检查表网络隔离的](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [快速入门:连接使用HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [如何使用HttpClient处理程序](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [如何保护HttpClient连接](http://go.microsoft.com/fwlink/?LinkId=245698)   
- [HttpClient示例](http://go.microsoft.com/fwlink/?LinkId=242550)
+## <a name="see-also"></a><span data-ttu-id="9995c-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9995c-117">See Also</span></span>  
+ <span data-ttu-id="9995c-118">[连接到 Web 服务](http://go.microsoft.com/fwlink/?LinkID=245696) </span><span class="sxs-lookup"><span data-stu-id="9995c-118">[Connecting to a web service](http://go.microsoft.com/fwlink/?LinkID=245696) </span></span>  
+ <span data-ttu-id="9995c-119">[网络隔离指南和核对清单](http://go.microsoft.com/fwlink/?LinkID=228265) </span><span class="sxs-lookup"><span data-stu-id="9995c-119">[Guidelines and checklist for network isolation](http://go.microsoft.com/fwlink/?LinkID=228265) </span></span>  
+ <span data-ttu-id="9995c-120">[快速入门：使用 HttpClient 进行连接](http://go.microsoft.com/fwlink/?LinkId=245697) </span><span class="sxs-lookup"><span data-stu-id="9995c-120">[Quickstart: Connecting using HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697) </span></span>  
+ <span data-ttu-id="9995c-121">[如何使用 HttpClient 处理程序](http://go.microsoft.com/fwlink/?LinkId=245699) </span><span class="sxs-lookup"><span data-stu-id="9995c-121">[How to use HttpClient handlers](http://go.microsoft.com/fwlink/?LinkId=245699) </span></span>  
+ <span data-ttu-id="9995c-122">[如何确保 HttpClient 连接安全](http://go.microsoft.com/fwlink/?LinkId=245698) </span><span class="sxs-lookup"><span data-stu-id="9995c-122">[How to secure HttpClient connections](http://go.microsoft.com/fwlink/?LinkId=245698) </span></span>  
+ [<span data-ttu-id="9995c-123">HttpClient 示例</span><span class="sxs-lookup"><span data-stu-id="9995c-123">HttpClient Sample</span></span>](http://go.microsoft.com/fwlink/?LinkId=242550)
+

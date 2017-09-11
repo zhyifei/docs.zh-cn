@@ -20,19 +20,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8dff4e518d8850b4050389e5677ac81ecd1e074
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a60b5cb3557016bba7bae9be6e0b9c9a448c1284
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>如何︰ 从 XmlReader (Visual Basic 中) 创建树
-本主题演示如何直接从<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>创建 XML 树 若要创建<xref:System.Xml.Linq.XElement>从<xref:System.Xml.XmlReader>，则必须定位<xref:System.Xml.XmlReader>元素节点上。</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlReader>将跳过注释和处理指令，但如果<xref:System.Xml.XmlReader>是否定位在文本节点上，将引发错误。</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> 若要避免此类错误，始终定位<xref:System.Xml.XmlReader>在元素之前创建 XML 树从<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>上</xref:System.Xml.XmlReader>  
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a><span data-ttu-id="af19e-102">如何︰ 从 XmlReader (Visual Basic 中) 创建树</span><span class="sxs-lookup"><span data-stu-id="af19e-102">How to: Create a Tree from an XmlReader (Visual Basic)</span></span>
+<span data-ttu-id="af19e-103">本主题演示如何直接从<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>创建 XML 树</span><span class="sxs-lookup"><span data-stu-id="af19e-103">This topic shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="af19e-104">若要创建<xref:System.Xml.Linq.XElement>从<xref:System.Xml.XmlReader>，则必须定位<xref:System.Xml.XmlReader>元素节点上。</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="af19e-104">To create an <xref:System.Xml.Linq.XElement> from an <xref:System.Xml.XmlReader>, you must position the <xref:System.Xml.XmlReader> on an element node.</span></span> <span data-ttu-id="af19e-105"><xref:System.Xml.XmlReader>将跳过注释和处理指令，但如果<xref:System.Xml.XmlReader>是否定位在文本节点上，将引发错误。</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="af19e-105">The <xref:System.Xml.XmlReader> will skip comments and processing instructions, but if the <xref:System.Xml.XmlReader> is positioned on a text node, an error will be thrown.</span></span> <span data-ttu-id="af19e-106">若要避免此类错误，始终定位<xref:System.Xml.XmlReader>在元素之前创建 XML 树从<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>上</xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="af19e-106">To avoid such errors, always position the <xref:System.Xml.XmlReader> on an element before you create an XML tree from the <xref:System.Xml.XmlReader>.</span></span>  
   
-## <a name="example"></a>示例  
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 书籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+## <a name="example"></a><span data-ttu-id="af19e-107">示例</span><span class="sxs-lookup"><span data-stu-id="af19e-107">Example</span></span>  
+ <span data-ttu-id="af19e-108">此示例使用下面的 XML 文档︰[示例 XML 文件︰ 书籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="af19e-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
- 下面的代码创建一个 `T:System.Xml.XmlReader` 对象，然后读取节点，直到找到第一个元素节点。 然后加载<xref:System.Xml.Linq.XElement>对象。</xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="af19e-109">下面的代码创建一个 `T:System.Xml.XmlReader` 对象，然后读取节点，直到找到第一个元素节点。</span><span class="sxs-lookup"><span data-stu-id="af19e-109">The following code creates an `T:System.Xml.XmlReader` object, and then reads nodes until it finds the first element node.</span></span> <span data-ttu-id="af19e-110">然后加载<xref:System.Xml.Linq.XElement>对象。</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="af19e-110">It then loads the <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  
@@ -43,7 +44,7 @@ Dim e As XElement = XElement.Load(r)
 Console.WriteLine(e)  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="af19e-111">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="af19e-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Catalog>  
@@ -69,5 +70,5 @@ Console.WriteLine(e)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="af19e-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="af19e-112">See Also</span></span>  
+ [<span data-ttu-id="af19e-113">分析 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af19e-113">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

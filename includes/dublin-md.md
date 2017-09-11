@@ -1,1 +1,1 @@
-Windows Server AppFabric 的承载功能
+<span data-ttu-id="89a4f-101">Windows Server AppFabric 的承载功能</span><span class="sxs-lookup"><span data-stu-id="89a4f-101">hosting features of Windows Server AppFabric</span></span>

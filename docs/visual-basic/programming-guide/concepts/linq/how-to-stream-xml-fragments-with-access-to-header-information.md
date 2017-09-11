@@ -21,23 +21,23 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 2ec1d189daa5460d3b90ea8609ea74eefcd70b7f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何︰ 访问标头信息 (Visual Basic 中) 的 XML 片段进行流式处理
-有时，您必须读取任意大的 XML 文件并在编写您的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a><span data-ttu-id="16237-102">如何︰ 访问标头信息 (Visual Basic 中) 的 XML 片段进行流式处理</span><span class="sxs-lookup"><span data-stu-id="16237-102">How to: Stream XML Fragments with Access to Header Information (Visual Basic)</span></span>
+<span data-ttu-id="16237-103">有时，您必须读取任意大的 XML 文件并在编写您的应用程序时可以预测应用程序的内存需求量。</span><span class="sxs-lookup"><span data-stu-id="16237-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="16237-104">如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。</span><span class="sxs-lookup"><span data-stu-id="16237-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="16237-105">因此，您应改用流处理技术。</span><span class="sxs-lookup"><span data-stu-id="16237-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- 一种方法是编写使用<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>对应用程序 但您可能需要使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 来查询 XML 树。 在这种情况下，您可以编写自己的自定义轴方法。 有关详细信息，请参阅[如何︰ 编写 LINQ to XML 轴方法 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
+ <span data-ttu-id="16237-106">一种方法是编写使用<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>对应用程序</span><span class="sxs-lookup"><span data-stu-id="16237-106">One option is to write your application using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="16237-107">但您可能需要使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 来查询 XML 树。</span><span class="sxs-lookup"><span data-stu-id="16237-107">However, you might want to use [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] to query the XML tree.</span></span> <span data-ttu-id="16237-108">在这种情况下，您可以编写自己的自定义轴方法。</span><span class="sxs-lookup"><span data-stu-id="16237-108">If this is the case, you can write your own custom axis method.</span></span> <span data-ttu-id="16237-109">有关详细信息，请参阅[如何︰ 编写 LINQ to XML 轴方法 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。</span><span class="sxs-lookup"><span data-stu-id="16237-109">For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span></span>  
   
- 若要编写您自己的轴方法，您编写一个小的方法使用<xref:System.Xml.XmlReader>来读取各个节点，直到它达到您感兴趣的节点之一。</xref:System.Xml.XmlReader> 该方法随后调用<xref:System.Xml.Linq.XNode.ReadFrom%2A>，从其读取<xref:System.Xml.XmlReader>并实例化 XML 片段。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> 然后，您可以对自定义轴方法编写 LINQ 查询。  
+ <span data-ttu-id="16237-110">若要编写您自己的轴方法，您编写一个小的方法使用<xref:System.Xml.XmlReader>来读取各个节点，直到它达到您感兴趣的节点之一。</xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="16237-110">To write your own axis method, you write a small method that uses the <xref:System.Xml.XmlReader> to read nodes until it reaches one of the nodes in which you are interested.</span></span> <span data-ttu-id="16237-111">该方法随后调用<xref:System.Xml.Linq.XNode.ReadFrom%2A>，从其读取<xref:System.Xml.XmlReader>并实例化 XML 片段。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A></span><span class="sxs-lookup"><span data-stu-id="16237-111">The method then calls <xref:System.Xml.Linq.XNode.ReadFrom%2A>, which reads from the <xref:System.Xml.XmlReader> and instantiates an XML fragment.</span></span> <span data-ttu-id="16237-112">然后，您可以对自定义轴方法编写 LINQ 查询。</span><span class="sxs-lookup"><span data-stu-id="16237-112">You can then write LINQ queries on your custom axis method.</span></span>  
   
- 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符，如<xref:System.Linq.Enumerable.OrderBy%2A>、 循环访问其源、 收集的所有数据、 进行排序，以及最后生成序列中的第一项。</xref:System.Linq.Enumerable.OrderBy%2A> 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会保持小的内存需求量。  
+ <span data-ttu-id="16237-113">流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。</span><span class="sxs-lookup"><span data-stu-id="16237-113">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="16237-114">某些标准查询运算符，如<xref:System.Linq.Enumerable.OrderBy%2A>、 循环访问其源、 收集的所有数据、 进行排序，以及最后生成序列中的第一项。</xref:System.Linq.Enumerable.OrderBy%2A></span><span class="sxs-lookup"><span data-stu-id="16237-114">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="16237-115">请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会保持小的内存需求量。</span><span class="sxs-lookup"><span data-stu-id="16237-115">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint.</span></span>  
   
-## <a name="example"></a>示例  
- 有时，问题会变得更有意思。 在下面的 XML 文档中，自定义轴方法的使用方也必须知道每一项所属的使用方名称。  
+## <a name="example"></a><span data-ttu-id="16237-116">示例</span><span class="sxs-lookup"><span data-stu-id="16237-116">Example</span></span>  
+ <span data-ttu-id="16237-117">有时，问题会变得更有意思。</span><span class="sxs-lookup"><span data-stu-id="16237-117">Sometimes the problem gets just a little more interesting.</span></span> <span data-ttu-id="16237-118">在下面的 XML 文档中，自定义轴方法的使用方也必须知道每一项所属的使用方名称。</span><span class="sxs-lookup"><span data-stu-id="16237-118">In the following XML document, the consumer of your custom axis method also has to know the name of the customer that each item belongs to.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -84,11 +84,11 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
- 本示例采用的方法还将监视此标头信息、保存标头信息，然后生成包含标头信息和所要枚举的详细信息的小型 XML 树。 该轴方法然后生成这个新的小型 XML 树。 之后，查询将可以访问标头信息以及详细信息。  
+ <span data-ttu-id="16237-119">本示例采用的方法还将监视此标头信息、保存标头信息，然后生成包含标头信息和所要枚举的详细信息的小型 XML 树。</span><span class="sxs-lookup"><span data-stu-id="16237-119">The approach that this example takes is to also watch for this header information, save the header information, and then build a small XML tree that contains both the header information and the detail that you are enumerating.</span></span> <span data-ttu-id="16237-120">该轴方法然后生成这个新的小型 XML 树。</span><span class="sxs-lookup"><span data-stu-id="16237-120">The axis method then yields this new, small XML tree.</span></span> <span data-ttu-id="16237-121">之后，查询将可以访问标头信息以及详细信息。</span><span class="sxs-lookup"><span data-stu-id="16237-121">The query then has access to the header information as well as the detail information.</span></span>  
   
- 此方法具有小的内存需求量。 由于生成了所有的详细 XML 片段，不再需要保留对前一个片段的引用，因此，此方法可用于垃圾回收。 请注意，此技术会在堆上创建许多短生存期的对象。  
+ <span data-ttu-id="16237-122">此方法具有小的内存需求量。</span><span class="sxs-lookup"><span data-stu-id="16237-122">This approach has a small memory footprint.</span></span> <span data-ttu-id="16237-123">由于生成了所有的详细 XML 片段，不再需要保留对前一个片段的引用，因此，此方法可用于垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="16237-123">As each detail XML fragment is yielded, no references are kept to the previous fragment, and it is available for garbage collection.</span></span> <span data-ttu-id="16237-124">请注意，此技术会在堆上创建许多短生存期的对象。</span><span class="sxs-lookup"><span data-stu-id="16237-124">Note that this technique creates many short lived objects on the heap.</span></span>  
   
- 下面的示例演示如何实现和使用可流处理由 URI 指定的文件中的 XML 片段的自定义轴方法。 此自定义轴经过专门编写，可以处理具有 `Customer`、`Name` 和 `Item` 元素，并且这些元素按上述 `Source.xml` 文档排列的文档。 这是一个过于简单的实现。 将会准备一个更可靠的实现以分析无效文档。  
+ <span data-ttu-id="16237-125">下面的示例演示如何实现和使用可流处理由 URI 指定的文件中的 XML 片段的自定义轴方法。</span><span class="sxs-lookup"><span data-stu-id="16237-125">The following example shows how to implement and use a custom axis method that streams XML fragments from the file specified by the URI.</span></span> <span data-ttu-id="16237-126">此自定义轴经过专门编写，可以处理具有 `Customer`、`Name` 和 `Item` 元素，并且这些元素按上述 `Source.xml` 文档排列的文档。</span><span class="sxs-lookup"><span data-stu-id="16237-126">This custom axis is specifically written such that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the above `Source.xml` document.</span></span> <span data-ttu-id="16237-127">这是一个过于简单的实现。</span><span class="sxs-lookup"><span data-stu-id="16237-127">It is a simplistic implementation.</span></span> <span data-ttu-id="16237-128">将会准备一个更可靠的实现以分析无效文档。</span><span class="sxs-lookup"><span data-stu-id="16237-128">A more robust implementation would be prepared to parse an invalid document.</span></span>  
   
 ```vb  
 Module Module1  
@@ -221,7 +221,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="16237-129">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="16237-129">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -248,6 +248,6 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="16237-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="16237-130">See Also</span></span>  
+ [<span data-ttu-id="16237-131">高级的 LINQ to XML 编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16237-131">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
 

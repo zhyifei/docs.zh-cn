@@ -25,14 +25,14 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
-向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。  
+# <a name="version-compatibility-in-the-net-framework"></a><span data-ttu-id="9b803-102">.NET Framework 的版本兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-102">Version Compatibility in the .NET Framework</span></span>
+<span data-ttu-id="9b803-103">向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。</span><span class="sxs-lookup"><span data-stu-id="9b803-103">Backward compatibility means that an app that was developed for a particular version of a platform will run on later versions of that platform.</span></span> <span data-ttu-id="9b803-104">.NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。</span><span class="sxs-lookup"><span data-stu-id="9b803-104">The .NET Framework tries to maximize backward compatibility: Source code written for one version of the .NET Framework should compile on later versions of the .NET Framework, and binaries that run on one version of the .NET Framework should behave identically on later versions of the .NET Framework.</span></span>  
   
 <a name="Apps"></a>   
-## <a name="version-compatibility-for-apps"></a>应用程序的版本兼容性  
- 默认情况下，应用将在其目标 .NET Framework 版本上运行。 如果该版本不存在且应用程序配置文件未定义支持的版本，则可能出现 .NET Framework 初始化错误。 在此情况下，尝试运行应用程序将失败。  
+## <a name="version-compatibility-for-apps"></a><span data-ttu-id="9b803-105">应用程序的版本兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-105">Version compatibility for apps</span></span>  
+ <span data-ttu-id="9b803-106">默认情况下，应用将在其目标 .NET Framework 版本上运行。</span><span class="sxs-lookup"><span data-stu-id="9b803-106">By default, an app runs on the version of the .NET Framework that it was built for.</span></span> <span data-ttu-id="9b803-107">如果该版本不存在且应用程序配置文件未定义支持的版本，则可能出现 .NET Framework 初始化错误。</span><span class="sxs-lookup"><span data-stu-id="9b803-107">If that version is not present and the app configuration file does not define supported versions, a .NET Framework initialization error may occur.</span></span> <span data-ttu-id="9b803-108">在此情况下，尝试运行应用程序将失败。</span><span class="sxs-lookup"><span data-stu-id="9b803-108">In this case, the attempt to run the app will fail.</span></span>  
   
- 若要定义运行应用的特定版本，请将一个或多个 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素添加到应用的配置文件中。 每个 `<supportedRuntime>` 元素都列出了支持的运行时版本，第一个元素指定了优先级最高的版本，最后一个元素指定了优先级最低的版本。  
+ <span data-ttu-id="9b803-109">若要定义运行应用的特定版本，请将一个或多个 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素添加到应用的配置文件中。</span><span class="sxs-lookup"><span data-stu-id="9b803-109">To define the specific versions on which your app runs, add one or more [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) elements to your app's configuration file.</span></span> <span data-ttu-id="9b803-110">每个 `<supportedRuntime>` 元素都列出了支持的运行时版本，第一个元素指定了优先级最高的版本，最后一个元素指定了优先级最低的版本。</span><span class="sxs-lookup"><span data-stu-id="9b803-110">Each `<supportedRuntime>` element lists a supported version of the runtime, with the first specifying the most preferred version and the last specifying the least preferred version.</span></span>  
   
 ```xml  
 <configuration>  
@@ -43,57 +43,57 @@ ms.lasthandoff: 07/28/2017
 </configuration>  
 ```  
   
- 有关详细信息，请参阅[如何：配置应用以支持 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
+ <span data-ttu-id="9b803-111">有关详细信息，请参阅[如何：配置应用以支持 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。</span><span class="sxs-lookup"><span data-stu-id="9b803-111">For more information, see [How to: Configure an App to Support .NET Framework 4 or 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).</span></span>  
   
-## <a name="version-compatibility-for-components"></a>组件的版本兼容性  
- 应用程序可控制运行它的 .NET Framework 版本，但组件不能。 由于组件和类库在特定应用的上下文中加载，因此它们会自动在运行应用的 .NET Framework 版本上运行。  
+## <a name="version-compatibility-for-components"></a><span data-ttu-id="9b803-112">组件的版本兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-112">Version compatibility for components</span></span>  
+ <span data-ttu-id="9b803-113">应用程序可控制运行它的 .NET Framework 版本，但组件不能。</span><span class="sxs-lookup"><span data-stu-id="9b803-113">An app can control the version of the .NET Framework on which it runs, but a component cannot.</span></span> <span data-ttu-id="9b803-114">由于组件和类库在特定应用的上下文中加载，因此它们会自动在运行应用的 .NET Framework 版本上运行。</span><span class="sxs-lookup"><span data-stu-id="9b803-114">Components and class libraries are loaded in the context of a particular app, and therefore automatically run on the version of the .NET Framework that the app runs on.</span></span>  
   
- 由于存在此限制，因此兼容性保证对组件特别重要。 从 .NET Framework 4 开始，你可以通过将 <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName> 特性应用于某个组件，来指定希望该组件与多个版本的兼容程度。 工具可使用此特性来检测组件的将来版本中的兼容性保证的潜在冲突。  
+ <span data-ttu-id="9b803-115">由于存在此限制，因此兼容性保证对组件特别重要。</span><span class="sxs-lookup"><span data-stu-id="9b803-115">Because of this restriction, compatibility guarantees are especially important for components.</span></span> <span data-ttu-id="9b803-116">从 .NET Framework 4 开始，你可以通过将 <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName> 特性应用于某个组件，来指定希望该组件与多个版本的兼容程度。</span><span class="sxs-lookup"><span data-stu-id="9b803-116">Starting with the .NET Framework 4, you can specify the degree to which a component is expected to remain compatible across multiple versions by applying the <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName> attribute to that component.</span></span> <span data-ttu-id="9b803-117">工具可使用此特性来检测组件的将来版本中的兼容性保证的潜在冲突。</span><span class="sxs-lookup"><span data-stu-id="9b803-117">Tools can use this attribute to detect potential violations of the compatibility guarantee in future versions of a component.</span></span>  
   
-## <a name="backward-compatibility-and-the-net-framework-45"></a>向后兼容性和 .NET Framework 4.5  
- .NET Framework 4.5 及其单点版本（4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7）与使用早期版本的 .NET Framework 生成的应用向后兼容。 换句话说，使用早期版本的 .NET Framework 生成的应用程序和组件将运行，而无需在 .NET Framework 4.5 上进行修改。 但在默认情况下，应用程序在其进行开发的公共语言运行时版本上运行，因此你必须提供配置文件，使应用程序能在 .NET Framework 4.5 上运行。 有关详细信息，请参阅本文前面的[应用的版本兼容性](#Apps)一节。  
+## <a name="backward-compatibility-and-the-net-framework-45"></a><span data-ttu-id="9b803-118">向后兼容性和 .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="9b803-118">Backward compatibility and the .NET Framework 4.5</span></span>  
+ <span data-ttu-id="9b803-119">.NET Framework 4.5 及其单点版本（4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7）与使用早期版本的 .NET Framework 生成的应用向后兼容。</span><span class="sxs-lookup"><span data-stu-id="9b803-119">The .NET Framework 4.5 and its point releases (4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, and 4.7) are backward-compatible with apps that were built with earlier versions of the .NET Framework.</span></span> <span data-ttu-id="9b803-120">换句话说，使用早期版本的 .NET Framework 生成的应用程序和组件将运行，而无需在 .NET Framework 4.5 上进行修改。</span><span class="sxs-lookup"><span data-stu-id="9b803-120">In other words, apps and components built with previous versions will work without modification on the .NET Framework 4.5.</span></span> <span data-ttu-id="9b803-121">但在默认情况下，应用程序在其进行开发的公共语言运行时版本上运行，因此你必须提供配置文件，使应用程序能在 .NET Framework 4.5 上运行。</span><span class="sxs-lookup"><span data-stu-id="9b803-121">However, by default, apps run on the version of the common language runtime for which they were developed, so you may have to provide a configuration file to enable your app to run on the .NET Framework 4.5.</span></span> <span data-ttu-id="9b803-122">有关详细信息，请参阅本文前面的[应用的版本兼容性](#Apps)一节。</span><span class="sxs-lookup"><span data-stu-id="9b803-122">For more information, see the [Version compatibility for apps](#Apps) section earlier in this article.</span></span>  
   
- 实际上，.NET Framework 中看似无关紧要的更改和编程技术上的更改会损坏此兼容性。 例如，.NET Framework 4.5 中的性能改进会公开早期版本中未出现的争用条件。 同样，使用 .NET Framework 程序集的硬编码路径，执行与特定版本的 .NET Framework 的相等比较，以及使用反射获取私有字段的值都不是向后兼容的做法。 此外，每个版本的 .NET Framework 都包含 Bug 修复和可能影响某些应用程序和组件的兼容性的安全相关更改。  
+ <span data-ttu-id="9b803-123">实际上，.NET Framework 中看似无关紧要的更改和编程技术上的更改会损坏此兼容性。</span><span class="sxs-lookup"><span data-stu-id="9b803-123">In practice, this compatibility can be broken by seemingly inconsequential changes in the .NET Framework and changes in programming techniques.</span></span> <span data-ttu-id="9b803-124">例如，.NET Framework 4.5 中的性能改进会公开早期版本中未出现的争用条件。</span><span class="sxs-lookup"><span data-stu-id="9b803-124">For example, performance improvements in the .NET Framework 4.5 can expose a race condition that did not occur on earlier versions.</span></span> <span data-ttu-id="9b803-125">同样，使用 .NET Framework 程序集的硬编码路径，执行与特定版本的 .NET Framework 的相等比较，以及使用反射获取私有字段的值都不是向后兼容的做法。</span><span class="sxs-lookup"><span data-stu-id="9b803-125">Similarly, using a hard-coded path to .NET Framework assemblies, performing an equality comparison with a particular version of the .NET Framework, and getting the value of a private field by using reflection are not backward-compatible practices.</span></span> <span data-ttu-id="9b803-126">此外，每个版本的 .NET Framework 都包含 Bug 修复和可能影响某些应用程序和组件的兼容性的安全相关更改。</span><span class="sxs-lookup"><span data-stu-id="9b803-126">In addition, each version of the .NET Framework includes bug fixes and security-related changes that can affect the compatibility of some apps and components.</span></span>  
   
- 如果应用和组件在 .NET Framework 4.5（包括其单点版本，即 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2 或 4.7）上未按预期运行，请使用以下清单：  
+ <span data-ttu-id="9b803-127">如果应用和组件在 .NET Framework 4.5（包括其单点版本，即 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2 或 4.7）上未按预期运行，请使用以下清单：</span><span class="sxs-lookup"><span data-stu-id="9b803-127">If your app or component does not work as expected on the .NET Framework 4.5 (including its point releases, the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, or 4.7, use the following checklists:</span></span>  
   
--   检查这些主题以了解可能影响应用程序的任何更改并采用描述的解决方法：  
+-   <span data-ttu-id="9b803-128">检查这些主题以了解可能影响应用程序的任何更改并采用描述的解决方法：</span><span class="sxs-lookup"><span data-stu-id="9b803-128">Check these topics  for any changes that might affect your app and apply the workaround described:</span></span>  
   
-    -   [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)  
+    -   [<span data-ttu-id="9b803-129">.NET Framework 4 迁移问题</span><span class="sxs-lookup"><span data-stu-id="9b803-129">.NET Framework 4 Migration Issues</span></span>](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)  
   
-    -   [4.5 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
+    -   [<span data-ttu-id="9b803-130">4.5 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-130">Application Compatibility in 4.5</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
   
-    -   [4.5.1 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
+    -   [<span data-ttu-id="9b803-131">4.5.1 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-131">Application Compatibility in 4.5.1</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
   
-    -   [4.5.2 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
+    -   [<span data-ttu-id="9b803-132">4.5.2 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-132">Application Compatibility in 4.5.2</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
   
-    -   [4.6 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+    -   [<span data-ttu-id="9b803-133">4.6 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-133">Application Compatibility in 4.6</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
   
-    -   [4.6.1 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+    -   [<span data-ttu-id="9b803-134">4.6.1 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-134">Application Compatibility in 4.6.1</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
   
-    -   [4.6.2 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+    -   [<span data-ttu-id="9b803-135">4.6.2 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-135">Application Compatibility in 4.6.2</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-    - [4.7 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
+    - [<span data-ttu-id="9b803-136">4.7 中的应用程序兼容性</span><span class="sxs-lookup"><span data-stu-id="9b803-136">Application Compatibility in 4.7</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
        
--   如果拥有 .NET Framework 1.1 应用程序，也请查看这些主题：  
+-   <span data-ttu-id="9b803-137">如果拥有 .NET Framework 1.1 应用程序，也请查看这些主题：</span><span class="sxs-lookup"><span data-stu-id="9b803-137">If you have a .NET Framework 1.1 app, also review these topics:</span></span>  
   
-    -   [.NET Framework 2.0 中的更改](http://go.microsoft.com/fwlink/?LinkID=125263)  
+    -   [<span data-ttu-id="9b803-138">.NET Framework 2.0 中的更改</span><span class="sxs-lookup"><span data-stu-id="9b803-138">Changes in .NET Framework 2.0</span></span>](http://go.microsoft.com/fwlink/?LinkID=125263)  
   
-    -   [.NET Framework 3.5 SP1 中的更改](http://go.microsoft.com/fwlink/?LinkId=186989)  
+    -   [<span data-ttu-id="9b803-139">.NET Framework 3.5 SP1 中的更改</span><span class="sxs-lookup"><span data-stu-id="9b803-139">Changes in .NET Framework 3.5 SP1</span></span>](http://go.microsoft.com/fwlink/?LinkId=186989)  
   
--   如果要重新编译现有源代码以在 .NET Framework 4.5 或其单点版本上运行，或者要从现有源代码库开发面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的新版本的应用或组件，请查看[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)以了解过时的类型和成员，并采用描述的解决方法。 （以前编译的代码将继续针对已标记为过时的类型和成员运行。）  
+-   <span data-ttu-id="9b803-140">如果要重新编译现有源代码以在 .NET Framework 4.5 或其单点版本上运行，或者要从现有源代码库开发面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的新版本的应用或组件，请查看[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)以了解过时的类型和成员，并采用描述的解决方法。</span><span class="sxs-lookup"><span data-stu-id="9b803-140">If you are recompiling existing source code to run on the .NET Framework 4.5 or its point releases, or if you are developing a new version of an app or component that targets the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] from an existing source code base, check [What's Obsolete in the Class Library](../../../docs/framework/whats-new/whats-obsolete.md) for obsolete types and members, and apply the workaround described.</span></span> <span data-ttu-id="9b803-141">（以前编译的代码将继续针对已标记为过时的类型和成员运行。）</span><span class="sxs-lookup"><span data-stu-id="9b803-141">(Previously compiled code will continue to run against types and members that have been marked as obsolete.)</span></span>  
   
--   如果确定 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的更改损坏了应用，请检查[运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)，确定是否能在应用的配置文件中使用运行时设置来还原以前的行为。  
+-   <span data-ttu-id="9b803-142">如果确定 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的更改损坏了应用，请检查[运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)，确定是否能在应用的配置文件中使用运行时设置来还原以前的行为。</span><span class="sxs-lookup"><span data-stu-id="9b803-142">If you determine that a change in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] has broken your app, check the [Runtime Settings Schema](../../../docs/framework/configure-apps/file-schema/runtime/index.md) to determine whether you can use a runtime setting in your app's configuration file to restore the previous behavior.</span></span>  
   
--   如果遇到未记录的问题，请记录 [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) Bug，然后以电子邮件的形式将 Bug 号发送到 [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com)。  
+-   <span data-ttu-id="9b803-143">如果遇到未记录的问题，请记录 [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) Bug，然后以电子邮件的形式将 Bug 号发送到 [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com)。</span><span class="sxs-lookup"><span data-stu-id="9b803-143">If you encounter an issue that is not documented, file a [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) bug and contact [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com) with the bug number.</span></span>  
   
-## <a name="compatibility-and-side-by-side-execution"></a>兼容性和并行执行  
- 如果找不到解决问题的适当方法，请记住，.NET Framework 4.5（或其中一个单点版本）是与版本 1.1、2.0 和 3.5 并行运行的，并且是取代版本 4 的就地更新。 对于以版本 1.1、2.0 和 3.5 为目标的应用程序，你可以在目标计算机上安装适当的 .NET Framework 版本以在其最佳环境中运行该应用程序。 有关并行执行的详细信息，请参阅[并行执行](../../../docs/framework/deployment/side-by-side-execution.md)。  
+## <a name="compatibility-and-side-by-side-execution"></a><span data-ttu-id="9b803-144">兼容性和并行执行</span><span class="sxs-lookup"><span data-stu-id="9b803-144">Compatibility and side-by-side execution</span></span>  
+ <span data-ttu-id="9b803-145">如果找不到解决问题的适当方法，请记住，.NET Framework 4.5（或其中一个单点版本）是与版本 1.1、2.0 和 3.5 并行运行的，并且是取代版本 4 的就地更新。</span><span class="sxs-lookup"><span data-stu-id="9b803-145">If you cannot find a suitable workaround for your issue, remember that the .NET Framework 4.5 (or one of its point releases) runs side by side with versions 1.1, 2.0, and 3.5, and is an in-place update that replaces version 4.</span></span> <span data-ttu-id="9b803-146">对于以版本 1.1、2.0 和 3.5 为目标的应用程序，你可以在目标计算机上安装适当的 .NET Framework 版本以在其最佳环境中运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="9b803-146">For apps that target versions 1.1, 2.0, and 3.5, you can install the appropriate version of the .NET Framework on the target machine to run the app in its best environment.</span></span> <span data-ttu-id="9b803-147">有关并行执行的详细信息，请参阅[并行执行](../../../docs/framework/deployment/side-by-side-execution.md)。</span><span class="sxs-lookup"><span data-stu-id="9b803-147">For more information about side-by-side execution, see [Side-by-Side Execution](../../../docs/framework/deployment/side-by-side-execution.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [新增功能](../../../docs/framework/whats-new/index.md)   
- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)   
- [应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)   
- [Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
- [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
+## <a name="see-also"></a><span data-ttu-id="9b803-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9b803-148">See Also</span></span>  
+ <span data-ttu-id="9b803-149">[新增功能](../../../docs/framework/whats-new/index.md) </span><span class="sxs-lookup"><span data-stu-id="9b803-149">[What's New](../../../docs/framework/whats-new/index.md) </span></span>  
+ <span data-ttu-id="9b803-150">[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md) </span><span class="sxs-lookup"><span data-stu-id="9b803-150">[What's Obsolete in the Class Library](../../../docs/framework/whats-new/whats-obsolete.md) </span></span>  
+ <span data-ttu-id="9b803-151">[应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md) </span><span class="sxs-lookup"><span data-stu-id="9b803-151">[Application Compatibility](../../../docs/framework/migration-guide/application-compatibility.md) </span></span>  
+ <span data-ttu-id="9b803-152">[Microsoft .NET Framework 支持生命周期策略](http://go.microsoft.com/fwlink/p/?LinkId=248212) </span><span class="sxs-lookup"><span data-stu-id="9b803-152">[Microsoft .NET Framework Support Lifecycle Policy](http://go.microsoft.com/fwlink/p/?LinkId=248212) </span></span>  
+ [<span data-ttu-id="9b803-153">.NET Framework 4 迁移问题</span><span class="sxs-lookup"><span data-stu-id="9b803-153">.NET Framework 4 Migration Issues</span></span>](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
 

@@ -26,11 +26,11 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="thread-timers-c"></a>线程计时器 (C#)
-<xref:System.Threading.Timer?displayProperty=fullName> 类对于定期在单独的线程上运行任务很有用。 例如，可以使用线程计时器来检查数据库的状态和完整性，或备份关键文件。  
+# <a name="thread-timers-c"></a><span data-ttu-id="340fa-102">线程计时器 (C#)</span><span class="sxs-lookup"><span data-stu-id="340fa-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="340fa-103"><xref:System.Threading.Timer?displayProperty=fullName> 类对于定期在单独的线程上运行任务很有用。</span><span class="sxs-lookup"><span data-stu-id="340fa-103">The <xref:System.Threading.Timer?displayProperty=fullName> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="340fa-104">例如，可以使用线程计时器来检查数据库的状态和完整性，或备份关键文件。</span><span class="sxs-lookup"><span data-stu-id="340fa-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>线程计时器示例  
- 以下示例每两秒启动一个任务，并使用标志启动用于停止计时器的 <xref:System.IDisposable.Dispose%2A> 方法。 此示例将状态发送到输出窗口。  
+## <a name="thread-timer-example"></a><span data-ttu-id="340fa-105">线程计时器示例</span><span class="sxs-lookup"><span data-stu-id="340fa-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="340fa-106">以下示例每两秒启动一个任务，并使用标志启动用于停止计时器的 <xref:System.IDisposable.Dispose%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="340fa-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="340fa-107">此示例将状态发送到输出窗口。</span><span class="sxs-lookup"><span data-stu-id="340fa-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -84,9 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- 当 <xref:System.Windows.Forms.Timer?displayProperty=fullName> 对象不可用时（例如开发控制台应用程序时），线程计时器特别有用。  
+ <span data-ttu-id="340fa-108">当 <xref:System.Windows.Forms.Timer?displayProperty=fullName> 对象不可用时（例如开发控制台应用程序时），线程计时器特别有用。</span><span class="sxs-lookup"><span data-stu-id="340fa-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=fullName> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Threading>   
- [多线程应用程序 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="340fa-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="340fa-109">See Also</span></span>  
+ <span data-ttu-id="340fa-110"><xref:System.Threading></span><span class="sxs-lookup"><span data-stu-id="340fa-110"><xref:System.Threading></span></span>   
+ [<span data-ttu-id="340fa-111">多线程应用程序 (C#)</span><span class="sxs-lookup"><span data-stu-id="340fa-111">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
 

@@ -1,54 +1,61 @@
 ---
-title: "WIF 配置架构约定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 配置架构约定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 092f6f4544e308dae45636f447f75100512a916a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# WIF 配置架构约定
-本主题讨论约定使用在Windows标识基础\(WIF\)配置主题中并描述了用于 [\<system.identityModel\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 部分和属性的一些常用的功能。  
+# <a name="wif-configuration-schema-conventions"></a><span data-ttu-id="c0caa-102">WIF 配置架构约定</span><span class="sxs-lookup"><span data-stu-id="c0caa-102">WIF Configuration Schema Conventions</span></span>
+<span data-ttu-id="c0caa-103">本主题讨论 Windows Identity Foundation (WIF) 配置主题中使用的约定并描述 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 部分中使用的一些常见功能和属性。</span><span class="sxs-lookup"><span data-stu-id="c0caa-103">This topic discusses conventions used throughout the Windows Identity Foundation (WIF) configuration topics and describes some common features and attributes used in the [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) and the [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) sections.</span></span>  
   
 <a name="BKMK_Modes"></a>   
-## 模式  
- 许多WIF配置元素具有 `mode` 属性。  此属性通常控制要选件类用于执行处理的特定部分，哪些配置元素允许作为当前元素的子元素。  配置会引发错误因架构设置，因此，如果在配置文件中的元素将被忽略。  
+## <a name="modes"></a><span data-ttu-id="c0caa-104">模式</span><span class="sxs-lookup"><span data-stu-id="c0caa-104">Modes</span></span>  
+ <span data-ttu-id="c0caa-105">许多 WIF 配置元素都具有 `mode` 属性。</span><span class="sxs-lookup"><span data-stu-id="c0caa-105">Many of the WIF configuration elements have a `mode` attribute.</span></span> <span data-ttu-id="c0caa-106">这一属性通常控制使用哪个类执行进程的特定部分，以及允许哪些配置元素作为当前元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="c0caa-106">This attribute typically controls which class is used to do a particular part of the processing and which configuration elements are allowed as child elements of the current element.</span></span> <span data-ttu-id="c0caa-107">如果配置文件中的元素因模式设置被忽略，会引发配置错误。</span><span class="sxs-lookup"><span data-stu-id="c0caa-107">A configuration error will be raised if elements that are included in the configuration file are ignored because of the mode settings.</span></span>  
   
 <a name="BKMK_TimespanValues"></a>   
-## timespan值  
- 其中 <xref:System.TimeSpan> 用作属性的类型，请参见 <xref:System.TimeSpan.Parse%28System.String%29> 方法发现了允许的格式。  此格式符合以下规范。  
+## <a name="timespan-values"></a><span data-ttu-id="c0caa-108">Timespan 值</span><span class="sxs-lookup"><span data-stu-id="c0caa-108">Timespan Values</span></span>  
+ <span data-ttu-id="c0caa-109">其中 <xref:System.TimeSpan> 用作属性的类型，请参阅 <xref:System.TimeSpan.Parse%28System.String%29> 方法以查看允许的格式。</span><span class="sxs-lookup"><span data-stu-id="c0caa-109">Where <xref:System.TimeSpan> is used as the type of an attribute, see the <xref:System.TimeSpan.Parse%28System.String%29> method to see the allowed format.</span></span> <span data-ttu-id="c0caa-110">此格式符合以下规范。</span><span class="sxs-lookup"><span data-stu-id="c0caa-110">This format conforms to the following specification.</span></span>  
   
 ```  
 [ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
 ```  
   
- 例如，“30 "，“30.00:00”，“30.00:00: 00 "的所有这意味着30天;和“00:05”，“00:05: 00 "，“0.00:05: 00.00 "的所有这意味着5分钟。  
+ <span data-ttu-id="c0caa-111">例如，“30”、“30.00:00”、“30.00:00:00”都表示 30 天，并且“00:05”、“00:05:00”、“0.00:05:00.00”都表示 5 分钟。</span><span class="sxs-lookup"><span data-stu-id="c0caa-111">For example, "30", "30.00:00", "30.00:00:00" all mean 30 days; and "00:05", "00:05:00", "0.00:05:00.00" all mean 5 minutes.</span></span>  
   
 <a name="BKMK_CertificateReferences"></a>   
-## 证书引用  
- 使用 `<certificateReference>` 元素，多个元素为对证书。  当引用证书时，以下属性可用。  
+## <a name="certificate-references"></a><span data-ttu-id="c0caa-112">证书引用</span><span class="sxs-lookup"><span data-stu-id="c0caa-112">Certificate References</span></span>  
+ <span data-ttu-id="c0caa-113">多个元素使用 `<certificateReference>` 元素获取对证书的引用。</span><span class="sxs-lookup"><span data-stu-id="c0caa-113">Several elements take references to certificates using the `<certificateReference>` element.</span></span> <span data-ttu-id="c0caa-114">引用证书时，可使用以下属性。</span><span class="sxs-lookup"><span data-stu-id="c0caa-114">When referencing a certificate, the following attributes are available.</span></span>  
   
 |||  
 |-|-|  
-|`storeLocation`|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> 枚举的值: `CurrentUser` 或 `CurrentMachine`。|  
-|`storeName`|<xref:System.Security.Cryptography.X509Certificates.StoreName> 枚举的值;最有用此上下文的是 `My` 和 `TrustedPeople`。|  
-|`x509FindType`|<xref:System.Security.Cryptography.X509Certificates.X509FindType> 枚举的值;最有用此上下文的是 `FindBySubjectName` 和 `FindByThumbprint`。  若要消除错误的可能性，建议 `FindByThumbprint` 类型用于生产环境中。|  
-|`findValue`|用于的值基于 `x509FindType` 属性查找证书。  若要消除错误的可能性，建议 `FindByThumbprint` 类型用于生产环境中。  当 `FindByThumbPrint` 指定时，此属性采用证书指纹匹配的十六进制字符串形式的值;例如，“97249e1a5fa6bee5e515b82111ef524a4c91583f”。|  
+|`storeLocation`|<span data-ttu-id="c0caa-115"><xref:System.Security.Cryptography.X509Certificates.StoreLocation> 枚举的一个值：`CurrentUser` 或 `CurrentMachine`。</span><span class="sxs-lookup"><span data-stu-id="c0caa-115">A value of the <xref:System.Security.Cryptography.X509Certificates.StoreLocation> enumeration: `CurrentUser` or `CurrentMachine`.</span></span>|  
+|`storeName`|<span data-ttu-id="c0caa-116"><xref:System.Security.Cryptography.X509Certificates.StoreName> 枚举的一个值；对此上下文最有用的是 `My` 和 `TrustedPeople`。</span><span class="sxs-lookup"><span data-stu-id="c0caa-116">A value of the <xref:System.Security.Cryptography.X509Certificates.StoreName> enumeration; the most useful for this context are `My` and `TrustedPeople`.</span></span>|  
+|`x509FindType`|<span data-ttu-id="c0caa-117"><xref:System.Security.Cryptography.X509Certificates.X509FindType> 枚举的一个值；对此上下文最有用的是 `FindBySubjectName` 和 `FindByThumbprint`。</span><span class="sxs-lookup"><span data-stu-id="c0caa-117">A value of the <xref:System.Security.Cryptography.X509Certificates.X509FindType> enumeration; the most useful for this context are `FindBySubjectName` and `FindByThumbprint`.</span></span> <span data-ttu-id="c0caa-118">若要消除错误的可能性，建议在生产环境中使用 `FindByThumbprint` 类型。</span><span class="sxs-lookup"><span data-stu-id="c0caa-118">To eliminate the chance of error, it is recommended that the `FindByThumbprint` type be used in production environments.</span></span>|  
+|`findValue`|<span data-ttu-id="c0caa-119">用于查找证书的值，基于 `x509FindType` 属性。</span><span class="sxs-lookup"><span data-stu-id="c0caa-119">The value used to find the certificate, based on the `x509FindType` attribute.</span></span> <span data-ttu-id="c0caa-120">若要消除错误的可能性，建议在生产环境中使用 `FindByThumbprint` 类型。</span><span class="sxs-lookup"><span data-stu-id="c0caa-120">To eliminate the chance of error, it is recommended that the `FindByThumbprint` type be used in production environments.</span></span> <span data-ttu-id="c0caa-121">指定 `FindByThumbPrint` 时，此属性提取一个值，此值是证书指纹的十六进制字符串形式，如：“97249e1a5fa6bee5e515b82111ef524a4c91583f”。</span><span class="sxs-lookup"><span data-stu-id="c0caa-121">When `FindByThumbPrint` is specified, this attribute takes a value that is the hexadecimal-string form of the certificate thumbprint; for example, "97249e1a5fa6bee5e515b82111ef524a4c91583f".</span></span>|  
   
 <a name="BKMK_CustomTypeReferences"></a>   
-## 自定义类型引用  
- 使用 `type` 属性，多个元素引用自定义类型。  此属性应指定自定义类型的名称。  若要引用从全局程序集缓存\(GAC\)的类型，应使用强名称。  若要引用从一个程序集中的类型在bin目录中，程序集限定的简单引用可以使用。  在App\_Code\/内容定义的类型可通过指定类型还引用名称没有限定的程序集。  
+## <a name="custom-type-references"></a><span data-ttu-id="c0caa-122">自定义类型引用</span><span class="sxs-lookup"><span data-stu-id="c0caa-122">Custom Type References</span></span>  
+ <span data-ttu-id="c0caa-123">多个元素使用 `type` 属性引用自定义类型。</span><span class="sxs-lookup"><span data-stu-id="c0caa-123">Several elements reference custom types using the `type` attribute.</span></span> <span data-ttu-id="c0caa-124">此属性应指定自定义类型的名称。</span><span class="sxs-lookup"><span data-stu-id="c0caa-124">This attribute should specify the name of the custom type.</span></span> <span data-ttu-id="c0caa-125">若要从全局程序集缓存 (GAC) 中引用类型，应使用强名称。</span><span class="sxs-lookup"><span data-stu-id="c0caa-125">To reference a type from the Global Assembly Cache (GAC), a strong name should be used.</span></span> <span data-ttu-id="c0caa-126">若要从 Bin/ 目录中引用类型，可使用简单的程序集限定的引用。</span><span class="sxs-lookup"><span data-stu-id="c0caa-126">To reference a type from an assembly in the Bin/ directory, a simple assembly-qualified reference may be used.</span></span> <span data-ttu-id="c0caa-127">App_Code/ 目录中定义的类型也可以在没有限定程序集时仅通过指定类型名称引用。</span><span class="sxs-lookup"><span data-stu-id="c0caa-127">Types defined in the App_Code/ directory may also be referenced by simply specifying the type name with no qualifying assembly.</span></span>  
   
- 必须从指定的类型派生自定义类型，并且它们必须提供 `public` 默认\(0个参数\)构造函数。  
+ <span data-ttu-id="c0caa-128">自定义类型应从指定类型中派生，同时应提供 `public` 默认（0 参数）构造函数。</span><span class="sxs-lookup"><span data-stu-id="c0caa-128">Custom types must be derived from the type specified and they must provide a `public` default (0 argument) constructor.</span></span>  
   
-## 请参阅  
- [\<system.identityModel\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)   
- [\<system.identityModel.services\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+## <a name="see-also"></a><span data-ttu-id="c0caa-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c0caa-129">See Also</span></span>  
+ <span data-ttu-id="c0caa-130">[\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) </span><span class="sxs-lookup"><span data-stu-id="c0caa-130">[\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) </span></span>  
+ [<span data-ttu-id="c0caa-131">\<system.identityModel.services></span><span class="sxs-lookup"><span data-stu-id="c0caa-131">\<system.identityModel.services></span></span>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+

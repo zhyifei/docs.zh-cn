@@ -26,12 +26,12 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何：合并和比较字符串集合 (LINQ) (C#)
-此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="d343e-102">如何：合并和比较字符串集合 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d343e-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
+<span data-ttu-id="d343e-103">此示例演示如何合并包含文本行的文件，并对结果排序。</span><span class="sxs-lookup"><span data-stu-id="d343e-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="d343e-104">具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。</span><span class="sxs-lookup"><span data-stu-id="d343e-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>设置项目和文本文件  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="d343e-105">设置项目和文本文件</span><span class="sxs-lookup"><span data-stu-id="d343e-105">To set up the project and the text files</span></span>  
   
-1.  将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
+1.  <span data-ttu-id="d343e-106">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="d343e-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
     Garcia, Debra  
     ```  
   
-2.  将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。 请注意，这两个文件拥有一些共同的名称。  
+2.  <span data-ttu-id="d343e-107">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="d343e-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="d343e-108">请注意，这两个文件拥有一些共同的名称。</span><span class="sxs-lookup"><span data-stu-id="d343e-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/28/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="d343e-109">示例</span><span class="sxs-lookup"><span data-stu-id="d343e-109">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -185,10 +185,10 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="d343e-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="d343e-110">Compiling the Code</span></span>  
+ <span data-ttu-id="d343e-111">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="d343e-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="d343e-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="d343e-112">See Also</span></span>  
+ <span data-ttu-id="d343e-113">[LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="d343e-113">[LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+ [<span data-ttu-id="d343e-114">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="d343e-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

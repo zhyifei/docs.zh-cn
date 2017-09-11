@@ -36,17 +36,17 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>= 运算符（C# 参考）
-赋值运算符 (`=`) 在由左操作数表示的存储位置、属性或索引器中存储右操作数的值，并将该值作为结果返回。 操作数类型必须相同（或右操作数必须可隐式转换为左操作数的类型）。  
+# <a name="-operator-c-reference"></a><span data-ttu-id="873a1-102">= 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="873a1-102">= Operator (C# Reference)</span></span>
+<span data-ttu-id="873a1-103">赋值运算符 (`=`) 在由左操作数表示的存储位置、属性或索引器中存储右操作数的值，并将该值作为结果返回。</span><span class="sxs-lookup"><span data-stu-id="873a1-103">The assignment operator (`=`) stores the value of its right-hand operand in the storage location, property, or indexer denoted by its left-hand operand and returns the value as its result.</span></span> <span data-ttu-id="873a1-104">操作数类型必须相同（或右操作数必须可隐式转换为左操作数的类型）。</span><span class="sxs-lookup"><span data-stu-id="873a1-104">The operands must be of the same type (or the right-hand operand must be implicitly convertible to the type of the left-hand operand).</span></span>  
   
-## <a name="remarks"></a>备注  
- 赋值运算符无法重载。 但是，可定义类型的隐式转换运算符，这样可将赋值运算符用于这些类型。 有关详细信息，请参阅[使用转换运算符](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)。  
+## <a name="remarks"></a><span data-ttu-id="873a1-105">备注</span><span class="sxs-lookup"><span data-stu-id="873a1-105">Remarks</span></span>  
+ <span data-ttu-id="873a1-106">赋值运算符无法重载。</span><span class="sxs-lookup"><span data-stu-id="873a1-106">The assignment operator cannot be overloaded.</span></span> <span data-ttu-id="873a1-107">但是，可定义类型的隐式转换运算符，这样可将赋值运算符用于这些类型。</span><span class="sxs-lookup"><span data-stu-id="873a1-107">However, you can define implicit conversion operators for a type, which enable you to use the assignment operator with those types.</span></span> <span data-ttu-id="873a1-108">有关详细信息，请参阅[使用转换运算符](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="873a1-108">For more information, see [Using Conversion Operators](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="873a1-109">示例</span><span class="sxs-lookup"><span data-stu-id="873a1-109">Example</span></span>  
+ <span data-ttu-id="873a1-110">[!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="873a1-110">[!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="873a1-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="873a1-111">See Also</span></span>  
+ <span data-ttu-id="873a1-112">[C# 参考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="873a1-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="873a1-113">[C# 编程指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="873a1-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="873a1-114">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="873a1-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

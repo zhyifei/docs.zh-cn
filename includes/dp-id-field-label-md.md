@@ -1,1 +1,1 @@
-依赖项属性标识符字段：
+<span data-ttu-id="21a8a-101">依赖项属性标识符字段：</span><span class="sxs-lookup"><span data-stu-id="21a8a-101">Dependency property identifier field:</span></span>

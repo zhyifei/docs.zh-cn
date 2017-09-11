@@ -1,71 +1,77 @@
 ---
-title: "用平台调用封送数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据封送处理, 平台调用"
-  - "封送处理, 平台调用"
-  - "平台调用, 封送处理数据"
+title: "用平台调用封送数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, marshaling data
+- data marshaling, platform invoke
+- marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 用平台调用封送数据
-若要调用从非托管库中导出的函数，.NET Framework 应用程序需要托管代码中表示非托管函数的函数原型。  若要创建使平台调用能正确封送数据的原型，必须执行以下操作：  
+# <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="ec160-102">用平台调用封送数据</span><span class="sxs-lookup"><span data-stu-id="ec160-102">Marshaling Data with Platform Invoke</span></span>
+<span data-ttu-id="ec160-103">若要调用从非托管库中导出的函数，.NET Framework 应用程序需要托管代码中表示非托管函数的函数原型。</span><span class="sxs-lookup"><span data-stu-id="ec160-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="ec160-104">若要创建使平台调用能正确封送数据的原型，必须执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="ec160-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  
   
--   将 [DLLImportAttribute](frlrfSystemRuntimeInteropServicesDllImportAttributeClassTopic) 特性应用于托管代码中的静态函数或方法。  
+-   <span data-ttu-id="ec160-105">将 <xref:System.Runtime.InteropServices.DllImportAttribute> 特性应用于托管代码中的静态函数或方法。</span><span class="sxs-lookup"><span data-stu-id="ec160-105">Apply the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to the static function or method in managed code.</span></span>  
   
--   用托管数据类型替换非托管数据类型。  
+-   <span data-ttu-id="ec160-106">用托管数据类型替换非托管数据类型。</span><span class="sxs-lookup"><span data-stu-id="ec160-106">Substitute managed data types for unmanaged data types.</span></span>  
   
- 通过应用具有可选字段的特性以及用托管数据类型替换非托管数据类型，可用附有非托管函数的文档来构造等效的托管原型。  有关如何应用 **DllImportAttribute** 的说明，请参阅[使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)。  
+ <span data-ttu-id="ec160-107">通过应用具有可选字段的特性以及用托管数据类型替换非托管数据类型，可用附有非托管函数的文档来构造等效的托管原型。</span><span class="sxs-lookup"><span data-stu-id="ec160-107">You can use the documentation supplied with an unmanaged function to construct an equivalent managed prototype by applying the attribute with its optional fields and substituting managed data types for unmanaged types.</span></span> <span data-ttu-id="ec160-108">有关如何应用 DllImportAttribute 的说明，请参阅[使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="ec160-108">For instructions about how to apply the **DllImportAttribute**, see [Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).</span></span>  
   
- 本节提供一些示例，演示如何创建托管函数原型，以便将参数传递到由非托管库导出的函数或接收来自这些函数的返回值。  该示例还演示了何时使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性和 <xref:System.Runtime.InteropServices.Marshal> 类来显式封送数据。  
+ <span data-ttu-id="ec160-109">本节提供一些示例，演示如何创建托管函数原型，以便将自变量传递到由非托管库导出的函数或接收来自这些函数的返回值。</span><span class="sxs-lookup"><span data-stu-id="ec160-109">This section provides samples that demonstrate how to create managed function prototypes for passing arguments to and receiving return values from functions exported by unmanaged libraries.</span></span> <span data-ttu-id="ec160-110">该示例还演示了何时使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性和 <xref:System.Runtime.InteropServices.Marshal> 类来显式封送数据。</span><span class="sxs-lookup"><span data-stu-id="ec160-110">The samples also demonstrate when to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute and the <xref:System.Runtime.InteropServices.Marshal> class to explicitly marshal data.</span></span>  
   
-## 平台调用数据类型  
- 下表列出了 Win32 API（于 Wtypes.h 中列出）和 C 样式函数中使用的数据类型。  许多非托管库包含将这些数据类型作为参数和返回值传递的函数。  第三列列出了相应的 .NET Framework 内置值类型或可在托管代码中使用的类。  在某些情况下，你用相同大小的类型替代表中列出的类型。  
+## <a name="platform-invoke-data-types"></a><span data-ttu-id="ec160-111">平台调用数据类型</span><span class="sxs-lookup"><span data-stu-id="ec160-111">Platform invoke data types</span></span>  
+ <span data-ttu-id="ec160-112">下表列出了 Win32 API（于 Wtypes.h 中列出）和 C 样式函数中使用的数据类型。</span><span class="sxs-lookup"><span data-stu-id="ec160-112">The following table lists data types used in the Win32 API (listed in Wtypes.h) and C-style functions.</span></span> <span data-ttu-id="ec160-113">许多非托管库包含将这些数据类型作为参数和返回值传递的函数。</span><span class="sxs-lookup"><span data-stu-id="ec160-113">Many unmanaged libraries contain functions that pass these data types as parameters and return values.</span></span> <span data-ttu-id="ec160-114">第三列列出了相应的 .NET Framework 内置值类型或可在托管代码中使用的类。</span><span class="sxs-lookup"><span data-stu-id="ec160-114">The third column lists the corresponding .NET Framework built-in value type or class that you use in managed code.</span></span> <span data-ttu-id="ec160-115">在某些情况下，你用相同大小的类型替代表中列出的类型。</span><span class="sxs-lookup"><span data-stu-id="ec160-115">In some cases, you can substitute a type of the same size for the type listed in the table.</span></span>  
   
-|Wtypes.h 中的非托管类型|非托管 C 语言类型|托管类名称|描述|  
-|----------------------|----------------|-----------|--------|  
-|**句柄**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|在 32 位 Windows 操作系统上为 32 位、在 64 位 Windows 操作系统上为 64 位。|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8 位|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16 位|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16 位|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32 位|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32 位|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32 位|  
-|**BOOL**|**long**|[\<caps:sentence id\="tgt48" sentenceid\="f5f846452032b75e5fcec49a05fe125a" class\="tgtSentence"\>System.Int32\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|32 位|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 位|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 位|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|使用 ANSI 修饰。|  
-|**WCHAR**|**wchar\_t**|<xref:System.Char?displayProperty=fullName>|使用 Unicode 修饰。|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 ANSI 修饰。|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 ANSI 修饰。|  
-|**LPWSTR**|**wchar\_t\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 Unicode 修饰。|  
-|**LPCWSTR**|**Const wchar\_t\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 Unicode 修饰。|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32 位|  
-|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=fullName>|64 位|  
+|<span data-ttu-id="ec160-116">Wtypes.h 中的非托管类型</span><span class="sxs-lookup"><span data-stu-id="ec160-116">Unmanaged type in Wtypes.h</span></span>|<span data-ttu-id="ec160-117">非托管 C 语言类型</span><span class="sxs-lookup"><span data-stu-id="ec160-117">Unmanaged C language type</span></span>|<span data-ttu-id="ec160-118">托管类名称</span><span class="sxs-lookup"><span data-stu-id="ec160-118">Managed class name</span></span>|<span data-ttu-id="ec160-119">描述</span><span class="sxs-lookup"><span data-stu-id="ec160-119">Description</span></span>|  
+|--------------------------------|-------------------------------|------------------------|-----------------|  
+|<span data-ttu-id="ec160-120">**HANDLE**</span><span class="sxs-lookup"><span data-stu-id="ec160-120">**HANDLE**</span></span>|<span data-ttu-id="ec160-121">\*void</span><span class="sxs-lookup"><span data-stu-id="ec160-121">**void\***</span></span>|<xref:System.IntPtr?displayProperty=fullName>|<span data-ttu-id="ec160-122">在 32 位 Windows 操作系统上为 32 位、在 64 位 Windows 操作系统上为 64 位。</span><span class="sxs-lookup"><span data-stu-id="ec160-122">32 bits on 32-bit Windows operating systems, 64 bits on 64-bit Windows operating systems.</span></span>|  
+|<span data-ttu-id="ec160-123">**BYTE**</span><span class="sxs-lookup"><span data-stu-id="ec160-123">**BYTE**</span></span>|<span data-ttu-id="ec160-124">**unsigned char**</span><span class="sxs-lookup"><span data-stu-id="ec160-124">**unsigned char**</span></span>|<xref:System.Byte?displayProperty=fullName>|<span data-ttu-id="ec160-125">8 位</span><span class="sxs-lookup"><span data-stu-id="ec160-125">8 bits</span></span>|  
+|<span data-ttu-id="ec160-126">**short**</span><span class="sxs-lookup"><span data-stu-id="ec160-126">**SHORT**</span></span>|<span data-ttu-id="ec160-127">**short**</span><span class="sxs-lookup"><span data-stu-id="ec160-127">**short**</span></span>|<xref:System.Int16?displayProperty=fullName>|<span data-ttu-id="ec160-128">16 位</span><span class="sxs-lookup"><span data-stu-id="ec160-128">16 bits</span></span>|  
+|<span data-ttu-id="ec160-129">**WORD**</span><span class="sxs-lookup"><span data-stu-id="ec160-129">**WORD**</span></span>|<span data-ttu-id="ec160-130">**unsigned short**</span><span class="sxs-lookup"><span data-stu-id="ec160-130">**unsigned short**</span></span>|<xref:System.UInt16?displayProperty=fullName>|<span data-ttu-id="ec160-131">16 位</span><span class="sxs-lookup"><span data-stu-id="ec160-131">16 bits</span></span>|  
+|<span data-ttu-id="ec160-132">**INT**</span><span class="sxs-lookup"><span data-stu-id="ec160-132">**INT**</span></span>|<span data-ttu-id="ec160-133">**int**</span><span class="sxs-lookup"><span data-stu-id="ec160-133">**int**</span></span>|<xref:System.Int32?displayProperty=fullName>|<span data-ttu-id="ec160-134">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-134">32 bits</span></span>|  
+|<span data-ttu-id="ec160-135">**UINT**</span><span class="sxs-lookup"><span data-stu-id="ec160-135">**UINT**</span></span>|<span data-ttu-id="ec160-136">**unsigned int**</span><span class="sxs-lookup"><span data-stu-id="ec160-136">**unsigned int**</span></span>|<xref:System.UInt32?displayProperty=fullName>|<span data-ttu-id="ec160-137">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-137">32 bits</span></span>|  
+|<span data-ttu-id="ec160-138">**LONG**</span><span class="sxs-lookup"><span data-stu-id="ec160-138">**LONG**</span></span>|<span data-ttu-id="ec160-139">**long**</span><span class="sxs-lookup"><span data-stu-id="ec160-139">**long**</span></span>|<xref:System.Int32?displayProperty=fullName>|<span data-ttu-id="ec160-140">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-140">32 bits</span></span>|  
+|<span data-ttu-id="ec160-141">**BOOL**</span><span class="sxs-lookup"><span data-stu-id="ec160-141">**BOOL**</span></span>|<span data-ttu-id="ec160-142">**long**</span><span class="sxs-lookup"><span data-stu-id="ec160-142">**long**</span></span>|<xref:System.Byte>|<span data-ttu-id="ec160-143">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-143">32 bits</span></span>|  
+|<span data-ttu-id="ec160-144">**DWORD**</span><span class="sxs-lookup"><span data-stu-id="ec160-144">**DWORD**</span></span>|<span data-ttu-id="ec160-145">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="ec160-145">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=fullName>|<span data-ttu-id="ec160-146">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-146">32 bits</span></span>|  
+|<span data-ttu-id="ec160-147">**ULONG**</span><span class="sxs-lookup"><span data-stu-id="ec160-147">**ULONG**</span></span>|<span data-ttu-id="ec160-148">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="ec160-148">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=fullName>|<span data-ttu-id="ec160-149">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-149">32 bits</span></span>|  
+|<span data-ttu-id="ec160-150">**CHAR**</span><span class="sxs-lookup"><span data-stu-id="ec160-150">**CHAR**</span></span>|<span data-ttu-id="ec160-151">**char**</span><span class="sxs-lookup"><span data-stu-id="ec160-151">**char**</span></span>|<xref:System.Char?displayProperty=fullName>|<span data-ttu-id="ec160-152">使用 ANSI 修饰。</span><span class="sxs-lookup"><span data-stu-id="ec160-152">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="ec160-153">**WCHAR**</span><span class="sxs-lookup"><span data-stu-id="ec160-153">**WCHAR**</span></span>|<span data-ttu-id="ec160-154">**wchar_t**</span><span class="sxs-lookup"><span data-stu-id="ec160-154">**wchar_t**</span></span>|<xref:System.Char?displayProperty=fullName>|<span data-ttu-id="ec160-155">使用 Unicode 修饰。</span><span class="sxs-lookup"><span data-stu-id="ec160-155">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="ec160-156">**LPSTR**</span><span class="sxs-lookup"><span data-stu-id="ec160-156">**LPSTR**</span></span>|<span data-ttu-id="ec160-157">**char\***</span><span class="sxs-lookup"><span data-stu-id="ec160-157">**char\***</span></span>|<span data-ttu-id="ec160-158"><xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="ec160-158"><xref:System.String?displayProperty=fullName> or <xref:System.Text.StringBuilder?displayProperty=fullName></span></span>|<span data-ttu-id="ec160-159">使用 ANSI 修饰。</span><span class="sxs-lookup"><span data-stu-id="ec160-159">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="ec160-160">**LPCSTR**</span><span class="sxs-lookup"><span data-stu-id="ec160-160">**LPCSTR**</span></span>|<span data-ttu-id="ec160-161">**Const char\***</span><span class="sxs-lookup"><span data-stu-id="ec160-161">**Const char\***</span></span>|<span data-ttu-id="ec160-162"><xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="ec160-162"><xref:System.String?displayProperty=fullName> or <xref:System.Text.StringBuilder?displayProperty=fullName></span></span>|<span data-ttu-id="ec160-163">使用 ANSI 修饰。</span><span class="sxs-lookup"><span data-stu-id="ec160-163">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="ec160-164">**LPWSTR**</span><span class="sxs-lookup"><span data-stu-id="ec160-164">**LPWSTR**</span></span>|<span data-ttu-id="ec160-165">wchar_t\*</span><span class="sxs-lookup"><span data-stu-id="ec160-165">**wchar_t\***</span></span>|<span data-ttu-id="ec160-166"><xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="ec160-166"><xref:System.String?displayProperty=fullName> or <xref:System.Text.StringBuilder?displayProperty=fullName></span></span>|<span data-ttu-id="ec160-167">使用 Unicode 修饰。</span><span class="sxs-lookup"><span data-stu-id="ec160-167">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="ec160-168">**LPCWSTR**</span><span class="sxs-lookup"><span data-stu-id="ec160-168">**LPCWSTR**</span></span>|<span data-ttu-id="ec160-169">Const wchar_t\*</span><span class="sxs-lookup"><span data-stu-id="ec160-169">**Const wchar_t\***</span></span>|<span data-ttu-id="ec160-170"><xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="ec160-170"><xref:System.String?displayProperty=fullName> or <xref:System.Text.StringBuilder?displayProperty=fullName></span></span>|<span data-ttu-id="ec160-171">使用 Unicode 修饰。</span><span class="sxs-lookup"><span data-stu-id="ec160-171">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="ec160-172">**FLOAT**</span><span class="sxs-lookup"><span data-stu-id="ec160-172">**FLOAT**</span></span>|<span data-ttu-id="ec160-173">**Float**</span><span class="sxs-lookup"><span data-stu-id="ec160-173">**Float**</span></span>|<xref:System.Single?displayProperty=fullName>|<span data-ttu-id="ec160-174">32 位</span><span class="sxs-lookup"><span data-stu-id="ec160-174">32 bits</span></span>|  
+|<span data-ttu-id="ec160-175">**DOUBLE**</span><span class="sxs-lookup"><span data-stu-id="ec160-175">**DOUBLE**</span></span>|<span data-ttu-id="ec160-176">**双精度**</span><span class="sxs-lookup"><span data-stu-id="ec160-176">**Double**</span></span>|<xref:System.Double?displayProperty=fullName>|<span data-ttu-id="ec160-177">64 位</span><span class="sxs-lookup"><span data-stu-id="ec160-177">64 bits</span></span>|  
   
- 有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C\# 和 C\+\+ 中的相应类型，请参阅 [.NET Framework 类库简介](../../../docs/standard/class-library-overview.md)。  
+ <span data-ttu-id="ec160-178">有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的相应类型，请参阅 [.NET Framework 类库简介](../../../docs/standard/class-library-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ec160-178">For corresponding types in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Introduction to the .NET Framework Class Library](../../../docs/standard/class-library-overview.md).</span></span>  
   
-## PinvokeLib.dll  
- 下面的代码定义由 Pinvoke.dll 提供的库函数。  本节中介绍的许多示例都调用此库。  
+## <a name="pinvokelibdll"></a><span data-ttu-id="ec160-179">PinvokeLib.dll</span><span class="sxs-lookup"><span data-stu-id="ec160-179">PinvokeLib.dll</span></span>  
+ <span data-ttu-id="ec160-180">下面的代码定义由 Pinvoke.dll 提供的库函数。</span><span class="sxs-lookup"><span data-stu-id="ec160-180">The following code defines the library functions provided by Pinvoke.dll.</span></span> <span data-ttu-id="ec160-181">本节中介绍的许多示例都调用此库。</span><span class="sxs-lookup"><span data-stu-id="ec160-181">Many samples described in this section call this library.</span></span>  
   
-### 示例  
- [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
+### <a name="example"></a><span data-ttu-id="ec160-182">示例</span><span class="sxs-lookup"><span data-stu-id="ec160-182">Example</span></span>  
+ <span data-ttu-id="ec160-183">[!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]</span><span class="sxs-lookup"><span data-stu-id="ec160-183">[!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]</span></span>  
   
- [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
+ <span data-ttu-id="ec160-184">[!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]</span><span class="sxs-lookup"><span data-stu-id="ec160-184">[!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]</span></span>
+

@@ -20,19 +20,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c3f84d21f9fbc7e57ba079461194acf7612add
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b4dc4a162d3562b218a448653cb51473fff4165a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体
-这些示例演示如何使用协变和逆变在`Func`和`Action`要启用重用方法，并提供更多的灵活性，在代码中的泛型委托。  
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a><span data-ttu-id="943ac-102">对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体</span><span class="sxs-lookup"><span data-stu-id="943ac-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>
+<span data-ttu-id="943ac-103">这些示例演示如何使用协变和逆变在`Func`和`Action`要启用重用方法，并提供更多的灵活性，在代码中的泛型委托。</span><span class="sxs-lookup"><span data-stu-id="943ac-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
   
- 有关协变和逆变的详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ <span data-ttu-id="943ac-104">有关协变和逆变的详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="943ac-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span></span>  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有协变类型参数的委托  
- 下面的示例阐释了协变支持在泛型的优点`Func`委托。 `FindByTitle`方法采用一个参数的`String`类型，并返回的对象`Employee`类型。 但是，将分配给此方法`Func(Of String, Person)`委托原因`Employee`继承`Person`。  
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="943ac-105">使用具有协变类型参数的委托</span><span class="sxs-lookup"><span data-stu-id="943ac-105">Using Delegates with Covariant Type Parameters</span></span>  
+ <span data-ttu-id="943ac-106">下面的示例阐释了协变支持在泛型的优点`Func`委托。</span><span class="sxs-lookup"><span data-stu-id="943ac-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="943ac-107">`FindByTitle`方法采用一个参数的`String`类型，并返回的对象`Employee`类型。</span><span class="sxs-lookup"><span data-stu-id="943ac-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="943ac-108">但是，将分配给此方法`Func(Of String, Person)`委托原因`Employee`继承`Person`。</span><span class="sxs-lookup"><span data-stu-id="943ac-108">However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -69,8 +70,8 @@ Class Finder
 End Class  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>使用具有逆变类型参数的委托  
- 下面的示例阐释了逆变支持泛型中的好处`Action`委托。 `AddToContacts`方法采用一个参数的`Person`类型。 但是，将分配给此方法`Action(Of Employee)`委托原因`Employee`继承`Person`。  
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="943ac-109">使用具有逆变类型参数的委托</span><span class="sxs-lookup"><span data-stu-id="943ac-109">Using Delegates with Contravariant Type Parameters</span></span>  
+ <span data-ttu-id="943ac-110">下面的示例阐释了逆变支持泛型中的好处`Action`委托。</span><span class="sxs-lookup"><span data-stu-id="943ac-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="943ac-111">`AddToContacts`方法采用一个参数的`Person`类型。</span><span class="sxs-lookup"><span data-stu-id="943ac-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="943ac-112">但是，将分配给此方法`Action(Of Employee)`委托原因`Employee`继承`Person`。</span><span class="sxs-lookup"><span data-stu-id="943ac-112">However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```vb  
 Public Class Person  
@@ -106,6 +107,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)   
- [泛型](https://msdn.microsoft.com/library/ms172192)
+## <a name="see-also"></a><span data-ttu-id="943ac-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="943ac-113">See Also</span></span>  
+ <span data-ttu-id="943ac-114">[协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md) </span><span class="sxs-lookup"><span data-stu-id="943ac-114">[Covariance and Contravariance (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md) </span></span>  
+<span data-ttu-id="943ac-115"> [泛型](https://msdn.microsoft.com/library/ms172192)</span><span class="sxs-lookup"><span data-stu-id="943ac-115"> [Generics](https://msdn.microsoft.com/library/ms172192)</span></span>

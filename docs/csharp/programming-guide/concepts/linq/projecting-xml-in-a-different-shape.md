@@ -21,17 +21,17 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a>对不同形状的 XML 进行投影 (C#)
-本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="9c0a0-102">对不同形状的 XML 进行投影 (C#)</span><span class="sxs-lookup"><span data-stu-id="9c0a0-102">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="9c0a0-103">本主题演示对形状不同于源 XML 的 XML 进行投影的示例。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- 许多典型的 XML 转换由链接的查询组成，如本示例中所示。 一种很常见的做法是从某种格式的 XML 开始，将中间结果投影为匿名类型或命名类型的集合，最后将结果投影回与源 XML 形状完全不同的 XML。  
+ <span data-ttu-id="9c0a0-104">许多典型的 XML 转换由链接的查询组成，如本示例中所示。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="9c0a0-105">一种很常见的做法是从某种格式的 XML 开始，将中间结果投影为匿名类型或命名类型的集合，最后将结果投影回与源 XML 形状完全不同的 XML。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a>示例  
- 本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 本示例还标识每个段落的样式和文本。 最后，本示例将以不同的形状投影 XML。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了执行投影操作的新语句。  
+## <a name="example"></a><span data-ttu-id="9c0a0-106">示例</span><span class="sxs-lookup"><span data-stu-id="9c0a0-106">Example</span></span>  
+ <span data-ttu-id="9c0a0-107">本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="9c0a0-108">本示例还标识每个段落的样式和文本。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="9c0a0-109">最后，本示例将以不同的形状投影 XML。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="9c0a0-110">本示例以本教程中前面的一些示例为基础构建。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="9c0a0-111">下面代码中的注释标识出了执行投影操作的新语句。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- 有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ <span data-ttu-id="9c0a0-112">有关创建此示例的源文档的说明，请参阅[创建源 Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空间中的类型。  
+ <span data-ttu-id="9c0a0-113">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="9c0a0-114">它使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="9c0a0-114">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -175,7 +175,7 @@ class Program
 }  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="9c0a0-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="9c0a0-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -242,11 +242,11 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a>后续步骤  
- 下面的示例通过查询查找 Word 文档中的所有文本：  
+## <a name="next-steps"></a><span data-ttu-id="9c0a0-116">后续步骤</span><span class="sxs-lookup"><span data-stu-id="9c0a0-116">Next Steps</span></span>  
+ <span data-ttu-id="9c0a0-117">下面的示例通过查询查找 Word 文档中的所有文本：</span><span class="sxs-lookup"><span data-stu-id="9c0a0-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [查找 Word 文档中的文本 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="9c0a0-118">查找 Word 文档中的文本 (C#)</span><span class="sxs-lookup"><span data-stu-id="9c0a0-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="9c0a0-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="9c0a0-119">See Also</span></span>  
+ [<span data-ttu-id="9c0a0-120">教程：操作 WordprocessingML 文档中的内容 (C#)</span><span class="sxs-lookup"><span data-stu-id="9c0a0-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 

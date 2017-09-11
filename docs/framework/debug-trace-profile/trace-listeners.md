@@ -1,55 +1,60 @@
 ---
-title: "Trace Listeners | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Listener object types"
-  - "listeners"
-  - "Trace class, listeners"
-  - "trace listeners, about trace listeners"
-  - "Listeners collection"
-  - "trace listeners"
-  - "tracing [.NET Framework], trace listeners"
-  - "logs, trace listeners"
+title: "跟踪侦听器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Listener object types
+- listeners
+- Trace class, listeners
+- trace listeners, about trace listeners
+- Listeners collection
+- trace listeners
+- tracing [.NET Framework], trace listeners
+- logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7dc94602a4bd66d74e7135b03a5d851a0a22754f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# Trace Listeners
-使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource>时，必须具有用于收集和记录发送的消息的机制。  跟踪消息可由*侦听器*接收。  侦听器的用途是收集、存储和路由跟踪消息。  侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
+# <a name="trace-listeners"></a><span data-ttu-id="03813-102">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="03813-102">Trace Listeners</span></span>
+<span data-ttu-id="03813-103">使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。</span><span class="sxs-lookup"><span data-stu-id="03813-103">When using **Trace**, **Debug** and <xref:System.Diagnostics.TraceSource>, you must have a mechanism for collecting and recording the messages that are sent.</span></span> <span data-ttu-id="03813-104">跟踪消息可由侦听器接收。</span><span class="sxs-lookup"><span data-stu-id="03813-104">Trace messages are received by *listeners*.</span></span> <span data-ttu-id="03813-105">侦听器的用途是收集、存储和路由跟踪消息。</span><span class="sxs-lookup"><span data-stu-id="03813-105">The purpose of a listener is to collect, store, and route tracing messages.</span></span> <span data-ttu-id="03813-106">侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。</span><span class="sxs-lookup"><span data-stu-id="03813-106">Listeners direct the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
   
- 侦听器可供 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 类使用，其中每个类都可以将其输出发送到多种侦听器对象。  以下是常用的预定义侦听器：  
+ <span data-ttu-id="03813-107">侦听器可用于 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 类，其中每个类都可以将输出发送到多种侦听器对象。</span><span class="sxs-lookup"><span data-stu-id="03813-107">Listeners are available to the **Debug**, **Trace**, and <xref:System.Diagnostics.TraceSource> classes, each of which can send its output to a variety of listener objects.</span></span> <span data-ttu-id="03813-108">以下是常用的预定义侦听器：</span><span class="sxs-lookup"><span data-stu-id="03813-108">The following are the commonly used predefined listeners:</span></span>  
   
--   <xref:System.Diagnostics.TextWriterTraceListener> 将输出重定向到 <xref:System.IO.TextWriter> 类的实例或为 <xref:System.IO.Stream> 类的任何项。  它也可以写入到控制台或文件，因为它们是 <xref:System.IO.Stream> 类。  
+-   <span data-ttu-id="03813-109"><xref:System.Diagnostics.TextWriterTraceListener> 将输出重定向到 <xref:System.IO.TextWriter> 类的实例或为 <xref:System.IO.Stream> 类的任何项。</span><span class="sxs-lookup"><span data-stu-id="03813-109">A <xref:System.Diagnostics.TextWriterTraceListener> redirects output to an instance of the <xref:System.IO.TextWriter> class or to anything that is a <xref:System.IO.Stream> class.</span></span> <span data-ttu-id="03813-110">它也可以写入到控制台或文件，因为它们是 <xref:System.IO.Stream> 类。</span><span class="sxs-lookup"><span data-stu-id="03813-110">It can also write to the console or to a file, because these are <xref:System.IO.Stream> classes.</span></span>  
   
--   <xref:System.Diagnostics.EventLogTraceListener> 将输出重定向到事件日志。  
+-   <span data-ttu-id="03813-111"><xref:System.Diagnostics.EventLogTraceListener> 将输出重定向到事件日志。</span><span class="sxs-lookup"><span data-stu-id="03813-111">An <xref:System.Diagnostics.EventLogTraceListener> redirects output to an event log.</span></span>  
   
--   <xref:System.Diagnostics.DefaultTraceListener> 向 **OutputDebugString** 和 **Debugger.Log** 方法发出 **Write**和 **WriteLine** 消息。  在 Visual Studio 中，这会导致“输出”窗口中显示调试消息。  **Fail**和失败的 **Assert** 消息也发到 **OutputDebugString** Windows API 和 **Debugger.Log** 方法，同样将显示消息框。  此行为是 **Debug** 和 **Trace** 消息的默认行为，因为 **DefaultTraceListener** 自动包含在每个 `Listeners` 集合中，且是自动包含的唯一侦听器。  
+-   <span data-ttu-id="03813-112"><xref:System.Diagnostics.DefaultTraceListener> 向 OutputDebugString 和 Debugger.Log 方法发出 Write 和 WriteLine 消息。</span><span class="sxs-lookup"><span data-stu-id="03813-112">A <xref:System.Diagnostics.DefaultTraceListener> emits **Write** and **WriteLine** messages to the **OutputDebugString** and to the **Debugger.Log** method.</span></span> <span data-ttu-id="03813-113">在 Visual Studio 中，这会导致“输出”窗口中显示调试消息。</span><span class="sxs-lookup"><span data-stu-id="03813-113">In Visual Studio, this causes the debugging messages to appear in the Output window.</span></span> <span data-ttu-id="03813-114">Fail 和失败的 Assert 消息也发到 OutputDebugString Windows API 和 Debugger.Log 方法，同样将显示消息框。</span><span class="sxs-lookup"><span data-stu-id="03813-114">**Fail** and failed **Assert** messages also emit to the **OutputDebugString** Windows API and the **Debugger.Log** method, and also cause a message box to be displayed.</span></span> <span data-ttu-id="03813-115">此行为是 Debug 和 Trace 消息的默认行为，因为 DefaultTraceListener 自动包含在每个 `Listeners` 集合中，且是自动包含的唯一侦听器。</span><span class="sxs-lookup"><span data-stu-id="03813-115">This behavior is the default behavior for **Debug** and **Trace** messages, because **DefaultTraceListener** is automatically included in every `Listeners` collection and is the only listener automatically included.</span></span>  
   
--   <xref:System.Diagnostics.ConsoleTraceListener> 将跟踪或调试输出定向到标准输出或标准错误流。  
+-   <span data-ttu-id="03813-116"><xref:System.Diagnostics.ConsoleTraceListener> 将跟踪或调试输出定向到标准输出或标准错误流。</span><span class="sxs-lookup"><span data-stu-id="03813-116">A <xref:System.Diagnostics.ConsoleTraceListener> directs tracing or debugging output to either the standard output or the standard error stream.</span></span>  
   
--   <xref:System.Diagnostics.DelimitedListTraceListener> 将跟踪或调试输出定向到文本编写器（如流编写器）或流（如文件流）。 跟踪输出采用由 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 属性指定的分隔符分隔的文本格式。  
+-   <span data-ttu-id="03813-117"><xref:System.Diagnostics.DelimitedListTraceListener> 将跟踪或调试输出定向到文本编写器（如流编写器）或流（如文件流）。</span><span class="sxs-lookup"><span data-stu-id="03813-117">A <xref:System.Diagnostics.DelimitedListTraceListener> directs tracing or debugging output to a text writer, such as a stream writer, or to a stream, such as a file stream.</span></span> <span data-ttu-id="03813-118">跟踪输出采用由 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 属性指定的分隔符分隔的文本格式。</span><span class="sxs-lookup"><span data-stu-id="03813-118">The trace output is in a delimited text format that uses the delimiter specified by the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property.</span></span>  
   
--   <xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪或调试输出以 XML 编码数据的形式定向到 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
+-   <span data-ttu-id="03813-119"><xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪或调试输出以 XML 编码数据的形式定向到 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。</span><span class="sxs-lookup"><span data-stu-id="03813-119">An <xref:System.Diagnostics.XmlWriterTraceListener> directs tracing or debugging output as XML-encoded data to a <xref:System.IO.TextWriter> or to a <xref:System.IO.Stream>, such as a <xref:System.IO.FileStream>.</span></span>  
   
- 如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。  有关详细信息，请参阅[How to: Create and Initialize Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[How to: Use TraceSource and Filters with Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。  **侦听器**集合中的任何侦听器均从跟踪输出方法获取相同消息。  例如，假设你设置了两个侦听器：**TextWriterTraceListener** 和 **EventLogTraceListener**。  每个侦听器接收相同消息。  **TextWriterTraceListener** 将其输出定向到流，而 **EventLogTraceListener** 将其输出定向到事件日志。  
+ <span data-ttu-id="03813-120">如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="03813-120">If you want any listener besides the <xref:System.Diagnostics.DefaultTraceListener> to receive **Debug**, **Trace** and <xref:System.Diagnostics.TraceSource> output, you must add it to the `Listeners` collection.</span></span> <span data-ttu-id="03813-121">有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。</span><span class="sxs-lookup"><span data-stu-id="03813-121">For more information, see [How to: Create and Initialize Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) and [How to: Use TraceSource and Filters with Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).</span></span> <span data-ttu-id="03813-122">侦听器集合中的任何侦听器均从跟踪输出方法获取相同消息。</span><span class="sxs-lookup"><span data-stu-id="03813-122">Any listener in the **Listeners** collection gets the same messages from the trace output methods.</span></span> <span data-ttu-id="03813-123">例如，假设你设置了两个侦听器：TextWriterTraceListener 和 EventLogTraceListener。</span><span class="sxs-lookup"><span data-stu-id="03813-123">For example, suppose you set up two listeners: a **TextWriterTraceListener** and an **EventLogTraceListener**.</span></span> <span data-ttu-id="03813-124">每个侦听器接收相同消息。</span><span class="sxs-lookup"><span data-stu-id="03813-124">Each listener receives the same message.</span></span> <span data-ttu-id="03813-125">TextWriterTraceListener 将输出定向到流，而 EventLogTraceListener 将输出定向到事件日志。</span><span class="sxs-lookup"><span data-stu-id="03813-125">The **TextWriterTraceListener** would direct its output to a stream, and the **EventLogTraceListener** would direct its output to an event log.</span></span>  
   
- 以下示例演示如何将输出发送到 **Listeners** 集合。  
+ <span data-ttu-id="03813-126">以下示例演示如何将输出发送到 Listeners 集合。</span><span class="sxs-lookup"><span data-stu-id="03813-126">The following example shows how to send output to the **Listeners** collection.</span></span>  
   
 ```vb  
 ' Use this example when debugging.  
@@ -65,9 +70,9 @@ System.Diagnostics.Debug.WriteLine("Error in Widget 42");
 System.Diagnostics.Trace.WriteLine("Error in Widget 42");  
 ```  
   
- 调试和跟踪共享一个 **Listeners** 集合，因此，如果你在应用程序中将侦听器对象添加到 **Debug.Listeners** 集合，则它也将被添加到 **Trace.Listeners** 集合。  
+ <span data-ttu-id="03813-127">调试和跟踪共享一个 Listeners 集合，因此，如果你在应用程序中将侦听器对象添加到 Debug.Listeners 集合，则它也将被添加到 Trace.Listeners 集合。</span><span class="sxs-lookup"><span data-stu-id="03813-127">Debug and trace share the same **Listeners** collection, so if you add a listener object to a **Debug.Listeners** collection in your application, it gets added to the **Trace.Listeners** collection as well.</span></span>  
   
- 以下示例演示如何使用侦听器将跟踪信息发送到控制台：  
+ <span data-ttu-id="03813-128">以下示例演示如何使用侦听器将跟踪信息发送到控制台：</span><span class="sxs-lookup"><span data-stu-id="03813-128">The following example shows how to use a listener to send tracing information to a console:</span></span>  
   
 ```vb  
 Trace.Listeners.Clear()  
@@ -80,13 +85,14 @@ System.Diagnostics.Trace.Listeners.Add(
    new System.Diagnostics.TextWriterTraceListener(Console.Out));  
 ```  
   
-## 开发人员定义的侦听器  
- 可以通过从 **TraceListener** 基类继承并用自定义方法重写其方法来定义侦听器。  有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
+## <a name="developer-defined-listeners"></a><span data-ttu-id="03813-129">开发人员定义的侦听器</span><span class="sxs-lookup"><span data-stu-id="03813-129">Developer-Defined Listeners</span></span>  
+ <span data-ttu-id="03813-130">可以通过从 TraceListener 基类继承并用自定义方法重写其方法来定义侦听器。</span><span class="sxs-lookup"><span data-stu-id="03813-130">You can define your own listeners by inheriting from the **TraceListener** base class and overriding its methods with your customized methods.</span></span> <span data-ttu-id="03813-131">有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。</span><span class="sxs-lookup"><span data-stu-id="03813-131">For more information on creating developer-defined listeners, see <xref:System.Diagnostics.TraceListener> in the .NET Framework reference.</span></span>  
   
-## 请参阅  
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TraceListener>   
- [Tracing and Instrumenting Applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Trace Switches](../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a><span data-ttu-id="03813-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="03813-132">See Also</span></span>  
+ <span data-ttu-id="03813-133"><xref:System.Diagnostics.TextWriterTraceListener></span><span class="sxs-lookup"><span data-stu-id="03813-133"><xref:System.Diagnostics.TextWriterTraceListener></span></span>   
+ <span data-ttu-id="03813-134"><xref:System.Diagnostics.EventLogTraceListener></span><span class="sxs-lookup"><span data-stu-id="03813-134"><xref:System.Diagnostics.EventLogTraceListener></span></span>   
+ <span data-ttu-id="03813-135"><xref:System.Diagnostics.DefaultTraceListener></span><span class="sxs-lookup"><span data-stu-id="03813-135"><xref:System.Diagnostics.DefaultTraceListener></span></span>   
+ <span data-ttu-id="03813-136"><xref:System.Diagnostics.TraceListener></span><span class="sxs-lookup"><span data-stu-id="03813-136"><xref:System.Diagnostics.TraceListener></span></span>   
+ <span data-ttu-id="03813-137">[跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md) </span><span class="sxs-lookup"><span data-stu-id="03813-137">[Tracing and Instrumenting Applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md) </span></span>  
+ [<span data-ttu-id="03813-138">跟踪开关</span><span class="sxs-lookup"><span data-stu-id="03813-138">Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/trace-switches.md)
+

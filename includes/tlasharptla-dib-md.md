@@ -1,1 +1,1 @@
-与设备无关的位图 (DIB)
+<span data-ttu-id="83b4e-101">与设备无关的位图 (DIB)</span><span class="sxs-lookup"><span data-stu-id="83b4e-101">device-independent bitmap (DIB)</span></span>

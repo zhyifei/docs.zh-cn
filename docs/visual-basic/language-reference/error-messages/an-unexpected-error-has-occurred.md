@@ -28,32 +28,33 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 03ab2d1c746fbc28c0c6f3e59371cc6bbd4050cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
-应用程序未能获取所需的操作系统资源。 一些可能导致此问题的原因是：  
+# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="6d727-102">发生错误，因为无法获得单个实例启动所需的操作系统资源</span><span class="sxs-lookup"><span data-stu-id="6d727-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
+<span data-ttu-id="6d727-103">应用程序未能获取所需的操作系统资源。</span><span class="sxs-lookup"><span data-stu-id="6d727-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="6d727-104">一些可能导致此问题的原因是：</span><span class="sxs-lookup"><span data-stu-id="6d727-104">Some of the possible causes for this problem are:</span></span>  
   
--   应用程序不具备创建命名操作系统对象的权限。  
+-   <span data-ttu-id="6d727-105">应用程序不具备创建命名操作系统对象的权限。</span><span class="sxs-lookup"><span data-stu-id="6d727-105">The application does not have permissions to create named operating-system objects.</span></span>  
   
--   公共语言运行时不具备创建内存映射文件的权限。  
+-   <span data-ttu-id="6d727-106">公共语言运行时不具备创建内存映射文件的权限。</span><span class="sxs-lookup"><span data-stu-id="6d727-106">The common language runtime does not have permissions to create memory-mapped files.</span></span>  
   
--   应用程序需要访问某个操作系统对象，但另一个进程正在使用该对象。  
+-   <span data-ttu-id="6d727-107">应用程序需要访问某个操作系统对象，但另一个进程正在使用该对象。</span><span class="sxs-lookup"><span data-stu-id="6d727-107">The application needs to access an operating-system object, but another process is using it.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6d727-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6d727-108">To correct this error</span></span>  
   
-1.  检查该应用程序具有创建命名操作系统对象的足够权限。  
+1.  <span data-ttu-id="6d727-109">检查该应用程序具有创建命名操作系统对象的足够权限。</span><span class="sxs-lookup"><span data-stu-id="6d727-109">Check that the application has sufficient permissions to create named operating-system objects.</span></span>  
   
-2.  检查公共语言运行时具有创建内存映射文件的足够权限。  
+2.  <span data-ttu-id="6d727-110">检查公共语言运行时具有创建内存映射文件的足够权限。</span><span class="sxs-lookup"><span data-stu-id="6d727-110">Check that the common language runtime has sufficient permissions to create memory-mapped files.</span></span>  
   
-3.  重新启动计算机以清除可能正使用连接到原始实例应用程序所需的资源的任何进程。  
+3.  <span data-ttu-id="6d727-111">重新启动计算机以清除可能正使用连接到原始实例应用程序所需的资源的任何进程。</span><span class="sxs-lookup"><span data-stu-id="6d727-111">Restart the computer to clear any process that may be using the resource needed to connect to the original instance application.</span></span>  
   
-4.  记录发生错误的环境，并与 Microsoft 产品支持服务联系  
+4.  <span data-ttu-id="6d727-112">记录发生错误的环境，并与 Microsoft 产品支持服务联系</span><span class="sxs-lookup"><span data-stu-id="6d727-112">Note the circumstances under which the error occurred, and call Microsoft Product Support Services</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [应用程序页、项目设计器 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
- [调试器基础知识](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="6d727-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6d727-113">See Also</span></span>  
+ <span data-ttu-id="6d727-114">[应用程序页、项目设计器 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic) </span><span class="sxs-lookup"><span data-stu-id="6d727-114">[Application Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic) </span></span>  
+<span data-ttu-id="6d727-115"> [调试器基础知识](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) </span><span class="sxs-lookup"><span data-stu-id="6d727-115"> [Debugger Basics](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) </span></span>  
+<span data-ttu-id="6d727-116"> [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="6d727-116"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

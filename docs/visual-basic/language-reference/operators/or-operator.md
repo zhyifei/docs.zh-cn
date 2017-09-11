@@ -41,35 +41,35 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f3f6c013df6cd5c3b99e465bdc8bb0b4ead6bdf4
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 01d51f50dd785f168ed850e3f1763b300d9d2011
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="or-operator-visual-basic"></a>Or 运算符 (Visual Basic)
-对两个执行逻辑析取`Boolean`表达式或两个数值表达式按位或运算。  
+# <a name="or-operator-visual-basic"></a><span data-ttu-id="b46fd-102">Or 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b46fd-102">Or Operator (Visual Basic)</span></span>
+<span data-ttu-id="b46fd-103">对两个执行逻辑析取`Boolean`表达式或两个数值表达式按位或运算。</span><span class="sxs-lookup"><span data-stu-id="b46fd-103">Performs a logical disjunction on two `Boolean` expressions, or a bitwise disjunction on two numeric expressions.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="b46fd-104">语法</span><span class="sxs-lookup"><span data-stu-id="b46fd-104">Syntax</span></span>  
   
 ```  
 result = expression1 Or expression2  
 ```  
   
-## <a name="parts"></a>部件  
+## <a name="parts"></a><span data-ttu-id="b46fd-105">部件</span><span class="sxs-lookup"><span data-stu-id="b46fd-105">Parts</span></span>  
  `result`  
- 必需。 任何`Boolean`或数值表达式。 有关`Boolean`比较，`result`是两个包含的逻辑析取`Boolean`值。 对于按位运算`result`是表示两个数字组合模式的包含按位析取的数值。  
+ <span data-ttu-id="b46fd-106">必需。</span><span class="sxs-lookup"><span data-stu-id="b46fd-106">Required.</span></span> <span data-ttu-id="b46fd-107">任何`Boolean`或数值表达式。</span><span class="sxs-lookup"><span data-stu-id="b46fd-107">Any `Boolean` or numeric expression.</span></span> <span data-ttu-id="b46fd-108">有关`Boolean`比较，`result`是两个包含的逻辑析取`Boolean`值。</span><span class="sxs-lookup"><span data-stu-id="b46fd-108">For `Boolean` comparison, `result` is the inclusive logical disjunction of two `Boolean` values.</span></span> <span data-ttu-id="b46fd-109">对于按位运算`result`是表示两个数字组合模式的包含按位析取的数值。</span><span class="sxs-lookup"><span data-stu-id="b46fd-109">For bitwise operations, `result` is a numeric value representing the inclusive bitwise disjunction of two numeric bit patterns.</span></span>  
   
  `expression1`  
- 必需。 任何`Boolean`或数值表达式。  
+ <span data-ttu-id="b46fd-110">必需。</span><span class="sxs-lookup"><span data-stu-id="b46fd-110">Required.</span></span> <span data-ttu-id="b46fd-111">任何`Boolean`或数值表达式。</span><span class="sxs-lookup"><span data-stu-id="b46fd-111">Any `Boolean` or numeric expression.</span></span>  
   
  `expression2`  
- 必需。 任何`Boolean`或数值表达式。  
+ <span data-ttu-id="b46fd-112">必需。</span><span class="sxs-lookup"><span data-stu-id="b46fd-112">Required.</span></span> <span data-ttu-id="b46fd-113">任何`Boolean`或数值表达式。</span><span class="sxs-lookup"><span data-stu-id="b46fd-113">Any `Boolean` or numeric expression.</span></span>  
   
-## <a name="remarks"></a>备注  
- 有关`Boolean`比较，`result`是`False`当且仅当`expression1`和`expression2`的计算结果为`False`。 下表说明了如何`result`确定的。  
+## <a name="remarks"></a><span data-ttu-id="b46fd-114">备注</span><span class="sxs-lookup"><span data-stu-id="b46fd-114">Remarks</span></span>  
+ <span data-ttu-id="b46fd-115">有关`Boolean`比较，`result`是`False`当且仅当`expression1`和`expression2`的计算结果为`False`。</span><span class="sxs-lookup"><span data-stu-id="b46fd-115">For `Boolean` comparison, `result` is `False` if and only if both `expression1` and `expression2` evaluate to `False`.</span></span> <span data-ttu-id="b46fd-116">下表说明了如何`result`确定的。</span><span class="sxs-lookup"><span data-stu-id="b46fd-116">The following table illustrates how `result` is determined.</span></span>  
   
-|If `expression1` is|和`expression2`是|值`result`是|  
+|<span data-ttu-id="b46fd-117">If `expression1` is</span><span class="sxs-lookup"><span data-stu-id="b46fd-117">If `expression1` is</span></span>|<span data-ttu-id="b46fd-118">和`expression2`是</span><span class="sxs-lookup"><span data-stu-id="b46fd-118">And `expression2` is</span></span>|<span data-ttu-id="b46fd-119">值`result`是</span><span class="sxs-lookup"><span data-stu-id="b46fd-119">The value of `result` is</span></span>|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -77,46 +77,46 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  在`Boolean`比较，`Or`运算符始终计算两个表达式，它可能包含调用过程。 [OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md)执行*短路*，这意味着，如果`expression1`是`True`，然后`expression2`则不会评估。  
+>  <span data-ttu-id="b46fd-120">在`Boolean`比较，`Or`运算符始终计算两个表达式，它可能包含调用过程。</span><span class="sxs-lookup"><span data-stu-id="b46fd-120">In a `Boolean` comparison, the `Or` operator always evaluates both expressions, which could include making procedure calls.</span></span> <span data-ttu-id="b46fd-121">[OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md)执行*短路*，这意味着，如果`expression1`是`True`，然后`expression2`则不会评估。</span><span class="sxs-lookup"><span data-stu-id="b46fd-121">The [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) performs *short-circuiting*, which means that if `expression1` is `True`, then `expression2` is not evaluated.</span></span>  
   
- 对于按位运算`Or`运算符在两个数值表达式执行按位比较位置相同的位并设置相应的位在`result`根据下表。  
+ <span data-ttu-id="b46fd-122">对于按位运算`Or`运算符在两个数值表达式执行按位比较位置相同的位并设置相应的位在`result`根据下表。</span><span class="sxs-lookup"><span data-stu-id="b46fd-122">For bitwise operations, the `Or` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.</span></span>  
   
-|如果中位`expression1`是|和在位`expression2`是|中的位`result`是|  
+|<span data-ttu-id="b46fd-123">如果中位`expression1`是</span><span class="sxs-lookup"><span data-stu-id="b46fd-123">If bit in `expression1` is</span></span>|<span data-ttu-id="b46fd-124">和在位`expression2`是</span><span class="sxs-lookup"><span data-stu-id="b46fd-124">And bit in `expression2` is</span></span>|<span data-ttu-id="b46fd-125">中的位`result`是</span><span class="sxs-lookup"><span data-stu-id="b46fd-125">The bit in `result` is</span></span>|  
 |--------------------------------|---------------------------------|----------------------------|  
-|1|1|1|  
-|1|0|1|  
-|0|1|1|  
-|0|0|0|  
+|<span data-ttu-id="b46fd-126">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-126">1</span></span>|<span data-ttu-id="b46fd-127">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-127">1</span></span>|<span data-ttu-id="b46fd-128">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-128">1</span></span>|  
+|<span data-ttu-id="b46fd-129">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-129">1</span></span>|<span data-ttu-id="b46fd-130">0</span><span class="sxs-lookup"><span data-stu-id="b46fd-130">0</span></span>|<span data-ttu-id="b46fd-131">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-131">1</span></span>|  
+|<span data-ttu-id="b46fd-132">0</span><span class="sxs-lookup"><span data-stu-id="b46fd-132">0</span></span>|<span data-ttu-id="b46fd-133">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-133">1</span></span>|<span data-ttu-id="b46fd-134">1</span><span class="sxs-lookup"><span data-stu-id="b46fd-134">1</span></span>|  
+|<span data-ttu-id="b46fd-135">0</span><span class="sxs-lookup"><span data-stu-id="b46fd-135">0</span></span>|<span data-ttu-id="b46fd-136">0</span><span class="sxs-lookup"><span data-stu-id="b46fd-136">0</span></span>|<span data-ttu-id="b46fd-137">0</span><span class="sxs-lookup"><span data-stu-id="b46fd-137">0</span></span>|  
   
 > [!NOTE]
->  因为逻辑和按位运算符的优先级低于其他算术和关系运算符，所以应将任何按位运算括在圆括号中以确保准确的执行。  
+>  <span data-ttu-id="b46fd-138">因为逻辑和按位运算符的优先级低于其他算术和关系运算符，所以应将任何按位运算括在圆括号中以确保准确的执行。</span><span class="sxs-lookup"><span data-stu-id="b46fd-138">Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.</span></span>  
   
-## <a name="data-types"></a>数据类型  
- 如果其中一个的操作数包括`Boolean`Visual Basic 表达式和一个数值表达式，将转换`Boolean`为数字值的表达式 (– 1 表示`True`，0 表示`False`)，并执行按位运算。  
+## <a name="data-types"></a><span data-ttu-id="b46fd-139">数据类型</span><span class="sxs-lookup"><span data-stu-id="b46fd-139">Data Types</span></span>  
+ <span data-ttu-id="b46fd-140">如果其中一个的操作数包括`Boolean`Visual Basic 表达式和一个数值表达式，将转换`Boolean`为数字值的表达式 (– 1 表示`True`，0 表示`False`)，并执行按位运算。</span><span class="sxs-lookup"><span data-stu-id="b46fd-140">If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.</span></span>  
   
- 有关`Boolean`比较，结果的数据类型是`Boolean`。 有关的按位比较，结果数据类型为数值类型适用于数据类型的`expression1`和`expression2`。 请参阅中的"关系与按位比较"表[运算符结果的数据类型的](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。  
+ <span data-ttu-id="b46fd-141">有关`Boolean`比较，结果的数据类型是`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="b46fd-141">For a `Boolean` comparison, the data type of the result is `Boolean`.</span></span> <span data-ttu-id="b46fd-142">有关的按位比较，结果数据类型为数值类型适用于数据类型的`expression1`和`expression2`。</span><span class="sxs-lookup"><span data-stu-id="b46fd-142">For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="b46fd-143">请参阅中的"关系与按位比较"表[运算符结果的数据类型的](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。</span><span class="sxs-lookup"><span data-stu-id="b46fd-143">See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
   
-## <a name="overloading"></a>重载  
- `Or`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的类或结构的类型。 如果您的代码对这样的类或结构中使用此运算符，请确保您了解其被重新定义的行为。 有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a><span data-ttu-id="b46fd-144">重载</span><span class="sxs-lookup"><span data-stu-id="b46fd-144">Overloading</span></span>  
+ <span data-ttu-id="b46fd-145">`Or`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="b46fd-145">The `Or` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="b46fd-146">如果您的代码对这样的类或结构中使用此运算符，请确保您了解其被重新定义的行为。</span><span class="sxs-lookup"><span data-stu-id="b46fd-146">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="b46fd-147">有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="b46fd-147">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例使用`Or`运算符对两个表达式执行包含的逻辑析取。 结果是`Boolean`值，该值表示两个表达式之一是否`True`。  
+## <a name="example"></a><span data-ttu-id="b46fd-148">示例</span><span class="sxs-lookup"><span data-stu-id="b46fd-148">Example</span></span>  
+ <span data-ttu-id="b46fd-149">下面的示例使用`Or`运算符对两个表达式执行包含的逻辑析取。</span><span class="sxs-lookup"><span data-stu-id="b46fd-149">The following example uses the `Or` operator to perform an inclusive logical disjunction on two expressions.</span></span> <span data-ttu-id="b46fd-150">结果是`Boolean`值，该值表示两个表达式之一是否`True`。</span><span class="sxs-lookup"><span data-stu-id="b46fd-150">The result is a `Boolean` value that represents whether either of the two expressions is `True`.</span></span>  
   
- [!code-vb[VbVbalrOperators #&35;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
+ <span data-ttu-id="b46fd-151">[!code-vb[VbVbalrOperators #&35;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="b46fd-151">[!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]</span></span>  
   
- 前面的示例将生成的结果`True`， `True`，和`False`分别。  
+ <span data-ttu-id="b46fd-152">前面的示例将生成的结果`True`， `True`，和`False`分别。</span><span class="sxs-lookup"><span data-stu-id="b46fd-152">The preceding example produces results of `True`, `True`, and `False`, respectively.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例使用`Or`运算符对两个数值表达式的各个位执行包含逻辑析取。 如果任一操作数中的对应位将设置为 1，则结果模式中的位将设置。  
+## <a name="example"></a><span data-ttu-id="b46fd-153">示例</span><span class="sxs-lookup"><span data-stu-id="b46fd-153">Example</span></span>  
+ <span data-ttu-id="b46fd-154">下面的示例使用`Or`运算符对两个数值表达式的各个位执行包含逻辑析取。</span><span class="sxs-lookup"><span data-stu-id="b46fd-154">The following example uses the `Or` operator to perform inclusive logical disjunction on the individual bits of two numeric expressions.</span></span> <span data-ttu-id="b46fd-155">如果任一操作数中的对应位将设置为 1，则结果模式中的位将设置。</span><span class="sxs-lookup"><span data-stu-id="b46fd-155">The bit in the result pattern is set if either of the corresponding bits in the operands is set to 1.</span></span>  
   
- [!code-vb[VbVbalrOperators #&36;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
+ <span data-ttu-id="b46fd-156">[!code-vb[VbVbalrOperators #&36;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="b46fd-156">[!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]</span></span>  
   
- 前面的示例分别产生 10、 14 和 14 的结果。  
+ <span data-ttu-id="b46fd-157">前面的示例分别产生 10、 14 和 14 的结果。</span><span class="sxs-lookup"><span data-stu-id="b46fd-157">The preceding example produces results of 10, 14, and 14, respectively.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [在 Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md)   
- [在 Visual Basic 中的逻辑和按位运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="b46fd-158">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b46fd-158">See Also</span></span>  
+ <span data-ttu-id="b46fd-159">[逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md) </span><span class="sxs-lookup"><span data-stu-id="b46fd-159">[Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md) </span></span>  
+<span data-ttu-id="b46fd-160"> [在 Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md) </span><span class="sxs-lookup"><span data-stu-id="b46fd-160"> [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md) </span></span>  
+<span data-ttu-id="b46fd-161"> [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span><span class="sxs-lookup"><span data-stu-id="b46fd-161"> [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span></span>  
+<span data-ttu-id="b46fd-162"> [OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md) </span><span class="sxs-lookup"><span data-stu-id="b46fd-162"> [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) </span></span>  
+<span data-ttu-id="b46fd-163"> [在 Visual Basic 中的逻辑和按位运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)</span><span class="sxs-lookup"><span data-stu-id="b46fd-163"> [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)</span></span>
 

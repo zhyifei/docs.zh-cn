@@ -1,1 +1,1 @@
-Microsoft Windows 更新
+<span data-ttu-id="a54cb-101">Microsoft Windows 更新</span><span class="sxs-lookup"><span data-stu-id="a54cb-101">Microsoft Windows Update</span></span>

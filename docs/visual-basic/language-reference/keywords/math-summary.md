@@ -31,25 +31,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795dabae84ef71ecdb3da7cf9dd9f21cdc9246b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 73ed8a24e5f2d46092beccdcfdf1d634c24182d6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="math-summary-visual-basic"></a>数学摘要 (Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]语言关键字和运行时库成员按目的组织和用途。  
+# <a name="math-summary-visual-basic"></a><span data-ttu-id="6936d-102">数学摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6936d-102">Math Summary (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="6936d-103">语言关键字和运行时库成员按目的组织和用途。</span><span class="sxs-lookup"><span data-stu-id="6936d-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|操作|语言元素|  
+|<span data-ttu-id="6936d-104">操作</span><span class="sxs-lookup"><span data-stu-id="6936d-104">Action</span></span>|<span data-ttu-id="6936d-105">语言元素</span><span class="sxs-lookup"><span data-stu-id="6936d-105">Language element</span></span>|  
 |------------|----------------------|  
-|导出三角函数。|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></xref:System.Math.Tan%2A></xref:System.Math.Sin%2A></xref:System.Math.Cos%2A></xref:System.Math.Atan%2A>|  
-|常规计算。|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></xref:System.Math.Sqrt%2A></xref:System.Math.Log%2A></xref:System.Math.Exp%2A>|  
-|生成随机数字。|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>,<xref:Microsoft.VisualBasic.VBMath.Rnd%2A></xref:Microsoft.VisualBasic.VBMath.Rnd%2A></xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|  
-|获取绝对值的数值。|<xref:System.Math.Abs%2A></xref:System.Math.Abs%2A>|  
-|获取一个表达式，表达式的符号。|<xref:System.Math.Sign%2A></xref:System.Math.Sign%2A>|  
-|执行数值转换。|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>,<xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Fix%2A>|  
+|<span data-ttu-id="6936d-106">导出三角函数。</span><span class="sxs-lookup"><span data-stu-id="6936d-106">Derive trigonometric functions.</span></span>|<span data-ttu-id="6936d-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></xref:System.Math.Tan%2A></xref:System.Math.Sin%2A></xref:System.Math.Cos%2A></xref:System.Math.Atan%2A></span><span class="sxs-lookup"><span data-stu-id="6936d-107"><xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A></span></span>|  
+|<span data-ttu-id="6936d-108">常规计算。</span><span class="sxs-lookup"><span data-stu-id="6936d-108">General calculations.</span></span>|<span data-ttu-id="6936d-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></xref:System.Math.Sqrt%2A></xref:System.Math.Log%2A></xref:System.Math.Exp%2A></span><span class="sxs-lookup"><span data-stu-id="6936d-109"><xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A></span></span>|  
+|<span data-ttu-id="6936d-110">生成随机数字。</span><span class="sxs-lookup"><span data-stu-id="6936d-110">Generate random numbers.</span></span>|<span data-ttu-id="6936d-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>,<xref:Microsoft.VisualBasic.VBMath.Rnd%2A></xref:Microsoft.VisualBasic.VBMath.Rnd%2A></xref:Microsoft.VisualBasic.VBMath.Randomize%2A></span><span class="sxs-lookup"><span data-stu-id="6936d-111"><xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A></span></span>|  
+|<span data-ttu-id="6936d-112">获取绝对值的数值。</span><span class="sxs-lookup"><span data-stu-id="6936d-112">Get absolute value.</span></span>|<span data-ttu-id="6936d-113"><xref:System.Math.Abs%2A></xref:System.Math.Abs%2A></span><span class="sxs-lookup"><span data-stu-id="6936d-113"><xref:System.Math.Abs%2A></span></span>|  
+|<span data-ttu-id="6936d-114">获取一个表达式，表达式的符号。</span><span class="sxs-lookup"><span data-stu-id="6936d-114">Get the sign of an expression.</span></span>|<span data-ttu-id="6936d-115"><xref:System.Math.Sign%2A></xref:System.Math.Sign%2A></span><span class="sxs-lookup"><span data-stu-id="6936d-115"><xref:System.Math.Sign%2A></span></span>|  
+|<span data-ttu-id="6936d-116">执行数值转换。</span><span class="sxs-lookup"><span data-stu-id="6936d-116">Perform numeric conversions.</span></span>|<span data-ttu-id="6936d-117"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>,<xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Fix%2A></span><span class="sxs-lookup"><span data-stu-id="6936d-117"><xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [派生的数学函数](../../../visual-basic/language-reference/keywords/derived-math-functions.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="6936d-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6936d-118">See Also</span></span>  
+ <span data-ttu-id="6936d-119">[派生的数学函数](../../../visual-basic/language-reference/keywords/derived-math-functions.md) </span><span class="sxs-lookup"><span data-stu-id="6936d-119">[Derived Math Functions](../../../visual-basic/language-reference/keywords/derived-math-functions.md) </span></span>  
+<span data-ttu-id="6936d-120"> [关键字](../../../visual-basic/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="6936d-120"> [Keywords](../../../visual-basic/language-reference/keywords/index.md) </span></span>  
+<span data-ttu-id="6936d-121"> [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="6936d-121"> [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>

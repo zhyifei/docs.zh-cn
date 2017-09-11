@@ -1,28 +1,33 @@
 ---
-title: "如何：获取接口和协议信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "网络"
+title: "如何：获取接口和协议信息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
 # 如何：获取接口和协议信息
-此示例演示如何读取网络接口的TCP统计信息。  
+此示例演示如何读取网络接口的 TCP 统计信息。  
   
 ## 示例  
   
@@ -82,4 +87,5 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## 编译代码  
  此示例需要：  
   
--   对 **System.Net** 命名空间。
+-   引用 System.Net 命名空间。
+

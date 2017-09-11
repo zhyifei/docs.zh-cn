@@ -1,30 +1,35 @@
 ---
-title: "异步服务器套接字示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "套接字，异步服务器套接字"
-  - "套接字，代码示例"
-  - "异步服务器套接字"
+title: "异步服务器套接字示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/21/2017
+
 ---
-# 异步服务器套接字示例
-下面的示例程序创建接收来自客户端的连接请求的服务器。  服务器以异步套接字生成，因此，服务器应用程序的执行不会挂起，它在等待从客户端时的连接。  应用程序收到来自客户端的字符串，在控制台上显示字符串，然后回显该字符串返回给客户端。  从客户端的字符串必须包含字符串“\<EOF\>”用于通知消息的结尾。  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="59717-102">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="59717-102">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="59717-103">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="59717-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="59717-104">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="59717-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="59717-105">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="59717-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="59717-106">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="59717-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## 请参阅  
- [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
- [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="59717-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="59717-107">See Also</span></span>  
+ <span data-ttu-id="59717-108">[异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md) </span><span class="sxs-lookup"><span data-stu-id="59717-108">[Asynchronous Client Socket Example](../../../docs/framework/network-programming/asynchronous-client-socket-example.md) </span></span>  
+ <span data-ttu-id="59717-109">[使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md) </span><span class="sxs-lookup"><span data-stu-id="59717-109">[Using an Asynchronous Server Socket](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md) </span></span>  
+ [<span data-ttu-id="59717-110">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="59717-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+
