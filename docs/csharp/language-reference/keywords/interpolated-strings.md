@@ -51,7 +51,7 @@ Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
 内插字符串的结构为：  
   
 ```  
-$"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text> ..."  
+$"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."  
 ```  
 
 其中： 
