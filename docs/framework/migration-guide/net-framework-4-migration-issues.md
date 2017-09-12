@@ -13,10 +13,10 @@ author: rpetrusha
 ms.author: mariaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: b70c0a7291cf8569781ffc6b67632f93c5627e8b
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -50,15 +50,15 @@ ms.lasthandoff: 08/10/2017
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **浏览器定义文件** | 浏览器定义文件已更新，以包括有关新的和已更新的浏览器和设备的信息。 旧式浏览器和设备（如 Netscape Navigator）已被删除，并且已添加更新的浏览器和设备（如 Google Chrome 和 Apple iPhone）。<br><br>如果应用程序包含的自定义浏览器定义继承自一个已删除的浏览器定义，将会出现错误。<br><br><xref:System.Web.HttpBrowserCapabilities> 对象（由页的 `Request.Browse` 属性公开）由浏览器定义文件驱动。 因此，通过在 ASP.NET 4 中访问此对象的属性返回的信息可能与早期版本的 ASP.NET 中已返回的信息不同。 | 如果应用程序依赖于旧式浏览器定义文件，可从以下文件夹复制这些文件：<br><br>Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers<br><br>将这些文件复制到 ASP.NET 4 对应的 \\CONFIG\\Browsers 文件夹中。 复制这些文件之后，请运行 [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858(v=vs.100).aspx) 命令行工具。 有关详细信息，请参阅 [http://www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkId=182900) 网站。 |
+| **浏览器定义文件** | 浏览器定义文件已更新，以包括有关新的和已更新的浏览器和设备的信息。 旧式浏览器和设备（如 Netscape Navigator）已被删除，并且已添加更新的浏览器和设备（如 Google Chrome 和 Apple iPhone）。<br><br>如果应用程序包含的自定义浏览器定义继承自一个已删除的浏览器定义，将会出现错误。<br><br><xref:System.Web.HttpBrowserCapabilities> 对象（由页的 `Request.Browse` 属性公开）由浏览器定义文件驱动。 因此，通过在 ASP.NET 4 中访问此对象的属性返回的信息可能与早期版本的 ASP.NET 中已返回的信息不同。 | 如果应用程序依赖于旧式浏览器定义文件，可从以下文件夹复制这些文件：<br><br>Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers<br><br>将这些文件复制到 ASP.NET 4 对应的 \\CONFIG\\Browsers 文件夹中。 复制这些文件之后，请运行 [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx) 命令行工具。 有关详细信息，请参阅 [http://www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkId=182900) 网站。 |
 | **在混合版本的 ASP.NET 下运行的子应用程序** | 由于配置或编译错误，配置为运行 ASP.NET 早期版本的应用程序子级的 ASP.NET 4 应用程序可能无法启动。 发生的具体错误取决于应用程序是在 IIS 6.0、IIS 7 还是 IIS 7.5 下运行。 | 可对受影响应用程序的配置文件进行更改，以便配置系统能正确识别 ASP.NET 4 应用程序。 有关必须进行的更改的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](http://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“ASP.NET 4 子应用程序在 ASP.NET 2.0 或 ASP.NET 3.5 应用程序下启动失败”一节。 |
 | **ClientID 更改** | 利用 ASP.NET 4 中的新 `clientIDMode` 设置，可指定 ASP.NET 生成 HTML 元素的 `id` 特性的方式。 在 ASP.NET 的早期版本中，默认行为与 `clientIDMode` 的 `AutoID` 设置等效。 现在的默认设置为 `Predictable`。 有关详细信息，请参阅 [ASP.NET Web 服务器控件标识](https://msdn.microsoft.com/library/1d04y8ss(v=vs.100).aspx)。 | 如果使用 Visual Studio 2010 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，则此工具会自动向 Web.config 文件添加设置，保留早期版本的 .NET Framework 的行为。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的模式。 若要禁用新的客户端 ID 模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages clientIDMode="AutoID" />` |
-| **代码访问安全性 (CAS)** | ASP.NET 3.5 中已添加的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 代码访问安全性 (CAS) 模型。 但是，实质上已对 ASP.NET 4 中的 CAS 实现进行了检查。 因此，依赖于在全局程序集缓存中运行的受信任代码的部分信任 ASP.NET 应用程序可能失败，并引发各种安全异常。 此外，依赖于对计算机 CAS 策略进行的大量修改的部分信任应用程序也可能失败，并引发安全异常。 | 可通过使用 `trust` 配置元素中的新 `legacyCasModel` 特性，将部分信任 ASP.NET 4 应用程序还原为 ASP.NET 1.1 和 2.0 的行为，如下面的示例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要说明：还原为早期 CAS 模型可能会降低安全性。<br><br>有关新 ASP.NET 4 代码访问安全性模型的详细信息，请参阅 [ASP.NET 4 应用程序中的代码访问安全性](https://msdn.microsoft.com/library/dd984947(v=vs.100).aspx)。 |
+| **代码访问安全性 (CAS)** | ASP.NET 3.5 中已添加的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 代码访问安全性 (CAS) 模型。 但是，实质上已对 ASP.NET 4 中的 CAS 实现进行了检查。 因此，依赖于在全局程序集缓存中运行的受信任代码的部分信任 ASP.NET 应用程序可能失败，并引发各种安全异常。 此外，依赖于对计算机 CAS 策略进行的大量修改的部分信任应用程序也可能失败，并引发安全异常。 | 可通过使用 `trust` 配置元素中的新 `legacyCasModel` 特性，将部分信任 ASP.NET 4 应用程序还原为 ASP.NET 1.1 和 2.0 的行为，如下面的示例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要说明：还原为早期 CAS 模型可能会降低安全性。<br><br>有关新 ASP.NET 4 代码访问安全性模型的详细信息，请参阅 [ASP.NET 4 应用程序中的代码访问安全性](https://msdn.microsoft.com/library/dd984947.aspx)。 |
 | **配置文件** | .NET Framework 和 ASP.NET 4 的根配置文件（machine.config 文件和根 Web.config 文件）已经更新，包含在 ASP.NET 3.5 的应用程序 Web.config 文件中找到的大多数样本配置信息。 由于托管 IIS 7 和 IIS 7.5 配置系统的复杂性，在 ASP.NET 4 下以及在 IIS 7 和 IIS 7.5 下运行 ASP.NET 3.5 应用程序会导致 ASP.NET 出错或 IIS 出错。 | 使用 Visual Studio 2010 中的项目升级工具将 ASP.NET 3.5 应用程序升级到 ASP.NET 4。 Visual Studio 2010 自动修改 ASP.NET 3.5 应用程序的 Web.config 文件，以包含 ASP.NET 4 的相应设置。<br><br>不过，可使用 .NET Framework 4 运行 ASP.NET 3.5 应用程序，而无需重新编译。 在此情况下，可能必须先手动修改应用程序的 Web.config 文件，然后在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下运行应用程序。 必须进行的特定更改取决于所使用的软件组合，包括 Service Pack (SP) 版本。 有关受此更改影响的可能软件组合以及如何解决特定组合相关问题的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](http://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“有关新的 ASP.NET 4 根配置的配置错误”一节。 |
 | **控件呈现** | 在 ASP.NET 的早期版本中，某些控件发出了无法禁用的标记。 默认情况下，ASP.NET 4 中不再生成此类标记。 呈现更改将影响下列控件：<br><br>* `Image` 和 `ImageButton` 控件不再呈现 `border="0"` 特性。<br>* 默认情况下，`BaseValidator` 类和派生自该类的验证控件不再呈现红色文本。<br>* `HtmlForm` 控件不呈现 `name` 特性。<br>* `Table` 控件不再呈现 `border="0"` 特性。<br><br>对于并不设计用于用户输入的控件（例如，`Label` 控件），如果其 `Enabled` 属性设置为 `false`（或者它们从容器控件继承此设置），则这些控件不再呈现 `disabled="disabled"` 特性。 | 如果使用 Visual Studio 2010 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，此工具会自动向 Web.config 文件添加设置，保留旧式呈现方式。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的呈现模式。 若要禁用新的呈现模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **默认文档中的事件处理程序** | 在对无扩展的 URL 发出请求（此 URL 具有已映射到它的默认文档）时，ASP.NET 4 会将 HTML `form` 元素的 `action` 特性呈现为空字符串。 在 ASP.NET 的早期版本中，对 `http://contoso.com` 的请求会导致对 Default.aspx 的请求。 在该文档中，开始 `form` 标记的呈现方式如以下示例所示：<br><br>`<form action="Default.aspx" />`<br><br>在 ASP.NET 4 中，对 `http://contoso.com` 的请求还会导致对 Default.aspx 的请求，但此时 ASP.NET 会按以下示例所示方式呈现 HTML 开始 `form` 标记：<br><br>`<form action="" />`<br><br>当 `action` 特性为空字符串时，IIS `DefaultDocumentModule` 对象将创建对 Default.aspx 的子请求。 在大多数情况下，此子请求对于应用程序代码是透明的，并且 Default.aspx 页会正常运行。 但托管代码和 IIS 7 或 IIS 7.5 集成模式之间可能的交互会导致托管 .aspx 页在子请求期间停止正常工作。 如果出现以下情况，则对默认 .aspx 文档的子请求将导致发生错误或意外行为：<br><br>* 将 .aspx 页发送到其 `form` 元素的 `action` 特性设置为 "" 的浏览器。<br>* 将窗体回发到 ASP.NET。<br>* 托管 HTTP 模块读取实体正文的某一部分，如 `Request.Form` 或 `Request.Params`。 这会使 POST 请求的实体正文读入托管内存中。 因此，实体正文不再对在 IIS 7 或 IIS 7.5 集成模式中运行的任何本机代码模块可用。<br>* IIS `DefaultDocumentModule` 对象最终运行并创建对 Default.aspx 文档的子请求。 但由于一段托管代码已读取实体正文，因此没有可发送给子请求的实体正文。<br>* 在对子请求运行 HTTP 管道时，将在处理程序执行阶段运行 .aspx 文件的处理程序。<br><br>由于没有实体正文，因此不存在窗体变量和视图状态。 这样一来，便没有可供 .aspx 页处理程序用来确定应引发哪个事件（如果有）的信息。 因此，不会运行针对受影响 .aspx 页的任何回发事件处理程序。 | 有关解决可能因为此更改而引发的问题的方法，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](http://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“可能会在 IIS 7 或 IIS 7.5 集成模式下的默认文档中引发的事件处理程序”。 |
 | **哈希算法** | ASP.NET 使用加密算法和哈希算法来帮助保护数据（如窗体身份验证 Cookie 和视图状态）。 默认情况下，ASP.NET 4 使用 <xref:System.Security.Cryptography.HMACSHA256> 算法对 Cookie 和视图状态进行哈希操作。 早期版本的 ASP.NET 使用较早的 <xref:System.Security.Cryptography.HMACSHA1> 算法。 | 如果运行混合了 ASP.NET 2.0 和 ASP.NET 4 的应用程序，其中的数据（如窗体身份验证 Cookie）必须跨多个 .NET Framework 版本工作，请通过在 Web.config 文件中添加以下设置，将 ASP.NET 4 Web 应用程序配置为使用较早的 <xref:System.Security.Cryptography.HMACSHA1> 算法：<br><br>`<machineKey validation="SHA1" />` |
-| **在 Internet Explorer 中托管控件** | 无法再使用 Internet Explorer 来托管 Windows 窗体控件，因为可通过更优的解决方案在 Web 上托管控件。 因此，已从 .NET Framework 中删除 IEHost.dll 和 IEExec.exe 程序集。 | 可使用以下技术在 Web 应用程序中进行自定义控件开发：<br><br>* 可创建 Silverlight 应用程序并将其配置为在浏览器外部运行。 有关详细信息，请参阅[浏览器外支持](https://msdn.microsoft.com/library/dd550721(v=vs.100).aspx)。<br>* 可生成 XAML 浏览器应用程序 (XBAP) 来利用 WPF 功能（需要客户端计算机上装有 .NET Framework）。 有关详细信息，请参阅 [WPF XAML 浏览器应用程序概述](https://msdn.microsoft.com/library/aa970060(v=vs.100).aspx)。 |
+| **在 Internet Explorer 中托管控件** | 无法再使用 Internet Explorer 来托管 Windows 窗体控件，因为可通过更优的解决方案在 Web 上托管控件。 因此，已从 .NET Framework 中删除 IEHost.dll 和 IEExec.exe 程序集。 | 可使用以下技术在 Web 应用程序中进行自定义控件开发：<br><br>* 可创建 Silverlight 应用程序并将其配置为在浏览器外部运行。 有关详细信息，请参阅[浏览器外支持](https://msdn.microsoft.com/library/dd550721(v=vs.100).aspx)。<br>* 可生成 XAML 浏览器应用程序 (XBAP) 来利用 WPF 功能（需要客户端计算机上装有 .NET Framework）。 有关详细信息，请参阅 [WPF XAML 浏览器应用程序概述](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)。 |
 | **HtmlEncode 和 UrlEncode 方法** | <xref:System.Web.HttpUtility> 和 <xref:System.Web.HttpServerUtility> 类的 `HtmlEncode` 和 `UrlEncode` 方法已更新，现可按如下方式对单引号字符 (') 进行编码：<br><br>* `HtmlEncode` 方法将单引号的实例编码为 `&#39;`<br>* `UrlEncode` 方法将单引号的实例编码为 `%27` | 检查使用 `HtmlEncode` 和 `UrlEncode` 方法的位置的代码，并确保对编码进行的更改不会导致将影响应用程序的更改。 |
 | **ASP.NET 2.0 应用程序中的 HttpException 错误** | 在 IIS 6 上启用 ASP.NET 4 后，IIS 6 上运行的 ASP.NET 2.0 应用程序（在 Windows Server 2003 或 Windows Server 2003 R2 中）可能会生成错误，如下所示：`System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.` | * 如果无需 ASP.NET 4 即可运行网站，请重新映射该网站以改用 ASP.NET 2.0。<br><br>- 或 -<br><br>* 如果需要 ASP.NET 4 才能运行网站，请将所有子 ASP.NET 2.0 虚拟目录移至映射到 ASP.NET 2.0 的其他网站。<br><br>- 或 -<br><br>* 禁用无扩展 URL。 有关详细信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](http://go.microsoft.com/fwlink/?LinkId=182908)（ASP.NET 4 重大更改）文档中“ASP.NET 2.0 应用程序可能生成引用 eurl.axd 的 HttpException 错误”。 |
 | **成员资格类型** | 已将 ASP.NET 成员资格中使用的某些类型（例如 <xref:System.Web.Security.MembershipProvider>）从 System.Web.dll 移至 System.Web.ApplicationServices.dll 程序集。 移动这些类型是为了解析客户端中的类型与扩展的 .NET Framework SKU 中的类型之间的体系结构层依赖关系。 | 对于已从早期版本的 ASP.NET 升级的类库以及使用已移动的成员资格类型的类库，在 ASP.NET 4 项目中使用这些类库时，可能无法编译它们。 如果是这样，请在类库项目中添加对 System.Web.ApplicationServices.dll 的引用。 |
@@ -80,10 +80,10 @@ ms.lasthandoff: 08/10/2017
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
 | **CardSpace** | Windows CardSpace 不再包含在 .NET Framework 中，而是单独提供。 | 从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=199868)下载 Windows CardSpace。 |
-| **配置文件** | 已对 .NET Framework 访问应用程序配置文件的方式进行了纠正。 | 如果应用程序配置文件名为 application-name.config，则将它重命名为 application-name.exe.config。 例如，将 MyApp.config 重命名为 MyApp.exe.config。 |
+| **配置文件** | 已对 .NET Framework 访问应用程序配置文件的方式进行了纠正。 | 如果应用程序配置文件名为 application-name.config，则将它重命名为 application-name.exe.config。例如，将 MyApp.config 重命名为 MyApp.exe.config。 |
 | **C# 代码编译器** | <xref:Microsoft.CSharp> 命名空间中的 `Compiler`、`CompilerError` 和 `ErrorLevel` 类不再可用，并且其程序集 (cscompmgd.dll) 不再包含在 .NET Framework 中。 | 使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 类和 <xref:System.CodeDom.Compiler> 命名空间中的其他类。 有关详细信息，请参阅[使用 CodeDOM](https://msdn.microsoft.com/library/y2k85ax6(v=vs.100).aspx)。 |
-| **承载**（非托管 API） | 为了改进承载功能，一些承载激活 API 已被弃用。 利用进程内并行执行功能，应用程序能够在同一个进程中加载和启动多个版本的 .NET Framework。 例如，可运行在同一进程中加载基于 .NET Framework 2.0 SP1 的外接程序（或组件）和基于 .NET Framework 4 的外接程序的应用程序。 较旧组件可继续使用 .NET Framework 的较旧版本，新组件则使用 .NET Framework 的新版本。 | 使用[进程内并行执行](https://msdn.microsoft.com/library/ee518876(v=vs.100).aspx)中描述的配置。 |
-| **新安全模型** | 代码访问安全性 (CAS) 策略已关闭并替换为简化模型，如 [.NET Framework 4 中的安全性更改](https://msdn.microsoft.com/library/dd233103(v=vs.100).aspx)中所述。 | 如果依赖于应用程序中的 CAS，则可能需要做出一些修改。 有关详细信息，请参阅[代码访问安全策略兼容性和迁移](https://msdn.microsoft.com/library/ee191568(v=vs.100).aspx)。 |
+| **承载**（非托管 API） | 为了改进承载功能，一些承载激活 API 已被弃用。 利用进程内并行执行功能，应用程序能够在同一个进程中加载和启动多个版本的 .NET Framework。 例如，可运行在同一进程中加载基于 .NET Framework 2.0 SP1 的外接程序（或组件）和基于 .NET Framework 4 的外接程序的应用程序。 较旧组件可继续使用 .NET Framework 的较旧版本，新组件则使用 .NET Framework 的新版本。 | 使用[进程内并行执行](/dotnet/framework/deployment/in-process-side-by-side-execution)中描述的配置。 |
+| **新安全模型** | 代码访问安全性 (CAS) 策略已关闭并替换为简化模型，如 [.NET Framework 4 中的安全性更改](https://msdn.microsoft.com/library/dd233103(v=vs.100).aspx)中所述。 | 如果依赖于应用程序中的 CAS，则可能需要做出一些修改。 有关详细信息，请参阅[代码访问安全策略兼容性和迁移](/dotnet/framework/misc/code-access-security-policy-compatibility-and-migration)。 |
 
 ### <a name="date-and-time"></a>日期和时间
 
@@ -128,7 +128,7 @@ ms.lasthandoff: 08/10/2017
 | **程序集加载** | 为了阻止过多加载程序集并节省虚拟地址空间，CLR 现仅通过使用 Win32 `MapViewOfFile` 函数来加载程序集。 此外，它不再调用 `LoadLibrary` 函数。<br><br>此更改以以下方式影响诊断应用程序：<br><br>* <xref:System.Diagnostics.ProcessModuleCollection> 将不再包含通过调用 `Process.GetCurrentProcess().Modules` 获取的类库（.dll 文件）中的任何模块。<br>* 使用 `EnumProcessModules` 函数的 Win32 应用程序将看不到列出的所有托管模块。 | 无。 |
 | **声明类型** | 当类型没有声明类型时，<xref:System.Type.DeclaringType> 属性现将正确返回 null。 | 无。 |
 | **委托** | 在将 null 值传递给委托的构造函数时，委托现将引发 <xref:System.ArgumentNullException> 而不是 <xref:System.NullReferenceException>。 | 确保任何异常处理捕获 <xref:System.ArgumentNullException>。 |
-| **全局程序集缓存位置更改** | 对于 .NET Framework 4 程序集，已将全局程序集缓存从 Windows 目录 (%WINDIR%) 移动到 Microsoft.Net 子目录 (%WINDIR%\\Microsoft.Net)。 早期版本中的程序集保留在较早的目录中。<br><br>非托管 [ASM_CACHE_FLAGS](https://msdn.microsoft.com/library/ms231621(v=vs.100).aspx) 枚举包含新的 `ASM_CACHE_ROOT_EX` 标志。 此标志可获得 .NET Framework 4 程序集的缓存位置，可通过 [GetCachePath](https://msdn.microsoft.com/library/ms232964(v=vs.100).aspx) 函数获取此位置。 | 无，假定应用程序不使用程序集的显式路径（不建议这样做）。 |
+| **全局程序集缓存位置更改** | 对于 .NET Framework 4 程序集，已将全局程序集缓存从 Windows 目录 (%WINDIR%) 移动到 Microsoft.Net 子目录 (%WINDIR%\\Microsoft.Net)。 早期版本中的程序集保留在较早的目录中。<br><br>非托管 [ASM_CACHE_FLAGS](https://msdn.microsoft.com/library/ms231621(v=vs.100).aspx) 枚举包含新的 `ASM_CACHE_ROOT_EX` 标志。 此标志可获得 .NET Framework 4 程序集的缓存位置，可通过 [GetCachePath](/dotnet/framework/unmanaged-api/fusion/getcachepath-function) 函数获取此位置。 | 无，假定应用程序不使用程序集的显式路径（不建议这样做）。 |
 | **全局程序集缓存工具** | [Gacutil.exe（全局程序集缓存工具）](https://msdn.microsoft.com/library/ex0ss12c(v=vs.100).aspx)不再支持 shell 插件查看器。 | 无。 |
 
 ### <a name="interoperability"></a>互操作性
@@ -137,9 +137,9 @@ ms.lasthandoff: 08/10/2017
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **缓冲区长度**（非托管 API） | 为了节省内存，已更改 [ICorProfilerInfo2::GetStringLayout](https://msdn.microsoft.com/library/ms230869(v=vs.100).aspx) 方法的 `pBufferLengthOffset` 参数的功能，以匹配 `pStringLengthOffset` 参数。 这两个参数目前都指向字符串长度的偏移量位置。 已从字符串类的表示形式中删除缓冲区长度。 | 删除缓冲区长度的任何依赖项。 |
+| **缓冲区长度**（非托管 API） | 为了节省内存，已更改 [ICorProfilerInfo2::GetStringLayout](/dotnet/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method) 方法的 `pBufferLengthOffset` 参数的功能，以匹配 `pStringLengthOffset` 参数。 这两个参数目前都指向字符串长度的偏移量位置。 已从字符串类的表示形式中删除缓冲区长度。 | 删除缓冲区长度的任何依赖项。 |
 | **JIT 调试** | 为了简化实时 (JIT) 调试的注册过程，.NET Framework 调试器现仅使用 AeDebug 注册表项，此注册表项可控制本机代码的 JIT 调试行为。 此更改产生以下结果：<br><br>* 不再能够为托管代码和本机代码注册两个不同的调试器。<br>* 不再能够为非交互式进程自动启动调试器，但可就交互式进程提示用户。<br>* 当调试器无法启动或当没有应启动的任何注册的调试器时，不再收到通知。<br>* 不再支持依赖于应用程序交互性的自动启动策略。 | 根据需要调整调试操作。 |
-| **平台调用** | 为了改进与非托管代码的互操作性的性能，平台调用中不正确的调用约定会导致应用程序失败。 在早期版本中，封送层在堆栈中向上解析这些错误。 | 在 Microsoft Visual Studio 2010 中调试应用程序时，将向用户通知这些错误，以便能够纠正它们。<br><br>如果二进制文件无法更新，可将 [\<NetFx40_PInvokeStackResilience>](https://msdn.microsoft.com/library/ff361650(v=vs.100).aspx) 元素包含在应用程序的配置文件中，以便能够在早期版本中的堆栈上解析这些调用错误。 但这可能会影响应用程序的性能。 |
+| **平台调用** | 为了改进与非托管代码的互操作性的性能，平台调用中不正确的调用约定会导致应用程序失败。 在早期版本中，封送层在堆栈中向上解析这些错误。 | 在 Microsoft Visual Studio 2010 中调试应用程序时，将向用户通知这些错误，以便能够纠正它们。<br><br>如果二进制文件无法更新，可将 [\<NetFx40_PInvokeStackResilience>](/dotnet/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element) 元素包含在应用程序的配置文件中，以便能够在早期版本中的堆栈上解析这些调用错误。 但这可能会影响应用程序的性能。 |
 | **移除的接口**（非托管 API） | 为了避免开发人员产生困惑，已移除以下接口，因为这些接口不提供任何有用的运行时方案，并且 CLR 不提供或接受任何实现：<br><br>* INativeImageINativeImageDependency<br>* INativeImageInstallInfo<br>* INativeImageEvaluate<br>* INativeImageConverter<br>* ICorModule<br>* IMetaDataConverter | 无。 |
 
 ## <a name="data"></a>数据
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/10/2017
 
 | 功能 | 与 3.5 SP1 的差异 |
 | ------- | ------------------------ |
-| **事件** | [System.Data.Linq.EntitySet\<TEntity>](https://msdn.microsoft.com/library/bb341748(v=vs.100).aspx) 集合现将引发 [ListChanged](https://msdn.microsoft.com/library/bb548946(v=vs.100).aspx) 事件以进行添加和删除操作（如果卸载 [EntitySet\<TEntity>](https://msdn.microsoft.com/library/bb341748(v=vs.100).aspx)），此外还户会在加载集合时引发该事件。 |
+| **事件** | 除了在加载 <xref:System.Data.Linq.EntitySet%601> 时会引发 <xref:System.Data.Linq.EntitySet%601.ListChanged> 事件外，卸载时，<xref:System.Data.Linq.EntitySet%601> 集合现在也会引发该事件以进行添加和删除操作。 |
 | **查询** | LINQ to SQL 查询中不再忽略 `Skip(0)`。 因此，具有此方法的查询的行为可能不同。 例如，在某些情况下，`OrderBy` 子句对于 `Skip(0)` 是必需的，如果未包含 `OrderBy` 子句，则查询现将引发 <xref:System.NotSupportedException> 异常。 |
 
 ### <a name="wcf-data-services"></a>WCF 数据服务
@@ -199,7 +199,7 @@ ms.lasthandoff: 08/10/2017
 | **标头** | 已对标头进行以下改进：<br><br>* WCF 数据服务现会正确地拒绝具有未指定的值的 `eTag` 标头。<br>* WCF 数据服务现将返回一个错误，并且不会执行针对链接的删除请求的请求（如果该请求中包含 `if-*` 标头）。<br>* WCF Data Services 现以客户端在 Accept 标头中指定的格式（Atom、JSON）将错误返回给客户端。 |
 | **JSON 读取器** | 如果 JavaScript 对象表示法 (JSON) 读取器在处理发送到 WCF 数据服务的 JSON 负载时读取到单个反斜杠（“\\”）转义字符，它现将正确返回一个错误。 |
 | **合并** | 已对 <xref:System.Data.Services.Client.MergeOption> 枚举进行以下改进：<br><br>* <xref:System.Data.Services.Client.MergeOption> 合并选项不再修改客户端上的实体作为来自数据服务的任何后续响应的结果。<br>* <xref:System.Data.Services.Client.MergeOption> 选项目前在动态 SQL 和已存储的基于过程的更新之间保持一致。 |
-| **请求** | 在处理对数据服务的请求前，现调用 [DataService\<T>.OnStartProcessingRequest](https://msdn.microsoft.com/library/cc646889(v=vs.100).aspx) 方法。 这可使该请求对 <xref:System.Data.Services.Providers.ServiceOperation> 服务正常工作。 |
+| **请求** | 在处理对数据服务的请求前，现在会调用 <xref:System.Data.Services.DataService%601.OnStartProcessingRequest%2A> 方法。 这可使该请求对 <xref:System.Data.Services.Providers.ServiceOperation> 服务正常工作。 |
 | **流** | WCF 数据服务不再为读取和写入操作关闭基础流。 |
 | **URI** | 已纠正 WCF 数据服务客户端对 URI 进行的转义。 |
 
@@ -302,7 +302,7 @@ ms.lasthandoff: 08/10/2017
 | **命名空间特性** | 为了防止数据损坏，<xref:System.Xml.XPath.XPathNavigator> 对象现正确返回 `x:xmlns` 特性的本地名称。 |
 | **命名空间声明** | 子树中的 <xref:System.Xml.XmlReader> 对象不再在单个 XML 元素中创建重复的命名空间声明。 |
 | **架构验证** | 为了阻止错误的架构验证，<xref:System.Xml.Schema.XmlSchemaSet> 类确保 XSD 架构编译的正确性和一致性。 这些架构可包含其他架构；例如，`A.xsd` 可包含 `B.xsd`，而后者又可包含 `C.xsd`。 编译上述任意架构会导致遍历依赖项图。 |
-| **脚本函数** | 当 [function-available 函数](https://msdn.microsoft.com/library/ms256124(v=vs.100).aspx) 实际可用时，它不再错误返回 `false`。 |
+| **脚本函数** | 当 [function-available 函数](https://msdn.microsoft.com/library/ms256124(v=vs.110).aspx) 实际可用时，它不再错误返回 `false`。 |
 | **URI** | <xref:System.Xml.Linq.XElement.Load%2A> 方法现会在 LINQ 查询中返回正确的 BaseURI。 |
 
 ### <a name="validation"></a>验证
@@ -334,10 +334,10 @@ ms.lasthandoff: 08/10/2017
 [.NET Framework 4 的迁移指南](https://msdn.microsoft.com/library/ff657133(v=vs.100).aspx)   
 [.NET Framework 4 中的新增功能](https://msdn.microsoft.com/library/ms171868(v=vs.100).aspx)   
 [.NET Framework 的版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   
-[将 Office 解决方案迁移到 .NET Framework 4](https://msdn.microsoft.com/library/ee207231(v=vs.100).aspx)
+[将 Office 解决方案迁移到 .NET Framework 4](https://msdn.microsoft.com/library/ee207231.aspx)
 
 ### <a name="other-resources"></a>其他资源
 
-[.NET Framework 中的过时功能](https://msdn.microsoft.com/library/ee461502(v=vs.100).aspx)   
+[.NET Framework 中的过时功能](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](http://go.microsoft.com/fwlink/?LinkId=191505)（.NET Framework 4 应用程序的迁移问题：Beta 2 到 RTM）
 
