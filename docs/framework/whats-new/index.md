@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: f922abca6898e91748158ee16f89ca7f57a81bf7
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 8d0818b770d94511736baf5d51abeba74a90c848
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
@@ -1171,7 +1171,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - 后台实时 (JIT) 编译，可在多核处理器上使用此功能改进应用程序性能。 请参阅 <xref:System.Runtime.ProfileOptimization>。
 
-- 可以限制正则表达式引擎在超时之前持续尝试解析正则表达式的时间。 请参阅 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 属性。
+- 可以限制正则表达式引擎在超时之前持续尝试解析正则表达式的时间。请参阅 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 属性。
 
 - 定义应用程序域的默认区域性的能力。 请参阅 <xref:System.Globalization.CultureInfo> 类。
 

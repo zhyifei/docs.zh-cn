@@ -26,10 +26,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a396280e1095497b86e4792f4debb9cf0435f50
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>NULL 条件运算符（C# 和 Visual Basic）
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- 最后一个示例演示 NULL 条件运算符会短路。  如果条件成员访问和索引操作链中的某个操作返回 NULL，则该链其余部分的执行将停止。  表达式中优先级较低的其他操作将继续。  例如，以下的示例中的 `E` 将始终执行，`??` 和 `==` 操作将执行。  
+ 最后一个示例演示 NULL 条件运算符会短路。  如果条件成员访问和索引操作链中的某个操作返回 NULL，则该链其余部分的执行将停止。  表达式中优先级较低的其他操作将继续。  例如，下例中的 `E` 将在第二行中执行，且 `??` 和 `==` 操作将执行。  在第一行中，左侧的计算结果非 null 时，`??` 将短路且 `E` 不会执行。
   
 ```csharp
 A?.B?.C?[0] ?? E  

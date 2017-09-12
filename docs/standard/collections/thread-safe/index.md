@@ -16,10 +16,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d0fa0af8f6a78a6d209fdb4956cbbe9448b5204
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 19ecc67b38e2eab52994fb278211c6d9ff67ae7e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
@@ -55,7 +55,7 @@ ms.lasthandoff: 07/28/2017
   
 |标题|描述|  
 |-----------|-----------------|  
-|[BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|介绍 <xref:System.Collections.Concurrent.BlockingCollection%601> 类型提供的功能。|  
+|[BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 类型提供的功能。|  
 |[如何：在 ConcurrentDictionary 中添加和移除项](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何从 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 添加和删除元素|  
 |[如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|描述如何在不使用只读枚举器的情况下，从阻止的集合添加和检索项。|  
 |[如何：向集合添加限制和阻塞功能](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|描述如何将任一集合类用作 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基础存储机制。|  
