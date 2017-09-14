@@ -31,50 +31,37 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 91bb2daefbc677fad8a3dd93b37aac996234d48c
+ms.sourcegitcommit: 76dfbcd548608eba7753fe9e91fdf6cdff2a5878
+ms.openlocfilehash: ccf46666baafe6e98103310554fee7a858bc4e01
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="c-preprocessor-directives"></a>C# 预处理器指令
-本节包含以下 C# 预处理器指令的相关信息。  
-  
- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)  
-  
- [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)  
-  
- [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)  
-  
- [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)  
-  
- [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)  
-  
- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
-  
- [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)  
-  
- [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)  
-  
- [#line](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)  
-  
- [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)  
-  
- [#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)  
-  
- [#pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)  
-  
- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
-  
- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
-  
- 请参阅各个主题了解更多信息和示例。  
-  
- 尽管编译器没有单独的预处理器，但本节中所述的指令如同经过了预处理器的处理。 这些指令用于帮助条件编译。 不同于 C 和 C++ 指令，不能使用这些指令来创建宏。  
-  
- 预处理器指令必须是一行中唯一的说明。  
-  
-## <a name="see-also"></a>另请参阅  
+本节介绍了以下 C# 预处理器指令：
+
+- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+- [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
+- [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)
+- [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)
+- [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)
+- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
+- [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)
+- [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)
+- [#line](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)
+- [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)
+- [#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)
+- [#pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)
+- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
+- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+
+请参阅各个主题了解更多信息和示例。
+
+尽管编译器没有单独的预处理器，但本节中所述指令的处理方式与有预处理器时一样。 这些指令用于帮助条件编译。 不同于 C 和 C++ 指令，不能使用这些指令来创建宏。
+
+预处理器指令必须是一行中唯一的说明。
+
+## <a name="see-also"></a>请参阅
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)
 
