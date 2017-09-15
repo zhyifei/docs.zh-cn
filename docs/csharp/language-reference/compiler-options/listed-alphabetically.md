@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 291c35f73b47167289a88f0b7655c26699fdc009
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
@@ -85,6 +85,8 @@ ms.lasthandoff: 07/28/2017
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定要用于编译器输出的语言。|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|根据通配符规范，包括当前目录及子目录下的所有文件。|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|从指定的程序集文件引用元数据。|  
+|[/refout](refout-compiler-option.md)|除主程序集之外，还生成引用程序集。|  
+|[/refonly](refonly-compiler-option.md)|生成引用程序集，而不生成主程序集。|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|嵌入指定的资源。|  
 |/ruleset:\<file>|指定可禁用特定诊断的规则集文件。|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|  

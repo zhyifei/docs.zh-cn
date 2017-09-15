@@ -1,7 +1,7 @@
 ---
-title: "析构元组和其他类型 | Microsoft Docs"
-description: "了解如何析构元组和其他类型"
-keywords: .NET, .NET Core, C#0
+title: "析构元组和其他类型"
+description: "了解如何析构元组和其他类型。"
+keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms-author: ronpet
 ms.date: 07/18/2016
@@ -11,13 +11,12 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: f0946db700301a63109f23be5536f3a0505f4d60
+ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
+ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/12/2017
 
 ---
-
 # <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型 #
 
 元组提供一种从方法调用中检索多个值的轻量级方法。 但是，一旦检索到元组，就必须处理它的各个元素。 按元素逐个执行此操作会比较麻烦，如下例所示。 `QueryCityData` 方法返回一个 3 元组，并通过单独的操作将其每个元素分配给一个变量。
@@ -44,21 +43,21 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 - 可使用 `var` 关键字，以便 C# 推断每个变量的类型。 将 `var` 关键字放在括号外。 以下示例在析构由 `QueryCityData` 方法返回的 3 元组时使用类型推理。
  
-      [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
+    [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
     还可在括号内将 `var` 关键字单独与任一或全部变量声明结合使用。 
 
-      [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
+    [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
     这很麻烦，不建议这样做。
 
-请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外指定特定类型。 这会引发编译器错误 CS8136：“`var (...)` 形式不允许 `var` 的特定类型”。
+请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外指定特定类型。 这会生成编译器错误 CS8136：“析构 var (...) 形式不允许对 var 使用特定类型。”
 
 请注意，还必须将元组的每个元素分配给一个变量。 如果省略任何元素，编译器将生成错误 CS8132，“无法将 ‘x’ 元素的元组析构为 ‘y’ 变量”。
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用放弃析构元组元素
 
-析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对放弃的支持，放弃是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 ("_") 指定放弃。 可放弃任意数量的值，且均由单个放弃 `_` 表示。
+析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对放弃的支持，放弃是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定放弃。 可放弃任意数量的值，且均由单个放弃 `_` 表示。
 
 以下示例演示了对元组使用放弃时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为放弃处理。  
 
@@ -90,7 +89,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>使用放弃析构用户定义类型
 
-就像使用[元组](#deconstructing-tuple-elements-with-discards)一样，可使用放弃来忽略 `Deconstruct` 方法返回的选定项。 每个放弃由一个名为“_”的变量定义，单个析构操作可包含多个放弃。
+就像使用[元组](#deconstructing-tuple-elements-with-discards)一样，可使用放弃来忽略 `Deconstruct` 方法返回的选定项。 每个放弃均由名为“\_”的变量定义，一个析构操作可包含多个放弃。
 
 以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。
 

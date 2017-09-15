@@ -10,15 +10,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 753c620e1352dfc5fc57c380c66479c8e2d9b0ee
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
-从 C# 7 开始，C# 支持引用返回值（ref 返回值）。 引用返回值允许方法将对象的引用（而不是值）返回给调用方。 然后，调用方可以选择将返回的对象视为按值返回或按引用返回。 如果按引用返回的值被调用方处理为引用（而非值），则该值即为 ref 局部变量。
+从 C# 7 开始，C# 支持引用返回值（ref 返回值）。 引用返回值允许方法将对象的引用（而不是值）返回给调用方。 然后，调用方可以选择将返回的对象视为按值返回或按引用返回。 调用方作为引用（而非值）处理的引用返回值为 ref 局部变量。
 
 ## <a name="what-is-a-reference-return-value"></a>什么是引用返回值？
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/28/2017
  
 - 返回值不能为常数或枚举成员，也不能是 `class` 或 `struct` 的属性。 尝试返回它们将生成编译器错误 CS8156：“无法在此上下文中使用表达式，因为它可能没有按引用返回”。
 
-此外，由于异步方法可能在完成执行前就返回，且已知其返回值，因此不允许在 `async` 方法中使用引用返回值。
+此外，由于异步方法可能在完成执行前就返回，虽然它的返回值仍未知，但也不允许对异步方法使用引用返回值。
  
 ## <a name="defining-a-ref-return-value"></a>定义 ref 返回值
 

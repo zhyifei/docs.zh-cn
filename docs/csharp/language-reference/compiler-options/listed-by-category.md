@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bf0b4a4130fe69a15e6db438ac1d58b676c9ee8b
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-by-category"></a>按类别列出的 C# 编译器选项
@@ -55,6 +55,8 @@ ms.lasthandoff: 07/28/2017
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|指定 .pdb 文件的文件名和位置。|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|指定输出平台。|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定编译器输出的语言。|  
+|[/refout](refout-compiler-option.md)|除主程序集之外，还生成引用程序集。|  
+|[/refonly](refonly-compiler-option.md)|生成引用程序集，而不生成主程序集。|  
 |[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|使用下列五个选项之一指定输出文件的格式：[/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)、[/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)、[/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)、[/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)、[/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 或 [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)。|  
 |/modulename:\<string>|指定源模块的名称|  
   
