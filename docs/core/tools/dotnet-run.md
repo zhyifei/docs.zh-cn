@@ -1,32 +1,44 @@
 ---
-title: "dotnet-run 命令 - .NET Core CLI"
-description: "dotnet-run 命令为从源代码运行应用程序提供了一个方便的选项。"
-keywords: "dotnet-run, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+title: "dotnet run 命令 - .NET Core CLI"
+description: "dotnet run 命令可便于使用源代码运行应用程序。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/22/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0a6fce4f83808076b7cbcabdaa948badde2cf80
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
+# <a name="dotnet-run"></a>dotnet 运行
 
-# <a name="dotnet-run"></a>dotnet-run
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称 
+## <a name="name"></a>名称
 
-`dotnet-run` - 无需任何显式编译或启动命令即可运行源代码。
+`dotnet run` - 无需任何显式编译或启动命令即可运行源代码。
 
 ## <a name="synopsis"></a>摘要
 
-`dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+---
 
 ## <a name="description"></a>描述
 
@@ -37,45 +49,91 @@ ms.lasthandoff: 07/28/2017
 如果该项目指定多个框架，在不使用 `-f|--framework <FRAMEWORK>` 选项指定框架时，执行 `dotnet run` 将导致错误。
 
 在项目上下文，而不是生成程序集中使用 `dotnet run` 命令。 如果尝试改为运行依赖于框架的应用程序 DLL，则必须在不使用命令的情况下使用 [dotnet](dotnet.md)。 例如，若要运行 `myapp.dll`，请使用：
- 
+
 ```
 dotnet myapp.dll
 ```
 
 有关 `dotnet` 驱动程序的详细信息，请参阅 [.NET Core 命令行工具 (CLI)](index.md) 主题。
 
-若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。 因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。 相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。 
+若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。 因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。 相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。
 
 ## <a name="options"></a>选项
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `--`
 
-将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此参数后的所有参数均传递给已运行的应用程序。 
+将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此参数后的所有参数均传递给已运行的应用程序。
+
+`-c|--configuration {Debug|Release}`
+
+定义生成配置。 默认值为 `Debug`。
+
+`-f|--framework <FRAMEWORK>`
+
+使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
 
 `-h|--help`
 
 打印出有关命令的简短帮助。
 
-`-c|--configuration <CONFIGURATION>`
+`--launch-profile <NAME>`
 
-用于生成项目的配置。 默认值为 `Debug`。
+启动应用程序时要使用的启动配置文件（若有）的名称。 启动配置文件在 launchSettings.json 文件中进行定义，通常称为 `Development`、`Staging` 和 `Production`。 有关详细信息，请参阅[使用多个环境](/aspnet/core/fundamentals/environments)。
+
+`--no-build`
+
+运行前不生成项目。
+
+`--no-launch-profile`
+
+不尝试使用 launchSettings.json 配置应用程序。
+
+`--no-restore`
+
+运行此命令时不执行隐式还原。
+
+`-p|--project <PATH>`
+
+指定要运行的项目文件的路径（文件夹名称或完整路径）。 如果未指定，则默认为当前目录。
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+指定要为其还原包的目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--`
+
+将参数分隔到正在运行的应用程序的参数的 `dotnet run`。 在此参数后的所有参数均传递给已运行的应用程序。
+
+`-c|--configuration {Debug|Release}`
+
+定义生成配置。 默认值为 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
 使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
+
+`-h|--help`
+
+打印出有关命令的简短帮助。
 
 `-p|--project <PATH/PROJECT.csproj>`
 
 指定项目文件的路径和名称。 （请参阅备注。）如果未指定，则默认为当前目录。
 
 > [!NOTE]
-> 通过 `-p|--project` 选项使用项目文件的路径和名称。 CLI 中的回归可阻止当前提供文件夹路径。 若要了解详细信息并跟踪此问题，请参阅 [dotnet run -p，无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。
+> 通过 `-p|--project` 选项使用项目文件的路径和名称。 CLI 中的回归可阻止使用 .NET Core 1.x SDK 提供文件夹路径。 若要详细了解此问题，请参阅 [dotnet run -p - 无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。
+
+---
 
 ## <a name="examples"></a>示例
 
 运行当前目录中的项目：
 
-`dotnet run` 
+`dotnet run`
 
 运行指定的项目：
 

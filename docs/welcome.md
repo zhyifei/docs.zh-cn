@@ -2,21 +2,20 @@
 title: "欢迎使用 .NET"
 description: ".NET 系列技术入门。"
 keywords: ".NET, .NET Core, 入门, 资讯"
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 07/03/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
+ms.sourcegitcommit: 03d1e3f0897713e25be7d7f893861a3eb4dac211
+ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/11/2017
 
 ---
-
 # <a name="welcome-to-net"></a>欢迎使用 .NET
 
 若要了解如何创建 .NET Core 应用，请参阅 [.NET Core 入门](core/get-started.md)。
@@ -25,12 +24,15 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="news"></a>新闻
 
+- [.NET Core 2.0 已发布！](https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released)
+- [宣布发布 .NET Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/)
+- [宣布发布 .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)
+- [宣布发布 ASP.NET Core 2.0](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)
+- [宣布发布 Entity Framework Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)
+- [Visual Basic 的新增功能：.NET Standard 类库和 dotnet CLI！](https://blogs.msdn.microsoft.com/vbteam/2017/08/14/new-for-visual-basic-net-standard-class-libraries-and-the-dotnet-cli/)
+- [Visual Studio 2017 版本 15.3 已发布](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/visual-studio-2017-version-15-3-released/)
 - [.NET Standard 简介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
-- [宣布发布 .NET Core 2.0 预览版 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)
-- [ASP.NET Core 2.0 预览版 2 简介](https://blogs.msdn.microsoft.com/webdev/2017/06/28/introducing-asp-net-core-2-0-preview-2/)
-- [Visual Studio 2017 的最新更新和下一预览版](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)
 - [Visual Studio for Mac：现已全面推出](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
-- [宣布发布 .NET Core 工具 1.0（.NET Core 1.0.4、.NET Core 1.1.1、.NET Core SDK 1.0.1）](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)
 - [宣布 Visual Studio 2017 已全面推出](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
 - [.NET Core 和 Visual Studio 2017 中的新增功能（视频）](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
 - [宣布发布 .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
@@ -44,7 +46,7 @@ ms.lasthandoff: 07/28/2017
 
 本文列出了涉及使用 .NET 的多种平台和语言。  可通过下列任意一节开始了解 .NET 及其语言：
 
-- [.NET 平台指南](standard/index.md)
+- [.NET 指南](standard/index.md)
 - [.NET Core 指南](core/index.md)
 - [.NET Framework 指南](framework/index.md)
 - [C# 指南](csharp/index.md)
@@ -55,7 +57,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="open-source"></a>打开源
 
-此文档是完全[开源](https://github.com/dotnet/docs)的。  可通过任何方式参与此文档，如创建问题、编写文档等。  此外，许多 .NET 本身也是开源的：
+此文档是完全[开源](https://github.com/dotnet/docs)的。 可通过任何方式参与此文档，如创建问题、编写文档等。  此外，许多 .NET 本身也是开源的：
 
 - [.NET Core 主页](https://github.com/dotnet/core)
 - [.NET 库](https://github.com/dotnet/corefx)

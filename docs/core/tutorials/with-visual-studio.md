@@ -4,17 +4,17 @@ description: "了解如何使用 Visual Studio 2017 生成简单的 C# .NET Core
 keywords: ".NET Core, .NET Core 控制台应用程序, Visual Studio 2017"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: HT
-ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
-ms.openlocfilehash: 37b81a6d4cf53dcf17158ccc4df6aca488f9a26b
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/29/2017
 
 改进应用程序，提示用户输入名字，并将其与日期和时间一同显示。 若要修改和测试程序，请执行以下操作：
 
-1. 在代码窗口中，在 `public static void Main(string[] args)` 代码行后面的左括号和第一个右括号之间，输入以下 C# 代码：
+1. 在代码窗口中，在 `static void Main(string[] args)` 代码行后面的左括号和第一个右括号之间，输入以下 C# 代码：
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
