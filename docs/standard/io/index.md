@@ -1,5 +1,5 @@
 ---
-title: "文件和流 I-O | Microsoft Docs"
+title: "文件和流 I/O"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/02/2017
  文件是一个由字节组成的有序的命名集合，它具有永久存储。 在处理文件时，你将处理目录路径、磁盘存储、文件和目录名称。 相反，流是一个字节序列，可用于对后备存储进行读取和写入操作，后备存储可以是多个存储媒介之一（例如，磁盘或内存）。 正如存在除磁盘之外的多种后备存储一样，也存在除文件流之外的多种流（如网络、内存和管道流）。  
   
 ## <a name="files-and-directories"></a>文件和目录  
- 可以使用 <xref:System.IO?displayProperty=fullName> 命名空间中的类型与文件和目录进行交互。 例如，你可以获取和设置文件和目录的属性，并基于搜索条件检索文件和目录的集合。  
+ 你可以使用 <xref:System.IO?displayProperty=fullName> 命名空间中的类型与文件和目录进行交互。 例如，你可以获取和设置文件和目录的属性，并基于搜索条件检索文件和目录的集合。  
   
  下面是一些常用的文件和目录类：  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/02/2017
  请参阅[如何：复制目录](../../../docs/standard/io/how-to-copy-directories.md)、[如何：创建目录列表](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)和[如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
   
 ## <a name="streams"></a>流  
- 抽象基类 <xref:System.IO.Stream> 支持读取和写入字节。 所有表示流的类都继承自 <xref:System.IO.Stream> 类。 <xref:System.IO.Stream> 类及其派生类提供数据源和存储库的常见视图，程序员不必了解操作系统和基础设备的具体细节。  
+ 抽象基类 <xref:System.IO.Stream> 支持读取和写入字节。 所有表示流的类都继承自 <xref:System.IO.Stream> 类。 <xref:System.IO.Stream> 类及其派生类提供数据源和存储库的常见视图，使程序员不必了解操作系统和基础设备的具体细节。  
   
  流涉及三个基本操作：  
   
@@ -66,19 +66,19 @@ ms.lasthandoff: 05/02/2017
   
  下面是一些常用的流类：  
   
--   <xref:System.IO.FileStream> – 用于对文件执行读取和写入操作。  
+-   <xref:System.IO.FileStream> - 用于对文件进行读取和写入操作。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 用于对独立存储中的文件执行读取和写入操作。  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 用于对独立存储中的文件进行读取或写入操作。  
   
--   <xref:System.IO.MemoryStream> - 用于作为后备存储对内存执行读取和写入操作。  
+-   <xref:System.IO.MemoryStream> - 用于作为后备存储对内存进行读取和写入操作。  
   
 -   <xref:System.IO.BufferedStream> - 用于改进读取和写入操作的性能。  
   
--   <xref:System.Net.Sockets.NetworkStream> – 用于通过网络套接字进行读取和写入。  
+-   <xref:System.Net.Sockets.NetworkStream> - 用于通过网络套接字进行读取和写入。  
   
 -   <xref:System.IO.Pipes.PipeStream> - 用于通过匿名和命名管道进行读取和写入。  
   
--   <xref:System.Security.Cryptography.CryptoStream> – 用于将数据流链接到加密转换。  
+-   <xref:System.Security.Cryptography.CryptoStream> - 用于将数据流链接到加密转换。  
   
  有关异步使用流的示例，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
@@ -87,11 +87,11 @@ ms.lasthandoff: 05/02/2017
   
  下面是一些常用的读取器和编写器类：  
   
--   <xref:System.IO.BinaryReader> 和 <xref:System.IO.BinaryWriter> – 用于将基元数据类型作为二进制值进行读取和写入。  
+-   <xref:System.IO.BinaryReader> 和 <xref:System.IO.BinaryWriter> - 用于将基元数据类型作为二进制值进行读取和写入。  
   
 -   <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter> - 用于通过使用编码值在字符和字节之间来回转换来读取和写入字符。  
   
--   <xref:System.IO.StringReader> 和 <xref:System.IO.StringWriter> – 用于在字符串中读取和写入字符。  
+-   <xref:System.IO.StringReader> 和 <xref:System.IO.StringWriter> - 用于从字符串读取字符以及将字符写入字符串中。  
   
 -   <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter> - 用作其他读取器和编写器（读取和写入字符和字符串，而不是二进制数据）的抽象基类。  
   
@@ -100,26 +100,26 @@ ms.lasthandoff: 05/02/2017
 ## <a name="asynchronous-io-operations"></a>异步 I/O 操作  
  读取或写入大量数据会占用大量资源。 如果你的应用程序需要保持对用户的响应性，则你应异步执行这些任务。 在执行同步 I/O 操作时，UI 线程将受阻，直至完成占用大量资源的操作。  在开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用时使用异步 I/O 操作可防止造成应用程序已停止工作的印象。  
   
- 异步成员名称中包含 `Async`，如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>/<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 你可以将这些方法与 `async` 和 `await` 关键字一起使用。  
+ 异步成员在其名称中包含 `Async`，如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 你可以将这些方法与 `async` 和 `await` 关键字一起使用。  
   
  有关详细信息，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
 ## <a name="compression"></a>压缩  
- 压缩是指减小文件大小以便存储的过程。 解压缩是提取压缩文件的内容以使这些内容采用可用格式的过程。 <xref:System.IO.Compression?displayProperty=fullName> 命名空间包含用于对文件和流进行压缩和解压缩的类型。  
+ 压缩是指减小文件大小以便存储的过程。 解压缩是提取压缩文件的内容以使这些内容采用可用格式的过程。 <xref:System.IO.Compression?displayProperty=fullName> 命名空间包含用于对文件和流进行压缩或解压缩的类型。  
   
  在对文件和流进行压缩和解压缩时，经常使用以下类：  
   
--   <xref:System.IO.Compression.ZipArchive> – 用于在 zip 存档中创建和检索条目。  
+-   <xref:System.IO.Compression.ZipArchive> - 用于在 zip 存档中创建和检索条目。  
   
--   <xref:System.IO.Compression.ZipArchiveEntry> – 用于表示压缩文件。  
+-   <xref:System.IO.Compression.ZipArchiveEntry> - 用于表示压缩文件。  
   
 -   <xref:System.IO.Compression.ZipFile> - 用于创建、提取和打开压缩包。  
   
--   <xref:System.IO.Compression.ZipFileExtensions> - 用于创建和提取压缩包中的条目。  
+-   <xref:System.IO.Compression.ZipFileExtensions> - 用于创建和提供压缩包中的条目。  
   
--   <xref:System.IO.Compression.DeflateStream> – 用于使用 Deflate 算法对流进行压缩和解压缩。  
+-   <xref:System.IO.Compression.DeflateStream> - 用于使用 Deflate 算法对流进行压缩和解压缩。  
   
--   <xref:System.IO.Compression.GZipStream> – 用于采用 gzip 数据格式对流进行压缩和解压缩。  
+-   <xref:System.IO.Compression.GZipStream> - 用于采用 gzip 数据格式对流进行压缩和解压缩。  
   
  请参阅[如何：压缩和提取文件](../../../docs/standard/io/how-to-compress-and-extract-files.md)。  
   
@@ -130,11 +130,11 @@ ms.lasthandoff: 05/02/2017
   
  在实现独立存储时，经常使用以下类：  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorage> – 提供用于独立存储实现的基类。  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorage> - 提供用于独立存储实现的基类。  
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> - 提供包含文件和目录的独立存储区。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 公开独立存储中的文件。  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 公开独立存储中的文件。  
   
  请参阅[独立存储](../../../docs/standard/io/isolated-storage.md)。  
   
@@ -143,11 +143,11 @@ ms.lasthandoff: 05/02/2017
   
  在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用 I/O 操作时，要注意一些重要差异：  
   
--   专门与文件操作相关的类型（如<xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的类型，如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
+-   专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的类型，如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
   
 -   独立存储不可用；请改用[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)。  
   
--   使用 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 等异步方法可防止 UI 线程受阻。  
+-   使用异步方法（如 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>）可防止 UI 线程受阻。  
   
 -   基于路径的压缩类型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions> 不可用。 请改用 [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 命名空间中的类型。  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 05/02/2017
  若要深入了解 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的 I/O 操作，请参阅 Windows 开发人员中心的[快速入门：读取和写入文件](http://go.microsoft.com/fwlink/p/?LinkId=243072)。  
   
 ## <a name="io-and-security"></a>I/O 和安全性  
- 在使用 <xref:System.IO?displayProperty=fullName> 命名空间中的类时，必须遵循操作系统安全性要求（如访问控制列表 (ACL)）来控制对文件和目录的访问。 此要求是除所有 <xref:System.Security.Permissions.FileIOPermission> 要求之外的额外要求。 可以用编程方式管理 ACL。 有关详细信息，请参阅[如何：添加或移除访问控制列表项](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
+ 在使用 <xref:System.IO?displayProperty=fullName> 命名空间中的类时，你必须遵循操作系统安全性要求（如访问控制列表 (ACL)）来控制对文件和目录的访问。 此要求是在所有 <xref:System.Security.Permissions.FileIOPermission> 要求之外的要求。 可以用编程方式管理 ACL。 有关详细信息，请参阅[如何：添加或移除访问控制列表项](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
   
  默认安全策略将阻止 Internet 或 Intranet 应用程序访问用户计算机上的文件。 因此，在编写将通过 Internet 或 Intranet 下载的代码时，请不要使用需要物理文件路径的 I/O 类。 请转而将[独立存储](../../../docs/standard/io/isolated-storage.md)用于传统 .NET Framework 应用程序，或将[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
   
