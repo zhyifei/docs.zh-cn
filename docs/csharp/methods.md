@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5e01f7244b8b7b83fbc76a80eae0c1432c936a
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="methods"></a>方法 #
@@ -22,7 +22,7 @@ ms.lasthandoff: 07/28/2017
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 `Main` 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。
 
 > [!NOTE]
-> 本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](https://msdn.microsoft.com/library/bb882516.aspx)。
+> 本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](programming-guide/statements-expressions-operators/anonymous-functions.md)。
 
 本主题包含以下各节：
 
@@ -252,14 +252,14 @@ if (person != null)
 
 使用扩展方法，可向现有类型“添加”方法，而无需修改类型本身或在继承的类型中实现新方法。 扩展方法也无需驻留在与其扩展的类型相同的程序集中。 要把扩展方法当作是定义的类型成员一样调用。
 
-有关详细信息，请参阅[扩展方法](https://msdn.microsoft.com/library/bb383977.aspx)。
+有关详细信息，请参阅[扩展方法](programming-guide/classes-and-structs/extension-methods.md)。
 
 <a name="async"></a>
 ## <a name="async-methods"></a>异步方法 ##
 
 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。
 
-如果用 [async](https://msdn.microsoft.com/library/hh156513.aspx) 修饰符标记方法，则可以在该方法中使用 [await](https://msdn.microsoft.com/library/hh156528.aspx) 运算符。 当控件到达异步方法中的 `await` 表达式时，如果等待的任务未完成，控件将返回到调用方，并在等待任务完成前，包含 `await` 关键字的方法中的进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
+如果用 [async](language-reference/keywords/async.md) 修饰符标记方法，则可以在该方法中使用 [await](language-reference/keywords/await.md) 运算符。 当控件到达异步方法中的 `await` 表达式时，如果等待的任务未完成，控件将返回到调用方，并在等待任务完成前，包含 `await` 关键字的方法中的进度将一直处于挂起状态。 任务完成后，可以在方法中恢复执行。
 
 > [!NOTE]
 > 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。
@@ -270,9 +270,9 @@ if (person != null)
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-异步方法不能声明任何 [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) 或 [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) 参数，但是可以调用具有这类参数的方法。
+异步方法不能声明任何 [ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out.md) 参数，但是可以调用具有这类参数的方法。
 
- 有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/mt674882.aspx)、[异步程序中的控制流](https://msdn.microsoft.com/library/mt674892.aspx)和[异步返回类型](https://msdn.microsoft.com/library/mt674893.aspx)。
+ 有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](async.md)、[异步程序中的控制流](programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](programming-guide/concepts/async/async-return-types.md)。
 
 <a name="expr"></a>
 ## <a name="expression-bodied-members"></a>Expression-Bodied 成员 ##
@@ -293,20 +293,20 @@ public Customer this[long id] => store.LookupCustomer(id);
 <a name="iterators"></a>
 ## <a name="iterators"></a>迭代器 ##
 
-迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) 语句返回元素，每次返回一个。 到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。
+迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。
 
 迭代器的返回类型可以是 @System.Collections.IEnumerable、@System.Collections.Generic.IEnumerable%601、@System.Collections.IEnumerator 或 @System.Collections.Generic.IEnumerator%601。
 
-有关详细信息，请参阅[迭代器](https://msdn.microsoft.com/library/mt639331.aspx)。
+有关详细信息，请参阅[迭代器](programming-guide/concepts/iterators.md)。
 
 ## <a name="see-also"></a>请参阅 ##
 
-[访问修饰符](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
-[静态类和静态类成员](https://msdn.microsoft.com/library/79b3xss3.aspx)   
-[继承](https://msdn.microsoft.com/library/ms173149.aspx)   
-[抽象类、密封类及类成员](https://msdn.microsoft.com/library/ms173150.aspx)   
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
-[传递参数](https://msdn.microsoft.com/library/0f66670z.aspx)
+[访问修饰符](language-reference/keywords/access-modifiers.md)   
+[静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+[继承](programming-guide/classes-and-structs/inheritance.md)   
+[抽象类、密封类及类成员](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+[params](language-reference/keywords/params.md)   
+[out](language-reference/keywords/out.md)   
+[ref](language-reference/keywords/ref.md)   
+[传递参数](programming-guide/classes-and-structs/passing-parameters.md)
 

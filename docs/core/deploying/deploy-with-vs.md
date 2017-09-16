@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5cc9de1371ba90532e20c11c9f82002ad5a5fa92
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 07/28/2017
 
 1. 如果系统中已安装 `Newtonsoft.Json`，请在“管理解决方案包”选项卡的右侧窗格中选择项目，将该项添加到项目。
 
-请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md#what-are-rids) 包含一个文件夹。
+请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
 
 ## <a name="simpleSelf"></a>不包含第三方依赖项的独立部署
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 07/28/2017
 
       1. 在“发布”选项卡上，选择“发布”。 Visual Studio 将包含应用程序的文件写入本地文件系统。
 
-      1. “发布”选项卡现在显示单个配置文件 FolderProfile。 该配置文件的配置设置显示在选项卡的“摘要”部分。 目标运行时用于标识已发布的运行时，目标位置用于标识独立部署文件的写入位置。
+      1. “发布”选项卡现在显示单个配置文件 FolderProfile。 该配置文件的配置设置显示在选项卡的“摘要”部分。目标运行时用于标识已发布的运行时，目标位置用于标识独立部署文件的写入位置。
 
       1. 默认情况下，Visual Studio 将所有已发布文件写入单个目录。 为了方便起见，最好为每个目标运行时创建单个配置文件，并将已发布文件置于特定于平台的目录中。 这包括为每个目标平台创建单独的发布配置文件。 现在，请执行下列操作，为每个平台重新生成应用程序：
 

@@ -1,23 +1,19 @@
 ---
 title: ".NET 体系结构组件"
 description: "描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现和工具。"
-keywords: ".NET, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 编译器"
 author: cartermp
 ms.author: mairaw
-ms.date: 08/10/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.translationtype: HT
-ms.sourcegitcommit: 14522f165b22a7b1bb2a717a7c9f293a265f4eb0
-ms.openlocfilehash: 8934febe77b30fb318b06e4d8d297282368438a5
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
 .NET 应用开发用于并运行于一个或多个 .NET 实现。  .NET 实现包括 .NET Framework、.NET Core 和 Mono。 .NET 的所有实现都有一个名为 .NET Standard 的通用 API 规范。 本文简要介绍了每个概念。
@@ -43,9 +39,9 @@ Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET
 
 ### <a name="net-core"></a>.NET 核心
 
-.NET Core 是一个经优化用于服务器工作负荷的跨平台实现。 它新式、高效，专用于处理大规模的服务器和云工作负荷。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 ASP.NET Core 在 .NET Core 上运行。
+.NET Core 是 .NET 的跨平台实现，专用于处理大规模的服务器和云工作负荷。 可在 Windows、macOS 和 Linux 上运行。 它实现 .NET Standard，因此面向 .NET Standard 的代码都可在 .NET Core 上运行。 ASP.NET Core 在 .NET Core 上运行。 
 
-若要了解有关 .NET Core 的详细信息，请参阅 [.NET Core 指南](../core/index.md)。
+要了解有关 .NET Core 的详细信息，请参阅 [.NET Core 指南](../core/index.md)和[为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -91,7 +87,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 - 开放源生成业务流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>请参阅
-
+[为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
 [.NET Standard](net-standard.md)  
 [.NET Core 指南](../core/index.md)  
 [.NET Framework 指南](../framework/index.md)  

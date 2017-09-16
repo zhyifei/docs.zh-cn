@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.translationtype: HT
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 8c747f65dca44fcca25fe67dccaa897561eefcc7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
@@ -122,7 +122,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-第一个版本发出 Web 请求来读取 .NET Foundation 组织下的所有存储库列表。 （.NET Foundation 的 gitHub ID 为“dotnet”）。 首先，新建一个 @System.Net.Http.HttpClient。 此对象负责处理请求和响应。 接下来的几行代码将 @System.Net.Http.HttpClient 设置为处理此请求。 在第一行中，它被配置为接受 GitHub JSON 响应。
+第一个版本发出 Web 请求来读取 .NET Foundation 组织下的所有存储库列表。 （.NET Foundation 的 gitHub ID 为“dotnet”）。 首先，新建一个 @System.Net.Http.HttpClient 。 此对象负责处理请求和响应。 接下来的几行代码将 @System.Net.Http.HttpClient 设置为处理此请求。 在第一行中，它被配置为接受 GitHub JSON 响应。
 此格式仅为 JSON。 下一代码行将用户代理标头添加到此对象发出的所有请求中。 这两个标头均由 GitHub 服务器代码进行检查，必须使用它们，才能检索 GitHub 中的信息。
 
 配置 @System.Net.Http.HttpClient 后，发出 Web 请求并检索响应。 在此第一个版本中，将使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 便捷方法。 此便捷方法先执行发出 Web 请求的任务，然后当返回请求时读取响应流，并从流中提取内容。 响应正文以 @System.String 的形式返回。 此字符串在任务完成时可用。 
@@ -172,7 +172,7 @@ var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-请注意，现在使用的是 @System.Net.Http.HttpClient.GetStreamAsync (System.String)，而不是 @System.Net.Http.HttpClient.GetStringAsync (System.String)。 序列化程序使用流（而不是字符串）作为其源。 让我们来看看上面第二行代码所使用的两项 C# 语言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的自变量是 `await` 表达式。 Await 表达式可以出现在代码中的几乎任何位置，尽管到目前为止，你只在赋值语句中看到过它们。
+请注意，现在使用的是 @System.Net.Http.HttpClient.GetStreamAsync(System.String) ，而不是 @System.Net.Http.HttpClient.GetStringAsync(System.String) 。 序列化程序使用流（而不是字符串）作为其源。 让我们来看看上面第二行代码所使用的两项 C# 语言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的自变量是 `await` 表达式。 Await 表达式可以出现在代码中的几乎任何位置，尽管到目前为止，你只在赋值语句中看到过它们。
 
 其次，`as` 运算符将编译时类型 `object` 转换成 `List<repo>`。 声明 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 即声明其返回 <xref:System.Object?displayProperty=fullName> 类型的对象。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 将返回你在构造它时指定的类型（在此教程中，为 `List<repo>`）。 如果转换失败，那么 `as` 运算符的计算结果为 `null`，而不是抛出异常。
 
@@ -352,7 +352,7 @@ public DateTime LastPush
 
 让我们来看一下上面的新构造。 `IgnoreDataMember` 特性指示序列化程序，不得将此类型读入任何 JSON 对象，也不得从中写入此类型。 此属性只包含 `get` 访问器。 不存在 `set` 访问器。 这就是在 C# 中定义*只读*属性的方式。 （是的，可以在 C# 中创建*只写*属性，但属性值受限。）@System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider) 方法分析字符串，并使用提供的日期格式创建 @System.DateTime 对象，然后使用 `CultureInfo` 对象将其他元数据添加到 `DateTime` 中。 如果分析操作失败，那么属性访问器会抛出异常。
 
-若要使用 @System.Globalization.CultureInfo.InvariantCulture，需要将 @System.Globalization 命名空间添加到 `repo.cs` 中的 `using` 语句：
+若要使用 @System.Globalization.CultureInfo.InvariantCulture ，需要将 @System.Globalization 命名空间添加到 `repo.cs` 中的 `using` 语句：
 
 ```csharp
 using System.Globalization;

@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.translationtype: HT
-ms.sourcegitcommit: f8cf12317f1f0163028db003ff31604480da5d1c
-ms.openlocfilehash: d9a1b1aa2b19e80b885a2da87746667bff04e234
+ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
+ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 
@@ -141,13 +141,15 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 
 ## <a name="mono"></a>Mono
 
-.NET Framework 的替代开放源。
+Mono 是主要在需要小型运行时使用的 .NET 实现。 它是运行时，在 Android、Mac、iOS、tvOS 和 watchOS 上为 Xamarin 应用程序提供技术支持，主要针对内存占用少的应用程序。
 
-Mono 的启动时间与首次发布 .NET Framework 的时间大致相同。 由于 .NET Framework 不是开放源，因此 Mono 必须从头开始，完全重新实现不包含共享代码的 .NET Framework。
+它支持所有当前已发布的 .NET Standard 版本。
 
-发布使用 MIT 许可证的 .NET Core 时，Microsoft 还发布了[使用 MIT 许可证的大量 .NET Framework](https://github.com/microsoft/referencesource)。 这使 Mono 社区可使用 .NET Framework 使用的相同代码来填补缺口，避免行为差异。
+以前，Mono 实现更大的 .NET Framework API 并模拟一些 Unix 上最常用的功能。 有时使用它运行依赖 Unix 上的这些功能的 .NET 应用程序。
 
-Mono 主要用于在 Linux 和 macOS 上运行 .NET 应用程序。 还有适用于其他平台的 Mono 端口；请参阅[Mono 支持的平台](http://www.mono-project.com/docs/about-mono/supported-platforms/)。 Mono 具有 WinForms、ASP.NET 和 `System.Drawing` 的实现（但不一定完整）。
+Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平台使用的完整静态编译器（预先编译）。
+
+若要了解有关 Mono 的详细信息，请参阅 [Mono 文档](http://www.mono-project.com/docs/)。
 
 ## <a name="net"></a>.NET
 

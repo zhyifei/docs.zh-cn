@@ -11,10 +11,10 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
-ms.openlocfilehash: 88492a5db66977f3b914123aa8489c079aff59c5
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/21/2017
 *   `Task` 表示不返回值的单个操作。
 *   `Task<T>` 表示返回 `T` 类型的值的单个操作。
 
-请务必将任务理解为工作的异步抽象，而非在线程之上的抽象。 默认情况下，任务在当前线程上执行，且在适当时会将工作委托给操作系统。 可选择性地通过 `Task.Run` API 明确请求任务在独立线程上运行。
+请务必将任务理解为工作的异步抽象，而非在线程之上的抽象。 默认情况下，任务在当前线程上执行，且在适当时会将工作委托给操作系统。 可选择性地通过 `Task.Run` API 显式请求任务在独立线程上运行。
 
 任务会公开一个 API 协议来监视、等候和访问任务的结果值（如 `Task<T>`）。 含有 `await` 关键字的语言集成可提供高级别抽象来使用任务。 
 

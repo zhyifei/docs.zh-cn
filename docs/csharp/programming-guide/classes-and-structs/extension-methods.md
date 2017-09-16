@@ -30,14 +30,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bfc0c0af620f7ec8b6b8a8352bf4253b85cc682c
+ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
+ms.openlocfilehash: 657f9ebfba5d6f49d3a88cb1cf790e4a0134a007
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>扩展方法（C# 编程指南）
-扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。 扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。 对于用 C# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法之间没有明显的差异。  
+扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。 扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。 对于用 C#、F# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法没有明显区别。  
   
  最常见的扩展方法是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 标准查询运算符，它将查询功能添加到现有的 <xref:System.Collections.IEnumerable?displayProperty=fullName> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 类型。 若要使用标准查询运算符，请先使用 `using System.Linq` 指令将它们置于范围中。 然后，任何实现了 <xref:System.Collections.Generic.IEnumerable%601> 的类型看起来都具有 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等实例方法。 在 <xref:System.Collections.Generic.IEnumerable%601> 类型的实例（如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>）后键入“dot”时，可以在 IntelliSense 语句完成中看到这些附加方法。  
   

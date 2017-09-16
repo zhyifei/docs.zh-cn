@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 227241d1b290dde2e9de66e6c0e3c904b432bae0
+ms.sourcegitcommit: 59e445ac27f07c85d9e98c5f595cf5f935f75443
+ms.openlocfilehash: 9a0a488c6f444608a335cd990847774fb6fe9e3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 参数修饰符（C# 参考）
@@ -77,15 +77,15 @@ class CS0663_Example
   
  [!code-cs[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
 
- [重试模式](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md)会返回一个 `bool`，指示某个操作是成功还是失败，并在 `out` 参数中返回该操作生成的值。 许多分析方法（例如 @System.DateTime.TryParse(System.String,@System.DateTime) 方法）采用此模式。
+ [重试模式](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md)会返回一个 `bool`，指示某个操作是成功还是失败，并在 `out` 参数中返回该操作生成的值。 许多分析方法（如 [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) 方法）都采用此模式。
    
 ## <a name="calling-a-method-with-an-out-argument"></a>调用具有 `out` 参数的方法
 
-在 C# 6 及更早版本中，必须先在单独的语句中声明变量，然后才能将其作为 `out` 参数传递。 下面的示例声明一个名为 `number` 的变量，然后将其传递给 [Int32.TryParse](xref:System.Int32.TryParse(System.String,@System.Int32) 方法，该方法会尝试将字符串转换为数字。
+在 C# 6 及更早版本中，必须先在单独的语句中声明变量，然后才能将其作为 `out` 参数传递。 下面的示例先声明了变量 `number`，然后再将它传递给将字符串转换为数字的 [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) 方法。
 
  [!code-cs[csrefKeywordsMethodParams#5](../../../../samples/snippets/csharp/language-reference/keywords/out/out-5.cs)]  
 
-从 C# 7 开始，可以在方法调用的参数列表而不是单独的变量声明中声明 `out` 变量。 这使得代码更简洁可读，还能防止在方法调用之前无意中向该变量赋值。 下面的示例与上一个示例基本相同，只不过它在对 [Int32.TryParse](xref:System.Int32.TryParse(System.String,@System.Int32) 方法的调用中定义了 `number` 变量。
+从 C# 7 开始，可以在方法调用的参数列表而不是单独的变量声明中声明 `out` 变量。 这使得代码更简洁可读，还能防止在方法调用之前无意中向该变量赋值。 下面的示例与上一个示例基本相同，不同之处在于它在对 [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) 方法的调用中定义了 `number` 变量。
 
  [!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/out/out-6.cs)]  
    

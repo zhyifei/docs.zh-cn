@@ -26,14 +26,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 969e02ea7a560a18f8c0f79ada089fd791362808
+ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
+ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 开发客户端应用程序
-利用在用户的计算机或设备本地运行的 .NET Framework，有多种方法开发基于 Windows 的应用程序。 本节包含的主题价始了如何使用 Windows Presentation Foundation (WPF) 或 Windows 窗体创建基于 Windows 的应用程序。 但是，你也可以利用 .NET Framework 创建客户端应用程序，并通过计算机或设备的 Windows 应用商店和 Windows Phone 应用商店提供给你的用户，Web 应用程序可以在浏览器中查看。  
+利用在用户的计算机或设备本地运行的 .NET Framework，有多种方法开发基于 Windows 的应用程序。 本节包含的主题价始了如何使用 Windows Presentation Foundation (WPF) 或 Windows 窗体创建基于 Windows 的应用程序。 不过，也可以利用 .NET Framework 创建 Web 应用程序，以及通过 Windows 应用商店或 Windows Phone 应用商店发布的面向计算机或设备的客户端应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  

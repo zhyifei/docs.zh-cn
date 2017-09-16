@@ -15,10 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef3e03edef48676e2e32201b422c66f117487907
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: fe7290f3a887f2c4d52e52a6aff708e0e9fe415f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>缓解：自定义 IMessageFilter.PreFilterMessage 实现
@@ -28,7 +28,7 @@ ms.lasthandoff: 07/28/2017
   
     -   通过调用 <xref:System.Windows.Forms.Application.AddMessageFilter%2A> 方法添加消息筛选器。  
   
-    -   通过调用 <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A> 方法删除消息筛选器。 方法。  
+    -   通过调用 <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A> 方法，删除消息筛选器。 方法。  
   
 -   以及通过调用 <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=fullName> 方法抽取消息。  
   

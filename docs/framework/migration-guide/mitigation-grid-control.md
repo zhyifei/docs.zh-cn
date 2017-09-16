@@ -1,5 +1,5 @@
 ---
-title: "缓解：网格控件向 *-列分配空间"
+title: "缓解：网格控件向 -列分配空间"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -24,7 +24,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>缓解：网格控件向 *-列分配空间
+# <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>缓解：网格控件向 -列分配空间
 
 自定位 .NET Framework 4.7 的应用程序起，WPF 替换了 <xref:System.Windows.Controls.Grid> 控件用于向 \*-列分配空间的算法。 
 
