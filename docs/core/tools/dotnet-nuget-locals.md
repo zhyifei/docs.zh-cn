@@ -1,28 +1,26 @@
 ---
-title: "dotnet-nuget-locals 命令 - .NET Core CLI"
-description: "dotnet-nuget-locals 命令清除或列出本地 NuGet 资源，例如 http 请求缓存、临时缓存或计算机范围的全局包文件夹。"
-keywords: "dotnet-nuget-locals, CLI, CLI 命令, .NET Core"
+title: "dotnet nuget locals 命令 - .NET Core CLI"
+description: "dotnet nuget locals 命令可清除或列出本地 NuGet 资源，如 http 请求缓存、临时缓存或整个计算机范围内的全局包文件夹。"
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-# <a name="dotnet-nuget-locals"></a>dotnet-nuget locals
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>名称
 
-`dotnet-nuget locals` -清除或列出本地 NuGet 资源。 
+`dotnet nuget locals` -清除或列出本地 NuGet 资源。
 
 ## <a name="synopsis"></a>摘要
 
@@ -38,27 +36,16 @@ ms.lasthandoff: 07/28/2017
 
 以下值之一：
 
-`all`
-
-表示指定的操作应用于所有缓存类型，即 http 请求缓存、全局包缓存和临时缓存。
-
-`http-cache`
-
-表示指定的操作仅应用于 http 请求缓存。 其他缓存位置不受影响。
-
-`global-packages`
-
-表示指定的操作仅应用于全局包缓存。 其他缓存位置不受影响。
-
-`temp`
-
-表示指定的操作仅应用于临时缓存。 其他缓存位置不受影响。
+* `all` - 表示指定的操作应用于所有缓存类型，即 http 请求缓存、全局包缓存和临时缓存。
+* `http-cache` - 表示指定的操作仅应用于 http 请求缓存。 其他缓存位置不受影响。
+* `global-packages` - 表示指定的操作仅应用于全局包缓存。 其他缓存位置不受影响。
+* `temp` - 表示指定的操作仅应用于临时缓存。 其他缓存位置不受影响。
 
 ## <a name="options"></a>选项
 
 `-h|--help`
 
-打印出有关命令的简短帮助。  
+打印出有关命令的简短帮助。
 
 `-c|--clear`
 
@@ -97,4 +84,3 @@ ms.lasthandoff: 07/28/2017
 ## <a name="troubleshooting"></a>疑难解答
 
 有关使用 `dotnet nuget locals` 命令时的常见问题和错误的信息，请参阅[管理 NuGet 缓存](/nuget/consume-packages/managing-the-nuget-cache)。
-

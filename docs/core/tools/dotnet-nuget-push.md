@@ -1,28 +1,26 @@
 ---
-title: "dotnet-nuget-push 命令 - .NET Core CLI"
-description: "dotnet-nuget-push 命令将包推送到服务器，并将其发布。"
-keywords: "dotnet-nuget-push, CLI, CLI 命令, .NET Core"
+title: "dotnet nuget push 命令 - .NET Core CLI"
+description: "dotnet nuget push 命令可将包推送到服务器并发布。"
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 83da967d9d7432fcb422b88344ff597d45fc9e85
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-# <a name="dotnet-nuget-push"></a>dotnet-nuget push
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>名称
 
-`dotnet-nuget push` - 将包推送到服务器，并将其发布。
+`dotnet nuget push` - 将包推送到服务器，并将其发布。
 
 ## <a name="synopsis"></a>摘要
 
@@ -42,7 +40,7 @@ ms.lasthandoff: 07/28/2017
 
 `-h|--help`
 
-打印出有关命令的简短帮助。  
+打印出有关命令的简短帮助。
 
 `-s|--source <SOURCE>`
 
@@ -84,11 +82,11 @@ ms.lasthandoff: 07/28/2017
 
 将 *foo.nupkg* 推送到自定义推送源 `http://customsource`（提供 API 密钥）：
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/` 
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
 将 *foo.nupkg* 推送到默认推送源：
 
-`dotnet nuget push foo.nupkg` 
+`dotnet nuget push foo.nupkg`
 
 将 *foo.symbols.nupkg* 推送到默认符号源：
 

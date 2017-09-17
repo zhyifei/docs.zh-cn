@@ -1,24 +1,22 @@
 ---
-title: "dotnet-sln 命令 - .NET Core CLI"
+title: "dotnet sln 命令 - .NET Core CLI"
 description: "使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。"
-keywords: "dotnet-sln, CLI, CLI 命令, .NET Core"
-author: spboyer
+author: mairaw
 ms.author: mairaw
-ms.date: 04/11/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 606929fbcafddf47abf5da6d3c8ce97d5af06909
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 5071cb80be0fb14829a0fdffd0f5a2d2371b6ba8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-sln"></a>dotnet sln
 
-# <a name="dotnet-sln"></a>dotnet-sln
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>名称
 
@@ -55,7 +53,7 @@ dotnet sln [-h|--help]
 
 `list`
 
-在解决方案文件中列出所有项目。
+列出解决方案文件中的所有项目。
 
 ## <a name="arguments"></a>参数
 
@@ -94,4 +92,3 @@ dotnet sln [-h|--help]
 使用通配模式从解决方案中删除多个 C# 项目：
 
 `dotnet sln todo.sln remove **/*.csproj`
-

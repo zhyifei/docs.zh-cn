@@ -1,28 +1,26 @@
 ---
-title: "dotnet-remove package 命令 - .NET Core CLI"
-description: "使用 dotnet-remove package 命令可方便地删除对项目的 NuGet 包引用。"
-keywords: "dotnet-remove, CLI, CLI 命令, .NET Core"
-author: spboyer
+title: "dotnet remove package 命令 - .NET Core CLI"
+description: "dotnet remove package 命令可便于删除对项目的 NuGet 包引用。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 2fcc8d37-16b3-4581-8038-832160e72d36
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a3fef846d5850e2c2a158ccd1f30a84e8f23f793
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 4167f5465571259975572669e27f20c586b910da
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-package"></a>dotnet remove package
 
-# <a name="dotnet-remove-package"></a>dotnet-remove package
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>名称
 
-`dotnet-remove package` - 从项目文件删除包引用。
+`dotnet remove package` - 从项目文件删除包引用。
 
 ## <a name="synopsis"></a>摘要
 
