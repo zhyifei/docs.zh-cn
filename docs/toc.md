@@ -66,7 +66,6 @@
 ## [.NET Core 的新增功能](core/whats-new/index.md)
 ## [教程](core/tutorials/index.md)
 ### [使用 Visual Studio 2017 在 Windows 上构建完整的 .NET Core 解决方案](core/tutorials/using-on-windows-full-solution.md)
-### [C# 和 Visual Studio Code 入门](core/tutorials/with-visual-studio-code.md)
 ### [在 macOS 上实现 .NET Core 入门](core/tutorials/using-on-macos.md)
 ### [借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -96,7 +95,10 @@
 ## [单元测试](core/testing/index.md)
 ### [使用 dotnet 测试和 xUnit 进行单元测试](core/testing/unit-testing-with-dotnet-test.md)
 ### [使用 dotnet 测试和 MSTest 进行单元测试](core/testing/unit-testing-with-mstest.md)
+### [使用 dotnet test 和 xUnit 进行 F# 单元测试]()
+### [使用 dotnet test 和 MSTest 进行 F# 单元测试]()
 ### [运行选择性单元测试](core/testing/selective-unit-tests.md)
+### [使用 Visual Studio 对 .NET Core 项目进行 Live Unit Testing]()
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支持](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
