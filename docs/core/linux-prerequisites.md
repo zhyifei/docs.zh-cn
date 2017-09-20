@@ -4,16 +4,16 @@ description: "支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux �
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/01/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: HT
-ms.sourcegitcommit: 7bbb8405f39a52d2798fd1dbc78f3116cb3bedbb
-ms.openlocfilehash: 9864ffa31caa007cb649a9e6e8913863d9cb2c35
+ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
+ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/05/2017
 
 .NET Core 2.0 将 Linux 视为一个操作系统。 支持的 Linux 发行版本都对应有一个 Linux 版本（每芯片体系结构）。
 
-以下 Linux x64 发行版本/版本支持 NET Core 2.x：
+以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 NET Core 2.x：
 
  * Red Hat Enterprise Linux 7
  * CentOS 7
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/05/2017
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-以下 Linux x64 发行版本/版本支持 .NET Core 1.x：
+以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 .NET Core 1.x：
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
@@ -325,7 +325,7 @@ CentOS 发行版本需要安装以下库：
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
    ```
    
-5. 提取 .NET Core SDK 二进制文件。
+5. 安装 .NET Core SDK。
 
    ```bash
    sudo apt-get update
@@ -337,6 +337,13 @@ CentOS 发行版本需要安装以下库：
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
+   
+7. 运行 `dotnet --version` 命令，以证明安装成功。
+
+   ```bash
+   dotnet --version
+   ```   
+  
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -364,17 +371,17 @@ CentOS 发行版本需要安装以下库：
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
    ```
 
----
-
 6. 运行 `dotnet --version` 命令，以证明安装成功。
 
    ```bash
    dotnet --version
    ```
 
+---
+
 ## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a>为 Fedora 24、Fedora 25 或 Fedora 26（64 位）安装 .NET Core
 
-为 Fedora 26、Fedora 25 (.NET Core 2.x) 或 Fedora 24 (.NET Core 1.x) 安装 .NET Core 的具体步骤：
+若要在 Fedora 26 或 Fedora 25 上安装 .NET Core 2.x，或在 Fedora 24 上安装 .NET Core 1.x，请执行以下操作：
 
 1. 从系统中删除 .NET Core 的所有旧预览版本。
 
@@ -520,7 +527,7 @@ CentOS 发行版本需要安装以下库：
 
 ## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>为 SUSE Linux Enterprise Server（64 位）安装 .NET Core
 
-为 SUSE Linux Enterprise Server (SLES) 12 SP2（64 位）安装 .NET Core 2.x 的具体步骤：
+若要为 SUSE Linux Enterprise Server (SLES) 12 SP2（64 位）安装 .NET Core 2.x，请执行以下操作：
 
 1. 从系统中删除 .NET Core 的所有旧预览版本。
 
@@ -553,7 +560,7 @@ CentOS 发行版本需要安装以下库：
    
 ## <a name="install-net-core-for-opensuse-64-bit"></a>为 openSUSE（64 位）安装 .NET Core
 
-为 openSUSE 安装 .NET Core 2.x/为 openSUSE（64 位）安装 .NET Core 1.x 的具体步骤：
+若要为 openSUSE 安装 .NET Core 2.x 或者为 openSUSE（64 位）安装 .NET Core 1.x，请执行以下操作：
 
 1. 从系统中删除 .NET Core 的所有旧预览版本。
 
