@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概述
@@ -50,7 +50,8 @@ ms.lasthandoff: 07/28/2017
   
  多个线程或任务可同时向集合添加项，如果集合达到其指定最大容量，则制造线程将发生阻塞，直到移除集合中的某个项。 多个使用者可以同时移除项，如果集合变空，则使用线程将发生阻塞，直到制造者添加某个项。 制造线程可调用 <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A> 来指示不再添加项。 使用者将监视 <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> 属性以了解集合何时为空且不再添加项。 下面的示例展示了容量上限为 100 的简单 BlockingCollection。 只要满足某些外部条件为 true，制造者任务就会向集合添加项，然后调用 <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>。 使用者任务获取项，直到 <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> 属性为 true。  
   
- [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)] [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
+ [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
+ [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
  有关完整示例，请参阅[如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)。  
   
@@ -60,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="cancelling-add-and-take-operations"></a>取消添加和取出操作  
  添加和取出操作通常会在一个循环内执行。 可以通过以下方法来取消循环：向 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 或 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法传入 <xref:System.Threading.CancellationToken>，然后在每次迭代时检查该标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 如果值为 true，由你自行决定是否通过清理所有资源并退出循环来响应取消请求。 下面的示例演示获取取消标记和使用该标记的代码的 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 重载：  
   
- [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)] [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
+ [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
+ [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
  有关如何添加取消支持的示例，请参阅[如何：在 BlockingCollection 中逐个添加和获取项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)中的第二个示例。  
   

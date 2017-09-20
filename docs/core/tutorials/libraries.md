@@ -14,7 +14,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/05/2017
 
 ## <a name="how-to-target-the-net-standard"></a>如何以 .NET Standard 为目标
 
-如果对 [.NET Standard](../../standard/net-standard.md) 不是很熟悉，请参阅了解详细信息。
+如果对 .NET Standard 不是很熟悉，请参阅 [](../../standard/net-standard.md) 了解详细信息。
 
 在该文中，提供有一个将 .NET Standard 版本映射到各种实现的表格：
 
