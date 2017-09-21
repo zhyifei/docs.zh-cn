@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
 ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
@@ -93,7 +93,7 @@ ms.lasthandoff: 08/10/2017
 ### <a name="application-configuration-file"></a>应用程序配置文件  
  首先，公共语言运行时检查应用程序配置文件是否存在重写调用程序集清单中存储的版本信息的相关信息。 可借助应用程序部署应用程序配置文件，但执行应用程序时不需要此文件。 通常几乎可瞬时完成此文件的检索，但如果应用程序基位于完成计算机上（例如，在基于 Internet Explorer Web 的方案中），必须下载配置文件。  
   
- 对于客户端可执行文件，应用程序配置文件和应用程序的可执行文件驻留在同一目录中，并且它与扩展名为 .config 的可执行文件具有相同的基名称。 例如，C:\Program Files\Myapp\Myapp.exe 的配置文件是 C:\Program Files\Myapp\Myapp.exe.config。 在基于浏览器的方案中，HTML 文件必须使用 \<link> 元素显式指向该配置文件。  
+ 对于客户端可执行文件，应用程序配置文件和应用程序的可执行文件驻留在同一目录中，并且它与扩展名为 .config 的可执行文件具有相同的基名称。 例如，C:\Program Files\Myapp\Myapp.exe 的配置文件是 C:\Program Files\Myapp\Myapp.exe.config。在基于浏览器的方案中，HTML 文件必须使用 \<link> 元素显式指向该配置文件。  
   
  以下代码提供了一个有关应用程序配置文件的简单示例。 此示例将 <xref:System.Diagnostics.TextWriterTraceListener> 添加到 <xref:System.Diagnostics.Debug.Listeners%2A> 集合，以便可以将调试信息记录到文件中。  
   

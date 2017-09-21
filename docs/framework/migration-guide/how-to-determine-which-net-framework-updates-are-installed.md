@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>如何：确定安装了哪些 .NET Framework 更新
@@ -44,7 +44,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>示例  
  以下代码以编程方式确定已安装在计算机上的 .NET Framework 更新。 你必须具有管理凭据才能运行此示例。  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
+ [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  该示例生成类似下面内容的输出：  
   

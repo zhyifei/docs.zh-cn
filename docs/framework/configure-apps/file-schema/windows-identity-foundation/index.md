@@ -1,24 +1,30 @@
 ---
-title: "Windows Identity Foundation 配置架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows Identity Foundation 配置架构"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/05/2017
+
 ---
-# Windows Identity Foundation 配置架构
-本节中的主题提供有关 Windows 标识基础 \(WIF\) 配置架构信息。  您还可以配置应用程序类所公开的框架，通过使用 WIF。  在处理相关元素在架构中的部分说明了这些类。  如下所示的基本 XML 标记公开的 WIF 配置架构的结构。  属性被忽略。  突出显示的批注表示架构的主要组件。  
+# <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 配置架构
+本节中的主题介绍了 Windows Identity Foundation (WIF) 配置架构。 还可以将应用程序配置为通过由框架公开的类使用 WIF。 在处理架构中相关元素的几节中提到了这些类。 以下显示由 WIF 配置架构公开的基本 XML 标记结构。 系统会省略属性。 突出显示的注释描述架构的主要组件。  
   
-```  
+```xml  
 <system.identityModel>  
     <!-- Service Configuration -->  
     <identityConfiguration>  
@@ -111,10 +117,11 @@ caps.handback.revision: 6
 </system.identityModel.services>  
 ```  
   
-## 本节内容  
- [\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)提供了配置，使应用程序中的 WIF 选项。  
+## <a name="in-this-section"></a>本节内容  
+ [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 提供用于在应用程序中启用 WIF 选项的配置。  
   
- [\<system.identityModel.services\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)提供了配置为使用 WIF 的被动联盟。  配置会话的身份验证模块 \(SAM\) 和联合身份验证模块 \(WSFAM\)。  
+ [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 提供使用 WIF 的被动联合的配置。 配置会话身份验证模块 (SAM) 和联合身份验证模块 (WSFAM)。  
   
-## 相关章节  
- [Configuration, Administration, And Management](http://msdn.microsoft.com/zh-cn/1e03c389-de2c-4096-aaff-86b087e1bea0)描述如何配置和管理 WIF 应用程序和服务。
+## <a name="related-sections"></a>相关章节  
+ [配置和管理](http://msdn.microsoft.com/en-us/1e03c389-de2c-4096-aaff-86b087e1bea0)描述如何配置和管理 WIF 应用程序与服务。
+

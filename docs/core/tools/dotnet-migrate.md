@@ -1,28 +1,26 @@
 ---
-title: "dotnet-migrate 命令 - .NET Core CLI"
-description: "dotnet-migrate 命令可迁移项目及其所有依赖项。"
-keywords: "dotnet-migrate, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+title: "dotnet migrate 命令 - .NET Core CLI"
+description: "dotnet migrate 命令可迁移项目及其所有依赖项。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8491d69b2e0df7b3bd2741e34abdb9631777019
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-migrate"></a>dotnet migrate
 
-# <a name="dotnet-migrate"></a>dotnet-migrate
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>名称
 
-`dotnet-migrate` - 将预览版 2 .NET Core 项目迁移到 .NET Core SDK 1.0 项目。
+`dotnet migrate` - 将预览版 2 .NET Core 项目迁移到 .NET Core SDK 1.0 项目。
 
 ## <a name="synopsis"></a>摘要
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 07/28/2017
 * 一个 *solution.sln* 文件，它迁移在解决方案中引用的项目。
 * 以递归方式迁移给定目录的所有子目录。
 
-`dotnet migrate` 命令将迁移的 *project.json* 文件保存在 `backup` 目录中，如果该目录不存在，将创建一个。 使用 `--skip-backup` 选项重写此行为。 
+`dotnet migrate` 命令将迁移的 *project.json* 文件保存在 `backup` 目录中，如果该目录不存在，将创建一个。 使用 `--skip-backup` 选项重写此行为。
 
 默认情况下，迁移操作会将迁移过程的状态输出到标准输出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 选项，输出将保存到指定的文件中。 
 
@@ -64,11 +62,11 @@ ms.lasthandoff: 07/28/2017
 
 `-h|--help`
 
-打印出有关命令的简短帮助。  
+打印出有关命令的简短帮助。
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-用于迁移的模板 csproj 文件。 默认情况下，使用与被 `dotnet new console` 删除的模板相同的模板。 
+用于迁移的模板 csproj 文件。 默认情况下，使用与被 `dotnet new console` 删除的模板相同的模板。
 
 `-v|--sdk-package-version <VERSION>`
 
@@ -107,4 +105,3 @@ ms.lasthandoff: 07/28/2017
 仅迁移当前项目，不迁移项目到项目 (P2P) 的依赖项。 此外，使用特定的 SDK 版本：
 
 `dotnet migrate -s -v 1.0.0-preview4`
-
