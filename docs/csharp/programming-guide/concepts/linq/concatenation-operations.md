@@ -39,7 +39,7 @@ ms.lasthandoff: 07/28/2017
   
 |方法名|描述|C# 查询表达式语法|更多信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|连接两个序列以组成一个序列。|不适用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=fullName>|  
+|Concat|连接两个序列以组成一个序列。|不适用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Linq>   

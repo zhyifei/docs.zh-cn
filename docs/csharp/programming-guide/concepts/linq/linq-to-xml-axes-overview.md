@@ -37,34 +37,34 @@ ms.lasthandoff: 07/28/2017
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|返回此元素的上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些上级具有指定的 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName>|返回此元素的子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些子代具有指定的 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|返回此元素的子元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回子元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些子元素具有指定的 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName>|返回此元素之后的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回此元素之后的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，此元素之后的这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>|返回此元素之前的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回此元素之前的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，此元素之前的这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|返回此元素及其上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName>|返回此元素及其子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|返回此元素的上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些上级具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|返回此元素的子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些子代具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|返回此元素的子元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回子元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些子元素具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|返回此元素之后的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回此元素之后的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，此元素之后的这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|返回此元素之前的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回此元素之前的元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，此元素之前的这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|返回此元素及其上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|返回此元素及其子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回元素的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些元素具有指定的 <xref:System.Xml.Linq.XName>。|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>用于检索单个元素的方法  
  下面的方法从 <xref:System.Xml.Linq.XElement> 对象中检索单个子级。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>|返回具有指定 <xref:System.Xml.Linq.XElement> 的第一个子 <xref:System.Xml.Linq.XName> 对象。|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|返回具有指定 <xref:System.Xml.Linq.XElement> 的第一个子 <xref:System.Xml.Linq.XName> 对象。|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>用于检索属性集合的方法  
  下面的方法从 <xref:System.Xml.Linq.XElement> 对象中检索属性。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|返回所有属性的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XAttribute>。|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|返回所有属性的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XAttribute>。|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>用于检索单个属性的方法  
  下面的方法从 <xref:System.Xml.Linq.XElement> 对象中检索单个属性。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>|返回具有指定 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|返回具有指定 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ to XML 轴 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

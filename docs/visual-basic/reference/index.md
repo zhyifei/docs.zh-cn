@@ -52,10 +52,10 @@ ms.lasthandoff: 07/28/2017
  提供了到完整 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言规范的链接，该规范包含了语言各个方面的详细信息。  
   
 ## <a name="reference"></a>参考  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  此命名空间包含 Visual Basic Power Pack 控件的类。 Visual Basic Power Packs 控件是附加的 Windows 窗体控件。  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  此命名空间提供了一个组件，使你能够打印出屏幕上出现的窗体的传真。  
   
 ## <a name="related-sections"></a>相关章节  
