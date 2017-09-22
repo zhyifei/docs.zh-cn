@@ -38,13 +38,13 @@ ms.lasthandoff: 07/28/2017
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>用于填充 XML 树的方法的行为  
  <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于填充 XML 树。 可以从文件、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader> 或字符串填充 XML 树：  
   
--   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
  如果方法不采用 <xref:System.Xml.Linq.LoadOptions> 作为参数，则该方法将不会保留无意义的空白。  
   

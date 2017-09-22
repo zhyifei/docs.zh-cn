@@ -39,10 +39,10 @@ LINQ 中的分区是指将输入序列划分为两个部分的操作，无需重
   
 |运算符名称|描述|C# 查询表达式语法|详细信息|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|跳过序列中指定位置之前的元素。|不适用。|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=fullName>|  
-|SkipWhile|基于谓词函数跳过元素，直到元素不符合条件。|不适用。|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=fullName>|  
-|Take|获取序列中指定位置之前的元素。|不适用。|<xref:System.Linq.Enumerable.Take%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=fullName>|  
-|TakeWhile|基于谓词函数获取元素，直到元素不符合条件。|不适用。|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=fullName>|  
+|Skip|跳过序列中指定位置之前的元素。|不适用。|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|SkipWhile|基于谓词函数跳过元素，直到元素不符合条件。|不适用。|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|Take|获取序列中指定位置之前的元素。|不适用。|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|TakeWhile|基于谓词函数获取元素，直到元素不符合条件。|不适用。|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Linq>   

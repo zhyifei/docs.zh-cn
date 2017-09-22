@@ -76,10 +76,10 @@ ms.lasthandoff: 08/21/2017
   
 |类|说明|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|表示 Windows NT 性能计数器组件。 使用此类可读取现有预定义或自定义计数器，并向自定义计数器发布（写入）性能数据。|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|提供与计数器交互的几种方法以及计算机上计数器的类别。|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|指定 `PerformanceCounter` 组件的安装程序。|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|为 `NextValue` 指定用于计算 `PerformanceCounter`的方法。|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|表示 Windows NT 性能计数器组件。 使用此类可读取现有预定义或自定义计数器，并向自定义计数器发布（写入）性能数据。|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|提供与计数器交互的几种方法以及计算机上计数器的类别。|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 组件的安装程序。|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|为 `NextValue` 指定用于计算 `PerformanceCounter`的方法。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)

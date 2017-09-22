@@ -45,13 +45,13 @@ ms.lasthandoff: 08/21/2017
 ## <a name="trace-levels"></a>跟踪级别  
  使用 TraceSwitch **T:System.Diagnostics.Switch**时，存在其他注意事项。 TraceSwitch **T:System.Diagnostics.Switch** 对象具有四个属性，这四个属性返回指示开关是否设置为至少一个特殊级别的 **Boolean** 值：  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  通过设置级别，可以将接收的跟踪信息数量限制为仅解决问题所需的信息。 通过将跟踪开关设置和配置为相应的跟踪级别，可以指定跟踪输出的详细级别。 可以选择接收错误消息、警告消息、信息性消息、详细跟踪消息，也可以选择不接收任何消息。  
   

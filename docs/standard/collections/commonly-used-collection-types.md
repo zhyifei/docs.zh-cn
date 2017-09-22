@@ -50,19 +50,19 @@ ms.lasthandoff: 09/06/2017
 |[泛型](../../../docs/standard/generics/index.md)|描述泛型功能，包括 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的泛型集合、委托和接口。 为 C#、Visual Basic 和 Visual C++ 提供功能文档链接和支持技术（如反射）链接。|  
   
 ## <a name="reference"></a>参考  
- <xref:System.Collections?displayProperty=fullName>  
+ <xref:System.Collections?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic?displayProperty=fullName>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
   
- <xref:System.Collections.ICollection?displayProperty=fullName>  
+ <xref:System.Collections.ICollection?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IList?displayProperty=fullName>  
+ <xref:System.Collections.IList?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.IList%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IDictionary?displayProperty=fullName>  
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 

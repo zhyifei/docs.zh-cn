@@ -53,21 +53,21 @@ ms.lasthandoff: 09/05/2017
 |[弱引用](../../../docs/standard/garbage-collection/weak-references.md)|描述允许应用程序访问对象的同时也允许垃圾回收器收集相应对象的功能。|  
   
 ## <a name="reference"></a>参考  
- <xref:System.GC?displayProperty=fullName>  
+ <xref:System.GC?displayProperty=nameWithType>  
   
- <xref:System.GCCollectionMode?displayProperty=fullName>  
+ <xref:System.GCCollectionMode?displayProperty=nameWithType>  
   
- <xref:System.GCNotificationStatus?displayProperty=fullName>  
+ <xref:System.GCNotificationStatus?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCLatencyMode?displayProperty=fullName>  
+ <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>  
   
- <xref:System.Object.Finalize%2A?displayProperty=fullName>  
+ <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
   
- <xref:System.IDisposable?displayProperty=fullName>  
+ <xref:System.IDisposable?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>另请参阅  
  [Cleaning Up Unmanaged Resources](../../../docs/standard/garbage-collection/unmanaged.md)（清理未托管资源）

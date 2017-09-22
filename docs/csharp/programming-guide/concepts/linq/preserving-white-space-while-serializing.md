@@ -36,13 +36,13 @@ ms.lasthandoff: 07/28/2017
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>用于序列化 XML 树的方法的空白行为  
  <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于序列化 XML 树。 可以将 XML 树序列化为文件、<xref:System.IO.TextReader> 或 <xref:System.Xml.XmlReader>。 `ToString` 方法序列化为字符串。  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=nameWithType>  
   
  如果方法不接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么该方法将格式化（缩进）序列化的 XML。 在这种情况下，将丢弃 XML 树中所有无意义的空白。  
   
