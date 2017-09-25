@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e499ade5ec8a9339b0d425c59809cf7c177466fb
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 796a904ec40dd8cdf59f093a4b89d7a2e1f99005
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="extern-c-reference"></a>extern（C# 参考）
@@ -96,7 +96,7 @@ public class MainClass
  3. 从 Visual Studio 安装目录打开一个 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过键入以下内容来编译 `cm.cs` 文件：  
   
 > **csc cm.cs**（针对 x64 命令提示符）   
->  -或-  
+>  - 或 -  
 > **csc /platform:x86 cm.cs**（针对 x32 命令提示符）  
   
  这将创建可执行文件 `cm.exe`。  
@@ -111,7 +111,7 @@ SampleMethod() returns 50.
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>   
+ <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>   
  [C# 参考](../../../csharp/language-reference/index.md)   
  [C# 编程指南](../../../csharp/programming-guide/index.md)   
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)   

@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 77f44a43b80c4cf1f12baadaaf6861b3b53244d9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="throw-c-reference"></a>throw（C# 参考）
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 ```csharp
 throw [e]
 ```
-`e` 是一个派生自 <xref:System.Exception?displayProperty=fullName> 的类的实例。 下例使用 `throw` 语句在传递给名为 `GetNumber` 的方法的参数与内部数组的有效索引不对应时引发 @System.IndexOutOfRangeException。
+`e` 是一个派生自 <xref:System.Exception?displayProperty=nameWithType> 的类的实例。 下例使用 `throw` 语句在传递给名为 `GetNumber` 的方法的参数与内部数组的有效索引不对应时引发 @System.IndexOutOfRangeException。
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 

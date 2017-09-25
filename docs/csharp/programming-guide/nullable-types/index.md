@@ -30,16 +30,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 56e22638457017688ff380f6683b463b47c53a17
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 6d99bffc74cbcce04d725b8f225a4a4b175973be
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="nullable-types-c-programming-guide"></a>可以为 null 的类型（C# 编程指南）
-可以为 null 的类型是 <xref:System.Nullable%601?displayProperty=fullName> 结构的实例。 可以为 null 的类型可以表示基础值类型正常范围内的值，再加上一个 `null` 值。 例如，`Nullable<Int32>` 读作“可以为 null 的 Int32”，可以将 -2147483648 到 2147483647 之间的任意值赋值给它，也可以将 `null` 赋值给它。 可以将 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 赋值给 `Nullable<bool>`。 处理数据库和其他包含不可赋值的元素的数据类型时，能够将 `null` 赋值给数值类型和布尔类型会特别有用。 例如，数据库中的布尔字段可以存储值 `true` 或 `false`，也可以处于未定义状态。 
+可以为 null 的类型是 <xref:System.Nullable%601?displayProperty=nameWithType> 结构的实例。 可以为 null 的类型可以表示基础值类型正常范围内的值，再加上一个 `null` 值。 例如，`Nullable<Int32>` 读作“可以为 null 的 Int32”，可以将 -2147483648 到 2147483647 之间的任意值赋值给它，也可以将 `null` 赋值给它。 可以将 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 赋值给 `Nullable<bool>`。 处理数据库和其他包含不可赋值的元素的数据类型时，能够将 `null` 赋值给数值类型和布尔类型会特别有用。 例如，数据库中的布尔字段可以存储值 `true` 或 `false`，也可以处于未定义状态。 
   
-[!code-cs[可以为 null 的类型](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 有关更多示例，请参阅[使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
@@ -52,13 +52,13 @@ ms.lasthandoff: 09/02/2017
   
 -   向可以为 null 的类型赋值的方法与向一般值类型赋值的方法相同，如 `int? x = 10;` 或 `double? d = 4.108`。 也能够向可以为 null 的类型赋值 `null`：`int? x = null.`  
   
--   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName> 方法可返回分配的值或基础类型的默认值（如果值为 `null` 的话）。例如，`int j = x.GetValueOrDefault();`  
+-   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 方法可返回分配的值或基础类型的默认值（如果值为 `null` 的话）。例如，`int j = x.GetValueOrDefault();`  
   
 -   使用 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 只读属性可测试是否存在 null 值并检索值，如以下示例所示：`if(x.HasValue) j = x.Value;`  
   
     -   如果变量包含值，则 `HasValue` 属性返回 `true`；如果值为 `null`，则返回 `false`。  
   
-    -   如果已赋值，则 `Value` 属性返回值。 否则，将会引发 <xref:System.InvalidOperationException?displayProperty=fullName>。  
+    -   如果已赋值，则 `Value` 属性返回值。 否则，将会引发 <xref:System.InvalidOperationException?displayProperty=nameWithType>。  
   
     -   `HasValue` 的默认值为 `false`。 `Value` 属性没有默认值。  
   
