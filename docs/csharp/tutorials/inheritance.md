@@ -135,7 +135,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 受保护 <xref:System.Object.Finalize%2A> 方法：用于在垃圾回收器回收对象的内存之前释放非托管资源。
 
-- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的卷影克隆。
+- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的浅拷贝。
 
 由于是隐式继承，因此我们可以调用 `SimpleClass` 对象中任何继承的成员，就像它实际上是 `SimpleClass` 类中定义的成员一样。 例如，下面的示例调用 `SimpleClass` 从 <xref:System.Object> 继承而来的 `SimpleClass.ToString` 方法。
 
@@ -183,7 +183,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   为了最大限度地提高代码重用性并创建合乎逻辑的直观继承层次结构，我们希望确保在 `Publication` 类中只添加所有或大多数出版物通用的数据和功能。 然后，派生类可以实现所表示的特定出版物种类的唯一成员。
 
-- 类层次结构的扩展空间大小。 要开发包含三个或多个类的层次结构，而不是仅包含一个基类和一个或多个派生类？ 例如，`Publication` 可以是 `Periodical` 的基类，同时又是 `Magazine`、`Journal` 和 `Newspaper` 的基类。
+- 类层次结构的扩展空间大小。 是否要开发包含三个或多个类的层次结构，而不是仅包含一个基类和一个或多个派生类？ 例如，`Publication` 可以是 `Periodical` 的基类，同时又是 `Magazine`、`Journal` 和 `Newspaper` 的基类。
 
   在我们的示例中，我们将使用包含 `Publication` 类和一个派生类 `Book` 的简单层次结构。 我们可以将此示例轻松扩展为创建其他许多派生自 `Publication` 的类，如 `Magazine` 和 `Article`。
 
