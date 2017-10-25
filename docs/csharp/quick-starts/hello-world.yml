@@ -1,0 +1,178 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: '<span data-ttu-id="66180-101">C# 初探</span><span class="sxs-lookup"><span data-stu-id="66180-101">Hello C#</span></span>'
+metadata:
+  title: '<span data-ttu-id="66180-102">C# 初探。</span><span class="sxs-lookup"><span data-stu-id="66180-102">Hello C#.</span></span> <span data-ttu-id="66180-103">读者最先查看的 C# 语言简介。</span><span class="sxs-lookup"><span data-stu-id="66180-103">Your first introduction to the C# language.</span></span>'
+  description: '<span data-ttu-id="66180-104">在本教程中，读者将使用浏览器通过交互方式了解 C#。</span><span class="sxs-lookup"><span data-stu-id="66180-104">In this tutorial, you''ll use your browser to learn C# interactively.</span></span> <span data-ttu-id="66180-105">读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。</span><span class="sxs-lookup"><span data-stu-id="66180-105">You write C# code and see the results of compiling and running your code directly in the browser.</span></span>'
+  audience: Developer
+  level: Beginner
+  nextTutorialHref: numbers-in-csharp
+  nextTutorialTitle: 'Numbers in C#'
+  displayType: two-column
+  interactive: csharp
+items:
+  - durationInMinutes: 1
+    content: |
+      <span data-ttu-id="66180-106">本教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。</span><span class="sxs-lookup"><span data-stu-id="66180-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="66180-107">具体包含一系列课程，最先介绍的就是“Hello World”程序。</span><span class="sxs-lookup"><span data-stu-id="66180-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="66180-108">这些课程介绍了 C# 语言的基础知识。</span><span class="sxs-lookup"><span data-stu-id="66180-108">These lessons teach you the fundamentals of the C# language.</span></span>
+  - title: '<span data-ttu-id="66180-109">运行首个 C# 程序</span><span class="sxs-lookup"><span data-stu-id="66180-109">Run your first C# program</span></span>'
+    durationInMinutes: 2
+    content: |
+      <span data-ttu-id="66180-110">在交互式窗口中，运行以下代码。</span><span class="sxs-lookup"><span data-stu-id="66180-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="66180-111">为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：</span><span class="sxs-lookup"><span data-stu-id="66180-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+
+      ```csharp
+      Console.WriteLine("Hello World!");
+      ```
+
+      <span data-ttu-id="66180-112">祝贺你！</span><span class="sxs-lookup"><span data-stu-id="66180-112">Congratulations!</span></span> <span data-ttu-id="66180-113">已运行首个 C# 程序。</span><span class="sxs-lookup"><span data-stu-id="66180-113">You've run your first C# program.</span></span> <span data-ttu-id="66180-114">这是一个简单程序，可输出消息“Hello World!”。</span><span class="sxs-lookup"><span data-stu-id="66180-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="66180-115">它使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法打印此消息。</span><span class="sxs-lookup"><span data-stu-id="66180-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="66180-116">`Console` 是表示控制台窗口的类型。</span><span class="sxs-lookup"><span data-stu-id="66180-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="66180-117">`WriteLine` 是 `Console` 类型的方法，负责将文本行打印到文本控制台。</span><span class="sxs-lookup"><span data-stu-id="66180-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
+
+      <span data-ttu-id="66180-118">接下来，将继续进一步探索。</span><span class="sxs-lookup"><span data-stu-id="66180-118">Let's move on and explore more.</span></span> <span data-ttu-id="66180-119">本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。</span><span class="sxs-lookup"><span data-stu-id="66180-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="66180-120">与 `Console` 类型一样，`string` 类型也包含方法。</span><span class="sxs-lookup"><span data-stu-id="66180-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="66180-121">`string` 方法处理的是文本。</span><span class="sxs-lookup"><span data-stu-id="66180-121">The `string` methods work with text.</span></span> 
+
+      > [!NOTE]
+      > <span data-ttu-id="66180-122">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="66180-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="66180-123">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="66180-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="66180-124">声明和使用变量</span><span class="sxs-lookup"><span data-stu-id="66180-124">Declare and use variables</span></span>
+    durationInMinutes: 3
+    content: |
+      <span data-ttu-id="66180-125">首个程序在屏幕上打印出了 `string`“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="66180-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="66180-126">。</span><span class="sxs-lookup"><span data-stu-id="66180-126">on the screen.</span></span> 
+
+      > [!TIP]
+      > <span data-ttu-id="66180-127">在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。</span><span class="sxs-lookup"><span data-stu-id="66180-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="66180-128">编译器会发现并报告这些错误。</span><span class="sxs-lookup"><span data-stu-id="66180-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="66180-129">如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。</span><span class="sxs-lookup"><span data-stu-id="66180-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+      > <span data-ttu-id="66180-130">这样做有助于了解 C# 代码结构。</span><span class="sxs-lookup"><span data-stu-id="66180-130">That exercise will help you learn the structure of C# code.</span></span> 
+
+      <span data-ttu-id="66180-131">首个程序只能打印一条消息。</span><span class="sxs-lookup"><span data-stu-id="66180-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="66180-132">可以使用变量编写更实用的程序。</span><span class="sxs-lookup"><span data-stu-id="66180-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="66180-133">借助变量符号，可以使用不同的值运行同一代码。</span><span class="sxs-lookup"><span data-stu-id="66180-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="66180-134">试一试吧！</span><span class="sxs-lookup"><span data-stu-id="66180-134">Let's try it!</span></span> <span data-ttu-id="66180-135">将在交互式窗口中已编写的代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-135">Replace the code you've written in the interactive window with the following code:</span></span>
+
+      ```csharp
+      string aFriend = "Bill";
+      Console.WriteLine(aFriend);
+      ```
+
+      <span data-ttu-id="66180-136">第一行代码声明变量 `aFriend`，并为它分配值“Bill”。</span><span class="sxs-lookup"><span data-stu-id="66180-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="66180-137">第二行代码打印出姓名。</span><span class="sxs-lookup"><span data-stu-id="66180-137">The second line prints out the name.</span></span>
+
+      <span data-ttu-id="66180-138">可以向声明的任何变量分配不同的值。</span><span class="sxs-lookup"><span data-stu-id="66180-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="66180-139">可以将姓名更改为自己一个好友的姓名。</span><span class="sxs-lookup"><span data-stu-id="66180-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="66180-140">在交互式窗口中已添加的代码后面，添加以下两行代码：</span><span class="sxs-lookup"><span data-stu-id="66180-140">Add these two lines in the interactive window following the code you've already added:</span></span>
+
+      ```csharp
+      aFriend = "Maria";
+      Console.WriteLine(aFriend);
+      ```
+
+      <span data-ttu-id="66180-141">可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。</span><span class="sxs-lookup"><span data-stu-id="66180-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
+
+      <span data-ttu-id="66180-142">可能还会注意到，最后两条消息中没有“Hello”一词。</span><span class="sxs-lookup"><span data-stu-id="66180-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="66180-143">现在就来解决一下这个问题。</span><span class="sxs-lookup"><span data-stu-id="66180-143">Let's fix that now.</span></span>  <span data-ttu-id="66180-144">将负责打印消息的代码行修改为以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-144">Modify the lines that print the message to the following:</span></span>
+
+      ```csharp
+      Console.WriteLine("Hello " + aFriend);
+      ```
+
+      <span data-ttu-id="66180-145">再次单击“运行”，看看结果如何。</span><span class="sxs-lookup"><span data-stu-id="66180-145">Click **Run** again to see the results.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="66180-146">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="66180-146">This online coding experience is in preview mode.</span></span> <span data-ttu-id="66180-147">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="66180-147">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="66180-148">使用字符串</span><span class="sxs-lookup"><span data-stu-id="66180-148">Work with strings</span></span>
+    durationInMinutes: 5
+    content: |
+      <span data-ttu-id="66180-149">上次编辑是对字符串用途的初探。</span><span class="sxs-lookup"><span data-stu-id="66180-149">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="66180-150">接下来，将进一步探索。</span><span class="sxs-lookup"><span data-stu-id="66180-150">Let's explore more.</span></span>
+
+      <span data-ttu-id="66180-151">`+` 是 C# 运算符。</span><span class="sxs-lookup"><span data-stu-id="66180-151">The `+` is called an operator in C#.</span></span> <span data-ttu-id="66180-152">如果应用于字符串（如 `firstString + secondString`），则会新建一个字符串，内含第一个字符串的文本，后跟第二个字符串的文本。</span><span class="sxs-lookup"><span data-stu-id="66180-152">When applied to strings like `firstString + secondString`, a new string is created with the text from the first followed by the text from the second.</span></span> <span data-ttu-id="66180-153">这称为“字符串串联”。</span><span class="sxs-lookup"><span data-stu-id="66180-153">This is referred to as *string concatenation*.</span></span> <span data-ttu-id="66180-154">可以组合任意数量的字符串，包括字符串变量。</span><span class="sxs-lookup"><span data-stu-id="66180-154">You can combine any number of strings, including string variables.</span></span>  <span data-ttu-id="66180-155">试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-155">Try this:</span></span>
+
+      ```csharp
+      string firstFriend = "Maria";
+      string secondFriend = "Sage";
+      Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
+      ```
+
+      <span data-ttu-id="66180-156">在进一步探索字符串的过程中，发现可以使用 `Length` 确定字符串长度。</span><span class="sxs-lookup"><span data-stu-id="66180-156">As you explore more with strings, you can find the length of a string using `Length`.</span></span> <span data-ttu-id="66180-157">`Length` 是字符串属性，可返回字符串中的字符数。</span><span class="sxs-lookup"><span data-stu-id="66180-157">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="66180-158">在交互式窗口的底部，添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-158">Add the following code at the bottom of the interactive window:</span></span>
+
+      ```csharp
+      Console.WriteLine("The name " + firstFriend + " has " + firstFriend.Length + " letters.");
+      Console.WriteLine("The name " + secondFriend + " has " + secondFriend.Length + " letters.");
+      ```
+
+      > [!TIP]
+      > <span data-ttu-id="66180-159">这是自行探索的良好时机。</span><span class="sxs-lookup"><span data-stu-id="66180-159">This is a good time to explore on your own.</span></span> <span data-ttu-id="66180-160">已了解到，`Console.WriteLine()` 将文本写入屏幕。</span><span class="sxs-lookup"><span data-stu-id="66180-160">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="66180-161">也已学习了如何声明变量，以及如何串联字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-161">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="66180-162">在交互式窗口中试一试吧。</span><span class="sxs-lookup"><span data-stu-id="66180-162">Experiment in the interactive window.</span></span> <span data-ttu-id="66180-163">试着自已编写其他一些消息。</span><span class="sxs-lookup"><span data-stu-id="66180-163">Write some more messages yourself.</span></span> <span data-ttu-id="66180-164">使用 `+` 运算符生成字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-164">Build strings using the `+` operator.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="66180-165">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="66180-165">This online coding experience is in preview mode.</span></span> <span data-ttu-id="66180-166">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="66180-166">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="66180-167">发掘字符串的更多精彩用途</span><span class="sxs-lookup"><span data-stu-id="66180-167">Do more with strings</span></span>
+    durationInMinutes: 5
+    content: |
+      <span data-ttu-id="66180-168">一直在使用方法 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 打印消息。</span><span class="sxs-lookup"><span data-stu-id="66180-168">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="66180-169">方法是用于实现某操作的代码块。</span><span class="sxs-lookup"><span data-stu-id="66180-169">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="66180-170">它有名称，这样就可以访问方法了。</span><span class="sxs-lookup"><span data-stu-id="66180-170">It has a name, so you can access it.</span></span> 
+
+      <span data-ttu-id="66180-171">`string` 类型包含许多实用方法。</span><span class="sxs-lookup"><span data-stu-id="66180-171">The `string` type has many useful methods.</span></span> <span data-ttu-id="66180-172">接下来，将探索 <xref:System.String.Trim%2A> 方法及相关方法 <xref:System.String.TrimStart%2A> 和 <xref:System.String.TrimEnd%2A>。</span><span class="sxs-lookup"><span data-stu-id="66180-172">Let's explore the <xref:System.String.Trim%2A> method, and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A>.</span></span> <span data-ttu-id="66180-173">这些方法用于删除前导空格和尾随空格：</span><span class="sxs-lookup"><span data-stu-id="66180-173">These methods remove leading and trailing spaces:</span></span>
+
+      ```csharp
+      string message = "      Hello World!       ";
+      Console.WriteLine("[" + message + "]");
+
+      string trimmedMessage = message.TrimStart();
+      Console.WriteLine("[" + trimmedMessage + "]");
+
+      trimmedMessage = message.TrimEnd();
+      Console.WriteLine("[" + trimmedMessage + "]");
+
+      trimmedMessage = message.Trim();
+      Console.WriteLine("[" + trimmedMessage + "]");
+      ```
+
+      <span data-ttu-id="66180-174">此示例强调了使用字符串时需要注意的几个重要概念。</span><span class="sxs-lookup"><span data-stu-id="66180-174">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="66180-175">控制字符串的方法返回的是新字符串对象，而不是就地进行修改。</span><span class="sxs-lookup"><span data-stu-id="66180-175">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="66180-176">可以看到，对任何 `Trim` 方法的所有调用都是返回新字符串，而不是更改原始消息。</span><span class="sxs-lookup"><span data-stu-id="66180-176">You can see that each call to any of the `Trim` methods returns a new string, but does not change the original message.</span></span>
+
+      <span data-ttu-id="66180-177">还可以通过其他方法使用字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-177">There are other methods available to work with a string.</span></span> <span data-ttu-id="66180-178">例如，可能已在编辑器或字处理器中使用了搜索和替换命令。</span><span class="sxs-lookup"><span data-stu-id="66180-178">For example, you've probably used a search and replace command in an editor or word processor.</span></span> <span data-ttu-id="66180-179"><xref:System.String.Replace%2A> 方法在 `string` 中执行类似操作。</span><span class="sxs-lookup"><span data-stu-id="66180-179">The <xref:System.String.Replace%2A> method does something similar in a `string`.</span></span> <span data-ttu-id="66180-180">此方法搜索子字符串，并将它替换为其他文本。</span><span class="sxs-lookup"><span data-stu-id="66180-180">It searches for a substring, and replaces it with different text.</span></span> <span data-ttu-id="66180-181"><xref:System.String.Replace%2A> 方法需要使用两个参数。</span><span class="sxs-lookup"><span data-stu-id="66180-181">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="66180-182">这两个字符串用括号括住。</span><span class="sxs-lookup"><span data-stu-id="66180-182">These are the strings between the parentheses.</span></span> <span data-ttu-id="66180-183">第一个字符串是要搜索的文本。</span><span class="sxs-lookup"><span data-stu-id="66180-183">The first string is the text to search for.</span></span> <span data-ttu-id="66180-184">第二个字符串是替换后的文本。</span><span class="sxs-lookup"><span data-stu-id="66180-184">The second string is the text to replace it with.</span></span> <span data-ttu-id="66180-185">亲自试一试吧。</span><span class="sxs-lookup"><span data-stu-id="66180-185">Try it for yourself.</span></span> <span data-ttu-id="66180-186">添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-186">Add this code:</span></span>
+
+      ```csharp
+      string message = "Hello World!";
+      Console.WriteLine(message);
+      message = message.Replace("Hello", "Greetings");
+      Console.WriteLine(message);
+      ```
+
+      <span data-ttu-id="66180-187">还有两个实用方法，可以将字符串设为全部大写或小写。</span><span class="sxs-lookup"><span data-stu-id="66180-187">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="66180-188">试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-188">Try the following code:</span></span>
+
+      ```csharp
+      string message = "Hello World!";
+      Console.WriteLine(message);
+      Console.WriteLine(message.ToUpper());
+      Console.WriteLine(message.ToLower());
+      ```
+
+      > [!NOTE]
+      > <span data-ttu-id="66180-189">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="66180-189">This online coding experience is in preview mode.</span></span> <span data-ttu-id="66180-190">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="66180-190">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="66180-191">搜索字符串</span><span class="sxs-lookup"><span data-stu-id="66180-191">Search strings</span></span>
+    durationInMinutes: 10
+    content: |
+      <span data-ttu-id="66180-192">搜索和替换操作的另一方面是，查找字符串中的文本。</span><span class="sxs-lookup"><span data-stu-id="66180-192">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="66180-193">可以使用 <xref:System.String.Contains%2A> 方法进行搜索。</span><span class="sxs-lookup"><span data-stu-id="66180-193">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="66180-194">此方法可确定字符串是否包含子字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-194">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="66180-195">若要探索 <xref:System.String.Contains%2A>，请试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="66180-195">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
+
+      ```csharp
+      string message = "You say goodbye, and I say hello";
+      Console.WriteLine(message.Contains("goodbye"));
+      Console.WriteLine(message.Contains("greetings"));
+      ```
+
+      <span data-ttu-id="66180-196"><xref:System.String.Contains%2A> 方法返回布尔值，指明是否找到了要搜索的字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-196">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="66180-197">布尔变量存储 `true` 或 `false` 值。</span><span class="sxs-lookup"><span data-stu-id="66180-197">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="66180-198">今后推出的课程将详细介绍布尔值。</span><span class="sxs-lookup"><span data-stu-id="66180-198">You'll learn more about **boolean** values in a later lesson.</span></span>
+
+      <span data-ttu-id="66180-199">***挑战***</span><span class="sxs-lookup"><span data-stu-id="66180-199">***Challenge***</span></span>
+
+      <span data-ttu-id="66180-200">有两个类似方法 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，也可以在字符串中搜索子字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-200">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="66180-201">这些方法搜索字符串开头或结尾的子字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-201">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="66180-202">试着将上一示例修改为使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是使用 <xref:System.String.Contains%2A>。</span><span class="sxs-lookup"><span data-stu-id="66180-202">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="66180-203">搜索字符串开头是否有“You”或“goodbye”。</span><span class="sxs-lookup"><span data-stu-id="66180-203">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="66180-204">搜索字符串末尾是否有“hello”或“goodbye”。</span><span class="sxs-lookup"><span data-stu-id="66180-204">Search for "hello" or "goodbye" at the end of a string.</span></span>
+
+      > [!Note]
+      > <span data-ttu-id="66180-205">针对字符串结尾文本测试时，请注意标点符号。</span><span class="sxs-lookup"><span data-stu-id="66180-205">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="66180-206">如果字符串以句点结尾，必须检查是否有以句点结尾的字符串。</span><span class="sxs-lookup"><span data-stu-id="66180-206">If the string ends with a period, you must check for a string that ends with a period.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="66180-207">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="66180-207">This online coding experience is in preview mode.</span></span> <span data-ttu-id="66180-208">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="66180-208">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="66180-209">完成挑战</span><span class="sxs-lookup"><span data-stu-id="66180-209">Complete challenge</span></span>
+    durationInMinutes: 3
+    content: |
+      <span data-ttu-id="66180-210">最后是否生成如下代码？</span><span class="sxs-lookup"><span data-stu-id="66180-210">Did you come up with something like this?</span></span>
+
+      ```csharp
+      string message = "You say goodbye, and I say hello";
+      Console.WriteLine(message.StartsWith("You"));
+      Console.WriteLine(message.StartsWith("goodbye"));
+
+      Console.WriteLine(message.EndsWith("hello"));
+      Console.WriteLine(message.EndsWith("goodbye"));
+      ```
+
+      > [!NOTE]
+      > <span data-ttu-id="66180-211">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="66180-211">This online coding experience is in preview mode.</span></span> <span data-ttu-id="66180-212">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="66180-212">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - content: |
+      <span data-ttu-id="66180-213">已完成“C# 初探”教程。</span><span class="sxs-lookup"><span data-stu-id="66180-213">You've completed the "Hello C#" tutorial.</span></span>
+
+      <span data-ttu-id="66180-214">若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../programming-guide/strings/index.md)的 [C# 编程指南](../programming-guide/index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="66180-214">You can learn more about working with the `string` type in the [C# Programming Guide](../programming-guide/index.md) topic on [strings](../programming-guide/strings/index.md).</span></span>
