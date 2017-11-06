@@ -1,47 +1,28 @@
 ---
 title: "switch 关键字（C# 参考）"
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
 - switch
 - case
 - case_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - switch statement [C#]
 - switch keyword [C#]
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
-ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 `switch` 是一个选择语句，它根据与匹配表达式匹配的模式，从候选列表中选择单个开关部分进行执行。 
@@ -104,7 +85,7 @@ switch (caseSwitch)
 
 ## <a name="case-labels"></a>Case 标签
 
- 每个 case 标签指定一个模式与匹配表达式（前面示例中的 `caseSwitch` 变量）进行比较。 如果它们匹配，则将控件传输到包含**首次**匹配 case 标签的开关部分。 如果没有与匹配表达式匹配的 case 标签模式，则将控件传输到带有 `default` case 标签的部分（若有）。 如果没有 `default` case，将不会执行任何开关部分中的语句，并且会将控件传输到 `switch` 语句之外。
+ 每个 case 标签指定一个模式与匹配表达式（前面示例中的 `caseSwitch` 变量）进行比较。 如果它们匹配，则将控件传输到包含**首次**匹配 case 标签的开关部分。 如果 case 标签模式均不与匹配表达式相匹配，控件将传输到带 `default` case 标签的部分（如有）。 如果没有 `default` case，将不会执行任何开关部分中的语句，并且会将控件传输到 `switch` 语句之外。
 
  有关 `switch` 语句和模式匹配的信息，请参阅使用 `switch` 语句的 [模式匹配](#pattern)部分。
 
@@ -155,7 +136,7 @@ switch (caseSwitch)
 
 - 否则，由对静态 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法的调用确定表达式的值。  
 
-以下示例使用常量模式来确定特定日期是否为周末、工作周的第一天、工作周的最后一天或工作周的中间日期。 它根据 @System.DayOfWeek 枚举的成员计算当前日期的 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 属性。 
+以下示例使用常量模式来确定特定日期是否为周末、工作周的第一天、工作周的最后一天或工作周的中间日期。 它根据 <xref:System.DayOfWeek> 枚举的成员计算当前日期的 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 属性。 
 
 [!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
@@ -209,7 +190,7 @@ case null:
 请注意，不会执行尝试测试 `Shape` 对象是否为 `null` 的示例中的 `when` 子句。 测试是否为 `null` 的正确类型模式是 `case null:`。
 
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
 
@@ -221,4 +202,3 @@ case null:
  
 
  
-
