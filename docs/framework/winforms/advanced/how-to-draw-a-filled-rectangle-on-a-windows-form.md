@@ -1,47 +1,51 @@
 ---
-title: "如何：在 Windows 窗体上绘制实心矩形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Graphics.FillRectangle"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "绘制矩形"
-  - "绘图, 矩形"
-  - "矩形, 绘图"
+title: "如何：在 Windows 窗体上绘制实心矩形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: Graphics.FillRectangle
+helpviewer_keywords:
+- drawing [Windows Forms], rectangles
+- rectangles [Windows Forms], drawing
+- drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dce1a8d1070ed1d016da0c94c1f3ecc1ed9df389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体上绘制实心矩形
-此示例在窗体上绘制实心矩形。  
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a><span data-ttu-id="30334-102">如何：在 Windows 窗体上绘制实心矩形</span><span class="sxs-lookup"><span data-stu-id="30334-102">How to: Draw a Filled Rectangle on a Windows Form</span></span>
+<span data-ttu-id="30334-103">此示例窗体上绘制实心的矩形。</span><span class="sxs-lookup"><span data-stu-id="30334-103">This example draws a filled rectangle on a form.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="30334-104">示例</span><span class="sxs-lookup"><span data-stu-id="30334-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#2)]
  [!code-csharp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#2)]
  [!code-vb[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
   
-## 编译代码  
- 不能在 <xref:System.Windows.Forms.Form.Load> 事件处理程序中调用此方法。  如果已调整该窗体的大小或者其他窗体遮蔽了该窗体，则不会重绘所绘制的内容。  若要自动重绘内容，应该重写 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法。  
+## <a name="compiling-the-code"></a><span data-ttu-id="30334-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="30334-105">Compiling the Code</span></span>  
+ <span data-ttu-id="30334-106">无法调用此方法中<xref:System.Windows.Forms.Form.Load>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="30334-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="30334-107">不会重新绘制的内容的绘制，如果窗体调整大小或另一种形式被遮盖。</span><span class="sxs-lookup"><span data-stu-id="30334-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="30334-108">若要使你自动重绘的内容，则应重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="30334-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## 可靠编程  
- 对任何消耗系统资源的对象（如 <xref:System.Drawing.Brush> 和 <xref:System.Drawing.Graphics> 对象）都应调用 <xref:System.IDisposable.Dispose%2A>。  
+## <a name="robust-programming"></a><span data-ttu-id="30334-109">可靠编程</span><span class="sxs-lookup"><span data-stu-id="30334-109">Robust Programming</span></span>  
+ <span data-ttu-id="30334-110">始终应调用<xref:System.IDisposable.Dispose%2A>对任何对象所消耗的系统资源，如<xref:System.Drawing.Brush>和<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="30334-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## 请参阅  
- <xref:System.Drawing.Graphics.FillRectangle%2A>   
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- [图形编程入门](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [使用钢笔绘制线条和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
- [GDI\+ 中的画笔和实心形状](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="30334-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="30334-111">See Also</span></span>  
+ <xref:System.Drawing.Graphics.FillRectangle%2A>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ [<span data-ttu-id="30334-112">图形编程入门</span><span class="sxs-lookup"><span data-stu-id="30334-112">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="30334-113">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="30334-113">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="30334-114">使用笔绘制直线和形状</span><span class="sxs-lookup"><span data-stu-id="30334-114">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="30334-115">GDI+ 中的画笔和填充形状</span><span class="sxs-lookup"><span data-stu-id="30334-115">Brushes and Filled Shapes in GDI+</span></span>](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)

@@ -1,55 +1,60 @@
 ---
-title: "如何：使用 Windows 窗体计时器组件以设置的间隔运行过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], 计时器"
-  - "初始化, Timer 组件"
-  - "过程, 特定时间间隔"
-  - "Timer 组件 [Windows 窗体], 初始化"
-  - "计时器, 事件间隔"
-  - "计时器, 基于 Windows 的"
+title: "如何：使用 Windows 窗体计时器组件以设置的间隔运行过程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], timers
+- timers [Windows Forms], event intervals
+- initialization [Windows Forms], Timer components
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], initializing
+- procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
-有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。  <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a><span data-ttu-id="6d64c-102">如何：使用 Windows 窗体计时器组件以设置的间隔运行过程</span><span class="sxs-lookup"><span data-stu-id="6d64c-102">How to: Run Procedures at Set Intervals with the Windows Forms Timer Component</span></span>
+<span data-ttu-id="6d64c-103">有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。</span><span class="sxs-lookup"><span data-stu-id="6d64c-103">You might sometimes want to create a procedure that runs at specific time intervals until a loop has finished or that runs when a set time interval has elapsed.</span></span> <span data-ttu-id="6d64c-104"><xref:System.Windows.Forms.Timer> 组件可实现此过程。</span><span class="sxs-lookup"><span data-stu-id="6d64c-104">The <xref:System.Windows.Forms.Timer> component makes such a procedure possible.</span></span>  
   
- 此组件专为 Windows 窗体环境设计。  如果需要适用于服务器环境的计时器，请参阅[Introduction to Server\-Based Timers](http://msdn.microsoft.com/zh-cn/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+ <span data-ttu-id="6d64c-105">此组件专为 Windows 窗体环境设计。</span><span class="sxs-lookup"><span data-stu-id="6d64c-105">This component is designed for a Windows Forms environment.</span></span> <span data-ttu-id="6d64c-106">如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。</span><span class="sxs-lookup"><span data-stu-id="6d64c-106">If you need a timer that is suitable for a server environment, see [Introduction to Server-Based Timers](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span></span>  
   
 > [!NOTE]
->  使用 <xref:System.Windows.Forms.Timer> 组件时，有一些限制。  有关详细信息，请参阅 [Windows 窗体 Timer 组件的 Interval 属性的限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)。  
+>  <span data-ttu-id="6d64c-107">使用 <xref:System.Windows.Forms.Timer> 组件时，有一些限制。</span><span class="sxs-lookup"><span data-stu-id="6d64c-107">There are some limitations when using the <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="6d64c-108">有关详细信息，请参阅[的 Windows 窗体 Timer 组件的 Interval 属性限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)。</span><span class="sxs-lookup"><span data-stu-id="6d64c-108">For more information, see [Limitations of the Windows Forms Timer Component's Interval Property](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).</span></span>  
   
-### 若要使用 Timer 组件以设定间隔运行过程  
+### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a><span data-ttu-id="6d64c-109">若要使用 Timer 组件以设定间隔运行过程</span><span class="sxs-lookup"><span data-stu-id="6d64c-109">To run a procedure at set intervals with the Timer component</span></span>  
   
-1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。  请参阅下图中的示例，了解如何以编程方式执行此操作。  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 还支持将组件添加到窗体。  另请参阅[如何：向 Windows 窗体添加无用户界面的控件](http://msdn.microsoft.com/library/becyw7bz%20\(v=vs.110\))。  
+1.  <span data-ttu-id="6d64c-110">在窗体中添加 <xref:System.Windows.Forms.Timer>。</span><span class="sxs-lookup"><span data-stu-id="6d64c-110">Add a <xref:System.Windows.Forms.Timer> to your form.</span></span> <span data-ttu-id="6d64c-111">请参阅下图中的示例，了解如何以编程方式执行此操作。</span><span class="sxs-lookup"><span data-stu-id="6d64c-111">See the following Example section for an illustration of how to do this programmatically.</span></span> [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="6d64c-112"> 还支持将组件添加到窗体。</span><span class="sxs-lookup"><span data-stu-id="6d64c-112"> also has support for adding components to a form.</span></span> <span data-ttu-id="6d64c-113">另请参阅[如何： 添加控件无用户界面到 Windows 窗体](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="6d64c-113">Also see [How to: Add Controls Without a User Interface to Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).</span></span>  
   
-2.  设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。  此属性确定过程再次运行之前的时间间隔。  
+2.  <span data-ttu-id="6d64c-114">设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。</span><span class="sxs-lookup"><span data-stu-id="6d64c-114">Set the <xref:System.Windows.Forms.Timer.Interval%2A> property (in milliseconds) for the timer.</span></span> <span data-ttu-id="6d64c-115">此属性确定过程再次运行之前的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="6d64c-115">This property determines how much time will pass before the procedure is run again.</span></span>  
   
     > [!NOTE]
-    >  计时器事件的发生频率越高，处理器用于响应事件的时间越长。  这将会降低整体性能。  时间间隔必须设置为大于所需间隔。  
+    >  <span data-ttu-id="6d64c-116">计时器事件的发生频率越高，处理器用于响应事件的时间越长。</span><span class="sxs-lookup"><span data-stu-id="6d64c-116">The more often a timer event occurs, the more processor time is used in responding to the event.</span></span> <span data-ttu-id="6d64c-117">这将会降低整体性能。</span><span class="sxs-lookup"><span data-stu-id="6d64c-117">This can slow down overall performance.</span></span> <span data-ttu-id="6d64c-118">时间间隔必须设置为大于所需间隔。</span><span class="sxs-lookup"><span data-stu-id="6d64c-118">Do not set a smaller interval than you need.</span></span>  
   
-3.  在 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序中编写相应代码。  在此事件中编写的代码将以 <xref:System.Windows.Forms.Timer.Interval%2A> 属性中指定的间隔运行。  
+3.  <span data-ttu-id="6d64c-119">在 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序中编写相应代码。</span><span class="sxs-lookup"><span data-stu-id="6d64c-119">Write appropriate code in the <xref:System.Windows.Forms.Timer.Tick> event handler.</span></span> <span data-ttu-id="6d64c-120">在此事件中编写的代码将以 <xref:System.Windows.Forms.Timer.Interval%2A> 属性中指定的间隔运行。</span><span class="sxs-lookup"><span data-stu-id="6d64c-120">The code you write in this event will run at the interval specified in the <xref:System.Windows.Forms.Timer.Interval%2A> property.</span></span>  
   
-4.  将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true` 以启动计时器。  <xref:System.Windows.Forms.Timer.Tick> 事件将开始发生，进而以设定间隔运行过程。  
+4.  <span data-ttu-id="6d64c-121">将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true` 以启动计时器。</span><span class="sxs-lookup"><span data-stu-id="6d64c-121">Set the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `true` to start the timer.</span></span> <span data-ttu-id="6d64c-122"><xref:System.Windows.Forms.Timer.Tick> 事件将开始发生，进而以设定间隔运行过程。</span><span class="sxs-lookup"><span data-stu-id="6d64c-122">The <xref:System.Windows.Forms.Timer.Tick> event will begin to occur, running your procedure at the set interval.</span></span>  
   
-5.  在适当时间，将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`以阻止过程再次运行。  将间隔设置为 `0` 不会导致计时器停止。  
+5.  <span data-ttu-id="6d64c-123">在适当时间，将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`以阻止过程再次运行。</span><span class="sxs-lookup"><span data-stu-id="6d64c-123">At the appropriate time, set the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `false` to stop the procedure from running again.</span></span> <span data-ttu-id="6d64c-124">将间隔设置为`0`不会导致计时器停止。</span><span class="sxs-lookup"><span data-stu-id="6d64c-124">Setting the interval to `0` does not cause the timer to stop.</span></span>  
   
-## 示例  
- 第一个代码示例以一秒的增量跟踪每天的时间。  它使用窗体上的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 组件。  将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 1000（等于 1 秒）。  在 <xref:System.Windows.Forms.Timer.Tick> 事件中，将标签的标题设置为当前时间。  单击按钮时，<xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`，使计时器停止更新标签的标题。  下面的代码示例要求你拥有的窗体具有名为 `Button1` 的 <xref:System.Windows.Forms.Button> 控件、名为 `Timer1` 的 <xref:System.Windows.Forms.Timer> 控件和名为 `Label1` 的 <xref:System.Windows.Forms.Label> 控件。  
+## <a name="example"></a><span data-ttu-id="6d64c-125">示例</span><span class="sxs-lookup"><span data-stu-id="6d64c-125">Example</span></span>  
+ <span data-ttu-id="6d64c-126">第一个代码示例以一秒的增量跟踪每天的时间。</span><span class="sxs-lookup"><span data-stu-id="6d64c-126">This first code example tracks the time of day in one-second increments.</span></span> <span data-ttu-id="6d64c-127">它使用窗体上的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 组件。</span><span class="sxs-lookup"><span data-stu-id="6d64c-127">It uses a <xref:System.Windows.Forms.Button>, a <xref:System.Windows.Forms.Label>, and a <xref:System.Windows.Forms.Timer> component on a form.</span></span> <span data-ttu-id="6d64c-128">将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 1000（等于 1 秒）。</span><span class="sxs-lookup"><span data-stu-id="6d64c-128">The <xref:System.Windows.Forms.Timer.Interval%2A> property is set to 1000 (equal to one second).</span></span> <span data-ttu-id="6d64c-129">在 <xref:System.Windows.Forms.Timer.Tick> 事件中，将标签的标题设置为当前时间。</span><span class="sxs-lookup"><span data-stu-id="6d64c-129">In the <xref:System.Windows.Forms.Timer.Tick> event, the label's caption is set to the current time.</span></span> <span data-ttu-id="6d64c-130">单击按钮时，<xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`，使计时器停止更新标签的标题。</span><span class="sxs-lookup"><span data-stu-id="6d64c-130">When the button is clicked, the <xref:System.Windows.Forms.Timer.Enabled%2A> property is set to `false`, stopping the timer from updating the label's caption.</span></span> <span data-ttu-id="6d64c-131">下面的代码示例要求你拥有的窗体具有<xref:System.Windows.Forms.Button>控件名为`Button1`、<xref:System.Windows.Forms.Timer>控件名为`Timer1`，和一个<xref:System.Windows.Forms.Label>控件名为`Label1`。</span><span class="sxs-lookup"><span data-stu-id="6d64c-131">The following code example requires that you have a form with a <xref:System.Windows.Forms.Button> control named `Button1`, a <xref:System.Windows.Forms.Timer> control named `Timer1`, and a <xref:System.Windows.Forms.Label> control named `Label1`.</span></span>  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -75,7 +80,6 @@ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.Event
          Timer1.Enabled = True  
       End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -112,7 +116,6 @@ private void Button1_Click(object sender, EventArgs e)
     Timer1.Enabled = true;  
   }  
 }  
-  
 ```  
   
 ```cpp  
@@ -153,11 +156,10 @@ private:
          timer1->Enabled = true;  
       }  
    }  
-  
 ```  
   
-## 示例  
- 第二个代码示例每隔 600 毫秒运行一个过程，直至完成一个循环。  下面的代码示例要求你拥有的窗体具有名为 `Button1` 的 <xref:System.Windows.Forms.Button> 控件、名为 `Timer1` 的 <xref:System.Windows.Forms.Timer> 控件和名为 `Label1` 的 <xref:System.Windows.Forms.Label> 控件。  
+## <a name="example"></a><span data-ttu-id="6d64c-132">示例</span><span class="sxs-lookup"><span data-stu-id="6d64c-132">Example</span></span>  
+ <span data-ttu-id="6d64c-133">第二个代码示例每隔 600 毫秒运行一个过程，直至完成一个循环。</span><span class="sxs-lookup"><span data-stu-id="6d64c-133">This second code example runs a procedure every 600 milliseconds until a loop has finished.</span></span> <span data-ttu-id="6d64c-134">下面的代码示例要求你拥有的窗体具有<xref:System.Windows.Forms.Button>控件名为`Button1`、<xref:System.Windows.Forms.Timer>控件名为`Timer1`，和一个<xref:System.Windows.Forms.Label>控件名为`Label1`。</span><span class="sxs-lookup"><span data-stu-id="6d64c-134">The following code example requires that you have a form with a <xref:System.Windows.Forms.Button> control named `Button1`, a <xref:System.Windows.Forms.Timer> control named `Timer1`, and a <xref:System.Windows.Forms.Label> control named `Label1`.</span></span>  
   
 ```vb  
 ' This variable will be the loop counter.  
@@ -182,7 +184,6 @@ Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Han
       Label1.Text = "Procedures Run: " & counter.ToString  
    End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -215,7 +216,6 @@ private void timer1_Tick(object sender, System.EventArgs e)
       label1.Text = "Procedures Run: " + counter.ToString();  
       }  
 }  
-  
 ```  
   
 ```cpp  
@@ -252,7 +252,7 @@ private:
    }  
 ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.Timer>   
- [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
- [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6d64c-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6d64c-135">See Also</span></span>  
+ <xref:System.Windows.Forms.Timer>  
+ [<span data-ttu-id="6d64c-136">Timer 组件</span><span class="sxs-lookup"><span data-stu-id="6d64c-136">Timer Component</span></span>](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [<span data-ttu-id="6d64c-137">Timer 组件概述</span><span class="sxs-lookup"><span data-stu-id="6d64c-137">Timer Component Overview</span></span>](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

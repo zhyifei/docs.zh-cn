@@ -1,139 +1,145 @@
 ---
-title: "流提供程序（WCF 数据服务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "流数据提供程序 [WCF 数据服务]"
-  - "WCF 数据服务, 二进制数据"
-  - "WCF 数据服务, 提供程序"
-  - "WCF 数据服务, 流"
+title: "流提供程序（WCF 数据服务）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, providers
+- WCF Data Services, binary data
+- streaming data provider [WCF Data Services]
+- WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9185e02b812de6db885993cc4d151f0f857b00f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 流提供程序（WCF 数据服务）
-数据服务可公开二进制大型对象数据。  此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。  当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base\-64 编码形式返回此二进制数据。  由于以这种方式加载和序列化大型二进制数据会影响到性能，因此[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 定义了一种机制，该机制独立于二进制数据所属的实体来检索二进制数据。  这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  
+# <a name="streaming-provider-wcf-data-services"></a><span data-ttu-id="974fd-102">流提供程序（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="974fd-102">Streaming Provider (WCF Data Services)</span></span>
+<span data-ttu-id="974fd-103">数据服务可公开二进制大型对象数据。</span><span class="sxs-lookup"><span data-stu-id="974fd-103">A data service can expose large object binary data.</span></span> <span data-ttu-id="974fd-104">此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。</span><span class="sxs-lookup"><span data-stu-id="974fd-104">This binary data might represent video and audio streams, images, document files, or other types of binary media.</span></span> <span data-ttu-id="974fd-105">当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。</span><span class="sxs-lookup"><span data-stu-id="974fd-105">When an entity in the data model includes one or more binary properties, the data service returns this binary data encoded as base-64 inside the entry in the response feed.</span></span> <span data-ttu-id="974fd-106">加载和序列化大型二进制数据，这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。</span><span class="sxs-lookup"><span data-stu-id="974fd-106">Because loading and serializing large binary data in this manner can affect performance, the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] defines a mechanism for retrieving binary data independent of the entity to which it belongs.</span></span> <span data-ttu-id="974fd-107">这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。</span><span class="sxs-lookup"><span data-stu-id="974fd-107">This is accomplished by separating the binary data from the entity into one or more data streams.</span></span>  
   
--   媒体资源 \- 属于某个实体的二进制数据，例如视频、音频、图像或其他类型的媒体资源流。  
+-   <span data-ttu-id="974fd-108">媒体资源 - 属于某个实体的二进制数据，例如视频、音频、图像或其他类型的媒体资源流。</span><span class="sxs-lookup"><span data-stu-id="974fd-108">Media resource - binary data that belongs to an entity, such as a video, audio, image or other type of media resource stream.</span></span>  
   
--   媒体链接入口 \- 引用相关媒体资源流的实体。  
+-   <span data-ttu-id="974fd-109">媒体链接入口 - 引用相关媒体资源流的实体。</span><span class="sxs-lookup"><span data-stu-id="974fd-109">Media link entry - an entity that has a reference to a related media resource stream.</span></span>  
   
- 利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。  流提供程序实现以 <xref:System.IO.Stream> 对象的形式向数据服务提供与特定实体关联的媒体资源流。  有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。  
+ <span data-ttu-id="974fd-110">利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可通过实现流数据提供程序定义二进制资源流。</span><span class="sxs-lookup"><span data-stu-id="974fd-110">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you define a binary resource stream by implementing a streaming data provider.</span></span> <span data-ttu-id="974fd-111">流提供程序实现为数据服务提供与与为特定实体关联的媒体资源流<xref:System.IO.Stream>对象。</span><span class="sxs-lookup"><span data-stu-id="974fd-111">The streaming provider implementation supplies the data service with the media resource stream associated with a specific entity as an <xref:System.IO.Stream> object.</span></span> <span data-ttu-id="974fd-112">有了此实现，数据服务能够以指定 MIME 类型的二进制数据流的形式通过 HTTP 接受和返回媒体资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-112">This implementation enables the data service to accept and return media resources over HTTP as binary data streams of a specified MIME type.</span></span>  
   
- 将数据服务配置为支持二进制数据流需要以下步骤：  
+ <span data-ttu-id="974fd-113">将数据服务配置为支持二进制数据流需要以下步骤：</span><span class="sxs-lookup"><span data-stu-id="974fd-113">Configuring a data service to support the streaming of binary data requires the following steps:</span></span>  
   
-1.  将数据模型中的一个或多个实体特性化为媒体链接入口。  这些实体不应包括要进行流处理的二进制数据。  始终在实体中以 base\-64 编码的二进制形式返回实体的所有二进制属性。  
+1.  <span data-ttu-id="974fd-114">将数据模型中的一个或多个实体特性化为媒体链接入口。</span><span class="sxs-lookup"><span data-stu-id="974fd-114">Attribute one or more entities in the data model as a media link entry.</span></span> <span data-ttu-id="974fd-115">这些实体不应包括要进行流处理的二进制数据。</span><span class="sxs-lookup"><span data-stu-id="974fd-115">These entities should not include the binary data to be streamed.</span></span> <span data-ttu-id="974fd-116">始终在实体中以 base-64 编码的二进制形式返回实体的所有二进制属性。</span><span class="sxs-lookup"><span data-stu-id="974fd-116">Any binary properties of an entity are always returned in the entry as base-64 encoded binary.</span></span>  
   
-2.  实现 T:System.Data.Services.Providers.IDataServiceStreamProvider 接口。  
+2.  <span data-ttu-id="974fd-117">实现 T:System.Data.Services.Providers.IDataServiceStreamProvider 接口。</span><span class="sxs-lookup"><span data-stu-id="974fd-117">Implement the T:System.Data.Services.Providers.IDataServiceStreamProvider interface.</span></span>  
   
-3.  定义一个实现 <xref:System.IServiceProvider> 接口的数据服务。  数据服务使用 <xref:System.IServiceProvider.GetService%2A> 实现访问流数据提供程序实现。  此方法返回适当的流提供程序实现。  
+3.  <span data-ttu-id="974fd-118">定义一个实现 <xref:System.IServiceProvider> 接口的数据服务。</span><span class="sxs-lookup"><span data-stu-id="974fd-118">Define a data service that implements the <xref:System.IServiceProvider> interface.</span></span> <span data-ttu-id="974fd-119">数据服务使用 <xref:System.IServiceProvider.GetService%2A> 实现访问流数据提供程序实现。</span><span class="sxs-lookup"><span data-stu-id="974fd-119">The data service uses the <xref:System.IServiceProvider.GetService%2A> implementation to access the streaming data provider implementation.</span></span> <span data-ttu-id="974fd-120">此方法返回适当的流提供程序实现。</span><span class="sxs-lookup"><span data-stu-id="974fd-120">This method returns the appropriate streaming provider implementation.</span></span>  
   
-4.  在 Web 应用程序配置中启用大型消息流。  
+4.  <span data-ttu-id="974fd-121">在 Web 应用程序配置中启用大型消息流。</span><span class="sxs-lookup"><span data-stu-id="974fd-121">Enable large message streams in the Web application configuration.</span></span>  
   
-5.  启用对服务器上或数据源中的二进制资源的访问。  
+5.  <span data-ttu-id="974fd-122">启用对服务器上或数据源中的二进制资源的访问。</span><span class="sxs-lookup"><span data-stu-id="974fd-122">Enable access to binary resources on the server or in a data source.</span></span>  
   
- 本主题中的示例基于示例流照片服务，该服务会在[数据服务流提供程序系列：实现流提供程序（第一部分）](http://go.microsoft.com/fwlink/?LinkID=198989)（可能为英文网页）一文中进行深入讨论。  MSDN 代码库的[流照片数据服务示例](http://go.microsoft.com/fwlink/?LinkID=198988)（可能为英文网页）页上提供了此示例服务的源代码。  
+ <span data-ttu-id="974fd-123">本主题中的示例基于示例流照片服务，这在文章中的深度讨论[数据服务流提供程序系列： 实现流提供程序 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。</span><span class="sxs-lookup"><span data-stu-id="974fd-123">The examples in this topic are based on a sample streaming photo service, which is discussed in depth in the post [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](http://go.microsoft.com/fwlink/?LinkID=198989).</span></span> <span data-ttu-id="974fd-124">此示例服务的源代码位于[流照片数据服务示例页](http://go.microsoft.com/fwlink/?LinkID=198988)MSDN 代码库上。</span><span class="sxs-lookup"><span data-stu-id="974fd-124">The source code for this sample service is available on the [Streaming Photo Data Service Sample page](http://go.microsoft.com/fwlink/?LinkID=198988) on MSDN Code Gallery.</span></span>  
   
-## 在数据模型中定义媒体链接入口  
- 数据源提供程序确定在数据模型中将某个实体定义为媒体链接入口的方式。  
+## <a name="defining-a-media-link-entry-in-the-data-model"></a><span data-ttu-id="974fd-125">在数据模型中定义媒体链接入口</span><span class="sxs-lookup"><span data-stu-id="974fd-125">Defining a Media Link Entry in the Data Model</span></span>  
+ <span data-ttu-id="974fd-126">数据源提供程序确定在数据模型中将某个实体定义为媒体链接入口的方式。</span><span class="sxs-lookup"><span data-stu-id="974fd-126">The data source provider determines the way that an entity is defined as a media link entry in the data model.</span></span>  
   
- **实体框架提供程序**  
- 若要指示某个实体为媒体链接入口，需将 `HasStream` 特性添加到概念模型中的相应实体类型定义，如以下示例所示：  
+ <span data-ttu-id="974fd-127">**实体框架提供程序**</span><span class="sxs-lookup"><span data-stu-id="974fd-127">**Entity Framework Provider**</span></span>  
+ <span data-ttu-id="974fd-128">若要指示某个实体为媒体链接入口，需将 `HasStream` 特性添加到概念模型中的相应实体类型定义，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="974fd-128">To indicate that an entity is a media link entry, add the `HasStream` attribute to the entity type definition in the conceptual model, as in the following example:</span></span>  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
   
- 还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。  
+ <span data-ttu-id="974fd-129">还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。</span><span class="sxs-lookup"><span data-stu-id="974fd-129">You must also add the namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` either to the entity or to the root of the .edmx or .csdl file that defines the data model.</span></span>  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供程序并公开媒体资源的数据服务，请参见[数据服务流提供程序系列：实现流提供程序（第一部分）](http://go.microsoft.com/fwlink/?LinkID=198989)（可能为英文网页）一文。  
+ [!INCLUDE[crexample](../../../../includes/crexample-md.md)]<span data-ttu-id="974fd-130">使用的数据服务[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，并公开媒体资源，请参阅文章[数据服务流提供程序系列： 实现流提供程序 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。</span><span class="sxs-lookup"><span data-stu-id="974fd-130"> a data service that uses the [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider and exposes a media resource, see the post [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](http://go.microsoft.com/fwlink/?LinkID=198989).</span></span>  
   
- **反射提供程序**  
- 若要指示某个实体为媒体链接入口，需将 <xref:System.Data.Services.Common.HasStreamAttribute> 添加到在反射提供程序中定义相应实体类型的类中。  
+ <span data-ttu-id="974fd-131">**反射提供程序**</span><span class="sxs-lookup"><span data-stu-id="974fd-131">**Reflection Provider**</span></span>  
+ <span data-ttu-id="974fd-132">若要指示某个实体为媒体链接入口，需将 <xref:System.Data.Services.Common.HasStreamAttribute> 添加到在反射提供程序中定义相应实体类型的类中。</span><span class="sxs-lookup"><span data-stu-id="974fd-132">To indicate that an entity is a media link entry, add the <xref:System.Data.Services.Common.HasStreamAttribute> to the class that defines the entity type in the reflection provider.</span></span>  
   
- **自定义数据服务提供程序**  
- 使用自定义服务提供程序时，可实现 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口来定义数据服务的元数据。  有关详细信息，请参阅[自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。  通过将表示实体类型（媒体链接入口）的 <xref:System.Data.Services.Providers.ResourceType> 的 <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> 属性设置为 `true`，可以指示一个二进制资源流属于 <xref:System.Data.Services.Providers.ResourceType>。  
+ <span data-ttu-id="974fd-133">**自定义数据服务提供程序**</span><span class="sxs-lookup"><span data-stu-id="974fd-133">**Custom Data Service Provider**</span></span>  
+ <span data-ttu-id="974fd-134">使用自定义服务提供程序时，可实现 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口来定义数据服务的元数据。</span><span class="sxs-lookup"><span data-stu-id="974fd-134">When using custom service providers, you implement the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface to define the metadata for your data service.</span></span> <span data-ttu-id="974fd-135">有关详细信息，请参阅[自定义数据服务提供商](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="974fd-135">For more information, see [Custom Data Service Providers](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).</span></span> <span data-ttu-id="974fd-136">通过将表示实体类型（媒体链接入口）的 <xref:System.Data.Services.Providers.ResourceType> 的 <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> 属性设置为 `true`，可以指示一个二进制资源流属于 <xref:System.Data.Services.Providers.ResourceType>。</span><span class="sxs-lookup"><span data-stu-id="974fd-136">You indicate that a binary resource stream belongs to a <xref:System.Data.Services.Providers.ResourceType> by setting the <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> property to `true` on the <xref:System.Data.Services.Providers.ResourceType> that represents the entity type, which is a media link entry.</span></span>  
   
-## 实现 IDataServiceStreamProvider 接口  
- 若要创建支持二进制数据流的数据服务，必须实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口。  有了此实现，数据服务能够以流的形式将二进制数据返回给客户端，并使用从客户端发送的流形式的二进制数据。  每当数据服务需要访问流形式的二进制数据时，都会创建一个此接口实例。  <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口指定以下成员：  
+## <a name="implementing-the-idataservicestreamprovider-interface"></a><span data-ttu-id="974fd-137">实现 IDataServiceStreamProvider 接口</span><span class="sxs-lookup"><span data-stu-id="974fd-137">Implementing the IDataServiceStreamProvider Interface</span></span>  
+ <span data-ttu-id="974fd-138">若要创建支持二进制数据流的数据服务，必须实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口。</span><span class="sxs-lookup"><span data-stu-id="974fd-138">To create a data service that supports binary data streams, you must implement the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="974fd-139">有了此实现，数据服务能够以流的形式将二进制数据返回给客户端，并使用从客户端发送的流形式的二进制数据。</span><span class="sxs-lookup"><span data-stu-id="974fd-139">This implementation enables the data service to return binary data as a stream to the client and consume binary data as a stream sent from the client.</span></span> <span data-ttu-id="974fd-140">每当数据服务需要访问流形式的二进制数据时，都会创建一个此接口实例。</span><span class="sxs-lookup"><span data-stu-id="974fd-140">The data service creates an instance of this interface whenever it needs to access binary data as a stream.</span></span> <span data-ttu-id="974fd-141"><xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口指定以下成员：</span><span class="sxs-lookup"><span data-stu-id="974fd-141">The <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface specifies the following members:</span></span>  
   
-|成员名称|描述|  
-|----------|--------|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|当删除媒体资源的媒体链接入口时，数据服务将调用此方法来删除相应媒体资源。  当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 时，此方法将包含会删除与所提供媒体链接入口关联的媒体资源的代码。|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|数据服务调用此方法来以流的形式返回媒体资源。  当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 时，此方法将包含提供流的代码，数据服务使用提供的流返回与所提供媒体链接入口关联的媒体资源。|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri%2A>|数据服务调用此方法，来返回用于请求媒体链接入口的媒体资源的 URI。  使用此值可以在媒体链接入口的内容元素中创建 `src` 特性，也可以请求数据流。  当此方法返回 `null` 时，数据服务自动确定 URI。  需要向客户端提供不使用流提供程序直接访问二进制数据的权限时，使用此方法。|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A>|数据服务调用此方法，来返回与指定媒体链接入口关联的媒体资源的 Content\-Type 值。|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A>|数据服务调用此方法，来返回与指定实体关联的数据流的 eTag。  管理二进制数据的并发性时使用此方法。  如果此方法返回 null，则数据服务不会跟踪并发。|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>|数据服务调用此方法，来获取在接收从客户端发送的流时所使用的流。  当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 时，您必须返回一个可写入流，以便数据服务将接收到的流数据写入到其中。|  
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|返回一个命名空间限定的类型名称，该名称表示数据服务运行时必须为媒体链接入口创建的类型，该媒体链接入口与正在插入的媒体资源的数据流相关联。|  
+|<span data-ttu-id="974fd-142">成员名称</span><span class="sxs-lookup"><span data-stu-id="974fd-142">Member name</span></span>|<span data-ttu-id="974fd-143">描述</span><span class="sxs-lookup"><span data-stu-id="974fd-143">Description</span></span>|  
+|-----------------|-----------------|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|<span data-ttu-id="974fd-144">当删除媒体资源的媒体链接入口时，数据服务将调用此方法来删除相应媒体资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-144">This method is invoked by the data service to delete the corresponding media resource when its media link entry is deleted.</span></span> <span data-ttu-id="974fd-145">当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 时，此方法将包含会删除与所提供媒体链接入口关联的媒体资源的代码。</span><span class="sxs-lookup"><span data-stu-id="974fd-145">When you implement <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, this method contains the code that deletes the media resource associated with the supplied media link entry.</span></span>|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|<span data-ttu-id="974fd-146">数据服务调用此方法来以流的形式返回媒体资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-146">This method is invoked by the data service to return a media resource as a stream.</span></span> <span data-ttu-id="974fd-147">当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 时，此方法将包含提供流的代码，数据服务使用提供的流返回与所提供媒体链接入口关联的媒体资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-147">When you implement <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, this method contains the code that provides a stream that is used by the data service to the return media resource that is associated with the provided media link entry.</span></span>|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri%2A>|<span data-ttu-id="974fd-148">数据服务调用此方法，来返回用于请求媒体链接入口的媒体资源的 URI。</span><span class="sxs-lookup"><span data-stu-id="974fd-148">This method is invoked by the data service to return the URI that is used to request the media resource for the media link entry.</span></span> <span data-ttu-id="974fd-149">使用此值可以在媒体链接入口的内容元素中创建 `src` 特性，也可以请求数据流。</span><span class="sxs-lookup"><span data-stu-id="974fd-149">This value is used to create the `src` attribute in the content element of the media link entry and that is used to request the data stream.</span></span> <span data-ttu-id="974fd-150">当此方法返回 `null` 时，数据服务自动确定 URI。</span><span class="sxs-lookup"><span data-stu-id="974fd-150">When this method returns `null`, the data service automatically determines the URI.</span></span> <span data-ttu-id="974fd-151">需要向客户端提供不使用流提供程序直接访问二进制数据的权限时，使用此方法。</span><span class="sxs-lookup"><span data-stu-id="974fd-151">Use this method when you need to provide clients with direct access to binary data without using the steam provider.</span></span>|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A>|<span data-ttu-id="974fd-152">数据服务调用此方法，来返回与指定媒体链接入口关联的媒体资源的 Content-Type 值。</span><span class="sxs-lookup"><span data-stu-id="974fd-152">This method is invoked by the data service to return the Content-Type value of the media resource that is associated with the specified media link entry.</span></span>|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A>|<span data-ttu-id="974fd-153">数据服务调用此方法，来返回与指定实体关联的数据流的 eTag。</span><span class="sxs-lookup"><span data-stu-id="974fd-153">This method is invoked by the data service to return the eTag of the data stream that is associated with the specified entity.</span></span> <span data-ttu-id="974fd-154">管理二进制数据的并发性时使用此方法。</span><span class="sxs-lookup"><span data-stu-id="974fd-154">This method is used when you manage concurrency for the binary data.</span></span> <span data-ttu-id="974fd-155">如果此方法返回 null，则数据服务不会跟踪并发。</span><span class="sxs-lookup"><span data-stu-id="974fd-155">When this method returns null, the data service does not track concurrency.</span></span>|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>|<span data-ttu-id="974fd-156">数据服务调用此方法，来获取在接收从客户端发送的流时所使用的流。</span><span class="sxs-lookup"><span data-stu-id="974fd-156">This method is invoked by the data service to obtain the stream that is used when receiving the stream sent from the client.</span></span> <span data-ttu-id="974fd-157">当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 时，您必须返回一个可写入流，以便数据服务将接收到的流数据写入到其中。</span><span class="sxs-lookup"><span data-stu-id="974fd-157">When you implement <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, you must return a writable stream to which the data service writes received stream data.</span></span>|  
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|<span data-ttu-id="974fd-158">返回一个命名空间限定的类型名称，该名称表示数据服务运行时必须为媒体链接入口创建的类型，该媒体链接入口与正在插入的媒体资源的数据流相关联。</span><span class="sxs-lookup"><span data-stu-id="974fd-158">Returns a namespace-qualified type name that represents the type that the data service runtime must create for the media link entry that is associated with the data stream for the media resource that is being inserted.</span></span>|  
   
-## 创建流数据服务  
- 若要向 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 运行时提供访问 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 实现的权限，所创建的数据服务还必须实现 <xref:System.IServiceProvider> 接口。  下面的示例演示如何实现 <xref:System.IServiceProvider.GetService%2A> 方法，以返回实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 的 `PhotoServiceStreamProvider` 类的实例。  
+## <a name="creating-the-streaming-data-service"></a><span data-ttu-id="974fd-159">创建流数据服务</span><span class="sxs-lookup"><span data-stu-id="974fd-159">Creating the Streaming Data Service</span></span>  
+ <span data-ttu-id="974fd-160">若要向 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 运行时提供访问 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 实现的权限，所创建的数据服务还必须实现 <xref:System.IServiceProvider> 接口。</span><span class="sxs-lookup"><span data-stu-id="974fd-160">To provide the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] runtime with access to the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementation, the data service that you create must also implement the <xref:System.IServiceProvider> interface.</span></span> <span data-ttu-id="974fd-161">下面的示例演示如何实现 <xref:System.IServiceProvider.GetService%2A> 方法，以返回实现 `PhotoServiceStreamProvider` 的 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 类的实例。</span><span class="sxs-lookup"><span data-stu-id="974fd-161">The following example shows how to implement the <xref:System.IServiceProvider.GetService%2A> method to return an instance of the `PhotoServiceStreamProvider` class that implements <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.</span></span>  
   
  [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
  [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
- 有关如何创建数据服务的一般信息，请参见[配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
+ <span data-ttu-id="974fd-162">有关如何创建数据服务的常规信息，请参阅[配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="974fd-162">For general information about how to create a data service, see [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).</span></span>  
   
-## 在宿主环境中启用大型二进制数据流  
- 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序中创建数据服务时，使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可提供 HTTP 协议实现。默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 HTTP 消息的大小限制为仅 65K 字节。  为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。  为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：  
+## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a><span data-ttu-id="974fd-163">在宿主环境中启用大型二进制数据流</span><span class="sxs-lookup"><span data-stu-id="974fd-163">Enabling Large Binary Streams in the Hosting Environment</span></span>  
+ <span data-ttu-id="974fd-164">当创建中的数据服务[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 应用程序，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用于提供 HTTP 协议实现。</span><span class="sxs-lookup"><span data-stu-id="974fd-164">When you create a data service in an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web application, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used to provide the HTTP protocol implementation.</span></span> <span data-ttu-id="974fd-165">默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]限制为仅 65k 字节的 HTTP 消息的大小。</span><span class="sxs-lookup"><span data-stu-id="974fd-165">By default, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limits the size of HTTP messages to only 65K bytes.</span></span> <span data-ttu-id="974fd-166">为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。</span><span class="sxs-lookup"><span data-stu-id="974fd-166">To be able to stream large binary data to and from the data service, you must also configure the Web application to enable large binary files and to use streams for transfer.</span></span> <span data-ttu-id="974fd-167">为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：</span><span class="sxs-lookup"><span data-stu-id="974fd-167">To do this, add the following in the `<configuration />` element of the application's Web.config file:</span></span>  
   
   
   
 > [!NOTE]
->  您必须使用 <xref:System.ServiceModel.TransferMode?displayProperty=fullName> 传输模式，以确保由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对请求和响应消息中的二进制数据进行流式处理且不进行缓冲。  
+>  <span data-ttu-id="974fd-168">您必须使用 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 传输模式，以确保由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对请求和响应消息中的二进制数据进行流式处理且不进行缓冲。</span><span class="sxs-lookup"><span data-stu-id="974fd-168">You must use a <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> transfer mode to ensure that the binary data in both the request and response messages are streamed and not buffered by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- 有关详细信息，请参阅[流消息传输](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)和[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
+ <span data-ttu-id="974fd-169">有关详细信息，请参阅[流消息传输](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)和[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。</span><span class="sxs-lookup"><span data-stu-id="974fd-169">For more information, see [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) and [Transport Quotas](../../../../docs/framework/wcf/feature-details/transport-quotas.md).</span></span>  
   
- 默认情况下，Internet 信息服务 \(IIS\) 还将请求的大小限制为 4MB。  在 IIS 上运行时，若要允许您的数据服务接收超过 4MB 的流，则还必须在 `<system.web />` 配置部分设置 [httpRuntime 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/zh-cn/e9b81350-8aaf-47cc-9843-5f7d0c59f369) 的 `maxRequestLength` 属性，如以下示例所示：  
+ <span data-ttu-id="974fd-170">默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。</span><span class="sxs-lookup"><span data-stu-id="974fd-170">By default, Internet Information Services (IIS) also limits the size of requests to 4MB.</span></span> <span data-ttu-id="974fd-171">若要启用你的数据服务以接收流大于 4 MB，在 IIS 上运行时，你还必须设置`maxRequestLength`属性[httpRuntime 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369)中`<system.web />`配置部分中，为下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="974fd-171">To enable your data service to receive streams larger than 4MB when running on IIS, you must also set the `maxRequestLength` attribute of the [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) in the `<system.web />` configuration section, as shown in the following example:</span></span>  
   
   
   
-## 在客户端应用程序中使用数据流  
- 通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，您可以在客户端上以二进制数据流的形式检索和更新这些公开的资源。  有关详细信息，请参阅[使用二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
+## <a name="using-data-streams-in-a-client-application"></a><span data-ttu-id="974fd-172">在客户端应用程序中使用数据流</span><span class="sxs-lookup"><span data-stu-id="974fd-172">Using Data Streams in a Client Application</span></span>  
+ <span data-ttu-id="974fd-173">通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，您可以在客户端上以二进制数据流的形式检索和更新这些公开的资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-173">The [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library enables you to both retrieve and update these exposed resources as binary streams on the client.</span></span> <span data-ttu-id="974fd-174">有关详细信息，请参阅[处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="974fd-174">For more information, see [Working with Binary Data](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).</span></span>  
   
-## 使用流提供程序时的注意事项  
- 以下是在实现流提供程序时以及从数据服务访问媒体资源时要考虑的一些事项。  
+## <a name="considerations-for-working-with-a-streaming-provider"></a><span data-ttu-id="974fd-175">使用流提供程序时的注意事项</span><span class="sxs-lookup"><span data-stu-id="974fd-175">Considerations for Working with a Streaming Provider</span></span>  
+ <span data-ttu-id="974fd-176">以下是在实现流提供程序时以及从数据服务访问媒体资源时要考虑的一些事项。</span><span class="sxs-lookup"><span data-stu-id="974fd-176">The following are things to consider when you implement a streaming provider and when you access media resources from a data service.</span></span>  
   
--   对于媒体资源不支持 MERGE 请求。  使用 PUT 请求可更改现有实体的媒体资源。  
+-   <span data-ttu-id="974fd-177">对于媒体资源不支持 MERGE 请求。</span><span class="sxs-lookup"><span data-stu-id="974fd-177">MERGE requests are not supported for media resources.</span></span> <span data-ttu-id="974fd-178">使用 PUT 请求可更改现有实体的媒体资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-178">Use a PUT request to change the media resource of an existing entity.</span></span>  
   
--   POST 请求不能用于创建新的媒体链接入口。  相反，您必须发出一个 POST 请求来创建新的媒体资源，而数据服务器则会使用默认值创建新的媒体链接入口。  这个新实体可由后续的 MERGE 或 PUT 请求进行更新。  您可能还应考虑缓存该实体并在处置器中进行更新，例如将属性值设置为 POST 请求中的 Slug 标头的值。  
+-   <span data-ttu-id="974fd-179">POST 请求不能用于创建新的媒体链接入口。</span><span class="sxs-lookup"><span data-stu-id="974fd-179">A POST request cannot be used to create a new media link entry.</span></span> <span data-ttu-id="974fd-180">相反，您必须发出一个 POST 请求来创建新的媒体资源，而数据服务器则会使用默认值创建新的媒体链接入口。</span><span class="sxs-lookup"><span data-stu-id="974fd-180">Instead, you must issue a POST request to create a new media resource, and the data service creates a new media link entry with default values.</span></span> <span data-ttu-id="974fd-181">这个新实体可由后续的 MERGE 或 PUT 请求进行更新。</span><span class="sxs-lookup"><span data-stu-id="974fd-181">This new entity can be updated by a subsequent MERGE or PUT request.</span></span> <span data-ttu-id="974fd-182">您可能还应考虑缓存该实体并在处置器中进行更新，例如将属性值设置为 POST 请求中的 Slug 标头的值。</span><span class="sxs-lookup"><span data-stu-id="974fd-182">You may also consider caching the entity and make updates in the disposer, such as setting the property value to the value of the Slug header in the POST request.</span></span>  
   
--   收到 POST 请求时，数据服务将先调用 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 来创建媒体资源，然后再调用 <xref:System.Data.Services.IUpdatable.SaveChanges%2A> 来创建媒体链接入口。  
+-   <span data-ttu-id="974fd-183">收到 POST 请求时，数据服务将先调用 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 来创建媒体资源，然后再调用 <xref:System.Data.Services.IUpdatable.SaveChanges%2A> 来创建媒体链接入口。</span><span class="sxs-lookup"><span data-stu-id="974fd-183">When a POST request is received, the data service calls <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> to create the media resource before it calls <xref:System.Data.Services.IUpdatable.SaveChanges%2A> to create the media link entry.</span></span>  
   
--   <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 的实现不应返回 <xref:System.IO.MemoryStream> 对象。  如果使用这种类型的流，则在服务接收到非常大的数据流时将会释放内存资源。  
+-   <span data-ttu-id="974fd-184"><xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 的实现不应返回 <xref:System.IO.MemoryStream> 对象。</span><span class="sxs-lookup"><span data-stu-id="974fd-184">An implementation of <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> should not return a <xref:System.IO.MemoryStream> object.</span></span> <span data-ttu-id="974fd-185">如果使用这种类型的流，则在服务接收到非常大的数据流时将会释放内存资源。</span><span class="sxs-lookup"><span data-stu-id="974fd-185">When you use this kind of stream, memory resource issues will occur when the service receives very large data streams.</span></span>  
   
--   以下是在数据库中存储媒体资源时应考虑的事项：  
+-   <span data-ttu-id="974fd-186">以下是在数据库中存储媒体资源时应考虑的事项：</span><span class="sxs-lookup"><span data-stu-id="974fd-186">The following are things to consider when storing media resources in a database:</span></span>  
   
-    -   数据模型中不应包括作为媒体资源的二进制属性。  数据模型中公开的所有属性都会在响应源的入口中返回。  
+    -   <span data-ttu-id="974fd-187">数据模型中不应包括作为媒体资源的二进制属性。</span><span class="sxs-lookup"><span data-stu-id="974fd-187">A binary property that is a media resource should not be included in the data model.</span></span> <span data-ttu-id="974fd-188">数据模型中公开的所有属性都会在响应源的入口中返回。</span><span class="sxs-lookup"><span data-stu-id="974fd-188">All properties exposed in a data model are returned in the entry in a response feed.</span></span>  
   
-    -   为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。  此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。  对于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据库，当二进制数据大于 1MB 时，建议您使用 FILESTREAM 以流形式将数据传入数据库中。  
+    -   <span data-ttu-id="974fd-189">为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。</span><span class="sxs-lookup"><span data-stu-id="974fd-189">To improve performance with a large binary stream, we recommend that you create a custom stream class to store binary data in the database.</span></span> <span data-ttu-id="974fd-190">此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。</span><span class="sxs-lookup"><span data-stu-id="974fd-190">This class is returned by your <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> implementation and sends the binary data to the database in chunks.</span></span> <span data-ttu-id="974fd-191">有关[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]数据库，我们建议你到数据库中使用 FILESTREAM 数据进行流处理的二进制数据大于 1MB 时。</span><span class="sxs-lookup"><span data-stu-id="974fd-191">For a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database, we recommend that you use a FILESTREAM to stream data into the database when the binary data is larger than 1MB.</span></span>  
   
-    -   确保您的数据库设计为存储将由数据服务接收的大型二进制数据流。  
+    -   <span data-ttu-id="974fd-192">确保您的数据库设计为存储将由数据服务接收的大型二进制数据流。</span><span class="sxs-lookup"><span data-stu-id="974fd-192">Ensure that your database is designed to store the binary large streams that are to be received by your data service.</span></span>  
   
-    -   当客户端发送 POST 请求以便将媒体链接入口与媒体资源一起插入到单个请求时，将先调用 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 以获取流，然后数据服务才将新实体插入到数据库。  流提供程序实现必须能够处理此数据服务行为。  请考虑使用单独的数据表来存储二进制数据或者在文件中存储数据流，直至已在数据库中插入实体。  
+    -   <span data-ttu-id="974fd-193">当客户端发送 POST 请求以便将媒体链接入口与媒体资源一起插入到单个请求时，将先调用 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 以获取流，然后数据服务才将新实体插入到数据库。</span><span class="sxs-lookup"><span data-stu-id="974fd-193">When a client sends a POST request to insert a media link entry with a media resource in a single request, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> is called to obtain the stream before the data service inserts the new entity into the database.</span></span> <span data-ttu-id="974fd-194">流提供程序实现必须能够处理此数据服务行为。</span><span class="sxs-lookup"><span data-stu-id="974fd-194">A streaming provider implementation must be able to handle this data service behavior.</span></span> <span data-ttu-id="974fd-195">请考虑使用单独的数据表来存储二进制数据或者在文件中存储数据流，直至已在数据库中插入实体。</span><span class="sxs-lookup"><span data-stu-id="974fd-195">Consider using a separate data table to store the binary data or store the data stream in a file until after the entity has been inserted into the database.</span></span>  
   
--   当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法时，您必须使用以方法参数的形式提供的 eTag 和 Content\-Type 值。  不要在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供程序实现中设置 eTag 或 Content\-Type 标头。  
+-   <span data-ttu-id="974fd-196">当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法时，您必须使用以方法参数的形式提供的 eTag 和 Content-Type 值。</span><span class="sxs-lookup"><span data-stu-id="974fd-196">When you implement the <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, or <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> methods, you must use the eTag and Content-Type values that are supplied as method parameters.</span></span> <span data-ttu-id="974fd-197">不要在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供程序实现中设置 eTag 或 Content-Type 标头。</span><span class="sxs-lookup"><span data-stu-id="974fd-197">Do not set eTag or Content-Type headers in your <xref:System.Data.Services.Providers.IDataServiceStreamProvider> provider implementation.</span></span>  
   
--   默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。  由于 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server 不支持此类编码方式，因此您无法使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。有关 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server 的更多信息，请参见 [Visual Studio 中用于 ASP.NET Web 项目的 Web 服务器](http://msdn.microsoft.com/zh-cn/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
+-   <span data-ttu-id="974fd-198">默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。</span><span class="sxs-lookup"><span data-stu-id="974fd-198">By default, the client sends large binary streams by using a chunked HTTP Transfer-Encoding.</span></span> <span data-ttu-id="974fd-199">因为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Development Server 不支持此类编码，无法使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。</span><span class="sxs-lookup"><span data-stu-id="974fd-199">Because the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server does not support this kind of encoding, you cannot use this Web server to host a streaming data service that must accept large binary streams.</span></span> <span data-ttu-id="974fd-200">有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器，请参阅[用于 ASP.NET Web 项目的 Visual Studio 中的 Web 服务器](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。</span><span class="sxs-lookup"><span data-stu-id="974fd-200">For more information on [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, see [Web Servers in Visual Studio for ASP.NET Web Projects](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).</span></span>  
   
 <a name="versioning"></a>   
-## 版本控制要求  
- 流提供程序具有以下 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议版本控制要求：  
+## <a name="versioning-requirements"></a><span data-ttu-id="974fd-201">版本控制要求</span><span class="sxs-lookup"><span data-stu-id="974fd-201">Versioning Requirements</span></span>  
+ <span data-ttu-id="974fd-202">流提供程序具有以下 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议版本控制要求：</span><span class="sxs-lookup"><span data-stu-id="974fd-202">The streaming provider has the following [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocol versioning requirements:</span></span>  
   
--   流提供程序要求数据服务支持 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议的 2.0 版本以及更高版本。  
+-   <span data-ttu-id="974fd-203">流提供程序要求数据服务支持 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议的 2.0 版本以及更高版本。</span><span class="sxs-lookup"><span data-stu-id="974fd-203">The streaming provider requires that the data service support version 2.0 of the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocol and later versions.</span></span>  
   
- 有关详细信息，请参阅[数据服务版本管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
+ <span data-ttu-id="974fd-204">有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="974fd-204">For more information, see [Data Service Versioning](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).</span></span>  
   
-## 请参阅  
- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)   
- [自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)   
- [使用二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="974fd-205">另请参阅</span><span class="sxs-lookup"><span data-stu-id="974fd-205">See Also</span></span>  
+ [<span data-ttu-id="974fd-206">数据服务提供程序</span><span class="sxs-lookup"><span data-stu-id="974fd-206">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="974fd-207">自定义数据服务提供商</span><span class="sxs-lookup"><span data-stu-id="974fd-207">Custom Data Service Providers</span></span>](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
+ [<span data-ttu-id="974fd-208">处理二进制数据</span><span class="sxs-lookup"><span data-stu-id="974fd-208">Working with Binary Data</span></span>](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

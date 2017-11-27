@@ -1,129 +1,113 @@
 ---
-title: "保护包装代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "代码安全性, 包装代码"
-  - "安全编码, 包装代码"
-  - "安全性 [.NET Framework], 包装代码"
-  - "包装代码, 保护"
+title: "保护包装代码"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], wrapper code
+- wrapper code, securing
+- secure coding, wrapper code
+- code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 70df7cb2f87fc2a6616d0818acdde6974bcce4d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 保护包装代码
-包装代码，特别是在包装的信任级别比使用它的代码的信任级别更高时，可以打开一组唯一的安全漏洞。 代表调用方完成的任何操作都是被利用的潜在漏洞，其中进行适当安全检查时不包括调用方的有限权限。  
+# <a name="securing-wrapper-code"></a><span data-ttu-id="b6cdb-102">保护包装代码</span><span class="sxs-lookup"><span data-stu-id="b6cdb-102">Securing Wrapper Code</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 请勿通过包装启用调用方无法自行执行的任何操作。 相对于完整堆栈遍历需求，在进行牵涉到限制安全性检查的操作时，这项操作特别危险。 当涉及到单级别检查时，在实际调用方和正在讨论的 API 元素之间干预包装代码很容易导致本应失败的安全检查成功，从而便削弱了安全性。  
+ <span data-ttu-id="b6cdb-103">包装代码，特别是在包装的信任级别比使用它的代码的信任级别更高时，可以打开一组唯一的安全漏洞。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-103">Wrapper code, especially where the wrapper has higher trust than code that uses it, can open a unique set of security weaknesses.</span></span> <span data-ttu-id="b6cdb-104">代表调用方完成的任何操作都是被利用的潜在漏洞，其中进行适当安全检查时不包括调用方的有限权限。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-104">Anything done on behalf of a caller, where the caller's limited permissions are not included in the appropriate security check, is a potential weakness to be exploited.</span></span>  
   
-> [!CAUTION]
->  代码访问安全性和部分受信任的代码  
->   
->  .NET Framework 提供一种机制，对在相同应用程序中运行的不同代码强制实施不同的信任级别，该机制称为代码访问安全性 \(CAS\)。  .NET Framework 中的代码访问安全性不应用作部分受信任的代码（特别是未知来源的代码）的安全边界。 建议在未实施其他安全措施的情况下，不要加载和执行未知来源的代码。  
->   
->  此策略适用于 .NET Framework 的所有版本，但不适用于 Silverlight 中所含的 .NET Framework。  
+ <span data-ttu-id="b6cdb-105">请勿通过包装启用调用方无法自行执行的任何操作。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-105">Never enable something through the wrapper that the caller could not do itself.</span></span> <span data-ttu-id="b6cdb-106">相对于完整堆栈遍历需求，在进行牵涉到限制安全性检查的操作时，这项操作特别危险。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-106">This is a special danger when doing something that involves a limited security check, as opposed to a full stack walk demand.</span></span> <span data-ttu-id="b6cdb-107">当涉及到单级别检查时，在实际调用方和正在讨论的 API 元素之间干预包装代码很容易导致本应失败的安全检查成功，从而便削弱了安全性。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-107">When single-level checks are involved, interposing the wrapper code between the real caller and the API element in question can easily cause the security check to succeed when it should not, thereby weakening security.</span></span>  
   
-## 委托  
- 委托安全性因 .NET Framework 的版本而异。  本节介绍了不同的委托行为和相关的安全注意事项。  
+## <a name="delegates"></a><span data-ttu-id="b6cdb-108">委托</span><span class="sxs-lookup"><span data-stu-id="b6cdb-108">Delegates</span></span>  
+ <span data-ttu-id="b6cdb-109">委托安全性因 .NET Framework 的版本而异。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-109">Delegate security differs between versions of the .NET Framework.</span></span>  <span data-ttu-id="b6cdb-110">本节介绍了不同的委托行为和相关的安全注意事项。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-110">This section describes the different delegate behaviors and associated security considerations.</span></span>  
   
-### .NET Framework 1.0 版和 1.1 版  
- .NET Framework 1.0 版和 1.1 版可执行以下针对委托创建者和委托调用方的安全性操作。  
+### <a name="in-version-10-and-11-of-the-net-framework"></a><span data-ttu-id="b6cdb-111">.NET Framework 1.0 版和 1.1 版</span><span class="sxs-lookup"><span data-stu-id="b6cdb-111">In version 1.0 and 1.1 of the .NET Framework</span></span>  
+ <span data-ttu-id="b6cdb-112">.NET Framework 1.0 版和 1.1 版可执行以下针对委托创建者和委托调用方的安全性操作。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-112">Version 1.0 and 1.1 of the .NET Framework perform the following security actions against a delegate creator and a delegate caller.</span></span>  
   
--   当创建委托时，将针对委托创建者的权限集执行对委托目标方法的安全链接要求。  未遵循安全操作将导致 <xref:System.Security.SecurityException>。  
+-   <span data-ttu-id="b6cdb-113">当创建委托时，将针对委托创建者的权限集执行对委托目标方法的安全链接要求。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-113">When a delegate is created, security link demands on the delegate target method are performed against the grant set of the delegate creator.</span></span>  <span data-ttu-id="b6cdb-114">未遵循安全操作将导致 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-114">Failure to satisfy the security action results in a <xref:System.Security.SecurityException>.</span></span>  
   
--   当调用委托时，将执行对委托调用方的任何现有的安全需求。  
+-   <span data-ttu-id="b6cdb-115">当调用委托时，将执行对委托调用方的任何现有的安全需求。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-115">When the delegate is invoked, any existing security demands on the delegate caller are performed.</span></span>  
   
- 无论何时，当代码从可能调用它的不太受信任代码中提取 <xref:System.Delegate> 时，确保不会启用不太受信任代码提升其权限。 如果提取委托想在以后使用，则创建委托的代码不会出现在调用堆栈之上，并且其权限也得不到测试（如果委托中或以下的代码尝试执行受保护操作）。 如果你的代码和调用方的代码其特权比创建者更高，则创建者可以安排调用路径，使其不作为调用堆栈的一部分。  
+ <span data-ttu-id="b6cdb-116">无论何时，当代码从可能调用它的不太受信任代码中提取 <xref:System.Delegate> 时，确保不会启用不太受信任代码提升其权限。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-116">Whenever your code takes a <xref:System.Delegate> from less-trusted code that might call it, make sure that you are not enabling the less-trusted code to escalate its permissions.</span></span> <span data-ttu-id="b6cdb-117">如果提取委托想在以后使用，则创建委托的代码不会出现在调用堆栈之上，并且其权限也得不到测试（如果委托中或以下的代码尝试执行受保护操作）。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-117">If you take a delegate and use it later, the code that created the delegate is not on the call stack and its permissions will not be tested if code in or under the delegate attempts a protected operation.</span></span> <span data-ttu-id="b6cdb-118">如果你的代码和调用方的代码其特权比创建者更高，则创建者可以安排调用路径，使其不作为调用堆栈的一部分。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-118">If your code and the caller code have higher privileges than the creator, the creator can orchestrate the call path without being part of the call stack.</span></span>  
   
-### .NET Framework 2.0 版及更高版本  
- 不像之前的版本，.NET Framework 2.0 版可执行针对创建和调用委托的委托创建者的安全操作。  
+### <a name="in-version-20-and-later-versions-of-the-net-framework"></a><span data-ttu-id="b6cdb-119">在 2.0 版和更高版本的.NET Framework</span><span class="sxs-lookup"><span data-stu-id="b6cdb-119">In version 2.0 and later versions of the .NET Framework</span></span>  
+ <span data-ttu-id="b6cdb-120">与早期版本中，不同版本 2.0 和更高版本的.NET Framework 执行针对委托创建者的安全操作时创建并调用委托。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-120">Unlike previous versions, version 2.0 and later versions of the .NET Framework performs security action against the delegate creator when the delegate is created and called.</span></span>  
   
--   当创建委托时，将针对委托创建者的权限集执行对委托目标方法的安全链接要求。  未遵循安全操作将导致 <xref:System.Security.SecurityException>。  
+-   <span data-ttu-id="b6cdb-121">当创建委托时，将针对委托创建者的权限集执行对委托目标方法的安全链接要求。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-121">When a delegate is created, security link demands on the delegate target method are performed against the grant set of the delegate creator.</span></span>  <span data-ttu-id="b6cdb-122">未遵循安全操作将导致 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-122">Failure to satisfy the security action results in a <xref:System.Security.SecurityException>.</span></span>  
   
--   在创建委托期间还会捕获委托创建者的权限集并存储在委托中。  
+-   <span data-ttu-id="b6cdb-123">在创建委托期间还会捕获委托创建者的权限集并存储在委托中。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-123">The delegate creator's grant set is also captured during delegate creation and stored with the delegate.</span></span>  
   
--   待用委托时，如果委托创建者和调用方属于不同的程序集，则将针对当前内容中的任何需求首先评估委托创建者捕获的权限集。  然后才是执行针对委托调用方的现有安全需求。  
+-   <span data-ttu-id="b6cdb-124">待用委托时，如果委托创建者和调用方属于不同的程序集，则将针对当前内容中的任何需求首先评估委托创建者捕获的权限集。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-124">When the delegate is invoked, the delegate creator's captured grant set is first evaluated against any demands in the current context if the delegate creator and caller belong to different assemblies.</span></span>  <span data-ttu-id="b6cdb-125">然后才是执行针对委托调用方的现有安全需求。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-125">Next, any existing security demands on the delegate caller are performed.</span></span>  
   
-## 链接需求和包装  
- 在安全性基础结构中，已经对链接需求加强了特殊保护，但它依然是代码中潜在的漏洞源。  
+## <a name="link-demands-and-wrappers"></a><span data-ttu-id="b6cdb-126">链接需求和包装</span><span class="sxs-lookup"><span data-stu-id="b6cdb-126">Link demands and wrappers</span></span>  
+ <span data-ttu-id="b6cdb-127">在安全性基础结构中，已经对链接需求加强了特殊保护，但它依然是代码中潜在的漏洞源。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-127">A special protection case with link demands has been strengthened in the security infrastructure, but it is still a source of possible weakness in your code.</span></span>  
   
- 如果完全受信任代码调用受 [LinkDemand](../../../docs/framework/misc/link-demands.md) 保护的属性、事件或方法，则调用成功，前提是对调用方的 **LinkDemand** 权限检查令人满意。 并且，如果完全受信任代码公共采用某个属性名称的类并使用反射调用其 **get** 访问器，则可成功调用 **get** 访问器，即使用户代码无权访问此属性。 这是因为 **LinkDemand** 仅检查直接调用方，而直接调用方是完全受信任的代码。 从根本上而言，完全受信任的代码可代表用户代码发出特权调用，而无需确保用户代码是否有权发出该调用。  
+ <span data-ttu-id="b6cdb-128">如果完全受信任的代码调用属性、 事件或方法受[LinkDemand](../../../docs/framework/misc/link-demands.md)，则调用成功，如果**LinkDemand**满足对调用方的权限检查。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-128">If fully trusted code calls a property, event, or method protected by a [LinkDemand](../../../docs/framework/misc/link-demands.md), the call succeeds if the **LinkDemand** permission check for the caller is satisfied.</span></span> <span data-ttu-id="b6cdb-129">此外，如果完全受信任的代码公开一个类采用的名称属性和调用其**获取**访问器使用反射调用**获取**访问器会成功，即使用户代码执行的操作不具有权限才能访问此属性。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-129">Additionally, if the fully trusted code exposes a class that takes the name of a property and calls its **get** accessor using reflection, that call to the **get** accessor succeeds even though the user code does not have the right to access this property.</span></span> <span data-ttu-id="b6cdb-130">这是因为**LinkDemand**检查仅直接调用方，这是完全受信任的代码。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-130">This is because the **LinkDemand** checks only the immediate caller, which is the fully trusted code.</span></span> <span data-ttu-id="b6cdb-131">从根本上而言，完全受信任的代码可代表用户代码发出特权调用，而无需确保用户代码是否有权发出该调用。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-131">In essence, the fully trusted code is making a privileged call on behalf of user code without making sure that the user code has the right to make that call.</span></span>  
   
- 为了帮助防止此类安全漏洞，公共语言运行时都会将检查范围扩展至对 **LinkDemand** 保护的方法、构造函数、属性或事件的直接调用的完整堆栈遍历需求。 这种保护会带来一些性能损失，并更改安全检查语义；完整的堆栈遍历需求可能会失败，其中会通过速度更快的单一级别检查。  
+ <span data-ttu-id="b6cdb-132">若要防止此类安全漏洞，公共语言运行时都会将检查扩展的完整堆栈遍历需求对方法、 构造函数、 属性或事件受任何间接调用**LinkDemand**。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-132">To help prevent such security holes, the common language runtime extends the check into a full stack-walking demand on any indirect call to a method, constructor, property, or event protected by a **LinkDemand**.</span></span> <span data-ttu-id="b6cdb-133">这种保护会带来一些性能损失，并更改安全检查语义；完整的堆栈遍历需求可能会失败，其中会通过速度更快的单一级别检查。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-133">This protection incurs some performance costs and changes the semantics of the security check; the full stack-walk demand might fail where the faster, one-level check would have passed.</span></span>  
   
-> [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，已将部分受信任的代码重新定义为透明代码。 透明模型会在可以执行特许事件（例如调用本机代码）的代码（关键代码）和无法执行的代码（透明代码）之间绘制一个屏障。 透明性可代替使用 <xref:System.Security.Permissions.SecurityAction> f或完全信任以识别具有 <xref:System.Security.SecurityCriticalAttribute> 的完全受信任代码。 有关此更改以及其他更改的详细信息，请参阅 [安全更改](../../../docs/framework/security/security-changes.md)。  
+## <a name="assembly-loading-wrappers"></a><span data-ttu-id="b6cdb-134">加载包装的程序集</span><span class="sxs-lookup"><span data-stu-id="b6cdb-134">Assembly loading wrappers</span></span>  
+ <span data-ttu-id="b6cdb-135">用于加载托管代码的几种方法，包括 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用调用方的证据加载程序集。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-135">Several methods used to load managed code, including <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, load assemblies with the evidence of the caller.</span></span> <span data-ttu-id="b6cdb-136">如果包装任何这些方法，安全系统将使用代码的授予权限（而不是使用包装其调用方的权限）加载程序集。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-136">If you wrap any of these methods, the security system could use your code's permission grant, instead of the permissions of the caller to your wrapper, to load the assemblies.</span></span> <span data-ttu-id="b6cdb-137">不应使用不太受信任代码加载比包装器调用方的权限更高的代码。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-137">You should not allow less-trusted code to load code that is granted higher permissions than those of the caller to your wrapper.</span></span>  
   
-## 加载包装的程序集  
- 用于加载托管代码的几种方法，包括 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>使用调用方的证据加载程序集。 如果包装任何这些方法，安全系统将使用代码的授予权限（而不是使用包装其调用方的权限）加载程序集。 不应使用不太受信任代码加载比包装器调用方的权限更高的代码。  
+ <span data-ttu-id="b6cdb-138">否则，将会降低任何具有完全信任或比潜在调用方（）的信任程度明显更高的代码的安全性。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-138">Any code that has full trust or significantly higher trust than a potential caller (including an Internet-permissions-level caller) could weaken security in this way.</span></span> <span data-ttu-id="b6cdb-139">如果你的代码有一个公共方法，它接受字节数组，并将其传递给**Assembly.Load**，从而代表调用方创建程序集，它可能会破坏安全性。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-139">If your code has a public method that takes a byte array and passes it to **Assembly.Load**, thereby creating an assembly on the caller's behalf, it might break security.</span></span>  
   
- 否则，将会降低任何具有完全信任或比潜在调用方（）的信任程度明显更高的代码的安全性。 如果代码有一个公共方法，它接受字节数组，并将其传递给 **Assembly.Load**，从而代表调用方创建程序集，则可能会破坏安全性。  
+ <span data-ttu-id="b6cdb-140">此问题适用于以下 API 元素：</span><span class="sxs-lookup"><span data-stu-id="b6cdb-140">This issue applies to the following API elements:</span></span>  
   
- 此问题适用于以下 API 元素：  
+-   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>  
+## <a name="demand-vs-linkdemand"></a><span data-ttu-id="b6cdb-141">Demand VS LinkDemand</span><span class="sxs-lookup"><span data-stu-id="b6cdb-141">Demand vs. LinkDemand</span></span>  
+ <span data-ttu-id="b6cdb-142">声明性安全提供了两种类型相似但执行方法完全不同的安全检查。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-142">Declarative security offers two kinds of security checks that are similar but perform very different checks.</span></span> <span data-ttu-id="b6cdb-143">你应该了解这两种形式，因为选择错误可能导安全性降低或性能受损。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-143">You should understand both forms because the wrong choice can result in weak security or performance loss.</span></span>  
   
-## Demand VS LinkDemand  
- 声明性安全提供了两种类型相似但执行方法完全不同的安全检查。 你应该了解这两种形式，因为选择错误可能导安全性降低或性能受损。  
+ <span data-ttu-id="b6cdb-144">声明性安全提供了下列安全检查：</span><span class="sxs-lookup"><span data-stu-id="b6cdb-144">Declarative security offers the following security checks:</span></span>  
   
- 声明性安全提供了下列安全检查：  
+-   <span data-ttu-id="b6cdb-145"><xref:System.Security.Permissions.SecurityAction.Demand> 指示代码访问安全堆栈审核。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-145"><xref:System.Security.Permissions.SecurityAction.Demand> specifies the code access security stack walk.</span></span> <span data-ttu-id="b6cdb-146">堆栈上的所有调用方必须具有特定权限或标识才能通过。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-146">All callers on the stack must have the specified permission or identity to pass.</span></span> <span data-ttu-id="b6cdb-147">**需**出现在每次调用，因为堆栈可能包含不同的调用方。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-147">**Demand** occurs on every call because the stack might contain different callers.</span></span> <span data-ttu-id="b6cdb-148">如果重复调用一种方法，则每次都会执行安全检查。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-148">If you call a method repeatedly, this security check occurs each time.</span></span> <span data-ttu-id="b6cdb-149">**需**是很好地防范引诱攻击; 将检测到尝试通过它获取未授权的代码。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-149">**Demand** is good protection against luring attacks; unauthorized code trying to get through it will be detected.</span></span>  
   
--   <xref:System.Security.Permissions.SecurityAction> 指示代码访问安全堆栈审核。 堆栈上的所有调用方必须具有特定权限或标识才能通过。 每次调用都会发生 **Demand**，因为堆栈可能包含不同的调用方。 如果重复调用一种方法，则每次都会执行安全检查。**Demand** 是对引诱攻击的有效保护方式；它可以检测尝试侵入的未授权代码。  
-  
--   [LinkDemand](../../../docs/framework/misc/link-demands.md) 发生在实时 \(JIT\) 编译时，并且检查仅限直接调用方。 这种安全检查不会检查调用方的调用方。 一旦此项检查成功，无论调用方调用的次数为多少，都无需任何其他安全性开销。 但是，这种方法没有对引诱攻击提供保护。 使用 **LinkDemand**，通过检查并可以引用代码的任何代码，都可能通过允许恶意代码利用已授权的代码进行调用的方式破坏安全性。 因此，请勿使用 **LinkDemand**，除非可以彻底避免所有可能的漏洞。  
+-   <span data-ttu-id="b6cdb-150">[LinkDemand](../../../docs/framework/misc/link-demands.md)发生 (在实时 JIT) 编译时，并且检查仅限直接调用方。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-150">[LinkDemand](../../../docs/framework/misc/link-demands.md) happens at just-in-time (JIT) compilation time and checks only the immediate caller.</span></span> <span data-ttu-id="b6cdb-151">这种安全检查不会检查调用方的调用方。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-151">This security check does not check the caller's caller.</span></span> <span data-ttu-id="b6cdb-152">一旦此项检查成功，无论调用方调用的次数为多少，都无需任何其他安全性开销。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-152">Once this check passes, there is no additional security overhead no matter how many times the caller might call.</span></span> <span data-ttu-id="b6cdb-153">但是，这种方法没有对引诱攻击提供保护。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-153">However, there is also no protection from luring attacks.</span></span> <span data-ttu-id="b6cdb-154">与**LinkDemand**，通过的测试并可以引用代码任何代码，可以通过允许恶意代码利用已授权的代码进行调用的代码可能会破坏安全性。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-154">With **LinkDemand**, any code that passes the test and can reference your code can potentially break security by allowing malicious code to call using the authorized code.</span></span> <span data-ttu-id="b6cdb-155">因此，不要使用**LinkDemand**除非可以彻底避免所有可能的漏洞。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-155">Therefore, do not use **LinkDemand** unless all the possible weaknesses can be thoroughly avoided.</span></span>  
   
     > [!NOTE]
-    >  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，链接要求已被 <xref:System.Security.SecurityRuleSet> 程序集中的 <xref:System.Security.SecurityCriticalAttribute> 属性所取代。<xref:System.Security.SecurityCriticalAttribute> 等同于完全信任的链接要求；但是，它也会影响继承规则。 有关这一更改的详细信息，请参阅 [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
+    >  <span data-ttu-id="b6cdb-156">在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，链接要求已替换为通过<xref:System.Security.SecurityCriticalAttribute>属性中<xref:System.Security.SecurityRuleSet.Level2>程序集。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-156">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], link demands have been replaced by the <xref:System.Security.SecurityCriticalAttribute> attribute in <xref:System.Security.SecurityRuleSet.Level2> assemblies.</span></span> <span data-ttu-id="b6cdb-157"><xref:System.Security.SecurityCriticalAttribute>等效于链接要求完全信任; 但是，它也会影响继承规则。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-157">The <xref:System.Security.SecurityCriticalAttribute> is equivalent to a link demand for full trust; however, it also affects inheritance rules.</span></span> <span data-ttu-id="b6cdb-158">有关此更改的详细信息，请参阅[安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-158">For more information about this change, see [Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md).</span></span>  
   
- 必须对使用 **LinkDemand** 时要求执行的其他预防措施进行单独编程；安全系统可以帮助执行这一点。 任何错误都会打开安全漏洞。 利用你的代码的所有授权代码都必须负责执行以下操作实现其他安全性：  
+ <span data-ttu-id="b6cdb-159">使用时所需的其他预防措施**LinkDemand**必须进行单独编程; 安全系统可以帮助执行这一点。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-159">The extra precautions required when using **LinkDemand** must be programmed individually; the security system can help with enforcement.</span></span> <span data-ttu-id="b6cdb-160">任何错误都会打开安全漏洞。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-160">Any mistake opens a security weakness.</span></span> <span data-ttu-id="b6cdb-161">利用你的代码的所有授权代码都必须负责执行以下操作实现其他安全性：</span><span class="sxs-lookup"><span data-stu-id="b6cdb-161">All authorized code that uses your code must be responsible for implementing additional security by doing the following:</span></span>  
   
--   限制调用代码对类或程序集的访问权限。  
+-   <span data-ttu-id="b6cdb-162">限制调用代码对类或程序集的访问权限。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-162">Restricting the calling code's access to the class or assembly.</span></span>  
   
--   对显示在将被调用的代码上的调用代码施行相同的安全检查并负责让其调用方也执行这种检查。 例如，你要编写代码，使其可以调用受 <xref:System.Security.Permissions.SecurityPermission> 的 **LinkDemand**（具有指定的 <xref:System.Security.Permissions.SecurityPermissionFlag> 标记）保护的方法，则你的方法还应采用 **LinkDemand**（或效果更强的 **Demand**）执行此权限。 例外情况是，如果你的代码以你认为安全的有限方式使用 **LinkDemand** 保护的方法，则会在你的代码中指定其他保护机制（例如“Demand”）。 对于这种例外情况，调用方需对削弱基础代码的安全性保护负责。  
+-   <span data-ttu-id="b6cdb-163">对显示在将被调用的代码上的调用代码施行相同的安全检查并负责让其调用方也执行这种检查。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-163">Placing the same security checks on the calling code that appear on the code being called and obligating its callers to do so.</span></span> <span data-ttu-id="b6cdb-164">例如，如果您编写代码来调用的方法使用来保护**LinkDemand**为<xref:System.Security.Permissions.SecurityPermission>与<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>指定标志，你的方法还应**LinkDemand** （或**需**，这是更强) 执行此权限。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-164">For example, if you write code that calls a method that is protected with a **LinkDemand** for the <xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specified, your method should also make a **LinkDemand** (or **Demand**, which is stronger) for this permission.</span></span> <span data-ttu-id="b6cdb-165">例外情况是如果你的代码使用**LinkDemand**-受保护的方法，以有限方式您决定是安全的在代码中提供其他安全保护机制 （例如 demand)。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-165">The exception is if your code uses the **LinkDemand**-protected method in a limited way that you decide is safe, given other security protection mechanisms (such as demands) in your code.</span></span> <span data-ttu-id="b6cdb-166">对于这种例外情况，调用方需对削弱基础代码的安全性保护负责。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-166">In this exceptional case, the caller takes responsibility in weakening the security protection on the underlying code.</span></span>  
   
--   确保你的代码调用方无法欺骗你的代码代表自己调用受保护的代码。 换言之，调用方不能强制授权代码向受保护的代码传递特定参数，或从受保护的代码中得到返回结果。  
+-   <span data-ttu-id="b6cdb-167">确保你的代码调用方无法欺骗你的代码代表自己调用受保护的代码。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-167">Ensuring that your code's callers cannot trick your code into calling the protected code on their behalf.</span></span> <span data-ttu-id="b6cdb-168">换言之，调用方不能强制授权代码向受保护的代码传递特定参数，或从受保护的代码中得到返回结果。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-168">In other words, callers cannot force the authorized code to pass specific parameters to the protected code, or to get results back from it.</span></span>  
   
-### 接口和链接需求  
- 如果使用 **LinkDemand** 的虚拟方法、属性或事件重写了基类方法，则基类方法还必须具有重写方法的相同 **LinkDemand** 才能有效。 当然，恶意代码重新强制转换为基类并调用基类方法的这种情况也是有可能的。 另请注意，可以将链接需求以隐式方式添加到不包含 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 程序集级别属性的程序集。  
+### <a name="interfaces-and-link-demands"></a><span data-ttu-id="b6cdb-169">接口和链接需求</span><span class="sxs-lookup"><span data-stu-id="b6cdb-169">Interfaces and Link Demands</span></span>  
+ <span data-ttu-id="b6cdb-170">如果虚拟方法、 属性或事件和**LinkDemand**重写基类方法，则基类方法还必须具有相同**LinkDemand**重写方法才能有效。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-170">If a virtual method, property, or event with **LinkDemand** overrides a base class method, the base class method must also have the same **LinkDemand** for the overridden method in order to be effective.</span></span> <span data-ttu-id="b6cdb-171">当然，恶意代码重新强制转换为基类并调用基类方法的这种情况也是有可能的。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-171">It is possible for malicious code to cast back to the base type and call the base class method.</span></span> <span data-ttu-id="b6cdb-172">另请注意，可以将链接需求以隐式方式添加到不包含 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 程序集级别属性的程序集。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-172">Also note that link demands can be added implicitly to assemblies that do not have the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> assembly-level attribute.</span></span>  
   
- 当接口方法也具有链接需求时，使用链接需求实现保护方法也是不错的选择。 请注意下列有关使用链接需求的接口：  
+ <span data-ttu-id="b6cdb-173">当接口方法也具有链接需求时，使用链接需求实现保护方法也是不错的选择。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-173">It is a good practice to protect method implementations with link demands when interface methods also have link demands.</span></span> <span data-ttu-id="b6cdb-174">请注意下列有关使用链接需求的接口：</span><span class="sxs-lookup"><span data-stu-id="b6cdb-174">Note the following about using link demands with interfaces:</span></span>  
   
--   **AllowPartiallyTrustedCallersAttribute** 属性也适用于接口。  
+-   <span data-ttu-id="b6cdb-175">如果你将放置**LinkDemand**在公共方法的类的实现接口方法， **LinkDemand**将不会强制执行你又强制转换为接口并调用该方法。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-175">If you place a **LinkDemand** on a public method of a class that implements an interface method, the **LinkDemand** will not be enforced if you then cast to the interface and call the method.</span></span> <span data-ttu-id="b6cdb-176">在这种情况下，因为你是针对接口，链接**LinkDemand**会认可该接口上。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-176">In this case, because you linked against the interface, only the **LinkDemand** on the interface is honored.</span></span>  
   
--   你可以将链接需求放放置在接口上以选择性地保护某些接口不被部分受信任的代码所使用（例如使用 **AllowPartiallyTrustedCallersAttribute**  属性时）。  
+ <span data-ttu-id="b6cdb-177">审阅安全性问题的以下各项：</span><span class="sxs-lookup"><span data-stu-id="b6cdb-177">Review the following items for security issues:</span></span>  
   
--   如果你的接口是在程序集中定义的，并且该程序集不包含 **AllowPartiallyTrustedCallersAttribute**  属性，则可以在部分受信任类中实现该接口。  
+-   <span data-ttu-id="b6cdb-178">接口方法上的显式链接需求。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-178">Explicit link demands on interface methods.</span></span> <span data-ttu-id="b6cdb-179">确保这些链接需求提供预期保护。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-179">Make sure these link demands offer the expected protection.</span></span> <span data-ttu-id="b6cdb-180">确定恶意代码是否可以使用强制转换来避开链接需求，如前面所述。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-180">Determine whether malicious code can use a cast to get around the link demands as described previously.</span></span>  
   
--   如果你将 **LinkDemand** 放置在可实现接口方法的类的公共方法中，之后你又强制转换为接口并调用该方法，则不会执行 **LinkDemand**。 在这种情况下，由于你是针对接口进行的链接，因此只会认可该接口上的 **LinkDemand**。  
+-   <span data-ttu-id="b6cdb-181">应用了包含链接需求的虚拟方法。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-181">Virtual methods with link demands applied.</span></span>  
   
- 审阅安全性问题的以下各项：  
+-   <span data-ttu-id="b6cdb-182">它们实现的类型和接口。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-182">Types and the interfaces they implement.</span></span> <span data-ttu-id="b6cdb-183">这些应使用相一致的链接需求。</span><span class="sxs-lookup"><span data-stu-id="b6cdb-183">These should use link demands consistently.</span></span>  
   
--   接口方法上的显式链接需求。 确保这些链接需求提供预期保护。 确定恶意代码是否可以使用强制转换来避开链接需求，如前面所述。  
-  
--   应用了包含链接需求的虚拟方法。  
-  
--   它们实现的类型和接口。 这些应使用相一致的链接需求。  
-  
-## 请参阅  
- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="b6cdb-184">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b6cdb-184">See Also</span></span>  
+ [<span data-ttu-id="b6cdb-185">安全编码准则</span><span class="sxs-lookup"><span data-stu-id="b6cdb-185">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

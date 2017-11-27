@@ -1,52 +1,50 @@
 ---
-title: "! (NOT) (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: '! (NOT) (Entity SQL)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1f10e65e284a14d6d86f9722cf44f080321fa0b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ! (NOT) (Entity SQL)
-对 `Boolean` 表达式求反。  
+# <a name="-not-entity-sql"></a><span data-ttu-id="cf110-103">!</span><span class="sxs-lookup"><span data-stu-id="cf110-103">!</span></span> <span data-ttu-id="cf110-104">(NOT) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="cf110-104">(NOT) (Entity SQL)</span></span>
+<span data-ttu-id="cf110-105">对 `Boolean` 表达式求反。</span><span class="sxs-lookup"><span data-stu-id="cf110-105">Negates a `Boolean` expression.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="cf110-106">语法</span><span class="sxs-lookup"><span data-stu-id="cf110-106">Syntax</span></span>  
   
 ```  
-  
 NOT boolean_expression  
 or  
 ! boolean_expression  
 ```  
   
-## 参数  
+## <a name="arguments"></a><span data-ttu-id="cf110-107">参数</span><span class="sxs-lookup"><span data-stu-id="cf110-107">Arguments</span></span>  
  `boolean_expression`  
- 返回 Boolean 的任何有效表达式。  
+ <span data-ttu-id="cf110-108">返回 Boolean 的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="cf110-108">Any valid expression that returns a Boolean.</span></span>  
   
-## 备注  
- 惊叹号 \(\!\) 与 NOT 运算符具有相同的功能。  
+## <a name="remarks"></a><span data-ttu-id="cf110-109">备注</span><span class="sxs-lookup"><span data-stu-id="cf110-109">Remarks</span></span>  
+ <span data-ttu-id="cf110-110">惊叹号 (!) 与 NOT 运算符具有相同的功能。</span><span class="sxs-lookup"><span data-stu-id="cf110-110">The exclamation point (!) has the same functionality as the NOT operator.</span></span>  
   
-## 示例  
- 以下 Entity SQL 查询使用 NOT 运算符以对 `Boolean` 表达式求反。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
+## <a name="example"></a><span data-ttu-id="cf110-111">示例</span><span class="sxs-lookup"><span data-stu-id="cf110-111">Example</span></span>  
+ <span data-ttu-id="cf110-112">以下 Entity SQL 查询使用 NOT 运算符以对 `Boolean` 表达式求反。</span><span class="sxs-lookup"><span data-stu-id="cf110-112">The following Entity SQL query uses the NOT operator to negates a `Boolean` expression.</span></span> <span data-ttu-id="cf110-113">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="cf110-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="cf110-114">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="cf110-114">To compile and run this query, follow these steps:</span></span>  
   
-1.  执行 [如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md) 中的过程。  
+1.  <span data-ttu-id="cf110-115">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="cf110-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
+2.  <span data-ttu-id="cf110-116">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="cf110-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#NOT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not)]  
   
-## 请参阅  
- [Entity SQL 参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="cf110-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cf110-117">See Also</span></span>  
+ [<span data-ttu-id="cf110-118">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="cf110-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

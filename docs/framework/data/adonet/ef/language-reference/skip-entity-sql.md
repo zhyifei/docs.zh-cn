@@ -1,55 +1,52 @@
 ---
-title: "SKIP (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: SKIP (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f53c84b216c847740f2c093582fd151d5ed0ef63
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# SKIP (Entity SQL)
-在 ORDER BY 子句中使用 SKIP 子子句可执行物理分页。 SKIP 不能脱离 ORDER BY 子句单独使用。  
+# <a name="skip-entity-sql"></a><span data-ttu-id="91280-102">SKIP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="91280-102">SKIP (Entity SQL)</span></span>
+<span data-ttu-id="91280-103">在 ORDER BY 子句中使用 SKIP 子子句可执行物理分页。</span><span class="sxs-lookup"><span data-stu-id="91280-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="91280-104">SKIP 不能脱离 ORDER BY 子句单独使用。</span><span class="sxs-lookup"><span data-stu-id="91280-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="91280-105">语法</span><span class="sxs-lookup"><span data-stu-id="91280-105">Syntax</span></span>  
   
 ```  
-  
 [ SKIP n ]  
 ```  
   
-## 参数  
+## <a name="arguments"></a><span data-ttu-id="91280-106">参数</span><span class="sxs-lookup"><span data-stu-id="91280-106">Arguments</span></span>  
  `n`  
- 要跳过的项数。  
+ <span data-ttu-id="91280-107">要跳过的项数。</span><span class="sxs-lookup"><span data-stu-id="91280-107">The number of items to skip.</span></span>  
   
-## 备注  
- 如果 ORDER BY 子句中存在 SKIP 表达式子子句，则将根据排序规范对结果排序，结果集将包含从紧接着 SKIP 表达式之后的下一行开始的行。 例如，SKIP 5 将跳过前五行，并返回第六行以及后续行。  
-  
-> [!NOTE]
->  如果 TOP 修饰符和 SKIP 子子句同时出现在同一个查询表达式中，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询将无效。 应重写查询，将 TOP 表达式更改为 LIMIT 表达式。  
+## <a name="remarks"></a><span data-ttu-id="91280-108">备注</span><span class="sxs-lookup"><span data-stu-id="91280-108">Remarks</span></span>  
+ <span data-ttu-id="91280-109">如果 ORDER BY 子句中存在 SKIP 表达式子子句，则将根据排序规范对结果排序，结果集将包含从紧接着 SKIP 表达式之后的下一行开始的行。</span><span class="sxs-lookup"><span data-stu-id="91280-109">If a SKIP expression sub-clause is present in an ORDER BY clause, the results will be sorted according the sort specification and the result set will include rows starting from the next row immediately after the SKIP expression.</span></span> <span data-ttu-id="91280-110">例如，SKIP 5 将跳过前五行，并返回第六行以及后续行。</span><span class="sxs-lookup"><span data-stu-id="91280-110">For example, SKIP 5 will skip the first five rows and return from the sixth row forward.</span></span>  
   
 > [!NOTE]
->  在 [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)] 中，对非键列同时使用 SKIP 和 ORDER BY 可能返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是由于 [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)] 对 SKIP 的解释方式造成的。 例如，在下面的代码中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
+>  <span data-ttu-id="91280-111">如果 TOP 修饰符和 SKIP 子子句同时出现在同一个查询表达式中， [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询将无效。</span><span class="sxs-lookup"><span data-stu-id="91280-111">An [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query is invalid if both the TOP modifier and the SKIP sub-clause are present in the same query expression.</span></span> <span data-ttu-id="91280-112">应重写查询，将 TOP 表达式更改为 LIMIT 表达式。</span><span class="sxs-lookup"><span data-stu-id="91280-112">The query should be rewritten by changing the TOP expression to the LIMIT expression.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="91280-113">在 [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)]中，对非键列同时使用 SKIP 和 ORDER BY 可能返回不正确的结果。</span><span class="sxs-lookup"><span data-stu-id="91280-113">In [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)], using SKIP with ORDER BY on non-key columns might return incorrect results.</span></span> <span data-ttu-id="91280-114">如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。</span><span class="sxs-lookup"><span data-stu-id="91280-114">More than the specified number of rows might be skipped if the non-key column has duplicate data in it.</span></span> <span data-ttu-id="91280-115">这是由于 [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)]对 SKIP 的解释方式造成的。</span><span class="sxs-lookup"><span data-stu-id="91280-115">This is due to how SKIP is translated for [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)].</span></span> <span data-ttu-id="91280-116">例如，在下面的代码中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：</span><span class="sxs-lookup"><span data-stu-id="91280-116">For example, in the following code more than five rows might be skipped if `E.NonKeyColumn` has duplicate values:</span></span>  
 >   
 >  `SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L`  
   
- [本](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL)示例中的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 ORDER BY 运算符与 SKIP 来指定 SELECT 语句中返回的对象所使用的排序顺序。  
+ <span data-ttu-id="91280-117">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 本 [示例中的](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) 查询使用 ORDER BY 运算符与 SKIP 来指定 SELECT 语句中返回的对象所使用的排序顺序。</span><span class="sxs-lookup"><span data-stu-id="91280-117">The  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query in [this](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) example uses the ORDER BY operator with SKIP to specify the sort order used on objects returned in a SELECT statement.</span></span>  
   
-## 请参阅  
- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)   
- [如何：按页查看查询结果](http://msdn.microsoft.com/zh-cn/ffc0f920-e7de-42e0-9b12-ef356421d030)   
- [分页](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)   
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="91280-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91280-118">See Also</span></span>  
+ [<span data-ttu-id="91280-119">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="91280-119">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
+ [<span data-ttu-id="91280-120">如何： 查询结果分页</span><span class="sxs-lookup"><span data-stu-id="91280-120">How to: Page Through Query Results</span></span>](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [<span data-ttu-id="91280-121">分页</span><span class="sxs-lookup"><span data-stu-id="91280-121">Paging</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
+ [<span data-ttu-id="91280-122">返回页首</span><span class="sxs-lookup"><span data-stu-id="91280-122">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

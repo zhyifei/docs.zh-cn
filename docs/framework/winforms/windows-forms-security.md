@@ -1,70 +1,71 @@
 ---
-title: "Windows 窗体安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "访问控制, Windows 窗体"
-  - "设计器访问安全性"
-  - "权限, Windows 窗体"
-  - "安全性 [Windows 窗体]"
-  - "安全策略, Windows 窗体"
-  - "Windows 窗体, 安全性"
+title: "Windows 窗体安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designer access security [Windows Forms]
+- permissions [Windows Forms], Windows Forms
+- Windows Forms, security
+- security [Windows Forms]
+- access control [Windows Forms], Windows Forms
+- security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Windows 窗体安全
-Windows 窗体以一种基于代码的安全模型为特色（为代码设置了安全性级别，而不论运行代码的用户是什么人）。  这种安全模型会加强计算机系统上已有的任何安全性架构。  这些架构包括浏览器中或操作系统中的安全性架构，例如 Internet Explorer 中提供的基于区域的安全性就属于浏览器中的安全性架构，Windows NT 的基于凭据的安全性就属于操作系统中的安全性架构。  
+# <a name="windows-forms-security"></a><span data-ttu-id="a449e-102">Windows 窗体安全</span><span class="sxs-lookup"><span data-stu-id="a449e-102">Windows Forms Security</span></span>
+<span data-ttu-id="a449e-103">Windows 窗体功能是基于代码的 （安全级别设置为代码，无论运行代码的用户） 的安全模型。</span><span class="sxs-lookup"><span data-stu-id="a449e-103">Windows Forms features a security model that is code-based (security levels are set for code, regardless of the user running the code).</span></span> <span data-ttu-id="a449e-104">这是除了可能已在您的计算机系统中的任何安全架构。</span><span class="sxs-lookup"><span data-stu-id="a449e-104">This is in addition to any security schemas that may be in place already on your computer system.</span></span> <span data-ttu-id="a449e-105">其中可能包括浏览器 （如基于区域的安全在 Internet Explorer 中可用） 或操作系统 （例如 Windows NT 的凭据基于安全性） 中。</span><span class="sxs-lookup"><span data-stu-id="a449e-105">These can include those in the browser (such as the zone-based security available in Internet Explorer) or the operating system (such as the credential-based security of Windows NT).</span></span>  
   
-## 本节内容  
- [Windows 窗体中的安全性概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- 简要说明 .NET Framework 的安全模型以及确保应用程序中的 Windows 窗体安全所需的基本步骤。  
+## <a name="in-this-section"></a><span data-ttu-id="a449e-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="a449e-106">In This Section</span></span>  
+ [<span data-ttu-id="a449e-107">Windows 窗体中的安全性概述</span><span class="sxs-lookup"><span data-stu-id="a449e-107">Security in Windows Forms Overview</span></span>](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ <span data-ttu-id="a449e-108">简要介绍了.NET Framework 安全模型和需确保你的应用程序中的 Windows 窗体的基本步骤都是安全的。</span><span class="sxs-lookup"><span data-stu-id="a449e-108">Briefly explains the .NET Framework security model and the basic steps necessary to ensure the Windows Forms in your application are secure.</span></span>  
   
- [Windows 窗体中更加安全的文件和数据访问](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- 描述如何在不完全受信任的环境中访问文件和数据。  
+ [<span data-ttu-id="a449e-109">在 Windows 窗体中提高文件和数据访问的安全性</span><span class="sxs-lookup"><span data-stu-id="a449e-109">More Secure File and Data Access in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ <span data-ttu-id="a449e-110">描述如何访问文件和不完全受信任环境中的数据。</span><span class="sxs-lookup"><span data-stu-id="a449e-110">Describes how to access files and data in a semi-trusted environment.</span></span>  
   
- [Windows 窗体中的更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- 描述如何在不完全受信任的环境中访问打印功能。  
+ [<span data-ttu-id="a449e-111">Windows 窗体中更加安全的打印</span><span class="sxs-lookup"><span data-stu-id="a449e-111">More Secure Printing in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ <span data-ttu-id="a449e-112">介绍如何访问部分信任的环境中的打印功能。</span><span class="sxs-lookup"><span data-stu-id="a449e-112">Describes how to access printing features in a semi-trusted environment.</span></span>  
   
- [Windows 窗体中额外的安全注意事项](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- 介绍在不完全受信任的环境中如何执行窗口管理、使用剪贴板以及调用非托管代码。  
+ [<span data-ttu-id="a449e-113">Windows 窗体中额外的安全注意事项</span><span class="sxs-lookup"><span data-stu-id="a449e-113">Additional Security Considerations in Windows Forms</span></span>](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ <span data-ttu-id="a449e-114">描述执行窗口操作、 使用剪贴板，以及调用到非托管代码在不完全受信任的环境中。</span><span class="sxs-lookup"><span data-stu-id="a449e-114">Describes performing window manipulation, using the Clipboard, and making calls to unmanaged code in a semi-trusted environment.</span></span>  
   
-## 相关章节  
- [NIB: Default Security Policy](http://msdn.microsoft.com/zh-cn/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
- 列出了在 Full Trust、Local Intranet 和 Internet 权限集中授予的默认权限。  
+## <a name="related-sections"></a><span data-ttu-id="a449e-115">相关章节</span><span class="sxs-lookup"><span data-stu-id="a449e-115">Related Sections</span></span>  
+ [<span data-ttu-id="a449e-116">NIB： 默认安全策略</span><span class="sxs-lookup"><span data-stu-id="a449e-116">NIB: Default Security Policy</span></span>](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ <span data-ttu-id="a449e-117">列出授予完全信任、 本地 Intranet 和 Internet 权限集的默认权限。</span><span class="sxs-lookup"><span data-stu-id="a449e-117">Lists the default permissions granted in the Full Trust, Local Intranet, and Internet permission sets.</span></span>  
   
- [NIB: General Security Policy Administration](http://msdn.microsoft.com/zh-cn/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
- 提供了有关如何管理 .NET Framework 安全策略和如何提升权限的信息。  
+ [<span data-ttu-id="a449e-118">NIB： 常规安全策略管理</span><span class="sxs-lookup"><span data-stu-id="a449e-118">NIB: General Security Policy Administration</span></span>](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ <span data-ttu-id="a449e-119">提供有关管理.NET Framework 安全策略和提升权限的信息。</span><span class="sxs-lookup"><span data-stu-id="a449e-119">Gives information about the administering the .NET Framework security policy and elevating permissions.</span></span>  
   
- [危险权限和策略管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
- 讨论某些可能允许安全系统被避开的 .NET Framework 权限。  
+ [<span data-ttu-id="a449e-120">危险权限和策略管理</span><span class="sxs-lookup"><span data-stu-id="a449e-120">Dangerous Permissions and Policy Administration</span></span>](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
+ <span data-ttu-id="a449e-121">讨论一些可能允许绕过安全系统的.net Framework 权限。</span><span class="sxs-lookup"><span data-stu-id="a449e-121">Discusses some of the.NET Framework permissions that can potentially allow the security system to be circumvented.</span></span>  
   
- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)  
- 链接到解释在 .NET Framework 中编写安全代码的最佳方法的主题。  
+ [<span data-ttu-id="a449e-122">安全编码准则</span><span class="sxs-lookup"><span data-stu-id="a449e-122">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="a449e-123">这些主题介绍安全地编写针对.NET Framework 的代码的最佳做法的链接。</span><span class="sxs-lookup"><span data-stu-id="a449e-123">Links to topics that explain the best practices for securely writing code against the .NET Framework.</span></span>  
   
- [NIB: Requesting Permissions](http://msdn.microsoft.com/zh-cn/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
- 讨论一些特性的用法，这些特性告知运行时，代码的运行需要哪些权限。  
+ [<span data-ttu-id="a449e-124">NIB： 请求权限</span><span class="sxs-lookup"><span data-stu-id="a449e-124">NIB: Requesting Permissions</span></span>](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ <span data-ttu-id="a449e-125">讨论特性，以便知道你的代码需要运行哪些权限的运行时的使用。</span><span class="sxs-lookup"><span data-stu-id="a449e-125">Discusses the use of attributes to let the runtime know what permissions your code needs to run.</span></span>  
   
- [安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)  
- 链接到探讨代码安全性基础概念的主题。  
+ [<span data-ttu-id="a449e-126">安全性的基础概念</span><span class="sxs-lookup"><span data-stu-id="a449e-126">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="a449e-127">链接到涵盖的基本代码安全性方面的主题。</span><span class="sxs-lookup"><span data-stu-id="a449e-127">Links to topics that cover the basic aspects of code security.</span></span>  
   
- [代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)  
- 讨论使用 .NET Framework 运行时安全策略的基础知识。  
+ [<span data-ttu-id="a449e-128">代码访问安全性基础知识</span><span class="sxs-lookup"><span data-stu-id="a449e-128">Code Access Security Basics</span></span>](../../../docs/framework/misc/code-access-security-basics.md)  
+ <span data-ttu-id="a449e-129">讨论使用运行时的安全策略的.NET Framework 的基础知识。</span><span class="sxs-lookup"><span data-stu-id="a449e-129">Discusses the basics of working with the .NET Framework run time security policy.</span></span>  
   
- [NIB: Determining When to Modify Security Policy](http://msdn.microsoft.com/zh-cn/af749b17-e461-409d-84b9-a3d44789db16)  
- 解释如何确定应用程序需要修改默认安全策略的时机。  
+ [<span data-ttu-id="a449e-130">NIB： 确定何时修改安全策略</span><span class="sxs-lookup"><span data-stu-id="a449e-130">NIB: Determining When to Modify Security Policy</span></span>](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ <span data-ttu-id="a449e-131">说明如何确定你的应用程序需要以偏离默认安全策略时。</span><span class="sxs-lookup"><span data-stu-id="a449e-131">Explains how to determine when your applications need to diverge from the default security policy.</span></span>  
   
- [NIB: Deploying Security Policy](http://msdn.microsoft.com/zh-cn/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
- 讨论部署安全策略更改的最佳方式。
+ [<span data-ttu-id="a449e-132">NIB： 部署安全策略</span><span class="sxs-lookup"><span data-stu-id="a449e-132">NIB: Deploying Security Policy</span></span>](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ <span data-ttu-id="a449e-133">讨论将安全策略更改部署的最佳方式。</span><span class="sxs-lookup"><span data-stu-id="a449e-133">Discusses the best manner for deploying security policy changes.</span></span>

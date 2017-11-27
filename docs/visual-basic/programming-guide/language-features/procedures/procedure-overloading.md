@@ -1,105 +1,104 @@
 ---
-title: "过程重载 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "按签名隐藏"
-  - "Overloads 关键字"
-  - "参数列表"
-  - "参数, 列表"
-  - "过程重载"
-  - "过程, 多个版本"
-  - "过程, 重载"
-  - "过程, 参数列表"
-  - "过程, 签名"
-  - "Shadows 关键字"
-  - "签名"
-  - "签名, 过程"
-  - "Visual Basic 代码, 参数列表"
-  - "Visual Basic 代码, 过程"
+title: "过程重载 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- signatures
+- Overloads keyword [Visual Basic]
+- hiding by signature
+- Visual Basic code, procedures
+- procedures [Visual Basic], signatures for
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], multiple versions
+- parameters [Visual Basic], lists
+- signatures [Visual Basic], procedure
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- Shadows keyword [Visual Basic]
+- procedure overloading
+- procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 过程重载 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-重载过程是指使用相同的名称和不同的参数列表在多个版本中定义某个过程。  重载的目的是定义过程的若干个密切相关的版本，而不需要通过名称来区分它们，  可通过改变参数列表达到此目的。  
+# <a name="procedure-overloading-visual-basic"></a><span data-ttu-id="a8fda-102">过程重载 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8fda-102">Procedure Overloading (Visual Basic)</span></span>
+<span data-ttu-id="a8fda-103">*重载*过程意味着在多个版本，使用相同名称但不同的参数列表中定义它。</span><span class="sxs-lookup"><span data-stu-id="a8fda-103">*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists.</span></span> <span data-ttu-id="a8fda-104">重载的目的是定义过程的几个密切相关的版本，而无需将它们按名称区分开来。</span><span class="sxs-lookup"><span data-stu-id="a8fda-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span> <span data-ttu-id="a8fda-105">通过不同的参数列表来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="a8fda-105">You do this by varying the parameter list.</span></span>  
   
-## 重载规则  
- 重载过程时，适用以下规则：  
+## <a name="overloading-rules"></a><span data-ttu-id="a8fda-106">重载规则</span><span class="sxs-lookup"><span data-stu-id="a8fda-106">Overloading Rules</span></span>  
+ <span data-ttu-id="a8fda-107">重载过程，适用以下规则：</span><span class="sxs-lookup"><span data-stu-id="a8fda-107">When you overload a procedure, the following rules apply:</span></span>  
   
--   **相同名称**。  每一重载版本都必须使用同一个过程名。  
+-   <span data-ttu-id="a8fda-108">**相同的名称**。</span><span class="sxs-lookup"><span data-stu-id="a8fda-108">**Same Name**.</span></span> <span data-ttu-id="a8fda-109">每个重载的版本必须使用相同的过程名称。</span><span class="sxs-lookup"><span data-stu-id="a8fda-109">Each overloaded version must use the same procedure name.</span></span>  
   
--   **不同签名**。  每个重载版本必须在以下至少一个方面不同于所有其他重载版本：  
+-   <span data-ttu-id="a8fda-110">**不同的签名**。</span><span class="sxs-lookup"><span data-stu-id="a8fda-110">**Different Signature**.</span></span> <span data-ttu-id="a8fda-111">每个重载的版本必须不同于在至少一个以下方面的所有其他重载版本：</span><span class="sxs-lookup"><span data-stu-id="a8fda-111">Each overloaded version must differ from all other overloaded versions in at least one of the following respects:</span></span>  
   
-    -   参数的数量  
+    -   <span data-ttu-id="a8fda-112">参数数目</span><span class="sxs-lookup"><span data-stu-id="a8fda-112">Number of parameters</span></span>  
   
-    -   参数的顺序  
+    -   <span data-ttu-id="a8fda-113">参数的顺序</span><span class="sxs-lookup"><span data-stu-id="a8fda-113">Order of the parameters</span></span>  
   
-    -   参数的数据类型  
+    -   <span data-ttu-id="a8fda-114">参数数据类型</span><span class="sxs-lookup"><span data-stu-id="a8fda-114">Data types of the parameters</span></span>  
   
-    -   类型参数的数量（适用于泛型过程）  
+    -   <span data-ttu-id="a8fda-115">类型参数 （对于泛型过程） 数</span><span class="sxs-lookup"><span data-stu-id="a8fda-115">Number of type parameters (for a generic procedure)</span></span>  
   
-    -   返回类型（仅适用于转换运算符）  
+    -   <span data-ttu-id="a8fda-116">返回类型 （仅针对转换运算符）</span><span class="sxs-lookup"><span data-stu-id="a8fda-116">Return type (only for a conversion operator)</span></span>  
   
-     以上各项与过程名称一起称为过程的“签名”。  在调用重载的过程时，编译器使用签名来检查调用是否与定义正确匹配。  
+     <span data-ttu-id="a8fda-117">过程名称，以及统称为前述各项*签名*的过程。</span><span class="sxs-lookup"><span data-stu-id="a8fda-117">Together with the procedure name, the preceding items are collectively called the *signature* of the procedure.</span></span> <span data-ttu-id="a8fda-118">当调用重载的过程时，编译器将使用签名来检查调用正确与定义相匹配。</span><span class="sxs-lookup"><span data-stu-id="a8fda-118">When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.</span></span>  
   
--   **不属于签名部分的项**。  如果不改变签名，就不能重载过程。  尤其不能仅通过改变下列一项或多项来重载过程：  
+-   <span data-ttu-id="a8fda-119">**项不是签名的一部分**。</span><span class="sxs-lookup"><span data-stu-id="a8fda-119">**Items Not Part of Signature**.</span></span> <span data-ttu-id="a8fda-120">如果不改变签名，不能重载过程。</span><span class="sxs-lookup"><span data-stu-id="a8fda-120">You cannot overload a procedure without varying the signature.</span></span> <span data-ttu-id="a8fda-121">具体而言，不能通过一个或多个以下各项仅改变重载过程：</span><span class="sxs-lookup"><span data-stu-id="a8fda-121">In particular, you cannot overload a procedure by varying only one or more of the following items:</span></span>  
   
-    -   过程修饰符关键字，如 `Public`、`Shared` 和 `Static`  
+    -   <span data-ttu-id="a8fda-122">过程修饰符关键字，如`Public`， `Shared`，和`Static`</span><span class="sxs-lookup"><span data-stu-id="a8fda-122">Procedure modifier keywords, such as `Public`, `Shared`, and `Static`</span></span>  
   
-    -   参数或类型参数的名称  
+    -   <span data-ttu-id="a8fda-123">参数或类型参数名称</span><span class="sxs-lookup"><span data-stu-id="a8fda-123">Parameter or type parameter names</span></span>  
   
-    -   类型参数约束（适用于泛型过程）  
+    -   <span data-ttu-id="a8fda-124">类型参数约束 （针对泛型过程）</span><span class="sxs-lookup"><span data-stu-id="a8fda-124">Type parameter constraints (for a generic procedure)</span></span>  
   
-    -   参数修饰符关键字，如 `ByRef` 和 `Optional`  
+    -   <span data-ttu-id="a8fda-125">参数修饰符关键字，如`ByRef`和`Optional`</span><span class="sxs-lookup"><span data-stu-id="a8fda-125">Parameter modifier keywords, such as `ByRef` and `Optional`</span></span>  
   
-    -   是否返回值  
+    -   <span data-ttu-id="a8fda-126">它是否返回一个值</span><span class="sxs-lookup"><span data-stu-id="a8fda-126">Whether it returns a value</span></span>  
   
-    -   返回值的数据类型（转换运算符除外）  
+    -   <span data-ttu-id="a8fda-127">数据类型 （除转换运算符） 的返回值</span><span class="sxs-lookup"><span data-stu-id="a8fda-127">The data type of the return value (except for a conversion operator)</span></span>  
   
-     以上列表中的项不属于签名。  虽然您无法用这些项区别重载版本，但可以在由其签名正确区分的重载版本中改变这些项。  
+     <span data-ttu-id="a8fda-128">上面的列表中的项不签名的一部分。</span><span class="sxs-lookup"><span data-stu-id="a8fda-128">The items in the preceding list are not part of the signature.</span></span> <span data-ttu-id="a8fda-129">但不能使用它们来区分重载版本，你可以通过它们的签名区分正确的重载版本中对其进行修改。</span><span class="sxs-lookup"><span data-stu-id="a8fda-129">Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.</span></span>  
   
--   **后期绑定的参数**。  如果要将一个后期绑定对象变量传递给一个重载版本，必须将相应的参数声明为 <xref:System.Object>。  
+-   <span data-ttu-id="a8fda-130">**后期绑定自变量**。</span><span class="sxs-lookup"><span data-stu-id="a8fda-130">**Late-Bound Arguments**.</span></span> <span data-ttu-id="a8fda-131">如果你想要将后期绑定的对象变量传递到重载版本，你必须声明为适当的参数<xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="a8fda-131">If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.</span></span>  
   
-## 过程的多个版本  
- 假设要编写一个 `Sub` 过程来根据客户的余额公布交易，同时希望能够通过名称或者通过帐号引用客户。  为此，可以定义两个不同的 `Sub` 过程，如下例所示：  
+## <a name="multiple-versions-of-a-procedure"></a><span data-ttu-id="a8fda-132">过程的多个版本</span><span class="sxs-lookup"><span data-stu-id="a8fda-132">Multiple Versions of a Procedure</span></span>  
+ <span data-ttu-id="a8fda-133">假设你正在编写`Sub`过程针对客户的平衡，和你发送一个事务想要能够按名称或帐户号，请参阅客户。</span><span class="sxs-lookup"><span data-stu-id="a8fda-133">Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number.</span></span> <span data-ttu-id="a8fda-134">若要适应这种情况，可以定义两个不同`Sub`过程，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="a8fda-134">To accommodate this, you can define two different `Sub` procedures, as in the following example:</span></span>  
   
  [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
-### 重载版本  
- 另一种方法是重载一个单独的过程名。  可以使用 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 关键字为每一个参数列表定义该过程的一个版本，如下所示：  
+### <a name="overloaded-versions"></a><span data-ttu-id="a8fda-135">重载的版本</span><span class="sxs-lookup"><span data-stu-id="a8fda-135">Overloaded Versions</span></span>  
+ <span data-ttu-id="a8fda-136">一种替代方法是重载的单一过程名称。</span><span class="sxs-lookup"><span data-stu-id="a8fda-136">An alternative is to overload a single procedure name.</span></span> <span data-ttu-id="a8fda-137">你可以使用[重载](../../../../visual-basic/language-reference/modifiers/overloads.md)关键字来定义为每个参数列表中，过程的一个版本，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a8fda-137">You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:</span></span>  
   
  [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
-#### 其他重载  
- 如果还需要接受以 `Decimal` 或 `Single` 表示的交易金额，可进一步重载 `post` 以允许这种变化形式。  如果在上例中对每个重载都进行了这样的操作，就会有四个 `Sub` 过程，它们具有相同的名称但是具有四个不同的签名。  
+#### <a name="additional-overloads"></a><span data-ttu-id="a8fda-138">其他重载</span><span class="sxs-lookup"><span data-stu-id="a8fda-138">Additional Overloads</span></span>  
+ <span data-ttu-id="a8fda-139">如果你还想要接受在事务量`Decimal`或`Single`，可进一步重载`post`以允许这种变化形式。</span><span class="sxs-lookup"><span data-stu-id="a8fda-139">If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation.</span></span> <span data-ttu-id="a8fda-140">如果你这样做这到每个前面的示例中的重载，你会有四个`Sub`过程，它们具有相同名称但具有四个不同的签名。</span><span class="sxs-lookup"><span data-stu-id="a8fda-140">If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.</span></span>  
   
-## 重载的优点  
- 重载过程的优点在于使调用更灵活。  若要使用前面示例中声明的 `post` 过程，调用代码可以获得 `String` 或 `Integer` 类型的客户标识，然后在两种情况下都调用同一过程。  下面的示例阐释了这一点：  
+## <a name="advantages-of-overloading"></a><span data-ttu-id="a8fda-141">重载的优点</span><span class="sxs-lookup"><span data-stu-id="a8fda-141">Advantages of Overloading</span></span>  
+ <span data-ttu-id="a8fda-142">重载过程的优点是在调用的灵活性。</span><span class="sxs-lookup"><span data-stu-id="a8fda-142">The advantage of overloading a procedure is in the flexibility of the call.</span></span> <span data-ttu-id="a8fda-143">若要使用`post`过程，声明在前面的示例中，调用代码可以获取的客户标识为`String`或`Integer`，然后在任一情况下调用相同的过程。</span><span class="sxs-lookup"><span data-stu-id="a8fda-143">To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case.</span></span> <span data-ttu-id="a8fda-144">下面的示例阐释了这一点：</span><span class="sxs-lookup"><span data-stu-id="a8fda-144">The following example illustrates this:</span></span>  
   
  [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
  [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
-## 请参阅  
- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [如何：定义一个过程的多个版本](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
- [如何：调用重载过程](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md)   
- [如何：重载带有可选参数的过程](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [如何：重载参数数量不确定的过程](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [重载过程注意事项](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)   
- [重载决策](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)   
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)   
- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a><span data-ttu-id="a8fda-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a8fda-145">See Also</span></span>  
+ [<span data-ttu-id="a8fda-146">过程</span><span class="sxs-lookup"><span data-stu-id="a8fda-146">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="a8fda-147">如何：定义一个过程的多个版本</span><span class="sxs-lookup"><span data-stu-id="a8fda-147">How to: Define Multiple Versions of a Procedure</span></span>](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [<span data-ttu-id="a8fda-148">如何：调用重载过程</span><span class="sxs-lookup"><span data-stu-id="a8fda-148">How to: Call an Overloaded Procedure</span></span>](./how-to-call-an-overloaded-procedure.md)  
+ [<span data-ttu-id="a8fda-149">如何：重载带有可选参数的过程</span><span class="sxs-lookup"><span data-stu-id="a8fda-149">How to: Overload a Procedure that Takes Optional Parameters</span></span>](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [<span data-ttu-id="a8fda-150">如何：重载参数数量不确定的过程</span><span class="sxs-lookup"><span data-stu-id="a8fda-150">How to: Overload a Procedure that Takes an Indefinite Number of Parameters</span></span>](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [<span data-ttu-id="a8fda-151">重载过程注意事项</span><span class="sxs-lookup"><span data-stu-id="a8fda-151">Considerations in Overloading Procedures</span></span>](./considerations-in-overloading-procedures.md)  
+ [<span data-ttu-id="a8fda-152">重载决策</span><span class="sxs-lookup"><span data-stu-id="a8fda-152">Overload Resolution</span></span>](./overload-resolution.md)  
+ [<span data-ttu-id="a8fda-153">重载</span><span class="sxs-lookup"><span data-stu-id="a8fda-153">Overloads</span></span>](../../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [<span data-ttu-id="a8fda-154">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="a8fda-154">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

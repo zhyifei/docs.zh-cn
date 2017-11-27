@@ -1,25 +1,28 @@
 ---
-title: "PeerTransportSecuritySettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: PeerTransportSecuritySettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1df08cbb-68c5-4d36-9f88-a776a8117de8
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e5b245895285b7286432f49cc177d480d1509cbb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# PeerTransportSecuritySettings
-PeerTransportSecuritySettings  
+# <a name="peertransportsecuritysettings"></a><span data-ttu-id="d53dd-102">PeerTransportSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="d53dd-102">PeerTransportSecuritySettings</span></span>
+<span data-ttu-id="d53dd-103">PeerTransportSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="d53dd-103">PeerTransportSecuritySettings</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="d53dd-104">语法</span><span class="sxs-lookup"><span data-stu-id="d53dd-104">Syntax</span></span>  
   
 ```  
 class PeerTransportSecuritySettings  
@@ -28,24 +31,24 @@ class PeerTransportSecuritySettings
 };  
 ```  
   
-## 方法  
- PeerTransportSecuritySettings 类不定义任何方法。  
+## <a name="methods"></a><span data-ttu-id="d53dd-105">方法</span><span class="sxs-lookup"><span data-stu-id="d53dd-105">Methods</span></span>  
+ <span data-ttu-id="d53dd-106">PeerTransportSecuritySettings 类不定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="d53dd-106">The PeerTransportSecuritySettings class does not define any methods.</span></span>  
   
-## 属性  
- PeerTransportSecuritySettings 类具有以下属性：  
+## <a name="properties"></a><span data-ttu-id="d53dd-107">属性</span><span class="sxs-lookup"><span data-stu-id="d53dd-107">Properties</span></span>  
+ <span data-ttu-id="d53dd-108">PeerTransportSecuritySettings 类具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="d53dd-108">The PeerTransportSecuritySettings class has the following property:</span></span>  
   
-### CredentialType  
- 数据类型：String  
+### <a name="credentialtype"></a><span data-ttu-id="d53dd-109">CredentialType</span><span class="sxs-lookup"><span data-stu-id="d53dd-109">CredentialType</span></span>  
+ <span data-ttu-id="d53dd-110">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="d53dd-110">Data type: string</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="d53dd-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d53dd-111">Access type: Read-only</span></span>  
   
- 对等安全元素的传输凭据类型。  
+ <span data-ttu-id="d53dd-112">对等安全元素的传输凭据类型。</span><span class="sxs-lookup"><span data-stu-id="d53dd-112">The transport credential type of the peer security element.</span></span>  
   
-## 要求  
+## <a name="requirements"></a><span data-ttu-id="d53dd-113">要求</span><span class="sxs-lookup"><span data-stu-id="d53dd-113">Requirements</span></span>  
   
-|MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|<span data-ttu-id="d53dd-114">MOF</span><span class="sxs-lookup"><span data-stu-id="d53dd-114">MOF</span></span>|<span data-ttu-id="d53dd-115">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="d53dd-115">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="d53dd-116">命名空间</span><span class="sxs-lookup"><span data-stu-id="d53dd-116">Namespace</span></span>|<span data-ttu-id="d53dd-117">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="d53dd-117">Defined in root\ServiceModel</span></span>|  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="d53dd-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d53dd-118">See Also</span></span>  
  <xref:System.ServiceModel.PeerTransportSecuritySettings>

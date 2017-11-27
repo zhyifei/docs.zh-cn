@@ -1,50 +1,51 @@
 ---
-title: "Windows 窗体数据绑定中的更改通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows 窗体, 为数据绑定添加更改通知"
-  - "Windows 窗体, 数据绑定"
+title: "Windows 窗体数据绑定中的更改通知"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, data binding
+- Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体数据绑定中的更改通知
-Windows 窗体数据绑定的最重要的概念之一是“更改通知”。  为了确保数据源及绑定控件总是具有最新的数据，必须为数据绑定添加更改通知。  具体地说，您希望确保绑定控件收到对其数据源所做更改的通知，并希望数据源收到对控件的绑定属性所做更改的通知。  
+# <a name="change-notification-in-windows-forms-data-binding"></a><span data-ttu-id="a11b3-102">Windows 窗体数据绑定中的更改通知</span><span class="sxs-lookup"><span data-stu-id="a11b3-102">Change Notification in Windows Forms Data Binding</span></span>
+<span data-ttu-id="a11b3-103">Windows 窗体数据绑定的最重要概念之一是*更改通知*。</span><span class="sxs-lookup"><span data-stu-id="a11b3-103">One of the most important concepts of Windows Forms data binding is *change notification*.</span></span> <span data-ttu-id="a11b3-104">若要确保你的数据源和绑定的控件始终具有最新的数据，必须添加数据绑定的更改通知。</span><span class="sxs-lookup"><span data-stu-id="a11b3-104">To ensure that your data source and bound controls always have the most recent data, you must add change notification for data binding.</span></span> <span data-ttu-id="a11b3-105">具体而言，你想要确保对其数据源，所做的更改，会通知绑定的控件，并且数据源会通知的控件的绑定属性所做的更改。</span><span class="sxs-lookup"><span data-stu-id="a11b3-105">Specifically, you want to ensure that bound controls are notified of changes that were made to their data source, and the data source is notified of changes that were made to the bound properties of a control.</span></span>  
   
- 根据数据绑定类型的不同，存在不同类型的更改通知：  
+ <span data-ttu-id="a11b3-106">有不同种类的更改通知，具体取决于数据绑定的类型：</span><span class="sxs-lookup"><span data-stu-id="a11b3-106">There are different kinds of change notification, depending on the kind of data binding:</span></span>  
   
--   简单绑定，即单个控件属性绑定到单个对象实例。  
+-   <span data-ttu-id="a11b3-107">简单绑定，在其中的单个控件属性绑定到对象的单个实例。</span><span class="sxs-lookup"><span data-stu-id="a11b3-107">Simple binding, in which a single control property is bound to a single instance of an object.</span></span>  
   
--   基于列表的绑定，既可以包括绑定到列表中某一项的属性的单个控件属性，也可以包括绑定到对象列表的控件属性。  
+-   <span data-ttu-id="a11b3-108">基于列表的绑定，可以包括单个控件属性绑定到列表中的项的属性或控件属性绑定到的对象的列表。</span><span class="sxs-lookup"><span data-stu-id="a11b3-108">List-based binding, which can include a single control property bound to the property of an item in a list or a control property bound to a list of objects.</span></span>  
   
- 此外，如果要创建希望用于数据绑定的 Windows 窗体控件，则必须将*属性名称*Changed 模式应用于这些控件，以便将对控件的绑定属性进行的更改传播到数据源。  
+ <span data-ttu-id="a11b3-109">此外，如果要创建想要用于数据绑定的 Windows 窗体控件，则必须应用*PropertyName*于这些控件，更改模式，以便对控件的绑定属性的更改传播到数据源。</span><span class="sxs-lookup"><span data-stu-id="a11b3-109">Additionally, if you are creating Windows Forms controls that you want to use for data binding, you must apply the *PropertyName*Changed pattern to the controls, so that changes to the bound property of a control are propagated to the data source.</span></span>  
   
-## 简单绑定的更改通知  
- 对于简单绑定，当绑定属性的值发生更改时，业务对象必须提供更改通知。  通过为业务对象的每个属性公开*属性名称*Changed 事件，并使用 <xref:System.Windows.Forms.BindingSource> 或使用首选方法（在该方法中，业务对象实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口，并在属性值发生更改时引发 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件）将业务对象绑定到控件，可以实现此目的。  有关更多信息，请参见[如何：实现 INotifyPropertyChanged 接口](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)。  当使用实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口的对象时，不必使用 <xref:System.Windows.Forms.BindingSource> 将对象绑定到控件，而是推荐使用 <xref:System.Windows.Forms.BindingSource>。  
+## <a name="change-notification-for-simple-binding"></a><span data-ttu-id="a11b3-110">简单绑定的更改通知</span><span class="sxs-lookup"><span data-stu-id="a11b3-110">Change Notification for Simple Binding</span></span>  
+ <span data-ttu-id="a11b3-111">对于简单绑定，业务对象绑定属性的值更改时必须提供更改通知。</span><span class="sxs-lookup"><span data-stu-id="a11b3-111">For simple binding, business objects must provide change notification when the value of a bound property changes.</span></span> <span data-ttu-id="a11b3-112">你可以执行此操作通过公开*PropertyName*Changed 事件的业务对象并将业务对象绑定到控件与每个属性<xref:System.Windows.Forms.BindingSource>或在其中实现业务对象的首选的方法<xref:System.ComponentModel.INotifyPropertyChanged>接口并引发<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>事件的属性的值更改时。</span><span class="sxs-lookup"><span data-stu-id="a11b3-112">You can do this by exposing an *PropertyName*Changed event for each property of your business object and binding the business object to controls with the <xref:System.Windows.Forms.BindingSource> or the preferred method in which your business object implements the <xref:System.ComponentModel.INotifyPropertyChanged> interface and raises a <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> event when the value of a property changes.</span></span> <span data-ttu-id="a11b3-113">有关详细信息，请参阅[如何： 实现 INotifyPropertyChanged 接口](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="a11b3-113">For more information, see [How to: Implement the INotifyPropertyChanged Interface](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md).</span></span> <span data-ttu-id="a11b3-114">当你使用实现的对象<xref:System.ComponentModel.INotifyPropertyChanged>接口，则不需要使用<xref:System.Windows.Forms.BindingSource>将对象绑定到控件，但使用<xref:System.Windows.Forms.BindingSource>建议。</span><span class="sxs-lookup"><span data-stu-id="a11b3-114">When you use objects that implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface, you do not have to use the <xref:System.Windows.Forms.BindingSource> to bind the object to a control, but using the <xref:System.Windows.Forms.BindingSource> is recommended.</span></span>  
   
-## 基于列表的绑定的更改通知  
- Windows 窗体根据绑定列表，向绑定控件提供属性更改（列表项属性值的更改）和列表更改（删除项或向列表添加项）信息。  因此，用于数据绑定的列表必须实现 <xref:System.ComponentModel.IBindingList>，该接口提供两种类型的更改通知。  <xref:System.ComponentModel.BindingList%601> 是 <xref:System.ComponentModel.IBindingList> 的泛型实现，专用于 Windows 窗体数据绑定。  可以创建一个 <xref:System.ComponentModel.BindingList%601>，其中包含实现 <xref:System.ComponentModel.INotifyPropertyChanged> 的业务对象类型，该列表自动将 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件转换为 <xref:System.ComponentModel.IBindingList.ListChanged> 事件。  如果绑定列表不是 <xref:System.ComponentModel.IBindingList>，则必须使用 <xref:System.Windows.Forms.BindingSource> 组件将对象列表绑定到 Windows 窗体控件。  <xref:System.Windows.Forms.BindingSource> 组件将提供与 <xref:System.ComponentModel.BindingList%601> 的属性到列表的转换类似的属性到列表的转换。  有关更多信息，请参见 [如何：使用 BindingSource 和 INotifyPropertyChanged 接口引发更改通知](../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md)。  
+## <a name="change-notification-for-list-based-binding"></a><span data-ttu-id="a11b3-115">基于列表的绑定的更改通知</span><span class="sxs-lookup"><span data-stu-id="a11b3-115">Change Notification for List-Based Binding</span></span>  
+ <span data-ttu-id="a11b3-116">Windows 窗体取决于绑定的列表，以提供 （列表项属性值更改） 的属性更改和更改的列表 （删除项或添加到列表） 绑定控件的信息。</span><span class="sxs-lookup"><span data-stu-id="a11b3-116">Windows Forms depends on a bound list to provide property change (a list item property value changes) and list changed (an item is deleted or added to the list) information to bound controls.</span></span> <span data-ttu-id="a11b3-117">因此，必须实现用于数据绑定列表<xref:System.ComponentModel.IBindingList>，该属性提供两种类型的更改通知。</span><span class="sxs-lookup"><span data-stu-id="a11b3-117">Therefore, lists used for data binding must implement the <xref:System.ComponentModel.IBindingList>, which provides both types of change notification.</span></span> <span data-ttu-id="a11b3-118"><xref:System.ComponentModel.BindingList%601>是的一般实现<xref:System.ComponentModel.IBindingList>，专用于 Windows 窗体数据绑定。</span><span class="sxs-lookup"><span data-stu-id="a11b3-118">The <xref:System.ComponentModel.BindingList%601> is a generic implementation of <xref:System.ComponentModel.IBindingList> and is designed for use with Windows Forms data binding.</span></span> <span data-ttu-id="a11b3-119">你可以创建<xref:System.ComponentModel.BindingList%601>，其中包含实现的业务对象类型<xref:System.ComponentModel.INotifyPropertyChanged>和列表将自动转换<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>事件<xref:System.ComponentModel.IBindingList.ListChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="a11b3-119">You can create a <xref:System.ComponentModel.BindingList%601> that contains a business object type that implements <xref:System.ComponentModel.INotifyPropertyChanged> and the list will automatically convert the <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> events to <xref:System.ComponentModel.IBindingList.ListChanged> events.</span></span> <span data-ttu-id="a11b3-120">如果绑定的列表不是<xref:System.ComponentModel.IBindingList>，你必须通过绑定到 Windows 窗体控件的对象的列表<xref:System.Windows.Forms.BindingSource>组件。</span><span class="sxs-lookup"><span data-stu-id="a11b3-120">If the bound list is not an <xref:System.ComponentModel.IBindingList>, you must bind the list of objects to Windows Forms controls by using the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="a11b3-121"><xref:System.Windows.Forms.BindingSource>组件将提供类似于其中的属性列表转换<xref:System.ComponentModel.BindingList%601>。</span><span class="sxs-lookup"><span data-stu-id="a11b3-121">The <xref:System.Windows.Forms.BindingSource> component will provide property-to-list conversion similar to that of the <xref:System.ComponentModel.BindingList%601>.</span></span> <span data-ttu-id="a11b3-122">有关详细信息，请参阅[如何： 使用 BindingSource 和 INotifyPropertyChanged 接口引发更改通知](../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md)。</span><span class="sxs-lookup"><span data-stu-id="a11b3-122">For more information, see [How to: Raise Change Notifications Using a BindingSource and the INotifyPropertyChanged Interface](../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md).</span></span>  
   
-## 自定义控件的更改通知  
- 最后，在控件方面，必须为设计用于绑定到数据的每个属性公开*属性名称*Changed 事件。  对控件属性的更改然后将传播到绑定的数据源。  有关更多信息，请参见 [如何：应用 PropertyNameChanged 模式](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+## <a name="change-notification-for-custom-controls"></a><span data-ttu-id="a11b3-123">自定义控件的更改通知</span><span class="sxs-lookup"><span data-stu-id="a11b3-123">Change Notification for Custom Controls</span></span>  
+ <span data-ttu-id="a11b3-124">最后，从控件端必须公开*PropertyName*旨在绑定到数据的每个属性的 Changed 事件。</span><span class="sxs-lookup"><span data-stu-id="a11b3-124">Finally, from the control side you must expose a *PropertyName*Changed event for each property designed to be bound to data.</span></span> <span data-ttu-id="a11b3-125">然后，对控件属性的更改会传播到绑定的数据源。</span><span class="sxs-lookup"><span data-stu-id="a11b3-125">The changes to the control property are then propagated to the bound data source.</span></span> <span data-ttu-id="a11b3-126">有关详细信息，请参阅[如何： 应用 PropertyNameChanged 模式](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="a11b3-126">For more information, see [How to: Apply the PropertyNameChanged Pattern](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.ComponentModel.INotifyPropertyChanged>   
- <xref:System.ComponentModel.BindingList%601>   
- [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [Windows 窗体支持的数据源](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)   
- [数据绑定和 Windows 窗体](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a11b3-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a11b3-127">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.ComponentModel.INotifyPropertyChanged>  
+ <xref:System.ComponentModel.BindingList%601>  
+ [<span data-ttu-id="a11b3-128">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="a11b3-128">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [<span data-ttu-id="a11b3-129">Windows 窗体支持的数据源</span><span class="sxs-lookup"><span data-stu-id="a11b3-129">Data Sources Supported by Windows Forms</span></span>](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [<span data-ttu-id="a11b3-130">数据绑定和 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="a11b3-130">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

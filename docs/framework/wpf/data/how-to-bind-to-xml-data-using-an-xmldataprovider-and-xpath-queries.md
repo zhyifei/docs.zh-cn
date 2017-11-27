@@ -1,74 +1,77 @@
 ---
-title: "如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "绑定, 使用 XmlDataProvider 查询绑定到 XML 数据"
-  - "Data Binding — 数据绑定, 使用 XmlDataProvider 查询绑定到 XML 数据"
-  - "XmlDataProvider, 绑定到 XML 数据"
+title: "如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XmlDataProvider [WPF], binding to XML data
+- data binding [WPF], binding to XML data using XmlDataProvider queries
+- binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06a515b266b2787c24e95b461075d9059e4311dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据
-本示例说明如何使用 <xref:System.Windows.Data.XmlDataProvider> 绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 数据。  
+# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a><span data-ttu-id="7125b-102">如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据</span><span class="sxs-lookup"><span data-stu-id="7125b-102">How to: Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>
+<span data-ttu-id="7125b-103">此示例演示如何将绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]数据使用<xref:System.Windows.Data.XmlDataProvider>。</span><span class="sxs-lookup"><span data-stu-id="7125b-103">This example shows how to bind to [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] data using an <xref:System.Windows.Data.XmlDataProvider>.</span></span>  
   
- 使用 <xref:System.Windows.Data.XmlDataProvider> 时，在应用程序中可通过数据绑定访问的基础数据可以是 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 节点的任意树。  也就是说，<xref:System.Windows.Data.XmlDataProvider> 提供一种将 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 节点的任意树用作[绑定源](GTMT)的简便方式。  
+ <span data-ttu-id="7125b-104">与<xref:System.Windows.Data.XmlDataProvider>，则基础可以通过你的应用程序中的数据绑定的数据可以是任何树[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]节点。</span><span class="sxs-lookup"><span data-stu-id="7125b-104">With an <xref:System.Windows.Data.XmlDataProvider>, the underlying data that can be accessed through data binding in your application can be any tree of [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] nodes.</span></span> <span data-ttu-id="7125b-105">换而言之，<xref:System.Windows.Data.XmlDataProvider>提供一种简便方式使用的任何树[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]作为绑定源的节点。</span><span class="sxs-lookup"><span data-stu-id="7125b-105">In other words, an <xref:System.Windows.Data.XmlDataProvider> provides a convenient way to use any tree of [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] nodes as a binding source.</span></span>  
   
-## 示例  
- 在下面的示例中，数据是作为 <xref:System.Windows.FrameworkElement.Resources%2A> 部分内的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *数据岛* 直接嵌入的。  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并始终具有一个单一根节点，在本示例中根节点为 *Inventory*。  
+## <a name="example"></a><span data-ttu-id="7125b-106">示例</span><span class="sxs-lookup"><span data-stu-id="7125b-106">Example</span></span>  
+ <span data-ttu-id="7125b-107">在下面的示例中，则数据嵌入直接作为[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]*数据岛*内<xref:System.Windows.FrameworkElement.Resources%2A>部分。</span><span class="sxs-lookup"><span data-stu-id="7125b-107">In the following example, the data is embedded directly as an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *data island* within the <xref:System.Windows.FrameworkElement.Resources%2A> section.</span></span> <span data-ttu-id="7125b-108">[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并始终具有一个单一根节点，在本示例中根节点为 *Inventory*。</span><span class="sxs-lookup"><span data-stu-id="7125b-108">An [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data island must be wrapped in `<x:XData>` tags and always have a single root node, which is *Inventory* in this example.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点具有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 特性。  将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。  在此内联情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及数据岛会继承 <xref:System.Windows> 命名空间。  因此，您需要将命名空间设置为空白，以防止 XPath 查询被 <xref:System.Windows> 命名空间限定而误导查询。  
+>  <span data-ttu-id="7125b-109">[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点具有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 属性。</span><span class="sxs-lookup"><span data-stu-id="7125b-109">The root node of the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data has an **xmlns** attribute that sets the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace to an empty string.</span></span> <span data-ttu-id="7125b-110">将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。</span><span class="sxs-lookup"><span data-stu-id="7125b-110">This is a requirement for applying XPath queries to a data island that is inline within the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="7125b-111">在本例内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，并因此数据岛，继承<xref:System.Windows>命名空间。</span><span class="sxs-lookup"><span data-stu-id="7125b-111">In this inline case, the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], and thus the data island, inherits the <xref:System.Windows> namespace.</span></span> <span data-ttu-id="7125b-112">因此，你需要将命名空间设置为空，以防止 XPath 查询正在由限定<xref:System.Windows>误导查询的命名空间。</span><span class="sxs-lookup"><span data-stu-id="7125b-112">Because of this, you need to set the namespace blank to keep XPath queries from being qualified by the <xref:System.Windows> namespace, which would misdirect the queries.</span></span>  
   
- [!code-xml[XMLDataSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
+ [!code-xaml[XMLDataSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- 如此示例中所示，若要使用特性语法创建相同的绑定声明，您必须对特殊字符进行正确转义。  有关更多信息，请参见 [XML 字符实体和 XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)。  
+ <span data-ttu-id="7125b-113">如此示例中所示，若要使用属性语法创建相同的绑定声明，必须对特殊字符进行正确转义。</span><span class="sxs-lookup"><span data-stu-id="7125b-113">As shown in this example, to create the same binding declaration in attribute syntax you must escape the special characters properly.</span></span> <span data-ttu-id="7125b-114">有关详细信息，请参阅 [XML 字符实体和 XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="7125b-114">For more information, see [XML Character Entities and XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md).</span></span>  
   
- 运行此示例后，<xref:System.Windows.Controls.ListBox> 将显示下列项。  这些项为 *Books* 下所有元素的 *Title*，其中 *Stock* 值为“*out*”，*Number* 值为 3 或者大于或等于 8。  请注意未返回 *CD* 项，因为在 <xref:System.Windows.Data.XmlDataProvider> 上设置的 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> 值指示应仅公开 *Books* 元素（这是设置筛选器所必需的）。  
+ <span data-ttu-id="7125b-115"><xref:System.Windows.Controls.ListBox>运行此示例时，将显示以下各项。</span><span class="sxs-lookup"><span data-stu-id="7125b-115">The <xref:System.Windows.Controls.ListBox> will show the following items when this example is run.</span></span> <span data-ttu-id="7125b-116">这些项为 *Books* 下所有元素的 *Title*，其中 *Stock* 值为“*out*”，*Number* 值为 3 或者大于或等于 8。</span><span class="sxs-lookup"><span data-stu-id="7125b-116">These are the *Title*s of all of the elements under *Books* with either a *Stock* value of "*out*" or a *Number* value of 3 or greater than or equals to 8.</span></span> <span data-ttu-id="7125b-117">请注意，没有*CD*返回项，因为<xref:System.Windows.Data.XmlDataProvider.XPath%2A>值上设置<xref:System.Windows.Data.XmlDataProvider>仅指示*丛书*元素应公开 （实质上设置筛选器）。</span><span class="sxs-lookup"><span data-stu-id="7125b-117">Notice that no *CD* items are returned because the <xref:System.Windows.Data.XmlDataProvider.XPath%2A> value set on the <xref:System.Windows.Data.XmlDataProvider> indicates that only the *Books* elements should be exposed (essentially setting a filter).</span></span>  
   
- ![XPath 示例](../../../../docs/framework/wpf/data/media/xpathexample.png "XPathExample")  
+ <span data-ttu-id="7125b-118">![XPath 示例](../../../../docs/framework/wpf/data/media/xpathexample.PNG "XPathExample")</span><span class="sxs-lookup"><span data-stu-id="7125b-118">![XPath Example](../../../../docs/framework/wpf/data/media/xpathexample.PNG "XPathExample")</span></span>  
   
- 在此示例中，将会显示书名，因为 <xref:System.Windows.DataTemplate> 中 <xref:System.Windows.Controls.TextBlock> 绑定的 <xref:System.Windows.Data.Binding.XPath%2A> 设置为“*Title*”。  如果您希望显示特性值，如 *ISBN*，那么应将 <xref:System.Windows.Data.Binding.XPath%2A> 值设置为“`@ISBN`”。  
+ <span data-ttu-id="7125b-119">在此示例中，因为显示书名<xref:System.Windows.Data.Binding.XPath%2A>的<xref:System.Windows.Controls.TextBlock>中绑定<xref:System.Windows.DataTemplate>设置为"*标题*"。</span><span class="sxs-lookup"><span data-stu-id="7125b-119">In this example, the book titles are displayed because the <xref:System.Windows.Data.Binding.XPath%2A> of the <xref:System.Windows.Controls.TextBlock> binding in the <xref:System.Windows.DataTemplate> is set to "*Title*".</span></span> <span data-ttu-id="7125b-120">如果你想要显示的值的属性，如*ISBN*，则会将设置的<xref:System.Windows.Data.Binding.XPath%2A>值赋给"`@ISBN`"。</span><span class="sxs-lookup"><span data-stu-id="7125b-120">If you want to display the value of an attribute, such as the *ISBN*, you would set that <xref:System.Windows.Data.Binding.XPath%2A> value to "`@ISBN`".</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性是由 XmlNode.SelectNodes 方法处理的。  您可以修改 **XPath** 查询以获取不同的结果。  下面是上述示例中的绑定 <xref:System.Windows.Controls.ListBox> 上的 <xref:System.Windows.Data.Binding.XPath%2A> 查询的一些示例：  
+ <span data-ttu-id="7125b-121">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。</span><span class="sxs-lookup"><span data-stu-id="7125b-121">The **XPath** properties in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] are handled by the XmlNode.SelectNodes method.</span></span> <span data-ttu-id="7125b-122">可以修改 **XPath** 查询以获取不同的结果。</span><span class="sxs-lookup"><span data-stu-id="7125b-122">You can modify the **XPath** queries to get different results.</span></span> <span data-ttu-id="7125b-123">下面是一些示例为<xref:System.Windows.Data.Binding.XPath%2A>查询在绑定上<xref:System.Windows.Controls.ListBox>从前面的示例：</span><span class="sxs-lookup"><span data-stu-id="7125b-123">Here are some examples for the <xref:System.Windows.Data.Binding.XPath%2A> query on the bound <xref:System.Windows.Controls.ListBox> from the previous example:</span></span>  
   
--   `XPath="Book[1]"` 将返回第一个 Book 元素（“XML in Action”）。  请注意 **XPath** 索引从 1 而不是从 0 开始。  
+-   <span data-ttu-id="7125b-124">`XPath="Book[1]"` 将返回第一个 Book 元素（“XML in Action”）。</span><span class="sxs-lookup"><span data-stu-id="7125b-124">`XPath="Book[1]"` will return the first book element ("XML in Action").</span></span> <span data-ttu-id="7125b-125">请注意，**XPath** 索引从 1 而不是从 0 开始。</span><span class="sxs-lookup"><span data-stu-id="7125b-125">Note that **XPath** indexes are based on 1, not 0.</span></span>  
   
--   `XPath="Book[@*]"` 将返回带有任意特性的所有 Book 元素。  
+-   <span data-ttu-id="7125b-126">`XPath="Book[@*]"` 将返回带有任意属性的所有 Book 元素。</span><span class="sxs-lookup"><span data-stu-id="7125b-126">`XPath="Book[@*]"` will return all book elements with any attributes.</span></span>  
   
--   `XPath="Book[last()-1]"` 将返回第二个至最后一个 Book 元素（“Introducing Microsoft .NET”）。  
+-   <span data-ttu-id="7125b-127">`XPath="Book[last()-1]"` 将返回第二个至最后一个 Book 元素（“Introducing Microsoft .NET”）。</span><span class="sxs-lookup"><span data-stu-id="7125b-127">`XPath="Book[last()-1]"` will return the second to last book element ("Introducing Microsoft .NET").</span></span>  
   
--   `XPath="*[position()>3]"` 将返回除前 3 个元素之外的所有 Book 元素。  
+-   <span data-ttu-id="7125b-128">`XPath="*[position()>3]"` 将返回除前 3 个元素之外的所有 Book 元素。</span><span class="sxs-lookup"><span data-stu-id="7125b-128">`XPath="*[position()>3]"` will return all of the book elements except for the first 3.</span></span>  
   
- 当运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 列表。  <xref:System.Xml.XmlNode> 是一个[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象，这意味着可以使用 <xref:System.Windows.Data.Binding.Path%2A> 属性绑定到[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性。  再以上述示例为例。  如果该示例的其余部分保持不变，您将 <xref:System.Windows.Controls.TextBlock> 绑定更改为下面的值，那么您将在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。  在此情况下，所有返回节点的名称为“*Book*”。  
+ <span data-ttu-id="7125b-129">当你运行**XPath**查询，它将返回<xref:System.Xml.XmlNode>或 XmlNodes 的列表。</span><span class="sxs-lookup"><span data-stu-id="7125b-129">When you run an **XPath** query, it returns an <xref:System.Xml.XmlNode> or a list of XmlNodes.</span></span> <span data-ttu-id="7125b-130"><xref:System.Xml.XmlNode>是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象，这意味着你可以使用<xref:System.Windows.Data.Binding.Path%2A>属性将绑定到[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]属性。</span><span class="sxs-lookup"><span data-stu-id="7125b-130"><xref:System.Xml.XmlNode> is a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] object, which means you can use the <xref:System.Windows.Data.Binding.Path%2A> property to bind to the [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] properties.</span></span> <span data-ttu-id="7125b-131">再以上述示例为例。</span><span class="sxs-lookup"><span data-stu-id="7125b-131">Consider the previous example again.</span></span> <span data-ttu-id="7125b-132">如果该示例的其余部分保持不变，并且更改<xref:System.Windows.Controls.TextBlock>绑定到以下，你将看到的名称中返回 XmlNodes <xref:System.Windows.Controls.ListBox>。</span><span class="sxs-lookup"><span data-stu-id="7125b-132">If the rest of the example stays the same and you change the <xref:System.Windows.Controls.TextBlock> binding to the following, you will see the names of the returned XmlNodes in the <xref:System.Windows.Controls.ListBox>.</span></span> <span data-ttu-id="7125b-133">在此情况下，所有返回节点的名称为“*Book*”。</span><span class="sxs-lookup"><span data-stu-id="7125b-133">In this case, the name of all the returned nodes is "*Book*".</span></span>  
   
- [!code-xml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
+ [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- 在某些应用程序中，将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 作为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页的源内的数据岛嵌入可能很不方便，因为在编译时必须知道该数据的确切内容。  因此，还支持从外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件获取该数据，如下面的示例所示：  
+ <span data-ttu-id="7125b-134">在某些应用程序中，将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 作为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页的源内的数据岛嵌入可能很不方便，因为在编译时必须知道该数据的确切内容。</span><span class="sxs-lookup"><span data-stu-id="7125b-134">In some applications, embedding the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] as a data island within the source of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page can be inconvenient because the exact content of the data must be known at compile time.</span></span> <span data-ttu-id="7125b-135">因此，还支持从外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件获取该数据，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="7125b-135">Therefore, obtaining the data from an external [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] file is also supported, as in the following example:</span></span>  
   
- [!code-xml[XMLDataSource2#XmlFileExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
+ [!code-xaml[XMLDataSource2#XmlFileExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据驻留在远程 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件中，那么可以通过将适当的 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 分配给 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 特性来定义对该数据的访问，如下所示：  
+ <span data-ttu-id="7125b-136">如果[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据驻留在远程[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]文件，你将定义的访问权限的数据通过分配适当[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]到<xref:System.Windows.Data.XmlDataProvider.Source%2A>属性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="7125b-136">If the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data resides in a remote [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] file, you would define access to the data by assigning an appropriate [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] to the <xref:System.Windows.Data.XmlDataProvider.Source%2A> attribute as follows:</span></span>  
   
-```  
+```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
 ```  
   
-## 请参阅  
- <xref:System.Windows.Data.ObjectDataProvider>   
- [绑定到 XDocument、XElement 或 LINQ for XML 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)   
- [对分层 XML 数据使用主\-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)   
- [绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)   
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="7125b-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7125b-137">See Also</span></span>  
+ <xref:System.Windows.Data.ObjectDataProvider>  
+ [<span data-ttu-id="7125b-138">绑定到 XDocument、XElement 或 LINQ to XML 查询结果</span><span class="sxs-lookup"><span data-stu-id="7125b-138">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [<span data-ttu-id="7125b-139">将主-详细模式与分层 XML 数据结合使用</span><span class="sxs-lookup"><span data-stu-id="7125b-139">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [<span data-ttu-id="7125b-140">绑定源概述</span><span class="sxs-lookup"><span data-stu-id="7125b-140">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [<span data-ttu-id="7125b-141">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="7125b-141">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="7125b-142">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="7125b-142">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

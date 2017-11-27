@@ -1,35 +1,27 @@
 ---
-title: "使用反射 (Visual Basic 中) 访问属性 |Microsoft 文档"
+title: "使用反射 (Visual Basic 中) 访问特性"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4763eccc5d1a6bdf3e89c1c4d825d5ff5c6caa3e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a4397200b5a2aa5f337dd3479b5405c1a9f245a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>使用反射 (Visual Basic 中) 访问特性
-如果没有某种方法检索该信息并对其进行操作的价值很小的将事实，您可以定义自定义属性并将其放置在您的源代码。 通过使用反射，您可以检索的定义是以自定义特性的信息。 主要方法是`GetCustomAttributes`，它返回数组的对象的 source 代码特性的运行时等效项。 此方法具有多个重载的版本。 有关详细信息，请参阅<xref:System.Attribute>。</xref:System.Attribute>  
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a><span data-ttu-id="87076-102">使用反射 (Visual Basic 中) 访问特性</span><span class="sxs-lookup"><span data-stu-id="87076-102">Accessing Attributes by Using Reflection (Visual Basic)</span></span>
+<span data-ttu-id="87076-103">你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。</span><span class="sxs-lookup"><span data-stu-id="87076-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="87076-104">通过使用反射，可以检索通过自定义特性定义的信息。</span><span class="sxs-lookup"><span data-stu-id="87076-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="87076-105">主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。</span><span class="sxs-lookup"><span data-stu-id="87076-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="87076-106">此方法有多个重载版本。</span><span class="sxs-lookup"><span data-stu-id="87076-106">This method has several overloaded versions.</span></span> <span data-ttu-id="87076-107">有关详细信息，请参阅<xref:System.Attribute>。</span><span class="sxs-lookup"><span data-stu-id="87076-107">For more information, see <xref:System.Attribute>.</span></span>  
   
- 属性规范，如︰  
+ <span data-ttu-id="87076-108">特性规范，例如：</span><span class="sxs-lookup"><span data-stu-id="87076-108">An attribute specification such as:</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -38,17 +30,17 @@ Class SampleClass
 End Class  
 ```  
   
- 是在概念上等效于此︰  
+ <span data-ttu-id="87076-109">在概念上等效于此：</span><span class="sxs-lookup"><span data-stu-id="87076-109">is conceptually equivalent to this:</span></span>  
   
 ```vb  
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
 anonymousAuthorObject.version = 1.1  
 ```  
   
- 但是，直到不执行的代码`SampleClass`的特性查询。 调用`GetCustomAttributes`上`SampleClass`导致`Author`对象构造并初始化为更高版本。 如果类具有其他属性，其他属性对象以类似方式构造。 `GetCustomAttributes`然后返回`Author`对象和数组中的任何其他属性对象。 然后，可以循环遍历此数组，确定哪些属性所应用基于每个数组元素的类型，并从属性对象提取信息。  
+ <span data-ttu-id="87076-110">但是，在为特性查询 `SampleClass` 之前，代码将不会执行。</span><span class="sxs-lookup"><span data-stu-id="87076-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="87076-111">对 `SampleClass` 调用 `GetCustomAttributes` 会导致按上述方式构造并初始化一个 `Author` 对象。</span><span class="sxs-lookup"><span data-stu-id="87076-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="87076-112">如果该类具有其他特性，则将以类似方式构造其他特性对象。</span><span class="sxs-lookup"><span data-stu-id="87076-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="87076-113">然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。</span><span class="sxs-lookup"><span data-stu-id="87076-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="87076-114">之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。</span><span class="sxs-lookup"><span data-stu-id="87076-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
   
-## <a name="example"></a>示例  
- 下面是一个完整的示例。 定义自定义属性、 将其应用于多个实体，并通过反射进行检索。  
+## <a name="example"></a><span data-ttu-id="87076-115">示例</span><span class="sxs-lookup"><span data-stu-id="87076-115">Example</span></span>  
+ <span data-ttu-id="87076-116">此处是一个完整的示例。</span><span class="sxs-lookup"><span data-stu-id="87076-116">Here is a complete example.</span></span> <span data-ttu-id="87076-117">定义自定义特性、将其应用于多个实体，并通过反射对其进行检索。</span><span class="sxs-lookup"><span data-stu-id="87076-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
   
 ```vb  
 ' Multiuse attribute  
@@ -116,11 +108,11 @@ Class TestAuthorAttribute
 End Class  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)   
- [检索存储在特性中的信息](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)   
- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [特性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a><span data-ttu-id="87076-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="87076-118">See Also</span></span>  
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [<span data-ttu-id="87076-119">Visual Basic 编程指南</span><span class="sxs-lookup"><span data-stu-id="87076-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="87076-120">检索存储在特性中的信息</span><span class="sxs-lookup"><span data-stu-id="87076-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [<span data-ttu-id="87076-121">反射 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="87076-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="87076-122">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="87076-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
+ [<span data-ttu-id="87076-123">创建自定义特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="87076-123">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

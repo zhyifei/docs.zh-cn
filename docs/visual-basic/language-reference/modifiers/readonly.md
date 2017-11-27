@@ -1,49 +1,47 @@
 ---
-title: "ReadOnly (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ReadOnly"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "属性 [Visual Basic], 只读"
-  - "ReadOnly 关键字"
-  - "ReadOnly 属性"
-  - "只读变量"
-  - "变量 [Visual Basic], 只读"
+title: ReadOnly (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ReadOnly
+helpviewer_keywords:
+- ReadOnly keyword [Visual Basic]
+- variables [Visual Basic], read-only
+- ReadOnly property
+- properties [Visual Basic], read-only
+- read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9ca1d2e4eddb3b88073d6fcd46b0de5c627ba809
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ReadOnly (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定可对变量或属性进行读操作但不能进行写操作。  
+# <a name="readonly-visual-basic"></a><span data-ttu-id="184a4-102">ReadOnly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="184a4-102">ReadOnly (Visual Basic)</span></span>
+<span data-ttu-id="184a4-103">指定，可以读取而不是写入的变量或属性。</span><span class="sxs-lookup"><span data-stu-id="184a4-103">Specifies that a variable or property can be read but not written.</span></span>  
   
-## 备注  
+## <a name="remarks"></a><span data-ttu-id="184a4-104">备注</span><span class="sxs-lookup"><span data-stu-id="184a4-104">Remarks</span></span>  
   
-## 规则  
+## <a name="rules"></a><span data-ttu-id="184a4-105">规则</span><span class="sxs-lookup"><span data-stu-id="184a4-105">Rules</span></span>  
   
--   **声明上下文。**仅可以在模块级别使用 `ReadOnly`。  这意味着 `ReadOnly` 元素的声明上下文必须是一个类、结构或模块，而不能是源文件、命名空间或过程。  
+-   <span data-ttu-id="184a4-106">**声明上下文。**</span><span class="sxs-lookup"><span data-stu-id="184a4-106">**Declaration Context.**</span></span> <span data-ttu-id="184a4-107">只能在模块级别使用 `ReadOnly`。</span><span class="sxs-lookup"><span data-stu-id="184a4-107">You can use `ReadOnly` only at module level.</span></span> <span data-ttu-id="184a4-108">这意味着的声明上下文`ReadOnly`元素必须是类、 结构或模块，并且不能是源文件、 命名空间或过程。</span><span class="sxs-lookup"><span data-stu-id="184a4-108">This means the declaration context for a `ReadOnly` element must be a class, structure, or module, and cannot be a source file, namespace, or procedure.</span></span>  
   
--   **组合修饰符。**不能在同一声明中将 `ReadOnly` 与 `Static` 同时指定。  
+-   <span data-ttu-id="184a4-109">**组合的修饰符。**</span><span class="sxs-lookup"><span data-stu-id="184a4-109">**Combined Modifiers.**</span></span> <span data-ttu-id="184a4-110">不能指定`ReadOnly`连同`Static`同一声明中。</span><span class="sxs-lookup"><span data-stu-id="184a4-110">You cannot specify `ReadOnly` together with `Static` in the same declaration.</span></span>  
   
--   **赋值。**使用 `ReadOnly` 属性的代码不可以设置值。  但是具有基础存储访问权限的代码可以随时赋值或更改值。  
+-   <span data-ttu-id="184a4-111">**将分配一个值。**</span><span class="sxs-lookup"><span data-stu-id="184a4-111">**Assigning a Value.**</span></span> <span data-ttu-id="184a4-112">代码使用`ReadOnly`属性不能将其值设置。</span><span class="sxs-lookup"><span data-stu-id="184a4-112">Code consuming a `ReadOnly` property cannot set its value.</span></span> <span data-ttu-id="184a4-113">但有权访问基础存储区的代码可以分配或随时更改的值。</span><span class="sxs-lookup"><span data-stu-id="184a4-113">But code that has access to the underlying storage can assign or change the value at any time.</span></span>  
   
-     您只可以在声明或者在定义类或结构的构造函数中，将一个值赋给 `ReadOnly` 变量。  
+     <span data-ttu-id="184a4-114">你可以将值赋给`ReadOnly`变量仅在其声明或在类或结构定义它的构造函数。</span><span class="sxs-lookup"><span data-stu-id="184a4-114">You can assign a value to a `ReadOnly` variable only in its declaration or in the constructor of a class or structure in which it is defined.</span></span>  
   
-## 何时使用 ReadOnly 变量  
- 有时不能使用 [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md) 声明常数值和给常数赋值。  例如，`Const` 语句可能不接受要赋给它的数据类型，或者在编译时可能无法使用常数表达式计算值。  在编译时甚至不知道值。  在这种情况下，可以使用 `ReadOnly` 变量保存常数值。  
+## <a name="when-to-use-a-readonly-variable"></a><span data-ttu-id="184a4-115">何时使用 ReadOnly 变量</span><span class="sxs-lookup"><span data-stu-id="184a4-115">When to Use a ReadOnly Variable</span></span>  
+ <span data-ttu-id="184a4-116">在一些情况下，你不能在其中使用[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)声明和分配常量值。</span><span class="sxs-lookup"><span data-stu-id="184a4-116">There are situations in which you cannot use a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value.</span></span> <span data-ttu-id="184a4-117">例如，`Const`语句不可能接受的数据类型，你想要分配，或你可能不能在编译时常量表达式计算的值。</span><span class="sxs-lookup"><span data-stu-id="184a4-117">For example, the `Const` statement might not accept the data type you want to assign, or you might not be able to compute the value at compile time with a constant expression.</span></span> <span data-ttu-id="184a4-118">您可能不知道值在编译时。</span><span class="sxs-lookup"><span data-stu-id="184a4-118">You might not even know the value at compile time.</span></span> <span data-ttu-id="184a4-119">在这些情况下，你可以使用`ReadOnly`变量以保存常量值。</span><span class="sxs-lookup"><span data-stu-id="184a4-119">In these cases, you can use a `ReadOnly` variable to hold a constant value.</span></span>  
   
 > [!IMPORTANT]
->  如果变量的数据类型为引用类型，例如数组或类实例，则即使变量本身为 `ReadOnly`，也可以更改其成员。  下面的示例阐释了这一点。  
+>  <span data-ttu-id="184a4-120">即使变量本身是，如果变量的数据类型是引用类型，如数组或类实例，可以更改其成员`ReadOnly`。</span><span class="sxs-lookup"><span data-stu-id="184a4-120">If the data type of the variable is a reference type, such as an array or a class instance, its members can be changed even if the variable itself is `ReadOnly`.</span></span> <span data-ttu-id="184a4-121">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="184a4-121">The following example illustrates this.</span></span>  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -53,21 +51,21 @@ caps.handback.revision: 15
   
  `End Sub`  
   
- 在初始化时，由 `characterArray()` 指向的数组保存“x”、“y”和“z”。  因为变量 `characterArray` 为 `ReadOnly`，所以在初始化它之后不可以更改它的值；即，不能将一个新数组赋给它。  但是，您可以更改一个或多个数组成员的值。  调用过程 `changeArrayElement` 之后，由 `characterArray()` 指向的数组保存“x”、“M”和“z”。  
+ <span data-ttu-id="184a4-122">在初始化时，该数组的指向`characterArray()`保存"x"、"y"和"z"。</span><span class="sxs-lookup"><span data-stu-id="184a4-122">When initialized, the array pointed to by `characterArray()` holds "x", "y", and "z".</span></span> <span data-ttu-id="184a4-123">因为变量`characterArray`是`ReadOnly`，只要该函数将初始化; 即，不能更改其值，不能向其分配一个新数组。</span><span class="sxs-lookup"><span data-stu-id="184a4-123">Because the variable `characterArray` is `ReadOnly`, you cannot change its value once it is initialized; that is, you cannot assign a new array to it.</span></span> <span data-ttu-id="184a4-124">但是，你可以更改的一个或多个数组成员的值。</span><span class="sxs-lookup"><span data-stu-id="184a4-124">However, you can change the values of one or more of the array members.</span></span> <span data-ttu-id="184a4-125">在过程调用`changeArrayElement`，指向的数组`characterArray()`保存"x"、"M"和"z"。</span><span class="sxs-lookup"><span data-stu-id="184a4-125">Following a call to the procedure `changeArrayElement`, the array pointed to by `characterArray()` holds "x", "M", and "z".</span></span>  
   
- 请注意，这与将过程参数声明为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 类似，因而可防止过程更改调用参数本身，但允许过程更改其成员。  
+ <span data-ttu-id="184a4-126">请注意，这是类似于声明过程参数是[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)，它防止过程更改调用自变量本身，但这样一来更改其成员。</span><span class="sxs-lookup"><span data-stu-id="184a4-126">Note that this is similar to declaring a procedure parameter to be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md), which prevents the procedure from changing the calling argument itself but allows it to change its members.</span></span>  
   
-## 示例  
- 下面的示例为雇佣某位职员的日期定义一个 `ReadOnly` 属性。  类将该属性值在内部存储为 `Private` 变量，因而只有该类中的代码可以更改该值。  但是，该属性为 `Public`，因此可以访问该类的任何代码都可以读取该属性。  
+## <a name="example"></a><span data-ttu-id="184a4-127">示例</span><span class="sxs-lookup"><span data-stu-id="184a4-127">Example</span></span>  
+ <span data-ttu-id="184a4-128">下面的示例定义`ReadOnly`员工受雇在其的日期属性。</span><span class="sxs-lookup"><span data-stu-id="184a4-128">The following example defines a `ReadOnly` property for the date on which an employee was hired.</span></span> <span data-ttu-id="184a4-129">属性值作为在内部的类存储`Private`变量，并且只在类中的代码可以更改该值。</span><span class="sxs-lookup"><span data-stu-id="184a4-129">The class stores the property value internally as a `Private` variable, and only code inside the class can change that value.</span></span> <span data-ttu-id="184a4-130">但是，该属性是`Public`，和可以访问类任何代码都可以读取该属性。</span><span class="sxs-lookup"><span data-stu-id="184a4-130">However, the property is `Public`, and any code that can access the class can read the property.</span></span>  
   
  [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
   
- `ReadOnly` 修饰符可用于下面的上下文中：  
+ <span data-ttu-id="184a4-131">`ReadOnly` 修饰符可用于下面的上下文中：</span><span class="sxs-lookup"><span data-stu-id="184a4-131">The `ReadOnly` modifier can be used in these contexts:</span></span>  
   
- [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="184a4-132">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="184a4-132">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="184a4-133">Property 语句</span><span class="sxs-lookup"><span data-stu-id="184a4-133">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## 请参阅  
- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="184a4-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="184a4-134">See Also</span></span>  
+ [<span data-ttu-id="184a4-135">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="184a4-135">WriteOnly</span></span>](../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [<span data-ttu-id="184a4-136">关键字</span><span class="sxs-lookup"><span data-stu-id="184a4-136">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

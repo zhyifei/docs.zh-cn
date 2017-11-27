@@ -1,44 +1,45 @@
 ---
-title: "ErrorProvider 组件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "错误信息, 显示"
-  - "ErrorProvider 组件 [Windows 窗体]"
-  - "错误 [Windows 窗体]"
+title: "ErrorProvider 组件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error messages [Windows Forms], displaying
+- errors [Windows Forms]
+- ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1dd0cfd8062274d4e2ad9ce75ae41ed69e703d4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# ErrorProvider 组件（Windows 窗体）
-使用 Windows 窗体 `ErrorProvider` 组件，可以在不打扰用户的情况下向用户显示有错误发生。  当验证用户在窗体中的输入或显示数据集内的错误时，一般要用到该控件。  
+# <a name="errorprovider-component-windows-forms"></a><span data-ttu-id="b2118-102">ErrorProvider 组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="b2118-102">ErrorProvider Component (Windows Forms)</span></span>
+<span data-ttu-id="b2118-103">Windows 窗体`ErrorProvider`组件用于向用户显示以非侵入性的方式有问题。</span><span class="sxs-lookup"><span data-stu-id="b2118-103">The Windows Forms `ErrorProvider` component is used to show the user in a non-intrusive way that something is wrong.</span></span> <span data-ttu-id="b2118-104">它通常是与验证窗体上的用户输入或显示在数据集中的错误结合使用。</span><span class="sxs-lookup"><span data-stu-id="b2118-104">It is typically used in conjunction with validating user input on a form, or displaying errors within a dataset.</span></span>  
   
-## 本节内容  
- [ErrorProvider 组件概述](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
- 解释该组件是什么及其主要功能和属性。  
+## <a name="in-this-section"></a><span data-ttu-id="b2118-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="b2118-105">In This Section</span></span>  
+ [<span data-ttu-id="b2118-106">ErrorProvider 组件概述</span><span class="sxs-lookup"><span data-stu-id="b2118-106">ErrorProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
+ <span data-ttu-id="b2118-107">说明此组件是什么及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="b2118-107">Explains what this component is and its key features and properties.</span></span>  
   
- [如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
- 提供有关如何使用错误提供程序组件来验证用户输入的说明。  
+ [<span data-ttu-id="b2118-108">如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标</span><span class="sxs-lookup"><span data-stu-id="b2118-108">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
+ <span data-ttu-id="b2118-109">提供有关验证错误提供程序组件与用户输入的指令。</span><span class="sxs-lookup"><span data-stu-id="b2118-109">Gives directions for validating user input with an error provider component.</span></span>  
   
- [如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- 提供有关如何使用错误提供程序组件来显示数据错误的说明。  
+ [<span data-ttu-id="b2118-110">如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误</span><span class="sxs-lookup"><span data-stu-id="b2118-110">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ <span data-ttu-id="b2118-111">提供有关使用错误提供程序组件来显示数据错误的指令。</span><span class="sxs-lookup"><span data-stu-id="b2118-111">Gives directions for using an error provider component to display data errors.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="b2118-112">参考</span><span class="sxs-lookup"><span data-stu-id="b2118-112">Reference</span></span>  
  <xref:System.Windows.Forms.ErrorProvider>  
- 描述该类并提供指向其所有成员的链接。  
+ <span data-ttu-id="b2118-113">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="b2118-113">Describes this class and has links to all its members.</span></span>  
   
-## 相关章节  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+## <a name="related-sections"></a><span data-ttu-id="b2118-114">相关章节</span><span class="sxs-lookup"><span data-stu-id="b2118-114">Related Sections</span></span>  
+ [<span data-ttu-id="b2118-115">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="b2118-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="b2118-116">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="b2118-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

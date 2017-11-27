@@ -1,121 +1,127 @@
 ---
-title: "如何：创建自定义令牌 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全 [WCF], 创建自定义令牌"
-  - "SecurityToken 类"
-  - "SecurityTokenParameters 类"
-  - "WSSecurityTokenSerializer 类"
+title: "如何：创建自定义令牌"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SecurityTokenParameters class
+- security [WCF], creating custom tokens
+- WSSecurityTokenSerializer class
+- SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7cdcb6d48fe3da9bf63dc1a97bfab1743dc78a3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建自定义令牌
-本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。有关完整的代码示例，请参见 [自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md) 示例。  
+# <a name="how-to-create-a-custom-token"></a><span data-ttu-id="8adc8-102">如何：创建自定义令牌</span><span class="sxs-lookup"><span data-stu-id="8adc8-102">How to: Create a Custom Token</span></span>
+<span data-ttu-id="8adc8-103">本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。</span><span class="sxs-lookup"><span data-stu-id="8adc8-103">This topic shows how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span> <span data-ttu-id="8adc8-104">有关完整的代码示例请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)示例。</span><span class="sxs-lookup"><span data-stu-id="8adc8-104">For a complete code example see the [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) sample.</span></span>  
   
- *安全令牌* 是本质上是一个 XML 元素所使用的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 来表示 SOAP 消息内部发件人有关的索赔的安全性框架。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性提供各种标记为系统提供身份验证模式。包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
+ <span data-ttu-id="8adc8-105">A*安全令牌*是实质上是一个 XML 元素，由[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]安全框架来表示有关 SOAP 消息内发件人的声明。</span><span class="sxs-lookup"><span data-stu-id="8adc8-105">A *security token* is essentially an XML element that is used by the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security framework to represent claims about a sender inside the SOAP message.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8adc8-106"> 安全性为系统提供的身份验证模式提供各种令牌。</span><span class="sxs-lookup"><span data-stu-id="8adc8-106"> security provides various tokens for system-provided authentication modes.</span></span> <span data-ttu-id="8adc8-107">包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。</span><span class="sxs-lookup"><span data-stu-id="8adc8-107">Examples include an X.509 certificate security token represented by the <xref:System.IdentityModel.Tokens.X509SecurityToken> class or a Username security token represented by the <xref:System.IdentityModel.Tokens.UserNameSecurityToken> class.</span></span>  
   
- 有时，所提供的类型不支持某种身份验证模式或凭据。这种情况下，必须创建自定义安全令牌来提供 SOAP 消息内部自定义凭据的 XML 表示形式。  
+ <span data-ttu-id="8adc8-108">有时，所提供的类型不支持某种身份验证模式或凭据。</span><span class="sxs-lookup"><span data-stu-id="8adc8-108">Sometimes an authentication mode or credential is not supported by the provided types.</span></span> <span data-ttu-id="8adc8-109">这种情况下，必须创建自定义安全令牌来提供 SOAP 消息内部自定义凭据的 XML 表示形式。</span><span class="sxs-lookup"><span data-stu-id="8adc8-109">In that case, it is necessary to create a custom security token to provide an XML representation of the custom credential inside the SOAP message.</span></span>  
   
- 下面的过程演示如何创建自定义安全令牌，以及如何将其与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构进行集成。本主题创建一个信用卡令牌，用于将客户端的信用卡相关信息传递到服务器。  
+ <span data-ttu-id="8adc8-110">下面的过程演示如何创建自定义安全令牌，以及如何将其与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构进行集成。</span><span class="sxs-lookup"><span data-stu-id="8adc8-110">The following procedures show how to create a custom security token and how to integrate it with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure.</span></span> <span data-ttu-id="8adc8-111">本主题创建一个信用卡令牌，用于将客户端的信用卡相关信息传递到服务器。</span><span class="sxs-lookup"><span data-stu-id="8adc8-111">This topic creates a credit card token that is used to pass information about the client's credit card to the server.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义凭据和安全令牌管理器的更多信息，请参见[演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8adc8-112">自定义凭据和安全令牌管理器，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-112"> custom credentials and security token manager, see [Walkthrough: Creating Custom Client and Service Credentials](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).</span></span>  
   
- 若要了解更多表示安全令牌的类，请参见 <xref:System.IdentityModel.Tokens> 命名空间。  
+ <span data-ttu-id="8adc8-113">若要了解更多表示安全令牌的类，请参见 <xref:System.IdentityModel.Tokens> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="8adc8-113">See the <xref:System.IdentityModel.Tokens> namespace for more classes that represent security tokens.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]凭据、安全令牌管理器、提供程序和身份验证器类的更多信息，请参见[Security Architecture](http://msdn.microsoft.com/zh-cn/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8adc8-114">凭据、 安全令牌管理器和提供程序和身份验证器类，请参阅[安全体系结构](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-114"> credentials, security token manager, and provider and authenticator classes, see [Security Architecture](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).</span></span>  
   
-## 过程  
- 客户端应用程序必须有一种方式来指定安全基础结构的信用卡信息。应用程序通过自定义客户端凭据类可访问此信息。第一步是创建一个类，用以表示自定义客户端凭据的信用卡信息。  
+## <a name="procedures"></a><span data-ttu-id="8adc8-115">过程</span><span class="sxs-lookup"><span data-stu-id="8adc8-115">Procedures</span></span>  
+ <span data-ttu-id="8adc8-116">客户端应用程序必须有一种方式来指定安全基础结构的信用卡信息。</span><span class="sxs-lookup"><span data-stu-id="8adc8-116">A client application must be provided with a way to specify credit card information for the security infrastructure.</span></span> <span data-ttu-id="8adc8-117">应用程序通过自定义客户端凭据类可访问此信息。</span><span class="sxs-lookup"><span data-stu-id="8adc8-117">This information is made available to the application by a custom client credentials class.</span></span> <span data-ttu-id="8adc8-118">第一步是创建一个类，用以表示自定义客户端凭据的信用卡信息。</span><span class="sxs-lookup"><span data-stu-id="8adc8-118">The first step is to create a class to represent the credit card information for custom client credentials.</span></span>  
   
-#### 创建一个表示客户端凭据内信用卡信息的类  
+#### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a><span data-ttu-id="8adc8-119">创建一个表示客户端凭据内信用卡信息的类</span><span class="sxs-lookup"><span data-stu-id="8adc8-119">To create a class that represents credit card information inside client credentials</span></span>  
   
-1.  定义一个新类，该类在应用程序中表示信用卡信息。下面的示例将该类命名为 `CreditCardInfo`。  
+1.  <span data-ttu-id="8adc8-120">定义一个新类，该类在应用程序中表示信用卡信息。</span><span class="sxs-lookup"><span data-stu-id="8adc8-120">Define a new class that represents the credit card information for the application.</span></span> <span data-ttu-id="8adc8-121">下面的示例将该类命名为 `CreditCardInfo`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-121">The following example names the class `CreditCardInfo`.</span></span>  
   
-2.  向类添加相应的属性，以便应用程序可以设置自定义令牌所需的必要信息。在此示例中，该类具有三个属性：`CardNumber`、`CardIssuer` 和 `ExpirationDate`。  
+2.  <span data-ttu-id="8adc8-122">向类添加相应的属性，以便应用程序可以设置自定义令牌所需的必要信息。</span><span class="sxs-lookup"><span data-stu-id="8adc8-122">Add appropriate properties to the class to allow an application set the necessary information required for the custom token.</span></span> <span data-ttu-id="8adc8-123">在此示例中，该类具有三个属性：`CardNumber`、`CardIssuer` 和 `ExpirationDate`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-123">In this example, the class has three properties: `CardNumber`, `CardIssuer`, and `ExpirationDate`.</span></span>  
   
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- 接下来，必须创建一个表示自定义安全令牌的类。安全令牌提供程序、身份验证器和序列化程序类将使用该类与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构相互传递安全令牌的有关信息。  
+ <span data-ttu-id="8adc8-124">接下来，必须创建一个表示自定义安全令牌的类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-124">Next, a class that represents the custom security token must be created.</span></span> <span data-ttu-id="8adc8-125">安全令牌提供程序、身份验证器和序列化程序类将使用该类与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构相互传递安全令牌的有关信息。</span><span class="sxs-lookup"><span data-stu-id="8adc8-125">This class is used by the security token provider, authenticator, and serializer classes to pass information about the security token to and from the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure.</span></span>  
   
-#### 创建自定义安全令牌类  
+#### <a name="to-create-a-custom-security-token-class"></a><span data-ttu-id="8adc8-126">创建自定义安全令牌类</span><span class="sxs-lookup"><span data-stu-id="8adc8-126">To create a custom security token class</span></span>  
   
-1.  定义一个从 <xref:System.IdentityModel.Tokens.SecurityToken> 类派生的新类。此示例创建一个名为 `CreditCardToken` 的类。  
+1.  <span data-ttu-id="8adc8-127">定义一个从 <xref:System.IdentityModel.Tokens.SecurityToken> 类派生的新类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-127">Define a new class derived from the <xref:System.IdentityModel.Tokens.SecurityToken> class.</span></span> <span data-ttu-id="8adc8-128">此示例创建一个名为 `CreditCardToken` 的类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-128">This example creates a class named `CreditCardToken`.</span></span>  
   
-2.  重写 <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 属性。该属性用于获取安全令牌的本地标识符，本地标识符用于从 SOAP 消息内其他元素指向安全令牌 XML 表示形式。在本示例中，令牌标识符可以作为构造函数参数传递给该属性，也可以在每次创建安全令牌实例时随机生成一个新的令牌标识符。  
+2.  <span data-ttu-id="8adc8-129">重写 <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-129">Override the <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> property.</span></span> <span data-ttu-id="8adc8-130">该属性用于获取安全令牌的本地标识符，本地标识符用于从 SOAP 消息内其他元素指向安全令牌 XML 表示形式。</span><span class="sxs-lookup"><span data-stu-id="8adc8-130">This property is used to get the local identifier of the security token that is used to point to the security token XML representation from other elements inside the SOAP message.</span></span> <span data-ttu-id="8adc8-131">在本示例中，令牌标识符可以作为构造函数参数传递给该属性，也可以在每次创建安全令牌实例时随机生成一个新的令牌标识符。</span><span class="sxs-lookup"><span data-stu-id="8adc8-131">In this example, a token identifier can be either passed to it as a constructor parameter or a new random one is generated every time a security token instance is created.</span></span>  
   
-3.  实现 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 属性。该属性返回一个安全密钥集合，这些密钥是安全令牌实例表示的。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以使用这些密钥对 SOAP 消息的组成部分进行签名或加密。在本示例中，信用卡安全令牌不能包含任何安全密钥；因此，该实现始终返回一个空集合。  
+3.  <span data-ttu-id="8adc8-132">实现 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-132">Implement the <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> property.</span></span> <span data-ttu-id="8adc8-133">该属性返回一个安全密钥集合，这些密钥是安全令牌实例表示的。</span><span class="sxs-lookup"><span data-stu-id="8adc8-133">This property returns a collection of security keys that the security token instance represents.</span></span> <span data-ttu-id="8adc8-134">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以使用这些密钥对 SOAP 消息的组成部分进行签名或加密。</span><span class="sxs-lookup"><span data-stu-id="8adc8-134">Such keys can be used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to sign or encrypt parts of the SOAP message.</span></span> <span data-ttu-id="8adc8-135">在本示例中，信用卡安全令牌不能包含任何安全密钥；因此，该实现始终返回一个空集合。</span><span class="sxs-lookup"><span data-stu-id="8adc8-135">In this example, the credit card security token cannot contain any security keys; therefore, the implementation always returns an empty collection.</span></span>  
   
-4.  重写 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 属性。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用这些属性来确定安全令牌实例的有效性。在本示例中，信用卡安全令牌只有到期日期，因此，`ValidFrom` 属性返回一个 <xref:System.DateTime>，它表示实例的创建日期和时间。  
+4.  <span data-ttu-id="8adc8-136">重写 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-136">Override the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> properties.</span></span> <span data-ttu-id="8adc8-137">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用这些属性来确定安全令牌实例的有效性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-137">These properties are used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to determine the validity of the security token instance.</span></span> <span data-ttu-id="8adc8-138">在本示例中，信用卡安全令牌只有到期日期，因此，`ValidFrom` 属性返回一个 <xref:System.DateTime>，它表示实例的创建日期和时间。</span><span class="sxs-lookup"><span data-stu-id="8adc8-138">In this example, the credit card security token has only an expiration date, so the `ValidFrom` property returns a <xref:System.DateTime> that represents the date and time of the instance creation.</span></span>  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- 在创建新的安全令牌类型时，需要实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 类。该实现在安全绑定元素配置中用于表示新的令牌类型。安全令牌参数类用作模板，用于在处理消息时与实际安全令牌实例进行匹配。该模板提供附加属性，应用程序可以使用这些附加属性来指定标准，安全令牌必须符合该标准才能使用或进行身份验证。下面的示例未添加任何附加属性，因此，当 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构搜索要使用或验证的安全令牌实例时，只会匹配安全令牌类型。  
+ <span data-ttu-id="8adc8-139">在创建新的安全令牌类型时，需要实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-139">When a new security token type is created, it requires an implementation of the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> class.</span></span> <span data-ttu-id="8adc8-140">该实现在安全绑定元素配置中用于表示新的令牌类型。</span><span class="sxs-lookup"><span data-stu-id="8adc8-140">The implementation is used in the security binding element configuration to represent the new token type.</span></span> <span data-ttu-id="8adc8-141">安全令牌参数类用作模板，用于在处理消息时与实际安全令牌实例进行匹配。</span><span class="sxs-lookup"><span data-stu-id="8adc8-141">The security token parameters class serves as a template that is used to match the actual security token instance to when a message is processed.</span></span> <span data-ttu-id="8adc8-142">该模板提供附加属性，应用程序可以使用这些附加属性来指定标准，安全令牌必须符合该标准才能使用或进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="8adc8-142">The template provides additional properties that an application can use to specify criteria that the security token must match to be used or authenticated.</span></span> <span data-ttu-id="8adc8-143">下面的示例未添加任何附加属性，因此，当 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构搜索要使用或验证的安全令牌实例时，只会匹配安全令牌类型。</span><span class="sxs-lookup"><span data-stu-id="8adc8-143">The following example does not add any additional properties, so only the security token type is matched when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure searches for a security token instance to use or to validate.</span></span>  
   
-#### 创建自定义安全令牌参数类  
+#### <a name="to-create-a-custom-security-token-parameters-class"></a><span data-ttu-id="8adc8-144">创建自定义安全令牌参数类</span><span class="sxs-lookup"><span data-stu-id="8adc8-144">To create a custom security token parameters class</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 类派生的新类。  
+1.  <span data-ttu-id="8adc8-145">定义一个从 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 类派生的新类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-145">Define a new class derived from the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> class.</span></span>  
   
-2.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> 方法。复制类中定义的所有内部字段（如果有）。此示例未定义任何附加字段。  
+2.  <span data-ttu-id="8adc8-146">实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-146">Implement the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> method.</span></span> <span data-ttu-id="8adc8-147">复制类中定义的所有内部字段（如果有）。</span><span class="sxs-lookup"><span data-stu-id="8adc8-147">Copy all internal fields defined in your class, if any.</span></span> <span data-ttu-id="8adc8-148">此示例未定义任何附加字段。</span><span class="sxs-lookup"><span data-stu-id="8adc8-148">This example does not define any additional fields.</span></span>  
   
-3.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> 只读属性。如果该类表示的安全令牌类型可以用来向服务验证客户端身份，则该属性返回 `true`。在本示例中，信用卡安全令牌可以用来向服务验证客户端身份。  
+3.  <span data-ttu-id="8adc8-149">实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> 只读属性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-149">Implement the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> read-only property.</span></span> <span data-ttu-id="8adc8-150">如果该类表示的安全令牌类型可以用来向服务验证客户端身份，则该属性返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-150">This property returns `true` if the security token type represented by this class can be used to authenticate a client to a service.</span></span> <span data-ttu-id="8adc8-151">在本示例中，信用卡安全令牌可以用来向服务验证客户端身份。</span><span class="sxs-lookup"><span data-stu-id="8adc8-151">In this example, the credit card security token can be used to authenticate a client to a service.</span></span>  
   
-4.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> 只读属性。如果该类表示的安全令牌类型可以用来向客户端验证服务身份，则该属性返回 `true`。在本示例中，信用卡安全令牌不能用来向客户端验证服务身份。  
+4.  <span data-ttu-id="8adc8-152">实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> 只读属性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-152">Implement the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> read-only property.</span></span> <span data-ttu-id="8adc8-153">如果该类表示的安全令牌类型可以用来向客户端验证服务身份，则该属性返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-153">This property returns `true` if the security token type represented by this class can be used to authenticate a service to a client.</span></span> <span data-ttu-id="8adc8-154">在本示例中，信用卡安全令牌不能用来向客户端验证服务身份。</span><span class="sxs-lookup"><span data-stu-id="8adc8-154">In this example, the credit card security token cannot be used to authenticate a service to a client.</span></span>  
   
-5.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 只读属性。如果该类表示的安全令牌类型可以映射到 Windows 帐户，则该属性返回 `true`。这种情况下，身份验证结果由一个 <xref:System.Security.Principal.WindowsIdentity> 类实例表示。在本示例中，令牌无法映射到 Windows 帐户。  
+5.  <span data-ttu-id="8adc8-155">实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 只读属性。</span><span class="sxs-lookup"><span data-stu-id="8adc8-155">Implement the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> read-only property.</span></span> <span data-ttu-id="8adc8-156">如果该类表示的安全令牌类型可以映射到 Windows 帐户，则该属性返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-156">This property returns `true` if the security token type represented by this class can be mapped to a Windows account.</span></span> <span data-ttu-id="8adc8-157">这种情况下，身份验证结果由一个 <xref:System.Security.Principal.WindowsIdentity> 类实例表示。</span><span class="sxs-lookup"><span data-stu-id="8adc8-157">If so, the authentication result is represented by a <xref:System.Security.Principal.WindowsIdentity> class instance.</span></span> <span data-ttu-id="8adc8-158">在本示例中，令牌无法映射到 Windows 帐户。</span><span class="sxs-lookup"><span data-stu-id="8adc8-158">In this example, the token cannot be mapped to a Windows account.</span></span>  
   
-6.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架需要引用此安全令牌参数类所表示的安全令牌实例，则会调用此方法。实际安全令牌实例和 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>（指定所请求的引用类型）都作为参数传递到此方法。在本示例中，信用卡安全令牌仅支持内部引用。<xref:System.IdentityModel.Tokens.SecurityToken> 类具有创建内部引用的功能，因此，该实现不需要附加代码。  
+6.  <span data-ttu-id="8adc8-159">实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-159">Implement the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> method.</span></span> <span data-ttu-id="8adc8-160">如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架需要引用此安全令牌参数类所表示的安全令牌实例，则会调用此方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-160">This method is called by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security framework when it requires a reference to the security token instance represented by this security token parameters class.</span></span> <span data-ttu-id="8adc8-161">实际安全令牌实例和 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>（指定所请求的引用类型）都作为参数传递到此方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-161">Both the actual security token instance and <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> that specifies the type of the reference that is being requested are passed to this method as arguments.</span></span> <span data-ttu-id="8adc8-162">在本示例中，信用卡安全令牌仅支持内部引用。</span><span class="sxs-lookup"><span data-stu-id="8adc8-162">In this example, only internal references are supported by the credit card security token.</span></span> <span data-ttu-id="8adc8-163"><xref:System.IdentityModel.Tokens.SecurityToken> 类具有创建内部引用的功能，因此，该实现不需要附加代码。</span><span class="sxs-lookup"><span data-stu-id="8adc8-163">The <xref:System.IdentityModel.Tokens.SecurityToken> class has functionality to create internal references; therefore, the implementation does not require additional code.</span></span>  
   
-7.  实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 调用此方法将安全令牌参数类实例转换为 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 类的实例。安全令牌提供程序使用转换结果来创建相应的安全令牌实例。  
+7.  <span data-ttu-id="8adc8-164">实现 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-164">Implement the <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> method.</span></span> <span data-ttu-id="8adc8-165">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 调用此方法将安全令牌参数类实例转换为 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 类的实例。</span><span class="sxs-lookup"><span data-stu-id="8adc8-165">This method is called by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to convert the security token parameters class instance into an instance of the <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> class.</span></span> <span data-ttu-id="8adc8-166">安全令牌提供程序使用转换结果来创建相应的安全令牌实例。</span><span class="sxs-lookup"><span data-stu-id="8adc8-166">The result is used by security token providers to create the appropriate security token instance.</span></span>  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- 安全令牌被传递到 SOAP 消息内部，因此，在安全令牌的内存表示形式和网络表示形式之间，需要一种转换机制。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用安全令牌序列化程序来完成这项任务。每个自定义令牌都必须有一个自定义安全令牌序列化程序，用于对 SOAP 消息中的自定义安全令牌进行序列化和反序列化。  
+ <span data-ttu-id="8adc8-167">安全令牌被传递到 SOAP 消息内部，这要求在安全令牌的内存中表示形式与网络表示形式之间有一种转换机制。</span><span class="sxs-lookup"><span data-stu-id="8adc8-167">Security tokens are transmitted inside SOAP messages, which requires a translation mechanism between the in-memory security token representation and the on-the-wire representation.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8adc8-168"> 使用安全令牌序列化程序来完成这项任务。</span><span class="sxs-lookup"><span data-stu-id="8adc8-168"> uses a security token serializer to accomplish this task.</span></span> <span data-ttu-id="8adc8-169">每个自定义令牌都必须有一个自定义安全令牌序列化程序，用于对 SOAP 消息中的自定义安全令牌进行序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="8adc8-169">Every custom token must be accompanied by a custom security token serializer that can serialize and deserialize the custom security token from the SOAP message.</span></span>  
   
 > [!NOTE]
->  默认情况下启用派生密钥。如果创建自定义安全令牌并将其用作主令牌，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将从其派生一个密钥。如果这样做，则它将调用自定义安全令牌序列化程序以便为自定义安全令牌写入 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>，同时将 `DerivedKeyToken` 序列化到网络。在接收端，如果从网络反序列化令牌，则 `DerivedKeyToken` 序列化程序期望 `SecurityTokenReference` 元素作为其下的顶级子元素。如果自定义安全令牌序列化程序在序列化其子句类型时未添加 `SecurityTokenReference` 元素，则会引发异常。  
+>  <span data-ttu-id="8adc8-170">默认情况下启用派生密钥。</span><span class="sxs-lookup"><span data-stu-id="8adc8-170">Derived keys are enabled by default.</span></span> <span data-ttu-id="8adc8-171">如果创建自定义安全令牌并将其用作主令牌，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将从其派生一个密钥。</span><span class="sxs-lookup"><span data-stu-id="8adc8-171">If you create a custom security token and use it as the primary token, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] derives a key from it.</span></span> <span data-ttu-id="8adc8-172">如果这样做，则它将调用自定义安全令牌序列化程序以便为自定义安全令牌写入 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>，同时将 `DerivedKeyToken` 序列化到网络。</span><span class="sxs-lookup"><span data-stu-id="8adc8-172">While doing so, it calls the custom security token serializer to write the <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> for the custom security token while serializing the `DerivedKeyToken` to the wire.</span></span> <span data-ttu-id="8adc8-173">在接收端，如果从网络反序列化令牌，则 `DerivedKeyToken` 序列化程序期望 `SecurityTokenReference` 元素作为其下的顶级子元素。</span><span class="sxs-lookup"><span data-stu-id="8adc8-173">On the receiving end, when deserializing the token off the wire, the `DerivedKeyToken` serializer expects a `SecurityTokenReference` element as the top-level child under itself.</span></span> <span data-ttu-id="8adc8-174">如果自定义安全令牌序列化程序在序列化其子句类型时未添加 `SecurityTokenReference` 元素，则会引发异常。</span><span class="sxs-lookup"><span data-stu-id="8adc8-174">If the custom security token serializer did not add a `SecurityTokenReference` element while serializing its clause type, an exception is thrown.</span></span>  
   
-#### 创建自定义安全令牌序列化程序  
+#### <a name="to-create-a-custom-security-token-serializer"></a><span data-ttu-id="8adc8-175">创建自定义安全令牌序列化程序</span><span class="sxs-lookup"><span data-stu-id="8adc8-175">To create a custom security token serializer</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> 类派生的新类。  
+1.  <span data-ttu-id="8adc8-176">定义一个从 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> 类派生的新类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-176">Define a new class derived from the <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> class.</span></span>  
   
-2.  重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> 方法，该方法使用一个 <xref:System.Xml.XmlReader> 来读取 XML 流。如果序列化程序实现可以根据给定的当前元素对安全令牌进行反序列化，则该方法返回 `true`。在本示例中，该方法检查 XML 读取器的当前 XML 元素是否具有正确的元素名称和命名空间。如果不具有，则调用该方法的基类实现来处理该 XML 元素。  
+2.  <span data-ttu-id="8adc8-177">重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> 方法，该方法使用一个 <xref:System.Xml.XmlReader> 来读取 XML 流。</span><span class="sxs-lookup"><span data-stu-id="8adc8-177">Override the <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> method, which relies on an <xref:System.Xml.XmlReader> to read the XML stream.</span></span> <span data-ttu-id="8adc8-178">如果序列化程序实现可以根据给定的当前元素对安全令牌进行反序列化，则该方法返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-178">The method returns `true` if the serializer implementation can deserialize the security token based given its current element.</span></span> <span data-ttu-id="8adc8-179">在本示例中，该方法检查 XML 读取器的当前 XML 元素是否具有正确的元素名称和命名空间。</span><span class="sxs-lookup"><span data-stu-id="8adc8-179">In this example, this method checks whether the XML reader's current XML element has the correct element name and namespace.</span></span> <span data-ttu-id="8adc8-180">如果不具有，则调用该方法的基类实现来处理该 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="8adc8-180">If it does not, it calls the base class implementation of this method to handle the XML element.</span></span>  
   
-3.  重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> 方法。此方法读取安全令牌的 XML 内容，并为其构造相应的内存表示形式。如果它不能识别传入的 XML 读取器当前读取的 XML 元素，则会调用基类实现来处理系统提供的令牌类型。  
+3.  <span data-ttu-id="8adc8-181">重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-181">Override the <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> method.</span></span> <span data-ttu-id="8adc8-182">此方法读取安全令牌的 XML 内容，并为其构造相应的内存表示形式。</span><span class="sxs-lookup"><span data-stu-id="8adc8-182">This method reads the XML content of the security token and constructs the appropriate in-memory representation for it.</span></span> <span data-ttu-id="8adc8-183">如果它不能识别传入的 XML 读取器当前读取的 XML 元素，则会调用基类实现来处理系统提供的令牌类型。</span><span class="sxs-lookup"><span data-stu-id="8adc8-183">If it does not recognize the XML element on which the passed-in XML reader is standing, it calls the base class implementation to process the system-provided token types.</span></span>  
   
-4.  重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> 方法。如果可以将令牌的内存表示形式（作为参数传入）转换为 XML 表示形式，则此方法返回 `true`。如果无法转换，则会调用基类实现。  
+4.  <span data-ttu-id="8adc8-184">重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-184">Override the <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> method.</span></span> <span data-ttu-id="8adc8-185">如果可以将令牌的内存表示形式（作为参数传入）转换为 XML 表示形式，则此方法返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="8adc8-185">This method returns `true` if it can convert the in-memory token representation (passed in as an argument) to the XML representation.</span></span> <span data-ttu-id="8adc8-186">如果无法转换，则会调用基类实现。</span><span class="sxs-lookup"><span data-stu-id="8adc8-186">If it cannot convert, it calls the base class implementation.</span></span>  
   
-5.  重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> 方法。此方法将安全令牌的内存表示形式转换为 XML 表示形式。如果此方法无法转换，则会调用基类实现。  
+5.  <span data-ttu-id="8adc8-187">重写 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-187">Override the <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> method.</span></span> <span data-ttu-id="8adc8-188">此方法将安全令牌的内存表示形式转换为 XML 表示形式。</span><span class="sxs-lookup"><span data-stu-id="8adc8-188">This method converts an in-memory security token representation into an XML representation.</span></span> <span data-ttu-id="8adc8-189">如果此方法无法转换，则会调用基类实现。</span><span class="sxs-lookup"><span data-stu-id="8adc8-189">If the method cannot convert, it calls the base class implementation.</span></span>  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
   
- 完成前面四个过程之后，将自定义安全令牌与安全令牌提供程序、身份验证器、管理器以及客户端和服务凭据进行集成。  
+ <span data-ttu-id="8adc8-190">完成前面四个过程之后，将自定义安全令牌与安全令牌提供程序、身份验证器、管理器以及客户端和服务凭据进行集成。</span><span class="sxs-lookup"><span data-stu-id="8adc8-190">After completing the four previous procedures, integrate the custom security token with the security token provider, authenticator, manager, and client and service credentials.</span></span>  
   
-#### 将自定义安全令牌与安全令牌提供程序进行集成  
+#### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a><span data-ttu-id="8adc8-191">将自定义安全令牌与安全令牌提供程序进行集成</span><span class="sxs-lookup"><span data-stu-id="8adc8-191">To integrate the custom security token with a security token provider</span></span>  
   
-1.  安全令牌提供程序可以创建、修改（如果需要）和返回令牌的实例。若要创建自定义安全令牌的自定义提供程序，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类继承的类。下面的示例重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以返回 `CreditCardToken` 的实例。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义安全令牌提供程序的更多信息，请参见[如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+1.  <span data-ttu-id="8adc8-192">安全令牌提供程序可以创建、修改（如果需要）和返回令牌的实例。</span><span class="sxs-lookup"><span data-stu-id="8adc8-192">The security token provider creates, modifies (if necessary), and returns an instance of the token.</span></span> <span data-ttu-id="8adc8-193">若要创建自定义安全令牌的自定义提供程序，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类继承的类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-193">To create a custom provider for the custom security token, create a class that inherits from the <xref:System.IdentityModel.Selectors.SecurityTokenProvider> class.</span></span> <span data-ttu-id="8adc8-194">下面的示例重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以返回 `CreditCardToken` 的实例。</span><span class="sxs-lookup"><span data-stu-id="8adc8-194">The following example overrides the <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> method to return an instance of the `CreditCardToken`.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8adc8-195">自定义安全令牌提供程序，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-195"> custom security token providers, see [How to: Create a Custom Security Token Provider](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).</span></span>  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
-#### 将自定义安全令牌与安全令牌身份验证器进行集成  
+#### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a><span data-ttu-id="8adc8-196">将自定义安全令牌与安全令牌身份验证器进行集成</span><span class="sxs-lookup"><span data-stu-id="8adc8-196">To integrate the custom security token with a security token authenticator</span></span>  
   
-1.  当安全令牌从消息中提取出来，安全令牌身份验证器即对其内容进行验证。若要为自定义安全令牌创建自定义身份验证器，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 类继承的类。下面的示例将会重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义安全令牌的更多信息，请参见 [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+1.  <span data-ttu-id="8adc8-197">当安全令牌从消息中提取出来，安全令牌身份验证器即对其内容进行验证。</span><span class="sxs-lookup"><span data-stu-id="8adc8-197">The security token authenticator validates the content of the security token when it is extracted from the message.</span></span> <span data-ttu-id="8adc8-198">若要为自定义安全令牌创建自定义身份验证器，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 类继承的类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-198">To create a custom authenticator for the custom security token, create a class that inherits from the <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> class.</span></span> <span data-ttu-id="8adc8-199">下面的示例将会重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="8adc8-199">The following example overrides the <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> method.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8adc8-200">自定义安全令牌的身份验证器，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-200"> custom security token authenticators, see [How to: Create a Custom Security Token Authenticator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).</span></span>  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -123,9 +129,9 @@ caps.handback.revision: 14
      [!code-csharp[c_CustomToken#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#12)]
      [!code-vb[c_CustomToken#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#12)]  
   
-#### 将自定义安全令牌与安全令牌管理器进行集成  
+#### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a><span data-ttu-id="8adc8-201">将自定义安全令牌与安全令牌管理器进行集成</span><span class="sxs-lookup"><span data-stu-id="8adc8-201">To integrate the custom security token with a security token manager</span></span>  
   
-1.  安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自定义安全令牌管理器，请参见 [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  <span data-ttu-id="8adc8-202">安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。</span><span class="sxs-lookup"><span data-stu-id="8adc8-202">The security token manager creates the appropriate token provider, security authenticator, and token serializer instances.</span></span> <span data-ttu-id="8adc8-203">若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-203">To create a custom token manager, create a class that inherits from the <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> class.</span></span> <span data-ttu-id="8adc8-204">该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。</span><span class="sxs-lookup"><span data-stu-id="8adc8-204">The primary methods of the class use a <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> to create the appropriate provider and client or service credentials.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8adc8-205">自定义安全令牌管理器，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-205"> custom security token managers, see [Walkthrough: Creating Custom Client and Service Credentials](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).</span></span>  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -133,9 +139,9 @@ caps.handback.revision: 14
      [!code-csharp[c_CustomToken#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#9)]
      [!code-vb[c_CustomToken#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#9)]  
   
-#### 将自定义安全令牌与自定义客户端和服务凭据进行集成  
+#### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a><span data-ttu-id="8adc8-206">将自定义安全令牌与自定义客户端和服务凭据进行集成</span><span class="sxs-lookup"><span data-stu-id="8adc8-206">To integrate the custom security token with custom client and service credentials</span></span>  
   
-1.  必须添加自定义客户端和服务凭据，才能向应用程序提供一个 API，使其能够指定先前创建的自定义安全令牌基础结构所使用的自定义令牌信息，从而提供自定义安全令牌内容并对内容进行身份验证。下面的示例演示如何执行此操作。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义客户端和服务凭据，请参见 [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  <span data-ttu-id="8adc8-207">必须添加自定义客户端和服务凭据，才能向应用程序提供一个 API，使其能够指定先前创建的自定义安全令牌基础结构所使用的自定义令牌信息，从而提供自定义安全令牌内容并对内容进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="8adc8-207">The custom client and service credentials must be added to provide an API for the application to allow specifying custom token information that is used by the custom security token infrastructure created previously to provide and authenticate the custom security token content.</span></span> <span data-ttu-id="8adc8-208">下面的示例演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="8adc8-208">The following samples show how this can be done.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8adc8-209">自定义客户端和服务凭据，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-209"> custom client and service credentials, see [Walkthrough: Creating Custom Client and Service Credentials](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).</span></span>  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -143,30 +149,30 @@ caps.handback.revision: 14
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- 先前创建的自定义安全令牌参数类用于通知 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架，在与服务通信时必须使用自定义安全令牌。下面的过程演示如何执行此操作。  
+ <span data-ttu-id="8adc8-210">先前创建的自定义安全令牌参数类用于通知 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架，在与服务通信时必须使用自定义安全令牌。</span><span class="sxs-lookup"><span data-stu-id="8adc8-210">The custom security token parameters class created previously is used to tell the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security framework that a custom security token must be used when communicating with a service.</span></span> <span data-ttu-id="8adc8-211">下面的过程演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="8adc8-211">The following procedure shows how this can be done.</span></span>  
   
-#### 将自定义安全令牌与绑定进行集成  
+#### <a name="to-integrate-the-custom-security-token-with-the-binding"></a><span data-ttu-id="8adc8-212">将自定义安全令牌与绑定进行集成</span><span class="sxs-lookup"><span data-stu-id="8adc8-212">To integrate the custom security token with the binding</span></span>  
   
-1.  在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上公开的一个令牌参数集合中，必须指定自定义安全令牌参数类。下面的示例使用 `SignedEncrypted` 所返回的集合。代码将信用卡自定义令牌添加到从客户端发送到服务的每个消息中，并对令牌内容自动进行了签名和加密。  
+1.  <span data-ttu-id="8adc8-213">在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上公开的一个令牌参数集合中，必须指定自定义安全令牌参数类。</span><span class="sxs-lookup"><span data-stu-id="8adc8-213">The custom security token parameters class must be specified in one of the token parameters collections that are exposed on the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> <span data-ttu-id="8adc8-214">下面的示例使用 `SignedEncrypted` 所返回的集合。</span><span class="sxs-lookup"><span data-stu-id="8adc8-214">The following example uses the collection returned by `SignedEncrypted`.</span></span> <span data-ttu-id="8adc8-215">代码将信用卡自定义令牌添加到从客户端发送到服务的每个消息中，并对令牌内容自动进行了签名和加密。</span><span class="sxs-lookup"><span data-stu-id="8adc8-215">The code adds the credit card custom token to every message sent from the client to the service with its content automatically signed and encrypted.</span></span>  
   
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- 本主题显示各种不同的代码块所需实施和使用自定义令牌。若要查看一个完整的示例所有这些支离破碎的代码适应，请参见 [自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)。  
+ <span data-ttu-id="8adc8-216">本主题显示实现和使用自定义令牌所需的各种不同的代码块。</span><span class="sxs-lookup"><span data-stu-id="8adc8-216">This topic shows the various pieces of code necessary to implement and use a custom token.</span></span> <span data-ttu-id="8adc8-217">若要查看如何的完整示例的代码的所有这些部分组合在一起，请参阅[自定义令牌](../../../../docs/framework/wcf/samples/custom-token.md)。</span><span class="sxs-lookup"><span data-stu-id="8adc8-217">To see a complete example of how all these pieces of code fit together see, [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md).</span></span>  
   
-## 请参阅  
- <xref:System.IdentityModel.Tokens.SecurityToken>   
- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>   
- <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>   
- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>   
- <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>   
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>   
- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>   
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ServiceCredentials>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)   
- [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)   
- [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)   
- [Security Architecture](http://msdn.microsoft.com/zh-cn/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a><span data-ttu-id="8adc8-218">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8adc8-218">See Also</span></span>  
+ <xref:System.IdentityModel.Tokens.SecurityToken>  
+ <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>  
+ <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenProvider>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ServiceCredentials>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ [<span data-ttu-id="8adc8-219">演练： 创建自定义客户端和服务凭据</span><span class="sxs-lookup"><span data-stu-id="8adc8-219">Walkthrough: Creating Custom Client and Service Credentials</span></span>](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [<span data-ttu-id="8adc8-220">如何： 创建自定义安全令牌身份验证器</span><span class="sxs-lookup"><span data-stu-id="8adc8-220">How to: Create a Custom Security Token Authenticator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [<span data-ttu-id="8adc8-221">如何： 创建自定义安全令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="8adc8-221">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [<span data-ttu-id="8adc8-222">安全体系结构</span><span class="sxs-lookup"><span data-stu-id="8adc8-222">Security Architecture</span></span>](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

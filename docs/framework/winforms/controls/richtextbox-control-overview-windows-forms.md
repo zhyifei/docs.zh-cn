@@ -1,39 +1,39 @@
 ---
-title: "RichTextBox 控件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RichTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "RichTextBox 控件 [Windows 窗体], 关于 RichTextBox 控件"
-  - "文本框, 关于文本框"
+title: "RichTextBox 控件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RichTextBox
+helpviewer_keywords:
+- RichTextBox control [Windows Forms], about RichTextBox control
+- text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# RichTextBox 控件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件用于显示、输入和操作带有格式的文本。  <xref:System.Windows.Forms.RichTextBox> 控件除了做 <xref:System.Windows.Forms.TextBox> 控件所做的每件事外，还可以显示字体、颜色和链接，从文件加载文本和加载嵌入的图像，以及查找指定的字符。  与字处理应用程序（如 Microsoft Word）类似，<xref:System.Windows.Forms.RichTextBox> 通常用于提供文本操作和显示功能。  <xref:System.Windows.Forms.RichTextBox> 控件可以显示滚动条，这一点与 <xref:System.Windows.Forms.TextBox> 控件相同；但是与 <xref:System.Windows.Forms.TextBox> 控件不同的是，它的默认设置是水平和垂直滚动条均根据需要显示，并且拥有更多的滚动条设置。  
+# <a name="richtextbox-control-overview-windows-forms"></a><span data-ttu-id="52027-102">RichTextBox 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="52027-102">RichTextBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="52027-103">Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输入和操作具有格式的文本。</span><span class="sxs-lookup"><span data-stu-id="52027-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control is used for displaying, entering, and manipulating text with formatting.</span></span> <span data-ttu-id="52027-104"><xref:System.Windows.Forms.RichTextBox>控件的作用的所有内容<xref:System.Windows.Forms.TextBox>控件的作用，但它还可以显示字体、 颜色和链接; 从文件; 加载文本和嵌入的图像并查找指定的字符。</span><span class="sxs-lookup"><span data-stu-id="52027-104">The <xref:System.Windows.Forms.RichTextBox> control does everything the <xref:System.Windows.Forms.TextBox> control does, but it can also display fonts, colors, and links; load text and embedded images from a file; and find specified characters.</span></span> <span data-ttu-id="52027-105"><xref:System.Windows.Forms.RichTextBox>控件通常用于文本操作，并显示类似于 Microsoft Word 等文字处理应用程序的功能。</span><span class="sxs-lookup"><span data-stu-id="52027-105">The <xref:System.Windows.Forms.RichTextBox> control is typically used to provide text manipulation and display features similar to word processing applications such as Microsoft Word.</span></span> <span data-ttu-id="52027-106">如<xref:System.Windows.Forms.TextBox>控件，<xref:System.Windows.Forms.RichTextBox>控件可以显示滚动条; 但与<xref:System.Windows.Forms.TextBox>控件，其默认设置是显示水平和垂直滚动条，根据需要并包含其他滚动条设置。</span><span class="sxs-lookup"><span data-stu-id="52027-106">Like the <xref:System.Windows.Forms.TextBox> control, the <xref:System.Windows.Forms.RichTextBox> control can display scroll bars; but unlike the <xref:System.Windows.Forms.TextBox> control, its default setting is to display both horizontal and vertical scrollbars as needed, and it has additional scrollbar settings.</span></span>  
   
-## 使用 RichTextBox 控件  
- 与 <xref:System.Windows.Forms.TextBox> 控件一样，显示的文本由 <xref:System.Windows.Forms.RichTextBox.Text%2A> 属性设置。  <xref:System.Windows.Forms.RichTextBox> 控件有许多用于设置文本格式的属性。  有关这些属性的详细信息，请参见 [如何：为 Windows 窗体 RichTextBox 控件设置字体特性](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) 和 [如何：在 Windows 窗体 RichTextBox 控件中设置缩进、悬挂缩进和带项目符号的段落](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)。  为操作文件，<xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 和 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法可以显示和编写包括纯文本、Unicode 纯文本和 RTF 格式 \(RTF\) 在内的多种文件格式。  可能的文件格式在 [RichTextBoxStreamType 枚举](frlrfSystemWindowsFormsRichTextBoxStreamTypeClassTopic)中列出。  可以使用 <xref:System.Windows.Forms.RichTextBox.Find%2A> 方法查找文本字符串或特定字符。  
+## <a name="working-with-the-richtextbox-control"></a><span data-ttu-id="52027-107">使用 RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="52027-107">Working with the RichTextBox Control</span></span>  
+ <span data-ttu-id="52027-108">与<xref:System.Windows.Forms.TextBox>控件，显示的文本设置<xref:System.Windows.Forms.RichTextBox.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="52027-108">As with the <xref:System.Windows.Forms.TextBox> control, the text displayed is set by the <xref:System.Windows.Forms.RichTextBox.Text%2A> property.</span></span> <span data-ttu-id="52027-109"><xref:System.Windows.Forms.RichTextBox>控件具有大量的属性，用于设置文本格式。</span><span class="sxs-lookup"><span data-stu-id="52027-109">The <xref:System.Windows.Forms.RichTextBox> control has numerous properties to format text.</span></span> <span data-ttu-id="52027-110">有关这些属性的详细信息，请参阅[如何：为 Windows 窗体 RichTextBox 控件设置字体特性](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md)和[如何：在 Windows 窗体 RichTextBox 控件中设置缩进、悬挂缩进和带项目符号的段落](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)。</span><span class="sxs-lookup"><span data-stu-id="52027-110">For details on these properties, see [How to: Set Font Attributes for the Windows Forms RichTextBox Control](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) and [How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md).</span></span> <span data-ttu-id="52027-111">若要处理文件，<xref:System.Windows.Forms.RichTextBox.LoadFile%2A>和<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法可以显示和写入多个文件格式，包括纯文本、 Unicode 纯文本和格式 RTF (丰富文本)。</span><span class="sxs-lookup"><span data-stu-id="52027-111">To manipulate files, the <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> and <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> methods can display and write multiple file formats including plain text, Unicode plain text, and Rich Text Format (RTF).</span></span> <span data-ttu-id="52027-112">中列出了可能的文件格式<xref:System.Windows.Forms.RichTextBoxStreamType>。</span><span class="sxs-lookup"><span data-stu-id="52027-112">The possible file formats are listed in <xref:System.Windows.Forms.RichTextBoxStreamType>.</span></span> <span data-ttu-id="52027-113">你可以使用<xref:System.Windows.Forms.RichTextBox.Find%2A>方法若要查找的文本或特定的字符的字符串。</span><span class="sxs-lookup"><span data-stu-id="52027-113">You can use the <xref:System.Windows.Forms.RichTextBox.Find%2A> method to find strings of text or specific characters.</span></span>  
   
- 也可以将 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 属性设置为 `true`，并编写处理 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件的代码，从而在 Web 样式的链接中使用 <xref:System.Windows.Forms.RichTextBox> 控件。  有关更多信息，请参见 [如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)。  将 <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> 属性设置为 `true` 可以防止用户操作控件中的部分或全部文本。  
+ <span data-ttu-id="52027-114">你还可以使用<xref:System.Windows.Forms.RichTextBox>Web 样式的链接，通过设置的控件<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>属性`true`编写代码来处理<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件。</span><span class="sxs-lookup"><span data-stu-id="52027-114">You can also use a <xref:System.Windows.Forms.RichTextBox> control for Web-style links by setting the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property to `true` and writing code to handle the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event.</span></span> <span data-ttu-id="52027-115">有关详细信息，请参阅[如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)。</span><span class="sxs-lookup"><span data-stu-id="52027-115">For more information, see [How to: Display Web-Style Links with the Windows Forms RichTextBox Control](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md).</span></span> <span data-ttu-id="52027-116">你可以防止用户通过设置操作的部分或全部控件中的文本<xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="52027-116">You can prevent the user from manipulating some or all of the text in the control by setting the <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> property to `true`.</span></span>  
   
- 在 <xref:System.Windows.Forms.RichTextBox> 控件中可以通过调用 <xref:System.Windows.Forms.TextBoxBase.Undo%2A> 和 <xref:System.Windows.Forms.RichTextBox.Redo%2A> 方法撤消和重复大多数编辑操作。  <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> 方法使您可以确定用户最后一次撤消的操作是否可以重新应用于控件。  
+ <span data-ttu-id="52027-117">可以撤消和重做中的大多数编辑操作<xref:System.Windows.Forms.RichTextBox>通过调用控件<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="52027-117">You can undo and redo most edit operations in a <xref:System.Windows.Forms.RichTextBox> control by calling the <xref:System.Windows.Forms.TextBoxBase.Undo%2A> and <xref:System.Windows.Forms.RichTextBox.Redo%2A> methods.</span></span> <span data-ttu-id="52027-118"><xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法使您能够确定是否可以重新撤消了用户的上一个操作应用于控件。</span><span class="sxs-lookup"><span data-stu-id="52027-118">The <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> method enables you to determine whether the last operation the user has undone can be reapplied to the control.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="52027-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="52027-119">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="52027-120">RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="52027-120">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="52027-121">TextBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="52027-121">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

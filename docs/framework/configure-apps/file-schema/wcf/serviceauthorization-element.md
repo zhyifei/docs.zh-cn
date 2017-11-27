@@ -1,31 +1,36 @@
 ---
-title: "&lt;serviceAuthorization&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "&lt;serviceAuthorization&gt; 元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cdbe676fa73c040737c947902d64b2c0e689e2a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceAuthorization&gt; 元素
-指定用于授予服务操作访问权限的设置。  
+# <a name="ltserviceauthorizationgt-element"></a><span data-ttu-id="c2c1a-102">&lt;serviceAuthorization&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="c2c1a-102">&lt;serviceAuthorization&gt; element</span></span>
+<span data-ttu-id="c2c1a-103">指定用于授予服务操作访问权限的设置。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-103">Specifies settings that authorize access to service operations</span></span>  
   
-## 语法  
+ <span data-ttu-id="c2c1a-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c2c1a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c2c1a-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c2c1a-105">\<behaviors></span></span>  
+<span data-ttu-id="c2c1a-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="c2c1a-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="c2c1a-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c2c1a-107">\<behavior></span></span>  
+<span data-ttu-id="c2c1a-108">\<serviceAuthorization ></span><span class="sxs-lookup"><span data-stu-id="c2c1a-108">\<serviceAuthorization></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c2c1a-109">语法</span><span class="sxs-lookup"><span data-stu-id="c2c1a-109">Syntax</span></span>  
   
+```xml  
 <serviceAuthorization  
      impersonateCallerForAllOperations="Boolean"  
       principalPermissionMode="None/UseWindowsGroups/UseAspNetRoles/Custom"  
@@ -37,36 +42,36 @@ caps.handback.revision: 26
 </serviceAuthorization>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c2c1a-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c2c1a-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c2c1a-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="c2c1a-112">特性</span><span class="sxs-lookup"><span data-stu-id="c2c1a-112">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|impersonateCallerForAllOperations|一个布尔值，指定是否服务中的所有操作都模拟调用方。  默认值为 `false`。<br /><br /> 当特定服务操作模拟调用方时，线程上下文会在执行指定服务前切换为调用方上下文。|  
-|principalPermissionMode|设置用于在服务器上执行操作的主体。  包括以下值：<br /><br /> -   无<br />-   UseWindowsGroups<br />-   UseAspNetRoles<br />-   自定义<br /><br /> 默认值为 UseWindowsGroups。  此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。  有关使用此属性的更多信息，请参见 [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。|  
-|roleProviderName|一个字符串，指定为 Windows Communication Foundation \(WCF\) 应用程序提供角色信息的角色提供程序的名称。  默认值为一个空字符串。|  
-|ServiceAuthorizationManagerType|一个包含服务授权管理器的类型的字符串。  有关详细信息，请参阅<xref:System.ServiceModel.ServiceAuthorizationManager>。|  
+|<span data-ttu-id="c2c1a-113">特性</span><span class="sxs-lookup"><span data-stu-id="c2c1a-113">Attribute</span></span>|<span data-ttu-id="c2c1a-114">描述</span><span class="sxs-lookup"><span data-stu-id="c2c1a-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="c2c1a-115">impersonateCallerForAllOperations</span><span class="sxs-lookup"><span data-stu-id="c2c1a-115">impersonateCallerForAllOperations</span></span>|<span data-ttu-id="c2c1a-116">一个布尔值，指定是否服务中的所有操作都模拟调用方。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-116">A Boolean value that specifies if all the operations in the service impersonate the caller.</span></span> <span data-ttu-id="c2c1a-117">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-117">The default is `false`.</span></span><br /><br /> <span data-ttu-id="c2c1a-118">当特定服务操作模拟调用方时，线程上下文会在执行指定服务前切换为调用方上下文。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-118">When a specific service operation impersonates the caller, the thread context is switched to the caller context before executing the specified service.</span></span>|  
+|<span data-ttu-id="c2c1a-119">principalPermissionMode</span><span class="sxs-lookup"><span data-stu-id="c2c1a-119">principalPermissionMode</span></span>|<span data-ttu-id="c2c1a-120">设置用于在服务器上执行操作的主体。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-120">Sets the principal used to carry out operations on the server.</span></span> <span data-ttu-id="c2c1a-121">包括以下值：</span><span class="sxs-lookup"><span data-stu-id="c2c1a-121">Values include the following:</span></span><br /><br /> <span data-ttu-id="c2c1a-122">-无</span><span class="sxs-lookup"><span data-stu-id="c2c1a-122">-   None</span></span><br /><span data-ttu-id="c2c1a-123">-UseWindowsGroups</span><span class="sxs-lookup"><span data-stu-id="c2c1a-123">-   UseWindowsGroups</span></span><br /><span data-ttu-id="c2c1a-124">-UseAspNetRoles</span><span class="sxs-lookup"><span data-stu-id="c2c1a-124">-   UseAspNetRoles</span></span><br /><span data-ttu-id="c2c1a-125">自定义</span><span class="sxs-lookup"><span data-stu-id="c2c1a-125">-   Custom</span></span><br /><br /> <span data-ttu-id="c2c1a-126">默认值为 UseWindowsGroups。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-126">The default value is UseWindowsGroups.</span></span> <span data-ttu-id="c2c1a-127">此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-127">The value is of type <xref:System.ServiceModel.Description.PrincipalPermissionMode>.</span></span> <span data-ttu-id="c2c1a-128">使用此属性的详细信息，请参阅[如何： 使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-128">For more information on using this attribute, see [How to: Restrict Access with the PrincipalPermissionAttribute Class](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).</span></span>|  
+|<span data-ttu-id="c2c1a-129">roleProviderName</span><span class="sxs-lookup"><span data-stu-id="c2c1a-129">roleProviderName</span></span>|<span data-ttu-id="c2c1a-130">一个字符串，指定为 Windows Communication Foundation (WCF) 应用程序提供角色信息的角色提供程序的名称。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-130">A string that specifies the name of the role provider, which provides role information for a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="c2c1a-131">默认值为一个空字符串。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-131">The default is an empty string.</span></span>|  
+|<span data-ttu-id="c2c1a-132">ServiceAuthorizationManagerType</span><span class="sxs-lookup"><span data-stu-id="c2c1a-132">ServiceAuthorizationManagerType</span></span>|<span data-ttu-id="c2c1a-133">一个包含服务授权管理器的类型的字符串。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-133">A string containing the type of the service authorization manager.</span></span> <span data-ttu-id="c2c1a-134">有关更多信息，请参见<xref:System.ServiceModel.ServiceAuthorizationManager>。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-134">For more information, see <xref:System.ServiceModel.ServiceAuthorizationManager>.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="c2c1a-135">子元素</span><span class="sxs-lookup"><span data-stu-id="c2c1a-135">Child Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|authorizationPolicies|包含可使用 `add` 关键字添加的授权策略类型的集合。  每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。  该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。  可以根据该授权策略来授予或拒绝访问控制。  有关详细信息，请参阅<xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>。|  
+|<span data-ttu-id="c2c1a-136">元素</span><span class="sxs-lookup"><span data-stu-id="c2c1a-136">Element</span></span>|<span data-ttu-id="c2c1a-137">描述</span><span class="sxs-lookup"><span data-stu-id="c2c1a-137">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="c2c1a-138">authorizationPolicies</span><span class="sxs-lookup"><span data-stu-id="c2c1a-138">authorizationPolicies</span></span>|<span data-ttu-id="c2c1a-139">包含可使用 `add` 关键字添加的授权策略类型的集合。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-139">Contains a collection of authorization policy types, which can be added using the `add` keyword.</span></span> <span data-ttu-id="c2c1a-140">每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-140">Each authorization policy contains a single required `policyType` attribute that is a string.</span></span> <span data-ttu-id="c2c1a-141">该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-141">The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims.</span></span> <span data-ttu-id="c2c1a-142">可以根据该授权策略来授予或拒绝访问控制。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-142">Access control can be granted or denied based on that.</span></span> <span data-ttu-id="c2c1a-143">有关更多信息，请参见<xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-143">For more information, see <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="c2c1a-144">父元素</span><span class="sxs-lookup"><span data-stu-id="c2c1a-144">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<行为\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|包含服务行为的设置集合。|  
+|<span data-ttu-id="c2c1a-145">元素</span><span class="sxs-lookup"><span data-stu-id="c2c1a-145">Element</span></span>|<span data-ttu-id="c2c1a-146">描述</span><span class="sxs-lookup"><span data-stu-id="c2c1a-146">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c2c1a-147">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c2c1a-147">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="c2c1a-148">包含服务行为的设置集合。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-148">Contains a collection of settings for the behavior of a service.</span></span>|  
   
-## 备注  
- 本节包含一些影响授权、自定义角色提供程序和模拟的元素。  
+## <a name="remarks"></a><span data-ttu-id="c2c1a-149">备注</span><span class="sxs-lookup"><span data-stu-id="c2c1a-149">Remarks</span></span>  
+ <span data-ttu-id="c2c1a-150">本节包含一些影响授权、自定义角色提供程序和模拟的元素。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-150">This section contains elements affecting authorization, custom role providers, and impersonation.</span></span>  
   
- `principalPermissionMode` 属性指定在授权使用受保护方法时要使用的用户组。  默认值为 `UseWindowsGroups`，该值指定在 Windows 组（例如，“Administrators”或“Users”）中搜索试图访问某个资源的标识。  您还可以指定 `UseAspNetRoles` 以使用自定义角色提供程序，该提供程序在 \<system.web\> 元素下配置，如下面的代码所示。  
+ <span data-ttu-id="c2c1a-151">`principalPermissionMode` 属性指定在授权使用受保护方法时要使用的用户组。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-151">The `principalPermissionMode` attribute specifies the groups of users to use when authorizing use of a protected method.</span></span> <span data-ttu-id="c2c1a-152">默认值为 `UseWindowsGroups`，该值指定在 Windows 组（例如，“Administrators”或“Users”）中搜索试图访问某个资源的标识。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-152">The default value is `UseWindowsGroups` and specifies that Windows groups, such as "Administrators" or "Users," are searched for an identity trying to access a resource.</span></span> <span data-ttu-id="c2c1a-153">你还可以指定`UseAspNetRoles`若要使用的自定义角色提供程序下配置\<.w e b > 元素，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-153">You can also specify `UseAspNetRoles` to use a custom role provider that is configured under the \<system.web> element, as shown in the following code.</span></span>  
   
-```  
+```xml  
 <system.web>  
   <membership defaultProvider="SqlProvider"   
    userIsOnlineTimeWindow="15">  
@@ -88,9 +93,9 @@ caps.handback.revision: 26
 </system.web>  
 ```  
   
- 下面的代码演示与 `principalPermissionMode` 特性一起使用的 `roleProviderName`。  
+ <span data-ttu-id="c2c1a-154">下面的代码演示与 `roleProviderName` 特性一起使用的 `principalPermissionMode`。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-154">The following code shows the `roleProviderName` used with the `principalPermissionMode` attribute.</span></span>  
   
-```  
+```xml  
 <behaviors>  
    <behavior name="ServiceBehaviour">  
      <serviceAuthorization principalPermissionMode ="UseAspNetRoles"   
@@ -100,13 +105,13 @@ caps.handback.revision: 26
 </behaviors>  
 ```  
   
- 有关使用此配置元素的详细示例，请参见[授予对服务操作的访问权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)和[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
+ <span data-ttu-id="c2c1a-155">使用此配置元素的详细示例，请参阅[授权服务操作访问权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)和[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。</span><span class="sxs-lookup"><span data-stu-id="c2c1a-155">For a detailed example of using this configuration element, see [Authorizing Access to Service Operations](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>   
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>   
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [授予对服务操作的访问权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)   
- [如何：为服务创建自定义授权管理器](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)   
- [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)   
- [授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a><span data-ttu-id="c2c1a-156">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c2c1a-156">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
+ <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
+ [<span data-ttu-id="c2c1a-157">安全行为</span><span class="sxs-lookup"><span data-stu-id="c2c1a-157">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="c2c1a-158">授予对服务操作访问权限</span><span class="sxs-lookup"><span data-stu-id="c2c1a-158">Authorizing Access to Service Operations</span></span>](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [<span data-ttu-id="c2c1a-159">如何： 创建自定义授权管理器服务</span><span class="sxs-lookup"><span data-stu-id="c2c1a-159">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [<span data-ttu-id="c2c1a-160">如何：使用 PrincipalPermissionAttribute 类限制访问</span><span class="sxs-lookup"><span data-stu-id="c2c1a-160">How to: Restrict Access with the PrincipalPermissionAttribute Class</span></span>](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [<span data-ttu-id="c2c1a-161">授权策略</span><span class="sxs-lookup"><span data-stu-id="c2c1a-161">Authorization Policy</span></span>](../../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -1,44 +1,47 @@
 ---
-title: "授权策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "授权策略"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 50998acedf3b462e17c57d784dfc1ebe6fff38b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 授权策略
-此示例演示如何实现一个自定义声明授权策略和一个关联的自定义服务授权管理器。这在服务对服务操作进行基于声明的访问检查，并在进行访问检查之前授予调用方某些权限时很有用。此示例演示添加声明的过程，以及对最终的声明集进行访问检查的过程。客户端与服务器之间的所有应用程序消息均已进行签名和加密。默认情况下，对于 `wsHttpBinding` 绑定，使用客户端提供的用户名和密码登录有效的 Windows NT 帐户。此示例演示如何利用自定义 <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> 对客户端进行身份验证。此外，此示例还演示使用 X.509 证书对服务进行客户端身份验证。此示例演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，该实现在它们之间为特定用户授予对服务的特定方法的访问权限。此示例基于[用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)，但演示了如何在调用 <xref:System.ServiceModel.ServiceAuthorizationManager> 之前执行声明转换。  
+# <a name="authorization-policy"></a><span data-ttu-id="44bc1-102">授权策略</span><span class="sxs-lookup"><span data-stu-id="44bc1-102">Authorization Policy</span></span>
+<span data-ttu-id="44bc1-103">此示例演示如何实现一个自定义声明授权策略和一个关联的自定义服务授权管理器。</span><span class="sxs-lookup"><span data-stu-id="44bc1-103">This sample demonstrates how to implement a custom claim authorization policy and an associated custom service authorization manager.</span></span> <span data-ttu-id="44bc1-104">这在服务对服务操作进行基于声明的访问检查，并在进行访问检查之前授予调用方某些权限时很有用。</span><span class="sxs-lookup"><span data-stu-id="44bc1-104">This is useful when the service makes claim-based access checks to service operations and prior to the access checks, grants the caller certain rights.</span></span> <span data-ttu-id="44bc1-105">此示例演示添加声明的过程，以及对最终的声明集进行访问检查的过程。</span><span class="sxs-lookup"><span data-stu-id="44bc1-105">This sample shows both the process of adding claims as well as the process for doing an access check against the finalized set of claims.</span></span> <span data-ttu-id="44bc1-106">客户端与服务器之间的所有应用程序消息均已进行签名和加密。</span><span class="sxs-lookup"><span data-stu-id="44bc1-106">All application messages between the client and server are signed and encrypted.</span></span> <span data-ttu-id="44bc1-107">默认情况下，对于 `wsHttpBinding` 绑定，使用客户端提供的用户名和密码登录有效的 Windows NT 帐户。</span><span class="sxs-lookup"><span data-stu-id="44bc1-107">By default with the `wsHttpBinding` binding, a username and password supplied by the client are used to logon to a valid Windows NT account.</span></span> <span data-ttu-id="44bc1-108">此示例演示如何使用自定义<!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>-->`System.IdentityModel.Selectors.UsernamePasswordValidator`进行身份验证客户端。</span><span class="sxs-lookup"><span data-stu-id="44bc1-108">This sample demonstrates how to utilize a custom <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` to authenticate the client.</span></span> <span data-ttu-id="44bc1-109">此外，此示例还演示使用 X.509 证书对服务进行客户端身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-109">In addition this sample shows the client authenticating to the service using an X.509 certificate.</span></span> <span data-ttu-id="44bc1-110">此示例演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，该实现在它们之间为特定用户授予对服务的特定方法的访问权限。</span><span class="sxs-lookup"><span data-stu-id="44bc1-110">This sample shows an implementation of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and <xref:System.ServiceModel.ServiceAuthorizationManager>, which between them grant access to specific methods of the service for specific users.</span></span> <span data-ttu-id="44bc1-111">此示例基于[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)，但演示了如何执行之前声明转换<xref:System.ServiceModel.ServiceAuthorizationManager>调用。</span><span class="sxs-lookup"><span data-stu-id="44bc1-111">This sample is based on the [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md), but demonstrates how to perform a claim transformation prior to the <xref:System.ServiceModel.ServiceAuthorizationManager> being called.</span></span>  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="44bc1-112">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="44bc1-112">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 概括而言，此示例演示：  
+ <span data-ttu-id="44bc1-113">概括而言，此示例演示：</span><span class="sxs-lookup"><span data-stu-id="44bc1-113">In summary, this sample demonstrates how:</span></span>  
   
--   如何使用用户名和密码对客户端进行身份验证。  
+-   <span data-ttu-id="44bc1-114">如何使用用户名和密码对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-114">The client can be authenticated using a user name-password.</span></span>  
   
--   如何使用 X.509 证书对客户端进行身份验证。  
+-   <span data-ttu-id="44bc1-115">如何使用 X.509 证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-115">The client can be authenticated using an X.509 certificate.</span></span>  
   
--   服务器如何根据自定义 `UsernamePassword` 验证程序验证客户端凭据。  
+-   <span data-ttu-id="44bc1-116">服务器如何根据自定义 `UsernamePassword` 验证程序验证客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="44bc1-116">The server validates the client credentials against a custom `UsernamePassword` validator.</span></span>  
   
--   如何使用服务器的 X.509 证书对服务器进行身份验证。  
+-   <span data-ttu-id="44bc1-117">如何使用服务器的 X.509 证书对服务器进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-117">The server is authenticated using the server's X.509 certificate.</span></span>  
   
--   服务器可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 控制对服务中的某些方法的访问。  
+-   <span data-ttu-id="44bc1-118">服务器可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 控制对服务中的某些方法的访问。</span><span class="sxs-lookup"><span data-stu-id="44bc1-118">The server can use <xref:System.ServiceModel.ServiceAuthorizationManager> to control access to certain methods in the service.</span></span>  
   
--   如何实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。  
+-   <span data-ttu-id="44bc1-119">如何实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。</span><span class="sxs-lookup"><span data-stu-id="44bc1-119">How to implement <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.</span></span>  
   
- 服务公开两个终结点，以便与使用配置文件 App.config 定义的服务进行通信。每个终结点由地址、绑定和协定组成。其中一个绑定是使用标准 `wsHttpBinding` 绑定配置的，该标准绑定使用 WS\-Security 和客户端用户名身份验证。另一个绑定是使用标准 `wsHttpBinding` 绑定配置的，该标准绑定使用 WS\-Security 和客户端证书身份验证。[\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)指定使用用户凭据对服务进行身份验证。服务器证书中包含的 `SubjectName` 属性 \(Property\) 值必须与 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)中的 `findValue` 属性 \(Attribute\) 值相同。  
+ <span data-ttu-id="44bc1-120">服务公开两个终结点，以便与使用配置文件 App.config 定义的服务进行通信。每个终结点由地址、绑定和协定组成。</span><span class="sxs-lookup"><span data-stu-id="44bc1-120">The service exposes two endpoints for communicating with the service, defined using the configuration file App.config. Each endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="44bc1-121">其中一个绑定是使用标准 `wsHttpBinding` 绑定配置的，该标准绑定使用 WS-Security 和客户端用户名身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-121">One binding is configured with a standard `wsHttpBinding` binding that uses WS-Security and client username authentication.</span></span> <span data-ttu-id="44bc1-122">另一个绑定是使用标准 `wsHttpBinding` 绑定配置的，该标准绑定使用 WS-Security 和客户端证书身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-122">The other binding is configured with a standard `wsHttpBinding` binding that uses WS-Security and client certificate authentication.</span></span> <span data-ttu-id="44bc1-123">[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)指定的用户凭据是要用于服务身份验证。</span><span class="sxs-lookup"><span data-stu-id="44bc1-123">The [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) specifies that the user credentials are to be used for service authentication.</span></span> <span data-ttu-id="44bc1-124">服务器证书必须包含相同的值`SubjectName`属性作为`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。</span><span class="sxs-lookup"><span data-stu-id="44bc1-124">The server certificate must contain the same value for the `SubjectName` property as the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -121,12 +124,11 @@ caps.handback.revision: 38
   </behaviors>  
   
 </system.serviceModel>  
-  
 ```  
   
- 每个客户端终结点配置由配置名称、服务终结点的绝对地址、绑定和协定组成。客户端绑定是使用本例中在 [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)中指定的相应安全模式以及在 [\<消息\>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)中指定的 `clientCredentialType` 配置的。  
+ <span data-ttu-id="44bc1-125">每个客户端终结点配置由配置名称、服务终结点的绝对地址、绑定和协定组成。</span><span class="sxs-lookup"><span data-stu-id="44bc1-125">Each client endpoint configuration consists of a configuration name, an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="44bc1-126">客户端绑定配置为适当的安全模式指定在此情况下在[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)和`clientCredentialType`中指定[\<消息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="44bc1-126">The client binding is configured with the appropriate security mode as specified in this case in the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) and `clientCredentialType` as specified in the [\<message>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <client>  
@@ -190,10 +192,9 @@ caps.handback.revision: 38
     </behaviors>  
   
   </system.serviceModel>  
-  
 ```  
   
- 对于基于用户名的终结点，客户端实现设置要使用的用户名和密码。  
+ <span data-ttu-id="44bc1-127">对于基于用户名的终结点，客户端实现设置要使用的用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="44bc1-127">For the user name-based endpoint, the client implementation sets the user name and password to use.</span></span>  
   
 ```  
 // Create a client with Username endpoint configuration  
@@ -217,10 +218,9 @@ catch (Exception e)
 }  
   
 client1.Close();  
-  
 ```  
   
- 对于基于证书的终结点，客户端实现设置要使用的客户端证书。  
+ <span data-ttu-id="44bc1-128">对于基于证书的终结点，客户端实现设置要使用的客户端证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-128">For the certificate-based endpoint, the client implementation sets the client certificate to use.</span></span>  
   
 ```  
 // Create a client with Certificate endpoint configuration  
@@ -243,10 +243,9 @@ catch (Exception e)
 }  
   
 client2.Close();  
-  
 ```  
   
- 此示例使用自定义 <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> 验证用户名和密码。此示例实现从 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 派生的 `MyCustomUserNamePasswordValidator`。有关更多信息，请参见有关 <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> 的文档。为了演示与 <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> 的集成，此自定义验证程序示例实现了 <xref:System.IdentityModel.Selectors.UsernamePasswordValidator.Validate%2A> 方法，以在用户名与密码匹配时接受用户名\/密码对，如下面的代码所示。  
+ <span data-ttu-id="44bc1-129">此示例使用自定义 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 验证用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="44bc1-129">This sample uses a custom <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> to validate user names and passwords.</span></span> <span data-ttu-id="44bc1-130">此示例实现从 `MyCustomUserNamePasswordValidator` 派生的 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>。</span><span class="sxs-lookup"><span data-stu-id="44bc1-130">The sample implements `MyCustomUserNamePasswordValidator`, derived from <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span></span> <span data-ttu-id="44bc1-131">有关更多信息，请参见有关 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 的文档。</span><span class="sxs-lookup"><span data-stu-id="44bc1-131">See the documentation about <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> for more information.</span></span> <span data-ttu-id="44bc1-132">为了演示与 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 的集成，此自定义验证程序示例实现了 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> 方法，以在用户名与密码匹配时接受用户名/密码对，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="44bc1-132">For the purposes of demonstrating the integration with the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, this custom validator sample implements the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> method to accept user name/password pairs where the user name matches the password as shown in the following code.</span></span>  
   
 ```  
 public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator  
@@ -269,19 +268,18 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
     }  
   }  
 }  
-  
 ```  
   
- 在服务代码中实现验证程序后，必须通知服务主机关于要使用的验证程序实例的信息。这是使用以下代码完成的。  
+ <span data-ttu-id="44bc1-133">在服务代码中实现验证程序后，必须通知服务主机关于要使用的验证程序实例的信息。</span><span class="sxs-lookup"><span data-stu-id="44bc1-133">Once the validator is implemented in service code, the service host must be informed about the validator instance to use.</span></span> <span data-ttu-id="44bc1-134">这是使用以下代码完成的。</span><span class="sxs-lookup"><span data-stu-id="44bc1-134">This is done using the following code.</span></span>  
   
 ```  
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;  
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();  
 ```  
   
- 或者，您可以在配置中执行相同的操作。  
+ <span data-ttu-id="44bc1-135">或者，您可以在配置中执行相同的操作。</span><span class="sxs-lookup"><span data-stu-id="44bc1-135">Or you can do the same thing in configuration.</span></span>  
   
-```  
+```xml  
 <behavior ...>  
     <serviceCredentials>  
       <!--   
@@ -293,9 +291,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为执行访问检查提供了一个丰富的、基于声明的模型。<xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="44bc1-136"> 为执行访问检查提供了一个丰富的、基于声明的模型。</span><span class="sxs-lookup"><span data-stu-id="44bc1-136"> provides a rich claims-based model for performing access checks.</span></span> <span data-ttu-id="44bc1-137"><xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。</span><span class="sxs-lookup"><span data-stu-id="44bc1-137">The <xref:System.ServiceModel.ServiceAuthorizationManager> object is used to perform the access check and determine whether the claims associated with the client satisfy the requirements necessary to access the service method.</span></span>  
   
- 出于演示目的，此示例演示了 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，它实现了 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法，以允许用户基于声明类型 http:\/\/example.com\/claims\/allowedoperation（其值为允许调用的操作的操作 URI）来访问方法。  
+ <span data-ttu-id="44bc1-138">出于演示目的，此示例演示了 <xref:System.ServiceModel.ServiceAuthorizationManager> 的实现，它实现了 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法，以允许用户基于声明类型 http://example.com/claims/allowedoperation（其值为允许调用的操作的操作 URI）来访问方法。</span><span class="sxs-lookup"><span data-stu-id="44bc1-138">For the purposes of demonstration, this sample shows an implementation of <xref:System.ServiceModel.ServiceAuthorizationManager> that implements the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method to allow a user's access to methods based on claims of type http://example.com/claims/allowedoperation whose value is the Action URI of the operation that is allowed to be called.</span></span>  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  
@@ -319,22 +317,20 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
     return false;                   
   }  
 }  
-  
 ```  
   
- 实现自定义 <xref:System.ServiceModel.ServiceAuthorizationManager> 后，必须通知服务主机关于要使用的 <xref:System.ServiceModel.ServiceAuthorizationManager> 的信息。这是通过如下所示的代码完成的。  
+ <span data-ttu-id="44bc1-139">实现自定义 <xref:System.ServiceModel.ServiceAuthorizationManager> 后，必须通知服务主机关于要使用的 <xref:System.ServiceModel.ServiceAuthorizationManager> 的信息。</span><span class="sxs-lookup"><span data-stu-id="44bc1-139">Once the custom <xref:System.ServiceModel.ServiceAuthorizationManager> is implemented, the service host must be informed about the <xref:System.ServiceModel.ServiceAuthorizationManager> to use.</span></span> <span data-ttu-id="44bc1-140">这是通过如下所示的代码完成的。</span><span class="sxs-lookup"><span data-stu-id="44bc1-140">This is done as shown in the following code.</span></span>  
   
-```  
+```xml  
 <behavior ...>  
     ...  
     <serviceAuthorization serviceAuthorizationManagerType="Microsoft.ServiceModel.Samples.MyServiceAuthorizationManager, service">  
         ...  
     </serviceAuthorization>  
 </behavior>  
-  
 ```  
   
- 要实现的主要 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法是 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 方法。  
+ <span data-ttu-id="44bc1-141">要实现的主要 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法是 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="44bc1-141">The primary <xref:System.IdentityModel.Policy.IAuthorizationPolicy> method to implement is the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> method.</span></span>  
   
 ```  
 public class MyAuthorizationPolicy : IAuthorizationPolicy  
@@ -390,29 +386,28 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }  
 ```  
   
- 上面的代码演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 方法如何检查尚未添加影响处理的新声明，并添加特定的声明。允许的声明是从 `GetAllowedOpList` 方法中获得的，实现该方法是为了返回允许用户执行的特定操作的列表。授权策略添加了访问特定操作的声明。<xref:System.ServiceModel.ServiceAuthorizationManager> 然后使用此授权策略执行访问检查决策。  
+ <span data-ttu-id="44bc1-142">上面的代码演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 方法如何检查尚未添加影响处理的新声明，并添加特定的声明。</span><span class="sxs-lookup"><span data-stu-id="44bc1-142">The previous code shows how the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> method checks that no new claims have been added that affect the processing and adds specific claims.</span></span> <span data-ttu-id="44bc1-143">允许的声明是从 `GetAllowedOpList` 方法中获得的，实现该方法是为了返回允许用户执行的特定操作的列表。</span><span class="sxs-lookup"><span data-stu-id="44bc1-143">The claims that are allowed are obtained from the `GetAllowedOpList` method, which is implemented to return a specific list of operations that the user is allowed to perform.</span></span> <span data-ttu-id="44bc1-144">授权策略添加了访问特定操作的声明。</span><span class="sxs-lookup"><span data-stu-id="44bc1-144">The authorization policy adds claims for accessing the particular operation.</span></span> <span data-ttu-id="44bc1-145"><xref:System.ServiceModel.ServiceAuthorizationManager> 然后使用此授权策略执行访问检查决策。</span><span class="sxs-lookup"><span data-stu-id="44bc1-145">This is later used by the <xref:System.ServiceModel.ServiceAuthorizationManager> to perform access check decisions.</span></span>  
   
- 实现自定义 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 后，必须通知服务主机关于要使用的授权策略的信息。  
+ <span data-ttu-id="44bc1-146">实现自定义 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 后，必须通知服务主机关于要使用的授权策略的信息。</span><span class="sxs-lookup"><span data-stu-id="44bc1-146">Once the custom <xref:System.IdentityModel.Policy.IAuthorizationPolicy> is implemented, the service host must be informed about the authorization policies to use.</span></span>  
   
-```  
+```xml  
 <serviceAuthorization ...>  
        <authorizationPolicies>   
             <add policyType='Microsoft.ServiceModel.Samples.CustomAuthorizationPolicy.MyAuthorizationPolicy, PolicyLibrary' />  
        </authorizationPolicies>   
 </serviceAuthorization>  
-  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。客户端成功调用 Add、Subtract 和 Multiple 方法，在尝试调用 Divide 方法时获得“访问被拒绝”消息。在客户端窗口中按 Enter 可以关闭客户端。  
+ <span data-ttu-id="44bc1-147">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-147">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="44bc1-148">客户端成功调用 Add、Subtract 和 Multiple 方法，在尝试调用 Divide 方法时获得“访问被拒绝”消息。</span><span class="sxs-lookup"><span data-stu-id="44bc1-148">The client successfully calls the Add, Subtract and Multiple methods and gets an "Access is denied" message when trying to call the Divide method.</span></span> <span data-ttu-id="44bc1-149">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="44bc1-149">Press ENTER in the client window to shut down the client.</span></span>  
   
-## 设置批处理文件  
- 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。  
+## <a name="setup-batch-file"></a><span data-ttu-id="44bc1-150">设置批处理文件</span><span class="sxs-lookup"><span data-stu-id="44bc1-150">Setup Batch File</span></span>  
+ <span data-ttu-id="44bc1-151">通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。</span><span class="sxs-lookup"><span data-stu-id="44bc1-151">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run a self-hosted application that requires server certificate-based security.</span></span>  
   
- 下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：  
+ <span data-ttu-id="44bc1-152">下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：</span><span class="sxs-lookup"><span data-stu-id="44bc1-152">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration:</span></span>  
   
--   创建服务器证书。  
+-   <span data-ttu-id="44bc1-153">创建服务器证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-153">Creating the server certificate.</span></span>  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。%SERVER\_NAME% 变量指定服务器名称。更改此变量可以指定您自己的服务器名称。默认值为 localhost。  
+     <span data-ttu-id="44bc1-154">Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-154">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="44bc1-155">%SERVER_NAME% 变量指定服务器名称。</span><span class="sxs-lookup"><span data-stu-id="44bc1-155">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="44bc1-156">更改此变量可以指定您自己的服务器名称。</span><span class="sxs-lookup"><span data-stu-id="44bc1-156">Change this variable to specify your own server name.</span></span> <span data-ttu-id="44bc1-157">默认值为 localhost。</span><span class="sxs-lookup"><span data-stu-id="44bc1-157">The default value is localhost.</span></span>  
   
     ```  
     echo ************  
@@ -422,98 +417,96 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   将服务器证书安装到客户端的受信任证书存储区中。  
+-   <span data-ttu-id="44bc1-158">将服务器证书安装到客户端的受信任证书存储区中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-158">Installing the server certificate into client's trusted certificate store.</span></span>  
   
-     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。因为客户端系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
+     <span data-ttu-id="44bc1-159">Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-159">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="44bc1-160">因为客户端系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="44bc1-160">This step is required because certificates that are generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="44bc1-161">如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。</span><span class="sxs-lookup"><span data-stu-id="44bc1-161">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   创建客户端证书。  
+-   <span data-ttu-id="44bc1-162">创建客户端证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-162">Creating the client certificate.</span></span>  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。%USER\_NAME% 变量指定服务器名称。此值设置为“test1”，因为这是 `IAuthorizationPolicy` 查找的名称。如果更改 %USER\_NAME% 的值，必须更改 `IAuthorizationPolicy.Evaluate` 方法中的对应值。  
+     <span data-ttu-id="44bc1-163">Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-163">The following lines from the Setup.bat batch file create the client certificate to be used.</span></span> <span data-ttu-id="44bc1-164">%USER_NAME% 变量指定服务器名称。</span><span class="sxs-lookup"><span data-stu-id="44bc1-164">The %USER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="44bc1-165">此值设置为“test1”，因为这是 `IAuthorizationPolicy` 查找的名称。</span><span class="sxs-lookup"><span data-stu-id="44bc1-165">This value is set to "test1" because this is the name the `IAuthorizationPolicy` looks for.</span></span> <span data-ttu-id="44bc1-166">如果更改 %USER_NAME% 的值，必须更改 `IAuthorizationPolicy.Evaluate` 方法中的对应值。</span><span class="sxs-lookup"><span data-stu-id="44bc1-166">If you change the value of %USER_NAME% you must change the corresponding value in the `IAuthorizationPolicy.Evaluate` method.</span></span>  
   
-     证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。  
+     <span data-ttu-id="44bc1-167">证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-167">The certificate is stored in My (Personal) store under the CurrentUser store location.</span></span>  
   
     ```  
     echo ************  
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-  
     ```  
   
--   将客户端证书安装到服务器的受信任证书存储区中。  
+-   <span data-ttu-id="44bc1-168">将客户端证书安装到服务器的受信任证书存储区中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-168">Installing the client certificate into server's trusted certificate store.</span></span>  
   
-     Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。因为服务器系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。  
+     <span data-ttu-id="44bc1-169">Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-169">The following lines in the Setup.bat batch file copy the client certificate into the trusted people store.</span></span> <span data-ttu-id="44bc1-170">因为服务器系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="44bc1-170">This step is required because certificates that are generated by Makecert.exe are not implicitly trusted by the server system.</span></span> <span data-ttu-id="44bc1-171">如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。</span><span class="sxs-lookup"><span data-stu-id="44bc1-171">If you already have a certificate that is rooted in a trusted root certificate—for example, a Microsoft issued certificate—this step of populating the server certificate store with the client certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### 设置和生成示例  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="44bc1-172">设置和生成示例</span><span class="sxs-lookup"><span data-stu-id="44bc1-172">To set up and build the sample</span></span>  
   
-1.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1.  <span data-ttu-id="44bc1-173">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="44bc1-173">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
+2.  <span data-ttu-id="44bc1-174">若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="44bc1-174">To run the sample in a single- or cross-computer configuration, use the following instructions.</span></span>  
   
 > [!NOTE]
->  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
+>  <span data-ttu-id="44bc1-175">如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。</span><span class="sxs-lookup"><span data-stu-id="44bc1-175">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
-#### 在同一计算机上运行示例  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="44bc1-176">在同一计算机上运行示例</span><span class="sxs-lookup"><span data-stu-id="44bc1-176">To run the sample on the same computer</span></span>  
   
-1.  使用管理员特权打开 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示窗口并运行示例安装文件夹中的 Setup.bat。这将安装运行示例所需的所有证书。  
+1.  <span data-ttu-id="44bc1-177">使用管理员特权打开 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示窗口并运行示例安装文件夹中的 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="44bc1-177">Open a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="44bc1-178">这将安装运行示例所需的所有证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-178">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  
+    >  <span data-ttu-id="44bc1-179">Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。</span><span class="sxs-lookup"><span data-stu-id="44bc1-179">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="44bc1-180">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。</span><span class="sxs-lookup"><span data-stu-id="44bc1-180">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  在使用管理员特权打开的 Visual Studio 命令提示中运行示例安装文件夹中的 Setup.bat。这将安装运行示例所需的所有证书。  
+2.  <span data-ttu-id="44bc1-181">在使用管理员特权打开的 Visual Studio 命令提示中运行示例安装文件夹中的 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="44bc1-181">Run Setup.bat in a Visual Studio command prompt opened with administrator privileges from the sample install folder.</span></span> <span data-ttu-id="44bc1-182">这将安装运行示例所需的所有证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-182">This installs all the certificates required for running the sample.</span></span>  
   
-3.  启动 service\\bin 中的 Service.exe。  
+3.  <span data-ttu-id="44bc1-183">启动 service\bin 中的 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="44bc1-183">Launch Service.exe from service\bin.</span></span>  
   
-4.  启动 \\client\\bin 中的 Client.exe。客户端活动将显示在客户端控制台应用程序上。  
+4.  <span data-ttu-id="44bc1-184">启动 \client\bin 中的 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="44bc1-184">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="44bc1-185">客户端活动将显示在客户端控制台应用程序上。</span><span class="sxs-lookup"><span data-stu-id="44bc1-185">Client activity is displayed on the client console application.</span></span>  
   
-5.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+5.  <span data-ttu-id="44bc1-186">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="44bc1-186">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 跨计算机运行示例  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="44bc1-187">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="44bc1-187">To run the sample across computers</span></span>  
   
-1.  在服务计算机上创建目录。  
+1.  <span data-ttu-id="44bc1-188">在服务计算机上创建目录。</span><span class="sxs-lookup"><span data-stu-id="44bc1-188">Create a directory on the service computer.</span></span>  
   
-2.  将 \\service\\bin 中的服务程序文件复制到服务计算机上的目录中。另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。  
+2.  <span data-ttu-id="44bc1-189">将 \service\bin 中的服务程序文件复制到服务计算机上的目录中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-189">Copy the service program files from \service\bin to the directory on the service computer.</span></span> <span data-ttu-id="44bc1-190">另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。</span><span class="sxs-lookup"><span data-stu-id="44bc1-190">Also copy the Setup.bat, Cleanup.bat, GetComputerName.vbs and ImportClientCert.bat files to the service computer.</span></span>  
   
-3.  在客户端计算机上为这些客户端二进制文件创建一个目录。  
+3.  <span data-ttu-id="44bc1-191">在客户端计算机上为这些客户端二进制文件创建一个目录。</span><span class="sxs-lookup"><span data-stu-id="44bc1-191">Create a directory on the client computerfor the client binaries.</span></span>  
   
-4.  将客户端程序文件复制到客户端计算机上的客户端目录中。另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
+4.  <span data-ttu-id="44bc1-192">将客户端程序文件复制到客户端计算机上的客户端目录中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-192">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="44bc1-193">另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。</span><span class="sxs-lookup"><span data-stu-id="44bc1-193">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。如果采用 `service` 参数运行 `setup.bat` ，则使用计算机的完全限定域名创建一个服务证书，并将此服务证书导出到名为 Service.cer 的文件中。  
+5.  <span data-ttu-id="44bc1-194">在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。</span><span class="sxs-lookup"><span data-stu-id="44bc1-194">On the server, run `setup.bat service` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="44bc1-195">运行`setup.bat`与`service`参数创建一个服务证书的计算机导出的完全限定域名服务证书导出到名为 Service.cer 的文件。</span><span class="sxs-lookup"><span data-stu-id="44bc1-195">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computerand exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  编辑 Service.exe.config 以反映新证书的名称（在 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的 `findValue` 属性中），该名称与计算机的完全限定域名相同。另外，将 \<service\>\/\<baseAddresses\> 元素中的计算机名称从 localhost 更改为服务计算机的完全限定名称。  
+6.  <span data-ttu-id="44bc1-196">编辑 Service.exe.config 以反映新的证书名称 (在`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 这是计算机的完全限定域名相同。</span><span class="sxs-lookup"><span data-stu-id="44bc1-196">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="44bc1-197">此外更改在 computername\<服务 > /\<baseAddresses > 元素从 localhost 到服务计算机的完全限定名称。</span><span class="sxs-lookup"><span data-stu-id="44bc1-197">Also change the computername in the \<service>/\<baseAddresses> element from localhost to the fully-qualified name of your service computer.</span></span>  
   
-7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
+7.  <span data-ttu-id="44bc1-198">将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-198">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-8.  在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。如果使用 `client` 参数运行 `setup.bat` ，将创建一个名为 test1 的客户端证书，并将该客户端证书导出到名为 Client.cer 的文件中。  
+8.  <span data-ttu-id="44bc1-199">在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。</span><span class="sxs-lookup"><span data-stu-id="44bc1-199">On the client, run `setup.bat client` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="44bc1-200">运行`setup.bat`与`client`参数创建一个名为 test1 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。</span><span class="sxs-lookup"><span data-stu-id="44bc1-200">Running `setup.bat` with the `client` argument creates a client certificate named test1 and exports the client certificate to a file named Client.cer.</span></span>  
   
-9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。通过用服务器的完全限定域名替换 localhost 来执行此操作。  
+9. <span data-ttu-id="44bc1-201">在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。</span><span class="sxs-lookup"><span data-stu-id="44bc1-201">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="44bc1-202">通过用服务器的完全限定域名替换 localhost 来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="44bc1-202">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  
   
-10. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
+10. <span data-ttu-id="44bc1-203">将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。</span><span class="sxs-lookup"><span data-stu-id="44bc1-203">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-11. 在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportServiceCert.bat。这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+11. <span data-ttu-id="44bc1-204">在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportServiceCert.bat。</span><span class="sxs-lookup"><span data-stu-id="44bc1-204">On the client, run ImportServiceCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="44bc1-205">这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。</span><span class="sxs-lookup"><span data-stu-id="44bc1-205">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-12. 在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportClientCert。这会将 Client.cer 文件中的客户端证书导入 LocalMachine \- TrustedPeople 存储区。  
+12. <span data-ttu-id="44bc1-206">在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportClientCert。</span><span class="sxs-lookup"><span data-stu-id="44bc1-206">On the server, run ImportClientCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="44bc1-207">这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。</span><span class="sxs-lookup"><span data-stu-id="44bc1-207">This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-13. 在服务器计算机上，从命令提示窗口中启动 Service.exe。  
+13. <span data-ttu-id="44bc1-208">在服务器计算机上，从命令提示窗口中启动 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="44bc1-208">On the server computer, launch Service.exe from the command prompt window.</span></span>  
   
-14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+14. <span data-ttu-id="44bc1-209">在客户端计算机上，从命令提示窗口中启动 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="44bc1-209">On the client computer, launch Client.exe from a command prompt window.</span></span> <span data-ttu-id="44bc1-210">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="44bc1-210">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 运行示例后进行清理  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="44bc1-211">运行示例后进行清理</span><span class="sxs-lookup"><span data-stu-id="44bc1-211">To clean up after the sample</span></span>  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。这将从证书存储区中移除服务器和客户端证书。  
+1.  <span data-ttu-id="44bc1-212">运行完示例后运行示例文件夹中的 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="44bc1-212">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span> <span data-ttu-id="44bc1-213">这将从证书存储区中移除服务器和客户端证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-213">This removes the server and client certificates from the certificate store.</span></span>  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。如果已运行跨计算机使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser \- TrustedPeople 存储中的服务证书。为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  <span data-ttu-id="44bc1-214">此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-214">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="44bc1-215">如果已运行跨计算机使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。</span><span class="sxs-lookup"><span data-stu-id="44bc1-215">If you have run [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="44bc1-216">为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="44bc1-216">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="44bc1-217">另请参阅</span><span class="sxs-lookup"><span data-stu-id="44bc1-217">See Also</span></span>

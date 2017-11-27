@@ -1,40 +1,43 @@
 ---
-title: "消息日志记录 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "消息日志记录"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 04e1b881d9aab1c35195794394cddf5172288cc1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 消息日志记录
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了记录传入和传出消息以便脱机使用的功能。使用消息日志记录功能，可以查看消息和消息正文是怎样的。如果希望了解传入了哪些参数以及接收终结点如何发现以 XML 形式表示的参数，这种类型的日志记录会特别有用。此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。  
+# <a name="message-logging"></a><span data-ttu-id="d8b7c-102">消息日志记录</span><span class="sxs-lookup"><span data-stu-id="d8b7c-102">Message Logging</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="d8b7c-103"> 提供了记录传入和传出消息以便脱机使用的功能。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-103"> provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="d8b7c-104">使用消息日志记录功能，可以查看消息和消息正文是怎样的。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="d8b7c-105">如果希望了解传入了哪些参数以及接收终结点如何发现以 XML 形式表示的参数，这种类型的日志记录会特别有用。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="d8b7c-106">此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="d8b7c-107">您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## 本节内容  
- [消息流概述](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d8b7c-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="d8b7c-108">In This Section</span></span>  
+ [<span data-ttu-id="d8b7c-109">消息流概述</span><span class="sxs-lookup"><span data-stu-id="d8b7c-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- 本主题描述事件日志消息如何与客户端和服务事件相对应。  
+ <span data-ttu-id="d8b7c-110">本主题描述事件日志消息如何与客户端和服务事件相对应。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [配置消息日志记录](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="d8b7c-111">配置消息日志记录</span><span class="sxs-lookup"><span data-stu-id="d8b7c-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- 本主题描述如何针对不同的方案配置消息日志记录。  
+ <span data-ttu-id="d8b7c-112">本主题描述如何针对不同的方案配置消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [查看消息日志](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="d8b7c-113">查看消息日志</span><span class="sxs-lookup"><span data-stu-id="d8b7c-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- 本主题描述如何查看消息日志。  
+ <span data-ttu-id="d8b7c-114">本主题描述如何查看消息日志。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-114">This topic describes how you can view message logs.</span></span>  
   
- [消息日志记录的安全问题](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="d8b7c-115">消息日志记录的安全问题</span><span class="sxs-lookup"><span data-stu-id="d8b7c-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
+ <span data-ttu-id="d8b7c-116">本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。</span><span class="sxs-lookup"><span data-stu-id="d8b7c-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## 请参阅  
- [管理和诊断](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d8b7c-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d8b7c-117">See Also</span></span>  
+ [<span data-ttu-id="d8b7c-118">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="d8b7c-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

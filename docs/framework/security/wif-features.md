@@ -5,33 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 091daa89f4546136980963f58cdc57efcc832279
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="wif-features"></a>WIF 功能
--   [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+# <a name="wif-features"></a><span data-ttu-id="ec57a-102">WIF 功能</span><span class="sxs-lookup"><span data-stu-id="ec57a-102">WIF Features</span></span>
+-   [<span data-ttu-id="ec57a-103">Identity and Access Tool for Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="ec57a-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
   
--   [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)  
+-   [<span data-ttu-id="ec57a-104">WIF 会话管理</span><span class="sxs-lookup"><span data-stu-id="ec57a-104">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
   
--   [WIF 和 Web 场](../../../docs/framework/security/wif-and-web-farms.md)  
+-   [<span data-ttu-id="ec57a-105">WIF 和 Web 场</span><span class="sxs-lookup"><span data-stu-id="ec57a-105">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
   
--   [WSFederation 身份验证模块概述](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+-   [<span data-ttu-id="ec57a-106">WSFederation 身份验证模块概述</span><span class="sxs-lookup"><span data-stu-id="ec57a-106">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
   
--   [WSTrustChannelFactory 和 WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+-   [<span data-ttu-id="ec57a-107">WSTrustChannelFactory 和 WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="ec57a-107">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
   
-## <a name="see-also"></a>另请参阅  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="ec57a-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ec57a-108">See Also</span></span>  
+ [<span data-ttu-id="ec57a-109">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="ec57a-109">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)

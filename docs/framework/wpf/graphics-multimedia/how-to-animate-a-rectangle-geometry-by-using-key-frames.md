@@ -1,46 +1,52 @@
 ---
-title: "如何：使用关键帧对矩形几何形状进行动画处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 使用关键帧对 RectangleGeometry 对象进行动画处理"
-  - "关键帧, 对 RectangleGeometry 对象进行动画处理"
-  - "RectangleGeometry 对象, 使用关键帧进行动画处理"
+title: "如何：使用关键帧对矩形几何形状进行动画处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- key frames [WPF], animating RectangleGeometry objects with
+- RectangleGeometry objects [WPF], animating with key frames
+- animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b6c23f894b6fa93a3889356416bd95f61fff8beb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用关键帧对矩形几何形状进行动画处理
-此示例演示如何使用关键帧对 <xref:System.Windows.Media.RectangleGeometry> 的 <xref:System.Windows.Media.RectangleGeometry.Rect%2A> 属性进行动画处理。  
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a><span data-ttu-id="76b68-102">如何：使用关键帧对矩形几何形状进行动画处理</span><span class="sxs-lookup"><span data-stu-id="76b68-102">How to: Animate a Rectangle Geometry by Using Key Frames</span></span>
+<span data-ttu-id="76b68-103">此示例演示如何进行动画处理<xref:System.Windows.Media.RectangleGeometry.Rect%2A>属性<xref:System.Windows.Media.RectangleGeometry>使用关键帧。</span><span class="sxs-lookup"><span data-stu-id="76b68-103">This example shows how to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry> by using key frames.</span></span>  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> 类对 <xref:System.Windows.Media.RectangleGeometry> 的 <xref:System.Windows.Media.RectangleGeometry.Rect%2A> 属性进行动画处理。  此动画按下列方式使用三个关键帧：  
+## <a name="example"></a><span data-ttu-id="76b68-104">示例</span><span class="sxs-lookup"><span data-stu-id="76b68-104">Example</span></span>  
+ <span data-ttu-id="76b68-105">下面的示例使用<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Media.RectangleGeometry.Rect%2A>属性<xref:System.Windows.Media.RectangleGeometry>。</span><span class="sxs-lookup"><span data-stu-id="76b68-105">The following example uses the <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry>.</span></span> <span data-ttu-id="76b68-106">此动画按以下方式使用三个关键帧：</span><span class="sxs-lookup"><span data-stu-id="76b68-106">This animation uses three key frames in the following manner:</span></span>  
   
-1.  在前两秒中，使用 <xref:System.Windows.Media.Animation.LinearRectKeyFrame> 类的实例对矩形位置、宽度和高度的逐渐变化进行动画处理。  诸如 <xref:System.Windows.Media.Animation.LinearRectKeyFrame> 的线性关键帧在值之间创建平滑的线性过渡。  
+1.  <span data-ttu-id="76b68-107">在第一个的两秒内，使用的是实例<xref:System.Windows.Media.Animation.LinearRectKeyFrame>类进行动画处理逐步更改位置、 宽度和高度的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b68-107">During the first two seconds, uses an instance of the <xref:System.Windows.Media.Animation.LinearRectKeyFrame> class to animate a gradual change in the position, width, and height of a rectangle.</span></span> <span data-ttu-id="76b68-108">之类的线性的关键帧<xref:System.Windows.Media.Animation.LinearRectKeyFrame>创建平滑的值之间的线性转换。</span><span class="sxs-lookup"><span data-stu-id="76b68-108">Linear key frames like <xref:System.Windows.Media.Animation.LinearRectKeyFrame> create a smooth linear transition between values.</span></span>  
   
-2.  在接下来的半秒结束时，使用 <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> 类的实例突然减小矩形的高度。  离散关键帧（如 <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>）将使值发生突变，也就是说，高度减小是快速发生的，并且不是细微变化。  
+2.  <span data-ttu-id="76b68-109">在下一步的末尾半秒，将使用的实例<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>类突然减小的矩形的高度。</span><span class="sxs-lookup"><span data-stu-id="76b68-109">During the end of the next half second, uses an instance of the <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> class to suddenly decrease the height of the rectangle.</span></span> <span data-ttu-id="76b68-110">之类的离散的关键帧<xref:System.Windows.Media.Animation.DiscreteRectKeyFrame>突变值，即，高度减小快速发生的不是细微。</span><span class="sxs-lookup"><span data-stu-id="76b68-110">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> create sudden changes between values, that is, the decrease in height occurs quickly and is not subtle.</span></span>  
   
-3.  在最后两秒内，使用 <xref:System.Windows.Media.Animation.SplineRectKeyFrame> 类的实例将矩形更改回其原始大小和位置。  [样条](GTMT)关键帧（如 <xref:System.Windows.Media.Animation.SplineRectKeyFrame>）将会根据 <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> 属性的值在各个值之间创建可变过渡。  在本例中，变化开始时比较缓慢，然后呈指数方式加速直到时间段结束。  
+3.  <span data-ttu-id="76b68-111">在最终的两秒内，使用的是实例<xref:System.Windows.Media.Animation.SplineRectKeyFrame>类要更改回为其原始大小和位置的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b68-111">During the final two seconds, uses an instance of the <xref:System.Windows.Media.Animation.SplineRectKeyFrame> class to change the rectangle back to its original size and position.</span></span> <span data-ttu-id="76b68-112">之类的样条关键帧<xref:System.Windows.Media.Animation.SplineRectKeyFrame>创建变量的值根据值之间转换<xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="76b68-112">Spline key frames like <xref:System.Windows.Media.Animation.SplineRectKeyFrame> create a variable transition between values according to the values of the <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="76b68-113">在此示例中，变化开始时缓慢，然后以指数级加速，直到时间段结束。</span><span class="sxs-lookup"><span data-stu-id="76b68-113">In this example, the change begins slowly and speeds up exponentially toward the end of the time segment.</span></span>  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
- [!code-xml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- 有关完整示例，请参见 [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012)（KeyFrame 动画示例）。  
+ <span data-ttu-id="76b68-114">有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。</span><span class="sxs-lookup"><span data-stu-id="76b68-114">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.RectangleGeometry>   
- <xref:System.Windows.Media.RectangleGeometry.Rect%2A>   
- <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>   
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [关键帧动画帮助主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="76b68-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="76b68-115">See Also</span></span>  
+ <xref:System.Windows.Media.RectangleGeometry>  
+ <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
+ <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  
+ [<span data-ttu-id="76b68-116">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="76b68-116">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="76b68-117">关键帧操作说明主题</span><span class="sxs-lookup"><span data-stu-id="76b68-117">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

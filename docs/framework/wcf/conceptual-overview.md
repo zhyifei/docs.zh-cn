@@ -1,52 +1,52 @@
 ---
-title: "概念概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF [WCF], 概念"
-  - "Windows Communication Foundation [WCF], 概念"
+title: "概念概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], concepts
+- Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3b500cec22d07868733aba187bdd744c97394aa8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 概念概述
-本主题概括介绍有关 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 消息系统以及对该系统提供支持的类的信息。  
+# <a name="conceptual-overview"></a><span data-ttu-id="00084-102">概念概述</span><span class="sxs-lookup"><span data-stu-id="00084-102">Conceptual Overview</span></span>
+<span data-ttu-id="00084-103">本主题概括介绍有关 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 消息系统以及对该系统提供支持的类的信息。</span><span class="sxs-lookup"><span data-stu-id="00084-103">This topic summarizes information about the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] messaging system and the classes that support its use.</span></span>  
   
-## 本节内容  
- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的简要概述。  
+## <a name="in-this-section"></a><span data-ttu-id="00084-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="00084-104">In This Section</span></span>  
+ [<span data-ttu-id="00084-105">什么是 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="00084-105">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ <span data-ttu-id="00084-106">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的简要概述。</span><span class="sxs-lookup"><span data-stu-id="00084-106">A brief overview of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span>  
   
- [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 编程模型的主要概念概述。  
+ [<span data-ttu-id="00084-107">Windows Communication Foundation 基础概念</span><span class="sxs-lookup"><span data-stu-id="00084-107">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)  
+ <span data-ttu-id="00084-108">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 编程模型的主要概念概述。</span><span class="sxs-lookup"><span data-stu-id="00084-108">An outline of the major concepts of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programming model.</span></span>  
   
- [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 体系结构的图形化表示。  
+ [<span data-ttu-id="00084-109">Windows Communication Foundation 体系结构</span><span class="sxs-lookup"><span data-stu-id="00084-109">Windows Communication Foundation Architecture</span></span>](../../../docs/framework/wcf/architecture.md)  
+ <span data-ttu-id="00084-110">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 体系结构的图形化表示。</span><span class="sxs-lookup"><span data-stu-id="00084-110">A graphical representation of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] architecture.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="00084-111">参考</span><span class="sxs-lookup"><span data-stu-id="00084-111">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## 相关章节  
- [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)  
+## <a name="related-sections"></a><span data-ttu-id="00084-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="00084-112">Related Sections</span></span>  
+ [<span data-ttu-id="00084-113">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="00084-113">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [准则与最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="00084-114">指南与最佳做法</span><span class="sxs-lookup"><span data-stu-id="00084-114">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [Windows Communication Foundation 示例](../../../docs/framework/wcf/samples/index.md)  
+ [<span data-ttu-id="00084-115">Windows Communication Foundation 示例</span><span class="sxs-lookup"><span data-stu-id="00084-115">Windows Communication Foundation Samples</span></span>](../../../docs/framework/wcf/samples/index.md)  
   
- [工具](../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)  
+ [<span data-ttu-id="00084-116">工具</span><span class="sxs-lookup"><span data-stu-id="00084-116">Tools</span></span>](../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)  
   
- [系统要求](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ [<span data-ttu-id="00084-117">系统要求</span><span class="sxs-lookup"><span data-stu-id="00084-117">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
- [常规参考](../../../docs/framework/wcf/general-reference.md)
+ [<span data-ttu-id="00084-118">常规参考</span><span class="sxs-lookup"><span data-stu-id="00084-118">General Reference</span></span>](../../../docs/framework/wcf/general-reference.md)

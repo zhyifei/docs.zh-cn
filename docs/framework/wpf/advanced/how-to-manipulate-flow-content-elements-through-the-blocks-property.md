@@ -1,28 +1,34 @@
 ---
-title: "如何：通过 Blocks 属性操作流内容元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Blocks 属性, 操作流内容元素"
-  - "文档, 通过 Blocks 属性操作流内容元素"
-  - "流内容元素, 通过 Blocks 属性操作"
-  - "属性, Blocks, 操作流内容元素"
+title: "如何：通过 Blocks 属性操作流内容元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- documents [WPF], manipulating flow content elements through Blocks property
+- flow content elements [WPF], manipulating through Blocks property
+- properties [WPF], Blocks [WPF], manipulating flow content elements
+- Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：通过 Blocks 属性操作流内容元素
-这些示例演示通过 **Blocks** 属性可以对流动内容元素执行的部分较常见的操作。  此属性用于在 <xref:System.Windows.Documents.BlockCollection> 中添加和移除项。  具有 **Blocks** 属性的流动内容元素包括：  
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a><span data-ttu-id="9ae79-102">如何：通过 Blocks 属性操作流内容元素</span><span class="sxs-lookup"><span data-stu-id="9ae79-102">How to: Manipulate Flow Content Elements through the Blocks Property</span></span>
+<span data-ttu-id="9ae79-103">这些示例演示一些较常见的操作，可以通过流内容元素对执行**块**属性。</span><span class="sxs-lookup"><span data-stu-id="9ae79-103">These examples demonstrate some of the more common operations that can be performed on flow content elements through the **Blocks** property.</span></span> <span data-ttu-id="9ae79-104">此属性用于添加和移除项从<xref:System.Windows.Documents.BlockCollection>。</span><span class="sxs-lookup"><span data-stu-id="9ae79-104">This property is used to add and remove items from <xref:System.Windows.Documents.BlockCollection>.</span></span> <span data-ttu-id="9ae79-105">流内容元素，该功能**块**属性包括：</span><span class="sxs-lookup"><span data-stu-id="9ae79-105">Flow content elements that feature a **Blocks** property include:</span></span>  
   
 -   <xref:System.Windows.Documents.Figure>  
   
@@ -34,43 +40,43 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Documents.TableCell>  
   
- 这些示例恰好将 <xref:System.Windows.Documents.Section> 用作流动内容元素，但是这些技术适用于承载流动内容元素集合的所有元素。  
+ <span data-ttu-id="9ae79-106">这些示例碰巧使用<xref:System.Windows.Documents.Section>作为流内容元素，但是，这些技术是适用于承载流内容元素集合的所有元素。</span><span class="sxs-lookup"><span data-stu-id="9ae79-106">These examples happen to use <xref:System.Windows.Documents.Section> as the flow content element, but these techniques are applicable to all elements that host a flow content element collection.</span></span>  
   
-## 示例  
- 下面的示例创建一个新的 <xref:System.Windows.Documents.Section>，然后使用 **Add** 方法将一个新的 Paragraph 添加到 **Section** 内容。  
+## <a name="example"></a><span data-ttu-id="9ae79-107">示例</span><span class="sxs-lookup"><span data-stu-id="9ae79-107">Example</span></span>  
+ <span data-ttu-id="9ae79-108">下面的示例创建一个新<xref:System.Windows.Documents.Section>，然后使用**添加**方法将添加到新段落**部分**内容。</span><span class="sxs-lookup"><span data-stu-id="9ae79-108">The following example creates a new <xref:System.Windows.Documents.Section> and then uses the **Add** method to add a new Paragraph to the **Section** contents.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
-## 示例  
- 下面的示例创建一个新的 <xref:System.Windows.Documents.Paragraph> 元素并将其插入到 <xref:System.Windows.Documents.Section> 的开头。  
+## <a name="example"></a><span data-ttu-id="9ae79-109">示例</span><span class="sxs-lookup"><span data-stu-id="9ae79-109">Example</span></span>  
+ <span data-ttu-id="9ae79-110">下面的示例创建一个新<xref:System.Windows.Documents.Paragraph>元素并将其插入的开始处<xref:System.Windows.Documents.Section>。</span><span class="sxs-lookup"><span data-stu-id="9ae79-110">The following example creates a new <xref:System.Windows.Documents.Paragraph> element and inserts it at the beginning of the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksinsert)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksinsert)]  
   
-## 示例  
- 下面的示例获取包含在 <xref:System.Windows.Documents.Section> 中的顶级 <xref:System.Windows.Documents.Block> 元素的数目。  
+## <a name="example"></a><span data-ttu-id="9ae79-111">示例</span><span class="sxs-lookup"><span data-stu-id="9ae79-111">Example</span></span>  
+ <span data-ttu-id="9ae79-112">下面的示例获取的顶级数<xref:System.Windows.Documents.Block>中所含元素<xref:System.Windows.Documents.Section>。</span><span class="sxs-lookup"><span data-stu-id="9ae79-112">The following example gets the number of top-level <xref:System.Windows.Documents.Block> elements contained in the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblockscount)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblockscount)]  
   
-## 示例  
- 下面的示例删除了 <xref:System.Windows.Documents.Section> 中的最后一个 <xref:System.Windows.Documents.Block> 元素。  
+## <a name="example"></a><span data-ttu-id="9ae79-113">示例</span><span class="sxs-lookup"><span data-stu-id="9ae79-113">Example</span></span>  
+ <span data-ttu-id="9ae79-114">以下示例将删除最后一个<xref:System.Windows.Documents.Block>中的元素<xref:System.Windows.Documents.Section>。</span><span class="sxs-lookup"><span data-stu-id="9ae79-114">The following example deletes the last <xref:System.Windows.Documents.Block> element in the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksremovelast)]  
   
-## 示例  
- 下面的示例从 <xref:System.Windows.Documents.Section> 中清除了所有内容（<xref:System.Windows.Documents.Block> 元素）。  
+## <a name="example"></a><span data-ttu-id="9ae79-115">示例</span><span class="sxs-lookup"><span data-stu-id="9ae79-115">Example</span></span>  
+ <span data-ttu-id="9ae79-116">下面的示例清除的所有内容 (<xref:System.Windows.Documents.Block>元素) 从<xref:System.Windows.Documents.Section>。</span><span class="sxs-lookup"><span data-stu-id="9ae79-116">The following example clears all of the contents (<xref:System.Windows.Documents.Block> elements) from the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## 请参阅  
- <xref:System.Windows.Documents.BlockCollection>   
- <xref:System.Windows.Documents.InlineCollection>   
- <xref:System.Windows.Documents.ListItemCollection>   
- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [通过 RowGroups 属性操作表的行组](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)   
- [通过 Columns 属性操作表列](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)   
- [通过 RowGroups 属性操作表的行组](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a><span data-ttu-id="9ae79-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9ae79-117">See Also</span></span>  
+ <xref:System.Windows.Documents.BlockCollection>  
+ <xref:System.Windows.Documents.InlineCollection>  
+ <xref:System.Windows.Documents.ListItemCollection>  
+ [<span data-ttu-id="9ae79-118">流文档概述</span><span class="sxs-lookup"><span data-stu-id="9ae79-118">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="9ae79-119">通过 RowGroups 属性操作表的行组</span><span class="sxs-lookup"><span data-stu-id="9ae79-119">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="9ae79-120">通过 Columns 属性控制表列</span><span class="sxs-lookup"><span data-stu-id="9ae79-120">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="9ae79-121">通过 RowGroups 属性操作表的行组</span><span class="sxs-lookup"><span data-stu-id="9ae79-121">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

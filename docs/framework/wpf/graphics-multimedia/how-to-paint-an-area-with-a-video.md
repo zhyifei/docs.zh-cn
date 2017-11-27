@@ -1,48 +1,54 @@
 ---
-title: "如何：使用视频绘制区域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "画笔, 使用视频进行绘制"
-  - "使用视频进行绘制"
-  - "视频, 绘制"
+title: "如何：使用视频绘制区域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- painting with a video [WPF]
+- video [WPF], painting with
+- brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 362231bbd1f4e95c260370a99233b7e8c2617ca1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用视频绘制区域
-此示例演示如何绘制带有媒体的区域。  若要绘制带有媒体的区域，一种方法就是结合使用 <xref:System.Windows.Controls.MediaElement> 和 <xref:System.Windows.Media.VisualBrush>。  使用 <xref:System.Windows.Controls.MediaElement> 加载和播放媒体，再使用该元素来设置 <xref:System.Windows.Media.VisualBrush> 的 <xref:System.Windows.Media.VisualBrush.Visual%2A> 属性，  然后可以使用 <xref:System.Windows.Media.VisualBrush> 来绘制带有已加载媒体的区域。  
+# <a name="how-to-paint-an-area-with-a-video"></a><span data-ttu-id="3d5b5-102">如何：使用视频绘制区域</span><span class="sxs-lookup"><span data-stu-id="3d5b5-102">How to: Paint an Area with a Video</span></span>
+<span data-ttu-id="3d5b5-103">此示例演示如何使用媒体绘制区域。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-103">This example shows how to paint an area with media.</span></span> <span data-ttu-id="3d5b5-104">绘制带有媒体的区域的一种方法是使用<xref:System.Windows.Controls.MediaElement>连同<xref:System.Windows.Media.VisualBrush>。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-104">One way to paint an area with media is to use a <xref:System.Windows.Controls.MediaElement> together with a <xref:System.Windows.Media.VisualBrush>.</span></span> <span data-ttu-id="3d5b5-105">使用<xref:System.Windows.Controls.MediaElement>加载和播放媒体，并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性<xref:System.Windows.Media.VisualBrush>。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-105">Use the <xref:System.Windows.Controls.MediaElement> to load and play the media, and then use it to set the <xref:System.Windows.Media.VisualBrush.Visual%2A> property of the <xref:System.Windows.Media.VisualBrush>.</span></span> <span data-ttu-id="3d5b5-106">然后，可以使用<xref:System.Windows.Media.VisualBrush>来绘制带有加载媒体的区域。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-106">You can then use the <xref:System.Windows.Media.VisualBrush> to paint an area with the loaded media.</span></span>  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Controls.MediaElement> 和 <xref:System.Windows.Media.VisualBrush> 来绘制带有视频的 <xref:System.Windows.Controls.TextBlock> 控件的 <xref:System.Windows.Controls.TextBlock.Foreground%2A>。  此示例将 <xref:System.Windows.Controls.MediaElement> 的 <xref:System.Windows.Controls.MediaElement.IsMuted%2A> 属性设置为 `true`，使它不发出声音。  
+## <a name="example"></a><span data-ttu-id="3d5b5-107">示例</span><span class="sxs-lookup"><span data-stu-id="3d5b5-107">Example</span></span>  
+ <span data-ttu-id="3d5b5-108">下面的示例使用<xref:System.Windows.Controls.MediaElement>和<xref:System.Windows.Media.VisualBrush>来绘制<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>视频的控件。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-108">The following example uses a <xref:System.Windows.Controls.MediaElement> and a <xref:System.Windows.Media.VisualBrush> to paint the <xref:System.Windows.Controls.TextBlock.Foreground%2A> of a <xref:System.Windows.Controls.TextBlock> control with video.</span></span> <span data-ttu-id="3d5b5-109">此示例将设置<xref:System.Windows.Controls.MediaElement.IsMuted%2A>属性<xref:System.Windows.Controls.MediaElement>到`true`，以便它不发出声音。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-109">This example sets the <xref:System.Windows.Controls.MediaElement.IsMuted%2A> property of the <xref:System.Windows.Controls.MediaElement> to `true` so that it produces no sound.</span></span>  
   
  [!code-csharp[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/PaintWithVideoExample.cs#graphicsmmvideoastextbackgroundinline)]
  [!code-vb[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/paintwithvideoexample.vb#graphicsmmvideoastextbackgroundinline)]
- [!code-xml[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/PaintWithVideoExample.xaml#graphicsmmvideoastextbackgroundinline)]  
+ [!code-xaml[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/PaintWithVideoExample.xaml#graphicsmmvideoastextbackgroundinline)]  
   
-## 示例  
- 由于 <xref:System.Windows.Media.VisualBrush> 是从 <xref:System.Windows.Media.TileBrush> 类继承的，因此它可以提供多种平铺模式。  通过将 <xref:System.Windows.Media.VisualBrush> 的 <xref:System.Windows.Media.TileBrush.TileMode%2A> 属性设置为 <xref:System.Windows.Media.TileMode>，并将它的 <xref:System.Windows.Media.TileBrush.Viewport%2A> 属性设置为小于正在绘制的区域的值，可以创建图块图案。  
+## <a name="example"></a><span data-ttu-id="3d5b5-110">示例</span><span class="sxs-lookup"><span data-stu-id="3d5b5-110">Example</span></span>  
+ <span data-ttu-id="3d5b5-111">因为<xref:System.Windows.Media.VisualBrush>继承自<xref:System.Windows.Media.TileBrush>类，它提供了几个平铺模式。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-111">Because <xref:System.Windows.Media.VisualBrush> inherits from the <xref:System.Windows.Media.TileBrush> class, it provides several tiling modes.</span></span> <span data-ttu-id="3d5b5-112">通过设置<xref:System.Windows.Media.TileBrush.TileMode%2A>属性<xref:System.Windows.Media.VisualBrush>到<xref:System.Windows.Media.TileMode.Tile>并设置其<xref:System.Windows.Media.TileBrush.Viewport%2A>属性的值小于你正在绘画的区域，你可以创建平铺的模式。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-112">By setting the <xref:System.Windows.Media.TileBrush.TileMode%2A> property of a <xref:System.Windows.Media.VisualBrush> to <xref:System.Windows.Media.TileMode.Tile> and by setting its <xref:System.Windows.Media.TileBrush.Viewport%2A> property to a value smaller than the area that you are painting, you can create a tiled pattern.</span></span>  
   
- 下面的示例与上一个示例基本相同，二者的区别在于 <xref:System.Windows.Media.VisualBrush> 根据视频生成模式。  
+ <span data-ttu-id="3d5b5-113">下面的示例与前面的示例，只不过等同<xref:System.Windows.Media.VisualBrush>从该视频生成模式。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-113">The following example is identical to the previous example, except that the <xref:System.Windows.Media.VisualBrush> generates a pattern from the video.</span></span>  
   
  [!code-csharp[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundTiledInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/PaintWithVideoExample.cs#graphicsmmvideoastextbackgroundtiledinline)]
  [!code-vb[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundTiledInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/paintwithvideoexample.vb#graphicsmmvideoastextbackgroundtiledinline)]
- [!code-xml[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/PaintWithVideoExample.xaml#graphicsmmvideoastextbackgroundtiledinline)]  
+ [!code-xaml[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/PaintWithVideoExample.xaml#graphicsmmvideoastextbackgroundtiledinline)]  
   
- 有关如何向应用程序添加内容文件（如媒体文件）的信息，请参见 [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  在添加媒体文件时，必须将其作为内容文件（而非资源文件）添加。  
+ <span data-ttu-id="3d5b5-114">有关如何将内容文件，如媒体文件添加到你的应用程序，请参阅[WPF 应用程序资源、 内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-114">For information about how to add a content file, such as a media file, to your application, see [WPF Application Resource, Content, and Data Files](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).</span></span> <span data-ttu-id="3d5b5-115">当你添加的媒体文件时，你必须将其添加为内容文件，而不是资源文件。</span><span class="sxs-lookup"><span data-stu-id="3d5b5-115">When you add a media file, you must add it as a content file, not as a resource file.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.VisualBrush>   
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)   
- [多媒体概述](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3d5b5-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3d5b5-116">See Also</span></span>  
+ <xref:System.Windows.Media.VisualBrush>  
+ [<span data-ttu-id="3d5b5-117">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="3d5b5-117">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="3d5b5-118">TileBrush 概述</span><span class="sxs-lookup"><span data-stu-id="3d5b5-118">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [<span data-ttu-id="3d5b5-119">多媒体概述</span><span class="sxs-lookup"><span data-stu-id="3d5b5-119">Multimedia Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)

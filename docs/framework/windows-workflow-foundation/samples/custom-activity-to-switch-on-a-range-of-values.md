@@ -1,29 +1,32 @@
 ---
-title: "要基于一系列值进行切换的自定义活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "要基于一系列值进行切换的自定义活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f2f422c4001c2e6ec46fc796e8dbf1b85e6a2b77
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 要基于一系列值进行切换的自定义活动
-此示例演示如何创建扩展对 <xref:System.Activities.Statements.Switch%601> 的使用的自定义活动。常规的 <xref:System.Activities.Statements.Switch%601> 语句允许基于单个值进行切换。但在一些业务方案中，活动必须基于一系列值进行切换。例如，活动可能在基于 1 和 5 之间切换值时执行一个操作，在基于 6 和 10 之间切换值时执行另一个操作，并为所有其他值执行默认操作。此自定义活动完全支持上述方案。  
+# <a name="custom-activity-to-switch-on-a-range-of-values"></a><span data-ttu-id="7d124-102">要基于一系列值进行切换的自定义活动</span><span class="sxs-lookup"><span data-stu-id="7d124-102">Custom Activity to Switch on a Range of Values</span></span>
+<span data-ttu-id="7d124-103">此示例演示如何创建扩展对 <xref:System.Activities.Statements.Switch%601> 的使用的自定义活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-103">This sample demonstrates how to create a custom activity that extends the use of a <xref:System.Activities.Statements.Switch%601>.</span></span> <span data-ttu-id="7d124-104">常规的 <xref:System.Activities.Statements.Switch%601> 语句允许基于单个值进行切换。</span><span class="sxs-lookup"><span data-stu-id="7d124-104">A conventional <xref:System.Activities.Statements.Switch%601> statement allows switching based upon a single value.</span></span> <span data-ttu-id="7d124-105">但在一些业务方案中，活动必须基于一系列值进行切换。</span><span class="sxs-lookup"><span data-stu-id="7d124-105">But, there are business scenarios where an activity must switch based upon a range of values.</span></span> <span data-ttu-id="7d124-106">例如，活动可能在基于 1 和 5 之间切换值时执行一个操作，在基于 6 和 10 之间切换值时执行另一个操作，并为所有其他值执行默认操作。</span><span class="sxs-lookup"><span data-stu-id="7d124-106">For example, an activity might execute one action when the value being switched upon is between 1 and 5, another action when the value is between 6 and 10, and a default action for all other values.</span></span> <span data-ttu-id="7d124-107">此自定义活动完全支持上述方案。</span><span class="sxs-lookup"><span data-stu-id="7d124-107">This custom activity enables exactly that scenario.</span></span>  
   
-## SwitchRange 活动  
- `SwitchRange` 活动将在其表达式的结果值包含在其某个 `Cases` 的范围内时计划一个子活动。  
+## <a name="the-switchrange-activity"></a><span data-ttu-id="7d124-108">SwitchRange 活动</span><span class="sxs-lookup"><span data-stu-id="7d124-108">The SwitchRange Activity</span></span>  
+ <span data-ttu-id="7d124-109">`SwitchRange` 活动将在其表达式的结果值包含在其某个 `Cases` 的范围内时计划一个子活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-109">The `SwitchRange` activity schedules a child activity when the result value of its expression is included within the range of one of its `Cases`.</span></span>  
   
- 下面的代码示例是一个基于一系列值进行切换的自定义活动。  
+ <span data-ttu-id="7d124-110">下面的代码示例是一个基于一系列值进行切换的自定义活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-110">The following code example is a custom activity that switches based upon a range of values.</span></span>  
   
 ```csharp  
-  
 public sealed class SwitchRange<T> : NativeActivity where T : IComparable  
 {  
    [RequiredArgument]  
@@ -37,20 +40,18 @@ public sealed class SwitchRange<T> : NativeActivity where T : IComparable
 }  
 ```  
   
-|||  
+|<span data-ttu-id="7d124-111">属性</span><span class="sxs-lookup"><span data-stu-id="7d124-111">Property</span></span>|<span data-ttu-id="7d124-112">描述</span><span class="sxs-lookup"><span data-stu-id="7d124-112">Description</span></span>|  
 |-|-|  
-|属性|说明|  
-|表达式|这是要计算并与 Cases 列表中的范围进行比较的表达式。该表达式的结果的类型为 T。|  
-|Cases|每个示例包含一个范围（From 和 To）和一个活动 \(Body\)。计算表达式并将其与范围进行比较。如果表达式的结果位于某个示例的范围内，则执行对应的活动。|  
-|Default|没有匹配的示例时所执行的活动。在设置为 `null` 时，不采用任何操作。|  
+|<span data-ttu-id="7d124-113">Expression</span><span class="sxs-lookup"><span data-stu-id="7d124-113">Expression</span></span>|<span data-ttu-id="7d124-114">这是要计算并与 Cases 列表中的范围进行比较的表达式。</span><span class="sxs-lookup"><span data-stu-id="7d124-114">This is the expression to be evaluated and compared against the ranges in the Cases list.</span></span> <span data-ttu-id="7d124-115">该表达式的结果的类型为 T。</span><span class="sxs-lookup"><span data-stu-id="7d124-115">The result of the expression is of type T.</span></span>|  
+|<span data-ttu-id="7d124-116">Cases</span><span class="sxs-lookup"><span data-stu-id="7d124-116">Cases</span></span>|<span data-ttu-id="7d124-117">每个示例包含一个范围（From 和 To）和一个活动 (Body)。</span><span class="sxs-lookup"><span data-stu-id="7d124-117">Each case consists of a range (From and To) and an activity (Body).</span></span> <span data-ttu-id="7d124-118">计算表达式并将其与范围进行比较。</span><span class="sxs-lookup"><span data-stu-id="7d124-118">The expression is evaluated and compared against the ranges.</span></span> <span data-ttu-id="7d124-119">如果表达式的结果位于某个示例的范围内，则执行对应的活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-119">If the result of the expression is within the range of one of the cases, the corresponding activity is executed.</span></span>|  
+|<span data-ttu-id="7d124-120">默认</span><span class="sxs-lookup"><span data-stu-id="7d124-120">Default</span></span>|<span data-ttu-id="7d124-121">没有匹配的示例时所执行的活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-121">The activity that is executed when no case is matched.</span></span> <span data-ttu-id="7d124-122">在设置为 `null` 时，不采用任何操作。</span><span class="sxs-lookup"><span data-stu-id="7d124-122">When set to `null`, no action is taken.</span></span>|  
   
-## CaseRange 类  
- `CaseRange` 类表示 `SwitchRange` 活动中的范围。`CaseRange` 的每个实例均包含一个范围（由 `From` 和 `To` 构成）和一个 `Body` 活动，如果在范围内计算 `SwitchRange` 中的表达式，则将计划该活动。  
+## <a name="caserange-class"></a><span data-ttu-id="7d124-123">CaseRange 类</span><span class="sxs-lookup"><span data-stu-id="7d124-123">CaseRange Class</span></span>  
+ <span data-ttu-id="7d124-124">`CaseRange` 类表示 `SwitchRange` 活动中的范围。</span><span class="sxs-lookup"><span data-stu-id="7d124-124">The `CaseRange` class represents a range within a `SwitchRange` activity.</span></span> <span data-ttu-id="7d124-125">`CaseRange` 的每个实例均包含一个范围（由 `From` 和 `To` 构成）和一个 `Body` 活动，如果在范围内计算 `SwitchRange` 中的表达式，则将计划该活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-125">Every instance of `CaseRange` contains a range (composed of a `From` and a `To`) and a `Body` activity that is scheduled if the expression in the `SwitchRange` is evaluated within the range.</span></span>  
   
- 下面的代码示例是 `CaseRange` 类的定义。  
+ <span data-ttu-id="7d124-126">下面的代码示例是 `CaseRange` 类的定义。</span><span class="sxs-lookup"><span data-stu-id="7d124-126">The following code example is the definition for the `CaseRange` class.</span></span>  
   
 ```  
-  
 public class CaseRange<T> where T : IComparable  
 {  
     public T From { get; set; }  
@@ -62,13 +63,12 @@ public class CaseRange<T> where T : IComparable
 ```  
   
 > [!NOTE]
->  示例中定义的 `SwitchRange` 和 `CaseRange` 类都是可使用实现 `IComparable` 的任何类型的泛型类（如 <xref:System.Activities.Statements.Switch%601> 类）。  
+>  <span data-ttu-id="7d124-127">示例中定义的 `SwitchRange` 和 `CaseRange` 类都是可使用实现 `IComparable` 的任何类型的泛型类（如 <xref:System.Activities.Statements.Switch%601> 类）。</span><span class="sxs-lookup"><span data-stu-id="7d124-127">Both the `SwitchRange` and `CaseRange` classes, which are defined in the sample are generic classes that can work with any type that implements `IComparable`, like the <xref:System.Activities.Statements.Switch%601> class.</span></span>  
   
-## 示例用法  
- 下面的代码示例演示如何使用 `SwitchRange` 活动。  
+## <a name="sample-usage"></a><span data-ttu-id="7d124-128">示例用法</span><span class="sxs-lookup"><span data-stu-id="7d124-128">Sample Usage</span></span>  
+ <span data-ttu-id="7d124-129">下面的代码示例演示如何使用 `SwitchRange` 活动。</span><span class="sxs-lookup"><span data-stu-id="7d124-129">The following code example demonstrates how to use the `SwitchRange` activity.</span></span>  
   
 ```csharp  
-  
 Activity SwitchRange = new SwitchRange<int>  
 {  
     Expression = new InArgument<int>(value),  
@@ -97,21 +97,21 @@ Activity SwitchRange = new SwitchRange<int>
 };  
 ```  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="7d124-130">使用此示例</span><span class="sxs-lookup"><span data-stu-id="7d124-130">To use this sample</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 SwitchRange.sln 解决方案文件。  
+1.  <span data-ttu-id="7d124-131">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 SwitchRange.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="7d124-131">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the SwitchRange.sln solution file.</span></span>  
   
-2.  要生成解决方案，按 Ctrl\+Shift\+B。  
+2.  <span data-ttu-id="7d124-132">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="7d124-132">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  若要运行解决方案，请按 Ctrl\+F5。  
+3.  <span data-ttu-id="7d124-133">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="7d124-133">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="7d124-134">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="7d124-134">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7d124-135">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="7d124-135">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="7d124-136">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="7d124-136">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7d124-137">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="7d124-137">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="7d124-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7d124-138">See Also</span></span>

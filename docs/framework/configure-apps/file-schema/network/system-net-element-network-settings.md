@@ -1,106 +1,106 @@
 ---
-title: "&lt;system.Net&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.Net> 元素"
-  - "system.Net 元素"
+title: "&lt;system.Net&gt;元素 （网络设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net
+helpviewer_keywords:
+- system.Net element
+- <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d2eb903b8a84410aa08504c12e78a016d2368923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;system.Net&gt; 元素（网络设置）
-包含指定 .NET Framework 与网络的连接方式的设置。  
+# <a name="ltsystemnetgt-element-network-settings"></a><span data-ttu-id="d3b3a-102">&lt;system.Net&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="d3b3a-102">&lt;system.Net&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="d3b3a-103">包含指定 .NET Framework 如何连接到网络的设置。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
   
-## 语法  
+ <span data-ttu-id="d3b3a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d3b3a-104">\<configuration></span></span>  
+<span data-ttu-id="d3b3a-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="d3b3a-105">\<system.net></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d3b3a-106">语法</span><span class="sxs-lookup"><span data-stu-id="d3b3a-106">Syntax</span></span>  
   
-      <system.net>   
+```xml  
+<system.net>   
 </system.net>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d3b3a-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d3b3a-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="d3b3a-108">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="d3b3a-109">特性</span><span class="sxs-lookup"><span data-stu-id="d3b3a-109">Attributes</span></span>  
+ <span data-ttu-id="d3b3a-110">无。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-110">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="d3b3a-111">子元素</span><span class="sxs-lookup"><span data-stu-id="d3b3a-111">Child Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用于对 Internet 请求进行身份验证的模块。|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定与 Internet 宿主的连接的最大数目。|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 \(HTTP\) 代理服务器。|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|配置简单邮件传输协议 \(SMTP\) 邮件发送选项。|  
-|[\<requestCaching\>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制网络请求的缓存机制。|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|为 <xref:System.Net> 和相关子命名空间中的类型配置基本网络选项。|  
-|[\<webRequestModules\> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用于从 Internet 宿主请求信息的模块。|  
+|<span data-ttu-id="d3b3a-112">**元素**</span><span class="sxs-lookup"><span data-stu-id="d3b3a-112">**Element**</span></span>|<span data-ttu-id="d3b3a-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="d3b3a-113">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="d3b3a-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="d3b3a-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="d3b3a-115">指定用来验证 Internet 请求的模块。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-115">Specifies modules used to authenticate Internet requests.</span></span>|  
+|[<span data-ttu-id="d3b3a-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="d3b3a-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="d3b3a-117">指定的最大到 Internet 主机的连接数。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
+|[<span data-ttu-id="d3b3a-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="d3b3a-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="d3b3a-119">配置超文本传输协议 (HTTP) 代理服务器。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="d3b3a-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="d3b3a-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="d3b3a-121">配置简单邮件传输协议 (SMTP) 邮件发送选项。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="d3b3a-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="d3b3a-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="d3b3a-123">控制网络请求的缓存机制。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-123">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="d3b3a-124">设置</span><span class="sxs-lookup"><span data-stu-id="d3b3a-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="d3b3a-125">配置中的类的基本网络选项<xref:System.Net>和相关子命名空间。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
+|[<span data-ttu-id="d3b3a-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="d3b3a-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="d3b3a-127">指定要用于从 Internet 主机请求信息的模块。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="d3b3a-128">父元素</span><span class="sxs-lookup"><span data-stu-id="d3b3a-128">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[configuration（配置）](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
+|<span data-ttu-id="d3b3a-129">**元素**</span><span class="sxs-lookup"><span data-stu-id="d3b3a-129">**Element**</span></span>|<span data-ttu-id="d3b3a-130">**描述**</span><span class="sxs-lookup"><span data-stu-id="d3b3a-130">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="d3b3a-131">配置</span><span class="sxs-lookup"><span data-stu-id="d3b3a-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="d3b3a-132">包含所有命名空间的设置。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-132">Contains settings for all namespaces.</span></span>|  
   
-## 备注  
- [\<system.net\>\<system.net\> 元素包含](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) <xref:System.Net> 中类的设置和相关的子名称集。  这些设置为从 Internet 宿主接收信息配置身份验证模块、连接管理、邮件设置、代理服务器和 Internet 请求模块。  
+## <a name="remarks"></a><span data-ttu-id="d3b3a-133">备注</span><span class="sxs-lookup"><span data-stu-id="d3b3a-133">Remarks</span></span>  
+ <span data-ttu-id="d3b3a-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)元素包含设置中的类<xref:System.Net>和相关子命名空间。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="d3b3a-135">设置配置身份验证模块、 连接管理、 邮件设置、 代理服务器，以及用于接收从 Internet 主机的信息的 Internet 请求模块。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
   
-## 示例  
- 下面的代码示例演示 <xref:System.Net> 类使用的典型配置。  
+## <a name="example"></a><span data-ttu-id="d3b3a-136">示例</span><span class="sxs-lookup"><span data-stu-id="d3b3a-136">Example</span></span>  
+ <span data-ttu-id="d3b3a-137">下面的示例演示使用的典型配置<xref:System.Net>类。</span><span class="sxs-lookup"><span data-stu-id="d3b3a-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
-      <add type = "System.Net.DigestClient" />  
-      <add type = "System.Net.NegotiateClient" />  
-      <add type = "System.Net.KerberosClient" />  
-      <add type = "System.Net.NtlmClient" />  
-      <add type = "System.Net.BasicClient" />  
+      <add type="System.Net.DigestClient" />  
+      <add type="System.Net.NegotiateClient" />  
+      <add type="System.Net.KerberosClient" />  
+      <add type="System.Net.NtlmClient" />  
+      <add type="System.Net.BasicClient" />  
     </authenticationModules>  
     <connectionManagement>  
-      <add address = "*" maxconnection = "2" />  
+      <add address="*" maxconnection="2" />  
     </connectionManagement>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault = "true"  
-        bypassonlocal = "true"  
+        usesystemdefault="true"  
+        bypassonlocal="true"  
       />  
     </defaultProxy>  
     <webRequestModules>  
-      <add prefix = "http"  
-        type = "System.Net.HttpRequestCreator"  
+      <add prefix="http"  
+           type="System.Net.HttpRequestCreator"  
       />  
-      <add prefix = "https"  
-        type = "System.Net.HttpRequestCreator"  
+      <add prefix="https"  
+           type="System.Net.HttpRequestCreator"  
       />  
-      <add prefix = "file"  
-        type = "System.Net.FileWebRequestCreator"  
+      <add prefix="file"  
+           type="System.Net.FileWebRequestCreator"  
       />  
     </webRequestModules>  
   </system.net>  
 </configuration>  
 ```  
   
-## 请参阅  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="d3b3a-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d3b3a-138">See Also</span></span>  
+ [<span data-ttu-id="d3b3a-139">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="d3b3a-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

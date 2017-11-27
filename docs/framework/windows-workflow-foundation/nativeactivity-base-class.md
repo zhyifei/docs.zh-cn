@@ -1,65 +1,69 @@
 ---
-title: "NativeActivity 基类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "NativeActivity 基类"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22c9557c53c15fef3ca8dee4a0f665d333c5ffe4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# NativeActivity 基类
-<xref:System.Activities.NativeActivity> 是一个带有受保护的构造函数的抽象类。与 <xref:System.Activities.CodeActivity> 一样，<xref:System.Activities.NativeActivity> 用于通过实现 <xref:System.Activities.NativeActivity.Execute%2A> 方法来编写命令性行为。与 <xref:System.Activities.CodeActivity> 不同的是，通过传递给 <xref:System.Activities.NativeActivity.Execute%2A> 方法的 <xref:System.Activities.NativeActivityContext> 对象，<xref:System.Activities.NativeActivity> 有权访问工作流运行时的所有公开的功能。  
+# <a name="nativeactivity-base-class"></a><span data-ttu-id="22405-102">NativeActivity 基类</span><span class="sxs-lookup"><span data-stu-id="22405-102">NativeActivity Base Class</span></span>
+<span data-ttu-id="22405-103"><xref:System.Activities.NativeActivity> 是一个带有受保护的构造函数的抽象类。</span><span class="sxs-lookup"><span data-stu-id="22405-103"><xref:System.Activities.NativeActivity> is an abstract class with a protected constructor.</span></span> <span data-ttu-id="22405-104">与 <xref:System.Activities.CodeActivity> 一样，<xref:System.Activities.NativeActivity> 用于通过实现 <xref:System.Activities.NativeActivity.Execute%2A> 方法来编写命令性行为。</span><span class="sxs-lookup"><span data-stu-id="22405-104">Like <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> is used for writing imperative behavior by implementing an <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span> <span data-ttu-id="22405-105">与 <xref:System.Activities.CodeActivity> 不同的是，通过传递给 <xref:System.Activities.NativeActivity> 方法的 <xref:System.Activities.NativeActivityContext> 对象，<xref:System.Activities.NativeActivity.Execute%2A> 有权访问工作流运行时的所有公开的功能。</span><span class="sxs-lookup"><span data-stu-id="22405-105">Unlike <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> has access to all of the exposed features of the workflow runtime through the <xref:System.Activities.NativeActivityContext> object passed to the <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span>  
   
-## 使用 NativeActivityContext  
- 通过使用类型为 <xref:System.Activities.NativeActivityContext> 的 `context` 参数的成员，可从 <xref:System.Activities.NativeActivity.Execute%2A> 方法中访问工作流运行时的功能。可通过 <xref:System.Activities.NativeActivityContext> 使用的功能如下：  
+## <a name="using-nativeactivitycontext"></a><span data-ttu-id="22405-106">使用 NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="22405-106">Using NativeActivityContext</span></span>  
+ <span data-ttu-id="22405-107">通过使用类型为 <xref:System.Activities.NativeActivity.Execute%2A> 的 `context` 参数的成员，可从 <xref:System.Activities.NativeActivityContext> 方法中访问工作流运行时的功能。</span><span class="sxs-lookup"><span data-stu-id="22405-107">Features of the workflow runtime can be accessed from within the <xref:System.Activities.NativeActivity.Execute%2A> method by using members of the `context` parameter, of type <xref:System.Activities.NativeActivityContext>.</span></span> <span data-ttu-id="22405-108">可通过 <xref:System.Activities.NativeActivityContext> 使用的功能如下：</span><span class="sxs-lookup"><span data-stu-id="22405-108">The features available through <xref:System.Activities.NativeActivityContext> include the following:</span></span>  
   
--   获取并设置参数和变量。  
+-   <span data-ttu-id="22405-109">获取并设置参数和变量。</span><span class="sxs-lookup"><span data-stu-id="22405-109">Getting and setting of arguments and variables.</span></span>  
   
--   使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 安排子活动。  
+-   <span data-ttu-id="22405-110">使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 安排子活动。</span><span class="sxs-lookup"><span data-stu-id="22405-110">Scheduling child activities with <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A></span></span>  
   
--   使用 <xref:System.Activities.NativeActivityContext.Abort%2A> 中止活动执行。  
+-   <span data-ttu-id="22405-111">使用 <xref:System.Activities.NativeActivityContext.Abort%2A> 中止活动执行。</span><span class="sxs-lookup"><span data-stu-id="22405-111">Aborting activity execution using <xref:System.Activities.NativeActivityContext.Abort%2A>.</span></span>  
   
--   使用 <xref:System.Activities.NativeActivityContext.CancelChild%2A> 和 <xref:System.Activities.NativeActivityContext.CancelChildren%2A> 取消子级执行。  
+-   <span data-ttu-id="22405-112">使用 <xref:System.Activities.NativeActivityContext.CancelChild%2A> 和 <xref:System.Activities.NativeActivityContext.CancelChildren%2A> 取消子级执行。</span><span class="sxs-lookup"><span data-stu-id="22405-112">Canceling child execution using <xref:System.Activities.NativeActivityContext.CancelChild%2A> and <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.</span></span>  
   
--   使用 <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> 和 <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> 等方法访问活动书签。  
+-   <span data-ttu-id="22405-113">使用 <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> 和 <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> 等方法访问活动书签。</span><span class="sxs-lookup"><span data-stu-id="22405-113">Access to activity bookmarks using such methods as <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, and <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.</span></span>  
   
--   使用 <xref:System.Activities.CodeActivityContext.Track%2A> 的自定义跟踪功能。  
+-   <span data-ttu-id="22405-114">使用 <xref:System.Activities.CodeActivityContext.Track%2A> 的自定义跟踪功能。</span><span class="sxs-lookup"><span data-stu-id="22405-114">Custom tracking features using <xref:System.Activities.CodeActivityContext.Track%2A>.</span></span>  
   
--   使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 和 <xref:System.Activities.NativeActivityContext.GetValue%2A> 访问活动的执行属性和值属性。  
+-   <span data-ttu-id="22405-115">使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 和 <xref:System.Activities.NativeActivityContext.GetValue%2A> 访问活动的执行属性和值属性。</span><span class="sxs-lookup"><span data-stu-id="22405-115">Access to the activity’s execution properties and value properties using <xref:System.Activities.CodeActivityContext.GetProperty%2A> and <xref:System.Activities.NativeActivityContext.GetValue%2A>.</span></span>  
   
--   使用 <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 和 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> 安排活动操作和功能。  
+-   <span data-ttu-id="22405-116">使用 <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 和 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> 安排活动操作和功能。</span><span class="sxs-lookup"><span data-stu-id="22405-116">Scheduling activity actions and functions using <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> and <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.</span></span>  
   
-#### 创建从 NativeActivity 继承的自定义活动  
+#### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a><span data-ttu-id="22405-117">创建从 NativeActivity 继承的自定义活动</span><span class="sxs-lookup"><span data-stu-id="22405-117">To create a custom activity that inherits from NativeActivity</span></span>  
   
-1.  打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
+1.  <span data-ttu-id="22405-118">打开 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="22405-118">Open[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-2.  依次选择**“文件”**、**“新建”**和**“项目”**。在**“项目类型”**窗口中的**“Visual C\#”**下，选择**“Workflow 4.0”**，然后选择**“v2010”**节点。在**“模板”**窗口中选择**“活动库”**。将新项目命名为 HelloActivity。  
+2.  <span data-ttu-id="22405-119">选择**文件**，**新**，，然后**项目**。</span><span class="sxs-lookup"><span data-stu-id="22405-119">Select **File**, **New**, and then **Project**.</span></span> <span data-ttu-id="22405-120">选择**Workflow 4.0**下**Visual C#**中**项目类型**窗口中，然后选择**v2010**节点。</span><span class="sxs-lookup"><span data-stu-id="22405-120">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="22405-121">选择**活动库**中**模板**窗口。</span><span class="sxs-lookup"><span data-stu-id="22405-121">Select **Activity Library** in the **Templates** window.</span></span> <span data-ttu-id="22405-122">将新项目命名为 HelloActivity。</span><span class="sxs-lookup"><span data-stu-id="22405-122">Name the new project HelloActivity.</span></span>  
   
-3.  右击 HelloActivity 项目中的 Activity1.xaml，然后选择**“删除”**。  
+3.  <span data-ttu-id="22405-123">右击 HelloActivity 项目中的 Activity1.xaml，然后选择**删除**。</span><span class="sxs-lookup"><span data-stu-id="22405-123">Right-click Activity1.xaml in the HelloActivity project and select **Delete**.</span></span>  
   
-4.  右击 HelloActivity 项目并选择**“添加”**，然后选择**“类”**。将新类命名为 HelloActivity.cs。  
+4.  <span data-ttu-id="22405-124">右击 HelloActivity 项目并选择**添加**，，然后**类**。</span><span class="sxs-lookup"><span data-stu-id="22405-124">Right-click the HelloActivity project and select **Add**, and then **Class**.</span></span> <span data-ttu-id="22405-125">将新类命名为 HelloActivity.cs。</span><span class="sxs-lookup"><span data-stu-id="22405-125">Name the new class HelloActivity.cs.</span></span>  
   
-5.  在 HelloActivity.cs 文件中，添加以下 `using` 指令。  
+5.  <span data-ttu-id="22405-126">在 HelloActivity.cs 文件中，添加以下 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="22405-126">In the HelloActivity.cs file, add the following `using` directives.</span></span>  
   
     ```csharp  
     using System.Activities;  
     using System.Activities.Statements;  
     ```  
   
-6.  通过向类声明中添加一个基类使新类从 <xref:System.Activities.NativeActivity> 继承。  
+6.  <span data-ttu-id="22405-127">通过向类声明中添加一个基类使新类从 <xref:System.Activities.NativeActivity> 继承。</span><span class="sxs-lookup"><span data-stu-id="22405-127">Make the new class inherit from <xref:System.Activities.NativeActivity> by adding a base class to the class declaration.</span></span>  
   
     ```csharp  
     class HelloActivity : NativeActivity  
     ```  
   
-7.  通过添加 <xref:System.Activities.NativeActivity.Execute%2A> 方法来向类中添加功能。  
+7.  <span data-ttu-id="22405-128">通过添加 <xref:System.Activities.NativeActivity.Execute%2A> 方法来向类中添加功能。</span><span class="sxs-lookup"><span data-stu-id="22405-128">Add functionality to the class by adding an <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span>  
   
     ```csharp  
     protected override void Execute(NativeActivityContext context)  
@@ -68,9 +72,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-8.  重写 <xref:System.Activities.NativeActivity.CacheMetadata%2A> 方法和调用相应的“添加”方法，以让工作流运行时了解自定义活动的变量、参数、子级和委托。  有关更多信息，请参见 <xref:System.Activities.NativeActivityMetadata> 类。  
+8.  <span data-ttu-id="22405-129">重写 <xref:System.Activities.NativeActivity.CacheMetadata%2A> 方法并且调用相应的 Add 方法，以便让工作流运行时了解自定义活动的变量、参数、子级和委托。  </span><span class="sxs-lookup"><span data-stu-id="22405-129">Override the <xref:System.Activities.NativeActivity.CacheMetadata%2A> method and call the appropriate Add method to let the workflow runtime know about the custom activity’s variables, arguments, children, and delegates.</span></span> <span data-ttu-id="22405-130">有关更多信息，请参见 <xref:System.Activities.NativeActivityMetadata> 类。</span><span class="sxs-lookup"><span data-stu-id="22405-130">For more information see the <xref:System.Activities.NativeActivityMetadata> class.</span></span>  
   
-9. 使用 <xref:System.Activities.NativeActivityContext> 对象来计划书签。有关如何创建、计划和恢复书签的详细信息，请参见 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>。  
+9. <span data-ttu-id="22405-131">使用 <xref:System.Activities.NativeActivityContext> 对象来计划书签。</span><span class="sxs-lookup"><span data-stu-id="22405-131">Use the <xref:System.Activities.NativeActivityContext> object to schedule a bookmark.</span></span> <span data-ttu-id="22405-132">有关如何创建、计划和恢复书签的详细信息，请参见 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>。</span><span class="sxs-lookup"><span data-stu-id="22405-132">See <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> for details on how to create, schedule, and resume a bookmark.</span></span>  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -79,5 +83,4 @@ caps.handback.revision: 8
             context.CreateBookmark(BookmarkName.Get(context),   
                 new BookmarkCallback(OnResumeBookmark));  
         }  
-  
     ```

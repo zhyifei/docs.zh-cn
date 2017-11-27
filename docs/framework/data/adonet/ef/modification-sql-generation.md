@@ -1,46 +1,49 @@
 ---
-title: "修改 SQL 生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改 SQL 生成"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0c41f818c554b61dd6e63818627cb494f7c01577
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 修改 SQL 生成
-本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。  此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。  
+# <a name="modification-sql-generation"></a><span data-ttu-id="6d8c5-102">修改 SQL 生成</span><span class="sxs-lookup"><span data-stu-id="6d8c5-102">Modification SQL Generation</span></span>
+<span data-ttu-id="6d8c5-103">本节讨论如何开发用于（符合 SQL:1999 的数据库）提供程序的修改 SQL 生成模块。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="6d8c5-104">此模块负责将修改命令目录树转换成适当的 SQL INSERT、UPDATE 或 DELETE 语句。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  
   
- 有关 SELECT 语句的 SQL 生成的信息，请参见 [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)。  
+ <span data-ttu-id="6d8c5-105">有关生成 SQL select 语句的信息，请参阅[SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-105">For information about SQL generation for select statements, see [SQL Generation](../../../../../docs/framework/data/adonet/ef/sql-generation.md).</span></span>  
   
-## 修改命令目录树的概述  
- 修改 SQL 生成模块可基于给定的输入 DbModificationCommandTree 生成特定于数据库的修改 SQL 语句。  
+## <a name="overview-of-modification-command-trees"></a><span data-ttu-id="6d8c5-106">修改命令目录树的概述</span><span class="sxs-lookup"><span data-stu-id="6d8c5-106">Overview of Modification Command Trees</span></span>  
+ <span data-ttu-id="6d8c5-107">修改 SQL 生成模块可基于给定的输入 DbModificationCommandTree 生成特定于数据库的修改 SQL 语句。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-107">The modification SQL generation module generates database-specific modification SQL statements based on a given input DbModificationCommandTree.</span></span>  
   
- DbModificationCommandTree 是继承自 DbCommandTree 的修改 DML 操作（插入、更新或删除操作）的对象模型表示形式。  DbModificationCommandTree 有三种实现：  
+ <span data-ttu-id="6d8c5-108">DbModificationCommandTree 是继承自 DbCommandTree 的修改 DML 操作（插入、更新或删除操作）的对象模型表示形式。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-108">A DbModificationCommandTree is an object model representation of a modification DML operation (an insert, an update, or a delete operation), inheriting from DbCommandTree.</span></span> <span data-ttu-id="6d8c5-109">DbModificationCommandTree 有三种实现：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-109">There are three implementations of DbModificationCommandTree:</span></span>  
   
--   DbInsertCommandTree  
+-   <span data-ttu-id="6d8c5-110">DbInsertCommandTree</span><span class="sxs-lookup"><span data-stu-id="6d8c5-110">DbInsertCommandTree</span></span>  
   
--   DbUpdateCommandTree  
+-   <span data-ttu-id="6d8c5-111">DbUpdateCommandTree</span><span class="sxs-lookup"><span data-stu-id="6d8c5-111">DbUpdateCommandTree</span></span>  
   
--   DbDeleteCommandTree  
+-   <span data-ttu-id="6d8c5-112">DbDeleteCommandTree</span><span class="sxs-lookup"><span data-stu-id="6d8c5-112">DbDeleteCommandTree</span></span>  
   
- DbModificationCommandTree 及其实现是由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]生成的，始终表示单行操作。  本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。  
+ <span data-ttu-id="6d8c5-113">DbModificationCommandTree 及其实现生成的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]始终表示单行操作。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-113">DbModificationCommandTree and its implementations that are produced by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] always represent a single row operation.</span></span> <span data-ttu-id="6d8c5-114">本节将介绍这些类型及其在 .NET Framework 版本 3.5 中的约束。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-114">This section describes these types with their constraints in the .NET Framework version 3.5.</span></span>  
   
- ![关系图](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3\-dd19\-48d0\-b91e\-30a76415bf5f")  
+ <span data-ttu-id="6d8c5-115">![关系图](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")</span><span class="sxs-lookup"><span data-stu-id="6d8c5-115">![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")</span></span>  
   
- DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。  Target 的 Expression 属性定义输入集，始终为 DbScanExpression。  DbScanExpression 可以表示表或视图，如果其 Target 的元数据属性“Defining Query”不为 null，也可以表示使用查询定义的数据集。  
+ <span data-ttu-id="6d8c5-116">DbModificationCommandTree 具有 Target 属性，该属性表示修改操作的目标集。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-116">DbModificationCommandTree has a Target property that represents the target set for the modification operation.</span></span> <span data-ttu-id="6d8c5-117">Target 的 Expression 属性定义输入集，始终为 DbScanExpression。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-117">The Target’s Expression property, which defines the input set is always DbScanExpression.</span></span>  <span data-ttu-id="6d8c5-118">DbScanExpression 可以代表一个表或视图，或一组数据使用查询定义如果元数据属性"Defining Query"其目标的非 null。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-118">A DbScanExpression can either represent a table or a view, or a set of data defined with a query if the metadata property "Defining Query" of its Target is non-null.</span></span>  
   
- DbScanExpression 表示一个查询，如果使用模型中的定义查询来定义集，但不提供相应的修改操作的功能，则它仅可以获取作为修改目标的提供程序。  提供程序也许不支持此类方案，例如 SqlClient 就不支持。  
+ <span data-ttu-id="6d8c5-119">DbScanExpression 表示一个查询，如果使用模型中的定义查询来定义集，但不提供相应的修改操作的功能，则它仅可以获取作为修改目标的提供程序。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-119">A DbScanExpression that represents a query could only reach a provider as a target of modification if the set was defined by using a defining query in the model but no function was provided for the corresponding modification operation.</span></span> <span data-ttu-id="6d8c5-120">提供程序也许不支持此类方案，例如 SqlClient 就不支持。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-120">Providers may not be able to support such a scenario (SqlClient, for example, does not).</span></span>  
   
- DbInsertCommandTree 表示用一个命令目录树代表的单行插入操作。  
+ <span data-ttu-id="6d8c5-121">DbInsertCommandTree 表示用一个命令目录树代表的单行插入操作。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-121">DbInsertCommandTree represents a single row insert operation expressed as a command tree.</span></span>  
   
 ```  
 public sealed class DbInsertCommandTree : DbModificationCommandTree {  
@@ -49,99 +52,99 @@ public sealed class DbInsertCommandTree : DbModificationCommandTree {
 }  
 ```  
   
- DbUpdateCommandTree 表示用一个命令目录树代表的单行更新操作。  
+ <span data-ttu-id="6d8c5-122">DbUpdateCommandTree 表示用一个命令目录树代表的单行更新操作。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-122">DbUpdateCommandTree represents a single-row update operation expressed as a command tree.</span></span>  
   
- DbDeleteCommandTree 表示单独行删除操作，表示为一个命令目录树。  
+ <span data-ttu-id="6d8c5-123">DbDeleteCommandTree 表示单独行删除操作，表示为一个命令目录树。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-123">DbDeleteCommandTree represents a single row delete operation expressed as a command tree.</span></span>  
   
-### 有关修改命令目录树属性的限制  
- 下面的信息和限制仅适用于修改命令目录树属性。  
+### <a name="restrictions-on-modification-command-tree-properties"></a><span data-ttu-id="6d8c5-124">有关修改命令目录树属性的限制</span><span class="sxs-lookup"><span data-stu-id="6d8c5-124">Restrictions on Modification Command Tree Properties</span></span>  
+ <span data-ttu-id="6d8c5-125">下面的信息和限制仅适用于修改命令目录树属性。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-125">The following information and restrictions apply to the modification command tree properties.</span></span>  
   
-#### DbInsertCommandTree 和 DbUpdateCommandTree 中的 Returning  
- 当 Returning 不为 null 时，指示该命令返回一个读取器。  否则，该命令应返回一个标量值，指示所影响的（已插入或已更新的）行的数量。  
+#### <a name="returning-in-dbinsertcommandtree-and-dbupdatecommandtree"></a><span data-ttu-id="6d8c5-126">DbInsertCommandTree 和 DbUpdateCommandTree 中的 Returning</span><span class="sxs-lookup"><span data-stu-id="6d8c5-126">Returning in DbInsertCommandTree and DbUpdateCommandTree</span></span>  
+ <span data-ttu-id="6d8c5-127">当 Returning 不为 null 时，指示该命令返回一个读取器。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-127">When non-null, Returning indicates that the command returns a reader.</span></span> <span data-ttu-id="6d8c5-128">否则，该命令应返回一个标量值，指示所影响的（已插入或已更新的）行的数量。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-128">Otherwise, the command should return a scalar value indicating the number of rows affected (inserted or updated).</span></span>  
   
- Returning 值指定基于已插入或已更新的行返回结果投影。  它仅可以属于表示行的 DbNewInstanceExpression 类型，其每个参数均为 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。  Returning 属性中使用的 DbPropertyExpressions 表示的属性始终为存储生成的值或计算值。  在 DbInsertCommandTree 中，当插入行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Identity 或 StoreGeneratedPattern.Computed）时，Returning 不为 null。  在 DbUpdateCommandTrees 中，当更新行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Computed）时，Returning 不为 null。  
+ <span data-ttu-id="6d8c5-129">Returning 值指定基于已插入或已更新的行返回结果投影。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-129">The Returning value specifies a projection of results to be returned based on the inserted or the updated row.</span></span> <span data-ttu-id="6d8c5-130">它仅可以属于表示行的 DbNewInstanceExpression 类型，其每个参数均为 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-130">It can only be of type DbNewInstanceExpression representing a row, with each of its arguments being a DbPropertyExpression over a DbVariableReferenceExpression representing a reference to the Target of the corresponding DbModificationCommandTree.</span></span> <span data-ttu-id="6d8c5-131">Returning 属性中使用的 DbPropertyExpressions 表示的属性始终为存储生成的值或计算值。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-131">The properties represented by the DbPropertyExpressions used in the property Returning are always store generated or computed values.</span></span> <span data-ttu-id="6d8c5-132">在 DbInsertCommandTree 中，当插入行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Identity 或 StoreGeneratedPattern.Computed）时，Returning 不为 null。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-132">In DbInsertCommandTree, Returning is not null when at least one property of the table in which the row is being inserted is specified as store generated or computed (marked as StoreGeneratedPattern.Identity or StoreGeneratedPattern.Computed in the ssdl).</span></span> <span data-ttu-id="6d8c5-133">在 DbUpdateCommandTrees 中，当更新行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Computed）时，Returning 不为 null。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-133">In DbUpdateCommandTrees, Returning is not null when at least one property of the table in which the row is being updated is specified as store computed (marked as StoreGeneratedPattern.Computed in the ssdl).</span></span>  
   
-#### DbInsertCommandTree 和 DbUpdateCommandTree 中的 SetClauses  
- SetClauses 指定插入或更新集子句的列表，这些子句定义插入或更新操作。  
+#### <a name="setclauses-in-dbinsertcommandtree-and-dbupdatecommandtree"></a><span data-ttu-id="6d8c5-134">DbInsertCommandTree 和 DbUpdateCommandTree 中的 SetClauses</span><span class="sxs-lookup"><span data-stu-id="6d8c5-134">SetClauses in DbInsertCommandTree and DbUpdateCommandTree</span></span>  
+ <span data-ttu-id="6d8c5-135">SetClauses 指定插入或更新集子句的列表，这些子句定义插入或更新操作。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-135">SetClauses specifies the list of insert or update set clauses that define the insert or update operation.</span></span>  
   
 ```  
 The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.   
 ```  
   
- Property 指定应进行更新的属性。  它始终是 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。  
+ <span data-ttu-id="6d8c5-136">Property 指定应进行更新的属性。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-136">Property specifies the property that should be updated.</span></span> <span data-ttu-id="6d8c5-137">它始终是 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-137">It is always a DbPropertyExpression over a DbVariableReferenceExpression, which represents a reference to the Target of the corresponding DbModificationCommandTree.</span></span>  
   
- Value 指定用来更新属性的新值。  它是 DbConstantExpression 类型或 DbNullExpression 类型。  
+ <span data-ttu-id="6d8c5-138">Value 指定用来更新属性的新值。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-138">Value specifies the new value with which to update the property.</span></span> <span data-ttu-id="6d8c5-139">它是 DbConstantExpression 类型或 DbNullExpression 类型。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-139">It is either of type DbConstantExpression or DbNullExpression.</span></span>  
   
-#### DbUpdateCommandTree 和 DbDeleteCommandTree 中的 Predicate  
- Predicate 指定用于确定应更新或删除目标集合中的哪些成员的谓词。  它是由 DbExpressions 的下列子集构成的表达式树：  
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a><span data-ttu-id="6d8c5-140">DbUpdateCommandTree 和 DbDeleteCommandTree 中的 Predicate</span><span class="sxs-lookup"><span data-stu-id="6d8c5-140">Predicate in DbUpdateCommandTree and DbDeleteCommandTree</span></span>  
+ <span data-ttu-id="6d8c5-141">Predicate 指定用于确定应更新或删除目标集合中的哪些成员的谓词。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-141">Predicate specifies the predicate used to determine which members of the target collection should be updated or deleted.</span></span> <span data-ttu-id="6d8c5-142">它是由 DbExpressions 的下列子集构成的表达式树：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-142">It is an expression tree built of the following subset of DbExpressions:</span></span>  
   
--   Equals 类型的 DbComparisonExpression，其右侧子级为 DbPropertyExression（根据下面的限制要求），左侧子级为 DbConstantExpression。  
+-   <span data-ttu-id="6d8c5-143">Equals 类型的 DbComparisonExpression，其右侧子级为 DbPropertyExression（根据下面的限制要求），左侧子级为 DbConstantExpression。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-143">DbComparisonExpression of kind Equals, with the right child being a DbPropertyExression as restricted below and the left child a DbConstantExpression.</span></span>  
   
--   DbConstantExpression  
+-   <span data-ttu-id="6d8c5-144">DbConstantExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-144">DbConstantExpression</span></span>  
   
--   根据下面的限制要求，DbIsNullExpression 在 DbPropertyExpresison 之上  
+-   <span data-ttu-id="6d8c5-145">根据下面的限制要求，DbIsNullExpression 在 DbPropertyExpresison 之上</span><span class="sxs-lookup"><span data-stu-id="6d8c5-145">DbIsNullExpression over a DbPropertyExpresison as restricted below</span></span>  
   
--   DbPropertyExpression 在表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。  
+-   <span data-ttu-id="6d8c5-146">DbPropertyExpression 在表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-146">DbPropertyExpression over a DbVariableReferenceExpression representing a reference to the Target of the corresponding DbModificationCommandTree.</span></span>  
   
--   DbAndExpression  
+-   <span data-ttu-id="6d8c5-147">DbAndExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-147">DbAndExpression</span></span>  
   
--   DbNotExpression  
+-   <span data-ttu-id="6d8c5-148">DbNotExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-148">DbNotExpression</span></span>  
   
--   DbOrExpression  
+-   <span data-ttu-id="6d8c5-149">DbOrExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-149">DbOrExpression</span></span>  
   
-## 示例提供程序中的修改 SQL 生成  
- [实体框架示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)（可能为英文网页）演示支持 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的 ADO.NET 数据提供程序的组件。  该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。  
+## <a name="modification-sql-generation-in-the-sample-provider"></a><span data-ttu-id="6d8c5-150">示例提供程序中的修改 SQL 生成</span><span class="sxs-lookup"><span data-stu-id="6d8c5-150">Modification SQL Generation in the Sample Provider</span></span>  
+ <span data-ttu-id="6d8c5-151">[实体框架示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)演示 ADO.NET 数据提供程序支持的组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-151">The [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) demonstrates the components of ADO.NET Data Providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="6d8c5-152">该示例提供程序以 SQL Server 2005 数据库为目标，并在 System.Data.SqlClient ADO.NET 2.0 数据提供程序之上作为一个包装实现。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-152">It targets a SQL Server 2005 database and is implemented as a wrapper on top of System.Data.SqlClient ADO.NET 2.0 Data Provider.</span></span>  
   
- 该示例提供程序的修改 SQL 生成模块（位于 SQL Generation\\DmlSqlGenerator.cs 文件中）采用一个输入 DbModificationCommandTree，并且生成可能带有 SELECT 语句的单个修改 SQL 语句以返回一个读取器（如果 DbModificationCommandTree 指定了读取器）。  请注意，生成的命令的形式受目标 SQL Server 数据库影响。  
+ <span data-ttu-id="6d8c5-153">该示例提供程序的修改 SQL 生成模块（位于 SQL Generation\DmlSqlGenerator.cs 文件中）采用一个输入 DbModificationCommandTree，并且生成可能带有 SELECT 语句的单个修改 SQL 语句以返回一个读取器（如果 DbModificationCommandTree 指定了读取器）。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-153">The modification SQL generation module of the sample provider (located in the file SQL Generation\DmlSqlGenerator.cs) takes an input DbModificationCommandTree and produces a single modification SQL statement possibly followed by a select statement to return a reader if specified by the DbModificationCommandTree.</span></span> <span data-ttu-id="6d8c5-154">请注意，生成的命令的形式受目标 SQL Server 数据库影响。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-154">Note that the shape of the commands generated is affected by the target SQL Server database.</span></span>  
   
-### 帮助器类：ExpressionTranslator  
- ExpressionTranslator 用作一个适用于 DbExpression 类型的所有修改命令目录树属性的通用轻型转换器。  它支持仅转换修改命令目录树的属性所限于使用的表达式类型，而且它在构建时应用了特定约束。  
+### <a name="helper-classes-expressiontranslator"></a><span data-ttu-id="6d8c5-155">帮助器类：ExpressionTranslator</span><span class="sxs-lookup"><span data-stu-id="6d8c5-155">Helper Classes: ExpressionTranslator</span></span>  
+ <span data-ttu-id="6d8c5-156">ExpressionTranslator 用作一个适用于 DbExpression 类型的所有修改命令目录树属性的通用轻型转换器。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-156">ExpressionTranslator serves as a common lightweight translator for all modification command tree properties of type DbExpression.</span></span> <span data-ttu-id="6d8c5-157">它支持仅转换修改命令目录树的属性所限于使用的表达式类型，而且它在构建时应用了特定约束。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-157">It supports translation of only the expression types to which the properties of the modification command tree are constrained and is built with the particular constraints in mind.</span></span>  
   
- 以下信息讨论如何访问特定的表达式类型（忽略具有细微转换的节点）。  
+ <span data-ttu-id="6d8c5-158">以下信息讨论如何访问特定的表达式类型（忽略具有细微转换的节点）。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-158">The following information discusses visiting specific expression types (nodes with trivial translations are omitted).</span></span>  
   
-### DbComparisonExpression  
- 当使用 preserveMemberValues \= true 构造 ExpressionTranslator 并且右侧的常量为 DbConstantExpression（而不是 DbNullExpression）时，它将左操作数（一个 DbPropertyExpressions）与该 DbConstantExpression 关联。  如果需要生成一个返回 Select 语句来标识受影响的行，则使用此类型。  
+### <a name="dbcomparisonexpression"></a><span data-ttu-id="6d8c5-159">DbComparisonExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-159">DbComparisonExpression</span></span>  
+ <span data-ttu-id="6d8c5-160">当使用 preserveMemberValues = true 构造 ExpressionTranslator 并且右侧的常量为 DbConstantExpression（而不是 DbNullExpression）时，它将左操作数（一个 DbPropertyExpressions）与该 DbConstantExpression 关联。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-160">When the ExpressionTranslator is constructed with preserveMemberValues = true, and when the constant to the right is a DbConstantExpression (instead of DbNullExpression), it associates the left operand (a DbPropertyExpressions) with that DbConstantExpression.</span></span> <span data-ttu-id="6d8c5-161">如果需要生成一个返回 Select 语句来标识受影响的行，则使用此类型。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-161">That is used if a return Select statement needs to be generated to identify the affected row.</span></span>  
   
-### DbConstantExpression  
- 针对每个所访问的常量，创建一个参数。  
+### <a name="dbconstantexpression"></a><span data-ttu-id="6d8c5-162">DbConstantExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-162">DbConstantExpression</span></span>  
+ <span data-ttu-id="6d8c5-163">针对每个所访问的常量，创建一个参数。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-163">For each visited constant a parameter is created.</span></span>  
   
-### DbPropertyExpression  
- 假定 DbPropertyExpression 的实例始终表示输入表，除非生成操作已创建一个别名（只会在使用表变量时的更新方案中出现这种情况），否则不需要为输入指定别名；转换默认为属性名。  
+### <a name="dbpropertyexpression"></a><span data-ttu-id="6d8c5-164">DbPropertyExpression</span><span class="sxs-lookup"><span data-stu-id="6d8c5-164">DbPropertyExpression</span></span>  
+ <span data-ttu-id="6d8c5-165">假定 DbPropertyExpression 的实例始终表示输入表，除非生成操作已创建一个别名（只会在使用表变量时的更新方案中出现这种情况），否则不需要为输入指定别名；转换默认为属性名。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-165">Given that the Instance of the DbPropertyExpression always represents the input table, unless the generation has created an alias (which only happens in update scenarios when a table variable is used), no alias needs to be specified for the input; the translation defaults to the property name.</span></span>  
   
-## 生成插入 SQL 命令  
- 对于示例提供程序中给定的 DbInsertCommandTree，生成的插入命令跟在下面两个插入模板中的一个后面。  
+## <a name="generating-an-insert-sql-command"></a><span data-ttu-id="6d8c5-166">生成插入 SQL 命令</span><span class="sxs-lookup"><span data-stu-id="6d8c5-166">Generating an Insert SQL Command</span></span>  
+ <span data-ttu-id="6d8c5-167">对于示例提供程序中给定的 DbInsertCommandTree，生成的插入命令跟在下面两个插入模板中的一个后面。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-167">For a given DbInsertCommandTree in the sample provider, the generated insert command follows one of the two insert templates below.</span></span>  
   
- 第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。  如果插入一行，则谓词元素“@@ROWCOUNT \> 0”为 true。  仅当 keyMemeberI 为存储生成的键时，谓词元素“keyMemberI \=  keyValueI &#124; scope\_identity\(\)”才会呈现“keyMemberI \=  scope\_identity\(\)”形式，这是因为 scope\_identity\(\) 返回插入到标识（存储生成的）列中的最后一个标识值。  
+ <span data-ttu-id="6d8c5-168">第一个模板包含一个命令来执行插入操作（假定值在 SetClauses 列表中）以及一个 SELECT 语句来为插入的行返回在 Returning 属性中指定的属性（如果 Returning 属性不为 null）。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-168">The first template has a command to perform the insert given the values in the list of SetClauses, and a SELECT statement to return the properties specified in the Returning property for the inserted row if the Returning property was not null.</span></span> <span data-ttu-id="6d8c5-169">谓词元素"@@ROWCOUNT > 0"如果插入一行也是如此。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-169">The predicate element "@@ROWCOUNT > 0" is true if a row was inserted.</span></span> <span data-ttu-id="6d8c5-170">谓词元素"keyMemberI = keyValueI &#124;scope_identity （)"使用了的形状"keyMemberI = scope_identity （）"仅当 keyMemeberI 为存储生成的键，因为 scope_identity （） 返回插入到标识 （存储生成的） 列的最后一个标识值。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-170">The predicate element "keyMemberI =  keyValueI &#124; scope_identity()" takes the shape  "keyMemberI =  scope_identity()" only if keyMemeberI is a store-generated key, because scope_identity() returns the last identity value inserted into an identity (store-generated) column.</span></span>  
   
 ```  
 -- first insert Template  
-INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
+INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
 VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES   
   
 [SELECT <returning>   
- FROM <target>   
+ FROM <target>  
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- 如果插入命令指定插入一行，其中的主键是存储生成的，但不是整数类型，因而不能与 scope\_identity\(\) 一起使用，则需要第二个模板。  如果存在复合存储生成的键，也要使用第二个模板。  
+ <span data-ttu-id="6d8c5-171">如果插入命令指定插入一行，其中的主键是存储生成的，但不是整数类型，因而不能与 scope_identity() 一起使用，则需要第二个模板。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-171">The second template is needed if the insert specifies inserting a row where the primary key is store-generated but is not an integer type and therefore can't be used with scope_identity()).</span></span> <span data-ttu-id="6d8c5-172">如果存在复合存储生成的键，也要使用第二个模板。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-172">It is also used if there is a compound store-generated key.</span></span>  
   
 ```  
 -- second insert template  
 DECLARE @generated_keys TABLE [(keyMember0, … keyMemberN)  
   
-INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
- OUTPUT inserted.KeyMember0, …, inserted.KeyMemberN INTO @generated_keys  
- VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES   
+INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
+ OUTPUT inserted.KeyMember0, …, inserted.KeyMemberN INTO @generated_keys  
+ VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES  
   
 [SELECT <returning_over_t>   
- FROM @generated_keys  AS g   
+ FROM @generated_keys  AS g  
 JOIN <target> AS t ON g.KeyMember0 = t.KeyMember0 AND … g.KeyMemberN = t.KeyMemberN  
- WHERE @@ROWCOUNT > 0   
+ WHERE @@ROWCOUNT > 0  
 ```  
   
- 下面的示例使用随示例提供程序提供的模型，  它从 DbInsertCommandTree 生成一个插入命令。  
+ <span data-ttu-id="6d8c5-173">下面的示例使用随示例提供程序提供的模型，</span><span class="sxs-lookup"><span data-stu-id="6d8c5-173">The following is an example that uses the model that is included with the sample provider.</span></span> <span data-ttu-id="6d8c5-174">它从 DbInsertCommandTree 生成一个插入命令。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-174">It generates an insert command from a DbInsertCommandTree.</span></span>  
   
- 下面的代码插入一个 Category：  
+ <span data-ttu-id="6d8c5-175">下面的代码插入一个 Category：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-175">The following code inserts a Category:</span></span>  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -153,7 +156,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- 此代码生成以下传递给提供程序的命令目录树:  
+ <span data-ttu-id="6d8c5-176">此代码生成以下传递给提供程序的命令目录树:</span><span class="sxs-lookup"><span data-stu-id="6d8c5-176">This code produces the following command tree, which is passed to the provider:</span></span>  
   
 ```  
 DbInsertCommandTree  
@@ -182,7 +185,7 @@ DbInsertCommandTree
       |_Var(target).CategoryID  
 ```  
   
- 示例提供程序生成的存储命令为下面的 SQL 语句：  
+ <span data-ttu-id="6d8c5-177">示例提供程序生成的存储命令为下面的 SQL 语句：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-177">The store command that the sample provider produces is the following SQL statement:</span></span>  
   
 ```  
 insert [dbo].[Categories]([CategoryName], [Description], [Picture])  
@@ -192,27 +195,27 @@ from [dbo].[Categories]
 where @@ROWCOUNT > 0 and [CategoryID] = scope_identity()  
 ```  
   
-## 生成更新 SQL 命令  
- 对于给定的 DbUpdateCommandTree，生成的更新命令将基于下面的模板：  
+## <a name="generating-an-update-sql-command"></a><span data-ttu-id="6d8c5-178">生成更新 SQL 命令</span><span class="sxs-lookup"><span data-stu-id="6d8c5-178">Generating an Update SQL Command</span></span>  
+ <span data-ttu-id="6d8c5-179">对于给定的 DbUpdateCommandTree，生成的更新命令将基于下面的模板：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-179">For a given DbUpdateCommandTree, the generated update command is based on the following template:</span></span>  
   
 ```  
 -- UPDATE Template   
-UPDATE <target>   
+UPDATE <target>   
 SET setClauseProprerty0 = setClauseValue0,  .. setClauseProprertyN = setClauseValueN  | @i = 0  
 WHERE <predicate>  
   
 [SELECT <returning>   
- FROM <target>   
+ FROM <target>  
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- 仅当未指定 set 子句时，set 子句才具有假 set 子句 \("@i \= 0"\)。  这将确保重新计算所有存储计算的列。  
+ <span data-ttu-id="6d8c5-180">Set 子句具有假 set 子句 ("@i = 0") 仅当不指定任何 set 子句时。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-180">The set clause has the fake set clause ("@i = 0") only if no set clauses are specified.</span></span> <span data-ttu-id="6d8c5-181">这将确保重新计算所有存储计算的列。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-181">This is to ensure that any store-computed columns are recomputed.</span></span>  
   
- 仅当 Returning 属性不为 null 时，才生成 SELECT 语句以返回在 Returning 属性中指定的属性。  
+ <span data-ttu-id="6d8c5-182">仅当 Returning 属性不为 null 时，才生成 SELECT 语句以返回在 Returning 属性中指定的属性。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-182">Only if the Returning property is not null, a select statement is generated to return the properties specified in the Returning property.</span></span>  
   
- 下面的示例使用随示例提供程序提供的模型生成更新命令。  
+ <span data-ttu-id="6d8c5-183">下面的示例使用随示例提供程序提供的模型生成更新命令。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-183">The following example uses the model that is included with the sample provider to generate an update command.</span></span>  
   
- 下面的用户代码更新 Category：  
+ <span data-ttu-id="6d8c5-184">下面的用户代码更新 Category：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-184">The following user code updates a Category:</span></span>  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -222,7 +225,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- 此用户代码生成以下传递给提供程序的命令目录树：  
+ <span data-ttu-id="6d8c5-185">此用户代码生成以下传递给提供程序的命令目录树：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-185">This user code produces the following command tree, which is passed to the provider:</span></span>  
   
 ```  
 DbUpdateCommandTree  
@@ -243,7 +246,7 @@ DbUpdateCommandTree
 |_Returning   
 ```  
   
- 示例提供程序生成下面的存储命令：  
+ <span data-ttu-id="6d8c5-186">示例提供程序生成下面的存储命令：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-186">The sample provider produces the following store command:</span></span>  
   
 ```  
 update [dbo].[Categories]  
@@ -251,18 +254,18 @@ set [CategoryName] = @p0
 where ([CategoryID] = @p1)   
 ```  
   
-### 生成删除 SQL 命令  
- 对于给定的 DbDeleteCommandTree，生成的 DELETE 命令将基于下面的模板：  
+### <a name="generating-a-delete-sql-command"></a><span data-ttu-id="6d8c5-187">生成删除 SQL 命令</span><span class="sxs-lookup"><span data-stu-id="6d8c5-187">Generating a Delete SQL Command</span></span>  
+ <span data-ttu-id="6d8c5-188">对于给定的 DbDeleteCommandTree，生成的 DELETE 命令将基于下面的模板：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-188">For a given DbDeleteCommandTree, the generated DELETE command is based on the following template:</span></span>  
   
 ```  
 -- DELETE Template   
-DELETE <target>   
+DELETE <target>   
 WHERE <predicate>  
 ```  
   
- 下面的示例使用随示例提供程序提供的模型生成删除命令。  
+ <span data-ttu-id="6d8c5-189">下面的示例使用随示例提供程序提供的模型生成删除命令。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-189">The following example uses the model that is included with the sample provider to generate a delete command.</span></span>  
   
- 下面的用户代码删除 Category：  
+ <span data-ttu-id="6d8c5-190">下面的用户代码删除 Category：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-190">The following user code deletes a Category:</span></span>  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -272,7 +275,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- 此用户代码生成以下传递给提供程序的命令目录树。  
+ <span data-ttu-id="6d8c5-191">此用户代码生成以下传递给提供程序的命令目录树。</span><span class="sxs-lookup"><span data-stu-id="6d8c5-191">This user code produces the following command tree, which is passed to the provider.</span></span>  
   
 ```  
 DbDeleteCommandTree  
@@ -286,12 +289,12 @@ DbDeleteCommandTree
     |_10  
 ```  
   
- 下面的存储命令由示例提供程序生成：  
+ <span data-ttu-id="6d8c5-192">下面的存储命令由示例提供程序生成：</span><span class="sxs-lookup"><span data-stu-id="6d8c5-192">The following store command is produced by the sample provider:</span></span>  
   
 ```  
 delete [dbo].[Categories]  
 where ([CategoryID] = @p0)  
 ```  
   
-## 请参阅  
- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a><span data-ttu-id="6d8c5-193">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6d8c5-193">See Also</span></span>  
+ [<span data-ttu-id="6d8c5-194">编写实体框架数据提供程序</span><span class="sxs-lookup"><span data-stu-id="6d8c5-194">Writing an Entity Framework Data Provider</span></span>](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

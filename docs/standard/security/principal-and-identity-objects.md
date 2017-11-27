@@ -1,60 +1,58 @@
 ---
-title: "主体和标识对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "GenericIdentity 对象"
-  - "GenericPrincipal 对象"
-  - "标识对象, 关于标识对象"
-  - "主体对象, 关于主体对象"
-  - "安全性 [.NET Framework], 标识对象"
-  - "安全性 [.NET Framework], 用户"
-  - "WindowsIdentity 对象"
-  - "WindowsPrincipal 对象"
+title: "主体和标识对象"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WindowsIdentity objects
+- GenericIdentity objects
+- GenericPrincipal objects
+- identity objects, about identity objects
+- security [.NET Framework], identity objects
+- principal objects, about principal objects
+- security [.NET Framework], principals
+- WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 主体和标识对象
-托管代码可通过 [Principal](frlrfSystemSecurityPrincipalIPrincipalClassTopic) 对象发现主体的标识或角色，该对象包含对 [Identity](frlrfSystemSecurityPrincipalIIdentityClassTopic) 对象的引用。  将标识和主体对象同用户与组帐户这样常见的概念进行比较，可能会有所帮助。  在多数网络环境中，用户帐户表示人员或程序，而组帐户表示特定类别的用户及其拥有的权限。  同样，.NET Framework 中的标识对象表示用户，而角色表示成员条件与安全性上下文。  在 .NET Framework 中，主体对象同时封装标识对象和角色。.NET Framework 应用程序根据主体的标识或角色成员条件（后者更常见）来向主体授予权限。  
+# <a name="principal-and-identity-objects"></a><span data-ttu-id="cb039-102">主体和标识对象</span><span class="sxs-lookup"><span data-stu-id="cb039-102">Principal and Identity Objects</span></span>
+<span data-ttu-id="cb039-103">托管的代码可能会发现标识或通过主体角色<xref:System.Security.Principal.IPrincipal>对象，它包含对引用<xref:System.Security.Principal.IIdentity>对象。</span><span class="sxs-lookup"><span data-stu-id="cb039-103">Managed code can discover the identity or the role of a principal through a <xref:System.Security.Principal.IPrincipal> object, which contains a reference to an <xref:System.Security.Principal.IIdentity> object.</span></span> <span data-ttu-id="cb039-104">将标识对象和主体对象同用户帐户与组帐户这样常见的概念进行比较，可能会有所帮助。</span><span class="sxs-lookup"><span data-stu-id="cb039-104">It might be helpful to compare identity and principal objects to familiar concepts like user and group accounts.</span></span> <span data-ttu-id="cb039-105">在大多数网络环境中，用户帐户表示人员或程序，而组帐户表示特定类别的用户及其拥有的权限。</span><span class="sxs-lookup"><span data-stu-id="cb039-105">In most network environments, user accounts represent people or programs, while group accounts represent certain categories of users and the rights they possess.</span></span> <span data-ttu-id="cb039-106">同样，.NET Framework 中的标识对象表示用户，而角色表示成员资格与安全性上下文。</span><span class="sxs-lookup"><span data-stu-id="cb039-106">Similarly, .NET Framework identity objects represent users, while roles represent memberships and security contexts.</span></span> <span data-ttu-id="cb039-107">在 .NET Framework 中，主体对象同时封装标识对象和角色。</span><span class="sxs-lookup"><span data-stu-id="cb039-107">In the .NET Framework, the principal object encapsulates both an identity object and a role.</span></span> <span data-ttu-id="cb039-108">.NET Framework 应用程序根据主体的标识或角色成员资格（后者更常见）来向主体授予权限。</span><span class="sxs-lookup"><span data-stu-id="cb039-108">.NET Framework applications grant rights to the principal based on its identity or, more commonly, its role membership.</span></span>  
   
-## 标识对象  
- 标识对象封装有关正在验证的用户或实体的信息。  在最基本的级别上，标识对象包含名称和身份验证类型。  名称可以是用户名或 Windows 帐户名，而身份验证类型可以是所支持的登录协议（如 Kerberos V5）或自定义值。  .NET Framework 定义了一个 <xref:System.Security.Principal.GenericIdentity> 对象和一个更专用的 <xref:System.Security.Principal.WindowsIdentity> 对象，前者可用于大多数自定义登录方案，后者可用于希望应用程序依赖 Windows 身份验证的情况。  此外，您还可以定义自己的标识类来封装自定义用户信息。  
+## <a name="identity-objects"></a><span data-ttu-id="cb039-109">标识对象</span><span class="sxs-lookup"><span data-stu-id="cb039-109">Identity Objects</span></span>  
+ <span data-ttu-id="cb039-110">标识对象封装有关正在验证的用户或实体的信息。</span><span class="sxs-lookup"><span data-stu-id="cb039-110">The identity object encapsulates information about the user or entity being validated.</span></span> <span data-ttu-id="cb039-111">在最基本的级别上，标识对象包含名称和身份验证类型。</span><span class="sxs-lookup"><span data-stu-id="cb039-111">At their most basic level, identity objects contain a name and an authentication type.</span></span> <span data-ttu-id="cb039-112">名称可以是用户名或 Windows 帐户名，而身份验证类型可以是所支持的登录协议（如 Kerberos V5）或自定义值。</span><span class="sxs-lookup"><span data-stu-id="cb039-112">The name can either be a user's name or the name of a Windows account, while the authentication type can be either a supported logon protocol, such as Kerberos V5, or a custom value.</span></span> <span data-ttu-id="cb039-113">.NET Framework 定义<xref:System.Security.Principal.GenericIdentity>可以用于大多数自定义登录方案并更专用的对象<xref:System.Security.Principal.WindowsIdentity>可在您的应用程序依赖于 Windows 身份验证时的对象。</span><span class="sxs-lookup"><span data-stu-id="cb039-113">The .NET Framework defines a <xref:System.Security.Principal.GenericIdentity> object that can be used for most custom logon scenarios and a more specialized <xref:System.Security.Principal.WindowsIdentity> object that can be used when you want your application to rely on Windows authentication.</span></span> <span data-ttu-id="cb039-114">此外，还可以定义自己的标识类来封装自定义用户信息。</span><span class="sxs-lookup"><span data-stu-id="cb039-114">Additionally, you can define your own identity class that encapsulates custom user information.</span></span>  
   
- <xref:System.Security.Principal.IIdentity> 接口定义用于访问名称和身份验证类型（例如 Kerberos V5 或 NTLM）的属性。  所有 **Identity** 类均实现 **IIdentity** 接口。  **Identity** 对象同执行当前线程所用的 Windows NT 进程标记之间不需要有什么关系。  但是，如果 **Identity** 对象是 **WindowsIdentity** 对象，则假定标识表示 Windows NT 安全标记。  
+ <span data-ttu-id="cb039-115"><xref:System.Security.Principal.IIdentity>接口定义用于访问一个名称和身份验证类型，例如 Kerberos V5 或 NTLM 的属性。</span><span class="sxs-lookup"><span data-stu-id="cb039-115">The <xref:System.Security.Principal.IIdentity> interface defines properties for accessing a name and an authentication type, such as Kerberos V5 or NTLM.</span></span> <span data-ttu-id="cb039-116">所有 **Identity** 类均实现 **IIdentity** 接口。</span><span class="sxs-lookup"><span data-stu-id="cb039-116">All **Identity** classes implement the **IIdentity** interface.</span></span> <span data-ttu-id="cb039-117">**Identity** 对象与当前执行线程所用的 Windows NT 进程标记之间不需要有什么关系。</span><span class="sxs-lookup"><span data-stu-id="cb039-117">There is no required relationship between an **Identity** object and the Windows NT process token under which a thread is currently executing.</span></span> <span data-ttu-id="cb039-118">但是，如果 **Identity** 对象是 **WindowsIdentity** 对象，则假定标识表示 Windows NT 安全标记。</span><span class="sxs-lookup"><span data-stu-id="cb039-118">However, if the **Identity** object is a **WindowsIdentity** object, the identity is assumed to represent a Windows NT security token.</span></span>  
   
-## 主体对象  
- 主体对象表示代码运行时所在的安全上下文。  实现基于角色的安全性的应用程序将基于与主体对象关联的角色来授予权限。  与标识对象相似，.NET Framework 也提供了 <xref:System.Security.Principal.GenericPrincipal> 对象和 <xref:System.Security.Principal.WindowsPrincipal> 对象。  您还可以定义自己的自定义主体类。  
+## <a name="principal-objects"></a><span data-ttu-id="cb039-119">主体对象</span><span class="sxs-lookup"><span data-stu-id="cb039-119">Principal Objects</span></span>  
+ <span data-ttu-id="cb039-120">主体对象表示代码运行时所在的安全性上下文。</span><span class="sxs-lookup"><span data-stu-id="cb039-120">The principal object represents the security context under which code is running.</span></span> <span data-ttu-id="cb039-121">实现基于角色的安全性的应用程序基于与主体对象关联的角色来授予权限。</span><span class="sxs-lookup"><span data-stu-id="cb039-121">Applications that implement role-based security grant rights based on the role associated with a principal object.</span></span> <span data-ttu-id="cb039-122">标识对象相似，.NET Framework 提供<xref:System.Security.Principal.GenericPrincipal>对象和一个<xref:System.Security.Principal.WindowsPrincipal>对象。</span><span class="sxs-lookup"><span data-stu-id="cb039-122">Similar to identity objects, the .NET Framework provides a <xref:System.Security.Principal.GenericPrincipal> object and a <xref:System.Security.Principal.WindowsPrincipal> object.</span></span> <span data-ttu-id="cb039-123">你还可以定义自己的自定义主体类。</span><span class="sxs-lookup"><span data-stu-id="cb039-123">You can also define your own custom principal classes.</span></span>  
   
- <xref:System.Security.Principal.IPrincipal> 接口定义一个属性和一个方法，前者用于访问关联的 **Identity** 对象，后者用于确定 **Principal** 对象所标识的用户是否为给定角色的成员。  所有 **Principal** 类都实现 **IPrincipal** 接口以及任何必需的附加属性和方法。  例如，公共语言运行时提供了 **WindowsPrincipal** 类，该类实现将 Windows NT 或 Windows 2000 组成员条件映射到角色的附加功能。  
+ <span data-ttu-id="cb039-124"><xref:System.Security.Principal.IPrincipal>接口定义用于访问关联的属性**标识**对象以及用于确定用户是否由方法**主体**对象是的成员给定的角色。</span><span class="sxs-lookup"><span data-stu-id="cb039-124">The <xref:System.Security.Principal.IPrincipal> interface defines a property for accessing an associated **Identity** object as well as a method for determining whether the user identified by the **Principal** object is a member of a given role.</span></span> <span data-ttu-id="cb039-125">所有 **Principal** 类都实现 **IPrincipal** 接口以及任何必需的附加属性和方法。</span><span class="sxs-lookup"><span data-stu-id="cb039-125">All **Principal** classes implement the **IPrincipal** interface as well as any additional properties and methods that are necessary.</span></span> <span data-ttu-id="cb039-126">例如，公共语言运行时提供 **WindowsPrincipal** 类，该类实现将 Windows NT 或 Windows 2000 组成员资格映射到角色的附加功能。</span><span class="sxs-lookup"><span data-stu-id="cb039-126">For example, the common language runtime provides the **WindowsPrincipal** class, which implements additional functionality for mapping Windows NT or Windows 2000 group membership to roles.</span></span>  
   
- **Principal** 对象将被绑定到应用程序域 \(<xref:System.AppDomain>\) 内部的调用上下文 \(<xref:System.Runtime.Remoting.Messaging.CallContext>\) 对象。  默认的调用上下文总是用每个新的 **AppDomain** 创建的，因此总是存在可用于接受 **Principal** 对象的调用上下文。  创建新线程的同时也为该线程创建 **CallContext** 对象。  **Principal** 对象引用从创建线程自动复制到新线程的 **CallContext** 中。  如果运行时无法确定哪个 **Principal** 对象属于线程的创建者，它将遵循 **Principal** 和 **Identity** 对象创建的默认策略。  
+ <span data-ttu-id="cb039-127">A**主体**对象绑定到调用上下文 (<xref:System.Runtime.Remoting.Messaging.CallContext>) 应用程序域内的对象 (<xref:System.AppDomain>)。</span><span class="sxs-lookup"><span data-stu-id="cb039-127">A **Principal** object is bound to a call context (<xref:System.Runtime.Remoting.Messaging.CallContext>) object within an application domain (<xref:System.AppDomain>).</span></span> <span data-ttu-id="cb039-128">默认的调用上下文始终用每个新的 **AppDomain** 创建，因此始终存在可用于接受 **Principal** 对象的调用上下文。</span><span class="sxs-lookup"><span data-stu-id="cb039-128">A default call context is always created with each new **AppDomain**, so there is always a call context available to accept the **Principal** object.</span></span> <span data-ttu-id="cb039-129">创建新线程的同时也为该线程创建 **CallContext** 对象。</span><span class="sxs-lookup"><span data-stu-id="cb039-129">When a new thread is created, a **CallContext** object is also created for the thread.</span></span> <span data-ttu-id="cb039-130">**Principal** 对象引用从正在创建的线程自动复制到新线程的 **CallContext** 中。</span><span class="sxs-lookup"><span data-stu-id="cb039-130">The **Principal** object reference is automatically copied from the creating thread to the new thread's **CallContext**.</span></span> <span data-ttu-id="cb039-131">如果运行时无法确定哪个**Principal** 对象属于线程的创建者，则会遵循 **Principal** 和 **Identity** 对象创建的默认策略。</span><span class="sxs-lookup"><span data-stu-id="cb039-131">If the runtime cannot determine which **Principal** object belongs to the creator of the thread, it follows the default policy for **Principal** and **Identity** object creation.</span></span>  
   
- 可配置的应用程序域特定策略定义了一些规则，用以决定同新的应用程序域关联的 **Principal** 对象类型。  在安全策略的允许范围内，运行时可创建 **Principal** 和 **Identity** 对象来反射同当前执行线程关联的操作系统标记。  默认情况下，运行时使用 **Principal** 和 **Identity** 对象表示未经身份验证的用户。  运行时不创建这些默认的 **Principal** 和 **Identity** 对象，除非代码尝试访问它们。  
+ <span data-ttu-id="cb039-132">可配置的应用程序域特定策略定义了一些规则，用以决定同新的应用程序域关联的 **Principal** 对象类型。</span><span class="sxs-lookup"><span data-stu-id="cb039-132">A configurable application domain-specific policy defines the rules for deciding what type of **Principal** object to associate with a new application domain.</span></span> <span data-ttu-id="cb039-133">在安全策略的允许范围内，运行时可创建 **Principal** 和 **Identity** 对象来反射与当前执行线程关联的操作系统标记。</span><span class="sxs-lookup"><span data-stu-id="cb039-133">Where security policy permits, the runtime can create **Principal** and **Identity** objects that reflect the operating system token associated with the current thread of execution.</span></span> <span data-ttu-id="cb039-134">默认情况下，运行时使用 **Principal** 和 **Identity** 对象表示未经身份验证的用户。</span><span class="sxs-lookup"><span data-stu-id="cb039-134">By default, the runtime uses **Principal** and **Identity** objects that represent unauthenticated users.</span></span> <span data-ttu-id="cb039-135">运行时不创建这些默认的 **Principal** 和 **Identity** 对象，除非代码尝试访问它们。</span><span class="sxs-lookup"><span data-stu-id="cb039-135">The runtime does not create these default **Principal** and **Identity** objects until the code attempts to access them.</span></span>  
   
- 创建应用程序域的受信任代码可设置应用程序域策略，以控制默认 **Principal** 和 **Identity** 对象的构造。  此应用程序域特定的策略适用于该应用程序域中的所有执行线程。  非托管的受信任宿主本身就具有设置此策略的能力，但托管代码必须具有控制域策略的 <xref:System.Security.Permissions.SecurityPermission?displayProperty=fullName> 才能设置此策略。  
+ <span data-ttu-id="cb039-136">创建应用程序域的受信任代码可设置应用程序域策略，以控制默认 **Principal** 和 **Identity** 对象的构造。</span><span class="sxs-lookup"><span data-stu-id="cb039-136">Trusted code that creates an application domain can set the application domain policy that controls construction of the default **Principal** and **Identity** objects.</span></span> <span data-ttu-id="cb039-137">此应用程序域特定策略适用于该应用程序域中的所有执行线程。</span><span class="sxs-lookup"><span data-stu-id="cb039-137">This application domain-specific policy applies to all execution threads in that application domain.</span></span> <span data-ttu-id="cb039-138">托管的受信任的主机本身就具有能够设置此策略，但设置此策略的托管的代码必须具有<xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>用于控制域策略。</span><span class="sxs-lookup"><span data-stu-id="cb039-138">An unmanaged, trusted host inherently has the ability to set this policy, but managed code that sets this policy must have the <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> for controlling domain policy.</span></span>  
   
- 在不同的应用程序域之间、但在同一进程内（因此在同一台计算机上）传输 **Principal** 对象时，远程基础结构将同调用方上下文相关联的、对 **Principal** 对象的引用复制到被调用方的上下文中。  
+ <span data-ttu-id="cb039-139">在不同的应用程序域之间、但在同一进程内（因此在同一台计算机上）传输 **Principal** 对象时，远程处理基础结构将与调用方上下文相关联的、对 **Principal** 对象的引用复制到被调用方的上下文中。</span><span class="sxs-lookup"><span data-stu-id="cb039-139">When transmitting a **Principal** object across application domains but within the same process (and therefore on the same computer), the remoting infrastructure copies a reference to the **Principal** object associated with the caller's context to the callee's context.</span></span>  
   
-## 请参阅  
- [如何：创建 WindowsPrincipal 对象](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)   
- [如何：创建 GenericPrincipal 和 GenericIdentity 对象](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)   
- [替换 Principal 对象](../../../docs/standard/security/replacing-a-principal-object.md)   
- [模拟与恢复](../../../docs/standard/security/impersonating-and-reverting.md)   
- [基于角色的安全性](../../../docs/standard/security/role-based-security.md)   
- [安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="cb039-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cb039-140">See Also</span></span>  
+ [<span data-ttu-id="cb039-141">如何：创建 WindowsPrincipal 对象</span><span class="sxs-lookup"><span data-stu-id="cb039-141">How to: Create a WindowsPrincipal Object</span></span>](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
+ [<span data-ttu-id="cb039-142">如何：创建 GenericPrincipal 和 GenericIdentity 对象</span><span class="sxs-lookup"><span data-stu-id="cb039-142">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
+ [<span data-ttu-id="cb039-143">替换主体对象</span><span class="sxs-lookup"><span data-stu-id="cb039-143">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [<span data-ttu-id="cb039-144">模拟与还原</span><span class="sxs-lookup"><span data-stu-id="cb039-144">Impersonating and Reverting</span></span>](../../../docs/standard/security/impersonating-and-reverting.md)  
+ [<span data-ttu-id="cb039-145">基于角色的安全性</span><span class="sxs-lookup"><span data-stu-id="cb039-145">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ [<span data-ttu-id="cb039-146">安全性的基础概念</span><span class="sxs-lookup"><span data-stu-id="cb039-146">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)

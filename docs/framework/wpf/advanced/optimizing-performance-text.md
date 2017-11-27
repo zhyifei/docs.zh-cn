@@ -1,177 +1,182 @@
 ---
-title: "优化性能：文本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "呈现文本"
-  - "超链接"
-  - "格式化文本 [WPF]"
-  - "文本性能"
-  - "标志符号"
+title: "优化性能：文本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- rendering text [WPF]
+- hyperlinks [WPF]
+- formatted text [WPF]
+- text [WPF], performance
+- glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 43fe1f9fa5189a3dfd5f700660f0528592382510
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 优化性能：文本
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包括对文本内容通过使用功能丰富的演示文稿的支持[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]控件。 通常可以将三个层中的文本呈现︰  
+# <a name="optimizing-performance-text"></a><span data-ttu-id="bea06-102">优化性能：文本</span><span class="sxs-lookup"><span data-stu-id="bea06-102">Optimizing Performance: Text</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="bea06-103"> 支持通过使用功能丰富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控件实现的文本内容演示。</span><span class="sxs-lookup"><span data-stu-id="bea06-103"> includes support for the presentation of text content through the use of feature-rich [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controls.</span></span> <span data-ttu-id="bea06-104">通常可以将文本呈现分为三层：</span><span class="sxs-lookup"><span data-stu-id="bea06-104">In general you can divide text rendering in three layers:</span></span>  
   
-1.  使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>直接对象。  
+1.  <span data-ttu-id="bea06-105">使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>直接对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-105">Using the <xref:System.Windows.Documents.Glyphs> and <xref:System.Windows.Media.GlyphRun> objects directly.</span></span>  
   
-2.  使用<xref:System.Windows.Media.FormattedText>对象。  
+2.  <span data-ttu-id="bea06-106">使用<xref:System.Windows.Media.FormattedText>对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-106">Using the <xref:System.Windows.Media.FormattedText> object.</span></span>  
   
-3.  使用高级别控件，如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。  
+3.  <span data-ttu-id="bea06-107">使用高级控件，如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-107">Using high-level controls, such as the <xref:System.Windows.Controls.TextBlock> and <xref:System.Windows.Documents.FlowDocument> objects.</span></span>  
   
- 本主题提供的文本呈现性能的建议。  
+ <span data-ttu-id="bea06-108">本主题提供文本呈现性能方面的建议。</span><span class="sxs-lookup"><span data-stu-id="bea06-108">This topic provides text rendering performance recommendations.</span></span>  
   
-   
   
 <a name="Glyph_Level"></a>   
-## <a name="rendering-text-at-the-glyph-level"></a>呈现标志符号级别的文本  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供高级的文本支持，包括具有直接访问权限的标志符号级别标记<xref:System.Windows.Documents.Glyphs>的用户想要截获并保存在格式化后的文本。 这些功能提供关键支持的不同文本呈现要求在每个以下方案。  
+## <a name="rendering-text-at-the-glyph-level"></a><span data-ttu-id="bea06-109">字形级别的呈现文本</span><span class="sxs-lookup"><span data-stu-id="bea06-109">Rendering Text at the Glyph Level</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="bea06-110">提供高级的文本支持包括直接访问的标志符号级标记<xref:System.Windows.Documents.Glyphs>的用户想要截获并保存在格式化后的文本。</span><span class="sxs-lookup"><span data-stu-id="bea06-110"> provides advanced text support including glyph-level markup with direct access to <xref:System.Windows.Documents.Glyphs> for customers who want to intercept and persist text after formatting.</span></span> <span data-ttu-id="bea06-111">这些功能为以下每种方案中不同的文本呈现要求提供关键支持。</span><span class="sxs-lookup"><span data-stu-id="bea06-111">These features provide critical support for the different text rendering requirements in each of the following scenarios.</span></span>  
   
--   屏幕上显示的固定格式文档。  
+-   <span data-ttu-id="bea06-112">固定格式文档的屏幕显示。</span><span class="sxs-lookup"><span data-stu-id="bea06-112">Screen display of fixed-format documents.</span></span>  
   
--   打印方案。  
+-   <span data-ttu-id="bea06-113">打印方案。</span><span class="sxs-lookup"><span data-stu-id="bea06-113">Print scenarios.</span></span>  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]作为设备的打印机语言。  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="bea06-114"> 作为设备打印机语言。</span><span class="sxs-lookup"><span data-stu-id="bea06-114"> as a device printer language.</span></span>  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]<span data-ttu-id="bea06-115">。</span><span class="sxs-lookup"><span data-stu-id="bea06-115">.</span></span>  
   
-    -   以前的打印机驱动程序，从输出[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]为固定格式的应用程序。  
+    -   <span data-ttu-id="bea06-116">以前的打印机驱动程序，从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 应用程序输出为固定格式。</span><span class="sxs-lookup"><span data-stu-id="bea06-116">Previous printer drivers, output from [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] applications to the fixed format.</span></span>  
   
-    -   打印后台处理格式。  
+    -   <span data-ttu-id="bea06-117">打印后台处理格式。</span><span class="sxs-lookup"><span data-stu-id="bea06-117">Print spool format.</span></span>  
   
--   固定格式的文档表示形式，包括以前版本的客户端[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]和其他计算设备。  
+-   <span data-ttu-id="bea06-118">固定格式的文档演示，包括以前版本的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 客户端和其他计算设备。</span><span class="sxs-lookup"><span data-stu-id="bea06-118">Fixed-format document representation, including clients for previous versions of [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] and other computing devices.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>旨在用于固定格式的文档演示文稿和打印方案。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]为常规布局提供了几个元素和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]方案如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 有关详细信息布局和[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]方案，请参阅[WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
+>  <span data-ttu-id="bea06-119"><xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>旨在固定格式的文档演示文稿和打印方案。</span><span class="sxs-lookup"><span data-stu-id="bea06-119"><xref:System.Windows.Documents.Glyphs> and <xref:System.Windows.Media.GlyphRun> are designed for fixed-format document presentation and print scenarios.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="bea06-120">为常规布局提供了多个元素和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]如方案<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="bea06-120"> provides several elements for general layout and [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenarios such as <xref:System.Windows.Controls.Label> and <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="bea06-121">有关布局和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案的详细信息，请参阅 [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="bea06-121">For more information on layout and [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios, see the [Typography in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).</span></span>  
   
- 下面的示例演示如何定义属性<xref:System.Windows.Documents.Glyphs>对象在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 <xref:System.Windows.Documents.Glyphs>对象表示的输出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 这些示例假定︰ 宋体、 Courier New 和 Times New Roman 字体安装在**C:\WINDOWS\Fonts**本地计算机上的文件夹。  
+ <span data-ttu-id="bea06-122">下面的示例演示如何定义属性<xref:System.Windows.Documents.Glyphs>对象在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bea06-122">The following examples show how to define properties for a <xref:System.Windows.Documents.Glyphs> object in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="bea06-123"><xref:System.Windows.Documents.Glyphs>对象表示的输出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bea06-123">The <xref:System.Windows.Documents.Glyphs> object represents the output of a <xref:System.Windows.Media.GlyphRun> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="bea06-124">示例假定本地计算机上的 **C:\WINDOWS\Fonts** 文件夹中安装了 Arial、Courier New 和 Times New Roman 字体。</span><span class="sxs-lookup"><span data-stu-id="bea06-124">The examples assume that the Arial, Courier New, and Times New Roman fonts are installed in the **C:\WINDOWS\Fonts** folder on the local computer.</span></span>  
   
- [!code-xml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
-### <a name="using-drawglyphrun"></a>使用 DrawGlyphRun  
- 如果具有自定义控件，并且您想要呈现标志符号，请使用<xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A>方法。  
+### <a name="using-drawglyphrun"></a><span data-ttu-id="bea06-125">使用 DrawGlyphRun</span><span class="sxs-lookup"><span data-stu-id="bea06-125">Using DrawGlyphRun</span></span>  
+ <span data-ttu-id="bea06-126">如果你必须自定义控件，你想要呈现标志符号，请使用<xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="bea06-126">If you have custom control and you want to render glyphs, use the <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> method.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此外提供了自定义设置文本格式使用较低级别服务<xref:System.Windows.Media.FormattedText>对象。 在呈现文本的最有效方法[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是通过生成文本的内容的标志符号级别使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>。 但是，这一高效率的成本是易于使用丰富的文本格式，这些是内置的功能丧失的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控件，如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="bea06-127">此外提供了使用格式设置的自定义文本的较低级别服务<xref:System.Windows.Media.FormattedText>对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-127"> also provides lower-level services for custom text formatting through the use of the <xref:System.Windows.Media.FormattedText> object.</span></span> <span data-ttu-id="bea06-128">中的呈现文本的最高效方式[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是通过生成标志符号级别使用的文本内容<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>。</span><span class="sxs-lookup"><span data-stu-id="bea06-128">The most efficient way of rendering text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is by generating text content at the glyph level using <xref:System.Windows.Documents.Glyphs> and <xref:System.Windows.Media.GlyphRun>.</span></span> <span data-ttu-id="bea06-129">但是，此效率的成本是易于使用丰富文本格式，这是内置的功能的损失的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控件，如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>。</span><span class="sxs-lookup"><span data-stu-id="bea06-129">However, the cost of this efficiency is the loss of easy to use rich text formatting, which are built-in features of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controls, such as <xref:System.Windows.Controls.TextBlock> and <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
 <a name="FormattedText_Object"></a>   
-## <a name="formattedtext-object"></a>FormattedText 对象  
- <xref:System.Windows.Media.FormattedText>对象，您可以绘制多行文本，在其中的文本中的每个字符可以单独设置格式。 有关详细信息，请参阅[绘图格式的文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。  
+## <a name="formattedtext-object"></a><span data-ttu-id="bea06-130">FormattedText 对象</span><span class="sxs-lookup"><span data-stu-id="bea06-130">FormattedText Object</span></span>  
+ <span data-ttu-id="bea06-131"><xref:System.Windows.Media.FormattedText>对象允许你绘制多行文本，在其中每个字符文本中的可以单独设置格式。</span><span class="sxs-lookup"><span data-stu-id="bea06-131">The <xref:System.Windows.Media.FormattedText> object allows you to draw multi-line text, in which each character in the text can be individually formatted.</span></span> <span data-ttu-id="bea06-132">有关详细信息，请参阅[绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。</span><span class="sxs-lookup"><span data-stu-id="bea06-132">For more information, see [Drawing Formatted Text](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md).</span></span>  
   
- 若要创建带格式的文本，请调用<xref:System.Windows.Media.FormattedText.%23ctor%2A>构造函数来创建<xref:System.Windows.Media.FormattedText>对象。 一旦您已经创建初始格式化的文本字符串，您可以应用范围的格式样式。 如果您的应用程序想要实现其自己的布局，则<xref:System.Windows.Media.FormattedText>对象是更好的选择，比使用一个控件，如<xref:System.Windows.Controls.TextBlock>。 有关详细信息<xref:System.Windows.Media.FormattedText>对象，请参阅[绘图格式的文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。  
+ <span data-ttu-id="bea06-133">若要创建带格式的文本，请调用<xref:System.Windows.Media.FormattedText.%23ctor%2A>构造函数来创建<xref:System.Windows.Media.FormattedText>对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-133">To create formatted text, call the <xref:System.Windows.Media.FormattedText.%23ctor%2A> constructor to create a <xref:System.Windows.Media.FormattedText> object.</span></span> <span data-ttu-id="bea06-134">创建初始格式化文本字符串后，便可应用某一范围的格式样式。</span><span class="sxs-lookup"><span data-stu-id="bea06-134">Once you have created the initial formatted text string, you can apply a range of formatting styles.</span></span> <span data-ttu-id="bea06-135">如果你的应用程序想要实现其自己的布局，则<xref:System.Windows.Media.FormattedText>对象是更好的选择比使用一个控件，如<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="bea06-135">If your application wants to implement its own layout, then the <xref:System.Windows.Media.FormattedText> object is better choice than using a control, such as <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="bea06-136">有关详细信息<xref:System.Windows.Media.FormattedText>对象，请参阅[绘制格式的文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。</span><span class="sxs-lookup"><span data-stu-id="bea06-136">For more information on the <xref:System.Windows.Media.FormattedText> object, see [Drawing Formatted Text](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md) .</span></span>  
   
- <xref:System.Windows.Media.FormattedText>对象提供低级别的文本格式设置功能。 可以将多个格式设置样式应用到一个或多个字符。 例如，您可以调用<xref:System.Windows.Media.FormattedText.SetFontSize%2A>和<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>方法来更改文本中的前五个字符的格式。  
+ <span data-ttu-id="bea06-137"><xref:System.Windows.Media.FormattedText>对象提供低级别的文本格式设置功能。</span><span class="sxs-lookup"><span data-stu-id="bea06-137">The <xref:System.Windows.Media.FormattedText> object provides low-level text formatting capability.</span></span> <span data-ttu-id="bea06-138">可向一个或多个字符应用多种格式样式。</span><span class="sxs-lookup"><span data-stu-id="bea06-138">You can apply multiple formatting styles to one or more characters.</span></span> <span data-ttu-id="bea06-139">例如，您可以调用<xref:System.Windows.Media.FormattedText.SetFontSize%2A>和<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>方法来更改格式设置的文本中的前五个字符。</span><span class="sxs-lookup"><span data-stu-id="bea06-139">For example, you could call both the <xref:System.Windows.Media.FormattedText.SetFontSize%2A> and <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> methods to change the formatting of the first five characters in the text.</span></span>  
   
- 下面的代码示例创建<xref:System.Windows.Media.FormattedText>对象并将其呈现。  
+ <span data-ttu-id="bea06-140">下面的代码示例创建<xref:System.Windows.Media.FormattedText>对象并将其呈现。</span><span class="sxs-lookup"><span data-stu-id="bea06-140">The following code example creates a <xref:System.Windows.Media.FormattedText> object and renders it.</span></span>  
   
  [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
  [!code-vb[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 <a name="FlowDocument_TextBlock_Label"></a>   
-## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument、 TextBlock 和标签控件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包括多个控件的文本绘制到屏幕。 每个控件面向不同的方案，并具有自己的功能和限制的列表。  
+## <a name="flowdocument-textblock-and-label-controls"></a><span data-ttu-id="bea06-141">FlowDocument、TextBlock 和 Label 控件</span><span class="sxs-lookup"><span data-stu-id="bea06-141">FlowDocument, TextBlock, and Label Controls</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="bea06-142"> 包括多个用于在屏幕中绘制文本的控件。</span><span class="sxs-lookup"><span data-stu-id="bea06-142"> includes multiple controls for drawing text to the screen.</span></span> <span data-ttu-id="bea06-143">每个控件都面向不同的方案，并具有自己的功能和限制列表。</span><span class="sxs-lookup"><span data-stu-id="bea06-143">Each control is targeted to a different scenario and has its own list of features and limitations.</span></span>  
   
-### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument 对性能的影响多个 TextBlock 或标签  
- 一般情况下， <xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label>时需要极少的文字支持时，可以使用。 <xref:System.Windows.Documents.FlowDocument>元素是可重流动支持丰富的内容，显示的文档容器，因此，具有比使用较好的性能效果<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控件。  
+### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a><span data-ttu-id="bea06-144">FlowDocument 对性能的影响比 TextBlock 或 Label 大</span><span class="sxs-lookup"><span data-stu-id="bea06-144">FlowDocument Impacts Performance More than TextBlock or Label</span></span>  
+ <span data-ttu-id="bea06-145">一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的如中的简短句子时应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bea06-145">In general, the <xref:System.Windows.Controls.TextBlock> element should be used when limited text support is required, such as a brief sentence in a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span> <span data-ttu-id="bea06-146"><xref:System.Windows.Controls.Label>可在时极少的文字支持是必需的。</span><span class="sxs-lookup"><span data-stu-id="bea06-146"><xref:System.Windows.Controls.Label> can be used when minimal text support is required.</span></span> <span data-ttu-id="bea06-147"><xref:System.Windows.Documents.FlowDocument>元素是支持的内容，丰富演示文稿的可重流动文档的容器，因此，包括性能影响最大比使用<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控件。</span><span class="sxs-lookup"><span data-stu-id="bea06-147">The <xref:System.Windows.Documents.FlowDocument> element is a container for re-flowable documents that support rich presentation of content, and therefore, has a greater performance impact than using the <xref:System.Windows.Controls.TextBlock> or <xref:System.Windows.Controls.Label> controls.</span></span>  
   
- 有关详细信息<xref:System.Windows.Documents.FlowDocument>，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ <span data-ttu-id="bea06-148">有关详细信息<xref:System.Windows.Documents.FlowDocument>，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="bea06-148">For more information on <xref:System.Windows.Documents.FlowDocument>, see [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).</span></span>  
   
-### <a name="avoid-using-textblock-in-flowdocument"></a>应避免在 FlowDocument 使用 TextBlock  
- <xref:System.Windows.Controls.TextBlock>元素派生自<xref:System.Windows.UIElement>。 <xref:System.Windows.Documents.Run>元素派生自<xref:System.Windows.Documents.TextElement>，这是比使用成本较低<xref:System.Windows.UIElement>的派生的对象。 如果可能，请使用<xref:System.Windows.Documents.Run>而不是<xref:System.Windows.Controls.TextBlock>用于显示文本中的内容<xref:System.Windows.Documents.FlowDocument>。  
+### <a name="avoid-using-textblock-in-flowdocument"></a><span data-ttu-id="bea06-149">避免在 FlowDocument 中使用 TextBlock</span><span class="sxs-lookup"><span data-stu-id="bea06-149">Avoid Using TextBlock in FlowDocument</span></span>  
+ <span data-ttu-id="bea06-150"><xref:System.Windows.Controls.TextBlock>元素派生自<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="bea06-150">The <xref:System.Windows.Controls.TextBlock> element is derived from <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="bea06-151"><xref:System.Windows.Documents.Run>元素派生自<xref:System.Windows.Documents.TextElement>，这是比使用成本较低<xref:System.Windows.UIElement>-派生对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-151">The <xref:System.Windows.Documents.Run> element is derived from <xref:System.Windows.Documents.TextElement>, which is less costly to use than a <xref:System.Windows.UIElement>-derived object.</span></span> <span data-ttu-id="bea06-152">如果可能，请使用<xref:System.Windows.Documents.Run>而非<xref:System.Windows.Controls.TextBlock>用于显示文本中的内容<xref:System.Windows.Documents.FlowDocument>。</span><span class="sxs-lookup"><span data-stu-id="bea06-152">When possible, use <xref:System.Windows.Documents.Run> rather than <xref:System.Windows.Controls.TextBlock> for displaying text content in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
- 下面的标记示例阐释了两种方法中设置文本内容<xref:System.Windows.Documents.FlowDocument>:  
+ <span data-ttu-id="bea06-153">以下的标记示例阐释了两种方法中设置文本内容<xref:System.Windows.Documents.FlowDocument>:</span><span class="sxs-lookup"><span data-stu-id="bea06-153">The following markup sample illustrates two ways of setting text content within a <xref:System.Windows.Documents.FlowDocument>:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
+ [!code-xaml[Performance#PerformanceSnippet13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
   
-### <a name="avoid-using-run-to-set-text-properties"></a>避免使用运行来设置文本属性  
- 一般情况下，使用<xref:System.Windows.Documents.Run>内<xref:System.Windows.Controls.TextBlock>是更好的性能比不使用显式密集型<xref:System.Windows.Documents.Run>根本对象。 如果您使用<xref:System.Windows.Documents.Run>以便设置文本属性，请设置这些属性直接在上<xref:System.Windows.Controls.TextBlock>相反。  
+### <a name="avoid-using-run-to-set-text-properties"></a><span data-ttu-id="bea06-154">避免使用 Run 来设置文本属性</span><span class="sxs-lookup"><span data-stu-id="bea06-154">Avoid Using Run to Set Text Properties</span></span>  
+ <span data-ttu-id="bea06-155">一般情况下，使用<xref:System.Windows.Documents.Run>内<xref:System.Windows.Controls.TextBlock>是更好的性能比不使用显式密集型<xref:System.Windows.Documents.Run>根本对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-155">In general, using a <xref:System.Windows.Documents.Run> within a <xref:System.Windows.Controls.TextBlock> is more performance intensive than not using an explicit <xref:System.Windows.Documents.Run> object at all.</span></span> <span data-ttu-id="bea06-156">如果你使用<xref:System.Windows.Documents.Run>才能设置文本属性，直接在上设置这些属性<xref:System.Windows.Controls.TextBlock>相反。</span><span class="sxs-lookup"><span data-stu-id="bea06-156">If you are using a <xref:System.Windows.Documents.Run> in order to set text properties, set those properties directly on the <xref:System.Windows.Controls.TextBlock> instead.</span></span>  
   
- 下面的标记示例阐释了这两种方式的 text 属性，在这种情况下，设置<xref:System.Windows.Controls.TextBlock.FontWeight%2A>属性︰  
+ <span data-ttu-id="bea06-157">以下的标记示例阐释了这两种方式的 text 属性，在这种情况下，设置<xref:System.Windows.Controls.TextBlock.FontWeight%2A>属性：</span><span class="sxs-lookup"><span data-stu-id="bea06-157">The following markup sample illustrates these two ways of setting a text property, in this case, the <xref:System.Windows.Controls.TextBlock.FontWeight%2A> property:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
+ [!code-xaml[Performance#PerformanceSnippet12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
   
- 下表显示了显示 1000 个成本<xref:System.Windows.Controls.TextBlock>对象显式超时和没有显式<xref:System.Windows.Documents.Run>。  
+ <span data-ttu-id="bea06-158">下表显示显示 1000 个的成本<xref:System.Windows.Controls.TextBlock>对象具有和没有显式<xref:System.Windows.Documents.Run>。</span><span class="sxs-lookup"><span data-stu-id="bea06-158">The following table shows the cost of displaying 1000 <xref:System.Windows.Controls.TextBlock> objects with and without an explicit <xref:System.Windows.Documents.Run>.</span></span>  
   
-|**TextBlock 类型**|**创建时间 （毫秒）**|**呈现时间 （毫秒）**|  
+|<span data-ttu-id="bea06-159">**TextBlock 类型**</span><span class="sxs-lookup"><span data-stu-id="bea06-159">**TextBlock type**</span></span>|<span data-ttu-id="bea06-160">**创建时间 (ms)**</span><span class="sxs-lookup"><span data-stu-id="bea06-160">**Creation time (ms)**</span></span>|<span data-ttu-id="bea06-161">**呈现时间 (ms)**</span><span class="sxs-lookup"><span data-stu-id="bea06-161">**Render time (ms)**</span></span>|  
 |------------------------|------------------------------|----------------------------|  
-|运行设置文本属性|146|540|  
-|TextBlock 设置文本属性|43|453|  
+|<span data-ttu-id="bea06-162">运行设置文本属性</span><span class="sxs-lookup"><span data-stu-id="bea06-162">Run setting text properties</span></span>|<span data-ttu-id="bea06-163">146</span><span class="sxs-lookup"><span data-stu-id="bea06-163">146</span></span>|<span data-ttu-id="bea06-164">540</span><span class="sxs-lookup"><span data-stu-id="bea06-164">540</span></span>|  
+|<span data-ttu-id="bea06-165">TextBlock 设置文本属性</span><span class="sxs-lookup"><span data-stu-id="bea06-165">TextBlock setting text properties</span></span>|<span data-ttu-id="bea06-166">43</span><span class="sxs-lookup"><span data-stu-id="bea06-166">43</span></span>|<span data-ttu-id="bea06-167">453</span><span class="sxs-lookup"><span data-stu-id="bea06-167">453</span></span>|  
   
-### <a name="avoid-databinding-to-the-labelcontent-property"></a>避免对 Label.Content 属性进行数据绑定  
- 假设您有<xref:System.Windows.Controls.Label>从经常更新的对象<xref:System.String>源。 当数据绑定<xref:System.Windows.Controls.Label>元素的<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为<xref:System.String>源对象时，您可能会遇到性能不佳。 每次源<xref:System.String>更新时，旧<xref:System.String>对象是放弃，并且一个新<xref:System.String>重新创建，因为<xref:System.String>对象是不可变的不能对其进行修改。 而这又会导致<xref:System.Windows.Controls.ContentPresenter>的<xref:System.Windows.Controls.Label>对象放弃其旧内容，并重新生成新的内容，以显示新<xref:System.String>。  
+### <a name="avoid-databinding-to-the-labelcontent-property"></a><span data-ttu-id="bea06-168">避免对 Label.Content 属性进行数据绑定</span><span class="sxs-lookup"><span data-stu-id="bea06-168">Avoid Databinding to the Label.Content Property</span></span>  
+ <span data-ttu-id="bea06-169">假设你有<xref:System.Windows.Controls.Label>从经常更新的对象<xref:System.String>源。</span><span class="sxs-lookup"><span data-stu-id="bea06-169">Imagine a scenario where you have a <xref:System.Windows.Controls.Label> object that is updated frequently from a <xref:System.String> source.</span></span> <span data-ttu-id="bea06-170">当数据绑定<xref:System.Windows.Controls.Label>元素的<xref:System.Windows.Controls.ContentControl.Content%2A>属性<xref:System.String>源对象，你可能会遇到性能不佳。</span><span class="sxs-lookup"><span data-stu-id="bea06-170">When data binding the <xref:System.Windows.Controls.Label> element's <xref:System.Windows.Controls.ContentControl.Content%2A> property to the <xref:System.String> source object, you may experience poor performance.</span></span> <span data-ttu-id="bea06-171">每次源<xref:System.String>更新时，旧<xref:System.String>对象是放弃，并且新<xref:System.String>重新创建-因为<xref:System.String>对象是不可变的不能修改它。</span><span class="sxs-lookup"><span data-stu-id="bea06-171">Each time the source <xref:System.String> is updated, the old <xref:System.String> object is discarded and a new <xref:System.String> is recreated—because a <xref:System.String> object is immutable, it cannot be modified.</span></span> <span data-ttu-id="bea06-172">这反过来会导致<xref:System.Windows.Controls.ContentPresenter>的<xref:System.Windows.Controls.Label>对象以放弃其旧内容，并重新生成新的内容，以显示新<xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="bea06-172">This, in turn, causes the <xref:System.Windows.Controls.ContentPresenter> of the <xref:System.Windows.Controls.Label> object to discard its old content and regenerate the new content to display the new <xref:System.String>.</span></span>  
   
- 此问题的解决方案很简单。 如果<xref:System.Windows.Controls.Label>未设置为一个自定义<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>值时，请替换<xref:System.Windows.Controls.Label>与<xref:System.Windows.Controls.TextBlock>和数据绑定其<xref:System.Windows.Controls.TextBlock.Text%2A>属性设置为源字符串。  
+ <span data-ttu-id="bea06-173">此问题的解决方法很简单。</span><span class="sxs-lookup"><span data-stu-id="bea06-173">The solution to this problem is simple.</span></span> <span data-ttu-id="bea06-174">如果<xref:System.Windows.Controls.Label>未设置为自定义<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>值时，请替换<xref:System.Windows.Controls.Label>与<xref:System.Windows.Controls.TextBlock>和数据绑定其<xref:System.Windows.Controls.TextBlock.Text%2A>的源字符串的属性。</span><span class="sxs-lookup"><span data-stu-id="bea06-174">If the <xref:System.Windows.Controls.Label> is not set to a custom <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> value, replace the <xref:System.Windows.Controls.Label> with a <xref:System.Windows.Controls.TextBlock> and data bind its <xref:System.Windows.Controls.TextBlock.Text%2A> property to the source string.</span></span>  
   
-|**数据绑定属性**|**更新时间 （毫秒）**|  
+|<span data-ttu-id="bea06-175">**数据绑定属性**</span><span class="sxs-lookup"><span data-stu-id="bea06-175">**Data bound property**</span></span>|<span data-ttu-id="bea06-176">**更新时间 (ms)**</span><span class="sxs-lookup"><span data-stu-id="bea06-176">**Update time (ms)**</span></span>|  
 |-----------------------------|----------------------------|  
-|Label.Content|835|  
-|TextBlock.Text|242|  
+|<span data-ttu-id="bea06-177">Label.Content</span><span class="sxs-lookup"><span data-stu-id="bea06-177">Label.Content</span></span>|<span data-ttu-id="bea06-178">835</span><span class="sxs-lookup"><span data-stu-id="bea06-178">835</span></span>|  
+|<span data-ttu-id="bea06-179">TextBlock.Text</span><span class="sxs-lookup"><span data-stu-id="bea06-179">TextBlock.Text</span></span>|<span data-ttu-id="bea06-180">242</span><span class="sxs-lookup"><span data-stu-id="bea06-180">242</span></span>|  
   
 <a name="Hyperlink"></a>   
-## <a name="hyperlink"></a>超链接  
- <xref:System.Windows.Documents.Hyperlink>对象为内联级别的流内容元素，它允许您承载在流内容中的超链接。  
+## <a name="hyperlink"></a><span data-ttu-id="bea06-181">超链接</span><span class="sxs-lookup"><span data-stu-id="bea06-181">Hyperlink</span></span>  
+ <span data-ttu-id="bea06-182"><xref:System.Windows.Documents.Hyperlink>对象是允许你在流内容中承载超链接的内联级别流内容元素。</span><span class="sxs-lookup"><span data-stu-id="bea06-182">The <xref:System.Windows.Documents.Hyperlink> object is an inline-level flow content element that allows you to host hyperlinks within the flow content.</span></span>  
   
-### <a name="combine-hyperlinks-in-one-textblock-object"></a>组合中一个 TextBlock 对象的超链接  
- 您可以优化使用多个<xref:System.Windows.Documents.Hyperlink>按在同一个分组元素<xref:System.Windows.Controls.TextBlock>。 这可帮助您在您的应用程序中创建的对象的数量降至最低。 例如，你可能想要显示多个超链接，如下所示︰  
+### <a name="combine-hyperlinks-in-one-textblock-object"></a><span data-ttu-id="bea06-183">在一个 TextBlock 对象中合并超链接</span><span class="sxs-lookup"><span data-stu-id="bea06-183">Combine Hyperlinks in One TextBlock Object</span></span>  
+ <span data-ttu-id="bea06-184">你可以优化使用多个<xref:System.Windows.Documents.Hyperlink>通过将它们组合在一起在同一元素<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="bea06-184">You can optimize the use of multiple <xref:System.Windows.Documents.Hyperlink> elements by grouping them together within the same <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="bea06-185">这有助于最小化在应用程序中创建的对象的数量。</span><span class="sxs-lookup"><span data-stu-id="bea06-185">This helps to minimize the number of objects you create in your application.</span></span> <span data-ttu-id="bea06-186">例如，可显示多个超链接，如下所示：</span><span class="sxs-lookup"><span data-stu-id="bea06-186">For example, you may want to display multiple hyperlinks, such as the following:</span></span>  
   
- MSN 主页 |我 MSN  
+ <span data-ttu-id="bea06-187">MSN 主页 &#124; 我的 MSN</span><span class="sxs-lookup"><span data-stu-id="bea06-187">MSN Home &#124; My MSN</span></span>  
   
- 下面的标记示例显示了多个<xref:System.Windows.Controls.TextBlock>元素用来显示这些超链接︰  
+ <span data-ttu-id="bea06-188">下面的标记示例演示多个<xref:System.Windows.Controls.TextBlock>元素用于显示这些超链接：</span><span class="sxs-lookup"><span data-stu-id="bea06-188">The following markup example shows multiple <xref:System.Windows.Controls.TextBlock> elements used to display the hyperlinks:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
+ [!code-xaml[Performance#PerformanceSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
   
- 下面的标记示例显示了更高效的方法显示的超链接，这一次，使用单个<xref:System.Windows.Controls.TextBlock>:  
+ <span data-ttu-id="bea06-189">下面的标记示例演示更有效的方式显示的超链接，此时，使用单个<xref:System.Windows.Controls.TextBlock>:</span><span class="sxs-lookup"><span data-stu-id="bea06-189">The following markup example shows a more efficient way of displaying the hyperlinks, this time, using a single <xref:System.Windows.Controls.TextBlock>:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
+ [!code-xaml[Performance#PerformanceSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
   
-### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>仅在 MouseEnter 事件上的超链接显示下划线  
- 一个<xref:System.Windows.TextDecoration>对象是可以添加到文本的视觉装饰; 但是，它可以是实例化大幅降低性能。 如果进行了充分利用<xref:System.Windows.Documents.Hyperlink>元素，请考虑仅在触发某个事件，如时显示下划线<xref:System.Windows.ContentElement.MouseEnter>事件。 有关详细信息，请参阅[指定是否为超链接添加下划线](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)。  
+### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a><span data-ttu-id="bea06-190">仅在 MouseEnter 事件的超链接中显示下划线</span><span class="sxs-lookup"><span data-stu-id="bea06-190">Showing Underlines on Hyperlinks Only on MouseEnter Events</span></span>  
+ <span data-ttu-id="bea06-191">A<xref:System.Windows.TextDecoration>对象是你可以将其添加到文本的视觉装饰; 但是，可将其实例化大幅降低性能。</span><span class="sxs-lookup"><span data-stu-id="bea06-191">A <xref:System.Windows.TextDecoration> object is a visual ornamentation that you can add to text; however, it can be performance intensive to instantiate.</span></span> <span data-ttu-id="bea06-192">如果你进行大量使用<xref:System.Windows.Documents.Hyperlink>元素，请考虑仅当如触发事件时，才显示下划线<xref:System.Windows.ContentElement.MouseEnter>事件。</span><span class="sxs-lookup"><span data-stu-id="bea06-192">If you make extensive use of <xref:System.Windows.Documents.Hyperlink> elements, consider showing an underline only when triggering an event, such as the <xref:System.Windows.ContentElement.MouseEnter> event.</span></span> <span data-ttu-id="bea06-193">有关详细信息，请参阅[指定是否为超链接添加下划线](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)。</span><span class="sxs-lookup"><span data-stu-id="bea06-193">For more information, see [Specify Whether a Hyperlink is Underlined](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).</span></span>  
   
- ![显示 Textdecoration 的超链接](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
-超链接出现在 MouseEnter  
+ <span data-ttu-id="bea06-194">![显示 Textdecoration 的超](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")</span><span class="sxs-lookup"><span data-stu-id="bea06-194">![Hyperlinks displaying TextDecorations](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")</span></span>  
+<span data-ttu-id="bea06-195">MouseEnter 上显示的超链接</span><span class="sxs-lookup"><span data-stu-id="bea06-195">Hyperlink appearing on MouseEnter</span></span>  
   
- 下面的标记的示例演示<xref:System.Windows.Documents.Hyperlink>使用和未使用下划线定义︰  
+ <span data-ttu-id="bea06-196">下面的标记示例演示<xref:System.Windows.Documents.Hyperlink>使用和未使用下划线定义：</span><span class="sxs-lookup"><span data-stu-id="bea06-196">The following markup sample shows a <xref:System.Windows.Documents.Hyperlink> defined with and without an underline:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+ [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
- 下表显示了显示 1000 个的性能开销<xref:System.Windows.Documents.Hyperlink>带以及不带下划线的元素。  
+ <span data-ttu-id="bea06-197">下表显示显示 1000 个的性能成本<xref:System.Windows.Documents.Hyperlink>元素与和未使用下划线。</span><span class="sxs-lookup"><span data-stu-id="bea06-197">The following table shows the performance cost of displaying 1000 <xref:System.Windows.Documents.Hyperlink> elements with and without an underline.</span></span>  
   
-|**超链接**|**创建时间 （毫秒）**|**呈现时间 （毫秒）**|  
+|<span data-ttu-id="bea06-198">**超链接**</span><span class="sxs-lookup"><span data-stu-id="bea06-198">**Hyperlink**</span></span>|<span data-ttu-id="bea06-199">**创建时间 (ms)**</span><span class="sxs-lookup"><span data-stu-id="bea06-199">**Creation time (ms)**</span></span>|<span data-ttu-id="bea06-200">**呈现时间 (ms)**</span><span class="sxs-lookup"><span data-stu-id="bea06-200">**Render time (ms)**</span></span>|  
 |-------------------|------------------------------|----------------------------|  
-|带有下划线|289|1130|  
-|未下划线|299|776|  
+|<span data-ttu-id="bea06-201">使用下划线</span><span class="sxs-lookup"><span data-stu-id="bea06-201">With underline</span></span>|<span data-ttu-id="bea06-202">289</span><span class="sxs-lookup"><span data-stu-id="bea06-202">289</span></span>|<span data-ttu-id="bea06-203">1130</span><span class="sxs-lookup"><span data-stu-id="bea06-203">1130</span></span>|  
+|<span data-ttu-id="bea06-204">不使用下划线</span><span class="sxs-lookup"><span data-stu-id="bea06-204">Without underline</span></span>|<span data-ttu-id="bea06-205">299</span><span class="sxs-lookup"><span data-stu-id="bea06-205">299</span></span>|<span data-ttu-id="bea06-206">776</span><span class="sxs-lookup"><span data-stu-id="bea06-206">776</span></span>|  
   
 <a name="Text_Formatting_Features"></a>   
-## <a name="text-formatting-features"></a>文本格式设置功能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供了丰富文本格式的服务，如自动断字。 这些服务可能会影响应用程序的性能，应仅在需要时使用。  
+## <a name="text-formatting-features"></a><span data-ttu-id="bea06-207">文本格式设置功能</span><span class="sxs-lookup"><span data-stu-id="bea06-207">Text Formatting Features</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="bea06-208"> 提供丰富的文本格式设置服务，如自动断字。</span><span class="sxs-lookup"><span data-stu-id="bea06-208"> provides rich text formatting services, such as automatic hyphenations.</span></span> <span data-ttu-id="bea06-209">这些服务可能会影响应用程序性能，应仅在需要时使用。</span><span class="sxs-lookup"><span data-stu-id="bea06-209">These services may impact application performance and should only be used when needed.</span></span>  
   
-### <a name="avoid-unnecessary-use-of-hyphenation"></a>避免不必要地使用断字  
- 自动断字功能查找行的文本，连字符断点，并允许附加断点位置中的行<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 默认情况下，这些对象中禁用自动断字功能。 可以通过将该对象的 IsHyphenationEnabled 属性设置为启用此功能`true`。 但是，启用此功能会导致[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]启动[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]互操作性，可能会影响应用程序的性能。 建议，除非您需要它，并使用自动断字功能。  
+### <a name="avoid-unnecessary-use-of-hyphenation"></a><span data-ttu-id="bea06-210">避免不必要地使用断字</span><span class="sxs-lookup"><span data-stu-id="bea06-210">Avoid Unnecessary Use of Hyphenation</span></span>  
+ <span data-ttu-id="bea06-211">自动断字功能发现连字符断点行文本，并允许其他中断位置中的行<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="bea06-211">Automatic hyphenation finds hyphen breakpoints for lines of text, and allows additional break positions for lines in <xref:System.Windows.Controls.TextBlock> and <xref:System.Windows.Documents.FlowDocument> objects.</span></span> <span data-ttu-id="bea06-212">默认禁用这些对象中的自动断字功能。</span><span class="sxs-lookup"><span data-stu-id="bea06-212">By default, the automatic hyphenation feature is disabled in these objects.</span></span> <span data-ttu-id="bea06-213">通过将该对象的 IsHyphenationEnabled 属性设置为 `true`，可以启用此功能。</span><span class="sxs-lookup"><span data-stu-id="bea06-213">You can enable this feature by setting the object's IsHyphenationEnabled property to `true`.</span></span> <span data-ttu-id="bea06-214">但是，启用此功能会导致 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 启动 [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] 互操作性，这可能会影响应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="bea06-214">However, enabling this feature causes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to initiate [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] interoperability, which can impact application performance.</span></span> <span data-ttu-id="bea06-215">除非需要，否则不建议使用自动断字功能。</span><span class="sxs-lookup"><span data-stu-id="bea06-215">It is recommended that you do not use automatic hyphenation unless you need it.</span></span>  
   
-### <a name="use-figures-carefully"></a>谨慎使用图形  
- 一个<xref:System.Windows.Documents.Figure>元素代表可以是绝对定位在某一页内容的流内容的一部分。 在某些情况下，<xref:System.Windows.Documents.Figure>可能会导致整个页后，可以自动重新设置格式的如果其位置与已布局的内容相冲突。 通过组合在一起不需要重新格式化的可能性降到最低<xref:System.Windows.Documents.Figure>旁边对方，或者将它们声明中固定的页大小的情况下的内容的顶部附近的元素。  
+### <a name="use-figures-carefully"></a><span data-ttu-id="bea06-216">谨慎使用图形</span><span class="sxs-lookup"><span data-stu-id="bea06-216">Use Figures Carefully</span></span>  
+ <span data-ttu-id="bea06-217">A<xref:System.Windows.Documents.Figure>元素表示可以是绝对定位的内容页中的流内容的一部分。</span><span class="sxs-lookup"><span data-stu-id="bea06-217">A <xref:System.Windows.Documents.Figure> element represents a portion of flow content that can be absolutely-positioned within a page of content.</span></span> <span data-ttu-id="bea06-218">在某些情况下，<xref:System.Windows.Documents.Figure>可能会导致整个页面自动重新设置格式的如果其位置与内容已经过布局的冲突。可以通过组合在一起的不必要重新格式化的可能性降至<xref:System.Windows.Documents.Figure>旁边，或者将它们声明在固定的页大小方案中的内容的顶部附近的元素。</span><span class="sxs-lookup"><span data-stu-id="bea06-218">In some cases, a <xref:System.Windows.Documents.Figure> may cause an entire page to automatically reformat if its position collides with content that has already been laid-out. You can minimize the possibility of unnecessary reformatting by either grouping <xref:System.Windows.Documents.Figure> elements next to each other, or declaring them near the top of content in a fixed page size scenario.</span></span>  
   
-### <a name="optimal-paragraph"></a>最佳段落  
- 最佳段落功能的<xref:System.Windows.Documents.FlowDocument>对象段落的布局，以便尽可能均匀地分布空白区域。 默认情况下，最佳段落功能被禁用。 可以通过将对象设置启用此功能<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>属性设置为`true`。 但是，启用此功能会影响应用程序的性能。 建议您不要使用最佳段落功能，除非您需要它。  
+### <a name="optimal-paragraph"></a><span data-ttu-id="bea06-219">最佳段落</span><span class="sxs-lookup"><span data-stu-id="bea06-219">Optimal Paragraph</span></span>  
+ <span data-ttu-id="bea06-220">最佳段落功能<xref:System.Windows.Documents.FlowDocument>对象布局在段落，以便尽可能均匀地分发的空白区域。</span><span class="sxs-lookup"><span data-stu-id="bea06-220">The optimal paragraph feature of the <xref:System.Windows.Documents.FlowDocument> object lays out paragraphs so that white space is distributed as evenly as possible.</span></span> <span data-ttu-id="bea06-221">默认禁用最佳段落功能。</span><span class="sxs-lookup"><span data-stu-id="bea06-221">By default, the optimal paragraph feature is disabled.</span></span> <span data-ttu-id="bea06-222">你可以启用此功能，通过设置对象的<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="bea06-222">You can enable this feature by setting the object's <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> property to `true`.</span></span> <span data-ttu-id="bea06-223">但是，启用此功能会影响应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="bea06-223">However, enabling this feature impacts application performance.</span></span> <span data-ttu-id="bea06-224">除非需要，否则不建议使用最佳段落功能。</span><span class="sxs-lookup"><span data-stu-id="bea06-224">It is recommended that you do not use the optimal paragraph feature unless you need it.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [布局和设计](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [二维图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="bea06-225">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bea06-225">See Also</span></span>  
+ [<span data-ttu-id="bea06-226">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="bea06-226">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="bea06-227">规划应用程序性能</span><span class="sxs-lookup"><span data-stu-id="bea06-227">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="bea06-228">利用硬件</span><span class="sxs-lookup"><span data-stu-id="bea06-228">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="bea06-229">布局和示例</span><span class="sxs-lookup"><span data-stu-id="bea06-229">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="bea06-230">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="bea06-230">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="bea06-231">对象行为</span><span class="sxs-lookup"><span data-stu-id="bea06-231">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="bea06-232">应用程序资源</span><span class="sxs-lookup"><span data-stu-id="bea06-232">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="bea06-233">数据绑定</span><span class="sxs-lookup"><span data-stu-id="bea06-233">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="bea06-234">其他性能建议</span><span class="sxs-lookup"><span data-stu-id="bea06-234">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

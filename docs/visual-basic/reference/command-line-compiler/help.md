@@ -1,14 +1,11 @@
 ---
-title: "/help、-？ (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: "/help、-？ (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /? compiler option [Visual Basic]
 - -help compiler option [Visual Basic]
@@ -17,33 +14,19 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c74d37af74a3a463d856f1c0a019bb4ecd04ee6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f8d0c17f26b4c1f1e8b6a20f70b0f3be4539aad1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="help--visual-basic"></a>/help，/? (Visual Basic)
-显示编译器选项。  
+# <a name="help--visual-basic"></a><span data-ttu-id="fdb95-103">/help，/?</span><span class="sxs-lookup"><span data-stu-id="fdb95-103">/help, /?</span></span> <span data-ttu-id="fdb95-104">(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fdb95-104">(Visual Basic)</span></span>
+<span data-ttu-id="fdb95-105">显示编译器选项。</span><span class="sxs-lookup"><span data-stu-id="fdb95-105">Displays the compiler options.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="fdb95-106">语法</span><span class="sxs-lookup"><span data-stu-id="fdb95-106">Syntax</span></span>  
   
 ```  
 /help  
@@ -51,19 +34,19 @@ ms.lasthandoff: 03/13/2017
 /?  
 ```  
   
-## <a name="remarks"></a>备注  
- 如果在编译中包括此选项，不创建任何输出文件并不进行编译。  
+## <a name="remarks"></a><span data-ttu-id="fdb95-107">备注</span><span class="sxs-lookup"><span data-stu-id="fdb95-107">Remarks</span></span>  
+ <span data-ttu-id="fdb95-108">如果你在编译时包含了此选项，不创建任何输出文件，并且不进行编译。</span><span class="sxs-lookup"><span data-stu-id="fdb95-108">If you include this option in a compilation, no output file is created and no compilation takes place.</span></span>  
   
 > [!NOTE]
->  `/help`选项不是可从[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]开发环境中; 只有当从命令行进行编译，它才可用。  
+>  <span data-ttu-id="fdb95-109">`/help`选项不是可从[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]开发环境中; 仅当从命令行进行编译时，它才可用。</span><span class="sxs-lookup"><span data-stu-id="fdb95-109">The `/help` option is not available from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码显示从命令行帮助。  
+## <a name="example"></a><span data-ttu-id="fdb95-110">示例</span><span class="sxs-lookup"><span data-stu-id="fdb95-110">Example</span></span>  
+ <span data-ttu-id="fdb95-111">下面的代码显示从命令行帮助。</span><span class="sxs-lookup"><span data-stu-id="fdb95-111">The following code displays help from the command line.</span></span>  
   
 ```  
 vbc /help  
 ```  
   
-## <a name="see-also"></a>请参见  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="fdb95-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fdb95-112">See Also</span></span>  
+ [<span data-ttu-id="fdb95-113">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="fdb95-113">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="fdb95-114">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="fdb95-114">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

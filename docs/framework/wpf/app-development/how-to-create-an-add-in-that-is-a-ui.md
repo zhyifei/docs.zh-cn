@@ -1,488 +1,119 @@
 ---
-title: "如何：创建作为 UI 的外接程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "创建作为 UI 的外接程序 [WPF]"
-  - "插件 [WPF] UI"
-  - "创建 UI 外接程序 [WPF]"
-  - "UI 外接 [WPF] 创建"
-  - "实现 UI 外接程序 [WPF]"
-  - "创建加载项的管线段 [WPF]"
+title: "如何：创建作为 UI 的外接程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating an add-in that is a UI [WPF]
+- add-ins [WPF], UI
+- creating UI add-ins [WPF]
+- UI add-ins [WPF], creating
+- implementing UI add-ins [WPF]
+- pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9151dd5fa36e3691361bcf6d7c7b281646982f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建作为 UI 的外接程序
-\<?xml version="1.0" encoding="utf-8"?>
-\<developerHowToDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://dduestorage.blob.core.windows.net/ddueschema/developer.xsd">
-  <introduction>
-    <para>此示例演示如何创建外接程序是<token>TLA #tla_wpf</token> <token>该值</token>承载的<token>TLA&#2;tla_wpf</token>独立的应用程序。</para>
-    <para>外接程序是<token>TLA2 接</token>即<token>TLA&#2;tla_wpf</token>用户控件。用户控件的内容是一个按钮，单击时，显示一个消息框。<token>TLA&#2;tla_wpf</token>外接程序的独立应用程序承载<token>TLA2 接</token>作为主应用程序窗口的内容。</para>
-    <para>
-      <embeddedLabel>先决条件</embeddedLabel>
-    </para>
-    <para>本示例重点演示<token>TLA&#2;tla_wpf</token>扩展<token>dnprdnshort</token>外接程序模型，启用此方案中，假设您具备以下︰</para>
-    <list class="bullet">
-      <listItem>
-        <para>方面的知识<token>dnprdnshort</token>外接程序模型，包括管道、 外接程序和宿主开发。如果您不熟悉这些概念，请参阅\<legacyLink xlink:href="8dd45b02-7218-40f9-857d-40d7b98b850b">外接程序和可扩展性</legacyLink>。有关演示如何实现一个管道、 外接程序和宿主应用程序的教程，请参阅\<legacyLink xlink:href="694a33c5-a040-450d-aed5-ac49fc88ce61">演练︰ 创建可扩展的应用程序</legacyLink>。</para>
-      </listItem> 
-      <listItem>
-        <para>方面的知识<token>TLA&#2;tla_wpf</token>扩展<token>dnprdnshort</token>外接程序模型，它可以在此处找到︰ \<link xlink:href="00b4c776-29a8-4dba-b603-280a0cdc2ade">WPF 外接程序概述</link>。</para>
-      </listItem> 
-    </list> 
-  </introduction> 
-  <codeExample> 
-    <legacy> 
-      <content>
-        <para>是的外接程序创建<token>TLA&#2;tla_wpf</token> <token>TLA2 接</token>每个管道段、 外接程序和宿主应用程序需要特定的代码。</para>
-        <para> 
-          <token>autoOutline</token>
-        </para>
-      </content>
-      <sections>
-        <section address="Contract">
-          <title>实现协定管线段</title>
-          <content>
-            <para>外接程序时<token>TLA2 接</token>外, 接程序协定必须实现<codeEntityReference autoUpgrade="true">越过</codeEntityReference>。在示例中，<codeInline>本</codeInline>实现<codeEntityReference autoUpgrade="true">越过</codeEntityReference>，如下面的代码中所示。</para>
-            <code language="c#">using System.AddIn.Contract; // INativeHandleContract
-using System.AddIn.Pipeline; // AddInContractAttribute
-
-namespace Contracts
-{
-    /// &lt;summary&gt;
-    /// Defines the services that an add-in will provide to a host application.
-    /// In this case, the add-in is a UI.
-    /// &lt;/summary&gt;
-    [AddInContract]
-    public interface IWPFAddInContract : INativeHandleContract {}
-}</code>
-          <code language="vb">Imports System.AddIn.Contract ' INativeHandleContract
-Imports System.AddIn.Pipeline ' AddInContractAttribute
-
-Namespace Contracts
-    ''' &lt;summary&gt;
-    ''' Defines the services that an add-in will provide to a host application.
-    ''' In this case, the add-in is a UI.
-    ''' &lt;/summary&gt;
-    &lt;AddInContract&gt;
-    Public Interface IWPFAddInContract
-        Inherits INativeHandleContract
-        Inherits IContract
-    End Interface
-End Namespace</code></content>
-        </section>
-        <section address="AddInViewPipeline">
-          <title>实现外接程序视图管线段</title>
-          <content>
-            <para>由于外接程序作为一个的子类实现<codeEntityReference autoUpgrade="true">应用</codeEntityReference>类型、 外接程序视图还必须子类<codeEntityReference autoUpgrade="true">应用</codeEntityReference>。下面的代码演示作为实现的协定的外接程序视图<codeInline>WPFAddInView</codeInline>类</para>
-            <code language="c#">using System.AddIn.Pipeline; // AddInBaseAttribute
-using System.Windows.Controls; // UserControl
-
-namespace AddInViews
-{
-    /// &lt;summary&gt;
-    /// Defines the add-in's view of the contract.
-    /// &lt;/summary&gt;
-    [AddInBase]
-    public class WPFAddInView : UserControl { }
-}</code> 
-          <code language="vb">Imports System.AddIn.Pipeline ' AddInBaseAttribute
-Imports System.Windows.Controls ' UserControl
-
-Namespace AddInViews
-    ''' &lt;summary&gt;
-    ''' Defines the add-in's view of the contract.
-    ''' &lt;/summary&gt;
-    &lt;AddInBase&gt;
-    Public Class WPFAddInView
-        Inherits UserControl
-    End Class
-End Namespace</code>
-            <para>在这里外, 接程序视图派生自<codeEntityReference autoUpgrade="true">接程序</codeEntityReference>。因此外, 接程序<token>TLA2 接</token>还应派生自<codeEntityReference autoUpgrade="true">接程序</codeEntityReference>。</para>
-          </content>
-        </section>
-        <section address="AddInSideAdapter">
-          <title>实现 Add-In-Side 适配器管线段</title>
-          <content>
-            <para>协定是<codeEntityReference autoUpgrade="true">越过</codeEntityReference>外, 接程序是<codeEntityReference autoUpgrade="true">应用</codeEntityReference>（如指定的外接程序视图管线段）。因此，<codeEntityReference autoUpgrade="true">应用</codeEntityReference>必须转换为<codeEntityReference autoUpgrade="true">越过</codeEntityReference>之前隔离边界。此任务由外接程序端适配器通过调用<codeEntityReference autoUpgrade="true">程序</codeEntityReference>，如下面的代码中所示。</para>
-            <code language="c#">using System; // IntPtr
-using System.AddIn.Contract; // INativeHandleContract
-using System.AddIn.Pipeline; // AddInAdapterAttribute, FrameworkElementAdapters, ContractBase
-using System.Security.Permissions;
-
-using AddInViews; // WPFAddInView
-using Contracts; // IWPFAddInContract
-
-namespace AddInSideAdapters
-{
-    /// &lt;summary&gt;
-    /// Adapts the add-in's view of the contract to the add-in contract
-    /// &lt;/summary&gt;
-    [AddInAdapter]
-    public class WPFAddIn_ViewToContractAddInSideAdapter : ContractBase, IWPFAddInContract
-    {
-        WPFAddInView wpfAddInView;
-
-        public WPFAddIn_ViewToContractAddInSideAdapter(WPFAddInView wpfAddInView)
-        {
-            // Adapt the add-in view of the contract (WPFAddInView) 
-            // to the contract (IWPFAddInContract)
-            this.wpfAddInView = wpfAddInView;
-        }
-
-        /// &lt;summary&gt;
-        /// ContractBase.QueryContract must be overridden to:
-        /// * Safely return a window handle for an add-in UI to the host 
-        ///   application's application.
-        /// * Enable tabbing between host application UI and add-in UI, in the
-        ///   "add-in is a UI" scenario.
-        /// &lt;/summary&gt;
-        public override IContract QueryContract(string contractIdentifier)
-        {
-            if (contractIdentifier.Equals(typeof(INativeHandleContract).AssemblyQualifiedName))
-            {
-                return FrameworkElementAdapters.ViewToContractAdapter(this.wpfAddInView);
-            }
-
-            return base.QueryContract(contractIdentifier);
-        }
-
-        /// &lt;summary&gt;
-        /// GetHandle is called by the WPF add-in model from the host application's 
-        /// application domain to to get the window handle for an add-in UI from the 
-        /// add-in's application domain. GetHandle is called if a window handle isn't 
-        /// returned by other means ie overriding ContractBase.QueryContract, 
-        /// as shown above.
-        /// NOTE: This method requires UnmanagedCodePermission to be called 
-        ///       (full-trust by default), to prevent illegal window handle
-        ///       access in partially trusted scenarios. If the add-in could
-        ///       run in a partially trusted application domain 
-        ///       (eg AddInSecurityLevel.Internet), you can safely return a window
-        ///       handle by overriding ContractBase.QueryContract, as shown above.
-        /// &lt;/summary&gt;
-        [SecurityPermissionAttribute(SecurityAction.Demand, Flags = SecurityPermissionFlag.UnmanagedCode)]
-        public IntPtr GetHandle()
-        {
-            return FrameworkElementAdapters.ViewToContractAdapter(this.wpfAddInView).GetHandle();
-        }
-    }
-}</code> 
-          <code language="vb">Imports System ' IntPtr
-Imports System.AddIn.Contract ' INativeHandleContract
-Imports System.AddIn.Pipeline ' AddInAdapterAttribute, FrameworkElementAdapters, ContractBase
-Imports System.Security.Permissions
-
-Imports AddInViews ' WPFAddInView
-Imports Contracts ' IWPFAddInContract
-
-Namespace AddInSideAdapters
-    ''' &lt;summary&gt;
-    ''' Adapts the add-in's view of the contract to the add-in contract
-    ''' &lt;/summary&gt;
-    &lt;AddInAdapter&gt;
-    Public Class WPFAddIn_ViewToContractAddInSideAdapter
-        Inherits ContractBase
-        Implements IWPFAddInContract
-
-        Private wpfAddInView As WPFAddInView
-
-        Public Sub New(ByVal wpfAddInView As WPFAddInView)
-            ' Adapt the add-in view of the contract (WPFAddInView) 
-            ' to the contract (IWPFAddInContract)
-            Me.wpfAddInView = wpfAddInView
-        End Sub
-
-        ''' &lt;summary&gt;
-        ''' ContractBase.QueryContract must be overridden to:
-        ''' * Safely return a window handle for an add-in UI to the host 
-        '''   application's application.
-        ''' * Enable tabbing between host application UI and add-in UI, in the
-        '''   "add-in is a UI" scenario.
-        ''' &lt;/summary&gt;
-        Public Overrides Function QueryContract(ByVal contractIdentifier As String) As IContract
-            If contractIdentifier.Equals(GetType(INativeHandleContract).AssemblyQualifiedName) Then
-                Return FrameworkElementAdapters.ViewToContractAdapter(Me.wpfAddInView)
-            End If
-
-            Return MyBase.QueryContract(contractIdentifier)
-        End Function
-
-        ''' &lt;summary&gt;
-        ''' GetHandle is called by the WPF add-in model from the host application's 
-        ''' application domain to to get the window handle for an add-in UI from the 
-        ''' add-in's application domain. GetHandle is called if a window handle isn't 
-        ''' returned by other means ie overriding ContractBase.QueryContract, 
-        ''' as shown above.
-        ''' NOTE: This method requires UnmanagedCodePermission to be called 
-        '''       (full-trust by default), to prevent illegal window handle
-        '''       access in partially trusted scenarios. If the add-in could
-        '''       run in a partially trusted application domain 
-        '''       (eg AddInSecurityLevel.Internet), you can safely return a window
-        '''       handle by overriding ContractBase.QueryContract, as shown above.
-        ''' &lt;/summary&gt;
-        &lt;SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)&gt;
-        Public Function GetHandle() As IntPtr Implements INativeHandleContract.GetHandle
-            Return FrameworkElementAdapters.ViewToContractAdapter(Me.wpfAddInView).GetHandle()
-        End Function
-
-    End Class
-End Namespace</code>
-            <para>在外接程序模型︰ 外接程序返回<token>TLA2 接</token>(请参阅\<link xlink:href="57f274b7-4c66-4b72-92eb-81939a393776">如何︰ 创建外接程序，将返回的用户界面</link>) 外, 接程序适配器转换<codeEntityReference autoUpgrade="true">应用</codeEntityReference>到<codeEntityReference autoUpgrade="true">越过</codeEntityReference>通过调用<codeEntityReference autoUpgrade="true">程序</codeEntityReference>。<codeEntityReference autoUpgrade="true">程序</codeEntityReference>尽管您需要实现从其编写代码来调用该方法还必须在此模型中，调用。执行此操作通过重写<codeEntityReference autoUpgrade="true">外</codeEntityReference>和实现调用的代码<codeEntityReference autoUpgrade="true">程序</codeEntityReference>如果正在调用的代码<codeEntityReference autoUpgrade="true">外</codeEntityReference>预期<codeEntityReference autoUpgrade="true">越过</codeEntityReference>。在这种情况下，调用方将是宿主端适配器，将在后续的子部分中介绍。</para>
-            <alert class="note">
-              <para>您还需要重写<codeEntityReference autoUpgrade="true">外</codeEntityReference>在此模型中使用 tab 键切换主机应用程序之间<token>TLA2 接</token>和外接程序<token>TLA2 接</token>。详细信息，请参阅"WPF 外接程序限制"中\<link xlink:href="00b4c776-29a8-4dba-b603-280a0cdc2ade">WPF 外接程序概述</link>。</para>
-            </alert>
-            <para>因为外接程序端适配器实现派生自接口<codeEntityReference autoUpgrade="true">越过</codeEntityReference>，还需要实现<codeEntityReference autoUpgrade="true">M:System.AddIn.Contract.INativeHandleContract.GetHandle</codeEntityReference>，尽管这将被忽略，但当<codeEntityReference autoUpgrade="true">外</codeEntityReference>被重写。</para>
-          </content>
-        </section>
-        <section address="HostViewPipeline">
-          <title>实现宿主视图管线段</title>
-          <content>
-            <para>在此模型中，宿主应用程序通常认为宿主视图是<codeEntityReference autoUpgrade="true">应用</codeEntityReference>子类。宿主端适配器必须将转换<codeEntityReference autoUpgrade="true">越过</codeEntityReference>到<codeEntityReference autoUpgrade="true">应用</codeEntityReference>后<codeEntityReference autoUpgrade="true">越过</codeEntityReference>跨越隔离边界。因为没有要获取的主机应用程序通过调用一种方法<codeEntityReference autoUpgrade="true">应用</codeEntityReference>，主机视图必须"return"<codeEntityReference autoUpgrade="true">应用</codeEntityReference>由包含它。因此，主机视图必须派生自的子类<codeEntityReference autoUpgrade="true">应用</codeEntityReference>可包含其他<token>TLA2 接程序 #plural</token>，如<codeEntityReference autoUpgrade="true">接程序</codeEntityReference>。下面的代码演示作为实现的协定的宿主视图<codeInline>WPFAddInHostView</codeInline>类。</para>
-            <code language="c#">using System.Windows.Controls; // UserControl
-
-namespace HostViews
-{
-    /// &lt;summary&gt;
-    /// Defines the host's view of the add-in
-    /// &lt;/summary&gt;
-    public class WPFAddInHostView : UserControl { }
-}</code>
-          <code language="vb">Imports System.Windows.Controls ' UserControl
-
-Namespace HostViews
-    ''' &lt;summary&gt;
-    ''' Defines the host's view of the add-in
-    ''' &lt;/summary&gt;
-    Public Class WPFAddInHostView
-        Inherits UserControl
-    End Class
-End Namespace</code>
-          </content>
-        </section>
-        <section address="HostSideAdapter">
-          <title>实现宿主端适配器管线段</title>
-          <content>
-            <para>协定是<codeEntityReference autoUpgrade="true">越过</codeEntityReference>，宿主应用程序需要<codeEntityReference autoUpgrade="true">接程序</codeEntityReference>（如指定的主机视图）。因此，<codeEntityReference autoUpgrade="true">越过</codeEntityReference>必须转换为<codeEntityReference autoUpgrade="true">应用</codeEntityReference>越过隔离边界之前被设置为主机视图的内容之后 (它派生自<codeEntityReference autoUpgrade="true">接程序</codeEntityReference>)。</para>
-            <para>此任务由宿主端适配器，如下面的代码中所示。</para> 
-            <code language="c#">using System.AddIn.Contract; // INativeHandleContract
-using System.AddIn.Pipeline; // HostAdapterAttribute, FrameworkElementAdapters, ContractHandle
-using System.Windows; // FrameworkElement
-
-using Contracts; // IWPFAddInContract
-using HostViews; // WPFAddInHostView
-
-namespace HostSideAdapters
-{
-    /// &lt;summary&gt;
-    /// Adapts the add-in contract to the host's view of the add-in
-    /// &lt;/summary&gt;
-    [HostAdapter]
-    public class WPFAddIn_ContractToViewHostSideAdapter : WPFAddInHostView
-    {
-        IWPFAddInContract wpfAddInContract;
-        ContractHandle wpfAddInContractHandle;
-
-        public WPFAddIn_ContractToViewHostSideAdapter(IWPFAddInContract wpfAddInContract)
-        {
-            // Adapt the contract (IWPFAddInContract) to the host application's
-            // view of the contract (WPFAddInHostView)
-            this.wpfAddInContract = wpfAddInContract;
-
-            // Prevent the reference to the contract from being released while the
-            // host application uses the add-in
-            this.wpfAddInContractHandle = new ContractHandle(wpfAddInContract);
-
-            // Convert the INativeHandleContract for the add-in UI that was passed 
-            // from the add-in side of the isolation boundary to a FrameworkElement
-            string aqn = typeof(INativeHandleContract).AssemblyQualifiedName;
-            INativeHandleContract inhc = (INativeHandleContract)wpfAddInContract.QueryContract(aqn);
-            FrameworkElement fe = (FrameworkElement)FrameworkElementAdapters.ContractToViewAdapter(inhc);
-
-            // Add FrameworkElement (which displays the UI provided by the add-in) as
-            // content of the view (a UserControl)
-            this.Content = fe;
-        }
-    }
-}</code> 
-          <code language="vb">Imports System.AddIn.Contract ' INativeHandleContract
-Imports System.AddIn.Pipeline ' HostAdapterAttribute, FrameworkElementAdapters, ContractHandle
-Imports System.Windows ' FrameworkElement
-
-Imports Contracts ' IWPFAddInContract
-Imports HostViews ' WPFAddInHostView
-
-Namespace HostSideAdapters
-    ''' &lt;summary&gt;
-    ''' Adapts the add-in contract to the host's view of the add-in
-    ''' &lt;/summary&gt;
-    &lt;HostAdapter&gt;
-    Public Class WPFAddIn_ContractToViewHostSideAdapter
-        Inherits WPFAddInHostView
-        Private wpfAddInContract As IWPFAddInContract
-        Private wpfAddInContractHandle As ContractHandle
-
-        Public Sub New(ByVal wpfAddInContract As IWPFAddInContract)
-            ' Adapt the contract (IWPFAddInContract) to the host application's
-            ' view of the contract (WPFAddInHostView)
-            Me.wpfAddInContract = wpfAddInContract
-
-            ' Prevent the reference to the contract from being released while the
-            ' host application uses the add-in
-            Me.wpfAddInContractHandle = New ContractHandle(wpfAddInContract)
-
-            ' Convert the INativeHandleContract for the add-in UI that was passed 
-            ' from the add-in side of the isolation boundary to a FrameworkElement
-            Dim aqn As String = GetType(INativeHandleContract).AssemblyQualifiedName
-            Dim inhc As INativeHandleContract = CType(wpfAddInContract.QueryContract(aqn), INativeHandleContract)
-            Dim fe As FrameworkElement = CType(FrameworkElementAdapters.ContractToViewAdapter(inhc), FrameworkElement)
-
-            ' Add FrameworkElement (which displays the UI provided by the add-in) as
-            ' content of the view (a UserControl)
-            Me.Content = fe
-        End Sub
-    End Class
-End Namespace</code>
-            <para>如您所见，宿主端适配器获取<codeEntityReference autoUpgrade="true">越过</codeEntityReference>通过调用外接程序端适配器<codeEntityReference autoUpgrade="true">外</codeEntityReference>方法 (这一点其中<codeEntityReference autoUpgrade="true">越过</codeEntityReference>跨越隔离边界)。</para>
-            <para>宿主端适配器，然后将转换<codeEntityReference autoUpgrade="true">越过</codeEntityReference>到<codeEntityReference autoUpgrade="true">应用</codeEntityReference>通过调用<codeEntityReference autoUpgrade="true">M:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter(System.AddIn.Contract.INativeHandleContract)</codeEntityReference>。最后，<codeEntityReference autoUpgrade="true">应用</codeEntityReference>设置为主机视图的内容。</para>
-          </content>
-        </section>
-        <section address="AddIn">
-          <title>实现外接程序</title>
-          <content>
-            <para>外接程序端适配器和就地外接程序视图后外, 接程序可以通过派生自外接程序视图，如下面的代码中所示。</para>
-            <code language="xaml">&lt;addInViews:WPFAddInView
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:addInViews="clr-namespace:AddInViews;assembly=AddInViews"
-    x:Class="WPFAddIn1.AddInUI"&gt;
-
-    &lt;Grid&gt;
-        &lt;Button Click="clickMeButton_Click" Content="Click Me!" /&gt;        
-    &lt;/Grid&gt;
-
-&lt;/addInViews:WPFAddInView&gt;</code> 
-            <code language="c#">using System.AddIn; // AddInAttribute
-using System.Windows; // MessageBox, RoutedEventArgs
-
-using AddInViews; // WPFAddInView
-
-namespace WPFAddIn1
-{
-    /// &lt;summary&gt;
-    /// Implements the add-in by deriving from WPFAddInView
-    /// &lt;/summary&gt;
-    [AddIn("WPF Add-In 1")]
-    public partial class AddInUI : WPFAddInView
-    {
-        public AddInUI()
-        {
-            InitializeComponent();
-        }
-
-        void clickMeButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Hello from WPFAddIn1");
-        }
-    }
-}</code> 
-          <code language="vb">Imports System.AddIn ' AddInAttribute
-Imports System.Windows ' MessageBox, RoutedEventArgs
-
-Imports AddInViews ' WPFAddInView
-
-Namespace WPFAddIn1
-    ''' &lt;summary&gt;
-    ''' Implements the add-in by deriving from WPFAddInView
-    ''' &lt;/summary&gt;
-    &lt;AddIn("WPF Add-In 1")&gt;
-    Partial Public Class AddInUI
-        Inherits WPFAddInView
-        Public Sub New()
-            InitializeComponent()
-        End Sub
-
-        Private Sub clickMeButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
-            MessageBox.Show("Hello from WPFAddIn1")
-        End Sub
-    End Class
-End Namespace</code>
-            <para>从此示例中，您可以看到此模型的一个突出优点︰ 外接程序开发人员只需实现外接程序 (因为它是<token>TLA2 接</token>以及)，而不是外接程序类和外接程序<token>TLA2 接</token>。</para>
-          </content>
-        </section>
-        <section address="HostApp">
-          <title>主机应用程序的实现</title>
-          <content>
-            <para>宿主端适配器和创建的主机视图中，宿主应用程序可以使用<token>dnprdnshort</token>外接程序模型以打开该管道并获取的宿主视图的外接程序。以下步骤显示在下面的代码。</para> 
-            <code language="c#">// Get add-in pipeline folder (the folder in which this application was launched from)
-string appPath = Environment.CurrentDirectory;
-
-// Rebuild visual add-in pipeline
-string[] warnings = AddInStore.Rebuild(appPath);
-if (warnings.Length &gt; 0)
-{
-    string msg = "Could not rebuild pipeline:";
-    foreach (string warning in warnings) msg += "\n" + warning;
-    MessageBox.Show(msg);
-    return;
-}
-
-// Activate add-in with Internet zone security isolation
-Collection&lt;AddInToken&gt; addInTokens = AddInStore.FindAddIns(typeof(WPFAddInHostView), appPath);
-AddInToken wpfAddInToken = addInTokens[0];
-this.wpfAddInHostView = wpfAddInToken.Activate&lt;WPFAddInHostView&gt;(AddInSecurityLevel.Internet);
-
-// Display add-in UI
-this.addInUIHostGrid.Children.Add(this.wpfAddInHostView);</code> 
-          <code language="vb">' Get add-in pipeline folder (the folder in which this application was launched from)
-Dim appPath As String = Environment.CurrentDirectory
-
-' Rebuild visual add-in pipeline
-Dim warnings() As String = AddInStore.Rebuild(appPath)
-If warnings.Length &gt; 0 Then
-    Dim msg As String = "Could not rebuild pipeline:"
-    For Each warning As String In warnings
-        msg &amp;= vbLf &amp; warning
-    Next warning
-    MessageBox.Show(msg)
-    Return
-End If
-
-' Activate add-in with Internet zone security isolation
-Dim addInTokens As Collection(Of AddInToken) = AddInStore.FindAddIns(GetType(WPFAddInHostView), appPath)
-Dim wpfAddInToken As AddInToken = addInTokens(0)
-Me.wpfAddInHostView = wpfAddInToken.Activate(Of WPFAddInHostView)(AddInSecurityLevel.Internet)
-
-' Display add-in UI
-Me.addInUIHostGrid.Children.Add(Me.wpfAddInHostView)</code>
-            <para>主机应用程序使用典型<token>dnprdnshort</token>外接程序模型代码，以激活外接程序，将隐式地返回宿主应用程序的宿主视图。宿主应用程序随后显示主机视图 (即<codeEntityReference autoUpgrade="true">接程序</codeEntityReference>) 从<codeEntityReference autoUpgrade="true">此</codeEntityReference>。</para>
-            <para>用于处理与外接程序代码<token>TLA2 接</token>在外接程序的应用程序域中运行。这些交互包括以下︰</para>
-            <list class="bullet">
-              <listItem>
-                <para>处理<codeEntityReference autoUpgrade="true">样式</codeEntityReference> <codeEntityReference autoUpgrade="true">自身</codeEntityReference>事件。</para>
-              </listItem> 
-              <listItem>
-                <para>显示<codeEntityReference autoUpgrade="true">T:System.Windows.MessageBox</codeEntityReference>。</para>
-              </listItem> 
-            </list>
-            <para>此活动是完全独立于宿主应用程序。</para>
-          </content>
-        </section>
-      </sections>
-    </legacy>
-  </codeExample>
-  <relatedTopics>
-\<legacyLink xlink:href="8dd45b02-7218-40f9-857d-40d7b98b850b">加载项和可扩展性</legacyLink>
-\<link xlink:href="00b4c776-29a8-4dba-b603-280a0cdc2ade">WPF 外接概述</link>
-</relatedTopics>
-</developerHowToDocument>
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a><span data-ttu-id="64e68-102">如何：创建作为 UI 的外接程序</span><span class="sxs-lookup"><span data-stu-id="64e68-102">How to: Create an Add-In That Is a UI</span></span>
+<span data-ttu-id="64e68-103">此示例演示如何创建外接程序是[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]承载的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]独立的应用程序。</span><span class="sxs-lookup"><span data-stu-id="64e68-103">This example shows how to create an add-in that is a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] which is hosted by a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application.</span></span>  
+  
+ <span data-ttu-id="64e68-104">外接程序是[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]即[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]用户控件。</span><span class="sxs-lookup"><span data-stu-id="64e68-104">The add-in is a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] that is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] user control.</span></span> <span data-ttu-id="64e68-105">用户控件的内容是单个按钮，单击时会显示消息框。</span><span class="sxs-lookup"><span data-stu-id="64e68-105">The content of the user control is a single button that, when clicked, displays a message box.</span></span> <span data-ttu-id="64e68-106">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]外接程序的独立应用程序承载[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]用作应用程序主窗口的内容。</span><span class="sxs-lookup"><span data-stu-id="64e68-106">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application hosts the add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] as the content of the main application window.</span></span>  
+  
+ <span data-ttu-id="64e68-107">**系统必备**</span><span class="sxs-lookup"><span data-stu-id="64e68-107">**Prerequisites**</span></span>  
+  
+ <span data-ttu-id="64e68-108">此示例重点介绍[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]扩展[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]外接程序模型，启用此方案中，假设您具备以下：</span><span class="sxs-lookup"><span data-stu-id="64e68-108">This example highlights the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extensions to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model that enable this scenario, and assumes the following:</span></span>  
+  
+-   <span data-ttu-id="64e68-109">知识[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]外接程序模型，包括管道、 外接程序和主机开发。</span><span class="sxs-lookup"><span data-stu-id="64e68-109">Knowledge of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model, including pipeline, add-in, and host development.</span></span> <span data-ttu-id="64e68-110">如果你不熟悉这些概念，请参阅[外接程序和扩展性](../../../../docs/framework/add-ins/index.md)。</span><span class="sxs-lookup"><span data-stu-id="64e68-110">If you are unfamiliar with these concepts, see [Add-ins and Extensibility](../../../../docs/framework/add-ins/index.md).</span></span> <span data-ttu-id="64e68-111">有关演示如何实现管道、 外接程序和主机应用程序的教程，请参阅[演练： 创建可扩展应用程序](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)。</span><span class="sxs-lookup"><span data-stu-id="64e68-111">For a tutorial that demonstrates the implementation of a pipeline, an add-in, and a host application, see [Walkthrough: Creating an Extensible Application](../../../../docs/framework/add-ins/walkthrough-create-extensible-app.md).</span></span>  
+  
+-   <span data-ttu-id="64e68-112">知识[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]扩展[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]外接程序模型，这可在此处找到： [WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="64e68-112">Knowledge of the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extensions to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model, which can be found here:     [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="64e68-113">示例</span><span class="sxs-lookup"><span data-stu-id="64e68-113">Example</span></span>  
+ <span data-ttu-id="64e68-114">若要创建是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]以及每个管道段外, 接程序时，主机应用程序需要特定的代码。</span><span class="sxs-lookup"><span data-stu-id="64e68-114">To create an add-in that is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] requires specific code for each pipeline segment, the add-in, and the host application.</span></span>  
+    
+  
+<a name="Contract"></a>   
+## <a name="implementing-the-contract-pipeline-segment"></a><span data-ttu-id="64e68-115">实现协定管道段</span><span class="sxs-lookup"><span data-stu-id="64e68-115">Implementing the Contract Pipeline Segment</span></span>  
+ <span data-ttu-id="64e68-116">外接程序时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]外, 接程序的协定必须实现<xref:System.AddIn.Contract.INativeHandleContract>。</span><span class="sxs-lookup"><span data-stu-id="64e68-116">When an add-in is a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], the contract for the add-in must implement <xref:System.AddIn.Contract.INativeHandleContract>.</span></span> <span data-ttu-id="64e68-117">在示例中，`IWPFAddInContract`实现<xref:System.AddIn.Contract.INativeHandleContract>，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="64e68-117">In the example, `IWPFAddInContract` implements <xref:System.AddIn.Contract.INativeHandleContract>, as shown in the following code.</span></span>  
+  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+  
+<a name="AddInViewPipeline"></a>   
+## <a name="implementing-the-add-in-view-pipeline-segment"></a><span data-ttu-id="64e68-118">实现外接程序视图管道段</span><span class="sxs-lookup"><span data-stu-id="64e68-118">Implementing the Add-In View Pipeline Segment</span></span>  
+ <span data-ttu-id="64e68-119">由于外接程序作为的一个子类实现<xref:System.Windows.FrameworkElement>类型外, 接程序视图还必须子类<xref:System.Windows.FrameworkElement>。</span><span class="sxs-lookup"><span data-stu-id="64e68-119">Because the add-in is implemented as a subclass of the <xref:System.Windows.FrameworkElement> type, the add-in view must also subclass <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="64e68-120">下面的代码演示作为实现的协定的外接程序视图`WPFAddInView`类。</span><span class="sxs-lookup"><span data-stu-id="64e68-120">The following code shows the add-in view of the contract, implemented as the `WPFAddInView` class.</span></span>  
+  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+  
+ <span data-ttu-id="64e68-121">在这里外, 接程序视图派生自<xref:System.Windows.Controls.UserControl>。</span><span class="sxs-lookup"><span data-stu-id="64e68-121">Here, the add-in view is derived from <xref:System.Windows.Controls.UserControl>.</span></span> <span data-ttu-id="64e68-122">因此外, 接程序[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]还应派生自<xref:System.Windows.Controls.UserControl>。</span><span class="sxs-lookup"><span data-stu-id="64e68-122">Consequently, the add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] should also derive from <xref:System.Windows.Controls.UserControl>.</span></span>  
+  
+<a name="AddInSideAdapter"></a>   
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a><span data-ttu-id="64e68-123">实现外接程序端适配器管道段</span><span class="sxs-lookup"><span data-stu-id="64e68-123">Implementing the Add-In-Side Adapter Pipeline Segment</span></span>  
+ <span data-ttu-id="64e68-124">协定是<xref:System.AddIn.Contract.INativeHandleContract>外, 接程序是<xref:System.Windows.FrameworkElement>（所指定的外接程序视图管道段）。</span><span class="sxs-lookup"><span data-stu-id="64e68-124">While the contract is an <xref:System.AddIn.Contract.INativeHandleContract>, the add-in is a <xref:System.Windows.FrameworkElement> (as specified by the add-in view pipeline segment).</span></span> <span data-ttu-id="64e68-125">因此，<xref:System.Windows.FrameworkElement>必须转换为<xref:System.AddIn.Contract.INativeHandleContract>在越过隔离边界之前。</span><span class="sxs-lookup"><span data-stu-id="64e68-125">Therefore, the <xref:System.Windows.FrameworkElement> must be converted to an <xref:System.AddIn.Contract.INativeHandleContract> before crossing the isolation boundary.</span></span> <span data-ttu-id="64e68-126">通过调用执行此工作的外接程序端适配器<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="64e68-126">This work is performed by the add-in-side adapter by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, as shown in the following code.</span></span>  
+  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+  
+ <span data-ttu-id="64e68-127">在外接程序模型在外接程序返回[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)](请参阅[创建外接程序中，将返回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)) 外, 接程序适配器转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。</span><span class="sxs-lookup"><span data-stu-id="64e68-127">In the add-in model where an add-in returns a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (see [Create an Add-In That Returns a UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), the add-in adapter converted the <xref:System.Windows.FrameworkElement> to an <xref:System.AddIn.Contract.INativeHandleContract> by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.</span></span> <span data-ttu-id="64e68-128"><xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>必须还调用在此模型中，尽管你需要实现一种方法从其编写代码以调用它。</span><span class="sxs-lookup"><span data-stu-id="64e68-128"><xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> must also be called in this model, although you need to implement a method from which to write the code to call it.</span></span> <span data-ttu-id="64e68-129">执行此操作通过重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和实现调用的代码，<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在调用的代码<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>预期<xref:System.AddIn.Contract.INativeHandleContract>。</span><span class="sxs-lookup"><span data-stu-id="64e68-129">You do this by overriding <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> and implementing the code that calls <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> if the code that is calling <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> is expecting an <xref:System.AddIn.Contract.INativeHandleContract>.</span></span> <span data-ttu-id="64e68-130">在此情况下，调用方将为主机端适配器，这在后续子节中有所介绍。</span><span class="sxs-lookup"><span data-stu-id="64e68-130">In this case, the caller will be the host-side adapter, which is covered in a subsequent subsection.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="64e68-131">你还需要重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>使用 tab 键切换之间主机应用程序在此模型中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和外接程序[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="64e68-131">You also need to override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in this model to enable tabbing between host application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] and add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span> <span data-ttu-id="64e68-132">有关详细信息，请参阅"WPF 外接程序限制" [WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="64e68-132">For more information, see "WPF Add-In Limitations" in [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
+  
+ <span data-ttu-id="64e68-133">因为外接程序端适配器实现的接口。 派生自<xref:System.AddIn.Contract.INativeHandleContract>，你还需要实现<xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>，但这将被忽略时<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>被重写。</span><span class="sxs-lookup"><span data-stu-id="64e68-133">Because the add-in-side adapter implements an interface that derives from <xref:System.AddIn.Contract.INativeHandleContract>, you also need to implement <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, although this is ignored when <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> is overridden.</span></span>  
+  
+<a name="HostViewPipeline"></a>   
+## <a name="implementing-the-host-view-pipeline-segment"></a><span data-ttu-id="64e68-134">实现主机视图管道段</span><span class="sxs-lookup"><span data-stu-id="64e68-134">Implementing the Host View Pipeline Segment</span></span>  
+ <span data-ttu-id="64e68-135">在此模型中，主机应用程序通常需要为主机视图<xref:System.Windows.FrameworkElement>子类。</span><span class="sxs-lookup"><span data-stu-id="64e68-135">In this model, the host application typically expects the host view to be a <xref:System.Windows.FrameworkElement> subclass.</span></span> <span data-ttu-id="64e68-136">主机端适配器必须将转换<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>后<xref:System.AddIn.Contract.INativeHandleContract>跨越隔离边界。</span><span class="sxs-lookup"><span data-stu-id="64e68-136">The host-side adapter must convert the <xref:System.AddIn.Contract.INativeHandleContract> to a <xref:System.Windows.FrameworkElement> after the <xref:System.AddIn.Contract.INativeHandleContract> crosses the isolation boundary.</span></span> <span data-ttu-id="64e68-137">由于方法未调用由主机应用程序获取<xref:System.Windows.FrameworkElement>，主机视图必须"返回"<xref:System.Windows.FrameworkElement>通过将包含它。</span><span class="sxs-lookup"><span data-stu-id="64e68-137">Because a method isn't being called by the host application to get the <xref:System.Windows.FrameworkElement>, the host view must "return" the <xref:System.Windows.FrameworkElement> by containing it.</span></span> <span data-ttu-id="64e68-138">因此，主机视图必须派生自的一个子类<xref:System.Windows.FrameworkElement>可包含其他[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]，如<xref:System.Windows.Controls.UserControl>。</span><span class="sxs-lookup"><span data-stu-id="64e68-138">Consequently, the host view must derive from a subclass of <xref:System.Windows.FrameworkElement> that can contain other [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], such as <xref:System.Windows.Controls.UserControl>.</span></span> <span data-ttu-id="64e68-139">下面的代码演示作为实现的协定主机视图`WPFAddInHostView`类。</span><span class="sxs-lookup"><span data-stu-id="64e68-139">The following code shows the host view of the contract, implemented as the `WPFAddInHostView` class.</span></span>  
+  
+  
+  
+<a name="HostSideAdapter"></a>   
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a><span data-ttu-id="64e68-140">实现主机端适配器管道段</span><span class="sxs-lookup"><span data-stu-id="64e68-140">Implementing the Host-Side Adapter Pipeline Segment</span></span>  
+ <span data-ttu-id="64e68-141">协定是<xref:System.AddIn.Contract.INativeHandleContract>，主机应用程序期望<xref:System.Windows.Controls.UserControl>（所指定的主机视图）。</span><span class="sxs-lookup"><span data-stu-id="64e68-141">While the contract is an <xref:System.AddIn.Contract.INativeHandleContract>, the host application expects a <xref:System.Windows.Controls.UserControl> (as specified by the host view).</span></span> <span data-ttu-id="64e68-142">因此，<xref:System.AddIn.Contract.INativeHandleContract>必须转换为<xref:System.Windows.FrameworkElement>之前被设置为主机视图的内容越过隔离边界之后, (它派生自<xref:System.Windows.Controls.UserControl>)。</span><span class="sxs-lookup"><span data-stu-id="64e68-142">Consequently, the <xref:System.AddIn.Contract.INativeHandleContract> must be converted to a <xref:System.Windows.FrameworkElement> after crossing the isolation boundary, before being set as content of the host view (which derives from <xref:System.Windows.Controls.UserControl>).</span></span>  
+  
+ <span data-ttu-id="64e68-143">这一工作由主机端适配器执行，如以下代码所示。</span><span class="sxs-lookup"><span data-stu-id="64e68-143">This work is performed by the host-side adapter, as shown in the following code.</span></span>  
+  
+  
+  
+ <span data-ttu-id="64e68-144">如你所见，主机端适配器获取<xref:System.AddIn.Contract.INativeHandleContract>通过调用外接程序端适配器<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>方法 (这是点，其中<xref:System.AddIn.Contract.INativeHandleContract>跨越隔离边界)。</span><span class="sxs-lookup"><span data-stu-id="64e68-144">As you can see, the host-side adapter acquires the <xref:System.AddIn.Contract.INativeHandleContract> by calling the add-in-side adapter's <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> method (this is the point where the <xref:System.AddIn.Contract.INativeHandleContract> crosses the isolation boundary).</span></span>  
+  
+ <span data-ttu-id="64e68-145">主机端适配器，然后将转换<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。</span><span class="sxs-lookup"><span data-stu-id="64e68-145">The host-side adapter then converts the <xref:System.AddIn.Contract.INativeHandleContract> to a <xref:System.Windows.FrameworkElement> by calling <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.</span></span> <span data-ttu-id="64e68-146">最后，<xref:System.Windows.FrameworkElement>设置为主机视图的内容。</span><span class="sxs-lookup"><span data-stu-id="64e68-146">Finally, the <xref:System.Windows.FrameworkElement> is set as the content of the host view.</span></span>  
+  
+<a name="AddIn"></a>   
+## <a name="implementing-the-add-in"></a><span data-ttu-id="64e68-147">实现外接程序</span><span class="sxs-lookup"><span data-stu-id="64e68-147">Implementing the Add-In</span></span>  
+ <span data-ttu-id="64e68-148">外接程序端适配器和外接程序视图就位后，外接程序就可以通过派生自外接程序视图来实现，如以下代码所示。</span><span class="sxs-lookup"><span data-stu-id="64e68-148">With the add-in-side adapter and add-in view in place, the add-in can be implemented by deriving from the add-in view, as shown in the following code.</span></span>  
+  
+  
+  
+  
+  
+ <span data-ttu-id="64e68-149">在此示例中，你可以看到此模型的一个突出优点： 外接程序开发人员只需实现外接程序 (因为它是[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]也)，而不是一个外接程序类和外接程序[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="64e68-149">From this example, you can see one interesting benefit of this model: add-in developers only need to implement the add-in (since it is the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] as well), rather than both an add-in class and an add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span>  
+  
+<a name="HostApp"></a>   
+## <a name="implementing-the-host-application"></a><span data-ttu-id="64e68-150">实现主机应用程序</span><span class="sxs-lookup"><span data-stu-id="64e68-150">Implementing the Host Application</span></span>  
+ <span data-ttu-id="64e68-151">主机端适配器和创建主机视图中，主机应用程序可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]外接程序模型来打开管道并获得的外接程序的主机视图。</span><span class="sxs-lookup"><span data-stu-id="64e68-151">With the host-side adapter and host view created, the host application can use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model to open the pipeline and acquire a host view of the add-in.</span></span> <span data-ttu-id="64e68-152">这些步骤在以下代码中显示。</span><span class="sxs-lookup"><span data-stu-id="64e68-152">These steps are shown in the following code.</span></span>  
+  
+  
+  
+ <span data-ttu-id="64e68-153">主机应用程序使用典型[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]外接程序模型代码以激活外接程序，它将隐式返回主机应用程序的主机视图。</span><span class="sxs-lookup"><span data-stu-id="64e68-153">The host application uses typical [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] add-in model code to activate the add-in, which implicitly returns the host view to the host application.</span></span> <span data-ttu-id="64e68-154">主机应用程序随后将显示主机视图 (即<xref:System.Windows.Controls.UserControl>) 从<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="64e68-154">The host application subsequently displays the host view (which is a <xref:System.Windows.Controls.UserControl>) from a <xref:System.Windows.Controls.Grid>.</span></span>  
+  
+ <span data-ttu-id="64e68-155">处理与外接程序的交互的代码[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在外接程序的应用程序域中运行。</span><span class="sxs-lookup"><span data-stu-id="64e68-155">The code for processing interactions with the add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] runs in the add-in's application domain.</span></span> <span data-ttu-id="64e68-156">这些交互包括以下内容：</span><span class="sxs-lookup"><span data-stu-id="64e68-156">These interactions include the following:</span></span>  
+  
+-   <span data-ttu-id="64e68-157">处理<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="64e68-157">Handling the <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  
+  
+-   <span data-ttu-id="64e68-158">显示<xref:System.Windows.MessageBox>。</span><span class="sxs-lookup"><span data-stu-id="64e68-158">Showing the <xref:System.Windows.MessageBox>.</span></span>  
+  
+ <span data-ttu-id="64e68-159">此活动完全独立于主机应用程序。</span><span class="sxs-lookup"><span data-stu-id="64e68-159">This activity is completely isolated from the host application.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="64e68-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="64e68-160">See Also</span></span>  
+ [<span data-ttu-id="64e68-161">外接程序和扩展性</span><span class="sxs-lookup"><span data-stu-id="64e68-161">Add-ins and Extensibility</span></span>](../../../../docs/framework/add-ins/index.md)  
+ [<span data-ttu-id="64e68-162">WPF 外接程序概述</span><span class="sxs-lookup"><span data-stu-id="64e68-162">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

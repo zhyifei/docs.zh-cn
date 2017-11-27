@@ -1,79 +1,81 @@
 ---
-title: "声明和令牌 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "声明 [WCF], 和令牌"
+title: "声明和令牌"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5df0845a341dc557627210c7f84fc59b4fadfd10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 声明和令牌
-本主题描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 根据所支持的默认令牌创建的各种声明类型。  
+# <a name="claims-and-tokens"></a><span data-ttu-id="27c46-102">声明和令牌</span><span class="sxs-lookup"><span data-stu-id="27c46-102">Claims and Tokens</span></span>
+<span data-ttu-id="27c46-103">本主题描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 根据所支持的默认令牌创建的各种声明类型。</span><span class="sxs-lookup"><span data-stu-id="27c46-103">This topic describes the various claim types that [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] creates from the default tokens that it supports.</span></span>  
   
- 可以使用 <xref:System.IdentityModel.Claims.ClaimSet> 和 <xref:System.IdentityModel.Claims.Claim> 类来检查客户端凭据的声明。  `ClaimSet` 包含 `Claim` 对象的集合。  每个 `Claim` 都具有以下重要成员：  
+ <span data-ttu-id="27c46-104">可以使用 <xref:System.IdentityModel.Claims.ClaimSet> 和 <xref:System.IdentityModel.Claims.Claim> 类来检查客户端凭据的声明。</span><span class="sxs-lookup"><span data-stu-id="27c46-104">You can examine the claims of a client credential by using the <xref:System.IdentityModel.Claims.ClaimSet> and <xref:System.IdentityModel.Claims.Claim> classes.</span></span> <span data-ttu-id="27c46-105">`ClaimSet` 包含 `Claim` 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="27c46-105">The `ClaimSet` contains a collection of `Claim` objects.</span></span> <span data-ttu-id="27c46-106">每个 `Claim` 都具有以下重要成员：</span><span class="sxs-lookup"><span data-stu-id="27c46-106">Each `Claim` has the following important members:</span></span>  
   
--   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 属性返回的统一资源标识符 \(URI\) 指定了所做声明的类型。  例如，声明类型可以是证书指纹，在这种情况下，URI 为 http:schemas.microsoft.com\/ws\/20005\/05\/identity\/claims\/thumprint。  
+-   <span data-ttu-id="27c46-107"><xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 属性返回的统一资源标识符 (URI) 指定了所做声明的类型。</span><span class="sxs-lookup"><span data-stu-id="27c46-107">The <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> property returns a Uniform Resource Identifier (URI) that specifies the type of claim being made.</span></span> <span data-ttu-id="27c46-108">例如，声明类型可以是证书指纹，在这种情况下，URI 为 http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint。</span><span class="sxs-lookup"><span data-stu-id="27c46-108">For example, a claim type may be a thumbprint of a certificate, in which case the URI is http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint.</span></span>  
   
--   <xref:System.IdentityModel.Claims.Claim.Right%2A> 属性返回的 URI 指定了声明权限。  预定义的权限位于 <xref:System.IdentityModel.Claims.Rights> 类中（<xref:System.IdentityModel.Claims.Rights.Identity%2A>、<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>）。  
+-   <span data-ttu-id="27c46-109"><xref:System.IdentityModel.Claims.Claim.Right%2A> 属性返回的 URI 指定了声明权限。</span><span class="sxs-lookup"><span data-stu-id="27c46-109">The <xref:System.IdentityModel.Claims.Claim.Right%2A> property returns a URI that specifies the right of the claim.</span></span> <span data-ttu-id="27c46-110">预定义的权限位于 <xref:System.IdentityModel.Claims.Rights> 类中（<xref:System.IdentityModel.Claims.Rights.Identity%2A>、<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>）。</span><span class="sxs-lookup"><span data-stu-id="27c46-110">Predefined rights are found in the <xref:System.IdentityModel.Claims.Rights> class (<xref:System.IdentityModel.Claims.Rights.Identity%2A>,  <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).</span></span>  
   
--   <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性返回与声明关联的资源。  
+-   <span data-ttu-id="27c46-111"><xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性返回与声明关联的资源。</span><span class="sxs-lookup"><span data-stu-id="27c46-111">The <xref:System.IdentityModel.Claims.Claim.Resource%2A> property returns the resource associated with the claim.</span></span>  
   
- 此外，每个 <xref:System.IdentityModel.Claims.ClaimSet> 还包含一个 <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> 属性，以表示 `Issuer` 的 <xref:System.IdentityModel.Claims.ClaimSet>。  
+ <span data-ttu-id="27c46-112">此外，每个 <xref:System.IdentityModel.Claims.ClaimSet> 还包含一个 <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> 属性，以表示 <xref:System.IdentityModel.Claims.ClaimSet> 的 `Issuer`。</span><span class="sxs-lookup"><span data-stu-id="27c46-112">Each <xref:System.IdentityModel.Claims.ClaimSet> also has an <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> property, which represents the <xref:System.IdentityModel.Claims.ClaimSet> of the `Issuer`.</span></span>  
   
-## Windows 帐户  
- 在客户端凭据映射到 Windows 用户帐户的情况下，生成的 <xref:System.IdentityModel.Claims.ClaimSet> 具有以下值：  
+## <a name="windows-accounts"></a><span data-ttu-id="27c46-113">Windows 帐户</span><span class="sxs-lookup"><span data-stu-id="27c46-113">Windows Accounts</span></span>  
+ <span data-ttu-id="27c46-114">在客户端凭据映射到 Windows 用户帐户的情况下，生成的 <xref:System.IdentityModel.Claims.ClaimSet> 具有以下值：</span><span class="sxs-lookup"><span data-stu-id="27c46-114">Where a client credential maps to a Windows user account, the resulting <xref:System.IdentityModel.Claims.ClaimSet> has the following values:</span></span>  
   
--   `Issuer` 是 <xref:System.IdentityModel.Claims.ClaimSet> 类的静态 Windows 属性返回的值。  
+-   <span data-ttu-id="27c46-115">`Issuer` 是 <xref:System.IdentityModel.Claims.ClaimSet> 类的静态 Windows 属性返回的值。</span><span class="sxs-lookup"><span data-stu-id="27c46-115">The `Issuer` is the value returned by the static Windows property of the <xref:System.IdentityModel.Claims.ClaimSet> class.</span></span>  
   
--   集合中的声明包括：  
+-   <span data-ttu-id="27c46-116">集合中的声明包括：</span><span class="sxs-lookup"><span data-stu-id="27c46-116">The claims in the collection are:</span></span>  
   
-    -   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 值为安全标识符 \(SID\)、<xref:System.IdentityModel.Claims.Claim.Right%2A> 属性值为 `Identity` 以及返回实际 SID 值的 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 的 <xref:System.IdentityModel.Claims.Claim>。  SID 是域控制器颁发给每个用户的一个唯一值。  SID 用于在与 Windows 安全交互时标识用户。  
+    -   <span data-ttu-id="27c46-117"><xref:System.IdentityModel.Claims.Claim> 值为安全标识符 (SID)、<xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 属性值为 <xref:System.IdentityModel.Claims.Claim.Right%2A> 以及返回实际 SID 值的 `Identity` 的 <xref:System.IdentityModel.Claims.Claim.Resource%2A>。</span><span class="sxs-lookup"><span data-stu-id="27c46-117">A <xref:System.IdentityModel.Claims.Claim> with a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> value of security identifier (SID), a <xref:System.IdentityModel.Claims.Claim.Right%2A> property value of `Identity`, and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> that returns the actual SID value.</span></span> <span data-ttu-id="27c46-118">SID 是域控制器颁发给每个用户的一个唯一值。</span><span class="sxs-lookup"><span data-stu-id="27c46-118">A SID is a unique value the domain controller issues to every user.</span></span> <span data-ttu-id="27c46-119">SID 用于在与 Windows 安全交互时标识用户。</span><span class="sxs-lookup"><span data-stu-id="27c46-119">The SID is used to identify the user in interactions with Windows security.</span></span>  
   
-    -   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 值为 SID、<xref:System.IdentityModel.Claims.Claim.Right%2A> 为 `PossessProperty` 以及 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 为 SID 值的 <xref:System.IdentityModel.Claims.Claim>。  
+    -   <span data-ttu-id="27c46-120"><xref:System.IdentityModel.Claims.Claim> 值为 SID、<xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 为 <xref:System.IdentityModel.Claims.Claim.Right%2A> 以及 `PossessProperty` 为 SID 值的 <xref:System.IdentityModel.Claims.Claim.Resource%2A>。</span><span class="sxs-lookup"><span data-stu-id="27c46-120">A <xref:System.IdentityModel.Claims.Claim> with a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> value of SID, a <xref:System.IdentityModel.Claims.Claim.Right%2A> of `PossessProperty`, and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> of the SID value.</span></span>  
   
-    -   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 为 <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>、<xref:System.IdentityModel.Claims.Claim.Right%2A> 为 `PossessProperty` 以及 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 为包含用户名的字符串（如“MYMACHINE\\Bob”）的 <xref:System.IdentityModel.Claims.Claim>。  
+    -   <span data-ttu-id="27c46-121"><xref:System.IdentityModel.Claims.Claim> 为 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>、<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> 为 <xref:System.IdentityModel.Claims.Claim.Right%2A> 以及 `PossessProperty` 为包含用户名的字符串（如“MYMACHINE\Bob”）的 <xref:System.IdentityModel.Claims.Claim.Resource%2A>。</span><span class="sxs-lookup"><span data-stu-id="27c46-121">A <xref:System.IdentityModel.Claims.Claim> with a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> of <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, a <xref:System.IdentityModel.Claims.Claim.Right%2A> of `PossessProperty` and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> of string containing the user name (for example, "MYMACHINE\Bob").</span></span>  
   
-    -   用户所属的各个组的 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 的附加 SID 声明。  
+    -   <span data-ttu-id="27c46-122">用户所属的各个组的 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 的附加 SID 声明。</span><span class="sxs-lookup"><span data-stu-id="27c46-122">Additional SID claims with <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> for the various groups the user belongs to.</span></span>  
   
-## 证书  
- 在客户端凭据为证书的情况下，生成的 <xref:System.IdentityModel.Claims.ClaimSet> 具有以下各值：  
+## <a name="certificates"></a><span data-ttu-id="27c46-123">证书</span><span class="sxs-lookup"><span data-stu-id="27c46-123">Certificates</span></span>  
+ <span data-ttu-id="27c46-124">在客户端凭据为证书的情况下，生成的 <xref:System.IdentityModel.Claims.ClaimSet> 具有以下各值：</span><span class="sxs-lookup"><span data-stu-id="27c46-124">Where the client credential is a certificate, the resulting <xref:System.IdentityModel.Claims.ClaimSet> has the following values:</span></span>  
   
--   对于自行颁发的证书，`Issuer` 为 <xref:System.IdentityModel.Claims.ClaimSet> 本身。  <xref:System.IdentityModel.Claims.ClaimSet> 返回 <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A> 的 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>、`Identity` 的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 以及 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 值，该值是一个包含证书指纹的 <xref:System.Byte> 数组。  
+-   <span data-ttu-id="27c46-125">对于自行颁发的证书，`Issuer` 为 <xref:System.IdentityModel.Claims.ClaimSet> 本身。</span><span class="sxs-lookup"><span data-stu-id="27c46-125">For self-issued certificates, the `Issuer` is the <xref:System.IdentityModel.Claims.ClaimSet> itself.</span></span> <span data-ttu-id="27c46-126"><xref:System.IdentityModel.Claims.ClaimSet> 返回 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 的 <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>、<xref:System.IdentityModel.Claims.Claim.Right%2A> 的 `Identity` 以及 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 值，该值是一个包含证书指纹的 <xref:System.Byte> 数组。</span><span class="sxs-lookup"><span data-stu-id="27c46-126">The <xref:System.IdentityModel.Claims.ClaimSet> returns a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> of <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, a <xref:System.IdentityModel.Claims.Claim.Right%2A> of `Identity`, and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> value that is a <xref:System.Byte> array containing the thumbprint of the certificate.</span></span>  
   
--   对于证书颁发机构颁发的证书，颁发者为表示证书颁发机构的证书的 `ClaimSet`。  
+-   <span data-ttu-id="27c46-127">对于证书颁发机构颁发的证书，颁发者为表示证书颁发机构的证书的 `ClaimSet`。</span><span class="sxs-lookup"><span data-stu-id="27c46-127">For a certificate issued by a certification authority, the issuer is the `ClaimSet` representing the certification authority’s certificate.</span></span>  
   
--   集合中的 `Claims` 包括：  
+-   <span data-ttu-id="27c46-128">集合中的 `Claims` 包括：</span><span class="sxs-lookup"><span data-stu-id="27c46-128">The `Claims` in the collection include:</span></span>  
   
-    -   `ClaimType` 为 Thumbprint、`Right` 为 PossessProperty 以及 `Resource` 为包含证书指纹的字节数组的 `Claim`  
+    -   <span data-ttu-id="27c46-129">`Claim` 为 Thumbprint、`ClaimType` 为 PossessProperty 以及 `Right` 为包含证书指纹的字节数组的 `Resource`</span><span class="sxs-lookup"><span data-stu-id="27c46-129">A `Claim` with a `ClaimType` of Thumbprint, a `Right` of PossessProperty, and a `Resource` that is a byte array containing the thumbprint of the certificate</span></span>  
   
-    -   各种类型的其他 PossessProperty 声明，包括表示各种证书属性的 X500DistinguishedName、Dns、Name、Upn 和 Rsa。  Rsa 声明的资源是与证书关联的公钥。**注意，**如果客户端凭据类型是服务映射到 Windows 帐户的证书，则会生成两个 `ClaimSet` 对象。  第一个对象包含与 Windows 帐户相关的所有声明，第二个对象包含与证书相关的所有声明。  
+    -   <span data-ttu-id="27c46-130">各种类型的其他 PossessProperty 声明，包括表示各种证书属性的 X500DistinguishedName、Dns、Name、Upn 和 Rsa。</span><span class="sxs-lookup"><span data-stu-id="27c46-130">Additional PossessProperty claims of various types, including X500DistinguishedName, Dns, Name, Upn, and Rsa, represent various properties of the certificate.</span></span> <span data-ttu-id="27c46-131">Rsa 声明的资源是与证书关联的公钥。**注意**其中客户端凭据类型是证书，服务会映射到 Windows 帐户，两个`ClaimSet`生成对象。</span><span class="sxs-lookup"><span data-stu-id="27c46-131">The resource for the Rsa claim is the public key associated with the certificate.**Note** Where the client credential type is a certificate that the service maps to a Windows account, two `ClaimSet` objects are generated.</span></span> <span data-ttu-id="27c46-132">第一个对象包含与 Windows 帐户相关的所有声明，第二个对象包含与证书相关的所有声明。</span><span class="sxs-lookup"><span data-stu-id="27c46-132">The first contains all the claims related to the Windows account and the second contains all the claims related to the certificate.</span></span>  
   
-## 用户名\/密码  
- 在客户端凭据是未映射到 Windows 帐户的用户名\/密码（或等效项）的情况下，生成的 `ClaimSet` 由 `ClaimSet` 类的静态 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 属性颁发。  `ClaimSet` 包含类型为 `` <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>、资源为客户端提供的用户名的 `Identity` 声明。  对应声明的 `Right` 为 `PossessProperty`。  
+## <a name="user-namepassword"></a><span data-ttu-id="27c46-133">用户名/密码</span><span class="sxs-lookup"><span data-stu-id="27c46-133">User Name/Password</span></span>  
+ <span data-ttu-id="27c46-134">在客户端凭据是未映射到 Windows 帐户的用户名/密码（或等效项）的情况下，生成的 `ClaimSet` 由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 类的静态 `ClaimSet` 属性颁发。</span><span class="sxs-lookup"><span data-stu-id="27c46-134">Where the client credential is a user name/password (or equivalent) that does not map to a Windows account, the resulting `ClaimSet` is issued by the static <xref:System.IdentityModel.Claims.ClaimSet.System%2A> property of the `ClaimSet` class.</span></span> <span data-ttu-id="27c46-135">`ClaimSet`包含`Identity`声明类型的<xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>其资源是客户端的用户名称提供。</span><span class="sxs-lookup"><span data-stu-id="27c46-135">The `ClaimSet` contains an `Identity` claim of type <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> whose resource is the user name the client provides.</span></span> <span data-ttu-id="27c46-136">对应声明的 `Right` 为 `PossessProperty`。</span><span class="sxs-lookup"><span data-stu-id="27c46-136">A corresponding claim has a `Right` of `PossessProperty`.</span></span>  
   
-## RSA 密钥  
- 在使用与证书无关联的 RSA 密钥的情况下，生成的 `ClaimSet` 是自行颁发的，并且包含类型为 `` <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>、资源为 RSA 密钥的 `Identity` 声明。  对应声明的 `Right` 为 `PossessProperty`。  
+## <a name="rsa-keys"></a><span data-ttu-id="27c46-137">RSA 密钥</span><span class="sxs-lookup"><span data-stu-id="27c46-137">RSA Keys</span></span>  
+ <span data-ttu-id="27c46-138">在使用不与证书相关联的 RSA 密钥时，生成`ClaimSet`自行颁发并且包含`Identity`声明类型的<xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>其资源为 RSA 密钥。</span><span class="sxs-lookup"><span data-stu-id="27c46-138">Where an RSA key not associated with a certificate is used, the resulting `ClaimSet` is self-issued and contains an `Identity` claim of type <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> whose resource is the RSA key.</span></span> <span data-ttu-id="27c46-139">对应声明的 `Right` 为 `PossessProperty`。</span><span class="sxs-lookup"><span data-stu-id="27c46-139">A corresponding claim has a `Right` of `PossessProperty`.</span></span>  
   
-## SAML  
- 在客户端使用安全断言标记语言 \(SAML\) 令牌进行身份验证的情况下，生成的 `ClaimSet` 由已对 SAML 令牌进行签名的实体来颁发，通常为颁发了 SAML 令牌的安全令牌服务 \(STS\) 的证书。  `ClaimSet` 中包含 SAML 令牌中的各种声明。  如果 SAML 令牌包含非 `null` 名称的 `SamlSubject`，则会创建一个类型为 <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A>、资源类型为 <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> 的 `Identity` 声明。  
+## <a name="saml"></a><span data-ttu-id="27c46-140">SAML</span><span class="sxs-lookup"><span data-stu-id="27c46-140">SAML</span></span>  
+ <span data-ttu-id="27c46-141">在客户端使用安全断言标记语言 (SAML) 令牌进行身份验证的情况下，生成的 `ClaimSet` 由已对 SAML 令牌进行签名的实体来颁发，通常为颁发了 SAML 令牌的安全令牌服务 (STS) 的证书。</span><span class="sxs-lookup"><span data-stu-id="27c46-141">Where the client authenticates with a Security Assertions Markup Language (SAML) token, the resulting `ClaimSet` is issued by the entity that signed the SAML token, often the certificate of the security token service (STS) that issued the SAML token.</span></span> <span data-ttu-id="27c46-142">`ClaimSet` 中包含 SAML 令牌中的各种声明。</span><span class="sxs-lookup"><span data-stu-id="27c46-142">The `ClaimSet` contains various claims as found in the SAML token.</span></span> <span data-ttu-id="27c46-143">如果 SAML 令牌包含非 `SamlSubject` 名称的 `null`，则会创建一个类型为 `Identity`、资源类型为 <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> 的 <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> 声明。</span><span class="sxs-lookup"><span data-stu-id="27c46-143">If the SAML token contains a `SamlSubject` with a non-`null` name, then an `Identity` claim with a type of <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> and a resource type of <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> are created.</span></span>  
   
-## 标识声明和 ServiceSecurityContext.IsAnonymous  
- 如果从客户端凭据生成的任何 `ClaimSet` 对象都不包含 `Right` 为 `Identity` 的声明，则 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 属性将返回 `true`。  如果存在一个或多个此类声明，则 `IsAnonymous` 属性将返回 `false`。  
+## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a><span data-ttu-id="27c46-144">标识声明和 ServiceSecurityContext.IsAnonymous</span><span class="sxs-lookup"><span data-stu-id="27c46-144">Identity Claims and ServiceSecurityContext.IsAnonymous</span></span>  
+ <span data-ttu-id="27c46-145">如果没有任何`ClaimSet`导致客户端凭据的对象包含的声明`Right`的`Identity,`则<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>属性返回`true`。</span><span class="sxs-lookup"><span data-stu-id="27c46-145">If none of the `ClaimSet` objects resulting from the client credentials contain a claim with a `Right` of `Identity,` then the <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> property returns `true`.</span></span> <span data-ttu-id="27c46-146">如果存在一个或多个此类声明，则 `IsAnonymous` 属性将返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="27c46-146">If one or more such claims are present, the `IsAnonymous` property returns `false`.</span></span>  
   
-## 请参阅  
- <xref:System.IdentityModel.Claims.ClaimSet>   
- <xref:System.IdentityModel.Claims.Claim>   
- <xref:System.IdentityModel.Claims.Rights>   
- <xref:System.IdentityModel.Claims.ClaimTypes>   
- [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a><span data-ttu-id="27c46-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="27c46-147">See Also</span></span>  
+ <xref:System.IdentityModel.Claims.ClaimSet>  
+ <xref:System.IdentityModel.Claims.Claim>  
+ <xref:System.IdentityModel.Claims.Rights>  
+ <xref:System.IdentityModel.Claims.ClaimTypes>  
+ [<span data-ttu-id="27c46-148">管理声明和使用标识模型的授权</span><span class="sxs-lookup"><span data-stu-id="27c46-148">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

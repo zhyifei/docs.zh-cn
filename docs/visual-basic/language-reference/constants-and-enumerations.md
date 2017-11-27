@@ -1,106 +1,89 @@
 ---
-title: "常量和枚举 (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: "常量和枚举 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - enumerations [Visual Basic]
-- constants
-- constants, list of
+- constants [Visual Basic]
+- constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e37ef2e3c51e96e85cb214054195016e69d52382
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供许多预定义的常量和枚举，面向开发人员。 常数存储保持不变的应用程序的执行中的值。 枚举提供能够与组相关的常数，并且能够将常量值与名称相关联的简便方法。  
+# <a name="constants-and-enumerations-visual-basic"></a><span data-ttu-id="7ff91-102">常量和枚举 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ff91-102">Constants and Enumerations (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="7ff91-103">提供了大量预定义的常量和枚举的开发人员。</span><span class="sxs-lookup"><span data-stu-id="7ff91-103"> supplies a number of predefined constants and enumerations for developers.</span></span> <span data-ttu-id="7ff91-104">常数存储中保持不变的应用程序的执行中的值。</span><span class="sxs-lookup"><span data-stu-id="7ff91-104">Constants store values that remain constant throughout the execution of an application.</span></span> <span data-ttu-id="7ff91-105">枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。</span><span class="sxs-lookup"><span data-stu-id="7ff91-105">Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.</span></span>  
   
-## <a name="constants"></a>常量  
+## <a name="constants"></a><span data-ttu-id="7ff91-106">常量</span><span class="sxs-lookup"><span data-stu-id="7ff91-106">Constants</span></span>  
   
-### <a name="conditional-compilation-constants"></a>条件编译常量  
- 下表列出可用于条件编译的预定义的常量。  
+### <a name="conditional-compilation-constants"></a><span data-ttu-id="7ff91-107">条件编译常量</span><span class="sxs-lookup"><span data-stu-id="7ff91-107">Conditional Compilation Constants</span></span>  
+ <span data-ttu-id="7ff91-108">下表列出可用于条件编译的预定义的常量。</span><span class="sxs-lookup"><span data-stu-id="7ff91-108">The following table lists the predefined constants available for conditional compilation.</span></span>  
   
-|**常量**|**描述**|  
+|<span data-ttu-id="7ff91-109">**常量**</span><span class="sxs-lookup"><span data-stu-id="7ff91-109">**Constant**</span></span>|<span data-ttu-id="7ff91-110">**描述**</span><span class="sxs-lookup"><span data-stu-id="7ff91-110">**Description**</span></span>|  
 |---|---|  
-|`CONFIG`|一个字符串，对应的当前设置**活动解决方案配置**框中**Configuration Manager**。|  
-|`DEBUG`|一个`Boolean`值，可以在设置**项目属性**对话框。 默认情况下，调试配置项目定义`DEBUG`。 当`DEBUG`定义，则<xref:System.Diagnostics.Debug>类方法将生成的输出传送到**输出**窗口。</xref:System.Diagnostics.Debug> 未定义时,<xref:System.Diagnostics.Debug>类方法不进行编译，不生成任何调试输出。</xref:System.Diagnostics.Debug>|  
-|`TARGET`|一个表示项目或命令行中的设置的输出类型的字符串**target**选项。 可能值`TARGET`是︰<br /><br /> -"winexe"为 Windows 应用程序。<br />-"exe"控制台应用程序。<br />-类库"库"。<br />-模块"模块"。<br />- **Target**可能在中设置选项[!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]集成的开发环境。 有关详细信息，请参阅[/target (Visual Basic 中)](../../visual-basic/reference/command-line-compiler/target.md)。|  
-|`TRACE`|一个`Boolean`值，可以在设置**项目属性**对话框。 默认情况下，所有配置项目都定义`TRACE`。 当`TRACE`定义，则<xref:System.Diagnostics.Trace>类方法将生成的输出传送到**输出**窗口。</xref:System.Diagnostics.Trace> 未定义时,<xref:System.Diagnostics.Trace>类方法将不会被编译，但不`Trace`生成输出。</xref:System.Diagnostics.Trace>|  
-|`VBC_VER`|一个数字，表示[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]版本，请在*主要*。*次要*格式。 版本号[!INCLUDE[vbprvblong](../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]为 8.0。|  
+|`CONFIG`|<span data-ttu-id="7ff91-111">对应的当前设置的字符串**活动解决方案配置**框中**Configuration Manager**。</span><span class="sxs-lookup"><span data-stu-id="7ff91-111">A string that corresponds to the current setting of the **Active Solution Configuration** box in the **Configuration Manager**.</span></span>|  
+|`DEBUG`|<span data-ttu-id="7ff91-112">A`Boolean`可以在中设置的值**项目属性**对话框。</span><span class="sxs-lookup"><span data-stu-id="7ff91-112">A `Boolean` value that can be set in the **Project Properties** dialog box.</span></span> <span data-ttu-id="7ff91-113">默认情况下，项目的调试配置定义`DEBUG`。</span><span class="sxs-lookup"><span data-stu-id="7ff91-113">By default, the Debug configuration for a project defines `DEBUG`.</span></span> <span data-ttu-id="7ff91-114">当`DEBUG`定义，<xref:System.Diagnostics.Debug>类方法将生成输出复制到**输出**窗口。</span><span class="sxs-lookup"><span data-stu-id="7ff91-114">When `DEBUG` is defined, <xref:System.Diagnostics.Debug> class methods generate output to the **Output** window.</span></span> <span data-ttu-id="7ff91-115">当未定义时，<xref:System.Diagnostics.Debug>类方法不进行编译，不生成任何调试输出。</span><span class="sxs-lookup"><span data-stu-id="7ff91-115">When it is not defined, <xref:System.Diagnostics.Debug> class methods are not compiled and no Debug output is generated.</span></span>|  
+|`TARGET`|<span data-ttu-id="7ff91-116">表示对项目或命令行中的设置的输出类型的字符串**target**选项。</span><span class="sxs-lookup"><span data-stu-id="7ff91-116">A string representing the output type for the project or the setting of the command-line **/target** option.</span></span> <span data-ttu-id="7ff91-117">可能值`TARGET`是：</span><span class="sxs-lookup"><span data-stu-id="7ff91-117">The possible values of `TARGET` are:</span></span><br /><br /> <span data-ttu-id="7ff91-118">-"winexe"Windows 应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ff91-118">-   "winexe" for a Windows application.</span></span><br /><span data-ttu-id="7ff91-119">-"exe"控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ff91-119">-   "exe" for a console application.</span></span><br /><span data-ttu-id="7ff91-120">-类库的"库"。</span><span class="sxs-lookup"><span data-stu-id="7ff91-120">-   "library" for a class library.</span></span><br /><span data-ttu-id="7ff91-121">-"模块"模块。</span><span class="sxs-lookup"><span data-stu-id="7ff91-121">-   "module" for a module.</span></span><br /><span data-ttu-id="7ff91-122">- **Target**可能在中设置选项[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境。</span><span class="sxs-lookup"><span data-stu-id="7ff91-122">-   The **/target** option may be set in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment.</span></span> <span data-ttu-id="7ff91-123">有关详细信息，请参阅[/target (Visual Basic 中)](../../visual-basic/reference/command-line-compiler/target.md)。</span><span class="sxs-lookup"><span data-stu-id="7ff91-123">For more information, see [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).</span></span>|  
+|`TRACE`|<span data-ttu-id="7ff91-124">A`Boolean`可以在中设置的值**项目属性**对话框。</span><span class="sxs-lookup"><span data-stu-id="7ff91-124">A `Boolean` value that can be set in the **Project Properties** dialog box.</span></span> <span data-ttu-id="7ff91-125">默认情况下，项目的所有配置都定义`TRACE`。</span><span class="sxs-lookup"><span data-stu-id="7ff91-125">By default, all configurations for a project define `TRACE`.</span></span> <span data-ttu-id="7ff91-126">当`TRACE`定义，<xref:System.Diagnostics.Trace>类方法将生成输出复制到**输出**窗口。</span><span class="sxs-lookup"><span data-stu-id="7ff91-126">When `TRACE` is defined, <xref:System.Diagnostics.Trace> class methods generate output to the **Output** window.</span></span> <span data-ttu-id="7ff91-127">当未定义时，<xref:System.Diagnostics.Trace>类方法将不会被编译，但未`Trace`生成输出。</span><span class="sxs-lookup"><span data-stu-id="7ff91-127">When it is not defined, <xref:System.Diagnostics.Trace> class methods are not compiled and no `Trace` output is generated.</span></span>|  
+|`VBC_VER`|<span data-ttu-id="7ff91-128">一个数字，表示[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]版本，请在*主要*。*次要*格式。</span><span class="sxs-lookup"><span data-stu-id="7ff91-128">A number representing the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] version, in *major*.*minor* format.</span></span> <span data-ttu-id="7ff91-129">版本的版本号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]为 8.0。</span><span class="sxs-lookup"><span data-stu-id="7ff91-129">The version number for [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] is 8.0.</span></span>|  
   
-### <a name="print-and-display-constants"></a>打印和显示常量  
- 当调用输出和显示功能时，您可以使用以下常量代替实际值在代码中。  
+### <a name="print-and-display-constants"></a><span data-ttu-id="7ff91-130">打印和显示常量</span><span class="sxs-lookup"><span data-stu-id="7ff91-130">Print and Display Constants</span></span>  
+ <span data-ttu-id="7ff91-131">当你调用输出，并显示函数时，你可以代替实际值在代码中使用以下常量。</span><span class="sxs-lookup"><span data-stu-id="7ff91-131">When you call print and display functions, you can use the following constants in your code in place of the actual values.</span></span>  
   
-|**常量**|**描述**|  
+|<span data-ttu-id="7ff91-132">**常量**</span><span class="sxs-lookup"><span data-stu-id="7ff91-132">**Constant**</span></span>|<span data-ttu-id="7ff91-133">**描述**</span><span class="sxs-lookup"><span data-stu-id="7ff91-133">**Description**</span></span>|  
 |---|---|  
-|`vbCrLf`|回车符/换行符的组合。|  
-|`vbCr`|回车符。|  
-|`vbLf`|换行字符。|  
-|`vbNewLine`|换行字符。|  
-|`vbNullChar`|Null 字符。|  
-|`vbNullString`|不完全相同的长度为零的字符串 ("");用来调用外部过程。|  
-|`vbObjectError`|错误号。 用户定义的错误号应大于此值。 例如: <br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
-|`vbTab`|制表符。|  
-|`vbBack`|退格符。|  
-|`vbFormFeed`|Microsoft Windows 中未使用。|  
-|`vbVerticalTab`|Microsoft Windows 中不很有用。|  
+|`vbCrLf`|<span data-ttu-id="7ff91-134">回车/换行字符组合。</span><span class="sxs-lookup"><span data-stu-id="7ff91-134">Carriage return/linefeed character combination.</span></span>|  
+|`vbCr`|<span data-ttu-id="7ff91-135">回车符。</span><span class="sxs-lookup"><span data-stu-id="7ff91-135">Carriage return character.</span></span>|  
+|`vbLf`|<span data-ttu-id="7ff91-136">换行符字符。</span><span class="sxs-lookup"><span data-stu-id="7ff91-136">Linefeed character.</span></span>|  
+|`vbNewLine`|<span data-ttu-id="7ff91-137">换行字符。</span><span class="sxs-lookup"><span data-stu-id="7ff91-137">Newline character.</span></span>|  
+|`vbNullChar`|<span data-ttu-id="7ff91-138">Null 字符。</span><span class="sxs-lookup"><span data-stu-id="7ff91-138">Null character.</span></span>|  
+|`vbNullString`|<span data-ttu-id="7ff91-139">不同于零长度字符串 ("");用来调用外部过程。</span><span class="sxs-lookup"><span data-stu-id="7ff91-139">Not the same as a zero-length string (""); used for calling external procedures.</span></span>|  
+|`vbObjectError`|<span data-ttu-id="7ff91-140">错误号。</span><span class="sxs-lookup"><span data-stu-id="7ff91-140">Error number.</span></span> <span data-ttu-id="7ff91-141">用户定义的错误号应大于此值。</span><span class="sxs-lookup"><span data-stu-id="7ff91-141">User-defined error numbers should be greater than this value.</span></span> <span data-ttu-id="7ff91-142">例如: </span><span class="sxs-lookup"><span data-stu-id="7ff91-142">For example:</span></span><br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbTab`|<span data-ttu-id="7ff91-143">制表符。</span><span class="sxs-lookup"><span data-stu-id="7ff91-143">Tab character.</span></span>|  
+|`vbBack`|<span data-ttu-id="7ff91-144">退格符。</span><span class="sxs-lookup"><span data-stu-id="7ff91-144">Backspace character.</span></span>|  
+|`vbFormFeed`|<span data-ttu-id="7ff91-145">未在 Microsoft Windows 中使用。</span><span class="sxs-lookup"><span data-stu-id="7ff91-145">Not used in Microsoft Windows.</span></span>|  
+|`vbVerticalTab`|<span data-ttu-id="7ff91-146">Microsoft Windows 中不很有用。</span><span class="sxs-lookup"><span data-stu-id="7ff91-146">Not useful in Microsoft Windows.</span></span>|  
   
-## <a name="enumerations"></a>枚举  
- 下表列出并描述由提供的枚举[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+## <a name="enumerations"></a><span data-ttu-id="7ff91-147">枚举</span><span class="sxs-lookup"><span data-stu-id="7ff91-147">Enumerations</span></span>  
+ <span data-ttu-id="7ff91-148">下表列出并描述由提供的枚举[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7ff91-148">The following table lists and describes the enumerations provided by [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-|枚举|说明|  
+|<span data-ttu-id="7ff91-149">枚举</span><span class="sxs-lookup"><span data-stu-id="7ff91-149">Enumeration</span></span>|<span data-ttu-id="7ff91-150">描述</span><span class="sxs-lookup"><span data-stu-id="7ff91-150">Description</span></span>|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle></xref:Microsoft.VisualBasic.AppWinStyle>|指示要在调用时，可用于所调用的程序的窗口样式<xref:Microsoft.VisualBasic.Interaction.Shell%2A>函数。</xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
-|<xref:Microsoft.VisualBasic.AudioPlayMode></xref:Microsoft.VisualBasic.AudioPlayMode>|指示如何在调用音频方法时播放声音。|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole></xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|指示角色在调用时，检查类型<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>方法。</xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
-|<xref:Microsoft.VisualBasic.CallType></xref:Microsoft.VisualBasic.CallType>|指示过程调用时，所调用的类型<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>函数。</xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
-|<xref:Microsoft.VisualBasic.CompareMethod></xref:Microsoft.VisualBasic.CompareMethod>|指示如何比较字符串时调用比较函数。|  
-|<xref:Microsoft.VisualBasic.DateFormat></xref:Microsoft.VisualBasic.DateFormat>|指示如何显示日期时调用<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>函数。</xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|  
-|<xref:Microsoft.VisualBasic.DateInterval></xref:Microsoft.VisualBasic.DateInterval>|指示当调用与日期相关的函数时如何确定日期间隔并设置其格式。|  
-|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption></xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|指定要从中删除一个目录包含文件或目录时应采取的操作。|  
-|<xref:Microsoft.VisualBasic.DueDate></xref:Microsoft.VisualBasic.DueDate>|指示何时付款时调用财务方法。|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType></xref:Microsoft.VisualBasic.FileIO.FieldType>|指示文本字段分隔的还是固定宽度。|  
-|<xref:Microsoft.VisualBasic.FileAttribute></xref:Microsoft.VisualBasic.FileAttribute>|指示要在调用文件访问函数时使用的文件属性。|  
-|<xref:Microsoft.VisualBasic.FirstDayOfWeek></xref:Microsoft.VisualBasic.FirstDayOfWeek>|指示在调用与日期相关的函数时使用的每周的第一天。|  
-|<xref:Microsoft.VisualBasic.FirstWeekOfYear></xref:Microsoft.VisualBasic.FirstWeekOfYear>|指示要在调用与日期相关的函数时使用的年份的第一周。|  
-|<xref:Microsoft.VisualBasic.MsgBoxResult></xref:Microsoft.VisualBasic.MsgBoxResult>|指示返回的消息框上按下了哪个按钮<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数。</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|<xref:Microsoft.VisualBasic.MsgBoxStyle></xref:Microsoft.VisualBasic.MsgBoxStyle>|指示要在调用时显示的按钮<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数。</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|<xref:Microsoft.VisualBasic.OpenAccess></xref:Microsoft.VisualBasic.OpenAccess>|指示如何在调用文件访问函数打开一个文件。|  
-|<xref:Microsoft.VisualBasic.OpenMode></xref:Microsoft.VisualBasic.OpenMode>|指示如何在调用文件访问函数打开一个文件。|  
-|<xref:Microsoft.VisualBasic.OpenShare></xref:Microsoft.VisualBasic.OpenShare>|指示如何在调用文件访问函数打开一个文件。|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption></xref:Microsoft.VisualBasic.FileIO.RecycleOption>|指定是否应被永久删除或放在回收站中一个文件。|  
-|<xref:Microsoft.VisualBasic.FileIO.SearchOption></xref:Microsoft.VisualBasic.FileIO.SearchOption>|指定是否以搜索所有或仅为顶级目录。|  
-|<xref:Microsoft.VisualBasic.TriState></xref:Microsoft.VisualBasic.TriState>|指示`Boolean`值或数字格式的函数调用时是否应使用默认值。|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption></xref:Microsoft.VisualBasic.FileIO.UICancelOption>|指定应使用哪些用户单击时执行此操作**取消**一次操作中。|  
-|<xref:Microsoft.VisualBasic.FileIO.UIOption></xref:Microsoft.VisualBasic.FileIO.UIOption>|指定在复制、 删除或移动文件或目录时显示进度对话框。|  
-|<xref:Microsoft.VisualBasic.VariantType></xref:Microsoft.VisualBasic.VariantType>|指示返回的变体对象的类型<xref:Microsoft.VisualBasic.Information.VarType%2A>函数。</xref:Microsoft.VisualBasic.Information.VarType%2A>|  
-|<xref:Microsoft.VisualBasic.VbStrConv></xref:Microsoft.VisualBasic.VbStrConv>|指示哪种类型的转换调用时要执行<xref:Microsoft.VisualBasic.Strings.StrConv%2A>函数。</xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|<span data-ttu-id="7ff91-151">指示要在调用时，可用于所调用的程序的窗口样式<xref:Microsoft.VisualBasic.Interaction.Shell%2A>函数。</span><span class="sxs-lookup"><span data-stu-id="7ff91-151">Indicates the window style to use for the invoked program when calling the <xref:Microsoft.VisualBasic.Interaction.Shell%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.AudioPlayMode>|<span data-ttu-id="7ff91-152">指示如何调用音频方法时播放声音。</span><span class="sxs-lookup"><span data-stu-id="7ff91-152">Indicates how to play sounds when calling audio methods.</span></span>|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|<span data-ttu-id="7ff91-153">指示要时调用，检查角色类型<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7ff91-153">Indicates the type of role to check when calling the <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> method.</span></span>|  
+|<xref:Microsoft.VisualBasic.CallType>|<span data-ttu-id="7ff91-154">指示的调用时要调用的过程的类型<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>函数。</span><span class="sxs-lookup"><span data-stu-id="7ff91-154">Indicates the type of procedure being invoked when calling the <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.CompareMethod>|<span data-ttu-id="7ff91-155">指示如何比较字符串时调用比较函数。</span><span class="sxs-lookup"><span data-stu-id="7ff91-155">Indicates how to compare strings when calling comparison functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.DateFormat>|<span data-ttu-id="7ff91-156">指示如何显示日期时调用<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>函数。</span><span class="sxs-lookup"><span data-stu-id="7ff91-156">Indicates how to display dates when calling the <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.DateInterval>|<span data-ttu-id="7ff91-157">指示当调用与日期相关的函数时如何确定日期间隔并设置其格式。</span><span class="sxs-lookup"><span data-stu-id="7ff91-157">Indicates how to determine and format date intervals when calling date-related functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|<span data-ttu-id="7ff91-158">指定要从中删除一个目录包含文件或目录时应采取的操作。</span><span class="sxs-lookup"><span data-stu-id="7ff91-158">Specifies what should be done when a directory that is to be deleted contains files or directories.</span></span>|  
+|<xref:Microsoft.VisualBasic.DueDate>|<span data-ttu-id="7ff91-159">指示何时付款调用财务方法时。</span><span class="sxs-lookup"><span data-stu-id="7ff91-159">Indicates when payments are due when calling financial methods.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|<span data-ttu-id="7ff91-160">指示是否分隔文本字段或固定宽度。</span><span class="sxs-lookup"><span data-stu-id="7ff91-160">Indicates whether text fields are delimited or fixed-width.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileAttribute>|<span data-ttu-id="7ff91-161">指示要在调用文件访问函数时使用的文件属性。</span><span class="sxs-lookup"><span data-stu-id="7ff91-161">Indicates the file attributes to use when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|<span data-ttu-id="7ff91-162">指示调用与日期相关的函数时使用的每周的第一天。</span><span class="sxs-lookup"><span data-stu-id="7ff91-162">Indicates the first day of the week to use when calling date-related functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|<span data-ttu-id="7ff91-163">指示要在调用与日期相关的函数时使用的年份的第一周。</span><span class="sxs-lookup"><span data-stu-id="7ff91-163">Indicates the first week of the year to use when calling date-related functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.MsgBoxResult>|<span data-ttu-id="7ff91-164">指示在消息框上按下了哪个按钮，由 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函数返回。</span><span class="sxs-lookup"><span data-stu-id="7ff91-164">Indicates which button was pressed on a message box, returned by the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.MsgBoxStyle>|<span data-ttu-id="7ff91-165">指示调用 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函数时显示的按钮。</span><span class="sxs-lookup"><span data-stu-id="7ff91-165">Indicates which buttons to display when calling the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.OpenAccess>|<span data-ttu-id="7ff91-166">指示如何在调用文件访问函数时打开文件。</span><span class="sxs-lookup"><span data-stu-id="7ff91-166">Indicates how to open a file when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.OpenMode>|<span data-ttu-id="7ff91-167">指示如何在调用文件访问函数时打开文件。</span><span class="sxs-lookup"><span data-stu-id="7ff91-167">Indicates how to open a file when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.OpenShare>|<span data-ttu-id="7ff91-168">指示如何在调用文件访问函数时打开文件。</span><span class="sxs-lookup"><span data-stu-id="7ff91-168">Indicates how to open a file when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|<span data-ttu-id="7ff91-169">指定是否应永久删除文件或在置于回收站。</span><span class="sxs-lookup"><span data-stu-id="7ff91-169">Specifies whether a file should be deleted permanently or placed in the Recycle Bin.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|<span data-ttu-id="7ff91-170">指定是否搜索所有或仅顶级目录。</span><span class="sxs-lookup"><span data-stu-id="7ff91-170">Specifies whether to search all or only top-level directories.</span></span>|  
+|<xref:Microsoft.VisualBasic.TriState>|<span data-ttu-id="7ff91-171">指示`Boolean`值或调用数字格式的函数时是否应使用默认值。</span><span class="sxs-lookup"><span data-stu-id="7ff91-171">Indicates a `Boolean` value or whether the default should be used when calling number-formatting functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|<span data-ttu-id="7ff91-172">指定应该是什么如果用户单击这样做**取消**执行操作的过程。</span><span class="sxs-lookup"><span data-stu-id="7ff91-172">Specifies what should be done if the user clicks **Cancel** during an operation.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.UIOption>|<span data-ttu-id="7ff91-173">指定复制、 删除或移动文件或目录时显示进度对话框。</span><span class="sxs-lookup"><span data-stu-id="7ff91-173">Specifies whether or not to show a progress dialog when copying, deleting, or moving files or directories.</span></span>|  
+|<xref:Microsoft.VisualBasic.VariantType>|<span data-ttu-id="7ff91-174">指示返回的变体对象的类型<xref:Microsoft.VisualBasic.Information.VarType%2A>函数。</span><span class="sxs-lookup"><span data-stu-id="7ff91-174">Indicates the type of a variant object, returned by the <xref:Microsoft.VisualBasic.Information.VarType%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.VbStrConv>|<span data-ttu-id="7ff91-175">指示调用 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 函数时要执行的转换类型。</span><span class="sxs-lookup"><span data-stu-id="7ff91-175">Indicates which type of conversion to perform when calling the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)   
- [Visual Basic](../../visual-basic/index.md)   
- [常量概述](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [枚举概述](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="7ff91-176">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ff91-176">See Also</span></span>  
+ [<span data-ttu-id="7ff91-177">Visual Basic 语言参考</span><span class="sxs-lookup"><span data-stu-id="7ff91-177">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ [<span data-ttu-id="7ff91-178">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7ff91-178">Visual Basic</span></span>](../../visual-basic/index.md)  
+ [<span data-ttu-id="7ff91-179">常量概述</span><span class="sxs-lookup"><span data-stu-id="7ff91-179">Constants Overview</span></span>](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [<span data-ttu-id="7ff91-180">枚举概述</span><span class="sxs-lookup"><span data-stu-id="7ff91-180">Enumerations Overview</span></span>](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

@@ -1,46 +1,47 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的单元格样式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "单元格, 样式"
-  - "数据网格, 单元格样式"
-  - "DataGridView 控件 [Windows 窗体], 单元格样式"
+title: "Windows 窗体 DataGridView 控件中的单元格样式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell styles
+- cells [Windows Forms], styles
+- data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: 33
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体 DataGridView 控件中的单元格样式
-<xref:System.Windows.Forms.DataGridView> 控件内的每个单元格都可以有自己的样式，如文本格式、背景色、前景色和字体。  但是，多个单元格通常会共享特定的样式特征。  
+# <a name="cell-styles-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="c24f4-102">Windows 窗体 DataGridView 控件中的单元格样式</span><span class="sxs-lookup"><span data-stu-id="c24f4-102">Cell Styles in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="c24f4-103">中的每个单元格<xref:System.Windows.Forms.DataGridView>控件可以具有其自己的样式，例如文本格式、 背景色、 前景颜色和字体。</span><span class="sxs-lookup"><span data-stu-id="c24f4-103">Each cell within the <xref:System.Windows.Forms.DataGridView> control can have its own style, such as text format, background color, foreground color, and font.</span></span> <span data-ttu-id="c24f4-104">但是，通常情况下，多个单元格将具有特定样式特征。</span><span class="sxs-lookup"><span data-stu-id="c24f4-104">Typically, however, multiple cells will share particular style characteristics.</span></span>  
   
- 共享样式的单元格组可能包含特定行或列内的所有单元格、包含特定值的所有单元格或控件内的所有单元格。  由于这些单元格组是重叠的，因此，每个单元格都可以从多处获取其样式信息。  例如，您可能希望 <xref:System.Windows.Forms.DataGridView> 控件中的每个单元格都使用相同字体，只有货币列的单元格使用货币格式，并且只有带负数的货币单元格使用红色前景色。  
+ <span data-ttu-id="c24f4-105">用于共享样式的单元格的组可能包括在特定行或列、 包含特定值的所有单元格或所有单元格的所有单元格控件中。</span><span class="sxs-lookup"><span data-stu-id="c24f4-105">Groups of cells that share styles may include all cells within particular rows or columns, all cells that contain particular values, or all cells in the control.</span></span> <span data-ttu-id="c24f4-106">因为这些组重叠，则每个单元格可能从多个位置中获取其样式信息。</span><span class="sxs-lookup"><span data-stu-id="c24f4-106">Because these groups overlap, each cell may get its styling information from more than one place.</span></span> <span data-ttu-id="c24f4-107">例如，你可能需要在中的每个单元格<xref:System.Windows.Forms.DataGridView>控件使用带有负数的字体相同，但仅在要使用货币格式的货币列中的单元格和仅货币单元格，才能使用红色前景色。</span><span class="sxs-lookup"><span data-stu-id="c24f4-107">For example, you may want every cell in a <xref:System.Windows.Forms.DataGridView> control to use the same font, but only cells in currency columns to use currency format, and only currency cells with negative numbers to use a red foreground color.</span></span>  
   
-## DataGridViewCellStyle 类  
- <xref:System.Windows.Forms.DataGridViewCellStyle> 类包含与视觉样式相关的下列属性：  
+## <a name="the-datagridviewcellstyle-class"></a><span data-ttu-id="c24f4-108">DataGridViewCellStyle 类</span><span class="sxs-lookup"><span data-stu-id="c24f4-108">The DataGridViewCellStyle Class</span></span>  
+ <span data-ttu-id="c24f4-109"><xref:System.Windows.Forms.DataGridViewCellStyle>类包含与视觉样式相关的以下属性：</span><span class="sxs-lookup"><span data-stu-id="c24f4-109">The <xref:System.Windows.Forms.DataGridViewCellStyle> class contains the following properties related to visual style:</span></span>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+-   <span data-ttu-id="c24f4-110"><xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A></span><span class="sxs-lookup"><span data-stu-id="c24f4-110"><xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> and <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A></span></span>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+-   <span data-ttu-id="c24f4-111"><xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A></span><span class="sxs-lookup"><span data-stu-id="c24f4-111"><xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> and <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A></span></span>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
- 此类还包含与格式设置相关的下列属性：  
+ <span data-ttu-id="c24f4-112">此类还包含与格式设置相关的以下属性：</span><span class="sxs-lookup"><span data-stu-id="c24f4-112">This class also contains the following properties related to formatting:</span></span>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+-   <span data-ttu-id="c24f4-113"><xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A></span><span class="sxs-lookup"><span data-stu-id="c24f4-113"><xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> and <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A></span></span>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+-   <span data-ttu-id="c24f4-114"><xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A></span><span class="sxs-lookup"><span data-stu-id="c24f4-114"><xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> and <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A></span></span>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
@@ -48,129 +49,129 @@ caps.handback.revision: 33
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
- 有关这些属性和其他单元格样式属性的更多信息，请参见 <xref:System.Windows.Forms.DataGridViewCellStyle> 参考文档和下面“请参见”部分列出的主题。  
+ <span data-ttu-id="c24f4-115">有关这些属性和其他单元格样式属性的详细信息，请参阅<xref:System.Windows.Forms.DataGridViewCellStyle>下面的另请参阅部分中列出的参考文档和主题。</span><span class="sxs-lookup"><span data-stu-id="c24f4-115">For more information on these properties and other cell-style properties, see the <xref:System.Windows.Forms.DataGridViewCellStyle> reference documentation and the topics listed in the See Also section below.</span></span>  
   
-## 使用 DataGridViewCellStyle 对象  
- 可以从 <xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.DataGridViewRow> 和 <xref:System.Windows.Forms.DataGridViewCell> 类及其派生类的各个属性中检索 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象。  如果这些属性中有一个尚未设置，则检索该属性的值将新建 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象。  您还可以实例化自己的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象，并将这些对象分配给以上属性。  
+## <a name="using-datagridviewcellstyle-objects"></a><span data-ttu-id="c24f4-116">使用 DataGridViewCellStyle 对象</span><span class="sxs-lookup"><span data-stu-id="c24f4-116">Using DataGridViewCellStyle Objects</span></span>  
+ <span data-ttu-id="c24f4-117">你可以检索<xref:System.Windows.Forms.DataGridViewCellStyle>对象的各种属性从<xref:System.Windows.Forms.DataGridView>， <xref:System.Windows.Forms.DataGridViewColumn>， <xref:System.Windows.Forms.DataGridViewRow>，和<xref:System.Windows.Forms.DataGridViewCell>类和它们的派生的类。</span><span class="sxs-lookup"><span data-stu-id="c24f4-117">You can retrieve <xref:System.Windows.Forms.DataGridViewCellStyle> objects from various properties of the <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>, and <xref:System.Windows.Forms.DataGridViewCell> classes and their derived classes.</span></span> <span data-ttu-id="c24f4-118">如果其中一个属性尚未尚未设置，检索其值将创建一个新<xref:System.Windows.Forms.DataGridViewCellStyle>对象。</span><span class="sxs-lookup"><span data-stu-id="c24f4-118">If one of these properties has not yet been set, retrieving its value will create a new <xref:System.Windows.Forms.DataGridViewCellStyle> object.</span></span> <span data-ttu-id="c24f4-119">你还可以实例化自己<xref:System.Windows.Forms.DataGridViewCellStyle>对象，并将它们分配给这些属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-119">You can also instantiate your own <xref:System.Windows.Forms.DataGridViewCellStyle> objects and assign them to these properties.</span></span>  
   
- 在多个 <xref:System.Windows.Forms.DataGridView> 元素间共享 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象可以避免不必要地重复样式信息。  由于在控件、列和行三个级别设置的样式从每个级别向下筛选直到单元格级别，因此，在每个级别上仅设置与其上面的级别不同的那些样式属性，也可以避免样式重复。  相关内容在后面的“样式继承”部分有更详细的说明。  
+ <span data-ttu-id="c24f4-120">你可以通过共享来避免不必要的样式信息的重复<xref:System.Windows.Forms.DataGridViewCellStyle>多个对象<xref:System.Windows.Forms.DataGridView>元素。</span><span class="sxs-lookup"><span data-stu-id="c24f4-120">You can avoid unnecessary duplication of style information by sharing <xref:System.Windows.Forms.DataGridViewCellStyle> objects among multiple <xref:System.Windows.Forms.DataGridView> elements.</span></span> <span data-ttu-id="c24f4-121">由于样式设置在控件、 列和行级别筛选器向下的通过每个级别向单元格级别，还可以通过在每个以上级别不同的级别设置仅这些样式属性来避免样式重复。</span><span class="sxs-lookup"><span data-stu-id="c24f4-121">Because the styles set at the control, column, and row levels filter down through each level to the cell level, you can also avoid style duplication by setting only those style properties at each level that differ from the levels above.</span></span> <span data-ttu-id="c24f4-122">遵循样式继承一部分更详细地对此进行了描述。</span><span class="sxs-lookup"><span data-stu-id="c24f4-122">This is described in more detail in the Style Inheritance section that follows.</span></span>  
   
- 下表列出获取或设置 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象的主要属性。  
+ <span data-ttu-id="c24f4-123">下表列出的主属性用于获取或设置<xref:System.Windows.Forms.DataGridViewCellStyle>对象。</span><span class="sxs-lookup"><span data-stu-id="c24f4-123">The following table lists the primary properties that get or set <xref:System.Windows.Forms.DataGridViewCellStyle> objects.</span></span>  
   
-|属性|类|说明|  
-|--------|-------|--------|  
-|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.DataGridViewRow> 和派生类|获取或设置整个控件（包括标头单元格）、一列或一行中所有单元格使用的默认样式。|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件中所有行使用的默认单元格样式。  不包括标头单元格。|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件中交替行使用的默认单元格样式。  用于创建帐目型的效果。|  
-|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件的行标头使用的默认单元格样式。  如果启用视觉样式，则用当前主题进行重写。|  
-|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|获取或设置控件的列标头使用的默认单元格样式。  如果启用视觉样式，则用当前主题进行重写。|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> 和派生类|获取或设置在单元格级别指定的样式。  这些样式将重写那些从较高级别继承的样式。|  
-|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>、<xref:System.Windows.Forms.DataGridViewRow>、<xref:System.Windows.Forms.DataGridViewColumn> 和派生类|获取当前应用于单元格、行或列的所有样式，包括从较高级别继承的样式。|  
+|<span data-ttu-id="c24f4-124">属性</span><span class="sxs-lookup"><span data-stu-id="c24f4-124">Property</span></span>|<span data-ttu-id="c24f4-125">类</span><span class="sxs-lookup"><span data-stu-id="c24f4-125">Classes</span></span>|<span data-ttu-id="c24f4-126">描述</span><span class="sxs-lookup"><span data-stu-id="c24f4-126">Description</span></span>|  
+|--------------|-------------|-----------------|  
+|`DefaultCellStyle`|<span data-ttu-id="c24f4-127"><xref:System.Windows.Forms.DataGridView><xref:System.Windows.Forms.DataGridViewColumn>， <xref:System.Windows.Forms.DataGridViewRow>，和派生类</span><span class="sxs-lookup"><span data-stu-id="c24f4-127"><xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>, and derived classes</span></span>|<span data-ttu-id="c24f4-128">获取或设置使用的整个控件 （包括标题单元格），在列中，或在行中的所有单元格的默认样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-128">Gets or sets default styles used by all cells in the entire control (including header cells), in a column, or in a row.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|<span data-ttu-id="c24f4-129">获取或设置控件中的所有行都使用的默认单元格样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-129">Gets or sets default cell styles used by all rows in the control.</span></span> <span data-ttu-id="c24f4-130">这不包括标题单元格。</span><span class="sxs-lookup"><span data-stu-id="c24f4-130">This does not include header cells.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|<span data-ttu-id="c24f4-131">获取或设置交替行控件中的使用的默认单元格样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-131">Gets or sets default cell styles used by alternating rows in the control.</span></span> <span data-ttu-id="c24f4-132">用于创建类似帐目的效果。</span><span class="sxs-lookup"><span data-stu-id="c24f4-132">Used to create a ledger-like effect.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|<span data-ttu-id="c24f4-133">获取或设置使用的控件的行标题的默认单元格样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-133">Gets or sets default cell styles used by the control's row headers.</span></span> <span data-ttu-id="c24f4-134">如果启用了可视样式，替代当前主题。</span><span class="sxs-lookup"><span data-stu-id="c24f4-134">Overridden by the current theme if visual styles are enabled.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|<span data-ttu-id="c24f4-135">获取或设置使用的控件的列标题的默认单元格样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-135">Gets or sets default cell styles used by the control's column headers.</span></span> <span data-ttu-id="c24f4-136">如果启用了可视样式，替代当前主题。</span><span class="sxs-lookup"><span data-stu-id="c24f4-136">Overridden by the current theme if visual styles are enabled.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<span data-ttu-id="c24f4-137"><xref:System.Windows.Forms.DataGridViewCell>和派生的类</span><span class="sxs-lookup"><span data-stu-id="c24f4-137"><xref:System.Windows.Forms.DataGridViewCell> and derived classes</span></span>|<span data-ttu-id="c24f4-138">获取或设置在单元格级别指定的样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-138">Gets or sets styles specified at the cell level.</span></span> <span data-ttu-id="c24f4-139">这些样式会覆盖继承从较高级别。</span><span class="sxs-lookup"><span data-stu-id="c24f4-139">These styles override those inherited from higher levels.</span></span>|  
+|`InheritedStyle`|<span data-ttu-id="c24f4-140"><xref:System.Windows.Forms.DataGridViewCell><xref:System.Windows.Forms.DataGridViewRow>， <xref:System.Windows.Forms.DataGridViewColumn>，和派生类</span><span class="sxs-lookup"><span data-stu-id="c24f4-140"><xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>, and derived classes</span></span>|<span data-ttu-id="c24f4-141">获取当前应用到单元格、 行或列，包括从较高级别继承的样式的所有样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-141">Gets all the styles currently applied to the cell, row, or column, including styles inherited from higher levels.</span></span>|  
   
- 如上所述，如果以前没有设置过样式属性，则获取样式属性值将自动实例化新的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象。  为了避免不必要地创建这些对象，行类和列类具有 <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> 属性，您可以检查该属性以确定是否设置了 <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> 属性。  同样，单元格类具有 <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> 属性，该属性指示是否设置了 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 属性。  
+ <span data-ttu-id="c24f4-142">如上所述，自动获取样式属性的值的实例化一个新<xref:System.Windows.Forms.DataGridViewCellStyle>对象如果属性尚未以前设置。</span><span class="sxs-lookup"><span data-stu-id="c24f4-142">As mentioned above, getting the value of a style property automatically instantiates a new <xref:System.Windows.Forms.DataGridViewCellStyle> object if the property has not been previously set.</span></span> <span data-ttu-id="c24f4-143">若要避免不必要地创建这些对象，行和列类具有<xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A>属性，可以检查以确定是否<xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A>设置属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-143">To avoid creating these objects unnecessarily, the row and column classes have a <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> property that you can check to determine whether the <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> property has been set.</span></span> <span data-ttu-id="c24f4-144">同样，单元格类具有<xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A>属性，该值指示是否<xref:System.Windows.Forms.DataGridViewCell.Style%2A>设置属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-144">Similarly, the cell classes have a <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> property that indicates whether the <xref:System.Windows.Forms.DataGridViewCell.Style%2A> property has been set.</span></span>  
   
- 每个样式属性在 <xref:System.Windows.Forms.DataGridView> 控件上都有一个对应的*属性名称*`Changed` 事件。  对于行、列和单元格属性，该事件的名称分别以“`Row`”、“`Column`”或“`Cell`”（例如，<xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>）开头。  如果将对应的样式属性设置为不同的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象，则这些事件中的每个事件都会发生；  如果在样式属性中检索 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象并更改其属性值，则这些事件不会发生。  若要响应对单元格样式对象本身的更改，可以对 <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> 事件进行处理。  
+ <span data-ttu-id="c24f4-145">每个样式属性都具有对应的*PropertyName* `Changed`上的事件<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="c24f4-145">Each of the style properties has a corresponding *PropertyName*`Changed` event on the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c24f4-146">有关行、 列和单元属性，该事件的名称开头"`Row`"，"`Column`"，或"`Cell`"(例如， <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>)。</span><span class="sxs-lookup"><span data-stu-id="c24f4-146">For row, column, and cell properties, the name of the event begins with "`Row`", "`Column`", or "`Cell`" (for example, <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>).</span></span> <span data-ttu-id="c24f4-147">每个事件发生时相应的样式属性设置为另一种<xref:System.Windows.Forms.DataGridViewCellStyle>对象。</span><span class="sxs-lookup"><span data-stu-id="c24f4-147">Each of these events occurs when the corresponding style property is set to a different <xref:System.Windows.Forms.DataGridViewCellStyle> object.</span></span> <span data-ttu-id="c24f4-148">当你检索时不会发生这些事件<xref:System.Windows.Forms.DataGridViewCellStyle>对象的样式属性和修改其属性值。</span><span class="sxs-lookup"><span data-stu-id="c24f4-148">These events do not occur when you retrieve a <xref:System.Windows.Forms.DataGridViewCellStyle> object from a style property and modify its property values.</span></span> <span data-ttu-id="c24f4-149">若要对更改作出响应的单元格样式对象本身，处理<xref:System.Windows.Forms.DataGridView.CellStyleContentChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="c24f4-149">To respond to changes to the cell style objects themselves, handle the <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> event.</span></span>  
   
-## 样式继承  
- 每个 <xref:System.Windows.Forms.DataGridViewCell> 从其 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 属性获取外观。  此属性返回的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象从类型 <xref:System.Windows.Forms.DataGridViewCellStyle> 的属性层次结构继承其属性值。  下面按非标头单元格的 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 获取其值的顺序列出这些属性。  
+## <a name="style-inheritance"></a><span data-ttu-id="c24f4-150">样式继承</span><span class="sxs-lookup"><span data-stu-id="c24f4-150">Style Inheritance</span></span>  
+ <span data-ttu-id="c24f4-151">每个<xref:System.Windows.Forms.DataGridViewCell>获取从其外观其<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-151">Each <xref:System.Windows.Forms.DataGridViewCell> gets its appearance from its <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> property.</span></span> <span data-ttu-id="c24f4-152"><xref:System.Windows.Forms.DataGridViewCellStyle>此属性返回的对象类型的属性层次结构中继承其值<xref:System.Windows.Forms.DataGridViewCellStyle>。</span><span class="sxs-lookup"><span data-stu-id="c24f4-152">The <xref:System.Windows.Forms.DataGridViewCellStyle> object returned by this property inherits its values from a hierarchy of properties of type <xref:System.Windows.Forms.DataGridViewCellStyle>.</span></span> <span data-ttu-id="c24f4-153">这些属性列在下面中的顺序<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>为非标题单元格获取其值。</span><span class="sxs-lookup"><span data-stu-id="c24f4-153">These properties are listed below in the order in which the <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> for non-header cells obtains its values.</span></span>  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>（仅限于索引号为奇数的行中的单元格）  
+3.  <span data-ttu-id="c24f4-154"><xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>（仅适用于具有奇数索引号的行中的单元格）</span><span class="sxs-lookup"><span data-stu-id="c24f4-154"><xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (only for cells in rows with odd index numbers)</span></span>  
   
-4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>  
+5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 对于行和列标头单元格，用以下列表中的值填充 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 属性，该列表列出给定顺序的源属性。  
+ <span data-ttu-id="c24f4-155">为行和列标题单元格<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>用从以下列表中所提供的顺序的源属性的值填充属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-155">For row and column header cells, the <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> property is populated by values from the following list of source properties in the given order.</span></span>  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=fullName> 或 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=fullName>  
+2.  <span data-ttu-id="c24f4-156"><xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="c24f4-156"><xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> or <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType></span></span>  
   
-3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 下图阐释此过程。  
+ <span data-ttu-id="c24f4-157">下图说明了此过程。</span><span class="sxs-lookup"><span data-stu-id="c24f4-157">The following diagram illustrates this process.</span></span>  
   
- ![类型 DataGridViewCellStyle 的属性](../../../../docs/framework/winforms/controls/media/datagridviewcells1.png "DataGridViewCells1")  
+ <span data-ttu-id="c24f4-158">![类型 DataGridViewCellStyle 的](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")</span><span class="sxs-lookup"><span data-stu-id="c24f4-158">![Properties of type DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")</span></span>  
   
- 还可以访问由特定的行和列继承的样式。  列 <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> 属性从下列属性继承其属性值。  
+ <span data-ttu-id="c24f4-159">你还可以访问继承的特定行和列样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-159">You can also access the styles inherited by specific rows and columns.</span></span> <span data-ttu-id="c24f4-160">列<xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A>属性继承其属性值从下列属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-160">The column <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> property inherits its values from the following properties.</span></span>  
   
-1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 行 <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> 属性从下列属性继承其属性值。  
+ <span data-ttu-id="c24f4-161">行<xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>属性继承其属性值从下列属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-161">The row <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> property inherits its values from the following properties.</span></span>  
   
-1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>（仅限于索引号为奇数的行中的单元格）  
+2.  <span data-ttu-id="c24f4-162"><xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>（仅适用于具有奇数索引号的行中的单元格）</span><span class="sxs-lookup"><span data-stu-id="c24f4-162"><xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (only for cells in rows with odd index numbers)</span></span>  
   
-3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>  
+3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 对于 `InheritedStyle` 属性返回的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象中的每个属性，均从相应列表中的第一个单元格样式获得其属性值，该列表中对应的属性被设置为 <xref:System.Windows.Forms.DataGridViewCellStyle> 类默认值以外的值。  
+ <span data-ttu-id="c24f4-163">中每个属性<xref:System.Windows.Forms.DataGridViewCellStyle>返回对象`InheritedStyle`属性值获取从相应的列表具有对应的属性设置为值以外的第一个单元格样式属性，<xref:System.Windows.Forms.DataGridViewCellStyle>类默认值。</span><span class="sxs-lookup"><span data-stu-id="c24f4-163">For each property in a <xref:System.Windows.Forms.DataGridViewCellStyle> object returned by an `InheritedStyle` property, the property value is obtained from the first cell style in the appropriate list that has the corresponding property set to a value other than the <xref:System.Windows.Forms.DataGridViewCellStyle> class defaults.</span></span>  
   
- 下表阐释如何从包含示例单元格的列继承该单元格的 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 属性值。  
+ <span data-ttu-id="c24f4-164">下表说明了如何<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>示例单元格的属性值继承自其包含的列。</span><span class="sxs-lookup"><span data-stu-id="c24f4-164">The following table illustrates how the <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> property value for an example cell is inherited from its containing column.</span></span>  
   
-|类型 `DataGridViewCellStyle` 的属性|检索的对象的示例 `ForeColor` 值|  
-|------------------------------------|----------------------------|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Red%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Black%2A?displayProperty=fullName>|  
+|<span data-ttu-id="c24f4-165">类型的属性`DataGridViewCellStyle`</span><span class="sxs-lookup"><span data-stu-id="c24f4-165">Property of type `DataGridViewCellStyle`</span></span>|<span data-ttu-id="c24f4-166">示例`ForeColor`检索到的对象的值</span><span class="sxs-lookup"><span data-stu-id="c24f4-166">Example `ForeColor` value for retrieved object</span></span>|  
+|----------------------------------------------|----------------------------------------------------|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType>|  
   
- 此时，单元格所在行的 <xref:System.Drawing.Color.Red%2A?displayProperty=fullName> 值是列表中的第一个实际值。  这个值作为单元格的 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 属性值。  
+ <span data-ttu-id="c24f4-167">在这种情况下，<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>从单元格的行的值是列表上的第一个实际值。</span><span class="sxs-lookup"><span data-stu-id="c24f4-167">In this case, the <xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType> value from the cell's row is the first real value on the list.</span></span> <span data-ttu-id="c24f4-168">该名称将成为<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>属性值的单元格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>。</span><span class="sxs-lookup"><span data-stu-id="c24f4-168">This becomes the <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> property value of the cell's <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>.</span></span>  
   
- 下图阐释不同的 <xref:System.Windows.Forms.DataGridViewCellStyle> 属性如何从不同的地方继承其属性值。  
+ <span data-ttu-id="c24f4-169">下图说明了如何不同<xref:System.Windows.Forms.DataGridViewCellStyle>属性继承其属性值从不同的位置。</span><span class="sxs-lookup"><span data-stu-id="c24f4-169">The following diagram illustrates how different <xref:System.Windows.Forms.DataGridViewCellStyle> properties can inherit their values from different places.</span></span>  
   
- ![DataGridView 属性&#47;值继承](../../../../docs/framework/winforms/controls/media/datagridviewcells2.png "DataGridViewCells2")  
+ <span data-ttu-id="c24f4-170">![DataGridView 属性 &#45; 值继承](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")</span><span class="sxs-lookup"><span data-stu-id="c24f4-170">![DataGridView property&#45;value inheritance](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")</span></span>  
   
- 可以利用样式继承为整个控件提供相应的样式，而不必在多处指定相同的信息。  
+ <span data-ttu-id="c24f4-171">通过利用样式继承，可以为整个控件提供适当的样式，而无需在多个位置指定相同的信息。</span><span class="sxs-lookup"><span data-stu-id="c24f4-171">By taking advantage of style inheritance, you can provide appropriate styles for the entire control without having to specify the same information in multiple places.</span></span>  
   
- 如上所述，虽然标头单元格参与了样式继承，但是，<xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 和 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 属性返回的对象具有以下的初始属性值，这些属性值将重写 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 属性返回的对象的属性值。  对于 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 属性返回的对象，如果要将为其设置的属性应用于行标头和列标头，则对于 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 和 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 属性返回的对象，必须将其对应的属性设置为为 <xref:System.Windows.Forms.DataGridViewCellStyle> 类指定的默认值。  
-  
-> [!NOTE]
->  如果启用了视觉样式，则行标头和列标头（<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A> 除外）的样式将自动由当前主题设置，并重写由这些属性指定的任何样式。  
-  
- <xref:System.Windows.Forms.DataGridViewButtonColumn>、<xref:System.Windows.Forms.DataGridViewImageColumn> 和 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 类型还对以下对象的某些值进行初始化，该对象由列 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 属性返回。  有关更多信息，请参见这些类型的参考文档。  
-  
-## 动态设置样式  
- 要使用特定值自定义单元格样式，需要实现 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName> 事件的处理程序。  此事件的处理程序接收 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 类型的参数。  此对象包含的属性使您可以确定正进行格式设置的单元格的值，以及该值在 <xref:System.Windows.Forms.DataGridView> 控件中的位置。  此对象还包含 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A> 属性，该属性被初始化为正进行格式设置的单元格的 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 属性的值。  可以修改单元格样式属性，以指定适合单元格值和位置的样式信息。  
+ <span data-ttu-id="c24f4-172">尽管标题单元格参与样式继承，如所述，返回的对象<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>和<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>属性<xref:System.Windows.Forms.DataGridView>控件具有重写返回的对象的属性值的初始属性值<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-172">Although header cells participate in style inheritance as described, the objects returned by the <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> and <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> properties of the <xref:System.Windows.Forms.DataGridView> control have initial property values that override the property values of the object returned by the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> property.</span></span> <span data-ttu-id="c24f4-173">如果你想为返回的对象设置的属性<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性要应用于行和列标题，你必须设置返回的对象的相应属性<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>和<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>为默认值的属性指示有关<xref:System.Windows.Forms.DataGridViewCellStyle>类。</span><span class="sxs-lookup"><span data-stu-id="c24f4-173">If you want the properties set for the object returned by the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> property to apply to row and column headers, you must set the corresponding properties of the objects returned by the <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> and <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> properties to the defaults indicated for the <xref:System.Windows.Forms.DataGridViewCellStyle> class.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView.RowPrePaint> 和 <xref:System.Windows.Forms.DataGridView.RowPostPaint> 事件还接收事件数据中的 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象，但在这种情况下，接收的对象是行 <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> 属性的只读副本，并且对该对象所做的更改不会影响控件。  
+>  <span data-ttu-id="c24f4-174">如果启用了可视样式，行和列标题 (除<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) 样式将自动由当前的主题，重写任何两个属性中指定的样式。</span><span class="sxs-lookup"><span data-stu-id="c24f4-174">If visual styles are enabled, the row and column headers (except for the <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) are automatically styled by the current theme, overriding any styles specified by these properties.</span></span>  
   
- 您还可以动态修改单个单元格的样式，以响应 <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=fullName> 和 <xref:System.Windows.Forms.DataGridView.CellMouseLeave> 等事件。  例如，在 <xref:System.Windows.Forms.DataGridView.CellMouseEnter> 事件的处理程序中，您可以存储单元格背景色的当前值（通过单元格的 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 属性检索），然后将这个当前值设置为一种新颜色，当鼠标悬停在单元格上时，这种新颜色就会突出显示相应的单元格。  然后，在 <xref:System.Windows.Forms.DataGridView.CellMouseLeave> 事件的处理程序中，您可以再将背景色还原为其原始值。  
+ <span data-ttu-id="c24f4-175"><xref:System.Windows.Forms.DataGridViewButtonColumn>， <xref:System.Windows.Forms.DataGridViewImageColumn>，和<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>类型还初始化的列返回的对象的某些值<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-175">The <xref:System.Windows.Forms.DataGridViewButtonColumn>, <xref:System.Windows.Forms.DataGridViewImageColumn>, and <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> types also initialize some values of the object returned by the column <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> property.</span></span> <span data-ttu-id="c24f4-176">有关详细信息，请参阅这些类型的参考文档。</span><span class="sxs-lookup"><span data-stu-id="c24f4-176">For more information, see the reference documentation for these types.</span></span>  
+  
+## <a name="setting-styles-dynamically"></a><span data-ttu-id="c24f4-177">动态设置样式</span><span class="sxs-lookup"><span data-stu-id="c24f4-177">Setting Styles Dynamically</span></span>  
+ <span data-ttu-id="c24f4-178">若要自定义的具有特定值的单元格的样式，实现的处理程序<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="c24f4-178">To customize the styles of cells with particular values, implement a handler for the <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="c24f4-179">此事件处理程序接收的自变量<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>类型。</span><span class="sxs-lookup"><span data-stu-id="c24f4-179">Handlers for this event receive an argument of the <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> type.</span></span> <span data-ttu-id="c24f4-180">此对象包含使你能够确定其位置以及正在格式化的单元格的值的属性<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="c24f4-180">This object contains properties that let you determine the value of the cell being formatted along with its location in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c24f4-181">此对象还包含<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A>初始化为的值的属性<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>正在格式化的单元格的属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-181">This object also contains a <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A> property that is initialized to the value of the <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> property of the cell being formatted.</span></span> <span data-ttu-id="c24f4-182">你可以修改的单元格样式属性来指定相应的单元格的值和位置的样式信息。</span><span class="sxs-lookup"><span data-stu-id="c24f4-182">You can modify the cell style properties to specify style information appropriate to the cell value and location.</span></span>  
   
 > [!NOTE]
->  无论是否设置了特定的样式值，对单元格的 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 属性中存储的值进行缓存都很重要。  如果您临时替换了某个样式设置，则将该设置还原为其原始的“未设置”状态可以确保单元格追溯到较高的级别以继承样式设置。  如果需要确定单元格的实际样式（无论该样式是否是继承的），则使用单元格的 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 属性。  
+>  <span data-ttu-id="c24f4-183"><xref:System.Windows.Forms.DataGridView.RowPrePaint>和<xref:System.Windows.Forms.DataGridView.RowPostPaint>事件还会收到<xref:System.Windows.Forms.DataGridViewCellStyle>对象在事件数据，但在其大小写，它是行的副本<xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>属性为只读的目的，并对它的更改不会影响该控件。</span><span class="sxs-lookup"><span data-stu-id="c24f4-183">The <xref:System.Windows.Forms.DataGridView.RowPrePaint> and <xref:System.Windows.Forms.DataGridView.RowPostPaint> events also receive a <xref:System.Windows.Forms.DataGridViewCellStyle> object in the event data, but in their case, it is a copy of the row <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> property for read-only purposes, and changes to it do not affect the control.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=fullName>   
- [Windows 窗体 DataGridView 控件中的基本格式设置和样式设置](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)   
- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)   
- [Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+ <span data-ttu-id="c24f4-184">你还可以动态修改以响应事件的各个单元格的样式如<xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType>和<xref:System.Windows.Forms.DataGridView.CellMouseLeave>事件。</span><span class="sxs-lookup"><span data-stu-id="c24f4-184">You can also dynamically modify the styles of individual cells in response to events such as the <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType> and <xref:System.Windows.Forms.DataGridView.CellMouseLeave> events.</span></span> <span data-ttu-id="c24f4-185">例如，在处理程序<xref:System.Windows.Forms.DataGridView.CellMouseEnter>事件，无法存储单元格背景色的当前值 (通过该单元格的检索<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性)，然后将其设置为在鼠标悬停在其上时将突出显示该单元格的一种新颜色。</span><span class="sxs-lookup"><span data-stu-id="c24f4-185">For example, in a handler for the <xref:System.Windows.Forms.DataGridView.CellMouseEnter> event, you could store the current value of the cell background color (retrieved through the cell's <xref:System.Windows.Forms.DataGridViewCell.Style%2A> property), then set it to a new color that will highlight the cell when the mouse hovers over it.</span></span> <span data-ttu-id="c24f4-186">中的处理程序<xref:System.Windows.Forms.DataGridView.CellMouseLeave>事件，然后可以将背景色还原到原始值。</span><span class="sxs-lookup"><span data-stu-id="c24f4-186">In a handler for the <xref:System.Windows.Forms.DataGridView.CellMouseLeave> event, you can then restore the background color to the original value.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="c24f4-187">缓存存储在该单元格的值<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性是而不考虑是否设置了特定样式值非常重要。</span><span class="sxs-lookup"><span data-stu-id="c24f4-187">Caching the values stored in the cell's <xref:System.Windows.Forms.DataGridViewCell.Style%2A> property is important regardless of whether a particular style value is set.</span></span> <span data-ttu-id="c24f4-188">如果您暂时替换样式设置，将其还原到"未设置"的原始状态可确保，则该单元格将返回到从较高级别继承的样式设置。</span><span class="sxs-lookup"><span data-stu-id="c24f4-188">If you temporarily replace a style setting, restoring it to its original "not set" state ensures that the cell will go back to inheriting the style setting from a higher level.</span></span> <span data-ttu-id="c24f4-189">如果你需要确定无论是否继承样式的单元格有效的实际样式，使用该单元格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c24f4-189">If you need to determine the actual style in effect for a cell regardless of whether the style is inherited, use the cell's <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> property.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c24f4-190">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c24f4-190">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>  
+ [<span data-ttu-id="c24f4-191">Windows 窗体 DataGridView 控件中的基本格式和样式设置</span><span class="sxs-lookup"><span data-stu-id="c24f4-191">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="c24f4-192">如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式</span><span class="sxs-lookup"><span data-stu-id="c24f4-192">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="c24f4-193">Windows 窗体 DataGridView 控件中的数据格式设置</span><span class="sxs-lookup"><span data-stu-id="c24f4-193">Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)

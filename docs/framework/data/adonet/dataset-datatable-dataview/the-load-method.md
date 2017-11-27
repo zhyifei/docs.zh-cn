@@ -1,39 +1,41 @@
 ---
-title: "Load 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "加载方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Load 方法
-可以使用 <xref:System.Data.DataTable.Load%2A> 方法为 <xref:System.Data.DataTable> 加载数据源中行。  这是一种重载方法，其最简单的形式是接受一个参数 **DataReader**。  在此形式中，将只是为 **DataTable** 加载行。  可以选择指定 **LoadOption** 参数，用于控制如何将数据添加到 **DataTable** 中。  
+# <a name="the-load-method"></a><span data-ttu-id="55a1a-102">加载方法</span><span class="sxs-lookup"><span data-stu-id="55a1a-102">The Load Method</span></span>
+<span data-ttu-id="55a1a-103">可以使用 <xref:System.Data.DataTable.Load%2A> 方法为 <xref:System.Data.DataTable> 加载数据源中行。</span><span class="sxs-lookup"><span data-stu-id="55a1a-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="55a1a-104">这是重载的方法，其最简单的形式，接受一个参数， **DataReader**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="55a1a-105">在这种形式，它只需加载**DataTable**行。</span><span class="sxs-lookup"><span data-stu-id="55a1a-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="55a1a-106">或者，可以指定**LoadOption**参数，用于控制如何将数据添加到**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  
   
- 如果 **DataTable** 中已包含数据行，**LoadOption** 参数非常有用，因为该参数描述从数据源传入的数据如何与表中已有的数据组合在一起。  例如，**PreserveCurrentValues**（默认设置）指定如果 **DataTable** 中的某行标记为 **Added**，**Original** 值或每一列将设置为数据源中匹配行的内容。  **Current** 值将保留在添加行时分配的值，行的 **RowState** 将设置为 **Changed**。  
+ <span data-ttu-id="55a1a-107">**LoadOption**参数会在情况下特别有用其中**DataTable**已包含的数据行，因为它说明了如何传入数据从数据源都将合并的数据已在表中。</span><span class="sxs-lookup"><span data-stu-id="55a1a-107">The **LoadOption** parameter is particularly useful in cases where the **DataTable** already contains rows of data, because it describes how incoming data from the data source will be combined with the data already in the table.</span></span> <span data-ttu-id="55a1a-108">例如， **PreserveCurrentValues** （默认） 指定在其中将行标记为的情况下**Added**中**DataTable**、**原始**值或每个列设置为匹配的行的内容从数据源。</span><span class="sxs-lookup"><span data-stu-id="55a1a-108">For example, **PreserveCurrentValues** (the default) specifies that in cases where a row is marked as **Added** in the **DataTable**, the **Original** value or each column is set to the contents of the matching row from the data source.</span></span> <span data-ttu-id="55a1a-109">**当前**值将保留时添加行，，分配的值与**RowState**的行都将它设置为**Changed**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-109">The **Current** value will retain the values assigned when the row was added, and the **RowState** of the row will be set to **Changed**.</span></span>  
   
- 下表给出了对 <xref:System.Data.LoadOption> 枚举值的简要说明。  
+ <span data-ttu-id="55a1a-110">下表给出了对 <xref:System.Data.LoadOption> 枚举值的简要说明。</span><span class="sxs-lookup"><span data-stu-id="55a1a-110">The following table gives a short description of the <xref:System.Data.LoadOption> enumeration values.</span></span>  
   
-|LoadOption 值|描述|  
-|------------------|--------|  
-|**OverwriteRow**|如果传入行的 **PrimaryKey** 值与 **DataTable** 中已有的某个行相同，每一列的 **Original** 和 **Current** 值将替换为传入行中的值，**RowState** 属性设置为 **Unchanged**。<br /><br /> 如果数据源中的行在 **DataTable** 中尚不存在，那么将以 **RowState** 值 **Unchanged** 添加。<br /><br /> 此选项的作用是刷新 **DataTable** 的内容，使其与数据源的内容匹配。|  
-|**PreserveCurrentValues（默认值）**|如果传入行的 **PrimaryKey** 值与 **DataTable** 中已有的某个行相同，**Original** 值将设置为传入行的内容，**Current** 值不变。<br /><br /> 如果 **RowState** 为 **Added** 或 **Modified**，将设置为 **Modified**。<br /><br /> 如果 **RowState** 为 **Deleted**，将仍为 **Deleted**。<br /><br /> 如果数据源中的行在 **DataTable** 中尚不存在，将添加这些行，并将 **RowState** 设置为 **Unchanged**。|  
-|**UpdateCurrentValues**|如果传入行的 **PrimaryKey** 值与 **DataTable** 中已有的某个行相同，**Current** 值将复制到 **Original** 值，**Current** 值设置为传入行的内容。<br /><br /> 如果 **DataTable** 中的 **RowState** 为 **Added**，**RowState** 仍为 **Added**。  对于标记为 **Modified** 或 **Deleted** 的行，**RowState** 为 **Modified**。<br /><br /> 将添加数据源中在 **DataTable** 尚不存在的行，**RowState** 设置为 **Added**。|  
+|<span data-ttu-id="55a1a-111">LoadOption 值</span><span class="sxs-lookup"><span data-stu-id="55a1a-111">LoadOption value</span></span>|<span data-ttu-id="55a1a-112">描述</span><span class="sxs-lookup"><span data-stu-id="55a1a-112">Description</span></span>|  
+|----------------------|-----------------|  
+|<span data-ttu-id="55a1a-113">**OverwriteRow**</span><span class="sxs-lookup"><span data-stu-id="55a1a-113">**OverwriteRow**</span></span>|<span data-ttu-id="55a1a-114">如果传入行具有相同**PrimaryKey**为已在一行的值**DataTable**、**原始**和**当前**每个值列替换由传入行中的值与**RowState**属性设置为**Unchanged**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-114">If incoming rows have the same **PrimaryKey** value as a row already in the **DataTable**, the **Original** and **Current** values of each column are replaced with the values in the incoming row, and the **RowState** property is set to **Unchanged**.</span></span><br /><br /> <span data-ttu-id="55a1a-115">从数据源中不存在的行**DataTable**添加与**RowState**值**Unchanged**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-115">Rows from the data source that do not already exist in the **DataTable** are added with a **RowState** value of **Unchanged**.</span></span><br /><br /> <span data-ttu-id="55a1a-116">此选项的作用是刷新的内容**DataTable** ，使其匹配数据源的内容。</span><span class="sxs-lookup"><span data-stu-id="55a1a-116">This option in effect refreshes the contents of the **DataTable** so that it matches the contents of the data source.</span></span>|  
+|<span data-ttu-id="55a1a-117">**PreserveCurrentValues （默认值）**</span><span class="sxs-lookup"><span data-stu-id="55a1a-117">**PreserveCurrentValues (default)**</span></span>|<span data-ttu-id="55a1a-118">如果传入行具有相同**PrimaryKey**为已在一行的值**DataTable**、**原始**值设置为传入行中和的内容**当前**值不会更改。</span><span class="sxs-lookup"><span data-stu-id="55a1a-118">If incoming rows have the same **PrimaryKey** value as a row already in the **DataTable**, the **Original** value is set to the contents of the incoming row, and the **Current** value is not changed.</span></span><br /><br /> <span data-ttu-id="55a1a-119">如果**RowState**是**Added**或**已修改**，设置为**已修改**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-119">If the **RowState** is **Added** or **Modified**, it is set to **Modified**.</span></span><br /><br /> <span data-ttu-id="55a1a-120">如果**RowState**已**已删除**，它就会一直**已删除**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-120">If the **RowState** was **Deleted**, it remains **Deleted**.</span></span><br /><br /> <span data-ttu-id="55a1a-121">从数据源中不存在的行**DataTable**添加，和**RowState**设置为**Unchanged**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-121">Rows from the data source that do not already exist in the **DataTable** are added, and the **RowState** is set to **Unchanged**.</span></span>|  
+|<span data-ttu-id="55a1a-122">**UpdateCurrentValues**</span><span class="sxs-lookup"><span data-stu-id="55a1a-122">**UpdateCurrentValues**</span></span>|<span data-ttu-id="55a1a-123">如果传入行具有相同**PrimaryKey**为已在一行的值**DataTable**、**当前**值复制到**原始**值，与**当前**然后，将值设置为传入行的内容。</span><span class="sxs-lookup"><span data-stu-id="55a1a-123">If incoming rows have the same **PrimaryKey** value as the row already in the **DataTable**, the **Current** value is copied to the **Original** value, and the **Current** value is then set to the contents of the incoming row.</span></span><br /><br /> <span data-ttu-id="55a1a-124">如果**RowState**中**DataTable**已**Added**、 **RowState**保持**Added**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-124">If the **RowState** in the **DataTable** was **Added**, the **RowState** remains **Added**.</span></span> <span data-ttu-id="55a1a-125">为行标记为**已修改**或**已删除**、 **RowState**是**已修改**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-125">For rows marked as **Modified** or **Deleted**, the **RowState** is **Modified**.</span></span><br /><br /> <span data-ttu-id="55a1a-126">从数据源中不存在的行**DataTable**添加，和**RowState**设置为**Added**。</span><span class="sxs-lookup"><span data-stu-id="55a1a-126">Rows from the data source that do not already exist in the **DataTable** are added, and the **RowState** is set to **Added**.</span></span>|  
   
- 以下示例使用 **Load** 方法显示 **Northwind** 数据库中员工的生日列表。  
+ <span data-ttu-id="55a1a-127">下面的示例使用**负载**方法以显示中的员工的生日列表**Northwind**数据库。</span><span class="sxs-lookup"><span data-stu-id="55a1a-127">The following sample uses the **Load** method to display a list of birthdays for the employees in the **Northwind** database.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
     ' Assumes that connectionString is a valid connection string  
     ' to the Northwind database on SQL Server.  
@@ -75,6 +77,6 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## 请参阅  
- [在 DataTable 中处理数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="55a1a-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="55a1a-128">See Also</span></span>  
+ [<span data-ttu-id="55a1a-129">操作数据表中的数据</span><span class="sxs-lookup"><span data-stu-id="55a1a-129">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="55a1a-130">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="55a1a-130">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

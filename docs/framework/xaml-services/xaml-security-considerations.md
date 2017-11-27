@@ -1,52 +1,55 @@
 ---
-title: "XAML Security Considerations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [XAML Services], .NET XAML services"
-  - "XAML security [XAML Services]"
+title: "XAML 安全注意事项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [XAML Services], .NET XAML services
+- XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# XAML Security Considerations
-本主题介绍在应用程序中使用 XAML 和 .NET Framework XAML 服务 API 时的最佳安全做法。  
+# <a name="xaml-security-considerations"></a><span data-ttu-id="2f41d-102">XAML 安全注意事项</span><span class="sxs-lookup"><span data-stu-id="2f41d-102">XAML Security Considerations</span></span>
+<span data-ttu-id="2f41d-103">本主题介绍在应用程序中的安全性的最佳做法，当你使用 XAML 和.NET Framework XAML 服务 API。</span><span class="sxs-lookup"><span data-stu-id="2f41d-103">This topic describes best practices for security in applications when you use XAML and .NET Framework XAML Services API.</span></span>  
   
-## 应用程序中不受信任的 XAML  
- 一般来说，不受信任的 XAML 是应用程序未明确包含或发出的任何 XAML 源。  
+## <a name="untrusted-xaml-in-applications"></a><span data-ttu-id="2f41d-104">在应用程序中不受信任的 XAML</span><span class="sxs-lookup"><span data-stu-id="2f41d-104">Untrusted XAML in Applications</span></span>  
+ <span data-ttu-id="2f41d-105">在最常规的意义上，不受信任的 XAML 是你的应用程序不是专门未包括或发出的任何 XAML 源。</span><span class="sxs-lookup"><span data-stu-id="2f41d-105">In the most general sense, untrusted XAML is any XAML source that your application did not specifically include or emit.</span></span>  
   
- 被编译为或存储为受信任且经过签名的程序集中的 `resx` 类型资源的 XAML 本质上是不受信任的。  当您整体上信任程序集时，也可以同样信任 XAML。  多数情况下，您只关心宽松 XAML 是否受信任，而宽松 XAML 就是从流或其他 IO 加载的 XAML 源。  宽松 XAML 不是具有部署和打包基础结构的应用程序模型的特定组件或功能。  不过，程序集可能会实现涉及加载宽松 XAML 的行为。  
+ <span data-ttu-id="2f41d-106">XAML 是编译为或存储为`resx`-在受信任和签名的程序集内的类型资源不是本质上是不受信任。</span><span class="sxs-lookup"><span data-stu-id="2f41d-106">XAML that is compiled into or stored as a `resx`-type resource within a trusted and signed assembly is not inherently untrusted.</span></span> <span data-ttu-id="2f41d-107">根据你信任的程序集作为一个整体，可以信任 XAML。</span><span class="sxs-lookup"><span data-stu-id="2f41d-107">You can trust the XAML as much as you trust the assembly as a whole.</span></span> <span data-ttu-id="2f41d-108">在大多数情况下，你是仅关心宽松 XAML，即从流或其他 IO 加载的 XAML 源的信任方面。</span><span class="sxs-lookup"><span data-stu-id="2f41d-108">In most cases, you are only concerned with the trust aspects of loose XAML, which is a XAML source that you load from a stream or other IO.</span></span> <span data-ttu-id="2f41d-109">宽松型 XAML 不是特定的组件或功能的应用程序模型进行部署和打包基础结构。</span><span class="sxs-lookup"><span data-stu-id="2f41d-109">Loose XAML is not a specific component or feature of an application model with a deployment and packaging infrastructure.</span></span> <span data-ttu-id="2f41d-110">但是，程序集可能会实施涉及加载松散的 XAML 的行为。</span><span class="sxs-lookup"><span data-stu-id="2f41d-110">However, an assembly might implement a behavior that involves loading loose XAML.</span></span>  
   
- 对于不受信任的 XAML，通常应将其视同为不受信任的代码。  使用沙盒或其他形式可防止可能不受信任的 XAML 访问受信任的代码。  
+ <span data-ttu-id="2f41d-111">对于不受信任的 XAML，应将其通常相同就像它是不受信任的代码。</span><span class="sxs-lookup"><span data-stu-id="2f41d-111">For untrusted XAML, you should treat it generally the same as if it were untrusted code.</span></span> <span data-ttu-id="2f41d-112">使用沙盒或其他形式以防止可能不受信任的 XAML 访问受信任的代码。</span><span class="sxs-lookup"><span data-stu-id="2f41d-112">Use sandboxing or other metaphors to prevent possibly untrusted XAML from accessing your trusted code.</span></span>  
   
- XAML 功能的特性为 XAML 提供了构造对象并设置它们属性的权限。  这些功能还包括访问类型转换器、映射和访问应用程序域中的程序集、使用标记扩展、`x:Code` 块等。  
+ <span data-ttu-id="2f41d-113">XAML 功能的性质提供 XAML 构造对象并设置其属性的权限。</span><span class="sxs-lookup"><span data-stu-id="2f41d-113">The nature of XAML capabilities gives the XAML the right to construct objects and set their properties.</span></span> <span data-ttu-id="2f41d-114">这些功能还包括访问映射和访问应用程序域中中的程序集使用标记扩展的类型转换器`x:Code`块，依次类推。</span><span class="sxs-lookup"><span data-stu-id="2f41d-114">These capabilities also include accessing type converters, mapping and accessing assemblies in the application domain, using markup extensions, `x:Code` blocks, and so on.</span></span>  
   
- 除了语言级别的功能外，XAML 还在多种技术中用于 UI 定义。  加载不受信任的 XAML 可能意味着加载恶意伪造的 UI。  
+ <span data-ttu-id="2f41d-115">除其语言级别功能，XAML 用于在许多技术的用户界面定义。</span><span class="sxs-lookup"><span data-stu-id="2f41d-115">In addition to its language-level capabilities, XAML is used for UI definition in many technologies.</span></span> <span data-ttu-id="2f41d-116">加载不受信任的 XAML 可能意味着加载恶意的欺骗 UI。</span><span class="sxs-lookup"><span data-stu-id="2f41d-116">Loading untrusted XAML might mean loading a malicious spoofing UI.</span></span>  
   
-## 在读取器和编写器之间共享上下文  
- XAML 读取器和 XAML 编写器的 .NET Framework XAML 服务体系结构通常需要将 XAML 读取器共享到 XAML 编写器或共享的 XAML 架构上下文。  如果您编写 XAML 节点循环逻辑或者提供自定义的保存路径，则可能需要共享对象或上下文。  不应在受信任的代码和不受信任的代码之间共享 XAML 读取器实例、非默认的 XAML 架构上下文或 XAML 读取器\/编写器类的设置。  
+## <a name="sharing-context-between-readers-and-writers"></a><span data-ttu-id="2f41d-117">读取器和编写器之间共享上下文</span><span class="sxs-lookup"><span data-stu-id="2f41d-117">Sharing Context Between Readers and Writers</span></span>  
+ <span data-ttu-id="2f41d-118">XAML 读取器和 XAML 编写器的.NET Framework XAML 服务体系结构通常需要共享到 XAML 编写器或共享的 XAML 架构上下文的 XAML 读取器。</span><span class="sxs-lookup"><span data-stu-id="2f41d-118">The .NET Framework XAML Services architecture for XAML readers and XAML writers often requires sharing a XAML reader to a XAML writer, or a shared XAML schema context.</span></span> <span data-ttu-id="2f41d-119">如果你正在编写 XAML 节点循环逻辑，或提供自定义保存路径可能需要共享的对象或上下文。</span><span class="sxs-lookup"><span data-stu-id="2f41d-119">Sharing objects or contexts might be required if you are writing XAML node loop logic, or providing a custom save path.</span></span> <span data-ttu-id="2f41d-120">不应共享 XAML 读取器实例、 默认 XAML 架构上下文或设置受信任和不受信任的代码之间的 XAML 读取器/编写器类。</span><span class="sxs-lookup"><span data-stu-id="2f41d-120">You should not share XAML reader instances, nondefault XAML schema context, or settings for XAML reader/writer classes between trusted and untrusted code.</span></span>  
   
- 涉及为基于 CLR 的类型支持编写 XAML 对象的大多数方案和操作只能使用默认的 XAML 架构上下文。  默认的 XAML 架构上下文未显式包含可能危及完全信任的设置。  因此，在受信任的和不受信任的 XAML 读取器\/编写器组件之间共享上下文是非常安全的。  但是，如果您这样做，则最好将此类读取器和编写器保留在单独的 <xref:System.AppDomain> 范围中，并将这些范围中的一个范围专用于\/进行沙盒处理以用于部分信任。  
+ <span data-ttu-id="2f41d-121">大多数方案和涉及 XAML 对象编写的基于 CLR 的类型支持的操作可以只使用默认 XAML 架构上下文。</span><span class="sxs-lookup"><span data-stu-id="2f41d-121">Most scenarios and operations involving XAML object writing for a CLR-based type backing can just use default XAML schema context.</span></span> <span data-ttu-id="2f41d-122">默认 XAML 架构上下文不显式包括可能会危害完全信任的设置。</span><span class="sxs-lookup"><span data-stu-id="2f41d-122">The default XAML schema context does not explicitly include settings that could compromise full trust.</span></span> <span data-ttu-id="2f41d-123">因此，它可安全地共享受信任和不受信任的 XAML 读取器/编写器组件之间的上下文。</span><span class="sxs-lookup"><span data-stu-id="2f41d-123">It is thus safe to share context between trusted and untrusted XAML reader/writer components.</span></span> <span data-ttu-id="2f41d-124">但是，如果执行此操作时，它仍是最佳做法要保留在单独的此类的读取器和编写<xref:System.AppDomain>范围，其中一个专用于/进行沙盒处理以部分信任。</span><span class="sxs-lookup"><span data-stu-id="2f41d-124">However, if you do this, it is still a best practice to keep such readers and writers in separate <xref:System.AppDomain> scopes, with one of them specifically intended/sandboxed for partial trust.</span></span>  
   
-## XAML 命名空间和程序集信任  
- 当加载到应用程序域中时，在受信任的程序集和不受信任的程序集之间，有关 XAML 如何解释映射到程序集的自定义 XAML 命名空间的基本非限定语法和定义没有区别。  因此，从技术上来说，不受信任的程序集可能会假冒受信任的程序集的专用 XAML 命名空间映射并且可能会捕获 XAML 源的声明的对象和属性信息。  如果您需要避免这种情况以满足安全要求，则应使用以下方法之一进行所需的 XAML 命名空间映射：  
+## <a name="xaml-namespaces-and-assembly-trust"></a><span data-ttu-id="2f41d-125">XAML 命名空间和程序集信任</span><span class="sxs-lookup"><span data-stu-id="2f41d-125">XAML Namespaces and Assembly Trust</span></span>  
+ <span data-ttu-id="2f41d-126">基本的非限定的语法和有关 XAML 如何解释程序集的自定义 XAML 命名空间映射的定义不区分作为加载到应用程序域的受信任和不受信任程序集。</span><span class="sxs-lookup"><span data-stu-id="2f41d-126">The basic unqualified syntax and definition for how XAML interprets a custom XAML namespace mapping to an assembly does not distinguish between a trusted and untrusted assembly as loaded into the application domain.</span></span> <span data-ttu-id="2f41d-127">因此，它是从技术上讲可能的不受信任的程序集，以欺骗受信任的程序集的预期的 XAML 命名空间映射和捕获的 XAML 源的声明的对象和属性信息。</span><span class="sxs-lookup"><span data-stu-id="2f41d-127">Thus, it is technically possible for an untrusted assembly to spoof a trusted assembly's intended XAML namespace mapping and capture a XAML source's declared object and property information.</span></span> <span data-ttu-id="2f41d-128">如果你有安全需求，从而避免这种情况下，应使用以下方法之一进行你预期的 XAML 命名空间映射：</span><span class="sxs-lookup"><span data-stu-id="2f41d-128">If you have security requirements to avoid this situation, your intended XAML namespace mapping should be made using one of the following techniques:</span></span>  
   
--   在应用程序的 XAML 所进行的任何 XAML 命名空间映射中对程序集使用完全限定的强名称。  
+-   <span data-ttu-id="2f41d-129">具有强名称由应用程序的 XAML 任何 XAML 命名空间映射中使用完全限定程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="2f41d-129">Use a fully qualified assembly name with strong name in any XAML namespace mapping made by your application's XAML.</span></span>  
   
--   将程序集映射限制为一组固定的引用程序集，方法是为 XAML 读取器和 XAML 对象编写器构造特定的 <xref:System.Xaml.XamlSchemaContext>。  请参见 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
+-   <span data-ttu-id="2f41d-130">限制将映射到一组固定的引用程序集，通过构造特定的程序集<xref:System.Xaml.XamlSchemaContext>XAML 读取器和 XAML 对象编写器。</span><span class="sxs-lookup"><span data-stu-id="2f41d-130">Restrict assembly mapping to a fixed set of reference assemblies, by constructing a specific <xref:System.Xaml.XamlSchemaContext> for your XAML readers and XAML object writers.</span></span> <span data-ttu-id="2f41d-131">请参阅<xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。</span><span class="sxs-lookup"><span data-stu-id="2f41d-131">See <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.</span></span>  
   
-## XAML 类型映射和类型系统访问  
- XAML 支持自己的类型系统，这在很多方面等同于 CLR 实现基本的 CLR 类型系统的方式。  但是，对于根据类型信息做出该类型信任决定的某些类型识别方面，应该遵从 CLR 后备类型中的类型信息。  这是因为 XAML 类型系统的某些特定报告功能作为虚方法打开，因此不完全在原始 .NET Framework XAML 服务实现的控制之下。  这些扩展性点之所以存在，是因为 XAML 类型系统是可扩展的，可使 XAML 本身的扩展性及其可能的备用类型映射策略与默认的支持 CLR 的实现以及默认的 XAML 架构上下文相匹配。  有关更多信息，请参见有关 <xref:System.Xaml.XamlType> 和 <xref:System.Xaml.XamlMember> 的多个属性的特定说明。  
+## <a name="xaml-type-mapping-and-type-system-access"></a><span data-ttu-id="2f41d-132">XAML 类型映射和类型系统访问</span><span class="sxs-lookup"><span data-stu-id="2f41d-132">XAML Type Mapping and Type System Access</span></span>  
+ <span data-ttu-id="2f41d-133">XAML 支持其自己的类型系统，即在许多方面与 CLR 如何实现基本的 CLR 类型系统对等。</span><span class="sxs-lookup"><span data-stu-id="2f41d-133">XAML supports its own type system, which in many ways is a peer to how CLR implements the basic CLR type system.</span></span> <span data-ttu-id="2f41d-134">但是，做出信任决定有关基于其类型信息的类型的类型识别的某些方面，你应延迟到 CLR 后备类型中的类型信息。</span><span class="sxs-lookup"><span data-stu-id="2f41d-134">However, for certain aspects of type awareness where you are making trust decisions about a type based on its type information, you should defer to the type information in the CLR backing types.</span></span> <span data-ttu-id="2f41d-135">这是因为某些 XAML 类型系统的特定报表功能保持打开状态作为虚拟方法，因此，不完全受控制的原始的.NET Framework XAML 服务实现。</span><span class="sxs-lookup"><span data-stu-id="2f41d-135">This is because some of the specific reporting capabilities of the XAML type system are left open as virtual methods and are therefore, not fully under the control of the original .NET Framework XAML Services implementations.</span></span> <span data-ttu-id="2f41d-136">这些扩展点存在，因为 XAML 类型系统是可扩展的以便与 XAML 本身的扩展性与默认 CLR 支持实现与默认 XAML 架构上下文其可能备用类型映射策略相匹配。</span><span class="sxs-lookup"><span data-stu-id="2f41d-136">These extensibility points exist because the XAML type system is extensible, to match the extensibility of XAML itself and its possible alternative type-mapping strategies versus the default CLR-backed implementation and default XAML schema context.</span></span> <span data-ttu-id="2f41d-137">有关详细信息，请参阅 》 上几个属性的特定注释<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。</span><span class="sxs-lookup"><span data-stu-id="2f41d-137">For more information, see the specific notes on several of the properties of <xref:System.Xaml.XamlType> and <xref:System.Xaml.XamlMember>.</span></span>  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="2f41d-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2f41d-138">See Also</span></span>  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

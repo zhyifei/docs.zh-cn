@@ -1,67 +1,68 @@
 ---
-title: "Windows 窗体中鼠标输入的工作原理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "鼠标, input"
-  - "Windows 窗体, 鼠标输入"
+title: "Windows 窗体中鼠标输入的工作原理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, mouse input
+- mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 20de05b5df3737ccc525cb50c81b51bcba766287
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体中鼠标输入的工作原理
-接收和处理鼠标输入是每个 Windows 应用程序的重要组成部分。  您可以通过处理鼠标事件来执行应用程序中的操作，或者使用鼠标位置信息来执行命中测试或其他操作。  另外，还可以更改应用程序中控件处理鼠标输入的方式。  本主题详细描述这些鼠标事件，以及如何获取和更改鼠标的系统设置。  有关与鼠标事件一起提供的数据和鼠标单击事件的引发顺序的更多信息，请参见 [Windows 窗体中的鼠标事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  
+# <a name="how-mouse-input-works-in-windows-forms"></a><span data-ttu-id="f8aea-102">Windows 窗体中鼠标输入的工作原理</span><span class="sxs-lookup"><span data-stu-id="f8aea-102">How Mouse Input Works in Windows Forms</span></span>
+<span data-ttu-id="f8aea-103">接收和处理鼠标输入是每个 Windows 应用程序的一个重要部分。</span><span class="sxs-lookup"><span data-stu-id="f8aea-103">Receiving and handling mouse input is an important part of every Windows application.</span></span> <span data-ttu-id="f8aea-104">你可以处理鼠标事件以在你的应用程序，执行操作，或使用鼠标位置信息来执行的命中测试或其他操作。</span><span class="sxs-lookup"><span data-stu-id="f8aea-104">You can handle mouse events to perform an action in your application, or use mouse location information to perform hit testing or other actions.</span></span> <span data-ttu-id="f8aea-105">此外，你可以更改你的应用程序中的控件处理鼠标输入的方式。</span><span class="sxs-lookup"><span data-stu-id="f8aea-105">In addition, you can change the way the controls in your application handle mouse input.</span></span> <span data-ttu-id="f8aea-106">本主题介绍这些详细信息，以及如何获取和更改鼠标的系统设置中的鼠标事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-106">This topic describes these mouse events in detail, and how to obtain and change system settings for the mouse.</span></span> <span data-ttu-id="f8aea-107">事件和在其中鼠标单击事件的顺序引发有关使用鼠标提供的数据的详细信息，请参阅[Windows 窗体中的鼠标事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="f8aea-107">For more information about the data provided with the mouse events and the order in which the mouse click events are raised, see [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span></span>  
   
-## 鼠标位置和命中测试  
- 当用户移动鼠标时，操作系统会移动鼠标指针。  鼠标指针包含一个称为作用点的像素，操作系统跟踪作用点并将其识别为指针的位置。  当用户移动鼠标或按下鼠标按钮时，包含 <xref:System.Windows.Forms.Cursor.HotSpot%2A> 的 <xref:System.Windows.Forms.Control> 将引发相应的鼠标事件。  处理鼠标事件时，可以使用 <xref:System.Windows.Forms.MouseEventArgs> 的 <xref:System.Windows.Forms.MouseEventArgs.Location%2A> 属性来获取当前鼠标的位置，也可以使用 <xref:System.Windows.Forms.Cursor> 类的 <xref:System.Windows.Forms.Cursor.Position%2A> 属性来获取当前鼠标的位置。  其后可以使用鼠标位置信息来执行命中测试，再根据鼠标的位置执行操作。  命中测试功能内置于多个 Windows 窗体控件中，如 <xref:System.Windows.Forms.ListView>、<xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.MonthCalendar> 和 <xref:System.Windows.Forms.DataGridView> 控件。  当命中测试与适当的鼠标事件（例如 <xref:System.Windows.Forms.Control.MouseHover>）一起使用时，命中测试对于确定应用程序应在何时执行特定操作十分有用。  
+## <a name="mouse-location-and-hit-testing"></a><span data-ttu-id="f8aea-108">鼠标位置和命中测试</span><span class="sxs-lookup"><span data-stu-id="f8aea-108">Mouse Location and Hit-Testing</span></span>  
+ <span data-ttu-id="f8aea-109">当用户移动鼠标时，操作系统将鼠标指针移。</span><span class="sxs-lookup"><span data-stu-id="f8aea-109">When the user moves the mouse, the operating system moves the mouse pointer.</span></span> <span data-ttu-id="f8aea-110">鼠标指针包含的单一像素，调用作用点，也不能操作系统跟踪会识别为指针的位置。</span><span class="sxs-lookup"><span data-stu-id="f8aea-110">The mouse pointer contains a single pixel, called the hot spot, which the operating system tracks and recognizes as the position of the pointer.</span></span> <span data-ttu-id="f8aea-111">当用户移动鼠标或按下鼠标按钮，<xref:System.Windows.Forms.Control>包含<xref:System.Windows.Forms.Cursor.HotSpot%2A>引发适当的鼠标事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-111">When the user moves the mouse or presses a mouse button, the <xref:System.Windows.Forms.Control> that contains the <xref:System.Windows.Forms.Cursor.HotSpot%2A> raises the appropriate mouse event.</span></span> <span data-ttu-id="f8aea-112">你可以获取与当前的鼠标位置<xref:System.Windows.Forms.MouseEventArgs.Location%2A>属性<xref:System.Windows.Forms.MouseEventArgs>处理鼠标事件时，或通过使用<xref:System.Windows.Forms.Cursor.Position%2A>属性<xref:System.Windows.Forms.Cursor>类。</span><span class="sxs-lookup"><span data-stu-id="f8aea-112">You can obtain the current mouse position with the <xref:System.Windows.Forms.MouseEventArgs.Location%2A> property of the <xref:System.Windows.Forms.MouseEventArgs> when handling a mouse event or by using the <xref:System.Windows.Forms.Cursor.Position%2A> property of the <xref:System.Windows.Forms.Cursor> class.</span></span> <span data-ttu-id="f8aea-113">你可以随后使用鼠标位置信息来执行命中测试，然后执行基于的鼠标位置的操作。</span><span class="sxs-lookup"><span data-stu-id="f8aea-113">You can subsequently use mouse location information to perform hit-testing, and then perform an action based on the location of the mouse.</span></span> <span data-ttu-id="f8aea-114">命中测试功能内置的与 Windows 窗体中的多个控件如<xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.TreeView>，<xref:System.Windows.Forms.MonthCalendar>和<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-114">Hit-testing capability is built in to several controls in Windows Forms such as the <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> and <xref:System.Windows.Forms.DataGridView> controls.</span></span> <span data-ttu-id="f8aea-115">使用与适当的鼠标事件<xref:System.Windows.Forms.Control.MouseHover>例如如，命中测试是用于确定当你的应用程序应执行特定的操作非常有用。</span><span class="sxs-lookup"><span data-stu-id="f8aea-115">Used with the appropriate mouse event, <xref:System.Windows.Forms.Control.MouseHover> for example, hit-testing is very useful for determining when your application should perform a specific action.</span></span>  
   
-## 鼠标事件  
- 响应鼠标输入的主要方式是处理鼠标事件。  下表列出鼠标事件并描述其引发条件。  
+## <a name="mouse-events"></a><span data-ttu-id="f8aea-116">鼠标事件</span><span class="sxs-lookup"><span data-stu-id="f8aea-116">Mouse Events</span></span>  
+ <span data-ttu-id="f8aea-117">响应的鼠标输入的主要方法是处理鼠标事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-117">The primary way to respond to mouse input is to handle mouse events.</span></span> <span data-ttu-id="f8aea-118">下表显示鼠标事件，并介绍引发时。</span><span class="sxs-lookup"><span data-stu-id="f8aea-118">The following table shows the mouse events and describes when they are raised.</span></span>  
   
-|鼠标事件|说明|  
-|----------|--------|  
-|<xref:System.Windows.Forms.Control.Click>|释放鼠标按钮时发生此事件，通常发生在 <xref:System.Windows.Forms.Control.MouseUp> 事件前。  此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。  如果只需要确定何时发生单击，可处理此事件。|  
-|<xref:System.Windows.Forms.Control.MouseClick>|用户使用鼠标单击控件时发生此事件。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。  如果需要在发生单击时获取鼠标的有关信息，可处理此事件。|  
-|<xref:System.Windows.Forms.Control.DoubleClick>|双击控件时发生此事件。  此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。  如果只需要确定何时发生双击，可处理此事件。|  
-|<xref:System.Windows.Forms.Control.MouseDoubleClick>|用户使用鼠标双击控件时发生此事件。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。  如果需要在发生双击时获取鼠标的有关信息，可处理此事件。|  
-|<xref:System.Windows.Forms.Control.MouseDown>|当鼠标指针在控件上且用户按下鼠标按钮时发生此事件。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.MouseEnter>|当鼠标指针进入控件的边框或工作区（具体取决于控件类型）时发生此事件。  此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.MouseHover>|当鼠标指针停留在控件上时发生此事件。  此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.MouseLeave>|当鼠标指针离开控件的边框或工作区（具体取决于控件类型）时发生此事件。  此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.MouseMove>|当鼠标指针在控件上移动时发生此事件。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.MouseUp>|当鼠标指针在控件上且用户释放鼠标按钮时发生此事件。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.MouseWheel>|如果用户在控件具有焦点时滚动鼠标轮，则发生此事件。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。  可以使用 <xref:System.Windows.Forms.MouseEventArgs> 的 <xref:System.Windows.Forms.MouseEventArgs.Delta%2A> 属性来确定鼠标滚动的距离。|  
+|<span data-ttu-id="f8aea-119">鼠标事件</span><span class="sxs-lookup"><span data-stu-id="f8aea-119">Mouse Event</span></span>|<span data-ttu-id="f8aea-120">描述</span><span class="sxs-lookup"><span data-stu-id="f8aea-120">Description</span></span>|  
+|-----------------|-----------------|  
+|<xref:System.Windows.Forms.Control.Click>|<span data-ttu-id="f8aea-121">释放鼠标按钮时，通常之前时发生此事件<xref:System.Windows.Forms.Control.MouseUp>事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-121">This event occurs when the mouse button is released, typically before the <xref:System.Windows.Forms.Control.MouseUp> event.</span></span> <span data-ttu-id="f8aea-122">此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-122">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span> <span data-ttu-id="f8aea-123">处理此事件时你只需以确定何时发生单击。</span><span class="sxs-lookup"><span data-stu-id="f8aea-123">Handle this event when you only need to determine when a click occurs.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseClick>|<span data-ttu-id="f8aea-124">当用户单击控件使用鼠标，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-124">This event occurs when the user clicks the control with the mouse.</span></span> <span data-ttu-id="f8aea-125">此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-125">The handler for this event receives an argument of type <xref:System.Windows.Forms.MouseEventArgs>.</span></span> <span data-ttu-id="f8aea-126">处理需要进行一次单击发生时获取鼠标有关的信息时此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-126">Handle this event when you need to get information about the mouse when a click occurs.</span></span>|  
+|<xref:System.Windows.Forms.Control.DoubleClick>|<span data-ttu-id="f8aea-127">双击该控件时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-127">This event occurs when the control is double-clicked.</span></span> <span data-ttu-id="f8aea-128">此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-128">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span> <span data-ttu-id="f8aea-129">处理此事件时你只需以确定何时发生一次双击。</span><span class="sxs-lookup"><span data-stu-id="f8aea-129">Handle this event when you only need to determine when a double-click occurs.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseDoubleClick>|<span data-ttu-id="f8aea-130">当用户双击鼠标控件，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-130">This event occurs when the user double-clicks the control with the mouse.</span></span> <span data-ttu-id="f8aea-131">此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-131">The handler for this event receives an argument of type <xref:System.Windows.Forms.MouseEventArgs>.</span></span> <span data-ttu-id="f8aea-132">处理需要进行一次双击发生时获取鼠标有关的信息时此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-132">Handle this event when you need to get information about the mouse when a double-click occurs.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseDown>|<span data-ttu-id="f8aea-133">当鼠标指针位于控件和用户按下鼠标按钮时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-133">This event occurs when the mouse pointer is over the control and the user presses a mouse button.</span></span> <span data-ttu-id="f8aea-134">此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-134">The handler for this event receives an argument of type <xref:System.Windows.Forms.MouseEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseEnter>|<span data-ttu-id="f8aea-135">当鼠标指针进入控件，具体取决于控件的类型的边框或客户端区域，则会发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-135">This event occurs when the mouse pointer enters the border or client area of the control, depending on the type of control.</span></span> <span data-ttu-id="f8aea-136">此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-136">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseHover>|<span data-ttu-id="f8aea-137">当鼠标指针停止，并停留在该控件时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-137">This event occurs when the mouse pointer stops and rests over the control.</span></span> <span data-ttu-id="f8aea-138">此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-138">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseLeave>|<span data-ttu-id="f8aea-139">在鼠标指针离开控件，具体取决于控件的类型的边框或客户端区域时发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-139">This event occurs when the mouse pointer leaves the border or client area of the control, depending on the type of the control.</span></span> <span data-ttu-id="f8aea-140">此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-140">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseMove>|<span data-ttu-id="f8aea-141">当鼠标指针移动到控件上时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-141">This event occurs when the mouse pointer moves while it is over a control.</span></span> <span data-ttu-id="f8aea-142">此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-142">The handler for this event receives an argument of type <xref:System.Windows.Forms.MouseEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseUp>|<span data-ttu-id="f8aea-143">当鼠标指针位于控件和用户释放鼠标按钮时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-143">This event occurs when the mouse pointer is over the control and the user releases a mouse button.</span></span> <span data-ttu-id="f8aea-144">此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-144">The handler for this event receives an argument of type <xref:System.Windows.Forms.MouseEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.MouseWheel>|<span data-ttu-id="f8aea-145">在控件有焦点，用户旋转鼠标滚轮时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="f8aea-145">This event occurs when the user rotates the mouse wheel while the control has focus.</span></span> <span data-ttu-id="f8aea-146">此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-146">The handler for this event receives an argument of type <xref:System.Windows.Forms.MouseEventArgs>.</span></span> <span data-ttu-id="f8aea-147">你可以使用<xref:System.Windows.Forms.MouseEventArgs.Delta%2A>属性<xref:System.Windows.Forms.MouseEventArgs>来确定已经滚动鼠标的距离。</span><span class="sxs-lookup"><span data-stu-id="f8aea-147">You can use the <xref:System.Windows.Forms.MouseEventArgs.Delta%2A> property of <xref:System.Windows.Forms.MouseEventArgs> to determine how far the mouse has scrolled.</span></span>|  
   
-## 更改鼠标输入并检测系统设置  
- 您可以检测和更改控件处理鼠标输入的方式，方法是从该控件派生并使用 <xref:System.Windows.Forms.Control.GetStyle%2A> 和 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法。  <xref:System.Windows.Forms.Control.SetStyle%2A> 方法采用 <xref:System.Windows.Forms.ControlStyles> 值的按位组合来确定控件是具有标准的单击或双击行为，还是处理自己的鼠标行为。  另外，<xref:System.Windows.Forms.SystemInformation> 类包含一些属性，这些属性描述鼠标功能并指定鼠标与操作系统之间的互动方式。  下表总结了这些属性。  
+## <a name="changing-mouse-input-and-detecting-system-settings"></a><span data-ttu-id="f8aea-148">更改鼠标输入并检测系统设置</span><span class="sxs-lookup"><span data-stu-id="f8aea-148">Changing Mouse Input and Detecting System Settings</span></span>  
+ <span data-ttu-id="f8aea-149">你可以检测和更改控件处理通过从该控件派生，并使用鼠标输入的方式<xref:System.Windows.Forms.Control.GetStyle%2A>和<xref:System.Windows.Forms.Control.SetStyle%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f8aea-149">You can detect and change the way a control handles mouse input by deriving from the control and using the <xref:System.Windows.Forms.Control.GetStyle%2A> and <xref:System.Windows.Forms.Control.SetStyle%2A> methods.</span></span> <span data-ttu-id="f8aea-150"><xref:System.Windows.Forms.Control.SetStyle%2A>方法采用的按位组合<xref:System.Windows.Forms.ControlStyles>值来确定控件是否会将标准单击或双击行为，或如果该控件将处理其自己的鼠标处理。</span><span class="sxs-lookup"><span data-stu-id="f8aea-150">The <xref:System.Windows.Forms.Control.SetStyle%2A> method takes a bitwise combination of <xref:System.Windows.Forms.ControlStyles> values to determine whether the control will have standard click or double-click behavior or if the control will handle its own mouse processing.</span></span> <span data-ttu-id="f8aea-151">此外，<xref:System.Windows.Forms.SystemInformation>类包括的属性，描述鼠标的功能，并指定与操作系统鼠标交互的方式。</span><span class="sxs-lookup"><span data-stu-id="f8aea-151">In addition, the <xref:System.Windows.Forms.SystemInformation> class includes properties that describe the capabilities of the mouse and specify how the mouse interacts with the operating system.</span></span> <span data-ttu-id="f8aea-152">下表总结了这些属性。</span><span class="sxs-lookup"><span data-stu-id="f8aea-152">The following table summarizes these properties.</span></span>  
   
-|属性|说明|  
-|--------|--------|  
-|<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|获取特定区域的尺寸（以像素为单位），用户必须在该区域内单击两次，操作系统才会将这两次单击视为一次双击。|  
-|<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|获取第一次单击和第二次单击之间可经过的最大毫秒数，只有两次单击的时间间隔不超过它，操作系统才会将该鼠标操作视为一次双击。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseButtons%2A>|获取鼠标上的按钮数。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseButtonsSwapped%2A>|获取一个值，该值指示是否已交换鼠标左右按钮的功能。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseHoverSize%2A>|获取特定矩形的尺寸（以像素为单位），鼠标指针必须在该矩形范围内停留达到鼠标悬停时间后，才会生成鼠标悬停消息。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseHoverTime%2A>|获取一个以毫秒为单位的时间，鼠标指针必须在悬停矩形中停留该时间后，才会生成鼠标悬停消息。|  
-|<xref:System.Windows.Forms.SystemInformation.MousePresent%2A>|获取一个值，该值指示鼠标是否已安装。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseSpeed%2A>|获取一个指示当前鼠标速度的值，该值从 1 到 20。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseWheelPresent%2A>|获取一个值，该值指示是否安装了带有鼠标轮的鼠标。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|获取滚动一下鼠标轮的增量值。|  
-|<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|获取滚动鼠标轮时所滚动过的行数。|  
+|<span data-ttu-id="f8aea-153">属性</span><span class="sxs-lookup"><span data-stu-id="f8aea-153">Property</span></span>|<span data-ttu-id="f8aea-154">描述</span><span class="sxs-lookup"><span data-stu-id="f8aea-154">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|<span data-ttu-id="f8aea-155">获取维度，以像素为单位，在其中用户必须单击两次，操作系统才两个区域的单击一次双击。</span><span class="sxs-lookup"><span data-stu-id="f8aea-155">Gets the dimensions, in pixels, of the area in which the user must click twice for the operating system to consider the two clicks a double-click.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|<span data-ttu-id="f8aea-156">获取最大的第一次单击与操作系统将鼠标操作视为双击第二次单击之间可以经过的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-156">Gets the maximum number of milliseconds that can elapse between a first click and a second click for the operating system to consider the mouse action a double-click.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseButtons%2A>|<span data-ttu-id="f8aea-157">获取鼠标上的按钮数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-157">Gets the number of buttons on the mouse.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseButtonsSwapped%2A>|<span data-ttu-id="f8aea-158">获取一个值，该值指示是否已交换鼠标左右按钮的功能。</span><span class="sxs-lookup"><span data-stu-id="f8aea-158">Gets a value indicating whether the functions of the left and right mouse buttons have been swapped.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseHoverSize%2A>|<span data-ttu-id="f8aea-159">获取特定矩形的尺寸（以像素为单位），鼠标指针必须在该矩形范围内停留达到鼠标悬停时间后，才会生成鼠标悬停消息。</span><span class="sxs-lookup"><span data-stu-id="f8aea-159">Gets the dimensions, in pixels, of the rectangle within which the mouse pointer has to stay for the mouse hover time before a mouse hover message is generated.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseHoverTime%2A>|<span data-ttu-id="f8aea-160">获取一个以毫秒为单位的时间，鼠标指针必须在悬停矩形中停留该时间后，才会生成鼠标悬停消息。</span><span class="sxs-lookup"><span data-stu-id="f8aea-160">Gets the time, in milliseconds, that the mouse pointer has to stay in the hover rectangle before a mouse hover message is generated.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MousePresent%2A>|<span data-ttu-id="f8aea-161">获取一个值，该值指示鼠标是否已安装。</span><span class="sxs-lookup"><span data-stu-id="f8aea-161">Gets a value indicating whether a mouse is installed.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseSpeed%2A>|<span data-ttu-id="f8aea-162">获取一个值，该值指示当前鼠标的速度，从 1 到 20。</span><span class="sxs-lookup"><span data-stu-id="f8aea-162">Gets a value indicating the current mouse speed, from 1 to 20.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseWheelPresent%2A>|<span data-ttu-id="f8aea-163">获取一个值，该值指示是否安装了带有鼠标轮的鼠标。</span><span class="sxs-lookup"><span data-stu-id="f8aea-163">Gets a value indicating whether a mouse with a mouse wheel is installed.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|<span data-ttu-id="f8aea-164">获取单次鼠标轮旋转增量的增量值的量。</span><span class="sxs-lookup"><span data-stu-id="f8aea-164">Gets the amount of the delta value of the increment of a single mouse wheel rotation.</span></span>|  
+|<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|<span data-ttu-id="f8aea-165">获取滚动鼠标轮时所滚动过的行数。</span><span class="sxs-lookup"><span data-stu-id="f8aea-165">Gets the number of lines to scroll when the mouse wheel is rotated.</span></span>|  
   
-## 请参阅  
- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
- [Windows 窗体中的鼠标捕获](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)   
- [Windows 窗体中的鼠标指针](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f8aea-166">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f8aea-166">See Also</span></span>  
+ [<span data-ttu-id="f8aea-167">Windows 窗体应用程序中的鼠标输入</span><span class="sxs-lookup"><span data-stu-id="f8aea-167">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="f8aea-168">Windows 窗体中的鼠标捕获</span><span class="sxs-lookup"><span data-stu-id="f8aea-168">Mouse Capture in Windows Forms</span></span>](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
+ [<span data-ttu-id="f8aea-169">Windows 窗体中的鼠标指针</span><span class="sxs-lookup"><span data-stu-id="f8aea-169">Mouse Pointers in Windows Forms</span></span>](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)

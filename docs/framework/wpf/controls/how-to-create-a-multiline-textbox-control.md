@@ -1,36 +1,38 @@
 ---
-title: "如何：创建多行 TextBox 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TextBox 控件, 多行文本"
+title: "如何：创建多行 TextBox 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 244eb38ea47bbd7376c2f8c6f5b2609fbd9c4330
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建多行 TextBox 控件
-本示例演示如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义一个 <xref:System.Windows.Controls.TextBox> 控件，该控件将自动扩展以容纳多行文本。  
+# <a name="how-to-create-a-multiline-textbox-control"></a><span data-ttu-id="e2b3f-102">如何：创建多行 TextBox 控件</span><span class="sxs-lookup"><span data-stu-id="e2b3f-102">How to: Create a Multiline TextBox Control</span></span>
+<span data-ttu-id="e2b3f-103">此示例演示如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定义<xref:System.Windows.Controls.TextBox>将自动扩展以容纳多行文本的控件。</span><span class="sxs-lookup"><span data-stu-id="e2b3f-103">This example shows how to use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to define a <xref:System.Windows.Controls.TextBox> control that will automatically expand to accommodate multiple lines of text.</span></span>  
   
-## 示例  
- 将 <xref:System.Windows.Controls.TextBox.TextWrapping%2A> 特性设置为 **Wrap** 会导致输入的文本在到达 <xref:System.Windows.Controls.TextBox> 控件的边缘时换至新行，必要时会自动扩展 <xref:System.Windows.Controls.TextBox> 控件以便为新行留出空间。  
+## <a name="example"></a><span data-ttu-id="e2b3f-104">示例</span><span class="sxs-lookup"><span data-stu-id="e2b3f-104">Example</span></span>  
+ <span data-ttu-id="e2b3f-105">设置<xref:System.Windows.Controls.TextBox.TextWrapping%2A>属性设为**包装**将导致输入的文本换行到一个新行时的边缘<xref:System.Windows.Controls.TextBox>达到控件时，自动扩展<xref:System.Windows.Controls.TextBox>控件为新行，留出空间必需。</span><span class="sxs-lookup"><span data-stu-id="e2b3f-105">Setting the <xref:System.Windows.Controls.TextBox.TextWrapping%2A> attribute to **Wrap** will cause entered text to wrap to a new line when the edge of the <xref:System.Windows.Controls.TextBox> control is reached, automatically expanding the <xref:System.Windows.Controls.TextBox> control to include room for a new line, if necessary.</span></span>  
   
- 将 <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> 特性设置为 **true** 会导致在按 Return 键时插入新行，必要时会再次自动扩展 <xref:System.Windows.Controls.TextBox> 以便为新行留出空间。  
+ <span data-ttu-id="e2b3f-106">设置<xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A>属性设为**true**会导致在新行时按 RETURN 键，再一次自动扩展插入<xref:System.Windows.Controls.TextBox>以便留出空间为新行，如有必要。</span><span class="sxs-lookup"><span data-stu-id="e2b3f-106">Setting the <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> attribute to **true** causes a new line to be inserted when the RETURN key is pressed, once again automatically expanding the <xref:System.Windows.Controls.TextBox> to include room for a new line, if necessary.</span></span>  
   
- <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> 特性向 <xref:System.Windows.Controls.TextBox> 添加一个滚动条，以便在 <xref:System.Windows.Controls.TextBox> 超出包含它的框架或窗口的大小时，可以滚动 <xref:System.Windows.Controls.TextBox> 的内容。  
+ <span data-ttu-id="e2b3f-107"><xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A>属性添加到一个滚动条<xref:System.Windows.Controls.TextBox>，以便内容<xref:System.Windows.Controls.TextBox>可以滚动如果<xref:System.Windows.Controls.TextBox>超出的框架或包围它的窗口的大小。</span><span class="sxs-lookup"><span data-stu-id="e2b3f-107">The <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> attribute adds a scroll bar to the <xref:System.Windows.Controls.TextBox>, so that the contents of the <xref:System.Windows.Controls.TextBox> can be scrolled through if the <xref:System.Windows.Controls.TextBox> expands beyond the size of the frame or window that encloses it.</span></span>  
   
- [!code-xml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
+ [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
-## 请参阅  
- <xref:System.Windows.TextWrapping>   
- [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)   
- [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e2b3f-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e2b3f-108">See Also</span></span>  
+ <xref:System.Windows.TextWrapping>  
+ [<span data-ttu-id="e2b3f-109">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="e2b3f-109">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="e2b3f-110">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="e2b3f-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

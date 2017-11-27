@@ -1,46 +1,44 @@
 ---
-title: "属性“&lt;属性名&gt;”的“Set”访问器不可访问 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc31102"
-  - "bc31102"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC31102"
+title: "&#39;集 &#39;访问器的属性 &#39;&lt;propertyname&gt;&#39; 不可访问"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc31102
+- bc31102
+helpviewer_keywords: BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9256a09b719ad3890e1d7c2cc23ffb0d40eec62f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 属性“&lt;属性名&gt;”的“Set”访问器不可访问
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-语句尝试在无权访问某个属性的 `Set` 过程时存储该属性的值。  
+# <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a><span data-ttu-id="4f15b-102">&#39;集 &#39;访问器的属性 &#39;&lt;propertyname&gt;&#39; 不可访问</span><span class="sxs-lookup"><span data-stu-id="4f15b-102">&#39;Set&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible</span></span>
+<span data-ttu-id="4f15b-103">语句试图存储属性的值，如果它不具有对该属性的访问`Set`过程。</span><span class="sxs-lookup"><span data-stu-id="4f15b-103">A statement attempts to store the value of a property when it does not have access to the property's `Set` procedure.</span></span>  
   
- 如果 [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md) 标记有限制性比其 [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md) 更强的访问级别，在以下情况中，尝试设置属性值的操作可能会失败：  
+ <span data-ttu-id="4f15b-104">如果[Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)标记具有限制性更强的访问权限级别比其[属性语句](../../../visual-basic/language-reference/statements/property-statement.md)，尝试设置的属性值在以下情况可能会失败：</span><span class="sxs-lookup"><span data-stu-id="4f15b-104">If the [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md) is marked with a more restrictive access level than its [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md), an attempt to set the property value could fail in the following cases:</span></span>  
   
--   `Set` 语句被标记为 [Private](../../../visual-basic/language-reference/modifiers/private.md)，并且调用代码位于其中定义了属性的类或结构的外部。  
+-   <span data-ttu-id="4f15b-105">`Set`语句被标记为[私有](../../../visual-basic/language-reference/modifiers/private.md)，但调用代码以外的类或结构在其中定义该属性。</span><span class="sxs-lookup"><span data-stu-id="4f15b-105">The `Set` statement is marked [Private](../../../visual-basic/language-reference/modifiers/private.md) and the calling code is outside the class or structure in which the property is defined.</span></span>  
   
--   `Set` 语句被标记为 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)，并且调用代码既不在其中定义了属性的类或结构中，也不在派生类中。  
+-   <span data-ttu-id="4f15b-106">`Set`语句被标记为[受保护](../../../visual-basic/language-reference/modifiers/protected.md)，调用代码不在类或结构在其中定义该属性，也不派生类中。</span><span class="sxs-lookup"><span data-stu-id="4f15b-106">The `Set` statement is marked [Protected](../../../visual-basic/language-reference/modifiers/protected.md) and the calling code is not in the class or structure in which the property is defined, nor in a derived class.</span></span>  
   
--   `Set` 语句被标记为 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)，并且调用代码所在的程序集与其中定义了属性的程序集不同。  
+-   <span data-ttu-id="4f15b-107">`Set`语句被标记为[友元](../../../visual-basic/language-reference/modifiers/friend.md)而调用的代码不在同一程序集在其中定义该属性。</span><span class="sxs-lookup"><span data-stu-id="4f15b-107">The `Set` statement is marked [Friend](../../../visual-basic/language-reference/modifiers/friend.md) and the calling code is not in the same assembly in which the property is defined.</span></span>  
   
- **错误 ID：**BC31102  
+ <span data-ttu-id="4f15b-108">**错误 ID:** BC31102</span><span class="sxs-lookup"><span data-stu-id="4f15b-108">**Error ID:** BC31102</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4f15b-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="4f15b-109">To correct this error</span></span>  
   
--   如果能够控制定义属性的源代码，请考虑使用与属性本身相同的访问级别声明 `Set` 过程。  
+-   <span data-ttu-id="4f15b-110">如果已定义属性的源代码管理，请考虑声明`Set`属性本身的相同访问级别的过程。</span><span class="sxs-lookup"><span data-stu-id="4f15b-110">If you have control of the source code defining the property, consider declaring the `Set` procedure with the same access level as the property itself.</span></span>  
   
--   如果无法控制定义属性的源代码，或者必须使 `Set` 过程访问级别的限制性比属性本身更强，请尝试将设置属性值的语句移到可更好地访问属性的代码区域中。  
+-   <span data-ttu-id="4f15b-111">如果你不能定义属性，对源代码的控制或必须限制`Set`过程访问级别限制性比强属性自身，尝试移动到具有更好地访问的代码区域设置的属性值的语句属性。</span><span class="sxs-lookup"><span data-stu-id="4f15b-111">If you do not have control of the source code defining the property, or you must restrict the `Set` procedure access level more than the property itself, try to move the statement that sets the property value to a region of code that has better access to the property.</span></span>  
   
-## 请参阅  
- [Property 过程](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [如何：声明具有混合访问级别的属性](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)
+## <a name="see-also"></a><span data-ttu-id="4f15b-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4f15b-112">See Also</span></span>  
+ [<span data-ttu-id="4f15b-113">属性过程</span><span class="sxs-lookup"><span data-stu-id="4f15b-113">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
+ [<span data-ttu-id="4f15b-114">如何：声明具有混合访问级别的属性</span><span class="sxs-lookup"><span data-stu-id="4f15b-114">How to: Declare a Property with Mixed Access Levels</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

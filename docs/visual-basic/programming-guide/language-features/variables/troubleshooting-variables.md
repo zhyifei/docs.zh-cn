@@ -1,86 +1,68 @@
 ---
-title: "在 Visual Basic 中的变量疑难解答 |Microsoft 文档"
+title: "变量疑难解答 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9cddf7ced50c42514ebc9a613f49adee31edde0b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bf6d2a0c7318c12b3001a92a8aa06625b4edabb6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="troubleshooting-variables-in-visual-basic"></a>变量疑难解答 (Visual Basic)
-此页列出在中使用变量时可能会出现一些常见问题[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+# <a name="troubleshooting-variables-in-visual-basic"></a><span data-ttu-id="8fbed-102">变量疑难解答 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fbed-102">Troubleshooting Variables in Visual Basic</span></span>
+<span data-ttu-id="8fbed-103">此页列出在使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]中的变量时可能出现的一些常见问题。</span><span class="sxs-lookup"><span data-stu-id="8fbed-103">This page lists some common problems that can occur when working with variables in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="unable-to-access-members-of-an-object"></a>无法访问对象的成员  
- 如果你的代码尝试访问对象上的属性或方法，可能会出现两种错误结果：  
+## <a name="unable-to-access-members-of-an-object"></a><span data-ttu-id="8fbed-104">无法访问对象的成员</span><span class="sxs-lookup"><span data-stu-id="8fbed-104">Unable to Access Members of an Object</span></span>  
+ <span data-ttu-id="8fbed-105">如果你的代码尝试访问对象上的属性或方法，可能会出现两种错误结果：</span><span class="sxs-lookup"><span data-stu-id="8fbed-105">If your code attempts to access a property or method on an object, there are two possible error outcomes:</span></span>  
   
--   如果你声明对象变量为特定类型，然后引用不是由此类型定义的成员，则编译器可能生成错误消息。  
+-   <span data-ttu-id="8fbed-106">如果你声明对象变量为特定类型，然后引用不是由此类型定义的成员，则编译器可能生成错误消息。</span><span class="sxs-lookup"><span data-stu-id="8fbed-106">The compiler can generate an error message if you declare the object variable to be of a specific type and then refer to a member not defined by that type.</span></span>  
   
--   运行时<xref:System.MemberAccessException>分配给对象变量的对象不公开您的代码尝试访问的成员时发生。</xref:System.MemberAccessException> 在的变量的情况下[Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)，您还可以获取此异常，如果该成员不是`Public`。 这是因为后期绑定只允许访问 `Public` 成员。  
+-   <span data-ttu-id="8fbed-107">当分配给对象变量的对象不显示代码正尝试访问的成员时，将产生运行时 <xref:System.MemberAccessException> 。</span><span class="sxs-lookup"><span data-stu-id="8fbed-107">A run-time <xref:System.MemberAccessException> occurs when the object assigned to an object variable does not expose the member your code is trying to access.</span></span> <span data-ttu-id="8fbed-108">当变量为 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)，如果成员不是 `Public`中的变量时可能出现的一些常见问题。</span><span class="sxs-lookup"><span data-stu-id="8fbed-108">In the case of a variable of [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), you can also get this exception if the member is not `Public`.</span></span> <span data-ttu-id="8fbed-109">这是因为后期绑定只允许访问 `Public` 成员。</span><span class="sxs-lookup"><span data-stu-id="8fbed-109">This is because late binding allows access only to `Public` members.</span></span>  
   
- 当[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)集类型检查`On`，方法和类与其声明的属性，可以访问的对象变量。 下面的示例阐释了这一点。  
+ <span data-ttu-id="8fbed-110">当 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 设置类型检查 `On`时，对象变量仅可访问声明它所用的类的方法和属性。</span><span class="sxs-lookup"><span data-stu-id="8fbed-110">When the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets type checking `On`, an object variable can access only the methods and properties of the class with which you declare it.</span></span> <span data-ttu-id="8fbed-111">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="8fbed-111">The following example illustrates this.</span></span>  
 
- [!code-vb[VbVbalrVariables #&2;](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
+ [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
   
- 在此示例中，`p`可以使用的成员<xref:System.Object>类本身，其中不包括`Left`属性。</xref:System.Object> 另一方面，`q`已声明的类型为<xref:System.Windows.Forms.Label>，因此它可以使用所有方法和属性<xref:System.Windows.Forms.Label>类<xref:System.Windows.Forms>命名空间。</xref:System.Windows.Forms> </xref:System.Windows.Forms.Label> </xref:System.Windows.Forms.Label>  
+ <span data-ttu-id="8fbed-112">在此示例中， `p` 仅可使用 <xref:System.Object> 类的成员，这不包括 `Left` 属性。</span><span class="sxs-lookup"><span data-stu-id="8fbed-112">In this example, `p` can use only the members of the <xref:System.Object> class itself, which do not include the `Left` property.</span></span> <span data-ttu-id="8fbed-113">另一方面， `q` 已声明为 <xref:System.Windows.Forms.Label>类型，因此它可以使用 <xref:System.Windows.Forms.Label> 命名空间中 <xref:System.Windows.Forms> 类的所有方法和属性。</span><span class="sxs-lookup"><span data-stu-id="8fbed-113">On the other hand, `q` was declared to be of type <xref:System.Windows.Forms.Label>, so it can use all the methods and properties of the <xref:System.Windows.Forms.Label> class in the <xref:System.Windows.Forms> namespace.</span></span>  
   
-### <a name="correct-approach"></a>正确方法  
- 若要能够访问特定类的对象的所有成员，则尽可能将对象变量声明为该类的类型。 如果你不能这样做，例如，如果您不知道在编译时类型的对象，则必须设置`Option Strict`到`Off`并声明变量成为[Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 这将允许将任意类型的对象分配给该变量，你应该采取措施确保当前分配的对象是可接受的类型。 您可以使用[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)能够做出此判断。  
+### <a name="correct-approach"></a><span data-ttu-id="8fbed-114">正确方法</span><span class="sxs-lookup"><span data-stu-id="8fbed-114">Correct Approach</span></span>  
+ <span data-ttu-id="8fbed-115">若要能够访问特定类的对象的所有成员，则尽可能将对象变量声明为该类的类型。</span><span class="sxs-lookup"><span data-stu-id="8fbed-115">To be able to access all the members of an object of a particular class, declare the object variable to be of the type of that class when possible.</span></span> <span data-ttu-id="8fbed-116">如果你不能这样做（例如如果你不知道编译时的对象类型），则必须将 `Option Strict` 设置为 `Off` ，并声明变量为 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)中的变量时可能出现的一些常见问题。</span><span class="sxs-lookup"><span data-stu-id="8fbed-116">If you cannot do this, for example if you do not know the object type at compile time, you must set `Option Strict` to `Off` and declare the variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span> <span data-ttu-id="8fbed-117">这将允许将任意类型的对象分配给该变量，你应该采取措施确保当前分配的对象是可接受的类型。</span><span class="sxs-lookup"><span data-stu-id="8fbed-117">This allows objects of any type to be assigned to the variable, and you should take steps to ensure that the currently assigned object is of an acceptable type.</span></span> <span data-ttu-id="8fbed-118">你可以使用[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)做出此判断。</span><span class="sxs-lookup"><span data-stu-id="8fbed-118">You can use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to make this determination.</span></span>  
   
-## <a name="other-components-cannot-access-your-variable"></a>其他组件不能访问你的变量  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]名称是*不区分大小写*。 如果这两个名称只是字母大小写不同，编译器会将其解析为相同的名称。 例如，它认为 `ABC` 和 `abc` 指的是同一个声明的元素。  
+## <a name="other-components-cannot-access-your-variable"></a><span data-ttu-id="8fbed-119">其他组件不能访问你的变量</span><span class="sxs-lookup"><span data-stu-id="8fbed-119">Other Components Cannot Access Your Variable</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="8fbed-120"> 名称 *不区分大小写*。</span><span class="sxs-lookup"><span data-stu-id="8fbed-120"> names are *case-insensitive*.</span></span> <span data-ttu-id="8fbed-121">如果这两个名称只是字母大小写不同，编译器会将其解析为相同的名称。</span><span class="sxs-lookup"><span data-stu-id="8fbed-121">If two names differ in alphabetic case only, the compiler interprets them as the same name.</span></span> <span data-ttu-id="8fbed-122">例如，它认为 `ABC` 和 `abc` 指的是同一个声明的元素。</span><span class="sxs-lookup"><span data-stu-id="8fbed-122">For example, it considers `ABC` and `abc` to refer to the same declared element.</span></span>  
   
- 但是，公共语言运行时 (CLR) 使用 *区分大小写* 绑定。 因此，当你生成程序集或 DLL 并使其可供其他程序集使用时，则名称将不再不区分大小写。 例如，如果你用名为 `ABC`的元素定义类，而其他程序集通过公共语言运行时使用你的类，则元素必须指的是 `ABC`。 如果你以后重新编译你的类并将元素名称更改为 `abc`，则使用你的类的其他程序集将不能再访问此元素。 因此，发布程序集的更新版本时，不应该更改公共元素的字母大小写。  
+ <span data-ttu-id="8fbed-123">但是，公共语言运行时 (CLR) 使用 *区分大小写* 绑定。</span><span class="sxs-lookup"><span data-stu-id="8fbed-123">However, the common language runtime (CLR) uses *case-sensitive* binding.</span></span> <span data-ttu-id="8fbed-124">因此，当你生成程序集或 DLL 并使其可供其他程序集使用时，则名称将不再不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="8fbed-124">Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive.</span></span> <span data-ttu-id="8fbed-125">例如，如果你用名为 `ABC`的元素定义类，而其他程序集通过公共语言运行时使用你的类，则元素必须指的是 `ABC`。</span><span class="sxs-lookup"><span data-stu-id="8fbed-125">For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`.</span></span> <span data-ttu-id="8fbed-126">如果你以后重新编译你的类并将元素名称更改为 `abc`，则使用你的类的其他程序集将不能再访问此元素。</span><span class="sxs-lookup"><span data-stu-id="8fbed-126">If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class can no longer access that element.</span></span> <span data-ttu-id="8fbed-127">因此，发布程序集的更新版本时，不应该更改公共元素的字母大小写。</span><span class="sxs-lookup"><span data-stu-id="8fbed-127">Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.</span></span>  
   
- 有关详细信息，请参阅[公共语言运行库](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482)。  
+ <span data-ttu-id="8fbed-128">有关详细信息，请参阅 [Common Language Runtime](../../../../standard/clr.md)。</span><span class="sxs-lookup"><span data-stu-id="8fbed-128">For more information, see [Common Language Runtime](../../../../standard/clr.md).</span></span>  
   
-### <a name="correct-approach"></a>正确方法  
- 若要允许其他组件访问你的变量，将其名称视为区分大小写。 当测试类或模块时，确保其他程序集绑定到你所希望的变量。 发布组件后，请勿对现有变量名称进行修改，包括更改大小写。  
+### <a name="correct-approach"></a><span data-ttu-id="8fbed-129">正确方法</span><span class="sxs-lookup"><span data-stu-id="8fbed-129">Correct Approach</span></span>  
+ <span data-ttu-id="8fbed-130">若要允许其他组件访问你的变量，将其名称视为区分大小写。</span><span class="sxs-lookup"><span data-stu-id="8fbed-130">To allow other components to access your variables, treat their names as if they were case-sensitive.</span></span> <span data-ttu-id="8fbed-131">当测试类或模块时，确保其他程序集绑定到你所希望的变量。</span><span class="sxs-lookup"><span data-stu-id="8fbed-131">When you are testing your class or module, make sure other assemblies are binding to the variables you expect them to.</span></span> <span data-ttu-id="8fbed-132">发布组件后，请勿对现有变量名称进行修改，包括更改大小写。</span><span class="sxs-lookup"><span data-stu-id="8fbed-132">Once you have published a component, do not make any modifications to existing variable names, including changing their cases.</span></span>  
   
-## <a name="wrong-variable-being-used"></a>正在使用的错误变量  
- 当您有一个同名的多个变量[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]编译器尝试解析该名称对每个引用。 如果变量具有不同的范围，编译器将解析对范围最小的声明的引用。 如果它们具有相同的范围，解析将失败，编译器将引发错误。 有关详细信息，请参阅[对声明的元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+## <a name="wrong-variable-being-used"></a><span data-ttu-id="8fbed-133">正在使用的错误变量</span><span class="sxs-lookup"><span data-stu-id="8fbed-133">Wrong Variable Being Used</span></span>  
+ <span data-ttu-id="8fbed-134">当你有名称相同的多个变量时， [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器将尝试解析该名称的每个引用。</span><span class="sxs-lookup"><span data-stu-id="8fbed-134">When you have more than one variable with the same name, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler attempts to resolve each reference to that name.</span></span> <span data-ttu-id="8fbed-135">如果变量具有不同的范围，编译器将解析对范围最小的声明的引用。</span><span class="sxs-lookup"><span data-stu-id="8fbed-135">If the variables have different scope, the compiler resolves a reference to the declaration with the narrowest scope.</span></span> <span data-ttu-id="8fbed-136">如果它们具有相同的范围，解析将失败，编译器将引发错误。</span><span class="sxs-lookup"><span data-stu-id="8fbed-136">If they have the same scope, the resolution fails and the compiler signals an error.</span></span> <span data-ttu-id="8fbed-137">有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。</span><span class="sxs-lookup"><span data-stu-id="8fbed-137">For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-### <a name="correct-approach"></a>正确方法  
- 避免使用名称相同范围不同的变量。 如果你正在使用其他程序集或项目，尽量避免使用在那些外部组件中定义的任何名称。 如果你有名称相同的多个变量，确保限定对它的每个引用。 有关详细信息，请参阅[对声明的元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+### <a name="correct-approach"></a><span data-ttu-id="8fbed-138">正确方法</span><span class="sxs-lookup"><span data-stu-id="8fbed-138">Correct Approach</span></span>  
+ <span data-ttu-id="8fbed-139">避免使用名称相同范围不同的变量。</span><span class="sxs-lookup"><span data-stu-id="8fbed-139">Avoid using variables with the same name but different scope.</span></span> <span data-ttu-id="8fbed-140">如果你正在使用其他程序集或项目，尽量避免使用在那些外部组件中定义的任何名称。</span><span class="sxs-lookup"><span data-stu-id="8fbed-140">If you are using other assemblies or projects, avoid using any names defined in those external components as much as possible.</span></span> <span data-ttu-id="8fbed-141">如果你有名称相同的多个变量，确保限定对它的每个引用。</span><span class="sxs-lookup"><span data-stu-id="8fbed-141">If you have more than one variable with the same name, be sure you qualify every reference to it.</span></span> <span data-ttu-id="8fbed-142">有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。</span><span class="sxs-lookup"><span data-stu-id="8fbed-142">For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [如何︰ 访问对象的成员](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)   
- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [如何︰ 确定对象变量引用的类型](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)   
- [对已声明的元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a><span data-ttu-id="8fbed-143">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8fbed-143">See Also</span></span>  
+ [<span data-ttu-id="8fbed-144">变量</span><span class="sxs-lookup"><span data-stu-id="8fbed-144">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="8fbed-145">变量声明</span><span class="sxs-lookup"><span data-stu-id="8fbed-145">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="8fbed-146">对象变量</span><span class="sxs-lookup"><span data-stu-id="8fbed-146">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="8fbed-147">对象变量声明</span><span class="sxs-lookup"><span data-stu-id="8fbed-147">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [<span data-ttu-id="8fbed-148">如何：访问对象的成员</span><span class="sxs-lookup"><span data-stu-id="8fbed-148">How to: Access Members of an Object</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+ [<span data-ttu-id="8fbed-149">对象变量值</span><span class="sxs-lookup"><span data-stu-id="8fbed-149">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [<span data-ttu-id="8fbed-150">如何：确定对象变量引用的类型</span><span class="sxs-lookup"><span data-stu-id="8fbed-150">How to: Determine What Type an Object Variable Refers To</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
+ [<span data-ttu-id="8fbed-151">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="8fbed-151">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="8fbed-152">已声明的元素名称</span><span class="sxs-lookup"><span data-stu-id="8fbed-152">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

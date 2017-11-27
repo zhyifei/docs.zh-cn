@@ -1,75 +1,75 @@
 ---
-title: "入门教程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "入门 [WCF]"
-  - "WCF [WCF], 入门"
-  - "Windows Communication Foundation [WCF], 入门"
+title: "入门 Tutorial1"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], getting started
+- Windows Communication Foundation [WCF], getting started
+- getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: 47
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 47
+caps.latest.revision: "47"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5f34ac7ec2761efda640e3c4838a5f44f2e244e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 入门教程
-本节中包含的主题旨在帮助您快速了解 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 编程体验。  这些主题要根据本主题底部的列表中的顺序完成。  通过学习本教程，您可以初步了解创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和客户端应用程序所需的步骤。  服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。  服务的终结点指定下列信息：服务所在的位置；一个绑定，其中包含描述客户端必须如何与服务进行通信的信息；一个协定，用于定义服务向其客户端提供的功能。  
+# <a name="getting-started-tutorial"></a><span data-ttu-id="15a94-102">入门教程</span><span class="sxs-lookup"><span data-stu-id="15a94-102">Getting Started Tutorial</span></span>
+<span data-ttu-id="15a94-103">本节中包含的主题旨在帮助您快速了解 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 编程体验。</span><span class="sxs-lookup"><span data-stu-id="15a94-103">The topics contained in this section are intended to give you quick exposure to the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programming experience.</span></span> <span data-ttu-id="15a94-104">这些主题要根据本主题底部的列表中的顺序完成。</span><span class="sxs-lookup"><span data-stu-id="15a94-104">They are designed to be completed in the order of the list at the bottom of this topic.</span></span> <span data-ttu-id="15a94-105">通过学习本教程，您可以初步了解创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和客户端应用程序所需的步骤。</span><span class="sxs-lookup"><span data-stu-id="15a94-105">Working through this tutorial gives you an introductory understanding of the steps required to create [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and client applications.</span></span> <span data-ttu-id="15a94-106">服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。</span><span class="sxs-lookup"><span data-stu-id="15a94-106">A service exposes one or more endpoints, each of which exposes one or more service operations.</span></span> <span data-ttu-id="15a94-107">*终结点*服务的指定的地址，其中可以找到服务，一个绑定，它包含描述客户端必须如何与该服务，并定义的功能的协定进行通信的信息向其客户端提供服务。</span><span class="sxs-lookup"><span data-stu-id="15a94-107">The *endpoint* of a service specifies an address where the service can be found, a binding that contains the information that describes how a client must communicate with the service, and a contract that defines the functionality provided by the service to its clients.</span></span>  
   
- 在完成本教程中的系列主题之后，您将会得到一个正在运行的服务，以及一个可以调用该服务的客户端。  前三个主题描述如何定义服务协定、如何实现服务协定以及如何承载服务。  创建的服务自承载在控制台应用程序中。  服务还可在 Internet Information Services \(IIS\) 下承载。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何进行此操作的更多信息，请参见[如何：在 IIS 中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  在代码中配置服务；不过，也可以在配置文件中配置服务。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用配置文件的更多信息，请参见[使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。  
+ <span data-ttu-id="15a94-108">在完成本教程中的系列主题之后，您将会得到一个正在运行的服务，以及一个可以调用该服务的客户端。</span><span class="sxs-lookup"><span data-stu-id="15a94-108">After you work through the sequence of topics in this tutorial, you will have a running service, and a client that calls the service.</span></span> <span data-ttu-id="15a94-109">前三个主题描述如何定义服务协定、如何实现服务协定以及如何承载服务。</span><span class="sxs-lookup"><span data-stu-id="15a94-109">The first three topics describe how to define a service contract, how to implement the service contract, and how to host the service.</span></span> <span data-ttu-id="15a94-110">创建的服务自承载在控制台应用程序中。</span><span class="sxs-lookup"><span data-stu-id="15a94-110">The service that is created is self-hosted within a console application.</span></span> <span data-ttu-id="15a94-111">服务还可在 Internet Information Services (IIS) 下承载。</span><span class="sxs-lookup"><span data-stu-id="15a94-111">Services can also be hosted under Internet Information Services (IIS).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="15a94-112">如何执行此操作，请参阅[如何： 承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。</span><span class="sxs-lookup"><span data-stu-id="15a94-112"> how to do this, see [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span></span> <span data-ttu-id="15a94-113">在代码中配置服务；不过，也可以在配置文件中配置服务。</span><span class="sxs-lookup"><span data-stu-id="15a94-113">The service is configured in code; however, services can also be configured within a configuration file.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="15a94-114">使用配置文件，请参阅[使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。</span><span class="sxs-lookup"><span data-stu-id="15a94-114"> using a configuration file see [Configuring Services Using Configuration Files](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).</span></span>  
   
- 后三个主题描述如何创建客户端代理，如何配置客户端应用程序，以及如何使用客户端代理调用由服务公开的操作。  服务发布定义客户端应用程序与服务进行通信所需信息的元数据。  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 自动化访问此元数据的过程，并使用它来构建和配置服务的客户端应用程序。  如果您没有使用 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，则可以使用 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 构建和配置服务的客户端应用程序。  
+ <span data-ttu-id="15a94-115">后三个主题描述如何创建客户端代理，如何配置客户端应用程序，以及如何使用客户端代理调用由服务公开的操作。</span><span class="sxs-lookup"><span data-stu-id="15a94-115">The next three topics describe how to create a client proxy, configure the client application, and use the client proxy to call service operation exposed by the service.</span></span> <span data-ttu-id="15a94-116">服务发布定义客户端应用程序与服务进行通信所需信息的元数据。</span><span class="sxs-lookup"><span data-stu-id="15a94-116">Services publish metadata that define the information a client application needs to communicate with the service.</span></span> [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]<span data-ttu-id="15a94-117"> 自动化访问此元数据的过程，并使用它来构建和配置服务的客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="15a94-117"> automates the process of accessing this metadata and uses it to construct and configure the client application for the service.</span></span> <span data-ttu-id="15a94-118">如果你不使用[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，你可以使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来构建和配置服务的客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="15a94-118">If you are not using [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], you can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to construct and configure the client application for the service.</span></span>  
   
- 本节中的所有主题均假定您使用 Visual Studio 2011 作为开发环境。  如果您使用的是其他开发环境，请忽略特定于 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 的说明。  
+ <span data-ttu-id="15a94-119">本节中的所有主题均假定您使用 Visual Studio 2011 作为开发环境。</span><span class="sxs-lookup"><span data-stu-id="15a94-119">All of the topics in this section assume you are using Visual Studio 2011 as the development environment.</span></span> <span data-ttu-id="15a94-120">如果您使用的是其他开发环境，请忽略特定于 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 的说明。</span><span class="sxs-lookup"><span data-stu-id="15a94-120">If you are using another development environment, ignore the [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] specific instructions.</span></span>  
   
 > [!NOTE]
->  如果运行的是 [!INCLUDE[wv](../../../includes/wv-md.md)] 或 Windows 操作系统的更高版本，则必须通过在“开始”菜单上右击 Microsoft Visual Studio 2011，然后选择**“以管理员身份运行”**的方式来启动 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]。  若要始终以管理员身份启动 Visual Studio 2011，可以创建一个快捷方式，右击该快捷方式，选择“属性”，选择**“兼容性”**选项卡，然后选中**“请以管理员身份运行该程序”**复选框。  在使用此快捷方式启动 Visual Studio 2011 时，会总是以管理员身份运行。  
+>  <span data-ttu-id="15a94-121">如果你正在运行[!INCLUDE[wv](../../../includes/wv-md.md)]或更高版本的 Windows 操作系统中，你必须启动[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]通过转到开始菜单和右键单击 Visual Studio 2011 并选择**以管理员身份运行**。</span><span class="sxs-lookup"><span data-stu-id="15a94-121">If you are running [!INCLUDE[wv](../../../includes/wv-md.md)] or later versions of the Windows operating system, you must start [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] by going to the Start menu and right clicking Visual Studio 2011 and selecting **Run as Administrator**.</span></span> <span data-ttu-id="15a94-122">若要始终以管理员身份可以创建一个快捷方式、 右键单击该快捷方式，选择属性，选择启动 Visual Studio 2011**兼容性**选项卡，然后选中**管理员身份运行此程序**复选框。</span><span class="sxs-lookup"><span data-stu-id="15a94-122">To always launch Visual Studio 2011 as an administrator you can create a short cut, right click the short cut, select properties, select the **Compatibility** tab, and check the **Run this program as an administrator** checkbox.</span></span> <span data-ttu-id="15a94-123">在使用此快捷方式启动 Visual Studio 2011 时，会总是以管理员身份运行。</span><span class="sxs-lookup"><span data-stu-id="15a94-123">When you start Visual Studio 2011 with this shortcut, it will always run as administrator.</span></span>  
   
- 有关可以下载到硬盘中并运行的示例应用程序，请参见 [Windows Communication Foundation Samples](http://msdn.microsoft.com/zh-cn/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)中的主题。  有关专门针对本主题的示例，请参见[入门](../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+ <span data-ttu-id="15a94-124">有关示例应用程序可以下载到您的硬盘和运行，请参阅中的主题[Windows Communication Foundation 示例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。</span><span class="sxs-lookup"><span data-stu-id="15a94-124">For sample applications that can be downloaded to your hard disk and run, see the topics in [Windows Communication Foundation Samples](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91).</span></span> <span data-ttu-id="15a94-125">本主题，请参阅，特别是，[入门](../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="15a94-125">For this topic, see, in particular, the [Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
- 有关创建服务和客户端的更深入信息，请参见[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ <span data-ttu-id="15a94-126">有关创建服务和客户端的更多详细信息，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="15a94-126">For more in-depth information about creating services and clients, see [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  
   
-## 本节内容  
- [如何：定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- 描述如何使用用户定义的接口创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 协定。  协定定义服务所公开的功能。  
+## <a name="in-this-section"></a><span data-ttu-id="15a94-127">本节内容</span><span class="sxs-lookup"><span data-stu-id="15a94-127">In This Section</span></span>  
+ [<span data-ttu-id="15a94-128">如何：定义服务协定</span><span class="sxs-lookup"><span data-stu-id="15a94-128">How to: Define a Service Contract</span></span>](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ <span data-ttu-id="15a94-129">描述如何使用用户定义的接口创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 协定。</span><span class="sxs-lookup"><span data-stu-id="15a94-129">Describes how to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contract using a user-defined interface.</span></span> <span data-ttu-id="15a94-130">协定定义服务所公开的功能。</span><span class="sxs-lookup"><span data-stu-id="15a94-130">The contract defines the functionality exposed by the service.</span></span>  
   
- [如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
- 描述如何实现服务协定。  一旦定义了某一协定后，必须使用某一服务类实现该协定。  
+ [<span data-ttu-id="15a94-131">如何：实现服务协定</span><span class="sxs-lookup"><span data-stu-id="15a94-131">How to: Implement a Service Contract</span></span>](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ <span data-ttu-id="15a94-132">描述如何实现服务协定。</span><span class="sxs-lookup"><span data-stu-id="15a94-132">Describes how to implement a service contract.</span></span> <span data-ttu-id="15a94-133">一旦定义了某一协定后，必须使用某一服务类实现该协定。</span><span class="sxs-lookup"><span data-stu-id="15a94-133">Once a contract is define, it must be implemented with a service class.</span></span>  
   
- [如何：承载和运行基本的服务](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
- 描述如何在代码中配置服务的终结点，以及如何在控制台应用程序内承载服务。  若要激活服务，必须在运行时环境中配置和承载服务。  此环境将创建服务并控制其上下文和生存期。  
+ [<span data-ttu-id="15a94-134">如何：托管和运行基本服务</span><span class="sxs-lookup"><span data-stu-id="15a94-134">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
+ <span data-ttu-id="15a94-135">描述如何在代码中配置服务的终结点，以及如何在控制台应用程序内承载服务。</span><span class="sxs-lookup"><span data-stu-id="15a94-135">Describes how to configure an endpoint for the service in code and how to host the service in a console application.</span></span> <span data-ttu-id="15a94-136">若要激活服务，必须在运行时环境中配置和承载服务。</span><span class="sxs-lookup"><span data-stu-id="15a94-136">To become active, a service must be configured and hosted within a run-time environment.</span></span> <span data-ttu-id="15a94-137">此环境将创建服务并控制其上下文和生存期。</span><span class="sxs-lookup"><span data-stu-id="15a94-137">This environment creates the service and controls its context and lifetime.</span></span>  
   
- [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- 描述如何从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务检索用于创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理的元数据。  此进程使用 Visual Studio 2011 中的“添加服务引用”功能。  
+ [<span data-ttu-id="15a94-138">如何：创建客户端</span><span class="sxs-lookup"><span data-stu-id="15a94-138">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ <span data-ttu-id="15a94-139">描述如何从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务检索用于创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理的元数据。</span><span class="sxs-lookup"><span data-stu-id="15a94-139">Describes how to retrieve metadata used to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy from a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="15a94-140">此进程使用 Visual Studio 2011 中的“添加服务引用”功能。</span><span class="sxs-lookup"><span data-stu-id="15a94-140">This process uses the Add Service Reference functionality within Visual Studio 2011.</span></span>  
   
- [如何：配置客户端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
- 描述如何配置 WCF 客户端。配置客户端需要指定客户端用于访问服务的终结点。  
+ [<span data-ttu-id="15a94-141">如何：配置客户端</span><span class="sxs-lookup"><span data-stu-id="15a94-141">How to: Configure a Client</span></span>](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
+ <span data-ttu-id="15a94-142">描述如何配置 WCF 客户端。配置客户端需要指定客户端用于访问服务的终结点。</span><span class="sxs-lookup"><span data-stu-id="15a94-142">Describes how to configure a WCF client Configuring the client requires specifying the endpoint that the client uses to access the service.</span></span>  
   
- [如何：使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- 描述如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理调用服务操作。  
+ [<span data-ttu-id="15a94-143">如何：使用客户端</span><span class="sxs-lookup"><span data-stu-id="15a94-143">How to: Use a Client</span></span>](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
+ <span data-ttu-id="15a94-144">描述如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="15a94-144">Describes how to use the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy to invoke service operations.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="15a94-145">参考</span><span class="sxs-lookup"><span data-stu-id="15a94-145">Reference</span></span>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
   
  <xref:System.ServiceModel.OperationContractAttribute>  
   
-## 相关章节  
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/zh-cn/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+## <a name="related-sections"></a><span data-ttu-id="15a94-146">相关章节</span><span class="sxs-lookup"><span data-stu-id="15a94-146">Related Sections</span></span>  
+ [<span data-ttu-id="15a94-147">Windows Communication Foundation 示例</span><span class="sxs-lookup"><span data-stu-id="15a94-147">Windows Communication Foundation Samples</span></span>](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [基本编程生命周期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [<span data-ttu-id="15a94-148">基本编程生命周期</span><span class="sxs-lookup"><span data-stu-id="15a94-148">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
-## 请参阅  
- [概念概述](../../../docs/framework/wcf/conceptual-overview.md)   
- [文档指南](../../../docs/framework/wcf/guide-to-the-documentation.md)   
- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)   
- [WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)
+## <a name="see-also"></a><span data-ttu-id="15a94-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="15a94-149">See Also</span></span>  
+ [<span data-ttu-id="15a94-150">概念性概述</span><span class="sxs-lookup"><span data-stu-id="15a94-150">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="15a94-151">文档使用指南</span><span class="sxs-lookup"><span data-stu-id="15a94-151">Guide to the Documentation</span></span>](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [<span data-ttu-id="15a94-152">什么是 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="15a94-152">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ [<span data-ttu-id="15a94-153">WCF 功能详细信息</span><span class="sxs-lookup"><span data-stu-id="15a94-153">WCF Feature Details</span></span>](../../../docs/framework/wcf/feature-details/index.md)

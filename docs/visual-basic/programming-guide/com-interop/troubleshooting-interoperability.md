@@ -1,161 +1,144 @@
 ---
-title: "互操作性 (Visual Basic 中) 疑难解答 |Microsoft 文档"
+title: "互操作性疑难解答 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - interop, deploying assemblies
 - assemblies [Visual Basic]
 - interop, installing assemblies that share components
 - COM objects, troubleshooting
 - interop, sharing components
-- troubleshooting interoperability
+- troubleshooting interoperability [Visual Basic]
 - interoperability, troubleshooting
-- COM interop, troubleshooting
+- COM interop [Visual Basic], troubleshooting
 - assemblies [Visual Basic], deploying
 - troubleshooting Visual Basic, interoperability
 - interop assemblies
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cbc37638ed5c57b94356c2d189f36b66202ceba5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 988d07fe08a6a78ae295d13f694c55a3b8f9d2e4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
-当 COM 和托管的代码之间互操作[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]，您可能会遇到一个或多个下列常见问题。  
+# <a name="troubleshooting-interoperability-visual-basic"></a><span data-ttu-id="06d43-102">互操作性疑难解答 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06d43-102">Troubleshooting Interoperability (Visual Basic)</span></span>
+<span data-ttu-id="06d43-103">当你 COM 和托管的代码之间的互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，你可能会遇到一个或多个以下的常见问题。</span><span class="sxs-lookup"><span data-stu-id="06d43-103">When you interoperate between COM and the managed code of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], you may encounter one or more of the following common issues.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor1"></a>互操作封送处理  
- 有时，您可能需要使用数据类型不属于[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]。 互操作程序集处理的大多数工作对于 COM 对象，但你可能需要控制在向 COM 公开托管的对象时使用的数据类型 例如，类库中的结构必须指定`BStr`非托管字符串发送到由 Visual Basic 6.0 和早期版本创建的 COM 对象的类型。 在这种情况下，你可以使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>若要使作为非托管类型公开的托管的类型的属性。</xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+##  <span data-ttu-id="06d43-104"><a name="vbconinteroperabilitymarshalinganchor1"></a>互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="06d43-104"><a name="vbconinteroperabilitymarshalinganchor1"></a> Interop Marshaling</span></span>  
+ <span data-ttu-id="06d43-105">有时，你可能需要使用数据类型不属于[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="06d43-105">At times, you may have to use data types that are not part of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="06d43-106">互操作程序集处理的大部分工作的 COM 对象，但你可能需要控制向 COM 公开托管的对象时使用的数据类型</span><span class="sxs-lookup"><span data-stu-id="06d43-106">Interop assemblies handle most of the work for COM objects, but you may have to control the data types that are used when managed objects are exposed to COM.</span></span> <span data-ttu-id="06d43-107">例如，类库中的结构必须指定`BStr`非托管字符串发送到由 Visual Basic 6.0 和早期版本创建的 COM 对象的类型。</span><span class="sxs-lookup"><span data-stu-id="06d43-107">For example, structures in class libraries must specify the `BStr` unmanaged type on strings sent to COM objects created by Visual Basic 6.0 and earlier versions.</span></span> <span data-ttu-id="06d43-108">在这种情况下，你可以使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>若要使作为非托管类型公开的托管的类型的属性。</span><span class="sxs-lookup"><span data-stu-id="06d43-108">In such cases, you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to cause managed types to be exposed as unmanaged types.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor2"></a>导出到非托管代码的固定长度的字符串  
- 在 Visual Basic 6.0 和早期版本中，字符串至 COM 对象导出为没有 null 终止字符的字节序列。 与其他语言的兼容性[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]包括终止字符输出字符串时。 若要解决此不兼容性的最佳方式是将字符串作为数组中缺少终止字符导出`Byte`或`Char`。  
+##  <span data-ttu-id="06d43-109"><a name="vbconinteroperabilitymarshalinganchor2"></a>将固定长度字符串导出到非托管代码</span><span class="sxs-lookup"><span data-stu-id="06d43-109"><a name="vbconinteroperabilitymarshalinganchor2"></a> Exporting Fixed-Length Strings to Unmanaged Code</span></span>  
+ <span data-ttu-id="06d43-110">在 Visual Basic 6.0 和早期版本中，字符串至 COM 对象导出为没有 null 终止字符的字节的序列。</span><span class="sxs-lookup"><span data-stu-id="06d43-110">In Visual Basic 6.0 and earlier versions, strings are exported to COM objects as sequences of bytes without a null termination character.</span></span> <span data-ttu-id="06d43-111">对于与其他语言的兼容性，Visual Basic.NET 中包括的终止字符导出字符串时。</span><span class="sxs-lookup"><span data-stu-id="06d43-111">For compatibility with other languages, Visual Basic .NET includes a termination character when exporting strings.</span></span> <span data-ttu-id="06d43-112">若要解决此不兼容性的最佳方法是导出的数组作为缺少的终止字符的字符串`Byte`或`Char`。</span><span class="sxs-lookup"><span data-stu-id="06d43-112">The best way to address this incompatibility is to export strings that lack the termination character as arrays of `Byte` or `Char`.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor3"></a>导出继承层次结构  
- 托管的类层次结构将平展出，当公开为 COM 对象。 例如，如果定义一个基类的成员，则继承的基类的派生类中公开为 COM 对象时，使用派生的类中的 COM 对象的客户端将不能使用继承的成员。 可以仅作为基类的实例从 COM 对象访问基类成员，然后仅当该基类还创建为 COM 对象。  
+##  <span data-ttu-id="06d43-113"><a name="vbconinteroperabilitymarshalinganchor3"></a>导出继承层次结构</span><span class="sxs-lookup"><span data-stu-id="06d43-113"><a name="vbconinteroperabilitymarshalinganchor3"></a> Exporting Inheritance Hierarchies</span></span>  
+ <span data-ttu-id="06d43-114">托管的类作为 COM 对象公开时，层次结构平展出。</span><span class="sxs-lookup"><span data-stu-id="06d43-114">Managed class hierarchies flatten out when exposed as COM objects.</span></span> <span data-ttu-id="06d43-115">例如，如果定义一个基类成员，然后继承的派生类中公开为 COM 对象的基类，则使用中的 COM 对象的派生的类的客户端将无法使用继承的成员。</span><span class="sxs-lookup"><span data-stu-id="06d43-115">For example, if you define a base class with a member, and then inherit the base class in a derived class that is exposed as a COM object, clients that use the derived class in the COM object will not be able to use the inherited members.</span></span> <span data-ttu-id="06d43-116">可以仅作为实例的基类，从 COM 对象访问基类成员，然后仅当该基类还创建为 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="06d43-116">Base class members can be accessed from COM objects only as instances of a base class, and then only if the base class is also created as a COM object.</span></span>  
   
-## <a name="overloaded-methods"></a>重载方法  
- 虽然你可以创建重载方法与[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，它们不支持由 com 使用。 当包含重载的方法的类公开为 COM 对象时，重载方法会生成新的方法名。  
+## <a name="overloaded-methods"></a><span data-ttu-id="06d43-117">重载方法</span><span class="sxs-lookup"><span data-stu-id="06d43-117">Overloaded Methods</span></span>  
+ <span data-ttu-id="06d43-118">虽然你可以创建的重载方法与[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，它们不支持由 com 使用。</span><span class="sxs-lookup"><span data-stu-id="06d43-118">Although you can create overloaded methods with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], they are not supported by COM.</span></span> <span data-ttu-id="06d43-119">当包含重载的方法的类公开为 COM 对象时，重载方法会生成新的方法名称。</span><span class="sxs-lookup"><span data-stu-id="06d43-119">When a class that contains overloaded methods is exposed as a COM object, new method names are generated for the overloaded methods.</span></span>  
   
- 例如，考虑一个具有两个重载类`Synch`方法。 当类公开为 COM 对象时，可能是新生成的方法名`Synch`和`Synch_2`。  
+ <span data-ttu-id="06d43-120">例如，考虑具有两个重载的类`Synch`方法。</span><span class="sxs-lookup"><span data-stu-id="06d43-120">For example, consider a class that has two overloads of the `Synch` method.</span></span> <span data-ttu-id="06d43-121">当类公开为 COM 对象时，可能是新的生成的方法名`Synch`和`Synch_2`。</span><span class="sxs-lookup"><span data-stu-id="06d43-121">When the class is exposed as a COM object, the new generated method names could be `Synch` and `Synch_2`.</span></span>  
   
- 此重命名操作会导致出现两个问题的 COM 对象的使用者。  
+ <span data-ttu-id="06d43-122">重命名可能导致两个问题的 COM 对象的使用者。</span><span class="sxs-lookup"><span data-stu-id="06d43-122">The renaming can cause two problems for consumers of the COM object.</span></span>  
   
-1.  客户端可能不希望生成的方法名。  
+1.  <span data-ttu-id="06d43-123">客户端可能不希望生成的方法名称。</span><span class="sxs-lookup"><span data-stu-id="06d43-123">Clients might not expect the generated method names.</span></span>  
   
-2.  到类或其基本类添加新的重载时，可以更改在类中公开为 COM 对象时生成的方法名。 这会导致版本控制问题。  
+2.  <span data-ttu-id="06d43-124">新的重载添加到类或其基本类时，可以更改为 COM 对象公开的类中的生成的方法名称。</span><span class="sxs-lookup"><span data-stu-id="06d43-124">The generated method names in the class exposed as a COM object can change when new overloads are added to the class or its base class.</span></span> <span data-ttu-id="06d43-125">这会导致版本控制问题。</span><span class="sxs-lookup"><span data-stu-id="06d43-125">This can cause versioning problems.</span></span>  
   
- 若要解决这两个问题，为每个方法提供一个唯一的名称，而不是使用重载，当您开发将公开为 COM 对象的对象。  
+ <span data-ttu-id="06d43-126">若要解决这两个问题，请为每个方法的唯一名称，而不是使用重载，当你开发将作为 COM 对象公开的对象时。</span><span class="sxs-lookup"><span data-stu-id="06d43-126">To solve both problems, give each method a unique name, instead of using overloading, when you develop objects that will be exposed as COM objects.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor4"></a>使用通过互操作程序集的 COM 对象  
- 几乎好像它们是它们所表示的 COM 对象的托管的代码替换使用互操作程序集。 但是，因为它们是包装并不是实际的 COM 对象，有一些使用互操作程序集和标准程序集之间的差异。 这些不同之处包括公开的类，以及数据类型的参数和返回值。  
+##  <span data-ttu-id="06d43-127"><a name="vbconinteroperabilitymarshalinganchor4"></a>使用通过互操作程序集的 COM 对象</span><span class="sxs-lookup"><span data-stu-id="06d43-127"><a name="vbconinteroperabilitymarshalinganchor4"></a> Use of COM Objects Through Interop Assemblies</span></span>  
+ <span data-ttu-id="06d43-128">几乎好像它们是它们表示的 COM 对象的托管的代码替换使用互操作程序集。</span><span class="sxs-lookup"><span data-stu-id="06d43-128">You use interop assemblies almost as if they are managed code replacements for the COM objects they represent.</span></span> <span data-ttu-id="06d43-129">但是，因为它们是包装器和不是实际的 COM 对象，是使用互操作程序集和标准程序集之间的一些差异。</span><span class="sxs-lookup"><span data-stu-id="06d43-129">However, because they are wrappers and not actual COM objects, there are some differences between using interop assemblies and standard assemblies.</span></span> <span data-ttu-id="06d43-130">这些不同之处包括公开的类，以及数据类型的参数和返回值。</span><span class="sxs-lookup"><span data-stu-id="06d43-130">These areas of difference include the exposure of classes, and data types for parameters and return values.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor5"></a>公开为这两个接口的类和类  
- 与标准的程序集中的类，不同的 COM 类在互操作程序集作为一个接口和类，表示的 COM 类中公开。 接口的名称是相同的 COM 类。 互操作的类的名称是相同的原始 COM 类，但以单词"类"追加。 例如，假设您的项目必须具有对 COM 对象的互操作程序集的引用。 如果 COM 类命名为`MyComClass`，智能感知和对象浏览器显示名为接口`MyComClass`和一个名为类`MyComClassClass`。  
+##  <span data-ttu-id="06d43-131"><a name="vbconinteroperabilitymarshalinganchor5"></a>类公开为这两个接口和类</span><span class="sxs-lookup"><span data-stu-id="06d43-131"><a name="vbconinteroperabilitymarshalinganchor5"></a> Classes Exposed as Both Interfaces and Classes</span></span>  
+ <span data-ttu-id="06d43-132">与标准的程序集中的类，不同的 COM 类公开为一个接口和一个类，表示的 COM 类互操作程序集中。</span><span class="sxs-lookup"><span data-stu-id="06d43-132">Unlike classes in standard assemblies, COM classes are exposed in interop assemblies as both an interface and a class that represents the COM class.</span></span> <span data-ttu-id="06d43-133">接口的名称是相同的 COM 类。</span><span class="sxs-lookup"><span data-stu-id="06d43-133">The interface's name is identical to that of the COM class.</span></span> <span data-ttu-id="06d43-134">互操作的类的名称是相同的原始的 COM 类，但以单词"类"追加。</span><span class="sxs-lookup"><span data-stu-id="06d43-134">The name of the interop class is the same as that of the original COM class, but with the word "Class" appended.</span></span> <span data-ttu-id="06d43-135">例如，假设你的项目必须具有对 COM 对象互操作程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="06d43-135">For example, suppose you have a project with a reference to an interop assembly for a COM object.</span></span> <span data-ttu-id="06d43-136">如果 COM 类命名为`MyComClass`，IntelliSense 和对象浏览器显示名为接口`MyComClass`和一个名为类`MyComClassClass`。</span><span class="sxs-lookup"><span data-stu-id="06d43-136">If the COM class is named `MyComClass`, IntelliSense and the Object Browser show an interface named `MyComClass` and a class named `MyComClassClass`.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor6"></a>创建.NET Framework 类的实例  
- 通常情况下，创建的实例[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]类使用`New`语句和类名。 具有互操作程序集所表示的 COM 类是在其中您可以使用的一个例子`New`语句提供的接口。 除非您使用了 COM 类`Inherits`语句，就像类一样，可以使用该接口。 下面的代码演示如何创建`Command`具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用的项目中的对象︰  
+##  <span data-ttu-id="06d43-137"><a name="vbconinteroperabilitymarshalinganchor6"></a>创建.NET Framework 类的实例</span><span class="sxs-lookup"><span data-stu-id="06d43-137"><a name="vbconinteroperabilitymarshalinganchor6"></a> Creating Instances of a .NET Framework Class</span></span>  
+ <span data-ttu-id="06d43-138">通常情况下，你创建的实例[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类使用`New`与类名称的语句。</span><span class="sxs-lookup"><span data-stu-id="06d43-138">Generally, you create an instance of a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class using the `New` statement with a class name.</span></span> <span data-ttu-id="06d43-139">具有互操作程序集中所表示的 COM 类是你可以在其中使用的一个例子`New`语句的接口。</span><span class="sxs-lookup"><span data-stu-id="06d43-139">Having a COM class represented by an interop assembly is the one case in which you can use the `New` statement with an interface.</span></span> <span data-ttu-id="06d43-140">除非你使用了 COM 类`Inherits`语句中，你可以像类一样使用接口。</span><span class="sxs-lookup"><span data-stu-id="06d43-140">Unless you are using the COM class with an `Inherits` statement, you can use the interface just as you would a class.</span></span> <span data-ttu-id="06d43-141">下面的代码演示如何创建`Command`具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用的项目中的对象：</span><span class="sxs-lookup"><span data-stu-id="06d43-141">The following code demonstrates how to create a `Command` object in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object:</span></span>  
   
- [!code-vb[VbVbalrInterop #&20;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
+ [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
- 但是，如果您使用 COM 类作为基类的派生类，您必须使用互操作表示的类的 COM 类，如以下代码所示︰  
+ <span data-ttu-id="06d43-142">但是，如果你使用的 COM 类作为基类的派生类，你必须使用表示的 COM 类，如以下代码所示的互操作类：</span><span class="sxs-lookup"><span data-stu-id="06d43-142">However, if you are using the COM class as the base for a derived class, you must use the interop class that represents the COM class, as in the following code:</span></span>  
   
- [!code-vb[VbVbalrInterop #&21;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
+ [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
   
 > [!NOTE]
->  互操作程序集隐式实现接口，用于表示 COM 类。 不应尝试使用`Implements`将导致语句来实现这些接口或错误。  
+>  <span data-ttu-id="06d43-143">互操作程序集隐式实现表示 COM 类的接口。</span><span class="sxs-lookup"><span data-stu-id="06d43-143">Interop assemblies implicitly implement interfaces that represent COM classes.</span></span> <span data-ttu-id="06d43-144">不应尝试使用`Implements`将导致语句来实现这些接口或错误。</span><span class="sxs-lookup"><span data-stu-id="06d43-144">You should not try to use the `Implements` statement to implement these interfaces or an error will result.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor7"></a>参数和返回值的数据类型  
- 标准程序集的成员，请与互操作程序集的成员可能具有不同于原始对象声明中使用的数据类型。 尽管互操作程序集将 COM 类型隐式转换为兼容的公共语言运行时类型，但您应注意两面用于防止运行时错误的数据类型。 例如，在 Visual Basic 6.0 和早期版本中，类型的值中创建的 COM 对象`Integer`假定[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]等效类型`Short`。 建议使用对象浏览器来检查导入成员的特征，然后使用它们。  
+##  <span data-ttu-id="06d43-145"><a name="vbconinteroperabilitymarshalinganchor7"></a>为参数和返回值的数据类型</span><span class="sxs-lookup"><span data-stu-id="06d43-145"><a name="vbconinteroperabilitymarshalinganchor7"></a> Data Types for Parameters and Return Values</span></span>  
+ <span data-ttu-id="06d43-146">与不同的是标准程序集的成员，互操作程序集的成员可能有不同于原始对象声明中使用的数据类型。</span><span class="sxs-lookup"><span data-stu-id="06d43-146">Unlike members of standard assemblies, interop assembly members may have data types that differ from those used in the  original object declaration.</span></span> <span data-ttu-id="06d43-147">尽管互操作程序集隐式转换为兼容的公共语言运行时类型的 COM 类型，但你应注意双方用于防止运行时错误的数据类型。</span><span class="sxs-lookup"><span data-stu-id="06d43-147">Although interop assemblies implicitly convert COM types to compatible common language runtime types, you should pay attention to the data types that are used by both sides to prevent runtime errors.</span></span> <span data-ttu-id="06d43-148">例如，在 Visual Basic 6.0 和早期版本，类型的值中创建的 COM 对象`Integer`假定[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]等效类型`Short`。</span><span class="sxs-lookup"><span data-stu-id="06d43-148">For example, in COM objects created in Visual Basic 6.0 and earlier versions, values of type `Integer` assume the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] equivalent type, `Short`.</span></span> <span data-ttu-id="06d43-149">建议你使用对象浏览器来检查导入的成员的特征，然后使用它们。</span><span class="sxs-lookup"><span data-stu-id="06d43-149">It is recommended that you use the Object Browser to examine the characteristics of imported members before you use them.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor8"></a>模块级别 COM 方法  
- 由大多数 COM 对象创建实例的 COM 类使用`New`关键字，然后再调用对象的方法。 此规则的例外涉及 COM 对象，包含`AppObj`或`GlobalMultiUse`COM 类。 这样的类中的模块级方法相似[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]类。 Visual Basic 6.0 和早期版本隐式创建此类对象的实例为您第一次调用其方法之一。 例如，在 Visual Basic 6.0 中可以添加到 Microsoft DAO 3.6 对象库，并调用的引用`DBEngine`而不必首先创建一个实例的方法︰  
+##  <span data-ttu-id="06d43-150"><a name="vbconinteroperabilitymarshalinganchor8"></a>模块级别 COM 方法</span><span class="sxs-lookup"><span data-stu-id="06d43-150"><a name="vbconinteroperabilitymarshalinganchor8"></a> Module level COM methods</span></span>  
+ <span data-ttu-id="06d43-151">由大多数 COM 对象创建的 COM 类使用的实例`New`关键字，然后调用对象的方法。</span><span class="sxs-lookup"><span data-stu-id="06d43-151">Most COM objects are used by creating an instance of a COM class using the `New` keyword and then calling methods of the object.</span></span> <span data-ttu-id="06d43-152">此规则的例外涉及包含的 COM 对象`AppObj`或`GlobalMultiUse`COM 类。</span><span class="sxs-lookup"><span data-stu-id="06d43-152">One exception to this rule involves COM objects that contain `AppObj` or `GlobalMultiUse` COM classes.</span></span> <span data-ttu-id="06d43-153">此类类类似于 Visual Basic.NET 类中的模块级别方法。</span><span class="sxs-lookup"><span data-stu-id="06d43-153">Such classes resemble module level methods in Visual Basic .NET classes.</span></span> <span data-ttu-id="06d43-154">Visual Basic 6.0 及更早版本隐式创建此类对象的实例为你首次调用其方法之一。</span><span class="sxs-lookup"><span data-stu-id="06d43-154">Visual Basic 6.0 and earlier versions implicitly create instances of such objects for you the first time that you call one of their methods.</span></span> <span data-ttu-id="06d43-155">例如，在 Visual Basic 6.0 可添加到 Microsoft DAO 3.6 对象库，并调用引用`DBEngine`而不必首先创建实例的方法：</span><span class="sxs-lookup"><span data-stu-id="06d43-155">For example, in Visual Basic 6.0 you can add a reference to the Microsoft DAO 3.6 Object Library and call the `DBEngine` method without first creating an instance:</span></span>  
   
-```  
+```vb  
 Dim db As DAO.Database  
 ' Open the database.  
 Set db = DBEngine.OpenDatabase("C:\nwind.mdb")  
 ' Use the database object.  
 ```  
   
- [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]要求您始终创建 COM 对象的实例，然后才能使用它们的方法。 若要使用这些方法[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]、 所需的类的变量声明和使用新的关键字来将对象分配给对象变量。 `Shared`时想要确保可以使用关键字创建的类只有一个实例。  
+ <span data-ttu-id="06d43-156">Visual Basic.NET 要求您始终创建 COM 对象的实例，然后才能使用其方法。</span><span class="sxs-lookup"><span data-stu-id="06d43-156">Visual Basic .NET requires that you always create instances of COM objects before you can use their methods.</span></span> <span data-ttu-id="06d43-157">若要在 Visual Basic 中使用这些方法，声明的变量的所需的类，并使用新的关键字将对象分配给对象变量。</span><span class="sxs-lookup"><span data-stu-id="06d43-157">To use these methods in Visual Basic, declare a variable of the desired class and use the new keyword to assign the object to the object variable.</span></span> <span data-ttu-id="06d43-158">`Shared`可以使用关键字，当你想要确保时创建的类只有一个实例。</span><span class="sxs-lookup"><span data-stu-id="06d43-158">The `Shared` keyword can be used when you want to make sure that only one instance of the class is created.</span></span>  
   
- [!code-vb[VbVbalrInterop 第&23;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
+ [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
   
-##  <a name="vbconinteroperabilitymarshalinganchor9"></a>事件处理程序中未处理的错误  
- 一个常见的互操作问题涉及处理由 COM 对象引发的事件的事件处理程序中的错误。 此类错误将被忽略，除非您明确检查使用`On Error`或`Try...Catch...Finally`语句。 例如，下面的示例摘自[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用的项目。  
+##  <span data-ttu-id="06d43-159"><a name="vbconinteroperabilitymarshalinganchor9"></a>在事件处理程序未处理的错误</span><span class="sxs-lookup"><span data-stu-id="06d43-159"><a name="vbconinteroperabilitymarshalinganchor9"></a> Unhandled Errors in Event Handlers</span></span>  
+ <span data-ttu-id="06d43-160">一个常见的互操作问题涉及处理由 COM 对象引发的事件的事件处理程序中的错误。</span><span class="sxs-lookup"><span data-stu-id="06d43-160">One common interop problem involves errors in event handlers that handle events raised by COM objects.</span></span> <span data-ttu-id="06d43-161">除非你专门检查使用的错误，则忽略此类错误`On Error`或`Try...Catch...Finally`语句。</span><span class="sxs-lookup"><span data-stu-id="06d43-161">Such errors are ignored unless you specifically check for errors using `On Error` or `Try...Catch...Finally` statements.</span></span> <span data-ttu-id="06d43-162">例如，下面的示例是从 Visual Basic.NET 项目具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用。</span><span class="sxs-lookup"><span data-stu-id="06d43-162">For example, the following example is from a Visual Basic .NET project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object.</span></span>  
   
- [!code-vb[VbVbalrInterop #&24;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
+ [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
   
- 此示例将按预期方式引发错误。 但是，如果您尝试相同的示例中而无需`Try...Catch...Finally`块中，错误将忽略就使用`OnError Resume Next`语句。 如果没有错误处理机制，被零除以无提示方式无法正常工作。 因为此类错误永远不会引发未处理的异常错误，很重要使用某种形式的处理从 COM 对象的事件的事件处理程序中的异常处理。  
+ <span data-ttu-id="06d43-163">此示例将按预期引发错误。</span><span class="sxs-lookup"><span data-stu-id="06d43-163">This example raises an error as expected.</span></span> <span data-ttu-id="06d43-164">但是，如果你尝试相同示例而不`Try...Catch...Finally`块，该错误忽略就使用`OnError Resume Next`语句。</span><span class="sxs-lookup"><span data-stu-id="06d43-164">However, if you try the same example without the `Try...Catch...Finally` block, the error is ignored as if you used the `OnError Resume Next` statement.</span></span> <span data-ttu-id="06d43-165">如果没有错误处理机制除以零的除法运算以静默方式失败。</span><span class="sxs-lookup"><span data-stu-id="06d43-165">Without error handling, the division by zero silently fails.</span></span> <span data-ttu-id="06d43-166">因为此类错误永远不会引发未处理的异常错误，务必使用某种形式的处理从 COM 对象的事件的事件处理程序中的异常处理。</span><span class="sxs-lookup"><span data-stu-id="06d43-166">Because such errors never raise unhandled exception errors, it is important that you use some form of exception handling in event handlers that handle events from COM objects.</span></span>  
   
-### <a name="understanding-com-interop-errors"></a>了解 COM 互操作错误  
- 如果没有错误处理机制，互操作调用通常产生错误时提供非常少的信息。 只要有可能，使用结构化处理，以提供有关问题的详细信息，它们发生的错误。 调试应用程序时可能特别有用。 例如:   
+### <a name="understanding-com-interop-errors"></a><span data-ttu-id="06d43-167">了解 COM 互操作错误</span><span class="sxs-lookup"><span data-stu-id="06d43-167">Understanding COM interop errors</span></span>  
+ <span data-ttu-id="06d43-168">如果没有错误处理机制，互操作调用通常产生错误时提供很少信息。</span><span class="sxs-lookup"><span data-stu-id="06d43-168">Without error handling, interop calls often generate errors that provide little information.</span></span> <span data-ttu-id="06d43-169">只要可能，使用结构化的错误处理发生时提供有关问题的详细信息。</span><span class="sxs-lookup"><span data-stu-id="06d43-169">Whenever possible, use structured error handling to provide more information about problems when they occur.</span></span> <span data-ttu-id="06d43-170">在调试应用程序时，这可以是特别有用。</span><span class="sxs-lookup"><span data-stu-id="06d43-170">This can be especially helpful when you debug applications.</span></span> <span data-ttu-id="06d43-171">例如: </span><span class="sxs-lookup"><span data-stu-id="06d43-171">For example:</span></span>  
   
- [!code-vb[VbVbalrInterop #&25;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
+ [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
- 可以通过检查异常对象的内容中找到的错误说明、 HRESULT 和 COM 错误的原因等信息。  
+ <span data-ttu-id="06d43-172">你可以通过检查异常对象的内容找到如错误描述、 HRESULT 和 COM 错误的原因的信息。</span><span class="sxs-lookup"><span data-stu-id="06d43-172">You can find information such as the error description, HRESULT, and the source of COM errors by examining the contents of the exception object.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor10"></a>ActiveX 控件问题  
- 使用 Visual Basic 6.0 中的大多数 ActiveX 控件使用[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]顺利。 主要的例外是容器控件中或以可视方式可以包含其他控件的控件。 无法与正常工作的旧控件的一些示例[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]如下︰  
+##  <span data-ttu-id="06d43-173"><a name="vbconinteroperabilitymarshalinganchor10"></a>ActiveX 控件问题</span><span class="sxs-lookup"><span data-stu-id="06d43-173"><a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX Control Issues</span></span>  
+ <span data-ttu-id="06d43-174">使用 Visual Basic 6.0 中的大多数 ActiveX 控件使用 Visual Basic.NET，而问题。</span><span class="sxs-lookup"><span data-stu-id="06d43-174">Most ActiveX controls that work with Visual Basic 6.0 work with Visual Basic .NET without trouble.</span></span> <span data-ttu-id="06d43-175">主要的例外是容器控件中或以可视方式包含其他控件的控件。</span><span class="sxs-lookup"><span data-stu-id="06d43-175">The main exceptions are container controls, or controls that visually contain other controls.</span></span> <span data-ttu-id="06d43-176">无法与正常工作的较旧控件的一些示例[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]如下所示：</span><span class="sxs-lookup"><span data-stu-id="06d43-176">Some examples of older controls that do not work correctly with [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] are as follows:</span></span>  
   
--   Microsoft 窗体 2.0 框架控件  
+-   <span data-ttu-id="06d43-177">Microsoft 窗体 2.0 框架控件</span><span class="sxs-lookup"><span data-stu-id="06d43-177">Microsoft Forms 2.0 Frame control</span></span>  
   
--   Up-down 控件，也称为数值调节钮控件  
+-   <span data-ttu-id="06d43-178">Up-down 控件，也称为数值调节钮控件</span><span class="sxs-lookup"><span data-stu-id="06d43-178">Up-Down control, also known as the spin control</span></span>  
   
--   Sheridan 选项卡控件  
+-   <span data-ttu-id="06d43-179">Sheridan 选项卡控件</span><span class="sxs-lookup"><span data-stu-id="06d43-179">Sheridan Tab Control</span></span>  
   
- 有的不受支持的 ActiveX 控件问题只有几个解决方法。 你可以迁移现有控件与[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]如果拥有原始源代码。 否则，您可以检查与软件供应商更新。NET 兼容版本的控件来替换不受支持的 ActiveX 控件。  
+ <span data-ttu-id="06d43-180">有仅几个解决方法不受支持 ActiveX 控件问题。</span><span class="sxs-lookup"><span data-stu-id="06d43-180">There are only a few workarounds for unsupported ActiveX control problems.</span></span> <span data-ttu-id="06d43-181">你可以迁移现有控件与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]如果你拥有原始源代码。</span><span class="sxs-lookup"><span data-stu-id="06d43-181">You can migrate existing controls to [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] if you own the original source code.</span></span> <span data-ttu-id="06d43-182">否则，你可以检查与软件供应商更新。控件替换的 NET 兼容版本不受支持 ActiveX 控件。</span><span class="sxs-lookup"><span data-stu-id="06d43-182">Otherwise, you can check with software vendors for updated .NET-compatible versions of controls to replace unsupported ActiveX controls.</span></span>  
   
-##  <a name="vbconinteroperabilitymarshalinganchor11"></a>传递的控件 ByRef 的 ReadOnly 属性  
- [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]如果通过，但您有时引发 COM 错误，如"错误 0x800A017F CTL_E_SETNOTSUPPORTED"`ReadOnly`某些较旧的 ActiveX 控件作为属性`ByRef`其他过程的参数。 从 Visual Basic 6.0 中的过程调用不会引发错误，并就像通过值传递，参数的处理方式类似。 请参阅中的错误消息[!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)]是 COM 对象的报告您尝试更改一个属性，它不具有属性`Set`过程。  
+##  <span data-ttu-id="06d43-183"><a name="vbconinteroperabilitymarshalinganchor11"></a>传递的控件 ByRef 的 ReadOnly 属性</span><span class="sxs-lookup"><span data-stu-id="06d43-183"><a name="vbconinteroperabilitymarshalinganchor11"></a> Passing ReadOnly Properties of Controls ByRef</span></span>  
+ <span data-ttu-id="06d43-184">Visual Basic.NET 有时引发 COM 错误，例如，"错误 0x800A017F CTL_E_SETNOTSUPPORTED"传递时`ReadOnly`作为某些较旧的 ActiveX 控件的属性`ByRef`其他过程的参数。</span><span class="sxs-lookup"><span data-stu-id="06d43-184">Visual Basic .NET sometimes raises COM errors such as, "Error 0x800A017F CTL_E_SETNOTSUPPORTED", when you pass `ReadOnly` properties of some older ActiveX controls as `ByRef` parameters to other procedures.</span></span> <span data-ttu-id="06d43-185">从 Visual Basic 6.0 的类似过程调用不会引发错误，和参数被视为通过值传递。</span><span class="sxs-lookup"><span data-stu-id="06d43-185">Similar procedure calls from Visual Basic 6.0 do not raise an error, and the parameters are treated as if you passed them by value.</span></span> <span data-ttu-id="06d43-186">Visual Basic.NET 错误消息指示你尝试更改一个属性，没有一个属性`Set`过程。</span><span class="sxs-lookup"><span data-stu-id="06d43-186">The Visual Basic .NET error message indicates that you are trying to change a property that does not have a property `Set` procedure.</span></span>  
   
- 如果您有权访问所调用的过程，您可以通过使用来防止出现此错误`ByVal`关键字来声明参数接受`ReadOnly`属性。 例如:   
+ <span data-ttu-id="06d43-187">如果你有权访问所调用的过程，你可以通过使用来防止出现此错误`ByVal`关键字来声明接受的参数`ReadOnly`属性。</span><span class="sxs-lookup"><span data-stu-id="06d43-187">If you have access to the procedure being called, you can prevent this error by using the `ByVal` keyword to declare parameters that accept `ReadOnly` properties.</span></span> <span data-ttu-id="06d43-188">例如: </span><span class="sxs-lookup"><span data-stu-id="06d43-188">For example:</span></span>  
   
- [!code-vb[VbVbalrInterop #&26;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
+ [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
- 如果还没有被调用的过程对源代码的访问，您可以强制要通过添加一组额外的方括号调用过程按值传递的属性。 例如，在项目中包含对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用，您可以使用︰  
+ <span data-ttu-id="06d43-189">如果你没有访问所调用的过程的源代码，你可以强制要通过添加一组额外的方括号调用过程通过值传递的属性。</span><span class="sxs-lookup"><span data-stu-id="06d43-189">If you do not have access to the source code for the procedure being called, you can force the property to be passed by value by adding an extra set of brackets around the calling procedure.</span></span> <span data-ttu-id="06d43-190">例如，在项目中具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用，你可以使用：</span><span class="sxs-lookup"><span data-stu-id="06d43-190">For example, in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object, you can use:</span></span>  
   
- [!code-vb[VbVbalrInterop #&27;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
+ [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
   
-##  <a name="vbconinteroperabilitymarshalinganchor12"></a>部署公开互操作的程序集  
- 公开 COM 接口的程序集部署了一些独特的挑战。 例如，当单独的应用程序引用同一个 COM 程序集时，将产生潜在的问题。 安装新版本的程序集和另一个应用程序仍在使用旧版本的程序集时，这种情况很常见。 如果您卸载共享某个 DLL 程序集，您可以会无意中使其不可用对其他程序集。  
+##  <span data-ttu-id="06d43-191"><a name="vbconinteroperabilitymarshalinganchor12"></a>部署公开互操作的程序集</span><span class="sxs-lookup"><span data-stu-id="06d43-191"><a name="vbconinteroperabilitymarshalinganchor12"></a> Deploying Assemblies That Expose Interop</span></span>  
+ <span data-ttu-id="06d43-192">部署公开的 COM 接口的程序集带来了一些独特的难题。</span><span class="sxs-lookup"><span data-stu-id="06d43-192">Deploying assemblies that expose COM interfaces presents some unique challenges.</span></span> <span data-ttu-id="06d43-193">例如，单独的应用程序都引用同一个 COM 程序集时发生的潜在问题。</span><span class="sxs-lookup"><span data-stu-id="06d43-193">For example, a potential problem occurs when separate applications reference the same COM assembly.</span></span> <span data-ttu-id="06d43-194">安装新版本的程序集和另一个应用程序仍在使用旧版本的程序集时，这种情况很常见。</span><span class="sxs-lookup"><span data-stu-id="06d43-194">This situation is common when a new version of an assembly is installed and another application is still using the old version of the assembly.</span></span> <span data-ttu-id="06d43-195">如果卸载共享 DLL 程序集，您可以无意中使其不可用到其他程序集。</span><span class="sxs-lookup"><span data-stu-id="06d43-195">If you uninstall an assembly that shares a DLL, you can unintentionally make it unavailable to the other assemblies.</span></span>  
   
- 若要避免此问题，应安装到全局程序集缓存 (GAC) 中的共享程序集和用于该组件的合并模块。 如果您不能在 GAC 中安装应用程序，它应安装到 CommonFilesFolder 特定于版本的子目录中。  
+ <span data-ttu-id="06d43-196">若要避免此问题，应安装到全局程序集缓存 (GAC) 中的共享程序集和组件使用合并模块。</span><span class="sxs-lookup"><span data-stu-id="06d43-196">To avoid this problem, you should install shared assemblies to the Global Assembly Cache (GAC) and use a MergeModule for the component.</span></span> <span data-ttu-id="06d43-197">如果你不能安装在 GAC 中的应用程序，它应安装到 CommonFilesFolder 特定于版本的子目录中。</span><span class="sxs-lookup"><span data-stu-id="06d43-197">If you cannot install the application in the GAC, it should be installed to CommonFilesFolder in a version-specific subdirectory.</span></span>  
   
- 不共享的程序集应并排放置在调用应用程序的目录。  
+ <span data-ttu-id="06d43-198">不共享的程序集应并排放置在与调用应用程序的目录。</span><span class="sxs-lookup"><span data-stu-id="06d43-198">Assemblies that are not shared should be located side by side in the directory with the calling application.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute></xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)   
- [Tlbimp.exe （类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)   
- [Tlbexp.exe （类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)   
- [演练︰ 用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)   
- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)   
- [全局程序集缓存](http://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202)
+## <a name="see-also"></a><span data-ttu-id="06d43-199">另请参阅</span><span class="sxs-lookup"><span data-stu-id="06d43-199">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="06d43-200">COM 互操作</span><span class="sxs-lookup"><span data-stu-id="06d43-200">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [<span data-ttu-id="06d43-201">Tlbimp.exe（类型库导入程序）</span><span class="sxs-lookup"><span data-stu-id="06d43-201">Tlbimp.exe (Type Library Importer)</span></span>](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [<span data-ttu-id="06d43-202">Tlbexp.exe（类型库导出程序）</span><span class="sxs-lookup"><span data-stu-id="06d43-202">Tlbexp.exe (Type Library Exporter)</span></span>](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [<span data-ttu-id="06d43-203">演练：使用 COM 对象实现继承</span><span class="sxs-lookup"><span data-stu-id="06d43-203">Walkthrough: Implementing Inheritance with COM Objects</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [<span data-ttu-id="06d43-204">Inherits 语句</span><span class="sxs-lookup"><span data-stu-id="06d43-204">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [<span data-ttu-id="06d43-205">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="06d43-205">Global Assembly Cache</span></span>](../../../framework/app-domains/gac.md)

@@ -1,145 +1,148 @@
 ---
-title: "图形呈现层 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "图形呈现层"
-  - "图形, 性能"
-  - "图形, 呈现层"
-  - "呈现图形"
-  - "呈现层"
+title: "图形呈现层"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], performance
+- rendering graphics [WPF]
+- rendering tiers [WPF]
+- graphics rendering tiers [WPF]
+- graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: 44
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 43
+caps.latest.revision: "44"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4a64ca2f0da2e10a3042b5f9c30baf3caa37534e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 图形呈现层
-呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
+# <a name="graphics-rendering-tiers"></a><span data-ttu-id="af826-102">图形呈现层</span><span class="sxs-lookup"><span data-stu-id="af826-102">Graphics Rendering Tiers</span></span>
+<span data-ttu-id="af826-103">呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。</span><span class="sxs-lookup"><span data-stu-id="af826-103">A rendering tier defines a level of graphics hardware capability and performance for a device that runs a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  
   
-   
+
   
 <a name="graphics_hardware"></a>   
-## 图形硬件  
- 对呈现层级别影响最大的图形硬件功能包括：  
+## <a name="graphics-hardware"></a><span data-ttu-id="af826-104">图形硬件</span><span class="sxs-lookup"><span data-stu-id="af826-104">Graphics Hardware</span></span>  
+ <span data-ttu-id="af826-105">对呈现层级别影响最大的图形硬件功能包括：</span><span class="sxs-lookup"><span data-stu-id="af826-105">The features of the graphics hardware that most impact the rendering tier levels are:</span></span>  
   
--   **视频 RAM** 图形硬件中的视频内存量决定了可用于合成图形的缓冲区的大小和数量。  
+-   <span data-ttu-id="af826-106">**视频 RAM** - 图形硬件中的视频内存量决定了可用于合成图形的缓冲区大小和数量。</span><span class="sxs-lookup"><span data-stu-id="af826-106">**Video RAM** The amount of video memory on the graphics hardware determines the size and number of buffers that can be used for compositing graphics.</span></span>  
   
--   **像素着色器** 像素着色器是按像素计算效果的图形处理功能。  每个显示帧可能有数百万像素需要处理，具体取决于所显示的图形的分辨率。  
+-   <span data-ttu-id="af826-107">**像素着色器** - 像素着色器是基于像素计算效果的图形处理功能。</span><span class="sxs-lookup"><span data-stu-id="af826-107">**Pixel Shader** A pixel shader is a graphics processing function that calculates effects on a per-pixel basis.</span></span> <span data-ttu-id="af826-108">每个显示帧可能有数百万像素需要处理，具体取决于显示图形的分辨率。</span><span class="sxs-lookup"><span data-stu-id="af826-108">Depending on the resolution of the displayed graphics, there could be several million pixels that need to be processed for each display frame.</span></span>  
   
--   **顶点着色器** 顶点着色器是对对象的顶点数据执行数学运算的图形处理功能。  
+-   <span data-ttu-id="af826-109">**顶点着色器** - 顶点着色器是对对象的顶点数据执行数学运算的图形处理功能。</span><span class="sxs-lookup"><span data-stu-id="af826-109">**Vertex Shader** A vertex shader is a graphics processing function that performs mathematical operations on the vertex data of the object.</span></span>  
   
--   **多纹理支持** 多纹理支持是指在对三维图形对象执行混合操作期间应用两个或更多个不同纹理的功能。  多纹理支持的程度由图形硬件中的多纹理单元数决定。  
+-   <span data-ttu-id="af826-110">**多纹理支持** - 多纹理支持是指对 3D 图形对象执行混合操作期间应用两个或更多个不同纹理的功能。</span><span class="sxs-lookup"><span data-stu-id="af826-110">**Multitexture Support** Multitexture support refers to the ability to apply two or more distinct textures during a blending operation on a 3D graphics object.</span></span> <span data-ttu-id="af826-111">多纹理支持的程度取决于图形硬件中的多纹理单元数。</span><span class="sxs-lookup"><span data-stu-id="af826-111">The degree of multitexture support is determined by the number of multitexture units on the graphics hardware.</span></span>  
   
 <a name="rendering_tier_definitions"></a>   
-## 呈现层定义  
- 图形硬件的功能决定了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的呈现功能。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系统定义了三个呈现层：  
+## <a name="rendering-tier-definitions"></a><span data-ttu-id="af826-112">呈现层定义</span><span class="sxs-lookup"><span data-stu-id="af826-112">Rendering Tier Definitions</span></span>  
+ <span data-ttu-id="af826-113">图形硬件的功能决定了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的呈现功能。</span><span class="sxs-lookup"><span data-stu-id="af826-113">The features of the graphics hardware determine the rendering capability of a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="af826-114">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系统定义了 3 个呈现层：</span><span class="sxs-lookup"><span data-stu-id="af826-114">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system defines three rendering tiers:</span></span>  
   
--   **呈现层 0** 无图形硬件加速。  所有图形功能都使用软件加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别低于 9.0。  
+-   <span data-ttu-id="af826-115">**呈现层 0** - 无图形硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-115">**Rendering Tier 0** No graphics hardware acceleration.</span></span> <span data-ttu-id="af826-116">所有图形功能都使用软件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-116">All graphics features use software acceleration.</span></span> <span data-ttu-id="af826-117">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别低于 9.0。</span><span class="sxs-lookup"><span data-stu-id="af826-117">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is less than version 9.0.</span></span>  
   
--   **呈现层 1** 某些图形功能使用图形硬件加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。  
+-   <span data-ttu-id="af826-118">**呈现层 1** - 某些图形功能使用图形硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-118">**Rendering Tier 1** Some graphics features use graphics hardware acceleration.</span></span> <span data-ttu-id="af826-119">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。</span><span class="sxs-lookup"><span data-stu-id="af826-119">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is greater than or equal to version 9.0.</span></span>  
   
--   **呈现层 2** 大多数图形功能都使用图形硬件加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。  
+-   <span data-ttu-id="af826-120">**呈现层 2** - 大多数图形功能都使用图形硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-120">**Rendering Tier 2** Most graphics features use graphics hardware acceleration.</span></span> <span data-ttu-id="af826-121">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。</span><span class="sxs-lookup"><span data-stu-id="af826-121">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is greater than or equal to version 9.0.</span></span>  
   
- 使用 <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=fullName> 属性可以在应用程序运行时检索呈现层。  使用呈现层可确定设备是否支持某些硬件加速图形功能。  然后应用程序就可以在运行时根据设备支持的呈现层采用不同的代码路径。  
+ <span data-ttu-id="af826-122"><xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType>属性允许您检索在应用程序运行时间的呈现层。</span><span class="sxs-lookup"><span data-stu-id="af826-122">The <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> property allows you to retrieve the rendering tier at application run time.</span></span> <span data-ttu-id="af826-123">使用呈现层可确定设备是否支持某些硬件加速图形功能。</span><span class="sxs-lookup"><span data-stu-id="af826-123">You use the rendering tier to determine whether the device supports certain hardware-accelerated graphics features.</span></span> <span data-ttu-id="af826-124">然后，应用程序就可以在运行时根据设备支持的呈现层采用不同的代码路径。</span><span class="sxs-lookup"><span data-stu-id="af826-124">Your application can then take different code paths at run time depending on the rendering tier supported by the device.</span></span>  
   
-### 呈现层 0  
- 呈现层的值为 0 意味着设备上的应用程序没有图形硬件加速可用。  在这一层次级别，应假设所有图形都将由软件呈现，而没有硬件加速。  这一层的功能与低于 9.0 的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本对应。  
+### <a name="rendering-tier-0"></a><span data-ttu-id="af826-125">呈现层 0</span><span class="sxs-lookup"><span data-stu-id="af826-125">Rendering Tier 0</span></span>  
+ <span data-ttu-id="af826-126">呈现层的值为 0 意味着设备上的应用程序没有图形硬件加速可用。</span><span class="sxs-lookup"><span data-stu-id="af826-126">A rendering tier value of 0 means that there is no graphics hardware acceleration available for the application on the device.</span></span> <span data-ttu-id="af826-127">在这一层次级别，应假设所有图形都由软件呈现，未采用硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-127">At this tier level, you should assume that all graphics will be rendered by software with no hardware acceleration.</span></span> <span data-ttu-id="af826-128">该层的功能对应于低于 9.0 的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="af826-128">This tier's functionality corresponds to a [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version that is less than 9.0.</span></span>  
   
-### 呈现层 1 与呈现层 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a><span data-ttu-id="af826-129">呈现层 1 与呈现层 2</span><span class="sxs-lookup"><span data-stu-id="af826-129">Rendering Tier 1 and Rendering Tier 2</span></span>  
   
 > [!NOTE]
->  从 .NET Framework 4 开始，呈现层 1 进行了重新定义，只包含支持 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 9.0 或更高版本的图形硬件。  支持 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 7 或 8 的图形硬件现在定义为呈现层 0。  
+>  <span data-ttu-id="af826-130">从 .NET Framework 4 开始，呈现层 1 进行了重新定义，只包含支持 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 9.0 或更高版本的图形硬件。</span><span class="sxs-lookup"><span data-stu-id="af826-130">Starting in the .NET Framework 4, rendering tier 1 has been redefined to only include graphics hardware that supports [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 9.0 or greater.</span></span> <span data-ttu-id="af826-131">支持 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 7 或 8 的图形硬件现定义为呈现层 0。</span><span class="sxs-lookup"><span data-stu-id="af826-131">Graphics hardware that supports [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 7 or 8 is now defined as rendering tier 0.</span></span>  
   
- 呈现层的值为 1 或 2 意味着，如果必要的系统资源可用并且尚未耗尽，则 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的大部分图形功能会使用硬件加速。  这对应于高于或等于 9.0 的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。  
+ <span data-ttu-id="af826-132">呈现层的值为 1 或 2 意味着，如果必要的系统资源可用并且尚未耗尽，则 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的大部分图形功能会使用硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-132">A rendering tier value of 1 or 2 means that most of the graphics features of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] will use hardware acceleration if the necessary system resources are available and have not been exhausted.</span></span> <span data-ttu-id="af826-133">这对应于高于或等于 9.0 的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="af826-133">This corresponds to a [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version that is greater than or equal to 9.0.</span></span>  
   
- 下表显示呈现层 1 和呈现层 2 的图形硬件要求差异：  
+ <span data-ttu-id="af826-134">下表显示呈现层 1 和呈现层 2 的图形硬件需求差异：</span><span class="sxs-lookup"><span data-stu-id="af826-134">The following table shows the differences in graphics hardware requirements for rendering tier 1 and rendering tier 2:</span></span>  
   
-|功能|层 1|层 2|  
-|--------|---------|---------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本|必须高于或等于 9.0。|必须高于或等于 9.0。|  
-|视频 RAM|必须大于或等于 60MB。|必须大于或等于 120MB。|  
-|像素着色器|版本级别必须高于或等于 2.0。|版本级别必须高于或等于 2.0。|  
-|顶点着色器|没有要求。|版本级别必须高于或等于 2.0。|  
-|多纹理单元|没有要求。|单元数必须大于或等于 4。|  
+|<span data-ttu-id="af826-135">功能</span><span class="sxs-lookup"><span data-stu-id="af826-135">Feature</span></span>|<span data-ttu-id="af826-136">层 1</span><span class="sxs-lookup"><span data-stu-id="af826-136">Tier 1</span></span>|<span data-ttu-id="af826-137">层 2</span><span class="sxs-lookup"><span data-stu-id="af826-137">Tier 2</span></span>|  
+|-------------|------------|------------|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]<span data-ttu-id="af826-138"> 版本</span><span class="sxs-lookup"><span data-stu-id="af826-138"> version</span></span>|<span data-ttu-id="af826-139">必须高于或等于 9.0。</span><span class="sxs-lookup"><span data-stu-id="af826-139">Must be greater than or equal to 9.0.</span></span>|<span data-ttu-id="af826-140">必须高于或等于 9.0。</span><span class="sxs-lookup"><span data-stu-id="af826-140">Must be greater than or equal to 9.0.</span></span>|  
+|<span data-ttu-id="af826-141">视频 RAM</span><span class="sxs-lookup"><span data-stu-id="af826-141">Video RAM</span></span>|<span data-ttu-id="af826-142">必须大于或等于 60 MB。</span><span class="sxs-lookup"><span data-stu-id="af826-142">Must be greater than or equal to 60MB.</span></span>|<span data-ttu-id="af826-143">必须大于或等于 120 MB。</span><span class="sxs-lookup"><span data-stu-id="af826-143">Must be greater than or equal to 120MB.</span></span>|  
+|<span data-ttu-id="af826-144">像素着色器</span><span class="sxs-lookup"><span data-stu-id="af826-144">Pixel shader</span></span>|<span data-ttu-id="af826-145">版本级别必须高于或等于 2.0。</span><span class="sxs-lookup"><span data-stu-id="af826-145">Version level must greater than or equal to 2.0.</span></span>|<span data-ttu-id="af826-146">版本级别必须高于或等于 2.0。</span><span class="sxs-lookup"><span data-stu-id="af826-146">Version level must greater than or equal to 2.0.</span></span>|  
+|<span data-ttu-id="af826-147">顶点着色器</span><span class="sxs-lookup"><span data-stu-id="af826-147">Vertex shader</span></span>|<span data-ttu-id="af826-148">没有要求。</span><span class="sxs-lookup"><span data-stu-id="af826-148">No requirement.</span></span>|<span data-ttu-id="af826-149">版本级别必须高于或等于 2.0。</span><span class="sxs-lookup"><span data-stu-id="af826-149">Version level must greater than or equal to 2.0.</span></span>|  
+|<span data-ttu-id="af826-150">多纹理单元</span><span class="sxs-lookup"><span data-stu-id="af826-150">Multitexture units</span></span>|<span data-ttu-id="af826-151">没有要求。</span><span class="sxs-lookup"><span data-stu-id="af826-151">No requirement.</span></span>|<span data-ttu-id="af826-152">单元数必须大于或等于 4。</span><span class="sxs-lookup"><span data-stu-id="af826-152">Number of units must greater than or equal to 4.</span></span>|  
   
- 下面的功能是呈现层 1 和呈现层 2 的硬件加速功能：  
+ <span data-ttu-id="af826-153">以下功能对呈现层 1 和呈现层 2 采用硬件加速：</span><span class="sxs-lookup"><span data-stu-id="af826-153">The following features and capabilities are hardware accelerated for rendering tier 1 and rendering tier 2:</span></span>  
   
-|功能|注释|  
-|--------|--------|  
-|二维呈现|支持大多数二维呈现。|  
-|三维光栅化|支持大多数三维光栅化。|  
-|三维各向异性筛选|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在呈现三维内容时尝试使用各向异性筛选。  各向异性筛选是指改善位置较远且与照相机成一定角度的图面上的纹理的图像质量。|  
-|三维 MIP 映射|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 会在呈现三维内容时尝试使用 MIP 映射。当纹理占据 <xref:System.Windows.Controls.Viewport3D> 中的较小视图区域时，MIP 映射可改进纹理呈现的质量。|  
-|径向渐变|虽然支持此功能，但应避免对大型对象使用 <xref:System.Windows.Media.RadialGradientBrush>。|  
-|三维光照计算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 执行每个顶点的光照，这意味着必须在应用于网格的每个材料的每个顶点计算光照强度。|  
-|文本呈现|子像素字体呈现使用图形硬件上可用的像素着色器。|  
+|<span data-ttu-id="af826-154">功能</span><span class="sxs-lookup"><span data-stu-id="af826-154">Feature</span></span>|<span data-ttu-id="af826-155">备注</span><span class="sxs-lookup"><span data-stu-id="af826-155">Notes</span></span>|  
+|-------------|-----------|  
+|<span data-ttu-id="af826-156">2D 呈现</span><span class="sxs-lookup"><span data-stu-id="af826-156">2D rendering</span></span>|<span data-ttu-id="af826-157">支持大多数 2D 呈现。</span><span class="sxs-lookup"><span data-stu-id="af826-157">Most 2D rendering is supported.</span></span>|  
+|<span data-ttu-id="af826-158">3D 光栅化</span><span class="sxs-lookup"><span data-stu-id="af826-158">3D rasterization</span></span>|<span data-ttu-id="af826-159">支持大多数 3D 光栅化。</span><span class="sxs-lookup"><span data-stu-id="af826-159">Most 3D rasterization is supported.</span></span>|  
+|<span data-ttu-id="af826-160">3D 各向异性筛选</span><span class="sxs-lookup"><span data-stu-id="af826-160">3D anisotropic filtering</span></span>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="af826-161"> 在呈现 3D 内容时尝试使用各向异性筛选。</span><span class="sxs-lookup"><span data-stu-id="af826-161"> attempts to use anisotropic filtering when rendering 3D content.</span></span> <span data-ttu-id="af826-162">各向异性筛选是指改善离相机较远且与相机角度较大的图面上纹理的图像质量。</span><span class="sxs-lookup"><span data-stu-id="af826-162">Anisotropic filtering refers to enhancing the image quality of textures on surfaces that are far away and steeply angled with respect to the camera.</span></span>|  
+|<span data-ttu-id="af826-163">3D MIP 映射</span><span class="sxs-lookup"><span data-stu-id="af826-163">3D MIP mapping</span></span>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="af826-164"> 在呈现 3D 内容时尝试使用 MIP 映射。</span><span class="sxs-lookup"><span data-stu-id="af826-164"> attempts to use MIP mapping when rendering 3D content.</span></span> <span data-ttu-id="af826-165">当纹理占用较小的视野时 MIP 映射的纹理呈现质量可提高<xref:System.Windows.Controls.Viewport3D>。</span><span class="sxs-lookup"><span data-stu-id="af826-165">MIP mapping improves the quality of texture rendering when a texture occupies a smaller field of view in a <xref:System.Windows.Controls.Viewport3D>.</span></span>|  
+|<span data-ttu-id="af826-166">径向渐变</span><span class="sxs-lookup"><span data-stu-id="af826-166">Radial gradients</span></span>|<span data-ttu-id="af826-167">虽然支持，但应避免使用<xref:System.Windows.Media.RadialGradientBrush>大型对象上。</span><span class="sxs-lookup"><span data-stu-id="af826-167">While supported, avoid the use of <xref:System.Windows.Media.RadialGradientBrush> on large objects.</span></span>|  
+|<span data-ttu-id="af826-168">3D 光照计算</span><span class="sxs-lookup"><span data-stu-id="af826-168">3D lighting calculations</span></span>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="af826-169"> 执行每个顶点的光照，这意味着必须在应用于网格的每个材料的每个顶点计算光照强度。</span><span class="sxs-lookup"><span data-stu-id="af826-169"> performs per-vertex lighting, which means that a light intensity must be calculated at each vertex for each material applied to a mesh.</span></span>|  
+|<span data-ttu-id="af826-170">文本呈现</span><span class="sxs-lookup"><span data-stu-id="af826-170">Text rendering</span></span>|<span data-ttu-id="af826-171">子像素字体呈现使用图形硬件上可用的像素着色器。</span><span class="sxs-lookup"><span data-stu-id="af826-171">Sub-pixel font rendering uses available pixel shaders on the graphics hardware.</span></span>|  
   
- 下面的功能只是呈现层 2 的硬件加速功能：  
+ <span data-ttu-id="af826-172">以下功能仅对呈现层 2 采用硬件加速：</span><span class="sxs-lookup"><span data-stu-id="af826-172">The following features and capabilities are hardware accelerated only for rendering tier 2:</span></span>  
   
-|功能|注释|  
-|--------|--------|  
-|三维抗锯齿|只有支持 Windows 显示驱动程序模型 \(WDDM\) 的操作系统（如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]）才支持三维抗锯齿。|  
+|<span data-ttu-id="af826-173">功能</span><span class="sxs-lookup"><span data-stu-id="af826-173">Feature</span></span>|<span data-ttu-id="af826-174">备注</span><span class="sxs-lookup"><span data-stu-id="af826-174">Notes</span></span>|  
+|-------------|-----------|  
+|<span data-ttu-id="af826-175">3D 抗锯齿</span><span class="sxs-lookup"><span data-stu-id="af826-175">3D anti-aliasing</span></span>|<span data-ttu-id="af826-176">只有支持 Windows 显示驱动程序模型 (WDDM) 的操作系统（如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]）才支持 3D 抗锯齿。</span><span class="sxs-lookup"><span data-stu-id="af826-176">3D anti-aliasing is supported only on operating systems that support Windows Display Driver Model (WDDM), such as [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] and [!INCLUDE[win7](../../../../includes/win7-md.md)].</span></span>|  
   
- 下面的功能**不是**硬件加速功能：  
+ <span data-ttu-id="af826-177">以下功能**未**采用硬件加速：</span><span class="sxs-lookup"><span data-stu-id="af826-177">The following features and capabilities are **not** hardware accelerated:</span></span>  
   
-|功能|注释|  
-|--------|--------|  
-|打印内容|所有打印内容都使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 软件管道呈现。|  
-|使用 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 的光栅化内容|使用 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 的 <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> 方法呈现的任何内容。|  
-|使用 <xref:System.Windows.Media.TileBrush> 的平铺内容|<xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.TileBrush.TileMode%2A> 属性设置为 <xref:System.Windows.Media.TileMode> 的任何平铺内容。|  
-|超过图形硬件的最大纹理大小的图面|对于大多数图形硬件而言，大型图面是指达到 2048x2048 或 4096x4096 像素大小的图面。|  
-|视频 RAM 要求超过图形硬件内存的任何操作|可以使用 Windows SDK 中的 [WPF 性能套件](../Topic/WPF%20Performance%20Suite.md)包含的分析器工具，来监视应用程序视频 RAM 使用情况。|  
-|分层窗口|分层窗口使 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以将内容呈现到屏幕中的非矩形窗口。  在支持 Windows 显示驱动程序模型 \(WDDM\)的操作系统（如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]）上，分层窗口是硬件加速的。  在其他系统上，如 [!INCLUDE[winxp](../../../../includes/winxp-md.md)]，分层窗口是通过软件来呈现的，没有硬件加速。<br /><br /> 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，您可以通过设置以下 <xref:System.Windows.Window> 属性来启用分层窗口：<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> \= <xref:System.Windows.WindowStyle><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> \= `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> \= <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|<span data-ttu-id="af826-178">功能</span><span class="sxs-lookup"><span data-stu-id="af826-178">Feature</span></span>|<span data-ttu-id="af826-179">备注</span><span class="sxs-lookup"><span data-stu-id="af826-179">Notes</span></span>|  
+|-------------|-----------|  
+|<span data-ttu-id="af826-180">打印内容</span><span class="sxs-lookup"><span data-stu-id="af826-180">Printed content</span></span>|<span data-ttu-id="af826-181">所有打印内容都使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 软件管道呈现。</span><span class="sxs-lookup"><span data-stu-id="af826-181">All printed content is rendered using the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] software pipeline.</span></span>|  
+|<span data-ttu-id="af826-182">使用栅格化内容<xref:System.Windows.Media.Imaging.RenderTargetBitmap></span><span class="sxs-lookup"><span data-stu-id="af826-182">Rasterized content that uses <xref:System.Windows.Media.Imaging.RenderTargetBitmap></span></span>|<span data-ttu-id="af826-183">通过使用呈现任何内容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。</span><span class="sxs-lookup"><span data-stu-id="af826-183">Any content rendered by using the <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> method of <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.</span></span>|  
+|<span data-ttu-id="af826-184">使用的平铺的内容<xref:System.Windows.Media.TileBrush></span><span class="sxs-lookup"><span data-stu-id="af826-184">Tiled content that uses <xref:System.Windows.Media.TileBrush></span></span>|<span data-ttu-id="af826-185">任何平铺在其中的内容<xref:System.Windows.Media.TileBrush.TileMode%2A>属性<xref:System.Windows.Media.TileBrush>设置为<xref:System.Windows.Media.TileMode.Tile>。</span><span class="sxs-lookup"><span data-stu-id="af826-185">Any tiled content in which the <xref:System.Windows.Media.TileBrush.TileMode%2A> property of the <xref:System.Windows.Media.TileBrush> is set to <xref:System.Windows.Media.TileMode.Tile>.</span></span>|  
+|<span data-ttu-id="af826-186">超过图形硬件最大纹理大小的图面</span><span class="sxs-lookup"><span data-stu-id="af826-186">Surfaces that exceed the maximum texture size of the graphics hardware</span></span>|<span data-ttu-id="af826-187">对大多数图形硬件而言，大型图面是指达到 2048x2048 或 4096x4096 像素大小的图面。</span><span class="sxs-lookup"><span data-stu-id="af826-187">For most graphics hardware, large surfaces are 2048x2048 or 4096x4096 pixels in size.</span></span>|  
+|<span data-ttu-id="af826-188">视频 RAM 要求超过图形硬件内存的任何操作</span><span class="sxs-lookup"><span data-stu-id="af826-188">Any operation whose video RAM requirement exceeds the memory of the graphics hardware</span></span>|<span data-ttu-id="af826-189">可使用 Windows SDK 中的 [WPF 性能套件](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)包含的分析器工具来监视应用程序视频 RAM 的使用情况。</span><span class="sxs-lookup"><span data-stu-id="af826-189">You can monitor application video RAM usage by using the Perforator tool that is included in the [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) in the Windows SDK.</span></span>|  
+|<span data-ttu-id="af826-190">分层窗口</span><span class="sxs-lookup"><span data-stu-id="af826-190">Layered windows</span></span>|<span data-ttu-id="af826-191">分层窗口允许 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序将内容呈现到非矩形窗口中的屏幕。</span><span class="sxs-lookup"><span data-stu-id="af826-191">Layered windows allow [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications to render content to the screen in a non-rectangular window.</span></span> <span data-ttu-id="af826-192">在支持 Windows 显示驱动程序模型 (WDDM) 的操作系统（如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]）上，分层窗口采用硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-192">On operating systems that support Windows Display Driver Model (WDDM), such as [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] and [!INCLUDE[win7](../../../../includes/win7-md.md)], layered windows are hardware accelerated.</span></span> <span data-ttu-id="af826-193">在 [!INCLUDE[winxp](../../../../includes/winxp-md.md)] 等其他系统上，分层窗口是通过软件来呈现的，未采用硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-193">On other systems, such as [!INCLUDE[winxp](../../../../includes/winxp-md.md)], layered windows are rendered by software with no hardware acceleration.</span></span><br /><br /> <span data-ttu-id="af826-194">你可以启用中的分层的窗口[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过设置以下<xref:System.Windows.Window>属性：</span><span class="sxs-lookup"><span data-stu-id="af826-194">You can enable layered windows in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] by setting the following <xref:System.Windows.Window> properties:</span></span><br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
-## 其他资源  
- 下面的资源可帮助您分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的性能特征。  
+## <a name="other-resources"></a><span data-ttu-id="af826-195">其他资源</span><span class="sxs-lookup"><span data-stu-id="af826-195">Other Resources</span></span>  
+ <span data-ttu-id="af826-196">以下资源可帮助你分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的性能特征。</span><span class="sxs-lookup"><span data-stu-id="af826-196">The following resources can help you analyze the performance characteristics of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  
   
-### 图形呈现注册表设置  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了四个注册表设置来控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈现：  
+### <a name="graphics-rendering-registry-settings"></a><span data-ttu-id="af826-197">图形呈现注册表设置</span><span class="sxs-lookup"><span data-stu-id="af826-197">Graphics Rendering Registry Settings</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="af826-198"> 提供了 4 个注册表设置来控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈现：</span><span class="sxs-lookup"><span data-stu-id="af826-198"> provides four registry settings for controlling [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering:</span></span>  
   
-|设置|说明|  
-|--------|--------|  
-|**禁用硬件加速选项**|指定是否应启用硬件加速。|  
-|**最大多级采样值**|指定消除 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 内容锯齿的多级采样级别。|  
-|**必需的视频驱动程序日期设置**|指定系统是否对 2004 年 11 月之前发布的驱动程序禁用硬件加速。|  
-|**使用参考光栅器选项**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否应使用参考光栅器。|  
+|<span data-ttu-id="af826-199">设置</span><span class="sxs-lookup"><span data-stu-id="af826-199">Setting</span></span>|<span data-ttu-id="af826-200">描述</span><span class="sxs-lookup"><span data-stu-id="af826-200">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="af826-201">**禁用硬件加速选项**</span><span class="sxs-lookup"><span data-stu-id="af826-201">**Disable Hardware Acceleration Option**</span></span>|<span data-ttu-id="af826-202">指定是否应启用硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-202">Specifies whether hardware acceleration should be enabled.</span></span>|  
+|<span data-ttu-id="af826-203">**最大多重采样值**</span><span class="sxs-lookup"><span data-stu-id="af826-203">**Maximum Multisample Value**</span></span>|<span data-ttu-id="af826-204">指定用于消除 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 内容锯齿的多重采样级别。</span><span class="sxs-lookup"><span data-stu-id="af826-204">Specifies the degree of multisampling for antialiasing [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] content.</span></span>|  
+|<span data-ttu-id="af826-205">**必需的视频驱动程序日期设置**</span><span class="sxs-lookup"><span data-stu-id="af826-205">**Required Video Driver Date Setting**</span></span>|<span data-ttu-id="af826-206">指定系统是否对 2004 年 11 月之前发布的驱动程序禁用硬件加速。</span><span class="sxs-lookup"><span data-stu-id="af826-206">Specifies whether the system disables hardware acceleration for drivers released before November 2004.</span></span>|  
+|<span data-ttu-id="af826-207">**使用参考光栅器选项**</span><span class="sxs-lookup"><span data-stu-id="af826-207">**Use Reference Rasterizer Option**</span></span>|<span data-ttu-id="af826-208">指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否应使用参考光栅器。</span><span class="sxs-lookup"><span data-stu-id="af826-208">Specifies whether [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] should use the reference rasterizer.</span></span>|  
   
- 知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。  还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。  有关更多信息，请参见[图形呈现注册表设置](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)。  
+ <span data-ttu-id="af826-209">知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。</span><span class="sxs-lookup"><span data-stu-id="af826-209">These settings can be accessed by any external configuration utility that knows how to reference the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] registry settings.</span></span> <span data-ttu-id="af826-210">还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。</span><span class="sxs-lookup"><span data-stu-id="af826-210">These settings can also be created or modified by accessing the values directly by using the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Registry Editor.</span></span> <span data-ttu-id="af826-211">有关详细信息，请参阅[图形呈现注册表设置](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="af826-211">For more information, see [Graphics Rendering Registry Settings](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).</span></span>  
   
-### WPF 性能分析工具  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，来帮助您分析应用程序的运行时行为，并确定可以应用的性能优化的类型。  下表列出了 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具 WPF 性能套件中包括的性能分析工具：  
+### <a name="wpf-performance-profiling-tools"></a><span data-ttu-id="af826-212">WPF 性能分析工具</span><span class="sxs-lookup"><span data-stu-id="af826-212">WPF Performance Profiling Tools</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="af826-213"> 提供了一套性能分析工具，此工具可帮助分析应用程序的运行时行为，并确定可应用的性能优化类型。</span><span class="sxs-lookup"><span data-stu-id="af826-213"> provides a suite of performance profiling tools that allow you to analyze the run-time behavior of your application and determine the types of performance optimizations you can apply.</span></span> <span data-ttu-id="af826-214">下表列出了 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具中包括的性能分析工具，WPF 性能套件：</span><span class="sxs-lookup"><span data-stu-id="af826-214">The following table lists the performance profiling tools that are included in the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] tool, WPF Performance Suite:</span></span>  
   
-|工具|说明|  
-|--------|--------|  
-|分析器|用于分析呈现行为。|  
-|可视化探查器|用于按可视化树中的元素分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服务（如布局和事件处理）的使用。|  
+|<span data-ttu-id="af826-215">工具</span><span class="sxs-lookup"><span data-stu-id="af826-215">Tool</span></span>|<span data-ttu-id="af826-216">描述</span><span class="sxs-lookup"><span data-stu-id="af826-216">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="af826-217">分析器</span><span class="sxs-lookup"><span data-stu-id="af826-217">Perforator</span></span>|<span data-ttu-id="af826-218">用于分析呈现行为。</span><span class="sxs-lookup"><span data-stu-id="af826-218">Use for analyzing rendering behavior.</span></span>|  
+|<span data-ttu-id="af826-219">可视化探查器</span><span class="sxs-lookup"><span data-stu-id="af826-219">Visual Profiler</span></span>|<span data-ttu-id="af826-220">用于按可视化树中的元素分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服务（如布局和事件处理）的使用。</span><span class="sxs-lookup"><span data-stu-id="af826-220">Use for profiling the use of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] services, such as layout and event handling, by elements in the visual tree.</span></span>|  
   
- WPF 性能套件提供性能数据的丰富图形视图。  有关 WPF 性能工具的更多信息，请参见 [WPF 性能套件](../Topic/WPF%20Performance%20Suite.md)。  
+ <span data-ttu-id="af826-221">WPF 性能套件提供丰富的性能数据的图形视图。</span><span class="sxs-lookup"><span data-stu-id="af826-221">The WPF Performance Suite provides a rich, graphical view of performance data.</span></span> <span data-ttu-id="af826-222">有关 WPF 性能工具的详细信息，请参阅 [WPF 性能套件](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)。</span><span class="sxs-lookup"><span data-stu-id="af826-222">For more information about WPF performance tools, see [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).</span></span>  
   
-### DirectX 诊断工具  
- [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具 Dxdiag.exe 旨在帮助您解决与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 有关的问题。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具的默认安装文件夹是：  
+### <a name="directx-diagnostic-tool"></a><span data-ttu-id="af826-223">DirectX 诊断工具</span><span class="sxs-lookup"><span data-stu-id="af826-223">DirectX Diagnostic Tool</span></span>  
+ <span data-ttu-id="af826-224">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具 Dxdiag.exe 旨在帮助你解决与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 有关的问题。</span><span class="sxs-lookup"><span data-stu-id="af826-224">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Diagnostic Tool, Dxdiag.exe, is designed to help you troubleshoot [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-related issues.</span></span> <span data-ttu-id="af826-225">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具的默认安装文件夹是：</span><span class="sxs-lookup"><span data-stu-id="af826-225">The default installation folder for the [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Diagnostic Tool is:</span></span>  
   
  `~\Windows\System32`  
   
- 当您运行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具时，主窗口中包含一组选项卡，使您可以显示和诊断与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 有关的信息。  例如，**“系统”**选项卡提供有关您的计算机的系统信息，并指定安装在您的计算机上的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的版本。  
+ <span data-ttu-id="af826-226">运行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具时，主窗口中包含一组可用于显示和诊断 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相关信息的选项卡。</span><span class="sxs-lookup"><span data-stu-id="af826-226">When you run the [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Diagnostic Tool, the main window contains a set of tabs that allow you to display and diagnose [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-related information.</span></span> <span data-ttu-id="af826-227">例如，“系统”选项卡提供有关计算机的系统信息，并指定安装在计算机上的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="af826-227">For example, the **System** tab provides system information about your computer and specifies the version of [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] that is installed on your computer.</span></span>  
   
- ![屏幕快照：DirectX 诊断工具](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool\_01")  
-“DirectX 诊断工具”主窗口  
+ <span data-ttu-id="af826-228">![屏幕快照： DirectX 诊断工具](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")</span><span class="sxs-lookup"><span data-stu-id="af826-228">![Screenhot: DirectX Diagnostic Tool](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")</span></span>  
+<span data-ttu-id="af826-229">“DirectX 诊断工具”主窗口</span><span class="sxs-lookup"><span data-stu-id="af826-229">DirectX Diagnostic Tool main window</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.RenderCapability>   
- <xref:System.Windows.Media.RenderOptions>   
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [WPF 性能套件](../Topic/WPF%20Performance%20Suite.md)   
- [图形呈现注册表设置](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)   
- [动画提示和技巧](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a><span data-ttu-id="af826-230">另请参阅</span><span class="sxs-lookup"><span data-stu-id="af826-230">See Also</span></span>  
+ <xref:System.Windows.Media.RenderCapability>  
+ <xref:System.Windows.Media.RenderOptions>  
+ [<span data-ttu-id="af826-231">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="af826-231">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="af826-232">WPF 性能套件</span><span class="sxs-lookup"><span data-stu-id="af826-232">WPF Performance Suite</span></span>](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
+ [<span data-ttu-id="af826-233">图形呈现注册表设置</span><span class="sxs-lookup"><span data-stu-id="af826-233">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="af826-234">动画提示和技巧</span><span class="sxs-lookup"><span data-stu-id="af826-234">Animation Tips and Tricks</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

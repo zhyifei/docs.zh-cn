@@ -1,63 +1,45 @@
 ---
-title: "每个...下一条语句 (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: "For Each...Next 语句 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
 - vb.ForEachNext
 - vb.Each
 - ForEachNext
-dev_langs:
-- VB
 helpviewer_keywords:
 - infinite loops
-- Next statement, For Each...Next
+- Next statement [Visual Basic], For Each...Next
 - endless loops
-- loop structures, For Each...Next
+- loop structures [Visual Basic], For Each...Next
 - loops, endless
-- Each keyword
+- Each keyword [Visual Basic]
 - instructions, repeating
-- For Each statement
+- For Each statement [Visual Basic]
 - collections, instruction repetition
 - loops, infinite
 - For Each...Next statements
 - For keyword [Visual Basic], For Each...Next statements
-- Exit statement, For Each...Next statements
+- Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: 56
-author: stevehoag
-ms.author: shoag
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0173877fa4a57da76fd774d70ce63d2beda23ad
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "56"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 语句 (Visual Basic)
-集合中每个元素重复一的组语句。  
+# <a name="for-eachnext-statement-visual-basic"></a><span data-ttu-id="5d2bd-102">For Each...Next 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d2bd-102">For Each...Next Statement (Visual Basic)</span></span>
+<span data-ttu-id="5d2bd-103">集合中每个元素重复一的组语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-103">Repeats a group of statements for each element in a collection.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="5d2bd-104">语法</span><span class="sxs-lookup"><span data-stu-id="5d2bd-104">Syntax</span></span>  
   
 ```  
 For Each element [ As datatype ] In group  
@@ -69,134 +51,141 @@ For Each element [ As datatype ] In group
 Next [ element ]  
 ```  
   
-## <a name="parts"></a>部件  
+## <a name="parts"></a><span data-ttu-id="5d2bd-105">部件</span><span class="sxs-lookup"><span data-stu-id="5d2bd-105">Parts</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="5d2bd-106">术语</span><span class="sxs-lookup"><span data-stu-id="5d2bd-106">Term</span></span>|<span data-ttu-id="5d2bd-107">定义</span><span class="sxs-lookup"><span data-stu-id="5d2bd-107">Definition</span></span>|  
 |---|---|  
-|`element`|在所需`For Each`语句。 参数是可选的`Next`语句。 变量。 用于循环访问集合的元素。|  
-|`datatype`|如果使用`element`不已声明。 数据类型的`element`。|  
-|`group`|必需。 是集合类型或对象类型的变量。 引用的集合对其`statements`要重复。|  
-|`statements`|可选。 之间的一个或多个语句`For Each`和`Next`中每一项上运行`group`。|  
-|`Continue For`|可选。 将控制转移到的起始位置`For Each`循环。|  
-|`Exit For`|可选。 传输控件外的`For Each`循环。|  
-|`Next`|必需。 终止的定义`For Each`循环。|  
+|`element`|<span data-ttu-id="5d2bd-108">中所需`For Each`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-108">Required in the `For Each` statement.</span></span> <span data-ttu-id="5d2bd-109">参数是可选的`Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-109">Optional in the `Next` statement.</span></span> <span data-ttu-id="5d2bd-110">变量。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-110">Variable.</span></span> <span data-ttu-id="5d2bd-111">用于循环访问集合的元素。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-111">Used to iterate through the elements of the collection.</span></span>|  
+|`datatype`|<span data-ttu-id="5d2bd-112">如果存在`element`不已声明。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-112">Required if `element` isn't already declared.</span></span> <span data-ttu-id="5d2bd-113">数据类型的`element`。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-113">Data type of `element`.</span></span>|  
+|`group`|<span data-ttu-id="5d2bd-114">必需。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-114">Required.</span></span> <span data-ttu-id="5d2bd-115">具有集合类型或对象的类型的变量。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-115">A variable with a type that's a collection type or Object.</span></span> <span data-ttu-id="5d2bd-116">对其引用集合`statements`要重复。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-116">Refers to the collection over which the `statements` are to be repeated.</span></span>|  
+|`statements`|<span data-ttu-id="5d2bd-117">可选。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-117">Optional.</span></span> <span data-ttu-id="5d2bd-118">一个或多个语句之间`For Each`和`Next`运行中的每个项`group`。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-118">One or more statements between `For Each` and `Next` that run on each item in `group`.</span></span>|  
+|`Continue For`|<span data-ttu-id="5d2bd-119">可选。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-119">Optional.</span></span> <span data-ttu-id="5d2bd-120">将控制转移到开始`For Each`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-120">Transfers control to the start of the `For Each` loop.</span></span>|  
+|`Exit For`|<span data-ttu-id="5d2bd-121">可选。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-121">Optional.</span></span> <span data-ttu-id="5d2bd-122">将扩展的控制转移`For Each`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-122">Transfers control out of the `For Each` loop.</span></span>|  
+|`Next`|<span data-ttu-id="5d2bd-123">必需。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-123">Required.</span></span> <span data-ttu-id="5d2bd-124">终止的定义`For Each`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-124">Terminates the definition of the `For Each` loop.</span></span>|  
   
-## <a name="simple-example"></a>简单的示例  
- Use a `For Each`...`Next`循环时想要为集合或数组的每个元素重复的一组语句。  
+## <a name="simple-example"></a><span data-ttu-id="5d2bd-125">简单的示例</span><span class="sxs-lookup"><span data-stu-id="5d2bd-125">Simple Example</span></span>  
+ <span data-ttu-id="5d2bd-126">使用`For Each`...`Next`循环时要重复的集合或数组每个元素的一组语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-126">Use a `For Each`...`Next` loop when you want to repeat a set of statements for each element of a collection or array.</span></span>  
   
 > [!TIP]
->  A [For...下一条语句](../../../visual-basic/language-reference/statements/for-next-statement.md)正常时，您可以将每个循环迭代与控制变量相关联，并确定该变量的初始值和最终值。 但是，当您正在同一个集合，初始和最终值的概念没有意义，并且您不必知道集合中存在的元素数量。 在这种情况下， `For Each`...`Next`循环通常是更好的选择。  
+>  <span data-ttu-id="5d2bd-127">A[为...下一条语句](../../../visual-basic/language-reference/statements/for-next-statement.md)适用时，你可以将每个迭代的循环控制变量与相关联，并确定该变量的初始和最终值。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-127">A [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) works well when you can associate each iteration of a loop with a control variable and determine that variable's initial and final values.</span></span> <span data-ttu-id="5d2bd-128">但是，当你处理的集合，初始和最终值的概念不是有意义，并且不必知道集合具有的元素数量。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-128">However, when you are dealing with a collection, the concept of initial and final values isn't meaningful, and you don't necessarily know how many elements the collection has.</span></span> <span data-ttu-id="5d2bd-129">在这种情况下， `For Each`...`Next`循环通常是更好的选择。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-129">In this kind of case, a `For Each`...`Next` loop is often a better choice.</span></span>  
   
- 在下面的示例中， `For Each`...`Next` 语句循环访问列表集合中的所有元素。  
+ <span data-ttu-id="5d2bd-130">在下面的示例中， `For Each`...`Next`</span><span class="sxs-lookup"><span data-stu-id="5d2bd-130">In the following example, the `For Each`…`Next`</span></span> <span data-ttu-id="5d2bd-131">语句循环访问列表集合的所有元素。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-131">statement iterates through all the elements of a List collection.</span></span>  
   
- [!code-vb[VbVbalrStatements #&121;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- 有关更多示例，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)和[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ <span data-ttu-id="5d2bd-132">有关更多示例，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)和[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-132">For more examples, see [Collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) and [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-## <a name="nested-loops"></a>嵌套的循环  
- 您可以嵌套`For Each`通过将另一个循环内的循环。  
+## <a name="nested-loops"></a><span data-ttu-id="5d2bd-133">嵌套的循环</span><span class="sxs-lookup"><span data-stu-id="5d2bd-133">Nested Loops</span></span>  
+ <span data-ttu-id="5d2bd-134">可以嵌套`For Each`置于另一个循环内的循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-134">You can nest `For Each` loops by putting one loop within another.</span></span>  
   
- 下面的示例演示嵌套`For Each`...`Next` 结构表示。  
+ <span data-ttu-id="5d2bd-135">下面的示例演示嵌套`For Each`...`Next`</span><span class="sxs-lookup"><span data-stu-id="5d2bd-135">The following example demonstrates nested `For Each`…`Next`</span></span> <span data-ttu-id="5d2bd-136">结构。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-136">structures.</span></span>  
   
- [!code-vb[VbVbalrStatements #&122;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
   
- 每次循环时，则此嵌套循环必须具有一个唯一`element`变量。  
+ <span data-ttu-id="5d2bd-137">每个循环时，则此嵌套循环必须具有唯一`element`变量。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-137">When you nest loops, each loop must have a unique `element` variable.</span></span>  
   
- 此外可以嵌套不同类型的彼此内部控制结构。 有关详细信息，请参阅[嵌套的控制结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
+ <span data-ttu-id="5d2bd-138">此外可以嵌套不同类型的每个其他控件结构。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-138">You can also nest different kinds of control structures within each other.</span></span> <span data-ttu-id="5d2bd-139">有关详细信息，请参阅[嵌套控制结构](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-139">For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).</span></span>  
   
-## <a name="exit-for-and-continue-for"></a>有关退出并继续  
- [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)语句会导致执行退出`For`...`Next` 为后面的语句的循环，并将控制权`Next`语句。  
+## <a name="exit-for-and-continue-for"></a><span data-ttu-id="5d2bd-140">退出的针对并继续</span><span class="sxs-lookup"><span data-stu-id="5d2bd-140">Exit For and Continue For</span></span>  
+ <span data-ttu-id="5d2bd-141">[Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)语句会导致执行退出`For`...`Next`</span><span class="sxs-lookup"><span data-stu-id="5d2bd-141">The [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) statement causes execution to exit the `For`…`Next`</span></span> <span data-ttu-id="5d2bd-142">到后面的语句的循环，并将控制权`Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-142">loop and transfers control to the statement that follows the `Next` statement.</span></span>  
   
- `Continue For`语句将控制权立即到循环的下一个迭代。 有关详细信息，请参阅[继续语句](../../../visual-basic/language-reference/statements/continue-statement.md)。  
+ <span data-ttu-id="5d2bd-143">`Continue For`语句将控制权立即到循环的下一个迭代。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-143">The `Continue For` statement transfers control immediately to the next iteration of the loop.</span></span> <span data-ttu-id="5d2bd-144">有关详细信息，请参阅[继续语句](../../../visual-basic/language-reference/statements/continue-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-144">For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).</span></span>  
   
- 下面的示例演示如何使用`Continue For`和`Exit For`语句。  
+ <span data-ttu-id="5d2bd-145">下面的示例演示如何使用`Continue For`和`Exit For`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-145">The following example shows how to use the `Continue For` and `Exit For` statements.</span></span>  
   
- [!code-vb[VbVbalrStatements #&123;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
   
- 你可以放置任意数量的`Exit For`中的语句`For Each`循环。 当使用内嵌套`For Each`循环，`Exit For`会导致执行到下一个较高级别的嵌套退出最里面的循环，并将控制权。  
+ <span data-ttu-id="5d2bd-146">你可以放置任意数量的`Exit For`中的语句`For Each`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-146">You can put any number of `Exit For` statements in a `For Each` loop.</span></span> <span data-ttu-id="5d2bd-147">当使用内嵌套`For Each`循环，`Exit For`会导致执行到下一步较高级别的嵌套退出最内部的循环，并将控制权。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-147">When used within nested `For Each` loops, `Exit For` causes execution to exit the innermost loop and transfers control to the next higher level of nesting.</span></span>  
   
- `Exit For`通常在某些条件的评估后使用，因为在`If`...`Then`...`Else`结构。 您可能想要使用`Exit For`针对下列条件︰  
+ <span data-ttu-id="5d2bd-148">`Exit For`通常使用某种条件; 评估之后例如，在`If`...`Then`...`Else`结构。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-148">`Exit For` is often used after an evaluation of some condition, for example, in an `If`...`Then`...`Else` structure.</span></span> <span data-ttu-id="5d2bd-149">你可能想要使用`Exit For`在以下情况：</span><span class="sxs-lookup"><span data-stu-id="5d2bd-149">You might want to use `Exit For` for the following conditions:</span></span>  
   
--   继续循环不必要或不可能。 这可能引起错误的值或终止请求。  
+-   <span data-ttu-id="5d2bd-150">继续循环是不必要或无法完成。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-150">Continuing to iterate is unnecessary or impossible.</span></span> <span data-ttu-id="5d2bd-151">这可能引起错误的值或终止请求。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-151">This might be caused by an erroneous value or a termination request.</span></span>  
   
--   中捕获到异常`Try`...`Catch`...`Finally`. 您可以使用`Exit For`末尾`Finally`块。  
+-   <span data-ttu-id="5d2bd-152">在捕获了一个异常`Try`...`Catch`...`Finally`.你可以使用`Exit For`末尾`Finally`块。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-152">An exception is caught in a `Try`...`Catch`...`Finally`. You might use `Exit For` at the end of the `Finally` block.</span></span>  
   
--   存在无限循环，这是一个循环，无法运行大型或甚至无限数量的次数。 如果检测到此类情况，则可以使用`Exit For`来退出循环。 有关详细信息，请参阅[做...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
+-   <span data-ttu-id="5d2bd-153">存在无限循环，即无法运行大型或甚至无限数量的次数的循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-153">There an endless loop, which is a loop that could run a large or even infinite number of times.</span></span> <span data-ttu-id="5d2bd-154">如果检测到此类条件，则可以使用`Exit For`来退出循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-154">If you detect such a condition, you can use `Exit For` to escape the loop.</span></span> <span data-ttu-id="5d2bd-155">有关详细信息，请参阅[执行...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-155">For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).</span></span>  
   
-## <a name="iterators"></a>迭代器  
- 您使用*迭代器*要在集合上执行自定义的迭代。 一个迭代器，可以是函数或`Get`取值函数。 它使用`Yield`语句可返回一次该集合的每个元素。  
+## <a name="iterators"></a><span data-ttu-id="5d2bd-156">迭代器</span><span class="sxs-lookup"><span data-stu-id="5d2bd-156">Iterators</span></span>  
+ <span data-ttu-id="5d2bd-157">你使用*迭代器*来对集合执行自定义迭代。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-157">You use an *iterator* to perform a custom iteration over a collection.</span></span> <span data-ttu-id="5d2bd-158">迭代器可以是函数或`Get`访问器。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-158">An iterator can be a function or a `Get` accessor.</span></span> <span data-ttu-id="5d2bd-159">它使用`Yield`语句以返回一次的集合的每个元素。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-159">It uses a `Yield` statement to return each element of the collection one at a time.</span></span>  
   
- 通过使用调用迭代器`For Each...Next`语句。 每次迭代`For Each`循环就会调用迭代器。 当`Yield`中迭代器中的表达式到达语句`Yield`返回语句，且不保留代码中的当前位置。 下次调用迭代器时，将从该位置重新开始执行。  
+ <span data-ttu-id="5d2bd-160">通过调用迭代器`For Each...Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-160">You call an iterator by using a `For Each...Next` statement.</span></span> <span data-ttu-id="5d2bd-161">`For Each` 循环的每次迭代都会调用迭代器。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-161">Each iteration of the `For Each` loop calls the iterator.</span></span> <span data-ttu-id="5d2bd-162">当`Yield`语句达到迭代器中的表达式中`Yield`语句会返回，并保留当前代码中的位置。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-162">When a `Yield` statement is reached in the iterator, the expression in the `Yield` statement is returned, and the current location in code is retained.</span></span> <span data-ttu-id="5d2bd-163">下次调用迭代器时，将从该位置重新开始执行。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-163">Execution is restarted from that location the next time that the iterator is called.</span></span>  
   
- 下面的示例使用迭代器函数。 迭代器函数具有`Yield`内的语句[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。 在`ListEvenNumbers`方法时，每次迭代`For Each`语句体创建了迭代器函数，它将继续到下一个调用`Yield`语句。  
+ <span data-ttu-id="5d2bd-164">下面的示例使用迭代器函数。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-164">The following example uses an iterator function.</span></span> <span data-ttu-id="5d2bd-165">迭代器函数具有`Yield`语句内[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-165">The iterator function has a `Yield` statement that's inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop.</span></span> <span data-ttu-id="5d2bd-166">在`ListEvenNumbers`方法时，每次迭代`For Each`语句体创建对迭代器函数，并将继续到下一步的调用`Yield`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-166">In the `ListEvenNumbers` method, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.</span></span>  
   
- [!code-vb[VbVbalrStatements #&127;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- 有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)， [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)，和[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
+ <span data-ttu-id="5d2bd-167">有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)， [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)，和[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-167">For more information, see [Iterators](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [Yield Statement](../../../visual-basic/language-reference/statements/yield-statement.md), and [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).</span></span>  
   
-## <a name="technical-implementation"></a>技术实现  
- 当`For Each`...`Next` 运行语句时，Visual Basic 集合只有一次，在循环开始之前进行评估。 如果更改了语句块`element`或`group`，这些更改不会影响循环的迭代。  
+## <a name="technical-implementation"></a><span data-ttu-id="5d2bd-168">技术实现</span><span class="sxs-lookup"><span data-stu-id="5d2bd-168">Technical Implementation</span></span>  
+ <span data-ttu-id="5d2bd-169">当`For Each`...`Next`</span><span class="sxs-lookup"><span data-stu-id="5d2bd-169">When a `For Each`…`Next`</span></span> <span data-ttu-id="5d2bd-170">语句在运行时，Visual Basic 对集合仅一次，循环启动之前进行评估。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-170">statement runs, Visual Basic evaluates the collection only one time, before the loop starts.</span></span> <span data-ttu-id="5d2bd-171">如果语句块更改`element`或`group`，这些更改不会影响循环的迭代。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-171">If your statement block changes `element` or `group`, these changes don't affect the iteration of the loop.</span></span>  
   
- 当在集合中的所有元素已连续都分配给`element`、`For Each`循环停止并将控制权传递到后面的语句`Next`语句。  
+ <span data-ttu-id="5d2bd-172">当集合中的所有元素已依次都分配给`element`、`For Each`循环停止并将控制权传递到后面的语句`Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-172">When all the elements in the collection have been successively assigned to `element`, the `For Each` loop stops and control passes to the statement following the `Next` statement.</span></span>  
   
- 如果`element`尚未被外部声明该循环中，您必须将其声明中`For Each`语句。 您可以声明的类型`element`使用由显式`As`语句，或者您可以依赖类型推断为指定类型。 在任一情况下，范围`element`是循环的正文。 但是，不能声明`element`循环内外。  
+ <span data-ttu-id="5d2bd-173">如果`element`尚未已之外声明该循环中，你必须将其声明中`For Each`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-173">If `element` hasn't been declared outside this loop, you must declare it in the `For Each` statement.</span></span> <span data-ttu-id="5d2bd-174">你可以声明的类型`element`通过使用显式`As`语句，或者你可以依赖于分配类型的类型推理。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-174">You can declare the type of `element` explicitly by using an `As` statement, or you can rely on type inference to assign the type.</span></span> <span data-ttu-id="5d2bd-175">在任一情况下的作用域`element`是循环的正文。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-175">In either case, the scope of `element` is the body of the loop.</span></span> <span data-ttu-id="5d2bd-176">但是，您無法宣告`element`循环内外。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-176">However, you cannot declare `element` both outside and inside the loop.</span></span>  
   
- 您可以选择指定`element`中`Next`语句。 这可以提高您的程序的可读性，尤其是在具有嵌套`For Each`循环。 你必须指定相同的变量作为出现在对应的那个`For Each`语句。  
+ <span data-ttu-id="5d2bd-177">你可以选择指定`element`中`Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-177">You can optionally specify `element` in the `Next` statement.</span></span> <span data-ttu-id="5d2bd-178">这可以改善你程序的可读性，尤其是在具有嵌套`For Each`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-178">This improves the readability of your program, especially if you have nested `For Each` loops.</span></span> <span data-ttu-id="5d2bd-179">你必须指定相同的变量为显示在相应的一个`For Each`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-179">You must specify the same variable as the one that appears in the corresponding `For Each` statement.</span></span>  
   
- 您可能想要避免更改的值`element`在一个循环内。 执行此操作可以导致更难以阅读和调试代码。 更改的值`group`不会影响该集合或它的元素，在第一次进入循环时已确定。  
+ <span data-ttu-id="5d2bd-180">你可能想要避免更改的值`element`循环内。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-180">You might want to avoid changing the value of `element` inside a loop.</span></span> <span data-ttu-id="5d2bd-181">执行此操作可以导致更难读取和调试你的代码。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-181">Doing this can make it more difficult to read and debug your code.</span></span> <span data-ttu-id="5d2bd-182">更改的值`group`不会影响集合或其元素，用于确定第一次键入循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-182">Changing the value of `group` doesn't affect the collection or its elements, which were determined when the loop was first entered.</span></span>  
   
- 当在嵌套循环中，如果`Next`外部的嵌套级别语句遇到过`Next`作为内部级别的编译器会引发错误。 但是，编译器可检测到这仅在您指定重叠错误`element`中每个`Next`语句。  
+ <span data-ttu-id="5d2bd-183">当要嵌套循环，如果`Next`外部的嵌套级别的语句遇到过`Next`的一个内部级别，编译器将引发错误。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-183">When you're nesting loops, if a `Next` statement of an outer nesting level is encountered before the `Next` of an inner level, the compiler signals an error.</span></span> <span data-ttu-id="5d2bd-184">但是，编译器可以检测到这只有在指定重叠错误`element`中每个`Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-184">However, the compiler can detect this overlapping error only if you specify `element` in every `Next` statement.</span></span>  
   
- 如果您的代码依赖于遍历以特定的顺序集合`For Each`...`Next`循环不是最佳选择，除非您知道的枚举器对象的特征，否则该集合公开。 遍历的顺序不由 Visual Basic 中，而是由确定<xref:System.Collections.IEnumerator.MoveNext%2A>的枚举数对象的方法。</xref:System.Collections.IEnumerator.MoveNext%2A> 因此，您可能无法预测集合中的哪个元素是在中返回的第一个`element`，或者它的下一个要返回给定元素的后面。 您可能会获得更可靠的结果使用其他循环结构，如`For`...`Next` or `Do`...`Loop`.  
+ <span data-ttu-id="5d2bd-185">如果你的代码依赖于遍历以特定的顺序集合`For Each`...`Next`循环不是最佳选择，除非你知道的枚举器对象的特征，否则该集合公开。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-185">If your code depends on traversing a collection in a particular order, a `For Each`...`Next` loop isn't the best choice, unless you know the characteristics of the enumerator object the collection exposes.</span></span> <span data-ttu-id="5d2bd-186">遍历的顺序不确定的 Visual Basic 中，但通过<xref:System.Collections.IEnumerator.MoveNext%2A>的枚举器对象的方法。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-186">The order of traversal isn't determined by Visual Basic, but by the <xref:System.Collections.IEnumerator.MoveNext%2A> method of the enumerator object.</span></span> <span data-ttu-id="5d2bd-187">因此，你可能无法预测哪些集合的元素是在中返回的第一个`element`，或者其中的下一个要返回给定元素之后。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-187">Therefore, you might not be able to predict which element of the collection is the first to be returned in `element`, or which is the next to be returned after a given element.</span></span> <span data-ttu-id="5d2bd-188">您可能会获得更可靠的结果，如使用不同的循环结构， `For`...`Next`或`Do`...`Loop`.</span><span class="sxs-lookup"><span data-stu-id="5d2bd-188">You might achieve more reliable results using a different loop structure, such as `For`...`Next` or `Do`...`Loop`.</span></span>  
   
- 数据类型`element`这样的数据类型的元素必须是`group`可以转换为它。  
+ <span data-ttu-id="5d2bd-189">数据类型`element`必须是这样，数据类型的元素的`group`可以转换为它。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-189">The data type of `element` must be such that the data type of the elements of `group` can be converted to it.</span></span>  
   
- 数据类型`group`必须是指的是集合或数组，它是可枚举的引用类型。 通常这意味着`group`实现的对象是指<xref:System.Collections.IEnumerable>接口`System.Collections`命名空间或<xref:System.Collections.Generic.IEnumerable%601>接口`System.Collections.Generic`命名空间。</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable> `System.Collections.IEnumerable`定义<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，它返回集合的枚举器对象。</xref:System.Collections.IEnumerable.GetEnumerator%2A> 枚举数对象实现`System.Collections.IEnumerator`接口`System.Collections`命名空间，并公开<xref:System.Collections.IEnumerator.Current%2A>属性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。</xref:System.Collections.IEnumerator.MoveNext%2A> </xref:System.Collections.IEnumerator.Reset%2A> </xref:System.Collections.IEnumerator.Current%2A> Visual Basic 使用这些来遍历该集合。  
+ <span data-ttu-id="5d2bd-190">数据类型`group`必须指的是集合或数组，它是可枚举是引用类型。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-190">The data type of `group` must be a reference type that refers to a collection or an array that's enumerable.</span></span> <span data-ttu-id="5d2bd-191">通常这意味着，`group`实现的对象是指<xref:System.Collections.IEnumerable>界面`System.Collections`命名空间或<xref:System.Collections.Generic.IEnumerable%601>界面`System.Collections.Generic`命名空间。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-191">Most commonly this means that `group` refers to an object that implements the <xref:System.Collections.IEnumerable> interface of the `System.Collections` namespace or the <xref:System.Collections.Generic.IEnumerable%601> interface of the `System.Collections.Generic` namespace.</span></span> <span data-ttu-id="5d2bd-192">`System.Collections.IEnumerable`定义<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，返回集合的枚举器对象。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-192">`System.Collections.IEnumerable` defines the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method, which returns an enumerator object for the collection.</span></span> <span data-ttu-id="5d2bd-193">枚举器对象实现`System.Collections.IEnumerator`界面`System.Collections`命名空间，并公开<xref:System.Collections.IEnumerator.Current%2A>属性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-193">The enumerator object implements the `System.Collections.IEnumerator` interface of the `System.Collections` namespace and exposes the <xref:System.Collections.IEnumerator.Current%2A> property and the <xref:System.Collections.IEnumerator.Reset%2A> and <xref:System.Collections.IEnumerator.MoveNext%2A> methods.</span></span> <span data-ttu-id="5d2bd-194">Visual Basic 使用这些遍历该集合。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-194">Visual Basic uses these to traverse the collection.</span></span>  
   
-### <a name="narrowing-conversions"></a>收缩转换  
- 当`Option Strict`设置为`On`，收缩转换通常会导致编译器错误。 在`For Each`语句，但是，从中的元素的转换`group`到`element`进行求值和在运行时执行收缩转换所致的编译器错误将被抑制。  
+### <a name="narrowing-conversions"></a><span data-ttu-id="5d2bd-195">收缩转换</span><span class="sxs-lookup"><span data-stu-id="5d2bd-195">Narrowing Conversions</span></span>  
+ <span data-ttu-id="5d2bd-196">当`Option Strict`设置为`On`，收缩转换通常会导致编译器错误。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-196">When `Option Strict` is set to `On`, narrowing conversions ordinarily cause compiler errors.</span></span> <span data-ttu-id="5d2bd-197">在`For Each`语句，但是，从中的元素的转换`group`到`element`进行求值和执行在运行时，编译器错误引起的收缩转换将被抑制。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-197">In a `For Each` statement, however, conversions from the elements in `group` to `element` are evaluated and performed at run time, and compiler errors caused by narrowing conversions are suppressed.</span></span>  
   
- 在下面的示例中，分配`m`的初始值为`n`时将不会编译`Option Strict`打开，因为转换`Long`到`Integer`是收缩转换。 在`For Each`语句，但是，没有编译器错误是，即使报告分配给`number`要求从同一转换`Long`到`Integer`。 在`For Each`语句中包含很多，运行时错误发生时<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>应用于较大的数字。</xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>  
+ <span data-ttu-id="5d2bd-198">在下面的示例中，分配`m`作为初始值为`n`时将不会编译`Option Strict`打开，因为转换`Long`到`Integer`都是收缩转换。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-198">In the following example, the assignment of `m` as the initial value for `n` doesn't compile when `Option Strict` is on because the conversion of a `Long` to an `Integer` is a narrowing conversion.</span></span> <span data-ttu-id="5d2bd-199">在`For Each`语句，但是，任何编译器错误是报告，即使分配给的`number`需要从相同的转换`Long`到`Integer`。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-199">In the `For Each` statement, however, no compiler error is reported, even though the assignment to `number` requires the same conversion from `Long` to `Integer`.</span></span> <span data-ttu-id="5d2bd-200">在`For Each`包含大量的语句，运行时错误发生时<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>应用于数量很大。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-200">In the `For Each` statement that contains a large number, a run-time error occurs when <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> is applied to the large number.</span></span>  
   
- [!code-vb[VbVbalrStatements #&89;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
   
-### <a name="ienumerator-calls"></a>IEnumerator 调用  
- 当执行`For Each`...`Next`循环启动时，Visual Basic 验证`group`指的是有效的集合对象。 如果没有，则它引发异常。 否则，它调用<xref:System.Collections.IEnumerator.MoveNext%2A>方法和<xref:System.Collections.IEnumerator.Current%2A>要返回的第一个元素的枚举数对象的属性。</xref:System.Collections.IEnumerator.Current%2A> </xref:System.Collections.IEnumerator.MoveNext%2A> 如果`MoveNext`指示是否有没有下一个元素，即如果该集合为空，`For Each`循环停止并将控制权传递到后面的语句`Next`语句。 否则，则 Visual Basic 设置`element`到第一个元素和运行此语句块。  
+### <a name="ienumerator-calls"></a><span data-ttu-id="5d2bd-201">IEnumerator 调用</span><span class="sxs-lookup"><span data-stu-id="5d2bd-201">IEnumerator Calls</span></span>  
+ <span data-ttu-id="5d2bd-202">当执行`For Each`...`Next`循环启动时，Visual Basic 验证`group`引用有效的集合对象。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-202">When execution of a `For Each`...`Next` loop starts, Visual Basic verifies that `group` refers to a valid collection object.</span></span> <span data-ttu-id="5d2bd-203">如果没有，则会引发异常。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-203">If not, it throws an exception.</span></span> <span data-ttu-id="5d2bd-204">否则，它会调用<xref:System.Collections.IEnumerator.MoveNext%2A>方法和<xref:System.Collections.IEnumerator.Current%2A>要返回的第一个元素的枚举器对象的属性。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-204">Otherwise, it calls the <xref:System.Collections.IEnumerator.MoveNext%2A> method and the <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object to return the first element.</span></span> <span data-ttu-id="5d2bd-205">如果`MoveNext`指示是否有没有下一个元素，即，如果该集合为空，`For Each`循环停止并将控制权传递到后面的语句`Next`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-205">If `MoveNext` indicates that there is no next element, that is, if the collection is empty, the `For Each` loop stops and control passes to the statement following the `Next` statement.</span></span> <span data-ttu-id="5d2bd-206">否则，Visual Basic 会将设置`element`到第一个元素和运行此语句块。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-206">Otherwise, Visual Basic sets `element` to the first element and runs the statement block.</span></span>  
   
- 每次 Visual Basic 遇到`Next`语句，它返回到`For Each`语句。 它将再次调用`MoveNext`和`Current`要返回的下一个元素，并再次运行块或停止根据结果的循环。 此过程将继续，直至`MoveNext`指示没有下一个元素或`Exit For`遇到语句。  
+ <span data-ttu-id="5d2bd-207">每次 Visual Basic 遇到`Next`语句，它返回到`For Each`语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-207">Each time Visual Basic encounters the `Next` statement, it returns to the `For Each` statement.</span></span> <span data-ttu-id="5d2bd-208">它将再次调用`MoveNext`和`Current`以返回下一个元素，并再次运行块，也不停止根据结果循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-208">Again it calls `MoveNext` and `Current` to return the next element, and again it either runs the block or stops the loop depending on the result.</span></span> <span data-ttu-id="5d2bd-209">此过程将继续，直至`MoveNext`指示没有下一个元素或`Exit For`遇到语句。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-209">This process continues until `MoveNext` indicates that there is no next element or an `Exit For` statement is encountered.</span></span>  
   
- **对集合进行修改。** 返回的枚举器对象<xref:System.Collections.IEnumerable.GetEnumerator%2A>通常不允许您通过添加、 删除、 替换或重新排列任何元素更改集合。</xref:System.Collections.IEnumerable.GetEnumerator%2A> 如果您已经启动后更改集合`For Each`...`Next`循环中，枚举器对象将变为无效，并访问的元素的下一步尝试导致<xref:System.InvalidOperationException>异常。</xref:System.InvalidOperationException>  
+ <span data-ttu-id="5d2bd-210">**修改集合。**</span><span class="sxs-lookup"><span data-stu-id="5d2bd-210">**Modifying the Collection.**</span></span> <span data-ttu-id="5d2bd-211">返回的枚举器对象<xref:System.Collections.IEnumerable.GetEnumerator%2A>通常不允许您更改通过添加、 删除、 替换或重新排序的任何元素的集合。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-211">The enumerator object returned by <xref:System.Collections.IEnumerable.GetEnumerator%2A> normally doesn't let you change the collection by adding, deleting, replacing, or reordering any elements.</span></span> <span data-ttu-id="5d2bd-212">如果你更改的集合，您已经启动后`For Each`...`Next`循环的枚举器对象将变为无效，和下一步尝试访问的元素会导致<xref:System.InvalidOperationException>异常。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-212">If you change the collection after you have initiated a `For Each`...`Next` loop, the enumerator object becomes invalid, and the next attempt to access an element causes an <xref:System.InvalidOperationException> exception.</span></span>  
   
- 但是，修改此阻止不由[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，而是通过实现<xref:System.Collections.IEnumerable>接口。</xref:System.Collections.IEnumerable> 它是可以实现`IEnumerable`允许在迭代期间修改的方式。 如果您正在考虑进行这种动态修改，请确保您了解的特征`IEnumerable`上正在使用的集合实现。  
+ <span data-ttu-id="5d2bd-213">但是，修改此阻止不由[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，而是通过实现<xref:System.Collections.IEnumerable>接口。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-213">However, this blocking of modification isn't determined by [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], but rather by the implementation of the <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="5d2bd-214">就能实现`IEnumerable`以允许进行迭代过程修改一种。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-214">It is possible to implement `IEnumerable` in a way that allows for modification during iteration.</span></span> <span data-ttu-id="5d2bd-215">如果你正在考虑进行这种动态修改，请确保你了解的特征`IEnumerable`你使用的集合上实现。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-215">If you are considering doing such dynamic modification, make sure that you understand the characteristics of the `IEnumerable` implementation on the collection you are using.</span></span>  
   
- **修改集合元素。** <xref:System.Collections.IEnumerator.Current%2A>枚举器对象的属性是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，并返回集合中的每个元素的本地副本。</xref:System.Collections.IEnumerator.Current%2A> 这意味着您不能修改这些元素本身中`For Each`...`Next` loop. 您所做的任何修改会影响中的本地副本`Current`而不反映回基础集合。 但是，如果元素是引用类型，您可以修改它所指向的实例的成员。 下面的示例修改`BackColor`的每个成员`thisControl`元素。 但是，不能修改`thisControl`本身。  
+ <span data-ttu-id="5d2bd-216">**修改集合元素。**</span><span class="sxs-lookup"><span data-stu-id="5d2bd-216">**Modifying Collection Elements.**</span></span> <span data-ttu-id="5d2bd-217"><xref:System.Collections.IEnumerator.Current%2A>的枚举器对象的属性是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，并返回每个集合元素的本地副本。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-217">The <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object is [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), and it returns a local copy of each collection element.</span></span> <span data-ttu-id="5d2bd-218">这意味着，你不能修改元素本身中`For Each`...`Next`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-218">This means that you cannot modify the elements themselves in a `For Each`...`Next` loop.</span></span> <span data-ttu-id="5d2bd-219">你所做的任何修改会影响仅从本地复制`Current`并不反映回基础集合。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-219">Any modification you make affects only the local copy from `Current` and isn't reflected back into the underlying collection.</span></span> <span data-ttu-id="5d2bd-220">但是，如果元素是引用类型，则可以修改它所指向的实例的成员。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-220">However, if an element is a reference type, you can modify the members of the instance to which it points.</span></span> <span data-ttu-id="5d2bd-221">下面的示例修改`BackColor`的每个成员`thisControl`元素。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-221">The following example modifies the `BackColor` member of each `thisControl` element.</span></span> <span data-ttu-id="5d2bd-222">但是，不能修改`thisControl`本身。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-222">You cannot, however, modify `thisControl` itself.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
- 前面的示例可以修改`BackColor`的每个成员`thisControl`元素，但是不能修改`thisControl`本身。  
+```vb  
+Sub lightBlueBackground(ByVal thisForm As System.Windows.Forms.Form)  
+    For Each thisControl As System.Windows.Forms.Control In thisForm.Controls  
+        thisControl.BackColor = System.Drawing.Color.LightBlue  
+    Next thisControl  
+End Sub  
+```  
   
- **遍历数组进行初始化。** 因为<xref:System.Array>类实现<xref:System.Collections.IEnumerable>接口，所有数组都公开<xref:System.Array.GetEnumerator%2A>方法。</xref:System.Array.GetEnumerator%2A> </xref:System.Collections.IEnumerable> </xref:System.Array> 这意味着您可以循环访问数组`For Each`...`Next` loop. 但是，只能读取数组元素。 你不能更改它们。  
+ <span data-ttu-id="5d2bd-223">前面的示例可以修改`BackColor`的每个成员`thisControl`元素，但是不能修改`thisControl`本身。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-223">The previous example can modify the `BackColor` member of each `thisControl` element, although it cannot modify `thisControl` itself.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例列出在 C:\ 目录中的所有文件夹使用<xref:System.IO.DirectoryInfo>类。</xref:System.IO.DirectoryInfo>  
+ <span data-ttu-id="5d2bd-224">**通过遍历数组。**</span><span class="sxs-lookup"><span data-stu-id="5d2bd-224">**Traversing Arrays.**</span></span> <span data-ttu-id="5d2bd-225">因为<xref:System.Array>类实现<xref:System.Collections.IEnumerable>接口，所有数组都公开<xref:System.Array.GetEnumerator%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-225">Because the <xref:System.Array> class implements the <xref:System.Collections.IEnumerable> interface, all arrays expose the <xref:System.Array.GetEnumerator%2A> method.</span></span> <span data-ttu-id="5d2bd-226">这意味着你可以循环访问数组与`For Each`...`Next`循环。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-226">This means that you can iterate through an array with a `For Each`...`Next` loop.</span></span> <span data-ttu-id="5d2bd-227">但是，你只能读取数组元素。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-227">However, you can only read the array elements.</span></span> <span data-ttu-id="5d2bd-228">你不能更改它们。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-228">You cannot change them.</span></span>  
   
- [!code-vb[VbVbalrStatements #&124;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+## <a name="example"></a><span data-ttu-id="5d2bd-229">示例</span><span class="sxs-lookup"><span data-stu-id="5d2bd-229">Example</span></span>  
+ <span data-ttu-id="5d2bd-230">下面的示例通过使用列出的 C:\ 目录中的所有文件夹<xref:System.IO.DirectoryInfo>类。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-230">The following example lists all the folders in the C:\ directory by using the <xref:System.IO.DirectoryInfo> class.</span></span>  
   
-## <a name="example"></a>示例  
- 以下示例阐释了对集合排序的过程。 该示例进行排序的实例`Car` <xref:System.Collections.Generic.List%601>。</xref:System.Collections.Generic.List%601>中存储的类 `Car`类实现<xref:System.IComparable%601>接口，此操作需要<xref:System.IComparable%601.CompareTo%2A>方法来实现。</xref:System.IComparable%601.CompareTo%2A> </xref:System.IComparable%601>  
+ [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
- 每次调用<xref:System.IComparable%601.CompareTo%2A>方法可用于排序的一个比较。</xref:System.IComparable%601.CompareTo%2A> 用户编写的代码中`CompareTo`方法返回当前对象与另一个对象的每个比较的值。 如果当前对象小于另一个对象，则返回的值小于零；如果当前对象大于另一个对象，则返回的值大于零；如果当前对象等于另一个对象，则返回的值等于零。 这使你可以在代码中定义大于、小于和等于条件。  
+## <a name="example"></a><span data-ttu-id="5d2bd-231">示例</span><span class="sxs-lookup"><span data-stu-id="5d2bd-231">Example</span></span>  
+ <span data-ttu-id="5d2bd-232">以下示例阐释了对集合排序的过程。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-232">The following example illustrates a procedure for sorting a collection.</span></span> <span data-ttu-id="5d2bd-233">该示例实例进行排序`Car`存储中的类<xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-233">The example sorts instances of a `Car` class that are stored in a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="5d2bd-234">`Car` 类实现 <xref:System.IComparable%601> 接口，此操作需要实现 <xref:System.IComparable%601.CompareTo%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-234">The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.</span></span>  
   
- 在`ListCars`方法，`cars.Sort()`语句对列表进行排序。 此调用<xref:System.Collections.Generic.List%601.Sort%2A>方法<xref:System.Collections.Generic.List%601>导致`CompareTo`方法来对自动调用`Car`中的对象`List`。</xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.List%601.Sort%2A>  
+ <span data-ttu-id="5d2bd-235">每次调用<xref:System.IComparable%601.CompareTo%2A>方法可用于排序的单一比较。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-235">Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that's used for sorting.</span></span> <span data-ttu-id="5d2bd-236">`CompareTo` 方法中用户编写的代码针对当前对象与另一个对象的每个比较返回一个值。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-236">User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object.</span></span> <span data-ttu-id="5d2bd-237">如果当前对象小于另一个对象，则返回的值小于零；如果当前对象大于另一个对象，则返回的值大于零；如果当前对象等于另一个对象，则返回的值等于零。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-237">The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal.</span></span> <span data-ttu-id="5d2bd-238">这使你可以在代码中定义大于、小于和等于条件。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-238">This enables you to define in code the criteria for greater than, less than, and equal.</span></span>  
   
- [!code-vb[VbVbalrStatements #&125;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ <span data-ttu-id="5d2bd-239">在 `ListCars` 方法中，`cars.Sort()` 语句对列表进行排序。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-239">In the `ListCars` method, the `cars.Sort()` statement sorts the list.</span></span> <span data-ttu-id="5d2bd-240">对 <xref:System.Collections.Generic.List%601> 的 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的此调用将导致为 `List` 中的 `Car` 对象自动调用 `CompareTo` 方法。</span><span class="sxs-lookup"><span data-stu-id="5d2bd-240">This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
- [有关...下一条语句](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [循环结构](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [While...While 语句结束](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [执行操作...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+ [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+  
+## <a name="see-also"></a><span data-ttu-id="5d2bd-241">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5d2bd-241">See Also</span></span>  
+ [<span data-ttu-id="5d2bd-242">集合</span><span class="sxs-lookup"><span data-stu-id="5d2bd-242">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [<span data-ttu-id="5d2bd-243">For...Next 语句</span><span class="sxs-lookup"><span data-stu-id="5d2bd-243">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="5d2bd-244">循环结构</span><span class="sxs-lookup"><span data-stu-id="5d2bd-244">Loop Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="5d2bd-245">While...End While 语句</span><span class="sxs-lookup"><span data-stu-id="5d2bd-245">While...End While Statement</span></span>](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [<span data-ttu-id="5d2bd-246">Do...Loop 语句</span><span class="sxs-lookup"><span data-stu-id="5d2bd-246">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [<span data-ttu-id="5d2bd-247">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="5d2bd-247">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [<span data-ttu-id="5d2bd-248">对象初始值设定项：命名类型和匿名类型</span><span class="sxs-lookup"><span data-stu-id="5d2bd-248">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="5d2bd-249">集合初始值设定项</span><span class="sxs-lookup"><span data-stu-id="5d2bd-249">Collection Initializers</span></span>](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [<span data-ttu-id="5d2bd-250">阵列</span><span class="sxs-lookup"><span data-stu-id="5d2bd-250">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -5,67 +5,59 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ebd50589c1ee2710e9d5dfe2c5110554be19ca5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6eec726342381f7e3ec71aeedd2ff012bc6c3e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
-有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  
+# <a name="secure-coding-guidelines-for-unmanaged-code"></a><span data-ttu-id="34fcf-102">托管代码的安全编码指南</span><span class="sxs-lookup"><span data-stu-id="34fcf-102">Secure Coding Guidelines for Unmanaged Code</span></span>
+<span data-ttu-id="34fcf-103">有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。</span><span class="sxs-lookup"><span data-stu-id="34fcf-103">Some library code needs to call into unmanaged code (for example, native code APIs, such as Win32).</span></span> <span data-ttu-id="34fcf-104">因为这意味着超出托管代码的安全外围，所以需要适当小心。</span><span class="sxs-lookup"><span data-stu-id="34fcf-104">Because this means going outside the security perimeter for managed code, due caution is required.</span></span> <span data-ttu-id="34fcf-105">如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。</span><span class="sxs-lookup"><span data-stu-id="34fcf-105">If your code is security-neutral, both your code and any code that calls it must have unmanaged code permission (<xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specified).</span></span>  
   
- 但是，调用方具有如此强大的权限通常是不合理的。 在这种情况下，受信任的代码可充当中介，类似于 [保护包装代码](../../../docs/framework/misc/securing-wrapper-code.md)中所述的托管包装或库代码。 如果基础的非托管代码的功能是完全安全的，则可直接将其公开；否则，首先需要进行合适权限的检查（要求）。  
+ <span data-ttu-id="34fcf-106">但是，调用方具有如此强大的权限通常是不合理的。</span><span class="sxs-lookup"><span data-stu-id="34fcf-106">However, it is often unreasonable for your caller to have such powerful permissions.</span></span> <span data-ttu-id="34fcf-107">在这种情况下，受信任的代码可充当中介，类似于 [保护包装代码](../../../docs/framework/misc/securing-wrapper-code.md)中所述的托管包装或库代码。</span><span class="sxs-lookup"><span data-stu-id="34fcf-107">In such cases, your trusted code can be the go-between, similar to the managed wrapper or library code described in [Securing Wrapper Code](../../../docs/framework/misc/securing-wrapper-code.md).</span></span> <span data-ttu-id="34fcf-108">如果基础的非托管代码的功能是完全安全的，则可直接将其公开；否则，首先需要进行合适权限的检查（要求）。</span><span class="sxs-lookup"><span data-stu-id="34fcf-108">If the underlying unmanaged code functionality is totally safe, it can be directly exposed; otherwise, a suitable permission check (demand) is required first.</span></span>  
   
- 当代码调入非托管代码，而你不希望要求调用方拥有可访问非托管代码的权限时，则必须声明该权利。 声明会阻止在帧处实施的堆栈审核。 必须非常小心，切勿在这一过程中制造安全漏洞。 通常情况下，这意味着必须要求调用方具有合适权限，然后使用非托管代码仅执行该权限所允许的操作，不能执行其他操作。 在某些情况下（例如，获取一天时间的函数），可将非托管代码直接公开给调用方，无需进行任何安全检查。 在任何情况下，任何断言的代码必须对安全负责。  
+ <span data-ttu-id="34fcf-109">当代码调入非托管代码，而你不希望要求调用方拥有可访问非托管代码的权限时，则必须声明该权利。</span><span class="sxs-lookup"><span data-stu-id="34fcf-109">When your code calls into unmanaged code but you do not want to require your callers to have permission to access unmanaged code, you must assert that right.</span></span> <span data-ttu-id="34fcf-110">声明会阻止在帧处实施的堆栈审核。</span><span class="sxs-lookup"><span data-stu-id="34fcf-110">An assertion blocks the stack walk at your frame.</span></span> <span data-ttu-id="34fcf-111">必须非常小心，切勿在这一过程中制造安全漏洞。</span><span class="sxs-lookup"><span data-stu-id="34fcf-111">You must be careful that you do not create a security hole in this process.</span></span> <span data-ttu-id="34fcf-112">通常情况下，这意味着必须要求调用方具有合适权限，然后使用非托管代码仅执行该权限所允许的操作，不能执行其他操作。</span><span class="sxs-lookup"><span data-stu-id="34fcf-112">Usually, this means that you must demand a suitable permission of your callers and then use unmanaged code to perform only what that permission allows and no more.</span></span> <span data-ttu-id="34fcf-113">在某些情况下（例如，获取一天时间的函数），可将非托管代码直接公开给调用方，无需进行任何安全检查。</span><span class="sxs-lookup"><span data-stu-id="34fcf-113">In some cases (for example, a get time-of-day function), unmanaged code can be directly exposed to callers without any security checks.</span></span> <span data-ttu-id="34fcf-114">在任何情况下，任何断言的代码必须对安全负责。</span><span class="sxs-lookup"><span data-stu-id="34fcf-114">In any case, any code that asserts must take responsibility for security.</span></span>  
   
- 由于任何提供代码路径到本机代码的托管代码都是恶意代码的潜在目标，确定哪些非托管代码可以安全使用以及必须如何使用需要特别小心。 通常情况下，绝不应将非托管代码直接公开给部分受信任的调用方。 对于在部分受信任代码可调用的库中使用非托管代码，在评估其安全性时，主要应注意两点：  
+ <span data-ttu-id="34fcf-115">由于任何提供代码路径到本机代码的托管代码都是恶意代码的潜在目标，确定哪些非托管代码可以安全使用以及必须如何使用需要特别小心。</span><span class="sxs-lookup"><span data-stu-id="34fcf-115">Because any managed code that provides a code path into native code is a potential target for malicious code, determining which unmanaged code can be safely used and how it must be used requires extreme care.</span></span> <span data-ttu-id="34fcf-116">通常情况下，绝不应将非托管代码直接公开给部分受信任的调用方。</span><span class="sxs-lookup"><span data-stu-id="34fcf-116">Generally, unmanaged code should never be directly exposed to partially trusted callers.</span></span> <span data-ttu-id="34fcf-117">对于在部分受信任代码可调用的库中使用非托管代码，在评估其安全性时，主要应注意两点：</span><span class="sxs-lookup"><span data-stu-id="34fcf-117">There are two primary considerations in evaluating the safety of unmanaged code use in libraries that are callable by partially trusted code:</span></span>  
   
--   **功能**。 非托管 API 是否提供了不允许调用方执行潜在的危险操作的功能？ 代码访问安全性使用权限强制执行对资源的访问，所以应考虑 API 是否使用文件、用户界面或线程处理，或它是否公开受保护的信息。 如果是，则包装它的托管代码必须要求必要的权限，才能允许其被访问。 此外，未受权限保护时，内存访问必须局限于严格的类型安全。  
+-   <span data-ttu-id="34fcf-118">**功能**。</span><span class="sxs-lookup"><span data-stu-id="34fcf-118">**Functionality**.</span></span> <span data-ttu-id="34fcf-119">非托管 API 是否提供了不允许调用方执行潜在的危险操作的功能？</span><span class="sxs-lookup"><span data-stu-id="34fcf-119">Does the unmanaged API provide functionality that does not allow callers to perform potentially dangerous operations?</span></span> <span data-ttu-id="34fcf-120">代码访问安全性使用权限强制执行对资源的访问，所以应考虑 API 是否使用文件、用户界面或线程处理，或它是否公开受保护的信息。</span><span class="sxs-lookup"><span data-stu-id="34fcf-120">Code access security uses permissions to enforce access to resources, so consider whether the API uses files, a user interface, or threading, or whether it exposes protected information.</span></span> <span data-ttu-id="34fcf-121">如果是，则包装它的托管代码必须要求必要的权限，才能允许其被访问。</span><span class="sxs-lookup"><span data-stu-id="34fcf-121">If it does, the managed code wrapping it must demand the necessary permissions before allowing it to be entered.</span></span> <span data-ttu-id="34fcf-122">此外，未受权限保护时，内存访问必须局限于严格的类型安全。</span><span class="sxs-lookup"><span data-stu-id="34fcf-122">Additionally, while not protected by a permission, memory access must be confined to strict type safety.</span></span>  
   
--   **参数检查**。 常见攻击将意外的参数传递到公开的非托管代码 API 方法，试图使它们超出规范运行。 使用范围外的索引或偏移值的缓冲区溢出是此类型攻击的一个常见示例，如同可能在基础代码中利用 bug 的任何参数一样。 因此，尽管对于部分受信任的调用方而言，非托管代码 API 在功能上是安全的（在作出必要的要求之后），托管代码也必须彻底检查参数有效性，以确保不存在来自使用托管代码包装层的恶意代码的意外调用。  
+-   <span data-ttu-id="34fcf-123">**参数检查**。</span><span class="sxs-lookup"><span data-stu-id="34fcf-123">**Parameter checking**.</span></span> <span data-ttu-id="34fcf-124">常见攻击将意外的参数传递到公开的非托管代码 API 方法，试图使它们超出规范运行。</span><span class="sxs-lookup"><span data-stu-id="34fcf-124">A common attack passes unexpected parameters to exposed unmanaged code API methods in an attempt to cause them to operate out of specification.</span></span> <span data-ttu-id="34fcf-125">使用范围外的索引或偏移值的缓冲区溢出是此类型攻击的一个常见示例，如同可能在基础代码中利用 bug 的任何参数一样。</span><span class="sxs-lookup"><span data-stu-id="34fcf-125">Buffer overruns using out-of-range index or offset values are one common example of this type of attack, as are any parameters that might exploit a bug in the underlying code.</span></span> <span data-ttu-id="34fcf-126">因此，尽管对于部分受信任的调用方而言，非托管代码 API 在功能上是安全的（在作出必要的要求之后），托管代码也必须彻底检查参数有效性，以确保不存在来自使用托管代码包装层的恶意代码的意外调用。</span><span class="sxs-lookup"><span data-stu-id="34fcf-126">Thus, even if the unmanaged code API is functionally safe (after necessary demands) for partially trusted callers, managed code must also check parameter validity exhaustively to ensure that no unintended calls are possible from malicious code using the managed code wrapper layer.</span></span>  
   
-## <a name="using-suppressunmanagedcodesecurityattribute"></a>使用 SuppressUnmanagedCodeSecurityAttribute  
- 就声明然后调用非托管代码而言，还存在性能方面的考虑。 对于此类的每个调用，安全系统自动要求非托管代码的权限，这会导致每次都进行堆栈审核。 如果你断言并立即调用非托管的代码，堆栈审核则可能毫无意义：它由断言和非托管代码的调用组成。  
+## <a name="using-suppressunmanagedcodesecurityattribute"></a><span data-ttu-id="34fcf-127">使用 SuppressUnmanagedCodeSecurityAttribute</span><span class="sxs-lookup"><span data-stu-id="34fcf-127">Using SuppressUnmanagedCodeSecurityAttribute</span></span>  
+ <span data-ttu-id="34fcf-128">就声明然后调用非托管代码而言，还存在性能方面的考虑。</span><span class="sxs-lookup"><span data-stu-id="34fcf-128">There is a performance aspect to asserting and then calling unmanaged code.</span></span> <span data-ttu-id="34fcf-129">对于此类的每个调用，安全系统自动要求非托管代码的权限，这会导致每次都进行堆栈审核。</span><span class="sxs-lookup"><span data-stu-id="34fcf-129">For every such call, the security system automatically demands unmanaged code permission, resulting in a stack walk each time.</span></span> <span data-ttu-id="34fcf-130">如果你断言并立即调用非托管的代码，堆栈审核则可能毫无意义：它由断言和非托管代码的调用组成。</span><span class="sxs-lookup"><span data-stu-id="34fcf-130">If you assert and immediately call unmanaged code, the stack walk can be meaningless: it consists of your assert and your unmanaged code call.</span></span>  
   
- 可将名为 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 的自定义特性应用于非托管代码的入口点，从而禁用要求指定了 <xref:System.Security.Permissions.SecurityPermission> 权限的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 的常规安全检查。 进行此操作时，须始终保持格外小心，因为此操作会开启一扇无需执行运行时安全检查即可进入非托管代码的大门。 应注意的是，即使应用了 **SuppressUnmanagedCodeSecurityAttribute** ，也存在发生于实时 (JIT) 编译的一次性安全检查，以确保直接调用方有权调用非托管代码。  
+ <span data-ttu-id="34fcf-131">可将名为 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 的自定义特性应用于非托管代码的入口点，从而禁用要求指定了 <xref:System.Security.Permissions.SecurityPermission> 权限的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 的常规安全检查。</span><span class="sxs-lookup"><span data-stu-id="34fcf-131">A custom attribute called <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> can be applied to unmanaged code entry points to disable the normal security check that demands <xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permission specified.</span></span> <span data-ttu-id="34fcf-132">进行此操作时，须始终保持格外小心，因为此操作会开启一扇无需执行运行时安全检查即可进入非托管代码的大门。</span><span class="sxs-lookup"><span data-stu-id="34fcf-132">Extreme caution must always be taken when doing this, because this action creates an open door into unmanaged code with no runtime security checks.</span></span> <span data-ttu-id="34fcf-133">应注意的是，即使应用了 **SuppressUnmanagedCodeSecurityAttribute** ，也存在发生于实时 (JIT) 编译的一次性安全检查，以确保直接调用方有权调用非托管代码。</span><span class="sxs-lookup"><span data-stu-id="34fcf-133">It should be noted that even with **SuppressUnmanagedCodeSecurityAttribute** applied, there is a one-time security check that happens at just-in-time (JIT) compilation to ensure that the immediate caller has permission to call unmanaged code.</span></span>  
   
- 如果使用 **SuppressUnmanagedCodeSecurityAttribute**，请检查以下几点：  
+ <span data-ttu-id="34fcf-134">如果使用 **SuppressUnmanagedCodeSecurityAttribute**，请检查以下几点：</span><span class="sxs-lookup"><span data-stu-id="34fcf-134">If you use the **SuppressUnmanagedCodeSecurityAttribute**, check the following points:</span></span>  
   
--   使非托管代码入口点位于内部，或者使其无法在代码外部被访问。  
+-   <span data-ttu-id="34fcf-135">使非托管代码入口点位于内部，或者使其无法在代码外部被访问。</span><span class="sxs-lookup"><span data-stu-id="34fcf-135">Make the unmanaged code entry point internal or otherwise inaccessible outside your code.</span></span>  
   
--   任何对非托管代码的调入都是潜在的安全漏洞。 请确保你的代码不是恶意代码间接调入非托管代码及避免安全检查的门户。 合适的话，则请求权限。  
+-   <span data-ttu-id="34fcf-136">任何对非托管代码的调入都是潜在的安全漏洞。</span><span class="sxs-lookup"><span data-stu-id="34fcf-136">Any call into unmanaged code is a potential security hole.</span></span> <span data-ttu-id="34fcf-137">请确保你的代码不是恶意代码间接调入非托管代码及避免安全检查的门户。</span><span class="sxs-lookup"><span data-stu-id="34fcf-137">Make sure your code is not a portal for malicious code to indirectly call into unmanaged code and avoid a security check.</span></span> <span data-ttu-id="34fcf-138">合适的话，则请求权限。</span><span class="sxs-lookup"><span data-stu-id="34fcf-138">Demand permissions, if appropriate.</span></span>  
   
--   如以下部分所述，创建指向非托管代码的危险路径时，使用命名约定进行显式标识。  
+-   <span data-ttu-id="34fcf-139">如以下部分所述，创建指向非托管代码的危险路径时，使用命名约定进行显式标识。</span><span class="sxs-lookup"><span data-stu-id="34fcf-139">Use a naming convention to explicitly identify when you are creating a dangerous path into unmanaged code, as described in the section below..</span></span>  
   
-## <a name="naming-convention-for-unmanaged-code-methods"></a>非托管代码方法的命名约定  
- 已建立了一个有用且强烈推荐的约定，用以对非托管代码的方法进行命名。 非托管代码的所有方法分为三个类别： **安全**、 **本机**和 **不安全**。 这些关键字可用作其中定义了各种类型的非托管代码入口点的类名。 在源代码中，应将这些关键字添加到类名，例如，像在 `Safe.GetTimeOfDay`、 `Native.Xyz`或 `Unsafe.DangerousAPI`中一样。 如下表所述，每个关键字为使用该类的开发人员提供有用的安全信息。  
+## <a name="naming-convention-for-unmanaged-code-methods"></a><span data-ttu-id="34fcf-140">非托管代码方法的命名约定</span><span class="sxs-lookup"><span data-stu-id="34fcf-140">Naming convention for unmanaged code methods</span></span>  
+ <span data-ttu-id="34fcf-141">已建立了一个有用且强烈推荐的约定，用以对非托管代码的方法进行命名。</span><span class="sxs-lookup"><span data-stu-id="34fcf-141">A useful and highly recommended convention has been established for naming unmanaged code methods.</span></span> <span data-ttu-id="34fcf-142">非托管代码的所有方法分为三个类别： **安全**、 **本机**和 **不安全**。</span><span class="sxs-lookup"><span data-stu-id="34fcf-142">All unmanaged code methods are separated into three categories: **safe**, **native**, and **unsafe**.</span></span> <span data-ttu-id="34fcf-143">这些关键字可用作其中定义了各种类型的非托管代码入口点的类名。</span><span class="sxs-lookup"><span data-stu-id="34fcf-143">These keywords can be used as class names within which the various kinds of unmanaged code entry points are defined.</span></span> <span data-ttu-id="34fcf-144">在源代码中，应将这些关键字添加到类名，例如，像在 `Safe.GetTimeOfDay`、 `Native.Xyz`或 `Unsafe.DangerousAPI`中一样。</span><span class="sxs-lookup"><span data-stu-id="34fcf-144">In source code, these keywords should be added to the class name, as in `Safe.GetTimeOfDay`, `Native.Xyz`, or `Unsafe.DangerousAPI`, for example.</span></span> <span data-ttu-id="34fcf-145">如下表所述，每个关键字为使用该类的开发人员提供有用的安全信息。</span><span class="sxs-lookup"><span data-stu-id="34fcf-145">Each of these keywords provides useful security information for developers using that class, as described in the following table.</span></span>  
   
-|关键字|安全注意事项|  
+|<span data-ttu-id="34fcf-146">关键字</span><span class="sxs-lookup"><span data-stu-id="34fcf-146">Keyword</span></span>|<span data-ttu-id="34fcf-147">安全注意事项</span><span class="sxs-lookup"><span data-stu-id="34fcf-147">Security considerations</span></span>|  
 |-------------|-----------------------------|  
-|**安全**|对于任何代码（即使是恶意代码）进行调用都是完全无害的。 可像其他托管代码一样使用。 例如，获取一天时间的函数通常是安全的。|  
-|**本机**|在安全性方面是非特定的；即需要非托管代码的权限才可进行调用的非托管代码。 检查了安全性，此操作可阻止未经授权的调用方。|  
-|**不安全**|取消了安全性的、具有潜在危险的非托管代码入口点。 使用此类非托管代码时，开发人员应加倍小心，要确保其他保护措施到位以避免出现安全漏洞。 开发人员必须负责，因为此关键字覆盖安全系统。|  
+|<span data-ttu-id="34fcf-148">**安全**</span><span class="sxs-lookup"><span data-stu-id="34fcf-148">**safe**</span></span>|<span data-ttu-id="34fcf-149">对于任何代码（即使是恶意代码）进行调用都是完全无害的。</span><span class="sxs-lookup"><span data-stu-id="34fcf-149">Completely harmless for any code, even malicious code, to call.</span></span> <span data-ttu-id="34fcf-150">可像其他托管代码一样使用。</span><span class="sxs-lookup"><span data-stu-id="34fcf-150">Can be used just like other managed code.</span></span> <span data-ttu-id="34fcf-151">例如，获取一天时间的函数通常是安全的。</span><span class="sxs-lookup"><span data-stu-id="34fcf-151">For example, a function that gets the time of day is typically safe.</span></span>|  
+|<span data-ttu-id="34fcf-152">**本机**</span><span class="sxs-lookup"><span data-stu-id="34fcf-152">**native**</span></span>|<span data-ttu-id="34fcf-153">在安全性方面是非特定的；即需要非托管代码的权限才可进行调用的非托管代码。</span><span class="sxs-lookup"><span data-stu-id="34fcf-153">Security-neutral; that is, unmanaged code that requires unmanaged code permission to call.</span></span> <span data-ttu-id="34fcf-154">检查了安全性，此操作可阻止未经授权的调用方。</span><span class="sxs-lookup"><span data-stu-id="34fcf-154">Security is checked, which stops an unauthorized caller.</span></span>|  
+|<span data-ttu-id="34fcf-155">**不安全**</span><span class="sxs-lookup"><span data-stu-id="34fcf-155">**unsafe**</span></span>|<span data-ttu-id="34fcf-156">取消了安全性的、具有潜在危险的非托管代码入口点。</span><span class="sxs-lookup"><span data-stu-id="34fcf-156">Potentially dangerous unmanaged code entry point with security suppressed.</span></span> <span data-ttu-id="34fcf-157">使用此类非托管代码时，开发人员应加倍小心，要确保其他保护措施到位以避免出现安全漏洞。</span><span class="sxs-lookup"><span data-stu-id="34fcf-157">Developers should use the greatest caution when using such unmanaged code, making sure that other protections are in place to prevent a security vulnerability.</span></span> <span data-ttu-id="34fcf-158">开发人员必须负责，因为此关键字覆盖安全系统。</span><span class="sxs-lookup"><span data-stu-id="34fcf-158">Developers must be responsible, as this keyword overrides the security system.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
-
+## <a name="see-also"></a><span data-ttu-id="34fcf-159">另请参阅</span><span class="sxs-lookup"><span data-stu-id="34fcf-159">See Also</span></span>  
+ [<span data-ttu-id="34fcf-160">安全编码准则</span><span class="sxs-lookup"><span data-stu-id="34fcf-160">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

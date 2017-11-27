@@ -1,48 +1,46 @@
 ---
-title: "程序集绑定重定向安全权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "程序集 [.NET Framework], 绑定重定向"
-  - "并行执行, 程序集绑定重定向"
+title: "程序集绑定重定向安全权限"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- side-by-side execution, assembly binding redirection
+- assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ddaf9965a3b3b5d6171a643b198db93309afad48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 程序集绑定重定向安全权限
-应用程序配置文件中的显式程序集绑定重定向需要安全权限。  这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。  该权限可通过针对 [SecurityPermission Class](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic)设置 [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic)标志来授予。  默认情况下，托管程序集没有任何权限。  
+# <a name="assembly-binding-redirection-security-permission"></a><span data-ttu-id="00343-102">程序集绑定重定向安全权限</span><span class="sxs-lookup"><span data-stu-id="00343-102">Assembly Binding Redirection Security Permission</span></span>
+<span data-ttu-id="00343-103">应用程序配置文件中的显式程序集绑定重定向需要安全权限。</span><span class="sxs-lookup"><span data-stu-id="00343-103">Explicit assembly binding redirection in an application configuration file requires a security permission.</span></span> <span data-ttu-id="00343-104">这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。</span><span class="sxs-lookup"><span data-stu-id="00343-104">This applies to redirection of .NET Framework assemblies and assemblies from third parties.</span></span> <span data-ttu-id="00343-105">通过设置授予此权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。</span><span class="sxs-lookup"><span data-stu-id="00343-105">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="00343-106">默认情况下，托管程序集具有任何权限。</span><span class="sxs-lookup"><span data-stu-id="00343-106">Managed assemblies have no permissions by default.</span></span>  
   
- 安全权限应授予受信任的区域（本地计算机）内和 Intranet 区域内运行的应用程序。  严禁在 Internet 区域内运行的应用程序执行程序集绑定重定向。  
+ <span data-ttu-id="00343-107">安全权限授予的受信任的区域 （本地计算机） 和 Intranet 区域中运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="00343-107">The security permission is granted to applications running in the Trusted Zone (local machine) and Intranet Zone.</span></span> <span data-ttu-id="00343-108">在 Internet 区域中运行的应用程序严格禁止执行程序集绑定重定向。</span><span class="sxs-lookup"><span data-stu-id="00343-108">Applications running in the Internet Zone are strictly prohibited from performing assembly binding redirection.</span></span>  
   
- 如果在由组件发行者控制的发行者策略文件中执行程序集重定向，或者，在管理员控制的计算机配置文件中执行程序集重定向，则不需要这一权限。  然而，应用程序需要一个权限通过使用应用程序配置文件中[\<publisherPolicy apply\="no"\/\>](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)元素来显式地忽略版权政策。  
+ <span data-ttu-id="00343-109">如果控制由组件的发布者，发布服务器策略文件中或由管理员控制的计算机配置文件中执行程序集重定向，则不需要的权限。</span><span class="sxs-lookup"><span data-stu-id="00343-109">The permission is not required if assembly redirection is performed in a publisher policy file that is controlled by the component publisher, or in the machine configuration file that is controlled by the administrator.</span></span> <span data-ttu-id="00343-110">但是，权限是若要显式忽略发行者策略使用的应用需要[ \<publisherPolicy 适用 ="no"/ >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)应用程序配置文件中的元素。</span><span class="sxs-lookup"><span data-stu-id="00343-110">However, the permission is required for an application to explicitly ignore publisher policy using the [\<publisherPolicy apply="no"/>](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) element in the application configuration file.</span></span>  
   
- 下表显示了 **BindingRedirect** 标志的默认安全设置。  
+ <span data-ttu-id="00343-111">下表显示的默认安全设置**可**标志。</span><span class="sxs-lookup"><span data-stu-id="00343-111">The following table shows the default security settings for the **BindingRedirects** flag.</span></span>  
   
-|区域|BindingRedirect 标志设置|  
-|--------|--------------------------|  
-|受信任的区域（本地计算机）|**ON**|  
-|Intranet 区域|**ON**|  
-|Internet 区域|**OFF**|  
-|不受信任的区域|**OFF**|  
+|<span data-ttu-id="00343-112">区域</span><span class="sxs-lookup"><span data-stu-id="00343-112">Zone</span></span>|<span data-ttu-id="00343-113">可标志设置</span><span class="sxs-lookup"><span data-stu-id="00343-113">BindingRedirects flag setting</span></span>|  
+|----------|-----------------------------------|  
+|<span data-ttu-id="00343-114">受信任的区域 （本地计算机）</span><span class="sxs-lookup"><span data-stu-id="00343-114">Trusted Zone (local machine)</span></span>|<span data-ttu-id="00343-115">**ON**</span><span class="sxs-lookup"><span data-stu-id="00343-115">**ON**</span></span>|  
+|<span data-ttu-id="00343-116">Intranet 区域</span><span class="sxs-lookup"><span data-stu-id="00343-116">Intranet Zone</span></span>|<span data-ttu-id="00343-117">**ON**</span><span class="sxs-lookup"><span data-stu-id="00343-117">**ON**</span></span>|  
+|<span data-ttu-id="00343-118">Internet 区域</span><span class="sxs-lookup"><span data-stu-id="00343-118">Internet Zone</span></span>|<span data-ttu-id="00343-119">**关闭**</span><span class="sxs-lookup"><span data-stu-id="00343-119">**OFF**</span></span>|  
+|<span data-ttu-id="00343-120">不受信任的区域</span><span class="sxs-lookup"><span data-stu-id="00343-120">Untrusted zones</span></span>|<span data-ttu-id="00343-121">**关闭**</span><span class="sxs-lookup"><span data-stu-id="00343-121">**OFF**</span></span>|  
   
- 管理员可以更改这些安全设置，以支持或限制给定计算机上的特定方案。  没有工具可用来更改 **BindingRedirect** 标志的默认设置；管理员必须手动编辑用户计算机上的 Security.config 文件。  
+ <span data-ttu-id="00343-122">管理员可以更改这些安全设置以支持或限制由给定计算机上的特定方案。</span><span class="sxs-lookup"><span data-stu-id="00343-122">An administrator can change these security settings to support or restrict specific scenarios on a given computer.</span></span> <span data-ttu-id="00343-123">没有用于更改工具**可**标志设置从默认设置; 管理员必须手动编辑用户的计算机上的 Security.config 文件。</span><span class="sxs-lookup"><span data-stu-id="00343-123">There are no tools for changing the **BindingRedirects** flag setting from the default; an administrator must manually edit the Security.config file on a user's computer.</span></span>  
   
-## 请参阅  
- [Publisher Policy Files and Side\-by\-Side Execution](http://msdn.microsoft.com/zh-cn/97a042be-4d72-40c3-91c0-76fd36bdf133)   
- [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)   
- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a><span data-ttu-id="00343-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00343-124">See Also</span></span>  
+ [<span data-ttu-id="00343-125">发布服务器策略文件，并通过并行执行</span><span class="sxs-lookup"><span data-stu-id="00343-125">Publisher Policy Files and Side-by-Side Execution</span></span>](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [<span data-ttu-id="00343-126">如何：启用和禁用自动绑定重定向</span><span class="sxs-lookup"><span data-stu-id="00343-126">How to: Enable and Disable Automatic Binding Redirection</span></span>](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
+ [<span data-ttu-id="00343-127">通过并行执行</span><span class="sxs-lookup"><span data-stu-id="00343-127">Side-by-Side Execution</span></span>](../../../docs/framework/deployment/side-by-side-execution.md)

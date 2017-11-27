@@ -1,27 +1,33 @@
 ---
-title: "向数据表中添加列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "向数据表添加列"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6107c21ed04c9c39d69c5c784244d8f6bf9560e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 向数据表中添加列
-<xref:System.Data.DataTable> 包含了由表的 **Columns** 属性引用的 <xref:System.Data.DataColumn> 对象的集合。  这个列的集合与任何约束一起定义表的架构（即结构）。  
+# <a name="adding-columns-to-a-datatable"></a><span data-ttu-id="016d5-102">向数据表添加列</span><span class="sxs-lookup"><span data-stu-id="016d5-102">Adding Columns to a DataTable</span></span>
+<span data-ttu-id="016d5-103">A<xref:System.Data.DataTable>包含一套<xref:System.Data.DataColumn>所引用的对象**列**的表的属性。</span><span class="sxs-lookup"><span data-stu-id="016d5-103">A <xref:System.Data.DataTable> contains a collection of <xref:System.Data.DataColumn> objects referenced by the **Columns** property of the table.</span></span> <span data-ttu-id="016d5-104">这个列的集合与任何约束一起定义表的架构（即结构）。</span><span class="sxs-lookup"><span data-stu-id="016d5-104">This collection of columns, along with any constraints, defines the schema, or structure, of the table.</span></span>  
   
- 通过使用 **DataColumn** 构造函数，或者通过调用表的 **Columns** 属性的 **Add** 方法（它是一个 <xref:System.Data.DataColumnCollection>），可在表内创建 **DataColumn** 对象。  **Add** 方法将接受可选的 **ColumnName**、**DataType** 和 **Expression** 参数，并将创建新的 **DataColumn** 作为集合的成员。  它还会接受现有的 **DataColumn** 对象并会将其添加到集合中，并会根据请求返回对所添加的 **DataColumn** 的引用。  由于 **DataTable** 对象不特定于任何数据源，所以在指定 **DataColumn** 的数据类型时会使用 .NET Framework 类型。  
+ <span data-ttu-id="016d5-105">你创建**DataColumn**通过使用表中的对象**DataColumn**构造函数，或通过调用**添加**方法**列**属性表，这是<xref:System.Data.DataColumnCollection>。</span><span class="sxs-lookup"><span data-stu-id="016d5-105">You create **DataColumn** objects within a table by using the **DataColumn** constructor, or by calling the **Add** method of the **Columns** property of the table, which is a <xref:System.Data.DataColumnCollection>.</span></span> <span data-ttu-id="016d5-106">**添加**方法将接受可选**ColumnName**， **DataType**，和**表达式**自变量，并创建新**DataColumn**作为集合的成员。</span><span class="sxs-lookup"><span data-stu-id="016d5-106">The **Add** method accepts optional **ColumnName**, **DataType**, and **Expression** arguments and creates a new **DataColumn** as a member of the collection.</span></span> <span data-ttu-id="016d5-107">它还会接受现有**DataColumn**对象并将其添加到集合，并返回对所添加的引用**DataColumn**如果请求。</span><span class="sxs-lookup"><span data-stu-id="016d5-107">It also accepts an existing **DataColumn** object and adds it to the collection, and returns a reference to the added **DataColumn** if requested.</span></span> <span data-ttu-id="016d5-108">因为**DataTable**对象不是特定于任何数据源、 指定的数据类型时使用.NET Framework 类型**DataColumn**。</span><span class="sxs-lookup"><span data-stu-id="016d5-108">Because **DataTable** objects are not specific to any data source, .NET Framework types are used when specifying the data type of a **DataColumn**.</span></span>  
   
- 以下示例向 **DataTable** 中添加了四列。  
+ <span data-ttu-id="016d5-109">下面的示例将添加到四个列**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="016d5-109">The following example adds four columns to a **DataTable**.</span></span>  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -34,7 +40,6 @@ workCol.Unique = true
 workTable.Columns.Add("CustLName", Type.GetType("System.String"))  
 workTable.Columns.Add("CustFName", Type.GetType("System.String"))  
 workTable.Columns.Add("Purchases", Type.GetType("System.Double"))  
-  
 ```  
   
 ```csharp  
@@ -49,17 +54,17 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- 请注意，示例中用于 **CustID** 列的属性设置为不允许 **DBNull** 值并将值约束为唯一。  但是，如果您将 **CustID** 列定义为表的主键列，**AllowDBNull** 属性就会自动设置为 **false**，并且 **Unique** 属性会自动设置为 **true**。  有关详细信息，请参阅[定义主键](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
+ <span data-ttu-id="016d5-110">在示例中，请注意，属性**CustID**列设置为不允许**DBNull**值并将值是唯一约束。</span><span class="sxs-lookup"><span data-stu-id="016d5-110">In the example, notice that the properties for the **CustID** column are set to not allow **DBNull** values and to constrain values to be unique.</span></span> <span data-ttu-id="016d5-111">但是，如果你定义**CustID**为主密钥列的表、 列**AllowDBNull**属性将自动设置为**false**和**Unique**属性将自动设置为**true**。</span><span class="sxs-lookup"><span data-stu-id="016d5-111">However, if you define the **CustID** column as the primary key column of the table, the **AllowDBNull** property will automatically be set to **false** and the **Unique** property will automatically be set to **true**.</span></span> <span data-ttu-id="016d5-112">有关详细信息，请参阅[定义主键](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。</span><span class="sxs-lookup"><span data-stu-id="016d5-112">For more information, see [Defining Primary Keys](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).</span></span>  
   
 > [!CAUTION]
->  如果没有为一个列提供列名，则在将该列添加到 **DataColumnCollection** 时，该列会得到从“Column1”开始递增的默认名称 Column*N*。  建议在提供列名时避免使用“Column*N*”命名约定，因为那样提供的名称可能与 **DataColumnCollection** 中现有的默认列名冲突。  如果提供的名称已经存在，将引发异常。  
+>  <span data-ttu-id="016d5-113">如果列名称未提供的列，该列会得到递增的默认名称的列*N，*从"Column1"开始，当它添加到**DataColumnCollection**。</span><span class="sxs-lookup"><span data-stu-id="016d5-113">If a column name is not supplied for a column, the column is given an incremental default name of Column*N,* starting with "Column1", when it is added to the **DataColumnCollection**.</span></span> <span data-ttu-id="016d5-114">我们建议你避免的命名约定"列*N*"时提供的列名，因为提供的名称可能与中的现有默认列名称相冲突**DataColumnCollection**。</span><span class="sxs-lookup"><span data-stu-id="016d5-114">We recommend that you avoid the naming convention of "Column*N*" when you supply a column name, because the name you supply may conflict with an existing default column name in the **DataColumnCollection**.</span></span> <span data-ttu-id="016d5-115">如果提供的名称已经存在，将引发异常。</span><span class="sxs-lookup"><span data-stu-id="016d5-115">If the supplied name already exists, an exception is thrown.</span></span>  
   
- 如果将 <xref:System.Xml.XLinq.XElement> 用作 <xref:System.Data.DataTable> 中的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataColumn.DataType%2A>，则在读入数据时，XML 序列化将不起作用。  例如，如果通过使用 `DataTable.WriteXml` 方法来写出 <xref:System.Xml.XmlDocument>，则在序列化为 XML 时，<xref:System.Xml.XLinq.XElement> 中会出现一个额外的父节点。  若要解决此问题，请使用 <xref:System.Data.SqlTypes.SqlXml> 类型来代替 <xref:System.Xml.XLinq.XElement>。  `ReadXml` 和 `WriteXml` 对 <xref:System.Data.SqlTypes.SqlXml> 均能正确使用。  
+ <span data-ttu-id="016d5-116">如果将 <xref:System.Xml.Linq.XElement> 用作 <xref:System.Data.DataColumn.DataType%2A> 中的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable>，则在读入数据时，XML 序列化将不起作用。</span><span class="sxs-lookup"><span data-stu-id="016d5-116">If you are using <xref:System.Xml.Linq.XElement> as the <xref:System.Data.DataColumn.DataType%2A> of a <xref:System.Data.DataColumn> in the <xref:System.Data.DataTable>, XML serialization will not work when you read in data.</span></span> <span data-ttu-id="016d5-117">例如，如果通过使用 <xref:System.Xml.XmlDocument> 方法来写出 `DataTable.WriteXml`，则在序列化为 XML 时，<xref:System.Xml.Linq.XElement> 中会出现一个额外的父节点。</span><span class="sxs-lookup"><span data-stu-id="016d5-117">For example, if you write out a <xref:System.Xml.XmlDocument> by using the `DataTable.WriteXml` method, upon serialization to XML there is an additional parent node in the <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="016d5-118">若要解决此问题，请使用 <xref:System.Data.SqlTypes.SqlXml> 类型来代替 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="016d5-118">To work around this problem, use the <xref:System.Data.SqlTypes.SqlXml> type instead of <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="016d5-119">`ReadXml` 和 `WriteXml` 对 <xref:System.Data.SqlTypes.SqlXml> 均能正确使用。</span><span class="sxs-lookup"><span data-stu-id="016d5-119">`ReadXml` and `WriteXml` work correctly with <xref:System.Data.SqlTypes.SqlXml>.</span></span>  
   
-## 请参阅  
- <xref:System.Data.DataColumn>   
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataTable>   
- [DataTable 架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="016d5-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="016d5-120">See Also</span></span>  
+ <xref:System.Data.DataColumn>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="016d5-121">数据表架构定义</span><span class="sxs-lookup"><span data-stu-id="016d5-121">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [<span data-ttu-id="016d5-122">数据表</span><span class="sxs-lookup"><span data-stu-id="016d5-122">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="016d5-123">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="016d5-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,40 +1,41 @@
 ---
-title: "Oracle LOB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oracle LOB
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e04c8fcb56b497ab183e05a0d6f40cb3facfed73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle LOB
-Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.OracleLob> 类，该类用于使用 Oracle **LOB** 数据类型。  
+# <a name="oracle-lobs"></a><span data-ttu-id="9dfee-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="9dfee-102">Oracle LOBs</span></span>
+<span data-ttu-id="9dfee-103">适用于 Oracle 的.NET Framework 数据提供程序包括<xref:System.Data.OracleClient.OracleLob>类，该类用于使用 Oracle **LOB**数据类型。</span><span class="sxs-lookup"><span data-stu-id="9dfee-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
   
- **OracleLob** 可能是下列 <xref:System.Data.OracleClient.OracleType> 数据类型之一：  
+ <span data-ttu-id="9dfee-104">**OracleLob**可能是下列其中一<xref:System.Data.OracleClient.OracleType>数据类型：</span><span class="sxs-lookup"><span data-stu-id="9dfee-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
   
-|数据类型|描述|  
-|----------|--------|  
-|**Blob**|包含二进制数据的 Oracle **BLOB** 数据类型，其最大大小为 4 GB。  此数据类型映射到 **Byte** 类型的 **Array**。|  
-|**Clob**|包含字符数据的 Oracle **CLOB** 数据类型，根据服务器的默认字符集，其最大大小为 4 GB。  此数据类型映射到 **String**。|  
-|**NClob**|包含字符数据的 Oracle **NCLOB** 数据类型，根据服务器的区域字符集，其最大大小为 4G 字节。  此数据类型映射到 **String**。|  
+|<span data-ttu-id="9dfee-105">数据类型</span><span class="sxs-lookup"><span data-stu-id="9dfee-105">Data type</span></span>|<span data-ttu-id="9dfee-106">描述</span><span class="sxs-lookup"><span data-stu-id="9dfee-106">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="9dfee-107">**Blob**</span><span class="sxs-lookup"><span data-stu-id="9dfee-107">**Blob**</span></span>|<span data-ttu-id="9dfee-108">Oracle **BLOB**包含最大大小为 4 千兆字节的二进制数据的数据类型。</span><span class="sxs-lookup"><span data-stu-id="9dfee-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="9dfee-109">此方法映射到**数组**类型的**字节**。</span><span class="sxs-lookup"><span data-stu-id="9dfee-109">This maps to an **Array** of type **Byte**.</span></span>|  
+|<span data-ttu-id="9dfee-110">**Clob**</span><span class="sxs-lookup"><span data-stu-id="9dfee-110">**Clob**</span></span>|<span data-ttu-id="9dfee-111">Oracle **CLOB**包含字符数据，基于默认字符的数据类型设置在服务器上，最大大小为 4 千兆字节。</span><span class="sxs-lookup"><span data-stu-id="9dfee-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="9dfee-112">此方法映射到**字符串**。</span><span class="sxs-lookup"><span data-stu-id="9dfee-112">This maps to **String**.</span></span>|  
+|<span data-ttu-id="9dfee-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="9dfee-113">**NClob**</span></span>|<span data-ttu-id="9dfee-114">Oracle **NCLOB**基于最大大小为 4 千兆字节在服务器上的区域字符集包含字符数据的数据类型。</span><span class="sxs-lookup"><span data-stu-id="9dfee-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="9dfee-115">此方法映射到**字符串**。</span><span class="sxs-lookup"><span data-stu-id="9dfee-115">This maps to **String**.</span></span>|  
   
- **OracleLob** 与 <xref:System.Data.OracleClient.OracleBFile> 的区别在于前者的数据存储在服务器上而不是存储在操作系统的物理文件中。  它也可以是一个读写对象，这一点与 **OracleBFile** 不同（后者始终为只读）。  
+ <span data-ttu-id="9dfee-116">**OracleLob**区别<xref:System.Data.OracleClient.OracleBFile>在于数据存储的服务器，而不是在操作系统中的物理文件上。</span><span class="sxs-lookup"><span data-stu-id="9dfee-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="9dfee-117">它还可读写对象，与不同**OracleBFile**，这始终是只读的。</span><span class="sxs-lookup"><span data-stu-id="9dfee-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
   
-## 创建、检索和写入 LOB  
- 以下 C\# 示例演示如何在 Oracle 表中创建 LOB，然后以 **OracleLob** 对象的形式检索并写入。  该示例演示如何使用 <xref:System.Data.OracleClient.OracleDataReader> 对象以及 **OracleLob** **Read** 和 **Write** 方法。  该示例使用 Oracle **BLOB**、**CLOB** 和 **NCLOB** 数据类型。  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="9dfee-118">创建、检索和写入 LOB</span><span class="sxs-lookup"><span data-stu-id="9dfee-118">Creating, Retrieving, and Writing to a LOB</span></span>  
+ <span data-ttu-id="9dfee-119">下面的 C# 示例演示如何你可以创建 Lob 在 Oracle 表，然后检索并对其进行写入的形式**OracleLob**对象。</span><span class="sxs-lookup"><span data-stu-id="9dfee-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="9dfee-120">该示例演示如何使用<xref:System.Data.OracleClient.OracleDataReader>对象和**OracleLob** **读取**和**编写**方法。</span><span class="sxs-lookup"><span data-stu-id="9dfee-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="9dfee-121">该示例使用 Oracle **BLOB**， **CLOB**，和**NCLOB**数据类型。</span><span class="sxs-lookup"><span data-stu-id="9dfee-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.IO;              
 using System.Text;             
@@ -224,12 +225,10 @@ public class LobExample
 }  
 ```  
   
-## 创建临时 LOB  
- 以下 C\# 示例演示如何创建临时 LOB。  
+## <a name="creating-a-temporary-lob"></a><span data-ttu-id="9dfee-122">创建临时 LOB</span><span class="sxs-lookup"><span data-stu-id="9dfee-122">Creating a Temporary LOB</span></span>  
+ <span data-ttu-id="9dfee-123">以下 C# 示例演示如何创建临时 LOB。</span><span class="sxs-lookup"><span data-stu-id="9dfee-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
   
- \[C\#\]  
-  
-```  
+```csharp  
 OracleConnection conn = new OracleConnection(  
   "server=test8172; integrated security=yes;");  
 conn.Open();  
@@ -258,6 +257,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## 请参阅  
- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="9dfee-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9dfee-124">See Also</span></span>  
+ [<span data-ttu-id="9dfee-125">Oracle 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="9dfee-125">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [<span data-ttu-id="9dfee-126">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="9dfee-126">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

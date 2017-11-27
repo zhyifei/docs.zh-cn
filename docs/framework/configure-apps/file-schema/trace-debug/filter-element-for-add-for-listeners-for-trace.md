@@ -1,75 +1,79 @@
 ---
-title: "&lt;trace&gt; 的 &lt;listeners&gt; 的 &lt;add&gt; 的 &lt;filter&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<trace> 的 <listeners> 的 <add> 的 <filter> 元素"
-  - "<trace> 的 <listeners> 的 <add> 的 filter 元素"
-  - "initializeData 特性"
+title: "&lt;筛选器&gt;元素&lt;添加&gt;为&lt;侦听器&gt;为&lt;跟踪&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
+helpviewer_keywords:
+- initializeData attribute
+- filter element for <add> for <listeners> for <trace>
+- <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3d1cf912e5a07e7514a6b032ff511923ae93c5f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;trace&gt; 的 &lt;listeners&gt; 的 &lt;add&gt; 的 &lt;filter&gt; 元素
-向跟踪的 `Listeners` 集合中的侦听器添加筛选器。  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="74cee-102">&lt;筛选器&gt;元素&lt;添加&gt;为&lt;侦听器&gt;为&lt;跟踪&gt;</span><span class="sxs-lookup"><span data-stu-id="74cee-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="74cee-103">将筛选器添加到中的侦听器`Listeners`跟踪的集合。</span><span class="sxs-lookup"><span data-stu-id="74cee-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
   
-## 语法  
+ <span data-ttu-id="74cee-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="74cee-104">\<configuration></span></span>  
+<span data-ttu-id="74cee-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="74cee-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="74cee-106">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="74cee-106">\<trace></span></span>  
+<span data-ttu-id="74cee-107">\<侦听器 ></span><span class="sxs-lookup"><span data-stu-id="74cee-107">\<listeners></span></span>  
+<span data-ttu-id="74cee-108">\<add></span><span class="sxs-lookup"><span data-stu-id="74cee-108">\<add></span></span>  
+<span data-ttu-id="74cee-109">\<筛选器 ></span><span class="sxs-lookup"><span data-stu-id="74cee-109">\<filter></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="74cee-110">语法</span><span class="sxs-lookup"><span data-stu-id="74cee-110">Syntax</span></span>  
+  
+```xml  
 <filter   
   type="traceFilterClassName"   
   initializeData="data" />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="74cee-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="74cee-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="74cee-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="74cee-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="74cee-113">特性</span><span class="sxs-lookup"><span data-stu-id="74cee-113">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|`type`|必需的特性。<br /><br /> 指定筛选器的类型，该类型应该从 <xref:System.Diagnostics.TraceFilter> 类继承。  可以使用以命名空间限定的类型名称，它对应于类型的 <xref:System.Type.FullName%2A> 属性，或者可以使用包括程序集信息的完全限定的类型名称，它对应于 <xref:System.Type.AssemblyQualifiedName%2A> 属性。  有关完全限定的类型名称的信息，请参见 [指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
-|`initializeData`|可选特性。<br /><br /> 传递到指定筛选类的构造函数的字符串。|  
+|<span data-ttu-id="74cee-114">特性</span><span class="sxs-lookup"><span data-stu-id="74cee-114">Attribute</span></span>|<span data-ttu-id="74cee-115">描述</span><span class="sxs-lookup"><span data-stu-id="74cee-115">Description</span></span>|  
+|---------------|-----------------|  
+|`type`|<span data-ttu-id="74cee-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="74cee-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="74cee-117">指定的类型的筛选器，它们应继承自<xref:System.Diagnostics.TraceFilter>类。</span><span class="sxs-lookup"><span data-stu-id="74cee-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="74cee-118">你可以使用命名空间限定的名称的类型，它对应于该类型的<xref:System.Type.FullName%2A>属性，也可以使用的完全限定的类型名称，包括程序集信息，它对应于<xref:System.Type.AssemblyQualifiedName%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="74cee-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="74cee-119">有关完全限定的类型名称的信息，请参阅[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="74cee-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="74cee-120">可选特性。</span><span class="sxs-lookup"><span data-stu-id="74cee-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="74cee-121">传递给构造函数指定的筛选器类的字符串。</span><span class="sxs-lookup"><span data-stu-id="74cee-121">The string passed to the constructor for the specified filter class.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="74cee-122">子元素</span><span class="sxs-lookup"><span data-stu-id="74cee-122">Child Elements</span></span>  
+ <span data-ttu-id="74cee-123">无。</span><span class="sxs-lookup"><span data-stu-id="74cee-123">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="74cee-124">父元素</span><span class="sxs-lookup"><span data-stu-id="74cee-124">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`system.diagnostics`|指定对消息进行收集、存储和路由的跟踪侦听器以及设置跟踪开关的级别。|  
-|`trace`|包含对跟踪消息进行收集、存储和路由的侦听器。|  
-|`listeners`|包含对消息进行收集、存储和路由的侦听器。  侦听器将跟踪输出定向到合适的目标。|  
-|`add`|将侦听器添加到 `Listeners` 集合中。|  
+|<span data-ttu-id="74cee-125">元素</span><span class="sxs-lookup"><span data-stu-id="74cee-125">Element</span></span>|<span data-ttu-id="74cee-126">描述</span><span class="sxs-lookup"><span data-stu-id="74cee-126">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="74cee-127">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="74cee-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="74cee-128">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="74cee-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="74cee-129">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="74cee-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="74cee-130">包含收集、 存储和将消息路由的侦听器。</span><span class="sxs-lookup"><span data-stu-id="74cee-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="74cee-131">侦听器将跟踪输出定向到适当的目标。</span><span class="sxs-lookup"><span data-stu-id="74cee-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`add`|<span data-ttu-id="74cee-132">将侦听器添加到 `Listeners` 集合中。</span><span class="sxs-lookup"><span data-stu-id="74cee-132">Adds a listener to the `Listeners` collection.</span></span>|  
   
-## 备注  
- `<filter>` 元素必须包含在跟踪侦听器的 `<add>` 元素中，该元素指定侦听器的类型而不只是 [\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md) 中定义的侦听器的名称。  如果 [\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md) 中定义了侦听器，则必须在该元素中定义侦听器的筛选器。  
+## <a name="remarks"></a><span data-ttu-id="74cee-133">备注</span><span class="sxs-lookup"><span data-stu-id="74cee-133">Remarks</span></span>  
+ <span data-ttu-id="74cee-134">`<filter>`元素必须包含在`<add>`中定义的跟踪侦听器的指定侦听器的类型的元素，而不仅仅是侦听器的名称[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)。</span><span class="sxs-lookup"><span data-stu-id="74cee-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="74cee-135">如果在中定义侦听器[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)，必须在该元素中定义该侦听器的筛选器。</span><span class="sxs-lookup"><span data-stu-id="74cee-135">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
   
- 此元素可用于计算机配置文件 \(Machine.config\) 和应用程序配置文件。  
+ <span data-ttu-id="74cee-136">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="74cee-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## 示例  
- 下面的示例演示如何使用 `<filter>` 元素向跟踪的 `Listeners` 集合中的侦听器 `console` 添加筛选器，并将筛选器事件级别指定为 `Error`。  
+## <a name="example"></a><span data-ttu-id="74cee-137">示例</span><span class="sxs-lookup"><span data-stu-id="74cee-137">Example</span></span>  
+ <span data-ttu-id="74cee-138">下面的示例演示如何使用`<filter>`元素添加到侦听器的筛选器`console`中`Listeners`跟踪，并作为筛选器事件级别指定的集合`Error`。</span><span class="sxs-lookup"><span data-stu-id="74cee-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <trace autoflush="false" indentsize="4">  
@@ -86,9 +90,9 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceFilter>   
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="74cee-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="74cee-139">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceFilter>  
+ [<span data-ttu-id="74cee-140">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="74cee-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

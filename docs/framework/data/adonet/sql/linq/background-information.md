@@ -1,93 +1,96 @@
 ---
-title: "背景信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "背景信息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b10845bb985e1461ddc5e09c4a87e1a673899ad6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 背景信息
-本节中的主题介绍有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的基础知识以外的概念和过程。  
+# <a name="background-information"></a><span data-ttu-id="cb453-102">背景信息</span><span class="sxs-lookup"><span data-stu-id="cb453-102">Background Information</span></span>
+<span data-ttu-id="cb453-103">本节中的主题介绍有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的基础知识以外的概念和过程。</span><span class="sxs-lookup"><span data-stu-id="cb453-103">The topics in this section pertain to concepts and procedures that extend beyond the basics about using [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- 请按以下这些步骤查找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 代码和应用程序的其他示例：  
+ <span data-ttu-id="cb453-104">请按以下这些步骤查找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 代码和应用程序的其他示例：</span><span class="sxs-lookup"><span data-stu-id="cb453-104">Follow these steps to find additional examples of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:</span></span>  
   
--   在 MSDN Library 中搜索特定问题。  
+-   <span data-ttu-id="cb453-105">Microsoft 文档中搜索特定问题。</span><span class="sxs-lookup"><span data-stu-id="cb453-105">Search Microsoft Docs for specific issues.</span></span>  
   
--   参与 [LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)（可能为英文网页），在这里可以与专家们详细讨论更复杂的主题。  
+-   <span data-ttu-id="cb453-106">参与[LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。</span><span class="sxs-lookup"><span data-stu-id="cb453-106">Participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span>  
   
--   学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C\# 代码示例的白皮书。  有关更多信息，请参见 [LINQ to SQL：关系数据的 .NET 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)（可能为英文网页）。  
+-   <span data-ttu-id="cb453-107">学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C# 代码示例的白皮书。</span><span class="sxs-lookup"><span data-stu-id="cb453-107">Study the whitepaper that details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# code examples.</span></span> <span data-ttu-id="cb453-108">有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)。</span><span class="sxs-lookup"><span data-stu-id="cb453-108">For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).</span></span>  
   
-## 本节内容  
- [ADO.NET 与 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- 介绍 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 与 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的关系。  
+## <a name="in-this-section"></a><span data-ttu-id="cb453-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="cb453-109">In This Section</span></span>  
+ [<span data-ttu-id="cb453-110">ADO.NET 和 LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="cb453-110">ADO.NET and LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
+ <span data-ttu-id="cb453-111">介绍 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 与 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的关系。</span><span class="sxs-lookup"><span data-stu-id="cb453-111">Describes the relationship of [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] and [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [分析 LINQ to SQL 源代码](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
- 介绍如何通过从 Northwind 示例数据库生成和查看源代码来分析 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射。  
+ [<span data-ttu-id="cb453-112">分析 LINQ to SQL 源代码</span><span class="sxs-lookup"><span data-stu-id="cb453-112">Analyzing LINQ to SQL Source Code</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
+ <span data-ttu-id="cb453-113">介绍如何通过从 Northwind 示例数据库生成和查看源代码来分析 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射。</span><span class="sxs-lookup"><span data-stu-id="cb453-113">Describes how to analyze [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapping by generating and viewing source code from the Northwind sample database.</span></span>  
   
- [自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
- 介绍如何添加验证代码及其他自定义内容。  
+ [<span data-ttu-id="cb453-114">自定义插入、 更新和删除操作</span><span class="sxs-lookup"><span data-stu-id="cb453-114">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ <span data-ttu-id="cb453-115">介绍如何添加验证代码及其他自定义内容。</span><span class="sxs-lookup"><span data-stu-id="cb453-115">Describes how to add validation code and other customizations.</span></span>  
   
- [数据绑定](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
- 介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何使用 <xref:System.ComponentModel.IListSource> 支持数据绑定。  
+ [<span data-ttu-id="cb453-116">数据绑定</span><span class="sxs-lookup"><span data-stu-id="cb453-116">Data Binding</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
+ <span data-ttu-id="cb453-117">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何使用 <xref:System.ComponentModel.IListSource> 支持数据绑定。</span><span class="sxs-lookup"><span data-stu-id="cb453-117">Describes how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses <xref:System.ComponentModel.IListSource> to support data binding.</span></span>  
   
- [继承支持](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
- 介绍继承在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型中的作用，以及如何在查询中使用相关运算符。  
+ [<span data-ttu-id="cb453-118">继承支持</span><span class="sxs-lookup"><span data-stu-id="cb453-118">Inheritance Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
+ <span data-ttu-id="cb453-119">介绍继承在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型中的作用，以及如何在查询中使用相关运算符。</span><span class="sxs-lookup"><span data-stu-id="cb453-119">Describes the role of inheritance in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, and how to use related operators in your queries.</span></span>  
   
- [本地方法调用](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
- 介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对局部方法调用的支持。  
+ [<span data-ttu-id="cb453-120">本地方法调用</span><span class="sxs-lookup"><span data-stu-id="cb453-120">Local Method Calls</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
+ <span data-ttu-id="cb453-121">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对局部方法调用的支持。</span><span class="sxs-lookup"><span data-stu-id="cb453-121">Describes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] support for local method calls.</span></span>  
   
- [使用 LINQ to SQL 的 N 层应用程序和远程应用程序](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- 提供有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的多层应用程序的详细信息。  
+ [<span data-ttu-id="cb453-122">N 层和远程应用程序而 LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="cb453-122">N-Tier and Remote Applications with LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ <span data-ttu-id="cb453-123">提供有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的多层应用程序的详细信息。</span><span class="sxs-lookup"><span data-stu-id="cb453-123">Provides detailed information for multi-tier applications that use [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [对象标识](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- 介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型中的对象标识，并解释此功能与数据库中的对象标识的不同之处。  
+ [<span data-ttu-id="cb453-124">对象标识</span><span class="sxs-lookup"><span data-stu-id="cb453-124">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ <span data-ttu-id="cb453-125">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型中的对象标识，并解释此功能与数据库中的对象标识的不同之处。</span><span class="sxs-lookup"><span data-stu-id="cb453-125">Describes object identity in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, and explains how this feature differs from object identity in a database.</span></span>  
   
- [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- 介绍对象模型及其与关系数据模型的关系。  
+ [<span data-ttu-id="cb453-126">LINQ to SQL 对象模型</span><span class="sxs-lookup"><span data-stu-id="cb453-126">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ <span data-ttu-id="cb453-127">介绍对象模型及其与关系数据模型的关系。</span><span class="sxs-lookup"><span data-stu-id="cb453-127">Describes the object model and its relationship to the relational data model.</span></span>  
   
- [对象状态与更改跟踪](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
- 提供有关 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何跟踪更改的详细信息。  
+ [<span data-ttu-id="cb453-128">对象状态和更改跟踪</span><span class="sxs-lookup"><span data-stu-id="cb453-128">Object States and Change-Tracking</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
+ <span data-ttu-id="cb453-129">提供有关 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何跟踪更改的详细信息。</span><span class="sxs-lookup"><span data-stu-id="cb453-129">Provides detailed information about how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tracks changes.</span></span>  
   
- [开放式并发：概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
- 介绍了开放式并发并定义了一些术语。  
+ [<span data-ttu-id="cb453-130">开放式并发： 概述</span><span class="sxs-lookup"><span data-stu-id="cb453-130">Optimistic Concurrency: Overview</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ <span data-ttu-id="cb453-131">介绍了开放式并发并定义了一些术语。</span><span class="sxs-lookup"><span data-stu-id="cb453-131">Describes optimistic concurrency and defines terms.</span></span>  
   
- [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- 介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的查询与 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中的查询不同的方面。  
+ [<span data-ttu-id="cb453-132">查询概念</span><span class="sxs-lookup"><span data-stu-id="cb453-132">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ <span data-ttu-id="cb453-133">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的查询与 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中的查询不同的方面。</span><span class="sxs-lookup"><span data-stu-id="cb453-133">Describes aspects of queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] that differ from queries in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span>  
   
- [从标识缓存中检索对象](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
- 介绍从标识缓存中检索对象的查询类型。  
+ [<span data-ttu-id="cb453-134">从标识缓存中检索对象</span><span class="sxs-lookup"><span data-stu-id="cb453-134">Retrieving Objects from the Identity Cache</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
+ <span data-ttu-id="cb453-135">介绍从标识缓存中检索对象的查询类型。</span><span class="sxs-lookup"><span data-stu-id="cb453-135">Describes the types of queries that retrieve objects from the identity cache.</span></span>  
   
- [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
- 介绍确保数据库连接安全的正确方法。  
+ [<span data-ttu-id="cb453-136">LINQ to SQL 中的安全</span><span class="sxs-lookup"><span data-stu-id="cb453-136">Security in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
+ <span data-ttu-id="cb453-137">介绍确保数据库连接安全的正确方法。</span><span class="sxs-lookup"><span data-stu-id="cb453-137">Describes the correct approach to security in database connections.</span></span>  
   
- [序列化](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
- 介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中的序列化过程。  
+ [<span data-ttu-id="cb453-138">序列化</span><span class="sxs-lookup"><span data-stu-id="cb453-138">Serialization</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
+ <span data-ttu-id="cb453-139">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中的序列化过程。</span><span class="sxs-lookup"><span data-stu-id="cb453-139">Describes the serialization process in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications.</span></span>  
   
- [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- 介绍如何在设计时映射存储过程以及如何从应用程序中调用它们。  
+ [<span data-ttu-id="cb453-140">存储的过程</span><span class="sxs-lookup"><span data-stu-id="cb453-140">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ <span data-ttu-id="cb453-141">介绍如何在设计时映射存储过程以及如何从应用程序中调用它们。</span><span class="sxs-lookup"><span data-stu-id="cb453-141">Describes how to map stored procedures at design time and how to call them from your application.</span></span>  
   
- [事务支持](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
- 概述了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持的三种事务模型。  
+ [<span data-ttu-id="cb453-142">事务支持</span><span class="sxs-lookup"><span data-stu-id="cb453-142">Transaction Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
+ <span data-ttu-id="cb453-143">概述了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持的三种事务模型。</span><span class="sxs-lookup"><span data-stu-id="cb453-143">Outlines the three models of transaction that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports.</span></span>  
   
- [SQL\-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- 介绍了在结合不同类型系统方面存在的挑战。  
+ [<span data-ttu-id="cb453-144">SQL CLR 类型不匹配</span><span class="sxs-lookup"><span data-stu-id="cb453-144">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ <span data-ttu-id="cb453-145">介绍了在结合不同类型系统方面存在的挑战。</span><span class="sxs-lookup"><span data-stu-id="cb453-145">Describes the challenges of mingling different type systems.</span></span>  
   
- [SQL\-CLR 自定义类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
- 提供有关自定义类型映射的指南。  
+ [<span data-ttu-id="cb453-146">SQL CLR 自定义类型映射</span><span class="sxs-lookup"><span data-stu-id="cb453-146">SQL-CLR Custom Type Mappings</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
+ <span data-ttu-id="cb453-147">提供有关自定义类型映射的指南。</span><span class="sxs-lookup"><span data-stu-id="cb453-147">Provides guidance on customizing type mappings.</span></span>  
   
- [用户定义函数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
- 介绍如何在设计时映射用户定义的函数以及如何从应用程序中调用它们。  
+ [<span data-ttu-id="cb453-148">用户定义函数</span><span class="sxs-lookup"><span data-stu-id="cb453-148">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
+ <span data-ttu-id="cb453-149">介绍如何在设计时映射用户定义的函数以及如何从应用程序中调用它们。</span><span class="sxs-lookup"><span data-stu-id="cb453-149">Describes how to map user-defined functions at design time and how to call them from your application.</span></span>  
   
-## 相关章节  
- [编程指南](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- 包含一些链接，这些链接指向解释 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的各个方面的各节。
+## <a name="related-sections"></a><span data-ttu-id="cb453-150">相关章节</span><span class="sxs-lookup"><span data-stu-id="cb453-150">Related Sections</span></span>  
+ [<span data-ttu-id="cb453-151">编程指南</span><span class="sxs-lookup"><span data-stu-id="cb453-151">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ <span data-ttu-id="cb453-152">包含一些链接，这些链接指向解释 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的各个方面的各节。</span><span class="sxs-lookup"><span data-stu-id="cb453-152">Includes links to sections that explain various aspects of the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>

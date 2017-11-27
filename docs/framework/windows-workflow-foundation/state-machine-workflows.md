@@ -1,24 +1,28 @@
 ---
-title: "状态机工作流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "状态机工作流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 23f903af1bfb63ac5d0b800656e7264d0f9d8b9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 状态机工作流
-状态机是用于开发程序的已知范例。<xref:System.Activities.Statements.StateMachine> 与 <xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition> 以及其他的活动均可用于生成状态机工作流程序。本主题提供了创建状态机工作流的概述。  
+# <a name="state-machine-workflows"></a><span data-ttu-id="44f7d-102">状态机工作流</span><span class="sxs-lookup"><span data-stu-id="44f7d-102">State Machine Workflows</span></span>
+<span data-ttu-id="44f7d-103">状态机是用于开发程序的已知范例。</span><span class="sxs-lookup"><span data-stu-id="44f7d-103">A state machine is a well-known paradigm for developing programs.</span></span> <span data-ttu-id="44f7d-104"><xref:System.Activities.Statements.StateMachine> 活动与 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 以及其他活动一起可用于生成状态机工作流程序。</span><span class="sxs-lookup"><span data-stu-id="44f7d-104">The <xref:System.Activities.Statements.StateMachine> activity, along with <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, and other activities can be used to build state machine workflow programs.</span></span> <span data-ttu-id="44f7d-105">本主题概述如何创建状态机工作流。</span><span class="sxs-lookup"><span data-stu-id="44f7d-105">This topic provides an overview of creating state machine workflows.</span></span>  
   
-## 状态机工作流概述  
- 状态机工作流提供建模类型，使用该类型可以以对事件驱动的方式对您的工作流进行建模。<xref:System.Activities.Statements.StateMachine> 活动包含状态和组成的状态机逻辑的转换，可以在活动可以使用的任何地方使用。 状态机运行时有若干类：  
+## <a name="state-machine-workflow-overview"></a><span data-ttu-id="44f7d-106">状态机工作流概述</span><span class="sxs-lookup"><span data-stu-id="44f7d-106">State Machine Workflow Overview</span></span>  
+ <span data-ttu-id="44f7d-107">状态机工作流提供建模样式，使用该样式可以通过事件驱动方式对您的工作流进行建模。</span><span class="sxs-lookup"><span data-stu-id="44f7d-107">State machine workflows provide a modeling style with which you can model your workflow in an event-driven manner.</span></span> <span data-ttu-id="44f7d-108"><xref:System.Activities.Statements.StateMachine> 活动包含状态和转换，它们构成了状态机的逻辑，并且可以在能够使用活动的任何地方使用。</span><span class="sxs-lookup"><span data-stu-id="44f7d-108">A <xref:System.Activities.Statements.StateMachine> activity contains the states and transitions that make up the logic of the state machine, and can be used anywhere an activity can be used.</span></span> <span data-ttu-id="44f7d-109">状态机运行时有若干类：</span><span class="sxs-lookup"><span data-stu-id="44f7d-109">There are several classes in the state machine runtime:</span></span>  
   
 -   <xref:System.Activities.Statements.StateMachine>  
   
@@ -26,88 +30,88 @@ caps.handback.revision: 16
   
 -   <xref:System.Activities.Statements.Transition>  
   
- 若要创建状态机工作流，状态将被添加到 <xref:System.Activities.Statements.StateMachine> 活动，并且将使用转换控制状态间的流。 以下从 [入门教程](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md) 步骤到 [如何：创建状态机工作流](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md) 的屏幕快照，显示了具有三个状态和三个转换的状态机工作流。**“初始化目标”**是初始状态，表示工作流中的第一个状态。这是由从指定**“启动”**节点导致的线所指定的。工作流中的最终状态被命名为 **FinalState**，表示工作流完成的时间点。  
+ <span data-ttu-id="44f7d-110">为了创建状态机工作流，需要将状态将添加到 <xref:System.Activities.Statements.StateMachine> 活动中，并且使用转换控制各状态之间的流。</span><span class="sxs-lookup"><span data-stu-id="44f7d-110">To create a state machine workflow, states are added to a <xref:System.Activities.Statements.StateMachine> activity, and transitions are used control the flow between states.</span></span> <span data-ttu-id="44f7d-111">以下屏幕截图中，从[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步骤[如何： 创建状态机工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)，显示三个状态和三个转换的状态机工作流。</span><span class="sxs-lookup"><span data-stu-id="44f7d-111">The following screenshot, from the [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) step [How to: Create a State Machine Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), shows a state machine workflow with three states and three transitions.</span></span> <span data-ttu-id="44f7d-112">**初始化目标**是初始状态，表示工作流中的第一个状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-112">**Initialize Target** is the initial state and represents the first state in the workflow.</span></span> <span data-ttu-id="44f7d-113">这由导致从行**启动**节点。</span><span class="sxs-lookup"><span data-stu-id="44f7d-113">This is designated by the line leading to it from the **Start** node.</span></span> <span data-ttu-id="44f7d-114">名为工作流中的最终状态**FinalState**，并代表该处完成的工作流的点。</span><span class="sxs-lookup"><span data-stu-id="44f7d-114">The final state in the workflow is named **FinalState**, and represents the point at which the workflow is completed.</span></span>  
   
- ![已完成的状态机工作流](../../../docs/framework/windows-workflow-foundation//media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ <span data-ttu-id="44f7d-115">![已完成状态机工作流](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span><span class="sxs-lookup"><span data-stu-id="44f7d-115">![Completed State Machine Workflow](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span></span>  
   
- 状态机工作流必须有且只有一个初始状态，并且至少有一个最终的状态。每个状态不是最终状态，但必须至少具有一个转换。以下各节包括创建和配置状态和转换。  
+ <span data-ttu-id="44f7d-116">状态机工作流必须有且只有一个初始状态，并且至少有一个最终状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-116">A state machine workflow must have one and only one initial state, and at least one final state.</span></span> <span data-ttu-id="44f7d-117">不属于最终状态的每个状态都必须具有至少一个转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-117">Each state that is not a final state must have at least one transition.</span></span> <span data-ttu-id="44f7d-118">下面的几节将介绍如何创建和配置状态和转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-118">The following sections cover creating and configuring states and transitions.</span></span>  
   
-## 创建和配置状态  
- <xref:System.Activities.Statements.State> 表示状态机可具有的状态。要将 <xref:System.Activities.Statements.State> 添加到工作流，请将**“状态”**活动设计器从**“工具箱”**的**“状态机”**部分拖到 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 图面上的<xref:System.Activities.Statements.StateMachine> 活动。  
+## <a name="creating-and-configuring-states"></a><span data-ttu-id="44f7d-119">创建和配置状态</span><span class="sxs-lookup"><span data-stu-id="44f7d-119">Creating and Configuring States</span></span>  
+ <span data-ttu-id="44f7d-120"><xref:System.Activities.Statements.State> 表示状态机可具有的状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-120">A <xref:System.Activities.Statements.State> represents a state in which a state machine can be in.</span></span> <span data-ttu-id="44f7d-121">若要添加<xref:System.Activities.Statements.State>到工作流中，将**状态**活动设计器从**状态机**部分**工具箱**拖放到<xref:System.Activities.Statements.StateMachine>上的活动[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]面。</span><span class="sxs-lookup"><span data-stu-id="44f7d-121">To add a <xref:System.Activities.Statements.State> to a workflow, drag the **State** activity designer from the **State Machine** section of the **Toolbox** and drop it onto a <xref:System.Activities.Statements.StateMachine> activity on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] surface.</span></span>  
   
- ![WF4 状态机活动](../../../docs/framework/windows-workflow-foundation//media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ <span data-ttu-id="44f7d-122">![WF4 状态机活动](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")</span><span class="sxs-lookup"><span data-stu-id="44f7d-122">![WF4 State Machine Activities](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")</span></span>  
   
- 若要将状态配置为**“初始状态”**，请右键单击状态，然后选择**“设置为初始状态”**。此外，如果无当前初始状态，初始状态可以通过将线从工作流顶部的**“启动”**节点拖到所需的状态的线来指定。当 <xref:System.Activities.Statements.StateMachine> 活动拖放到工作流设计器时，它预配置了名为**“State1”**的初始状态。状态机工作流必须有且只有一个初始状态。  
+ <span data-ttu-id="44f7d-123">若要配置状态作为**初始状态**，右键单击状态，然后选择**设置为初始状态**。</span><span class="sxs-lookup"><span data-stu-id="44f7d-123">To configure a state as the **Initial State**, right-click the state and select **Set as Initial State**.</span></span> <span data-ttu-id="44f7d-124">此外，如果没有任何当前的初始状态，初始状态可以指定通过拖动中的一行**启动**顶部的工作流所需的状态保存到的节点。</span><span class="sxs-lookup"><span data-stu-id="44f7d-124">Additionally, if there is no current initial state, the initial state can be designated by dragging a line from the **Start** node at the top of the workflow to the desired state.</span></span> <span data-ttu-id="44f7d-125">当<xref:System.Activities.Statements.StateMachine>活动拖放工作流设计器，将会用名为初始状态预先配置**State1**。</span><span class="sxs-lookup"><span data-stu-id="44f7d-125">When a <xref:System.Activities.Statements.StateMachine> activity is dropped onto the workflow designer, it is pre-configured with an initial state named **State1**.</span></span> <span data-ttu-id="44f7d-126">一个状态机工作流必须有且只有一个初始状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-126">A state machine workflow must have one and only one initial state.</span></span>  
   
- 表示状态机中的终止状态的状态称为最终状态。最终状态是其将 <xref:System.Activities.Statements.State.IsFinal%2A> 属性集设置为 `true` 的状态，无 <xref:System.Activities.Statements.State.Exit%2A> 活动和也没有始于它的转换。 若要将最终状态添加到工作流，请将**“FinalState”**活动设计器从**“工具箱”**的**“状态机”**部分拖到 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 图面上的 <xref:System.Activities.Statements.StateMachine> 活动。  状态机工作流必须至少有一个最终状态。  
+ <span data-ttu-id="44f7d-127">表示状态机终止状态的状态称为最终状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-127">A state that represents a terminating state in a state machine is called a final state.</span></span> <span data-ttu-id="44f7d-128">最终状态是 <xref:System.Activities.Statements.State.IsFinal%2A> 属性设置为 `true`、没有 <xref:System.Activities.Statements.State.Exit%2A> 活动且没有源自它的转换的一种状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-128">A final state is a state that has its <xref:System.Activities.Statements.State.IsFinal%2A> property set to `true`, has no <xref:System.Activities.Statements.State.Exit%2A> activity, and no transitions originating from it.</span></span> <span data-ttu-id="44f7d-129">若要将最终状态添加到工作流中，拖动**FinalState**活动设计器从**状态机**部分**工具箱**拖放到<xref:System.Activities.Statements.StateMachine>上的活动[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]面。</span><span class="sxs-lookup"><span data-stu-id="44f7d-129">To add a final state to a workflow, drag a **FinalState** activity designer from the **State Machine** section of the **Toolbox** and drop it onto a <xref:System.Activities.Statements.StateMachine> activity on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] surface.</span></span> <span data-ttu-id="44f7d-130">一个状态机工作流必须具有至少一个最终状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-130">A state machine workflow must have at least one final state.</span></span>  
   
-### 配置条目和退出操作  
- 状态可以有 <xref:System.Activities.Statements.State.Entry%2A> 和 <xref:System.Activities.Statements.State.Exit%2A> 操作。 （配置为最终状态的状态可能只有一个输入操作）。当工作流实例输入状态时，将执行输入操作中的任何活动。输入操作完成时，将安排状态转换的触发器。 当向另一状态的转换完成时，即使该状态转换返回到相同状态，也将执行退出操作中的活动。退出操作完成后，执行转换操作中的活动，然后转给新的状态，并将安排其输入操作。  
-  
-> [!NOTE]
->  当调试状态机工作流，可以将断点放置在根状态机活动上和状态机工作流中的状态。断点不能直接放在转换上, 但它们可以放在包含在状态和转换中的任何活动上。  
-  
-## 创建和配置转换  
- 所有状态必须均具有至少一个转换，除了不可能具有任何转换的最终状态。状态添加到状态机工作流后可能添加转换，或者他们可以在状态放置时进行创建。  
-  
- 若要在一个步骤中添加 <xref:System.Activities.Statements.State> 和创建转换，请将**“状态”**活动从**“工具箱”**的**“状态机”**部分拖动，并将鼠标悬停在工作流设计器中的另一状态上。当在另一 <xref:System.Activities.Statements.State> 上拖动了 <xref:System.Activities.Statements.State> 时，四个三角形会出现在 <xref:System.Activities.Statements.State> 周围。如果 <xref:System.Activities.Statements.State> 拖动到其中四个三角形之一，则其将添加到状态机，而且转换将从源 <xref:System.Activities.Statements.State> 创建到放置目标 <xref:System.Activities.Statements.State>。有关更多信息，请参见 [事务活动设计器](../Topic/Transition%20Activity%20Designer.md)。  
-  
- 若要在状态添加后创建转换，有两种方法。第一个方法就是将状态从工作流设计器图面进行拖动，将鼠标悬停在现有状态并将其放置在其中一个放置点上。这种方法非常类似于上一节中描述的方法。您也可以将鼠标悬停在所需的源状态上，并将线拖到所需的目标状态。  
+### <a name="configuring-entry-and-exit-actions"></a><span data-ttu-id="44f7d-131">配置进入和退出操作</span><span class="sxs-lookup"><span data-stu-id="44f7d-131">Configuring Entry and Exit Actions</span></span>  
+ <span data-ttu-id="44f7d-132">一个状态可以具有一个 <xref:System.Activities.Statements.State.Entry%2A> 和一个 <xref:System.Activities.Statements.State.Exit%2A> 操作。</span><span class="sxs-lookup"><span data-stu-id="44f7d-132">A state can have an <xref:System.Activities.Statements.State.Entry%2A> and an <xref:System.Activities.Statements.State.Exit%2A> action.</span></span> <span data-ttu-id="44f7d-133">（配置为最终状态的状态只能具有一个进入操作）。</span><span class="sxs-lookup"><span data-stu-id="44f7d-133">(A state configured as a final state may have only an entry action).</span></span> <span data-ttu-id="44f7d-134">当某个工作流实例进入某一状态时，进入操作中的所有活动都将执行。</span><span class="sxs-lookup"><span data-stu-id="44f7d-134">When a workflow instance enters a state, any activities in the entry action execute.</span></span> <span data-ttu-id="44f7d-135">在该进入操作完成后，将计划针对状态转换的触发器。</span><span class="sxs-lookup"><span data-stu-id="44f7d-135">When the entry action is complete, the triggers for the state’s transitions are scheduled.</span></span> <span data-ttu-id="44f7d-136">当确认转换到另一状态时，即使该状态转换回相同状态，也将执行退出操作中的活动。</span><span class="sxs-lookup"><span data-stu-id="44f7d-136">When a transition to another state is confirmed, the activities in the exit action are executed, even if the state transitions back to the same state.</span></span> <span data-ttu-id="44f7d-137">退出操作完成后，转换操作中的活动将执行，然后转换到新状态，并将计划其进入操作。</span><span class="sxs-lookup"><span data-stu-id="44f7d-137">After the exit action completes, the activities in the transition’s action execute, and then the new state is transitioned to, and its entry actions are scheduled.</span></span>  
   
 > [!NOTE]
->  状态机中的单个状态使用工作流设计器可以创建多达 76 种转换。对在设计器外创建的工作流中的状态转换的限制只受系统资源限制。  
+>  <span data-ttu-id="44f7d-138">当调试某一状态机工作流时，可以将断点放置在状态机根活动上以及状态机工作流内的状态上。</span><span class="sxs-lookup"><span data-stu-id="44f7d-138">When debugging a state machine workflow, breakpoints can be placed on the root state machine activity and states within the state machine workflow.</span></span> <span data-ttu-id="44f7d-139">断点不能直接放置于转换上，但可以放置于状态和转换中包含的任何活动上。</span><span class="sxs-lookup"><span data-stu-id="44f7d-139">Breakpoints may not be placed directly on the transitions, but they may be placed on any activities contained within the states and transitions.</span></span>  
   
- 转型期可以具有 <xref:System.Activities.Statements.Transition.Trigger%2A>、<xref:System.Activities.Statements.Transition.Condition%2A> 和 <xref:System.Activities.Statements.Transition.Action%2A>。在转换源状态的 <xref:System.Activities.Statements.State.Entry%2A> 操作完成时安排转换的 <xref:System.Activities.Statements.Transition.Trigger%2A>。 通常，<xref:System.Activities.Statements.Transition.Trigger%2A> 是一种等待某种类型的事件发生的活动，但它可以是任何活动或没有活动。一旦 <xref:System.Activities.Statements.Transition.Trigger%2A> 活动完成，如果存在，将对 <xref:System.Activities.Statements.Transition.Condition%2A> 进行计算。如果没有 <xref:System.Activities.Statements.Transition.Trigger%2A> 活动，那么立即对 <xref:System.Activities.Statements.Transition.Condition%2A> 进行计算。如果条件计算结果为 `false`，取消转换，而<xref:System.Activities.Statements.Transition.Trigger%2A> 所有在此状态的活动将重新安排。如果有将相同源状态作为当前转换而共享的其他转换，则那些 <xref:System.Activities.Statements.Transition.Trigger%2A> 操作被取消和重新安排。如果 <xref:System.Activities.Statements.Transition.Condition%2A> 的计算结果为 `true`，或有没有条件，那么将执行源状态的 <xref:System.Activities.Statements.State.Exit%2A> 操作，然后执行转换的 <xref:System.Activities.Statements.Transition.Action%2A>。当 <xref:System.Activities.Statements.Transition.Action%2A> 完成后，控件将传递给**“目标”**状态  
+## <a name="creating-and-configuring-transitions"></a><span data-ttu-id="44f7d-140">创建和配置转换</span><span class="sxs-lookup"><span data-stu-id="44f7d-140">Creating and Configuring Transitions</span></span>  
+ <span data-ttu-id="44f7d-141">所有状态必须均具有至少一个转换，只有最终状态除外，最终状态不能具有任何转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-141">All states must have at least one transition, except for a final state which may not have any transitions.</span></span> <span data-ttu-id="44f7d-142">在某一状态添加到状态机工作流后可以添加转换，或者可以在删除状态时创建转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-142">Transitions may be added after a state is added to a state machine workflow, or they can be created as the state is dropped.</span></span>  
   
- 共享常见触发器的转换称为共享的触发器转换。共享触发器转换组中的每个转换均具有同一触发器，但 <xref:System.Activities.Statements.Transition.Condition%2A> 和操作是唯一的。若要将其他操作添加到转换和创建共享转换，请单击圆圈，以指示所需转换的开始，并将它拖动到所需的状态。新转换将以初始转换的形式共享同一触发器，但它将具有一个唯一的条件和操作。也可以通过单击转换设计器底部的**“添加共享的触发器转换”**，再选择**“连接的可用状态”**下列表中的所需目标状态，在转换设计器中创建共享转换。  
+ <span data-ttu-id="44f7d-143">若要添加<xref:System.Activities.Statements.State>和创建转换在一个步骤中，拖动**状态**活动从**状态机**部分**工具箱**并将它悬停在另一种状态工作流设计器。</span><span class="sxs-lookup"><span data-stu-id="44f7d-143">To add a <xref:System.Activities.Statements.State> and create a transition in one step, drag a **State** activity from the **State Machine** section of the **Toolbox** and hover it over another state in the workflow designer.</span></span> <span data-ttu-id="44f7d-144">在另一个 <xref:System.Activities.Statements.State> 上拖动 <xref:System.Activities.Statements.State> 时，在另一个 <xref:System.Activities.Statements.State> 周围将出现四个三角形。</span><span class="sxs-lookup"><span data-stu-id="44f7d-144">When the dragged <xref:System.Activities.Statements.State> is over another <xref:System.Activities.Statements.State>, four triangles will appear around the other <xref:System.Activities.Statements.State>.</span></span> <span data-ttu-id="44f7d-145">如果将 <xref:System.Activities.Statements.State> 放置到其中一个三角形，则将其添加到状态机，而且创建从源 <xref:System.Activities.Statements.State> 到放置目标 <xref:System.Activities.Statements.State> 的转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-145">If the <xref:System.Activities.Statements.State> is dropped onto one of the four triangles, it is added to the state machine and a transition is created from the source <xref:System.Activities.Statements.State> to the dropped destination <xref:System.Activities.Statements.State>.</span></span> <span data-ttu-id="44f7d-146">有关详细信息，请参阅[Transition 活动设计器](/visualstudio/workflow-designer/transition-activity-designer)。</span><span class="sxs-lookup"><span data-stu-id="44f7d-146">For more information, see [Transition Activity Designer](/visualstudio/workflow-designer/transition-activity-designer).</span></span>  
+  
+ <span data-ttu-id="44f7d-147">若要在添加状态后创建转换，有两个选项。</span><span class="sxs-lookup"><span data-stu-id="44f7d-147">To create a transition after a state is added, there are two options.</span></span> <span data-ttu-id="44f7d-148">第一个选项就是从工作流设计器图面拖动状态，并悬停在现有状态上，然后放置在其中一个放置点上。</span><span class="sxs-lookup"><span data-stu-id="44f7d-148">The first option is to drag the state from the workflow designer surface and hover it over an existing state and drop it on one of the drop points.</span></span> <span data-ttu-id="44f7d-149">这个选项与上一节中介绍的方法非常相似。</span><span class="sxs-lookup"><span data-stu-id="44f7d-149">This is very similar to the method described in the previous section.</span></span> <span data-ttu-id="44f7d-150">您也可以将鼠标悬停在所需的源状态上，然后拖动线条到所需的目标状态上。</span><span class="sxs-lookup"><span data-stu-id="44f7d-150">You can also hover the mouse over the desired source state, and drag a line to the desired destination state.</span></span>  
   
 > [!NOTE]
->  注意，如果转换的 <xref:System.Activities.Statements.Transition.Condition%2A> 计算结果为 `False`（或所有的共享触发转换的计算结果为 `False`），转换将不发生并且此状态下的所有转换的所有触发将被重新计划。  
+>  <span data-ttu-id="44f7d-151">状态机中的单个状态使用工作流设计器可以创建多达 76 个转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-151">A single state in a state machine can have up to 76 transitions created using the workflow designer.</span></span> <span data-ttu-id="44f7d-152">对在设计器外创建的工作流状态的转换限制只受系统资源限制。</span><span class="sxs-lookup"><span data-stu-id="44f7d-152">The limit on transitions for a state for workflows created outside the designer is limited only by system resources.</span></span>  
   
- 有关创建状态机工作流的更多信息，请参见 [如何：创建状态机工作流](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md)、[StateMachine 活动设计器](../Topic/StateMachine%20Activity%20Designer.md), [状态活动设计器](../Topic/State%20Activity%20Designer.md)、[FinalState 活动设计器](../Topic/FinalState%20Activity%20Designer.md) 以及 [事务活动设计器](../Topic/Transition%20Activity%20Designer.md)。  
+ <span data-ttu-id="44f7d-153">一个转换可以具有一个 <xref:System.Activities.Statements.Transition.Trigger%2A>、一个 <xref:System.Activities.Statements.Transition.Condition%2A> 和一个 <xref:System.Activities.Statements.Transition.Action%2A>。</span><span class="sxs-lookup"><span data-stu-id="44f7d-153">A transition may have a <xref:System.Activities.Statements.Transition.Trigger%2A>, a <xref:System.Activities.Statements.Transition.Condition%2A>, and an <xref:System.Activities.Statements.Transition.Action%2A>.</span></span> <span data-ttu-id="44f7d-154">在转换的源状态的 <xref:System.Activities.Statements.Transition.Trigger%2A> 操作完成时，将会计划转换的 <xref:System.Activities.Statements.State.Entry%2A>。</span><span class="sxs-lookup"><span data-stu-id="44f7d-154">A transition’s <xref:System.Activities.Statements.Transition.Trigger%2A> is scheduled when the transition’s source state’s <xref:System.Activities.Statements.State.Entry%2A> action is complete.</span></span> <span data-ttu-id="44f7d-155">通常，<xref:System.Activities.Statements.Transition.Trigger%2A> 是一种等待某种类型的事件发生的活动，但它可以是任何活动，也可以是完全没有任何活动。</span><span class="sxs-lookup"><span data-stu-id="44f7d-155">Typically the <xref:System.Activities.Statements.Transition.Trigger%2A> is an activity that waits for some type of event to occur, but it can be any activity, or no activity at all.</span></span> <span data-ttu-id="44f7d-156">在 <xref:System.Activities.Statements.Transition.Trigger%2A> 活动完成后，将会对 <xref:System.Activities.Statements.Transition.Condition%2A>（如果有）进行计算。</span><span class="sxs-lookup"><span data-stu-id="44f7d-156">Once the <xref:System.Activities.Statements.Transition.Trigger%2A> activity is complete, the <xref:System.Activities.Statements.Transition.Condition%2A>, if present, is evaluated.</span></span> <span data-ttu-id="44f7d-157">如果没有 <xref:System.Activities.Statements.Transition.Trigger%2A> 活动，则立即对 <xref:System.Activities.Statements.Transition.Condition%2A> 进行计算。</span><span class="sxs-lookup"><span data-stu-id="44f7d-157">If there is no <xref:System.Activities.Statements.Transition.Trigger%2A> activity then the <xref:System.Activities.Statements.Transition.Condition%2A> is immediately evaluated.</span></span> <span data-ttu-id="44f7d-158">如果条件的计算结果为 `false`，则取消转换，并且来自该状态的所有转换的 <xref:System.Activities.Statements.Transition.Trigger%2A> 活动都将重新计划。</span><span class="sxs-lookup"><span data-stu-id="44f7d-158">If the condition evaluates to `false`, the transition is cancelled, and the <xref:System.Activities.Statements.Transition.Trigger%2A> activity for all transitions from the state are rescheduled.</span></span> <span data-ttu-id="44f7d-159">如果存在与当前转换共享相同源状态的其他转换，也将取消并且重新计划这些 <xref:System.Activities.Statements.Transition.Trigger%2A> 操作。</span><span class="sxs-lookup"><span data-stu-id="44f7d-159">If there are other transitions that share the same source state as the current transition, those <xref:System.Activities.Statements.Transition.Trigger%2A> actions are cancelled and rescheduled as well.</span></span> <span data-ttu-id="44f7d-160">如果 <xref:System.Activities.Statements.Transition.Condition%2A> 的计算结果为 `true` 或没有任何条件，则执行源状态的 <xref:System.Activities.Statements.State.Exit%2A> 操作，然后执行转换的 <xref:System.Activities.Statements.Transition.Action%2A>。</span><span class="sxs-lookup"><span data-stu-id="44f7d-160">If the <xref:System.Activities.Statements.Transition.Condition%2A> evaluates to `true`, or there is no condition, then the <xref:System.Activities.Statements.State.Exit%2A> action of the source state is executed, and then the <xref:System.Activities.Statements.Transition.Action%2A> of the transition is executed.</span></span> <span data-ttu-id="44f7d-161">当<xref:System.Activities.Statements.Transition.Action%2A>完成后，控制权将传递给**目标**状态</span><span class="sxs-lookup"><span data-stu-id="44f7d-161">When the <xref:System.Activities.Statements.Transition.Action%2A> completes, control passes to the **Target** state</span></span>  
   
-## 状态机术语  
- 本节定义本主题中使用的状态机词汇。  
+ <span data-ttu-id="44f7d-162">共享公共触发器的转换称作共享触发器转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-162">Transitions that share a common trigger are known as shared trigger transitions.</span></span> <span data-ttu-id="44f7d-163">一组共享触发器转换中的每个转换都具有相同触发器，但具有唯一的 <xref:System.Activities.Statements.Transition.Condition%2A> 和 Action。</span><span class="sxs-lookup"><span data-stu-id="44f7d-163">Each transition in a group of shared trigger transitions has the same trigger, but a unique <xref:System.Activities.Statements.Transition.Condition%2A> and Action.</span></span> <span data-ttu-id="44f7d-164">若要将其他操作添加到转换和创建共享转换，请单击指示所需转换的开始的圆并将它拖到所需的状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-164">To add additional actions to a transition and create a shared transition, click the circle that indicates the start of the desired transition and drag it to the desired state.</span></span> <span data-ttu-id="44f7d-165">新转换将与初始转换共享相同的触发器，但它将具有一个唯一的条件和操作。</span><span class="sxs-lookup"><span data-stu-id="44f7d-165">The new transition will share a same trigger as the initial transition, but it will have a unique condition and action.</span></span> <span data-ttu-id="44f7d-166">创建共享的转换可以还从在转换设计器中通过单击**添加共享的触发器转换**底部的转换设计器，然后选择所需的目标状态从**连接的可用状态**下拉列表。</span><span class="sxs-lookup"><span data-stu-id="44f7d-166">Shared transitions can also be created from within the transition designer by clicking **Add shared trigger transition** at the bottom of the transition designer, and then selecting the desired target state from the **Available states to connect** drop-down.</span></span>  
   
- State  
- 组成状态机的基本单位。任何特定时间状态都可处于一个状态。  
+> [!NOTE]
+>  <span data-ttu-id="44f7d-167">注意，如果转换的 <xref:System.Activities.Statements.Transition.Condition%2A> 计算结果为 `False`（或所有共享触发转换条件的计算结果均为 `False`），转换将不发生，并且此状态下的所有转换的所有触发将被重新计划。</span><span class="sxs-lookup"><span data-stu-id="44f7d-167">Note that if the <xref:System.Activities.Statements.Transition.Condition%2A> of a transition evaluates to `False` (or all of the conditions of a shared trigger transition evaluate to `False`), the transition will not occur and all triggers for all the transitions from the state will be rescheduled.</span></span>  
   
- 输入操作  
- 输入状态时执行的活动  
+ <span data-ttu-id="44f7d-168">有关创建状态机工作流的详细信息，请参阅[如何： 创建状态机工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)， [StateMachine 活动设计器](/visualstudio/workflow-designer/statemachine-activity-designer)，[状态活动设计器](/visualstudio/workflow-designer/state-activity-designer)，[FinalState 活动设计器](/visualstudio/workflow-designer/finalstate-activity-designer)，和[转换活动设计器](/visualstudio/workflow-designer/transition-activity-designer)。</span><span class="sxs-lookup"><span data-stu-id="44f7d-168">For more information on creating state machine workflows, see [How to: Create a State Machine Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [StateMachine Activity Designer](/visualstudio/workflow-designer/statemachine-activity-designer), [State Activity Designer](/visualstudio/workflow-designer/state-activity-designer), [FinalState Activity Designer](/visualstudio/workflow-designer/finalstate-activity-designer), and [Transition Activity Designer](/visualstudio/workflow-designer/transition-activity-designer).</span></span>  
   
- 退出操作  
- 退出状态时执行的活动  
+## <a name="state-machine-terminology"></a><span data-ttu-id="44f7d-169">状态机术语</span><span class="sxs-lookup"><span data-stu-id="44f7d-169">State Machine Terminology</span></span>  
+ <span data-ttu-id="44f7d-170">本节定义本主题中使用的状态机词汇。</span><span class="sxs-lookup"><span data-stu-id="44f7d-170">This section defines the state machine vocabulary used throughout this topic.</span></span>  
   
- 转换  
- 两个状态间的定向关系，表示状态机对特定类型事件的出现的完整响应。  
+ <span data-ttu-id="44f7d-171">状态</span><span class="sxs-lookup"><span data-stu-id="44f7d-171">State</span></span>  
+ <span data-ttu-id="44f7d-172">构成状态机的基本单位。</span><span class="sxs-lookup"><span data-stu-id="44f7d-172">The basic unit that composes a state machine.</span></span> <span data-ttu-id="44f7d-173">状态机在任何特定时间都可处于某一状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-173">A state machine can be in one state at any particular time.</span></span>  
   
- 共享的转换  
- 与一个或多个转换共享源状态和触发器的转换，但状态和操作是唯一的。  
+ <span data-ttu-id="44f7d-174">进入操作</span><span class="sxs-lookup"><span data-stu-id="44f7d-174">Entry Action</span></span>  
+ <span data-ttu-id="44f7d-175">进入状态时执行的活动</span><span class="sxs-lookup"><span data-stu-id="44f7d-175">An activity executed when entering the state</span></span>  
   
- 触发器  
- 导致转换发生的触发活动。  
+ <span data-ttu-id="44f7d-176">退出操作</span><span class="sxs-lookup"><span data-stu-id="44f7d-176">Exit Action</span></span>  
+ <span data-ttu-id="44f7d-177">退出状态时执行的活动</span><span class="sxs-lookup"><span data-stu-id="44f7d-177">An activity executed when exiting the state</span></span>  
   
- 条件  
- 触发器出现后，约束的计算结果必须为 `true`，以便转换完成。  
+ <span data-ttu-id="44f7d-178">切换</span><span class="sxs-lookup"><span data-stu-id="44f7d-178">Transition</span></span>  
+ <span data-ttu-id="44f7d-179">两个状态之间的定向关系，表示状态机对发生的特定类型事件的整个响应。</span><span class="sxs-lookup"><span data-stu-id="44f7d-179">A directed relationship between two states which represents the complete response of a state machine to an occurrence of an event of a particular type.</span></span>  
   
- 转换操作  
- 执行特定转换时执行的活动。  
+ <span data-ttu-id="44f7d-180">共享转换</span><span class="sxs-lookup"><span data-stu-id="44f7d-180">Shared Transition</span></span>  
+ <span data-ttu-id="44f7d-181">与一个或多个转换共享源状态和触发器、但具有唯一条件和操作的一种转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-181">A transition that shares a source state and trigger with one or more transitions, but has a unique condition and action.</span></span>  
   
- 条件转换  
- 具有显式条件的转换。  
+ <span data-ttu-id="44f7d-182">触发器</span><span class="sxs-lookup"><span data-stu-id="44f7d-182">Trigger</span></span>  
+ <span data-ttu-id="44f7d-183">导致转换发生的触发活动。</span><span class="sxs-lookup"><span data-stu-id="44f7d-183">A triggering activity that causes a transition to occur.</span></span>  
   
- 自行转换  
- 从状态转换到它本身的转换。  
+ <span data-ttu-id="44f7d-184">条件</span><span class="sxs-lookup"><span data-stu-id="44f7d-184">Condition</span></span>  
+ <span data-ttu-id="44f7d-185">一个约束条件，该约束的计算结果必须为 `true`，然后触发器才会发生以便完成转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-185">A constraint which must evaluate to `true` after the trigger occurs in order for the transition to complete.</span></span>  
   
- 初始状态  
- 表示状态机起始点的状态。  
+ <span data-ttu-id="44f7d-186">转换操作</span><span class="sxs-lookup"><span data-stu-id="44f7d-186">Transition Action</span></span>  
+ <span data-ttu-id="44f7d-187">在执行某个转换时执行的活动。</span><span class="sxs-lookup"><span data-stu-id="44f7d-187">An activity which is executed when performing a certain transition.</span></span>  
   
- 最终状态  
- 表示状态机完成的状态。  
+ <span data-ttu-id="44f7d-188">条件转换</span><span class="sxs-lookup"><span data-stu-id="44f7d-188">Conditional Transition</span></span>  
+ <span data-ttu-id="44f7d-189">具有显式条件的转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-189">A transition with an explicit condition.</span></span>  
   
-## 请参阅  
- [如何：创建状态机工作流](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md)   
- [StateMachine 活动设计器](../Topic/StateMachine%20Activity%20Designer.md)   
- [状态活动设计器](../Topic/State%20Activity%20Designer.md)   
- [FinalState 活动设计器](../Topic/FinalState%20Activity%20Designer.md)   
- [事务活动设计器](../Topic/Transition%20Activity%20Designer.md)
+ <span data-ttu-id="44f7d-190">自行转换</span><span class="sxs-lookup"><span data-stu-id="44f7d-190">Self-transition</span></span>  
+ <span data-ttu-id="44f7d-191">从某一状态转换到该状态本身的一种转换。</span><span class="sxs-lookup"><span data-stu-id="44f7d-191">A transition which transits from a state to itself.</span></span>  
+  
+ <span data-ttu-id="44f7d-192">初始状态</span><span class="sxs-lookup"><span data-stu-id="44f7d-192">Initial State</span></span>  
+ <span data-ttu-id="44f7d-193">表示状态机起始点的一种状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-193">A state which represents the starting point of the state machine.</span></span>  
+  
+ <span data-ttu-id="44f7d-194">最终状态</span><span class="sxs-lookup"><span data-stu-id="44f7d-194">Final State</span></span>  
+ <span data-ttu-id="44f7d-195">表示状态机完成的一种状态。</span><span class="sxs-lookup"><span data-stu-id="44f7d-195">A state which represents the completion of the state machine.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="44f7d-196">另请参阅</span><span class="sxs-lookup"><span data-stu-id="44f7d-196">See Also</span></span>  
+ [<span data-ttu-id="44f7d-197">如何：创建状态机工作流</span><span class="sxs-lookup"><span data-stu-id="44f7d-197">How to: Create a State Machine Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ [<span data-ttu-id="44f7d-198">StateMachine 活动设计器</span><span class="sxs-lookup"><span data-stu-id="44f7d-198">StateMachine Activity Designer</span></span>](/visualstudio/workflow-designer/statemachine-activity-designer)  
+ [<span data-ttu-id="44f7d-199">State 活动设计器</span><span class="sxs-lookup"><span data-stu-id="44f7d-199">State Activity Designer</span></span>](/visualstudio/workflow-designer/state-activity-designer)  
+ [<span data-ttu-id="44f7d-200">FinalState 活动设计器</span><span class="sxs-lookup"><span data-stu-id="44f7d-200">FinalState Activity Designer</span></span>](/visualstudio/workflow-designer/finalstate-activity-designer)  
+ [<span data-ttu-id="44f7d-201">Transition 活动设计器</span><span class="sxs-lookup"><span data-stu-id="44f7d-201">Transition Activity Designer</span></span>](/visualstudio/workflow-designer/transition-activity-designer)

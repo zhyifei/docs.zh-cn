@@ -1,117 +1,124 @@
 ---
-title: "如何：创建活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：创建活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: 39
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b52daa513bad9d0cb05fcabb27ff5755f8dba2a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建活动
-活动是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心行为单元。活动的执行逻辑可以使用托管代码实现，也可以使用其他活动实现。本主题演示如何创建两个活动。第一个活动是简单活动，它使用代码来实现其执行逻辑。第二个活动的实现是用其他活动定义的。后续教程步骤会使用这些活动。  
+# <a name="how-to-create-an-activity"></a><span data-ttu-id="57bcc-102">如何：创建活动</span><span class="sxs-lookup"><span data-stu-id="57bcc-102">How to: Create an Activity</span></span>
+<span data-ttu-id="57bcc-103">活动是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心行为单元。</span><span class="sxs-lookup"><span data-stu-id="57bcc-103">Activities are the core unit of behavior in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span></span> <span data-ttu-id="57bcc-104">活动的执行逻辑可以使用托管代码实现，也可以使用其他活动实现。</span><span class="sxs-lookup"><span data-stu-id="57bcc-104">The execution logic of an activity can be implemented in managed code or it can be implemented by using other activities.</span></span> <span data-ttu-id="57bcc-105">本主题演示如何创建两个活动。</span><span class="sxs-lookup"><span data-stu-id="57bcc-105">This topic demonstrates how to create two activities.</span></span> <span data-ttu-id="57bcc-106">第一个活动是简单活动，它使用代码来实现其执行逻辑。</span><span class="sxs-lookup"><span data-stu-id="57bcc-106">The first activity is a simple activity that uses code to implement its execution logic.</span></span> <span data-ttu-id="57bcc-107">第二个活动的实现是用其他活动定义的。</span><span class="sxs-lookup"><span data-stu-id="57bcc-107">The implementation of the second activity is defined by using other activities.</span></span> <span data-ttu-id="57bcc-108">后续教程步骤会使用这些活动。</span><span class="sxs-lookup"><span data-stu-id="57bcc-108">These activities are used in following steps in the tutorial.</span></span>  
   
 > [!NOTE]
->  若要下载完整版教程，请参见 [Windows Workflow Foundation \(WF45\) — 入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  <span data-ttu-id="57bcc-109">若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="57bcc-109">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### 创建活动库项目  
+### <a name="to-create-the-activity-library-project"></a><span data-ttu-id="57bcc-110">创建活动库项目</span><span class="sxs-lookup"><span data-stu-id="57bcc-110">To create the activity library project</span></span>  
   
-1.  打开 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，然后从**“文件”**菜单中依次选择**“新建”**和**“项目”**。  
+1.  <span data-ttu-id="57bcc-111">打开[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]选择**新建**，**项目**从**文件**菜单。</span><span class="sxs-lookup"><span data-stu-id="57bcc-111">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and choose **New**,  **Project** from the **File** menu.</span></span>  
   
-2.  在**“已安装”**、**“模板”**列表中，展开**“其他项目类型”**节点，然后选择**“Visual Studio 解决方案”**。  
+2.  <span data-ttu-id="57bcc-112">展开**其他项目类型**中的节点**已安装**，**模板**列表并选择**Visual Studio 解决方案**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-112">Expand the **Other Project Types** node in the **Installed**, **Templates** list and select **Visual Studio Solutions**.</span></span>  
   
-3.  从**“Visual Studio 解决方案”**列表中选择**“空白解决方案”**。请确保在 .NET Framework 版本下拉列表中选择**“.NET Framework 4.5”**。在**“名称”**框中键入 `WF45GettingStartedTutorial`，然后单击**“确定”**。  
+3.  <span data-ttu-id="57bcc-113">选择**空白解决方案**从**Visual Studio 解决方案**列表。</span><span class="sxs-lookup"><span data-stu-id="57bcc-113">Select **Blank Solution** from the **Visual Studio Solutions** list.</span></span> <span data-ttu-id="57bcc-114">请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。</span><span class="sxs-lookup"><span data-stu-id="57bcc-114">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="57bcc-115">类型`WF45GettingStartedTutorial`中**名称**中，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-115">Type `WF45GettingStartedTutorial` in the **Name** box and then click **OK**.</span></span>  
   
-4.  在**解决方案资源管理器**中右键单击**“WF45GettingStartedTutorial”**，然后依次选择**“添加”**和**“新建项目”**。  
+4.  <span data-ttu-id="57bcc-116">右键单击**WF45GettingStartedTutorial**中**解决方案资源管理器**选择**添加**，**新项目**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-116">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
     > [!TIP]
-    >  如果未显示**解决方案资源管理器**窗口，请从**“视图”**菜单选择**“解决方案资源管理器**。  
+    >  <span data-ttu-id="57bcc-117">如果未显示 **解决方案资源管理器** 窗口，请从 **“视图”** 菜单选择 **“解决方案资源管理器** 。</span><span class="sxs-lookup"><span data-stu-id="57bcc-117">If the **Solution Explorer** window is not displayed, select **Solution Explorer** from the **View** menu.</span></span>  
   
-5.  在**“已安装”**节点中，选择**“Visual C\#”**、**“工作流”**（或**“Visual Basic”**、**“工作流”**）。请确保在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 版本下拉列表中选择**“.NET Framework 4.5”**。从**“工作流”**列表中选择**“活动库”**。在**“名称”**框中，键入 `NumberGuessWorkflowActivities`，然后单击**“确定”**。  
+5.  <span data-ttu-id="57bcc-118">在 **“已安装”** 节点中，选择 **“Visual C#”**、 **“工作流”** （或 **“Visual Basic”**、 **“工作流”**）。</span><span class="sxs-lookup"><span data-stu-id="57bcc-118">In the **Installed** node, select **Visual C#**, **Workflow** (or **Visual Basic**, **Workflow**).</span></span> <span data-ttu-id="57bcc-119">确保**.NET Framework 4.5**中选择[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本下拉列表。</span><span class="sxs-lookup"><span data-stu-id="57bcc-119">Ensure that **.NET Framework 4.5** is selected in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version drop-down list.</span></span> <span data-ttu-id="57bcc-120">选择**活动库**从**工作流**列表。</span><span class="sxs-lookup"><span data-stu-id="57bcc-120">Select **Activity Library** from the **Workflow** list.</span></span> <span data-ttu-id="57bcc-121">类型`NumberGuessWorkflowActivities`中**名称**中，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-121">Type `NumberGuessWorkflowActivities` in the **Name** box and then click **OK**.</span></span>  
   
     > [!NOTE]
-    >  根据在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中配置为主要语言的编程语言，**“Visual C\#”**或**“Visual Basic”**节点可能位于**“已安装”**节点下的**“其他语言”**节点中。  
+    >  <span data-ttu-id="57bcc-122">根据的编程语言配置为主要语言中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]、 **Visual C#**或**Visual Basic**节点可能位于**其他语言**中的节点**已安装**节点。</span><span class="sxs-lookup"><span data-stu-id="57bcc-122">Depending on which programming language is configured as the primary language in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>  
   
-6.  在**解决方案资源管理器**中右键单击**“Activity1.xaml”**，然后选择**“删除”**。单击**“确定”**以确认。  
+6.  <span data-ttu-id="57bcc-123">右键单击**Activity1.xaml**中**解决方案资源管理器**选择**删除**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-123">Right-click **Activity1.xaml** in **Solution Explorer** and choose **Delete**.</span></span> <span data-ttu-id="57bcc-124">单击 **“确定”** 以确认。</span><span class="sxs-lookup"><span data-stu-id="57bcc-124">Click **OK** to confirm.</span></span>  
   
-### 创建 ReadInt 活动  
+### <a name="to-create-the-readint-activity"></a><span data-ttu-id="57bcc-125">创建 ReadInt 活动</span><span class="sxs-lookup"><span data-stu-id="57bcc-125">To create the ReadInt activity</span></span>  
   
-1.  从**“项目”**菜单中选择**“添加新项”**。  
+1.  <span data-ttu-id="57bcc-126">选择**添加新项**从**项目**菜单。</span><span class="sxs-lookup"><span data-stu-id="57bcc-126">Choose **Add New Item** from the **Project** menu.</span></span>  
   
-2.  在**“已安装”**、**“常用项”**节点中，选择**“工作流”**。从**“工作流”**列表中选择**“代码活动”**。  
+2.  <span data-ttu-id="57bcc-127">在**已安装**，**通用项**节点中，选择**工作流**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-127">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="57bcc-128">选择**代码活动**从**工作流**列表。</span><span class="sxs-lookup"><span data-stu-id="57bcc-128">Select **Code Activity** from the **Workflow** list.</span></span>  
   
-3.  在**“名称”**框中键入 `ReadInt`，然后单击**“添加”**。  
+3.  <span data-ttu-id="57bcc-129">类型`ReadInt`到**名称**中，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-129">Type `ReadInt` into the **Name** box and then click **Add**.</span></span>  
   
-4.  将现有的 `ReadInt` 定义替换为下面的定义。  
+4.  <span data-ttu-id="57bcc-130">将现有的 `ReadInt` 定义替换为下面的定义。</span><span class="sxs-lookup"><span data-stu-id="57bcc-130">Replace the existing `ReadInt` definition with the following definition.</span></span>  
   
      [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]  
   
     > [!NOTE]
-    >  `ReadInt` 活动派生自 <xref:System.Activities.NativeActivity%601> 而不是 <xref:System.Activities.CodeActivity>，这是默认的代码活动模板。如果活动提供单个结果，可以使用 <xref:System.Activities.CodeActivity%601>，它是通过 <xref:System.Activities.Activity%601.Result%2A> 参数公开的，但是 <xref:System.Activities.CodeActivity%601> 不支持使用书签，因此使用 <xref:System.Activities.NativeActivity%601>。  
+    >  <span data-ttu-id="57bcc-131">`ReadInt` 活动派生自 <xref:System.Activities.NativeActivity%601> 而不是 <xref:System.Activities.CodeActivity>，这是默认的代码活动模板。</span><span class="sxs-lookup"><span data-stu-id="57bcc-131">The `ReadInt` activity derives from <xref:System.Activities.NativeActivity%601> instead of <xref:System.Activities.CodeActivity>, which is the default for the code activity template.</span></span> <span data-ttu-id="57bcc-132">如果活动提供单个结果，可以使用 <xref:System.Activities.CodeActivity%601>，它是通过 <xref:System.Activities.Activity%601.Result%2A> 参数公开的，但是 <xref:System.Activities.CodeActivity%601> 不支持使用书签，因此使用 <xref:System.Activities.NativeActivity%601>。</span><span class="sxs-lookup"><span data-stu-id="57bcc-132"><xref:System.Activities.CodeActivity%601> can be used if the activity provides a single result, which is exposed through the <xref:System.Activities.Activity%601.Result%2A> argument, but <xref:System.Activities.CodeActivity%601> does not support the use of bookmarks, so <xref:System.Activities.NativeActivity%601> is used.</span></span>  
   
-### 创建 Prompt 活动  
+### <a name="to-create-the-prompt-activity"></a><span data-ttu-id="57bcc-133">创建 Prompt 活动</span><span class="sxs-lookup"><span data-stu-id="57bcc-133">To create the Prompt activity</span></span>  
   
-1.  按 Ctrl\+Shift\+B 生成项目。通过生成项目，可以使用此项目中的 `ReadInt` 活动生成此步骤中的自定义活动。  
+1.  <span data-ttu-id="57bcc-134">按 Ctrl+Shift+B 生成项目。</span><span class="sxs-lookup"><span data-stu-id="57bcc-134">Press CTRL+SHIFT+B to build the project.</span></span> <span data-ttu-id="57bcc-135">通过生成项目，可以使用此项目中的 `ReadInt` 活动生成此步骤中的自定义活动。</span><span class="sxs-lookup"><span data-stu-id="57bcc-135">Building the project enables the `ReadInt` activity in this project to be used to build the custom activity from this step.</span></span>  
   
-2.  从**“项目”**菜单中选择**“添加新项”**。  
+2.  <span data-ttu-id="57bcc-136">选择**添加新项**从**项目**菜单。</span><span class="sxs-lookup"><span data-stu-id="57bcc-136">Choose **Add New Item** from the **Project** menu.</span></span>  
   
-3.  在**“已安装”**、**“常用项”**节点中，选择**“工作流”**。从**“工作流”**列表中选择**“活动”**。  
+3.  <span data-ttu-id="57bcc-137">在**已安装**，**通用项**节点中，选择**工作流**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-137">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="57bcc-138">选择**活动**从**工作流**列表。</span><span class="sxs-lookup"><span data-stu-id="57bcc-138">Select **Activity** from the **Workflow** list.</span></span>  
   
-4.  在**“名称”**框中键入 `Prompt`，然后单击**“添加”**。  
+4.  <span data-ttu-id="57bcc-139">类型`Prompt`到**名称**中，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-139">Type `Prompt` into the **Name** box and then click **Add**.</span></span>  
   
-5.  如果设计器中尚未显示**“Prompt.xaml”**工作流，请在**解决方案资源管理器**中双击该工作流，使其显示在设计器中。  
+5.  <span data-ttu-id="57bcc-140">双击**Prompt.xaml**中**解决方案资源管理器**以将其显示在设计器中，如果未显示。</span><span class="sxs-lookup"><span data-stu-id="57bcc-140">Double-click **Prompt.xaml** in **Solution Explorer** to display it in the designer if it is not already displayed.</span></span>  
   
-6.  单击活动设计器左下方的**“参数”**按钮，以显示**“参数”**窗格。  
+6.  <span data-ttu-id="57bcc-141">单击**参数**左下方的活动设计器以显示**参数**窗格。</span><span class="sxs-lookup"><span data-stu-id="57bcc-141">Click **Arguments** in the lower-left side of the activity designer to display the **Arguments** pane.</span></span>  
   
-7.  单击**“创建参数”**。  
+7.  <span data-ttu-id="57bcc-142">单击**创建自变量**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-142">Click **Create Argument**.</span></span>  
   
-8.  在**“名称”**框中键入 `BookmarkName`，从**“方向”**下拉列表中选择**“输入”**，再从**“参数类型”**下拉列表中选择**“String”**，然后按 Enter 保存该参数。  
+8.  <span data-ttu-id="57bcc-143">类型`BookmarkName`到**名称**框中，选择**中**从**方向**下拉列表中，选择**字符串**从**自变量类型**下拉列表，然后按 ENTER 保存该自变量。</span><span class="sxs-lookup"><span data-stu-id="57bcc-143">Type `BookmarkName` into the **Name** box, select **In** from the **Direction** drop-down list, select **String** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-9. 单击**“创建参数”**。  
+9. <span data-ttu-id="57bcc-144">单击**创建自变量**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-144">Click **Create Argument**.</span></span>  
   
-10. 在新添加的 `BookmarkName` 参数下方的**“名称”**框中键入 `Result`，从**“方向”**下拉列表中选择**“输出”**，再从**“参数类型”**下拉列表中选择**“Int32”**，然后按 Enter。  
+10. <span data-ttu-id="57bcc-145">类型`Result`到**名称**是下新添加的框`BookmarkName`自变量中，选择**出**从**方向**下拉列表中，选择**Int32**从**自变量类型**下拉列表，然后按 ENTER。</span><span class="sxs-lookup"><span data-stu-id="57bcc-145">Type `Result` into the **Name** box that is underneath the newly added `BookmarkName` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-11. 单击**“创建参数”**。  
+11. <span data-ttu-id="57bcc-146">单击**创建自变量**。</span><span class="sxs-lookup"><span data-stu-id="57bcc-146">Click **Create Argument**.</span></span>  
   
-12. 在**“名称”**框中键入 `Text`，从**“方向”**下拉列表中选择**“输入”**，再从**“参数类型”**下拉列表中选择**“String”**，然后按 Enter 保存该参数。  
+12. <span data-ttu-id="57bcc-147">类型`Text`到**名称**框中，选择**中**从**方向**下拉列表中，选择**字符串**从**自变量类型**下拉列表，然后按 ENTER 保存该自变量。</span><span class="sxs-lookup"><span data-stu-id="57bcc-147">Type `Text` into the **Name** box, select **In** from the **Direction** drop-down list, select **String** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-     在以下步骤中，这三个参数将绑定到添加到 `Prompt` 活动中的 <xref:System.Activities.Statements.WriteLine> 和 `ReadInt` 活动的相应参数。  
+     <span data-ttu-id="57bcc-148">在以下步骤中，这三个参数将绑定到添加到 <xref:System.Activities.Statements.WriteLine> 活动中的 `ReadInt` 和 `Prompt` 活动的相应参数。</span><span class="sxs-lookup"><span data-stu-id="57bcc-148">These three arguments are bound to the corresponding arguments of the <xref:System.Activities.Statements.WriteLine> and `ReadInt` activities that are added to the `Prompt` activity in the following steps.</span></span>  
   
-13. 单击活动设计器左下方的**“参数”**，以关闭**“参数”**窗格。  
+13. <span data-ttu-id="57bcc-149">单击**参数**要关闭的活动设计器左下方**参数**窗格。</span><span class="sxs-lookup"><span data-stu-id="57bcc-149">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-14. 从**“工具箱”**的**“控制流”**部分中，将 **Sequence** 活动拖到 **Prompt** 活动设计器的**“在此处放置活动”**标签上。  
-  
-    > [!TIP]
-    >  如果**“工具箱”**窗口未显示，请从**“视图”**菜单中选择**“工具箱”**。  
-  
-15. 从**“工具箱”**的**“基元”**部分中，将 **WriteLine** 活动拖到 **Sequence** 活动设计器的**“在此处放置活动”**标签上。  
-  
-16. 将 **WriteLine** 活动的 **Text** 参数绑定到 **Prompt** 活动的 **Text** 参数，方法是在**“属性”**窗口中的**“输入 C\# 表达式”**框或者**“输入 VB 表达式”**框中键入 `Text`，然后按 Tab 键两次。这会关闭 IntelliSense 列表成员窗口，并通过将选择范围移离属性保存属性值。通过在活动本身的**“输入 C\# 表达式”**或**“输入 VB 表达式”**框中键入 `Text`，也可以设置此属性。  
+14. <span data-ttu-id="57bcc-150">拖动**序列**活动从**控制流**部分**工具箱**拖放到**将活动拖至此处**标签**提示**活动设计器。</span><span class="sxs-lookup"><span data-stu-id="57bcc-150">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the **Drop activity here** label of the **Prompt** activity designer.</span></span>  
   
     > [!TIP]
-    >  如果**“属性窗口”**未显示，请从**“视图”**菜单中选择**“属性窗口”**。  
+    >  <span data-ttu-id="57bcc-151">如果**工具箱**不显示窗口中，选择**工具箱**从**视图**菜单。</span><span class="sxs-lookup"><span data-stu-id="57bcc-151">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-17. 将 **ReadInt** 活动从**“工具箱”**的 **NumberGuessWorkflowActivities** 部分拖到 **Sequence** 活动中，以便它位于 **WriteLine** 活动之后。  
+15. <span data-ttu-id="57bcc-152">拖动**WriteLine**活动从**基元**部分**工具箱**拖放到**将活动拖至此处**标签**序列**活动。</span><span class="sxs-lookup"><span data-stu-id="57bcc-152">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Drop activity here** label of the **Sequence** activity.</span></span>  
   
-18. 将**“ReadInt”**活动的**“BookmarkName”**参数绑定到**“Prompt”**活动的**“BookmarkName”**参数，方法是在**“属性窗口”**中**“BookmarkName”**参数右侧的**“输入 VB 表达式”**框中键入 `BookmarkName`，然后按 Tab 键两次以关闭 IntelliSense“列出成员”窗口并保存该属性。  
+16. <span data-ttu-id="57bcc-153">将绑定**文本**参数**WriteLine**活动**文本**参数**提示**通过键入活动`Text`到**输入 C# 表达式**或**输入 VB 表达式**框中**属性**窗口中，然后按 TAB 键两次。</span><span class="sxs-lookup"><span data-stu-id="57bcc-153">Bind the **Text** argument of the **WriteLine** activity to the **Text** argument of the **Prompt** activity by typing `Text` into the **Enter a C# expression** or **Enter a VB expression** box in the **Properties** window, and then press the TAB key two times.</span></span> <span data-ttu-id="57bcc-154">这会关闭 IntelliSense 列表成员窗口，并通过将选择范围移离属性保存属性值。</span><span class="sxs-lookup"><span data-stu-id="57bcc-154">This dismisses the IntelliSense list members window and saves the property value by moving the selection off the property.</span></span> <span data-ttu-id="57bcc-155">此外可以通过键入设置此属性`Text`到**输入 C# 表达式**或**输入 VB 表达式**在活动本身的框。</span><span class="sxs-lookup"><span data-stu-id="57bcc-155">This property can also be set by typing `Text` into the **Enter a C# expression** or **Enter a VB expression** box on the activity itself.</span></span>  
   
-19. 将**“ReadInt”**活动的**“Result”**参数绑定到**“Prompt”**活动的**“Result”**参数，方法是在**“属性窗口”**中**“Result”**参数右侧的**“输入 VB 表达式”**框中键入 `Result`，然后按 Tab 键两次。  
+    > [!TIP]
+    >  <span data-ttu-id="57bcc-156">如果**属性窗口**未显示，选择**属性窗口**从**视图**菜单。</span><span class="sxs-lookup"><span data-stu-id="57bcc-156">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
   
-20. 按 Ctrl\+Shift\+B 生成解决方案。  
+17. <span data-ttu-id="57bcc-157">拖动**ReadInt**活动从**NumberGuessWorkflowActivities**部分**工具箱**拖放**序列**活动使其**WriteLine**活动。</span><span class="sxs-lookup"><span data-stu-id="57bcc-157">Drag a **ReadInt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox** and drop it in the **Sequence** activity so that it follows the **WriteLine** activity.</span></span>  
   
-     有关如何使用这些活动创建工作流的说明，请参见教程的下一步骤[如何：创建工作流](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow.md)。  
+18. <span data-ttu-id="57bcc-158">将绑定**BookmarkName**参数**ReadInt**活动**BookmarkName**参数**提示**通过键入活动`BookmarkName`到**输入 VB 表达式**右侧的框中**BookmarkName**中的参数**属性窗口**，然后按 TAB 键两个以下情况下关闭 IntelliSense 列表成员窗口并保存属性。</span><span class="sxs-lookup"><span data-stu-id="57bcc-158">Bind the **BookmarkName** argument of the **ReadInt** activity to the **BookmarkName** argument of the **Prompt** activity by typing `BookmarkName` into the **Enter a VB expression** box to the right of the **BookmarkName** argument in the **Properties Window**, and then press the TAB key two times to close the IntelliSense list members window and save the property.</span></span>  
   
-## 请参阅  
- <xref:System.Activities.CodeActivity>   
- <xref:System.Activities.NativeActivity%601>   
- [设计和实现自定义活动](../../../docs/framework/windows-workflow-foundation//designing-and-implementing-custom-activities.md)   
- [入门教程](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [如何：创建工作流](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow.md)   
- [在自定义设计器中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+19. <span data-ttu-id="57bcc-159">将绑定**结果**参数**ReadInt**活动**结果**参数**提示**通过键入活动`Result`到**输入 VB 表达式**右侧的框中**结果**中的参数**属性窗口**，然后按 TAB 键两次。</span><span class="sxs-lookup"><span data-stu-id="57bcc-159">Bind the **Result** argument of the **ReadInt** activity to the **Result** argument of the **Prompt** activity by typing `Result` into the **Enter a VB expression** box to the right of the **Result** argument in the **Properties Window**, and then press the TAB key two times.</span></span>  
+  
+20. <span data-ttu-id="57bcc-160">按 Ctrl+Shift+B 生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="57bcc-160">Press CTRL+SHIFT+B to build the solution.</span></span>  
+  
+     <span data-ttu-id="57bcc-161">有关说明如何使用这些活动创建工作流在本教程，请参阅下一步[如何： 创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="57bcc-161">For instructions on how to create a workflow by using these activities, see the next step in the tutorial, [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="57bcc-162">另请参阅</span><span class="sxs-lookup"><span data-stu-id="57bcc-162">See Also</span></span>  
+ <xref:System.Activities.CodeActivity>  
+ <xref:System.Activities.NativeActivity%601>  
+ [<span data-ttu-id="57bcc-163">设计和实现自定义活动</span><span class="sxs-lookup"><span data-stu-id="57bcc-163">Designing and Implementing Custom Activities</span></span>](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
+ [<span data-ttu-id="57bcc-164">入门教程</span><span class="sxs-lookup"><span data-stu-id="57bcc-164">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [<span data-ttu-id="57bcc-165">如何：创建工作流</span><span class="sxs-lookup"><span data-stu-id="57bcc-165">How to: Create a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [<span data-ttu-id="57bcc-166">在自定义活动设计器中使用 ExpressionTextBox</span><span class="sxs-lookup"><span data-stu-id="57bcc-166">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

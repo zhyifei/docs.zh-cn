@@ -1,35 +1,38 @@
 ---
-title: "3409 - HttpPipelineProcessInboundRequestStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3409 - HttpPipelineProcessInboundRequestStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f20271f-a30b-456c-a416-73329921c6d3
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 94dda388e70aadcde6f89e8c149aab4000040c39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 3409 - HttpPipelineProcessInboundRequestStop
-## 属性  
+# <a name="3409---httppipelineprocessinboundrequeststop"></a><span data-ttu-id="aa216-102">3409 - HttpPipelineProcessInboundRequestStop</span><span class="sxs-lookup"><span data-stu-id="aa216-102">3409 - HttpPipelineProcessInboundRequestStop</span></span>
+## <a name="properties"></a><span data-ttu-id="aa216-103">属性</span><span class="sxs-lookup"><span data-stu-id="aa216-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3409|  
-|关键字|HTTP|  
-|级别|详细|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="aa216-104">ID</span><span class="sxs-lookup"><span data-stu-id="aa216-104">ID</span></span>|<span data-ttu-id="aa216-105">3409</span><span class="sxs-lookup"><span data-stu-id="aa216-105">3409</span></span>|  
+|<span data-ttu-id="aa216-106">关键字</span><span class="sxs-lookup"><span data-stu-id="aa216-106">Keywords</span></span>|<span data-ttu-id="aa216-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="aa216-107">HTTP</span></span>|  
+|<span data-ttu-id="aa216-108">级别</span><span class="sxs-lookup"><span data-stu-id="aa216-108">Level</span></span>|<span data-ttu-id="aa216-109">详细</span><span class="sxs-lookup"><span data-stu-id="aa216-109">Verbose</span></span>|  
+|<span data-ttu-id="aa216-110">通道</span><span class="sxs-lookup"><span data-stu-id="aa216-110">Channel</span></span>|<span data-ttu-id="aa216-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="aa216-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 在 Http 消息处理程序已完成处理入站请求时，发出此事件。  
+## <a name="description"></a><span data-ttu-id="aa216-112">描述</span><span class="sxs-lookup"><span data-stu-id="aa216-112">Description</span></span>  
+ <span data-ttu-id="aa216-113">在 Http 消息处理程序已完成处理入站请求时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="aa216-113">This event is emitted when the Http message handler completed processing the inbound request.</span></span>  
   
-## 消息  
- Http 消息处理程序已完成处理入站请求。  
+## <a name="message"></a><span data-ttu-id="aa216-114">消息</span><span class="sxs-lookup"><span data-stu-id="aa216-114">Message</span></span>  
+ <span data-ttu-id="aa216-115">Http 消息处理程序已完成处理入站请求。</span><span class="sxs-lookup"><span data-stu-id="aa216-115">Http message handler completed processing an inbound request.</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="aa216-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="aa216-116">Details</span></span>

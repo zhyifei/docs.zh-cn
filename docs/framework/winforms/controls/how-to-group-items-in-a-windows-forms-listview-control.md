@@ -1,72 +1,76 @@
 ---
-title: "如何：对 Windows 窗体 ListView 控件中的项进行分组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "分组"
-  - "组"
-  - "组, 在 Windows 窗体控件中"
-  - "列表视图, 分组项"
-  - "列表, 分组项"
-  - "ListView 控件 [Windows 窗体], 分组项"
+title: "如何：对 Windows 窗体 ListView 控件中的项进行分组"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], grouping items
+- lists [Windows Forms], grouping items
+- grouping
+- list views [Windows Forms], grouping items
+- groups
+- groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c22134513c2c6a3ff2bc621e68f546b7bcc93ba9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：对 Windows 窗体 ListView 控件中的项进行分组
-使用 <xref:System.Windows.Forms.ListView> 控件的分组功能可以用分组形式显示相关项组。  在屏幕上，这些组由包含组标题的水平组标头分隔。  可以使用 <xref:System.Windows.Forms.ListView> 组按字母顺序、日期或任何其他逻辑组合对项进行分组，从而简化大型列表的导航。  下图显示了一些分好组的项。  
+# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a><span data-ttu-id="96af8-102">如何：对 Windows 窗体 ListView 控件中的项进行分组</span><span class="sxs-lookup"><span data-stu-id="96af8-102">How to: Group Items in a Windows Forms ListView Control</span></span>
+<span data-ttu-id="96af8-103">使用的分组功能<xref:System.Windows.Forms.ListView>控件，你可以在组中显示的项的相关的集。</span><span class="sxs-lookup"><span data-stu-id="96af8-103">With the grouping feature of the <xref:System.Windows.Forms.ListView> control, you can display related sets of items in groups.</span></span> <span data-ttu-id="96af8-104">在屏幕上分隔这些组由包含组标题的水平组标题。</span><span class="sxs-lookup"><span data-stu-id="96af8-104">These groups are separated on the screen by horizontal group headers that contain the group titles.</span></span> <span data-ttu-id="96af8-105">你可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项进行分组按字母顺序，按日期，或任何其他逻辑分组的导航。</span><span class="sxs-lookup"><span data-stu-id="96af8-105">You can use <xref:System.Windows.Forms.ListView> groups to make navigating large lists easier by grouping items alphabetically, by date, or by any other logical grouping.</span></span> <span data-ttu-id="96af8-106">下图显示一些分组的项。</span><span class="sxs-lookup"><span data-stu-id="96af8-106">The following image shows some grouped items.</span></span>  
   
- ![ListView 组](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
-ListView 已分组的项  
+ <span data-ttu-id="96af8-107">![ListView 组](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")</span><span class="sxs-lookup"><span data-stu-id="96af8-107">![ListView Groups](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")</span></span>  
+<span data-ttu-id="96af8-108">ListView 的分组项</span><span class="sxs-lookup"><span data-stu-id="96af8-108">ListView grouped items</span></span>  
   
- 若要启用分组，首先必须在设计器中或以编程方式创建一个或多个组。  定义组后，可向组分配 <xref:System.Windows.Forms.ListView> 项。  此外，可以用编程方式将一个组中的项移至另外一个组中。  
+ <span data-ttu-id="96af8-109">若要启用分组，您必须首先创建一个或多个组设计器中或以编程方式。</span><span class="sxs-lookup"><span data-stu-id="96af8-109">To enable grouping, you must first create one or more groups either in the designer or programmatically.</span></span> <span data-ttu-id="96af8-110">定义的组之后，你可以分配<xref:System.Windows.Forms.ListView>项目到组。</span><span class="sxs-lookup"><span data-stu-id="96af8-110">After a group has been defined, you can assign <xref:System.Windows.Forms.ListView> items to groups.</span></span> <span data-ttu-id="96af8-111">你还可以移动项从一个组到另一个以编程方式。</span><span class="sxs-lookup"><span data-stu-id="96af8-111">You can also move items from one group to another programmatically.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView> 组仅在应用程序调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName> 方法时在 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] 上可用。  在以前的操作系统上，任何与组有关的代码都无效，并且组也不会出现。  有关更多信息，请参见 <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=fullName>。  
+>  <span data-ttu-id="96af8-112"><xref:System.Windows.Forms.ListView>组是仅适用于[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]在你的应用程序调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="96af8-112"><xref:System.Windows.Forms.ListView> groups are available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="96af8-113">在早期的操作系统上与组相关的任何代码有影响，并且组将不会出现。</span><span class="sxs-lookup"><span data-stu-id="96af8-113">On earlier operating systems, any code relating to groups has no effect and the groups will not appear.</span></span> <span data-ttu-id="96af8-114">有关详细信息，请参阅<xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="96af8-114">For more information, see <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.</span></span>  
   
-### 添加组  
+### <a name="to-add-groups"></a><span data-ttu-id="96af8-115">若要添加组</span><span class="sxs-lookup"><span data-stu-id="96af8-115">To add groups</span></span>  
   
-1.  使用 <xref:System.Windows.Forms.ListView.Groups%2A> 集合的 <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> 方法。  
+1.  <span data-ttu-id="96af8-116">使用 <xref:System.Windows.Forms.ListView.Groups%2A> 集合的 <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="96af8-116">Use the <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> method of the <xref:System.Windows.Forms.ListView.Groups%2A> collection.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#21)]  
   
-### 移除组  
+### <a name="to-remove-groups"></a><span data-ttu-id="96af8-117">要删除组</span><span class="sxs-lookup"><span data-stu-id="96af8-117">To remove groups</span></span>  
   
-1.  使用 <xref:System.Windows.Forms.ListView.Groups%2A> 集合的 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 或 <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 方法。  
+1.  <span data-ttu-id="96af8-118">使用<xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>或<xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A>方法<xref:System.Windows.Forms.ListView.Groups%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="96af8-118">Use the <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> or <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> method of the <xref:System.Windows.Forms.ListView.Groups%2A> collection.</span></span>  
   
-     <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 方法可移除单个组，而 <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 方法可移除列表中的所有组。  
+     <span data-ttu-id="96af8-119"><xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>方法中删除单个组;<xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A>方法从列表中删除所有组。</span><span class="sxs-lookup"><span data-stu-id="96af8-119">The <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> method removes a single group; the <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> method removes all groups from the list.</span></span>  
   
     > [!NOTE]
-    >  移除某个组时，不会移除该组中的项。  
+    >  <span data-ttu-id="96af8-120">删除组不会删除该组中的项。</span><span class="sxs-lookup"><span data-stu-id="96af8-120">Removing a group does not remove the items within that group.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#22)]  
   
-### 向组分配项或在组之间移动项  
+### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a><span data-ttu-id="96af8-121">若要将项分配给组或组之间移动项</span><span class="sxs-lookup"><span data-stu-id="96af8-121">To assign items to groups or move items between groups</span></span>  
   
-1.  设置各个项的 <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=fullName> 属性。  
+1.  <span data-ttu-id="96af8-122">设置<xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType>的各项的属性。</span><span class="sxs-lookup"><span data-stu-id="96af8-122">Set the <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> property of individual items.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  
   
-## 请参阅  
- <xref:System.Windows.Forms.ListView>   
- <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ListViewGroup>   
- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
- [ListView 控件概述](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Windows XP Features and Windows Forms Controls](http://msdn.microsoft.com/zh-cn/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)   
- [如何：使用 Windows 窗体 ListView 控件添加和移除项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+## <a name="see-also"></a><span data-ttu-id="96af8-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="96af8-123">See Also</span></span>  
+ <xref:System.Windows.Forms.ListView>  
+ <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ListViewGroup>  
+ [<span data-ttu-id="96af8-124">ListView 控件</span><span class="sxs-lookup"><span data-stu-id="96af8-124">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [<span data-ttu-id="96af8-125">ListView 控件概述</span><span class="sxs-lookup"><span data-stu-id="96af8-125">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="96af8-126">Windows XP 功能和 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="96af8-126">Windows XP Features and Windows Forms Controls</span></span>](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [<span data-ttu-id="96af8-127">如何：使用 Windows 窗体 ListView 控件添加和删除项</span><span class="sxs-lookup"><span data-stu-id="96af8-127">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

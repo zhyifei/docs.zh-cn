@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a1a5612-82c6-4cf6-aa96-ca6f5df12b69
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6cf182d7a71c38caf1dcee8823f362c614c87dd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader
-System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader  
+# <a name="systemservicemodeldiagnosticsfailedtoaddanactivityidheader"></a><span data-ttu-id="b410d-102">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span><span class="sxs-lookup"><span data-stu-id="b410d-102">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span></span>
+<span data-ttu-id="b410d-103">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span><span class="sxs-lookup"><span data-stu-id="b410d-103">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span></span>  
   
-## 说明  
- 无法在传出消息上设置活动 id 头。  
+## <a name="description"></a><span data-ttu-id="b410d-104">描述</span><span class="sxs-lookup"><span data-stu-id="b410d-104">Description</span></span>  
+ <span data-ttu-id="b410d-105">无法在传出消息上设置活动 id 头。</span><span class="sxs-lookup"><span data-stu-id="b410d-105">Failed to set an activity id header on an outgoing message.</span></span>  
   
-## 请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b410d-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b410d-106">See Also</span></span>  
+ [<span data-ttu-id="b410d-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="b410d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b410d-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="b410d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b410d-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="b410d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

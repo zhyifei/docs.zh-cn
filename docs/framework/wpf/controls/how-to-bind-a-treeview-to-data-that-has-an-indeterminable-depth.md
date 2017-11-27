@@ -1,37 +1,39 @@
 ---
-title: "如何：将 TreeView 绑定到深度无法确定的数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView 控件 [WPF], 绑定到深度不确定的数据"
+title: "如何：将 TreeView 绑定到深度无法确定的数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b16cae3a91eae73a4480484d89bb075862256b25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：将 TreeView 绑定到深度无法确定的数据
-有时您可能需要将 <xref:System.Windows.Controls.TreeView> 绑定到深度未知的数据源。  如果数据具有递归性质，则可能会发生这种情况；文件系统或公司的组织结构就属于这种数据，在文件系统中，文件夹还可以包含文件夹，在公司的组织结构中，员工又有自己的直属员工。  
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a><span data-ttu-id="80271-102">如何：将 TreeView 绑定到深度无法确定的数据</span><span class="sxs-lookup"><span data-stu-id="80271-102">How to: Bind a TreeView to Data That Has an Indeterminable Depth</span></span>
+<span data-ttu-id="80271-103">可能有的时候你想要将绑定<xref:System.Windows.Controls.TreeView>到数据源不已知其深度。</span><span class="sxs-lookup"><span data-stu-id="80271-103">There might be times when you want to bind a <xref:System.Windows.Controls.TreeView> to a data source whose depth is not known.</span></span>  <span data-ttu-id="80271-104">这会时发生数据具有递归性质，例如文件系统，其中文件夹可以包含文件夹或公司的组织结构，其中员工的直接下属作为其他员工。</span><span class="sxs-lookup"><span data-stu-id="80271-104">This can occur when the data is recursive in nature, such as a file system, where folders can contain folders, or a company's organizational structure, where employees have other employees as direct reports.</span></span>  
   
- 数据源必须有分层的对象模型。  例如，一个 `Employee` 类可能包含一个由 Employee 对象组成的集合，其中的每个对象都是一位员工的直属员工。  如果数据以未分层方式表示，则您必须构建该数据的分层表示形式。  
+ <span data-ttu-id="80271-105">数据源必须具有层次结构的对象模型。</span><span class="sxs-lookup"><span data-stu-id="80271-105">The data source must have a hierarchical object model.</span></span> <span data-ttu-id="80271-106">例如，`Employee`类可能包含的是直接下属的员工的员工对象的集合。</span><span class="sxs-lookup"><span data-stu-id="80271-106">For example, an `Employee` class might contain a collection of Employee objects that are the direct reports of an employee.</span></span> <span data-ttu-id="80271-107">如果不是分层的方式表示数据，则必须生成的分层表示形式的数据。</span><span class="sxs-lookup"><span data-stu-id="80271-107">If the data is represented in a way that is not hierarchical, you must build a hierarchical representation of the data.</span></span>  
   
- 设置 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=fullName> 属性时，如果 <xref:System.Windows.Controls.ItemsControl> 为每个子项生成了一个 <xref:System.Windows.Controls.ItemsControl>，则子级 <xref:System.Windows.Controls.ItemsControl> 使用同一 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 作为父级。  例如，如果设置绑定到数据的 <xref:System.Windows.Controls.TreeView> 的 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性，则所生成的每个 <xref:System.Windows.Controls.TreeViewItem> 都会使用分配给 <xref:System.Windows.Controls.TreeView> 的 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性的 <xref:System.Windows.DataTemplate>。  
+ <span data-ttu-id="80271-108">当你将设置<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType>属性如果<xref:System.Windows.Controls.ItemsControl>生成<xref:System.Windows.Controls.ItemsControl>每个子项，则子<xref:System.Windows.Controls.ItemsControl>使用相同<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>与父项。</span><span class="sxs-lookup"><span data-stu-id="80271-108">When you set the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType> property and if the <xref:System.Windows.Controls.ItemsControl> generates an <xref:System.Windows.Controls.ItemsControl> for each child item, then the child <xref:System.Windows.Controls.ItemsControl> uses the same <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> as the parent.</span></span> <span data-ttu-id="80271-109">例如，如果你设置<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>数据绑定属性<xref:System.Windows.Controls.TreeView>，每个<xref:System.Windows.Controls.TreeViewItem>，它是生成的使用<xref:System.Windows.DataTemplate>，已分配给<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>属性<xref:System.Windows.Controls.TreeView>。</span><span class="sxs-lookup"><span data-stu-id="80271-109">For example, if you set the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property on a data-bound <xref:System.Windows.Controls.TreeView>, each <xref:System.Windows.Controls.TreeViewItem> that is generated uses the <xref:System.Windows.DataTemplate> that was assigned to the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property of the <xref:System.Windows.Controls.TreeView>.</span></span>  
   
- 借助 <xref:System.Windows.HierarchicalDataTemplate>，您可以在数据模板中为 <xref:System.Windows.Controls.TreeViewItem> 或任何 <xref:System.Windows.Controls.HeaderedItemsControl> 指定 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  设置 <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=fullName> 属性后，在应用 <xref:System.Windows.HierarchicalDataTemplate> 时会使用该值。  通过使用 <xref:System.Windows.HierarchicalDataTemplate>，您可以以递归方式为 <xref:System.Windows.Controls.TreeView> 中的每个 <xref:System.Windows.Controls.TreeViewItem> 设置 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  
+ <span data-ttu-id="80271-110"><xref:System.Windows.HierarchicalDataTemplate>使您能够指定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.TreeViewItem>，或任何<xref:System.Windows.Controls.HeaderedItemsControl>，数据模板。</span><span class="sxs-lookup"><span data-stu-id="80271-110">The <xref:System.Windows.HierarchicalDataTemplate> enables you to specify the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for a <xref:System.Windows.Controls.TreeViewItem>, or any <xref:System.Windows.Controls.HeaderedItemsControl>, on the data template.</span></span> <span data-ttu-id="80271-111">当你将设置<xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType>属性的值时使用<xref:System.Windows.HierarchicalDataTemplate>应用。</span><span class="sxs-lookup"><span data-stu-id="80271-111">When you set the <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType> property, that value is used when the <xref:System.Windows.HierarchicalDataTemplate> is applied.</span></span> <span data-ttu-id="80271-112">通过使用<xref:System.Windows.HierarchicalDataTemplate>，你可以以递归方式集<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>每个<xref:System.Windows.Controls.TreeViewItem>中<xref:System.Windows.Controls.TreeView>。</span><span class="sxs-lookup"><span data-stu-id="80271-112">By using a <xref:System.Windows.HierarchicalDataTemplate>, you can recursively set the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for each <xref:System.Windows.Controls.TreeViewItem> in the <xref:System.Windows.Controls.TreeView>.</span></span>  
   
-## 示例  
- 下面的示例演示如何将 <xref:System.Windows.Controls.TreeView> 绑定到分层数据并使用 <xref:System.Windows.HierarchicalDataTemplate> 为每个 <xref:System.Windows.Controls.TreeViewItem> 指定 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  <xref:System.Windows.Controls.TreeView> 绑定到表示公司内的员工的 XML 数据。  每个 `Employee` 元素可以包含其他 `Employee` 元素，以指示上下级关系。  由于数据是递归的，因此 <xref:System.Windows.HierarchicalDataTemplate> 可应用于每一级。  
+## <a name="example"></a><span data-ttu-id="80271-113">示例</span><span class="sxs-lookup"><span data-stu-id="80271-113">Example</span></span>  
+ <span data-ttu-id="80271-114">下面的示例演示如何将绑定<xref:System.Windows.Controls.TreeView>到层次结构数据，然后使用<xref:System.Windows.HierarchicalDataTemplate>指定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>每个<xref:System.Windows.Controls.TreeViewItem>。</span><span class="sxs-lookup"><span data-stu-id="80271-114">The following example demonstrates how to bind a <xref:System.Windows.Controls.TreeView> to hierarchical data and use a <xref:System.Windows.HierarchicalDataTemplate> to specify the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for each <xref:System.Windows.Controls.TreeViewItem>.</span></span>  <span data-ttu-id="80271-115"><xref:System.Windows.Controls.TreeView>将绑定到表示一家公司中的员工的 XML 数据。</span><span class="sxs-lookup"><span data-stu-id="80271-115">The <xref:System.Windows.Controls.TreeView> binds to XML data that represents the employees in a company.</span></span>  <span data-ttu-id="80271-116">每个`Employee`元素可以包含其他`Employee`元素以指示隶属关系。</span><span class="sxs-lookup"><span data-stu-id="80271-116">Each `Employee` element can contain other `Employee` elements to indicate who reports to whom.</span></span> <span data-ttu-id="80271-117">因为数据是递归的<xref:System.Windows.HierarchicalDataTemplate>可以应用于每个级别。</span><span class="sxs-lookup"><span data-stu-id="80271-117">Because the data is recursive, the <xref:System.Windows.HierarchicalDataTemplate> can be applied to each level.</span></span>  
   
- [!code-xml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
-## 请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)
+## <a name="see-also"></a><span data-ttu-id="80271-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="80271-118">See Also</span></span>  
+ [<span data-ttu-id="80271-119">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="80271-119">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="80271-120">数据模板化概述</span><span class="sxs-lookup"><span data-stu-id="80271-120">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)

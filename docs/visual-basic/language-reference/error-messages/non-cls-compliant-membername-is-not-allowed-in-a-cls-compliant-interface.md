@@ -1,64 +1,46 @@
 ---
-title: "不符合 CLS 符合&lt;membername&gt;符合 cls 的接口中不允许 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "不符合 CLS 符合&lt;membername&gt;符合 cls 的接口中不允许"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc40033
 - vbc40033
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC40033
+helpviewer_keywords: BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2861ef22c9307e5bd7d2eabf4f6e37bbd9086345
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 358abd338d3ce780c2f0aae7aa8efb53e57b477c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>不符合 CLS 符合&lt;membername&gt;不允许在符合 cls 的接口
-属性、 过程或在接口中的事件被标记为`<CLSCompliant(True)>`接口本身时被标记为`<CLSCompliant(False)>`或未标记。  
+# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a><span data-ttu-id="6237d-102">不符合 CLS 符合&lt;membername&gt;符合 cls 的接口中不允许</span><span class="sxs-lookup"><span data-stu-id="6237d-102">Non-CLS-compliant &lt;membername&gt; is not allowed in a CLS-compliant interface</span></span>
+<span data-ttu-id="6237d-103">属性、 过程或接口中的事件被标记为`<CLSCompliant(True)>`接口本身时被标记为`<CLSCompliant(False)>`或未标记。</span><span class="sxs-lookup"><span data-stu-id="6237d-103">A property, procedure, or event in an interface is marked as `<CLSCompliant(True)>` when the interface itself is marked as `<CLSCompliant(False)>` or is not marked.</span></span>  
   
- 接口不能为符合[语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)，其所有成员都必须都是符合。  
+ <span data-ttu-id="6237d-104">接口不能符合[语言独立性和独立于语言的组件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)，其所有成员必须都是合规的。</span><span class="sxs-lookup"><span data-stu-id="6237d-104">For an interface to be compliant with the [Language Independence and Language-Independent Components](https://msdn.microsoft.com/library/12a7a7h3) (CLS), all its members must be compliant.</span></span>  
   
- 当您将应用<xref:System.CLSCompliantAttribute>编程元素中，设置该属性的`isCompliant`至任一参数`True`或`False`来指示符合或不符合性。</xref:System.CLSCompliantAttribute> 此参数没有默认值，必须为其提供一个值。  
+ <span data-ttu-id="6237d-105">当将 <xref:System.CLSCompliantAttribute> 应用到编程元素中时，需要将该特性的 `isCompliant` 参数设置为 `True` 或 `False` 来指示符合或不符合性。</span><span class="sxs-lookup"><span data-stu-id="6237d-105">When you apply the <xref:System.CLSCompliantAttribute> to a programming element, you set the attribute's `isCompliant` parameter to either `True` or `False` to indicate compliance or noncompliance.</span></span> <span data-ttu-id="6237d-106">此参数没有默认值，必须为其提供一个值。</span><span class="sxs-lookup"><span data-stu-id="6237d-106">There is no default for this parameter, and you must supply a value.</span></span>  
   
- 如果不适用<xref:System.CLSCompliantAttribute>到元素，它被视为不符合要求。</xref:System.CLSCompliantAttribute>  
+ <span data-ttu-id="6237d-107">如果不将 <xref:System.CLSCompliantAttribute> 应用到元素，则它将被视为不符合规范。</span><span class="sxs-lookup"><span data-stu-id="6237d-107">If you do not apply the <xref:System.CLSCompliantAttribute> to an element, it is considered to be noncompliant.</span></span>  
   
- 默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ <span data-ttu-id="6237d-108">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="6237d-108">By default, this message is a warning.</span></span> <span data-ttu-id="6237d-109">有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="6237d-109">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **错误 ID:** BC40033  
+ <span data-ttu-id="6237d-110">**错误 ID:** BC40033</span><span class="sxs-lookup"><span data-stu-id="6237d-110">**Error ID:** BC40033</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6237d-111">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6237d-111">To correct this error</span></span>  
   
--   如果你需要 CLS 遵从性，并可以控制接口源代码，将接口标记为`<CLSCompliant(True)>`是否符合其所有成员。  
+-   <span data-ttu-id="6237d-112">如果你需要 CLS 遵从性，并且可以控制接口源代码，将标记为接口`<CLSCompliant(True)>`是否符合其所有成员。</span><span class="sxs-lookup"><span data-stu-id="6237d-112">If you require CLS compliance and have control over the interface source code, mark the interface as `<CLSCompliant(True)>` if all its members are compliant.</span></span>  
   
--   如果你需要 CLS 遵从性，并不能控制接口源代码，或者如果它不符合以使其符合，定义此成员内使用不同的接口。  
+-   <span data-ttu-id="6237d-113">如果你需要 CLS 符合性而不能控制接口源代码，或者不将其限制为符合，定义此成员在不同的接口。</span><span class="sxs-lookup"><span data-stu-id="6237d-113">If you require CLS compliance and do not have control over the interface source code, or if it does not qualify to be compliant, define this member within a different interface.</span></span>  
   
--   如果您需要此成员保留在其当前的接口，删除<xref:System.CLSCompliantAttribute>从其定义或将其标记为`<CLSCompliant(False)>`。</xref:System.CLSCompliantAttribute>  
+-   <span data-ttu-id="6237d-114">如果你需要此成员保留在其当前的接口，删除<xref:System.CLSCompliantAttribute>从其定义或将其标记为`<CLSCompliant(False)>`。</span><span class="sxs-lookup"><span data-stu-id="6237d-114">If you require that this member remain within its current interface, remove the <xref:System.CLSCompliantAttribute> from its definition or mark it as `<CLSCompliant(False)>`.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [\<PAVE 通过&1;> 编写符合 Cls 的代码](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+## <a name="see-also"></a><span data-ttu-id="6237d-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6237d-115">See Also</span></span>  
+ [<span data-ttu-id="6237d-116">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="6237d-116">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="6237d-117">\<PAVE 通过 > 编写符合 Cls 的代码</span><span class="sxs-lookup"><span data-stu-id="6237d-117">\<PAVE OVER> Writing CLS-Compliant Code</span></span>](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

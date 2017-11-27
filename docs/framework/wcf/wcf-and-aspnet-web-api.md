@@ -1,39 +1,41 @@
 ---
-title: "WCF 和 ASP.NET Web API | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 和 ASP.NET Web API"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e3d4d3677654934bc083ec14c97c65573a327146
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 和 ASP.NET Web API
-WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。[ASP.NET Web API](http://www.asp.net/web-api) 是一个用来方便地生成 HTTP 服务的框架，这些服务可访问广泛的客户端，包括浏览器和移动设备。ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。  
+# <a name="wcf-and-aspnet-web-api"></a><span data-ttu-id="2e160-102">WCF 和 ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="2e160-102">WCF and ASP.NET Web API</span></span>
+<span data-ttu-id="2e160-103">WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。</span><span class="sxs-lookup"><span data-stu-id="2e160-103">WCF is Microsoft’s unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="2e160-104">借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。</span><span class="sxs-lookup"><span data-stu-id="2e160-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span> <span data-ttu-id="2e160-105">[ASP.NET Web API](http://www.asp.net/web-api)是一个框架，可以轻松地生成覆盖广泛的客户端，包括浏览器和移动设备的 HTTP 服务。</span><span class="sxs-lookup"><span data-stu-id="2e160-105">[ASP.NET Web API](http://www.asp.net/web-api) is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices.</span></span> <span data-ttu-id="2e160-106">ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。</span><span class="sxs-lookup"><span data-stu-id="2e160-106">ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework.</span></span> <span data-ttu-id="2e160-107">本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。</span><span class="sxs-lookup"><span data-stu-id="2e160-107">This topic presents some guidance to help you decide which technology will best meet your needs.</span></span>  
   
-## 选择要使用的技术  
- 下表介绍了每种技术的主要功能。  
+## <a name="choosing-which-technology-to-use"></a><span data-ttu-id="2e160-108">选择要使用的技术</span><span class="sxs-lookup"><span data-stu-id="2e160-108">Choosing which technology to use</span></span>  
+ <span data-ttu-id="2e160-109">下表介绍了每种技术的主要功能。</span><span class="sxs-lookup"><span data-stu-id="2e160-109">The following table describes the major features of each technology.</span></span>  
   
-|WCF|ASP.NET Web API|  
+|<span data-ttu-id="2e160-110">WCF</span><span class="sxs-lookup"><span data-stu-id="2e160-110">WCF</span></span>|<span data-ttu-id="2e160-111">ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="2e160-111">ASP.NET Web API</span></span>|  
 |---------|---------------------|  
-|启用支持多种传输协议（HTTP、TCP、UDP 和自定义传输）的生成服务，并允许在这些服务之间切换。|仅限 HTTP。用于 HTTP 的第一类编程模型。更适合从各种浏览器、移动设备等进行访问，可实现大范围访问。|  
-|启用支持同一消息类型的多种编码（文本、MTOM 和二进制）的生成服务，并允许在这些服务之间切换。|启用支持广泛的媒体类型（包括 XML、JSON 等）的生成 Web API。|  
-|支持采用 WS\-\* 标准的生成服务，如可靠消息传递、事务、消息安全性。|使用基本协议和格式，如 HTTP、WebSocket、SSL、JQuery、JSON 和 XML。不支持较高级别的协议，如消息传递或事务。|  
-|支持请求\-答复、单向和双工消息交换模式。|HTTP 是请求\/响应，不过，通过 [SignalR](https://github.com/SignalR/SignalR) 和 WebSocket 集成，可集成其他模式。|  
-|可以在 WSDL 中描述 WCF SOAP 服务，从而可通过自动工具，针对具有复杂架构的服务来生成客户端代理。|可通过各种方法来描述 Web API：从用于描述代码片段的自动生成的 HTML 帮助页，直至用于 OData 集成 API 的结构化元数据。|  
-|随 .NET Framework 一起提供。|随 .NET Framework 一起提供，但它是一个开放源代码程序，也可通过独立下载以带外方式获得。|  
+|<span data-ttu-id="2e160-112">启用支持多种传输协议（HTTP、TCP、UDP 和自定义传输）的生成服务，并允许在这些服务之间切换。</span><span class="sxs-lookup"><span data-stu-id="2e160-112">Enables building services that support multiple transport protocols (HTTP, TCP, UDP, and custom transports) and allows switching between them.</span></span>|<span data-ttu-id="2e160-113">仅限 HTTP。</span><span class="sxs-lookup"><span data-stu-id="2e160-113">HTTP only.</span></span> <span data-ttu-id="2e160-114">第一类的编程模型，用于 HTTP。</span><span class="sxs-lookup"><span data-stu-id="2e160-114">First-class programming model for HTTP.</span></span> <span data-ttu-id="2e160-115">更适合用于从各种浏览器，etc 启用宽访问的移动设备进行访问。</span><span class="sxs-lookup"><span data-stu-id="2e160-115">More suitable for access from various browsers, mobile devices etc enabling wide reach.</span></span>|  
+|<span data-ttu-id="2e160-116">启用支持同一消息类型的多种编码（文本、MTOM 和二进制）的生成服务，并允许在这些服务之间切换。</span><span class="sxs-lookup"><span data-stu-id="2e160-116">Enables building services that support multiple encodings (Text, MTOM, and Binary) of the same message type and allows switching between them.</span></span>|<span data-ttu-id="2e160-117">启用支持广泛的媒体类型（包括 XML、JSON 等）的生成 Web API。</span><span class="sxs-lookup"><span data-stu-id="2e160-117">Enables building Web APIs that support wide variety of media types including XML, JSON etc.</span></span>|  
+|<span data-ttu-id="2e160-118">支持采用 WS-* 标准的生成服务，如可靠消息传递、事务、消息安全性。</span><span class="sxs-lookup"><span data-stu-id="2e160-118">Supports building services with WS-* standards like Reliable Messaging, Transactions, Message Security.</span></span>|<span data-ttu-id="2e160-119">使用基本协议和格式，如 HTTP、WebSocket、SSL、JQuery、JSON 和 XML。</span><span class="sxs-lookup"><span data-stu-id="2e160-119">Uses basic protocol and formats such as HTTP, WebSockets, SSL, JQuery, JSON, and XML.</span></span> <span data-ttu-id="2e160-120">不支持较高级别的协议，如消息传递或事务。</span><span class="sxs-lookup"><span data-stu-id="2e160-120">There is no support for higher level protocols such as Reliable Messaging or Transactions.</span></span>|  
+|<span data-ttu-id="2e160-121">支持请求-答复、单向和双工消息交换模式。</span><span class="sxs-lookup"><span data-stu-id="2e160-121">Supports Request-Reply, One Way, and Duplex message exchange patterns.</span></span>|<span data-ttu-id="2e160-122">HTTP 请求/响应，但可以通过支持其他模式[SignalR](https://github.com/SignalR/SignalR)和 Websocket 的集成。</span><span class="sxs-lookup"><span data-stu-id="2e160-122">HTTP is request/response but additional patterns can be supported through [SignalR](https://github.com/SignalR/SignalR) and WebSockets integration.</span></span>|  
+|<span data-ttu-id="2e160-123">可以在 WSDL 中描述 WCF SOAP 服务，从而可通过自动工具，针对具有复杂架构的服务来生成客户端代理。</span><span class="sxs-lookup"><span data-stu-id="2e160-123">WCF SOAP services can be described in WSDL allowing automated tools to generate client proxies even for services with complex schemas.</span></span>|<span data-ttu-id="2e160-124">可通过各种方法来描述 Web API：从用于描述代码片段的自动生成的 HTML 帮助页，直至用于 OData 集成 API 的结构化元数据。</span><span class="sxs-lookup"><span data-stu-id="2e160-124">There is a variety of ways to describe a Web API ranging from auto-generated HTML help page describing snippets to structured metadata for OData integrated APIs.</span></span>|  
+|<span data-ttu-id="2e160-125">随 .NET Framework 一起提供。</span><span class="sxs-lookup"><span data-stu-id="2e160-125">Ships with the .NET framework.</span></span>|<span data-ttu-id="2e160-126">随 .NET Framework 一起提供，但它是一个开放源代码程序，也可通过独立下载以带外方式获得。</span><span class="sxs-lookup"><span data-stu-id="2e160-126">Ships with .NET framework but is open-source and is also available out-of-band as independent download.</span></span>|  
   
- 使用 WCF 可创建可靠、安全的 Web 服务，这些服务可通过各种传输方式来访问。使用 ASP.NET Web API 可创建基于 HTTP 的服务，这些服务可从各种客户端来访问。如果要创建和设计新的 REST 样式服务，请使用 ASP.NET Web API。虽然 WCF 针对编写 REST 样式服务提供了一些支持，但 ASP.NET Web API 中的 REST 支持更加完整，并且，所有将来的 REST 功能改进都将在 ASP.NET Web API 中进行。如果您现在拥有一种 WCF 服务，并且要公开其他 REST 终结点，请使用 WCF 和 <xref:System.ServiceModel.WebHttpBinding>。  
+ <span data-ttu-id="2e160-127">使用 WCF 可创建可靠、安全的 Web 服务，这些服务可通过各种传输方式来访问。</span><span class="sxs-lookup"><span data-stu-id="2e160-127">Use WCF to create reliable, secure web services that accessible over a variety of transports.</span></span> <span data-ttu-id="2e160-128">使用 ASP.NET Web API 可创建基于 HTTP 的服务，这些服务可从各种客户端来访问。</span><span class="sxs-lookup"><span data-stu-id="2e160-128">Use ASP.NET Web API to create HTTP-based services that are accessible from a wide variety of clients.</span></span> <span data-ttu-id="2e160-129">如果要创建和设计新的 REST 样式服务，请使用 ASP.NET Web API。</span><span class="sxs-lookup"><span data-stu-id="2e160-129">Use ASP.NET Web API if you are creating and designing new REST-style services.</span></span> <span data-ttu-id="2e160-130">虽然 WCF 针对编写 REST 样式服务提供了一些支持，但 ASP.NET Web API 中的 REST 支持更加完整，并且，所有将来的 REST 功能改进都将在 ASP.NET Web API 中进行。</span><span class="sxs-lookup"><span data-stu-id="2e160-130">Although WCF provides some support for writing REST-style services, the support for REST in ASP.NET Web API is more complete and all future REST feature improvements will be made in ASP.NET Web API.</span></span> <span data-ttu-id="2e160-131">如果您现在拥有一种 WCF 服务，并且要公开其他 REST 终结点，请使用 WCF 和 <xref:System.ServiceModel.WebHttpBinding>。</span><span class="sxs-lookup"><span data-stu-id="2e160-131">If you have an existing WCF service and you want to expose additional REST endpoints, use WCF and the <xref:System.ServiceModel.WebHttpBinding>.</span></span>  
   
-## 请参阅  
- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)   
- [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)   
- [WCF and ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)
+## <a name="see-also"></a><span data-ttu-id="2e160-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2e160-132">See Also</span></span>  
+ [<span data-ttu-id="2e160-133">什么是 Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="2e160-133">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ [<span data-ttu-id="2e160-134">Windows Communication Foundation 基础概念</span><span class="sxs-lookup"><span data-stu-id="2e160-134">Fundamental Windows Communication Foundation Concepts</span></span>](../../../docs/framework/wcf/fundamental-concepts.md)  

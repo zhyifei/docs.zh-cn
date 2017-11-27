@@ -1,177 +1,182 @@
 ---
-title: "WPF 画笔概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "画笔, 关于画笔"
+title: "WPF 画笔概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: de5bcaeffb77f52b80c229cf0402c2c090e40d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 画笔概述
-屏幕上的所有可见内容之所以可见，是因为它们是由画笔绘制的。  例如，可以使用画笔来描述按钮的背景、文本的前景和形状的填充内容。  本主题介绍了使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 画笔进行绘制的概念并提供了示例。  使用画笔，您可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
+# <a name="wpf-brushes-overview"></a><span data-ttu-id="76b06-102">WPF 画笔概述</span><span class="sxs-lookup"><span data-stu-id="76b06-102">WPF Brushes Overview</span></span>
+<span data-ttu-id="76b06-103">在你的屏幕上可见的所有内容是可见的因为它已由画笔绘制。</span><span class="sxs-lookup"><span data-stu-id="76b06-103">Everything visible on your screen is visible because it was painted by a brush.</span></span> <span data-ttu-id="76b06-104">例如，画笔用于描述背景的按钮、 文本、 前景和形状的填充。</span><span class="sxs-lookup"><span data-stu-id="76b06-104">For example, a brush is used to describe the background of a button, the foreground of text, and the fill of a shape.</span></span> <span data-ttu-id="76b06-105">本主题介绍的概念与绘制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔并提供了示例。</span><span class="sxs-lookup"><span data-stu-id="76b06-105">This topic introduces the concepts of painting with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes and provides examples.</span></span> <span data-ttu-id="76b06-106">借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。</span><span class="sxs-lookup"><span data-stu-id="76b06-106">Brushes enable you to paint [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] objects with anything from simple, solid colors to complex sets of patterns and images.</span></span>  
   
 <a name="paintingwithbrush"></a>   
-## 使用画笔进行绘制  
- <xref:System.Windows.Media.Brush> 使用其输出对区域进行“绘制”。  画笔不同，其输出类型也不同。  某些画笔使用纯色绘制区域，其他画笔则使用渐变、图案、图像或绘图绘制区域。  下图显示了每个不同 <xref:System.Windows.Media.Brush> 类型的示例。  
+## <a name="painting-with-a-brush"></a><span data-ttu-id="76b06-107">使用画笔绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-107">Painting with a Brush</span></span>  
+ <span data-ttu-id="76b06-108">A <xref:System.Windows.Media.Brush> ""使用绘制区域其输出。</span><span class="sxs-lookup"><span data-stu-id="76b06-108">A <xref:System.Windows.Media.Brush> "paints" an area with its output.</span></span> <span data-ttu-id="76b06-109">不同画笔具有不同类型的输出。</span><span class="sxs-lookup"><span data-stu-id="76b06-109">Different brushes have different types of output.</span></span> <span data-ttu-id="76b06-110">某些画笔绘制带有纯色，具有渐变、 模式、 图像或绘图的其他人的区域。</span><span class="sxs-lookup"><span data-stu-id="76b06-110">Some brushes paint an area with a solid color, others with a gradient, pattern, image, or drawing.</span></span> <span data-ttu-id="76b06-111">下图显示的每个不同示例<xref:System.Windows.Media.Brush>类型。</span><span class="sxs-lookup"><span data-stu-id="76b06-111">The following illustration shows examples of each of the different <xref:System.Windows.Media.Brush> types.</span></span>  
   
- ![画笔类型](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushtypes.png "graphicsmm\_brushtypes")  
-画笔示例  
+ <span data-ttu-id="76b06-112">![画笔类型](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")</span><span class="sxs-lookup"><span data-stu-id="76b06-112">![Brush types](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")</span></span>  
+<span data-ttu-id="76b06-113">画笔示例</span><span class="sxs-lookup"><span data-stu-id="76b06-113">Brush examples</span></span>  
   
- 大多数可见对象允许您指定对其进行绘制的方式。  下表列出了一些常见对象和属性，可以对这些对象和属性使用 <xref:System.Windows.Media.Brush>。  
+ <span data-ttu-id="76b06-114">大多数的视觉对象，可以指定绘制方式。</span><span class="sxs-lookup"><span data-stu-id="76b06-114">Most visual objects enable you to specify how they are painted.</span></span> <span data-ttu-id="76b06-115">下表列出了一些常见的对象和属性可以使用<xref:System.Windows.Media.Brush>。</span><span class="sxs-lookup"><span data-stu-id="76b06-115">The following table lists some common objects and properties with which you can use a <xref:System.Windows.Media.Brush>.</span></span>  
   
-|类|画笔属性|  
-|-------|----------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
-|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
+|<span data-ttu-id="76b06-116">类</span><span class="sxs-lookup"><span data-stu-id="76b06-116">Class</span></span>|<span data-ttu-id="76b06-117">画笔属性</span><span class="sxs-lookup"><span data-stu-id="76b06-117">Brush properties</span></span>|  
+|-----------|----------------------|  
+|<xref:System.Windows.Controls.Border>|<span data-ttu-id="76b06-118"><xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A></span><span class="sxs-lookup"><span data-stu-id="76b06-118"><xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A></span></span>|  
+|<xref:System.Windows.Controls.Control>|<span data-ttu-id="76b06-119"><xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A></span><span class="sxs-lookup"><span data-stu-id="76b06-119"><xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A></span></span>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<span data-ttu-id="76b06-120"><xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A></span><span class="sxs-lookup"><span data-stu-id="76b06-120"><xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A></span></span>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
- 下面部分描述了不同的 <xref:System.Windows.Media.Brush> 类型并提供每个类型的示例。  
+ <span data-ttu-id="76b06-121">下列各节描述了不同<xref:System.Windows.Media.Brush>类型并提供每个示例。</span><span class="sxs-lookup"><span data-stu-id="76b06-121">The following sections describe the different <xref:System.Windows.Media.Brush> types and provide an example of each.</span></span>  
   
 <a name="paintwithsolidcolorbrush"></a>   
-## 使用纯色进行绘制  
- <xref:System.Windows.Media.SolidColorBrush> 使用纯 <xref:System.Windows.Media.Color> 绘制区域。  指定 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 有多种方法：例如，可以指定其 alpha、红色和绿色通道或使用一种由 <xref:System.Windows.Media.Colors> 类提供的预定义颜色之一。  
+## <a name="paint-with-a-solid-color"></a><span data-ttu-id="76b06-122">使用纯色绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-122">Paint with a Solid Color</span></span>  
+ <span data-ttu-id="76b06-123">A<xref:System.Windows.Media.SolidColorBrush>使用纯色绘制区域<xref:System.Windows.Media.Color>。</span><span class="sxs-lookup"><span data-stu-id="76b06-123">A <xref:System.Windows.Media.SolidColorBrush> paints an area with a solid <xref:System.Windows.Media.Color>.</span></span> <span data-ttu-id="76b06-124">有各种方法来指定<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>： 例如，可以指定它 alpha、 红色、 蓝方和绿色的通道，或使用提供的预定义颜色之一<xref:System.Windows.Media.Colors>类。</span><span class="sxs-lookup"><span data-stu-id="76b06-124">There are a variety of ways to specify the <xref:System.Windows.Media.SolidColorBrush.Color%2A> of a <xref:System.Windows.Media.SolidColorBrush>: for example, you can specify its alpha, red, blue, and green channels or use one of the predefined color provided by the <xref:System.Windows.Media.Colors> class.</span></span>  
   
- 以下示例使用 <xref:System.Windows.Media.SolidColorBrush> 绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  下面的插图显示绘制好的矩形。  
+ <span data-ttu-id="76b06-125">下面的示例使用<xref:System.Windows.Media.SolidColorBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="76b06-125">The following example uses a <xref:System.Windows.Media.SolidColorBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="76b06-126">下图显示绘制的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b06-126">The following illustration shows the painted rectangle.</span></span>  
   
- ![使用 SolidColorBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm\_brush\_ovw\_solidcolorbrush")  
-使用 SolidColorBrush 绘制的矩形  
+ <span data-ttu-id="76b06-127">![使用 SolidColorBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")</span><span class="sxs-lookup"><span data-stu-id="76b06-127">![A rectangle painted using a SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")</span></span>  
+<span data-ttu-id="76b06-128">使用 SolidColorBrush 绘制的矩形</span><span class="sxs-lookup"><span data-stu-id="76b06-128">A Rectangle painted using a SolidColorBrush</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmsolidcolorbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- 有关 <xref:System.Windows.Media.SolidColorBrush> 类的更多信息，请参见[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
+ <span data-ttu-id="76b06-129">有关详细信息<xref:System.Windows.Media.SolidColorBrush>类，请参阅[使用纯色和渐变概述绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-129">For more information about the <xref:System.Windows.Media.SolidColorBrush> class, see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span>  
   
 <a name="paintwithlineargradientbrush"></a>   
-## 使用线性渐变进行绘制  
- <xref:System.Windows.Media.LinearGradientBrush> 使用线性渐变绘制区域。  线形渐变横跨一条直线（渐变轴）将两种或更多种色彩进行混合。  可以使用 <xref:System.Windows.Media.GradientStop> 对象指定渐变的颜色及其位置。  
+## <a name="paint-with-a-linear-gradient"></a><span data-ttu-id="76b06-130">使用线性渐变绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-130">Paint with a Linear Gradient</span></span>  
+ <span data-ttu-id="76b06-131">A<xref:System.Windows.Media.LinearGradientBrush>使用线性渐变绘制区域。</span><span class="sxs-lookup"><span data-stu-id="76b06-131">A <xref:System.Windows.Media.LinearGradientBrush> paints an area with a linear gradient.</span></span> <span data-ttu-id="76b06-132">线性渐变混合横跨一条直线，渐变轴的两个或多个颜色。</span><span class="sxs-lookup"><span data-stu-id="76b06-132">A linear gradient blends two or more colors across a line, the gradient axis.</span></span> <span data-ttu-id="76b06-133">你使用<xref:System.Windows.Media.GradientStop>指定颜色渐变或它们的位置中的对象。</span><span class="sxs-lookup"><span data-stu-id="76b06-133">You use <xref:System.Windows.Media.GradientStop> objects to specify the colors in the gradient and their positions.</span></span>  
   
- 以下示例使用 <xref:System.Windows.Media.LinearGradientBrush> 绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  下面的插图显示绘制好的矩形。  
+ <span data-ttu-id="76b06-134">下面的示例使用<xref:System.Windows.Media.LinearGradientBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="76b06-134">The following example uses a <xref:System.Windows.Media.LinearGradientBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="76b06-135">下图显示绘制的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b06-135">The following illustration shows the painted rectangle.</span></span>  
   
- ![使用 LinearGradientBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-lineargradientbrush.png "graphicsmm\_brush\_ovw\_lineargradientbrush")  
-使用 LinearGradientBrush 绘制的图形  
+ <span data-ttu-id="76b06-136">![使用 LinearGradientBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")</span><span class="sxs-lookup"><span data-stu-id="76b06-136">![A rectangle painted using a LinearGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")</span></span>  
+<span data-ttu-id="76b06-137">使用 LinearGradientBrush 绘制的矩形</span><span class="sxs-lookup"><span data-stu-id="76b06-137">A Rectangle painted using a LinearGradientBrush</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmlineargradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- 有关 <xref:System.Windows.Media.LinearGradientBrush> 类的更多信息，请参见[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
+ <span data-ttu-id="76b06-138">有关详细信息<xref:System.Windows.Media.LinearGradientBrush>类，请参阅[使用纯色和渐变概述绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-138">For more information about the <xref:System.Windows.Media.LinearGradientBrush> class, see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span>  
   
 <a name="paintwithradialgradientbrush"></a>   
-## 使用径向渐变进行绘制  
- <xref:System.Windows.Media.RadialGradientBrush> 使用径向渐变绘制区域。  径向渐变跨一个圆将两种或更多种色彩进行混合。  与 <xref:System.Windows.Media.LinearGradientBrush> 类一样，可以使用 <xref:System.Windows.Media.GradientStop> 对象来指定渐变的色彩及其位置。  
+## <a name="paint-with-a-radial-gradient"></a><span data-ttu-id="76b06-139">使用径向渐变绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-139">Paint with a Radial Gradient</span></span>  
+ <span data-ttu-id="76b06-140">A<xref:System.Windows.Media.RadialGradientBrush>使用径向渐变绘制区域。</span><span class="sxs-lookup"><span data-stu-id="76b06-140">A <xref:System.Windows.Media.RadialGradientBrush> paints an area with a radial gradient.</span></span> <span data-ttu-id="76b06-141">径向渐变跨一个圆混合两个或多个颜色。</span><span class="sxs-lookup"><span data-stu-id="76b06-141">A radial gradient blends two or more colors across a circle.</span></span> <span data-ttu-id="76b06-142">与<xref:System.Windows.Media.LinearGradientBrush>类，用于<xref:System.Windows.Media.GradientStop>指定颜色渐变或它们的位置中的对象。</span><span class="sxs-lookup"><span data-stu-id="76b06-142">As with the <xref:System.Windows.Media.LinearGradientBrush> class, you use <xref:System.Windows.Media.GradientStop> objects to specify the colors in the gradient and their positions.</span></span>  
   
- 以下示例使用 <xref:System.Windows.Media.RadialGradientBrush> 绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  下面的插图显示绘制好的矩形。  
+ <span data-ttu-id="76b06-143">下面的示例使用<xref:System.Windows.Media.RadialGradientBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="76b06-143">The following example uses a <xref:System.Windows.Media.RadialGradientBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="76b06-144">下图显示绘制的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b06-144">The following illustration shows the painted rectangle.</span></span>  
   
- ![使用 RadialGradientBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-radialgradientbrush.png "graphicsmm\_brush\_ovw\_radialgradientbrush")  
-使用 RadialGradientBrush 绘制的矩形  
+ <span data-ttu-id="76b06-145">![使用 RadialGradientBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")</span><span class="sxs-lookup"><span data-stu-id="76b06-145">![A rectangle painted using a RadialGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")</span></span>  
+<span data-ttu-id="76b06-146">使用 RadialGradientBrush 绘制的矩形</span><span class="sxs-lookup"><span data-stu-id="76b06-146">A Rectangle painted using a RadialGradientBrush</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmradialgradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- 有关 <xref:System.Windows.Media.RadialGradientBrush> 类的更多信息，请参见[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
+ <span data-ttu-id="76b06-147">有关详细信息<xref:System.Windows.Media.RadialGradientBrush>类，请参阅[使用纯色和渐变概述绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-147">For more information about the <xref:System.Windows.Media.RadialGradientBrush> class, see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span>  
   
 <a name="paintwithimage"></a>   
-## 使用图像进行绘制  
- <xref:System.Windows.Media.ImageBrush> 使用 <xref:System.Windows.Media.ImageSource> 绘制一个区域。  
+## <a name="paint-with-an-image"></a><span data-ttu-id="76b06-148">使用图像进行绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-148">Paint with an Image</span></span>  
+ <span data-ttu-id="76b06-149"><xref:System.Windows.Media.ImageBrush>使用绘制区域<xref:System.Windows.Media.ImageSource>。</span><span class="sxs-lookup"><span data-stu-id="76b06-149">An <xref:System.Windows.Media.ImageBrush> paints an area with a <xref:System.Windows.Media.ImageSource>.</span></span>  
   
- 以下示例使用 <xref:System.Windows.Media.ImageBrush> 绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  下面的插图显示绘制好的矩形。  
+ <span data-ttu-id="76b06-150">下面的示例使用<xref:System.Windows.Media.ImageBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="76b06-150">The following example uses an <xref:System.Windows.Media.ImageBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="76b06-151">下图显示绘制的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b06-151">The following illustration shows the painted rectangle.</span></span>  
   
- ![使用 ImageBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-imagebrush.png "graphicsmm\_brush\_ovw\_imagebrush")  
-使用图像绘制的矩形  
+ <span data-ttu-id="76b06-152">![使用 imagebrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")</span><span class="sxs-lookup"><span data-stu-id="76b06-152">![A Rectangle painted by an ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")</span></span>  
+<span data-ttu-id="76b06-153">使用图像绘制的矩形</span><span class="sxs-lookup"><span data-stu-id="76b06-153">A Rectangle painted using a Image</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
   
- 有关 <xref:System.Windows.Media.ImageBrush> 类的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ <span data-ttu-id="76b06-154">有关详细信息<xref:System.Windows.Media.ImageBrush>类，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-154">For more information about the <xref:System.Windows.Media.ImageBrush> class, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="paintwithdrawing"></a>   
-## 使用绘图进行绘制  
- <xref:System.Windows.Media.DrawingBrush> 使用 <xref:System.Windows.Media.Drawing> 绘制一个区域。  <xref:System.Windows.Media.Drawing> 可以包含形状、图像、文本和媒体。  
+## <a name="paint-with-a-drawing"></a><span data-ttu-id="76b06-155">使用绘图进行绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-155">Paint with a Drawing</span></span>  
+ <span data-ttu-id="76b06-156">A<xref:System.Windows.Media.DrawingBrush>使用绘制区域<xref:System.Windows.Media.Drawing>。</span><span class="sxs-lookup"><span data-stu-id="76b06-156">A <xref:System.Windows.Media.DrawingBrush> paints an area with a <xref:System.Windows.Media.Drawing>.</span></span> <span data-ttu-id="76b06-157">A<xref:System.Windows.Media.Drawing>可以包含形状、 图像、 文本和媒体。</span><span class="sxs-lookup"><span data-stu-id="76b06-157">A <xref:System.Windows.Media.Drawing> can contain shapes, images, text, and media.</span></span>  
   
- 以下示例使用 <xref:System.Windows.Media.DrawingBrush> 绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  下面的插图显示绘制好的矩形。  
+ <span data-ttu-id="76b06-158">下面的示例使用<xref:System.Windows.Media.DrawingBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="76b06-158">The following example uses a <xref:System.Windows.Media.DrawingBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="76b06-159">下图显示绘制的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b06-159">The following illustration shows the painted rectangle.</span></span>  
   
- ![使用 DrawingBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-drawingbrush.png "graphicsmm\_brush\_ovw\_drawingbrush")  
-使用 DrawingBrush 绘制的矩形  
+ <span data-ttu-id="76b06-160">![使用 DrawingBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")</span><span class="sxs-lookup"><span data-stu-id="76b06-160">![A rectangle painted using a DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")</span></span>  
+<span data-ttu-id="76b06-161">使用 DrawingBrush 绘制的矩形</span><span class="sxs-lookup"><span data-stu-id="76b06-161">A Rectangle painted using a DrawingBrush</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmdrawingbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmdrawingbrushexampleinline)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
   
- 有关 <xref:System.Windows.Media.DrawingBrush> 类的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ <span data-ttu-id="76b06-162">有关详细信息<xref:System.Windows.Media.DrawingBrush>类，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-162">For more information about the <xref:System.Windows.Media.DrawingBrush> class, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="paintwithvisual"></a>   
-## 使用 Visual 进行绘制  
- <xref:System.Windows.Media.VisualBrush> 使用 <xref:System.Windows.Media.Visual> 对象绘制区域。  Visual 对象的示例包括 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Page> 和 <xref:System.Windows.Controls.MediaElement>。  使用 <xref:System.Windows.Media.VisualBrush> 还可以将内容从应用程序的一个部分提取到另一个区域，在创建反射效果和放大局部屏幕时将会非常有用。  
+## <a name="paint-with-a-visual"></a><span data-ttu-id="76b06-163">使用视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-163">Paint with a Visual</span></span>  
+ <span data-ttu-id="76b06-164">A<xref:System.Windows.Media.VisualBrush>使用绘制区域<xref:System.Windows.Media.Visual>对象。</span><span class="sxs-lookup"><span data-stu-id="76b06-164">A <xref:System.Windows.Media.VisualBrush> paints an area with a <xref:System.Windows.Media.Visual> object.</span></span> <span data-ttu-id="76b06-165">视觉对象的示例包括<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.Page>，和<xref:System.Windows.Controls.MediaElement>。</span><span class="sxs-lookup"><span data-stu-id="76b06-165">Examples of Visual objects include <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Page>, and <xref:System.Windows.Controls.MediaElement>.</span></span> <span data-ttu-id="76b06-166">A<xref:System.Windows.Media.VisualBrush>还允许你将内容从另一个区域，则应用程序的一部分是用于创建反射效果和放大屏幕的部分非常有用。</span><span class="sxs-lookup"><span data-stu-id="76b06-166">A <xref:System.Windows.Media.VisualBrush> also enables you to project content from one portion of your application into another area; it's very useful for creating reflection effects and magnifying portions of the screen.</span></span>  
   
- 以下示例使用 <xref:System.Windows.Media.VisualBrush> 绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  下面的插图显示绘制好的矩形。  
+ <span data-ttu-id="76b06-167">下面的示例使用<xref:System.Windows.Media.VisualBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="76b06-167">The following example uses a <xref:System.Windows.Media.VisualBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="76b06-168">下图显示绘制的矩形。</span><span class="sxs-lookup"><span data-stu-id="76b06-168">The following illustration shows the painted rectangle.</span></span>  
   
- ![使用 VisualBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-visualbrush.png "graphicsmm\_brush\_ovw\_visualbrush")  
-使用 VisualBrush 绘制的矩形  
+ <span data-ttu-id="76b06-169">![使用 VisualBrush 绘制的矩形](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")</span><span class="sxs-lookup"><span data-stu-id="76b06-169">![A rectangle painted using a VisualBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")</span></span>  
+<span data-ttu-id="76b06-170">使用 VisualBrush 绘制的矩形</span><span class="sxs-lookup"><span data-stu-id="76b06-170">A Rectangle painted using a VisualBrush</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmvisualbrushexampleinline)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
   
- 有关 <xref:System.Windows.Media.VisualBrush> 类的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ <span data-ttu-id="76b06-171">有关详细信息<xref:System.Windows.Media.VisualBrush>类，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-171">For more information about the <xref:System.Windows.Media.VisualBrush> class, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
-## 使用预定义画笔和系统画笔进行绘制  
- 为了方便起见，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 提供了一组预定义画笔和系统画笔，您可以使用这些画笔来绘制对象。  
+## <a name="paint-using-predefined-and-system-brushes"></a><span data-ttu-id="76b06-172">使用预定义画笔和系统画笔绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-172">Paint using Predefined and System Brushes</span></span>  
+ <span data-ttu-id="76b06-173">为方便起见，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供一组预定义和系统画笔可用于绘制对象。</span><span class="sxs-lookup"><span data-stu-id="76b06-173">For convenience, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] provides a set of predefined and system brushes that you can use to paint objects.</span></span>  
   
--   有关可用预定义画笔的列表，请参见 <xref:System.Windows.Media.Brushes> 类。  有关演示如何使用预定义画笔的示例，请参见[使用纯色绘制区域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)。  
+-   <span data-ttu-id="76b06-174">有关可用的预定义画笔的列表，请参阅<xref:System.Windows.Media.Brushes>类。</span><span class="sxs-lookup"><span data-stu-id="76b06-174">For a list of available predefined brushes, see the <xref:System.Windows.Media.Brushes> class.</span></span> <span data-ttu-id="76b06-175">有关演示如何使用预定义的画笔的示例，请参阅[使用纯色绘制区域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-175">For an example showing how to use a predefined brush, see [Paint an Area with a Solid Color](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).</span></span>  
   
--   有关可用系统画笔的列表，请参见 <xref:System.Windows.SystemColors> 类。  有关示例，请参见[使用系统画笔绘制区域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)。  
+-   <span data-ttu-id="76b06-176">可用系统画笔的列表，请参阅<xref:System.Windows.SystemColors>类。</span><span class="sxs-lookup"><span data-stu-id="76b06-176">For a list of available system brushes, see the <xref:System.Windows.SystemColors> class.</span></span> <span data-ttu-id="76b06-177">有关示例，请参阅[使用系统画笔绘制区域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-177">For an example, see [Paint an Area with a System Brush](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md).</span></span>  
   
 <a name="commonbrushfeatures"></a>   
-## 常见画笔功能  
- <xref:System.Windows.Media.Brush> 对象提供了 <xref:System.Windows.Media.Brush.Opacity%2A> 属性，可以通过该属性使画笔显示为透明或半透明。  如果 <xref:System.Windows.Media.Brush.Opacity%2A> 的值为 0，则画笔显示完全透明；如果 <xref:System.Windows.Media.Brush.Opacity%2A> 的值为 1，则画笔显示为完全不透明。  下面的示例使用 <xref:System.Windows.Media.Brush.Opacity%2A> 属性使 <xref:System.Windows.Media.SolidColorBrush> 具有 25% 的不透明度。  
+## <a name="common-brush-features"></a><span data-ttu-id="76b06-178">常见的画笔功能</span><span class="sxs-lookup"><span data-stu-id="76b06-178">Common Brush Features</span></span>  
+ <span data-ttu-id="76b06-179"><xref:System.Windows.Media.Brush>对象提供<xref:System.Windows.Media.Brush.Opacity%2A>属性，可以用于将透明或半透明的画笔。</span><span class="sxs-lookup"><span data-stu-id="76b06-179"><xref:System.Windows.Media.Brush> objects provide an <xref:System.Windows.Media.Brush.Opacity%2A> property that can be used to make a brush transparent or partially transparent.</span></span> <span data-ttu-id="76b06-180"><xref:System.Windows.Media.Brush.Opacity%2A>值为 0，则画笔完全透明，而<xref:System.Windows.Media.Brush.Opacity%2A>值为 1，则画笔完全不透明。</span><span class="sxs-lookup"><span data-stu-id="76b06-180">An <xref:System.Windows.Media.Brush.Opacity%2A> value of 0 makes a brush completely transparent, while an <xref:System.Windows.Media.Brush.Opacity%2A> value of 1 makes a brush completely opaque.</span></span> <span data-ttu-id="76b06-181">下面的示例使用<xref:System.Windows.Media.Brush.Opacity%2A>属性以使<xref:System.Windows.Media.SolidColorBrush>25%不透明。</span><span class="sxs-lookup"><span data-stu-id="76b06-181">The following example uses the <xref:System.Windows.Media.Brush.Opacity%2A> property to make a <xref:System.Windows.Media.SolidColorBrush> 25 percent opaque.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
+ [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
  [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
   
- 如果画笔包含部分透明的颜色，则通过相乘将该颜色的不透明度的值与画笔的不透明度值进行结合。  例如，如果画笔的不透明度值为 0.5，画笔中使用颜色的不透明度值也是 0.5，则输出颜色的不透明度值为 0.25。  
+ <span data-ttu-id="76b06-182">如果画笔包含部分透明的颜色，颜色的不透明度值相结合通过不透明度值相乘的画笔。</span><span class="sxs-lookup"><span data-stu-id="76b06-182">If the brush contains colors that are partially transparent, the opacity value of the color is combined through multiplication with the opacity value of the brush.</span></span> <span data-ttu-id="76b06-183">例如，如果画笔有的不透明度值为 0.5，画笔中使用的颜色又有的不透明度值为 0.5，则输出颜色具有 0.25 的不透明度值。</span><span class="sxs-lookup"><span data-stu-id="76b06-183">For example, if a brush has an opacity value of 0.5 and a color used in the brush also has an opacity value of 0.5, the output color has an opacity value of 0.25.</span></span>  
   
 > [!NOTE]
->  与使用元素的 <xref:System.Windows.UIElement.Opacity%2A?displayProperty=fullName> 属性来更改整个元素的不透明度相比，更改画笔的不透明度值将会更有效。  
+>  <span data-ttu-id="76b06-184">更高效，若要更改的画笔的不透明度值，更改整个元素使用的不透明度比其<xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="76b06-184">It's more efficient to change the opacity value of a brush than it is to change the opacity of an entire element using its <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> property.</span></span>  
   
- 您可以使用画笔的 <xref:System.Windows.Media.Brush.Transform%2A> 或 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 属性对画笔的内容进行旋转、缩放、扭曲和平移。  有关更多信息，请参见[Brush 变换概述](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)。  
+ <span data-ttu-id="76b06-185">可以旋转、 缩放、 倾斜，和将画笔的内容转换使用其<xref:System.Windows.Media.Brush.Transform%2A>或<xref:System.Windows.Media.Brush.RelativeTransform%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="76b06-185">You can rotate, scale, skew, and translate a brush's content by using its <xref:System.Windows.Media.Brush.Transform%2A> or <xref:System.Windows.Media.Brush.RelativeTransform%2A> properties.</span></span> <span data-ttu-id="76b06-186">有关详细信息，请参阅[画笔转换概述](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-186">For more information, see [Brush Transformation Overview](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).</span></span>  
   
- 由于它们是 <xref:System.Windows.Media.Animation.Animatable> 的对象，因此也可以对 <xref:System.Windows.Media.Brush> 进行动画处理。  有关更多信息，请参见[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ <span data-ttu-id="76b06-187">因为它们是<xref:System.Windows.Media.Animation.Animatable>对象，<xref:System.Windows.Media.Brush>对象可以进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="76b06-187">Because they are <xref:System.Windows.Media.Animation.Animatable> objects, <xref:System.Windows.Media.Brush> objects can be animated.</span></span> <span data-ttu-id="76b06-188">有关详细信息，请参阅 [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-188">For more information, see [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
 <a name="freezable_features"></a>   
-### Freezable 功能  
- 由于它继承自 <xref:System.Windows.Freezable> 类，因此 <xref:System.Windows.Media.Brush> 类提供了一些特殊功能：<xref:System.Windows.Media.Brush> 对象可声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、在多个对象之间共享以及进行克隆。  另外，除 <xref:System.Windows.Media.VisualBrush> 外，所有的 <xref:System.Windows.Media.Brush> 类型都可以设为只读以提高性能和成为线程安全的类型。  
+### <a name="freezable-features"></a><span data-ttu-id="76b06-189">Freezable 功能</span><span class="sxs-lookup"><span data-stu-id="76b06-189">Freezable Features</span></span>  
+ <span data-ttu-id="76b06-190">因为它继承自<xref:System.Windows.Freezable>类，<xref:System.Windows.Media.Brush>类提供了一些特殊功能：<xref:System.Windows.Media.Brush>对象可声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 在多个对象之间共享和克隆。</span><span class="sxs-lookup"><span data-stu-id="76b06-190">Because it inherits from the <xref:System.Windows.Freezable> class, the <xref:System.Windows.Media.Brush> class provides several special features: <xref:System.Windows.Media.Brush> objects can be declared as [resources](../../../../docs/framework/wpf/advanced/xaml-resources.md), shared among multiple objects, and cloned.</span></span> <span data-ttu-id="76b06-191">此外，所有<xref:System.Windows.Media.Brush>类型除外<xref:System.Windows.Media.VisualBrush>可以生成只读的以提高性能，生成线程安全。</span><span class="sxs-lookup"><span data-stu-id="76b06-191">In addition, all the <xref:System.Windows.Media.Brush> types except <xref:System.Windows.Media.VisualBrush> can be made read-only to improve performance and made thread-safe.</span></span>  
   
- 有关 <xref:System.Windows.Freezable> 对象提供的不同功能的更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="76b06-192">有关提供的不同功能的详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="76b06-192">For more information about the different features provided by <xref:System.Windows.Freezable> objects, see [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
- 有关无法冻结 <xref:System.Windows.Media.VisualBrush> 对象的原因的更多信息，请参见 <xref:System.Windows.Media.VisualBrush> 类型页。  
+ <span data-ttu-id="76b06-193">有关详细信息为何<xref:System.Windows.Media.VisualBrush>对象不能为冻结，请参阅<xref:System.Windows.Media.VisualBrush>类型页。</span><span class="sxs-lookup"><span data-stu-id="76b06-193">For more information on why <xref:System.Windows.Media.VisualBrush> objects cannot be frozen, see the <xref:System.Windows.Media.VisualBrush> type page.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.Brush>   
- <xref:System.Windows.Media.Brushes>   
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973)   
- [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005)   
- [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049)   
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)   
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="76b06-194">另请参阅</span><span class="sxs-lookup"><span data-stu-id="76b06-194">See Also</span></span>  
+ <xref:System.Windows.Media.Brush>  
+ <xref:System.Windows.Media.Brushes>  
+ [<span data-ttu-id="76b06-195">使用纯色和渐变进行绘制概述</span><span class="sxs-lookup"><span data-stu-id="76b06-195">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="76b06-196">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="76b06-196">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="76b06-197">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="76b06-197">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="76b06-198">画笔示例</span><span class="sxs-lookup"><span data-stu-id="76b06-198">Brushes Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159973)  
+ [<span data-ttu-id="76b06-199">ImageBrush 示例</span><span class="sxs-lookup"><span data-stu-id="76b06-199">ImageBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [<span data-ttu-id="76b06-200">VisualBrush 示例</span><span class="sxs-lookup"><span data-stu-id="76b06-200">VisualBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160049)  
+ [<span data-ttu-id="76b06-201">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="76b06-201">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [<span data-ttu-id="76b06-202">其他性能建议</span><span class="sxs-lookup"><span data-stu-id="76b06-202">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

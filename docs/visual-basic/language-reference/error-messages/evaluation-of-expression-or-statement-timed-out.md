@@ -1,53 +1,35 @@
 ---
-title: "表达式或语句的计算已超时 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "表达式或语句的计算已超时"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30722
 - bc30722
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30722
+helpviewer_keywords: BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf087a85710cbf19e490b3c8f335ea40dbc0d4f7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 32852e000d1de2ae8594215c17952cdddec56f5d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="evaluation-of-expression-or-statement-timed-out"></a>表达式或语句的计算已超时
-表达式的计算没有及时完成。  
+# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="17baf-102">表达式或语句的计算已超时</span><span class="sxs-lookup"><span data-stu-id="17baf-102">Evaluation of expression or statement timed out</span></span>
+<span data-ttu-id="17baf-103">表达式的计算未及时完成。</span><span class="sxs-lookup"><span data-stu-id="17baf-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
   
- **错误 ID:** BC30722  
+ <span data-ttu-id="17baf-104">**错误 ID:** BC30722</span><span class="sxs-lookup"><span data-stu-id="17baf-104">**Error ID:** BC30722</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="17baf-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="17baf-105">To correct this error</span></span>  
   
-1.  验证输入的代码正确。  
+1.  <span data-ttu-id="17baf-106">验证输入的代码正确。</span><span class="sxs-lookup"><span data-stu-id="17baf-106">Verify that the entered code is correct.</span></span>  
   
-2.  因此，采用较少的时间执行简化您的表达式。  
+2.  <span data-ttu-id="17baf-107">简化你的表达式，使它采用更快速地执行。</span><span class="sxs-lookup"><span data-stu-id="17baf-107">Simplify your expression so that it takes less time to execute.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在 Visual Studio 中进行调试](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a><span data-ttu-id="17baf-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17baf-108">See Also</span></span>  
+ [<span data-ttu-id="17baf-109">在 Visual Studio 中进行调试</span><span class="sxs-lookup"><span data-stu-id="17baf-109">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)

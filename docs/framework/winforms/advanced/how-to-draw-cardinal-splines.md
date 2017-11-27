@@ -1,58 +1,64 @@
 ---
-title: "如何：绘制基数样条曲线 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "基本样条, 绘图"
-  - "绘图, 基本样条"
-  - "图形, 基本样条"
+title: "如何：绘制基数样条曲线"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cardinal splines [Windows Forms], drawing
+- drawing [Windows Forms], cardinal splines
+- graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c47ff269cb1c367abee0be197fdc80485fb37b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：绘制基数样条曲线
-基数样条是平滑通过一组给定点的曲线。  若要绘制基数样条曲线，请创建 <xref:System.Drawing.Graphics> 对象并将一组点的地址传递给 <xref:System.Drawing.Graphics.DrawCurve%2A> 方法。  
+# <a name="how-to-draw-cardinal-splines"></a><span data-ttu-id="23be5-102">如何：绘制基数样条曲线</span><span class="sxs-lookup"><span data-stu-id="23be5-102">How to: Draw Cardinal Splines</span></span>
+<span data-ttu-id="23be5-103">基数样条是平滑地通过给定的一组点的曲线。</span><span class="sxs-lookup"><span data-stu-id="23be5-103">A cardinal spline is a curve that passes smoothly through a given set of points.</span></span> <span data-ttu-id="23be5-104">若要绘制的基数样条，创建<xref:System.Drawing.Graphics>对象并将传递指向数组的地址<xref:System.Drawing.Graphics.DrawCurve%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="23be5-104">To draw a cardinal spline, create a <xref:System.Drawing.Graphics> object and pass the address of an array of points to the <xref:System.Drawing.Graphics.DrawCurve%2A> method.</span></span>  
   
-### 绘制钟形基数样条曲线  
+### <a name="drawing-a-bell-shaped-cardinal-spline"></a><span data-ttu-id="23be5-105">绘制钟形基数样条</span><span class="sxs-lookup"><span data-stu-id="23be5-105">Drawing a Bell-Shaped Cardinal Spline</span></span>  
   
--   下面的示例绘制了一条通过五个指定点的钟形基数样条曲线。  下面的插图显示该曲线和五个点。  
+-   <span data-ttu-id="23be5-106">下面的示例绘制的钟形基数样条通过五个指定点。</span><span class="sxs-lookup"><span data-stu-id="23be5-106">The following example draws a bell-shaped cardinal spline that passes through five designated points.</span></span> <span data-ttu-id="23be5-107">下图显示曲线和五个点。</span><span class="sxs-lookup"><span data-stu-id="23be5-107">The following illustration shows the curve and five points.</span></span>  
+  
+     <span data-ttu-id="23be5-108">![基数样条](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")</span><span class="sxs-lookup"><span data-stu-id="23be5-108">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
-### 绘制闭合的基数样条曲线  
+### <a name="drawing-a-closed-cardinal-spline"></a><span data-ttu-id="23be5-109">绘制闭合的基数样条</span><span class="sxs-lookup"><span data-stu-id="23be5-109">Drawing a Closed Cardinal Spline</span></span>  
   
--   使用 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawClosedCurve%2A> 方法可绘制闭合的基数样条曲线。  在闭合的基数样条曲线中，曲线连续通过系列中最后一个点，并与系列中的第一个点连接。  下面的示例绘制了一条通过六个指定点的闭合的基数样条曲线。  下面的插图显示闭合的样条曲线和六个点。  
+-   <span data-ttu-id="23be5-110">使用<xref:System.Drawing.Graphics.DrawClosedCurve%2A>方法<xref:System.Drawing.Graphics>类绘制的闭合基数样条。</span><span class="sxs-lookup"><span data-stu-id="23be5-110">Use the <xref:System.Drawing.Graphics.DrawClosedCurve%2A> method of the <xref:System.Drawing.Graphics> class to draw a closed cardinal spline.</span></span> <span data-ttu-id="23be5-111">在闭合的基数样条曲线继续，数组中的最后一个点，连接与数组中的第一个点。</span><span class="sxs-lookup"><span data-stu-id="23be5-111">In a closed cardinal spline, the curve continues through the last point in the array and connects with the first point in the array.</span></span> <span data-ttu-id="23be5-112">下面的示例绘制通过六个指定点的闭合基数样条。</span><span class="sxs-lookup"><span data-stu-id="23be5-112">The following example draws a closed cardinal spline that passes through six designated points.</span></span> <span data-ttu-id="23be5-113">下图显示六个点以及闭合样条。</span><span class="sxs-lookup"><span data-stu-id="23be5-113">The following illustration shows the closed spline along with the six points.</span></span>  
   
- ![基数样条](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
+ <span data-ttu-id="23be5-114">![基数样条](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")</span><span class="sxs-lookup"><span data-stu-id="23be5-114">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### 更改基数样条曲线的弯曲方式  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a><span data-ttu-id="23be5-115">更改基数样条的弯曲</span><span class="sxs-lookup"><span data-stu-id="23be5-115">Changing the Bend of a Cardinal Spline</span></span>  
   
--   通过将张力参数传递给 <xref:System.Drawing.Graphics.DrawCurve%2A> 方法，可更改基数样条曲线的弯曲方式。  下面的示例绘制了三条通过同一组点的基数样条曲线。  下面的插图显示三条样条曲线及其张力值。  请注意，当张力为 0 时，这些点由一条直线连接。  
+-   <span data-ttu-id="23be5-116">更改的基数样条弯曲通过传递的张力参数的方式<xref:System.Drawing.Graphics.DrawCurve%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="23be5-116">Change the way a cardinal spline bends by passing a tension argument to the <xref:System.Drawing.Graphics.DrawCurve%2A> method.</span></span> <span data-ttu-id="23be5-117">下面的示例绘制三个通过相同的点集的基数样条。</span><span class="sxs-lookup"><span data-stu-id="23be5-117">The following example draws three cardinal splines that pass through the same set of points.</span></span> <span data-ttu-id="23be5-118">下图显示其张力值以及三个样条。</span><span class="sxs-lookup"><span data-stu-id="23be5-118">The following illustration shows the three splines along with their tension values.</span></span> <span data-ttu-id="23be5-119">请注意张力为 0 时, 点由直线进行连接。</span><span class="sxs-lookup"><span data-stu-id="23be5-119">Note that when the tension is 0, the points are connected by straight lines.</span></span>  
   
- ![基数样条](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
+ <span data-ttu-id="23be5-120">![基数样条](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")</span><span class="sxs-lookup"><span data-stu-id="23be5-120">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它们需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="23be5-121">编译代码</span><span class="sxs-lookup"><span data-stu-id="23be5-121">Compiling the Code</span></span>  
+ <span data-ttu-id="23be5-122">前面的示例专用于 Windows 窗体，并且它们要求<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="23be5-122">The preceding examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 请参阅  
- [直线、曲线和图形](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [构造并绘制曲线](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a><span data-ttu-id="23be5-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="23be5-123">See Also</span></span>  
+ [<span data-ttu-id="23be5-124">直线、曲线和形状</span><span class="sxs-lookup"><span data-stu-id="23be5-124">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="23be5-125">构造并绘制曲线</span><span class="sxs-lookup"><span data-stu-id="23be5-125">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

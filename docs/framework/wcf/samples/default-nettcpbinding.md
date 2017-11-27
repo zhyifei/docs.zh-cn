@@ -1,52 +1,51 @@
 ---
-title: "默认 NetTcpBinding | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "网络配置文件 TCP"
+title: "默认 NetTcpBinding"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-caps.latest.revision: 39
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1977bab08f35c8603776974a9e5266cbb140b4e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 默认 NetTcpBinding
-本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。  此示例基于实现计算器服务的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  在本示例中，服务是自承载服务。  客户端和服务都是控制台应用程序。  
+# <a name="default-nettcpbinding"></a><span data-ttu-id="07a9d-102">默认 NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="07a9d-102">Default NetTcpBinding</span></span>
+<span data-ttu-id="07a9d-103">本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。</span><span class="sxs-lookup"><span data-stu-id="07a9d-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="07a9d-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="07a9d-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="07a9d-105">在本示例中，服务是自承载服务。</span><span class="sxs-lookup"><span data-stu-id="07a9d-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="07a9d-106">客户端和服务都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="07a9d-106">Both the client and service are console applications.</span></span>  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="07a9d-107">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="07a9d-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="07a9d-108">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="07a9d-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="07a9d-109">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="07a9d-109">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  <span data-ttu-id="07a9d-110">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="07a9d-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="07a9d-111">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="07a9d-111">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 绑定是在客户端和服务的配置文件中指定的。  绑定类型是在 [\<endpoint\>](http://msdn.microsoft.com/zh-cn/13aa23b7-2f08-4add-8dbf-a99f8127c017) 元素的 `binding` 特性中指定的，如下面的示例配置所示。  
+ <span data-ttu-id="07a9d-112">绑定是在客户端和服务的配置文件中指定的。</span><span class="sxs-lookup"><span data-stu-id="07a9d-112">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="07a9d-113">中指定的绑定类型`binding`属性[\<终结点 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="07a9d-113">The binding type is specified in the `binding` attribute of the [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <endpoint address=""  
           binding="netTcpBinding"  
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 前面的示例演示如何配置终结点以使用具有默认设置的 `netTcpBinding` 绑定。  如果要配置 `netTcpBinding` 绑定并更改它的一些设置，则必须定义绑定配置。  终结点必须使用 `bindingConfiguration` 属性按名称来引用绑定配置。  在本示例中，绑定配置的名称为 `Binding1` 并按下面的示例配置所示进行定义。  
+ <span data-ttu-id="07a9d-114">前面的示例演示如何配置终结点以使用具有默认设置的 `netTcpBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="07a9d-114">The previous sample shows how to configure an endpoint to use the `netTcpBinding` binding with the default settings.</span></span> <span data-ttu-id="07a9d-115">如果要配置 `netTcpBinding` 绑定并更改它的一些设置，则必须定义绑定配置。</span><span class="sxs-lookup"><span data-stu-id="07a9d-115">If you want to configure the `netTcpBinding` binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="07a9d-116">终结点必须使用 `bindingConfiguration` 属性按名称来引用绑定配置。</span><span class="sxs-lookup"><span data-stu-id="07a9d-116">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span> <span data-ttu-id="07a9d-117">在本示例中，绑定配置的名称为 `Binding1` 并按下面的示例配置所示进行定义。</span><span class="sxs-lookup"><span data-stu-id="07a9d-117">In this sample, the binding configuration is named `Binding1` and is defined as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <services>  
   <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -91,7 +90,7 @@ caps.handback.revision: 39
 </bindings>  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。  在客户端窗口中按 Enter 可以关闭客户端。  
+ <span data-ttu-id="07a9d-118">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="07a9d-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="07a9d-119">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="07a9d-119">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -102,25 +101,24 @@ Divide(22,7) = 3.14285714285714
 Press ENTER to terminate client.  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="07a9d-120">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="07a9d-120">To set up, build, and run the sample</span></span>  
   
-1.  使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1.  <span data-ttu-id="07a9d-121">使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。</span><span class="sxs-lookup"><span data-stu-id="07a9d-121">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  确保已经执行了[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  <span data-ttu-id="07a9d-122">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="07a9d-122">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="07a9d-123">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="07a9d-123">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4.  <span data-ttu-id="07a9d-124">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="07a9d-124">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  由于该服务器是自承载的，因此必须在客户端的 App.config 文件中指定一个标识才能用跨计算机配置来运行该示例。  
+    >  <span data-ttu-id="07a9d-125">由于该服务器是自承载的，因此必须在客户端的 App.config 文件中指定一个标识才能用跨计算机配置来运行该示例。</span><span class="sxs-lookup"><span data-stu-id="07a9d-125">Because the server is self-hosted, you must specify an identity in the client's App.config file to run the sample in a cross-machine configuration.</span></span>  
   
-    ```  
+    ```xml  
     <client>  
       <endpoint name=""  
           address="net.tcp://servername:9000/servicemodelsamples/service"   
@@ -133,4 +131,4 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="07a9d-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="07a9d-126">See Also</span></span>

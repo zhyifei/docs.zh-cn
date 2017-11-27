@@ -1,24 +1,26 @@
 ---
-title: "运算符对于“&lt;name1&gt;”和“&lt;name2&gt;”无效 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrNoValidOperator_TwoOperands"
+title: "运算符不适合 &#39;&lt;name1&gt;&#39; 和 &#39;&lt;name2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrNoValidOperator_TwoOperands
 ms.assetid: b2b1e6ce-d262-4644-8085-e48a2e2f06a6
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1898cf4830a587fbfc086d518be3e8aea801c7ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 运算符对于“&lt;name1&gt;”和“&lt;name2&gt;”无效
-运算符不适合于正运算的类型。  
+# <a name="operator-is-not-valid-for-39ltname1gt39-and-39ltname2gt39"></a><span data-ttu-id="0e42c-102">运算符不适合 &#39;&lt;name1&gt;&#39; 和 &#39;&lt;name2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="0e42c-102">Operator is not valid for &#39;&lt;name1&gt;&#39; and &#39;&lt;name2&gt;&#39;</span></span>
+<span data-ttu-id="0e42c-103">运算符不适合于正运算的类型。</span><span class="sxs-lookup"><span data-stu-id="0e42c-103">An operator is not appropriate for the types being operated on.</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0e42c-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="0e42c-104">To correct this error</span></span>  
   
-1.  确保该运算符适合于正运算的类型。  
+1.  <span data-ttu-id="0e42c-105">确保该运算符适合于正运算的类型。</span><span class="sxs-lookup"><span data-stu-id="0e42c-105">Ensure that the operator is appropriate for the types being operated on.</span></span>  
   
-## 请参阅  
- [运算符](../../visual-basic/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="0e42c-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0e42c-106">See Also</span></span>  
+ [<span data-ttu-id="0e42c-107">运算符</span><span class="sxs-lookup"><span data-stu-id="0e42c-107">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)

@@ -1,70 +1,76 @@
 ---
-title: "System.Transactions 与 SQL Server 的集成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "System.Transactions 与 SQL Server 的集成"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2299a974fc9c6af9e5fba0de6e16ab72de8b5e10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# System.Transactions 与 SQL Server 的集成
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版引入了一个可通过 <xref:System.Transactions> 命名空间访问的事务框架。 此框架公开事务的方式是完全集成在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  
+# <a name="systemtransactions-integration-with-sql-server"></a><span data-ttu-id="4dab8-102">System.Transactions 与 SQL Server 的集成</span><span class="sxs-lookup"><span data-stu-id="4dab8-102">System.Transactions Integration with SQL Server</span></span>
+<span data-ttu-id="4dab8-103">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版引入了一个可通过 <xref:System.Transactions> 命名空间访问的事务框架。</span><span class="sxs-lookup"><span data-stu-id="4dab8-103">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 2.0 introduced a transaction framework that can be accessed through the <xref:System.Transactions> namespace.</span></span> <span data-ttu-id="4dab8-104">此框架公开事务的方式是完全集成在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4dab8-104">This framework exposes transactions in a way that is fully integrated in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], including [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
- 除了对编程能力的增强之外，<xref:System.Transactions> 与 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 可一起使用，在处理事务时协调优化。 可提升事务是可以根据需要自动提升为完全分布式事务的轻型（本地）事务。  
+ <span data-ttu-id="4dab8-105">除了对编程能力的增强之外， <xref:System.Transactions> 与 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 可一起使用，在处理事务时协调优化。</span><span class="sxs-lookup"><span data-stu-id="4dab8-105">In addition to the programmability enhancements, <xref:System.Transactions> and [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] can work together to coordinate optimizations when you work with transactions.</span></span> <span data-ttu-id="4dab8-106">可提升事务是可以根据需要自动提升为完全分布式事务的轻型（本地）事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-106">A promotable transaction is a lightweight (local) transaction that can be automatically promoted to a fully distributed transaction on an as-needed basis.</span></span>  
   
- 从 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 开始，当您使用 <xref:System.Data.SqlClient> 时 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 会提供对可提升事务的支持。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的，不需要开发人员参与。  
+ <span data-ttu-id="4dab8-107">从 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 开始，当您使用 <xref:System.Data.SqlClient> 时 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]会提供对可提升事务的支持。</span><span class="sxs-lookup"><span data-stu-id="4dab8-107">Starting with [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> supports promotable transactions when you work with [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="4dab8-108">可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。</span><span class="sxs-lookup"><span data-stu-id="4dab8-108">A promotable transaction does not invoke the added overhead of a distributed transaction unless the added overhead is required.</span></span> <span data-ttu-id="4dab8-109">可提升事务是自动的，不需要开发人员参与。</span><span class="sxs-lookup"><span data-stu-id="4dab8-109">Promotable transactions are automatic require no intervention from the developer.</span></span>  
   
- 只有一起使用 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序 \(`SqlClient`\) 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 时，才可以使用可提升事务。  
+ <span data-ttu-id="4dab8-110">只有一起使用 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序 (`SqlClient`) 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]时，才可以使用可提升事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-110">Promotable transactions are only available when you use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (`SqlClient`) with [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
-## 创建可提升事务  
- SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供程序支持可提升事务，这种事务通过 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 命名空间中的类处理。 可提升事务通过将分布式事务推迟到需要时再创建，对分布式事务进行优化。 如果只需要一个资源管理器，则不会发生任何分布式事务。  
-  
-> [!NOTE]
->  在部分信任方案中，将事务提升为分布式事务时，需要 <xref:System.Transactions.DistributedTransactionPermission>。  
-  
-## 可提升事务方案  
- 分布式事务由 Microsoft 分布式事务处理协调器 \(MS DTC\) 管理，该协调程序集成了事务中访问的所有资源管理器，通常会占用大量的系统资源。 可提升事务是 <xref:System.Transactions> 事务的一种特殊形式，有效地将工作委托给简单的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 事务。<xref:System.Transactions>、<xref:System.Data.SqlClient> 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 协调在处理事务时涉及到的工作，根据需要将其提升为完全分布式事务。  
-  
- 使用可提升事务的优点是在使用活动 <xref:System.Transactions.TransactionScope> 事务打开某个连接但不打开任何其他连接时，事务作为轻型事务提交，而不引发完全分布式事务的其他系统开销。  
-  
-### 连接字符串关键字  
- <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 属性支持关键字 `Enlist`，该关键字指示 <xref:System.Data.SqlClient> 是否将检测事务上下文并自动在分布式事务中登记连接。 如果 `Enlist=true`，连接将自动在打开的线程的当前事务上下文中登记。 如果 `Enlist=false`，`SqlClient` 连接不会与分布式事务进行交互。`Enlist` 的默认值为 true。 如果连接字符串中未指定 `Enlist`，而在连接打开时检测到一个连接，连接将自动在分布式事务中登记。  
-  
- `Transaction Binding` 连接字符串中的 <xref:System.Data.SqlClient.SqlConnection> 关键字控制连接与已登记的 `System.Transactions` 事务的关联。 还可以通过 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 属性使用。  
-  
- 下表说明可用的值。  
-  
-|关键字|描述|  
-|---------|--------|  
-|Implicit Unbind|默认值。 事务结束时，连接与事务分离，切换回自动提交模式。|  
-|Explicit Unbind|事务关闭之前，连接保持附加到事务。 如果关联的事务未处于活动状态或不匹配 <xref:System.Transactions.Transaction.Current%2A>，则连接将失败。|  
-  
-## 使用 TransactionScope  
- <xref:System.Transactions.TransactionScope> 类通过隐式在分布式事务中登记连接，使代码块事务化。 必须在 <xref:System.Transactions.TransactionScope.Complete%2A> 块的结尾调用 <xref:System.Transactions.TransactionScope> 方法，然后再离开该代码块。 离开代码块将调用 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法。 如果引发的异常造成代码离开范围，将认为事务已中止。  
-  
- 我们建议您使用 `using` 块，以确保在退出 using 代码块时，在 <xref:System.Transactions.TransactionScope.Dispose%2A> 对象上调用 <xref:System.Transactions.TransactionScope>。 如果无法提交或回滚挂起的事务，可能会对性能造成严重影响，因为 <xref:System.Transactions.TransactionScope> 的默认超时为一分钟。 如果不使用 `using` 语句，必须在 `Try` 代码块中执行所有工作，并在 <xref:System.Transactions.TransactionScope.Dispose%2A> 代码块中显式调用 `Finally` 方法。  
-  
- 如果在 <xref:System.Transactions.TransactionScope> 中发生异常，事务将标记为不一致并被弃用。 在 <xref:System.Transactions.TransactionScope> 断开后，事务将回滚。 如果未发生任何异常，参与的事务将提交。  
+## <a name="creating-promotable-transactions"></a><span data-ttu-id="4dab8-111">创建可提升事务</span><span class="sxs-lookup"><span data-stu-id="4dab8-111">Creating Promotable Transactions</span></span>  
+ <span data-ttu-id="4dab8-112">SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供程序支持可提升事务，这种事务通过 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 命名空间中的类处理。</span><span class="sxs-lookup"><span data-stu-id="4dab8-112">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server provides support for promotable transactions, which are handled through the classes in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> namespace.</span></span> <span data-ttu-id="4dab8-113">可提升事务通过将分布式事务推迟到需要时再创建，对分布式事务进行优化。</span><span class="sxs-lookup"><span data-stu-id="4dab8-113">Promotable transactions optimize distributed transactions by deferring creating a distributed transaction until it is needed.</span></span> <span data-ttu-id="4dab8-114">如果只需要一个资源管理器，则不会发生任何分布式事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-114">If only one resource manager is required, no distributed transaction occurs.</span></span>  
   
 > [!NOTE]
->  默认情况下，`TransactionScope` 类将创建一个 <xref:System.Transactions.Transaction.IsolationLevel%2A> 为 `Serializable` 的事务。 根据应用程序的不同，可能需要考虑降低隔离级别，以避免应用程序中出现大量的争用。  
+>  <span data-ttu-id="4dab8-115">在部分信任方案中，将事务提升为分布式事务时，需要 <xref:System.Transactions.DistributedTransactionPermission> 。</span><span class="sxs-lookup"><span data-stu-id="4dab8-115">In a partially trusted scenario, the <xref:System.Transactions.DistributedTransactionPermission> is required when a transaction is promoted to a distributed transaction.</span></span>  
+  
+## <a name="promotable-transaction-scenarios"></a><span data-ttu-id="4dab8-116">可提升事务方案</span><span class="sxs-lookup"><span data-stu-id="4dab8-116">Promotable Transaction Scenarios</span></span>  
+ <span data-ttu-id="4dab8-117">分布式事务由 Microsoft 分布式事务处理协调器 (MS DTC) 管理，该协调程序集成了事务中访问的所有资源管理器，通常会占用大量的系统资源。</span><span class="sxs-lookup"><span data-stu-id="4dab8-117">Distributed transactions typically consume significant system resources, being managed by Microsoft Distributed Transaction Coordinator (MS DTC), which integrates all the resource managers accessed in the transaction.</span></span> <span data-ttu-id="4dab8-118">可提升事务是 <xref:System.Transactions> 事务的一种特殊形式，有效地将工作委托给简单的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-118">A promotable transaction is a special form of a <xref:System.Transactions> transaction that effectively delegates the work to a simple [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] transaction.</span></span> <span data-ttu-id="4dab8-119"><xref:System.Transactions>、 <xref:System.Data.SqlClient>和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 协调在处理事务时涉及到的工作，根据需要将其提升为完全分布式事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-119"><xref:System.Transactions>, <xref:System.Data.SqlClient>, and [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] coordinate the work involved in handling the transaction, promoting it to a full distributed transaction as needed.</span></span>  
+  
+ <span data-ttu-id="4dab8-120">使用可提升事务的优点是在使用活动 <xref:System.Transactions.TransactionScope> 事务打开某个连接但不打开任何其他连接时，事务作为轻型事务提交，而不引发完全分布式事务的其他系统开销。</span><span class="sxs-lookup"><span data-stu-id="4dab8-120">The benefit of using promotable transactions is that when a connection is opened by using an active <xref:System.Transactions.TransactionScope> transaction, and no other connections are opened, the transaction commits as a lightweight transaction, instead of incurring the additional overhead of a full distributed transaction.</span></span>  
+  
+### <a name="connection-string-keywords"></a><span data-ttu-id="4dab8-121">连接字符串关键字</span><span class="sxs-lookup"><span data-stu-id="4dab8-121">Connection String Keywords</span></span>  
+ <span data-ttu-id="4dab8-122"><xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 属性支持关键字 `Enlist`，该关键字指示 <xref:System.Data.SqlClient> 是否将检测事务上下文并自动在分布式事务中登记连接。</span><span class="sxs-lookup"><span data-stu-id="4dab8-122">The <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> property supports a keyword, `Enlist`, which indicates whether <xref:System.Data.SqlClient> will detect transactional contexts and automatically enlist the connection in a distributed transaction.</span></span> <span data-ttu-id="4dab8-123">如果 `Enlist=true`，连接将自动在打开的线程的当前事务上下文中登记。</span><span class="sxs-lookup"><span data-stu-id="4dab8-123">If `Enlist=true`, the connection is automatically enlisted in the opening thread's current transaction context.</span></span> <span data-ttu-id="4dab8-124">如果 `Enlist=false`， `SqlClient` 连接不会与分布式事务进行交互。</span><span class="sxs-lookup"><span data-stu-id="4dab8-124">If `Enlist=false`, the `SqlClient` connection does not interact with a distributed transaction.</span></span> <span data-ttu-id="4dab8-125">`Enlist` 的默认值为 true。</span><span class="sxs-lookup"><span data-stu-id="4dab8-125">The default value for `Enlist` is true.</span></span> <span data-ttu-id="4dab8-126">如果连接字符串中未指定 `Enlist` ，而在连接打开时检测到一个连接，连接将自动在分布式事务中登记。</span><span class="sxs-lookup"><span data-stu-id="4dab8-126">If `Enlist` is not specified in the connection string, the connection is automatically enlisted in a distributed transaction if one is detected when the connection is opened.</span></span>  
+  
+ <span data-ttu-id="4dab8-127">`Transaction Binding` 连接字符串中的 <xref:System.Data.SqlClient.SqlConnection> 关键字控制连接与已登记的 `System.Transactions` 事务的关联。</span><span class="sxs-lookup"><span data-stu-id="4dab8-127">The `Transaction Binding` keywords in a <xref:System.Data.SqlClient.SqlConnection> connection string control the connection's association with an enlisted `System.Transactions` transaction.</span></span> <span data-ttu-id="4dab8-128">还可以通过 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>属性使用。</span><span class="sxs-lookup"><span data-stu-id="4dab8-128">It is also available through the <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> property of a <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.</span></span>  
+  
+ <span data-ttu-id="4dab8-129">下表说明可用的值。</span><span class="sxs-lookup"><span data-stu-id="4dab8-129">The following table describes the possible values.</span></span>  
+  
+|<span data-ttu-id="4dab8-130">关键字</span><span class="sxs-lookup"><span data-stu-id="4dab8-130">Keyword</span></span>|<span data-ttu-id="4dab8-131">描述</span><span class="sxs-lookup"><span data-stu-id="4dab8-131">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="4dab8-132">Implicit Unbind</span><span class="sxs-lookup"><span data-stu-id="4dab8-132">Implicit Unbind</span></span>|<span data-ttu-id="4dab8-133">默认值。</span><span class="sxs-lookup"><span data-stu-id="4dab8-133">The default.</span></span> <span data-ttu-id="4dab8-134">事务结束时，连接与事务分离，切换回自动提交模式。</span><span class="sxs-lookup"><span data-stu-id="4dab8-134">The connection detaches from the transaction when it ends, switching back to autocommit mode.</span></span>|  
+|<span data-ttu-id="4dab8-135">Explicit Unbind</span><span class="sxs-lookup"><span data-stu-id="4dab8-135">Explicit Unbind</span></span>|<span data-ttu-id="4dab8-136">事务关闭之前，连接保持附加到事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-136">The connection remains attached to the transaction until the transaction is closed.</span></span> <span data-ttu-id="4dab8-137">如果关联的事务未处于活动状态或不匹配 <xref:System.Transactions.Transaction.Current%2A>，则连接将失败。</span><span class="sxs-lookup"><span data-stu-id="4dab8-137">The connection will fail if the associated transaction is not active or does not match <xref:System.Transactions.Transaction.Current%2A>.</span></span>|  
+  
+## <a name="using-transactionscope"></a><span data-ttu-id="4dab8-138">使用 TransactionScope</span><span class="sxs-lookup"><span data-stu-id="4dab8-138">Using TransactionScope</span></span>  
+ <span data-ttu-id="4dab8-139"><xref:System.Transactions.TransactionScope> 类通过隐式在分布式事务中登记连接，使代码块事务化。</span><span class="sxs-lookup"><span data-stu-id="4dab8-139">The <xref:System.Transactions.TransactionScope> class makes a code block transactional by implicitly enlisting connections in a distributed transaction.</span></span> <span data-ttu-id="4dab8-140">必须在 <xref:System.Transactions.TransactionScope.Complete%2A> 块的结尾调用 <xref:System.Transactions.TransactionScope> 方法，然后再离开该代码块。</span><span class="sxs-lookup"><span data-stu-id="4dab8-140">You must call the <xref:System.Transactions.TransactionScope.Complete%2A> method at the end of the <xref:System.Transactions.TransactionScope> block before leaving it.</span></span> <span data-ttu-id="4dab8-141">离开代码块将调用 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="4dab8-141">Leaving the block invokes the <xref:System.Transactions.TransactionScope.Dispose%2A> method.</span></span> <span data-ttu-id="4dab8-142">如果引发的异常造成代码离开范围，将认为事务已中止。</span><span class="sxs-lookup"><span data-stu-id="4dab8-142">If an exception has been thrown that causes the code to leave scope, the transaction is considered aborted.</span></span>  
+  
+ <span data-ttu-id="4dab8-143">我们建议您使用 `using` 块，以确保在退出 using 代码块时，在 <xref:System.Transactions.TransactionScope.Dispose%2A> 对象上调用 <xref:System.Transactions.TransactionScope> 。</span><span class="sxs-lookup"><span data-stu-id="4dab8-143">We recommend that you use a `using` block to make sure that <xref:System.Transactions.TransactionScope.Dispose%2A> is called on the <xref:System.Transactions.TransactionScope> object when the using block is exited.</span></span> <span data-ttu-id="4dab8-144">如果无法提交或回滚挂起的事务，可能会对性能造成严重影响，因为 <xref:System.Transactions.TransactionScope> 的默认超时为一分钟。</span><span class="sxs-lookup"><span data-stu-id="4dab8-144">Failure to commit or roll back pending transactions can significantly damage performance because the default time-out for the <xref:System.Transactions.TransactionScope> is one minute.</span></span> <span data-ttu-id="4dab8-145">如果不使用 `using` 语句，必须在 `Try` 代码块中执行所有工作，并在 <xref:System.Transactions.TransactionScope.Dispose%2A> 代码块中显式调用 `Finally` 方法。</span><span class="sxs-lookup"><span data-stu-id="4dab8-145">If you do not use a `using` statement, you must perform all work in a `Try` block and explicitly call the <xref:System.Transactions.TransactionScope.Dispose%2A> method in the `Finally` block.</span></span>  
+  
+ <span data-ttu-id="4dab8-146">如果在 <xref:System.Transactions.TransactionScope>中发生异常，事务将标记为不一致并被弃用。</span><span class="sxs-lookup"><span data-stu-id="4dab8-146">If an exception occurs in the <xref:System.Transactions.TransactionScope>, the transaction is marked as inconsistent and is abandoned.</span></span> <span data-ttu-id="4dab8-147">在 <xref:System.Transactions.TransactionScope> 断开后，事务将回滚。</span><span class="sxs-lookup"><span data-stu-id="4dab8-147">It will be rolled back when the <xref:System.Transactions.TransactionScope> is disposed.</span></span> <span data-ttu-id="4dab8-148">如果未发生任何异常，参与的事务将提交。</span><span class="sxs-lookup"><span data-stu-id="4dab8-148">If no exception occurs, participating transactions commit.</span></span>  
   
 > [!NOTE]
->  我们建议您只在分布式事务中执行更新、插入和删除，因为这些操作会占用大量的数据库资源。 选择语句可能会对数据库资源进行不必要的锁定，在某些方案中，可能需要使用事务进行选择。 任何非数据库工作应在事务范围之外完成，除非工作涉及其他事务化的资源管理器。 尽管事务范围内的异常会使事务无法提交，但是，<xref:System.Transactions.TransactionScope> 类没有规定回滚您的代码在事务本身范围之外所作的任何更改。 如果在事务回滚时需要采取某项措施，必须自己编写 <xref:System.Transactions.IEnlistmentNotification> 接口的实现并显式在事务中登记。  
+>  <span data-ttu-id="4dab8-149">默认情况下， `TransactionScope` 类将创建一个 <xref:System.Transactions.Transaction.IsolationLevel%2A> 为 `Serializable` 的事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-149">The `TransactionScope` class creates a transaction with a <xref:System.Transactions.Transaction.IsolationLevel%2A> of `Serializable` by default.</span></span> <span data-ttu-id="4dab8-150">根据应用程序的不同，可能需要考虑降低隔离级别，以避免应用程序中出现大量的争用。</span><span class="sxs-lookup"><span data-stu-id="4dab8-150">Depending on your application, you might want to consider lowering the isolation level to avoid high contention in your application.</span></span>  
   
-## 示例  
- 使用 <xref:System.Transactions> 要求具有 System.Transactions.dll 的引用。  
+> [!NOTE]
+>  <span data-ttu-id="4dab8-151">我们建议您只在分布式事务中执行更新、插入和删除，因为这些操作会占用大量的数据库资源。</span><span class="sxs-lookup"><span data-stu-id="4dab8-151">We recommend that you perform only updates, inserts, and deletes within distributed transactions because they consume significant database resources.</span></span> <span data-ttu-id="4dab8-152">选择语句可能会对数据库资源进行不必要的锁定，在某些方案中，可能需要使用事务进行选择。</span><span class="sxs-lookup"><span data-stu-id="4dab8-152">Select statements may lock database resources unnecessarily, and in some scenarios, you may have to use transactions for selects.</span></span> <span data-ttu-id="4dab8-153">任何非数据库工作应在事务范围之外完成，除非工作涉及其他事务化的资源管理器。</span><span class="sxs-lookup"><span data-stu-id="4dab8-153">Any non-database work should be done outside the scope of the transaction, unless it involves other transacted resource managers.</span></span> <span data-ttu-id="4dab8-154">尽管事务范围内的异常会使事务无法提交，但是， <xref:System.Transactions.TransactionScope> 类没有规定回滚您的代码在事务本身范围之外所作的任何更改。</span><span class="sxs-lookup"><span data-stu-id="4dab8-154">Although an exception in the scope of the transaction prevents the transaction from committing, the <xref:System.Transactions.TransactionScope> class has no provision for rolling back any changes your code has made outside the scope of the transaction itself.</span></span> <span data-ttu-id="4dab8-155">如果在事务回滚时需要采取某项措施，必须自己编写 <xref:System.Transactions.IEnlistmentNotification> 接口的实现并显式在事务中登记。</span><span class="sxs-lookup"><span data-stu-id="4dab8-155">If you have to take some action when the transaction is rolled back, you must write your own implementation of the <xref:System.Transactions.IEnlistmentNotification> interface and explicitly enlist in the transaction.</span></span>  
   
- 下面的函数演示如何针对包装在 <xref:System.Data.SqlClient.SqlConnection> 块中的两个不同 SQL Server 实例（由两个不同的 <xref:System.Transactions.TransactionScope> 对象表示）创建可提升事务。 该代码使用 <xref:System.Transactions.TransactionScope> 语句创建 `using` 代码块并打开第一个连接，该连接自动在 <xref:System.Transactions.TransactionScope> 中登记。 事务最初作为轻型事务登记，而不是作为完全分布式事务。 仅当第一个连接中的命令没有引发异常时，才会在 <xref:System.Transactions.TransactionScope> 中登记第二个连接。 打开第二个连接后，事务将自动提升为完全分布式事务。 将会调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法，仅当未引发异常时，该方法才会提交事务。 如果在 <xref:System.Transactions.TransactionScope> 代码块中的任意位置引发了异常，将不会调用 `Complete`，当在 <xref:System.Transactions.TransactionScope> 的 `using` 代码块结尾处执行 dispose 后，将回滚分布式事务。  
+## <a name="example"></a><span data-ttu-id="4dab8-156">示例</span><span class="sxs-lookup"><span data-stu-id="4dab8-156">Example</span></span>  
+ <span data-ttu-id="4dab8-157">使用 <xref:System.Transactions> 要求具有 System.Transactions.dll 的引用。</span><span class="sxs-lookup"><span data-stu-id="4dab8-157">Working with <xref:System.Transactions> requires that you have a reference to System.Transactions.dll.</span></span>  
+  
+ <span data-ttu-id="4dab8-158">下面的函数演示如何针对包装在 <xref:System.Data.SqlClient.SqlConnection> 块中的两个不同 SQL Server 实例（由两个不同的 <xref:System.Transactions.TransactionScope> 对象表示）创建可提升事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-158">The following function demonstrates how to create a promotable transaction against two different SQL Server instances, represented by two different <xref:System.Data.SqlClient.SqlConnection> objects, which are wrapped in a <xref:System.Transactions.TransactionScope> block.</span></span> <span data-ttu-id="4dab8-159">该代码使用 <xref:System.Transactions.TransactionScope> 语句创建 `using` 代码块并打开第一个连接，该连接自动在 <xref:System.Transactions.TransactionScope>中登记。</span><span class="sxs-lookup"><span data-stu-id="4dab8-159">The code creates the <xref:System.Transactions.TransactionScope> block with a `using` statement and opens the first connection, which automatically enlists it in the <xref:System.Transactions.TransactionScope>.</span></span> <span data-ttu-id="4dab8-160">事务最初作为轻型事务登记，而不是作为完全分布式事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-160">The transaction is initially enlisted as a lightweight transaction, not a full distributed transaction.</span></span> <span data-ttu-id="4dab8-161">仅当第一个连接中的命令没有引发异常时，才会在 <xref:System.Transactions.TransactionScope> 中登记第二个连接。</span><span class="sxs-lookup"><span data-stu-id="4dab8-161">The second connection is enlisted in the <xref:System.Transactions.TransactionScope> only if the command in the first connection does not throw an exception.</span></span> <span data-ttu-id="4dab8-162">打开第二个连接后，事务将自动提升为完全分布式事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-162">When the second connection is opened, the transaction is automatically promoted to a full distributed transaction.</span></span> <span data-ttu-id="4dab8-163">将会调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法，仅当未引发异常时，该方法才会提交事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-163">The <xref:System.Transactions.TransactionScope.Complete%2A> method is invoked, which commits the transaction only if no exceptions have been thrown.</span></span> <span data-ttu-id="4dab8-164">如果在 <xref:System.Transactions.TransactionScope> 代码块中的任意位置引发了异常，将不会调用 `Complete` ，当在 <xref:System.Transactions.TransactionScope> 的 `using` 代码块结尾处执行 dispose 后，将回滚分布式事务。</span><span class="sxs-lookup"><span data-stu-id="4dab8-164">If an exception has been thrown at any point in the <xref:System.Transactions.TransactionScope> block, `Complete` will not be called, and the distributed transaction will roll back when the <xref:System.Transactions.TransactionScope> is disposed at the end of its `using` block.</span></span>  
   
 ```csharp  
 // This function takes arguments for the 2 connection strings and commands in order  
@@ -232,6 +238,6 @@ Public Function CreateTransactionScope( _
 End Function  
 ```  
   
-## 请参阅  
- [事务和并发](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
- [ADO.NET 托管提供程序和 DataSet 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="4dab8-165">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4dab8-165">See Also</span></span>  
+ [<span data-ttu-id="4dab8-166">事务和并发性</span><span class="sxs-lookup"><span data-stu-id="4dab8-166">Transactions and Concurrency</span></span>](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [<span data-ttu-id="4dab8-167">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="4dab8-167">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,59 +1,57 @@
 ---
-title: "如何：创建固定值变量 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "变量 [Visual Basic], 常量值"
-  - "变量 [Visual Basic], 只读"
+title: "如何：创建固定值变量 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], read-only
+- variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d1475553e64fef92ec3f3bb7e1b4fbfb357dbec8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建固定值变量 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-固定值变量的概念看起来有点矛盾。  但在某些情况下，常数不够灵活，需要使用一个具有固定值的变量。  此时，可以使用 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 关键字来定义一个成员变量。  
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="64d42-102">如何：创建固定值变量 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64d42-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
+<span data-ttu-id="64d42-103">不会更改其值的变量的概念可能看起来有点矛盾。</span><span class="sxs-lookup"><span data-stu-id="64d42-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="64d42-104">在一些情况下不可行常量时，但它可用于具有固定值的变量。</span><span class="sxs-lookup"><span data-stu-id="64d42-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="64d42-105">在这种情况下，你可以定义具有的成员变量[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="64d42-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  
   
- 在以下情况下，不能使用 [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md) 声明和分配常数值：  
+ <span data-ttu-id="64d42-106">不能使用[Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)声明和分配常量值在以下情况下：</span><span class="sxs-lookup"><span data-stu-id="64d42-106">You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:</span></span>  
   
--   `Const` 语句不接受要使用的数据类型  
+-   <span data-ttu-id="64d42-107">`Const`语句不接受你想要使用的数据类型</span><span class="sxs-lookup"><span data-stu-id="64d42-107">The `Const` statement does not accept the data type you want to use</span></span>  
   
--   在编译时不知道值  
+-   <span data-ttu-id="64d42-108">在编译时不知道值</span><span class="sxs-lookup"><span data-stu-id="64d42-108">You do not know the value at compile time</span></span>  
   
--   不能在编译时计算常数值  
+-   <span data-ttu-id="64d42-109">无法在编译时计算的常量值</span><span class="sxs-lookup"><span data-stu-id="64d42-109">You are unable to compute the constant value at compile time</span></span>  
   
-### 创建固定值变量  
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a><span data-ttu-id="64d42-110">若要在值中创建一个变量，不会更改</span><span class="sxs-lookup"><span data-stu-id="64d42-110">To create a variable that does not change in value</span></span>  
   
-1.  在模块级别，使用 [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md) 声明一个成员变量，并包含 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 关键字。  
+1.  <span data-ttu-id="64d42-111">在模块级别声明的成员变量[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)，并且包括[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="64d42-111">At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  
   
     ```  
-  
     Dim ReadOnly timeStarted  
     ```  
   
-     只能对成员变量指定 `ReadOnly`。  这意味着必须在模块级别、所有过程之外定义该变量。  
+     <span data-ttu-id="64d42-112">你可以指定`ReadOnly`仅在成员变量上。</span><span class="sxs-lookup"><span data-stu-id="64d42-112">You can specify `ReadOnly` only on a member variable.</span></span> <span data-ttu-id="64d42-113">这意味着你必须定义在模块级别，在任何过程之外的变量。</span><span class="sxs-lookup"><span data-stu-id="64d42-113">This means you must define the variable at module level, outside of any procedure.</span></span>  
   
-2.  如果可以在编译时计算单条语句的值，则在 `Dim` 语句中使用初始化子句。  [As](../../../../visual-basic/language-reference/statements/as-clause.md) 子句后接等号 \(`=`\)，后面为表达式。  确保编译器将此表达式计算为一个常数值。  
+2.  <span data-ttu-id="64d42-114">如果可以计算在编译时的单个语句中的值，使用中的初始化子句`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="64d42-114">If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement.</span></span> <span data-ttu-id="64d42-115">请按照[作为](../../../../visual-basic/language-reference/statements/as-clause.md)子句以等号 (`=`) 后, 跟表达式。</span><span class="sxs-lookup"><span data-stu-id="64d42-115">Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression.</span></span> <span data-ttu-id="64d42-116">请确保编译器可以计算此表达式与一个常数值。</span><span class="sxs-lookup"><span data-stu-id="64d42-116">Be sure the compiler can evaluate this expression to a constant value.</span></span>  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  
     ```  
   
-     只能对 `ReadOnly` 变量赋一次值。  一旦赋值，任何代码都不能更改其值。  
+     <span data-ttu-id="64d42-117">你可以将值赋给`ReadOnly`变量一次。</span><span class="sxs-lookup"><span data-stu-id="64d42-117">You can assign a value to a `ReadOnly` variable only once.</span></span> <span data-ttu-id="64d42-118">这么做后，没有代码可以更改其值。</span><span class="sxs-lookup"><span data-stu-id="64d42-118">Once you do so, no code can ever change its value.</span></span>  
   
-     如果在编译时不知道值或不能在编译时用单条语句计算值，还可以在运行时在构造函数中为它赋值。  为此，必须在类或结构级别声明 `ReadOnly` 变量。  在类或结构的构造函数中，计算变量的固定值，并在从构造函数返回之前将它赋给变量。  
+     <span data-ttu-id="64d42-119">如果你在编译时，不知道值或不能在单个语句中的编译时计算，可以仍将其分配在构造函数中的运行时。</span><span class="sxs-lookup"><span data-stu-id="64d42-119">If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor.</span></span> <span data-ttu-id="64d42-120">若要执行此操作，您必须声明`ReadOnly`变量在类或结构的级别。</span><span class="sxs-lookup"><span data-stu-id="64d42-120">To do this, you must declare the `ReadOnly` variable at class or structure level.</span></span> <span data-ttu-id="64d42-121">在该类或结构的构造函数，计算变量的固定的值，并在返回从构造函数之前将其分配给变量。</span><span class="sxs-lookup"><span data-stu-id="64d42-121">In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.</span></span>  
   
-## 请参阅  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)   
- [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)
+## <a name="see-also"></a><span data-ttu-id="64d42-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="64d42-122">See Also</span></span>  
+ [<span data-ttu-id="64d42-123">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="64d42-123">WriteOnly</span></span>](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [<span data-ttu-id="64d42-124">Const 语句</span><span class="sxs-lookup"><span data-stu-id="64d42-124">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)

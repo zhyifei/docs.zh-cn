@@ -1,73 +1,75 @@
 ---
-title: "&lt;namedCaches&gt; 的 &lt;add&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<namedCaches> 的 <add> 元素"
-  - "<namedCaches> 的 add 元素"
+title: "&lt;添加&gt;元素&lt;namedCaches&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- add element for <namedCaches>
+- <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0baafcb53bf79a25618dad56c2dcf1412e48624b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;namedCaches&gt; 的 &lt;add&gt; 元素
-向内存缓存的 `namedCaches` 集合添加 `namedCache` 项。  
+# <a name="ltaddgt-element-for-ltnamedcachesgt"></a><span data-ttu-id="e28c4-102">&lt;添加&gt;元素&lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="e28c4-102">&lt;add&gt; Element for &lt;namedCaches&gt;</span></span>
+<span data-ttu-id="e28c4-103">将添加`namedCache`进入`namedCaches`内存缓存的集合。</span><span class="sxs-lookup"><span data-stu-id="e28c4-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
-## 语法  
+ <span data-ttu-id="e28c4-104">\<system.runtime.caching ></span><span class="sxs-lookup"><span data-stu-id="e28c4-104">\<system.runtime.caching></span></span>  
+<span data-ttu-id="e28c4-105">\<memoryCache ></span><span class="sxs-lookup"><span data-stu-id="e28c4-105">\<memoryCache></span></span>  
+<span data-ttu-id="e28c4-106">\<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="e28c4-106">\<namedCaches></span></span>  
+<span data-ttu-id="e28c4-107">\<add></span><span class="sxs-lookup"><span data-stu-id="e28c4-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e28c4-108">语法</span><span class="sxs-lookup"><span data-stu-id="e28c4-108">Syntax</span></span>  
+  
+```xml  
 <namedCaches>  
     <add name="default" />  
       <!-- child elements -->  
  </namedCaches>  
 ```  
   
-## 类型  
+## <a name="type"></a><span data-ttu-id="e28c4-109">类型</span><span class="sxs-lookup"><span data-stu-id="e28c4-109">Type</span></span>  
  `None`  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e28c4-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e28c4-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="e28c4-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e28c4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="e28c4-112">特性</span><span class="sxs-lookup"><span data-stu-id="e28c4-112">Attributes</span></span>  
   
-|||  
+|<span data-ttu-id="e28c4-113">特性</span><span class="sxs-lookup"><span data-stu-id="e28c4-113">Attribute</span></span>|<span data-ttu-id="e28c4-114">描述</span><span class="sxs-lookup"><span data-stu-id="e28c4-114">Description</span></span>|  
 |-|-|  
-|特性|说明|  
-|`CacheMemoryLimitMegabytes`|指定 <xref:System.Runtime.Caching.MemoryCache> 的实例可增长到的最大允许大小（以兆字节为单位）的整数值。  默认值是 0，表示默认使用 <xref:System.Runtime.Caching.MemoryCache> 类的自动调整大小试探法。|  
-|`Name`|缓存的名称。|  
-|`PhysicalMemoryLimitPercentage`|介于 0 与 100 之间的指定高速缓存可以使用的物理安装的计算机内存的最大百分比的整数值。  默认值是 0，表示默认使用 <xref:System.Runtime.Caching.MemoryCache> 类的自动调整大小试探法。|  
-|`PollingInterval`|一个值，该值指示缓存实现将当前内存负载与为缓存实例设置的绝对内存和内存百分比限制进行比较所采用的时间间隔。  此值以“HH:MM:SS”格式输入。|  
+|`CacheMemoryLimitMegabytes`|<span data-ttu-id="e28c4-115">一个整数值，指定的最大允许大小 （以兆字节为单位） 的实例<xref:System.Runtime.Caching.MemoryCache>可以增长到。</span><span class="sxs-lookup"><span data-stu-id="e28c4-115">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="e28c4-116">默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。</span><span class="sxs-lookup"><span data-stu-id="e28c4-116">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`Name`|<span data-ttu-id="e28c4-117">缓存的名称。</span><span class="sxs-lookup"><span data-stu-id="e28c4-117">The name of the cache.</span></span>|  
+|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="e28c4-118">指定以物理方式安装的计算机可以由缓存使用的内存的最大百分比整数值介于 0 和 100 之间。</span><span class="sxs-lookup"><span data-stu-id="e28c4-118">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="e28c4-119">默认值为 0，这意味着<xref:System.Runtime.Caching.MemoryCache>默认情况下使用类的自动调整大小试探法。</span><span class="sxs-lookup"><span data-stu-id="e28c4-119">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`PollingInterval`|<span data-ttu-id="e28c4-120">一个时间间隔的值，在该时间间隔之后，缓存实现会将当前内存负载与为缓存实例设置的基于绝对值和百分比的内存限制进行比较。</span><span class="sxs-lookup"><span data-stu-id="e28c4-120">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="e28c4-121">"Hh: mm:"格式输入此值。</span><span class="sxs-lookup"><span data-stu-id="e28c4-121">This value is entered in "HH:MM:SS" format.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="e28c4-122">子元素</span><span class="sxs-lookup"><span data-stu-id="e28c4-122">Child Elements</span></span>  
  `None`  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="e28c4-123">父元素</span><span class="sxs-lookup"><span data-stu-id="e28c4-123">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<namedCaches\>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含命名的 <xref:System.Runtime.Caching.MemoryCache> 实例的配置设置的集合。|  
+|<span data-ttu-id="e28c4-124">元素</span><span class="sxs-lookup"><span data-stu-id="e28c4-124">Element</span></span>|<span data-ttu-id="e28c4-125">描述</span><span class="sxs-lookup"><span data-stu-id="e28c4-125">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e28c4-126">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="e28c4-126">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="e28c4-127">包含的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。</span><span class="sxs-lookup"><span data-stu-id="e28c4-127">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## 备注  
- `add` 元素向用于内存缓存的 `namedCaches` 集合添加项  在使用 `add` 元素之前，可以使用 [clear](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) 元素来保证该集合中没有其他已命名的高速缓存。  此元素可用于 Machine.config 文件和 Web.config 文件中。  
+## <a name="remarks"></a><span data-ttu-id="e28c4-128">备注</span><span class="sxs-lookup"><span data-stu-id="e28c4-128">Remarks</span></span>  
+ <span data-ttu-id="e28c4-129">`add`元素添加到一个条目`namedCaches`内存缓存的集合。</span><span class="sxs-lookup"><span data-stu-id="e28c4-129">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="e28c4-130">你可以使用[清除](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)元素在使用之前`add`元素能够确定不是否存在任何其他命名缓存在集合中的。</span><span class="sxs-lookup"><span data-stu-id="e28c4-130">You can use the [clear](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="e28c4-131">在 machine.config 文件中并在 Web.config 文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="e28c4-131">This element can be used in the machine.config file and in the Web.config file.</span></span>  
   
-## 示例  
- 下面的示例演示如何定义默认 `namedCache` 项对内存缓存的 `namedCaches`  集合的设置。  
+## <a name="example"></a><span data-ttu-id="e28c4-132">示例</span><span class="sxs-lookup"><span data-stu-id="e28c4-132">Example</span></span>  
+ <span data-ttu-id="e28c4-133">下面的示例演示如何定义默认设置`namedCache`进入`namedCaches`内存缓存的集合。</span><span class="sxs-lookup"><span data-stu-id="e28c4-133">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
-```  
+```xml  
 <configuration>  
   
   <system.runtime.caching>  
@@ -84,5 +86,5 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 请参阅  
- [\<namedCaches\> 元素（缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="e28c4-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e28c4-134">See Also</span></span>  
+ [<span data-ttu-id="e28c4-135">\<namedCaches > 元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="e28c4-135">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

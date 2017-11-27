@@ -1,41 +1,47 @@
 ---
-title: "如何：实现依赖项属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "依赖项属性, 后备属性"
-  - "属性, 使用依赖项属性进行后备"
+title: "如何：实现依赖属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], backing properties with
+- properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9bc4dee8f0b2eef76e5769ae7da3a13edf7c3300
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：实现依赖项属性
-本示例演示如何使用 <xref:System.Windows.DependencyProperty> 字段来支持[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性，从而定义一个[依赖项属性](GTMT)。  当您定义自己的属性并需要它们支持 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的诸多方面（包括样式、数据绑定、继承、动画和默认值）时，应将其实现为[依赖项属性](GTMT)。  
+# <a name="how-to-implement-a-dependency-property"></a><span data-ttu-id="3c95f-102">如何：实现依赖属性</span><span class="sxs-lookup"><span data-stu-id="3c95f-102">How to: Implement a Dependency Property</span></span>
+<span data-ttu-id="3c95f-103">此示例演示如何备份[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]具有属性<xref:System.Windows.DependencyProperty>字段，从而定义依赖项属性。</span><span class="sxs-lookup"><span data-stu-id="3c95f-103">This example shows how to back a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property with a <xref:System.Windows.DependencyProperty> field, thus defining a dependency property.</span></span> <span data-ttu-id="3c95f-104">定义自己的属性并需要其支持 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的诸多方面（包括样式、数据绑定、继承、动画和默认值）时，应将其作为依赖属性实现。</span><span class="sxs-lookup"><span data-stu-id="3c95f-104">When you define your own properties and want them to support many aspects of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] functionality, including styles, data binding, inheritance, animation, and default values, you should implement them as a dependency property.</span></span>  
   
-## 示例  
- 以下示例首先通过调用 <xref:System.Windows.DependencyProperty.Register%2A> 方法来注册一个[依赖项属性](GTMT)。  用于存储[依赖项属性](GTMT)的名称和特征的标识符字段的名称必须是作为 <xref:System.Windows.DependencyProperty.Register%2A> 调用的一部分为依赖项属性选择的 <xref:System.Windows.DependencyProperty.Name%2A>，并追加字符串 `Property`。  例如，如果使用 `Location` 的 <xref:System.Windows.DependencyProperty.Name%2A> 注册一个依赖项属性，则为依赖项属性定义的标识符字段必须名为 `LocationProperty`。  
+## <a name="example"></a><span data-ttu-id="3c95f-105">示例</span><span class="sxs-lookup"><span data-stu-id="3c95f-105">Example</span></span>  
+ <span data-ttu-id="3c95f-106">下面的示例首先通过调用注册依赖属性<xref:System.Windows.DependencyProperty.Register%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3c95f-106">The following example first registers a dependency property by calling the <xref:System.Windows.DependencyProperty.Register%2A> method.</span></span> <span data-ttu-id="3c95f-107">用于存储名称，并且必须特征的依赖项属性的标识符字段名称<xref:System.Windows.DependencyProperty.Name%2A>你选择的依赖项属性的一部分<xref:System.Windows.DependencyProperty.Register%2A>调用，文本的字符串追加`Property`。</span><span class="sxs-lookup"><span data-stu-id="3c95f-107">The name of the identifier field that you use to store the name and characteristics of the dependency property must be the <xref:System.Windows.DependencyProperty.Name%2A> you chose for the dependency property as part of the <xref:System.Windows.DependencyProperty.Register%2A> call, appended by the literal string `Property`.</span></span> <span data-ttu-id="3c95f-108">例如，如果你注册具有的依赖项属性<xref:System.Windows.DependencyProperty.Name%2A>的`Location`，则必须命名为你定义的依赖项属性标识符字段`LocationProperty`。</span><span class="sxs-lookup"><span data-stu-id="3c95f-108">For instance, if you register a dependency property with a <xref:System.Windows.DependencyProperty.Name%2A> of `Location`, then the identifier field that you define for the dependency property must be named `LocationProperty`.</span></span>  
   
- 在此示例中，[依赖项属性](GTMT)的名称及其 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 访问器均为 `State`；标识符字段为 `StateProperty`；属性的类型为 <xref:System.Boolean>；注册[依赖项属性](GTMT)的类型为 `MyStateControl`。  
+ <span data-ttu-id="3c95f-109">在此示例中，依赖项属性的名称并将其[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]取值函数，则`State`; 标识符字段是`StateProperty`; 属性的类型是<xref:System.Boolean>; 和注册的依赖项属性的类型是`MyStateControl`。</span><span class="sxs-lookup"><span data-stu-id="3c95f-109">In this example, the name of the dependency property and its [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] accessor is `State`; the identifier field is `StateProperty`; the type of the property is <xref:System.Boolean>; and the type that registers the dependency property is `MyStateControl`.</span></span>  
   
- 如果不遵循此命名模式，则设计器可能无法正确地报告您的属性，而且属性系统样式应用程序的某些方面可能不会以预期的方式工作。  
+ <span data-ttu-id="3c95f-110">如果不遵循此命名模式，则设计器可能无法正确地报告属性，而且属性系统样式应用程序的某些方面可能不会以预期的方式工作。</span><span class="sxs-lookup"><span data-stu-id="3c95f-110">If you fail to follow this naming pattern, designers might not report your property correctly, and certain aspects of property system style application might not behave as expected.</span></span>  
   
- 还可以为[依赖项属性](GTMT)属性指定默认元数据。  此示例将 `State` [依赖项属性](GTMT)的默认值注册为 `false`。  
+ <span data-ttu-id="3c95f-111">还可为依赖属性指定默认元数据。</span><span class="sxs-lookup"><span data-stu-id="3c95f-111">You can also specify default metadata for a dependency property.</span></span> <span data-ttu-id="3c95f-112">此示例将 `State` 依赖属性的默认值注册为 `false`。</span><span class="sxs-lookup"><span data-stu-id="3c95f-112">This example registers the default value of the `State` dependency property to be `false`.</span></span>  
   
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
   
- 有关如何以及为何实现一个[依赖项属性](GTMT)，而非仅使用私有字段支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的更多信息，请参见[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ <span data-ttu-id="3c95f-113">若要深入了解实现依赖属性而非仅使用私有字段支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的原因及其实现方式，请参阅[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="3c95f-113">For more information about how and why to implement a dependency property, as opposed to just backing a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property with a private field, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
-## 请参阅  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="3c95f-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3c95f-114">See Also</span></span>  
+ [<span data-ttu-id="3c95f-115">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="3c95f-115">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="3c95f-116">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="3c95f-116">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

@@ -1,41 +1,44 @@
 ---
-title: "Windows Communication Foundation 示例的一次性安装过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows Communication Foundation 示例的一次性安装过程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: 83
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 83
+caps.latest.revision: "83"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f2cb8d8376447de12f324719e39f575df8f33a3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation 示例的一次性安装过程
-大多数 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例均承载于 Internet 信息服务 \(IIS\) 中，并从公共虚拟目录中运行。此一次性安装过程在磁盘上创建一个文件夹；还将向 IIS 添加一个名为**“ServiceModelSamples”**的虚拟目录。  
+# <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a><span data-ttu-id="95ae8-102">Windows Communication Foundation 示例的一次性安装过程</span><span class="sxs-lookup"><span data-stu-id="95ae8-102">One-Time Setup Procedure for the Windows Communication Foundation Samples</span></span>
+<span data-ttu-id="95ae8-103">大多数 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例均承载于 Internet 信息服务 (IIS) 中，并从公共虚拟目录中运行。</span><span class="sxs-lookup"><span data-stu-id="95ae8-103">Most of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples are hosted in Internet Information Services (IIS) and run from a common virtual directory.</span></span> <span data-ttu-id="95ae8-104">此一次性安装过程在磁盘; 上创建一个文件夹它还将虚拟目录添加到名为的 IIS **ServiceModelSamples**。</span><span class="sxs-lookup"><span data-stu-id="95ae8-104">This one-time setup procedure creates a folder on the disk; it also adds a virtual directory to IIS named **ServiceModelSamples**.</span></span>  
   
- **“ServiceModelSamples”**虚拟目录用于生成和运行使用 IIS 承载的服务的所有示例。这是运行示例所需的唯一虚拟目录。绑定示例将替换以前在此虚拟目录部署的所有服务；只有最近生成的示例将在此虚拟目录中部署并可用。  
+ <span data-ttu-id="95ae8-105">**ServiceModelSamples**虚拟目录用于生成和运行使用 IIS 承载的服务的所有示例。</span><span class="sxs-lookup"><span data-stu-id="95ae8-105">The **ServiceModelSamples** virtual directory is used for building and running all samples that use an IIS-hosted service.</span></span> <span data-ttu-id="95ae8-106">这是运行示例所需的唯一虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-106">This is the only virtual directory that is required to run the samples.</span></span> <span data-ttu-id="95ae8-107">绑定示例将替换以前在此虚拟目录部署的所有服务；只有最近生成的示例将在此虚拟目录中部署并可用。</span><span class="sxs-lookup"><span data-stu-id="95ae8-107">Building a sample will replace any previously deployed service at this virtual directory; only the most recently built sample will be deployed and available in this virtual directory.</span></span>  
   
 > [!NOTE]
->  必须在本地管理员帐户下运行所有命令。如果使用的是 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 或 Windows Server 2008 R2，则还必须用提升的特权运行命令提示。为此，请右击命令提示图标，然后单击**“以管理员身份运行”**。本主题中的所有命令都必须在具有合适路径设置的命令提示中运行。确保这一点的最简单方法是使用 Visual Studio 命令提示。若要打开此提示，请单击“开始”，选择**“所有程序”**，向下滚动到**“Visual Studio 2010”**，选择**“Visual Studio工具”**，右击**“Visual Studio 命令提示\(2010\)”**然后单击**“以管理员身份运行”**。如果安装了 Visual Studio 学习版，但此命令提示不可用，则必须向系统路径添加“C:\\Windows\\Microsoft.Net\\Framework\\v4.0”。  
+>  <span data-ttu-id="95ae8-108">必须在本地管理员帐户下运行所有命令。</span><span class="sxs-lookup"><span data-stu-id="95ae8-108">You must run all commands under a local administrator account.</span></span> <span data-ttu-id="95ae8-109">如果使用的是 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 或 Windows Server 2008 R2，则还必须用提升的特权运行命令提示。</span><span class="sxs-lookup"><span data-stu-id="95ae8-109">If you are using Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], or Windows Server 2008 R2, you must also run the command prompt with elevated privileges.</span></span> <span data-ttu-id="95ae8-110">为此，请右键单击命令提示符图标，并依次**以管理员身份运行**。</span><span class="sxs-lookup"><span data-stu-id="95ae8-110">To do so, right-click the command prompt icon, and then click **Run as administrator**.</span></span> <span data-ttu-id="95ae8-111">本主题中的所有命令都必须在具有合适路径设置的命令提示中运行。</span><span class="sxs-lookup"><span data-stu-id="95ae8-111">All commands in this topic must be run in a command prompt that has the appropriate path settings.</span></span>  <span data-ttu-id="95ae8-112">确保这一点的最简单方法是使用 Visual Studio 命令提示。</span><span class="sxs-lookup"><span data-stu-id="95ae8-112">The easiest way to ensure this is by using the Visual Studio Command Prompt.</span></span> <span data-ttu-id="95ae8-113">若要打开此提示，请单击**启动**，选择**所有程序**，向下滚动到**Visual Studio 2010**，选择**Visual Studio Tools**，右键单击**Visual Studio 命令提示 (2010)**，然后单击**以管理员身份运行**。</span><span class="sxs-lookup"><span data-stu-id="95ae8-113">To open this prompt, click **Start**, select **All Programs**, scroll down to **Visual Studio 2010**, select **Visual Studio Tools**, right-click **Visual Studio Command Prompt (2010)**, and then click **Run as administrator**.</span></span> <span data-ttu-id="95ae8-114">如果安装了 Visual Studio 学习版，但此命令提示不可用，则必须向系统路径添加“C:\Windows\Microsoft.Net\Framework\v4.0”。</span><span class="sxs-lookup"><span data-stu-id="95ae8-114">If you have one of the Visual Studio Express editions installed, this command prompt is not available, and you will have to add "C:\Windows\Microsoft.Net\Framework\v4.0" to the system path.</span></span>  
   
-### WCF 示例的一次性安装过程  
+### <a name="one-time-setup-procedure-for-wcf-samples"></a><span data-ttu-id="95ae8-115">WCF 示例的一次性安装过程</span><span class="sxs-lookup"><span data-stu-id="95ae8-115">One-time setup procedure for WCF samples</span></span>  
   
-1.  确保已安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 的更多信息，请参见[Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
+1.  <span data-ttu-id="95ae8-116">确保已安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="95ae8-116">Ensure that [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] is set up.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="95ae8-117">如何设置[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，请参阅[Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-117"> how to set up [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], see [Internet Information Service Hosting Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).</span></span>  
   
-2.  确保已安装 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。搜索 v4.0（或更高版本）的以下目录：**\\Windows\\Microsoft.NET\\Framework**  
+2.  <span data-ttu-id="95ae8-118">确保已安装 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="95ae8-118">Ensure that [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] is installed.</span></span> <span data-ttu-id="95ae8-119">搜索以下目录 v4.0 （或更高版本）： **\Windows\Microsoft.NET\Framework**</span><span class="sxs-lookup"><span data-stu-id="95ae8-119">Search the following directory for v4.0 (or later): **\Windows\Microsoft.NET\Framework**</span></span>  
   
-3.  如果未安装 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 并且操作系统不是 Windows Server 2008 SP2 或更高版本，请安装[修补程序 251798](http://go.microsoft.com/fwlink/?LinkId=184693)（可能为英文网页）。  
+3.  <span data-ttu-id="95ae8-120">如果[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]未安装，并且你的操作系统不是 Windows Server 2008 SP2 或更高版本，安装[修补程序 251798](http://go.microsoft.com/fwlink/?LinkId=184693)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-120">If [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] is not installed, and your operating system is not Windows Server 2008 SP2 or later, install [Hotfix 251798](http://go.microsoft.com/fwlink/?LinkId=184693).</span></span>  
   
-4.  运行以下命令。有关必须运行这些命令的原因的更多信息，请参见 [IIS Hosted Service Fails](http://msdn.microsoft.com/zh-cn/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。  
+4.  <span data-ttu-id="95ae8-121">运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="95ae8-121">Run the following commands.</span></span> <span data-ttu-id="95ae8-122">有关为什么必须运行这些命令的详细信息，请参阅[IIS 托管服务失败](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-122">For more information about why these commands must be run, see [IIS Hosted Service Fails](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).</span></span>  
   
     > [!WARNING]
-    >  如果重新安装 IIS，则需要再次运行以下命令。  
+    >  <span data-ttu-id="95ae8-123">如果重新安装 IIS，则需要再次运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="95ae8-123">If IIS is reinstalled, the following commands will need to be run again.</span></span>  
   
     ```  
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable  
@@ -43,54 +46,54 @@ caps.handback.revision: 83
     ```  
   
     > [!WARNING]
-    >  运行命令 `aspnet_regiis –i –enable` 会使默认应用程序池使用 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 运行，这可能会对同一台计算机上的其他应用程序产生不兼容问题。  
+    >  <span data-ttu-id="95ae8-124">运行命令`aspnet_regiis –i –enable`将使默认应用程序池运行使用[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]，这可能会产生相同的计算机上的其他应用程序的不兼容问题。</span><span class="sxs-lookup"><span data-stu-id="95ae8-124">Running the command `aspnet_regiis –i –enable` will make the Default App Pool run using [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], which may produce incompatibility issues for other applications on the same computer.</span></span>  
   
-5.  按照[防火墙说明](../../../../docs/framework/wcf/samples/firewall-instructions.md)启用示例使用的端口。  
+5.  <span data-ttu-id="95ae8-125">请按照[防火墙说明](../../../../docs/framework/wcf/samples/firewall-instructions.md)用于启用这些示例使用的端口。</span><span class="sxs-lookup"><span data-stu-id="95ae8-125">Follow the [Firewall Instructions](../../../../docs/framework/wcf/samples/firewall-instructions.md) for enabling the ports used by the samples.</span></span>  
   
-6.  检查以下默认目录：\<安装驱动器\>:**\\WF\_WCF\_Samples**。如果之前已安装这些示例，则该目录为默认目录。  
+6.  <span data-ttu-id="95ae8-126">检查以下默认目录：\<安装驱动器 >:**\WF_WCF_Samples**。</span><span class="sxs-lookup"><span data-stu-id="95ae8-126">Check for the following default directory: \<InstallDrive>:**\WF_WCF_Samples**.</span></span> <span data-ttu-id="95ae8-127">如果之前已安装这些示例，则该目录为默认目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-127">If the samples were previously installed, this is the default directory.</span></span>  
   
-7.  如果未安装示例，则可以从 [Visual C\#](http://go.microsoft.com/fwlink/?LinkId=190939) 或 [Visual Basic](http://go.microsoft.com/fwlink/?LinkID=193373)（可能为英文网页）的示例下载位置进行安装。  
+7.  <span data-ttu-id="95ae8-128">如果未安装这些示例，它们从安装的示例下载位置[Visual C#](http://go.microsoft.com/fwlink/?LinkId=190939)或[Visual Basic](http://go.microsoft.com/fwlink/?LinkID=193373)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-128">If the samples are not installed, install them from the samples download location for [Visual C#](http://go.microsoft.com/fwlink/?LinkId=190939) or [Visual Basic](http://go.microsoft.com/fwlink/?LinkID=193373).</span></span>  
   
-8.  安装这些示例后，转到：\<安装驱动器\>:**\\WF\_WCF\_Samples\\WCF\\Setup\\**  
+8.  <span data-ttu-id="95ae8-129">后安装这些示例，请转到：\<安装驱动器 >:**\WF_WCF_Samples\WCF\Setup\\**</span><span class="sxs-lookup"><span data-stu-id="95ae8-129">After installing the samples, go to : \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**</span></span>  
   
-9. 运行 **Setupvroot.bat** 批处理文件。将执行以下步骤：  
+9. <span data-ttu-id="95ae8-130">运行**Setupvroot.bat**批处理文件。</span><span class="sxs-lookup"><span data-stu-id="95ae8-130">Run the **Setupvroot.bat** batch file.</span></span> <span data-ttu-id="95ae8-131">将执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="95ae8-131">The following steps are performed:</span></span>  
   
-    -   将在 IIS 中创建一个名为 ServiceModelSamples 的虚拟目录。  
+    -   <span data-ttu-id="95ae8-132">将在 IIS 中创建一个名为 ServiceModelSamples 的虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-132">A virtual directory is created in IIS named ServiceModelSamples.</span></span>  
   
-    -   新建名为 %SystemDrive%\\Inetpub\\wwwroot\\ServiceModelSamples 和 %SystemDrive%\\Inetpub\\wwwroot\\ServiceModelSamples\\bin 的磁盘目录。  
+    -   <span data-ttu-id="95ae8-133">新建名为 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples 和 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin 的磁盘目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-133">New disk directories are created named %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin.</span></span>  
   
-     如果想要手动设置这些目录，请参见[虚拟目录设置说明](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)。若要恢复此步骤中所进行的所有更改，请在使用完示例后运行一次 cleanupvroot.bat。  
-  
-    > [!NOTE]
-    >  除非运行 cleanupvroot.bat，否则此过程只能在计算机上执行一次。  
-  
-10. 您必须向在其下生成示例的帐户和 Network Service 用户授予对 %SystemDrive%\\inetpub\\wwwroot 的修改权限。在生成过程中，某些 Web 承载的示例可能会尝试将已编译的二进制文件复制到上述位置，如果您没有设置相应权限，则生成过程将中断。另外，也可以保持权限不变，并以管理员身份运行 SDK 命令提示或 Visual Studio 命令提示 \(2012\)，或在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中生成示例（也以管理员身份运行）。  
+     <span data-ttu-id="95ae8-134">如果想要手动设置这些目录，请参阅[虚拟目录设置说明](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-134">If you prefer to set up these directories manually, see the [Virtual Directory Setup Instructions](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md).</span></span> <span data-ttu-id="95ae8-135">若要恢复此步骤中所进行的所有更改，请在使用完示例后运行一次 cleanupvroot.bat。</span><span class="sxs-lookup"><span data-stu-id="95ae8-135">To revert all changes done in this step, run cleanupvroot.bat after you finish using the samples.</span></span>  
   
     > [!NOTE]
-    >  如果未完成此步骤，IIS 承载的所有示例都将在生成时失败。确保正确设置权限，或者同时以管理员身份运行 SDK 命令提示和 Visual Studio 命令提示 \(2012\)。  
+    >  <span data-ttu-id="95ae8-136">除非运行 cleanupvroot.bat，否则此过程只能在计算机上执行一次。</span><span class="sxs-lookup"><span data-stu-id="95ae8-136">This procedure must be performed only once on a computer, unless cleanupvroot.bat is run.</span></span>  
   
-11. 在计算机上创建一个 C:\\logs 目录；某些示例可能需要此目录。确保向合适的帐户授予了对此文件夹的写访问权限。对于 Windows 7、[!INCLUDE[wv](../../../../includes/wv-md.md)] 和 Windows Server 2008 R2，此帐户为 **Network Service**。对于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，该帐户为 NT Authority\\Network Service。对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，该帐户为 ASPNET。  
-  
-12. 运行 Setupcerttool.bat 文件。此文件位于 \<安装路径\>\\WF\_WCF\_Samples\\WCF\\Setup\\ 文件夹中。此脚本将执行以下任务：  
-  
-    -   生成 FindPrivateKey 工具。  
-  
-    -   创建一个名为 %ProgramFiles%\\ServiceModelSampleTools 的目录。  
-  
-    -   将新的 FindPrivateKey 工具复制到此目录。  
-  
-     使用证书且承载于 IIS 中的示例需要使用此工具。  
+10. <span data-ttu-id="95ae8-137">您必须向在其下生成示例的帐户和 Network Service 用户授予对 %SystemDrive%\inetpub\wwwroot 的修改权限。</span><span class="sxs-lookup"><span data-stu-id="95ae8-137">You must grant permission to modify for %SystemDrive%\inetpub\wwwroot to the account under which you are building the samples and the Network Service user.</span></span> <span data-ttu-id="95ae8-138">在生成过程中，某些 Web 承载的示例可能会尝试将已编译的二进制文件复制到上述位置，如果您没有设置相应权限，则生成过程将中断。</span><span class="sxs-lookup"><span data-stu-id="95ae8-138">While building, some Web-hosted samples might attempt to copy the compiled binaries to the previously mentioned location, and if you have not set the appropriate permissions, the build will break.</span></span> <span data-ttu-id="95ae8-139">另外，也可以保持权限不变，并以管理员身份运行 SDK 命令提示或 Visual Studio 命令提示 (2012)，或在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中生成示例（也以管理员身份运行）。</span><span class="sxs-lookup"><span data-stu-id="95ae8-139">Alternatively, you can leave the permissions as they are and run the SDK command prompt or Visual Studio Command Prompt (2012) as Administrator, or build the samples in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], also run as Administrator.</span></span>  
   
     > [!NOTE]
-    >  出于安全方面的考虑，请记住在完成这些示例后，通过运行名为 Cleanupvroot.bat 的批处理文件来移除虚拟目录定义和在上面的设置步骤中授予的权限。  
+    >  <span data-ttu-id="95ae8-140">如果未完成此步骤，IIS 承载的所有示例都将在生成时失败。</span><span class="sxs-lookup"><span data-stu-id="95ae8-140">If this step is not completed, all IIS-hosted samples will fail while building.</span></span> <span data-ttu-id="95ae8-141">确保正确设置权限，或者同时以管理员身份运行 SDK 命令提示和 Visual Studio 命令提示 (2012)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-141">Ensure that you set the permissions correctly, or run both the SDK command prompt and Visual Studio Command Prompt (2012) as Administrator.</span></span>  
   
-13. 自承载（不承载于 IIS 中）的示例需要在计算机上注册要侦听的 HTTP 地址的权限。用于 HTTP 命名空间保留的权限由用于运行该示例的用户帐户提供。默认情况下，管理员帐户具有注册任何 HTTP 地址的权限。必须授予非管理员帐户对示例使用的 HTTP 命名空间的权限。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何配置命名空间保留的更多信息，请参见[配置 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。  
+11. <span data-ttu-id="95ae8-142">在计算机上创建一个 C:\logs 目录；某些示例可能需要此目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-142">Create a C:\logs directory on the computer; some samples might be expecting it.</span></span> <span data-ttu-id="95ae8-143">确保向合适的帐户授予了对此文件夹的写访问权限。</span><span class="sxs-lookup"><span data-stu-id="95ae8-143">Make sure that the appropriate account has write access granted to this folder.</span></span> <span data-ttu-id="95ae8-144">对于 Windows 7、 [!INCLUDE[wv](../../../../includes/wv-md.md)]，并且 Windows Server 2008 R2，此帐户是**网络服务**。</span><span class="sxs-lookup"><span data-stu-id="95ae8-144">For Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)], and Windows Server 2008 R2, this account is **Network Service**.</span></span> <span data-ttu-id="95ae8-145">对于 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，该帐户为 NT Authority\Network Service。</span><span class="sxs-lookup"><span data-stu-id="95ae8-145">For  [!INCLUDE[lserver](../../../../includes/lserver-md.md)], the account is NT Authority\Network Service.</span></span> <span data-ttu-id="95ae8-146">对于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，该帐户为 ASPNET。</span><span class="sxs-lookup"><span data-stu-id="95ae8-146">For [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], the account is ASPNET.</span></span>  
   
-14. 有些示例需要使用消息队列。有关安装说明，请参见[安装“消息队列 \(MSMQ\)”](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
+12. <span data-ttu-id="95ae8-147">运行 Setupcerttool.bat 文件。</span><span class="sxs-lookup"><span data-stu-id="95ae8-147">Run the Setupcerttool.bat file.</span></span> <span data-ttu-id="95ae8-148">此文件位于\<InstallPath > \WF_WCF_Samples\WCF\Setup\ 文件夹。</span><span class="sxs-lookup"><span data-stu-id="95ae8-148">This file is located in the  \<InstallPath>\WF_WCF_Samples\WCF\Setup\  folder.</span></span>  <span data-ttu-id="95ae8-149">此脚本将执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="95ae8-149">This script will perform the following tasks:</span></span>  
+  
+    -   <span data-ttu-id="95ae8-150">生成 FindPrivateKey 工具。</span><span class="sxs-lookup"><span data-stu-id="95ae8-150">Build the FindPrivateKey tool.</span></span>  
+  
+    -   <span data-ttu-id="95ae8-151">创建一个名为 %ProgramFiles%\ServiceModelSampleTools 的目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-151">Create a directory called %ProgramFiles%\ServiceModelSampleTools.</span></span>  
+  
+    -   <span data-ttu-id="95ae8-152">将新的 FindPrivateKey 工具复制到此目录。</span><span class="sxs-lookup"><span data-stu-id="95ae8-152">Copy the new FindPrivateKey tool to this directory.</span></span>  
+  
+     <span data-ttu-id="95ae8-153">使用证书且承载于 IIS 中的示例需要使用此工具。</span><span class="sxs-lookup"><span data-stu-id="95ae8-153">This tool is required by samples that use certificates and are hosted in IIS.</span></span>  
   
     > [!NOTE]
-    >  确保在运行需要消息队列的任何示例之前启动 MSMQ 服务。  
+    >  <span data-ttu-id="95ae8-154">出于安全方面的考虑，请记住在完成这些示例后，通过运行名为 Cleanupvroot.bat 的批处理文件来移除虚拟目录定义和在上面的设置步骤中授予的权限。</span><span class="sxs-lookup"><span data-stu-id="95ae8-154">For security purposes, remember to remove the virtual directory definition and permissions granted in the setup steps above by running the batch file named Cleanupvroot.bat after you are finished with the samples.</span></span>  
   
-15. 有些示例需要使用证书。请参见 [Internet Information Services \(IIS\) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+13. <span data-ttu-id="95ae8-155">自承载（不承载于 IIS 中）的示例需要在计算机上注册要侦听的 HTTP 地址的权限。</span><span class="sxs-lookup"><span data-stu-id="95ae8-155">Samples that are self-hosted (not hosted in IIS) require permission to register HTTP addresses on the computer for listening.</span></span> <span data-ttu-id="95ae8-156">用于 HTTP 命名空间保留的权限由用于运行该示例的用户帐户提供。</span><span class="sxs-lookup"><span data-stu-id="95ae8-156">The permission for an HTTP namespace reservation comes from the user account used to run the sample.</span></span> <span data-ttu-id="95ae8-157">默认情况下，管理员帐户具有注册任何 HTTP 地址的权限。</span><span class="sxs-lookup"><span data-stu-id="95ae8-157">By default, administrator accounts have the permission to register any HTTP address.</span></span> <span data-ttu-id="95ae8-158">必须向非管理员帐户授予针对示例所使用的 HTTP 命名空间的权限。</span><span class="sxs-lookup"><span data-stu-id="95ae8-158">Non-administrator accounts must be granted permission for the HTTP namespaces used by the samples.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="95ae8-159">如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-159"> how to configure namespace reservations, see [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).</span></span>  
   
-## 请参阅
+14. <span data-ttu-id="95ae8-160">有些示例需要使用消息队列。</span><span class="sxs-lookup"><span data-stu-id="95ae8-160">Some samples require Message Queuing.</span></span> <span data-ttu-id="95ae8-161">请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)有关安装说明。</span><span class="sxs-lookup"><span data-stu-id="95ae8-161">See [Installing Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) for installation instructions.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="95ae8-162">确保在运行需要消息队列的任何示例之前启动 MSMQ 服务。</span><span class="sxs-lookup"><span data-stu-id="95ae8-162">Ensure that you start the MSMQ service before you run any samples that require Message Queuing.</span></span>  
+  
+15. <span data-ttu-id="95ae8-163">有些示例需要使用证书。</span><span class="sxs-lookup"><span data-stu-id="95ae8-163">Some samples require certificates.</span></span> <span data-ttu-id="95ae8-164">请参阅[Internet 信息服务 (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。</span><span class="sxs-lookup"><span data-stu-id="95ae8-164">See [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="95ae8-165">另请参阅</span><span class="sxs-lookup"><span data-stu-id="95ae8-165">See Also</span></span>

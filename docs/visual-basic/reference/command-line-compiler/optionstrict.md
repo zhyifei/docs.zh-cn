@@ -1,92 +1,74 @@
 ---
-title: "/optionstrict |Microsoft 文档"
-ms.date: 2015-07-20
+title: /optionstrict
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- /optionstrict
-dev_langs:
-- VB
+f1_keywords: /optionstrict
 helpviewer_keywords:
 - -optionstrict compiler option [Visual Basic]
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0394d9c1f4c082271316829ef1d226bd97d136c9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f783cc5b20c4fe6d7812a05a66cbc4cdfc0b9395
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="optionstrict"></a>/optionstrict
-强制使用严格类型语义来限制隐式类型转换。  
+# <a name="optionstrict"></a><span data-ttu-id="57369-102">/optionstrict</span><span class="sxs-lookup"><span data-stu-id="57369-102">/optionstrict</span></span>
+<span data-ttu-id="57369-103">强制执行严格类型语义来限制隐式类型转换。</span><span class="sxs-lookup"><span data-stu-id="57369-103">Enforces strict type semantics to restrict implicit type conversions.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="57369-104">语法</span><span class="sxs-lookup"><span data-stu-id="57369-104">Syntax</span></span>  
   
 ```  
 /optionstrict[+ | -]  
 /optionstrict[:custom]  
 ```  
   
-## <a name="arguments"></a>参数  
- `+` &#124; `-`  
- 可选。 `/optionstrict+`选项将限制隐式类型转换。 此选项的默认值是`/optionstrict-`。 `/optionstrict+`选项等同于`/optionstrict`。 您可以使用内容的许可类型语义。  
+## <a name="arguments"></a><span data-ttu-id="57369-105">参数</span><span class="sxs-lookup"><span data-stu-id="57369-105">Arguments</span></span>  
+ <span data-ttu-id="57369-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="57369-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="57369-107">可选。</span><span class="sxs-lookup"><span data-stu-id="57369-107">Optional.</span></span> <span data-ttu-id="57369-108">`/optionstrict+`选项将限制隐式类型转换。</span><span class="sxs-lookup"><span data-stu-id="57369-108">The `/optionstrict+` option restricts implicit type conversion.</span></span> <span data-ttu-id="57369-109">此选项的默认值是`/optionstrict-`。</span><span class="sxs-lookup"><span data-stu-id="57369-109">The default for this option is `/optionstrict-`.</span></span> <span data-ttu-id="57369-110">`/optionstrict+`选项等同于`/optionstrict`。</span><span class="sxs-lookup"><span data-stu-id="57369-110">The `/optionstrict+` option is the same as `/optionstrict`.</span></span> <span data-ttu-id="57369-111">你可以使用这两许可类型语义。</span><span class="sxs-lookup"><span data-stu-id="57369-111">You can use both for permissive type semantics.</span></span>  
   
  `custom`  
- 必需。 不遵从严格语言语义时发出警告。  
+ <span data-ttu-id="57369-112">必需。</span><span class="sxs-lookup"><span data-stu-id="57369-112">Required.</span></span> <span data-ttu-id="57369-113">未遵从严格语言语义时发出警告。</span><span class="sxs-lookup"><span data-stu-id="57369-113">Warn when strict language semantics are not respected.</span></span>  
   
-## <a name="remarks"></a>备注  
- 当`/optionstrict+`的效力范围是可以隐式地进行唯一扩大类型转换。 隐式收缩类型转换，如分配`Decimal`键入指向整数的类型对象的对象，报告为错误。  
+## <a name="remarks"></a><span data-ttu-id="57369-114">备注</span><span class="sxs-lookup"><span data-stu-id="57369-114">Remarks</span></span>  
+ <span data-ttu-id="57369-115">当`/optionstrict+`实际上，是可以隐式进行唯一扩大类型转换。</span><span class="sxs-lookup"><span data-stu-id="57369-115">When `/optionstrict+` is in effect, only widening type conversions can be made implicitly.</span></span> <span data-ttu-id="57369-116">隐式收缩类型转换，如分配`Decimal`键入指向整数的类型对象的对象，报告为错误。</span><span class="sxs-lookup"><span data-stu-id="57369-116">Implicit narrowing type conversions, such as assigning a `Decimal` type object to an integer type object, are reported as errors.</span></span>  
   
- 若要生成的隐式收缩类型转换的警告，请使用`/optionstrict:custom`。 使用`/nowarn:numberlist`以忽略特定警告和`/warnaserror:numberlist`将特定的警告视为错误。  
+ <span data-ttu-id="57369-117">若要生成的隐式收缩类型转换的警告，请使用`/optionstrict:custom`。</span><span class="sxs-lookup"><span data-stu-id="57369-117">To generate warnings for implicit narrowing type conversions, use `/optionstrict:custom`.</span></span> <span data-ttu-id="57369-118">使用`/nowarn:numberlist`以忽略特定警告和`/warnaserror:numberlist`特定警告视为错误。</span><span class="sxs-lookup"><span data-stu-id="57369-118">Use `/nowarn:numberlist` to ignore particular warnings and `/warnaserror:numberlist` to treat particular warnings as errors.</span></span>  
   
-### <a name="to-set-optionstrict-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置 /optionstrict  
+### <a name="to-set-optionstrict-in-the-visual-studio-ide"></a><span data-ttu-id="57369-119">在 Visual Studio IDE 中设置 /optionstrict</span><span class="sxs-lookup"><span data-stu-id="57369-119">To set /optionstrict in the Visual Studio IDE</span></span>  
   
-1.  在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性。** 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  <span data-ttu-id="57369-120">在 “解决方案资源管理器”中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="57369-120">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="57369-121">上**项目**菜单上，单击**属性。**</span><span class="sxs-lookup"><span data-stu-id="57369-121">On the **Project** menu, click **Properties.**</span></span> <span data-ttu-id="57369-122">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="57369-122">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  单击“编译”****选项卡。  
+2.  <span data-ttu-id="57369-123">单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="57369-123">Click the **Compile** tab.</span></span>  
   
-3.  在修改此值**Option Strict**框。  
+3.  <span data-ttu-id="57369-124">修改中的值**Option Strict**框。</span><span class="sxs-lookup"><span data-stu-id="57369-124">Modify the value in the **Option Strict** box.</span></span>  
   
-### <a name="to-set-optionstrict-programmatically"></a>以编程方式设置 /optionstrict  
+### <a name="to-set-optionstrict-programmatically"></a><span data-ttu-id="57369-125">以编程方式设置 /optionstrict</span><span class="sxs-lookup"><span data-stu-id="57369-125">To set /optionstrict programmatically</span></span>  
   
--   请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。  
+-   <span data-ttu-id="57369-126">请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="57369-126">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码编译`Test.vb`使用严格类型语义。  
+## <a name="example"></a><span data-ttu-id="57369-127">示例</span><span class="sxs-lookup"><span data-stu-id="57369-127">Example</span></span>  
+ <span data-ttu-id="57369-128">下面的代码编译`Test.vb`使用严格类型语义。</span><span class="sxs-lookup"><span data-stu-id="57369-128">The following code compiles `Test.vb` using strict type semantics.</span></span>  
   
 ```  
 vbc /optionstrict+ test.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)   
- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)   
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
- [/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)   
- [/warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [“选项”对话框 ->“项目”->“Visual Basic 默认值”](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a><span data-ttu-id="57369-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="57369-129">See Also</span></span>  
+ [<span data-ttu-id="57369-130">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="57369-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="57369-131">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="57369-131">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [<span data-ttu-id="57369-132">/optionexplicit</span><span class="sxs-lookup"><span data-stu-id="57369-132">/optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
+ [<span data-ttu-id="57369-133">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="57369-133">/optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [<span data-ttu-id="57369-134">/nowarn</span><span class="sxs-lookup"><span data-stu-id="57369-134">/nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)  
+ [<span data-ttu-id="57369-135">/warnaserror (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57369-135">/warnaserror (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)  
+ [<span data-ttu-id="57369-136">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="57369-136">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="57369-137">Option Strict 语句</span><span class="sxs-lookup"><span data-stu-id="57369-137">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="57369-138">“选项”对话框 ->“项目”->“Visual Basic 默认值”</span><span class="sxs-lookup"><span data-stu-id="57369-138">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

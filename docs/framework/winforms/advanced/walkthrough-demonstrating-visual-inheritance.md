@@ -1,47 +1,51 @@
 ---
-title: "演练：演示可视化继承 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "窗体继承, 演练"
-  - "继承, 演练"
-  - "可视继承"
-  - "演练 [Windows 窗体], 可视继承"
-  - "Windows 窗体, 继承"
+title: "演练：演示可视化继承"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- form inheritance [Windows Forms], walkthroughs
+- visual inheritance
+- inheritance [Windows Forms], walkthroughs
+- walkthroughs [Windows Forms], visual inheritance
+- Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 711f823e418a1bbea1479b9d6a8d70d4fa506365
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：演示可视化继承
-通过 Visual 继承，可以查看基本表单上的控件和添加新控件。  在本演练中，你将创建基窗体，并将其编译到类库。  将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。  在本演练中，你将学会如何执行以下任务：  
+# <a name="walkthrough-demonstrating-visual-inheritance"></a><span data-ttu-id="bded3-102">演练：演示可视化继承</span><span class="sxs-lookup"><span data-stu-id="bded3-102">Walkthrough: Demonstrating Visual Inheritance</span></span>
+<span data-ttu-id="bded3-103">通过 Visual 继承，可以查看基本表单上的控件和添加新控件。</span><span class="sxs-lookup"><span data-stu-id="bded3-103">Visual inheritance enables you to see the controls on the base form and to add new controls.</span></span> <span data-ttu-id="bded3-104">在本演练中，你将创建基窗体，并将其编译到类库。</span><span class="sxs-lookup"><span data-stu-id="bded3-104">In this walkthrough you will create a base form and compile it into a class library.</span></span> <span data-ttu-id="bded3-105">将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。</span><span class="sxs-lookup"><span data-stu-id="bded3-105">You will import this class library into another project and create a new form that inherits from the base form.</span></span> <span data-ttu-id="bded3-106">在本演练中，你将学会如何执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="bded3-106">During this walkthrough, you will learn how to:</span></span>  
   
--   创建包含基窗体的类库项目。  
+-   <span data-ttu-id="bded3-107">创建包含基窗体的类库项目。</span><span class="sxs-lookup"><span data-stu-id="bded3-107">Create a class library project containing a base form.</span></span>  
   
--   添加具有可修改基窗体的派生类的属性的按钮。  
+-   <span data-ttu-id="bded3-108">添加具有可修改基窗体的派生类的属性的按钮。</span><span class="sxs-lookup"><span data-stu-id="bded3-108">Add a button with properties that derived classes of the base form can modify.</span></span>  
   
--   添加基窗体的继承者无法修改的按钮。  
+-   <span data-ttu-id="bded3-109">添加基窗体的继承者无法修改的按钮。</span><span class="sxs-lookup"><span data-stu-id="bded3-109">Add a button that cannot be modified by inheritors of the base form.</span></span>  
   
--   创建包含从 `BaseForm` 继承的窗体的项目。  
+-   <span data-ttu-id="bded3-110">创建包含从 `BaseForm` 继承的窗体的项目。</span><span class="sxs-lookup"><span data-stu-id="bded3-110">Create a project containing a form that inherits from `BaseForm`.</span></span>  
   
- 最后，本演练将显示继承的窗体上私有控件和受保护控件之间的差异。  
+ <span data-ttu-id="bded3-111">最后，本演练将显示继承的窗体上私有控件和受保护控件之间的差异。</span><span class="sxs-lookup"><span data-stu-id="bded3-111">Ultimately, this walkthrough will demonstrate the difference between private and protected controls on an inherited form.</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关详细信息，请参阅 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="bded3-112">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="bded3-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="bded3-113">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="bded3-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="bded3-114">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="bded3-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
 > [!CAUTION]
->  并非所有控件都支持从基窗体执行 Visual 继承。  以下控件不支持本演练中描述的情景：  
+>  <span data-ttu-id="bded3-115">并非所有控件都支持从基窗体执行 Visual 继承。</span><span class="sxs-lookup"><span data-stu-id="bded3-115">Not all controls support visual inheritance from a base form.</span></span> <span data-ttu-id="bded3-116">以下控件不支持本演练中描述的情景：</span><span class="sxs-lookup"><span data-stu-id="bded3-116">The following controls do not support the scenario described in this walkthrough:</span></span>  
 >   
 >  <xref:System.Windows.Forms.WebBrowser>  
 >   
@@ -55,42 +59,42 @@ caps.handback.revision: 24
 >   
 >  <xref:System.Windows.Forms.DataGridView>  
 >   
->  无论使用何种修饰符（`private``protected` 或 `public`），继承的窗体中的这些控件始终为只读。  
+>  <span data-ttu-id="bded3-117">无论使用何种修饰符（`private``protected` 或 `public`），继承的窗体中的这些控件始终为只读。</span><span class="sxs-lookup"><span data-stu-id="bded3-117">These controls in the inherited form are always read-only regardless of the modifiers you use (`private`, `protected`, or `public`).</span></span>  
   
-## 方案步骤  
- 第一步是创建基窗体。  
+## <a name="scenario-steps"></a><span data-ttu-id="bded3-118">方案步骤</span><span class="sxs-lookup"><span data-stu-id="bded3-118">Scenario Steps</span></span>  
+ <span data-ttu-id="bded3-119">第一步是创建基窗体。</span><span class="sxs-lookup"><span data-stu-id="bded3-119">The first step is to create the base form.</span></span>  
   
-#### 创建包含基窗体的类库项目  
+#### <a name="to-create-a-class-library-project-containing-a-base-form"></a><span data-ttu-id="bded3-120">创建包含基窗体的类库项目</span><span class="sxs-lookup"><span data-stu-id="bded3-120">To create a class library project containing a base form</span></span>  
   
-1.  从“文件”菜单上，选择“新建”，然后选择“项目”打开“新建项目”对话框。  
+1.  <span data-ttu-id="bded3-121">从**文件**菜单上，选择**新建**，，然后**项目**以打开**新项目**对话框。</span><span class="sxs-lookup"><span data-stu-id="bded3-121">From the **File** menu, choose **New**, and then **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  创建名为 `BaseFormLibrary` 的 Windows 窗体应用程序。  
+2.  <span data-ttu-id="bded3-122">创建 Windows 窗体应用程序名为`BaseFormLibrary`。</span><span class="sxs-lookup"><span data-stu-id="bded3-122">Create a Windows Forms application named `BaseFormLibrary`.</span></span>  
   
-3.  若要创建类库（而非标准 Windows 窗体应用程序），请在“解决方案资源管理器”中右键单击“BaseFormLibrary”项目节点，然后选择“属性”。  
+3.  <span data-ttu-id="bded3-123">若要在中创建一个类库，而不是标准的 Windows 窗体应用程序，**解决方案资源管理器**，右键单击**BaseFormLibrary**项目节点，然后选择**属性**.</span><span class="sxs-lookup"><span data-stu-id="bded3-123">To create a class library instead of a standard Windows Forms application, in **Solution Explorer**, right-click the **BaseFormLibrary** project node and then select **Properties**.</span></span>  
   
-4.  在项目属性中，将“输出类型”从“Windows 应用程序”更改为“类库”。  
+4.  <span data-ttu-id="bded3-124">在项目属性中，更改**输出类型**从**Windows 应用程序**到**类库**。</span><span class="sxs-lookup"><span data-stu-id="bded3-124">In the properties for the project, change the **Output type** from **Windows Application** to **Class Library**.</span></span>  
   
-5.  从“文件”菜单上，选择“全部保存”以将项目和文件保存到默认位置。  
+5.  <span data-ttu-id="bded3-125">从**文件**菜单上，选择**保存所有**将项目和文件保存到默认位置。</span><span class="sxs-lookup"><span data-stu-id="bded3-125">From the **File** menu, choose **Save All** to save the project and files to the default location.</span></span>  
   
- 接下来的两步是将按钮添加至基窗体。  为了演示 visual 继承，请通过设置按钮的 `Modifiers` 属性为它们指定不同的访问级别。  
+ <span data-ttu-id="bded3-126">接下来的两步是将按钮添加至基窗体。</span><span class="sxs-lookup"><span data-stu-id="bded3-126">The next two procedures add buttons to the base form.</span></span> <span data-ttu-id="bded3-127">为了演示 visual 继承，请通过设置按钮的 `Modifiers` 属性为它们指定不同的访问级别。</span><span class="sxs-lookup"><span data-stu-id="bded3-127">To demonstrate visual inheritance, you will give the buttons different access levels by setting their `Modifiers` properties.</span></span>  
   
-#### 添加基窗体的继承者可修改的按钮  
+#### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a><span data-ttu-id="bded3-128">添加基窗体的继承者可修改的按钮</span><span class="sxs-lookup"><span data-stu-id="bded3-128">To add a button that inheritors of the base form can modify</span></span>  
   
-1.  在设计器中打开**“Form1”**。  
+1.  <span data-ttu-id="bded3-129">打开**Form1**设计器中。</span><span class="sxs-lookup"><span data-stu-id="bded3-129">Open **Form1** in the designer.</span></span>  
   
-2.  在“工具箱”的“所有 Windows 窗体”选项卡上，双击“按钮”以向窗体添加按钮。  使用鼠标来定位按钮和调整其大小。  
+2.  <span data-ttu-id="bded3-130">上**所有 Windows 窗体**选项卡**工具箱**，双击**按钮**到窗体添加一个按钮。</span><span class="sxs-lookup"><span data-stu-id="bded3-130">On the **All Windows Forms** tab of the **Toolbox**, double-click **Button** to add a button to the form.</span></span> <span data-ttu-id="bded3-131">使用鼠标来定位按钮和调整其大小。</span><span class="sxs-lookup"><span data-stu-id="bded3-131">Use the mouse to position and resize the button.</span></span>  
   
-3.  在“属性”窗口中，设置按钮的下列属性：  
+3.  <span data-ttu-id="bded3-132">在“属性”窗口中，设置按钮的下列属性：</span><span class="sxs-lookup"><span data-stu-id="bded3-132">In the Properties window, set the following properties of the button:</span></span>  
   
-    -   将“Text”属性设置为“Say Hello”。  
+    -   <span data-ttu-id="bded3-133">设置**文本**属性**Say Hello**。</span><span class="sxs-lookup"><span data-stu-id="bded3-133">Set the **Text** property to **Say Hello**.</span></span>  
   
-    -   将 \(Name\) 属性设置为“btnProtected”。  
+    -   <span data-ttu-id="bded3-134">设置**（名称）**属性**btnProtected**。</span><span class="sxs-lookup"><span data-stu-id="bded3-134">Set the **(Name)** property to **btnProtected**.</span></span>  
   
-    -   将“Modifiers”**“Modifiers”**属性设置为“Protected”。  这使继承自“Form1”的窗体能够修改“btnProtected”属性。  
+    -   <span data-ttu-id="bded3-135">设置**修饰符**属性**受保护**。</span><span class="sxs-lookup"><span data-stu-id="bded3-135">Set the**Modifiers** property to **Protected**.</span></span> <span data-ttu-id="bded3-136">这使得继承的窗体**Form1**若要修改的属性**btnProtected**。</span><span class="sxs-lookup"><span data-stu-id="bded3-136">This makes it possible for forms that inherit from **Form1** to modify the properties of **btnProtected**.</span></span>  
   
-4.  双击“Say Hello”按钮以为“Click”事件添加事件处理程序。  
+4.  <span data-ttu-id="bded3-137">双击**Say Hello**按钮以添加事件处理程序**单击**事件。</span><span class="sxs-lookup"><span data-stu-id="bded3-137">Double-click the **Say Hello** button to add an event handler for the **Click** event.</span></span>  
   
-5.  将以下代码行添加到事件处理程序：  
+5.  <span data-ttu-id="bded3-138">将以下代码行添加到事件处理程序：</span><span class="sxs-lookup"><span data-stu-id="bded3-138">Add the following line of code to the event handler:</span></span>  
   
     ```vb  
     MessageBox.Show("Hello, World!")  
@@ -100,19 +104,19 @@ caps.handback.revision: 24
     MessageBox.Show("Hello, World!");  
     ```  
   
-#### 添加基窗体的继承者不能修改的按钮  
+#### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a><span data-ttu-id="bded3-139">添加基窗体的继承者不能修改的按钮</span><span class="sxs-lookup"><span data-stu-id="bded3-139">To add a button that cannot be modified by inheritors of the base form</span></span>  
   
-1.  通过单击代码编辑器上方的“Form1.vb \[Design\], Form1.cs \[Design\], or Form1.jsl \[Design\]”选项卡或按 F7，切换到设计视图。  
+1.  <span data-ttu-id="bded3-140">切换到设计视图，通过单击**Form1.vb [设计]，Form1.cs [Design]，or Form1.jsl [Design]**选项卡上方代码编辑器中，或按 F7。</span><span class="sxs-lookup"><span data-stu-id="bded3-140">Switch to design view by clicking the **Form1.vb [Design], Form1.cs [Design], or Form1.jsl [Design]** tab above the code editor, or by pressing F7.</span></span>  
   
-2.  按如下方式添加第二个按钮并设置其属性：  
+2.  <span data-ttu-id="bded3-141">按如下方式添加第二个按钮并设置其属性：</span><span class="sxs-lookup"><span data-stu-id="bded3-141">Add a second button and set its properties as follows:</span></span>  
   
-    -   将“Text”属性设置为“Say Goodbye”。  
+    -   <span data-ttu-id="bded3-142">设置**文本**属性**Say Goodbye**。</span><span class="sxs-lookup"><span data-stu-id="bded3-142">Set the **Text** property to **Say Goodbye**.</span></span>  
   
-    -   将 \(Name\) 属性设置为“btnPrivate”。  
+    -   <span data-ttu-id="bded3-143">设置**（名称）**属性**btnPrivate**。</span><span class="sxs-lookup"><span data-stu-id="bded3-143">Set the **(Name)** property to **btnPrivate**.</span></span>  
   
-    -   将“Modifiers”属性设置为“Private”。  这使继承自“Form1”的窗体无法修改“btnPrivate”属性。  
+    -   <span data-ttu-id="bded3-144">设置**修饰符**属性**私有**。</span><span class="sxs-lookup"><span data-stu-id="bded3-144">Set the **Modifiers** property to **Private**.</span></span> <span data-ttu-id="bded3-145">这使继承的窗体**Form1**若要修改的属性**btnPrivate**。</span><span class="sxs-lookup"><span data-stu-id="bded3-145">This makes it impossible for forms that inherit from **Form1** to modify the properties of **btnPrivate**.</span></span>  
   
-3.  双击“Say Goodbye”按钮以便为“Click”事件添加事件处理程序。  将以下代码行放入事件过程：  
+3.  <span data-ttu-id="bded3-146">双击**Say Goodbye**按钮以添加事件处理程序**单击**事件。</span><span class="sxs-lookup"><span data-stu-id="bded3-146">Double-click the **Say Goodbye** button to add an event handler for the **Click** event.</span></span> <span data-ttu-id="bded3-147">将以下代码行放入事件过程：</span><span class="sxs-lookup"><span data-stu-id="bded3-147">Place the following line of code in the event procedure:</span></span>  
   
     ```vb  
     MessageBox.Show("Goodbye!")  
@@ -122,54 +126,54 @@ caps.handback.revision: 24
     MessageBox.Show("Goodbye!");  
     ```  
   
-4.  从“构建”菜单上，选择“构建 BaseForm 库”来构建类库。  
+4.  <span data-ttu-id="bded3-148">从**生成**菜单上，选择**构建 BaseForm 库**生成类库。</span><span class="sxs-lookup"><span data-stu-id="bded3-148">From the **Build** menu, choose **Build BaseForm Library** to build the class library.</span></span>  
   
-     构建库后，可创建从刚创建的窗体继承的新项目。  
+     <span data-ttu-id="bded3-149">构建库后，可创建从刚创建的窗体继承的新项目。</span><span class="sxs-lookup"><span data-stu-id="bded3-149">Once the library is built, you can create a new project that inherits from the form you just created.</span></span>  
   
-#### 创建包含继承自基窗体的窗体的项目  
+#### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a><span data-ttu-id="bded3-150">创建包含继承自基窗体的窗体的项目</span><span class="sxs-lookup"><span data-stu-id="bded3-150">To create a project containing a form that inherits from the base form</span></span>  
   
-1.  在“文件”菜单上，选择“添加”，然后选择“新建项目”打开“添加新项目”对话框。  
+1.  <span data-ttu-id="bded3-151">从**文件**菜单上，选择**添加**然后**新项目**以打开**添加新项目**对话框。</span><span class="sxs-lookup"><span data-stu-id="bded3-151">From the **File** menu, choose **Add** and then **New Project** to open the **Add New Project** dialog box.</span></span>  
   
-2.  创建名为 `InheritanceTest` 的 Windows 窗体应用程序。  
+2.  <span data-ttu-id="bded3-152">创建 Windows 窗体应用程序名为`InheritanceTest`。</span><span class="sxs-lookup"><span data-stu-id="bded3-152">Create a Windows Forms application named `InheritanceTest`.</span></span>  
   
-#### 添加继承的窗体  
+#### <a name="to-add-an-inherited-form"></a><span data-ttu-id="bded3-153">添加继承的窗体</span><span class="sxs-lookup"><span data-stu-id="bded3-153">To add an inherited form</span></span>  
   
-1.  在“解决方案资源管理器”中，右键单击“InheritanceTest”项目，然后依次选择“添加”和“新建项”。  
+1.  <span data-ttu-id="bded3-154">在**解决方案资源管理器**，右键单击**InheritanceTest**项目，依次选择**添加**，然后选择**新项**。</span><span class="sxs-lookup"><span data-stu-id="bded3-154">In **Solution Explorer**, right-click the **InheritanceTest** project, select **Add**, and then select**New Item**.</span></span>  
   
-2.  在“添加新项”对话框中，选择“Windows 窗体”类别（若有类别列表），然后选择“继承的窗体”模板。  
+2.  <span data-ttu-id="bded3-155">在**添加新项**对话框中，选择**Windows 窗体**类别 （如果你有一个类别的列表），然后选择**继承的窗体**模板。</span><span class="sxs-lookup"><span data-stu-id="bded3-155">In the **Add New Item** dialog box, select the **Windows Forms** category (if you have a list of categories) and then select the **Inherited Form** template.</span></span>  
   
-3.  保留“Form2”的默认名称，然后单击“添加”。  
+3.  <span data-ttu-id="bded3-156">保留默认名称的`Form2`，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="bded3-156">Leave the default name of `Form2` and then click **Add**.</span></span>  
   
-4.  在“继承选择器”对话框中，将“BaseFormLibrary”项目的“Form1”选为要从中继承的窗体并单击“确定”。  
+4.  <span data-ttu-id="bded3-157">在**继承选择器**对话框中，选择**Form1**从**BaseFormLibrary**项目中的，表单能够从继承并单击用作**确定**.</span><span class="sxs-lookup"><span data-stu-id="bded3-157">In the **Inheritance Picker** dialog box, select **Form1** from the **BaseFormLibrary** project as the form to inherit from and click **OK**.</span></span>  
   
-     此操作将在“InheritanceTest”项目中创建由“BaseFormLibrary”中的窗体派生的窗体。  
+     <span data-ttu-id="bded3-158">这将创建中的窗体**InheritanceTest**派生自的窗体中的项目**BaseFormLibrary**。</span><span class="sxs-lookup"><span data-stu-id="bded3-158">This creates a form in the **InheritanceTest** project that derives from the form in **BaseFormLibrary**.</span></span>  
   
-5.  如果设计器中继承的窗体 \(**Form2**\) 尚未打开，双击将其打开。  
+5.  <span data-ttu-id="bded3-159">打开继承的窗体 (**Form2**) 通过双击它，如果尚未打开设计器中。</span><span class="sxs-lookup"><span data-stu-id="bded3-159">Open the inherited form (**Form2**) in the designer by double-clicking it, if it is not already open.</span></span>  
   
-     在设计器中，继承的按钮上角有一个符号 \(![VisualBasicInheritanceSymbol 屏幕快照](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.png "vbInheritanceGlyph")\)，指示它们是继承的。  
+     <span data-ttu-id="bded3-160">继承的按钮在设计器中，有一个符号 (![VisualBasicInheritanceSymbol 屏幕快照](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 在其上角，指示它们继承。</span><span class="sxs-lookup"><span data-stu-id="bded3-160">In the designer, the inherited buttons have a symbol (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) in their upper corner, indicating they are inherited.</span></span>  
   
-6.  选择“Say Hello”按钮，并查案调整大小图柄。  由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。  
+6.  <span data-ttu-id="bded3-161">选择**Say Hello**按钮，然后观察调整大小图柄。</span><span class="sxs-lookup"><span data-stu-id="bded3-161">Select the **Say Hello** button and observe the resize handles.</span></span> <span data-ttu-id="bded3-162">由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。</span><span class="sxs-lookup"><span data-stu-id="bded3-162">Because this button is protected, the inheritors can move it, resize it, change its caption, and make other modifications.</span></span>  
   
-7.  选择专有的“Say Goodbye”按钮，请注意它不具有调整大小图柄。  此外，在“属性”窗口中，此按钮的属性呈灰显，指示不能修改。  
+7.  <span data-ttu-id="bded3-163">选择个人**Say Goodbye**按钮，并请注意它不具有调整大小图柄。</span><span class="sxs-lookup"><span data-stu-id="bded3-163">Select the private **Say Goodbye** button, and notice that it does not have resize handles.</span></span> <span data-ttu-id="bded3-164">此外，在**属性**窗口中，此按钮的属性呈灰显，指示不能修改它们。</span><span class="sxs-lookup"><span data-stu-id="bded3-164">Additionally, in the **Properties** window, the properties of this button are grayed to indicate they cannot be modified.</span></span>  
   
-8.  如果使用 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]：  
+8.  <span data-ttu-id="bded3-165">如果使用 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]：</span><span class="sxs-lookup"><span data-stu-id="bded3-165">If you are using [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:</span></span>  
   
-    1.  在“解决方案资源管理器”中，右键单击“InheritanceTest”项目中的“Form1”，然后选择“删除”。  在显示的消息框中，单击“确定”以确认删除。  
+    1.  <span data-ttu-id="bded3-166">在**解决方案资源管理器**，右键单击**Form1**中**InheritanceTest**项目，然后选择**删除**。</span><span class="sxs-lookup"><span data-stu-id="bded3-166">In **Solution Explorer**, right-click **Form1** in the **InheritanceTest** project and then choose **Delete**.</span></span> <span data-ttu-id="bded3-167">在显示的消息框中，单击**确定**以确认删除。</span><span class="sxs-lookup"><span data-stu-id="bded3-167">In the message box that appears, click **OK** to confirm the deletion.</span></span>  
   
-    2.  打开 Program.cs 文件并将 `Application.Run(new Form1());` 行更改为 `Application.Run(new Form2());`。  
+    2.  <span data-ttu-id="bded3-168">打开 Program.cs 文件并将 `Application.Run(new Form1());` 行更改为 `Application.Run(new Form2());`。</span><span class="sxs-lookup"><span data-stu-id="bded3-168">Open the Program.cs file and change the line `Application.Run(new Form1());` to `Application.Run(new Form2());`.</span></span>  
   
-9. 在“解决方案资源管理器”中，右键单击“InheritanceTest”项目，然后选择“设为启动项目”。  
+9. <span data-ttu-id="bded3-169">在**解决方案资源管理器**，右键单击**InheritanceTest**项目，然后选择**设为启动项目**。</span><span class="sxs-lookup"><span data-stu-id="bded3-169">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Set As Startup Project**.</span></span>  
   
-10. 在“解决方案资源管理器”中，右键单击“InheritanceTest”项目，然后选择“属性”。  
+10. <span data-ttu-id="bded3-170">在**解决方案资源管理器**，右键单击**InheritanceTest**项目，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="bded3-170">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Properties**.</span></span>  
   
-11. 在“InheritanceTest”属性页中，将“启动对象”设置为继承的窗体 \(**Form2**\)。  
+11. <span data-ttu-id="bded3-171">在**InheritanceTest**属性页中，设置**启动对象**要继承的窗体 (**Form2**)。</span><span class="sxs-lookup"><span data-stu-id="bded3-171">In the **InheritanceTest** property pages, set the **Startup object** to be the inherited form (**Form2**).</span></span>  
   
-12. 按 F5 运行此应用程序，并观察继承的窗体的行为。  
+12. <span data-ttu-id="bded3-172">按 F5 运行此应用程序，并观察继承的窗体的行为。</span><span class="sxs-lookup"><span data-stu-id="bded3-172">Press F5 to run the application, and observe the behavior of the inherited form.</span></span>  
   
-## 后续步骤  
- 用户控件的继承方式大致相同。  打开新的类库项目并添加用户控件。  在其上放置构成控件，然后编译项目。  打开另一个新的类库项目，并添加对已编译的类库的引用。  另外，尝试将继承的控件（通过“添加新项”对话框）添加至项目并使用“继承选择器”。  添加用户控件，并更改 `Inherits`（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`）语句。  有关详细信息，请参阅[如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
+## <a name="next-steps"></a><span data-ttu-id="bded3-173">后续步骤</span><span class="sxs-lookup"><span data-stu-id="bded3-173">Next Steps</span></span>  
+ <span data-ttu-id="bded3-174">用户控件的继承方式大致相同。</span><span class="sxs-lookup"><span data-stu-id="bded3-174">Inheritance for user controls works in much the same way.</span></span> <span data-ttu-id="bded3-175">打开新的类库项目并添加用户控件。</span><span class="sxs-lookup"><span data-stu-id="bded3-175">Open a new class library project and add a user control.</span></span> <span data-ttu-id="bded3-176">在其上放置构成控件，然后编译项目。</span><span class="sxs-lookup"><span data-stu-id="bded3-176">Place constituent controls on it and compile the project.</span></span> <span data-ttu-id="bded3-177">打开另一个新的类库项目，并添加对已编译的类库的引用。</span><span class="sxs-lookup"><span data-stu-id="bded3-177">Open another new class library project and add a reference to the compiled class library.</span></span> <span data-ttu-id="bded3-178">另外，尝试将继承的控件 (通过**添加新项**对话框) 到项目和使用**继承选择器**。</span><span class="sxs-lookup"><span data-stu-id="bded3-178">Also, try adding an inherited control (through the **Add New Items** dialog box) to the project and using the **Inheritance Picker**.</span></span> <span data-ttu-id="bded3-179">添加用户控件，并更改 `Inherits`（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`）语句。</span><span class="sxs-lookup"><span data-stu-id="bded3-179">Add a user control, and change the `Inherits` (`:` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) statement.</span></span> <span data-ttu-id="bded3-180">有关详细信息，请参阅[如何： 继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="bded3-180">For more information, see [How to: Inherit Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).</span></span>  
   
-## 请参阅  
- [如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)   
- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)   
- [Windows 窗体](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="bded3-181">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bded3-181">See Also</span></span>  
+ [<span data-ttu-id="bded3-182">如何：继承 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="bded3-182">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [<span data-ttu-id="bded3-183">Windows 窗体可视化继承</span><span class="sxs-lookup"><span data-stu-id="bded3-183">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [<span data-ttu-id="bded3-184">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="bded3-184">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)

@@ -1,31 +1,34 @@
 ---
-title: "&lt;customBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;customBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f73ad4d09e085040e006102e5b44664ece98a58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;customBinding&gt;
-提供了对用户消息堆栈的完全控制。  
+# <a name="ltcustombindinggt"></a><span data-ttu-id="0e5e7-102">&lt;customBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0e5e7-102">&lt;customBinding&gt;</span></span>
+<span data-ttu-id="0e5e7-103">提供了对用户消息堆栈的完全控制。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-103">Provides full control over the messaging stack for the user.</span></span>  
   
-## 语法  
+ <span data-ttu-id="0e5e7-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="0e5e7-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-105">\<bindings></span></span>  
+<span data-ttu-id="0e5e7-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-106">\<customBinding></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0e5e7-107">语法</span><span class="sxs-lookup"><span data-stu-id="0e5e7-107">Syntax</span></span>  
   
+```xml  
 <customBinding>  
     <binding name="string"  
         closeTimeout="TimeSpan"  
@@ -181,63 +184,63 @@ caps.handback.revision: 24
 </customBinding>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0e5e7-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="0e5e7-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="0e5e7-109">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-109">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="0e5e7-110">特性</span><span class="sxs-lookup"><span data-stu-id="0e5e7-110">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|closeTimeout|一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。  此值应大于或等于 <xref:System.TimeSpan.Zero>。  默认值为 00:01:00。|  
-|name|一个包含绑定的配置名称的字符串。  此值是用户定义的一个字符串，可充当自定义绑定的标识字符串。  从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。  有关默认配置以及无名称绑定和行为的更多信息，请参见[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
-|openTimeout|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。  此值应大于或等于 <xref:System.TimeSpan.Zero>。  默认值为 00:01:00。|  
-|receiveTimeout|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。  此值应大于或等于 <xref:System.TimeSpan.Zero>。  默认值为 00:01:00。|  
-|sendTimeout|一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。  此值应大于或等于 <xref:System.TimeSpan.Zero>。  默认值为 00:01:00。|  
+|<span data-ttu-id="0e5e7-111">特性</span><span class="sxs-lookup"><span data-stu-id="0e5e7-111">Attribute</span></span>|<span data-ttu-id="0e5e7-112">描述</span><span class="sxs-lookup"><span data-stu-id="0e5e7-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="0e5e7-113">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="0e5e7-113">closeTimeout</span></span>|<span data-ttu-id="0e5e7-114">一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-114">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="0e5e7-115">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-115">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0e5e7-116">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-116">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="0e5e7-117">name</span><span class="sxs-lookup"><span data-stu-id="0e5e7-117">name</span></span>|<span data-ttu-id="0e5e7-118">一个包含绑定的配置名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-118">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="0e5e7-119">此值是用户定义的一个字符串，可充当自定义绑定的标识字符串。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-119">This value is a user-defined string that acts as the identification string for the custom binding.</span></span> <span data-ttu-id="0e5e7-120">从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-120">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="0e5e7-121">有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-121">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|<span data-ttu-id="0e5e7-122">openTimeout</span><span class="sxs-lookup"><span data-stu-id="0e5e7-122">openTimeout</span></span>|<span data-ttu-id="0e5e7-123">一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-123">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="0e5e7-124">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-124">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0e5e7-125">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-125">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="0e5e7-126">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="0e5e7-126">receiveTimeout</span></span>|<span data-ttu-id="0e5e7-127">一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-127">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="0e5e7-128">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-128">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0e5e7-129">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-129">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="0e5e7-130">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="0e5e7-130">sendTimeout</span></span>|<span data-ttu-id="0e5e7-131">一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-131">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="0e5e7-132">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-132">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="0e5e7-133">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-133">The default is 00:01:00.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="0e5e7-134">子元素</span><span class="sxs-lookup"><span data-stu-id="0e5e7-134">Child Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<compositeDuplex\>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|对自定义绑定指定双向消息处理。  它与本身不允许进行双工通信的传输（例如，HTTP）一起使用。  与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。<br /><br /> 客户端必须公开一个地址，以便服务进行联系和建立连接。  此客户端地址由 `ClientBaseAddress` 属性提供。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|  
-|[\<pnrpPeerResolver\>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定对等名称解析协议 \(PNRP\) 对等名称解析程序。  此元素的类型为 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|  
-|[\<reliableSession\>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS\-ReliableMessaging 的设置。  如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。  此元素的类型为 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。  此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|  
-|[\<sslStreamSecurity\>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 流绑定的安全设置。  此元素的类型为 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|  
-|[\<transactionFlow\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定绑定支持事务流以及 `transactionProtocol` 属性将要使用的协议。  此元素的类型为 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|  
-|[\<windowsStreamSecurity\>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自定义绑定的流安全选项。  此元素的类型为 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|  
+|<span data-ttu-id="0e5e7-135">元素</span><span class="sxs-lookup"><span data-stu-id="0e5e7-135">Element</span></span>|<span data-ttu-id="0e5e7-136">描述</span><span class="sxs-lookup"><span data-stu-id="0e5e7-136">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0e5e7-137">\<compositeDuplex ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-137">\<compositeDuplex></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|<span data-ttu-id="0e5e7-138">对自定义绑定指定双向消息处理。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-138">Specifies two-way messaging to the custom binding.</span></span> <span data-ttu-id="0e5e7-139">它与本身不允许进行双工通信的传输（例如，HTTP）一起使用。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-139">It is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="0e5e7-140">与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-140">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span><br /><br /> <span data-ttu-id="0e5e7-141">客户端必须公开一个地址，以便服务进行联系和建立连接。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-141">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="0e5e7-142">此客户端地址由 `ClientBaseAddress` 属性提供。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-142">This client address is provided by the `ClientBaseAddress` attribute.</span></span><br /><br /> <span data-ttu-id="0e5e7-143">此元素的类型为 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-143">This element is of type <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.</span></span>|  
+|[<span data-ttu-id="0e5e7-144">\<pnrpPeerResolver ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-144">\<pnrpPeerResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|<span data-ttu-id="0e5e7-145">指定对等名称解析协议 (PNRP) 对等名称解析程序。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-145">Specifies a Peer Name Resolution Protocol (PNRP) peer name resolver.</span></span> <span data-ttu-id="0e5e7-146">此元素的类型为 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-146">This element is of type <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.</span></span>|  
+|[<span data-ttu-id="0e5e7-147">\<reliableSession ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-147">\<reliableSession></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|<span data-ttu-id="0e5e7-148">指定 WS-ReliableMessaging 的设置。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-148">Specifies the setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="0e5e7-149">如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-149">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span> <span data-ttu-id="0e5e7-150">此元素的类型为 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-150">This element is of type <xref:System.ServiceModel.Configuration.ReliableSessionElement>.</span></span>|  
+|[<span data-ttu-id="0e5e7-151">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-151">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="0e5e7-152">指定自定义绑定的安全选项。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-152">Specifies the options for security of the custom binding.</span></span> <span data-ttu-id="0e5e7-153">此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-153">This element is of type <xref:System.ServiceModel.Configuration.SecurityElement>.</span></span>|  
+|[<span data-ttu-id="0e5e7-154">\<sslStreamSecurity ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-154">\<sslStreamSecurity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|<span data-ttu-id="0e5e7-155">指定 SSL 流绑定的安全设置。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-155">Specifies the security settings for a SSL stream binding.</span></span> <span data-ttu-id="0e5e7-156">此元素的类型为 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-156">This element is of type <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.</span></span>|  
+|[<span data-ttu-id="0e5e7-157">\<transactionFlow ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-157">\<transactionFlow></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|<span data-ttu-id="0e5e7-158">指定绑定支持事务流以及 `transactionProtocol` 属性将要使用的协议。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-158">Specifies that the binding supports transaction flow, and the protocol to be used by the `transactionProtocol` attribute.</span></span> <span data-ttu-id="0e5e7-159">此元素的类型为 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-159">This element is of type <xref:System.ServiceModel.Configuration.TransactionFlowElement>.</span></span>|  
+|[<span data-ttu-id="0e5e7-160">\<windowsstreamsecurity 正在 ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-160">\<windowsStreamSecurity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|<span data-ttu-id="0e5e7-161">指定自定义绑定的流安全选项。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-161">Specifies the options for streaming security of the custom binding.</span></span> <span data-ttu-id="0e5e7-162">此元素的类型为 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-162">This element is of type <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="0e5e7-163">父元素</span><span class="sxs-lookup"><span data-stu-id="0e5e7-163">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|绑定|包含 Windows Communication Foundation 应用程序的所有绑定。|  
+|<span data-ttu-id="0e5e7-164">元素</span><span class="sxs-lookup"><span data-stu-id="0e5e7-164">Element</span></span>|<span data-ttu-id="0e5e7-165">描述</span><span class="sxs-lookup"><span data-stu-id="0e5e7-165">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="0e5e7-166">绑定</span><span class="sxs-lookup"><span data-stu-id="0e5e7-166">bindings</span></span>|<span data-ttu-id="0e5e7-167">包含 Windows Communication Foundation 应用程序的所有绑定。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-167">Contains all bindings for Windows Communication Foundation applications.</span></span>|  
   
-## 备注  
- 自定义绑定提供了对 WCF 消息堆栈的完全控制。  通过添加特定实体的配置元素，可以创建特别定制的绑定。  例如，用户可以合并 `httpsTransport` 节、`reliableSession` 节和 `security` 节以创建一个安全可靠的基于 https 的绑定。  
+## <a name="remarks"></a><span data-ttu-id="0e5e7-168">备注</span><span class="sxs-lookup"><span data-stu-id="0e5e7-168">Remarks</span></span>  
+ <span data-ttu-id="0e5e7-169">自定义绑定提供了对 WCF 消息堆栈的完全控制。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-169">Custom bindings provide full control over the WCF messaging stack.</span></span> <span data-ttu-id="0e5e7-170">通过添加特定实体的配置元素，可以创建特别定制的绑定。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-170">Special tailored bindings can be created my adding the configuration elements for specific entities.</span></span> <span data-ttu-id="0e5e7-171">例如，用户可以合并 `httpsTransport` 节、`reliableSession` 节和 `security` 节以创建一个安全可靠的基于 https 的绑定。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-171">For example, the user can combine the `httpsTransport` section, `reliableSession` section and the `security` section to create a reliable and secure https based binding.</span></span>  
   
- 单个绑定按照堆栈元素在堆栈上出现的顺序来指定它们的配置元素，从而定义消息堆栈。  每个元素都定义和配置了该堆栈的一个元素。  在每个自定义绑定中，必须有且只能有一个传输元素。  如果没有该元素，消息堆栈将是不完整的。  
+ <span data-ttu-id="0e5e7-172">单个绑定按照堆栈元素在堆栈上出现的顺序来指定它们的配置元素，从而定义消息堆栈。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-172">An individual binding defines the message stack by specifying the configuration elements for the stack elements in the order they appear on the stack.</span></span> <span data-ttu-id="0e5e7-173">每个元素都定义和配置了该堆栈的一个元素。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-173">Each element defines and configures the one element of the stack.</span></span> <span data-ttu-id="0e5e7-174">在每个自定义绑定中，必须有且只能有一个传输元素。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-174">There must be one and only one transport element in each custom binding.</span></span> <span data-ttu-id="0e5e7-175">如果没有该元素，消息堆栈将是不完整的。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-175">Without this element, the messaging stack is incomplete.</span></span>  
   
- 元素在堆栈中出现的顺序非常重要，因为在将操作应用于消息时会采用该顺序。  建议的堆栈元素顺序如下：  
+ <span data-ttu-id="0e5e7-176">元素在堆栈中出现的顺序非常重要，因为在将操作应用于消息时会采用该顺序。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-176">The order in which elements appear in the stack matters, because it is the order in which operations are applied to the message.</span></span> <span data-ttu-id="0e5e7-177">建议的堆栈元素顺序如下：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-177">The recommended order of stack elements is the following:</span></span>  
   
-1.  事务（可选）  
+1.  <span data-ttu-id="0e5e7-178">事务（可选）</span><span class="sxs-lookup"><span data-stu-id="0e5e7-178">Transactions (optional)</span></span>  
   
-2.  可靠消息（可选）  
+2.  <span data-ttu-id="0e5e7-179">可靠消息（可选）</span><span class="sxs-lookup"><span data-stu-id="0e5e7-179">Reliable Messaging (optional)</span></span>  
   
-3.  安全（可选）  
+3.  <span data-ttu-id="0e5e7-180">安全（可选）</span><span class="sxs-lookup"><span data-stu-id="0e5e7-180">Security (optional)</span></span>  
   
-4.  传输  
+4.  <span data-ttu-id="0e5e7-181">传输</span><span class="sxs-lookup"><span data-stu-id="0e5e7-181">Transport</span></span>  
   
-5.  编码器（可选）  
+5.  <span data-ttu-id="0e5e7-182">编码器（可选）</span><span class="sxs-lookup"><span data-stu-id="0e5e7-182">Encoder (optional)</span></span>  
   
- 当系统提供的某个绑定不符合服务要求时，应使用自定义绑定。  例如，自定义绑定可用于实现在服务终结点使用新的传输或新的编码器。  
+ <span data-ttu-id="0e5e7-183">当系统提供的某个绑定不符合服务要求时，应使用自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-183">Use a custom binding when one of the system-provided bindings does not meet the requirements of your service.</span></span> <span data-ttu-id="0e5e7-184">例如，自定义绑定可用于实现在服务终结点使用新的传输或新的编码器。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-184">A custom binding could be used, for example, to enable the use of a new transport or a new encoder at a service endpoint.</span></span>  
   
- 自定义绑定是使用以特定顺序“堆叠”的绑定元素集合中的某个 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 构造的，顺序如下：  
+ <span data-ttu-id="0e5e7-185">自定义绑定是使用以特定顺序“堆叠”的绑定元素集合中的某个 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 构造的，顺序如下：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-185">A custom binding is constructed using one of the <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> from a collection of binding elements that are "stacked" in a specific order:</span></span>  
   
--   最顶层是一个允许流事务的可选 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>。  
+-   <span data-ttu-id="0e5e7-186">最顶层是一个允许流事务的可选 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-186">At the top is an optional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> that allows flowing transactions.</span></span>  
   
--   接下来是一个可选的 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它提供了 WS\-ReliableMessaging 规范中定义的会话和排序机制。  此会话概念可跨 SOAP 和传输中介。  
+-   <span data-ttu-id="0e5e7-187">接下来是一个可选的 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它提供了 WS-ReliableMessaging 规范中定义的会话和排序机制。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-187">Next is an optional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> that provides a session and ordering mechanism as defined in the WS-ReliableMessaging specification.</span></span> <span data-ttu-id="0e5e7-188">此会话概念可跨 SOAP 和传输中介。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-188">This notion of a session can cross SOAP and transport intermediaries.</span></span>  
   
--   接下来是一个可选的安全绑定元素，它提供了授权、身份验证、保护和机密性之类的安全功能。  [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供以下安全绑定元素：  
+-   <span data-ttu-id="0e5e7-189">接下来是一个可选的安全绑定元素，它提供了授权、身份验证、保护和机密性之类的安全功能。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-189">Next is an optional security binding element that provides security features like authorization, authentication, protection, and confidentiality.</span></span> <span data-ttu-id="0e5e7-190">[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供以下安全绑定元素：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-190">The following security binding elements are provided by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:</span></span>  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -247,11 +250,11 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
--   接着是由下面的绑定元素指定的多个可选消息模式：  
+-   <span data-ttu-id="0e5e7-191">接着是由下面的绑定元素指定的多个可选消息模式：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-191">Next are the optional message-patterns specified by binding elements:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
   
--   再下面是以下可选的传输升级\/帮助器绑定元素：  
+-   <span data-ttu-id="0e5e7-192">再下面是以下可选的传输升级/帮助器绑定元素：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-192">Next are the optional transport upgrades/helpers binding elements:</span></span>  
   
     -   <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
   
@@ -259,7 +262,7 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   再接下来是一个必需的消息编码绑定元素。  可以使用自己的传输或者使用以下消息编码绑定之一：  
+-   <span data-ttu-id="0e5e7-193">再接下来是一个必需的消息编码绑定元素。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-193">Next is a required message encoding binding element.</span></span> <span data-ttu-id="0e5e7-194">可以使用自己的传输或者使用以下消息编码绑定之一：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-194">You can use your own transport or use one of the following message encoding bindings:</span></span>  
   
     -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
@@ -267,7 +270,7 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   底层是一个必需的传输元素。  可以使用自己的传输，或者使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供的传输绑定元素之一：  
+-   <span data-ttu-id="0e5e7-195">底层是一个必需的传输元素。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-195">At the bottom is a required transport element.</span></span> <span data-ttu-id="0e5e7-196">可以使用自己的传输，或者使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供的传输绑定元素之一：</span><span class="sxs-lookup"><span data-stu-id="0e5e7-196">You can use your own transport or use one of transport binding elements provided by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:</span></span>  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -283,32 +286,34 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
- 下表总结了每层的选项。  
+ <span data-ttu-id="0e5e7-197">下表总结了每层的选项。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-197">The following table summarizes the options for each layer.</span></span>  
   
-|层|选项|必需|  
-|-------|--------|--------|  
-|事务流|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|  
-|可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|  
-|安全性|对称、非对称、传输级|No|  
-|形状更改|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|  
-|传输升级|SSL 流、Windows 流、对等解析程序|No|  
-|编码|文本、二进制、MTOM、自定义|是|  
-|传输|TCP、命名管道、HTTP、HTTPS、MSMQ 风格、自定义|是|  
+|<span data-ttu-id="0e5e7-198">层</span><span class="sxs-lookup"><span data-stu-id="0e5e7-198">Layer</span></span>|<span data-ttu-id="0e5e7-199">选项</span><span class="sxs-lookup"><span data-stu-id="0e5e7-199">Options</span></span>|<span data-ttu-id="0e5e7-200">必需</span><span class="sxs-lookup"><span data-stu-id="0e5e7-200">Required</span></span>|  
+|-----------|-------------|--------------|  
+|<span data-ttu-id="0e5e7-201">事务流</span><span class="sxs-lookup"><span data-stu-id="0e5e7-201">Transaction Flow</span></span>|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|<span data-ttu-id="0e5e7-202">No</span><span class="sxs-lookup"><span data-stu-id="0e5e7-202">No</span></span>|  
+|<span data-ttu-id="0e5e7-203">可靠性</span><span class="sxs-lookup"><span data-stu-id="0e5e7-203">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|<span data-ttu-id="0e5e7-204">No</span><span class="sxs-lookup"><span data-stu-id="0e5e7-204">No</span></span>|  
+|<span data-ttu-id="0e5e7-205">安全性</span><span class="sxs-lookup"><span data-stu-id="0e5e7-205">Security</span></span>|<span data-ttu-id="0e5e7-206">对称、非对称、传输级</span><span class="sxs-lookup"><span data-stu-id="0e5e7-206">Symmetric, Asymmetric, Transport-Level</span></span>|<span data-ttu-id="0e5e7-207">No</span><span class="sxs-lookup"><span data-stu-id="0e5e7-207">No</span></span>|  
+|<span data-ttu-id="0e5e7-208">形状更改</span><span class="sxs-lookup"><span data-stu-id="0e5e7-208">Shape Change</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|<span data-ttu-id="0e5e7-209">No</span><span class="sxs-lookup"><span data-stu-id="0e5e7-209">No</span></span>|  
+|<span data-ttu-id="0e5e7-210">传输升级</span><span class="sxs-lookup"><span data-stu-id="0e5e7-210">Transport Upgrades</span></span>|<span data-ttu-id="0e5e7-211">SSL 流、Windows 流、对等解析程序</span><span class="sxs-lookup"><span data-stu-id="0e5e7-211">SSL stream, Windows stream, Peer Resolver</span></span>|<span data-ttu-id="0e5e7-212">No</span><span class="sxs-lookup"><span data-stu-id="0e5e7-212">No</span></span>|  
+|<span data-ttu-id="0e5e7-213">编码</span><span class="sxs-lookup"><span data-stu-id="0e5e7-213">Encoding</span></span>|<span data-ttu-id="0e5e7-214">文本、二进制、MTOM、自定义</span><span class="sxs-lookup"><span data-stu-id="0e5e7-214">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="0e5e7-215">是</span><span class="sxs-lookup"><span data-stu-id="0e5e7-215">Yes</span></span>|  
+|<span data-ttu-id="0e5e7-216">传输</span><span class="sxs-lookup"><span data-stu-id="0e5e7-216">Transport</span></span>|<span data-ttu-id="0e5e7-217">TCP、命名管道、HTTP、HTTPS、MSMQ 风格、自定义</span><span class="sxs-lookup"><span data-stu-id="0e5e7-217">TCP, Named Pipes, HTTP, HTTPS, flavors of MSMQ, Custom</span></span>|<span data-ttu-id="0e5e7-218">是</span><span class="sxs-lookup"><span data-stu-id="0e5e7-218">Yes</span></span>|  
   
- 此外，可以定义自己的绑定元素，并将它们插在前面定义的任何层之间。  
+ <span data-ttu-id="0e5e7-219">此外，可以定义自己的绑定元素，并将它们插在前面定义的任何层之间。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-219">In addition, you can define your own binding elements and insert them between any of the preceding defined layers.</span></span>  
   
- 有关如何使用自定义绑定修改系统提供的绑定的讨论，请参见[如何：自定义系统提供的绑定](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+ <span data-ttu-id="0e5e7-220">有关如何使用自定义绑定修改系统提供的绑定的讨论，请参阅[如何： 自定义系统提供的绑定](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="0e5e7-220">For a discussion on how to use a custom binding to modify a system-provided binding, see [How to: Customize a System-Provided Binding](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
   
-## 请参阅  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.Configuration.BindingsSection>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [customBinding Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+1.  
+  
+## <a name="see-also"></a><span data-ttu-id="0e5e7-221">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0e5e7-221">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.Configuration.BindingsSection>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="0e5e7-222">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="0e5e7-222">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="0e5e7-223">绑定</span><span class="sxs-lookup"><span data-stu-id="0e5e7-223">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="0e5e7-224">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="0e5e7-224">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="0e5e7-225">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="0e5e7-225">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="0e5e7-226">customBinding 元素</span><span class="sxs-lookup"><span data-stu-id="0e5e7-226">customBinding Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="0e5e7-227">绑定</span><span class="sxs-lookup"><span data-stu-id="0e5e7-227">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="0e5e7-228">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="0e5e7-228">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="0e5e7-229">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="0e5e7-229">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)

@@ -1,135 +1,115 @@
 ---
-title: "&lt;supportedRuntime&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<supportedRuntime> 元素"
-  - "supportedRuntime 元素"
+title: "&lt;supportedRuntime&gt;元素"
+ms.date: 10/17/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+ms.custom: updateeachrelease
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
+helpviewer_keywords:
+- supportedRuntime element
+- <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-caps.latest.revision: 33
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 28
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;supportedRuntime&gt; 元素
-指定应用程序支持的公共语言运行时版本。 此元素应由用 .NET Framework 1.1 版或更高版本生成的所有应用程序使用。  
+# <a name="ltsupportedruntimegt-element"></a><span data-ttu-id="0d82d-102">&lt;supportedRuntime&gt;元素</span><span class="sxs-lookup"><span data-stu-id="0d82d-102">&lt;supportedRuntime&gt; Element</span></span>
+<span data-ttu-id="0d82d-103">指定应用程序支持的公共语言运行时版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-103">Specifies which versions of the common language runtime the application supports.</span></span> <span data-ttu-id="0d82d-104">此元素应由用 .NET Framework 1.1 版或更高版本生成的所有应用程序使用。</span><span class="sxs-lookup"><span data-stu-id="0d82d-104">This element should be used by all applications built with version 1.1 or later of the .NET Framework.</span></span>  
   
- [\<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+[<span data-ttu-id="0d82d-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0d82d-105">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+
+[<span data-ttu-id="0d82d-106">\<startup></span><span class="sxs-lookup"><span data-stu-id="0d82d-106">\<startup></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
   
- [\<startup\>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+<span data-ttu-id="0d82d-107">**\<supportedRuntime>**</span><span class="sxs-lookup"><span data-stu-id="0d82d-107">**\<supportedRuntime>**</span></span>  
   
- **\<supportedRuntime\>**  
+## <a name="syntax"></a><span data-ttu-id="0d82d-108">语法</span><span class="sxs-lookup"><span data-stu-id="0d82d-108">Syntax</span></span>  
   
-## 语法  
-  
-```  
-  
+```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## 特性  
+## <a name="attributes"></a><span data-ttu-id="0d82d-109">特性</span><span class="sxs-lookup"><span data-stu-id="0d82d-109">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|**version**|可选特性。<br /><br /> 一个字符串值，它指定此应用程序支持的公共语言运行时 \(CLR\) 版本。 有关 `version` 特性的有效值的信息，请参阅[“运行时版本”值](#version)部分。 **Note:**  通过 .NET Framework 3.5，“*运行时版本*”值的形式为*主版本号*.*次版本号*.*内部版本号*。 从 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 开始，仅主版本号和次版本号是必需的（即“v4.0”而不是“v4.0.30319”）。 建议使用较短字符串。|  
-|**sku**|可选特性。<br /><br /> 一个字符串值，该值指定库存单位 \(SKU\)，库存单位则指定此应用程序支持的 .NET Framework 版本。<br /><br /> 从 .NET Framework 4.0 起，建议使用 `sku` 特性。  若存在该特性，则它指示应用面向的 .NET Framework 版本。<br /><br /> 有关 SKU 特性的有效值的信息，请参阅 [“SKU ID”值](#sku) 部分。|  
+|<span data-ttu-id="0d82d-110">特性</span><span class="sxs-lookup"><span data-stu-id="0d82d-110">Attribute</span></span>|<span data-ttu-id="0d82d-111">描述</span><span class="sxs-lookup"><span data-stu-id="0d82d-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="0d82d-112">**version**</span><span class="sxs-lookup"><span data-stu-id="0d82d-112">**version**</span></span>|<span data-ttu-id="0d82d-113">可选特性。</span><span class="sxs-lookup"><span data-stu-id="0d82d-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="0d82d-114">一个字符串值，它指定此应用程序支持的公共语言运行时 (CLR) 版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-114">A string value that specifies the version of the common language runtime (CLR) that this application supports.</span></span> <span data-ttu-id="0d82d-115">有关有效值的`version`属性，请参阅["运行时版本"值](#version)部分。</span><span class="sxs-lookup"><span data-stu-id="0d82d-115">For valid values of the `version` attribute, see the ["runtime version" values](#version) section.</span></span> <span data-ttu-id="0d82d-116">**注意：**通过.NET Framework 3.5，"*运行时版本*"值的形式*主要*。*次要*。*生成*。</span><span class="sxs-lookup"><span data-stu-id="0d82d-116">**Note:**  Through the .NET Framework 3.5, the "*runtime version*" value takes the form *major*.*minor*.*build*.</span></span> <span data-ttu-id="0d82d-117">从 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 开始，仅主版本号和次版本号是必需的（即“v4.0”而不是“v4.0.30319”）。</span><span class="sxs-lookup"><span data-stu-id="0d82d-117">Beginning with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], only the major and minor version numbers are required (that is, "v4.0" instead of "v4.0.30319").</span></span> <span data-ttu-id="0d82d-118">建议使用较短字符串。</span><span class="sxs-lookup"><span data-stu-id="0d82d-118">The shorter string is recommended.</span></span>|  
+|<span data-ttu-id="0d82d-119">**sku**</span><span class="sxs-lookup"><span data-stu-id="0d82d-119">**sku**</span></span>|<span data-ttu-id="0d82d-120">可选特性。</span><span class="sxs-lookup"><span data-stu-id="0d82d-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="0d82d-121">一个字符串值，该值指定库存单位 (SKU)，库存单位则指定此应用程序支持的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-121">A string value that specifies the stock-keeping unit (SKU), which in turn specifies which .NET Framework release this application supports.</span></span><br /><br /> <span data-ttu-id="0d82d-122">从.NET Framework 4.0、 使用`sku`建议属性。</span><span class="sxs-lookup"><span data-stu-id="0d82d-122">Starting with the .NET Framework 4.0, the use of the `sku` attribute is recommended.</span></span>  <span data-ttu-id="0d82d-123">若存在该特性，则它指示应用面向的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-123">When present, it indicates the version of the .NET Framework that the app targets.</span></span><br /><br /> <span data-ttu-id="0d82d-124">有关有效的 sku 属性的值，请参阅["sku id"值](#sku)部分。</span><span class="sxs-lookup"><span data-stu-id="0d82d-124">For valid values of the sku attribute, see the ["sku id" values](#sku) section.</span></span>|  
   
-## 备注  
- 如果应用程序配置文件中没有 **\<supportedRuntime\>** 元素，则使用用于生成应用程序的运行时版本。  
-  
- **\< supportedRuntime\>** 元素应由使用运行时 1.1 版或更高版本生成的所有应用程序使用。 仅为支持运行时 1.0 版而生成的应用程序必须使用 [\<requiredRuntime\>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 元素。  
-  
-> [!NOTE]
->  如果使用 [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) 函数来指定配置文件，则必须使用适用于所有运行时版本的 `<requiredRuntime>` 元素。 当你使用 [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) 时，`<supportedRuntime>` 元素将被忽略。  
-  
- 对于支持从 .NET Framework 1.1 到 3.5 的运行时版本的应用，支持多个运行时版本时，第一个元素应指定优先级最高的版本，最后一个元素应指定优先级最低的版本。 对于支持 .NET Framework 4.0 或更高版本的应用，`version` 特性指示普遍适用于 .NET Framework 4 及更高版本的 CLR 版本，而 `sku` 特性指示应用所面向的单个 .NET Framework 版本。  
+## <a name="remarks"></a><span data-ttu-id="0d82d-125">备注</span><span class="sxs-lookup"><span data-stu-id="0d82d-125">Remarks</span></span>  
+<span data-ttu-id="0d82d-126">如果 **\<supportedRuntime >**元素不存在应用程序配置文件中，使用用于生成应用程序的运行时的版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-126">If the **\<supportedRuntime>** element is not present in the application configuration file, the version of the runtime used to build the application is used.</span></span>  
+
+<span data-ttu-id="0d82d-127">**\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。</span><span class="sxs-lookup"><span data-stu-id="0d82d-127">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="0d82d-128">为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="0d82d-128">Applications built to support only version 1.0 of the runtime must use the [\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element.</span></span>  
   
 > [!NOTE]
->  如果你的应用程序使用旧式激活路径（如 [CorBindToRuntimeEx 函数](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)），并且你希望这些路径激活 CLR 的版本 4（而不是较早的版本），或者你的应用程序是用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 生成的，但在使用较早版本的 .NET Framework 生成的混合模式程序集上有依赖项，则不足以在受支持的运行时列表中指定 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。 此外，在配置文件的 [\<startup\> 元素](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)中，必须将 `useLegacyV2RuntimeActivationPolicy` 特性设置为 `true`。 但是，将此特性设置为 `true` 意味着，用 .NET Framework 早期版本生成的所有组件都使用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]（而不是生成它们时所用的运行时）运行。  
+>  <span data-ttu-id="0d82d-129">如果你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数来指定配置文件，必须使用`<requiredRuntime>`所有的运行时版本的元素。</span><span class="sxs-lookup"><span data-stu-id="0d82d-129">If you use the [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="0d82d-130">`<supportedRuntime>`元素将被忽略，当你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。</span><span class="sxs-lookup"><span data-stu-id="0d82d-130">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>  
   
- 我们建议你使用应用程序可在其上运行的所有 .NET Framework 版本来测试这些应用程序。  
+<span data-ttu-id="0d82d-131">对于支持从 .NET Framework 1.1 到 3.5 的运行时版本的应用，支持多个运行时版本时，第一个元素应指定优先级最高的版本，最后一个元素应指定优先级最低的版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-131">For apps that support versions of the runtime from the .NET Framework 1.1 through 3.5, when multiple versions of the runtime are supported, the first element should specify the most preferred version of the runtime, and the last element should specify the least preferred version.</span></span> <span data-ttu-id="0d82d-132">对于支持.NET Framework 4.0 或更高版本，应用`version`属性指示的 CLR 版本，这是普遍适用于.NET Framework 4 和更高版本，与`sku`属性指示单个.NET Framework 版本的应用程序目标。</span><span class="sxs-lookup"><span data-stu-id="0d82d-132">For apps that support the .NET Framework 4.0 or later versions, the `version` attribute indicates the CLR version, which is common to the .NET Framework 4 and later versions, and the `sku` attribute indicates single .NET Framework version that the app targets.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="0d82d-133">如果你的应用程序使用旧式激活路径，如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且你希望这些路径激活而不是早期版本，CLR 版本 4 或如果你的应用程序生成与[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]具有依赖关系，但在使用.NET Framework 的早期版本生成的混合模式程序集，它不能指定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]支持运行时列表中。</span><span class="sxs-lookup"><span data-stu-id="0d82d-133">If your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework, it is not sufficient to specify the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in the list of supported runtimes.</span></span> <span data-ttu-id="0d82d-134">此外，在[\<启动 > 元素](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)在配置文件中，必须设置`useLegacyV2RuntimeActivationPolicy`属性设为`true`。</span><span class="sxs-lookup"><span data-stu-id="0d82d-134">In addition, in the [\<startup> element](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) in your configuration file, you must set the `useLegacyV2RuntimeActivationPolicy` attribute to `true`.</span></span> <span data-ttu-id="0d82d-135">但是，将此特性设置为 `true` 意味着，用 .NET Framework 早期版本生成的所有组件都使用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]（而不是生成它们时所用的运行时）运行。</span><span class="sxs-lookup"><span data-stu-id="0d82d-135">However, setting this attribute to `true` means that all components built with earlier versions of the .NET Framework are run using the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] instead of the runtimes they were built with.</span></span>  
+  
+<span data-ttu-id="0d82d-136">我们建议你使用应用程序可在其上运行的所有 .NET Framework 版本来测试这些应用程序。</span><span class="sxs-lookup"><span data-stu-id="0d82d-136">We recommend that you test applications with all the .NET Framework versions that they can run on.</span></span>  
   
 <a name="version"></a>   
-## “运行时版本”值  
- 下表列出了`version`特性的*运行时版本*值的有效值。  
-  
-|.NET Framework 版本|`version` 特性|  
-|-----------------------|------------------|  
-|1.0|"v1.0.3705"|  
-|1.1|"v1.1.4322"|  
-|2.0|"v2.0.50727"|  
-|3.0|"v2.0.50727"|  
-|3.5|"v2.0.50727"|  
-|4.0|"v4.0"|  
-|4.5|"v4.0"|  
-|4.5.1|"v4.0"|  
-|4.5.2|"v4.0"|  
-|4.6|"v4.0"|  
-|4.6.1|"v4.0"|  
+## <a name="runtime-version-values"></a><span data-ttu-id="0d82d-137">“运行时版本”值</span><span class="sxs-lookup"><span data-stu-id="0d82d-137">"runtime version" values</span></span>  
+<span data-ttu-id="0d82d-138">`runtime`属性指定给定的应用程序需要的公共语言运行时 (CLR) 版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-138">The `runtime` attribute specifies the Common Language Runtime (CLR) version that is required for a given application.</span></span> <span data-ttu-id="0d82d-139">请注意，所有.NET Framework v4.x 版本都指定`v4.0`CLR。</span><span class="sxs-lookup"><span data-stu-id="0d82d-139">Note that all .NET Framework v4.x versions specify the `v4.0` CLR.</span></span> <span data-ttu-id="0d82d-140">下表列出有效值*运行时版本*值`version`属性。</span><span class="sxs-lookup"><span data-stu-id="0d82d-140">The following table lists valid values for the *runtime version* value of the `version` attribute.</span></span>  
+
+|<span data-ttu-id="0d82d-141">.NET Framework 版本</span><span class="sxs-lookup"><span data-stu-id="0d82d-141">.NET Framework version</span></span>|<span data-ttu-id="0d82d-142">`version` 特性</span><span class="sxs-lookup"><span data-stu-id="0d82d-142">`version` attribute</span></span>|  
+|----------------------------|-------------------------|  
+|<span data-ttu-id="0d82d-143">1.0</span><span class="sxs-lookup"><span data-stu-id="0d82d-143">1.0</span></span>|<span data-ttu-id="0d82d-144">"v1.0.3705"</span><span class="sxs-lookup"><span data-stu-id="0d82d-144">"v1.0.3705"</span></span>|  
+|<span data-ttu-id="0d82d-145">1.1</span><span class="sxs-lookup"><span data-stu-id="0d82d-145">1.1</span></span>|<span data-ttu-id="0d82d-146">"v1.1.4322"</span><span class="sxs-lookup"><span data-stu-id="0d82d-146">"v1.1.4322"</span></span>|  
+|<span data-ttu-id="0d82d-147">2.0</span><span class="sxs-lookup"><span data-stu-id="0d82d-147">2.0</span></span>|<span data-ttu-id="0d82d-148">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="0d82d-148">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="0d82d-149">3.0</span><span class="sxs-lookup"><span data-stu-id="0d82d-149">3.0</span></span>|<span data-ttu-id="0d82d-150">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="0d82d-150">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="0d82d-151">3.5</span><span class="sxs-lookup"><span data-stu-id="0d82d-151">3.5</span></span>|<span data-ttu-id="0d82d-152">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="0d82d-152">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="0d82d-153">4.0-4.7.1</span><span class="sxs-lookup"><span data-stu-id="0d82d-153">4.0-4.7.1</span></span>|<span data-ttu-id="0d82d-154">"v4.0"</span><span class="sxs-lookup"><span data-stu-id="0d82d-154">"v4.0"</span></span>|  
+
   
 <a name="sku"></a>   
-## “SKU ID”值  
- 下表列出 `sku` 特性支持的 .NET Framework 版本（自 .NET Framework 4 起）。  请注意，自 .NET Framework 4 开始的 `sku` 特性指示应用面向的 .NET Framework 版本。  
+## <a name="sku-id-values"></a><span data-ttu-id="0d82d-155">“SKU ID”值</span><span class="sxs-lookup"><span data-stu-id="0d82d-155">"sku id" values</span></span>  
+<span data-ttu-id="0d82d-156">`sku`属性使用目标框架名字对象 (TFM) 以指示应用面向的且运行所需的.NET framework 的版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-156">The `sku` attribute uses a target framework moniker (TFM) to indicate the version of the .NET Framework that the app targets and requires to run.</span></span> <span data-ttu-id="0d82d-157">下表列出了支持的有效值`sku`属性，从.NET Framework 4 开始。</span><span class="sxs-lookup"><span data-stu-id="0d82d-157">The following table lists valid values that are supported by the `sku` attribute, starting with the .NET Framework 4.</span></span>
   
-|.NET Framework 版本|`sku` 特性|  
-|-----------------------|--------------|  
-|4.0|".NETFramework,Version\=v4.0"|  
-|4.0，客户端配置文件|".NETFramework,Version\=v4.0,Profile\=Client"|  
-|4.0，平台更新 1|.NETFramework,Version\=v4.0.1|  
-|4.0，客户端配置文件，Update 1|.NETFramework,Version\=v4.0.1,Profile\=Client|  
-|4.0，平台更新 2|.NETFramework,Version\=v4.0.2|  
-|4.0，客户端配置文件，Update 2|.NETFramework,Version\=v4.0.2,Profile\=Client|  
-|4.0，平台更新 3|.NETFramework,Version\=v4.0.3|  
-|4.0，客户端配置文件，Update 3|.NETFramework,Version\=v4.0.3,Profile\=Client|  
-|4.5|".NETFramework,Version\=v4.5"|  
-|4.5.1|".NETFramework,Version\=v4.5"|  
-|4.5.2|".NETFramework,Version\=v4.5"|  
-|4.6|".NETFramework,Version\=v4.5"|  
-|4.6.1|".NETFramework,Version\=v4.5"|  
-  
- 下表显示对于不同的 `sku` 特性值，当 `version` 特性为 v4.0 且 `sku` 特性标识 .NET Framework 4 或它的一个平台更新 \(PU\) 时，应用程序将在安装的哪一个 .NET Framework 4 版本上运行。  
-  
-|`sku` 特性的值|4.0 Client|4.0 Full|4.0 Client \+ PU 1|4.0 Full \+ PU 1|4.0 Client \+ PU 2|4.0 Full \+ PU 2|4.0 Client \+ PU 3|4.0 Full \+ PU 3|4.5 和更高版本|  
-|----------------|----------------|--------------|------------------------|----------------------|------------------------|----------------------|------------------------|----------------------|---------------|  
-|.NETFramework,Version\=v4.0,Profile\=Client|是|是|是|是|是|是|是|是|是|  
-|.NETFramework,Version\=v4.0||是||是||是||是|是|  
-|.NETFramework,Version\=v4.0.1,Profile\=Client|||是|是|是|是|是|是|是|  
-|.NETFramework,Version\=v4.0.1||||是||是||是|是|  
-|.NETFramework,Version\=v4.0.2,Profile\=Client|||||是|是|是|是|是|  
-|.NETFramework,Version\=v4.0.2||||||是||是|是|  
-|.NETFramework,Version\=v4.0.3,Profile\=Client|||||||是|是|是|  
-|.NETFramework,Version\=v4.0.3||||||||是|是|  
-  
-## 示例  
- 下面的示例演示如何在配置文件中指定支持的运行时版本。 配置文件指示应用面向 .NET Framework 4.6。  
+|<span data-ttu-id="0d82d-158">.NET Framework 版本</span><span class="sxs-lookup"><span data-stu-id="0d82d-158">.NET Framework version</span></span>|<span data-ttu-id="0d82d-159">`sku` 特性</span><span class="sxs-lookup"><span data-stu-id="0d82d-159">`sku` attribute</span></span>|  
+|----------------------------|---------------------|  
+|<span data-ttu-id="0d82d-160">4.0</span><span class="sxs-lookup"><span data-stu-id="0d82d-160">4.0</span></span>|<span data-ttu-id="0d82d-161">".NETFramework,Version=v4.0"</span><span class="sxs-lookup"><span data-stu-id="0d82d-161">".NETFramework,Version=v4.0"</span></span>|  
+|<span data-ttu-id="0d82d-162">4.0，客户端配置文件</span><span class="sxs-lookup"><span data-stu-id="0d82d-162">4.0, Client Profile</span></span>|<span data-ttu-id="0d82d-163">".NETFramework,Version=v4.0,Profile=Client"</span><span class="sxs-lookup"><span data-stu-id="0d82d-163">".NETFramework,Version=v4.0,Profile=Client"</span></span>|  
+|<span data-ttu-id="0d82d-164">4.0，平台更新 1</span><span class="sxs-lookup"><span data-stu-id="0d82d-164">4.0, platform update 1</span></span>|<span data-ttu-id="0d82d-165">.NETFramework,Version=v4.0.1</span><span class="sxs-lookup"><span data-stu-id="0d82d-165">.NETFramework,Version=v4.0.1</span></span>|  
+|<span data-ttu-id="0d82d-166">4.0，客户端配置文件，Update 1</span><span class="sxs-lookup"><span data-stu-id="0d82d-166">4.0, Client Profile, update 1</span></span>|<span data-ttu-id="0d82d-167">.NETFramework,Version=v4.0.1,Profile=Client</span><span class="sxs-lookup"><span data-stu-id="0d82d-167">.NETFramework,Version=v4.0.1,Profile=Client</span></span>|  
+|<span data-ttu-id="0d82d-168">4.0，平台更新 2</span><span class="sxs-lookup"><span data-stu-id="0d82d-168">4.0, platform update 2</span></span>|<span data-ttu-id="0d82d-169">.NETFramework,Version=v4.0.2</span><span class="sxs-lookup"><span data-stu-id="0d82d-169">.NETFramework,Version=v4.0.2</span></span>|  
+|<span data-ttu-id="0d82d-170">4.0，客户端配置文件，Update 2</span><span class="sxs-lookup"><span data-stu-id="0d82d-170">4.0, Client Profile, update 2</span></span>|<span data-ttu-id="0d82d-171">.NETFramework,Version=v4.0.2,Profile=Client</span><span class="sxs-lookup"><span data-stu-id="0d82d-171">.NETFramework,Version=v4.0.2,Profile=Client</span></span>|  
+|<span data-ttu-id="0d82d-172">4.0，平台更新 3</span><span class="sxs-lookup"><span data-stu-id="0d82d-172">4.0, platform update 3</span></span>|<span data-ttu-id="0d82d-173">.NETFramework,Version=v4.0.3</span><span class="sxs-lookup"><span data-stu-id="0d82d-173">.NETFramework,Version=v4.0.3</span></span>|  
+|<span data-ttu-id="0d82d-174">4.0，客户端配置文件，Update 3</span><span class="sxs-lookup"><span data-stu-id="0d82d-174">4.0, Client Profile, update 3</span></span>|<span data-ttu-id="0d82d-175">.NETFramework,Version=v4.0.3,Profile=Client</span><span class="sxs-lookup"><span data-stu-id="0d82d-175">.NETFramework,Version=v4.0.3,Profile=Client</span></span>|  
+|<span data-ttu-id="0d82d-176">4.5</span><span class="sxs-lookup"><span data-stu-id="0d82d-176">4.5</span></span>|<span data-ttu-id="0d82d-177">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="0d82d-177">".NETFramework,Version=v4.5"</span></span>|  
+|<span data-ttu-id="0d82d-178">4.5.1</span><span class="sxs-lookup"><span data-stu-id="0d82d-178">4.5.1</span></span>|<span data-ttu-id="0d82d-179">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="0d82d-179">".NETFramework,Version=v4.5.1"</span></span>|  
+|<span data-ttu-id="0d82d-180">4.5.2</span><span class="sxs-lookup"><span data-stu-id="0d82d-180">4.5.2</span></span>|<span data-ttu-id="0d82d-181">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="0d82d-181">".NETFramework,Version=v4.5.2"</span></span>|  
+|<span data-ttu-id="0d82d-182">4.6</span><span class="sxs-lookup"><span data-stu-id="0d82d-182">4.6</span></span>|<span data-ttu-id="0d82d-183">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="0d82d-183">".NETFramework,Version=v4.6"</span></span>|  
+|<span data-ttu-id="0d82d-184">4.6.1</span><span class="sxs-lookup"><span data-stu-id="0d82d-184">4.6.1</span></span>|<span data-ttu-id="0d82d-185">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="0d82d-185">".NETFramework,Version=v4.6.1"</span></span>|  
+|<span data-ttu-id="0d82d-186">4.6.2</span><span class="sxs-lookup"><span data-stu-id="0d82d-186">4.6.2</span></span>|<span data-ttu-id="0d82d-187">".NETFramework，Version = v4.6.2"</span><span class="sxs-lookup"><span data-stu-id="0d82d-187">".NETFramework,Version=v4.6.2"</span></span>|  
+|<span data-ttu-id="0d82d-188">4.7</span><span class="sxs-lookup"><span data-stu-id="0d82d-188">4.7</span></span>|<span data-ttu-id="0d82d-189">".NETFramework，Version = v4.7"</span><span class="sxs-lookup"><span data-stu-id="0d82d-189">".NETFramework,Version=v4.7"</span></span>|
+|<span data-ttu-id="0d82d-190">4.7.1</span><span class="sxs-lookup"><span data-stu-id="0d82d-190">4.7.1</span></span>|<span data-ttu-id="0d82d-191">".NETFramework，Version = 4.7.1"</span><span class="sxs-lookup"><span data-stu-id="0d82d-191">".NETFramework,Version=4.7.1"</span></span>|
+
+## <a name="example"></a><span data-ttu-id="0d82d-192">示例</span><span class="sxs-lookup"><span data-stu-id="0d82d-192">Example</span></span>  
+ <span data-ttu-id="0d82d-193">下面的示例演示如何在配置文件中指定支持的运行时版本。</span><span class="sxs-lookup"><span data-stu-id="0d82d-193">The following example shows how to specify the supported runtime version in a configuration file.</span></span> <span data-ttu-id="0d82d-194">该配置文件指示应用面向.NET Framework 4.7。</span><span class="sxs-lookup"><span data-stu-id="0d82d-194">The configuration file indicates that the app targets the .NET Framework 4.7.</span></span>  
   
 ```xml  
-  
-<configuration> <startup> <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6" /> </startup> </configuration>  
-  
+<configuration>  
+   <startup>  
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7" />  
+   </startup>  
+</configuration>  
 ```  
   
-## 配置文件  
- 此元素可用于应用程序配置文件中。  
+## <a name="configuration-file"></a><span data-ttu-id="0d82d-195">配置文件</span><span class="sxs-lookup"><span data-stu-id="0d82d-195">Configuration File</span></span>  
+ <span data-ttu-id="0d82d-196">此元素可用于应用程序配置文件中。</span><span class="sxs-lookup"><span data-stu-id="0d82d-196">This element can be used in the application configuration file.</span></span>  
   
-## 请参阅  
- [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<PaveOver\> 指定要使用的运行时版本](http://msdn.microsoft.com/zh-cn/c376208d-980d-42b4-865b-fbe0d9cc97c2)   
- [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+## <a name="see-also"></a><span data-ttu-id="0d82d-197">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0d82d-197">See Also</span></span>  
+ [<span data-ttu-id="0d82d-198">启动设置架构</span><span class="sxs-lookup"><span data-stu-id="0d82d-198">Startup Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
+ [<span data-ttu-id="0d82d-199">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="0d82d-199">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="0d82d-200">进程内并行执行</span><span class="sxs-lookup"><span data-stu-id="0d82d-200">In-Process Side-by-Side Execution</span></span>](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

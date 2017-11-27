@@ -1,75 +1,81 @@
 ---
-title: "如何：以编程方式打印 XPS 文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "以编程方式打印 XPS 文件"
-  - "XPS 文件, 以编程方式打印"
+title: "如何：以编程方式打印 XPS 文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- printing XPS files programmatically [WPF]
+- XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 949d92e8599ee083593cbd7f970a9b37d31970ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：以编程方式打印 XPS 文件
-可以使用 <xref:System.Printing.PrintQueue.AddJob%2A> 方法的一个重载来打印 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件，而不必打开 <xref:System.Windows.Controls.PrintDialog>，或者从原则上来说，根本不必打开任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  
+# <a name="how-to-programmatically-print-xps-files"></a><span data-ttu-id="43bb2-102">如何：以编程方式打印 XPS 文件</span><span class="sxs-lookup"><span data-stu-id="43bb2-102">How to: Programmatically Print XPS Files</span></span>
+<span data-ttu-id="43bb2-103">你可以使用的一个重载<xref:System.Printing.PrintQueue.AddJob%2A>方法打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而无需打开<xref:System.Windows.Controls.PrintDialog>或原则上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]根本。</span><span class="sxs-lookup"><span data-stu-id="43bb2-103">You can use one overload of the <xref:System.Printing.PrintQueue.AddJob%2A> method to print [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] files without opening a <xref:System.Windows.Controls.PrintDialog> or, in principle, any [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] at all.</span></span>  
   
- 您还可以使用 <xref:System.Windows.Xps.XpsDocumentWriter> 的许多 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法来打印 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件。  有关更多信息，请参见[Printing an XPS Document](http://msdn.microsoft.com/zh-cn/849555c8-0c4e-48c0-86bc-a5494c69b36c)。  
+ <span data-ttu-id="43bb2-104">你还可以打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件使用多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。</span><span class="sxs-lookup"><span data-stu-id="43bb2-104">You can also print [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] files using the many <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> and <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> methods of the <xref:System.Windows.Xps.XpsDocumentWriter>.</span></span> <span data-ttu-id="43bb2-105">有关此操作的详细信息，请参阅[打印 XPS 文档](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)。</span><span class="sxs-lookup"><span data-stu-id="43bb2-105">For more about this, [Printing an XPS Document](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c).</span></span>  
   
- 打印 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 的另一种方法是使用 <xref:System.Windows.Controls.PrintDialog> 控件的 <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> 或 <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> 方法。  请参见[调用打印对话框](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)。  
+ <span data-ttu-id="43bb2-106">另一种打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]是使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>或<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>方法<xref:System.Windows.Controls.PrintDialog>控件。</span><span class="sxs-lookup"><span data-stu-id="43bb2-106">Another way of printing [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] is to use the <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> or <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> methods of the <xref:System.Windows.Controls.PrintDialog> control.</span></span> <span data-ttu-id="43bb2-107">请参阅[调用打印对话框](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)。</span><span class="sxs-lookup"><span data-stu-id="43bb2-107">See [Invoke a Print Dialog](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).</span></span>  
   
-## 示例  
- 使用三参数 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 方法的主要步骤如下。  下面的示例给出了详细信息。  
+## <a name="example"></a><span data-ttu-id="43bb2-108">示例</span><span class="sxs-lookup"><span data-stu-id="43bb2-108">Example</span></span>  
+ <span data-ttu-id="43bb2-109">使用三个参数的主要步骤<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法如下所示。</span><span class="sxs-lookup"><span data-stu-id="43bb2-109">The main steps to using the three-parameter <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> method are as follows.</span></span> <span data-ttu-id="43bb2-110">以下示例提供了详细信息。</span><span class="sxs-lookup"><span data-stu-id="43bb2-110">The example below gives details.</span></span>  
   
-1.  确定打印机是否是 XPSDrv 打印机  （有关 XPSDrv 的更多信息，请参见[打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)）。  
+1.  <span data-ttu-id="43bb2-111">确定打印机是否是 XPSDrv 打印机。</span><span class="sxs-lookup"><span data-stu-id="43bb2-111">Determine if the printer is an XPSDrv printer.</span></span> <span data-ttu-id="43bb2-112">（有关 XPSDrv 的详细信息，请参阅[打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)。）</span><span class="sxs-lookup"><span data-stu-id="43bb2-112">(See [Printing Overview](../../../../docs/framework/wpf/advanced/printing-overview.md) for more about XPSDrv.)</span></span>  
   
-2.  如果打印机不是 XPSDrv 打印机，将线程的单元设置为单线程。  
+2.  <span data-ttu-id="43bb2-113">如果打印机不是 XPSDrv 打印机，将线程的单元设置为单线程。</span><span class="sxs-lookup"><span data-stu-id="43bb2-113">If the printer is not an XPSDrv printer, set the thread's apartment to single thread.</span></span>  
   
-3.  实例化一个打印服务器和打印队列对象。  
+3.  <span data-ttu-id="43bb2-114">实例化打印服务器并打印队列对象。</span><span class="sxs-lookup"><span data-stu-id="43bb2-114">Instantiate a print server and print queue object.</span></span>  
   
-4.  调用该方法，并指定作业名称、要打印的文件以及指示打印机是否是 XPSDrv 打印机的 <xref:System.Boolean> 标志。  
+4.  <span data-ttu-id="43bb2-115">调用方法，指定作业名称、 要打印的文件和一个<xref:System.Boolean>标志，该值指示是否在打印机防止。</span><span class="sxs-lookup"><span data-stu-id="43bb2-115">Call the method, specifying a job name, the file to be printed, and a <xref:System.Boolean> flag indicating whether or not the printer is an XPSDrv printer.</span></span>  
   
- 下面的示例演示如何以批处理方式打印一个目录中的所有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  尽管应用程序提示用户指定目录，但是三参数的 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 方法不需要[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  它可以用在可传递给它的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件名和路径所在的任何代码路径中。  
+ <span data-ttu-id="43bb2-116">以下示例演示如何以批处理方式打印目录中的所有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。</span><span class="sxs-lookup"><span data-stu-id="43bb2-116">The example below shows how to batch print all [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] files in a directory.</span></span> <span data-ttu-id="43bb2-117">尽管该应用程序提示用户指定的目录，由三个参数<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法不需要[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="43bb2-117">Although the application prompts the user to specify the directory, the three-parameter <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> method does not require a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span> <span data-ttu-id="43bb2-118">它可用于具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件名的任何代码路径和可以传递到该方法的路径。</span><span class="sxs-lookup"><span data-stu-id="43bb2-118">It can be used in any code path where you have an [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] file name and path that you can pass to it.</span></span>  
   
- 只要 <xref:System.Boolean> 参数是 `false`（当使用的不是 XPSDrv 打印机时，该参数必须为此值），<xref:System.Printing.PrintQueue.AddJob%2A> 的三参数 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 重载就必须运行在单个线程单元中。  但是，[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 的默认单元状态是多线程。  必须将此默认设置反过来，因为本示例采用的不是 XPSDrv 打印机。  
+ <span data-ttu-id="43bb2-119">三个参数<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>重载<xref:System.Printing.PrintQueue.AddJob%2A>必须在单线程单元中运行时<xref:System.Boolean>参数是`false`，它必须是在使用非 XPSDrv 打印机时。</span><span class="sxs-lookup"><span data-stu-id="43bb2-119">The three-parameter <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> overload of <xref:System.Printing.PrintQueue.AddJob%2A> must run in a single thread apartment whenever the <xref:System.Boolean> parameter is `false`, which it must be when a non-XPSDrv printer is being used.</span></span> <span data-ttu-id="43bb2-120">但是，[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 的默认单元状态为多线程。</span><span class="sxs-lookup"><span data-stu-id="43bb2-120">However, the default apartment state for [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] is multiple thread.</span></span> <span data-ttu-id="43bb2-121">由于本示例假定使用非 XPSDrv 打印机，因此此默认值必须为相反值。</span><span class="sxs-lookup"><span data-stu-id="43bb2-121">This default must be reversed since the example assumes a non-XPSDrv printer.</span></span>  
   
- 有两种方法来更改默认设置。  一种方法是在应用程序的 `Main` 方法的第一行（通常是“`static void Main(string[] args)`”）的紧上方添加 <xref:System.STAThreadAttribute>（即“`[System.STAThreadAttribute()]`”）。  但是，许多应用程序都要求 `Main` 方法有多线程单元状态，因此存在第二种方法，即：在一个单独的线程中放置对 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 的调用，该线程的单元状态通过 <xref:System.Threading.Thread.SetApartmentState%2A> 设置为 <xref:System.Threading.ApartmentState>。  下面的示例使用第二种方法。  
+ <span data-ttu-id="43bb2-122">有两种可用于更改此默认值的方法。</span><span class="sxs-lookup"><span data-stu-id="43bb2-122">There are two ways to change the default.</span></span> <span data-ttu-id="43bb2-123">一种方法是只需添加<xref:System.STAThreadAttribute>(即"`[System.STAThreadAttribute()]`") 正上方的应用程序的首行`Main`方法 (通常"`static void Main(string[] args)`")。</span><span class="sxs-lookup"><span data-stu-id="43bb2-123">One way is to simply add the <xref:System.STAThreadAttribute> (that is, "`[System.STAThreadAttribute()]`") just above the first line of the application's `Main` method (usually "`static void Main(string[] args)`").</span></span> <span data-ttu-id="43bb2-124">但是，许多应用程序要求`Main`方法具有多线程的单元状态，因此第二种方法： 将到调用放<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>其单元状态设置为一个单独的线程中<xref:System.Threading.ApartmentState.STA>与<xref:System.Threading.Thread.SetApartmentState%2A>。</span><span class="sxs-lookup"><span data-stu-id="43bb2-124">However, many applications require that the `Main` method have a multi-threaded apartment state, so there is a second method: put the call to <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> in a separate thread whose apartment state is set to <xref:System.Threading.ApartmentState.STA> with <xref:System.Threading.Thread.SetApartmentState%2A>.</span></span> <span data-ttu-id="43bb2-125">以下示例使用第二种方法。</span><span class="sxs-lookup"><span data-stu-id="43bb2-125">The example below uses this second technique.</span></span>  
   
- 因此，示例的开头实例化一个 <xref:System.Threading.Thread> 对象，并将一个 **PrintXPS** 方法作为 <xref:System.Threading.ThreadStart> 参数传递给它  （**PrintXPS** 方法在本示例的稍后部分定义）。接下来，线程设置为单线程单元。  `Main` 方法的剩余代码启动新线程。  
+ <span data-ttu-id="43bb2-126">此示例相应地，方法是实例化从开始<xref:System.Threading.Thread>对象并将其传递**PrintXPS**方法作为<xref:System.Threading.ThreadStart>参数。</span><span class="sxs-lookup"><span data-stu-id="43bb2-126">Accordingly, the example begins by instantiating a <xref:System.Threading.Thread> object and passing it a **PrintXPS** method as the <xref:System.Threading.ThreadStart> parameter.</span></span> <span data-ttu-id="43bb2-127">（该示例的后面部分定义了 **PrintXPS** 方法。）接下来，将线程设置为单线程单元。</span><span class="sxs-lookup"><span data-stu-id="43bb2-127">(The **PrintXPS** method is defined later in the example.) Next the thread is set to a single thread apartment.</span></span> <span data-ttu-id="43bb2-128">`Main` 方法的唯一剩余代码会启动新线程。</span><span class="sxs-lookup"><span data-stu-id="43bb2-128">The only remaining code of the `Main` method starts the new thread.</span></span>  
   
- 该示例的主要内容在 `static` **BatchXPSPrinter.PrintXPS** 方法中。  在创建打印服务器和队列后，该方法会提示用户输入包含 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件的目录。  在确认该目录存在并且其中存在 \*.xps 文件后，该方法将每个这样的文件添加到打印队列中。  该示例假定打印机不是 XPSDrv，因此我们将 `false` 传递给 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 方法的最后一个参数。  为此，该方法在尝试将文件转换为打印机的页面描述语言之前，会先验证文件中的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 标记。  如果验证失败，将引发一个异常。  代码示例将捕捉此异常，将有关此异常的信息通知给用户，然后继续处理下一个 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
+ <span data-ttu-id="43bb2-129">该示例的内容主要关于 `static`**BatchXPSPrinter.PrintXPS** 方法。</span><span class="sxs-lookup"><span data-stu-id="43bb2-129">The meat of the example is in the `static`**BatchXPSPrinter.PrintXPS** method.</span></span> <span data-ttu-id="43bb2-130">创建打印服务器和队列后，该方法会提示用户提供包含 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件的目录。</span><span class="sxs-lookup"><span data-stu-id="43bb2-130">After creating a print server and queue, the method prompts the user for a directory containing [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] files.</span></span> <span data-ttu-id="43bb2-131">在验证存在该目录且其中存在 *.xps 文件之后，该方法会将每个此类文件添加到打印队列。</span><span class="sxs-lookup"><span data-stu-id="43bb2-131">After validating the existence of the directory and the presence of *.xps files in it, the method adds each such file to the print queue.</span></span> <span data-ttu-id="43bb2-132">该示例假定，打印机将是不是 XPSDrv，因此，我们传递`false`到的最后一个参数<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法。</span><span class="sxs-lookup"><span data-stu-id="43bb2-132">The example assumes that the printer is non-XPSDrv, so we are passing `false` to the last parameter of <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> method.</span></span> <span data-ttu-id="43bb2-133">出于此原因，该方法先验证文件中的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 标记，然后再尝试将其转换为打印机的页面描述语言。</span><span class="sxs-lookup"><span data-stu-id="43bb2-133">For this reason, the method will validate the [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] markup in the file before it attempts to convert it to the printer's page description language.</span></span> <span data-ttu-id="43bb2-134">如果验证失败，会引发异常。</span><span class="sxs-lookup"><span data-stu-id="43bb2-134">If the validation fails, an exception is thrown.</span></span> <span data-ttu-id="43bb2-135">该示例代码将捕获该异常，并通知用户相关信息，然后继续处理下一 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。</span><span class="sxs-lookup"><span data-stu-id="43bb2-135">The example code will catch the exception, notify the user about it, and then go on to process the next [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] file.</span></span>  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
- 如果您使用的是 XPSDrv 打印机，则可以将最后一个参数设置为 `true`。  在这种情况下，因为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 是打印机的页面描述语言，所以此方法会将文件发送到打印机，而不对它进行验证或将它转换为另一种页面描述语言。  如果您在设计时不确定应用程序是否将使用 XPSDrv 打印机，则可以修改应用程序，使它读取 <xref:System.Printing.PrintQueue.IsXpsDevice%2A> 属性，并根据它找到的内容进行分支。  
+ <span data-ttu-id="43bb2-136">如果使用 XPSDrv 打印机，则可将最后一个参数设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="43bb2-136">If you are using an XPSDrv printer, then you can set the final parameter to `true`.</span></span> <span data-ttu-id="43bb2-137">在这种情况下，由于 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 是打印机的页面描述语言，该方法会将文件发送到打印机，而不会对其进行验证或将其转换为另一种页面描述语言。</span><span class="sxs-lookup"><span data-stu-id="43bb2-137">In that case, since [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] is the printer's page description language, the method will send the file to the printer without validating it or converting it to another page description language.</span></span> <span data-ttu-id="43bb2-138">如果您不确定在设计时是否应用程序将使用为防止，则可以修改应用程序具有它读取<xref:System.Printing.PrintQueue.IsXpsDevice%2A>属性和根据它所找到的分支。</span><span class="sxs-lookup"><span data-stu-id="43bb2-138">If you are uncertain at design time whether the application will be using an XPSDrv printer, you can modify the application to have it read the <xref:System.Printing.PrintQueue.IsXpsDevice%2A> property and branch according to what it finds.</span></span>  
   
- 因为在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 发行之后，最初几乎没有 XPSDrv 打印机可以立即投入使用，因此，可能需要将非 XPSDrv 打印机假装成 XPSDrv 打印机。  为此，应将 Pipelineconfig.xml 添加到运行您的应用程序的计算机的以下注册表项中的文件列表：  
+ <span data-ttu-id="43bb2-139">由于发布 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 后，最初存在几个可立即使用的 XPSDrv 打印机，可能需要将非 XPSDrv 打印机伪装为 XPSDrv 打印机。</span><span class="sxs-lookup"><span data-stu-id="43bb2-139">Since there will initially be few XPSDrv printers available immediately after the release of [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] and [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], you may need to disguise a non-XPSDrv printer as an XPSDrv printer.</span></span> <span data-ttu-id="43bb2-140">为此，请将 Pipelineconfig.xml 添加到运行应用程序的计算机的注册表项中的以下文件列表：</span><span class="sxs-lookup"><span data-stu-id="43bb2-140">To do so, add Pipelineconfig.xml to the list of files in the following registry key of the computer running your application:</span></span>  
   
- HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Print\\Environments\\Windows NT x86\\Drivers\\Version\-3\\*\<PseudoXPSPrinter\>*\\DependentFiles  
+ <span data-ttu-id="43bb2-141">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles</span><span class="sxs-lookup"><span data-stu-id="43bb2-141">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles</span></span>  
   
- 其中 *\<PseudoXPSPrinter\>* 是任一打印队列。  然后必须重新启动计算机。  
+ <span data-ttu-id="43bb2-142">其中 *\<PseudoXPSPrinter>* 是任一打印队列。</span><span class="sxs-lookup"><span data-stu-id="43bb2-142">where *\<PseudoXPSPrinter>* is any print queue.</span></span> <span data-ttu-id="43bb2-143">然后必须重新启动计算机。</span><span class="sxs-lookup"><span data-stu-id="43bb2-143">The machine must then be rebooted.</span></span>  
   
- 这种假装使您可以将 `true` 作为 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 的最后一个参数来传递，而不会导致异常，但因为 *\<PseudoXPSPrinter\>* 并不是真正的 XPSDrv 打印机，因此打印出来的将仅仅是乱码。  
+ <span data-ttu-id="43bb2-144">此是经过伪装将使你能够将传递`true`作为最后一个参数的<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>而不会导致异常，但由于*\<出现 >*实际上不防止仅仅是乱码将打印。</span><span class="sxs-lookup"><span data-stu-id="43bb2-144">This disguise will enable you to pass `true` as the final parameter of <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> without causing an exception, but since *\<PseudoXPSPrinter>* is not really an XPSDrv printer, only garbage will print.</span></span>  
   
- **注意** 为简单起见，上面的示例通过检查是否存在扩展名 \*.xps 来检测文件是否是 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。  但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不一定有此扩展名。  [isXPS.exe（isXPS 合规性工具）](../Topic/isXPS.exe%20\(isXPS%20Conformance%20Tool\).md) 也是一种测试文件是否是 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 的方法。  
+ <span data-ttu-id="43bb2-145">**请注意**为简单起见，以上示例通过测试是否存在 *.xps 扩展名来确定文件是否为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="43bb2-145">**Note** For simplicity, the example above uses the presence of an *.xps extension as its test that a file is [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].</span></span> <span data-ttu-id="43bb2-146">但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不需要具有此扩展名。</span><span class="sxs-lookup"><span data-stu-id="43bb2-146">However, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] files do not have to have this extension.</span></span> <span data-ttu-id="43bb2-147">[isXPS.exe（isXPS 合规性工具）](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)是一种测试文件是否具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。</span><span class="sxs-lookup"><span data-stu-id="43bb2-147">The [isXPS.exe (isXPS Conformance Tool)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3) is one way of testing a file for [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] validity.</span></span>  
   
-## 请参阅  
- <xref:System.Printing.PrintQueue>   
- <xref:System.Printing.PrintQueue.AddJob%2A>   
- <xref:System.Threading.ApartmentState>   
- <xref:System.STAThreadAttribute>   
- [XPS](http://www.microsoft.com/xps)   
- [Printing an XPS Document](http://msdn.microsoft.com/zh-cn/849555c8-0c4e-48c0-86bc-a5494c69b36c)   
- [Managed and Unmanaged Threading](http://msdn.microsoft.com/zh-cn/db425c20-4b2f-4433-bf96-76071c7881e5)   
- [isXPS.exe（isXPS 合规性工具）](../Topic/isXPS.exe%20\(isXPS%20Conformance%20Tool\).md)   
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="43bb2-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43bb2-148">See Also</span></span>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Printing.PrintQueue.AddJob%2A>  
+ <xref:System.Threading.ApartmentState>  
+ <xref:System.STAThreadAttribute>  
+ [<span data-ttu-id="43bb2-149">XPS</span><span class="sxs-lookup"><span data-stu-id="43bb2-149">XPS</span></span>](http://www.microsoft.com/xps)  
+ [<span data-ttu-id="43bb2-150">打印 XPS 文档</span><span class="sxs-lookup"><span data-stu-id="43bb2-150">Printing an XPS Document</span></span>](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
+ [<span data-ttu-id="43bb2-151">托管和非托管线程处理</span><span class="sxs-lookup"><span data-stu-id="43bb2-151">Managed and Unmanaged Threading</span></span>](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [<span data-ttu-id="43bb2-152">isXPS.exe（isXPS 合规性工具）</span><span class="sxs-lookup"><span data-stu-id="43bb2-152">isXPS.exe (isXPS Conformance Tool)</span></span>](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
+ [<span data-ttu-id="43bb2-153">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="43bb2-153">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="43bb2-154">打印概述</span><span class="sxs-lookup"><span data-stu-id="43bb2-154">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

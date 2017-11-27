@@ -1,194 +1,177 @@
 ---
-title: "在 Visual Basic 中的语句 |Microsoft 文档"
+title: "语句 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic], declaring
-- colons (:)
-- constants, defining
+- colons (:) [Visual Basic]
+- constants [Visual Basic], defining
 - underlines
-- constants, statements
-- blue underline
-- procedures, statements
+- constants [Visual Basic], statements
+- blue underline [Visual Basic]
+- procedures [Visual Basic], statements
 - variables [Visual Basic], assigning
-- line breaks, in code
-- executable statements
+- line breaks [Visual Basic], in code
+- executable statements [Visual Basic]
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 001ea1cb5e651b95f808eefd47fd468f556550a1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# <a name="statements-in-visual-basic"></a>语句 (Visual Basic)
-中的语句[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]是完整的指令。 它可以包含关键字、 运算符、 变量、 常量和表达式。 每个语句都属于以下类别之一︰  
+# <a name="statements-in-visual-basic"></a><span data-ttu-id="ceaba-102">语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ceaba-102">Statements in Visual Basic</span></span>
+<span data-ttu-id="ceaba-103">中的语句[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是完整的指令。</span><span class="sxs-lookup"><span data-stu-id="ceaba-103">A statement in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] is a complete instruction.</span></span> <span data-ttu-id="ceaba-104">它可以包含关键字、 运算符、 变量、 常量和表达式。</span><span class="sxs-lookup"><span data-stu-id="ceaba-104">It can contain keywords, operators, variables, constants, and expressions.</span></span> <span data-ttu-id="ceaba-105">每个语句都属于以下类别之一：</span><span class="sxs-lookup"><span data-stu-id="ceaba-105">Each statement belongs to one of the following categories:</span></span>  
   
--   **声明语句**，其中命名变量、 常量或过程中，并还可以指定一种数据类型。  
+-   <span data-ttu-id="ceaba-106">**声明语句**，其中命名变量、 常量或过程，并还可以指定数据类型。</span><span class="sxs-lookup"><span data-stu-id="ceaba-106">**Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.</span></span>  
   
--   **可执行语句**，它启动操作。 这些语句可以调用方法或函数，并且它们可以循环或分支的代码块。 可执行语句包括**赋值语句**，它将一个值或表达式分配给变量或常数。  
+-   <span data-ttu-id="ceaba-107">**可执行语句**，该启动操作。</span><span class="sxs-lookup"><span data-stu-id="ceaba-107">**Executable Statements**, which initiate actions.</span></span> <span data-ttu-id="ceaba-108">这些语句可以调用的方法或函数，并且它们可以循环或分支的代码块。</span><span class="sxs-lookup"><span data-stu-id="ceaba-108">These statements can call a method or function, and they can loop or branch through blocks of code.</span></span> <span data-ttu-id="ceaba-109">可执行语句包括**赋值语句**，这将分配的值或表达式，并为变量或常量。</span><span class="sxs-lookup"><span data-stu-id="ceaba-109">Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.</span></span>  
   
- 本主题介绍每个类别。 此外，本主题介绍如何结合使用多个语句在单独的行以及如何跨多行 continue 语句。  
+ <span data-ttu-id="ceaba-110">本主题介绍每个类别。</span><span class="sxs-lookup"><span data-stu-id="ceaba-110">This topic describes each category.</span></span> <span data-ttu-id="ceaba-111">此外，本主题介绍如何合并多个语句在单独的行以及如何通过多个线路继续一条语句。</span><span class="sxs-lookup"><span data-stu-id="ceaba-111">Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.</span></span>  
   
-## <a name="declaration-statements"></a>声明语句  
- 使用声明语句命名和过程、 变量、 属性、 数组和常量定义。 在声明的编程元素时，您还可以定义其数据类型、 访问级别和作用域。 有关详细信息，请参阅[声明元素的特性](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)。  
+## <a name="declaration-statements"></a><span data-ttu-id="ceaba-112">声明语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-112">Declaration Statements</span></span>  
+ <span data-ttu-id="ceaba-113">使用声明语句进行命名和定义过程、 变量、 属性、 数组和常量。</span><span class="sxs-lookup"><span data-stu-id="ceaba-113">You use declaration statements to name and define procedures, variables, properties, arrays, and constants.</span></span> <span data-ttu-id="ceaba-114">在声明编程元素时，你还可以定义其数据类型、 访问级别和作用域。</span><span class="sxs-lookup"><span data-stu-id="ceaba-114">When you declare a programming element, you can also define its data type, access level, and scope.</span></span> <span data-ttu-id="ceaba-115">有关详细信息，请参阅[声明元素的特性](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-115">For more information, see [Declared Element Characteristics](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).</span></span>  
   
- 下面的示例包含三个声明。  
+ <span data-ttu-id="ceaba-116">下面的示例包含三个声明。</span><span class="sxs-lookup"><span data-stu-id="ceaba-116">The following example contains three declarations.</span></span>  
   
- [!code-vb[VbVbalrStatements #&80;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_1.vb)]  
+ [!code-vb[VbVbalrStatements#80](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_1.vb)]  
   
- 第一个声明是`Sub`语句。 以及与其匹配`End Sub`语句，它声明一个名为过程`applyFormat`。 它还指定`applyFormat`是`Public`，这意味着可以引用它的任何代码可以调用它。  
+ <span data-ttu-id="ceaba-117">第一个声明是`Sub`语句。</span><span class="sxs-lookup"><span data-stu-id="ceaba-117">The first declaration is the `Sub` statement.</span></span> <span data-ttu-id="ceaba-118">以及其匹配`End Sub`语句，它声明一个名为的过程`applyFormat`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-118">Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`.</span></span> <span data-ttu-id="ceaba-119">它还指定`applyFormat`是`Public`，这意味着，任何可以引用它的代码可以调用它。</span><span class="sxs-lookup"><span data-stu-id="ceaba-119">It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.</span></span>  
   
- 第二个声明是`Const`语句，它声明了常量`limit`，并指定`Integer`数据类型和值为 33。  
+ <span data-ttu-id="ceaba-120">第二个声明`Const`语句，声明常量`limit`，并指定`Integer`数据类型和值的 33。</span><span class="sxs-lookup"><span data-stu-id="ceaba-120">The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.</span></span>  
   
- 第三个声明是`Dim`语句声明变量`thisWidget`。 数据类型是否为特定对象，即从创建对象`Widget`类。 您可以声明一个变量以任何基本数据类型，或为在您使用的应用程序中公开任意对象类型。  
+ <span data-ttu-id="ceaba-121">第三个声明是`Dim`语句，它声明了变量`thisWidget`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-121">The third declaration is the `Dim` statement, which declares the variable `thisWidget`.</span></span> <span data-ttu-id="ceaba-122">数据类型的特定对象，即从创建对象`Widget`类。</span><span class="sxs-lookup"><span data-stu-id="ceaba-122">The data type is a specific object, namely an object created from the `Widget` class.</span></span> <span data-ttu-id="ceaba-123">你可以声明任何的变量基本数据类型或为在你使用的应用程序中公开任意对象类型。</span><span class="sxs-lookup"><span data-stu-id="ceaba-123">You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.</span></span>  
   
-### <a name="initial-values"></a>初始值  
- 包含声明语句的代码运行时，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]保留已声明的元素所需的内存。 如果该元素具有一个值，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]初始化为其数据类型的默认值。 详细信息，请参阅"行为"中[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。  
+### <a name="initial-values"></a><span data-ttu-id="ceaba-124">初始值</span><span class="sxs-lookup"><span data-stu-id="ceaba-124">Initial Values</span></span>  
+ <span data-ttu-id="ceaba-125">包含声明语句的代码运行时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]保留已声明的元素所需的内存。</span><span class="sxs-lookup"><span data-stu-id="ceaba-125">When the code containing a declaration statement runs, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reserves the memory required for the declared element.</span></span> <span data-ttu-id="ceaba-126">如果该元素具有一个值，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]其初始化为其数据类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="ceaba-126">If the element holds a value, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] initializes it to the default value for its data type.</span></span> <span data-ttu-id="ceaba-127">有关详细信息，请参阅"行为" [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-127">For more information, see "Behavior" in [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>  
   
- 您可以将初始值赋给一个变量，作为其声明的一部分，如下面的示例所示。  
+ <span data-ttu-id="ceaba-128">如下面的示例所示，你可以将初始值分配给一个变量，作为其声明的一部分。</span><span class="sxs-lookup"><span data-stu-id="ceaba-128">You can assign an initial value to a variable as part of its declaration, as the following example illustrates.</span></span>  
   
- [!code-vb[VbVbalrStatements #&81;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_2.vb)]  
+ [!code-vb[VbVbalrStatements#81](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_2.vb)]  
   
- 如果某个变量为对象变量，您可以通过声明时地显式创建它的类的实例[New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)关键字，如下面的示例阐释了。  
+ <span data-ttu-id="ceaba-129">如果变量是一个对象变量，你可以通过使用声明时地显式创建其类的实例[New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)关键字，如下面的示例演示。</span><span class="sxs-lookup"><span data-stu-id="ceaba-129">If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.</span></span>  
   
- [!code-vb[VbVbalrStatements #&82;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_3.vb)]  
+ [!code-vb[VbVbalrStatements#82](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_3.vb)]  
   
- 请注意直到执行变量的声明语句，在声明语句中指定的初始值未分配给一个变量。 到那时，该变量包含其数据类型的默认值。  
+ <span data-ttu-id="ceaba-130">请注意直到执行达到其声明语句，在声明语句中指定的初始值未分配给变量。</span><span class="sxs-lookup"><span data-stu-id="ceaba-130">Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement.</span></span> <span data-ttu-id="ceaba-131">在此之前，该变量包含其数据类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="ceaba-131">Until that time, the variable contains the default value for its data type.</span></span>  
   
-## <a name="executable-statements"></a>可执行语句  
- 一个可执行语句执行的操作。 它可以调用的过程，在代码中，只需遍历多个语句的另一个位置的分支，或计算的表达式。 赋值语句是一种特殊情况的一个可执行语句。  
+## <a name="executable-statements"></a><span data-ttu-id="ceaba-132">可执行语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-132">Executable Statements</span></span>  
+ <span data-ttu-id="ceaba-133">一个可执行语句执行一个操作。</span><span class="sxs-lookup"><span data-stu-id="ceaba-133">An executable statement performs an action.</span></span> <span data-ttu-id="ceaba-134">它可以调用的过程，在代码中，循环访问的多条语句，另一个位置的分支，或计算表达式。</span><span class="sxs-lookup"><span data-stu-id="ceaba-134">It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression.</span></span> <span data-ttu-id="ceaba-135">赋值语句是一种特殊情况的一个可执行语句。</span><span class="sxs-lookup"><span data-stu-id="ceaba-135">An assignment statement is a special case of an executable statement.</span></span>  
   
- 下面的示例使用`If...Then...Else`控制结构来运行不同的变量的值所基于的代码块。 在代码中，每个块内`For...Next`循环运行指定的次数。  
+ <span data-ttu-id="ceaba-136">下面的示例使用`If...Then...Else`控制结构运行不同的变量的值的代码块。</span><span class="sxs-lookup"><span data-stu-id="ceaba-136">The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable.</span></span> <span data-ttu-id="ceaba-137">在每个代码块中，`For...Next`循环运行指定的次数。</span><span class="sxs-lookup"><span data-stu-id="ceaba-137">Within each block of code, a `For...Next` loop runs a specified number of times.</span></span>  
   
- [!code-vb[VbVbalrStatements #&83;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_4.vb)]  
+ [!code-vb[VbVbalrStatements#83](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_4.vb)]  
   
- `If`前面示例中的语句会检查参数值`clockwise`。 如果值为`True`，它将调用`spinClockwise`方法`aWidget`。 如果值为`False`，它将调用`spinCounterClockwise`方法`aWidget`。 `If...Then...Else`控制结构结尾`End If`。  
+ <span data-ttu-id="ceaba-138">`If`语句在前面的示例将检查参数的值`clockwise`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-138">The `If` statement in the preceding example checks the value of the parameter `clockwise`.</span></span> <span data-ttu-id="ceaba-139">如果值为`True`，它调用`spinClockwise`方法`aWidget`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-139">If the value is `True`, it calls the `spinClockwise` method of `aWidget`.</span></span> <span data-ttu-id="ceaba-140">如果值为`False`，它调用`spinCounterClockwise`方法`aWidget`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-140">If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`.</span></span> <span data-ttu-id="ceaba-141">`If...Then...Else`控件结构结尾`End If`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-141">The `If...Then...Else` control structure ends with `End If`.</span></span>  
   
- `For...Next`循环内每个块将调用相应方法的次数的值相等`revolutions`参数。  
+ <span data-ttu-id="ceaba-142">`For...Next`循环内每个块调用相应方法的次数等于的值`revolutions`参数。</span><span class="sxs-lookup"><span data-stu-id="ceaba-142">The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.</span></span>  
   
-## <a name="assignment-statements"></a>赋值语句  
- 赋值语句执行赋值操作，包括获取赋值运算符右侧的值 (`=`) 并将其存储在左侧，如以下示例所示的元素中。  
+## <a name="assignment-statements"></a><span data-ttu-id="ceaba-143">赋值语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-143">Assignment Statements</span></span>  
+ <span data-ttu-id="ceaba-144">赋值语句执行分配操作，包括获取赋值运算符右侧的值 (`=`) 并将其存储在左侧，如以下示例所示元素中。</span><span class="sxs-lookup"><span data-stu-id="ceaba-144">Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.</span></span>  
   
- [!code-vb[VbVbalrStatements #&73;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_5.vb)]  
+ [!code-vb[VbVbalrStatements#73](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_5.vb)]  
   
- 在前面的示例中，赋值语句将存储在变量中的文本值 42 `v`。  
+ <span data-ttu-id="ceaba-145">在前面的示例中，赋值语句将存储在变量中的文本值 42 `v`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-145">In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.</span></span>  
   
-### <a name="eligible-programming-elements"></a>合格的编程元素  
- 赋值运算符左侧的编程元素必须能够接受和存储的值。 这意味着它必须是变量或属性不是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，或者它必须是一个数组元素。 在赋值语句的上下文中，此类元素有时称为*左值*，为"左侧值"。  
+### <a name="eligible-programming-elements"></a><span data-ttu-id="ceaba-146">合格的编程元素</span><span class="sxs-lookup"><span data-stu-id="ceaba-146">Eligible Programming Elements</span></span>  
+ <span data-ttu-id="ceaba-147">赋值运算符左侧的编程元素必须能够以接受并存储一个值。</span><span class="sxs-lookup"><span data-stu-id="ceaba-147">The programming element on the left side of the assignment operator must be able to accept and store a value.</span></span> <span data-ttu-id="ceaba-148">这意味着它必须是变量或属性不是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，或它必须是一个数组元素。</span><span class="sxs-lookup"><span data-stu-id="ceaba-148">This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element.</span></span> <span data-ttu-id="ceaba-149">在赋值语句的上下文中，此类元素有时称为*左值*，"左值。"</span><span class="sxs-lookup"><span data-stu-id="ceaba-149">In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."</span></span>  
   
- 赋值运算符右侧的值生成的表达式，它可以由文本、 常量、 变量、 属性、 数组元素、 其他表达式或函数调用的任意组合组成。 下面的示例阐释了这一点。  
+ <span data-ttu-id="ceaba-150">赋值运算符右侧的值由一个表达式，它可以包含文本、 常量、 变量、 属性、 数组元素、 其他表达式或函数调用的任意组合的生成。</span><span class="sxs-lookup"><span data-stu-id="ceaba-150">The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls.</span></span> <span data-ttu-id="ceaba-151">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="ceaba-151">The following example illustrates this.</span></span>  
   
- [!code-vb[VbVbalrStatements #&74;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_6.vb)]  
+ [!code-vb[VbVbalrStatements#74](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_6.vb)]  
   
- 前面的示例将变量中保存的值`y`变量中保存的值为`z`，然后将添加对函数的调用返回的值`findResult`。 此表达式的总计值然后存储在变量`x`。  
+ <span data-ttu-id="ceaba-152">前面的示例将值保存在变量中添加`y`到变量中保存的值`z`，然后添加对函数的调用返回的值`findResult`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-152">The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`.</span></span> <span data-ttu-id="ceaba-153">此表达式的总计值然后存储在变量`x`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-153">The total value of this expression is then stored in variable `x`.</span></span>  
   
-### <a name="data-types-in-assignment-statements"></a>赋值语句中的数据类型  
- 除了数值，赋值运算符还可以分配`String`值，如下面的示例所示。  
+### <a name="data-types-in-assignment-statements"></a><span data-ttu-id="ceaba-154">赋值语句中的数据类型</span><span class="sxs-lookup"><span data-stu-id="ceaba-154">Data Types in Assignment Statements</span></span>  
+ <span data-ttu-id="ceaba-155">除了数值，赋值运算符还可以分配`String`值，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="ceaba-155">In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.</span></span>  
   
- [!code-vb[VbVbalrStatements #&75;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_7.vb)]  
+ [!code-vb[VbVbalrStatements#75](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_7.vb)]  
   
- 你还可以分配`Boolean`值，使用`Boolean`文字或`Boolean`表达式，如下面的示例将说明。  
+ <span data-ttu-id="ceaba-156">你还可以分配`Boolean`值，使用`Boolean`文本或`Boolean`表达式，如下面的示例阐释了。</span><span class="sxs-lookup"><span data-stu-id="ceaba-156">You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.</span></span>  
   
- [!code-vb[VbVbalrStatements #&76;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_8.vb)]  
+ [!code-vb[VbVbalrStatements#76](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_8.vb)]  
   
- 同样，可以将适当的值分配给的编程元素`Char`， `Date`，或`Object`数据类型。 您还可以将对象实例分配给要从中创建该实例的类中声明的元素。  
+ <span data-ttu-id="ceaba-157">同样，可以将适当的值分配到的编程元素`Char`， `Date`，或`Object`数据类型。</span><span class="sxs-lookup"><span data-stu-id="ceaba-157">Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type.</span></span> <span data-ttu-id="ceaba-158">你还可以为要从中创建该实例的类中声明的元素分配对象实例。</span><span class="sxs-lookup"><span data-stu-id="ceaba-158">You can also assign an object instance to an element declared to be of the class from which that instance is created.</span></span>  
   
-### <a name="compound-assignment-statements"></a>复合赋值语句  
- *复合赋值语句*第一次对执行操作，然后再将它分配给编程元素的表达式。 下面的示例阐释了以下运算符之一`+=`，该运算符左侧变量的值由右侧表达式的值时都会增加。  
+### <a name="compound-assignment-statements"></a><span data-ttu-id="ceaba-159">复合赋值语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-159">Compound Assignment Statements</span></span>  
+ <span data-ttu-id="ceaba-160">*复合赋值语句*首先执行之前将其分配到编程元素中的表达式上的操作。</span><span class="sxs-lookup"><span data-stu-id="ceaba-160">*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element.</span></span> <span data-ttu-id="ceaba-161">下面的示例阐释了这些运算符之一`+=`，右侧表达式的值上运算符左侧的变量的值时都会增加。</span><span class="sxs-lookup"><span data-stu-id="ceaba-161">The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.</span></span>  
   
- [!code-vb[VbVbalrStatements #&77;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_9.vb)]  
+ [!code-vb[VbVbalrStatements#77](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_9.vb)]  
   
- 前面的示例中的值加上 1 `n`，然后将存储在该新值`n`。 它是一种速记等效的以下语句︰  
+ <span data-ttu-id="ceaba-162">前面的示例将 1 添加到的值`n`，然后将存储在该新值`n`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-162">The preceding example adds 1 to the value of `n`, and then stores that new value in `n`.</span></span> <span data-ttu-id="ceaba-163">它是一种速记等效的以下语句：</span><span class="sxs-lookup"><span data-stu-id="ceaba-163">It is a shorthand equivalent of the following statement:</span></span>  
   
- [!code-vb[VbVbalrStatements #&78;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_10.vb)]  
+ [!code-vb[VbVbalrStatements#78](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_10.vb)]  
   
- 可以使用此类型的运算符执行多种不同的复合赋值操作。 这些运算符和有关它们的详细信息的列表，请参阅[赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)。  
+ <span data-ttu-id="ceaba-164">可以使用此类型的运算符执行各种复合赋值操作。</span><span class="sxs-lookup"><span data-stu-id="ceaba-164">A variety of compound assignment operations can be performed using operators of this type.</span></span> <span data-ttu-id="ceaba-165">有关这些运算符和有关它们的详细信息的列表，请参阅[赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-165">For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).</span></span>  
   
- 串联赋值运算符 (`&=`) 可用于将字符串添加到已存在的结束字符串，如下面的示例所示。  
+ <span data-ttu-id="ceaba-166">串联赋值运算符 (`&=`) 可用于将字符串添加到现有的末尾字符串，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="ceaba-166">The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.</span></span>  
   
- [!code-vb[VbVbalrStatements #&79;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_11.vb)]  
+ [!code-vb[VbVbalrStatements#79](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_11.vb)]  
   
-### <a name="type-conversions-in-assignment-statements"></a>赋值语句中的类型转换  
- 将分配给变量、 属性或数组元素的值必须是相应于该目标元素的数据类型。 一般情况下，您应尝试生成相同的数据类型与目标元素的值。 但是，某些类型可以在分配过程转换为其他类型中。  
+### <a name="type-conversions-in-assignment-statements"></a><span data-ttu-id="ceaba-167">赋值语句中的类型转换</span><span class="sxs-lookup"><span data-stu-id="ceaba-167">Type Conversions in Assignment Statements</span></span>  
+ <span data-ttu-id="ceaba-168">你将分配给变量、 属性或数组元素的值必须是适合于该目标元素的数据类型。</span><span class="sxs-lookup"><span data-stu-id="ceaba-168">The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element.</span></span> <span data-ttu-id="ceaba-169">一般情况下，你应尝试生成与目标元素相同的数据类型的值。</span><span class="sxs-lookup"><span data-stu-id="ceaba-169">In general, you should try to generate a value of the same data type as that of the destination element.</span></span> <span data-ttu-id="ceaba-170">但是，某些类型可以在分配期间转换为其他类型中。</span><span class="sxs-lookup"><span data-stu-id="ceaba-170">However, some types can be converted to other types during assignment.</span></span>  
   
- 有关数据类型之间进行转换的信息，请参阅[Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。 简单地说，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]会自动将给定类型的值转换为其扩大的任何其他类型。 一个*扩大转换*是一个中，始终在运行时成功，不会丢失任何数据。 例如，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]将转换`Integer`值赋给`Double`在适当的时候，因为`Integer`加宽到`Double`。 有关详细信息，请参阅[扩大和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ <span data-ttu-id="ceaba-171">有关数据类型之间进行转换的信息，请参阅[在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-171">For information on converting between data types, see [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md).</span></span> <span data-ttu-id="ceaba-172">简单地说，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动将给定类型的值转换为其扩大的任何其他类型。</span><span class="sxs-lookup"><span data-stu-id="ceaba-172">In brief, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically converts a value of a given type to any other type to which it widens.</span></span> <span data-ttu-id="ceaba-173">A*扩大转换*是一个程序中始终成功运行时，不会丢失任何数据。</span><span class="sxs-lookup"><span data-stu-id="ceaba-173">A *widening conversion* is one in that always succeeds at run time and does not lose any data.</span></span> <span data-ttu-id="ceaba-174">例如，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]将转换`Integer`值赋给`Double`在适当的时候，因为`Integer`扩大到`Double`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-174">For example, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`.</span></span> <span data-ttu-id="ceaba-175">有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-175">For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
   
- *收缩转换*（那些不扩大） 执行的运行时，在发生故障或数据丢失的风险。 您可以通过使用类型转换函数，显式执行收缩转换，或者您可以直接将编译器能够通过设置隐式执行所有转换`Option Strict Off`。 有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
+ <span data-ttu-id="ceaba-176">*收缩转换*（那些不扩大） 执行的运行时，在发生故障或数据丢失的风险。</span><span class="sxs-lookup"><span data-stu-id="ceaba-176">*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss.</span></span> <span data-ttu-id="ceaba-177">你可以通过使用类型转换函数，显式执行收缩转换，或者你可以直接将编译器隐式执行所有转换，通过设置`Option Strict Off`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-177">You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`.</span></span> <span data-ttu-id="ceaba-178">有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-178">For more information, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).</span></span>  
   
-## <a name="putting-multiple-statements-on-one-line"></a>在一行上放置多个语句  
- 在由冒号分隔的单个行中可以有多个语句 (`:`) 字符。 下面的示例阐释了这一点。  
+## <a name="putting-multiple-statements-on-one-line"></a><span data-ttu-id="ceaba-179">将多个语句放置在一个行</span><span class="sxs-lookup"><span data-stu-id="ceaba-179">Putting Multiple Statements on One Line</span></span>  
+ <span data-ttu-id="ceaba-180">在用冒号分隔的单一行中可以有多个语句 (`:`) 字符。</span><span class="sxs-lookup"><span data-stu-id="ceaba-180">You can have multiple statements on a single line separated by the colon (`:`) character.</span></span> <span data-ttu-id="ceaba-181">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="ceaba-181">The following example illustrates this.</span></span>  
   
- [!code-vb[VbVbalrStatements #&70;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_12.vb)]  
+ [!code-vb[VbVbalrStatements#70](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_12.vb)]  
   
- 虽然偶尔带来方便，因此这种形式的语法使代码更难以阅读和维护。 因此，建议您保留到行的一条语句。  
+ <span data-ttu-id="ceaba-182">虽然偶尔带来方便，因此这种形式的语法使代码更难读取和维护。</span><span class="sxs-lookup"><span data-stu-id="ceaba-182">Though occasionally convenient, this form of syntax makes your code hard to read and maintain.</span></span> <span data-ttu-id="ceaba-183">因此，建议你保留到行的一个语句。</span><span class="sxs-lookup"><span data-stu-id="ceaba-183">Thus, it is recommended that you keep one statement to a line.</span></span>  
   
-## <a name="continuing-a-statement-over-multiple-lines"></a>跨多行继续一条语句  
- 语句通常会使在一行上，但太长时，您可以继续使用行继续符序列，其中包括空格后跟一个下划线字符在下一行 (`_`) 后跟回车符。 在下面的示例中，`MsgBox`可执行的语句将继续在两个行。  
+## <a name="continuing-a-statement-over-multiple-lines"></a><span data-ttu-id="ceaba-184">跨多行继续一条语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-184">Continuing a Statement over Multiple Lines</span></span>  
+ <span data-ttu-id="ceaba-185">语句通常符合在一行上，但太长时，你可以继续到下一步的行使用续行符序列，其中包括空格和下划线字符 (`_`) 跟回车符。</span><span class="sxs-lookup"><span data-stu-id="ceaba-185">A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return.</span></span> <span data-ttu-id="ceaba-186">在下面的示例中，`MsgBox`可执行的语句将继续运行在两个行。</span><span class="sxs-lookup"><span data-stu-id="ceaba-186">In the following example, the `MsgBox` executable statement is continued over two lines.</span></span>  
   
- [!code-vb[VbVbalrStatements #&71;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_13.vb)]  
+ [!code-vb[VbVbalrStatements#71](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_13.vb)]  
   
-### <a name="implicit-line-continuation"></a>隐式行继续符  
- 在许多情况下，可以在下一步的后续行继续一条语句，而无需使用下划线字符 (_)。 下表列出了隐式在下一行代码 continue 语句的语法元素。  
+### <a name="implicit-line-continuation"></a><span data-ttu-id="ceaba-187">隐式行继续标志</span><span class="sxs-lookup"><span data-stu-id="ceaba-187">Implicit Line Continuation</span></span>  
+ <span data-ttu-id="ceaba-188">在许多情况下，可以在下一步的后续行 continue 语句，而无需使用下划线字符 (_)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-188">In many cases, you can continue a statement on the next consecutive line without using the underscore character (_).</span></span> <span data-ttu-id="ceaba-189">下表列出隐式在下一个代码行继续该语句的语法元素。</span><span class="sxs-lookup"><span data-stu-id="ceaba-189">The following table lists the syntax elements that implicitly continue the statement on the next line of code.</span></span>  
   
-|语法元素|示例|  
+|<span data-ttu-id="ceaba-190">语法元素</span><span class="sxs-lookup"><span data-stu-id="ceaba-190">Syntax element</span></span>|<span data-ttu-id="ceaba-191">示例</span><span class="sxs-lookup"><span data-stu-id="ceaba-191">Example</span></span>|  
 |---|---|  
-|在逗号之后 (`,`)。|[!code-vb[VbVbalrLineContinuation #&1;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_14.vb)]|  
-|在左括号之后 (`(`) 或右括号之前 (`)`)。|[!code-vb[VbVbalrLineContinuation #&2;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_15.vb)]|  
-|在左大括号之后 (`{`) 或右大括号之前 (`}`)。|[!code-vb[VbVbalrLineContinuation #&3;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_16.vb)]<br /><br /> 有关详细信息，请参阅[对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)或[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
-|在打开后嵌入式表达式 (`<%=`) 或嵌入式表达式结束之前 (`%>`) 在 XML 文本内。|[!code-vb[VbVbalrLineContinuation #&4;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_17.vb)]<br /><br /> 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
-|串联运算符之后 (`&`)。|[!code-vb[VbVbcnConventions #&9;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_18.vb)]<br /><br /> 有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`).|[!code-vb[VbVbalrLineContinuation #&5;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br /><br /> 有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression.|[!code-vb[VbVbalrLineContinuation #&7;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_20.vb)]<br /><br /> 有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|之后`Is`和`IsNot`运算符。|[!code-vb[VbVbalrLineContinuation #&8;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_21.vb)]<br /><br /> 有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|在成员限定符后 (`.`) 和成员名称的前面。 但是，您必须包含成员限定符字符后面的使用时的行继续符字符 (_)`With`语句或在一种类型的初始化列表中提供值。 请考虑使用赋值运算符之后换行 (例如， `=`) 正在使用时`With`语句或对象初始化列表。|[!code-vb[VbVbalrLineContinuation #&5;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br />[!code-vb[VbVbalrLineContinuation #&14;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_22.vb)]<br /><br /> 有关详细信息，请参阅[与...使用语句结束](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[对象初始值设定项︰ 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。|  
-|XML 轴属性限定符后 (`.`或`.@`或`...`)。 但是，必须包括行继续符字符 (_)，当您在使用时指定成员限定符`With`关键字。|[!code-vb[VbVbalrLineContinuation #&9;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_23.vb)]<br /><br /> 有关详细信息，请参阅[XML 轴属性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)。|  
-|在小于-号 (<) or="" before="" a="" greater-than="" sign=""></)>`>`) 时指定的属性。 此外后大于-号 (`>`) 时指定的属性。 但是，您必须包含行继续符字符 (_) 时，可以指定程序集级别或模块级别的属性。|[!code-vb[VbVbalrLineContinuation #&10;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_24.vb)]<br /><br /> 有关详细信息，请参阅[属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)。|  
-|Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). 您不能之间换行组成的多个关键字的查询运算符的关键字 (`Order By`， `Group Join`， `Take While`，和`Skip While`)。|[!code-vb[VbVbalrLineContinuation #&11;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_25.vb)]<br /><br /> 有关详细信息，请参阅[查询](../../../visual-basic/language-reference/queries/queries.md)。|  
-|之后`In`中的关键字`For Each`语句。|[!code-vb[VbVbalrLineContinuation #&12;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_26.vb)]<br /><br /> 有关详细信息，请参阅[为每个...下一条语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。|  
-|之后`From`集合初始值设定项中的关键字。|[!code-vb[VbVbalrLineContinuation #&13;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> 有关详细信息，请参阅[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
+|<span data-ttu-id="ceaba-192">在逗号之后 (`,`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-192">After a comma (`,`).</span></span>|[!code-vb[VbVbalrLineContinuation#1](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_14.vb)]|  
+|<span data-ttu-id="ceaba-193">打开括号后 (`(`) 或右括号之前 (`)`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-193">After an open parenthesis (`(`) or before a closing parenthesis (`)`).</span></span>|[!code-vb[VbVbalrLineContinuation#2](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_15.vb)]|  
+|<span data-ttu-id="ceaba-194">在左大括号后 (`{`) 或右大括号之前 (`}`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-194">After an open curly brace (`{`) or before a closing curly brace (`}`).</span></span>|[!code-vb[VbVbalrLineContinuation#3](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_16.vb)]<br /><br /> <span data-ttu-id="ceaba-195">有关详细信息，请参阅[对象初始值设定项： 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)或[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-195">For more information, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).</span></span>|  
+|<span data-ttu-id="ceaba-196">在打开后嵌入表达式 (`<%=`) 或之前的嵌入式表达式的关闭 (`%>`) 在 XML 文本。</span><span class="sxs-lookup"><span data-stu-id="ceaba-196">After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal.</span></span>|[!code-vb[VbVbalrLineContinuation#4](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_17.vb)]<br /><br /> <span data-ttu-id="ceaba-197">有关详细信息，请参阅[XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-197">For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>|  
+|<span data-ttu-id="ceaba-198">串联运算符之后 (`&`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-198">After the concatenation operator (`&`).</span></span>|[!code-vb[VbVbcnConventions#9](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_18.vb)]<br /><br /> <span data-ttu-id="ceaba-199">有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-199">For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).</span></span>|  
+|<span data-ttu-id="ceaba-200">赋值运算符后 (`=`， `&=`， `:=`， `+=`， `-=`， `*=`， `/=`， `\=`， `^=`， `<<=`， `>>=`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-200">After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`).</span></span>|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br /><br /> <span data-ttu-id="ceaba-201">有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-201">For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).</span></span>|  
+|<span data-ttu-id="ceaba-202">二元运算符后 (`+`， `-`， `/`， `*`， `Mod`， `<>`， `<`， `>`， `<=`， `>=`， `^`， `>>`，`<<`， `And`， `AndAlso`， `Or`， `OrElse`， `Like`， `Xor`) 在表达式中。</span><span class="sxs-lookup"><span data-stu-id="ceaba-202">After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression.</span></span>|[!code-vb[VbVbalrLineContinuation#7](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_20.vb)]<br /><br /> <span data-ttu-id="ceaba-203">有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-203">For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).</span></span>|  
+|<span data-ttu-id="ceaba-204">后`Is`和`IsNot`运算符。</span><span class="sxs-lookup"><span data-stu-id="ceaba-204">After the `Is` and `IsNot` operators.</span></span>|[!code-vb[VbVbalrLineContinuation#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_21.vb)]<br /><br /> <span data-ttu-id="ceaba-205">有关详细信息，请参阅[按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-205">For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).</span></span>|  
+|<span data-ttu-id="ceaba-206">成员限定符字符之后 (`.`) 和之前的成员名称。</span><span class="sxs-lookup"><span data-stu-id="ceaba-206">After a member qualifier character (`.`) and before the member name.</span></span> <span data-ttu-id="ceaba-207">但是，必须包含以下成员限定符，当你使用行继续符 (_)`With`语句或提供一种类型的初始化列表中的值。</span><span class="sxs-lookup"><span data-stu-id="ceaba-207">However, you must include a line-continuation character (_) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type.</span></span> <span data-ttu-id="ceaba-208">请考虑之后赋值运算符换行 (例如， `=`) 如果要使用`With`语句或对象初始化列表。</span><span class="sxs-lookup"><span data-stu-id="ceaba-208">Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists.</span></span>|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br />[!code-vb[VbVbalrLineContinuation#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_22.vb)]<br /><br /> <span data-ttu-id="ceaba-209">有关详细信息，请参阅[与...使用语句结束](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[对象初始值设定项： 命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-209">For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span></span>|  
+|<span data-ttu-id="ceaba-210">XML 轴属性限定符后 (`.`或`.@`或`...`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-210">After an XML axis property qualifier (`.` or `.@` or `...`).</span></span> <span data-ttu-id="ceaba-211">但是，必须包括行继续符 (_)，当你使用指定的成员限定符时`With`关键字。</span><span class="sxs-lookup"><span data-stu-id="ceaba-211">However, you must include a line-continuation character (_) when you specify a member qualifier when you are using the `With` keyword.</span></span>|[!code-vb[VbVbalrLineContinuation#9](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_23.vb)]<br /><br /> <span data-ttu-id="ceaba-212">有关详细信息，请参阅[XML 轴属性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-212">For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).</span></span>|  
+|<span data-ttu-id="ceaba-213">在小于-号 (<) 或之前大于-号 (`>`) 时指定属性。</span><span class="sxs-lookup"><span data-stu-id="ceaba-213">After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute.</span></span> <span data-ttu-id="ceaba-214">此外后大于-号 (`>`) 时指定属性。</span><span class="sxs-lookup"><span data-stu-id="ceaba-214">Also after a greater-than sign (`>`) when you specify an attribute.</span></span> <span data-ttu-id="ceaba-215">但是，在指定程序集级别或模块级特性时必须包括行继续符 (_)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-215">However, you must include a line-continuation character (_) when you specify assembly-level or module-level attributes.</span></span>|[!code-vb[VbVbalrLineContinuation#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_24.vb)]<br /><br /> <span data-ttu-id="ceaba-216">有关详细信息，请参阅[的特性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-216">For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).</span></span>|  
+|<span data-ttu-id="ceaba-217">之前和之后查询运算符 (`Aggregate`， `Distinct`， `From`， `Group By`， `Group Join`， `Join`， `Let`， `Order By`， `Select`， `Skip`， `Skip While`， `Take`， `Take While`， `Where`， `In`， `Into`， `On`， `Ascending`，和`Descending`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-217">Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`).</span></span> <span data-ttu-id="ceaba-218">不能中断由组成的多个关键字的查询运算符关键字之间的连线 (`Order By`， `Group Join`， `Take While`，和`Skip While`)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-218">You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`).</span></span>|[!code-vb[VbVbalrLineContinuation#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_25.vb)]<br /><br /> <span data-ttu-id="ceaba-219">有关详细信息，请参阅[查询](../../../visual-basic/language-reference/queries/queries.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-219">For more information, see [Queries](../../../visual-basic/language-reference/queries/queries.md).</span></span>|  
+|<span data-ttu-id="ceaba-220">后`In`中的关键字`For Each`语句。</span><span class="sxs-lookup"><span data-stu-id="ceaba-220">After the `In` keyword in a `For Each` statement.</span></span>|[!code-vb[VbVbalrLineContinuation#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_26.vb)]<br /><br /> <span data-ttu-id="ceaba-221">有关详细信息，请参阅[每个...下一条语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-221">For more information, see [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).</span></span>|  
+|<span data-ttu-id="ceaba-222">后`From`集合初始值设定项中的关键字。</span><span class="sxs-lookup"><span data-stu-id="ceaba-222">After the `From` keyword in a collection initializer.</span></span>|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> <span data-ttu-id="ceaba-223">有关详细信息，请参阅[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ceaba-223">For more information, see [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).</span></span>|  
   
-## <a name="adding-comments"></a>添加注释  
- 源代码并不总是很容易理解，甚至对程序员而言。 为了帮助说明其代码，因此，大多数程序员请自由使用嵌入的注释。 一个过程或特定指令的读取或更高版本使用它的任何人都可以解释代码中的注释。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]在编译期间，将忽略注释不会影响已编译的代码。  
+## <a name="adding-comments"></a><span data-ttu-id="ceaba-224">添加注释</span><span class="sxs-lookup"><span data-stu-id="ceaba-224">Adding Comments</span></span>  
+ <span data-ttu-id="ceaba-225">源代码并不总是具有自我说明性，甚至到编写它的程序员。</span><span class="sxs-lookup"><span data-stu-id="ceaba-225">Source code is not always self-explanatory, even to the programmer who wrote it.</span></span> <span data-ttu-id="ceaba-226">若要帮助说明其代码，因此，大多数程序员来说请自由使用嵌入的注释。</span><span class="sxs-lookup"><span data-stu-id="ceaba-226">To help document their code, therefore, most programmers make liberal use of embedded comments.</span></span> <span data-ttu-id="ceaba-227">过程或特定指令的读取或更高版本使用它的任何人都可以解释代码中的注释。</span><span class="sxs-lookup"><span data-stu-id="ceaba-227">Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="ceaba-228">在编译期间，将忽略注释，而且它们不影响已编译的代码。</span><span class="sxs-lookup"><span data-stu-id="ceaba-228"> ignores comments during compilation, and they do not affect the compiled code.</span></span>  
   
- 注释行开头的撇号 (`'`) 或`REM`跟一个空格。 可以将他们添加任何地方在代码中，除字符串中。 若要将注释附加到一条语句，插入一个撇号或`REM`之后的语句，后面添加注释。 注释还可以在自己单独的行上。 下面的示例演示这些可能性。  
+ <span data-ttu-id="ceaba-229">注释行开头撇号 (`'`) 或`REM`跟一个空格。</span><span class="sxs-lookup"><span data-stu-id="ceaba-229">Comment lines begin with an apostrophe (`'`) or `REM` followed by a space.</span></span> <span data-ttu-id="ceaba-230">它们都可添加任何位置在代码中，除字符串中。</span><span class="sxs-lookup"><span data-stu-id="ceaba-230">They can be added anywhere in code, except within a string.</span></span> <span data-ttu-id="ceaba-231">要追加到一条语句的注释，插入撇号或`REM`后面添加注释的语句之后。</span><span class="sxs-lookup"><span data-stu-id="ceaba-231">To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment.</span></span> <span data-ttu-id="ceaba-232">注释还可以在其自己单独的行上。</span><span class="sxs-lookup"><span data-stu-id="ceaba-232">Comments can also go on their own separate line.</span></span> <span data-ttu-id="ceaba-233">下面的示例演示这些可能的匹配项。</span><span class="sxs-lookup"><span data-stu-id="ceaba-233">The following example demonstrates these possibilities.</span></span>  
   
- [!code-vb[VbVbalrStatements #&72;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_28.vb)]  
+ [!code-vb[VbVbalrStatements#72](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_28.vb)]  
   
-## <a name="checking-compilation-errors"></a>检查编译错误  
- 如果键入的代码行后，该行显示有蓝色波浪下划线 （也会出现一条错误消息），则语句中有语法错误。 您必须找出错误的语句 （通过查看在任务列表中，或将鼠标悬停在带有鼠标指针的错误以及阅读的错误消息） 并更正它。 直到已修复代码中的所有语法错误，程序将无法正确编译。  
+## <a name="checking-compilation-errors"></a><span data-ttu-id="ceaba-234">检查编译错误</span><span class="sxs-lookup"><span data-stu-id="ceaba-234">Checking Compilation Errors</span></span>  
+ <span data-ttu-id="ceaba-235">如果键入的代码行后，该行显示有蓝色波浪下划线 （也会出现一条错误消息），则语句中有语法错误。</span><span class="sxs-lookup"><span data-stu-id="ceaba-235">If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement.</span></span> <span data-ttu-id="ceaba-236">你必须找出错误的语句 （通过在任务列表中，查找或将鼠标悬停在带有鼠标指针的错误并读取错误消息），并更正它。</span><span class="sxs-lookup"><span data-stu-id="ceaba-236">You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it.</span></span> <span data-ttu-id="ceaba-237">直到在代码中修复所有语法错误，程序将无法正确编译。</span><span class="sxs-lookup"><span data-stu-id="ceaba-237">Until you have fixed all syntax errors in your code, your program will fail to compile correctly.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
+## <a name="related-sections"></a><span data-ttu-id="ceaba-238">相关章节</span><span class="sxs-lookup"><span data-stu-id="ceaba-238">Related Sections</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="ceaba-239">术语</span><span class="sxs-lookup"><span data-stu-id="ceaba-239">Term</span></span>|<span data-ttu-id="ceaba-240">定义</span><span class="sxs-lookup"><span data-stu-id="ceaba-240">Definition</span></span>|  
 |---|---|  
-|[赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)|提供一些主题的链接，如涉及赋值运算符的语言参考页`=`， `*=`，和`&=`。|  
-|[运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|演示如何组合元素和运算符以生成新值。|  
-|[如何：在代码中拆分和合并语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|演示如何拆分为多行的一条语句以及如何在同一行上放置多个语句。|  
-|[如何：标记语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|演示如何标记代码行。|
+|[<span data-ttu-id="ceaba-241">赋值运算符</span><span class="sxs-lookup"><span data-stu-id="ceaba-241">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)|<span data-ttu-id="ceaba-242">提供一些主题的链接，如涵盖赋值运算符的语言参考页`=`， `*=`，和`&=`。</span><span class="sxs-lookup"><span data-stu-id="ceaba-242">Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.</span></span>|  
+|[<span data-ttu-id="ceaba-243">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="ceaba-243">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|<span data-ttu-id="ceaba-244">演示如何组合元素和运算符以生成新值。</span><span class="sxs-lookup"><span data-stu-id="ceaba-244">Shows how to combine elements with operators to yield new values.</span></span>|  
+|[<span data-ttu-id="ceaba-245">如何：在代码中拆分和合并语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-245">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|<span data-ttu-id="ceaba-246">演示如何拆分为多行的单个语句以及如何在同一行上放置多个语句。</span><span class="sxs-lookup"><span data-stu-id="ceaba-246">Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.</span></span>|  
+|[<span data-ttu-id="ceaba-247">如何：标记语句</span><span class="sxs-lookup"><span data-stu-id="ceaba-247">How to: Label Statements</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|<span data-ttu-id="ceaba-248">演示如何标记代码行。</span><span class="sxs-lookup"><span data-stu-id="ceaba-248">Shows how to label a line of code.</span></span>|

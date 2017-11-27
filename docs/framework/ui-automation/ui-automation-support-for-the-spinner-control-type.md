@@ -1,97 +1,100 @@
 ---
-title: "UI Automation Support for the Spinner Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Spinner control type"
-  - "Spinner control type"
-  - "control types, Spinner"
+title: "UI 自动化对 Spinner 控件类型的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Spinner control type
+- Spinner control type
+- control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 3014b6ecdff8252ae30cd9ca630d081c5952043f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Spinner Control Type
+# <a name="ui-automation-support-for-the-spinner-control-type"></a><span data-ttu-id="652c5-102">UI 自动化对 Spinner 控件类型的支持</span><span class="sxs-lookup"><span data-stu-id="652c5-102">UI Automation Support for the Spinner Control Type</span></span>
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="652c5-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="652c5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="652c5-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="652c5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题提供有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 对于微调控件类型的支持信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
+ <span data-ttu-id="652c5-105">本主题提供有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 对于微调控件类型的支持信息。</span><span class="sxs-lookup"><span data-stu-id="652c5-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Spinner control type.</span></span> <span data-ttu-id="652c5-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。</span><span class="sxs-lookup"><span data-stu-id="652c5-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="652c5-107">这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。</span><span class="sxs-lookup"><span data-stu-id="652c5-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 微调控件用于从项的某个域或数字的某个范围进行选择。  
+ <span data-ttu-id="652c5-108">微调控件用于从项的某个域或数字的某个范围进行选择。</span><span class="sxs-lookup"><span data-stu-id="652c5-108">Spinner controls are used to select from a domain of items or a range of numbers.</span></span>  
   
- 以下几节定义微调控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有微调控件，无论对于 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ <span data-ttu-id="652c5-109">以下几节定义微调控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Spinner control type.</span></span> <span data-ttu-id="652c5-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有微调控件，无论对于 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="652c5-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all spinner controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必需的 UI 自动化树结构  
- 下表描述与支持“范围值”、“值”和“选项”控件模式的微调控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="652c5-111">必需的 UI 自动化树结构</span><span class="sxs-lookup"><span data-stu-id="652c5-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="652c5-112">下表描述与支持“范围值”、“值”和“选项”控件模式的微调控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图可包含的内容。</span><span class="sxs-lookup"><span data-stu-id="652c5-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertain to spinner controls when they support the Range Value, Value, and Selection control patterns and describes what can be contained in each view.</span></span> <span data-ttu-id="652c5-113">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="652c5-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
- **“范围值”或“值”控件模式**  
+ <span data-ttu-id="652c5-114">**“范围值”或“值”控件模式**</span><span class="sxs-lookup"><span data-stu-id="652c5-114">**Range Value or Value control pattern**</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|Spinner<br /><br /> -   Edit（0 个或 1 个）<br />-   Button（2 个）|Spinner|  
+|<span data-ttu-id="652c5-115">控件视图</span><span class="sxs-lookup"><span data-stu-id="652c5-115">Control View</span></span>|<span data-ttu-id="652c5-116">内容视图</span><span class="sxs-lookup"><span data-stu-id="652c5-116">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="652c5-117">Spinner</span><span class="sxs-lookup"><span data-stu-id="652c5-117">Spinner</span></span><br /><br /> <span data-ttu-id="652c5-118">-Edit （0 个或 1）</span><span class="sxs-lookup"><span data-stu-id="652c5-118">-   Edit (0 or 1)</span></span><br /><span data-ttu-id="652c5-119">按钮 (2)</span><span class="sxs-lookup"><span data-stu-id="652c5-119">-   Button (2)</span></span>|<span data-ttu-id="652c5-120">Spinner</span><span class="sxs-lookup"><span data-stu-id="652c5-120">Spinner</span></span>|  
   
- **Selection 控件模式**  
+ <span data-ttu-id="652c5-121">**Selection 控件模式**</span><span class="sxs-lookup"><span data-stu-id="652c5-121">**Selection control pattern**</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|Spinner<br /><br /> -   Edit（0 个或 1 个）<br />-   Button（2 个）<br />-   List Item（0 个或多个）|Spinner<br /><br /> -   ListItem（0 个或多个）|  
+|<span data-ttu-id="652c5-122">控件视图</span><span class="sxs-lookup"><span data-stu-id="652c5-122">Control View</span></span>|<span data-ttu-id="652c5-123">内容视图</span><span class="sxs-lookup"><span data-stu-id="652c5-123">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="652c5-124">Spinner</span><span class="sxs-lookup"><span data-stu-id="652c5-124">Spinner</span></span><br /><br /> <span data-ttu-id="652c5-125">-Edit （0 个或 1）</span><span class="sxs-lookup"><span data-stu-id="652c5-125">-   Edit (0 or 1)</span></span><br /><span data-ttu-id="652c5-126">按钮 (2)</span><span class="sxs-lookup"><span data-stu-id="652c5-126">-   Button (2)</span></span><br /><span data-ttu-id="652c5-127">-List Item （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="652c5-127">-   List Item (0 or more)</span></span>|<span data-ttu-id="652c5-128">Spinner</span><span class="sxs-lookup"><span data-stu-id="652c5-128">Spinner</span></span><br /><br /> <span data-ttu-id="652c5-129">-ListItem （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="652c5-129">-   ListItem (0 or more)</span></span>|  
   
- 若要确保自动化测试工具可以区分控件视图子树中的两个按钮，请相应地指定 `SmallIncrement` 或 `SmallDecrement``AutomationId`。 对于某些实现，相关联的编辑控件可能与微调控件对等。  
+ <span data-ttu-id="652c5-130">若要确保自动化测试工具可以区分控件视图子树中的两个按钮，请相应地指定 `SmallIncrement` 或 `SmallDecrement``AutomationId` 。</span><span class="sxs-lookup"><span data-stu-id="652c5-130">To ensure that the two buttons in the control view subtree can be distinguished by automated test tools, assign the `SmallIncrement` or `SmallDecrement``AutomationId` as appropriate.</span></span> <span data-ttu-id="652c5-131">对于某些实现，相关联的编辑控件可能与微调控件对等。</span><span class="sxs-lookup"><span data-stu-id="652c5-131">For some implementations, the associated Edit control may be a peer of the Spinner control.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与微调控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="652c5-132">必需的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="652c5-132">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="652c5-133">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与微调控件尤其相关。</span><span class="sxs-lookup"><span data-stu-id="652c5-133">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to spinner controls.</span></span> <span data-ttu-id="652c5-134">有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="652c5-134">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|备注|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|微调控件的可单击点将焦点赋予该控件的编辑部分。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|微调控件通常从静态文本标签中获取其名称。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|微调控件具有静态文本标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Spinner|此值对于所有 UI 框架均相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“微调”|与微调控件类型相对应的已本地化字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|微调控件必须始终为内容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|微调控件必须始终为控件。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="652c5-135"> 属性</span><span class="sxs-lookup"><span data-stu-id="652c5-135"> Property</span></span>|<span data-ttu-id="652c5-136">值</span><span class="sxs-lookup"><span data-stu-id="652c5-136">Value</span></span>|<span data-ttu-id="652c5-137">备注</span><span class="sxs-lookup"><span data-stu-id="652c5-137">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="652c5-138">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="652c5-138">See notes.</span></span>|<span data-ttu-id="652c5-139">此属性的值在应用程序的所有控件中都必须保持唯一。</span><span class="sxs-lookup"><span data-stu-id="652c5-139">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="652c5-140">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="652c5-140">See notes.</span></span>|<span data-ttu-id="652c5-141">包含整个控件的最外层矩形。</span><span class="sxs-lookup"><span data-stu-id="652c5-141">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="652c5-142">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="652c5-142">See notes.</span></span>|<span data-ttu-id="652c5-143">微调控件的可单击点将焦点赋予该控件的编辑部分。</span><span class="sxs-lookup"><span data-stu-id="652c5-143">The spinner control's clickable point gives focus to the edit portion of the control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="652c5-144">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="652c5-144">See notes.</span></span>|<span data-ttu-id="652c5-145">如果该控件可以接收键盘焦点，则它必须支持此属性。</span><span class="sxs-lookup"><span data-stu-id="652c5-145">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="652c5-146">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="652c5-146">See notes.</span></span>|<span data-ttu-id="652c5-147">微调控件通常从静态文本标签中获取其名称。</span><span class="sxs-lookup"><span data-stu-id="652c5-147">The spinner control typically gets its name from a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="652c5-148">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="652c5-148">See notes.</span></span>|<span data-ttu-id="652c5-149">微调控件具有静态文本标签。</span><span class="sxs-lookup"><span data-stu-id="652c5-149">Spinner controls have a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="652c5-150">Spinner</span><span class="sxs-lookup"><span data-stu-id="652c5-150">Spinner</span></span>|<span data-ttu-id="652c5-151">此值对于所有 UI 框架均相同。</span><span class="sxs-lookup"><span data-stu-id="652c5-151">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="652c5-152">“微调”</span><span class="sxs-lookup"><span data-stu-id="652c5-152">"spinner"</span></span>|<span data-ttu-id="652c5-153">与微调控件类型相对应的已本地化字符串。</span><span class="sxs-lookup"><span data-stu-id="652c5-153">Localized string corresponding to the Spinner control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="652c5-154">True</span><span class="sxs-lookup"><span data-stu-id="652c5-154">True</span></span>|<span data-ttu-id="652c5-155">微调控件必须始终为内容。</span><span class="sxs-lookup"><span data-stu-id="652c5-155">The spinner control must always be content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="652c5-156">True</span><span class="sxs-lookup"><span data-stu-id="652c5-156">True</span></span>|<span data-ttu-id="652c5-157">微调控件必须始终为控件。</span><span class="sxs-lookup"><span data-stu-id="652c5-157">The Spinner control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
-## 必需的 UI 自动化控件模式和属性  
- 下表列出需要由微调控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns-and-properties"></a><span data-ttu-id="652c5-158">必需的 UI 自动化控件模式和属性</span><span class="sxs-lookup"><span data-stu-id="652c5-158">Required UI Automation Control Patterns and Properties</span></span>  
+ <span data-ttu-id="652c5-159">下表列出需要由微调控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。</span><span class="sxs-lookup"><span data-stu-id="652c5-159">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by spinner controls.</span></span> <span data-ttu-id="652c5-160">有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="652c5-160">For more information about control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控件模式\/模式属性|支持\/值|备注|  
-|----------------|-----------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|视情况而定|具有要选择的项列表的微调控件必须支持此模式。|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|微调控件始终是单选容器。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|视情况而定|跨越数值范围的微调控件可支持此模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|跨越一组离散选项或数字的微调控件可以支持此模式。|  
+|<span data-ttu-id="652c5-161">控件模式/模式属性</span><span class="sxs-lookup"><span data-stu-id="652c5-161">Control Pattern/Pattern Property</span></span>|<span data-ttu-id="652c5-162">支持/值</span><span class="sxs-lookup"><span data-stu-id="652c5-162">Support/Value</span></span>|<span data-ttu-id="652c5-163">备注</span><span class="sxs-lookup"><span data-stu-id="652c5-163">Notes</span></span>|  
+|---------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|<span data-ttu-id="652c5-164">视情况而定</span><span class="sxs-lookup"><span data-stu-id="652c5-164">Depends</span></span>|<span data-ttu-id="652c5-165">具有要选择的项列表的微调控件必须支持此模式。</span><span class="sxs-lookup"><span data-stu-id="652c5-165">Spinner controls that have a list of items to be selected must support this pattern.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|<span data-ttu-id="652c5-166">False</span><span class="sxs-lookup"><span data-stu-id="652c5-166">False</span></span>|<span data-ttu-id="652c5-167">微调控件始终是单选容器。</span><span class="sxs-lookup"><span data-stu-id="652c5-167">Spinner controls are always single selection containers.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="652c5-168">视情况而定</span><span class="sxs-lookup"><span data-stu-id="652c5-168">Depends</span></span>|<span data-ttu-id="652c5-169">跨越数值范围的微调控件可支持此模式。</span><span class="sxs-lookup"><span data-stu-id="652c5-169">Spinner controls that span a numeric range can support this pattern.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="652c5-170">视情况而定</span><span class="sxs-lookup"><span data-stu-id="652c5-170">Depends</span></span>|<span data-ttu-id="652c5-171">跨越一组离散选项或数字的微调控件可以支持此模式。</span><span class="sxs-lookup"><span data-stu-id="652c5-171">Spinner controls that span a discrete set of options or numbers can support this pattern.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必需的 UI 自动化事件  
- 下表列出需要由所有微调控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="652c5-172">必需的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="652c5-172">Required UI Automation Events</span></span>  
+ <span data-ttu-id="652c5-173">下表列出需要由所有微调控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-173">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all spinner controls.</span></span> <span data-ttu-id="652c5-174">有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="652c5-174">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="652c5-175"> 事件</span><span class="sxs-lookup"><span data-stu-id="652c5-175"> Event</span></span>|<span data-ttu-id="652c5-176">支持</span><span class="sxs-lookup"><span data-stu-id="652c5-176">Support</span></span>|<span data-ttu-id="652c5-177">备注</span><span class="sxs-lookup"><span data-stu-id="652c5-177">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|<span data-ttu-id="652c5-178">视情况而定</span><span class="sxs-lookup"><span data-stu-id="652c5-178">Depends</span></span>|<span data-ttu-id="652c5-179">无</span><span class="sxs-lookup"><span data-stu-id="652c5-179">None</span></span>|  
+|<span data-ttu-id="652c5-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="652c5-181">必需</span><span class="sxs-lookup"><span data-stu-id="652c5-181">Required</span></span>|<span data-ttu-id="652c5-182">无</span><span class="sxs-lookup"><span data-stu-id="652c5-182">None</span></span>|  
+|<span data-ttu-id="652c5-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="652c5-184">必需</span><span class="sxs-lookup"><span data-stu-id="652c5-184">Required</span></span>|<span data-ttu-id="652c5-185">无</span><span class="sxs-lookup"><span data-stu-id="652c5-185">None</span></span>|  
+|<span data-ttu-id="652c5-186"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-186"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="652c5-187">必需</span><span class="sxs-lookup"><span data-stu-id="652c5-187">Required</span></span>|<span data-ttu-id="652c5-188">无</span><span class="sxs-lookup"><span data-stu-id="652c5-188">None</span></span>|  
+|<span data-ttu-id="652c5-189"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-189"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="652c5-190">视情况而定</span><span class="sxs-lookup"><span data-stu-id="652c5-190">Depends</span></span>|<span data-ttu-id="652c5-191">无</span><span class="sxs-lookup"><span data-stu-id="652c5-191">None</span></span>|  
+|<span data-ttu-id="652c5-192"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="652c5-192"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="652c5-193">视情况而定</span><span class="sxs-lookup"><span data-stu-id="652c5-193">Depends</span></span>|<span data-ttu-id="652c5-194">无</span><span class="sxs-lookup"><span data-stu-id="652c5-194">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="652c5-195">必需</span><span class="sxs-lookup"><span data-stu-id="652c5-195">Required</span></span>|<span data-ttu-id="652c5-196">无</span><span class="sxs-lookup"><span data-stu-id="652c5-196">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="652c5-197">必需</span><span class="sxs-lookup"><span data-stu-id="652c5-197">Required</span></span>|<span data-ttu-id="652c5-198">无</span><span class="sxs-lookup"><span data-stu-id="652c5-198">None</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Automation.ControlType.Spinner>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="652c5-199">另请参阅</span><span class="sxs-lookup"><span data-stu-id="652c5-199">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Spinner>  
+ [<span data-ttu-id="652c5-200">UI 自动化控件类型概述</span><span class="sxs-lookup"><span data-stu-id="652c5-200">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="652c5-201">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="652c5-201">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

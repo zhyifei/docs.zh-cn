@@ -1,152 +1,130 @@
 ---
-title: "不透明遮罩概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "画笔, 不透明蒙板"
-  - "蒙板, 不透明度"
-  - "不透明度, 蒙板"
+title: "不透明蒙板概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- brushes [WPF], opacity masks
+- masks [WPF], opacity
+- opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6cd077d1e24fa50dc42a2169b45fe38930cc76c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 不透明遮罩概述
-使用不透明蒙板，您可以使某个元素或 visual 类的某些部分呈现出透明或部分透明的效果。  若要创建不透明蒙板，请将 <xref:System.Windows.Media.Brush> 应用到元素或 <xref:System.Windows.Media.Visual> 的 <xref:System.Windows.UIElement.OpacityMask%2A> 属性。  将画笔映射到元素或 visual 类，每个画笔像素的不透明度值用于确定对应的元素或 visual 类像素的不透明度值。  
-  
- 本主题包括以下部分。  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [必备组件](#prereqs)  
-  
--   [使用不透明蒙板创建可视化效果](#opacitymasks)  
-  
--   [创建不透明蒙板](#creatingopacitymasks)  
-  
--   [将渐变用作不透明蒙板](#creatingopacitymaskswithgradients)  
-  
--   [为不透明蒙板指定渐变停止点](#specifyinggradientcolors)  
-  
--   [将图像用作不透明蒙板](#usingimageasopacitymask)  
-  
--   [根据绘图创建不透明蒙板](#drawingbrushasopacitymask)  
-  
--   [相关主题](#seeAlsoToggle)  
+# <a name="opacity-masks-overview"></a><span data-ttu-id="b9810-102">不透明蒙板概述</span><span class="sxs-lookup"><span data-stu-id="b9810-102">Opacity Masks Overview</span></span>
+<span data-ttu-id="b9810-103">不透明蒙板能够使部分元素或视觉对象透明或部分透明。</span><span class="sxs-lookup"><span data-stu-id="b9810-103">Opacity masks enable you to make portions of an element or visual either transparent or partially transparent.</span></span> <span data-ttu-id="b9810-104">若要创建不透明蒙板，则应用<xref:System.Windows.Media.Brush>到<xref:System.Windows.UIElement.OpacityMask%2A>元素的属性或<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="b9810-104">To create an opacity mask, you apply a <xref:System.Windows.Media.Brush> to the <xref:System.Windows.UIElement.OpacityMask%2A> property of an element or <xref:System.Windows.Media.Visual>.</span></span>  <span data-ttu-id="b9810-105">画笔映射到元素或视觉对象，并且画笔的每个像素的不透明度值用于确定生成的元素或视觉对象的每个相应像素的不透明度。</span><span class="sxs-lookup"><span data-stu-id="b9810-105">The brush is mapped to the element or visual, and the opacity value of each brush pixel is used to determine the resulting opacity of each corresponding pixel of the element or visual.</span></span>  
   
 <a name="prereqs"></a>   
-## 必备组件  
- 本概述假定您熟悉 <xref:System.Windows.Media.Brush> 对象。  有关画笔用法的介绍，请参见[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  有关 <xref:System.Windows.Media.ImageBrush> 和 <xref:System.Windows.Media.DrawingBrush> 的信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="b9810-106">先决条件</span><span class="sxs-lookup"><span data-stu-id="b9810-106">Prerequisites</span></span>  
+ <span data-ttu-id="b9810-107">本概述假定你熟悉<xref:System.Windows.Media.Brush>对象。</span><span class="sxs-lookup"><span data-stu-id="b9810-107">This overview assumes that you are familiar with <xref:System.Windows.Media.Brush> objects.</span></span> <span data-ttu-id="b9810-108">有关使用画笔的介绍，请参阅[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="b9810-108">For an introduction to using brushes, see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span> <span data-ttu-id="b9810-109">璝惠<xref:System.Windows.Media.ImageBrush>和<xref:System.Windows.Media.DrawingBrush>，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="b9810-109">For information about <xref:System.Windows.Media.ImageBrush> and <xref:System.Windows.Media.DrawingBrush>, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="opacitymasks"></a>   
-## 使用不透明蒙板创建可视化效果  
- 不透明蒙板通过将其内容映射到元素或 visual 类来发挥作用。  然后，使用各画笔像素的 [alpha 通道](GTMT)确定元素或 visual 类的相应像素的不透明度值，并忽略画笔的实际颜色。  如果画笔的指定部分是透明的，则元素或 visual 类的相应部分也将变成透明的。  如果画笔的指定部分是不透明的，则元素或 visual 类的相应部分的不透明度保持不变。  应将不透明蒙板指定的不透明度与元素或 visual 类中存在的任何不透明度设置结合使用。  例如，如果元素的不透明度值为 25%，并且应用的不透明蒙板从完全不透明过渡到完全透明，则元素会从 25% 不透明过渡到完全透明。  
+## <a name="creating-visual-effects-with-opacity-masks"></a><span data-ttu-id="b9810-110">使用不透明蒙板创建视觉效果</span><span class="sxs-lookup"><span data-stu-id="b9810-110">Creating Visual Effects with Opacity Masks</span></span>  
+ <span data-ttu-id="b9810-111">不透明蒙板的工作原理是将其内容映射到元素或视觉对象。</span><span class="sxs-lookup"><span data-stu-id="b9810-111">An opacity mask works by mapping its contents to the element or visual.</span></span> <span data-ttu-id="b9810-112">画笔像素的 alpha 通道则用于确定生成的元素或视觉对象相应像素的不透明度；将忽略画笔的实际颜色。</span><span class="sxs-lookup"><span data-stu-id="b9810-112">The alpha channel of each of the brush's pixels are then used to determine the resulting opacity of the element or visual's corresponding pixels; the actual color of the brush is ignored.</span></span> <span data-ttu-id="b9810-113">如果画笔的指定部分是透明的，则元素或视觉对象的相应部分将变为透明。</span><span class="sxs-lookup"><span data-stu-id="b9810-113">If a given portion of the brush is transparent, the corresponding portion of the element or visual becomes transparent.</span></span> <span data-ttu-id="b9810-114">如果画笔的指定部分是不透明的，则元素或视觉对象的相应部分未改变。</span><span class="sxs-lookup"><span data-stu-id="b9810-114">If a given portion of the brush is opaque, the opacity of the corresponding portion of the element or visual is unchanged.</span></span> <span data-ttu-id="b9810-115">不透明蒙板指定的不透明度与元素或视觉对象呈现的任何不透明度设置相结合。</span><span class="sxs-lookup"><span data-stu-id="b9810-115">The opacity specified by the opacity mask is combined with any opacity settings present in the element or visual.</span></span> <span data-ttu-id="b9810-116">例如：如果某个元素的不透明度是 25% 并且从完全不透明过渡完全透明时应用不透明蒙板，结果是元素从 25% 的不透明过渡到完全透明。</span><span class="sxs-lookup"><span data-stu-id="b9810-116">For example, if an element is 25 percent opaque and an opacity mask is applied that transitions from fully opaque to fully transparent, the result is an element that transitions from 25 percent opacity to fully transparent.</span></span>  
   
 > [!NOTE]
->  本概述中的示例只演示了如何将不透明蒙板应用到图像元素，而事实上，可以将它应用到任何元素或 <xref:System.Windows.Media.Visual>，包括各种面板和控件。  
+>  <span data-ttu-id="b9810-117">尽管本概述中的示例演示如何在图像元素上的不透明蒙板的但不透明蒙板可以应用于任何元素或<xref:System.Windows.Media.Visual>，包括面板和控件。</span><span class="sxs-lookup"><span data-stu-id="b9810-117">Although the examples in this overview demonstrate the use of opacity masks on image elements, an opacity mask may be applied to any element or <xref:System.Windows.Media.Visual>, including panels and controls.</span></span>  
   
- 不透明蒙板可用来创建各种各样有趣的可视化效果，例如创建逐渐从视野中消失的图像或按钮、向元素中添加纹理或者结合渐变制造出玻璃般的图面。  下面的插图演示不透明蒙板的用法：  方格形背景用于显示蒙板的透明部分。  
+ <span data-ttu-id="b9810-118">不透明蒙板用于创建有趣的视觉效果，如创建从视图淡入淡出的图像或按钮、向元素添加纹理或结合渐变产生玻璃般的图面。</span><span class="sxs-lookup"><span data-stu-id="b9810-118">Opacity masks are used to create interesting visual effects, such as to create images or buttons that fade from view, to add textures to elements, or to combine gradients to produce glass-like surfaces.</span></span> <span data-ttu-id="b9810-119">以下图示演示了不透明蒙板的使用。</span><span class="sxs-lookup"><span data-stu-id="b9810-119">The following illustration demonstrates the use of an opacity mask.</span></span> <span data-ttu-id="b9810-120">棋盘格的背景用于显示蒙板的透明部分。</span><span class="sxs-lookup"><span data-stu-id="b9810-120">A checkered background is used to show the transparent portions of the mask.</span></span>  
   
- ![具有 LinearGradientBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk\_graphicsmm\_opacitymask\_imageexample")  
-不透明蒙板示例  
+ <span data-ttu-id="b9810-121">![具有 LinearGradientBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")</span><span class="sxs-lookup"><span data-stu-id="b9810-121">![Object with a LinearGradientBrush opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")</span></span>  
+<span data-ttu-id="b9810-122">不透明蒙板示例</span><span class="sxs-lookup"><span data-stu-id="b9810-122">Opacity masking example</span></span>  
   
 <a name="creatingopacitymasks"></a>   
-## 创建不透明蒙板  
- 若要创建不透明蒙板，请创建一个 <xref:System.Windows.Media.Brush> 并将其应用到元素或 visual 类的 <xref:System.Windows.UIElement.OpacityMask%2A> 属性。  可以将任何类型的 <xref:System.Windows.Media.Brush> 用作不透明蒙板。  
+## <a name="creating-an-opacity-mask"></a><span data-ttu-id="b9810-123">创建不透明蒙板</span><span class="sxs-lookup"><span data-stu-id="b9810-123">Creating an Opacity Mask</span></span>  
+ <span data-ttu-id="b9810-124">若要创建不透明蒙板，你可以创建<xref:System.Windows.Media.Brush>和将其应用于<xref:System.Windows.UIElement.OpacityMask%2A>的元素或视觉对象的属性。</span><span class="sxs-lookup"><span data-stu-id="b9810-124">To create an opacity mask, you create a <xref:System.Windows.Media.Brush> and apply it to the <xref:System.Windows.UIElement.OpacityMask%2A> property of an element or visual.</span></span> <span data-ttu-id="b9810-125">你可以使用任何一种<xref:System.Windows.Media.Brush>作为不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-125">You can use any type of <xref:System.Windows.Media.Brush> as an opacity mask.</span></span>  
   
--   <xref:System.Windows.Media.LinearGradientBrush>、<xref:System.Windows.Media.RadialGradientBrush>：用来使元素或 visual 类逐渐从视野中消失。  
+-   <span data-ttu-id="b9810-126"><xref:System.Windows.Media.LinearGradientBrush><xref:System.Windows.Media.RadialGradientBrush>： 用于将元素或从视图 visual 淡入淡出。</span><span class="sxs-lookup"><span data-stu-id="b9810-126"><xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Used to make an element or visual fade from view.</span></span>  
   
-     下面的图像显示了将 <xref:System.Windows.Media.LinearGradientBrush> 用作不透明蒙板的效果。  
+     <span data-ttu-id="b9810-127">下图显示<xref:System.Windows.Media.LinearGradientBrush>用作不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-127">The following image shows a <xref:System.Windows.Media.LinearGradientBrush> used as an opacity mask.</span></span>  
   
-     ![具有 LinearGradientBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.png "wcpsdk\_graphicsmm\_brushes\_lineagradientopacitymasksingle")  
-LinearGradientBrush 不透明蒙板示例  
+     <span data-ttu-id="b9810-128">![具有 LinearGradientBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")</span><span class="sxs-lookup"><span data-stu-id="b9810-128">![An object with an LinearGradientBrush opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")</span></span>  
+<span data-ttu-id="b9810-129">LinearGradientBrush 不透明蒙板示例</span><span class="sxs-lookup"><span data-stu-id="b9810-129">LinearGradientBrush Opacity Masking Example</span></span>  
   
--   <xref:System.Windows.Media.ImageBrush>：用来创建纹理和制造柔化或撕裂边缘效果。  
+-   <span data-ttu-id="b9810-130"><xref:System.Windows.Media.ImageBrush>： 用于创建纹理和软或残缺边缘造成影响。</span><span class="sxs-lookup"><span data-stu-id="b9810-130"><xref:System.Windows.Media.ImageBrush>: Used to create texture and soft or torn edge effects.</span></span>  
   
-     下面的图像显示了将 <xref:System.Windows.Media.ImageBrush> 用作不透明蒙板的效果。  
+     <span data-ttu-id="b9810-131">下图显示<xref:System.Windows.Media.ImageBrush>用作不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-131">The following image shows an <xref:System.Windows.Media.ImageBrush> used as an opacity mask.</span></span>  
   
-     ![具有 ImageBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.png "wcpsdk\_graphicsmm\_brushes\_imageasopacitymasksingle")  
-LinearGradientBrush 不透明蒙板示例  
+     <span data-ttu-id="b9810-132">![具有 ImageBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")</span><span class="sxs-lookup"><span data-stu-id="b9810-132">![Object that has an ImageBrush opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")</span></span>  
+<span data-ttu-id="b9810-133">LinearGradientBrush 不透明蒙板示例</span><span class="sxs-lookup"><span data-stu-id="b9810-133">LinearGradientBrush opacity masking example</span></span>  
   
--   <xref:System.Windows.Media.DrawingBrush>：用来根据各种模式的形状、图像和渐变创建复杂的不透明蒙板。  
+-   <span data-ttu-id="b9810-134"><xref:System.Windows.Media.DrawingBrush>： 用于创建复杂的不透明蒙板从形状、 图像和渐变的模式。</span><span class="sxs-lookup"><span data-stu-id="b9810-134"><xref:System.Windows.Media.DrawingBrush>: Used to create complex opacity masks from patterns of shapes, images, and gradients.</span></span>  
   
-     下面的图像显示了将 <xref:System.Windows.Media.DrawingBrush> 用作不透明蒙板的效果。  
+     <span data-ttu-id="b9810-135">下图显示<xref:System.Windows.Media.DrawingBrush>用作不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-135">The following image shows a <xref:System.Windows.Media.DrawingBrush> used as an opacity mask.</span></span>  
   
-     ![具有 DrawingBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.png "wcpsdk\_drawingbrushasopacitymask\_single")  
-DrawingBrush 不透明蒙板示例  
+     <span data-ttu-id="b9810-136">![具有 DrawingBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")</span><span class="sxs-lookup"><span data-stu-id="b9810-136">![Object with a DrawingBrush opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")</span></span>  
+<span data-ttu-id="b9810-137">DrawingBrush 不透明蒙板示例</span><span class="sxs-lookup"><span data-stu-id="b9810-137">DrawingBrush opacity masking example</span></span>  
   
- 渐变画笔（<xref:System.Windows.Media.LinearGradientBrush> 和 <xref:System.Windows.Media.RadialGradientBrush>）非常适合于用作不透明蒙板。  因为 <xref:System.Windows.Media.SolidColorBrush> 将区域填充为统一的颜色，因此其不透明蒙板效果较弱；使用 <xref:System.Windows.Media.SolidColorBrush> 的效果相当于设置元素或 visual 类的 <xref:System.Windows.UIElement.OpacityMask%2A> 属性。  
+ <span data-ttu-id="b9810-138">渐变画刷 (<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>) 是非常适合用作不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-138">The gradient brushes (<xref:System.Windows.Media.LinearGradientBrush> and <xref:System.Windows.Media.RadialGradientBrush>) are particularly well-suited for use as an opacity mask.</span></span> <span data-ttu-id="b9810-139">因为<xref:System.Windows.Media.SolidColorBrush>将区域统一的颜色填充，它们使较差的不透明度屏蔽; 使用<xref:System.Windows.Media.SolidColorBrush>等同于将设置的元素的或视觉对象的<xref:System.Windows.UIElement.OpacityMask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="b9810-139">Because a <xref:System.Windows.Media.SolidColorBrush> fills an area with a uniform color, they make poor opacity masks; using a <xref:System.Windows.Media.SolidColorBrush> is equivalent to setting the element's or visual's <xref:System.Windows.UIElement.OpacityMask%2A> property.</span></span>  
   
 <a name="creatingopacitymaskswithgradients"></a>   
-## 将渐变用作不透明蒙板  
- 若要创建渐变填充，请指定两个或多个渐变停止点。  每个渐变停止点都包含并描述了一种颜色和一个位置（有关创建和使用渐变的更多信息，请参见[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)）。  此过程与将渐变用作不透明蒙板类似，所不同的是，此处不透明蒙板渐变混合 alpha 通道值，而不是混合颜色。  因此，渐变内容的实际颜色无关紧要，只有各种颜色的 alpha 通道或不透明度才是比较重要的。  下面是一个示例。  
+## <a name="using-a-gradient-as-an-opacity-mask"></a><span data-ttu-id="b9810-140">将渐变用作不透明蒙板</span><span class="sxs-lookup"><span data-stu-id="b9810-140">Using a Gradient as an Opacity Mask</span></span>  
+ <span data-ttu-id="b9810-141">要创建渐变填充，请指定两个或多个梯度停止点。</span><span class="sxs-lookup"><span data-stu-id="b9810-141">To create a gradient fill, you specify two or more gradient stops.</span></span> <span data-ttu-id="b9810-142">每个渐变停止点包含描述一种颜色和位置（请参阅[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)了解关于创建和使用渐变的更多信息）。</span><span class="sxs-lookup"><span data-stu-id="b9810-142">Each gradient stop contains describes a color and a position (see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) for more information about creating and using gradients).</span></span> <span data-ttu-id="b9810-143">将渐变用作不透明蒙板时，除非不使用混合颜色，由不透明蒙板渐变混合 alpha 通道值，否则过程相同。</span><span class="sxs-lookup"><span data-stu-id="b9810-143">The process is the same when using a gradient as an opacity mask, except that, instead of blending colors, the opacity mask gradient blends alpha channel values.</span></span> <span data-ttu-id="b9810-144">因此，渐变内容的实际颜色并不重要；只有 alpha 通道或每种颜色的不透明度很重要。</span><span class="sxs-lookup"><span data-stu-id="b9810-144">So the actual color of the gradient's contents do not matter; only the alpha channel, or opacity, of each color matters.</span></span> <span data-ttu-id="b9810-145">下面是一个示例。</span><span class="sxs-lookup"><span data-stu-id="b9810-145">The following is an example.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->  
+ [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
   
 <a name="specifyinggradientcolors"></a>   
-## 为不透明蒙板指定渐变停止点  
- 在上面的示例中，系统定义的颜色 <xref:System.Windows.Media.Colors.Black%2A> 用作渐变的开始颜色。  由于 <xref:System.Windows.Media.Colors> 类中除 <xref:System.Windows.Media.Colors.Transparent%2A> 之外的所有颜色都是完全不透明的，因此可以将这些颜色用来定义渐变不透明蒙板的开始颜色。  
+## <a name="specifying-gradient-stops-for-an-opacity-mask"></a><span data-ttu-id="b9810-146">为不透明蒙板指定梯度停止点</span><span class="sxs-lookup"><span data-stu-id="b9810-146">Specifying Gradient Stops for an Opacity Mask</span></span>  
+ <span data-ttu-id="b9810-147">在前面的示例中，系统定义的颜色<xref:System.Windows.Media.Colors.Black%2A>用作渐变的起始颜色。</span><span class="sxs-lookup"><span data-stu-id="b9810-147">In the previous example, the system-defined color <xref:System.Windows.Media.Colors.Black%2A> is used as the starting color of the gradient.</span></span> <span data-ttu-id="b9810-148">因为所有中的颜色<xref:System.Windows.Media.Colors>类，除了<xref:System.Windows.Media.Colors.Transparent%2A>，是完全不透明，它们可以用于只需定义渐变的不透明蒙版的起始颜色。</span><span class="sxs-lookup"><span data-stu-id="b9810-148">Because all of the colors in the <xref:System.Windows.Media.Colors> class, except <xref:System.Windows.Media.Colors.Transparent%2A>, are fully opaque, they can be used to simply define a starting color for a gradient opacity mask.</span></span>  
   
- 对于在定义不透明蒙板时对 alpha 值其他控制，可以使用标记中的 [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] 十六进制表示法或使用 <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=fullName> 方法指定颜色的 alpha 通道。  
+ <span data-ttu-id="b9810-149">对于其他控制 alpha 值定义不透明蒙板时，你可以指定使用的颜色的 alpha 通道[!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)]在标记中或使用十六进制表示法<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="b9810-149">For additional control over alpha values when defining an opacity mask, you can specify the alpha channel of colors using [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] hexadecimal notation in markup or using the <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> method.</span></span>  
   
 <a name="argbsyntax"></a>   
-### 在“XAML”中指定颜色的不透明度  
- 在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定各颜色的不透明度。  [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用以下语法：  
+### <a name="specifying-color-opacity-in-xaml"></a><span data-ttu-id="b9810-150">在“XAML”中指定颜色不透明度</span><span class="sxs-lookup"><span data-stu-id="b9810-150">Specifying Color Opacity in "XAML"</span></span>  
+ <span data-ttu-id="b9810-151">在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。</span><span class="sxs-lookup"><span data-stu-id="b9810-151">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you use  [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] hexadecimal notation to specify the opacity of individual colors.</span></span> [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]<span data-ttu-id="b9810-152"> 十六进制表示法使用下面语法：</span><span class="sxs-lookup"><span data-stu-id="b9810-152"> hexadecimal notation uses the following syntax:</span></span>  
   
- `#`**aa** *rrggbb*  
+ <span data-ttu-id="b9810-153">`#` **aa** *rrggbb*</span><span class="sxs-lookup"><span data-stu-id="b9810-153">`#` **aa** *rrggbb*</span></span>  
   
- 上一行中的 *aa* 表示用于指定颜色的不透明度的两位十六进制值。  *rr*、*gg* 和 *bb* 分别表示用于指定颜色中的红色分量、绿色分量和蓝色分量的两位十六进制值。  每个十六进制数字都是 0\-9 或 A\-F 中的一个值。  其中 0 是最小值，F 是最大值。  Alpha 值 00 用于指定完全透明的颜色，而 alpha 值 FF 用于建完全不透明的颜色。  在下面的示例中，使用十六进制 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 表示法来指定两种颜色。  第一种是完全不透明的，第二种是完全透明的。  
+ <span data-ttu-id="b9810-154">上一行中的 *aa* 表示用于指定颜色不透明度的两位十六进制值。</span><span class="sxs-lookup"><span data-stu-id="b9810-154">The *aa* in the previous line represents a two-digit hexadecimal value used to specify the opacity of the color.</span></span> <span data-ttu-id="b9810-155">*rr*、*gg* 和 *bb* 分别表示用于指定颜色中的红色、绿色和蓝色量的两位十六进制值。</span><span class="sxs-lookup"><span data-stu-id="b9810-155">The *rr*, *gg*, and *bb* each represent a two digit hexadecimal value used to specify the amount of red, green, and blue in the color.</span></span> <span data-ttu-id="b9810-156">每个十六进制数字介于 0-9 或 A-F 之间。</span><span class="sxs-lookup"><span data-stu-id="b9810-156">Each hexadecimal digit may have a value from 0-9 or A-F.</span></span> <span data-ttu-id="b9810-157">0 是最小值，F 是最大值。</span><span class="sxs-lookup"><span data-stu-id="b9810-157">0 is the smallest value, and F is the greatest.</span></span> <span data-ttu-id="b9810-158">00 的 alpha 值指定完全透明的颜色，而 FF 的 alpha 值创建完全不透明的颜色。</span><span class="sxs-lookup"><span data-stu-id="b9810-158">An alpha value of 00 specifies a color that is completely transparent, while an alpha value of FF creates a color that is fully opaque.</span></span>  <span data-ttu-id="b9810-159">在下面的示例中，十六进制 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 表示法用于指定两种颜色。</span><span class="sxs-lookup"><span data-stu-id="b9810-159">In the following example, hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notation is used to specify two colors.</span></span> <span data-ttu-id="b9810-160">第一种为完全不透明色，第二种为完全透明色。</span><span class="sxs-lookup"><span data-stu-id="b9810-160">The first is fully opaque, while the second is completely transparent.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->  
+ [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
 <a name="usingimageasopacitymask"></a>   
-## 将图像用作不透明蒙板  
- 图像也可用作不透明蒙板。  下面的图像就是一个很好的例子。  方格形背景用于显示蒙板的透明部分。  
+## <a name="using-an-image-as-an-opacity-mask"></a><span data-ttu-id="b9810-161">将图像用作不透明蒙板</span><span class="sxs-lookup"><span data-stu-id="b9810-161">Using an Image as an Opacity Mask</span></span>  
+ <span data-ttu-id="b9810-162">图像也可以用作不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-162">Images can also be used as an opacity mask.</span></span> <span data-ttu-id="b9810-163">下面的图像显示了一个示例。</span><span class="sxs-lookup"><span data-stu-id="b9810-163">The following image shows an example.</span></span> <span data-ttu-id="b9810-164">棋盘格的背景用于显示蒙板的透明部分。</span><span class="sxs-lookup"><span data-stu-id="b9810-164">A checkered background is used to show the transparent portions of the mask.</span></span>  
   
- ![具有 ImageBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk\_graphicsmm\_imageasopacitymask")  
-不透明蒙板示例  
+ <span data-ttu-id="b9810-165">![具有 ImageBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")</span><span class="sxs-lookup"><span data-stu-id="b9810-165">![An object with an ImageBrush opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")</span></span>  
+<span data-ttu-id="b9810-166">不透明蒙板示例</span><span class="sxs-lookup"><span data-stu-id="b9810-166">Opacity masking example</span></span>  
   
- 若要将图像用作不透明蒙板，请使用 <xref:System.Windows.Media.ImageBrush> 以包含图像。  创建作为不透明蒙板使用的图像时，请将图像保存为支持多个透明度级别的格式，如[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]。  下面的示例演示了用于创建上述效果的代码。  
+ <span data-ttu-id="b9810-167">若要使用映像作为不透明蒙板，请使用<xref:System.Windows.Media.ImageBrush>来包含映像。</span><span class="sxs-lookup"><span data-stu-id="b9810-167">To use an image as an opacity mask, use an <xref:System.Windows.Media.ImageBrush> to contain the image.</span></span> <span data-ttu-id="b9810-168">创建要用作不透明蒙板的图像时，以支持多级别不透明度的格式保存图像，例如 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b9810-168">When creating an image to be used as an opacity mask, save the image in a format that supports multiple levels of transparency, such as [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)].</span></span> <span data-ttu-id="b9810-169">下面的示例显示了用于创建上图的代码。</span><span class="sxs-lookup"><span data-stu-id="b9810-169">The following example shows the code used to create the previous illustration.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]  -->
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  -->  
+ [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
 <a name="tilingimageopacitymask"></a>   
-### 将平铺的图像用作不透明蒙板  
- 在下面的示例中，通过另一个 <xref:System.Windows.Media.ImageBrush> 来利用同一图像，但是还利用了该画笔的平铺功能来生成图像为 50 像素的正方形的平铺效果。  
+### <a name="using-a-tiled-image-as-an-opacity-mask"></a><span data-ttu-id="b9810-170">将平铺图像用作不透明蒙板</span><span class="sxs-lookup"><span data-stu-id="b9810-170">Using a Tiled Image as an Opacity Mask</span></span>  
+ <span data-ttu-id="b9810-171">在下面的示例中，同一个映像使用与另一个<xref:System.Windows.Media.ImageBrush>，但画笔的平铺功能用于生成磁贴的图像为 50 像素的正方形。</span><span class="sxs-lookup"><span data-stu-id="b9810-171">In the following example, the same image is used with another <xref:System.Windows.Media.ImageBrush>, but the brush's tiling features are used to produce tiles of the image 50 pixels square.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->  
+ [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
 <a name="drawingbrushasopacitymask"></a>   
-## 根据绘图创建不透明蒙板  
- 绘图也可用作不透明蒙板。  绘图内包含的形状本身可以使用渐变、纯色、图像甚至其他绘图来填充。  下面的图像举例说明了将绘图用作不透明蒙板的效果。  方格形背景用于显示蒙板的透明部分。  
+## <a name="creating-an-opacity-mask-from-a-drawing"></a><span data-ttu-id="b9810-172">通过图形创建不透明蒙板</span><span class="sxs-lookup"><span data-stu-id="b9810-172">Creating an Opacity Mask from a Drawing</span></span>  
+ <span data-ttu-id="b9810-173">图形可用作不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-173">Drawings can be used an opacity mask.</span></span> <span data-ttu-id="b9810-174">图形中包含的形状可使用渐变、纯色、图像或甚至其他图形来填充它们自己。</span><span class="sxs-lookup"><span data-stu-id="b9810-174">The shapes contained within the drawing can themselves be filled with gradients, solid colors, images, or even other drawings.</span></span> <span data-ttu-id="b9810-175">下面的图像显示了图形用作不透明蒙板的示例。</span><span class="sxs-lookup"><span data-stu-id="b9810-175">The following image shows an example of a drawing used as an opacity mask.</span></span> <span data-ttu-id="b9810-176">棋盘格的背景用于显示蒙板的透明部分。</span><span class="sxs-lookup"><span data-stu-id="b9810-176">A checkered background is used to show the transparent portions of the mask.</span></span>  
   
- ![具有 DrawingBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk\_drawingbrushasopacitymask")  
-DrawingBrush 不透明蒙板示例  
+ <span data-ttu-id="b9810-177">![具有 DrawingBrush 不透明蒙版的对象](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")</span><span class="sxs-lookup"><span data-stu-id="b9810-177">![An object with a DrawingBrush opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")</span></span>  
+<span data-ttu-id="b9810-178">DrawingBrush 不透明蒙板示例</span><span class="sxs-lookup"><span data-stu-id="b9810-178">DrawingBrush opacity masking example</span></span>  
   
- 若要将绘图用作不透明蒙板，请使用 <xref:System.Windows.Media.DrawingBrush> 以包含绘图。  下面的示例演示了用于创建上述效果的代码：  
+ <span data-ttu-id="b9810-179">若要使用作为不透明蒙绘图，使用<xref:System.Windows.Media.DrawingBrush>以包含绘图。</span><span class="sxs-lookup"><span data-stu-id="b9810-179">To use a drawing as an opacity mask, use a <xref:System.Windows.Media.DrawingBrush> to contain the drawing.</span></span> <span data-ttu-id="b9810-180">下面的示例显示了用于创建上图的代码：</span><span class="sxs-lookup"><span data-stu-id="b9810-180">The following example shows the code used to create the previous illustration:</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->  
+ [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
 <a name="tileddrawingbrush"></a>   
-### 将平铺的绘图用作不透明蒙板  
- 与 <xref:System.Windows.Media.ImageBrush> 相同，<xref:System.Windows.Media.DrawingBrush> 也可用来平铺其绘图。  在下面的示例中，绘图画笔用于创建平铺的不透明蒙板。  
+### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a><span data-ttu-id="b9810-181">将平铺图形用作不透明蒙板</span><span class="sxs-lookup"><span data-stu-id="b9810-181">Using a Tiled Drawing as an Opacity Mask</span></span>  
+ <span data-ttu-id="b9810-182">如<xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush>可设为平铺其绘图。</span><span class="sxs-lookup"><span data-stu-id="b9810-182">Like the <xref:System.Windows.Media.ImageBrush>, the <xref:System.Windows.Media.DrawingBrush> can be made to tile its drawing.</span></span> <span data-ttu-id="b9810-183">在下面的示例中，图形画笔用于创建平铺的不透明蒙板。</span><span class="sxs-lookup"><span data-stu-id="b9810-183">In the following example, a drawing brush is used to create a tiled opacity mask.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->
- <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->  
+ [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
-## 请参阅  
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b9810-184">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b9810-184">See Also</span></span>  
+ [<span data-ttu-id="b9810-185">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="b9810-185">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="b9810-186">使用纯色和渐变进行绘制概述</span><span class="sxs-lookup"><span data-stu-id="b9810-186">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

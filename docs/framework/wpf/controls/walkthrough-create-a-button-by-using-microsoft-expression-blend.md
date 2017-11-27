@@ -1,262 +1,265 @@
 ---
-title: "演练：使用 Microsoft Expression Blend 创建按钮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "按钮"
-  - "转换, 将形状转换为按钮"
-  - "Expression Blend [WPF 设计器]"
+title: "演练：使用 Microsoft Expression Blend 创建按钮"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- buttons [WPF]
+- converting [WPF], shape to button
+- Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1371fdc3582e2ebe052442b15ecb2d5cf0b2865a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：使用 Microsoft Expression Blend 创建按钮
-本演练逐步引导您完成使用 Microsoft Expression Blend 创建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 自定义按钮的过程。  
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a><span data-ttu-id="95c96-102">演练：使用 Microsoft Expression Blend 创建按钮</span><span class="sxs-lookup"><span data-stu-id="95c96-102">Walkthrough: Create a Button by Using Microsoft Expression Blend</span></span>
+<span data-ttu-id="95c96-103">本演练将引导你完成创建过程[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自定义的按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-103">This walkthrough steps you through the process of creating a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] customized button using Microsoft Expression Blend.</span></span>  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend 的工作方式是：生成以后编译为可执行程序的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  如果希望直接使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，则可以使用另一个演练，后者的具体操作为在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]（而不是 Blend）中使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 创建与本演练相同的应用程序。  有关更多信息，请参见[使用 XAML 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)。  
+>  <span data-ttu-id="95c96-104">Microsoft Expression Blend 的工作原理是生成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]然后编译以使可执行程序。</span><span class="sxs-lookup"><span data-stu-id="95c96-104">Microsoft Expression Blend works by generating [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] that is then compiled to make the executable program.</span></span> <span data-ttu-id="95c96-105">如果你想使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]直接，没有创建一个使用此条件的应用程序的另一个演练[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]与[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]而不是 Blend。</span><span class="sxs-lookup"><span data-stu-id="95c96-105">If you would rather work with [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] directly, there is another walkthrough that creates the same application as this one using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] with [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] rather than Blend.</span></span> <span data-ttu-id="95c96-106">请参阅[创建使用 xaml 按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="95c96-106">See [Create a Button by Using XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) for more information.</span></span>  
   
- 下图演示了您将创建的自定义按钮。  
+ <span data-ttu-id="95c96-107">下图显示的自定义的按钮，你将要创建。</span><span class="sxs-lookup"><span data-stu-id="95c96-107">The following illustration shows the customized button that you will create.</span></span>  
   
- ![你将创建的自定义按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.png "custom\_button\_blend\_Intro")  
+ <span data-ttu-id="95c96-108">![你将创建的自定义的按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")</span><span class="sxs-lookup"><span data-stu-id="95c96-108">![The customized button that you will create](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")</span></span>  
   
-## 将形状转换为按钮  
- 在本演练的第一部分，您将创建自定义按钮的自定义外观。  为此，首先将一个矩形转换为按钮。  然后将其他形状添加到按钮模板，以创建一个外观更复杂的按钮。  为什么不从矩形按钮开始并对其进行自定义呢？  这是因为按钮具有您不需要的内置功能；因而对于自定义按钮，从矩形开始更简单些。  
+## <a name="convert-a-shape-to-a-button"></a><span data-ttu-id="95c96-109">将形状转换至一个按钮</span><span class="sxs-lookup"><span data-stu-id="95c96-109">Convert a Shape to a Button</span></span>  
+ <span data-ttu-id="95c96-110">在本演练的第一部分中，你将创建自定义按钮的自定义外观。</span><span class="sxs-lookup"><span data-stu-id="95c96-110">In the first part of this walkthrough you create the custom look of the custom button.</span></span> <span data-ttu-id="95c96-111">若要执行此操作，你首先将矩形转换至一个按钮中。</span><span class="sxs-lookup"><span data-stu-id="95c96-111">To do this, you first convert a rectangle to a button.</span></span> <span data-ttu-id="95c96-112">然后添加其他形状到此按钮时，模板创建更复杂的查找按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-112">You then add additional shapes to the template of the button, creating a more complex looking button.</span></span> <span data-ttu-id="95c96-113">为什么不开头于常规按钮和自定义它？</span><span class="sxs-lookup"><span data-stu-id="95c96-113">Why not start with a regular button and customize it?</span></span> <span data-ttu-id="95c96-114">是因为按钮具有不需要; 的内置功能对于自定义按钮，很容易地开头矩形。</span><span class="sxs-lookup"><span data-stu-id="95c96-114">Because a button has built-in functionality that you do not need; for custom buttons, it is easier to start with a rectangle.</span></span>  
   
-#### 在 Expression Blend 中创建新项目  
+#### <a name="to-create-a-new-project-in-expression-blend"></a><span data-ttu-id="95c96-115">在 Expression Blend 中创建新项目</span><span class="sxs-lookup"><span data-stu-id="95c96-115">To create a new project in Expression Blend</span></span>  
   
-1.  启动 Expression Blend。  （单击**“开始”**，指向**“所有程序”**，指向**“Microsoft Expression”**，然后单击**“Microsoft Expression Blend”**。）  
+1.  <span data-ttu-id="95c96-116">启动 Expression Blend。</span><span class="sxs-lookup"><span data-stu-id="95c96-116">Start Expression Blend.</span></span> <span data-ttu-id="95c96-117">(单击**启动**，指向**所有程序**，指向**Microsoft 表达式**，然后单击**Microsoft Expression Blend**。)</span><span class="sxs-lookup"><span data-stu-id="95c96-117">(Click **Start**, point to **All Programs**, point to **Microsoft Expression**, and then click **Microsoft Expression Blend**.)</span></span>  
   
-2.  如果需要，将应用程序窗口最大化。  
+2.  <span data-ttu-id="95c96-118">如果需要最大化应用程序。</span><span class="sxs-lookup"><span data-stu-id="95c96-118">Maximize the application if needed.</span></span>  
   
-3.  在**“文件”**菜单上，单击**“新建项目”**。  
+3.  <span data-ttu-id="95c96-119">在“文件”菜单上，单击“新建项目”。</span><span class="sxs-lookup"><span data-stu-id="95c96-119">On the **File** menu, click **New Project**.</span></span>  
   
-4.  选择**“标准应用程序\(.exe\)”**。  
+4.  <span data-ttu-id="95c96-120">选择**标准应用程序 (.exe)**。</span><span class="sxs-lookup"><span data-stu-id="95c96-120">Select **Standard Application (.exe)**.</span></span>  
   
-5.  将该项目的名称指定为 `CustomButton`，然后按**“确定”**。  
+5.  <span data-ttu-id="95c96-121">将项目`CustomButton`按**确定**。</span><span class="sxs-lookup"><span data-stu-id="95c96-121">Name the project `CustomButton` and press **OK**.</span></span>  
   
- 此时，您已具有一个空的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目。  可按 F5 运行该应用程序。  正如预期的那样，该应用程序仅包含一个空窗口。  下面，您将创建一个圆角矩形并将其转换为按钮。  
+ <span data-ttu-id="95c96-122">此时您已具有一个空[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]项目。</span><span class="sxs-lookup"><span data-stu-id="95c96-122">At this point you have a blank [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] project.</span></span> <span data-ttu-id="95c96-123">你可以按 F5 运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="95c96-123">You can press F5 to run the application.</span></span> <span data-ttu-id="95c96-124">如你所料，该应用程序包含一个空白的窗口。</span><span class="sxs-lookup"><span data-stu-id="95c96-124">As you might expect, the application consists of only a blank window.</span></span> <span data-ttu-id="95c96-125">接下来，创建一个圆角的矩形，并将其转换为一个按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-125">Next, you create a rounded rectangle and convert it into a button.</span></span>  
   
-#### 将矩形转换为按钮  
+#### <a name="to-convert-a-rectangle-to-a-button"></a><span data-ttu-id="95c96-126">将矩形转换至一个按钮</span><span class="sxs-lookup"><span data-stu-id="95c96-126">To convert a Rectangle to a Button</span></span>  
   
-1.  **将窗口的 Background 属性设置为 Black**：选择窗口，单击**“属性”**选项卡，然后将 <xref:System.Windows.Controls.Control.Background%2A> 属性设置为 `Black`。  
+1.  <span data-ttu-id="95c96-127">**将窗口背景属性设置为黑色：**选择窗口中，单击**属性选项卡**，并设置<xref:System.Windows.Controls.Control.Background%2A>属性`Black`。</span><span class="sxs-lookup"><span data-stu-id="95c96-127">**Set the Window Background property to black:** Select the Window, click the **Properties Tab**, and set the <xref:System.Windows.Controls.Control.Background%2A> property to `Black`.</span></span>  
   
-     ![如何将按钮的背景设置为黑色](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom\_button\_blend\_ChangeBackground")  
+     <span data-ttu-id="95c96-128">![如何将一个按钮的背景设置为黑色](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")</span><span class="sxs-lookup"><span data-stu-id="95c96-128">![How to set the background of a button to black](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")</span></span>  
   
-2.  **在窗口上绘制一个大小与按钮相近的矩形**：在左侧的工具面板中选择矩形工具，然后在窗口中拖动出矩形。  
+2.  <span data-ttu-id="95c96-129">**在窗口上绘制的矩形大约按钮的大小：**选择左侧的工具面板上的矩形工具并将该矩形拖到窗口。</span><span class="sxs-lookup"><span data-stu-id="95c96-129">**Draw a rectangle approximately the size of a button on the Window:** Select the rectangle tool on the left-hand tool panel and drag the rectangle onto the Window.</span></span>  
   
-     ![如何绘制矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom\_button\_blend\_DrawRect")  
+     <span data-ttu-id="95c96-130">![如何绘制矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")</span><span class="sxs-lookup"><span data-stu-id="95c96-130">![How to draw a rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")</span></span>  
   
-3.  **将矩形各角改为圆角**：拖动矩形的控制点，或者直接设置 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 属性。  将 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 的值均设置为 20。  
+3.  <span data-ttu-id="95c96-131">**倒圆角化矩形角出：**拖动矩形的控点，或者直接设置<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="95c96-131">**Round out the corners of the rectangle:** Either drag the control points of the rectangle or directly set the <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> properties.</span></span> <span data-ttu-id="95c96-132">设置的值<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>为 20。</span><span class="sxs-lookup"><span data-stu-id="95c96-132">Set the values of <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> to 20.</span></span>  
   
-     ![如何使矩形的角变为圆角](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom\_button\_blend\_RoundCorners")  
+     <span data-ttu-id="95c96-133">![如何使矩形的角变圆](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")</span><span class="sxs-lookup"><span data-stu-id="95c96-133">![How to make the corners of a rectangle round](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")</span></span>  
   
-4.  **将该矩形更改为按钮**：选择该矩形。  在**“工具”**菜单上，单击**“创建按钮”**。  
+4.  <span data-ttu-id="95c96-134">**该矩形更改为一个按钮：**选择矩形。</span><span class="sxs-lookup"><span data-stu-id="95c96-134">**Change the rectangle into a button:** Select the rectangle.</span></span> <span data-ttu-id="95c96-135">上**工具**菜单上，单击**使按钮**。</span><span class="sxs-lookup"><span data-stu-id="95c96-135">On the **Tools** menu, click **Make Button**.</span></span>  
   
-     ![如何使形状变为按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom\_button\_blend\_MakeButton")  
+     <span data-ttu-id="95c96-136">![如何使形状变为按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")</span><span class="sxs-lookup"><span data-stu-id="95c96-136">![How to make a shape into a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")</span></span>  
   
-5.  **指定样式\/模板的范围**：显示与以下类似的对话框。  
+5.  <span data-ttu-id="95c96-137">**指定的样式/模板的作用域：**像显示以下对话框。</span><span class="sxs-lookup"><span data-stu-id="95c96-137">**Specify the scope of the style/template:** A dialog box like the following appears.</span></span>  
   
-     ![“创建样式资源”对话框](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom\_button\_blend\_MakeButton2")  
+     <span data-ttu-id="95c96-138">!["创建样式资源"对话框中](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")</span><span class="sxs-lookup"><span data-stu-id="95c96-138">![The "Create Style Resource" dialog box](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")</span></span>  
   
-     对于**“资源名称\(项\)”**，选择**“应用于所有项”**。  这会使所生成的样式和按钮模板应用于作为按钮的所有对象。  对于**“定义范围”**，选择**“应用程序”**。  这会使所生成的样式和按钮模板的范围涵盖整个应用程序。  在这两个框中设置相应值后，按钮的样式和模板将应用于整个应用程序中的所有按钮，并且在应用程序中创建的所有按钮默认情况下都会使用此模板。  
+     <span data-ttu-id="95c96-139">有关**资源名称 （键）**，选择**应用于所有**。</span><span class="sxs-lookup"><span data-stu-id="95c96-139">For **Resource name (Key)**, select **Apply to all**.</span></span>  <span data-ttu-id="95c96-140">这将使生成的样式和按钮模板应用于所有按钮的对象。</span><span class="sxs-lookup"><span data-stu-id="95c96-140">This will make the resulting style and button template apply to all objects that are buttons.</span></span> <span data-ttu-id="95c96-141">有关**中定义**，选择**应用程序**。</span><span class="sxs-lookup"><span data-stu-id="95c96-141">For **Define in**, select **Application**.</span></span> <span data-ttu-id="95c96-142">这将使生成的样式和按钮模板具有在整个应用程序上的作用域。</span><span class="sxs-lookup"><span data-stu-id="95c96-142">This will make the resulting style and button template have scope over the entire application.</span></span> <span data-ttu-id="95c96-143">在这两个框中设置值时，按钮样式和模板应用于整个应用程序中的所有按钮并且将应用程序中创建任何按钮，默认情况下，使用此模板。</span><span class="sxs-lookup"><span data-stu-id="95c96-143">When you set the values in these two boxes, the button style and template apply to all buttons within the entire application and any button you create in the application will, by default, use this template.</span></span>  
   
-## 编辑按钮模板  
- 现在，您有一个已更改为按钮的矩形。  在本部分中，您将修改按钮模板，并进一步自定义按钮的外观。  
+## <a name="edit-the-button-template"></a><span data-ttu-id="95c96-144">编辑按钮模板</span><span class="sxs-lookup"><span data-stu-id="95c96-144">Edit the Button Template</span></span>  
+ <span data-ttu-id="95c96-145">你现在有一个已更改为一个按钮的矩形。</span><span class="sxs-lookup"><span data-stu-id="95c96-145">You now have a rectangle that has been changed to a button.</span></span> <span data-ttu-id="95c96-146">在此部分中，将修改的按钮模板并进一步自定义其外观。</span><span class="sxs-lookup"><span data-stu-id="95c96-146">In this section, you'll modify the template of the button and further customize how it looks.</span></span>  
   
-#### 编辑按钮模板可更改按钮外观  
+#### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a><span data-ttu-id="95c96-147">若要编辑按钮模板以更改按钮外观</span><span class="sxs-lookup"><span data-stu-id="95c96-147">To edit the button template to change the button appearance</span></span>  
   
-1.  **转到编辑模板视图**：若要进一步自定义按钮外观，我们需要编辑按钮模板。  此模板是在将矩形转换为按钮时创建的。  若要编辑按钮模板，请右击该按钮，然后选择**“编辑控件部件\(模板\)”**，然后选择**“编辑模板”**。  
+1.  <span data-ttu-id="95c96-148">**转到编辑模板视图：**若要进一步自定义我们按钮的外观，我们需要编辑按钮模板。</span><span class="sxs-lookup"><span data-stu-id="95c96-148">**Go into edit template view:** To further customize the look of our button, we need to edit the button template.</span></span> <span data-ttu-id="95c96-149">我们将矩形转换按钮时，创建了此模板。</span><span class="sxs-lookup"><span data-stu-id="95c96-149">This template was created when we converted the rectangle into a button.</span></span> <span data-ttu-id="95c96-150">若要编辑按钮模板，请右键单击该按钮，然后选择**编辑控件部件 （模板）**然后**编辑模板**。</span><span class="sxs-lookup"><span data-stu-id="95c96-150">To edit the button template, right-click the button and select **Edit Control Parts (Template)** and then **Edit Template**.</span></span>  
   
-     ![如何编辑模板](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom\_button\_blend\_EditTemplate")  
+     <span data-ttu-id="95c96-151">![如何编辑模板](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")</span><span class="sxs-lookup"><span data-stu-id="95c96-151">![How to edit a template](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")</span></span>  
   
-     在模板编辑器中，您会看到该按钮现在已分隔为 <xref:System.Windows.Shapes.Rectangle> 和 <xref:System.Windows.Controls.ContentPresenter>。  <xref:System.Windows.Controls.ContentPresenter> 用于呈现按钮中的内容（如字符串“Button”）。  该矩形和 <xref:System.Windows.Controls.ContentPresenter> 均放置在 <xref:System.Windows.Controls.Grid> 内部。  
+     <span data-ttu-id="95c96-152">在模板编辑器中，请注意现在分为按钮<xref:System.Windows.Shapes.Rectangle>和<xref:System.Windows.Controls.ContentPresenter>。</span><span class="sxs-lookup"><span data-stu-id="95c96-152">In the template editor, notice that the button is now separated into a <xref:System.Windows.Shapes.Rectangle> and the <xref:System.Windows.Controls.ContentPresenter>.</span></span> <span data-ttu-id="95c96-153"><xref:System.Windows.Controls.ContentPresenter>用于呈现按钮 （例如，字符串"Button"） 中的内容。</span><span class="sxs-lookup"><span data-stu-id="95c96-153">The <xref:System.Windows.Controls.ContentPresenter> is used to present content within the button (for example, the string "Button").</span></span> <span data-ttu-id="95c96-154">这两个矩形和<xref:System.Windows.Controls.ContentPresenter>内布局<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="95c96-154">Both the rectangle and <xref:System.Windows.Controls.ContentPresenter> are laid out inside of a <xref:System.Windows.Controls.Grid>.</span></span>  
   
-     ![用于展示矩形的组件](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom\_button\_blend\_TemplatePanel")  
+     <span data-ttu-id="95c96-155">![中用于展示矩形的组件](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")</span><span class="sxs-lookup"><span data-stu-id="95c96-155">![Components in the presentation of a rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")</span></span>  
   
-2.  **更改模板组件的名称**：右击模板清单中的矩形，将 <xref:System.Windows.Shapes.Rectangle> 名称从“\[Rectangle\]”更改为“outerRectangle”，并将“\[ContentPresenter\]”更改为“myContentPresenter”。  
+2.  <span data-ttu-id="95c96-156">**更改模板组件的名称：**右键单击要在模板清单更改的矩形<xref:System.Windows.Shapes.Rectangle>名称从"[矩形]"写入"outerRectangle"，并将"[ContentPresenter]"更改为"myContentPresenter"。</span><span class="sxs-lookup"><span data-stu-id="95c96-156">**Change the names of the template components:** Right-click the rectangle in the template inventory, change the <xref:System.Windows.Shapes.Rectangle> name from "[Rectangle]" to "outerRectangle", and change "[ContentPresenter]" to "myContentPresenter".</span></span>  
   
-     ![如何重命名模板的组件](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom\_button\_blend\_RenameComponents")  
+     <span data-ttu-id="95c96-157">![如何重命名模板的一个组件](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")</span><span class="sxs-lookup"><span data-stu-id="95c96-157">![How to rename a component of a template](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")</span></span>  
   
-3.  **修改该矩形以使其内部为空（就像圆环一样）**：选择**“outerRectangle”**，将 <xref:System.Windows.Shapes.Shape.Fill%2A> 设置为“Transparent”，并将 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 设置为 5。  
+3.  <span data-ttu-id="95c96-158">**Alter 矩形，使它为空内 （如一个圆环图）：**选择**outerRectangle**并设置<xref:System.Windows.Shapes.Shape.Fill%2A>到"透明"和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>为 5。</span><span class="sxs-lookup"><span data-stu-id="95c96-158">**Alter the rectangle so that it is empty inside (like a donut):** Select **outerRectangle** and set <xref:System.Windows.Shapes.Shape.Fill%2A> to "Transparent" and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> to 5.</span></span>  
   
-     ![如何使矩形为空](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom\_button\_blend\_ChangeRectProperties")  
+     <span data-ttu-id="95c96-159">![如何使矩形为空](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")</span><span class="sxs-lookup"><span data-stu-id="95c96-159">![How to make a rectangle empty](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")</span></span>  
   
-     然后，将 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为模板将显示的任意颜色。  为此，请单击**“笔画”**旁边的小白框，选择**“CustomExpression”**，然后在显示的对话框中键入“{TemplateBinding Background}”。  
+     <span data-ttu-id="95c96-160">然后设置<xref:System.Windows.Shapes.Shape.Stroke%2A>的模板将是任何内容的颜色。</span><span class="sxs-lookup"><span data-stu-id="95c96-160">Then set the <xref:System.Windows.Shapes.Shape.Stroke%2A> to the color of whatever the template will be.</span></span> <span data-ttu-id="95c96-161">若要执行此操作，请单击小白色框旁边**描边**，选择**CustomExpression**，并在对话框中键入"{TemplateBinding 后台}"。</span><span class="sxs-lookup"><span data-stu-id="95c96-161">To do this, click the small white box next to **Stroke**, select **CustomExpression**, and type "{TemplateBinding Background}" in the dialog box.</span></span>  
   
-     ![如何设置和使用模板的颜色](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom\_button\_blend\_TemplateStroke")  
+     <span data-ttu-id="95c96-162">![如何设置使用的模板的颜色](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")</span><span class="sxs-lookup"><span data-stu-id="95c96-162">![How to set the use the color of the template](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")</span></span>  
   
-4.  **创建内部矩形**：现在，创建另一个矩形（将其命名为“innerRectangle”），并将其对称地放在**“outerRectangle”**的内部。  在执行这种操作时，可能需要进行放大，以便该按钮在编辑区域中显示得大一些。  
-  
-    > [!NOTE]
-    >  所得的矩形可能与图中的矩形有所差别（例如，它可能有圆角）。  
-  
-     ![如何在一个矩形内创建另一个矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom\_button\_blend\_innerRectangleProperties")  
-  
-5.  **将 ContentPresenter 移到上方**：此时，文本“Button”可能不再显示。  如果出现此问题，就表示**“innerRectangle”**位于**“myContentPresenter”**上层。  若要修复此问题，请拖动**“innerRectangle”**下面的**“myContentPresenter”**。  重新定位矩形和**“myContentPresenter”**，使其外观与下面类似。  
+4.  <span data-ttu-id="95c96-163">**创建一个内部矩形：**现在，创建另一个矩形 （将其"innerRectangle"） 并将其定位所需的内部**outerRectangle** 。</span><span class="sxs-lookup"><span data-stu-id="95c96-163">**Create an inner rectangle:** Now, create another rectangle (name it "innerRectangle") and position it symmetrically on the inside of **outerRectangle** .</span></span> <span data-ttu-id="95c96-164">此类型的工作，你将可能想要缩放，使其更大的编辑区域中。</span><span class="sxs-lookup"><span data-stu-id="95c96-164">For this kind of work, you will probably want to zoom to make the button larger in the editing area.</span></span>  
   
     > [!NOTE]
-    >  或者，也可以将**“myContentPresenter”**放在上层，方法是：右击它，然后按**“置前”**。  
+    >  <span data-ttu-id="95c96-165">你矩形可能看起来比图中的一个不同 （例如，它可能有了圆形角）。</span><span class="sxs-lookup"><span data-stu-id="95c96-165">Your rectangle might look different than the one in the figure (for example, it might have rounded corners).</span></span>  
   
-     ![如何将一个按钮移到另一个按钮的上面](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom\_button\_blend\_innerRectangle2")  
+     <span data-ttu-id="95c96-166">![如何创建另一个矩形内的矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")</span><span class="sxs-lookup"><span data-stu-id="95c96-166">![How to create a rectangle inside another rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")</span></span>  
   
-6.  **更改 innerRectangle 的外观：**将 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>、<xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 和 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 的值均设置为 20。  此外，再使用自定义表达式“{TemplateBinding Background}”将 <xref:System.Windows.Shapes.Shape.Fill%2A> 设置为该模板的背景，并将 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为“transparent”。  您会看到**“innerRectangle”**的 <xref:System.Windows.Shapes.Shape.Fill%2A> 和 <xref:System.Windows.Shapes.Shape.Stroke%2A> 属性设置将与**“outerRectangle”**的设置相反。  
-  
-     ![如何更改矩形的外观](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom\_button\_blend\_glassRectangleProperties1")  
-  
-7.  **在顶层添加玻璃层**：自定义按钮外观的最后一步是在顶层添加玻璃层。  此玻璃层由第三个矩形构成。  由于玻璃层将覆盖整个按钮，因此该玻璃矩形在尺寸上与**“outerRectangle”**相近。  因而只需复制**“outerRectangle”**即可创建该矩形。  突出显示**“outerRectangle”**，并使用 Ctrl\+C 和 Ctrl\+V 进行复制。  将此新矩形命名为“glassCube”。  
-  
-8.  **根据需要重新定位 glassCube**：如果尚未定位**“glassCube”**，以致于它覆盖了整个按钮，请将其拖到适当的位置。  
-  
-9. **使 glassCube 的形状略微不同于 outerRectangle**：更改**“glassCube”**的各属性。  可从以下更改着手：将 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 属性均更改为 10，并将 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 更改为 2。  
-  
-     ![glassCube 的外观设置](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom\_button\_blend\_GlassCubeAppearance")  
-  
-10. **使 glassCube 的外观与玻璃类似**：使用不透明度为 75% 的线性渐变，并按大约 6 个平均间隔在白色和透明色之间变换，即可将 <xref:System.Windows.Shapes.Shape.Fill%2A> 设置为玻璃外观。  渐变停止点将设置为：  
-  
-    -   渐变停止点 1：白色，Alpha 值为 75%  
-  
-    -   渐变停止点 2：透明色  
-  
-    -   渐变停止点 3：白色，Alpha 值为 75%  
-  
-    -   渐变停止点 4：透明色  
-  
-    -   渐变停止点 5：白色，Alpha 值为 75%  
-  
-    -   渐变停止点 6：透明色  
-  
-     这会创建“波浪形”玻璃外观。  
-  
-     ![看起来像玻璃的矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom\_button\_blend\_glassRectangleProperties2")  
-  
-11. **隐藏玻璃层**：既然已经看到了玻璃层的外观，您就可以将它隐藏起来，方法是：进入**“属性”**面板的**“外观”**窗格，并将“不透明度”设置为 0%，即可隐藏该层。  在以下各部分中，我们将使用属性触发器和事件来显示和操作玻璃层。  
-  
-     ![如何隐藏玻璃矩形](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom\_button\_glassRectangleProperties3")  
-  
-## 自定义按钮行为  
- 此时，您已通过编辑按钮模板自定义了该按钮的表示形式，但该按钮并不像典型按钮那样对用户操作做出响应（例如，在鼠标悬停、接收焦点和单击时更改外观）。下面两个过程将说明如何将类似这样的行为生成到自定义按钮中。  我们将从简单的属性触发器开始，然后添加事件触发器和动画。  
-  
-#### 设置属性触发器  
-  
-1.  **创建新的属性触发器**：选择**“glassCube”**，单击**“触发器”**面板中的**“\+ 属性”**（参见下一步后面的图示）。  这样可创建一个默认属性触发器。  
-  
-2.  **将 IsMouseOver 设置为触发器使用的属性**：将该属性更改为 <xref:System.Windows.UIElement.IsMouseOver%2A>。  这会在 <xref:System.Windows.UIElement.IsMouseOver%2A> 属性为 `true` 时（即用户将鼠标指向按钮时）激活此属性触发器。  
-  
-     ![如何在属性上设置触发器](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom\_button\_blend\_IsMousedOverPropertyTrigger")  
-  
-3.  **IsMouseOver 为 glassCube 触发 100% 的不透明度**：您会看到**“触发器记录功能处于启用状态”**（见上图）。  这意味着在记录功能启用的情况下，对**“glassCube”**属性值所做的任何更改都会成为当 <xref:System.Windows.UIElement.IsMouseOver%2A> 为 `true` 时所执行的操作。  在记录期间，将**“glassCube”**的 <xref:System.Windows.UIElement.Opacity%2A> 更改为 100%。  
-  
-     ![如何设置按钮的不透明度](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom\_button\_blend\_IsMousedOverPropertyTrigger2")  
-  
-     现在，您已创建了第一个属性触发器。  请注意，编辑器的**“触发器”**面板记录了 <xref:System.Windows.UIElement.Opacity%2A> 已更改为 100%。  
-  
-     ![“触发器”面板](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom\_button\_blend\_PropertyTriggerInfo")  
-  
-     按 F5 运行该应用程序，并将鼠标指针移到该按钮上，然后再移开。  您应当会看到当鼠标移到该按钮上时，就会显示玻璃层；而当指针离开时，玻璃层就会消失。  
-  
-4.  **IsMouseOver 触发笔画值更改**：下面将某些其他操作与 <xref:System.Windows.UIElement.IsMouseOver%2A> 触发器关联。  在继续记录时，将所选内容从**“glassCube”**切换为**“outerRectangle”**。  然后，将**“outerRectangle”**的 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为自定义表达式“{DynamicResource {x:Static SystemColors.HighlightBrushKey}}”。  这会将 <xref:System.Windows.Shapes.Shape.Stroke%2A> 设置为按钮所使用的典型突出显示颜色。  按 F5 查看鼠标移到按钮上时的效果。  
-  
-     ![如何将笔画设置为突出显示颜色](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom\_button\_blend\_IsMousedOverPropertyTrigger3")  
-  
-5.  **IsMouseOver 触发模糊文本**：下面将另一个操作与 <xref:System.Windows.UIElement.IsMouseOver%2A> 属性触发器关联。  当按钮上面显示玻璃层时，使按钮内容显示得有些模糊。  为此，可以将模糊的 <xref:System.Windows.Media.Effects.BitmapEffect> 应用于 <xref:System.Windows.Controls.ContentPresenter> \(**myContentPresenter**\)。  
-  
-     ![如何使按钮内容变得模糊](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom\_button\_blend\_PropertyTriggerWithBitMapEffect")  
+5.  <span data-ttu-id="95c96-167">**移动到顶部 ContentPresenter:**此时，很可能文本"Button"不不再可见。</span><span class="sxs-lookup"><span data-stu-id="95c96-167">**Move ContentPresenter to the top:** At this point, it is possible that the text "Button" will not be visible any longer.</span></span> <span data-ttu-id="95c96-168">如果该条件，否则这是因为**innerRectangle**之上**myContentPresenter**。</span><span class="sxs-lookup"><span data-stu-id="95c96-168">If this is so, this is because **innerRectangle** is on top of the **myContentPresenter**.</span></span> <span data-ttu-id="95c96-169">若要解决此问题，拖动**myContentPresenter**下面**innerRectangle**。</span><span class="sxs-lookup"><span data-stu-id="95c96-169">To fix this, drag **myContentPresenter** below **innerRectangle**.</span></span> <span data-ttu-id="95c96-170">重新定位矩形和**myContentPresenter**看起来类似如下。</span><span class="sxs-lookup"><span data-stu-id="95c96-170">Reposition rectangles and **myContentPresenter** to look similar to below.</span></span>  
   
     > [!NOTE]
-    >  若要将**“属性”**面板返回搜索 <xref:System.Windows.Media.Effects.BitmapEffect> 之前的外观，请从**“搜索”**框中清除文本。  
+    >  <span data-ttu-id="95c96-171">或者，您可以定位**myContentPresenter**通过右键单击它并按顶部**转发发送**。</span><span class="sxs-lookup"><span data-stu-id="95c96-171">Alternatively, you can also position **myContentPresenter** on top by right-clicking it and pressing **Send Forward**.</span></span>  
   
-     此时，我们已对几个关联操作使用了属性触发器，以创建当鼠标指针进入及离开按钮区域时的突出显示行为。  按钮的另一个典型行为就是在具有焦点时（即被单击时）处于突出显示状态。  可通过为 <xref:System.Windows.UIElement.IsFocused%2A> 属性添加另一个属性触发器，来添加此类行为。  
+     <span data-ttu-id="95c96-172">![如何将一个按钮移基于另一个按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")</span><span class="sxs-lookup"><span data-stu-id="95c96-172">![How to move one button on top of another button](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")</span></span>  
   
-6.  **为 IsFocused 创建属性触发器**：使用与 <xref:System.Windows.UIElement.IsMouseOver%2A> 相同的过程（参见此部分中的第一步），为 <xref:System.Windows.UIElement.IsFocused%2A> 属性创建另一个属性触发器。  当显示**“触发器记录功能处于启用状态”**时，将下列操作添加到该触发器中：  
+6.  <span data-ttu-id="95c96-173">**更改查找范围的 innerRectangle:**设置<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>， <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>，和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>值为 20。</span><span class="sxs-lookup"><span data-stu-id="95c96-173">**Change the look of innerRectangle:** Set the <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> values to 20.</span></span> <span data-ttu-id="95c96-174">此外，设置<xref:System.Windows.Shapes.Shape.Fill%2A>为使用自定义表达式"{TemplateBinding 后台}"的模板的背景) 并设置<xref:System.Windows.Shapes.Shape.Stroke%2A>"透明"。</span><span class="sxs-lookup"><span data-stu-id="95c96-174">In addition, set the <xref:System.Windows.Shapes.Shape.Fill%2A> to the background of the template using the custom expression "{TemplateBinding Background}" ) and set <xref:System.Windows.Shapes.Shape.Stroke%2A> to "transparent".</span></span> <span data-ttu-id="95c96-175">请注意，设置<xref:System.Windows.Shapes.Shape.Fill%2A>和<xref:System.Windows.Shapes.Shape.Stroke%2A>的**innerRectangle**是那些用于相反**outerRectangle**。</span><span class="sxs-lookup"><span data-stu-id="95c96-175">Notice that the settings for the <xref:System.Windows.Shapes.Shape.Fill%2A> and <xref:System.Windows.Shapes.Shape.Stroke%2A> of **innerRectangle** are the opposite of those for **outerRectangle**.</span></span>  
   
-    -   **“glassCube”**获取 100% 的 <xref:System.Windows.UIElement.Opacity%2A>。  
+     <span data-ttu-id="95c96-176">![如何更改矩形的外观](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")</span><span class="sxs-lookup"><span data-stu-id="95c96-176">![How to change the appearance of a rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")</span></span>  
   
-    -   **“outerRectangle”**获取 <xref:System.Windows.Shapes.Shape.Stroke%2A> 自定义表达式值“{DynamicResource {x:Static SystemColors.HighlightBrushKey}}”。  
+7.  <span data-ttu-id="95c96-177">**在最前面添加玻璃层：**自定义按钮的外观的最后一个部分是在最前面添加玻璃层。</span><span class="sxs-lookup"><span data-stu-id="95c96-177">**Add a glass layer on top:** The final piece of customizing the look of the button is to add a glass layer on top.</span></span> <span data-ttu-id="95c96-178">此玻璃层包含，第三个矩形。</span><span class="sxs-lookup"><span data-stu-id="95c96-178">This glass layer consists of a third rectangle.</span></span> <span data-ttu-id="95c96-179">因为玻璃将覆盖了整个按钮，玻璃矩形中是类似的维度**outerRectangle**。</span><span class="sxs-lookup"><span data-stu-id="95c96-179">Because the glass will cover the entire button, the glass rectangle is similar in dimensions to the **outerRectangle**.</span></span> <span data-ttu-id="95c96-180">因此，只需制作的副本创建矩形**outerRectangle**。</span><span class="sxs-lookup"><span data-stu-id="95c96-180">Therefore, create the rectangle by simply making a copy of the **outerRectangle**.</span></span> <span data-ttu-id="95c96-181">突出显示**outerRectangle**并使用 CTRL + C 和 CTRL + V 复制。</span><span class="sxs-lookup"><span data-stu-id="95c96-181">Highlight **outerRectangle** and use CTRL+C and CTRL+V to make a copy.</span></span> <span data-ttu-id="95c96-182">命名此新添加的矩形"glassCube"。</span><span class="sxs-lookup"><span data-stu-id="95c96-182">Name this new rectangle "glassCube".</span></span>  
   
- 作为本演练的最后一步，我们将向按钮添加动画。  这些动画将由事件（具体来说是 <xref:System.Windows.UIElement.MouseEnter> 和 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件）触发。  
+8.  <span data-ttu-id="95c96-183">**如有必要重新定位 glassCube:**如果**glassCube**是尚未定位，以便它涵盖了整个按钮，将它拖到位置。</span><span class="sxs-lookup"><span data-stu-id="95c96-183">**Reposition glassCube if necessary:** If **glassCube** is not already positioned so that it covers the entire button, drag it into position.</span></span>  
   
-#### 使用事件触发器和动画增加互动  
+9. <span data-ttu-id="95c96-184">**提供与 outerRectangle 略有不同的形状的 glassCube:**更改的属性**glassCube**。</span><span class="sxs-lookup"><span data-stu-id="95c96-184">**Give glassCube a slightly different shape than outerRectangle:** Change the properties of **glassCube**.</span></span> <span data-ttu-id="95c96-185">首先通过更改<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>到 10 的属性和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>为 2。</span><span class="sxs-lookup"><span data-stu-id="95c96-185">Start off by changing the <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> properties to 10 and the <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> to 2.</span></span>  
   
-1.  **创建 MouseEnter 事件触发器**：添加新的事件触发器，并选择 <xref:System.Windows.UIElement.MouseEnter> 作为要在该触发器中使用的事件。  
+     <span data-ttu-id="95c96-186">![GlassCube 的外观设置](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")</span><span class="sxs-lookup"><span data-stu-id="95c96-186">![The appearance settings for glassCube](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")</span></span>  
   
-     ![如何创建 MouseEnter 事件触发器](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom\_button\_blend\_MouseOverEventTrigger")  
+10. <span data-ttu-id="95c96-187">**使 glassCube 的外观像玻璃：**设置<xref:System.Windows.Shapes.Shape.Fill%2A>到玻璃查看使用线性渐变 75%不透明和之间交替颜色空白和透明超过 6 大约均匀地用空白分隔的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="95c96-187">**Make glassCube look like glass:** Set the <xref:System.Windows.Shapes.Shape.Fill%2A> to a glassy look by  using a linear gradient that is 75% opaque and alternates between the color White and Transparent over 6 approximately evenly spaced intervals.</span></span> <span data-ttu-id="95c96-188">这是要设置为梯度停止点的内容：</span><span class="sxs-lookup"><span data-stu-id="95c96-188">This is what to set the gradient stops to:</span></span>  
   
-2.  **创建动画时间线**：接下来，将动画时间线与 <xref:System.Windows.UIElement.MouseEnter> 事件关联。  
+    -   <span data-ttu-id="95c96-189">Alpha 值为 75%的渐变停止点 1： 空白</span><span class="sxs-lookup"><span data-stu-id="95c96-189">Gradient Stop 1: White with Alpha value of 75%</span></span>  
   
-     ![如何向事件添加动画时间线](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom\_button\_blend\_MouseOverEventTrigger2")  
+    -   <span data-ttu-id="95c96-190">渐变停止点 2： 透明</span><span class="sxs-lookup"><span data-stu-id="95c96-190">Gradient Stop 2: Transparent</span></span>  
   
-     按**“确定”**创建一个新的时间线后，会显示**“时间线”**面板，同时设计面板上会显示“时间线记录功能处于启用状态”。  这意味着可开始在时间线中记录属性更改（对属性更改进行动画处理）。  
+    -   <span data-ttu-id="95c96-191">Alpha 值为 75%的渐变停止点 3： 空白</span><span class="sxs-lookup"><span data-stu-id="95c96-191">Gradient Stop 3: White with Alpha value of 75%</span></span>  
+  
+    -   <span data-ttu-id="95c96-192">渐变停止点 4： 透明</span><span class="sxs-lookup"><span data-stu-id="95c96-192">Gradient Stop 4: Transparent</span></span>  
+  
+    -   <span data-ttu-id="95c96-193">Alpha 值为 75%的渐变停止点 5： 空白</span><span class="sxs-lookup"><span data-stu-id="95c96-193">Gradient Stop 5: White with Alpha value of 75%</span></span>  
+  
+    -   <span data-ttu-id="95c96-194">渐变停止点 6： 透明</span><span class="sxs-lookup"><span data-stu-id="95c96-194">Gradient Stop 6: Transparent</span></span>  
+  
+     <span data-ttu-id="95c96-195">这将创建"波浪形"玻璃外观。</span><span class="sxs-lookup"><span data-stu-id="95c96-195">This creates a "wavy" glass look.</span></span>  
+  
+     <span data-ttu-id="95c96-196">![看起来像玻璃的矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")</span><span class="sxs-lookup"><span data-stu-id="95c96-196">![A rectangle that that looks like glass](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")</span></span>  
+  
+11. <span data-ttu-id="95c96-197">**隐藏玻璃层：**看玻璃层如下所示，请转到**外观窗格**的**属性面板**和设置为 0%，可以将其隐藏的不透明度。</span><span class="sxs-lookup"><span data-stu-id="95c96-197">**Hide the glass layer:** Now that you see what the glassy layer looks like, go into the **Appearance pane** of the **Properties panel** and set the Opacity to 0% to hide it.</span></span> <span data-ttu-id="95c96-198">在以下各部分，我们将使用属性触发器和事件来显示和操作玻璃层。</span><span class="sxs-lookup"><span data-stu-id="95c96-198">In the sections ahead, we'll use property triggers and events to show and manipulate the glass layer.</span></span>  
+  
+     <span data-ttu-id="95c96-199">![如何隐藏玻璃矩形](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")</span><span class="sxs-lookup"><span data-stu-id="95c96-199">![How to hide the glass rectangle](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")</span></span>  
+  
+## <a name="customize-the-button-behavior"></a><span data-ttu-id="95c96-200">自定义按钮行为</span><span class="sxs-lookup"><span data-stu-id="95c96-200">Customize the Button Behavior</span></span>  
+ <span data-ttu-id="95c96-201">此时，已通过编辑其模板自定义按钮的呈现方式，但按钮不响应用户操作像典型按钮那样 （例如，更改在鼠标悬停时的外观，接收焦点，然后单击。）下面两个过程演示如何生成类似这样到自定义按钮的行为。</span><span class="sxs-lookup"><span data-stu-id="95c96-201">At this point, you have customized the presentation of the button by editing its template, but the button does not react to user actions as typical buttons do (for example, changing appearance upon mouse-over, receiving focus, and clicking.) The next two procedures show how to build behaviors like these into the custom button.</span></span> <span data-ttu-id="95c96-202">我们从简单的属性触发器开始，然后添加事件触发器和动画。</span><span class="sxs-lookup"><span data-stu-id="95c96-202">We'll start with simple property triggers, and then add event triggers and animations.</span></span>  
+  
+#### <a name="to-set-property-triggers"></a><span data-ttu-id="95c96-203">若要设置属性触发器</span><span class="sxs-lookup"><span data-stu-id="95c96-203">To set property triggers</span></span>  
+  
+1.  <span data-ttu-id="95c96-204">**创建新的属性触发器：**与**glassCube**处于选中状态，单击**+ 属性**中**触发器**面板 （请参阅，如下图所下一步）。</span><span class="sxs-lookup"><span data-stu-id="95c96-204">**Create a new property trigger:** With **glassCube** selected, click **+ Property** in the **Triggers** panel (see the figure that follows the next step).</span></span> <span data-ttu-id="95c96-205">这将创建一个默认属性触发器属性触发器。</span><span class="sxs-lookup"><span data-stu-id="95c96-205">This creates a property trigger with a default property trigger.</span></span>  
+  
+2.  <span data-ttu-id="95c96-206">**请使用触发器的属性的 IsMouseOver:**更改将属性设为<xref:System.Windows.UIElement.IsMouseOver%2A>。</span><span class="sxs-lookup"><span data-stu-id="95c96-206">**Make IsMouseOver the property used by the trigger:** Change the property to <xref:System.Windows.UIElement.IsMouseOver%2A>.</span></span> <span data-ttu-id="95c96-207">这使得属性触发器激活时<xref:System.Windows.UIElement.IsMouseOver%2A>属性是`true`（当用户指向使用鼠标按钮）。</span><span class="sxs-lookup"><span data-stu-id="95c96-207">This makes the property trigger activate when the <xref:System.Windows.UIElement.IsMouseOver%2A> property is `true` (when the user points to the button with the mouse).</span></span>  
+  
+     <span data-ttu-id="95c96-208">![如何在属性上设置触发器](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")</span><span class="sxs-lookup"><span data-stu-id="95c96-208">![How to set a trigger on a property](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")</span></span>  
+  
+3.  <span data-ttu-id="95c96-209">**IsMouseOver 触发的 glasscube 的 100%不透明度：**请注意，**触发器记录功能处于启用**（请参见前面的图）。</span><span class="sxs-lookup"><span data-stu-id="95c96-209">**IsMouseOver triggers opacity of 100% for glassCube:** Notice that the **Trigger recording is on** (see the preceding figure).</span></span> <span data-ttu-id="95c96-210">这意味着，对的属性值进行任何更改**glassCube**上录制时将成为操作发生时<xref:System.Windows.UIElement.IsMouseOver%2A>是`true`。</span><span class="sxs-lookup"><span data-stu-id="95c96-210">This means that any changes you make to the property values of **glassCube** while recording is on will become an action that takes place when <xref:System.Windows.UIElement.IsMouseOver%2A> is `true`.</span></span> <span data-ttu-id="95c96-211">录制时，更改<xref:System.Windows.UIElement.Opacity%2A>的**glassCube**为 100%。</span><span class="sxs-lookup"><span data-stu-id="95c96-211">While recording, change the <xref:System.Windows.UIElement.Opacity%2A> of **glassCube** to 100%.</span></span>  
+  
+     <span data-ttu-id="95c96-212">![如何设置按钮的不透明度](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")</span><span class="sxs-lookup"><span data-stu-id="95c96-212">![How to set the opacity of a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")</span></span>  
+  
+     <span data-ttu-id="95c96-213">现在已创建你的第一个属性触发器。</span><span class="sxs-lookup"><span data-stu-id="95c96-213">You have now created your first property trigger.</span></span> <span data-ttu-id="95c96-214">请注意，**触发器面板**编辑器的已记录<xref:System.Windows.UIElement.Opacity%2A>更改为 100%。</span><span class="sxs-lookup"><span data-stu-id="95c96-214">Notice that the **Triggers panel** of the editor has recorded the <xref:System.Windows.UIElement.Opacity%2A> being changed to 100%.</span></span>  
+  
+     <span data-ttu-id="95c96-215">![“触发器”面板](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")</span><span class="sxs-lookup"><span data-stu-id="95c96-215">![The "Triggers" panel](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")</span></span>  
+  
+     <span data-ttu-id="95c96-216">按 f5 键以运行该应用程序，并将鼠标指针移动通过和关闭按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-216">Press F5 to run the application, and move the mouse pointer over and off the button.</span></span> <span data-ttu-id="95c96-217">你应看到时出现的玻璃层鼠标移到该按钮并在鼠标指针离开时消失。</span><span class="sxs-lookup"><span data-stu-id="95c96-217">You should see the glass layer appear when you mouse-over the button and disappear when the pointer leaves.</span></span>  
+  
+4.  <span data-ttu-id="95c96-218">**IsMouseOver 触发器描边，则值更改：**让我们将使用的一些其他操作相关联<xref:System.Windows.UIElement.IsMouseOver%2A>触发器。</span><span class="sxs-lookup"><span data-stu-id="95c96-218">**IsMouseOver triggers stroke value change:** Let's associate some other actions with the <xref:System.Windows.UIElement.IsMouseOver%2A> trigger.</span></span> <span data-ttu-id="95c96-219">在录制仍然存在，请切换你从选择**glassCube**到**outerRectangle**。</span><span class="sxs-lookup"><span data-stu-id="95c96-219">While recording continues, switch your selection from **glassCube** to **outerRectangle**.</span></span> <span data-ttu-id="95c96-220">然后设置<xref:System.Windows.Shapes.Shape.Stroke%2A>的**outerRectangle**为"{DynamicResource {x： 静态 SystemColors.HighlightBrushKey}}"自定义表达式。</span><span class="sxs-lookup"><span data-stu-id="95c96-220">Then set the <xref:System.Windows.Shapes.Shape.Stroke%2A> of **outerRectangle** to the custom expression of "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}".</span></span> <span data-ttu-id="95c96-221">这将设置<xref:System.Windows.Shapes.Shape.Stroke%2A>到典型突出显示使用按钮的颜色。</span><span class="sxs-lookup"><span data-stu-id="95c96-221">This sets the <xref:System.Windows.Shapes.Shape.Stroke%2A> to the typical highlight color used by buttons.</span></span> <span data-ttu-id="95c96-222">按 f5 键以查看在你将鼠标到按钮上方时效果。</span><span class="sxs-lookup"><span data-stu-id="95c96-222">Press F5 to see the effect when you mouse over the button.</span></span>  
+  
+     <span data-ttu-id="95c96-223">![如何将笔画设置为突出显示颜色](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")</span><span class="sxs-lookup"><span data-stu-id="95c96-223">![How to set the stroke to the highlight color](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")</span></span>  
+  
+5.  <span data-ttu-id="95c96-224">**IsMouseOver 触发模糊的文本：**让我们将关联到的一个更多操作<xref:System.Windows.UIElement.IsMouseOver%2A>属性触发器。</span><span class="sxs-lookup"><span data-stu-id="95c96-224">**IsMouseOver triggers blurry text:** Let's associate one more action to the <xref:System.Windows.UIElement.IsMouseOver%2A> property trigger.</span></span> <span data-ttu-id="95c96-225">使时玻璃将显示在其显示有些模糊按钮的内容。</span><span class="sxs-lookup"><span data-stu-id="95c96-225">Make the content of the button appear a little blurry when the glass appears over it.</span></span> <span data-ttu-id="95c96-226">若要执行此操作，我们可以应用模糊<xref:System.Windows.Media.Effects.BitmapEffect>到<xref:System.Windows.Controls.ContentPresenter>(**myContentPresenter**)。</span><span class="sxs-lookup"><span data-stu-id="95c96-226">To do this, we can apply a blur <xref:System.Windows.Media.Effects.BitmapEffect> to the <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).</span></span>  
+  
+     <span data-ttu-id="95c96-227">![如何模糊按钮内容](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")</span><span class="sxs-lookup"><span data-stu-id="95c96-227">![How to blur the content of a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")</span></span>  
   
     > [!NOTE]
-    >  可能需要调整窗口和\/或面板大小，才能看到显示效果。  
+    >  <span data-ttu-id="95c96-228">若要返回**属性面板**回它已之前未搜索<xref:System.Windows.Media.Effects.BitmapEffect>，清除中的文本**搜索框**。</span><span class="sxs-lookup"><span data-stu-id="95c96-228">To return the **Properties panel** back to what it was before you did the search for <xref:System.Windows.Media.Effects.BitmapEffect>, clear the text from the **Search box**.</span></span>  
   
-     ![时间线面板](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom\_button\_blend\_MouseOverEventTrigger3")  
+     <span data-ttu-id="95c96-229">此时，我们已在多个关联的操作使用属性触发器时鼠标指针进入和离开按钮区域创建突出显示行为。</span><span class="sxs-lookup"><span data-stu-id="95c96-229">At this point, we have used a property trigger with several associated actions to create highlighting behavior for when the mouse pointer enters and leaves the button area.</span></span> <span data-ttu-id="95c96-230">按钮的另一种典型行为是在其具有焦点时突出显示 （如后单击它）。</span><span class="sxs-lookup"><span data-stu-id="95c96-230">Another typical behavior for a button is to highlight when it has focus (as after it is clicked).</span></span> <span data-ttu-id="95c96-231">我们可以通过添加另一个属性触发器中添加这种行为<xref:System.Windows.UIElement.IsFocused%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="95c96-231">We can add such behavior by adding another property trigger for the <xref:System.Windows.UIElement.IsFocused%2A> property.</span></span>  
   
-3.  **创建关键帧**：要创建动画，请选择要为其设置动画的对象，在时间线上创建两个或更多个关键帧，并为这些关键帧设置要在其间插入动画的属性值。  下图将引导您完成创建关键帧的过程。  
+6.  <span data-ttu-id="95c96-232">**为 IsFocused 创建属性触发器：**使用相同的过程<xref:System.Windows.UIElement.IsMouseOver%2A>（请参阅本部分的第一步），创建另一个属性触发器<xref:System.Windows.UIElement.IsFocused%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="95c96-232">**Create property trigger for IsFocused:** Using the same procedure as for <xref:System.Windows.UIElement.IsMouseOver%2A> (see the first step of this section), create another property trigger for the <xref:System.Windows.UIElement.IsFocused%2A> property.</span></span> <span data-ttu-id="95c96-233">虽然**触发器记录功能处于启用**，到触发器中添加下列操作：</span><span class="sxs-lookup"><span data-stu-id="95c96-233">While **Trigger recording is on**, add the following actions to the trigger:</span></span>  
   
-     ![如何创建关键帧](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom\_button\_blend\_MouseOverEventTrigger4")  
+    -   <span data-ttu-id="95c96-234">**glassCube**获取<xref:System.Windows.UIElement.Opacity%2A>的 100%。</span><span class="sxs-lookup"><span data-stu-id="95c96-234">**glassCube** gets an <xref:System.Windows.UIElement.Opacity%2A> of 100%.</span></span>  
   
-4.  **在此关键帧处缩小 glassCube**：选择第二个关键帧后，使用**“大小变换”**将**“glassCube”**的大小缩小为其实际大小的 90%。  
+    -   <span data-ttu-id="95c96-235">**outerRectangle**获取<xref:System.Windows.Shapes.Shape.Stroke%2A>"{DynamicResource {x： 静态 SystemColors.HighlightBrushKey}}"的自定义表达式值。</span><span class="sxs-lookup"><span data-stu-id="95c96-235">**outerRectangle** gets a <xref:System.Windows.Shapes.Shape.Stroke%2A> custom expression value of "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}".</span></span>  
   
-     ![如何缩小按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom\_button\_blend\_SizeTransform")  
+ <span data-ttu-id="95c96-236">作为最后一步在本演练中，我们将向按钮添加动画。</span><span class="sxs-lookup"><span data-stu-id="95c96-236">As the final step in this walkthrough, we will add animations to the button.</span></span> <span data-ttu-id="95c96-237">事件将触发这些动画-具体而言，<xref:System.Windows.UIElement.MouseEnter>和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="95c96-237">These animations will be triggered by events—specifically, the <xref:System.Windows.UIElement.MouseEnter> and <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events.</span></span>  
   
-     按 F5 运行该应用程序。  将鼠标指针移到该按钮上。  您会看到该按钮上的玻璃层会缩小。  
+#### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a><span data-ttu-id="95c96-238">若要使用事件触发器和动画添加交互性</span><span class="sxs-lookup"><span data-stu-id="95c96-238">To use event triggers and animations to add interactivity</span></span>  
   
-5.  **创建另一个事件触发器并将其与另一个动画关联**：下面将再添加一个动画。  该过程与用于创建上一事件触发器动画的过程类似：  
+1.  <span data-ttu-id="95c96-239">**创建 MouseEnter 事件触发器：**添加新的事件触发器，并选择<xref:System.Windows.UIElement.MouseEnter>作为要在触发器中使用的事件。</span><span class="sxs-lookup"><span data-stu-id="95c96-239">**Create a MouseEnter Event Trigger:** Add a new event trigger and select <xref:System.Windows.UIElement.MouseEnter> as the event to use in the trigger.</span></span>  
   
-    1.  使用 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件创建一个新的事件触发器。  
+     <span data-ttu-id="95c96-240">![如何创建 MouseEnter 事件触发器](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")</span><span class="sxs-lookup"><span data-stu-id="95c96-240">![How to create a MouseEnter event trigger](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")</span></span>  
   
-    2.  将一个新的时间线与 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件关联。  
+2.  <span data-ttu-id="95c96-241">**创建动画时间线：**接下来，将关联到动画时间线<xref:System.Windows.UIElement.MouseEnter>事件。</span><span class="sxs-lookup"><span data-stu-id="95c96-241">**Create an animation timeline:** Next, associate an animation timeline to the <xref:System.Windows.UIElement.MouseEnter> event.</span></span>  
   
-     ![如何创建新的时间线](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom\_button\_blend\_ClickEventTrigger1")  
+     <span data-ttu-id="95c96-242">![如何向事件添加动画时间线](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")</span><span class="sxs-lookup"><span data-stu-id="95c96-242">![How to add an animation timeline to an event](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")</span></span>  
   
-    1.  在此时间线上，创建两个关键帧，一个位于 0.0 秒，另一个位于 0.3 秒。  
+     <span data-ttu-id="95c96-243">按后**确定**创建一个新的时间线，**时间线面板**出现并显示在设计面板"时间线记录功能处于启用"。</span><span class="sxs-lookup"><span data-stu-id="95c96-243">After you press **OK** to create a new timeline, a **Timeline Panel** appears and "Timeline recording is on" is visible in the design panel.</span></span> <span data-ttu-id="95c96-244">这意味着我们可以开始时间线 （动画的属性更改） 中记录属性更改。</span><span class="sxs-lookup"><span data-stu-id="95c96-244">This means we can start recording property changes in the timeline (animate property changes).</span></span>  
   
-    2.  突出显示位于 0.3 秒处的关键帧后，将**“旋转变换角度”**设置为 360 度。  
+    > [!NOTE]
+    >  <span data-ttu-id="95c96-245">你可能需要调整大小窗口和/或面板，以分别查看它们的显示。</span><span class="sxs-lookup"><span data-stu-id="95c96-245">You may need to resize your window and/or panels to see the display.</span></span>  
   
-     ![如何创建旋转变换](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom\_button\_blend\_RotateTransform")  
+     <span data-ttu-id="95c96-246">![时间线面板](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")</span><span class="sxs-lookup"><span data-stu-id="95c96-246">![The timeline panel](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")</span></span>  
   
-    1.  按 F5 运行该应用程序。  单击按钮。  您会看到玻璃层会旋转一周。  
+3.  <span data-ttu-id="95c96-247">**创建关键帧：**若要创建动画，选择你想要进行动画处理，创建两个或多个关键帧在时间线、 上以及为这些关键帧，设置你想要在其间动画的属性值的对象。</span><span class="sxs-lookup"><span data-stu-id="95c96-247">**Create a keyframe:** To create an animation, select the object you want to animate, create two or more keyframes on the timeline, and for those keyframes, set the property values you want the animation to interpolate between.</span></span> <span data-ttu-id="95c96-248">下图可引导您完成创建关键帧。</span><span class="sxs-lookup"><span data-stu-id="95c96-248">The following figure guides you through the creation of a keyframe.</span></span>  
   
-## 结束语  
- 您已完成了自定义按钮的过程。  此过程是通过按钮模板来实现的，该模板会应用于该应用程序中的所有按钮。  如果您离开模板编辑模式（见下图）并创建更多的按钮，则会看到它们的外观和行为与该自定义按钮类似，而不是与默认按钮类似。  
+     <span data-ttu-id="95c96-249">![如何创建关键帧](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")</span><span class="sxs-lookup"><span data-stu-id="95c96-249">![How to create a keyframe](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")</span></span>  
   
- ![自定义按钮模板](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom\_button\_blend\_ScopeUp")  
+4.  <span data-ttu-id="95c96-250">**收缩此关键帧处 glassCube:**与所选第二个关键帧的情况下，压缩的大小**glassCube**为使用其完整大小的 90%**大小转换**。</span><span class="sxs-lookup"><span data-stu-id="95c96-250">**Shrink glassCube at this keyframe:** With the second keyframe selected, shrink the size of the **glassCube** to 90% of its full size using the **Size Transform**.</span></span>  
   
- ![使用同一模板的多个按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom\_button\_blend\_CreateMultipleButtons")  
+     <span data-ttu-id="95c96-251">![如何缩小按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")</span><span class="sxs-lookup"><span data-stu-id="95c96-251">![How to shrink the size of a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")</span></span>  
   
- 按 F5 运行该应用程序。  单击这些按钮，并注意它们行为的相似程度。  
+     <span data-ttu-id="95c96-252">按 F5 运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="95c96-252">Press F5 to run the application.</span></span> <span data-ttu-id="95c96-253">将鼠标指针移到按钮上方。</span><span class="sxs-lookup"><span data-stu-id="95c96-253">Move the mouse pointer over the button.</span></span> <span data-ttu-id="95c96-254">请注意，玻璃层会缩小按钮的上面。</span><span class="sxs-lookup"><span data-stu-id="95c96-254">Notice that the glass layer shrinks on top of the button.</span></span>  
   
- 请回想一下，当您对该模板进行自定义时，应将**“innerRectangle”**的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性和**“outerRectangle”**的 <xref:System.Windows.Shapes.Shape.Stroke%2A> 属性设置成了模板背景 \({TemplateBinding Background}\)。  因此，在设置各按钮的背景颜色时，所设置的背景就会分别应用于这些属性。  现在，尝试更改这些背景。  在下图中，使用了不同的渐变效果。  因此，虽然模板对控件（如按钮）的整体自定义十分有用，但仍可修改使用模板的控件，以使其外观互不相同。  
+5.  <span data-ttu-id="95c96-255">**创建另一个事件触发器并与之关联不同的动画：**让我们添加一个更多的动画。</span><span class="sxs-lookup"><span data-stu-id="95c96-255">**Create another Event Trigger and associate a different animation with it:** Let's add one more animation.</span></span> <span data-ttu-id="95c96-256">使用你用于创建上一个事件触发器动画的类似过程：</span><span class="sxs-lookup"><span data-stu-id="95c96-256">Use a similar procedure to what you used to create the previous event trigger animation:</span></span>  
   
- ![具有相同模板、但外观不同的按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.png "custom\_button\_blend\_BlendConclusion")  
+    1.  <span data-ttu-id="95c96-257">创建新事件触发器使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="95c96-257">Create a new event trigger using the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  
   
- 综上所述，在对按钮模板进行自定义的过程中，您已掌握了如何在 Microsoft Expression Blend 中完成以下各项任务：  
+    2.  <span data-ttu-id="95c96-258">将关联的新时间线<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="95c96-258">Associate a new timeline with the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  
   
--   对控件的外观进行自定义。  
+     <span data-ttu-id="95c96-259">![如何创建新的时间线](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")</span><span class="sxs-lookup"><span data-stu-id="95c96-259">![How to create a new timeline](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")</span></span>  
   
--   设置属性触发器。  属性触发器十分有用，因为它们可用于大多数对象，而不仅仅是控件。  
+    1.  <span data-ttu-id="95c96-260">为此时间线，创建两个关键帧，0.0 秒时达到的一个，另一个位于 0.3 秒。</span><span class="sxs-lookup"><span data-stu-id="95c96-260">For this timeline, create two keyframes, one at 0.0 seconds and the second one at 0.3 seconds.</span></span>  
   
--   设置事件触发器。  事件触发器十分有用，因为它们可用于大多数对象，而不仅仅是控件。  
+    2.  <span data-ttu-id="95c96-261">突出显示的 0.3 秒时达到的关键帧后，设置**旋转变换角度**到 360 度。</span><span class="sxs-lookup"><span data-stu-id="95c96-261">With the keyframe at 0.3 seconds highlighted, set the **Rotate Transform Angle** to 360 degrees.</span></span>  
   
--   创建动画。  
+     <span data-ttu-id="95c96-262">![如何创建旋转变换](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")</span><span class="sxs-lookup"><span data-stu-id="95c96-262">![How to create a rotate transform](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")</span></span>  
   
--   其他任务：创建渐变、添加 BitmapEffects、使用变换以及设置对象的基本属性。  
+    1.  <span data-ttu-id="95c96-263">按 F5 运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="95c96-263">Press F5 to run the application.</span></span> <span data-ttu-id="95c96-264">单击按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-264">Click the button.</span></span> <span data-ttu-id="95c96-265">请注意，玻璃层会旋转。</span><span class="sxs-lookup"><span data-stu-id="95c96-265">Notice that the glass layer spins around.</span></span>  
   
-## 请参阅  
- [使用 XAML 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [位图效果概述](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="conclusion"></a><span data-ttu-id="95c96-266">结束语</span><span class="sxs-lookup"><span data-stu-id="95c96-266">Conclusion</span></span>  
+ <span data-ttu-id="95c96-267">您已经完成了自定义的按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-267">You have completed a customized button.</span></span> <span data-ttu-id="95c96-268">你执行此过程通过已应用到应用程序中的所有按钮的按钮模板。</span><span class="sxs-lookup"><span data-stu-id="95c96-268">You did this using a button template that was applied to all buttons in the application.</span></span> <span data-ttu-id="95c96-269">如果你离开模板编辑模式 （请参阅下图） 并创建更多按钮，你将看到其外观和行为类似自定义按钮而不是类似的默认按钮。</span><span class="sxs-lookup"><span data-stu-id="95c96-269">If you leave the template editing mode (see the following figure) and create more buttons, you will see that they look and behave like your custom button rather than like the default button.</span></span>  
+  
+ <span data-ttu-id="95c96-270">![自定义按钮模板](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom_button_blend_ScopeUp")</span><span class="sxs-lookup"><span data-stu-id="95c96-270">![The custom button template](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom_button_blend_ScopeUp")</span></span>  
+  
+ <span data-ttu-id="95c96-271">![使用同一模板的多个按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom_button_blend_CreateMultipleButtons")</span><span class="sxs-lookup"><span data-stu-id="95c96-271">![Multiple buttons that use the same template](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom_button_blend_CreateMultipleButtons")</span></span>  
+  
+ <span data-ttu-id="95c96-272">按 F5 运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="95c96-272">Press F5 to run the application.</span></span> <span data-ttu-id="95c96-273">单击按钮，并注意到所有的行为方式相同。</span><span class="sxs-lookup"><span data-stu-id="95c96-273">Click the buttons and notice how they all behave the same.</span></span>  
+  
+ <span data-ttu-id="95c96-274">请记住，尽管您已自定义模板，你设置<xref:System.Windows.Shapes.Shape.Fill%2A>属性**innerRectangle**和<xref:System.Windows.Shapes.Shape.Stroke%2A>属性**outerRectangle**到模板背景 （{TemplateBinding 后台}）。</span><span class="sxs-lookup"><span data-stu-id="95c96-274">Remember that while you were customizing the template, you set the <xref:System.Windows.Shapes.Shape.Fill%2A> property of **innerRectangle** and the <xref:System.Windows.Shapes.Shape.Stroke%2A> property **outerRectangle** to the template background ({TemplateBinding Background}).</span></span> <span data-ttu-id="95c96-275">因此，当你设置的单个按钮的背景色时你设置的背景将用于这些各自的属性。</span><span class="sxs-lookup"><span data-stu-id="95c96-275">Because of this, when you set the background color of the individual buttons, the background you set will be used for those respective properties.</span></span> <span data-ttu-id="95c96-276">请尝试现在更改背景。</span><span class="sxs-lookup"><span data-stu-id="95c96-276">Try changing the backgrounds now.</span></span> <span data-ttu-id="95c96-277">在下图中，使用不同的渐变效果。</span><span class="sxs-lookup"><span data-stu-id="95c96-277">In the following figure, different gradients are used.</span></span> <span data-ttu-id="95c96-278">因此，虽然模板很有用的控件，例如按钮的总体自定义项，使用模板的控件可以仍可修改看起来彼此不同。</span><span class="sxs-lookup"><span data-stu-id="95c96-278">Therefore, although a template is useful for overall customization of controls like button, controls with templates can still be modified to look different from each other.</span></span>  
+  
+ <span data-ttu-id="95c96-279">![查找其他具有相同模板的按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")</span><span class="sxs-lookup"><span data-stu-id="95c96-279">![Buttons with the same template that look diferent](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")</span></span>  
+  
+ <span data-ttu-id="95c96-280">总之，在自定义按钮模板的过程中，你已了解如何执行以下操作，在 Microsoft Expression Blend 中：</span><span class="sxs-lookup"><span data-stu-id="95c96-280">In conclusion, in the process of customizing a button template you have learned how to do the following in Microsoft Expression Blend:</span></span>  
+  
+-   <span data-ttu-id="95c96-281">自定义控件的外观。</span><span class="sxs-lookup"><span data-stu-id="95c96-281">Customize the look of a control.</span></span>  
+  
+-   <span data-ttu-id="95c96-282">设置属性触发器。</span><span class="sxs-lookup"><span data-stu-id="95c96-282">Set property triggers.</span></span> <span data-ttu-id="95c96-283">属性触发器是非常有用，因为它们可以用于大多数对象，而不仅仅是控件。</span><span class="sxs-lookup"><span data-stu-id="95c96-283">Property triggers are very useful because they can be used on most objects, not just controls.</span></span>  
+  
+-   <span data-ttu-id="95c96-284">设置事件触发器。</span><span class="sxs-lookup"><span data-stu-id="95c96-284">Set event triggers.</span></span> <span data-ttu-id="95c96-285">事件触发器是非常有用，因为它们可以用于大多数对象，而不仅仅是控件。</span><span class="sxs-lookup"><span data-stu-id="95c96-285">Event triggers are very useful because they can be used on most objects, not just controls.</span></span>  
+  
+-   <span data-ttu-id="95c96-286">创建动画。</span><span class="sxs-lookup"><span data-stu-id="95c96-286">Create animations.</span></span>  
+  
+-   <span data-ttu-id="95c96-287">杂项： 创建渐变添加 BitmapEffects，使用转换，并设置的对象的基本属性。</span><span class="sxs-lookup"><span data-stu-id="95c96-287">Miscellaneous: create gradients, add BitmapEffects, use transforms, and set basic properties of objects.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="95c96-288">另请参阅</span><span class="sxs-lookup"><span data-stu-id="95c96-288">See Also</span></span>  
+ [<span data-ttu-id="95c96-289">使用 XAML 创建按钮</span><span class="sxs-lookup"><span data-stu-id="95c96-289">Create a Button by Using XAML</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
+ [<span data-ttu-id="95c96-290">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="95c96-290">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="95c96-291">动画概述</span><span class="sxs-lookup"><span data-stu-id="95c96-291">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="95c96-292">使用纯色和渐变进行绘制概述</span><span class="sxs-lookup"><span data-stu-id="95c96-292">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="95c96-293">位图效果概述</span><span class="sxs-lookup"><span data-stu-id="95c96-293">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

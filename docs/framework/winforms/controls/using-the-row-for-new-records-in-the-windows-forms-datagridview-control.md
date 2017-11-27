@@ -1,73 +1,74 @@
 ---
-title: "在 Windows 窗体 DataGridView 控件中使用新记录行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView 控件 [Windows 窗体], 为新记录添加行"
-  - "DataGridView 控件 [Windows 窗体], 数据输入"
-  - "行, 新建记录"
+title: "在 Windows 窗体 DataGridView 控件中使用新记录行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], adding rows for new records
+- rows [Windows Forms], new records
+- DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4633a70f6c3d010e6cc75236778cf2fd59c0e05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows 窗体 DataGridView 控件中使用新记录行
-在应用程序中使用 <xref:System.Windows.Forms.DataGridView> 编辑数据时，经常希望使用户能够向数据存储区添加新的数据行。  <xref:System.Windows.Forms.DataGridView> 控件通过为新记录提供一行（总是显示为最后一行）来支持此功能。  该行在其行标头中用星号 \(\*\) 标记。  以下各节讨论在启用新记录行后编程时应考虑的一些问题。  
+# <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f6f25-102">在 Windows 窗体 DataGridView 控件中使用新记录行</span><span class="sxs-lookup"><span data-stu-id="f6f25-102">Using the Row for New Records in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="f6f25-103">当你使用<xref:System.Windows.Forms.DataGridView>进行编辑你的应用程序中的数据，通常要使用户能够将新的数据行添加到数据存储。</span><span class="sxs-lookup"><span data-stu-id="f6f25-103">When you use a <xref:System.Windows.Forms.DataGridView> for editing data in your application, you will often want to give your users the ability to add new rows of data to the data store.</span></span> <span data-ttu-id="f6f25-104"><xref:System.Windows.Forms.DataGridView>控件通过始终作为最后一行显示为新记录，提供行来支持此功能。</span><span class="sxs-lookup"><span data-stu-id="f6f25-104">The <xref:System.Windows.Forms.DataGridView> control supports this functionality by providing a row for new records, which is always shown as the last row.</span></span> <span data-ttu-id="f6f25-105">它将标有其行标题中的星号 （*） 符号。</span><span class="sxs-lookup"><span data-stu-id="f6f25-105">It is marked with an asterisk (*) symbol in its row header.</span></span> <span data-ttu-id="f6f25-106">以下各节讨论的一些操作应考虑启用程序与用于新纪录的行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-106">The following sections discuss some of the things you should consider when you program with the row for new records enabled.</span></span>  
   
-## 显示新记录行  
- 使用 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 属性可指示是否显示新记录行。  此属性的默认值为 `true`。  
+## <a name="displaying-the-row-for-new-records"></a><span data-ttu-id="f6f25-107">显示用于新纪录的行</span><span class="sxs-lookup"><span data-stu-id="f6f25-107">Displaying the Row for New Records</span></span>  
+ <span data-ttu-id="f6f25-108">使用<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性以指示是否显示用于新纪录的行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-108">Use the <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property to indicate whether the row for new records is displayed.</span></span> <span data-ttu-id="f6f25-109">此属性的默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="f6f25-109">The default value of this property is `true`.</span></span>  
   
- 对于数据绑定的情况，如果控件的 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 属性和数据源的 <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=fullName> 属性均为 `true`，则将显示新记录行。  如果其中的一个属性为 `false`，则不显示该行。  
+ <span data-ttu-id="f6f25-110">数据绑定情况下，将显示新记录所在行如果<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>的控件的属性和<xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType>的数据源的属性均`true`。</span><span class="sxs-lookup"><span data-stu-id="f6f25-110">For the data bound case, the row for new records will be shown if the <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property of the control and the <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType> property of the data source are both `true`.</span></span> <span data-ttu-id="f6f25-111">如果存在任何一种`false`则不会显示行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-111">If either is `false` then the row will not be shown.</span></span>  
   
-## 用默认数据填充新记录行  
- 当用户选择新记录行作为当前行时，<xref:System.Windows.Forms.DataGridView> 控件引发 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件。  
+## <a name="populating-the-row-for-new-records-with-default-data"></a><span data-ttu-id="f6f25-112">为新记录的默认数据填充行</span><span class="sxs-lookup"><span data-stu-id="f6f25-112">Populating the Row for New Records with Default Data</span></span>  
+ <span data-ttu-id="f6f25-113">当用户选择用于新纪录的行的当前行中，作为<xref:System.Windows.Forms.DataGridView>控件都将引发<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。</span><span class="sxs-lookup"><span data-stu-id="f6f25-113">When the user selects the row for new records as the current row, the <xref:System.Windows.Forms.DataGridView> control raises the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span>  
   
- 此事件提供对新 <xref:System.Windows.Forms.DataGridViewRow> 的访问，并使您能够用默认数据填充该新行。  有关更多信息，请参见 [如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ <span data-ttu-id="f6f25-114">此事件提供对新的访问<xref:System.Windows.Forms.DataGridViewRow>并使你能够填充新的默认数据行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-114">This event provides access to the new <xref:System.Windows.Forms.DataGridViewRow> and enables you to populate the new row with default data.</span></span> <span data-ttu-id="f6f25-115">有关详细信息，请参阅[如何： 在 Windows 窗体 DataGridView 控件中的新行的指定默认值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)</span><span class="sxs-lookup"><span data-stu-id="f6f25-115">For more information, see [How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)</span></span>  
   
-## 行集合  
- 新记录行包含在 <xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合中，但在两个方面具有不同的行为：  
+## <a name="the-rows-collection"></a><span data-ttu-id="f6f25-116">行集合</span><span class="sxs-lookup"><span data-stu-id="f6f25-116">The Rows Collection</span></span>  
+ <span data-ttu-id="f6f25-117">用于新纪录的行包含在<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.Rows%2A>集合但其行为以不同方式在两个方面：</span><span class="sxs-lookup"><span data-stu-id="f6f25-117">The row for new records is contained in the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.Rows%2A> collection but behaves differently in two respects:</span></span>  
   
--   不能以编程方式将新记录行从 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合中移除。  如果尝试执行此操作，将引发 <xref:System.InvalidOperationException>。  用户也不能删除新记录行。  <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=fullName> 方法不会从 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合中移除此行。  
+-   <span data-ttu-id="f6f25-118">用于新纪录的行不能从删除<xref:System.Windows.Forms.DataGridView.Rows%2A>集合以编程方式。</span><span class="sxs-lookup"><span data-stu-id="f6f25-118">The row for new records cannot be removed from the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection programmatically.</span></span> <span data-ttu-id="f6f25-119"><xref:System.InvalidOperationException>如果尝试执行此操作，将引发。</span><span class="sxs-lookup"><span data-stu-id="f6f25-119">An <xref:System.InvalidOperationException> is thrown if this is attempted.</span></span> <span data-ttu-id="f6f25-120">用户也不能删除用于新纪录的行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-120">The user also cannot delete the row for new records.</span></span> <span data-ttu-id="f6f25-121"><xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>方法不会删除从此行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="f6f25-121">The <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> method does not remove this row from the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.</span></span>  
   
--   不能在新记录行之后添加任何行。  如果尝试执行此操作，将引发 <xref:System.InvalidOperationException>。  因此，新记录行总是 <xref:System.Windows.Forms.DataGridView> 控件中的最后一行。  存在新记录行时，<xref:System.Windows.Forms.DataGridViewRowCollection> 中添加行的方法（<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A> 和 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>）都在内部调用插入方法。  
+-   <span data-ttu-id="f6f25-122">可以为新记录的行之后不添加任何行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-122">No row can be added after the row for new records.</span></span> <span data-ttu-id="f6f25-123"><xref:System.InvalidOperationException>如果尝试执行此操作，则引发。</span><span class="sxs-lookup"><span data-stu-id="f6f25-123">An <xref:System.InvalidOperationException> is raised if this is attempted.</span></span> <span data-ttu-id="f6f25-124">因此，用于新纪录的行始终是中的最后一行<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="f6f25-124">As a result, the row for new records is always the last row in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="f6f25-125">上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>中添加行-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>-所有调用插入方法内部存在用于新纪录的行时。</span><span class="sxs-lookup"><span data-stu-id="f6f25-125">The methods on <xref:System.Windows.Forms.DataGridViewRowCollection> that add rows—<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, and <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>—all call insertion methods internally when the row for new records is present.</span></span>  
   
-## 新记录行的视觉自定义  
- 创建新记录行时，新记录行基于由 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 属性指定的行。  没有为此行指定的任何单元格样式都将从其他属性继承。  有关单元格样式继承的更多信息，请参见 [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+## <a name="visual-customization-of-the-row-for-new-records"></a><span data-ttu-id="f6f25-126">为新记录可视的行的自定义</span><span class="sxs-lookup"><span data-stu-id="f6f25-126">Visual Customization of the Row for New Records</span></span>  
+ <span data-ttu-id="f6f25-127">创建用于新纪录的行时，它基于指定的行的<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="f6f25-127">When the row for new records is created, it is based on the row specified by the <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> property.</span></span> <span data-ttu-id="f6f25-128">任何未指定此行的单元格样式均继承于其他属性。</span><span class="sxs-lookup"><span data-stu-id="f6f25-128">Any cell styles that are not specified for this row are inherited from other properties.</span></span> <span data-ttu-id="f6f25-129">有关单元格样式继承的详细信息，请参阅[在 Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="f6f25-129">For more information about cell style inheritance, see [Cell Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span></span>  
   
- 新记录行中的单元格显示的初始值是从每个单元格的 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 属性检索得到的。  对于类型为 <xref:System.Windows.Forms.DataGridViewImageCell> 的单元格，此属性返回一个占位符图像。  对于其他类型的单元格，此属性返回 `null`。  可以重写此属性以返回自定义值。  但是，当焦点进入新记录行时，这些初始值可以被 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件处理程序替换。  
+ <span data-ttu-id="f6f25-130">为新的记录检索从每个单元格的行中的单元显示的初始值<xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="f6f25-130">The initial values displayed by cells in the row for new records are retrieved from each cell's <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> property.</span></span> <span data-ttu-id="f6f25-131">有关类型的单元格<xref:System.Windows.Forms.DataGridViewImageCell>，此属性返回占位符图像。</span><span class="sxs-lookup"><span data-stu-id="f6f25-131">For cells of type <xref:System.Windows.Forms.DataGridViewImageCell>, this property returns a placeholder image.</span></span> <span data-ttu-id="f6f25-132">否则，此属性返回`null`。</span><span class="sxs-lookup"><span data-stu-id="f6f25-132">Otherwise, this property returns `null`.</span></span> <span data-ttu-id="f6f25-133">你可以重写此属性以返回自定义值。</span><span class="sxs-lookup"><span data-stu-id="f6f25-133">You can override this property to return a custom value.</span></span> <span data-ttu-id="f6f25-134">但是，这些初始值可以替换为<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件处理程序时焦点输入新记录的行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-134">However, these initial values can be replaced by a <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event handler when focus enters the row for new records.</span></span>  
   
- 用于此行标头的标准图标（箭头或星号）不是公开的。  如果要自定义这些图标，需要创建一个自定义的 <xref:System.Windows.Forms.DataGridViewRowHeaderCell> 类。  
+ <span data-ttu-id="f6f25-135">是一个箭头或星号，用于此行的标头的标准图标不被公开。</span><span class="sxs-lookup"><span data-stu-id="f6f25-135">The standard icons for this row's header, which are an arrow or an asterisk, are not exposed publicly.</span></span> <span data-ttu-id="f6f25-136">如果你想要自定义图标，你将需要创建自定义<xref:System.Windows.Forms.DataGridViewRowHeaderCell>类。</span><span class="sxs-lookup"><span data-stu-id="f6f25-136">If you want to customize the icons, you will need to create a custom <xref:System.Windows.Forms.DataGridViewRowHeaderCell> class.</span></span>  
   
- 标准图标使用行标头单元格所使用的 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 属性。  如果没有完整显示所需的足够空间，就不呈现这些标准图标。  
+ <span data-ttu-id="f6f25-137">使用的标准图标<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>属性<xref:System.Windows.Forms.DataGridViewCellStyle>使用行标题单元格。</span><span class="sxs-lookup"><span data-stu-id="f6f25-137">The standard icons use the <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> property of the <xref:System.Windows.Forms.DataGridViewCellStyle> in use by the row header cell.</span></span> <span data-ttu-id="f6f25-138">如果没有足够的空间来显示它们完全不会呈现的标准图标。</span><span class="sxs-lookup"><span data-stu-id="f6f25-138">The standard icons are not rendered if there is not enough space to display them completely.</span></span>  
   
- 如果行标头单元格已设置了字符串值，并且没有足够的空间既显示文本又显示图标，则首先放弃图标。  
+ <span data-ttu-id="f6f25-139">如果行标题单元格具有一个字符串值，设置，并且没有为文本和图标足够的空间，先删除图标。</span><span class="sxs-lookup"><span data-stu-id="f6f25-139">If the row header cell has a string value set, and if there is not enough room for both the text and icon, the icon is dropped first.</span></span>  
   
-## 排序  
- 在取消绑定模式中，即使用户已对 <xref:System.Windows.Forms.DataGridView> 的内容排序，也总是将新记录添加到 <xref:System.Windows.Forms.DataGridView> 的末尾。  用户将需要重新应用该排序以便将该行排列到正确的位置；此行为类似于 <xref:System.Windows.Forms.ListView> 控件的行为。  
+## <a name="sorting"></a><span data-ttu-id="f6f25-140">排序</span><span class="sxs-lookup"><span data-stu-id="f6f25-140">Sorting</span></span>  
+ <span data-ttu-id="f6f25-141">在未绑定模式下，将总是被新记录添加到的末尾<xref:System.Windows.Forms.DataGridView>即使用户已排序的内容<xref:System.Windows.Forms.DataGridView>。</span><span class="sxs-lookup"><span data-stu-id="f6f25-141">In unbound mode, new records will always be added to the end of the <xref:System.Windows.Forms.DataGridView> even if the user has sorted the content of the <xref:System.Windows.Forms.DataGridView>.</span></span> <span data-ttu-id="f6f25-142">用户将需要再次应用排序，以便将该行排列到正确的位置;此行为是类似于<xref:System.Windows.Forms.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="f6f25-142">The user will need to apply the sort again in order to sort the row to the correct position; this behavior is similar to that of the <xref:System.Windows.Forms.ListView> control.</span></span>  
   
- 在数据绑定和虚拟模式中，应用了排序以后的插入行为将取决于数据模型的实现。  对于 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，将立刻将该行排列到正确的位置。  
+ <span data-ttu-id="f6f25-143">在数据绑定和虚拟模式，插入行为应用排序时将依赖于数据模型的实现。</span><span class="sxs-lookup"><span data-stu-id="f6f25-143">In data bound and virtual modes, the insertion behavior when a sort is applied will be dependent on the implementation of the data model.</span></span> <span data-ttu-id="f6f25-144">有关[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，行立即排列到正确的位置。</span><span class="sxs-lookup"><span data-stu-id="f6f25-144">For [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], the row is immediately sorted into the correct position.</span></span>  
   
-## 关于新记录行的其他说明  
- 不能将此行的 <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> 属性设置为 `false`。  如果尝试执行此操作，将引发 <xref:System.InvalidOperationException>。  
+## <a name="other-notes-on-the-row-for-new-records"></a><span data-ttu-id="f6f25-145">用于新纪录的行上的其他说明</span><span class="sxs-lookup"><span data-stu-id="f6f25-145">Other Notes on the Row for New Records</span></span>  
+ <span data-ttu-id="f6f25-146">无法设置<xref:System.Windows.Forms.DataGridViewRow.Visible%2A>该行与属性`false`。</span><span class="sxs-lookup"><span data-stu-id="f6f25-146">You cannot set the <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> property of this row to `false`.</span></span> <span data-ttu-id="f6f25-147"><xref:System.InvalidOperationException>如果尝试执行此操作，则引发。</span><span class="sxs-lookup"><span data-stu-id="f6f25-147">An <xref:System.InvalidOperationException> is raised if this is attempted.</span></span>  
   
- 新记录行总是在未选中状态下创建。  
+ <span data-ttu-id="f6f25-148">始终在未选中状态中创建用于新纪录的行。</span><span class="sxs-lookup"><span data-stu-id="f6f25-148">The row for new records is always created in the unselected state.</span></span>  
   
-## 虚拟模式  
- 如果要实现虚拟模式，您需要对以下情况进行跟踪：在数据模型中何时需要新记录行；何时回滚该行的添加操作。  此功能的正确实现取决于数据模型的实现及其事务语义，例如，提交范围是在单元格级还是在行级。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。  
+## <a name="virtual-mode"></a><span data-ttu-id="f6f25-149">虚拟模式</span><span class="sxs-lookup"><span data-stu-id="f6f25-149">Virtual Mode</span></span>  
+ <span data-ttu-id="f6f25-150">如果你要实现虚拟模式，你将需要跟踪用于新记录行需要在数据模型，何时回滚添加行时。</span><span class="sxs-lookup"><span data-stu-id="f6f25-150">If you are implementing virtual mode, you will need to track when a row for new records is needed in the data model and when to roll back the addition of the row.</span></span> <span data-ttu-id="f6f25-151">此功能的正确实现取决于实现数据模型和其事务的语义，例如，在单元或行级别上是否是提交作用域。</span><span class="sxs-lookup"><span data-stu-id="f6f25-151">The exact implementation of this functionality depends on the implementation of the data model and its transaction semantics, for example, whether commit scope is at the cell or row level.</span></span> <span data-ttu-id="f6f25-152">有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="f6f25-152">For more information, see [Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=fullName>   
- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)   
- [如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+## <a name="see-also"></a><span data-ttu-id="f6f25-153">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f6f25-153">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
+ [<span data-ttu-id="f6f25-154">Windows 窗体 DataGridView 控件中的数据输入</span><span class="sxs-lookup"><span data-stu-id="f6f25-154">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="f6f25-155">如何：指定 Windows 窗体 DataGridView 控件中新行的默认值</span><span class="sxs-lookup"><span data-stu-id="f6f25-155">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)

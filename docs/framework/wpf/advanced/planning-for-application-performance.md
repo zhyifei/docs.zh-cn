@@ -1,51 +1,54 @@
 ---
-title: "规划应用程序性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "应用程序, 优化"
-  - "WPF 应用程序, 优化"
+title: "规划应用程序性能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applications [WPF], optimizing
+- WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 规划应用程序性能
-是否能够成功实现性能目标取决于您制定的性能策略的优劣。  规划是开发任何产品的第一个阶段。  本主题描述几个非常简单的规则，用于制定可实现绝佳性能的策略。  
+# <a name="planning-for-application-performance"></a><span data-ttu-id="4a4ef-102">规划应用程序性能</span><span class="sxs-lookup"><span data-stu-id="4a4ef-102">Planning for Application Performance</span></span>
+<span data-ttu-id="4a4ef-103">达到性能目标成功取决于你开发你性能策略的程度。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-103">The success of achieving your performance goals depends on how well you develop your performance strategy.</span></span> <span data-ttu-id="4a4ef-104">规划是开发任何产品中的第一个阶段。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-104">Planning is the first stage in developing any product.</span></span> <span data-ttu-id="4a4ef-105">本主题介绍一些非常简单规则可用于开发良好的性能策略。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-105">This topic describes a few very simple rules for developing a good performance strategy.</span></span>  
   
-## 从方案的角度考虑  
- 方案可帮助您将重点放在应用程序的关键组件上。  方案通常派生自您的客户和竞争产品。  不断研究客户，并确定客户真正关注您的产品和竞争对手产品的哪些方面。  客户的反馈可帮助您确定应用程序的主要方案。  例如，如果您设计的组件将在启动时使用，则该组件很有可能将只在应用程序启动时调用一次。  启动时间将成为关键方案。  关键方案的其他示例可以是动画序列所需的帧速率或者应用程序所允许的最大工作集。  
+## <a name="think-in-terms-of-scenarios"></a><span data-ttu-id="4a4ef-106">考虑方案</span><span class="sxs-lookup"><span data-stu-id="4a4ef-106">Think in Terms of Scenarios</span></span>  
+ <span data-ttu-id="4a4ef-107">方案可帮助你专注于你的应用程序的关键组件。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-107">Scenarios can help you focus on the critical components of your application.</span></span> <span data-ttu-id="4a4ef-108">方案通常源自客户，以及竞争对手的产品。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-108">Scenarios are generally derived from your customers, as well as competitive products.</span></span> <span data-ttu-id="4a4ef-109">始终研究客户，并找出实际产生它们非常高兴有关您的产品和竞争对手的产品。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-109">Always study your customers and find out what really makes them excited about your product, and your competitors' products.</span></span> <span data-ttu-id="4a4ef-110">你的客户的反馈可以帮助您确定应用程序的主要方案。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-110">Your customers' feedback can help you to determine your application's primary scenario.</span></span> <span data-ttu-id="4a4ef-111">例如，如果你正在设计将在启动时使用的组件，则很可能，在应用程序启动时一次调用该组件。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-111">For instance, if you are designing a component that will be used at startup, it is likely that the component will be called only once, when the application starts up.</span></span> <span data-ttu-id="4a4ef-112">启动时间变得关键方案。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-112">Startup time becomes your key scenario.</span></span> <span data-ttu-id="4a4ef-113">重要的方案的其他示例可能是所需的帧速率对于动画序列，或最大工作集允许对应用程序。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-113">Other examples of key scenarios could be the desired frame rate for animation sequences, or the maximum working set allowed for the application.</span></span>  
   
-## 制定目标  
- 目标可帮助您确定应用程序的执行速度是慢还是快。  您应当为每个方案制定目标。  所有的性能目标都应当基于客户的预期来制定。  在应用程序开发周期的早期制定性能目标可能会有些困难，因为早期仍存在许多未解决的问题。  但是，最好制定初始目标并在以后进行修订，而不要根本就没有目标。  
+## <a name="define-goals"></a><span data-ttu-id="4a4ef-114">定义目标</span><span class="sxs-lookup"><span data-stu-id="4a4ef-114">Define Goals</span></span>  
+ <span data-ttu-id="4a4ef-115">目标帮助你确定应用程序的性能速度更快或变慢。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-115">Goals help you to determine whether an application is performing faster or slower.</span></span> <span data-ttu-id="4a4ef-116">应为每个方案定义目标。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-116">You should define goals for all of your scenarios.</span></span> <span data-ttu-id="4a4ef-117">你定义的所有性能目标应都基于客户预期。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-117">All performance goals that you define should be based on your customers' expectations.</span></span> <span data-ttu-id="4a4ef-118">它可能在应用程序开发在早期的目标重启，仍有许多解决的问题时制定性能比较困难。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-118">It may be difficult to set performance goals early on in the application development cycle, when there are still many unresolved issues.</span></span> <span data-ttu-id="4a4ef-119">但是，最好制定初始目标并晚于以目标根本没有修改它。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-119">However, it is better to set an initial goal and revise it later than not to have a goal at all.</span></span>  
   
-## 了解平台  
- 在应用程序开发过程中，总是按照度量、调查、简化\/更正这一周期来操作。  从开发周期的开始到结束，您需要在稳定而可靠的环境中度量应用程序的性能。  您应当避免由外部因素造成的变化。  例如，在测试性能时，应当禁用防病毒或任何自动更新功能（如 SMS），以防它们影响性能测试结果。  在对应用程序的性能进行度量之后，需要确定哪些更改将使性能获得最大的改进。  在对应用程序进行修改之后，请再次启动该周期。  
+## <a name="understand-your-platform"></a><span data-ttu-id="4a4ef-120">了解你的平台</span><span class="sxs-lookup"><span data-stu-id="4a4ef-120">Understand Your Platform</span></span>  
+ <span data-ttu-id="4a4ef-121">始终保持度量、 调查、 在应用程序开发周期中改进/更正的周期。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-121">Always maintain the cycle of measuring, investigating, refining/correcting during your application development cycle.</span></span> <span data-ttu-id="4a4ef-122">从开发周期的末尾开始，你需要测量可靠且稳定的环境中的应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-122">From the beginning to the end of the development cycle, you need to measure your application's performance in a reliable, stable environment.</span></span> <span data-ttu-id="4a4ef-123">应避免通过外部因素造成的变化。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-123">You should avoid variability caused by external factors.</span></span> <span data-ttu-id="4a4ef-124">例如，测试性能时，你应禁用防病毒软件或如 SMS 任何自动更新，顺序不适用于影响性能测试结果。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-124">For example, when testing performance, you should disable anti-virus or any automatic update such as SMS, in order not to impact performance test results.</span></span> <span data-ttu-id="4a4ef-125">一旦具有度量应用程序的性能，需要标识将导致最大的改进的更改。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-125">Once you have measured your application's performance, you need to identify the changes that will result in the biggest improvements.</span></span> <span data-ttu-id="4a4ef-126">一次修改了你的应用程序，再次启动该周期。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-126">Once you have modified your application, start the cycle again.</span></span>  
   
-## 将性能调整设置为迭代过程  
- 您应当知道将要使用的每个功能的相对成本。  例如，从计算资源的角度看，在 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]中使用反射通常对性能的要求很高，因此您需要慎用反射。  这并不意味着避免使用反射，而只是表示您应当注意平衡应用程序的性能要求与所用功能的性能需求。  
+## <a name="make-performance-tuning-an-iterative-process"></a><span data-ttu-id="4a4ef-127">进行性能优化的迭代过程</span><span class="sxs-lookup"><span data-stu-id="4a4ef-127">Make Performance Tuning an Iterative Process</span></span>  
+ <span data-ttu-id="4a4ef-128">您应该知道你将使用每个功能的相对成本。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-128">You should know the relative cost of each feature you will use.</span></span> <span data-ttu-id="4a4ef-129">例如，在中对反射的使用[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]通常是性能密集型根据计算资源，因此你将想要谨慎地使用。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-129">For example, the use of reflection in [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] is generally performance intensive in terms of computing resources, so you would want to use it judiciously.</span></span> <span data-ttu-id="4a4ef-130">这并不意味着若要避免使用反射，仅在你应小心地将其与你使用的功能的性能需求的应用程序性能要求相平衡。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-130">This does not mean to avoid the use of reflection, only that you should be careful to balance the performance requirements of your application with the performance demands of the features you use.</span></span>  
   
-## 以图形丰富性为目标生成内容  
- 如需创建面向 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序性能的可伸缩方法，关键方法之一是以图形丰富性为目标生成内容。  总是首先使用对性能要求最低的资源来实现方案目标。  在实现这些目标之后，使用对性能要求较高的功能来生成包含大量图形的内容，同时始终牢记方案目标。  请记住，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是一个非常丰富的平台，它提供了非常丰富的图形功能。  随意使用对性能要求很高的功能可能会对应用程序的整体性能产生负面影响。  
+## <a name="build-towards-graphical-richness"></a><span data-ttu-id="4a4ef-131">生成大量图形的内容</span><span class="sxs-lookup"><span data-stu-id="4a4ef-131">Build Towards Graphical Richness</span></span>  
+ <span data-ttu-id="4a4ef-132">一种用于创建实现可缩放的方法的关键技术[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序性能是构建于图形丰富功能和复杂性。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-132">A key technique for creating a scalable approach towards achieving [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application performance is to build towards graphical richness and complexity.</span></span> <span data-ttu-id="4a4ef-133">始终使用最少的性能密集型资源实现方案目标开头。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-133">Always start with using the least performance intensive resources to achieve your scenario goals.</span></span> <span data-ttu-id="4a4ef-134">后实现这些目标，请通过使用更多性能密集型功能，始终记住你方案的目标构建向图形丰富功能。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-134">Once you achieve these goals, build towards graphic richness by using more performance intensive features, always keeping your scenario goals in mind.</span></span> <span data-ttu-id="4a4ef-135">请记住，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是非常丰富的平台，并提供非常丰富的图形功能。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-135">Remember, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is a very rich platform and provides very rich graphic features.</span></span> <span data-ttu-id="4a4ef-136">使用不加考虑性能密集型功能可以对应用程序总体性能产生负面影响。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-136">Using performance intensive features without thinking can negatively impact your overall application performance.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件在本质上具有可扩展性，它允许在不修改其控件行为的情况下对其外观进行广泛的自定义。  通过利用样式、数据模板和控件模板，可以根据您的性能要求来创建并逐步改造可自定义的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="4a4ef-137">控件是广泛的自定义其外观，而不修改其控件行为的从而本质上是可扩展。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-137"> controls are inherently extensible by allowing for wide-spread customization of their appearance, while not altering their control behavior.</span></span> <span data-ttu-id="4a4ef-138">通过利用的样式、 数据模板和控件模板，你可以创建并以增量方式不断发展可自定义[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，适应性能要求。</span><span class="sxs-lookup"><span data-stu-id="4a4ef-138">By taking advantage of styles, data templates, and control templates, you can create and incrementally evolve a customizable [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] that adapts to your performance requirements.</span></span>  
   
-## 请参阅  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [布局和设计](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [二维图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="4a4ef-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4a4ef-139">See Also</span></span>  
+ [<span data-ttu-id="4a4ef-140">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="4a4ef-140">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="4a4ef-141">利用硬件</span><span class="sxs-lookup"><span data-stu-id="4a4ef-141">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="4a4ef-142">布局和示例</span><span class="sxs-lookup"><span data-stu-id="4a4ef-142">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="4a4ef-143">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="4a4ef-143">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="4a4ef-144">对象行为</span><span class="sxs-lookup"><span data-stu-id="4a4ef-144">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="4a4ef-145">应用程序资源</span><span class="sxs-lookup"><span data-stu-id="4a4ef-145">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="4a4ef-146">文本</span><span class="sxs-lookup"><span data-stu-id="4a4ef-146">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="4a4ef-147">数据绑定</span><span class="sxs-lookup"><span data-stu-id="4a4ef-147">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="4a4ef-148">其他性能建议</span><span class="sxs-lookup"><span data-stu-id="4a4ef-148">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
