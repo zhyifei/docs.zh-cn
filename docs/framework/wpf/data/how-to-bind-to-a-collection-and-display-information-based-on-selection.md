@@ -1,57 +1,63 @@
 ---
-title: "如何：绑定到集合并基于选择显示信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Data Binding — 数据绑定, 绑定到集合"
-  - "Data Binding — 数据绑定, 创建数据集合的视图"
-  - "Data Binding — 数据绑定, 选择视图的数据"
-  - "数据集合, 选择视图的数据"
+title: "如何：绑定到集合并基于选择显示信息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data collections [WPF], selecting data for views
+- data binding [WPF], creating views of data collections
+- data binding [WPF], selecting data for views
+- data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e92621e7e62750ae5ad73158232ccdabfb22287a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：绑定到集合并基于选择显示信息
-在一个简单的主\-从方案中，您有一个已绑定数据的 <xref:System.Windows.Controls.ItemsControl>，例如 <xref:System.Windows.Controls.ListBox>。  基于用户的选择显示有关选定项的更多信息。  此示例演示如何实现该方案。  
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>如何：绑定到集合并基于选择显示信息
+在简单的主 / 从方案中，具有数据绑定<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox>。 基于用户选择，显示有关选定项的详细信息。 此示例演示如何实现这种情况。  
   
-## 示例  
- 在此示例中，`People` 是 `Person` 类的一个 <xref:System.Collections.ObjectModel.ObservableCollection%601>。  该 `Person` 类包含三个属性：`FirstName`、`LastName` 和 `HomeTown`，它们的类型均为 `string`。  
+## <a name="example"></a>示例  
+ 在此示例中，`People`是<xref:System.Collections.ObjectModel.ObservableCollection%601>的`Person`类。 这`Person`类包含三个属性： `FirstName`， `LastName`，和`HomeTown`，所有类型`string`。  
   
- [!code-xml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
-[!code-xml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
+ [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
+[!code-xaml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
- <xref:System.Windows.Controls.ContentControl> 使用以下 <xref:System.Windows.DataTemplate>，该模板定义如何显示 `Person` 的信息：  
+ <xref:System.Windows.Controls.ContentControl>使用以下<xref:System.Windows.DataTemplate>，它定义如何的信息`Person`显示：  
   
- [!code-xml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
+ [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
- 以下是该示例生成的内容的一个屏幕快照。  <xref:System.Windows.Controls.ContentControl> 显示所选人员的其他属性。  
+ 以下是该示例生成的屏幕快照。 <xref:System.Windows.Controls.ContentControl>显示选择的人员的其他属性。  
   
- ![绑定到集合](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding\_CollectionBindingSample")  
+ ![绑定到集合](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
- 此示例中需要注意的两点是：  
+ 需要注意，在此示例中，两个的事项为：  
   
-1.  <xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.ContentControl> 绑定到同一个源。  两个绑定的 <xref:System.Windows.Data.Binding.Path%2A> 属性均未指定，因为两个控件都绑定到整个集合对象。  
+1.  <xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ContentControl>将绑定到相同的源。 <xref:System.Windows.Data.Binding.Path%2A>不指定这两种绑定的属性，因为这两个控件绑定到整个集合对象。  
   
-2.  为此，必须将 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 属性设置为 `true`。  设置此属性可以确保选定项始终设置为 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。  或者，如果 <xref:System.Windows.Controls.ListBox> 从 <xref:System.Windows.Data.CollectionViewSource> 获取数据，则它将自动同步选定内容和当前内容。  
+2.  必须设置<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>属性`true`为使工作。 将设置此属性可确保所选的项始终设置为<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果<xref:System.Windows.Controls.ListBox>获取它从数据<xref:System.Windows.Data.CollectionViewSource>，它自动同步所选内容和货币。  
   
- 请注意，`Person` 类按以下方式重写 `ToString` 方法。  默认情况下，<xref:System.Windows.Controls.ListBox> 调用 `ToString` 并显示绑定集合中每个对象的字符串表示形式。  因此，每个 `Person` 都显示为 <xref:System.Windows.Controls.ListBox> 中的第一个名称。  
+ 请注意，`Person`类重写`ToString`方法按以下方式。 默认情况下，<xref:System.Windows.Controls.ListBox>调用`ToString`并在与绑定集合中显示的字符串表示形式的每个对象。 这就是为什么每个`Person`显示中的第一个名为<xref:System.Windows.Controls.ListBox>。  
   
  [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
  [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
-## 请参阅  
- [对分层数据使用主\-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)   
- [对分层 XML 数据使用主\-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)   
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>另请参阅  
+ [将主-详细模式与分层数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [将主-详细模式与分层 XML 数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

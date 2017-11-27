@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="constrained-execution-regions"></a>受约束的执行区域
 受约束的执行区域 (CER) 是创建可靠托管代码机制的一部分。 CER 定义一个区域，该区域内公共语言运行时 (CLR) 会受到约束，不能引发阻止该区域内代码完全执行的带外异常。 在该区域中，用户代码受到约束，不能执行会导致引发带外异常的代码。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法应该立即先于 `try` 块执行并将 `catch`、`finally`、`fault` 块标记为受约束的执行区域。 标记为受约束的区域后，代码只能调用其他具有强可靠性协定的代码，并且代码不应对未准备好或不可靠的方法进行分配和虚拟调用，除非该代码已准备好处理失败。 CLR 会为 CER 中正在执行的代码延迟线程中止。  
@@ -126,4 +124,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另请参阅  
  [可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)
-

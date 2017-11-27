@@ -1,69 +1,71 @@
 ---
-title: "&lt;Thread_UseAllCpuGroups&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Thread_UseAllCpuGroups&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Thread_UseAllCpuGroups&gt; 元素
-指定运行时是否在所有的 CPU 组中分布托管的线程。  
+# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt;元素
+指定运行时是否跨所有 CPU 组分发托管的线程。  
   
-## 语法  
+ \<configuration>  
+\<运行时 >  
+<Thread_UseAllCpuGroups>  
   
-```vb  
+## <a name="syntax"></a>语法  
+  
+```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
 |特性|描述|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指定运行时是否在所有的 CPU 组中分布托管的线程。|  
+|---------------|-----------------|  
+|`enabled`|必需的特性。<br /><br /> 指定运行时是否跨所有 CPU 组分发托管的线程。|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
-|-------|--------|  
-|`false`|运行时不会跨多个 CPU 组分发托管线程。  这是默认设置。|  
-|`true`|如果计算机具有多个 CPU 组，并 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 元素已启用，运行时在多个 CPU 组中分布托管线程。|  
+|-----------|-----------------|  
+|`false`|运行时不将托管的线程分发跨多个 CPU 组中。 这是默认设置。|  
+|`true`|运行时将托管的线程分布到多个 CPU 组，如果计算机具有多个 CPU 组和[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)启用元素。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
-## 备注  
- 当计算机具有多个 CPU 组时，启用此元素会导致运行时在所有 CPU 组中分发托管线程。  若要使用此功能，您还必须启用 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 元素，这种元素可以将垃圾回收扩展至所有 CPU 组，并在创建和平衡堆时将考虑所有内核。  启用 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 组件需要启用 [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 元素。  如果这些元素未启用，则启用 `<Thread_UseAllCpuGroups>` 元素将无作用。  
+## <a name="remarks"></a>备注  
+ 如果计算机具有多个 CPU 组，则启用此元素将导致运行时将托管的线程分发范围的所有 CPU 组。 若要使用此功能，你必须启用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素，它将垃圾回收扩展到所有的 CPU 组，并将考虑在内时创建和平衡堆的所有内核。 启用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素需要启用[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素。 如果未启用这些元素，则启用`<Thread_UseAllCpuGroups>`元素没有任何影响。  
   
-## 示例  
- 下面的示例演示了如何启用对多个 CPU 组的支持。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何启用对多个 CPU 组的支持。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <Thread_UseAllCpuGroups enabled="true"/>  
@@ -73,7 +75,7 @@ caps.handback.revision: 6
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<GCCpuGroup\> 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a>另请参阅  
+ [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<GCCpuGroup > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

@@ -1,54 +1,36 @@
 ---
-title: "Option Compare 语句 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "Option Compare 语句"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Compare
 - vb.OptionCompare
-dev_langs:
-- VB
 helpviewer_keywords:
 - case sensitivity, Option Compare statement
-- Compare keyword
-- binary comparison
+- Compare keyword [Visual Basic]
+- binary comparison [Visual Basic]
 - strings [Visual Basic], returning from functions
-- binary comparison, Option Compare statement
+- binary comparison [Visual Basic], Option Compare statement
 - strings [Visual Basic], comparing
 - string comparison [Visual Basic], Option Compare statement
-- Text keyword, Option Compare statement
-- Binary keyword, Option Compare statement
+- Text keyword [Visual Basic], Option Compare statement
+- Binary keyword [Visual Basic], Option Compare statement
 - string comparison [Visual Basic], sorting data
-- Option Compare statement
+- Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b1b077a8818315e52ada6b08ff1e1ced9bbd17c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 281b18322f5be4e7dadcb9533680b25016a44c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="option-compare-statement"></a>Option Compare 语句
 声明比较字符串数据时要使用的默认比较方法。  
@@ -73,7 +55,7 @@ Option Compare { Binary | Text }
   
  `Binary` 比较会对每个字符串中每个字符的数字 Unicode 值进行比较。 `Text` 比较会基于当前区域性中的词汇意义对每个 Unicode 字符进行比较。  
   
- 在 Microsoft Windows 中，排序顺序取决于代码页。 有关详细信息，请参阅[代码页](https://docs.microsoft.com/cpp/c-runtime-library/code-pages)。  
+ 在 Microsoft Windows 中，排序顺序取决于代码页。 有关详细信息，请参阅[代码页](/cpp/c-runtime-library/code-pages)。  
   
  在下例中，使用 `Option Compare Binary` 对英语/欧洲代码页 (ANSI 1252) 中的字符进行排序，由此产生典型的二进制排序顺序。  
   
@@ -84,19 +66,19 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>当 Option Compare 语句不存在时  
- 如果源代码不包含`Option Compare`语句， **Option Compare**上设置[编译页，项目设计器 (Visual Basic 中)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果您使用命令行编译器，指定的设置[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)使用编译器选项。  
+ 如果源代码不包含`Option Compare`语句， **Option Compare**上设置[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果你使用命令行编译器，通过指定设置[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)使用编译器选项。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 #### <a name="to-set-option-compare-in-the-ide"></a>若要在 IDE 中设置 Option Compare  
   
-1.  在**解决方案资源管理器**，选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[NIB︰ 使用项目设计器管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[NIB： 项目设计器用管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
   
-2.  单击“编译”****选项卡。  
+2.  单击“编译”选项卡。  
   
-3.  中的值设置**Option Compare**框。  
+3.  设置中的值**Option Compare**框。  
   
- 当您创建项目时， **Option Compare**上设置**编译**选项卡上设置为**Option Compare**中设置**选项**对话框。 若要更改此设置，请在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是**二进制**。  
+ 当你创建项目， **Option Compare**上设置**编译**选项卡设置为**Option Compare**中设置**选项**对话框。 若要更改此设置，请在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是**二进制**。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>若要设置命令行上的 Option Compare  
   
@@ -105,23 +87,23 @@ Option Compare { Binary | Text }
 ## <a name="example"></a>示例  
  下例使用 `Option Compare` 语句将二进制比较设置为默认字符串比较方法。 若要使用此代码，请取消 `Option Compare Binary` 语句的注释，并将其置于源文件顶部。  
   
- [!code-vb[VbVbalrStatements #&45;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
   
 ## <a name="example"></a>示例  
  下例使用 `Option Compare` 语句将不区分大小写的文本排序顺序设置为默认字符串比较方法。 若要使用此代码，请取消 `Option Compare Text` 语句的注释，并将其置于源文件顶部。  
   
- [!code-vb[VbVbalrStatements #&46;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A></xref:Microsoft.VisualBasic.Strings.InStr%2A>   
- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A></xref:Microsoft.VisualBasic.Strings.InStrRev%2A>   
- <xref:Microsoft.VisualBasic.Strings.Replace%2A></xref:Microsoft.VisualBasic.Strings.Replace%2A>   
- <xref:Microsoft.VisualBasic.Strings.Split%2A></xref:Microsoft.VisualBasic.Strings.Split%2A>   
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A></xref:Microsoft.VisualBasic.Strings.StrComp%2A>   
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)   
- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)   
- [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)   
- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
+ <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Replace%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Split%2A>  
+ <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
+ [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)  
+ [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -1,6 +1,6 @@
 ---
 title: "符号和运算符参考 (F#)"
-description: "符号和运算符参考 (F#)"
+description: "了解符号和 F # 编程语言中使用的运算符。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 514dc37dce3df3f40ae99ce55772b0c4e8deb95f
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
 > [!NOTE]
@@ -128,7 +127,7 @@ ms.lasthandoff: 04/05/2017
 |--------|-------------|
 |`as`|右|
 |`when`|右|
-|<code>&#124;</code>（竖线）|左|
+|<code>&#124;</code>（管道）|左|
 |`;`|右|
 |`let`|不相关|
 |`function`, `fun`, `match`, `try`|不相关|
@@ -136,10 +135,10 @@ ms.lasthandoff: 04/05/2017
 |`->`|右|
 |`:=`|右|
 |`,`|不相关|
-|`or`<code>&#124;&#124;</code>|左|
+|`or`, <code>&#124;&#124;</code>|左侧|
 |`&`, `&&`|左侧|
 |`:>`, `:?>`|右|
-|`!=`*op*，`<`*op*，`>`*op*，`=`，<code>&#124;</code>*op*，`&`*op*，`&`<br /><br />（包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`）|左|
+|`!=`*操作*， `<`*操作*， `>`*操作*， `=`， <code>&#124;</code>*操作*， `&` *操作*，`&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左|
 |`^`*op*<br /><br />（包括 `^^^`）|右|
 |`::`|右|
 |`:?`|未关联|
@@ -158,4 +157,3 @@ F# 支持自定义运算符重载。 这意味着你可以自定义自己的运�
 [F# 语言参考](../index.md)
 
 [运算符重载](../operator-overloading.md)
-

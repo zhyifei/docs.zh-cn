@@ -1,47 +1,45 @@
 ---
-title: "OFTYPE (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: OFTYPE (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: cd2660eb5fddd0c75b44d0796edce37c83865e81
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# OFTYPE (Entity SQL)
+# <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 从查询表达式返回特定类型的对象集合。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-OFTYPE (expression, [ONLY] test_type)  
+OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  `expression`  
  返回对象集合的任何有效的查询表达式。  
   
  `test_type`  
  要对 `expression` 返回的每个对象进行测试的类型。 该类型必须由命名空间进行限定。  
   
-## 返回值  
- `test_type` 类型或 `test_type` 的基类型或派生类型的对象集合。 如果指定 ONLY，则仅返回 `test_type` 的实例或空集合。  
+## <a name="return-value"></a>返回值  
+ `test_type`类型或 `test_type`的基类型或派生类型的对象集合。 如果指定 ONLY，则仅返回 `test_type` 的实例或空集合。  
   
-## 备注  
- `OFTYPE` 表达式指定一个类型表达式，此表达式旨在针对集合的每个元素执行类型测试。`OFTYPE` 表达式生成指定类型的新集合，其中仅包含等效于该类型或其子类型的元素。  
+## <a name="remarks"></a>备注  
+ `OFTYPE` 表达式指定一个类型表达式，此表达式旨在针对集合的每个元素执行类型测试。  `OFTYPE` 表达式生成指定类型的新集合，其中仅包含等效于该类型或其子类型的元素。  
   
  `OFTYPE` 表达式是下面的查询表达式的缩写形式：  
   
@@ -66,15 +64,15 @@ OfType(executives, NamespaceName.Manager)
  下表显示了 `OFTYPE` 运算符对于某些模式的行为。 所有异常都在调用提供程序之前从客户端引发：  
   
 |模式|行为|  
-|--------|--------|  
-|OFTYPE\(Collection\(EntityType\), EntityType\)|Collection\(EntityType\)|  
-|OFTYPE\(Collection\(ComplexType\), ComplexType\)|引发|  
-|OFTYPE\(Collection\(RowType\), RowType\)|引发|  
+|-------------|--------------|  
+|OFTYPE(Collection(EntityType), EntityType)|Collection(EntityType)|  
+|OFTYPE(Collection(ComplexType), ComplexType)|引发|  
+|OFTYPE(Collection(RowType), RowType)|引发|  
   
-## 示例  
- 下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 OFTYPE 运算符从 Course 对象集合返回 OnsiteCourse 对象集合。 该查询基于 [School 模型](http://msdn.microsoft.com/zh-cn/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
+## <a name="example"></a>示例  
+ 下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 OFTYPE 运算符从 Course 对象集合返回 OnsiteCourse 对象集合。 该查询基于 [School 模型](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)。  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   
-## 请参阅  
- [Entity SQL 参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,28 +1,31 @@
 ---
-title: "带有 WCF 服务的 ASMX 客户端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "带有 WCF 服务的 ASMX 客户端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11ccb40fb4c29678ce0552da2dd8eb29c1ae561e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 带有 WCF 服务的 ASMX 客户端
+# <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建服务，然后从非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端（如 ASMX 客户端）访问该服务。  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。  
+>  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 此示例由客户端控制台程序 \(.exe\) 和 Internet 信息服务 \(IIS\) 所承载的服务库 \(.dll\) 组成。该服务实现定义“请求\-答复”通信模式的协定。该协定由 `ICalculator` 接口定义，此接口公开数学运算（`Add`、`Subtract`、`Multiply` 和 `Divide`）。ASMX 客户端向某个数学运算发出同步请求，服务使用结果进行回复。  
+ 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，此接口公开数学运算（`Add`、`Subtract`、`Multiply` 和 `Divide`）。 ASMX 客户端向某个数学运算发出同步请求，服务使用结果进行回复。  
   
  该服务实现一个 `ICalculator` 协定，下面的代码对该协定进行了定义。  
   
@@ -39,30 +42,27 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);  
 }  
-  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 将 CLR 类型映射到 XML 表示形式。<xref:System.Runtime.Serialization.DataContractSerializer> 对某些 XML 表示形式的解释不同于 XmlSerializer。非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 代理生成器（如 Wsdl.exe）可在使用 XmlSerializer 时生成更适用的接口。<xref:System.ServiceModel.XmlSerializerFormatAttribute> 应用于 `ICalculator` 接口，以确保使用 XmlSerializer 将 CLR 类型映射到 XML。服务实现计算并返回相应的结果。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 将 CLR 类型映射到 XML 表示形式。 <xref:System.Runtime.Serialization.DataContractSerializer> 对某些 XML 表示形式的解释不同于 XmlSerializer。 非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 代理生成器（如 Wsdl.exe）可在使用 XmlSerializer 时生成更适用的接口。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>应用于`ICalculator`接口，以确保使用 XmlSerializer 将 CLR 类型映射到 XML。 服务实现计算并返回相应的结果。  
   
- 服务公开单一终结点，以便与使用配置文件 \(Web.config\) 定义的服务进行通信。终结点由地址、绑定和协定组成。服务在 Internet 信息服务 \(IIS\) 主机提供的基地址公开该终结点。`binding` 属性设置为 basicHttpBinding，它使用 SOAP 1.1（符合 WS\-I BasicProfile 1.1）提供 HTTP 通信，如下面的示例配置所示。  
+ 服务公开单一终结点，以便与使用配置文件 (Web.config) 定义的服务进行通信。 终结点由地址、绑定和协定组成。 服务在 Internet 信息服务 (IIS) 主机提供的基地址公开该终结点。 `binding` 属性设置为 basicHttpBinding，它使用 SOAP 1.1（符合 WS-I BasicProfile 1.1）提供 HTTP 通信，如下面的示例配置所示。  
   
-```  
+```xml  
 <services>  
-   <service   
-       name="Microsoft.ServiceModel.Samples.CalculatorService"  
-       behaviorConfiguration="CalculatorServiceBehavior">  
-       <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc.  -->  
-      <endpoint address=""  
-               binding="basicHttpBinding"   
-               contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-   </service>  
+  <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+           behaviorConfiguration="CalculatorServiceBehavior">  
+    <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc.  -->  
+    <endpoint address=""  
+              binding="basicHttpBinding"   
+              contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+  </service>  
 </services>  
-  
 ```  
   
- ASMX 客户端使用由 Web 服务描述语言 \(WSDL\) 实用工具 \(Wsdl.exe\) 生成的类型化代理与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信。该类型化代理包含在 generatedClient.cs 文件中。WSDL 实用工具为指定的服务检索元数据并生成一个类型化代理，供客户端用来进行通信。默认情况下，框架不公开任何元数据。若要公开生成代理所需的元数据，必须添加 [\<serviceMetadata\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) 并将其 `httpGetEnabled` 属性设置为 `True`，如下面的配置所示。  
+ ASMX 客户端使用由 Web 服务描述语言 (WSDL) 实用工具 (Wsdl.exe) 生成的类型化代理与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信。 该类型化代理包含在 generatedClient.cs 文件中。 WSDL 实用工具为指定的服务检索元数据并生成一个类型化代理，供客户端用来进行通信。 默认情况下，框架不公开任何元数据。 若要公开生成代理所需的元数据，必须添加[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)并设置其`httpGetEnabled`属性设为`True`下面的配置中所示。  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior name="CalculatorServiceBehavior">  
@@ -78,19 +78,17 @@ public interface ICalculator
   
  在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
   
-```  
+```console  
 wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorServiceAddress http://localhost/servicemodelsamples/service.svc?wsdl  
-  
 ```  
   
- 通过使用生成的类型化代理，客户端可以通过配置相应的地址来访问给定的服务终结点。客户端使用配置文件 \(App.config\) 指定要与其通信的终结点。  
+ 通过使用生成的类型化代理，客户端可以通过配置相应的地址来访问给定的服务终结点。 客户端使用配置文件 (App.config) 指定要与其通信的终结点。  
   
-```  
+```xml  
 <appSettings>  
-      <add key="CalculatorServiceAddress"   
-      value="http://localhost/ServiceModelSamples/service.svc"/>  
+  <add key="CalculatorServiceAddress"   
+       value="http://localhost/ServiceModelSamples/service.svc"/>  
 </appSettings>  
-  
 ```  
   
  客户端实现构造了类型化代理的一个实例，以开始与服务进行通信。  
@@ -128,10 +126,9 @@ using (CalculatorService client = new CalculatorService())
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -140,27 +137,26 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]传递和返回复杂数据类型的更多信息，请参见：[Windows 窗体客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)、[Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)和 [ASP.NET 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]传递和返回复杂数据类型，请参阅： [Windows 窗体客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[ASP.NET 中的数据绑定客户端](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

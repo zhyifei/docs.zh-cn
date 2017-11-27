@@ -1,23 +1,27 @@
 ---
-title: "方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Scenario1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 622e164f70efd3051fbb54f413d5cfead1dd94d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 方案
+# <a name="scenario"></a>方案
 本节包含 [!INCLUDE[wf](../../../../includes/wf-md.md)] 方案的示例。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [活动库](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
  包含演示使用内置活动库的方案的示例。  
   
@@ -33,8 +37,8 @@ caps.handback.revision: 5
  [使用 FlowChart 与 Pick 的组合的 StateMachine 方案](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
  演示如何使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Pick> 活动的组合实现一个简单的秒表方案。  
   
- [XAML 中的 WPF 和 WF 集成](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- 演示如何创建在一个 XAML 文档中使用 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 和 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的应用程序。为实现此目的，示例使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 可扩展性。  
+ [WPF 和 XAML 中的 WF 集成](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
+ 演示如何创建在一个 XAML 文档中使用 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 和 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的应用程序。 为实现此目的，示例使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 可扩展性。  
   
- [外部 RuleSet 工具包](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
+ [外部 Ruleset 工具包](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  演示如何管理和编辑数据库中的 RuleSet，以及如何在运行时从工作流中访问这些 RuleSet。

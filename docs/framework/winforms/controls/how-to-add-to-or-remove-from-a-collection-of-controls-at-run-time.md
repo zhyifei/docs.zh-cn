@@ -1,37 +1,41 @@
 ---
-title: "如何：在运行时在控件集合中进行添加或移除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "集合, 添加项"
-  - "控件 [Windows 窗体], 使用集合添加"
-  - "控件 [Windows 窗体], 使用集合移除"
-  - "控件集合"
-  - "运行时, 添加控件"
-  - "运行时, 移除控件"
+title: "如何：在运行时在控件集合中进行添加或移除"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- run time [Windows Forms], removing controls
+- controls [Windows Forms], adding using collections
+- controls collections
+- collections [Windows Forms], adding items
+- run time [Windows Forms], adding controls
+- controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b359679df68bf3caa9bab1bdbadedadcde45ac5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在运行时在控件集合中进行添加或移除
-应用程序开发中的常规任务在窗体上的任何容器控件上添加控件或移除控件（如 <xref:System.Windows.Forms.Panel> 或 <xref:System.Windows.Forms.GroupBox> 控件，甚至窗体自身）。  在设计时，可以直接将控件拖到面板或分组框上。  在运行时，这些控件维护一个 `Controls` 集合，该集合记录在其中放置了哪些控件。  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>如何：在运行时在控件集合中进行添加或移除
+应用程序开发中的常见任务是将控件添加到和从窗体上任何容器控件中删除控件 (如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控件或甚至窗体本身)。 在设计时，可直接将控件拖到面板或分组框上。 在运行时，这些控件维护一个 `Controls` 集合，该集合会跟踪集合中放置了哪些控件。  
   
 > [!NOTE]
->  下面的代码示例适用于在其中维护一个控件集合的任何控件。  
+>  以下代码示例适用于其中维护了一个控件集合的任何控件。  
   
-### 以编程方式向集合添加控件  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a>以编程方式向集合添加控件  
   
 1.  创建要添加的控件实例。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 10
   
 3.  将控件添加到父控件的 `Controls` 集合。  
   
-     下面的代码示例演示如何创建 <xref:System.Windows.Forms.Button> 控件的实例。  该示例需要一个具有 <xref:System.Windows.Forms.Panel> 控件的窗体，并且要创建的按钮的事件处理方法 `NewPanelButton_Click` 已存在。  
+     下面的代码示例演示如何创建的实例<xref:System.Windows.Forms.Button>控件。 它需要的窗体具有<xref:System.Windows.Forms.Panel>控制的和要创建的按钮的事件处理方法， `NewPanelButton_Click`，已存在。  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -53,7 +57,6 @@ caps.handback.revision: 10
        ' handler for your application.  
        AddHandler NewPanelButton.Click, AddressOf NewPanelButton_Click  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -65,19 +68,19 @@ caps.handback.revision: 10
        // from the Control class. In this case, it is a Button control.  
        panel1.Controls.Add(newPanelButton);  
        // The event handler indicated for the Click event in the code   
-       // below is used as an example. Substite the appropriate event  
+       // below is used as an example. Substitute the appropriate event  
        // handler for your application.  
        this.newPanelButton.Click += new System.EventHandler(this. NewPanelButton_Click);  
     }  
     ```  
   
-### 以编程方式从集合移除控件  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a>以编程方式从集合移除控件  
   
-1.  从事件中移除事件处理程序。  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中使用 [RemoveHandler 语句](../../../../ocs/visual-basic/language-reference/statements/removehandler-statement.md) 关键字；在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中则使用 [\-\= 运算符](../Topic/-=%20Operator%20\(C%23%20Reference\)2.md)。  
+1.  从事件中移除事件处理程序。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中使用 [RemoveHandler 语句](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)关键字；在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中则使用 [-= 运算符（C# 参考）](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
   
-2.  使用 `Remove` 方法，从该面板的 `Controls` 集合中删除所需的控件。  
+2.  使用 `Remove` 方法，从面板的 `Controls` 集合中删除所需控件。  
   
-3.  调用 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，释放该控件使用的所有资源。  
+3.  调用<xref:System.Windows.Forms.Control.Dispose%2A>方法来释放控件使用的所有资源。  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -90,7 +93,6 @@ caps.handback.revision: 10
           NewPanelButton.Dispose()  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -108,6 +110,6 @@ caps.handback.revision: 10
     }  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.Panel>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.Panel>  
  [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

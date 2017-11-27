@@ -1,30 +1,33 @@
 ---
-title: "演练：本地化混合应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "混合应用程序 [WPF 互操作性]"
-  - "本地化 [WPF 互操作性]"
+title: "演练：本地化混合应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- localization [WPF interoperability]
+- hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5e1425eafd0f1663aaf82185e0f32bf2a3bea509
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：本地化混合应用程序
-本演练演示如何在基于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的混合应用程序中本地化 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。  
+# <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
+本演练演示如何以本地化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的元素[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-基于混合应用程序。  
   
  本演练涉及以下任务：  
   
--   创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]宿主项目。  
+-   创建[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]主机项目。  
   
 -   添加可本地化的内容。  
   
@@ -34,119 +37,119 @@ caps.handback.revision: 14
   
 -   使用 LocBaml 工具生成附属程序集。  
   
- 有关本演练中所阐释任务的完整代码清单，请参见 [Localizing a Hybrid Application Sample](http://go.microsoft.com/fwlink/?LinkID=160015)（本地化混合应用程序示例）。  
+ 本演练的任务的完整代码清单，请参阅[本地化混合应用程序示例](http://go.microsoft.com/fwlink/?LinkID=160015)。  
   
- 在完成本演练后，您将具有一个本地化的混合应用程序。  
+ 完成后，你将拥有一个本地化的混合应用程序。  
   
-## 系统必备  
- 您需要以下组件来完成本演练：  
+## <a name="prerequisites"></a>先决条件  
+ 你需要以下组件来完成本演练：  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]。  
   
-## 创建 Windows 窗体宿主项目  
- 第一步是创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序项目并添加一个包含要本地化的内容的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。  
+## <a name="creating-the-windows-forms-host-project"></a>创建 Windows 窗体宿主项目  
+ 第一步是创建[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序项目，并添加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包含将本地化的内容元素。  
   
-#### 创建宿主项目  
+#### <a name="to-create-the-host-project"></a>创建宿主项目  
   
-1.  创建一个名为 `LocalizingWpfInWf` 的 WPF 应用程序项目。  有关更多信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  创建一个名为的 WPF 应用程序项目`LocalizingWpfInWf`。 有关详细信息，请参阅 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
-2.  向该项目添加一个名为 `SimpleControl` 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 元素。  
+2.  添加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>元素调用`SimpleControl`到项目。  
   
-3.  使用 <xref:System.Windows.Forms.Integration.ElementHost> 控件在窗体上放置一个 `SimpleControl` 元素。  有关更多信息，请参见[演练：在 Windows 窗体中承载 3\-D WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。  
+3.  使用<xref:System.Windows.Forms.Integration.ElementHost>控件放置`SimpleControl`窗体上的元素。 有关详细信息，请参阅[演练： 承载 Windows 窗体中三维 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。  
   
-## 添加可本地化的内容  
- 下一步，您将添加一个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]标签控件，并将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的内容设置为可本地化的字符串。  
+## <a name="adding-localizable-content"></a>添加可本地化的内容  
+ 接下来，你将添加[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]标签控件，并设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]为可本地化字符串的元素的内容。  
   
-#### 添加可本地化的内容  
+#### <a name="to-add-localizable-content"></a>添加可本地化的内容  
   
-1.  在解决方案资源管理器中双击**“SimpleControl.xaml”**，以便在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]中将其打开。  
+1.  在解决方案资源管理器中，双击**SimpleControl.xaml**中打开[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
-2.  使用以下代码示设置 <xref:System.Windows.Controls.Button> 控件的内容。  
+2.  设置的内容<xref:System.Windows.Controls.Button>控制是通过使用下面的代码。  
   
-     [!code-xml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]  
+     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]  
   
-3.  在解决方案资源管理器中，双击**“Form1”**在 Windows 窗体设计器中打开它。  
+3.  在解决方案资源管理器中，双击**Form1**若要在 Windows 窗体设计器中打开它。  
   
-4.  打开工具箱，并双击**“标签”**向窗体中添加一个标签控件。  将其 <xref:System.Windows.Forms.Control.Text%2A> 属性的值设置为 `"Hello"`。  
+4.  打开工具箱，并双击**标签**标签控件添加到窗体。 将其 <xref:System.Windows.Forms.Control.Text%2A> 属性的值设置为 `"Hello"`。  
   
 5.  按 F5 生成并运行该应用程序。  
   
-     `SimpleControl` 元素和该标签控件都会显示文本 **"Hello"**。  
+     这两个`SimpleControl`元素和标签控件显示文本**"Hello"**。  
   
-## 启用本地化  
- Windows 窗体设计器提供了用于在附属程序集中启用本地化的设置。  
+## <a name="enabling-localization"></a>启用本地化  
+ Windows 窗体设计器提供用于在附属程序集中启用本地化的设置。  
   
-#### 启用本地化  
+#### <a name="to-enable-localization"></a>启用本地化  
   
-1.  在解决方案资源管理器中，双击**“Form1.cs”**在 Windows 窗体设计器中打开它。  
+1.  在解决方案资源管理器中，双击**Form1.cs**若要在 Windows 窗体设计器中打开它。  
   
-2.  在“属性”窗口中，将该窗体的**“Localizable”**属性值设置为 `true`。  
+2.  在属性窗口中，将窗体的值设置**Localizable**属性`true`。  
   
-3.  在“属性”窗口中，将**“Language”**属性的值设置为**“西班牙语\(西班牙\)”**。  
+3.  在属性窗口中，将的值设置**语言**属性**西班牙语 （西班牙）**。  
   
-4.  在 Windows 窗体设计器中，选择该标签控件。  
+4.  在 Windows 窗体设计器中，选择标签控件。  
   
-5.  在“属性”窗口中，将 <xref:System.Windows.Forms.Control.Text%2A> 属性的值设置为 `"Hola"`。  
+5.  在属性窗口中，将的值设置<xref:System.Windows.Forms.Control.Text%2A>属性`"Hola"`。  
   
-     此时，名为“Form1.es\-ES.resx”的新资源会添加到该项目中。  
+     一个名为 Form1.es-ES.resx 的新资源文件会添加到项目中。  
   
-6.  在解决方案资源管理器中，右击**“Form1.cs”**，然后单击**“查看代码”**在代码编辑器中打开它。  
+6.  在解决方案资源管理器，右键单击**Form1.cs**单击**查看代码**以在代码编辑器中打开它。  
   
-7.  将下面的代码复制到 `Form1` 构造函数，然后调用 `InitializeComponent`。  
+7.  下面的代码复制到`Form1`构造函数，然后调用`InitializeComponent`。  
   
      [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]  
   
-8.  在解决方案资源管理器中，右击**“LocalizingWpfInWf”**，然后单击**“卸载项目”**。  
+8.  在解决方案资源管理器，右键单击**LocalizingWpfInWf**单击**卸载项目**。  
   
-     此时，该项目名称会被标记为**“\(不可用\)”**。  
+     项目名称标记为**（不可用）**。  
   
-9. 右击**“LocalizingWpfInWf”**，然后单击**“编辑 LocalizingWpfInWf.csproj”**。  
+9. 右键单击**LocalizingWpfInWf**，然后单击**编辑 LocalizingWpfInWf.csproj**。  
   
-     此时，该项目文件会在代码编辑器中打开。  
+     项目文件将在代码编辑器中打开。  
   
-10. 将下面一行复制到该项目文件中的第一个 `PropertyGroup`。  
+10. 将以下行复制到第一个`PropertyGroup`项目文件中。  
   
-    ```  
+    ```xml  
     <UICulture>en-US</UICulture>   
     ```  
   
-11. 保存该项目文件，然后将其关闭。  
+11. 保存项目文件并将其关闭。  
   
-12. 在解决方案资源管理器中，右击**“LocalizingWpfInWf”**，然后单击**“重新加载项目”**。  
+12. 在解决方案资源管理器，右键单击**LocalizingWpfInWf**单击**重新加载项目**。  
   
-## 分配资源标识符  
- 您可以使用资源标识符将可本地化的内容映射到资源程序集。  当指定 `updateuid` 选项时，MsBuild.exe 应用程序会自动分配资源标识符。  
+## <a name="assigning-resource-identifiers"></a>分配资源标识符  
+ 可以通过使用资源标识符将可本地化内容映射到资源程序集。 MsBuild.exe 应用程序会自动分配资源标识符，当你指定`updateuid`选项。  
   
-#### 分配资源标识符  
+#### <a name="to-assign-resource-identifiers"></a>分配资源标识符  
   
-1.  从“开始”菜单中打开 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 命令提示窗口。  
+1.  从开始菜单中，打开[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]命令提示符。  
   
-2.  使用以下命令将资源标识符分配给可本地化的内容。  
+2.  使用以下命令将资源标识符分配到可本地化内容。  
   
     ```  
     msbuild /t:updateuid LocalizingWpfInWf.csproj  
     ```  
   
-3.  在解决方案资源管理器中，双击**“SimpleControl.xaml”**在代码编辑器中打开它。  此时，您会看到 `msbuild` 命令已将 `Uid` 特性添加到所有元素中。  这通过分配资源标识符，简化了本地化操作。  
+3.  在解决方案资源管理器中，双击**SimpleControl.xaml**以在代码编辑器中打开它。 你将看到`msbuild`命令添加`Uid`属性设为所有元素。 这有助于通过分配资源标识符进行本地化。  
   
-     [!code-xml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]  
+     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]  
   
-4.  按 F6 键生成解决方案。  
+4.  按 F6 生成解决方案。  
   
-## 使用 LocBaml 工具生成附属程序集  
- 本地化内容存储在一个纯资源附属程序集中。  使用命令行工具 LocBaml.exe 为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容生成本地化程序集。  
+## <a name="using-locbaml-to-produce-a-satellite-assembly"></a>使用 LocBaml 生成附属程序集  
+ 本地化的内容存储在资源仅*附属程序集*。 使用命令行工具 LocBaml.exe 生成的本地化程序集你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。  
   
-#### 生成附属程序集  
+#### <a name="to-produce-a-satellite-assembly"></a>生成附属程序集  
   
-1.  将 LocBaml.exe 复制到您项目的 obj\\Debug 文件夹中。  有关更多信息，请参见[对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。  
+1.  将 LocBaml.exe 复制到项目的 obj\Debug 文件夹中。 有关详细信息，请参阅[本地化应用程序](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。  
   
-2.  在命令提示窗口中，使用以下命令将资源字符串提取到一个临时文件中。  
+2.  在“命令提示符”窗口中，使用以下命令将资源字符串提取到临时文件中。  
   
     ```  
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 或其他文本编辑器打开 temp.csv 文件。  将字符串 `"Hello"` 替换为其西班牙语的翻译 `"Hola"`。  
+3.  打开与 temp.csv 文件[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]或其他文本编辑器。 替换字符串`"Hello"`有其西班牙语转换技术， `"Hola"`。  
   
 4.  保存 temp.csv 文件。  
   
@@ -156,7 +159,7 @@ caps.handback.revision: 14
     LocBaml /generate /trans:temp.csv LocalizingWpfInWf.g.en-US.resources /out:. /cul:es-ES  
     ```  
   
-     在 obj\\Debug 文件夹中创建 LocalizingWpfInWf.g.es\-ES.resources 文件。  
+     将在 obj\Debug 文件夹中创建 LocalizingWpfInWf.g.es-ES.resources 文件。  
   
 6.  使用以下命令生成本地化附属程序集。  
   
@@ -164,17 +167,17 @@ caps.handback.revision: 14
     Al.exe /out:LocalizingWpfInWf.resources.dll /culture:es-ES /embed:LocalizingWpfInWf.Form1.es-ES.resources /embed:LocalizingWpfInWf.g.es-ES.resources  
     ```  
   
-     在 obj\\Debug 文件夹中创建 LocalizingWpfInWf.resources.dll 文件。  
+     将在 obj\Debug 文件夹中创建 LocalizingWpfInWf.resources.dll 文件。  
   
-7.  将 LocalizingWpfInWf.resources.dll 文件复制到该项目的 bin\\Debug\\es\-ES 文件夹中。  替换现有文件。  
+7.  将 LocalizingWpfInWf.resources.dll 文件复制到项目的 bin\Debug\es-ES 文件夹中。 替换现有文件。  
   
-8.  运行 LocalizingWpfInWf.exe，该文件位于该项目的 bin\\Debug 文件夹中。  不要重新生成将被覆盖的应用程序或附属程序集。  
+8.  运行 LocalizingWpfInWf.exe，它位于项目的 bin\Debug 文件夹中。 不要重新生成应用程序，否则附属程序集将被覆盖。  
   
-     此时，应用程序会显示本地化字符串，而不是英语字符串。  
+     应用程序显示本地化后的字符串，而不是英语字符串。  
   
-## 请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)   
- [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)   
- [WPF 设计器](http://msdn.microsoft.com/zh-cn/c6c65214-8411-4e16-b254-163ed4099c26)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
+ [演练： 本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)  
+ [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

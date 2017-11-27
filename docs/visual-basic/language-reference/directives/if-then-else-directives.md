@@ -1,41 +1,40 @@
 ---
-title: "#If...Then...#Else 指令 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.#EndIf"
-  - "#End If"
-  - "#Then"
-  - "#ElseIf"
-  - "vb.#ElseIf"
-  - "vb.#Else"
-  - "vb.#If"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "#Else 指令 [Visual Basic]"
-  - "#End if 指令 [Visual Basic]"
-  - "#If 指令 [Visual Basic]"
-  - "条件编译, 指令"
-  - "else 指令 (#else)"
-  - "有选择的编译"
-  - "Visual Basic 代码, 编译"
+title: "#<a name=\"ifthenelse-directives\"></a>如果......#Else 指令"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.#EndIf
+- '#End If'
+- '#Then'
+- '#ElseIf'
+- vb.#ElseIf
+- vb.#Else
+- vb.#If
+helpviewer_keywords:
+- Visual Basic code, compiling
+- '#If directive [Visual Basic]'
+- conditional compilation [Visual Basic], directives
+- '#End if directive [Visual Basic]'
+- selective compiling
+- else directive (#else)
+- '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 77757e441ae937aa86122f237e839d1005644409
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# #If...Then...#Else 指令
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-根据条件编译选定的 Visual Basic 代码块。  
+# <a name="ifthenelse-directives"></a>#If...Then...#Else 指令
+有条件地编译选定的 Visual Basic 代码块。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #If expression Then  
@@ -50,32 +49,32 @@ caps.handback.revision: 14
 #End If  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `expression`  
- 对于 `#If` 和 `#ElseIf` 语句是必选的，在其他地方则是可选的。  计算结果为 `True` 或 `False` 的任意表达式，仅由一个或多个条件编译器常数、文本和运算符组成。  
+ 所需的`#If`和`#ElseIf`语句，可选在其他位置。 任何表达式，以独占方式包含一个或多个条件编译器常量、 文本和运算符，计算结果为`True`或`False`。  
   
  `statements`  
- 对于 `#If` 语句块是必选的，在其他地方则是可选的。  如果所关联的表达式结果为 `True`，将对 Visual Basic 程序行或编译器指令进行编译。  
+ 所需的`#If`语句块，可选在其他位置。 Visual Basic 程序线条或如果关联的表达式的计算结果为编译的编译器指令`True`。  
   
  `#End If`  
- 终止 `#If` 语句块。  
+ 终止`#If`语句块。  
   
-## 备注  
- 表面上，`#If...Then...#Else` 指令的行为与 `If...Then...Else` 语句的行为相同。  但是，`#If...Then...#Else` 指令计算编译器要编译的内容，而 `If...Then...Else` 语句则计算运行时的条件。  
+## <a name="remarks"></a>备注  
+ 行为、 表面上`#If...Then...#Else`指令显示相同的为`If...Then...Else`语句。 但是，`#If...Then...#Else`指令评估什么编译的编译器，而`If...Then...Else`语句在运行时计算条件。  
   
- 条件编译通常用来编译不同平台上的同一个程序。  也可以用来避免调试代码出现在可执行文件中。  条件编译时被排除的代码在最终的可执行文件中被完全忽略，所以不会对大小或性能有任何影响。  
+ 条件编译通常用于编译不同平台的同一个程序。 它还用来防止调试可执行文件中显示的代码。 在条件编译期间被排除的代码完全省略从最终的可执行文件，因此它具有大小或性能没有影响。  
   
- 不管计算的结果如何，所有的表达式都使用 `Option Compare Binary` 来计算。  `Option Compare` 语句不影响 `#If` 及 `#ElseIf` 语句中的表达式。  
+ 而不考虑任何评估的结果，将计算所有表达式使用`Option Compare Binary`。 `Option Compare`语句不会影响中的表达式`#If`和`#ElseIf`语句。  
   
 > [!NOTE]
->  不存在 `#If`、`#Else`、`#ElseIf` 和 `#End If` 指令的单行形式。  任何指令所在的同一行中不会出现其他代码。  
+>  任何单行形式的`#If`， `#Else`， `#ElseIf`，和`#End If`指令存在。 没有其他代码可出现在任何指令所在的行。  
   
-## 示例  
- 本示例使用 `#If...Then...#Else` 构造来判断是否编译某些语句。  
+## <a name="example"></a>示例  
+ 此示例使用`#If...Then...#Else`构造来确定是否编译某些语句。  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
-## 请参阅  
- [\#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)   
- [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
+## <a name="see-also"></a>另请参阅  
+ [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
  [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

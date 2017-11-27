@@ -1,65 +1,73 @@
 ---
-title: "&lt;claimsAuthorizationManager&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimsAuthorizationManager&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4b4d86204d5f7225f167be125ce017488c851e98
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimsAuthorizationManager&gt;
-为传入的声明的声明授权管理器中注册。  
+# <a name="ltclaimsauthorizationmanagergt"></a>&lt;claimsAuthorizationManager&gt;
+注册用于传入声明的声明授权管理器。  
   
-## 语法  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<claimsAuthorizationManager >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimsAuthorizationManager type = xs:string>  
-      <optionalConfigurationElements />  
-    </claimsAuthorizationManager>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type = xs:string>  
+      <optionalConfigurationElements />  
+    </claimsAuthorizationManager>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|type|自定义类型派生自的<xref:System.Security.Claims.ClaimsAuthorizationManager>类。  有关如何指定`type`属性，请参阅[Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences)。|  
+|特性|描述|  
+|---------------|-----------------|  
+|类型|派生自的自定义类型<xref:System.Security.Claims.ClaimsAuthorizationManager>类。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
   
-### 子元素  
- 如果没有`type`属性中，如果`type`属性引用<xref:System.Security.Claims.ClaimsAuthenticationManager>类， `<claimsAuthorizationManager>`元素不会子元素 ； 但是，从派生类<xref:System.Security.Claims.ClaimsAuthorizationManager>可以定义子配置元素。  
+### <a name="child-elements"></a>子元素  
+ 如果没有任何`type`属性，或者如果`type`属性引用<xref:System.Security.Claims.ClaimsAuthenticationManager>类，`<claimsAuthorizationManager>`元素不采用子元素; 但是，类派生自<xref:System.Security.Claims.ClaimsAuthorizationManager>可以定义子配置元素。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定的服务级别标识设置。|  
+|元素|描述|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
   
-## 备注  
- 通过提供的默认行为<xref:System.Security.Claims.ClaimsAuthorizationManager>类始终授权传入的声明。  如果不是`type`指定属性或`type`属性指定了<xref:System.Security.Claims.ClaimsAuthorizationManager>类， `<claimsAuthorizationManager>`元素不会子元素。  您可以指定`type`属性，以注册类型派生自<xref:System.Security.Claims.ClaimsAuthorizationManager>类可以实现自定义行为。  派生的类可以支持配置的子元素通过`<claimsAuthorizationManager>`元素，通过重写<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>方法来处理这些元素。  定义的子元素的架构由设计器的类。  
+## <a name="remarks"></a>备注  
+ 通过提供的默认行为<xref:System.Security.Claims.ClaimsAuthorizationManager>类始终授权的传入声明。 如果没有`type`指定属性或如果`type`属性指定<xref:System.Security.Claims.ClaimsAuthorizationManager>类，`<claimsAuthorizationManager>`元素不采用子元素。 你可以指定`type`特性来注册类型派生自<xref:System.Security.Claims.ClaimsAuthorizationManager>类，以实现自定义行为。 派生的类可以支持的子元素通过配置`<claimsAuthorizationManager>`通过重写元素<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>方法以处理这些元素。 为子元素定义的架构是最多的类设计器。  
   
 > [!IMPORTANT]
->  使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类来提供基于声明的访问控制，在代码中，所引用的标识配置`<federationConfiguration>`元素配置的索赔授权管理器和策略，用于做出授权决定。  是这样，即使在不是被动的 Web 方案，例如 Windows 资格） 应用程序或不是基于 Web 的应用程序的方案中。  如果应用程序不是被动的 Web 应用程序中， `<claimsAuthorizationManager>`元素 （和它的子策略元素，如果有的话） 的引用的标识配置将应用的唯一设置。  所有其他设置都被忽略。  有关更多信息，请参见 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素。  
+>  使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类提供在代码中，引用的标识配置的基于声明的访问控制`<federationConfiguration>`元素会配置的声明授权管理器和用于使的策略授权决策。 这是为 true，即使在不是被动 Web 方案，例如 Windows Communication Foundation (WCF) 应用程序或不是基于 Web 的应用程序的方案中。 如果应用程序不是被动的 Web 应用程序，`<claimsAuthorizationManager>`元素 （和其子策略元素，如果存在） 的引用的标识配置的应用的唯一设置。 将忽略所有其他设置。 有关详细信息，请参阅[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)元素。  
   
- 此元素设置<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=fullName>属性。  
+ 此元素设置<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType>属性。  
   
-## 示例  
- 下面的 XML 说明索赔授权的配置管理器的实现的策略组成的资源操作对每个指定的请求者必须拥有对资源执行的操作的声明的布尔组合。  在中找不到实现声明授权管理器可以使用此策略的代码`ClaimsBasedAuthorization`的示例。  
+## <a name="example"></a>示例  
+ 下面的 XML 演示声明授权的配置管理器实现策略组成资源操作对其中每个指定的请求者必须具有对资源执行操作的声明的 boolean 类型的值组合。 实现声明授权管理器能够使用此策略的代码可在`ClaimsBasedAuthorization`示例。  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration>  
       <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  

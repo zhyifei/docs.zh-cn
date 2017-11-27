@@ -1,34 +1,37 @@
 ---
-title: "如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 444fab903683b952d1a8c312c3f6032be880da68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型的元数据，如下所示：  
   
--   若要使用 Svcutil.exe 为一组程序集导出所有已编译服务协定的元数据，请将这些程序集指定为输入参数。这是默认行为。  
+-   若要使用 Svcutil.exe 为一组程序集导出所有已编译服务协定的元数据，请将这些程序集指定为输入参数。 这是默认行为。  
   
--   若要使用 Svcutil.exe 导出已编译服务的元数据，请将该（这些）服务程序集指定为输入参数。必须使用 `/serviceName` 选项来指示要导出的服务的配置名称。Svcutil.exe 自动为指定的可执行程序集加载配置文件。  
+-   若要使用 Svcutil.exe 导出已编译服务的元数据，请将该（这些）服务程序集指定为输入参数。 必须使用 `/serviceName` 选项来指示要导出的服务的配置名称。 Svcutil.exe 自动为指定的可执行程序集加载配置文件。  
   
 -   若要导出一组程序集内的所有数据协定类型，请使用 `/dataContractOnly` 选项。  
   
 > [!NOTE]
 >  请使用 `/reference` 选项来指定所有相关程序集的文件路径。  
   
-### 导出已编译服务协定的元数据  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a>导出已编译服务协定的元数据  
   
 1.  将服务协定实现编译为一个或多个类库。  
   
@@ -41,13 +44,13 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     svcutil.exe Contracts.dll  
     ```  
   
-### 导出已编译服务的元数据  
+### <a name="to-export-metadata-for-a-compiled-service"></a>导出已编译服务的元数据  
   
 1.  将服务实现编译为可执行程序集。  
   
 2.  为服务可执行程序集创建一个配置文件，并添加服务配置。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.serviceModel>  
@@ -69,7 +72,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### 导出已编译数据协定的元数据  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a>导出已编译数据协定的元数据  
   
 1.  将数据协定实现编译为一个或多个类库。  
   
@@ -82,7 +85,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例演示如何为单个服务实现和配置生成元数据。  
   
  导出服务协定的元数据。  
@@ -167,9 +170,8 @@ public class MyService : IPersonFinder
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 请参阅  
- [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
+## <a name="see-also"></a>另请参阅  
+ [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

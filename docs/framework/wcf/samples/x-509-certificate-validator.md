@@ -1,25 +1,28 @@
 ---
-title: "X.509 证书验证程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "X.509 证书验证程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 623bc36743bd63ccb452d2a65e85301b4a0cb117
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# X.509 证书验证程序
-此示例演示如何实现自定义 X.509 证书验证程序。当内置的 X.509 证书验证模式都不能满足应用程序的要求时，实现自定义证书验证程序很有用。此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。客户端使用此类证书对服务进行身份验证。  
+# <a name="x509-certificate-validator"></a>X.509 证书验证程序
+此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的要求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。  
   
- 注意：因为任何人都可以构造自行颁发的证书，所以服务使用的自定义验证程序的安全性低于 ChainTrust X509CertificateValidationMode 提供的默认行为。在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。  
+ 注意：因为任何人都可以构造自行颁发的证书，所以服务使用的自定义验证程序的安全性低于 ChainTrust X509CertificateValidationMode 提供的默认行为。 在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。  
   
  概括而言，此示例演示：  
   
@@ -29,9 +32,9 @@ caps.handback.revision: 21
   
 -   如何使用服务器的 X.509 证书对服务器进行身份验证。  
   
- 服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。绑定是使用标准 `wsHttpBinding` 配置的，该标准绑定默认使用 `WSSecurity` 和客户端证书身份验证。服务行为指定对客户端 X.509 证书进行验证的“自定义”模式以及验证程序类的类型。该行为还使用 serviceCertificate 元素指定服务器证书。服务器证书中包含的 `SubjectName` 值必须与 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)中的 `findValue` 值相同。  
+ 服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。 绑定配置的标准`wsHttpBinding`默认使用`WSSecurity`和客户端证书身份验证。 服务行为指定对客户端 X.509 证书进行验证的“自定义”模式以及验证程序类的类型。 该行为还使用 serviceCertificate 元素指定服务器证书。 服务器证书必须包含相同的值`SubjectName`作为`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。  
   
-```  
+```xml  
   <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -99,12 +102,11 @@ caps.handback.revision: 21
       </serviceBehaviors>  
     </behaviors>  
       </system.serviceModel>  
-  
 ```  
   
- 客户端终结点配置由配置名称、服务终结点的绝对地址、绑定和协定组成。该客户端绑定是使用适当的模式和消息 `clientCredentialType` 配置的。  
+ 客户端终结点配置由配置名称、服务终结点的绝对地址、绑定和协定组成。 该客户端绑定是使用适当的模式和消息 `clientCredentialType` 配置的。  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <!-- X509 certificate based endpoint -->  
@@ -153,7 +155,6 @@ caps.handback.revision: 21
       </endpointBehaviors>  
     </behaviors>  
   </system.serviceModel>  
-  
 ```  
   
  客户端实现设置要使用的客户端证书。  
@@ -207,7 +208,7 @@ catch (Exception e)
 }  
 ```  
   
- 此示例使用自定义 X509CertificateValidator 来验证证书。此示例实现从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 派生的 CustomX509CertificateValidator。有关更多信息，请参见有关 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 的文档。这个特定的自定义验证程序示例实现了 Validate 方法，可以接受自行颁发的任何 X.509 证书，如下面的代码所示。  
+ 此示例使用自定义 X509CertificateValidator 来验证证书。 此示例实现从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 派生的 CustomX509CertificateValidator。 有关更多信息，请参见有关 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 的文档。 这个特定的自定义验证程序示例实现了 Validate 方法，可以接受自行颁发的任何 X.509 证书，如下面的代码所示。  
   
 ```  
 public class CustomX509CertificateValidator : X509CertificateValidator  
@@ -219,10 +220,9 @@ public class CustomX509CertificateValidator : X509CertificateValidator
      throw new Exception("Certificate is not self-issued");  
    }  
 }  
-  
 ```  
   
- 在服务代码中实现验证程序后，必须通知服务主机关于要使用的验证程序实例的信息。这是使用以下代码完成的。  
+ 在服务代码中实现验证程序后，必须通知服务主机关于要使用的验证程序实例的信息。 这是使用以下代码完成的。  
   
 ```  
 serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.Custom;  
@@ -231,7 +231,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
  或者，您可以在如下配置中执行相同的操作。  
   
-```  
+```xml  
 <behaviors>  
     <serviceBehaviors>  
      <behavior name="CalculatorServiceBehavior">  
@@ -255,19 +255,18 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   </behavior>  
  </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。客户端应成功地调用所有方法。在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 客户端应成功地调用所有方法。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-## 设置批处理文件  
- 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
+## <a name="setup-batch-file"></a>设置批处理文件  
+ 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
   
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：  
   
 -   创建服务器证书：  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。%SERVER\_NAME% 变量指定服务器名称。更改此变量可以指定您自己的服务器名称。默认值为 localhost。  
+     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 %SERVER_NAME% 变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 默认值为 localhost。  
   
     ```  
     echo ************  
@@ -277,12 +276,11 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
 -   将服务器证书安装到客户端的受信任证书存储区中：  
   
-     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
+     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
@@ -290,7 +288,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 -   创建客户端证书：  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。%USER\_NAME% 变量指定客户端名称。此值设置为“test1”，因为这是客户端代码查找的名称。如果更改 %USER\_NAME% 的值，必须更改 Client.cs 源文件中对应的值并重新生成客户端。  
+     Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。 %USER_NAME% 变量指定客户端名称。 此值设置为“test1”，因为这是客户端代码查找的名称。 如果更改 %USER_NAME% 的值，必须更改 Client.cs 源文件中对应的值并重新生成客户端。  
   
      证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。  
   
@@ -302,71 +300,70 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe  
-  
     ```  
   
 -   将客户端证书安装到服务器的受信任证书存储区中：  
   
-     Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。因为服务器系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。  
+     Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。 因为服务器系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### 设置和生成示例  
+#### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 2.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
   
-#### 在同一计算机上运行示例  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
   
-1.  在使用管理员特权打开的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中，从示例安装文件夹运行 Setup.bat。这将安装运行示例所需的所有证书。  
+1.  在使用管理员特权打开的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中，从示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。  
   
     > [!IMPORTANT]
-    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  
+    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  
   
-2.  启动 service\\bin 中的 Service.exe。  
+2.  启动 service\bin 中的 Service.exe。  
   
-3.  启动 \\client\\bin 中的 Client.exe。客户端活动将显示在客户端控制台应用程序上。  
+3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 跨计算机运行示例  
+#### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
 1.  在服务计算机上创建目录。  
   
-2.  从 \\service\\bin 中将服务程序文件复制到服务计算机上的虚拟目录中。另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。  
+2.  从 \service\bin 中将服务程序文件复制到服务计算机上的虚拟目录中。 另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。  
   
 3.  在客户端计算机上为这些客户端二进制文件创建一个目录。  
   
-4.  将客户端程序文件复制到客户端计算机上的客户端目录中。另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
+4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。如果采用 `service` 参数运行 `setup.bat` ，则使用计算机的完全限定域名创建一个服务证书，并将此服务证书导出到名为 Service.cer 的文件中。  
+5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。 运行`setup.bat`与`service`参数创建一个服务证书的计算机导出的完全限定域名服务证书导出到名为 Service.cer 的文件。  
   
-6.  编辑 Service.exe.config 以反映新证书的名称（在 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的 `findValue` 属性中），该名称与计算机的完全限定域名相同。另外，将 \<service\>\/\<baseAddresses\> 元素中的计算机名称从 localhost 更改为服务计算机的完全限定名称。  
+6.  编辑 Service.exe.config 以反映新的证书名称 (在`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 这是计算机的完全限定域名相同。 此外更改中的计算机名称\<服务 > /\<baseAddresses > 元素从 localhost 到服务计算机的完全限定名称。  
   
 7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-8.  在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。如果使用 `client` 参数运行 `setup.bat` ，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
+8.  在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。 如果使用 `setup.bat` 参数运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
   
-9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。通过用服务器的完全限定域名替换 localhost 来执行此操作。  
+9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 通过用服务器的完全限定域名替换 localhost 来执行此操作。  
   
 10. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
   
-11. 在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportServiceCert.bat。这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+11. 在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-12. 在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportClientCert。这会将 Client.cer 文件中的客户端证书导入 LocalMachine \- TrustedPeople 存储区。  
+12. 在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportClientCert。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
   
 13. 在服务器计算机上，从命令提示窗口中启动 Service.exe。  
   
-14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。 如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 运行示例后进行清理  
+#### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。这将从证书存储区中移除服务器和客户端证书。  
+1.  运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器和客户端证书。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser \- TrustedPeople 存储中的服务证书。为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

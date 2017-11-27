@@ -1,26 +1,30 @@
 ---
-title: "WF 中的集合活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WF 中的集合活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f1feb09c67051c1e99ac199adc20fe6ca4d6e4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WF 中的集合活动
-集合活动用于使用工作流中的集合对象。  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含多个系统提供的活动，用于在集合中添加和移除项、测试集合中是否存在某个项以及清除集合。  `ExistsInCollection` 和 `RemoveFromCollectio`n 具有类型为 <xref:System.Activities.OutArgument%601> 的 <xref:System.Boolean>，它指示结果。  
+# <a name="collection-activities-in-wf"></a>WF 中的集合活动
+集合活动用于使用工作流中的集合对象。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含多个系统提供的活动，用于在集合中添加和移除项、测试集合中是否存在某个项以及清除集合。 `ExistsInCollection`和`RemoveFromCollection`具有<xref:System.Activities.OutArgument%601>类型的<xref:System.Boolean>，它指示结果。  
   
 > [!IMPORTANT]
 >  如果在设置基础集合对象之前执行集合活动，则会引发 <xref:System.InvalidOperationException>，并且活动将发生错误。  
   
-## 集合活动  
+## <a name="collection-activities"></a>集合活动  
   
 |||  
 |-|-|  
@@ -29,8 +33,8 @@ caps.handback.revision: 10
 |<xref:System.Activities.Statements.ExistsInCollection%601>|如果集合中存在某个项，则返回 `true`。|  
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|从指定集合中移除某个项，并在成功移除后返回 `true`。|  
   
-## 使用集合活动  
- 下面的代码示例演示如何与声明为工作流变量的集合交互。  使用的集合是 <xref:System.Collections.Generic.List%E2%80%991> 对象的 <xref:System.String>，该集合命名为 `fruitList`。  
+## <a name="using-collection-activities"></a>使用集合活动  
+ 下面的代码示例演示如何与声明为工作流变量的集合交互。 使用的集合是<!--zz <xref:System.Collections.Generic.List%E2%80%991>-->`System.Collections.Generic.List`的<xref:System.String>对象命名的`fruitList`。  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -85,7 +89,6 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
 ```xaml  
@@ -229,7 +232,6 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
  还可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601>（而不是 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>）创建上面的代码示例。  
@@ -287,10 +289,9 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
-```  
+```xml  
 <Sequence  
    xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -431,8 +432,7 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
-## 请参阅  
- [使用命令性代码创作工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>另请参阅  
+ [使用强制性代码创建工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

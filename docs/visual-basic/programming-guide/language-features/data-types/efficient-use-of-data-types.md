@@ -1,69 +1,52 @@
 ---
-title: "有效使用数据类型 (Visual Basic 中) |Microsoft 文档"
+title: "有效使用数据类型 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - performance, data type efficiency
 - data types [Visual Basic], weak typing
-- AscW function, preferred to Asc
+- AscW function [Visual Basic], preferred to Asc
 - data types [Visual Basic], using efficiently
-- optimization, data types
+- optimization [Visual Basic], data types
 - data types [Visual Basic], strong typing
 - strong typing
 - typing, strong
 - data types [Visual Basic], optimizing
-- ChrW function, preferred to Chr
+- ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b81a1c81d970beee32925c3f2fe6ca3bcad79151
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效使用数据类型 (Visual Basic)
-未声明的变量和数据类型未声明的变量分配`Object`数据类型。 这使得更易于编写的程序速度快，但这样会导致执行速度更慢。  
+未声明的变量和数据类型未声明的变量分配`Object`数据类型。 这使得可以轻松快速，编写程序，但它可能会导致它们执行速度更慢。  
   
 ## <a name="strong-typing"></a>强类型  
- 指定为所有变量的数据类型被称为*强类型化*。 使用强类型化有几个优点︰  
+ 指定的所有变量的数据类型被称为*强类型化*。 使用强类型有多种优点：  
   
--   它使您的变量的 IntelliSense 支持。 这样，您可以在代码中键入时看到它们的属性和其他成员。  
+-   它使你的变量的 IntelliSense 支持。 这样，你可以查看其属性和其他成员，作为你的代码中的类型。  
   
--   它可利用的编译器类型检查。 这将捕获在运行时由于如溢出错误而失败的语句。 不支持它们的对象，它还捕获对方法的调用。  
+-   它可利用的编译器类型检查。 这将捕获在运行时由于如溢出错误而导致失败的语句。 它还不支持这些选项的对象上捕获对方法的调用。  
   
--   这会导致更快地执行代码。  
+-   这会导致你的代码的执行速度更快。  
   
-## <a name="most-efficient-data-types"></a>最高效的数据类型  
- 对于永远不会包含秒的小数部分的变量，整数数据类型将比非整型更加有效。 在[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，`Integer`和`UInteger`是最有效的数值类型。  
+## <a name="most-efficient-data-types"></a>最有效的数据类型  
+ 从不包含小数的变量，整数数据类型是比非整型类型效率更高。 在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，`Integer`和`UInteger`是最有效的数值类型。  
   
- 对于分数，`Double`是最有效的数据类型，因为当前平台上的处理器执行以双精度浮点运算。 但是，操作与`Double`与整数类型，如速度快`Integer`。  
+ 对于分数，`Double`是最有效的数据类型，因为在当前平台上的处理器执行以双精度浮点运算。 但是，与操作`Double`速度与整数类型，例如`Integer`。  
   
 ## <a name="specifying-data-type"></a>指定数据类型  
- 使用[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)来声明某个特定类型的变量。 同时可以通过指定其访问级别[公共](../../../../visual-basic/language-reference/modifiers/public.md)，[受保护](../../../../visual-basic/language-reference/modifiers/protected.md)，[朋友](../../../../visual-basic/language-reference/modifiers/friend.md)，或[专用](../../../../visual-basic/language-reference/modifiers/private.md)关键字，如以下示例所示。  
+ 使用[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)来声明特定类型的变量。 同时可以通过指定其访问级别[公共](../../../../visual-basic/language-reference/modifiers/public.md)，[受保护](../../../../visual-basic/language-reference/modifiers/protected.md)，[友元](../../../../visual-basic/language-reference/modifiers/friend.md)，或[私有](../../../../visual-basic/language-reference/modifiers/private.md)关键字，如下所示下面的示例。  
   
 ```  
 Private x As Double  
@@ -71,14 +54,14 @@ Protected s As String
 ```  
   
 ## <a name="character-conversion"></a>字符转换  
- `AscW`和`ChrW`函数以 unicode 格式进行操作。 您应使用这些优先`Asc`和`Chr`，它必须在执行和跳出执行 Unicode 转换。  
+ `AscW`和`ChrW`在 Unicode 函数操作。 你应使用它们优先`Asc`和`Chr`，执行和跳出执行 Unicode，必须将其转换。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [数值数据类型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [使用 IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense)
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [数值数据类型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
+ [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [使用 IntelliSense](/visualstudio/ide/using-intellisense)

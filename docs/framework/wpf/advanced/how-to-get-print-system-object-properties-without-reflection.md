@@ -1,49 +1,54 @@
 ---
-title: "如何：在不使用反射的情况下获得打印系统对象属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PrintSystemObject, 获取属性"
+title: "如何：在不使用反射的情况下获得打印系统对象属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2f6015d25ee8868fe9b4c6dcf3bf145d413521e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在不使用反射的情况下获得打印系统对象属性
-使用反射列举对象的属性（以及这些属性的类型）会降低应用程序性能。  <xref:System.Printing.IndexedProperties> 命名空间提供一种使用反射获取此信息的方法。  
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：在不使用反射的情况下获得打印系统对象属性
+使用反射对象上列举的属性 （以及这些属性的类型） 会降低应用程序性能。 <xref:System.Printing.IndexedProperties>命名空间提供一种方式获取此信息与使用反射。  
   
-## 示例  
- 执行如下步骤可以实现上述目的：  
+## <a name="example"></a>示例  
+ 执行此操作的步骤如下所示。  
   
-1.  创建类型的实例。  在下面的示例中，类型为 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]附带的 <xref:System.Printing.PrintQueue> 类型，但几近相同的代码也适用于您从 <xref:System.Printing.PrintSystemObject> 派生的类型。  
+1.  创建类型的实例。 在下面的示例中，类型是<xref:System.Printing.PrintQueue>附带的类型[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，但几乎完全相同的代码也适用于类型派生自<xref:System.Printing.PrintSystemObject>。  
   
-2.  通过该类型的 <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> 创建 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>。  此字典中每项的 <xref:System.Collections.DictionaryEntry.Value%2A> 属性是从 <xref:System.Printing.IndexedProperties.PrintProperty> 派生的类型之一的对象。  
+2.  创建<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>从该类型的<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>。 <xref:System.Collections.DictionaryEntry.Value%2A>此字典中的每个条目的属性是一个派生自的类型的对象<xref:System.Printing.IndexedProperties.PrintProperty>。  
   
-3.  枚举字典的成员。  对于每个成员，请执行下列操作。  
+3.  枚举字典中的成员。 为每个，执行以下操作。  
   
-4.  将每项的值向上转换为 <xref:System.Printing.IndexedProperties.PrintProperty>，并使用它来创建一个 <xref:System.Printing.IndexedProperties.PrintProperty> 对象。  
+4.  向上转换到每个条目的值<xref:System.Printing.IndexedProperties.PrintProperty>并用它来创建<xref:System.Printing.IndexedProperties.PrintProperty>对象。  
   
-5.  获取每个 <xref:System.Printing.IndexedProperties.PrintProperty> 对象的 <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> 的类型。  
+5.  获取类型的<xref:System.Printing.IndexedProperties.PrintProperty.Value%2A>的每个<xref:System.Printing.IndexedProperties.PrintProperty>对象。  
   
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
-## 请参阅  
- <xref:System.Printing.IndexedProperties.PrintProperty>   
- <xref:System.Printing.PrintSystemObject>   
- <xref:System.Printing.IndexedProperties>   
- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>   
- <xref:System.Printing.LocalPrintServer>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Collections.DictionaryEntry>   
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Printing.IndexedProperties.PrintProperty>  
+ <xref:System.Printing.PrintSystemObject>  
+ <xref:System.Printing.IndexedProperties>  
+ <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
+ <xref:System.Printing.LocalPrintServer>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Collections.DictionaryEntry>  
+ [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)

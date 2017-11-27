@@ -1,30 +1,22 @@
 ---
-title: "如何︰ 控制 Namespace 前缀 (Visual Basic) (LINQ to XML) |Microsoft 文档"
+title: "如何：控制命名空间前缀 (Visual Basic) (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b559b54ffaa53b2ae5cd3b6c6d2d4db3ebe0a04
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a48feeb25cc8d28d57edc7421f73b2829f8c19ef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>如何：控制命名空间前缀 (Visual Basic) (LINQ to XML)
 本主题说明如何控制命名空间前缀。  
@@ -32,7 +24,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 本示例声明两个命名空间。 它指定`http://www.adventure-works.com`命名空间具有前缀`aw`，并且`www.fourthcoffee.com`命名空间具有前缀的`fc`。  
+ 本示例声明两个命名空间。 它指定`http://www.adventure-works.com`命名空间具有前缀`aw`，且`www.fourthcoffee.com`命名空间具有的前缀`fc`。  
   
 ### <a name="code"></a>代码  
   
@@ -71,4 +63,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+ [处理 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

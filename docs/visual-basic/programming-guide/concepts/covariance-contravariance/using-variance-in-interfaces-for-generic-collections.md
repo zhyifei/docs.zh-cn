@@ -1,44 +1,65 @@
 ---
-title: "泛型集合 (Visual Basic 中) 的接口中使用变体 |Microsoft 文档"
+title: "泛型集合 (Visual Basic 中) 在接口中使用变体"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 86184c7de3fe16148bf954b16d703ca682216337
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b8944bf8f6377ddc633f81dccd9f379bf176d9f3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>泛型集合 (Visual Basic 中) 的接口中使用变体
-协变接口允许其方法以返回更多比在接口中指定的派生的类型。 逆变接口允许其方法来接受较少比指定的那些接口中的派生类型的参数。  
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>泛型集合 (Visual Basic 中) 在接口中使用变体
+协变接口允许其方法返回的派生类型多于接口中指定的派生类型。 逆变接口允许其方法接受派生类型少于接口中指定的类型的参数。  
   
- 在.NET Framework 4 中，多个现有接口变得协变和逆变。 其中包括<xref:System.Collections.Generic.IEnumerable%601>和<xref:System.IComparable%601>。</xref:System.IComparable%601> </xref:System.Collections.Generic.IEnumerable%601> 这样您就可以重用与基类型派生类型的集合的泛型集合进行操作的方法。  
+ 在.NET Framework 4 中，多个现有接口已变为协变和逆变接口。 包括 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601>。 这使你可将对基类型的泛型集合进行操作的那些方法重用于派生类型的集合。  
   
  .NET Framework 中的变体接口的列表，请参阅[泛型接口 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
   
 ## <a name="converting-generic-collections"></a>转换泛型集合  
- 下面的示例阐释了协变支持中的好处<xref:System.Collections.Generic.IEnumerable%601>接口。</xref:System.Collections.Generic.IEnumerable%601> `PrintFullName`方法接受一套`IEnumerable(Of Person)`类型作为参数。 但是，您可以重复使用它的集合`IEnumerable(Of Person)`类型，因为`Employee`继承`Person`。  
+ 下例阐释了 <xref:System.Collections.Generic.IEnumerable%601> 接口中的协变支持的益处。 `PrintFullName` 方法接受 `IEnumerable(Of Person)` 类型的集合作为参数。 但可将该方法重用于 `IEnumerable(Of Person)` 类型的集合，因为 `Employee` 继承 `Person`。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+' Simple hierarchy of classes.  
+Public Class Person  
+    Public Property FirstName As String  
+    Public Property LastName As String  
+End Class  
+  
+Public Class Employee  
+    Inherits Person  
+End Class  
+  
+' The method has a parameter of the IEnumerable(Of Person) type.  
+Public Sub PrintFullName(ByVal persons As IEnumerable(Of Person))  
+    For Each person As Person In persons  
+        Console.WriteLine(  
+            "Name: " & person.FirstName & " " & person.LastName)  
+    Next  
+End Sub  
+  
+Sub Main()  
+    Dim employees As IEnumerable(Of Employee) = New List(Of Employee)  
+  
+    ' You can pass IEnumerable(Of Employee),   
+    ' although the method expects IEnumerable(Of Person).  
+  
+    PrintFullName(employees)  
+  
+End Sub  
+```  
+  
 ## <a name="comparing-generic-collections"></a>比较泛型集合  
- 下面的示例阐释了逆变中的支持权益<xref:System.Collections.Generic.IComparer%601>接口。</xref:System.Collections.Generic.IComparer%601> `PersonComparer` 类实现 `IComparer(Of Person)` 接口。 但是，您可以重复使用此类来比较的对象的序列`Employee`类型，因为`Employee`继承`Person`。  
+ 下例阐释了 <xref:System.Collections.Generic.IComparer%601> 接口中的逆变支持的益处。 `PersonComparer` 类实现 `IComparer(Of Person)` 接口。 但可以重用此类来比较 `Employee` 类型的对象序列，因为 `Employee` 继承 `Person`。  
   
 ```vb  
 ' Simple hierarhcy of classes.  
@@ -98,4 +119,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [泛型接口 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+ [泛型接口中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

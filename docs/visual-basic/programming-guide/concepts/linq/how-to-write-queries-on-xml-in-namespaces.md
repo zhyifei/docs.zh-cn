@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 编写针对命名空间 (Visual Basic 中) 中的 XML 的查询 |Microsoft 文档"
+title: "如何： 命名空间 (Visual Basic 中) 中的 XML 编写查询"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5708a2a162132262722f390842f59c9c6a6838e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何︰ 编写针对命名空间 (Visual Basic 中) 中的 XML 的查询
-若要针对的是命名空间中的 XML 编写查询，必须使用<xref:System.Xml.Linq.XName>具有正确的命名空间的对象。</xref:System.Xml.Linq.XName>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何： 命名空间 (Visual Basic 中) 中的 XML 编写查询
+若要针对命名空间中的 XML 编写查询，必须使用具有正确命名空间的 <xref:System.Xml.Linq.XName> 对象。  
   
  在 Visual Basic 中，最常用的方法是定义一个全局命名空间，然后使用那些使用该全局命名空间的 XML 文本和 XML 属性。 您可以定义一个全局默认命名空间，在这种情况中，XML 文本中的元素将默认位于该命名空间中。 或者，您可以定义一个具有前缀的全局命名空间，然后根据需要在 XML 文本和 XML 属性中使用该前缀。 与其他形式的 XML 一样，默认情况下，属性始终不在任何命名空间中。  
   
- 本主题中示例的第一组演示如何在默认命名空间中创建 XML 树。 第二个集演示如何在具有前缀的命名空间中创建 XML 树。  
+ 本主题的第一个示例集演示如何在默认命名空间中创建一个 XML 树。 第二个示例集演示如何在带有前缀的命名空间中创建一个 XML 树。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个位于默认命名空间中的 XML 树。 然后检索元素的集合。  
@@ -106,4 +98,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+ [处理 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

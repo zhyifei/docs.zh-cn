@@ -1,39 +1,39 @@
 ---
-title: "DataGrid 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据 [Windows 窗体], 在 Windows 窗体上显示"
-  - "数据网格"
-  - "DataGrid 控件 [Windows 窗体]"
-  - "数据集 [Windows 窗体], 在 DataGrid 控件中显示"
-  - "数据集 [Windows 窗体], 用户界面"
-  - "显示数据, 在窗体上"
+title: "DataGrid 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- datasets [Windows Forms], user interface
+- DataGrid control [Windows Forms]
+- datasets [Windows Forms], displaying in DataGrid control
+- displaying data [Windows Forms], on forms
+- data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c60927451ad4350ef507f2e2a661bcfaab4ea788
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid 控件（Windows 窗体）
+# <a name="datagrid-control-windows-forms"></a>DataGrid 控件（Windows 窗体）
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 `DataGrid` 控件并添加了功能；但是，可以选择保留 `DataGrid` 控件以实现向后兼容并供将来使用。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控件取代了 `DataGrid` 控件并添加了功能；但是，可以选择保留 `DataGrid` 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- Windows 窗体 `DataGrid` 控件可为 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 数据集提供用户界面，以显示表格数据并允许对数据源进行更新。  
+ Windows 窗体 `DataGrid` 控件向 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 数据集提供用户界面，以显示表格数据和实现数据源更新。  
   
- 当 `DataGrid` 控件设置为有效的数据源时，该控件将被自动填充，同时根据数据的形状创建列和行。  `DataGrid` 控件可以用于显示单个表或显示一组表之间的分层关系。  
+ `DataGrid` 控件设置为有效数据源时，则自动填充该控件，同时根据数据的形状创建列和行。 `DataGrid` 控件可用于显示单个表或显示一组表之间的分层关系。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [DataGrid 控件概述](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  描述 `DataGrid` 控件的基本功能。  
   
@@ -52,41 +52,41 @@ caps.handback.revision: 18
  [如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
  描述如何在 `DataGrid` 控件中以编程方式更改数据。  
   
- [如何：使用设计器用 Windows 窗体 DataGrid 控件创建主\/详细信息列表](../../../../docs/framework/winforms/controls/create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
- 描述如何使用设计器在两个独立的 `DataGrid` 控件中显示以父\/子关系关联在一起的两个表。  
+ [如何：使用设计器用 Windows 窗体 DataGrid 控件创建主/从列表](../../../../docs/framework/winforms/controls/create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
+ 描述如何使用设计器在两个独立的 `DataGrid` 控件中显示以父/子关系关联在一起的两个表。  
   
- [如何：使用 Windows 窗体 DataGrid 控件创建主\/从列表](../../../../docs/framework/winforms/controls/how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md)  
- 描述如何在两个独立的 `DataGrid` 控件中显示以父\/子关系关联在一起的两个表。  
+ 如何：使用 Windows 窗体 DataGrid 控件创建主/从列表  
+ 描述如何在两个独立的 `DataGrid` 控件中显示以父/子关系关联在一起的两个表。  
   
  [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- 描述如何在 `DataGrid` 控件中移除列。  
+ 描述如何在 `DataGrid` 控件中删除列。  
   
  [如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
- 描述如何使用设计器更改 `DataGrid` 控件的与外观相关的属性。  
+ 描述如何使用设计器更改 `DataGrid` 控件与外观相关的属性。  
   
  [如何：设置 Windows 窗体 DataGrid 控件的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)  
- 描述如何更改 `DataGrid` 控件的与外观相关的属性。  
+ 描述如何更改 `DataGrid` 控件与外观相关的属性。  
   
  [Windows 窗体 DataGrid 控件的键盘快捷键](../../../../docs/framework/winforms/controls/keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
- 列出通过 `DataGrid` 控件进行定位的快捷方式。  
+ 列出通过 `DataGrid` 控件进行导航的快捷方式。  
   
  [如何：响应 Windows 窗体 DataGrid 控件中的单击](../../../../docs/framework/winforms/controls/how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
- 描述如何确定用户单击的是 `DataGrid` 控件中的哪个单元格。  
+ 描述如何确定用户在 `DataGrid` 控件中单击的单元格。  
   
  [如何：用 Windows 窗体 DataGrid 控件验证输入](../../../../docs/framework/winforms/controls/how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  描述如何验证绑定到 `DataGrid` 控件的数据集中的输入。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGrid>  
- 提供 <xref:System.Windows.Forms.DataGrid> 类的概述。  
+ 提供的概述<xref:System.Windows.Forms.DataGrid>类。  
   
  <xref:System.Windows.Forms.DataGrid.DataSource%2A>  
- 提供有关如何使用该属性将 <xref:System.Windows.Forms.DataGrid> 控件绑定到数据的详细信息。  
+ 提供有关使用此属性将绑定的详细信息<xref:System.Windows.Forms.DataGrid>控件的数据。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- 提供有关 Windows 窗体中的数据绑定的主题链接。  
+ 提供有关 Windows 窗体中数据绑定的主题的链接。  
   
-## 请参阅  
- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

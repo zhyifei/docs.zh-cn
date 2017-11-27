@@ -1,35 +1,38 @@
 ---
-title: "可变排队通信 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "可变排队通信"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a7e6bb57245e9877fe337b86a03565d0197b0084
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 可变排队通信
-此示例演示如何通过消息队列 \(MSMQ\) 传输来执行可变排队通信。此示例使用 <xref:System.ServiceModel.NetMsmqBinding>。此例中的服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
+# <a name="volatile-queued-communication"></a>可变排队通信
+此示例演示如何通过消息队列 (MSMQ) 传输来执行可变排队通信。 此示例使用 <xref:System.ServiceModel.NetMsmqBinding>。 此例中的服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。  
+>  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 在排队通信中，客户端使用队列与服务进行通信。更确切地说，客户端向队列发送消息。服务从队列接收消息。因此不必同时运行服务和客户端便可使用队列进行通信。  
+ 在排队通信中，客户端使用队列与服务进行通信。 更确切地说，客户端向队列发送消息。 服务从队列接收消息。 因此不必同时运行服务和客户端便可使用队列进行通信。  
   
  发送没有保证的消息时，MSMQ 仅尽量传递消息，这不同于“一次性”保证。具有“一次性”保证时，MSMQ 可确保消息被送达，如果无法送达消息，则会向您发出通知。  
   
- 在某些情况下，当及时送达比丢失消息更重要时，您可能想要通过某个队列发送没有保证的可变消息。队列管理器崩溃时可变消息不存在。因此，如果队列管理器崩溃，用于存储可变消息的非事务性队列可以存在，但消息本身则无法存在，因为消息未存储在磁盘中。  
+ 在某些情况下，当及时送达比丢失消息更重要时，您可能想要通过某个队列发送没有保证的可变消息。 队列管理器崩溃时可变消息不存在。 因此，如果队列管理器崩溃，用于存储可变消息的非事务性队列可以存在，但消息本身则无法存在，因为消息未存储在磁盘中。  
   
 > [!NOTE]
->  不能使用 MSMQ 在某个事务范围内发送没有保证的可变消息。还必须创建非事务性队列以发送可变消息。  
+>  不能使用 MSMQ 在某个事务范围内发送没有保证的可变消息。 还必须创建非事务性队列以发送可变消息。  
   
  此示例中的服务协定是定义最适合与队列一起使用的单向服务的 `IStockTicker`。  
   
@@ -40,7 +43,6 @@ public interface IStockTicker
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-  
 ```  
   
  服务操作显示股票代号符号和价格，如下面的示例代码所示：  
@@ -54,10 +56,9 @@ public class StockTickerService : IStockTicker
      }  
      …  
 }  
-  
 ```  
   
- 服务是自承载服务。使用 MSMQ 传输时，必须提前创建所使用的队列。可以手动或通过代码完成此操作。在此示例中，该服务包含代码，以检查队列是否存在并在必要时创建队列。从配置文件中读取队列名称。[ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 使用该基址来生成服务的代理。  
+ 服务是自承载服务。 使用 MSMQ 传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务包含代码，以检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。 基址由[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来为服务生成代理。  
   
 ```  
 // Host the service within this EXE console application.  
@@ -86,17 +87,16 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-  
 ```  
   
- MSMQ 队列名是在配置文件的 appSettings 节中指定的。服务终结点是在配置文件的 system.serviceModel 节中定义的，它指定了 `netMsmqBinding` 绑定。  
+ MSMQ 队列名是在配置文件的 appSettings 节中指定的。 服务终结点是在配置文件的 system.serviceModel 节中定义的，它指定了 `netMsmqBinding` 绑定。  
   
 > [!NOTE]
->  队列名称为本地计算机使用圆点 \(.\)，并在使用 <xref:System.Messaging> 创建队列时在其路径中使用反斜杠分隔符。[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点地址指定一个 net.msmq: 方案，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。  
+>  队列名称对本地计算机使用圆点 (.)，并在使用 <xref:System.Messaging> 创建队列时在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点地址指定一个 net.msmq: 方案，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。  
   
  消息的保证和持久性或可变性也在配置中指定。  
   
-```  
+```xml  
 <appSettings>  
   <!-- use appSetting to configure MSMQ queue name -->  
   <add key="queueName" value=".\private$\ServiceModelSamplesVolatile" />  
@@ -125,7 +125,6 @@ public static void Main()
   </bindings>  
   ...  
 </system.serviceModel>  
-  
 ```  
   
  由于该示例通过使用非事务性队列来发送排队消息，因此无法将经过事务处理的消息发送到队列。  
@@ -145,10 +144,9 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-  
 ```  
   
- 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。您可以看到服务从客户端接收消息。在每个控制台窗口中按 Enter 可以关闭服务和客户端。请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  
+ 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  
   
 ```  
 The service is ready.  
@@ -166,21 +164,21 @@ Stock Tick zzz8:43.32
 Stock Tick zzz9:43.3  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
- 默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。MSMQ 传输安全有两个相关的属性，即 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` 。默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
+ 默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。 有两个相关属性对于 MSMQ 传输安全，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>和<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`默认情况下，身份验证模式设置为`Windows`和保护级别设置为`Sign`。 为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。 如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
   
-### 在加入到工作组或在没有 Active Directory 集成的计算机上运行示例  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>在加入到工作组或在没有 Active Directory 集成的计算机上运行示例  
   
 1.  如果计算机不是域成员或尚未安装 Active Directory 集成，请将身份验证模式和保护级别设置为 `None` 以关闭传输安全性，如下面的示例配置代码所示：  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <services>  
           <service name="Microsoft.ServiceModel.Samples.StockTickerService"  
@@ -223,21 +221,20 @@ Stock Tick zzz9:43.3
         </behaviors>  
   
       </system.serviceModel>  
-  
     ```  
   
 2.  确保在运行示例前更改服务器和客户端上的配置。  
   
     > [!NOTE]
-    >  将 `security mode` 设置为 `None` 等效于将 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性设置为 `None`。  
+    >  将 `security mode` 设置为 `None` 等效于将 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全设置为 `None`。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

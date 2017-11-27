@@ -1,105 +1,109 @@
 ---
-title: "演练：创建未绑定的 Windows 窗体 DataGridView 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据 [Windows 窗体], 不绑定到数据源显示"
-  - "数据 [Windows 窗体], 未绑定"
-  - "DataGridView 控件 [Windows 窗体], 不绑定到数据源显示数据"
-  - "DataGridView 控件 [Windows 窗体], 未绑定数据"
-  - "演练 [Windows 窗体], DataGridView 控件"
+title: "演练：创建未绑定的 Windows 窗体 DataGridView 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data [Windows Forms], displaying without binding to data source
+- DataGridView control [Windows Forms], unbound data
+- DataGridView control [Windows Forms], displaying data without binding to a data source
+- data [Windows Forms], unbound
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：创建未绑定的 Windows 窗体 DataGridView 控件
-您可能经常需要显示并非来自数据库的表格数据。  例如，您可能要显示一个二维字符串数组的内容。  <xref:System.Windows.Forms.DataGridView> 类提供一种在不绑定到数据源的情况下显示数据的方法，此方法既简单，又具有非常强的可自定义性。  本演练演示如何在“取消绑定”模式下填充 <xref:System.Windows.Forms.DataGridView> 控件以及管理行的添加和删除。  默认情况下，用户可以添加新行。  要禁止添加行，应将 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 属性设置为 `false`。  
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>演练：创建未绑定的 Windows 窗体 DataGridView 控件
+你可能经常想要显示不是从数据库的表格数据。 例如，你可能想要显示的字符串的二维数组的内容。 <xref:System.Windows.Forms.DataGridView>类提供了一种简单且高度可自定义的方法，以显示数据不绑定到数据源。 本演练演示如何填充<xref:System.Windows.Forms.DataGridView>控制和管理的添加和删除的"取消绑定"模式中的行。 默认情况下，用户可以添加新行。 若要禁止添加行，将设置<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性是`false`。  
   
- 若要以单个列表的形式复制本主题中的代码，请参见 [如何：创建未绑定的 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
+ 若要将代码复制本主题中的一个单独的清单，请参阅[如何： 创建未绑定的 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
   
-## 创建窗体  
+## <a name="creating-the-form"></a>创建窗体  
   
-#### 使用未绑定的 DataGridView 控件  
+#### <a name="to-use-an-unbound-datagridview-control"></a>若要使用未绑定的 DataGridView 控件  
   
-1.  创建一个从 <xref:System.Windows.Forms.Form> 派生并包含下列变量声明和 `Main` 方法的类。  
+1.  创建一个类，派生自<xref:System.Windows.Forms.Form>和包含以下变量声明和`Main`方法。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  在窗体的类定义中实现一个 `SetupLayout` 方法以设置窗体的布局。  
+2.  实现`SetupLayout`设置窗体的布局的窗体的类定义中的方法。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  创建一个 `SetupDataGridView` 方法以设置 <xref:System.Windows.Forms.DataGridView> 的列和属性。  
+3.  创建`SetupDataGridView`方法以设置<xref:System.Windows.Forms.DataGridView>列和属性。  
   
-     此方法首先向窗体的 <xref:System.Windows.Forms.Control.Controls%2A> 集合中添加 <xref:System.Windows.Forms.DataGridView> 控件。  接下来，使用 <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> 属性设置要显示的列数。  列标题的默认样式是通过设置 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 属性返回的 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>、<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> 属性来设置的。  
+     此方法首先将添加<xref:System.Windows.Forms.DataGridView>控件添加到窗体的<xref:System.Windows.Forms.Control.Controls%2A>集合。 接下来，使用设置要显示的列数<xref:System.Windows.Forms.DataGridView.ColumnCount%2A>属性。 通过设置来设置列标题的默认样式<xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>， <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>，和<xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>属性<xref:System.Windows.Forms.DataGridViewCellStyle>返回<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>属性。  
   
-     布局和外观属性设置好后，接下来该分配列名了。  此方法退出后，便可以填充 <xref:System.Windows.Forms.DataGridView> 控件了。  
+     设置布局和外观属性，并将分配列名称。 当此方法退出时，<xref:System.Windows.Forms.DataGridView>控件已准备好进行填充。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  创建一个 `PopulateDataGridView` 方法以便向 <xref:System.Windows.Forms.DataGridView> 控件中添加行。  
+4.  创建`PopulateDataGridView`方法以将行添加到<xref:System.Windows.Forms.DataGridView>控件。  
   
-     每一行都表示一首歌曲及其关联信息。  
+     每一行代表一首歌曲和其相关的信息。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  实用工具方法创建好后，便可以开始附加事件处理程序了。  
+5.  与就地的实用工具方法，你可以附加事件处理程序。  
   
-     您将处理**“添加”**和**“删除”**按钮的 <xref:System.Windows.Forms.Control.Click> 事件、窗体的 <xref:System.Windows.Forms.Form.Load> 事件以及 <xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件。  
+     将处理**添加**和**删除**按钮的<xref:System.Windows.Forms.Control.Click>事件、 窗体的<xref:System.Windows.Forms.Form.Load>事件，和<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。  
   
-     当**“添加”**按钮的 <xref:System.Windows.Forms.Control.Click> 事件引发时，会向 <xref:System.Windows.Forms.DataGridView> 中添加一个新的空行。  
+     当**添加**按钮的<xref:System.Windows.Forms.Control.Click>引发事件时，新的空的行添加到<xref:System.Windows.Forms.DataGridView>。  
   
-     当**“删除”**按钮的 <xref:System.Windows.Forms.Control.Click> 事件引发时，会删除选定的行，除非它是新记录行（该行使用户可以添加新行）。  该行始终是 <xref:System.Windows.Forms.DataGridView> 控件中的最后一行。  
+     当**删除**按钮的<xref:System.Windows.Forms.Control.Click>引发事件，删除所选的行，除非它是新记录，以便用户可以在行中添加新行。 该行始终是中的最后一行<xref:System.Windows.Forms.DataGridView>控件。  
   
-     当窗体的 <xref:System.Windows.Forms.Form.Load> 事件被引发时，会调用 `SetupLayout`、`SetupDataGridView` 和 `PopulateDataGridView` 实用工具方法。  
+     当窗体的<xref:System.Windows.Forms.Form.Load>引发事件时， `SetupLayout`， `SetupDataGridView`，和`PopulateDataGridView`调用实用工具方法。  
   
-     当 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件被引发时，`Date` 列中的每个单元格都格式化为一个长日期，除非单元格的值无法分析。  
+     当<xref:System.Windows.Forms.DataGridView.CellFormatting>引发事件时，每个单元格中`Date`列将格式化为长日期，除非无法分析该单元格的值。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## 测试应用程序  
- 现在可以测试窗体，以确保其行为与预期相同。  
+## <a name="testing-the-application"></a>测试应用程序  
+ 你现在可以测试窗体，以确保其行为与预期相同。  
   
-#### 测试窗体  
+#### <a name="to-test-the-form"></a>若要测试窗体  
   
 -   按 F5 运行该应用程序。  
   
-     您将看到一个 <xref:System.Windows.Forms.DataGridView> 控件，它显示 `PopulateDataGridView` 中列出的歌曲。  可以使用**“添加行”**按钮添加新行，使用**“删除行”**按钮删除选定的行。  未绑定的 <xref:System.Windows.Forms.DataGridView> 控件是数据存储区，它的数据独立于任何外部源，如 <xref:System.Data.DataSet> 或数组。  
+     你将看到<xref:System.Windows.Forms.DataGridView>显示中列出的歌曲控件`PopulateDataGridView`。 你可以添加新行和的**添加行**按钮，并且您可以删除与所选的行**删除行**按钮。 未绑定<xref:System.Windows.Forms.DataGridView>控件是数据存储，其数据是独立于任何外部源，如<xref:System.Data.DataSet>或数组。  
   
-## 后续步骤  
- 此应用程序使您对 <xref:System.Windows.Forms.DataGridView> 控件的功能有一个基本了解。  您可以通过以下几种方法来自定义 <xref:System.Windows.Forms.DataGridView> 控件的外观和行为：  
+## <a name="next-steps"></a>后续步骤  
+ 此应用程序提供一个基本的了解<xref:System.Windows.Forms.DataGridView>控件的功能。 你可以自定义的外观和行为<xref:System.Windows.Forms.DataGridView>控制以下几种方式：  
   
--   更改边框和标题样式。  有关更多信息，请参见 [如何：更改 Windows 窗体 DataGridView 控件中的边框和网格线的样式](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)。  
+-   更改边框和标头的样式。 有关详细信息，请参阅[如何： 更改边框和网格线在 Windows 窗体 DataGridView 控件中的样式](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)。  
   
--   允许或限制用户向 <xref:System.Windows.Forms.DataGridView> 控件中输入数据。  有关更多信息，请参见[如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)和[如何：使 Windows 窗体 DataGridView 控件中的列只读](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
+-   允许或限制用户输入到<xref:System.Windows.Forms.DataGridView>控件。 有关详细信息，请参阅[如何： 防止添加和删除行在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)，和[如何： 在 Windows 窗体 DataGridView 控件中使列成为只读](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
   
--   检查用户输入中是否有与数据库有关的错误。  有关更多信息，请参见 [演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
+-   检查与数据库相关的错误的用户输入。 有关详细信息，请参阅[演练： 处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
   
--   使用虚拟模式处理特大数据集。  有关更多信息，请参见 [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+-   处理非常大的数据集使用的虚拟模式。 有关详细信息，请参阅[演练： 在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
   
--   自定义单元格的外观。  有关更多信息，请参见 [如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) 和 [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
+-   自定义单元格的外观。 有关详细信息，请参阅[如何： 自定义 Windows 窗体 DataGridView 控件中的单元外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[如何： 设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [如何：创建未绑定的 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.DataGridView>  
+ [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [如何：创建未绑定 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
  [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

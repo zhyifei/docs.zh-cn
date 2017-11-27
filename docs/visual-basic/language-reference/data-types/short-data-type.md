@@ -1,56 +1,75 @@
 ---
-title: "Short 数据类型 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Short"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "数据类型 [Visual Basic], 整数"
-  - "整数数字"
-  - "整数, 数据类型"
-  - "整数, 类型"
-  - "整数数据类型"
-  - "文本类型的字符, S"
-  - "数字, integer"
-  - "数字, 整个"
-  - "S 文本类型字符"
-  - "Short 数据类型"
-  - "整数"
+title: "Short 数据类型 (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+author: rpetrusha
+ms.author: ronpet
+f1_keywords: vb.Short
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- S literal type character [Visual Basic]
+- Short data type
+- literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+ms.openlocfilehash: fef948debed69cf9fb7b0e6bb65eb0ddbe497a92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Short 数据类型 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-保存 16 位（2 字节）有符号整数，值的范围为 \-32,768 到 32,767。  
+# <a name="short-data-type-visual-basic"></a>Short 数据类型 (Visual Basic)
+保存有符号 16 位 （2 个字节） 整数，值的范围从-32768 到 32767。  
   
-## 备注  
- 使用 `Short` 数据类型以包含不需要 `Integer` 整个数据宽度的整型值。  在某些情况下，公共语言运行时可以将 `Short` 变量紧密地打包在一起，以节省内存消耗。  
+## <a name="remarks"></a>备注  
+ 使用`Short`数据类型包含不需要的完整数据宽度的整数值`Integer`。 在某些情况下，公共语言运行时可以 pack 你`Short`紧密合作，以节省内存消耗的变量。  
   
  `Short` 的默认值为 0。  
   
-## 编程提示  
+## <a name="literal-assignments"></a>文本分配
+
+你可以声明并初始化`Short`变量中将其分配为十进制文本、 八进制文本中，为十六进制文本、 （开始或利用 Visual Basic 自 2017 年 1） 二进制文本。 如果整数文本在 `Short` 范围之外（即，如果它小于 <xref:System.Int16.MinValue?displayProperty=nameWithType> 或大于 <xref:System.Int16.MaxValue?displayProperty=nameWithType>），会发生编译错误。
+
+在下面的示例中，整数等于 1,034，表示为十进制数字，十六进制，和从隐式转换二进制文本[整数](integer-data-type.md)到`Short`值。
+
+[!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
+
+> [!NOTE]
+> 使用前缀`&h`或`&H`来表示为十六进制文本、 前缀`&b`或`&B`来表示二进制文字和前缀`&o`或`&O`来表示八进制文本。 十进制文本没有前缀。
+
+从 Visual Basic 自 2017 年开始，你还可以使用下划线字符， `_`，作为数字分隔符以增强可读性，如以下示例所示。
+
+[!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
+
+此外可以包括数值`S`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`Short`数据类型，如以下示例所示。
+
+```vb
+Dim number = &H0326S
+```
+
+## <a name="programming-tips"></a>编程提示
+
+-   **扩大转换。** `Short`数据类型加宽到`Integer`， `Long`， `Decimal`， `Single`，或`Double`。 这意味着，你可以将 `Short` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。  
   
--   **扩大。** `Short` 数据类型扩大为 `Integer`、`Long`、`Decimal`、`Single` 或 `Double`。  这意味着您可以将 `Short` 转换为这些类型中的任一类型，而不会遇到 <xref:System.OverflowException?displayProperty=fullName> 错误。  
+-   **类型字符。** 将文本类型字符 `S` 追加到文本会将其强制转换为 `Short` 数据类型。 `Short`中有任何标识符类型字符。  
   
--   **类型字符。**将文本类型字符 `S` 追加到文本会将其强制转换成 `Short` 数据类型。  `Short` 不具有标识符类型字符。  
+-   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Int16?displayProperty=nameWithType> 结构。  
   
--   **Framework 类型。**.NET Framework 中的对应类型是 <xref:System.Int16?displayProperty=fullName> 结构。  
-  
-## 请参阅  
- <xref:System.Int16?displayProperty=fullName>   
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)   
+## <a name="see-also"></a>请参阅
+
+ <xref:System.Int16?displayProperty=nameWithType>  
+ [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

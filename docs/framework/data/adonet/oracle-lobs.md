@@ -1,40 +1,41 @@
 ---
-title: "Oracle LOB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oracle LOB
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e04c8fcb56b497ab183e05a0d6f40cb3facfed73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle LOB
-Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.OracleLob> 类，该类用于使用 Oracle **LOB** 数据类型。  
+# <a name="oracle-lobs"></a>Oracle LOB
+适用于 Oracle 的.NET Framework 数据提供程序包括<xref:System.Data.OracleClient.OracleLob>类，该类用于使用 Oracle **LOB**数据类型。  
   
- **OracleLob** 可能是下列 <xref:System.Data.OracleClient.OracleType> 数据类型之一：  
+ **OracleLob**可能是下列其中一<xref:System.Data.OracleClient.OracleType>数据类型：  
   
 |数据类型|描述|  
-|----------|--------|  
-|**Blob**|包含二进制数据的 Oracle **BLOB** 数据类型，其最大大小为 4 GB。  此数据类型映射到 **Byte** 类型的 **Array**。|  
-|**Clob**|包含字符数据的 Oracle **CLOB** 数据类型，根据服务器的默认字符集，其最大大小为 4 GB。  此数据类型映射到 **String**。|  
-|**NClob**|包含字符数据的 Oracle **NCLOB** 数据类型，根据服务器的区域字符集，其最大大小为 4G 字节。  此数据类型映射到 **String**。|  
+|---------------|-----------------|  
+|**Blob**|Oracle **BLOB**包含最大大小为 4 千兆字节的二进制数据的数据类型。 此方法映射到**数组**类型的**字节**。|  
+|**Clob**|Oracle **CLOB**包含字符数据，基于默认字符的数据类型设置在服务器上，最大大小为 4 千兆字节。 此方法映射到**字符串**。|  
+|**NClob**|Oracle **NCLOB**基于最大大小为 4 千兆字节在服务器上的区域字符集包含字符数据的数据类型。 此方法映射到**字符串**。|  
   
- **OracleLob** 与 <xref:System.Data.OracleClient.OracleBFile> 的区别在于前者的数据存储在服务器上而不是存储在操作系统的物理文件中。  它也可以是一个读写对象，这一点与 **OracleBFile** 不同（后者始终为只读）。  
+ **OracleLob**区别<xref:System.Data.OracleClient.OracleBFile>在于数据存储的服务器，而不是在操作系统中的物理文件上。 它还可读写对象，与不同**OracleBFile**，这始终是只读的。  
   
-## 创建、检索和写入 LOB  
- 以下 C\# 示例演示如何在 Oracle 表中创建 LOB，然后以 **OracleLob** 对象的形式检索并写入。  该示例演示如何使用 <xref:System.Data.OracleClient.OracleDataReader> 对象以及 **OracleLob** **Read** 和 **Write** 方法。  该示例使用 Oracle **BLOB**、**CLOB** 和 **NCLOB** 数据类型。  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a>创建、检索和写入 LOB  
+ 下面的 C# 示例演示如何你可以创建 Lob 在 Oracle 表，然后检索并对其进行写入的形式**OracleLob**对象。 该示例演示如何使用<xref:System.Data.OracleClient.OracleDataReader>对象和**OracleLob** **读取**和**编写**方法。 该示例使用 Oracle **BLOB**， **CLOB**，和**NCLOB**数据类型。  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.IO;              
 using System.Text;             
@@ -224,12 +225,10 @@ public class LobExample
 }  
 ```  
   
-## 创建临时 LOB  
- 以下 C\# 示例演示如何创建临时 LOB。  
+## <a name="creating-a-temporary-lob"></a>创建临时 LOB  
+ 以下 C# 示例演示如何创建临时 LOB。  
   
- \[C\#\]  
-  
-```  
+```csharp  
 OracleConnection conn = new OracleConnection(  
   "server=test8172; integrated security=yes;");  
 conn.Open();  
@@ -258,6 +257,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## 请参阅  
- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
+## <a name="see-also"></a>另请参阅  
+ [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

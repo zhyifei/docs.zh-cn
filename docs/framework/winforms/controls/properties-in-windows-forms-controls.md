@@ -1,64 +1,65 @@
 ---
-title: "Windows 窗体控件中的属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 属性"
-  - "自定义控件 [Windows 窗体], 属性概述（使用代码）"
-  - "属性 [Windows 窗体]"
+title: "Windows 窗体控件中的属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], properties overview (using code)
+- controls [Windows Forms], properties
+- properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Windows 窗体控件中的属性
-Windows 窗体控件继承了基类 <xref:System.Windows.Forms.Control?displayProperty=fullName> 的许多属性。  包括 <xref:System.Windows.Forms.Control.Font%2A>、<xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Bounds%2A>、<xref:System.Windows.Forms.Control.ClientRectangle%2A>、<xref:System.Windows.Forms.Control.DisplayRectangle%2A>、<xref:System.Windows.Forms.Control.Enabled%2A>、<xref:System.Windows.Forms.Control.Focused%2A>、<xref:System.Windows.Forms.Control.Height%2A>、<xref:System.Windows.Forms.Control.Width%2A>、<xref:System.Windows.Forms.Control.Visible%2A>、<xref:System.Windows.Forms.Control.AutoSize%2A> 等属性以及许多其他属性。  有关继承的属性的详细信息，请参见 <xref:System.Windows.Forms.Control?displayProperty=fullName>。  
+# <a name="properties-in-windows-forms-controls"></a>Windows 窗体控件中的属性
+Windows 窗体控件继承许多属性表单的基类<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 这些属性包括如<xref:System.Windows.Forms.Control.Font%2A>， <xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Bounds%2A>， <xref:System.Windows.Forms.Control.ClientRectangle%2A>， <xref:System.Windows.Forms.Control.DisplayRectangle%2A>， <xref:System.Windows.Forms.Control.Enabled%2A>， <xref:System.Windows.Forms.Control.Focused%2A>， <xref:System.Windows.Forms.Control.Height%2A>， <xref:System.Windows.Forms.Control.Width%2A>， <xref:System.Windows.Forms.Control.Visible%2A>， <xref:System.Windows.Forms.Control.AutoSize%2A>，等等。 有关继承的属性的详细信息，请参阅<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
- 可以在控件中重写继承属性和定义新属性。  
+ 可以在控件中重写继承的属性和定义新属性。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [定义属性](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- 演示如何为自定义控件或组件实现属性，并介绍如何将该属性集成到设计环境中。  
+ 演示如何为自定义控件或组件实现属性，以及如何将该属性集成到设计环境中。  
   
  [使用 ShouldSerialize 和 Reset 方法定义默认值](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  演示如何为自定义控件或组件定义默认属性值。  
   
  [属性更改事件](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- 描述如何在属性值发生更改时启用属性更改通知。  
+ 介绍如何在属性值发生更改时启用属性更改通知。  
   
  [如何：公开构成控件的属性](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
  演示如何在自定义复合控件中公开构成控件的属性。  
   
  [自定义控件中的方法实现](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
- 描述如何在自定义控件和组件中实现方法。  
+ 介绍如何在自定义控件和组件中实现方法。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.UserControl>  
  介绍用于实现复合控件的基类。  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- 介绍指定要用于自定义属性类型的 <xref:System.ComponentModel.TypeConverter> 的特性。  
+ 文档属性，指定<xref:System.ComponentModel.TypeConverter>将用于自定义属性类型。  
   
  <xref:System.ComponentModel.EditorAttribute>  
- 介绍指定要用于自定义属性的 <xref:System.Drawing.Design.UITypeEditor> 的特性。  
+ 文档属性，指定<xref:System.Drawing.Design.UITypeEditor>用于自定义属性。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- 描述可以对自定义控件和组件的属性或其他成员应用的特性。  
+ 描述你可以应用到自定义控件和组件的属性或其他成员的特性。  
   
- [组件的设计时特性\)](../Topic/Design-Time%20Attributes%20for%20Components.md)  
- 列出要应用于组件和控件的元数据特性，以便使它们在设计时正确地显示在可视化设计器中。  
+ [组件的设计时特性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ 将列出的元数据特性应用到组件和控件，以便在设计时正确显示在可视化设计器中。  
   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)  
- 描述如何实现如编辑器和设计器等提供设计时支持的类。
+ [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ 描述如何实现提供设计时支持的类，例如编辑器和设计器。

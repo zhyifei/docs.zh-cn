@@ -1,38 +1,30 @@
 ---
-title: "如何︰ 从 XmlReader (Visual Basic 中) 创建一个目录树 |Microsoft 文档"
+title: "如何： 从 XmlReader (Visual Basic 中) 创建树"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8dff4e518d8850b4050389e5677ac81ecd1e074
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4ceae7c2bee85e7b368322c8ba195dea9feff672
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>如何︰ 从 XmlReader (Visual Basic 中) 创建树
-本主题演示如何直接从<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>创建 XML 树 若要创建<xref:System.Xml.Linq.XElement>从<xref:System.Xml.XmlReader>，则必须定位<xref:System.Xml.XmlReader>元素节点上。</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlReader>将跳过注释和处理指令，但如果<xref:System.Xml.XmlReader>是否定位在文本节点上，将引发错误。</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> 若要避免此类错误，始终定位<xref:System.Xml.XmlReader>在元素之前创建 XML 树从<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>上</xref:System.Xml.XmlReader>  
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>如何： 从 XmlReader (Visual Basic 中) 创建树
+本主题演示如何直接从 <xref:System.Xml.XmlReader> 创建 XML 树。 若要从 <xref:System.Xml.Linq.XElement> 创建 <xref:System.Xml.XmlReader>，必须将 <xref:System.Xml.XmlReader> 定位在元素节点上。 <xref:System.Xml.XmlReader> 将跳过注释和处理指令，但如果 <xref:System.Xml.XmlReader> 定位在文本节点上，则将引发错误。 若要避免这类错误，请在从 <xref:System.Xml.XmlReader> 创建 XML 树之前，始终将 <xref:System.Xml.XmlReader> 定位在元素上。  
   
 ## <a name="example"></a>示例  
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 书籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
- 下面的代码创建一个 `T:System.Xml.XmlReader` 对象，然后读取节点，直到找到第一个元素节点。 然后加载<xref:System.Xml.Linq.XElement>对象。</xref:System.Xml.Linq.XElement>  
+ 下面的代码创建一个 `T:System.Xml.XmlReader` 对象，然后读取节点，直到找到第一个元素节点。 然后加载 <xref:System.Xml.Linq.XElement> 对象。  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  

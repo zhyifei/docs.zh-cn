@@ -1,27 +1,29 @@
 ---
-title: "在会话中对排队消息进行分组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "队列 [WCF]。 对消息进行分组"
+title: "在会话中对排队消息进行分组"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在会话中对排队消息进行分组
+# <a name="grouping-queued-messages-in-a-session"></a>在会话中对排队消息进行分组
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的会话可以将一组相关消息分为一组，以便由单个接收应用程序进行处理。 属于一个会话的消息必须属于同一事务。 因为所有消息都属于同一事务，所以如果有一个消息未能得到处理，整个会话都将回滚。 会话对于死信队列和病毒队列具有类似的行为。 在为会话配置的排队绑定上设置的生存时间 (TTL) 属性被应用于整个会话。 如果在 TTL 过期前仅发送了会话中的一部分消息，则会将整个会话都放到死信队列中。 与此类似，如果会话中有消息未能发送到应用程序队列中的应用程序，则会将整个会话都放到病毒队列（如果可用）中。  
   
 ## <a name="message-grouping-example"></a>消息分组示例  
@@ -31,13 +33,13 @@ caps.handback.revision: 30
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>设置服务协定以使用会话  
   
-1.  定义一个需要会话的服务协定。 对执行此操作<xref:System.ServiceModel.OperationContractAttribute>属性并指定︰  
+1.  定义一个需要会话的服务协定。 为此，可使用 <xref:System.ServiceModel.OperationContractAttribute> 属性并指定以下内容：  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  将该协定中的操作标记为单向操作，因为这些方法不返回任何结果。 这通过<xref:System.ServiceModel.OperationContractAttribute>属性并指定︰  
+2.  将该协定中的操作标记为单向操作，因为这些方法不返回任何结果。 为此，可使用 <xref:System.ServiceModel.OperationContractAttribute> 属性并指定以下内容：  
   
     ```  
     [OperationContract(IsOneWay = true)]  
@@ -49,17 +51,17 @@ caps.handback.revision: 30
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  每个服务操作都需要一个事务。 指定这一点与<xref:System.ServiceModel.OperationBehaviorAttribute>属性。 负责完成该事务的操作还应将 `TransactionAutoComplete` 设置为 `true`。  
+4.  每个服务操作都需要一个事务。 可使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性予以指定。 负责完成该事务的操作还应将 `TransactionAutoComplete` 设置为 `true`。  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  配置一个终结点，该终结点使用系统提供的 `NetProfileMsmqBinding` 绑定。  
+5.  配置一个终结点，该终结点使用系统提供的 `NetMsmqBinding` 绑定。  
   
-6.  创建一个事务性队列使用<xref:System.Messaging>。 还可以使用消息队列 (MSMQ) 或 MMC 创建该队列。 如果你这样做，请创建一个事务性队列。  
+6.  使用 <xref:System.Messaging> 创建一个事务性队列。 还可以使用消息队列 (MSMQ) 或 MMC 创建该队列。 如果您这样做，请创建一个事务性队列。  
   
-7.  使用创建该服务的服务主机<xref:System.ServiceModel.ServiceHost>。  
+7.  使用 <xref:System.ServiceModel.ServiceHost> 为该服务创建一个服务主机。  
   
 8.  打开服务主机使服务处于可用状态。  
   
@@ -93,5 +95,5 @@ caps.handback.revision: 30
   
   
 ## <a name="see-also"></a>另请参阅  
- [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)   
+ [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)

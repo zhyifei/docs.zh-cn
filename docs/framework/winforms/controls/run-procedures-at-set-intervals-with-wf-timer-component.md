@@ -1,55 +1,60 @@
 ---
-title: "如何：使用 Windows 窗体计时器组件以设置的间隔运行过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], 计时器"
-  - "初始化, Timer 组件"
-  - "过程, 特定时间间隔"
-  - "Timer 组件 [Windows 窗体], 初始化"
-  - "计时器, 事件间隔"
-  - "计时器, 基于 Windows 的"
+title: "如何：使用 Windows 窗体计时器组件以设置的间隔运行过程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], timers
+- timers [Windows Forms], event intervals
+- initialization [Windows Forms], Timer components
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], initializing
+- procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
-有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。  <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
+有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。 <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
   
- 此组件专为 Windows 窗体环境设计。  如果需要适用于服务器环境的计时器，请参阅[Introduction to Server\-Based Timers](http://msdn.microsoft.com/zh-cn/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+ 此组件专为 Windows 窗体环境设计。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
   
 > [!NOTE]
->  使用 <xref:System.Windows.Forms.Timer> 组件时，有一些限制。  有关详细信息，请参阅 [Windows 窗体 Timer 组件的 Interval 属性的限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)。  
+>  使用 <xref:System.Windows.Forms.Timer> 组件时，有一些限制。 有关详细信息，请参阅[的 Windows 窗体 Timer 组件的 Interval 属性限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)。  
   
-### 若要使用 Timer 组件以设定间隔运行过程  
+### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用 Timer 组件以设定间隔运行过程  
   
-1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。  请参阅下图中的示例，了解如何以编程方式执行此操作。  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 还支持将组件添加到窗体。  另请参阅[如何：向 Windows 窗体添加无用户界面的控件](http://msdn.microsoft.com/library/becyw7bz%20\(v=vs.110\))。  
+1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。 请参阅下图中的示例，了解如何以编程方式执行此操作。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 还支持将组件添加到窗体。 另请参阅[如何： 添加控件无用户界面到 Windows 窗体](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。  
   
-2.  设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。  此属性确定过程再次运行之前的时间间隔。  
+2.  设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。 此属性确定过程再次运行之前的时间间隔。  
   
     > [!NOTE]
-    >  计时器事件的发生频率越高，处理器用于响应事件的时间越长。  这将会降低整体性能。  时间间隔必须设置为大于所需间隔。  
+    >  计时器事件的发生频率越高，处理器用于响应事件的时间越长。 这将会降低整体性能。 时间间隔必须设置为大于所需间隔。  
   
-3.  在 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序中编写相应代码。  在此事件中编写的代码将以 <xref:System.Windows.Forms.Timer.Interval%2A> 属性中指定的间隔运行。  
+3.  在 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序中编写相应代码。 在此事件中编写的代码将以 <xref:System.Windows.Forms.Timer.Interval%2A> 属性中指定的间隔运行。  
   
-4.  将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true` 以启动计时器。  <xref:System.Windows.Forms.Timer.Tick> 事件将开始发生，进而以设定间隔运行过程。  
+4.  将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true` 以启动计时器。 <xref:System.Windows.Forms.Timer.Tick> 事件将开始发生，进而以设定间隔运行过程。  
   
-5.  在适当时间，将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`以阻止过程再次运行。  将间隔设置为 `0` 不会导致计时器停止。  
+5.  在适当时间，将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`以阻止过程再次运行。 将间隔设置为`0`不会导致计时器停止。  
   
-## 示例  
- 第一个代码示例以一秒的增量跟踪每天的时间。  它使用窗体上的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 组件。  将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 1000（等于 1 秒）。  在 <xref:System.Windows.Forms.Timer.Tick> 事件中，将标签的标题设置为当前时间。  单击按钮时，<xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`，使计时器停止更新标签的标题。  下面的代码示例要求你拥有的窗体具有名为 `Button1` 的 <xref:System.Windows.Forms.Button> 控件、名为 `Timer1` 的 <xref:System.Windows.Forms.Timer> 控件和名为 `Label1` 的 <xref:System.Windows.Forms.Label> 控件。  
+## <a name="example"></a>示例  
+ 第一个代码示例以一秒的增量跟踪每天的时间。 它使用窗体上的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 组件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 1000（等于 1 秒）。 在 <xref:System.Windows.Forms.Timer.Tick> 事件中，将标签的标题设置为当前时间。 单击按钮时，<xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `false`，使计时器停止更新标签的标题。 下面的代码示例要求你拥有的窗体具有<xref:System.Windows.Forms.Button>控件名为`Button1`、<xref:System.Windows.Forms.Timer>控件名为`Timer1`，和一个<xref:System.Windows.Forms.Label>控件名为`Label1`。  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -75,7 +80,6 @@ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.Event
          Timer1.Enabled = True  
       End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -112,7 +116,6 @@ private void Button1_Click(object sender, EventArgs e)
     Timer1.Enabled = true;  
   }  
 }  
-  
 ```  
   
 ```cpp  
@@ -153,11 +156,10 @@ private:
          timer1->Enabled = true;  
       }  
    }  
-  
 ```  
   
-## 示例  
- 第二个代码示例每隔 600 毫秒运行一个过程，直至完成一个循环。  下面的代码示例要求你拥有的窗体具有名为 `Button1` 的 <xref:System.Windows.Forms.Button> 控件、名为 `Timer1` 的 <xref:System.Windows.Forms.Timer> 控件和名为 `Label1` 的 <xref:System.Windows.Forms.Label> 控件。  
+## <a name="example"></a>示例  
+ 第二个代码示例每隔 600 毫秒运行一个过程，直至完成一个循环。 下面的代码示例要求你拥有的窗体具有<xref:System.Windows.Forms.Button>控件名为`Button1`、<xref:System.Windows.Forms.Timer>控件名为`Timer1`，和一个<xref:System.Windows.Forms.Label>控件名为`Label1`。  
   
 ```vb  
 ' This variable will be the loop counter.  
@@ -182,7 +184,6 @@ Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Han
       Label1.Text = "Procedures Run: " & counter.ToString  
    End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -215,7 +216,6 @@ private void timer1_Tick(object sender, System.EventArgs e)
       label1.Text = "Procedures Run: " + counter.ToString();  
       }  
 }  
-  
 ```  
   
 ```cpp  
@@ -252,7 +252,7 @@ private:
    }  
 ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.Timer>   
- [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.Timer>  
+ [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
  [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

@@ -1,39 +1,45 @@
 ---
-title: "如何：使用事件创建翻转效果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "元素的颜色, 更改"
-  - "元素颜色, 更改"
-  - "翻转效果"
+title: "如何：使用事件创建翻转效果"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors of elements [WPF], changing
+- rollover effect [WPF]
+- element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c82d993c31174419793319da74ffa38d122ef203
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用事件创建翻转效果
-本示例演示如何在鼠标指针进入和离开元素所在的区域时更改元素的颜色。  
+# <a name="how-to-create-a-rollover-effect-using-events"></a>如何：使用事件创建翻转效果
+此示例演示如何根据鼠标指针进入和离开元素占用的区域更改元素的颜色。  
   
- 本示例包括一个[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件和一个代码隐藏文件。  
+ 此示例组成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件和代码隐藏文件。  
   
 > [!NOTE]
->  本示例演示了如何使用事件，但建议在样式中使用 <xref:System.Windows.Trigger> 来获得相同的效果。  有关更多信息，请参见[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+>  此示例演示如何使用事件，但获得相同的效果的推荐的方式是使用<xref:System.Windows.Trigger>样式。 有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
-## 示例  
- 下面的 [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] 创建用户界面（它包括围绕在 <xref:System.Windows.Controls.TextBlock> 周围的 <xref:System.Windows.Controls.Border>），并将 <xref:System.Windows.Input.Mouse.MouseEnter> 和 <xref:System.Windows.UIElement.MouseLeave> 事件处理程序附加到 <xref:System.Windows.Controls.Border> 上。  
+## <a name="example"></a>示例  
+ 以下[!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]创建用户界面，其中包括<xref:System.Windows.Controls.Border>围绕<xref:System.Windows.Controls.TextBlock>，并将其附加<xref:System.Windows.Input.Mouse.MouseEnter>和<xref:System.Windows.UIElement.MouseLeave>到事件处理程序<xref:System.Windows.Controls.Border>。  
   
- [!code-xml[mouseenterMouseleave#MouseEnterLeaveSampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml#mouseenterleavesamplexaml)]  
+ [!code-xaml[mouseenterMouseleave#MouseEnterLeaveSampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml#mouseenterleavesamplexaml)]  
   
- 下面的代码隐藏文件创建 <xref:System.Windows.UIElement.MouseEnter> 和 <xref:System.Windows.UIElement.MouseLeave> 事件处理程序。  当鼠标指针进入 <xref:System.Windows.Controls.Border> 时，<xref:System.Windows.Controls.Border> 的背景变成红色。  当鼠标指针离开 <xref:System.Windows.Controls.Border> 后，<xref:System.Windows.Controls.Border> 的背景又变回白色。  
+ 下面的代码隐藏创建<xref:System.Windows.UIElement.MouseEnter>和<xref:System.Windows.UIElement.MouseLeave>事件处理程序。  当鼠标指针进入<xref:System.Windows.Controls.Border>，背景的<xref:System.Windows.Controls.Border>将变为红色。  当鼠标指针离开<xref:System.Windows.Controls.Border>，背景的<xref:System.Windows.Controls.Border>将变回为空白。  
   
  [!code-csharp[mouseenterMouseleave#MouseEnterLeaveSampleEventHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseenterMouseleave/CSharp/Window1.xaml.cs#mouseenterleavesampleeventhandlers)]
  [!code-vb[mouseenterMouseleave#MouseEnterLeaveSampleEventHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseenterMouseleave/VisualBasic/Window1.xaml.vb#mouseenterleavesampleeventhandlers)]

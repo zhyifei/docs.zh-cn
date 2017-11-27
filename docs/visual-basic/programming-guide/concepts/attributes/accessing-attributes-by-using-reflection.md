@@ -1,35 +1,27 @@
 ---
-title: "使用反射 (Visual Basic 中) 访问属性 |Microsoft 文档"
+title: "使用反射 (Visual Basic 中) 访问特性"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4763eccc5d1a6bdf3e89c1c4d825d5ff5c6caa3e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a4397200b5a2aa5f337dd3479b5405c1a9f245a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>使用反射 (Visual Basic 中) 访问特性
-如果没有某种方法检索该信息并对其进行操作的价值很小的将事实，您可以定义自定义属性并将其放置在您的源代码。 通过使用反射，您可以检索的定义是以自定义特性的信息。 主要方法是`GetCustomAttributes`，它返回数组的对象的 source 代码特性的运行时等效项。 此方法具有多个重载的版本。 有关详细信息，请参阅<xref:System.Attribute>。</xref:System.Attribute>  
+你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。 通过使用反射，可以检索通过自定义特性定义的信息。 主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。 此方法有多个重载版本。 有关详细信息，请参阅<xref:System.Attribute>。  
   
- 属性规范，如︰  
+ 特性规范，例如：  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -38,17 +30,17 @@ Class SampleClass
 End Class  
 ```  
   
- 是在概念上等效于此︰  
+ 在概念上等效于此：  
   
 ```vb  
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
 anonymousAuthorObject.version = 1.1  
 ```  
   
- 但是，直到不执行的代码`SampleClass`的特性查询。 调用`GetCustomAttributes`上`SampleClass`导致`Author`对象构造并初始化为更高版本。 如果类具有其他属性，其他属性对象以类似方式构造。 `GetCustomAttributes`然后返回`Author`对象和数组中的任何其他属性对象。 然后，可以循环遍历此数组，确定哪些属性所应用基于每个数组元素的类型，并从属性对象提取信息。  
+ 但是，在为特性查询 `SampleClass` 之前，代码将不会执行。 对 `SampleClass` 调用 `GetCustomAttributes` 会导致按上述方式构造并初始化一个 `Author` 对象。 如果该类具有其他特性，则将以类似方式构造其他特性对象。 然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。 之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。  
   
 ## <a name="example"></a>示例  
- 下面是一个完整的示例。 定义自定义属性、 将其应用于多个实体，并通过反射进行检索。  
+ 此处是一个完整的示例。 定义自定义特性、将其应用于多个实体，并通过反射对其进行检索。  
   
 ```vb  
 ' Multiuse attribute  
@@ -117,10 +109,10 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)   
- [检索存储在特性中的信息](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)   
- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [特性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
+ [检索存储在特性中的信息](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

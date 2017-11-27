@@ -1,28 +1,35 @@
 ---
-title: "&lt;userDefinedType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userDefinedType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0baac8dc6a9899261a490a257dbae0e7eb4d2ced
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;userDefinedType&gt;
-表示一个要包括到服务协定中的用户定义类型 \(UDT\)。  
+# <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
+表示一个要包括到服务协定中的用户定义类型 (UDT)。  
   
-## 语法  
+ \<系统。ServiceModel >  
+\<comContracts >  
+\<comContract >  
+\<userDefinedTypes >  
   
-```  
+## <a name="syntax"></a>语法  
   
+```xml  
 <comContracts>  
   <comContract>  
       <userDefinedTypes>  
@@ -36,35 +43,35 @@ caps.handback.revision: 5
 </comContracts>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
 |特性|描述|  
-|--------|--------|  
-|`name`|一个可选属性，包含提供可读类型名称的字符串。  运行库不使用该属性，但该属性可以帮助读取器区分类型。|  
+|---------------|-----------------|  
+|`name`|一个可选属性，包含提供可读类型名称的字符串。 运行库不使用该属性，但该属性可以帮助读取器区分类型。|  
 |`TypeDefID`|一个 GUID 字符串，标识已注册类型库中的特定 UDT 类型。|  
 |`TypeLibID`|一个 GUID 字符串，标识定义该类型的已注册类型库。|  
 |`TypeLibVersion`|一个字符串，标识定义该类型的类型库版本。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
+|-------------|-----------------|  
 |`userDefinedTypes`|一个 `userDefinedType` 元素集合。|  
   
-## 备注  
- COM\+ 集成运行时通过检查类型库来创建服务。  当 COM\+ 组件包含传递 VARIANT 的方法时，系统将无法确定要在运行时之前传递的实际类型。  因此，当您试图在 VARIANT 内传递用户定义类型 \(UDT\) 时，将由于该类型不是可供序列化的已知类型而失败。  
+## <a name="remarks"></a>备注  
+ COM+ 集成运行时通过检查类型库来创建服务。 当 COM+ 组件包含传递 VARIANT 的方法时，系统将无法确定要在运行时之前传递的实际类型。 因此，当您试图在 VARIANT 内传递用户定义类型 (UDT) 时，将由于该类型不是可供序列化的已知类型而失败。  
   
- 若要避免此问题，可以将 UDT 添加到配置文件，以使 UDT 作为已知类型包括到相应的服务协定中。  为此，必须唯一地标识 UDT 和协定（即使用它的原始 COM 接口）。  
+ 若要避免此问题，可以将 UDT 添加到配置文件，以使 UDT 作为已知类型包括到相应的服务协定中。 为此，必须唯一地标识 UDT 和协定（即使用它的原始 COM 接口）。  
   
- 下面的示例演示将两个特定的 UDT 添加到配置文件的 \<`userDefinedTypes`\> 节，以便达到此目的。  
+ 下面的示例演示将两个特定的 UDT 添加到配置文件的 <`userDefinedTypes`> 节，以便达到此目的。  
   
-```  
+```xml  
 <comContracts>  
   <comContract  
       contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
@@ -94,10 +101,10 @@ caps.handback.revision: 5
   
  在初始化服务时，集成运行库会查找指定的类型，然后将这些类型添加到指定协定的已知类型集合中。  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>   
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>   
- <xref:System.ServiceModel.Configuration.ComUdtElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [与 COM\+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [如何：配置 COM\+ 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
+ <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComUdtElement>  
+ [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [与 COM + 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [如何： 配置 COM + 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -1,51 +1,54 @@
 ---
-title: "如何：为 TileBrush 设置平铺大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TileBrush, 平铺大小"
-  - "TileBrush 的视区属性"
+title: "如何：为 TileBrush 设置平铺大小"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TileBrush [WPF], size of tilepropertys
+- Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 484419c05c3d607212ea6d565777cf49cbfdbc19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：为 TileBrush 设置平铺大小
-下面的示例演示如何为 <xref:System.Windows.Media.TileBrush> 设置图块大小。  默认情况下，<xref:System.Windows.Media.TileBrush> 生成一个可完全填充所绘制区域的图块。  可以通过设置 <xref:System.Windows.Media.TileBrush.Viewport%2A> 和 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 属性来重写此行为。  
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>如何：为 TileBrush 设置平铺大小
+此示例演示如何设置的磁贴大小<xref:System.Windows.Media.TileBrush>。 默认情况下，<xref:System.Windows.Media.TileBrush>生成单个磁贴可完全填充你正在绘画的区域。 可以通过设置重写此行为<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>属性。  
   
- <xref:System.Windows.Media.TileBrush.Viewport%2A> 属性可以为 <xref:System.Windows.Media.TileBrush> 指定图块大小。  默认情况下，<xref:System.Windows.Media.TileBrush.Viewport%2A> 属性值相对于所绘制区域的大小。  为了让 <xref:System.Windows.Media.TileBrush.Viewport%2A> 属性指定绝对图块大小，请将 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 属性设置为 <xref:System.Windows.Media.BrushMappingMode>。  
+ <xref:System.Windows.Media.TileBrush.Viewport%2A>属性指定的磁贴大小<xref:System.Windows.Media.TileBrush>。 默认情况下，值<xref:System.Windows.Media.TileBrush.Viewport%2A>属性是相对于当前所绘制的区域大小。 若要使<xref:System.Windows.Media.TileBrush.Viewport%2A>属性指定一个绝对磁贴大小，大小设置<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>属性<xref:System.Windows.Media.BrushMappingMode.Absolute>。  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.ImageBrush>（<xref:System.Windows.Media.TileBrush> 的一个类型）来绘制带有图块的矩形。  此示例将每个图块图像设置为在长宽方向上分别占输出区域（矩形）的 50%。  因此，该矩形将用图块图像的四个投影来绘制。  
+## <a name="example"></a>示例  
+ 下面的示例使用<xref:System.Windows.Media.ImageBrush>，一种<xref:System.Windows.Media.TileBrush>、 来绘制与磁贴的矩形。 此示例将每个平铺设置为在长宽方向上分别占输出区域（矩形）的 50%。 因此，将用四个投影图像绘制该矩形。  
   
- 下面的插图显示由该示例生成的输出。  
+ 下图显示该示例生成的输出。
   
  ![使用图像画笔平铺的示例](../../../../docs/framework/wpf/graphics-multimedia/media/0.png "0")  
   
  [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]  
   
- 下一个示例创建一个 <xref:System.Windows.Media.ImageBrush>，将它的 <xref:System.Windows.Media.TileBrush.Viewport%2A> 设置为 `0,0,25,25`，将它的 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 设置为 <xref:System.Windows.Media.BrushMappingMode>，并使用它来绘制另一个矩形。  因此，画笔会生成一个宽度为 25 [像素](GTMT)、高度为 25 [像素](GTMT)的图块。  
+ 下一个示例创建<xref:System.Windows.Media.ImageBrush>，设置其<xref:System.Windows.Media.TileBrush.Viewport%2A>到`0,0,25,25`及其<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>到<xref:System.Windows.Media.BrushMappingMode.Absolute>，并使用它来绘制另一个矩形。 因此，画笔会生成一个宽度为 25 像素、高度为 25 像素的平铺。  
   
- 下面的插图显示由该示例生成的输出。  
+ 下图显示该示例生成的输出。  
   
- ![一个平铺的 TileBrush，其视区为 0,0,0.25,0.25](../../../../docs/framework/wpf/graphics-multimedia/media/25x25viewport.png "25x25viewport")  
+ ![视区为 0,0,0.25,0.25 的平铺 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/25x25viewport.png "25x25viewport")  
   
  [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]  
   
- 上面的几个示例摘自一个更大的示例。  有关完整示例，请参见 [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005)（ImageBrush 示例）。  
+ 以上几个示例摘自一个更大的示例。 有关完整的示例，请参阅[ImageBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160005)。  
   
- 尽管此示例使用 <xref:System.Windows.Media.ImageBrush> 类，但是 <xref:System.Windows.Media.TileBrush.Viewport%2A> 和 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 属性对于其他 <xref:System.Windows.Media.TileBrush> 对象（即 <xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush>）的行为方式是相同的。  有关 <xref:System.Windows.Media.ImageBrush> 和其他 <xref:System.Windows.Media.TileBrush> 对象的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ 虽然此示例使用<xref:System.Windows.Media.ImageBrush>类，<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>属性具有相同行为其他<xref:System.Windows.Media.TileBrush>对象，即为<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 有关详细信息<xref:System.Windows.Media.ImageBrush>和其他<xref:System.Windows.Media.TileBrush>对象，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
-## 请参阅  
- <xref:System.Windows.Media.TileBrush>   
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [使用 TileBrush 创建不同的平铺模式](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Media.TileBrush>  
+ [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [使用 TileBrush 创建不同的平铺图案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

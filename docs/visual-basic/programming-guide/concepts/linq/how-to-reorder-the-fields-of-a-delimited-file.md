@@ -1,39 +1,31 @@
 ---
-title: "如何︰ 重新排列带分隔符的文件 (LINQ) (Visual Basic) 字段 |Microsoft 文档"
+title: "如何： 带分隔符的文件 (LINQ) (Visual Basic) 的字段重新排序"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9abb0510ed3944cd80d6658238ef79d64dc0ca27
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f308495a21b671edf03fbd791ef77d668d55388d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何︰ 重新排列带分隔符的文件 (LINQ) (Visual Basic) 字段
-以逗号分隔值 (CSV) 文件是文本文件，通常用于存储表格数据或其他由行和列的表格数据。 通过使用<xref:System.String.Split%2A>方法来分隔字段，它是非常简单查询并通过使用 LINQ 处理 CSV 文件。</xref:System.String.Split%2A> 事实上，使用相同的方法来重新排列的任何结构化文本; 行部分不受限制到 CSV 文件。  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何： 带分隔符的文件 (LINQ) (Visual Basic) 的字段重新排序
+逗号分隔值 (CSV) 文件是一种文本文件，通常用于存储电子表格数据或其他由行和列表示的表格数据。 通过使用 <xref:System.String.Split%2A> 方法分隔字段，可以非常轻松地使用 LINQ 来查询和操作 CSV 文件。 事实上，可以使用此技术来重新排列任何结构化文本行部分；此技术不局限于 CSV 文件。  
   
- 在下面的示例中，假定有三列分别代表学生的"last name，""名字"和"id"。 根据学生的姓氏和名字的字母顺序中的字段。 此查询生成新的序列中的 ID 列显示在最前面，后面组合学生的名字和姓氏的第二个列。 根据 ID 字段，这些行进行重新排序。 结果保存到一个新文件，不修改原始数据。  
+ 在下面的示例中，假设有三列分别代表学生的“姓氏”、“名字”和“ID”。 这些字段基于学生的姓氏按字母顺序排列。 查询生成一个新序列，其中首先出现的是 ID 列，后面的第二列组合了学生的名字和姓氏。 根据 ID 字段重新排列各行。 结果保存到新文件，但不修改原始数据。  
   
 ### <a name="to-create-the-data-file"></a>创建数据文件  
   
-1.  将以下行复制到名为 spreadsheet1.csv 纯文本文件。 将文件保存在项目文件夹中。  
+1.  将以下各行复制到名为 spreadsheet1.csv 的纯文本文件。 将此文件保存到项目文件夹。  
   
     ```  
     Adams,Terry,120  
@@ -94,6 +86,6 @@ End Class
 ## <a name="compiling-the-code"></a>编译代码  
   
 ## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)   
+ [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [如何：从 CSV 文件生成 XML](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

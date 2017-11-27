@@ -1,25 +1,28 @@
 ---
-title: "AppDomainInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AppDomainInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97818cf1fc6fa1c59b8b0eeaab69a73b21360151
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# AppDomainInfo
+# <a name="appdomaininfo"></a>AppDomainInfo
 应用程序域信息  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class AppDomainInfo  
@@ -39,98 +42,98 @@ class AppDomainInfo
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  AppDomainInfo 类未定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  AppDomainInfo 类具有以下属性：  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  数据类型：sint32  
   
  访问类型：只读  
   
  Appdomain 的 ID。  
   
-### IsDefault  
+### <a name="isdefault"></a>IsDefault  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指示该 appdomain 是否为默认 appdomain。  
   
-### LogMalformedMessages  
+### <a name="logmalformedmessages"></a>LogMalformedMessages  
  数据类型：Boolean  
   
- 访问类型：读\/写  
+ 访问类型：读/写  
   
  一个值，指定是否记录格式不正确的消息。  
   
-### LogMessagesAtServiceLevel  
+### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  数据类型：Boolean  
   
- 访问类型：读\/写  
+ 访问类型：读/写  
   
  一个值，指定是否在服务级别跟踪消息（在与加密和传输有关的转换之前）。  
   
-### LogMessagesAtTransportLevel  
+### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  数据类型：Boolean  
   
- 访问类型：读\/写  
+ 访问类型：读/写  
   
  一个值，指定是否在传输级别跟踪消息。  
   
-### MessageLoggingTraceListeners  
+### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
  数据类型：TraceListener 数组  
   
  访问类型：只读  
   
  侦听 System.Wmi.MessageLogging 跟踪源的集合跟踪侦听器。  
   
-### Name  
+### <a name="name"></a>名称  
  数据类型：String  
   
  访问类型：只读  
   
  Appdomain 的名称。  
   
-### PerformanceCounters  
+### <a name="performancecounters"></a>PerformanceCounters  
  数据类型：String  
   
  访问类型：只读  
   
  Appdomain 中的活动性能计数器的范围。  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  数据类型：sint32  
   
  访问类型：只读  
   
  进程 ID。  
   
-### ServiceConfigPath  
+### <a name="serviceconfigpath"></a>ServiceConfigPath  
  数据类型：String  
   
  访问类型：只读  
   
  服务配置的路径。  
   
-### TraceLevel  
+### <a name="tracelevel"></a>TraceLevel  
  数据类型：String  
   
- 访问类型：读\/写  
+ 访问类型：读/写  
   
  System.Wmi 跟踪源的跟踪级别。  
   
-### ServiceModelTraceListeners  
+### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
  数据类型：TraceListener 数组  
   
  访问类型：只读  
   
  一个来自 System.ServiceModel 跟踪源的侦听器的集合。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|MOF|在 Servicemodel.mof 中声明。|  
-|---------|-----------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|
+|MOF|已在 Servicemodel.mof 中声明。|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|

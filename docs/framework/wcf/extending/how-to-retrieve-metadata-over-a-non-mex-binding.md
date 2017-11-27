@@ -1,29 +1,32 @@
 ---
-title: "如何：通过非 MEX 绑定检索元数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：通过非 MEX 绑定检索元数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f214c45ea09c96d5cb77646f31b7c53338761621
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：通过非 MEX 绑定检索元数据
-本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。本示例中的代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：通过非 MEX 绑定检索元数据
+本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 在此示例代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  
   
-### 通过非 MEX 绑定检索元数据  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>通过非 MEX 绑定检索元数据  
   
-1.  确定 MEX 终结点所使用的绑定。对于 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，可以通过访问服务的配置文件来确定 MEX 绑定。在本例中，MEX 绑定在以下服务配置中定义。  
+1.  确定由 MEX 终结点使用的绑定。 对于 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，可以通过访问服务的配置文件来确定 MEX 绑定。 在本例中，MEX 绑定在以下服务配置中定义。  
   
-    ```  
+    ```xml  
     <services>  
         <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
                 behaviorConfiguration="CalculatorServiceBehavior">  
@@ -55,9 +58,9 @@ caps.handback.revision: 10
      </bindings>  
     ```  
   
-2.  在客户端配置文件中，配置同样的自定义绑定。在该配置文件中，客户端还定义了一个 `clientCredentials` 行为以提供证书，用于在请求 MEX 终结点中的元数据时对服务进行身份验证。在使用 Svcutil.exe 通过自定义绑定请求元数据时，应向 Svcutil.exe 的配置文件 \(Svcutil.exe.config\) 中添加 MEX 终结点配置，并且终结点配置的名称应与 MEX 终结点地址的 URI 架构匹配，如下面的代码所示。  
+2.  在客户端配置文件中，配置同样的自定义绑定。 在该配置文件中，客户端还定义了一个 `clientCredentials` 行为以提供证书，用于在请求 MEX 终结点中的元数据时对服务进行身份验证。 在使用 Svcutil.exe 通过自定义绑定请求元数据时，应向 Svcutil.exe 的配置文件 (Svcutil.exe.config) 中添加 MEX 终结点配置，并且终结点配置的名称应与 MEX 终结点地址的 URI 架构匹配，如下面的代码所示。  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <client>  
         <endpoint name="http"  
@@ -90,7 +93,7 @@ caps.handback.revision: 10
     </system.serviceModel>  
     ```  
   
-3.  创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。  
+3.  创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。 有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -128,7 +131,7 @@ caps.handback.revision: 10
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  此时，您拥有服务终结点的集合。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]导入元数据的更多消息，请参见[如何：将元数据导入服务终结点](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5.  此时，您拥有服务终结点的集合。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]导入元数据，请参阅[如何： 导入到服务终结点的元数据](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)

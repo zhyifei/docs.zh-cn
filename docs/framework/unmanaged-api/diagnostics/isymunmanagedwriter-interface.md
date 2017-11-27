@@ -1,0 +1,66 @@
+---
+title: "ISymUnmanagedWriter 接口"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ISymUnmanagedWriter
+api_location: diasymreader.dll
+api_type: COM
+f1_keywords: ISymUnmanagedWriter
+helpviewer_keywords: ISymUnmanagedWriter interface [.NET Framework debugging]
+ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
+topic_type: apiref
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 1e74e625c911f35bdb7c20451b1babd02cdb7658
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter 接口
+表示符号编写器，并提供方法来定义文档、 序列点、 词法作用域和变量。  
+  
+## <a name="methods"></a>方法  
+  
+|方法|描述|  
+|------------|-----------------|  
+|[Abort 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|关闭而不将符号提交到符号存储区的符号编写器。|  
+|[Close 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|将符号提交到符号存储区后关闭符号编写器。|  
+|[CloseMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)|关闭当前方法。 一旦关闭方法，可以在其中定义没有更多的符号。|  
+|[CloseNamespace 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)|关闭最近打开的命名空间。|  
+|[CloseScope 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)|关闭当前词法范围。|  
+|[DefineConstant 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)|定义的常量值的名称。|  
+|[DefineDocument 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definedocument-method.md)|定义源文档。|  
+|[DefineField 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definefield-method.md)|定义一个不在方法内的变量。|  
+|[DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)|定义单个全局变量。|  
+|[DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)|在当前词法范围内定义单个变量。|  
+|[DefineParameter 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineparameter-method.md)|在当前方法中定义的单个参数。|  
+|[DefineSequencePoints 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definesequencepoints-method.md)|在当前方法内定义一组序列点。|  
+|[GetDebugInfo 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md)|返回编译器编写可移植可执行 (PE) 文件头中的调试目录项所需的信息。|  
+|[Initialize 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)|设置元数据发射器接口此编写器将与之相关联，并设置将向其写入调试符号的输出文件名称。|  
+|[Initialize2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)|设置此编写器将与之关联的元数据发射器接口，设置输出文件的名称向其调试符号将写入和设置的程序数据库 (PDB) 文件的最终位置。|  
+|[OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)|打开一个到哪些符号发出信息的方法。|  
+|[OpenNamespace 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)|打开一个新的命名空间。|  
+|[OpenScope 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)|在当前方法中打开新的词法范围。|  
+|[RemapToken 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-remaptoken-method.md)|通知符号编写器元数据标记在发出元数据已被重新映射。|  
+|[SetMethodSourceRange 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setmethodsourcerange-method.md)|指定的真正开始和结束源文件中的方法。|  
+|[SetScopeRange 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md)|定义指定词法范围的偏移量范围。|  
+|[SetSymAttribute 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setsymattribute-method.md)|定义基于其名称的自定义属性。|  
+|[SetUserEntryPoint 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setuserentrypoint-method.md)|指定是为此模块的入口点的用户定义的方法。|  
+|[UsingNamespace 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-usingnamespace-method.md)|指定当前打开的词法范围内，使用给定的完全限定的命名空间名称。|  
+  
+## <a name="requirements"></a>要求  
+ **标头：** CorSym.idl、 CorSym.h  
+  
+## <a name="see-also"></a>另请参阅  
+ [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [ISymUnmanagedWriter2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
+ [ISymUnmanagedWriter3 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

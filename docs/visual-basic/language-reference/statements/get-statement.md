@@ -1,84 +1,81 @@
 ---
-title: "Get 语句 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Get"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Get 关键字"
-  - "Get 语句"
-  - "Get 语句, 语法"
-  - "属性 [Visual Basic], 只读"
-  - "属性过程, Get 语句"
-  - "只读属性"
+title: "Get 语句"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Get
+helpviewer_keywords:
+- Get statement [Visual Basic], syntax
+- Get statement [Visual Basic]
+- properties [Visual Basic], read-only
+- read-only properties
+- Get keyword [Visual Basic]
+- property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Get 语句
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-声明用于检索属性值的 `Get` 属性过程。  
+# <a name="get-statement"></a>Get 语句
+声明`Get`属性过程用于检索属性的值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] Get()  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] Get()  
+    [ statements ]  
 End Get  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
   
-|||  
-|-|-|  
 |术语|定义|  
-|`attributelist`|可选。  请参见[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|在此属性中的至多一个 `Get` 和 `Set` 语句上为可选项。  可以是如下内容之一：<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`statements`|可选。  在调用 `Get` 属性过程时运行的一个或多个语句。|  
-|`End Get`|必选。  终止 `Get` 属性过程的定义。|  
+|---|---|  
+|`attributelist`|可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|在最多一种可选`Get`和`Set`此属性中的语句。 可以是以下各项之一：<br /><br /> -   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`statements`|可选。 运行时的一个或多个语句`Get`调用属性过程。|  
+|`End Get`|必需。 终止的定义`Get`属性过程。|  
   
-## 备注  
- 除非属性被标记为 `WriteOnly`，否则每个属性都必须有一个 `Get` 属性过程。  `Get` 过程用于返回属性的当前值。  
+## <a name="remarks"></a>备注  
+ 每个属性必须具有`Get`属性过程除非该属性被标记为`WriteOnly`。 `Get`过程用于返回属性的当前值。  
   
- 当表达式请求属性的值时，Visual Basic 会自动调用属性的 `Get` 过程。  
+ Visual Basic 将自动调用属性的`Get`过程当表达式请求属性的值。  
   
- 属性声明体只能在 [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md) 和 `End Property` 语句之间包含属性的 `Get` 和 `Set` 过程。  它不能存储除这些过程外的任何内容。  特别地，它不能存储属性的当前值。  必须在属性外存储此值，原因是，如果在以上任一属性过程中存储此值，则另一个属性过程将无法访问它。  常用的方法是将此值存储在 [Private](../../../visual-basic/language-reference/modifiers/private.md) 变量（在与属性相同的级别上声明）中。  必须在要应用 `Get` 过程的属性内部定义该过程。  
+ 属性声明的主体可以包含仅属性的`Get`和`Set`之间过程[属性语句](../../../visual-basic/language-reference/statements/property-statement.md)和`End Property`语句。 无法将存储这些过程之外的任何内容。 具体而言，它不能存储属性的当前值。 必须存储此值超出了该属性，因为如果将其存储在属性过程之一，另一个属性过程无法访问它。 常用方法是存储中的值[私有](../../../visual-basic/language-reference/modifiers/private.md)作为属性的相同级别声明的变量。 必须定义`Get`所适用的属性的内部过程。  
   
- `Get` 过程默认为其包含属性的访问级别，除非您在 `Get` 语句中使用 `accessmodifier`。  
+ `Get`过程默认为其包含的属性的访问级别，除非使用`accessmodifier`中`Get`语句。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   **混合访问级别。**如果定义一个读写属性，则可以根据需要为 `Get` 或 `Set` 过程指定不同的访问级别，但不能同时为两者这样做。  否则，过程访问级别在限制性上必须比属性的访问级别更高。  例如，如果将属性声明为 `Friend`，则可以将 `Get` 过程声明为 `Private`，但不能声明为 `Public`。  
+-   **混合的访问级别。** 如果你正在定义一个读 / 写属性，你可以选择指定不同的访问级别也`Get`或`Set`过程中，但不是两者。 如果执行此操作时，过程访问级别必须比属性访问级别限制性更强。 例如，如果属性声明`Friend`，可以声明`Get`过程`Private`，但不是`Public`。  
   
-     如果要定义 `ReadOnly` 属性，则 `Get` 过程代表整个属性。  不能为 `Get` 声明另一个访问级别，因为这会为属性设置两个访问级别。  
+     如果你正在定义`ReadOnly`属性，`Get`过程表示整个属性。 你不能声明不同的访问级别`Get`，因为这会设置属性的两个访问级别。  
   
--   **返回类型。** [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)可以声明其返回值的数据类型。  `Get` 过程会自动返回该数据类型。  可以指定任何数据类型或枚举、结构、类或接口的名称。  
+-   **返回类型。** [属性语句](../../../visual-basic/language-reference/statements/property-statement.md)可声明它返回的值的数据类型。 `Get`过程会自动返回数据类型。 你可以指定任何数据类型或枚举、 结构、 类或接口的名称。  
   
-     如果 `Property` 语句未指定 `returntype`，则过程将返回 `Object`。  
+     如果`Property`语句不指定`returntype`，该过程返回`Object`。  
   
-## 行为  
+## <a name="behavior"></a>行为  
   
--   **从过程中返回。**当 `Get` 过程返回到调用代码时，执行过程将在请求属性值的语句内继续进行。  
+-   **从过程返回。** 当`Get`过程返回到调用代码时，执行会继续在请求的属性值的语句内。  
   
-     `Get` 属性过程可以使用 [Return 语句](../../../visual-basic/language-reference/statements/return-statement.md) 来返回值，也可以通过将返回值赋给属性名称来返回值。  有关更多信息，请参见 [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md) 中的“返回值”。  
+     `Get`属性过程可以返回值使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或通过将返回值分配给属性名称。 有关详细信息，请参阅"返回值" [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
-     使用 `Exit Property` 和 `Return` 语句可以立即从属性过程中退出。  过程中的任何地方可以出现任意数量的 `Exit Property` 和 `Return` 语句，而且可以混用 `Exit Property` 和 `Return` 语句。  
+     `Exit Property`和`Return`语句从属性过程会导致立即退出。 任意数量的`Exit Property`和`Return`语句可以出现的任何位置在过程中，并可混合`Exit Property`和`Return`语句。  
   
--   **返回值。**若要从 `Get` 过程返回某个值，您可以将该值赋给属性名称，或者将其包含在 [Return 语句](../../../visual-basic/language-reference/statements/return-statement.md) 语句中。  `Return` 语句将同时分配 `Get` 过程返回值并退出过程。  
+-   **返回值。** 返回一个介于`Get`过程中，您可以将值分配到属性名称或将其包含在[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`语句将同时分配`Get`过程返回值并退出该过程。  
   
-     如果使用 `Exit Property` 而未将值赋给属性名称，`Get` 过程将返回属性数据类型的默认值。  有关更多信息，请参见 [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md) 中的“返回值”。  
+     如果你使用`Exit Property`而不将值分配到属性名称，`Get`过程返回该属性的数据类型的默认值。 有关详细信息，请参阅"返回值" [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
-     下面的示例阐释了只读属性 `quoteForTheDay` 返回保存在私有变量 `quoteValue` 中的值的两种方式。  
+     下面的示例演示两种方法的只读属性`quoteForTheDay`可以返回的私有变量中保存的值`quoteValue`。  
   
      [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_1.vb)]  
   
@@ -86,14 +83,14 @@ End Get
   
      [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_3.vb)]  
   
-## 示例  
- 下面的示例使用 `Get` 语句返回属性的值。  
+## <a name="example"></a>示例  
+ 下面的示例使用`Get`语句以返回属性的值。  
   
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
-## 请参阅  
- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  [演练：定义类](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

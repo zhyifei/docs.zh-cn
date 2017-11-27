@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -19,18 +14,17 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Internet 协议版本 6
+# <a name="internet-protocol-version-6"></a>Internet 协议版本 6
 Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件。 IPv6 旨在解决当前版本的 Internet 协议套件（称作 IPv4）存在的许多问题，包括地址消耗、安全性、自动配置和扩展性等问题。 IPv6 扩展了 Internet 的功能以启用新型应用程序，包括对等和移动应用程序。 以下是当前 IPv4 协议的主要问题：  
   
 -   地址空间快速消耗。  
@@ -59,7 +53,7 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
   
  有关详细信息，请参阅 [IPv6 寻址](../../../docs/framework/network-programming/ipv6-addressing.md)、[IPv6 路由](../../../docs/framework/network-programming/ipv6-routing.md)、[IPv6 自动配置](../../../docs/framework/network-programming/ipv6-auto-configuration.md)、[启用和禁用 IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) 以及[如何：修改计算机配置文件以启用 IPv6 支持](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
-## 参考资料  
+## <a name="references"></a>参考资料  
  以下是可以在 Internet 工程任务组站点（[http://www.ietf.org](http://www.ietf.org/)）找到的精选 RFC 文档：  
   
 -   RFC 1287，面向未来的 Internet 体系结构。  
@@ -72,8 +66,7 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
   
  还可以在 [Technet 上的 IPv6 区域](http://go.microsoft.com/fwlink/?LinkID=179658)中找到 IPv6 相关信息。  
   
-## 另请参阅  
- [IPv6 套接字示例](http://go.microsoft.com/fwlink/?LinkID=179568)   
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>另请参阅  
+ [IPv6 套接字示例](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [套接字](../../../docs/framework/network-programming/sockets.md)
-

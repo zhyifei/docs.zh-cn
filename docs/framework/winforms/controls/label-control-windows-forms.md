@@ -1,47 +1,48 @@
 ---
-title: "Label 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Label 控件 [Windows 窗体]"
-  - "标签"
-  - "LinkLabel 控件 [Windows 窗体]"
+title: "Label 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Label control [Windows Forms]
+- labels
+- LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 90a870c71bc7e5d853049d363c27a29d00be3f6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Label 控件（Windows 窗体）
+# <a name="label-control-windows-forms"></a>Label 控件（Windows 窗体）
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripLabel> 控件替换了 <xref:System.Windows.Forms.Label> 控件并向其中添加了功能。  <xref:System.Windows.Forms.ToolStripLabel> 可以与如 <xref:System.Windows.Forms.ToolStripDropDown> 的其他新控件一起使用。  然而，您可以选择保留 <xref:System.Windows.Forms.Label> 控件以备向后兼容和供将来使用。  
+>  <xref:System.Windows.Forms.ToolStripLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.Label>控件。 你可以使用<xref:System.Windows.Forms.ToolStripLabel>与其他新控件，如<xref:System.Windows.Forms.ToolStripDropDown>。 但是，<xref:System.Windows.Forms.Label>控件将保留向后兼容性和将来使用，如果你选择。  
   
- Windows 窗体 <xref:System.Windows.Forms.Label> 控件用于显示用户不能编辑的文本或图像。  它们用于标识窗体上的对象（例如，描述单击某控件时该控件所进行的操作）或显示相应信息以响应应用程序中的运行时事件或进程。  因为 <xref:System.Windows.Forms.Label> 控件不能接收焦点，所以也可以用来为其他控件创建访问键。  
+ Windows 窗体<xref:System.Windows.Forms.Label>控件用于显示文本或图像的用户无法编辑。 它们用于标识窗体上的对象-哪些某个控件的说明进行的操作如果单击，例如，或以响应运行时事件或应用程序中的过程中显示信息。 因为<xref:System.Windows.Forms.Label>控件不能接收焦点，所以也可以用来创建其他控件的访问键。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [Label 控件概述](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+ 说明此控件的本质及其主要功能和属性。  
   
  [如何：使用 Windows 窗体 Label 控件创建访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
- 描述如何使用标签定义另一个控件的访问键。  
+ 描述如何使用标签来定义另一个控件的访问密钥。  
   
- [如何：调整 Windows 窗体标签控件大小以适应其内容](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- 解释如何调整标签 \(Label\) 控件的大小以适应其标题。  
+ [如何：重设 Windows 窗体 Label 控件大小以适应其内容](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ 解释如何调整其标题的标签控件的大小。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Label>  
- 描述该类并提供指向其所有成员的链接。  
+ 对此类进行描述，并提供指向其所有成员的链接。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+ 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。

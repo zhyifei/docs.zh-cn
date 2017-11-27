@@ -1,32 +1,36 @@
 ---
-title: "在控制台应用程序中轮询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在控制台应用程序中轮询"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在控制台应用程序中轮询
-ADO.NET 中的异步操作使您可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。  但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。  在这种情况下，可以轮询异步操作，确定操作是否已完成。  
+# <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
+ADO.NET 中的异步操作使你可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。 但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。 在这种情况下，可以轮询异步操作，确定操作是否已完成。  
   
  可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性确定操作是否已完成。  
   
-## 示例  
- 以下控制台应用程序更新 **AdventureWorks** 示例数据库中的数据，异步完成其任务。  为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。  通常情况下，您不会试图使命令运行速度更慢，但是在这种情况下，这样做可以更容易演示异步行为。  
+## <a name="example"></a>示例  
+ 以下控制台应用程序更新中的数据**AdventureWorks**示例数据库，以异步方式执行其工作。 为了模拟长时间运行的进程，此示例在命令文本中插入一个 WAITFOR 语句。 通常情况下，您不会试图使命令运行速度更慢，但是在这种情况下，这样做可以更容易演示异步行为。  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## 请参阅  
- [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
+## <a name="see-also"></a>另请参阅  
+ [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

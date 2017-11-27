@@ -1,25 +1,28 @@
 ---
-title: "ClientCredentials | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ClientCredentials
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 68a2fa36c8a4fa1fde3ca8d8aaf1898060ea972f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ClientCredentials
+# <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class ClientCredentials : Behavior  
@@ -35,73 +38,73 @@ class ClientCredentials : Behavior
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  ClientCredentials 类未定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  ClientCredentials 类具有以下属性：  
   
-### ClientCertificate  
+### <a name="clientcertificate"></a>ClientCertificate  
  数据类型：String  
   
  访问类型：只读  
   
  客户端用来向服务验证身份的 X.509 证书。  
   
-### HttpDigest  
+### <a name="httpdigest"></a>HttpDigest  
  数据类型：String  
   
  访问类型：只读  
   
  当前 Http Digest 凭据。  
   
-### IssuedToken  
+### <a name="issuedtoken"></a>IssuedToken  
  数据类型：String  
   
  访问类型：只读  
   
  用于联系本地安全令牌服务的终结点地址和绑定。  
   
-### Peer  
+### <a name="peer"></a>对等  
  数据类型：String  
   
  访问类型：只读  
   
  对等节点用来向网格中的其他节点验证其自身身份的凭据。  
   
-### ServiceCertificate  
+### <a name="servicecertificate"></a>ServiceCertificate  
  数据类型：String  
   
  访问类型：只读  
   
  服务的 X.509 证书。  
   
-### SupportInteractive  
+### <a name="supportinteractive"></a>SupportInteractive  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个布尔值，指定凭据是否支持交互式协商。  
   
-### UserName  
+### <a name="username"></a>UserName  
  数据类型：String  
   
  访问类型：只读  
   
  客户端用来向服务验证其自身身份的用户名和密码。  
   
-### Windows  
+### <a name="windows"></a>Windows  
  数据类型：String  
   
  访问类型：只读  
   
  客户端用来向服务验证其自身身份的 Windows 凭据。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|MOF|在 Servicemodel.mof 中声明。|  
-|---------|-----------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|MOF|已在 Servicemodel.mof 中声明。|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Description.ClientCredentials>

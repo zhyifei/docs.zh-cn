@@ -1,33 +1,36 @@
 ---
-title: "路由 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "路由 [WCF]"
-  - "WCF [WCF], 路由"
-  - "Windows Communication Foundation [WCF], 路由"
+title: "路由"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- routing [WCF]
+- WCF [WCF], routing
+- Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 路由
-本节中的主题涵盖路由服务。  路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  
+# <a name="routing"></a>路由
+本节中的主题涵盖路由服务。 路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [路由服务](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  提供路由服务功能的概述。  
   
- [Routing Service](http://msdn.microsoft.com/zh-cn/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [路由服务](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  描述路由服务的功能。  
   
  [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

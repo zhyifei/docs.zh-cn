@@ -1,73 +1,72 @@
 ---
-title: "如何：控制变量的范围 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "已声明的元素, 范围"
-  - "已声明的元素, 可见性"
-  - "范围, 已声明的元素"
-  - "范围, 变量"
-  - "范围, Visual Basic"
-  - "变量 [Visual Basic], 范围"
-  - "变量 [Visual Basic], 可见性"
-  - "可见性, 已声明的元素"
-  - "可见性, 变量"
+title: "如何：控制变量的范围 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- variables [Visual Basic], visibility
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], variables
+- scope [Visual Basic], Visual Basic
+- declared elements [Visual Basic], visibility
+- visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7284d344e3bf0fdd0f900f2a820d6c8db4a4bf74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：控制变量的范围 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-通常，在声明变量的整个区域内，变量都在*“范围”*内，或对于引用是可见的。  在某些情况下，变量的*“访问级别”*可影响其范围。  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>如何：控制变量的范围 (Visual Basic)
+通常情况下，变量位于*作用域*，或作为参考，整个声明它的区域可见。 在某些情况下，该变量的*访问级别*可影响其范围。  
   
- 有关更多信息，请参见 [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
+ 有关详细信息，请参阅[在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
   
-## 块级别或过程级别的范围  
+## <a name="scope-at-block-or-procedure-level"></a>在块或过程级别的作用域  
   
-#### 使变量仅在块内可见  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>若要使变量仅在块内可见  
   
--   将变量的 [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md) 放置在块的起始和终止声明语句之间，例如在 `For` 循环的 `For` 和 `Next` 语句之间。  
+-   位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)变量之间的起始和终止声明语句的该块中，例如之间`For`和`Next`的语句`For`循环。  
   
-     该变量只能在块内引用。  
+     你可以引用该变量只能在块中。  
   
-#### 使变量仅在过程内可见  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>若要使变量仅在过程内可见  
   
--   将变量的 `Dim` 语句放置在过程内部，所有块（如 `With`...`End With` 块）的外部。  
+-   位置`Dim`变量过程中但在任何块外部语句 (如`With`...`End With`块)。  
   
-     该变量只能在该过程（包括过程内包含的所有块）内引用。  
+     你可以引用只能从在过程中，包括在该过程中包含任何块内的变量。  
   
-## 模块级别或命名空间级别上的范围  
- 为方便起见，单个术语*“模块级别”*同等地应用于模块、类和结构。  模块级别变量的访问级别确定其范围。  包含模块、类或结构的命名空间也会影响范围。  
+## <a name="scope-at-module-or-namespace-level"></a>在模块或 Namespace 级别的作用域  
+ 为方便起见，单个字词*模块级别*同样适用于模块、 类和结构。 模块级变量的访问级别确定其作用域。 包含模块、 类或结构的命名空间也会影响范围。  
   
-#### 使变量在整个模块、类或结构内可见  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>若要使变量在整个模块、 类或结构可见  
   
-1.  将变量的 `Dim` 语句放置在模块、类或结构的内部，所有过程的外部。  
+1.  位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
   
-2.  将 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 关键字包含在 `Dim` 语句中。  
+2.  包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。  
   
-3.  从模块、类或结构内部的任何位置都可以引用该变量，但是不能从外部引用。  
+3.  您可以参考内任意位置模块、 类或结构，但不是能从变量之外。  
   
-#### 使变量在整个命名空间内可见  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>若要使变量在一个命名空间整个可见  
   
-1.  将变量的 `Dim` 语句放置在模块、类或结构的内部，所有过程的外部。  
+1.  位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
   
-2.  将 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 或 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 关键字包含在 `Dim` 语句中。  
+2.  包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。  
   
-3.  从包含该模块、类或结构的命名空间中的任何位置都可以引用该变量。  
+3.  你可以引用的变量从任意位置包含模块、 类或结构的命名空间中。  
   
-## 示例  
- 下面的示例在模块级别声明一个变量，并限制其可见性，只有模块中的代码才能访问。  
+## <a name="example"></a>示例  
+ 下面的示例声明了一个在模块级别的变量，并限制到模块中的代码其可见性。  
   
 ```  
 Module demonstrateScope  
@@ -81,24 +80,24 @@ Module demonstrateScope
 End Module  
 ```  
   
- 在前面的示例中，在模块 `demonstrateScope` 中定义的所有过程都可以引用 `String` 变量 `strMsg`。  调用 `usePrivateVariable` 过程时，在对话框中显示字符串变量 `strMsg` 的内容。  
+ 在前面的示例中，在模块中定义的所有过程`demonstrateScope`可以指`String`变量`strMsg`。 当`usePrivateVariable`调用过程时，它将显示的字符串变量的内容`strMsg`在对话框中。  
   
- 对上述示例进行如下更改后，字符串变量 `strMsg` 可由它的声明命名空间内任意位置的代码引用。  
+ 与前面的示例中，字符串变量到以下内容有变更`strMsg`可以通过其声明的命名空间中的任意位置的代码引用。  
   
 ```  
 Public strMsg As String  
 ```  
   
-## 可靠编程  
- 变量的范围越窄，引用另一个同名变量时不小心引用到该变量的机会就越少。  也可以将引用匹配的问题减至最少。  
+## <a name="robust-programming"></a>可靠编程  
+ 变量中，你有针对意外引用它来替换另一个变量具有相同名称的可能性更小的范围越窄。 你还可以尽量减少引用匹配的问题。  
   
-## .NET Framework 安全性  
- 变量的范围越窄，恶意代码非正当使用该变量的机会就越少。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 变量的范围越窄，它的使用变量越小的恶意代码可以不正确的机会。  
   
-## 请参阅  
- [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [在 Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
  [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -1,23 +1,26 @@
 ---
-title: "自定义多路分解器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义多路分解器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: 41
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7c74648a249ec833f2b0fc8b8f5eea9247dc364
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 自定义多路分解器
-本示例演示如何将 MSMQ 消息头映射到不同服务操作，以便使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务不再像 [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 和 [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 示例中那样限于使用一个服务操作。  
+# <a name="custom-demux"></a>自定义多路分解器
+此示例演示如何将 MSMQ 消息头映射到不同服务操作，以便[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>并不仅限于使用一个服务操作，如中所示[到消息队列Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
   
  本示例中的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。  
   
@@ -37,7 +40,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- MSMQ 消息没有 Action 标头。  无法自动将不同的 MSMQ 消息映射到操作协定。  所以只能有一个操作协定。  为了克服此限制，服务实现 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 接口的 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法。  通过 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法，服务可以将给定的消息头映射到特定服务操作。  在本示例中，将消息的标签标头映射到服务操作。  操作协定的 `Name` 参数确定必须为给定的消息标签调度哪个服务操作。  例如，如果消息的标签标头包含“SubmitPurchaseOrder”，则调用“SubmitPurchaseOrder”服务操作。  
+ MSMQ 消息没有 Action 标头。 无法自动将不同的 MSMQ 消息映射到操作协定。 所以只能有一个操作协定。 为了克服此限制，服务实现 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 接口的 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 方法。 通过 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法，服务可以将给定的消息头映射到特定服务操作。 在本示例中，将消息的标签标头映射到服务操作。 操作协定的 `Name` 参数确定必须为给定的消息标签调度哪个服务操作。 例如，如果消息的标签标头包含“SubmitPurchaseOrder”，则调用“SubmitPurchaseOrder”服务操作。  
   
 ```  
 public class OperationSelector : IDispatchOperationSelector  
@@ -50,7 +53,7 @@ public class OperationSelector : IDispatchOperationSelector
 }  
 ```  
   
- 服务必须实现 <xref:System.ServiceModel.Description.IContractBehavior> 接口的 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 方法，如下面的示例代码所示。  这会将自定义 `OperationSelector` 应用于服务框架调度运行时。  
+ 服务必须实现 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 接口的 <xref:System.ServiceModel.Description.IContractBehavior> 方法，如下面的示例代码所示。 这会将自定义 `OperationSelector` 应用于服务框架调度运行时。  
   
 ```  
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
@@ -59,7 +62,7 @@ void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, Se
 }  
 ```  
   
- 在到达 OperationSelector 之前，消息必须通过调度程序的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。  默认情况下，如果在由服务实现的任何协定上找不到消息操作，则会拒绝该消息。  为了避免这种阻碍的发生，我们实现了一个名为 `MatchAllFilterBehavior` 的 <xref:System.ServiceModel.Description.IEndpointBehavior>，它通过应用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 允许任何消息通过 `ContractFilter`，如下所示。  
+ 在到达 OperationSelector 之前，消息必须通过调度程序的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。 默认情况下，如果在由服务实现的任何协定上找不到消息操作，则会拒绝该消息。 为了避免这种阻碍的发生，我们实现了一个名为 <xref:System.ServiceModel.Description.IEndpointBehavior> 的 `MatchAllFilterBehavior`，它通过应用 `ContractFilter` 允许任何消息通过 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，如下所示。  
   
 ```  
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
@@ -68,7 +71,7 @@ public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispa
 }  
 ```  
   
- 当服务接收到消息时，会使用标签标头提供的信息调度相应的服务操作。  消息正文反序列化为 `PurchaseOrder` 对象，如下面的示例代码所示。  
+ 当服务接收到消息时，会使用标签标头提供的信息调度相应的服务操作。 消息正文反序列化为 `PurchaseOrder` 对象，如下面的示例代码所示。  
   
 ```  
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -81,7 +84,7 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
 }  
 ```  
   
- 服务是自承载服务。  使用 MSMQ 时，必须提前创建所使用的队列。  可以手动或通过代码完成此操作。  在本示例中，服务包含用以检查队列是否存在的代码，并在队列不存在时创建该队列。  从配置文件中读取队列名称。  
+ 服务是自承载服务。 使用 MSMQ 时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在本示例中，服务包含用以检查队列是否存在的代码，并在队列不存在时创建该队列。 从配置文件中读取队列名称。  
   
 ```  
 public static void Main()  
@@ -116,18 +119,17 @@ public static void Main()
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。  
   
 > [!NOTE]
->  队列名称为本地计算机使用圆点 \(.\)，并在其路径中使用反斜杠分隔符。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。  方案后面是根据 MSMQ 格式名寻址指南正确格式化的队列地址。  
+>  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点地址指定 msmq.formatname 方案，并为本地计算机使用 localhost。 方案后面是根据 MSMQ 格式名寻址指南正确格式化的队列地址。  
   
-```  
+```xml  
 <appSettings>  
     <!-- Use appSetting to configure the MSMQ queue name. -->  
     <add key="queueName" value=".\private$\Orders" />  
 </appSettings>  
-  
 ```  
   
 > [!NOTE]
->  此示例要求安装[消息队列](http://go.microsoft.com/fwlink/?LinkId=95143)（可能为英文网页）。  
+>  此示例需要安装[消息队列](http://go.microsoft.com/fwlink/?LinkId=95143)。  
   
  启动服务并运行客户端。  
   
@@ -160,31 +162,31 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已经执行了[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  如果先运行服务，则它将检查以确保队列存在。  如果队列不存在，则服务将创建一个队列。  可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。  执行下面的步骤来在 Windows 2008 中创建队列。  
+2.  如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
   
     1.  在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。  
   
-    2.  展开**“功能”**选项卡。  
+    2.  展开**功能**选项卡。  
   
-    3.  右击**“私有消息队列”**，然后选择**“新建”**和**“专用队列”**。  
+    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
   
-    4.  选中**“事务性”**框。  
+    4.  检查**事务**框。  
   
-    5.  输入 `ServiceModelSamplesTransacted` 作为新队列的名称。  
+    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。  
   
-3.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-### 跨计算机运行示例  
+### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
-1.  将 \\service\\bin\\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。  
+1.  将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。  
   
-2.  将 \\client\\bin\\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+2.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
 3.  在 Client.exe.config 文件中，更改 orderQueueName 以指定服务计算机名称，而不是使用“.”。  
   
@@ -193,14 +195,14 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 5.  在客户端计算机上，在命令提示符下启动 Client.exe。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## 请参阅  
- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
- [消息队列 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=95143)
+## <a name="see-also"></a>另请参阅  
+ [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [消息队列](http://go.microsoft.com/fwlink/?LinkId=95143)

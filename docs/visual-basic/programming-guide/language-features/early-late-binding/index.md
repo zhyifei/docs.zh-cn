@@ -1,50 +1,32 @@
 ---
 title: "早期绑定和后期绑定 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- early binding
+- early binding [Visual Basic]
 - objects [Visual Basic], late-bound
 - objects [Visual Basic], early-bound
 - objects [Visual Basic], late bound
-- early binding, Visual Basic compiler
-- binding, late and early
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
 - objects [Visual Basic], early bound
 - Visual Basic compiler, early and late binding
-- late binding
-- late binding, Visual Basic compiler
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: aceffe59fb6043b3089621b9a3f95b0425f9a522
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="early-and-late-binding-visual-basic"></a>早期绑定和后期绑定 (Visual Basic)
 在对象被分配给对象变量时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器会执行 `binding` 过程。 如果对象被分配给声明为特定对象类型的变量，就是*早期绑定*对象。 借助早期绑定对象，编译器可以在应用程序执行前分配内存并执行其他优化。 例如，下面的代码片段将变量声明为类型 <xref:System.IO.FileStream>：  
@@ -64,7 +46,6 @@ ms.lasthandoff: 07/28/2017
 >  晚期绑定只能用于访问声明为 `Public` 的类型成员。 访问声明为 `Friend` 或 `Protected Friend` 的成员会导致生成运行时错误。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
- [对象生存期：如何创建和销毁对象](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
+ <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>  
+ [对象生存期：如何创建和销毁对象](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
  [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-

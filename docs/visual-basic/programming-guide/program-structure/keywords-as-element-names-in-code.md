@@ -1,45 +1,44 @@
 ---
-title: "代码中用作元素名称的关键字 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "元素名称, 在代码中"
-  - "关键字 [Visual Basic], 在代码中"
-  - "名称冲突"
-  - "Visual Basic 代码, 命名规则"
+title: "代码中用作元素名称的关键字 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Visual Basic code, naming conventions
+- keywords [Visual Basic], in code
+- name conflicts [Visual Basic]
+- element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f410a0eaac0dcc034d406a89ed1d01a8f228a583
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 代码中用作元素名称的关键字 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-任何程序元素（如变量、类或成员）都可以将相同的名称当作限制性关键字。  例如，可以创建一个名为 `Loop` 的变量。  但是，若要引用这个变量（其名称与限制性关键字 `Loop` 相同）的版本，必须在该变量的前面添加完全限定字符串或将该变量括在方括号 \(`[ ]`\) 中，如下面的示例所示。  
+# <a name="keywords-as-element-names-in-code-visual-basic"></a>代码中用作元素名称的关键字 (Visual Basic)
+任何程序元素-例如变量、 类或成员-可以具有相同的名称与受限制的关键字。 例如，可以创建一个名为变量`Loop`。 但是，来指代你版-它具有与同名的受限`Loop`关键字-必须在它前面加上一个完全限定字符串，或将它括在方括号 (`[ ]`)，如下面的示例所示。  
   
  [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
- 如果不执行上述任何一种操作，则 Visual Basic 假设使用的是内部 `Loop` 关键字而产生错误，如下面的示例所示：  
+ 如果你不执行其中一种，则 Visual Basic 假设的内部函数的使用`Loop`关键字，并生成错误，如以下示例所示：  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- 在引用窗体和控件，以及在声明变量或以与限制性关键字相同的名称定义过程时可以使用方括号。  人们很容易忘记对名称进行限制或加方括号，因而导致代码错误并使其难以阅读。  有鉴于此，建议您不要将限制性关键字用作程序元素的名称。  可是，如果将来的 Visual Basic 版本定义了与现有窗体或控件名冲突的新关键字，则在更新代码以适应新版本时可以使用该技术。  
+ 在引用窗体和控件，以及时，可以使用方括号声明一个变量或与受限制的关键字定义具有相同名称的过程。 将很容易忘记限定名称或包含方括号，因此将错误引入到你的代码并导致更难以读取。 为此，我们建议你不要将受限制的关键字用作的程序元素的名称。 但是，如果将来版本的 Visual Basic 定义了一个新的关键字冲突，与现有窗体或控件名称，然后你可以使用此方法更新你的代码时要使用新版本。  
   
 > [!NOTE]
->  程序也可以加入其他引用程序集提供的元素名。  如果这些名称与限制性关键字冲突，则在其前后加上方括号会导致 Visual Basic 将它们解释为您定义的元素。  
+>  程序还可能包括由其他引用的程序集的元素名称。 如果这些名称与受限制的关键字冲突，然后加上方括号围绕它们会导致 Visual Basic 将解释为您定义的元素。  
   
-## 请参阅  
- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)

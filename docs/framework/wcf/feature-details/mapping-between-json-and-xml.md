@@ -1,41 +1,44 @@
 ---
-title: "JSON 和 XML 之间的映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "JSON 和 XML 之间的映射"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8bcc8f178f76c536b189058210a586d0d37a1834
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# JSON 和 XML 之间的映射
-读取器和编写器生成的<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 JSON 内容时也使用读取器和编写器，此工厂生成发送或接收的[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]使用的应用程序<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。  
+# <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之间的映射
+<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 生成的读取器和编写器通过 JavaScript 对象表示法 (JSON) 内容提供 XML API。 JSON 使用 JavaScript 的对象文字子集对数据进行编码。 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序使用 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> 或 <xref:System.ServiceModel.WebHttpBinding> 发送或接收 JSON 内容时，也使用此工厂生成的读取器和编写器。  
   
  使用 JSON 内容进行初始化时，JSON 读取器的行为方式与文本 XML 读取器通过 XML 实例执行的方式相同。 对文本 XML 读取器的调用序列生成某个 XML 实例时，JSON 编写器写出 JSON 内容。 本主题中描述此 XML 实例和 JSON 内容之间的映射以供在高级方案中使用。  
   
  在内部，由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 处理时，JSON 表示为 XML infoset。 通常，无须关注此内部表示，因为该映射仅仅是逻辑映射：JSON 通常并不物理转换为内存中的 XML 或从 XML 转换为 JSON。 该映射意味着 XML API 用于访问 JSON 内容。  
   
- 当[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 JSON 时，通常的方案是<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>由自动插入<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>行为，或由<xref:System.ServiceModel.Description.WebHttpBehavior>行为在适当的时候。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>了解 JSON 和 XML infoset 之间的映射和行为就像它直接处理 json。 (可以使用<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>与任何 XML 读取器或编写器，并了解 XML 符合下面的映射。)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 JSON 时，通常的方案是在适当时由 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 行为或 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 行为自动插入 <xref:System.ServiceModel.Description.WebHttpBehavior>。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML infoset 之间的映射，其行为就像它直接处理 JSON 那样。 （通过了解 XML 符合下面的映射，可以将 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 与任何 XML 读取器或编写器一起使用。）  
   
- 在高级方案中，可能需要直接访问下面的映射。 当您想要序列化和反序列化 JSON 自定义方式，而不依赖于时，会出现这些情况<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，或在处理时<xref:System.ServiceModel.Channels.Message>直接为包含 JSON 消息的类型。 JSON-XML 映射也用于消息日志记录。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用消息日志记录功能时，按照下一节中描述的映射，将 JSON 消息记录为 XML。  
+ 在高级方案中，可能需要直接访问下面的映射。 希望以自定义方式序列化和反序列化 JSON 而不依赖于 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 时，或者直接为包含 JSON 的消息处理 <xref:System.ServiceModel.Channels.Message> 类型时，会出现这些方案。 JSON-XML 映射也用于消息日志记录。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用消息日志记录功能时，按照下一节中描述的映射，将 JSON 消息记录为 XML。  
   
  为阐明映射的概念，下面的示例采用一个 JSON 文档。  
   
-```  
+```json  
 {"product":"pencil","price":12}  
 ```  
   
- 若要读取此 JSON 文档，使用前面提到的读取器之一，请使用相同的序列<xref:System.Xml.XmlDictionaryReader>调用，就像要阅读下面的 XML 文档。  
+ 若要使用前面提到的读取器之一读取此 JSON 文档，请使用与读取以下 XML 文档所用相同的 <xref:System.Xml.XmlDictionaryReader> 调用序列。  
   
-```  
+```xml  
 <root type="object">  
     <product type="string">pencil</product>  
     <price type="number">12</price>  
@@ -45,7 +48,7 @@ caps.handback.revision: 10
  此外，如果示例中的 JSON 消息由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 接收并记录，则在前面的日志中会看到 XML 片段。  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON 和 XML Infoset 之间的映射  
- 正式情况下，映射是 JSON 之间中所述[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) （除非在某些限制宽松和某些添加其他限制） 和 XML 信息集 （以及不是文本 XML） 中所述[XML 信息集](http://go.microsoft.com/fwlink/?LinkId=98809)。 请参阅本主题有关的定义*信息项*和 [方括号] 中的字段。  
+ 准确地讲，映射是之间 JSON 中所述[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) （除非包含某些限制宽松和某些添加其他限制） 和 XML 信息集 （以及不文本 XML） 中所述[XML 信息设置](http://go.microsoft.com/fwlink/?LinkId=98809)。 请参阅本主题的定义*信息项*和 [方括号] 中的字段。  
   
  空 JSON 文档映射到空 XML 文档，而空 XML 文档映射到空 JSON 文档。 在 XML 到 JSON 的映射上，文档之后不允许有前导空白和尾随空白。  
   
@@ -61,7 +64,7 @@ caps.handback.revision: 10
   
  `<root type="number">42</root>`  
   
- 都具有到 JSON 的映射。 `root`1> 元素是根 JSON 元素，这两种情况。  
+ 都具有到 JSON 的映射。 <`root`> 元素是两种情况下的根 JSON 元素。  
   
  此外，在使用 DII 的情况下，应该考虑以下内容：  
   
@@ -71,7 +74,7 @@ caps.handback.revision: 10
   
 -   [子级] 列表不包含 DTD 信息项。  
   
--   [子级] 列表不包含个人信息 (PI) 信息项（不将 \<?xml…> 声明视为 PI 信息项）  
+-   [子级] 列表不包含个人信息 (PI) 信息项 ( \<？ xml … > 声明不被视为 PI 信息项)  
   
 -   [符号] 集为空。  
   
@@ -153,12 +156,12 @@ caps.handback.revision: 10
   
 |`JSON Type Attribute` 的 AII 的 [正常化值]|对应 EII 的已允许 [子级]|映射到 JSON|  
 |---------------------------------------------------------|---------------------------------------------------|---------------------|  
-|`string`（或缺少 JSON 类型 AII）<br /><br /> `string` 与缺少 JSON 类型 AII 相同，使 `string` 成为默认值。<br /><br /> 因此，`<root> string1</root>` 映射到 JSON `string`“string1”。|0 个或多个 Cii|JSON `string`（JSON RFC，第 2.5 节）。 每个 `char` 是对应于来自 CII 的 [字符代码] 的字符。 如果没有 CII，则它映射到空 JSON `string`。<br /><br /> 示例：下面的元素映射到 JSON 片段：<br /><br /> `<root type="string">42</root>`<br /><br /> JSON 片段是“42”。<br /><br /> 在 XML 到 JSON 的映射上，必须转义的字符映射到转义符，所有其他字符都映射到未转义的字符。 "/"字符是特殊字符 – 即使它不一定要经过转义 (写出为"\\/")。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON 片段是" \\"da\\/ta\\""。<br /><br /> 在 JSON 到 XML 的映射上，任何转义符和未转义的字符都正确映射到对应的 [字符代码]。<br /><br /> 示例：JSON 片段“\u0041BC”映射到下面的 XML 元素。<br /><br /> `<root type="string">ABC</root>`<br /><br /> 字符串可以由未映射到 XML 的空白（JSON RFC 第 2 节中的“ws”）围绕。<br /><br /> 示例：JSON 片段           "ABC"（在第一个双引号之前存在空格）映射到下面的 XML 元素。<br /><br /> `<root type="string">ABC</root>`<br /><br /> XML 中的任何空白都映射到 JSON 中的空白。<br /><br /> 示例：下面的 XML 元素映射到 JSON 片段。<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON 片段是“ A BC ”。|  
+|`string`（或缺少 JSON 类型 AII）<br /><br /> `string` 与缺少 JSON 类型 AII 相同，使 `string` 成为默认值。<br /><br /> 因此，`<root> string1</root>` 映射到 JSON `string`“string1”。|0 个或多个 Cii|JSON `string`（JSON RFC，第 2.5 节）。 每个 `char` 是对应于来自 CII 的 [字符代码] 的字符。 如果没有 CII，则它映射到空 JSON `string`。<br /><br /> 示例：下面的元素映射到 JSON 片段：<br /><br /> `<root type="string">42</root>`<br /><br /> JSON 片段是“42”。<br /><br /> 在 XML 到 JSON 的映射上，必须转义的字符映射到转义符，所有其他字符都映射到未转义的字符。 "/"字符是特殊字符 – 即使它不一定要转义 (写出为"\\/")。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON 片段是" \\"da\\/ta\\""。<br /><br /> 在 JSON 到 XML 的映射上，任何转义符和未转义的字符都正确映射到对应的 [字符代码]。<br /><br /> 示例：JSON 片段“\u0041BC”映射到下面的 XML 元素。<br /><br /> `<root type="string">ABC</root>`<br /><br /> 字符串可以由未映射到 XML 的空白（JSON RFC 第 2 节中的“ws”）围绕。<br /><br /> 示例：JSON 片段           "ABC"（在第一个双引号之前存在空格）映射到下面的 XML 元素。<br /><br /> `<root type="string">ABC</root>`<br /><br /> XML 中的任何空白都映射到 JSON 中的空白。<br /><br /> 示例：下面的 XML 元素映射到 JSON 片段。<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON 片段是“ A BC ”。|  
 |`number`|1 个或多个 CII|可能由空白围绕的 JSON `number`（JSON RFC，第 2.4 节）。 数字/空白组合中的每个字符都是对应于 CII 中 [字符代码] 的字符。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON 片段是    42<br /><br /> （保留空白）。|  
 |`boolean`|4 个或 5 个 CII（对应于 `true` 或 `false`），可能由其他空白 CII 围绕。|对应于字符串“true”的 CII 序列被映射到文字 `true`，而对应于字符串“false”的 CII 序列被映射到文字 `false`。 保留了围绕的空白。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON 片段是 `false`。|  
 |`null`|都不允许。|文字 `null`。 在 JSON 到 XML 的映射上，`null` 可能由未映射到 XML 的空白（第 2 节中的“ws”）围绕。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> `<root type="null"/>`<br /><br /> 或<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> 在这两种情况下 JSON 片段都是 `Null`。|  
-|`object`|0 个或多个 EII。|如 JSON RFC 第 2.2 节中的 `begin-object`（左花括号），后跟每个 EII 的成员记录，将进一步说明。 如果存在多个 EII，则在成员记录之间存在值分隔符（逗号）。 所有这一切后跟 end-object（右花括号）。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> <root type="object"></root>\><br /><br /> <type1 type="string"></type1>\>aaa\><br /><br /> <type2 type="string"></type2>\>bbb\><br /><br /> \><br /><br /> JSON 片段是 {"type1":"aaa","type2":"bbb"}。<br /><br /> 如果在 XML 到 JSON 的映射上存在数据协定类型属性，则在开头插入其他成员记录。 其名称是数据协定类型属性（“__type”）的 [本地名称]，其值是该属性的 [正常化值]。 相反，在 JSON 到 XML 的映射，如果第一个成员记录的名称是数据协定类型属性的 [本地名称] (即，"\_（_t)")，对应的数据协定类型属性是映射 XML 中存在但不存在对应的 EII。 请注意，此成员记录必须首先出现在 JSON 对象中才能应用此特殊映射。 这与通常的 JSON 处理（成员记录的顺序是不重要的）相背离。<br /><br /> 示例:<br /><br /> 下面的 JSON 片段映射到 XML。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML 是下面的代码。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> 请注意， \_（_t） AII 存在，但没有任何\_（_t) EII。<br /><br /> 但是，如果保留 JSON 中的顺序，如下面的示例所示。<br /><br /> {"name":"John"，"\_（_t)":"Person"}<br /><br /> 则显示对应的 XML。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> 也就是说， \_（_t） 不再具有特殊含义，映射到 EII 同往常一样，不是 AII。<br /><br /> 映射到 JSON 值时，AII 的 [正常化值] 的转义/未转义规则与在此表的“string”行中指定的 JSON 字符串的相同。<br /><br /> 示例:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> 前面的示例可以映射到下面的 JSON。<br /><br /> `{"__type":"\\abc"}`<br /><br /> 在 XML 到 JSON 的映射上，第一个 EII 的 [本地名称] 不得是"\_（_t)"。<br /><br /> 在对象的 XML 到 JSON 的映射上从不生成空白 (`ws`)，且在 JSON 到 XML 的映射上忽略空白。<br /><br /> 示例：下面的 JSON 片段映射到 XML 元素。<br /><br /> {   "ccc"   :  "aaa",   "ddd"    :"bbb"}<br /><br /> 在下面的代码中显示了 XML 元素。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|  
-ray'|0 个或多个 EII|如 JSON RFC 第 2.3 节中的 begin-array（左花括号），后跟每个 EII 的数组记录，将进一步描述。 如果存在多个 EII，则在数组记录之间存在值分隔符（逗号）。 所有这一切后跟 end-array。<br /><br /> 示例：下面的 XML 元素映射到 JSON 片段。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON 片段是 ["aaa","bbb"]<br /><br /> 在数组的 XML 到 JSON 的映射上从不生成空白 (`ws`)，且在 JSON 到 XML 的映射上忽略空白。<br /><br /> 示例：AJSON 片段。<br /><br /> [     "aaa",     "bbb"]<br /><br /> 它映射到的 XML 元素。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|  
+|`object`|0 个或多个 EII。|如 JSON RFC 第 2.2 节中的 `begin-object`（左花括号），后跟每个 EII 的成员记录，将进一步说明。 如果存在多个 EII，则在成员记录之间存在值分隔符（逗号）。 所有这一切后跟 end-object（右花括号）。<br /><br /> 示例：下面的元素映射到 JSON 片段。<br /><br /> \<根类型 ="对象"><br /><br /> \<type1 类型 ="string"> aaa\</type1 ><br /><br /> \<type2 类型 ="string"> bbb\</type2 ><br /><br /> \<根/><br /><br /> JSON 片段是 {"type1":"aaa","type2":"bbb"}。<br /><br /> 如果在 XML 到 JSON 的映射上存在数据协定类型属性，则在开头插入其他成员记录。 其名称是数据协定类型属性（“__type”）的 [本地名称]，其值是该属性的 [正常化值]。 相反，在 JSON 到 XML 的映射，如果第一个成员记录的名称是数据协定类型属性的 [本地名称] (即"\_（_t)")，相应的数据协定类型属性位于在映射的 XML 中，但不是对应的 EII存在。 请注意，此成员记录必须首先出现在 JSON 对象中才能应用此特殊映射。 这与通常的 JSON 处理（成员记录的顺序是不重要的）相背离。<br /><br /> 示例:<br /><br /> 下面的 JSON 片段映射到 XML。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML 是下面的代码。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> 请注意， \_（_t） AII 是存在，但没有任何\_（_t) EII。<br /><br /> 但是，如果保留 JSON 中的顺序，如下面的示例所示。<br /><br /> {"name":"John"，"\_（_t)":"Person"}<br /><br /> 则显示对应的 XML。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> 也就是说， \_（_t） 不再具有特殊含义，映射到 EII 像往常一样，不是 AII。<br /><br /> 映射到 JSON 值时，AII 的 [正常化值] 的转义/未转义规则与在此表的“string”行中指定的 JSON 字符串的相同。<br /><br /> 示例:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> 前面的示例可以映射到下面的 JSON。<br /><br /> `{"__type":"\\abc"}`<br /><br /> 不能在 XML 到 JSON 的映射，第一个 EII 的 [本地名称]"\_（_t)"。<br /><br /> 在对象的 XML 到 JSON 的映射上从不生成空白 (`ws`)，且在 JSON 到 XML 的映射上忽略空白。<br /><br /> 示例：下面的 JSON 片段映射到 XML 元素。<br /><br /> {   "ccc"   :  "aaa",   "ddd"    :"bbb"}<br /><br /> 在下面的代码中显示了 XML 元素。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|  
+射线|0 个或多个 EII|如 JSON RFC 第 2.3 节中的 begin-array（左花括号），后跟每个 EII 的数组记录，将进一步描述。 如果存在多个 EII，则在数组记录之间存在值分隔符（逗号）。 所有这一切后跟 end-array。<br /><br /> 示例：下面的 XML 元素映射到 JSON 片段。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON 片段是 ["aaa","bbb"]<br /><br /> 在数组的 XML 到 JSON 的映射上从不生成空白 (`ws`)，且在 JSON 到 XML 的映射上忽略空白。<br /><br /> 示例：AJSON 片段。<br /><br /> [     "aaa",     "bbb"]<br /><br /> 它映射到的 XML 元素。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|  
   
  成员记录的工作原理如下：  
   
@@ -238,6 +241,6 @@ ray'|0 个或多个 EII|如 JSON RFC 第 2.3 节中的 begin-array（左花括�
  `["myValue1",2,[true,null]]`  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>   
+ <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
  [独立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)

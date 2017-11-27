@@ -1,111 +1,108 @@
 ---
-title: "将可打印的报表添加到 Visual Studio 应用程序 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "打印 [Visual Studio], 报告"
-  - "报告, Visual Studio 中的打印"
+title: "将可打印的报表添加到 Visual Studio 应用程序"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- printing [Visual Studio], reports
+- reports [Visual Basic], printing in Visual Studio
 ms.assetid: 93928405-ef41-495e-bce2-9d43d5a7080a
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4ce2a8b12d8202a9f201a82b0d4a571249210d48
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 将可打印的报表添加到 Visual Studio 应用程序
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Studio 支持各种报告解决方案，可以帮助您向 Visual Basic 应用程序中添加丰富的数据报告功能。  可以使用 ReportViewer 控件、Crystal Reports 或 SQL Server Reporting Services 来创建和添加报告。  
+# <a name="adding-printable-reports-to-visual-studio-applications"></a>将可打印的报表添加到 Visual Studio 应用程序
+Visual Studio 支持各种报表的解决方案来帮助你添加到 Visual Basic 应用程序报告的丰富数据。 你可以创建并添加使用 ReportViewer 控件、 Crystal Reports 或 SQL Server Reporting Services 报表。  
   
 > [!NOTE]
->  SQL Server Reporting Services 是 SQL Server 2005 的一部分，而不是 Visual Studio 的一部分。  除非您已经安装了 SQL Server 2005，否则您的系统上不会安装有 Reporting Services。  
+>  SQL Server Reporting Services 是 SQL Server 2005，而不是 Visual Studio 的一部分。 在你的系统上未安装，除非你已安装 SQL Server 2005 reporting Services。  
   
-## Visual Basic 应用程序中 Microsoft 报告技术的概述  
- 从以下方法中进行选择以在应用程序中使用 Microsoft 报告技术：  
+## <a name="overview-of-microsoft-reporting-technology-in-visual-basic-applications"></a>Microsoft 报表中 Visual Basic 应用程序的技术的概述  
+ 从以下方法用于使用 Microsoft 报表技术应用程序中的选择：  
   
--   向 Visual Basic Windows 应用程序中添加 ReportViewer 控件的一个或多个实例。  
+-   ReportViewer 控件的一个或多个实例添加到 Visual Basic Windows 应用程序。  
   
--   通过调用 Report Server Web 服务，从而以编程方式集成 SQL Server Reporting Services。  
+-   通过对报表服务器 Web 服务进行调用的以编程方式将 SQL Server Reporting Services 集成。  
   
--   通过将 ReportViewer 控件作为报告查看器，将报告服务器作为报告处理器，从而将 ReportViewer 控件与 Microsoft SQL Server 2005 Reporting Services 一起使用。  （请注意，如果希望将报告服务器和 ReportViewer 控件一起使用，您必须使用 SQL Server 2005 版的 Reporting Services。）  
+-   使用 ReportViewer 控件和 Microsoft SQL Server 2005 Reporting Services 一起使用，为一个报表处理器为报表查看器和报表服务器使用的控件。 （请注意，是否你想要一起使用的报表服务器和 ReportViewer 控件，你必须使用 Reporting Services 的 SQL Server 2005 版本）。  
   
-## 使用 ReportViewer 控件  
- 将报告功能嵌入 Visual Basic Windows 应用程序的最简便方法就是向应用程序的窗体中添加 ReportViewer 控件。  该控件将直接向应用程序中添加报告处理功能，并提供一个集成报表设计器，因此可以使用来自任何 ADO.NET 数据对象的数据生成报告。  系统包含一个全功能 API，该 API 提供对该控件和报告的编程访问，以便配置运行时功能。  
+## <a name="using-reportviewer-controls"></a>使用 ReportViewer 控件  
+ 嵌入报表功能集成到 Visual Basic Windows 应用程序的最简单方法是将 ReportViewer 控件添加到你的应用程序中的窗体。 该控件将添加报表处理直接向你的应用程序的功能，并提供一个集成的报表设计器，从而使您可以生成报表使用从任何 ADO.NET 数据对象的数据。 全功能 API 提供以编程方式访问控件，并报告，以便你可以配置运行时功能。  
   
- ReportViewer 在可任意发行的单个数据控件中提供了内置的报告处理和查看功能。  如果需要以下报告功能，请选择使用 ReportViewer 控件：  
+ ReportViewer 提供内置的报表处理和查看单个、 可自由地分发数据控件中的功能。 选择 ReportViewer 控件，是否你需要以下的报表功能：  
   
--   客户端应用程序中的报告处理。  将在该控件提供的视图区域显示经过处理的报告。  
+-   在客户端应用程序中处理的报表。 处理的报表将出现在该控件提供的视图区域。  
   
--   数据绑定到 ADO.NET 数据表。  可以创建使用为该控件提供的 <xref:System.Data.DataTable> 实例的报告。  还可以直接绑定到业务对象。  
+-   数据绑定到 ADO.NET 数据表。 你可以创建使用的报表<xref:System.Data.DataTable>提供给控件的实例。 此外可以直接到业务对象绑定。  
   
--   可以包含在应用程序中的可再发行控件。  
+-   你可包括在你的应用程序的可再发行控件。  
   
--   页导航、打印、搜索和导出格式等运行时功能。  ReportViewer 工具栏提供对这些操作的支持。  
+-   运行时功能，例如页面导航、 打印、 搜索和导出格式。 ReportViewer 工具栏提供对这些操作的支持。  
   
- 若要使用 ReportViewer 控件，可以将其从 Visual Studio 工具箱的**“数据”**节拖动到 Visual Basic Windows 应用程序中的窗体上。  
+ 若要使用 ReportViewer 控件，可以将其从拖动**数据**的 Visual Studio 工具箱中拖动到在 Visual Basic Windows 应用程序的窗体的部分。  
   
-### 在 Visual Studio 中创建供 ReportViewer 控件使用的报告  
- 若要生成在 ReportViewer 中运行的报告，请向您的项目中添加一个**“报告”**模板。  Visual Studio 将创建一个客户端报告定义文件 \(.rdlc\)，并将该文件添加到项目中，然后在 Visual Studio 工作区中打开集成的报表设计器。  
+### <a name="creating-reports-in-visual-studio-for-reportviewer-controls"></a>为 ReportViewer 控件在 Visual Studio 中创建报表  
+ 若要构建在 ReportViewer 中运行的报表，将添加**报表**到你的项目模板。 Visual Studio 创建的客户端报表定义文件 (.rdlc)，将文件添加到你的项目，并在 Visual Studio 工作区中打开的集成的报表设计器。  
   
- Visual Studio 报表设计器与**“数据源”**窗口相集成。  将某个字段从**“数据源”**窗口拖动到报告中时，报表设计器会将有关数据源的元数据复制到报告定义文件中。  ReportViewer 控件使用此元数据来自动生成数据绑定代码。  
+ Visual Studio 报表设计器与集成**数据源**窗口。 当你将字段从**数据源**到报表中，报表设计器窗口将有关数据源的元数据复制到报表定义文件。 ReportViewer 控件使用此元数据自动生成数据绑定代码。  
   
- Visual Studio 报表设计器不包含报告预览功能。  若要预览报告，请运行应用程序，然后预览其中嵌入的报告。  
+ Visual Studio 报表设计器不包括报表预览功能。 若要预览报表、 运行应用程序和预览报表嵌入在其中。  
   
-||  
-|-|  
-|向应用程序中添加基本报告功能|  
-|1.  从**“工具箱”**的**“数据”**选项卡中将 ReportViewer 控件拖动到窗体上。<br />2.  在**“项目”**菜单上选择**“添加新项”**。  在**“添加新项”**对话框中选择**“报告”**图标，然后单击**“添加”**。<br />     将在开发环境中打开报表设计器，并将报告定义 \(.rdlc\) 文件添加到项目中。<br />3.  从**“工具箱”**中将报告项拖动到报告布局上，并根据需要排列报告项。<br />4.  将字段从**“数据源”**窗口中拖动到报告布局中的报告项。|  
+|若要将基本报表功能添加到你的应用程序|  
+|---|    
+|1.将 ReportViewer 控件从**数据**选项卡**工具箱**拖动到窗体。<br />2.在 **“项目”** 菜单上选择 **“添加新项”**。 在**添加新项**对话框中，选择**报表**图标，然后单击**添加**。<br />     在开发环境中，打开的报表设计器和报表 (.rdlc) 文件添加到项目。<br />3.将报表项从**工具箱**报表布局上根据需要对其进行排列。<br />4.将字段从**数据源**到报表布局中的报表项的窗口。|  
   
-## 在 Visual Basic 应用程序中使用 Reporting Services  
- Reporting Services 是一项基于服务器的报告技术，该技术包括在 SQL Server 中。  Reporting Services 包含 ReportViewer 控件中所没有的附加功能。  如果需要以下任何功能，请选择 Reporting Services：  
+## <a name="using-reporting-services-in-visual-basic-applications"></a>在 Visual Basic 应用程序中使用 Reporting Services  
+ Reporting Services 是一种基于服务器的报告技术所包含的 SQL Server。 Reporting Services 包括 ReportViewer 控件中找不到的其他功能。 如果你需要任何以下功能，请选择 Reporting Services:  
   
--   扩展部署和服务器端报告处理，可提高复杂报告或长时间运行的报告以及大量报告活动的性能。  
+-   向外扩展部署，并且提供了改进的性能，用于复杂或长时间运行的报表和大量报表活动的服务器端报表处理。  
   
--   集成的数据和报告处理，并支持自定义报告控件和丰富的呈现输出格式。  
+-   集成的数据和报表处理，并支持自定义报表控件和丰富的呈现输出格式。  
   
--   计划的报告处理，以便能够精确指定报告运行时间。  
+-   计划报表处理，以便你可以指定运行报表的确切时间。  
   
--   通过电子邮件或向文件共享位置分发的基于订户的报告。  
+-   通过电子邮件或文件共享位置的基于订阅服务器的报表分发。  
   
--   临时报告，以便业务用户可以根据需要创建报告。  
+-   特别报告，以便根据需要业务用户可以创建报表。  
   
--   数据驱动的订阅，以将自定义报告输出路由至动态的收件人列表。  
+-   将自定义的报表输出路由到收件人动态列表的数据驱动的订阅。  
   
--   用于数据处理、报告传递、自定义身份验证以及报告呈现的自定义扩展。  
+-   数据处理、 报表传递、 自定义身份验证和报表呈现的自定义扩展。  
   
- 报告服务器作为 Web 服务实现。  应用程序代码中必须包含对该 Web 服务的调用才能访问报告和其他元数据。  该 Web 服务提供对报告服务器实例的完全编程访问。  
+ 报表服务器作为 Web 服务实现。 你的应用程序代码必须包含对 Web 服务调用，以访问报表和其他元数据。 Web 服务提供完整的报表服务器实例以编程方式访问。  
   
- 由于 Reporting Services 是一项基于 Web 的报告技术，因此默认查看器将显示以 HTML 格式呈现的报告。  如果不想使用 HTML 作为默认的报告呈现格式，则必须为应用程序编写一个自定义报告查看器。  
+ 由于 Reporting Services 是一项基于 Web 的报表技术，默认查看器中的 HTML 格式显示呈现的报表。 如果你不想要用作默认报表演示文稿格式的 HTML，你将需要编写一个自定义报表查看器查看你的应用程序。  
   
-### 在 Visual Studio 中创建用于 Reporting Services 的报告  
- 若要生成在报告服务器上运行的报告，请在 Visual Studio 中使用 Business Intelligence Development Studio 创建报告定义 \(.rdl\) 文件，Business Intelligence Development Studio 包含在 SQL Server 2005 中。  
+### <a name="creating-reports-in-visual-studio-for-reporting-services"></a>为 Reporting Services 在 Visual Studio 中创建报表  
+ 若要生成的报表服务器运行的报表，你创建报表定义 (.rdl) 文件在 Visual Studio 中通过 Business Intelligence Development Studio 中，包含在 SQL Server 2005。  
   
 > [!NOTE]
->  必须安装 SQL Server 2005 才能使用 SQL Server Reporting Services 和 Business Intelligence Development Studio。  
+>  你必须具有 SQL Server 2005 安装才能使用 SQL Server Reporting Services 和 Business Intelligence Development Studio。  
   
- Business Intelligence Development Studio 将添加特定于 SQL Server 组件的项目模板。  若要创建报告，可以选择**“报表服务器项目”**或**“报表服务器项目向导”**模板。  可以将数据源连接与查询指定为各种数据源类型，包括 SQL Server、Oracle、Analysis Services、XML 和 SQL Server Integration Services。  通过使用**“数据”**选项卡、**“布局”**选项卡和**“预览”**选项卡，可以在同一个工作区中定义数据、创建报告布局和预览报告。  
+ Business Intelligence Development Studio 添加特定于 SQL Server 组件的项目模板。 若要创建的报表，可以选择从**报表服务器项目**或**报表服务器项目向导**模板。 你可以指定数据源连接和查询到各种数据源类型，包括 SQL Server、 Oracle、 Analysis Services、 XML 和 SQL Server Integration Services。 A**数据**选项卡上，**布局**选项卡上，和**预览**选项卡允许你定义数据、 创建报表布局，以及预览同一工作区中所有的报表。  
   
- 为该控件或报表服务器生成的报告定义可以在这两项技术中的任意一项技术中重用。  
+ 为控件或报表服务器创建的报表定义可以在任一技术中重复使用。  
   
-||  
-|-|  
-|创建在报表服务器上运行的报告|  
-|1.  在**“文件”**菜单上选择**“新建”**。<br />     将打开**“新建项目”**对话框。<br />2.  在**“项目类型”**窗格中单击**“Business Intelligence 项目”**。<br />3.  在“模板”窗格中选择**“报表服务器项目”**或**“报表服务器项目向导”**。|  
+|若要创建报表服务器运行的报表|  
+|---|    
+|1.上**文件**菜单上，选择**新建**。<br />     **“新建项目”** 对话框随即打开。<br />2.在**项目类型**窗格中，单击**商业智能项目**。<br />3.在模板窗格中，选择**报表服务器项目**或**报表服务器项目向导**。|  
   
-## 将 ReportViewer 控件和 SQL Server Reporting Services 一起使用  
- 可以在同一应用程序中将 ReportViewer 控件和 SQL Server 2005 报表服务一起使用。  
+## <a name="using-reportviewer-controls-and-sql-server-reporting-services-together"></a>使用 ReportViewer 控件和 SQL Server Reporting Services 在一起  
+ ReportViewer 控件和 SQL Server 2005 Reporting Services 可一起在同一个应用程序。  
   
--   ReportViewer 控件提供一个查看器，可用来在应用程序中显示报表。  
+-   ReportViewer 控件可提供用于在你的应用程序中显示报表查看器。  
   
--   报表服务提供报表，并在远程服务器上执行所有处理操作。  
+-   Reporting Services 提供报表，并在远程服务器上执行所有处理。  
   
- 可将 ReportViewer 控件配置为显示在远程报表服务器上存储和处理的报表。  这种类型的配置称为“远程处理模式”。  在远程处理模式中，该控件将请求存储在远程报表服务器上的报表。  报表服务器会执行所有报表处理、数据处理及报表呈现工作。  将向控件返回一个处理完且已呈现的报表，并在视图区域中显示此报表。  
+ 可以配置 ReportViewer 控件以显示远程的 Reporting Services 报表服务器上的存储和处理的报表。 此类型的配置称为*远程处理模式*。 在远程处理模式下，该控件将请求存储在远程报表服务器的报表。 报表服务器执行所有报表处理、 数据处理和报表呈现。 已完成的呈现的报表是返回到控件，显示在视图区域。  
   
- 在报表服务器上运行的报表支持其他导出格式，具有不同的报表参数化实现，使用该报表服务器所支持的数据源类型，并可在报表服务器上通过基于角色的授权模型进行访问。  
+ 在支持其他报表服务器运行的报表导出格式，具有不同的报表参数化实现，使用支持的报表服务器，并通过基于角色的授权模型上访问的数据源类型报表服务器。  
   
- 若要使用远程处理模式，请在配置 ReportViewer 控件时指定服务器报表的 URL 和路径。
+ 若要使用远程处理模式，请指定的 URL 和服务器报表的路径配置 ReportViewer 控件时。

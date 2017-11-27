@@ -1,48 +1,52 @@
 ---
-title: "如何：在绘制的文本中设置制表位 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "选项卡, 绘制的文本"
-  - "文本, 使用制表位绘制"
+title: "如何：在绘制的文本中设置制表位"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing with tab stops
+- tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e561e8096780301230071e869dac482a6a908a5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在绘制的文本中设置制表位
-通过调用 <xref:System.Drawing.StringFormat> 对象的 <xref:System.Drawing.StringFormat.SetTabStops%2A> 方法，然后将该 <xref:System.Drawing.StringFormat> 对象传递给 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawString%2A> 方法，可以设置文本的制表位。  
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>如何：在绘制的文本中设置制表位
+你可以通过调用设置文本的制表位<xref:System.Drawing.StringFormat.SetTabStops%2A>方法<xref:System.Drawing.StringFormat>对象，然后将该<xref:System.Drawing.StringFormat>对象传递给<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>类。  
   
 > [!NOTE]
->  尽管可以使用 <xref:System.Windows.Forms.TextFormatFlags?displayProperty=fullName> 标志扩展现有的制表位，但 <xref:System.Windows.Forms.TextRenderer?displayProperty=fullName> 不支持在绘制文本中添加新的制表位。  
+>  <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType>执行不支持添加制表位与绘制的文本，尽管你可以扩展现有的选项卡停止使用<xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType>标志。  
   
-## 示例  
- 下面的示例在 150、250 和 350 处设置制表位。  然后，代码显示用制表符分隔的名称和测验分数的列表。  
+## <a name="example"></a>示例  
+ 下面的示例在 150、 250 和 350 设置制表位。 然后，代码将显示名称和测试分数的选项卡式的列表。  
   
- 下面的插图显示用制表符分隔的文本。  
+ 下图显示的选项卡式的文本。  
   
  ![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext4.png "fontstext4")  
   
- 下面的代码将两个参数传递给 <xref:System.Drawing.StringFormat.SetTabStops%2A> 方法。  第二个参数是包含制表位偏移量的数组。  传递给 <xref:System.Drawing.StringFormat.SetTabStops%2A> 的第一个参数是 0，它表明数组中的第一个偏移量从位置 0（边框的左边）测量。  
+ 下面的代码将传递到两个自变量<xref:System.Drawing.StringFormat.SetTabStops%2A>方法。 第二个参数是一个数组，包含制表位偏移量。 第一个自变量传递给<xref:System.Drawing.StringFormat.SetTabStops%2A>为 0，它表示数组中的第一个偏移量从位置 0，边界矩形的左边缘开始测量。  
   
  [!code-csharp[System.Drawing.FontsAndText#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
-## 编译代码  
+## <a name="compiling-the-code"></a>编译代码  
   
--   前面的示例是为使用 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.PaintEventHandler> 的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+-   前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
-## 请参阅  
- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [如何：用 GDI 绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

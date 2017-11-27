@@ -1,42 +1,46 @@
 ---
-title: "如何：在 Windows 窗体中打印图形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "图形, 打印"
-  - "打印 [Windows 窗体], 图形"
+title: "如何：在 Windows 窗体中打印图形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- graphics [Windows Forms], printing
+- printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f495135b3210f430c887451844bec8b154db33c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体中打印图形
-您经常需要在基于 Windows 的应用程序中打印图形。  <xref:System.Drawing.Graphics> 类提供将对象绘制到设备（如屏幕或打印机）的方法。  
+# <a name="how-to-print-graphics-in-windows-forms"></a>如何：在 Windows 窗体中打印图形
+通常情况下，你将想要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics>类提供的对象绘制到设备，如屏幕或打印机的方法。  
   
-### 打印图形  
+### <a name="to-print-graphics"></a>若要打印图形  
   
-1.  向窗体添加 <xref:System.Drawing.Printing.PrintDocument> 组件。  
+1.  添加<xref:System.Drawing.Printing.PrintDocument>组件向窗体。  
   
-2.  在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件处理程序中，使用 <xref:System.Drawing.Printing.PrintPageEventArgs> 类的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 属性指示打印机打印哪一类型的图形。  
+2.  在<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序中，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>属性<xref:System.Drawing.Printing.PrintPageEventArgs>类可指示在哪种类型的图形要打印的打印机。  
   
-     下面的代码示例演示用来在边框内创建蓝色椭圆的事件处理程序。  该边框具有如下位置和尺寸：起点为 \(100，150\)，宽度为 250，高度为 250。  
+     下面的代码示例显示用于创建一个蓝色的椭圆的边界的矩形范围内的事件处理程序。 矩形具有以下的位置和尺寸： 开始 100，使用的 250 宽度和高度为 250 150。  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillEllipse(Brushes.Blue, New Rectangle(100, 150, 250, 250))  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ caps.handback.revision: 20
        e.Graphics.FillRectangle(Brushes.Blue,   
          new Rectangle(100, 150, 250, 250));  
     }  
-  
     ```  
   
     ```cpp  
@@ -59,13 +62,12 @@ caps.handback.revision: 20
        }  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）在窗体的构造函数中放置以下代码来注册事件处理程序。  
+     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
-  
     ```  
   
     ```cpp  
@@ -74,7 +76,7 @@ caps.handback.revision: 20
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## 请参阅  
- <xref:System.Drawing.Graphics>   
- <xref:System.Drawing.Brush>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Drawing.Brush>  
  [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

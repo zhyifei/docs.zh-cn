@@ -1,41 +1,43 @@
 ---
-title: "如何：更改 ListView 中列的水平对齐方式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView 控件, 水平对齐"
+title: "如何：更改 ListView 中列的水平对齐方式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ed163de9a5b01a3ddab8ef42d21f38d35f48519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：更改 ListView 中列的水平对齐方式
-默认情况下，<xref:System.Windows.Controls.ListViewItem> 中的每个列的内容都是左对齐的。  通过提供 <xref:System.Windows.DataTemplate>，然后设置 <xref:System.Windows.DataTemplate> 中的元素上的 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性，可以更改每个列的对齐方式。  本主题演示默认情况下 <xref:System.Windows.Controls.ListView> 如何对齐其内容，并且演示如何更改 <xref:System.Windows.Controls.ListView> 中某个列的对齐方式。  
+# <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>如何：更改 ListView 中列的水平对齐方式
+默认情况下，每个列中的内容<xref:System.Windows.Controls.ListViewItem>是左对齐。 你可以通过提供更改每个列的对齐方式<xref:System.Windows.DataTemplate>和设置<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>中元素的属性上<xref:System.Windows.DataTemplate>。 本主题说明如何<xref:System.Windows.Controls.ListView>对齐其内容默认情况下和如何更改中的一列的对齐方式<xref:System.Windows.Controls.ListView>。  
   
-## 示例  
- 在下面的示例中，`Title` 和 `ISBN` 列中的数据左对齐。  
+## <a name="example"></a>示例  
+ 在下面的示例中中的数据`Title`和`ISBN`列是左对齐。  
   
- [!code-xml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- 若要更改 `ISBN` 列的对齐方式，需要指定每个 <xref:System.Windows.Controls.ListViewItem> 的 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 属性为 <xref:System.Windows.HorizontalAlignment>，这样每个 <xref:System.Windows.Controls.ListViewItem> 中的元素就可以跨越或占据每个列的整个宽度。  由于 <xref:System.Windows.Controls.ListView> 被绑定到数据源，因此需要创建用于设置 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 的样式。  接下来，需要使用 <xref:System.Windows.DataTemplate> 来显示内容，而不是使用 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 属性。  若要显示每个模板的 `ISBN`，<xref:System.Windows.DataTemplate> 只能包含一个将其 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性设置为 <xref:System.Windows.HorizontalAlignment> 的 <xref:System.Windows.Controls.TextBlock>。  
+ 若要更改的对齐方式`ISBN`列中，你需要指定<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>每个属性<xref:System.Windows.Controls.ListViewItem>是<xref:System.Windows.HorizontalAlignment.Stretch>，以便在每个元素<xref:System.Windows.Controls.ListViewItem>可以跨或沿每一列的整个宽度放置。 因为<xref:System.Windows.Controls.ListView>绑定到数据源，你需要创建设置样式<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>。 接下来，你需要使用<xref:System.Windows.DataTemplate>以显示内容而不是使用<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>属性。 若要显示`ISBN`的每个模板，<xref:System.Windows.DataTemplate>只能包含<xref:System.Windows.Controls.TextBlock>具有其<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性设置为<xref:System.Windows.HorizontalAlignment.Right>。  
   
- 下面的示例定义使 `ISBN` 列右对齐所需的样式和 <xref:System.Windows.DataTemplate>，并更改 <xref:System.Windows.Controls.GridViewColumn> 以引用 <xref:System.Windows.DataTemplate>。  
+ 下面的示例定义的样式和<xref:System.Windows.DataTemplate>使所需`ISBN`右对齐的列和更改<xref:System.Windows.Controls.GridViewColumn>引用<xref:System.Windows.DataTemplate>。  
   
- [!code-xml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
-[!code-xml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
+ [!code-xaml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
+[!code-xaml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
-## 请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
  [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)

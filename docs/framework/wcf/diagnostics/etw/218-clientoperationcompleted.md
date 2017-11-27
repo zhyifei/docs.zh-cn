@@ -1,43 +1,46 @@
 ---
-title: "218 - ClientOperationCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 218 - ClientOperationCompleted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b069bced-7bb2-4e01-8227-e5dbda17af09
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ea826aa99e847f74c5a44113f2ae16d7322873f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 218 - ClientOperationCompleted
-## 属性  
+# <a name="218---clientoperationcompleted"></a>218 - ClientOperationCompleted
+## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
 |ID|218|  
 |关键字|疑难解答，ServiceModel|  
 |级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
   
-## 说明  
- 此事件恰好在操作完成之后由客户端发出。对于单向操作，此事件恰好在成功发送消息之后发送。对于请求\-响应操作，此事件在接收响应之后发送。  
+## <a name="description"></a>描述  
+ 此事件恰好在操作完成之后由客户端发出。 对于单向操作，此事件恰好在成功发送消息之后发送。 对于请求-响应操作，此事件在接收响应之后发送。  
   
-## 消息  
- 客户端已执行完与协定“%2”相关联的操作“%1”。消息已发送到“%3”。  
+## <a name="message"></a>消息  
+ 客户端已执行完与协定“%2”相关联的操作“%1”。 消息已发送到“%3”。  
   
-## 详细信息  
+## <a name="details"></a>详细信息  
   
-|数据项名称|数据项类型|说明|  
-|-----------|-----------|--------|  
+|数据项名称|数据项类型|描述|  
+|--------------------|--------------------|-----------------|  
 |操作|xs:string|传出消息的 SOAP 操作标头。|  
-|协定名称|`xs:string`|协定的名称。示例：ICalculator。|  
+|协定名称|`xs:string`|协定的名称。 示例：ICalculator。|  
 |目标|`xs:string`|消息已发送到的服务终结点的地址。|  
-|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。此字段的格式定义为“网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;服务名称”。示例：“默认网站\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService”。|  
+|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName。 示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

@@ -1,36 +1,37 @@
 ---
-title: "安全和争用条件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "代码安全性, 争用条件"
-  - "争用条件"
-  - "安全编码, 争用条件"
-  - "安全性 [.NET Framework], 争用条件"
+title: "安全和争用条件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [.NET Framework], race conditions
+- race conditions
+- secure coding, race conditions
+- code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c092113f670c5799d98dcb13c9c713bbd1a47fb6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 安全和争用条件
-另一个需要关注的方面是争用条件可能会利用安全漏洞。  可能利用的方式有好几种。  下面的副主题概述了开发人员必须避免的几种主要陷阱。  
+# <a name="security-and-race-conditions"></a>安全和争用条件
+需要关注的另一个方面是争用条件被利用的安全漏洞的可能性。 有几种方法可能是在其中。 请按照下面的副主题概述了一些开发人员必须避免主要缺陷。  
   
-## Dispose 方法中的争用条件  
- 如果某个类的 **Dispose** 方法（有关更多信息，请参见 [Garbage Collection](../../../docs/standard/garbage-collection/index.md)）没有进行同步，则 **Dispose** 内的清除代码可能会运行多次，如下面的示例所示。  
+## <a name="race-conditions-in-the-dispose-method"></a>Dispose 方法中的争用条件  
+ 如果类的**释放**方法 (有关详细信息，请参阅[垃圾回收](../../../docs/standard/garbage-collection/index.md)) 不是同步，则可能会在该清理代码**释放**可以运行多个一次，如下面的示例中所示。  
   
 ```vb  
 Sub Dispose()  
@@ -39,7 +40,6 @@ Sub Dispose()
        myObj = Nothing  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -53,13 +53,13 @@ void Dispose()
 }  
 ```  
   
- 由于此 **Dispose** 实现未进行同步，因此在将 `_myObj` 设置为 **null** 之前，第一个线程及随后的第二个线程均可调用 `Cleanup`。  这是否会成为一个安全问题取决于运行 `Cleanup` 代码时发生了什么情况。  未同步的 **Dispose** 实现出现的重要问题需要使用资源句柄（例如文件）。  不适当的处理可能导致使用错误的句柄，这通常会造成安全弱点。  
+ 因为这**释放**未同步的实现，则可能`Cleanup`由第一个线程，然后之前第二个线程调用`_myObj`设置为**null**。 这是否是安全隐患依赖于会发生什么情况时`Cleanup`代码运行。 未同步的主要问题**释放**实现涉及使用如文件的资源句柄。 处置不当可能会导致错误的句柄使用，这通常会造成安全漏洞。  
   
-## 构造函数中的争用条件  
- 在某些应用程序中，其他线程可能在它们的类构造函数完全运行之前访问类成员。  您应当检查所有的类构造函数以确保发生这种情况时不会出现安全问题，或者根据需要同步线程。  
+## <a name="race-conditions-in-constructors"></a>构造函数中的争用条件  
+ 在某些应用程序，它可能是可能的其他线程，以访问类成员之前已完全运行其类构造函数。 你应查看所有的类构造函数，以确保如果这应发生这种情况，或者如有必要同步线程没有安全问题。  
   
-## 缓存对象的争用条件  
- 如果类的其他部分没有被适当地同步，缓存安全信息的代码或使用代码访问安全 [Assert](../../../docs/framework/misc/using-the-assert-method.md) 操作的代码也很容易受到争用条件的影响，具体情况如下面的示例所示。  
+## <a name="race-conditions-with-cached-objects"></a>使用缓存的对象的争用条件  
+ 缓存安全信息或使用代码访问安全性的代码[断言](../../../docs/framework/misc/using-the-assert-method.md)操作还可能容易受到攻击争用条件如果类的其他部分不正确同步，如下面的示例中所示。  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -78,7 +78,6 @@ Sub DoOtherWork()
         DoSomethingTrusted()  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -105,12 +104,12 @@ void DoOtherWork()
 }  
 ```  
   
- 对于可以使用同一对象从其他线程调用的 `DoOtherWork`，如果存在到达它的其他路径，则不受信任的调用方就可以绕过请求。  
+ 如果没有其他的路径`DoOtherWork`并且可以从使用同一对象的另一个线程中调用，则不受信任的调用方可以绕过请求。  
   
- 如果您的代码缓存了安全信息，请确保从安全信息中查找这一弱点。  
+ 如果你的代码缓存安全信息，请确保你针对此漏洞查看它。  
   
-## Finalizer 中的争用条件  
- 在引用静态资源或非托管资源的对象（该对象随后会在其终结器中释放这一资源）中，也可能出现争用条件。  如果多个对象共享同一个在类的终结器中操作的资源，则这些对象必须同步所有对该资源的访问。  
+## <a name="race-conditions-in-finalizers"></a>终结器中的争用条件  
+ 对象中引用它然后释放其终结器中的静态或非托管资源，还会出现争用条件。 如果多个对象共享的资源的操作在类的终结器中，这些对象必须同步所有对该资源的访问。  
   
-## 请参阅  
- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另请参阅  
+ [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

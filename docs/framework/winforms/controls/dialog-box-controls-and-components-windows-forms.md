@@ -1,54 +1,55 @@
 ---
-title: "对话框控件和组件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CommonDialog 控件"
-  - "对话框, Windows 窗体"
-  - "Windows 窗体对话框, 预定义的"
-  - "Windows 窗体, 对话框"
+title: "对话框控件和组件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CommonDialog control
+- Windows Forms dialog boxes [Windows Forms], predefined
+- dialog boxes [Windows Forms], Windows Forms
+- Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 对话框控件和组件（Windows 窗体）
-以下 Windows 窗体控件和组件提供标准对话框。  单击链接，获取有关每个对话框中可用函数的详细信息。  
+# <a name="dialog-box-controls-and-components-windows-forms"></a>对话框控件和组件（Windows 窗体）
+以下 Windows 窗体控件和组件提供标准对话框。 单击链接，获取有关每个对话框中可用函数的详细信息。  
   
-## 参考  
- [ColorDialog 类](frlrfSystemWindowsFormsColorDialogClassTopic)  
+## <a name="reference"></a>参考  
+ <xref:System.Windows.Forms.ColorDialog>  
  提供关于 <xref:System.Windows.Forms.ColorDialog> 类及其成员的引用信息。  
   
- [FontDialog 类](frlrfSystemWindowsFormsFontDialogClassTopic)  
+ <xref:System.Windows.Forms.FontDialog>  
  提供关于 <xref:System.Windows.Forms.FontDialog> 类及其成员的引用信息。  
   
- [OpenFileDialog 类](frlrfSystemWindowsFormsOpenFileDialogClassTopic)  
+ <xref:System.Windows.Forms.OpenFileDialog>  
  提供关于 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。  
   
- [PageSetupDialog 类](frlrfSystemWindowsFormsPageSetupDialogClassTopic)  
+ <xref:System.Windows.Forms.PageSetupDialog>  
  提供关于 <xref:System.Windows.Forms.PageSetupDialog> 类及其成员的引用信息。  
   
- [PrintDialog 类](frlrfSystemWindowsFormsPrintDialogClassTopic)  
+ <xref:System.Windows.Forms.PrintDialog>  
  提供关于 <xref:System.Windows.Forms.PrintDialog> 类及其成员的引用信息。  
   
- [PrintPreviewDialog 类](frlrfSystemWindowsFormsPrintPreviewDialogClassTopic)  
+ <xref:System.Windows.Forms.PrintPreviewDialog>  
  提供关于 <xref:System.Windows.Forms.PrintPreviewDialog> 类及其成员的引用信息。  
   
- [SaveFileDialog 类](frlrfSystemWindowsFormsSaveFileDialogClassTopic)  
+ <xref:System.Windows.Forms.SaveFileDialog>  
  提供关于 <xref:System.Windows.Forms.SaveFileDialog> 类及其成员的引用信息。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [Windows 窗体中的对话框](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  介绍如何为 Windows 窗体创建对话框。  
   
@@ -76,4 +77,4 @@ caps.handback.revision: 10
  [SaveFileDialog 组件概述](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  选择要保存的文件及要保存的位置。  
   
- 另请参阅 [Windows 窗体中的对话框](http://msdn.microsoft.com/library/2chz8edb%20\(v=vs.110\))。
+ 另请参阅 [Windows 窗体中的对话框](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\))。

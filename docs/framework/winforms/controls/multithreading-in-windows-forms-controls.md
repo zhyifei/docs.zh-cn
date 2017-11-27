@@ -1,53 +1,53 @@
 ---
-title: "Windows 窗体控件中的多线程处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BackgroundWorker 组件"
-  - "BeginInvoke 方法"
-  - "线程处理 [Windows 窗体], 控件"
+title: "Windows 窗体控件中的多线程处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BackgroundWorker component
+- threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4651ca9707dcf0fac2edea0f004275cfcf18cf2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Windows 窗体控件中的多线程处理
-在很多应用程序中，通过在另一个线程上执行耗时的操作，可以让用户界面 \(UI\) 提高响应能力。  可以用很多工具来让 Windows 窗体控件多线程化，包括 <xref:System.Threading> 命名空间、<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName> 方法和 `BackgroundWorker` 组件。  
+# <a name="multithreading-in-windows-forms-controls"></a>Windows 窗体控件中的多线程处理
+在许多应用程序，你可以进行用户界面 (UI) 更快地响应执行耗时的操作在另一个线程上。 有多种工具都是可用于多线程处理你的 Windows 窗体控件，包括<xref:System.Threading>命名空间，<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法，与`BackgroundWorker`组件。  
   
 > [!NOTE]
->  `BackgroundWorker` 组件可以在 <xref:System.Threading> 命名空间和 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName> 方法中替换和添加功能；但是，也可以选择保留这些功能以备向后兼容和将来使用。  有关更多信息，请参见 [BackgroundWorker 组件概述](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
+>  `BackgroundWorker`组件替换，并添加了功能<xref:System.Threading>命名空间和<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法; 但是，这些会保留向后兼容性和将来使用，如果你选择。 有关详细信息，请参阅[BackgroundWorker 组件概述](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
   
-## 本节内容  
- [如何：对 Windows 窗体控件进行线程安全调用](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- 显示如何对 Windows 窗体控件进行线程安全调用。  
+## <a name="in-this-section"></a>本节内容  
+ [如何：对 Windows 窗体控件执行线程安全调用](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ 演示如何使 Windows 窗体控件的线程安全调用。  
   
  [如何：使用后台线程搜索文件](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
- 显示如何使用 <xref:System.Threading> 命名空间和 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 方法来异步搜索文件。  
+ 演示如何使用<xref:System.Threading>命名空间和<xref:System.Windows.Forms.Control.BeginInvoke%2A>方法来以异步方式搜索文件。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.ComponentModel.BackgroundWorker>  
- 介绍用于封装辅助线程以执行异步操作的组件。  
+ 记录封装工作线程为异步操作的组件。  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
  介绍如何异步加载声音。  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- 介绍如何异步加载图像。  
+ 介绍如何以异步方式加载映像。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [如何：在后台运行操作](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- 显示如何用 <xref:System.ComponentModel.BackgroundWorker> 组件来执行耗时的操作。  
+ 演示如何执行耗时的操作与<xref:System.ComponentModel.BackgroundWorker>组件。  
   
  [BackgroundWorker 组件概述](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- 提供一些主题，描述了如何使用 <xref:System.ComponentModel.BackgroundWorker> 组件来执行异步操作。
+ 提供一些主题，介绍如何使用<xref:System.ComponentModel.BackgroundWorker>组件为异步操作。

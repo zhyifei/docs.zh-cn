@@ -1,195 +1,188 @@
 ---
-title: "DataGrid 样式和模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], DataGrid"
-  - "DataGrid [WPF], 样式和模板"
-  - "部件 [WPF], DataGrid"
-  - "状态 [WPF], DataGrid"
-  - "样式 [WPF], DataGrid"
-  - "模板 [WPF], DataGrid"
+title: "DataGrid 样式和模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], DataGrid
+- ControlTemplate [WPF], DataGrid
+- DataGrid [WPF], styles and templates
+- templates [WPF], DataGrid
+- styles [WPF], DataGrid
+- parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid 样式和模板
-本主题介绍 <xref:System.Windows.Controls.DataGrid> 控件的样式和模板。  您可以修改默认的 <xref:System.Windows.Controls.ControlTemplate>，以便为控件提供一个独特的外观。  有关更多信息，请参见[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="datagrid-styles-and-templates"></a>DataGrid 样式和模板
+本主题介绍的样式和模板的<xref:System.Windows.Controls.DataGrid>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## DataGrid 部件  
- 下表列出了 <xref:System.Windows.Controls.DataGrid> 控件的命名部件。  
+## <a name="datagrid-parts"></a>DataGrid 部件  
+ 下表列出的命名的部件<xref:System.Windows.Controls.DataGrid>控件。  
   
-||||  
+|部件|类型|描述|  
 |-|-|-|  
-|组成部分|类型|说明|  
-|PART\_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|包含列标题的行。|  
+|PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|包含列标题的行。|  
   
- 在为 <xref:System.Windows.Controls.DataGrid> 创建 <xref:System.Windows.Controls.ControlTemplate> 时，模板可能在 <xref:System.Windows.Controls.ScrollViewer> 中包含 <xref:System.Windows.Controls.ItemsPresenter>。  （<xref:System.Windows.Controls.ItemsPresenter> 显示 <xref:System.Windows.Controls.DataGrid> 中的每一项；通过 <xref:System.Windows.Controls.ScrollViewer> 可以在控件内滚动）。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer> 的直接子级，则您必须为 <xref:System.Windows.Controls.ItemsPresenter> 提供名称 `ItemsPresenter`。  
+ 当你创建<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.DataGrid>，你的模板可能包含<xref:System.Windows.Controls.ItemsPresenter>内<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>显示中的每一项<xref:System.Windows.Controls.DataGrid>;<xref:System.Windows.Controls.ScrollViewer>使控件内滚动)。  如果<xref:System.Windows.Controls.ItemsPresenter>不的直接子级<xref:System.Windows.Controls.ScrollViewer>，您必须为指定<xref:System.Windows.Controls.ItemsPresenter>名称， `ItemsPresenter`。  
   
- <xref:System.Windows.Controls.DataGrid> 的默认模板包含一个 <xref:System.Windows.Controls.ScrollViewer> 控件。  有关由 <xref:System.Windows.Controls.ScrollViewer> 定义的部件的更多信息，请参见 [ScrollViewer 样式和模板](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)。  
+ 默认模板<xref:System.Windows.Controls.DataGrid>包含<xref:System.Windows.Controls.ScrollViewer>控件。 有关由定义的部分的详细信息<xref:System.Windows.Controls.ScrollViewer>，请参阅[ScrollViewer 样式和模板](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)。  
   
-## DataGrid 状态  
- 下表列出了 <xref:System.Windows.Controls.DataGrid> 控件的可视状态。  
+## <a name="datagrid-states"></a>DataGrid 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.DataGrid>控件。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Normal|CommonStates|默认状态。|  
-|禁用|CommonStates|控件被禁用。|  
+|普通|CommonStates|默认状态。|  
+|已禁用|CommonStates|已禁用控件。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
-|InvalidUnfocused|ValidationStates|控件无效并且没有焦点。|  
-|Valid|ValidationStates|控件有效。|  
+|InvalidUnfocused|ValidationStates|控件无效，并且没有焦点。|  
+|有效|ValidationStates|控件有效。|  
   
-## DataGridCell 部件  
- <xref:System.Windows.Controls.DataGridCell> 元素没有任何命名部件。  
+## <a name="datagridcell-parts"></a>DataGridCell 部件  
+ <xref:System.Windows.Controls.DataGridCell>元素不具有任何已命名的部件。  
   
-## DataGridCell 状态  
- 下表列出了 <xref:System.Windows.Controls.DataGridCell> 元素的可视状态。  
+## <a name="datagridcell-states"></a>DataGridCell 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.DataGridCell>元素。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Normal|CommonStates|默认状态。|  
-|MouseOver|CommonStates|鼠标指针置于单元格上。|  
-|Focused|FocusStates|单元格具有焦点。|  
-|Unfocused|FocusStates|单元格没有焦点|  
-|当前|CurrentStates|单元格是当前单元格。|  
+|普通|CommonStates|默认状态。|  
+|MouseOver|CommonStates|鼠标指针位于单元格。|  
+|已设定焦点|FocusStates|单元格有焦点。|  
+|失去焦点|FocusStates|单元格不具有焦点|  
+|当前|CurrentStates|该单元格对当前单元格。|  
 |规则|CurrentStates|单元格不是当前单元格。|  
-|显示|InteractionStates|单元格处于显示模式。|  
-|编辑|InteractionStates|单元格处于编辑模式。|  
-|已选定|SelectionStates|单元格已选择。|  
-|未选定|SelectionStates|单元格未选择。|  
-|InvalidFocused|ValidationStates|单元格无效，但具有焦点。|  
-|InvalidUnfocused|ValidationStates|单元格无效，并且没有焦点。|  
-|Valid|ValidationStates|单元格有效。|  
+|显示|InteractionStates|该单元格显示模式中。|  
+|编辑|InteractionStates|该单元格处于编辑模式。|  
+|已选定|SelectionStates|选择的单元。|  
+|未选定|SelectionStates|未选择的单元。|  
+|InvalidFocused|ValidationStates|单元格无效，具有焦点。|  
+|InvalidUnfocused|ValidationStates|单元格无效，不具有焦点。|  
+|有效|ValidationStates|该单元格有效。|  
   
-## DataGridRow 部件  
- <xref:System.Windows.Controls.DataGridRow> 元素没有任何命名部件。  
+## <a name="datagridrow-parts"></a>DataGridRow 部件  
+ <xref:System.Windows.Controls.DataGridRow>元素不具有任何已命名的部件。  
   
-## DataGridRow 状态  
- 下表列出了 <xref:System.Windows.Controls.DataGridRow> 元素的可视状态。  
+## <a name="datagridrow-states"></a>DataGridRow 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.DataGridRow>元素。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Normal|CommonStates|默认状态。|  
-|MouseOver|CommonStates|鼠标指针置于行上。|  
-|MouseOver\_Editing|CommonStates|鼠标指针置于行上，并且行处于编辑模式。|  
-|MouseOver\_Selected|CommonStates|鼠标指针置于行上，并且行已选择。|  
-|MouseOver\_Unfocused\_Editing|CommonStates|鼠标指针置于行上，行处于编辑模式，并且没有焦点。|  
-|MouseOver\_Unfocused\_Selected|CommonStates|鼠标指针置于行上，行已选择，并且没有焦点。|  
-|Normal\_AlternatingRow|CommonStates|行是交替行。|  
-|Normal\_Editing|CommonStates|行处于编辑模式。|  
-|Normal\_Selected|CommonStates|行已选择。|  
-|Unfocused\_Editing|CommonStates|行处于编辑模式，并且没有焦点。|  
-|Unfocused\_Selected|CommonStates|行已选择，并且没有焦点。|  
+|普通|CommonStates|默认状态。|  
+|MouseOver|CommonStates|鼠标指针位于行。|  
+|MouseOver_Editing|CommonStates|鼠标指针位于行和行处于编辑模式。|  
+|MouseOver_Selected|CommonStates|鼠标指针位于行和选择行。|  
+|MouseOver_Unfocused_Editing|CommonStates|鼠标指针位于行、 行处于编辑模式，并且不具有焦点。|  
+|MouseOver_Unfocused_Selected|CommonStates|鼠标指针位于行，行选择，并且不具有焦点。|  
+|Normal_AlternatingRow|CommonStates|行是交替行。|  
+|Normal_Editing|CommonStates|行处于编辑模式。|  
+|Normal_Selected|CommonStates|选择的行。|  
+|Unfocused_Editing|CommonStates|行处于编辑模式，并且不具有焦点。|  
+|Unfocused_Selected|CommonStates|行选择，并且不具有焦点。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
-|InvalidUnfocused|ValidationStates|控件无效并且没有焦点。|  
-|Valid|ValidationStates|控件有效。|  
+|InvalidUnfocused|ValidationStates|控件无效，并且没有焦点。|  
+|有效|ValidationStates|控件有效。|  
   
-## DataGridRowHeader 部件  
- 下表列出了 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 元素的命名部件。  
+## <a name="datagridrowheader-parts"></a>DataGridRowHeader 部件  
+ 下表列出的命名的部件<xref:System.Windows.Controls.Primitives.DataGridRowHeader>元素。  
   
-||||  
+|部件|类型|描述|  
 |-|-|-|  
-|组成部分|类型|说明|  
-|PART\_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从顶部调整行标题大小的元素。|  
-|PART\_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从底部调整行标题大小的元素。|  
+|PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于调整大小从顶部的行标题元素。|  
+|PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于调整大小从底部的行标头元素。|  
   
-## DataGridRowHeader 状态  
- 下表列出了 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 元素的可视状态。  
+## <a name="datagridrowheader-states"></a>DataGridRowHeader 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.Primitives.DataGridRowHeader>元素。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Normal|CommonStates|默认状态。|  
-|MouseOver|CommonStates|鼠标指针置于行上。|  
-|MouseOver\_CurrentRow|CommonStates|鼠标指针置于行上，并且行是当前行。|  
-|MouseOver\_CurrentRow\_Selected|CommonStates|鼠标指针置于行上，行是当前行并已选择。|  
-|MouseOver\_EditingRow|CommonStates|鼠标指针置于行上，并且行处于编辑模式。|  
-|MouseOver\_Selected|CommonStates|鼠标指针置于行上，并且行已选择。|  
-|MouseOver\_Unfocused\_CurrentRow\_Selected|CommonStates|鼠标指针置于行上，行是当前行并已选择，并且没有焦点。|  
-|MouseOver\_Unfocused\_EditingRow|CommonStates|鼠标指针置于行上，行处于编辑模式，并且没有焦点。|  
-|MouseOver\_Unfocused\_Selected|CommonStates|鼠标指针置于行上，行已选择，并且没有焦点。|  
-|Normal\_CurrentRow|CommonStates|行是当前行。|  
-|Normal\_CurrentRow\_Selected|CommonStates|行是当前行并已选择。|  
-|Normal\_EditingRow|CommonStates|行处于编辑模式。|  
-|Normal\_Selected|CommonStates|行已选择。|  
-|Unfocused\_CurrentRow\_Selected|CommonStates|行是当前行，已选择，并且没有焦点。|  
-|Unfocused\_EditingRow|CommonStates|行处于编辑模式，并且没有焦点。|  
-|Unfocused\_Selected|CommonStates|行已选择，并且没有焦点。|  
+|普通|CommonStates|默认状态。|  
+|MouseOver|CommonStates|鼠标指针位于行。|  
+|MouseOver_CurrentRow|CommonStates|鼠标指针位于行和行为当前行。|  
+|MouseOver_CurrentRow_Selected|CommonStates|鼠标指针置于行，并且行是当前和所选。|  
+|MouseOver_EditingRow|CommonStates|鼠标指针位于行和行处于编辑模式。|  
+|MouseOver_Selected|CommonStates|鼠标指针位于行和选择行。|  
+|MouseOver_Unfocused_CurrentRow_Selected|CommonStates|鼠标指针是否位于一行，行是当前和所选，和不具有焦点。|  
+|MouseOver_Unfocused_EditingRow|CommonStates|鼠标指针位于行、 行处于编辑模式，并且不具有焦点。|  
+|MouseOver_Unfocused_Selected|CommonStates|鼠标指针位于行，行选择，并且不具有焦点。|  
+|Normal_CurrentRow|CommonStates|行是当前行。|  
+|Normal_CurrentRow_Selected|CommonStates|行是当前行，并且选择了。|  
+|Normal_EditingRow|CommonStates|行处于编辑模式。|  
+|Normal_Selected|CommonStates|选择的行。|  
+|Unfocused_CurrentRow_Selected|CommonStates|行是当前行，被选定，并且不具有焦点。|  
+|Unfocused_EditingRow|CommonStates|行处于编辑模式，并且不具有焦点。|  
+|Unfocused_Selected|CommonStates|行选择，并且不具有焦点。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
-|InvalidUnfocused|ValidationStates|控件无效并且没有焦点。|  
-|Valid|ValidationStates|控件有效。|  
+|InvalidUnfocused|ValidationStates|控件无效，并且没有焦点。|  
+|有效|ValidationStates|控件有效。|  
   
-## DataGridColumnHeadersPresenter 部件  
- 下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 元素的命名部件。  
+## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter 部件  
+ 下表列出的命名的部件<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>元素。  
   
-||||  
+|部件|类型|描述|  
 |-|-|-|  
-|组成部分|类型|说明|  
-|PART\_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|列标题的占位符。|  
+|PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|列标题占位符。|  
   
-## DataGridColumnHeadersPresenter 状态  
- 下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 元素的可视状态。  
+## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>元素。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|InvalidFocused|ValidationStates|单元格无效，但具有焦点。|  
-|InvalidUnfocused|ValidationStates|单元格无效，并且没有焦点。|  
-|Valid|ValidationStates|单元格有效。|  
+|InvalidFocused|ValidationStates|单元格无效，具有焦点。|  
+|InvalidUnfocused|ValidationStates|单元格无效，不具有焦点。|  
+|有效|ValidationStates|该单元格有效。|  
   
-## DataGridColumnHeader 部件  
- 下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 元素的命名部件。  
+## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader 部件  
+ 下表列出的命名的部件<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>元素。  
   
-||||  
+|部件|类型|描述|  
 |-|-|-|  
-|组成部分|类型|说明|  
-|PART\_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从左侧调整列标题大小的元素。|  
-|PART\_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于从右侧调整列标题大小的元素。|  
+|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于调整大小从左侧的列标头元素。|  
+|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用于调整大小从右侧的列标头元素。|  
   
-## DataGridColumnHeader 状态  
- 下表列出了 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 元素的可视状态。  
+## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>元素。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Normal|CommonStates|默认状态。|  
-|MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|Pressed（已按下）|CommonStates|控件已按下。|  
-|SortAscending|SortStates|列按升序排序。|  
-|SortDescending|SortStates|列按降序排序。|  
-|Unsorted|SortStates|列未排序。|  
+|普通|CommonStates|默认状态。|  
+|MouseOver|CommonStates|鼠标指针悬停在控件上方。|  
+|已按下|CommonStates|已按下控件。|  
+|SortAscending|SortStates|对列进行排序以升序。|  
+|SortDescending|SortStates|对列进行排序以降序顺序。|  
+|未排序|SortStates|未对列进行排序。|  
 |InvalidFocused|ValidationStates|控件无效，但具有焦点。|  
-|InvalidUnfocused|ValidationStates|控件无效并且没有焦点。|  
-|Valid|ValidationStates|控件有效。|  
+|InvalidUnfocused|ValidationStates|控件无效，并且没有焦点。|  
+|有效|ValidationStates|控件有效。|  
   
-## DataGrid ControlTemplate 示例  
- 下面的示例演示如何为 <xref:System.Windows.Controls.DataGrid> 控件及其关联类型定义 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate 示例  
+ 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.DataGrid>控件和其关联的类型。  
   
- [!code-xml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- 上面的示例使用下面的一个或多个资源。  
+ 上一示例使用了一个或多个以下资源。  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 有关完整示例，请参见         [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)（使用 ControlTemplates 设置样式的示例）.  
+ 有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 请参阅  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

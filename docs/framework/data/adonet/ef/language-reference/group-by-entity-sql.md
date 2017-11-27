@@ -1,48 +1,46 @@
 ---
-title: "GROUP BY (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: GROUP BY (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: cb19589fbba12bba710638e061defa198f9fa169
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# GROUP BY (Entity SQL)
-指定由查询 \([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)\) 表达式返回的对象要分入的组。  
+# <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
+指定由查询 ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式返回的对象要分入的组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
 [ GROUP BY aliasedExpression [ ,...n ] ]  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  `aliasedExpression`  
- 要对其执行分组的任何有效查询表达式。`expression` 可以是属性或者是引用 FROM 子句所返回的属性的非聚合表达式。 GROUP BY 子句中的每一个表达式的求值结果必须为可比较相等性的类型。 这些类型通常为标量基元类型，如数字、字符串和日期。 不可按集合分组。  
+ 要对其执行分组的任何有效查询表达式。 `expression` 可以是属性或者是引用 FROM 子句所返回的属性的非聚合表达式。 GROUP BY 子句中的每一个表达式的求值结果必须为可比较相等性的类型。 这些类型通常为标量基元类型，如数字、字符串和日期。 不可按集合分组。  
   
-## 备注  
- 如果 SELECT 子句 \<select list\> 中包含聚合函数，则 GROUP BY 将计算每个组的汇总值。 指定 GROUP BY 时，选择列表中任何非聚合表达式内的每个属性名都应包含在 GROUP BY 列表中，或者 GROUP BY 表达式必须与选择列表表达式完全匹配。  
+## <a name="remarks"></a>备注  
+ 如果聚合函数包括在 SELECT 子句\<选择列表 >，GROUP BY 将计算每个组的汇总值。 指定 GROUP BY 时，选择列表中任何非聚合表达式内的每个属性名都应包含在 GROUP BY 列表中，或者 GROUP BY 表达式必须与选择列表表达式完全匹配。  
   
 > [!NOTE]
 >  如果未指定 ORDER BY 子句，则使用 GROUP BY 子句返回的组没有任何特定的顺序。 若要指定特定的数据排序，建议始终使用 ORDER BY 子句。  
   
  指定 GROUP BY 子句时，无论是显式指定还是隐式指定（例如，通过查询中的 HAVING 子句指定），当前作用域都将隐藏，并且将引入新的作用域。  
   
- SELECT 子句、HAVING 子句和 ORDER BY 子句将无法再引用 FROM 子句中指定的元素名。 您只能引用分组表达式本身。 为此，可以为每个分组表达式指定新的名称（别名）。 如果没有为分组表达式指定别名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将尝试使用别名生成规则来生成别名，如下例中所示。  
+ SELECT 子句、HAVING 子句和 ORDER BY 子句将无法再引用 FROM 子句中指定的元素名。 您只能引用分组表达式本身。 为此，可以为每个分组表达式指定新的名称（别名）。 如果没有为分组表达式指定别名， [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将尝试使用别名生成规则来生成别名，如下例中所示。  
   
  `SELECT g1, g2, ...gn FROM c as c1`  
   
@@ -71,15 +69,15 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
  有关使用 GROUP BY 的示例，请参阅 [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 GROUP BY 运算符来指定查询所返回的对象的分组。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  执行 [如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md) 中的过程。  
+1.  按照中的步骤[如何： 执行查询该返回 PrimitiveType 结果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
 2.  将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
-## 请参阅  
- [Entity SQL 参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

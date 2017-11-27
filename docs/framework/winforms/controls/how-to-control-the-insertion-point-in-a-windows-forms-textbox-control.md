@@ -1,46 +1,50 @@
 ---
-title: "如何：控制 Windows 窗体 TextBox 控件中的插入点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "插入点, TextBox 控件"
-  - "文本框, 控制插入点"
-  - "TextBox 控件 [Windows 窗体], 插入点"
+title: "如何：控制 Windows 窗体 TextBox 控件中的插入点"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- TextBox control [Windows Forms], insertion point
+- insertion points [Windows Forms], TextBox controls
+- text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5cc3dab3acafdb151cf14f81145ef47e5a6ff689
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：控制 Windows 窗体 TextBox 控件中的插入点
-当 Windows 窗体 <xref:System.Windows.Forms.TextBox> 控件最初获得焦点时，文本框内的默认插入点在任何现有文本的左侧。  用户可以使用键盘或鼠标来移动插入点。  如果文本框失去焦点而后又再次获得焦点，则插入点为用户上一次放置的位置。  
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>如何：控制 Windows 窗体 TextBox 控件中的插入点
+在 Windows 窗体时<xref:System.Windows.Forms.TextBox>控件首先获得焦点时，文本框内的默认插入位于任何现有的文本的左边。 用户可以移动鼠标或键盘的插入点。 如果文本框失去并且然后重新获得焦点，插入点将用户上次放置的任何位置它。  
   
- 在某些情况下，此行为可能给用户带来不便。  在字处理应用程序中，用户可能希望新字符显示在任何现有文本的后面。  在数据输入应用程序中，用户可能希望新字符替换任何现有项。  <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 和 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 属性使您可以根据自己的需要来修改此行为。  
+ 在某些情况下，此行为可能给用户带来不便。 在文字处理应用程序，用户可能希望新字符后任何现有的文本显示。 在数据输入应用程序中，用户可能会要替换任何现有项的新字符。 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>和<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性使您能够修改以满足你的目的的行为。  
   
-### 控制 TextBox 控件中的插入点  
+### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>若要控制文本框控件中的插入点  
   
-1.  将 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 属性设置为适当的值。  如果值为零，则插入点紧挨第一个字符的左边。  
+1.  将 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 属性设置为适当的值。 零放置插入点的第一个字符左侧。  
   
-2.  （可选）将 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 属性设置为要选择的文本的长度。  
+2.  （可选）设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性设置为你想要选择的文本的长度。  
   
-     下面的代码始终将插入点的位置恢复到 0。  `TextBox1_Enter` 事件处理程序必须绑定到控件；有关更多信息，请参见 [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)。  
+     下面的代码始终为 0 返回插入点。 `TextBox1_Enter`事件处理程序必须绑定到控件; 有关详细信息，请参阅[Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)。  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
        TextBox1.SelectionStart = 0  
        TextBox1.SelectionLength = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -48,7 +52,6 @@ caps.handback.revision: 19
        textBox1.SelectionStart = 0;  
        textBox1.SelectionLength = 0;  
     }  
-  
     ```  
   
     ```cpp  
@@ -61,19 +64,19 @@ caps.handback.revision: 19
        }  
     ```  
   
-## 使插入点默认情况下可见  
- 只有当 <xref:System.Windows.Forms.TextBox> 控件处于 Tab 键顺序中的第一个位置时，<xref:System.Windows.Forms.TextBox> 插入点才默认在新窗体中可见。  否则，只有当使用键盘或鼠标使 <xref:System.Windows.Forms.TextBox> 具有焦点时，才会显示插入点。  
+## <a name="making-the-insertion-point-visible-by-default"></a>使插入点默认情况下可见  
+ <xref:System.Windows.Forms.TextBox>插入点，则默认情况下，在新的窗体才可见<xref:System.Windows.Forms.TextBox>控件是第一个 tab 键顺序。 否则，插入点将显示仅当为<xref:System.Windows.Forms.TextBox>使用鼠标或键盘焦点。  
   
-#### 使文本框插入点在新窗体中默认可见  
+#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>若要使文本框将插入点默认情况下，新的窗体上可见  
   
--   将 <xref:System.Windows.Forms.TextBox> 控件的 <xref:System.Windows.Forms.Control.TabIndex%2A> 属性设置为 `0`。  
+-   设置<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.Control.TabIndex%2A>属性`0`。  
   
-## 请参阅  
- <xref:System.Windows.Forms.TextBox>   
- [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [如何：创建只读文本框](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [如何：在字符串中放置引号](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [如何：在 Windows 窗体 TextBox 控件中选择文本](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [如何：在 Windows 窗体 TextBox 控件中查看多个行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.TextBox>  
+ [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [如何：创建只读文本框](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [如何：在字符串中添加引号](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [如何：在 Windows 窗体 TextBox 控件中选择文本](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [如何：在 Windows 窗体 TextBox 控件中查看多个行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  [TextBox 控件](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
