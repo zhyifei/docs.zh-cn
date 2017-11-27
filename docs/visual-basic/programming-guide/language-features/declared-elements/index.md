@@ -1,39 +1,21 @@
 ---
 title: "已声明的元素 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 0c437331e5fb1a5b9d727b3e24760250685fd365
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="declared-elements-in-visual-basic"></a>已声明的元素 (Visual Basic)
 已声明的元素是在声明语句中定义的编程元素。 已声明的元素包括变量、常量、枚举、类，结构、模块、接口、过程、过程参数、函数返回、外部过程引用、运算符、属性、事件和委托。  
@@ -87,4 +69,3 @@ ms.lasthandoff: 07/28/2017
   
  [声明上下文和默认访问级别](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
  列出已声明元素的类型，并介绍每个元素的声明语句、可以在其中声明此元素的上下文，以及每个元素的默认访问级别。
-

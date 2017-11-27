@@ -1,42 +1,24 @@
 ---
 title: "事件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 虽然可以将 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 项目可视化为按序列执行的一系列过程，但实际上大多数程序都是事件驱动型。也就是说，外部发生的*事件*决定了执行流。  
@@ -81,7 +63,7 @@ ms.lasthandoff: 07/28/2017
   
 -   不能将 `WithEvents` 变量用作对象变量。 也就是说，不能将其声明为 `Object`，必须在声明变量时指定类名。  
   
--   由于共享事件未与类实例绑定，因此不能使用 `WithEvents` 以声明性方式处理共享事件。 同样，不能使用 `WithEvents` 或 `Handles` 处理 `Structure` 中的事件。 在这两种情况下，均可使用 `AddHandler` 语句处理这些事件。  
+-   因为共享的事件不会与类实例关联的不能使用`WithEvents`以声明方式处理共享的事件。 同样，不能使用 `WithEvents` 或 `Handles` 处理 `Structure` 中的事件。 在这两种情况下，均可使用 `AddHandler` 语句处理这些事件。  
   
 -   无法创建 `WithEvents` 变量的数组。  
   
@@ -133,4 +115,3 @@ ms.lasthandoff: 07/28/2017
 |[事件](../../../../standard/events/index.md)|概述了 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的事件模型。|  
 |[在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)|介绍了如何处理与 Windows 窗体对象关联的事件。|  
 |[委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|概述了 Visual Basic 中的委托。|
-

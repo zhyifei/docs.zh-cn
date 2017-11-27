@@ -1,41 +1,23 @@
 ---
 title: "接口 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, interfaces
-- interfaces, Visual Basic
+- interfaces [Visual Basic], Visual Basic
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 0b3f13cd69564a61da1a961e35c5319e4c2d79aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  
@@ -108,4 +90,3 @@ ms.lasthandoff: 08/11/2017
 |-----------|-----------------|  
 |[演练：创建和实现接口](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供引导你定义和实现自己的接口的详细过程。|  
 |[泛型接口中的变体](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|讨论泛型接口中的协变和逆变，提供 .NET Framework 中的变体泛型接口列表。|
-

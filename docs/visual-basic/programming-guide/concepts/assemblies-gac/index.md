@@ -1,31 +1,22 @@
 ---
 title: "程序集和全局程序集缓存 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 8a53a153851973c735a430056520b01c27b1ef59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>程序集和全局程序集缓存 (Visual Basic)
 程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 作为 .NET Framework 的构建基块，程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式。 它们向公共语言运行时提供了注意类型实现代码所需的信息。 可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。  
@@ -51,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
 -   文件表，描述构成程序集的其他所有文件（例如，.exe 或 .dll 文件依赖的其他任何程序集、位图或自述文件）。  
   
--   *程序集引用列表*，列出了应用程序需要的可能由其他人创建的所有外部依赖项（.dll 或其他文件）。 程序集既可以引用全局对象，也可以引用私有对象。 全局对象驻留在全局程序集缓存中，此区域对其他应用程序也可用，类似于 System32 目录。 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空间是全局程序集缓存中的程序集示例。 私有对象必须位于级别不高于应用程序安装目录的目录中。  
+-   *程序集引用列表*，列出了应用程序需要的可能由其他人创建的所有外部依赖项（.dll 或其他文件）。 程序集既可以引用全局对象，也可以引用私有对象。 全局对象驻留在全局程序集缓存中，此区域对其他应用程序也可用，类似于 System32 目录。 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间是全局程序集缓存中的程序集示例。 私有对象必须位于级别不高于应用程序安装目录的目录中。  
   
  由于程序集包含内容、版本控制和依赖项的相关信息，因此使用 Visual Basic 创建的应用程序并不依赖 Windows 注册表值才能正常运行。 程序集减少了 .dll 冲突，让应用程序变得更可靠、更易于部署。 在许多情况下，只需将 .NET 应用程序的文件复制到目标计算机，即可进行安装。  
   
@@ -67,12 +58,11 @@ ms.lasthandoff: 07/28/2017
 >  若要在 Visual Studio 中生成程序集，请选择“生成”菜单上的“生成”。  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时中的程序集](https://msdn.microsoft.com/library/k3677y81)   
- [友元程序集 (Visual Basic)](friend-assemblies.md)   
- [如何：与其他应用程序共享程序集 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)   
- [如何：加载和卸载程序集 (Visual Basic)](how-to-load-and-unload-assemblies.md)   
- [如何：确定文件是否为程序集 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)   
- [如何：使用命令行创建和使用程序集 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
+ [Assemblies in the Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)（公共语言运行时中的程序集）  
+ [友元程序集 (Visual Basic)](friend-assemblies.md)  
+ [如何： 与其他应用程序 (Visual Basic) 共享程序集](how-to-share-an-assembly-with-other-applications.md)  
+ [如何： 加载和卸载程序集 (Visual Basic)](how-to-load-and-unload-assemblies.md)  
+ [如何： 确定文件是否为程序集 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [如何： 创建和使用程序集使用命令行 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
-

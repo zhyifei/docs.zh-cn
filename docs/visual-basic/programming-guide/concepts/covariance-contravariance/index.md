@@ -1,28 +1,19 @@
 ---
 title: "协变和逆变 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 8d31737fc3d02c9caa4c13ef2d69e5e3192ef3af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 1df3b01573ae1a9dc5c106efa5e387927c57c55f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>协变和逆变 (Visual Basic)
 在 Visual Basic 中，协变和逆变能够实现数组类型、委托类型和泛型类型参数的隐式引用转换。 协变保留分配兼容性，逆变则与之相反。  
@@ -114,4 +105,3 @@ Dim objects As IEnumerable(Of Object) = strings
 |[委托中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|讨论泛型委托和非泛型委托中的协变和逆变，并提供 .NET Framework 中的变体泛型委托列表。|  
 |[使用委托中的变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|演示如何使用非泛型委托中的协变和逆变支持以将方法签名与委托类型相匹配。|  
 |[对 Func 和 Action 泛型委托使用变体 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|演示 `Func` 委托和 `Action` 委托中对协变和逆变的支持如何帮助重复使用代码。|
-

@@ -1,45 +1,25 @@
 ---
 title: "Visual Basic 中的数组"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Array
-dev_langs:
-- VB
+f1_keywords: vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 04deeccd19fd4edb3f2c88310d660eedf5c707d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
 数组是一组在逻辑上彼此相关的值，如语法学校中每个年级学生的数量。  如果你要查找有关 Visual Basic for Applications (VBA) 中的数组的帮助，请参阅 [语言参考](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx)。  
@@ -147,7 +127,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[VbVbalrArrays#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#6)]  
   
-##  <a name="BKMK_Populating"></a>使用初始值填充数组  
+##  <a name="BKMK_Populating"></a> 使用初始值填充数组  
  通过使用数组文本，可以创建包含一组初始值的数组。 数组文本包含用逗号分隔的值列表，这些值被括在括号内 (`{}`)。  
   
  通过使用数组文本创建数组时，可以提供数组类型或使用类型推理功能来确定数组类型。 下面的代码演示了两种选项。  
@@ -160,7 +140,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[VbVbalrCollectionInitializers#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#4)]  
   
-###  <a name="BKMK_NestedArrayLiterals"></a>嵌套的数组文本  
+###  <a name="BKMK_NestedArrayLiterals"></a> 嵌套的数组文本  
  可以通过使用嵌套的数组文本创建多维数组。 嵌套的数组文本必须具有维度和维度数目或排名，这与生成的数组保持一致。 下面的代码示例通过使用数组文本创建了一个二维的整数数组。  
   
  [!code-vb[VbVbalrCollectionInitializers#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#7)]  
@@ -210,14 +190,14 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[VbVbalrArrays#52](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#52)]  
   
-##  <a name="BKMK_JaggedArrays"></a>交错数组  
+##  <a name="BKMK_JaggedArrays"></a> 交错数组  
  保留其他数组作为元素的数组被称为数组的数组或交错数组。 交错数组和交错数组中的每个元素都可以具有一个或多个维度。 有时应用程序中的数据结构是二维而不是矩形。  
   
  下面的示例是月份数组，其中每个元素是天数数组。 由于不同的月份具有的天数也不同，因此元素不构成矩形二维数组。 因此，使用交错数组而不是多维数组。  
   
  [!code-vb[VbVbalrArrays#21](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#21)]  
   
-##  <a name="BKMK_ZeroLength"></a>零长度数组  
+##  <a name="BKMK_ZeroLength"></a> 零长度数组  
  不包含任何元素的数组也称为零长度数组。 保留零长度数组的变量不具有值 `Nothing`。 若要创建一个不包含任何元素的数组，可声明数组的维度之一为 -1，如以下示例所示。  
   
  [!code-vb[VbVbalrArrays#14](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#14)]  
@@ -257,11 +237,11 @@ Dim prices(3, 4, 5) As Long
 ##  <a name="BKMK_ArrayTypes"></a> 数组类型和其他类型  
  每个数组都具有一个数据类型，但不同于它的元素的数据类型。 没有一种数据类型能用于所有数组。 相反，数组的数据类型由数组的维度数量或 *“排名”*，以及数组中元素的数据类型确定。 仅当两个数组变量具有相同的排名且它们的元素具有相同的数据类型时，它们才被视为具有相同的数据类型。 数组中维度长度不会影响数组数据类型。  
   
- 每个数组都继承自 <xref:System.Array?displayProperty=fullName> 类，并且你可以声明一个类型为 `Array` 的变量，但不能创建一个类型为 `Array` 的数组。 此外，[ReDim 语句](../../../../visual-basic/language-reference/statements/redim-statement.md)无法对声明为类型 `Array` 的变量执行运算。 出于这些原因，以及为类型安全考虑，最好将每个数组声明为特定类型，例如前面示例中的 `Integer` 。  
+ 每个数组都继承自 <xref:System.Array?displayProperty=nameWithType> 类，并且你可以声明一个类型为 `Array` 的变量，但不能创建一个类型为 `Array` 的数组。 此外，[ReDim 语句](../../../../visual-basic/language-reference/statements/redim-statement.md)无法对声明为类型 `Array` 的变量执行运算。 出于这些原因，以及为类型安全考虑，最好将每个数组声明为特定类型，例如前面示例中的 `Integer` 。  
   
  你可以通过几种方式了解到数组及其元素的数据类型。  
   
--   你可以调用变量上的 <xref:System.Object.GetType%2A?displayProperty=fullName> 方法来接收此变量的运行时类型的 <xref:System.Type> 对象。 <xref:System.Type> 对象可在其属性和方法中保存大量信息。  
+-   你可以调用变量上的 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法来接收此变量的运行时类型的 <xref:System.Type> 对象。 <xref:System.Type> 对象可在其属性和方法中保存大量信息。  
   
 -   你可以将该变量传递到 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函数来接收包含运行时类型名称的 `String` 。  
   
@@ -271,19 +251,19 @@ Dim prices(3, 4, 5) As Long
   
  [!code-vb[VbVbalrArrays#15](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#15)]  
   
-##  <a name="BKMK_Collections"></a>替代数组的集合  
+##  <a name="BKMK_Collections"></a> 作为数组的替代方法的集合  
  数组最适用于创建和使用固定数量的强类型化对象。 集合提供更灵活的方式来使用对象组。 与数组不同，你使用的对象组会随着应用程序更改的需要动态地放大和缩小。  
   
  如果需要更改数组大小，必须使用 [ReDim 语句](../../../../visual-basic/language-reference/statements/redim-statement.md)。 当你这样做时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会新建一个数组，并释放旧数组以供处置。 这需要执行时间。 因此，如果你正在使用的项目数量频繁变化，或者你无法预测你所需的最大项目数量，使用集合也许能够获得更好的性能。  
   
  对于某些集合，你可以为放入集合中的任何对象分配一个密钥，这样你便可以使用该密钥快速检索此对象。  
   
- 如果你的集合中只包含一种数据类型的元素，你可以使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
+ 如果你的集合中只包含一种数据类型的元素，你可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
   
  有关集合的详细信息，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
   
 ### <a name="example"></a>示例  
- 下面的示例使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 泛型类 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 创建 `Customer` 对象的列表集合。  
+ 下面的示例使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 泛型类 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 创建 `Customer` 对象的列表集合。  
   
  [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
   
@@ -300,7 +280,6 @@ Dim prices(3, 4, 5) As Long
 |[数组疑难解答](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|讨论在使用数组时出现的一些常见问题。|  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Array>   
- [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)   
+ <xref:System.Array>  
+ [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [ReDim 语句](../../../../visual-basic/language-reference/statements/redim-statement.md)
-

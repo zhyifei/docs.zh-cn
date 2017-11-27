@@ -1,43 +1,25 @@
 ---
 title: "错误消息 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbeca9d1b6971f8b3de112eb6a199b8bacbc1670
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="error-messages-visual-basic"></a>错误消息 (Visual Basic)
 编写、编译或运行 Visual Basic 应用程序时，可能会生成以下类型的错误：  
@@ -61,4 +43,3 @@ ms.lasthandoff: 07/28/2017
  如果标识符有波形下划线，且最右边的字符下面有短下划线，可以为类、构造函数、方法、属性、字段或枚举生成存根。 有关详细信息，请参阅[根据使用情况生成](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage)。
   
  通过解决 Visual Basic 编译器警告提示的问题，可以编写运行速度更快、bug 更少的代码。 这些警告可以识别可能会在应用程序运行时生成错误的代码。 例如，如果尝试调用未赋值的对象变量的成员、让未设置返回值的函数返回值或执行有逻辑错误的 `Try` 代码块来捕获异常，编译器都会生成警告。 若要详细了解警告（包括如何启用和禁用警告），请参阅[在 Visual Basic 中配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。
-

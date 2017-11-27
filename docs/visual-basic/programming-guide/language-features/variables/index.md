@@ -1,43 +1,25 @@
 ---
 title: "变量 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2fdc670bf4f17000809e75e32c32edb39abf0fed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: a7a47ad7e4ade9f15159c27ac672aeb937a05493
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variables-in-visual-basic"></a>变量 (Visual Basic)
 使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 执行计算时，经常需要存储值。 例如，可能需要计算、比较多个值，并根据比较结果对这些值执行不同的运算。 若要进行比较，必须保留这些值。  
@@ -61,10 +43,9 @@ ms.lasthandoff: 07/28/2017
  与变量一样，属性表示可访问的值。 不过，它比变量更复杂。 属性使用代码块来控制如何设置并检索值。 有关详细信息，请参阅 [Visual Basic 中属性和变量的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [变量疑难解答](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
- [如何：将数据移入和移出变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
- [Visual Basic 中属性和变量的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
+ [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [变量疑难解答](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)  
+ [如何：将数据移入和移出变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [在 Visual Basic 中属性和变量之间的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)  
  [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-

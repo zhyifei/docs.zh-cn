@@ -8,27 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework 中的安全性
 公共语言运行时和 .NET Framework 提供许多有用的类和服务，让开发人员能够轻松编写安全代码，并让系统管理员能够自定义对代码授予的权限，使代码可以访问受保护的资源。 此外，运行时和 .NET Framework 提供了有用的类和服务，以方便使用加密和基于角色的安全性。  
@@ -58,4 +52,3 @@ ms.lasthandoff: 09/05/2017
 ## <a name="related-sections"></a>相关章节  
  [开发指南](../../../docs/framework/development-guide.md)  
  提供了有关应用程序开发的所有关键技术区域和任务（包括创建、配置、调试、保护和部署应用程序）的指南，以及有关动态编程、互操作性、扩展性、内存管理和线程处理的信息。
-
