@@ -8,54 +8,47 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="security-in-the-net-framework"></a>.NET Framework 中的安全性
-公共语言运行时和 .NET Framework 提供许多有用的类和服务，让开发人员能够轻松编写安全代码，并让系统管理员能够自定义对代码授予的权限，使代码可以访问受保护的资源。 此外，运行时和 .NET Framework 提供了有用的类和服务，以方便使用加密和基于角色的安全性。  
+# <a name="security-in-the-net-framework"></a><span data-ttu-id="cce65-102">.NET Framework 中的安全性</span><span class="sxs-lookup"><span data-stu-id="cce65-102">Security in the .NET Framework</span></span>
+<span data-ttu-id="cce65-103">公共语言运行时和 .NET Framework 提供许多有用的类和服务，让开发人员能够轻松编写安全代码，并让系统管理员能够自定义对代码授予的权限，使代码可以访问受保护的资源。</span><span class="sxs-lookup"><span data-stu-id="cce65-103">The common language runtime and the .NET Framework provide many useful classes and services that enable developers to easily write secure code and enable system administrators to customize the permissions granted to code so that it can access protected resources.</span></span> <span data-ttu-id="cce65-104">此外，运行时和 .NET Framework 提供了有用的类和服务，以方便使用加密和基于角色的安全性。</span><span class="sxs-lookup"><span data-stu-id="cce65-104">In addition, the runtime and the .NET Framework provide useful classes and services that facilitate the use of cryptography and role-based security.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
- [安全更改](../../../docs/framework/security/security-changes.md)  
- 描述对 .NET Framework 安全系统进行的重要更改。  
+## <a name="in-this-section"></a><span data-ttu-id="cce65-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="cce65-105">In This Section</span></span>  
+ [<span data-ttu-id="cce65-106">安全更改</span><span class="sxs-lookup"><span data-stu-id="cce65-106">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)  
+ <span data-ttu-id="cce65-107">描述对 .NET Framework 安全系统进行的重要更改。</span><span class="sxs-lookup"><span data-stu-id="cce65-107">Describes important changes to the .NET Framework security system.</span></span>  
   
- [安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)  
- 概述公共语言运行时的安全功能。 本节是开发人员和系统管理员感兴趣的内容。  
+ [<span data-ttu-id="cce65-108">安全性的基础概念</span><span class="sxs-lookup"><span data-stu-id="cce65-108">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="cce65-109">概述公共语言运行时的安全功能。</span><span class="sxs-lookup"><span data-stu-id="cce65-109">Provides an overview of common language runtime security features.</span></span> <span data-ttu-id="cce65-110">本节是开发人员和系统管理员感兴趣的内容。</span><span class="sxs-lookup"><span data-stu-id="cce65-110">This section is of interest to developers and system administrators.</span></span>  
   
- [基于角色的安全性](../../../docs/standard/security/role-based-security.md)  
- 描述如何在代码中与基于角色的安全性进行交互。 本节是开发人员感兴趣的内容。  
+ [<span data-ttu-id="cce65-111">基于角色的安全性</span><span class="sxs-lookup"><span data-stu-id="cce65-111">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ <span data-ttu-id="cce65-112">描述如何在代码中与基于角色的安全性进行交互。</span><span class="sxs-lookup"><span data-stu-id="cce65-112">Describes how to interact with role-based security in your code.</span></span> <span data-ttu-id="cce65-113">本节是开发人员感兴趣的内容。</span><span class="sxs-lookup"><span data-stu-id="cce65-113">This section is of interest to developers.</span></span>  
   
- [加密模型](../../../docs/standard/security/cryptography-model.md)  
- 概述 .NET Framework 提供的加密服务。 本节是开发人员感兴趣的内容。  
+ [<span data-ttu-id="cce65-114">加密模型</span><span class="sxs-lookup"><span data-stu-id="cce65-114">Cryptography Model</span></span>](../../../docs/standard/security/cryptography-model.md)  
+ <span data-ttu-id="cce65-115">概述 .NET Framework 提供的加密服务。</span><span class="sxs-lookup"><span data-stu-id="cce65-115">Provides an overview of cryptographic services provided by the .NET Framework.</span></span> <span data-ttu-id="cce65-116">本节是开发人员感兴趣的内容。</span><span class="sxs-lookup"><span data-stu-id="cce65-116">This section is of interest to developers.</span></span>  
   
- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)  
- 描述创建可靠的.NET Framework 应用程序的一些最佳做法。 本节是开发人员感兴趣的内容。  
+ [<span data-ttu-id="cce65-117">安全编码准则</span><span class="sxs-lookup"><span data-stu-id="cce65-117">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="cce65-118">描述创建可靠的.NET Framework 应用程序的一些最佳做法。</span><span class="sxs-lookup"><span data-stu-id="cce65-118">Describes some of the best practices for creating reliable .NET Framework applications.</span></span> <span data-ttu-id="cce65-119">本节是开发人员感兴趣的内容。</span><span class="sxs-lookup"><span data-stu-id="cce65-119">This section is of interest to developers.</span></span>  
   
- [非托管代码的安全编码指南](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- 描述在调用非托管代码时的一些最佳做法和安全问题。  
+ [<span data-ttu-id="cce65-120">非托管代码的安全编码指南</span><span class="sxs-lookup"><span data-stu-id="cce65-120">Secure Coding Guidelines for Unmanaged Code</span></span>](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
+ <span data-ttu-id="cce65-121">描述在调用非托管代码时的一些最佳做法和安全问题。</span><span class="sxs-lookup"><span data-stu-id="cce65-121">Describes some of the best practices and security concerns when calling unmanaged code.</span></span>  
   
- [Windows Identity Foundation](../../../docs/framework/security/index.md)  
- 描述如何在应用程序中实现基于声明的标识。  
+ [<span data-ttu-id="cce65-122">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="cce65-122">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)  
+ <span data-ttu-id="cce65-123">描述如何在应用程序中实现基于声明的标识。</span><span class="sxs-lookup"><span data-stu-id="cce65-123">Describes how you can implement claims-based identity in your applications.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- [开发指南](../../../docs/framework/development-guide.md)  
- 提供了有关应用程序开发的所有关键技术区域和任务（包括创建、配置、调试、保护和部署应用程序）的指南，以及有关动态编程、互操作性、扩展性、内存管理和线程处理的信息。
-
+## <a name="related-sections"></a><span data-ttu-id="cce65-124">相关章节</span><span class="sxs-lookup"><span data-stu-id="cce65-124">Related Sections</span></span>  
+ [<span data-ttu-id="cce65-125">开发指南</span><span class="sxs-lookup"><span data-stu-id="cce65-125">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+ <span data-ttu-id="cce65-126">提供了有关应用程序开发的所有关键技术区域和任务（包括创建、配置、调试、保护和部署应用程序）的指南，以及有关动态编程、互操作性、扩展性、内存管理和线程处理的信息。</span><span class="sxs-lookup"><span data-stu-id="cce65-126">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>
