@@ -1,70 +1,71 @@
 ---
-title: "webRequestModules -&gt; &lt;clear&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> 元素, webRequestModules"
-  - "<webRequestModules>, clear 元素"
-  - "clear 元素, webRequestModules"
-  - "webRequestModules, clear 元素"
+title: "&lt;清除&gt;webRequestModules （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- <clear> element, webRequestModules
+- <webRequestModules>, clear element
+- webRequestModules, clear element
+- clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c88792663b07ace7250b6ee4065e60d6cfb90afd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# webRequestModules -&gt; &lt;clear&gt; 元素（网络设置）
-从应用程序中移除所有已注册的 Web 请求模块。  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="7dd77-102">&lt;清除&gt;webRequestModules （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="7dd77-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="7dd77-103">从应用程序中删除所有已注册的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="7dd77-103">Removes all registered Web request modules from the application.</span></span>  
   
-## 语法  
+ <span data-ttu-id="7dd77-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7dd77-104">\<configuration></span></span>  
+<span data-ttu-id="7dd77-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="7dd77-105">\<system.net></span></span>  
+<span data-ttu-id="7dd77-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="7dd77-106">\<webRequestModules></span></span>  
+<span data-ttu-id="7dd77-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="7dd77-107">\<clear></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7dd77-108">语法</span><span class="sxs-lookup"><span data-stu-id="7dd77-108">Syntax</span></span>  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7dd77-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="7dd77-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7dd77-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="7dd77-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="7dd77-111">特性</span><span class="sxs-lookup"><span data-stu-id="7dd77-111">Attributes</span></span>  
+ <span data-ttu-id="7dd77-112">无。</span><span class="sxs-lookup"><span data-stu-id="7dd77-112">None.</span></span>  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="7dd77-113">子元素</span><span class="sxs-lookup"><span data-stu-id="7dd77-113">Child Elements</span></span>  
+ <span data-ttu-id="7dd77-114">无。</span><span class="sxs-lookup"><span data-stu-id="7dd77-114">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="7dd77-115">父元素</span><span class="sxs-lookup"><span data-stu-id="7dd77-115">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用于向网络主机请求信息的模块。|  
+|<span data-ttu-id="7dd77-116">**元素**</span><span class="sxs-lookup"><span data-stu-id="7dd77-116">**Element**</span></span>|<span data-ttu-id="7dd77-117">**描述**</span><span class="sxs-lookup"><span data-stu-id="7dd77-117">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="7dd77-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="7dd77-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="7dd77-119">指定要用于从网络主机请求信息的模块。</span><span class="sxs-lookup"><span data-stu-id="7dd77-119">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## 备注  
- `clear` 元素移除所有注册的 Web 请求模块，这些请求模块是较早在配置文件中或在配置层次结构的较高级别定义的。  
+## <a name="remarks"></a><span data-ttu-id="7dd77-120">备注</span><span class="sxs-lookup"><span data-stu-id="7dd77-120">Remarks</span></span>  
+ <span data-ttu-id="7dd77-121">`clear`元素中删除所有已注册的配置文件中或在配置层次结构中较高级别前面定义的 Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="7dd77-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a><span data-ttu-id="7dd77-122">配置文件</span><span class="sxs-lookup"><span data-stu-id="7dd77-122">Configuration Files</span></span>  
+ <span data-ttu-id="7dd77-123">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="7dd77-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 示例  
- 下面的代码示例清除所有 Web 请求模块，然后为 HTTP 注册 Web 请求模块。  
+## <a name="example"></a><span data-ttu-id="7dd77-124">示例</span><span class="sxs-lookup"><span data-stu-id="7dd77-124">Example</span></span>  
+ <span data-ttu-id="7dd77-125">下面的示例将清除所有 Web 请求模块，然后注册 HTTP Web 请求模块。</span><span class="sxs-lookup"><span data-stu-id="7dd77-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -78,6 +79,6 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebRequest>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="7dd77-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7dd77-126">See Also</span></span>  
+ <xref:System.Net.WebRequest>  
+ [<span data-ttu-id="7dd77-127">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="7dd77-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

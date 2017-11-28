@@ -1,88 +1,90 @@
 ---
-title: "&lt;applicationPool&gt; 元素（Web 设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<applicationPool> 元素"
-  - "applicationPool 元素"
+title: "&lt;applicationPool&gt;元素 （Web 设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applicationPool element
+- <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;applicationPool&gt; 元素（Web 设置）
-指定配置设置，当 ASP.NET 应用程序在 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 或更高版本上以集成模式运行时，ASP.NET 可以使用这些设置来管理进程范围的行为。  
+# <a name="ltapplicationpoolgt-element-web-settings"></a><span data-ttu-id="07225-102">&lt;applicationPool&gt;元素 （Web 设置）</span><span class="sxs-lookup"><span data-stu-id="07225-102">&lt;applicationPool&gt; Element (Web Settings)</span></span>
+<span data-ttu-id="07225-103">指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理进程范围的行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。</span><span class="sxs-lookup"><span data-stu-id="07225-103">Specifies configuration settings that are used by ASP.NET to manage process-wide behavior when an ASP.NET application is running in Integrated mode on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version.</span></span>  
   
 > [!IMPORTANT]
->  此元素及其支持的功能仅在 ASP.NET 应用程序承载于 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 或更高版本上时才起作用。  
+>  <span data-ttu-id="07225-104">此元素和功能它支持才起作用，如果你的 ASP.NET 应用程序托管在[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。</span><span class="sxs-lookup"><span data-stu-id="07225-104">This element and the feature it supports only work if your ASP.NET application is hosted on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions.</span></span>  
   
-## 语法  
+ <span data-ttu-id="07225-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="07225-105">\<configuration></span></span>  
+<span data-ttu-id="07225-106">\<.w e b > 元素 （Web 设置）</span><span class="sxs-lookup"><span data-stu-id="07225-106">\<system.web> Element (Web Settings)</span></span>  
+<span data-ttu-id="07225-107">\<applicationPool > 元素 （Web 设置）</span><span class="sxs-lookup"><span data-stu-id="07225-107">\<applicationPool> Element (Web Settings)</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="07225-108">语法</span><span class="sxs-lookup"><span data-stu-id="07225-108">Syntax</span></span>  
+  
+```xml  
 <applicationPool   
-    maxConcurrentRequestsPerCPU="5000"   
-    maxConcurrentThreadsPerCPU="0"   
-    requestQueueLimit="5000" />  
+    maxConcurrentRequestsPerCPU="5000"   
+    maxConcurrentThreadsPerCPU="0"   
+    requestQueueLimit="5000" />  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="07225-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="07225-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="07225-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="07225-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="07225-111">特性</span><span class="sxs-lookup"><span data-stu-id="07225-111">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|`maxConcurrentRequestsPerCPU`|指定 ASP.NET 允许对每个 CPU 同时发出的请求数。|  
-|`maxConcurrentThreadsPerCPU`|指定可为每个 CPU 的单个应用程序池同时运行的线程数。  这提供了一种用于控制 ASP.NET 并发的备选方法，因为您可以限制每个 CPU 为服务请求而允许使用的托管线程的数量。  默认情况下此设置为 0，这表示 ASP.NET 不限制每个 CPU 可创建的线程数量，尽管 CLR 线程池限制了可创建的线程数量。|  
-|`requestQueueLimit`|指定在单个进程中可为 ASP.NET 排队的请求的最大数目。  当两个或两个以上的 ASP.NET 应用程序在单个应用程序池中运行时，对应用程序池中的任何应用程序所发出的请求的累积集受此设置的制约。|  
+|<span data-ttu-id="07225-112">特性</span><span class="sxs-lookup"><span data-stu-id="07225-112">Attribute</span></span>|<span data-ttu-id="07225-113">描述</span><span class="sxs-lookup"><span data-stu-id="07225-113">Description</span></span>|  
+|---------------|-----------------|  
+|`maxConcurrentRequestsPerCPU`|<span data-ttu-id="07225-114">指定 ASP.NET 允许每个 CPU 的同时请求数。</span><span class="sxs-lookup"><span data-stu-id="07225-114">Specifies how many simultaneous requests ASP.NET allows per CPU.</span></span>|  
+|`maxConcurrentThreadsPerCPU`|<span data-ttu-id="07225-115">指定多少个并发线程可以为每个 CPU 运行应用程序池。</span><span class="sxs-lookup"><span data-stu-id="07225-115">Specifies how many simultaneous threads can be running for an application pool for each CPU.</span></span> <span data-ttu-id="07225-116">这会提供一种替代方式来控制 ASP.NET 的并发程度，因为你可以限制可用于每个 CPU 为请求提供服务的托管线程数。</span><span class="sxs-lookup"><span data-stu-id="07225-116">This provides an alternative way to control ASP.NET concurrency, because you can limit the number of managed threads that can be used per CPU to serve requests.</span></span> <span data-ttu-id="07225-117">默认情况下此设置为 0，这意味着 ASP.NET 不尽管 CLR 线程池还限制可以创建的线程数限制的每个 CPU，可以创建的线程数。</span><span class="sxs-lookup"><span data-stu-id="07225-117">By default this setting is 0, which means that ASP.NET does not limit the number of threads that can be created per CPU, although the CLR thread pool also limits the number of threads that can be created.</span></span>|  
+|`requestQueueLimit`|<span data-ttu-id="07225-118">指定的最大可以为 ASP.NET 在一个进程中排队的请求数。</span><span class="sxs-lookup"><span data-stu-id="07225-118">Specifies the maximum number of requests that can be queued for ASP.NET in a single process.</span></span> <span data-ttu-id="07225-119">在两个或多个 ASP.NET 应用程序运行在单个应用程序池中，向应用程序池的任何应用程序发出的请求的累积集将遵循此设置。</span><span class="sxs-lookup"><span data-stu-id="07225-119">When two or more ASP.NET applications run in a single application pool, the cumulative set of requests being made to any application in the application pool is subject to this setting.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="07225-120">子元素</span><span class="sxs-lookup"><span data-stu-id="07225-120">Child Elements</span></span>  
+ <span data-ttu-id="07225-121">无。</span><span class="sxs-lookup"><span data-stu-id="07225-121">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="07225-122">父元素</span><span class="sxs-lookup"><span data-stu-id="07225-122">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<system.web\>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|包含有关 ASP.NET 如何与宿主应用程序进行交互的信息。|  
+|<span data-ttu-id="07225-123">元素</span><span class="sxs-lookup"><span data-stu-id="07225-123">Element</span></span>|<span data-ttu-id="07225-124">描述</span><span class="sxs-lookup"><span data-stu-id="07225-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="07225-125">\<system.web></span><span class="sxs-lookup"><span data-stu-id="07225-125">\<system.web></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|<span data-ttu-id="07225-126">包含有关 ASP.NET 如何与宿主应用程序交互的信息。</span><span class="sxs-lookup"><span data-stu-id="07225-126">Contains information about how ASP.NET interacts with a host application.</span></span>|  
   
-## 备注  
- 在以集成模式运行 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 或更高版本时，利用此元素组合，可以配置当应用程序承载于 IIS 应用程序池中时，ASP.NET 管理线程和对请求进行排队的方式。  如果运行 IIS 6 或以经典模式或 ISAPI 模式运行 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]，则将忽略这些设置。  
+## <a name="remarks"></a><span data-ttu-id="07225-127">备注</span><span class="sxs-lookup"><span data-stu-id="07225-127">Remarks</span></span>  
+ <span data-ttu-id="07225-128">当你运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本在集成模式下，此元素组合允许你配置 ASP.NET 应用程序承载在 IIS 应用程序池中时如何管理线程和队列的请求。</span><span class="sxs-lookup"><span data-stu-id="07225-128">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version in Integrated mode, this element combination lets you configure how ASP.NET manages threads and queues requests when the application is hosted in an IIS application pool.</span></span> <span data-ttu-id="07225-129">如果运行 IIS 6，或者运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]在经典模式下或在 ISAPI 模式下，将忽略这些设置。</span><span class="sxs-lookup"><span data-stu-id="07225-129">If you run IIS 6 or you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] in Classic mode or in ISAPI mode, these settings are ignored.</span></span>  
   
- `applicationPool` 设置适用于在特定版本的 .NET Framework 上运行的所有应用程序池。  这些设置包含在 aspnet.config 文件中。  对于版本 2.0 和版本 4 的 .NET Framework，有一个版本的此文件适用。（版本 3.0 和版本 3.5 的 .NET Framework 与版本 2.0 的 .NET Framework 共享 aspnet.config 文件。）  
+ <span data-ttu-id="07225-130">`applicationPool`设置适用于特定版本的.NET framework 运行的所有应用程序池。</span><span class="sxs-lookup"><span data-stu-id="07225-130">The `applicationPool` settings apply to all application pools that run on a particular version of the .NET Framework.</span></span> <span data-ttu-id="07225-131">设置包含在 aspnet.config 文件中。</span><span class="sxs-lookup"><span data-stu-id="07225-131">The settings are contained in an aspnet.config file.</span></span> <span data-ttu-id="07225-132">没有此文件为版本 2.0 和 4.0 的.NET framework 的版本。</span><span class="sxs-lookup"><span data-stu-id="07225-132">There is a version of this file for versions 2.0 and 4.0 of the .NET Framework.</span></span> <span data-ttu-id="07225-133">（版本 3.0 和 3.5 的.NET framework 共享下的 aspnet.config 文件版本 2.0。）</span><span class="sxs-lookup"><span data-stu-id="07225-133">(Versions 3.0 and 3.5 of the .NET Framework share the aspnet.config file with version 2.0.)</span></span>  
   
 > [!IMPORTANT]
->  如果在 [!INCLUDE[win7](../../../../../includes/win7-md.md)] 上运行 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]，则可以为每个应用程序池配置单独的 aspnet.config 文件。  这样做可让您为每个应用程序池调整线程的性能。  
+>  <span data-ttu-id="07225-134">如果你运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]上[!INCLUDE[win7](../../../../../includes/win7-md.md)]，你可以通过配置单独的 aspnet.config 文件为每个应用程序池。</span><span class="sxs-lookup"><span data-stu-id="07225-134">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] on [!INCLUDE[win7](../../../../../includes/win7-md.md)], you can configure a separate aspnet.config file for every application pool.</span></span> <span data-ttu-id="07225-135">这样可以定制为每个应用程序池的线程的性能。</span><span class="sxs-lookup"><span data-stu-id="07225-135">This lets you tailor the performance of the threads for each application pool.</span></span>  
   
- 对于 `maxConcurrentRequestsPerCPU` 设置，[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 中的默认设置“5000”可有效关闭由 ASP.NET 控制的请求限制，除非每个 CPU 实际拥有的请求数为 5000 或更多。  默认设置改为依赖于 CLR 线程池来自动管理每个 CPU 的并发。  对于大量使用异步请求处理的应用程序或具有很多在网络 I\/O 上阻塞长时间运行的请求的应用程序，增大 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 中的默认限制将使它们受益。  将 `maxConcurrentRequestsPerCPU` 设置为零将禁止使用托管线程来处理 ASP.NET 请求。  当应用程序在 IIS 应用程序池中运行时，请求将停留在 IIS I\/O 线程上，从而使并发受到 IIS 线程设置的限制。  
+ <span data-ttu-id="07225-136">有关`maxConcurrentRequestsPerCPU`设置，"5000"的默认设置[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]有效地将关闭请求限制，它受 ASP.NET，除非您实际上有 5000 或更多的请求，每个 CPU。</span><span class="sxs-lookup"><span data-stu-id="07225-136">For the `maxConcurrentRequestsPerCPU` setting, the default setting of "5000" in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] effectively turns off request throttling that is controlled by ASP.NET, unless you actually have 5000 or more requests per CPU.</span></span> <span data-ttu-id="07225-137">默认设置改为依赖于 CLR 线程池来自动管理每个 CPU 的并发。</span><span class="sxs-lookup"><span data-stu-id="07225-137">The default setting depends instead on the CLR thread-pool to automatically manage concurrency per CPU.</span></span> <span data-ttu-id="07225-138">在构成广泛使用的异步请求处理负载，或已在网络 I/O 上受阻的多长时间运行请求的应用程序将受益于中的增大的默认限制[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="07225-138">Applications that make extensive use of asynchronous request processing, or that have many long-running requests blocked on network I/O, will benefit from the increased default limit in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="07225-139">设置`maxConcurrentRequestsPerCPU`到用于处理 ASP.NET 请求零将关闭的托管线程使用。</span><span class="sxs-lookup"><span data-stu-id="07225-139">Setting `maxConcurrentRequestsPerCPU` to zero turns off the use of managed threads for processing ASP.NET requests.</span></span> <span data-ttu-id="07225-140">应用程序运行时在 IIS 应用程序池中，请求将停留在 IIS I/O 线程和 IIS 线程设置因此限制并发。</span><span class="sxs-lookup"><span data-stu-id="07225-140">When an application runs in an IIS application pool, requests stay on the IIS I/O thread and therefore concurrency is throttled by IIS thread settings.</span></span>  
   
- `requestQueueLimit` 设置的工作方式与 [processModel](http://msdn.microsoft.com/zh-cn/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) 元素的 `requestQueueLimit` 特性的工作方式相同，该特性是在 ASP.NET 应用程序的 Web.config 文件中设置的。  但 aspnet.config 文件中的 `requestQueueLimit` 设置会重写 Web.config 文件中的 `requestQueueLimit` 设置。  换言之，如果同时设置了这两个特性（默认情况下为此情形），则 aspnet.config 文件中的 `requestQueueLimit` 设置优先。  
+ <span data-ttu-id="07225-141">`requestQueueLimit`设置相同的工作方式为`requestQueueLimit`属性[processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)元素，它在 ASP.NET 应用程序的 Web.config 文件中设置。</span><span class="sxs-lookup"><span data-stu-id="07225-141">The `requestQueueLimit` setting works the same way as the `requestQueueLimit` attribute of the [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) element, which is set in the Web.config files for ASP.NET applications.</span></span> <span data-ttu-id="07225-142">但是， `requestQueueLimit` aspnet.config 文件中的设置将重写`requestQueueLimit`在 Web.config 文件中设置。</span><span class="sxs-lookup"><span data-stu-id="07225-142">However, the `requestQueueLimit` setting in an aspnet.config file overrides the `requestQueueLimit` setting in a Web.config file.</span></span> <span data-ttu-id="07225-143">换而言之，如果未设置这两个属性 （默认情况下，此为 true）， `requestQueueLimit` aspnet.config 文件中的设置将优先。</span><span class="sxs-lookup"><span data-stu-id="07225-143">In other words, if both attributes are set (by default, this is true), the `requestQueueLimit` setting in the aspnet.config file takes precedence.</span></span>  
   
-## 示例  
- 下面的示例演示在以下环境中，如何在 aspnet.config 文件中配置 ASP.NET 进程范围的行为：  
+## <a name="example"></a><span data-ttu-id="07225-144">示例</span><span class="sxs-lookup"><span data-stu-id="07225-144">Example</span></span>  
+ <span data-ttu-id="07225-145">下面的示例演示如何在以下情况下的 aspnet.config 文件中配置 ASP.NET 进程范围的行为：</span><span class="sxs-lookup"><span data-stu-id="07225-145">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file in the following circumstances:</span></span>  
   
--   应用程序承载于 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 应用程序池中。  
+-   <span data-ttu-id="07225-146">应用程序托管在[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]应用程序池。</span><span class="sxs-lookup"><span data-stu-id="07225-146">The application is hosted in an [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] application pool.</span></span>  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 正在以集成模式运行。  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]<span data-ttu-id="07225-147">在集成模式下运行。</span><span class="sxs-lookup"><span data-stu-id="07225-147"> is running in Integrated mode.</span></span>  
   
--   应用程序使用的是 [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] 或更高版本。  
+-   <span data-ttu-id="07225-148">应用程序使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更高版本。</span><span class="sxs-lookup"><span data-stu-id="07225-148">The application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span>  
   
- 该示例中的值均为默认值。  
+ <span data-ttu-id="07225-149">在示例中的值是默认值。</span><span class="sxs-lookup"><span data-stu-id="07225-149">The values in the example are the default values.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <applicationPool   
@@ -93,14 +95,14 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## 元素信息  
+## <a name="element-information"></a><span data-ttu-id="07225-150">元素信息</span><span class="sxs-lookup"><span data-stu-id="07225-150">Element Information</span></span>  
   
 |||  
 |-|-|  
-|命名空间||  
-|架构名称||  
-|验证文件||  
-|可以为空||  
+|<span data-ttu-id="07225-151">命名空间</span><span class="sxs-lookup"><span data-stu-id="07225-151">Namespace</span></span>||  
+|<span data-ttu-id="07225-152">架构名称</span><span class="sxs-lookup"><span data-stu-id="07225-152">Schema Name</span></span>||  
+|<span data-ttu-id="07225-153">验证文件</span><span class="sxs-lookup"><span data-stu-id="07225-153">Validation File</span></span>||  
+|<span data-ttu-id="07225-154">可以为空</span><span class="sxs-lookup"><span data-stu-id="07225-154">Can be Empty</span></span>||  
   
-## 请参阅  
- [\<system.web\> 元素（Web 设置）](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+## <a name="see-also"></a><span data-ttu-id="07225-155">另请参阅</span><span class="sxs-lookup"><span data-stu-id="07225-155">See Also</span></span>  
+ [<span data-ttu-id="07225-156">\<system.web> 元素（Web 设置）</span><span class="sxs-lookup"><span data-stu-id="07225-156">\<system.web> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

@@ -1,70 +1,72 @@
 ---
-title: "WCF 数据服务资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF 数据服务, 了解更多信息"
+title: "WCF 数据服务资源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1e9093c7a499ca8333f1b474f1777619b48a2084
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WCF 数据服务资源
-可以在以下位置找到有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的介绍性主题。  其中的许多主题还包含指向包含更多详细信息的相关主题的链接。  
+# <a name="wcf-data-services-resources"></a><span data-ttu-id="db218-102">WCF 数据服务资源</span><span class="sxs-lookup"><span data-stu-id="db218-102">WCF Data Services Resources</span></span>
+<span data-ttu-id="db218-103">可以在以下位置找到有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的介绍性主题。</span><span class="sxs-lookup"><span data-stu-id="db218-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] introductory topics can be found in the following locations.</span></span> <span data-ttu-id="db218-104">其中的许多主题还包含指向包含更多详细信息的相关主题的链接。</span><span class="sxs-lookup"><span data-stu-id="db218-104">Many of these topics also contain links to related topics that contain more detailed information.</span></span>  
   
- [概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
- 概述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中提供的功能。  
+ [<span data-ttu-id="db218-105">概述</span><span class="sxs-lookup"><span data-stu-id="db218-105">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
+ <span data-ttu-id="db218-106">概述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中提供的功能。</span><span class="sxs-lookup"><span data-stu-id="db218-106">Provides an overview of the features and functionality available in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [入门](../../../../docs/framework/data/adonet/ef/getting-started.md)  
- 介绍如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 来设计和访问数据服务，如[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)中所述。  
+ [<span data-ttu-id="db218-107">入门</span><span class="sxs-lookup"><span data-stu-id="db218-107">Getting Started</span></span>](../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ <span data-ttu-id="db218-108">描述如何设计和使用访问数据服务[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，如所示[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="db218-108">Describes how to design and access a data service by using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], as illustrated by the [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
- [应用程序方案](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
- 提供基于任务的方法来创建 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和用于访问[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源的应用程序。  
+ [<span data-ttu-id="db218-109">应用程序方案</span><span class="sxs-lookup"><span data-stu-id="db218-109">Application Scenarios</span></span>](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+ <span data-ttu-id="db218-110">提供基于任务的方法来创建[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和应用程序访问[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。</span><span class="sxs-lookup"><span data-stu-id="db218-110">Provides a task-based approach to creating [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and applications that access [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span>  
   
- [Visual Studio and .NET Framework Glossary](http://msdn.microsoft.com/zh-cn/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
- 包含 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 文档中使用的术语。  
+ [<span data-ttu-id="db218-111">Visual Studio 和.NET Framework 术语表</span><span class="sxs-lookup"><span data-stu-id="db218-111">Visual Studio and .NET Framework Glossary</span></span>](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ <span data-ttu-id="db218-112">包括中的术语[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]文档。</span><span class="sxs-lookup"><span data-stu-id="db218-112">Includes terms used in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] documentation.</span></span>  
   
-## 外部资源  
- 以下外部资源提供用于创建公开和使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]应用程序的其他信息和支持。  
+## <a name="external-resources"></a><span data-ttu-id="db218-113">外部资源</span><span class="sxs-lookup"><span data-stu-id="db218-113">External Resources</span></span>  
+ <span data-ttu-id="db218-114">以下外部资源提供其他信息和支持用于创建[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公开和使用应用程序[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送。</span><span class="sxs-lookup"><span data-stu-id="db218-114">The following external resources provide additional information and support for creating [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] applications that expose and consume [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.</span></span>  
   
- [WCF 数据服务论坛](http://go.microsoft.com/fwlink/?LinkId=150512)（可能为英文网页）  
- 数据编程支持（针对 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 开发人员）。  
+ [<span data-ttu-id="db218-115">WCF 数据服务论坛</span><span class="sxs-lookup"><span data-stu-id="db218-115">WCF Data Services Forum</span></span>](http://go.microsoft.com/fwlink/?LinkId=150512)  
+ <span data-ttu-id="db218-116">数据编程支持（针对 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 开发人员）。</span><span class="sxs-lookup"><span data-stu-id="db218-116">Data programming support for [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] developers.</span></span>  
   
- [WCF 数据服务团队博客](http://go.microsoft.com/fwlink/?LinkId=150511)（可能为英文网页）  
- 包含对 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 功能的更新和讨论的博客。  
+ <span data-ttu-id="db218-117">[WCF Data Services Team Blog](http://go.microsoft.com/fwlink/?LinkId=150511)（WCF Data Services 团队博客）</span><span class="sxs-lookup"><span data-stu-id="db218-117">[WCF Data Services Team Blog](http://go.microsoft.com/fwlink/?LinkId=150511)</span></span>  
+ <span data-ttu-id="db218-118">包含对 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 功能的更新和讨论的博客。</span><span class="sxs-lookup"><span data-stu-id="db218-118">Blog that contains updates and discussion of [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] features and functionality.</span></span>  
   
- [OData 网站](http://go.microsoft.com/fwlink/?LinkID=184554)（可能为英文网页）  
- 有关 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的信息的主要来源。  
+ [<span data-ttu-id="db218-119">OData 网站</span><span class="sxs-lookup"><span data-stu-id="db218-119">OData Web Site</span></span>](http://go.microsoft.com/fwlink/?LinkID=184554)  
+ <span data-ttu-id="db218-120">有关 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的信息的主要来源。</span><span class="sxs-lookup"><span data-stu-id="db218-120">The primary source of information about [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span></span>  
   
- [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
- 包含使您能够使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源的示例服务、示例和编程库。  
+ [<span data-ttu-id="db218-121">OData SDK</span><span class="sxs-lookup"><span data-stu-id="db218-121">OData SDK</span></span>](http://go.microsoft.com/fwlink/?LinkID=185248)  
+ <span data-ttu-id="db218-122">包含示例服务、 示例和编程库，使您能够使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送。</span><span class="sxs-lookup"><span data-stu-id="db218-122">Contains sample services, samples, and programming libraries that enable you to work with [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.</span></span>  
   
- [OData 博客](http://go.microsoft.com/fwlink/?LinkId=185868)（可能为英文网页）  
- 包含有关 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 编程方式的讨论的博客。  
+ [<span data-ttu-id="db218-123">OData 博客</span><span class="sxs-lookup"><span data-stu-id="db218-123">OData Blog</span></span>](http://go.microsoft.com/fwlink/?LinkId=185868)  
+ <span data-ttu-id="db218-124">包含有关讨论的博客[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]编程。</span><span class="sxs-lookup"><span data-stu-id="db218-124">Blog that contains discussions about [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] programming.</span></span>  
   
- [数据访问和存储开发人员中心](http://go.microsoft.com/fwlink/?LinkId=91903)（可能为英文网页）  
- 用于查找有关使用数据的信息和资源的中心位置。  
+ [<span data-ttu-id="db218-125">数据访问和存储开发人员中心</span><span class="sxs-lookup"><span data-stu-id="db218-125">Data Access and Storage Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=91903)  
+ <span data-ttu-id="db218-126">用于查找有关使用数据的信息和资源的中心位置。</span><span class="sxs-lookup"><span data-stu-id="db218-126">Central location for finding information and resources for working with data.</span></span>  
   
- [数据平台的“如何实现”视频：WCF 数据服务系列](http://go.microsoft.com/fwlink/?LinkId=124600)（可能为英文网页）  
- 包含一组演示如何生成和访问数据服务的视频截屏。  
+ [<span data-ttu-id="db218-127">数据平台如何操作？视频： WCF 数据服务系列</span><span class="sxs-lookup"><span data-stu-id="db218-127">Data Platform How Do I? Videos: WCF Data Services Series</span></span>](http://go.microsoft.com/fwlink/?LinkId=124600)  
+ <span data-ttu-id="db218-128">包含一组演示如何生成和访问数据服务的视频截屏。</span><span class="sxs-lookup"><span data-stu-id="db218-128">Contains a set of video screen casts that demonstrate how to build and access data services.</span></span>  
   
- [概述：WCF 数据服务](http://go.microsoft.com/fwlink/?LinkID=131074)（可能为英文网页）  
- 提供有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]优势的更多高级信息的白皮书。  
+ [<span data-ttu-id="db218-129">概述： WCF 数据服务</span><span class="sxs-lookup"><span data-stu-id="db218-129">Overview: WCF Data Services</span></span>](http://go.microsoft.com/fwlink/?LinkID=131074)  
+ <span data-ttu-id="db218-130">提供有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]优势的更多高级信息的白皮书。</span><span class="sxs-lookup"><span data-stu-id="db218-130">A white paper that provides more high-level information about the benefits of [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [使用 Microsoft WCF 数据服务](http://go.microsoft.com/fwlink/?LinkID=131075)（可能为英文网页）  
- 提供创建数据服务和在客户端应用程序中访问数据服务的其他信息和示例的白皮书。  
+ [<span data-ttu-id="db218-131">使用 Microsoft WCF 数据服务</span><span class="sxs-lookup"><span data-stu-id="db218-131">Using Microsoft WCF Data Services</span></span>](http://go.microsoft.com/fwlink/?LinkID=131075)  
+ <span data-ttu-id="db218-132">提供创建数据服务和在客户端应用程序中访问数据服务的其他信息和示例的白皮书。</span><span class="sxs-lookup"><span data-stu-id="db218-132">A white paper that provides additional information and examples for creating data services and accessing data services in client applications.</span></span>  
   
- [实体关系模型：针对数据的统一视图](http://go.microsoft.com/fwlink/?LinkId=91909)（可能为英文网页），作者为麻省理工学院的 Peter Pin\-Shan Chen  
- 介绍 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现的实体关系模型的基础。  该文撰写于 1976 年，是计算机领域中最常引用的论文之一。  
+ <span data-ttu-id="db218-133">[实体关系模型： 向数据的统一视图](http://go.microsoft.com/fwlink/?LinkId=91909)的 Peter Pin-shan Chen，麻省理工学院的</span><span class="sxs-lookup"><span data-stu-id="db218-133">[The Entity-Relationship Model: Toward a Unified View of Data](http://go.microsoft.com/fwlink/?LinkId=91909) by Peter Pin-Shan Chen, Massachusetts Institute of Technology</span></span>  
+ <span data-ttu-id="db218-134">介绍 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现的实体关系模型的基础。</span><span class="sxs-lookup"><span data-stu-id="db218-134">Describes the basis for the entity-relational model that is implemented by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span> <span data-ttu-id="db218-135">该文撰写于 1976 年，是计算机领域中最常引用的论文之一。</span><span class="sxs-lookup"><span data-stu-id="db218-135">Written in 1976, this is one of the most frequently cited papers in the computer field.</span></span>  
   
-## 请参阅  
- [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="db218-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="db218-136">See Also</span></span>  
+ [<span data-ttu-id="db218-137">入门</span><span class="sxs-lookup"><span data-stu-id="db218-137">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

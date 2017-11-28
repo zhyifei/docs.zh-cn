@@ -1,60 +1,67 @@
 ---
-title: "&lt;routing&gt; 的 &lt;filters&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;routing&gt; 的 &lt;filters&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9dddd9f9ba5f4c2cea7e92c666e8d224ccf21cee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;routing&gt; 的 &lt;filters&gt;
-表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型。  
-  
-## 语法  
-  
-```vb  
-  
-<routing>  
-      <filters>  
-        <filter customType=”String”  
-                filterData=”String”  
-                filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath"   
-                name="String" />  
-      </filters>  
-</routing>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
-  
-### 特性  
- 无。  
-  
-### 子元素  
-  
-|元素|描述|  
-|--------|--------|  
-|[\<筛选器\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|包含路由筛选器，该筛选器确定计算传入消息时将使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型。|  
-  
-### 父元素  
-  
-|元素|描述|  
-|--------|--------|  
-|[\<路由\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型，以及用于定义在筛选器匹配时消息发送到的目标终结点的路由表。|  
-  
-## 请参阅  
- [System.ServiceModel.Routing.Configuration.FilterElement](assetId:///System.ServiceModel.Routing.Configuration.FilterElement?qualifyHint=False&amp;autoUpgrade=True)
+# <a name="ltfiltersgt-of-ltroutinggt"></a><span data-ttu-id="d420b-102">&lt;routing&gt; 的 &lt;filters&gt;</span><span class="sxs-lookup"><span data-stu-id="d420b-102">&lt;filters&gt; of &lt;routing&gt;</span></span>
+
+<span data-ttu-id="d420b-103">表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型。</span><span class="sxs-lookup"><span data-stu-id="d420b-103">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span>
+
+<span data-ttu-id="d420b-104">[**\<system.serviceModel >**](system-servicemodel.md) </span><span class="sxs-lookup"><span data-stu-id="d420b-104">[**\<system.serviceModel>**](system-servicemodel.md) </span></span>  
+<span data-ttu-id="d420b-105">&nbsp;&nbsp;[**\<路由 >**](routing.md) </span><span class="sxs-lookup"><span data-stu-id="d420b-105">&nbsp;&nbsp;[**\<routing>**](routing.md) </span></span>  
+<span data-ttu-id="d420b-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<筛选器 >**</span><span class="sxs-lookup"><span data-stu-id="d420b-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="d420b-107">语法</span><span class="sxs-lookup"><span data-stu-id="d420b-107">Syntax</span></span>
+
+```xml
+<system.serviceModel>
+  <routing>
+    <filters>
+      <filter customType="String" 
+              filterData="String" 
+              filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath" 
+              name="String" />
+    </filters>
+  </routing>
+</system.serviceModel>
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="d420b-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d420b-108">Attributes and elements</span></span>
+
+<span data-ttu-id="d420b-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d420b-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+
+### <a name="attributes"></a><span data-ttu-id="d420b-110">特性</span><span class="sxs-lookup"><span data-stu-id="d420b-110">Attributes</span></span>
+
+<span data-ttu-id="d420b-111">无</span><span class="sxs-lookup"><span data-stu-id="d420b-111">None</span></span>
+
+### <a name="child-elements"></a><span data-ttu-id="d420b-112">子元素</span><span class="sxs-lookup"><span data-stu-id="d420b-112">Child elements</span></span>
+
+|     | <span data-ttu-id="d420b-113">描述</span><span class="sxs-lookup"><span data-stu-id="d420b-113">Description</span></span> |
+| --- | ----------- |
+| [<span data-ttu-id="d420b-114">**\<筛选器 >**</span><span class="sxs-lookup"><span data-stu-id="d420b-114">**\<filter>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | <span data-ttu-id="d420b-115">包含路由筛选器，该筛选器确定计算传入消息时将使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型。</span><span class="sxs-lookup"><span data-stu-id="d420b-115">Contains a routing filter that determines the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> will be used when evaluating incoming messages.</span></span> |
+
+### <a name="parent-elements"></a><span data-ttu-id="d420b-116">父元素</span><span class="sxs-lookup"><span data-stu-id="d420b-116">Parent elements</span></span>
+
+|     | <span data-ttu-id="d420b-117">描述</span><span class="sxs-lookup"><span data-stu-id="d420b-117">Description</span></span> |
+| --- | ----------- |
+| [<span data-ttu-id="d420b-118">**\<路由 >**</span><span class="sxs-lookup"><span data-stu-id="d420b-118">**\<routing>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="d420b-119">表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型，以及用于定义在筛选器匹配时消息发送到的目标终结点的路由表。</span><span class="sxs-lookup"><span data-stu-id="d420b-119">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span> |
+
+## <a name="see-also"></a><span data-ttu-id="d420b-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="d420b-120">See also</span></span>
+
+<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

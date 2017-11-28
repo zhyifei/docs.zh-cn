@@ -1,46 +1,49 @@
 ---
-title: "数据绑定和 LINQ to DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据绑定和 LINQ to DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3b097f9bca790d1f19da9d75f834c6277507d8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 数据绑定和 LINQ to DataSet
-数据绑定是在应用程序 UI 和业务逻辑之间建立连接的过程。  如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。  <xref:System.Data.DataSet> 是数据驻留在内存中的表示形式，不管包含的数据来自什么数据源，它都可以提供一致的关系编程模型。  使用 ADO.NET 2.0 <xref:System.Data.DataView> 可以对存储在 <xref:System.Data.DataTable> 中的数据进行排序和筛选。  数据绑定应用程序中经常会使用此功能。  通过使用 <xref:System.Data.DataView>，您可以使用不同的排序顺序公开表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  有关 <xref:System.Data.DataView> 对象的更多信息，请参见 [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。  
+# <a name="data-binding-and-linq-to-dataset"></a><span data-ttu-id="70a8e-102">数据绑定和 LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="70a8e-102">Data Binding and LINQ to DataSet</span></span>
+<span data-ttu-id="70a8e-103">*数据绑定*是在应用程序 UI 和业务逻辑之间建立连接的过程。</span><span class="sxs-lookup"><span data-stu-id="70a8e-103">*Data binding* is the process that establishes a connection between the application UI and business logic.</span></span> <span data-ttu-id="70a8e-104">如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。</span><span class="sxs-lookup"><span data-stu-id="70a8e-104">If the binding has the correct settings and the data provides the proper notifications, when the data changes its value, the elements that are bound to the data reflect changes automatically.</span></span> <span data-ttu-id="70a8e-105"><xref:System.Data.DataSet> 是数据驻留在内存中的表示形式，不管包含的数据来自什么数据源，它都可以提供一致的关系编程模型。</span><span class="sxs-lookup"><span data-stu-id="70a8e-105">The <xref:System.Data.DataSet> is an in- memory representation of data that provides a consistent relational programming model, regardless of the source of the data it contains.</span></span> <span data-ttu-id="70a8e-106">使用 ADO.NET 2.0 <xref:System.Data.DataView> 可以对存储在 <xref:System.Data.DataTable> 中的数据进行排序和筛选。</span><span class="sxs-lookup"><span data-stu-id="70a8e-106">The ADO.NET 2.0 <xref:System.Data.DataView> enables you to sort and filter the data stored in a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="70a8e-107">数据绑定应用程序中经常会使用此功能。</span><span class="sxs-lookup"><span data-stu-id="70a8e-107">This functionality is often used in data-binding applications.</span></span> <span data-ttu-id="70a8e-108">通过使用 <xref:System.Data.DataView>，您可以使用不同的排序顺序公开表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。</span><span class="sxs-lookup"><span data-stu-id="70a8e-108">By using a <xref:System.Data.DataView>, you can expose the data in a table with different sort orders, and you can filter the data by row state or based on a filter expression.</span></span> <span data-ttu-id="70a8e-109">有关详细信息<xref:System.Data.DataView>对象，请参阅[Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。</span><span class="sxs-lookup"><span data-stu-id="70a8e-109">For more information about the <xref:System.Data.DataView> object, see [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span></span>  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使开发人员能够通过使用 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 来创建针对 <xref:System.Data.DataSet> 的复杂而功能强大的查询。  但是，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询返回了 <xref:System.Data.DataRow> 对象的枚举，这在进行绑定的情况中不容易使用。若要使绑定更容易些，您可以从 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询创建 <xref:System.Data.DataView>。  此 <xref:System.Data.DataView> 使用查询中指定的筛选和排序，但更适合数据绑定。  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 通过提供基于表达式的筛选和排序 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 扩展了 <xref:System.Data.DataView> 的功能，这允许进行比基于字符串的筛选和排序更复杂、更强大的筛选和排序。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="70a8e-110">允许开发人员通过创建复杂且功能强大的查询<xref:System.Data.DataSet>使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="70a8e-110"> allows developers to create complex, powerful queries over a <xref:System.Data.DataSet> by using [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)].</span></span> <span data-ttu-id="70a8e-111">但是，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询返回的枚举<xref:System.Data.DataRow>轻松不绑定方案中使用的对象。</span><span class="sxs-lookup"><span data-stu-id="70a8e-111">However, a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query returns an enumeration of <xref:System.Data.DataRow> objects, which is not easily used in a binding scenario.</span></span> <span data-ttu-id="70a8e-112">若要简化绑定，可以创建<xref:System.Data.DataView>从[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询。</span><span class="sxs-lookup"><span data-stu-id="70a8e-112">To make binding easier, you can create a <xref:System.Data.DataView> from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.</span></span> <span data-ttu-id="70a8e-113">这<xref:System.Data.DataView>使用的筛选和排序指定在查询中，但更适合数据绑定。</span><span class="sxs-lookup"><span data-stu-id="70a8e-113">This <xref:System.Data.DataView> uses the filtering and sorting specified in the query, but is better suited for data binding.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="70a8e-114">扩展的功能<xref:System.Data.DataView>通过提供[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]基于表达式的筛选和排序，这样，对于更复杂而功能强大的筛选和排序执行比基于字符串的筛选和排序操作。</span><span class="sxs-lookup"><span data-stu-id="70a8e-114"> extends the functionality of the <xref:System.Data.DataView> by providing [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expression-based filtering and sorting, which allows for much more complex and powerful filtering and sorting operations than string-based filtering and sorting.</span></span>  
   
- 请注意，<xref:System.Data.DataView> 表示查询本身，而不是处于查询前面的视图。  <xref:System.Data.DataView> 绑定到 UI 控件（如 <xref:System.Windows.Forms.DataGrid> 或 <xref:System.Windows.Forms.DataGridView>），提供简单的数据绑定模型。  也可以从 <xref:System.Data.DataTable> 创建 <xref:System.Data.DataView>，从而提供该表的默认视图。  
+ <span data-ttu-id="70a8e-115">请注意，<xref:System.Data.DataView> 表示查询本身，而不是处于查询前面的视图。</span><span class="sxs-lookup"><span data-stu-id="70a8e-115">Note that the <xref:System.Data.DataView> represents the query itself and is not a view on top of the query.</span></span> <span data-ttu-id="70a8e-116"><xref:System.Data.DataView> 绑定到 UI 控件（如 <xref:System.Windows.Forms.DataGrid> 或 <xref:System.Windows.Forms.DataGridView>），提供简单的数据绑定模型。</span><span class="sxs-lookup"><span data-stu-id="70a8e-116">The <xref:System.Data.DataView> is bound to a UI control, such as a <xref:System.Windows.Forms.DataGrid> or a <xref:System.Windows.Forms.DataGridView>, providing a simple data binding model.</span></span> <span data-ttu-id="70a8e-117">也可以从 <xref:System.Data.DataView> 创建 <xref:System.Data.DataTable>，从而提供该表的默认视图。</span><span class="sxs-lookup"><span data-stu-id="70a8e-117">A <xref:System.Data.DataView> can also be created from a <xref:System.Data.DataTable>, providing a default view of that table.</span></span>  
   
-## 本节内容  
- [创建 DataView 对象](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
- 提供有关创建 <xref:System.Data.DataView> 的信息。  
+## <a name="in-this-section"></a><span data-ttu-id="70a8e-118">本节内容</span><span class="sxs-lookup"><span data-stu-id="70a8e-118">In This Section</span></span>  
+ [<span data-ttu-id="70a8e-119">创建 DataView 对象</span><span class="sxs-lookup"><span data-stu-id="70a8e-119">Creating a DataView Object</span></span>](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
+ <span data-ttu-id="70a8e-120">提供有关创建 <xref:System.Data.DataView> 的信息。</span><span class="sxs-lookup"><span data-stu-id="70a8e-120">Provides information about creating a <xref:System.Data.DataView>.</span></span>  
   
- [使用 DataView 进行筛选](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- 说明如何使用 <xref:System.Data.DataView> 进行筛选。  
+ [<span data-ttu-id="70a8e-121">使用 DataView 进行筛选</span><span class="sxs-lookup"><span data-stu-id="70a8e-121">Filtering with DataView</span></span>](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ <span data-ttu-id="70a8e-122">说明如何使用 <xref:System.Data.DataView> 进行筛选。</span><span class="sxs-lookup"><span data-stu-id="70a8e-122">Describes how to filter with the <xref:System.Data.DataView>.</span></span>  
   
- [使用 DataView 进行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
- 说明如何使用 <xref:System.Data.DataView> 进行排序。  
+ [<span data-ttu-id="70a8e-123">使用 DataView 进行排序</span><span class="sxs-lookup"><span data-stu-id="70a8e-123">Sorting with DataView</span></span>](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
+ <span data-ttu-id="70a8e-124">说明如何使用 <xref:System.Data.DataView> 进行排序。</span><span class="sxs-lookup"><span data-stu-id="70a8e-124">Describes how to sort with the <xref:System.Data.DataView>.</span></span>  
   
- [在 DataView 中查询 DataRowView 集合](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
- 提供有关查询由 <xref:System.Data.DataView> 公开的 <xref:System.Data.DataRowView> 集合的信息。  
+ [<span data-ttu-id="70a8e-125">查询在 DataView 中的 DataRowView 集合</span><span class="sxs-lookup"><span data-stu-id="70a8e-125">Querying the DataRowView Collection in a DataView</span></span>](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
+ <span data-ttu-id="70a8e-126">提供有关查询由 <xref:System.Data.DataRowView> 公开的 <xref:System.Data.DataView> 集合的信息。</span><span class="sxs-lookup"><span data-stu-id="70a8e-126">Provides information about querying the <xref:System.Data.DataRowView> collection exposed by <xref:System.Data.DataView>.</span></span>  
   
- [DataView 性能](../../../../docs/framework/data/adonet/dataview-performance.md)  
- 提供有关 <xref:System.Data.DataView> 和性能的信息。  
+ [<span data-ttu-id="70a8e-127">DataView 性能</span><span class="sxs-lookup"><span data-stu-id="70a8e-127">DataView Performance</span></span>](../../../../docs/framework/data/adonet/dataview-performance.md)  
+ <span data-ttu-id="70a8e-128">提供有关 <xref:System.Data.DataView> 和性能的信息。</span><span class="sxs-lookup"><span data-stu-id="70a8e-128">Provides information about <xref:System.Data.DataView> and performance.</span></span>  
   
- [如何：将 DataView 对象绑定到 Windows 窗体 DataGridView 控件](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
- 说明如何将 <xref:System.Data.DataView> 对象绑定到 <xref:System.Windows.Forms.DataGridView>。  
+ [<span data-ttu-id="70a8e-129">如何： 将 DataView 对象绑定到 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="70a8e-129">How to: Bind a DataView Object to a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ <span data-ttu-id="70a8e-130">说明如何将 <xref:System.Data.DataView> 对象绑定到 <xref:System.Windows.Forms.DataGridView>。</span><span class="sxs-lookup"><span data-stu-id="70a8e-130">Describes how to bind a <xref:System.Data.DataView> object to a <xref:System.Windows.Forms.DataGridView>.</span></span>  
   
-## 请参阅  
- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="70a8e-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="70a8e-131">See Also</span></span>  
+ [<span data-ttu-id="70a8e-132">编程指南</span><span class="sxs-lookup"><span data-stu-id="70a8e-132">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

@@ -1,69 +1,77 @@
 ---
-title: "&lt;dataContractSerializer&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "<dataContractSerializer> 元素"
-  - "DataContractSerializer"
-  - "dataContractSerializer 元素"
-  - "KnownTypes"
+title: '&lt;dataContractSerializer&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dataContractSerializer element
+- <dataContractSerializer> element
+- DataContractSerializer
+- KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ba6a70f6d618446ed3ffd446c06c8f3c88354ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;dataContractSerializer&gt;
-包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。  此元素出现在两个不同的层次结构中。  这两个层次结构分别在下面的“架构层次结构”一节和“备注”一节中列出。  
+# <a name="ltdatacontractserializergt"></a><span data-ttu-id="c8499-102">&lt;dataContractSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="c8499-102">&lt;dataContractSerializer&gt;</span></span>
+<span data-ttu-id="c8499-103">包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。</span><span class="sxs-lookup"><span data-stu-id="c8499-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="c8499-104">此元素出现在两个不同的层次结构中。</span><span class="sxs-lookup"><span data-stu-id="c8499-104">This element occurs in two different hierarchies.</span></span> <span data-ttu-id="c8499-105">这两个层次结构分别在下面的“架构层次结构”一节和“备注”一节中列出。</span><span class="sxs-lookup"><span data-stu-id="c8499-105">One is listed the following Schema Hierarchy section and the other is listed in the Remarks section.</span></span>  
   
-## 语法  
+ <span data-ttu-id="c8499-106">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c8499-106">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c8499-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c8499-107">\<behaviors></span></span>  
+<span data-ttu-id="c8499-108">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="c8499-108">\<serviceBehaviors></span></span>  
+<span data-ttu-id="c8499-109">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c8499-109">\<behavior></span></span>  
+<span data-ttu-id="c8499-110">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="c8499-110">\<dataContractSerializer></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c8499-111">语法</span><span class="sxs-lookup"><span data-stu-id="c8499-111">Syntax</span></span>  
   
+```xml  
 <dataContractSerializer ignoreExtensionDataObject="Boolean"  
    maxItemsInObjectGraph="Integer" />  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c8499-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c8499-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="c8499-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c8499-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="c8499-114">特性</span><span class="sxs-lookup"><span data-stu-id="c8499-114">Attributes</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|ignoreExtensionDataObject|一个布尔值，指定在对终结点进行序列化或反序列化时，是否要忽略由该终结点提供的数据。  只可对 `<behavior>` 元素下的 `<dataContractSerializer>` 设置此属性。|  
-|maxItemsInObjectGraph|一个整数，指定要序列化或反序列化的最大项数。  此属性为 65536。|  
+|<span data-ttu-id="c8499-115">元素</span><span class="sxs-lookup"><span data-stu-id="c8499-115">Element</span></span>|<span data-ttu-id="c8499-116">描述</span><span class="sxs-lookup"><span data-stu-id="c8499-116">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="c8499-117">ignoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="c8499-117">ignoreExtensionDataObject</span></span>|<span data-ttu-id="c8499-118">一个布尔值，指定在对终结点进行序列化或反序列化时，是否要忽略由该终结点提供的数据。</span><span class="sxs-lookup"><span data-stu-id="c8499-118">A Boolean value that specifies whether to ignore data supplied by the endpoint when it is being serialized or deserialized.</span></span> <span data-ttu-id="c8499-119">只可对 `<dataContractSerializer>` 元素下的 `<behavior>` 设置此属性。</span><span class="sxs-lookup"><span data-stu-id="c8499-119">This attribute is settable only on the `<dataContractSerializer>` under the `<behavior>` element.</span></span>|  
+|<span data-ttu-id="c8499-120">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="c8499-120">maxItemsInObjectGraph</span></span>|<span data-ttu-id="c8499-121">一个整数，指定要序列化或反序列化的最大项数。</span><span class="sxs-lookup"><span data-stu-id="c8499-121">An integer that specifies the maximum number of items to serialize or deserialize.</span></span> <span data-ttu-id="c8499-122">此属性为 65536。</span><span class="sxs-lookup"><span data-stu-id="c8499-122">This attribute is 65536.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="c8499-123">子元素</span><span class="sxs-lookup"><span data-stu-id="c8499-123">Child Elements</span></span>  
+ <span data-ttu-id="c8499-124">无。</span><span class="sxs-lookup"><span data-stu-id="c8499-124">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="c8499-125">父元素</span><span class="sxs-lookup"><span data-stu-id="c8499-125">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<行为\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|服务行为的设置集合。|  
-|[\<system.runtime.serialization\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。|  
+|<span data-ttu-id="c8499-126">元素</span><span class="sxs-lookup"><span data-stu-id="c8499-126">Element</span></span>|<span data-ttu-id="c8499-127">描述</span><span class="sxs-lookup"><span data-stu-id="c8499-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c8499-128">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c8499-128">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|<span data-ttu-id="c8499-129">服务行为的设置集合。</span><span class="sxs-lookup"><span data-stu-id="c8499-129">A collection of settings for the behavior of a service.</span></span>|  
+|[<span data-ttu-id="c8499-130">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="c8499-130">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<span data-ttu-id="c8499-131">表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。</span><span class="sxs-lookup"><span data-stu-id="c8499-131">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## 备注  
- 如本主题的“简介”部分所述，这是 \<X509Extension\> 元素所在的第二个层次结构。  
+## <a name="remarks"></a><span data-ttu-id="c8499-132">备注</span><span class="sxs-lookup"><span data-stu-id="c8499-132">Remarks</span></span>  
+ <span data-ttu-id="c8499-133">如本主题的简介中所述，这是在其中的第二个层次结构\<X509Extension > 元素出现。</span><span class="sxs-lookup"><span data-stu-id="c8499-133">As stated in the Introduction of this topic, this is the second hierarchy in which the \<X509Extension> element occurs.</span></span>  
   
- [\<system.runtime.serialization\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ [<span data-ttu-id="c8499-134">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="c8499-134">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
   
- [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [<span data-ttu-id="c8499-135">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="c8499-135">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
   
- 有关已知类型的更多信息，请参见 <xref:System.Runtime.Serialization.DataContractSerializer>。  
+ <span data-ttu-id="c8499-136">有关已知类型的更多信息，请参见 <xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="c8499-136">For more information about known types, see <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## 请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>   
- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>   
- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [数据传输和序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="c8499-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c8499-137">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
+ <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
+ [<span data-ttu-id="c8499-138">数据协定已知的类型</span><span class="sxs-lookup"><span data-stu-id="c8499-138">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="c8499-139">数据传输和序列化</span><span class="sxs-lookup"><span data-stu-id="c8499-139">Data Transfer and Serialization</span></span>](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
