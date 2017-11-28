@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
 
 控制台应用程序具有多种用途；从简单的状态查询到长时间运行的文档图像处理任务。 在任何情况下，启动和缩放这些应用程序的能力始终在硬件购置、启动时间或运行多个实例方面受限。
@@ -145,4 +143,3 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>摘要
 无需对应用程序代码进行任何更改，只需通过添加 Dockerfile 并发布应用程序，即可容器化 .NET Framework 控制台应用程序、立即利用运行多个实例的优势、洁净启动和停止，以及使用更多 Windows Server 2016 功能。
-

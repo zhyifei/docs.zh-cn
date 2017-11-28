@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
+ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core CLI 工具遥测
 
 [.NET Core SDK](index.md) 包括可收集使用情况信息的[遥测功能](https://github.com/dotnet/cli/pull/2145)。 请务必让 .NET 团队了解到工具使用情况，以便我们可以进行改进。 有关详细信息，请参阅[从 .NET Core SDK 遥测中所了解到的内容](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)。
@@ -39,6 +37,7 @@ ms.lasthandoff: 08/12/2017
 - `dotnet pack`
 - `dotnet restore`
 - `dotnet run`
+
 
 ## <a name="behavior"></a>行为
 
@@ -130,9 +129,8 @@ You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environmen
 You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [从 .NET Core SDK 遥测中所了解到的内容](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
 [遥测参考源（dotnet/cli 存储库；版本/2.0.0 分支）](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
 [.NET Core SDK 使用情况数据](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
-

@@ -1,40 +1,21 @@
 ---
 title: "使用 Visual Basic 开发应用程序"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3752d99e3e9860d5cac2996bb412fdb6c30b5af1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0dee8a19d22eb9b483a2d17fad43830971a8ab0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 开发应用程序
 本节介绍有关 Visual Basic 语言的概念文档。  
@@ -47,7 +28,7 @@ ms.lasthandoff: 07/28/2017
  讨论一项名为 `My` 的新功能，此功能可用于访问与应用程序及其运行时环境相关的信息和默认对象实例。  
   
  [在 Visual Basic 应用程序中访问数据](../../visual-basic/developing-apps/accessing-data.md)  
- 包含有关在 Visual Basic 中访问数据的帮助信息。   
+ 包含有关在 Visual Basic 中访问数据的帮助信息。  
   
  [在 Visual Basic 中创建和使用组件](../../visual-basic/developing-apps/creating-and-using-components.md)  
  定义术语“组件”，并讨论如何以及何时创建组件。  
@@ -67,4 +48,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
  包含 Visual Basic 语言的参考文档。
-

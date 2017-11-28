@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>移植到 .NET Core - 分析第三方依赖项
 
 移植过程的第一步是了解第三方依赖项。  需要找出尚未在 .NET Core 上运行的依赖项（如果有），并为这些没有在 .Net Core 上运行的依赖项制定应变计划。
@@ -97,4 +95,3 @@ dotnet5.5
 ## <a name="next-steps"></a>后续步骤
 
 若要移植库，请参阅 [Porting your Libraries](libraries.md)（移植库）。
-

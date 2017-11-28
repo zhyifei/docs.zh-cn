@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
+ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="expressions"></a>表达式
 
 *表达式*是在*操作数*和*运算符*的基础之上构造而成。 表达式的运算符指明了向操作数应用的运算。 运算符的示例包括 `+`、`-`、`*`、`/` 和 `new`。 操作数的示例包括文本、字段、局部变量和表达式。
@@ -45,7 +43,7 @@ ms.lasthandoff: 07/28/2017
     - `new T(...){...}`：使用初始值设定项的对象创建
     - `new {...}`：匿名对象初始值设定项
     - `new T[...]`：数组创建
-    - `typeof(T)`：获取 `T` 的 @System.Type 对象
+    - `typeof(T)`：获取 `T` 的 <xref:System.Type> 对象
     - `checked(x)`：在已检查的上下文中计算表达式
     - `unchecked(x)`：在未检查的上下文中计算表达式
     - `default(T)`：获取类型为 `T` 的默认值
@@ -102,4 +100,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [上一页](types-and-variables.md)
 [下一页](statements.md)
-

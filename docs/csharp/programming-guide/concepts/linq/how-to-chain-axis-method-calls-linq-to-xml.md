@@ -1,33 +1,29 @@
 ---
 title: "如何：链接轴方法调用 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 7cf5cb445dc64dfa5f4734ae58e6e921a5a92148
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17793e0620969125de202de7edea89d748b98ee7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何：链接轴方法调用 (LINQ to XML) (C#)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
   
- 有两个返回元素集合、名称为 `Elements` 的轴：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法。 可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。  
+ 有两个返回元素集合、名称为 `Elements` 的轴：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法。 可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。  
   
 ## <a name="example"></a>示例  
- 本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。  
+ 本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。  
   
  本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
@@ -54,7 +50,7 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- 此方法有效是因为其中有一个 `Elements` 轴实现充当 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XContainer> 的扩展方法。 <xref:System.Xml.Linq.XElement> 是从 <xref:System.Xml.Linq.XContainer> 派生的，因此可以对调用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法的结果调用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法。  
+ 此方法有效是因为其中有一个 `Elements` 轴实现充当 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XContainer> 的扩展方法。 <xref:System.Xml.Linq.XElement> 是从 <xref:System.Xml.Linq.XContainer> 派生的，因此可以对调用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法的结果调用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法。  
   
 ## <a name="example"></a>示例  
  有时，当可能存在或不存在间隔上级时，您希望在特定的元素深度，检索所有的元素。 例如，在下面的文档中，您可能要检索属于 `ConfigParameter` 元素的子元素的所有 `Customer` 元素，而不是属于 `ConfigParameter` 元素的子元素的 `Root`。  
@@ -81,7 +77,7 @@ foreach (XElement e in names)
 </Root>  
 ```  
   
- 若要执行此操作，您可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 轴，如下所示：  
+ 若要执行此操作，您可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 轴，如下所示：  
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
@@ -130,4 +126,3 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ to XML 轴 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

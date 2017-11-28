@@ -1,30 +1,33 @@
 ---
-title: "跟踪类型摘要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "跟踪类型摘要"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d8e82f153e996ffebc2aba614f42c5cfa949e7ec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 跟踪类型摘要
-[源级别](http://go.microsoft.com/fwlink/?LinkID=94943)（可能为英文网页）定义各种跟踪级别：严重、错误、警告、信息和详细，并提供对 `ActivityTracing` 标志的说明，该标志可切换跟踪边界和活动传输事件的输出。  
+# <a name="trace-type-summary"></a>跟踪类型摘要
+[源级别](http://go.microsoft.com/fwlink/?LinkID=94943)定义各种跟踪级别： 严重、 错误、 警告、 信息和详细，并提供说明`ActivityTracing`标志切换的输出以跟踪边界和活动传输事件。  
   
- 还可以查看可从 <xref:System.Diagnostics> 发出的跟踪类型的 [TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169)。  
+ 此外可以查看[TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169)类型可以从发出的跟踪的<xref:System.Diagnostics>。  
   
  下表列出了最重要的跟踪类型。  
   
 |跟踪类型|描述|  
-|----------|--------|  
+|----------------|-----------------|  
 |严重|致命错误或应用程序崩溃。|  
 |错误|可恢复的错误。|  
 |警告|信息性消息。|  
@@ -50,7 +53,7 @@ caps.handback.revision: 6
   
 -   如果有挂起和恢复跟踪，则在挂起跟踪和恢复跟踪之间不能有任何跟踪  
   
--   只要符合上述条件，就可以有任意多个严重\/错误\/警告\/信息\/详细\/传输跟踪  
+-   只要符合上述条件，就可以有任意多个严重/错误/警告/信息/详细/传输跟踪  
   
  下面的正则表达式用于定义全局范围内的理想活动，  
   
@@ -58,7 +61,7 @@ caps.handback.revision: 6
 R+   
 ```  
   
- R 是本地范围内活动的正则表达式。  这将转换为，  
+ R 是本地范围内活动的正则表达式。 这将转换为，  
   
 ```  
 [R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  

@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
+ms.openlocfilehash: 893999f9abcc299da4fb0923fe47c371079f695c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e11515031716a66ead866e52504137cb4e1df137
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
@@ -63,4 +61,3 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 ## <a name="next-step"></a>下一步
 
 [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](using-on-mac-vs-full-solution.md)主题为你演示如何构建包含可重用的库和单元测试的完整的 .NET Core 解决方案。
-

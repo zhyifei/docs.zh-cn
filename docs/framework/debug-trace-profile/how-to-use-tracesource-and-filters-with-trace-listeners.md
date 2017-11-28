@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - initializing trace listeners
 - configuration files [.NET Framework], trace listeners
@@ -27,16 +21,15 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73a91d081a1e59995d52f3ef6927db12dd7e4599
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4b557a9f9f462df2d1afe6d6b61871e0e9f40174
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：将 TraceSource 和筛选器与跟踪侦听器一起使用
 .NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 用作增强型跟踪系统，并可用来代替较旧的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 跟踪类的静态方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
@@ -114,7 +107,7 @@ ms.lasthandoff: 08/21/2017
   
 ### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>更改侦听器写入跟踪消息的级别  
   
-1.  配置文件在初始化应用程序时初始化跟踪源的设置。 若要更改这些设置，必须更改配置文件并重启应用，或使用 <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=fullName> 方法以编程方式刷新应用程序。 应用程序可以动态更改配置文件设置的属性，以重写用户指定的任何设置。  例如，可能想要确保始终将关键消息发送到文本文件，而不管当前配置设置如何。  
+1.  配置文件在初始化应用程序时初始化跟踪源的设置。 若要更改这些设置，必须更改配置文件并重启应用，或使用 <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> 方法以编程方式刷新应用程序。 应用程序可以动态更改配置文件设置的属性，以重写用户指定的任何设置。  例如，可能想要确保始终将关键消息发送到文本文件，而不管当前配置设置如何。  
   
     ```  
     using System;  
@@ -179,10 +172,9 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventTypeFilter>   
- [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventTypeFilter>  
+ [如何： 创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-

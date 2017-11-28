@@ -1,30 +1,21 @@
 ---
 title: "标准查询运算符的查询表达式语法 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f662f23948f5d18c31a981a2f46d78f382ff5c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30e994329234b8bd455f739694e50121bac63d5d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>标准查询运算符的查询表达式语法 (C#)
 某些使用更频繁的标准查询运算符具有专用的 C# 语言关键字语法，使用这些语法可以在查询表达式中调用这些运算符。 查询表达式是比基于方法的等效项更具可读性的另一种查询表示形式。 查询表达式子句在编译时被转换为对查询方法的调用。  
@@ -47,8 +38,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Linq.Enumerable.Where%2A>|`where`<br /><br /> （有关详细信息，请参阅 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。）|  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable>   
- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [标准查询运算符按执行方式的分类 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-

@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework, development guide
+helpviewer_keywords: .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 07/28/2017
  描述如何使用 Windows Communication Foundation (WCF) 生成安全可靠且面向服务的应用。  
   
  [使用 Windows Workflow Foundation 生成工作流](windows-workflow-foundation/index.md)     
- 提供有关用于 Windows Workflow Foundation (WF) 的编程模型、示例和工具的信息。   
+ 提供有关用于 Windows Workflow Foundation (WF) 的编程模型、示例和工具的信息。  
 
  [Windows 服务应用程序](../../docs/framework/windows-services/index.md)  
  介绍如何使用 Visual Studio 和 .NET Framework 创建作为服务安装的应用，以及如何开始、停止和以其他方式控制其行为。  
@@ -94,4 +91,3 @@ ms.lasthandoff: 07/28/2017
   
  [.NET Framework 示例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  提供指向演示 .NET Framework 技术的示例应用的 MSDN 代码示例库的链接。
-

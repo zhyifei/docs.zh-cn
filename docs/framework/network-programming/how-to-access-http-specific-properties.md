@@ -8,21 +8,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a0c5a2c3a159e4d10da03a584b29e4b77720534
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f277321ab94874970cb392dfe7f84a52a1cc2c40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-access-http-specific-properties"></a>如何：访问 HTTP 特定的属性
 此示例演示如何关闭 HTTP 保持的连接行为并从 Web 服务器获取协议版本号。  
@@ -62,7 +59,6 @@ HttpWResp.Close();
 -   引用 System.Net 命名空间。  
   
 ## <a name="see-also"></a>另请参阅  
- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)   
+ [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)  
  [HTTP](../../../docs/framework/network-programming/http.md)
-

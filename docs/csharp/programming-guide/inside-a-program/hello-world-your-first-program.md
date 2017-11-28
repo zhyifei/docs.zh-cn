@@ -1,42 +1,24 @@
 ---
 title: "Hello World -- 您的第一个程序（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
-ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一个程序（C# 编程指南）
 以下过程创建传统“Hello World!”程序的 C# 版本。 该程序显示字符串 `Hello World!`  
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/31/2017
   
 6.  将 Program.cs 的内容替换为以下代码。  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  选择 F5 键运行该项目。 将显示包含行 `Hello World!` 的命令提示符窗口  
   
@@ -72,11 +54,11 @@ ms.lasthandoff: 07/31/2017
 ## <a name="comments"></a>注释  
  第一行包含一条注释。 字符 `//` 将该行的其余内容转换为一条注释。  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
+ [!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  还可以通过将文本块置于 `/*` 和 `*/` 字符之间，禁止对其的注释。 这在下面的示例中显示。  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
+ [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Main 方法  
  C# 控制台应用程序必须包含 `Main` 方法，控件在其中开始和结束。 在 `Main` 方法中，可以创建对象并执行其他方法。  
@@ -85,19 +67,19 @@ ms.lasthandoff: 07/31/2017
   
 -   它可返回 `void`。  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   还可以返回一个整数。  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   无论使用哪种返回类型，它都可以带有参数。  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      - 或 -  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  `Main` 方法中定义的参数 `args` 是一个 `string` 类型的数组，该数组包含用于调用该程序的命令行自变量。 与 C++ 不同的是该数组不包括可执行 (exe) 文件的名称。  
   
@@ -108,9 +90,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="input-and-output"></a>输入和输出  
  C# 程序通常使用由 .NET Framework 的运行时库提供的输入/输出服务。 语句 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。 这是运行时库中 <xref:System.Console> 类的输出方法之一。 该方法将在标准输出流中显示其字符串参数，后接新行。 其他 <xref:System.Console> 方法可用于不同的输入和输出操作。 如果程序开头包含 `using System;` 指令，则可以直接使用 <xref:System> 类和方法，而不必进行完全限定。 例如，可以调用 `Console.WriteLine`，而非 `System.Console.WriteLine`：  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
+ [!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  有关输入/输出方法的详细信息，请参阅 <xref:System.IO>。  
   
@@ -150,11 +132,10 @@ ms.lasthandoff: 07/31/2017
  有关 C# 编译器及其选项的详细信息，请参阅 [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)。
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)   
- [字符串](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover>C# 示例应用程序](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [Main() 和命令行自变量](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [字符串](../../../csharp/programming-guide/strings/index.md)  
+ [\<paveover>C# 示例应用程序](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

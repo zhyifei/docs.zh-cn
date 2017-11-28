@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection, reflection-only loader context
 - assemblies [.NET Framework], loading for reflection
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>如何：将程序集加载到仅反射上下文中
 通过仅反射加载上下文，可检查为其他平台或 .NET Framework 的其他版本编译的程序集。 只能检查，不能执行加载到此上下文中的代码。 这意味着无法创建对象，因为无法执行构造函数。 因为该代码无法执行，所以不会自动加载依赖项。 如果需要对依赖项进行检查，必须自行加载。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  使用程序集的 <xref:System.Reflection.Assembly.ReflectionOnly%2A> 属性确定是否已将程序集加载到仅反射上下文中。  
   
-4.  如果向程序集或程序集中的类型应用了特性，则应使用 <xref:System.Reflection.CustomAttributeData> 类检查这些特性，确保未尝试在仅反射上下文中执行代码。 使用 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> 方法的适当重载获取表示应用于程序集、成员、模块或参数的特性的 <xref:System.Reflection.CustomAttributeData> 对象。  
+4.  如果向程序集或程序集中的类型应用了特性，则应使用 <xref:System.Reflection.CustomAttributeData> 类检查这些特性，确保未尝试在仅反射上下文中执行代码。 使用 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 方法的适当重载获取表示应用于程序集、成员、模块或参数的特性的 <xref:System.Reflection.CustomAttributeData> 对象。  
   
     > [!NOTE]
     >  应用于程序集或其内容的特性可能是在该程序集中定义的，也可能是在加载到仅反射上下文中的另一个程序集中定义的。 无法事先知悉这些特性是在何处定义的。  
@@ -54,10 +56,11 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  为简化本代码示例，该程序集自行完成加载和检查操作。 通常情况下，不要在执行上下文和仅反射上下文中加载同一程序集。  
   
- [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)][!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)][!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+ [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
+ <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+ <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
  <xref:System.Reflection.CustomAttributeData>
-

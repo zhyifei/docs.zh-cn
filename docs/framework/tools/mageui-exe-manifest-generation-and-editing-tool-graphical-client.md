@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
@@ -52,7 +45,7 @@ ms.lasthandoff: 09/25/2017
 |**另存为**|**文件**||将文件保存到磁盘，使你能够提供新的文件名和/或位置。|  
 |**全部保存**|**文件**||保存对 MageUI.exe 中当前打开的全部文件所做的更改。|  
 |**首选项**|**文件**||打开“首选项”对话框。 有关详细信息，请参阅下一节。|  
-|**Exit**|**文件**|Alt + F4|退出 MageUI.exe。|  
+|<bpt id="p1">**</bpt>Exit<ept id="p1">**</ept>|**文件**|Alt + F4|退出 MageUI.exe。|  
 |**剪切**|**编辑**|Ctrl+X|从应用程序中移除当前选定的文本，然后将其移至系统剪贴板。|  
 |**复制**|**编辑**|Ctrl+C|将当前选定的文本复制到系统剪贴板。|  
 |**粘贴**|**编辑**|Ctrl+V|将文本从系统剪贴板粘贴到当前活动的文本元素中。|  
@@ -207,7 +200,6 @@ ms.lasthandoff: 09/25/2017
 |**选择清单**|使你能够选择应用程序清单。 选择应用程序清单后，此页面上的所有其他字段均将进行填充。|  
   
 ## <a name="see-also"></a>另请参阅  
- [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
- [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-

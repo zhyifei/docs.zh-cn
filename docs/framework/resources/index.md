@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resources-in-desktop-apps"></a>桌面应用程序中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
@@ -51,17 +49,17 @@ ms.lasthandoff: 09/05/2017
  有关详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)一文。  
   
 ## <a name="retrieving-resources"></a>检索资源  
- 在运行时，应用会基于 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性指定的区域性为每个线程加载相应的本地化资源。 此属性的值按如下方式派生：  
+ 在运行时，应用会基于 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 属性指定的区域性为每个线程加载相应的本地化资源。 此属性的值按如下方式派生：  
   
--   向 <xref:System.Globalization.CultureInfo> 属性直接分配一个表示本地化区域性的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> 对象。  
+-   向 <xref:System.Globalization.CultureInfo> 属性直接分配一个表示本地化区域性的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 对象。  
   
--   如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName> 属性检索默认线程 UI 区域性。  
+-   如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性检索默认线程 UI 区域性。  
   
 -   如果没有明确分配默认线程 UI 区域性，则通过调用 Windows `GetUserDefaultUILanguage` 函数来检索本地计算机当前用户的区域性。  
   
- 有关如何设置当前 UI 区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 参考页。  
+ 有关如何设置当前 UI 区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 参考页。  
   
- 随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=fullName> 类，可以为当前的 UI 区域性或特定区域性检索资源。 虽然 <xref:System.Resources.ResourceManager> 类最常用于检索桌面应用资源，但 <xref:System.Resources?displayProperty=fullName> 命名空间也包含可用于检索资源的其他类型。 这些方法包括：  
+ 随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类，可以为当前的 UI 区域性或特定区域性检索资源。 虽然 <xref:System.Resources.ResourceManager> 类最常用于检索桌面应用资源，但 <xref:System.Resources?displayProperty=nameWithType> 命名空间也包含可用于检索资源的其他类型。 这些方法包括：  
   
 -   <xref:System.Resources.ResourceReader> 类 - 可用于枚举嵌入在程序集或存储于独立二进制 .resources 文件中的资源。 当您不知道运行时可用资源的准确名称时，这将会很有用。  
   
@@ -72,11 +70,10 @@ ms.lasthandoff: 09/05/2017
 -   <xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- [应用程序要点](../../../docs/standard/application-essentials.md)   
- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
+ [应用程序要点](../../../docs/standard/application-essentials.md)  
+ [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [检索资源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
-

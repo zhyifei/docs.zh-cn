@@ -1,43 +1,24 @@
 ---
 title: "base（C# 参考）"
 description: "了解 base 关键字，使用它从 C# 中的派生类中访问基类的成员。"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - base
 - BaseClass.BaseClass
 - base_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- base keyword [C#]
+helpviewer_keywords: base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1bbaa0cc05b35f822113bc3a8c3cde966b1484ef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
-ms.openlocfilehash: b3a389d92373b6ba5995a7644b0440f9d8fad9ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="base-c-reference"></a>base（C# 参考）
 
@@ -56,20 +37,20 @@ ms.lasthandoff: 08/17/2017
 ## <a name="example"></a>示例
 在本例中，基类 `Person` 和派生类 `Employee` 都有一个名为 `Getinfo` 的方法。 通过使用 `base` 关键字，可以从派生类中调用基类的 `Getinfo` 方法。
 
-[!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]
+[!code-csharp[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]
 
 有关其他示例，请参阅 [new](../../../csharp/language-reference/keywords/new.md)、[virtual](../../../csharp/language-reference/keywords/virtual.md) 和 [override](../../../csharp/language-reference/keywords/override.md)。
 
 ## <a name="example"></a>示例
 本示例显示如何指定在创建派生类实例时调用的基类构造函数。
 
-[!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
+[!code-csharp[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
 
 ## <a name="c-language-specification"></a>C# 语言规范
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>请参阅
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [this](../../../csharp/language-reference/keywords/this.md)

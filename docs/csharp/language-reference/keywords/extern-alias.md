@@ -1,42 +1,23 @@
 ---
 title: "外部别名（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- alias_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: alias_CSharpKeyword
 helpviewer_keywords:
 - extern alias keyword [C#]
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4e995586c08659853538726a12679770cd1ada37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66b399aaf6d4b3ba27957f3eadad3c1079ed2e90
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
 有时你可能不得不引用具有相同的完全限定类型名称的程序集的两个版本。 例如，可能需要在同一应用程序中使用某程序集的两个或多个版本。 通过使用外部程序集别名，可在别名命名的根级别命名空间内包装每个程序集的命名空间，使其能够在同一文件中使用。  
@@ -63,11 +44,10 @@ ms.lasthandoff: 09/25/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [:: 运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
  [/reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-

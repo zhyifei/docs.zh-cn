@@ -1,12 +1,9 @@
 ---
 title: "静态类和静态类成员（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静态类和静态类成员（C# 编程指南）
 [静态](../../../csharp/language-reference/keywords/static.md)类基本上与非静态类相同，但存在一个差异：静态类无法实例化。 换句话说，无法使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字创建类类型的变量。 由于不存在任何实例变量，因此可以使用类名本身访问静态类的成员。 例如，如果你具有一个静态类，该类名为 `UtilityClass`，并且具有一个名为 `MethodA` 的公共方法，如下面的示例所示：  
@@ -45,7 +27,7 @@ ms.lasthandoff: 07/28/2017
 UtilityClass.MethodA();  
 ```  
   
- 静态类可以用作只对输入参数进行操作并且不必获取或设置任何内部实例字段的方法集的方便容器。 例如，在 .NET Framework 类库中，静态 <xref:System.Math?displayProperty=fullName> 类包含执行数学运算，而无需存储或检索对 <xref:System.Math> 类特定实例唯一的数据的方法。 即，通过指定类名和方法名称来应用类的成员，如下面的示例所示。  
+ 静态类可以用作只对输入参数进行操作并且不必获取或设置任何内部实例字段的方法集的方便容器。 例如，在 .NET Framework 类库中，静态 <xref:System.Math?displayProperty=nameWithType> 类包含执行数学运算，而无需存储或检索对 <xref:System.Math> 类特定实例唯一的数据的方法。 即，通过指定类名和方法名称来应用类的成员，如下面的示例所示。  
   
 ```csharp  
 double dub = -3.14;  
@@ -81,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>示例  
  下面是静态类的示例，该类包含将温度从摄氏度从华氏度以及从华氏度转换为摄氏度的两个方法：  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## <a name="static-members"></a>静态成员  
  非静态类可以包含静态方法、字段、属性或事件。 即使未创建类的任何实例，也可对类调用静态成员。 静态成员始终按类名（而不是实例名称）进行访问。 静态成员只有一个副本存在（与创建的类的实例数有关）。 静态方法和属性无法在其包含类型中访问非静态字段和事件，它们无法访问任何对象的实例变量，除非在方法参数中显式传递它。  
@@ -96,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  可在成员的返回类型之前使用 `static` 关键字声明静态类成员，如下面的示例所示：  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  在首次访问静态成员之前以及在调用构造函数（如果有）之前，会初始化静态成员。 若要访问静态类成员，请使用类的名称（而不是变量名称）指定成员的位置，如下面的示例所示：  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  如果类包含静态字段，则提供在类加载时初始化它们的静态构造函数。  
   
@@ -109,11 +91,10 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [类](../../../csharp/language-reference/keywords/class.md)   
- [静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
+ [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [类](../../../csharp/language-reference/keywords/class.md)  
+ [静态构造函数](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [实例构造函数](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
-

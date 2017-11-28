@@ -1,45 +1,27 @@
 ---
 title: "如何：在 Visual Basic 中下载文件"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- downloading Internet resources, files
-- downloading files
-- remote computers, downloading from
-- files, downloading
-- files, transferring
+- downloading Internet resources [Visual Basic], files
+- downloading files [Visual Basic]
+- remote computers [Visual Basic], downloading from
+- files [Visual Basic], downloading
+- files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc67d28b870f86c6464e86f7682f71e6e36ea9e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>如何：在 Visual Basic 中下载文件
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可用来下载远程文件并将其存储到特定位置。 如果 `ShowUI` 参数设置为 `True`，则显示一个对话框，该对话框显示下载进度并允许用户取消该操作。 默认情况下，不会覆盖同名的现有文件；如果希望覆盖现有文件，则将 `overwrite` 参数设为 `True`。  
@@ -81,8 +63,7 @@ ms.lasthandoff: 07/28/2017
     >  `DownLoadFile` 方法使用的 FTP 协议以纯文本方式发送信息（包括密码），因此不应用于传送敏感信息。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Devices.Network>   
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>   
- [如何：上传文件](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)   
+ <xref:Microsoft.VisualBasic.Devices.Network>  
+ <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
+ [如何：上载文件](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [如何：分析文件路径](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-

@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-inner-joins"></a>执行内部联接
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="simple-key-join-example"></a>简单键联接示例  
  下面的示例创建两个集合，其中包含两种用户定义类型 `Person` 和 `Pet` 的对象。 查询使用 C# 中的 `join` 子句将 `Person` 对象与 `Owner` 是该 `Person` 的 `Pet` 对象匹配。 C# 中的 `select` 子句定义结果对象的外观。 在此示例中，结果对象是由所有者名字和宠物姓名组成的匿名类型。  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
  请注意，`LastName` 是“Huff”的 `Person` 对象未出现在结果集中，因为没有 `Pet` 对象的 `Pet.Owner` 等于该 `Person`。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  下面的示例使用 `Employee` 对象的列表和 `Student` 对象的列表来确定哪些雇员同时还是学生。 这两种类型都具有 <xref:System.String> 类型的 `FirstName` 和 `LastName` 属性。 通过每个列表的元素创建联接键的函数会返回由每个元素的 `FirstName` 和 `LastName` 属性组成的匿名类型。 联接运算会比较这些复合键是否相等，并从每个列表返回名字和姓氏都匹配的对象对。  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
 ## <a name="example"></a>示例  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  C# 中的第二个 `join` 子句基于由 `Owner` 类型的 `Person` 属性和动物姓名的第一个字母组成的复合键，将第一个联接返回的匿名类型与提供的狗列表中的 `Dog` 对象相关联。 它返回包含来自每个匹配对的 `Cat.Name` 和 `Dog.Name` 属性的匿名类型的序列。 由于这是内部联接，因此只返回第一个数据源中在第二个数据源中具有匹配项的对象。  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
 ## <a name="example"></a>示例  
   
@@ -74,13 +72,12 @@ ms.lasthandoff: 07/28/2017
   
  `query1` 的结果等效于通过使用 `join` 子句（不使用 `into` 子句）执行内部联接来获取的结果集。 `query2` 变量演示了此等效查询。  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [执行分组联接](perform-grouped-joins.md)   
- [执行左外部联接](perform-left-outer-joins.md)   
- [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [执行分组联接](perform-grouped-joins.md)  
+ [执行左外部联接](perform-left-outer-joins.md)  
+ [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

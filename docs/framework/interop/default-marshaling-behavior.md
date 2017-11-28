@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, default
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -87,7 +83,7 @@ BSTR MethodOne (BSTR b) {
   
 -   对于平台调用，默认情况下，委托作为非托管函数指针进行封送。  
   
--   对于 COM 互操作，默认情况下，委托作为 _Delegate 类型的 COM 接口进行封送。 在 Mscorlib.tlb 类型库中定义 **_Delegate** 接口且该接口包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName> 方法，使你可以调用该委托引用的方法。  
+-   对于 COM 互操作，默认情况下，委托作为 _Delegate 类型的 COM 接口进行封送。 在 Mscorlib.tlb 类型库中定义 **_Delegate** 接口且该接口包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，使你可以调用该委托引用的方法。  
   
  下表显示托管委托数据类型的封送处理选项。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性提供若干 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值来封送委托。  
   
@@ -365,34 +361,34 @@ interface _Graphics {
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>系统值类型  
- <xref:System> 命名空间具有多个表示运行时原始类型装箱形式的值类型。 例如，值类型 <xref:System.Int32?displayProperty=fullName> 结构表示 ELEMENT_TYPE_I4 的装箱形式。 不像其他格式化类型将这些类型作为结构进行封送处理，而是以它们装箱的原始类型的相同方式将它们封送处理。 因此，System.Int32 作为 ELEMENT_TYPE_I4 封送处理，而不是作为包含长类型的单个成员的结构封送处理。 下表包含系统命名空间中的值类型列表，这些值类型是基元类型的装箱表示形式。  
+ <xref:System> 命名空间具有多个表示运行时原始类型装箱形式的值类型。 例如，值类型 <xref:System.Int32?displayProperty=nameWithType> 结构表示 ELEMENT_TYPE_I4 的装箱形式。 不像其他格式化类型将这些类型作为结构进行封送处理，而是以它们装箱的原始类型的相同方式将它们封送处理。 因此，System.Int32 作为 ELEMENT_TYPE_I4 封送处理，而不是作为包含长类型的单个成员的结构封送处理。 下表包含系统命名空间中的值类型列表，这些值类型是基元类型的装箱表示形式。  
   
 |系统值类型|元素类型|  
 |-----------------------|------------------|  
-|<xref:System.Boolean?displayProperty=fullName>|ELEMENT_TYPE_BOOLEAN|  
-|<xref:System.SByte?displayProperty=fullName>|ELEMENT_TYPE_I1|  
-|<xref:System.Byte?displayProperty=fullName>|ELEMENT_TYPE_UI1|  
-|<xref:System.Char?displayProperty=fullName>|ELEMENT_TYPE_CHAR|  
-|<xref:System.Int16?displayProperty=fullName>|ELEMENT_TYPE_I2|  
-|<xref:System.UInt16?displayProperty=fullName>|ELEMENT_TYPE_U2|  
-|<xref:System.Int32?displayProperty=fullName>|ELEMENT_TYPE_I4|  
-|<xref:System.UInt32?displayProperty=fullName>|ELEMENT_TYPE_U4|  
-|<xref:System.Int64?displayProperty=fullName>|ELEMENT_TYPE_I8|  
-|<xref:System.UInt64?displayProperty=fullName>|ELEMENT_TYPE_U8|  
-|<xref:System.Single?displayProperty=fullName>|ELEMENT_TYPE_R4|  
-|<xref:System.Double?displayProperty=fullName>|ELEMENT_TYPE_R8|  
-|<xref:System.String?displayProperty=fullName>|ELEMENT_TYPE_STRING|  
-|<xref:System.IntPtr?displayProperty=fullName>|ELEMENT_TYPE_I|  
-|<xref:System.UIntPtr?displayProperty=fullName>|ELEMENT_TYPE_U|  
+|<xref:System.Boolean?displayProperty=nameWithType>|ELEMENT_TYPE_BOOLEAN|  
+|<xref:System.SByte?displayProperty=nameWithType>|ELEMENT_TYPE_I1|  
+|<xref:System.Byte?displayProperty=nameWithType>|ELEMENT_TYPE_UI1|  
+|<xref:System.Char?displayProperty=nameWithType>|ELEMENT_TYPE_CHAR|  
+|<xref:System.Int16?displayProperty=nameWithType>|ELEMENT_TYPE_I2|  
+|<xref:System.UInt16?displayProperty=nameWithType>|ELEMENT_TYPE_U2|  
+|<xref:System.Int32?displayProperty=nameWithType>|ELEMENT_TYPE_I4|  
+|<xref:System.UInt32?displayProperty=nameWithType>|ELEMENT_TYPE_U4|  
+|<xref:System.Int64?displayProperty=nameWithType>|ELEMENT_TYPE_I8|  
+|<xref:System.UInt64?displayProperty=nameWithType>|ELEMENT_TYPE_U8|  
+|<xref:System.Single?displayProperty=nameWithType>|ELEMENT_TYPE_R4|  
+|<xref:System.Double?displayProperty=nameWithType>|ELEMENT_TYPE_R8|  
+|<xref:System.String?displayProperty=nameWithType>|ELEMENT_TYPE_STRING|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|ELEMENT_TYPE_I|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|ELEMENT_TYPE_U|  
   
  系统命名空间中一些其他值类型的处理方式则不同。 由于非托管代码已具备这些类型的完善格式，因此封送拆收器具有用于将其封送的特殊规则。 下表列出系统命名空间中的特殊值类型，以及其封送到的非托管类型。  
   
 |系统值类型|IDL 类型|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=fullName>|DATE|  
-|<xref:System.Decimal?displayProperty=fullName>|DECIMAL|  
-|<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|OLE_COLOR|  
+|<xref:System.DateTime?displayProperty=nameWithType>|DATE|  
+|<xref:System.Decimal?displayProperty=nameWithType>|DECIMAL|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Drawing.Color?displayProperty=nameWithType>|OLE_COLOR|  
   
  下面的代码显示 Stdole2 类型库中非托管类型 DATE、GUID、DECIMAL 和 OLE_COLOR 的定义。  
   
@@ -451,9 +447,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Blittable 和非 Blittable 类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)   
- [数组的默认封送处理](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
- [对象的默认封送处理](../../../docs/framework/interop/default-marshaling-for-objects.md)   
+ [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)  
+ [数组的默认封送处理](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [对象的默认封送处理](../../../docs/framework/interop/default-marshaling-for-objects.md)  
  [字符串的默认封送处理](../../../docs/framework/interop/default-marshaling-for-strings.md)
-

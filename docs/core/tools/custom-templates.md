@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
 ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
 [.NET Core SDK](https://www.microsoft.com/net/download/core) 附带许多预安装的模板，与 [`dotnet new` 命令](dotnet-new.md)结合使用。 自.NET Core 2.0 起，可以为任何类型的项目（如应用程序、服务、工具或类库）创建自己的自定义模板。 甚至可以创建输出一个或多个独立文件（如配置文件）的模板。
@@ -89,7 +87,7 @@ dotnet new -l
 
 | 元素            | 类型   | 描述 |
 | ------------------ | ------ | ----------- |
-| **\<authors>**     | string | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。 创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
+| **\<authors>**     | string | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
 | **\<description>** | string | 用于 UI 显示的包的详细说明。 |
 | **\<id>**          | string | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
 | **\<packageType>** | string | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
@@ -157,11 +155,10 @@ dotnet new -u <FILE_SYSTEM_DIRECTORY>
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [创建 dotnet new 自定义模板（教程）](../tutorials/create-custom-template.md)  
 [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)  
 [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
 [如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)  
-

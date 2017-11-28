@@ -1,39 +1,21 @@
 ---
 title: "COM 类示例（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ad14b414c037d38da55ce0ec82685b790cc46d2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a759a7dcd211207c8740dd99d592daa509ddec47
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 类示例（C# 编程指南）
 下面是将公开为 COM 对象的类的示例。 在将此代码放置在 .cs 文件中并添加到项目后，将“注册 COM 互操作”属性设置为“True”。 有关详细信息，请参阅 [NIB：如何：为 COM 互操作注册组件](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e)。  
@@ -57,10 +39,9 @@ ms.lasthandoff: 07/28/2017
  此类实现此类接口；它可以实现多个接口，但第一个实现将为默认类接口。 在此处实现向 COM 公开的方法和属性。 它们必须标记为公共，并且必须匹配类接口中的声明。 此外，在此处声明此类引发的事件。 它们必须标记为公共，并且必须匹配事件接口中的声明。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
+ [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [互操作性](../../../csharp/programming-guide/interop/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [互操作性](../../../csharp/programming-guide/interop/index.md)  
  [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-

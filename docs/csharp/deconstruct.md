@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
+ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
-ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型 #
 
@@ -39,7 +38,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 - 可以在括号内显式声明每个字段的类型。 以下示例使用此方法来析构由 `QueryCityData` 方法返回的 3 元组。
 
-    [!code-csharp[析构-显式](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
+    [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
 - 可使用 `var` 关键字，以便 C# 推断每个变量的类型。 将 `var` 关键字放在括号外。 以下示例在析构由 `QueryCityData` 方法返回的 3 元组时使用类型推理。
  
@@ -61,17 +60,17 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 以下示例演示了对元组使用放弃时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为放弃处理。  
 
-[!code-csharp[元组-放弃](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
+[!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 ### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 
 非元组类型不提供对放弃的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
 
-[!code-csharp[类-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
 然后，可使用类似于以下的分配来析构名为 `p` 的 `Person` 类的实例：
 
-[!code-csharp[类-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
 
 以下示例重载 `Deconstruct` 方法以返回 `Person` 对象的各种属性组合。 单个重载返回：
 
@@ -79,13 +78,13 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 - 名字、姓氏和中间名。
 - 名字、姓氏、城市名和省/市/自治区名。
 
-[!code-csharp[类-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
 因为可重载 `Deconstruct` 方法来反映通常从对象中提取的数据组，所以应使用独特明确的签名来定义 `Deconstruct` 方法。 如果有多个 `Deconstruct` 方法具有相同数量的 `out` 参数，或具有相同数量和类型的 `out` 参数且顺序不同，则可能会造成混淆。 
 
 以下示例中的重载 `Deconstruct` 方法演示一种混淆的可能性。 第一个重载按该顺序返回 `Person` 对象的名字、中间名、姓氏和年龄。 第二个重载仅将姓名信息与年收入一起返回，但名字、中间名和姓氏的顺序不同。 这使得在析构 `Person` 实例时容易混淆参数的顺序。
 
-[!code-csharp[析构-多义性](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>使用放弃析构用户定义类型
 
@@ -93,17 +92,16 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。
 
-[!code-csharp[类-放弃](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
+[!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>使用扩展方法析构用户定义的类型
 
 如果没有创建类、结构或接口，仍可通过实现一个或多个 `Deconstruct` [扩展方法](programming-guide/classes-and-structs/extension-methods.md)来析构该类型的对象，以返回所需值。 
 
-以下示例为 <xref:System.Reflection.PropertyInfo?displayProperty=fullName> 类定义了两个 `Deconstruct` 扩展方法。 第一个方法返回一组值，指示属性的特征，包括其类型、是静态还是实例、是否为只读，以及是否已编制索引。 第二个方法指示属性的可访问性。 因为 get 和 set 访问器的可访问性可能不同，所以布尔值指示属性是否具有单独的 get 和 set 访问器，如果是，则指示它们是否具有相同的可访问性。 如果只有一个访问器，或者 get 和 set 访问器具有相同的可访问性，则 `access` 变量指示整个属性的可访问性。 否则，get 和 set 访问器的可访问性由 `getAccess` 和 `setAccess` 变量所指示的可访问性来指示。
+以下示例为 <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> 类定义了两个 `Deconstruct` 扩展方法。 第一个方法返回一组值，指示属性的特征，包括其类型、是静态还是实例、是否为只读，以及是否已编制索引。 第二个方法指示属性的可访问性。 因为 get 和 set 访问器的可访问性可能不同，所以布尔值指示属性是否具有单独的 get 和 set 访问器，如果是，则指示它们是否具有相同的可访问性。 如果只有一个访问器，或者 get 和 set 访问器具有相同的可访问性，则 `access` 变量指示整个属性的可访问性。 否则，get 和 set 访问器的可访问性由 `getAccess` 和 `setAccess` 变量所指示的可访问性来指示。
 
-[!code-csharp[扩展-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
+[!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>请参阅
 [放弃](discards.md)   
 [元组](tuples.md)  
-

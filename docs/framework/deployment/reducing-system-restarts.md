@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, reducing system restarts
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d3f54e3794d1595ed120685a452478791e0ad37c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安装期间减少系统重新启动
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序使用[重启管理器](http://go.microsoft.com/fwlink/?LinkId=231425)来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
@@ -50,7 +43,6 @@ ms.lasthandoff: 07/28/2017
  如果使用的是链接的安装程序，但不希望提供自己的消息框用于关闭应用，则链接 .NET Framework 安装过程时可以使用命令行上的 `/showrmui` 和 `/passive` 选项。 一起使用这些选项时，如果可以通过关闭应用避免系统重启，安装程序将显示关闭应用的消息框。 此消息框在被动模式下的行为与在完全用户界面下的行为相同。 请参阅[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)，了解用于重新分发 .NET Framework 的一组完整命令行选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [部署](../../../docs/framework/deployment/index.md)   
- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [部署](../../../docs/framework/deployment/index.md)  
+ [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
-

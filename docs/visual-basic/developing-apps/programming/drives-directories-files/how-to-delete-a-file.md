@@ -1,44 +1,26 @@
 ---
 title: "如何：在 Visual Basic 中删除文件"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Delete method
-- files, deleting
-- files, manipulating
+- Delete method [Visual Basic]
+- files [Visual Basic], deleting
+- files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 536c10070ef51044b801fc6a5805741896586dff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e4b0b87fd403556777e0ab5a1edd517687360374
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>如何：在 Visual Basic 中删除文件
 通过 `My.Computer.FileSystem` 对象的 `DeleteFile` 方法，可以删除文件。 它提供的选项包括：是否将已删除的文件发送到“回收站”、是否要求用户确认应删除该文件，以及当用户取消操作时要执行的操作。  
@@ -85,9 +67,8 @@ ms.lasthandoff: 07/28/2017
 -   用户取消了该操作，并且 `onUserCancel` 设置为 `ThrowException` (<xref:System.OperationCanceledException>)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.UIOption>   
- <xref:Microsoft.VisualBasic.FileIO.RecycleOption>   
+ <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.UIOption>  
+ <xref:Microsoft.VisualBasic.FileIO.RecycleOption>  
  [如何：获取目录中的文件集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
-

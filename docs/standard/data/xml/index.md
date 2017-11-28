@@ -8,22 +8,16 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -42,13 +36,13 @@ ms.lasthandoff: 09/05/2017
   
  这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如:   
   
--   <xref:System.Xml.XmlDocument?displayProperty=fullName> 类可实现 [W3C 文档对象模型 (DOM) 级别 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 级别 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建议。  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 类可实现 [W3C 文档对象模型 (DOM) 级别 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 级别 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建议。  
   
--   <xref:System.Xml.XmlReader?displayProperty=fullName> 和 <xref:System.Xml.XmlWriter?displayProperty=fullName> 类支持 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空间](http://www.w3.org/TR/REC-xml-names/)建议。  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 类支持 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空间](http://www.w3.org/TR/REC-xml-names/)建议。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> 类中的架构支持 [W3C XML 架构第 1 部分：结构](http://www.w3.org/TR/xmlschema-1/)和 [XML 架构第 2 部分：数据类型](http://www.w3.org/TR/xmlschema-2/)建议。  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 类中的架构支持 [W3C XML 架构第 1 部分：结构](http://www.w3.org/TR/xmlschema-1/)和 [XML 架构第 2 部分：数据类型](http://www.w3.org/TR/xmlschema-2/)建议。  
   
--   <xref:System.Xml.Xsl?displayProperty=fullName> 命名空间中的类支持符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建议的 XSLT 转换。  
+-   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空间中的类支持符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建议的 XSLT 转换。  
   
  .NET Framework 中的 XML 类具有以下优点：  
   
@@ -101,4 +95,3 @@ ms.lasthandoff: 09/05/2017
   
  [XML 开发人员中心](http://go.microsoft.com/fwlink/?linkid=42458)  
  为 XML 开发人员提供其他技术信息、下载、新闻组和其他资源。
-

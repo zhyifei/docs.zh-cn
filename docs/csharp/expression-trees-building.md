@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-expression-trees"></a>生成表达式树
 
 [上一步 - 解释表达式](expression-trees-interpreting.md)
@@ -180,4 +178,3 @@ BlockExpression body = Expression.Block(
 另外，此时存在一些不能通过使用 `Expression` 类方法直接生成的 C# 表达式。 一般来说，这些将是在 C# 5 和 C# 6 中添加的最新运算符和表达式。 （例如，无法生成 `async` 表达式，并且无法直接创建新 `?.` 运算符。）
 
 [下一步 - 转换表达式](expression-trees-translating.md)
-

@@ -1,41 +1,22 @@
 ---
 title: "属性（C# 编程指南）"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="properties-c-programming-guide"></a>属性（C# 编程指南）
 
@@ -56,9 +37,9 @@ ms.lasthandoff: 07/28/2017
 
 有一个实现属性的基本模式，该模式使用私有支持字段来设置和检索属性值。 `get` 访问器返回私有字段的值，`set` 访问器在向私有字段赋值之前可能会执行一些数据验证。 这两个访问器还可以在存储或返回数据之前对其执行某些转换或计算。
 
-下面的示例阐释了此模式。 在此示例中，`TimePeriod` 类表示时间间隔。 在内部，该类将时间间隔以秒为单位存储在名为 `seconds` 的私有字段中。 名为 `Hours` 的读-写属性允许客户以小时为单位指定时间间隔。 `get` 和 `set` 访问器都会执行小时与秒之间的必要转换。 此外，`set` 访问器还会验证数据，如果小时数无效，则引发 @System.ArgumentOutOfRangeException。 
+下面的示例阐释了此模式。 在此示例中，`TimePeriod` 类表示时间间隔。 在内部，该类将时间间隔以秒为单位存储在名为 `seconds` 的私有字段中。 名为 `Hours` 的读-写属性允许客户以小时为单位指定时间间隔。 `get` 和 `set` 访问器都会执行小时与秒之间的必要转换。 此外，`set` 访问器还会验证数据，如果小时数无效，则引发 <xref:System.ArgumentOutOfRangeException>。 
    
- [!code-cs[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>表达式主体定义  
 
@@ -66,11 +47,11 @@ ms.lasthandoff: 07/28/2017
 
  从 C# 6 开始，只读属性可以将 `get` 访问器作为 expression-bodied 成员实现。 在这种情况下，既不使用 `get` 访问器关键字，也不使用 `return` 关键字。 下面的示例将只读 `Name` 属性作为 expression-bodied 成员实现。
 
- [!code-cs[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  从 C# 7 开始，`get` 和 `set` 访问器都可以作为 expression-bodied 成员实现。 在这种情况下，必须使用 `get` 和 `set` 关键字。 下面的示例阐释如何为这两个访问器使用表达式主体定义。 请注意，`return` 关键字不与 `get` 访问器搭配使用。
  
-  [!code-cs[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>自动实现的属性
 
@@ -78,7 +59,7 @@ ms.lasthandoff: 07/28/2017
 
 如果属性具有 `get` 和 `set` 访问器，则必须自动实现这两个访问器。 自动实现的属性通过以下方式定义：使用 `get` 和 `set` 关键字，但不提供任何实现。 下面的示例与上一个示例基本相同，只不过 `Name` 和 `Price` 是自动实现的属性。 请注意，该示例还删除了参数化构造函数，以便通过调用默认构造函数和[对象初始值设定项](object-and-collection-initializers.md)立即初始化 `SaleItem` 对象。
 
-  [!code-cs[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>相关章节  
   
@@ -96,9 +77,8 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>请参阅
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [索引器](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [索引器](../../../csharp/programming-guide/indexers/index.md)  
  [get 关键字](../../../csharp/language-reference/keywords/get.md)    
  [set 关键字](../../../csharp/language-reference/keywords/set.md)    
-

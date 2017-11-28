@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 516e065bc360538e7b62807a5492c0c6c9d16e69
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：启用 WIF 跟踪
 ## <a name="applies-to"></a>适用于  
@@ -112,4 +110,3 @@ ms.lasthandoff: 08/21/2017
 2.  关闭浏览器窗口，然后导航到 C:\logs 文件夹。 使用文本编辑器打开 C:\logs\WIF.xml 文件。  
   
 3.  检查 WIF.xml 文件并验证该文件是否包含以 \<E2ETraceEvent> 开头的项。 这些跟踪将包含 \<TraceRecord > 元素，其中包含对跟踪活动的描述，如验证 SecurityToken。
-

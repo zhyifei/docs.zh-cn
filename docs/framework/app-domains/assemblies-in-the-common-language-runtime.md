@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>公共语言运行时中的程序集
 程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 对于运行时，类型不存在于程序集上下文之外。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 07/28/2017
   
  程序集可以为静态或动态。 静态程序集可以包括 .NET Framework 类型（接口和类），以及该程序集的资源（位图、JPEG 文件、资源文件等）。 静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。 你还可以使用 .NET Framework 来创建动态程序集，动态程序集直接从内存运行并且在执行前不存储到磁盘上。 你可以在执行动态程序集后将它们保存在磁盘上。  
   
- 有几种创建程序集的方法。 你可以使用过去用来创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio。 你可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中提供的工具创建带有在其他部署环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=fullName>）来创建动态程序集。  
+ 有几种创建程序集的方法。 你可以使用过去用来创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio。 你可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中提供的工具创建带有在其他部署环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -71,5 +69,4 @@ ms.lasthandoff: 07/28/2017
 |[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 .NET Framework 如何在运行时解析程序集引用。|  
   
 ## <a name="reference"></a>参考  
- <xref:System.Reflection.Assembly?displayProperty=fullName>
-
+ <xref:System.Reflection.Assembly?displayProperty=nameWithType>

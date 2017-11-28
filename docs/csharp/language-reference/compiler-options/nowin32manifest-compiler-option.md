@@ -1,42 +1,23 @@
 ---
 title: "-nowin32manifest（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /nowin32manifest
-dev_langs:
-- CSharp
+f1_keywords: /nowin32manifest
 helpviewer_keywords:
 - nowin32manifest compiler option [C#]
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1e0d4697e0e14c84c4bc642521cf4f9cdf6a4ed6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8314fd661ccce968238b480b54847abf7cbece74
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nowin32manifest-c-compiler-options"></a>/nowin32manifest（C# 编译器选项）
 使用 **/nowin32manifest** 选项可指示编译器不将任何应用程序清单嵌入到可执行文件中。  
@@ -54,7 +35,6 @@ ms.lasthandoff: 07/28/2017
   
  有关创建清单的详细信息，请参阅 [/win32manifest（C# 编译器选项）](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。  
   
-## <a name="see-also"></a>请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

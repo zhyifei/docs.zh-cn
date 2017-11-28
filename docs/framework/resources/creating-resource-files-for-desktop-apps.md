@@ -5,26 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - resource files, .resources files
 - .resources files
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>创建桌面应用程序的资源文件
 可以将字符串、图像或对象数据等资源包含在资源文件中，方便应用程序使用。 .NET Framework 提供了五种创建资源文件的方法：  
@@ -65,7 +66,7 @@ name2=value2
   
  .txt 和 .restext 文件的资源文件格式是相同的。 .restext 文件扩展名仅用于明确区分文本文件和基于文本的资源文件。  
   
- 字符串资源显示为名称/值对，其中名称是标识资源的字符串，值是在将名称传递给资源检索方法（例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>）时返回的资源字符串。 名称和值必须用等号 (=) 分隔开。 例如：  
+ 字符串资源显示为名称/值对，其中名称是标识资源的字符串，值是在将名称传递给资源检索方法（例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>）时返回的资源字符串。 名称和值必须用等号 (=) 分隔开。 例如：  
   
 ```  
 FileMenuName=File  
@@ -77,7 +78,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  请勿使用资源文件存储密码、 安全敏感信息或私人数据。  
   
- 在文本文件中，允许存在空字符串（即值为 <xref:System.String.Empty?displayProperty=fullName> 的资源）。 例如：  
+ 在文本文件中，允许存在空字符串（即值为 <xref:System.String.Empty?displayProperty=nameWithType> 的资源）。 例如：  
   
 ```  
 EmptyString=  
@@ -99,7 +100,7 @@ CancelButton=Cancel
   
  如果文本文件包含名称的重复匹配项，[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 将显示一条警告，并忽略第二个名称。  
   
- 值不能包含换行符，但可以使用 C 语言样式的转义符，例如使用 `\n` 表示新行，使用 `\t` 表示制表符。 还可以使用经过转义的反斜杠字符（例如，“\\\\”）。 此外，允许使用空字符串。  
+ 值不能包含换行符，但可以使用 C 语言样式的转义符，例如使用 `\n` 表示新行，使用 `\t` 表示制表符。还可以使用经过转义的反斜杠字符（例如，“\\\\”）。 此外，允许使用空字符串。  
   
  应使用 little-endian 或 big-endian 字节顺序的 UTF-8 编码或 UTF-16 编码以文本文件格式保存资源。 但是在默认情况下，将 .txt 文件转换为 .resources 文件的[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 会将文件默认视为 UTF-8 文件。 如果希望 Resgen.exe 识别使用 UTF-16 编码的文件，必须在文件开头包含 Unicode 字节顺序标记 (U + FEFF)。  
   
@@ -123,7 +124,8 @@ greeting=Hello, {0}!
   
  下面的示例展示了某控制台应用程序中的源代码，该控制台应用程序使用 .resources 文件向用户显示信息。  
   
- [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)] [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
+ [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)]
+ [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
   
  如果使用的是 Visual Basic，且源代码文件名为 Greeting.vb，以下命令将创建一个包含嵌入的 .resources 文件的可执行文件：  
   
@@ -174,20 +176,21 @@ greeting=Hello, {0}!
   
 <a name="ResourcesFiles"></a>   
 ## <a name="resources-in-resources-files"></a>.resources 文件中的资源  
- 可以使用 <xref:System.Resources.ResourceWriter?displayProperty=fullName> 类以编程方式从代码中直接创建二进制资源 (.resources) 文件。 还可以使用[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 从文本文件或 .resx 文件创建 .resources 文件。 .resources 文件除了可以包含字符串数据之外，还可以包含二进制数据（字节数组）和对象数据。 以编程方式创建 .resources 文件需要执行下列步骤：  
+ 可以使用 <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> 类以编程方式从代码中直接创建二进制资源 (.resources) 文件。 还可以使用[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 从文本文件或 .resx 文件创建 .resources 文件。 .resources 文件除了可以包含字符串数据之外，还可以包含二进制数据（字节数组）和对象数据。 以编程方式创建 .resources 文件需要执行下列步骤：  
   
 1.  创建一个具有唯一文件名的 <xref:System.Resources.ResourceWriter> 对象。 可以通过将文件名或文件流指定为 <xref:System.Resources.ResourceWriter> 类构造函数来实现这此操作。  
   
-2.  调用 <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=fullName> 方法的重载之一以便将每个已命名的资源添加到文件。 该资源可以是字符串、对象或二进制数据（字节数组）集合。  
+2.  调用 <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType> 方法的重载之一以便将每个已命名的资源添加到文件。 该资源可以是字符串、对象或二进制数据（字节数组）集合。  
   
-3.  通过调用 <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=fullName> 方法将资源写入文件并关闭 <xref:System.Resources.ResourceWriter> 对象。  
+3.  通过调用 <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=nameWithType> 方法将资源写入文件并关闭 <xref:System.Resources.ResourceWriter> 对象。  
   
 > [!NOTE]
 >  请勿使用资源文件存储密码、 安全敏感信息或私人数据。  
   
  下面的示例以编程方式创建了一个名为 CarResources.resources 的 .resources 文件，该文件存储了六个字符串、一个图标和两个由应用程序定义的对象（两个 `Automobile` 对象）。 请注意，示例中定义并实例化的 `Automobile` 类，使用 <xref:System.SerializableAttribute> 属性进行标记，这样二进制序列化格式化程序便可持久保留该类。  
   
- [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)] [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
+ [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
   
  创建 .resources 文件后，可以通过含入语言编译器的 `/resource` 开关将其嵌入运行时可执行文件或库中，或者通过使用[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将其嵌入附属程序集。  
   
@@ -200,7 +203,6 @@ greeting=Hello, {0}!
  编译时，Visual Studio 首先将项目中的 .resx 文件转换为二进制资源 (.resources) 文件，并将其存储在项目 obj 目录的子目录中。 Visual Studio 会将不包含本地化资源的所有资源文件嵌入项目生成的主程序集中。 如果资源文件包含本地化资源，Visual Studio 会将其嵌入用于每个本地化区域性的单独的附属程序集中。 然后将每个附属程序集存储到名称与本地化区域性相对应的目录中。 例如，本地化的英语（美国）资源存储在 en-US 子目录的附属程序集中。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Resources>   
- [桌面应用中的资源](../../../docs/framework/resources/index.md)   
+ <xref:System.Resources>  
+ [桌面应用中的资源](../../../docs/framework/resources/index.md)  
  [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-

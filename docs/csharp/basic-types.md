@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
+ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 16c99ec5d1c120f1ab079940459cdb7716471353
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="types-variables-and-values"></a>类型、变量和值  
 C# 是一种强类型语言。 每个变量和常量都有一个类型，每个求值的表达式也是如此。 每个方法签名指定了每个输入参数和返回值的类型。 .NET Framework 类库定义了一组内置数值类型以及表示各种逻辑构造的更复杂类型（如文件系统、网络连接、对象的集合和数组以及日期）。 典型的 C# 程序使用类库中的类型，以及对程序问题域的专属概念进行建模的用户定义类型。  
   
@@ -64,7 +62,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 可以使用[结构](language-reference/keywords/class.md)、[类](language-reference/keywords/class.md)、[接口](language-reference/keywords/interface.md)，和[枚举](language-reference/keywords/enum.md)构造创建你自己的自定义类型。 .NET Framework 类库本身就是 Microsoft 提供的一组自定义类型，以供你在自己的应用程序中使用。 默认情况下，类库中最常用的类型在任何 C# 程序中均可用。 对于其他类型，只有在显式添加对定义这些类型的程序集的项目引用时才可用。 编译器引用程序集之后，你可以声明在源代码的此程序集中声明的类型的变量（和常量）。 
   
 ## <a name="generic-types"></a>泛型类型  
-可使用一个或多个类型参数声明、作为客户端代码在创建类型实例时将提供的实际类型（具体类型）的占位符的类型。 这种类型称为泛型类型。 例如，.NET Framework 类型 @System.Collections.Generic.List%601 具有一个类型参数，它按照惯例被命名为 *T*。当创建类型的实例时，指定列表将包含的对象的类型，例如字符串：  
+可使用一个或多个类型参数声明、作为客户端代码在创建类型实例时将提供的实际类型（具体类型）的占位符的类型。 这种类型称为*泛型类型*。 例如，.NET Framework 类型 <xref:System.Collections.Generic.List%601> 具有一个类型参数，它按照惯例被命名为 *T*。创建类型实例时，指定列表将包含的对象类型，例如字符串：  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)] 
   
@@ -80,7 +78,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 ## <a name="the-common-type-system"></a>通用类型系统  
 了解 .NET Framework 中的类型系统的两个基本点非常重要：  
   
--   它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 @System.Int32 (C# keyword: `int`) 等内置数值类型）最终都派生自单个基类型，即 @System.Object (C# keyword: `object`)。 此统一类型层次结构称为[通用类型系统](../standard/common-type-system.md) (CTS)。 有关 C# 中的继承的详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。  
+-   它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32> (C# keyword: `int`) 等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object> (C# keyword: `object`)。 此统一类型层次结构称为[通用类型系统](../standard/common-type-system.md) (CTS)。 有关 C# 中的继承的详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。  
   
 -   CTS 中的每种类型被定义为值类型或引用类型。 这包括 .NET Framework 类库中的所有自定义类型以及你自己的用户定义类型。 使用 [struct](language-reference/keywords/struct.md) 关键字定义的类型是值类型；所有内置数值类型都是 **structs**。 有关值类型的详细信息，请参阅[结构](structs.md)。 使用 [class](language-reference/keywords/class.md) 关键字定义的类型是引用类型。 有关引用类型的详细信息，请参阅[类](classes.md)。 引用类型和值类型具有不同的编译时规则和不同的运行时行为。
  
@@ -88,4 +86,3 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 ## <a name="see-also"></a>请参阅
 [结构](structs.md)
 [类](classes.md)
-

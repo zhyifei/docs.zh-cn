@@ -1,33 +1,24 @@
 ---
 title: "线程计时器 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 52ed71e8-4fd9-43a4-ae40-04cce7cff23f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9702360408340b28fcdcc8f197467a002f77ee51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-timers-c"></a>线程计时器 (C#)
-<xref:System.Threading.Timer?displayProperty=fullName> 类对于定期在单独的线程上运行任务很有用。 例如，可以使用线程计时器来检查数据库的状态和完整性，或备份关键文件。  
+<xref:System.Threading.Timer?displayProperty=nameWithType> 类对于定期在单独的线程上运行任务很有用。 例如，可以使用线程计时器来检查数据库的状态和完整性，或备份关键文件。  
   
 ## <a name="thread-timer-example"></a>线程计时器示例  
  以下示例每两秒启动一个任务，并使用标志启动用于停止计时器的 <xref:System.IDisposable.Dispose%2A> 方法。 此示例将状态发送到输出窗口。  
@@ -84,9 +75,8 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- 当 <xref:System.Windows.Forms.Timer?displayProperty=fullName> 对象不可用时（例如开发控制台应用程序时），线程计时器特别有用。  
+ 当 <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 对象不可用时（例如开发控制台应用程序时），线程计时器特别有用。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading>   
+ <xref:System.Threading>  
  [多线程应用程序 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
-

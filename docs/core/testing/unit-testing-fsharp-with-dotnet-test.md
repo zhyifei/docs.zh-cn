@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.topic: article
+dev_langs: fsharp
 ms.prod: .net-core
+ms.openlocfilehash: b4612b2b1a218f2bd126240db564258e07ba5231
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 1c0be8818f045a33cc0ee48e335cc05bf37ace92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
 
@@ -165,4 +165,3 @@ let sumOfSquares xs =
 ```
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。
-

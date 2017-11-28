@@ -1,22 +1,18 @@
 ---
 title: "从 XML 树中删除元素、属性和节点 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>从 XML 树中删除元素、属性和节点 (C#)
 可以修改 XML 树，移除元素、属性和其他类型的节点。  
@@ -29,19 +25,19 @@ ms.lasthandoff: 08/10/2017
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|从父节点中移除 <xref:System.Xml.Linq.XAttribute>。|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|从 <xref:System.Xml.Linq.XContainer> 中移除子节点。|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|从 <xref:System.Xml.Linq.XElement> 中移除内容和属性。|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|移除 <xref:System.Xml.Linq.XElement> 的属性。|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|如果传递 `null` 作为值，则移除该属性。|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName>|如果传递 `null` 作为值，则移除该子元素。|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|从父节点中移除 <xref:System.Xml.Linq.XNode>。|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName>|从父元素中移除源集合中的每个属性或元素。|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|从父节点中移除 <xref:System.Xml.Linq.XAttribute>。|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|从 <xref:System.Xml.Linq.XContainer> 中移除子节点。|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|从 <xref:System.Xml.Linq.XElement> 中移除内容和属性。|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|移除 <xref:System.Xml.Linq.XElement> 的属性。|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|如果传递 `null` 作为值，则移除该属性。|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|如果传递 `null` 作为值，则移除该子元素。|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|从父节点中移除 <xref:System.Xml.Linq.XNode>。|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|从父元素中移除源集合中的每个属性或元素。|  
   
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 此示例演示三种移除元素的方法。 第一种，移除单个元素。 第二种，检索元素的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 运算符将它们具体化，然后移除集合。 最后一种，检索元素的集合，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法移除元素。  
+ 此示例演示三种移除元素的方法。 第一种，移除单个元素。 第二种，检索元素的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 运算符将它们具体化，然后移除集合。 最后一种，检索元素的集合，使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 扩展方法移除元素。  
   
  有关 <xref:System.Linq.Enumerable.ToList%2A> 运算符的详细信息，请参阅[转换数据类型 (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)。  
   
@@ -89,4 +85,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>请参阅  
  [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

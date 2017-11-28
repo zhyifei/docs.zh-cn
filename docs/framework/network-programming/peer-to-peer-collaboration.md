@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>对等协作
 对等网络服务利用存在于 Internet 边缘的相对强大的计算机（个人计算机）完成各项任务，不仅仅是基于客户端的计算任务。 现代个人计算机 (PC) 具有超快处理器、大量存储和大型硬盘，在执行诸如电子邮件和 Web 浏览等常见计算任务时，并未充分利用这些优势。 现代 PC 可以轻松地充当许多类型的应用程序的客户端和服务器（对等机）。  
@@ -56,6 +50,5 @@ ms.lasthandoff: 08/21/2017
  在 Active Directory 域中，域控制器使用 Kerberos 提供身份验证服务。 在无服务器对等环境中，对等机必须提供其自身的身份验证。 对于对等网络，任何节点都可充当 CA，无需要求每个对等机受信任根存储中存在根证书。 使用自签名证书提供身份验证，格式为 X.509 证书。 这些是由每个对等机创建的证书，其生成公钥/私钥对以及使用私钥签名的证书。 自签名证书用于身份验证，并提供有关对等机实体的信息。 如 X.509 身份验证一样，对等机网络身份验证依赖于一系列追溯受信任公钥的证书。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Net.PeerToPeer.Collaboration>   
+ <xref:System.Net.PeerToPeer.Collaboration>  
  [关于 System.Net.PeerToPeer.Collaboration 命名空间](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-

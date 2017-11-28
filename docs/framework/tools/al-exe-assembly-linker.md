@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Al.exe
 - Assembly Linker
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 71600e0771c31392f568e11a7f51fc258ac5b362
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f02c8d9f292daf473dea1af3929b0001a0aadbb7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -88,7 +81,7 @@ al sources options
 |**/template:** `filename`|指定程序集 `filename`，除区域性字段之外的所有程序集元数据都从该程序集继承。<br /><br /> 使用 **/template** 创建的程序集将成为附属程序集。|
 |**/title:** `text`|为程序集中的“标题”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/title** 在文件资源管理器中将显示为 Win32“说明”资源，shell 将其用作应用程序的友好名称。 如果某个文件类型有多个支持应用程序，则该字符串也会出现在此文件类型的快捷菜单的“打开方式”子菜单中。<br /><br /> 如果文本是空字符串，则 Win32“说明”资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/title** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
 |**/trade[mark]:** `text`|为程序集中的“商标”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/trademark** 在文件资源管理器中将显示为 Win32“商标”资源。<br /><br /> 如果文本是空字符串，则 Win32“商标”资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/trademark** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|
-|**/v[ersion]:** `version`|指定此程序集的版本信息。 版本字符串的格式为 `major`.`minor`.`build`.`revision`。 默认值为 0。<br /><br /> 如果指定 **/version**，则必须指定 `major`。 如果指定 `major` 和 `minor`，则可以为 `build` 指定星号 (\*)。 这会使 `build` 等于从当地时间 2000 年 1 月 1 日算起的天数，使 `revision` 等于从当地时间当日午夜算起的秒数的一半。<br /><br /> 如果指定 `major`、`minor` 和 `build`，则可以指定一个星号作为 `revision`。 这会使 `revision` 等于从当地时间当地午夜算起的秒数的一半。<br /><br /> 概括而言，有效的版本字符串如下：<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中，X 是 0 至 65534 之间（不含 65535）的任何一个无符号短常数。<br /><br /> 如果不指定 **/win32res**，则 **/version** 将用作 Win32“程序集版本”资源。<br /><br /> 如果不指定 **/win32res**、**/productversion** 和 **/fileversion**，则 **/version** 将用于“程序集版本”、文件版本和“产品版本”Win32 资源。<br /><br /> 如果指定 **/win32res**，则 **/version** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
+|**/v[ersion]:** `version`|指定此程序集的版本信息。 版本字符串的格式为 `major`.`minor`.`build`.`revision`。默认值为 0。<br /><br /> 如果指定 **/version**，则必须指定 `major`。 如果指定 `major` 和 `minor`，则可以为 `build` 指定星号 (\*)。 这会使 `build` 等于从当地时间 2000 年 1 月 1 日算起的天数，使 `revision` 等于从当地时间当日午夜算起的秒数的一半。<br /><br /> 如果指定 `major`、`minor` 和 `build`，则可以指定一个星号作为 `revision`。 这会使 `revision` 等于从当地时间当地午夜算起的秒数的一半。<br /><br /> 概括而言，有效的版本字符串如下：<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中，X 是 0 至 65534 之间（不含 65535）的任何一个无符号短常数。<br /><br /> 如果不指定 **/win32res**，则 **/version** 将用作 Win32“程序集版本”资源。<br /><br /> 如果不指定 **/win32res**、**/productversion** 和 **/fileversion**，则 **/version** 将用于“程序集版本”、文件版本和“产品版本”Win32 资源。<br /><br /> 如果指定 **/win32res**，则 **/version** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
 |**/win32icon:** `filename`|在程序集中插入 .ico 文件。 .ico 文件在文件资源管理器中赋予输出文件所需的外观。|
 |**/win32res:** `filename`|在输出文件中插入 Win32 资源（.res 文件）。 可使用资源编译器创建 Win32 资源文件。 在编译 Visual C++ 程序时会调用资源编译器；.res 文件是从 .rc 文件创建的。|
 |`@filename`|指定包含 Al.exe 命令的响应文件。<br /><br /> 响应文件中的命令既可以每行显示一个，也可以显示在同一行中，用一个或多个空格分隔。|
@@ -195,4 +188,3 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
 [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
 [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 966bc0883cf29774ab6f52f6f3207241c129159c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完全限定的类型名称
-必须指定类型名称才能为各种反射操作提供有效输入。 完全限定的类型名称包含程序集名称规范、命名空间规范和类型名称。 类型名称规范由 <xref:System.Type.GetType%2A?displayProperty=fullName>、<xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 等方法使用。  
+必须指定类型名称才能为各种反射操作提供有效输入。 完全限定的类型名称包含程序集名称规范、命名空间规范和类型名称。 类型名称规范由 <xref:System.Type.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 等方法使用。  
   
 ## <a name="backus-naur-form-grammar-for-type-names"></a>类型名称的巴科斯-诺尔范式语法  
  巴科斯-诺尔范式 (BNF) 定义正式语言的语法。 下表列出的 BNF 词法规则，说明如何识别有效输入。 最终元素（无法再减小的元素）全部以大写字母显示。 非最终元素（可以再减小的元素）则显示为大小写混合或带单引号的字符串，但单引号 (') 不是语法本身的一部分。 竖线 (|) 表示具有子规则的规则。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 07/28/2017
   
  请注意，除 AssemblyNameSpec 外，所有 TypeSpec 组件中的空格都是相关的。 在 AssemblyNameSpec 中，“,”分隔符之前的空格相关，但“,”分隔符之后的空格将被忽略。  
   
- 反射类（如 <xref:System.Type.FullName%2A?displayProperty=fullName>）返回改变后的名称，以便使返回的名称可以用在对 <xref:System.Type.GetType%2A> 的调用中（如同用在 `MyType.GetType(myType.FullName)` 中）。  
+ 反射类（如 <xref:System.Type.FullName%2A?displayProperty=nameWithType>）返回改变后的名称，以便使返回的名称可以用在对 <xref:System.Type.GetType%2A> 的调用中（如同用在 `MyType.GetType(myType.FullName)` 中）。  
   
  例如，某个类型的完全限定名称可能是 `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`。  
   
@@ -136,7 +134,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  SimpleTypeSpec & 表示托管指针或引用。 例如，要获取对 MyType 类型的引用，请使用 `Type.GetType("MyType &")`。 请注意，与指针不同，引用仅限于一个级别。  
   
 ## <a name="specifying-arrays"></a>指定数组  
- 在 BNF 语法中，ReflectionEmitDimension 仅适用于使用 <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> 检索的不完整类型定义。 不完整类型定义是使用 <xref:System.Reflection.Emit?displayProperty=fullName> 构造但没有对其调用 <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=fullName> 的 <xref:System.Reflection.Emit.TypeBuilder> 对象。 ReflectionDimension 可用于检索任何已完成的类型定义，即已加载的类型。  
+ 在 BNF 语法中，ReflectionEmitDimension 仅适用于使用 <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> 检索的不完整类型定义。 不完整类型定义是使用 <xref:System.Reflection.Emit?displayProperty=nameWithType> 构造但没有对其调用 <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> 的 <xref:System.Reflection.Emit.TypeBuilder> 对象。 ReflectionDimension 可用于检索任何已完成的类型定义，即已加载的类型。  
   
  通过指定数组的级别，可以访问反射中的数组：  
   
@@ -153,11 +151,10 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  对于 ModuleBuilder.GetType，`MyArray[0..5]` 指示大小为 6、下限为 0 的单维数组。 `MyArray[4…]` 指示大小未知、下限为 4 的单维数组。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection.AssemblyName>   
- <xref:System.Reflection.Emit.ModuleBuilder>   
- <xref:System.Reflection.Emit.TypeBuilder>   
- <xref:System.Type.FullName%2A?displayProperty=fullName>   
- <xref:System.Type.GetType%2A?displayProperty=fullName>   
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
+ <xref:System.Reflection.AssemblyName>  
+ <xref:System.Reflection.Emit.ModuleBuilder>  
+ <xref:System.Reflection.Emit.TypeBuilder>  
+ <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
+ <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
+ <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
  [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-

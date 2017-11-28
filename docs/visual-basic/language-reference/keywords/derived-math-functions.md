@@ -1,65 +1,64 @@
 ---
-title: "派生的数学函数 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "角度"
-  - "反余割函数"
-  - "反余弦函数"
-  - "反余切函数"
-  - "反正割函数"
-  - "反正弦函数"
-  - "算术运算, 导出数学函数"
-  - "余割函数"
-  - "余切函数"
-  - "度"
-  - "导出数学函数"
-  - "函数 [Visual Basic], 导出数学函数"
-  - "双曲函数"
-  - "反函数"
-  - "对数"
-  - "数学函数, 派生"
-  - "正割函数"
-  - "三角函数"
+title: "派生的数学函数 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- arithmetic operations, derived math functions
+- cosecant function
+- arcsecant function
+- arccotangent function
+- functions [Visual Basic], derived math functions
+- inverse functions
+- math functions, derived
+- derived math functions
+- cotangent function
+- angles
+- secant function
+- trigonometric functions
+- logarithms
+- arccosecant function
+- hyperbolic functions
+- arcsine function
+- degrees
+- arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5816fa4c8c384eca116fa1512950a3588c6e3392
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 派生的数学函数 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-下表显示了非内部数学函数，这些函数可由 <xref:System.Math?displayProperty=fullName> 对象的内部数学函数导出。  通过向文件或项目添加 `Imports System.Math`，可以访问内部数学函数。  
+# <a name="derived-math-functions-visual-basic"></a>派生的数学函数 (Visual Basic)
+下表显示可以派生自的内部函数的数学函数的非内部的数学函数<xref:System.Math?displayProperty=nameWithType>对象。 你可以通过添加访问内部函数的数学函数`Imports System.Math`向你的文件或项目。  
   
-|功能|导出的等效公式|  
-|--------|-------------|  
-|正切 \(Sec\(x\)\)|1 \/ Cos\(x\)|  
-|余切 \(Csc\(x\)\)|1 \/ Sin\(x\)|  
-|余切 \(Ctan\(x\)\)|1 \/ Tan\(x\)|  
-|反正弦 \(Asin\(x\)\)|Atan\(x \/ Sqrt\(\-x \* x \+ 1\)\)|  
-|反余弦 \(Acos\(x\)\)|Atan\(\-x \/ Sqrt\(\-x \* x \+ 1\)\) \+ 2 \* Atan\(1\)|  
-|反正割 \(Asec\(x\)\)|2 \* Atan\(1\) – Atan\(Sign\(x\) \/ Sqrt\(x \* x – 1\)\)|  
-|反余割 \(Acsc\(x\)\)|Atan\(Sign\(x\) \/ Sqrt\(x \* x – 1\)\)|  
-|反余切 \(Acot\(x\)\)|2 \* Atan\(1\) \- Atan\(x\)|  
-|双曲正弦 \(Sinh\(x\)\)|\(Exp\(x\) – Exp\(\-x\)\) \/ 2|  
-|双曲余弦 \(Cosh\(x\)\)|\(Exp\(x\) \+ Exp\(\-x\)\) \/ 2|  
-|双曲正切 \(Tanh\(x\)\)|\(Exp\(x\) – Exp\(\-x\)\) \/ \(Exp\(x\) \+ Exp\(\-x\)\)|  
-|双曲正割 \(Sech\(x\)\)|2 \/ \(Exp\(x\) \+ Exp\(\-x\)\)|  
-|双曲余割 \(Csch\(x\)\)|2 \/ \(Exp\(x\) – Exp\(\-x\)\)|  
-|双曲余切 \(Coth\(x\)\)|\(Exp\(x\) \+ Exp\(\-x\)\) \/ \(Exp\(x\) – Exp\(\-x\)\)|  
-|反双曲正弦 \(Asinh\(x\)\)|Log\(x \+ Sqrt\(x \* x \+ 1\)\)|  
-|反双曲余弦 \(Acosh\(x\)\)|Log\(x \+ Sqrt\(x \* x – 1\)\)|  
-|反双曲正切 \(Atanh\(x\)\)|Log\(\(1 \+ x\) \/ \(1 – x\)\) \/ 2|  
-|反双曲正割 \(AsecH\(x\)\)|Log\(\(Sqrt\(\-x \* x \+ 1\) \+ 1\) \/ x\)|  
-|反双曲余割 \(Acsch\(x\)\)|Log\(\(Sign\(x\) \* Sqrt\(x \* x \+ 1\) \+ 1\) \/ x\)|  
-|反双曲余切 \(Acoth\(x\)\)|Log\(\(x \+ 1\) \/ \(x – 1\)\) \/ 2|  
+|函数|派生的等效项|  
+|--------------|-------------------------|  
+|正割值 (Sec(x))|1 / Cos(x)|  
+|余割值 (Csc(x))|1 / sin （x)|  
+|余切值 (Ctan(x))|1 / Tan(x)|  
+|反正弦值 (Asin(x))|Atan (x / Sqrt (-x * x + 1))|  
+|反余弦值 (Acos(x))|Atan (-x / Sqrt (-x * x + 1)) + 2 \* Atan(1)|  
+|反正割 (Asec(x))|2 * Atan(1) – Atan(Sign(x) / Sqrt (x \* x-1))|  
+|反余割值 (Acsc(x))|Atan(Sign(x) / Sqrt (x * x-1))|  
+|反余切值 (Acot(x))|2 * Atan(1)-Atan(x)|  
+|双曲正弦值 (Sinh(x))|(Exp(x) – Exp(-x)) / 2|  
+|双曲余弦值 (Cosh(x))|(Exp(x) + Exp(-x)) / 2|  
+|双曲正切值 (Tanh(x))|(Exp(x) – Exp(-x)) / （Exp(x) + Exp(-x))|  
+|双曲正割值 (Sech(x))|2 / （Exp(x) + Exp(-x))|  
+|双曲余割值 (Csch(x))|2 / (Exp(x) – Exp(-x))|  
+|双曲余切值 (Coth(x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
+|反双曲正弦值 (Asinh(x))|日志 (x + Sqrt (x * x + 1))|  
+|反双曲余弦值 (Acosh(x))|日志 (x + Sqrt (x * x-1))|  
+|反双曲正切值 (Atanh(x))|日志 ((1 + x) / (1-x)) / 2|  
+|反双曲正割值 (AsecH(x))|日志 ((Sqrt (-x * x + 1) + 1) / x)|  
+|反双曲余割值 (Acsch(x))|Log((Sign(x) * Sqrt (x \* x + 1) + 1) / x)|  
+|反双曲余切值 (Acoth(x))|日志 ((x + 1) / (x-1)) / 2|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数学函数](../../../visual-basic/language-reference/functions/math-functions.md)

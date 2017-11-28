@@ -1,39 +1,21 @@
 ---
 title: "in（泛型修饰符）（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.assetid: 3a778c36-8aed-4ebe-aa8b-39f4057215b1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 84773fca826b5a25679f1385a11c51b590ea20f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-generic-modifier-c-reference"></a>in（泛型修饰符）（C# 参考）
 对于泛型类型参数，`in` 关键字可指定类型参数是逆变的。 可以在泛型接口和委托中使用 `in` 关键字。  
@@ -51,18 +33,17 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>示例  
  下面的示例演示如何声明、扩展和实现逆变泛型接口。 它还演示如何对实现此接口的类使用隐式转换。  
   
- [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
+ [!code-csharp[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
 ## <a name="example"></a>示例  
  以下示例演示如何声明、实例化和调用逆变泛型委托。 它还演示如何隐式转换委托类型。  
   
- [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
+ [!code-csharp[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)  
+ [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
-

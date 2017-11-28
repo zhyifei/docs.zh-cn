@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: b8b53e5890aaebbad2f0a5f0e058182193b11622
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b74702d71113c3a9dac654971e7d02f97016218b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-the-gamepiececollection-class"></a>创建 GamePieceCollection 类
 GamePieceCollection 类派生自泛型 List 类，并引入可更轻松管理多个 GamePiece 对象的方法。  
@@ -40,9 +38,8 @@ GamePieceCollection 类派生自泛型 List 类，并引入可更轻松管理多
  [!code-csharp[ManipulationXNA#_GamePieceCollection_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_updatefrommouse)]  
   
 ## <a name="see-also"></a>另请参阅  
- [操作和惯性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [在 XNA 应用程序中使用操作和惯性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [创建 GamePiece 类](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
- [创建 Game1 类](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)   
+ [控制和惯性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [在 XNA 应用程序中使用控制和惯性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [创建 GamePiece 类](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
+ [创建 Game1 类](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)  
  [完整代码清单](../../../docs/framework/common-client-technologies/full-code-listings.md)
-

@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging extensions
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: efdb4bec75d160acd212b763690bd7a473c35eed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41338111c92cb4af7f175c00c8ec87e48dc9c228
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) 环境的信息，帮助你在 Visual Studio 和 Windows 调试器 (WinDbg.exe) 中调试托管程序。 此工具需要你启用项目的非托管调试。 SOS.dll 自动随 .NET Framework 一起安装。 若要在 Visual Studio 中使用 SOS.dll，请安装 [Windows 驱动程序工具包 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
@@ -220,6 +213,5 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
+ [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

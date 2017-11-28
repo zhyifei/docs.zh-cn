@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="working-with-linq"></a>使用 LINQ
 
 ## <a name="introduction"></a>介绍
@@ -297,19 +295,19 @@ public static void Main(string[] args)
 
 从花色开始。 这是使用 `enum` 的大好时机：
 
-[!CODE-csharp[花色枚举](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
+[!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
 
 `Suits()` 方法也更改了类型和实现代码：
 
-[!CODE-csharp[花色 IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
+[!CODE-csharp[Suit IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
 
 接下来，对纸牌的级别进行同样的更改：
 
-[!CODE-csharp[级别枚举](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
+[!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
 
 以及用于生成级别的方法：
 
-[!CODE-csharp[级别 IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
+[!CODE-csharp[Rank IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
 
 作为最后一项清理工作，让我们使用一个类型来表示纸牌，而不是依赖于匿名类型。 匿名类型非常适合轻量级的局部类型，但在此示例中，扑克牌是主要概念之一。 它应为具体类型。
 
@@ -334,4 +332,3 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 此示例展示了在 LINQ 中使用的一些方法，以及如何创建你自己的方法与支持 LINQ 的代码轻松结合使用。 还展示了惰性计算和及早计算的区别，以及决定使用哪种计算对性能产生的影响。
 
 而且，你也了解了一点魔术师掌握的一项技能。 魔术师之所以采用完美洗牌是因为，可以控制每张纸牌在一副纸牌中的移动。 在一些戏法中，魔术师会让一位观众将一张纸牌放在一副纸牌的最上面，然后进行几次洗牌，指出观众所放那张纸牌的具体位置。 在另一些戏法中，则需要按特定方式设置一副纸牌。 魔术师会在变戏法前设置一副纸牌。 然后，她会对一副纸牌进行 5 次向内洗牌。 在舞台上，她可以向观众展示看似杂乱无章的一副纸牌，然后再进行 3 次洗牌，这样刚好就可以得到她想要的一副纸牌了。
-

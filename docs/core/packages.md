@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
 ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
 .NET Core 是一种由 NuGet 包组成的平台。 有些产品体验受益于包的细粒度定义，而另一些受益于粗粒度的定义。 为了适应这种二元定义，一款好的产品应该作为一组细粒度的包发布，然后在更粗的粒度组块中进行描述，单个包的正式的名字叫做“元包”。
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/04/2017
 `Microsoft.NETCore.App` 元包的目标框架是 `netcoreapp`。 它提供了约 60 个库的访问权限，其中约 40 个由 `NETStandard.Library` 包提供，还有另外 20 个库。 可以引用目标框架为 `netcoreapp` 或与框架（如 `netstandard`）兼容的库获得对其他 API 的访问权限。 
 
 由 `Microsoft.NETCore.App` 提供的大部分其他库还可以使用 `netstandard` 作为目标，如果其他 `netstandard` 库满足这些框架的依赖项的话。 这意味着，`netstandard` 库也可以引用这些包作为依赖项。 
-

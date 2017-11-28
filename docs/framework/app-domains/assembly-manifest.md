@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-manifest"></a>程序集清单
 每一程序集，无论是静态的还是动态的，均包含描述该程序集中各元素彼此如何关联的数据集合。 程序集清单就包含这些程序集元数据。 程序集清单包含指定该程序集的版本要求和安全标识所需的所有元数据，以及定义该程序集的范围和解析对资源和类的引用所需的全部元数据。 程序集清单可以存储在具有 Microsoft 中间语言 (MSIL) 代码的 PE 文件（.exe 或 .dll）中，也可存储在只包含程序集清单信息的独立 PE 文件中。  
@@ -65,8 +63,7 @@ ms.lasthandoff: 07/28/2017
  通过在代码中使用程序集特性，您可以添加或更改程序集清单中的一些信息。 您可以更改版本信息和信息性特性，包括商标、版权、产品、公司和信息性版本。 有关程序集特性的完整列表，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [程序集内容](../../../docs/framework/app-domains/assembly-contents.md)   
- [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)   
- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ [程序集内容](../../../docs/framework/app-domains/assembly-contents.md)  
+ [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

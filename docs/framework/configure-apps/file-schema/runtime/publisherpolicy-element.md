@@ -1,81 +1,84 @@
 ---
-title: "&lt;publisherPolicy&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#publisherPolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<publisherPolicy> 元素"
-  - "容器标记, <publisherPolicy> 元素"
-  - "publisherPolicy 元素"
+title: "&lt;publisherPolicy&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#publisherPolicy
+helpviewer_keywords:
+- publisherPolicy element
+- container tags, <publisherPolicy> element
+- <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;publisherPolicy&gt; 元素
-指定运行时是否采用出版商策略。  
+# <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt;元素
+指定运行时是否使用发布者策略。  
   
-## 语法  
+ \<configuration>  
+\<运行时 >  
+\<assemblyBinding >  
+\<dependentAssembly >  
+\<publisherPolicy >  
   
-```  
+## <a name="syntax"></a>语法  
   
+```xml  
 <publisherPolicy apply="yes|no"/>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|`apply`|指定是否应用出版商策略。|  
+|特性|描述|  
+|---------------|-----------------|  
+|`apply`|指定是否要应用发布服务器策略。|  
   
-## 应用特性  
+## <a name="apply-attribute"></a>应用特性  
   
-|值|说明|  
-|-------|--------|  
-|`yes`|应用出版商策略。  此设置为默认设置。|  
-|`no`|不应用出版商策略。|  
+|值|描述|  
+|-----------|-----------------|  
+|`yes`|将发布服务器策略的应用。 此为默认设置。|  
+|`no`|不适用于发布服务器策略。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
-## 备注  
- 当组件供应商发布新版本的程序集时，供应商可以包含出版商策略，以便使用旧版本的应用程序现在使用新版本。  为了指定是否为一个特定的程序集使用出版商策略，把**\<publisherPolicy\>**元素放入**\<dependentAssembly\>**元素。  
+## <a name="remarks"></a>备注  
+ 当组件供应商释放程序集的新版本时，供应商可以包括发布服务器策略，因此现在使用旧版本的应用程序使用新版本。 若要指定是否为特定的程序集应用出版商策略，请将 **\<publisherPolicy >**中的元素 **\<dependentAssembly >**元素。  
   
- **apply** 特性的默认设置为 **yes**。  将 **apply** 特性设置为 **no** 会重写程序集任何以前的 **yes** 设置。  
+ 默认设置**应用**属性是**是**。 设置**应用**属性设为**没有**替代以前所有**是**的程序集的设置。  
   
- 应用程序需要一个权限通过使用应用程序配置文件中[\<publisherPolicy apply\="no"\/\>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)元素来显式地忽略版权政策。  该权限可通过针对 [SecurityPermission Class](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic)设置  [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic)标志来授予。  有关更多信息，请参见[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
+ 权限是必需的应用程序显式忽略发行者策略使用[ \<publisherPolicy 适用 ="no"/ >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)应用程序配置文件中的元素。 通过设置授予此权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
   
-## 示例  
- 下面的示例为程序集 `myAssembly` 关闭了出版商策略。  
+## <a name="example"></a>示例  
+ 下面的示例从发布服务器策略关闭后的程序集`myAssembly`。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -90,8 +93,8 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+## <a name="see-also"></a>另请参阅  
+ [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

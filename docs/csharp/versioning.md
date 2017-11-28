@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
 本教程将介绍版本控制在 .NET 中的含义。 还将介绍对库进行版本控制以及升级到新版本的库时需要考虑的因素。
@@ -89,7 +87,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 请参见以下示例：
 
-[!code-csharp[“new”修饰符的示例用法](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
 **输出**
 
@@ -107,7 +105,7 @@ A derived method
 
 `override` 修饰符指派生实现会扩展基类成员的实现而不是将其隐藏。 基类成员需要具有应用于自身的 `virtual` 修饰符。
 
-[!code-csharp[“override”修饰符的示例用法](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **输出**
 
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 `override` 修饰符将在编译时计算，如果此修饰符找不到要重写的虚拟成员，编译器将引发错误。
 
 了解所讨论的这些技术以及使用情境，对于简化库版本之间的转换有重要作用。
-

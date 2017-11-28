@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 987157bc3663330d9c610c1016787890e9dc6137
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -138,4 +136,3 @@ ms.lasthandoff: 08/21/2017
 2.  在“注册”页上，创建用户帐户，然后单击“注册”。 将使用 Forms 身份验证创建帐户，并将使你自动登录。  
   
 3.  已重定向到主页后，将看到一个位于标题“你的声明”下方的表格，它包含有关帐户的“颁发者”、“原始颁发者”、“类型”、“值”和“值类型”声明信息。
-

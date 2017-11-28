@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用异步客户端套接字
 异步客户端套接字在等待网络操作完成时不会挂起应用程序。 相反，它使用标准 .NET Framework 异步编程模型在一个线程上处理网络连接，而应用程序继续在原始线程上运行。 异步套接字适用于大量使用网络或不宜等待网络操作完成（才可继续运作）的应用程序。  
@@ -43,9 +40,9 @@ ms.lasthandoff: 08/21/2017
   
  异步操作要求使用回调方法返回操作结果。 如果应用程序不需要知道结果，则不需要任何回调方法。 本节中的示例代码阐释如何使用某个方法开始连接到网络设备并使用回调方法完成此连接、如何使用某个方法开始发送数据并使用回调方法完成此次发送，以及如何使用某个方法开始接收数据并使用回调方法结束接收数据。  
   
- 异步套接字使用系统线程池中的多个线程处理网络连接。 一个线程负责发起数据的发送或接收；其他线程完成与网络设备的连接以及发送或接收数据。 在以下示例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 类的实例用于挂起主线程的执行并在执行可以继续时发出信号。  
+ 异步套接字使用系统线程池中的多个线程处理网络连接。 一个线程负责发起数据的发送或接收；其他线程完成与网络设备的连接以及发送或接收数据。 在以下示例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类的实例用于挂起主线程的执行并在执行可以继续时发出信号。  
   
- 在下面的示例中，为了将异步套接字连接到网络设备，`Connect` 方法会初始化 Socket，然后调用 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName> 方法（传递表示网络设备的远程终结点）、连接回调方法和状态对象（即客户端 Socket，用于在异步调用之间传递状态信息）。 该示例实现 `Connect` 方法，将指定的 Socket 连接到指定的终结点。 它假定一个名为 `connectDone` 的全局 ManualResetEvent。  
+ 在下面的示例中，为了将异步套接字连接到网络设备，`Connect` 方法会初始化 Socket，然后调用 <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> 方法（传递表示网络设备的远程终结点）、连接回调方法和状态对象（即客户端 Socket，用于在异步调用之间传递状态信息）。 该示例实现 `Connect` 方法，将指定的 Socket 连接到指定的终结点。 它假定一个名为 `connectDone` 的全局 ManualResetEvent。  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -298,7 +295,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-

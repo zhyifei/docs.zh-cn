@@ -1,43 +1,24 @@
 ---
 title: "-target（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /target
-dev_langs:
-- CSharp
+f1_keywords: /target
 helpviewer_keywords:
 - target compiler options [C#]
 - /target compiler options [C#]
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="target-c-compiler-options"></a>/target（C# 编译器选项）
 **/target** 编译器选项可指定为以下四种形式之一：  
@@ -60,7 +41,7 @@ ms.lasthandoff: 07/28/2017
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  创建一个 .winmdobj 中间文件。  
   
- 如果不指定 **/target:module**，**/target** 会将 .NET Framework 程序集清单放入输出文件中。 有关详细信息，请参阅[公共语言运行时中的程序集](https://msdn.microsoft.com/library/k3677y81)和[公共特性](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b)。  
+ 如果不指定 **/target:module**，**/target** 会将 .NET Framework 程序集清单放入输出文件中。 有关详细信息，请参阅[公共语言运行时中的程序集](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)和[公共特性](../../programming-guide/concepts/attributes/common-attributes.md)。  
   
  程序集清单放置在编译中的第一个 .exe 输出文件中，如果没有 .exe 输出文件，会放置在第一个 DLL 中。 例如，在以下的命令行中，清单将放置在 `1.exe` 中：  
   
@@ -86,7 +67,6 @@ public class TestClass
  有关如何以编程方式设置此编译器选项的详细信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)   
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
  [/subsystemversion（C# 编译器选项）](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
-

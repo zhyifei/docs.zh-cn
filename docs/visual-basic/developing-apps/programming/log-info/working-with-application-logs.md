@@ -1,44 +1,25 @@
 ---
 title: "使用 Application 日志 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>使用 Application 日志 (Visual Basic)
 使用 `My.Applicaton.Log` 和 `My.Log` 对象可以轻松将日志记录和跟踪信息写入日志。  
@@ -72,7 +53,7 @@ ms.lasthandoff: 07/28/2017
  可以通过添加或更改计算机和应用程序的配置文件来重写默认行为。 有关详细信息，请参阅 [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
   
 ## <a name="configuring-log-settings"></a>配置日志设置  
- `Log` 对象具有默认的实现，即使没有应用程序配置文件 app.config 也可工作。 若要更改默认设置，必须添加包含新设置的配置文件。 有关更多信息，请参见 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
+ `Log` 对象具有默认的实现，即使没有应用程序配置文件 app.config 也可工作。若要更改默认设置，必须添加包含新设置的配置文件。 有关更多信息，请参见 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
   
  日志配置部分位于 `<system.diagnostics>` 节点当中，该节点位于 app.config 文件的 `<configuration>` 节点之下。 日志信息在以下几个节点中定义：  
   
@@ -128,6 +109,5 @@ ms.lasthandoff: 07/28/2017
 -   **避免拒绝服务。** 如果应用程序将太多的信息写入日志，则可能填满日志或导致难以查找重要的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  [记录来自应用程序的信息](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

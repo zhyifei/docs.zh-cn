@@ -1,30 +1,21 @@
 ---
 title: "演练：在 Visual Studio (C#) 中保持对象"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>演练：在 Visual Studio (C#) 中保持对象
 虽然可在设计时将对象的属性设置为默认值，但销毁对象时，运行时输入的任何值都将丢失。 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。  
@@ -229,7 +220,6 @@ ms.lasthandoff: 07/28/2017
   
  此时可再次生成并运行应用程序。 最初，默认值在文本框中显示。 尝试更改这些值并在第四个文本框中输入名称。 关闭该应用程序，然后重新运行。 请注意，现在文本框中将显示新值。  
   
-## <a name="see-also"></a>请参阅  
- [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)
-

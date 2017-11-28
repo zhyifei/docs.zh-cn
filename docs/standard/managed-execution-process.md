@@ -16,16 +16,15 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a47761acfabd3de77d65483d50fbe7a77f96e076
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf4234f36745fdc13635ab2c6394f49aefabf7a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -116,13 +115,12 @@ ms.lasthandoff: 08/21/2017
  [返回页首](#introduction)  
   
 ## <a name="see-also"></a>另请参阅  
- [概述](../../docs/framework/get-started/overview.md)   
- [语言独立性和与语言无关的组件](../../docs/standard/language-independence-and-language-independent-components.md)   
- [元数据和自述组件](../../docs/standard/metadata-and-self-describing-components.md)   
- [Ilasm.exe（IL 汇编程序）](../../docs/framework/tools/ilasm-exe-il-assembler.md)   
- [安全性](../../docs/standard/security/index.md)   
- [与非托管代码交互操作](../../docs/framework/interop/index.md)   
- [部署](../../docs/framework/deployment/net-framework-applications.md)   
- [公共语言运行时中的程序集](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
+ [概述](../../docs/framework/get-started/overview.md)  
+ [语言独立性和与语言无关的组件](../../docs/standard/language-independence-and-language-independent-components.md)  
+ [元数据和自描述组件](../../docs/standard/metadata-and-self-describing-components.md)  
+ [Ilasm.exe（IL 汇编程序）](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+ [安全性](../../docs/standard/security/index.md)  
+ [与非托管代码交互操作](../../docs/framework/interop/index.md)  
+ [部署](../../docs/framework/deployment/net-framework-applications.md)  
+ [Assemblies in the Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
  [应用程序域](../../docs/framework/app-domains/application-domains.md)
-

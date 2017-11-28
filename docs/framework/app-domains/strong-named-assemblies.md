@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 4165d968ff347dd9af3bff755be22484debc23c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02a79ff2d198149b51edb3765805f2614adb2483
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="strong-named-assemblies"></a>具有强名称的程序集
 强命名一个程序集可为程序集创建唯一的标识，并且可以防止程序集冲突。  
@@ -53,8 +51,7 @@ ms.lasthandoff: 07/28/2017
  如果你是开源开发人员且希望利用强命名程序集的标识优势，不妨签入与源代码管理系统内程序集相关联的私钥。  
   
 ## <a name="see-also"></a>另请参阅  
- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)   
- [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
+ [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

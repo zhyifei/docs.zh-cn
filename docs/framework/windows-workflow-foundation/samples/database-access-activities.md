@@ -1,40 +1,44 @@
 ---
-title: "数据库访问活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据库访问活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 10066c1d5e6bd0d03d91337a2fed987c881b23b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 数据库访问活动
-数据库访问活动可用于在一个工作流内访问数据库。通过这些活动，可以访问数据库以检索或修改信息，并使用 [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) 访问数据库。  
+# <a name="database-access-activities"></a>数据库访问活动
+数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果该目录不存在，请转到（下载页）以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  如果该目录不存在，请转到（下载页）以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
-## 数据库活动  
+## <a name="database-activities"></a>数据库活动  
  以下部分详细介绍了此示例中包含的活动列表。  
   
-## DbUpdate  
+## <a name="dbupdate"></a>DbUpdate  
  执行可在数据库中产生修改（插入、更新、删除和其他修改）的 SQL 查询。  
   
  此类采用异步方式执行其工作（它派生自 <xref:System.Activities.AsyncCodeActivity> 并使用其异步功能）。  
   
- 通过设置提供程序固定名称 \(`ProviderName`\) 和连接字符串 \(`ConnectionString`\)，或仅使用应用程序配置文件中的连接字符串配置名称 \(`ConfigFileSectionName`\)，可以配置连接信息。  
+ 通过设置提供程序固定名称 (`ProviderName`) 和连接字符串 (`ConnectionString`)，或仅使用应用程序配置文件中的连接字符串配置名称 (`ConfigFileSectionName`)，可以配置连接信息。  
   
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。  
   
@@ -74,27 +78,26 @@ Public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
-|||  
+|参数|描述|  
 |-|-|  
-|参数|说明|  
-|ProviderName|ADO.NET 提供程序固定名称。如果设置此参数，则必须还要设置 `ConnectionString`。|  
-|ConnectionString|用于连接到数据库的连接字符串。如果设置此参数，则必须还要设置 `ProviderName`。|  
-|ConfigName|存储连接信息的配置文件部分的名称。设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|  
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|  
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|  
 |Sql|要执行的 SQL 命令。|  
-|Parameters|SQL 查询的参数集合。|  
+|参数|SQL 查询的参数集合。|  
 |AffectedRecords|最后一个操作影响的记录的数量。|  
   
-## DbQueryScalar  
+## <a name="dbqueryscalar"></a>DbQueryScalar  
  执行可从数据库检索单个值的查询。  
   
  此类采用异步方式执行其工作（它派生自 <xref:System.Activities.AsyncCodeActivity%601> 并使用其异步功能）。  
   
- 通过设置提供程序固定名称 \(`ProviderName`\) 和连接字符串 \(`ConnectionString`\)，或仅使用应用程序配置文件中的连接字符串配置名称 \(`ConfigFileSectionName`\)，可以配置连接信息。  
+ 通过设置提供程序固定名称 (`ProviderName`) 和连接字符串 (`ConnectionString`)，或仅使用应用程序配置文件中的连接字符串配置名称 (`ConfigFileSectionName`)，可以配置连接信息。  
   
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。  
   
- 执行 `DbQueryScalar` 之后，将在 `Result``out` 参数中返回标量（此参数为 `TResult` 类型，并在基类 <xref:System.Activities.AsyncCodeActivity%601> 中定义）。  
+ 后`DbQueryScalar`是执行，在中返回标量`Result``out`自变量 (类型的`TResult`，即在基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -128,25 +131,24 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }  
 ```  
   
-|||  
+|参数|描述|  
 |-|-|  
-|参数|说明|  
-|ProviderName|ADO.NET 提供程序固定名称。如果设置此参数，则必须还要设置 `ConnectionString`。|  
-|ConnectionString|用于连接到数据库的连接字符串。如果设置此参数，则必须还要设置 `ProviderName`。|  
-|ConfigName|存储连接信息的配置文件部分的名称。设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|  
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|  
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|  
 |Sql|要执行的 SQL 命令。|  
-|Parameters|SQL 查询的参数集合。|  
-|Result|执行查询后获得的标量。此参数的类型为 `TResult`。|  
+|参数|SQL 查询的参数集合。|  
+|结果|执行查询后获得的标量。 此参数的类型为 `TResult`。|  
   
-## DbQuery  
- 执行可检索对象列表的查询。执行查询后，将执行一个映射函数（它可以为 <xref:System.Func%601>\<`DbDataReader`、`TResult`\> 或 <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`、`TResult`\>）。此映射函数在 `DbDataReader` 中获取一个记录，并将其映射到要返回的对象。  
+## <a name="dbquery"></a>DbQuery  
+ 执行可检索对象列表的查询。 执行查询后，执行映射函数 (它可以是<xref:System.Func%601> < `DbDataReader`， `TResult`> 或<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>)。 此映射函数在 `DbDataReader` 中获取一个记录，并将其映射到要返回的对象。  
   
- 通过设置提供程序固定名称 \(`ProviderName`\) 和连接字符串 \(`ConnectionString`\)，或仅使用应用程序配置文件中的连接字符串配置名称 \(`ConfigFileSectionName`\)，可以配置连接信息。  
+ 通过设置提供程序固定名称 (`ProviderName`) 和连接字符串 (`ConnectionString`)，或仅使用应用程序配置文件中的连接字符串配置名称 (`ConfigFileSectionName`)，可以配置连接信息。  
   
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。  
   
- 使用 `DbDataReader` 检索 SQL 查询的结果。此活动将循环访问 `DbDataReader`，并将 `DbDataReader` 中的行映射到 `TResult` 的实例。`DbQuery` 的用户必须提供映射代码。可以通过两种方法执行此操作：使用 <xref:System.Func%601>\<`DbDataReader`, `TResult`\> 或 <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>。在第一种情况下，将在单个执行脉冲中完成映射。因此，此方法的速度更快，但无法序列化为 XAML。在后一种情况下，将在多个脉冲中完成映射。因此，此方法的速度较慢，但可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。  
+ 使用 `DbDataReader` 检索 SQL 查询的结果。 此活动将循环访问 `DbDataReader`，并将 `DbDataReader` 中的行映射到 `TResult` 的实例。 用户`DbQuery`必须提供映射代码，这可以通过两种方式： 使用<xref:System.Func%601> < `DbDataReader`， `TResult`> 或<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>。 在第一种情况下，将在单个执行脉冲中完成映射。 因此，此方法的速度更快，但无法序列化为 XAML。 在后一种情况下，将在多个脉冲中完成映射。 因此，此方法的速度较慢，但可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -188,27 +190,26 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }  
 ```  
   
-|||  
+|参数|描述|  
 |-|-|  
-|参数|说明|  
-|ProviderName|ADO.NET 提供程序固定名称。如果设置此参数，则必须还要设置 `ConnectionString`。|  
-|ConnectionString|用于连接到数据库的连接字符串。如果设置此参数，则必须还要设置 `ProviderName`。|  
-|ConfigName|存储连接信息的配置文件部分的名称。设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|  
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|  
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|  
 |Sql|要执行的 SQL 命令。|  
-|Parameters|SQL 查询的参数集合。|  
-|Mapper|映射函数 \(<xref:System.Func%601>\<`DbDataReader`, `TResult`\>\)，它接受在执行查询后获得的 `DataReader` 中的一个记录，并返回一个 `TResult` 类型的对象的实例（此实例将被添加到 `Result` 集合中）。<br /><br /> 在这种情况下，将在单个执行脉冲中完成映射，但不能使用设计器以声明方式创作它。|  
-|MapperFunc|映射函数 \(<xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>\)，它接受在执行查询后获得的 `DataReader` 中的一个记录，并返回一个 `TResult` 类型的对象的实例（此实例将被添加到 `Result` 集合中）。<br /><br /> 在这种情况下，将在多个执行脉冲中完成映射。此函数可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。|  
-|Result|对象列表，这些对象是通过执行查询并对 `DataReader` 中的每个记录执行映射函数得到的。|  
+|参数|SQL 查询的参数集合。|  
+|Mapper|映射函数 (<xref:System.Func%601><`DbDataReader`， `TResult`>) 采用记录`DataReader`执行查询后获得并返回类型的对象的实例`TResult`要添加到`Result`集合。<br /><br /> 在这种情况下，将在单个执行脉冲中完成映射，但不能使用设计器以声明方式创作它。|  
+|MapperFunc|映射函数 (<xref:System.Activities.ActivityFunc%601><`DbDataReader`， `TResult`>) 采用记录`DataReader`执行查询后获得并返回类型的对象的实例`TResult`要添加到`Result`集合。<br /><br /> 在这种情况下，将在多个执行脉冲中完成映射。 此函数可序列化为 XAML，并以声明方式进行创作（任何现有活动均可参与映射）。|  
+|结果|对象列表，这些对象是通过执行查询并对 `DataReader` 中的每个记录执行映射函数得到的。|  
   
-## DbQueryDataSet  
- 执行可返回 <xref:System.Data.DataSet> 的查询。此类以异步方式执行其工作。它派生自 <xref:System.Activities.AsyncCodeActivity>\<`TResult`\> 并使用其异步功能。  
+## <a name="dbquerydataset"></a>DbQueryDataSet  
+ 执行可返回 <xref:System.Data.DataSet> 的查询。 此类以异步方式执行其工作。 它派生自<xref:System.Activities.AsyncCodeActivity> < `TResult`> 并使用其异步功能。  
   
- 通过设置提供程序固定名称 \(`ProviderName`\) 和连接字符串 \(`ConnectionString`\)，或仅使用应用程序配置文件中的连接字符串配置名称 \(`ConfigFileSectionName`\)，可以配置连接信息。  
+ 通过设置提供程序固定名称 (`ProviderName`) 和连接字符串 (`ConnectionString`)，或仅使用应用程序配置文件中的连接字符串配置名称 (`ConfigFileSectionName`)，可以配置连接信息。  
   
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。  
   
- 执行 `DbQueryDataSet` 之后，将在 `Result``out` 参数中返回 `DataSet`（此参数为 `TResult` 类型，并在基类 <xref:System.Activities.AsyncCodeActivity%601> 中定义）。  
+ 后`DbQueryDataSet`执行`DataSet`中返回`Result``out`自变量 (类型的`TResult`，即在基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -242,19 +243,18 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }  
 ```  
   
-|||  
+|参数|描述|  
 |-|-|  
-|参数|说明|  
-|ProviderName|ADO.NET 提供程序固定名称。如果设置此参数，则必须还要设置 `ConnectionString`。|  
-|ConnectionString|用于连接到数据库的连接字符串。如果设置此参数，则必须还要设置 `ProviderName`。|  
-|ConfigName|存储连接信息的配置文件部分的名称。设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|  
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|  
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|  
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|  
 |Sql|要执行的 SQL 命令。|  
-|Parameters|SQL 查询的参数集合。|  
-|Result|执行查询后获得的 <xref:System.Data.DataSet>。|  
+|参数|SQL 查询的参数集合。|  
+|结果|执行查询后获得的 <xref:System.Data.DataSet>。|  
   
-## 配置连接信息  
- 所有 DbActivities 共享相同的配置参数。可以通过两种方式进行相关配置：  
+## <a name="configuring-connection-information"></a>配置连接信息  
+ 所有 DbActivities 共享相同的配置参数。 可以通过两种方式进行相关配置：  
   
 -   `ConnectionString + InvariantName`：设置 ADO.NET 提供程序固定名称和连接字符串。  
   
@@ -271,7 +271,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 -   `ConfigName`：设置包含连接信息的配置部分的名称。  
   
-    ```  
+    ```xml  
     <connectionStrings>      
         <add name="DbActivitiesSample"  
              providerName="System.Data.SqlClient"  
@@ -289,10 +289,10 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };  
     ```  
   
-## 运行此示例  
+## <a name="running-this-sample"></a>运行此示例  
   
-### 设置说明  
- 此示例使用一个数据库。此示例提供了一个安装和加载脚本 \(Setup.cmd\)。必须使用命令提示执行该文件。  
+### <a name="setup-instructions"></a>设置说明  
+ 此示例使用一个数据库。 此示例提供了一个安装和加载脚本 (Setup.cmd)。 必须使用命令提示执行该文件。  
   
  Setup.cmd 脚本调用 CreateDb.sql 脚本文件，该文件包含可执行下列操作的 SQL 命令：  
   
@@ -306,34 +306,34 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 -   将 12 个记录插入到 Employees 表中。  
   
-##### 运行 Setup.cmd  
+##### <a name="to-run-setupcmd"></a>运行 Setup.cmd  
   
 1.  打开命令提示。  
   
 2.  转到 DbActivities 示例文件夹。  
   
-3.  键入“setup.cmd”，然后按 Enter。  
+3.  键入"setup.cmd"，然后按 ENTER。  
   
     > [!NOTE]
-    >  Setup.cmd 尝试将此示例安装在您本地计算机的 SqlExpress 实例中。如果您需要在其他 SQL Server 实例中安装它，请将 Setup.cmd 改为使用新的实例名称。  
+    >  Setup.cmd 尝试将此示例安装在您本地计算机的 SqlExpress 实例中。 如果您需要在其他 SQL Server 实例中安装它，请将 Setup.cmd 改为使用新的实例名称。  
   
-##### 卸载示例数据库  
+##### <a name="to-uninstall-the-sample-database"></a>卸载示例数据库  
   
 1.  在命令提示中运行示例文件夹中的 Cleanup.cmd。  
   
-##### 运行示例  
+##### <a name="to-run-the-sample"></a>运行示例  
   
 1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开解决方案  
   
-2.  若要编译解决方案，请按 CTRL\+SHIFT\+B。  
+2.  若要编译解决方案，请按 CTRL+SHIFT+B。  
   
-3.  若要运行示例而不进行调试，按 Ctrl\+F5。  
+3.  若要运行示例而不进行调试，按 Ctrl+F5。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

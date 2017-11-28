@@ -1,41 +1,22 @@
 ---
 title: "for（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - for
 - for_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- for keyword [C#]
+helpviewer_keywords: for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cb7e83733fe026658f502b430975a0f8a27e9df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d65c198b0fd763bddae4832290af038b8992eb48
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
 通过使用 `for` 循环，可以重复运行一个语句或语句块，直到指定的表达式的计算结果为 `false` 为止。 这种类型的循环可用于循环访问数组，以及事先知道循环要在其中进行循环访问的次数的其他应用程序。  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>示例  
  在下面的示例中，`i` 的值被写入控制台，并在循环的每次迭代过程中递增 1。  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
+ [!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  上一示例中的 `for` 语句执行以下操作。  
   
@@ -120,20 +101,19 @@ for (initializer; condition; iterator)
   
  下面的示例阐释了几种不太常见的选择：为初始化表达式部分中的外部循环变量赋值、同时在初始化表达式部分和迭代器部分中调用 `Console.WriteLine` 方法，以及更改迭代器部分中的两个变量的值。  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+ [!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  定义 `for` 语句的所有表达式都是可选的。 例如，以下语句创建一个无限循环。  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+ [!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [for 语句 (C++)](/cpp/cpp/for-statement-cpp)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [for 语句 (C++)](/cpp/cpp/for-statement-cpp)  
  [迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
-

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - TraceMode attribute
 - hexidecimal data, network tracing output
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8c451a84117208457942d1c3794628963a49e93
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: deb191f18bda5b00ef4a967f50e8e983289882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interpreting-network-tracing"></a>解释网络跟踪
 启用网络跟踪之后，可以通过跟踪捕获应用程序对各种 <xref:System.Net> 类成员的调用。 这些调用的输出可能类似于以下示例。  
@@ -60,7 +54,6 @@ ms.lasthandoff: 08/21/2017
  `Connection: Close`  
   
 ## <a name="see-also"></a>另请参阅  
- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
+ [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)
-

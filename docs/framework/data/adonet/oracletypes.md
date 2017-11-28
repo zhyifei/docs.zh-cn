@@ -1,35 +1,38 @@
 ---
-title: "OracleType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OracleTypes
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e0fa5a76c304246d1518ad7491cfc5b8b741f913
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# OracleType
-Oracle .NET Framework 数据提供程序包括多个可以用于使用 Oracle 数据类型的结构。  包括 <xref:System.Data.OracleClient.OracleNumber> 和 <xref:System.Data.OracleClient.OracleString>。  
+# <a name="oracletypes"></a>OracleTypes
+Oracle .NET Framework 数据提供程序包括多个可以用于使用 Oracle 数据类型的结构。 包括 <xref:System.Data.OracleClient.OracleNumber> 和 <xref:System.Data.OracleClient.OracleString>。  
   
 > [!NOTE]
 >  有关此类结构的完整列表，请参见 <xref:System.Data.OracleClient>。  
   
- 以下 C\# 示例：  
+ 以下 C# 示例：  
   
 -   创建一个 Oracle 表并为该表加载数据。  
   
 -   使用 <xref:System.Data.OracleClient.OracleDataReader> 访问数据，并使用多个 <xref:System.Data.OracleClient.OracleType> 结构显示数据。  
   
-## 创建 Oracle 表  
- 此示例创建一个 Oracle 表并为该表加载数据。  必须先运行此示例，才能运行下一个示例。  
+## <a name="creating-an-oracle-table"></a>创建 Oracle 表  
+ 此示例创建一个 Oracle 表并为该表加载数据。 必须先运行此示例，才能运行下一个示例。  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -58,8 +61,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## 从 Oracle 表检索数据  
- 此示例使用 **OracleDataReader** 访问数据，并使用多个 **OracleType** 结构显示数据。  
+## <a name="retrieving-data-from-the-oracle-table"></a>从 Oracle 表检索数据  
+ 此示例使用**OracleDataReader**能够访问数据，并使用多个**OracleType**结构显示数据。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -122,6 +125,6 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## 请参阅  
- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
+## <a name="see-also"></a>另请参阅  
+ [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

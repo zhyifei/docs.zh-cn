@@ -1,40 +1,21 @@
 ---
 title: "方法（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 Main 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。  
@@ -50,17 +31,17 @@ ms.lasthandoff: 09/25/2017
   
  方法参数在括号内，并且用逗号分隔。 空括号指示方法不需要任何参数。 此类包含三种方法：  
   
- [!code-cs[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
 ## <a name="method-access"></a>方法访问  
  调用对象上的方法就像访问字段。 在对象名之后添加一个句点、方法名和括号。 参数列在括号里，并且用逗号分隔。 因此，可在以下示例中调用 `Motorcycle` 类的方法：  
   
- [!code-cs[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## <a name="method-parameters-vs-arguments"></a>方法参数与参数  
  该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如:   
   
- [!code-cs[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>按引用传递与按值传递  
  默认情况下，值类型传递给方法时，传递的是副本而不是对象本身。 因此，对参数的更改不会影响调用方法中的原始副本。 可以使用 ref 关键字按引用传递值类型。 有关详细信息，请参阅[传递值类型参数](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)。 有关内置值类型的列表，请参阅[值类型表](../../../csharp/language-reference/keywords/value-types-table.md)。  
@@ -69,11 +50,11 @@ ms.lasthandoff: 09/25/2017
   
  通过使用 `class` 关键字创建引用类型，如以下示例所示。  
   
- [!code-cs[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
   
  现在，如果将基于此类型的对象传递到方法，则将传递对对象的引用。 下面的示例将 `SampleRefType` 类型的对象传递到 `ModifyObject`方法。  
   
- [!code-cs[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
   
  该示例执行的内容实质上与先前示例相同，均按值将参数传递到方法。 但是因为使用了引用类型，结果有所不同。 `ModifyObject` 中所做的对形参 `value` 的 `obj`字段的修改，也会更改 `value` 方法中实参 `rt`的 `TestRefType` 字段。 `TestRefType` 方法显示 33 作为输出。  
   
@@ -93,13 +74,13 @@ public ref double GetEstimatedDistance()
 
 `return` 关键字还会停止执行该方法。 如果返回类型为 `void`，没有值的 `return` 语句仍可用于停止执行该方法。 没有 `return` 关键字，当方法到达代码块结尾时，将停止执行。 具有非空的返回类型的方法都需要使用 `return` 关键字来返回值。 例如，这两种方法都使用 `return` 关键字来返回整数：  
   
- [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
  若要使用从方法返回的值，调用方法可以在相同类型的值足够的地方使用该方法调用本身。 也可以将返回值分配给变量。 例如，以下两个代码示例实现了相同的目标：  
   
- [!code-cs[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
   
- [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内参数的原始值，则此步骤可能很有必要。  
 
@@ -147,7 +128,7 @@ static void Main(string[] args)
   
  `startButton_Click` 方法是具有 void 返回类型的异步方法的示例。 因为 `DoSomethingAsync` 是异步方法，调用 `DoSomethingAsync` 的任务必须等待，如以下语句所示： `await DoSomethingAsync();`。 `startButton_Click` 方法必须使用 `async` 修饰符进行定义，因为该方法具有 `await` 表达式。  
   
- [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
  异步方法不能声明任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 参数，但是可以调用具有这类参数的方法。  
   
@@ -179,16 +160,15 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类和结构](index.md)   
- [访问修饰符](access-modifiers.md)   
- [静态类和静态类成员](static-classes-and-static-class-members.md)   
- [继承](inheritance.md)   
- [抽象类、密封类及类成员](abstract-and-sealed-classes-and-class-members.md)   
- [params](../../../csharp/language-reference/keywords/params.md)   
- [return](../../../csharp/language-reference/keywords/return.md)   
- [out](../../../csharp/language-reference/keywords/out.md)   
- [ref](../../../csharp/language-reference/keywords/ref.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [类和结构](index.md)  
+ [访问修饰符](access-modifiers.md)  
+ [静态类和静态类成员](static-classes-and-static-class-members.md)  
+ [继承](inheritance.md)  
+ [抽象类、密封类及类成员](abstract-and-sealed-classes-and-class-members.md)  
+ [params](../../../csharp/language-reference/keywords/params.md)  
+ [return](../../../csharp/language-reference/keywords/return.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
  [传递参数](passing-parameters.md)
-

@@ -1,42 +1,23 @@
 ---
 title: "-out（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /out
-dev_langs:
-- CSharp
+f1_keywords: /out
 helpviewer_keywords:
 - /out compiler option [C#]
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6db728bc98f5223fc35268a1cce41021ff530cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="out-c-compiler-options"></a>/out（C# 编译器选项）
 “/out”选项指定输出文件的名称。  
@@ -66,9 +47,9 @@ ms.lasthandoff: 07/28/2017
   
  如果在命令行编译中生成多个输出文件，请记住，仅其中一个输出文件可以是程序集，且只有（使用 /out 隐式或显式）指定的第一个输出文件可以是程序集。  
   
- 在编译时生成的任何模块都将成为与编译时生成的程序集关联的文件。 使用 [ildasm.exe](https://msdn.microsoft.com/library/f7dy01k1) 查看程序集清单，了解关联文件。  
+ 在编译时生成的任何模块都将成为与编译时生成的程序集关联的文件。 使用 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) 查看程序集清单，了解关联文件。  
   
- 为使 exe 成为友元程序集的目标，/out 编译器选项是必需的。 有关详细信息，请参阅[友元程序集](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
+ 为使 exe 成为友元程序集的目标，/out 编译器选项是必需的。 有关详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -88,7 +69,6 @@ csc t.cs /out:mymodule.netmodule /target:module t2.cs
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [友元程序集](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)   
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

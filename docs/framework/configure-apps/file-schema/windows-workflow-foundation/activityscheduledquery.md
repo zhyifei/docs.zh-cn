@@ -1,62 +1,71 @@
 ---
-title: "&lt;activityScheduledQuery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;activityScheduledQuery&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 779ac3995d4d5fb1b63de6ae6b9db7103691d6f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;activityScheduledQuery&gt;
-表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。  跟踪参与者需要用此查询来订阅活动安排记录。  
+# <a name="ltactivityscheduledquerygt"></a>&lt;activityScheduledQuery&gt;
+表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
- 有关跟踪配置文件查询的更多信息，请参见[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)  
+ 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-## 语法  
+\<system.serviceModel >  
+\<跟踪 >  
+\<trackingProfile >  
+\<工作流 >  
+\<activityScheduledQueries >  
+\<activityScheduledQuery >  
   
-```vb  
+## <a name="syntax"></a>语法  
   
-<tracking>  
-     <trackingProfile name="Name">  
-       <workflow>  
-          <activityScheduledQueries>  
-             <activityScheduledQuery activityName="String"  
-                 childActivityName="String"/>  
-          </activityScheduledQueries>  
-       </workflow>  
-     </trackingProfile>  
+```xml 
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String" 
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
 |特性|描述|  
-|--------|--------|  
+|---------------|-----------------|  
 |activityName|一个字符串，指定正在请求取消的活动的名称。|  
 |childActivityName|一个字符串，指定已请求将其取消的子活动的名称。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<activityScheduledQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
+|-------------|-----------------|  
+|[\<activityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
   
-## 请参阅  
- [System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement](assetId:///System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.ActivityScheduledQuery](assetId:///System.Activities.Tracking.ActivityScheduledQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>       
+ <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>       
+ [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

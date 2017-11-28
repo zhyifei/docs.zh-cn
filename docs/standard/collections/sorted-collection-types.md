@@ -15,28 +15,27 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0f23a69a8e2493e018b0a37628762247c0e33430
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sorted-collection-types"></a>已排序的集合类型
-<xref:System.Collections.SortedList?displayProperty=fullName> 类、<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> 泛型类和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> 泛型类与 <xref:System.Collections.Hashtable> 类和 <xref:System.Collections.Generic.Dictionary%602> 泛型类的相似之处在于均实现 <xref:System.Collections.IDictionary> 接口，不同之处在于它们让元素一直按键的排序顺序排列，并且不具备哈希表的 O(1) 插入和检索特性。 这三个类具有若干共性：  
+<xref:System.Collections.SortedList?displayProperty=nameWithType> 类、<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> 泛型类和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> 泛型类与 <xref:System.Collections.Hashtable> 类和 <xref:System.Collections.Generic.Dictionary%602> 泛型类的相似之处在于均实现 <xref:System.Collections.IDictionary> 接口，不同之处在于它们让元素一直按键的排序顺序排列，并且不具备哈希表的 O(1) 插入和检索特性。 这三个类具有若干共性：  
   
--   这三个类全都实现 <xref:System.Collections.IDictionary?displayProperty=fullName> 接口。 两个泛型类还实现 <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName> 泛型接口。  
+-   这三个类全都实现 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 接口。 两个泛型类还实现 <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> 泛型接口。  
   
 -   每个元素都是用于枚举的键/值对。  
   
     > [!NOTE]
     >  枚举时，非泛型 <xref:System.Collections.SortedList> 类返回 <xref:System.Collections.DictionaryEntry> 对象，尽管两个泛型类型返回 <xref:System.Collections.Generic.KeyValuePair%602> 对象。  
   
--   元素按 <xref:System.Collections.IComparer?displayProperty=fullName> 实现代码（对于非泛型 <xref:System.Collections.SortedList>）或 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 实现代码（对于两个泛型类）进行排序。  
+-   元素按 <xref:System.Collections.IComparer?displayProperty=nameWithType> 实现代码（对于非泛型 <xref:System.Collections.SortedList>）或 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现代码（对于两个泛型类）进行排序。  
   
 -   每个类提供了返回仅包含键或仅包含值的集合的属性。  
   
@@ -57,8 +56,7 @@ ms.lasthandoff: 07/28/2017
  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，<xref:System.Collections.Generic.SortedSet%601> 类提供在执行插入、删除和搜索操作之后让数据一直按排序顺序排列的自平衡树。 此类和 <xref:System.Collections.Generic.HashSet%601> 类实现 <xref:System.Collections.Generic.ISet%601> 接口。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.IDictionary?displayProperty=fullName>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
  [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be4fc9f9f2fc9ae57f22a7e59eca05a331ebfb32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
 <a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
@@ -69,7 +67,6 @@ ms.lasthandoff: 07/28/2017
  因为强命名和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)进行签名确保了完整性，因此可将代码访问安全策略建立在这两种形式的程序集证据的基础上。 强命名和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)进行签名通过数字签名和证书来确保完整性。 上面提到的所有技术（哈希验证、强命名和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md) 进行签名）可协同工作，确保程序集没有做过任何方式的改动。  
   
 ## <a name="see-also"></a>另请参阅  
- [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
+ [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
  [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)
-

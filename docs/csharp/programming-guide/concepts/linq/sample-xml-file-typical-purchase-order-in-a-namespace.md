@@ -1,30 +1,21 @@
 ---
 title: "示例 XML 文件：命名空间 1 中的典型采购订单"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4e85dc10de556f37d63438b4c2d19f52e181efad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e0067364b013509db983bcf5b1b1aa2290036276
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>示例 XML 文件：命名空间中的典型采购订单
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 此文件是典型的采购单。 该 XML 在某个命名空间中。  
@@ -73,4 +64,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>请参阅  
  [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
-

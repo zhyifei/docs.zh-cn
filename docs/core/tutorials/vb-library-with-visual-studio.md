@@ -8,15 +8,13 @@ ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
-ms.devlang: vb
+dev_langs: vb
+ms.openlocfilehash: 6572f35b1e2b652c9f2ff5448165ece104f0bdf6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: a933e1eef6e4e9814aeba4206469a64563a7e91d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库
 
 类库定义的是可以由应用程序调用的类型和方法。 借助定目标到 .NET Standard 2.0 的类库，任何支持相应版本 .NET Standard 的 .NET 实现都可以调用库。 完成类库时，可以决定是要将其作为第三方组件进行分布，还是要将其作为与一个或多个应用程序捆绑在一起的组件进行添加。
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/12/2017
 
   [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   类库 `UtilityLibraries.StringLibrary` 包含 `StartsWithUpper` 方法，此方法会返回 <xref:System.Boolean> 值，以指明当前字符串实例是否以大写字符开头。 Unicode 标准会区分大小写字符。 如果为大写字符，<xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> 方法返回 `true`。
+   类库 `UtilityLibraries.StringLibrary` 包含 `StartsWithUpper` 方法，此方法会返回 <xref:System.Boolean> 值，以指明当前字符串实例是否以大写字符开头。 Unicode 标准会区分大小写字符。 如果为大写字符，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法返回 `true`。
 
 1. 在菜单栏中，选择“生成” > “生成解决方案”。 此项目的编译应该没有错误。
 
@@ -71,4 +69,3 @@ ms.lasthandoff: 08/12/2017
 ## <a name="next-step"></a>下一步
 
 已成功生成库。 由于尚未调用库的任何方法，因此还不知道它能否按预期运行。 开发库的下一步是使用[单元测试项目](testing-library-with-visual-studio.md)测试库。
-

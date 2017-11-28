@@ -1,62 +1,60 @@
 ---
-title: "WCF 的 &lt;cancelRequestedQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 的 &lt;cancelRequestedQueries&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a5501965f746fe85ad07e396f005beb8e12f3d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 的 &lt;cancelRequestedQueries&gt;
-表示一个查询集合，这些查询用于跟踪父活动取消子活动的请求。  跟踪参与者需要用此查询来订阅取消请求记录对象。  
+# <a name="ltcancelrequestedqueriesgt-of-wcf"></a>WCF 的 &lt;cancelRequestedQueries&gt;
+表示一个查询集合，这些查询用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。  
   
- 有关跟踪配置文件查询的更多信息，请参见[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)  
+ 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-## 语法  
+ \<system.serviceModel >  
+\<跟踪 >  
+\<trackingProfile >  
+\<工作流 >  
+\<cancelRequestedQueries >  
   
-```vb  
+## <a name="syntax"></a>语法  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <cancelRequestQueries>  
-             <cancelRequestQuery activityName="String"  
-                 childActivityName="String"/>  
-          </cancelRequestQueries>  
-       </workflow>  
-   </trackingProfile>  
-</tracking>  
-  
-```  
-  
-## 特性和元素  
+```xml
+<tracking>   <trackingProfile name="Name">       <workflow>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>       </workflow>   </trackingProfile></tracking>  
+```
+
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<cancelRequestedQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|一个查询，用于跟踪父活动取消子活动的请求|  
+|-------------|-----------------|  
+|[\<cancelRequestedQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|一个查询，用于跟踪父活动取消子活动的请求|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|  
+|-------------|-----------------|  
+|[\<工作流 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `a HYPERLINK "http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` 属性所标识的特定工作流的所有查询。|  
   
-## 请参阅  
- <xref:System.Activities.Tracking.CancelRequestedQuery>   
- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Activities.Tracking.CancelRequestedQuery>  
+ [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

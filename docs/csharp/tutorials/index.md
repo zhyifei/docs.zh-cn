@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.translationtype: HT
-ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
 ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="c-tutorials"></a>C# 教程
 
 下面各教程介绍了如何使用 [.NET Core](../../core/index.md) 生成 C# 程序：
@@ -34,4 +32,3 @@ ms.lasthandoff: 09/07/2017
 * [字符串内插](string-interpolation.md)：介绍了 C# 中的 `$` 字符串内插的诸多用法。
 
 * [使用特性](attributes.md)：介绍了如何在 C# 中创建和使用特性。
-

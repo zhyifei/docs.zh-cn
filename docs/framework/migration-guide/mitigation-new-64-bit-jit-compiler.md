@@ -15,16 +15,15 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 091b83cc0d7829c8ff078e6397aa480895b7a115
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>缓解：新的 64 位 JIT 编译器
 自 .NET Framework 4.6 起，运行时包括新版 64 位 JIT 编译器，用于执行实时编译。 此更改不会影响 32 位 JIT 编译器的编译。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
 -   在某些情况下，如果启用了优化，无法正确比较 <xref:System.UInt16> 值与其高位集。  
   
--   在某些情况下，尤其是在初始化数组值时，通过 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 指令执行的内存初始化可能会使用不正确的值初始化内存。 这可能会导致未经处理的异常抛出或输出不正确。  
+-   在某些情况下，尤其是在初始化数组值时，通过 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> IL 指令执行的内存初始化可能会使用不正确的值初始化内存。 这可能会导致未经处理的异常抛出或输出不正确。  
   
 -   在某些极少数情况下，如果启用了编译器优化，条件位测试可能会返回错误的 <xref:System.Boolean> 值或引发异常。  
   
@@ -81,6 +80,5 @@ ms.lasthandoff: 07/28/2017
  还可以在 [Microsoft Connect](https://connect.microsoft.com/VisualStudio) 上报告 bug，告诉我们你遇到的问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  [\<useLegacyJit> 元素](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
-

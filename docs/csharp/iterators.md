@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="iterators"></a>迭代器
 
 编写的几乎每个程序都需要循环访问集合。 因此需要编写代码来检查集合中的每一项。 
@@ -246,6 +244,5 @@ finally
 ```
 
 幸运地是，无需记住所有这些细节。 `foreach` 语句会为你处理所有这些细微差别。 编译器会为所有这些构造生成正确的代码。 
-
 
 

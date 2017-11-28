@@ -1,25 +1,21 @@
 ---
 title: "教程：操作 WordprocessingML 文档中的内容 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3ddd3f35d1a1b6761aace8460aceda638f169f05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 293e8de848f83517211e3f3ed640102a2c534764
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>教程：操作 WordprocessingML 文档中的内容 (C#)
 本教程演示如何应用函数转换方法和 LINQ to XML 来操作 XML 文档。 C# 示例查询和操作用 Microsoft Word 保存的 Office Open XML WordprocessingML 文档中的信息。  
@@ -41,7 +37,6 @@ ms.lasthandoff: 07/28/2017
 |[查找 Word 文档中的文本 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|使用前面的查询在文档中查找指定的文本字符串。|  
 |[Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|提供 Office Open XML WordprocessingML 文档的一些详细信息。|  
   
-## <a name="see-also"></a>请参阅  
- [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)   
+## <a name="see-also"></a>另请参阅  
+ [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
  [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-

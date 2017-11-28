@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates-and-lambdas"></a>委托和 lambda
 
 委托定义类型，类型指定特定方法签名。 可将满足此签名的方法（静态或实例）分配给该类型的变量，然后（使用适当参数）直接调用该方法，或将其作为参数本身传递给另一方法再进行调用。 以下示例演示了委托的用法。
@@ -157,4 +155,3 @@ public MainWindow()
 *   [委托](https://msdn.microsoft.com/library/ms173171.aspx)
 *   [匿名函数](https://msdn.microsoft.com/library/bb882516.aspx)
 *   [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)
-

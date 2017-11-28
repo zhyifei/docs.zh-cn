@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>区别委托和事件
 
 [上一页](modern-events.md)
@@ -55,4 +53,3 @@ ms.lasthandoff: 07/28/2017
 ## <a name="evaluate-carefully"></a>仔细评估
 
 以上考虑因素并非固定不变的规则。 相反，它们代表可帮助决定针对特定使用情况的最佳选择的指南。 因为两者类似，所以甚至可以将两者作为原型，并考虑使用更加自然的一种。 两者均能很好地处理后期绑定方案。 使用能与设计进行最佳通讯的一种。
-

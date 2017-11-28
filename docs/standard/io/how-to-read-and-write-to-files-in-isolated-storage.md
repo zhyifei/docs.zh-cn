@@ -1,46 +1,52 @@
 ---
-title: "如何：在独立存储中读取和写入文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "使用独立存储的数据存储, 读取和写至文件"
-  - "数据存储区, 读取和写至文件"
-  - "文件, 独立存储"
-  - "独立存储, 读取和写至文件"
-  - "读取数据"
-  - "在存储区中读取文件"
-  - "存储, 读取和写至文件"
-  - "使用独立存储来存储数据, 读取和写至文件"
-  - "写到存储区中的文件"
+title: "如何：在独立存储中读取和写入文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- files, isolated storage
+- reading data
+- storing data using isolated storage, reading and writing to files
+- writing to files within store
+- data storage using isolated storage, reading and writing to files
+- reading files within store
+- isolated storage, reading and writing to files
+- data stores, reading and writing to files
+- stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-caps.latest.revision: 15
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 8d733efc3d70070dd12f55c651033e97d1792c38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在独立存储中读取和写入文件
-读取或写入文件，一个在独立存储区的文件，有流读取器 \(<xref:System.IO.StreamReader> 对象\) 的 <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 对象或流编写器 \(<xref:System.IO.StreamWriter> 对象\)。  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>如何：在独立存储中读取和写入文件
+若要读取或写入独立存储区的文件，请使用包含流读取器（<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 对象）或流编写器（<xref:System.IO.StreamReader> 对象）的 <xref:System.IO.StreamWriter> 对象。  
   
-## 示例  
- 下面的代码示例获取独立存储而检查名为 TestStore.txt 的文件是否存在。  如果不存在，则创建该文件并将“Hello Isolated Storage”写入文件。  如果 TestStore.txt 已存在，则代码示例读取文件。  
+## <a name="example"></a>示例  
+ 下面的代码示例获取独立存储区，并检查存储区中是否存在 TestStore.txt 文件。 如果不存在，则创建该文件并将“Hello Isolated Storage”写入该文件。 如果 TestStore.txt 已存在，则示例代码会读取该文件。  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## 请参阅  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>   
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>   
- <xref:System.IO.FileMode?displayProperty=fullName>   
- <xref:System.IO.FileAccess?displayProperty=fullName>   
- <xref:System.IO.StreamReader?displayProperty=fullName>   
- <xref:System.IO.StreamWriter?displayProperty=fullName>   
- [文件和流 I\/O](../../../docs/standard/io/index.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+ <xref:System.IO.FileMode?displayProperty=nameWithType>  
+ <xref:System.IO.FileAccess?displayProperty=nameWithType>  
+ <xref:System.IO.StreamReader?displayProperty=nameWithType>  
+ <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
+ [文件和流 I-O](../../../docs/standard/io/index.md)  
  [独立存储](../../../docs/standard/io/isolated-storage.md)

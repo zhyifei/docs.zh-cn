@@ -1,41 +1,22 @@
 ---
 title: "事件（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f714bded446e62ac6165d691d2404249275178e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a913a615de8185bb358376def1e2a051bdaa951
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
@@ -83,9 +64,8 @@ ms.lasthandoff: 09/25/2017
  [Learning C# 3.0: Master the Fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195418) （学习 C# 3.0：掌握 C# 3.0 的基本知识）中的 [委托和事件](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.EventHandler>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [委托](../../../csharp/programming-guide/delegates/index.md)   
- [在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)   
+ <xref:System.EventHandler>  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [委托](../../../csharp/programming-guide/delegates/index.md)  
+ [在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)  
  [使用基于事件的异步模式进行多线程编程](https://msdn.microsoft.com/library/hkasytyf)
-

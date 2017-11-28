@@ -1,30 +1,21 @@
 ---
 title: "创建自定义特性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 38bdedb352cc79f7a4cc3d08eb6138e7d994514b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ae5084501a2dd60ae23c93bbdb52dcd44f3f3f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-custom-attributes-c"></a>创建自定义特性 (C#)
 可通过定义特性类创建自己的自定义特性，特性类是直接或间接派生自 <xref:System.Attribute> 的类，可快速轻松地识别元数据中的特性定义。 假设希望使用编写类型的程序员的姓名来标记该类型。 可能需要定义一个自定义 `Author` 特性类：  
@@ -84,11 +75,10 @@ class SampleClass
 >  如果特性类包含属性，则该属性必须为读写属性。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection>   
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
+ <xref:System.Reflection>  
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+ [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)  
+ [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
  [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
-

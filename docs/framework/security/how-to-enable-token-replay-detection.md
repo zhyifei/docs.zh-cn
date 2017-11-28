@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>如何：启用令牌重播检测
 ## <a name="applies-to"></a>适用于  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/21/2017
 2.  按浏览器“返回”按钮。 “/”应用程序页应显示服务器错误，描述为：ID1062: 已检测到重播: 令牌: “System.IdentityModel.Tokens.SamlSecurityToken”，后跟 AssertionId 和颁发者。  
   
      会出现此错误页，因为检测到令牌重播时引发 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 类型异常。 出现此错误的原因是第一次提供令牌时，你尝试重新发送初始 POST 请求。 对于服务器的后续请求，“返回”按钮不会引起此行为。
-

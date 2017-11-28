@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CCW
 - COM interop, COM wrappers
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbf466fb52af94d51babb30fdee85f4a056298c6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874550511ed04427003f6fd54fdd97b3001356fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-callable-wrapper"></a>COM 可调用包装
 COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象和该对象的 COM 可调用包装器 (CCW)。 无法直接引用 .NET 对象，COM 客户端使用 CCW 作为托管对象的代理。  
@@ -189,11 +185,10 @@ public class LoanApp : IAnother {
  自动生成的双重接口可能适合少数情况；但是，更多情况下，它将造成与版本相关的复杂性。 例如，使用派生类的类接口的 COM 客户端可以通过对基类的更改轻松中断。 当第三方提供基类时，类接口的布局将不受你的控制。 进一步来说，与仅支持调度的接口不同，双重接口 (ClassInterface.AutoDual)提供对导出的类型库中的类接口的说明。 此类说明会促使后期绑定的客户端在运行时缓存 DispId。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)   
- [COM 包装器](../../../docs/framework/interop/com-wrappers.md)   
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [模拟 COM 接口](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)   
- [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [COM 包装](../../../docs/framework/interop/com-wrappers.md)  
+ [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [模拟 COM 接口](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)
-

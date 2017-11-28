@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - platform invoke, identifying functions
 - COM interop, DLL functions
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b96ef668a8a11794b87d3cbe7c2ba864f8a75e2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b5aa725d30e280d672724c7b7f4fd11a848a3ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="identifying-functions-in-dlls"></a>标识 DLL 中的函数
 DLL 函数的标识由以下元素组成：  
@@ -61,9 +54,8 @@ DLL 函数的标识由以下元素组成：
  有关 Win32 API 的完整文档，请参阅平台 SDK。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
+ [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
-

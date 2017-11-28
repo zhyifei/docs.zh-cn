@@ -1,40 +1,22 @@
 ---
 title: "如何：确定字符串是否表示数值（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 850c5d0e7a246b2319ba841dae9884c90390d38c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f89f4a4771625389a04f5c92829c91d66eb207
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何：确定字符串是否表示数值（C# 编程指南）
 若要确定字符串是否是指定数值类型的有效表示形式，请使用由所有基元数值类型以及如 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 等类型实现的静态 `TryParse` 方法。 以下示例演示如何确定“108”是否为有效的 [int](../../../csharp/language-reference/keywords/int.md)。  
@@ -53,7 +35,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="example"></a>示例  
  以下示例演示如何对 `long`、`byte` 和 `decimal` 值的字符串表示形式使用 `TryParse`。  
   
- [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
+ [!code-csharp[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  基元数值类型还实现 `Parse` 静态方法，如果字符串不是有效数字，该方法将引发异常。 `TryParse` 通常更高效，因为如果数值无效，它仅返回 false。  
@@ -62,9 +44,8 @@ bool result = int.TryParse(s, out i); //i now = 108
  请务必使用 `TryParse` 或 `Parse` 方法验证控件（如文本框和组合框）中的用户输入。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：将字节数组转换为 int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)   
- [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)   
- [如何：在十六进制字符串与数值类型之间转换](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
- [分析数值字符串](../../../standard/base-types/parsing-numeric.md)   
+ [如何：将字节数组转换为 int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
+ [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
+ [如何：在十六进制字符串与数值类型之间转换](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
+ [分析数值字符串](../../../standard/base-types/parsing-numeric.md)  
  [格式设置类型](../../../standard/base-types/formatting-types.md)
-

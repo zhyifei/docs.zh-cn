@@ -1,42 +1,23 @@
 ---
 title: "-errorreport（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport（C# 编译器选项）
 此选项提供向 Microsoft 报告 C# 内部编译错误的简便方法。  
@@ -62,9 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  **发送**  
  自动向 Microsoft 发送内部编译器错误报告。 若要启用此选项，必须首先同意 Microsoft 数据收集策略。 首次在计算机上指定 **/errorreport:send** 时，编译器消息将引导你访问包含 Microsoft 数据收集策略的网站。  
-  
- 此选项取决于注册表设置。 有关如何在注册表中设置适当的值的信息，请参阅 MSDN 网站上的[如何在 Visual Studio 2008 命令行工具中打开自动错误报告](http://go.microsoft.com/fwlink/?LinkID=184695)。  
-  
+    
 ## <a name="remarks"></a>备注  
  当编译器无法处理源代码文件时，会导致内部编译器错误 (ICE)。 出现 ICE 时，编译器不会生成可用于修复代码的输出文件或任何有用的诊断。  
   
@@ -88,4 +67,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
-

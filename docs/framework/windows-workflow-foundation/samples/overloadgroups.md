@@ -1,20 +1,24 @@
 ---
-title: "OverloadGroups | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OverloadGroups
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d547d2-f5fb-4de3-a959-ee6139a4f1ad
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2a5ab416dc484dddc0b6aa0ec25757921815c723
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# OverloadGroups
+# <a name="overloadgroups"></a>OverloadGroups
 此示例包含 `CreateLocation` 活动，它具有两个有趣的特征：  
   
 1.  它具有一些必需的参数和一些可选的参数。  
@@ -25,23 +29,23 @@ caps.handback.revision: 9
   
 -   `[isRequired]` 验证是否已为某个特定活动的属性赋值，如果没有，则它将引发异常。  
   
--   `[OverloadGroup]` 汇集了一组参数，以便活动用户可在两个参数集中选择使用哪一个。用户不能使用同一实例中不同重载组中的参数。  
+-   `[OverloadGroup]` 汇集了一组参数，以便活动用户可在两个参数集中选择使用哪一个。 用户不能使用同一实例中不同重载组中的参数。  
   
- 在设置不同的工作流之后，调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，它将返回<xref:System.Activities.Validation.ConstraintViolation> 的 <xref:System.Activities.Validation.ValidationResults> 集合。将 <xref:System.Activities.Validation.ConstraintViolation> 对象输出到控制台。  
+ 在设置不同的工作流之后, 调用<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>它将返回<xref:System.Activities.Validation.ValidationResults>集合<!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation`。 打印<!--zz <xref:System.Activities.Validation.ConstraintViolation>-->`System.Activities.Validation.ConstraintViolation`到控制台的对象。  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开**“OverloadGroups.sln”**示例解决方案。  
+1.  打开**OverloadGroups.sln**示例中的解决方案[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。  
   
 2.  生成和运行解决方案。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

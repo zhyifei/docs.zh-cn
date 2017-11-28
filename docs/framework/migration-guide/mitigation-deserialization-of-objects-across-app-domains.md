@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f86ddcb86f3361665498ca0e34bf9147338551
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象的反序列化
 有时，当一个应用程序使用具有不同应用程序基的两个或多个应用程序域时，如果尝试跨应用程序域在逻辑调用上下文中反序列化对象，则会引发异常。  
@@ -29,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  一个应用程序使用具有不同应用程序基的两个或多个应用程序域。  
   
-2.  通过调用 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 等方法将某些类型明确添加到 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>。 这些类型未标记为可序列化并且未存储在全局程序集缓存中。  
+2.  通过调用 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> 等方法将某些类型明确添加到 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>。 这些类型未标记为可序列化并且未存储在全局程序集缓存中。  
   
 3.  之后，在非默认应用程序域中运行的代码尝试从配置文件中读取值，或者使用 XML 来反序列化对象。  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
-

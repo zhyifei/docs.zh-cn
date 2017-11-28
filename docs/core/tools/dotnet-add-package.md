@@ -7,12 +7,11 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -29,6 +28,8 @@ ms.lasthandoff: 08/14/2017
 ## <a name="description"></a>描述
 
 使用 `dotnet add package` 命令可方便地向项目文件添加包引用。 运行该命令后，还有一个兼容性检查，确保包与项目中的框架兼容。 如果通过了该检查，则将 `<PackageReference>` 元素添加到项目文件并运行 [dotnet 还原](dotnet-restore.md)。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 例如，将 `Newtonsoft.Json` 添加到 ToDo.csproj 后的输出如以下示例所示：
 
@@ -97,4 +98,3 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 使用特定的 NuGet 源添加包：
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
-

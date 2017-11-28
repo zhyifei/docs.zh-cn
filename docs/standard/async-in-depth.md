@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
 ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-in-depth"></a>深入了解异步
 
 使用基于 .NET 任务的异步模型可直接编写绑定 I/O 和 CPU 的异步代码。 该模型由 `Task` 和 `Task<T>` 类型以及 C# 和 Visual Basic 中的 `async` 和 `await` 关键字公开。 （有关特定语言的资源，请参见[另请参阅](#see-also)部分。）本文解释如何使用 .NET 异步，并深入介绍其中使用的异步框架。
@@ -154,4 +152,3 @@ public async Task<int> CalculateResult(InputData data)
 [C# 中的异步编程](~/docs/csharp/async.md)   
 [F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
 [使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

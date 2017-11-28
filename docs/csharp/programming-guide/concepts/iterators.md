@@ -1,27 +1,18 @@
 ---
 title: "迭代器 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 迭代器可用于逐步迭代集合，例如列表和数组。  
@@ -366,7 +357,7 @@ public class Stack<T> : IEnumerable<T>
   
  在 `foreach` 循环（或对 `IEnumerator.MoveNext` 的直接调用）的每次后续迭代中，下一个迭代器代码体都会在上一个 `yield return` 语句之后恢复。 然后继续下一个 `yield return` 语句，直至到达迭代器体的结尾，或直至遇到 `yield break` 语句。  
   
- 迭代器不支持 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName> 方法。 若要从头开始重新迭代，必须获取新的迭代器。  
+ 迭代器不支持 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 方法。 若要从头开始重新迭代，必须获取新的迭代器。  
   
  有关其他信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。  
   
@@ -380,10 +371,9 @@ public class Stack<T> : IEnumerable<T>
 -   在迭代器中封装生成列表。 使用迭代器方法，可生成该列表，然后在循环中产出每个结果。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [对数组使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
+ [对数组使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)
-

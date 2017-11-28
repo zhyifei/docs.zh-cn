@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
 - library assemblies
@@ -18,16 +20,15 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：生成单文件程序集
 单文件程序集（最简单的程序集类型）包含类型信息和实现，以及[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)。 可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 创建单文件程序集。 默认情况下，编译器创建扩展名为 .exe 的程序集文件。  
@@ -95,8 +96,7 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)   
- [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)   
- [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
+ [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

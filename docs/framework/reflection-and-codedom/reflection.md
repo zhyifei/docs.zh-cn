@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +28,18 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf8d583b3e65c80f2c0eef1f6b3e32befe00c3fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反射
-<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=fullName> 使你能够获取有关加载的[程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9)、[接口](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5)和[值类型](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。  
+<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9)、[接口](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5)和[值类型](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。  
   
  [公共语言运行时](../../../docs/standard/clr.md)加载程序管理[应用程序域](../../../docs/framework/app-domains/application-domains.md)，应用程序域构成具有相同应用程序范围的对象周围定义的边界。 此管理包括将每个程序集加载到相应的应用程序域中和控制每个程序集内的类型层次结构的内存布局。  
   
@@ -94,10 +92,9 @@ ms.lasthandoff: 07/28/2017
 |[发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|说明如何生成动态程序集和动态方法。|  
   
 ## <a name="reference"></a>参考  
- <xref:System.Type?displayProperty=fullName>  
+ <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
-

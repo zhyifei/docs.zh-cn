@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-    
 # <a name="enums"></a>枚举
 
 ***枚举类型***是包含一组已命名常量的独特值类型。 需要定义包含一组离散值的类型时，可以定义枚举。 枚举使用一种整型值类型作为其基础存储， 并提供离散值的语义含义。
@@ -45,4 +43,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [上一页](interfaces.md)
 [下一页](delegates.md)
-

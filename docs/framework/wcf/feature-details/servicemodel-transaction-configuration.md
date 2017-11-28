@@ -1,37 +1,39 @@
 ---
-title: "ServiceModel 事务配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务 [WCF], ServiceModel 配置"
+title: "ServiceModel 事务配置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 54b07eff0b54816fe2d359a27f75b07ecb9f355a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ServiceModel 事务配置
+# <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了以下三个用于为服务配置事务的属性：`transactionFlow`、`transactionProtocol` 和 `transactionTimeout`。  
   
-## 配置 transactionFlow  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以使用特定的事务流协议为特定终结点配置用于接受传入事务的绑定。此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成自定义绑定。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置配置元素的更多信息，请参见 [\<绑定\>](../../../../docs/framework/misc/binding.md) 和 [WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+## <a name="configuring-transactionflow"></a>配置 transactionFlow  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以使用特定的事务流协议为特定终结点配置用于接受传入事务的绑定。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成您自己的自定义绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置的配置元素，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 属性指定是否为使用绑定的服务终结点启用事务流。  
   
-## 配置 transactionProtocol  
+## <a name="configuring-transactionprotocol"></a>配置 transactionProtocol  
  `transactionProtocol` 属性指定要应用于使用绑定的服务终结点的事务协议。  
   
- 下面是一个配置节示例，该配置节将指定的绑定配置为支持事务流并且使用 WS\-AtomicTransaction 协议。  
+ 下面是一个配置节示例，该配置节将指定的绑定配置为支持事务流并且使用 WS-AtomicTransaction 协议。  
   
-```  
+```xml  
 <netNamedPipeBinding>  
    <binding name="test"  
       closeTimeout="00:00:10"  
@@ -48,10 +50,10 @@ caps.handback.revision: 8
 </netNamedPipeBinding>  
 ```  
   
-## 配置 transactionTimeout  
- 可以在配置文件的 `behavior` 元素中配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 `transactionTimeout` 属性。下面的代码演示如何执行此操作。  
+## <a name="configuring-transactiontimeout"></a>配置 transactionTimeout  
+ 可以在配置文件的 `transactionTimeout` 元素中配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 `behavior` 属性。 下面的代码演示如何执行此操作。  
   
-```  
+```xml  
 <configuration>  
    <system.serviceModel>  
       <behaviors>  
@@ -61,7 +63,7 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- `transactionTimeout` 属性指定了在该服务中创建的新事务必须在此期间完成的时间段。它被用作任何建立新事务的操作的 <xref:System.Transactions.TransactionScope> 超时，而且，如果应用了 <xref:System.ServiceModel.OperationBehaviorAttribute>，则 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性将设置为 `true`。  
+ `transactionTimeout` 属性指定了在该服务中创建的新事务必须在此期间完成的时间段。 它被用作任何建立新事务的操作的 <xref:System.Transactions.TransactionScope> 超时，而且，如果应用了 <xref:System.ServiceModel.OperationBehaviorAttribute>，则 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性将设置为 `true`。  
   
  超时指定了从创建事务到完成两阶段提交协议的第 1 阶段之间的持续时间。  
   
@@ -69,6 +71,6 @@ caps.handback.revision: 8
   
  请注意，所使用的超时值是此 `transactionTimeout` 配置设置和任何 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 属性之间的较小值。  
   
-## 请参阅  
- [\<绑定\>](../../../../docs/framework/misc/binding.md)   
+## <a name="see-also"></a>另请参阅  
+ [\<绑定 >](../../../../docs/framework/misc/binding.md)  
  [WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

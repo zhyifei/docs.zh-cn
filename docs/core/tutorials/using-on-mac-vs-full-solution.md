@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题演示了构建包含可重用的库和单元测试的 .NET Core 解决方案。
@@ -80,7 +78,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 1. 若要使测试库使用 `WordCount` 类，请将引用添加到 `TextUtils` 项目中。 在“解决方案”边栏中，右键单击“TestLibrary”下的“依赖项”。 从上下文菜单中选择“编辑引用”。
 
-1. 在“编辑引用”对话框中，选择“项目”选项卡上的“TextUtils”项目。 选择“确定”。
+1. 在“编辑引用”对话框中，选择“项目”选项卡上的“TextUtils”项目。选择“确定”。
 
    ![编辑引用对话框](./media/using-on-mac-vs-full-solution/vsmacfull07.png)
 
@@ -199,4 +197,3 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 ## <a name="see-also"></a>请参阅
 
 [Visual Studio 2017 for Mac 发行说明](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
 可将 .NET Core 应用程序部署为依赖框架的部署或独立部署，前者包含应用程序二进制文件，但依赖目标系统上存在的 .NET Core，而后者同时包含应用程序和 .NET Core 二进制文件。 有关 .NET Core 应用程序部署的概述，请参阅 [.NET Core 应用程序部署](index.md)。
@@ -42,7 +40,7 @@ ms.lasthandoff: 09/12/2017
 
    在编辑器中打开 Program.cs 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 创建应用的调试版本。
 
@@ -92,7 +90,7 @@ ms.lasthandoff: 09/12/2017
 
    在编辑器中打开 Program.cs 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 定义应用的目标平台。
 
@@ -189,4 +187,3 @@ ms.lasthandoff: 09/12/2017
 # <a name="see-also"></a>请参阅
 [.NET Core 应用程序部署](index.md)   
 [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)   
-

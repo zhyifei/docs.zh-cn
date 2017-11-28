@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 9ca51a06e6e7ec89576facf3a70c789325fd893c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bad9e339896b0d62dce75a4044b18f3ae6a69332
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="global-assembly-cache"></a>全局程序集缓存
 安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，叫做全局程序集缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。  
@@ -53,7 +51,6 @@ ms.lasthandoff: 07/28/2017
  部署在全局程序集缓存中的程序集必须使用强名称。 将程序集添加到全局程序集缓存时，将对组成该程序集的所有文件执行完整性检查。 缓存通过执行这些完整性检查来确保该程序集未被篡改，例如，文件已更改，但清单没有反映出此更改。  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
+ [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
+ [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

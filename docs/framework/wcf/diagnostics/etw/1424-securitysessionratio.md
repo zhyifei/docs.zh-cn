@@ -1,35 +1,38 @@
 ---
-title: "1424 - SecuritySessionRatio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1424 - SecuritySessionRatio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd960f10-dd43-42d4-a415-75eae0cb7cac
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b17b625625666512aa7d7e654f86ff21e5af3e82
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 1424 - SecuritySessionRatio
-## 属性  
+# <a name="1424---securitysessionratio"></a>1424 - SecuritySessionRatio
+## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
 |ID|1424|  
 |关键字|配额|  
 |级别|详细|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
   
-## 描述  
+## <a name="description"></a>描述  
  发出此事件以便提供安全会话比率信息。  
   
-## 消息  
- 安全会话比率：%1\/%2  
+## <a name="message"></a>消息  
+ 安全会话比率：%1/%2  
   
-## 详细信息
+## <a name="details"></a>详细信息

@@ -1,22 +1,17 @@
 ---
 title: "本地函数（C# 编程指南）"
-ms.date: 2017-06-14
+ms.date: 06/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- local functions [C#]
+helpviewer_keywords: local functions [C#]
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="local-functions-c-programming-guide"></a>本地函数（C# 编程指南）
 
@@ -60,7 +55,7 @@ ms.lasthandoff: 08/16/2017
  
 以下示例定义了一个名为 `AppendPathSeparator` 的本地函数，该函数对于名为 `GetText` 的方法是私有的：
    
-[!code-cs[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+[!code-csharp[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
    
 ## <a name="local-functions-and-exceptions"></a>本地函数和异常
 
@@ -68,22 +63,21 @@ ms.lasthandoff: 08/16/2017
 
 以下示例定义 `OddSequence` 方法，用于枚举指定范围之间的奇数。 因为它会将一个大于 100 的数字传递到 `OddSequence` 迭代器方法，该方法将引发 <xref:System.ArgumentOutOfRangeException>。 如示例中的输出所示，仅当循环访问数字时才显示异常，而非检索迭代器时。
 
-[!code-cs[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
+[!code-csharp[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
 
 相反，可以在执行验证时和通过从本地函数返回迭代器检索迭代器之前引发异常，如以下示例所示。
 
-[!code-cs[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+[!code-csharp[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
 可以通过类似的方式使用本地函数来处理异步操作之外的异常。 异步方法中引发的异常通常都需要检查 <xref:System.AggregateException> 的内部异常。 本地函数允许代码快速失败，并允许同步引发和观察异常。
 
 以下示例使用名为 `GetMultipleAsync` 的异步方法暂停指定的秒数并返回一个值，该值是该秒数的任意倍数。 最大延迟为 5 秒；如果该值大于 5，则结果为 <xref:System.ArgumentOutOfRangeException>。 如以下示例所示，开始执行 `GetMultipleAsync` 方法后，将值 6 传递到 `GetMultipleAsync` 方法时引发的异常将在 <xref:System.AggregateException> 中进行包装。
 
-[!code-cs[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
+[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
 正如处理方法迭代器一样，可以在调用异步方法之前重构本示例中的代码以执行验证。 如以下示例中的输出所示，<xref:System.ArgumentOutOfRangeException> 不在 <x:System.AggregateException> 中进行包装。
 
-[!code-cs[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
+[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
 ## <a name="see-also"></a>请参阅
 [方法](methods.md)
-

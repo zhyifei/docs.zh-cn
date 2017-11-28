@@ -1,30 +1,21 @@
 ---
 title: "如何：为 LINQ 查询添加自定义方法 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 01617ec2583361099eb5afb7957960ba39812680
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c1a7ec7c5c719839d7a1a63568541a26a8216377
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何：为 LINQ 查询添加自定义方法 (C#)
 可通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口添加扩展方法扩展可用于 LINQ 查询的方法集。 例如，除了标准平均值或最大值运算，还可以创建自定义聚合方法，从一系列值计算单个值。 此外可以创建一个方法，用作一个值序列的自定义筛选器或用于对其进行特定数据转换，并返回新的序列。 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A> 就是此类方法的示例。  
@@ -223,6 +214,5 @@ foreach (var element in query)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Generic.IEnumerable%601>   
+ <xref:System.Collections.Generic.IEnumerable%601>  
  [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-

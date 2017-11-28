@@ -8,12 +8,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-restore"></a>dotnet 还原
 
@@ -44,6 +43,8 @@ dotnet restore [-h|--help]
 ## <a name="description"></a>描述
 
 `dotnet restore` 命令使用 NuGet 还原依赖项以及在 project 文件中指定的特定于项目的工具。 默认情况下，并行执行对依赖项和工具的还原。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 为了还原依赖项，NuGet 需要包所在的源。 通常通过 *NuGet.config* 配置文件提供源。 安装 CLI 工具时提供一个默认的配置文件。 可以通过在项目目录中创建自己的 *NuGet.config* 文件来指定其他源。 也可以在命令提示符处指定每次调用的其他源。
 
@@ -170,4 +171,3 @@ dotnet restore [-h|--help]
 还原当前目录中项目的依赖项和工具，并仅显示最少的输出：
 
 `dotnet restore --verbosity minimal`
-

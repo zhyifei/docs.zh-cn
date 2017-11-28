@@ -1,41 +1,20 @@
 ---
 title: "#<a name=\"pragma-warning-c-reference\"></a>杂注警告（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#pragma warning'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#pragma warning [C#]'
+f1_keywords: '#pragma warning'
+helpviewer_keywords: '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5330b448dc2b328992b2d29699557d20df56dee4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c11acfd096d36c96ceb9e9c5c0d16e47e58fa1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
 `#pragma warning` 可以启用或禁用特定警告。  
@@ -82,9 +61,8 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
  [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
-

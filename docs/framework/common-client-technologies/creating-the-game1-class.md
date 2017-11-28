@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 1e4fd15013f10667b397e010fff56b7bc6a0f641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9c6d0bdfd21f431ae6da38e3868386f91d5b725b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-the-game1-class"></a>创建 Game1 类
 在所有的 Microsoft XNA 项目中，Game1 类都派生自 [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) 类，后者提供了 XNA 游戏的基本图形设备初始化、游戏逻辑和呈现代码。 Game1 类相对简单，因为大部分工作是在 GamePiece 和 GamePieceCollection 类中完成的。  
@@ -46,9 +44,8 @@ ms.lasthandoff: 07/28/2017
  [!code-csharp[ManipulationXNA#_Game1_DrawGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_drawgame)]  
   
 ## <a name="see-also"></a>另请参阅  
- [操作和惯性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [在 XNA 应用程序中使用操作和惯性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [创建 GamePiece 类](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
- [创建 GamePieceCollection 类](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
+ [控制和惯性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [在 XNA 应用程序中使用控制和惯性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [创建 GamePiece 类](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
+ [创建 GamePieceCollection 类](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [完整代码清单](../../../docs/framework/common-client-technologies/full-code-listings.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="executing-expression-trees"></a>执行表达式树
 
 [上一部分 -- 支持表达式树的框架类型](expression-classes.md)
@@ -130,4 +128,3 @@ private static Func<int, int> CreateBoundResource()
 表达式树表示会为创建的任意给定构造执行的代码。 只要编译和执行代码的环境匹配创建表达式的环境，则一切将按预期进行。 如果未按预期进行，那么错误也是很容易预知的，并且将在使用表达式树的任何代码的第一个测试中捕获这些错误。
 
 [下一部分 -- 解释表达式](expression-trees-interpreting.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -52,7 +45,7 @@ ms.lasthandoff: 08/21/2017
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     有关清单元素及其属性的信息，请在 MSDN 库中搜索“应用程序清单参考”。  
+     有关清单元素和其属性的信息，请参阅[应用程序清单](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)。  
   
 3.  标识清单的所有者。 以下示例中，`myComApp` 版本 1 拥有清单文件。  
   
@@ -92,7 +85,7 @@ ms.lasthandoff: 08/21/2017
   
 5.  保存并命名清单文件。 应用程序清单的名称是程序集可执行文件的名称后加 .manifest 扩展名。 例如，myComApp.exe 的应用程序清单文件名称是 myComApp.exe.manifest。  
   
- 可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关其他信息，请搜索 MSDN 库中的“并行程序集”。  
+ 可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关其他信息，有关详细信息，请参阅[有关的并行程序集](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)。  
   
 #### <a name="to-create-a-component-manifest"></a>创建组件清单  
   
@@ -188,8 +181,7 @@ ms.lasthandoff: 08/21/2017
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [免注册 COM 互操作](../../../docs/framework/interop/registration-free-com-interop.md)   
- [免注册 COM 互操作的要求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [将 COM 组件配置为免注册激活](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
+ [免注册 COM 互操作](../../../docs/framework/interop/registration-free-com-interop.md)  
+ [免注册 COM 互操作的要求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [将 COM 组件配置为免注册激活](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [基于 .NET 组件的免注册激活：演练](http://go.microsoft.com/fwlink/?LinkId=158812)
-

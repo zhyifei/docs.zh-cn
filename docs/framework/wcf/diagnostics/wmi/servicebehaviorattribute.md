@@ -1,25 +1,28 @@
 ---
-title: "ServiceBehaviorAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceBehaviorAttribute
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f7401acd5aefcb7a8c02ea6c05a94374e41d9b9d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceBehaviorAttribute
+# <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class ServiceBehaviorAttribute : Behavior  
@@ -42,121 +45,121 @@ class ServiceBehaviorAttribute : Behavior
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  ServiceBehaviorAttribute 类未定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  ServiceBehaviorAttribute 类具有以下属性：  
   
-### AutomaticSessionShutdown  
+### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指示在客户端关闭输出会话时是否自动关闭会话。  
   
-### ConcurrencyMode  
+### <a name="concurrencymode"></a>ConcurrencyMode  
  数据类型：String  
 访问类型：只读  
   
  指示服务是支持单线程、多线程还是支持可重入调用。  
   
-### ConfigurationName  
+### <a name="configurationname"></a>ConfigurationName  
  数据类型：String  
   
  访问类型：只读  
   
  服务配置的名称。  
   
-### IgnoreExtensionDataObject  
+### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指定是否要将未知序列化数据发送到网络上。  
   
-### IncludeExceptionDetailInFaults  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指定是否在返回给客户端的 SOAP 错误详细信息中包含托管异常信息以供调试。  
   
-### InstanceContextMode  
+### <a name="instancecontextmode"></a>InstanceContextMode  
  数据类型：String  
   
  访问类型：只读  
   
  指定何时创建新服务对象。  
   
-### MaxItemsInObjectGraph  
+### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  数据类型：sint32  
   
  访问类型：只读  
   
  序列化对象中允许的最大项数。  
   
-### Name  
+### <a name="name"></a>名称  
  数据类型：String  
   
  访问类型：只读  
   
  WSDL 中服务的名称属性。  
   
-### Namespace  
+### <a name="namespace"></a>命名空间  
  数据类型：String  
   
  访问类型：只读  
   
  WSDL 中服务的目标命名空间。  
   
-### ReleaseServiceInstanceOnTransactionComplete  
+### <a name="releaseserviceinstanceontransactioncomplete"></a>ReleaseServiceInstanceOnTransactionComplete  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指定当前事务完成后，是否回收服务对象。  
   
-### TransactionAutoCompleteOnSessionClose  
+### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指定当前会话关闭时，挂起的事务是否已完成。  
   
-### TransactionIsolationLevel  
+### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
  数据类型：String  
   
  访问类型：只读  
   
  指定事务的隔离级别。  
   
-### TransactionTimeout  
+### <a name="transactiontimeout"></a>TransactionTimeout  
  数据类型：DateTime  
   
  访问类型：只读  
   
  事务必须在此期间完成的时间段。  
   
-### UseSynchronizationContext  
+### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指定是否使用当前同步上下文来选择线程执行。  
   
-### ValidateMustUnderstand  
+### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  数据类型：Boolean  
   
  访问类型：只读  
   
  指定系统或应用程序是否强制执行 SOAP MustUnderstand 标头处理。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|MOF|在 Servicemodel.mof 中声明。|  
-|---------|-----------------------------|  
-|Namespace|已在 root\\ServiceModel 中定义|  
+|MOF|已在 Servicemodel.mof 中声明。|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>

@@ -1,41 +1,22 @@
 ---
 title: "when（C# 参考）"
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - when_CSharpKeyword
 - when
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- when keyword [C#]
+helpviewer_keywords: when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f453d9f4b443d7adeeb0ab628b4ddad1a0116e49
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae869fa04d2dfb963694f258624c5cd594ff1184
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
  # <a name="when-c-reference"></a>when（C# 参考）
 
@@ -53,9 +34,9 @@ catch ExceptionType [e] when (expr)
 ```
 其中，*expr* 是一个表达式，其计算结果为布尔值。 如果该表达式返回 `true`，则执行异常处理程序；如果返回 `false`，则不执行。 
 
-以下示例使用 `when` 关键字有条件地执行 @System.Net.HttpRequestException 的处理程序，具体取决于异常消息的文本内容。
+以下示例使用 `when` 关键字有条件地执行 <xref:System.Net.Http.HttpRequestException> 的处理程序，具体取决于异常消息的文本内容。
 
- [!code-cs[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
+ [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
   
 ## <a name="when-in-a-switch-statement"></a>`switch` 语句中的 `when`
 
@@ -68,11 +49,10 @@ case (expr) when (when-condition):
 
 以下示例使用 `when` 关键字针对具有零范围的 `Shape` 对象进行测试，同时针对各种范围大于零的 `Shape` 对象进行测试。 
 
- [!code-cs[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+ [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
 
 ## <a name="see-also"></a>请参阅 
   [switch 语句](switch.md)  
   [try/catch 语句](try-catch.md)  
   [try/catch/finally 语句](try-catch-finally.md) 
-
 

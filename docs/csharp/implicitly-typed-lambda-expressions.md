@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 663613af001f9727c48bd48553540305e47a6bab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="implicitly-typed-lambda-expressions"></a>隐式类型化 lambda 表达式
 
 我没有使用 `var` 声明此表达式树。 不能使用隐式类型化变量声明来声明 lambda 表达式。
@@ -26,6 +24,5 @@ ms.lasthandoff: 07/28/2017
 赋值两侧都无法告知编译器查看赋值运算符另一侧的对象并查看我的类型是否匹配。
 
 通过阅读[这篇文章](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf)（PDF 下载），甚至可以获得有关 C# 语言为何指定该行为的详细信息
-
 
 

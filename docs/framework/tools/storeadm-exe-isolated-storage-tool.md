@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Storeadm.exe
 - listing stores for current user
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d9ae6b007fe32dfbef973105311ba929cc247e6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e2304bd0e2ac9115c9d937e502b960399d793356
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe（独立存储工具）
 独立存储工具列出或移除当前用户的所有现有存储。  
@@ -76,7 +69,6 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  实际上，是否为用户启用漫游并不会影响 Storeadm.exe 的管理。 在不使用任何选项的情况下运行此工具会向本地存储应用所有操作。 在使用 /roaming 选项的情况下运行此工具会将所有操作应用于可漫游的存储。 在使用 /machine 选项的情况下运行此工具会将所有操作应用于计算机存储。  
   
 ## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
- [独立存储](../../../docs/standard/io/isolated-storage.md)   
+ [工具](../../../docs/framework/tools/index.md)  
+ [独立存储](../../../docs/standard/io/isolated-storage.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

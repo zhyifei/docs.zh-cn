@@ -1,48 +1,30 @@
 ---
 title: "如何：在 Visual Basic 中创建注册表项并设置其值"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - RegistryKey.CreateSubKey
 - RegistryKey.SetValue
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, creating
-- registry, adding values
-- registry, adding keys
-- registry keys, setting values
+- registry keys [Visual Basic], creating
+- registry [Visual Basic], adding values
+- registry [Visual Basic], adding keys
+- registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106a98a1b15c37eb2cac05e1a681bf7dfed3543d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中创建注册表项并设置其值
 `My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。  
@@ -97,9 +79,8 @@ ms.lasthandoff: 07/28/2017
  若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
+ <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
+ [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
  [代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)
-

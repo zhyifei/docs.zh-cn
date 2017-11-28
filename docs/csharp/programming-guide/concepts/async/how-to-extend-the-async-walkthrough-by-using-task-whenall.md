@@ -1,33 +1,24 @@
 ---
 title: "如何：使用 Task.WhenAll 扩展异步演练 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a83ceb8a58104cc7a4c177ce6c7df9aded8af7e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 132332f4fd274126bb8bc270cd762e1bdc97106f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 扩展异步演练 (C#)
-可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 方法来改进[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的异步解决方案性能。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
+可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法来改进[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的异步解决方案性能。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
   
  你可能已在演练中注意到网站以不同速率进行下载。 有时一个网站非常慢，这会延迟所有其余下载。 运行在演练中生成的异步解决方案时，如果不想等待，则可以方便地结束程序，但更好的选项是同时启动所有下载，并让较快的下载继续进行而不等待延迟的下载。  
   
@@ -453,6 +444,5 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
  [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-

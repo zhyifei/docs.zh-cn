@@ -1,40 +1,22 @@
 ---
 title: "如何：了解向方法传递结构和向方法传递类引用之间的区别（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b989c3cefe72c6c17d10dd91005dcecbfc84e389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4508c8765ac678fd371180cb0c3ece3e1d9a44
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何：了解向方法传递结构和向方法传递类引用之间的区别（C# 编程指南）
 下面的示例演示向方法传递[结构](../../../csharp/language-reference/keywords/struct.md)和向方法传递[类](../../../csharp/language-reference/keywords/class.md)实例之间的区别。 在此示例中，这两个参数（结构和类实例）都按值传递，并且两个方法都更改了参数的一个字段的值。 但是，由于传递结构和传递类实例时所传递的内容不同，所以这两个方法的结果不同。  
@@ -46,11 +28,10 @@ ms.lasthandoff: 07/28/2017
  以下示例输出对差异进行了说明。 调用 `ClassTaker` 方法更改了类实例的 `willIChange` 字段的值，因为该方法使用参数中的地址来查找类实例的指定字段。 调用 `StructTaker` 方法不会更改调用方法中结构的 `willIChange` 字段，因为该参数的值是结构本身的副本，而不是其地址的副本。 `StructTaker` 更改副本，对 `StructTaker` 的调用完成时，副本丢失。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+ [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
  [传递参数](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
-

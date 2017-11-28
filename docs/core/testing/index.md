@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
 由于在设计 .NET Core 时考虑到了可测试性，因此为应用程序创建单元测试比以往更加简单。 本文简要介绍了单元测试（以及与其他类型测试的不同之处）。 链接的资源展示了如何将测试项目添加到解决方案中，再使用命令行或 Visual Studio 运行单元测试。
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/14/2017
 * 如果使用的是 Visual Studio，只需参阅 [.NET Core 中的 Live Unit Testing](/visualstudio/test/live-unit-testing)
 * 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](selective-unit-tests.md)或[使用 Visual Studio 添加和排除测试](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods)。
 * XUnit 团队编写了一个教程，介绍[如何通过 .NET Core 和 Visual Studio 使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
-

@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f7051e753c324933828e2447752f9c5ea13ed9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe（.NET 安全批注器工具）
 .NET 安全性批注器工具 (SecAnnotate.exe) 是标识一个或多个程序集的 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令行应用程序。  
@@ -70,4 +63,3 @@ SecAnnotate.exe [parameters] [assemblies]
  有关 .NET 安全性批注器的详细信息，请参阅 .NET 安全性博客中的[使用 SecAnnotate 分析程序集中的透明度冲突](http://go.microsoft.com/fwlink/?LinkId=187648)。  
   
 ## <a name="examples"></a>示例
-

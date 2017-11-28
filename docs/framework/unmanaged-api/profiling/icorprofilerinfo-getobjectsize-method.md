@@ -1,0 +1,71 @@
+---
+title: "ICorProfilerInfo::GetObjectSize 方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorProfilerInfo.GetObjectSize
+api_location: mscorwks.dll
+api_type: COM
+f1_keywords: ICorProfilerInfo::GetObjectSize
+helpviewer_keywords:
+- GetObjectSize method [.NET Framework profiling]
+- ICorProfilerInfo::GetObjectSize method [.NET Framework profiling]
+ms.assetid: 9f02e763-73f7-42cb-a41c-f78499d9482c
+topic_type: apiref
+caps.latest.revision: "16"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 8d395d498dd34cb0cbc93e898761c87dcd5ec42a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
+---
+# <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize 方法
+获取指定对象的大小。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+HRESULT GetObjectSize(  
+    [in]  ObjectID objectId,  
+    [out] ULONG  *pcSize);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ `objectId`  
+ [in]对象的 ID。  
+  
+ `pcSize`  
+ [out]指向对象的大小，以字节为单位的指针。  
+  
+## <a name="remarks"></a>备注  
+  
+> [!IMPORTANT]
+>  此方法已过时。 它返回 COR_E_OVERFLOW 对象大于 4 GB 在 64 位平台上。 使用[icorprofilerinfo4:: Getobjectsize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)方法相反。  
+  
+ 相同的类型的不同对象通常具有相同的大小。 但是，某些类型，如数组或字符串，可能具有不同大小的每个对象。  
+  
+ 通过返回的大小`GetObjectSize`方法不包括在垃圾回收堆上对象后可能会出现任何对齐方式填充。 如果你使用`GetObjectSize`方法，使对象与对象前进上垃圾回收堆中，添加手动，根据需要填充的对齐方式。  
+  
+-   在 32 位 Windows 上，COR_PRF_GC_GEN_0、 COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用 4 字节对齐方式，并 COR_PRF_GC_LARGE_OBJECT_HEAP 使用 8 字节对齐方式。  
+  
+-   在 64 位 Windows 上对齐始终是 8 个字节。  
+  
+## <a name="requirements"></a>要求  
+ **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+  
+ **头文件：** CorProf.idl、CorProf.h  
+  
+ **库：** CorGuids.lib  
+  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>另请参阅  
+ [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

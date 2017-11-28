@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="hosting-net-core"></a>托管 .NET Core
 
 像所有的托管代码一样，.NET Core 应用程序也由主机执行。 主机负责启动运行时（包括 JIT 和垃圾回收器等组件）、创建 AppDomain 并调用托管的入口点。
@@ -147,4 +145,3 @@ hr = runtimeHost->CreateDelegate(
 如果开始时操作不起作用，请再次检查 *coreclr.dll* 是否在主机预期的位置可用、是否 TPA 列表中包含了所有必需的框架库以及 CoreCLR 的位数（32 位或 64 位）是否匹配主机的构建方式。
 
 托管 .NET Core 运行时是高级方案，许多开发人员并不需要实施这一方案，但对于那些需要从本机进程启动托管代码的人员，或需要更好地控制 .NET Core 运行时的行为的人员而言，它会非常有用。 因为 .NET Core 能够与其自身并行运行，甚至可以创建主机，这些主机能够初始化和启动多个 .NET Core 运行时版本并在同一进程中执行所有这些版本上的应用。 
-

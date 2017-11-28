@@ -1,39 +1,21 @@
 ---
 title: "接口（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0552cea71f66ba8c299b1706cab6778c9e3367c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 接口包含[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)可以实现的一组相关功能的定义。  
@@ -42,7 +24,7 @@ ms.lasthandoff: 07/28/2017
   
  可使用 [interface](../../../csharp/language-reference/keywords/interface.md) 关键字定义接口，如以下示例所示。  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
  实现 <xref:System.IEquatable%601> 接口的任何类或结构都必须包含与该接口指定的签名匹配的 <xref:System.IEquatable%601.Equals%2A> 方法的定义。 因此，可以依靠实现 `IEquatable<T>` 的类来包含 `Equals` 方法，类的实例可以通过该方法确定它是否等于相同类的另一个实例。  
   
@@ -58,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
  下面的示例展示了 IEquatable<T\> 接口的实现代码。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现。  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
  类的属性和索引器可以为接口中定义的属性或索引器定义额外的访问器。 例如，接口可能会声明包含 [get](../../../csharp/language-reference/keywords/get.md) 取值函数的属性。 实现此接口的类可以声明包含 `get` 和 [set](../../../csharp/language-reference/keywords/set.md) 取值函数的同一属性。 但是，如果属性或索引器使用显式实现，则访问器必须匹配。 有关显式实现的详细信息，请参阅[显式接口实现](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)和[接口属性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)。  
   
@@ -117,6 +99,5 @@ ms.lasthandoff: 07/28/2017
  [学习 C# 3.0：掌握 C# 3.0 的基础知识](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)中的[接口](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-

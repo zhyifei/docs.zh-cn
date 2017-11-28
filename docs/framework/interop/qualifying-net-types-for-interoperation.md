@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, qualifying .NET types
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68ecd5e4c562f1eecb31ee539adb70d67455a584
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
@@ -63,9 +56,8 @@ ms.lasthandoff: 08/21/2017
  导出到 COM 后，托管类型的继承层次结构将被展平。 托管和非托管环境之间的版本控制也会有所不同。 向 COM 公开的类型不具有其他托管类型相同的版本控制特性。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md)   
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
+ [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md)  
  [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-

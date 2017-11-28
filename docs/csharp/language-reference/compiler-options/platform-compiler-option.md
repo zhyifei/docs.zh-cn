@@ -1,42 +1,23 @@
 ---
 title: "-platform（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /platform
-dev_langs:
-- CSharp
+f1_keywords: /platform
 helpviewer_keywords:
 - platform compiler option [C#]
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 44d4cadbc45eb141ecb7a83345d2a7a834ce5299
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
@@ -77,7 +58,7 @@ ms.lasthandoff: 07/28/2017
   
  anycpu32bitpreferred 设置只对可执行 (.exe) 文件有效，并且需要 .NET Framework 4.5。  
   
- 有关开发 Windows 64 位操作系统上运行的应用程序的详细信息，请参阅 [64 位应用程序](https://msdn.microsoft.com/library/ms241064)。  
+ 有关开发 Windows 64 位操作系统上运行的应用程序的详细信息，请参阅 [64 位应用程序](../../../framework/64-bit-apps.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -99,6 +80,5 @@ csc /platform:anycpu filename.cs
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](index.md)   
+ [C# 编译器选项](index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

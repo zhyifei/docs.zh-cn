@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 7c884985873679b25831c15ef5c8b6370ecd6460
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
 
 在[使用 Visual Studio 2017 生成 C# .NET Core 类库](library-with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)中，创建了简单的类库，用于向 <xref:System.String> 类添加扩展方法。 现在，将创建一个单元测试，用于确保此类库能够按预期运行。 向在上一主题中创建的解决方案添加单元测试项目。
@@ -103,7 +104,7 @@ ms.lasthandoff: 09/19/2017
 
 测试 `StringLibrary.StartsWithUpper` 方法时，需要提供许多以大写字符开头的字符串。 在这种情况下，此方法应返回 `true`，以便可以调用 [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx) 方法。 同样，需要提供许多以非大写字符开头的字符串。 在这种情况下，此方法应返回 `false`，以便可以调用 [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx) 方法。
 
-由于库方法处理的是字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty)（不含字符且 @System.String.Length 为 0 的有效字符串）和 `null` 字符串（尚未初始化的字符串）。 如果对 @System.String 实例调用 `StartsWithUpper` 作为扩展方法，无法向其传递 `null` 字符串。 不过，还可以直接将其作为静态方法进行调用，并向其传递一个 @System.String 自变量。
+由于库方法处理的是字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty)（不含字符且 <xref:System.String.Length> 为 0 的有效字符串）和 `null` 字符串（尚未初始化的字符串）。 如果对 <xref:System.String> 实例调用 `StartsWithUpper` 作为扩展方法，无法向其传递 `null` 字符串。 不过，还可以直接将其作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。
 
 将定义三个方法，每个方法都会对字符串数组中的各个元素反复调用它的 [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) 方法。 由于测试方法在第一次遇到测试不通过时会立即失败，因此将调用方法重载，以便传递字符串来指明方法调用中使用的字符串值。
 
@@ -185,4 +186,3 @@ ms.lasthandoff: 09/19/2017
 1. 从菜单栏中选择“测试” > “运行” > “所有测试”，运行单元测试。 测试通过。
 
 至此，已完成对库的测试，下一步就是使其可供调用方使用。 可以将类库与一个或多个应用程序捆绑在一起，也可以 NuGet 包的形式分发类库。 有关详细信息，请参阅[使用 .NET Standard 类库](./consuming-library-with-visual-studio.md)。
-

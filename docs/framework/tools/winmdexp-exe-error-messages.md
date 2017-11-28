@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -160,26 +159,20 @@ f1_keywords:
 - WME1015
 - WME1047
 - WME9
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winmdexp.exe, error messages
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3797621322fd88d57133602b1cb3c3173fedbe6e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 错误消息
 当使用 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件模板时，生成进程调用 [Winmdexp.exe（Windows 运行时元数据导出工具）](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此“错误列表”中会显示 Winmdexp.exe 错误消息。 Winmdexp.exe 在用 `/target:winmdobj` 选项编译的模块上运行。 由于它需要将编译的模块作为输入，因此不会显示错误消息，除非编译成功。  
@@ -189,6 +182,5 @@ ms.lasthandoff: 07/28/2017
  如果该文章未讨论您遇到的错误，并且您认为消息所含信息不足以解决问题，请使用该文章中的反馈链接并附上错误消息。 也可以在 [Microsoft Connect 网站](http://go.microsoft.com/fwlink/p/?LinkId=251130)提交 Bug。 还可以在 [Microsoft 论坛](http://go.microsoft.com/fwlink/p/?LinkId=251129)上查找更多信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [Winmdexp.exe（Windows 运行时元数据导出工具）](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
+ [Winmdexp.exe（Windows 运行时元数据导出工具）](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  [诊断 Windows 运行时组件错误条件](http://go.microsoft.com/fwlink/p/?LinkId=251127)
-

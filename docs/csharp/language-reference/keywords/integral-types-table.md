@@ -1,41 +1,23 @@
 ---
 title: "整型表（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 663ea9a64284c25999564eca9ea5ccec861e9662
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2932d0b7c8e1b01a4965b29d90bdd5711ddb5dc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="integral-types-table-c-reference"></a>整型表（C# 参考）
 下表显示整型类型的大小和范围，它们构成简单类型的子集。  
@@ -55,12 +37,11 @@ ms.lasthandoff: 07/28/2017
  如果由整数文本所表示的值超出了 `ulong` 的范围，则将出现编译错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)   
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

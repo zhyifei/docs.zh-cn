@@ -1,40 +1,44 @@
 ---
-title: "使用等待句柄的 ASP.NET 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用等待句柄的 ASP.NET 应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 01244b06085614ea5e36bdde3e3b2fe196c0c0f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用等待句柄的 ASP.NET 应用程序
-在您的应用程序一次只处理一个异步操作时，用于处理异步操作的回调和轮询模型十分有用。  等待模型提供了一种更灵活的方式来处理多个异步操作。  有两种等待模型，是根据用于实现它们的 <xref:System.Threading.WaitHandle> 方法命名的：等待（任何）模型和等待（所有）模型。  
+# <a name="aspnet-applications-using-wait-handles"></a>使用等待句柄的 ASP.NET 应用程序
+在您的应用程序一次只处理一个异步操作时，用于处理异步操作的回调和轮询模型十分有用。 等待模型提供了一种更灵活的方式来处理多个异步操作。 有两种等待模型，是根据用于实现它们的 <xref:System.Threading.WaitHandle> 方法命名的：等待（任何）模型和等待（所有）模型。  
   
- 要使用上述任一等待模型，您需要使用 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法返回的 <xref:System.IAsyncResult> 对象的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 属性。  <xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都要求您将多个 <xref:System.Threading.WaitHandle> 对象一起组合在一个数组中，作为一个参数发送。  
+ 要使用上述任一等待模型，您需要使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A>、<xref:System.IAsyncResult> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法返回的 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 对象的 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 属性。 <xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都要求您将多个 <xref:System.Threading.WaitHandle> 对象一起组合在一个数组中，作为一个参数发送。  
   
- 这两种等待方法都监控异步操作，等待操作完成。  <xref:System.Threading.WaitHandle.WaitAny%2A> 方法等待任何操作完成或超时。  一旦您知道某一特定操作完成后，就可以处理其结果，然后继续等待下一个操作完成或超时。  <xref:System.Threading.WaitHandle.WaitAll%2A> 方法等待 <xref:System.Threading.WaitHandle> 实例数组中的所有进程都完成或超时后，再继续。  
+ 这两种等待方法都监控异步操作，等待操作完成。 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法等待任何操作完成或超时。一旦您知道某一特定操作完成后，就可以处理其结果，然后继续等待下一个操作完成或超时。<xref:System.Threading.WaitHandle.WaitAll%2A> 方法等待 <xref:System.Threading.WaitHandle> 实例数组中的所有进程都完成或超时后，再继续。  
   
- 当您需要在不同服务器上运行时间长度不等的多个操作时，或者在服务器的性能强大到足以同时处理所有查询时，等待模型的优点可以最大地发挥。  在此处提供的示例中，通过将长度不等的多个 WAITFOR 命令添加到不重要的 SELECT 查询，三个查询模拟长进程。  
+ 当您需要在不同服务器上运行时间长度不等的多个操作时，或者在服务器的性能强大到足以同时处理所有查询时，等待模型的优点可以最大地发挥。 在此处提供的示例中，通过将长度不等的多个 WAITFOR 命令添加到不重要的 SELECT 查询，三个查询模拟长进程。  
   
-## 示例：等待（任何）模型  
- 下面的示例说明等待（任何）模型。  一旦启动了三个异步进程后，就调用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法以等待其中任何一个进程完成。  在每个进程完成后，调用 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法并读取结果 <xref:System.Data.SqlClient.SqlDataReader> 对象。  在此时，实际的应用程序将很可能使用 <xref:System.Data.SqlClient.SqlDataReader> 填充该页的某个部分。  在这个简单的示例中，进程完成时间被添加到与该进程相对应的文本框中。  合起来看，文本框中的这些时间说明以下结论：每次进程完成后都执行代码。  
+## <a name="example-wait-any-model"></a>示例：等待（任何）模型  
+ 下面的示例说明等待（任何）模型。 一旦启动了三个异步进程后，就调用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法以等待其中任何一个进程完成。 在每个进程完成后，调用 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法并读取结果 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在此时，实际的应用程序将很可能使用 <xref:System.Data.SqlClient.SqlDataReader> 填充该页的某个部分。 在这个简单的示例中，进程完成时间被添加到与该进程相对应的文本框中。 合起来看，文本框中的这些时间说明以下结论：每次进程完成后都执行代码。  
   
- 要设置此示例，请创建一个新的 ASP.NET 网站项目。  将一个 <xref:System.Web.UI.WebControls.Button> 控件和四个 <xref:System.Web.UI.WebControls.TextBox> 控件放置于页面上（接受每个控件的默认名称）。  
+ 要设置此示例，请创建一个新的 ASP.NET 网站项目。 将一个 <xref:System.Web.UI.WebControls.Button> 控件和四个 <xref:System.Web.UI.WebControls.TextBox> 控件放置于页面上（接受每个控件的默认名称）。  
   
  在窗体的类中添加以下代码，根据环境的需要修改连接字符串。  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -165,9 +169,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -320,18 +322,16 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## 示例：等待（所有）模型  
- 下面的示例说明等待（所有）模型。  一旦启动了三个异步进程后，调用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法以等待这些进程完成或超时。  
+## <a name="example-wait-all-model"></a>示例：等待（所有）模型  
+ 下面的示例说明等待（所有）模型。 一旦启动了三个异步进程后，调用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法以等待这些进程完成或超时。  
   
- 与等待（任何）模型的示例类似，进程完成时间被添加到与该进程相对应的文本框中。  文本框中的这些时间再次说明以下结论：跟随在 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法后的代码只在所有进程都完成后才执行。  
+ 与等待（任何）模型的示例类似，进程完成时间被添加到与该进程相对应的文本框中。 文本框中的这些时间再次说明以下结论：跟随在 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法后的代码只在所有进程都完成后才执行。  
   
- 要设置此示例，请创建一个新的 ASP.NET 网站项目。  将一个 <xref:System.Web.UI.WebControls.Button> 控件和四个 <xref:System.Web.UI.WebControls.TextBox> 控件放置于页面上（接受每个控件的默认名称）。  
+ 要设置此示例，请创建一个新的 ASP.NET 网站项目。 将一个 <xref:System.Web.UI.WebControls.Button> 控件和四个 <xref:System.Web.UI.WebControls.TextBox> 控件放置于页面上（接受每个控件的默认名称）。  
   
  在窗体的类中添加以下代码，根据环境的需要修改连接字符串。  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -452,9 +452,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -591,6 +589,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## 请参阅  
- [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
+## <a name="see-also"></a>另请参阅  
+ [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

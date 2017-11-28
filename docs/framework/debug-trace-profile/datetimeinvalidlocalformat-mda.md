@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - dates [.NET Framework], formatting
 - invalid date time local format
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43155bb2eebfd2cd379d245715c100878fb9fb73
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3181acec440f2d01e928bb051b297fba75de1e2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 使用只打算用于本地 <xref:System.DateTime> 实例的格式对存储为协调世界时 (UTC) 的 <xref:System.DateTime> 实例设置格式时，将激活 `dateTimeInvalidLocalFormat` MDA。 对于未指定的或默认的 <xref:System.DateTime> 实例，不激活此 MDA。  
@@ -48,7 +41,7 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>原因  
- <xref:System.DateTime.ToString%2A?displayProperty=fullName> 方法的“z”格式包括本地时区偏移量，例如，“+10:00”表示悉尼时间。 就这一点而言，只有 <xref:System.DateTime> 值是本地时间时，它才会得出有意义的结果。 如果该值是 UTC 时间，则 <xref:System.DateTime.ToString%2A?displayProperty=fullName> 包括本地时区偏移量，但是不显示或调整时区说明符。  
+ <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 方法的“z”格式包括本地时区偏移量，例如，“+10:00”表示悉尼时间。 就这一点而言，只有 <xref:System.DateTime> 值是本地时间时，它才会得出有意义的结果。 如果该值是 UTC 时间，则 <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 包括本地时区偏移量，但是不显示或调整时区说明符。  
   
 ### <a name="resolution"></a>解决方法  
  应采用可表明 UTC <xref:System.DateTime> 实例为 UTC 时间的方式设置这些实例的格式。 对于 UTC 时间的格式，建议使用一个“Z”表示 UTC 时间：  
@@ -102,6 +95,5 @@ String serialized = XmlConvert.ToString(myDateTime,
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Globalization.DateTimeFormatInfo>   
+ <xref:System.Globalization.DateTimeFormatInfo>  
  [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

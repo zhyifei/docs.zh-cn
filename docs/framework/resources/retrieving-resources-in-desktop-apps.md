@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -23,23 +25,22 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4c1b751fc5fb5717ad4bf030777359bef2e69545
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f4c2527b7ef1e673d578f8c1e9a30fdacdea4046
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
 使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>从程序集中检索资源  
- <xref:System.Resources.ResourceManager> 类提供对运行时资源的访问权限。 使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName> 方法检索字符串资源和 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=fullName> 或使用 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=fullName> 方法检索非字符串资源。 每个方法都有两种重载：  
+ <xref:System.Resources.ResourceManager> 类提供对运行时资源的访问权限。 使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> 方法检索字符串资源和 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> 或使用 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> 方法检索非字符串资源。 每个方法都有两种重载：  
   
 -   单一参数是包含资源名称的字符串的重载。 该方法尝试为当前线程区域性检索资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
   
@@ -66,9 +67,10 @@ TimeHeader=L'heure actuelle est
 TimeHeader=Текущее время —  
 ```  
   
- 此示例的源代码（在代码的 C# 版本中位于名为 GetString.cs 的文件中，在 Visual Basic 版本中位于名为 GetString.vb 的文件中）定义包含四种区域性名称（资源可用的三种区域性和西班牙语（西班牙）区域性）的字符串数组。 一个随机执行 5 次的循环选择其中一种区域性并将其分配到 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性。 然后调用 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法检索与一天当中的时间一起显示的本地化的字符串。  
+ 此示例的源代码（在代码的 C# 版本中位于名为 GetString.cs 的文件中，在 Visual Basic 版本中位于名为 GetString.vb 的文件中）定义包含四种区域性名称（资源可用的三种区域性和西班牙语（西班牙）区域性）的字符串数组。 一个随机执行 5 次的循环选择其中一种区域性并将其分配到 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 属性。 然后调用 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法检索与一天当中的时间一起显示的本地化的字符串。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstring.cs#3)] [!code-vb[Conceptual.Resources.Retrieving#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstring.vb#3)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstring.cs#3)]
+ [!code-vb[Conceptual.Resources.Retrieving#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstring.vb#3)]  
   
  以下批处理 (.bat) 文件编译该示例，并在相应的目录中生成附属程序集。 为 C# 语言和编译器提供了命令。 对于 Visual Basic ，将 `csc` 更改为 `vbc`，并将 `GetString.cs` 更改为 `GetString.vb`。  
   
@@ -92,11 +94,13 @@ al /embed:strings.ru-RU.resources /culture:ru-RU /out:ru-RU\GetString.resources.
   
  下面的示例使用 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法检索应用启动初始窗口中使用的位图。 以下源代码位于名为 CreateResources.cs 的文件中（C# 版本）或位于名为 CreateResources.vb 的文件中（Visual Basic 版本），它能生成包含序列化图像的 .resx 文件。 在这种情况下，图片从一个名为 SplashScreen.jpg 的文件中加载；可以修改文件名以替换你自己的图像。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)] [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
+ [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
  以下代码将检索该资源，并在 <xref:System.Windows.Forms.PictureBox> 控件中显示图像。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)] [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
+ [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
   
  可以使用以下批处理文件生成 C# 示例。 对于 Visual Basic，将 `csc` 更改为 `vbc`，并将源代码文件的扩展名由 `.cs` 更改为 `.vb`。  
   
@@ -109,17 +113,20 @@ resgen AppResources.resx
 csc GetStream.cs /resource:AppResources.resources  
 ```  
   
- 下面的示例使用 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=fullName> 方法反序列化一个自定义对象。 该示例包含一个名为 UIElements.cs （对于 Visual Basic 则为 UIElements.vb）的源代码文件，用于定义以下名为 `PersonTable`的结构。 此结构应由显示表列的本地化名称的常规表显示例程使用。 请注意，`PersonTable` 结构标有 <xref:System.SerializableAttribute> 属性。  
+ 下面的示例使用 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> 方法反序列化一个自定义对象。 该示例包含一个名为 UIElements.cs （对于 Visual Basic 则为 UIElements.vb）的源代码文件，用于定义以下名为 `PersonTable`的结构。 此结构应由显示表列的本地化名称的常规表显示例程使用。 请注意， `PersonTable` 结构标有 <xref:System.SerializableAttribute> 属性。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)] [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
+ [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
   
  下面的代码来自名为 CreateResources.cs（对于 Visual Basic 则为 CreateResources.vb）的文件，该代码创建一个名为 UIResources.resx 的 XML 资源文件，该文件存储有表标题和包含已针对英语语言本地化的应用的信息的 `PersonTable` 对象。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example1.cs#7)] [!code-vb[Conceptual.Resources.Retrieving#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#7)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example1.cs#7)]
+ [!code-vb[Conceptual.Resources.Retrieving#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#7)]  
   
  下面的代码位于名为 GetObject.cs (GetObject.vb) 的源代码文件中，然后检索资源并将其显示在控制台上。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example2.cs#8)] [!code-vb[Conceptual.Resources.Retrieving#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example2.vb#8)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example2.cs#8)]
+ [!code-vb[Conceptual.Resources.Retrieving#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example2.vb#8)]  
   
  可以生成必要的资源文件和程序集，并通过执行以下批处理文件运行该应用。 必须使用 `/r` 选项提供具有对 UIElements.dll 的引用的 Resgen.exe，以便其能够访问有关 `PersonTable` 结构的信息。 如果使用 C#，请将 `vbc` 编译器名称替换为 `csc`，并将 `.vb` 扩展名替换为 `.cs`。  
   
@@ -147,7 +154,7 @@ GetObject.exe
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>从 .resources 文件中检索资源  
- 如果选择不在附属程序集中部署资源，你仍可以使用 <xref:System.Resources.ResourceManager> 对象直接访问 .resources 文件中的资源。 要执行此操作，必须正确部署.resources 文件。 然后使用 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=fullName> 方法实例化 <xref:System.Resources.ResourceManager> 对象，并指定包含独立 .resources 文件的目录。  
+ 如果选择不在附属程序集中部署资源，你仍可以使用 <xref:System.Resources.ResourceManager> 对象直接访问 .resources 文件中的资源。 要执行此操作，必须正确部署.resources 文件。 然后使用 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> 方法实例化 <xref:System.Resources.ResourceManager> 对象，并指定包含独立 .resources 文件的目录。  
   
 ### <a name="deploying-resources-files"></a>部署 .resources 文件  
  将 .resources 文件嵌入应用程序程序集和附属程序集后，每个附属程序集都具有相同的文件名，但被放在反射附属程序集区域性的子目录中。 与此相反，从 .resources 文件直接访问资源时，可以将所有 .resources 文件放在单一目录（通常为应用程序目录的子目录）中。 应用的默认 .resources 文件名称仅包含一个根名称，不带有其区域性的指示（例如 strings.resources）。 每个本地化的区域性资源存储在名称包含根名称，后带有区域性标记所组成的文件中（例如 strings.ja.resources 或 strings.de-DE.resources）。 下图显示资源文件应被放置在目录结构中的何处。  
@@ -161,7 +168,7 @@ GetObject.exe
 > [!NOTE]
 >  请勿使用独立 .resources 文件部署 ASP.NET 应用。 这可能会导致锁定问题并破坏 XCOPY 部署。 建议部署附属程序集中的 ASP.NET 资源。 有关更多信息，请参见 [ASP.NET Web Page Resources Overview](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
   
- 实例化 <xref:System.Resources.ResourceManager> 对象后，使用前文所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索资源。 但是，直接从 .resources 文件中检索资源与从程序集中检索嵌入的资源有所不同。 从 .resources 文件中检索资源时， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法总是忽略当前区域性检索默认区域性的资源。 若要检索应用的当前区域性资源或指定区域性的资源，必须调用 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法并指定要检索资源的区域性。 若要检索当前区域性的资源，请将 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性的值指定为 `culture` 参数。 如果资源管理器无法检索 `culture`的资源，则使用标准资源回退规则检索相应的资源。  
+ 实例化 <xref:System.Resources.ResourceManager> 对象后，使用前文所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索资源。 但是，直接从 .resources 文件中检索资源与从程序集中检索嵌入的资源有所不同。 从 .resources 文件中检索资源时， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法总是忽略当前区域性检索默认区域性的资源。 若要检索应用的当前区域性资源或指定区域性的资源，必须调用 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法并指定要检索资源的区域性。 若要检索当前区域性的资源，请将 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性的值指定为 `culture` 参数。 如果资源管理器无法检索 `culture`的资源，则使用标准资源回退规则检索相应的资源。  
   
 ### <a name="an-example"></a>示例  
  下面的示例说明资源管理器如何直接从 .resources 文件中检索资源。 此示例由三个基于文本的资源文件组成，区域性分别为英语（美国）、法语（法国）和俄语（俄罗斯）。 英语（美国）为示例的默认区域性。 其资源存储在以下名为 Strings.txt 的文件中：  
@@ -185,9 +192,10 @@ Greeting=Здравствуйте
 Prompt=Как вас зовут?  
 ```  
   
- 以下是该实例的源代码。 该示例为英语（美国）、英语（加拿大）、法语（法国）和俄语（俄罗斯）区域性实例化 <xref:System.Globalization.CultureInfo> 对象，并将以上每一种语言作为当前区域性。 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=fullName> 方法提供 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性的值作为 `culture` 参数来检索相应的区域性指定资源。  
+ 以下是该实例的源代码。 该示例为英语（美国）、英语（加拿大）、法语（法国）和俄语（俄罗斯）区域性实例化 <xref:System.Globalization.CultureInfo> 对象，并将以上每一种语言作为当前区域性。 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法提供 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性的值作为 `culture` 参数来检索相应的区域性指定资源。  
   
- [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)] [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
+ [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
+ [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
  可以通过运行以下批处理文件编译该示例的 C# 版本。 如果使用 Visual Basic，请将 `csc` 替换为 `vbc`，并将 `.cs` 扩展名替换为 `.vb`。  
   
@@ -201,9 +209,8 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Resources.ResourceManager>   
- [桌面应用中的资源](../../../docs/framework/resources/index.md)   
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.Resources.ResourceManager>  
+ [桌面应用中的资源](../../../docs/framework/resources/index.md)  
+ [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkID=241674)
-

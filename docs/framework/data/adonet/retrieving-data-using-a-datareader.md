@@ -1,66 +1,72 @@
 ---
-title: "使用 DataReader 检索数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 DataReader 检索 ADO 数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0b66ca2fbcc760598b771b4c02a46acc3c9c1d4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 DataReader 检索数据
-使用 **DataReader** 检索数据包括创建 **Command** 对象的实例，然后通过调用 **Command.ExecuteReader** 创建一个 **DataReader**，以便从数据源检索行。  下面的示例演示如何使用 **DataReader**，其中 `reader` 表示有效的 DataReader，而 `command` 表示有效的 Command 对象。  
+# <a name="retrieving-data-using-a-datareader"></a>使用 DataReader 检索 ADO 数据
+检索数据使用**DataReader**涉及到创建的实例**命令**对象，然后创建**DataReader**通过调用**Command.ExecuteReader**从数据源中检索行。 下面的示例演示如何使用**DataReader**其中`reader`表示有效的 DataReader 和`command`表示有效的命令对象。  
   
 ```  
 reader = command.ExecuteReader();  
 ```  
   
- 使用 **DataReader** 对象的 **Read** 方法可从查询结果中获取行。  通过向 **DataReader** 传递列的名称或序号引用，可以访问返回行的每一列。  不过，为了实现最佳性能，**DataReader** 提供了一系列方法，将使您能够访问其本机数据类型（**GetDateTime**、**GetDouble**、**GetGuid**、**GetInt32** 等）的列值。  有关数据提供程序特定的 **DataReaders** 的类型化访问器方法列表，请参见 <xref:System.Data.OleDb.OleDbDataReader> 和 <xref:System.Data.SqlClient.SqlDataReader>。  假定基础数据类型为已知，如果使用类型化访问器方法，将减少在检索列值时所需的类型转换量。  
+ 你使用**读取**方法**DataReader**对象从查询结果中获取行。 你可以通过传递的名称或序号引用的列访问返回的行的每一列**DataReader**。 但是，为了获得最佳性能， **DataReader**提供使你能够访问其本机数据类型中的列值的方法的一系列 (**GetDateTime**， **GetDouble**， **GetGuid**， **GetInt32**，依次类推)。 有关的数据提供程序特定的类型化访问器方法列表**DataReaders**，请参阅<xref:System.Data.OleDb.OleDbDataReader>和<xref:System.Data.SqlClient.SqlDataReader>。 假定基础数据类型为已知，如果使用类型化访问器方法，将减少在检索列值时所需的类型转换量。  
   
 > [!NOTE]
->  .NET Framework 的 Windows Server 2003 版包含 **DataReader** 的附加属性 **HasRows**，该属性使您能够在读取 **DataReader** 之前就可确定它是否返回了任何结果。  
+>  Windows Server 2003 版本的.NET Framework 包括的其他属性**DataReader**， **HasRows**，这使您能够确定如果**DataReader**已从其返回之前读取任何结果。  
   
- 以下代码示例循环访问一个 **DataReader** 对象，并从每个行中返回两个列。  
+ 下面的代码示例循环访问**DataReader**对象，并从每个行中的返回两个列。  
   
  [!code-csharp[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
- **DataReader** 提供未缓冲的数据流，该数据流使过程逻辑可以有效地按顺序处理从数据源中返回的结果。  由于数据不在内存中缓存，所以在检索大量数据时，**DataReader** 是一种适合的选择。  
+ **DataReader**提供未缓冲的数据流，使过程逻辑可以有效地按顺序处理数据源的结果。 **DataReader**是一个不错的选择，因为数据不在内存中缓存中检索大量数据时。  
   
-## 关闭 DataReader  
- 每次使用完 **DataReader** 对象后都应调用 **Close** 方法。  
+## <a name="closing-the-datareader"></a>关闭 DataReader  
+ 始终应调用**关闭**方法时使用完**DataReader**对象。  
   
- 如果 **Command** 包含输出参数或返回值，那么在 **DataReader** 关闭之前，将无法访问这些输出参数或返回值。  
+ 如果你**命令**包含输出参数或返回值，它们将不可用之前**DataReader**已关闭。  
   
- 请注意，当 **DataReader** 打开时，该 **DataReader** 将以独占方式使用 **Connection**。  在原始 **DataReader** 关闭之前，将无法对 **Connection** 执行任何命令（包括创建另一个 **DataReader**）。  
+ 请注意，当**DataReader**处于打开状态，**连接**正在独占方式使用**DataReader**。 无法执行任何命令**连接**，包括创建另一个**DataReader**，直到原始**DataReader**已关闭。  
   
 > [!NOTE]
->  不要在类的 **Finalize** 方法中对 **Connection**、**DataReader** 或任何其他托管对象调用 **Close** 或 **Dispose**。  在终结器中，仅释放类直接拥有的非托管资源。  如果类不拥有任何非托管资源，则不要在类定义中包含 **Finalize** 方法。  有关详细信息，请参阅[Garbage Collection](../../../../docs/standard/garbage-collection/index.md)。  
+>  不要调用**关闭**或**释放**上**连接**、 **DataReader**，或在任何其他托管的对象**Finalize**你类的方法。 在终结器中，仅释放类直接拥有的非托管资源。 如果你的类不拥有任何非托管的资源，不包括**Finalize**在类定义的方法。 有关详细信息，请参阅[垃圾回收](../../../../docs/standard/garbage-collection/index.md)。  
   
-## 使用 NextResult 检索多个结果集  
- 如果返回的是多个结果集，**DataReader** 会提供 **NextResult** 方法来按顺序循环访问这些结果集。  以下示例显示 <xref:System.Data.SqlClient.SqlDataReader> 如何使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 方法处理两个 SELECT 语句的结果。  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a>使用 NextResult 检索多个结果集  
+ 如果返回了多个结果集， **DataReader**提供**NextResult**方法来循环访问结果以设置顺序。 以下示例显示 <xref:System.Data.SqlClient.SqlDataReader> 如何使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 方法处理两个 SELECT 语句的结果。  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
-## 从 DataReader 中获取架构信息  
- 当 **DataReader** 打开时，可以使用 **GetSchemaTable** 方法检索有关当前结果集的架构信息。  **GetSchemaTable** 将返回一个填充了行和列的 <xref:System.Data.DataTable> 对象，这些行和列包含当前结果集的架构信息。  对于结果集的每一列，**DataTable** 都包含一行。  架构表行的每一列都映射到在结果集中返回的列的属性，其中 **ColumnName** 是属性的名称，而列的值为属性的值。  以下代码示例为 **DataReader** 编写架构信息。  
+## <a name="getting-schema-information-from-the-datareader"></a>从 DataReader 中获取架构信息  
+ 虽然**DataReader**是打开，你可以检索有关当前结果集使用的架构信息**GetSchemaTable**方法。 **GetSchemaTable**返回<xref:System.Data.DataTable>具有行和列包含当前结果集的架构信息填充的对象。 **DataTable**结果集的每一列中对应一行。 架构表行的每一列都映射到属性中返回的列的结果集，其中**ColumnName**是属性的名称和列的值是属性的值。 下面的代码示例将写出的架构信息**DataReader**。  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
-## 使用 OLE DB 章节  
- 分层行集或章节（OLE DB 类型 **DBTYPE\_HCHAPTER**、ADO 类型 **adChapter**）可以使用 <xref:System.Data.OleDb.OleDbDataReader> 来检索。  当以 **DataReader** 的形式返回包含某章节的查询时，该章节将以此 **DataReader** 中列的形式返回，并作为 **DataReader** 对象公开。  
+## <a name="working-with-ole-db-chapters"></a>使用 OLE DB 章节  
+ 分层行集或章节 (OLE DB 类型**DBTYPE_HCHAPTER**，ADO 类型**adChapter**) 可以使用检索<xref:System.Data.OleDb.OleDbDataReader>。 当为返回包含某章节的查询时**DataReader**，作为中列的返回章**DataReader**和公开为**DataReader**对象。  
   
- ADO.NET **DataSet** 也可用于通过表间的父子关系来表示分层行集。  有关详细信息，请参阅[DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)。  
+ ADO.NET**数据集**还用于表示分层行集使用父-子表之间的关系。 有关详细信息，请参阅[数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)。  
   
  以下代码示例使用 MSDataShape 提供程序来为客户列表中的每个客户生成订单的章节列。  
   
@@ -128,14 +134,14 @@ custReader.Close();
 }  
 ```  
   
-## 使用 Oracle REF CURSOR 返回结果  
- Oracle .NET Framework 数据提供程序支持使用 Oracle REF CURSOR 返回查询结果。  Oracle REF CURSOR 以 <xref:System.Data.OracleClient.OracleDataReader> 的形式返回。  
+## <a name="returning-results-with-oracle-ref-cursors"></a>使用 Oracle REF CURSOR 返回结果  
+ Oracle .NET Framework 数据提供程序支持使用 Oracle REF CURSOR 返回查询结果。 Oracle REF CURSOR 以 <xref:System.Data.OracleClient.OracleDataReader> 的形式返回。  
   
- 可以使用 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> 方法检索表示 Oracle REF CURSOR 的 **OracleDataReader** 对象，也可以将返回一个或多个 Oracle REF CURSOR 的 <xref:System.Data.OracleClient.OracleCommand> 指定为用于填充 <xref:System.Data.DataSet> 的 <xref:System.Data.OracleClient.OracleDataAdapter> 的 **SelectCommand**。  
+ 你可以检索**OracleDataReader**对象，表示使用 Oracle REF CURSOR<xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>方法，并且你还可以指定<xref:System.Data.OracleClient.OracleCommand>返回一个或多个 Oracle REF Cursor 作为**SelectCommand**为<xref:System.Data.OracleClient.OracleDataAdapter>用来填充<xref:System.Data.DataSet>。  
   
- 若要访问从 Oracle 数据源中返回的 REF CURSOR，请为查询创建 **OracleCommand**，并将引用 REF CURSOR 的输出参数添加到 **OracleCommand** 的 **Parameters** 集合中。  该参数的名称必须与查询中的 REF CURSOR 参数名称相匹配。  将参数类型设置为 **OracleType.Cursor**。  **OracleCommand** 的 **ExecuteReader** 方法将为 REF CURSOR 返回 **OracleDataReader**。  
+ 若要访问从 Oracle 数据源返回的 REF CURSOR，创建**OracleCommand**查询并添加引用到 REF CURSOR 的输出参数**参数**你的集合**OracleCommand**。 该参数的名称必须与查询中的 REF CURSOR 参数名称相匹配。 设置的参数的类型**OracleType.Cursor**。 **ExecuteReader**方法你**OracleCommand**将返回**OracleDataReader**为 REF CURSOR。  
   
- 如果 **OracleCommand** 返回多个 REF CURSOR，则将添加多个输出参数。  通过调用 **OracleCommand.ExecuteReader** 方法可以访问不同的 REF CURSOR。  调用 **ExecuteReader** 将返回引用第一个 REF CURSOR 的 **OracleDataReader**。  然后，可以调用 **OracleDataReader.NextResult** 方法访问随后的 REF CURSOR。  尽管 **OracleCommand.Parameters** 集合中参数的名称与 REF CURSOR 输出参数名称相匹配，但 **OracleDataReader** 将按这些参数添加到 **Parameters** 集合中的顺序进行访问。  
+ 如果你**OracleCommand**返回多个 REF CURSOR，添加多个输出参数。 你可以通过调用访问不同的 REF Cursor **OracleCommand.ExecuteReader**方法。 调用**ExecuteReader**返回**OracleDataReader**引用第一个 REF CURSOR。 然后，你可以调用**OracleDataReader.NextResult**方法访问随后的 REF Cursor。 尽管中的参数你**OracleCommand.Parameters**集合匹配 REF CURSOR 输出参数名称， **OracleDataReader**中它们已添加到的顺序对它们进行访问**参数**集合。  
   
  例如，请看下面这个 Oracle 包和包正文。  
   
@@ -157,7 +163,7 @@ CREATE OR REPLACE PACKAGE BODY CURSPKG AS
 END CURSPKG;   
 ```  
   
- 以下代码将创建从先前的 Oracle 包返回 REF CURSOR 的 **OracleCommand**，方法是将类型 **OracleType.Cursor** 的两个参数添加到 **Parameters** 集合中。  
+ 下面的代码创建**OracleCommand** ，通过添加两个参数的类型从先前的 Oracle 包返回 REF Cursor **OracleType.Cursor**到**参数**集合。  
   
 ```vb  
 Dim cursCmd As OracleCommand = New OracleCommand("CURSPKG.OPEN_TWO_CURSORS", oraConn)  
@@ -171,7 +177,7 @@ cursCmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = ParameterDire
 cursCmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = ParameterDirection.Output;  
 ```  
   
- 以下代码使用 **OracleDataReader** 的 **Read** 和 **NextResult** 方法返回先前命令的结果。  REF CURSOR 参数按顺序返回。  
+ 以下代码将返回的结果的上一个命令使用**读取**和**NextResult**方法**OracleDataReader**。 REF CURSOR 参数按顺序返回。  
   
 ```vb  
 oraConn.Open()  
@@ -227,10 +233,10 @@ reader.Close();
 oraConn.Close();  
 ```  
   
- 以下示例使用先前的命令用 Oracle 包的结果来填充 **DataSet**。  
+ 下面的示例使用前一个命令来填充**数据集**使用 Oracle 包的结果。  
   
 > [!NOTE]
->  为了避免 **OverflowException**，建议您在将值存储在 **DataRow** 中之前，还应执行从 Oracle NUMBER 类型到有效的 .NET Framework 类型的任何转换。  可以使用 **FillError** 事件来确定是否发生了 **OverflowException**。  有关 **FillError** 事件的更多信息，请参见 [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+>  若要避免**OverflowException**，我们建议你还处理任何从 Oracle NUMBER 类型转换为有效的.NET Framework 类型之前将值存储在**DataRow**。 你可以使用**FillError**事件来确定是否**OverflowException**发生。 有关详细信息**FillError**事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
 ```vb  
 Dim ds As DataSet = New DataSet()  
@@ -252,9 +258,9 @@ adapter.TableMappings.Add("Table1", "Departments");
 adapter.Fill(ds);  
 ```  
   
-## 请参阅  
- [Working with DataReaders](http://msdn.microsoft.com/zh-cn/126a966a-d08d-4d22-a19f-f432908b2b54)   
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 Datareader](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

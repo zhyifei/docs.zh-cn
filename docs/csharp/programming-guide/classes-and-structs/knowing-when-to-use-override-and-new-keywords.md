@@ -1,40 +1,22 @@
 ---
 title: "了解何时使用 Override 和 New 关键字（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4888a93819b155d10b82bfd1ee105a73a1fdc126
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解何时使用 Override 和 New 关键字（C# 编程指南）
 在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类方法，而 `new` 修饰符则用于隐藏该方法。 本主题中的示例阐释了这种差异。  
@@ -565,9 +547,8 @@ namespace OverrideAndNew2
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)   
- [base](../../../csharp/language-reference/keywords/base.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+ [base](../../../csharp/language-reference/keywords/base.md)  
  [abstract](../../../csharp/language-reference/keywords/abstract.md)
-

@@ -1,44 +1,26 @@
 ---
 title: "访问键盘 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- keyboards, accessing [Visual Basic]
-- My.Computer.Keyboard object, tasks
+- keyboards [Visual Basic], accessing [Visual Basic]
+- My.Computer.Keyboard object [Visual Basic], tasks
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 39ca8afbfd43d26b5d171a6a3789c61b992c1b50
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b12fa7b7164fde72a624d69f7f0d84afe4ed38b0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>访问键盘 (Visual Basic)
 `My.Computer.Keyboard` 对象提供用于访问键盘当前状态的属性（例如当前按下的键），并提供将击键发送到活动窗口的方法。  
@@ -57,6 +39,5 @@ ms.lasthandoff: 07/28/2017
 |启动应用程序并向其发送击键|[如何：启动应用程序并向其发送击键 (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Devices.Keyboard>   
+ <xref:Microsoft.VisualBasic.Devices.Keyboard>  
  <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
-

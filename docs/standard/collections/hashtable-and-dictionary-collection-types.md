@@ -16,19 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>哈希表和字典集合类型
-<xref:System.Collections.Hashtable?displayProperty=fullName> 类以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> 泛型类实现 <xref:System.Collections.IDictionary?displayProperty=fullName> 接口。 <xref:System.Collections.Generic.Dictionary%602> 泛型类还实现 <xref:System.Collections.Generic.IDictionary%602> 泛型接口。 因此，这些集合中的每个元素都是一个键值对。  
+<xref:System.Collections.Hashtable?displayProperty=nameWithType> 类以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 泛型类实现 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 接口。 <xref:System.Collections.Generic.Dictionary%602> 泛型类还实现 <xref:System.Collections.Generic.IDictionary%602> 泛型接口。 因此，这些集合中的每个元素都是一个键值对。  
   
  <xref:System.Collections.Hashtable> 由包含集合元素的存储桶组成。 存储桶是 <xref:System.Collections.Hashtable> 中元素的虚拟子组，与在大多数集合中进行搜索和检索相比，其搜索和检索更加容易和快速。 每个存储桶都与一个哈希代码相关联，该哈希代码通过哈希函数生成并基于元素的键。  
   
@@ -45,11 +44,10 @@ ms.lasthandoff: 09/06/2017
  <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类具有与 <xref:System.Collections.Hashtable> 类相同的功能。 特定类型（不包括 <xref:System.Object>）的 <xref:System.Collections.Generic.Dictionary%602> 与 <xref:System.Collections.Hashtable> 相比可为值类型提供更好的性能。 这是因为 <xref:System.Collections.Hashtable> 的元素属于 <xref:System.Object> 类型；因此，装箱和取消装箱通常发生在存储或检索值类型时。 可能有多个线程同时访问该集合时，应使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
  [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)
-

@@ -1,69 +1,73 @@
 ---
-title: "&lt;source&gt; 的 &lt;listeners&gt; 的 &lt;clear&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> 的 <listeners> 的 <clear> 元素"
-  - "<source> 的 <listeners> 的 clear 元素"
+title: "&lt;清除&gt;元素&lt;侦听器&gt;为&lt;源&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
+helpviewer_keywords:
+- <clear> element for <listeners> for <source>
+- clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d5e8518f2ca8a04d91f5bfdd9f6389c741d0278e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt; 的 &lt;listeners&gt; 的 &lt;clear&gt; 元素
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;清除&gt;元素&lt;侦听器&gt;为&lt;源&gt;
 清除跟踪源的 `Listeners` 集合。  
   
-## 语法  
+ \<configuration>  
+\<system.diagnostics >  
+\<源 >  
+\<源 >  
+\<侦听器 >  
+\<清除 >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <clear/>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`system.diagnostics`|指定对消息进行收集、存储和路由的跟踪侦听器以及设置跟踪开关的级别。|  
-|`sources`|包含启动跟踪消息的跟踪源。|  
-|`source`|指定启动跟踪消息的跟踪源。|  
-|`listeners`|指定对消息进行收集、存储和路由的侦听器。|  
+|`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
+|`sources`|包含用于启动跟踪消息的跟踪源。|  
+|`source`|指定用于启动跟踪消息的跟踪源。|  
+|`listeners`|指定收集、 存储和将消息路由的侦听器。|  
   
-## 备注  
- `<clear>` 元素从跟踪源的 `Listeners` 集合中移除所有侦听器，包括 <xref:System.Diagnostics.DefaultTraceListener>。  在使用 `<add>` 元素之前，可以使用 `<clear>` 元素确认该集合中没有其他活动的侦听器。  
+## <a name="remarks"></a>备注  
+ `<clear>`元素中移除所有侦听器从`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。 你可以使用`<clear>`元素之前使用`<add>`被某些有没有其他活动的侦听器集合中的元素。  
   
-## 配置文件  
- 此元素可用于计算机配置文件 \(Machine.config\) 和应用程序配置文件。  
+## <a name="configuration-file"></a>配置文件  
+ 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
-## 示例  
- 下面的示例演示如何在使用 `<add>` 元素向跟踪源 `TraceSourceApp` 的 `Listeners` 集合中添加侦听器 `console` 和 `textListener` 之前使用 `<clear>` 元素。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用`<clear>`元素之前使用`<add>`元素将侦听器`console`和`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -89,8 +93,8 @@ caps.handback.revision: 7
 </configuration>   
 ```  
   
-## 请参阅  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

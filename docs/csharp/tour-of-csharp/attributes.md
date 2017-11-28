@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
+ms.openlocfilehash: 6878a408ef892ee47a03bfa04f736b9bf9671696
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5f290b2cb7074d0b442d5971e5e08a0f6cac55ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="attributes"></a>特性
 
 C# 程序中的类型、成员和其他实体支持使用修饰符来控制其行为的某些方面。 例如，方法的可访问性是由 `public`、`protected`、`internal` 和 `private` 修饰符控制。 C# 整合了这种能力，以便可以将用户定义类型的声明性信息附加到程序实体，并在运行时检索此类信息。 程序通过定义和使用***特性***来指定此类额外的声明性信息。
@@ -26,7 +24,7 @@ C# 程序中的类型、成员和其他实体支持使用修饰符来控制其�
 
 [!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
 
-所有特性类都派生自标准库提供的 @System.Attribute 基类。 特性的应用方式为，在相关声明前的方括号内指定特性的名称以及任意自变量。 如果特性的名称以 `Attribute` 结尾，那么可以在引用特性时省略这部分名称。 例如，可按如下方法使用 `HelpAttribute` 特性。
+所有特性类都派生自标准库提供的 <xref:System.Attribute> 基类。 特性的应用方式为，在相关声明前的方括号内指定特性的名称以及任意自变量。 如果特性的名称以 `Attribute` 结尾，那么可以在引用特性时省略这部分名称。 例如，可按如下方法使用 `HelpAttribute` 特性。
 
 [!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
 
@@ -36,4 +34,3 @@ C# 程序中的类型、成员和其他实体支持使用修饰符来控制其�
 
 >[!div class="step-by-step"]
 [上一页](delegates.md)
-

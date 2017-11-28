@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-class-libraries"></a>.NET 类库
 
 类库是 .NET 的[共享库](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 通过类库可将实用功能组件化为可供多个应用程序使用的模块。 还可使用类库加载应用程序启动时不需要或未知的功能。 类库通过 [.NET 程序集文件格式](assembly-format.md)进行描述。
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/21/2017
 ### <a name="mono-class-libraries"></a>Mono 类库
 
 Mono 支持多种类库，包括上述三种类型的库。 Mono 常被视为（正确地）Microsoft .NET Framework 的跨平台实现。 部分原因是，平台特定的 .NET Framework 库可在 Mono 运行时上运行，而无需修改或重新编译。 创建可移植库之前，此特性就已存在，因此在 .NET Framework 和 Mono 之间启用二进制可移植性是显而易见的选择（虽然它只能单向运行）。
-

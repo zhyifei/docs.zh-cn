@@ -1,39 +1,21 @@
 ---
 title: "泛型和反射（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 201806cca08be0633d41e10ecb7641a0f03c975b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反射（C# 编程指南）
 因为公共语言运行时 (CLR) 能够在运行时访问泛型类型信息，所以可以使用反射获取关于泛型类型的信息，方法与用于非泛型类型的方法相同。 有关详细信息，请参阅[运行时中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
@@ -68,8 +50,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|用类型数组的元素替代当前泛型方法定义的类型参数，并返回表示结果构造方法的 <xref:System.Reflection.MethodInfo> 对象。|  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [泛型](../../../csharp/programming-guide/generics/index.md)   
- [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [泛型](../../../csharp/programming-guide/generics/index.md)  
+ [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
  [泛型](~/docs/standard/generics/index.md)
-

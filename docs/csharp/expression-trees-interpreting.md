@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interpreting-expressions"></a>解释表达式
 
 [上一部分 -- 执行表达式](expression-trees-execution.md)
@@ -529,4 +527,3 @@ The expression body is:
 即使存在这些限制，在编写阅读和理解表达式树的算法这方面应当是没有问题的。
 
 [下一部分 -- 生成表达式](expression-trees-building.md)
-

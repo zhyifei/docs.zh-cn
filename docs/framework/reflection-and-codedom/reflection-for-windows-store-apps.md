@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 80429810a46438cdbf7cf2993e5f3b0779d300c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd9f8dc3b17dee946155986fe9c66a4f4c4e1353
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>.NET Framework 中用于 Windows 应用商店应用程序的反射
 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，.NET Framework 包含一系列用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的反射类型和成员。 这些类型和成员可从完整的 .NET Framework 以及[适用于 Windows 应用商店应用的 .NET](http://go.microsoft.com/fwlink/?LinkID=225700) 中获取。 本文档介绍 .NET Framework 4 及更早版本中这些类型和成员与其对应项之间的主要差异。  
@@ -45,9 +46,9 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>示例  
  此示例使用 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中的反射类型和成员来检索 <xref:System.Globalization.Calendar> 类型的方法和属性，包括继承的方法和属性。 若要运行此代码，请在名为“反射”的项目中，将代码粘贴到包含名为 `textblock1` 的 [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 控件的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 页的代码文件中。 如果将此代码粘贴到具有不同名称的项目中，只需确保将命名空间的名称更改为与你的项目匹配。  
   
- [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)] [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
+ [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
+ [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>另请参阅  
- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)   
+ [反射](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [适用于 Windows 应用商店应用的 .NET - 支持的 API](http://go.microsoft.com/fwlink/?LinkID=225700)
-

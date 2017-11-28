@@ -1,5 +1,5 @@
 ---
-title: .NET Standard | Microsoft Docs
+title: .NET Standard
 description: "了解 .NET Standard 及其版本以及支持它的 .NET 实现。"
 keywords: .NET Standard, PCL, .NET
 author: mairaw
@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
+ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: eaae98ce0f7a1b49669098812193ae1b629584a4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -151,4 +150,3 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 
 ## <a name="see-also"></a>另请参阅
 [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
-

@@ -1,42 +1,23 @@
 ---
 title: "async（C# 参考）"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="async-c-reference"></a>async（C# 参考）
 使用 `async` 修饰符可将方法、[lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定为异步。 如果对方法或表达式使用此修饰符，则其称为异步方法。 如下示例定义了一个名为 `ExampleMethodAsync` 的异步方法： 
@@ -48,7 +29,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-如果不熟悉异步编程，或者不了解异步方法如何在不阻止调用方线程的情况下使用 `await` 关键字完成可能需要长时间运行的工作，请阅读[使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)中的介绍。 如下代码见于一种异步方法中，且调用 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName> 方法： 
+如果不熟悉异步编程，或者不了解异步方法如何在不阻止调用方线程的情况下使用 `await` 关键字完成可能需要长时间运行的工作，请阅读[使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)中的介绍。 如下代码见于一种异步方法中，且调用 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法： 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -82,7 +63,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - 将此代码粘贴到 MainPage.xaml.cs 中的 `MainPage` 类中。  
 - 为 System.Net.Http 和 System.Threading.Tasks 添加 using 指令。  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
 >  若要深入了解各项任务以及在等待任务期间所执行的代码，请参阅[使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。 有关使用类似元素的完整 WPF 示例，请参阅[演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
@@ -106,8 +87,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 有关详细信息和示例，请参阅[异步返回类型](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [Await](../../../csharp/language-reference/keywords/await.md)   
- [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [await](../../../csharp/language-reference/keywords/await.md)  
+ [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)
-

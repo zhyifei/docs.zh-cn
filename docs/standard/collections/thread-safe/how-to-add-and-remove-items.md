@@ -8,22 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, concurrent dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1c034b656cf7a953ae532c12640b5916001764c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中添加和移除项
-本示例演示如何在 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> 中添加、检索、更新和删除项。 此集合类是一个线程安全实现。 建议在多个线程可能同时尝试访问元素时使用此集合类。  
+本示例演示如何在 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 中添加、检索、更新和删除项。 此集合类是一个线程安全实现。 建议在多个线程可能同时尝试访问元素时使用此集合类。  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 提供了多个便捷的方法，这些方法使代码在尝试添加或移除数据之前无需先检查键是否存在。 下表列出了这些便捷的方法，并说明在何种情况下这些方法。  
   
@@ -54,6 +55,5 @@ ms.lasthandoff: 09/19/2017
  因此，无法保证 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 返回的数据与线程的 valueFactory 创建的数据相同。 调用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> 时可能发生相似的事件序列。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)
-

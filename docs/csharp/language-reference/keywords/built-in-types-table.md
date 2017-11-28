@@ -1,39 +1,21 @@
 ---
 title: "内置类型表（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d9d1e4945526a862074e73e608185696328946be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df13a45544491dee9e592a4ab0b90b5235f12abc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
 下表显示内置 C# 类型的关键字，即 <xref:System> 命名空间中预定义类型的别名。  
@@ -75,12 +57,11 @@ Console.WriteLine(myVariable.GetType());
  也可使用 [typeof](../../../csharp/language-reference/keywords/typeof.md) 运算符。  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [值类型](../../../csharp/language-reference/keywords/value-types.md)   
- [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)   
- [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [值类型](../../../csharp/language-reference/keywords/value-types.md)  
+ [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
+ [动态](../../../csharp/language-reference/keywords/dynamic.md)  
  [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

@@ -1,32 +1,23 @@
 ---
 title: "调用方信息 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caller-information-c"></a>调用方信息 (C#)
 通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。 此信息有助于跟踪、调试和创建诊断工具。  
   
- 若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空间中定义的调用方信息特性：  
+ 若要获取此信息，可以使用应用于可选参数的特性，每个特性都具有默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：  
   
 |特性|描述|类型|  
 |---|---|---|  
@@ -90,8 +81,7 @@ public void TraceMessage(string message,
 |无包含的成员（例如，程序集级别或应用于类型的特性）|可选参数的默认值。|  
   
 ## <a name="see-also"></a>另请参阅  
- [特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [通用特性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
+ [特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [通用特性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
-

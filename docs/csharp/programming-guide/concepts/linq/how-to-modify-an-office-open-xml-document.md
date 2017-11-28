@@ -1,25 +1,21 @@
 ---
 title: "如何：修改 Office Open XML 文档 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>如何：修改 Office Open XML 文档 (C#)
 本主题显演示一个打开、修改和保存 Office Open XML 文档的示例。  
@@ -29,7 +25,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>示例  
  本示例查找文档中的第一个段落元素。 示例从段落中检索文本，然后删除段落中的所有文本域。 它创建一个由第一个段落已转换为大写的文本构成的新文本域。 然后将已更改的 XML 序列化为 Open XML 包并关闭该包。  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空间中的类型。  
+ 本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
 ```csharp  
 public static class LocalExtensions  
@@ -161,4 +157,3 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>请参阅  
  [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

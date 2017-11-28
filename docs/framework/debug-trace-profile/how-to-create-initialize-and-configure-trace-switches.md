@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace switches, configuring
 - tracing [.NET Framework], trace switches
@@ -21,29 +18,28 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5ba232e3c84f7bfa089822d4a4f792b179bf32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>创建和初始化跟踪开关  
- 为了使用跟踪开关，必须首先创建跟踪开关并将其放置在代码中。 有两种预定义的类可用于创建开关对象：<xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> 类和 <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> 类。 如果您只关心跟踪消息是否出现，应使用 <xref:System.Diagnostics.BooleanSwitch>；如果您需要区别不同的跟踪级别，应使用 <xref:System.Diagnostics.TraceSwitch>。 如果使用 <xref:System.Diagnostics.TraceSwitch>，则可以定义您自己的调试消息并将其与不同的跟踪级别相关联。 您可以将这两种开关用于跟踪或调试。 默认情况下，将禁用 <xref:System.Diagnostics.BooleanSwitch>，并将 <xref:System.Diagnostics.TraceSwitch> 设置为 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=fullName> 级别。 可在任何需要使用跟踪开关的位置创建和放置跟踪开关。  
+ 为了使用跟踪开关，必须首先创建跟踪开关并将其放置在代码中。 有两种预定义的类可用于创建开关对象：<xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 类和 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 类。 如果您只关心跟踪消息是否出现，应使用 <xref:System.Diagnostics.BooleanSwitch>；如果您需要区别不同的跟踪级别，应使用 <xref:System.Diagnostics.TraceSwitch>。 如果使用 <xref:System.Diagnostics.TraceSwitch>，则可以定义您自己的调试消息并将其与不同的跟踪级别相关联。 您可以将这两种开关用于跟踪或调试。 默认情况下，将禁用 <xref:System.Diagnostics.BooleanSwitch>，并将 <xref:System.Diagnostics.TraceSwitch> 设置为 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType> 级别。 可在任何需要使用跟踪开关的位置创建和放置跟踪开关。  
   
  虽然可以在代码中设置跟踪级别和其他配置选项，但最好使用配置文件来管理开关的状态。 这是因为，通过配置系统管理开关配置可获得较大的灵活性，您无需重新编译应用程序，就可以打开和关闭各个开关并更改级别。  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>若要创建和初始化跟踪开关  
   
-1.  将开关定义为 <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> 类型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> 类型并设置开关的名称和说明。  
+1.  将开关定义为 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 类型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 类型并设置开关的名称和说明。  
   
 2.  配置跟踪开关。 有关详细信息，请参阅[配置跟踪开关](#configure)。  
   
@@ -72,7 +68,7 @@ ms.lasthandoff: 08/21/2017
   
  在已部署的应用程序中，应用程序未运行时重新配置开关对象可启用跟踪代码。 通常，这涉及到打开和关闭开关对象或更改跟踪级别，然后重新启动应用程序。  
   
- 创建开关实例时，还可以通过指定 displayName 和 description 这两个参数来初始化此实例。 构造函数的 displayName 参数设置 <xref:System.Diagnostics.Switch> 类实例的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=fullName> 属性。 displayName 是用于在 .config 文件中配置开关的名称，description 参数应返回开关及其所控制的消息的简要说明 。  
+ 创建开关实例时，还可以通过指定 displayName 和 description 这两个参数来初始化此实例。 构造函数的 displayName 参数设置 <xref:System.Diagnostics.Switch> 类实例的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 属性。 displayName 是用于在 .config 文件中配置开关的名称，description 参数应返回开关及其所控制的消息的简要说明 。  
   
  除了指定要配置的开关名称，还必须指定此开关的值。 此值是一个整数。 对于 <xref:System.Diagnostics.BooleanSwitch>，0 值对应“关闭”，而任何非零值对应“打开”。 对于 <xref:System.Diagnostics.TraceSwitch>，0、1、2、3 和 4 分别对应“关闭”、“错误”、“警告”、“信息”和“详细”。 任何大于 4 的数字将被视为“详细”，而任何小于零的数字将被视为“关闭”。  
   
@@ -138,8 +134,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [如何： 向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-

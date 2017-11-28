@@ -1,70 +1,72 @@
 ---
-title: "&lt;sources&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#sources"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sources> 元素"
-  - "sources 元素"
-  - "跟踪源"
+title: "&lt;源&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#sources
+helpviewer_keywords:
+- sources element
+- trace sources
+- <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 58e9ff8787916132406a7e63aff511c9fb221b73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sources&gt; 元素
+# <a name="ltsourcesgt-element"></a>&lt;源&gt;元素
 指定启动跟踪消息的跟踪源。  
   
-## 语法  
+ \<configuration>  
+\<system.diagnostics >  
+\<源 >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <sources>  
    <source>...</source>  
 </sources>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
-|--------|--------|  
-|[\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必需的元素。<br /><br /> 指定启动跟踪消息的跟踪源。|  
+|元素|描述|  
+|-------------|-----------------|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必需的元素。<br /><br /> 指定用于启动跟踪消息的跟踪源。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`system.diagnostics`|指定对消息进行收集、存储和路由的跟踪侦听器以及设置跟踪开关的级别。|  
+|`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
   
-## 备注  
- 此元素可用于计算机配置文件 \(Machine.config\) 和应用程序配置文件。  
+## <a name="remarks"></a>备注  
+ 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
-## 示例  
- 下面的示例演示如何使用 `<sources>` 元素添加跟踪源 `mySource` 并设置名为 `sourceSwitch` 的源开关的级别。  添加了一个控制台跟踪侦听器，该侦听器将跟踪信息写到控制台。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用`<sources>`要添加的跟踪源元素`mySource`和设置源开关的级别命名`sourceSwitch`。 将控制台跟踪侦听器添加跟踪信息写入控制台。  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
@@ -87,12 +89,12 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

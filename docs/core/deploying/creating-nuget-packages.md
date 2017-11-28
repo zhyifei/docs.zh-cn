@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
+ms.openlocfilehash: a5738a4f3755a959660db4be683677673af61ef9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>如何使用跨平台工具创建 NuGet 包
 
 > [!NOTE]
@@ -28,6 +26,9 @@ ms.lasthandoff: 07/28/2017
 假设你刚编写了一个很棒的新库，并想通过 NuGet 发布。  你就可以使用跨平台工具创建一个 NuGet 包，完全照做就行！  下例假定使用一个名为 **SuperAwesomeLibrary** 的库，该库以 `netstandard1.0` 为目标。
 
 如果存在可传递的依赖项，也就是说，如果一个项目依赖于另一个项目，在创建 NuGet 包前，则需要确保使用 `dotnet restore` 还原整个解决方案的包。  否则将导致 `dotnet pack` 命令不能正常运行。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 
 确认包已还原后，可以导航到库所在的目录：
 
@@ -66,4 +67,3 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>不要混淆 `dotnet pack` 和 `dotnet publish`
 
 务必注意，不是任何时候都涉及 `dotnet publish` 命令。  `dotnet publish` 命令用于在同一个包中部署具有所有依赖项的应用程序 - 而不是用于生成通过 NuGet 发布和使用的 NuGet 包。
-

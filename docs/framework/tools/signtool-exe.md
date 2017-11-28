@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
@@ -91,7 +84,7 @@ signtool [command] [options] [file_name | ...]
 |`/csp` CSPName|指定包含私钥容器的加密服务提供程序 (CSP)。|  
 |`/d` Desc|指定已签名内容的说明。|  
 |`/du` URL|为已签名内容的详细说明指定统一资源定位器 (URL)。|  
-|`/f` SignCertFile|指定文件中的签名证书。 如果文件采用个人信息交换 (PFX) 格式且受密码保护，则使用 `/p` 选项指定密码。 如果文件不包含私钥，则使用 `/csp` 和 `/k` 选项指定 CSP 和私钥容器名。|  
+|`/f` SignCertFile|指定文件中的签名证书。 如果文件采用个人信息交换 (PFX) 格式且受密码保护，则使用 `/p` 选项指定密码。 如果文件不包含私钥，则使用 `/csp` 和 `/kc` 选项指定 CSP 和私钥容器名。|  
 |`/fd`|指定要用于创建文件签名的文件摘要算法。 默认值为 SHA1。|  
 |`/i` IssuerName|指定签名证书的颁发者的名称。 该值可以是整个颁发者名称的子字符串。|  
 |`/kc` PrivKeyContainerName|指定私钥容器名。|  
@@ -225,6 +218,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
+ [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

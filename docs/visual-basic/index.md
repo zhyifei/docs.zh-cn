@@ -1,40 +1,19 @@
 ---
 title: Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.assetid: 5cc578fe-d9e5-4015-937d-b34b83207072
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
-ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
 
@@ -42,10 +21,10 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
   
  这一代 Visual Basic 将延续传统，继续方便你快速轻松地创建 .NET Framework 应用程序。  
   
- 如果你尚无 Visual Basic，可以从 [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs) 网站免费获取包含 Visual Basic 的 Visual Studio 版本。  
+ 如果你尚无 Visual Basic，可以从 [Visual Studio](https://www.visualstudio.com/products/downloads) 网站免费获取包含 Visual Basic 的 Visual Studio 版本。  
   
 ## <a name="in-this-section"></a>本节内容  
- [入门](../visual-basic/getting-started/index.md)   
+ [入门](../visual-basic/getting-started/index.md)  
  通过列出各产品版本中的新功能和可用内容，帮助用户开始工作。  
    
  [编程概念](../visual-basic/programming-guide/concepts/index.md) 介绍对 Visual Basic 程序员最有用的语言概念。
@@ -77,4 +56,3 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
   
  [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
  介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。
-

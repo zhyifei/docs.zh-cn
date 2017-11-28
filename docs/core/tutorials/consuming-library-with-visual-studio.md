@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
-ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 调用 .NET Core 类库
 
 如果已按照[使用 Visual Studio 2017 生成 C# .NET Core 类库](./library-with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)以及[使用 Visual Studio 2017 测试 .NET Core 类库](testing-library-with-visual-studio.md)中的步骤创建并测试类库，并且已生成库的发布版本，下一步就是使其可供调用方使用。 可以通过以下两种方式执行此操作：
@@ -104,4 +105,3 @@ ms.lasthandoff: 09/08/2017
    > 如果路径中没有包含 dotnet.exe 的目录，可以通过在控制台窗口中输入 `where dotnet.exe` 来找到它的位置。
 
 若要详细了解如何创建 NuGet 包，请参阅[如何使用跨平台工具创建 NuGet 包](../../core/deploying/creating-nuget-packages.md)。
-

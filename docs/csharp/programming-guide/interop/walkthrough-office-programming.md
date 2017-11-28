@@ -1,40 +1,25 @@
 ---
 title: "演练：Office 编程（C# 和 Visual Basic）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 dev_langs:
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - Office, programming in Visual Basic and C#
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 862f445107e0f58e8e00fba1708156c747165def
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>演练：Office 编程（C# 和 Visual Basic）
 Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程的功能。 有用的 C# 功能包括命名参数和可选参数以及类型为 `dynamic` 的返回值。 在 COM 编程中，可以省略 `ref` 关键字并获得索引属性的访问权限。 Visual Basic 中的功能包括自动实现的属性、Lambda 表达式语句和集合初始值设定项。
@@ -83,7 +68,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 2.  将以下 `Imports` 语句 (Visual Basic) 或 `using` 指令 (C#) 添加到代码文件的顶部（如果不存在）。  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-csharp[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
 
      [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
   
@@ -93,13 +78,13 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 2.  将 `Account` 类的定义替换为以下代码。 类定义使用自动实现的属性。 有关详细信息，请参阅[自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-csharp[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
 
      [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  若要创建包含两个帐户的 `bankAccounts` 列表，请将以下代码添加到 ThisAddIn.vb 或 ThisAddIn.cs 中的 `ThisAddIn_Startup` 方法。 列表声明使用集合初始值设定项。 有关详细信息，请参阅[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-csharp[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
 
      [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
@@ -107,7 +92,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 1.  在相同的文件中，将以下方法添加到 `ThisAddIn` 类。 该方法设置 Excel 工作薄并将数据导出到工作簿。  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-csharp[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
 
      [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
@@ -117,13 +102,13 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
          有关详细信息，请参阅[命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
   
-    -   [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 对象的 `Range` 和 `Offset` 属性使用“索引属性”功能。 此功能允许你通过以下典型 C# 语法从 COM 类型使用这些属性。 索引属性还允许你使用 `Value` 对象的 `Range` 属性，因此不必使用 `Value2` 属性。 `Value` 属性已编入索引，但索引是可选的。 在以下示例中，可选自变量和索引属性配合使用。  
+    -   [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 对象的 `Range` 和 `Offset` 属性使用“索引属性”功能。 此功能允许你通过以下典型 C# 语法从 COM 类型使用这些属性。 索引属性还允许你使用 `Value` 对象的 `Range` 属性，因此不必使用 `Value2` 属性。 `Value` 属性已编入索引，但索引是可选的。 在以下示例中，可选参数和索引属性配合使用。  
   
-         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
          在早期版本的语言中，需要以下特殊语法。  
   
-         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         [!code-csharp[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
   
          你不能创建自己的索引属性。 该功能仅支持使用现有索引属性。  
   
@@ -131,7 +116,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 2.  在 `DisplayInExcel` 的末尾添加以下代码以将列宽调整为适合内容。  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-csharp[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
 
      [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
@@ -139,7 +124,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
      例如，`excelApp.Columns[1]` 返回`Object`，并且 `AutoFit` 是 Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 方法。 如果没有 `dynamic`，你必须将 `excelApp.Columns[1]` 返回的对象强制转换为 `Range` 的实例，然后才能调用 `AutoFit` 方法。  
   
-     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
      有关嵌入互操作类型的详细信息，请参阅本主题后面部分的“查找 PIA 引用”和“还原 PIA 依赖项”程序。 有关 `dynamic` 的详细信息，请参阅 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 或[使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   
@@ -147,7 +132,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 1.  在 `ThisAddIn_StartUp` 方法的末尾添加以下代码。 对 `DisplayInExcel` 的调用包含两个参数。 第一个参数是要处理的帐户列表的名称。 第二个参数是定义如何处理数据的多行 lambda 表达式。 每个帐户的 `ID` 和 `balance` 值都显示在相邻的单元格中，如果余额小于零，则相应的行显示为红色。 有关详细信息，请参阅 [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-csharp[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
 
      [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
@@ -157,7 +142,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 1.  在 `ThisAddIn_StartUp` 方法末尾添加以下代码，以创建包含指向 Excel 工作簿的链接的 Word 文档。  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-csharp[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
@@ -210,23 +195,22 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 8.  在 Visual Studio 中，单击“生成”菜单上的“清理解决方案”以清理完成的项目。  
   
-## <a name="see-also"></a>请参阅  
- [自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)   
- [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [按位置和按名称传递参数](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [如何：在 COM 互操作编程中使用索引属性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)   
- [演练：嵌入 Microsoft Office 程序集中的类型信息](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)   
- [演练：嵌入托管程序集中的类型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [演练：创建你的第一个 Excel VSTO 外接程序](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+ [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [按位置和按名称传递自变量](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+ [命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ [动态](../../../csharp/language-reference/keywords/dynamic.md)  
+ [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [如何：在 COM 互操作编程中使用索引属性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [演练：嵌入 Microsoft Office 程序集中的类型信息](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
+ [演练：嵌入托管程序集中的类型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [演练：创建你的第一个 Excel VSTO 外接程序](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
  [互操作性](../../../csharp/programming-guide/interop/index.md)
-

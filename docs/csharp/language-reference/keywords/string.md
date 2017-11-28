@@ -1,45 +1,26 @@
 ---
 title: "string（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
 - string_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - strings [C#], reference
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 56847aad4cb8b0427594a299df2306d21675506b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="string-c-reference"></a>string（C# 参考）
 `string` 类型表示零个或多个 Unicode 字符的序列。 `string` 是 .NET Framework 中 <xref:System.String> 的别名。  
@@ -118,20 +99,19 @@ Console.WriteLine(a);
  有关 C# 中的字符串的详细信息，请参阅[字符串](../../../csharp/programming-guide/strings/index.md)。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [Best Practices for Using Strings](../../../standard/base-types/best-practices-strings.md) （有关使用字符串的最佳做法）  
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)   
- [值类型](../../../csharp/language-reference/keywords/value-types.md)   
- [基本字符串操作](../../../standard/base-types/basic-string-operations.md)   
- [创建新字符串](../../../standard/base-types/creating-new.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [有关使用字符串的最佳做法](../../../standard/base-types/best-practices-strings.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
+ [值类型](../../../csharp/language-reference/keywords/value-types.md)  
+ [基本字符串操作](../../../standard/base-types/basic-string-operations.md)  
+ [新建字符串](../../../standard/base-types/creating-new.md)  
  [设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>将 .NET Core 项目迁移到 .csproj 格式
 
 本文档介绍 .NET Core 项目的迁移方案，并探讨以下三个迁移方案：
@@ -90,4 +88,3 @@ Visual Studio 将迁移自动选择的项目。 迁移解决方案时，如果�
 
 ## <a name="see-also"></a>请参阅
 [移植、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
-

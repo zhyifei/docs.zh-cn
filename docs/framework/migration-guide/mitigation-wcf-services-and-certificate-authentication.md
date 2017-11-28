@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: bb852719e3312b78b86621e3cb69fa8bf7267856
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>缓解：WCF 服务和证书身份验证
 .NET Framework 4.6 向 WCF SSL 协议默认列表添加了 TLS 1.1 和 TLS 1.2。 客户端和服务器计算机都安装了 .NET Framework 4.6 或更高版本时，TLS 1.2 用于协商。  
@@ -59,11 +58,10 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
--   如果在源代码中动态配置了绑定，将 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 属性更新为使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) 或源代码中的早期版本协议。  
+-   如果在源代码中动态配置了绑定，将 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 属性更新为使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) 或源代码中的早期版本协议。  
   
     > [!CAUTION]
     >  不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。  
   
 ## <a name="see-also"></a>另请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-

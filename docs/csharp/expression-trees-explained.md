@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>表达式树说明
 
 [上一步 - 概述](expression-trees.md)
@@ -50,7 +48,7 @@ var sum = 1 + 2;
 
 这可能看起来很复杂，但它功能强大。 按照相同的过程，可以分解更加复杂的表达式。 请思考此表达式：
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ var finalAnswer = this.SecretSauceFuncion(
 不能执行的操作是修改表达式树。  表达式树是不可变的数据结构。 如果想要改变（更改）表达式树，则必须创建基于原始树副本但包含所需更改的新树。 
 
 [下一步 - 框架类型支持表达式树](expression-classes.md)
-

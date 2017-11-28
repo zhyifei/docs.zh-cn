@@ -1,27 +1,33 @@
 ---
-title: "将 XSLT 转换应用于数据集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将 XSLT 转换应用于 DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 将 XSLT 转换应用于数据集
-<xref:System.Data.DataSet> 的 **WriteXml** 方法使您能够以 XML 数据形式来编写 **DataSet** 的内容。  随后的一项常见任务是使用 XSL 转换 \(XSLT\) 将该 XML 转换为另一种格式。  不过，通过使 **DataSet** 与 <xref:System.Xml.XmlDataDocument> 同步，可以将 XSLT 样式表应用于 **DataSet** 的内容，而不必首先使用 **WriteXml** 以 XML 数据形式来编写 **DataSet** 的内容。  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a>将 XSLT 转换应用于 DataSet
+**WriteXml**方法<xref:System.Data.DataSet>使您能够写入的内容**数据集**以 XML 数据形式。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 但是，同步**数据集**与<xref:System.Xml.XmlDataDocument>，可以将 XSLT 样式表应用到的内容**数据集**而无需首先编写的内容**数据集**以 XML 数据**WriteXml**。  
   
- 以下示例使用表和关系填充一个 **DataSet**，使该 **DataSet** 与 **XmlDataDocument** 同步，然后使用 XSLT 样式表以 HTML 文件形式来编写该 **DataSet** 的一部分。  下面是该 XSLT 样式表的内容。  
+ 下面的示例填充**数据集**使用表和关系，同步**数据集**与**XmlDataDocument**，并将写入的一部分**数据集**使用 XSLT 样式表以 HTML 文件。 下面是该 XSLT 样式表的内容。  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
   
 <xsl:template match="CustomerOrders">  
@@ -60,10 +66,10 @@ caps.handback.revision: 4
 </xsl:stylesheet>  
 ```  
   
- 以下代码填充 **DataSet** 并应用 XSLT 样式表。  
+ 以下代码填充**数据集**并应用 XSLT 样式表。  
   
 > [!NOTE]
->  当应用 XSLT 样式表的 **DataSet** 包含关系时，如果为每个嵌套关系将 <xref:System.Data.DataRelation> 的 **Nested** 属性设置为 **true**，将获得最佳性能。  此设置使您可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。  有关嵌套关系的更多信息，请参见[嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+>  如果要将应用到一个 XSLT 样式表**数据集**包含关系，则您实现最佳性能，如果你设置**嵌套**属性<xref:System.Data.DataRelation>到**true**为每个嵌套关系。 此设置使你可以使用 XSLT 样式表，执行正常的由上而下处理以遍历层次结构和转换数据，而不是使用对性能要求较高的 XPath 定位轴（例如，样式表节点测试表达式中前面的同级和后面的同级）来遍历层次结构。 有关嵌套关系的详细信息，请参阅[嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -127,6 +133,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## 请参阅  
- [数据集与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

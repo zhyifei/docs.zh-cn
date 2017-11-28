@@ -1,30 +1,21 @@
 ---
 title: "处理异步应用中的重新进入 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a917f88d3d6105f836dc67ef8a9ec92efc300d7a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd51c81c9589831146942ad9f0eae3642d4678e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>处理异步应用中的重新进入 (C#)
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  
@@ -729,6 +720,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 12. 从[禁用“开始”按钮](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)、[取消并重启操作](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)或[运行多个操作并将输出排入队列](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中进行更改以处理重新进入。  
   
 ## <a name="see-also"></a>另请参阅  
- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-

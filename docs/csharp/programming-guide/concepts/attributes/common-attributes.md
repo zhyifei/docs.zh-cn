@@ -1,30 +1,21 @@
 ---
 title: "通用属性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
@@ -67,7 +58,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.AssemblyFlagsAttribute>|指定程序集是否支持在同一计算机上、同一进程中或同一应用程序域中并行执行。|  
   
 ### <a name="informational-attributes"></a>信息性特性  
- 信息性特性可用于提供程序集的其他公司或产品信息。 下表显示 <xref:System.Reflection?displayProperty=fullName> 命名空间中定义的信息性属性。  
+ 信息性特性可用于提供程序集的其他公司或产品信息。 下表显示 <xref:System.Reflection?displayProperty=nameWithType> 命名空间中定义的信息性属性。  
   
 |特性|目标|  
 |---------------|-------------|  
@@ -80,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.CLSCompliantAttribute>|指示程序集是否符合公共语言规范 (CLS)。|  
   
 ### <a name="assembly-manifest-attributes"></a>程序集清单特性  
- 程序集清单特性可用于提供程序集清单中的信息。 这些信息包括标题、说明、默认别名和配置。 下表显示 <xref:System.Reflection?displayProperty=fullName> 命名空间中定义的程序集清单属性。  
+ 程序集清单特性可用于提供程序集清单中的信息。 这些信息包括标题、说明、默认别名和配置。 下表显示 <xref:System.Reflection?displayProperty=nameWithType> 命名空间中定义的程序集清单属性。  
   
 |特性|目标|  
 |---------------|-------------|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a>调用方信息特性  
  通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。  
   
- 若要获取成员调用方信息，可以使用应用于可选参数的特性。 每个可选参数指定一个默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空间中定义的调用方信息特性：  
+ 若要获取成员调用方信息，可以使用应用于可选参数的特性。 每个可选参数指定一个默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：  
   
 |特性|描述|类型|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  有关调用方信息特性的详细信息，请参阅[调用方信息 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [特性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+ [特性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

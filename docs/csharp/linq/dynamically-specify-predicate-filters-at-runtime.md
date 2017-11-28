@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
+ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e724428bce09e2b2fa20b9391ad131424e16413
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在运行时动态指定谓词筛选器
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 07/28/2017
   
 4.  将类 `Program` 替换为以下代码。  
   
-     [!code-cs[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
+     [!code-csharp[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  将以下行添加到类 `DynamicPredicates` 中 `ids` 声明下的 `Main` 方法。  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  复制下面的方法，并将其粘贴到类 `DynamicPredicates`。  
   
-     [!code-cs[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
+     [!code-csharp[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  在 `Main` 方法中，将对 `QueryByID` 的调用替换为以下调用，该调用将 `args` 数组中的第一个元素作为其参数发送：`QueryByYear(args[0])`。  
   
@@ -78,6 +76,5 @@ ms.lasthandoff: 07/28/2017
   
  
 ## <a name="see-also"></a>另请参阅  
- [LINQ 查询表达式](index.md)   
+ [LINQ 查询表达式](index.md)  
  [where 子句](../language-reference/keywords/where-clause.md)
-

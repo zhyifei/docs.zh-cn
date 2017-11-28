@@ -1,25 +1,21 @@
 ---
 title: "LINQ to XML 轴概述 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3472a6deefd8d4c3cafec2c538c8d0a8b9f2e470
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 轴概述 (C#)
 创建 XML 树或将 XML 文档加载到 XML 树之后，可以进行查询，从而查找元素和属性并检索它们的值。 通过*轴方法*（也叫做*轴*）来检索集合。 一些轴就是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 另一些轴是 <xref:System.Xml.Linq.Extensions> 类中的扩展方法。 实现为扩展方法的轴对集合进行操作，然后返回集合。  
@@ -68,4 +64,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ to XML 轴 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

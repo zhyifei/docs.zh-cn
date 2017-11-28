@@ -1,15 +1,12 @@
 ---
 title: "创建、删除和移动文件和目录 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
 - I/O [Visual Basic], deleting folders
@@ -31,29 +28,14 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 388d8567235230003f0b770c2266e4a4d77ca754
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00144ca80e267ef2f24df0bdaa1c9f689a43af77
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>创建、删除和移动文件和目录 (Visual Basic)
 本节列出了与在 Visual Basic 中创建、删除、移动和重命名文件及目录相关的任务。  
@@ -147,4 +129,3 @@ ms.lasthandoff: 07/28/2017
   
  [写入文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  列出涉及写入文件的任务。
-

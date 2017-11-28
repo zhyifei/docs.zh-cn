@@ -14,16 +14,15 @@ helpviewer_keywords:
 - concurrency [.NET Framework]
 - .NET Framework, concurrency
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 589bb8fc36d95a48930e4b51a096e7db18905397
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="parallel-processing-and-concurrency-in-the-net-framework"></a>.NET Framework 中的并行处理和并发
 .NET Framework 提供了多种使用多个执行线程的方式，使应用程序在响应用户的同时，最大程度提高用户计算机的性能。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另请参阅  
  [开发指南](../../docs/framework/development-guide.md)
-

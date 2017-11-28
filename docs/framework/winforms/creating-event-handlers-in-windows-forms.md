@@ -1,33 +1,34 @@
 ---
-title: "在 Windows 窗体中创建事件处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "事件处理程序 [Windows 窗体]"
-  - "事件处理 [Windows 窗体]"
-  - "事件 [Windows 窗体], 事件处理程序"
-  - "Windows 窗体控件, 事件处理"
-  - "Windows 窗体, 事件处理"
+title: "在 Windows 窗体中创建事件处理程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event handling [Windows Forms]
+- Windows Forms controls, event handling
+- Windows Forms, event handling
+- events [Windows Forms], event handlers
+- event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0625d5272b4c3ae4f21793d0b0fc8645158e6a2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 在 Windows 窗体中创建事件处理程序
-事件处理程序是代码中的过程，用于确定事件（例如用户单击按钮或消息队列收到消息）发生时要执行的操作。  引发事件时，将执行收到该事件的一个或多个事件处理程序。  可以将事件分配给多个处理程序，并且可以动态更改处理特定事件的方法。  还可以使用 Windows 窗体设计器来创建事件处理程序。  
+# <a name="creating-event-handlers-in-windows-forms"></a>在 Windows 窗体中创建事件处理程序
+事件处理程序是代码中的过程，用于确定事件（例如用户单击按钮或消息队列收到消息）发生时要执行的操作。 引发事件时，将执行收到该事件的一个或多个事件处理程序。 可以将事件分配给多个处理程序，并且可以动态更改处理特定事件的方法。 还可以使用 Windows 窗体设计器来创建事件处理程序。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [事件概述](../../../docs/framework/winforms/events-overview-windows-forms.md)  
  解释事件模型和委托的角色。  
   
@@ -43,12 +44,12 @@ caps.handback.revision: 22
  [Windows 窗体中的事件顺序](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  描述在 Windows 窗体控件中引发事件的顺序。  
   
- [如何：使用设计器创建事件处理程序](http://msdn.microsoft.com/zh-cn/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [如何：使用设计器创建事件处理程序](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  
  描述如何使用 Windows 窗体设计器来创建事件处理程序。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [事件](../../../docs/standard/events/index.md)  
  提供一些指向有关使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 处理和引发事件的主题的链接。  
   
- [有关 Visual Basic 中继承的事件处理程序的疑难解答](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)  
+ [Visual Basic 中继承的事件处理程序疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
  列出了继承的组件中的事件处理程序所发生的常见问题。

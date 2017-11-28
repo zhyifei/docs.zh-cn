@@ -1,30 +1,21 @@
 ---
 title: "演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
@@ -49,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
 -   不嵌入常量。  
   
--   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 类不支持将嵌入类型作为密钥。 可以实现自己的字典类型以支持将嵌入类型作为密钥。  
+-   <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类不支持将嵌入类型作为密钥。 可以实现自己的字典类型以支持将嵌入类型作为密钥。  
   
  本演练中将执行以下操作：  
   
@@ -75,9 +66,9 @@ ms.lasthandoff: 07/28/2017
   
 3.  在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。 将文件重命名为 `ISampleInterface.cs`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。  
   
-4.  右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“生成”选项卡。 将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。  
+4.  右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。  
   
-5.  在编辑项目属性期间，单击“签名”选项卡。 选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
+5.  在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
   
 6.  打开 ISampleInterface.cs 文件。 将以下代码添加到 ISampleInterface 类文件，以创建 ISampleInterface 接口。  
   
@@ -123,9 +114,9 @@ ms.lasthandoff: 07/28/2017
   
 3.  在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。 将文件重命名为 `SampleClass.cs`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。  
   
-4.  右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“生成”选项卡。 将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
+4.  右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
   
-5.  在编辑项目属性期间，单击“签名”选项卡。 选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
+5.  在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
   
 6.  右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”。  
   
@@ -168,7 +159,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `TypeEquivalenceClient`，然后单击“确定”。 新项目创建完成。  
   
-3.  右键单击 TypeEquivalenceClient 项目，然后单击“属性”。 单击“生成”选项卡。 将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
+3.  右键单击 TypeEquivalenceClient 项目，然后单击“属性”。 单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
   
 4.  右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”。  
   
@@ -210,7 +201,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。  
   
-2.  在“打开项目”对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“应用程序”  选项卡。 单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。  
+2.  在“打开项目”对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“应用程序”  选项卡。单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。  
   
 3.  打开 SampleInterface.cs 文件。 将以下代码行添加到 ISampleInterface 接口。  
   
@@ -230,7 +221,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。  
   
-2.  在“打开项目”对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“应用程序”  选项卡。 单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。  
+2.  在“打开项目”对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“应用程序”  选项卡。单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。  
   
 3.  打开 SampleClass.cs 文件。 将以下代码行添加到 SampleClass 类。  
   
@@ -249,9 +240,8 @@ ms.lasthandoff: 07/28/2017
   
 6.  在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。  
   
-## <a name="see-also"></a>请参阅  
- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)   
+## <a name="see-also"></a>另请参阅  
+ [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+ [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)  
  [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

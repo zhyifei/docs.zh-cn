@@ -6,18 +6,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
+ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
 .NET 是独立的语言。 这意味着，开发人员可使用面向 .NET 实现的多种语言之一（例如 C#、F# 和 Visual Basic）进行开发。 可访问针对 .NET 实现开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果你是组件开发人员，无论组件采用哪种语言，均可由任何 .NET 应用程序访问。
@@ -2952,5 +2953,4 @@ vbc example.vb /r:UtilityLib.dll
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
 

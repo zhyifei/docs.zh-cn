@@ -7,5 +7,3 @@
 ## [如何：使用正则表达式搜索字符串](how-to-search-strings-using-regular-expressions.md)
 ## [如何：确定字符串是否表示数值](how-to-determine-whether-a-string-represents-a-numeric-value.md)
 ## [如何：将字符串转换为 DateTime](how-to-convert-a-string-to-a-datetime.md)
-## [如何：在旧式编码与 Unicode 之间转换](how-to-convert-between-legacy-encodings-and-unicode.md)
-## [如何：将 RTF 转换为纯文本](how-to-convert-rtf-to-plain-text.md)

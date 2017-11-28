@@ -14,30 +14,27 @@ helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/25/2017
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
 
 ## <a name="introduction"></a>介绍
-
 兼容性是每版 .NET 要实现的非常重要的目标。 兼容性可确保每个版本都具有累加特征，以便旧版本仍能正常使用。 然而，更改旧功能（以便提升性能、解决安全问题或修复 bug）可能会导致在更高版本 .NET 上运行的现有代码或应用出现兼容性问题。 .NET Framework 可识别重定目标更改和运行时更改。 重定目标更改会影响定位特定版本的 .NET Framework、但在更高版本 .NET 上运行的应用。 运行时更改会影响在特定版本 .NET 上运行的所有应用。
 
 每个应用都定位特定版本的 .NET Framework，这可以通过下列方式指定：
 
-- 在 Visual Studio 中定义目标框架。
-- 在项目文件中指定目标框架。
-- 向源代码应用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>。
+* 在 Visual Studio 中定义目标框架。
+* 在项目文件中指定目标框架。
+* 向源代码应用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>。
 
 如果应用在比目标 .NET 版本更高的版本上运行，.NET Framework 会通过怪异的行为来模拟旧版目标版本。 也就是说，应用虽然在更高版本的 Framework 上运行，但行为就像在旧版本 .NET 上运行一样。 .NET Framework 各版本之间的许多兼容性问题都是通过这种怪异的模型进行缓解。
 
@@ -82,16 +79,14 @@ ms.lasthandoff: 07/28/2017
 -   可用诊断的 ID
 
 ## <a name="usage"></a>用法
-
 首先，从下面选择一种兼容性更改类型：
 
-- [重定目标更改](./retargeting/index.md)
-- [运行时更改](./runtime/index.md)
+* [重定目标更改](./retargeting/index.md)
+* [运行时更改](./runtime/index.md)
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[新增功能](../../../docs/framework/whats-new/index.md)   
-[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
-
+* [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [新增功能](../../../docs/framework/whats-new/index.md)
+* [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)

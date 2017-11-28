@@ -1,44 +1,26 @@
 ---
 title: "如何：在 Visual Basic 中读取二进制文件"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- binary files, reading from
+- binary files [Visual Basic], reading from
 - I/O [Visual Basic], reading from binary files
-- ReadAllBytes method, reading from binary files
+- ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea6056f7d33b1137abb19b24246ce6874ff4d008
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5c0a093073b9a064629ae13a52a2295ad184b81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中读取二进制文件
 `My.Computer.FileSystem` 对象提供用于读取二进制文件的 `ReadAllBytes` 方法。  
@@ -77,9 +59,8 @@ ms.lasthandoff: 07/28/2017
  在应用程序中使用输入的数据之前，需验证所有的输入内容。 文件的内容可能不是预期内容，并且用来读取该文件的方法可能失败。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>   
- [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
+ [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
  [将数据存储到剪贴板以及从剪贴板读取数据](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)
-

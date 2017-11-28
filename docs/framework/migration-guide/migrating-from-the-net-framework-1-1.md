@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5757894a63ed556413147b8ef8c85c2d31ef11a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="migrating-from-the-net-framework-11"></a>从 .NET Framework 1.1 迁移
 [!INCLUDE[win7](../../../includes/win7-md.md)] 及更高版本的 Windows 操作系统不支持 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]。 因此，面向 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 的应用程序在未进行修改的情况下将不会在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更高版本的操作系统上运行。 本主题介绍了在 [!INCLUDE[win7](../../../includes/win7-md.md)] 及更高版本的 Windows 操作系统控制下运行定位 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 的应用程序时需要执行的步骤。 有关 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 的详细信息，请参阅[在 Windows 8 及更高版本上运行 .NET Framework 1.1 应用程序](../../../docs/framework/install/run-net-framework-1-1-apps.md)。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 07/28/2017
  弃用的类型和成员对重定目标的应用程序和重新编译的应用程序产生的影响略有不同。 使用已过时的类型和成员将不会影响重定目标的应用程序，除非已从其程序集中物理删除这些过时的类型或成员。 重新编译使用过时的类型或成员的应用程序通常会产生编译器警告而不是编译器错误。 但某些情况下会产生编译器错误，且无法成功编译使用过时的类型或成员的代码。 在此情况下，你必须先重新编写调用过时的类型或成员的源代码，然后再重新编译应用程序。 若要详细了解已过时类型和成员，请参阅[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)。  
   
  若要评估自发布 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 后弃用的类型和成员的影响，请参阅[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)。 查看 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的过时类型和成员的列表。
-

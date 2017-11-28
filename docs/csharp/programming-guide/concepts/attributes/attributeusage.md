@@ -1,30 +1,21 @@
 ---
 title: AttributeUsage (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c008c1a696e93bc3b756a926a046aa5a6942bc10
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：  
@@ -154,12 +145,11 @@ A2
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Attribute>   
- <xref:System.Reflection>   
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [特性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [特性](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+ [特性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [特性](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
  [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

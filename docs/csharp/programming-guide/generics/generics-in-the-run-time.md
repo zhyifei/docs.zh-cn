@@ -1,38 +1,19 @@
 ---
 title: "运行时中的泛型（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], at run time
+helpviewer_keywords: generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5ef0b63b293ec277ebf9331e8f282ce2c1692d31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 661dff2d8ec2e12ab6a459660a5378f74e93b9c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>运行时中的泛型（C# 编程指南）
 泛型类型或方法编译为 Microsoft 中间语言 (MSIL) 时，它包含将其标识为具有类型参数的元数据。 如何使用泛型类型的 MSIL 根据所提供的类型参数是值类型还是引用类型而有所不同。  
@@ -41,11 +22,11 @@ ms.lasthandoff: 07/28/2017
   
  例如，假定程序代码声明了一个由整数构造的堆栈：  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
  此时，运行时生成一个专用版 <xref:System.Collections.Generic.Stack%601> 类，其中用整数相应地替换其参数。 现在，每当程序代码使用整数堆栈时，运行时都重新使用已生成的专用 <xref:System.Collections.Generic.Stack%601> 类。 在下面的示例中创建了两个整数堆栈实例，且它们共用 `Stack<int>` 代码的一个实例：  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
  但是，假定在代码中另一点上再创建一个将不同值类型（例如 `long` 或用户定义结构）作为参数的 <xref:System.Collections.Generic.Stack%601> 类。 其结果是，运行时在 MSIL 中生成另一个版本的泛型类型并在适当位置替换 `long`。 转换已不再必要，因为每个专用化泛型类本机包含值类型。  
   
@@ -53,25 +34,24 @@ ms.lasthandoff: 07/28/2017
   
  例如，假定有两个引用类型、一个 `Customer` 类和一个 `Order` 类，并假定已创建 `Customer` 类型的堆栈：  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
  此时，运行时生成一个专用版 <xref:System.Collections.Generic.Stack%601> 类，此类存储之后会被填写的引用类型，而不是存储数据。 假定下一行代码创建另一引用类型的堆栈，其名为 `Order`：  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
  不同于值类型，不会为 `Order` 类型创建 <xref:System.Collections.Generic.Stack%601> 类的另一专用版。 相反，创建专用版 <xref:System.Collections.Generic.Stack%601> 类的实例并将 `orders` 变量设置为引用此实例。 假定之后遇到一行创建 `Customer` 类型堆栈的代码：  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
  与之前使用通过 `Order` 类型创建的 <xref:System.Collections.Generic.Stack%601> 类一样，会创建专用 <xref:System.Collections.Generic.Stack%601> 类的另一个实例。 其中包含的指针设置为引用 `Customer` 类型大小的内存区。 由于引用类型的数量因程序不同而有较大差异，因此通过将编译器为引用类型的泛型类创建的专用类的数量减少至 1，泛型的 C# 实现可极大减少代码量。  
   
  此外，使用值类型或引用类型参数实例化泛型 C# 类时，反射可在运行时对其进行查询，且其实际类型和类型参数皆可被确定。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Generic>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [泛型简介](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
+ <xref:System.Collections.Generic>  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [泛型](~/docs/standard/generics/index.md)
-

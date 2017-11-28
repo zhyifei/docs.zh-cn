@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 58eeda82c66ecda6ffd714e808b006634ccba804
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任环境中运行 Intranet 应用程序
 从 .NET Framework 3.5 版 Service Pack 1 (SP1) 开始，应用程序及其库程序集可在网络共享中作为完全信任的程序集运行。 <xref:System.Security.SecurityZone.MyComputer> 区域证据自动添加到从 Intranet 上的共享加载的程序集。 此证据为这些程序集提供与计算机上程序集所具有的相同授予集（通常为完全信任）。 此功能不适用于 ClickOnce 应用程序或用于在主机上运行的应用程序。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另请参阅  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

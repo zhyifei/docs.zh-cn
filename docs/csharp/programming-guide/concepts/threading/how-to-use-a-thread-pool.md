@@ -1,30 +1,21 @@
 ---
 title: "如何：使用线程池 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 210a9235-83a6-420b-af52-2d6a58e5133f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9ad5ffb224821c67d227297f8a5a4a1476d77b0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f90262cdfa6e4d6c8c37c553e999d51fee736d6a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>如何：使用线程池 (C#)
 *线程池*是一种多线程处理形式，处理过程中将任务添加到队列，然后在创建线程后自动启动这些任务。 有关详细信息，请参阅[线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)。  
@@ -150,15 +141,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent>   
- [线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
- [线程处理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [线程池 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
+ [线程处理 [C#]](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [安全性](../../../../standard/security/index.md)
-

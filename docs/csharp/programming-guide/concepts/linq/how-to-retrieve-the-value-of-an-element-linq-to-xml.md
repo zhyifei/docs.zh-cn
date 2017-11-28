@@ -1,30 +1,26 @@
 ---
 title: "如何：检索元素的值 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: ceb803eff68f72378ca195120ed96990d62d3593
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70e60c799157c7aa577bb8abd1fa6aaad746d3d1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何：检索元素的值 (LINQ to XML) (C#)
-本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> 属性。  
+本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  
   
- 但是，对于 C#，强制转换通常是更好的方法。 在检索可能存在也可能不存在的元素（或属性）的值时，如果将元素或属性强制转换为可以为 null 的类型，则代码会更易于编写。 本主题最后一个示例对此进行了演示。 但是，无法通过强制转换设置元素的内容，而通过 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> 属性可以做到这一点。  
+ 但是，对于 C#，强制转换通常是更好的方法。 在检索可能存在也可能不存在的元素（或属性）的值时，如果将元素或属性强制转换为可以为 null 的类型，则代码会更易于编写。 本主题最后一个示例对此进行了演示。 但是，无法通过强制转换设置元素的内容，而通过 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性可以做到这一点。  
   
 ## <a name="example"></a>示例  
  若要检索元素的值，只需将 <xref:System.Xml.Linq.XElement> 对象强制转换为所需的类型即可。 任何时候都可以将元素强制转换为字符串，如下所示：  
@@ -159,4 +155,3 @@ v4:element does not exist
   
 ## <a name="see-also"></a>请参阅  
  [LINQ to XML 轴 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

@@ -1,41 +1,22 @@
 ---
 title: "await（C# 参考）"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- await_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 28be25d2f467ea5df4de50516bfa03347c77081e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="await-c-reference"></a>await（C# 参考）
 `await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。 任务表示正在进行的工作。  
@@ -48,12 +29,12 @@ ms.lasthandoff: 07/28/2017
 应用 `await` 运算符的任务通常由实现[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法调用返回。 包括返回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 `System.Threading.Tasks.ValueType<TResult>` 对象的方法。  
 
   
- 如下示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=fullName> 方法返回 `Task<byte[]>`。 当任务完成时，任务约定生成实际字节数组。 `await` 运算符挂起执行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法完成其操作。 同时，控制权会返回给 `GetPageSizeAsync` 的调用方。 任务结束执行时，`await` 表达式的计算结果为字节数组。  
+ 如下示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法返回 `Task<byte[]>`。 当任务完成时，任务约定生成实际字节数组。 `await` 运算符挂起执行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法完成其操作。 同时，控制权会返回给 `GetPageSizeAsync` 的调用方。 任务结束执行时，`await` 表达式的计算结果为字节数组。  
 
-[!code-cs[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  有关完整示例，请参阅[演练：使用 async 和 await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
+>  有关完整示例，请参阅[演练：使用 async 和 await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](http://go.microsoft.com/fwlink/?LinkID=255191)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
   
 如前一示例所示，如果 `await` 应用于返回 `Task<TResult>` 的方法调用的结果，则 `await` 表达式的类型为 `TResult`。 如果 `await` 应用于返回 `Task` 的方法调用的结果，则 `await` 表达式的类型为 `void`。 以下示例演示了差异。  
   
@@ -79,19 +60,18 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
   
 如果等待的任务返回异步方法取消，则 `await` 运算符会重新引发 <xref:System.OperationCanceledException>。  
   
-处于故障状态的单个任务可以反映多个异常。 例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 调用的结果。 等待此类任务时，等待操作仅重新引发异常之一。 但是，无法预测重新引发的异常。  
+处于故障状态的单个任务可以反映多个异常。 例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 调用的结果。 等待此类任务时，等待操作仅重新引发异常之一。 但是，无法预测重新引发的异常。  
   
 有关异步方法中的错误处理的示例，请参阅 [try catch](../../../csharp/language-reference/keywords/try-catch.md)。  
   
 ## <a name="example"></a>示例  
-下面的示例返回页面（页面 URL 作为命令行参数传递给页面）中的字符总数。 此示例调用 `GetPageLengthsAsync` 方法，此方法标记有 `async` 关键字。 而 `GetPageLengthsAsync` 方法使用 `await` 关键字等待对 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=fullName> 方法的调用。  
+下面的示例返回页面（页面 URL 作为命令行参数传递给页面）中的字符总数。 此示例调用 `GetPageLengthsAsync` 方法，此方法标记有 `async` 关键字。 而 `GetPageLengthsAsync` 方法使用 `await` 关键字等待对 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> 方法的调用。  
 
-[!code-cs[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-由于不支持在应用程序入口点中使用 `async` 和`await`，因此我们无法将 `async` 属性应用到 `Main` 方法，也无法等待 `GetPageLengthsAsync` 方法调用。 我们可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=fullName> 属性的值来确保 `Main` 方法等待异步操作完成。 对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName> 方法。 
+由于不支持在应用程序入口点中使用 `async` 和`await`，因此我们无法将 `async` 属性应用到 `Main` 方法，也无法等待 `GetPageLengthsAsync` 方法调用。 我们可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 属性的值来确保 `Main` 方法等待异步操作完成。 对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 
 
 ## <a name="see-also"></a>另请参阅  
 [使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)   
 [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 [async](../../../csharp/language-reference/keywords/async.md)
-

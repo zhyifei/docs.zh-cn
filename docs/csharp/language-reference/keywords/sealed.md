@@ -1,41 +1,22 @@
 ---
 title: "sealed（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - sealed
 - sealed_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- sealed keyword [C#]
+helpviewer_keywords: sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8248b451f0431286fdaba3583fc2031eb6cdbcd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8d0fe959eac03aad4f1ae1fada61c0ad2fd65cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sealed-c-reference"></a>sealed（C# 参考）
 应用于某个类时，`sealed` 修饰符可阻止其他类继承自该类。 在下面的示例中，类 `B` 继承自类 `A`，但没有类可以继承自类 `B`。  
@@ -50,7 +31,7 @@ sealed class B : A {}
 ## <a name="example"></a>示例  
  在下面的示例中，`Z` 继承自 `Y`，但 `Z` 无法替代在 `X` 中声明并在 `Y` 中密封的虚函数 `F`。  
   
- [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
  在类中定义新方法或属性时，可以通过不将它们声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md)，来防止派生类替代它们。  
   
@@ -65,7 +46,7 @@ sealed class B : A {}
  有关更多示例，请参阅[抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  在上面的示例中，可能会尝试使用以下语句从密封类继承：  
   
@@ -85,14 +66,13 @@ sealed class B : A {}
   
 -   派生类可能采用使它们无法再正常工作或按预期工作的方式来修改类的可能性。  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
+ [替代](../../../csharp/language-reference/keywords/override.md)  
  [virtual](../../../csharp/language-reference/keywords/virtual.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 653b91f899da5962132577fba0df6ecfcdfde4ae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
@@ -52,9 +50,9 @@ ms.lasthandoff: 07/28/2017
   
  例如，在沙盒应用程序域中运行的代码被限制于此列表所述的访问权限，除非该应用程序域授予其他权限。  
   
- 从 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 开始，尝试访问通常无法访问的成员将生成目标对象授权集的需求以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 以“完全信任”运行的代码（比如，从命令行启动的应用程序中的代码）始终可以满足这些权限。 （如本文后续部分所述，访问安全关键成员时会受到限制。）  
+ 从 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 开始，尝试访问通常无法访问的成员将生成目标对象授权集的需求以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 以“完全信任”运行的代码（比如，从命令行启动的应用程序中的代码）始终可以满足这些权限。 （如本文后续部分所述，访问安全关键成员时会受到限制。）  
   
- 沙盒应用程序域可以向 <xref:System.Security.Permissions.ReflectionPermission> 授予 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> 标志，如本文后续部分中的[访问通常不可访问的成员](#accessingNormallyInaccessible)中所述。  
+ 沙盒应用程序域可以向 <xref:System.Security.Permissions.ReflectionPermission> 授予 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志，如本文后续部分中的[访问通常不可访问的成员](#accessingNormallyInaccessible)中所述。  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>访问安全关键成员  
@@ -87,21 +85,21 @@ ms.lasthandoff: 07/28/2017
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>访问通常不可访问的成员  
  根据公共语言运行时的可访问性规则，若要使用反射来调用无法访问的成员，你的代码必须获得以下两个权限之一：  
   
--   若要允许代码调用任何非公共成员：代码必须获得带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+-   若要允许代码调用任何非公共成员：代码必须获得带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
     > [!NOTE]
     >  默认情况下，安全策略拒绝源于 Internet 的代码的权限。 此权限永远不会授权予源自 Internet 的代码。  
   
--   若要允许代码调用任何非公共成员，只要包含调用成员的程序集的授予集与包含调用代码的程序集的授予集相同或为其子集：你的代码必须授予带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+-   若要允许代码调用任何非公共成员，只要包含调用成员的程序集的授予集与包含调用代码的程序集的授予集相同或为其子集：你的代码必须授予带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
- 例如，假设你为应用程序域授予 Internet 权限以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则使用两个程序集 A 和 B 运行 Internet 应用程序。  
+ 例如，假设你为应用程序域授予 Internet 权限以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则使用两个程序集 A 和 B 运行 Internet 应用程序。  
   
 -   程序集 A 可以使用反射来访问程序集 B 的私有成员，因为程序集 B 的授予集不包括一个 A 尚未被授予的任何权限。  
   
 -   程序集 A 不能使用反射来访问 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集的私有成员（如 mscorlib.dll），因为 mscorlib.dll 是完全受信任的，因此有尚未被授予给程序集 A 的权限。代码访问安全性在运行时审核堆栈将引发 <xref:System.MemberAccessException>。  
   
 ## <a name="serialization"></a>序列化  
- 对于序列化，带 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=fullName> 标志的 <xref:System.Security.Permissions.SecurityPermission>，无论其访问级别是什么，都能够获取和设置序列化类型的成员。 此权限使代码可以发现并更改实例的私有状态。 （除被授予适当权限以外，在元数据中该类型必须[标记](../../../docs/standard/attributes/applying-attributes.md)为可序列化。）  
+ 对于序列化，带 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>，无论其访问级别是什么，都能够获取和设置序列化类型的成员。 此权限使代码可以发现并更改实例的私有状态。 （除被授予适当权限以外，在元数据中该类型必须[标记](../../../docs/standard/attributes/applying-attributes.md)为可序列化。）  
   
 ## <a name="parameters-of-type-methodinfo"></a>类型 MethodInfo 的参数  
  尤其是对受信任的代码，要避免编写采用 <xref:System.Reflection.MethodInfo> 参数的公共成员。 此类成员可能更容易受到恶意代码的攻击。 例如，考虑采用 <xref:System.Reflection.MethodInfo> 参数的高度受信任代码中的公共成员。 假定公共成员间接调用所提供参数 <xref:System.Reflection.MethodBase.Invoke%2A> 上的方法。 如果公共成员不执行必要的权限检查，对 <xref:System.Reflection.MethodBase.Invoke%2A> 方法的调用会一直成功，因为安全系统确定了该调用方为高度受信任的调用方。 即使恶意代码没有直接调用该方法的权限，它仍可以通过调用公共成员间接调用该方法。  
@@ -110,18 +108,17 @@ ms.lasthandoff: 07/28/2017
   
 -   以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，透明代码不能使用反射访问关键安全成员。  
   
--   <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
+-   <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
   
--   以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+-   以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>   
- <xref:System.Security.Permissions.ReflectionPermission>   
- <xref:System.Security.Permissions.SecurityPermission>   
- [安全更改](../../../docs/framework/security/security-changes.md)   
- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)   
- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [应用属性](../../../docs/standard/attributes/applying-attributes.md)   
+ <xref:System.Security.Permissions.ReflectionPermissionFlag>  
+ <xref:System.Security.Permissions.ReflectionPermission>  
+ <xref:System.Security.Permissions.SecurityPermission>  
+ [安全更改](../../../docs/framework/security/security-changes.md)  
+ [代码访问安全性](../../../docs/framework/misc/code-access-security.md)  
+ [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [应用特性](../../../docs/standard/attributes/applying-attributes.md)  
  [访问自定义属性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
-

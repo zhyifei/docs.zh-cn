@@ -1,30 +1,21 @@
 ---
 title: "多线程应用程序 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multithreaded-applications-c"></a>多线程应用程序 (C#)
 借助 C#，可以编写同时执行多个任务的应用程序。 可在单独的线程上执行可能妨碍其他任务的任务，这些线程是称为多线程处理或自由线程处理的进程。  
@@ -91,8 +82,7 @@ newThread.Abort();
  前台线程可无限制地运行，而后台线程将在最后一个前台线程停止后立即停止。 可以使用 <xref:System.Threading.Thread.IsBackground%2A> 属性来确定或更改线程的后台状态。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Thread>   
- [线程同步 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
- [多线程过程的参数和返回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
+ <xref:System.Threading.Thread>  
+ [线程同步 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
+ [多线程过程的参数和返回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)  
  [线程处理 [C#]](../../../../csharp/programming-guide/concepts/threading/index.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="translating-expression-trees"></a>转换表达式树
 
 [上一部分 -- 生成表达式](expression-trees-building.md)
@@ -205,4 +203,3 @@ Computed sum: 10
 你可以检查一组代码、对该代码进行任意更改，并执行更改后的版本。 由于表达式树是不可变的，你可以通过使用现有树的组件创建新树。 这样可使创建修改的表达式树所需的内存量最小。
 
 [下一部分 -- 总结](expression-trees-summary.md)
-

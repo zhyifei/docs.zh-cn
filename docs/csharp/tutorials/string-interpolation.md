@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
 
 借助字符串内插，可以将字符串中的占位符替换成字符串变量的值。 在低于 C# 6 的版本中，使用 `System.String.Format` 实现字符串内插。 虽然这样做是可行的，但由于要用到编号占位符，因此加大了读取难度且过程更为冗长。
@@ -46,23 +44,27 @@ dotnet new console
 
 此命令将创建基本的 .NET Core 项目，其中包含项目文件 *interpolated.csproj* 和源代码文件 *Program.cs*。 需要执行 `dotnet restore` 来还原编译此项目所需的依赖项。
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 若要运行程序，请使用 `dotnet run`。 此时，应该可以在控制台中看到“Hello, World”输出。
+
+
 
 ## <a name="intro-to-string-interpolation"></a>字符串内插简介
 
 使用 `System.String.Format` 在字符串中指定要被字符串后面的参数替换的“占位符”。 例如：
 
-[!code-csharp[String.Format 示例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 上面的代码将输出“My name is Matt Groves”。
 
 在 C# 6 中，定义内插字符串的方式为，在内插字符串前面添加 `$` 符号，然后直接在字符串中使用变量，而不使用 `String.Format`。 例如：
 
-[!code-csharp[内插示例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 不必局限于变量。 可以在括号内使用任意表达式。 例如：
 
-[!code-csharp[内插表达式示例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 上面的代码将输出：
 
@@ -80,7 +82,7 @@ This is line number 5
 
 例如，可以添加填充和数值格式：
 
-[!code-csharp[内插格式设置示例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 上面的代码将输出如下内容：
 
@@ -118,9 +120,8 @@ Console.WriteLine(localizeMe);
 
 例如：
 
-[!code-csharp[内插国际化示例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>结束语 
 
 此教程介绍了如何使用 C# 6 的字符串内插功能。 它主要是简化了 `String.Format` 简单语句的编写，而它的高级用途则存在一些注意事项。
-

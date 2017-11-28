@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="json-web-token-handler"></a>JSON Web 标记处理程序
 Windows Identity Foundation 的 JSON Web 标记处理程序扩展使你能够在应用程序中创建和验证 JSON Web 标记 (JWT)。 可将 JWT 标记处理程序配置为像其他内置安全标记处理程序一样在 WIF 管线中运行，但也可以单独使用它来在轻型应用程序中执行标记验证。 在使用 OAuth 2.0 持有人标记方案（例如，对 Microsoft Azure Active Directory 进行身份验证）时，JWT 标记处理程序尤其有用。  
@@ -39,4 +37,3 @@ Windows Identity Foundation 的 JSON Web 标记处理程序扩展使你能够在
 -   **验证 JWT 令牌**：JWT 令牌可由令牌处理程序的验证逻辑轻松验证，后者可作为应用程序的 WIF 管线的一部分或独立于 WIF 进行调用  
   
 -   **创建 JWT 令牌**：JWT 令牌处理程序可用于创建 JWT 标记以便在下游服务中进行授权
-

@@ -1,30 +1,21 @@
 ---
 title: "如何：从 XML 文件读取对象数据 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6a3389de2f3272a546a7380ef386f5d88666e6d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02ff7a209cd78c70c6e3c443105d27b33c6f0af4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何：从 XML 文件读取对象数据 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
@@ -79,8 +70,7 @@ public void ReadXML()
  始终验证输入，并且绝不会反序列化来自不受信任源的数据。 重新创建的对象会在具有对它进行反序列化的代码的权限的本地计算机上运行。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.IO.StreamWriter>   
- [如何：将对象数据写入 XML 文件 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)   
- [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ <xref:System.IO.StreamWriter>  
+ [如何：将对象数据写入 XML 文件 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)
-

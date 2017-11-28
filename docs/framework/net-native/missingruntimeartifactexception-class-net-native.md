@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6089336f0b4c37e0bf867fbb18376705848b4104
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e477a870107a8d4d8fbac9a3d4fb10a285158280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>缺少运行时间项目异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -49,14 +47,14 @@ ms.lasthandoff: 08/21/2017
   
 |属性|描述|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|获取提供有关异常的其他用户定义信息的键/值对集合。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string HelpLink { get; set; }`|获取或设置指向与此异常关联的帮助文件链接。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public int HResult { get; protected set; }`|获取/设置 `HRESULT`，即分配给一个特定异常的编码数值。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public Exception InnerException { get; }`|获取导致当前异常的异常。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string Message { get; }`|获取描述当前异常的消息。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string Source { get; set; }`|获取或设置导致错误的应用程序名称或对象。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public string StackTrace { get; }`|获取调用堆栈上的即时框架字符串表示形式。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public MethodBase TargetSite { get; }`|获取引发当前异常的方法。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
+|`public IDictionary Data { get; }`|获取提供有关异常的其他用户定义信息的键/值对集合。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public string HelpLink { get; set; }`|获取或设置指向与此异常关联的帮助文件链接。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public int HResult { get; protected set; }`|获取/设置 `HRESULT`，即分配给一个特定异常的编码数值。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public Exception InnerException { get; }`|获取导致当前异常的异常。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public string Message { get; }`|获取描述当前异常的消息。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public string Source { get; set; }`|获取或设置导致错误的应用程序名称或对象。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public string StackTrace { get; }`|获取调用堆栈上的即时框架字符串表示形式。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public MethodBase TargetSite { get; }`|获取引发当前异常的方法。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
   
 ## <a name="methods"></a>方法  
   
@@ -64,18 +62,18 @@ ms.lasthandoff: 08/21/2017
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|确定指定的对象是否等于当前对象。  （从 <xref:System.Object> 继承。）|  
 |`protected void Finalize()`|在垃圾回收将某一对象回收前允许该对象尝试释放资源并执行其他清理操作。 （从 <xref:System.Object> 继承。）|  
-|`public Exception GetBaseException()`|返回是一个或多个后续异常的根源的异常。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
+|`public Exception GetBaseException()`|返回是一个或多个后续异常的根源的异常。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
 |`public int GetHashCode()`|为 `MissingRuntimeArtifactException` 实例返回一个哈希代码。   （从 <xref:System.Object> 继承。）|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|设置一个包含有关异常信息的 <xref:System.Runtime.Serialization.SerializationInfo> 对象。  （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
-|`public Type GetType()`|获取当前实例的运行时类型。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|设置一个包含有关异常信息的 <xref:System.Runtime.Serialization.SerializationInfo> 对象。  （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
+|`public Type GetType()`|获取当前实例的运行时类型。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
 |`protected Object MemberwiseClone()`|创建当前对象的卷影副本。 （从 <xref:System.Object> 继承。）|  
-|`public string ToString()`|返回当前异常的字符串表示形式。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
+|`public string ToString()`|返回当前异常的字符串表示形式。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
   
 ## <a name="events"></a>事件  
   
 |Event|描述|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|当异常被序列化用来创建包含有关该异常的徐列出数据的异常状态对象时会出现该问题。 （从 <xref:System.Exception?displayProperty=fullName> 继承。）|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|当异常被序列化用来创建包含有关该异常的徐列出数据的异常状态对象时会出现该问题。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
   
 ## <a name="usage-details"></a>使用详情  
  当试图实例化一个类型或调用一个类型成员，并且尽管类型或成员的元数据存在但其实现已遭到删除的情况下，会引发 `MissingRuntimeArtifactException` 异常。  
@@ -91,6 +89,5 @@ ms.lasthandoff: 08/21/2017
  `MissingRuntimeArtifactException` 类不包括独有成员；它的所有成员都是从其基类即 <xref:System.MemberAccessException> 继承的。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-
