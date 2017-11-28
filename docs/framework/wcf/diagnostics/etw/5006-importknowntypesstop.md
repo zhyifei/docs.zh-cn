@@ -1,35 +1,38 @@
 ---
-title: "5006 - ImportKnownTypesStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 5006 - ImportKnownTypesStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e1786c1-cbdd-4427-b8fc-cbf86b8debae
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8fbec22b7e7c97050e490dc76649753d863c8807
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 5006 - ImportKnownTypesStop
-## 属性  
+# <a name="5006---importknowntypesstop"></a><span data-ttu-id="54ca4-102">5006 - ImportKnownTypesStop</span><span class="sxs-lookup"><span data-stu-id="54ca4-102">5006 - ImportKnownTypesStop</span></span>
+## <a name="properties"></a><span data-ttu-id="54ca4-103">属性</span><span class="sxs-lookup"><span data-stu-id="54ca4-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|5006|  
-|关键字|序列化|  
-|级别|详细|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="54ca4-104">ID</span><span class="sxs-lookup"><span data-stu-id="54ca4-104">ID</span></span>|<span data-ttu-id="54ca4-105">5006</span><span class="sxs-lookup"><span data-stu-id="54ca4-105">5006</span></span>|  
+|<span data-ttu-id="54ca4-106">关键字</span><span class="sxs-lookup"><span data-stu-id="54ca4-106">Keywords</span></span>|<span data-ttu-id="54ca4-107">序列化</span><span class="sxs-lookup"><span data-stu-id="54ca4-107">Serialization</span></span>|  
+|<span data-ttu-id="54ca4-108">级别</span><span class="sxs-lookup"><span data-stu-id="54ca4-108">Level</span></span>|<span data-ttu-id="54ca4-109">详细</span><span class="sxs-lookup"><span data-stu-id="54ca4-109">Verbose</span></span>|  
+|<span data-ttu-id="54ca4-110">通道</span><span class="sxs-lookup"><span data-stu-id="54ca4-110">Channel</span></span>|<span data-ttu-id="54ca4-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="54ca4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 当 ImportKnownTypes 停止时发出此事件。  
+## <a name="description"></a><span data-ttu-id="54ca4-112">描述</span><span class="sxs-lookup"><span data-stu-id="54ca4-112">Description</span></span>  
+ <span data-ttu-id="54ca4-113">当 ImportKnownTypes 停止时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="54ca4-113">This event is emitted when the ImportKnownTypes stops.</span></span>  
   
-## 消息  
- ImportKnownTypes 停止。  
+## <a name="message"></a><span data-ttu-id="54ca4-114">消息</span><span class="sxs-lookup"><span data-stu-id="54ca4-114">Message</span></span>  
+ <span data-ttu-id="54ca4-115">ImportKnownTypes 停止。</span><span class="sxs-lookup"><span data-stu-id="54ca4-115">ImportKnownTypes stop.</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="54ca4-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="54ca4-116">Details</span></span>

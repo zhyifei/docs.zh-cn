@@ -1,28 +1,38 @@
 ---
-title: "&lt;peer&gt; 的 &lt;certificate&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;peer&gt; 的 &lt;certificate&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bf53ec9538834fc6fdb098bff4f78ef1c726ef5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;peer&gt; 的 &lt;certificate&gt;
-指定对等方使用的证书。  
+# <a name="ltcertificategt-of-ltpeergt"></a><span data-ttu-id="fb7e2-102">&lt;peer&gt; 的 &lt;certificate&gt;</span><span class="sxs-lookup"><span data-stu-id="fb7e2-102">&lt;certificate&gt; of &lt;peer&gt;</span></span>
+<span data-ttu-id="fb7e2-103">指定对等方使用的证书。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-103">Specifies a certificate used by a peer.</span></span>  
   
-## 语法  
+ <span data-ttu-id="fb7e2-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="fb7e2-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-105">\<behaviors></span></span>  
+<span data-ttu-id="fb7e2-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="fb7e2-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-107">\<behavior></span></span>  
+<span data-ttu-id="fb7e2-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="fb7e2-109">\<对等 ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-109">\<peer></span></span>  
+<span data-ttu-id="fb7e2-110">\<证书 ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-110">\<certificate></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="fb7e2-111">语法</span><span class="sxs-lookup"><span data-stu-id="fb7e2-111">Syntax</span></span>  
   
+```xml  
 <certificate findValue = "String"   
 storeLocation = "CurrentUser/LocalMachine"  
 storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
@@ -30,41 +40,41 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 />  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fb7e2-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="fb7e2-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="fb7e2-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="fb7e2-114">特性</span><span class="sxs-lookup"><span data-stu-id="fb7e2-114">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|`findValue`|一个字符串，包含要在 X.509 证书存储中搜索的值。  此属性中包含的类型必须满足指定 `x509FindType` 的要求。  默认值为一个空字符串。|  
-|`storeLocation`|指定客户端可用于验证对等方的证书的 X.509 证书存储的位置。  包括以下有效值：<br /><br /> -   LocalMachine：分配给本地计算机的证书存储。<br />-   CurrentUser：分配给当前用户的证书存储。<br /><br /> 默认值为 LocalMachine。|  
-|`storeName`|指定要打开的 X.509 证书存储区的名称。  包括以下有效值：<br /><br /> -   AddressBook：其他用户的证书存储。<br />-   AuthRoot：第三方证书颁发机构 \(CA\) 的证书存储。<br />-   CertificateAuthority：中间证书颁发机构 \(CA\) 的证书存储。<br />-   Disallowed：吊销的证书的证书存储。<br />-   My：个人证书的证书存储。<br />-   Root：受信任的根证书颁发机构 \(CA\) 的证书存储。<br />-   TrustedPeople：直接受信任的人和资源的证书存储。<br />-   TrustedPublisher：直接受信任的发行者的证书存储。<br /><br /> 默认值为 My。|  
-|`X509FindType`|定义要执行的 X.509 搜索的类型。  包括以下有效值：<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 属性中包含的类型必须满足指定 `X509FindType` 的要求。<br /><br /> 默认值为 FindBySubjectDistinguishedName。|  
+|<span data-ttu-id="fb7e2-115">特性</span><span class="sxs-lookup"><span data-stu-id="fb7e2-115">Attribute</span></span>|<span data-ttu-id="fb7e2-116">描述</span><span class="sxs-lookup"><span data-stu-id="fb7e2-116">Description</span></span>|  
+|---------------|-----------------|  
+|`findValue`|<span data-ttu-id="fb7e2-117">一个字符串，包含要在 X.509 证书存储中搜索的值。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-117">A string that contains the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="fb7e2-118">此属性中包含的类型必须满足指定 `x509FindType` 的要求。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-118">The type contained in the attribute must satisfy the requirements of the specified `x509FindType`.</span></span> <span data-ttu-id="fb7e2-119">默认值为一个空字符串。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-119">The default is an empty string.</span></span>|  
+|`storeLocation`|<span data-ttu-id="fb7e2-120">指定客户端可用于验证对等方的证书的 X.509 证书存储的位置。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-120">Specifies the location of the X.509 certificate store that the client uses to validate the peer's certificate against.</span></span> <span data-ttu-id="fb7e2-121">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="fb7e2-121">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="fb7e2-122">-LocalMachine： 分配给本地计算机的证书存储。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-122">-   LocalMachine: the certificate store assigned to the local machine.</span></span><br /><span data-ttu-id="fb7e2-123">-CurrentUser： 分配给当前用户的证书存储。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-123">-   CurrentUser: the certificate store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="fb7e2-124">默认值为 LocalMachine。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-124">The default is LocalMachine.</span></span>|  
+|`storeName`|<span data-ttu-id="fb7e2-125">指定要打开的 X.509 证书存储区的名称。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-125">Specifies the name of the X.509 certificate store to open.</span></span> <span data-ttu-id="fb7e2-126">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="fb7e2-126">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="fb7e2-127">-AddressBook： 其他用户证书存储区。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-127">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="fb7e2-128">-AuthRoot： 证书存储第三方证书颁发机构 (Ca)。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-128">-   AuthRoot: Certificate store for third-party certificate authorities (CAs).</span></span><br /><span data-ttu-id="fb7e2-129">-CertificateAuthority： 中间证书颁发机构 (Ca) 证书存储区。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-129">-   CertificateAuthority: Certificate store for intermediate certificate authorities (CAs).</span></span><br /><span data-ttu-id="fb7e2-130">-不允许： 证书吊销的证书存储。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-130">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="fb7e2-131">-My： 个人证书的证书存储区。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-131">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="fb7e2-132">-Root： 受信任的根证书颁发机构 (Ca) 证书存储区。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-132">-   Root: Certificate store for trusted root certificate authorities (CAs).</span></span><br /><span data-ttu-id="fb7e2-133">-TrustedPeople： 直接受信任的人和资源的证书存储区。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-133">-   TrustedPeople: Certificate store for directly-trusted people and resources.</span></span><br /><span data-ttu-id="fb7e2-134">-TrustedPublisher： 直接受信任发布者证书存储区。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-134">-   TrustedPublisher: Certificate store for directly-trusted publishers.</span></span><br /><br /> <span data-ttu-id="fb7e2-135">默认值为 My。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-135">The default is My.</span></span>|  
+|`X509FindType`|<span data-ttu-id="fb7e2-136">定义要执行的 X.509 搜索的类型。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-136">Defines the type of X.509 search to be executed.</span></span> <span data-ttu-id="fb7e2-137">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="fb7e2-137">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="fb7e2-138">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="fb7e2-138">-   FindByThumbPrint</span></span><br /><span data-ttu-id="fb7e2-139">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="fb7e2-139">-   FindBySubjectName</span></span><br /><span data-ttu-id="fb7e2-140">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="fb7e2-140">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="fb7e2-141">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="fb7e2-141">-   FindByIssuerName</span></span><br /><span data-ttu-id="fb7e2-142">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="fb7e2-142">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="fb7e2-143">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="fb7e2-143">-   FindBySerialNumber</span></span><br /><span data-ttu-id="fb7e2-144">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="fb7e2-144">-   FindByTimeValid</span></span><br /><span data-ttu-id="fb7e2-145">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="fb7e2-145">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="fb7e2-146">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="fb7e2-146">-   FindByTemplateName</span></span><br /><span data-ttu-id="fb7e2-147">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="fb7e2-147">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="fb7e2-148">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="fb7e2-148">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="fb7e2-149">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="fb7e2-149">-   FindByExtension</span></span><br /><span data-ttu-id="fb7e2-150">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="fb7e2-150">-   FindByKeyUsage</span></span><br /><span data-ttu-id="fb7e2-151">-和 FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="fb7e2-151">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="fb7e2-152">`findValue` 属性中包含的类型必须满足指定 `X509FindType` 的要求。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-152">The type contained in the `findValue` attribute must satisfy the requirements of the specified `X509FindType`.</span></span><br /><br /> <span data-ttu-id="fb7e2-153">默认值为 FindBySubjectDistinguishedName。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-153">The default value is FindBySubjectDistinguishedName.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="fb7e2-154">子元素</span><span class="sxs-lookup"><span data-stu-id="fb7e2-154">Child Elements</span></span>  
+ <span data-ttu-id="fb7e2-155">无。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-155">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="fb7e2-156">父元素</span><span class="sxs-lookup"><span data-stu-id="fb7e2-156">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<peer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|指定对等节点的当前凭据。|  
+|<span data-ttu-id="fb7e2-157">元素</span><span class="sxs-lookup"><span data-stu-id="fb7e2-157">Element</span></span>|<span data-ttu-id="fb7e2-158">描述</span><span class="sxs-lookup"><span data-stu-id="fb7e2-158">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="fb7e2-159">\<对等 ></span><span class="sxs-lookup"><span data-stu-id="fb7e2-159">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|<span data-ttu-id="fb7e2-160">指定对等节点的当前凭据。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-160">Specifies the current credentials for a peer node.</span></span>|  
   
-## 备注  
- 此配置元素包含对对等网格中的邻居进行身份验证时使用的 `X509Certificate2` 实例。  
+## <a name="remarks"></a><span data-ttu-id="fb7e2-161">备注</span><span class="sxs-lookup"><span data-stu-id="fb7e2-161">Remarks</span></span>  
+ <span data-ttu-id="fb7e2-162">此配置元素包含对对等网格中的邻居进行身份验证时使用的 `X509Certificate2` 实例。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-162">This configuration element contains an `X509Certificate2` instance used when authenticating neighbors in the peer mesh.</span></span>  
   
- 有关对等编程的更多信息，请参见[对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+ <span data-ttu-id="fb7e2-163">有关对等编程的详细信息，请参阅[对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。</span><span class="sxs-lookup"><span data-stu-id="fb7e2-163">For more information about peer-to-peer programming, see [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>   
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>   
- <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>   
- <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>   
- <xref:System.ServiceModel.Security.PeerCredential>   
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)   
- [Peer Channel Message Authentication](http://msdn.microsoft.com/zh-cn/80e73386-514e-4c30-9e4a-b9ca8c173a95)   
- [Peer Channel Custom Authentication](http://msdn.microsoft.com/zh-cn/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)   
- [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="fb7e2-164">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fb7e2-164">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>  
+ <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  
+ <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>  
+ <xref:System.ServiceModel.Security.PeerCredential>  
+ [<span data-ttu-id="fb7e2-165">使用证书</span><span class="sxs-lookup"><span data-stu-id="fb7e2-165">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="fb7e2-166">对等网络</span><span class="sxs-lookup"><span data-stu-id="fb7e2-166">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="fb7e2-167">对等通道消息身份验证</span><span class="sxs-lookup"><span data-stu-id="fb7e2-167">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="fb7e2-168">对等通道自定义身份验证</span><span class="sxs-lookup"><span data-stu-id="fb7e2-168">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="fb7e2-169">保护对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="fb7e2-169">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [<span data-ttu-id="fb7e2-170">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="fb7e2-170">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

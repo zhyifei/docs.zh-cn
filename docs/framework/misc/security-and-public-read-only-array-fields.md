@@ -1,39 +1,36 @@
 ---
-title: "安全和公共只读数组字段 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "安全性 [.NET Framework], 公共只读数组字段"
+title: "安全和公共只读数组字段"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ae2e9a7dd9e08344c254b52c7139c6d1dd2776a3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 安全和公共只读数组字段
-一定不要使用托管库的公共只读数组字段来定义应用程序的边界行为或安全性，因为公共只读数组字段可以被修改。  
+# <a name="security-and-public-read-only-array-fields"></a><span data-ttu-id="4423d-102">安全和公共只读数组字段</span><span class="sxs-lookup"><span data-stu-id="4423d-102">Security and Public Read-only Array Fields</span></span>
+<span data-ttu-id="4423d-103">切勿使用托管库的公共的只读数组字段来定义的边界行为或应用程序的安全，因为可以修改只读公共数组字段。</span><span class="sxs-lookup"><span data-stu-id="4423d-103">Never use read-only public array fields from managed libraries to define the boundary behavior or security of your applications because read-only public array fields can be modified.</span></span>  
   
-## 备注  
- 某些 .NET Framework 类中提供包含平台特定边界参数的只读公共字段。例如，<xref:System.IO.Path.InvalidPathChars> 字段是一个数组，该数组描述文件路径字符串中不允许使用的字符。在整个 .NET Framework 中存在许多类似的字段。  
+## <a name="remarks"></a><span data-ttu-id="4423d-104">备注</span><span class="sxs-lookup"><span data-stu-id="4423d-104">Remarks</span></span>  
+ <span data-ttu-id="4423d-105">一些.NET framework 类包括只读包含特定于平台的边界参数的公共字段。</span><span class="sxs-lookup"><span data-stu-id="4423d-105">Some .NET framework classes include read-only public fields that contain platform-specific boundary parameters.</span></span>  <span data-ttu-id="4423d-106">例如，<xref:System.IO.Path.InvalidPathChars>字段是一个数组，其中描述的文件路径字符串中不允许使用的字符。</span><span class="sxs-lookup"><span data-stu-id="4423d-106">For example, the <xref:System.IO.Path.InvalidPathChars> field is an array that describes the characters that are not allowed in a file path string.</span></span>  <span data-ttu-id="4423d-107">许多类似的字段会显示整个.NET Framework。</span><span class="sxs-lookup"><span data-stu-id="4423d-107">Many similar fields are present throughout the .NET Framework.</span></span>  
   
- 可以通过您的代码或共享其应用程序域的代码来修改公共只读字段（如 <xref:System.IO.Path.InvalidPathChars>）的值。不应使用这样的公共只读数组字段来定义应用程序的边界行为。否则，恶意代码可能会更改边界定义并以出乎意料的方式使用您的代码。  
+ <span data-ttu-id="4423d-108">公共只读字段的值喜欢<xref:System.IO.Path.InvalidPathChars>可通过你的代码或共享代码的应用程序域的代码修改。</span><span class="sxs-lookup"><span data-stu-id="4423d-108">The values of public read-only fields like <xref:System.IO.Path.InvalidPathChars> can be modified by your code or code that shares your code’s application domain.</span></span>  <span data-ttu-id="4423d-109">不应使用如下公共的只读数组字段来定义你的应用程序的边界行为。</span><span class="sxs-lookup"><span data-stu-id="4423d-109">You should not use read-only public array fields like this to define the boundary behavior of your applications.</span></span>  <span data-ttu-id="4423d-110">如果这样做，恶意代码可以修改的边界定义，以意想不到的方式使用您的代码。</span><span class="sxs-lookup"><span data-stu-id="4423d-110">If you do, malicious code can alter the boundary definitions and use your code in unexpected ways.</span></span>  
   
- 在 .NET Framework 2.0 版和更高版本中，应使用可返回新数组的方法，而不应使用公共数组字段。例如，您不应使用 <xref:System.IO.Path.InvalidPathChars> 字段，而应使用 <xref:System.IO.Path.GetInvalidPathChars%2A> 方法。  
+ <span data-ttu-id="4423d-111">在版本 2.0 及更高版本的.NET Framework 中，应使用返回一个新数组，而不是使用公共数组字段的方法。</span><span class="sxs-lookup"><span data-stu-id="4423d-111">In version 2.0 and later of the .NET Framework, you should use methods that return a new array instead of using public array fields.</span></span>  <span data-ttu-id="4423d-112">例如，而不是使用<xref:System.IO.Path.InvalidPathChars>字段中，你应使用<xref:System.IO.Path.GetInvalidPathChars%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="4423d-112">For example, instead of using the <xref:System.IO.Path.InvalidPathChars> field, you should use the <xref:System.IO.Path.GetInvalidPathChars%2A> method.</span></span>  
   
- 注意，.NET Framework 类型不使用公共字段在内部定义边界类型。.NET Framework 改用单独的私有字段。更改这些公共字段的值不会改变 .NET Framework 类型的行为。  
+ <span data-ttu-id="4423d-113">请注意，.NET Framework 类型并不使用公共字段内部定义边界类型。</span><span class="sxs-lookup"><span data-stu-id="4423d-113">Note that the .NET Framework types do not use the public fields to define boundary types internally.</span></span>  <span data-ttu-id="4423d-114">相反，.NET Framework 使用单独的私有字段。</span><span class="sxs-lookup"><span data-stu-id="4423d-114">Instead, the .NET Framework uses separate private fields.</span></span>  <span data-ttu-id="4423d-115">更改这些公共字段的值不会更改.NET Framework 类型的行为。</span><span class="sxs-lookup"><span data-stu-id="4423d-115">Changing the values of these public fields does not alter the behavior of .NET Framework types.</span></span>  
   
-## 请参阅  
- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="4423d-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4423d-116">See Also</span></span>  
+ [<span data-ttu-id="4423d-117">安全编码准则</span><span class="sxs-lookup"><span data-stu-id="4423d-117">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -1,81 +1,79 @@
 ---
-title: "&lt;disableCommitThreadStack&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCommitThreadStack"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableCommitThreadStack> 元素"
-  - "disableCommitThreadStack 元素"
+title: "&lt;disableCommitThreadStack&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCommitThreadStack
+helpviewer_keywords:
+- <disableCommitThreadStack> element
+- disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8d74566b71501cf21081ac894048bb1c29e0ad94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;disableCommitThreadStack&gt; 元素
-指定在线程启动时是否提交完整线程堆栈。  
+# <a name="ltdisablecommitthreadstackgt-element"></a><span data-ttu-id="88372-102">&lt;disableCommitThreadStack&gt;元素</span><span class="sxs-lookup"><span data-stu-id="88372-102">&lt;disableCommitThreadStack&gt; Element</span></span>
+<span data-ttu-id="88372-103">指定在线程启动时是否提交完整线程堆栈。</span><span class="sxs-lookup"><span data-stu-id="88372-103">Specifies whether the full thread stack is committed when a thread is started.</span></span>  
   
- \<configuration\>  
-\<runtime\>  
-\<disableCommitThreadStack\>  
+ <span data-ttu-id="88372-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="88372-104">\<configuration></span></span>  
+<span data-ttu-id="88372-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="88372-105">\<runtime></span></span>  
+<span data-ttu-id="88372-106">\<disableCommitThreadStack ></span><span class="sxs-lookup"><span data-stu-id="88372-106">\<disableCommitThreadStack></span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="88372-107">语法</span><span class="sxs-lookup"><span data-stu-id="88372-107">Syntax</span></span>  
   
-```  
+```xml  
 <disableCommitThreadStack enabled="0|1"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="88372-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="88372-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="88372-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="88372-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="88372-110">特性</span><span class="sxs-lookup"><span data-stu-id="88372-110">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|enabled|必需的特性。<br /><br /> 指定是否禁止在线程启动时提交完整线程堆栈（默认行为）。|  
+|<span data-ttu-id="88372-111">特性</span><span class="sxs-lookup"><span data-stu-id="88372-111">Attribute</span></span>|<span data-ttu-id="88372-112">描述</span><span class="sxs-lookup"><span data-stu-id="88372-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="88372-113">enabled</span><span class="sxs-lookup"><span data-stu-id="88372-113">enabled</span></span>|<span data-ttu-id="88372-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="88372-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="88372-115">指定是否禁止在线程启动时提交完整线程堆栈（默认行为）。</span><span class="sxs-lookup"><span data-stu-id="88372-115">Specifies whether committing the full thread stack on thread startup (the default behavior) is disabled.</span></span>|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a><span data-ttu-id="88372-116">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="88372-116">enabled Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|0|不禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。|  
-|1|禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。|  
+|<span data-ttu-id="88372-117">值</span><span class="sxs-lookup"><span data-stu-id="88372-117">Value</span></span>|<span data-ttu-id="88372-118">描述</span><span class="sxs-lookup"><span data-stu-id="88372-118">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="88372-119">0</span><span class="sxs-lookup"><span data-stu-id="88372-119">0</span></span>|<span data-ttu-id="88372-120">不禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。</span><span class="sxs-lookup"><span data-stu-id="88372-120">Do not disable the default behavior of the common language runtime, which is to commit the full thread stack when a thread is started.</span></span>|  
+|<span data-ttu-id="88372-121">1</span><span class="sxs-lookup"><span data-stu-id="88372-121">1</span></span>|<span data-ttu-id="88372-122">禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。</span><span class="sxs-lookup"><span data-stu-id="88372-122">Disable the default behavior of the common language runtime, which is to commit the full thread stack when a thread is started.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="88372-123">子元素</span><span class="sxs-lookup"><span data-stu-id="88372-123">Child Elements</span></span>  
+ <span data-ttu-id="88372-124">无。</span><span class="sxs-lookup"><span data-stu-id="88372-124">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="88372-125">父元素</span><span class="sxs-lookup"><span data-stu-id="88372-125">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
+|<span data-ttu-id="88372-126">元素</span><span class="sxs-lookup"><span data-stu-id="88372-126">Element</span></span>|<span data-ttu-id="88372-127">描述</span><span class="sxs-lookup"><span data-stu-id="88372-127">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="88372-128">公共语言运行时和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="88372-128">The root element in every configuration file used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|`runtime`|<span data-ttu-id="88372-129">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="88372-129">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 备注  
- 公共语言运行时的默认行为是在线程启动时提交完整线程堆栈。 当必须在内存有限的服务器上创建大量线程，并且其中大多数线程都使用非常小的堆栈空间时，如果公共语言运行时在线程启动时不立即提交完整线程堆栈，则服务器可能会表现更好。  
+## <a name="remarks"></a><span data-ttu-id="88372-130">备注</span><span class="sxs-lookup"><span data-stu-id="88372-130">Remarks</span></span>  
+ <span data-ttu-id="88372-131">公共语言运行时的默认行为是在线程启动时提交完整线程堆栈。</span><span class="sxs-lookup"><span data-stu-id="88372-131">The default behavior of the common language runtime is to commit the full thread stack when a thread is started.</span></span> <span data-ttu-id="88372-132">当必须在内存有限的服务器上创建大量线程，并且其中大多数线程都使用非常小的堆栈空间时，如果公共语言运行时在线程启动时不立即提交完整线程堆栈，则服务器可能会表现更好。</span><span class="sxs-lookup"><span data-stu-id="88372-132">If a large number of threads must be created on a server that has limited memory, and most of those threads will use very little stack space, the server might perform better if the common language runtime does not commit the full thread stack immediately when a thread is started.</span></span>  
   
 > [!NOTE]
->  非托管主机可以使用 [STARTUP\_FLAGS](../../../../../ocs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) 枚举中的 `STARTUP_DISABLE_COMMITTHREADSTACK` 启动标志实现相同结果。  
+>  <span data-ttu-id="88372-133">非托管主机可以使用 `STARTUP_DISABLE_COMMITTHREADSTACK` STARTUP_FLAGS [枚举中的](../../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) 启动标志实现相同结果。</span><span class="sxs-lookup"><span data-stu-id="88372-133">Unmanaged hosts can use the `STARTUP_DISABLE_COMMITTHREADSTACK` startup flag in the [STARTUP_FLAGS](../../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeration to accomplish the same result.</span></span>  
   
-## 示例  
- 下面的示例演示如何禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。  
+## <a name="example"></a><span data-ttu-id="88372-134">示例</span><span class="sxs-lookup"><span data-stu-id="88372-134">Example</span></span>  
+ <span data-ttu-id="88372-135">下面的示例演示如何禁用公共语言运行时的默认行为（即在线程启动时提交完整线程堆栈）。</span><span class="sxs-lookup"><span data-stu-id="88372-135">The following example shows how to disable the default behavior of the common language runtime, which is to commit the full thread stack on thread startup.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableCommitThreadStack enabled="1" />  
@@ -83,6 +81,6 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="88372-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="88372-136">See Also</span></span>  
+ [<span data-ttu-id="88372-137">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="88372-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="88372-138">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="88372-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

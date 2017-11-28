@@ -1,33 +1,39 @@
 ---
-title: "如何：检测和解决提交冲突 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：检测到并解决冲突的提交"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8eb2e27ab034d464ba6978d9ddc063e623812619
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：检测和解决提交冲突
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了许多资源，用于检测和解决因多个用户更改数据库而产生的冲突。  有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+# <a name="how-to-detect-and-resolve-conflicting-submissions"></a><span data-ttu-id="72da9-102">如何：检测到并解决冲突的提交</span><span class="sxs-lookup"><span data-stu-id="72da9-102">How to: Detect and Resolve Conflicting Submissions</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="72da9-103"> 提供了许多资源，用于检测和解决因多个用户更改数据库而产生的冲突。</span><span class="sxs-lookup"><span data-stu-id="72da9-103"> provides many resources for detecting and resolving conflicts that stem from multi-user changes to the database.</span></span> <span data-ttu-id="72da9-104">有关详细信息，请参阅[如何： 管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。</span><span class="sxs-lookup"><span data-stu-id="72da9-104">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
   
-## 示例  
- 下面的示例显示了捕获 <xref:System.Data.Linq.ChangeConflictException> 异常的 `try`\/`catch` 块。  每个冲突的实体和成员信息会显示在控制台窗口中。  
+## <a name="example"></a><span data-ttu-id="72da9-105">示例</span><span class="sxs-lookup"><span data-stu-id="72da9-105">Example</span></span>  
+ <span data-ttu-id="72da9-106">下面的示例演示`try` / `catch`捕获的块<xref:System.Data.Linq.ChangeConflictException>异常。</span><span class="sxs-lookup"><span data-stu-id="72da9-106">The following example shows a `try`/`catch` block that catches a <xref:System.Data.Linq.ChangeConflictException> exception.</span></span> <span data-ttu-id="72da9-107">每个冲突的实体和成员信息会显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="72da9-107">Entity and member information for each conflict is displayed in the console window.</span></span>  
   
 > [!NOTE]
->  您必须将 `using System.Reflection` 指令（在 Visual Basic 中为 `Imports System.Reflection`）包含在内，以支持信息检索。  有关详细信息，请参阅<xref:System.Reflection>。  
+>  <span data-ttu-id="72da9-108">您必须将 `using System.Reflection` 指令（在 Visual Basic 中为 `Imports System.Reflection`）包含在内，以支持信息检索。</span><span class="sxs-lookup"><span data-stu-id="72da9-108">You must include the `using System.Reflection` directive (`Imports System.Reflection` in Visual Basic) to support the information retrieval.</span></span> <span data-ttu-id="72da9-109">有关更多信息，请参见<xref:System.Reflection>。</span><span class="sxs-lookup"><span data-stu-id="72da9-109">For more information, see <xref:System.Reflection>.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#2)]
  [!code-vb[DLinqSubmittingChanges#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#2)]  
   
-## 请参阅  
- [生成和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)   
- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="72da9-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="72da9-110">See Also</span></span>  
+ [<span data-ttu-id="72da9-111">进行和提交数据更改</span><span class="sxs-lookup"><span data-stu-id="72da9-111">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
+ [<span data-ttu-id="72da9-112">如何： 管理更改冲突</span><span class="sxs-lookup"><span data-stu-id="72da9-112">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

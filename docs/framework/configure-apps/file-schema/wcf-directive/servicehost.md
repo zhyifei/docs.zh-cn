@@ -1,28 +1,30 @@
 ---
-title: "@ServiceHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '@ServiceHost'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ed64a90131fcd8f2d9f2120c03db4a21d8dc6efe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# @ServiceHost
-将用于生成服务主机的工厂与要承载的服务以及访问或编译 .svc 文件中提供的宿主代码所需的其他编程方面相关联。  
+# <a name="servicehost"></a>@ServiceHost
+<span data-ttu-id="b2d2a-101">将用于生成服务主机的工厂与要承载的服务以及访问或编译 .svc 文件中提供的宿主代码所需的其他编程方面相关联。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-101">Associates the factory used to produce the service host with the service to be hosted and other programming aspects required to access or compile the hosting code provided in the .svc file.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="b2d2a-102">语法</span><span class="sxs-lookup"><span data-stu-id="b2d2a-102">Syntax</span></span>  
   
 ```  
-  
 <% @ServiceHost   
 Service = "Service, ServiceNamespace"   
 Factory = "Factory, FactoryNamespace"  
@@ -31,39 +33,39 @@ Language = "Language"
 CodeBehind = "CodeBehind"%>  
 ```  
   
-## 特性  
+## <a name="attributes"></a><span data-ttu-id="b2d2a-103">特性</span><span class="sxs-lookup"><span data-stu-id="b2d2a-103">Attributes</span></span>  
   
-#### 服务  
- 承载的服务的 CLR 类型名称。  此名称应为实现一个或多个服务协定的类型的限定名称。  
+#### <a name="service"></a><span data-ttu-id="b2d2a-104">服务</span><span class="sxs-lookup"><span data-stu-id="b2d2a-104">Service</span></span>  
+ <span data-ttu-id="b2d2a-105">承载的服务的 CLR 类型名称。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-105">The CLR type name of the service hosted.</span></span> <span data-ttu-id="b2d2a-106">此名称应为实现一个或多个服务协定的类型的限定名称。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-106">This should be a qualified name of a type that implements one or more of the service contacts.</span></span>  
   
-#### Factory  
- 用于实例化服务主机的服务主机工厂的 CLR 类型名称。  此属性是可选的。  如果未指定，则使用默认的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，这将返回 <xref:System.ServiceModel.ServiceHost> 的实例。  
+#### <a name="factory"></a><span data-ttu-id="b2d2a-107">Factory</span><span class="sxs-lookup"><span data-stu-id="b2d2a-107">Factory</span></span>  
+ <span data-ttu-id="b2d2a-108">用于实例化服务主机的服务主机工厂的 CLR 类型名称。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-108">The CLR type name of the service host factory used to instantiate the service host.</span></span> <span data-ttu-id="b2d2a-109">此属性是可选的。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-109">This attribute is optional.</span></span> <span data-ttu-id="b2d2a-110">如果未指定，则使用默认的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，这将返回 <xref:System.ServiceModel.ServiceHost> 的实例。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-110">If unspecified, the default <xref:System.ServiceModel.Activation.ServiceHostFactory> is used, which returns an instance of <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
-#### 调试  
- 指示是否应使用调试符号来编译 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务。  如果应使用调试符号编译 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务，则为 `true`；否则为 `false`。  
+#### <a name="debug"></a><span data-ttu-id="b2d2a-111">调试</span><span class="sxs-lookup"><span data-stu-id="b2d2a-111">Debug</span></span>  
+ <span data-ttu-id="b2d2a-112">指示是否应使用调试符号来编译 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-112">Indicates whether the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service should be compiled with debug symbols.</span></span> <span data-ttu-id="b2d2a-113">如果应使用调试符号编译 `true` 服务，则为 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]；否则为 `false`。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-113">`true` if the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service should be compiled with debug symbols; otherwise, `false`.</span></span>  
   
-#### 语言  
- 指定编译文件 \(.svc\) 中的所有内联代码时使用的语言。  这些值可以表示 .NET 支持的任何语言，包括 C\#、VB 和 JS，这三项分别表示 C\#、Visual Basic .NET 和 JScript .NET。  此属性是可选的。  
+#### <a name="language"></a><span data-ttu-id="b2d2a-114">语言</span><span class="sxs-lookup"><span data-stu-id="b2d2a-114">Language</span></span>  
+ <span data-ttu-id="b2d2a-115">指定编译文件 (.svc) 中的所有内联代码时使用的语言。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-115">Specifies the language used when compiling all the inline code within file (.svc).</span></span> <span data-ttu-id="b2d2a-116">这些值可以表示 .NET 支持的任何语言，包括 C#、VB 和 JS，这三项分别表示 C#、Visual Basic .NET 和 JScript .NET。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-116">The values can represent any .NET-supported language, including C#, VB, and JS, which refer to C#, Visual Basic .NET, and JScript .NET, respectively.</span></span> <span data-ttu-id="b2d2a-117">此属性是可选的。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-117">This attribute is optional.</span></span>  
   
-#### CodeBehind  
- 当实现 XML Web services 的类未驻留在相同的文件中，且尚未编译成程序集并放置在 \\Bin 目录中时，指定实现 XML Web services 的源文件。  
+#### <a name="codebehind"></a><span data-ttu-id="b2d2a-118">CodeBehind</span><span class="sxs-lookup"><span data-stu-id="b2d2a-118">CodeBehind</span></span>  
+ <span data-ttu-id="b2d2a-119">当实现 XML Web services 的类未驻留在相同的文件中，且尚未编译成程序集并放置在 \Bin 目录中时，指定实现 XML Web services 的源文件。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-119">Specifies the source file that implements the XML Web service, when the class that implements the XML Web service does not reside in the same file and has not been compiled into an assembly and placed in the \Bin directory.</span></span>  
   
-## 备注  
- 用于承载服务的 <xref:System.ServiceModel.ServiceHost> 是 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 编程模型中的一个扩展点。  由于 <xref:System.ServiceModel.ServiceHost> 可能属于宿主环境不应直接实例化的多态类型，因此使用工厂模式对其进行实例化。  
+## <a name="remarks"></a><span data-ttu-id="b2d2a-120">备注</span><span class="sxs-lookup"><span data-stu-id="b2d2a-120">Remarks</span></span>  
+ <span data-ttu-id="b2d2a-121">用于承载服务的 <xref:System.ServiceModel.ServiceHost> 是 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 编程模型中的一个扩展点。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-121">The <xref:System.ServiceModel.ServiceHost> used to host the service is a point of extensibility within the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] programming model.</span></span> <span data-ttu-id="b2d2a-122">由于 <xref:System.ServiceModel.ServiceHost> 可能属于宿主环境不应直接实例化的多态类型，因此使用工厂模式对其进行实例化。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-122">A factory pattern is used to instantiate the <xref:System.ServiceModel.ServiceHost> because it is, potentially, a polymorphic type that the hosting environment should not instantiate directly.</span></span>  
   
- 默认实现使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 创建 <xref:System.ServiceModel.ServiceHost> 的实例。  但您可以通过在 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令中指定工厂实现的 CLR 类型名称来提供自己的工厂（一个返回您的派生主机的工厂）。  
+ <span data-ttu-id="b2d2a-123">默认实现使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 创建 <xref:System.ServiceModel.ServiceHost> 的实例。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-123">The default implementation uses <xref:System.ServiceModel.Activation.ServiceHostFactory> to create an instance of <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="b2d2a-124">但你可以通过指定工厂实现中的 CLR 类型名称提供您自己的工厂 （一个用于返回派生的宿主） [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-124">But you can provide your own factory (one that returns your derived host) by specifying the CLR type name of your factory implementation in the [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.</span></span>  
   
- 若要使用自己的自定义服务主机工厂，而不使用默认工厂，只需在 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令中提供相应的类型名称，如下所示：  
+ <span data-ttu-id="b2d2a-125">若要使用你自己的自定义服务主机工厂而不是默认工厂，只需提供中的类型名称[ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令，如下所示：</span><span class="sxs-lookup"><span data-stu-id="b2d2a-125">To use you own custom service host factory instead of the default factory, just provide the type name in the [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive as follows:</span></span>  
   
+```xml  
+<% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
 ```  
-<% @ServiceHost Factory=”DerivedFactory” Service=”MyService” %>  
-```  
   
- 尽可能简化工厂实现。  如果具有大量的自定义逻辑，则应将这些逻辑放入宿主而不是工厂内，这样可以获得更好的代码重用性。  
+ <span data-ttu-id="b2d2a-126">尽可能简化工厂实现。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-126">Keep the factory implementations as light as possible.</span></span> <span data-ttu-id="b2d2a-127">如果具有大量的自定义逻辑，则应将这些逻辑放入宿主而不是工厂内，这样可以获得更好的代码重用性。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-127">If you have lots of custom logic, your code is more reusable if you put that logic inside your host instead of inside the factory.</span></span>  
   
- 例如，若要为 `MyService` 启用支持 AJAX 的终结点，请在 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令中为 `Factory` 属性的值指定 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，而不是使用默认的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，如以下示例所示。  
+ <span data-ttu-id="b2d2a-128">例如，若要启用 ajax 的终结点为`MyService`，指定<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>的值的`Factory`属性，而不是默认值<xref:System.ServiceModel.Activation.ServiceHostFactory>中[ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)作为指令下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="b2d2a-128">For example, to enable an AJAX-enabled endpoint for `MyService`, specify the <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> for the value of the `Factory` attribute, instead of the default <xref:System.ServiceModel.Activation.ServiceHostFactory>, in the [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive as shown in the following example.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="b2d2a-129">示例</span><span class="sxs-lookup"><span data-stu-id="b2d2a-129">Example</span></span>  
   
 ```  
 <% @ServiceHost   
@@ -74,5 +76,5 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## 请参阅  
- [自定义服务主机](../../../../../docs/framework/wcf/samples/custom-service-host.md)
+## <a name="see-also"></a><span data-ttu-id="b2d2a-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b2d2a-130">See Also</span></span>  
+ [<span data-ttu-id="b2d2a-131">自定义服务主机</span><span class="sxs-lookup"><span data-stu-id="b2d2a-131">Custom Service Host</span></span>](../../../../../docs/framework/wcf/samples/custom-service-host.md)

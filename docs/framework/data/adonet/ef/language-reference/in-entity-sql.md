@@ -1,56 +1,54 @@
 ---
-title: "IN (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: IN (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 553b2037ef9b1eead3a3f4745d0cb6fdfcde27ff
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# IN (Entity SQL)
-确定某个值是否与某个集合中的任何值匹配。  
+# <a name="in-entity-sql"></a><span data-ttu-id="ecf47-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ecf47-102">IN (Entity SQL)</span></span>
+<span data-ttu-id="ecf47-103">确定某个值是否与某个集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="ecf47-103">Determines whether a value matches any value in a collection.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="ecf47-104">语法</span><span class="sxs-lookup"><span data-stu-id="ecf47-104">Syntax</span></span>  
   
 ```  
-  
 value [ NOT ] IN expression  
 ```  
   
-## 参数  
+## <a name="arguments"></a><span data-ttu-id="ecf47-105">参数</span><span class="sxs-lookup"><span data-stu-id="ecf47-105">Arguments</span></span>  
  `value`  
- 返回匹配值的任何有效表达式。  
+ <span data-ttu-id="ecf47-106">返回匹配值的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="ecf47-106">Any valid expression that returns the value to match.</span></span>  
   
- \[ NOT \]  
- 指定对 IN 的 `Boolean` 结果取反。  
+ <span data-ttu-id="ecf47-107">[ NOT ]</span><span class="sxs-lookup"><span data-stu-id="ecf47-107">[ NOT ]</span></span>  
+ <span data-ttu-id="ecf47-108">指定对 IN 的 `Boolean` 结果取反。</span><span class="sxs-lookup"><span data-stu-id="ecf47-108">Specifies that the `Boolean` result of IN be negated.</span></span>  
   
  `expression`  
- 返回集合以测试是否具有匹配的任何有效表达式。 所有表达式都必须与 `value` 一样属于同一类型或属于公共基类型或派生类型。  
+ <span data-ttu-id="ecf47-109">返回集合以测试是否具有匹配的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="ecf47-109">Any valid expression that returns the collection to test for a match.</span></span> <span data-ttu-id="ecf47-110">所有表达式都必须与 `value` 一样属于同一类型或属于公共基类型或派生类型。</span><span class="sxs-lookup"><span data-stu-id="ecf47-110">All expressions must be of the same type or of a common base or derived type as `value`.</span></span>  
   
-## 返回值  
- 如果在集合中找到此值，则为 `true`；如果值为空或集合为空，则为空；否则为 `false`。 使用 NOT IN 可对 IN 的结果取反。  
+## <a name="return-value"></a><span data-ttu-id="ecf47-111">返回值</span><span class="sxs-lookup"><span data-stu-id="ecf47-111">Return Value</span></span>  
+ <span data-ttu-id="ecf47-112">如果在集合中找到此值，则为 `true`；如果值为空或集合为空，则为空；否则为 `false`。</span><span class="sxs-lookup"><span data-stu-id="ecf47-112">`true` if the value is found in the collection; null if the value is null or the collection is null; otherwise, `false`.</span></span> <span data-ttu-id="ecf47-113">使用 NOT IN 可对 IN 的结果取反。</span><span class="sxs-lookup"><span data-stu-id="ecf47-113">Using NOT IN negates the results of IN.</span></span>  
   
-## 示例  
- 以下 Entity SQL 查询使用 IN 运算符以确定某个值是否与集合中的任何值匹配。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
+## <a name="example"></a><span data-ttu-id="ecf47-114">示例</span><span class="sxs-lookup"><span data-stu-id="ecf47-114">Example</span></span>  
+ <span data-ttu-id="ecf47-115">以下 Entity SQL 查询使用 IN 运算符以确定某个值是否与集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="ecf47-115">The following Entity SQL query uses the IN operator to determine whether a value matches any value in a collection.</span></span> <span data-ttu-id="ecf47-116">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="ecf47-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="ecf47-117">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="ecf47-117">To compile and run this query, follow these steps:</span></span>  
   
-1.  执行 [如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md) 中的过程。  
+1.  <span data-ttu-id="ecf47-118">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="ecf47-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
+2.  <span data-ttu-id="ecf47-119">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="ecf47-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
-## 请参阅  
- [Entity SQL 参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="ecf47-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ecf47-120">See Also</span></span>  
+ [<span data-ttu-id="ecf47-121">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="ecf47-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

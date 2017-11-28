@@ -1,82 +1,91 @@
 ---
-title: "&lt;issuerNameRegistry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;issuerNameRegistry&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0c0552e06564e09832cf78afeb8f183a0a0dc94c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;issuerNameRegistry&gt;
-配置颁发者名称注册表所使用的标记处理程序集合中的处理程序。  
+# <a name="ltissuernameregistrygt"></a><span data-ttu-id="1c621-102">&lt;issuerNameRegistry&gt;</span><span class="sxs-lookup"><span data-stu-id="1c621-102">&lt;issuerNameRegistry&gt;</span></span>
+<span data-ttu-id="1c621-103">配置的颁发者名称注册表，由标记处理程序集合中的处理程序。</span><span class="sxs-lookup"><span data-stu-id="1c621-103">Configures the issuer name registry that is used by handlers in the token handler collection.</span></span>  
   
-## 语法  
+ <span data-ttu-id="1c621-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="1c621-104">\<system.identityModel></span></span>  
+<span data-ttu-id="1c621-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="1c621-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="1c621-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="1c621-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="1c621-107">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="1c621-107">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="1c621-108">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="1c621-108">\<issuerNameRegistry></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1c621-109">语法</span><span class="sxs-lookup"><span data-stu-id="1c621-109">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <issuerNameRegistry type=xs:string>  
-          <optionalCustomConfigurationElements />  
-        </issuerNameRegistry>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <issuerNameRegistry type=xs:string>  
+          <optionalCustomConfigurationElements />  
+        </issuerNameRegistry>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1c621-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1c621-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="1c621-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1c621-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="1c621-112">特性</span><span class="sxs-lookup"><span data-stu-id="1c621-112">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|type|从派生类型<xref:System.IdentityModel.Tokens.IssuerNameRegistry>类。  有关如何指定自定义`type`，请参阅[Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences)。|  
+|<span data-ttu-id="1c621-113">特性</span><span class="sxs-lookup"><span data-stu-id="1c621-113">Attribute</span></span>|<span data-ttu-id="1c621-114">描述</span><span class="sxs-lookup"><span data-stu-id="1c621-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="1c621-115">类型</span><span class="sxs-lookup"><span data-stu-id="1c621-115">type</span></span>|<span data-ttu-id="1c621-116">派生自类型<xref:System.IdentityModel.Tokens.IssuerNameRegistry>类。</span><span class="sxs-lookup"><span data-stu-id="1c621-116">A type that derives from the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class.</span></span> <span data-ttu-id="1c621-117">有关如何指定自定义的详细信息`type`，请参阅 [自定义类型引用]。</span><span class="sxs-lookup"><span data-stu-id="1c621-117">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="1c621-118">子元素</span><span class="sxs-lookup"><span data-stu-id="1c621-118">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|当`type`属性指定基于配置的颁发者名称注册表 \( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类）、 [\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)元素，必须指定。  [\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)元素可以采用`<add>`， `<clear>`，或`<remove>`作为子元素的元素。|  
+|<span data-ttu-id="1c621-119">元素</span><span class="sxs-lookup"><span data-stu-id="1c621-119">Element</span></span>|<span data-ttu-id="1c621-120">描述</span><span class="sxs-lookup"><span data-stu-id="1c621-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="1c621-121">\<trustedIssuers ></span><span class="sxs-lookup"><span data-stu-id="1c621-121">\<trustedIssuers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|<span data-ttu-id="1c621-122">当`type`属性指定基于配置的颁发者名称注册表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类)，则[ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)必须指定元素。</span><span class="sxs-lookup"><span data-stu-id="1c621-122">When the `type` attribute specifies the configuration-based issuer name registry (the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class), the [\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element must be specified.</span></span> <span data-ttu-id="1c621-123">[ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)元素可以`<add>`， `<clear>`，或`<remove>`元素作为子元素。</span><span class="sxs-lookup"><span data-stu-id="1c621-123">The [\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element can take `<add>`, `<clear>`, or `<remove>` elements as child elements.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="1c621-124">父元素</span><span class="sxs-lookup"><span data-stu-id="1c621-124">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌的处理程序。|  
+|<span data-ttu-id="1c621-125">元素</span><span class="sxs-lookup"><span data-stu-id="1c621-125">Element</span></span>|<span data-ttu-id="1c621-126">描述</span><span class="sxs-lookup"><span data-stu-id="1c621-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="1c621-127">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="1c621-127">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="1c621-128">提供配置集合的安全令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="1c621-128">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## 备注  
- 颁发者的所有标记都验证使用颁发者名称的注册表。  这是一个从派生的对象<xref:System.IdentityModel.Tokens.IssuerNameRegistry>类。  颁发者名称注册表用于将所需验证签名的标记生成相应的颁发者的加密材料助记符名称相关联。  颁发者名称注册表维护依赖方 \(RP\) 应用程序都受信任的颁发者的列表。  使用指定的颁发者名称注册表类型`type`属性。  `<issuerNameRegistry>`元素可以有一个或多个提供配置为指定类型的子元素。  您提供通过重写处理这些子元素的逻辑<xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>方法。  
+## <a name="remarks"></a><span data-ttu-id="1c621-129">备注</span><span class="sxs-lookup"><span data-stu-id="1c621-129">Remarks</span></span>  
+ <span data-ttu-id="1c621-130">颁发者的所有令牌使用颁发者名称注册表进行都验证。</span><span class="sxs-lookup"><span data-stu-id="1c621-130">All issuer tokens are validated using an issuer name registry.</span></span> <span data-ttu-id="1c621-131">这是一个对象，派生自<xref:System.IdentityModel.Tokens.IssuerNameRegistry>类。</span><span class="sxs-lookup"><span data-stu-id="1c621-131">This is an object that derives from the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class.</span></span> <span data-ttu-id="1c621-132">颁发者名称注册表用于将验证由相应的颁发者的令牌的签名所需的加密材料的助记键名称相关联。</span><span class="sxs-lookup"><span data-stu-id="1c621-132">The issuer name registry is used to associate a mnemonic name to the cryptographic material that is needed to verify the signatures of tokens produced by the corresponding issuer.</span></span> <span data-ttu-id="1c621-133">颁发者名称注册表维护受信任的信赖方 (RP) 应用程序的颁发者的列表。</span><span class="sxs-lookup"><span data-stu-id="1c621-133">The issuer name registry maintains a list of issuers that are trusted by the relying party (RP) application.</span></span> <span data-ttu-id="1c621-134">使用指定的颁发者名称注册表类型`type`属性。</span><span class="sxs-lookup"><span data-stu-id="1c621-134">The type of the issuer name registry is specified using the `type` attribute.</span></span> <span data-ttu-id="1c621-135">`<issuerNameRegistry>`元素可以拥有一个或多个提供指定类型的配置的子元素。</span><span class="sxs-lookup"><span data-stu-id="1c621-135">The `<issuerNameRegistry>` element can have one or more child elements that provide configuration for the specified type.</span></span> <span data-ttu-id="1c621-136">提供通过重写处理这些子元素的逻辑<xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="1c621-136">You provide the logic that processes these child elements by overriding the <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> method.</span></span>  
   
- 提供了单一的颁发者名称的注册表类型的框中，WIF <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类。  此类使用受信任的颁发者的证书配置中指定的一组。  它要求子配置元素， `<trustedIssuers>`，在配置受信任的颁发者的证书的集合。  受信任的证书使用 ASN.1 编码形式的证书指纹和添加或从集合中移除通过指定`<add>`， `<clear>`，或`<remove>`元素。  
+ <span data-ttu-id="1c621-137">WIF 提供单个颁发者名称注册表类型超出了框中，<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类。</span><span class="sxs-lookup"><span data-stu-id="1c621-137">WIF provides a single issuer name registry type out of the box, the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class.</span></span> <span data-ttu-id="1c621-138">此类使用一的组配置中指定的受信任颁发者证书。</span><span class="sxs-lookup"><span data-stu-id="1c621-138">This class uses a set of trusted issuer certificates that are specified in configuration.</span></span> <span data-ttu-id="1c621-139">它需要子配置元素，`<trustedIssuers>`下配置的受信任颁发者证书的集合。</span><span class="sxs-lookup"><span data-stu-id="1c621-139">It requires a child configuration element, `<trustedIssuers>`, under which the collection of trusted issuer certificates is configured.</span></span> <span data-ttu-id="1c621-140">受信任的证书指定使用 ASN.1 编码形式的证书指纹和添加或从集合中移除使用`<add>`， `<clear>`，或`<remove>`元素。</span><span class="sxs-lookup"><span data-stu-id="1c621-140">Trusted certificates are specified using the ASN.1 encoded form of the certificate thumbprint and are added or removed from the collection by using `<add>`, `<clear>`, or `<remove>` elements.</span></span>  
   
- `<issuerNameRegistry>`元素都由<xref:System.IdentityModel.Configuration.IssuerNameRegistryElement>类。  
+ <span data-ttu-id="1c621-141">`<issuerNameRegistry>`元素表示由<xref:System.IdentityModel.Configuration.IssuerNameRegistryElement>类。</span><span class="sxs-lookup"><span data-stu-id="1c621-141">The `<issuerNameRegistry>` element is represented by the <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> class.</span></span>  
   
 > [!NOTE]
->  指定`<issuerNameRegistry>`元素的子元素作为[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已被否决，但仍然支持向后兼容性。  在设置`<securityTokenHandlerConfiguration>`元素会覆盖那些在`<identityConfiguration>`元素。  
+>  <span data-ttu-id="1c621-142">指定`<issuerNameRegistry>`元素的子元素作为[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素已弃用，但仍支持向后兼容。</span><span class="sxs-lookup"><span data-stu-id="1c621-142">Specifying the `<issuerNameRegistry>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="1c621-143">上的设置`<securityTokenHandlerConfiguration>`元素上会覆盖`<identityConfiguration>`元素。</span><span class="sxs-lookup"><span data-stu-id="1c621-143">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## 示例  
- 下面的 XML 说明如何指定配置基于颁发者名称的注册表。  
+## <a name="example"></a><span data-ttu-id="1c621-144">示例</span><span class="sxs-lookup"><span data-stu-id="1c621-144">Example</span></span>  
+ <span data-ttu-id="1c621-145">下面的 XML 演示如何指定配置基于颁发者名称注册表。</span><span class="sxs-lookup"><span data-stu-id="1c621-145">The following XML shows how to specify the configuration based issuer name registry.</span></span>  
   
-```  
+```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  
   <trustedIssuers>  
     <add thumbprint="9B74CB … 1EF40D0" name="LocalSTS" />  
   </trustedIssuers>  
 </issuerNameRegistry>  
-  
 ```  
   
-## 请参阅  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>   
+## <a name="see-also"></a><span data-ttu-id="1c621-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1c621-146">See Also</span></span>  
+ <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
  <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

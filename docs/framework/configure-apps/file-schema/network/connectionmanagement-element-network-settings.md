@@ -1,73 +1,74 @@
 ---
-title: "&lt;connectionManagement&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#connectionManagement"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<connectionManagement> 元素"
-  - "connectionManagement 元素"
+title: "&lt;connectionManagement&gt;元素 （网络设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#connectionManagement
+helpviewer_keywords:
+- <connectionManagement> element
+- connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: e3380ce1e8e798740214feee0e76d9949caa6bc9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;connectionManagement&gt; 元素（网络设置）
-指定与网络主机的最大连接数。  
+# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="e303f-102">&lt;connectionManagement&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="e303f-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="e303f-103">指定到网络主机的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="e303f-103">Specifies the maximum number of connections to a network host.</span></span>  
   
-## 语法  
+ <span data-ttu-id="e303f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e303f-104">\<configuration></span></span>  
+<span data-ttu-id="e303f-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="e303f-105">\<system.net></span></span>  
+<span data-ttu-id="e303f-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="e303f-106">\<connectionManagement></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e303f-107">语法</span><span class="sxs-lookup"><span data-stu-id="e303f-107">Syntax</span></span>  
   
-      <connectionManagement>   
+```xml  
+<connectionManagement>   
 </connectionManagement>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e303f-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e303f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e303f-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e303f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="e303f-110">特性</span><span class="sxs-lookup"><span data-stu-id="e303f-110">Attributes</span></span>  
+ <span data-ttu-id="e303f-111">无。</span><span class="sxs-lookup"><span data-stu-id="e303f-111">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="e303f-112">子元素</span><span class="sxs-lookup"><span data-stu-id="e303f-112">Child Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[添加](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|将 IP 地址或 DNS 名称添加到连接管理列表中。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|清除连接管理列表。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|将 IP 地址或 DNS 名称从连接管理列表中移除。|  
+|<span data-ttu-id="e303f-113">**元素**</span><span class="sxs-lookup"><span data-stu-id="e303f-113">**Element**</span></span>|<span data-ttu-id="e303f-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="e303f-114">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="e303f-115">add</span><span class="sxs-lookup"><span data-stu-id="e303f-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e303f-116">将 IP 地址或 DNS 名称添加到连接管理列表。</span><span class="sxs-lookup"><span data-stu-id="e303f-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
+|[<span data-ttu-id="e303f-117">clear</span><span class="sxs-lookup"><span data-stu-id="e303f-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e303f-118">清除连接管理列表。</span><span class="sxs-lookup"><span data-stu-id="e303f-118">Clears the connection management list.</span></span>|  
+|[<span data-ttu-id="e303f-119">remove</span><span class="sxs-lookup"><span data-stu-id="e303f-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e303f-120">从连接管理列表中删除 IP 地址或 DNS 名称。</span><span class="sxs-lookup"><span data-stu-id="e303f-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="e303f-121">父元素</span><span class="sxs-lookup"><span data-stu-id="e303f-121">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 与网络的连接方式的设置。|  
+|<span data-ttu-id="e303f-122">**元素**</span><span class="sxs-lookup"><span data-stu-id="e303f-122">**Element**</span></span>|<span data-ttu-id="e303f-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="e303f-123">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="e303f-124">system.net</span><span class="sxs-lookup"><span data-stu-id="e303f-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="e303f-125">包含指定 .NET Framework 如何连接到网络的设置。</span><span class="sxs-lookup"><span data-stu-id="e303f-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## 备注  
- `connectionManagement` 元素定义与服务器或服务器组的最大连接数。  
+## <a name="remarks"></a><span data-ttu-id="e303f-126">备注</span><span class="sxs-lookup"><span data-stu-id="e303f-126">Remarks</span></span>  
+ <span data-ttu-id="e303f-127">`connectionManagement`元素定义的服务器或服务器组的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="e303f-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a><span data-ttu-id="e303f-128">配置文件</span><span class="sxs-lookup"><span data-stu-id="e303f-128">Configuration Files</span></span>  
+ <span data-ttu-id="e303f-129">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="e303f-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 示例  
- 下面的代码示例将一个应用程序配置为使用四个与服务器 www.contoso.com 的连接和两个与其他所有服务器的连接。  
+## <a name="example"></a><span data-ttu-id="e303f-130">示例</span><span class="sxs-lookup"><span data-stu-id="e303f-130">Example</span></span>  
+ <span data-ttu-id="e303f-131">下面的示例将配置应用程序使用 4 个到 www.contoso.com 和两个连接到所有其他服务器。</span><span class="sxs-lookup"><span data-stu-id="e303f-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <connectionManagement>  
@@ -78,7 +79,7 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.ServicePoint>   
- <xref:System.Net.ServicePointManager>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="e303f-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e303f-132">See Also</span></span>  
+ <xref:System.Net.ServicePoint>  
+ <xref:System.Net.ServicePointManager>  
+ [<span data-ttu-id="e303f-133">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="e303f-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

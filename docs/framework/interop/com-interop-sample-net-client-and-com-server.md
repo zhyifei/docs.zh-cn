@@ -5,37 +5,34 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3a2db2aba0904aac89bf5fe73c715ff7a5eeb5f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a>COM 互操作示例：.NET 客户端和 COM 服务器
-本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="4342c-102">COM 互操作示例：.NET 客户端和 COM 服务器</span><span class="sxs-lookup"><span data-stu-id="4342c-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="4342c-103">本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。</span><span class="sxs-lookup"><span data-stu-id="4342c-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- 在本示例中，客户端将创建并调用 Loan 组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。 本示例中出现的代码片段将贯穿本节。  
+ <span data-ttu-id="4342c-104">在本示例中，客户端将创建并调用 Loan 组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。</span><span class="sxs-lookup"><span data-stu-id="4342c-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="4342c-105">本示例中出现的代码片段将贯穿本节。</span><span class="sxs-lookup"><span data-stu-id="4342c-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a>.NET 客户端  
+## <a name="net-client"></a><span data-ttu-id="4342c-106">.NET 客户端</span><span class="sxs-lookup"><span data-stu-id="4342c-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -165,7 +162,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a>COM 服务器  
+## <a name="com-server"></a><span data-ttu-id="4342c-107">COM 服务器</span><span class="sxs-lookup"><span data-stu-id="4342c-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -310,6 +307,5 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)
-
+## <a name="see-also"></a><span data-ttu-id="4342c-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4342c-108">See Also</span></span>  
+ [<span data-ttu-id="4342c-109">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="4342c-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)

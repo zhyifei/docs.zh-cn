@@ -1,36 +1,42 @@
 ---
-title: "通过 XML Web services 使用 DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通过 XML Web 服务使用数据集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 73af93286530fe94145cb5c05f4c70eed110d6ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 通过 XML Web services 使用 DataSet
-<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。  由于可以将 **DataSet** 指定为 XML Web services 的输入或输出，并且无需进行其他任何编码即可在 XML Web services 和客户端之间将 **DataSet** 内容以流的形式来回传递，因此 **DataSet** 是“可序列化的”。  **DataSet** 使用 DiffGram 格式隐式地转换为 XML 流，通过网络进行发送，然后在接收端从 XML 流重新构造为 **DataSet**。  它为您使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。  有关 DiffGram 格式的更多信息，请参见 [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
+# <a name="consuming-a-dataset-from-an-xml-web-service"></a><span data-ttu-id="91148-102">通过 XML Web 服务使用数据集</span><span class="sxs-lookup"><span data-stu-id="91148-102">Consuming a DataSet from an XML Web Service</span></span>
+<span data-ttu-id="91148-103"><xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。</span><span class="sxs-lookup"><span data-stu-id="91148-103">The <xref:System.Data.DataSet> was architected with a disconnected design, in part to facilitate the convenient transport of data over the Internet.</span></span> <span data-ttu-id="91148-104">**数据集**在于它可以被指定为的输入或输出而无需任何其他编码的 XML Web 服务所需的内容流处理所显示"可序列化"**数据集**从 XML Web 服务为客户端以及反向。</span><span class="sxs-lookup"><span data-stu-id="91148-104">The **DataSet** is "serializable" in that it can be specified as an input to or output from XML Web services without any additional coding required to stream the contents of the **DataSet** from an XML Web service to a client and back.</span></span> <span data-ttu-id="91148-105">**数据集**隐式转换为使用 DiffGram 格式的 XML 流，通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。</span><span class="sxs-lookup"><span data-stu-id="91148-105">The **DataSet** is implicitly converted to an XML stream using the DiffGram format, sent over the network, and then reconstructed from the XML stream as a **DataSet** on the receiving end.</span></span> <span data-ttu-id="91148-106">它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。</span><span class="sxs-lookup"><span data-stu-id="91148-106">This gives you a very simple and flexible method for transmitting and returning relational data using XML Web services.</span></span> <span data-ttu-id="91148-107">有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。</span><span class="sxs-lookup"><span data-stu-id="91148-107">For more information about the DiffGram format, see [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).</span></span>  
   
- 以下示例显示如何创建 XML Web services 和客户端，以使用 **DataSet** 传输关系数据（包括修改的数据）并将任何更新解析回原始数据源。  
+ <span data-ttu-id="91148-108">下面的示例演示如何创建 XML Web 服务和客户端使用**数据集**传输关系数据 （包括修改后的数据） 和任何将更新解析回原始数据源。</span><span class="sxs-lookup"><span data-stu-id="91148-108">The following example shows how to create an XML Web service and client that use the **DataSet** to transport relational data (including modified data) and resolve any updates back to the original data source.</span></span>  
   
 > [!NOTE]
->  我们建议您在创建 XML Web services 时，应始终考虑到安全问题。  有关保证 XML Web services 的安全的信息，请参见[Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/zh-cn/354b2ab1-2782-4542-b32a-dc560178b90c)。  
+>  <span data-ttu-id="91148-109">我们建议你在创建 XML Web services 时，应始终考虑到安全问题。</span><span class="sxs-lookup"><span data-stu-id="91148-109">We recommend that you always consider security implications when creating an XML Web service.</span></span> <span data-ttu-id="91148-110">有关保护的 XML Web 服务的信息，请参阅[保护 XML 创建使用 ASP.NET Web 服务](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)。</span><span class="sxs-lookup"><span data-stu-id="91148-110">For information on securing an XML Web service, see [Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c).</span></span>  
   
-### 创建返回和使用 DataSet 的 XML Web services  
+### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a><span data-ttu-id="91148-111">创建返回和使用 DataSet 的 XML Web services</span><span class="sxs-lookup"><span data-stu-id="91148-111">To create an XML Web service that returns and consumes a DataSet</span></span>  
   
-1.  创建 XML Web services。  
+1.  <span data-ttu-id="91148-112">创建 XML Web services。</span><span class="sxs-lookup"><span data-stu-id="91148-112">Create the XML Web service.</span></span>  
   
-     在本示例中，将创建返回数据（在本示例中为 **Northwind** 数据库中客户列表）的 XML Web services，然后接收一个包含数据更新的 **DataSet**，XML Web services 会将更新解析回原始数据源。  
+     <span data-ttu-id="91148-113">在示例中，XML Web 服务创建返回数据，在这种情况下从客户列表**Northwind**数据库，并接收**数据集**更新的数据，该 XML Web 服务解析回原始数据源。</span><span class="sxs-lookup"><span data-stu-id="91148-113">In the example, an XML Web service is created that returns data, in this case a list of customers from the **Northwind** database, and receives a **DataSet** with updates to the data, which the XML Web service resolves back to the original data source.</span></span>  
   
-     XML Web services 将公开两个方法：**GetCustomers**（返回客户列表）和 **UpdateCustomers**（将更新解析回数据源）。  XML Web services 存储在 Web 服务器上名为 DataSetSample.asmx 的文件中。  下面的代码概括了 DataSetSample.asmx 的内容。  
+     <span data-ttu-id="91148-114">XML Web 服务公开两个方法： **GetCustomers**，则返回的客户，列表和**UpdateCustomers**、 将更新解析回数据源。</span><span class="sxs-lookup"><span data-stu-id="91148-114">The XML Web service exposes two methods: **GetCustomers**, to return the list of customers, and **UpdateCustomers**, to resolve updates back to the data source.</span></span> <span data-ttu-id="91148-115">XML Web services 存储在 Web 服务器上名为 DataSetSample.asmx 的文件中。</span><span class="sxs-lookup"><span data-stu-id="91148-115">The XML Web service is stored in a file on the Web server called DataSetSample.asmx.</span></span> <span data-ttu-id="91148-116">下面的代码概括了 DataSetSample.asmx 的内容。</span><span class="sxs-lookup"><span data-stu-id="91148-116">The following code outlines the contents of DataSetSample.asmx.</span></span>  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -94,7 +100,6 @@ caps.handback.revision: 4
         Return custDS  
       End Function  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -162,41 +167,41 @@ caps.handback.revision: 4
     }  
     ```  
   
-     在通常情况下，将编写 **UpdateCustomers** 方法来捕获开放式并发冲突。  为了简单起见，以上示例没有包含此方法。  有关开放式并发的更多信息，请参见[开放式并发](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)。  
+     <span data-ttu-id="91148-117">在典型方案中， **UpdateCustomers**方法，则会写入来捕获开放式并发冲突。</span><span class="sxs-lookup"><span data-stu-id="91148-117">In a typical scenario, the **UpdateCustomers** method would be written to catch optimistic concurrency violations.</span></span> <span data-ttu-id="91148-118">为了简单起见，以上示例没有包含此方法。</span><span class="sxs-lookup"><span data-stu-id="91148-118">For simplicity, the example does not include this.</span></span> <span data-ttu-id="91148-119">有关开放式并发的详细信息，请参阅[开放式并发](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)。</span><span class="sxs-lookup"><span data-stu-id="91148-119">For more information about optimistic concurrency, see [Optimistic Concurrency](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).</span></span>  
   
-2.  创建 XML Web services 代理。  
+2.  <span data-ttu-id="91148-120">创建 XML Web services 代理。</span><span class="sxs-lookup"><span data-stu-id="91148-120">Create an XML Web service proxy.</span></span>  
   
-     XML Web services 的客户端将需要通过 SOAP 代理来使用公开的方法。  可以使用 Visual Studio 生成此代理。  通过从 Visual Studio 中设置对现有 Web 服务的 Web 引用，此步骤中所述的所有行为均将透明地发生。  如果要自己创建代理类，请继续阅读本讨论。  但是，在大多数情况下，使用 Visual Studio 足以为客户端应用程序创建代理类。  
+     <span data-ttu-id="91148-121">XML Web services 的客户端将需要通过 SOAP 代理来使用公开的方法。</span><span class="sxs-lookup"><span data-stu-id="91148-121">Clients of the XML Web service require a SOAP proxy in order to consume the exposed methods.</span></span> <span data-ttu-id="91148-122">可以使用 Visual Studio 生成此代理。</span><span class="sxs-lookup"><span data-stu-id="91148-122">You can have Visual Studio generate this proxy for you.</span></span> <span data-ttu-id="91148-123">通过从 Visual Studio 中设置对现有 Web 服务的 Web 引用，此步骤中所述的所有行为均将透明地发生。</span><span class="sxs-lookup"><span data-stu-id="91148-123">By setting a Web reference to an existing Web service from within Visual Studio, all the behavior described in this step occurs transparently.</span></span> <span data-ttu-id="91148-124">如果要自己创建代理类，请继续阅读本讨论。</span><span class="sxs-lookup"><span data-stu-id="91148-124">If you want to create the proxy class yourself, continue with this discussion.</span></span> <span data-ttu-id="91148-125">但是，在大多数情况下，使用 Visual Studio 足以为客户端应用程序创建代理类。</span><span class="sxs-lookup"><span data-stu-id="91148-125">In most circumstances, however, using Visual Studio to create the proxy class for the client application is sufficient.</span></span>  
   
-     代理可以使用 Web 服务描述语言工具来创建。  例如，如果在 URL http:\/\/myserver\/data\/DataSetSample.asmx 处公开 XML Web services，请发出如下命令创建一个命名空间为 **WebData.DSSample** 的 Visual Basic .NET 代理，并将其存储在文件 sample.vb 中。  
+     <span data-ttu-id="91148-126">代理可以使用 Web 服务描述语言工具来创建。</span><span class="sxs-lookup"><span data-stu-id="91148-126">A proxy can be created using the Web Services Description Language Tool.</span></span> <span data-ttu-id="91148-127">例如，如果 URL http://myserver/data/DataSetSample.asmx 处公开 XML Web 服务时，发出如下命令创建的命名空间的 Visual Basic.NET 代理**WebData.DSSample**并将其存储在文件中sample.vb 中。</span><span class="sxs-lookup"><span data-stu-id="91148-127">For example, if the XML Web service is exposed at the URL http://myserver/data/DataSetSample.asmx, issue a command such as the following to create a Visual Basic .NET proxy with a namespace of **WebData.DSSample** and store it in the file sample.vb.</span></span>  
   
     ```  
     wsdl /l:VB /out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
-     若要在文件 sample.cs 中创建一个 C\# 代理，请发出以下命令。  
+     <span data-ttu-id="91148-128">若要在文件 sample.cs 中创建一个 C# 代理，请发出以下命令。</span><span class="sxs-lookup"><span data-stu-id="91148-128">To create a C# proxy in the file sample.cs, issue the following command.</span></span>  
   
     ```  
     wsdl /l:CS /out:sample.cs http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
-     然后，可以将该代理编译为库并导入 XML Web services 客户端。  若要将 sample.vb 中存储的 Visual Basic .NET 代理代码编译为 sample.dll，请发出以下命令。  
+     <span data-ttu-id="91148-129">然后，可以将该代理编译为库并导入 XML Web services 客户端。</span><span class="sxs-lookup"><span data-stu-id="91148-129">The proxy can then be compiled as a library and imported into the XML Web service client.</span></span> <span data-ttu-id="91148-130">若要将 sample.vb 中存储的 Visual Basic .NET 代理代码编译为 sample.dll，请发出以下命令。</span><span class="sxs-lookup"><span data-stu-id="91148-130">To compile the Visual Basic .NET proxy code stored in sample.vb as sample.dll, issue the following command.</span></span>  
   
     ```  
     vbc /t:library /out:sample.dll sample.vb /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
     ```  
   
-     若要将 sample.cs 中存储的 C\# 代理代码编译为 sample.dll，请发出以下命令。  
+     <span data-ttu-id="91148-131">若要将 sample.cs 中存储的 C# 代理代码编译为 sample.dll，请发出以下命令。</span><span class="sxs-lookup"><span data-stu-id="91148-131">To compile the C# proxy code stored in sample.cs as sample.dll, issue the following command.</span></span>  
   
     ```  
     csc /t:library /out:sample.dll sample.cs /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
     ```  
   
-3.  创建 XML Web services 客户端。  
+3.  <span data-ttu-id="91148-132">创建 XML Web services 客户端。</span><span class="sxs-lookup"><span data-stu-id="91148-132">Create an XML Web service client.</span></span>  
   
-     如果要使用 Visual Studio 生成 Web 服务代理类，只需创建客户端项目，然后在解决方案资源管理器窗口中右击该项目，单击“添加 Web 引用”，从可用 Web 服务列表中选择 Web 服务（如果 Web 服务不在当前的解决方案中，即不在当前的计算机上，此操作可能要求提供 Web 服务终结点的地址）。如果自己创建 XML Web services 代理（按照前面的步骤所述），可以将其导入客户端代码并使用 XML Web services 方法。  以下示例代码导入该代理库，调用 **GetCustomers** 来获取客户列表，添加新客户，然后返回一个包含对 **UpdateCustomers** 的更新的 **DataSet**。  
+     <span data-ttu-id="91148-133">如果你想要使用 Visual Studio 为你生成的 Web 服务代理类，只需创建客户端项目中，并且，在解决方案资源管理器窗口中，右键单击项目，单击**添加 Web 引用**，并选择从 Web 服务（这可能需要提供 Web 服务终结点地址，如果 Web 服务不在当前解决方案中，或在当前计算机上可用。） 的可用 Web 服务的列表如果自己创建 XML Web services 代理（按照前面的步骤所述），可以将其导入客户端代码并使用 XML Web services 方法。</span><span class="sxs-lookup"><span data-stu-id="91148-133">If you want to have Visual Studio generate the Web service proxy class for you, simply create the client project, and, in the Solution Explorer window, right-click the project, click **Add Web Reference**, and select the Web service from the list of available Web services (this may require supplying the address of the Web service endpoint, if the Web service isn't available within the current solution, or on the current computer.) If you create the XML Web service proxy yourself (as described in the previous step), you can import it into your client code and consume the XML Web service methods.</span></span> <span data-ttu-id="91148-134">下面的示例代码导入该代理库，调用**GetCustomers**来获取客户列表，添加新客户，然后返回**数据集**的更新的**UpdateCustomers**.</span><span class="sxs-lookup"><span data-stu-id="91148-134">The following sample code imports the proxy library, calls **GetCustomers** to get a list of customers, adds a new customer, and then returns a **DataSet** with the updates to **UpdateCustomers**.</span></span>  
   
-     请注意，该示例将 **DataSet.GetChanges** 所返回的 **DataSet** 传递给 **UpdateCustomers**，这是因为只有经过修改的行才需要传递给 **UpdateCustomers**。  **UpdateCustomers** 返回已解析的 **DataSet**，然后，您可以将其合并 \(**Merge**\) 到现有 **DataSet** 中，以包含来自更新的已解析更改以及任何行错误信息。  以下代码假定您使用 Visual Studio 创建的 Web 引用，并且已在“添加 Web 引用”对话框中将该 Web 引用重命名为 DsSample。  
+     <span data-ttu-id="91148-135">请注意，该示例将**数据集**返回**DataSet.GetChanges**到**UpdateCustomers**因为仅修改后的行才需要传递给**UpdateCustomers**。</span><span class="sxs-lookup"><span data-stu-id="91148-135">Notice that the example passes the **DataSet** returned by **DataSet.GetChanges** to **UpdateCustomers** because only modified rows need to be passed to **UpdateCustomers**.</span></span> <span data-ttu-id="91148-136">**UpdateCustomers**返回已解析**数据集**，然后，您可以**合并**到现有**数据集**以合并的已解析的更改和从更新任何行错误信息。</span><span class="sxs-lookup"><span data-stu-id="91148-136">**UpdateCustomers** returns the resolved **DataSet**, which you can then **Merge** into the existing **DataSet** to incorporate the resolved changes and any row error information from the update.</span></span> <span data-ttu-id="91148-137">以下代码假定你具有使用 Visual Studio 创建的 Web 引用，并且你已重命名为 DsSample 中的 Web 引用**添加 Web 引用**对话框。</span><span class="sxs-lookup"><span data-stu-id="91148-137">The following code assumes that you have used Visual Studio to create the Web reference, and that you have renamed the Web reference to DsSample in the **Add Web Reference** dialog box.</span></span>  
   
     ```vb  
     Imports System  
@@ -222,7 +227,6 @@ caps.handback.revision: 4
         customersDataSet.AcceptChanges()  
       End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -253,24 +257,24 @@ caps.handback.revision: 4
     }  
     ```  
   
-     如果决定自己创建代理类，必须执行下列额外的步骤。  若要编译该示例，将需要提供已创建的代理库 \(sample.dll\) 和相关的 .NET 库。  若要编译该示例的 Visual Basic .NET 版本（存储在文件 client.vb 中），请发出以下命令。  
+     <span data-ttu-id="91148-138">如果决定自己创建代理类，必须执行下列额外的步骤。</span><span class="sxs-lookup"><span data-stu-id="91148-138">If you decide to create the proxy class yourself, you must take the following extra steps.</span></span> <span data-ttu-id="91148-139">若要编译该示例，将需要提供已创建的代理库 (sample.dll) 和相关的 .NET 库。</span><span class="sxs-lookup"><span data-stu-id="91148-139">To compile the sample, supply the proxy library that was created (sample.dll) and the related .NET libraries.</span></span> <span data-ttu-id="91148-140">若要编译该示例的 Visual Basic .NET 版本（存储在文件 client.vb 中），请发出以下命令。</span><span class="sxs-lookup"><span data-stu-id="91148-140">To compile the Visual Basic .NET version of the sample, stored in the file client.vb, issue the following command.</span></span>  
   
     ```  
     vbc client.vb /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-     若要编译该示例的 C\# 版本（存储在文件 client.cs 中），请发出以下命令。  
+     <span data-ttu-id="91148-141">若要编译该示例的 C# 版本（存储在文件 client.cs 中），请发出以下命令。</span><span class="sxs-lookup"><span data-stu-id="91148-141">To compile the C# version of the sample, stored in the file client.cs, issue the following command.</span></span>  
   
     ```  
     csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-## 请参阅  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [从 DataAdapter 填充数据集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)   
- [使用 DataAdapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)   
- [Web Services Description Language Tool \(Wsdl.exe\)](http://msdn.microsoft.com/zh-cn/b9210348-8bc2-4367-8c91-d1a04b403e88)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="91148-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91148-142">See Also</span></span>  
+ [<span data-ttu-id="91148-143">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="91148-143">ADO.NET</span></span>](../../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="91148-144">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="91148-144">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="91148-145">数据表</span><span class="sxs-lookup"><span data-stu-id="91148-145">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="91148-146">从 DataAdapter 填充数据集</span><span class="sxs-lookup"><span data-stu-id="91148-146">Populating a DataSet from a DataAdapter</span></span>](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [<span data-ttu-id="91148-147">使用 DataAdapter 更新数据源</span><span class="sxs-lookup"><span data-stu-id="91148-147">Updating Data Sources with DataAdapters</span></span>](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [<span data-ttu-id="91148-148">DataAdapter 参数</span><span class="sxs-lookup"><span data-stu-id="91148-148">DataAdapter Parameters</span></span>](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [<span data-ttu-id="91148-149">Web 服务描述语言工具 (Wsdl.exe)</span><span class="sxs-lookup"><span data-stu-id="91148-149">Web Services Description Language Tool (Wsdl.exe)</span></span>](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [<span data-ttu-id="91148-150">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="91148-150">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

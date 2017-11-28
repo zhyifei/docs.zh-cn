@@ -1,86 +1,95 @@
 ---
-title: "&lt;ws2007HttpBinding&gt; 的 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;ws2007HttpBinding&gt; 的 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 31c5404b29f025af5193386eccafdbeab95cb2cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;ws2007HttpBinding&gt; 的 &lt;transport&gt;
-定义 HTTP 传输的身份验证设置。  
+# <a name="lttransportgt-of-ltws2007httpbindinggt"></a><span data-ttu-id="6caf2-102">&lt;ws2007HttpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="6caf2-102">&lt;transport&gt; of &lt;ws2007HttpBinding&gt;</span></span>
+<span data-ttu-id="6caf2-103">定义 HTTP 传输的身份验证设置。</span><span class="sxs-lookup"><span data-stu-id="6caf2-103">Defines authentication settings for the HTTP transport.</span></span>  
   
-## 语法  
+ <span data-ttu-id="6caf2-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="6caf2-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="6caf2-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="6caf2-105">\<bindings></span></span>  
+<span data-ttu-id="6caf2-106">\<ws2007HttpBinding ></span><span class="sxs-lookup"><span data-stu-id="6caf2-106">\<ws2007HttpBinding></span></span>  
+<span data-ttu-id="6caf2-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="6caf2-107">\<binding></span></span>  
+<span data-ttu-id="6caf2-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="6caf2-108">\<security></span></span>  
+<span data-ttu-id="6caf2-109">\<传输 ></span><span class="sxs-lookup"><span data-stu-id="6caf2-109">\<transport></span></span>  
+  
+## <a name="syntax"></a><span data-ttu-id="6caf2-110">语法</span><span class="sxs-lookup"><span data-stu-id="6caf2-110">Syntax</span></span>  
   
 ```  
-  
 transport clientCredentialType =   
        "Basic/Certificate/Digest/None/Ntlm/Windows"  
        proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
        realm="string"   
 ```  
   
-## 类型  
+## <a name="type"></a><span data-ttu-id="6caf2-111">类型</span><span class="sxs-lookup"><span data-stu-id="6caf2-111">Type</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6caf2-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="6caf2-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="6caf2-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="6caf2-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="6caf2-114">特性</span><span class="sxs-lookup"><span data-stu-id="6caf2-114">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|`clientCredentialType`|指定用于向服务证明客户端身份的凭据。  此属性的类型为 <xref:System.ServiceModel.HttpClientCredentialType>。|  
-|`proxyCredentialType`|指定用于向域代理证明客户端身份的凭据。  此属性的类型为 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
-|`realm`|摘要式或基本身份验证的身份验证领域。  默认值为一个空字符串。<br /><br /> 身份验证领域至少指定执行身份验证的主机的名称。  它还可以指定具有访问权限的用户集合。  用户可以查询身份验证领域，以确定多个可能的用户名和密码中哪一个可以使用。|  
+|<span data-ttu-id="6caf2-115">特性</span><span class="sxs-lookup"><span data-stu-id="6caf2-115">Attribute</span></span>|<span data-ttu-id="6caf2-116">描述</span><span class="sxs-lookup"><span data-stu-id="6caf2-116">Description</span></span>|  
+|---------------|-----------------|  
+|`clientCredentialType`|<span data-ttu-id="6caf2-117">指定用于向服务证明客户端身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="6caf2-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="6caf2-118">此属性的类型为 <xref:System.ServiceModel.HttpClientCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="6caf2-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
+|`proxyCredentialType`|<span data-ttu-id="6caf2-119">指定用于向域代理证明客户端身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="6caf2-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="6caf2-120">此属性的类型为 <xref:System.ServiceModel.HttpProxyCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="6caf2-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
+|`realm`|<span data-ttu-id="6caf2-121">摘要式或基本身份验证的身份验证领域。</span><span class="sxs-lookup"><span data-stu-id="6caf2-121">The authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="6caf2-122">默认值为一个空字符串。</span><span class="sxs-lookup"><span data-stu-id="6caf2-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="6caf2-123">身份验证领域至少指定执行身份验证的主机的名称。</span><span class="sxs-lookup"><span data-stu-id="6caf2-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="6caf2-124">它还可以指定具有访问权限的用户集合。</span><span class="sxs-lookup"><span data-stu-id="6caf2-124">It can also specify a collection of users who have access.</span></span> <span data-ttu-id="6caf2-125">用户可以查询身份验证领域，以确定多个可能的用户名和密码中哪一个可以使用。</span><span class="sxs-lookup"><span data-stu-id="6caf2-125">A user can query the authentication realm to determine which one of the several possible usernames and passwords can be used.</span></span>|  
   
-## clientCredentialType 属性  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="6caf2-126">clientCredentialType 属性</span><span class="sxs-lookup"><span data-stu-id="6caf2-126">clientCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|无|禁用安全性。|  
-|Basic|使用基本身份验证。|  
-|摘要|使用摘要式身份验证。|  
-|Ntlm|对 Windows 域使用 NTLM 身份验证作为回退。|  
-|Windows|使用集成 Windows 身份验证。|  
-|证书|使用 X.509 证书对客户端进行身份验证。|  
+|<span data-ttu-id="6caf2-127">值</span><span class="sxs-lookup"><span data-stu-id="6caf2-127">Value</span></span>|<span data-ttu-id="6caf2-128">描述</span><span class="sxs-lookup"><span data-stu-id="6caf2-128">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="6caf2-129">无</span><span class="sxs-lookup"><span data-stu-id="6caf2-129">None</span></span>|<span data-ttu-id="6caf2-130">禁用安全性。</span><span class="sxs-lookup"><span data-stu-id="6caf2-130">Security is disabled.</span></span>|  
+|<span data-ttu-id="6caf2-131">Basic</span><span class="sxs-lookup"><span data-stu-id="6caf2-131">Basic</span></span>|<span data-ttu-id="6caf2-132">使用基本身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-132">Uses basic authentication.</span></span>|  
+|<span data-ttu-id="6caf2-133">摘要</span><span class="sxs-lookup"><span data-stu-id="6caf2-133">Digest</span></span>|<span data-ttu-id="6caf2-134">使用摘要式身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-134">Uses digest authentication.</span></span>|  
+|<span data-ttu-id="6caf2-135">Ntlm</span><span class="sxs-lookup"><span data-stu-id="6caf2-135">Ntlm</span></span>|<span data-ttu-id="6caf2-136">对 Windows 域使用 NTLM 身份验证作为回退。</span><span class="sxs-lookup"><span data-stu-id="6caf2-136">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
+|<span data-ttu-id="6caf2-137">Windows</span><span class="sxs-lookup"><span data-stu-id="6caf2-137">Windows</span></span>|<span data-ttu-id="6caf2-138">使用集成 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-138">Uses integrated Windows authentication.</span></span>|  
+|<span data-ttu-id="6caf2-139">证书</span><span class="sxs-lookup"><span data-stu-id="6caf2-139">Certificate</span></span>|<span data-ttu-id="6caf2-140">使用 X.509 证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-140">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-## proxyCredentialType 属性  
+## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="6caf2-141">proxyCredentialType 属性</span><span class="sxs-lookup"><span data-stu-id="6caf2-141">proxyCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|无|禁用安全性。|  
-|Basic|使用基本身份验证。|  
-|摘要|使用摘要式身份验证。|  
-|Ntlm|对 Windows 域使用 NTLM 作为回退。|  
-|Windows|使用集成 Windows 身份验证。|  
-|证书|使用 X.509 证书对客户端进行身份验证。|  
+|<span data-ttu-id="6caf2-142">值</span><span class="sxs-lookup"><span data-stu-id="6caf2-142">Value</span></span>|<span data-ttu-id="6caf2-143">描述</span><span class="sxs-lookup"><span data-stu-id="6caf2-143">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="6caf2-144">无</span><span class="sxs-lookup"><span data-stu-id="6caf2-144">None</span></span>|<span data-ttu-id="6caf2-145">禁用安全性。</span><span class="sxs-lookup"><span data-stu-id="6caf2-145">Security is disabled.</span></span>|  
+|<span data-ttu-id="6caf2-146">Basic</span><span class="sxs-lookup"><span data-stu-id="6caf2-146">Basic</span></span>|<span data-ttu-id="6caf2-147">使用基本身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-147">Uses basic authentication.</span></span>|  
+|<span data-ttu-id="6caf2-148">摘要</span><span class="sxs-lookup"><span data-stu-id="6caf2-148">Digest</span></span>|<span data-ttu-id="6caf2-149">使用摘要式身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-149">Uses digest authentication.</span></span>|  
+|<span data-ttu-id="6caf2-150">Ntlm</span><span class="sxs-lookup"><span data-stu-id="6caf2-150">Ntlm</span></span>|<span data-ttu-id="6caf2-151">对 Windows 域使用 NTLM 作为回退。</span><span class="sxs-lookup"><span data-stu-id="6caf2-151">Uses NTLM as a fallback with a Windows domain.</span></span>|  
+|<span data-ttu-id="6caf2-152">Windows</span><span class="sxs-lookup"><span data-stu-id="6caf2-152">Windows</span></span>|<span data-ttu-id="6caf2-153">使用集成 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-153">Uses integrated Windows authentication.</span></span>|  
+|<span data-ttu-id="6caf2-154">证书</span><span class="sxs-lookup"><span data-stu-id="6caf2-154">Certificate</span></span>|<span data-ttu-id="6caf2-155">使用 X.509 证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="6caf2-155">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="6caf2-156">子元素</span><span class="sxs-lookup"><span data-stu-id="6caf2-156">Child Elements</span></span>  
+ <span data-ttu-id="6caf2-157">无</span><span class="sxs-lookup"><span data-stu-id="6caf2-157">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="6caf2-158">父元素</span><span class="sxs-lookup"><span data-stu-id="6caf2-158">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|表示 [\<ws2007HttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) 元素的安全功能。|  
+|<span data-ttu-id="6caf2-159">元素</span><span class="sxs-lookup"><span data-stu-id="6caf2-159">Element</span></span>|<span data-ttu-id="6caf2-160">描述</span><span class="sxs-lookup"><span data-stu-id="6caf2-160">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="6caf2-161">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="6caf2-161">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|<span data-ttu-id="6caf2-162">表示的安全功能[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)元素。</span><span class="sxs-lookup"><span data-stu-id="6caf2-162">Represents the security capabilities of the [\<ws2007HttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) element.</span></span>|  
   
-## 请参阅  
- <xref:System.ServiceModel.HttpTransportSecurity>   
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="6caf2-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6caf2-163">See Also</span></span>  
+ <xref:System.ServiceModel.HttpTransportSecurity>  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>  
+ [<span data-ttu-id="6caf2-164">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="6caf2-164">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="6caf2-165">绑定</span><span class="sxs-lookup"><span data-stu-id="6caf2-165">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="6caf2-166">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="6caf2-166">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="6caf2-167">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="6caf2-167">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="6caf2-168">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="6caf2-168">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

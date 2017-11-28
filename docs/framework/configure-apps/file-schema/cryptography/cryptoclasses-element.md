@@ -1,67 +1,71 @@
 ---
-title: "&lt;cryptoClasses&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClasses"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoClasses> 元素"
-  - "cryptoClasses 元素"
+title: "&lt;cryptoClasses&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClasses
+helpviewer_keywords:
+- <cryptoClasses> element
+- cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7ed25fa1a2bdedc410fccf48802742766287c438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cryptoClasses&gt; 元素
-包含密码类的列表，这些类具有到[\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)元素中的友好名称的映射。  
+# <a name="ltcryptoclassesgt-element"></a><span data-ttu-id="e5221-102">&lt;cryptoClasses&gt;元素</span><span class="sxs-lookup"><span data-stu-id="e5221-102">&lt;cryptoClasses&gt; Element</span></span>
+<span data-ttu-id="e5221-103">包含密码类的列表，这些类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。</span><span class="sxs-lookup"><span data-stu-id="e5221-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
   
-## 语法  
+ <span data-ttu-id="e5221-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e5221-104">\<configuration></span></span>  
+<span data-ttu-id="e5221-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="e5221-105">\<mscorlib></span></span>  
+<span data-ttu-id="e5221-106">\<g s ></span><span class="sxs-lookup"><span data-stu-id="e5221-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="e5221-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="e5221-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="e5221-108">\<cryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="e5221-108">\<cryptoClasses></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e5221-109">语法</span><span class="sxs-lookup"><span data-stu-id="e5221-109">Syntax</span></span>  
+  
+```xml  
 <cryptoClasses>   
 </cryptoClasses>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e5221-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e5221-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="e5221-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e5221-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="e5221-112">特性</span><span class="sxs-lookup"><span data-stu-id="e5221-112">Attributes</span></span>  
+ <span data-ttu-id="e5221-113">无。</span><span class="sxs-lookup"><span data-stu-id="e5221-113">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="e5221-114">子元素</span><span class="sxs-lookup"><span data-stu-id="e5221-114">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<\<cryptoClass\>\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|包含一个密码类，该类具有到  **\<nameEntry\>**元素中的友好名称的映射。|  
+|<span data-ttu-id="e5221-115">元素</span><span class="sxs-lookup"><span data-stu-id="e5221-115">Element</span></span>|<span data-ttu-id="e5221-116">描述</span><span class="sxs-lookup"><span data-stu-id="e5221-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e5221-117">\<cryptoClass ></span><span class="sxs-lookup"><span data-stu-id="e5221-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="e5221-118">包含一个密码类，该类具有到 **\<nameEntry>** 元素中的友好名称的映射。</span><span class="sxs-lookup"><span data-stu-id="e5221-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="e5221-119">父元素</span><span class="sxs-lookup"><span data-stu-id="e5221-119">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`cryptographySettings`|包含密码设置。|  
-|`cryptoNameMapping`|包含类到友好名称的映射。|  
-|`mscorlib`|包含 `cryptographySettings` 元素。|  
+|<span data-ttu-id="e5221-120">元素</span><span class="sxs-lookup"><span data-stu-id="e5221-120">Element</span></span>|<span data-ttu-id="e5221-121">描述</span><span class="sxs-lookup"><span data-stu-id="e5221-121">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="e5221-122">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="e5221-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="e5221-123">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="e5221-123">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="e5221-124">包含类到友好名称的映射。</span><span class="sxs-lookup"><span data-stu-id="e5221-124">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="e5221-125">包含`cryptographySettings`元素。</span><span class="sxs-lookup"><span data-stu-id="e5221-125">Contains the `cryptographySettings` element.</span></span>|  
   
-## 示例  
- 下面的示例演示如何使用  **\<cryptoClass\>**元素来引用密码类和配置运行时。  然后，您就可以将字符串“RSA”传递到 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> 方法并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回一个 `MyCryptoRSAClass` 对象。  
+## <a name="example"></a><span data-ttu-id="e5221-126">示例</span><span class="sxs-lookup"><span data-stu-id="e5221-126">Example</span></span>  
+ <span data-ttu-id="e5221-127">下面的示例演示如何使用 **\<cryptoClass >**元素来引用密码类并配置运行时。</span><span class="sxs-lookup"><span data-stu-id="e5221-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="e5221-128">然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。</span><span class="sxs-lookup"><span data-stu-id="e5221-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -82,10 +86,10 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Security.Cryptography>   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)   
- [System.Security.Cryptography.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic)   
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="e5221-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e5221-129">See Also</span></span>  
+ <xref:System.Security.Cryptography>  
+ [<span data-ttu-id="e5221-130">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="e5221-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="e5221-131">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="e5221-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="e5221-132">加密服务</span><span class="sxs-lookup"><span data-stu-id="e5221-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="e5221-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="e5221-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+ [<span data-ttu-id="e5221-134">配置加密类</span><span class="sxs-lookup"><span data-stu-id="e5221-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

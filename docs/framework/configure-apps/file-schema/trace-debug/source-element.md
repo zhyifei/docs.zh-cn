@@ -1,76 +1,73 @@
 ---
-title: "&lt;source&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> 元素"
-  - "source 元素"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: "&lt;源&gt;元素"
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt; 元素
-指定启动跟踪消息的跟踪源。  
+# <a name="ltsourcegt-element"></a><span data-ttu-id="f45ae-102">&lt;源&gt;元素</span><span class="sxs-lookup"><span data-stu-id="f45ae-102">&lt;source&gt; Element</span></span>
+<span data-ttu-id="f45ae-103">指定用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="f45ae-103">Specifies a trace source that initiates tracing messages.</span></span>  
   
-## 语法  
+ <span data-ttu-id="f45ae-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f45ae-104">\<configuration></span></span>  
+<span data-ttu-id="f45ae-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="f45ae-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="f45ae-106">\<源 ></span><span class="sxs-lookup"><span data-stu-id="f45ae-106">\<sources></span></span>  
+<span data-ttu-id="f45ae-107">\<源 ></span><span class="sxs-lookup"><span data-stu-id="f45ae-107">\<source></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="f45ae-108">语法</span><span class="sxs-lookup"><span data-stu-id="f45ae-108">Syntax</span></span>  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f45ae-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f45ae-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f45ae-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f45ae-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="f45ae-111">特性</span><span class="sxs-lookup"><span data-stu-id="f45ae-111">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|`name`|可选特性。<br /><br /> 指定跟踪源的名称。|  
-|`switchName`|可选特性。<br /><br /> 指定应用程序中的跟踪开关实例的名称。  如果未在某个 `<switches>` 元素中标识该开关，则该值指定开关的级别。|  
-|`switchType`|可选特性。<br /><br /> 指定跟踪开关的类型。  如存在，该类型必须是有效的类名，并且不能是空字符串。|  
-|`extraAttribute`|可选特性。<br /><br /> 为该跟踪源的 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 方法确定的跟踪源特定属性指定该值。|  
+|<span data-ttu-id="f45ae-112">特性</span><span class="sxs-lookup"><span data-stu-id="f45ae-112">Attribute</span></span>|<span data-ttu-id="f45ae-113">描述</span><span class="sxs-lookup"><span data-stu-id="f45ae-113">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="f45ae-114">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f45ae-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f45ae-115">指定跟踪源的名称。</span><span class="sxs-lookup"><span data-stu-id="f45ae-115">Specifies the name of the trace source.</span></span>|  
+|`switchName`|<span data-ttu-id="f45ae-116">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f45ae-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f45ae-117">应用程序中指定的跟踪交换机实例的名称。</span><span class="sxs-lookup"><span data-stu-id="f45ae-117">Specifies the name of a trace switch instance in the application.</span></span> <span data-ttu-id="f45ae-118">如果此开关不在中标识`<switches>`元素，值指定为交换机级别。</span><span class="sxs-lookup"><span data-stu-id="f45ae-118">If the switch is not identified in a `<switches>` element, the value specifies the level for the switch.</span></span>|  
+|`switchType`|<span data-ttu-id="f45ae-119">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f45ae-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f45ae-120">指定的一种跟踪开关。</span><span class="sxs-lookup"><span data-stu-id="f45ae-120">Specifies the type of the trace switch.</span></span> <span data-ttu-id="f45ae-121">如果存在，类型必须是有效的类名称，并且不能为空字符串。</span><span class="sxs-lookup"><span data-stu-id="f45ae-121">If present, the type must be a valid class name and cannot be an empty string.</span></span>|  
+|`extraAttribute`|<span data-ttu-id="f45ae-122">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f45ae-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f45ae-123">指定由跟踪源特定属性的值<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>为该跟踪源的方法。</span><span class="sxs-lookup"><span data-stu-id="f45ae-123">Specifies the value for a trace source-specific attribute identified by the <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> method for that trace source.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="f45ae-124">子元素</span><span class="sxs-lookup"><span data-stu-id="f45ae-124">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|包含对消息进行收集、存储和路由的侦听器。|  
+|<span data-ttu-id="f45ae-125">元素</span><span class="sxs-lookup"><span data-stu-id="f45ae-125">Element</span></span>|<span data-ttu-id="f45ae-126">描述</span><span class="sxs-lookup"><span data-stu-id="f45ae-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="f45ae-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="f45ae-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="f45ae-128">包含收集、 存储和将消息路由的侦听器。</span><span class="sxs-lookup"><span data-stu-id="f45ae-128">Contains listeners that collect, store, and route messages.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="f45ae-129">父元素</span><span class="sxs-lookup"><span data-stu-id="f45ae-129">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`system.diagnostics`|指定对消息进行收集、存储和路由的跟踪侦听器以及设置跟踪开关的级别。|  
-|`sources`|包含启动跟踪消息的跟踪源。|  
+|<span data-ttu-id="f45ae-130">元素</span><span class="sxs-lookup"><span data-stu-id="f45ae-130">Element</span></span>|<span data-ttu-id="f45ae-131">描述</span><span class="sxs-lookup"><span data-stu-id="f45ae-131">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="f45ae-132">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="f45ae-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="f45ae-133">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="f45ae-133">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="f45ae-134">包含用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="f45ae-134">Contains trace sources that initiate tracing messages.</span></span>|  
   
-## 备注  
- 此元素可用于计算机配置文件 \(Machine.config\) 和应用程序配置文件。  
+## <a name="remarks"></a><span data-ttu-id="f45ae-135">备注</span><span class="sxs-lookup"><span data-stu-id="f45ae-135">Remarks</span></span>  
+ <span data-ttu-id="f45ae-136">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="f45ae-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## 示例  
- 下面的示例演示如何使用 `<source>`  元素添加跟踪源 `mySource` 并设置名为 `sourceSwitch` 的源开关的级别。  添加了一个控制台跟踪侦听器，该侦听器将跟踪信息写到控制台。  
+## <a name="example"></a><span data-ttu-id="f45ae-137">示例</span><span class="sxs-lookup"><span data-stu-id="f45ae-137">Example</span></span>  
+ <span data-ttu-id="f45ae-138">下面的示例演示如何使用`<source>`要添加的跟踪源元素`mySource`和设置源开关的级别命名`sourceSwitch`。</span><span class="sxs-lookup"><span data-stu-id="f45ae-138">The following example shows how to use the `<source>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="f45ae-139">将控制台跟踪侦听器添加跟踪信息写入控制台。</span><span class="sxs-lookup"><span data-stu-id="f45ae-139">A console trace listener is added that writes trace information to the console.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 请参阅  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a><span data-ttu-id="f45ae-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f45ae-140">See Also</span></span>  
+ [<span data-ttu-id="f45ae-141">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="f45ae-141">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="f45ae-142">跟踪开关</span><span class="sxs-lookup"><span data-stu-id="f45ae-142">Trace Switches</span></span>](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

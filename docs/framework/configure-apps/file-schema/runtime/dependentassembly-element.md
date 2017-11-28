@@ -1,70 +1,73 @@
 ---
-title: "&lt;dependentAssembly&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#dependentAssembly"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<dependentAssembly> 元素"
-  - "容器标记, <dependentAssembly> 元素"
-  - "dependentAssembly 元素"
+title: "&lt;dependentAssembly&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#dependentAssembly
+helpviewer_keywords:
+- container tags, <dependentAssembly> element
+- dependentAssembly element
+- <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 60c7e53c11a23b242e71fdb3e0b7597ae9fbda18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;dependentAssembly&gt; 元素
-封装每个程序集的绑定策略和程序集位置。  为每个程序集使用一个 `dependentAssembly` 元素。  
+# <a name="ltdependentassemblygt-element"></a><span data-ttu-id="796cc-102">&lt;dependentAssembly&gt;元素</span><span class="sxs-lookup"><span data-stu-id="796cc-102">&lt;dependentAssembly&gt; Element</span></span>
+<span data-ttu-id="796cc-103">封装每个程序集的绑定策略和程序集位置。</span><span class="sxs-lookup"><span data-stu-id="796cc-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="796cc-104">使用一个`dependentAssembly`每个程序集的元素。</span><span class="sxs-lookup"><span data-stu-id="796cc-104">Use one `dependentAssembly` element for each assembly.</span></span>  
   
-## 语法  
+ <span data-ttu-id="796cc-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="796cc-105">\<configuration></span></span>  
+<span data-ttu-id="796cc-106">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="796cc-106">\<runtime></span></span>  
+<span data-ttu-id="796cc-107">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="796cc-107">\<assemblyBinding></span></span>  
+<span data-ttu-id="796cc-108">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="796cc-108">\<dependentAssembly></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="796cc-109">语法</span><span class="sxs-lookup"><span data-stu-id="796cc-109">Syntax</span></span>  
+  
+```xml  
 <dependentAssembly>   
 </dependentAssembly>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="796cc-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="796cc-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="796cc-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="796cc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="796cc-112">特性</span><span class="sxs-lookup"><span data-stu-id="796cc-112">Attributes</span></span>  
+ <span data-ttu-id="796cc-113">无。</span><span class="sxs-lookup"><span data-stu-id="796cc-113">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="796cc-114">子元素</span><span class="sxs-lookup"><span data-stu-id="796cc-114">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`assemblyIdentity`|包含关于该程序集的标识信息。  此元素必须包含在每个 `dependentAssembly` 元素中。|  
-|`codeBase`|如果计算机上未安装共享程序集，指定运行时可在何处找到共享程序集。|  
-|`bindingRedirect`|将一个程序集版本重定向到另一个版本。|  
-|`publisherPolicy`|指定运行时是否应用此程序集的出版商策略。|  
+|<span data-ttu-id="796cc-115">元素</span><span class="sxs-lookup"><span data-stu-id="796cc-115">Element</span></span>|<span data-ttu-id="796cc-116">描述</span><span class="sxs-lookup"><span data-stu-id="796cc-116">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyIdentity`|<span data-ttu-id="796cc-117">包含有关程序集的标识信息。</span><span class="sxs-lookup"><span data-stu-id="796cc-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="796cc-118">此元素必须包括在每个`dependentAssembly`元素。</span><span class="sxs-lookup"><span data-stu-id="796cc-118">This element must be included in each `dependentAssembly` element.</span></span>|  
+|`codeBase`|<span data-ttu-id="796cc-119">指定在何处运行时可以找到共享的程序集，如果计算机上未安装。</span><span class="sxs-lookup"><span data-stu-id="796cc-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
+|`bindingRedirect`|<span data-ttu-id="796cc-120">将一个程序集版本重定向到另一个版本。</span><span class="sxs-lookup"><span data-stu-id="796cc-120">Redirects one assembly version to another.</span></span>|  
+|`publisherPolicy`|<span data-ttu-id="796cc-121">指定运行时是否适用于此程序集的发布服务器策略。</span><span class="sxs-lookup"><span data-stu-id="796cc-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="796cc-122">父元素</span><span class="sxs-lookup"><span data-stu-id="796cc-122">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
+|<span data-ttu-id="796cc-123">元素</span><span class="sxs-lookup"><span data-stu-id="796cc-123">Element</span></span>|<span data-ttu-id="796cc-124">描述</span><span class="sxs-lookup"><span data-stu-id="796cc-124">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyBinding`|<span data-ttu-id="796cc-125">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="796cc-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="796cc-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="796cc-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="796cc-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="796cc-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 示例  
- 下面的示例说明如何为两个程序集封装程序集信息。  
+## <a name="example"></a><span data-ttu-id="796cc-128">示例</span><span class="sxs-lookup"><span data-stu-id="796cc-128">Example</span></span>  
+ <span data-ttu-id="796cc-129">下面的示例演示如何封装两个程序集的程序集信息。</span><span class="sxs-lookup"><span data-stu-id="796cc-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -85,7 +88,7 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="796cc-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="796cc-130">See Also</span></span>  
+ [<span data-ttu-id="796cc-131">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="796cc-131">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="796cc-132">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="796cc-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="796cc-133">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="796cc-133">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,64 +1,67 @@
 ---
-title: "LINQ to DataSet 示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to DataSet 示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to DataSet 示例
-本节提供使用标准查询运算符的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 编程示例。  这些示例中所使用的 <xref:System.Data.DataSet> 已通过使用[向数据集中加载数据](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)中指定的 `FillDataSet` 方法进行填充。有关更多信息，请参见[Standard Query Operators Overview](../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+# <a name="linq-to-dataset-examples"></a><span data-ttu-id="23bed-102">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="23bed-102">LINQ to DataSet Examples</span></span>
+<span data-ttu-id="23bed-103">本部分提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]编程使用标准查询运算符的示例。</span><span class="sxs-lookup"><span data-stu-id="23bed-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="23bed-104"><xref:System.Data.DataSet>这些示例中使用填充使用`FillDataSet`方法，指定在[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="23bed-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="23bed-105">有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="23bed-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
-## 本节内容  
- [查询表达式示例：](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
- 包含下面的示例：  
+## <a name="in-this-section"></a><span data-ttu-id="23bed-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="23bed-106">In This Section</span></span>  
+ [<span data-ttu-id="23bed-107">查询表达式示例</span><span class="sxs-lookup"><span data-stu-id="23bed-107">Query Expression Examples</span></span>](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ <span data-ttu-id="23bed-108">包含下面的示例：</span><span class="sxs-lookup"><span data-stu-id="23bed-108">Contains the following examples:</span></span>  
   
--   [投影](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+-   [<span data-ttu-id="23bed-109">投影</span><span class="sxs-lookup"><span data-stu-id="23bed-109">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
--   [限制](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+-   [<span data-ttu-id="23bed-110">限制</span><span class="sxs-lookup"><span data-stu-id="23bed-110">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
--   [分区](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+-   [<span data-ttu-id="23bed-111">分区</span><span class="sxs-lookup"><span data-stu-id="23bed-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [Ordering](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="23bed-112">排序</span><span class="sxs-lookup"><span data-stu-id="23bed-112">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [元素运算符](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="23bed-113">元素运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-113">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [聚合运算符](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="23bed-114">聚合运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-114">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [联接运算符](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+-   [<span data-ttu-id="23bed-115">联接运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-115">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [基于方法的查询示例：](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
- 包含下面的示例：  
+ [<span data-ttu-id="23bed-116">基于方法的查询示例</span><span class="sxs-lookup"><span data-stu-id="23bed-116">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ <span data-ttu-id="23bed-117">包含下面的示例：</span><span class="sxs-lookup"><span data-stu-id="23bed-117">Contains the following examples:</span></span>  
   
--   [投影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+-   [<span data-ttu-id="23bed-118">投影</span><span class="sxs-lookup"><span data-stu-id="23bed-118">Projection</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
--   [分区](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+-   [<span data-ttu-id="23bed-119">分区</span><span class="sxs-lookup"><span data-stu-id="23bed-119">Partitioning</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [Ordering](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="23bed-120">排序</span><span class="sxs-lookup"><span data-stu-id="23bed-120">Ordering</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [集合运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [<span data-ttu-id="23bed-121">集运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-121">Set Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
--   [转换运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+-   [<span data-ttu-id="23bed-122">转换运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-122">Conversion Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
--   [元素运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="23bed-123">元素运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-123">Element Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [聚合运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="23bed-124">聚合运算符</span><span class="sxs-lookup"><span data-stu-id="23bed-124">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+-   [<span data-ttu-id="23bed-125">Join</span><span class="sxs-lookup"><span data-stu-id="23bed-125">Join</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [数据集特定的运算符示例](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- 包含演示如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 类的示例。  
+ [<span data-ttu-id="23bed-126">数据集特定的运算符示例</span><span class="sxs-lookup"><span data-stu-id="23bed-126">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ <span data-ttu-id="23bed-127">包含演示如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 类的示例。</span><span class="sxs-lookup"><span data-stu-id="23bed-127">Contains examples that demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
   
-## 请参阅  
- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)   
- [向数据集中加载数据](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="23bed-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="23bed-128">See Also</span></span>  
+ [<span data-ttu-id="23bed-129">编程指南</span><span class="sxs-lookup"><span data-stu-id="23bed-129">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="23bed-130">数据加载到数据集</span><span class="sxs-lookup"><span data-stu-id="23bed-130">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

@@ -1,28 +1,37 @@
 ---
-title: "&lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9def7fbd0082cc7fa9d9f18388604383cb71f9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt;
-定义消息队列集成传输的安全设置。  
+# <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="83875-102">&lt;msmqIntegrationBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="83875-102">&lt;transport&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
+<span data-ttu-id="83875-103">定义消息队列集成传输的安全设置。</span><span class="sxs-lookup"><span data-stu-id="83875-103">Defines the security settings for the Message Queuing integration transport.</span></span>  
   
-## 语法  
+ <span data-ttu-id="83875-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="83875-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="83875-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="83875-105">\<bindings></span></span>  
+<span data-ttu-id="83875-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="83875-106">msmqIntegrationBinding</span></span>  
+<span data-ttu-id="83875-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="83875-107">\<binding></span></span>  
+<span data-ttu-id="83875-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="83875-108">\<security></span></span>  
+<span data-ttu-id="83875-109">\<传输 ></span><span class="sxs-lookup"><span data-stu-id="83875-109">\<transport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="83875-110">语法</span><span class="sxs-lookup"><span data-stu-id="83875-110">Syntax</span></span>  
   
+```xml  
 <security>  
     <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
         msmqEncryptionAlgorithm="RC4Stream/AES"  
@@ -31,38 +40,38 @@ caps.handback.revision: 15
 </security>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="83875-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="83875-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="83875-112">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="83875-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="83875-113">特性</span><span class="sxs-lookup"><span data-stu-id="83875-113">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|`msmqAuthenticationMode`|指定 MSMQ 传输必须采用什么方式对消息进行身份验证。  如果将此属性设置为 `None`，则 `msmqProtectionLevel` 属性的值也必须设置为 `None`。<br /><br /> 包括以下有效值：<br /><br /> -   None：不进行身份验证。<br />-   WindowsDomain：身份验证机制使用 Active Directory 获取与消息关联的 SID 的 X.509 证书。  然后使用它来检查队列的 ACL 以确保用户有权写入队列。<br />-   Certificate：通道从证书存储中获得证书。<br /><br /> 默认值为 WindowsDomain。  此属性的类型为 <xref:System.ServiceModel.MsmqAuthenticationMode>。|  
-|`msmqEncryptionAlgorithm`|指定在消息队列管理器之间传输消息时用于在网络上对消息进行加密的算法。  包括以下有效值：<br /><br /> -   RC4Stream<br />-   AES<br /><br /> 默认值为 RC4Stream。  此属性的类型为 <xref:System.ServiceModel.MsmqEncryptionAlgorithm>。|  
-|`msmqProtectionLevel`|指定在 MSMQ 传输级别采用什么方式来保护消息。  加密可以确保消息的完整性，而 EncryptAndSign 不仅可以确保消息的完整性，还可以确保消息的不可否认性，也就是说，消息确实来自发送者，并且发送者与其所声称的身份一致。<br /><br /> -   包括以下有效值：<br />-   None：无保护。<br />-   Sign：对消息进行签名。<br />-   EncryptAndSign：对消息进行加密和签名。<br /><br /> 默认值为 Sign。  此属性的类型为 ProtectionLevel。|  
-|`msmqSecureHashAlgorithm`|-   指定用于计算签名中的摘要的算法。  包括以下有效值：<br />-   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> 默认值为 SHA1。  此属性的类型为 <xref:System.ServiceModel.MsmqSecureHashAlgorithm>。|  
+|<span data-ttu-id="83875-114">特性</span><span class="sxs-lookup"><span data-stu-id="83875-114">Attribute</span></span>|<span data-ttu-id="83875-115">描述</span><span class="sxs-lookup"><span data-stu-id="83875-115">Description</span></span>|  
+|---------------|-----------------|  
+|`msmqAuthenticationMode`|<span data-ttu-id="83875-116">指定 MSMQ 传输必须采用什么方式对消息进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="83875-116">Specifies how the message must be authenticated by the MSMQ transport.</span></span> <span data-ttu-id="83875-117">如果将此属性设置为 `None`，则 `msmqProtectionLevel` 属性的值也必须设置为 `None`。</span><span class="sxs-lookup"><span data-stu-id="83875-117">If this is set to `None`, the value of the `msmqProtectionLevel` attribute must also be set to `None`.</span></span><br /><br /> <span data-ttu-id="83875-118">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="83875-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="83875-119">-None： 无身份验证。</span><span class="sxs-lookup"><span data-stu-id="83875-119">-   None: No authentication.</span></span><br /><span data-ttu-id="83875-120">-WindowsDomain： 身份验证机制使用 Active Directory 获取与消息关联的 SID 的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="83875-120">-   WindowsDomain: The authentication mechanism uses Active Directory to get the X.509 certificate for the SID associated with the message.</span></span> <span data-ttu-id="83875-121">然后使用它来检查队列的 ACL 以确保用户有权写入队列。</span><span class="sxs-lookup"><span data-stu-id="83875-121">This is then used to check the ACL of the queue to ensure the user has permission to write to the queue.</span></span><br /><span data-ttu-id="83875-122">-证书： 通道从证书存储中获取的证书。</span><span class="sxs-lookup"><span data-stu-id="83875-122">-   Certificate: The channel gets the certificate from the certificate store.</span></span><br /><br /> <span data-ttu-id="83875-123">默认值为 WindowsDomain。</span><span class="sxs-lookup"><span data-stu-id="83875-123">The default value is WindowsDomain.</span></span> <span data-ttu-id="83875-124">此属性的类型为 <xref:System.ServiceModel.MsmqAuthenticationMode>。</span><span class="sxs-lookup"><span data-stu-id="83875-124">This attribute is of type <xref:System.ServiceModel.MsmqAuthenticationMode>.</span></span>|  
+|`msmqEncryptionAlgorithm`|<span data-ttu-id="83875-125">指定在消息队列管理器之间传输消息时用于在网络上对消息进行加密的算法。</span><span class="sxs-lookup"><span data-stu-id="83875-125">Specifies the algorithm to be used for message encryption on the wire when transferring messages between message queue managers.</span></span> <span data-ttu-id="83875-126">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="83875-126">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="83875-127">-RC4Stream</span><span class="sxs-lookup"><span data-stu-id="83875-127">-   RC4Stream</span></span><br /><span data-ttu-id="83875-128">-AES</span><span class="sxs-lookup"><span data-stu-id="83875-128">-   AES</span></span><br /><br /> <span data-ttu-id="83875-129">默认值为 RC4Stream。</span><span class="sxs-lookup"><span data-stu-id="83875-129">The default value is RC4Stream.</span></span> <span data-ttu-id="83875-130">此属性的类型为 <xref:System.ServiceModel.MsmqEncryptionAlgorithm>。</span><span class="sxs-lookup"><span data-stu-id="83875-130">This attribute is of type <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.</span></span>|  
+|`msmqProtectionLevel`|<span data-ttu-id="83875-131">指定在 MSMQ 传输级别采用什么方式来保护消息。</span><span class="sxs-lookup"><span data-stu-id="83875-131">Specifies how the message is secured at the level of the MSMQ transport.</span></span> <span data-ttu-id="83875-132">加密可以确保消息的完整性，而 EncryptAndSign 不仅可以确保消息的完整性，还可以确保消息的不可否认性，也就是说，消息确实来自发送者，并且发送者与其所声称的身份一致。</span><span class="sxs-lookup"><span data-stu-id="83875-132">Encryption ensures message integrity while EncryptAndSign ensures both message integrity and non-repudiation; that is, the message indeed comes from the sender and the sender is who he says he is.</span></span><br /><br /> <span data-ttu-id="83875-133">有效值包括：</span><span class="sxs-lookup"><span data-stu-id="83875-133">-   Valid values include the following:</span></span><br /><span data-ttu-id="83875-134">-None： 无保护。</span><span class="sxs-lookup"><span data-stu-id="83875-134">-   None: No protection.</span></span><br /><span data-ttu-id="83875-135">-Sign： 消息进行签名。</span><span class="sxs-lookup"><span data-stu-id="83875-135">-   Sign: Messages are signed.</span></span><br /><span data-ttu-id="83875-136">-EncryptAndSign： 消息进行加密和签名。</span><span class="sxs-lookup"><span data-stu-id="83875-136">-   EncryptAndSign: Messages are encrypted and signed.</span></span><br /><br /> <span data-ttu-id="83875-137">默认值为 Sign。</span><span class="sxs-lookup"><span data-stu-id="83875-137">The default value is Sign.</span></span> <span data-ttu-id="83875-138">此属性的类型为 ProtectionLevel。</span><span class="sxs-lookup"><span data-stu-id="83875-138">This attribute is of type ProtectionLevel.</span></span>|  
+|`msmqSecureHashAlgorithm`|<span data-ttu-id="83875-139">-指定用于计算签名摘要算法。</span><span class="sxs-lookup"><span data-stu-id="83875-139">-   Specifies the algorithm to be used in computing the digest as part of signatures.</span></span> <span data-ttu-id="83875-140">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="83875-140">Valid values include the following:</span></span><br /><span data-ttu-id="83875-141">-MD5</span><span class="sxs-lookup"><span data-stu-id="83875-141">-   MD5</span></span><br /><span data-ttu-id="83875-142">-SHA1</span><span class="sxs-lookup"><span data-stu-id="83875-142">-   SHA1</span></span><br /><span data-ttu-id="83875-143">-SHA256</span><span class="sxs-lookup"><span data-stu-id="83875-143">-   SHA256</span></span><br /><span data-ttu-id="83875-144">-SHA512</span><span class="sxs-lookup"><span data-stu-id="83875-144">-   SHA512</span></span><br /><br /> <span data-ttu-id="83875-145">默认值为 SHA1。</span><span class="sxs-lookup"><span data-stu-id="83875-145">The default value is SHA1.</span></span> <span data-ttu-id="83875-146">此属性的类型为 <xref:System.ServiceModel.MsmqSecureHashAlgorithm>。</span><span class="sxs-lookup"><span data-stu-id="83875-146">This attribute is of type <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="83875-147">子元素</span><span class="sxs-lookup"><span data-stu-id="83875-147">Child Elements</span></span>  
+ <span data-ttu-id="83875-148">无</span><span class="sxs-lookup"><span data-stu-id="83875-148">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="83875-149">父元素</span><span class="sxs-lookup"><span data-stu-id="83875-149">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义 MSMQ 绑定的安全设置。|  
+|<span data-ttu-id="83875-150">元素</span><span class="sxs-lookup"><span data-stu-id="83875-150">Element</span></span>|<span data-ttu-id="83875-151">描述</span><span class="sxs-lookup"><span data-stu-id="83875-151">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="83875-152">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="83875-152">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|<span data-ttu-id="83875-153">定义 MSMQ 绑定的安全设置。</span><span class="sxs-lookup"><span data-stu-id="83875-153">Defines the security settings for a MSMQ binding.</span></span>|  
   
-## 备注  
- 此元素包装消息队列集成传输的安全设置。  消息队列集成传输和排队传输的设置是相同的。  使用此元素可以设置身份验证模式、加密算法、安全哈希算法和保护级别。  
+## <a name="remarks"></a><span data-ttu-id="83875-154">备注</span><span class="sxs-lookup"><span data-stu-id="83875-154">Remarks</span></span>  
+ <span data-ttu-id="83875-155">此元素包装消息队列集成传输的安全设置。</span><span class="sxs-lookup"><span data-stu-id="83875-155">This element encapsulates the security settings for the Message Queuing integration transport.</span></span> <span data-ttu-id="83875-156">消息队列集成传输和排队传输的设置是相同的。</span><span class="sxs-lookup"><span data-stu-id="83875-156">The settings are the same for both the Message Queuing integration and queued transports.</span></span> <span data-ttu-id="83875-157">使用此元素可以设置身份验证模式、加密算法、安全哈希算法和保护级别。</span><span class="sxs-lookup"><span data-stu-id="83875-157">It enables you to set the Authentication Mode, Encryption Algorithm, Secure Hash Algorithm, and Protection Level.</span></span>  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>   
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.MsmqTransportSecurity>   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="83875-158">另请参阅</span><span class="sxs-lookup"><span data-stu-id="83875-158">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.MsmqTransportSecurity>  
+ [<span data-ttu-id="83875-159">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="83875-159">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="83875-160">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="83875-160">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="83875-161">绑定</span><span class="sxs-lookup"><span data-stu-id="83875-161">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="83875-162">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="83875-162">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="83875-163">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="83875-163">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="83875-164">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="83875-164">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

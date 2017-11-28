@@ -1,145 +1,144 @@
 ---
-title: "Entity SQL 参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Entity SQL 引用"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 776a2a93f559ba54651adc49e6b609c8156e9e31
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Entity SQL 参考
-本节包含 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 参考主题。本主题汇总了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 运算符并按类别对其分组。  
+# <a name="entity-sql-reference"></a><span data-ttu-id="aef35-102">Entity SQL 引用</span><span class="sxs-lookup"><span data-stu-id="aef35-102">Entity SQL Reference</span></span>
+<span data-ttu-id="aef35-103">本节包含 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 参考主题。</span><span class="sxs-lookup"><span data-stu-id="aef35-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="aef35-104">本主题总结并组[!INCLUDE[esql](../../../../../../includes/esql-md.md)]按类别的运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  
   
-## 算术运算符  
- 算术运算符对两个表达式执行数学运算，这两个表达式可以是一个或多个数值数据类型。  下表列出了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 算术运算符。  
+## <a name="arithmetic-operators"></a><span data-ttu-id="aef35-105">算术运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-105">Arithmetic Operators</span></span>  
+ <span data-ttu-id="aef35-106">算术运算符对两个表达式执行数学运算，这两个表达式可以是一个或多个数值数据类型。</span><span class="sxs-lookup"><span data-stu-id="aef35-106">Arithmetic operators perform mathematical operations on two expressions of one or more numeric data types.</span></span> <span data-ttu-id="aef35-107">下表列出了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 算术运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-107">The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] arithmetic operators.</span></span>  
   
-|运算符|使用|  
-|---------|--------|  
-|[\+（添加）](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|加法。|  
-|[\/（除）](../../../../../../docs/framework/data/adonet/ef/language-reference/divide-entity-sql.md)|除法。|  
-|[%（取模）](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|返回除法运算的余数。|  
-|[\*（乘）](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|乘法。|  
-|[\-（负号）](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|求反。|  
-|[\-（减）](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|减法。|  
+|<span data-ttu-id="aef35-108">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-108">Operator</span></span>|<span data-ttu-id="aef35-109">使用</span><span class="sxs-lookup"><span data-stu-id="aef35-109">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="aef35-110">+ （添加）</span><span class="sxs-lookup"><span data-stu-id="aef35-110">+ (Add)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|<span data-ttu-id="aef35-111">加法。</span><span class="sxs-lookup"><span data-stu-id="aef35-111">Addition.</span></span>|  
+|<span data-ttu-id="aef35-112">"/ （除）"</span><span class="sxs-lookup"><span data-stu-id="aef35-112">"/ (Divide)"</span></span>|<span data-ttu-id="aef35-113">除法。</span><span class="sxs-lookup"><span data-stu-id="aef35-113">Division.</span></span>|  
+|[<span data-ttu-id="aef35-114">%（取模）</span><span class="sxs-lookup"><span data-stu-id="aef35-114">% (Modulo)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|<span data-ttu-id="aef35-115">返回除法运算的余数。</span><span class="sxs-lookup"><span data-stu-id="aef35-115">Returns the remainder of a division.</span></span>|  
+|[<span data-ttu-id="aef35-116">* （乘）</span><span class="sxs-lookup"><span data-stu-id="aef35-116">* (Multiply)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|<span data-ttu-id="aef35-117">乘法。</span><span class="sxs-lookup"><span data-stu-id="aef35-117">Multiplication.</span></span>|  
+|[<span data-ttu-id="aef35-118">-（负号）</span><span class="sxs-lookup"><span data-stu-id="aef35-118">- (Negative)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|<span data-ttu-id="aef35-119">求反。</span><span class="sxs-lookup"><span data-stu-id="aef35-119">Negation.</span></span>|  
+|[<span data-ttu-id="aef35-120">-（减）</span><span class="sxs-lookup"><span data-stu-id="aef35-120">- (Subtract)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|<span data-ttu-id="aef35-121">减法。</span><span class="sxs-lookup"><span data-stu-id="aef35-121">Subtraction.</span></span>|  
   
-## 规范函数  
- 所有数据提供程序都支持规范函数，并且所有查询技术都可以使用规范函数。  下表列出了规范函数。  
+## <a name="canonical-functions"></a><span data-ttu-id="aef35-122">规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-122">Canonical Functions</span></span>  
+ <span data-ttu-id="aef35-123">所有数据提供程序都支持规范函数，并且所有查询技术都可以使用规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-123">Canonical functions are supported by all data providers and can be used by all querying technologies.</span></span> <span data-ttu-id="aef35-124">下表列出了规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-124">The following table lists the canonical functions.</span></span>  
   
-|函数|类型|  
-|--------|--------|  
-|[聚合 Entity SQL 规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合规范函数。|  
-|[数学规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。|  
-|[字符串规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。|  
-|[日期和时间规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。|  
-|[按位规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。|  
-|[其他规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|讨论未分类为按位、日期\/时间、字符串、数字或聚合函数的函数。|  
+|<span data-ttu-id="aef35-125">函数</span><span class="sxs-lookup"><span data-stu-id="aef35-125">Function</span></span>|<span data-ttu-id="aef35-126">类型</span><span class="sxs-lookup"><span data-stu-id="aef35-126">Type</span></span>|  
+|--------------|----------|  
+|[<span data-ttu-id="aef35-127">聚合 Entity SQL 规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-127">Aggregate Entity SQL Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|<span data-ttu-id="aef35-128">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-128">Discusses aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="aef35-129">数学规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-129">Math Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|<span data-ttu-id="aef35-130">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-130">Discusses math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="aef35-131">字符串规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-131">String Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|<span data-ttu-id="aef35-132">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-132">Discusses string [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="aef35-133">日期和时间规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-133">Date and Time Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="aef35-134">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-134">Discusses date and time [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="aef35-135">按位规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-135">Bitwise Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="aef35-136">讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-136">Discusses bitwise [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="aef35-137">其他规范函数</span><span class="sxs-lookup"><span data-stu-id="aef35-137">Other Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|<span data-ttu-id="aef35-138">讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-138">Discusses functions not classified as bitwise, date/time, string, math, or aggregate.</span></span>|  
   
-## 比较运算符  
- 比较运算符适用于下列类型：`Byte`、`Int16`、`Int32`、`Int64`、`Double`、`Single`、`Decimal`、`String`、`DateTime`、`Date`、`Time`、`DateTimeOffset`。  应用比较运算符之前将对操作数进行隐性类型升级。  比较运算符总是生成布尔值。  如果操作数中至少有一个 `null`，则结果为 `null`。  
+## <a name="comparison-operators"></a><span data-ttu-id="aef35-139">比较运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-139">Comparison Operators</span></span>  
+ <span data-ttu-id="aef35-140">比较运算符适用于下列类型：`Byte`、`Int16`、`Int32`、`Int64`、`Double`、`Single`、`Decimal`、`String`、`DateTime`、`Date`、`Time`、`DateTimeOffset`。</span><span class="sxs-lookup"><span data-stu-id="aef35-140">Comparison operators are defined for the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`.</span></span> <span data-ttu-id="aef35-141">应用比较运算符之前将对操作数进行隐性类型升级。</span><span class="sxs-lookup"><span data-stu-id="aef35-141">Implicit type promotion occurs for the operands before the comparison operator is applied.</span></span> <span data-ttu-id="aef35-142">比较运算符总是生成布尔值。</span><span class="sxs-lookup"><span data-stu-id="aef35-142">Comparison operators always yield Boolean values.</span></span> <span data-ttu-id="aef35-143">如果操作数中至少有一个 `null`，则结果为 `null`。</span><span class="sxs-lookup"><span data-stu-id="aef35-143">When at least one of the operands is `null`, the result is `null`.</span></span>  
   
- 相等和不相等适用于有标识的所有对象类型，如 `Boolean` 类型。  拥有相同标识的非基元对象被视为相等。  下表列出了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 比较运算符。  
+ <span data-ttu-id="aef35-144">相等和不相等适用于有标识的所有对象类型，如 `Boolean` 类型。</span><span class="sxs-lookup"><span data-stu-id="aef35-144">Equality and inequality are defined for any object type that has identity, such as the `Boolean` type.</span></span> <span data-ttu-id="aef35-145">拥有相同标识的非基元对象被视为相等。</span><span class="sxs-lookup"><span data-stu-id="aef35-145">Non-primitive objects with identity are considered equal if they share the same identity.</span></span> <span data-ttu-id="aef35-146">下表列出了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 比较运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-146">The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] comparison operators.</span></span>  
   
-|运算符|描述|  
-|---------|--------|  
-|[\=（等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|比较两个表达式是否相等。|  
-|[\> （大于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。|  
-|[\>\=（大于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于或等于右侧表达式的值。|  
-|[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|确定查询表达式是否为 null。|  
-|[\< （小于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。|  
-|[\<\=（小于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。|  
-|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|确定表达式的结果值是否在指定范围内。|  
-|[\!\=（不等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式是否不等于右侧表达式。|  
-|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|确定特定字符串是否与指定模式相匹配。|  
+|<span data-ttu-id="aef35-147">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-147">Operator</span></span>|<span data-ttu-id="aef35-148">描述</span><span class="sxs-lookup"><span data-stu-id="aef35-148">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="aef35-149">= （等于）</span><span class="sxs-lookup"><span data-stu-id="aef35-149">= (Equals)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|<span data-ttu-id="aef35-150">比较两个表达式是否相等。</span><span class="sxs-lookup"><span data-stu-id="aef35-150">Compares the equality of two expressions.</span></span>|  
+|[<span data-ttu-id="aef35-151">> （大于）</span><span class="sxs-lookup"><span data-stu-id="aef35-151">> (Greater Than)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|<span data-ttu-id="aef35-152">比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="aef35-152">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>|  
+|[<span data-ttu-id="aef35-153">> = (大于或等于)</span><span class="sxs-lookup"><span data-stu-id="aef35-153">>= (Greater Than or Equal To)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|<span data-ttu-id="aef35-154">比较两个表达式以确定左侧表达式的值是否大于或等于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="aef35-154">Compares two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span>|  
+|[<span data-ttu-id="aef35-155">是 （& A) #91;不 &#93;NULL</span><span class="sxs-lookup"><span data-stu-id="aef35-155">IS &#91;NOT&#93; NULL</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|<span data-ttu-id="aef35-156">确定查询表达式是否为 null。</span><span class="sxs-lookup"><span data-stu-id="aef35-156">Determines if a query expression is null.</span></span>|  
+|[<span data-ttu-id="aef35-157">< （小于）</span><span class="sxs-lookup"><span data-stu-id="aef35-157">< (Less Than)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|<span data-ttu-id="aef35-158">比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="aef35-158">Compares two expressions to determine whether the left expression has a value less than the right expression.</span></span>|  
+|[<span data-ttu-id="aef35-159">< = （小于或等于）</span><span class="sxs-lookup"><span data-stu-id="aef35-159"><= (Less Than or Equal To)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|<span data-ttu-id="aef35-160">比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。</span><span class="sxs-lookup"><span data-stu-id="aef35-160">Compares two expressions to determine whether the left expression has a value less than or equal to the right expression.</span></span>|  
+|[<span data-ttu-id="aef35-161">&#91;不 &#93;之间</span><span class="sxs-lookup"><span data-stu-id="aef35-161">&#91;NOT&#93; BETWEEN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|<span data-ttu-id="aef35-162">确定表达式的结果值是否在指定范围内。</span><span class="sxs-lookup"><span data-stu-id="aef35-162">Determines whether an expression results in a value in a specified range.</span></span>|  
+|[<span data-ttu-id="aef35-163">！ = （不等于）</span><span class="sxs-lookup"><span data-stu-id="aef35-163">!= (Not Equal To)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|<span data-ttu-id="aef35-164">比较两个表达式以确定左侧表达式是否不等于右侧表达式。</span><span class="sxs-lookup"><span data-stu-id="aef35-164">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span>|  
+|[<span data-ttu-id="aef35-165">&#91;不 &#93;类似于</span><span class="sxs-lookup"><span data-stu-id="aef35-165">&#91;NOT&#93; LIKE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|<span data-ttu-id="aef35-166">确定特定字符串是否与指定模式相匹配。</span><span class="sxs-lookup"><span data-stu-id="aef35-166">Determines whether a specific character string matches a specified pattern.</span></span>|  
   
-## 逻辑和 Case 表达式运算符  
- 逻辑运算符测试条件的真实性。  CASE 表达式计算一组布尔表达式的值以确定结果。  下表列出了逻辑和 Case 表达式运算符。  
+## <a name="logical-and-case-expression-operators"></a><span data-ttu-id="aef35-167">逻辑和 Case 表达式运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-167">Logical and Case Expression Operators</span></span>  
+ <span data-ttu-id="aef35-168">逻辑运算符测试条件的真实性。</span><span class="sxs-lookup"><span data-stu-id="aef35-168">Logical operators test for the truth of a condition.</span></span> <span data-ttu-id="aef35-169">CASE 表达式计算一组布尔表达式的值以确定结果。</span><span class="sxs-lookup"><span data-stu-id="aef35-169">The CASE expression evaluates a set of Boolean expressions to determine the result.</span></span> <span data-ttu-id="aef35-170">下表列出了逻辑和 Case 表达式运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-170">The following table lists the logical and CASE expression operators.</span></span>  
   
-|运算符|描述|  
-|---------|--------|  
-|[&&（逻辑与）](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|逻辑“与”。|  
-|[\!  （逻辑非）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|逻辑非。|  
-|[&#124;&#124;（逻辑或）](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|逻辑“或”。|  
-|[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|求出一组布尔表达式的值以确定结果。|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|当 [WHEN](http://msdn.microsoft.com/zh-cn/6233fe9f-00b0-460e-8372-64e138a5f998) 子句取值为 true 时的结果。|  
+|<span data-ttu-id="aef35-171">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-171">Operator</span></span>|<span data-ttu-id="aef35-172">描述</span><span class="sxs-lookup"><span data-stu-id="aef35-172">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="aef35-173">& & （逻辑与）</span><span class="sxs-lookup"><span data-stu-id="aef35-173">&& (Logical AND)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|<span data-ttu-id="aef35-174">逻辑“与”。</span><span class="sxs-lookup"><span data-stu-id="aef35-174">Logical AND.</span></span>|  
+|[!（逻辑非）]<span data-ttu-id="aef35-175">(../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)</span><span class="sxs-lookup"><span data-stu-id="aef35-175">(../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)</span></span>|<span data-ttu-id="aef35-176">逻辑非。</span><span class="sxs-lookup"><span data-stu-id="aef35-176">Logical NOT.</span></span>|  
+|[<span data-ttu-id="aef35-177">&#124; &#124;（逻辑或）</span><span class="sxs-lookup"><span data-stu-id="aef35-177">&#124;&#124; (Logical OR)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|<span data-ttu-id="aef35-178">逻辑“或”。</span><span class="sxs-lookup"><span data-stu-id="aef35-178">Logical OR.</span></span>|  
+|[<span data-ttu-id="aef35-179">用例</span><span class="sxs-lookup"><span data-stu-id="aef35-179">CASE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|<span data-ttu-id="aef35-180">求出一组布尔表达式的值以确定结果。</span><span class="sxs-lookup"><span data-stu-id="aef35-180">Evaluates a set of Boolean expressions to determine the result.</span></span>|  
+|[<span data-ttu-id="aef35-181">然后</span><span class="sxs-lookup"><span data-stu-id="aef35-181">THEN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|<span data-ttu-id="aef35-182">结果[时](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998)when 子句取值为 true。</span><span class="sxs-lookup"><span data-stu-id="aef35-182">The result of a [WHEN](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) clause when it evaluates to true.</span></span>|  
   
-## 查询运算符  
- 查询运算符用于定义返回实体数据的查询表达式。  下表列出了查询运算符。  
+## <a name="query-operators"></a><span data-ttu-id="aef35-183">查询运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-183">Query Operators</span></span>  
+ <span data-ttu-id="aef35-184">查询运算符用于定义返回实体数据的查询表达式。</span><span class="sxs-lookup"><span data-stu-id="aef35-184">Query operators are used to define query expressions that return entity data.</span></span> <span data-ttu-id="aef35-185">下表列出了查询运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-185">The following table lists query operators.</span></span>  
   
-|运算符|使用|  
-|---------|--------|  
-|[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|指定 [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 语句中使用的集合。|  
-|[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|指定由查询 \([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)\) 表达式返回的对象要分入的组。|  
-|[GroupPartition](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|返回从聚合与之相关的组分区提取的参数值集合。|  
-|[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|指定组或聚合的搜索条件。|  
-|[LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|与 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 子句一起使用，以执行物理分页。|  
-|[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|指定用于 [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 语句所返回的对象的排序顺序。|  
-|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|指定投影中由查询返回的元素。|  
-|[SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|与 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 子句一起使用，以执行物理分页。|  
-|[TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|指定查询结果中将只返回第一组行。|  
-|[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|按条件筛选由查询返回的数据。|  
+|<span data-ttu-id="aef35-186">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-186">Operator</span></span>|<span data-ttu-id="aef35-187">使用</span><span class="sxs-lookup"><span data-stu-id="aef35-187">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="aef35-188">从</span><span class="sxs-lookup"><span data-stu-id="aef35-188">FROM</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|<span data-ttu-id="aef35-189">指定在中使用的集合[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。</span><span class="sxs-lookup"><span data-stu-id="aef35-189">Specifies the collection that is used in [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statements.</span></span>|  
+|[<span data-ttu-id="aef35-190">分组依据</span><span class="sxs-lookup"><span data-stu-id="aef35-190">GROUP BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|<span data-ttu-id="aef35-191">指定到的对象，所返回的查询分组 ([选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式的放置。</span><span class="sxs-lookup"><span data-stu-id="aef35-191">Specifies groups into which objects that are returned by a query ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expression are to be placed.</span></span>|  
+|[<span data-ttu-id="aef35-192">GroupPartition</span><span class="sxs-lookup"><span data-stu-id="aef35-192">GroupPartition</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|<span data-ttu-id="aef35-193">返回从聚合与之相关的组分区提取的自变量值集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-193">Returns a collection of argument values, projected off the group partition to which the aggregate is related.</span></span>|  
+|[<span data-ttu-id="aef35-194">无</span><span class="sxs-lookup"><span data-stu-id="aef35-194">HAVING</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|<span data-ttu-id="aef35-195">指定组或聚合的搜索条件。</span><span class="sxs-lookup"><span data-stu-id="aef35-195">Specifies a search condition for a group or an aggregate.</span></span>|  
+|[<span data-ttu-id="aef35-196">限制</span><span class="sxs-lookup"><span data-stu-id="aef35-196">LIMIT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|<span data-ttu-id="aef35-197">与使用[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句以执行物理分页。</span><span class="sxs-lookup"><span data-stu-id="aef35-197">Used with the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause to performed physical paging.</span></span>|  
+|[<span data-ttu-id="aef35-198">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="aef35-198">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|<span data-ttu-id="aef35-199">指定返回的对象使用的排序顺序[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。</span><span class="sxs-lookup"><span data-stu-id="aef35-199">Specifies the sort order that is used on objects returned in a [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statement.</span></span>|  
+|[<span data-ttu-id="aef35-200">选择</span><span class="sxs-lookup"><span data-stu-id="aef35-200">SELECT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|<span data-ttu-id="aef35-201">指定投影中由查询返回的元素。</span><span class="sxs-lookup"><span data-stu-id="aef35-201">Specifies the elements in the projection that are returned by a query.</span></span>|  
+|[<span data-ttu-id="aef35-202">跳过</span><span class="sxs-lookup"><span data-stu-id="aef35-202">SKIP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|<span data-ttu-id="aef35-203">与使用[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句以执行物理分页。</span><span class="sxs-lookup"><span data-stu-id="aef35-203">Used with the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause to performed physical paging.</span></span>|  
+|[<span data-ttu-id="aef35-204">返回页首</span><span class="sxs-lookup"><span data-stu-id="aef35-204">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|<span data-ttu-id="aef35-205">指定查询结果中将只返回第一组行。</span><span class="sxs-lookup"><span data-stu-id="aef35-205">Specifies that only the first set of rows will be returned from the query result.</span></span>|  
+|[<span data-ttu-id="aef35-206">其中</span><span class="sxs-lookup"><span data-stu-id="aef35-206">WHERE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|<span data-ttu-id="aef35-207">按条件筛选由查询返回的数据。</span><span class="sxs-lookup"><span data-stu-id="aef35-207">Conditionally filters data that is returned by a query.</span></span>|  
   
-## 引用运算符  
- 引用是指向特定实体集中的特定实体的逻辑指针（外键）。  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符对引用进行构造、解构和导航：  
+## <a name="reference-operators"></a><span data-ttu-id="aef35-208">引用运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-208">Reference Operators</span></span>  
+ <span data-ttu-id="aef35-209">引用是指向特定实体集中的特定实体的逻辑指针（外键）。</span><span class="sxs-lookup"><span data-stu-id="aef35-209">A reference is a logical pointer (foreign key) to a specific entity in a specific entity set.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="aef35-210">支持使用以下运算符进行构造、 解构和导航到引用。</span><span class="sxs-lookup"><span data-stu-id="aef35-210"> supports the following operators to construct, deconstruct, and navigate through references.</span></span>  
   
-|运算符|使用|  
-|---------|--------|  
-|[CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|创建对实体集中的实体的引用。|  
-|[DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|取消引用一个引用值，并生成该取消引用的结果。|  
-|[KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|提取引用或实体表达式的键。|  
-|[NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|使您可以从一个实体类型到另一个实体类型对关系进行导航|  
-|[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|返回对实体实例的引用。|  
+|<span data-ttu-id="aef35-211">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-211">Operator</span></span>|<span data-ttu-id="aef35-212">使用</span><span class="sxs-lookup"><span data-stu-id="aef35-212">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="aef35-213">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="aef35-213">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|<span data-ttu-id="aef35-214">创建对实体集中的实体的引用。</span><span class="sxs-lookup"><span data-stu-id="aef35-214">Creates references to an entity in an entity set.</span></span>|  
+|[<span data-ttu-id="aef35-215">DEREF</span><span class="sxs-lookup"><span data-stu-id="aef35-215">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|<span data-ttu-id="aef35-216">取消引用一个引用值，并生成该取消引用的结果。</span><span class="sxs-lookup"><span data-stu-id="aef35-216">Dereferences a reference value and produces the result of that dereference.</span></span>|  
+|[<span data-ttu-id="aef35-217">密钥</span><span class="sxs-lookup"><span data-stu-id="aef35-217">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|<span data-ttu-id="aef35-218">提取引用或实体表达式的键。</span><span class="sxs-lookup"><span data-stu-id="aef35-218">Extracts the key of a reference or of an entity expression.</span></span>|  
+|[<span data-ttu-id="aef35-219">导航</span><span class="sxs-lookup"><span data-stu-id="aef35-219">NAVIGATE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|<span data-ttu-id="aef35-220">使您可以从一个实体类型到另一个实体类型对关系进行导航</span><span class="sxs-lookup"><span data-stu-id="aef35-220">Allows you to navigate over the relationship from one entity type to another</span></span>|  
+|[<span data-ttu-id="aef35-221">REF</span><span class="sxs-lookup"><span data-stu-id="aef35-221">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|<span data-ttu-id="aef35-222">返回对实体实例的引用。</span><span class="sxs-lookup"><span data-stu-id="aef35-222">Returns a reference to an entity instance.</span></span>|  
   
-## 集运算符  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了各种功能强大的集运算符。  这包括与 Transact\-SQL 运算符类似的集运算符，例如 UNION、INTERSECT、EXCEPT 和 EXISTS。  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还支持用于清除重复项 \(SET\)、成员身份测试 \(IN\) 和联接 \(JOIN\) 的运算符。  下表列出了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符。  
+## <a name="set-operators"></a><span data-ttu-id="aef35-223">集运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-223">Set Operators</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="aef35-224"> 提供了各种功能强大的集运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-224"> provides various powerful set operations.</span></span> <span data-ttu-id="aef35-225">这包括集运算符类似于 TRANSACT-SQL 运算符，例如 UNION、 INTERSECT、 EXCEPT 和 EXISTS。</span><span class="sxs-lookup"><span data-stu-id="aef35-225">This includes set operators similar to Transact-SQL  operators such as UNION, INTERSECT, EXCEPT, and EXISTS.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="aef35-226"> 还支持用于清除重复项 (SET)、成员身份测试 (IN) 和联接 (JOIN) 的运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-226"> also supports operators for duplicate elimination (SET), membership testing (IN), and joins (JOIN).</span></span> <span data-ttu-id="aef35-227">下表列出了 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-227">The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span>  
   
-|运算符|使用|  
-|---------|--------|  
-|[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|从多值集合中提取元素。|  
-|[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|返回由 EXCEPT 操作数左侧的查询表达式返回而不由 EXCEPT 操作数右侧的查询表达式返回的任何非重复值的集合。|  
-|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|确定集合是否为空。|  
-|[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|将一个由多个集合组成的集合转换为一个平展集合。|  
-|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|确定某个值是否与某个集合中的任何值匹配。|  
-|[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。|  
-|[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|确定两个集合是否具有公共元素。|  
-|[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。|  
-|[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|将两个或更多查询的结果组合成单个集合。|  
+|<span data-ttu-id="aef35-228">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-228">Operator</span></span>|<span data-ttu-id="aef35-229">使用</span><span class="sxs-lookup"><span data-stu-id="aef35-229">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="aef35-230">ANYELEMENT</span><span class="sxs-lookup"><span data-stu-id="aef35-230">ANYELEMENT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|<span data-ttu-id="aef35-231">从多值集合中提取元素。</span><span class="sxs-lookup"><span data-stu-id="aef35-231">Extracts an element from a multivalued collection.</span></span>|  
+|[<span data-ttu-id="aef35-232">除非</span><span class="sxs-lookup"><span data-stu-id="aef35-232">EXCEPT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|<span data-ttu-id="aef35-233">返回由 EXCEPT 操作数左侧的查询表达式返回而不由 EXCEPT 操作数右侧的查询表达式返回的任何非重复值的集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-233">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span>|  
+|[<span data-ttu-id="aef35-234">&#91;不 &#93;存在</span><span class="sxs-lookup"><span data-stu-id="aef35-234">&#91;NOT&#93; EXISTS</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|<span data-ttu-id="aef35-235">确定集合是否为空。</span><span class="sxs-lookup"><span data-stu-id="aef35-235">Determines if a collection is empty.</span></span>|  
+|[<span data-ttu-id="aef35-236">平展</span><span class="sxs-lookup"><span data-stu-id="aef35-236">FLATTEN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|<span data-ttu-id="aef35-237">将一个由多个集合组成的集合转换为一个平展集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-237">Converts a collection of collections into a flattened collection.</span></span>|  
+|[<span data-ttu-id="aef35-238">&#91;不 &#93;在</span><span class="sxs-lookup"><span data-stu-id="aef35-238">&#91;NOT&#93; IN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|<span data-ttu-id="aef35-239">确定某个值是否与某个集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="aef35-239">Determines whether a value matches any value in a collection.</span></span>|  
+|[<span data-ttu-id="aef35-240">相交</span><span class="sxs-lookup"><span data-stu-id="aef35-240">INTERSECT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|<span data-ttu-id="aef35-241">返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-241">Returns a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span>|  
+|[<span data-ttu-id="aef35-242">重叠</span><span class="sxs-lookup"><span data-stu-id="aef35-242">OVERLAPS</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|<span data-ttu-id="aef35-243">确定两个集合是否具有公共元素。</span><span class="sxs-lookup"><span data-stu-id="aef35-243">Determines whether two collections have common elements.</span></span>|  
+|[<span data-ttu-id="aef35-244">设置</span><span class="sxs-lookup"><span data-stu-id="aef35-244">SET</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|<span data-ttu-id="aef35-245">用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。</span><span class="sxs-lookup"><span data-stu-id="aef35-245">Used to convert a collection of objects into a set by yielding a new collection with all duplicate elements removed.</span></span>|  
+|[<span data-ttu-id="aef35-246">UNION</span><span class="sxs-lookup"><span data-stu-id="aef35-246">UNION</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|<span data-ttu-id="aef35-247">将两个或更多查询的结果组合成单个集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-247">Combines the results of two or more queries into a single collection.</span></span>|  
   
-## 类型运算符  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了用于构造、查询和操作表达式（值）的类型的运算。  下表列出了用于处理类型的运算符。  
+## <a name="type-operators"></a><span data-ttu-id="aef35-248">类型运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-248">Type Operators</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="aef35-249">提供允许构造、 查询和操作表达式 （值） 的类型的操作。</span><span class="sxs-lookup"><span data-stu-id="aef35-249"> provides operations that allow the type of an expression (value) to be constructed, queried, and manipulated.</span></span> <span data-ttu-id="aef35-250">下表列出了用于处理类型的运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-250">The following table lists operators that are used to work with types.</span></span>  
   
-|运算符|使用|  
-|---------|--------|  
-|[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|将一种数据类型的表达式转换为另一种数据类型的表达式。|  
-|[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|用于 [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) 操作中，以声明实体类型或复杂类型的集合。|  
-|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|确定表达式的类型是否为指定类型或指定类型的某个子类型。|  
-|[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|从查询表达式返回特定类型的对象集合。|  
-|[命名类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|用于创建实体类型或复杂类型的实例。|  
-|[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|根据值列表创建多集的实例。|  
-|[ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|从一个或多个值构造结构上类型化的匿名记录。|  
-|[TREAT](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|将特定基类型的对象视为指定派生类型的对象。|  
+|<span data-ttu-id="aef35-251">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-251">Operator</span></span>|<span data-ttu-id="aef35-252">使用</span><span class="sxs-lookup"><span data-stu-id="aef35-252">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="aef35-253">强制转换</span><span class="sxs-lookup"><span data-stu-id="aef35-253">CAST</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|<span data-ttu-id="aef35-254">将一种数据类型的表达式转换为另一种数据类型的表达式。</span><span class="sxs-lookup"><span data-stu-id="aef35-254">Converts an expression of one data type to another.</span></span>|  
+|[<span data-ttu-id="aef35-255">集合</span><span class="sxs-lookup"><span data-stu-id="aef35-255">COLLECTION</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|<span data-ttu-id="aef35-256">在中使用[函数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)操作以声明实体类型或复杂类型的集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-256">Used in a [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operation to declare a collection of entity types or complex types.</span></span>|  
+|[<span data-ttu-id="aef35-257">是 （& A) #91;不 &#93;的</span><span class="sxs-lookup"><span data-stu-id="aef35-257">IS &#91;NOT&#93; OF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|<span data-ttu-id="aef35-258">确定表达式的类型是否为指定类型或指定类型的某个子类型。</span><span class="sxs-lookup"><span data-stu-id="aef35-258">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>|  
+|[<span data-ttu-id="aef35-259">OFTYPE</span><span class="sxs-lookup"><span data-stu-id="aef35-259">OFTYPE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|<span data-ttu-id="aef35-260">从查询表达式返回特定类型的对象集合。</span><span class="sxs-lookup"><span data-stu-id="aef35-260">Returns a collection of objects from a query expression that is of a specific type.</span></span>|  
+|[<span data-ttu-id="aef35-261">命名的类型构造函数</span><span class="sxs-lookup"><span data-stu-id="aef35-261">Named Type Constructor</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|<span data-ttu-id="aef35-262">用于创建实体类型或复杂类型的实例。</span><span class="sxs-lookup"><span data-stu-id="aef35-262">Used to create instances of entity types or complex types.</span></span>|  
+|[<span data-ttu-id="aef35-263">多重集合</span><span class="sxs-lookup"><span data-stu-id="aef35-263">MULTISET</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|<span data-ttu-id="aef35-264">根据值列表创建多集的实例。</span><span class="sxs-lookup"><span data-stu-id="aef35-264">Creates an instance of a multiset from a list of values.</span></span>|  
+|[<span data-ttu-id="aef35-265">行</span><span class="sxs-lookup"><span data-stu-id="aef35-265">ROW</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|<span data-ttu-id="aef35-266">从一个或多个值构造结构上类型化的匿名记录。</span><span class="sxs-lookup"><span data-stu-id="aef35-266">Constructs anonymous, structurally typed records from one or more values.</span></span>|  
+|[<span data-ttu-id="aef35-267">TREAT</span><span class="sxs-lookup"><span data-stu-id="aef35-267">TREAT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|<span data-ttu-id="aef35-268">将特定基类型的对象视为指定派生类型的对象。</span><span class="sxs-lookup"><span data-stu-id="aef35-268">Treats an object of a particular base type as an object of the specified derived type.</span></span>|  
   
-## 其他运算符  
- 下表列出了其他 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 运算符。  
+## <a name="other-operators"></a><span data-ttu-id="aef35-269">其他运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-269">Other Operators</span></span>  
+ <span data-ttu-id="aef35-270">下表列出了其他[!INCLUDE[esql](../../../../../../includes/esql-md.md)]运算符。</span><span class="sxs-lookup"><span data-stu-id="aef35-270">The following table lists other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators.</span></span>  
   
-|运算符|使用|  
-|---------|--------|  
-|[\+（字符串串联）](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|用于在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中串联字符串。|  
-|[.  （成员访问）](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|用于访问结构化概念模型类型实例的属性或字段的值。|  
-|[\-\-（注释）](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 注释。|  
-|[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|定义可在 Entity SQL 查询中执行的内联函数。|  
+|<span data-ttu-id="aef35-271">运算符</span><span class="sxs-lookup"><span data-stu-id="aef35-271">Operator</span></span>|<span data-ttu-id="aef35-272">使用</span><span class="sxs-lookup"><span data-stu-id="aef35-272">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="aef35-273">+ （字符串串联）</span><span class="sxs-lookup"><span data-stu-id="aef35-273">+ (String Concatenation)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|<span data-ttu-id="aef35-274">用于在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中串联字符串。</span><span class="sxs-lookup"><span data-stu-id="aef35-274">Used to concatenate strings in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>|  
+|[<span data-ttu-id="aef35-275">。（成员访问）</span><span class="sxs-lookup"><span data-stu-id="aef35-275">. (Member Access)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|<span data-ttu-id="aef35-276">用于访问结构化概念模型类型实例的属性或字段的值。</span><span class="sxs-lookup"><span data-stu-id="aef35-276">Used to access the value of a property or field of an instance of structural conceptual model type.</span></span>|  
+|[<span data-ttu-id="aef35-277">-（注释）</span><span class="sxs-lookup"><span data-stu-id="aef35-277">-- (Comment)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|<span data-ttu-id="aef35-278">包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 注释。</span><span class="sxs-lookup"><span data-stu-id="aef35-278">Include [!INCLUDE[esql](../../../../../../includes/esql-md.md)] comments.</span></span>|  
+|[<span data-ttu-id="aef35-279">函数</span><span class="sxs-lookup"><span data-stu-id="aef35-279">FUNCTION</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|<span data-ttu-id="aef35-280">定义可在 Entity SQL 查询中执行的内联函数。</span><span class="sxs-lookup"><span data-stu-id="aef35-280">Defines an inline function that can be executed in an Entity SQL query.</span></span>|  
   
-## 请参阅  
- [Entity SQL 语言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+## <a name="see-also"></a><span data-ttu-id="aef35-281">另请参阅</span><span class="sxs-lookup"><span data-stu-id="aef35-281">See Also</span></span>  
+ [<span data-ttu-id="aef35-282">实体 SQL 语言</span><span class="sxs-lookup"><span data-stu-id="aef35-282">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

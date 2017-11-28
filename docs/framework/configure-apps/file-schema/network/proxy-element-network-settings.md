@@ -1,90 +1,92 @@
 ---
-title: "&lt;proxy&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<proxy> 元素"
-  - "proxy 元素"
+title: "&lt;代理&gt;元素 （网络设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
+helpviewer_keywords:
+- <proxy> element
+- proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: 20
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7178527f369c698b0ab53aa41cb28dd0126436b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;proxy&gt; 元素（网络设置）
-定义代理服务器。  
+# <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="dc618-102">&lt;代理&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="dc618-102">&lt;proxy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="dc618-103">定义代理服务器。</span><span class="sxs-lookup"><span data-stu-id="dc618-103">Defines a proxy server.</span></span>  
   
-## 语法  
+ <span data-ttu-id="dc618-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dc618-104">\<configuration></span></span>  
+<span data-ttu-id="dc618-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="dc618-105">\<system.net></span></span>  
+<span data-ttu-id="dc618-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="dc618-106">\<defaultProxy></span></span>  
+<span data-ttu-id="dc618-107">\<代理 ></span><span class="sxs-lookup"><span data-stu-id="dc618-107">\<proxy></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="dc618-108">语法</span><span class="sxs-lookup"><span data-stu-id="dc618-108">Syntax</span></span>  
+  
+```xml  
+<proxy
+  autoDetect="true|false|unspecified" 
+  bypassonlocal="true|false|unspecified"
+  proxyaddress="uriString"
+  scriptLocation="uriString"
+  usesystemdefault="true|false|unspecified"
+/>
 ```  
   
-      <proxy   
-  autoDetect="true|false|unspecified"    
-  bypassonlocal="true|false|unspecified"   
-  proxyaddress="uriString"  
-  scriptLocation="uriString"   
-  usesystemdefault="true|false|unspecified "   
-/>  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dc618-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="dc618-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="dc618-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="dc618-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+### <a name="attributes"></a><span data-ttu-id="dc618-111">特性</span><span class="sxs-lookup"><span data-stu-id="dc618-111">Attributes</span></span>  
   
-### 特性  
+|<span data-ttu-id="dc618-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="dc618-112">**Attribute**</span></span>|<span data-ttu-id="dc618-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="dc618-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`autoDetect`|<span data-ttu-id="dc618-114">指定是否自动检测代理。</span><span class="sxs-lookup"><span data-stu-id="dc618-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="dc618-115">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="dc618-115">The default value is `unspecified`.</span></span>|  
+|`bypassonlocal`|<span data-ttu-id="dc618-116">指定对于本地资源是否跳过代理。</span><span class="sxs-lookup"><span data-stu-id="dc618-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="dc618-117">本地资源包括本地服务器 （http://localhost、 http://loopback 或 http://127.0.0.1） 和不带句点 (http://webserver) 的 URI。</span><span class="sxs-lookup"><span data-stu-id="dc618-117">Local resources include the local server (http://localhost, http://loopback, or http://127.0.0.1) and a URI without a period (http://webserver).</span></span> <span data-ttu-id="dc618-118">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="dc618-118">The default value is `unspecified`.</span></span>|  
+|`proxyaddress`|<span data-ttu-id="dc618-119">指定的代理 URI 来使用。</span><span class="sxs-lookup"><span data-stu-id="dc618-119">Specifies the proxy URI to use.</span></span>|  
+|`scriptLocation`|<span data-ttu-id="dc618-120">指定的配置脚本的位置。</span><span class="sxs-lookup"><span data-stu-id="dc618-120">Specifies the location of the configuration script.</span></span>|  
+|`usesystemdefault`|<span data-ttu-id="dc618-121">指定是否使用 Internet Explorer 代理设置。</span><span class="sxs-lookup"><span data-stu-id="dc618-121">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="dc618-122">如果设置为`true`，后续的属性将替代 Internet Explorer 代理设置。</span><span class="sxs-lookup"><span data-stu-id="dc618-122">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="dc618-123">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="dc618-123">The default value is `unspecified`.</span></span>|  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|`autoDetect`|指定是否自动检测代理。  默认值为 `unspecified`。|  
-|`bypassonlocal`|指定对于本地资源是否跳过代理。  本地资源包括本地服务器（http:\/\/localhost、http:\/\/loopback 或 http:\/\/127.0.0.1）和没有句点的 URI \(http:\/\/webserver\)。  默认值为 `unspecified`。|  
-|`proxyaddress`|指定要使用的代理 URI。|  
-|`scriptLocation`|指定配置脚本的位置。|  
-|`usesystemdefault`|指定是否使用 Internet Explorer 代理设置。  如果设置为 `true`，则后面的特性将重写 Internet Explorer 代理设置。  默认值为 `unspecified`。|  
+### <a name="child-elements"></a><span data-ttu-id="dc618-124">子元素</span><span class="sxs-lookup"><span data-stu-id="dc618-124">Child Elements</span></span>  
+ <span data-ttu-id="dc618-125">无。</span><span class="sxs-lookup"><span data-stu-id="dc618-125">None.</span></span>  
   
-### 子元素  
- 无。  
+### <a name="parent-elements"></a><span data-ttu-id="dc618-126">父元素</span><span class="sxs-lookup"><span data-stu-id="dc618-126">Parent Elements</span></span>  
   
-### 父元素  
+|<span data-ttu-id="dc618-127">**元素**</span><span class="sxs-lookup"><span data-stu-id="dc618-127">**Element**</span></span>|<span data-ttu-id="dc618-128">**描述**</span><span class="sxs-lookup"><span data-stu-id="dc618-128">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="dc618-129">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="dc618-129">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="dc618-130">配置超文本传输协议 (HTTP) 代理服务器。</span><span class="sxs-lookup"><span data-stu-id="dc618-130">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 \(HTTP\) 代理服务器。|  
+## <a name="text-value"></a><span data-ttu-id="dc618-131">文本值</span><span class="sxs-lookup"><span data-stu-id="dc618-131">Text Value</span></span>  
   
-## 文本值  
+## <a name="remarks"></a><span data-ttu-id="dc618-132">备注</span><span class="sxs-lookup"><span data-stu-id="dc618-132">Remarks</span></span>  
+ <span data-ttu-id="dc618-133">`proxy`元素定义为应用程序代理服务器。</span><span class="sxs-lookup"><span data-stu-id="dc618-133">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="dc618-134">如果从配置文件缺少时此元素，则.NET Framework 将代理设置使用在 Internet 资源管理器中。</span><span class="sxs-lookup"><span data-stu-id="dc618-134">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
   
-## 备注  
- `proxy` 元素为应用程序定义代理服务器。  如果配置文件中缺少此元素，则 .NET Framework 将使用 Internet Explorer 中的代理设置。  
+ <span data-ttu-id="dc618-135">值`proxyaddress`属性应为格式正确的统一资源标识符 (URI)。</span><span class="sxs-lookup"><span data-stu-id="dc618-135">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
   
- `proxyaddress` 特性的值应当是格式良好的统一资源标识符 \(URI\)。  
+ <span data-ttu-id="dc618-136">`scriptLocation`特性引用了自动检测代理配置脚本。</span><span class="sxs-lookup"><span data-stu-id="dc618-136">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="dc618-137"><xref:System.Net.WebProxy>类将尝试查找配置脚本 (通常命名 Wpad.dat) 时**使用自动配置脚本**在 Internet Explorer 中选择选项。</span><span class="sxs-lookup"><span data-stu-id="dc618-137">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span>  
   
- `scriptLocation` 特性引用代理自动检测配置脚本。  当在 Internet Explorer 中选中了**“使用自动配置脚本”**选项时，<xref:System.Net.WebProxy> 类将尝试定位配置脚本（其名称通常为 Wpad.dat）。  
+ <span data-ttu-id="dc618-138">使用`usesystemdefault`.NET Framework 1.1 版应用程序迁移到 2.0 版的属性。</span><span class="sxs-lookup"><span data-stu-id="dc618-138">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
   
- 对于要迁移到 2.0 版的 .NET Framework 1.1 版应用程序，请使用 `usesystemdefault` 特性。  
+ <span data-ttu-id="dc618-139">如果引发异常`proxyaddress`属性指定了无效的默认代理。</span><span class="sxs-lookup"><span data-stu-id="dc618-139">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="dc618-140">异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。</span><span class="sxs-lookup"><span data-stu-id="dc618-140">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
- 如果 `proxyaddress` 特性指定了无效的默认代理，则会引发异常。  该异常上的 <xref:System.Exception.InnerException%2A> 属性应该有关于错误根本原因的详细信息。  
+## <a name="configuration-files"></a><span data-ttu-id="dc618-141">配置文件</span><span class="sxs-lookup"><span data-stu-id="dc618-141">Configuration Files</span></span>  
+ <span data-ttu-id="dc618-142">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="dc618-142">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="example"></a><span data-ttu-id="dc618-143">示例</span><span class="sxs-lookup"><span data-stu-id="dc618-143">Example</span></span>  
+ <span data-ttu-id="dc618-144">下面的示例使用来自 Internet 资源管理器代理的默认值，指定代理地址，并跳过代理以进行本地访问。</span><span class="sxs-lookup"><span data-stu-id="dc618-144">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
   
-## 示例  
- 下面的代码示例使用 Internet Explorer 代理的默认设置，指定代理地址并对本地访问跳过代理。  
-  
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -98,6 +100,6 @@ caps.handback.revision: 20
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="dc618-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dc618-145">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="dc618-146">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="dc618-146">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
