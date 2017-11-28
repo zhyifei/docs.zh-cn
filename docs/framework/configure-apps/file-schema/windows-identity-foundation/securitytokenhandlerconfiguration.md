@@ -1,71 +1,80 @@
 ---
-title: "&lt;securityTokenHandlerConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;securityTokenHandlerConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: be98c93452c9c7a37ecad5b03f5160ea08f2c82e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;securityTokenHandlerConfiguration&gt;
-提供了配置标记处理程序的集合。  
+# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
+提供配置令牌处理程序的集合。  
   
-## 语法  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<securityTokenHandlerConfiguration >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
-          maximumClockSkew=TimeSpan>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
+          maximumClockSkew=TimeSpan>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|saveBootstrapContext|指定是否应包含引导标记的会话令牌中。  该值还通过设置设置标记处理程序集合上`saveBootstrapContext`属性上[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素。  上的标记处理程序集合值将替代该服务上设置的值。|  
-|maximumClockSkew|A <xref:System.TimeSpan> ，它指定允许的最大时钟不一致。  执行时间敏感型业务，如验证登录会话的到期时间时，可以控制允许的最大时钟不一致。  默认为 5 分钟，"00: 05: 00"。  有关如何指定<xref:System.TimeSpan>的值，请参阅[Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues)。  也可以在服务级别通过设置来设置最大时钟倾斜`maximumClockSkew`属性上[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素。  上的标记处理程序集合值将替代该服务上设置的值。|  
+|特性|描述|  
+|---------------|-----------------|  
+|saveBootstrapContext|指定是否应在会话令牌中包含启动令牌。 值还可以设置对令牌处理程序集合通过设置`saveBootstrapContext`属性[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素。 令牌处理程序集合设置一个值重写在服务上设置的值。|  
+|maximumClockSkew|A <xref:System.TimeSpan> ，指定最大允许的时钟偏差。 执行具有时效性操作，例如验证登录会话的过期时间时，可以控制最大允许的时钟偏差。 默认值为 5 分钟，"00: 05:00"。 有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。 最大时钟偏差还可以设置在服务级别通过设置`maximumClockSkew`属性[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)元素。 令牌处理程序集合设置一个值重写在服务上设置的值。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
-|--------|--------|  
-|[\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定的 Uri 的都是可接受的标识符，该依赖方的组。  可选。|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册用于会话令牌和令牌重做检测的缓存。  可指定服务级别或安全令牌的处理程序集。  可选。|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制用于验证证书的标记处理程序的设置。  可指定服务级别或安全令牌的处理程序集。  如果特定处理程序配置为使用其自己的验证程序重写这些设置。  可选。|  
-|[\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置颁发者名称注册表所使用的标记处理程序集合中的处理程序。  可选。|  
-|[\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|注册颁发令牌解析所使用的标记处理程序集合中的处理程序。  颁发者令牌解析用于解析上传入令牌和邮件的签名标记。  可选。|  
-|[\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|注册服务令牌解析所使用的标记处理程序集合中的处理程序。  令牌解析服务用于解析传入令牌和邮件加密标记。  可选。|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用标记重做检测并指定标记的过期时间。  可指定服务级别或安全令牌的处理程序集。  可选。|  
+|元素|描述|  
+|-------------|-----------------|  
+|[\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定是可接受此信赖方标识符的 Uri 的集。 可选。|  
+|[\<缓存 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册用于会话令牌和令牌重放检测的缓存。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。 可以指定在服务级别或对安全令牌处理程序集合。 如果使用自己的验证程序配置特定的处理程序，则将重写这些设置。 可选。|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置的颁发者名称注册表，由标记处理程序集合中的处理程序。 可选。|  
+|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|注册的颁发者令牌解析程序由标记处理程序集合中的处理程序。 颁发者令牌解析程序用于解析在传入令牌和消息签名的令牌。 可选。|  
+|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|注册的服务令牌解析程序由标记处理程序集合中的处理程序。 服务的标记解析程序用于解析在传入令牌和消息上的加密令牌。 可选。|  
+|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用令牌重放检测并指定令牌的过期时间。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定的安全令牌的处理程序中注册该终结点的集合。|  
+|元素|描述|  
+|-------------|-----------------|  
+|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定与终结点注册的安全令牌处理程序的集合。|  
   
-## 备注  
- 本部分提供的属性值<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>对象。  本节中的设置重写该服务上配置的。  其中的某些设置，可以通过安全标记处理程序集合添加一个处理程序时指定的设置覆盖。  
+## <a name="remarks"></a>备注  
+ 本部分提供的属性值<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>对象。 此节中配置的设置会覆盖的服务上配置。 其中某些设置可以反过来，重写由处理程序添加到安全令牌的处理程序集合时指定的设置。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```xml  
 <system.identityModel>  
   <identityConfiguration>  
     <securityTokenHandlers>   

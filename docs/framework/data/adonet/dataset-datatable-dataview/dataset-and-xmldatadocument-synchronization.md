@@ -1,29 +1,35 @@
 ---
-title: "数据集与 XmlDataDocument 同步 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据集和 XmlDataDocument 同步"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 数据集与 XmlDataDocument 同步
-ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。  若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。  以前，数据的这两种表示形式是单独使用的。  不过，.NET Framework 允许分别通过 **DataSet** 对象和 <xref:System.Xml.XmlDataDocument> 对象对数据的关系和分层表示形式进行实时、同步的访问。  
+# <a name="dataset-and-xmldatadocument-synchronization"></a>数据集和 XmlDataDocument 同步
+ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。 若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。 以前，数据的这两种表示形式是单独使用的。 不过，.NET Framework 允许对通过数据的关系和分层表示的实时同步访问**数据集**对象和<xref:System.Xml.XmlDataDocument>对象，分别。  
   
- 当 **DataSet** 与 **XmlDataDocument** 同步时，这两个对象都使用同一组数据。  这意味着如果对 **DataSet** 作出更改，更改将在 **XmlDataDocument** 中得到反映，反之亦然。  **DataSet** 和 **XmlDataDocument** 之间的这种关系为编程提供了很大的灵活性，它允许单个应用程序使用一组数据来访问围绕 **DataSet** 生成的整组服务（例如 Web 窗体控件、Windows 窗体控件以及 Visual Studio .NET 设计器等）以及 XML 服务组（例如可扩展样式表语言 \[XSL\]、XSL 转换 \[XSLT\] 和 XML 路径语言 \[XPath\]）。  您不必选择使应用程序以哪一组服务为目标，这两组服务都可用。  
+ 当**数据集**与同步**XmlDataDocument**，这两个对象都使用一组数据。 这意味着，如果更改到**数据集**，此更改将反映在**XmlDataDocument**，反之亦然。 之间的关系**数据集**和**XmlDataDocument**通过允许单个应用程序，使用一组数据，访问生成的服务的整个套件创建极大的灵活性围绕**数据集**（如 Web 窗体和 Windows 窗体控件和 Visual Studio.NET 设计器），以及包括可扩展样式表语言 (XSL)、 XSL 转换 (XSLT) 和 XML 路径的所有 XML 服务套件语言 (XPath)。 您不必选择使应用程序以哪一组服务为目标，这两组服务都可用。  
   
- 有若干种方法可以使 **DataSet** 与 **XmlDataDocument** 同步。  你可以：  
+ 有多种方法可以同步**数据集**与**XmlDataDocument**。 你可以：  
   
--   使用架构（即关系结构）和数据填充 **DataSet**，然后使其与新 **XmlDataDocument** 同步。  这将提供现有关系数据的分层视图。  例如：  
+-   填充**数据集**使用架构 （即关系结构） 和数据，然后使其与新同步**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如:   
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -41,11 +47,11 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   仅使用架构填充 **DataSet**（如强类型化的 **DataSet**），使其与 **XmlDataDocument** 同步，然后从 XML 文档中加载 **XmlDataDocument**。  这将提供现有分层数据的关系视图。  **DataSet** 架构中的表名称和列名称必须匹配要与其同步的 XML 元素的名称。  该匹配区分大小写。  
+-   填充**数据集**仅使用架构 (如强类型化**数据集**)，使其与同步**XmlDataDocument**，，然后加载**XmlDataDocument**从 XML 文档。 这将提供现有分层数据的关系视图。 表名称和中的列名称你**数据集**架构必须匹配要与其同步的 XML 元素名称。 该匹配区分大小写。  
   
-     请注意，**DataSet** 的架构只需匹配需要在关系视图中公开的 XML 元素。  这样，就可以具有非常大的 XML 文档，而该文档上可以有非常小的关系“窗口”。  即使 **DataSet** 仅公开 XML 文档的一小部分，**XmlDataDocument** 仍将保留整个 XML 文档。  （有关详细示例，请参见[使数据集与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)。）  
+     请注意的架构**数据集**只需匹配要在关系视图中公开的 XML 元素。 这样，就可以具有非常大的 XML 文档，而该文档上可以有非常小的关系“窗口”。 **XmlDataDocument**即使保留整个 XML 文档**数据集**仅公开它的一小部分。 (这的详细示例，请参阅[使 DataSet 与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)。)  
   
-     以下代码示例显示创建 **DataSet** 和填充其架构，然后使其与 **XmlDataDocument** 同步的步骤。  请注意，**DataSet** 架构只需要匹配 **XmlDataDocument** 中要使用 **DataSet** 公开的元素。  
+     下面的代码示例演示的步骤创建**数据集**和填充其架构，然后将其与同步**XmlDataDocument**。 请注意，**数据集**架构只需要匹配中的元素**XmlDataDocument**你想要公开使用**数据集**。  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -65,11 +71,11 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
-     如果 **XmlDataDocument** 已经与包含数据的 **DataSet** 同步，则不能加载该 **XmlDataDocument**。  否则会引发异常。  
+     无法加载**XmlDataDocument**如果与同步**数据集**包含数据。 否则会引发异常。  
   
--   创建一个新的 **XmlDataDocument** 并从 XML 文档中加载，然后使用 **XmlDataDocument** 的 **DataSet** 属性访问数据的关系视图。  若要使用 **DataSet** 查看 **XmlDataDocument** 中的数据，需要先设置 **DataSet** 的架构。  同样，**DataSet** 架构中的表名称和列名称必须匹配要与其同步的 XML 元素的名称。  该匹配区分大小写。  
+-   创建一个新**XmlDataDocument**和从 XML 文档，加载它，然后访问的数据使用的关系视图**数据集**属性**XmlDataDocument**。 你需要设置的架构**数据集**你可以查看任何中的数据之前**XmlDataDocument**使用**数据集**。 中的表名称和列的名称同样，你**数据集**架构必须匹配要与其同步的 XML 元素名称。 该匹配区分大小写。  
   
-     以下代码示例显示如何访问 **XmlDataDocument** 中数据的关系视图。  
+     下面的代码示例演示如何访问中的数据的关系视图**XmlDataDocument**。  
   
     ```vb  
     Dim xmlDoc As XmlDataDocument = New XmlDataDocument  
@@ -78,7 +84,6 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
     ' Add code here to create the schema of the DataSet to view the data.  
   
     xmlDoc.Load("XMLDocument.xml")  
-  
     ```  
   
     ```csharp  
@@ -90,32 +95,32 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- 使 **XmlDataDocument** 与 **DataSet** 同步的另一个优点是避免了 XML 文档的失真。  如果 **DataSet** 是使用 **ReadXml** 从 XML 文档中填充的，那么当使用 **WriteXml** 以 XML 文档形式写回数据时，数据可能大大不同于初始的 XML 文档。  这是因为 **DataSet** 不维护 XML 文档中的格式设置（如空白）或分层信息（如元素顺序）。  **DataSet** 也不包含 XML 文档中因为不匹配 **Dataset** 架构而被忽略的元素。  通过使 **XmlDataDocument** 与 **DataSet** 同步，可以在 **XmlDataDocument** 中维护初始 XML 文档的格式设置和分层元素结构，而 **DataSet** 仅包含适用于 **DataSet** 的数据和架构信息。  
+ 同步的另一个优点**XmlDataDocument**与**数据集**是避免了 XML 文档的失真。 如果**数据集**填充从 XML 文档使用**ReadXml**，当将数据写回作为 XML 文档使用**WriteXml**可能大大不同于原始 XML 文档。 这是因为**数据集**不维护格式设置，如空格或分层信息，如元素顺序，从 XML 文档。 **数据集**也不包含 XML 文档中已忽略，因为它们与的架构不匹配的元素**数据集**。 同步**XmlDataDocument**与**数据集**允许在中维护初始 XML 文档的格式设置和分层元素结构**XmlDataDocument**，虽然**数据集**包含唯一的数据和架构信息适用于**数据集**。  
   
- 当使 **DataSet** 与 **XmlDataDocument** 同步时，根据 <xref:System.Data.DataRelation> 对象是否嵌套，所得的结果可能会有所不同。  有关详细信息，请参阅[嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+ 同步时**数据集**与**XmlDataDocument**，结果可能会有所不同，具体取决于是否你<xref:System.Data.DataRelation>对象是否嵌套。 有关详细信息，请参阅[嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
-## 本节内容  
- [使数据集与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
- 显示如何使强类型化的 **DataSet** 使用最小的架构与 **XmlDataDocument** 同步的示例。  
+## <a name="in-this-section"></a>本节内容  
+ [使 DataSet 与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ 演示同步强类型化**数据集**，使用最小的架构与**XmlDataDocument**。  
   
- [对 DataSet 执行 XPath 查询](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
- 显示对 **DataSet** 的内容执行 XPath 查询的示例。  
+ [对数据集执行 XPath 查询](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ 演示的内容执行 XPath 查询**数据集**。  
   
- [将 XSLT 转换应用于数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
- 显示对 **DataSet** 的内容应用 XSLT 转换的示例。  
+ [将 XSLT 转换应用到数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ 演示将 XSLT 转换应用于的内容**数据集**。  
   
-## 相关章节  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- 描述 **DataSet** 如何作为数据源与 XML 进行交互（包括以 XML 数据的形式加载和保持 **DataSet** 的内容）。  
+## <a name="related-sections"></a>相关章节  
+ [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ 描述如何**数据集**作为数据源，包括加载和保持的内容与 XML 进行交互**数据集**以 XML 数据形式。  
   
- [嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- 讨论嵌套 **DataRelation** 对象在以 XML 数据形式表示 **DataSet** 内容时的重要性，并描述如何创建这些关系。  
+ [嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ 讨论的重要性嵌套**DataRelation**对象表示的内容时**数据集**作为 XML 数据，并描述如何创建这些关系。  
   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- 描述 **DataSet** 并说明如何使用它来管理应用程序数据和与包括关系数据库和 XML 在内的数据源进行交互。  
+ [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ 描述**数据集**以及如何使用它来管理应用程序数据和与数据源包括关系数据库和 XML 进行交互。  
   
- [XmlDataDocument 类](frlrfSystemXmlXmlDataDocumentClassTopic)  
- 包含有关 **XmlDataDocument** 类的参考信息。  
+ <xref:System.Xml.XmlDataDocument>  
+ 包含有关引用信息**XmlDataDocument**类。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

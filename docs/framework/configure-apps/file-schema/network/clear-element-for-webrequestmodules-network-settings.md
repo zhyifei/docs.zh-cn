@@ -1,70 +1,71 @@
 ---
-title: "webRequestModules -&gt; &lt;clear&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> 元素, webRequestModules"
-  - "<webRequestModules>, clear 元素"
-  - "clear 元素, webRequestModules"
-  - "webRequestModules, clear 元素"
+title: "&lt;清除&gt;webRequestModules （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- <clear> element, webRequestModules
+- <webRequestModules>, clear element
+- webRequestModules, clear element
+- clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c88792663b07ace7250b6ee4065e60d6cfb90afd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# webRequestModules -&gt; &lt;clear&gt; 元素（网络设置）
-从应用程序中移除所有已注册的 Web 请求模块。  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;清除&gt;webRequestModules （网络设置） 的元素
+从应用程序中删除所有已注册的 Web 请求模块。  
   
-## 语法  
+ \<configuration>  
+\<system.net >  
+\<webRequestModules >  
+\<清除 >  
   
-```  
+## <a name="syntax"></a>语法  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用于向网络主机请求信息的模块。|  
+|**元素**|**描述**|  
+|-----------------|---------------------|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要用于从网络主机请求信息的模块。|  
   
-## 备注  
- `clear` 元素移除所有注册的 Web 请求模块，这些请求模块是较早在配置文件中或在配置层次结构的较高级别定义的。  
+## <a name="remarks"></a>备注  
+ `clear`元素中删除所有已注册的配置文件中或在配置层次结构中较高级别前面定义的 Web 请求模块。  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a>配置文件  
+ 此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## 示例  
- 下面的代码示例清除所有 Web 请求模块，然后为 HTTP 注册 Web 请求模块。  
+## <a name="example"></a>示例  
+ 下面的示例将清除所有 Web 请求模块，然后注册 HTTP Web 请求模块。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -78,6 +79,6 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Net.WebRequest>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

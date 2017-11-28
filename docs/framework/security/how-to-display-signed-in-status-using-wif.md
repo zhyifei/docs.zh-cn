@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 显示登录状态
 ## <a name="applies-to"></a>适用于  
@@ -165,4 +163,3 @@ ms.lasthandoff: 08/21/2017
 1.  在 Visual Studio 中，按“F5”开始调试应用程序。 如果未发现任何错误，将打开一个新的浏览器窗口。  
   
 2.  你可能会注意到，浏览器会以无提示方式将请求重定向到 STS，然后打开 Default.aspx 页。 如果 WIF 配置正确，站点应会显示以下文本：“你已登录”。
-

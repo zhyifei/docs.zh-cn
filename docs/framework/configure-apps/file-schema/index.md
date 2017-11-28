@@ -5,15 +5,9 @@ ms.date: 05/01/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework application configuration, configuration schema
 - machine configuration files
@@ -34,18 +28,16 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4c681f4798b36ce0d92b2101ab2d36988a0d19e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 7f2dec0d71c1a0822bf39ae420d4e56bdaf99e0d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework 的配置文件架构
 
 配置文件是可用来更改应用设置并为其设置策略的标准 XML 文件。 .NET Framework 配置架构由一些可在配置文件中用来控制应用行为的元素组成。 本节的目录反映了架构的层次结构：启动、运行时、网络和其他配置设置类型。
@@ -100,4 +92,3 @@ ms.lasthandoff: 09/05/2017
 [Web 服务设置架构](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e)描述控制 ASP.NET Web 服务及其客户端的行为的元素。
 
 [配置 .NET Framework 应用](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)描述如何在 .NET Framework 中配置安全性、程序集绑定和远程处理。
-

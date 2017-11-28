@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging [.NET Framework]
 - .NET Framework application configuration, debugging
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f7696edacc95dee383a7c7e9256cca3eac44839
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 21032358c9edb1b79d9e170e477502670f781fc3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="debugging-tracing-and-profiling"></a>调试、跟踪和分析
 若要调试 .NET Framework 应用程序，编译器和运行时环境必须配置为可将调试程序附加到该应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。 在对托管应用程序进行调试后，可对其进行分析以增强性能。 分析计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  
@@ -67,4 +60,3 @@ ms.lasthandoff: 09/07/2017
   
  [开发指南](../../../docs/framework/development-guide.md)  
  提供了有关应用程序开发的所有关键技术区域和任务（包括创建、配置、调试、保护和部署应用程序）的指南，以及有关动态编程、互操作性、扩展性、内存管理和线程处理的信息。
-

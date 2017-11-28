@@ -1,46 +1,43 @@
 ---
-title: "使用准则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "类库设计准则 [.NET Framework] 使用准则"
+title: "使用准则"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 使用准则
-本部分包含在可公开访问的 Api 中使用公共类型的指导原则。 它处理的内置框架类型 （例如，序列化属性） 和重载常用运算符直接使用。  
+# <a name="usage-guidelines"></a>使用准则
+本部分包含在可公开访问的 Api 中使用公共类型的指导原则。 它涉及到直接使用内置的 Framework 类型 （例如，序列化属性） 和重载常用的运算符。  
   
- <xref:System.IDisposable?displayProperty=fullName> 接口在此部分中，不会对其进行介绍，但在讨论 [释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md) 部分。  
+ <xref:System.IDisposable?displayProperty=nameWithType>接口在此部分中，不会对其进行介绍，但已在[释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)部分。  
   
 > [!NOTE]
->  指南和其他常见有关其他信息，内置的.NET Framework 类型，请参阅下面的参考主题︰ <xref:System.DateTime?displayProperty=fullName>, ，<xref:System.DateTimeOffset?displayProperty=fullName>, ，<xref:System.ICloneable?displayProperty=fullName>, ，<xref:System.IComparable%601?displayProperty=fullName>, ，<xref:System.IEquatable%601?displayProperty=fullName>, ，<xref:System.Nullable%601?displayProperty=fullName>, ，<xref:System.Object?displayProperty=fullName>, ，<xref:System.Uri?displayProperty=fullName>。  
+>  准则和其他常见有关其他信息，内置的.NET Framework 类型，请参阅以下参考主题： <xref:System.DateTime?displayProperty=nameWithType>， <xref:System.DateTimeOffset?displayProperty=nameWithType>， <xref:System.ICloneable?displayProperty=nameWithType>， <xref:System.IComparable%601?displayProperty=nameWithType>， <xref:System.IEquatable%601?displayProperty=nameWithType>， <xref:System.Nullable%601?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.  
   
-## 本节内容  
- [数组](../../../docs/standard/design-guidelines/arrays.md)  
- [特性](../../../docs/standard/design-guidelines/特性.md)  
- [集合](../../../amples/snippets/cpp/VS_Snippets_Misc/cx_collections/cpp/collections.vcxproj)  
- [序列化](../../../docs/standard/design-guidelines/序列化.md)  
+## <a name="in-this-section"></a>本节内容  
+ [阵列](../../../docs/standard/design-guidelines/arrays.md)  
+ [特性](../../../docs/standard/design-guidelines/attributes.md)  
+ [集合](/cpp/mfc/collections)  
+ [序列化](../../../docs/standard/design-guidelines/serialization.md)  
  [System.Xml 使用情况](../../../docs/standard/design-guidelines/system-xml-usage.md)  
  [相等运算符](../../../docs/standard/design-guidelines/equality-operators.md)  
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## 请参阅  
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另请参阅  
+ [框架设计指南](../../../docs/standard/design-guidelines/index.md)

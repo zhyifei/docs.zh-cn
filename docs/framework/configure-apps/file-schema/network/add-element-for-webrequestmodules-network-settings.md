@@ -1,82 +1,84 @@
 ---
-title: "webRequestModules -&gt; &lt;add&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 元素, webRequestModules"
-  - "<webRequestModules>, add 元素"
-  - "add 元素, webRequestModules"
-  - "webRequestModules, add 元素"
+title: "&lt;添加&gt;webRequestModules （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <webRequestModules>, add element
+- webRequestModules, add element
+- add element, webRequestModules
+- <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# webRequestModules -&gt; &lt;add&gt; 元素（网络设置）
-将自定义 Web 请求模块添加到应用程序。  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;添加&gt;webRequestModules （网络设置） 的元素
+将自定义的 Web 请求模块添加到应用程序。  
   
-## 语法  
+ \<configuration>  
+\<system.net >  
+\<webRequestModules >  
+\<add>  
   
-```  
+## <a name="syntax"></a>语法  
   
-      <add   
-  prefix = "URI prefix"   
-  type = "module name, Version, Culture, PublicKeyToken"   
+```xml  
+<add   
+  prefix="URI prefix"   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|`prefix`|由该 Web 请求模块处理的请求的 URI 前缀。|  
-|`type`|实现该 Web 请求模块的模块的程序集和类名。|  
+|**特性**|**描述**|  
+|-------------------|---------------------|  
+|`prefix`|此 Web 请求模块处理的请求 URI 前缀。|  
+|`type`|完全限定的类型名称 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)，用逗号、 实现此 Web 请求模块分隔。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定用于向网络主机请求信息的模块。|  
+|**元素**|**描述**|  
+|-----------------|---------------------|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要用于从网络主机请求信息的模块。|  
   
-## 备注  
- `prefix` 特性定义使用指定的 Web 请求模块的 URI 前缀。  Web 请求模块通常被注册来处理特定的协议（例如 HTTP 或 FTP），但也可能被注册来处理对特定服务器或服务器上的路径的请求。  
+## <a name="remarks"></a>备注  
+ `prefix`属性定义了使用指定的 Web 请求模块的 URI 前缀。 Web 请求模块通常注册用于处理特定的协议，如 HTTP 或 FTP，但可以注册用于处理请求的特定服务器或服务器上的路径。  
   
- 在将 URI 匹配前缀传递给 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法时，会创建 Web 请求模块。  
+ 当 URI 匹配的前缀传递给创建 Web 请求模块<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
   
- `prefix` 特性的值应当是有效 URI 的前导字符，例如，“http”或“http:\/\/www.contoso.com”。  
+ 值`prefix`属性应为有效的 URI-例如，"http"或"http://www.contoso.com"的开始字符。  
   
- `type` 特性的值应当是有效的 DLL 名称和对应的类名，二者之间用逗号分隔。  
+ 值`type`属性应为有效类型名称和相应的程序集名称，用逗号分隔。  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a>配置文件  
+ 此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## 示例  
- 下面的代码示例为 HTTP 注册自定义 Web 请求模块。  应当将 Version 和 PublicKeyToken 的值替换为指定模块的正确值。  
+## <a name="example"></a>示例  
+ 下面的示例对 HTTP 注册自定义的 Web 请求模块。 版本和 PublicKeyToken 提供值应替换为指定的模块的正确值。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -89,6 +91,6 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Net.WebRequest>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
