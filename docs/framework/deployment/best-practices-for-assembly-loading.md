@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies,binding
 - LoadFrom method
@@ -25,164 +19,162 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 302be9cafc0fd2ef327767cbf1178d4927757d2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fe9ae599f8a8470a85000bc23823d66ef0c8ca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
-本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
+# <a name="best-practices-for-assembly-loading"></a><span data-ttu-id="b74d0-102">适用于程序集加载的最佳做法</span><span class="sxs-lookup"><span data-stu-id="b74d0-102">Best Practices for Assembly Loading</span></span>
+<span data-ttu-id="b74d0-103">本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。</span><span class="sxs-lookup"><span data-stu-id="b74d0-103">This article discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span> <span data-ttu-id="b74d0-104">本文讨论以下建议：</span><span class="sxs-lookup"><span data-stu-id="b74d0-104">The article discusses the following recommendations:</span></span>  
   
--   [了解加载上下文的优点和缺点](#load_contexts)  
+-   [<span data-ttu-id="b74d0-105">了解加载上下文的优点和缺点</span><span class="sxs-lookup"><span data-stu-id="b74d0-105">Understand the advantages and disadvantages of load contexts</span></span>](#load_contexts)  
   
--   [避免对部分程序集名称进行绑定](#avoid_partial_names)  
+-   [<span data-ttu-id="b74d0-106">避免对部分程序集名称进行绑定</span><span class="sxs-lookup"><span data-stu-id="b74d0-106">Avoid binding on partial assembly names</span></span>](#avoid_partial_names)  
   
--   [避免将一个程序集加载到多个上下文中](#avoid_loading_into_multiple_contexts)  
+-   [<span data-ttu-id="b74d0-107">避免将一个程序集加载到多个上下文中</span><span class="sxs-lookup"><span data-stu-id="b74d0-107">Avoid loading an assembly into multiple contexts</span></span>](#avoid_loading_into_multiple_contexts)  
   
--   [避免将一个程序集的多个版本加载到同一上下文中](#avoid_loading_multiple_versions)  
+-   [<span data-ttu-id="b74d0-108">避免将一个程序集的多个版本加载到同一上下文中</span><span class="sxs-lookup"><span data-stu-id="b74d0-108">Avoid loading multiple versions of an assembly into the same context</span></span>](#avoid_loading_multiple_versions)  
   
--   [考虑切换到默认加载上下文](#switch_to_default)  
+-   [<span data-ttu-id="b74d0-109">考虑切换到默认加载上下文</span><span class="sxs-lookup"><span data-stu-id="b74d0-109">Consider switching to the default load context</span></span>](#switch_to_default)  
   
- 第一个建议（即[了解加载上下文的优点和缺点](#load_contexts)）为其他建议提供了背景信息，因为这些建议都依赖于对加载上下文的了解。  
+ <span data-ttu-id="b74d0-110">第一个建议（即[了解加载上下文的优点和缺点](#load_contexts)）为其他建议提供了背景信息，因为这些建议都依赖于对加载上下文的了解。</span><span class="sxs-lookup"><span data-stu-id="b74d0-110">The first recommendation, [understand the advantages and disadvantages of load contexts](#load_contexts), provides background information for the other recommendations, because they all depend on a knowledge of load contexts.</span></span>  
   
 <a name="load_contexts"></a>   
-## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>了解加载上下文的优点和缺点  
- 在应用程序域中，可以将程序集加载到以下三个上下文之一中，也可以在没有上下文的情况下加载它们：  
+## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a><span data-ttu-id="b74d0-111">了解加载上下文的优点和缺点</span><span class="sxs-lookup"><span data-stu-id="b74d0-111">Understand the Advantages and Disadvantages of Load Contexts</span></span>  
+ <span data-ttu-id="b74d0-112">在应用程序域中，可以将程序集加载到以下三个上下文之一中，也可以在没有上下文的情况下加载它们：</span><span class="sxs-lookup"><span data-stu-id="b74d0-112">Within an application domain, assemblies can be loaded into one of three contexts, or they can be loaded without context:</span></span>  
   
--   默认加载上下文包含通过探测全局程序集缓存找到的程序集、（如果托管了运行时）主机程序集存储区（例如在 SQL Server 中）以及应用程序域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。 <xref:System.Reflection.Assembly.Load%2A> 方法的大多数重载都将程序集加载到此上下文中。  
+-   <span data-ttu-id="b74d0-113">默认加载上下文包含通过探测全局程序集缓存找到的程序集、（如果托管了运行时）主机程序集存储区（例如在 SQL Server 中）以及应用程序域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。</span><span class="sxs-lookup"><span data-stu-id="b74d0-113">The default load context contains assemblies found by probing the global assembly cache, the host assembly store if the runtime is hosted (for example, in SQL Server), and the <xref:System.AppDomainSetup.ApplicationBase%2A> and <xref:System.AppDomainSetup.PrivateBinPath%2A> of the application domain.</span></span> <span data-ttu-id="b74d0-114"><xref:System.Reflection.Assembly.Load%2A> 方法的大多数重载都将程序集加载到此上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-114">Most overloads of the <xref:System.Reflection.Assembly.Load%2A> method load assemblies into this context.</span></span>  
   
--   加载位置上下文包含从加载程序未搜索的位置加载的程序集。 例如，外接程序可能安装在一个不在应用程序路径下的目录中。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 都是通过路径加载的方法的示例。  
+-   <span data-ttu-id="b74d0-115">加载位置上下文包含从加载程序未搜索的位置加载的程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-115">The load-from context contains assemblies that are loaded from locations that are not searched by the loader.</span></span> <span data-ttu-id="b74d0-116">例如，外接程序可能安装在一个不在应用程序路径下的目录中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-116">For example, add-ins might be installed in a directory that is not under the application path.</span></span> <span data-ttu-id="b74d0-117"><xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 都是通过路径加载的方法的示例。</span><span class="sxs-lookup"><span data-stu-id="b74d0-117"><xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>, and <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> are examples of methods that load by path.</span></span>  
   
--   仅反射上下文包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法加载的程序集。 由于无法执行此上下文中的代码，因此在这里不对其进行讨论。 有关详细信息，请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+-   <span data-ttu-id="b74d0-118">仅反射上下文包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法加载的程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-118">The reflection-only context contains assemblies loaded with the <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> and <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> methods.</span></span> <span data-ttu-id="b74d0-119">由于无法执行此上下文中的代码，因此在这里不对其进行讨论。</span><span class="sxs-lookup"><span data-stu-id="b74d0-119">Code in this context cannot be executed, so it is not discussed here.</span></span> <span data-ttu-id="b74d0-120">有关详细信息，请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。</span><span class="sxs-lookup"><span data-stu-id="b74d0-120">For more information, see [How to: Load Assemblies into the Reflection-Only Context](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).</span></span>  
   
--   如果使用反射发出生成了一个瞬态动态程序集，则该程序集不在任何上下文中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法加载的大多数程序集都是在没有上下文的情况下加载的，并且从字节数组加载的程序集也是在没有上下文的情况下加载的，除非这些程序集的标识（在应用策略后）证实它们位于全局程序集缓存中。  
+-   <span data-ttu-id="b74d0-121">如果使用反射发出生成了一个瞬态动态程序集，则该程序集不在任何上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-121">If you generated a transient dynamic assembly by using reflection emit, the assembly is not in any context.</span></span> <span data-ttu-id="b74d0-122">此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法加载的大多数程序集都是在没有上下文的情况下加载的，并且从字节数组加载的程序集也是在没有上下文的情况下加载的，除非这些程序集的标识（在应用策略后）证实它们位于全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-122">In addition, most assemblies that are loaded by using the <xref:System.Reflection.Assembly.LoadFile%2A> method are loaded without context, and assemblies that are loaded from byte arrays are loaded without context unless their identity (after policy is applied) establishes that they are in the global assembly cache.</span></span>  
   
- 以下各节将讨论执行上下文的优点和缺点。  
+ <span data-ttu-id="b74d0-123">以下各节将讨论执行上下文的优点和缺点。</span><span class="sxs-lookup"><span data-stu-id="b74d0-123">The execution contexts have advantages and disadvantages, as discussed in the following sections.</span></span>  
   
-### <a name="default-load-context"></a>默认加载上下文  
- 将程序集加载到默认加载上下文中时，会自动加载其依赖项。 将自动为默认加载上下文或加载位置上下文中的程序集查找加载到默认加载上下文中的依赖项。 按程序集标识进行加载可确保不使用未知版本的程序集，从而提高应用程序的稳定性（请参阅[避免对部分程序集名称进行绑定](#avoid_partial_names)一节）。  
+### <a name="default-load-context"></a><span data-ttu-id="b74d0-124">默认加载上下文</span><span class="sxs-lookup"><span data-stu-id="b74d0-124">Default Load Context</span></span>  
+ <span data-ttu-id="b74d0-125">将程序集加载到默认加载上下文中时，会自动加载其依赖项。</span><span class="sxs-lookup"><span data-stu-id="b74d0-125">When assemblies are loaded into the default load context, their dependencies are loaded automatically.</span></span> <span data-ttu-id="b74d0-126">将自动为默认加载上下文或加载位置上下文中的程序集查找加载到默认加载上下文中的依赖项。</span><span class="sxs-lookup"><span data-stu-id="b74d0-126">Dependencies that are loaded into the default load context are found automatically for assemblies in the default load context or the load-from context.</span></span> <span data-ttu-id="b74d0-127">按程序集标识进行加载可确保不使用未知版本的程序集，从而提高应用程序的稳定性（请参阅[避免对部分程序集名称进行绑定](#avoid_partial_names)一节）。</span><span class="sxs-lookup"><span data-stu-id="b74d0-127">Loading by assembly identity increases the stability of applications by ensuring that unknown versions of assemblies are not used (see the [Avoid Binding on Partial Assembly Names](#avoid_partial_names) section).</span></span>  
   
- 使用默认加载上下文具有以下缺点：  
+ <span data-ttu-id="b74d0-128">使用默认加载上下文具有以下缺点：</span><span class="sxs-lookup"><span data-stu-id="b74d0-128">Using the default load context has the following disadvantages:</span></span>  
   
--   加载到其他上下文中的依赖项将不可用。  
+-   <span data-ttu-id="b74d0-129">加载到其他上下文中的依赖项将不可用。</span><span class="sxs-lookup"><span data-stu-id="b74d0-129">Dependencies that are loaded into other contexts are not available.</span></span>  
   
--   不能将位于探测路径外部位置的程序集加载到默认加载上下文中。  
+-   <span data-ttu-id="b74d0-130">不能将位于探测路径外部位置的程序集加载到默认加载上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-130">You cannot load assemblies from locations outside the probing path into the default load context.</span></span>  
   
-### <a name="load-from-context"></a>加载位置上下文  
- 利用加载位置上下文，可从不在应用程序路径下（因此不包含在探测路径中）的某个路径加载程序集。 加载位置上下文允许从该路径查找和加载依赖项，因为路径信息由上下文维护。 另外，此上下文中的程序集可以使用加载到默认加载上下文中的依赖项。  
+### <a name="load-from-context"></a><span data-ttu-id="b74d0-131">加载位置上下文</span><span class="sxs-lookup"><span data-stu-id="b74d0-131">Load-From Context</span></span>  
+ <span data-ttu-id="b74d0-132">利用加载位置上下文，可从不在应用程序路径下（因此不包含在探测路径中）的某个路径加载程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-132">The load-from context lets you load an assembly from a path that is not under the application path, and therefore is not included in probing.</span></span> <span data-ttu-id="b74d0-133">加载位置上下文允许从该路径查找和加载依赖项，因为路径信息由上下文维护。</span><span class="sxs-lookup"><span data-stu-id="b74d0-133">It enables dependencies to be located and loaded from that path, because the path information is maintained by the context.</span></span> <span data-ttu-id="b74d0-134">另外，此上下文中的程序集可以使用加载到默认加载上下文中的依赖项。</span><span class="sxs-lookup"><span data-stu-id="b74d0-134">In addition, assemblies in this context can use dependencies that are loaded into the default load context.</span></span>  
   
- 使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法或其他按路径加载的方法之一加载程序集具有以下缺点：  
+ <span data-ttu-id="b74d0-135">使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法或其他按路径加载的方法之一加载程序集具有以下缺点：</span><span class="sxs-lookup"><span data-stu-id="b74d0-135">Loading assemblies by using the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> method, or one of the other methods that load by path, has the following disadvantages:</span></span>  
   
--   如果已加载一个具有相同标识的程序集，则即使指定了不同的路径，<xref:System.Reflection.Assembly.LoadFrom%2A> 仍返回已加载的程序集。  
+-   <span data-ttu-id="b74d0-136">如果已加载一个具有相同标识的程序集，则即使指定了不同的路径，<xref:System.Reflection.Assembly.LoadFrom%2A> 仍返回已加载的程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-136">If an assembly with the same identity is already loaded, <xref:System.Reflection.Assembly.LoadFrom%2A> returns the loaded assembly even if a different path was specified.</span></span>  
   
--   如果用 <xref:System.Reflection.Assembly.LoadFrom%2A> 加载一个程序集，随后默认加载上下文中的一个程序集尝试按显示名称加载同一程序集，则加载尝试将失败。 对程序集进行反序列化时，可能发生这种情况。  
+-   <span data-ttu-id="b74d0-137">如果用 <xref:System.Reflection.Assembly.LoadFrom%2A> 加载一个程序集，随后默认加载上下文中的一个程序集尝试按显示名称加载同一程序集，则加载尝试将失败。</span><span class="sxs-lookup"><span data-stu-id="b74d0-137">If an assembly is loaded with <xref:System.Reflection.Assembly.LoadFrom%2A>, and later an assembly in the default load context tries to load the same assembly by display name, the load attempt fails.</span></span> <span data-ttu-id="b74d0-138">对程序集进行反序列化时，可能发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="b74d0-138">This can occur when an assembly is deserialized.</span></span>  
   
--   如果用 <xref:System.Reflection.Assembly.LoadFrom%2A> 加载一个程序集，并且探测路径包括一个具有相同标识但位置不同的程序集，则将发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 或其他意外行为。  
+-   <span data-ttu-id="b74d0-139">如果用 <xref:System.Reflection.Assembly.LoadFrom%2A> 加载一个程序集，并且探测路径包括一个具有相同标识但位置不同的程序集，则将发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 或其他意外行为。</span><span class="sxs-lookup"><span data-stu-id="b74d0-139">If an assembly is loaded with <xref:System.Reflection.Assembly.LoadFrom%2A>, and the probing path includes an assembly with the same identity but in a different location, an <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, or other unexpected behavior can occur.</span></span>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> 需要对指定路径的 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=fullName> 和 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=fullName> 或 <xref:System.Net.WebPermission>。  
+-   <span data-ttu-id="b74d0-140"><xref:System.Reflection.Assembly.LoadFrom%2A> 需要对指定路径的 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> 和 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> 或 <xref:System.Net.WebPermission>。</span><span class="sxs-lookup"><span data-stu-id="b74d0-140"><xref:System.Reflection.Assembly.LoadFrom%2A> demands <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> and <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, or <xref:System.Net.WebPermission>, on the specified path.</span></span>  
   
--   如果存在程序集的本机映像，将不会使用它。  
+-   <span data-ttu-id="b74d0-141">如果存在程序集的本机映像，将不会使用它。</span><span class="sxs-lookup"><span data-stu-id="b74d0-141">If a native image exists for the assembly, it is not used.</span></span>  
   
--   程序集不能以非特定于域的方式加载。  
+-   <span data-ttu-id="b74d0-142">程序集不能以非特定于域的方式加载。</span><span class="sxs-lookup"><span data-stu-id="b74d0-142">The assembly cannot be loaded as domain-neutral.</span></span>  
   
--   该策略不适用于 1.0 和 1.1 版本的 .NET Framework。  
+-   <span data-ttu-id="b74d0-143">该策略不适用于 1.0 和 1.1 版本的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="b74d0-143">In the .NET Framework versions 1.0 and 1.1, policy is not applied.</span></span>  
   
-### <a name="no-context"></a>无上下文  
- 使用反射发出生成的瞬态程序集只能选择在没有下文的情况下进行加载。 在没有上下文的情况下进行加载是将具有同一标识的多个程序集加载到一个应用程序域中的唯一方式。 这将省去探测成本。  
+### <a name="no-context"></a><span data-ttu-id="b74d0-144">无上下文</span><span class="sxs-lookup"><span data-stu-id="b74d0-144">No Context</span></span>  
+ <span data-ttu-id="b74d0-145">使用反射发出生成的瞬态程序集只能选择在没有下文的情况下进行加载。</span><span class="sxs-lookup"><span data-stu-id="b74d0-145">Loading without context is the only option for transient assemblies that are generated with reflection emit.</span></span> <span data-ttu-id="b74d0-146">在没有上下文的情况下进行加载是将具有同一标识的多个程序集加载到一个应用程序域中的唯一方式。</span><span class="sxs-lookup"><span data-stu-id="b74d0-146">Loading without context is the only way to load multiple assemblies that have the same identity into one application domain.</span></span> <span data-ttu-id="b74d0-147">这将省去探测成本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-147">The cost of probing is avoided.</span></span>  
   
- 从字节数组加载的程序集都是在没有上下文的情况下加载的，除非程序集的标识（在应用策略后建立）与全局程序集缓存中的程序集标识匹配；在此情况下，将会从全局程序集缓存加载程序集。  
+ <span data-ttu-id="b74d0-148">从字节数组加载的程序集都是在没有上下文的情况下加载的，除非程序集的标识（在应用策略后建立）与全局程序集缓存中的程序集标识匹配；在此情况下，将会从全局程序集缓存加载程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-148">Assemblies that are loaded from byte arrays are loaded without context unless the identity of the assembly, which is established when policy is applied, matches the identity of an assembly in the global assembly cache; in that case, the assembly is loaded from the global assembly cache.</span></span>  
   
- 在没有上下文的情况下加载程序集具有以下缺点：  
+ <span data-ttu-id="b74d0-149">在没有上下文的情况下加载程序集具有以下缺点：</span><span class="sxs-lookup"><span data-stu-id="b74d0-149">Loading assemblies without context has the following disadvantages:</span></span>  
   
--   无法将其他程序集绑定到在没有上下文的情况下加载的程序集，除非处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。  
+-   <span data-ttu-id="b74d0-150">无法将其他程序集绑定到在没有上下文的情况下加载的程序集，除非处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。</span><span class="sxs-lookup"><span data-stu-id="b74d0-150">Other assemblies cannot bind to assemblies that are loaded without context, unless you handle the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
--   依赖项无法自动加载。 可以在没有上下文的情况下预加载依赖项、将依赖项预加载到默认加载上下文中或通过处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件来加载依赖项。  
+-   <span data-ttu-id="b74d0-151">依赖项无法自动加载。</span><span class="sxs-lookup"><span data-stu-id="b74d0-151">Dependencies are not loaded automatically.</span></span> <span data-ttu-id="b74d0-152">可以在没有上下文的情况下预加载依赖项、将依赖项预加载到默认加载上下文中或通过处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件来加载依赖项。</span><span class="sxs-lookup"><span data-stu-id="b74d0-152">You can preload them without context, preload them into the default load context, or load them by handling the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
--   在没有上下文的情况下加载具有同一标识的多个程序集会导致出现类型标识问题，这些问题与将具有同一标识的多个程序集加载到多个上下文中所导致的问题类似。 请参阅[避免将一个程序集加载到多个上下文中](#avoid_loading_into_multiple_contexts)。  
+-   <span data-ttu-id="b74d0-153">在没有上下文的情况下加载具有同一标识的多个程序集会导致出现类型标识问题，这些问题与将具有同一标识的多个程序集加载到多个上下文中所导致的问题类似。</span><span class="sxs-lookup"><span data-stu-id="b74d0-153">Loading multiple assemblies with the same identity without context can cause type identity problems similar to those caused by loading assemblies with the same identity into multiple contexts.</span></span> <span data-ttu-id="b74d0-154">请参阅[避免将一个程序集加载到多个上下文中](#avoid_loading_into_multiple_contexts)。</span><span class="sxs-lookup"><span data-stu-id="b74d0-154">See [Avoid Loading an Assembly into Multiple Contexts](#avoid_loading_into_multiple_contexts).</span></span>  
   
--   如果存在程序集的本机映像，将不会使用它。  
+-   <span data-ttu-id="b74d0-155">如果存在程序集的本机映像，将不会使用它。</span><span class="sxs-lookup"><span data-stu-id="b74d0-155">If a native image exists for the assembly, it is not used.</span></span>  
   
--   程序集不能以非特定于域的方式加载。  
+-   <span data-ttu-id="b74d0-156">程序集不能以非特定于域的方式加载。</span><span class="sxs-lookup"><span data-stu-id="b74d0-156">The assembly cannot be loaded as domain-neutral.</span></span>  
   
--   该策略不适用于 1.0 和 1.1 版本的 .NET Framework。  
+-   <span data-ttu-id="b74d0-157">该策略不适用于 1.0 和 1.1 版本的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="b74d0-157">In the .NET Framework versions 1.0 and 1.1, policy is not applied.</span></span>  
   
 <a name="avoid_partial_names"></a>   
-## <a name="avoid-binding-on-partial-assembly-names"></a>避免对部分程序集名称进行绑定  
- 加载程序集时，如果仅指定程序集显示名称的一部分 (<xref:System.Reflection.Assembly.FullName%2A>)，则会发生部分名称绑定。 例如，可能会在调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法时仅使用程序集的简单名称，而忽略版本、区域性和公钥标记。 也可能会调用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法，该方法首先调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，再搜索全局程序集缓存（如果未能找到程序集）并加载程序集的最新可用版本。  
+## <a name="avoid-binding-on-partial-assembly-names"></a><span data-ttu-id="b74d0-158">避免对部分程序集名称进行绑定</span><span class="sxs-lookup"><span data-stu-id="b74d0-158">Avoid Binding on Partial Assembly Names</span></span>  
+ <span data-ttu-id="b74d0-159">加载程序集时，如果仅指定程序集显示名称的一部分 (<xref:System.Reflection.Assembly.FullName%2A>)，则会发生部分名称绑定。</span><span class="sxs-lookup"><span data-stu-id="b74d0-159">Partial name binding occurs when you specify only part of the assembly display name (<xref:System.Reflection.Assembly.FullName%2A>) when you load an assembly.</span></span> <span data-ttu-id="b74d0-160">例如，可能会在调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法时仅使用程序集的简单名称，而忽略版本、区域性和公钥标记。</span><span class="sxs-lookup"><span data-stu-id="b74d0-160">For example, you might call the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method with only the simple name of the assembly, omitting the version, culture, and public key token.</span></span> <span data-ttu-id="b74d0-161">也可能会调用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法，该方法首先调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，再搜索全局程序集缓存（如果未能找到程序集）并加载程序集的最新可用版本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-161">Or you might call the <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> method, which first calls the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method and, if that fails to locate the assembly, searches the global assembly cache and loads the latest available version of the assembly.</span></span>  
   
- 部分名称绑定会导致出现许多问题，其中包括：  
+ <span data-ttu-id="b74d0-162">部分名称绑定会导致出现许多问题，其中包括：</span><span class="sxs-lookup"><span data-stu-id="b74d0-162">Partial name binding can cause many problems, including the following:</span></span>  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法可能会加载简单名称相同的不同程序集。 例如，两个应用程序可能会将具有简单名称 `GraphicsLibrary` 的两个完全不同的程序集安装到全局程序集缓存中。  
+-   <span data-ttu-id="b74d0-163"><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法可能会加载简单名称相同的不同程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-163">The <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> method might load a different assembly with the same simple name.</span></span> <span data-ttu-id="b74d0-164">例如，两个应用程序可能会将具有简单名称 `GraphicsLibrary` 的两个完全不同的程序集安装到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-164">For example, two applications might install two completely different assemblies that both have the simple name `GraphicsLibrary` into the global assembly cache.</span></span>  
   
--   实际加载的程序集可能无法后向兼容。 例如，若不指定版本，加载的版本可能会比最初编写程序时指定使用的版本新很多。 较新版本中的更改可能会导致应用程序中出现错误。  
+-   <span data-ttu-id="b74d0-165">实际加载的程序集可能无法后向兼容。</span><span class="sxs-lookup"><span data-stu-id="b74d0-165">The assembly that is actually loaded might not be backward-compatible.</span></span> <span data-ttu-id="b74d0-166">例如，若不指定版本，加载的版本可能会比最初编写程序时指定使用的版本新很多。</span><span class="sxs-lookup"><span data-stu-id="b74d0-166">For example, not specifying the version might result in the loading of a much later version than the version your program was originally written to use.</span></span> <span data-ttu-id="b74d0-167">较新版本中的更改可能会导致应用程序中出现错误。</span><span class="sxs-lookup"><span data-stu-id="b74d0-167">Changes in the later version might cause errors in your application.</span></span>  
   
--   实际加载的程序集可能无法前向兼容。 例如，可以使用程序集的最新版本来生成并测试应用程序，但部分绑定可能会加载一个缺少应用程序所用功能的早期版本。  
+-   <span data-ttu-id="b74d0-168">实际加载的程序集可能无法前向兼容。</span><span class="sxs-lookup"><span data-stu-id="b74d0-168">The assembly that is actually loaded might not be forward-compatible.</span></span> <span data-ttu-id="b74d0-169">例如，可以使用程序集的最新版本来生成并测试应用程序，但部分绑定可能会加载一个缺少应用程序所用功能的早期版本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-169">For example, you might have built and tested your application with the latest version of an assembly, but partial binding might load a much earlier version that lacks features your application uses.</span></span>  
   
--   安装新的应用程序可能会损坏现有应用程序。 安装共享程序集的更新的非兼容版本会损坏使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法的应用程序。  
+-   <span data-ttu-id="b74d0-170">安装新的应用程序可能会损坏现有应用程序。</span><span class="sxs-lookup"><span data-stu-id="b74d0-170">Installing new applications can break existing applications.</span></span> <span data-ttu-id="b74d0-171">安装共享程序集的更新的非兼容版本会损坏使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b74d0-171">An application that uses the <xref:System.Reflection.Assembly.LoadWithPartialName%2A> method can be broken by installing a newer, incompatible version of a shared assembly.</span></span>  
   
--   可能发生意外的依赖项加载。 在加载共享一个依赖项的两个程序集时，如果利用部分绑定来加载它们，则可能会导致其中一个程序集使用未用来生成或测试该程序集的组件。  
+-   <span data-ttu-id="b74d0-172">可能发生意外的依赖项加载。</span><span class="sxs-lookup"><span data-stu-id="b74d0-172">Unexpected dependency loading can occur.</span></span> <span data-ttu-id="b74d0-173">在加载共享一个依赖项的两个程序集时，如果利用部分绑定来加载它们，则可能会导致其中一个程序集使用未用来生成或测试该程序集的组件。</span><span class="sxs-lookup"><span data-stu-id="b74d0-173">It you load two assemblies that share a dependency, loading them with partial binding might result in one assembly using a component that it was not built or tested with.</span></span>  
   
- 由于部分名称绑定会导致出现上述问题，因此已将 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法标记为已过时。 建议改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，并指定完整的程序集显示名称。 请参阅[了解加载上下文的优点和缺点](#load_contexts)和[考虑切换到默认加载上下文](#switch_to_default)。  
+ <span data-ttu-id="b74d0-174">由于部分名称绑定会导致出现上述问题，因此已将 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法标记为已过时。</span><span class="sxs-lookup"><span data-stu-id="b74d0-174">Because of the problems it can cause, the <xref:System.Reflection.Assembly.LoadWithPartialName%2A> method has been marked obsolete.</span></span> <span data-ttu-id="b74d0-175">建议改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，并指定完整的程序集显示名称。</span><span class="sxs-lookup"><span data-stu-id="b74d0-175">We recommend that you use the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method instead, and specify full assembly display names.</span></span> <span data-ttu-id="b74d0-176">请参阅[了解加载上下文的优点和缺点](#load_contexts)和[考虑切换到默认加载上下文](#switch_to_default)。</span><span class="sxs-lookup"><span data-stu-id="b74d0-176">See [Understand the Advantages and Disadvantages of Load Contexts](#load_contexts) and [Consider Switching to the Default Load Context](#switch_to_default).</span></span>  
   
- 如果希望使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法（因为此方法使程序集加载变得很轻松），请考虑在应用程序失败时提供用于标识缺失的程序集的错误消息，与自动使用程序集的未知版本（可能会导致不可预知的行为和安全漏洞）相比，这样做可能能够提供更好的用户体验。  
+ <span data-ttu-id="b74d0-177">如果希望使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法（因为此方法使程序集加载变得很轻松），请考虑在应用程序失败时提供用于标识缺失的程序集的错误消息，与自动使用程序集的未知版本（可能会导致不可预知的行为和安全漏洞）相比，这样做可能能够提供更好的用户体验。</span><span class="sxs-lookup"><span data-stu-id="b74d0-177">If you want to use the <xref:System.Reflection.Assembly.LoadWithPartialName%2A> method because it makes assembly loading easy, consider that having your application fail with an error message that identifies the missing assembly is likely to provide a better user experience than automatically using an unknown version of the assembly, which might cause unpredictable behavior and security holes.</span></span>  
   
 <a name="avoid_loading_into_multiple_contexts"></a>   
-## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>避免将一个程序集加载到多个上下文中  
- 将一个程序集加载到多个上下文中会导致出现类型标识问题。 将同一个程序集中的相同类型加载到两个不同的上下文中，就像是加载具有相同名称的两个不同的类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
+## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a><span data-ttu-id="b74d0-178">避免将一个程序集加载到多个上下文中</span><span class="sxs-lookup"><span data-stu-id="b74d0-178">Avoid Loading an Assembly into Multiple Contexts</span></span>  
+ <span data-ttu-id="b74d0-179">将一个程序集加载到多个上下文中会导致出现类型标识问题。</span><span class="sxs-lookup"><span data-stu-id="b74d0-179">Loading an assembly into multiple contexts can cause type identity problems.</span></span> <span data-ttu-id="b74d0-180">将同一个程序集中的相同类型加载到两个不同的上下文中，就像是加载具有相同名称的两个不同的类型一样。</span><span class="sxs-lookup"><span data-stu-id="b74d0-180">If the same type is loaded from the same assembly into two different contexts, it is as if two different types with the same name had been loaded.</span></span> <span data-ttu-id="b74d0-181">如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。</span><span class="sxs-lookup"><span data-stu-id="b74d0-181">An <xref:System.InvalidCastException> is thrown if you try to cast one type to the other, with the confusing message that type `MyType` cannot be cast to type `MyType`.</span></span>  
   
- 例如，假设在一个名为 `Utility` 的程序集中声明 `ICommunicate` 接口，该接口由程序及其加载的其他程序集引用。 这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。  
+ <span data-ttu-id="b74d0-182">例如，假设在一个名为 `Utility` 的程序集中声明 `ICommunicate` 接口，该接口由程序及其加载的其他程序集引用。</span><span class="sxs-lookup"><span data-stu-id="b74d0-182">For example, suppose that the `ICommunicate` interface is declared in an assembly named `Utility`, which is referenced by your program and also by other assemblies that your program loads.</span></span> <span data-ttu-id="b74d0-183">这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。</span><span class="sxs-lookup"><span data-stu-id="b74d0-183">These other assemblies contain types that implement the `ICommunicate` interface, allowing your program to use them.</span></span>  
   
- 下面来看看在程序运行时会出现的情况。 程序所引用的程序集将加载到默认加载上下文中。 如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法按照目标程序集的标识来加载该程序集，则该程序集及其依赖项都将位于默认加载上下文中。 程序和目标程序集将使用同一个 `Utility` 程序集。  
+ <span data-ttu-id="b74d0-184">下面来看看在程序运行时会出现的情况。</span><span class="sxs-lookup"><span data-stu-id="b74d0-184">Now consider what happens when your program is run.</span></span> <span data-ttu-id="b74d0-185">程序所引用的程序集将加载到默认加载上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-185">Assemblies that are referenced by your program are loaded into the default load context.</span></span> <span data-ttu-id="b74d0-186">如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法按照目标程序集的标识来加载该程序集，则该程序集及其依赖项都将位于默认加载上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-186">If you load a target assembly by its identity, using the <xref:System.Reflection.Assembly.Load%2A> method, it will be in the default load context, and so will its dependencies.</span></span> <span data-ttu-id="b74d0-187">程序和目标程序集将使用同一个 `Utility` 程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-187">Both your program and the target assembly will use the same `Utility` assembly.</span></span>  
   
- 不过，假设使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法按照目标程序集的文件路径加载该程序集。 该程序集将在没有任何上下文的情况下进行加载，因此不会自动加载其依赖项。 可能具有 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件的处理程序来提供依赖项，并且该处理程序可能会使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法在没有上下文的情况下加载 `Utility` 程序集。 此时，若创建目标程序集中包含的某个类型的实例，并尝试将该实例分配给类型 `ICommunicate` 的变量，则将引发 <xref:System.InvalidCastException>，因为运行时会将 `Utility` 程序集的两个副本中的 `ICommunicate` 接口视为不同的类型。  
+ <span data-ttu-id="b74d0-188">不过，假设使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法按照目标程序集的文件路径加载该程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-188">However, suppose you load the target assembly by its file path, using the <xref:System.Reflection.Assembly.LoadFile%2A> method.</span></span> <span data-ttu-id="b74d0-189">该程序集将在没有任何上下文的情况下进行加载，因此不会自动加载其依赖项。</span><span class="sxs-lookup"><span data-stu-id="b74d0-189">The assembly is loaded without any context, so its dependencies are not automatically loaded.</span></span> <span data-ttu-id="b74d0-190">可能具有 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的处理程序来提供依赖项，并且该处理程序可能会使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法在没有上下文的情况下加载 `Utility` 程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-190">You might have a handler for the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event to supply the dependency, and it might load the `Utility` assembly with no context by using the <xref:System.Reflection.Assembly.LoadFile%2A> method.</span></span> <span data-ttu-id="b74d0-191">此时，若创建目标程序集中包含的某个类型的实例，并尝试将该实例分配给类型 `ICommunicate` 的变量，则将引发 <xref:System.InvalidCastException>，因为运行时会将 `Utility` 程序集的两个副本中的 `ICommunicate` 接口视为不同的类型。</span><span class="sxs-lookup"><span data-stu-id="b74d0-191">Now when you create an instance of a type that is contained in the target assembly and try to assign it to a variable of type `ICommunicate`, an <xref:System.InvalidCastException> is thrown because the runtime considers the `ICommunicate` interfaces in the two copies of the `Utility` assembly to be different types.</span></span>  
   
- 在许多其他情况下，也可以将一个程序集加载到多个上下文中。 最佳方法是通过在应用程序路径中重新定位目标程序集，并对 <xref:System.Reflection.Assembly.Load%2A> 方法使用完整的显示名称，从而避免冲突。 然后，将目标程序集加载到默认加载上下文中，并且两个程序集将使用同一个 `Utility` 程序集。  
+ <span data-ttu-id="b74d0-192">在许多其他情况下，也可以将一个程序集加载到多个上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-192">There are many other scenarios in which an assembly can be loaded into multiple contexts.</span></span> <span data-ttu-id="b74d0-193">最佳方法是通过在应用程序路径中重新定位目标程序集，并对 <xref:System.Reflection.Assembly.Load%2A> 方法使用完整的显示名称，从而避免冲突。</span><span class="sxs-lookup"><span data-stu-id="b74d0-193">The best approach is to avoid conflicts by relocating the target assembly in your application path and using the <xref:System.Reflection.Assembly.Load%2A> method with the full display name.</span></span> <span data-ttu-id="b74d0-194">然后，将目标程序集加载到默认加载上下文中，并且两个程序集将使用同一个 `Utility` 程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-194">The assembly is then loaded into the default load context, and both assemblies use the same `Utility` assembly.</span></span>  
   
- 如果目标程序集必须保留在应用程序路径的外部，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法将目标程序集加载到加载位置上下文中。 如果编译的目标程序集中存在对应用程序的 `Utility` 程序集的引用，则目标程序集将会使用应用程序已加载到默认加载上下文中的 `Utility` 程序集。 请注意，如果目标程序集依赖应用程序路径外部的 `Utility` 程序集副本，则会出现问题。 如果在应用程序加载 `Utility` 程序集之前已将该程序集加载到加载位置上下文中，则应用程序的加载将失败。  
+ <span data-ttu-id="b74d0-195">如果目标程序集必须保留在应用程序路径的外部，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法将目标程序集加载到加载位置上下文中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-195">If the target assembly must remain outside your application path, you can use the <xref:System.Reflection.Assembly.LoadFrom%2A> method to load it into the load-from context.</span></span> <span data-ttu-id="b74d0-196">如果编译的目标程序集中存在对应用程序的 `Utility` 程序集的引用，则目标程序集将会使用应用程序已加载到默认加载上下文中的 `Utility` 程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-196">If the target assembly was compiled with a reference to your application's `Utility` assembly, it will use the `Utility` assembly that your application has loaded into the default load context.</span></span> <span data-ttu-id="b74d0-197">请注意，如果目标程序集依赖应用程序路径外部的 `Utility` 程序集副本，则会出现问题。</span><span class="sxs-lookup"><span data-stu-id="b74d0-197">Note that problems can occur if the target assembly has a dependency on a copy of the `Utility` assembly located outside your application path.</span></span> <span data-ttu-id="b74d0-198">如果在应用程序加载 `Utility` 程序集之前已将该程序集加载到加载位置上下文中，则应用程序的加载将失败。</span><span class="sxs-lookup"><span data-stu-id="b74d0-198">If that assembly is loaded into the load-from context before your application loads the `Utility` assembly, your application's load will fail.</span></span>  
   
- [考虑切换到默认加载上下文](#switch_to_default)一节讨论了针对使用文件路径加载（例如 <xref:System.Reflection.Assembly.LoadFile%2A> 和 <xref:System.Reflection.Assembly.LoadFrom%2A>）的替代方法。  
+ <span data-ttu-id="b74d0-199">[考虑切换到默认加载上下文](#switch_to_default)一节讨论了针对使用文件路径加载（例如 <xref:System.Reflection.Assembly.LoadFile%2A> 和 <xref:System.Reflection.Assembly.LoadFrom%2A>）的替代方法。</span><span class="sxs-lookup"><span data-stu-id="b74d0-199">The [Consider Switching to the Default Load Context](#switch_to_default) section discusses alternatives to using file path loads such as <xref:System.Reflection.Assembly.LoadFile%2A> and <xref:System.Reflection.Assembly.LoadFrom%2A>.</span></span>  
   
 <a name="avoid_loading_multiple_versions"></a>   
-## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>避免将一个程序集的多个版本加载到同一上下文中  
- 将一个程序集的多个版本加载到一个加载上下文中会导致出现类型标识问题。 从同一个程序集的两个版本加载同一个类型，就像是加载了具有相同名称的两个不同类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
+## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a><span data-ttu-id="b74d0-200">避免将一个程序集的多个版本加载到同一上下文中</span><span class="sxs-lookup"><span data-stu-id="b74d0-200">Avoid Loading Multiple Versions of an Assembly into the Same Context</span></span>  
+ <span data-ttu-id="b74d0-201">将一个程序集的多个版本加载到一个加载上下文中会导致出现类型标识问题。</span><span class="sxs-lookup"><span data-stu-id="b74d0-201">Loading multiple versions of an assembly into one load context can cause type identity problems.</span></span> <span data-ttu-id="b74d0-202">从同一个程序集的两个版本加载同一个类型，就像是加载了具有相同名称的两个不同类型一样。</span><span class="sxs-lookup"><span data-stu-id="b74d0-202">If the same type is loaded from two versions of the same assembly, it is as if two different types with the same name had been loaded.</span></span> <span data-ttu-id="b74d0-203">如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。</span><span class="sxs-lookup"><span data-stu-id="b74d0-203">An <xref:System.InvalidCastException> is thrown if you try to cast one type to the other, with the confusing message that type `MyType` cannot be cast to type `MyType`.</span></span>  
   
- 例如，程序可能会直接加载 `Utility` 程序集的一个版本，稍后它可能会加载另一个程序集，而该程序集将加载 `Utility` 程序集的一个不同的版本。 或者，编码错误可能会导致应用程序中两个不同的代码路径加载一个程序集的不同版本。  
+ <span data-ttu-id="b74d0-204">例如，程序可能会直接加载 `Utility` 程序集的一个版本，稍后它可能会加载另一个程序集，而该程序集将加载 `Utility` 程序集的一个不同的版本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-204">For example, your program might load one version of the `Utility` assembly directly, and later it might load another assembly that loads a different version of the `Utility` assembly.</span></span> <span data-ttu-id="b74d0-205">或者，编码错误可能会导致应用程序中两个不同的代码路径加载一个程序集的不同版本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-205">Or a coding error might cause two different code paths in your application to load different versions of an assembly.</span></span>  
   
- 在默认加载上下文中，如果使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法并指定包含不同版本号的完整程序集显示名称，则会出现此问题。 对于在没有上下文的情况下加载的程序集来说，若使用 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName> 方法从不同的路径加载同一程序集，则会出现此问题。 运行时会将从不同的路径加载的两个程序集视为不同的程序集，即使这两个程序集的标识相同也是如此。  
+ <span data-ttu-id="b74d0-206">在默认加载上下文中，如果使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法并指定包含不同版本号的完整程序集显示名称，则会出现此问题。</span><span class="sxs-lookup"><span data-stu-id="b74d0-206">In the default load context, this problem can occur when you use the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method and specify complete assembly display names that include different version numbers.</span></span> <span data-ttu-id="b74d0-207">对于在没有上下文的情况下加载的程序集来说，若使用 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> 方法从不同的路径加载同一程序集，则会出现此问题。</span><span class="sxs-lookup"><span data-stu-id="b74d0-207">For assemblies that are loaded without context, the problem can be caused by using the <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> method to load the same assembly from different paths.</span></span> <span data-ttu-id="b74d0-208">运行时会将从不同的路径加载的两个程序集视为不同的程序集，即使这两个程序集的标识相同也是如此。</span><span class="sxs-lookup"><span data-stu-id="b74d0-208">The runtime considers two assemblies that are loaded from different paths to be different assemblies, even if their identities are the same.</span></span>  
   
- 除了类型标识问题之外，如果将从程序集的一个版本加载的类型传递给需要来自不同版本的类型的代码，则多个程序集版本还会导致 <xref:System.MissingMethodException>。 例如，此代码可能需要已添加到更高版本的方法。  
+ <span data-ttu-id="b74d0-209">除了类型标识问题之外，如果将从程序集的一个版本加载的类型传递给需要来自不同版本的类型的代码，则多个程序集版本还会导致 <xref:System.MissingMethodException>。</span><span class="sxs-lookup"><span data-stu-id="b74d0-209">In addition to type identity problems, multiple versions of an assembly can cause a <xref:System.MissingMethodException> if a type that is loaded from one version of the assembly is passed to code that expects that type from a different version.</span></span> <span data-ttu-id="b74d0-210">例如，此代码可能需要已添加到更高版本的方法。</span><span class="sxs-lookup"><span data-stu-id="b74d0-210">For example, the code might expect a method that was added to the later version.</span></span>  
   
- 如果版本之间的类型行为发生更改，则会出现更多的细微错误。 例如，某个方法可能会引发意外的异常或返回意外的值。  
+ <span data-ttu-id="b74d0-211">如果版本之间的类型行为发生更改，则会出现更多的细微错误。</span><span class="sxs-lookup"><span data-stu-id="b74d0-211">More subtle errors can occur if the behavior of the type changed between versions.</span></span> <span data-ttu-id="b74d0-212">例如，某个方法可能会引发意外的异常或返回意外的值。</span><span class="sxs-lookup"><span data-stu-id="b74d0-212">For example, a method might throw an unexpected exception or return an unexpected value.</span></span>  
   
- 请认真检查代码，确保仅加载程序集的一个版本。 可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=fullName> 方法确定在任何给定时间加载的程序集。  
+ <span data-ttu-id="b74d0-213">请认真检查代码，确保仅加载程序集的一个版本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-213">Carefully review your code to ensure that only one version of an assembly is loaded.</span></span> <span data-ttu-id="b74d0-214">可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> 方法确定在任何给定时间加载的程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-214">You can use the <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> method to determine which assemblies are loaded at any given time.</span></span>  
   
 <a name="switch_to_default"></a>   
-## <a name="consider-switching-to-the-default-load-context"></a>考虑切换到默认加载上下文  
- 检查应用程序的程序集加载和部署模式。 是否能够消除从字节数组加载的程序集？ 是否能够将程序集移动到探测路径中？ 如果程序集位于全局程序集缓存中或应用程序域的探测路径（即 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>）中，则可以按照程序集的标识来加载程序集。  
+## <a name="consider-switching-to-the-default-load-context"></a><span data-ttu-id="b74d0-215">考虑切换到默认加载上下文</span><span class="sxs-lookup"><span data-stu-id="b74d0-215">Consider Switching to the Default Load Context</span></span>  
+ <span data-ttu-id="b74d0-216">检查应用程序的程序集加载和部署模式。</span><span class="sxs-lookup"><span data-stu-id="b74d0-216">Examine your application's assembly loading and deployment patterns.</span></span> <span data-ttu-id="b74d0-217">是否能够消除从字节数组加载的程序集？</span><span class="sxs-lookup"><span data-stu-id="b74d0-217">Can you eliminate assemblies that are loaded from byte arrays?</span></span> <span data-ttu-id="b74d0-218">是否能够将程序集移动到探测路径中？</span><span class="sxs-lookup"><span data-stu-id="b74d0-218">Can you move assemblies into the probing path?</span></span> <span data-ttu-id="b74d0-219">如果程序集位于全局程序集缓存中或应用程序域的探测路径（即 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>）中，则可以按照程序集的标识来加载程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-219">If assemblies are located in the global assembly cache or in the application domain's probing path (that is, its <xref:System.AppDomainSetup.ApplicationBase%2A> and <xref:System.AppDomainSetup.PrivateBinPath%2A>), you can load the assembly by its identity.</span></span>  
   
- 如果无法将所有程序集放入探测路径中，请考虑替代方式，例如使用 .NET Framework 外接程序模型，将程序集放置到全局程序集缓存中或创建应用程序域。  
+ <span data-ttu-id="b74d0-220">如果无法将所有程序集放入探测路径中，请考虑替代方式，例如使用 .NET Framework 外接程序模型，将程序集放置到全局程序集缓存中或创建应用程序域。</span><span class="sxs-lookup"><span data-stu-id="b74d0-220">If it is not possible to put all your assemblies in the probing path, consider alternatives such as using the .NET Framework add-in model, placing assemblies into the global assembly cache, or creating application domains.</span></span>  
   
-### <a name="consider-using-the-net-framework-add-in-model"></a>考虑使用 .NET Framework 外接程序模型  
- 如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。 此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。 有关外接程序模型的信息，请参阅[外接程序和扩展性](../../../docs/framework/add-ins/index.md)。  
+### <a name="consider-using-the-net-framework-add-in-model"></a><span data-ttu-id="b74d0-221">考虑使用 .NET Framework 外接程序模型</span><span class="sxs-lookup"><span data-stu-id="b74d0-221">Consider Using the .NET Framework Add-In Model</span></span>  
+ <span data-ttu-id="b74d0-222">如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。</span><span class="sxs-lookup"><span data-stu-id="b74d0-222">If you are using the load-from context to implement add-ins, which typically are not installed in the application base, use the .NET Framework add-in model.</span></span> <span data-ttu-id="b74d0-223">此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。</span><span class="sxs-lookup"><span data-stu-id="b74d0-223">This model provides isolation at the application domain or process level, without requiring you to manage application domains yourself.</span></span> <span data-ttu-id="b74d0-224">有关外接程序模型的信息，请参阅[外接程序和扩展性](../../../docs/framework/add-ins/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b74d0-224">For information about the add-in model, see [Add-ins and Extensibility](../../../docs/framework/add-ins/index.md).</span></span>  
   
-### <a name="consider-using-the-global-assembly-cache"></a>考虑使用全局程序集缓存  
- 将程序集置于全局程序集缓存中，不但可以获得位于应用程序基外部的共享程序集路径的好处，而且不会丧失默认加载上下文的优点，也不会承袭其他上下文的缺点。  
+### <a name="consider-using-the-global-assembly-cache"></a><span data-ttu-id="b74d0-225">考虑使用全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="b74d0-225">Consider Using the Global Assembly Cache</span></span>  
+ <span data-ttu-id="b74d0-226">将程序集置于全局程序集缓存中，不但可以获得位于应用程序基外部的共享程序集路径的好处，而且不会丧失默认加载上下文的优点，也不会承袭其他上下文的缺点。</span><span class="sxs-lookup"><span data-stu-id="b74d0-226">Place assemblies in the global assembly cache to get the benefit of a shared assembly path that is outside the application base, without losing the advantages of the default load context or taking on the disadvantages of the other contexts.</span></span>  
   
-### <a name="consider-using-application-domains"></a>考虑使用应用程序域  
- 如果确定无法在应用程序的探测路径中部署某些程序集，请考虑为这些程序集创建新的应用程序域。 使用 <xref:System.AppDomainSetup> 可创建新的应用程序域，而使用 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> 属性可指定包含要加载的程序集的路径。 如果要探测多个目录，则可以将 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置为根目录，并使用 <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 属性标识要探测的子目录。 或者，可以创建多个应用程序域，并将每个应用程序域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置为其程序集的相应路径。  
+### <a name="consider-using-application-domains"></a><span data-ttu-id="b74d0-227">考虑使用应用程序域</span><span class="sxs-lookup"><span data-stu-id="b74d0-227">Consider Using Application Domains</span></span>  
+ <span data-ttu-id="b74d0-228">如果确定无法在应用程序的探测路径中部署某些程序集，请考虑为这些程序集创建新的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="b74d0-228">If you determine that some of your assemblies cannot be deployed in the application's probing path, consider creating a new application domain for those assemblies.</span></span> <span data-ttu-id="b74d0-229">使用 <xref:System.AppDomainSetup> 可创建新的应用程序域，而使用 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 属性可指定包含要加载的程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="b74d0-229">Use an <xref:System.AppDomainSetup> to create the new application domain, and use the <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> property to specify the path that contains the assemblies you want to load.</span></span> <span data-ttu-id="b74d0-230">如果要探测多个目录，则可以将 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置为根目录，并使用 <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> 属性标识要探测的子目录。</span><span class="sxs-lookup"><span data-stu-id="b74d0-230">If you have multiple directories to probe, you can set the <xref:System.AppDomainSetup.ApplicationBase%2A> to a root directory and use the <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> property to identify the subdirectories to probe.</span></span> <span data-ttu-id="b74d0-231">或者，可以创建多个应用程序域，并将每个应用程序域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置为其程序集的相应路径。</span><span class="sxs-lookup"><span data-stu-id="b74d0-231">Alternatively, you can create multiple application domains and set the <xref:System.AppDomainSetup.ApplicationBase%2A> of each application domain to the appropriate path for its assemblies.</span></span>  
   
- 请注意，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法加载这些程序集。 由于这些程序集此时位于探测路径中，因此会将它们加载到默认加载上下文（而非加载位置上下文）中。 不过，建议切换到 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法并提供完整的程序集显示名称，从而确保始终使用正确的版本。  
+ <span data-ttu-id="b74d0-232">请注意，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法加载这些程序集。</span><span class="sxs-lookup"><span data-stu-id="b74d0-232">Note that you can use the <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> method to load these assemblies.</span></span> <span data-ttu-id="b74d0-233">由于这些程序集此时位于探测路径中，因此会将它们加载到默认加载上下文（而非加载位置上下文）中。</span><span class="sxs-lookup"><span data-stu-id="b74d0-233">Because they are now in the probing path, they will be loaded into the default load context instead of the load-from context.</span></span> <span data-ttu-id="b74d0-234">不过，建议切换到 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法并提供完整的程序集显示名称，从而确保始终使用正确的版本。</span><span class="sxs-lookup"><span data-stu-id="b74d0-234">However, we recommend that you switch to the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method and supply full assembly display names to ensure that correct versions are always used.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName>   
- <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>   
- [外接程序和扩展性](../../../docs/framework/add-ins/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="b74d0-235">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b74d0-235">See Also</span></span>  
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
+ [<span data-ttu-id="b74d0-236">外接程序和扩展性</span><span class="sxs-lookup"><span data-stu-id="b74d0-236">Add-ins and Extensibility</span></span>](../../../docs/framework/add-ins/index.md)

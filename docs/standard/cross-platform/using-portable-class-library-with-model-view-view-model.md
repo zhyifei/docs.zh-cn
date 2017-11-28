@@ -1,99 +1,100 @@
 ---
-title: "将可移植类库与模型-视图-视图模型配合使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "可移植类库 [.NET Framework], 和 MVVM"
-  - "MVVM, 和可移植类库"
+title: "将可移植类库与模型-视图-视图模型配合使用"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Portable Class Library [.NET Framework], and MVVM
+- MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e39a8df5c8aee05414e778f15a29bbeda8dba930
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 将可移植类库与模型-视图-视图模型配合使用
-可以使用 [可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) .NET Framework 实现视图模型视图模型模式 \(MVVM\) 和共享多个平台进行的程序集。  
+# <a name="using-portable-class-library-with-model-view-view-model"></a><span data-ttu-id="516a1-102">将可移植类库与模型-视图-视图模型配合使用</span><span class="sxs-lookup"><span data-stu-id="516a1-102">Using Portable Class Library with Model-View-View Model</span></span>
+<span data-ttu-id="516a1-103">你可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)实现模型-视图-视图模型 (MVVM) 模式并在多个平台之间共享程序集。</span><span class="sxs-lookup"><span data-stu-id="516a1-103">You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.</span></span>  
   
- MVVM 是隔离基础业务逻辑的用户界面的应用程序的模式。  您可以在[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目中实现模型和视图模型类，然后针对不同的平台创建自定义视图。  如下图所示，此方法一次只允许编写数据模型和业务逻辑，和使用 .NET framework、Silverlight、windows phone 和 Windows  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用程序的代码。  
+ <span data-ttu-id="516a1-104">MVVM 是将用户界面与基础业务逻辑相隔离的应用程序模式。</span><span class="sxs-lookup"><span data-stu-id="516a1-104">MVVM is an application pattern that isolates the user interface from the underlying business logic.</span></span> <span data-ttu-id="516a1-105">您可以在 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 中的[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]项目中实现模型和视图模型类，然后针对不同的平台创建自定义视图。</span><span class="sxs-lookup"><span data-stu-id="516a1-105">You can implement the model and view model classes in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], and then create views that are customized for different platforms.</span></span> <span data-ttu-id="516a1-106">通过此方法，只需编写数据模型和业务逻辑一次，即可将该代码用于 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用，如下图所示。</span><span class="sxs-lookup"><span data-stu-id="516a1-106">This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps, as shown in the following illustration.</span></span>  
   
- ![可移植的 MVVM 关系图](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
+ <span data-ttu-id="516a1-107">![可移植的 MVVM 关系图](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")</span><span class="sxs-lookup"><span data-stu-id="516a1-107">![Portable with MVVM diagram](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")</span></span>  
   
- 本主题不提供有关 MVVM 模式的常规信息。  它仅提供有关如何使用 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 实现 MVVM 的信息。  有关MVVM的更多信息，请参见MSDN Library[MVVM Quickstart](http://go.microsoft.com/fwlink/?LinkId=234934)。  
+ <span data-ttu-id="516a1-108">本主题不提供有关 MVVM 模式的一般信息。</span><span class="sxs-lookup"><span data-stu-id="516a1-108">This topic does not provide general information about the MVVM pattern.</span></span> <span data-ttu-id="516a1-109">它仅提供有关如何使用信息[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]实现 MVVM。</span><span class="sxs-lookup"><span data-stu-id="516a1-109">It only provides information about how to use [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] to implement MVVM.</span></span> <span data-ttu-id="516a1-110">MVVM 有关的详细信息，请参阅[MVVM 快速入门](http://go.microsoft.com/fwlink/?LinkId=234934)。</span><span class="sxs-lookup"><span data-stu-id="516a1-110">For more information about MVVM, see the [MVVM Quickstart](http://go.microsoft.com/fwlink/?LinkId=234934).</span></span>  
   
-## 支持 MVVM 的类  
- 当您面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 时，[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight 以及 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 项目的 Windows Phone 7.5 时，以下类可用于实现 MVVM 模式：  
+## <a name="classes-that-support-mvvm"></a><span data-ttu-id="516a1-111">支持 MVVM 类</span><span class="sxs-lookup"><span data-stu-id="516a1-111">Classes That Support MVVM</span></span>  
+ <span data-ttu-id="516a1-112">当针对[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]， [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，Silverlight 或为 Windows Phone 7.5 你[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目中，下面的类是可用于实现 MVVM 模式：</span><span class="sxs-lookup"><span data-stu-id="516a1-112">When you target the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, the following classes are available for implementing the MVVM pattern:</span></span>  
   
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-113"><xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-113"><xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-114"><xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-114"><xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-115"><xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-115"><xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-116"><xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-116"><xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-117"><xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-117"><xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-118"><xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-118"><xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-119"><xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-119"><xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-120"><xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-120"><xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-121"><xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-121"><xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.Windows.Input.ICommand?displayProperty=fullName> 类  
+-   <span data-ttu-id="516a1-122"><xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 类</span><span class="sxs-lookup"><span data-stu-id="516a1-122"><xref:System.Windows.Input.ICommand?displayProperty=nameWithType> class</span></span>  
   
--   <xref:System.ComponentModel.DataAnnotations?displayProperty=fullName> 命名空间中的所有类。  
+-   <span data-ttu-id="516a1-123">中的所有类<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空间</span><span class="sxs-lookup"><span data-stu-id="516a1-123">All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace</span></span>  
   
-## 实现 MVVM  
- 若要实现 MVVM，通常在 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 项目中创建模型和视图模型，因为 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 项目无法引用不可移植的项目。  模型和视图模型可以在同一项目或在单独的项目中。  如果使用分离项目，请从视图模型项目向模型项目添加引用。  
+## <a name="implementing-mvvm"></a><span data-ttu-id="516a1-124">实现 MVVM</span><span class="sxs-lookup"><span data-stu-id="516a1-124">Implementing MVVM</span></span>  
+ <span data-ttu-id="516a1-125">若要实现 MVVM，你通常创建模型，以及在视图模型[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目，因为[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目不能引用不可移植项目。</span><span class="sxs-lookup"><span data-stu-id="516a1-125">To implement MVVM, you typically create both the model and the view model in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, because a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project cannot reference a non-portable project.</span></span> <span data-ttu-id="516a1-126">模型和视图模型可以是同一项目中或在单独的项目。</span><span class="sxs-lookup"><span data-stu-id="516a1-126">The model and view model can be in the same project or in separate projects.</span></span> <span data-ttu-id="516a1-127">如果你使用单独的项目，从视图模型项目模型项目添加引用。</span><span class="sxs-lookup"><span data-stu-id="516a1-127">If you use separate projects, add a reference from the view model project to the model project.</span></span>  
   
- 在编译模型和视图模型项目后，在包含视图的应用程序中引用这些程序集。  如果视图仅与视图模型进行交互，则您只需引用包含该视图模型的程序集。  
+ <span data-ttu-id="516a1-128">编译模型和查看模型项目后，你将引用的包含视图的应用中的这些程序集。</span><span class="sxs-lookup"><span data-stu-id="516a1-128">After you compile the model and view model projects, you reference those assemblies in the app that contains the view.</span></span> <span data-ttu-id="516a1-129">如果该视图仅与视图模型交互时，只需引用包含视图模型的程序集。</span><span class="sxs-lookup"><span data-stu-id="516a1-129">If the view interacts only with the view model, you only have to reference the assembly that contains the view model.</span></span>  
   
-### 模型  
- 下面的示例演示可能位于 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 项目中的简化模型类。  
+### <a name="model"></a><span data-ttu-id="516a1-130">模型</span><span class="sxs-lookup"><span data-stu-id="516a1-130">Model</span></span>  
+ <span data-ttu-id="516a1-131">下面的示例演示可驻留在一个简化的模型类[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目。</span><span class="sxs-lookup"><span data-stu-id="516a1-131">The following example shows a simplified model class that could reside in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]  
   
- 下面的示例演示一种简单的方法填充、检索和更新 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 项目中的数据。  在实际应用程序中，您将检索源数据，如 Windows Communication Foundation \(WCF\) 服务。  
+ <span data-ttu-id="516a1-132">下面的示例演示一种简单的方法，以填充、 检索和更新中的数据[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目。</span><span class="sxs-lookup"><span data-stu-id="516a1-132">The following example shows a simple way to populate, retrieve, and update the data in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project.</span></span> <span data-ttu-id="516a1-133">在实际应用中，将从 Windows Communication Foundation (WCF) 服务等源检索数据。</span><span class="sxs-lookup"><span data-stu-id="516a1-133">In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]  
   
-### 视图模型  
- 视图模型的基类通常在实现 MVVM 模式时添加。  下面的示例演示基类。  
+### <a name="view-model"></a><span data-ttu-id="516a1-134">视图模型</span><span class="sxs-lookup"><span data-stu-id="516a1-134">View Model</span></span>  
+ <span data-ttu-id="516a1-135">在实现 MVVM 模式时，经常会添加的查看模型的基类。</span><span class="sxs-lookup"><span data-stu-id="516a1-135">A base class for view models is frequently added when implementing the MVVM pattern.</span></span> <span data-ttu-id="516a1-136">下面的示例演示的基类。</span><span class="sxs-lookup"><span data-stu-id="516a1-136">The following example shows a base class.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]  
   
- <xref:System.Windows.Input.ICommand> 接口的实现经常与 MVVM 模式一起使用。  下面的示例演示 <xref:System.Windows.Input.ICommand> 接口的实现。  
+ <span data-ttu-id="516a1-137">实现<xref:System.Windows.Input.ICommand>接口经常用于 MVVM 模式。</span><span class="sxs-lookup"><span data-stu-id="516a1-137">An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern.</span></span> <span data-ttu-id="516a1-138">下面的示例演示 <xref:System.Windows.Input.ICommand> 接口的实现。</span><span class="sxs-lookup"><span data-stu-id="516a1-138">The following example shows an implementation of the <xref:System.Windows.Input.ICommand> interface.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]  
   
- 下面的示例演示简化视图模型。  
+ <span data-ttu-id="516a1-139">下面的示例显示了一个简化的视图模型。</span><span class="sxs-lookup"><span data-stu-id="516a1-139">The following example shows a simplified view model.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### 视图  
- 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 应用程序、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用程序、基于 Silverlight 的应用程序或 windows 7.5 应用程序，您可以引用包含模型和视图模型项目的程序集。然后创建与视图模型进行交互的视图。  下面的示例演示从视图模型的数据检索和更新的简单的 Windows Presentation Foundation \(WPF\) 应用程序。  可以在 Silverlight、Windows Phone 或 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用程序中创建类似的视图。  
+### <a name="view"></a><span data-ttu-id="516a1-140">视图</span><span class="sxs-lookup"><span data-stu-id="516a1-140">View</span></span>  
+ <span data-ttu-id="516a1-141">从[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]应用，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序、 基于 Silverlight 的应用或 Windows Phone 7.5 应用，你可以引用包含模型和视图模型项目的程序集。</span><span class="sxs-lookup"><span data-stu-id="516a1-141">From a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] app, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.</span></span>  <span data-ttu-id="516a1-142">然后与视图模型配合创建交互的视图。</span><span class="sxs-lookup"><span data-stu-id="516a1-142">You then create a view that interacts with the view model.</span></span> <span data-ttu-id="516a1-143">下面的示例演示一个简化的 Windows Presentation Foundation (WPF) 应用，检索更新视图模型中的数据。</span><span class="sxs-lookup"><span data-stu-id="516a1-143">The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model.</span></span> <span data-ttu-id="516a1-144">你可以创建 Silverlight，Windows Phone 中的类似视图或[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。</span><span class="sxs-lookup"><span data-stu-id="516a1-144">You could create similar views in Silverlight, Windows Phone, or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span>  
   
- [!code-xml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
+ [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## 请参阅  
- [可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a><span data-ttu-id="516a1-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="516a1-145">See Also</span></span>  
+ [<span data-ttu-id="516a1-146">可移植类库</span><span class="sxs-lookup"><span data-stu-id="516a1-146">Portable Class Library</span></span>](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,65 +17,63 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="resources-in-desktop-apps"></a>桌面应用程序中的资源
-几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
+# <a name="resources-in-desktop-apps"></a><span data-ttu-id="95b8a-102">桌面应用程序中的资源</span><span class="sxs-lookup"><span data-stu-id="95b8a-102">Resources in Desktop Apps</span></span>
+<span data-ttu-id="95b8a-103">几乎每一个生产性应用都需要使用资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-103">Nearly every production-quality app has to use resources.</span></span> <span data-ttu-id="95b8a-104">资源是在逻辑上随应用部署的任何不可执行的数据。</span><span class="sxs-lookup"><span data-stu-id="95b8a-104">A resource is any nonexecutable data that is logically deployed with an app.</span></span> <span data-ttu-id="95b8a-105">资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。</span><span class="sxs-lookup"><span data-stu-id="95b8a-105">A resource might be displayed in an app as error messages or as part of the user interface.</span></span> <span data-ttu-id="95b8a-106">资源可以包含多种形式的数据，包括字符串、图像和持久的对象。</span><span class="sxs-lookup"><span data-stu-id="95b8a-106">Resources can contain data in a number of forms, including strings, images, and persisted objects.</span></span> <span data-ttu-id="95b8a-107">（若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。</span><span class="sxs-lookup"><span data-stu-id="95b8a-107">(To write persisted objects to a resource file, the objects must be serializable.) Storing your data in a resource file enables you to change the data without recompiling your entire app.</span></span> <span data-ttu-id="95b8a-108">还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。</span><span class="sxs-lookup"><span data-stu-id="95b8a-108">It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data that is stored in multiple locations.</span></span>  
   
- .NET Framework 为桌面应用资源的创建和本地化提供全面的支持。 此外，.NET Framework 还支持一种在桌面应用中打包和部署这些虚拟化资源的简单模型。  
+ <span data-ttu-id="95b8a-109">.NET Framework 为桌面应用资源的创建和本地化提供全面的支持。</span><span class="sxs-lookup"><span data-stu-id="95b8a-109">The .NET Framework provides comprehensive support for the creation and localization of resources in desktop apps.</span></span> <span data-ttu-id="95b8a-110">此外，.NET Framework 还支持一种在桌面应用中打包和部署这些虚拟化资源的简单模型。</span><span class="sxs-lookup"><span data-stu-id="95b8a-110">In addition, the .NET Framework supports a simple model for packaging and deploying these localized resources in desktop apps.</span></span>  
   
- 有关 ASP.NET 中的资源的信息，请参阅 Internet Explorer 开发人员中心的 [ASP.NET 网页资源概述](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
+ <span data-ttu-id="95b8a-111">有关 ASP.NET 中的资源的信息，请参阅 Internet Explorer 开发人员中心的 [ASP.NET 网页资源概述](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。</span><span class="sxs-lookup"><span data-stu-id="95b8a-111">For information about resources in ASP.NET, see [ASP.NET Web Page Resources Overview](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd) in the Internet Explorer Developer Center.</span></span>  
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用采用不同于桌面应用的资源模型并将其资源存储在单个程序包资源索引 (PRI) 文件中。 有关 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中的资源的信息，请参阅 Windows 开发人员中心的[在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkId=241674)。  
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]<span data-ttu-id="95b8a-112">应用采用不同于桌面应用的资源模型并将其资源存储在单个程序包资源索引 (PRI) 文件中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-112"> apps use a different resource model from desktop apps and store their resources in a single package resource index (PRI) file.</span></span> <span data-ttu-id="95b8a-113">有关 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中的资源的信息，请参阅 Windows 开发人员中心的[在 Windows 应用商店应用中创建和检索资源](http://go.microsoft.com/fwlink/p/?LinkId=241674)。</span><span class="sxs-lookup"><span data-stu-id="95b8a-113">For information about resources in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps, see [Creating and retrieving resources in Windows Store apps](http://go.microsoft.com/fwlink/p/?LinkId=241674) in the Windows Dev Center.</span></span>  
   
-## <a name="creating-and-localizing-resources"></a>创建和本地化资源  
- 在非本地化的应用中，可以使用资源文件作为应用数据的存储库，特别用于存储本来可能在源代码中的多个位置为硬编码的字符串。 通常以文本 (.txt) 或 XML (.resx) 文件形式创建资源，并使用 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将其编译为二进制 .resources 文件。 随后，这些文件可由语言编译器嵌入到应用的可执行文件中。 有关创建资源的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
+## <a name="creating-and-localizing-resources"></a><span data-ttu-id="95b8a-114">创建和本地化资源</span><span class="sxs-lookup"><span data-stu-id="95b8a-114">Creating and Localizing Resources</span></span>  
+ <span data-ttu-id="95b8a-115">在非本地化的应用中，可以使用资源文件作为应用数据的存储库，特别用于存储本来可能在源代码中的多个位置为硬编码的字符串。</span><span class="sxs-lookup"><span data-stu-id="95b8a-115">In a non-localized app, you can use resource files as a repository for app data, particularly for strings that might otherwise be hard-coded in multiple locations in source code.</span></span> <span data-ttu-id="95b8a-116">通常以文本 (.txt) 或 XML (.resx) 文件形式创建资源，并使用 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将其编译为二进制 .resources 文件。</span><span class="sxs-lookup"><span data-stu-id="95b8a-116">Most commonly, you create resources as either text (.txt) or XML (.resx) files, and use [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) to compile them into binary .resources files.</span></span> <span data-ttu-id="95b8a-117">随后，这些文件可由语言编译器嵌入到应用的可执行文件中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-117">These files can then be embedded in the app's executable file by a language compiler.</span></span> <span data-ttu-id="95b8a-118">有关创建资源的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="95b8a-118">For more information about creating resources, see [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).</span></span>  
   
- 您还可以按特定的区域性对应用的资源进行本地化。 这样可以生成应用的本地化（翻译）版本。 在开发使用本地化资源的应用时，可以指定一个区域性作为非特定或回退区域性，以在没有合适的资源可用时使用该区域性的资源。 通常，非特定区域性的资源存储在应用的可执行文件中。 其余各本地化区域性的资源存储在单独的附属程序集中。 有关详细信息，请参阅[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
+ <span data-ttu-id="95b8a-119">您还可以按特定的区域性对应用的资源进行本地化。</span><span class="sxs-lookup"><span data-stu-id="95b8a-119">You can also localize your app's resources for specific cultures.</span></span> <span data-ttu-id="95b8a-120">这样可以生成应用的本地化（翻译）版本。</span><span class="sxs-lookup"><span data-stu-id="95b8a-120">This enables you to build localized (translated) versions of your apps.</span></span> <span data-ttu-id="95b8a-121">在开发使用本地化资源的应用时，可以指定一个区域性作为非特定或回退区域性，以在没有合适的资源可用时使用该区域性的资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-121">When you develop an app that uses localized resources, you designate a culture that serves as the neutral or fallback culture whose resources are used if no suitable resources are available.</span></span> <span data-ttu-id="95b8a-122">通常，非特定区域性的资源存储在应用的可执行文件中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-122">Typically, the resources of the neutral culture are stored in the app's executable.</span></span> <span data-ttu-id="95b8a-123">其余各本地化区域性的资源存储在单独的附属程序集中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-123">The remaining resources for individual localized cultures are stored in standalone satellite assemblies.</span></span> <span data-ttu-id="95b8a-124">有关详细信息，请参阅[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="95b8a-124">For more information, see [Creating Satellite Assemblies](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).</span></span>  
   
-## <a name="packaging-and-deploying-resources"></a>打包和部署资源  
- 本地化的应用资源部署在[附属程序集](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中。 附属程序集包含单个区域性的资源；它不包含任何应用代码。 在附属程序集部署模型中，所创建的应用包含一个默认程序集（通常是主程序集），对于该应用支持的每种区域性，还包含一个附属程序集。 因为附属程序集不是主程序集的一部分，所以您不必替换该应用的主程序集，即可很容易地替换或更新与特定区域性相对应的资源。  
+## <a name="packaging-and-deploying-resources"></a><span data-ttu-id="95b8a-125">打包和部署资源</span><span class="sxs-lookup"><span data-stu-id="95b8a-125">Packaging and Deploying Resources</span></span>  
+ <span data-ttu-id="95b8a-126">本地化的应用资源部署在[附属程序集](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-126">You deploy localized app resources in [satellite assemblies](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).</span></span> <span data-ttu-id="95b8a-127">附属程序集包含单个区域性的资源；它不包含任何应用代码。</span><span class="sxs-lookup"><span data-stu-id="95b8a-127">A satellite assembly contains the resources of a single culture; it does not contain any app code.</span></span> <span data-ttu-id="95b8a-128">在附属程序集部署模型中，所创建的应用包含一个默认程序集（通常是主程序集），对于该应用支持的每种区域性，还包含一个附属程序集。</span><span class="sxs-lookup"><span data-stu-id="95b8a-128">In the satellite assembly deployment model, you create an app with one default assembly (which is typically the main assembly) and one satellite assembly for each culture that the app supports.</span></span> <span data-ttu-id="95b8a-129">因为附属程序集不是主程序集的一部分，所以您不必替换该应用的主程序集，即可很容易地替换或更新与特定区域性相对应的资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-129">Because the satellite assemblies are not part of the main assembly, you can easily replace or update resources corresponding to a specific culture without replacing the app's main assembly.</span></span>  
   
- 在确定哪些资源将构成应用的默认资源程序集时要谨慎。 因为默认资源程序集是主程序集的一部分，所以对它做任何更改都会要求你替换主程序集。 如果没有提供默认资源，则在[资源回退进程](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)尝试查找默认资源时会引发异常。 在设计良好的应用中，使用资源应永远不会引发异常。  
+ <span data-ttu-id="95b8a-130">在确定哪些资源将构成应用的默认资源程序集时要谨慎。</span><span class="sxs-lookup"><span data-stu-id="95b8a-130">Carefully determine which resources will make up your app's default resource assembly.</span></span> <span data-ttu-id="95b8a-131">因为默认资源程序集是主程序集的一部分，所以对它做任何更改都会要求你替换主程序集。</span><span class="sxs-lookup"><span data-stu-id="95b8a-131">Because it is a part of the main assembly, any changes to it will require you to replace the main assembly.</span></span> <span data-ttu-id="95b8a-132">如果没有提供默认资源，则在[资源回退进程](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)尝试查找默认资源时会引发异常。</span><span class="sxs-lookup"><span data-stu-id="95b8a-132">If you do not provide a default resource, an exception will be thrown when the [resource fallback process](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) attempts to find it.</span></span> <span data-ttu-id="95b8a-133">在设计良好的应用中，使用资源应永远不会引发异常。</span><span class="sxs-lookup"><span data-stu-id="95b8a-133">In a well-designed app, using resources should never throw an exception.</span></span>  
   
- 有关详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)一文。  
+ <span data-ttu-id="95b8a-134">有关详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)一文。</span><span class="sxs-lookup"><span data-stu-id="95b8a-134">For more information, see the [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) article.</span></span>  
   
-## <a name="retrieving-resources"></a>检索资源  
- 在运行时，应用会基于 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性指定的区域性为每个线程加载相应的本地化资源。 此属性的值按如下方式派生：  
+## <a name="retrieving-resources"></a><span data-ttu-id="95b8a-135">检索资源</span><span class="sxs-lookup"><span data-stu-id="95b8a-135">Retrieving Resources</span></span>  
+ <span data-ttu-id="95b8a-136">在运行时，应用会基于 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 属性指定的区域性为每个线程加载相应的本地化资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-136">At run time, an app loads the appropriate localized resources on a per-thread basis, based on the culture specified by the <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="95b8a-137">此属性的值按如下方式派生：</span><span class="sxs-lookup"><span data-stu-id="95b8a-137">This property value is derived as follows:</span></span>  
   
--   向 <xref:System.Globalization.CultureInfo> 属性直接分配一个表示本地化区域性的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> 对象。  
+-   <span data-ttu-id="95b8a-138">向 <xref:System.Globalization.CultureInfo> 属性直接分配一个表示本地化区域性的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 对象。</span><span class="sxs-lookup"><span data-stu-id="95b8a-138">By directly assigning a <xref:System.Globalization.CultureInfo> object that represents the localized culture to the <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> property.</span></span>  
   
--   如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName> 属性检索默认线程 UI 区域性。  
+-   <span data-ttu-id="95b8a-139">如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性检索默认线程 UI 区域性。</span><span class="sxs-lookup"><span data-stu-id="95b8a-139">If a culture is not explicitly assigned, by retrieving the default thread UI culture from the <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> property.</span></span>  
   
--   如果没有明确分配默认线程 UI 区域性，则通过调用 Windows `GetUserDefaultUILanguage` 函数来检索本地计算机当前用户的区域性。  
+-   <span data-ttu-id="95b8a-140">如果没有明确分配默认线程 UI 区域性，则通过调用 Windows `GetUserDefaultUILanguage` 函数来检索本地计算机当前用户的区域性。</span><span class="sxs-lookup"><span data-stu-id="95b8a-140">If a default thread UI culture is not explicitly assigned, by retrieving the culture for the current user on the local computer by calling the Windows `GetUserDefaultUILanguage` function.</span></span>  
   
- 有关如何设置当前 UI 区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 参考页。  
+ <span data-ttu-id="95b8a-141">有关如何设置当前 UI 区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 参考页。</span><span class="sxs-lookup"><span data-stu-id="95b8a-141">For more information about how the current UI culture is set, see the <xref:System.Globalization.CultureInfo> and <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> reference pages.</span></span>  
   
- 随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=fullName> 类，可以为当前的 UI 区域性或特定区域性检索资源。 虽然 <xref:System.Resources.ResourceManager> 类最常用于检索桌面应用资源，但 <xref:System.Resources?displayProperty=fullName> 命名空间也包含可用于检索资源的其他类型。 这些方法包括：  
+ <span data-ttu-id="95b8a-142">随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类，可以为当前的 UI 区域性或特定区域性检索资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-142">You can then retrieve resources for the current UI culture or for a specific culture by using the <xref:System.Resources.ResourceManager?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="95b8a-143">虽然 <xref:System.Resources.ResourceManager> 类最常用于检索桌面应用资源，但 <xref:System.Resources?displayProperty=nameWithType> 命名空间也包含可用于检索资源的其他类型。</span><span class="sxs-lookup"><span data-stu-id="95b8a-143">Although the <xref:System.Resources.ResourceManager> class is most commonly used for retrieving resources in desktop apps, the <xref:System.Resources?displayProperty=nameWithType> namespace contains additional types that you can use to retrieve resources.</span></span> <span data-ttu-id="95b8a-144">这些方法包括：</span><span class="sxs-lookup"><span data-stu-id="95b8a-144">These include:</span></span>  
   
--   <xref:System.Resources.ResourceReader> 类 - 可用于枚举嵌入在程序集或存储于独立二进制 .resources 文件中的资源。 当您不知道运行时可用资源的准确名称时，这将会很有用。  
+-   <span data-ttu-id="95b8a-145"><xref:System.Resources.ResourceReader> 类 - 可用于枚举嵌入在程序集或存储于独立二进制 .resources 文件中的资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-145">The <xref:System.Resources.ResourceReader> class, which enables you to enumerate resources embedded in an assembly or stored in a standalone binary .resources file.</span></span> <span data-ttu-id="95b8a-146">当您不知道运行时可用资源的准确名称时，这将会很有用。</span><span class="sxs-lookup"><span data-stu-id="95b8a-146">It is useful when you don't know the precise names of the resources that are available at run time.</span></span>  
   
--   <xref:System.Resources.ResXResourceReader> 类 - 可用于从 XML (.resx) 文件中检索资源。  
+-   <span data-ttu-id="95b8a-147"><xref:System.Resources.ResXResourceReader> 类 - 可用于从 XML (.resx) 文件中检索资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-147">The <xref:System.Resources.ResXResourceReader> class, which enables you to retrieve resources from an XML (.resx) file.</span></span>  
   
--   <xref:System.Resources.ResourceSet> 类 - 可用于检索特定区域性的资源，而不遵循回退规则。 资源可以存储在程序集或独立的二进制 .resources 文件中。 您还可以开发 <xref:System.Resources.IResourceReader> 实现以使用 <xref:System.Resources.ResourceSet> 类从某个其他源中检索资源。  
+-   <span data-ttu-id="95b8a-148"><xref:System.Resources.ResourceSet> 类 - 可用于检索特定区域性的资源，而不遵循回退规则。</span><span class="sxs-lookup"><span data-stu-id="95b8a-148">The <xref:System.Resources.ResourceSet> class, which enables you to retrieve the resources of a specific culture without observing fallback rules.</span></span> <span data-ttu-id="95b8a-149">资源可以存储在程序集或独立的二进制 .resources 文件中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-149">The resources can be stored in an assembly or a standalone binary .resources file.</span></span> <span data-ttu-id="95b8a-150">您还可以开发 <xref:System.Resources.IResourceReader> 实现以使用 <xref:System.Resources.ResourceSet> 类从某个其他源中检索资源。</span><span class="sxs-lookup"><span data-stu-id="95b8a-150">You can also develop an <xref:System.Resources.IResourceReader> implementation that enables you to use the <xref:System.Resources.ResourceSet> class to retrieve resources from some other source.</span></span>  
   
--   <xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。  
+-   <span data-ttu-id="95b8a-151"><xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。</span><span class="sxs-lookup"><span data-stu-id="95b8a-151">The <xref:System.Resources.ResXResourceSet> class, which enables you to retrieve all the items in an XML resource file into memory.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- [应用程序要点](../../../docs/standard/application-essentials.md)   
- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
- [检索资源](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
-
+## <a name="see-also"></a><span data-ttu-id="95b8a-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="95b8a-152">See Also</span></span>  
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="95b8a-153">应用程序要点</span><span class="sxs-lookup"><span data-stu-id="95b8a-153">Application Essentials</span></span>](../../../docs/standard/application-essentials.md)  
+ [<span data-ttu-id="95b8a-154">创建资源文件</span><span class="sxs-lookup"><span data-stu-id="95b8a-154">Creating Resource Files</span></span>](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [<span data-ttu-id="95b8a-155">打包和部署资源</span><span class="sxs-lookup"><span data-stu-id="95b8a-155">Packaging and Deploying Resources</span></span>](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [<span data-ttu-id="95b8a-156">创建附属程序集</span><span class="sxs-lookup"><span data-stu-id="95b8a-156">Creating Satellite Assemblies</span></span>](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+ [<span data-ttu-id="95b8a-157">检索资源</span><span class="sxs-lookup"><span data-stu-id="95b8a-157">Retrieving Resources</span></span>](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

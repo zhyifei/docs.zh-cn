@@ -1,75 +1,77 @@
 ---
-title: "&lt;compilers&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<compilers> 元素"
-  - "编译器配置元素, <compilers> 元素"
-  - "compilers 元素"
+title: "&lt;编译器&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers
+helpviewer_keywords:
+- compiler configuration elements, <compilers> element
+- <compilers> element
+- compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: bea78fe5086a73e4cc588973764ac9bbef2fadc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;compilers&gt; 元素
-编译器配置元素的容器；包含0或者多个[\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。  
+# <a name="ltcompilersgt-element"></a><span data-ttu-id="ed8a5-102">&lt;编译器&gt;元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-102">&lt;compilers&gt; Element</span></span>
+<span data-ttu-id="ed8a5-103">编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  
   
-## 语法  
+ <span data-ttu-id="ed8a5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ed8a5-104">\<configuration></span></span>  
+<span data-ttu-id="ed8a5-105">\<system.codedom ></span><span class="sxs-lookup"><span data-stu-id="ed8a5-105">\<system.codedom></span></span>  
+<span data-ttu-id="ed8a5-106">\<编译器 > 元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-106">\<compilers> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ed8a5-107">语法</span><span class="sxs-lookup"><span data-stu-id="ed8a5-107">Syntax</span></span>  
+  
+```xml  
 <compilers>  
   <compiler ... />  
 </compilers>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ed8a5-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ed8a5-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="ed8a5-110">特性</span><span class="sxs-lookup"><span data-stu-id="ed8a5-110">Attributes</span></span>  
+ <span data-ttu-id="ed8a5-111">无。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-111">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="ed8a5-112">子元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-112">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<compiler\> 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定语言提供程序的编译器配置特性。|  
+|<span data-ttu-id="ed8a5-113">元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-113">Element</span></span>|<span data-ttu-id="ed8a5-114">描述</span><span class="sxs-lookup"><span data-stu-id="ed8a5-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ed8a5-115">\<compiler> Element</span><span class="sxs-lookup"><span data-stu-id="ed8a5-115">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="ed8a5-116">指定语言提供程序的编译器配置属性。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-116">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="ed8a5-117">父元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-117">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<configuration\> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|[\<system.codedom\> 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
+|<span data-ttu-id="ed8a5-118">元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-118">Element</span></span>|<span data-ttu-id="ed8a5-119">描述</span><span class="sxs-lookup"><span data-stu-id="ed8a5-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ed8a5-120">\<configuration> 元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-120">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="ed8a5-121">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="ed8a5-122">\<system.codedom > 元素</span><span class="sxs-lookup"><span data-stu-id="ed8a5-122">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="ed8a5-123">指定可用语言提供程序的编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-123">Specifies compiler configuration settings for available language providers.</span></span>|  
   
-## 备注  
- The [\<compilers\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素包含计算机上的语言提供程序的编译器配置设置。  每个Each [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素为一个特定语言提供程序指定编译器配置特性。  
+## <a name="remarks"></a><span data-ttu-id="ed8a5-124">备注</span><span class="sxs-lookup"><span data-stu-id="ed8a5-124">Remarks</span></span>  
+ <span data-ttu-id="ed8a5-125">[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素包含的计算机上的语言提供程序的编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-125">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="ed8a5-126">每个[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素指定特定的语言提供程序的编译器配置特性。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-126">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- .NET Framework 在计算机配置文件 \(Machine.config\) 中定义初始编译器和语言提供程序设置。  开发人员和编译器供应商可以为新的 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 实现添加配置设置。  使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> 方法可在计算机上以编程方式枚举语言提供程序和编译器配置设置。  
+ <span data-ttu-id="ed8a5-127">.NET Framework 在计算机配置文件 (Machine.config) 中定义的初始编译器和语言提供程序设置。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-127">The .NET Framework defines the initial compiler and language provider settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="ed8a5-128">开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 实现的配置设置。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-128">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="ed8a5-129">使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-129">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
-## 配置文件  
- 此元素可以在计算机配置文件和应用程序配置文件中使用。  
+## <a name="configuration-file"></a><span data-ttu-id="ed8a5-130">配置文件</span><span class="sxs-lookup"><span data-stu-id="ed8a5-130">Configuration File</span></span>  
+ <span data-ttu-id="ed8a5-131">计算机配置文件和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-131">This element can be used in the machine configuration file and the application configuration file.</span></span>  
   
-## 示例  
- 下面的示例阐释了一个典型的编译器配置元素。  
+## <a name="example"></a><span data-ttu-id="ed8a5-132">示例</span><span class="sxs-lookup"><span data-stu-id="ed8a5-132">Example</span></span>  
+ <span data-ttu-id="ed8a5-133">以下示例说明典型的编译器配置元素。</span><span class="sxs-lookup"><span data-stu-id="ed8a5-133">The following example illustrates a typical compiler configuration element.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.codedom>  
      <compilers>  
@@ -85,9 +87,9 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)   
- [\<compiler\> 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+## <a name="see-also"></a><span data-ttu-id="ed8a5-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ed8a5-134">See Also</span></span>  
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [<span data-ttu-id="ed8a5-135">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="ed8a5-135">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ed8a5-136">编译器和语言提供程序设置架构</span><span class="sxs-lookup"><span data-stu-id="ed8a5-136">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+ [<span data-ttu-id="ed8a5-137">\<compiler> Element</span><span class="sxs-lookup"><span data-stu-id="ed8a5-137">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

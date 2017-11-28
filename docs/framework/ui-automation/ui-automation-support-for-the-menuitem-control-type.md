@@ -1,110 +1,113 @@
 ---
-title: "UI Automation Support for the MenuItem Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Menu Item"
-  - "Menu Item control type"
-  - "UI Automation, Menu Item control type"
+title: "UI 自动化对 MenuItem 控件类型的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Menu Item
+- Menu Item control type
+- UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-caps.latest.revision: 23
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 7b7fbd8f2f667c1a3276267700182fc7d113c73e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the MenuItem Control Type
+# <a name="ui-automation-support-for-the-menuitem-control-type"></a><span data-ttu-id="6b5be-102">UI 自动化对 MenuItem 控件类型的支持</span><span class="sxs-lookup"><span data-stu-id="6b5be-102">UI Automation Support for the MenuItem Control Type</span></span>
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="6b5be-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="6b5be-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="6b5be-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="6b5be-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题提供有关对 MenuItem 控件类型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支持的信息。 本主题描述控件的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 树结构，并提供 MenuItem 控件类型所必需的属性和控件模式。  
+ <span data-ttu-id="6b5be-105">本主题提供有关对 MenuItem 控件类型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支持的信息。</span><span class="sxs-lookup"><span data-stu-id="6b5be-105">This topic provides information about [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] support for the MenuItem control type.</span></span> <span data-ttu-id="6b5be-106">本主题描述控件的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 树结构，并提供 MenuItem 控件类型所必需的属性和控件模式。</span><span class="sxs-lookup"><span data-stu-id="6b5be-106">It describes the control's [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tree structure and provides the properties and control patterns that are required for the MenuItem control type.</span></span>  
   
- 使用菜单控件，可以对与命令和事件处理程序相关联的元素以分层方式进行组织。 在典型的 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 应用程序中，菜单栏包含多个菜单项（如“文件”、“编辑”和“窗口”），每个菜单项都可显示一个菜单。 菜单包含一系列菜单项（如“新建”、“打开”和“关闭”），可以通过展开这些菜单项来显示额外的菜单项，或者通过单击它们来执行特定的操作。 菜单项可以承载于菜单、菜单栏或工具栏中。  
+ <span data-ttu-id="6b5be-107">使用菜单控件，可以对与命令和事件处理程序相关联的元素以分层方式进行组织。</span><span class="sxs-lookup"><span data-stu-id="6b5be-107">A menu control allows hierarchal organization of elements associated with commands and event handlers.</span></span> <span data-ttu-id="6b5be-108">在典型的 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 应用程序中，菜单栏包含多个菜单项（如“文件” 、“编辑” 和“窗口” ），每个菜单项都可显示一个菜单。</span><span class="sxs-lookup"><span data-stu-id="6b5be-108">In a typical [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] application, a menu bar contains several menu items (such as **File**, **Edit**, and **Window**), and each menu item displays a menu.</span></span> <span data-ttu-id="6b5be-109">菜单包含一系列菜单项（如“新建” 、“打开” 和“关闭” ），可以通过展开这些菜单项来显示额外的菜单项，或者通过单击它们来执行特定的操作。</span><span class="sxs-lookup"><span data-stu-id="6b5be-109">A menu contains a collection of menu items (such as **New**, **Open**, and **Close**), which can be expanded to display additional menu items or perform a specific action when clicked.</span></span> <span data-ttu-id="6b5be-110">菜单项可以承载于菜单、菜单栏或工具栏中。</span><span class="sxs-lookup"><span data-stu-id="6b5be-110">A menu item can be hosted in a menu, menu bar, or tool bar.</span></span>  
   
- 以下几节定义了 MenuItem 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ <span data-ttu-id="6b5be-111">以下几节定义了 MenuItem 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-111">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the MenuItem control type.</span></span> <span data-ttu-id="6b5be-112">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6b5be-112">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all list controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必需的 UI 自动化树结构  
- 下表描述了与菜单项控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="6b5be-113">必需的 UI 自动化树结构</span><span class="sxs-lookup"><span data-stu-id="6b5be-113">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="6b5be-114">下表描述了与菜单项控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。</span><span class="sxs-lookup"><span data-stu-id="6b5be-114">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to menu item controls and describes what can be contained in each view.</span></span> <span data-ttu-id="6b5be-115">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6b5be-115">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|MenuItem “帮助”<br /><br /> <ul><li>菜单（帮助菜单项的子菜单）<br /><br /> <ul><li>MenuItem“帮助主题”</li><li>MenuItem “关于 Notepad”</li></ul></li></ul>|MenuItem “帮助”<br /><br /> -   MenuItem“帮助主题”<br />-   MenuItem “关于 Notepad”|  
+|<span data-ttu-id="6b5be-116">控件视图</span><span class="sxs-lookup"><span data-stu-id="6b5be-116">Control View</span></span>|<span data-ttu-id="6b5be-117">内容视图</span><span class="sxs-lookup"><span data-stu-id="6b5be-117">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="6b5be-118">MenuItem “帮助”</span><span class="sxs-lookup"><span data-stu-id="6b5be-118">MenuItem "Help"</span></span><br /><br /> <ul><li><span data-ttu-id="6b5be-119">菜单（帮助菜单项的子菜单）</span><span class="sxs-lookup"><span data-stu-id="6b5be-119">Menu (sub menu of Help menu item)</span></span><br /><br /> <ul><li><span data-ttu-id="6b5be-120">MenuItem“帮助主题”</span><span class="sxs-lookup"><span data-stu-id="6b5be-120">MenuItem "Help Topics"</span></span></li><li><span data-ttu-id="6b5be-121">MenuItem “关于 Notepad”</span><span class="sxs-lookup"><span data-stu-id="6b5be-121">MenuItem "About Notepad"</span></span></li></ul></li></ul>|<span data-ttu-id="6b5be-122">MenuItem “帮助”</span><span class="sxs-lookup"><span data-stu-id="6b5be-122">MenuItem "Help"</span></span><br /><br /> <span data-ttu-id="6b5be-123">-MenuItem"帮助主题"</span><span class="sxs-lookup"><span data-stu-id="6b5be-123">-   MenuItem "Help Topics"</span></span><br /><span data-ttu-id="6b5be-124">-MenuItem"关于 Notepad"</span><span class="sxs-lookup"><span data-stu-id="6b5be-124">-   MenuItem "About Notepad"</span></span>|  
   
- 菜单项控件的控件视图具有如上所示的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构。 请注意“帮助”菜单项含在其中，以更好地阐明子菜单层次结构中典型菜单的结构。  
+ <span data-ttu-id="6b5be-125">菜单项控件的控件视图具有如上所示的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构。</span><span class="sxs-lookup"><span data-stu-id="6b5be-125">The control view of the menu item control has the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure shown above.</span></span> <span data-ttu-id="6b5be-126">请注意“帮助”  菜单项含在其中，以更好地阐明子菜单层次结构中典型菜单的结构。</span><span class="sxs-lookup"><span data-stu-id="6b5be-126">Note that the **Help** menu item is inlcluded to better illustrate the structure in a typical menu to submenu hierarchy.</span></span>  
   
- 而对于内容视图而言，菜单不存在于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，因为它不给最终用户提供有意义的信息。  
+ <span data-ttu-id="6b5be-127">而对于内容视图而言，菜单不存在于 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，因为它不给最终用户提供有意义的信息。</span><span class="sxs-lookup"><span data-stu-id="6b5be-127">For the content view, Menu is absent from the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree because it does not convey meaningful information to the end user.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与菜单项控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="6b5be-128">必需的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="6b5be-128">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="6b5be-129">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与菜单项控件尤其相关。</span><span class="sxs-lookup"><span data-stu-id="6b5be-129">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to menu item controls.</span></span> <span data-ttu-id="6b5be-130">有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="6b5be-130">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|属性|值|说明|  
-|--------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果存在边界矩形，则受支持。 如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|菜单项控件不包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中，且自己标有名称。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|无标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|MenuItem|此值对于所有 UI 框架均相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“菜单项”|与 MenuItem 控件类型相对应的已本地化字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|菜单项控件决不包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|菜单项控件必须始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。|  
+|<span data-ttu-id="6b5be-131">属性</span><span class="sxs-lookup"><span data-stu-id="6b5be-131">Property</span></span>|<span data-ttu-id="6b5be-132">值</span><span class="sxs-lookup"><span data-stu-id="6b5be-132">Value</span></span>|<span data-ttu-id="6b5be-133">说明</span><span class="sxs-lookup"><span data-stu-id="6b5be-133">Description</span></span>|  
+|--------------|-----------|-----------------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="6b5be-134">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="6b5be-134">See notes.</span></span>|<span data-ttu-id="6b5be-135">此属性的值在应用程序的所有控件中都必须保持唯一。</span><span class="sxs-lookup"><span data-stu-id="6b5be-135">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="6b5be-136">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="6b5be-136">See notes.</span></span>|<span data-ttu-id="6b5be-137">包含整个控件的最外层矩形。</span><span class="sxs-lookup"><span data-stu-id="6b5be-137">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="6b5be-138">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="6b5be-138">See notes.</span></span>|<span data-ttu-id="6b5be-139">如果存在边界矩形，则受支持。</span><span class="sxs-lookup"><span data-stu-id="6b5be-139">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="6b5be-140">如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。</span><span class="sxs-lookup"><span data-stu-id="6b5be-140">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="6b5be-141">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="6b5be-141">See notes.</span></span>|<span data-ttu-id="6b5be-142">如果该控件可以接收键盘焦点，则它必须支持此属性。</span><span class="sxs-lookup"><span data-stu-id="6b5be-142">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="6b5be-143">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="6b5be-143">See notes.</span></span>|<span data-ttu-id="6b5be-144">菜单项控件不包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中，且自己标有名称。</span><span class="sxs-lookup"><span data-stu-id="6b5be-144">The menu item control is included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree and is self labeled with a name.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="6b5be-145">无标签。</span><span class="sxs-lookup"><span data-stu-id="6b5be-145">No label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="6b5be-146">MenuItem</span><span class="sxs-lookup"><span data-stu-id="6b5be-146">MenuItem</span></span>|<span data-ttu-id="6b5be-147">此值对于所有 UI 框架均相同。</span><span class="sxs-lookup"><span data-stu-id="6b5be-147">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="6b5be-148">“菜单项”</span><span class="sxs-lookup"><span data-stu-id="6b5be-148">"menu item"</span></span>|<span data-ttu-id="6b5be-149">与 MenuItem 控件类型相对应的已本地化字符串。</span><span class="sxs-lookup"><span data-stu-id="6b5be-149">Localized string corresponding to the MenuItem control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="6b5be-150">True</span><span class="sxs-lookup"><span data-stu-id="6b5be-150">True</span></span>|<span data-ttu-id="6b5be-151">菜单项控件决不包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。</span><span class="sxs-lookup"><span data-stu-id="6b5be-151">The menu item control is never included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="6b5be-152">True</span><span class="sxs-lookup"><span data-stu-id="6b5be-152">True</span></span>|<span data-ttu-id="6b5be-153">菜单项控件必须始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。</span><span class="sxs-lookup"><span data-stu-id="6b5be-153">The menu item control must always be included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必需的 UI 自动化控件模式  
- 下表列出需要由菜单项控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="6b5be-154">必需的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="6b5be-154">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="6b5be-155">下表列出需要由菜单项控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。</span><span class="sxs-lookup"><span data-stu-id="6b5be-155">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by menu item controls.</span></span> <span data-ttu-id="6b5be-156">有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6b5be-156">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控件模式属性|支持|备注|  
-|------------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|视情况而定|如果控件可以展开或折叠，则实现 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>。|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|视情况而定|如果该控件执行单个操作或命令，则实现 <xref:System.Windows.Automation.Provider.IInvokeProvider>。|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|视情况而定|如果该控件表示可以打开或关闭的选项，则实现 <xref:System.Windows.Automation.Provider.IToggleProvider>。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|视情况而定|如果该控件用于从菜单项之间的选项列表中选择，则实现 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。|  
+|<span data-ttu-id="6b5be-157">控件模式属性</span><span class="sxs-lookup"><span data-stu-id="6b5be-157">Control Pattern Property</span></span>|<span data-ttu-id="6b5be-158">支持</span><span class="sxs-lookup"><span data-stu-id="6b5be-158">Support</span></span>|<span data-ttu-id="6b5be-159">备注</span><span class="sxs-lookup"><span data-stu-id="6b5be-159">Notes</span></span>|  
+|------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|<span data-ttu-id="6b5be-160">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-160">Depends</span></span>|<span data-ttu-id="6b5be-161">如果控件可以展开或折叠，则实现 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>。</span><span class="sxs-lookup"><span data-stu-id="6b5be-161">If the control can be expanded or collapsed, implement <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|<span data-ttu-id="6b5be-162">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-162">Depends</span></span>|<span data-ttu-id="6b5be-163">如果该控件执行单个操作或命令，则实现 <xref:System.Windows.Automation.Provider.IInvokeProvider>。</span><span class="sxs-lookup"><span data-stu-id="6b5be-163">If the control executes a single action or command, implement <xref:System.Windows.Automation.Provider.IInvokeProvider>.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|<span data-ttu-id="6b5be-164">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-164">Depends</span></span>|<span data-ttu-id="6b5be-165">如果该控件表示可以打开或关闭的选项，则实现 <xref:System.Windows.Automation.Provider.IToggleProvider>。</span><span class="sxs-lookup"><span data-stu-id="6b5be-165">If the control represents an option that can be turned on or off, implement <xref:System.Windows.Automation.Provider.IToggleProvider>.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|<span data-ttu-id="6b5be-166">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-166">Depends</span></span>|<span data-ttu-id="6b5be-167">如果该控件用于从菜单项之间的选项列表中选择，则实现 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。</span><span class="sxs-lookup"><span data-stu-id="6b5be-167">If the control is used to select from a list of options among menu items, implement <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.</span></span>|  
   
 <a name="UI_Automation_Events_for_Menu_Item"></a>   
-## 菜单项的 UI 自动化事件  
- 下表列出与菜单项控件关联的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。  
+## <a name="ui-automation-events-for-menu-item"></a><span data-ttu-id="6b5be-168">菜单项的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="6b5be-168">UI Automation Events for Menu Item</span></span>  
+ <span data-ttu-id="6b5be-169">下表列出与菜单项控件关联的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-169">The following table lists the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] events associated with the menu item control.</span></span>  
   
-|Event|支持|说明|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|视情况而定|如果控件支持 Invoke 控件模式则必须引发。|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。|视情况而定|如果控件支持 Toggle 控件模式则必须引发。|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 属性更改事件。|视情况而定|如果控件支持 Expand Collapse 控件模式则必须引发。|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|视情况而定|无。|  
+|<span data-ttu-id="6b5be-170">Event</span><span class="sxs-lookup"><span data-stu-id="6b5be-170">Event</span></span>|<span data-ttu-id="6b5be-171">支持</span><span class="sxs-lookup"><span data-stu-id="6b5be-171">Support</span></span>|<span data-ttu-id="6b5be-172">说明</span><span class="sxs-lookup"><span data-stu-id="6b5be-172">Explanation</span></span>|  
+|-----------|-------------|-----------------|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|<span data-ttu-id="6b5be-173">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-173">Depends</span></span>|<span data-ttu-id="6b5be-174">如果控件支持 Invoke 控件模式则必须引发。</span><span class="sxs-lookup"><span data-stu-id="6b5be-174">Must be raised if control supports Invoke control pattern.</span></span>|  
+|<span data-ttu-id="6b5be-175"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-175"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-176">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-176">Depends</span></span>|<span data-ttu-id="6b5be-177">如果控件支持 Toggle 控件模式则必须引发。</span><span class="sxs-lookup"><span data-stu-id="6b5be-177">Must be raised if control supports Toggle control pattern.</span></span>|  
+|<span data-ttu-id="6b5be-178"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-178"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-179">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-179">Depends</span></span>|<span data-ttu-id="6b5be-180">如果控件支持 Expand Collapse 控件模式则必须引发。</span><span class="sxs-lookup"><span data-stu-id="6b5be-180">Must be raised if control supports Expand Collapse control pattern.</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|<span data-ttu-id="6b5be-181">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-181">Depends</span></span>|<span data-ttu-id="6b5be-182">无。</span><span class="sxs-lookup"><span data-stu-id="6b5be-182">None.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必需的 UI 自动化事件  
- 下表列出需要由所有菜单项控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="6b5be-183">必需的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="6b5be-183">Required UI Automation Events</span></span>  
+ <span data-ttu-id="6b5be-184">下表列出需要由所有菜单项控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-184">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all menu item controls.</span></span> <span data-ttu-id="6b5be-185">有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6b5be-185">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持\/值|备注|  
-|------------------------------------------------------------------------------|-----------|--------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="6b5be-186"> 事件</span><span class="sxs-lookup"><span data-stu-id="6b5be-186"> Event</span></span>|<span data-ttu-id="6b5be-187">支持/值</span><span class="sxs-lookup"><span data-stu-id="6b5be-187">Support/Value</span></span>|<span data-ttu-id="6b5be-188">备注</span><span class="sxs-lookup"><span data-stu-id="6b5be-188">Notes</span></span>|  
+|---------------------------------------------------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|<span data-ttu-id="6b5be-189">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-189">Depends</span></span>|<span data-ttu-id="6b5be-190">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-190">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|<span data-ttu-id="6b5be-191">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-191">Depends</span></span>|<span data-ttu-id="6b5be-192">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-192">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|<span data-ttu-id="6b5be-193">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-193">Depends</span></span>|<span data-ttu-id="6b5be-194">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-194">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|<span data-ttu-id="6b5be-195">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-195">Depends</span></span>|<span data-ttu-id="6b5be-196">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-196">None</span></span>|  
+|<span data-ttu-id="6b5be-197"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-197"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-198">必需</span><span class="sxs-lookup"><span data-stu-id="6b5be-198">Required</span></span>|<span data-ttu-id="6b5be-199">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-199">None</span></span>|  
+|<span data-ttu-id="6b5be-200"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-200"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-201">必需</span><span class="sxs-lookup"><span data-stu-id="6b5be-201">Required</span></span>|<span data-ttu-id="6b5be-202">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-202">None</span></span>|  
+|<span data-ttu-id="6b5be-203"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-203"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-204">必需</span><span class="sxs-lookup"><span data-stu-id="6b5be-204">Required</span></span>|<span data-ttu-id="6b5be-205">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-205">None</span></span>|  
+|<span data-ttu-id="6b5be-206"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-206"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-207">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-207">Depends</span></span>|<span data-ttu-id="6b5be-208">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-208">None</span></span>|  
+|<span data-ttu-id="6b5be-209"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="6b5be-209"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> property-changed event.</span></span>|<span data-ttu-id="6b5be-210">视情况而定</span><span class="sxs-lookup"><span data-stu-id="6b5be-210">Depends</span></span>|<span data-ttu-id="6b5be-211">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-211">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="6b5be-212">必需</span><span class="sxs-lookup"><span data-stu-id="6b5be-212">Required</span></span>|<span data-ttu-id="6b5be-213">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-213">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="6b5be-214">必需</span><span class="sxs-lookup"><span data-stu-id="6b5be-214">Required</span></span>|<span data-ttu-id="6b5be-215">无</span><span class="sxs-lookup"><span data-stu-id="6b5be-215">None</span></span>|  
   
 <a name="Legacy_Issues"></a>   
-## 遗留问题  
- 仅当 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 菜单项被选中且能够以编程方式被确定为支持 Toggle 模式所必需时，才可支持 Toggle 模式。 因为 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 菜单项不会公开它是否有具有被选中的能力，所以未选中菜单项时将支持 Invoke 模式。 异常将始终支持 Invoke 模式，这甚至适用于应仅支持 Toggle 模式的菜单项。 这是为了当曾支持 Invoke 模式的元素（未选中菜单项时）在选中后不再持该模式时，使客户端不至于困惑。  
+## <a name="legacy-issues"></a><span data-ttu-id="6b5be-216">遗留问题</span><span class="sxs-lookup"><span data-stu-id="6b5be-216">Legacy Issues</span></span>  
+ <span data-ttu-id="6b5be-217">仅当 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 菜单项被选中且能够以编程方式被确定为支持 Toggle 模式所必需时，才可支持 Toggle 模式。</span><span class="sxs-lookup"><span data-stu-id="6b5be-217">Toggle Pattern will only be supported when the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] menu item is checked and can be programmatically determined necessary to support Toggle Pattern.</span></span> <span data-ttu-id="6b5be-218">因为 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 菜单项不会公开它是否有具有被选中的能力，所以未选中菜单项时将支持 Invoke 模式。</span><span class="sxs-lookup"><span data-stu-id="6b5be-218">Because the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] menu item does not expose whether it has the ability to be checked, Invoke Pattern will be supported when the menu item is not checked.</span></span> <span data-ttu-id="6b5be-219">异常将始终支持 Invoke 模式，这甚至适用于应仅支持 Toggle 模式的菜单项。</span><span class="sxs-lookup"><span data-stu-id="6b5be-219">An exception will be made to always support Invoke Pattern even for menu items that should only support Toggle Pattern.</span></span> <span data-ttu-id="6b5be-220">这是为了当曾支持 Invoke 模式的元素（未选中菜单项时）在选中后不再持该模式时，使客户端不至于困惑。</span><span class="sxs-lookup"><span data-stu-id="6b5be-220">This is so clients do not become confused that an element that was supporting Invoke Pattern (when menu item was unchecked) no longer supports the pattern once it becomes checked.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Automation.ControlType.MenuItem>   
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6b5be-221">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6b5be-221">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.MenuItem>  
+ [<span data-ttu-id="6b5be-222">UI 自动化控件模式概述</span><span class="sxs-lookup"><span data-stu-id="6b5be-222">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="6b5be-223">UI 自动化控件类型概述</span><span class="sxs-lookup"><span data-stu-id="6b5be-223">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="6b5be-224">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="6b5be-224">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

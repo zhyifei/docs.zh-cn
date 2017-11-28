@@ -1,66 +1,45 @@
 ---
 title: "^= 运算符（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- ^=_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- ^= operator [C#]
+f1_keywords: ^=_CSharpKeyword
+helpviewer_keywords: ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8d4de06dbfd269dc5e0f2cc5003e8981068220a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 33b0dccf5031809bb4fcb73d0f7d6a344accdea3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-c-reference"></a>^= 运算符（C# 参考）
-异或赋值运算符。  
+# <a name="-operator-c-reference"></a><span data-ttu-id="b277d-102">^= 运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="b277d-102">^= Operator (C# Reference)</span></span>
+<span data-ttu-id="b277d-103">异或赋值运算符。</span><span class="sxs-lookup"><span data-stu-id="b277d-103">The exclusive-OR assignment operator.</span></span>  
   
-## <a name="remarks"></a>备注  
- 形式如下的表达式  
+## <a name="remarks"></a><span data-ttu-id="b277d-104">备注</span><span class="sxs-lookup"><span data-stu-id="b277d-104">Remarks</span></span>  
+ <span data-ttu-id="b277d-105">形式如下的表达式</span><span class="sxs-lookup"><span data-stu-id="b277d-105">An expression of the form</span></span>  
   
 ```  
 x ^= y  
 ```  
   
- 计算结果为  
+ <span data-ttu-id="b277d-106">计算结果为</span><span class="sxs-lookup"><span data-stu-id="b277d-106">is evaluated as</span></span>  
   
 ```  
 x = x ^ y  
 ```  
   
- 不同的是 `x` 只计算一次。 [^ 运算符](../../../csharp/language-reference/operators/xor-operator.md) 对整型操作数执行按位异或运算，对 [bool](../../../csharp/language-reference/keywords/bool.md) 操作数执行逻辑异或运算。  
+ <span data-ttu-id="b277d-107">不同的是 `x` 只计算一次。</span><span class="sxs-lookup"><span data-stu-id="b277d-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="b277d-108">[^ 运算符](../../../csharp/language-reference/operators/xor-operator.md) 对整型操作数执行按位异或运算，对 [bool](../../../csharp/language-reference/keywords/bool.md) 操作数执行逻辑异或运算。</span><span class="sxs-lookup"><span data-stu-id="b277d-108">The [^ operator](../../../csharp/language-reference/operators/xor-operator.md) performs a bitwise exclusive-OR operation on integral operands and logical exclusive-OR on [bool](../../../csharp/language-reference/keywords/bool.md) operands.</span></span>  
   
- 不能直接重载 ^= 运算符，但用户定义的类型可重载 [^ 运算符](../../../csharp/language-reference/operators/xor-operator.md)（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。  
+ <span data-ttu-id="b277d-109">不能直接重载 ^= 运算符，但用户定义的类型可重载 [^ 运算符](../../../csharp/language-reference/operators/xor-operator.md)（请参阅[运算符](../../../csharp/language-reference/keywords/operator.md)）。</span><span class="sxs-lookup"><span data-stu-id="b277d-109">The ^= operator cannot be overloaded directly, but user-defined types can overload the [^ operator](../../../csharp/language-reference/operators/xor-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-assignment-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="b277d-110">示例</span><span class="sxs-lookup"><span data-stu-id="b277d-110">Example</span></span>  
+ [!code-csharp[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 运算符](../../../csharp/language-reference/operators/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="b277d-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b277d-111">See Also</span></span>  
+ [<span data-ttu-id="b277d-112">C# 参考</span><span class="sxs-lookup"><span data-stu-id="b277d-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="b277d-113">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="b277d-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b277d-114">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="b277d-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

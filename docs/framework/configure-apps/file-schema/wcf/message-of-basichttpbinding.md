@@ -1,65 +1,74 @@
 ---
-title: "&lt;basicHttpBinding&gt; 的 &lt;message&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;basicHttpBinding&gt; 的 &lt;message&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 014e7d5ca9d6bc379edb82a71d52dccb73fa23f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;basicHttpBinding&gt; 的 &lt;message&gt;
-定义 [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)的消息级安全性设置。  
+# <a name="ltmessagegt-of-ltbasichttpbindinggt"></a><span data-ttu-id="03edd-102">&lt;basicHttpBinding&gt; 的 &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="03edd-102">&lt;message&gt; of &lt;basicHttpBinding&gt;</span></span>
+<span data-ttu-id="03edd-103">定义的消息级安全性设置[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="03edd-103">Defines the settings for message-level security of the [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
-## 语法  
+ <span data-ttu-id="03edd-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="03edd-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="03edd-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="03edd-105">\<bindings></span></span>  
+<span data-ttu-id="03edd-106">\<basicHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="03edd-106">\<basicHttpBinding></span></span>  
+<span data-ttu-id="03edd-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="03edd-107">\<binding></span></span>  
+<span data-ttu-id="03edd-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="03edd-108">\<security></span></span>  
+<span data-ttu-id="03edd-109">\<消息 ></span><span class="sxs-lookup"><span data-stu-id="03edd-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="03edd-110">语法</span><span class="sxs-lookup"><span data-stu-id="03edd-110">Syntax</span></span>  
   
+```xml  
 <message   
    algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
       clientCredentialType="UserName/Certificate"/>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="03edd-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="03edd-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="03edd-112">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="03edd-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="03edd-113">特性</span><span class="sxs-lookup"><span data-stu-id="03edd-113">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|algorithmSuite|设置消息加密和密钥包装算法。  此属性类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>，用于指定算法和密钥大小。  这些算法映射到安全策略语言 \(WS\-SecurityPolicy\) 规范中指定的算法。<br /><br /> 默认值为 `Basic256`。|  
-|clientCredentialType|指定要在使用基于消息的安全性执行客户端身份验证时使用的凭据类型。  默认值为 `UserName`。|  
+|<span data-ttu-id="03edd-114">特性</span><span class="sxs-lookup"><span data-stu-id="03edd-114">Attribute</span></span>|<span data-ttu-id="03edd-115">描述</span><span class="sxs-lookup"><span data-stu-id="03edd-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="03edd-116">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="03edd-116">algorithmSuite</span></span>|<span data-ttu-id="03edd-117">设置消息加密和密钥包装算法。</span><span class="sxs-lookup"><span data-stu-id="03edd-117">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="03edd-118">此属性类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>，用于指定算法和密钥大小。</span><span class="sxs-lookup"><span data-stu-id="03edd-118">This attribute is of type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, which specifies the algorithms and the key sizes.</span></span> <span data-ttu-id="03edd-119">这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。</span><span class="sxs-lookup"><span data-stu-id="03edd-119">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="03edd-120">默认值为 `Basic256`。</span><span class="sxs-lookup"><span data-stu-id="03edd-120">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="03edd-121">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="03edd-121">clientCredentialType</span></span>|<span data-ttu-id="03edd-122">指定要在使用基于消息的安全性执行客户端身份验证时使用的凭据类型。</span><span class="sxs-lookup"><span data-stu-id="03edd-122">Specifies the type of credential to be used when performing client authentication using message-based security.</span></span> <span data-ttu-id="03edd-123">默认值为 `UserName`。</span><span class="sxs-lookup"><span data-stu-id="03edd-123">The default is `UserName`.</span></span>|  
   
-## clientCredentialType 属性  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="03edd-124">clientCredentialType 属性</span><span class="sxs-lookup"><span data-stu-id="03edd-124">clientCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|UserName|-   要求使用 UserName 凭据向服务器对客户端进行身份验证。  此凭据需要使用 [\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)来指定。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也不支持使用密码派生密钥并使用这样的密钥来提供消息安全性。  因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。  对于 `basicHttpBinding`，这要求设置一个 SSL 通道。|  
-|证书|要求使用证书向服务器对客户端进行身份验证。  在此情况下，需要使用 [\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)和 [\<clientCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) 来指定客户端凭据。  此外，在使用消息安全模式时，需要向客户端提供服务证书。  在此情况下，需要通过使用 <xref:System.ServiceModel.Description.ClientCredentials> 类或 `ClientCredentials` 行为元素并指定服务证书（使用 [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)指定）来指定服务凭据。|  
+|<span data-ttu-id="03edd-125">值</span><span class="sxs-lookup"><span data-stu-id="03edd-125">Value</span></span>|<span data-ttu-id="03edd-126">描述</span><span class="sxs-lookup"><span data-stu-id="03edd-126">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="03edd-127">UserName</span><span class="sxs-lookup"><span data-stu-id="03edd-127">UserName</span></span>|<span data-ttu-id="03edd-128">-要求客户端在使用 UserName 凭据向服务器进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="03edd-128">-   Requires the client be authenticated to the server with a UserName credential.</span></span> <span data-ttu-id="03edd-129">此凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。</span><span class="sxs-lookup"><span data-stu-id="03edd-129">This credential needs to be specified using the [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).</span></span><br /><span data-ttu-id="03edd-130">-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]不支持发送密码摘要，也使用派生密钥的密码并使用这样的密钥来提供消息安全性。</span><span class="sxs-lookup"><span data-stu-id="03edd-130">-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] does not support sending a password digest or deriving keys using passwords and using such keys for message security.</span></span> <span data-ttu-id="03edd-131">因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。</span><span class="sxs-lookup"><span data-stu-id="03edd-131">Therefore, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport be secured when using UserName credentials.</span></span> <span data-ttu-id="03edd-132">对于 `basicHttpBinding`，这要求设置一个 SSL 通道。</span><span class="sxs-lookup"><span data-stu-id="03edd-132">For the `basicHttpBinding`, this requires setting up an SSL channel.</span></span>|  
+|<span data-ttu-id="03edd-133">证书</span><span class="sxs-lookup"><span data-stu-id="03edd-133">Certificate</span></span>|<span data-ttu-id="03edd-134">要求使用证书向服务器对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="03edd-134">Requires that the client be authenticated to the server using a certificate.</span></span> <span data-ttu-id="03edd-135">在这种情况下，客户端凭据需要指定使用[ \<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)和[ \<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。</span><span class="sxs-lookup"><span data-stu-id="03edd-135">The client credential in this case needs to be specified using [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) and the [\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md).</span></span> <span data-ttu-id="03edd-136">此外，在使用消息安全模式时，需要向客户端提供服务证书。</span><span class="sxs-lookup"><span data-stu-id="03edd-136">In addition, when using message security mode, the client needs to be provisioned with the service certificate.</span></span> <span data-ttu-id="03edd-137">在这种情况下需要使用指定服务凭据<xref:System.ServiceModel.Description.ClientCredentials>类或`ClientCredentials`行为元素并指定服务证书使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。</span><span class="sxs-lookup"><span data-stu-id="03edd-137">The service credential in this case needs to be specified using <xref:System.ServiceModel.Description.ClientCredentials> class or `ClientCredentials` behavior element and specifying the service certificate using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="03edd-138">子元素</span><span class="sxs-lookup"><span data-stu-id="03edd-138">Child Elements</span></span>  
+ <span data-ttu-id="03edd-139">无</span><span class="sxs-lookup"><span data-stu-id="03edd-139">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="03edd-140">父元素</span><span class="sxs-lookup"><span data-stu-id="03edd-140">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义 [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)的安全功能。|  
+|<span data-ttu-id="03edd-141">元素</span><span class="sxs-lookup"><span data-stu-id="03edd-141">Element</span></span>|<span data-ttu-id="03edd-142">描述</span><span class="sxs-lookup"><span data-stu-id="03edd-142">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="03edd-143">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="03edd-143">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|<span data-ttu-id="03edd-144">定义的安全功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="03edd-144">Defines the security capabilities for the [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>|  
   
-## 示例  
- 此示例演示如何实现使用 basicHttpBinding 和消息安全性的应用程序。  在下面的服务配置示例中，终结点定义将指定 basicHttpBinding 并引用名为 `Binding1` 的绑定配置。  服务用于向客户端验证自己身份的证书是在配置文件的 `behaviors` 节中 `serviceCredentials` 元素的下面设置的。  应用于证书（客户端使用该证书向服务验证自己的身份）的验证模式也是在 `behaviors` 节中 `clientCertificate` 元素的下面设置的。  
+## <a name="example"></a><span data-ttu-id="03edd-145">示例</span><span class="sxs-lookup"><span data-stu-id="03edd-145">Example</span></span>  
+ <span data-ttu-id="03edd-146">此示例演示如何实现使用 basicHttpBinding 和消息安全性的应用程序。</span><span class="sxs-lookup"><span data-stu-id="03edd-146">This sample demonstrates how to implement an application that uses the basicHttpBinding and message security.</span></span> <span data-ttu-id="03edd-147">在下面的服务配置示例中，终结点定义将指定 basicHttpBinding 并引用名为 `Binding1` 的绑定配置。</span><span class="sxs-lookup"><span data-stu-id="03edd-147">In the following configuration example for a service, the endpoint definition specifies the basicHttpBinding and references a binding configuration named `Binding1`.</span></span> <span data-ttu-id="03edd-148">服务用于向客户端验证自己身份的证书是在配置文件的 `behaviors` 节中 `serviceCredentials` 元素的下面设置的。</span><span class="sxs-lookup"><span data-stu-id="03edd-148">The certificate that the service uses to authenticate itself to the client is set in the `behaviors` section of the configuration file under the `serviceCredentials` element.</span></span> <span data-ttu-id="03edd-149">应用于证书（客户端使用该证书向服务验证自己的身份）的验证模式也是在 `behaviors` 节中 `clientCertificate` 元素的下面设置的。</span><span class="sxs-lookup"><span data-stu-id="03edd-149">The validation mode that applies to the certificate that the client uses to authenticate itself to the service is also set in the `behaviors` section under the `clientCertificate` element.</span></span>  
   
- 在客户端配置文件中指定同样的绑定和安全详细信息。  
+ <span data-ttu-id="03edd-150">在客户端配置文件中指定同样的绑定和安全详细信息。</span><span class="sxs-lookup"><span data-stu-id="03edd-150">The same binding and security details are specified in the client configuration file.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -126,13 +135,13 @@ caps.handback.revision: 23
 </system.serviceModel>  
 ```  
   
-## 请参阅  
- <xref:System.ServiceModel.BasicHttpMessageSecurity>   
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="03edd-151">另请参阅</span><span class="sxs-lookup"><span data-stu-id="03edd-151">See Also</span></span>  
+ <xref:System.ServiceModel.BasicHttpMessageSecurity>  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>  
+ [<span data-ttu-id="03edd-152">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="03edd-152">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="03edd-153">绑定</span><span class="sxs-lookup"><span data-stu-id="03edd-153">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="03edd-154">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="03edd-154">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="03edd-155">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="03edd-155">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="03edd-156">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="03edd-156">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

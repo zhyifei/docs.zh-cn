@@ -1,35 +1,39 @@
 ---
-title: "GetSchema 和架构集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "GetSchema 和架构集合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4790195d5f02ac1f68f8ab4c5ef39499052cd725
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# GetSchema 和架构集合
-每个由 .NET Framework 管理的提供程序中的 **Connection** 类实现 **GetSchema** 方法，该方法用于检索与当前连接的数据库有关的架构信息，从 **GetSchema** 方法返回的架构信息以 <xref:System.Data.DataTable> 的形式传入。  **GetSchema** 方法属于重载方法，提供可选的参数来指定要返回的架构集合以及限制返回的信息量。  
+# <a name="getschema-and-schema-collections"></a><span data-ttu-id="ab8f3-102">GetSchema 和架构集合</span><span class="sxs-lookup"><span data-stu-id="ab8f3-102">GetSchema and Schema Collections</span></span>
+<span data-ttu-id="ab8f3-103">**连接**中每个.NET Framework 托管提供程序实现的类**GetSchema**方法用于检索有关与当前连接的数据库的架构信息和从返回的架构信息**GetSchema**方法采用的形式<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="ab8f3-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="ab8f3-104">**GetSchema**方法属于重载的方法，提供可选参数来指定要返回的架构集合以及限制返回的信息量。</span><span class="sxs-lookup"><span data-stu-id="ab8f3-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
   
-## 指定架构集合  
- **GetSchema** 方法的第一个可选参数是以字符串形式指定的集合名称。  有两种类型的架构集合：所有提供程序通用的通用架构集合以及每个提供程序特定的特定架构集合。  
+## <a name="specifying-the-schema-collections"></a><span data-ttu-id="ab8f3-105">指定架构集合</span><span class="sxs-lookup"><span data-stu-id="ab8f3-105">Specifying the Schema Collections</span></span>  
+ <span data-ttu-id="ab8f3-106">第一个可选参数**GetSchema**方法是指定为一个字符串的集合名称。</span><span class="sxs-lookup"><span data-stu-id="ab8f3-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="ab8f3-107">有两种类型的架构集合：所有提供程序通用的通用架构集合以及每个提供程序特定的特定架构集合。</span><span class="sxs-lookup"><span data-stu-id="ab8f3-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
   
- 可以通过调用没有参数或包含架构集合名称“MetaDataCollections”的 **GetSchema** 方法来查询由 .NET Framework 管理的提供程序，以确定支持的架构集合列表。  此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。  
+ <span data-ttu-id="ab8f3-108">您可以查询由.NET Framework 托管提供程序以确定支持的架构集合列表，通过调用**GetSchema**不带任何参数，或包含架构集合名称"MetaDataCollections"的方法。</span><span class="sxs-lookup"><span data-stu-id="ab8f3-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="ab8f3-109">此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。</span><span class="sxs-lookup"><span data-stu-id="ab8f3-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
   
-### 检索架构集合示例  
- 以下示例演示如何使用 SQL Server .NET Framework 数据提供程序的 <xref:System.Data.SqlClient.SqlConnection> 类的 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 方法来检索与 **AdventureWorks** 示例数据库中包含的所有表有关的架构信息：  
+### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="ab8f3-110">检索架构集合示例</span><span class="sxs-lookup"><span data-stu-id="ab8f3-110">Retrieving Schema Collections Example</span></span>  
+ <span data-ttu-id="ab8f3-111">下面的示例演示如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>SQL Server 的.NET Framework 数据提供程序方法<xref:System.Data.SqlClient.SqlConnection>类检索有关的所有表中包含的架构信息**AdventureWorks**示例数据库：</span><span class="sxs-lookup"><span data-stu-id="ab8f3-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -65,9 +69,7 @@ Module Module1
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -112,6 +114,6 @@ class Program
 }  
 ```  
   
-## 请参阅  
- [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="ab8f3-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ab8f3-112">See Also</span></span>  
+ [<span data-ttu-id="ab8f3-113">检索数据库架构信息</span><span class="sxs-lookup"><span data-stu-id="ab8f3-113">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [<span data-ttu-id="ab8f3-114">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="ab8f3-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

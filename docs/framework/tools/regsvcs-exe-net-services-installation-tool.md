@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Regsvcs.exe
 - .NET Services Installation tool
@@ -22,31 +16,30 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 931fc9ee10762485f8fc4da906109023f15e09f8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe（.NET 服务安装工具）
-.NET 服务安装工具执行下列操作：  
+# <a name="regsvcsexe-net-services-installation-tool"></a><span data-ttu-id="5133b-102">Regsvcs.exe（.NET 服务安装工具）</span><span class="sxs-lookup"><span data-stu-id="5133b-102">Regsvcs.exe (.NET Services Installation Tool)</span></span>
+<span data-ttu-id="5133b-103">.NET 服务安装工具执行下列操作：</span><span class="sxs-lookup"><span data-stu-id="5133b-103">The .NET Services Installation tool performs the following actions:</span></span>  
   
--   加载并注册程序集。  
+-   <span data-ttu-id="5133b-104">加载并注册程序集。</span><span class="sxs-lookup"><span data-stu-id="5133b-104">Loads and registers an assembly.</span></span>  
   
--   生成、注册类型库并将其安装到指定的 COM+ 应用程序中。  
+-   <span data-ttu-id="5133b-105">生成、注册类型库并将其安装到指定的 COM+ 应用程序中。</span><span class="sxs-lookup"><span data-stu-id="5133b-105">Generates, registers, and installs a type library into a specified COM+ application.</span></span>  
   
--   配置以编程方式添加到类的服务。  
+-   <span data-ttu-id="5133b-106">配置以编程方式添加到类的服务。</span><span class="sxs-lookup"><span data-stu-id="5133b-106">Configures services that you have added programmatically to your class.</span></span>  
   
- 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ <span data-ttu-id="5133b-107">若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="5133b-107">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="5133b-108">有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="5133b-108">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- 在命令提示符处，键入以下内容：  
+ <span data-ttu-id="5133b-109">在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="5133b-109">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="5133b-110">语法</span><span class="sxs-lookup"><span data-stu-id="5133b-110">Syntax</span></span>  
   
 ```  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
@@ -54,55 +47,54 @@ ms.lasthandoff: 07/28/2017
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="5133b-111">参数</span><span class="sxs-lookup"><span data-stu-id="5133b-111">Parameters</span></span>  
   
-|参数|描述|  
+|<span data-ttu-id="5133b-112">参数</span><span class="sxs-lookup"><span data-stu-id="5133b-112">Argument</span></span>|<span data-ttu-id="5133b-113">描述</span><span class="sxs-lookup"><span data-stu-id="5133b-113">Description</span></span>|  
 |--------------|-----------------|  
-|assemblyFile.dll|源程序集文件。 此程序集必须用强名称进行签名。 有关详细信息，请参阅[使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。|  
+|<span data-ttu-id="5133b-114">assemblyFile.dll</span><span class="sxs-lookup"><span data-stu-id="5133b-114">*assemblyFile.dll*</span></span>|<span data-ttu-id="5133b-115">源程序集文件。</span><span class="sxs-lookup"><span data-stu-id="5133b-115">The source assembly file.</span></span> <span data-ttu-id="5133b-116">此程序集必须用强名称进行签名。</span><span class="sxs-lookup"><span data-stu-id="5133b-116">The assembly must be signed with a strong name.</span></span> <span data-ttu-id="5133b-117">有关详细信息，请参阅[使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="5133b-117">For more information, see [Signing an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>|  
   
-|选项|描述|  
+|<span data-ttu-id="5133b-118">选项</span><span class="sxs-lookup"><span data-stu-id="5133b-118">Option</span></span>|<span data-ttu-id="5133b-119">描述</span><span class="sxs-lookup"><span data-stu-id="5133b-119">Description</span></span>|  
 |------------|-----------------|  
-|/appdir: path|指定应用程序的根目录。|  
-|/appname: applicationName|指定要查找或创建的 COM+ 应用程序的名称。|  
-|**/c**|创建目标应用程序。|  
-|/componly|只配置组件；忽略方法和接口。|  
-|/exapp|指定此工具需要现有应用程序。|  
-|/extlb|使用现有类型库。|  
-|/fc|查找或创建目标应用程序。|  
-|**/help**|显示该工具的命令语法和选项。|  
-|/noreconfig|不重新配置现有的目标应用程序。|  
-|**/nologo**|取消显示 Microsoft 启动版权标志。|  
-|/parname: name|指定要查找或创建的 COM+ 应用程序的名称或 ID。|  
-|/reconfig|重新配置现有目标应用程序。 这是默认设置。|  
-|/tlb: typelibraryfile|指定要安装的类型库文件。|  
-|/u|卸载目标应用程序。|  
-|**/quiet**|指定安静模式；取消显示登录和成功消息。|  
-|**/?**|显示该工具的命令语法和选项。|  
+|<span data-ttu-id="5133b-120">/appdir: path</span><span class="sxs-lookup"><span data-stu-id="5133b-120">**/appdir:** *path*</span></span>|<span data-ttu-id="5133b-121">指定应用程序的根目录。</span><span class="sxs-lookup"><span data-stu-id="5133b-121">Specifies the root directory of the application.</span></span>|  
+|<span data-ttu-id="5133b-122">/appname: applicationName</span><span class="sxs-lookup"><span data-stu-id="5133b-122">**/appname:** *applicationName*</span></span>|<span data-ttu-id="5133b-123">指定要查找或创建的 COM+ 应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="5133b-123">Specifies the name of the COM+ application to either find or create.</span></span>|  
+|<span data-ttu-id="5133b-124">**/c**</span><span class="sxs-lookup"><span data-stu-id="5133b-124">**/c**</span></span>|<span data-ttu-id="5133b-125">创建目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="5133b-125">Creates the target application.</span></span>|  
+|<span data-ttu-id="5133b-126">/componly</span><span class="sxs-lookup"><span data-stu-id="5133b-126">**/componly**</span></span>|<span data-ttu-id="5133b-127">只配置组件；忽略方法和接口。</span><span class="sxs-lookup"><span data-stu-id="5133b-127">Configures components only; ignores methods and interfaces.</span></span>|  
+|<span data-ttu-id="5133b-128">/exapp</span><span class="sxs-lookup"><span data-stu-id="5133b-128">**/exapp**</span></span>|<span data-ttu-id="5133b-129">指定此工具需要现有应用程序。</span><span class="sxs-lookup"><span data-stu-id="5133b-129">Specifies to the tool to expect an existing application.</span></span>|  
+|<span data-ttu-id="5133b-130">/extlb</span><span class="sxs-lookup"><span data-stu-id="5133b-130">**/extlb**</span></span>|<span data-ttu-id="5133b-131">使用现有类型库。</span><span class="sxs-lookup"><span data-stu-id="5133b-131">Uses an existing type library.</span></span>|  
+|<span data-ttu-id="5133b-132">/fc</span><span class="sxs-lookup"><span data-stu-id="5133b-132">**/fc**</span></span>|<span data-ttu-id="5133b-133">查找或创建目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="5133b-133">Finds or creates the target application.</span></span>|  
+|<span data-ttu-id="5133b-134">**/help**</span><span class="sxs-lookup"><span data-stu-id="5133b-134">**/help**</span></span>|<span data-ttu-id="5133b-135">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="5133b-135">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="5133b-136">/noreconfig</span><span class="sxs-lookup"><span data-stu-id="5133b-136">**/noreconfig**</span></span>|<span data-ttu-id="5133b-137">不重新配置现有的目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="5133b-137">Does not reconfigure an existing target application.</span></span>|  
+|<span data-ttu-id="5133b-138">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="5133b-138">**/nologo**</span></span>|<span data-ttu-id="5133b-139">取消显示 Microsoft 启动版权标志。</span><span class="sxs-lookup"><span data-stu-id="5133b-139">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="5133b-140">/parname: name</span><span class="sxs-lookup"><span data-stu-id="5133b-140">**/parname:** *name*</span></span>|<span data-ttu-id="5133b-141">指定要查找或创建的 COM+ 应用程序的名称或 ID。</span><span class="sxs-lookup"><span data-stu-id="5133b-141">Specifies the name or id of the COM+ application to either find or create.</span></span>|  
+|<span data-ttu-id="5133b-142">/reconfig</span><span class="sxs-lookup"><span data-stu-id="5133b-142">**/reconfig**</span></span>|<span data-ttu-id="5133b-143">重新配置现有目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="5133b-143">Reconfigures an existing target application.</span></span> <span data-ttu-id="5133b-144">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="5133b-144">This is the default.</span></span>|  
+|<span data-ttu-id="5133b-145">/tlb: typelibraryfile</span><span class="sxs-lookup"><span data-stu-id="5133b-145">**/tlb:** *typelibraryfile*</span></span>|<span data-ttu-id="5133b-146">指定要安装的类型库文件。</span><span class="sxs-lookup"><span data-stu-id="5133b-146">Specifies the type library file to install.</span></span>|  
+|<span data-ttu-id="5133b-147">/u</span><span class="sxs-lookup"><span data-stu-id="5133b-147">**/u**</span></span>|<span data-ttu-id="5133b-148">卸载目标应用程序。</span><span class="sxs-lookup"><span data-stu-id="5133b-148">Uninstalls the target application.</span></span>|  
+|<span data-ttu-id="5133b-149">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="5133b-149">**/quiet**</span></span>|<span data-ttu-id="5133b-150">指定安静模式；取消显示登录和成功消息。</span><span class="sxs-lookup"><span data-stu-id="5133b-150">Specifies quiet mode; suppresses the logo and success message display.</span></span>|  
+|<span data-ttu-id="5133b-151">**/?**</span><span class="sxs-lookup"><span data-stu-id="5133b-151">**/?**</span></span>|<span data-ttu-id="5133b-152">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="5133b-152">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>备注  
- Regsvcs.exe 需要由 assemblyFile.dll 指定的源程序集文件。 此程序集必须用强名称进行签名。 有关强名称签名的更多信息，请参阅[使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。 目标应用程序的名称和类型库文件的名称都是可选的。 如果 applicationName 参数尚不存在，则该参数可从源程序集文件生成并且将由 Regsvcs.exe 创建。 typelibraryfile 参数可以指定类型库名称。 如果未指定类型库名称，默认情况下，Regsvcs.exe 将使用程序集名称。  
+## <a name="remarks"></a><span data-ttu-id="5133b-153">备注</span><span class="sxs-lookup"><span data-stu-id="5133b-153">Remarks</span></span>  
+ <span data-ttu-id="5133b-154">Regsvcs.exe 需要由 assemblyFile.dll 指定的源程序集文件。</span><span class="sxs-lookup"><span data-stu-id="5133b-154">Regsvcs.exe requires a source assembly file specified by *assemblyFile.dll*.</span></span> <span data-ttu-id="5133b-155">此程序集必须用强名称进行签名。</span><span class="sxs-lookup"><span data-stu-id="5133b-155">This assembly must be signed with a strong name.</span></span> <span data-ttu-id="5133b-156">有关强名称签名的更多信息，请参阅[使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。</span><span class="sxs-lookup"><span data-stu-id="5133b-156">For more information on strong name signing, see [Signing an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span> <span data-ttu-id="5133b-157">目标应用程序的名称和类型库文件的名称都是可选的。</span><span class="sxs-lookup"><span data-stu-id="5133b-157">The names of the target application and the type library file are optional.</span></span> <span data-ttu-id="5133b-158">如果 applicationName 参数尚不存在，则该参数可从源程序集文件生成并且将由 Regsvcs.exe 创建。</span><span class="sxs-lookup"><span data-stu-id="5133b-158">The *applicationName* argument can be generated from the source assembly file and will be created by Regsvcs.exe, if it does not already exist.</span></span> <span data-ttu-id="5133b-159">typelibraryfile 参数可以指定类型库名称。</span><span class="sxs-lookup"><span data-stu-id="5133b-159">The *typelibraryfile* argument can specify a type library name.</span></span> <span data-ttu-id="5133b-160">如果未指定类型库名称，默认情况下，Regsvcs.exe 将使用程序集名称。</span><span class="sxs-lookup"><span data-stu-id="5133b-160">If you do not specify a type library name, Regsvcs.exe uses the assembly name as the default.</span></span>  
   
- 当 Regsvcs.exe 注册组件的方法时，它需要遵从那些方法的[要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)和[链接要求](../../../docs/framework/misc/link-demands.md)。 因为该工具在完全受信任的环境中执行，所以大多数权限要求都会成功。 但是，如果组件中的方法受 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求或链接要求保护，则 Regsvcs.exe 无法注册这些组件。  
+ <span data-ttu-id="5133b-161">当 Regsvcs.exe 注册组件的方法时，它需要遵从那些方法的[要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)和[链接要求](../../../docs/framework/misc/link-demands.md)。</span><span class="sxs-lookup"><span data-stu-id="5133b-161">When Regsvcs.exe registers a component's methods, it is subject to the [demands](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) and [link demands](../../../docs/framework/misc/link-demands.md) on those methods.</span></span> <span data-ttu-id="5133b-162">因为该工具在完全受信任的环境中执行，所以大多数权限要求都会成功。</span><span class="sxs-lookup"><span data-stu-id="5133b-162">Because the tool executes in a fully-trusted environment, most demands for a permission succeed.</span></span> <span data-ttu-id="5133b-163">但是，如果组件中的方法受 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求或链接要求保护，则 Regsvcs.exe 无法注册这些组件。</span><span class="sxs-lookup"><span data-stu-id="5133b-163">However, Regsvcs.exe cannot register components with methods protected by a demand or link demand for the <xref:System.Security.Permissions.StrongNameIdentityPermission> or the <xref:System.Security.Permissions.PublisherIdentityPermission>.</span></span>  
   
- 你必须在本地计算机上具有管理特权才能使用 Regsvcs.exe。  
+ <span data-ttu-id="5133b-164">你必须在本地计算机上具有管理特权才能使用 Regsvcs.exe。</span><span class="sxs-lookup"><span data-stu-id="5133b-164">You must have administrative privileges on the local computer to use Regsvcs.exe.</span></span>  
   
- 如果 Regsvcs.exe 在执行上述任何操作时失败，它将显示相应的错误信息。  
+ <span data-ttu-id="5133b-165">如果 Regsvcs.exe 在执行上述任何操作时失败，它将显示相应的错误信息。</span><span class="sxs-lookup"><span data-stu-id="5133b-165">If Regsvcs.exe fails while performing any of these actions, it displays corresponding error messages.</span></span>  
   
-## <a name="examples"></a>示例  
- 下面的命令将 `myTest.dll` 中包含的所有公共类添加到 `myTargetApp`（一个现有的 COM+ 应用程序）中，同时生成 `myTest.tlb` 类型库。  
+## <a name="examples"></a><span data-ttu-id="5133b-166">示例</span><span class="sxs-lookup"><span data-stu-id="5133b-166">Examples</span></span>  
+ <span data-ttu-id="5133b-167">下面的命令将 `myTest.dll` 中包含的所有公共类添加到 `myTargetApp`（一个现有的 COM+ 应用程序）中，同时生成 `myTest.tlb` 类型库。</span><span class="sxs-lookup"><span data-stu-id="5133b-167">The following command adds all public classes contained in `myTest.dll` to `myTargetApp` (an existing COM+ application) and produces the `myTest.tlb` type library.</span></span>  
   
 ```  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
- 下面的命令将 `myTest.dll` 中包含的所有公共类添加到 `myTargetApp`（一个现有的 COM+ 应用程序）中，同时生成 `newTest.tlb` 类型库。  
+ <span data-ttu-id="5133b-168">下面的命令将 `myTest.dll` 中包含的所有公共类添加到 `myTargetApp`（一个现有的 COM+ 应用程序）中，同时生成 `newTest.tlb` 类型库。</span><span class="sxs-lookup"><span data-stu-id="5133b-168">The following command adds all public classes contained in `myTest.dll` to `myTargetApp` (an existing COM+ application) and produces the `newTest.tlb` type library.</span></span>  
   
 ```  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
- [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="5133b-169">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5133b-169">See Also</span></span>  
+ [<span data-ttu-id="5133b-170">工具</span><span class="sxs-lookup"><span data-stu-id="5133b-170">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="5133b-171">如何：使用强名称为程序集签名</span><span class="sxs-lookup"><span data-stu-id="5133b-171">How to: Sign an Assembly with a Strong Name</span></span>](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [<span data-ttu-id="5133b-172">命令提示</span><span class="sxs-lookup"><span data-stu-id="5133b-172">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

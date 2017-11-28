@@ -1,123 +1,122 @@
 ---
-title: "概念模型规范函数到 SQL Server 函数映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "SQL Server 函数映射的规范化概念模型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a186c37506441dde814ca52970c60f0f816ba53e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 概念模型规范函数到 SQL Server 函数映射
-本主题介绍概念模型规范函数如何映射到相应的 SQL Server 函数。  
+# <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a><span data-ttu-id="3642d-102">SQL Server 函数映射的规范化概念模型</span><span class="sxs-lookup"><span data-stu-id="3642d-102">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>
+<span data-ttu-id="3642d-103">本主题介绍概念模型规范函数如何映射到相应的 SQL Server 函数。</span><span class="sxs-lookup"><span data-stu-id="3642d-103">This topic describes how conceptual model canonical functions map to the corresponding SQL Server functions.</span></span>  
   
-## 日期和时间函数  
- 下表介绍了日期和时间函数映射：  
+## <a name="date-and-time-functions"></a><span data-ttu-id="3642d-104">日期和时间函数</span><span class="sxs-lookup"><span data-stu-id="3642d-104">Date and Time Functions</span></span>  
+ <span data-ttu-id="3642d-105">下表介绍了日期和时间函数映射：</span><span class="sxs-lookup"><span data-stu-id="3642d-105">The following table describes the date and time functions mapping:</span></span>  
   
-|规范函数|SQL Server 函数|  
-|----------|-------------------|  
-|[AddDays\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
-|[AddHours\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
-|[AddMicroseconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
-|[AddMilliseconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
-|[AddMinutes\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
-|[AddMonths\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
-|[AddNanoseconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
-|[AddSeconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
-|[AddYears\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
-|[CreateDateTime\(year, month, day, hour, minute, second\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|对于 SQL Server 2000 和 SQL Server 2005，在服务器上创建 `datetime` 带格式的值。  对于 SQL Server 2008 及更高版本，在服务器上创建 `datetime2` 值。|  
-|[CreateDateTimeOffset\(year, month, day, hour, minute, second, tzoffset\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|在服务器上创建 `datetimeoffset` 带格式的值。<br /><br /> 在 SQL Server 2000 或 SQL Server 2005 中不受支持。|  
-|[CreateTime\(hour, minute, second\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|在服务器上创建 `time` 带格式的值。<br /><br /> 在 SQL Server 2000 或 SQL Server 2005 中不受支持。|  
-|[CurrentDateTime\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTime()`（在 SQLServer 2008 中）。<br /><br /> `GetDate()`（在 SQLServer 2000 和 SQLServer 2005 中）。|  
-|[CurrentDateTimeOffset\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()`（在 SQL Server 2008 中）。<br /><br /> 在 SQL Server 2000 或 SQL Server 2005 中不受支持。|  
-|[CurrentUtcDateTime\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()`（在 SQLServer 2008 中）。  `GetUtcDate()`（在 SQL Server 2000 和 SQL Server 2005 中）。|  
-|[DayOfYear\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
-|[Day\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
-|[DiffDays\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
-|[DiffHours\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(hour, startdate, enddate)`|  
-|[DiffMicroseconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(microsecond, startdate, enddate)`|  
-|[DiffMilliseconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(millisecond, startdate, enddate)`|  
-|[DiffMinutes\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(minute, startdate, enddate)`|  
-|[DiffNanoseconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(nanosecond, startdate, enddate)`|  
-|[DiffSeconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(second, startdate, enddate)`|  
-|[DiffYears\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
-|[GetTotalOffsetMinutes\(DateTimeOffset\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
-|[Hour\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
-|[Millisecond\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
-|[Minute\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
-|[Month\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
-|[Second\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
-|[Truncate\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|对于 SQL Server 2000 和 SQL Server 2005，在服务器上创建被截断的 `datetime` `` 带格式的值。  对于 SQL Server 2008 及更高版本，在服务器上创建被截断的 `` `datetime2` 或 `` `datetimeoffset` 值。|  
-|[Year\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
+|<span data-ttu-id="3642d-106">规范函数</span><span class="sxs-lookup"><span data-stu-id="3642d-106">Canonical functions</span></span>|<span data-ttu-id="3642d-107">SQL Server 函数</span><span class="sxs-lookup"><span data-stu-id="3642d-107">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="3642d-108">AddDays(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-108">AddDays(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
+|[<span data-ttu-id="3642d-109">AddHours(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-109">AddHours(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
+|[<span data-ttu-id="3642d-110">AddMicroseconds(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-110">AddMicroseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
+|[<span data-ttu-id="3642d-111">AddMilliseconds(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-111">AddMilliseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
+|[<span data-ttu-id="3642d-112">AddMinutes(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-112">AddMinutes(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
+|[<span data-ttu-id="3642d-113">AddMonths(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-113">AddMonths(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
+|[<span data-ttu-id="3642d-114">AddNanoseconds(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-114">AddNanoseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
+|[<span data-ttu-id="3642d-115">AddSeconds(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-115">AddSeconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
+|[<span data-ttu-id="3642d-116">AddYears(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-116">AddYears(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
+|[<span data-ttu-id="3642d-117">CreateDateTime （年、 月、 日、 小时、 分钟、 秒）</span><span class="sxs-lookup"><span data-stu-id="3642d-117">CreateDateTime(year, month, day, hour, minute, second)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-118">对于 SQL Server 2000 和 SQL Server 2005，在服务器上创建 `datetime` 带格式的值。</span><span class="sxs-lookup"><span data-stu-id="3642d-118">For SQL Server 2000 and SQL Server 2005, a `datetime` formatted value is created on the server.</span></span> <span data-ttu-id="3642d-119">对于 SQL Server 2008 及更高版本，在服务器上创建 `datetime2` 值。</span><span class="sxs-lookup"><span data-stu-id="3642d-119">For SQL Server 2008 and later versions, a `datetime2` value is created on the server.</span></span>|  
+|[<span data-ttu-id="3642d-120">CreateDateTimeOffset （年、 月、 日、 小时、 分钟、 秒、 tzoffset）</span><span class="sxs-lookup"><span data-stu-id="3642d-120">CreateDateTimeOffset(year, month, day, hour, minute, second, tzoffset)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-121">在服务器上创建 `datetimeoffset` 带格式的值。</span><span class="sxs-lookup"><span data-stu-id="3642d-121">A `datetimeoffset` formatted value is created on the server.</span></span><br /><br /> <span data-ttu-id="3642d-122">在 SQL Server 2000 或 SQL Server 2005 中不受支持。</span><span class="sxs-lookup"><span data-stu-id="3642d-122">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="3642d-123">CreateTime （小时、 分钟、 秒）</span><span class="sxs-lookup"><span data-stu-id="3642d-123">CreateTime(hour, minute, second)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-124">在服务器上创建 `time` 带格式的值。</span><span class="sxs-lookup"><span data-stu-id="3642d-124">A `time` formatted value is created on the server.</span></span><br /><br /> <span data-ttu-id="3642d-125">在 SQL Server 2000 或 SQL Server 2005 中不受支持。</span><span class="sxs-lookup"><span data-stu-id="3642d-125">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="3642d-126">CurrentDateTime()</span><span class="sxs-lookup"><span data-stu-id="3642d-126">CurrentDateTime()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-127">`SysDateTime()`（在 SQLServer 2008 中）。</span><span class="sxs-lookup"><span data-stu-id="3642d-127">`SysDateTime()` in SQLServer 2008.</span></span><br /><br /> <span data-ttu-id="3642d-128">`GetDate()`（在 SQLServer 2000 和 SQLServer 2005 中）。</span><span class="sxs-lookup"><span data-stu-id="3642d-128">`GetDate()` in SQLServer 2000 and SQLServer 2005.</span></span>|  
+|[<span data-ttu-id="3642d-129">CurrentDateTimeOffset()</span><span class="sxs-lookup"><span data-stu-id="3642d-129">CurrentDateTimeOffset()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-130">`SysDateTimeOffset()`（在 SQL Server 2008 中）。</span><span class="sxs-lookup"><span data-stu-id="3642d-130">`SysDateTimeOffset()` in SQL Server 2008.</span></span><br /><br /> <span data-ttu-id="3642d-131">在 SQL Server 2000 或 SQL Server 2005 中不受支持。</span><span class="sxs-lookup"><span data-stu-id="3642d-131">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="3642d-132">CurrentUtcDateTime()</span><span class="sxs-lookup"><span data-stu-id="3642d-132">CurrentUtcDateTime()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-133">`SysUtcDateTime()`（在 SQLServer 2008 中）。</span><span class="sxs-lookup"><span data-stu-id="3642d-133">`SysUtcDateTime()` in SQLServer 2008.</span></span> <span data-ttu-id="3642d-134">`GetUtcDate()`（在 SQL Server 2000 和 SQL Server 2005 中）。</span><span class="sxs-lookup"><span data-stu-id="3642d-134">`GetUtcDate()` in SQL Server 2000 and SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="3642d-135">DayOfYear(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-135">DayOfYear(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
+|[<span data-ttu-id="3642d-136">Day(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-136">Day(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
+|[<span data-ttu-id="3642d-137">DiffDays （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-137">DiffDays(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-138">DiffHours （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-138">DiffHours(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(hour, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-139">DiffMicroseconds （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-139">DiffMicroseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(microsecond, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-140">DiffMilliseconds （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-140">DiffMilliseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(millisecond, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-141">DiffMinutes （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-141">DiffMinutes(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(minute, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-142">DiffNanoseconds （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-142">DiffNanoseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(nanosecond, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-143">DiffSeconds （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-143">DiffSeconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(second, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-144">DiffYears （startExpression，endExpression）</span><span class="sxs-lookup"><span data-stu-id="3642d-144">DiffYears(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
+|[<span data-ttu-id="3642d-145">GetTotalOffsetMinutes(DateTimeOffset)</span><span class="sxs-lookup"><span data-stu-id="3642d-145">GetTotalOffsetMinutes(DateTimeOffset)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
+|[<span data-ttu-id="3642d-146">Hour(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-146">Hour(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
+|[<span data-ttu-id="3642d-147">Millisecond(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-147">Millisecond(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
+|[<span data-ttu-id="3642d-148">Minute(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-148">Minute(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
+|[<span data-ttu-id="3642d-149">Month(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-149">Month(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
+|[<span data-ttu-id="3642d-150">Second(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-150">Second(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
+|[<span data-ttu-id="3642d-151">Truncate(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-151">Truncate(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="3642d-152">对于 SQL Server 2000 和 SQL Server 2005，被截断的`datetime`在服务器上创建带格式的值。</span><span class="sxs-lookup"><span data-stu-id="3642d-152">For SQL Server 2000 and SQL Server 2005, a truncated `datetime` formatted value is created on the server.</span></span> <span data-ttu-id="3642d-153">对于 SQL Server 2008 和更高版本，被截断`datetime2`或`datetimeoffset`在服务器上创建值。</span><span class="sxs-lookup"><span data-stu-id="3642d-153">For SQL Server 2008 and later versions, a truncated `datetime2` or `datetimeoffset` value is created on the server.</span></span>|  
+|[<span data-ttu-id="3642d-154">Year(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-154">Year(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
   
-## 聚合函数  
- 下表介绍了聚合函数映射：  
+## <a name="aggregate-functions"></a><span data-ttu-id="3642d-155">聚合函数</span><span class="sxs-lookup"><span data-stu-id="3642d-155">Aggregate Functions</span></span>  
+ <span data-ttu-id="3642d-156">下表介绍了聚合函数映射：</span><span class="sxs-lookup"><span data-stu-id="3642d-156">The following table describes the aggregate functions mapping:</span></span>  
   
-|规范函数|SQL Server 函数|  
-|----------|-------------------|  
-|[Avg\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
-|[BigCount\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
-|[Count\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
-|[Min\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
-|[Max\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
-|[StDev\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEV(expression)`|  
-|[StDevP\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEVP(expression)`|  
-|[Sum\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`SUM(expression)`|  
-|[Var\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VAR(expression)`|  
-|[VarP\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
+|<span data-ttu-id="3642d-157">规范函数</span><span class="sxs-lookup"><span data-stu-id="3642d-157">Canonical functions</span></span>|<span data-ttu-id="3642d-158">SQL Server 函数</span><span class="sxs-lookup"><span data-stu-id="3642d-158">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="3642d-159">Avg(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-159">Avg(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
+|[<span data-ttu-id="3642d-160">BigCount(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-160">BigCount(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
+|[<span data-ttu-id="3642d-161">Count(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-161">Count(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
+|[<span data-ttu-id="3642d-162">Min(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-162">Min(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
+|[<span data-ttu-id="3642d-163">Max(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-163">Max(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
+|[<span data-ttu-id="3642d-164">StDev(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-164">StDev(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEV(expression)`|  
+|[<span data-ttu-id="3642d-165">StDevP(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-165">StDevP(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEVP(expression)`|  
+|[<span data-ttu-id="3642d-166">Sum(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-166">Sum(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`SUM(expression)`|  
+|[<span data-ttu-id="3642d-167">Var(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-167">Var(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VAR(expression)`|  
+|[<span data-ttu-id="3642d-168">VarP(expression)</span><span class="sxs-lookup"><span data-stu-id="3642d-168">VarP(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
   
-## 数学函数  
- 下表介绍了数学函数映射：  
+## <a name="math-functions"></a><span data-ttu-id="3642d-169">数学函数</span><span class="sxs-lookup"><span data-stu-id="3642d-169">Math functions</span></span>  
+ <span data-ttu-id="3642d-170">下表介绍了数学函数映射：</span><span class="sxs-lookup"><span data-stu-id="3642d-170">The following table describes the math functions mapping:</span></span>  
   
-|规范函数|SQL Server 函数|  
-|----------|-------------------|  
-|[Abs\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
-|[Ceiling\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
-|[Floor\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
-|[Power\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
-|[Round\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[Truncate](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|<span data-ttu-id="3642d-171">规范函数</span><span class="sxs-lookup"><span data-stu-id="3642d-171">Canonical functions</span></span>|<span data-ttu-id="3642d-172">SQL Server 函数</span><span class="sxs-lookup"><span data-stu-id="3642d-172">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="3642d-173">Abs(value)</span><span class="sxs-lookup"><span data-stu-id="3642d-173">Abs(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
+|[<span data-ttu-id="3642d-174">Ceiling(value)</span><span class="sxs-lookup"><span data-stu-id="3642d-174">Ceiling(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
+|[<span data-ttu-id="3642d-175">Floor(value)</span><span class="sxs-lookup"><span data-stu-id="3642d-175">Floor(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
+|[<span data-ttu-id="3642d-176">Power(value)</span><span class="sxs-lookup"><span data-stu-id="3642d-176">Power(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
+|[<span data-ttu-id="3642d-177">Round(value)</span><span class="sxs-lookup"><span data-stu-id="3642d-177">Round(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
+|[<span data-ttu-id="3642d-178">截断</span><span class="sxs-lookup"><span data-stu-id="3642d-178">Truncate</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
-## 字符串函数  
- 下表介绍了字符串函数映射：  
+## <a name="string-functions"></a><span data-ttu-id="3642d-179">字符串函数</span><span class="sxs-lookup"><span data-stu-id="3642d-179">String Functions</span></span>  
+ <span data-ttu-id="3642d-180">下表介绍了字符串函数映射：</span><span class="sxs-lookup"><span data-stu-id="3642d-180">The following table describes the string functions mapping:</span></span>  
   
-|规范函数|SQL Server 函数|  
-|----------|-------------------|  
-|[Contains\(string, target\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Concat\(string1, string2\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|string1 \+ string2|  
-|[EndsWith\(string, target\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **注意** 如果 `string` 存储在固定长度字符串列中且 `target` 为常量，`CHARINDEX` 函数返回 `false`。  在这种情况下，将搜索整个字符串，包括任何填充尾随空格。  一种可行的解决方法是在将字符串传递给 `EndsWith` 函数前，将数据裁剪为固定长度字符串，如下面的示例所示：`EndsWith(TRIM(string), target)`|  
-|[IndexOf\(target, string2\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
-|[Left \(string1, length\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
-|[Length \(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
-|[LTrim\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
-|[Right \(string1, length\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
-|[Trim\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
-|[Replace \(string1, string2, string3\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
-|[Reverse \(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
-|[RTrim\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
-|[StartsWith\(string, target\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Substring\(string, start, length\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
-|[ToLower\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
-|[ToUpper\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
+|<span data-ttu-id="3642d-181">规范函数</span><span class="sxs-lookup"><span data-stu-id="3642d-181">Canonical functions</span></span>|<span data-ttu-id="3642d-182">SQL Server 函数</span><span class="sxs-lookup"><span data-stu-id="3642d-182">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="3642d-183">Contains(string, target)</span><span class="sxs-lookup"><span data-stu-id="3642d-183">Contains(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[<span data-ttu-id="3642d-184">Concat （string1，string2）</span><span class="sxs-lookup"><span data-stu-id="3642d-184">Concat(string1, string2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|<span data-ttu-id="3642d-185">string1 + string2</span><span class="sxs-lookup"><span data-stu-id="3642d-185">string1 + string2</span></span>|  
+|[<span data-ttu-id="3642d-186">EndsWith （字符串、 目标）</span><span class="sxs-lookup"><span data-stu-id="3642d-186">EndsWith(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> <span data-ttu-id="3642d-187">**请注意**`CHARINDEX`函数返回`false`如果`string`固定的长度字符串列中存储和`target`为常量。</span><span class="sxs-lookup"><span data-stu-id="3642d-187">**Note** The `CHARINDEX` function returns `false` if the `string` is stored in a fixed length string column and `target` is a constant.</span></span> <span data-ttu-id="3642d-188">在这种情况下，将搜索整个字符串，包括任何填充尾随空格。</span><span class="sxs-lookup"><span data-stu-id="3642d-188">In this case, the entire string is searched, including any padding trailing spaces.</span></span> <span data-ttu-id="3642d-189">一种可行的解决方法是在将字符串传递给 `EndsWith` 函数前，将数据裁剪为固定长度字符串，如下面的示例所示：`EndsWith(TRIM(string), target)`</span><span class="sxs-lookup"><span data-stu-id="3642d-189">A possible workaround is to trim the data in the fixed length string before passing the string to the `EndsWith` function, as in the following example: `EndsWith(TRIM(string), target)`</span></span>|  
+|[<span data-ttu-id="3642d-190">IndexOf （目标、 string2）</span><span class="sxs-lookup"><span data-stu-id="3642d-190">IndexOf(target, string2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
+|[<span data-ttu-id="3642d-191">左 （string1，长度）</span><span class="sxs-lookup"><span data-stu-id="3642d-191">Left (string1, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
+|[<span data-ttu-id="3642d-192">长度 （字符串）</span><span class="sxs-lookup"><span data-stu-id="3642d-192">Length (string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
+|[<span data-ttu-id="3642d-193">LTrim(string)</span><span class="sxs-lookup"><span data-stu-id="3642d-193">LTrim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
+|[<span data-ttu-id="3642d-194">右键 （string1，长度）</span><span class="sxs-lookup"><span data-stu-id="3642d-194">Right (string1, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
+|[<span data-ttu-id="3642d-195">Trim(string)</span><span class="sxs-lookup"><span data-stu-id="3642d-195">Trim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
+|[<span data-ttu-id="3642d-196">替换 （string1，string2，string3）</span><span class="sxs-lookup"><span data-stu-id="3642d-196">Replace (string1, string2, string3)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
+|[<span data-ttu-id="3642d-197">反向 （字符串）</span><span class="sxs-lookup"><span data-stu-id="3642d-197">Reverse (string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
+|[<span data-ttu-id="3642d-198">RTrim(string)</span><span class="sxs-lookup"><span data-stu-id="3642d-198">RTrim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
+|[<span data-ttu-id="3642d-199">StartsWith （字符串、 目标）</span><span class="sxs-lookup"><span data-stu-id="3642d-199">StartsWith(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[<span data-ttu-id="3642d-200">子字符串 （字符串、 开始、 长度）</span><span class="sxs-lookup"><span data-stu-id="3642d-200">Substring(string, start, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
+|[<span data-ttu-id="3642d-201">ToLower(string)</span><span class="sxs-lookup"><span data-stu-id="3642d-201">ToLower(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
+|[<span data-ttu-id="3642d-202">ToUpper(string)</span><span class="sxs-lookup"><span data-stu-id="3642d-202">ToUpper(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
   
-## 位函数  
- 下表介绍了位函数映射：  
+## <a name="bitwise-functions"></a><span data-ttu-id="3642d-203">位函数</span><span class="sxs-lookup"><span data-stu-id="3642d-203">Bitwise Functions</span></span>  
+ <span data-ttu-id="3642d-204">下表介绍了位函数映射：</span><span class="sxs-lookup"><span data-stu-id="3642d-204">The following table describes the bitwise functions mapping:</span></span>  
   
-|规范函数|SQL Server 函数|  
-|----------|-------------------|  
-|[BitWiseAnd \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 & value2|  
-|[BitWiseNot \(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|~value|  
-|[BitWiseOr \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 &#124; value2|  
-|[BitWiseXor \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 ^ value2|
+|<span data-ttu-id="3642d-205">规范函数</span><span class="sxs-lookup"><span data-stu-id="3642d-205">Canonical functions</span></span>|<span data-ttu-id="3642d-206">SQL Server 函数</span><span class="sxs-lookup"><span data-stu-id="3642d-206">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="3642d-207">BitWiseAnd （value1，value2）</span><span class="sxs-lookup"><span data-stu-id="3642d-207">BitWiseAnd (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="3642d-208">value1 & value2</span><span class="sxs-lookup"><span data-stu-id="3642d-208">value1 & value2</span></span>|  
+|[<span data-ttu-id="3642d-209">BitWiseNot （值）</span><span class="sxs-lookup"><span data-stu-id="3642d-209">BitWiseNot (value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="3642d-210">~value</span><span class="sxs-lookup"><span data-stu-id="3642d-210">~value</span></span>|  
+|[<span data-ttu-id="3642d-211">BitWiseOr （value1，value2）</span><span class="sxs-lookup"><span data-stu-id="3642d-211">BitWiseOr (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="3642d-212">value1 &#124;value2</span><span class="sxs-lookup"><span data-stu-id="3642d-212">value1 &#124; value2</span></span>|  
+|[<span data-ttu-id="3642d-213">BitWiseXor （value1，value2）</span><span class="sxs-lookup"><span data-stu-id="3642d-213">BitWiseXor (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="3642d-214">value1 ^ value2</span><span class="sxs-lookup"><span data-stu-id="3642d-214">value1 ^ value2</span></span>|

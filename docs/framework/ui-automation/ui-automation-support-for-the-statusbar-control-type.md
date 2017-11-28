@@ -1,85 +1,88 @@
 ---
-title: "UI Automation Support for the StatusBar Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "StatusBar control type"
-  - "UI Automation, Status Bar control type"
-  - "control types, Status Bar"
+title: "UI 自动化对 StatusBar 控件类型的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- StatusBar control type
+- UI Automation, Status Bar control type
+- control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-caps.latest.revision: 22
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 434d853aae2404bb907e06ebf021a6d04be20c31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the StatusBar Control Type
+# <a name="ui-automation-support-for-the-statusbar-control-type"></a><span data-ttu-id="c3969-102">UI 自动化对 StatusBar 控件类型的支持</span><span class="sxs-lookup"><span data-stu-id="c3969-102">UI Automation Support for the StatusBar Control Type</span></span>
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="c3969-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="c3969-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="c3969-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="c3969-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题提供有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 对于状态栏控件的支持信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
+ <span data-ttu-id="c3969-105">本主题提供有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 对于状态栏控件的支持信息。</span><span class="sxs-lookup"><span data-stu-id="c3969-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the StatusBar control type.</span></span> <span data-ttu-id="c3969-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。</span><span class="sxs-lookup"><span data-stu-id="c3969-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="c3969-107">这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。</span><span class="sxs-lookup"><span data-stu-id="c3969-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 状态栏控件显示有关将在应用程序窗口中查看的对象和对象组件的信息，或应用程序内与该对象的操作相关的上下文信息。  
+ <span data-ttu-id="c3969-108">状态栏控件显示有关将在应用程序窗口中查看的对象和对象组件的信息，或应用程序内与该对象的操作相关的上下文信息。</span><span class="sxs-lookup"><span data-stu-id="c3969-108">A status bar control displays information about an object being viewed in a window of an application, the object's component, or contextual information that relates to that object's operation within your application.</span></span>  
   
- 以下几节定义状态栏控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有状态栏控件，无论对于 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ <span data-ttu-id="c3969-109">以下几节定义状态栏控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。</span><span class="sxs-lookup"><span data-stu-id="c3969-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the StatusBar control type.</span></span> <span data-ttu-id="c3969-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有状态栏控件，无论对于 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c3969-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all status bar controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必需的 UI 自动化树结构  
- 下表描述与状态栏控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="c3969-111">必需的 UI 自动化树结构</span><span class="sxs-lookup"><span data-stu-id="c3969-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="c3969-112">下表描述与状态栏控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。</span><span class="sxs-lookup"><span data-stu-id="c3969-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to status bar controls and describes what can be contained in each view.</span></span> <span data-ttu-id="c3969-113">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c3969-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|StatusBar<br /><br /> -   Edit（0 个或多个）<br />-   Progress Bar（0 个或多个）<br />-   Image（0 个或多个）<br />-   Button（0 个或多个）|StatusBar<br /><br /> -   Edit（0 个或多个）<br />-   ProgressBar（0 个或多个）<br />-   Image（0 个或多个）<br />-   Button（0 个或多个）|  
+|<span data-ttu-id="c3969-114">控件视图</span><span class="sxs-lookup"><span data-stu-id="c3969-114">Control View</span></span>|<span data-ttu-id="c3969-115">内容视图</span><span class="sxs-lookup"><span data-stu-id="c3969-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="c3969-116">StatusBar</span><span class="sxs-lookup"><span data-stu-id="c3969-116">StatusBar</span></span><br /><br /> <span data-ttu-id="c3969-117">-Edit （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-117">-   Edit (0 or more)</span></span><br /><span data-ttu-id="c3969-118">-进度栏 （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-118">-   Progress Bar (0 or many)</span></span><br /><span data-ttu-id="c3969-119">-Image （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-119">-   Image (0 or many)</span></span><br /><span data-ttu-id="c3969-120">-Button （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-120">-   Button (0 or many)</span></span>|<span data-ttu-id="c3969-121">StatusBar</span><span class="sxs-lookup"><span data-stu-id="c3969-121">StatusBar</span></span><br /><br /> <span data-ttu-id="c3969-122">-Edit （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-122">-   Edit (0 or more)</span></span><br /><span data-ttu-id="c3969-123">-ProgressBar （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-123">-   ProgressBar (0 or many)</span></span><br /><span data-ttu-id="c3969-124">-Image （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-124">-   Image (0 or many)</span></span><br /><span data-ttu-id="c3969-125">-Button （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="c3969-125">-   Button (0 or many)</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必需的 UI 自动化属性  
- 下表列出了 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与进度栏控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="c3969-126">必需的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="c3969-126">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="c3969-127">下表列出了 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与进度栏控件尤其相关。</span><span class="sxs-lookup"><span data-stu-id="c3969-127">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to progress bar controls.</span></span> <span data-ttu-id="c3969-128">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="c3969-128">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|备注|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|状态栏的边界矩形必须包含其中包含的所有控件。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果存在边界矩形，则受支持。 如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|状态栏控件不需要名称，除非应用程序中使用了多个状态栏。 在本例中，使用“Internet 状态”或“应用程序状态”等名称来区分每个状态栏。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|状态栏控件通常没有标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|StatusBar|此值对于所有 UI 框架均相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“状态栏”|与状态栏控件类型相对应的已本地化字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|状态栏控件始终包含内容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|状态栏控件始终是一个控件。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|视情况而定|如果当前在屏幕上不可见，则状态栏控件将为此属性返回 True。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|视情况而定|控件方向的值：水平或垂直。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|False|不适用|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|状态栏不具有快捷键。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="c3969-129"> 属性</span><span class="sxs-lookup"><span data-stu-id="c3969-129"> Property</span></span>|<span data-ttu-id="c3969-130">值</span><span class="sxs-lookup"><span data-stu-id="c3969-130">Value</span></span>|<span data-ttu-id="c3969-131">备注</span><span class="sxs-lookup"><span data-stu-id="c3969-131">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="c3969-132">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="c3969-132">See notes.</span></span>|<span data-ttu-id="c3969-133">此属性的值在应用程序的所有控件中都必须保持唯一。</span><span class="sxs-lookup"><span data-stu-id="c3969-133">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="c3969-134">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="c3969-134">See notes.</span></span>|<span data-ttu-id="c3969-135">状态栏的边界矩形必须包含其中包含的所有控件。</span><span class="sxs-lookup"><span data-stu-id="c3969-135">The bounding rectangle of a status bar must encompass all of the controls contained within it.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="c3969-136">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="c3969-136">See notes.</span></span>|<span data-ttu-id="c3969-137">如果存在边界矩形，则受支持。</span><span class="sxs-lookup"><span data-stu-id="c3969-137">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="c3969-138">如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。</span><span class="sxs-lookup"><span data-stu-id="c3969-138">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="c3969-139">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="c3969-139">See notes.</span></span>|<span data-ttu-id="c3969-140">如果该控件可以接收键盘焦点，则它必须支持此属性。</span><span class="sxs-lookup"><span data-stu-id="c3969-140">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="c3969-141">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="c3969-141">See notes.</span></span>|<span data-ttu-id="c3969-142">状态栏控件不需要名称，除非应用程序中使用了多个状态栏。</span><span class="sxs-lookup"><span data-stu-id="c3969-142">The status bar control does not need a name unless more than one is used within an application.</span></span> <span data-ttu-id="c3969-143">在本例中，使用“Internet 状态”或“应用程序状态”等名称来区分每个状态栏。</span><span class="sxs-lookup"><span data-stu-id="c3969-143">In this case, distinguish each bar with names such as "Internet Status" or "Application Status."</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="c3969-144">状态栏控件通常没有标签。</span><span class="sxs-lookup"><span data-stu-id="c3969-144">The status bar control usually does not have a label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="c3969-145">StatusBar</span><span class="sxs-lookup"><span data-stu-id="c3969-145">StatusBar</span></span>|<span data-ttu-id="c3969-146">此值对于所有 UI 框架均相同。</span><span class="sxs-lookup"><span data-stu-id="c3969-146">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="c3969-147">“状态栏”</span><span class="sxs-lookup"><span data-stu-id="c3969-147">"status bar"</span></span>|<span data-ttu-id="c3969-148">与状态栏控件类型相对应的已本地化字符串。</span><span class="sxs-lookup"><span data-stu-id="c3969-148">Localized string corresponding to the StatusBar control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="c3969-149">True</span><span class="sxs-lookup"><span data-stu-id="c3969-149">True</span></span>|<span data-ttu-id="c3969-150">状态栏控件始终包含内容。</span><span class="sxs-lookup"><span data-stu-id="c3969-150">The status bar control always contains content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="c3969-151">True</span><span class="sxs-lookup"><span data-stu-id="c3969-151">True</span></span>|<span data-ttu-id="c3969-152">状态栏控件始终是一个控件。</span><span class="sxs-lookup"><span data-stu-id="c3969-152">The status bar control is always a control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|<span data-ttu-id="c3969-153">视情况而定</span><span class="sxs-lookup"><span data-stu-id="c3969-153">Depends</span></span>|<span data-ttu-id="c3969-154">如果当前在屏幕上不可见，则状态栏控件将为此属性返回 True。</span><span class="sxs-lookup"><span data-stu-id="c3969-154">A status bar control will return True for this property if it is not currently visible on the screen.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|<span data-ttu-id="c3969-155">视情况而定</span><span class="sxs-lookup"><span data-stu-id="c3969-155">Depends</span></span>|<span data-ttu-id="c3969-156">控件方向的值：水平或垂直。</span><span class="sxs-lookup"><span data-stu-id="c3969-156">The value of the control's orientation: horizontal or vertical.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="c3969-157">False</span><span class="sxs-lookup"><span data-stu-id="c3969-157">False</span></span>|<span data-ttu-id="c3969-158">不适用</span><span class="sxs-lookup"><span data-stu-id="c3969-158">Not applicable</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|<span data-ttu-id="c3969-159">状态栏不具有快捷键。</span><span class="sxs-lookup"><span data-stu-id="c3969-159">Status bars do not have accelerator keys.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必需的 UI 自动化控件模式  
- 下表列出需要由状态栏控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="c3969-160">必需的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="c3969-160">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="c3969-161">下表列出需要由状态栏控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。</span><span class="sxs-lookup"><span data-stu-id="c3969-161">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by status bar controls.</span></span> <span data-ttu-id="c3969-162">有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c3969-162">For more information about control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控件模式|支持|备注|  
-|----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|可选|状态栏控件应支持“网格”控件模式，以便监视各个部分并可轻松引用信息。|  
+|<span data-ttu-id="c3969-163">控件模式</span><span class="sxs-lookup"><span data-stu-id="c3969-163">Control Pattern</span></span>|<span data-ttu-id="c3969-164">支持</span><span class="sxs-lookup"><span data-stu-id="c3969-164">Support</span></span>|<span data-ttu-id="c3969-165">备注</span><span class="sxs-lookup"><span data-stu-id="c3969-165">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|<span data-ttu-id="c3969-166">可选</span><span class="sxs-lookup"><span data-stu-id="c3969-166">Optional</span></span>|<span data-ttu-id="c3969-167">状态栏控件应支持“网格”控件模式，以便监视各个部分并可轻松引用信息。</span><span class="sxs-lookup"><span data-stu-id="c3969-167">Status bar controls should support the Grid control pattern so that individual pieces can be monitored and easily referenced for information.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必需的 UI 自动化事件  
- 下表列出需要由所有状态栏控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="c3969-168">必需的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="c3969-168">Required UI Automation Events</span></span>  
+ <span data-ttu-id="c3969-169">下表列出需要由所有状态栏控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="c3969-169">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all status bar controls.</span></span> <span data-ttu-id="c3969-170">有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c3969-170">For more information about events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="c3969-171"> 事件</span><span class="sxs-lookup"><span data-stu-id="c3969-171"> Event</span></span>|<span data-ttu-id="c3969-172">支持</span><span class="sxs-lookup"><span data-stu-id="c3969-172">Support</span></span>|<span data-ttu-id="c3969-173">备注</span><span class="sxs-lookup"><span data-stu-id="c3969-173">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="c3969-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="c3969-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="c3969-175">必需</span><span class="sxs-lookup"><span data-stu-id="c3969-175">Required</span></span>|<span data-ttu-id="c3969-176">无</span><span class="sxs-lookup"><span data-stu-id="c3969-176">None</span></span>|  
+|<span data-ttu-id="c3969-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="c3969-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="c3969-178">必需</span><span class="sxs-lookup"><span data-stu-id="c3969-178">Required</span></span>|<span data-ttu-id="c3969-179">无</span><span class="sxs-lookup"><span data-stu-id="c3969-179">None</span></span>|  
+|<span data-ttu-id="c3969-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="c3969-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="c3969-181">必需</span><span class="sxs-lookup"><span data-stu-id="c3969-181">Required</span></span>|<span data-ttu-id="c3969-182">无</span><span class="sxs-lookup"><span data-stu-id="c3969-182">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="c3969-183">必需</span><span class="sxs-lookup"><span data-stu-id="c3969-183">Required</span></span>|<span data-ttu-id="c3969-184">无</span><span class="sxs-lookup"><span data-stu-id="c3969-184">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="c3969-185">必需</span><span class="sxs-lookup"><span data-stu-id="c3969-185">Required</span></span>|<span data-ttu-id="c3969-186">无</span><span class="sxs-lookup"><span data-stu-id="c3969-186">None</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Automation.ControlType.StatusBar>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c3969-187">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c3969-187">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.StatusBar>  
+ [<span data-ttu-id="c3969-188">UI 自动化控件类型概述</span><span class="sxs-lookup"><span data-stu-id="c3969-188">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="c3969-189">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="c3969-189">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

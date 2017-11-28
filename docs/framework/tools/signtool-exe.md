@@ -5,226 +5,218 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
-签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
+# <a name="signtoolexe-sign-tool"></a><span data-ttu-id="e3c50-102">SignTool.exe（签名工具）</span><span class="sxs-lookup"><span data-stu-id="e3c50-102">SignTool.exe (Sign Tool)</span></span>
+<span data-ttu-id="e3c50-103">签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-103">Sign Tool is a command-line tool that digitally signs files, verifies signatures in files, and time-stamps files.</span></span>  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ <span data-ttu-id="e3c50-104">此工具会自动随 Visual Studio 一起安装。</span><span class="sxs-lookup"><span data-stu-id="e3c50-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="e3c50-105">若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。</span><span class="sxs-lookup"><span data-stu-id="e3c50-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="e3c50-106">有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- 在命令提示符处，键入以下内容：  
+ <span data-ttu-id="e3c50-107">在命令提示符处，键入以下内容：</span><span class="sxs-lookup"><span data-stu-id="e3c50-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="e3c50-108">语法</span><span class="sxs-lookup"><span data-stu-id="e3c50-108">Syntax</span></span>  
   
 ```  
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="e3c50-109">参数</span><span class="sxs-lookup"><span data-stu-id="e3c50-109">Parameters</span></span>  
   
-|参数|描述|  
+|<span data-ttu-id="e3c50-110">参数</span><span class="sxs-lookup"><span data-stu-id="e3c50-110">Argument</span></span>|<span data-ttu-id="e3c50-111">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-111">Description</span></span>|  
 |--------------|-----------------|  
-|`command`|指定要对文件执行的操作的四个命令（`catdb`、`sign`、`Timestamp` 或 `Verify`）之一。 有关每个命令的说明，请参见下一个表。|  
-|`options`|用于修改命令的选项。 除全局 `/q` 和 `/v` 选项之外，每个命令均支持一组唯一选项。|  
-|`file_name`|要进行签名的文件的路径。|  
+|`command`|<span data-ttu-id="e3c50-112">指定要对文件执行的操作的四个命令（`catdb`、`sign`、`Timestamp` 或 `Verify`）之一。</span><span class="sxs-lookup"><span data-stu-id="e3c50-112">One of four commands (`catdb`, `sign`, `Timestamp`, or `Verify`) that specifies an operation to perform on a file.</span></span> <span data-ttu-id="e3c50-113">有关每个命令的说明，请参见下一个表。</span><span class="sxs-lookup"><span data-stu-id="e3c50-113">For a description of each command, see the next table.</span></span>|  
+|`options`|<span data-ttu-id="e3c50-114">用于修改命令的选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-114">An option that modifies a command.</span></span> <span data-ttu-id="e3c50-115">除全局 `/q` 和 `/v` 选项之外，每个命令均支持一组唯一选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-115">In addition to the global `/q` and `/v` options, each command supports a unique set of options.</span></span>|  
+|`file_name`|<span data-ttu-id="e3c50-116">要进行签名的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="e3c50-116">The path to a file to sign.</span></span>|  
   
- 签名工具支持下列命令。 每个命令均与不同的选项集结合使用，这些选项集已在其各自的节中列出。  
+ <span data-ttu-id="e3c50-117">签名工具支持下列命令。</span><span class="sxs-lookup"><span data-stu-id="e3c50-117">The following commands are supported by Sign Tool.</span></span> <span data-ttu-id="e3c50-118">每个命令均与不同的选项集结合使用，这些选项集已在其各自的节中列出。</span><span class="sxs-lookup"><span data-stu-id="e3c50-118">Each command is used with distinct sets of options, which are listed in their respective sections.</span></span>  
   
-|命令|描述|  
+|<span data-ttu-id="e3c50-119">命令</span><span class="sxs-lookup"><span data-stu-id="e3c50-119">Command</span></span>|<span data-ttu-id="e3c50-120">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-120">Description</span></span>|  
 |-------------|-----------------|  
-|`catdb`|在目录数据库中添加或移除目录文件。 目录数据库用于自动查找目录文件，并由 GUID 标识。 有关 `catdb` 命令支持的选项列表，请参阅 [catdb 命令选项](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
-|`sign`|对文件进行数字签名。 数字签名可以阻止文件被篡改，并且使用户能够基于签名证书验证签名者。 有关 `sign` 命令支持的选项列表，请参阅 [sign 命令选项](../../../docs/framework/tools/signtool-exe.md#sign)。|  
-|`Timestamp`|为文件添加时间戳。 有关 `TimeStamp` 命令支持的选项列表，请参阅 [TimeStamp 命令选项](../../../docs/framework/tools/signtool-exe.md#TimeStamp)。|  
-|`Verify`|通过确定签名证书是否由受信任的颁发机构颁发、是否已撤消签名证书，以及签名证书对于特定策略是否有效（可选）来验证文件的数字签名。 有关 `Verify` 命令支持的选项列表，请参阅 [Verify 命令选项](../../../docs/framework/tools/signtool-exe.md#Verify)。|  
+|`catdb`|<span data-ttu-id="e3c50-121">在目录数据库中添加或移除目录文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-121">Adds a catalog file to, or removes it from, a catalog database.</span></span> <span data-ttu-id="e3c50-122">目录数据库用于自动查找目录文件，并由 GUID 标识。</span><span class="sxs-lookup"><span data-stu-id="e3c50-122">Catalog databases are used for automatic lookup of catalog files and are identified by GUID.</span></span> <span data-ttu-id="e3c50-123">有关 `catdb` 命令支持的选项列表，请参阅 [catdb 命令选项](../../../docs/framework/tools/signtool-exe.md#catdb)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-123">For a list of the options supported by the `catdb` command, see [catdb Command Options](../../../docs/framework/tools/signtool-exe.md#catdb).</span></span>|  
+|`sign`|<span data-ttu-id="e3c50-124">对文件进行数字签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-124">Digitally signs files.</span></span> <span data-ttu-id="e3c50-125">数字签名可以阻止文件被篡改，并且使用户能够基于签名证书验证签名者。</span><span class="sxs-lookup"><span data-stu-id="e3c50-125">Digital signatures protect files from tampering, and enable users to verify the signer based on a signing certificate.</span></span> <span data-ttu-id="e3c50-126">有关 `sign` 命令支持的选项列表，请参阅 [sign 命令选项](../../../docs/framework/tools/signtool-exe.md#sign)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-126">For a list of the options supported by the `sign` command, see [sign Command Options](../../../docs/framework/tools/signtool-exe.md#sign).</span></span>|  
+|`Timestamp`|<span data-ttu-id="e3c50-127">为文件添加时间戳。</span><span class="sxs-lookup"><span data-stu-id="e3c50-127">Time-stamps files.</span></span> <span data-ttu-id="e3c50-128">有关 `TimeStamp` 命令支持的选项列表，请参阅 [TimeStamp 命令选项](../../../docs/framework/tools/signtool-exe.md#TimeStamp)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-128">For a list of the options supported by the `TimeStamp` command, see [TimeStamp Command Options](../../../docs/framework/tools/signtool-exe.md#TimeStamp).</span></span>|  
+|`Verify`|<span data-ttu-id="e3c50-129">通过确定签名证书是否由受信任的颁发机构颁发、是否已撤消签名证书，以及签名证书对于特定策略是否有效（可选）来验证文件的数字签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-129">Verifies the digital signature of files by determining whether the signing certificate was issued by a trusted authority, whether the signing certificate has been revoked, and, optionally, whether the signing certificate is valid for a specific policy.</span></span> <span data-ttu-id="e3c50-130">有关 `Verify` 命令支持的选项列表，请参阅 [Verify 命令选项](../../../docs/framework/tools/signtool-exe.md#Verify)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-130">For a list of the options supported by the `Verify` command, see [Verify Command Options](../../../docs/framework/tools/signtool-exe.md#Verify).</span></span>|  
   
- 下列选项适用于所有签名工具命令。  
+ <span data-ttu-id="e3c50-131">下列选项适用于所有签名工具命令。</span><span class="sxs-lookup"><span data-stu-id="e3c50-131">The following options apply to all Sign Tool commands.</span></span>  
   
-|全局选项|描述|  
+|<span data-ttu-id="e3c50-132">全局选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-132">Global option</span></span>|<span data-ttu-id="e3c50-133">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-133">Description</span></span>|  
 |-------------------|-----------------|  
-|**/q**|如果命令运行成功，则不显示输出；如果命令运行失败，则显示最小输出。|  
-|**/v**|无论命令是否运行成功，都显示详细输出，并显示警告消息。|  
-|**/debug**|显示调试信息。|  
+|<span data-ttu-id="e3c50-134">**/q**</span><span class="sxs-lookup"><span data-stu-id="e3c50-134">**/q**</span></span>|<span data-ttu-id="e3c50-135">如果命令运行成功，则不显示输出；如果命令运行失败，则显示最小输出。</span><span class="sxs-lookup"><span data-stu-id="e3c50-135">Displays no output if the command runs successfully, and displays minimal output if the command fails.</span></span>|  
+|<span data-ttu-id="e3c50-136">**/v**</span><span class="sxs-lookup"><span data-stu-id="e3c50-136">**/v**</span></span>|<span data-ttu-id="e3c50-137">无论命令是否运行成功，都显示详细输出，并显示警告消息。</span><span class="sxs-lookup"><span data-stu-id="e3c50-137">Displays verbose output regardless of whether the command runs successfully or fails, and displays warning messages.</span></span>|  
+|<span data-ttu-id="e3c50-138">**/debug**</span><span class="sxs-lookup"><span data-stu-id="e3c50-138">**/debug**</span></span>|<span data-ttu-id="e3c50-139">显示调试信息。</span><span class="sxs-lookup"><span data-stu-id="e3c50-139">Displays debugging information.</span></span>|  
   
 <a name="catdb"></a>   
-## <a name="catdb-command-options"></a>catdb 命令选项  
- 下表列出了可与 `catdb` 命令一起使用的选项。  
+## <a name="catdb-command-options"></a><span data-ttu-id="e3c50-140">catdb 命令选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-140">catdb Command Options</span></span>  
+ <span data-ttu-id="e3c50-141">下表列出了可与 `catdb` 命令一起使用的选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-141">The following table lists the options that can be used with the `catdb` command.</span></span>  
   
-|Catdb 选项|描述|  
+|<span data-ttu-id="e3c50-142">Catdb 选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-142">Catdb option</span></span>|<span data-ttu-id="e3c50-143">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-143">Description</span></span>|  
 |------------------|-----------------|  
-|`/d`|指定更新默认目录数据库。 如果 `/d` 和 `/g` 选项都未使用，则签名工具会更新系统组件和驱动程序数据库。|  
-|`/g` GUID|指定由全局唯一标识符 GUID 标识的目录数据库已更新。|  
-|`/r`|从目录数据库中移除指定的目录。 如果未指定该选项，签名工具将向目录数据库添加指定目录。|  
-|`/u`|指定自动为添加的目录文件生成唯一名称。 如有必要，重命名目录文件以阻止与现有目录文件发生名称冲突。 如果未指定该选项，签名工具将覆盖与所添加的目录同名的任何现有目录。|  
+|`/d`|<span data-ttu-id="e3c50-144">指定更新默认目录数据库。</span><span class="sxs-lookup"><span data-stu-id="e3c50-144">Specifies that the default catalog database is updated.</span></span> <span data-ttu-id="e3c50-145">如果 `/d` 和 `/g` 选项都未使用，则签名工具会更新系统组件和驱动程序数据库。</span><span class="sxs-lookup"><span data-stu-id="e3c50-145">If neither the `/d` nor the `/g` option is used, Sign Tool updates the system component and driver database.</span></span>|  
+|<span data-ttu-id="e3c50-146">`/g` GUID</span><span class="sxs-lookup"><span data-stu-id="e3c50-146">`/g` *GUID*</span></span>|<span data-ttu-id="e3c50-147">指定由全局唯一标识符 GUID 标识的目录数据库已更新。</span><span class="sxs-lookup"><span data-stu-id="e3c50-147">Specifies that the catalog database identified by the globally unique identifier *GUID* is updated.</span></span>|  
+|`/r`|<span data-ttu-id="e3c50-148">从目录数据库中移除指定的目录。</span><span class="sxs-lookup"><span data-stu-id="e3c50-148">Removes the specified catalogs from the catalog database.</span></span> <span data-ttu-id="e3c50-149">如果未指定该选项，签名工具将向目录数据库添加指定目录。</span><span class="sxs-lookup"><span data-stu-id="e3c50-149">If this option is not specified, Sign Tool adds the specified catalogs to the catalog database.</span></span>|  
+|`/u`|<span data-ttu-id="e3c50-150">指定自动为添加的目录文件生成唯一名称。</span><span class="sxs-lookup"><span data-stu-id="e3c50-150">Specifies that a unique name is automatically generated for the added catalog files.</span></span> <span data-ttu-id="e3c50-151">如有必要，重命名目录文件以阻止与现有目录文件发生名称冲突。</span><span class="sxs-lookup"><span data-stu-id="e3c50-151">If necessary, the catalog files are renamed to prevent name conflicts with existing catalog files.</span></span> <span data-ttu-id="e3c50-152">如果未指定该选项，签名工具将覆盖与所添加的目录同名的任何现有目录。</span><span class="sxs-lookup"><span data-stu-id="e3c50-152">If this option is not specified, Sign Tool overwrites any existing catalog that has the same name as the catalog being added.</span></span>|  
   
 <a name="sign"></a>   
-## <a name="sign-command-options"></a>sign 命令选项  
- 下表列出了可与 `sign` 命令一起使用的选项。  
+## <a name="sign-command-options"></a><span data-ttu-id="e3c50-153">sign 命令选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-153">sign Command Options</span></span>  
+ <span data-ttu-id="e3c50-154">下表列出了可与 `sign` 命令一起使用的选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-154">The following table lists the options that can be used with the `sign` command.</span></span>  
   
-|Sign 命令选项|描述|  
+|<span data-ttu-id="e3c50-155">Sign 命令选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-155">Sign command option</span></span>|<span data-ttu-id="e3c50-156">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-156">Description</span></span>|  
 |-------------------------|-----------------|  
-|`/a`|自动选择最佳签名证书。 签名工具将查找满足所有指定条件的所有有效证书，并选择有效时间最长的证书。 如果未提供该选项，签名工具仅查找一个有效的签名证书。|  
-|`/ac` file|将 file 中的其他证书添加到签名块。|  
-|`/as`|追加此签名。 如果不存在主签名，则改为使此签名成为主签名。|  
-|`/c` CertTemplateName|指定用于对证书进行签名的证书模板名（一个 Microsoft 扩展）。|  
-|`/csp` CSPName|指定包含私钥容器的加密服务提供程序 (CSP)。|  
-|`/d` Desc|指定已签名内容的说明。|  
-|`/du` URL|为已签名内容的详细说明指定统一资源定位器 (URL)。|  
-|`/f` SignCertFile|指定文件中的签名证书。 如果文件采用个人信息交换 (PFX) 格式且受密码保护，则使用 `/p` 选项指定密码。 如果文件不包含私钥，则使用 `/csp` 和 `/k` 选项指定 CSP 和私钥容器名。|  
-|`/fd`|指定要用于创建文件签名的文件摘要算法。 默认值为 SHA1。|  
-|`/i` IssuerName|指定签名证书的颁发者的名称。 该值可以是整个颁发者名称的子字符串。|  
-|`/kc` PrivKeyContainerName|指定私钥容器名。|  
-|`/n` SubjectName|指定签名证书的主题的名称。 该值可以是整个主题名称的子字符串。|  
-|`/nph`|如果支持，则取消可执行文件的页面哈希。 默认值由 SIGNTOOL_PAGE_HASHES 环境变量和 wintrust.dll 版本决定。 对于非 PE 文件，忽略此选项。|  
-|`/p` Password|指定打开 PFX 文件时要使用的密码。 （使用 `/f` 选项指定 PFX 文件。）|  
-|`/p7` Path|指定为每个指定的内容文件生成的公钥加密标准 (PKCS) #7 文件。 PKCS #7 文件命名为 path\\filename.p7。|  
-|`/p7ce` Value|为已签名的 PKCS #7 内容指定选项。 将 Value 设置为“嵌入的”，可将已签名内容嵌入到 PKCS #7 文件中；如果设置为“DetachedSignedData”，则可生成分离的 PKCS #7 文件的已签名数据部分。 如果未使用 `/p7ce` 选项，默认情况下将嵌入已签名的内容。|  
-|`/p7co` \<OID>|指定标识已签名的 PKCS #7 内容的对象标识符 (OID)。|  
-|`/ph`|如果支持，则生成可执行文件的页面哈希。|  
-|`/r` RootSubjectName|指定签名证书必须链接到的根证书的主题名称。 该值可以是根证书的整个主题名称的子字符串。|  
-|`/s` StoreName|指定要在搜索证书时打开的存储。 如果未指定该选项，则打开 `My` 存储。|  
-|`/sha1` Hash|指定签名证书的 SHA1 哈希。 当多个证书满足剩余开关指定的条件时，通常会指定 SHA1 哈希。|  
-|`/sm`|指定使用计算机存储，而不是用户存储。|  
-|`/t` URL|指定时间戳服务器的 URL。 如果该选项（或 `/tr`）不存在，将不会对签名文件执行时间戳操作。 如果时间戳操作失败，将生成一个警告。 此选项不能与 `/tr` 选项一起使用。|  
-|`/td` alg|将此选项与 `/tr` 选项一起使用可请求 RFC 3161 时间戳服务器使用的摘要算法。|  
-|`/tr` URL|指定 RFC 3161 时间戳服务器的 URL。 如果该选项（或 `/t`）不存在，将不会对签名文件执行时间戳操作。 如果时间戳操作失败，将生成一个警告。 此选项不能与 `/t` 选项一起使用。|  
-|`/u` Usage|指定签名证书中必须存在的增强型密钥用法 (EKU)。 可以通过 OID 或字符串指定该用法的值。 默认用法为“代码签名”(1.3.6.1.5.5.7.3.3)。|  
-|`/uw`|指定“Windows 系统组件验证”(1.3.6.1.4.1.311.10.3.6) 的用法。|  
+|`/a`|<span data-ttu-id="e3c50-157">自动选择最佳签名证书。</span><span class="sxs-lookup"><span data-stu-id="e3c50-157">Automatically selects the best signing certificate.</span></span> <span data-ttu-id="e3c50-158">签名工具将查找满足所有指定条件的所有有效证书，并选择有效时间最长的证书。</span><span class="sxs-lookup"><span data-stu-id="e3c50-158">Sign Tool will find all valid certificates that satisfy all specified conditions and select the one that is valid for the longest time.</span></span> <span data-ttu-id="e3c50-159">如果未提供该选项，签名工具仅查找一个有效的签名证书。</span><span class="sxs-lookup"><span data-stu-id="e3c50-159">If this option is not present, Sign Tool expects to find only one valid signing certificate.</span></span>|  
+|<span data-ttu-id="e3c50-160">`/ac` file</span><span class="sxs-lookup"><span data-stu-id="e3c50-160">`/ac`  *file*</span></span>|<span data-ttu-id="e3c50-161">将 file 中的其他证书添加到签名块。</span><span class="sxs-lookup"><span data-stu-id="e3c50-161">Adds an additional certificate from *file* to the signature block.</span></span>|  
+|`/as`|<span data-ttu-id="e3c50-162">追加此签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-162">Appends this signature.</span></span> <span data-ttu-id="e3c50-163">如果不存在主签名，则改为使此签名成为主签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-163">If no primary signature is present, this signature is made the primary signature instead.</span></span>|  
+|<span data-ttu-id="e3c50-164">`/c` CertTemplateName</span><span class="sxs-lookup"><span data-stu-id="e3c50-164">`/c`  *CertTemplateName*</span></span>|<span data-ttu-id="e3c50-165">指定用于对证书进行签名的证书模板名（一个 Microsoft 扩展）。</span><span class="sxs-lookup"><span data-stu-id="e3c50-165">Specifies the Certificate Template Name (a Microsoft extension) for the signing certificate.</span></span>|  
+|<span data-ttu-id="e3c50-166">`/csp` CSPName</span><span class="sxs-lookup"><span data-stu-id="e3c50-166">`/csp`  *CSPName*</span></span>|<span data-ttu-id="e3c50-167">指定包含私钥容器的加密服务提供程序 (CSP)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-167">Specifies the cryptographic service provider (CSP) that contains the private key container.</span></span>|  
+|<span data-ttu-id="e3c50-168">`/d` Desc</span><span class="sxs-lookup"><span data-stu-id="e3c50-168">`/d`  *Desc*</span></span>|<span data-ttu-id="e3c50-169">指定已签名内容的说明。</span><span class="sxs-lookup"><span data-stu-id="e3c50-169">Specifies a description of the signed content.</span></span>|  
+|<span data-ttu-id="e3c50-170">`/du` URL</span><span class="sxs-lookup"><span data-stu-id="e3c50-170">`/du`  *URL*</span></span>|<span data-ttu-id="e3c50-171">为已签名内容的详细说明指定统一资源定位器 (URL)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-171">Specifies a Uniform Resource Locator (URL) for the expanded description of the signed content.</span></span>|  
+|<span data-ttu-id="e3c50-172">`/f` SignCertFile</span><span class="sxs-lookup"><span data-stu-id="e3c50-172">`/f`  *SignCertFile*</span></span>|<span data-ttu-id="e3c50-173">指定文件中的签名证书。</span><span class="sxs-lookup"><span data-stu-id="e3c50-173">Specifies the signing certificate in a file.</span></span> <span data-ttu-id="e3c50-174">如果文件采用个人信息交换 (PFX) 格式且受密码保护，则使用 `/p` 选项指定密码。</span><span class="sxs-lookup"><span data-stu-id="e3c50-174">If the file is in Personal Information Exchange (PFX) format and protected by a password, use the `/p` option to specify the password.</span></span> <span data-ttu-id="e3c50-175">如果文件不包含私钥，则使用 `/csp` 和 `/kc` 选项指定 CSP 和私钥容器名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-175">If the file does not contain private keys, use the `/csp` and `/kc` options to specify the CSP and private key container name.</span></span>|  
+|`/fd`|<span data-ttu-id="e3c50-176">指定要用于创建文件签名的文件摘要算法。</span><span class="sxs-lookup"><span data-stu-id="e3c50-176">Specifies the file digest algorithm to use for creating file signatures.</span></span> <span data-ttu-id="e3c50-177">默认值为 SHA1。</span><span class="sxs-lookup"><span data-stu-id="e3c50-177">The default is SHA1.</span></span>|  
+|<span data-ttu-id="e3c50-178">`/i` IssuerName</span><span class="sxs-lookup"><span data-stu-id="e3c50-178">`/i`  *IssuerName*</span></span>|<span data-ttu-id="e3c50-179">指定签名证书的颁发者的名称。</span><span class="sxs-lookup"><span data-stu-id="e3c50-179">Specifies the name of the issuer of the signing certificate.</span></span> <span data-ttu-id="e3c50-180">该值可以是整个颁发者名称的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e3c50-180">This value can be a substring of the entire issuer name.</span></span>|  
+|<span data-ttu-id="e3c50-181">`/kc` PrivKeyContainerName</span><span class="sxs-lookup"><span data-stu-id="e3c50-181">`/kc`  *PrivKeyContainerName*</span></span>|<span data-ttu-id="e3c50-182">指定私钥容器名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-182">Specifies the private key container name.</span></span>|  
+|<span data-ttu-id="e3c50-183">`/n` SubjectName</span><span class="sxs-lookup"><span data-stu-id="e3c50-183">`/n`  *SubjectName*</span></span>|<span data-ttu-id="e3c50-184">指定签名证书的主题的名称。</span><span class="sxs-lookup"><span data-stu-id="e3c50-184">Specifies the name of the subject of the signing certificate.</span></span> <span data-ttu-id="e3c50-185">该值可以是整个主题名称的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e3c50-185">This value can be a substring of the entire subject name.</span></span>|  
+|`/nph`|<span data-ttu-id="e3c50-186">如果支持，则取消可执行文件的页面哈希。</span><span class="sxs-lookup"><span data-stu-id="e3c50-186">If supported, suppresses page hashes for executable files.</span></span> <span data-ttu-id="e3c50-187">默认值由 SIGNTOOL_PAGE_HASHES 环境变量和 wintrust.dll 版本决定。</span><span class="sxs-lookup"><span data-stu-id="e3c50-187">The default is determined by the SIGNTOOL_PAGE_HASHES environment variable and by the wintrust.dll version.</span></span> <span data-ttu-id="e3c50-188">对于非 PE 文件，忽略此选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-188">This option is ignored for non-PE files.</span></span>|  
+|<span data-ttu-id="e3c50-189">`/p` Password</span><span class="sxs-lookup"><span data-stu-id="e3c50-189">`/p`  *Password*</span></span>|<span data-ttu-id="e3c50-190">指定打开 PFX 文件时要使用的密码。</span><span class="sxs-lookup"><span data-stu-id="e3c50-190">Specifies the password to use when opening a PFX file.</span></span> <span data-ttu-id="e3c50-191">（使用 `/f` 选项指定 PFX 文件。）</span><span class="sxs-lookup"><span data-stu-id="e3c50-191">(Use the `/f` option to specify a PFX file.)</span></span>|  
+|<span data-ttu-id="e3c50-192">`/p7` Path</span><span class="sxs-lookup"><span data-stu-id="e3c50-192">`/p7` *Path*</span></span>|<span data-ttu-id="e3c50-193">指定为每个指定的内容文件生成的公钥加密标准 (PKCS) #7 文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-193">Specifies that a Public Key Cryptography Standards (PKCS) #7 file is produced for each specified content file.</span></span> <span data-ttu-id="e3c50-194">PKCS #7 文件命名为 path\\filename.p7。</span><span class="sxs-lookup"><span data-stu-id="e3c50-194">PKCS #7 files are named *path*\\*filename*.p7.</span></span>|  
+|<span data-ttu-id="e3c50-195">`/p7ce` Value</span><span class="sxs-lookup"><span data-stu-id="e3c50-195">`/p7ce` *Value*</span></span>|<span data-ttu-id="e3c50-196">为已签名的 PKCS #7 内容指定选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-196">Specifies options for the signed PKCS #7 content.</span></span> <span data-ttu-id="e3c50-197">将 Value 设置为“嵌入的”，可将已签名内容嵌入到 PKCS #7 文件中；如果设置为“DetachedSignedData”，则可生成分离的 PKCS #7 文件的已签名数据部分。</span><span class="sxs-lookup"><span data-stu-id="e3c50-197">Set *Value* to "Embedded" to embed the signed content in the PKCS #7 file, or to "DetachedSignedData" to produce the signed data portion of a detached PKCS #7 file.</span></span> <span data-ttu-id="e3c50-198">如果未使用 `/p7ce` 选项，默认情况下将嵌入已签名的内容。</span><span class="sxs-lookup"><span data-stu-id="e3c50-198">If the `/p7ce` option is not used, the signed content is embedded by default.</span></span>|  
+|<span data-ttu-id="e3c50-199">`/p7co` \<OID></span><span class="sxs-lookup"><span data-stu-id="e3c50-199">`/p7co` *\<OID>*</span></span>|<span data-ttu-id="e3c50-200">指定标识已签名的 PKCS #7 内容的对象标识符 (OID)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-200">Specifies the object identifier (OID) that identifies the signed PKCS #7 content.</span></span>|  
+|`/ph`|<span data-ttu-id="e3c50-201">如果支持，则生成可执行文件的页面哈希。</span><span class="sxs-lookup"><span data-stu-id="e3c50-201">If supported, generates page hashes for executable files.</span></span>|  
+|<span data-ttu-id="e3c50-202">`/r` RootSubjectName</span><span class="sxs-lookup"><span data-stu-id="e3c50-202">`/r`  *RootSubjectName*</span></span>|<span data-ttu-id="e3c50-203">指定签名证书必须链接到的根证书的主题名称。</span><span class="sxs-lookup"><span data-stu-id="e3c50-203">Specifies the name of the subject of the root certificate that the signing certificate must chain to.</span></span> <span data-ttu-id="e3c50-204">该值可以是根证书的整个主题名称的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e3c50-204">This value may be a substring of the entire subject name of the root certificate.</span></span>|  
+|<span data-ttu-id="e3c50-205">`/s` StoreName</span><span class="sxs-lookup"><span data-stu-id="e3c50-205">`/s`  *StoreName*</span></span>|<span data-ttu-id="e3c50-206">指定要在搜索证书时打开的存储。</span><span class="sxs-lookup"><span data-stu-id="e3c50-206">Specifies the store to open when searching for the certificate.</span></span> <span data-ttu-id="e3c50-207">如果未指定该选项，则打开 `My` 存储。</span><span class="sxs-lookup"><span data-stu-id="e3c50-207">If this option is not specified, the `My` store is opened.</span></span>|  
+|<span data-ttu-id="e3c50-208">`/sha1` Hash</span><span class="sxs-lookup"><span data-stu-id="e3c50-208">`/sha1`  *Hash*</span></span>|<span data-ttu-id="e3c50-209">指定签名证书的 SHA1 哈希。</span><span class="sxs-lookup"><span data-stu-id="e3c50-209">Specifies the SHA1 hash of the signing certificate.</span></span> <span data-ttu-id="e3c50-210">当多个证书满足剩余开关指定的条件时，通常会指定 SHA1 哈希。</span><span class="sxs-lookup"><span data-stu-id="e3c50-210">The SHA1 hash is commonly specified when multiple certificates satisfy the criteria specified by the remaining switches.</span></span>|  
+|`/sm`|<span data-ttu-id="e3c50-211">指定使用计算机存储，而不是用户存储。</span><span class="sxs-lookup"><span data-stu-id="e3c50-211">Specifies that a machine store, instead of a user store, is used.</span></span>|  
+|<span data-ttu-id="e3c50-212">`/t` URL</span><span class="sxs-lookup"><span data-stu-id="e3c50-212">`/t`  *URL*</span></span>|<span data-ttu-id="e3c50-213">指定时间戳服务器的 URL。</span><span class="sxs-lookup"><span data-stu-id="e3c50-213">Specifies the URL of the time stamp server.</span></span> <span data-ttu-id="e3c50-214">如果该选项（或 `/tr`）不存在，将不会对签名文件执行时间戳操作。</span><span class="sxs-lookup"><span data-stu-id="e3c50-214">If this option (or `/tr`) is not present, the signed file will not be time stamped.</span></span> <span data-ttu-id="e3c50-215">如果时间戳操作失败，将生成一个警告。</span><span class="sxs-lookup"><span data-stu-id="e3c50-215">A warning is generated if time stamping fails.</span></span> <span data-ttu-id="e3c50-216">此选项不能与 `/tr` 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="e3c50-216">This option cannot be used with the `/tr` option.</span></span>|  
+|<span data-ttu-id="e3c50-217">`/td` alg</span><span class="sxs-lookup"><span data-stu-id="e3c50-217">`/td`  *alg*</span></span>|<span data-ttu-id="e3c50-218">将此选项与 `/tr` 选项一起使用可请求 RFC 3161 时间戳服务器使用的摘要算法。</span><span class="sxs-lookup"><span data-stu-id="e3c50-218">Used with the `/tr` option to request a digest algorithm used by the RFC 3161 time stamp server.</span></span>|  
+|<span data-ttu-id="e3c50-219">`/tr` URL</span><span class="sxs-lookup"><span data-stu-id="e3c50-219">`/tr`  *URL*</span></span>|<span data-ttu-id="e3c50-220">指定 RFC 3161 时间戳服务器的 URL。</span><span class="sxs-lookup"><span data-stu-id="e3c50-220">Specifies the URL of the RFC 3161 time stamp server.</span></span> <span data-ttu-id="e3c50-221">如果该选项（或 `/t`）不存在，将不会对签名文件执行时间戳操作。</span><span class="sxs-lookup"><span data-stu-id="e3c50-221">If this option (or `/t`) is not present, the signed file will not be time stamped.</span></span> <span data-ttu-id="e3c50-222">如果时间戳操作失败，将生成一个警告。</span><span class="sxs-lookup"><span data-stu-id="e3c50-222">A warning is generated if time stamping fails.</span></span> <span data-ttu-id="e3c50-223">此选项不能与 `/t` 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="e3c50-223">This option cannot be used with the `/t` option.</span></span>|  
+|<span data-ttu-id="e3c50-224">`/u` Usage</span><span class="sxs-lookup"><span data-stu-id="e3c50-224">`/u`  *Usage*</span></span>|<span data-ttu-id="e3c50-225">指定签名证书中必须存在的增强型密钥用法 (EKU)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-225">Specifies the enhanced key usage (EKU) that must be present in the signing certificate.</span></span> <span data-ttu-id="e3c50-226">可以通过 OID 或字符串指定该用法的值。</span><span class="sxs-lookup"><span data-stu-id="e3c50-226">The usage value can be specified by OID or string.</span></span> <span data-ttu-id="e3c50-227">默认用法为“代码签名”(1.3.6.1.5.5.7.3.3)。</span><span class="sxs-lookup"><span data-stu-id="e3c50-227">The default usage is "Code Signing" (1.3.6.1.5.5.7.3.3).</span></span>|  
+|`/uw`|<span data-ttu-id="e3c50-228">指定“Windows 系统组件验证”(1.3.6.1.4.1.311.10.3.6) 的用法。</span><span class="sxs-lookup"><span data-stu-id="e3c50-228">Specifies usage of "Windows System Component Verification" (1.3.6.1.4.1.311.10.3.6).</span></span>|  
   
- 有关用法示例，请参阅 [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx)（使用 SignTool 为文件签名）。  
+ <span data-ttu-id="e3c50-229">有关用法示例，请参阅 [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx)（使用 SignTool 为文件签名）。</span><span class="sxs-lookup"><span data-stu-id="e3c50-229">For usage examples, see [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx).</span></span>  
   
 <a name="TimeStamp"></a>   
-## <a name="timestamp-command-options"></a>TimeStamp 命令选项  
- 下表列出了可与 `TimeStamp` 命令一起使用的选项。  
+## <a name="timestamp-command-options"></a><span data-ttu-id="e3c50-230">TimeStamp 命令选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-230">TimeStamp Command Options</span></span>  
+ <span data-ttu-id="e3c50-231">下表列出了可与 `TimeStamp` 命令一起使用的选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-231">The following table lists the options that can be used with the `TimeStamp` command.</span></span>  
   
-|TimeStamp 选项|描述|  
+|<span data-ttu-id="e3c50-232">TimeStamp 选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-232">TimeStamp option</span></span>|<span data-ttu-id="e3c50-233">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-233">Description</span></span>|  
 |----------------------|-----------------|  
-|`/p7`|对 PKCS #7 文件执行时间戳操作。|  
-|`/t` URL|指定时间戳服务器的 URL。 要执行时间戳操作的文件必须在以前已进行签名。 需要 `/t` 或 `/tr` 选项。|  
-|`/td` alg|请求 RFC 3161 时间戳服务器使用的摘要算法。 `/td` 与 `/tr` 选项一起使用。|  
-|`/tp` index|对 index 处的签名进行时间戳操作。|  
-|`/tr` URL|指定 RFC 3161 时间戳服务器的 URL。 要执行时间戳操作的文件必须在以前已进行签名。 需要 `/tr` 或 `/t` 选项。|  
+|`/p7`|<span data-ttu-id="e3c50-234">对 PKCS #7 文件执行时间戳操作。</span><span class="sxs-lookup"><span data-stu-id="e3c50-234">Time stamps PKCS #7 files.</span></span>|  
+|<span data-ttu-id="e3c50-235">`/t` URL</span><span class="sxs-lookup"><span data-stu-id="e3c50-235">`/t`  *URL*</span></span>|<span data-ttu-id="e3c50-236">指定时间戳服务器的 URL。</span><span class="sxs-lookup"><span data-stu-id="e3c50-236">Specifies the URL of the time stamp server.</span></span> <span data-ttu-id="e3c50-237">要执行时间戳操作的文件必须在以前已进行签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-237">The file being time stamped must have previously been signed.</span></span> <span data-ttu-id="e3c50-238">需要 `/t` 或 `/tr` 选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-238">Either the `/t` or the `/tr` option is required.</span></span>|  
+|<span data-ttu-id="e3c50-239">`/td` alg</span><span class="sxs-lookup"><span data-stu-id="e3c50-239">`/td`  *alg*</span></span>|<span data-ttu-id="e3c50-240">请求 RFC 3161 时间戳服务器使用的摘要算法。</span><span class="sxs-lookup"><span data-stu-id="e3c50-240">Requests a digest algorithm used by the RFC 3161 time stamp server.</span></span> <span data-ttu-id="e3c50-241">`/td` 与 `/tr` 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="e3c50-241">`/td` is used with the `/tr` option.</span></span>|  
+|<span data-ttu-id="e3c50-242">`/tp` index</span><span class="sxs-lookup"><span data-stu-id="e3c50-242">`/tp` *index*</span></span>|<span data-ttu-id="e3c50-243">对 index 处的签名进行时间戳操作。</span><span class="sxs-lookup"><span data-stu-id="e3c50-243">Time stamps the signature at *index*.</span></span>|  
+|<span data-ttu-id="e3c50-244">`/tr` URL</span><span class="sxs-lookup"><span data-stu-id="e3c50-244">`/tr`  *URL*</span></span>|<span data-ttu-id="e3c50-245">指定 RFC 3161 时间戳服务器的 URL。</span><span class="sxs-lookup"><span data-stu-id="e3c50-245">Specifies the URL of the RFC 3161 time stamp server.</span></span> <span data-ttu-id="e3c50-246">要执行时间戳操作的文件必须在以前已进行签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-246">The file being time stamped must have previously been signed.</span></span> <span data-ttu-id="e3c50-247">需要 `/tr` 或 `/t` 选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-247">Either the `/tr` or the `/t` option is required.</span></span>|  
   
- 有关使用示例，请参阅 [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx)（向之前已签名的文件添加时间戳）。  
+ <span data-ttu-id="e3c50-248">有关使用示例，请参阅 [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx)（向之前已签名的文件添加时间戳）。</span><span class="sxs-lookup"><span data-stu-id="e3c50-248">For a usage example, see [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx).</span></span>  
   
 <a name="Verify"></a>   
-## <a name="verify-command-options"></a>Verify 命令选项  
+## <a name="verify-command-options"></a><span data-ttu-id="e3c50-249">Verify 命令选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-249">Verify Command Options</span></span>  
   
-|Verify 选项|描述|  
+|<span data-ttu-id="e3c50-250">Verify 选项</span><span class="sxs-lookup"><span data-stu-id="e3c50-250">Verify option</span></span>|<span data-ttu-id="e3c50-251">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-251">Description</span></span>|  
 |-------------------|-----------------|  
-|`/a`|指定可以使用所有方法来验证文件。 首先，搜索目录数据库以确定是否在目录中对文件进行签名。 如果未在任何目录中对文件进行签名，签名工具将尝试验证文件的嵌入签名。 验证可以或不能在目录中进行签名的文件时，建议使用该选项。 这些文件的示例包括 Windows 文件或驱动程序。|  
-|`/ad`|使用默认的目录数据库查找目录。|  
-|`/ag` CatDBGUID|在由 CatDBGUID 标识的目录数据库中查找目录。|  
-|`/all`|验证包含多个签名的文件中的所有签名。|  
-|`/as`|使用系统组件（驱动程序）目录数据库查找目录。|  
-|`/c` CatFile|通过名称指定目录文件。|  
-|`/d`|指定签名工具应打印描述和描述 URL。|  
-|`/ds` Index|验证指定位置的签名。|  
-|`/hash` (`SHA1`|`SHA256`)|指定在目录中搜索文件时要使用的可选哈希算法。|  
-|`/kp`|指定应使用内核模式驱动程序签名策略执行验证。|  
-|`/ms`|使用多个验证语义。 这是 [!INCLUDE[win8](../../../includes/win8-md.md)] 和更高版本上的 [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) 调用的默认行为。|  
-|`/o` Version|按操作系统版本验证文件。 Version 具有以下形式：PlatformID:VerMajor.VerMinor.BuildNumber。 PlatformID 表示 <xref:System.PlatformID> 枚举成员的基础值。 重要提示：建议使用 `/o` 开关。 如果未指定 `/o`，SignTool.exe 可能会返回意外的结果。 例如，如果你未将 `/o` 开关包含在内，则能在旧版操作系统上正确验证的系统目录可能在新版操作系统上无法正确验证。|  
-|`/p7`|验证 PKCS #7 文件。 无现有策略用于 PKCS #7 验证。 该签名处于选中状态，并为签名证书生成了链。|  
-|`/pa`|指定应使用默认认证码验证策略。 如果未指定 `/pa` 选项，签名工具将使用 Windows 驱动程序验证策略。 此选项不能与 `catdb` 选项一起使用。|  
-|`/pg` PolicyGUID|通过 GUID 指定验证策略。 PolicyGUID 相当于验证策略的 ActionID。 此选项不能与 `catdb` 选项一起使用。|  
-|`/ph`|指定签名工具应打印并验证页面哈希值。|  
-|`/r` RootSubjectName|指定签名证书必须链接到的根证书的主题名称。 该值可以是根证书的整个主题名称的子字符串。|  
-|`/tw`|指定在未对签名进行时间戳操作时应生成警告。|  
+|`/a`|<span data-ttu-id="e3c50-252">指定可以使用所有方法来验证文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-252">Specifies that all methods can be used to verify the file.</span></span> <span data-ttu-id="e3c50-253">首先，搜索目录数据库以确定是否在目录中对文件进行签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-253">First, the catalog databases are searched to determine whether the file is signed in a catalog.</span></span> <span data-ttu-id="e3c50-254">如果未在任何目录中对文件进行签名，签名工具将尝试验证文件的嵌入签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-254">If the file is not signed in any catalog, Sign Tool attempts to verify the file's embedded signature.</span></span> <span data-ttu-id="e3c50-255">验证可以或不能在目录中进行签名的文件时，建议使用该选项。</span><span class="sxs-lookup"><span data-stu-id="e3c50-255">This option is recommended when verifying files that may or may not be signed in a catalog.</span></span> <span data-ttu-id="e3c50-256">这些文件的示例包括 Windows 文件或驱动程序。</span><span class="sxs-lookup"><span data-stu-id="e3c50-256">Examples of these files include Windows files or drivers.</span></span>|  
+|`/ad`|<span data-ttu-id="e3c50-257">使用默认的目录数据库查找目录。</span><span class="sxs-lookup"><span data-stu-id="e3c50-257">Finds the catalog by using the default catalog database.</span></span>|  
+|<span data-ttu-id="e3c50-258">`/ag` CatDBGUID</span><span class="sxs-lookup"><span data-stu-id="e3c50-258">`/ag` *CatDBGUID*</span></span>|<span data-ttu-id="e3c50-259">在由 CatDBGUID 标识的目录数据库中查找目录。</span><span class="sxs-lookup"><span data-stu-id="e3c50-259">Finds the catalog in the catalog database that is identified by the *CatDBGUID*.</span></span>|  
+|`/all`|<span data-ttu-id="e3c50-260">验证包含多个签名的文件中的所有签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-260">Verifies all signatures in a file that includes multiple signatures.</span></span>|  
+|`/as`|<span data-ttu-id="e3c50-261">使用系统组件（驱动程序）目录数据库查找目录。</span><span class="sxs-lookup"><span data-stu-id="e3c50-261">Finds the catalog by using the system component (driver) catalog database.</span></span>|  
+|<span data-ttu-id="e3c50-262">`/c` CatFile</span><span class="sxs-lookup"><span data-stu-id="e3c50-262">`/c` *CatFile*</span></span>|<span data-ttu-id="e3c50-263">通过名称指定目录文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-263">Specifies the catalog file by name.</span></span>|  
+|`/d`|<span data-ttu-id="e3c50-264">指定签名工具应打印描述和描述 URL。</span><span class="sxs-lookup"><span data-stu-id="e3c50-264">Specifies that Sign Tool should print the description and the description URL.</span></span>|  
+|<span data-ttu-id="e3c50-265">`/ds` Index</span><span class="sxs-lookup"><span data-stu-id="e3c50-265">`/ds`  *Index*</span></span>|<span data-ttu-id="e3c50-266">验证指定位置的签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-266">Verifies the signature at a specified position.</span></span>|  
+|<span data-ttu-id="e3c50-267">`/hash` (`SHA1`|`SHA256`)</span><span class="sxs-lookup"><span data-stu-id="e3c50-267">`/hash` (`SHA1`&#124;`SHA256`)</span></span>|<span data-ttu-id="e3c50-268">指定在目录中搜索文件时要使用的可选哈希算法。</span><span class="sxs-lookup"><span data-stu-id="e3c50-268">Specifies an optional hash algorithm to use when searching for a file in a catalog.</span></span>|  
+|`/kp`|<span data-ttu-id="e3c50-269">指定应使用内核模式驱动程序签名策略执行验证。</span><span class="sxs-lookup"><span data-stu-id="e3c50-269">Specifies that verification should be performed with the kernel-mode driver signing policy.</span></span>|  
+|`/ms`|<span data-ttu-id="e3c50-270">使用多个验证语义。</span><span class="sxs-lookup"><span data-stu-id="e3c50-270">Uses multiple verification semantics.</span></span> <span data-ttu-id="e3c50-271">这是 [!INCLUDE[win8](../../../includes/win8-md.md)] 和更高版本上的 [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) 调用的默认行为。</span><span class="sxs-lookup"><span data-stu-id="e3c50-271">This is the default behavior of a [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) call on [!INCLUDE[win8](../../../includes/win8-md.md)] and above.</span></span>|  
+|<span data-ttu-id="e3c50-272">`/o` Version</span><span class="sxs-lookup"><span data-stu-id="e3c50-272">`/o` *Version*</span></span>|<span data-ttu-id="e3c50-273">按操作系统版本验证文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-273">Verifies the file by operating system version.</span></span> <span data-ttu-id="e3c50-274">Version 具有以下形式：PlatformID:VerMajor.VerMinor.BuildNumber。</span><span class="sxs-lookup"><span data-stu-id="e3c50-274">*Version* has the following form: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*.</span></span> <span data-ttu-id="e3c50-275">PlatformID 表示 <xref:System.PlatformID> 枚举成员的基础值。</span><span class="sxs-lookup"><span data-stu-id="e3c50-275">*PlatformID* represents the underlying value of a <xref:System.PlatformID> enumeration member.</span></span> <span data-ttu-id="e3c50-276">重要提示：建议使用 `/o` 开关。</span><span class="sxs-lookup"><span data-stu-id="e3c50-276">**Important:**  The use of the `/o` switch is recommended.</span></span> <span data-ttu-id="e3c50-277">如果未指定 `/o`，SignTool.exe 可能会返回意外的结果。</span><span class="sxs-lookup"><span data-stu-id="e3c50-277">If `/o` is not specified, SignTool.exe may return unexpected results.</span></span> <span data-ttu-id="e3c50-278">例如，如果你未将 `/o` 开关包含在内，则能在旧版操作系统上正确验证的系统目录可能在新版操作系统上无法正确验证。</span><span class="sxs-lookup"><span data-stu-id="e3c50-278">For example, if you do not include the `/o` switch, system catalogs that validate correctly on an older operating system may not validate correctly on a newer operating system.</span></span>|  
+|`/p7`|<span data-ttu-id="e3c50-279">验证 PKCS #7 文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-279">Verifies PKCS #7 files.</span></span> <span data-ttu-id="e3c50-280">无现有策略用于 PKCS #7 验证。</span><span class="sxs-lookup"><span data-stu-id="e3c50-280">No existing policies are used for PKCS #7 validation.</span></span> <span data-ttu-id="e3c50-281">该签名处于选中状态，并为签名证书生成了链。</span><span class="sxs-lookup"><span data-stu-id="e3c50-281">The signature is checked and a chain is built for the signing certificate.</span></span>|  
+|`/pa`|<span data-ttu-id="e3c50-282">指定应使用默认认证码验证策略。</span><span class="sxs-lookup"><span data-stu-id="e3c50-282">Specifies that the Default Authenticode Verification Policy should be used.</span></span> <span data-ttu-id="e3c50-283">如果未指定 `/pa` 选项，签名工具将使用 Windows 驱动程序验证策略。</span><span class="sxs-lookup"><span data-stu-id="e3c50-283">If the `/pa` option is not specified, Sign Tool uses the Windows Driver Verification Policy.</span></span> <span data-ttu-id="e3c50-284">此选项不能与 `catdb` 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="e3c50-284">This option cannot be used with the `catdb` options.</span></span>|  
+|<span data-ttu-id="e3c50-285">`/pg` PolicyGUID</span><span class="sxs-lookup"><span data-stu-id="e3c50-285">`/pg` *PolicyGUID*</span></span>|<span data-ttu-id="e3c50-286">通过 GUID 指定验证策略。</span><span class="sxs-lookup"><span data-stu-id="e3c50-286">Specifies a verification policy by GUID.</span></span> <span data-ttu-id="e3c50-287">PolicyGUID 相当于验证策略的 ActionID。</span><span class="sxs-lookup"><span data-stu-id="e3c50-287">The *PolicyGUID* corresponds to the ActionID of the verification policy.</span></span> <span data-ttu-id="e3c50-288">此选项不能与 `catdb` 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="e3c50-288">This option cannot be used with the `catdb` options.</span></span>|  
+|`/ph`|<span data-ttu-id="e3c50-289">指定签名工具应打印并验证页面哈希值。</span><span class="sxs-lookup"><span data-stu-id="e3c50-289">Specifies that Sign Tool should print and verify page hash values.</span></span>|  
+|<span data-ttu-id="e3c50-290">`/r` RootSubjectName</span><span class="sxs-lookup"><span data-stu-id="e3c50-290">`/r` *RootSubjectName*</span></span>|<span data-ttu-id="e3c50-291">指定签名证书必须链接到的根证书的主题名称。</span><span class="sxs-lookup"><span data-stu-id="e3c50-291">Specifies the name of the subject of the root certificate that the signing certificate must chain to.</span></span> <span data-ttu-id="e3c50-292">该值可以是根证书的整个主题名称的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e3c50-292">This value can be a substring of the entire subject name of the root certificate.</span></span>|  
+|`/tw`|<span data-ttu-id="e3c50-293">指定在未对签名进行时间戳操作时应生成警告。</span><span class="sxs-lookup"><span data-stu-id="e3c50-293">Specifies that a warning should be generated if the signature is not time stamped.</span></span>|  
   
- 有关用法示例，请参阅 [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx)（使用 SignTool 验证文件签名）。  
+ <span data-ttu-id="e3c50-294">有关用法示例，请参阅 [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx)（使用 SignTool 验证文件签名）。</span><span class="sxs-lookup"><span data-stu-id="e3c50-294">For usage examples, see [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx).</span></span>  
   
-## <a name="return-value"></a>返回值  
- 当其终止时，签名工具将返回下列退出代码之一。  
+## <a name="return-value"></a><span data-ttu-id="e3c50-295">返回值</span><span class="sxs-lookup"><span data-stu-id="e3c50-295">Return Value</span></span>  
+ <span data-ttu-id="e3c50-296">当其终止时，签名工具将返回下列退出代码之一。</span><span class="sxs-lookup"><span data-stu-id="e3c50-296">Sign Tool returns one of the following exit codes when it terminates.</span></span>  
   
-|退出代码|描述|  
+|<span data-ttu-id="e3c50-297">退出代码</span><span class="sxs-lookup"><span data-stu-id="e3c50-297">Exit code</span></span>|<span data-ttu-id="e3c50-298">描述</span><span class="sxs-lookup"><span data-stu-id="e3c50-298">Description</span></span>|  
 |---------------|-----------------|  
-|0|执行成功。|  
-|1|执行失败。|  
-|2|执行完成，但出现警告。|  
+|<span data-ttu-id="e3c50-299">0</span><span class="sxs-lookup"><span data-stu-id="e3c50-299">0</span></span>|<span data-ttu-id="e3c50-300">执行成功。</span><span class="sxs-lookup"><span data-stu-id="e3c50-300">Execution was successful.</span></span>|  
+|<span data-ttu-id="e3c50-301">1</span><span class="sxs-lookup"><span data-stu-id="e3c50-301">1</span></span>|<span data-ttu-id="e3c50-302">执行失败。</span><span class="sxs-lookup"><span data-stu-id="e3c50-302">Execution has failed.</span></span>|  
+|<span data-ttu-id="e3c50-303">2</span><span class="sxs-lookup"><span data-stu-id="e3c50-303">2</span></span>|<span data-ttu-id="e3c50-304">执行完成，但出现警告。</span><span class="sxs-lookup"><span data-stu-id="e3c50-304">Execution has completed with warnings.</span></span>|  
   
-## <a name="examples"></a>示例  
- 以下命令将目录文件 MyCatalogFileName.cat 添加到系统组件和驱动程序数据库中。 如有必要阻止替换名为 `/u` 的现有目录文件，`MyCatalogFileName.cat` 选项会生成唯一名称。  
+## <a name="examples"></a><span data-ttu-id="e3c50-305">示例</span><span class="sxs-lookup"><span data-stu-id="e3c50-305">Examples</span></span>  
+ <span data-ttu-id="e3c50-306">以下命令将目录文件 MyCatalogFileName.cat 添加到系统组件和驱动程序数据库中。</span><span class="sxs-lookup"><span data-stu-id="e3c50-306">The following command adds the catalog file MyCatalogFileName.cat to the system component and driver database.</span></span> <span data-ttu-id="e3c50-307">如有必要阻止替换名为 `/u` 的现有目录文件，`MyCatalogFileName.cat` 选项会生成唯一名称。</span><span class="sxs-lookup"><span data-stu-id="e3c50-307">The `/u` option generates a unique name if necessary to prevent replacing an existing catalog file named `MyCatalogFileName.cat`.</span></span>  
   
 ```  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
- 以下命令通过使用最佳证书对文件进行自动签名。  
+ <span data-ttu-id="e3c50-308">以下命令通过使用最佳证书对文件进行自动签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-308">The following command signs a file automatically by using the best certificate.</span></span>  
   
 ```  
 signtool sign /a MyFile.exe  
 ```  
   
- 以下命令使用存储在受密码保护的 PFX 文件中的证书对文件进行数字签名。  
+ <span data-ttu-id="e3c50-309">以下命令使用存储在受密码保护的 PFX 文件中的证书对文件进行数字签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-309">The following command digitally signs a file by using a certificate stored in a password-protected PFX file.</span></span>  
   
 ```  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
- 以下命令对文件进行数字签名并加盖时间戳。 用于对文件进行签名的证书存储在 PFX 文件中。  
+ <span data-ttu-id="e3c50-310">以下命令对文件进行数字签名并加盖时间戳。</span><span class="sxs-lookup"><span data-stu-id="e3c50-310">The following command digitally signs and time-stamps a file.</span></span> <span data-ttu-id="e3c50-311">用于对文件进行签名的证书存储在 PFX 文件中。</span><span class="sxs-lookup"><span data-stu-id="e3c50-311">The certificate used to sign the file is stored in a PFX file.</span></span>  
   
 ```  
 signtool sign /f MyCert.pfx /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
- 以下命令通过使用位于 `My` 存储中的证书对文件进行签名，该证书的主题名为 `My Company Certificate`。  
+ <span data-ttu-id="e3c50-312">以下命令通过使用位于 `My` 存储中的证书对文件进行签名，该证书的主题名为 `My Company Certificate`。</span><span class="sxs-lookup"><span data-stu-id="e3c50-312">The following command signs a file by using a certificate located in the `My` store that has a subject name of `My Company Certificate`.</span></span>  
   
 ```  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
- 以下命令对 ActiveX 控件进行签名，并提供在系统提示用户安装此控件时由 Internet Explorer 显示的信息。  
+ <span data-ttu-id="e3c50-313">以下命令对 ActiveX 控件进行签名，并提供在系统提示用户安装此控件时由 Internet Explorer 显示的信息。</span><span class="sxs-lookup"><span data-stu-id="e3c50-313">The following command signs an ActiveX control and provides information that is displayed by Internet Explorer when the user is prompted to install the control.</span></span>  
   
 ```  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
- 以下命令对已进行数字签名的文件加盖时间戳。  
+ <span data-ttu-id="e3c50-314">以下命令对已进行数字签名的文件加盖时间戳。</span><span class="sxs-lookup"><span data-stu-id="e3c50-314">The following command time-stamps a file that has already been digitally signed.</span></span>  
   
 ```  
 signtool timestamp /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
- 以下命令确认文件已签名。  
+ <span data-ttu-id="e3c50-315">以下命令确认文件已签名。</span><span class="sxs-lookup"><span data-stu-id="e3c50-315">The following command verifies that a file has been signed.</span></span>  
   
 ```  
 signtool verify MyFile.exe  
 ```  
   
- 以下命令验证可能已在目录中签名的系统文件。  
+ <span data-ttu-id="e3c50-316">以下命令验证可能已在目录中签名的系统文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-316">The following command verifies a system file that may be signed in a catalog.</span></span>  
   
 ```  
 signtool verify /a SystemFile.dll  
 ```  
   
- 以下命令验证已在名为 `MyCatalog.cat` 目录中签名的系统文件。  
+ <span data-ttu-id="e3c50-317">以下命令验证已在名为 `MyCatalog.cat` 目录中签名的系统文件。</span><span class="sxs-lookup"><span data-stu-id="e3c50-317">The following command verifies a system file that is signed in a catalog named `MyCatalog.cat`.</span></span>  
   
 ```  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="e3c50-318">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e3c50-318">See Also</span></span>  
+ [<span data-ttu-id="e3c50-319">工具</span><span class="sxs-lookup"><span data-stu-id="e3c50-319">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="e3c50-320">命令提示</span><span class="sxs-lookup"><span data-stu-id="e3c50-320">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

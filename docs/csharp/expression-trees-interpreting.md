@@ -10,27 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="interpreting-expressions"></a><span data-ttu-id="c0d34-104">解释表达式</span><span class="sxs-lookup"><span data-stu-id="c0d34-104">Interpreting Expressions</span></span>
 
-# <a name="interpreting-expressions"></a>解释表达式
+[<span data-ttu-id="c0d34-105">上一部分 -- 执行表达式</span><span class="sxs-lookup"><span data-stu-id="c0d34-105">Previous -- Executing Expressions</span></span>](expression-trees-execution.md)
 
-[上一部分 -- 执行表达式](expression-trees-execution.md)
+<span data-ttu-id="c0d34-106">现在，让我们编写一些代码来检查*表达式树*的结构。</span><span class="sxs-lookup"><span data-stu-id="c0d34-106">Now, let's write some code to examine the structure of an *expression tree*.</span></span> <span data-ttu-id="c0d34-107">表达式树中的每个节点将是派生自 `Expression` 的类的对象。</span><span class="sxs-lookup"><span data-stu-id="c0d34-107">Every node in an expression tree will be an object of a class that is derived from `Expression`.</span></span>
 
-现在，让我们编写一些代码来检查*表达式树*的结构。 表达式树中的每个节点将是派生自 `Expression` 的类的对象。
+<span data-ttu-id="c0d34-108">该设计使得访问表达式树中的所有节点成为相对直接的递归操作。</span><span class="sxs-lookup"><span data-stu-id="c0d34-108">That design makes visiting all the nodes in an expression tree a relatively straight forward recursive operation.</span></span> <span data-ttu-id="c0d34-109">常规策略是从根节点开始并确定它是哪种节点。</span><span class="sxs-lookup"><span data-stu-id="c0d34-109">The general strategy is to start at the root node and determine what kind of node it is.</span></span>
 
-该设计使得访问表达式树中的所有节点成为相对直接的递归操作。 常规策略是从根节点开始并确定它是哪种节点。
+<span data-ttu-id="c0d34-110">如果节点类型具有子级，则以递归方式访问该子级。</span><span class="sxs-lookup"><span data-stu-id="c0d34-110">If the node type has children, recursively visit the children.</span></span> <span data-ttu-id="c0d34-111">在每个子节点中，重复在根节点处使用的步骤：确定类型，且如果该类型具有子级，则访问每个子级。</span><span class="sxs-lookup"><span data-stu-id="c0d34-111">At each child node, repeat the process used at the root node: determine the type, and if the type has children, visit each of the children.</span></span>
 
-如果节点类型具有子级，则以递归方式访问该子级。 在每个子节点中，重复在根节点处使用的步骤：确定类型，且如果该类型具有子级，则访问每个子级。
-
-## <a name="examining-an-expression-with-no-children"></a>检查不具有子级的表达式
-让我们首先访问一个非常简单的表达式树中的每个节点。
-下面是创建常数表达式然后检查其属性的代码：
+## <a name="examining-an-expression-with-no-children"></a><span data-ttu-id="c0d34-112">检查不具有子级的表达式</span><span class="sxs-lookup"><span data-stu-id="c0d34-112">Examining an Expression with No Children</span></span>
+<span data-ttu-id="c0d34-113">让我们首先访问一个非常简单的表达式树中的每个节点。</span><span class="sxs-lookup"><span data-stu-id="c0d34-113">Let's start by visiting each node in a very simple expression tree.</span></span>
+<span data-ttu-id="c0d34-114">下面是创建常数表达式然后检查其属性的代码：</span><span class="sxs-lookup"><span data-stu-id="c0d34-114">Here's the code that creates a constant expression and then examines its properties:</span></span>
 
 ```csharp
 var constant = Expression.Constant(24, typeof(int));
@@ -40,7 +38,7 @@ Console.WriteLine($"The type of the constant value is {constant.Type}");
 Console.WriteLine($"The value of the constant value is {constant.Value}");
 ```
 
-将打印以下内容：
+<span data-ttu-id="c0d34-115">将打印以下内容：</span><span class="sxs-lookup"><span data-stu-id="c0d34-115">This will print the following:</span></span>
 
 ```
 This is an Constant expression type
@@ -48,21 +46,21 @@ The type of the constant value is System.Int32
 The value of the constant value is 24
 ```
 
-现在，让我们来编写将检查此表达式的代码，并写出有关它的一些重要属性。 下面是该代码：
+<span data-ttu-id="c0d34-116">现在，让我们来编写将检查此表达式的代码，并写出有关它的一些重要属性。</span><span class="sxs-lookup"><span data-stu-id="c0d34-116">Now, let's write the code that would examine this expression and write out some important properties about it.</span></span> <span data-ttu-id="c0d34-117">下面是该代码：</span><span class="sxs-lookup"><span data-stu-id="c0d34-117">Here's that code:</span></span>
 
-## <a name="examining-a-simple-addition-expression"></a>检查一个简单的加法表达式
+## <a name="examining-a-simple-addition-expression"></a><span data-ttu-id="c0d34-118">检查一个简单的加法表达式</span><span class="sxs-lookup"><span data-stu-id="c0d34-118">Examining a simple Addition Expression</span></span>
 
-让我们从本节简介处的加法示例开始。
+<span data-ttu-id="c0d34-119">让我们从本节简介处的加法示例开始。</span><span class="sxs-lookup"><span data-stu-id="c0d34-119">Let's start with the addition sample from the introduction to this section.</span></span>
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> 我没有使用 `var` 来声明此表达式树，因为此操作无法执行，这是由于赋值右侧是隐式类型而导致的。 若要更深入地理解这一点，请阅读[此处](implicitly-typed-lambda-expressions.md)。
+> <span data-ttu-id="c0d34-120">我没有使用 `var` 来声明此表达式树，因为此操作无法执行，这是由于赋值右侧是隐式类型而导致的。</span><span class="sxs-lookup"><span data-stu-id="c0d34-120">I'm not using `var` to declare this expression tree, as it is not possible because the right-hand side of the assignment is implicitly typed.</span></span> <span data-ttu-id="c0d34-121">若要更深入地理解这一点，请阅读[此处](implicitly-typed-lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c0d34-121">To understand this more deeply, read [here](implicitly-typed-lambda-expressions.md).</span></span>
 
-根节点是 `LambdaExpression`。 为了获得 `=>` 运算符右侧的有用代码，需要找到 `LambdaExpression` 的子级之一。 我们将通过本部分中的所有表达式来实现此目的。 父节点确实有助于找到 `LambdaExpression` 的返回类型。
+<span data-ttu-id="c0d34-122">根节点是 `LambdaExpression`。</span><span class="sxs-lookup"><span data-stu-id="c0d34-122">The root node is a `LambdaExpression`.</span></span> <span data-ttu-id="c0d34-123">为了获得 `=>` 运算符右侧的有用代码，需要找到 `LambdaExpression` 的子级之一。</span><span class="sxs-lookup"><span data-stu-id="c0d34-123">In order to get the interesting code on the right hand side of the `=>` operator, you need to find one of the children of the `LambdaExpression`.</span></span> <span data-ttu-id="c0d34-124">我们将通过本部分中的所有表达式来实现此目的。</span><span class="sxs-lookup"><span data-stu-id="c0d34-124">We'll do that with all the expressions in this section.</span></span> <span data-ttu-id="c0d34-125">父节点确实有助于找到 `LambdaExpression` 的返回类型。</span><span class="sxs-lookup"><span data-stu-id="c0d34-125">The parent node does help us find the return type of the `LambdaExpression`.</span></span>
 
-若要检查此表达式中的每个节点，将需要以递归方式访问大量节点。 下面是一个简单的首次实现：
+<span data-ttu-id="c0d34-126">若要检查此表达式中的每个节点，将需要以递归方式访问大量节点。</span><span class="sxs-lookup"><span data-stu-id="c0d34-126">To examine each node in this expression, we'll need to recursively visit a number of nodes.</span></span> <span data-ttu-id="c0d34-127">下面是一个简单的首次实现：</span><span class="sxs-lookup"><span data-stu-id="c0d34-127">Here's a simple first implementation:</span></span>
 
 ```csharp
 Expression<Func<int, int, int>> addition = (a, b) => a + b;
@@ -86,7 +84,7 @@ var right= (ParameterExpression)additionBody.Right;
 Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name}");
 ```
 
-此示例打印以下输出：
+<span data-ttu-id="c0d34-128">此示例打印以下输出：</span><span class="sxs-lookup"><span data-stu-id="c0d34-128">This sample prints the following output:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -102,9 +100,9 @@ The right side is a Parameter expression
         Parameter Type: System.Int32, Name: b
 ```
 
-你会注意到以上代码示例中的大量重复。
-让我们将其清理干净，并生成一个更加通用的表达式节点访问者。 这将要求编写递归算法。 任何节点都可能是具有子级的类型。
-具有子级的任何节点都要求访问这些子级并确定该节点是什么。 下面是利用递归访问加法运算的已清理的版本：
+<span data-ttu-id="c0d34-129">你会注意到以上代码示例中的大量重复。</span><span class="sxs-lookup"><span data-stu-id="c0d34-129">You'll notice a lot of repetition in the code sample above.</span></span>
+<span data-ttu-id="c0d34-130">让我们将其清理干净，并生成一个更加通用的表达式节点访问者。</span><span class="sxs-lookup"><span data-stu-id="c0d34-130">Let's clean that up and build a more general purpose expression node visitor.</span></span> <span data-ttu-id="c0d34-131">这将要求编写递归算法。</span><span class="sxs-lookup"><span data-stu-id="c0d34-131">That's going to require us to write a recursive algorithm.</span></span> <span data-ttu-id="c0d34-132">任何节点都可能是具有子级的类型。</span><span class="sxs-lookup"><span data-stu-id="c0d34-132">Any node could be of a type that might have children.</span></span>
+<span data-ttu-id="c0d34-133">具有子级的任何节点都要求访问这些子级并确定该节点是什么。</span><span class="sxs-lookup"><span data-stu-id="c0d34-133">Any node that has children requires us to visit those children and determine what that node is.</span></span> <span data-ttu-id="c0d34-134">下面是利用递归访问加法运算的已清理的版本：</span><span class="sxs-lookup"><span data-stu-id="c0d34-134">Here's the cleaned up version that utilizes recursion to visit the addition operations:</span></span>
 
 ```csharp
 // Base Visitor class:
@@ -222,9 +220,9 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-此算法是可以访问任意 `LambdaExpression` 的算法的基础。 其中有大量缺口，即表明我创建的代码仅查找它可能遇到的表达式树节点组的一小部分。 但是，你仍可以从其结果中获益匪浅。 （遇到新的节点类型时，`Visitor.CreateFromExpression` 方法中的默认 case 会将消息打印到错误控制台。 如此，你便知道要添加新的表达式类型。）
+<span data-ttu-id="c0d34-135">此算法是可以访问任意 `LambdaExpression` 的算法的基础。</span><span class="sxs-lookup"><span data-stu-id="c0d34-135">This algorithm is the basis of an algorithm that can visit any arbitrary `LambdaExpression`.</span></span> <span data-ttu-id="c0d34-136">其中有大量缺口，即表明我创建的代码仅查找它可能遇到的表达式树节点组的一小部分。</span><span class="sxs-lookup"><span data-stu-id="c0d34-136">There are a lot of holes, namely that the code I created only looks for a very small sample of the possible sets of expression tree nodes that it may encounter.</span></span> <span data-ttu-id="c0d34-137">但是，你仍可以从其结果中获益匪浅。</span><span class="sxs-lookup"><span data-stu-id="c0d34-137">However, you can still learn quite a bit from what it produces.</span></span> <span data-ttu-id="c0d34-138">（遇到新的节点类型时，`Visitor.CreateFromExpression` 方法中的默认 case 会将消息打印到错误控制台。</span><span class="sxs-lookup"><span data-stu-id="c0d34-138">(The default case in the `Visitor.CreateFromExpression` method prints a message to the error console when a new node type is encountered.</span></span> <span data-ttu-id="c0d34-139">如此，你便知道要添加新的表达式类型。）</span><span class="sxs-lookup"><span data-stu-id="c0d34-139">That way, you know to add a new expression type.)</span></span>
 
-在上面所示的加法表达式中运行此访问者时，将获得以下输出：
+<span data-ttu-id="c0d34-140">在上面所示的加法表达式中运行此访问者时，将获得以下输出：</span><span class="sxs-lookup"><span data-stu-id="c0d34-140">When you run this visitor on the addition expression shown above, you get the following output:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -245,17 +243,17 @@ The expression body is:
                 Type: System.Int32, Name: b, ByRef: False
 ```
 
-现在既已构建更通用的访问者实现，便可以访问和处理更多不同类型的表达式了。
+<span data-ttu-id="c0d34-141">现在既已构建更通用的访问者实现，便可以访问和处理更多不同类型的表达式了。</span><span class="sxs-lookup"><span data-stu-id="c0d34-141">Now that you've built a more general visitor implementation, you can visit and process many more different types of expressions.</span></span>
 
-## <a name="examining-an-addition-expression-with-many-levels"></a>检查具有许多级别的加法表达式
+## <a name="examining-an-addition-expression-with-many-levels"></a><span data-ttu-id="c0d34-142">检查具有许多级别的加法表达式</span><span class="sxs-lookup"><span data-stu-id="c0d34-142">Examining an Addition Expression with Many Levels</span></span>
 
-让我们尝试更复杂的示例，但仍限制节点类型仅为加法：
+<span data-ttu-id="c0d34-143">让我们尝试更复杂的示例，但仍限制节点类型仅为加法：</span><span class="sxs-lookup"><span data-stu-id="c0d34-143">Let's try a more complicated example, yet still limit the node types to addition only:</span></span>
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-在访问者算法上运行此表达式之前，请尝试思考可能的输出是什么。 请记住，`+` 运算符是*二元运算符*：它必须具有两个子级，分别表示左右操作数。 有几种可行的方法来构造可能正确的树：
+<span data-ttu-id="c0d34-144">在访问者算法上运行此表达式之前，请尝试思考可能的输出是什么。</span><span class="sxs-lookup"><span data-stu-id="c0d34-144">Before you run this on the visitor algorithm, try a thought exercise to work out what the output might be.</span></span> <span data-ttu-id="c0d34-145">请记住，`+` 运算符是*二元运算符*：它必须具有两个子级，分别表示左右操作数。</span><span class="sxs-lookup"><span data-stu-id="c0d34-145">Remember that the `+` operator is a *binary operator*: it must have two children, representing the left and right operands.</span></span> <span data-ttu-id="c0d34-146">有几种可行的方法来构造可能正确的树：</span><span class="sxs-lookup"><span data-stu-id="c0d34-146">There are several possible ways to construct a tree that could be correct:</span></span>
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -266,18 +264,18 @@ Expression<Func<int>> sum4 = () => 1 + ((2 + 3) + 4);
 Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
-可以看到可能的答案分为两种，以便着重于最有可能正确的答案。 第一种表示*右结合*表达式。 第二种表示*左结合*表达式。
-这两种格式的优点是，格式可以缩放为任意数量的加法表达式。 
+<span data-ttu-id="c0d34-147">可以看到可能的答案分为两种，以便着重于最有可能正确的答案。</span><span class="sxs-lookup"><span data-stu-id="c0d34-147">You can see the separation into two possible answers to highlight the most promising.</span></span> <span data-ttu-id="c0d34-148">第一种表示*右结合*表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-148">The first represents *right associative* expressions.</span></span> <span data-ttu-id="c0d34-149">第二种表示*左结合*表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-149">The second represent *left associative* expressions.</span></span>
+<span data-ttu-id="c0d34-150">这两种格式的优点是，格式可以缩放为任意数量的加法表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-150">The advantage of both of those two formats is that the format scales to any arbitrary number of addition expressions.</span></span> 
 
-如果确实通过该访问者运行此表达式，则将看到此输出，其验证简单的加法表达式是否为*左结合*。 
+<span data-ttu-id="c0d34-151">如果确实通过该访问者运行此表达式，则将看到此输出，其验证简单的加法表达式是否为*左结合*。</span><span class="sxs-lookup"><span data-stu-id="c0d34-151">If you do run this expression through the visitor, you will see this this output, verifying that the simple addition expression is *left associative*.</span></span> 
 
-为了运行此示例并查看完整的表达式树，我不得不对源表达式树进行一次更改。 当表达式树包含所有常量时，所得到的树仅包含 `10` 的常量值。 编译器执行所有加法运算，并将表达式缩减为其最简单的形式。 只需在表达式中添加一个变量即可看到原始的树：
+<span data-ttu-id="c0d34-152">为了运行此示例并查看完整的表达式树，我不得不对源表达式树进行一次更改。</span><span class="sxs-lookup"><span data-stu-id="c0d34-152">In order to run this sample, and see the full expression tree, I had to make one change to the source expression tree.</span></span> <span data-ttu-id="c0d34-153">当表达式树包含所有常量时，所得到的树仅包含 `10` 的常量值。</span><span class="sxs-lookup"><span data-stu-id="c0d34-153">When the expression tree contains all constants, the resulting tree simply contains the constant value of `10`.</span></span> <span data-ttu-id="c0d34-154">编译器执行所有加法运算，并将表达式缩减为其最简单的形式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-154">The compiler performs all the addition and reduces the expression to its simplest form.</span></span> <span data-ttu-id="c0d34-155">只需在表达式中添加一个变量即可看到原始的树：</span><span class="sxs-lookup"><span data-stu-id="c0d34-155">Simply adding one variable in the expression is sufficient to see the original tree:</span></span>
 
 ```csharp
 Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 ```
 
-创建可得出此总和的访问者并运行该访问者，则会看到以下输出：
+<span data-ttu-id="c0d34-156">创建可得出此总和的访问者并运行该访问者，则会看到以下输出：</span><span class="sxs-lookup"><span data-stu-id="c0d34-156">Create a visitor for this sum and run the visitor you'll see this output:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -309,13 +307,13 @@ The expression body is:
                 The value of the constant value is 4
 ```
 
-还可以通过访问者代码运行任何其他示例，并查看其表示的树。 下面是上述 `sum3` 表达式（使用附加参数来阻止编译器计算常量）的一个示例：
+<span data-ttu-id="c0d34-157">还可以通过访问者代码运行任何其他示例，并查看其表示的树。</span><span class="sxs-lookup"><span data-stu-id="c0d34-157">You can also run any of the other samples through the visitor code and see what tree it represents.</span></span> <span data-ttu-id="c0d34-158">下面是上述 `sum3` 表达式（使用附加参数来阻止编译器计算常量）的一个示例：</span><span class="sxs-lookup"><span data-stu-id="c0d34-158">Here's an example of the `sum3` expression above (with an additional parameter to prevent the compiler from computing the constant):</span></span>
 
 ```csharp
 Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 ```
 
-下面是访问者的输出：
+<span data-ttu-id="c0d34-159">下面是访问者的输出：</span><span class="sxs-lookup"><span data-stu-id="c0d34-159">Here's the output from the visitor:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -348,11 +346,11 @@ The expression body is:
                         Type: System.Int32, Name: b, ByRef: False
 ```
 
-请注意，括号不是输出的一部分。 表达式树中不存在表示输入表达式中的括号的节点。 表达式树的结构包含传达优先级所需的所有信息。
+<span data-ttu-id="c0d34-160">请注意，括号不是输出的一部分。</span><span class="sxs-lookup"><span data-stu-id="c0d34-160">Notice that the parentheses are not part of the output.</span></span> <span data-ttu-id="c0d34-161">表达式树中不存在表示输入表达式中的括号的节点。</span><span class="sxs-lookup"><span data-stu-id="c0d34-161">There are no nodes in the expression tree that represent the parentheses in the input expression.</span></span> <span data-ttu-id="c0d34-162">表达式树的结构包含传达优先级所需的所有信息。</span><span class="sxs-lookup"><span data-stu-id="c0d34-162">The structure of the expression tree contains all the information necessary to communicate the precedence.</span></span>
 
-## <a name="extending-from-this-sample"></a>从此示例扩展
+## <a name="extending-from-this-sample"></a><span data-ttu-id="c0d34-163">从此示例扩展</span><span class="sxs-lookup"><span data-stu-id="c0d34-163">Extending from this sample</span></span>
 
-此示例仅处理最基本的表达式树。 在本部分中看到的代码仅处理常量整数和二进制 `+` 运算符。 作为最后一个示例，让我们更新访问者以处理更加复杂的表达式。 让我们这样来改进它：
+<span data-ttu-id="c0d34-164">此示例仅处理最基本的表达式树。</span><span class="sxs-lookup"><span data-stu-id="c0d34-164">The sample deals with only the most rudimentary expression trees.</span></span> <span data-ttu-id="c0d34-165">在本部分中看到的代码仅处理常量整数和二进制 `+` 运算符。</span><span class="sxs-lookup"><span data-stu-id="c0d34-165">The code you've seen in this section only handles constant integers and the binary `+` operator.</span></span> <span data-ttu-id="c0d34-166">作为最后一个示例，让我们更新访问者以处理更加复杂的表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-166">As a final sample, let's update the visitor to handle a more complicated expression.</span></span> <span data-ttu-id="c0d34-167">让我们这样来改进它：</span><span class="sxs-lookup"><span data-stu-id="c0d34-167">Let's make it work for this:</span></span>
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
@@ -361,17 +359,17 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-此代码表示数学*阶乘*函数的一个可能的实现。 编写此代码的方式强调了通过将 lambda 表达式分配到表达式来生成表达式树的两个限制。 首先，lambda 语句是不允许的。 这意味着无法使用循环、块、if / else 语句和 C# 中常用的其他控件结构。 我只能使用表达式。 其次，不能以递归方式调用同一表达式。
-如果该表达式已是一个委托，则可以通过递归方式进行调用，但不能在其表达式树的形式中调用它。 在有关[生成表达式树](expression-trees-building.md)的部分中将介绍克服这些限制的技巧。
+<span data-ttu-id="c0d34-168">此代码表示数学*阶乘*函数的一个可能的实现。</span><span class="sxs-lookup"><span data-stu-id="c0d34-168">This code represents one possible implementation for the mathematical *factorial* function.</span></span> <span data-ttu-id="c0d34-169">编写此代码的方式强调了通过将 lambda 表达式分配到表达式来生成表达式树的两个限制。</span><span class="sxs-lookup"><span data-stu-id="c0d34-169">The way I've written this code highlights two limitiations of building expression trees by assigning lambda expressions to Expressions.</span></span> <span data-ttu-id="c0d34-170">首先，lambda 语句是不允许的。</span><span class="sxs-lookup"><span data-stu-id="c0d34-170">First, statement lambdas are not allowed.</span></span> <span data-ttu-id="c0d34-171">这意味着无法使用循环、块、if / else 语句和 C# 中常用的其他控件结构。</span><span class="sxs-lookup"><span data-stu-id="c0d34-171">That means I can't use loops, blocks, if / else statements, and other control structures common in C#.</span></span> <span data-ttu-id="c0d34-172">我只能使用表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-172">I'm limited to using expressions.</span></span> <span data-ttu-id="c0d34-173">其次，不能以递归方式调用同一表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-173">Second, I can't recursively call the same expression.</span></span>
+<span data-ttu-id="c0d34-174">如果该表达式已是一个委托，则可以通过递归方式进行调用，但不能在其表达式树的形式中调用它。</span><span class="sxs-lookup"><span data-stu-id="c0d34-174">I could if it were already a delegate, but I can't call it in its expression tree form.</span></span> <span data-ttu-id="c0d34-175">在有关[生成表达式树](expression-trees-building.md)的部分中将介绍克服这些限制的技巧。</span><span class="sxs-lookup"><span data-stu-id="c0d34-175">In the section on [building expression trees](expression-trees-building.md) you'll learn techniques to overcome these limitations.</span></span>
 
 
-在此表达式中，将遇到所有这些类型的节点：
-1. Equal（二进制表达式）
-2. Multiply（二进制表达式）
-3. Conditional（? : 表达式）
-4. 方法调用表达式（调用 `Range()` 和 `Aggregate()`）
+<span data-ttu-id="c0d34-176">在此表达式中，将遇到所有这些类型的节点：</span><span class="sxs-lookup"><span data-stu-id="c0d34-176">In this expression, you'll encounter nodes of all these types:</span></span>
+1. <span data-ttu-id="c0d34-177">Equal（二进制表达式）</span><span class="sxs-lookup"><span data-stu-id="c0d34-177">Equal (binary expression)</span></span>
+2. <span data-ttu-id="c0d34-178">Multiply（二进制表达式）</span><span class="sxs-lookup"><span data-stu-id="c0d34-178">Multiply (binary expression)</span></span>
+3. <span data-ttu-id="c0d34-179">Conditional（?</span><span class="sxs-lookup"><span data-stu-id="c0d34-179">Conditional (the ?</span></span> <span data-ttu-id="c0d34-180">: 表达式）</span><span class="sxs-lookup"><span data-stu-id="c0d34-180">: expression)</span></span>
+4. <span data-ttu-id="c0d34-181">方法调用表达式（调用 `Range()` 和 `Aggregate()`）</span><span class="sxs-lookup"><span data-stu-id="c0d34-181">Method Call Expression (calling `Range()` and `Aggregate()`)</span></span>
 
-修改访问者算法的其中一个方法是持续执行它，并在每次到达 `default` 子句时编写节点类型。 经过几次迭代之后，便将看到每个可能的节点。 这样便万事俱备了。 结果类似于：
+<span data-ttu-id="c0d34-182">修改访问者算法的其中一个方法是持续执行它，并在每次到达 `default` 子句时编写节点类型。</span><span class="sxs-lookup"><span data-stu-id="c0d34-182">One way to modify the visitor algorithm is to keep executing it, and write the node type every time you reach your `default` clause.</span></span> <span data-ttu-id="c0d34-183">经过几次迭代之后，便将看到每个可能的节点。</span><span class="sxs-lookup"><span data-stu-id="c0d34-183">After a few iterations, you'll have seen each of the potential nodes.</span></span> <span data-ttu-id="c0d34-184">这样便万事俱备了。</span><span class="sxs-lookup"><span data-stu-id="c0d34-184">Then, you have all you need.</span></span> <span data-ttu-id="c0d34-185">结果类似于：</span><span class="sxs-lookup"><span data-stu-id="c0d34-185">The result would be something like this:</span></span>
 
 ```csharp
 public static Visitor CreateFromExpression(Expression node)
@@ -399,7 +397,7 @@ public static Visitor CreateFromExpression(Expression node)
 }
 ```
 
-ConditionalVisitor 和 MethodCallVisitor 将处理这两个节点：
+<span data-ttu-id="c0d34-186">ConditionalVisitor 和 MethodCallVisitor 将处理这两个节点：</span><span class="sxs-lookup"><span data-stu-id="c0d34-186">The ConditionalVisitor and MethodCallVisitor process those two nodes:</span></span>
 
 ```csharp
 public class ConditionalVisitor : Visitor
@@ -458,7 +456,7 @@ public class MethodCallVisitor : Visitor
 }
 ```
 
-且表达式树的输出为：
+<span data-ttu-id="c0d34-187">且表达式树的输出为：</span><span class="sxs-lookup"><span data-stu-id="c0d34-187">And the output for the expression tree would be:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -514,19 +512,18 @@ The expression body is:
                                         Type: System.Int32, Name: factor, ByRef: False
 ```
 
-## <a name="extending-the-sample-library"></a>扩展示例库
+## <a name="extending-the-sample-library"></a><span data-ttu-id="c0d34-188">扩展示例库</span><span class="sxs-lookup"><span data-stu-id="c0d34-188">Extending the Sample Library</span></span>
 
-本部分中的示例演示访问和检查表达式树中的节点的核心技术。 我略过了很多可能需要的操作，以便专注于访问表达式树中的节点这一核心任务。 
+<span data-ttu-id="c0d34-189">本部分中的示例演示访问和检查表达式树中的节点的核心技术。</span><span class="sxs-lookup"><span data-stu-id="c0d34-189">The samples in this section show the core techniques to visit and examine nodes in an expression tree.</span></span> <span data-ttu-id="c0d34-190">我略过了很多可能需要的操作，以便专注于访问表达式树中的节点这一核心任务。</span><span class="sxs-lookup"><span data-stu-id="c0d34-190">I glossed over many actions you might need in order to concentrate on the core tasks of visiting and accessing nodes in an expression tree.</span></span> 
 
-首先，访问者只处理整数常量。 常量值可以是任何其他数值类型，且 C# 语言支持这些类型之间的转换和提升。 此代码的更可靠版本可反映所有这些功能。
+<span data-ttu-id="c0d34-191">首先，访问者只处理整数常量。</span><span class="sxs-lookup"><span data-stu-id="c0d34-191">First, the visitors only handle constants that are integers.</span></span> <span data-ttu-id="c0d34-192">常量值可以是任何其他数值类型，且 C# 语言支持这些类型之间的转换和提升。</span><span class="sxs-lookup"><span data-stu-id="c0d34-192">Constant values could be any other numeric type, and the C# language supports conversions and promotions between those types.</span></span> <span data-ttu-id="c0d34-193">此代码的更可靠版本可反映所有这些功能。</span><span class="sxs-lookup"><span data-stu-id="c0d34-193">A more robust version of this code would mirror all those capabilities.</span></span>
 
-即使最后一个示例也只可识别可能的节点类型的一部分。
-你仍可以向其添加许多将导致其失败的表达式。
-完整的实现包含在名为 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 的 .NET 标准中，且可以处理所有可能的节点类型。
+<span data-ttu-id="c0d34-194">即使最后一个示例也只可识别可能的节点类型的一部分。</span><span class="sxs-lookup"><span data-stu-id="c0d34-194">Even the last example recognizes a subset of the possible node types.</span></span>
+<span data-ttu-id="c0d34-195">你仍可以向其添加许多将导致其失败的表达式。</span><span class="sxs-lookup"><span data-stu-id="c0d34-195">You can still feed it many expressions that will cause it to fail.</span></span>
+<span data-ttu-id="c0d34-196">完整的实现包含在名为 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 的 .NET 标准中，且可以处理所有可能的节点类型。</span><span class="sxs-lookup"><span data-stu-id="c0d34-196">A full implementation is included in the .NET Standard under the name [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) and can handle all the possible node types.</span></span>
 
-最后，在本文中所使用的库是为演示和学习目的而生成。 它未进行优化。 编写它是为了让所使用的结构非常清晰，以及强调用于访问节点和对此进行分析的技术。 生产实现将更加注重性能。
+<span data-ttu-id="c0d34-197">最后，在本文中所使用的库是为演示和学习目的而生成。</span><span class="sxs-lookup"><span data-stu-id="c0d34-197">Finally, the library I used in this article was built for demonstration and learning.</span></span> <span data-ttu-id="c0d34-198">它未进行优化。</span><span class="sxs-lookup"><span data-stu-id="c0d34-198">It's not optimized.</span></span> <span data-ttu-id="c0d34-199">编写它是为了让所使用的结构非常清晰，以及强调用于访问节点和对此进行分析的技术。</span><span class="sxs-lookup"><span data-stu-id="c0d34-199">I wrote it to make the structures used very clear, and to highlight the techniques used to visit the nodes and analyze what's there.</span></span> <span data-ttu-id="c0d34-200">生产实现将更加注重性能。</span><span class="sxs-lookup"><span data-stu-id="c0d34-200">A production implementation would pay more attention to performance than I have.</span></span>
 
-即使存在这些限制，在编写阅读和理解表达式树的算法这方面应当是没有问题的。
+<span data-ttu-id="c0d34-201">即使存在这些限制，在编写阅读和理解表达式树的算法这方面应当是没有问题的。</span><span class="sxs-lookup"><span data-stu-id="c0d34-201">Even with those limitations, you should be well on your way to writing algorithms that read and understand expression trees.</span></span>
 
-[下一部分 -- 生成表达式](expression-trees-building.md)
-
+[<span data-ttu-id="c0d34-202">下一部分 -- 生成表达式</span><span class="sxs-lookup"><span data-stu-id="c0d34-202">Next -- Building Expressions</span></span>](expression-trees-building.md)

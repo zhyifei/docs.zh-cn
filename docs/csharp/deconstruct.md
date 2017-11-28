@@ -10,100 +10,98 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
+ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
-ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型 #
+# <a name="deconstructing-tuples-and-other-types"></a><span data-ttu-id="83bcc-104">析构元组和其他类型</span><span class="sxs-lookup"><span data-stu-id="83bcc-104">Deconstructing tuples and other types</span></span> #
 
-元组提供一种从方法调用中检索多个值的轻量级方法。 但是，一旦检索到元组，就必须处理它的各个元素。 按元素逐个执行此操作会比较麻烦，如下例所示。 `QueryCityData` 方法返回一个 3 元组，并通过单独的操作将其每个元素分配给一个变量。
+<span data-ttu-id="83bcc-105">元组提供一种从方法调用中检索多个值的轻量级方法。</span><span class="sxs-lookup"><span data-stu-id="83bcc-105">A tuple provides a light-weight way to retrieve multiple values from a method call.</span></span> <span data-ttu-id="83bcc-106">但是，一旦检索到元组，就必须处理它的各个元素。</span><span class="sxs-lookup"><span data-stu-id="83bcc-106">But once you retrieve the tuple, you have to handle its individual elements.</span></span> <span data-ttu-id="83bcc-107">按元素逐个执行此操作会比较麻烦，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="83bcc-107">Doing this on an element-by-element basis is cumbersome, as the following example shows.</span></span> <span data-ttu-id="83bcc-108">`QueryCityData` 方法返回一个 3 元组，并通过单独的操作将其每个元素分配给一个变量。</span><span class="sxs-lookup"><span data-stu-id="83bcc-108">The `QueryCityData` method returns a 3-tuple, and each of its elements is assigned to a variable in a separate operation.</span></span>
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-从对象检索多个字段值和属性值可能同样麻烦：必须按成员逐个将字段值或属性值赋给一个变量。 
+<span data-ttu-id="83bcc-109">从对象检索多个字段值和属性值可能同样麻烦：必须按成员逐个将字段值或属性值赋给一个变量。</span><span class="sxs-lookup"><span data-stu-id="83bcc-109">Retrieving multiple field and property values from an object can be equally cumbersome: you have to assign a field or property value to a variable on a member-by-member basis.</span></span> 
 
-从 C# 7 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。 析构元组时，将其元素分配给各个变量。 析构对象时，将选定值分配给各个变量。 
+<span data-ttu-id="83bcc-110">从 C# 7 开始，用户可从元组中检索多个元素，或在单个析构操作中从对象检索多个字段值、属性值和计算值。</span><span class="sxs-lookup"><span data-stu-id="83bcc-110">Starting with C# 7, you can retrieve multiple elements from a tuple or retrieve multiple field, property, and computed values from an object in a single *deconstruct* operation.</span></span> <span data-ttu-id="83bcc-111">析构元组时，将其元素分配给各个变量。</span><span class="sxs-lookup"><span data-stu-id="83bcc-111">When you deconstruct a tuple, you assign its elements to individual variables.</span></span> <span data-ttu-id="83bcc-112">析构对象时，将选定值分配给各个变量。</span><span class="sxs-lookup"><span data-stu-id="83bcc-112">When you deconstruct an object, you assign selected values to individual variables.</span></span> 
 
-## <a name="deconstructing-a-tuple"></a>析构元组
+## <a name="deconstructing-a-tuple"></a><span data-ttu-id="83bcc-113">析构元组</span><span class="sxs-lookup"><span data-stu-id="83bcc-113">Deconstructing a tuple</span></span>
 
-C# 提供内置的元组析构支持，可在单个操作中解包一个元组中的所有项。 用于析构元组的常规语法与用于定义元组的语法相似：将要向其分配元素的变量放在赋值语句左侧的括号中。 例如，以下语句将 4 元组的元素分配给 4 个单独的变量：
+<span data-ttu-id="83bcc-114">C# 提供内置的元组析构支持，可在单个操作中解包一个元组中的所有项。</span><span class="sxs-lookup"><span data-stu-id="83bcc-114">C# features built-in support for deconstructing tuples, which lets you unpackage all the items in a tuple in a single operation.</span></span> <span data-ttu-id="83bcc-115">用于析构元组的常规语法与用于定义元组的语法相似：将要向其分配元素的变量放在赋值语句左侧的括号中。</span><span class="sxs-lookup"><span data-stu-id="83bcc-115">The general syntax for deconstructing a tuple is similar to the syntax for defining one: you enclose the variables to which each element is to be assigned in parentheses in the left side of an assignment statement.</span></span> <span data-ttu-id="83bcc-116">例如，以下语句将 4 元组的元素分配给 4 个单独的变量：</span><span class="sxs-lookup"><span data-stu-id="83bcc-116">For example, the following statement assigns the elements of a 4-tuple to four separate variables:</span></span>
 
 ```csharp
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-有两种方法可用于析构元组：
+<span data-ttu-id="83bcc-117">有两种方法可用于析构元组：</span><span class="sxs-lookup"><span data-stu-id="83bcc-117">There are two ways to deconstruct a tuple:</span></span>
 
-- 可以在括号内显式声明每个字段的类型。 以下示例使用此方法来析构由 `QueryCityData` 方法返回的 3 元组。
+- <span data-ttu-id="83bcc-118">可以在括号内显式声明每个字段的类型。</span><span class="sxs-lookup"><span data-stu-id="83bcc-118">You can explicitly declare the type of each field inside parentheses.</span></span> <span data-ttu-id="83bcc-119">以下示例使用此方法来析构由 `QueryCityData` 方法返回的 3 元组。</span><span class="sxs-lookup"><span data-stu-id="83bcc-119">The following example uses this approach to deconstruct the 3-tuple returned by the `QueryCityData` method.</span></span>
 
-    [!code-csharp[析构-显式](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
+    [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
-- 可使用 `var` 关键字，以便 C# 推断每个变量的类型。 将 `var` 关键字放在括号外。 以下示例在析构由 `QueryCityData` 方法返回的 3 元组时使用类型推理。
+- <span data-ttu-id="83bcc-120">可使用 `var` 关键字，以便 C# 推断每个变量的类型。</span><span class="sxs-lookup"><span data-stu-id="83bcc-120">You can use the `var` keyword so that C# infers the type of each variable.</span></span> <span data-ttu-id="83bcc-121">将 `var` 关键字放在括号外。</span><span class="sxs-lookup"><span data-stu-id="83bcc-121">You place the `var` keyword outside of the parentheses.</span></span> <span data-ttu-id="83bcc-122">以下示例在析构由 `QueryCityData` 方法返回的 3 元组时使用类型推理。</span><span class="sxs-lookup"><span data-stu-id="83bcc-122">The following example uses type inference when deconstructing the 3-tuple returned by the `QueryCityData` method.</span></span>
  
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    还可在括号内将 `var` 关键字单独与任一或全部变量声明结合使用。 
+    <span data-ttu-id="83bcc-123">还可在括号内将 `var` 关键字单独与任一或全部变量声明结合使用。</span><span class="sxs-lookup"><span data-stu-id="83bcc-123">You can also use the `var` keyword individually with any or all of the variable declarations inside the parentheses.</span></span> 
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
-    这很麻烦，不建议这样做。
+    <span data-ttu-id="83bcc-124">这很麻烦，不建议这样做。</span><span class="sxs-lookup"><span data-stu-id="83bcc-124">This is cumbersome and is not recommended.</span></span>
 
-请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外指定特定类型。 这会生成编译器错误 CS8136：“析构 var (...) 形式不允许对 var 使用特定类型。”
+<span data-ttu-id="83bcc-125">请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外指定特定类型。</span><span class="sxs-lookup"><span data-stu-id="83bcc-125">Note that you cannot specify a specific type outside the parentheses even if every field in the tuple has the same type.</span></span> <span data-ttu-id="83bcc-126">这会生成编译器错误 CS8136：“析构 var (...) 形式不允许对 var 使用特定类型。”</span><span class="sxs-lookup"><span data-stu-id="83bcc-126">This generates compiler error CS8136, "Deconstruction 'var (...)' form disallows a specific type for 'var'.".</span></span>
 
-请注意，还必须将元组的每个元素分配给一个变量。 如果省略任何元素，编译器将生成错误 CS8132，“无法将 ‘x’ 元素的元组析构为 ‘y’ 变量”。
+<span data-ttu-id="83bcc-127">请注意，还必须将元组的每个元素分配给一个变量。</span><span class="sxs-lookup"><span data-stu-id="83bcc-127">Note that you must also assign each element of the tuple to a variable.</span></span> <span data-ttu-id="83bcc-128">如果省略任何元素，编译器将生成错误 CS8132，“无法将 ‘x’ 元素的元组析构为 ‘y’ 变量”。</span><span class="sxs-lookup"><span data-stu-id="83bcc-128">If you omit any elements, the compiler generates error CS8132, "Cannot deconstruct a tuple of 'x' elements into 'y' variables."</span></span>
 
-## <a name="deconstructing-tuple-elements-with-discards"></a>使用放弃析构元组元素
+## <a name="deconstructing-tuple-elements-with-discards"></a><span data-ttu-id="83bcc-129">使用放弃析构元组元素</span><span class="sxs-lookup"><span data-stu-id="83bcc-129">Deconstructing tuple elements with discards</span></span>
 
-析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对放弃的支持，放弃是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定放弃。 可放弃任意数量的值，且均由单个放弃 `_` 表示。
+<span data-ttu-id="83bcc-130">析构元组时，通常只需要关注某些元素的值。</span><span class="sxs-lookup"><span data-stu-id="83bcc-130">Often when deconstructing a tuple, you're interested in the values of only some elements.</span></span> <span data-ttu-id="83bcc-131">从 C# 7 开始，便可利用 C# 对放弃的支持，放弃是一种仅能写入的变量，且其值将被忽略。</span><span class="sxs-lookup"><span data-stu-id="83bcc-131">Starting with C# 7, you can take advantage of C#'s support for *discards*, which are write-only variables whose values you've chosen to ignore.</span></span> <span data-ttu-id="83bcc-132">在赋值中，通过下划线字符 (\_) 指定放弃。</span><span class="sxs-lookup"><span data-stu-id="83bcc-132">A discard is designated by an underscore character ("\_") in an assignment.</span></span> <span data-ttu-id="83bcc-133">可放弃任意数量的值，且均由单个放弃 `_` 表示。</span><span class="sxs-lookup"><span data-stu-id="83bcc-133">You can discard as many values as you like; all are represented by the single discard, `_`.</span></span>
 
-以下示例演示了对元组使用放弃时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为放弃处理。  
+<span data-ttu-id="83bcc-134">以下示例演示了对元组使用放弃时的用法。</span><span class="sxs-lookup"><span data-stu-id="83bcc-134">The following example illustrates the use of tuples with discards.</span></span> <span data-ttu-id="83bcc-135">`QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。</span><span class="sxs-lookup"><span data-stu-id="83bcc-135">The `QueryCityDataForYears` method returns a 6-tuple with the name of a city, its area, a year, the city's population for that year, a second year, and the city's population for that second year.</span></span> <span data-ttu-id="83bcc-136">该示例显示了两个年份之间人口的变化。</span><span class="sxs-lookup"><span data-stu-id="83bcc-136">The example shows the change in population between those two years.</span></span> <span data-ttu-id="83bcc-137">对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。</span><span class="sxs-lookup"><span data-stu-id="83bcc-137">Of the data available from the tuple, we're unconcerned with the city area, and we know the city name and the two dates at design-time.</span></span> <span data-ttu-id="83bcc-138">因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为放弃处理。</span><span class="sxs-lookup"><span data-stu-id="83bcc-138">As a result, we're only interested in the two population values stored in the tuple, and can handle its remaining values as discards.</span></span>  
 
-[!code-csharp[元组-放弃](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
+[!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
+### <a name="deconstructing-user-defined-types"></a><span data-ttu-id="83bcc-139">析构用户定义类型</span><span class="sxs-lookup"><span data-stu-id="83bcc-139">Deconstructing user-defined types</span></span>
 
-非元组类型不提供对放弃的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
+<span data-ttu-id="83bcc-140">非元组类型不提供对放弃的内置支持。</span><span class="sxs-lookup"><span data-stu-id="83bcc-140">Non-tuple types do not offer built-in support for discards.</span></span> <span data-ttu-id="83bcc-141">但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。</span><span class="sxs-lookup"><span data-stu-id="83bcc-141">However, as the author of a class, a struct, or an interface, you can allow instances of the type to be deconstructed by implementing one or more `Deconstruct` methods.</span></span> <span data-ttu-id="83bcc-142">该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。</span><span class="sxs-lookup"><span data-stu-id="83bcc-142">The method returns void, and each value to be deconstructed is indicated by an [out](language-reference/keywords/out-parameter-modifier.md) parameter in the method signature.</span></span> <span data-ttu-id="83bcc-143">例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：</span><span class="sxs-lookup"><span data-stu-id="83bcc-143">For example, the following `Deconstruct` method of a `Person` class returns the first, middle, and last name:</span></span>
 
-[!code-csharp[类-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
-然后，可使用类似于以下的分配来析构名为 `p` 的 `Person` 类的实例：
+<span data-ttu-id="83bcc-144">然后，可使用类似于以下的分配来析构名为 `p` 的 `Person` 类的实例：</span><span class="sxs-lookup"><span data-stu-id="83bcc-144">You can then deconstruct an instance of the `Person` class named `p` with an assignment like the following:</span></span>
 
-[!code-csharp[类-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
 
-以下示例重载 `Deconstruct` 方法以返回 `Person` 对象的各种属性组合。 单个重载返回：
+<span data-ttu-id="83bcc-145">以下示例重载 `Deconstruct` 方法以返回 `Person` 对象的各种属性组合。</span><span class="sxs-lookup"><span data-stu-id="83bcc-145">The following example overloads the `Deconstruct` method to return various combinations of properties of a `Person` object.</span></span> <span data-ttu-id="83bcc-146">单个重载返回：</span><span class="sxs-lookup"><span data-stu-id="83bcc-146">Individual overloads return:</span></span>
 
-- 名字和姓氏。
-- 名字、姓氏和中间名。
-- 名字、姓氏、城市名和省/市/自治区名。
+- <span data-ttu-id="83bcc-147">名字和姓氏。</span><span class="sxs-lookup"><span data-stu-id="83bcc-147">A first and last name.</span></span>
+- <span data-ttu-id="83bcc-148">名字、姓氏和中间名。</span><span class="sxs-lookup"><span data-stu-id="83bcc-148">A first, last, and middle name.</span></span>
+- <span data-ttu-id="83bcc-149">名字、姓氏、城市名和省/市/自治区名。</span><span class="sxs-lookup"><span data-stu-id="83bcc-149">A first name, a last name, a city name, and a state name.</span></span>
 
-[!code-csharp[类-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-因为可重载 `Deconstruct` 方法来反映通常从对象中提取的数据组，所以应使用独特明确的签名来定义 `Deconstruct` 方法。 如果有多个 `Deconstruct` 方法具有相同数量的 `out` 参数，或具有相同数量和类型的 `out` 参数且顺序不同，则可能会造成混淆。 
+<span data-ttu-id="83bcc-150">因为可重载 `Deconstruct` 方法来反映通常从对象中提取的数据组，所以应使用独特明确的签名来定义 `Deconstruct` 方法。</span><span class="sxs-lookup"><span data-stu-id="83bcc-150">Because you can overload the `Deconstruct` method to reflect groups of data that are commonly extracted from an object, you should be careful to define `Deconstruct` methods with signatures that are distinctive and unambiguous.</span></span> <span data-ttu-id="83bcc-151">如果有多个 `Deconstruct` 方法具有相同数量的 `out` 参数，或具有相同数量和类型的 `out` 参数且顺序不同，则可能会造成混淆。</span><span class="sxs-lookup"><span data-stu-id="83bcc-151">Multiple `Deconstruct` methods that have the same number of `out` parameters or the same number and type of `out` parameters in a different order can cause confusion.</span></span> 
 
-以下示例中的重载 `Deconstruct` 方法演示一种混淆的可能性。 第一个重载按该顺序返回 `Person` 对象的名字、中间名、姓氏和年龄。 第二个重载仅将姓名信息与年收入一起返回，但名字、中间名和姓氏的顺序不同。 这使得在析构 `Person` 实例时容易混淆参数的顺序。
+<span data-ttu-id="83bcc-152">以下示例中的重载 `Deconstruct` 方法演示一种混淆的可能性。</span><span class="sxs-lookup"><span data-stu-id="83bcc-152">The overloaded `Deconstruct` method in the following example illustrates one possible source of confusion.</span></span> <span data-ttu-id="83bcc-153">第一个重载按该顺序返回 `Person` 对象的名字、中间名、姓氏和年龄。</span><span class="sxs-lookup"><span data-stu-id="83bcc-153">The first overload returns the first name, middle name, last name, and age of a `Person` object, in that order.</span></span> <span data-ttu-id="83bcc-154">第二个重载仅将姓名信息与年收入一起返回，但名字、中间名和姓氏的顺序不同。</span><span class="sxs-lookup"><span data-stu-id="83bcc-154">The second overload returns name information only along with annual income, but the first, middle, and last name are in a different order.</span></span> <span data-ttu-id="83bcc-155">这使得在析构 `Person` 实例时容易混淆参数的顺序。</span><span class="sxs-lookup"><span data-stu-id="83bcc-155">This makes it easy to confuse the order of arguments when deconstructing a `Person` instance.</span></span>
 
-[!code-csharp[析构-多义性](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
 
-## <a name="deconstructing-a-user-defined-type-with-discards"></a>使用放弃析构用户定义类型
+## <a name="deconstructing-a-user-defined-type-with-discards"></a><span data-ttu-id="83bcc-156">使用放弃析构用户定义类型</span><span class="sxs-lookup"><span data-stu-id="83bcc-156">Deconstructing a user-defined type with discards</span></span>
 
-就像使用[元组](#deconstructing-tuple-elements-with-discards)一样，可使用放弃来忽略 `Deconstruct` 方法返回的选定项。 每个放弃均由名为“\_”的变量定义，一个析构操作可包含多个放弃。
+<span data-ttu-id="83bcc-157">就像使用[元组](#deconstructing-tuple-elements-with-discards)一样，可使用放弃来忽略 `Deconstruct` 方法返回的选定项。</span><span class="sxs-lookup"><span data-stu-id="83bcc-157">Just as you do with [tuples](#deconstructing-tuple-elements-with-discards), you can use discards to ignore selected items returned by a `Deconstruct` method.</span></span> <span data-ttu-id="83bcc-158">每个放弃均由名为“\_”的变量定义，一个析构操作可包含多个放弃。</span><span class="sxs-lookup"><span data-stu-id="83bcc-158">Each discard is defined by a variable named "\_", and a single deconstruction operation can include multiple discards.</span></span>
 
-以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。
+<span data-ttu-id="83bcc-159">以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。</span><span class="sxs-lookup"><span data-stu-id="83bcc-159">The following example deconstructs a `Person` object into four strings (the first and last names, the city, and the state) but discards the last name and the state.</span></span>
 
-[!code-csharp[类-放弃](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
+[!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
 
-## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>使用扩展方法析构用户定义的类型
+## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a><span data-ttu-id="83bcc-160">使用扩展方法析构用户定义的类型</span><span class="sxs-lookup"><span data-stu-id="83bcc-160">Deconstructing a user-defined type with an extension method</span></span>
 
-如果没有创建类、结构或接口，仍可通过实现一个或多个 `Deconstruct` [扩展方法](programming-guide/classes-and-structs/extension-methods.md)来析构该类型的对象，以返回所需值。 
+<span data-ttu-id="83bcc-161">如果没有创建类、结构或接口，仍可通过实现一个或多个 `Deconstruct` [扩展方法](programming-guide/classes-and-structs/extension-methods.md)来析构该类型的对象，以返回所需值。</span><span class="sxs-lookup"><span data-stu-id="83bcc-161">If you didn't author a class, struct, or interface, you can still deconstruct objects of that type by implementing one or more `Deconstruct` [extension methods](programming-guide/classes-and-structs/extension-methods.md) to return the values in which you're interested.</span></span> 
 
-以下示例为 <xref:System.Reflection.PropertyInfo?displayProperty=fullName> 类定义了两个 `Deconstruct` 扩展方法。 第一个方法返回一组值，指示属性的特征，包括其类型、是静态还是实例、是否为只读，以及是否已编制索引。 第二个方法指示属性的可访问性。 因为 get 和 set 访问器的可访问性可能不同，所以布尔值指示属性是否具有单独的 get 和 set 访问器，如果是，则指示它们是否具有相同的可访问性。 如果只有一个访问器，或者 get 和 set 访问器具有相同的可访问性，则 `access` 变量指示整个属性的可访问性。 否则，get 和 set 访问器的可访问性由 `getAccess` 和 `setAccess` 变量所指示的可访问性来指示。
+<span data-ttu-id="83bcc-162">以下示例为 <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> 类定义了两个 `Deconstruct` 扩展方法。</span><span class="sxs-lookup"><span data-stu-id="83bcc-162">The following example defines two `Deconstruct` extension methods for the <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="83bcc-163">第一个方法返回一组值，指示属性的特征，包括其类型、是静态还是实例、是否为只读，以及是否已编制索引。</span><span class="sxs-lookup"><span data-stu-id="83bcc-163">The first returns a set of values that indicate the characteristics of the property, including its type, whether it's static or instance, whether it's read-only, and whether it's indexed.</span></span> <span data-ttu-id="83bcc-164">第二个方法指示属性的可访问性。</span><span class="sxs-lookup"><span data-stu-id="83bcc-164">The second indicates the property's accessibility.</span></span> <span data-ttu-id="83bcc-165">因为 get 和 set 访问器的可访问性可能不同，所以布尔值指示属性是否具有单独的 get 和 set 访问器，如果是，则指示它们是否具有相同的可访问性。</span><span class="sxs-lookup"><span data-stu-id="83bcc-165">Because the accessibility of get and set accessors can differ, Boolean values indicate whether the property has separate get and set accessors and, if it does, whether they have the same accessibility.</span></span> <span data-ttu-id="83bcc-166">如果只有一个访问器，或者 get 和 set 访问器具有相同的可访问性，则 `access` 变量指示整个属性的可访问性。</span><span class="sxs-lookup"><span data-stu-id="83bcc-166">If there is only one accessor or both the get and the set accessor have the same accessibility, the `access` variable indicates the accessibility of the property as a whole.</span></span> <span data-ttu-id="83bcc-167">否则，get 和 set 访问器的可访问性由 `getAccess` 和 `setAccess` 变量所指示的可访问性来指示。</span><span class="sxs-lookup"><span data-stu-id="83bcc-167">Otherwise, the accessibility of the get and set accessors are indicated by the accessaccessibility is indicated by the `getAccess` and `setAccess` variables.</span></span>
 
-[!code-csharp[扩展-析构](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
+[!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
-## <a name="see-also"></a>请参阅
-[放弃](discards.md)   
-[元组](tuples.md)  
-
+## <a name="see-also"></a><span data-ttu-id="83bcc-168">请参阅</span><span class="sxs-lookup"><span data-stu-id="83bcc-168">See also</span></span>
+<span data-ttu-id="83bcc-169">[放弃](discards.md) </span><span class="sxs-lookup"><span data-stu-id="83bcc-169">[Discards](discards.md) </span></span>  
+[<span data-ttu-id="83bcc-170">元组</span><span class="sxs-lookup"><span data-stu-id="83bcc-170">Tuples</span></span>](tuples.md)  

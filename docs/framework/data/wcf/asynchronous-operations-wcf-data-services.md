@@ -1,47 +1,50 @@
 ---
-title: "异步操作（WCF 数据服务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "异步操作 [WCF 数据服务]"
-  - "WCF 数据服务, 异步操作"
-  - "WCF 数据服务, 客户端库"
+title: "异步操作（WCF 数据服务）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, asynchronous operations
+- asynchronous operations [WCF Data Services]
+- WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c1fc4b2f02c5b07df71ccf78ade4904297583f7e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 异步操作（WCF 数据服务）
-与内部网络中运行的应用程序相比，Web 应用程序必须适应客户端与服务器之间更长时间的延迟。  若要优化应用程序的性能和用户体验，建议您在通过 Web 访问 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 服务器时使用 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601> 类的异步方法。  
+# <a name="asynchronous-operations-wcf-data-services"></a><span data-ttu-id="cace7-102">异步操作（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="cace7-102">Asynchronous Operations (WCF Data Services)</span></span>
+<span data-ttu-id="cace7-103">与内部网络中运行的应用程序相比，Web 应用程序必须适应客户端与服务器之间更长时间的延迟。</span><span class="sxs-lookup"><span data-stu-id="cace7-103">Web applications must accommodate higher latency between client and server than applications that run inside internal networks.</span></span> <span data-ttu-id="cace7-104">若要优化应用程序的性能和用户体验，建议您在通过 Web 访问 <xref:System.Data.Services.Client.DataServiceContext> 服务器时使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 和 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 类的异步方法。</span><span class="sxs-lookup"><span data-stu-id="cace7-104">To optimize the performance and user experience of your application, we recommend using the asynchronous methods of the <xref:System.Data.Services.Client.DataServiceContext> and <xref:System.Data.Services.Client.DataServiceQuery%601> classes when accessing [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] servers over the Web.</span></span>  
   
- 尽管 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 服务器异步处理 HTTP 请求，但是 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库的某些方法是同步的，并且会一直等到整个请求\-响应交换完成后才会继续执行。  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库的异步方法不会等待此交换完成，并且允许应用程序同时保持具有响应能力的用户界面。  
+ <span data-ttu-id="cace7-105">尽管 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 服务器异步处理 HTTP 请求，但是 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库的某些方法是同步的，并且会一直等到整个请求-响应交换完成后才会继续执行。</span><span class="sxs-lookup"><span data-stu-id="cace7-105">Although the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] servers process HTTP requests asynchronously, some methods of the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client libraries are synchronous and wait until the entire request-response exchange is completed before continuing execution.</span></span> <span data-ttu-id="cace7-106">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库的异步方法不会等待此交换完成，并且允许应用程序同时保持具有响应能力的用户界面。</span><span class="sxs-lookup"><span data-stu-id="cace7-106">The asynchronous methods of the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client libraries do not wait for this exchange to complete and can allow your application to maintain a responsive user interface in the meantime.</span></span>  
   
- 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601> 类的一对方法（分别以 *Begin* 和 *End* 开头），可以执行异步操作。  *Begin* 方法注册一个委托，服务将在操作完成时调用该委托。  应在注册的委托中调用 *End* 方法以处理来自已完成操作的回调。  在调用 *End* 方法以完成异步操作时，必须从用于开始该操作的那个 <xref:System.Data.Services.Client.DataServiceQuery%601> 或 <xref:System.Data.Services.Client.DataServiceContext> 实例进行调用。  每个 *Begin* 方法采用一个 `state` 参数，该参数可将一个状态对象传递给回调。  此状态对象是从 <xref:System.IAsyncResult> 中检索的，后者随回调提供，用于调用对应的 *End* 方法以完成异步操作。  例如，如果在对 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例调用 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 方法时提供该实例作为 `state` 参数，那么 <xref:System.IAsyncResult> 将返回同一个 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例。  随后将使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 的这个实例调用 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法以完成查询操作。  有关详细信息，请参阅[如何：执行异步数据服务查询](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)。  
+ <span data-ttu-id="cace7-107">你可以通过使用成对的方法上执行异步操作<xref:System.Data.Services.Client.DataServiceContext>和<xref:System.Data.Services.Client.DataServiceQuery%601>开头的类*开始*和*结束*分别。</span><span class="sxs-lookup"><span data-stu-id="cace7-107">You can perform asynchronous operations by using a pair of methods on the <xref:System.Data.Services.Client.DataServiceContext> and <xref:System.Data.Services.Client.DataServiceQuery%601> classes that start with *Begin* and *End* respectively.</span></span> <span data-ttu-id="cace7-108">*开始*方法注册服务时，才完成操作调用的委托。</span><span class="sxs-lookup"><span data-stu-id="cace7-108">The *Begin* methods register a delegate that the service calls when the operation is complete.</span></span> <span data-ttu-id="cace7-109">*结束*应注册用于处理来自已完成的操作的回调委托中调用方法。</span><span class="sxs-lookup"><span data-stu-id="cace7-109">The *End* methods should be called in the delegate that is registered to handle the callback from the completed operations.</span></span> <span data-ttu-id="cace7-110">当调用*结束*方法以完成异步操作，则必须在执行从同一个<xref:System.Data.Services.Client.DataServiceQuery%601>或<xref:System.Data.Services.Client.DataServiceContext>用于开始操作的实例。</span><span class="sxs-lookup"><span data-stu-id="cace7-110">When you call the *End* method to complete an asynchronous operation, you must do so from the same <xref:System.Data.Services.Client.DataServiceQuery%601> or <xref:System.Data.Services.Client.DataServiceContext> instance that you used to begin the operation.</span></span> <span data-ttu-id="cace7-111">每个*开始*方法采用`state`可以将状态对象传递给回调的参数。</span><span class="sxs-lookup"><span data-stu-id="cace7-111">Each *Begin* method takes a `state` parameter that can pass a state object to the callback.</span></span> <span data-ttu-id="cace7-112">此状态对象从<xref:System.IAsyncResult>随回调提供，用于调用对应*结束*方法以完成异步操作。</span><span class="sxs-lookup"><span data-stu-id="cace7-112">This state object is retrieved from the <xref:System.IAsyncResult> that is supplied with the callback and is used to call the corresponding *End* method to complete the asynchronous operation.</span></span> <span data-ttu-id="cace7-113">例如，如果在对 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例调用 `state` 方法时提供该实例作为 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 参数，那么 <xref:System.Data.Services.Client.DataServiceQuery%601> 将返回同一个 <xref:System.IAsyncResult> 实例。</span><span class="sxs-lookup"><span data-stu-id="cace7-113">For example, when you supply the <xref:System.Data.Services.Client.DataServiceQuery%601> instance as the `state` parameter when you call the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method on the instance, the same <xref:System.Data.Services.Client.DataServiceQuery%601> instance is returned by the <xref:System.IAsyncResult>.</span></span> <span data-ttu-id="cace7-114">随后将使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 的这个实例调用 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法以完成查询操作。</span><span class="sxs-lookup"><span data-stu-id="cace7-114">This instance of <xref:System.Data.Services.Client.DataServiceQuery%601> is then used to call the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method to complete the query operation.</span></span> <span data-ttu-id="cace7-115">有关详细信息，请参阅[如何： 执行异步数据服务查询](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="cace7-115">For more information, see [How to: Execute Asynchronous Data Service Queries](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).</span></span>  
   
 > [!NOTE]
->  .NET Framework for Silverlight 中提供的客户端库仅支持异步操作。  有关更多信息，请参见 [WCF 数据服务 \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkID=143149)（可能为英文网页）。  
+>  <span data-ttu-id="cace7-116">.NET Framework for Silverlight 中提供的客户端库仅支持异步操作。</span><span class="sxs-lookup"><span data-stu-id="cace7-116">Only asynchronous operations are supported by the client libraries that are provided in the .NET Framework for Silverlight.</span></span> <span data-ttu-id="cace7-117">有关详细信息，请参阅[WCF 数据服务 (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)。</span><span class="sxs-lookup"><span data-stu-id="cace7-117">For more information, see [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149).</span></span>  
   
- .NET Framework 客户端库支持下列异步操作：  
+ <span data-ttu-id="cace7-118">.NET Framework 客户端库支持下列异步操作：</span><span class="sxs-lookup"><span data-stu-id="cace7-118">The .NET Framework client libraries support the following asynchronous operations:</span></span>  
   
-|操作|方法|  
-|--------|--------|  
-|执行 <xref:System.Data.Services.Client.DataServiceQuery%601>。|-   <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>|  
-|从 <xref:System.Data.Services.Client.DataServiceContext> 执行查询。|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>|  
-|从 <xref:System.Data.Services.Client.DataServiceContext> 执行批查询。|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecuteBatch%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecuteBatch%2A>|  
-|将相关实体加载到 <xref:System.Data.Services.Client.DataServiceContext> 中。|-   <xref:System.Data.Services.Client.DataServiceContext.BeginLoadProperty%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndLoadProperty%2A>|  
-|保存对 <xref:System.Data.Services.Client.DataServiceContext> 中对象的更改|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
+|<span data-ttu-id="cace7-119">操作</span><span class="sxs-lookup"><span data-stu-id="cace7-119">Operation</span></span>|<span data-ttu-id="cace7-120">方法</span><span class="sxs-lookup"><span data-stu-id="cace7-120">Methods</span></span>|  
+|---------------|-------------|  
+|<span data-ttu-id="cace7-121">执行 <xref:System.Data.Services.Client.DataServiceQuery%601>。</span><span class="sxs-lookup"><span data-stu-id="cace7-121">Executing a <xref:System.Data.Services.Client.DataServiceQuery%601>.</span></span>|-   <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>|  
+|<span data-ttu-id="cace7-122">从 <xref:System.Data.Services.Client.DataServiceContext> 执行查询。</span><span class="sxs-lookup"><span data-stu-id="cace7-122">Executing a query from the <xref:System.Data.Services.Client.DataServiceContext>.</span></span>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>|  
+|<span data-ttu-id="cace7-123">从 <xref:System.Data.Services.Client.DataServiceContext> 执行批查询。</span><span class="sxs-lookup"><span data-stu-id="cace7-123">Executing a batch query from the <xref:System.Data.Services.Client.DataServiceContext>.</span></span>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecuteBatch%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecuteBatch%2A>|  
+|<span data-ttu-id="cace7-124">将相关实体加载到 <xref:System.Data.Services.Client.DataServiceContext> 中。</span><span class="sxs-lookup"><span data-stu-id="cace7-124">Loading a related entity into the <xref:System.Data.Services.Client.DataServiceContext>.</span></span>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginLoadProperty%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndLoadProperty%2A>|  
+|<span data-ttu-id="cace7-125">保存对 <xref:System.Data.Services.Client.DataServiceContext> 中对象的更改</span><span class="sxs-lookup"><span data-stu-id="cace7-125">Saving changes to objects in the <xref:System.Data.Services.Client.DataServiceContext></span></span>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
-## 异步操作的线程注意事项  
- 在多线程应用程序中，不一定会在用于调用 *Begin* 方法的那个线程（即创建初始请求的线程）中调用针对异步操作注册为回调的委托。  对于必须在特定线程中调用回调的应用程序，必须将处理响应的 *End* 方法的执行显式封送至所需线程。  例如，在基于 Windows Presentation Foundation \(WPF\) 的应用程序和基于 Silverlight 的应用程序中，必须通过对 <xref:System.Windows.Threading.Dispatcher> 对象使用 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 方法，将响应封送回 UI 线程。  有关详细信息，请参阅[Querying the Data Service \(WCF Data Services\/Silverlight\)](http://msdn.microsoft.com/zh-cn/3a7cdc07-c37e-4da2-b98b-c3763fd0970b)。  
+## <a name="threading-considerations-for-asynchronous-operations"></a><span data-ttu-id="cace7-126">异步操作的线程注意事项</span><span class="sxs-lookup"><span data-stu-id="cace7-126">Threading Considerations for Asynchronous Operations</span></span>  
+ <span data-ttu-id="cace7-127">在多线程应用程序中，注册为异步操作的回调调用委托时不一定在用于调用同一线程上*开始*方法，这将创建初始请求。</span><span class="sxs-lookup"><span data-stu-id="cace7-127">In a multi-threaded application, the delegate that is registered as a callback for the asynchronous operation is not necessarily invoked on the same thread that was used to call the *Begin* method, which creates the initial request.</span></span> <span data-ttu-id="cace7-128">在其中必须在特定线程中调用回调的应用，你必须显式封送的执行*结束*方法，用于处理对所需线程的响应。</span><span class="sxs-lookup"><span data-stu-id="cace7-128">In an application where the callback must be invoked on a specific thread, you must explicitly marshal the execution of the *End* method, which handles the response, to the desired thread.</span></span> <span data-ttu-id="cace7-129">例如，在基于 Windows Presentation Foundation (WPF) 的应用程序和基于 Silverlight 的应用程序中，必须通过对 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 对象使用 <xref:System.Windows.Threading.Dispatcher> 方法，将响应封送回 UI 线程。</span><span class="sxs-lookup"><span data-stu-id="cace7-129">For example, in Windows Presentation Foundation (WPF)-based applications and Silverlight-based applications, the response must be marshaled back to the UI thread by using the <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> method on the <xref:System.Windows.Threading.Dispatcher> object.</span></span> <span data-ttu-id="cace7-130">有关详细信息，请参阅[查询数据服务 (WCF 数据服务/Silverlight)](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b)。</span><span class="sxs-lookup"><span data-stu-id="cace7-130">For more information, see [Querying the Data Service (WCF Data Services/Silverlight)](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).</span></span>  
   
-## 请参阅  
- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="cace7-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cace7-131">See Also</span></span>  
+ [<span data-ttu-id="cace7-132">WCF Data Services 客户端库</span><span class="sxs-lookup"><span data-stu-id="cace7-132">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

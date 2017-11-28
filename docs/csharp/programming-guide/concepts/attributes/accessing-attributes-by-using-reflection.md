@@ -1,52 +1,43 @@
 ---
 title: "使用反射访问特性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 162bdd6b968def391a2f3413596ee8c2a8b01cc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36724c7b6a2a786aff837db5bcf2ad2ccfa39205
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="accessing-attributes-by-using-reflection-c"></a>使用反射访问特性 (C#)
-你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。 通过使用反射，可以检索通过自定义特性定义的信息。 主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。 此方法有多个重载版本。 有关详细信息，请参阅<xref:System.Attribute>。  
+# <a name="accessing-attributes-by-using-reflection-c"></a><span data-ttu-id="f738b-102">使用反射访问特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="f738b-102">Accessing Attributes by Using Reflection (C#)</span></span>
+<span data-ttu-id="f738b-103">你可以定义自定义特性并将其放入源代码中这一事实，在没有检索该信息并对其进行操作的方法的情况下将没有任何价值。</span><span class="sxs-lookup"><span data-stu-id="f738b-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="f738b-104">通过使用反射，可以检索通过自定义特性定义的信息。</span><span class="sxs-lookup"><span data-stu-id="f738b-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="f738b-105">主要方法是 `GetCustomAttributes`，它返回对象数组，这些对象在运行时等效于源代码特性。</span><span class="sxs-lookup"><span data-stu-id="f738b-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="f738b-106">此方法有多个重载版本。</span><span class="sxs-lookup"><span data-stu-id="f738b-106">This method has several overloaded versions.</span></span> <span data-ttu-id="f738b-107">有关详细信息，请参阅<xref:System.Attribute>。</span><span class="sxs-lookup"><span data-stu-id="f738b-107">For more information, see <xref:System.Attribute>.</span></span>  
   
- 特性规范，例如：  
+ <span data-ttu-id="f738b-108">特性规范，例如：</span><span class="sxs-lookup"><span data-stu-id="f738b-108">An attribute specification such as:</span></span>  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
 class SampleClass  
 ```  
   
- 在概念上等效于此：  
+ <span data-ttu-id="f738b-109">在概念上等效于此：</span><span class="sxs-lookup"><span data-stu-id="f738b-109">is conceptually equivalent to this:</span></span>  
   
 ```csharp  
 Author anonymousAuthorObject = new Author("P. Ackerman");  
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- 但是，在为特性查询 `SampleClass` 之前，代码将不会执行。 对 `SampleClass` 调用 `GetCustomAttributes` 会导致按上述方式构造并初始化一个 `Author` 对象。 如果该类具有其他特性，则将以类似方式构造其他特性对象。 然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。 之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。  
+ <span data-ttu-id="f738b-110">但是，在为特性查询 `SampleClass` 之前，代码将不会执行。</span><span class="sxs-lookup"><span data-stu-id="f738b-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="f738b-111">对 `SampleClass` 调用 `GetCustomAttributes` 会导致按上述方式构造并初始化一个 `Author` 对象。</span><span class="sxs-lookup"><span data-stu-id="f738b-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="f738b-112">如果该类具有其他特性，则将以类似方式构造其他特性对象。</span><span class="sxs-lookup"><span data-stu-id="f738b-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="f738b-113">然后 `GetCustomAttributes` 会以数组形式返回 `Author` 对象和任何其他特性对象。</span><span class="sxs-lookup"><span data-stu-id="f738b-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="f738b-114">之后你便可以循环访问此数组，根据每个数组元素的类型确定所应用的特性，并从特性对象中提取信息。</span><span class="sxs-lookup"><span data-stu-id="f738b-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
   
-## <a name="example"></a>示例  
- 此处是一个完整的示例。 定义自定义特性、将其应用于多个实体，并通过反射对其进行检索。  
+## <a name="example"></a><span data-ttu-id="f738b-115">示例</span><span class="sxs-lookup"><span data-stu-id="f738b-115">Example</span></span>  
+ <span data-ttu-id="f738b-116">此处是一个完整的示例。</span><span class="sxs-lookup"><span data-stu-id="f738b-116">Here is a complete example.</span></span> <span data-ttu-id="f738b-117">定义自定义特性、将其应用于多个实体，并通过反射对其进行检索。</span><span class="sxs-lookup"><span data-stu-id="f738b-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
   
 ```csharp  
 // Multiuse attribute.  
@@ -130,12 +121,11 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [检索存储在特性中的信息](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-
+## <a name="see-also"></a><span data-ttu-id="f738b-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f738b-118">See Also</span></span>  
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [<span data-ttu-id="f738b-119">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="f738b-119">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="f738b-120">检索存储在特性中的信息</span><span class="sxs-lookup"><span data-stu-id="f738b-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [<span data-ttu-id="f738b-121">反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="f738b-121">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="f738b-122">特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="f738b-122">Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [<span data-ttu-id="f738b-123">创建自定义特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="f738b-123">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

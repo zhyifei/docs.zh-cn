@@ -1,63 +1,44 @@
 ---
 title: "&lt;returns&gt;（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - returns
 - <returns>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0313e9584ae6a94469db17e15f8b6b509b8aebd5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a4001894ab9af104173088ca0110270f76bda8d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt;（C# 编程指南）
-## <a name="syntax"></a>语法  
+# <a name="ltreturnsgt-c-programming-guide"></a><span data-ttu-id="134e7-102">&lt;returns&gt;（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="134e7-102">&lt;returns&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="134e7-103">语法</span><span class="sxs-lookup"><span data-stu-id="134e7-103">Syntax</span></span>  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="134e7-104">参数</span><span class="sxs-lookup"><span data-stu-id="134e7-104">Parameters</span></span>  
  `description`  
- 返回值的说明。  
+ <span data-ttu-id="134e7-105">返回值的说明。</span><span class="sxs-lookup"><span data-stu-id="134e7-105">A description of the return value.</span></span>  
   
-## <a name="remarks"></a>备注  
- 在方法声明的注释中应使用 \<returns> 标记来描述返回值。  
+## <a name="remarks"></a><span data-ttu-id="134e7-106">备注</span><span class="sxs-lookup"><span data-stu-id="134e7-106">Remarks</span></span>  
+ <span data-ttu-id="134e7-107">在方法声明的注释中应使用 \<returns> 标记来描述返回值。</span><span class="sxs-lookup"><span data-stu-id="134e7-107">The \<returns> tag should be used in the comment for a method declaration to describe the return value.</span></span>  
   
- 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
+ <span data-ttu-id="134e7-108">使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="134e7-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+## <a name="example"></a><span data-ttu-id="134e7-109">示例</span><span class="sxs-lookup"><span data-stu-id="134e7-109">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
   
-## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="134e7-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="134e7-110">See Also</span></span>  
+ [<span data-ttu-id="134e7-111">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="134e7-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="134e7-112">建议的文档注释标记</span><span class="sxs-lookup"><span data-stu-id="134e7-112">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

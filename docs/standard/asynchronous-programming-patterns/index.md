@@ -12,31 +12,29 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET Framework
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="asynchronous-programming-patterns"></a><span data-ttu-id="cc6ce-102">异步编程模式</span><span class="sxs-lookup"><span data-stu-id="cc6ce-102">Asynchronous Programming Patterns</span></span>
 
-# <a name="asynchronous-programming-patterns"></a>异步编程模式
+<span data-ttu-id="cc6ce-103">.NET Framework 提供了执行异步操作的三种模式：</span><span class="sxs-lookup"><span data-stu-id="cc6ce-103">The .NET Framework provides three patterns for performing asynchronous operations:</span></span>  
+  
+- <span data-ttu-id="cc6ce-104">异步编程模型 (APM) 模式（也称 <xref:System.IAsyncResult> 模式），在此模式中异步操作需要 `Begin` 和 `End` 方法（比如用于异步写入操作的 `BeginWrite` 和 `EndWrite`）。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-104">Asynchronous Programming Model (APM) pattern (also called the <xref:System.IAsyncResult> pattern), where asynchronous operations require `Begin` and `End` methods (for example, `BeginWrite` and `EndWrite` for asynchronous write operations).</span></span> <span data-ttu-id="cc6ce-105">不建议新的开发使用此模式。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-105">This pattern is no longer recommended for new development.</span></span> <span data-ttu-id="cc6ce-106">有关详细信息，请参阅[异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-106">For more information, see [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).</span></span>  
+  
+- <span data-ttu-id="cc6ce-107">基于事件的异步模式 (EAP)，这种模式需要 `Async` 后缀，也需要一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-107">Event-based Asynchronous Pattern (EAP), which requires a method that has the `Async` suffix, and also requires one or more events, event handler delegate types, and `EventArg`-derived types.</span></span> <span data-ttu-id="cc6ce-108">EAP 是在 .NET Framework 2.0 中引入的。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-108">EAP was introduced in the .NET Framework 2.0.</span></span> <span data-ttu-id="cc6ce-109">不建议新的开发使用这种模式。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-109">It is no longer recommended for new development.</span></span> <span data-ttu-id="cc6ce-110">有关详细信息，请参阅[基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-110">For more information, see [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span></span>  
+  
+- <span data-ttu-id="cc6ce-111">基于任务的异步模式 (TAP) 使用一种方法来表示异步操作的启动和完成。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-111">Task-based Asynchronous Pattern (TAP), which uses a single method to represent the initiation and completion of an asynchronous operation.</span></span> <span data-ttu-id="cc6ce-112">TAP 是在 .NET Framework 4 中引入的，并且它是在 .NET Framework 中进行异步编程的推荐使用方法。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-112">TAP was introduced in the .NET Framework 4 and is the recommended approach to asynchronous programming in the .NET Framework.</span></span> <span data-ttu-id="cc6ce-113">C# 中的 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 关键词以及 Visual Basic 语言中的 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 运算符为 TAP 添加了语言支持。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-113">The [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) keywords in C# and the [Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) operators in Visual Basic Language add language support for TAP.</span></span> <span data-ttu-id="cc6ce-114">有关详细信息，请参阅[基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-114">For more information, see [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).</span></span>  
+  
+## <a name="comparing-patterns"></a><span data-ttu-id="cc6ce-115">比较模式</span><span class="sxs-lookup"><span data-stu-id="cc6ce-115">Comparing Patterns</span></span>  
 
-.NET Framework 提供了执行异步操作的三种模式：  
-  
-- 异步编程模型 (APM) 模式（也称 <xref:System.IAsyncResult> 模式），在此模式中异步操作需要 `Begin` 和 `End` 方法（比如用于异步写入操作的 `BeginWrite` 和 `EndWrite`）。 不建议新的开发使用此模式。 有关详细信息，请参阅[异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。  
-  
-- 基于事件的异步模式 (EAP)，这种模式需要 `Async` 后缀，也需要一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。 EAP 是在 .NET Framework 2.0 中引入的。 不建议新的开发使用这种模式。 有关详细信息，请参阅[基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  
-  
-- 基于任务的异步模式 (TAP) 使用一种方法来表示异步操作的启动和完成。 TAP 是在 .NET Framework 4 中引入的，并且它是在 .NET Framework 中进行异步编程的推荐使用方法。 C# 中的 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 关键词以及 Visual Basic 语言中的 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 运算符为 TAP 添加了语言支持。 有关详细信息，请参阅[基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
-  
-## <a name="comparing-patterns"></a>比较模式  
-
-为了快速比较这三种模式的异步操作方式，请考虑使用从指定偏移量处起将指定量数据读取到提供的缓冲区中的`Read`方法：  
+<span data-ttu-id="cc6ce-116">为了快速比较这三种模式的异步操作方式，请考虑使用从指定偏移量处起将指定量数据读取到提供的缓冲区中的`Read`方法：</span><span class="sxs-lookup"><span data-stu-id="cc6ce-116">For a quick comparison of how the three patterns model asynchronous operations, consider a `Read` method that reads a specified amount of data into a provided buffer starting at a specified offset:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -45,7 +43,7 @@ public class MyClass
 }  
 ```  
   
-此方法对应的 APM 将公开 `BeginRead` 和 `EndRead` 方法：  
+<span data-ttu-id="cc6ce-117">此方法对应的 APM 将公开 `BeginRead` 和 `EndRead` 方法：</span><span class="sxs-lookup"><span data-stu-id="cc6ce-117">The APM counterpart of this method would expose the `BeginRead` and `EndRead` methods:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -57,7 +55,7 @@ public class MyClass
 }  
 ```  
   
-对应的 EAP 将公开以下类型和成员的集：  
+<span data-ttu-id="cc6ce-118">对应的 EAP 将公开以下类型和成员的集：</span><span class="sxs-lookup"><span data-stu-id="cc6ce-118">The EAP counterpart would expose the following set of types and members:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -67,7 +65,7 @@ public class MyClass
 }  
 ```  
   
-对应的 TAP 将公开以下单个 `ReadAsync` 方法：  
+<span data-ttu-id="cc6ce-119">对应的 TAP 将公开以下单个 `ReadAsync` 方法：</span><span class="sxs-lookup"><span data-stu-id="cc6ce-119">The TAP counterpart would expose the following single `ReadAsync` method:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -76,19 +74,18 @@ public class MyClass
 }  
 ```  
   
-为了全面讨论 TAP、APM 和 EAP，请参阅下一节中提供的链接。  
+<span data-ttu-id="cc6ce-120">为了全面讨论 TAP、APM 和 EAP，请参阅下一节中提供的链接。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-120">For a comprehensive discussion of TAP, APM, and EAP, see the links provided in the next section.</span></span>  
   
-## <a name="related-topics"></a>相关主题
+## <a name="related-topics"></a><span data-ttu-id="cc6ce-121">相关主题</span><span class="sxs-lookup"><span data-stu-id="cc6ce-121">Related topics</span></span>
 
-| 标题 | 描述 |
+| <span data-ttu-id="cc6ce-122">标题</span><span class="sxs-lookup"><span data-stu-id="cc6ce-122">Title</span></span> | <span data-ttu-id="cc6ce-123">描述</span><span class="sxs-lookup"><span data-stu-id="cc6ce-123">Description</span></span> |
 | ----- | ----------- |
-| [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | 描述使用 <xref:System.IAsyncResult> 接口提供异步行为的旧模型。 不建议新的开发使用此模型。 |
-| [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | 描述提供异步行为的基于事件的旧模型。 不建议新的开发使用此模型。 |
-| [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | 描述基于 <xref:System.Threading.Tasks> 命名空间的新异步模式。 此模型是在 .NET Framework 4 及更高版本中进行异步编程的推荐使用方法。 |
+| [<span data-ttu-id="cc6ce-124">异步编程模型 (APM)</span><span class="sxs-lookup"><span data-stu-id="cc6ce-124">Asynchronous Programming Model (APM)</span></span>](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | <span data-ttu-id="cc6ce-125">描述使用 <xref:System.IAsyncResult> 接口提供异步行为的旧模型。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-125">Describes the legacy model that uses the <xref:System.IAsyncResult> interface to provide asynchronous behavior.</span></span> <span data-ttu-id="cc6ce-126">不建议新的开发使用此模型。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-126">This model is no longer recommended for new development.</span></span> |
+| [<span data-ttu-id="cc6ce-127">基于事件的异步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="cc6ce-127">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | <span data-ttu-id="cc6ce-128">描述提供异步行为的基于事件的旧模型。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-128">Describes the event-based legacy model for providing asynchronous behavior.</span></span> <span data-ttu-id="cc6ce-129">不建议新的开发使用此模型。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-129">This model is no longer recommended for new development.</span></span> |
+| [<span data-ttu-id="cc6ce-130">基于任务的异步模式 (TAP)</span><span class="sxs-lookup"><span data-stu-id="cc6ce-130">Task-based Asynchronous Pattern (TAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | <span data-ttu-id="cc6ce-131">描述基于 <xref:System.Threading.Tasks> 命名空间的新异步模式。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-131">Describes the new asynchronous pattern based on the <xref:System.Threading.Tasks> namespace.</span></span> <span data-ttu-id="cc6ce-132">此模型是在 .NET Framework 4 及更高版本中进行异步编程的推荐使用方法。</span><span class="sxs-lookup"><span data-stu-id="cc6ce-132">This model is the recommended approach to asynchronous programming in the .NET Framework 4 and later versions.</span></span> |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a><span data-ttu-id="cc6ce-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc6ce-133">See also</span></span>
 
-[C# 中的异步编程](~/docs/csharp/async.md)   
-[F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-[使用 Async 和 Await 的异步编程 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-
+<span data-ttu-id="cc6ce-134">[C# 中的异步编程](~/docs/csharp/async.md) </span><span class="sxs-lookup"><span data-stu-id="cc6ce-134">[Asynchronous programming in C#](~/docs/csharp/async.md) </span></span>  
+<span data-ttu-id="cc6ce-135">[F# 中的异步编程](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) </span><span class="sxs-lookup"><span data-stu-id="cc6ce-135">[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) </span></span>  
+[<span data-ttu-id="cc6ce-136">使用 Async 和 Await 的异步编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc6ce-136">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/concepts/async/index.md)

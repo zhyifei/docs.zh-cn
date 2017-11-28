@@ -1,27 +1,33 @@
 ---
-title: "管理 DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "管理 DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3cf89cd378d19b5de64a733e80ec757c7e3bdb89
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 管理 DataView
-可以使用 <xref:System.Data.DataViewManager> 来管理 <xref:System.Data.DataView> 中所有表的视图设置。  如果有一个控件（例如进行关系导航的网格）要绑定到多个表，**DataViewManager** 则是理想的选择。  
+# <a name="managing-dataviews"></a><span data-ttu-id="0ae27-102">管理 DataView</span><span class="sxs-lookup"><span data-stu-id="0ae27-102">Managing DataViews</span></span>
+<span data-ttu-id="0ae27-103">可以使用 <xref:System.Data.DataViewManager> 来管理 <xref:System.Data.DataView> 中所有表的视图设置。</span><span class="sxs-lookup"><span data-stu-id="0ae27-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="0ae27-104">如果你有想要绑定到多个表的控件，如网格进行关系导航**DataViewManager**是理想之选。</span><span class="sxs-lookup"><span data-stu-id="0ae27-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  
   
- **DataViewManager** 包含 <xref:System.Data.DataViewSetting> 对象的集合，这些对象用于设置 <xref:System.Data.DataSet> 中各表的视图设置。  对于 **DataSet** 中的每个表，<xref:System.Data.DataViewSettingCollection> 都包含一个 <xref:System.Data.DataViewSetting> 对象。  可以使用所引用表的 **DataViewSetting** 来设置该表的默认 **ApplyDefaultSort**、**Sort**、**RowFilter** 和 **RowStateFilter** 属性。  可以按名称或序号引用或通过向特定表对象传递引用来引用该特定表的 **DataViewSetting**。  可以使用 **DataViewSettings** 属性来访问 **DataViewManager** 中 **DataViewSetting** 对象的集合。  
+ <span data-ttu-id="0ae27-105">**DataViewManager**包含一套<xref:System.Data.DataViewSetting>用于设置中的表的视图设置的对象<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="0ae27-105">The **DataViewManager** contains a collection of <xref:System.Data.DataViewSetting> objects that are used to set the view setting of the tables in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="0ae27-106"><xref:System.Data.DataViewSettingCollection>包含一个<xref:System.Data.DataViewSetting>每个表中的对象**数据集**。</span><span class="sxs-lookup"><span data-stu-id="0ae27-106">The <xref:System.Data.DataViewSettingCollection> contains one <xref:System.Data.DataViewSetting> object for each table in a **DataSet**.</span></span> <span data-ttu-id="0ae27-107">你可以设置默认值**ApplyDefaultSort**，**排序**， **RowFilter**，和**RowStateFilter**所引用表的属性使用其**DataViewSetting**。</span><span class="sxs-lookup"><span data-stu-id="0ae27-107">You can set the default **ApplyDefaultSort**, **Sort**, **RowFilter**, and **RowStateFilter** properties of the referenced table by using its **DataViewSetting**.</span></span> <span data-ttu-id="0ae27-108">你可以引用**DataViewSetting**为特定表按名称或序号引用，或者通过将传递给该特定表对象的引用。</span><span class="sxs-lookup"><span data-stu-id="0ae27-108">You can reference the **DataViewSetting** for a particular table by name or ordinal reference, or by passing a reference to that specific table object.</span></span> <span data-ttu-id="0ae27-109">你可以访问的集合**DataViewSetting**中的对象**DataViewManager**使用**Dataviewsetting**属性。</span><span class="sxs-lookup"><span data-stu-id="0ae27-109">You can access the collection of **DataViewSetting** objects in a **DataViewManager** by using the **DataViewSettings** property.</span></span>  
   
- 以下代码示例使用 SQL Server **Northwind** 数据库的 **Customers** 表、**Orders** 表和 **Order Details** 表来填充 **DataSet**，创建表之间的关系，使用 **DataViewManager** 设置默认 **DataView** 设置，并将 **DataGrid** 绑定到 **DataViewManager**。  该示例将 **DataSet** 中所有表的默认 **DataView** 设置设为按表的主键进行排序 \(**ApplyDefaultSort** \= **true**\)，然后将 **Customers** 表的排序顺序修改为按 **CompanyName** 排序。  
+ <span data-ttu-id="0ae27-110">以下代码示例填充**数据集**与 SQL Server **Northwind**数据库表**客户**，**订单**，和**订单明细**、 创建表之间的关系，然后使用**DataViewManager** ，来设置默认**DataView**设置和绑定**DataGrid**到**DataViewManager**。</span><span class="sxs-lookup"><span data-stu-id="0ae27-110">The following code example fills a **DataSet** with the SQL Server **Northwind** database tables **Customers**, **Orders**, and **Order Details**, creates the relationships between the tables, uses a **DataViewManager** to set default **DataView** settings, and binds a **DataGrid** to the **DataViewManager**.</span></span> <span data-ttu-id="0ae27-111">该示例设置的默认**DataView**中的所有表设置**数据集**要作为排序依据表的主键 (**ApplyDefaultSort**  =  **true**)，然后修改的排序顺序**客户**表要作为排序依据**CompanyName**。</span><span class="sxs-lookup"><span data-stu-id="0ae27-111">The example sets the default **DataView** settings for all tables in the **DataSet** to sort by the primary key of the table (**ApplyDefaultSort** = **true**), and then modifies the sort order of the **Customers** table to sort by **CompanyName**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -72,7 +78,6 @@ viewManager.DataViewSettings("Customers").Sort = "CompanyName"
 ' Bind to a DataGrid.  
 Dim grid As System.Windows.Forms.DataGrid = New System.Windows.Forms.DataGrid()  
 grid.SetDataBinding(viewManager, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -124,10 +129,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataViewManager>   
- <xref:System.Data.DataViewSetting>   
- <xref:System.Data.DataViewSettingCollection>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="0ae27-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0ae27-112">See Also</span></span>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataViewManager>  
+ <xref:System.Data.DataViewSetting>  
+ <xref:System.Data.DataViewSettingCollection>  
+ [<span data-ttu-id="0ae27-113">数据视图</span><span class="sxs-lookup"><span data-stu-id="0ae27-113">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="0ae27-114">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="0ae27-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

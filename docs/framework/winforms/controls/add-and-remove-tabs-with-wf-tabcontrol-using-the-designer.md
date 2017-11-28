@@ -1,48 +1,49 @@
 ---
-title: "如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "选项卡页"
-  - "TabPage 控件"
-  - "TabPage 控件 [Windows 窗体], 添加和移除选项卡"
-  - "选项卡, 添加到页"
-  - "选项卡, 从页中移除"
+title: "如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tabs [Windows Forms], removing from pages
+- TabPage control
+- TabPage control [Windows Forms], adding and removing tabs
+- tabs [Windows Forms], adding to pages
+- tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02bcf434baee0c27ca2674817df0e4033effb125
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡
-<xref:System.Windows.Forms.TabControl> 控件在放置到窗体上时默认包含两个选项卡。  可以使用设计器来添加或移除选项卡。  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a><span data-ttu-id="b69ea-102">如何：使用设计器用 Windows 窗体 TabControl 添加和移除选项卡</span><span class="sxs-lookup"><span data-stu-id="b69ea-102">How to: Add and Remove Tabs with the Windows Forms TabControl Using the Designer</span></span>
+<span data-ttu-id="b69ea-103">当你将放置<xref:System.Windows.Forms.TabControl>控制窗体中，它包含两个选项卡默认情况下。</span><span class="sxs-lookup"><span data-stu-id="b69ea-103">When you place a <xref:System.Windows.Forms.TabControl> control on your form, it contains two tabs by default.</span></span> <span data-ttu-id="b69ea-104">你可以添加或移除使用设计器的选项卡。</span><span class="sxs-lookup"><span data-stu-id="b69ea-104">You can add or remove tabs using the designer.</span></span>  
   
- 下面的过程需要一个**“Windows 应用程序”**项目，该项目拥有一个包含 <xref:System.Windows.Forms.TabControl> 控件的窗体。  有关设置此类项目的信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ <span data-ttu-id="b69ea-105">下面的过程需要**Windows 应用程序**具有一个窗体包含项目<xref:System.Windows.Forms.TabControl>控件。</span><span class="sxs-lookup"><span data-stu-id="b69ea-105">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TabControl> control.</span></span> <span data-ttu-id="b69ea-106">有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="b69ea-106">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="b69ea-107">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="b69ea-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="b69ea-108">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="b69ea-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="b69ea-109">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="b69ea-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 使用设计器添加或移除选项卡  
+### <a name="to-add-or-remove-a-tab-using-the-designer"></a><span data-ttu-id="b69ea-110">若要添加或删除使用设计器的选项卡</span><span class="sxs-lookup"><span data-stu-id="b69ea-110">To add or remove a tab using the designer</span></span>  
   
--   在控件的智能标记上，单击**“添加选项卡”**或**“移除选项卡”**  
+-   <span data-ttu-id="b69ea-111">在控件的智能标记上，单击**添加选项卡**或**删除选项卡**</span><span class="sxs-lookup"><span data-stu-id="b69ea-111">On the control's smart tag, click **Add Tab** or **Remove Tab**</span></span>  
   
-     \- 或 \-  
+     <span data-ttu-id="b69ea-112">- 或 -</span><span class="sxs-lookup"><span data-stu-id="b69ea-112">-or-</span></span>  
   
-     在**“属性”**窗口中，单击 <xref:System.Windows.Forms.TabControl.TabPages%2A> 属性旁边的**“省略号”**按钮 \(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) 以打开**“TabPage 集合编辑器”**。  单击**“添加”**或**“移除”**按钮。  
+     <span data-ttu-id="b69ea-113">在**属性**窗口中，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TabControl.TabPages%2A>以打开**TabPage 集合编辑器**。</span><span class="sxs-lookup"><span data-stu-id="b69ea-113">In the **Properties** window, click the **Ellipsis** button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.TabControl.TabPages%2A> property to open the **TabPage Collection Editor**.</span></span> <span data-ttu-id="b69ea-114">单击**添加**或**删除**按钮。</span><span class="sxs-lookup"><span data-stu-id="b69ea-114">Click the **Add** or **Remove** button.</span></span>  
   
-## 请参阅  
- [TabControl 控件](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)   
- [TabControl 控件概述](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [如何：将控件添加到选项卡页](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [如何：禁用选项卡页](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [如何：更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="b69ea-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b69ea-115">See Also</span></span>  
+ [<span data-ttu-id="b69ea-116">TabControl 控件</span><span class="sxs-lookup"><span data-stu-id="b69ea-116">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [<span data-ttu-id="b69ea-117">TabControl 控件概述</span><span class="sxs-lookup"><span data-stu-id="b69ea-117">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="b69ea-118">如何：向选项卡页添加控件</span><span class="sxs-lookup"><span data-stu-id="b69ea-118">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="b69ea-119">如何：禁用选项卡页</span><span class="sxs-lookup"><span data-stu-id="b69ea-119">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="b69ea-120">如何：更改 Windows 窗体 TabControl 控件的外观</span><span class="sxs-lookup"><span data-stu-id="b69ea-120">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

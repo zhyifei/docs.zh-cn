@@ -1,61 +1,42 @@
 ---
 title: "await（C# 参考）"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- await_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 28be25d2f467ea5df4de50516bfa03347c77081e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="await-c-reference"></a>await（C# 参考）
-`await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。 任务表示正在进行的工作。  
+# <a name="await-c-reference"></a><span data-ttu-id="6a478-102">await（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="6a478-102">await (C# Reference)</span></span>
+<span data-ttu-id="6a478-103">`await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。</span><span class="sxs-lookup"><span data-stu-id="6a478-103">The `await` operator is applied to a task in an asynchronous method to insert a suspension point in the execution of the method until the awaited task completes.</span></span> <span data-ttu-id="6a478-104">任务表示正在进行的工作。</span><span class="sxs-lookup"><span data-stu-id="6a478-104">The task represents ongoing work.</span></span>  
   
-`await` 仅可用于由 [async](../../../csharp/language-reference/keywords/async.md) 关键字修改的异步方法中。 使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法。  
+<span data-ttu-id="6a478-105">`await` 仅可用于由 [async](../../../csharp/language-reference/keywords/async.md) 关键字修改的异步方法中。</span><span class="sxs-lookup"><span data-stu-id="6a478-105">`await` can only be used in an asynchronous method modified by the [async](../../../csharp/language-reference/keywords/async.md) keyword.</span></span> <span data-ttu-id="6a478-106">使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法。</span><span class="sxs-lookup"><span data-stu-id="6a478-106">Such a method, defined by using the `async` modifier and usually containing one or more `await` expressions, is referred to as an *async method*.</span></span>  
   
 > [!NOTE]
->  `async` 和 `await` 关键字是在 C# 5 中引入的。 有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。  
+>  <span data-ttu-id="6a478-107">`async` 和 `await` 关键字是在 C# 5 中引入的。</span><span class="sxs-lookup"><span data-stu-id="6a478-107">The `async` and `await` keywords were introduced in C# 5.</span></span> <span data-ttu-id="6a478-108">有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6a478-108">For an introduction to async programming, see [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md).</span></span>  
   
-应用 `await` 运算符的任务通常由实现[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法调用返回。 包括返回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 `System.Threading.Tasks.ValueType<TResult>` 对象的方法。  
+<span data-ttu-id="6a478-109">应用 `await` 运算符的任务通常由实现[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法调用返回。</span><span class="sxs-lookup"><span data-stu-id="6a478-109">The task to which the `await` operator is applied typically is returned by a call to a method that implements the [Task-Based Asynchronous Pattern](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).</span></span> <span data-ttu-id="6a478-110">包括返回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 `System.Threading.Tasks.ValueType<TResult>` 对象的方法。</span><span class="sxs-lookup"><span data-stu-id="6a478-110">They include methods that return <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, and `System.Threading.Tasks.ValueType<TResult>` objects.</span></span>  
 
   
- 如下示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=fullName> 方法返回 `Task<byte[]>`。 当任务完成时，任务约定生成实际字节数组。 `await` 运算符挂起执行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法完成其操作。 同时，控制权会返回给 `GetPageSizeAsync` 的调用方。 任务结束执行时，`await` 表达式的计算结果为字节数组。  
+ <span data-ttu-id="6a478-111">如下示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法返回 `Task<byte[]>`。</span><span class="sxs-lookup"><span data-stu-id="6a478-111">In the following example, the <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> method returns a `Task<byte[]>`.</span></span> <span data-ttu-id="6a478-112">当任务完成时，任务约定生成实际字节数组。</span><span class="sxs-lookup"><span data-stu-id="6a478-112">The task is a promise to produce the actual byte array when the task is complete.</span></span> <span data-ttu-id="6a478-113">`await` 运算符挂起执行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法完成其操作。</span><span class="sxs-lookup"><span data-stu-id="6a478-113">The `await` operator suspends execution until the work of the <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> method is complete.</span></span> <span data-ttu-id="6a478-114">同时，控制权会返回给 `GetPageSizeAsync` 的调用方。</span><span class="sxs-lookup"><span data-stu-id="6a478-114">In the meantime, control is returned to the caller of `GetPageSizeAsync`.</span></span> <span data-ttu-id="6a478-115">任务结束执行时，`await` 表达式的计算结果为字节数组。</span><span class="sxs-lookup"><span data-stu-id="6a478-115">When the task finishes execution, the `await` expression evaluates to a byte array.</span></span>  
 
-[!code-cs[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  有关完整示例，请参阅[演练：使用 async 和 await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
+>  <span data-ttu-id="6a478-116">有关完整示例，请参阅[演练：使用 async 和 await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。</span><span class="sxs-lookup"><span data-stu-id="6a478-116">For the complete example, see [Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="6a478-117">可以从 Microsoft 网站的[开发者代码示例](http://go.microsoft.com/fwlink/?LinkID=255191)中下载示例。</span><span class="sxs-lookup"><span data-stu-id="6a478-117">You can download the sample from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkID=255191) on the Microsoft website.</span></span> <span data-ttu-id="6a478-118">该示例处于 AsyncWalkthrough_HttpClient 项目中。</span><span class="sxs-lookup"><span data-stu-id="6a478-118">The example is in the AsyncWalkthrough_HttpClient project.</span></span>  
   
-如前一示例所示，如果 `await` 应用于返回 `Task<TResult>` 的方法调用的结果，则 `await` 表达式的类型为 `TResult`。 如果 `await` 应用于返回 `Task` 的方法调用的结果，则 `await` 表达式的类型为 `void`。 以下示例演示了差异。  
+<span data-ttu-id="6a478-119">如前一示例所示，如果 `await` 应用于返回 `Task<TResult>` 的方法调用的结果，则 `await` 表达式的类型为 `TResult`。</span><span class="sxs-lookup"><span data-stu-id="6a478-119">As shown in the previous example, if `await` is applied to the result of a method call that returns a `Task<TResult>`, then the type of the `await` expression is `TResult`.</span></span> <span data-ttu-id="6a478-120">如果 `await` 应用于返回 `Task` 的方法调用的结果，则 `await` 表达式的类型为 `void`。</span><span class="sxs-lookup"><span data-stu-id="6a478-120">If `await` is applied to the result of a method call that returns a `Task`, then the type of the `await` expression is `void`.</span></span> <span data-ttu-id="6a478-121">以下示例演示了差异。</span><span class="sxs-lookup"><span data-stu-id="6a478-121">The following example illustrates the difference.</span></span>  
   
 ```csharp  
 // await keyword used with a method that returns a Task<TResult>.  
@@ -68,30 +49,29 @@ await AsyncMethodThatReturnsTask();
 TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 ```  
   
-`await` 表达式不阻止正在执行它的线程。 而是使编译器将剩下的异步方法注册为等待任务的延续任务。 控制权随后会返回给异步方法的调用方。 任务完成时，它会调用其延续任务，异步方法的执行会在暂停的位置处恢复。  
+<span data-ttu-id="6a478-122">`await` 表达式不阻止正在执行它的线程。</span><span class="sxs-lookup"><span data-stu-id="6a478-122">An `await` expression does not block the thread on which it is executing.</span></span> <span data-ttu-id="6a478-123">而是使编译器将剩下的异步方法注册为等待任务的延续任务。</span><span class="sxs-lookup"><span data-stu-id="6a478-123">Instead, it causes the compiler to sign up the rest of the async method as a continuation on the awaited task.</span></span> <span data-ttu-id="6a478-124">控制权随后会返回给异步方法的调用方。</span><span class="sxs-lookup"><span data-stu-id="6a478-124">Control then returns to the caller of the async method.</span></span> <span data-ttu-id="6a478-125">任务完成时，它会调用其延续任务，异步方法的执行会在暂停的位置处恢复。</span><span class="sxs-lookup"><span data-stu-id="6a478-125">When the task completes, it invokes its continuation, and execution of the async method resumes where it left off.</span></span>  
   
-`await` 表达式只能在由 `async` 修饰符标记的封闭方法体、lambda 表达式或异步方法中出现。 术语 await 在该上下文中仅用作关键字。 在其他位置，它会解释为标识符。 在方法、Lambda 表达式或匿名方法中，`await` 表达式不能在同步函数体、查询表达式、[lock 语句](../../../csharp/language-reference/keywords/lock-statement.md)块或[不安全](../../../csharp/language-reference/keywords/unsafe.md)上下文中出现。  
+<span data-ttu-id="6a478-126">`await` 表达式只能在由 `async` 修饰符标记的封闭方法体、lambda 表达式或异步方法中出现。</span><span class="sxs-lookup"><span data-stu-id="6a478-126">An `await` expression can occur only in the body of its enclosing method, lambda expression, or anonymous method, which must be marked with an `async` modifier.</span></span> <span data-ttu-id="6a478-127">术语 await 在该上下文中仅用作关键字。</span><span class="sxs-lookup"><span data-stu-id="6a478-127">The term *await* serves as a keyword only in that context.</span></span> <span data-ttu-id="6a478-128">在其他位置，它会解释为标识符。</span><span class="sxs-lookup"><span data-stu-id="6a478-128">Elsewhere, it is interpreted as an identifier.</span></span> <span data-ttu-id="6a478-129">在方法、Lambda 表达式或匿名方法中，`await` 表达式不能在同步函数体、查询表达式、[lock 语句](../../../csharp/language-reference/keywords/lock-statement.md)块或[不安全](../../../csharp/language-reference/keywords/unsafe.md)上下文中出现。</span><span class="sxs-lookup"><span data-stu-id="6a478-129">Within the method, lambda expression, or anonymous method, an `await` expression cannot occur in the body of a synchronous function, in a query expression, in the block of a [lock statement](../../../csharp/language-reference/keywords/lock-statement.md), or in an [unsafe](../../../csharp/language-reference/keywords/unsafe.md) context.</span></span>  
   
-## <a name="exceptions"></a>异常  
-大多数异步方法返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 返回任务的属性携带有关其状态和历史记录的信息，如任务是否完成、异步方法是否导致异常或已取消以及最终结果是什么。 `await` 运算符通过在由 `GetAwaiter` 方法返回的对象上调用方法来访问那些属性。  
+## <a name="exceptions"></a><span data-ttu-id="6a478-130">异常</span><span class="sxs-lookup"><span data-stu-id="6a478-130">Exceptions</span></span>  
+<span data-ttu-id="6a478-131">大多数异步方法返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="6a478-131">Most async methods return a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="6a478-132">返回任务的属性携带有关其状态和历史记录的信息，如任务是否完成、异步方法是否导致异常或已取消以及最终结果是什么。</span><span class="sxs-lookup"><span data-stu-id="6a478-132">The properties of the returned task carry information about its status and history, such as whether the task is complete, whether the async method caused an exception or was canceled, and what the final result is.</span></span> <span data-ttu-id="6a478-133">`await` 运算符通过在由 `GetAwaiter` 方法返回的对象上调用方法来访问那些属性。</span><span class="sxs-lookup"><span data-stu-id="6a478-133">The `await` operator accesses those properties by calling methods on the object returned by the `GetAwaiter` method.</span></span>  
   
-如果等待的返回任务的异步方法会导致异常，则 `await` 运算符重新引发异常。  
+<span data-ttu-id="6a478-134">如果等待的返回任务的异步方法会导致异常，则 `await` 运算符重新引发异常。</span><span class="sxs-lookup"><span data-stu-id="6a478-134">If you await a task-returning async method that causes an exception, the `await` operator rethrows the exception.</span></span>  
   
-如果等待的任务返回异步方法取消，则 `await` 运算符会重新引发 <xref:System.OperationCanceledException>。  
+<span data-ttu-id="6a478-135">如果等待的任务返回异步方法取消，则 `await` 运算符会重新引发 <xref:System.OperationCanceledException>。</span><span class="sxs-lookup"><span data-stu-id="6a478-135">If you await a task-returning async method that's canceled, the `await` operator rethrows an <xref:System.OperationCanceledException>.</span></span>  
   
-处于故障状态的单个任务可以反映多个异常。 例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 调用的结果。 等待此类任务时，等待操作仅重新引发异常之一。 但是，无法预测重新引发的异常。  
+<span data-ttu-id="6a478-136">处于故障状态的单个任务可以反映多个异常。</span><span class="sxs-lookup"><span data-stu-id="6a478-136">A single task that is in a faulted state can reflect multiple exceptions.</span></span> <span data-ttu-id="6a478-137">例如，任务可能是对 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 调用的结果。</span><span class="sxs-lookup"><span data-stu-id="6a478-137">For example, the task might be the result of a call to <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6a478-138">等待此类任务时，等待操作仅重新引发异常之一。</span><span class="sxs-lookup"><span data-stu-id="6a478-138">When you await such a task, the await operation rethrows only one of the exceptions.</span></span> <span data-ttu-id="6a478-139">但是，无法预测重新引发的异常。</span><span class="sxs-lookup"><span data-stu-id="6a478-139">However, you can't predict which of the exceptions is rethrown.</span></span>  
   
-有关异步方法中的错误处理的示例，请参阅 [try catch](../../../csharp/language-reference/keywords/try-catch.md)。  
+<span data-ttu-id="6a478-140">有关异步方法中的错误处理的示例，请参阅 [try catch](../../../csharp/language-reference/keywords/try-catch.md)。</span><span class="sxs-lookup"><span data-stu-id="6a478-140">For examples of error handling in async methods, see [try-catch](../../../csharp/language-reference/keywords/try-catch.md).</span></span>  
   
-## <a name="example"></a>示例  
-下面的示例返回页面（页面 URL 作为命令行参数传递给页面）中的字符总数。 此示例调用 `GetPageLengthsAsync` 方法，此方法标记有 `async` 关键字。 而 `GetPageLengthsAsync` 方法使用 `await` 关键字等待对 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=fullName> 方法的调用。  
+## <a name="example"></a><span data-ttu-id="6a478-141">示例</span><span class="sxs-lookup"><span data-stu-id="6a478-141">Example</span></span>  
+<span data-ttu-id="6a478-142">下面的示例返回页面（页面 URL 作为命令行参数传递给页面）中的字符总数。</span><span class="sxs-lookup"><span data-stu-id="6a478-142">The following example returns the total number of characters in the pages whose URLs are passed to it as command line arguments.</span></span> <span data-ttu-id="6a478-143">此示例调用 `GetPageLengthsAsync` 方法，此方法标记有 `async` 关键字。</span><span class="sxs-lookup"><span data-stu-id="6a478-143">The example calls the `GetPageLengthsAsync` method, which is marked with the `async` keyword.</span></span> <span data-ttu-id="6a478-144">而 `GetPageLengthsAsync` 方法使用 `await` 关键字等待对 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> 方法的调用。</span><span class="sxs-lookup"><span data-stu-id="6a478-144">The `GetPageLengthsAsync` method in turn uses the `await` keyword to await calls to the <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> method.</span></span>  
 
-[!code-cs[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-由于不支持在应用程序入口点中使用 `async` 和`await`，因此我们无法将 `async` 属性应用到 `Main` 方法，也无法等待 `GetPageLengthsAsync` 方法调用。 我们可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=fullName> 属性的值来确保 `Main` 方法等待异步操作完成。 对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName> 方法。 
+<span data-ttu-id="6a478-145">由于不支持在应用程序入口点中使用 `async` 和`await`，因此我们无法将 `async` 属性应用到 `Main` 方法，也无法等待 `GetPageLengthsAsync` 方法调用。</span><span class="sxs-lookup"><span data-stu-id="6a478-145">Because the use of `async` and `await` in an application entry point is not supported, we cannot apply the `async` attribute to the `Main` method, nor can we await the `GetPageLengthsAsync` method call.</span></span> <span data-ttu-id="6a478-146">我们可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 属性的值来确保 `Main` 方法等待异步操作完成。</span><span class="sxs-lookup"><span data-stu-id="6a478-146">We can ensure that the `Main` method waits for the async operation to complete by retrieving the value of the <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="6a478-147">对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="6a478-147">For tasks that do not return a value, you can call the <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> method.</span></span> 
 
-## <a name="see-also"></a>另请参阅  
-[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)   
-[演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[async](../../../csharp/language-reference/keywords/async.md)
-
+## <a name="see-also"></a><span data-ttu-id="6a478-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6a478-148">See also</span></span>  
+<span data-ttu-id="6a478-149">[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md) </span><span class="sxs-lookup"><span data-stu-id="6a478-149">[Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md) </span></span>  
+<span data-ttu-id="6a478-150">[演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span><span class="sxs-lookup"><span data-stu-id="6a478-150">[Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span></span>  
+[<span data-ttu-id="6a478-151">async</span><span class="sxs-lookup"><span data-stu-id="6a478-151">async</span></span>](../../../csharp/language-reference/keywords/async.md)

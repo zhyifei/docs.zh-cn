@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 25c502de-e7d9-4838-bc7e-3ac4fa64dfad
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 294056019b4142f500c68ded6d9ac60ed3bdea0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances
-System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances  
+# <a name="systemservicemodelportsharingwasclosealllistenerchannelinstances"></a><span data-ttu-id="eedd4-102">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span><span class="sxs-lookup"><span data-stu-id="eedd4-102">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span></span>
+<span data-ttu-id="eedd4-103">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span><span class="sxs-lookup"><span data-stu-id="eedd4-103">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span></span>  
   
-## 说明  
- 关闭所有使用 Windows Process Activation Service \(WAS\) 的侦听器通道实例。  
+## <a name="description"></a><span data-ttu-id="eedd4-104">描述</span><span class="sxs-lookup"><span data-stu-id="eedd4-104">Description</span></span>  
+ <span data-ttu-id="eedd4-105">关闭所有使用 Windows Process Activation Service (WAS) 的侦听器通道实例。</span><span class="sxs-lookup"><span data-stu-id="eedd4-105">Close all listener channel instances using Windows Process Activation Service (WAS).</span></span>  
   
-## 请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="eedd4-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="eedd4-106">See Also</span></span>  
+ [<span data-ttu-id="eedd4-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="eedd4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="eedd4-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="eedd4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="eedd4-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="eedd4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

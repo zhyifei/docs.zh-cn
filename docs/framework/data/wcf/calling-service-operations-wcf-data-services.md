@@ -1,116 +1,122 @@
 ---
-title: "调用服务操作（WCF 数据服务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "调用服务操作（WCF 数据服务）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e43fbe2002c19b8203ff048b4200dcfaad27afe0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 调用服务操作（WCF 数据服务）
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 定义数据服务的服务操作。  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]允许您将这类操作定义为数据服务的方法。  与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。  服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。  服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库可以用于访问支持 HTTP GET 请求的服务操作。  这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。  有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
+# <a name="calling-service-operations-wcf-data-services"></a><span data-ttu-id="3eb8d-102">调用服务操作（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="3eb8d-102">Calling Service Operations (WCF Data Services)</span></span>
+<span data-ttu-id="3eb8d-103">[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 定义数据服务的服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-103">The [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] defines service operations for a data service.</span></span> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="3eb8d-104">允许您将这类操作定义为数据服务的方法。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-104"> enables you to define such operations as methods on the data service.</span></span> <span data-ttu-id="3eb8d-105">与其他数据服务资源一样，这些服务操作也通过 URI 进行寻址。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-105">Like other data service resources, these service operations are addressed by using URIs.</span></span> <span data-ttu-id="3eb8d-106">服务操作可以返回实体类型的集合、单个实体类型实例的集合和基元类型（如整数和字符串）的集合。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-106">A service operation can return collections of entity types, single entity type instances, and primitive types, such as integer and string.</span></span> <span data-ttu-id="3eb8d-107">服务操作还可以返回 `null`（在 Visual Basic 中为 `Nothing`）。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-107">A service operation can also return `null` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="3eb8d-108">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库可以用于访问支持 HTTP GET 请求的服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-108">The [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library can be used to access service operations that support HTTP GET requests.</span></span> <span data-ttu-id="3eb8d-109">这些种类的服务操作定义为应用了 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-109">These kinds of service operations are defined as methods that have the <xref:System.ServiceModel.Web.WebGetAttribute> applied.</span></span> <span data-ttu-id="3eb8d-110">有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-110">For more information, see [Service Operations](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).</span></span>  
   
- 服务操作在实现 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的数据服务所返回的元数据中公开。  在元数据中，服务操作表示为 `FunctionImport` 元素。  在生成强类型 <xref:System.Data.Services.Client.DataServiceContext> 时，“添加服务引用”和 DataSvcUtil.exe 工具将忽略此元素。  因此，无法在上下文中找到一种方法用来直接调用服务操作。  不过，您仍可使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端并通过以下两种方式之一来调用服务操作：  
+ <span data-ttu-id="3eb8d-111">服务操作在实现 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的数据服务所返回的元数据中公开。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-111">Service operations are exposed in the metadata returned by a data service that implements the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span></span> <span data-ttu-id="3eb8d-112">在元数据中，服务操作表示为 `FunctionImport` 元素。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-112">In the metadata, service operations are represented as `FunctionImport` elements.</span></span> <span data-ttu-id="3eb8d-113">在生成强类型 <xref:System.Data.Services.Client.DataServiceContext> 时，“添加服务引用”和 DataSvcUtil.exe 工具将忽略此元素。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-113">When generating the strongly-typed <xref:System.Data.Services.Client.DataServiceContext>, the Add Service Reference and DataSvcUtil.exe tools ignore this element.</span></span> <span data-ttu-id="3eb8d-114">因此，无法在上下文中找到一种方法用来直接调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-114">Because of this, you will not find a method on the context that can be used to call a service operation directly.</span></span> <span data-ttu-id="3eb8d-115">不过，您仍可使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端并通过以下两种方式之一来调用服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-115">However, you can still use the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client to call service operations in one of these two ways:</span></span>  
   
--   通过调用 <xref:System.Data.Services.Client.DataServiceContext> 的 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法，同时提供服务操作的 URI 以及任何参数。  此方法用于调用任意 GET 服务操作。  
+-   <span data-ttu-id="3eb8d-116">通过调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 方法，同时提供服务操作的 URI 以及任何参数。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-116">By calling the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method on the <xref:System.Data.Services.Client.DataServiceContext>, supplying the URI of the service operation, along with any parameters.</span></span> <span data-ttu-id="3eb8d-117">此方法用于调用任意 GET 服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-117">This method is used to call any GET service operation.</span></span>  
   
--   通过对 <xref:System.Data.Services.Client.DataServiceContext> 使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 方法来创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象。  在调用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 时，该服务操作的名称将提供给 `entitySetName` 参数。  此方法返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象，该对象在枚举时或在调用 <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> 方法时调用该服务操作。  此方法用于调用返回集合的 GET 服务操作。  可通过使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法来提供单个参数。  可以进一步编辑此方法返回的 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象，就像对待任何查询对象一样。  有关详细信息，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+-   <span data-ttu-id="3eb8d-118">通过对 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 使用 <xref:System.Data.Services.Client.DataServiceContext> 方法来创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-118">By using the <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> method on the <xref:System.Data.Services.Client.DataServiceContext> to create a <xref:System.Data.Services.Client.DataServiceQuery%601> object.</span></span> <span data-ttu-id="3eb8d-119">在调用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 时，该服务操作的名称将提供给 `entitySetName` 参数。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-119">When calling <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>, the name of the service operation is supplied to the `entitySetName` parameter.</span></span> <span data-ttu-id="3eb8d-120">此方法返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象，该对象在枚举时或在调用 <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> 方法时调用该服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-120">This method returns a <xref:System.Data.Services.Client.DataServiceQuery%601> object that calls the service operation when enumerated or when the <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> method is called.</span></span> <span data-ttu-id="3eb8d-121">此方法用于调用返回集合的 GET 服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-121">This method is used to call GET service operations that return a collection.</span></span> <span data-ttu-id="3eb8d-122">可通过使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法来提供单个参数。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-122">A single parameter can be supplied by using the <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> method.</span></span> <span data-ttu-id="3eb8d-123">可以进一步编辑此方法返回的 <xref:System.Data.Services.Client.DataServiceQuery%601> 对象，就像对待任何查询对象一样。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-123">The <xref:System.Data.Services.Client.DataServiceQuery%601> object returned by this method can be further composed against like any query object.</span></span> <span data-ttu-id="3eb8d-124">有关详细信息，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-124">For more information, see [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span></span>  
   
-## 调用服务操作的注意事项  
- 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端调用服务操作时的注意事项如下。  
+## <a name="considerations-for-calling-service-operations"></a><span data-ttu-id="3eb8d-125">调用服务操作的注意事项</span><span class="sxs-lookup"><span data-stu-id="3eb8d-125">Considerations for Calling Service Operations</span></span>  
+ <span data-ttu-id="3eb8d-126">使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端调用服务操作时的注意事项如下。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-126">The following considerations apply when using the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client to call service operations.</span></span>  
   
--   在异步访问数据服务时，必须使用同等异步 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>\/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 方法（针对 <xref:System.Data.Services.Client.DataServiceContext>）或 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>\/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法（针对 <xref:System.Data.Services.Client.DataServiceQuery%601>）。  
+-   <span data-ttu-id="3eb8d-127">当异步访问数据服务，必须使用同等异步<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>方法<xref:System.Data.Services.Client.DataServiceContext>或<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>方法<xref:System.Data.Services.Client.DataServiceQuery%601>。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-127">When accessing the data service asynchronously, you must use the equivalent asynchronous <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> methods on <xref:System.Data.Services.Client.DataServiceContext> or the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> methods on <xref:System.Data.Services.Client.DataServiceQuery%601>.</span></span>  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不能具体化返回基元类型集合的服务操作的结果。  
+-   <span data-ttu-id="3eb8d-128">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不能具体化返回基元类型集合的服务操作的结果。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-128">The [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library cannot materialize the results from a service operation that returns a collection of primitive types.</span></span>  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不支持调用 POST 服务操作。  服务操作由 HTTP POST 调用，后者通过使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 配合 `Method="POST"` 参数定义。  要通过使用 HTTP POST 请求调用服务操作，必须使用 <xref:System.Net.HttpWebRequest>。  
+-   <span data-ttu-id="3eb8d-129">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库不支持调用 POST 服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-129">The [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library does not support calling POST service operations.</span></span> <span data-ttu-id="3eb8d-130">服务操作由 HTTP POST 调用，后者通过使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 配合 `Method="POST"` 参数定义。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-130">Service operations that are called by an HTTP POST are defined by using the <xref:System.ServiceModel.Web.WebInvokeAttribute> with the `Method="POST"` parameter.</span></span> <span data-ttu-id="3eb8d-131">要通过使用 HTTP POST 请求调用服务操作，必须使用 <xref:System.Net.HttpWebRequest>。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-131">To call a service operation by using an HTTP POST request, you must instead use an <xref:System.Net.HttpWebRequest>.</span></span>  
   
--   您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用这样的 GET 服务操作：它返回实体或基元类型的单个结果，或需要多个输入参数。  必须调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
+-   <span data-ttu-id="3eb8d-132">您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用这样的 GET 服务操作：它返回实体或基元类型的单个结果，或需要多个输入参数。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-132">You cannot use <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> to call a GET service operation that returns a single result, of either entity or primitive type, or that requires more than one input parameter.</span></span> <span data-ttu-id="3eb8d-133">必须调用 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-133">You must instead call the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method.</span></span>  
   
--   请考虑对强类型 <xref:System.Data.Services.Client.DataServiceContext> 分部类创建扩展方法，该分部类通过工具生成，使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法来调用服务操作。  这样您就可以直接从上下文调用服务操作。  有关更多信息，请参见博客文章[服务操作和 WCF 数据服务客户端](http://go.microsoft.com/fwlink/?LinkId=215668)（可能为英文网页）。  
+-   <span data-ttu-id="3eb8d-134">请考虑对强类型 <xref:System.Data.Services.Client.DataServiceContext> 分部类创建扩展方法，该分部类通过工具生成，使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法来调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-134">Consider creating an extension method on the strongly-typed <xref:System.Data.Services.Client.DataServiceContext> partial class, which is generated by the tools, that uses either the <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> or the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method to call a service operation.</span></span> <span data-ttu-id="3eb8d-135">这样您就可以直接从上下文调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-135">This enables you to call service operations directly from the context.</span></span> <span data-ttu-id="3eb8d-136">有关详细信息，请参阅博客文章[服务操作和 WCF 数据服务客户端](http://go.microsoft.com/fwlink/?LinkId=215668)。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-136">For more information, see the blog post [Service Operations and the WCF Data Services Client](http://go.microsoft.com/fwlink/?LinkId=215668).</span></span>  
   
--   使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用服务操作时，客户端库会自动对提供给 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字符进行转义，方法是执行保留字符百分比编码（如“and”符 \(&\)），并转义字符串中的单引号。  但是，在通过调用某个 *Execute* 方法来调用服务操作时，您必须记得对所有用户提供字符串值执行这种转义。  URI 中的单引号转义为单引号对。  
+-   <span data-ttu-id="3eb8d-137">使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 调用服务操作时，客户端库会自动对提供给 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字符进行转义，方法是执行保留字符百分比编码（如“and”符 (&)），并转义字符串中的单引号。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-137">When you use <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> to call a service operation, the client library automatically escapes characters supplied to the <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> by performing percent-encoding of reserved characters, such as ampersand (&), and escaping of single-quotes in strings.</span></span> <span data-ttu-id="3eb8d-138">但是，当你调用之一*执行*方法来调用服务操作，您必须记住要执行的任何用户提供的字符串值的此转义。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-138">However, when you call one of the *Execute* methods to call a service operation, you must remember to perform this escaping of any user-supplied string values.</span></span> <span data-ttu-id="3eb8d-139">URI 中的单引号转义为单引号对。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-139">Single-quotes in URIs are escaped as pairs of single-quotes.</span></span>  
   
-## 调用服务操作示例  
- 本节通过以下示例演示如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库来调用服务操作：  
+## <a name="examples-of-calling-service-operations"></a><span data-ttu-id="3eb8d-140">调用服务操作示例</span><span class="sxs-lookup"><span data-stu-id="3eb8d-140">Examples of Calling Service Operations</span></span>  
+ <span data-ttu-id="3eb8d-141">本节通过以下示例演示如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库来调用服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-141">This section contains the following examples of how to call service operations by using the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library:</span></span>  
   
--   [调用 Execute&lt;T&gt; 以返回实体集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+-   [<span data-ttu-id="3eb8d-142">调用执行&lt;T&gt;返回的实体集合</span><span class="sxs-lookup"><span data-stu-id="3eb8d-142">Calling Execute&lt;T&gt; to Return a Collection of Entities</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
--   [使用 CreateQuery&lt;T&gt; 返回实体集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+-   [<span data-ttu-id="3eb8d-143">使用 CreateQuery&lt;T&gt;返回的实体集合</span><span class="sxs-lookup"><span data-stu-id="3eb8d-143">Using CreateQuery&lt;T&gt; to Return a Collection of Entities</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
--   [调用 Execute&lt;T&gt; 以返回单个实体](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+-   [<span data-ttu-id="3eb8d-144">调用执行&lt;T&gt;以返回单个实体</span><span class="sxs-lookup"><span data-stu-id="3eb8d-144">Calling Execute&lt;T&gt; to Return a Single Entity</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
--   [调用 Execute&lt;T&gt; 以返回基元值集合](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+-   [<span data-ttu-id="3eb8d-145">调用执行&lt;T&gt;以返回基元值的集合</span><span class="sxs-lookup"><span data-stu-id="3eb8d-145">Calling Execute&lt;T&gt; to Return a Collection of Primitive Values</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
--   [调用 Execute&lt;T&gt; 以返回单个基元值](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+-   [<span data-ttu-id="3eb8d-146">调用执行&lt;T&gt;以返回单个基元值</span><span class="sxs-lookup"><span data-stu-id="3eb8d-146">Calling Execute&lt;T&gt; to Return a Single Primitive Value</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
--   [调用不返回数据的服务操作](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
+-   [<span data-ttu-id="3eb8d-147">调用服务操作不返回任何数据</span><span class="sxs-lookup"><span data-stu-id="3eb8d-147">Calling a Service Operation that Returns No Data</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
--   [异步调用服务操作](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
+-   [<span data-ttu-id="3eb8d-148">以异步方式调用服务操作</span><span class="sxs-lookup"><span data-stu-id="3eb8d-148">Calling a Service Operation Asynchronously</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>   
-### 调用 Execute\<T\> 以返回实体集合  
- 下面的示例调用名为 GetOrdersByCity 的服务操作，该操作采用字符串参数 `city`，并返回 <xref:System.Linq.IQueryable%601>：  
+### <a name="calling-executet-to-return-a-collection-of-entities"></a><span data-ttu-id="3eb8d-149">调用执行\<T > 若要返回的实体集合</span><span class="sxs-lookup"><span data-stu-id="3eb8d-149">Calling Execute\<T> to Return a Collection of Entities</span></span>  
+ <span data-ttu-id="3eb8d-150">下面的示例调用名为 GetOrdersByCity 的服务操作，该操作采用字符串参数 `city`，并返回 <xref:System.Linq.IQueryable%601>：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-150">The following example calls a service operation named GetOrdersByCity, which takes a string parameter of `city` and returns an <xref:System.Linq.IQueryable%601>:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationiqueryable)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationiqueryable)]  
   
- 在此示例中，该服务操作返回 `Order` 对象的集合，其中含有相关的 `Order_Detail` 对象。  
+ <span data-ttu-id="3eb8d-151">在此示例中，该服务操作返回 `Order` 对象的集合，其中含有相关的 `Order_Detail` 对象。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-151">In this example, the service operation returns a collection of `Order` objects with related `Order_Detail` objects.</span></span>  
   
 <a name="CreateQueryIQueryable"></a>   
-### 使用 CreateQuery\<T\> 返回实体集合  
- 下面的示例使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 来返回用于调用同一 GetOrdersByCity 服务操作的 <xref:System.Data.Services.Client.DataServiceQuery%601>：  
+### <a name="using-createqueryt-to-return-a-collection-of-entities"></a><span data-ttu-id="3eb8d-152">使用 CreateQuery\<T > 若要返回的实体集合</span><span class="sxs-lookup"><span data-stu-id="3eb8d-152">Using CreateQuery\<T> to Return a Collection of Entities</span></span>  
+ <span data-ttu-id="3eb8d-153">下面的示例使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 来返回用于调用同一 GetOrdersByCity 服务操作的 <xref:System.Data.Services.Client.DataServiceQuery%601>：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-153">The following example uses the <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> to return a <xref:System.Data.Services.Client.DataServiceQuery%601> that is used to call the same GetOrdersByCity service operation:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationcreatequery)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationcreatequery)]  
   
- 在此示例中，<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法用于向查询中添加参数，而 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法用于在结果中包括相关 Order\_Details 对象。  
+ <span data-ttu-id="3eb8d-154">在此示例中，<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法用于向查询中添加参数，而 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法用于在结果中包括相关 Order_Details 对象。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-154">In this example, the <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> method is used to add the parameter to the query, and the <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> method is used to include related Order_Details objects in the results.</span></span>  
   
 <a name="ExecuteSingleEntity"></a>   
-### 调用 Execute\<T\> 以返回单个实体  
- 下面的示例调用名为 GetNewestOrder 的服务操作，该操作仅返回单个 Order 实体：  
+### <a name="calling-executet-to-return-a-single-entity"></a><span data-ttu-id="3eb8d-155">调用执行\<T > 若要返回单个实体</span><span class="sxs-lookup"><span data-stu-id="3eb8d-155">Calling Execute\<T> to Return a Single Entity</span></span>  
+ <span data-ttu-id="3eb8d-156">下面的示例调用名为 GetNewestOrder 的服务操作，该操作仅返回单个 Order 实体：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-156">The following example calls a service operation named GetNewestOrder that returns only a single Order entity:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationsingleentity)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationsingleentity)]  
   
- 在此示例中，<xref:System.Linq.Enumerable.FirstOrDefault%2A> 方法用于在执行时仅请求单个 Order 实体。  
+ <span data-ttu-id="3eb8d-157">在此示例中，<xref:System.Linq.Enumerable.FirstOrDefault%2A> 方法用于在执行时仅请求单个 Order 实体。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-157">In this example, the <xref:System.Linq.Enumerable.FirstOrDefault%2A> method is used to request only a single Order entity on execution.</span></span>  
   
 <a name="ExecutePrimitiveCollection"></a>   
-### 调用 Execute\<T\> 以返回基元值集合  
- 下面的示例调用返回字符串值集合的服务操作：  
+### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a><span data-ttu-id="3eb8d-158">调用执行\<T > 以返回基元值的集合</span><span class="sxs-lookup"><span data-stu-id="3eb8d-158">Calling Execute\<T> to Return a Collection of Primitive Values</span></span>  
+ <span data-ttu-id="3eb8d-159">下面的示例调用返回字符串值集合的服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-159">The following example calls a service operation that returns a collection of string values:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationenumstring)]  
   
 <a name="ExecutePrimitiveValue"></a>   
-### 调用 Execute\<T\> 以返回单个基元值  
- 下面的示例调用返回单个字符串值的服务操作：  
+### <a name="calling-executet-to-return-a-single-primitive-value"></a><span data-ttu-id="3eb8d-160">调用执行\<T > 若要返回单个基元值</span><span class="sxs-lookup"><span data-stu-id="3eb8d-160">Calling Execute\<T> to Return a Single Primitive Value</span></span>  
+ <span data-ttu-id="3eb8d-161">下面的示例调用返回单个字符串值的服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-161">The following example calls a service operation that returns a single string value:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationsingleint)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationsingleint)]  
   
- 同样，在此示例中，<xref:System.Linq.Enumerable.FirstOrDefault%2A> 方法用于在执行时仅请求单个整数值。  
+ <span data-ttu-id="3eb8d-162">同样，在此示例中，<xref:System.Linq.Enumerable.FirstOrDefault%2A> 方法用于在执行时仅请求单个整数值。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-162">Again in this example, the <xref:System.Linq.Enumerable.FirstOrDefault%2A> method is used to request only a single integer value on execution.</span></span>  
   
 <a name="ExecuteVoid"></a>   
-### 调用不返回数据的服务操作  
- 下面的示例调用不返回任何数据的服务操作：  
+### <a name="calling-a-service-operation-that-returns-no-data"></a><span data-ttu-id="3eb8d-163">调用不返回数据的服务操作</span><span class="sxs-lookup"><span data-stu-id="3eb8d-163">Calling a Service Operation that Returns No Data</span></span>  
+ <span data-ttu-id="3eb8d-164">下面的示例调用不返回任何数据的服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-164">The following example calls a service operation that returns no data:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationvoid)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationVoid](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationvoid)]  
   
- 由于不返回数据，因此不分配执行的值。  请求已成功的唯一指示是未引发 <xref:System.Data.Services.Client.DataServiceQueryException>。  
+ <span data-ttu-id="3eb8d-165">由于不返回数据，因此不分配执行的值。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-165">Because not data is returned, the value of the execution is not assigned.</span></span> <span data-ttu-id="3eb8d-166">请求已成功的唯一指示是未引发 <xref:System.Data.Services.Client.DataServiceQueryException>。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-166">The only indication that the request has succeeded is that no <xref:System.Data.Services.Client.DataServiceQueryException> is raised.</span></span>  
   
 <a name="ExecuteAsync"></a>   
-### 异步调用服务操作  
- 下面的示例通过调用 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 来异步调用服务操作：  
+### <a name="calling-a-service-operation-asynchronously"></a><span data-ttu-id="3eb8d-167">异步调用服务操作</span><span class="sxs-lookup"><span data-stu-id="3eb8d-167">Calling a Service Operation Asynchronously</span></span>  
+ <span data-ttu-id="3eb8d-168">下面的示例通过调用 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 来异步调用服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-168">The following example calls a service operation asynchronously by calling <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> and <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationasync)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationasync)]  
@@ -118,9 +124,9 @@ caps.handback.revision: 4
  [!code-csharp[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onasyncexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncexecutioncomplete)]  
   
- 由于不返回数据，因此不分配由该执行返回的值。  请求已成功的唯一指示是未引发 <xref:System.Data.Services.Client.DataServiceQueryException>。  
+ <span data-ttu-id="3eb8d-169">由于不返回数据，因此不分配由该执行返回的值。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-169">Because no data is returned, the value returned by the execution is not assigned.</span></span> <span data-ttu-id="3eb8d-170">请求已成功的唯一指示是未引发 <xref:System.Data.Services.Client.DataServiceQueryException>。</span><span class="sxs-lookup"><span data-stu-id="3eb8d-170">The only indication that the request has succeeded is that no <xref:System.Data.Services.Client.DataServiceQueryException> is raised.</span></span>  
   
- 下面的示例通过使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 来异步调用同一服务操作：  
+ <span data-ttu-id="3eb8d-171">下面的示例通过使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 来异步调用同一服务操作：</span><span class="sxs-lookup"><span data-stu-id="3eb8d-171">The following example calls the same service operation asynchronously by using <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>:</span></span>  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#callserviceoperationqueryasync)]
  [!code-vb[Astoria Northwind Client#CallServiceOperationQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#callserviceoperationqueryasync)]  
@@ -128,5 +134,5 @@ caps.handback.revision: 4
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## 请参阅  
- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="3eb8d-172">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3eb8d-172">See Also</span></span>  
+ [<span data-ttu-id="3eb8d-173">WCF Data Services 客户端库</span><span class="sxs-lookup"><span data-stu-id="3eb8d-173">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

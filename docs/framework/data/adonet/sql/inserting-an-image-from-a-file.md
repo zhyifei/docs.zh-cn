@@ -1,28 +1,34 @@
 ---
-title: "从文件插入图像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "从文件中插入图像"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a780e35d9eb5420138587102aee753e96a8eff9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 从文件插入图像
-可以将二进制大对象 \(BLOB\) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。  BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="e054e-102">从文件中插入图像</span><span class="sxs-lookup"><span data-stu-id="e054e-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="e054e-103">可以将二进制大对象 (BLOB) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。</span><span class="sxs-lookup"><span data-stu-id="e054e-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="e054e-104">BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。</span><span class="sxs-lookup"><span data-stu-id="e054e-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- 若要将 BLOB 值写入数据库，请发出相应的 INSERT 或 UPDATE 语句并将 BLOB 值作为输入参数传递（请参见[配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)）。  如果 BLOB 存储为文本格式（如 SQL Server `text` 字段），则可将 BLOB 作为字符串参数传递。  如果 BLOB 存储为二进制格式（如 SQL Server `image` 字段），则可将类型 `byte` 的数组作为二进制参数传递。  
+ <span data-ttu-id="e054e-105">将 BLOB 值写入到你的数据库，发出相应的 INSERT 或 UPDATE 语句并将 BLOB 值作为输入参数传递 (请参阅[配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md))。</span><span class="sxs-lookup"><span data-stu-id="e054e-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="e054e-106">如果 BLOB 存储为文本格式（如 SQL Server `text` 字段），则可将 BLOB 作为字符串参数传递。</span><span class="sxs-lookup"><span data-stu-id="e054e-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="e054e-107">如果 BLOB 存储为二进制格式（如 SQL Server `image` 字段），则可将类型 `byte` 的数组作为二进制参数传递。</span><span class="sxs-lookup"><span data-stu-id="e054e-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## 示例  
- 下面的代码示例将雇员信息添加到 Northwind 数据库中的“Employees”表中。  从文件中读取雇员的照片并将其添加到表中的“照片”字段，此字段是一个图像字段。  
+## <a name="example"></a><span data-ttu-id="e054e-108">示例</span><span class="sxs-lookup"><span data-stu-id="e054e-108">Example</span></span>  
+ <span data-ttu-id="e054e-109">下面的代码示例将雇员信息添加到 Northwind 数据库中的“Employees”表中。</span><span class="sxs-lookup"><span data-stu-id="e054e-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="e054e-110">从文件中读取雇员的照片并将其添加到表中的“照片”字段，此字段是一个图像字段。</span><span class="sxs-lookup"><span data-stu-id="e054e-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -134,9 +140,9 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## 请参阅  
- [使用命令修改数据](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [检索二进制数据](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)   
- [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e054e-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e054e-111">See Also</span></span>  
+ [<span data-ttu-id="e054e-112">使用命令修改数据</span><span class="sxs-lookup"><span data-stu-id="e054e-112">Using Commands to Modify Data</span></span>](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="e054e-113">检索二进制数据</span><span class="sxs-lookup"><span data-stu-id="e054e-113">Retrieving Binary Data</span></span>](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [<span data-ttu-id="e054e-114">SQL Server 二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="e054e-114">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="e054e-115">SQL Server 数据类型映射</span><span class="sxs-lookup"><span data-stu-id="e054e-115">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="e054e-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="e054e-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

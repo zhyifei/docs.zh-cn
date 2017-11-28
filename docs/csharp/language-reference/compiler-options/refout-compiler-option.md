@@ -1,59 +1,52 @@
 ---
 title: "-refout（C# 编译器选项）"
-ms.date: 2017-08-08
+ms.date: 08/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refout
-dev_langs:
-- CSharp
+f1_keywords: /refout
 helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: b1516356bf7ec8f5716c0c4183148f675f2ffa78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
+# <a name="refout-c-compiler-options"></a><span data-ttu-id="37b1b-102">/refout（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="37b1b-102">/refout (C# Compiler Options)</span></span>
 
-# <a name="refout-c-compiler-options"></a>/refout（C# 编译器选项）
+<span data-ttu-id="37b1b-103">/refout 选项指定应输出引用程序集的文件路径。</span><span class="sxs-lookup"><span data-stu-id="37b1b-103">The **/refout** option specifies a file path where the reference assembly should be output.</span></span> <span data-ttu-id="37b1b-104">这在 Emit API 中转换为 `metadataPeStream`。</span><span class="sxs-lookup"><span data-stu-id="37b1b-104">This translates to `metadataPeStream` in the Emit API.</span></span>
 
-/refout 选项指定应输出引用程序集的文件路径。 这在 Emit API 中转换为 `metadataPeStream`。
-
-## <a name="syntax"></a>语法
+## <a name="syntax"></a><span data-ttu-id="37b1b-105">语法</span><span class="sxs-lookup"><span data-stu-id="37b1b-105">Syntax</span></span>
 
 ```console
 /refout:filepath
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a><span data-ttu-id="37b1b-106">参数</span><span class="sxs-lookup"><span data-stu-id="37b1b-106">Arguments</span></span>
 
- `filepath` - 引用程序集的文件路径。 通常情况下，应与主程序集的路径匹配。 推荐约定（MSBuild 采用）是，将引用程序集放入与主程序集相关的“ref/”子文件夹中。
+ <span data-ttu-id="37b1b-107">`filepath` - 引用程序集的文件路径。</span><span class="sxs-lookup"><span data-stu-id="37b1b-107">`filepath` The filepath for the reference assembly.</span></span> <span data-ttu-id="37b1b-108">通常情况下，应与主程序集的路径匹配。</span><span class="sxs-lookup"><span data-stu-id="37b1b-108">It should generally match that of the primary assembly.</span></span> <span data-ttu-id="37b1b-109">推荐约定（MSBuild 采用）是，将引用程序集放入与主程序集相关的“ref/”子文件夹中。</span><span class="sxs-lookup"><span data-stu-id="37b1b-109">The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly.</span></span>
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a><span data-ttu-id="37b1b-110">备注</span><span class="sxs-lookup"><span data-stu-id="37b1b-110">Remarks</span></span>
 
-仅包含元数据的程序集会将方法主体替换为一个 `throw null` 主体，但包括除匿名类型以外的所有成员。 使用 `throw null` 主体（而非不使用主体）的原因在于，这样做可以运行和传递 PEVerify（从而验证元数据的完整性）。
+<span data-ttu-id="37b1b-111">仅包含元数据的程序集会将方法主体替换为一个 `throw null` 主体，但包括除匿名类型以外的所有成员。</span><span class="sxs-lookup"><span data-stu-id="37b1b-111">Metadata-only assemblies have their method bodies replaced with a single `throw null` body, but include all members except anonymous types.</span></span> <span data-ttu-id="37b1b-112">使用 `throw null` 主体（而非不使用主体）的原因在于，这样做可以运行和传递 PEVerify（从而验证元数据的完整性）。</span><span class="sxs-lookup"><span data-stu-id="37b1b-112">The reason for using `throw null` bodies (as opposed to no bodies) is so that PEVerify could run and pass (thus validating the completeness of the metadata).</span></span>
 
-引用程序集包括程序集级 `ReferenceAssembly` 属性。 可以在源中指定此属性（之后编译器就不需要进行合成）。 由于有此属性，运行时会拒绝加载用于执行的引用程序集（但仍可在仅限反射的模式下加载）。 在程序集上反射的工具需要确保仅将引用程序集加载为反射模式，否则将生成运行时 typeload 错误。
+<span data-ttu-id="37b1b-113">引用程序集包括程序集级 `ReferenceAssembly` 属性。</span><span class="sxs-lookup"><span data-stu-id="37b1b-113">Reference assemblies include an assembly-level `ReferenceAssembly` attribute.</span></span> <span data-ttu-id="37b1b-114">可以在源中指定此属性（之后编译器就不需要进行合成）。</span><span class="sxs-lookup"><span data-stu-id="37b1b-114">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="37b1b-115">由于有此属性，运行时会拒绝加载用于执行的引用程序集（但仍可在仅限反射的模式下加载）。</span><span class="sxs-lookup"><span data-stu-id="37b1b-115">Because of this attribute, runtimes will refuse to load reference assemblies for execution (but they can still be loaded in reflection-only mode).</span></span> <span data-ttu-id="37b1b-116">在程序集上反射的工具需要确保仅将引用程序集加载为反射模式，否则将生成运行时 typeload 错误。</span><span class="sxs-lookup"><span data-stu-id="37b1b-116">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only, otherwise they will receive a typeload error from the runtime.</span></span>
 
-引用程序集进一步从仅包含元数据的程序集中删除元数据（私有成员）：
+<span data-ttu-id="37b1b-117">引用程序集进一步从仅包含元数据的程序集中删除元数据（私有成员）：</span><span class="sxs-lookup"><span data-stu-id="37b1b-117">Reference assemblies further remove metadata (private members) from metadata-only assemblies:</span></span>
 
-- 引用程序集只包含在 API 外围应用中所需的引用。 实际程序集可能包含与特定实现相关的其他引用。 例如，`class C { private void M() { dynamic d = 1; ... } }` 的引用程序集不引用 `dynamic` 所需的任何类型。
-- 删除私有函数成员（方法、属性和事件），前提是这不会对编译造成显著影响。 如果没有 `InternalsVisibleTo` 属性，也请删除内部函数成员。
-- 但保留引用程序集中的所有类型（包括私有或嵌套类型）。 保留所有属性（甚至是内部属性）。
-- 保留所有虚拟方法。 保留显式接口实现。 保留显式实现的属性和事件，因为它们的访问器是虚拟的（因此予以保留）。
-- 保留结构的所有字段。 （这是 post-C#-7.1 优化候选项）
+- <span data-ttu-id="37b1b-118">引用程序集只包含在 API 外围应用中所需的引用。</span><span class="sxs-lookup"><span data-stu-id="37b1b-118">A reference assembly only has references for what it needs in the API surface.</span></span> <span data-ttu-id="37b1b-119">实际程序集可能包含与特定实现相关的其他引用。</span><span class="sxs-lookup"><span data-stu-id="37b1b-119">The real assembly may have additional references related to specific implementations.</span></span> <span data-ttu-id="37b1b-120">例如，`class C { private void M() { dynamic d = 1; ... } }` 的引用程序集不引用 `dynamic` 所需的任何类型。</span><span class="sxs-lookup"><span data-stu-id="37b1b-120">For instance, the reference assembly for `class C { private void M() { dynamic d = 1; ... } }` does not reference any types required for `dynamic`.</span></span>
+- <span data-ttu-id="37b1b-121">删除私有函数成员（方法、属性和事件），前提是这不会对编译造成显著影响。</span><span class="sxs-lookup"><span data-stu-id="37b1b-121">Private function-members (methods, properties, and events) are removed in cases where their removal doesn't observably impact compilation.</span></span> <span data-ttu-id="37b1b-122">如果没有 `InternalsVisibleTo` 属性，也请删除内部函数成员。</span><span class="sxs-lookup"><span data-stu-id="37b1b-122">If there are no `InternalsVisibleTo` attributes, do the same for internal function-members.</span></span>
+- <span data-ttu-id="37b1b-123">但保留引用程序集中的所有类型（包括私有或嵌套类型）。</span><span class="sxs-lookup"><span data-stu-id="37b1b-123">But all types (including private or nested types) are kept in reference assemblies.</span></span> <span data-ttu-id="37b1b-124">保留所有属性（甚至是内部属性）。</span><span class="sxs-lookup"><span data-stu-id="37b1b-124">All attributes are kept (even internal ones).</span></span>
+- <span data-ttu-id="37b1b-125">保留所有虚拟方法。</span><span class="sxs-lookup"><span data-stu-id="37b1b-125">All virtual methods are kept.</span></span> <span data-ttu-id="37b1b-126">保留显式接口实现。</span><span class="sxs-lookup"><span data-stu-id="37b1b-126">Explicit interface implementations are kept.</span></span> <span data-ttu-id="37b1b-127">保留显式实现的属性和事件，因为它们的访问器是虚拟的（因此予以保留）。</span><span class="sxs-lookup"><span data-stu-id="37b1b-127">Explicitly implemented properties and events are kept, as their accessors are virtual (and are therefore kept).</span></span>
+- <span data-ttu-id="37b1b-128">保留结构的所有字段。</span><span class="sxs-lookup"><span data-stu-id="37b1b-128">All fields of a struct are kept.</span></span> <span data-ttu-id="37b1b-129">（这是 post-C#-7.1 优化候选项）</span><span class="sxs-lookup"><span data-stu-id="37b1b-129">(This is a candidate for post-C#-7.1 refinement)</span></span>
 
-`/refout` 和 [`/refonly`](refonly-compiler-option.md) 选项互斥。
+<span data-ttu-id="37b1b-130">`/refout` 和 [`/refonly`](refonly-compiler-option.md) 选项互斥。</span><span class="sxs-lookup"><span data-stu-id="37b1b-130">The `/refout` and [`/refonly`](refonly-compiler-option.md) options are mutually exclusive.</span></span>
 
-## <a name="see-also"></a>另请参阅
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="37b1b-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="37b1b-131">See Also</span></span>
+ [<span data-ttu-id="37b1b-132">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="37b1b-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="37b1b-133">管理项目和解决方案属性</span><span class="sxs-lookup"><span data-stu-id="37b1b-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

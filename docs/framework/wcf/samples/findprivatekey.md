@@ -1,42 +1,41 @@
 ---
-title: "FindPrivateKey | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "FindPrivateKey"
+title: FindPrivateKey
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c1ff00bead6130601070ac94686ee9622a6fe218
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# FindPrivateKey
-查找与证书存储区中的特定 X.509 证书关联的私钥文件的位置和名称可能很困难。使用 FindPrivateKey.exe 工具可以更快地完成此过程。  
+# <a name="findprivatekey"></a><span data-ttu-id="2b438-102">FindPrivateKey</span><span class="sxs-lookup"><span data-stu-id="2b438-102">FindPrivateKey</span></span>
+<span data-ttu-id="2b438-103">查找与证书存储区中的特定 X.509 证书关联的私钥文件的位置和名称可能很困难。</span><span class="sxs-lookup"><span data-stu-id="2b438-103">It can be difficult to find the location and name of the private key file associated with a specific X.509 certificate in the certificate store.</span></span> <span data-ttu-id="2b438-104">使用 FindPrivateKey.exe 工具可以更快地完成此过程。</span><span class="sxs-lookup"><span data-stu-id="2b438-104">The FindPrivateKey.exe tool facilitates this process.</span></span>  
   
 > [!IMPORTANT]
->  FindPrivateKey 是一个需要在使用已编译的之前的样本。有关如何版本 FindPrivateKey 工具的信息，请参见"版本 FindPrivateKey 项目"部分下面的说明。  
+>  <span data-ttu-id="2b438-105">FindPrivateKey 是一个需要在使用之前进行编译的样本。</span><span class="sxs-lookup"><span data-stu-id="2b438-105">FindPrivateKey is a sample that needs to be compiled prior to use.</span></span> <span data-ttu-id="2b438-106">有关如何构建 FindPrivateKey 工具，请参阅"以生成 FindPrivateKey 项目"下面的部分的说明。</span><span class="sxs-lookup"><span data-stu-id="2b438-106">See the "To build the FindPrivateKey project" section below for instructions on how to build the FindPrivateKey tool.</span></span>  
   
- X.509 证书是由计算机管理员或计算机上的任何用户安装的。但是，该证书可以由使用其他帐户（例如 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上的 ASPNET 或 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 NETWORK SERVICE 帐户）运行的服务来访问。  
+ <span data-ttu-id="2b438-107">X.509 证书是由计算机管理员或计算机上的任何用户安装的。</span><span class="sxs-lookup"><span data-stu-id="2b438-107">X.509 certificates are installed by an Administrator or any user in the machine.</span></span> <span data-ttu-id="2b438-108">但是，该证书可以由使用其他帐户（例如 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上的 ASPNET 或 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 NETWORK SERVICE 帐户）运行的服务来访问。</span><span class="sxs-lookup"><span data-stu-id="2b438-108">However the certificate may be accessed by a service running under a different account (for example, the ASPNET on [!INCLUDE[wxp](../../../../includes/wxp-md.md)] or the NETWORK SERVICE accounts on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]).</span></span>  
   
- 此帐户可能没有访问私钥文件的权限，因为证书原来并不是由它安装的。FindPrivateKey 工具可以为您提供给定 X.509 证书的私钥文件的位置。您可以在知道特定 X.509 证书的私钥文件的位置后立即添加或移除对此文件的权限。  
+ <span data-ttu-id="2b438-109">此帐户可能没有访问私钥文件的权限，因为证书原来并不是由它安装的。</span><span class="sxs-lookup"><span data-stu-id="2b438-109">This account may not have access to the private key file because the certificate was not installed by it originally.</span></span> <span data-ttu-id="2b438-110">FindPrivateKey 工具可以为您提供给定 X.509 证书的私钥文件的位置。</span><span class="sxs-lookup"><span data-stu-id="2b438-110">The FindPrivateKey tool gives you the location of a given X.509 Certificate's private key file.</span></span> <span data-ttu-id="2b438-111">您可以在知道特定 X.509 证书的私钥文件的位置后立即添加或移除对此文件的权限。</span><span class="sxs-lookup"><span data-stu-id="2b438-111">You can add permissions or remove permissions to this file once you know the location of the particular X.509 certificates' private key file.</span></span>  
   
- 使用证书确保安全性的示例在 Setup.bat 文件中使用 FindPrivateKey 工具。找到私钥文件后，您可以使用其他工具（如 Cacls.exe）设置该文件的适当访问权限。  
+ <span data-ttu-id="2b438-112">使用证书确保安全性的示例在 Setup.bat 文件中使用 FindPrivateKey 工具。</span><span class="sxs-lookup"><span data-stu-id="2b438-112">The samples that use certificates for security use the FindPrivateKey tool in the Setup.bat file.</span></span> <span data-ttu-id="2b438-113">找到私钥文件后，您可以使用其他工具（如 Cacls.exe）设置该文件的适当访问权限。</span><span class="sxs-lookup"><span data-stu-id="2b438-113">Once the private key file has been found you can use other tools such as Cacls.exe to set the appropriate access rights onto the file.</span></span>  
   
- 使用用户帐户（如自承载可执行文件）运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，请确保该用户帐户具有该文件的只读访问权限。使用 Internet 信息服务 \(IIS\) 运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，该服务使用的默认帐户是 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上的 ASPNET 或 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 NETWORK SERVICE，该帐户默认情况下没有私钥文件的访问权限。  
+ <span data-ttu-id="2b438-114">使用用户帐户（如自承载可执行文件）运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，请确保该用户帐户具有该文件的只读访问权限。</span><span class="sxs-lookup"><span data-stu-id="2b438-114">When running a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service under a user account, such as a self-hosted executable, ensure that the user account has read-only access to the file.</span></span> <span data-ttu-id="2b438-115">使用 Internet 信息服务 (IIS) 运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，该服务使用的默认帐户是 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上的 ASPNET 或 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 NETWORK SERVICE，该帐户默认情况下没有私钥文件的访问权限。</span><span class="sxs-lookup"><span data-stu-id="2b438-115">When running a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service under Internet Information Services (IIS) the default accounts that the service runs under are the ASPNET on [!INCLUDE[wxp](../../../../includes/wxp-md.md)] or the NETWORK SERVICE on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], which by default do not have access to the private key file.</span></span>  
   
-## 示例  
- 访问进程没有读取特权的证书时，您将看到类似如下示例的异常消息。  
+## <a name="examples"></a><span data-ttu-id="2b438-116">示例</span><span class="sxs-lookup"><span data-stu-id="2b438-116">Examples</span></span>  
+ <span data-ttu-id="2b438-117">访问进程没有读取特权的证书时，您将看到类似如下示例的异常消息。</span><span class="sxs-lookup"><span data-stu-id="2b438-117">When accessing a certificate for which the process does not have read privilege, you see an exception message similar to the following example.</span></span>  
   
 ```  
 System.ArgumentException was unhandled  
@@ -44,63 +43,62 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"  
 ```  
   
- 发生这种情况时，可以使用 FindPrivateKey 工具查找私钥文件，然后为服务正在其中运行的进程设置访问权限。例如，可以使用下面示例中所示的 Cacls.exe 工具完成此操作。  
+ <span data-ttu-id="2b438-118">发生这种情况时，可以使用 FindPrivateKey 工具查找私钥文件，然后为服务正在其中运行的进程设置访问权限。</span><span class="sxs-lookup"><span data-stu-id="2b438-118">When this occurs use the FindPrivateKey tool to find the private key file and then set the access right for the process that the service is running under.</span></span> <span data-ttu-id="2b438-119">例如，可以使用下面示例中所示的 Cacls.exe 工具完成此操作。</span><span class="sxs-lookup"><span data-stu-id="2b438-119">For example, this can be done with the Cacls.exe tool as shown in the following example.</span></span>  
   
 ```  
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R  
 ```  
   
-#### 生成 FindPrivateKey 项目  
+#### <a name="to-build-the-findprivatekey-project"></a><span data-ttu-id="2b438-120">生成 FindPrivateKey 项目</span><span class="sxs-lookup"><span data-stu-id="2b438-120">To build the FindPrivateKey project</span></span>  
   
-1.  打开[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，然后定位到安装示例的目录位置下的语言特定的子目录。  
+1.  <span data-ttu-id="2b438-121">打开 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，然后导航到安装此示例的目录位置下语言特定的子目录。</span><span class="sxs-lookup"><span data-stu-id="2b438-121">Open [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] and navigate to the language-specific subdirectory under the directory location where you installed the sample.</span></span>  
   
-2.  双击 .sln 文件图标，在 Visual Studio 中打开该文件。  
+2.  <span data-ttu-id="2b438-122">双击 .sln 文件图标，在 Visual Studio 中打开该文件。</span><span class="sxs-lookup"><span data-stu-id="2b438-122">Double-click the .sln file icon to open the file in Visual Studio.</span></span>  
   
-3.  在**“生成”**菜单中选择**“重新生成解决方案”**。客户端程序文件在 client\\bin 中生成，服务程序文件在 service\\bin 中生成。  
+3.  <span data-ttu-id="2b438-123">在**生成**菜单上，选择**重新生成解决方案**。</span><span class="sxs-lookup"><span data-stu-id="2b438-123">In the **Build** menu, select **Rebuild Solution**.</span></span> <span data-ttu-id="2b438-124">客户端程序文件在 client\bin 中生成，服务程序文件在 service\bin 中生成。</span><span class="sxs-lookup"><span data-stu-id="2b438-124">The client program files are built to client\bin and the service program files are built to service\bin.</span></span>  
   
-4.  生成解决方案将生成如下文件：FindPrivateKey.exe。  
+4.  <span data-ttu-id="2b438-125">生成解决方案将生成如下文件：FindPrivateKey.exe。</span><span class="sxs-lookup"><span data-stu-id="2b438-125">Building the solution generates the file: FindPrivateKey.exe.</span></span>  
   
-## 约定 \- 命令行条目  
- “\[*option*\]”代表一组可选参数。  
+## <a name="conventionscommand-line-entries"></a><span data-ttu-id="2b438-126">约定 - 命令行条目</span><span class="sxs-lookup"><span data-stu-id="2b438-126">Conventions—Command-Line Entries</span></span>  
+ <span data-ttu-id="2b438-127">"[*选项*]"表示一组可选的参数。</span><span class="sxs-lookup"><span data-stu-id="2b438-127">"[*option*]" represents an optional set of parameters.</span></span>  
   
- “{*option*}”代表一组强制参数。  
+ <span data-ttu-id="2b438-128">"{*选项*}"代表一组强制参数。</span><span class="sxs-lookup"><span data-stu-id="2b438-128">"{*option*}" represents a mandatory set of parameters.</span></span>  
   
- "*option1* &#124;*option2* 代表一组选项中的一个选项。  
+ <span data-ttu-id="2b438-129">"*选项 1* &#124;*选项 2*"代表一种选择的选项集之间。</span><span class="sxs-lookup"><span data-stu-id="2b438-129">"*option1* &#124; *option2*" represents a choice between sets of options.</span></span>  
   
- "\<*value*\>" 代表要输入的参数值。  
+ <span data-ttu-id="2b438-130">"\<*值*>"代表要输入的参数值。</span><span class="sxs-lookup"><span data-stu-id="2b438-130">"\<*value*>" represents a parameter value to be entered.</span></span>  
   
-## 用法  
+## <a name="usage"></a><span data-ttu-id="2b438-131">用法</span><span class="sxs-lookup"><span data-stu-id="2b438-131">Usage</span></span>  
   
 ```  
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]  
 ```  
   
- 其中：  
+ <span data-ttu-id="2b438-132">其中：</span><span class="sxs-lookup"><span data-stu-id="2b438-132">Where:</span></span>  
   
 ```  
-       <subjectName> The subject name of the certificate  
-       <thumbprint>  The thumbprint of the certificate (You can use the Certmgr.exe tool to find this)  
-       -f            output file name only  
-       -d            output directory only  
-       -a            output absolute file name  
+       <subjectName> The subject name of the certificate  
+       <thumbprint>  The thumbprint of the certificate (You can use the Certmgr.exe tool to find this)  
+       -f            output file name only  
+       -d            output directory only  
+       -a            output absolute file name  
 ```  
   
- 如果没在命令提示符中指定任何参数，将显示此帮助文本。  
+ <span data-ttu-id="2b438-133">如果没在命令提示符中指定任何参数，将显示此帮助文本。</span><span class="sxs-lookup"><span data-stu-id="2b438-133">If no parameters are specified at the command prompt then this help text is displayed.</span></span>  
   
-## 示例  
- 此示例在 Current User.FindPrivateKey My CurrentUser \-n "CN\=localhost" 的“个人”存储区中查找主题名称为 "CN\=localhost" 的证书的文件名。  
+## <a name="examples"></a><span data-ttu-id="2b438-134">示例</span><span class="sxs-lookup"><span data-stu-id="2b438-134">Examples</span></span>  
+ <span data-ttu-id="2b438-135">此示例在 Current User.FindPrivateKey My CurrentUser -n "CN=localhost" 的“个人”存储区中查找主题名称为 "CN=localhost" 的证书的文件名。</span><span class="sxs-lookup"><span data-stu-id="2b438-135">This example finds the filename of the certificate with a subject name of "CN=localhost", in the Personal store of the Current User.FindPrivateKey My CurrentUser -n "CN=localhost".</span></span>  
   
- 此示例在 Current 的“个人”存储区中查找主题名称为 "CN\=localhost" 的证书的文件名，并输出完整的目录路径。  
+ <span data-ttu-id="2b438-136">此示例在 Current 的“个人”存储区中查找主题名称为 "CN=localhost" 的证书的文件名，并输出完整的目录路径。</span><span class="sxs-lookup"><span data-stu-id="2b438-136">This example finds the filename of the certificate with a subject name of "CN=localhost", in the Personal store of the Current and output the full directory path.</span></span>  
   
 ```  
 User.FindPrivateKey My CurrentUser -n "CN=localhost" -a  
-  
 ```  
   
- 此示例在“本地计算机”的“个人”存储区中查找指纹为 "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52" 的证书的文件名。  
+ <span data-ttu-id="2b438-137">此示例在“本地计算机”的“个人”存储区中查找指纹为 "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52" 的证书的文件名。</span><span class="sxs-lookup"><span data-stu-id="2b438-137">This example finds the filename of the certificate with a thumbprint of "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52", in the Personal store of the Local Computer.</span></span>  
   
 ```  
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52" –c  
 ```  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="2b438-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2b438-138">See Also</span></span>

@@ -1,46 +1,51 @@
 ---
-title: "如何：创建安全会话 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全性 [WCF], 创建会话"
+title: "如何：创建安全会话"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f2393209352f18eb25b9837ca1ad8ca2746b91d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：创建安全会话
-除 [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定外，已启用消息安全时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中系统提供的绑定将自动使用安全会话。  
+# <a name="how-to-create-a-secure-session"></a><span data-ttu-id="1c3b7-102">如何：创建安全会话</span><span class="sxs-lookup"><span data-stu-id="1c3b7-102">How to: Create a Secure Session</span></span>
+<span data-ttu-id="1c3b7-103">除[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定、 中的系统提供绑定[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]自动使用安全会话中启用消息安全时。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-103">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, the system-provided bindings in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] automatically use secure sessions when message security is enabled.</span></span>  
   
- 默认情况下，安全会话不会在已回收的 Web 服务器中存在。  建立安全会话时，客户端和服务将缓存与安全会话关联的密钥。  交换消息时，只交换已缓存密钥的标识符。  如果回收了 Web 服务器，则也会回收缓存，因此 Web 服务器将无法检索该标识符的已缓存密钥。  如果发生这种情况，将会引发异常并返回至客户端。  使用有状态安全上下文令牌 \(SCT\) 的安全会话可以在回收 Web 服务器后存在。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在安全会话中使用有状态 SCT，请参见[如何：为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+ <span data-ttu-id="1c3b7-104">默认情况下，安全会话不会在已回收的 Web 服务器中存在。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-104">By default, secure sessions do not survive a Web server that is recycled.</span></span> <span data-ttu-id="1c3b7-105">建立安全会话时，客户端和服务将缓存与安全会话关联的密钥。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-105">When a secure session is established, the client and the service cache the key that is associated with the secure session.</span></span> <span data-ttu-id="1c3b7-106">交换消息时，只交换已缓存密钥的标识符。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-106">As the messages are exchanged, only an identifier to the cached key is exchanged.</span></span> <span data-ttu-id="1c3b7-107">如果回收了 Web 服务器，则也会回收缓存，因此 Web 服务器将无法检索该标识符的已缓存密钥。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-107">If the Web server is recycled, the cache is also recycled, such that the Web server cannot retrieve the cached key for the identifier.</span></span> <span data-ttu-id="1c3b7-108">如果发生这种情况，将会引发异常并返回至客户端。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-108">If this happens, an exception is thrown back to the client.</span></span> <span data-ttu-id="1c3b7-109">使用有状态安全上下文令牌 (SCT) 的安全会话可以在回收 Web 服务器后存在。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-109">Secure sessions that use a stateful security context token (SCT) can survive a Web server being recycled.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1c3b7-110">在安全会话中，使用有状态 SCT，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-110"> using a stateful SCT in a secure session, see [How to: Create a Security Context Token for a Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
-### 通过使用系统提供的一个绑定指定服务使用安全会话  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a><span data-ttu-id="1c3b7-111">通过使用系统提供的一个绑定指定服务使用安全会话</span><span class="sxs-lookup"><span data-stu-id="1c3b7-111">To specify that a service uses secure sessions by using one of the system-provided bindings</span></span>  
   
--   配置服务以使用支持消息安全的系统提供的绑定。  
+-   <span data-ttu-id="1c3b7-112">配置服务以使用支持消息安全的系统提供的绑定。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-112">Configure a service to use a system-provided binding that supports message security.</span></span>  
   
-     除 [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定外，在系统提供的绑定配置为使用消息安全时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将自动使用安全会话。  下表列出了支持消息安全的系统提供的绑定以及消息安全是否是默认的安全机制。  
+     <span data-ttu-id="1c3b7-113">除[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定，当系统提供的绑定配置为使用消息安全，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]自动使用安全会话。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-113">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, when the system-provided bindings are configured to use message security, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatically uses secure sessions.</span></span> <span data-ttu-id="1c3b7-114">下表列出了支持消息安全的系统提供的绑定以及消息安全是否是默认的安全机制。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-114">The following table lists the system-provided bindings that support message security and whether message security is the default security mechanism.</span></span>  
   
-    |系统提供的绑定|配置元素|默认情况下是否启用消息安全|  
-    |-------------|----------|-------------------|  
-    |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|No|  
-    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|是|  
-    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|是|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|是|  
-    |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|No|  
-    |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|No|  
+    |<span data-ttu-id="1c3b7-115">系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="1c3b7-115">System-provided binding</span></span>|<span data-ttu-id="1c3b7-116">配置元素</span><span class="sxs-lookup"><span data-stu-id="1c3b7-116">Configuration element</span></span>|<span data-ttu-id="1c3b7-117">默认情况下是否启用消息安全</span><span class="sxs-lookup"><span data-stu-id="1c3b7-117">Message security on by default</span></span>|  
+    |------------------------------|---------------------------|------------------------------------|  
+    |<xref:System.ServiceModel.BasicHttpBinding>|[<span data-ttu-id="1c3b7-118">\<basicHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1c3b7-118">\<basicHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|<span data-ttu-id="1c3b7-119">No</span><span class="sxs-lookup"><span data-stu-id="1c3b7-119">No</span></span>|  
+    |<xref:System.ServiceModel.WSHttpBinding>|[<span data-ttu-id="1c3b7-120">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1c3b7-120">\<wsHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|<span data-ttu-id="1c3b7-121">是</span><span class="sxs-lookup"><span data-stu-id="1c3b7-121">Yes</span></span>|  
+    |<xref:System.ServiceModel.WSDualHttpBinding>|[<span data-ttu-id="1c3b7-122">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1c3b7-122">\<wsDualHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|<span data-ttu-id="1c3b7-123">是</span><span class="sxs-lookup"><span data-stu-id="1c3b7-123">Yes</span></span>|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[<span data-ttu-id="1c3b7-124">\<wsFederationHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1c3b7-124">\<wsFederationHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|<span data-ttu-id="1c3b7-125">是</span><span class="sxs-lookup"><span data-stu-id="1c3b7-125">Yes</span></span>|  
+    |<xref:System.ServiceModel.NetTcpBinding>|[<span data-ttu-id="1c3b7-126">\<netTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="1c3b7-126">\<netTcpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|<span data-ttu-id="1c3b7-127">No</span><span class="sxs-lookup"><span data-stu-id="1c3b7-127">No</span></span>|  
+    |<xref:System.ServiceModel.NetMsmqBinding>|[<span data-ttu-id="1c3b7-128">\<netMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="1c3b7-128">\<netMsmqBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|<span data-ttu-id="1c3b7-129">No</span><span class="sxs-lookup"><span data-stu-id="1c3b7-129">No</span></span>|  
   
-     下面的代码示例使用配置指定名为 `wsHttpBinding_Calculator` 的绑定，该绑定使用了 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)、消息安全和安全会话。  
+     <span data-ttu-id="1c3b7-130">下面的代码示例使用配置来指定一个名为绑定`wsHttpBinding_Calculator`使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)、 消息安全性，和安全会话。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-130">The following code example uses configuration to specify a binding named `wsHttpBinding_Calculator` that uses the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), message security, and secure sessions.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <WSHttpBinding>  
        <binding name = "wsHttpBinding_Calculator">  
@@ -52,23 +57,23 @@ caps.handback.revision: 10
     </bindings>  
     ```  
   
-     下面的代码示例指定了用于保护 `secureCalculator` 服务的 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)、消息安全和安全会话。  
+     <span data-ttu-id="1c3b7-131">下面的代码示例指定[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)、 消息安全性，和安全会话用于保护`secureCalculator`服务。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-131">The following code example specifies that the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), message security, and secure sessions are used to secure the `secureCalculator` service.</span></span>  
   
      [!code-csharp[c_CreateSecureSession#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#1)]
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  通过将 `establishSecurityContext` 属性设置为 `false`，可以为 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)关闭安全会话。  对于其他系统提供的绑定，只能通过创建自定义绑定来关闭安全会话。  
+    >  <span data-ttu-id="1c3b7-132">可以关闭安全会话的[ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)通过设置`establishSecurityContext`属性设为`false`。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-132">Secure sessions can be turned off for the [<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) by setting the `establishSecurityContext` attribute to `false`.</span></span> <span data-ttu-id="1c3b7-133">对于其他系统提供的绑定，只能通过创建自定义绑定来关闭安全会话。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-133">For the other system-provided bindings, secure sessions can only be turned off by creating a custom binding.</span></span>  
   
-### 通过使用自定义绑定来指定服务使用安全会话  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a><span data-ttu-id="1c3b7-134">通过使用自定义绑定来指定服务使用安全会话</span><span class="sxs-lookup"><span data-stu-id="1c3b7-134">To specify that a service uses secure sessions by using a custom binding</span></span>  
   
--   创建一个自定义绑定，该绑定指定由安全会话保护 SOAP 消息。  
+-   <span data-ttu-id="1c3b7-135">创建一个自定义绑定，该绑定指定由安全会话保护 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-135">Create a custom binding that specifies that SOAP messages are protected by a secure session.</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建自定义绑定的更多信息，请参见[如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1c3b7-136">创建自定义绑定，请参阅[如何： 自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-136"> creating a custom binding, see [How to: Customize a System-Provided Binding](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
   
-     下面的代码示例使用配置来指定使用安全会话的消息的自定义绑定。  
+     <span data-ttu-id="1c3b7-137">下面的代码示例使用配置来指定使用安全会话的消息的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-137">The following code example uses configuration to specify a custom binding that messages using a secure session.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <!-- configure a custom binding -->  
       <customBinding>  
@@ -82,10 +87,10 @@ caps.handback.revision: 10
     </bindings>  
     ```  
   
-     下面的代码示例创建一个自定义绑定，该绑定使用 <xref:System.ServiceModel.Configuration.AuthenticationMode> 身份验证模式启动安全会话。  
+     <span data-ttu-id="1c3b7-138">下面的代码示例创建一个自定义绑定，该绑定使用 <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> 身份验证模式启动安全会话。</span><span class="sxs-lookup"><span data-stu-id="1c3b7-138">The following code example creates a custom binding that uses the <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> authentication mode to bootstrap a secure session.</span></span>  
   
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## 请参阅  
- [WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1c3b7-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1c3b7-139">See Also</span></span>  
+ [<span data-ttu-id="1c3b7-140">WCF 绑定概述</span><span class="sxs-lookup"><span data-stu-id="1c3b7-140">WCF Bindings Overview</span></span>](../../../../docs/framework/wcf/bindings-overview.md)

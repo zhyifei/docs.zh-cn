@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,56 +19,54 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="assemblies-in-the-common-language-runtime"></a>公共语言运行时中的程序集
-程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 对于运行时，类型不存在于程序集上下文之外。  
+# <a name="assemblies-in-the-common-language-runtime"></a><span data-ttu-id="b5cc8-102">公共语言运行时中的程序集</span><span class="sxs-lookup"><span data-stu-id="b5cc8-102">Assemblies in the Common Language Runtime</span></span>
+<span data-ttu-id="b5cc8-103">程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-103">Assemblies are the building blocks of .NET Framework applications; they form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions.</span></span> <span data-ttu-id="b5cc8-104">程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-104">An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.</span></span> <span data-ttu-id="b5cc8-105">程序集向公共语言运行时提供了解类型实现所需要的信息。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-105">An assembly provides the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="b5cc8-106">对于运行时，类型不存在于程序集上下文之外。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-106">To the runtime, a type does not exist outside the context of an assembly.</span></span>  
   
- 程序集执行以下功能：  
+ <span data-ttu-id="b5cc8-107">程序集执行以下功能：</span><span class="sxs-lookup"><span data-stu-id="b5cc8-107">An assembly performs the following functions:</span></span>  
   
--   包含公共语言运行时执行的代码。 如果可迁移可执行 (PE) 文件没有相关联的程序集清单，则将不执行该文件中的 Microsoft 中间语言 (MSIL) 代码。 请注意，每个程序集只能有一个入口点（即 `DllMain`、`WinMain` 或 `Main`）。  
+-   <span data-ttu-id="b5cc8-108">包含公共语言运行时执行的代码。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-108">It contains code that the common language runtime executes.</span></span> <span data-ttu-id="b5cc8-109">如果可迁移可执行 (PE) 文件没有相关联的程序集清单，则将不执行该文件中的 Microsoft 中间语言 (MSIL) 代码。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-109">Microsoft intermediate language (MSIL) code in a portable executable (PE) file will not be executed if it does not have an associated assembly manifest.</span></span> <span data-ttu-id="b5cc8-110">请注意，每个程序集只能有一个入口点（即 `DllMain`、`WinMain` 或 `Main`）。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-110">Note that each assembly can have only one entry point (that is, `DllMain`, `WinMain`, or `Main`).</span></span>  
   
--   程序集形成安全边界。 程序集就是在其中请求和授予权限的单元。 有关应用于程序集的安全边界的更多信息，请参见[程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)。  
+-   <span data-ttu-id="b5cc8-111">程序集形成安全边界。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-111">It forms a security boundary.</span></span> <span data-ttu-id="b5cc8-112">程序集就是在其中请求和授予权限的单元。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-112">An assembly is the unit at which permissions are requested and granted.</span></span> <span data-ttu-id="b5cc8-113">有关应用于程序集的安全边界的更多信息，请参见[程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-113">For more information about security boundaries as they apply to assemblies, see [Assembly Security Considerations](../../../docs/framework/app-domains/assembly-security-considerations.md).</span></span>  
   
--   程序集形成类型边界。 每一类型的标识均包括该类型所驻留的程序集的名称。 在一个程序集的范围中加载的称为 `MyType` 的类型不同于在另一个程序集范围中加载的称为 `MyType` 的类型。  
+-   <span data-ttu-id="b5cc8-114">程序集形成类型边界。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-114">It forms a type boundary.</span></span> <span data-ttu-id="b5cc8-115">每一类型的标识均包括该类型所驻留的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-115">Every type's identity includes the name of the assembly in which it resides.</span></span> <span data-ttu-id="b5cc8-116">在一个程序集的范围中加载的称为 `MyType` 的类型不同于在另一个程序集范围中加载的称为 `MyType` 的类型。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-116">A type called `MyType` that is loaded in the scope of one assembly is not the same as a type called `MyType` that is loaded in the scope of another assembly.</span></span>  
   
--   程序集形成引用范围边界。 程序集的清单包含用于解析类型和满足资源请求的程序集元数据。 它指定在该程序集之外公开的类型和资源。 该清单还枚举它所依赖的其他程序集。  
+-   <span data-ttu-id="b5cc8-117">程序集形成引用范围边界。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-117">It forms a reference scope boundary.</span></span> <span data-ttu-id="b5cc8-118">程序集的清单包含用于解析类型和满足资源请求的程序集元数据。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-118">The assembly's manifest contains assembly metadata that is used for resolving types and satisfying resource requests.</span></span> <span data-ttu-id="b5cc8-119">它指定在该程序集之外公开的类型和资源。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-119">It specifies the types and resources that are exposed outside the assembly.</span></span> <span data-ttu-id="b5cc8-120">该清单还枚举它所依赖的其他程序集。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-120">The manifest also enumerates other assemblies on which it depends.</span></span>  
   
--   程序集形成版本边界。 程序集是公共语言运行时中最小的可版本化单元，同一程序集中的所有类型和资源均会被版本化为一个单元。 程序集的清单描述你为任何依赖项程序集所指定的版本依赖性。 有关版本控制的更多信息，请参见[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
+-   <span data-ttu-id="b5cc8-121">程序集形成版本边界。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-121">It forms a version boundary.</span></span> <span data-ttu-id="b5cc8-122">程序集是公共语言运行时中最小的可版本化单元，同一程序集中的所有类型和资源均会被版本化为一个单元。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-122">The assembly is the smallest versionable unit in the common language runtime; all types and resources in the same assembly are versioned as a unit.</span></span> <span data-ttu-id="b5cc8-123">程序集的清单描述你为任何依赖项程序集所指定的版本依赖性。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-123">The assembly's manifest describes the version dependencies you specify for any dependent assemblies.</span></span> <span data-ttu-id="b5cc8-124">有关版本控制的更多信息，请参见[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-124">For more information about versioning, see [Assembly Versioning](../../../docs/framework/app-domains/assembly-versioning.md).</span></span>  
   
--   程序集形成部署单元。 当一个应用程序启动时，只有该应用程序最初调用的程序集必须存在。 其他程序集（例如本地化资源和包含实用工具类的程序集）可以按需检索。 这就使应用程序在第一次下载时保持精简。 有关部署程序集的更多信息，请参见[部署应用程序](../../../docs/framework/deployment/index.md)。  
+-   <span data-ttu-id="b5cc8-125">程序集形成部署单元。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-125">It forms a deployment unit.</span></span> <span data-ttu-id="b5cc8-126">当一个应用程序启动时，只有该应用程序最初调用的程序集必须存在。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-126">When an application starts, only the assemblies that the application initially calls must be present.</span></span> <span data-ttu-id="b5cc8-127">其他程序集（例如本地化资源和包含实用工具类的程序集）可以按需检索。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-127">Other assemblies, such as localization resources or assemblies containing utility classes, can be retrieved on demand.</span></span> <span data-ttu-id="b5cc8-128">这就使应用程序在第一次下载时保持精简。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-128">This allows applications to be kept simple and thin when first downloaded.</span></span> <span data-ttu-id="b5cc8-129">有关部署程序集的更多信息，请参见[部署应用程序](../../../docs/framework/deployment/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-129">For more information about deploying assemblies, see [Deploying Applications](../../../docs/framework/deployment/index.md).</span></span>  
   
--   程序集是支持并行执行的单元。 有关运行多个程序集版本的更多信息，请参见[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
+-   <span data-ttu-id="b5cc8-130">程序集是支持并行执行的单元。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-130">It is the unit at which side-by-side execution is supported.</span></span> <span data-ttu-id="b5cc8-131">有关运行多个程序集版本的更多信息，请参见[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-131">For more information about running multiple versions of an assembly, see [Assemblies and Side-by-Side Execution](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).</span></span>  
   
- 程序集可以为静态或动态。 静态程序集可以包括 .NET Framework 类型（接口和类），以及该程序集的资源（位图、JPEG 文件、资源文件等）。 静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。 你还可以使用 .NET Framework 来创建动态程序集，动态程序集直接从内存运行并且在执行前不存储到磁盘上。 你可以在执行动态程序集后将它们保存在磁盘上。  
+ <span data-ttu-id="b5cc8-132">程序集可以为静态或动态。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-132">Assemblies can be static or dynamic.</span></span> <span data-ttu-id="b5cc8-133">静态程序集可以包括 .NET Framework 类型（接口和类），以及该程序集的资源（位图、JPEG 文件、资源文件等）。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-133">Static assemblies can include .NET Framework types (interfaces and classes), as well as resources for the assembly (bitmaps, JPEG files, resource files, and so on).</span></span> <span data-ttu-id="b5cc8-134">静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-134">Static assemblies are stored on disk in portable executable (PE) files.</span></span> <span data-ttu-id="b5cc8-135">你还可以使用 .NET Framework 来创建动态程序集，动态程序集直接从内存运行并且在执行前不存储到磁盘上。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-135">You can also use the .NET Framework to create dynamic assemblies, which are run directly from memory and are not saved to disk before execution.</span></span> <span data-ttu-id="b5cc8-136">你可以在执行动态程序集后将它们保存在磁盘上。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-136">You can save dynamic assemblies to disk after they have executed.</span></span>  
   
- 有几种创建程序集的方法。 你可以使用过去用来创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio。 你可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中提供的工具创建带有在其他部署环境中创建的模块的程序集。 还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=fullName>）来创建动态程序集。  
+ <span data-ttu-id="b5cc8-137">有几种创建程序集的方法。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-137">There are several ways to create assemblies.</span></span> <span data-ttu-id="b5cc8-138">你可以使用过去用来创建 .dll 或 .exe 文件的开发工具，例如 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-138">You can use development tools, such as Visual Studio, that you have used in the past to create .dll or .exe files.</span></span> <span data-ttu-id="b5cc8-139">你可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中提供的工具创建带有在其他部署环境中创建的模块的程序集。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-139">You can use tools provided in the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] to create assemblies with modules created in other development environments.</span></span> <span data-ttu-id="b5cc8-140">还可以使用公共语言运行时 API（例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>）来创建动态程序集。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-140">You can also use common language runtime APIs, such as <xref:System.Reflection.Emit?displayProperty=nameWithType>, to create dynamic assemblies.</span></span>  
   
-## <a name="related-topics"></a>相关主题  
+## <a name="related-topics"></a><span data-ttu-id="b5cc8-141">相关主题</span><span class="sxs-lookup"><span data-stu-id="b5cc8-141">Related Topics</span></span>  
   
-|标题|说明|  
+|<span data-ttu-id="b5cc8-142">标题</span><span class="sxs-lookup"><span data-stu-id="b5cc8-142">Title</span></span>|<span data-ttu-id="b5cc8-143">说明</span><span class="sxs-lookup"><span data-stu-id="b5cc8-143">Description</span></span>|  
 |-----------|-----------------|  
-|[程序集内容](../../../docs/framework/app-domains/assembly-contents.md)|描述组成程序集的各元素。|  
-|[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)|描述程序集清单中的数据，以及它如何存储在程序集中。|  
-|[全局程序集缓存](../../../docs/framework/app-domains/gac.md)|描述全局程序集缓存以及它如何用于程序集。|  
-|[具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)|描述具有强名称的程序集的特性。|  
-|[程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)|讨论安全性如何作用于程序集。|  
-|[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)|提供对 .NET Framework 版本控制策略的概述。|  
-|[程序集位置](../../../docs/framework/app-domains/assembly-placement.md)|讨论将程序集放到什么位置。|  
-|[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|提供同时使用运行时或程序集的多个版本的概述。|  
-|[使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)|描述如何在程序集上创建、签署和设置特性。|  
-|[发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|描述如何创建动态程序集。|  
-|[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 .NET Framework 如何在运行时解析程序集引用。|  
+|[<span data-ttu-id="b5cc8-144">程序集内容</span><span class="sxs-lookup"><span data-stu-id="b5cc8-144">Assembly Contents</span></span>](../../../docs/framework/app-domains/assembly-contents.md)|<span data-ttu-id="b5cc8-145">描述组成程序集的各元素。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-145">Describes the elements that make up an assembly.</span></span>|  
+|[<span data-ttu-id="b5cc8-146">程序集清单</span><span class="sxs-lookup"><span data-stu-id="b5cc8-146">Assembly Manifest</span></span>](../../../docs/framework/app-domains/assembly-manifest.md)|<span data-ttu-id="b5cc8-147">描述程序集清单中的数据，以及它如何存储在程序集中。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-147">Describes the data in the assembly manifest, and how it is stored in assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-148">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="b5cc8-148">Global Assembly Cache</span></span>](../../../docs/framework/app-domains/gac.md)|<span data-ttu-id="b5cc8-149">描述全局程序集缓存以及它如何用于程序集。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-149">Describes the global assembly cache and how it is used with assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-150">具有强名称的程序集</span><span class="sxs-lookup"><span data-stu-id="b5cc8-150">Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/strong-named-assemblies.md)|<span data-ttu-id="b5cc8-151">描述具有强名称的程序集的特性。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-151">Describes the characteristics of strong-named assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-152">程序集安全注意事项</span><span class="sxs-lookup"><span data-stu-id="b5cc8-152">Assembly Security Considerations</span></span>](../../../docs/framework/app-domains/assembly-security-considerations.md)|<span data-ttu-id="b5cc8-153">讨论安全性如何作用于程序集。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-153">Discusses how security works with assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-154">程序集版本控制</span><span class="sxs-lookup"><span data-stu-id="b5cc8-154">Assembly Versioning</span></span>](../../../docs/framework/app-domains/assembly-versioning.md)|<span data-ttu-id="b5cc8-155">提供对 .NET Framework 版本控制策略的概述。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-155">Provides an overview of the .NET Framework versioning policy.</span></span>|  
+|[<span data-ttu-id="b5cc8-156">程序集位置</span><span class="sxs-lookup"><span data-stu-id="b5cc8-156">Assembly Placement</span></span>](../../../docs/framework/app-domains/assembly-placement.md)|<span data-ttu-id="b5cc8-157">讨论将程序集放到什么位置。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-157">Discusses where to locate assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-158">程序集和并行执行</span><span class="sxs-lookup"><span data-stu-id="b5cc8-158">Assemblies and Side-by-Side Execution</span></span>](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|<span data-ttu-id="b5cc8-159">提供同时使用运行时或程序集的多个版本的概述。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-159">Provides an overview of using multiple versions of the runtime or of an assembly simultaneously.</span></span>|  
+|[<span data-ttu-id="b5cc8-160">使用程序集编程</span><span class="sxs-lookup"><span data-stu-id="b5cc8-160">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)|<span data-ttu-id="b5cc8-161">描述如何在程序集上创建、签署和设置特性。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-161">Describes how to create, sign, and set attributes on assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-162">发出动态方法和程序集</span><span class="sxs-lookup"><span data-stu-id="b5cc8-162">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|<span data-ttu-id="b5cc8-163">描述如何创建动态程序集。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-163">Describes how to create dynamic assemblies.</span></span>|  
+|[<span data-ttu-id="b5cc8-164">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="b5cc8-164">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|<span data-ttu-id="b5cc8-165">描述 .NET Framework 如何在运行时解析程序集引用。</span><span class="sxs-lookup"><span data-stu-id="b5cc8-165">Describes how the .NET Framework resolves assembly references at run time.</span></span>|  
   
-## <a name="reference"></a>参考  
- <xref:System.Reflection.Assembly?displayProperty=fullName>
-
+## <a name="reference"></a><span data-ttu-id="b5cc8-166">参考</span><span class="sxs-lookup"><span data-stu-id="b5cc8-166">Reference</span></span>  
+ <xref:System.Reflection.Assembly?displayProperty=nameWithType>

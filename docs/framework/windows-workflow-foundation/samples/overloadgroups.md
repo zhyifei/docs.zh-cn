@@ -1,47 +1,51 @@
 ---
-title: "OverloadGroups | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OverloadGroups
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d547d2-f5fb-4de3-a959-ee6139a4f1ad
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2a5ab416dc484dddc0b6aa0ec25757921815c723
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# OverloadGroups
-此示例包含 `CreateLocation` 活动，它具有两个有趣的特征：  
+# <a name="overloadgroups"></a><span data-ttu-id="d6787-102">OverloadGroups</span><span class="sxs-lookup"><span data-stu-id="d6787-102">OverloadGroups</span></span>
+<span data-ttu-id="d6787-103">此示例包含 `CreateLocation` 活动，它具有两个有趣的特征：</span><span class="sxs-lookup"><span data-stu-id="d6787-103">This sample consists of an activity (`CreateLocation`), which has two interesting characteristics:</span></span>  
   
-1.  它具有一些必需的参数和一些可选的参数。  
+1.  <span data-ttu-id="d6787-104">它具有一些必需的参数和一些可选的参数。</span><span class="sxs-lookup"><span data-stu-id="d6787-104">It has some required arguments and some optional ones.</span></span>  
   
-2.  它允许用户选择提供两个不同参数集中的一个。  
+2.  <span data-ttu-id="d6787-105">它允许用户选择提供两个不同参数集中的一个。</span><span class="sxs-lookup"><span data-stu-id="d6787-105">It allows the user to choose to provide one of two different sets of arguments.</span></span>  
   
- 使用以下两项功能可以实现上述行为：  
+ <span data-ttu-id="d6787-106">使用以下两项功能可以实现上述行为：</span><span class="sxs-lookup"><span data-stu-id="d6787-106">These behaviors are accomplished by using these two features:</span></span>  
   
--   `[isRequired]` 验证是否已为某个特定活动的属性赋值，如果没有，则它将引发异常。  
+-   <span data-ttu-id="d6787-107">`[isRequired]` 验证是否已为某个特定活动的属性赋值，如果没有，则它将引发异常。</span><span class="sxs-lookup"><span data-stu-id="d6787-107">`[isRequired]` validates that a property of a specific activity is assign, and if not, it throws an exception.</span></span>  
   
--   `[OverloadGroup]` 汇集了一组参数，以便活动用户可在两个参数集中选择使用哪一个。用户不能使用同一实例中不同重载组中的参数。  
+-   <span data-ttu-id="d6787-108">`[OverloadGroup]` 汇集了一组参数，以便活动用户可在两个参数集中选择使用哪一个。</span><span class="sxs-lookup"><span data-stu-id="d6787-108">`[OverloadGroup]` puts together a set of arguments, so that the user of the activity can choose between using one set or another.</span></span> <span data-ttu-id="d6787-109">用户不能使用同一实例中不同重载组中的参数。</span><span class="sxs-lookup"><span data-stu-id="d6787-109">The user cannot use arguments from different Overload Groups in the same instance.</span></span>  
   
- 在设置不同的工作流之后，调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，它将返回<xref:System.Activities.Validation.ConstraintViolation> 的 <xref:System.Activities.Validation.ValidationResults> 集合。将 <xref:System.Activities.Validation.ConstraintViolation> 对象输出到控制台。  
+ <span data-ttu-id="d6787-110">在设置不同的工作流之后, 调用<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>它将返回<xref:System.Activities.Validation.ValidationResults>集合<!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation`。</span><span class="sxs-lookup"><span data-stu-id="d6787-110">After setting up different workflows, call <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> which returns a <xref:System.Activities.Validation.ValidationResults> collection of <!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation`.</span></span> <span data-ttu-id="d6787-111">打印<!--zz <xref:System.Activities.Validation.ConstraintViolation>-->`System.Activities.Validation.ConstraintViolation`到控制台的对象。</span><span class="sxs-lookup"><span data-stu-id="d6787-111">Print the <!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation` objects to the console.</span></span>  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d6787-112">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="d6787-112">To set up, build, and run the sample</span></span>  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开**“OverloadGroups.sln”**示例解决方案。  
+1.  <span data-ttu-id="d6787-113">打开**OverloadGroups.sln**示例中的解决方案[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d6787-113">Open the **OverloadGroups.sln** sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  生成和运行解决方案。  
+2.  <span data-ttu-id="d6787-114">生成和运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="d6787-114">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="d6787-115">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="d6787-115">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d6787-116">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="d6787-116">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="d6787-117">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="d6787-117">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d6787-118">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="d6787-118">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="d6787-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d6787-119">See Also</span></span>

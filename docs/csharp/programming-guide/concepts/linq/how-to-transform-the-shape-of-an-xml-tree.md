@@ -1,41 +1,37 @@
 ---
 title: "如何：转换 XML 树的形状 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: fd5b1351f8473aa2a1bd40992095a89fdfc38375
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3558cb7592641d784f0150ce7016563ad9c81c46
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>如何：转换 XML 树的形状 (C#)
-XML 文档的*形状*是指它的元素名称、属性名称以及它的层次结构的特征。  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a><span data-ttu-id="1b191-102">如何：转换 XML 树的形状 (C#)</span><span class="sxs-lookup"><span data-stu-id="1b191-102">How to: Transform the Shape of an XML Tree (C#)</span></span>
+<span data-ttu-id="1b191-103">XML 文档的*形状*是指它的元素名称、属性名称以及它的层次结构的特征。</span><span class="sxs-lookup"><span data-stu-id="1b191-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
   
- 有时，您将不得不更改 XML 文档的形状。 例如，您可能必须将一个现有 XML 文档发送到另一个系统，而该系统要求使用不同的元素和属性名称。 你可以在整个文档中，根据需要删除和重命名元素，但是，如果使用函数构造，则可获得可读性更强、更易于维护的代码。 有关函数构造的详细信息，请参阅[函数构造 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ <span data-ttu-id="1b191-104">有时，您将不得不更改 XML 文档的形状。</span><span class="sxs-lookup"><span data-stu-id="1b191-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="1b191-105">例如，您可能必须将一个现有 XML 文档发送到另一个系统，而该系统要求使用不同的元素和属性名称。</span><span class="sxs-lookup"><span data-stu-id="1b191-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="1b191-106">你可以在整个文档中，根据需要删除和重命名元素，但是，如果使用函数构造，则可获得可读性更强、更易于维护的代码。</span><span class="sxs-lookup"><span data-stu-id="1b191-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="1b191-107">有关函数构造的详细信息，请参阅[函数构造 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="1b191-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
- 第一个示例更改 XML 文档的组织结构。 它将复杂元素从树中的一个位置移动到另一个位置。  
+ <span data-ttu-id="1b191-108">第一个示例更改 XML 文档的组织结构。</span><span class="sxs-lookup"><span data-stu-id="1b191-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="1b191-109">它将复杂元素从树中的一个位置移动到另一个位置。</span><span class="sxs-lookup"><span data-stu-id="1b191-109">It moves complex elements from one location in the tree to another.</span></span>  
   
- 本主题的第二个示例创建一个 XML 文档，该文档具有与源文档不同的形状。 它更改元素名称的大小写，重命名某些元素，转换后的树中不包含源树的某些元素。  
+ <span data-ttu-id="1b191-110">本主题的第二个示例创建一个 XML 文档，该文档具有与源文档不同的形状。</span><span class="sxs-lookup"><span data-stu-id="1b191-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="1b191-111">它更改元素名称的大小写，重命名某些元素，转换后的树中不包含源树的某些元素。</span><span class="sxs-lookup"><span data-stu-id="1b191-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码使用嵌入式查询表达式更改 XML 文件的形状。  
+## <a name="example"></a><span data-ttu-id="1b191-112">示例</span><span class="sxs-lookup"><span data-stu-id="1b191-112">Example</span></span>  
+ <span data-ttu-id="1b191-113">下面的代码使用嵌入式查询表达式更改 XML 文件的形状。</span><span class="sxs-lookup"><span data-stu-id="1b191-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
   
- 本示例中的源 XML 文档在 `Customers` 元素（它包含所有客户）下包含一个 `Root` 元素。 此外，在 `Orders` 元素（包含所有订单）下包含一个 `Root` 元素。 本示例创建一个新的 XML 树，在该树中，每个客户的订单都包含在 `Orders` 元素内的 `Customer` 元素中。 原始文档还在 `CustomerID` 元素中包含一个 `Order` 元素；此元素将从重新变形的文档中移除。  
+ <span data-ttu-id="1b191-114">本示例中的源 XML 文档在 `Customers` 元素（它包含所有客户）下包含一个 `Root` 元素。</span><span class="sxs-lookup"><span data-stu-id="1b191-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="1b191-115">此外，在 `Orders` 元素（包含所有订单）下包含一个 `Root` 元素。</span><span class="sxs-lookup"><span data-stu-id="1b191-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="1b191-116">本示例创建一个新的 XML 树，在该树中，每个客户的订单都包含在 `Orders` 元素内的 `Customer` 元素中。</span><span class="sxs-lookup"><span data-stu-id="1b191-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="1b191-117">原始文档还在 `CustomerID` 元素中包含一个 `Order` 元素；此元素将从重新变形的文档中移除。</span><span class="sxs-lookup"><span data-stu-id="1b191-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ <span data-ttu-id="1b191-118">本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="1b191-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -61,7 +57,7 @@ XElement newCustOrd =
 Console.WriteLine(newCustOrd);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="1b191-119">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="1b191-119">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -97,12 +93,12 @@ Console.WriteLine(newCustOrd);
   . . .  
 ```  
   
-## <a name="example"></a>示例  
- 本示例重命名某些元素并将某些属性转换为元素。  
+## <a name="example"></a><span data-ttu-id="1b191-120">示例</span><span class="sxs-lookup"><span data-stu-id="1b191-120">Example</span></span>  
+ <span data-ttu-id="1b191-121">本示例重命名某些元素并将某些属性转换为元素。</span><span class="sxs-lookup"><span data-stu-id="1b191-121">This example renames some elements and converts some attributes to elements.</span></span>  
   
- 代码调用 `ConvertAddress`，它返回一个 <xref:System.Xml.Linq.XElement> 对象列表。 此方法的参数是一个查询，该查询确定 `Address` 属性值为 `Type` 的 `"Shipping"` 复杂元素。  
+ <span data-ttu-id="1b191-122">代码调用 `ConvertAddress`，它返回一个 <xref:System.Xml.Linq.XElement> 对象列表。</span><span class="sxs-lookup"><span data-stu-id="1b191-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="1b191-123">此方法的参数是一个查询，该查询确定 `Address` 属性值为 `Type` 的 `"Shipping"` 复杂元素。</span><span class="sxs-lookup"><span data-stu-id="1b191-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。  
+ <span data-ttu-id="1b191-124">本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。</span><span class="sxs-lookup"><span data-stu-id="1b191-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  
@@ -135,7 +131,7 @@ static void Main(string[] args)
 }  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="1b191-125">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="1b191-125">This code produces the following output:</span></span>  
   
 ```xml  
 <PO>  
@@ -150,6 +146,5 @@ static void Main(string[] args)
 </PO>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="1b191-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="1b191-126">See Also</span></span>  
+ [<span data-ttu-id="1b191-127">投影和转换 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1b191-127">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

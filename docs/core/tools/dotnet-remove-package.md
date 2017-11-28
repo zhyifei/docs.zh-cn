@@ -7,48 +7,46 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 4167f5465571259975572669e27f20c586b910da
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-remove-package"></a>dotnet remove package
+# <a name="dotnet-remove-package"></a><span data-ttu-id="5d4a5-103">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="5d4a5-103">dotnet remove package</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a><span data-ttu-id="5d4a5-104">名称</span><span class="sxs-lookup"><span data-stu-id="5d4a5-104">Name</span></span>
 
-`dotnet remove package` - 从项目文件删除包引用。
+<span data-ttu-id="5d4a5-105">`dotnet remove package` - 从项目文件删除包引用。</span><span class="sxs-lookup"><span data-stu-id="5d4a5-105">`dotnet remove package` - Removes package reference from a project file.</span></span>
 
-## <a name="synopsis"></a>摘要
+## <a name="synopsis"></a><span data-ttu-id="5d4a5-106">摘要</span><span class="sxs-lookup"><span data-stu-id="5d4a5-106">Synopsis</span></span>
 
 `dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a><span data-ttu-id="5d4a5-107">描述</span><span class="sxs-lookup"><span data-stu-id="5d4a5-107">Description</span></span>
 
-使用 `dotnet remove package` 命令可方便地从项目删除 NuGet 包引用。
+<span data-ttu-id="5d4a5-108">使用 `dotnet remove package` 命令可方便地从项目删除 NuGet 包引用。</span><span class="sxs-lookup"><span data-stu-id="5d4a5-108">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a><span data-ttu-id="5d4a5-109">参数</span><span class="sxs-lookup"><span data-stu-id="5d4a5-109">Arguments</span></span>
 
 `PROJECT`
 
-指定项目文件。 如果未指定，此命令会搜索当前目录，以获取解决方案文件。
+<span data-ttu-id="5d4a5-110">指定项目文件。</span><span class="sxs-lookup"><span data-stu-id="5d4a5-110">Specifies the project file.</span></span> <span data-ttu-id="5d4a5-111">如果未指定，此命令会搜索当前目录，以获取解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="5d4a5-111">If not specified, the command will search the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-要删除的包引用。
+<span data-ttu-id="5d4a5-112">要删除的包引用。</span><span class="sxs-lookup"><span data-stu-id="5d4a5-112">The package reference to remove.</span></span>
 
-## <a name="options"></a>选项
+## <a name="options"></a><span data-ttu-id="5d4a5-113">选项</span><span class="sxs-lookup"><span data-stu-id="5d4a5-113">Options</span></span>
 
 `-h|--help`
 
-打印出有关命令的简短帮助。
+<span data-ttu-id="5d4a5-114">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="5d4a5-114">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a>示例
+## <a name="examples"></a><span data-ttu-id="5d4a5-115">示例</span><span class="sxs-lookup"><span data-stu-id="5d4a5-115">Examples</span></span>
 
-从当前目录中的项目删除 `Newtonsoft.Json` NuGet 包：
+<span data-ttu-id="5d4a5-116">从当前目录中的项目删除 `Newtonsoft.Json` NuGet 包：</span><span class="sxs-lookup"><span data-stu-id="5d4a5-116">Removes `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
 
 `dotnet remove package Newtonsoft.Json`
-

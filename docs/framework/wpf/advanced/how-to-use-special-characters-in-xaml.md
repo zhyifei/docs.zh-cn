@@ -1,43 +1,46 @@
 ---
-title: "如何：在 XAML 中使用特殊字符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "字符, 特殊"
-  - "特殊字符"
-  - "版式, 特殊字符"
-  - "Unicode UTF-8 文件格式"
-  - "UTF-8 文件格式"
+title: "如何：在 XAML 中使用特殊字符"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unicode UTF-8 file format
+- UTF-8 file format
+- characters [WPF], special
+- typography [WPF], special characters
+- special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 308b2152f98286ba532a15e5491b5d1a25aa66dd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：在 XAML 中使用特殊字符
-在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中创建的标记文件自动以 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF\-8 的文件格式保存，这意味着大多数特殊字符（如重音符号）都会正确编码。  不过，有一组常用特殊字符的处理方式有所不同。  这些特殊字符遵循[!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 编码标准。  
+# <a name="how-to-use-special-characters-in-xaml"></a><span data-ttu-id="1a98d-102">如何：在 XAML 中使用特殊字符</span><span class="sxs-lookup"><span data-stu-id="1a98d-102">How to: Use Special Characters in XAML</span></span>
+<span data-ttu-id="1a98d-103">在中创建的标记文件[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]自动保存在[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]utf-8 文件格式，这意味着大部分特殊字符，如重音符号进行正确编码。</span><span class="sxs-lookup"><span data-stu-id="1a98d-103">Markup files that are created in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] are automatically saved in the [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF-8 file format, which means that most special characters, such as accent marks, are encoded correctly.</span></span> <span data-ttu-id="1a98d-104">但是，有一组常用特殊字符的处理方式不同。</span><span class="sxs-lookup"><span data-stu-id="1a98d-104">However, there is a set of commonly-used special characters that are handled differently.</span></span> <span data-ttu-id="1a98d-105">这些特殊字符遵循[!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]编码标准。</span><span class="sxs-lookup"><span data-stu-id="1a98d-105">These special characters follow the [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] standard for encoding.</span></span>  
   
- 下表显示了对这组特殊字符进行编码所用的语法：  
+ <span data-ttu-id="1a98d-106">下表显示这组特殊字符的编码语法：</span><span class="sxs-lookup"><span data-stu-id="1a98d-106">The following table shows the syntax for encoding this set of special characters:</span></span>  
   
-|字符|语法|说明|  
-|--------|--------|--------|  
-|\<|`<`|小于号。|  
-|\>|`>`|大于号。|  
-|&|`&`|“and”符。|  
-|"|`"`|双引号。|  
+|<span data-ttu-id="1a98d-107">字符</span><span class="sxs-lookup"><span data-stu-id="1a98d-107">Character</span></span>|<span data-ttu-id="1a98d-108">语法</span><span class="sxs-lookup"><span data-stu-id="1a98d-108">Syntax</span></span>|<span data-ttu-id="1a98d-109">描述</span><span class="sxs-lookup"><span data-stu-id="1a98d-109">Description</span></span>|  
+|---------------|------------|-----------------|  
+|<|`<`|<span data-ttu-id="1a98d-110">小于符号。</span><span class="sxs-lookup"><span data-stu-id="1a98d-110">Less than symbol.</span></span>|  
+|>|`>`|<span data-ttu-id="1a98d-111">大于符号。</span><span class="sxs-lookup"><span data-stu-id="1a98d-111">Greater than sign.</span></span>|  
+|&|`&`|<span data-ttu-id="1a98d-112">& 符号。</span><span class="sxs-lookup"><span data-stu-id="1a98d-112">Ampersand symbol.</span></span>|  
+|<span data-ttu-id="1a98d-113">"</span><span class="sxs-lookup"><span data-stu-id="1a98d-113">"</span></span>|`"`|<span data-ttu-id="1a98d-114">双引号。</span><span class="sxs-lookup"><span data-stu-id="1a98d-114">Double quote symbol.</span></span>|  
   
 > [!NOTE]
->  如果使用文本编辑器（如 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 记事本）创建标记文件，则必须以 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF\-8 文件格式保存文件以保留任何编码的特殊字符。  
+>  <span data-ttu-id="1a98d-115">如果你创建的标记文件，使用文本编辑器中，如[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]记事本，你必须保存在文件[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]以保持任何 utf-8 文件格式编码的特殊字符。</span><span class="sxs-lookup"><span data-stu-id="1a98d-115">If you create a markup file using a text editor, such as [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Notepad, you must save the file in the [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF-8 file format in order to preserve any encoded special characters.</span></span>  
   
- 下面的示例演示在创建标记时如何在文本中使用特殊字符。  
+ <span data-ttu-id="1a98d-116">以下示例演示创建标记时如何在文本中使用特殊字符。</span><span class="sxs-lookup"><span data-stu-id="1a98d-116">The following example shows how you can use special characters in text when creating markup.</span></span>  
   
-## 示例  
- [!code-xml[SpecialCharsSnippets#SpecialCharsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpecialCharsSnippets/CS/Window1.xaml#specialcharssnippet1)]
+## <a name="example"></a><span data-ttu-id="1a98d-117">示例</span><span class="sxs-lookup"><span data-stu-id="1a98d-117">Example</span></span>  
+ [!code-xaml[SpecialCharsSnippets#SpecialCharsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpecialCharsSnippets/CS/Window1.xaml#specialcharssnippet1)]

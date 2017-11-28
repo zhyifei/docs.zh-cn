@@ -10,31 +10,29 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ffa97164736fc7f3edc450682d23bdf499b6eb34
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="globaljson-reference"></a><span data-ttu-id="32179-104">global.json 引用</span><span class="sxs-lookup"><span data-stu-id="32179-104">global.json reference</span></span>
 
-# <a name="globaljson-reference"></a>global.json 引用
+<span data-ttu-id="32179-105">global.json 文件允许通过 `sdk` 属性选择所使用的 .NET Core 工具版本。</span><span class="sxs-lookup"><span data-stu-id="32179-105">The *global.json* file allows selection of the .NET Core tools version being used through the `sdk` property.</span></span>
 
-global.json 文件允许通过 `sdk` 属性选择所使用的 .NET Core 工具版本。
+<span data-ttu-id="32179-106">.NET Core CLI 工具在当前工作目录（不必与项目目录相同）或它的一个父目录中查找此文件。</span><span class="sxs-lookup"><span data-stu-id="32179-106">.NET Core CLI tools look for this file in the current working directory (which isn't necessarily the same as the project directory) or one of its parent directories.</span></span>
 
-.NET Core CLI 工具在当前工作目录（不必与项目目录相同）或它的一个父目录中查找此文件。
+## <a name="sdk"></a><span data-ttu-id="32179-107">SDK</span><span class="sxs-lookup"><span data-stu-id="32179-107">sdk</span></span>
+<span data-ttu-id="32179-108">类型：Object</span><span class="sxs-lookup"><span data-stu-id="32179-108">Type: Object</span></span>
 
-## <a name="sdk"></a>SDK
-类型：Object
+<span data-ttu-id="32179-109">指定 SDK 相关信息。</span><span class="sxs-lookup"><span data-stu-id="32179-109">Specifies information about the SDK.</span></span>
 
-指定 SDK 相关信息。
+### <a name="version"></a><span data-ttu-id="32179-110">版本</span><span class="sxs-lookup"><span data-stu-id="32179-110">version</span></span>
+<span data-ttu-id="32179-111">类型：String</span><span class="sxs-lookup"><span data-stu-id="32179-111">Type: String</span></span>
 
-### <a name="version"></a>版本
-类型：String
+<span data-ttu-id="32179-112">要使用的 SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="32179-112">The version of the SDK to use.</span></span>
 
-要使用的 SDK 版本。
-
-例如：
+<span data-ttu-id="32179-113">例如：</span><span class="sxs-lookup"><span data-stu-id="32179-113">For example:</span></span>
 
 ```json
 {
@@ -43,4 +41,3 @@ global.json 文件允许通过 `sdk` 属性选择所使用的 .NET Core 工具�
   }
 }
 ```
-

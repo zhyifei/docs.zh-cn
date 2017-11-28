@@ -1,44 +1,47 @@
 ---
-title: "自定义凭据和凭据验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "凭据验证 [WCF]"
-  - "凭据 [WCF]"
-  - "凭据 [WCF], 自定义"
-  - "凭据 [WCF], 验证"
-  - "自定义凭据 [WCF]"
+title: "自定义凭据和凭据验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [WCF], custom
+- credentials [WCF]
+- custom credentials [WCF]
+- credential validation [WCF]
+- credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3ca7726f3a6a0c5faaab1cbbd0b31125ce0c1d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 自定义凭据和凭据验证
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的安全性基于服务与客户端之间的凭据交换。  大多数安全方案均可使用常见的凭据类型来实现，如 Windows \(Kerberos\)、用户名和密码以及证书。  而本节中的主题针对需要使用新类型的凭据的情况说明如何处理和验证这些新类型。  
+# <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="8e430-102">自定义凭据和凭据验证</span><span class="sxs-lookup"><span data-stu-id="8e430-102">Custom Credential and Credential Validation</span></span>
+<span data-ttu-id="8e430-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的安全性基于服务与客户端之间的凭据交换。</span><span class="sxs-lookup"><span data-stu-id="8e430-103">Security in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="8e430-104">大多数安全方案均可使用常见的凭据类型来实现，如 Windows (Kerberos)、用户名和密码以及证书。</span><span class="sxs-lookup"><span data-stu-id="8e430-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="8e430-105">而本节中的主题针对需要使用新类型的凭据的情况说明如何处理和验证这些新类型。</span><span class="sxs-lookup"><span data-stu-id="8e430-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  
   
-## 本节内容  
- [如何：创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- 介绍如何通过从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 类继承来自定义 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 验证。  
+## <a name="in-this-section"></a><span data-ttu-id="8e430-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="8e430-106">In This Section</span></span>  
+ [<span data-ttu-id="8e430-107">如何： 创建使用自定义证书验证程序服务</span><span class="sxs-lookup"><span data-stu-id="8e430-107">How to: Create a Service that Employs a Custom Certificate Validator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ <span data-ttu-id="8e430-108">介绍如何通过从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类继承来自定义 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 验证。</span><span class="sxs-lookup"><span data-stu-id="8e430-108">Explains how to customize [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] validation by inheriting from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span>  
   
- [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- 演示如何扩展 <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类以容纳新的凭据类型。  这是介绍如何创建自定义凭据类型的系列主题中的第一个主题。  
+ [<span data-ttu-id="8e430-109">演练： 创建自定义客户端和服务凭据</span><span class="sxs-lookup"><span data-stu-id="8e430-109">Walkthrough: Creating Custom Client and Service Credentials</span></span>](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ <span data-ttu-id="8e430-110">演示如何扩展<xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>类以容纳新凭据类型。</span><span class="sxs-lookup"><span data-stu-id="8e430-110">Demonstrates how to extend the <xref:System.ServiceModel.Description.ClientCredentials> and <xref:System.ServiceModel.Description.ServiceCredentials> classes to accommodate new credential types.</span></span> <span data-ttu-id="8e430-111">这是介绍如何创建自定义凭据类型的系列主题中的第一个主题。</span><span class="sxs-lookup"><span data-stu-id="8e430-111">This is first in a series of topics that enable creation of custom credential types.</span></span>  
   
- [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- 说明如何创建安全令牌提供程序来处理新的凭据类型并返回凭据的新令牌。  这是该系列主题中的第二个主题。  
+ [<span data-ttu-id="8e430-112">如何： 创建自定义安全令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="8e430-112">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ <span data-ttu-id="8e430-113">说明如何创建安全令牌提供程序来处理新的凭据类型并返回凭据的新令牌。</span><span class="sxs-lookup"><span data-stu-id="8e430-113">Explains how to create a security token provider to handle new credential types and return new tokens for the credential.</span></span> <span data-ttu-id="8e430-114">这是该系列主题中的第二个主题。</span><span class="sxs-lookup"><span data-stu-id="8e430-114">This is the second topic in the series.</span></span>  
   
- [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- 说明如何创建自定义身份验证器来验证新的凭据类型。  这是该系列主题中的第三个主题。  
+ [<span data-ttu-id="8e430-115">如何： 创建自定义安全令牌身份验证器</span><span class="sxs-lookup"><span data-stu-id="8e430-115">How to: Create a Custom Security Token Authenticator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ <span data-ttu-id="8e430-116">说明如何创建自定义身份验证器来验证新的凭据类型。</span><span class="sxs-lookup"><span data-stu-id="8e430-116">Explains how to create a custom authenticator to authenticate a new credential type.</span></span> <span data-ttu-id="8e430-117">这是该系列主题中的第三个主题。</span><span class="sxs-lookup"><span data-stu-id="8e430-117">This is the third topic in the series.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="8e430-118">参考</span><span class="sxs-lookup"><span data-stu-id="8e430-118">Reference</span></span>  
  <xref:System.ServiceModel.Security>  
   
  <xref:System.IdentityModel.Claims>  
@@ -55,12 +58,12 @@ caps.handback.revision: 8
   
  <xref:System.ServiceModel.Description.ServiceCredentials>  
   
-## 相关章节  
- [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+## <a name="related-sections"></a><span data-ttu-id="8e430-119">相关章节</span><span class="sxs-lookup"><span data-stu-id="8e430-119">Related Sections</span></span>  
+ [<span data-ttu-id="8e430-120">身份验证</span><span class="sxs-lookup"><span data-stu-id="8e430-120">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
- [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="8e430-121">联合身份验证和已颁发的令牌</span><span class="sxs-lookup"><span data-stu-id="8e430-121">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="8e430-122">授权</span><span class="sxs-lookup"><span data-stu-id="8e430-122">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## 请参阅  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="8e430-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8e430-123">See Also</span></span>  
+ [<span data-ttu-id="8e430-124">安全性</span><span class="sxs-lookup"><span data-stu-id="8e430-124">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)

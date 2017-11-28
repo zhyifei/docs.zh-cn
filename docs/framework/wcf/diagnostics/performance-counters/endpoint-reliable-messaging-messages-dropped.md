@@ -1,23 +1,26 @@
 ---
-title: "终结点：丢弃的可靠消息传递消息数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "终结点：丢弃的可靠消息传递消息数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0c5b842-3b75-4cd1-91c4-a702ae17bdcd
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0de55e970679359837f2570f6c6e1e2d97c014b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 终结点：丢弃的可靠消息传递消息数
-计数器名称：Reliable Messaging Sessions Dropped（丢弃的可靠消息会话数）。  
+# <a name="endpoint-reliable-messaging-messages-dropped"></a><span data-ttu-id="a637e-102">终结点：丢弃的可靠消息传递消息数</span><span class="sxs-lookup"><span data-stu-id="a637e-102">Endpoint: Reliable Messaging Messages Dropped</span></span>
+<span data-ttu-id="a637e-103">计数器名称：Reliable Messaging Sessions Dropped（丢弃的可靠消息会话数）。</span><span class="sxs-lookup"><span data-stu-id="a637e-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
   
-## 描述  
- 此终结点上已丢弃的可靠消息传递消息总数。
+## <a name="description"></a><span data-ttu-id="a637e-104">描述</span><span class="sxs-lookup"><span data-stu-id="a637e-104">Description</span></span>  
+ <span data-ttu-id="a637e-105">此终结点上已丢弃的可靠消息传递消息总数。</span><span class="sxs-lookup"><span data-stu-id="a637e-105">Total number of reliable messaging messages that have been dropped at this endpoint.</span></span>

@@ -1,40 +1,42 @@
 ---
-title: "对服务操作失败进行监视 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "对服务操作失败进行监视"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 42506f7f32d0174b4f980f4e94d370cf4c137276
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 对服务操作失败进行监视
-如果为应用程序启用了分析跟踪，则可以在事件查看器中轻松地监视服务失败。本主题演示如何确定服务操作失败的时间，以及如何确定失败的原因。  
+# <a name="monitoring-service-operation-failures"></a><span data-ttu-id="0958f-102">对服务操作失败进行监视</span><span class="sxs-lookup"><span data-stu-id="0958f-102">Monitoring Service Operation Failures</span></span>
+<span data-ttu-id="0958f-103">如果为应用程序启用了分析跟踪，则可以在事件查看器中轻松地监视服务失败。</span><span class="sxs-lookup"><span data-stu-id="0958f-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="0958f-104">本主题演示如何确定服务操作失败的时间，以及如何确定失败的原因。</span><span class="sxs-lookup"><span data-stu-id="0958f-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  
   
-### 确定服务操作失败信息  
+### <a name="determining-service-operation-failure-information"></a><span data-ttu-id="0958f-105">确定服务操作失败信息</span><span class="sxs-lookup"><span data-stu-id="0958f-105">Determining service operation failure information</span></span>  
   
-1.  通过单击**“开始”**、**“运行”**并输入 `eventvwr.exe` 来打开事件查看器。  
+1.  <span data-ttu-id="0958f-106">通过单击打开事件查看器**启动**，**运行**，并输入`eventvwr.exe`。</span><span class="sxs-lookup"><span data-stu-id="0958f-106">Open Event Viewer by clicking **Start**, **Run**, and entering `eventvwr.exe`.</span></span>  
   
-2.  如果尚未启用分析跟踪，请展开**“应用程序和服务日志”**、**“Microsoft”**、**“Windows”**、**“应用程序服务器”\-\>“应用程序”**。选择**“视图”**、**“显示分析和调试日志”**。右击**“分析”**，然后选择**“启用日志”**。保持事件查看器打开，以便在服务操作失败后可以查看跟踪。  
+2.  <span data-ttu-id="0958f-107">如果尚未启用分析跟踪，则展开**Applications and Services Logs**， **Microsoft**， **Windows**，**应用程序服务器-应用程序**.</span><span class="sxs-lookup"><span data-stu-id="0958f-107">If you haven’t enabled analytic tracing, expand **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**.</span></span> <span data-ttu-id="0958f-108">选择**视图**，**显示分析和调试日志**。</span><span class="sxs-lookup"><span data-stu-id="0958f-108">Select **View**, **Show Analytic and Debug Logs**.</span></span> <span data-ttu-id="0958f-109">右键单击**分析**和选择**启用日志**。</span><span class="sxs-lookup"><span data-stu-id="0958f-109">Right-click **Analytic** and select **Enable Log**.</span></span> <span data-ttu-id="0958f-110">保持事件查看器打开，以便在服务操作失败后可以查看跟踪。</span><span class="sxs-lookup"><span data-stu-id="0958f-110">Leave Event Viewer open so that traces can be viewed after the service operation fails.</span></span>  
   
-3.  接下来，打开在 [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] 的[入门教程](../../../../../docs/framework/wcf/getting-started-tutorial.md)中创建的示例。请注意，必须以管理员身份运行 [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]，以便可以创建该服务。如果安装了 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 示例，则可以打开[入门](../../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含本教程中创建的完整项目。  
+3.  <span data-ttu-id="0958f-111">接下来，打开在中创建的示例[入门教程](../../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]请注意，必须运行[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]以管理员身份，以便可以创建服务。</span><span class="sxs-lookup"><span data-stu-id="0958f-111">Next, open the sample created in the [Getting Started Tutorial](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Note that you must run [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] as an administrator so that the service can be created.</span></span> <span data-ttu-id="0958f-112">如果你有[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]安装的示例，你可以打开[入门](../../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教程中创建的项目。</span><span class="sxs-lookup"><span data-stu-id="0958f-112">If you have the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] samples installed, you can open the [Getting Started](../../../../../docs/framework/wcf/samples/getting-started-sample.md), which contains the completed project created in the tutorial.</span></span>  
   
-4.  在服务器项目的 Program.cs 文件中，将以下代码行添加到 `CalculatorService` 类中 `Divide` 方法的开头：  
+4.  <span data-ttu-id="0958f-113">在服务器项目的 Program.cs 文件中，将以下代码行添加到 `Divide` 类中 `CalculatorService` 方法的开头：</span><span class="sxs-lookup"><span data-stu-id="0958f-113">In the Program.cs file in the Server project, add the following line of code to the start of the `Divide` method in the `CalculatorService` class:</span></span>  
   
     ```  
     if (n2 == 0) throw new DivideByZeroException();  
-  
     ```  
   
-5.  在客户端项目的 Program.cs 文件中，将分配给 value2 的值更改为零：  
+5.  <span data-ttu-id="0958f-114">在客户端项目的 Program.cs 文件中，将分配给 value2 的值更改为零：</span><span class="sxs-lookup"><span data-stu-id="0958f-114">In the Program.cs file in the Client project, change the value assigned to value2 to zero:</span></span>  
   
     ```  
     //Call the Divide service operation  
@@ -42,18 +44,17 @@ caps.handback.revision: 6
     value2 = 0.00D;  
     result = client.Divide(value1, value2);  
     Console.WriteLine("Divide({0}, {1}) = {2}", value1, value2, result);  
-  
     ```  
   
-6.  通过按**“Ctrl\+F5”**来执行该服务器应用程序而不进行调试。  
+6.  <span data-ttu-id="0958f-115">执行服务器应用程序而不进行调试按**Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="0958f-115">Execute the server application without debugging by pressing **Ctrl+F5**.</span></span>  
   
-7.  打开 Visual Studio 命令提示。定位到客户端目录，然后从命令行执行该客户端。  
+7.  <span data-ttu-id="0958f-116">打开 Visual Studio 命令提示。</span><span class="sxs-lookup"><span data-stu-id="0958f-116">Open a Visual Studio command prompt.</span></span>  <span data-ttu-id="0958f-117">定位到客户端目录，然后从命令行执行该客户端。</span><span class="sxs-lookup"><span data-stu-id="0958f-117">Navigate to the client directory and execute the client from the command line.</span></span>  
   
-8.  在事件查看器中，禁用并刷新分析日志，然后按事件 ID 对事件排序。查找事件 ID 为 [219 \- ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md)（描述服务失败）的事件。  
+8.  <span data-ttu-id="0958f-118">在事件查看器中，禁用并刷新分析日志，然后按事件 ID 对事件排序。</span><span class="sxs-lookup"><span data-stu-id="0958f-118">In Event Viewer, disable and refresh the Analytic log and sort the events by Event ID.</span></span>  <span data-ttu-id="0958f-119">查找具有事件 ID 的事件[219-ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md)，用于描述服务失败。</span><span class="sxs-lookup"><span data-stu-id="0958f-119">Look for an event with Event ID [219 - ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), which describes the service failure.</span></span>  
   
     ```Output  
-    消息处理过程中出现了“System.DivideByZeroException”类型的未经处理的异常。完整异常 ToString: System.DivideByZeroException: 试图除以零。  
+    There was an unhandled exception of type 'System.DivideByZeroException' during message processing.  Full Exception ToString: System.DivideByZeroException: Attempted to divide by zero.  
     ```  
   
     > [!NOTE]
-    >  事件在发送到事件查看器时将被缓冲；可能不会立即显示失败事件。
+    >  <span data-ttu-id="0958f-120">事件在发送到事件查看器时将被缓冲；可能不会立即显示失败事件。</span><span class="sxs-lookup"><span data-stu-id="0958f-120">Events are buffered when being sent to the event viewer; the failure event may not appear right away.</span></span>

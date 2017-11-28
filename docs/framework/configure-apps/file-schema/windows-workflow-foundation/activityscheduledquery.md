@@ -1,62 +1,71 @@
 ---
-title: "&lt;activityScheduledQuery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;activityScheduledQuery&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 779ac3995d4d5fb1b63de6ae6b9db7103691d6f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;activityScheduledQuery&gt;
-表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。  跟踪参与者需要用此查询来订阅活动安排记录。  
+# <a name="ltactivityscheduledquerygt"></a><span data-ttu-id="59b13-102">&lt;activityScheduledQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="59b13-102">&lt;activityScheduledQuery&gt;</span></span>
+<span data-ttu-id="59b13-103">表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。</span><span class="sxs-lookup"><span data-stu-id="59b13-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="59b13-104">跟踪参与者需要用此查询来订阅活动安排记录。</span><span class="sxs-lookup"><span data-stu-id="59b13-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
   
- 有关跟踪配置文件查询的更多信息，请参见[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)  
+ <span data-ttu-id="59b13-105">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="59b13-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-## 语法  
+<span data-ttu-id="59b13-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="59b13-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="59b13-107">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="59b13-107">\<tracking></span></span>  
+<span data-ttu-id="59b13-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="59b13-108">\<trackingProfile></span></span>  
+<span data-ttu-id="59b13-109">\<工作流 ></span><span class="sxs-lookup"><span data-stu-id="59b13-109">\<workflow></span></span>  
+<span data-ttu-id="59b13-110">\<activityScheduledQueries ></span><span class="sxs-lookup"><span data-stu-id="59b13-110">\<activityScheduledQueries></span></span>  
+<span data-ttu-id="59b13-111">\<activityScheduledQuery ></span><span class="sxs-lookup"><span data-stu-id="59b13-111">\<activityScheduledQuery></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="59b13-112">语法</span><span class="sxs-lookup"><span data-stu-id="59b13-112">Syntax</span></span>  
   
-<tracking>  
-     <trackingProfile name="Name">  
-       <workflow>  
-          <activityScheduledQueries>  
-             <activityScheduledQuery activityName="String"  
-                 childActivityName="String"/>  
-          </activityScheduledQueries>  
-       </workflow>  
-     </trackingProfile>  
+```xml 
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String" 
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="59b13-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="59b13-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="59b13-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="59b13-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="59b13-115">特性</span><span class="sxs-lookup"><span data-stu-id="59b13-115">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|activityName|一个字符串，指定正在请求取消的活动的名称。|  
-|childActivityName|一个字符串，指定已请求将其取消的子活动的名称。|  
+|<span data-ttu-id="59b13-116">特性</span><span class="sxs-lookup"><span data-stu-id="59b13-116">Attribute</span></span>|<span data-ttu-id="59b13-117">描述</span><span class="sxs-lookup"><span data-stu-id="59b13-117">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="59b13-118">activityName</span><span class="sxs-lookup"><span data-stu-id="59b13-118">activityName</span></span>|<span data-ttu-id="59b13-119">一个字符串，指定正在请求取消的活动的名称。</span><span class="sxs-lookup"><span data-stu-id="59b13-119">A string that specifies the name of the activity that is requesting the cancellation.</span></span>|  
+|<span data-ttu-id="59b13-120">childActivityName</span><span class="sxs-lookup"><span data-stu-id="59b13-120">childActivityName</span></span>|<span data-ttu-id="59b13-121">一个字符串，指定已请求将其取消的子活动的名称。</span><span class="sxs-lookup"><span data-stu-id="59b13-121">A string that specifies the name of the child activity for which cancellation was requested.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="59b13-122">子元素</span><span class="sxs-lookup"><span data-stu-id="59b13-122">Child Elements</span></span>  
+ <span data-ttu-id="59b13-123">无。</span><span class="sxs-lookup"><span data-stu-id="59b13-123">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="59b13-124">父元素</span><span class="sxs-lookup"><span data-stu-id="59b13-124">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<activityScheduledQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
+|<span data-ttu-id="59b13-125">元素</span><span class="sxs-lookup"><span data-stu-id="59b13-125">Element</span></span>|<span data-ttu-id="59b13-126">描述</span><span class="sxs-lookup"><span data-stu-id="59b13-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="59b13-127">\<activityScheduledQuery ></span><span class="sxs-lookup"><span data-stu-id="59b13-127">\<activityScheduledQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|<span data-ttu-id="59b13-128">一个查询，用于跟踪安排给父活动来执行的活动。</span><span class="sxs-lookup"><span data-stu-id="59b13-128">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
   
-## 请参阅  
- [System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement](assetId:///System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.ActivityScheduledQuery](assetId:///System.Activities.Tracking.ActivityScheduledQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="59b13-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="59b13-129">See Also</span></span>  
+ <span data-ttu-id="59b13-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="59b13-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="59b13-131"><xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="59b13-131"><xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="59b13-132">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="59b13-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="59b13-133">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="59b13-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

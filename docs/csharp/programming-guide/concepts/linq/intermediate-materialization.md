@@ -1,31 +1,27 @@
 ---
 title: "中间具体化 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 46d347921e24bc5504c69534d7b5c087818a6c7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3faf721dd4dd9cdda2f7d5f2d440c8d3c6623968
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="intermediate-materialization-c"></a>中间具体化 (C#)
-有时，稍不小心就会导致查询中的集合过早具体化，从而显著改变应用程序的内存和性能配置文件。 有些标准查询运算符会在生成单个元素之前导致其源集合具体化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=fullName> 首先循环访问其整个源集合，然后对所有项排序，最后生成第一项。 这意味着获取排序集合中的第一项需要高开销；其后的每一项不需要高开销。 这样做很有意义：该查询运算符将不可能以其他方式操作。  
+# <a name="intermediate-materialization-c"></a><span data-ttu-id="70230-102">中间具体化 (C#)</span><span class="sxs-lookup"><span data-stu-id="70230-102">Intermediate Materialization (C#)</span></span>
+<span data-ttu-id="70230-103">有时，稍不小心就会导致查询中的集合过早具体化，从而显著改变应用程序的内存和性能配置文件。</span><span class="sxs-lookup"><span data-stu-id="70230-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="70230-104">有些标准查询运算符会在生成单个元素之前导致其源集合具体化。</span><span class="sxs-lookup"><span data-stu-id="70230-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="70230-105">例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> 首先循环访问其整个源集合，然后对所有项排序，最后生成第一项。</span><span class="sxs-lookup"><span data-stu-id="70230-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="70230-106">这意味着获取排序集合中的第一项需要高开销；其后的每一项不需要高开销。</span><span class="sxs-lookup"><span data-stu-id="70230-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="70230-107">这样做很有意义：该查询运算符将不可能以其他方式操作。</span><span class="sxs-lookup"><span data-stu-id="70230-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
   
-## <a name="example"></a>示例  
- 本示例改自上一示例。 `AppendString` 方法在循环访问源之前调用 <xref:System.Linq.Enumerable.ToList%2A>。 这将导致具体化。  
+## <a name="example"></a><span data-ttu-id="70230-108">示例</span><span class="sxs-lookup"><span data-stu-id="70230-108">Example</span></span>  
+ <span data-ttu-id="70230-109">本示例改自上一示例。</span><span class="sxs-lookup"><span data-stu-id="70230-109">This example alters the previous example.</span></span> <span data-ttu-id="70230-110">`AppendString` 方法在循环访问源之前调用 <xref:System.Linq.Enumerable.ToList%2A>。</span><span class="sxs-lookup"><span data-stu-id="70230-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="70230-111">这将导致具体化。</span><span class="sxs-lookup"><span data-stu-id="70230-111">This causes materialization.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -76,7 +72,7 @@ class Program
 }  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="70230-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="70230-112">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -92,12 +88,11 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- 在此示例中，您可以看到，对 <xref:System.Linq.Enumerable.ToList%2A> 的调用会导致 `AppendString` 生成第一项之前枚举其整个源。 如果源是一个大数组，这将显著改变应用程序的内存配置文件。  
+ <span data-ttu-id="70230-113">在此示例中，您可以看到，对 <xref:System.Linq.Enumerable.ToList%2A> 的调用会导致 `AppendString` 生成第一项之前枚举其整个源。</span><span class="sxs-lookup"><span data-stu-id="70230-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="70230-114">如果源是一个大数组，这将显著改变应用程序的内存配置文件。</span><span class="sxs-lookup"><span data-stu-id="70230-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
   
- 标准查询运算符也可以链接在一起。 本教程的最后一个主题将对此进行说明。  
+ <span data-ttu-id="70230-115">标准查询运算符也可以链接在一起。</span><span class="sxs-lookup"><span data-stu-id="70230-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="70230-116">本教程的最后一个主题将对此进行说明。</span><span class="sxs-lookup"><span data-stu-id="70230-116">The final topic in this tutorial illustrates this.</span></span>  
   
--   [将标准查询运算符链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+-   [<span data-ttu-id="70230-117">将标准查询运算符链接在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="70230-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
+## <a name="see-also"></a><span data-ttu-id="70230-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="70230-118">See Also</span></span>  
+ [<span data-ttu-id="70230-119">教程：将查询链接在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="70230-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

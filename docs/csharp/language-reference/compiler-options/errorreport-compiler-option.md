@@ -1,91 +1,69 @@
 ---
 title: "-errorreport（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="errorreport-c-compiler-options"></a>/errorreport（C# 编译器选项）
-此选项提供向 Microsoft 报告 C# 内部编译错误的简便方法。  
+# <a name="errorreport-c-compiler-options"></a><span data-ttu-id="d475a-102">/errorreport（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="d475a-102">/errorreport (C# Compiler Options)</span></span>
+<span data-ttu-id="d475a-103">此选项提供向 Microsoft 报告 C# 内部编译错误的简便方法。</span><span class="sxs-lookup"><span data-stu-id="d475a-103">This option provides a convenient way to report a C# internal compiler error to Microsoft.</span></span>  
   
 > [!NOTE]
->  在 Windows Vista 和 Windows Server 2008 上，为 Visual Studio 制定的错误报告设置不会替代通过 Windows 错误报告 (WER) 制定的设置。 WER 设置始终优先于 Visual Studio 错误报告设置。  
+>  <span data-ttu-id="d475a-104">在 Windows Vista 和 Windows Server 2008 上，为 Visual Studio 制定的错误报告设置不会替代通过 Windows 错误报告 (WER) 制定的设置。</span><span class="sxs-lookup"><span data-stu-id="d475a-104">On Windows Vista and Windows Server 2008, the error reporting settings that you make for Visual Studio do not override the settings made through Windows Error Reporting (WER).</span></span> <span data-ttu-id="d475a-105">WER 设置始终优先于 Visual Studio 错误报告设置。</span><span class="sxs-lookup"><span data-stu-id="d475a-105">WER settings always take precedence over Visual Studio error reporting settings.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="d475a-106">语法</span><span class="sxs-lookup"><span data-stu-id="d475a-106">Syntax</span></span>  
   
 ```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   
-## <a name="arguments"></a>参数  
- **none**  
- 不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。  
+## <a name="arguments"></a><span data-ttu-id="d475a-107">参数</span><span class="sxs-lookup"><span data-stu-id="d475a-107">Arguments</span></span>  
+ <span data-ttu-id="d475a-108">**none**</span><span class="sxs-lookup"><span data-stu-id="d475a-108">**none**</span></span>  
+ <span data-ttu-id="d475a-109">不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。</span><span class="sxs-lookup"><span data-stu-id="d475a-109">Reports about internal compiler errors will not be collected or sent to Microsoft.</span></span>  
   
- **提示**  
- 当您收到内部编译器错误时，提示您发送报告。 **提示**是在开发环境中编译应用程序时的默认值。  
+ <span data-ttu-id="d475a-110">**提示**</span><span class="sxs-lookup"><span data-stu-id="d475a-110">**prompt**</span></span>  
+ <span data-ttu-id="d475a-111">当您收到内部编译器错误时，提示您发送报告。</span><span class="sxs-lookup"><span data-stu-id="d475a-111">Prompts you to send a report when you receive an internal compiler error.</span></span> <span data-ttu-id="d475a-112">**提示**是在开发环境中编译应用程序时的默认值。</span><span class="sxs-lookup"><span data-stu-id="d475a-112">**prompt** is the default when you compile an application in the development environment.</span></span>  
   
- **queue**  
- 将错误报告排入队列。 使用管理凭据登录时，可以报告自上次登录以来的任何故障。 系统最多每 3 天 1 次提醒你发送故障报告。 **排队**是在命令行编译应用程序时的默认值。  
+ <span data-ttu-id="d475a-113">**queue**</span><span class="sxs-lookup"><span data-stu-id="d475a-113">**queue**</span></span>  
+ <span data-ttu-id="d475a-114">将错误报告排入队列。</span><span class="sxs-lookup"><span data-stu-id="d475a-114">Queues the error report.</span></span> <span data-ttu-id="d475a-115">使用管理凭据登录时，可以报告自上次登录以来的任何故障。</span><span class="sxs-lookup"><span data-stu-id="d475a-115">When you log on with administrative credentials, you can report any failures since the last time that you were logged on.</span></span> <span data-ttu-id="d475a-116">系统最多每 3 天 1 次提醒你发送故障报告。</span><span class="sxs-lookup"><span data-stu-id="d475a-116">You will not be prompted to send reports for failures more than once every three days.</span></span> <span data-ttu-id="d475a-117">**排队**是在命令行编译应用程序时的默认值。</span><span class="sxs-lookup"><span data-stu-id="d475a-117">**queue** is the default when you compile an application at the command line.</span></span>  
   
- **发送**  
- 自动向 Microsoft 发送内部编译器错误报告。 若要启用此选项，必须首先同意 Microsoft 数据收集策略。 首次在计算机上指定 **/errorreport:send** 时，编译器消息将引导你访问包含 Microsoft 数据收集策略的网站。  
+ <span data-ttu-id="d475a-118">**发送**</span><span class="sxs-lookup"><span data-stu-id="d475a-118">**send**</span></span>  
+ <span data-ttu-id="d475a-119">自动向 Microsoft 发送内部编译器错误报告。</span><span class="sxs-lookup"><span data-stu-id="d475a-119">Automatically sends reports of internal compiler errors to Microsoft.</span></span> <span data-ttu-id="d475a-120">若要启用此选项，必须首先同意 Microsoft 数据收集策略。</span><span class="sxs-lookup"><span data-stu-id="d475a-120">To enable this option, you must first agree to the Microsoft data collection policy.</span></span> <span data-ttu-id="d475a-121">首次在计算机上指定 **/errorreport:send** 时，编译器消息将引导你访问包含 Microsoft 数据收集策略的网站。</span><span class="sxs-lookup"><span data-stu-id="d475a-121">The first time that you specify **/errorreport:send** on a computer, a compiler message will refer you to a Web site that contains the Microsoft data collection policy.</span></span>  
+    
+## <a name="remarks"></a><span data-ttu-id="d475a-122">备注</span><span class="sxs-lookup"><span data-stu-id="d475a-122">Remarks</span></span>  
+ <span data-ttu-id="d475a-123">当编译器无法处理源代码文件时，会导致内部编译器错误 (ICE)。</span><span class="sxs-lookup"><span data-stu-id="d475a-123">An internal compiler error (ICE) results when the compiler cannot process a source code file.</span></span> <span data-ttu-id="d475a-124">出现 ICE 时，编译器不会生成可用于修复代码的输出文件或任何有用的诊断。</span><span class="sxs-lookup"><span data-stu-id="d475a-124">When an ICE occurs, the compiler does not produce an output file or any useful diagnostic that you can use to fix your code.</span></span>  
   
- 此选项取决于注册表设置。 有关如何在注册表中设置适当的值的信息，请参阅 MSDN 网站上的[如何在 Visual Studio 2008 命令行工具中打开自动错误报告](http://go.microsoft.com/fwlink/?LinkID=184695)。  
+ <span data-ttu-id="d475a-125">在早期版本中，收到 ICE 时，我们欢迎你与 Microsoft 产品支持服务联系以报告问题。</span><span class="sxs-lookup"><span data-stu-id="d475a-125">In previous releases, when you received an ICE, you were encouraged to contact Microsoft Product Support Services to report the problem.</span></span> <span data-ttu-id="d475a-126">通过使用 **/errorreport**，可向 Visual C# 团队提供 ICE 信息。</span><span class="sxs-lookup"><span data-stu-id="d475a-126">By using **/errorreport**, you can provide ICE information to the Visual C# team.</span></span> <span data-ttu-id="d475a-127">你的错误报告可以帮助改进未来的编译器版本。</span><span class="sxs-lookup"><span data-stu-id="d475a-127">Your error reports can help improve future compiler releases.</span></span>  
   
-## <a name="remarks"></a>备注  
- 当编译器无法处理源代码文件时，会导致内部编译器错误 (ICE)。 出现 ICE 时，编译器不会生成可用于修复代码的输出文件或任何有用的诊断。  
+ <span data-ttu-id="d475a-128">用户能否发送报告取决于计算机和用户策略权限。</span><span class="sxs-lookup"><span data-stu-id="d475a-128">A user's ability to send reports depends on computer and user policy permissions.</span></span>  
   
- 在早期版本中，收到 ICE 时，我们欢迎你与 Microsoft 产品支持服务联系以报告问题。 通过使用 **/errorreport**，可向 Visual C# 团队提供 ICE 信息。 你的错误报告可以帮助改进未来的编译器版本。  
+ <span data-ttu-id="d475a-129">有关错误调试器的详细信息，请参阅 [Description of the Dr.Watson for Windows (Drwtsn32.exe) Tool](http://go.microsoft.com/fwlink/?LinkId=147286)（Windows Dr. Watson (Drwtsn32.exe) 工具的说明）。</span><span class="sxs-lookup"><span data-stu-id="d475a-129">For more information about error debugger, see [Description of the Dr. Watson for Windows (Drwtsn32.exe) Tool](http://go.microsoft.com/fwlink/?LinkId=147286).</span></span>  
   
- 用户能否发送报告取决于计算机和用户策略权限。  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d475a-130">在 Visual Studio 开发环境中设置此编译器选项</span><span class="sxs-lookup"><span data-stu-id="d475a-130">To set this compiler option in the Visual Studio development environment</span></span>  
   
- 有关错误调试器的详细信息，请参阅 [Description of the Dr.Watson for Windows (Drwtsn32.exe) Tool](http://go.microsoft.com/fwlink/?LinkId=147286)（Windows Dr. Watson (Drwtsn32.exe) 工具的说明）。  
+1.  <span data-ttu-id="d475a-131">打开项目的“属性”页。</span><span class="sxs-lookup"><span data-stu-id="d475a-131">Open the project's **Properties** page.</span></span> <span data-ttu-id="d475a-132">有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。</span><span class="sxs-lookup"><span data-stu-id="d475a-132">For more information, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
+2.  <span data-ttu-id="d475a-133">单击“生成”属性页。</span><span class="sxs-lookup"><span data-stu-id="d475a-133">Click the **Build** property page.</span></span>  
   
-1.  打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+3.  <span data-ttu-id="d475a-134">单击 **“高级”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="d475a-134">Click the **Advanced** button.</span></span>  
   
-2.  单击“生成”属性页。  
+4.  <span data-ttu-id="d475a-135">修改“内部编译器错误报告”属性。</span><span class="sxs-lookup"><span data-stu-id="d475a-135">Modify the **Internal Compiler Error Reporting** property.</span></span>  
   
-3.  单击 **“高级”** 按钮。  
+ <span data-ttu-id="d475a-136">有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。</span><span class="sxs-lookup"><span data-stu-id="d475a-136">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.</span></span>  
   
-4.  修改“内部编译器错误报告”属性。  
-  
- 有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。  
-  
-## <a name="see-also"></a>另请参阅  
- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d475a-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d475a-137">See Also</span></span>  
+ [<span data-ttu-id="d475a-138">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="d475a-138">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

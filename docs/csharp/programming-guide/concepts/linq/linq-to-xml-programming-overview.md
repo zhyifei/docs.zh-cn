@@ -1,45 +1,35 @@
 ---
 title: "LINQ to XML 编程概述 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4306be3540577bf921eff71dbd9dd822707b33dd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc22991f53920b045280d3e74b9b8dd73e63c944
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-xml-programming-overview-c"></a>LINQ to XML 编程概述 (C#)
-这些主题提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的高级概述信息，以及有关三个最重要类的详细信息。  
+# <a name="linq-to-xml-programming-overview-c"></a><span data-ttu-id="67589-102">LINQ to XML 编程概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-102">LINQ to XML Programming Overview (C#)</span></span>
+<span data-ttu-id="67589-103">这些主题提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的高级概述信息，以及有关三个最重要类的详细信息。</span><span class="sxs-lookup"><span data-stu-id="67589-103">These topics provide high-level overview information about the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, as well as detailed information about three of the most important classes.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="67589-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="67589-104">In This Section</span></span>  
   
-|主题|描述|  
+|<span data-ttu-id="67589-105">主题</span><span class="sxs-lookup"><span data-stu-id="67589-105">Topic</span></span>|<span data-ttu-id="67589-106">描述</span><span class="sxs-lookup"><span data-stu-id="67589-106">Description</span></span>|  
 |-----------|-----------------|  
-|[函数编程与过程编程 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|总览介绍编写 LINQ to XML 应用程序的两种主要方法。|  
-|[LINQ to XML 类概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的概述。|  
-|[XElement 类概述 (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)|介绍 <xref:System.Xml.Linq.XElement> 类，该类表示 XML 元素。 <xref:System.Xml.Linq.XElement> 是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类层次结构中的基础类之一。|  
-|[XAttribute 类概述 (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)|介绍 <xref:System.Xml.Linq.XAttribute> 类，该类表示 XML 属性。|  
-|[XDocument 类概述 (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|介绍 <xref:System.Xml.Linq.XDocument> 类，该类表示 XML 文档。|  
-|[如何：生成 LINQ to XML 示例 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|包含生成 LINQ to XML 示例所需的 `Using` 指令。|  
+|[<span data-ttu-id="67589-107">函数编程与过程编程 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-107">Functional vs. Procedural Programming (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|<span data-ttu-id="67589-108">总览介绍编写 LINQ to XML 应用程序的两种主要方法。</span><span class="sxs-lookup"><span data-stu-id="67589-108">Provides a high level view of the two principle approaches to writing LINQ to XML applications.</span></span>|  
+|[<span data-ttu-id="67589-109">LINQ to XML 类概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-109">LINQ to XML Classes Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|<span data-ttu-id="67589-110">提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的概述。</span><span class="sxs-lookup"><span data-stu-id="67589-110">Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes.</span></span>|  
+|[<span data-ttu-id="67589-111">XElement 类概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-111">XElement Class Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)|<span data-ttu-id="67589-112">介绍 <xref:System.Xml.Linq.XElement> 类，该类表示 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="67589-112">Introduces the <xref:System.Xml.Linq.XElement> class, which represents XML elements.</span></span> <span data-ttu-id="67589-113"><xref:System.Xml.Linq.XElement> 是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类层次结构中的基础类之一。</span><span class="sxs-lookup"><span data-stu-id="67589-113"><xref:System.Xml.Linq.XElement> is one of the fundamental classes in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] class hierarchy.</span></span>|  
+|[<span data-ttu-id="67589-114">XAttribute 类概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-114">XAttribute Class Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)|<span data-ttu-id="67589-115">介绍 <xref:System.Xml.Linq.XAttribute> 类，该类表示 XML 属性。</span><span class="sxs-lookup"><span data-stu-id="67589-115">Introduces the <xref:System.Xml.Linq.XAttribute> class, which represents XML attributes.</span></span>|  
+|[<span data-ttu-id="67589-116">XDocument 类概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-116">XDocument Class Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|<span data-ttu-id="67589-117">介绍 <xref:System.Xml.Linq.XDocument> 类，该类表示 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="67589-117">Introduces the <xref:System.Xml.Linq.XDocument> class, which represents XML documents.</span></span>|  
+|[<span data-ttu-id="67589-118">如何：生成 LINQ to XML 示例 (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-118">How to: Build LINQ to XML Examples (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|<span data-ttu-id="67589-119">包含生成 LINQ to XML 示例所需的 `Using` 指令。</span><span class="sxs-lookup"><span data-stu-id="67589-119">Contains the `Using` directives that are required to build the LINQ to XML examples.</span></span>|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="67589-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="67589-120">See Also</span></span>  
+ [<span data-ttu-id="67589-121">编程指南 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="67589-121">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

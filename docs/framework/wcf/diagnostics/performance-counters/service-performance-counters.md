@@ -1,30 +1,33 @@
 ---
-title: "服务性能计数器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "服务性能计数器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: de51c6d0a3070f8bba8a2c77f9c028e7cfbc944d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 服务性能计数器
-服务性能计数器将服务行为作为整体来进行衡量，可用于诊断服务整体性能。如果使用性能监视器 \(Perfmon.exe\) 查看，可以在 `ServiceModelService 4.0.0.0` 性能对象下找到服务性能计数器。使用以下模式命名计数器实例：  
+# <a name="service-performance-counters"></a><span data-ttu-id="ea09e-102">服务性能计数器</span><span class="sxs-lookup"><span data-stu-id="ea09e-102">Service Performance Counters</span></span>
+<span data-ttu-id="ea09e-103">服务性能计数器将服务行为作为整体来进行衡量，可用于诊断服务整体性能。</span><span class="sxs-lookup"><span data-stu-id="ea09e-103">Service performance counters measure the service behavior as a whole and can be used to diagnose the performance of the whole service.</span></span> <span data-ttu-id="ea09e-104">如果使用性能监视器 (Perfmon.exe) 查看，可以在 `ServiceModelService 4.0.0.0` 性能对象下找到服务性能计数器。</span><span class="sxs-lookup"><span data-stu-id="ea09e-104">They can be found under the `ServiceModelService 4.0.0.0` performance object when viewing with Performance Monitor (Perfmon.exe).</span></span> <span data-ttu-id="ea09e-105">使用以下模式命名计数器实例：</span><span class="sxs-lookup"><span data-stu-id="ea09e-105">The instances are named using the following pattern:</span></span>  
   
 ```  
 ServiceName@ServiceBaseAddress  
 ```  
   
 > [!CAUTION]
->  性能计数器实例的名称长度存在限制。当 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 计数器实例名称超出最大长度时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 会用一个哈希值替换实例名称的一部分。  
+>  <span data-ttu-id="ea09e-106">性能计数器实例的名称长度存在限制。</span><span class="sxs-lookup"><span data-stu-id="ea09e-106">There is a limit on the length of a performance counter instance's name.</span></span> <span data-ttu-id="ea09e-107">当 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 计数器实例名称超出最大长度时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 会用一个哈希值替换实例名称的一部分。</span><span class="sxs-lookup"><span data-stu-id="ea09e-107">When a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] counter instance name exceeds the maximum length, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] replaces a portion of the instance name with a hash value.</span></span>  
   
-## 请参阅  
- [性能计数器](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+## <a name="see-also"></a><span data-ttu-id="ea09e-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ea09e-108">See Also</span></span>  
+ [<span data-ttu-id="ea09e-109">性能计数器</span><span class="sxs-lookup"><span data-stu-id="ea09e-109">Performance Counters</span></span>](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

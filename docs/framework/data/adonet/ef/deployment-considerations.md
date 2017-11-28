@@ -1,44 +1,43 @@
 ---
-title: "部署注意事项（实体框架） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "部署注意事项（实体框架）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 部署注意事项（实体框架）
-本主题提供有关部署使用 ADO.NET 实体框架进行数据访问的应用程序的信息。  有关实体框架的更多信息，请参见 [入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  
+# <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="c930a-102">部署注意事项（实体框架）</span><span class="sxs-lookup"><span data-stu-id="c930a-102">Deployment Considerations (Entity Framework)</span></span>
+<span data-ttu-id="c930a-103">本主题提供有关部署使用 ADO.NET 实体框架进行数据访问的应用程序的信息。</span><span class="sxs-lookup"><span data-stu-id="c930a-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="c930a-104">有关实体框架的详细信息，请参阅[入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)。</span><span class="sxs-lookup"><span data-stu-id="c930a-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  
   
- 实体框架提供了一组与 Visual Studio 集成的工具，使得在 Visual Studio 中进行开发更加容易。  有关详细信息，请参阅[ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/zh-cn/91076853-0881-421b-837a-f582f36be527)。  本主题未介绍如何使用特定技术部署基于实体框架的应用程序。  
+ <span data-ttu-id="c930a-105">实体框架提供了一组与 Visual Studio 集成的工具，使得在 Visual Studio 中进行开发更加容易。</span><span class="sxs-lookup"><span data-stu-id="c930a-105">The Entity Framework provides a set of tools that integrate with and make it easier to develop in Visual Studio.</span></span> <span data-ttu-id="c930a-106">有关详细信息，请参阅[ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)。</span><span class="sxs-lookup"><span data-stu-id="c930a-106">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span> <span data-ttu-id="c930a-107">本主题未介绍如何使用特定技术部署基于实体框架的应用程序。</span><span class="sxs-lookup"><span data-stu-id="c930a-107">This topic does not describe how to use specific technologies to deploy an Entity Framework–based application.</span></span>  
   
- Visual Studio 提供用于分发和部署应用程序的工具（例如 ClickOnce 部署）。  有关更多信息，请参见 Visual Studio 文档中的[部署应用程序和组件](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md)。  
+ <span data-ttu-id="c930a-108">Visual Studio 提供用于分发和部署应用程序的工具（例如 ClickOnce 部署）。</span><span class="sxs-lookup"><span data-stu-id="c930a-108">Visual Studio provides facilities for distributing and deploying applications, such as ClickOnce deployment.</span></span> <span data-ttu-id="c930a-109">有关详细信息，请参阅[部署应用程序和组件](https://msdn.microsoft.com/library/wtzawcsz)Visual Studio 文档中。</span><span class="sxs-lookup"><span data-stu-id="c930a-109">For more information, see [Deploying Applications and Components](https://msdn.microsoft.com/library/wtzawcsz) in the Visual Studio documentation.</span></span>  
   
- 部署使用实体框架的应用程序时需要考虑以下注意事项：  
+ <span data-ttu-id="c930a-110">部署使用实体框架的应用程序时需要考虑以下注意事项：</span><span class="sxs-lookup"><span data-stu-id="c930a-110">The following considerations apply when you deploy an application that uses the Entity Framework:</span></span>  
   
--   自 .NET Framework 3.5 Service Pack 1 \(SP1\) 起实体框架成为 .NET Framework 的一个组件。  部署基于 Entity Framework 的应用程序时必须确保安装了 .NET Framework 3.5 SP1 或更高版本。  
+-   <span data-ttu-id="c930a-111">自 .NET Framework 3.5 Service Pack 1 (SP1) 起实体框架成为 .NET Framework 的一个组件。</span><span class="sxs-lookup"><span data-stu-id="c930a-111">The Entity Framework is a component of the .NET Framework starting with the .NET Framework 3.5 Service Pack 1 (SP1).</span></span> <span data-ttu-id="c930a-112">部署基于 Entity Framework 的应用程序时必须确保安装了 .NET Framework 3.5 SP1 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="c930a-112">You must ensure that the .NET Framework 3.5 SP1 or a later version is installed when deploying an Entity Framework–based application.</span></span>  
   
--   当概念模型由实体数据模型向导生成时，将在应用程序配置文件中创建连接字符串。  模型和映射文件可以作为应用程序资源嵌入，或复制到输出目录中。  默认情况下，它们部署为嵌入的应用程序资源。  使用实体设计器文件的 `Metadata Artifact Processing` 属性可选择这些选项之一。  有关详细信息，请参阅[How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/zh-cn/e2c9820f-1705-457e-9fdb-8b289f3179b4)。  
+-   <span data-ttu-id="c930a-113">当概念模型由实体数据模型向导生成时，将在应用程序配置文件中创建连接字符串。</span><span class="sxs-lookup"><span data-stu-id="c930a-113">When a conceptual model is generated by the Entity Data Model Wizard, a connection string is created in the application configuration file.</span></span> <span data-ttu-id="c930a-114">模型和映射文件可以作为应用程序资源嵌入，或复制到输出目录中。</span><span class="sxs-lookup"><span data-stu-id="c930a-114">Model and mapping files can be embedded as application resources or they can be copied to the output directory.</span></span> <span data-ttu-id="c930a-115">默认情况下，它们部署为嵌入的应用程序资源。</span><span class="sxs-lookup"><span data-stu-id="c930a-115">By default, they are deployed as embedded application resources.</span></span> <span data-ttu-id="c930a-116">使用实体设计器文件的 `Metadata Artifact Processing` 属性可选择这些选项之一。</span><span class="sxs-lookup"><span data-stu-id="c930a-116">Use the `Metadata Artifact Processing` property of the Entity Designer file to select one of these options.</span></span> <span data-ttu-id="c930a-117">有关详细信息，请参阅[如何： 复制模型和映射文件添加到输出目录](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4)。</span><span class="sxs-lookup"><span data-stu-id="c930a-117">For more information, see [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span></span>  
   
--   确保模型和映射信息（以概念架构定义语言 \(CSDL\)、存储架构定义语言 \(SSDL\) 和映射规范语言 \(MSL\) 表示）与应用程序一起部署在由连接字符串指定的位置。  有关详细信息，请参阅[连接字符串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。  
+-   <span data-ttu-id="c930a-118">确保模型和映射信息（以概念架构定义语言 (CSDL)、存储架构定义语言 (SSDL) 和映射规范语言 (MSL) 表示）与应用程序一起部署在由连接字符串指定的位置。</span><span class="sxs-lookup"><span data-stu-id="c930a-118">Ensure that the model and mapping information (expressed in conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL)) is deployed together with the application and in the location specified by the connection string.</span></span> <span data-ttu-id="c930a-119">有关详细信息，请参阅[连接字符串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="c930a-119">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
--   在将模型和映射信息作为应用程序资源嵌入时，每次更新概念模型时，都必须重新编译和重新部署应用程序。  
+-   <span data-ttu-id="c930a-120">在将模型和映射信息作为应用程序资源嵌入时，每次更新概念模型时，都必须重新编译和重新部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="c930a-120">When you embed model and mapping information as application resources, you must recompile and redeploy the application every time the conceptual model is updated.</span></span>  
   
--   因为 Entity Framework 是 .NET Framework 的一个组件，因此在 .NET Framework 许可协议许可的情况下可以与您的应用程序一起重新分发该组件。  
+-   <span data-ttu-id="c930a-121">因为实体框架是 .NET Framework 的一个组件，因此在 .NET Framework 许可协议许可的情况下可以与您的应用程序一起重新分发该组件。</span><span class="sxs-lookup"><span data-stu-id="c930a-121">Because the Entity Framework is a component of the .NET Framework, it can be redistributed with your application as permitted by the .NET Framework license agreement.</span></span>  
   
-## 请参阅  
- [ADO.NET 实体框架](../../../../../docs/framework/data/adonet/ef/index.md)   
- [开发和部署注意事项](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="c930a-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c930a-122">See Also</span></span>  
+ [<span data-ttu-id="c930a-123">ADO.NET 实体框架</span><span class="sxs-lookup"><span data-stu-id="c930a-123">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="c930a-124">开发和部署注意事项</span><span class="sxs-lookup"><span data-stu-id="c930a-124">Development and Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

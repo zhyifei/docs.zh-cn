@@ -1,40 +1,46 @@
 ---
-title: "单表查询 (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "单表查询 (LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f157bb172d173872aa7b792035b653976a9c1c0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 单表查询 (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 查询适用于实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Query.IQueryable%601> 接口的数据源。  <xref:System.Data.DataTable> 类不实现任何一个接口，所以如果要使用 <xref:System.Data.DataTable> 作为[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询的 `From` 子句中的源，则必须调用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 方法。  
+# <a name="single-table-queries-linq-to-dataset"></a><span data-ttu-id="219bf-102">单表查询 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="219bf-102">Single-Table Queries (LINQ to DataSet)</span></span>
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]<span data-ttu-id="219bf-103">查询适用于实现的数据源<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。</span><span class="sxs-lookup"><span data-stu-id="219bf-103"> queries work on data sources that implement the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="219bf-104"><xref:System.Data.DataTable> 类不实现任何一个接口，所以如果要使用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 作为<xref:System.Data.DataTable> 查询的 `From` 子句中的源，则必须调用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 方法。</span><span class="sxs-lookup"><span data-stu-id="219bf-104">The <xref:System.Data.DataTable> class does not implement either interface, so you must call the <xref:System.Data.DataTableExtensions.AsEnumerable%2A> method if you want to use the <xref:System.Data.DataTable> as a source in the `From` clause of a [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] query.</span></span>  
   
- 下面的示例获取 SalesOrderHeader 表中的所有联机订单并将订单 ID、订单日期和订单编号输出到控制台。  
+ <span data-ttu-id="219bf-105">下面的示例获取 SalesOrderHeader 表中的所有联机订单并将订单 ID、订单日期和订单编号输出到控制台。</span><span class="sxs-lookup"><span data-stu-id="219bf-105">The following example gets all the online orders from the SalesOrderHeader table and outputs the order ID, order date, and order number to the console.</span></span>  
   
- [!code-csharp[dp linq to dataset examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]
- [!code-vb[dp linq to dataset examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)]  
+ [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
+ [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- 本地变量查询使用查询表达式进行初始化，该表达式通过应用标准查询运算符中的一个或多个查询运算符，或者在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 的情况下应用特定于 <xref:System.Data.DataSet> 类的一个或多个运算符对一个或多个信息源进行运算。  前面示例中的查询表达式使用两个标准查询运算符：`Where` 和 `Select`。  
+ <span data-ttu-id="219bf-106">本地变量查询使用查询表达式进行初始化，该表达式通过应用标准查询运算符中的一个或多个查询运算符，或者在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 的情况下应用特定于 <xref:System.Data.DataSet> 类的一个或多个运算符对一个或多个信息源进行运算。</span><span class="sxs-lookup"><span data-stu-id="219bf-106">The local variable query is initialized with a query expression, which operates on one or more information sources by applying one or more query operators from either the standard query operators or, in the case of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operators specific to the <xref:System.Data.DataSet> class.</span></span> <span data-ttu-id="219bf-107">前面示例中的查询表达式使用两个标准查询运算符：`Where` 和 `Select`。</span><span class="sxs-lookup"><span data-stu-id="219bf-107">The query expression in the previous example uses two of the standard query operators: `Where` and `Select`.</span></span>  
   
- `Where` 子句基于条件筛选序列，在本例中，`OnlineOrderFlag` 设置为 `true`。  `Select` 运算符分配并返回一个可枚举对象，该对象可捕获传递给运算符的参数。  在上面的示例中，创建了一个具有三个属性的匿名类型：`SalesOrderID`、`OrderDate` 和 `SalesOrderNumber`。  这三个属性的值设置为 `SalesOrderHeader` 表中的 `SalesOrderID`、`OrderDate` 和 `SalesOrderNumber` 列值。  
+ <span data-ttu-id="219bf-108">`Where` 子句基于条件筛选序列，在本例中，`OnlineOrderFlag` 设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="219bf-108">The `Where` clause filters the sequence based on a condition, in this case that the `OnlineOrderFlag` is set to `true`.</span></span> <span data-ttu-id="219bf-109">`Select` 运算符分配并返回一个可枚举对象，该对象可捕获传递给运算符的参数。</span><span class="sxs-lookup"><span data-stu-id="219bf-109">The `Select` operator allocates and returns an enumerable object that captures the arguments passed to the operator.</span></span> <span data-ttu-id="219bf-110">在上面的示例中，创建了一个具有三个属性的匿名类型：`SalesOrderID`、`OrderDate` 和 `SalesOrderNumber`。</span><span class="sxs-lookup"><span data-stu-id="219bf-110">In this above example, an anonymous type is created with three properties: `SalesOrderID`, `OrderDate`, and `SalesOrderNumber`.</span></span> <span data-ttu-id="219bf-111">这三个属性的值设置为 `SalesOrderID` 表中的 `OrderDate`、`SalesOrderNumber` 和 `SalesOrderHeader` 列值。</span><span class="sxs-lookup"><span data-stu-id="219bf-111">The values of these three properties are set to the values of the `SalesOrderID`, `OrderDate`, and `SalesOrderNumber` columns from the `SalesOrderHeader` table.</span></span>  
   
- 然后，`foreach` 循环枚举由 `Select` 返回的可枚举对象，并生成查询结果。  由于查询是一种可以实现 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Linq.Enumerable> 类型，因此，查询的计算将推迟到使用 `foreach` 循环来循环访问查询变量之后进行。  推迟查询计算可使查询保持为可进行多次计算的值，每次计算都可能生成不同的结果。  
+ <span data-ttu-id="219bf-112">然后，`foreach` 循环枚举由 `Select` 返回的可枚举对象，并生成查询结果。</span><span class="sxs-lookup"><span data-stu-id="219bf-112">The `foreach` loop then enumerates the enumerable object returned by `Select` and yields the query results.</span></span> <span data-ttu-id="219bf-113">由于查询是一种可以实现 <xref:System.Linq.Enumerable> 的 <xref:System.Collections.Generic.IEnumerable%601> 类型，因此，查询的计算将推迟到使用 `foreach` 循环来循环访问查询变量之后进行。</span><span class="sxs-lookup"><span data-stu-id="219bf-113">Because query is an <xref:System.Linq.Enumerable> type, which implements <xref:System.Collections.Generic.IEnumerable%601>, the evaluation of the query is deferred until the query variable is iterated over using the `foreach` loop.</span></span> <span data-ttu-id="219bf-114">推迟查询计算可使查询保持为可进行多次计算的值，每次计算都可能生成不同的结果。</span><span class="sxs-lookup"><span data-stu-id="219bf-114">Deferred query evaluation allows queries to be kept as values that can be evaluated multiple times, each time yielding potentially different results.</span></span>  
   
- <xref:System.Data.DataRowExtensions.Field%2A> 方法提供对 <xref:System.Data.DataRow> 列值的访问，而 <xref:System.Data.DataRowExtensions.SetField%2A>（前面的示例未演示）设置 <xref:System.Data.DataRow> 中的列值。  <xref:System.Data.DataRowExtensions.Field%2A> 方法和 <xref:System.Data.DataRowExtensions.SetField%2A> 方法都可以处理可以为 null 的类型，因此不必显式检查 null 值。  这两种方法也都是泛型方法，这意味着您不必强制转换返回类型。  您可以使用 <xref:System.Data.DataRow> 中预先存在的列访问器（例如 `o["OrderDate"]`），但是这样做要求您将返回对象强制转换为相应的类型。  如果列可以为 null，则必须使用 <xref:System.Data.DataRow.IsNull%2A> 方法检查值是否为 null。  有关详细信息，请参阅[泛型 Field 和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)。  
+ <span data-ttu-id="219bf-115"><xref:System.Data.DataRowExtensions.Field%2A> 方法提供对 <xref:System.Data.DataRow> 列值的访问，而 <xref:System.Data.DataRowExtensions.SetField%2A>（前面的示例未演示）设置 <xref:System.Data.DataRow> 中的列值。</span><span class="sxs-lookup"><span data-stu-id="219bf-115">The <xref:System.Data.DataRowExtensions.Field%2A> method provides access to the column values of a <xref:System.Data.DataRow> and the <xref:System.Data.DataRowExtensions.SetField%2A> (not shown in the previous example) sets column values in a <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="219bf-116"><xref:System.Data.DataRowExtensions.Field%2A> 方法和 <xref:System.Data.DataRowExtensions.SetField%2A> 方法都可以处理可以为 null 的类型，因此不必显式检查 null 值。</span><span class="sxs-lookup"><span data-stu-id="219bf-116">Both the <xref:System.Data.DataRowExtensions.Field%2A> method and <xref:System.Data.DataRowExtensions.SetField%2A> method handle nullable types, so you do not have to explicitly check for null values.</span></span> <span data-ttu-id="219bf-117">这两种方法也都是泛型方法，这意味着您不必强制转换返回类型。</span><span class="sxs-lookup"><span data-stu-id="219bf-117">Both methods are generic methods, also, which means you do not have to cast the return type.</span></span> <span data-ttu-id="219bf-118">您可以使用 <xref:System.Data.DataRow> 中预先存在的列访问器（例如 `o["OrderDate"]`），但是这样做要求您将返回对象强制转换为相应的类型。</span><span class="sxs-lookup"><span data-stu-id="219bf-118">You could use the pre-existing column accessor in <xref:System.Data.DataRow> (for example, `o["OrderDate"]`), but doing so would require you to cast the return object to the appropriate type.</span></span>  <span data-ttu-id="219bf-119">如果列可以为 null，则必须使用 <xref:System.Data.DataRow.IsNull%2A> 方法检查值是否为 null。</span><span class="sxs-lookup"><span data-stu-id="219bf-119">If the column is nullable you have to check if the value is null by using the <xref:System.Data.DataRow.IsNull%2A> method.</span></span> <span data-ttu-id="219bf-120">有关详细信息，请参阅[泛型字段和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="219bf-120">For more information, see [Generic Field and SetField Methods](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).</span></span>  
   
- 请注意，<xref:System.Data.DataRowExtensions.Field%2A> 方法和 <xref:System.Data.DataRowExtensions.SetField%2A> 方法的泛型参数 `T` 中指定的数据类型必须与基础值的类型相匹配，否则将引发 <xref:System.InvalidCastException>。  指定的列名称也必须与 <xref:System.Data.DataSet> 中的列名称相匹配，否则将引发 <xref:System.ArgumentException>。  在这两种情况下，异常都是在执行查询期间的运行时数据枚举时引发的。  
+ <span data-ttu-id="219bf-121">请注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法的泛型参数 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的数据类型必须与基础值的类型相匹配，否则将引发 <xref:System.InvalidCastException>。</span><span class="sxs-lookup"><span data-stu-id="219bf-121">Note that the data type specified in the generic parameter `T` of the <xref:System.Data.DataRowExtensions.Field%2A> method and <xref:System.Data.DataRowExtensions.SetField%2A> method must match the type of the underlying value or an <xref:System.InvalidCastException> will be thrown.</span></span> <span data-ttu-id="219bf-122">指定的列名称也必须与 <xref:System.Data.DataSet> 中的列名称相匹配，否则将引发 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="219bf-122">The specified column name must also match the name of a column in the <xref:System.Data.DataSet> or an <xref:System.ArgumentException> will be thrown.</span></span> <span data-ttu-id="219bf-123">在这两种情况下，异常都是在执行查询期间的运行时数据枚举时引发的。</span><span class="sxs-lookup"><span data-stu-id="219bf-123">In both cases, the exception is thrown at run time data enumeration when the query is executed.</span></span>  
   
-## 请参阅  
- [交叉表查询](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)   
- [查询类型化数据集](../../../../docs/framework/data/adonet/querying-typed-datasets.md)   
- [泛型 Field 和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="219bf-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="219bf-124">See Also</span></span>  
+ [<span data-ttu-id="219bf-125">跨表查询</span><span class="sxs-lookup"><span data-stu-id="219bf-125">Cross-Table Queries</span></span>](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ [<span data-ttu-id="219bf-126">查询类型化数据集</span><span class="sxs-lookup"><span data-stu-id="219bf-126">Querying Typed DataSets</span></span>](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [<span data-ttu-id="219bf-127">泛型字段和 SetField 方法</span><span class="sxs-lookup"><span data-stu-id="219bf-127">Generic Field and SetField Methods</span></span>](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

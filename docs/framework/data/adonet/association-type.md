@@ -1,46 +1,49 @@
 ---
-title: "关联类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "关联类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 476a92979ff0dc6292e64ce5514cc600a9dee50a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 关联类型
-“关联类型”（也称为关联）是用来描述实体数据模型 \(EDM\) 中的关系的基本构造块。  在概念模型中，关联表示两个[实体类型](../../../../docs/framework/data/adonet/entity-type.md)（例如 `Customer` 和 `Order`）之间的关系。  在应用程序中，一个关联实例表示一个特定的关联（例如 `Customer` 实例与 `Order` 实例之间的关联）。  关联实例按逻辑分组在[关联集](../../../../docs/framework/data/adonet/association-set.md)中。  
+# <a name="association-type"></a><span data-ttu-id="fde48-102">关联类型</span><span class="sxs-lookup"><span data-stu-id="fde48-102">association type</span></span>
+<span data-ttu-id="fde48-103">*关联类型*（也称为关联） 是用于描述实体数据模型 (EDM) 中的关系的基本构建块。</span><span class="sxs-lookup"><span data-stu-id="fde48-103">An *association type* (also called an association) is the fundamental building block for describing relationships in the Entity Data Model (EDM).</span></span> <span data-ttu-id="fde48-104">在概念模型中，关联表示两个之间的关系[实体类型](../../../../docs/framework/data/adonet/entity-type.md)(如`Customer`和`Order`)。</span><span class="sxs-lookup"><span data-stu-id="fde48-104">In a conceptual model, an association represents a relationship between two [entity types](../../../../docs/framework/data/adonet/entity-type.md) (such as `Customer` and `Order`).</span></span> <span data-ttu-id="fde48-105">在应用程序中，一个关联实例表示一个特定的关联（例如 `Customer` 实例与 `Order` 实例之间的关联）。</span><span class="sxs-lookup"><span data-stu-id="fde48-105">In an application, an instance of an association represents a specific association (such as an association between an instance of `Customer` and an instance of `Order`).</span></span> <span data-ttu-id="fde48-106">关联实例按逻辑分组在[关联集](../../../../docs/framework/data/adonet/association-set.md)。</span><span class="sxs-lookup"><span data-stu-id="fde48-106">Association instances are logically grouped in an [association set](../../../../docs/framework/data/adonet/association-set.md).</span></span>  
   
- 关联定义包含以下信息：  
+ <span data-ttu-id="fde48-107">关联定义包含以下信息：</span><span class="sxs-lookup"><span data-stu-id="fde48-107">An association definition contains the following information:</span></span>  
   
--   唯一名称。  （必需）  
+-   <span data-ttu-id="fde48-108">唯一名称。</span><span class="sxs-lookup"><span data-stu-id="fde48-108">A unique name.</span></span> <span data-ttu-id="fde48-109">（必需）</span><span class="sxs-lookup"><span data-stu-id="fde48-109">(Required)</span></span>  
   
--   两个[关联端](../../../../docs/framework/data/adonet/association-end.md)，关系中的每个实体类型一个。  （必需）  
+-   <span data-ttu-id="fde48-110">两个[关联端](../../../../docs/framework/data/adonet/association-end.md)，一个用于关系中每个实体类型。</span><span class="sxs-lookup"><span data-stu-id="fde48-110">Two [association ends](../../../../docs/framework/data/adonet/association-end.md), one for each entity type in the relationship.</span></span> <span data-ttu-id="fde48-111">（必需）</span><span class="sxs-lookup"><span data-stu-id="fde48-111">(Required)</span></span>  
   
     > [!NOTE]
-    >  关联不能表示两个以上的实体类型之间的关系。  但是，通过为每个关联端指定相同的实体类型，关联可以定义自身关系。  
+    >  <span data-ttu-id="fde48-112">关联不能表示两个以上的实体类型之间的关系。</span><span class="sxs-lookup"><span data-stu-id="fde48-112">An association cannot represent a relationship among more than two entity types.</span></span> <span data-ttu-id="fde48-113">但是，通过为每个关联端指定相同的实体类型，关联可以定义自身关系。</span><span class="sxs-lookup"><span data-stu-id="fde48-113">An association can, however, define a self-relationship by specifying the same entity type for each of its association ends.</span></span>  
   
--   一个[引用完整性约束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)。  （可选）  
+-   <span data-ttu-id="fde48-114">A[引用完整性约束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)。</span><span class="sxs-lookup"><span data-stu-id="fde48-114">A [referential integrity constraint](../../../../docs/framework/data/adonet/referential-integrity-constraint.md).</span></span> <span data-ttu-id="fde48-115">（可选）</span><span class="sxs-lookup"><span data-stu-id="fde48-115">(Optional)</span></span>  
   
- 每个关联端必须指定一个[关联端重数](../../../../docs/framework/data/adonet/association-end-multiplicity.md)，它表明在关联的一端可以存在的实体类型实例的数量。  关联端重数的值可以为“一 \(1\)”、“零或一 \(0..1\)”或“多 \(\*\)”。  通过[导航属性](../../../../docs/framework/data/adonet/navigation-property.md)或外键（如果实体类型上有）可以访问关联某一端的实体类型实例。  有关更多信息，请参见[实体数据模型：外键](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
+ <span data-ttu-id="fde48-116">每个关联端必须指定[关联端重数](../../../../docs/framework/data/adonet/association-end-multiplicity.md)，该值指示在关联的一端可以存在的实体类型实例数。</span><span class="sxs-lookup"><span data-stu-id="fde48-116">Each association end must specify an [association end multiplicity](../../../../docs/framework/data/adonet/association-end-multiplicity.md) that indicates the number of entity type instances that can be at one end of the association.</span></span> <span data-ttu-id="fde48-117">关联端重数的值可以为“一 (1)”、“零或一 (0..1)”或“多 (*)”。</span><span class="sxs-lookup"><span data-stu-id="fde48-117">An association end multiplicity can have a value of one (1), zero or one (0..1), or many (*).</span></span> <span data-ttu-id="fde48-118">可以通过访问的关联另一端的实体类型实例[导航属性](../../../../docs/framework/data/adonet/navigation-property.md)或如果它们公开的实体类型上的外键。</span><span class="sxs-lookup"><span data-stu-id="fde48-118">Entity type instances at one end of an association can be accessed through [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) or foreign keys if they are exposed on an entity type.</span></span> <span data-ttu-id="fde48-119">有关详细信息，请参阅[实体数据模型： 外键](../../../../docs/framework/data/adonet/foreign-key-property.md)。</span><span class="sxs-lookup"><span data-stu-id="fde48-119">For more information, see [Entity Data Model: Foreign Keys](../../../../docs/framework/data/adonet/foreign-key-property.md).</span></span>  
   
-## 示例  
- 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。  `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。  `Publisher` 端的重数为“一 \(1\)”，`Book` 端的重数为“多 \(\*\)”，表明一个出版商可以出版很多书，而一本书只能由一个出版商出版。  
+## <a name="example"></a><span data-ttu-id="fde48-120">示例</span><span class="sxs-lookup"><span data-stu-id="fde48-120">Example</span></span>  
+ <span data-ttu-id="fde48-121">下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。</span><span class="sxs-lookup"><span data-stu-id="fde48-121">The diagram below shows a conceptual model with two associations: `PublishedBy` and `WrittenBy`.</span></span> <span data-ttu-id="fde48-122">`PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。</span><span class="sxs-lookup"><span data-stu-id="fde48-122">The association ends for the `PublishedBy` association are the `Book` and `Publisher` entity types.</span></span> <span data-ttu-id="fde48-123">`Publisher` 端的重数为“一 (1)”，`Book` 端的重数为“多 (*)”，表明一个出版商可以出版很多书，而一本书只能由一个出版商出版。</span><span class="sxs-lookup"><span data-stu-id="fde48-123">The multiplicity of the `Publisher` end is one (1) and the multiplicity of the `Book` end is many (*), indicating that a publisher publishes many books and a book is published by one publisher.</span></span>  
   
- ![示例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="fde48-124">![示例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="fde48-124">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- [ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)使用一种称为概念架构定义语言 \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\) 的域特定语言 \(DSL\) 来定义概念模型。  下面的 CSDL 定义了上图中显示的 `PublishedBy` 关联：  
+ <span data-ttu-id="fde48-125">[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)使用域特定语言 (DSL) 称为概念架构定义语言 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 来定义概念模型。</span><span class="sxs-lookup"><span data-stu-id="fde48-125">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="fde48-126">下面的 CSDL 定义了上图中显示的 `PublishedBy` 关联：</span><span class="sxs-lookup"><span data-stu-id="fde48-126">The following CSDL defines the `PublishedBy` association shown in the diagram above:</span></span>  
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## 请参阅  
- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="fde48-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fde48-127">See Also</span></span>  
+ [<span data-ttu-id="fde48-128">实体数据模型关键概念</span><span class="sxs-lookup"><span data-stu-id="fde48-128">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="fde48-129">实体数据模型</span><span class="sxs-lookup"><span data-stu-id="fde48-129">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,89 +1,70 @@
 ---
 title: "可以为 null 的类型（C# 编程指南）"
-ms.date: 2017-05-15
+ms.date: 05/15/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 6d99bffc74cbcce04d725b8f225a4a4b175973be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nullable-types-c-programming-guide"></a>可以为 null 的类型（C# 编程指南）
-可以为 null 的类型是 <xref:System.Nullable%601?displayProperty=nameWithType> 结构的实例。 可以为 null 的类型可以表示基础值类型正常范围内的值，再加上一个 `null` 值。 例如，`Nullable<Int32>` 读作“可以为 null 的 Int32”，可以将 -2147483648 到 2147483647 之间的任意值赋值给它，也可以将 `null` 赋值给它。 可以将 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 赋值给 `Nullable<bool>`。 处理数据库和其他包含不可赋值的元素的数据类型时，能够将 `null` 赋值给数值类型和布尔类型会特别有用。 例如，数据库中的布尔字段可以存储值 `true` 或 `false`，也可以处于未定义状态。 
+# <a name="nullable-types-c-programming-guide"></a><span data-ttu-id="59337-102">可以为 null 的类型（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="59337-102">Nullable Types (C# Programming Guide)</span></span>
+<span data-ttu-id="59337-103">可以为 null 的类型是 <xref:System.Nullable%601?displayProperty=nameWithType> 结构的实例。</span><span class="sxs-lookup"><span data-stu-id="59337-103">Nullable types are instances of the <xref:System.Nullable%601?displayProperty=nameWithType> struct.</span></span> <span data-ttu-id="59337-104">可以为 null 的类型可以表示基础值类型正常范围内的值，再加上一个 `null` 值。</span><span class="sxs-lookup"><span data-stu-id="59337-104">A nullable type can represent the correct range of values for its underlying value type, plus an additional `null` value.</span></span> <span data-ttu-id="59337-105">例如，`Nullable<Int32>` 读作“可以为 null 的 Int32”，可以将 -2147483648 到 2147483647 之间的任意值赋值给它，也可以将 `null` 赋值给它。</span><span class="sxs-lookup"><span data-stu-id="59337-105">For example, a `Nullable<Int32>`, pronounced "Nullable of Int32," can be assigned any value from -2147483648 to 2147483647, or it can be assigned the `null` value.</span></span> <span data-ttu-id="59337-106">可以将 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 赋值给 `Nullable<bool>`。</span><span class="sxs-lookup"><span data-stu-id="59337-106">A `Nullable<bool>` can be assigned the values [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), or [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="59337-107">处理数据库和其他包含不可赋值的元素的数据类型时，能够将 `null` 赋值给数值类型和布尔类型会特别有用。</span><span class="sxs-lookup"><span data-stu-id="59337-107">The ability to assign `null` to numeric and Boolean types is especially useful when you are dealing with databases and other data types that contain elements that may not be assigned a value.</span></span> <span data-ttu-id="59337-108">例如，数据库中的布尔字段可以存储值 `true` 或 `false`，也可以处于未定义状态。</span><span class="sxs-lookup"><span data-stu-id="59337-108">For example, a Boolean field in a database can store the values `true` or `false`, or it may be undefined.</span></span> 
   
-[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
-有关更多示例，请参阅[使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+<span data-ttu-id="59337-109">有关更多示例，请参阅[使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)</span><span class="sxs-lookup"><span data-stu-id="59337-109">For more examples, see [Using Nullable Types](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)</span></span>  
   
-## <a name="nullable-types-overview"></a>可以为 null 的类型概述  
- 可以为 null 的类型具有以下特征：  
+## <a name="nullable-types-overview"></a><span data-ttu-id="59337-110">可以为 null 的类型概述</span><span class="sxs-lookup"><span data-stu-id="59337-110">Nullable Types Overview</span></span>  
+ <span data-ttu-id="59337-111">可以为 null 的类型具有以下特征：</span><span class="sxs-lookup"><span data-stu-id="59337-111">Nullable types have the following characteristics:</span></span>  
   
--   可以为 null 的类型表示可以向其赋值 `null` 的值类型变量。 不能根据引用类型创建可以为 null 的类型 （引用类型已支持 `null` 值）。  
+-   <span data-ttu-id="59337-112">可以为 null 的类型表示可以向其赋值 `null` 的值类型变量。</span><span class="sxs-lookup"><span data-stu-id="59337-112">Nullable types represent value-type variables that can be assigned the value of `null`.</span></span> <span data-ttu-id="59337-113">不能根据引用类型创建可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="59337-113">You cannot create a nullable type based on a reference type.</span></span> <span data-ttu-id="59337-114">（引用类型已支持 `null` 值）。</span><span class="sxs-lookup"><span data-stu-id="59337-114">(Reference types already support the `null` value.)</span></span>  
   
--   语法 `T?` 是 <xref:System.Nullable%601> 的简写，其中 `T` 是值类型。 这两种形式是可互换的。  
+-   <span data-ttu-id="59337-115">语法 `T?` 是 <xref:System.Nullable%601> 的简写，其中 `T` 是值类型。</span><span class="sxs-lookup"><span data-stu-id="59337-115">The syntax `T?` is shorthand for <xref:System.Nullable%601>, where `T` is a value type.</span></span> <span data-ttu-id="59337-116">这两种形式是可互换的。</span><span class="sxs-lookup"><span data-stu-id="59337-116">The two forms are interchangeable.</span></span>  
   
--   向可以为 null 的类型赋值的方法与向一般值类型赋值的方法相同，如 `int? x = 10;` 或 `double? d = 4.108`。 也能够向可以为 null 的类型赋值 `null`：`int? x = null.`  
+-   <span data-ttu-id="59337-117">向可以为 null 的类型赋值的方法与向一般值类型赋值的方法相同，如 `int? x = 10;` 或 `double? d = 4.108`。</span><span class="sxs-lookup"><span data-stu-id="59337-117">Assign a value to a nullable type just as you would for an ordinary value type, for example `int? x = 10;` or `double? d = 4.108`.</span></span> <span data-ttu-id="59337-118">也能够向可以为 null 的类型赋值 `null`：`int? x = null.`</span><span class="sxs-lookup"><span data-stu-id="59337-118">A nullable type can also be assigned the value `null`: `int? x = null.`</span></span>  
   
--   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 方法可返回分配的值或基础类型的默认值（如果值为 `null` 的话）。例如，`int j = x.GetValueOrDefault();`  
+-   <span data-ttu-id="59337-119">使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 方法可返回分配的值或基础类型的默认值（如果值为 `null` 的话）。例如，`int j = x.GetValueOrDefault();`</span><span class="sxs-lookup"><span data-stu-id="59337-119">Use the <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> method to return either the assigned value, or the default value for the underlying type if the value is `null`, for example `int j = x.GetValueOrDefault();`</span></span>  
   
--   使用 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 只读属性可测试是否存在 null 值并检索值，如以下示例所示：`if(x.HasValue) j = x.Value;`  
+-   <span data-ttu-id="59337-120">使用 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 只读属性可测试是否存在 null 值并检索值，如以下示例所示：`if(x.HasValue) j = x.Value;`</span><span class="sxs-lookup"><span data-stu-id="59337-120">Use the <xref:System.Nullable%601.HasValue%2A> and <xref:System.Nullable%601.Value%2A> read-only properties to test for null and retrieve the value, as shown in the following example: `if(x.HasValue) j = x.Value;`</span></span>  
   
-    -   如果变量包含值，则 `HasValue` 属性返回 `true`；如果值为 `null`，则返回 `false`。  
+    -   <span data-ttu-id="59337-121">如果变量包含值，则 `HasValue` 属性返回 `true`；如果值为 `null`，则返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="59337-121">The `HasValue` property returns `true` if the variable contains a value, or `false` if it is `null`.</span></span>  
   
-    -   如果已赋值，则 `Value` 属性返回值。 否则，将会引发 <xref:System.InvalidOperationException?displayProperty=nameWithType>。  
+    -   <span data-ttu-id="59337-122">如果已赋值，则 `Value` 属性返回值。</span><span class="sxs-lookup"><span data-stu-id="59337-122">The `Value` property returns a value if one is assigned.</span></span> <span data-ttu-id="59337-123">否则，将会引发 <xref:System.InvalidOperationException?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="59337-123">Otherwise, a <xref:System.InvalidOperationException?displayProperty=nameWithType> is thrown.</span></span>  
   
-    -   `HasValue` 的默认值为 `false`。 `Value` 属性没有默认值。  
+    -   <span data-ttu-id="59337-124">`HasValue` 的默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="59337-124">The default value for `HasValue` is `false`.</span></span> <span data-ttu-id="59337-125">`Value` 属性没有默认值。</span><span class="sxs-lookup"><span data-stu-id="59337-125">The `Value` property has no default value.</span></span>  
   
-    -   还能将 `==` 和 `!=` 运算符与可以为 null 的类型结合使用，如以下示例所示：`if (x != null) y = x;`  
+    -   <span data-ttu-id="59337-126">还能将 `==` 和 `!=` 运算符与可以为 null 的类型结合使用，如以下示例所示：`if (x != null) y = x;`</span><span class="sxs-lookup"><span data-stu-id="59337-126">You can also use the `==` and `!=` operators with a nullable type, as shown in the following example: `if (x != null) y = x;`</span></span>  
   
--   将当前值为 `null` 的可以为 null 的类型赋值给不可以为 null 的类型时，能够使用 `??` 运算符赋予默认值，例如 `int? x = null; int y = x ?? -1;`  
+-   <span data-ttu-id="59337-127">将当前值为 `null` 的可以为 null 的类型赋值给不可以为 null 的类型时，能够使用 `??` 运算符赋予默认值，例如 `int? x = null; int y = x ?? -1;`</span><span class="sxs-lookup"><span data-stu-id="59337-127">Use the `??` operator to assign a default value that will be applied when a nullable type whose current value is `null` is assigned to a non-nullable type, for example `int? x = null; int y = x ?? -1;`</span></span>  
   
--   不得嵌套可以为 null 的类型。 无法编译下面的一行代码：`Nullable<Nullable<int>> n;`  
+-   <span data-ttu-id="59337-128">不得嵌套可以为 null 的类型。</span><span class="sxs-lookup"><span data-stu-id="59337-128">Nested nullable types are not allowed.</span></span> <span data-ttu-id="59337-129">无法编译下面的一行代码：`Nullable<Nullable<int>> n;`</span><span class="sxs-lookup"><span data-stu-id="59337-129">The following line will not compile: `Nullable<Nullable<int>> n;`</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- 更多相关信息：  
+## <a name="related-sections"></a><span data-ttu-id="59337-130">相关章节</span><span class="sxs-lookup"><span data-stu-id="59337-130">Related Sections</span></span>  
+ <span data-ttu-id="59337-131">更多相关信息：</span><span class="sxs-lookup"><span data-stu-id="59337-131">For more information:</span></span>  
   
--   [使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+-   [<span data-ttu-id="59337-132">使用可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="59337-132">Using Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
--   [装箱可以为 null 的类型](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
+-   [<span data-ttu-id="59337-133">装箱可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="59337-133">Boxing Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
   
--   [??运算符](../../../csharp/language-reference/operators/null-conditional-operator.md)  
+-   [<span data-ttu-id="59337-134">??运算符</span><span class="sxs-lookup"><span data-stu-id="59337-134">?? Operator</span></span>](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="59337-135">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="59337-135">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Nullable>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md)   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [“提升”的准确含义是什么？](http://go.microsoft.com/fwlink/?LinkId=112382)
-
+## <a name="see-also"></a><span data-ttu-id="59337-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="59337-136">See Also</span></span>  
+ <xref:System.Nullable>  
+ [<span data-ttu-id="59337-137">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="59337-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="59337-138">C#</span><span class="sxs-lookup"><span data-stu-id="59337-138">C#</span></span>](../../../csharp/index.md)  
+ [<span data-ttu-id="59337-139">C# 参考</span><span class="sxs-lookup"><span data-stu-id="59337-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="59337-140">“提升”的准确含义是什么？</span><span class="sxs-lookup"><span data-stu-id="59337-140">What exactly does 'lifted' mean?</span></span>](http://go.microsoft.com/fwlink/?LinkId=112382)

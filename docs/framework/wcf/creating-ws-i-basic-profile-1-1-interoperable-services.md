@@ -1,50 +1,54 @@
 ---
-title: "创建 WS-I 基本配置文件 1.1 可互操作服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "配置 [WCF], 可互操作的服务"
+title: "创建 WS-I 基本配置文件 1.1 可互操作服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a725f1cbe50bcad5247e727efcffbad62985a01a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 创建 WS-I 基本配置文件 1.1 可互操作服务
-将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务终结点配置为可与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 服务客户端互操作：  
+# <a name="creating-ws-i-basic-profile-11-interoperable-services"></a><span data-ttu-id="f8bc2-102">创建 WS-I 基本配置文件 1.1 可互操作服务</span><span class="sxs-lookup"><span data-stu-id="f8bc2-102">Creating WS-I Basic Profile 1.1 Interoperable Services</span></span>
+<span data-ttu-id="f8bc2-103">将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务终结点配置为可与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 服务客户端互操作：</span><span class="sxs-lookup"><span data-stu-id="f8bc2-103">To configure a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients:</span></span>  
   
--   使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=fullName>作为服务终结点的绑定类型的类型。  
+-   <span data-ttu-id="f8bc2-104">将 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 类型用作服务终结点的绑定类型。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-104">Use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  
   
--   不要使用服务终结点上的回调和会话协定功能或事务行为  
+-   <span data-ttu-id="f8bc2-105">不要使用服务终结点上的回调和会话协定功能或事务行为</span><span class="sxs-lookup"><span data-stu-id="f8bc2-105">Do not use callback and session contract features or transaction behaviors on your service endpoint</span></span>  
   
- 你可以根据需要在该绑定上启用对 HTTPS 和传输级客户端身份验证的支持。  
+ <span data-ttu-id="f8bc2-106">您可以根据需要在该绑定上启用对 HTTPS 和传输级客户端身份验证的支持。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-106">You can optionally enable support for HTTPS and transport-level client authentication on the binding.</span></span>  
   
- 以下功能<xref:System.ServiceModel.BasicHttpBinding>类需要 WS 之外的功能的基本配置文件 1.1:  
+ <span data-ttu-id="f8bc2-107"><xref:System.ServiceModel.BasicHttpBinding> 类的以下特性所要求的功能超出了 WS-I 基本配置文件 1.1 的范围：</span><span class="sxs-lookup"><span data-stu-id="f8bc2-107">The following features of the <xref:System.ServiceModel.BasicHttpBinding> class require functionality beyond WS-I Basic Profile 1.1:</span></span>  
   
--   由消息传输优化机制 (MTOM) 消息编码控制<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=fullName>属性。 将此属性保留为其默认值，即<xref:System.ServiceModel.WSMessageEncoding?displayProperty=fullName>以便不使用 MTOM。  
+-   <span data-ttu-id="f8bc2-108">由 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 属性控制的消息传递优化机制 (MTOM) 消息编码。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-108">Message Transmission Optimization Mechanism (MTOM) message encoding controlled by the <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="f8bc2-109">将此属性保留为其默认值（即 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>）以便不使用 MTOM。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-109">Leave  this property at its default value, which is <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> to not use MTOM.</span></span>  
   
--   通过控制的消息安全<xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=fullName>值提供的 WS-安全性支持符合 WS-我 Basic Security Profile 1.0。 将此属性保留为其默认值，即<xref:System.ServiceModel.SecurityMode?displayProperty=fullName>为不使用 Ws-security。  
+-   <span data-ttu-id="f8bc2-110">由 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 值控制的消息安全提供符合 WS-I 基本安全配置文件 1.0 的 WS-Security 支持。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-110">Message security controlled by the <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> value provides WS-Security support compliant with WS-I Basic Security Profile 1.0.</span></span> <span data-ttu-id="f8bc2-111">将此属性保留为其默认值（即 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>）以便不使用 WS-Security。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-111">Leave this property at its default value, which is <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> to not use WS-Security.</span></span>  
   
- 若要使元数据[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]适用于服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服务客户端生成工具︰ [Web 服务描述语言工具 (Wsdl.exe)](http://msdn.microsoft.com/zh-cn/b9210348-8bc2-4367-8c91-d1a04b403e88)， [Web 服务发现工具 (Disco.exe)](http://msdn.microsoft.com/zh-cn/acd88078-c581-42bc-94ca-6633e2851979)，和`Add Web Reference`功能[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; 您必须启用元数据发布。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
+ <span data-ttu-id="f8bc2-112">若要使元数据[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]适用于服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服务客户端生成工具： [Web 服务描述语言工具 (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)， [Web 服务发现工具 (Disco.exe)](http://msdn.microsoft.com/en-us/acd88078-c581-42bc-94ca-6633e2851979)，和`Add Web Reference`功能[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; 必须启用元数据发布。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-112">To make the metadata for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service available to [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use the Web service client generation tools: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88), [Web Services Discovery Tool (Disco.exe)](http://msdn.microsoft.com/en-us/acd88078-c581-42bc-94ca-6633e2851979), and the `Add Web Reference` feature in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; you must enable metadata publication.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="f8bc2-113">[发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-113"> [Publishing Metadata Endpoints](../../../docs/framework/wcf/publishing-metadata-endpoints.md).</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="f8bc2-114">示例</span><span class="sxs-lookup"><span data-stu-id="f8bc2-114">Example</span></span>  
   
-### <a name="description"></a>描述  
- 下面的代码示例演示如何添加与代码（或配置文件）中的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web 服务客户端兼容的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 终结点。  
+### <a name="description"></a><span data-ttu-id="f8bc2-115">描述</span><span class="sxs-lookup"><span data-stu-id="f8bc2-115">Description</span></span>  
+ <span data-ttu-id="f8bc2-116">下面的代码示例演示如何添加[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]与兼容的终结点[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 服务客户端在代码和配置文件中。</span><span class="sxs-lookup"><span data-stu-id="f8bc2-116">The following example code demonstrates how to add a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoint that is compatible with [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web service clients in code and, alternatively, in a configuration file.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="f8bc2-117">代码</span><span class="sxs-lookup"><span data-stu-id="f8bc2-117">Code</span></span>  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
+ [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
- <!-- TODO: review snippet reference [!code[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/common/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  -->  
-  
-## <a name="see-also"></a>另请参阅  
- [与 ASP.NET Web 服务互操作性](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+## <a name="see-also"></a><span data-ttu-id="f8bc2-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f8bc2-118">See Also</span></span>  
+ [<span data-ttu-id="f8bc2-119">与 ASP.NET Web 服务互操作性</span><span class="sxs-lookup"><span data-stu-id="f8bc2-119">Interoperability with ASP.NET Web Services</span></span>](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

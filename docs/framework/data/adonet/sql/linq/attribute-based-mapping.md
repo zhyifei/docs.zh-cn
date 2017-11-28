@@ -1,153 +1,156 @@
 ---
-title: "基于属性的映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "基于特性的映射"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 基于属性的映射
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过应用属性或通过使用外部映射文件将 SQL Server 数据库映射到 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型。  本主题概述了基于属性的方法。  
+# <a name="attribute-based-mapping"></a><span data-ttu-id="110f5-102">基于特性的映射</span><span class="sxs-lookup"><span data-stu-id="110f5-102">Attribute-Based Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="110f5-103">映射到 SQL Server 数据库[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型通过应用属性或通过使用外部映射文件。</span><span class="sxs-lookup"><span data-stu-id="110f5-103"> maps a SQL Server database to a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model by either applying attributes or by using an external mapping file.</span></span> <span data-ttu-id="110f5-104">本主题概述了基于属性的方法。</span><span class="sxs-lookup"><span data-stu-id="110f5-104">This topic outlines the attribute-based approach.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 最基本的映射形式是将数据库映射到 <xref:System.Data.Linq.DataContext>，将表映射到类，将列和关系映射到这些类的属性。  您也可以使用属性来将继承层次结构映射到对象模型中。  有关详细信息，请参阅[如何：使用 Visual Basic 或 C\# 生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ <span data-ttu-id="110f5-105">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 最基本的映射形式是将数据库映射到 <xref:System.Data.Linq.DataContext>，将表映射到类，将列和关系映射到这些类的属性。</span><span class="sxs-lookup"><span data-stu-id="110f5-105">In its most elementary form, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] maps a database to a <xref:System.Data.Linq.DataContext>, a table to a class, and columns and relationships to properties on those classes.</span></span> <span data-ttu-id="110f5-106">您也可以使用属性来将继承层次结构映射到对象模型中。</span><span class="sxs-lookup"><span data-stu-id="110f5-106">You can also use attributes to map an inheritance hierarchy in your object model.</span></span> <span data-ttu-id="110f5-107">有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。</span><span class="sxs-lookup"><span data-stu-id="110f5-107">For more information, see [How to: Generate the Object Model in Visual Basic or C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).</span></span>  
   
- 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员通常使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 执行基于属性的映射。也可以使用 SQLMetal 命令行工具，或亲自手动对属性进行编码。  有关详细信息，请参阅[如何：使用 Visual Basic 或 C\# 生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
-  
-> [!NOTE]
->  您还可以通过使用外部 XML 文件进行映射。  有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
-  
- 以下各节更加详细地介绍了基于属性的映射。  有关更多信息，请参见 <xref:System.Data.Linq.Mapping> 命名空间。  
-  
-## DatabaseAttribute 属性  
- 使用此属性可指定在连接未提供名称时数据库的默认名称。  此属性 \(Attribute\) 是可选的，但如果使用它，则必须按照下表中的说明应用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性 \(Property\)。  
-  
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|与其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性一起使用，用于指定数据库的名称。|  
-  
- 有关详细信息，请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
-  
-## TableAttribute 属性  
- 使用此属性可将类指定为与数据库表或视图关联的实体类。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将具有此属性的类视为持久性类。  下表介绍了 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 属性。  
-  
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|与类名相同的字符串|将类指定为与数据库表关联的实体类。|  
-  
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.TableAttribute>。  
-  
-## ColumnAttribute 属性  
- 使用此属性可指定实体类的某个成员表示数据库表中的列。  您可以将此属性 \(Attribute\) 应用于任何字段或属性 \(Property\)。  
-  
- 当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 保存对数据库所做的更改时，只会检索并持久保存您标识为列的那些成员。  不具有此属性的成员被假定为非持久的，且不会被提交以进行插入或更新。  
-  
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
-  
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|指示公共语言运行库 \(CLR\) 在执行插入或更新操作后检索值。<br /><br /> 可供选择的值：Always、Never、OnUpdate、OnInsert。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|指示列可以包含 null 值。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|推断出的数据库列类型|使用数据库类型和修饰符来指定数据库列的类型。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|空|定义数据库中计算所得的列。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|指示列包含数据库自动生成的值。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|指示列包含 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 继承层次结构的鉴别器值。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|指定此类成员表示作为表主键或表主键一部分的列。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|将成员的列类型标识为数据库时间戳或版本号。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|除非对某个成员而言 `Always` 为 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>，否则为 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何实现开放式并发冲突的检测。|  
-  
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
+ <span data-ttu-id="110f5-108">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员通常会使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来执行基于属性的映射。</span><span class="sxs-lookup"><span data-stu-id="110f5-108">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] typically perform attribute-based mapping by using the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="110f5-109">也可以使用 SQLMetal 命令行工具，或亲自手动对属性进行编码。</span><span class="sxs-lookup"><span data-stu-id="110f5-109">You can also use the SQLMetal command-line tool, or you can hand-code the attributes yourself.</span></span> <span data-ttu-id="110f5-110">有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。</span><span class="sxs-lookup"><span data-stu-id="110f5-110">For more information, see [How to: Generate the Object Model in Visual Basic or C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).</span></span>  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。  例如，请确保 AssociationAttribute.Storage 属性 \(Property\) 的属性 \(Attribute\) 中使用的值与代码中其他位置使用的相应属性 \(Property\) 名称值的大小写相匹配。  这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。  有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>。  
+>  <span data-ttu-id="110f5-111">您还可以通过使用外部 XML 文件进行映射。</span><span class="sxs-lookup"><span data-stu-id="110f5-111">You can also map by using an external XML file.</span></span> <span data-ttu-id="110f5-112">有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="110f5-112">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
-## AssociationAttribute 属性  
- 使用此属性 \(Attribute\) 可指定属性 \(Property\) 表示数据库中的关联，如外键对主键关系。  有关关系的详细信息，请参阅[如何：映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
+ <span data-ttu-id="110f5-113">以下各节更加详细地介绍了基于属性的映射。</span><span class="sxs-lookup"><span data-stu-id="110f5-113">The following sections describe attribute-based mapping in more detail.</span></span> <span data-ttu-id="110f5-114">有关更多信息，请参见 <xref:System.Data.Linq.Mapping> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="110f5-114">For more information, see the <xref:System.Data.Linq.Mapping> namespace.</span></span>  
   
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
+## <a name="databaseattribute-attribute"></a><span data-ttu-id="110f5-115">DatabaseAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-115">DatabaseAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-116">使用此属性可指定在连接未提供名称时数据库的默认名称。</span><span class="sxs-lookup"><span data-stu-id="110f5-116">Use this attribute to specify the default name of the database when a name is not supplied by the connection.</span></span> <span data-ttu-id="110f5-117">此属性 (Attribute) 是可选的，但如果使用它，则必须按照下表中的说明应用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-117">This attribute is optional, but if you use it, you must apply the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property, as described in the following table.</span></span>  
   
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|当放置在其外键成员均不可以为 null 的关联上时，如果该关联设置为 null，则删除对象。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|无|向关联添加删除行为。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|如果为 true，则将成员指定为表示数据库关系的关联中的外键。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|如果为 true，则指示对外键的唯一性约束。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|相关类的 ID|将目标实体类的一个或多个成员指定为关联的另一端上的键值。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|String|包含类的 ID|指定此实体类的成员表示关联的此端上的键值。|  
+|<span data-ttu-id="110f5-118">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-118">Property</span></span>|<span data-ttu-id="110f5-119">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-119">Type</span></span>|<span data-ttu-id="110f5-120">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-120">Default</span></span>|<span data-ttu-id="110f5-121">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-121">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|<span data-ttu-id="110f5-122">String</span><span class="sxs-lookup"><span data-stu-id="110f5-122">String</span></span>|<span data-ttu-id="110f5-123">请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A></span><span class="sxs-lookup"><span data-stu-id="110f5-123">See <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A></span></span>|<span data-ttu-id="110f5-124">与其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性一起使用，用于指定数据库的名称。</span><span class="sxs-lookup"><span data-stu-id="110f5-124">Used with its <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property, specifies the name of the database.</span></span>|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
+ <span data-ttu-id="110f5-125">有关详细信息，请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-125">For more information, see <xref:System.Data.Linq.Mapping.DatabaseAttribute>.</span></span>  
+  
+## <a name="tableattribute-attribute"></a><span data-ttu-id="110f5-126">TableAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-126">TableAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-127">使用此属性可将类指定为与数据库表或视图关联的实体类。</span><span class="sxs-lookup"><span data-stu-id="110f5-127">Use this attribute to designate a class as an entity class that is associated with a database table or view.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="110f5-128"> 将具有此属性的类视为持久性类。</span><span class="sxs-lookup"><span data-stu-id="110f5-128"> treats classes that have this attribute as persistent classes.</span></span> <span data-ttu-id="110f5-129">下表介绍了 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="110f5-129">The following table describes the <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property.</span></span>  
+  
+|<span data-ttu-id="110f5-130">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-130">Property</span></span>|<span data-ttu-id="110f5-131">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-131">Type</span></span>|<span data-ttu-id="110f5-132">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-132">Default</span></span>|<span data-ttu-id="110f5-133">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-133">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|<span data-ttu-id="110f5-134">String</span><span class="sxs-lookup"><span data-stu-id="110f5-134">String</span></span>|<span data-ttu-id="110f5-135">与类名相同的字符串</span><span class="sxs-lookup"><span data-stu-id="110f5-135">Same string as class name</span></span>|<span data-ttu-id="110f5-136">将类指定为与数据库表关联的实体类。</span><span class="sxs-lookup"><span data-stu-id="110f5-136">Designates a class as an entity class associated with a database table.</span></span>|  
+  
+ <span data-ttu-id="110f5-137">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.TableAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-137">For more information, see <xref:System.Data.Linq.Mapping.TableAttribute>.</span></span>  
+  
+## <a name="columnattribute-attribute"></a><span data-ttu-id="110f5-138">ColumnAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-138">ColumnAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-139">使用此属性可指定实体类的某个成员表示数据库表中的列。</span><span class="sxs-lookup"><span data-stu-id="110f5-139">Use this attribute to designate a member of an entity class to represent a column in a database table.</span></span> <span data-ttu-id="110f5-140">您可以将此属性 (Attribute) 应用于任何字段或属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-140">You can apply this attribute to any field or property.</span></span>  
+  
+ <span data-ttu-id="110f5-141">当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 保存对数据库所做的更改时，只会检索并持久保存您标识为列的那些成员。</span><span class="sxs-lookup"><span data-stu-id="110f5-141">Only those members you identify as columns are retrieved and persisted when [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saves changes to the database.</span></span> <span data-ttu-id="110f5-142">不具有此属性的成员被假定为非持久的，且不会被提交以进行插入或更新。</span><span class="sxs-lookup"><span data-stu-id="110f5-142">Members without this attribute are assumed to be non-persistent and are not submitted for inserts or updates.</span></span>  
+  
+ <span data-ttu-id="110f5-143">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-143">The following table describes properties of this attribute.</span></span>  
+  
+|<span data-ttu-id="110f5-144">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-144">Property</span></span>|<span data-ttu-id="110f5-145">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-145">Type</span></span>|<span data-ttu-id="110f5-146">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-146">Default</span></span>|<span data-ttu-id="110f5-147">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-147">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|<span data-ttu-id="110f5-148">AutoSync</span><span class="sxs-lookup"><span data-stu-id="110f5-148">AutoSync</span></span>|<span data-ttu-id="110f5-149">Never</span><span class="sxs-lookup"><span data-stu-id="110f5-149">Never</span></span>|<span data-ttu-id="110f5-150">指示公共语言运行库 (CLR) 在执行插入或更新操作后检索值。</span><span class="sxs-lookup"><span data-stu-id="110f5-150">Instructs the common language runtime (CLR) to retrieve the value after an insert or update operation.</span></span><br /><br /> <span data-ttu-id="110f5-151">可供选择的值：Always、Never、OnUpdate、OnInsert。</span><span class="sxs-lookup"><span data-stu-id="110f5-151">Options: Always, Never, OnUpdate, OnInsert.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|<span data-ttu-id="110f5-152">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-152">Boolean</span></span>|`true`|<span data-ttu-id="110f5-153">指示列可以包含 null 值。</span><span class="sxs-lookup"><span data-stu-id="110f5-153">Indicates that a column can contain null values.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|<span data-ttu-id="110f5-154">String</span><span class="sxs-lookup"><span data-stu-id="110f5-154">String</span></span>|<span data-ttu-id="110f5-155">推断出的数据库列类型</span><span class="sxs-lookup"><span data-stu-id="110f5-155">Inferred database column type</span></span>|<span data-ttu-id="110f5-156">使用数据库类型和修饰符来指定数据库列的类型。</span><span class="sxs-lookup"><span data-stu-id="110f5-156">Uses database types and modifiers to specify the type of the database column.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|<span data-ttu-id="110f5-157">String</span><span class="sxs-lookup"><span data-stu-id="110f5-157">String</span></span>|<span data-ttu-id="110f5-158">空</span><span class="sxs-lookup"><span data-stu-id="110f5-158">Empty</span></span>|<span data-ttu-id="110f5-159">定义数据库中计算所得的列。</span><span class="sxs-lookup"><span data-stu-id="110f5-159">Defines a computed column in a database.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|<span data-ttu-id="110f5-160">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-160">Boolean</span></span>|`false`|<span data-ttu-id="110f5-161">指示列包含数据库自动生成的值。</span><span class="sxs-lookup"><span data-stu-id="110f5-161">Indicates that a column contains values that the database auto-generates.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|<span data-ttu-id="110f5-162">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-162">Boolean</span></span>|`false`|<span data-ttu-id="110f5-163">指示列包含 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 继承层次结构的鉴别器值。</span><span class="sxs-lookup"><span data-stu-id="110f5-163">Indicates that the column contains a discriminator value for a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] inheritance hierarchy.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|<span data-ttu-id="110f5-164">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-164">Boolean</span></span>|`false`|<span data-ttu-id="110f5-165">指定此类成员表示作为表主键或表主键一部分的列。</span><span class="sxs-lookup"><span data-stu-id="110f5-165">Specifies that this class member represents a column that is or is part of the primary keys of the table.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|<span data-ttu-id="110f5-166">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-166">Boolean</span></span>|`false`|<span data-ttu-id="110f5-167">将成员的列类型标识为数据库时间戳或版本号。</span><span class="sxs-lookup"><span data-stu-id="110f5-167">Identifies the column type of the member as a database timestamp or version number.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|<span data-ttu-id="110f5-168">UpdateCheck</span><span class="sxs-lookup"><span data-stu-id="110f5-168">UpdateCheck</span></span>|<span data-ttu-id="110f5-169">除非对某个成员而言 `Always` 为 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>，否则为 `true`</span><span class="sxs-lookup"><span data-stu-id="110f5-169">`Always`, unless <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> is `true` for a member</span></span>|<span data-ttu-id="110f5-170">指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何实现开放式并发冲突的检测。</span><span class="sxs-lookup"><span data-stu-id="110f5-170">Specifies how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] approaches the detection of optimistic concurrency conflicts.</span></span>|  
+  
+ <span data-ttu-id="110f5-171">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ColumnAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-171">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute>.</span></span>  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。  例如，请确保 AssociationAttribute.Storage 属性 \(Property\) 的属性 \(Attribute\) 中使用的值与代码中其他位置使用的相应属性 \(Property\) 名称值的大小写相匹配。  这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。  有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>。  
+>  <span data-ttu-id="110f5-172">AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。</span><span class="sxs-lookup"><span data-stu-id="110f5-172">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="110f5-173">例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。</span><span class="sxs-lookup"><span data-stu-id="110f5-173">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="110f5-174">这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="110f5-174">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="110f5-175">有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="110f5-175">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
-## InheritanceMappingAttribute 属性  
- 使用此属性可映射继承层次结构。  
+## <a name="associationattribute-attribute"></a><span data-ttu-id="110f5-176">AssociationAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-176">AssociationAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-177">使用此属性 (Attribute) 可指定属性 (Property) 表示数据库中的关联，如外键对主键关系。</span><span class="sxs-lookup"><span data-stu-id="110f5-177">Use this attribute to designate a property to represent an association in the database, such as a foreign key to primary key relationship.</span></span> <span data-ttu-id="110f5-178">有关关系的详细信息，请参阅[如何： 映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。</span><span class="sxs-lookup"><span data-stu-id="110f5-178">For more information about relationships, see [How to: Map Database Relationships](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).</span></span>  
   
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
+ <span data-ttu-id="110f5-179">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-179">The following table describes properties of this attribute.</span></span>  
   
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|无。  必须提供值。|指定鉴别器的代码值。|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|如果为 true，则在存储区中没有与指定值中的任何一个值匹配的鉴别器值时实例化此类型的对象。|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|类型|无。  必须提供值。|指定层次结构中的类的类型。|  
+|<span data-ttu-id="110f5-180">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-180">Property</span></span>|<span data-ttu-id="110f5-181">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-181">Type</span></span>|<span data-ttu-id="110f5-182">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-182">Default</span></span>|<span data-ttu-id="110f5-183">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-183">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|<span data-ttu-id="110f5-184">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-184">Boolean</span></span>|`false`|<span data-ttu-id="110f5-185">当放置在其外键成员均不可以为 null 的关联上时，如果该关联设置为 null，则删除对象。</span><span class="sxs-lookup"><span data-stu-id="110f5-185">When placed on an association whose foreign key members are all non-nullable, deletes the object when the association is set to null.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|<span data-ttu-id="110f5-186">String</span><span class="sxs-lookup"><span data-stu-id="110f5-186">String</span></span>|<span data-ttu-id="110f5-187">无</span><span class="sxs-lookup"><span data-stu-id="110f5-187">None</span></span>|<span data-ttu-id="110f5-188">向关联添加删除行为。</span><span class="sxs-lookup"><span data-stu-id="110f5-188">Adds delete behavior to an association.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|<span data-ttu-id="110f5-189">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-189">Boolean</span></span>|`false`|<span data-ttu-id="110f5-190">如果为 true，则将成员指定为表示数据库关系的关联中的外键。</span><span class="sxs-lookup"><span data-stu-id="110f5-190">If true, designates the member as the foreign key in an association representing a database relationship.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|<span data-ttu-id="110f5-191">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-191">Boolean</span></span>|`false`|<span data-ttu-id="110f5-192">如果为 true，则指示对外键的唯一性约束。</span><span class="sxs-lookup"><span data-stu-id="110f5-192">If true, indicates a uniqueness constraint on the foreign key.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|<span data-ttu-id="110f5-193">String</span><span class="sxs-lookup"><span data-stu-id="110f5-193">String</span></span>|<span data-ttu-id="110f5-194">相关类的 ID</span><span class="sxs-lookup"><span data-stu-id="110f5-194">ID of the related class</span></span>|<span data-ttu-id="110f5-195">将目标实体类的一个或多个成员指定为关联的另一端上的键值。</span><span class="sxs-lookup"><span data-stu-id="110f5-195">Designates one or more members of the target entity class as key values on the other side of the association.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|<span data-ttu-id="110f5-196">String</span><span class="sxs-lookup"><span data-stu-id="110f5-196">String</span></span>|<span data-ttu-id="110f5-197">包含类的 ID</span><span class="sxs-lookup"><span data-stu-id="110f5-197">ID of the containing class</span></span>|<span data-ttu-id="110f5-198">指定此实体类的成员表示关联的此端上的键值。</span><span class="sxs-lookup"><span data-stu-id="110f5-198">Designates members of this entity class to represent the key values on this side of the association.</span></span>|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。  
+ <span data-ttu-id="110f5-199">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.AssociationAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-199">For more information, see <xref:System.Data.Linq.Mapping.AssociationAttribute>.</span></span>  
   
-## FunctionAttribute 属性  
- 使用此属性可指定方法表示数据库中的存储过程或用户定义函数。  
+> [!NOTE]
+>  <span data-ttu-id="110f5-200">AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。</span><span class="sxs-lookup"><span data-stu-id="110f5-200">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="110f5-201">例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。</span><span class="sxs-lookup"><span data-stu-id="110f5-201">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="110f5-202">这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="110f5-202">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="110f5-203">有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="110f5-203">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
+## <a name="inheritancemappingattribute-attribute"></a><span data-ttu-id="110f5-204">InheritanceMappingAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-204">InheritanceMappingAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-205">使用此属性可映射继承层次结构。</span><span class="sxs-lookup"><span data-stu-id="110f5-205">Use this attribute to map an inheritance hierarchy.</span></span>  
   
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|如果为 false，则指示映射到存储过程。  如果为 true，则指示映射到用户定义的函数。|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|与数据库中的名称相同的字符串|指定存储过程或用户定义函数的名称。|  
+ <span data-ttu-id="110f5-206">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-206">The following table describes properties of this attribute.</span></span>  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.FunctionAttribute>。  
+|<span data-ttu-id="110f5-207">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-207">Property</span></span>|<span data-ttu-id="110f5-208">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-208">Type</span></span>|<span data-ttu-id="110f5-209">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-209">Default</span></span>|<span data-ttu-id="110f5-210">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-210">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|<span data-ttu-id="110f5-211">String</span><span class="sxs-lookup"><span data-stu-id="110f5-211">String</span></span>|<span data-ttu-id="110f5-212">无。</span><span class="sxs-lookup"><span data-stu-id="110f5-212">None.</span></span> <span data-ttu-id="110f5-213">必须提供值。</span><span class="sxs-lookup"><span data-stu-id="110f5-213">Value must be supplied.</span></span>|<span data-ttu-id="110f5-214">指定鉴别器的代码值。</span><span class="sxs-lookup"><span data-stu-id="110f5-214">Specifies the code value of the discriminator.</span></span>|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|<span data-ttu-id="110f5-215">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-215">Boolean</span></span>|`false`|<span data-ttu-id="110f5-216">如果为 true，则在存储区中没有与指定值中的任何一个值匹配的鉴别器值时实例化此类型的对象。</span><span class="sxs-lookup"><span data-stu-id="110f5-216">If true, instantiates an object of this type when no discriminator value in the store matches any one of the specified values.</span></span>|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|<span data-ttu-id="110f5-217">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-217">Type</span></span>|<span data-ttu-id="110f5-218">无。</span><span class="sxs-lookup"><span data-stu-id="110f5-218">None.</span></span> <span data-ttu-id="110f5-219">必须提供值。</span><span class="sxs-lookup"><span data-stu-id="110f5-219">Value must be supplied.</span></span>|<span data-ttu-id="110f5-220">指定层次结构中的类的类型。</span><span class="sxs-lookup"><span data-stu-id="110f5-220">Specifies the type of the class in the hierarchy.</span></span>|  
   
-## ParameterAttribute 属性  
- 使用此属性可映射存储过程方法中的输入参数。  
+ <span data-ttu-id="110f5-221">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-221">For more information, see <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.</span></span>  
   
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
+## <a name="functionattribute-attribute"></a><span data-ttu-id="110f5-222">FunctionAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-222">FunctionAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-223">使用此属性可指定方法表示数据库中的存储过程或用户定义函数。</span><span class="sxs-lookup"><span data-stu-id="110f5-223">Use this attribute to designate a method as representing a stored procedure or user-defined function in the database.</span></span>  
   
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|无|指定数据库类型。|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|与数据库中的参数名相同的字符串|指定参数的名称。|  
+ <span data-ttu-id="110f5-224">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-224">The following table describes the properties of this attribute.</span></span>  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ParameterAttribute>。  
+|<span data-ttu-id="110f5-225">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-225">Property</span></span>|<span data-ttu-id="110f5-226">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-226">Type</span></span>|<span data-ttu-id="110f5-227">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-227">Default</span></span>|<span data-ttu-id="110f5-228">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-228">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|<span data-ttu-id="110f5-229">Boolean</span><span class="sxs-lookup"><span data-stu-id="110f5-229">Boolean</span></span>|`false`|<span data-ttu-id="110f5-230">如果为 false，则指示映射到存储过程。</span><span class="sxs-lookup"><span data-stu-id="110f5-230">If false, indicates mapping to a stored procedure.</span></span> <span data-ttu-id="110f5-231">如果为 true，则指示映射到用户定义的函数。</span><span class="sxs-lookup"><span data-stu-id="110f5-231">If true, indicates mapping to a user-defined function.</span></span>|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|<span data-ttu-id="110f5-232">String</span><span class="sxs-lookup"><span data-stu-id="110f5-232">String</span></span>|<span data-ttu-id="110f5-233">与数据库中的名称相同的字符串</span><span class="sxs-lookup"><span data-stu-id="110f5-233">Same string as name in the database</span></span>|<span data-ttu-id="110f5-234">指定存储过程或用户定义函数的名称。</span><span class="sxs-lookup"><span data-stu-id="110f5-234">Specifies the name of the stored procedure or user-defined function.</span></span>|  
   
-## ResultTypeAttribute 属性  
- 使用此属性可指定结果类型。  
+ <span data-ttu-id="110f5-235">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.FunctionAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-235">For more information, see <xref:System.Data.Linq.Mapping.FunctionAttribute>.</span></span>  
   
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
+## <a name="parameterattribute-attribute"></a><span data-ttu-id="110f5-236">ParameterAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-236">ParameterAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-237">使用此属性可映射存储过程方法中的输入参数。</span><span class="sxs-lookup"><span data-stu-id="110f5-237">Use this attribute to map input parameters on stored procedure methods.</span></span>  
   
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|类型|（无）|用于映射到返回 <xref:System.Data.Linq.IMultipleResults> 的存储过程的方法。  为存储过程声明有效的或预期的类型映射。|  
+ <span data-ttu-id="110f5-238">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-238">The following table describes properties of this attribute.</span></span>  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ResultTypeAttribute>。  
+|<span data-ttu-id="110f5-239">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-239">Property</span></span>|<span data-ttu-id="110f5-240">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-240">Type</span></span>|<span data-ttu-id="110f5-241">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-241">Default</span></span>|<span data-ttu-id="110f5-242">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-242">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|<span data-ttu-id="110f5-243">String</span><span class="sxs-lookup"><span data-stu-id="110f5-243">String</span></span>|<span data-ttu-id="110f5-244">无</span><span class="sxs-lookup"><span data-stu-id="110f5-244">None</span></span>|<span data-ttu-id="110f5-245">指定数据库类型。</span><span class="sxs-lookup"><span data-stu-id="110f5-245">Specifies database type.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|<span data-ttu-id="110f5-246">String</span><span class="sxs-lookup"><span data-stu-id="110f5-246">String</span></span>|<span data-ttu-id="110f5-247">与数据库中的参数名相同的字符串</span><span class="sxs-lookup"><span data-stu-id="110f5-247">Same string as parameter name in database</span></span>|<span data-ttu-id="110f5-248">指定参数的名称。</span><span class="sxs-lookup"><span data-stu-id="110f5-248">Specifies a name for the parameter.</span></span>|  
   
-## DataAttribute 属性  
- 使用此属性可指定名称和私有存储字段。  
+ <span data-ttu-id="110f5-249">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ParameterAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-249">For more information, see <xref:System.Data.Linq.Mapping.ParameterAttribute>.</span></span>  
   
- 下表介绍了此属性 \(Attribute\) 的属性 \(Property\)。  
+## <a name="resulttypeattribute-attribute"></a><span data-ttu-id="110f5-250">ResultTypeAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-250">ResultTypeAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-251">使用此属性可指定结果类型。</span><span class="sxs-lookup"><span data-stu-id="110f5-251">Use this attribute to specify a result type.</span></span>  
   
-|属性|类型|默认|描述|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|与数据库中的名称相同|指定表、列等的名称。|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|公共访问器|指定基础存储字段的名称。|  
+ <span data-ttu-id="110f5-252">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-252">The following table describes properties of this attribute.</span></span>  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.DataAttribute>。  
+|<span data-ttu-id="110f5-253">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-253">Property</span></span>|<span data-ttu-id="110f5-254">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-254">Type</span></span>|<span data-ttu-id="110f5-255">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-255">Default</span></span>|<span data-ttu-id="110f5-256">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-256">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|<span data-ttu-id="110f5-257">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-257">Type</span></span>|<span data-ttu-id="110f5-258">（无）</span><span class="sxs-lookup"><span data-stu-id="110f5-258">(None)</span></span>|<span data-ttu-id="110f5-259">用于映射到返回 <xref:System.Data.Linq.IMultipleResults> 的存储过程的方法。</span><span class="sxs-lookup"><span data-stu-id="110f5-259">Used on methods mapped to stored procedures that return <xref:System.Data.Linq.IMultipleResults>.</span></span> <span data-ttu-id="110f5-260">为存储过程声明有效的或预期的类型映射。</span><span class="sxs-lookup"><span data-stu-id="110f5-260">Declares the valid or expected type mappings for the stored procedure.</span></span>|  
   
-## 请参阅  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+ <span data-ttu-id="110f5-261">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ResultTypeAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-261">For more information, see <xref:System.Data.Linq.Mapping.ResultTypeAttribute>.</span></span>  
+  
+## <a name="dataattribute-attribute"></a><span data-ttu-id="110f5-262">DataAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="110f5-262">DataAttribute Attribute</span></span>  
+ <span data-ttu-id="110f5-263">使用此属性可指定名称和私有存储字段。</span><span class="sxs-lookup"><span data-stu-id="110f5-263">Use this attribute to specify names and private storage fields.</span></span>  
+  
+ <span data-ttu-id="110f5-264">下表介绍了此属性 (Attribute) 的属性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="110f5-264">The following table describes properties of this attribute.</span></span>  
+  
+|<span data-ttu-id="110f5-265">属性</span><span class="sxs-lookup"><span data-stu-id="110f5-265">Property</span></span>|<span data-ttu-id="110f5-266">类型</span><span class="sxs-lookup"><span data-stu-id="110f5-266">Type</span></span>|<span data-ttu-id="110f5-267">默认</span><span class="sxs-lookup"><span data-stu-id="110f5-267">Default</span></span>|<span data-ttu-id="110f5-268">描述</span><span class="sxs-lookup"><span data-stu-id="110f5-268">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|<span data-ttu-id="110f5-269">String</span><span class="sxs-lookup"><span data-stu-id="110f5-269">String</span></span>|<span data-ttu-id="110f5-270">与数据库中的名称相同</span><span class="sxs-lookup"><span data-stu-id="110f5-270">Same as name in database</span></span>|<span data-ttu-id="110f5-271">指定表、列等的名称。</span><span class="sxs-lookup"><span data-stu-id="110f5-271">Specifies the name of the table, column, and so on.</span></span>|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|<span data-ttu-id="110f5-272">String</span><span class="sxs-lookup"><span data-stu-id="110f5-272">String</span></span>|<span data-ttu-id="110f5-273">公共访问器</span><span class="sxs-lookup"><span data-stu-id="110f5-273">Public accessors</span></span>|<span data-ttu-id="110f5-274">指定基础存储字段的名称。</span><span class="sxs-lookup"><span data-stu-id="110f5-274">Specifies the name of the underlying storage field.</span></span>|  
+  
+ <span data-ttu-id="110f5-275">有关更多信息，请参见<xref:System.Data.Linq.Mapping.DataAttribute>。</span><span class="sxs-lookup"><span data-stu-id="110f5-275">For more information, see <xref:System.Data.Linq.Mapping.DataAttribute>.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="110f5-276">另请参阅</span><span class="sxs-lookup"><span data-stu-id="110f5-276">See Also</span></span>  
+ [<span data-ttu-id="110f5-277">参考</span><span class="sxs-lookup"><span data-stu-id="110f5-277">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

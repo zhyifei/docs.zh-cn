@@ -1,45 +1,35 @@
 ---
 title: "命名空间概述 (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d2aa60f10e9d4cf1b1db4d2e81d94e5ea8e1302a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dfa9e65bcf5a3c0e37bb1a44caab889468c5c236
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="namespaces-overview-linq-to-xml"></a>命名空间概述 (LINQ to XML)
-本主题介绍命名空间、<xref:System.Xml.Linq.XName> 类和 <xref:System.Xml.Linq.XNamespace> 类。  
+# <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="6f928-102">命名空间概述 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6f928-102">Namespaces Overview (LINQ to XML)</span></span>
+<span data-ttu-id="6f928-103">本主题介绍命名空间、<xref:System.Xml.Linq.XName> 类和 <xref:System.Xml.Linq.XNamespace> 类。</span><span class="sxs-lookup"><span data-stu-id="6f928-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  
   
-## <a name="xml-names"></a>XML 名称  
- XML 名称常常是导致 XML 编程复杂性的原因。 XML 名称由 XML 命名空间（也称为 XML 命名空间 URI）和本地名称组成。 XML 命名空间类似于基于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的程序中的命名空间。 它能够唯一限定元素和属性的名称。 这有助于避免 XML 文档各个部分之间的名称冲突。 声明 XML 命名空间后，可以选择只需在此命名空间内唯一的本地名称。  
+## <a name="xml-names"></a><span data-ttu-id="6f928-104">XML 名称</span><span class="sxs-lookup"><span data-stu-id="6f928-104">XML Names</span></span>  
+ <span data-ttu-id="6f928-105">XML 名称常常是导致 XML 编程复杂性的原因。</span><span class="sxs-lookup"><span data-stu-id="6f928-105">XML names are often a source of complexity in XML programming.</span></span> <span data-ttu-id="6f928-106">XML 名称由 XML 命名空间（也称为 XML 命名空间 URI）和本地名称组成。</span><span class="sxs-lookup"><span data-stu-id="6f928-106">An XML name consists of an XML namespace (also called an XML namespace URI) and a local name.</span></span> <span data-ttu-id="6f928-107">XML 命名空间类似于基于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的程序中的命名空间。</span><span class="sxs-lookup"><span data-stu-id="6f928-107">An XML namespace is similar to a namespace in a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-based program.</span></span> <span data-ttu-id="6f928-108">它能够唯一限定元素和属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6f928-108">It enables you to uniquely qualify the names of elements and attributes.</span></span> <span data-ttu-id="6f928-109">这有助于避免 XML 文档各个部分之间的名称冲突。</span><span class="sxs-lookup"><span data-stu-id="6f928-109">This helps avoid name conflicts between various parts of an XML document.</span></span> <span data-ttu-id="6f928-110">声明 XML 命名空间后，可以选择只需在此命名空间内唯一的本地名称。</span><span class="sxs-lookup"><span data-stu-id="6f928-110">When you have declared an XML namespace, you can select a local name that only has to be unique within that namespace.</span></span>  
   
- XML 名称的另一个方面是 XML 命名空间前缀。 XML 名称的复杂性大都是由 XML 前缀引起的。 这些前缀可用来创建 XML 命名空间的快捷方式，从而使 XML 文档更加简洁易懂。 但是，XML 前缀仅在其上下文中才有意义，这就增加了复杂性。 例如，XML 前缀 `aw` 可以与 XML 树的一部分中的一个 XML 命名空间关联，也可以与该 XML 树的另一部分中的另一个 XML 命名空间关联。  
+ <span data-ttu-id="6f928-111">XML 名称的另一个方面是 XML 命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="6f928-111">Another aspect of XML names is XML *namespace prefixes*.</span></span> <span data-ttu-id="6f928-112">XML 名称的复杂性大都是由 XML 前缀引起的。</span><span class="sxs-lookup"><span data-stu-id="6f928-112">XML prefixes cause most of the complexity of XML names.</span></span> <span data-ttu-id="6f928-113">这些前缀可用来创建 XML 命名空间的快捷方式，从而使 XML 文档更加简洁易懂。</span><span class="sxs-lookup"><span data-stu-id="6f928-113">These prefixes enable you to create a shortcut for an XML namespace, which makes the XML document more concise and understandable.</span></span> <span data-ttu-id="6f928-114">但是，XML 前缀仅在其上下文中才有意义，这就增加了复杂性。</span><span class="sxs-lookup"><span data-stu-id="6f928-114">However, XML prefixes depend on their context to have meaning, which adds complexity.</span></span> <span data-ttu-id="6f928-115">例如，XML 前缀 `aw` 可以与 XML 树的一部分中的一个 XML 命名空间关联，也可以与该 XML 树的另一部分中的另一个 XML 命名空间关联。</span><span class="sxs-lookup"><span data-stu-id="6f928-115">For example, the XML prefix `aw` could be associated with one XML namespace in one part of an XML tree, and with a different XML namespace in a different part of the XML tree.</span></span>  
   
- 通过 C# 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的一个优点是您无须使用 XML 前缀。 当 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 加载或解析 XML 文档时，每个 XML 前缀都解析为它对应的 XML 命名空间。 之后，当您处理使用命名空间的文档时，您几乎总是通过命名空间 URI，而不是通过命名空间前缀来访问命名空间。 开发人员在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用 XML 名称时，他们始终使用完全限定的 XML 名称（即，XML 命名空间和本地名称）。 但是，如有必要，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许您使用和控制命名空间前缀。  
+ <span data-ttu-id="6f928-116">通过 C# 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的一个优点是您无须使用 XML 前缀。</span><span class="sxs-lookup"><span data-stu-id="6f928-116">One of the advantages of using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with C# is that you do not have to use XML prefixes.</span></span> <span data-ttu-id="6f928-117">当 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 加载或解析 XML 文档时，每个 XML 前缀都解析为它对应的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="6f928-117">When [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] loads or parses an XML document, each XML prefix is resolved to its corresponding XML namespace.</span></span> <span data-ttu-id="6f928-118">之后，当您处理使用命名空间的文档时，您几乎总是通过命名空间 URI，而不是通过命名空间前缀来访问命名空间。</span><span class="sxs-lookup"><span data-stu-id="6f928-118">After that, when you work with a document that uses namespaces, you almost always access the namespaces through the namespace URI, and not through the namespace prefix.</span></span> <span data-ttu-id="6f928-119">开发人员在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用 XML 名称时，他们始终使用完全限定的 XML 名称（即，XML 命名空间和本地名称）。</span><span class="sxs-lookup"><span data-stu-id="6f928-119">When developers work with XML names in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] they always work with a fully-qualified XML name (that is, an XML namespace and a local name).</span></span> <span data-ttu-id="6f928-120">但是，如有必要，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许您使用和控制命名空间前缀。</span><span class="sxs-lookup"><span data-stu-id="6f928-120">However, when necessary, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] allows you to work with and control namespace prefixes.</span></span>  
   
- 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，表示 XML 名称的类为 <xref:System.Xml.Linq.XName>。 XML 名称在整个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API 中频繁出现，任何时候只要需要 XML 名称，您就会发现 <xref:System.Xml.Linq.XName> 参数。 但是，很少会直接使用 <xref:System.Xml.Linq.XName>。 <xref:System.Xml.Linq.XName> 包含一个从字符串的隐式转换。  
+ <span data-ttu-id="6f928-121">在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，表示 XML 名称的类为 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="6f928-121">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the class that represents XML names is <xref:System.Xml.Linq.XName>.</span></span> <span data-ttu-id="6f928-122">XML 名称在整个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API 中频繁出现，任何时候只要需要 XML 名称，您就会发现 <xref:System.Xml.Linq.XName> 参数。</span><span class="sxs-lookup"><span data-stu-id="6f928-122">XML names appear frequently throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API, and wherever an XML name is required, you will find an <xref:System.Xml.Linq.XName> parameter.</span></span> <span data-ttu-id="6f928-123">但是，很少会直接使用 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="6f928-123">However, you rarely work directly with an <xref:System.Xml.Linq.XName>.</span></span> <span data-ttu-id="6f928-124"><xref:System.Xml.Linq.XName> 包含一个从字符串的隐式转换。</span><span class="sxs-lookup"><span data-stu-id="6f928-124"><xref:System.Xml.Linq.XName> contains an implicit conversion from string.</span></span>  
   
- 有关详细信息，请参阅 <xref:System.Xml.Linq.XNamespace> 和 <xref:System.Xml.Linq.XName>。  
+ <span data-ttu-id="6f928-125">有关详细信息，请参阅 <xref:System.Xml.Linq.XNamespace> 和 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="6f928-125">For more information, see <xref:System.Xml.Linq.XNamespace> and <xref:System.Xml.Linq.XName>.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
-
+## <a name="see-also"></a><span data-ttu-id="6f928-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6f928-126">See Also</span></span>  
+ [<span data-ttu-id="6f928-127">使用 XML 命名空间 (C#)</span><span class="sxs-lookup"><span data-stu-id="6f928-127">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -1,81 +1,62 @@
 ---
 title: "数组（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1cdd319ef6bbb296c7afa5195563b92bdd361f0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1035caae15b64d1311305cfe4c1f1a74c80ed19a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="arrays-c-programming-guide"></a>数组（C# 编程指南）
-可以将同一类型的多个变量存储在一个数组数据结构中。 通过指定数组的元素类型来声明数组。  
+# <a name="arrays-c-programming-guide"></a><span data-ttu-id="a3f63-102">数组（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="a3f63-102">Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="a3f63-103">可以将同一类型的多个变量存储在一个数组数据结构中。</span><span class="sxs-lookup"><span data-stu-id="a3f63-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="a3f63-104">通过指定数组的元素类型来声明数组。</span><span class="sxs-lookup"><span data-stu-id="a3f63-104">You declare an array by specifying the type of its elements.</span></span>  
   
  `type[] arrayName;`  
   
- 以下示例创建一维、多维和交错数组：  
+ <span data-ttu-id="a3f63-105">以下示例创建一维、多维和交错数组：</span><span class="sxs-lookup"><span data-stu-id="a3f63-105">The following examples create single-dimensional, multidimensional, and jagged arrays:</span></span>  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a>数组概述  
- 数组具有以下属性：  
+## <a name="array-overview"></a><span data-ttu-id="a3f63-106">数组概述</span><span class="sxs-lookup"><span data-stu-id="a3f63-106">Array Overview</span></span>  
+ <span data-ttu-id="a3f63-107">数组具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="a3f63-107">An array has the following properties:</span></span>  
   
--   数组可以是[一维](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)、[多维](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)或[交错](../../../csharp/programming-guide/arrays/jagged-arrays.md)的。  
+-   <span data-ttu-id="a3f63-108">数组可以是[一维](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)、[多维](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)或[交错](../../../csharp/programming-guide/arrays/jagged-arrays.md)的。</span><span class="sxs-lookup"><span data-stu-id="a3f63-108">An array can be [Single-Dimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) or [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).</span></span>  
   
--   创建数组实例时，将建立纬度数量和每个纬度的长度。 这些值在实例的生存期内无法更改。  
+-   <span data-ttu-id="a3f63-109">创建数组实例时，将建立纬度数量和每个纬度的长度。</span><span class="sxs-lookup"><span data-stu-id="a3f63-109">The number of dimensions and the length of each dimension are established when the array instance is created.</span></span> <span data-ttu-id="a3f63-110">这些值在实例的生存期内无法更改。</span><span class="sxs-lookup"><span data-stu-id="a3f63-110">These values can't be changed during the lifetime of the instance.</span></span>  
   
--   数值数组元素的默认值设置为零，而引用元素设置为 null。  
+-   <span data-ttu-id="a3f63-111">数值数组元素的默认值设置为零，而引用元素设置为 null。</span><span class="sxs-lookup"><span data-stu-id="a3f63-111">The default values of numeric array elements are set to zero, and reference elements are set to null.</span></span>  
   
--   交错数组是数组的数组，因此其元素为引用类型且被初始化为 `null`。  
+-   <span data-ttu-id="a3f63-112">交错数组是数组的数组，因此其元素为引用类型且被初始化为 `null`。</span><span class="sxs-lookup"><span data-stu-id="a3f63-112">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
--   数组从零开始编制索引：包含 `n` 元素的数组从 `0` 索引到 `n-1`。  
+-   <span data-ttu-id="a3f63-113">数组从零开始编制索引：包含 `n` 元素的数组从 `0` 索引到 `n-1`。</span><span class="sxs-lookup"><span data-stu-id="a3f63-113">Arrays are zero indexed: an array with `n` elements is indexed from `0` to `n-1`.</span></span>  
   
--   数组元素可以是任何类型，其中包括数组类型。  
+-   <span data-ttu-id="a3f63-114">数组元素可以是任何类型，其中包括数组类型。</span><span class="sxs-lookup"><span data-stu-id="a3f63-114">Array elements can be of any type, including an array type.</span></span>  
   
--   数组类型是从抽象的基类型 <xref:System.Array> 派生的[引用类型](../../../csharp/language-reference/keywords/reference-types.md)。 由于此类型实现 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，因此可以在 C# 中的所有数组上使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 迭代。  
+-   <span data-ttu-id="a3f63-115">数组类型是从抽象的基类型 <xref:System.Array> 派生的[引用类型](../../../csharp/language-reference/keywords/reference-types.md)。</span><span class="sxs-lookup"><span data-stu-id="a3f63-115">Array types are [reference types](../../../csharp/language-reference/keywords/reference-types.md) derived from the abstract base type <xref:System.Array>.</span></span> <span data-ttu-id="a3f63-116">由于此类型实现 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，因此可以在 C# 中的所有数组上使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 迭代。</span><span class="sxs-lookup"><span data-stu-id="a3f63-116">Since this type implements <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601>, you can use [foreach](../../../csharp/language-reference/keywords/foreach-in.md) iteration on all arrays in C#.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
+## <a name="related-sections"></a><span data-ttu-id="a3f63-117">相关章节</span><span class="sxs-lookup"><span data-stu-id="a3f63-117">Related Sections</span></span>  
   
--   [作为对象的数组](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+-   [<span data-ttu-id="a3f63-118">作为对象的数组</span><span class="sxs-lookup"><span data-stu-id="a3f63-118">Arrays as Objects</span></span>](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
--   [对数组使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+-   [<span data-ttu-id="a3f63-119">对数组使用 foreach</span><span class="sxs-lookup"><span data-stu-id="a3f63-119">Using foreach with Arrays</span></span>](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
--   [将数组作为参数传递](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+-   [<span data-ttu-id="a3f63-120">将数组作为参数传递</span><span class="sxs-lookup"><span data-stu-id="a3f63-120">Passing Arrays as Arguments</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [使用 ref 和 out 传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
+-   [<span data-ttu-id="a3f63-121">使用 ref 和 out 传递数组</span><span class="sxs-lookup"><span data-stu-id="a3f63-121">Passing Arrays Using ref and out</span></span>](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="a3f63-122">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="a3f63-122">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
- [数组集合类型](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
-
+## <a name="see-also"></a><span data-ttu-id="a3f63-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a3f63-123">See Also</span></span>  
+ [<span data-ttu-id="a3f63-124">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a3f63-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a3f63-125">集合</span><span class="sxs-lookup"><span data-stu-id="a3f63-125">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [<span data-ttu-id="a3f63-126">数组集合类型</span><span class="sxs-lookup"><span data-stu-id="a3f63-126">Array Collection Type</span></span>](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

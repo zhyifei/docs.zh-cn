@@ -1,44 +1,47 @@
 ---
-title: "数据类型和函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据类型和函数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 数据类型和函数
-下表列出的主题介绍了对公共语言运行库 \(CLR\) 的成员、构造和强制转换的 LINQ to SQL 支持。  受支持的成员和构造可以在 LINQ to SQL 查询中使用。  
+# <a name="data-types-and-functions"></a><span data-ttu-id="1dede-102">数据类型和函数</span><span class="sxs-lookup"><span data-stu-id="1dede-102">Data Types and Functions</span></span>
+<span data-ttu-id="1dede-103">下表列出的主题介绍了对公共语言运行库 (CLR) 的成员、构造和强制转换的 LINQ to SQL 支持。</span><span class="sxs-lookup"><span data-stu-id="1dede-103">The topics listed in the following table describe LINQ to SQL support for members, constructs, and casts of the common language runtime (CLR).</span></span> <span data-ttu-id="1dede-104">受支持的成员和构造可以在 LINQ to SQL 查询中使用。</span><span class="sxs-lookup"><span data-stu-id="1dede-104">Supported members and constructs are available to use in your LINQ to SQL queries.</span></span>  
   
- 表中不受支持的项表示 LINQ to SQL 无法转换 CLR 成员、构造或强制转换以供在 SQL Server 上执行。  您可能仍可以在您的代码中使用这些项，但是在查询转换为 Transact\-SQL 之前或结果已经从数据库中检索后必须对其进行计算。  
+ <span data-ttu-id="1dede-105">表中不受支持的项表示 LINQ to SQL 无法转换 CLR 成员、构造或强制转换以供在 SQL Server 上执行。</span><span class="sxs-lookup"><span data-stu-id="1dede-105">An unsupported item in the table means that LINQ to SQL cannot translate the CLR member, construct, or cast for execution on the SQL Server.</span></span> <span data-ttu-id="1dede-106">您可能仍可以在您的代码中使用这些项，但是在查询转换为 Transact-SQL 之前或结果已经从数据库中检索后必须对其进行计算。</span><span class="sxs-lookup"><span data-stu-id="1dede-106">You may still be able to use them in your code, but they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-|主题|描述|  
-|--------|--------|  
-|[SQL\-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|提供 CLR 类型和 SQL Server 类型之间的详细映射矩阵。|  
-|[基本数据类型](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[Boolean 数据类型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[Null 语义](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|提供指向讨论 null 和可以为 null 问题的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主题的链接。|  
-|[数值运算符和比较运算符](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[顺序运算符](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[System.Convert 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|介绍对 <xref:System.DateTime?displayProperty=fullName> 结构的成员的 LINQ to SQL 支持。|  
-|[System.DateTimeOffset 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|介绍对 <xref:System.DateTimeOffset?displayProperty=fullName> 结构的成员的 LINQ to SQL 支持。|  
-|[System.Math 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[System.Object 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[System.String 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
-|[System.TimeSpan 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|介绍对 <xref:System.TimeSpan?displayProperty=fullName> 结构的成员的 LINQ to SQL 支持。|  
-|[不支持的功能](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持的功能。|  
+|<span data-ttu-id="1dede-107">主题</span><span class="sxs-lookup"><span data-stu-id="1dede-107">Topic</span></span>|<span data-ttu-id="1dede-108">描述</span><span class="sxs-lookup"><span data-stu-id="1dede-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="1dede-109">SQL CLR 类型映射</span><span class="sxs-lookup"><span data-stu-id="1dede-109">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|<span data-ttu-id="1dede-110">提供 CLR 类型和 SQL Server 类型之间的详细映射矩阵。</span><span class="sxs-lookup"><span data-stu-id="1dede-110">Provides a detailed matrix of mappings between CLR types and SQL Server types.</span></span>|  
+|[<span data-ttu-id="1dede-111">基本数据类型</span><span class="sxs-lookup"><span data-stu-id="1dede-111">Basic Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|<span data-ttu-id="1dede-112">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-112">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-113">Boolean 数据类型</span><span class="sxs-lookup"><span data-stu-id="1dede-113">Boolean Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|<span data-ttu-id="1dede-114">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-114">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-115">Null 语义</span><span class="sxs-lookup"><span data-stu-id="1dede-115">Null Semantics</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|<span data-ttu-id="1dede-116">提供指向讨论 null 和可以为 null 问题的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主题的链接。</span><span class="sxs-lookup"><span data-stu-id="1dede-116">Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] topics that discuss null and nullable issues.</span></span>|  
+|[<span data-ttu-id="1dede-117">数值和比较运算符</span><span class="sxs-lookup"><span data-stu-id="1dede-117">Numeric and Comparison Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|<span data-ttu-id="1dede-118">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-118">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-119">序列运算符</span><span class="sxs-lookup"><span data-stu-id="1dede-119">Sequence Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|<span data-ttu-id="1dede-120">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-120">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-121">System.Convert 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-121">System.Convert Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|<span data-ttu-id="1dede-122">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-122">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-123">System.DateTime 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-123">System.DateTime Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<span data-ttu-id="1dede-124">介绍对 <xref:System.DateTime?displayProperty=nameWithType> 结构的成员的 LINQ to SQL 支持。</span><span class="sxs-lookup"><span data-stu-id="1dede-124">Describes LINQ to SQL support for members of the <xref:System.DateTime?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="1dede-125">System.DateTimeOffset 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-125">System.DateTimeOffset Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<span data-ttu-id="1dede-126">介绍对 <xref:System.DateTimeOffset?displayProperty=nameWithType> 结构的成员的 LINQ to SQL 支持。</span><span class="sxs-lookup"><span data-stu-id="1dede-126">Describes LINQ to SQL support for members of the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="1dede-127">System.Math 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-127">System.Math Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|<span data-ttu-id="1dede-128">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-128">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-129">System.Object 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-129">System.Object Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|<span data-ttu-id="1dede-130">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-130">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-131">System.String 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-131">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="1dede-132">总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。</span><span class="sxs-lookup"><span data-stu-id="1dede-132">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="1dede-133">System.TimeSpan 方法</span><span class="sxs-lookup"><span data-stu-id="1dede-133">System.TimeSpan Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<span data-ttu-id="1dede-134">介绍对 <xref:System.TimeSpan?displayProperty=nameWithType> 结构的成员的 LINQ to SQL 支持。</span><span class="sxs-lookup"><span data-stu-id="1dede-134">Describes LINQ to SQL support for members of the <xref:System.TimeSpan?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="1dede-135">不支持的功能</span><span class="sxs-lookup"><span data-stu-id="1dede-135">Unsupported Functionality</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|<span data-ttu-id="1dede-136">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持的功能。</span><span class="sxs-lookup"><span data-stu-id="1dede-136">Describes functionality that is not supported in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
   
-## 请参阅  
- [SQL\-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)   
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [.NET Framework Class Library in Visual Studio](http://msdn.microsoft.com/zh-cn/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a><span data-ttu-id="1dede-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1dede-137">See Also</span></span>  
+ [<span data-ttu-id="1dede-138">SQL CLR 类型不匹配</span><span class="sxs-lookup"><span data-stu-id="1dede-138">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [<span data-ttu-id="1dede-139">参考</span><span class="sxs-lookup"><span data-stu-id="1dede-139">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="1dede-140">Visual Studio 中的.NET framework 类库</span><span class="sxs-lookup"><span data-stu-id="1dede-140">.NET Framework Class Library in Visual Studio</span></span>](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)

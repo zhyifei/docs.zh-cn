@@ -1,62 +1,41 @@
 ---
 title: "#<a name=\"pragma-warning-c-reference\"></a>杂注警告（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#pragma warning'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#pragma warning [C#]'
+f1_keywords: '#pragma warning'
+helpviewer_keywords: '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5330b448dc2b328992b2d29699557d20df56dee4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c11acfd096d36c96ceb9e9c5c0d16e47e58fa1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
-`#pragma warning` 可以启用或禁用特定警告。  
+# <a name="pragma-warning-c-reference"></a><span data-ttu-id="947ee-102">#pragma warning（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="947ee-102">#pragma warning (C# Reference)</span></span>
+<span data-ttu-id="947ee-103">`#pragma warning` 可以启用或禁用特定警告。</span><span class="sxs-lookup"><span data-stu-id="947ee-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="947ee-104">语法</span><span class="sxs-lookup"><span data-stu-id="947ee-104">Syntax</span></span>  
   
 ```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a><span data-ttu-id="947ee-105">参数</span><span class="sxs-lookup"><span data-stu-id="947ee-105">Parameters</span></span>  
  `warning-list`  
- 以逗号分隔的警告编号的列表。 “CS”前缀是可选的。  
+ <span data-ttu-id="947ee-106">以逗号分隔的警告编号的列表。</span><span class="sxs-lookup"><span data-stu-id="947ee-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="947ee-107">“CS”前缀是可选的。</span><span class="sxs-lookup"><span data-stu-id="947ee-107">The "CS" prefix is optional.</span></span>  
   
- 未指定警告编号时，`disable` 会禁用所有警告，`restore` 会启用所有警告。  
+ <span data-ttu-id="947ee-108">未指定警告编号时，`disable` 会禁用所有警告，`restore` 会启用所有警告。</span><span class="sxs-lookup"><span data-stu-id="947ee-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
   
 > [!NOTE]
->  若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”窗口中查找警告编号。  
+>  <span data-ttu-id="947ee-109">若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”窗口中查找警告编号。</span><span class="sxs-lookup"><span data-stu-id="947ee-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="947ee-110">示例</span><span class="sxs-lookup"><span data-stu-id="947ee-110">Example</span></span>  
   
 ```csharp
 // pragma_warning.cs  
@@ -82,9 +61,8 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="947ee-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="947ee-111">See Also</span></span>  
+ [<span data-ttu-id="947ee-112">C# 参考</span><span class="sxs-lookup"><span data-stu-id="947ee-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="947ee-113">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="947ee-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="947ee-114">C# 预处理器指令</span><span class="sxs-lookup"><span data-stu-id="947ee-114">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)  
+ [<span data-ttu-id="947ee-115">C# 编译器错误</span><span class="sxs-lookup"><span data-stu-id="947ee-115">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)

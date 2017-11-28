@@ -1,46 +1,49 @@
 ---
-title: "如何：使用 Svcutil.exe 验证已编译的服务代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用 Svcutil.exe 验证已编译的服务代码"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8ea14631208f755b45a27ff323b7d875c1ae5cd8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：使用 Svcutil.exe 验证已编译的服务代码
-可以使用 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 在不承载服务的情况下检测服务实现和配置中的错误。  
+# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a><span data-ttu-id="4144a-102">如何：使用 Svcutil.exe 验证已编译的服务代码</span><span class="sxs-lookup"><span data-stu-id="4144a-102">How to: Use Svcutil.exe to Validate Compiled Service Code</span></span>
+<span data-ttu-id="4144a-103">你可以使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)不承载服务的情况下检测服务实现和配置中的错误。</span><span class="sxs-lookup"><span data-stu-id="4144a-103">You can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to detect errors in service implementations and configurations without hosting the service.</span></span>  
   
-### 验证服务  
+### <a name="to-validate-a-service"></a><span data-ttu-id="4144a-104">验证服务</span><span class="sxs-lookup"><span data-stu-id="4144a-104">To validate a service</span></span>  
   
-1.  将服务编译为可执行文件以及一个或多个相关程序集。  
+1.  <span data-ttu-id="4144a-105">将服务编译为可执行文件以及一个或多个相关程序集。</span><span class="sxs-lookup"><span data-stu-id="4144a-105">Compile your service into an executable file and one or more dependent assemblies.</span></span>  
   
-2.  打开一个 SDK 命令提示  
+2.  <span data-ttu-id="4144a-106">打开一个 SDK 命令提示</span><span class="sxs-lookup"><span data-stu-id="4144a-106">Open an SDK command prompt</span></span>  
   
-3.  在命令提示符处，使用下面的格式启动 Svcutil.exe 工具。  有关各种参数的更多信息，请参见 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 主题的“服务验证”一节。  
+3.  <span data-ttu-id="4144a-107">在命令提示符处，使用下面的格式启动 Svcutil.exe 工具。</span><span class="sxs-lookup"><span data-stu-id="4144a-107">At the command prompt, launch the Svcutil.exe tool using the following format.</span></span> <span data-ttu-id="4144a-108">有关的各种参数的详细信息，请参阅的服务 Validationsection [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)主题。</span><span class="sxs-lookup"><span data-stu-id="4144a-108">For more information on the various parameters, see the Service Validationsection of the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) topic.</span></span>  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  
     ```  
   
-     必须使用 `/serviceName` 选项来指示要验证的服务的配置名称。  
+     <span data-ttu-id="4144a-109">必须使用 `/serviceName` 选项来指示要验证的服务的配置名称。</span><span class="sxs-lookup"><span data-stu-id="4144a-109">You must use the `/serviceName` option to indicate the configuration name of the service you want to validate.</span></span>  
   
-     `assemblyPath` 参数指定一个路径，该路径指向包含要验证的服务类型的服务以及一个或多个程序集的可执行文件。  可执行程序集必须具有关联的配置文件，以提供服务配置。  可以使用标准命令行通配符来提供多个程序集。  
+     <span data-ttu-id="4144a-110">`assemblyPath` 参数指定一个路径，该路径指向包含要验证的服务类型的服务以及一个或多个程序集的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="4144a-110">The `assemblyPath` argument specifies the path to the executable file for the service and one or more assemblies that contain the service types to be validated.</span></span> <span data-ttu-id="4144a-111">可执行程序集必须具有关联的配置文件，以提供服务配置。</span><span class="sxs-lookup"><span data-stu-id="4144a-111">The executable assembly must have an associated configuration file to provide the service configuration.</span></span> <span data-ttu-id="4144a-112">可以使用标准命令行通配符来提供多个程序集。</span><span class="sxs-lookup"><span data-stu-id="4144a-112">You can use standard command-line wildcards to provide multiple assemblies.</span></span>  
   
-## 示例  
- 下面的命令验证在 myServiceHost.exe 可执行文件中实现的服务 myServiceName。  该服务的配置文件 \(myServiceHost.exe.config\) 自动进行加载。  
+## <a name="example"></a><span data-ttu-id="4144a-113">示例</span><span class="sxs-lookup"><span data-stu-id="4144a-113">Example</span></span>  
+ <span data-ttu-id="4144a-114">下面的命令验证在 myServiceHost.exe 可执行文件中实现的服务 myServiceName。</span><span class="sxs-lookup"><span data-stu-id="4144a-114">The following command the service myServiceName implemented in the myServiceHost.exe executable file.</span></span>  <span data-ttu-id="4144a-115">该服务的配置文件 (myServiceHost.exe.config) 自动进行加载。</span><span class="sxs-lookup"><span data-stu-id="4144a-115">The configuration file for the service (myServiceHost.exe.config) is automatically loaded.</span></span>  
   
 ```  
 svcutil /validate /serviceName:myServiceName myServiceHost.exe  
 ```  
   
-## 请参阅  
- [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="4144a-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4144a-116">See Also</span></span>  
+ [<span data-ttu-id="4144a-117">ServiceModel 元数据实用工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="4144a-117">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

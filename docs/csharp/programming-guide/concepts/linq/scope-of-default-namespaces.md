@@ -1,44 +1,35 @@
 ---
 title: "C#1 中默认命名空间的范围"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 95a31f4ffa1b27a8670d9dc979bdceb7f2b8dfdd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f1c8d8106f7e3e01bb546ce24dd4153b90a0142d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C# 中默认命名空间的范围
-XML 树中表示的默认命名空间不在查询范围内。 如果您的 XML 在默认命名空间内，仍须声明一个 <xref:System.Xml.Linq.XNamespace> 变量，并将该变量与本地名称组合在一起，生成一个限定名，在查询中使用。  
+# <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="bac5b-102">C# 中默认命名空间的范围</span><span class="sxs-lookup"><span data-stu-id="bac5b-102">Scope of Default Namespaces in C#</span></span>
+<span data-ttu-id="bac5b-103">XML 树中表示的默认命名空间不在查询范围内。</span><span class="sxs-lookup"><span data-stu-id="bac5b-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="bac5b-104">如果您的 XML 在默认命名空间内，仍须声明一个 <xref:System.Xml.Linq.XNamespace> 变量，并将该变量与本地名称组合在一起，生成一个限定名，在查询中使用。</span><span class="sxs-lookup"><span data-stu-id="bac5b-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
   
- 查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。  
+ <span data-ttu-id="bac5b-105">查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。</span><span class="sxs-lookup"><span data-stu-id="bac5b-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- 本主题的第一个示例集演示一种加载但是按不正确方式查询默认命名空间中的 XML 的典型方式。  
+ <span data-ttu-id="bac5b-106">本主题的第一个示例集演示一种加载但是按不正确方式查询默认命名空间中的 XML 的典型方式。</span><span class="sxs-lookup"><span data-stu-id="bac5b-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
   
- 第二个示例集演示必需的更正，以便可以查询命名空间中的 XML。  
+ <span data-ttu-id="bac5b-107">第二个示例集演示必需的更正，以便可以查询命名空间中的 XML。</span><span class="sxs-lookup"><span data-stu-id="bac5b-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
-## <a name="example"></a>示例  
- 此示例演示如何在命名空间中创建 XML 和一个返回空结果集的查询。  
+## <a name="example"></a><span data-ttu-id="bac5b-108">示例</span><span class="sxs-lookup"><span data-stu-id="bac5b-108">Example</span></span>  
+ <span data-ttu-id="bac5b-109">此示例演示如何在命名空间中创建 XML 和一个返回空结果集的查询。</span><span class="sxs-lookup"><span data-stu-id="bac5b-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="bac5b-110">代码</span><span class="sxs-lookup"><span data-stu-id="bac5b-110">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -59,20 +50,20 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a>注释  
- 此示例产生下面的结果：  
+### <a name="comments"></a><span data-ttu-id="bac5b-111">注释</span><span class="sxs-lookup"><span data-stu-id="bac5b-111">Comments</span></span>  
+ <span data-ttu-id="bac5b-112">此示例产生下面的结果：</span><span class="sxs-lookup"><span data-stu-id="bac5b-112">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a>示例  
- 本示例演示如何在命名空间中创建 XML 和一个正确编码的查询。  
+## <a name="example"></a><span data-ttu-id="bac5b-113">示例</span><span class="sxs-lookup"><span data-stu-id="bac5b-113">Example</span></span>  
+ <span data-ttu-id="bac5b-114">本示例演示如何在命名空间中创建 XML 和一个正确编码的查询。</span><span class="sxs-lookup"><span data-stu-id="bac5b-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- 与上述不正确编码的示例相比，使用 C# 时的正确方法是声明和初始化一个 <xref:System.Xml.Linq.XNamespace> 对象，并在指定 <xref:System.Xml.Linq.XName> 对象时使用它。 在这种情况下，<xref:System.Xml.Linq.XElement.Elements%2A> 方法的参数是一个 <xref:System.Xml.Linq.XName> 对象。  
+ <span data-ttu-id="bac5b-115">与上述不正确编码的示例相比，使用 C# 时的正确方法是声明和初始化一个 <xref:System.Xml.Linq.XNamespace> 对象，并在指定 <xref:System.Xml.Linq.XName> 对象时使用它。</span><span class="sxs-lookup"><span data-stu-id="bac5b-115">In contrast to the incorrectly coded example above, the correct approach when using C# is to declare and initialize an <xref:System.Xml.Linq.XNamespace> object, and to use it when specifying <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="bac5b-116">在这种情况下，<xref:System.Xml.Linq.XElement.Elements%2A> 方法的参数是一个 <xref:System.Xml.Linq.XName> 对象。</span><span class="sxs-lookup"><span data-stu-id="bac5b-116">In this case, the argument to the <xref:System.Xml.Linq.XElement.Elements%2A> method is an <xref:System.Xml.Linq.XName> object.</span></span>  
   
-### <a name="code"></a>代码  
+### <a name="code"></a><span data-ttu-id="bac5b-117">代码</span><span class="sxs-lookup"><span data-stu-id="bac5b-117">Code</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -94,8 +85,8 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a>注释  
- 此示例产生下面的结果：  
+### <a name="comments"></a><span data-ttu-id="bac5b-118">注释</span><span class="sxs-lookup"><span data-stu-id="bac5b-118">Comments</span></span>  
+ <span data-ttu-id="bac5b-119">此示例产生下面的结果：</span><span class="sxs-lookup"><span data-stu-id="bac5b-119">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
@@ -105,6 +96,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
-
+## <a name="see-also"></a><span data-ttu-id="bac5b-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="bac5b-120">See Also</span></span>  
+ [<span data-ttu-id="bac5b-121">使用 XML 命名空间 (C#)</span><span class="sxs-lookup"><span data-stu-id="bac5b-121">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

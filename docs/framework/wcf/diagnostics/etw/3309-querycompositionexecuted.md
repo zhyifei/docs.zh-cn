@@ -1,35 +1,38 @@
 ---
-title: "3309 - QueryCompositionExecuted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3309 - QueryCompositionExecuted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7ae2267-b478-4115-8317-a89ce4ced65d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b5355dc938021d4de63e5c9de6e441a3ef392315
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 3309 - QueryCompositionExecuted
-## 属性  
+# <a name="3309---querycompositionexecuted"></a><span data-ttu-id="7cec5-102">3309 - QueryCompositionExecuted</span><span class="sxs-lookup"><span data-stu-id="7cec5-102">3309 - QueryCompositionExecuted</span></span>
+## <a name="properties"></a><span data-ttu-id="7cec5-103">属性</span><span class="sxs-lookup"><span data-stu-id="7cec5-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3309|  
-|关键字|ServiceModel|  
-|级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="7cec5-104">ID</span><span class="sxs-lookup"><span data-stu-id="7cec5-104">ID</span></span>|<span data-ttu-id="7cec5-105">3309</span><span class="sxs-lookup"><span data-stu-id="7cec5-105">3309</span></span>|  
+|<span data-ttu-id="7cec5-106">关键字</span><span class="sxs-lookup"><span data-stu-id="7cec5-106">Keywords</span></span>|<span data-ttu-id="7cec5-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7cec5-107">ServiceModel</span></span>|  
+|<span data-ttu-id="7cec5-108">级别</span><span class="sxs-lookup"><span data-stu-id="7cec5-108">Level</span></span>|<span data-ttu-id="7cec5-109">信息</span><span class="sxs-lookup"><span data-stu-id="7cec5-109">Information</span></span>|  
+|<span data-ttu-id="7cec5-110">通道</span><span class="sxs-lookup"><span data-stu-id="7cec5-110">Channel</span></span>|<span data-ttu-id="7cec5-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="7cec5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 当执行查询组合时，发出此事件。  
+## <a name="description"></a><span data-ttu-id="7cec5-112">描述</span><span class="sxs-lookup"><span data-stu-id="7cec5-112">Description</span></span>  
+ <span data-ttu-id="7cec5-113">当执行查询组合时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="7cec5-113">This event is emitted when the query composition is executed.</span></span>  
   
-## 消息  
- 已对请求 Uri“%2”执行了使用“%1”的查询组合。  
+## <a name="message"></a><span data-ttu-id="7cec5-114">消息</span><span class="sxs-lookup"><span data-stu-id="7cec5-114">Message</span></span>  
+ <span data-ttu-id="7cec5-115">已对请求 Uri“%2”执行了使用“%1”的查询组合。</span><span class="sxs-lookup"><span data-stu-id="7cec5-115">Query composition using '%1' was executed on the Request Uri: '%2'.</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="7cec5-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="7cec5-116">Details</span></span>

@@ -1,42 +1,39 @@
 ---
-title: "如何：定义连接字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: "如何：定义连接字符串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 757b70d99a7f2b499d4ad5aab2be2bb61b28af0d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：定义连接字符串
-本主题介绍如何定义在连接到概念模型时使用的连接字符串。  本主题基于 [AdventureWorks 销售](http://msdn.microsoft.com/zh-cn/f16cd988-673f-4376-b034-129ca93c7832)概念模型。  AdventureWorks 销售模型将在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 文档的与任务相关的所有主题中使用。  本主题假定您已配置[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]且定义了 AdventureWorks 销售模型。  有关详细信息，请参阅[How to: Manually Define the Model and Mapping Files](http://msdn.microsoft.com/zh-cn/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。  本主题中的过程还包括在[How to: Manually Configure an Entity Framework Project](http://msdn.microsoft.com/zh-cn/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)中。  
+# <a name="how-to-define-the-connection-string"></a><span data-ttu-id="17352-102">如何：定义连接字符串</span><span class="sxs-lookup"><span data-stu-id="17352-102">How to: Define the Connection String</span></span>
+<span data-ttu-id="17352-103">本主题介绍如何定义在连接到概念模型时使用的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="17352-103">This topic shows how to define the connection string that is used when connecting to a conceptual model.</span></span> <span data-ttu-id="17352-104">本主题基于[AdventureWorks 销售](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)概念模型。</span><span class="sxs-lookup"><span data-stu-id="17352-104">This topic is based on the [AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) conceptual model.</span></span> <span data-ttu-id="17352-105">AdventureWorks 销售模型将在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 文档的与任务相关的所有主题中使用。</span><span class="sxs-lookup"><span data-stu-id="17352-105">The AdventureWorks Sales Model is used throughout the task-related topics in the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation.</span></span> <span data-ttu-id="17352-106">本主题假定你已配置[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和定义 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="17352-106">This topic assumes that you have already configured the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] and defined the AdventureWorks Sales Model.</span></span> <span data-ttu-id="17352-107">有关详细信息，请参阅[如何： 手动定义模型和映射文件](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。</span><span class="sxs-lookup"><span data-stu-id="17352-107">For more information, see [How to: Manually Define the Model and Mapping Files](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).</span></span> <span data-ttu-id="17352-108">本主题中的过程也包括在[如何： 手动配置实体框架项目](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。</span><span class="sxs-lookup"><span data-stu-id="17352-108">The procedures in this topic are also included in [How to: Manually Configure an Entity Framework Project](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).</span></span>  
   
 > [!NOTE]
->  如果在 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 项目中使用[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]向导，则该向导将自动生成 .edmx 文件并将该项目配置为使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。  有关详细信息，请参阅[How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/zh-cn/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
+>  <span data-ttu-id="17352-109">如果在 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 项目中使用[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]向导，则该向导将自动生成 .edmx 文件并将该项目配置为使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="17352-109">If you use the [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Wizard in a [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] project, it automatically generates an .edmx file and configures the project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="17352-110">有关详细信息，请参阅[如何： 使用实体数据模型向导](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)</span><span class="sxs-lookup"><span data-stu-id="17352-110">For more information, see [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)</span></span>  
   
-### 定义实体框架连接字符串  
+### <a name="to-define-the-entity-framework-connection-string"></a><span data-ttu-id="17352-111">定义实体框架连接字符串</span><span class="sxs-lookup"><span data-stu-id="17352-111">To define the Entity Framework connection string</span></span>  
   
--   打开项目的应用程序配置文件 \(app.config\) 并添加以下连接字符串：  
+-   <span data-ttu-id="17352-112">打开项目的应用程序配置文件 (app.config) 并添加以下连接字符串：</span><span class="sxs-lookup"><span data-stu-id="17352-112">Open the project's application configuration file (app.config) and add the following connection string:</span></span>  
   
   
   
-     如果项目没有应用程序配置文件，可以通过从**“项目”**菜单中选择**“添加新项”**，选择**“常规”**类别，接着选择**“应用程序配置文件”**，然后单击**“添加”**，以添加应用程序配置文件。  
+     <span data-ttu-id="17352-113">如果你的项目不具有应用程序配置文件，则可以添加一个，方法是选择**添加新项**从**项目**菜单上，选择**常规**类别中，选择**应用程序配置文件**，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="17352-113">If your project does not have an application configuration file, you can add one by selecting **Add New Item** from the **Project** menu, selecting the **General** category, selecting **Application Configuration File**, and then clicking **Add**.</span></span>  
   
-## 请参阅  
- [Quickstart](http://msdn.microsoft.com/zh-cn/0bc534be-789f-4819-b9f6-76e51d961675)   
- [How to: Create a New .edmx File](http://msdn.microsoft.com/zh-cn/beb8189e-e51c-4051-839c-9902c224abf2)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/zh-cn/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="17352-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17352-114">See Also</span></span>  
+ [<span data-ttu-id="17352-115">快速入门</span><span class="sxs-lookup"><span data-stu-id="17352-115">Quickstart</span></span>](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675)  
+ [<span data-ttu-id="17352-116">如何： 创建新的.edmx 文件</span><span class="sxs-lookup"><span data-stu-id="17352-116">How to: Create a New .edmx File</span></span>](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)  
+ [<span data-ttu-id="17352-117">ADO.NET 实体数据模型工具</span><span class="sxs-lookup"><span data-stu-id="17352-117">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

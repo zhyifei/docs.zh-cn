@@ -1,85 +1,76 @@
 ---
 title: "演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
-如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a><span data-ttu-id="7cf02-102">演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)</span><span class="sxs-lookup"><span data-stu-id="7cf02-102">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (C#)</span></span>
+<span data-ttu-id="7cf02-103">如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。</span><span class="sxs-lookup"><span data-stu-id="7cf02-103">If you embed type information from a strong-named managed assembly, you can loosely couple types in an application to achieve version independence.</span></span> <span data-ttu-id="7cf02-104">也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-104">That is, your program can be written to use types from multiple versions of a managed library without having to be recompiled for each version.</span></span>  
   
- 类型嵌入经常与 COM 互操作一起使用，例如使用 Microsoft Office 中的自动化对象的应用程序。 通过嵌入类型信息，程序的同一个版本可以处理不同计算机上的不同 Microsoft Office 版本。 但也可以在完全托管的解决方案中使用类型嵌入。  
+ <span data-ttu-id="7cf02-105">类型嵌入经常与 COM 互操作一起使用，例如使用 Microsoft Office 中的自动化对象的应用程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-105">Type embedding is frequently used with COM interop, such as an application that uses automation objects from Microsoft Office.</span></span> <span data-ttu-id="7cf02-106">通过嵌入类型信息，程序的同一个版本可以处理不同计算机上的不同 Microsoft Office 版本。</span><span class="sxs-lookup"><span data-stu-id="7cf02-106">Embedding type information enables the same build of a program to work with different versions of Microsoft Office on different computers.</span></span> <span data-ttu-id="7cf02-107">但也可以在完全托管的解决方案中使用类型嵌入。</span><span class="sxs-lookup"><span data-stu-id="7cf02-107">However, you can also use type embedding with a fully managed solution.</span></span>  
   
- 可从具有以下特征的程序集嵌入类型信息：  
+ <span data-ttu-id="7cf02-108">可从具有以下特征的程序集嵌入类型信息：</span><span class="sxs-lookup"><span data-stu-id="7cf02-108">Type information can be embedded from an assembly that has the following characteristics:</span></span>  
   
--   程序集至少公开一个公共接口。  
+-   <span data-ttu-id="7cf02-109">程序集至少公开一个公共接口。</span><span class="sxs-lookup"><span data-stu-id="7cf02-109">The assembly exposes at least one public interface.</span></span>  
   
--   嵌入的接口使用 `ComImport` 特性和 `Guid` 特性（及一个唯一 GUID）进行批注。  
+-   <span data-ttu-id="7cf02-110">嵌入的接口使用 `ComImport` 特性和 `Guid` 特性（及一个唯一 GUID）进行批注。</span><span class="sxs-lookup"><span data-stu-id="7cf02-110">The embedded interfaces are annotated with a `ComImport` attribute and a `Guid` attribute (and a unique GUID).</span></span>  
   
--   程序集使用 `ImportedFromTypeLib` 特性或 `PrimaryInteropAssembly` 特性和程序集级别的 `Guid` 特性进行批注。 （默认情况下，Visual C# 项目模板包含程序集级别的 `Guid` 特性。）  
+-   <span data-ttu-id="7cf02-111">程序集使用 `ImportedFromTypeLib` 特性或 `PrimaryInteropAssembly` 特性和程序集级别的 `Guid` 特性进行批注。</span><span class="sxs-lookup"><span data-stu-id="7cf02-111">The assembly is annotated with the `ImportedFromTypeLib` attribute or the `PrimaryInteropAssembly` attribute, and an assembly-level `Guid` attribute.</span></span> <span data-ttu-id="7cf02-112">（默认情况下，Visual C# 项目模板包含程序集级别的 `Guid` 特性。）</span><span class="sxs-lookup"><span data-stu-id="7cf02-112">(By default, Visual C# project templates include an assembly-level `Guid` attribute.)</span></span>  
   
- 指定可嵌入的公共接口后，可以创建实现这些接口的运行时类。 然后，客户端程序可以通过引用包含这些公共接口的程序集，并将该引用的 `Embed Interop Types` 属性设置为 `True`，在设计时嵌入这些接口的类型信息。 这等效于使用命令行编译器和通过 `/link` 编译器选项引用该程序集。 然后，客户端程序可以加载类型化为这些接口的运行时对象的实例。 如果创建新版本的强命名运行时程序集，则不必使用更新的运行时程序集来重新编译客户端程序。 客户端程序将使用公共接口的嵌入类型信息，从而继续使用任何可用的运行时程序集版本。  
+ <span data-ttu-id="7cf02-113">指定可嵌入的公共接口后，可以创建实现这些接口的运行时类。</span><span class="sxs-lookup"><span data-stu-id="7cf02-113">After you have specified the public interfaces that can be embedded, you can create runtime classes that implement those interfaces.</span></span> <span data-ttu-id="7cf02-114">然后，客户端程序可以通过引用包含这些公共接口的程序集，并将该引用的 `Embed Interop Types` 属性设置为 `True`，在设计时嵌入这些接口的类型信息。</span><span class="sxs-lookup"><span data-stu-id="7cf02-114">A client program can then embed the type information for those interfaces at design time by referencing the assembly that contains the public interfaces and setting the `Embed Interop Types` property of the reference to `True`.</span></span> <span data-ttu-id="7cf02-115">这等效于使用命令行编译器和通过 `/link` 编译器选项引用该程序集。</span><span class="sxs-lookup"><span data-stu-id="7cf02-115">This is equivalent to using the command line compiler and referencing the assembly by using the `/link` compiler option.</span></span> <span data-ttu-id="7cf02-116">然后，客户端程序可以加载类型化为这些接口的运行时对象的实例。</span><span class="sxs-lookup"><span data-stu-id="7cf02-116">The client program can then load instances of your runtime objects typed as those interfaces.</span></span> <span data-ttu-id="7cf02-117">如果创建新版本的强命名运行时程序集，则不必使用更新的运行时程序集来重新编译客户端程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-117">If you create a new version of your strong-named runtime assembly, the client program does not have to be recompiled with the updated runtime assembly.</span></span> <span data-ttu-id="7cf02-118">客户端程序将使用公共接口的嵌入类型信息，从而继续使用任何可用的运行时程序集版本。</span><span class="sxs-lookup"><span data-stu-id="7cf02-118">Instead, the client program continues to use whichever version of the runtime assembly is available to it, using the embedded type information for the public interfaces.</span></span>  
   
- 由于类型嵌入的主要功能是提供对 COM 互操作程序集中类型信息的嵌入的支持，因此以下限制在将类型信息嵌入完全托管解决方案中时适用：  
+ <span data-ttu-id="7cf02-119">由于类型嵌入的主要功能是提供对 COM 互操作程序集中类型信息的嵌入的支持，因此以下限制在将类型信息嵌入完全托管解决方案中时适用：</span><span class="sxs-lookup"><span data-stu-id="7cf02-119">Because the primary function of type embedding is to support embedding of type information from COM interop assemblies, the following limitations apply when you embed type information in a fully managed solution:</span></span>  
   
--   仅嵌入特定于 COM 互操作的特性；忽略其他特性。  
+-   <span data-ttu-id="7cf02-120">仅嵌入特定于 COM 互操作的特性；忽略其他特性。</span><span class="sxs-lookup"><span data-stu-id="7cf02-120">Only attributes specific to COM interop are embedded; other attributes are ignored.</span></span>  
   
--   如果一个类型使用泛型参数且泛型参数的类型是嵌入类型，则不能跨程序集边界使用该类型。 跨程序集边界的示例包括从另一个程序集调用方法或从另一个程序集中定义的类型派生类型。  
+-   <span data-ttu-id="7cf02-121">如果一个类型使用泛型参数且泛型参数的类型是嵌入类型，则不能跨程序集边界使用该类型。</span><span class="sxs-lookup"><span data-stu-id="7cf02-121">If a type uses generic parameters and the type of the generic parameter is an embedded type, that type cannot be used across an assembly boundary.</span></span> <span data-ttu-id="7cf02-122">跨程序集边界的示例包括从另一个程序集调用方法或从另一个程序集中定义的类型派生类型。</span><span class="sxs-lookup"><span data-stu-id="7cf02-122">Examples of crossing an assembly boundary include calling a method from another assembly or a deriving a type from a type defined in another assembly.</span></span>  
   
--   不嵌入常量。  
+-   <span data-ttu-id="7cf02-123">不嵌入常量。</span><span class="sxs-lookup"><span data-stu-id="7cf02-123">Constants are not embedded.</span></span>  
   
--   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 类不支持将嵌入类型作为密钥。 可以实现自己的字典类型以支持将嵌入类型作为密钥。  
+-   <span data-ttu-id="7cf02-124"><xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类不支持将嵌入类型作为密钥。</span><span class="sxs-lookup"><span data-stu-id="7cf02-124">The <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> class does not support an embedded type as a key.</span></span> <span data-ttu-id="7cf02-125">可以实现自己的字典类型以支持将嵌入类型作为密钥。</span><span class="sxs-lookup"><span data-stu-id="7cf02-125">You can implement your own dictionary type to support an embedded type as a key.</span></span>  
   
- 本演练中将执行以下操作：  
+ <span data-ttu-id="7cf02-126">本演练中将执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="7cf02-126">In this walkthrough, you will do the following:</span></span>  
   
--   创建一个强命名程序集，它具有包含可嵌入类型信息的公共接口。  
+-   <span data-ttu-id="7cf02-127">创建一个强命名程序集，它具有包含可嵌入类型信息的公共接口。</span><span class="sxs-lookup"><span data-stu-id="7cf02-127">Create a strong-named assembly that has a public interface that contains type information that can be embedded.</span></span>  
   
--   创建一个实现该公共接口的强命名运行时程序集。  
+-   <span data-ttu-id="7cf02-128">创建一个实现该公共接口的强命名运行时程序集。</span><span class="sxs-lookup"><span data-stu-id="7cf02-128">Create a strong-named runtime assembly that implements that public interface.</span></span>  
   
--   创建一个客户端程序，该程序嵌入公共接口中的类型信息，并创建运行时程序集中的类的实例。  
+-   <span data-ttu-id="7cf02-129">创建一个客户端程序，该程序嵌入公共接口中的类型信息，并创建运行时程序集中的类的实例。</span><span class="sxs-lookup"><span data-stu-id="7cf02-129">Create a client program that embeds the type information from the public interface and creates an instance of the class from the runtime assembly.</span></span>  
   
--   修改并重新生成运行时程序集。  
+-   <span data-ttu-id="7cf02-130">修改并重新生成运行时程序集。</span><span class="sxs-lookup"><span data-stu-id="7cf02-130">Modify and rebuild the runtime assembly.</span></span>  
   
--   运行客户端程序，查看正在使用的运行时程序集新版本，而不必重新编译该客户端程序。  
+-   <span data-ttu-id="7cf02-131">运行客户端程序，查看正在使用的运行时程序集新版本，而不必重新编译该客户端程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-131">Run the client program to see that the new version of the runtime assembly is being used without having to recompile the client program.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-an-interface"></a>创建接口  
+## <a name="creating-an-interface"></a><span data-ttu-id="7cf02-132">创建接口</span><span class="sxs-lookup"><span data-stu-id="7cf02-132">Creating an Interface</span></span>  
   
-#### <a name="to-create-the-type-equivalence-interface-project"></a>创建类型等效性接口项目  
+#### <a name="to-create-the-type-equivalence-interface-project"></a><span data-ttu-id="7cf02-133">创建类型等效性接口项目</span><span class="sxs-lookup"><span data-stu-id="7cf02-133">To create the type equivalence interface project</span></span>  
   
-1.  在 Visual Studio 中的“文件”菜单上，选择“新建”，然后单击“项目”。  
+1.  <span data-ttu-id="7cf02-134">在 Visual Studio 中的“文件”菜单上，选择“新建”，然后单击“项目”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-134">In Visual Studio, on the **File** menu, choose **New** and then click **Project**.</span></span>  
   
-2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceInterface`，然后单击“确定”。 新项目创建完成。  
+2.  <span data-ttu-id="7cf02-135">在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-135">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="7cf02-136">在“模板”窗格中，选择“类库”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-136">Select **Class Library** in the **Templates** pane.</span></span> <span data-ttu-id="7cf02-137">在“名称”框中，键入 `TypeEquivalenceInterface`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-137">In the **Name** box, type `TypeEquivalenceInterface`, and then click **OK**.</span></span> <span data-ttu-id="7cf02-138">新项目创建完成。</span><span class="sxs-lookup"><span data-stu-id="7cf02-138">The new project is created.</span></span>  
   
-3.  在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。 将文件重命名为 `ISampleInterface.cs`，然后按 Enter。 重命名文件也会将类重命名为 `ISampleInterface`。 此类将表示类的公共接口。  
+3.  <span data-ttu-id="7cf02-139">在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-139">In **Solution Explorer**, right-click the Class1.cs file and click **Rename**.</span></span> <span data-ttu-id="7cf02-140">将文件重命名为 `ISampleInterface.cs`，然后按 Enter。</span><span class="sxs-lookup"><span data-stu-id="7cf02-140">Rename the file to `ISampleInterface.cs` and press ENTER.</span></span> <span data-ttu-id="7cf02-141">重命名文件也会将类重命名为 `ISampleInterface`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-141">Renaming the file will also rename the class to `ISampleInterface`.</span></span> <span data-ttu-id="7cf02-142">此类将表示类的公共接口。</span><span class="sxs-lookup"><span data-stu-id="7cf02-142">This class will represent the public interface for the class.</span></span>  
   
-4.  右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“生成”选项卡。 将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。 本演练的后续步骤中也将使用此位置。  
+4.  <span data-ttu-id="7cf02-143">右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-143">Right-click the TypeEquivalenceInterface project and click **Properties**.</span></span> <span data-ttu-id="7cf02-144">单击“生成”选项卡。将输出路径设置为开发计算机上的有效位置，例如 `C:\TypeEquivalenceSample`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-144">Click the the **Build** tab. Set the output path to a valid location on your development computer, such as `C:\TypeEquivalenceSample`.</span></span> <span data-ttu-id="7cf02-145">本演练的后续步骤中也将使用此位置。</span><span class="sxs-lookup"><span data-stu-id="7cf02-145">This location will also be used in a later step in this walkthrough.</span></span>  
   
-5.  在编辑项目属性期间，单击“签名”选项卡。 选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
+5.  <span data-ttu-id="7cf02-146">在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。</span><span class="sxs-lookup"><span data-stu-id="7cf02-146">While still editing the project properties, click the **Signing** tab. Select the **Sign the assembly** option.</span></span> <span data-ttu-id="7cf02-147">在“选择强名称密钥文件”列表中，单击“<新建…>”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-147">In the **Choose a strong name key file** list, click **<New...>**.</span></span> <span data-ttu-id="7cf02-148">在“密钥文件名”框中，键入 `key.snk`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-148">In the **Key file name** box, type `key.snk`.</span></span> <span data-ttu-id="7cf02-149">清除“使用密码保护密钥文件”复选框。</span><span class="sxs-lookup"><span data-stu-id="7cf02-149">Clear the **Protect my key file with a password** check box.</span></span> <span data-ttu-id="7cf02-150">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-150">Click **OK**.</span></span>  
   
-6.  打开 ISampleInterface.cs 文件。 将以下代码添加到 ISampleInterface 类文件，以创建 ISampleInterface 接口。  
+6.  <span data-ttu-id="7cf02-151">打开 ISampleInterface.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-151">Open the ISampleInterface.cs file.</span></span> <span data-ttu-id="7cf02-152">将以下代码添加到 ISampleInterface 类文件，以创建 ISampleInterface 接口。</span><span class="sxs-lookup"><span data-stu-id="7cf02-152">Add the following code to the ISampleInterface class file to create the ISampleInterface interface.</span></span>  
   
     ```csharp  
     using System;  
@@ -97,41 +88,41 @@ ms.lasthandoff: 07/28/2017
     }  
     ```  
   
-7.  在“工具”菜单上，单击“创建 Guid”。 在“创建 GUID”对话框中，单击“注册表格式”，然后单击“复制”。 单击“退出” 。  
+7.  <span data-ttu-id="7cf02-153">在“工具”菜单上，单击“创建 Guid”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-153">On the **Tools** menu, click **Create Guid**.</span></span> <span data-ttu-id="7cf02-154">在“创建 GUID”对话框中，单击“注册表格式”，然后单击“复制”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-154">In the **Create GUID** dialog box, click **Registry Format** and then click **Copy**.</span></span> <span data-ttu-id="7cf02-155">单击“退出” 。</span><span class="sxs-lookup"><span data-stu-id="7cf02-155">Click **Exit**.</span></span>  
   
-8.  在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”对话框复制的 GUID。 删除复制的 GUID 中的大括号 ({})。  
+8.  <span data-ttu-id="7cf02-156">在 `Guid` 特性中，删除示例 GUID ，并粘贴从“创建 GUID”对话框复制的 GUID。</span><span class="sxs-lookup"><span data-stu-id="7cf02-156">In the `Guid` attribute, delete the sample GUID and paste in the GUID that you copied from the **Create GUID** dialog box.</span></span> <span data-ttu-id="7cf02-157">删除复制的 GUID 中的大括号 ({})。</span><span class="sxs-lookup"><span data-stu-id="7cf02-157">Remove the braces ({}) from the copied GUID.</span></span>  
   
-9. 在“解决方案资源管理器”中，展开“属性”文件夹。 双击 AssemblyInfo.cs 文件。 向文件中添加以下特性。  
+9. <span data-ttu-id="7cf02-158">在“解决方案资源管理器”中，展开“属性”文件夹。</span><span class="sxs-lookup"><span data-stu-id="7cf02-158">In **Solution Explorer**, expand the **Properties** folder.</span></span> <span data-ttu-id="7cf02-159">双击 AssemblyInfo.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-159">Double-click the AssemblyInfo.cs file.</span></span> <span data-ttu-id="7cf02-160">向文件中添加以下特性。</span><span class="sxs-lookup"><span data-stu-id="7cf02-160">Add the following attribute to the file.</span></span>  
   
     ```csharp  
     [assembly: ImportedFromTypeLib("")]  
     ```  
   
-     保存该文件。  
+     <span data-ttu-id="7cf02-161">保存该文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-161">Save the file.</span></span>  
   
-10. 保存项目。  
+10. <span data-ttu-id="7cf02-162">保存项目。</span><span class="sxs-lookup"><span data-stu-id="7cf02-162">Save the project.</span></span>  
   
-11. 右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。  
+11. <span data-ttu-id="7cf02-163">右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-163">Right-click the TypeEquivalenceInterface project and click **Build**.</span></span> <span data-ttu-id="7cf02-164">此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。</span><span class="sxs-lookup"><span data-stu-id="7cf02-164">The class library .dll file is compiled and saved to the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-## <a name="creating-a-runtime-class"></a>创建运行时类  
+## <a name="creating-a-runtime-class"></a><span data-ttu-id="7cf02-165">创建运行时类</span><span class="sxs-lookup"><span data-stu-id="7cf02-165">Creating a Runtime Class</span></span>  
   
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>创建类型等效性运行时项目  
+#### <a name="to-create-the-type-equivalence-runtime-project"></a><span data-ttu-id="7cf02-166">创建类型等效性运行时项目</span><span class="sxs-lookup"><span data-stu-id="7cf02-166">To create the type equivalence runtime project</span></span>  
   
-1.  在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
+1.  <span data-ttu-id="7cf02-167">在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-167">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”。 新项目创建完成。  
+2.  <span data-ttu-id="7cf02-168">在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-168">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="7cf02-169">在“模板”窗格中，选择“类库”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-169">Select **Class Library** in the **Templates** pane.</span></span> <span data-ttu-id="7cf02-170">在“名称”框中，键入 `TypeEquivalenceRuntime`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-170">In the **Name** box, type `TypeEquivalenceRuntime`, and then click **OK**.</span></span> <span data-ttu-id="7cf02-171">新项目创建完成。</span><span class="sxs-lookup"><span data-stu-id="7cf02-171">The new project is created.</span></span>  
   
-3.  在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。 将文件重命名为 `SampleClass.cs`，然后按 Enter。 重命名文件也会将类重命名为 `SampleClass`。 此类将实现 `ISampleInterface` 接口。  
+3.  <span data-ttu-id="7cf02-172">在“解决方案资源管理器”中，右键单击 Class1.cs 文件，然后单击“重命名”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-172">In **Solution Explorer**, right-click the Class1.cs file and click **Rename**.</span></span> <span data-ttu-id="7cf02-173">将文件重命名为 `SampleClass.cs`，然后按 Enter。</span><span class="sxs-lookup"><span data-stu-id="7cf02-173">Rename the file to `SampleClass.cs` and press ENTER.</span></span> <span data-ttu-id="7cf02-174">重命名文件也会将类重命名为 `SampleClass`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-174">Renaming the file also renames the class to `SampleClass`.</span></span> <span data-ttu-id="7cf02-175">此类将实现 `ISampleInterface` 接口。</span><span class="sxs-lookup"><span data-stu-id="7cf02-175">This class will implement the `ISampleInterface` interface.</span></span>  
   
-4.  右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“生成”选项卡。 将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
+4.  <span data-ttu-id="7cf02-176">右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-176">Right-click the TypeEquivalenceRuntime project and click **Properties**.</span></span> <span data-ttu-id="7cf02-177">单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-177">Click the **Build** tab. Set the output path to the same location you used in the TypeEquivalenceInterface project, for example, `C:\TypeEquivalenceSample`.</span></span>  
   
-5.  在编辑项目属性期间，单击“签名”选项卡。 选择“为程序集签名”选项。 在“选择强名称密钥文件”列表中，单击“<新建…>”。 在“密钥文件名”框中，键入 `key.snk`。 清除“使用密码保护密钥文件”复选框。 单击“确定”。  
+5.  <span data-ttu-id="7cf02-178">在编辑项目属性期间，单击“签名”选项卡。选择“为程序集签名”选项。</span><span class="sxs-lookup"><span data-stu-id="7cf02-178">While still editing the project properties, click the **Signing** tab. Select the **Sign the assembly** option.</span></span> <span data-ttu-id="7cf02-179">在“选择强名称密钥文件”列表中，单击“<新建…>”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-179">In the **Choose a strong name key file** list, click **<New...>**.</span></span> <span data-ttu-id="7cf02-180">在“密钥文件名”框中，键入 `key.snk`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-180">In the **Key file name** box, type `key.snk`.</span></span> <span data-ttu-id="7cf02-181">清除“使用密码保护密钥文件”复选框。</span><span class="sxs-lookup"><span data-stu-id="7cf02-181">Clear the **Protect my key file with a password** check box.</span></span> <span data-ttu-id="7cf02-182">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-182">Click **OK**.</span></span>  
   
-6.  右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件并单击“确定”。  
+6.  <span data-ttu-id="7cf02-183">右键单击 TypeEquivalenceRuntime 项目，然后单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-183">Right-click the TypeEquivalenceRuntime project and click **Add Reference**.</span></span> <span data-ttu-id="7cf02-184">单击“浏览”选项卡，然后浏览到输出路径文件夹。</span><span class="sxs-lookup"><span data-stu-id="7cf02-184">Click the **Browse** tab and browse to the output path folder.</span></span> <span data-ttu-id="7cf02-185">选择 TypeEquivalenceInterface.dll 文件并单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-185">Select the TypeEquivalenceInterface.dll file and click **OK**.</span></span>  
   
-7.  在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“特定版本”属性设置为“False”。  
+7.  <span data-ttu-id="7cf02-186">在“解决方案资源管理器”中，展开“引用”文件夹。</span><span class="sxs-lookup"><span data-stu-id="7cf02-186">In **Solution Explorer**, expand the **References** folder.</span></span> <span data-ttu-id="7cf02-187">选择 TypeEquivalenceInterface 引用。</span><span class="sxs-lookup"><span data-stu-id="7cf02-187">Select the TypeEquivalenceInterface reference.</span></span> <span data-ttu-id="7cf02-188">在 TypeEquivalenceInterface 引用的“属性”窗口中，将“特定版本”属性设置为“False”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-188">In the Properties window for the TypeEquivalenceInterface reference, set the **Specific Version** property to **False**.</span></span>  
   
-8.  将以下代码添加到 SampleClass 类文件，以创建 SampleClass 类。  
+8.  <span data-ttu-id="7cf02-189">将以下代码添加到 SampleClass 类文件，以创建 SampleClass 类。</span><span class="sxs-lookup"><span data-stu-id="7cf02-189">Add the following code to the SampleClass class file to create the SampleClass class.</span></span>  
   
     ```csharp  
     using System;  
@@ -156,25 +147,25 @@ ms.lasthandoff: 07/28/2017
     )  
     ```  
   
-9. 保存项目。  
+9. <span data-ttu-id="7cf02-190">保存项目。</span><span class="sxs-lookup"><span data-stu-id="7cf02-190">Save the project.</span></span>  
   
-10. 右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。 此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。  
+10. <span data-ttu-id="7cf02-191">右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-191">Right-click the TypeEquivalenceRuntime project and click **Build**.</span></span> <span data-ttu-id="7cf02-192">此时将编译类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。</span><span class="sxs-lookup"><span data-stu-id="7cf02-192">The class library .dll file is compiled and saved to the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-## <a name="creating-a-client-project"></a>创建客户端项目  
+## <a name="creating-a-client-project"></a><span data-ttu-id="7cf02-193">创建客户端项目</span><span class="sxs-lookup"><span data-stu-id="7cf02-193">Creating a Client Project</span></span>  
   
-#### <a name="to-create-the-type-equivalence-client-project"></a>创建类型等效性客户端项目  
+#### <a name="to-create-the-type-equivalence-client-project"></a><span data-ttu-id="7cf02-194">创建类型等效性客户端项目</span><span class="sxs-lookup"><span data-stu-id="7cf02-194">To create the type equivalence client project</span></span>  
   
-1.  在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
+1.  <span data-ttu-id="7cf02-195">在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-195">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `TypeEquivalenceClient`，然后单击“确定”。 新项目创建完成。  
+2.  <span data-ttu-id="7cf02-196">在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-196">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="7cf02-197">在“模板”窗格中，选择“控制台应用程序”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-197">Select **Console Application** in the **Templates** pane.</span></span> <span data-ttu-id="7cf02-198">在“名称”框中，键入 `TypeEquivalenceClient`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-198">In the **Name** box, type `TypeEquivalenceClient`, and then click **OK**.</span></span> <span data-ttu-id="7cf02-199">新项目创建完成。</span><span class="sxs-lookup"><span data-stu-id="7cf02-199">The new project is created.</span></span>  
   
-3.  右键单击 TypeEquivalenceClient 项目，然后单击“属性”。 单击“生成”选项卡。 将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。  
+3.  <span data-ttu-id="7cf02-200">右键单击 TypeEquivalenceClient 项目，然后单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-200">Right-click the TypeEquivalenceClient project and click **Properties**.</span></span> <span data-ttu-id="7cf02-201">单击“生成”选项卡。将输出路径设置为 TypeEquivalenceInterface 项目中所用的同一位置，例如，`C:\TypeEquivalenceSample`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-201">Click the **Build** tab. Set the output path to the same location you used in the TypeEquivalenceInterface project, for example, `C:\TypeEquivalenceSample`.</span></span>  
   
-4.  右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”。 单击“浏览”选项卡，然后浏览到输出路径文件夹。 选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”。  
+4.  <span data-ttu-id="7cf02-202">右键单击 TypeEquivalenceClient 项目，然后单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-202">Right-click the TypeEquivalenceClient project and click **Add Reference**.</span></span> <span data-ttu-id="7cf02-203">单击“浏览”选项卡，然后浏览到输出路径文件夹。</span><span class="sxs-lookup"><span data-stu-id="7cf02-203">Click the **Browse** tab and browse to the output path folder.</span></span> <span data-ttu-id="7cf02-204">选择 TypeEquivalenceInterface.dll 文件（不是 TypeEquivalenceRuntime.dll）并单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-204">Select the TypeEquivalenceInterface.dll file (not the TypeEquivalenceRuntime.dll) and click **OK**.</span></span>  
   
-5.  在“解决方案资源管理器”中，展开“引用”文件夹。 选择 TypeEquivalenceInterface 引用。 在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”属性设置为“True”。  
+5.  <span data-ttu-id="7cf02-205">在“解决方案资源管理器”中，展开“引用”文件夹。</span><span class="sxs-lookup"><span data-stu-id="7cf02-205">In **Solution Explorer**, expand the **References** folder.</span></span> <span data-ttu-id="7cf02-206">选择 TypeEquivalenceInterface 引用。</span><span class="sxs-lookup"><span data-stu-id="7cf02-206">Select the TypeEquivalenceInterface reference.</span></span> <span data-ttu-id="7cf02-207">在 TypeEquivalenceInterface 引用的“属性”窗口中，将“嵌入互操作类型”属性设置为“True”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-207">In the Properties window for the TypeEquivalenceInterface reference, set the **Embed Interop Types** property to **True**.</span></span>  
   
-6.  将以下代码添加到 Program.cs 文件，以创建客户端程序。  
+6.  <span data-ttu-id="7cf02-208">将以下代码添加到 Program.cs 文件，以创建客户端程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-208">Add the following code to the Program.cs file to create the client program.</span></span>  
   
     ```csharp  
     using System;  
@@ -202,37 +193,37 @@ ms.lasthandoff: 07/28/2017
     }  
     ```  
   
-7.  按 Ctrl+F5 生成并运行程序。  
+7.  <span data-ttu-id="7cf02-209">按 Ctrl+F5 生成并运行程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-209">Press CTRL+F5 to build and run the program.</span></span>  
   
-## <a name="modifying-the-interface"></a>修改接口  
+## <a name="modifying-the-interface"></a><span data-ttu-id="7cf02-210">修改接口</span><span class="sxs-lookup"><span data-stu-id="7cf02-210">Modifying the Interface</span></span>  
   
-#### <a name="to-modify-the-interface"></a>修改接口  
+#### <a name="to-modify-the-interface"></a><span data-ttu-id="7cf02-211">修改接口</span><span class="sxs-lookup"><span data-stu-id="7cf02-211">To modify the interface</span></span>  
   
-1.  在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。  
+1.  <span data-ttu-id="7cf02-212">在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-212">In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.</span></span>  
   
-2.  在“打开项目”对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。 单击“应用程序”  选项卡。 单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。  
+2.  <span data-ttu-id="7cf02-213">在“打开项目”对话框中，右键单击 TypeEquivalenceInterface 项目，然后单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-213">In the **Open Project** dialog box, right-click the TypeEquivalenceInterface project, and then click **Properties**.</span></span> <span data-ttu-id="7cf02-214">单击“应用程序”  选项卡。单击“程序集信息”按钮。</span><span class="sxs-lookup"><span data-stu-id="7cf02-214">Click the **Application** tab. Click the **Assembly Information** button.</span></span> <span data-ttu-id="7cf02-215">将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-215">Change the **Assembly Version** and **File Version** values to `2.0.0.0`.</span></span>  
   
-3.  打开 SampleInterface.cs 文件。 将以下代码行添加到 ISampleInterface 接口。  
+3.  <span data-ttu-id="7cf02-216">打开 SampleInterface.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-216">Open the SampleInterface.cs file.</span></span> <span data-ttu-id="7cf02-217">将以下代码行添加到 ISampleInterface 接口。</span><span class="sxs-lookup"><span data-stu-id="7cf02-217">Add the following line of code to the ISampleInterface interface.</span></span>  
   
     ```csharp  
     DateTime GetDate();  
     ```  
   
-     保存该文件。  
+     <span data-ttu-id="7cf02-218">保存该文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-218">Save the file.</span></span>  
   
-4.  保存项目。  
+4.  <span data-ttu-id="7cf02-219">保存项目。</span><span class="sxs-lookup"><span data-stu-id="7cf02-219">Save the project.</span></span>  
   
-5.  右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。 此时将编译新版本的类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。  
+5.  <span data-ttu-id="7cf02-220">右键单击 TypeEquivalenceInterface 项目，然后单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-220">Right-click the TypeEquivalenceInterface project and click **Build**.</span></span> <span data-ttu-id="7cf02-221">此时将编译新版本的类库 .dll 文件，并保存到指定的生成输出路径中（如 C:\TypeEquivalenceSample）。</span><span class="sxs-lookup"><span data-stu-id="7cf02-221">A new version of the class library .dll file is compiled and saved in the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-## <a name="modifying-the-runtime-class"></a>修改运行时类  
+## <a name="modifying-the-runtime-class"></a><span data-ttu-id="7cf02-222">修改运行时类</span><span class="sxs-lookup"><span data-stu-id="7cf02-222">Modifying the Runtime Class</span></span>  
   
-#### <a name="to-modify-the-runtime-class"></a>修改运行时类  
+#### <a name="to-modify-the-runtime-class"></a><span data-ttu-id="7cf02-223">修改运行时类</span><span class="sxs-lookup"><span data-stu-id="7cf02-223">To modify the runtime class</span></span>  
   
-1.  在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。  
+1.  <span data-ttu-id="7cf02-224">在 Visual Studio 中的“文件”菜单上，指向“打开”，然后单击“项目/解决方案”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-224">In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.</span></span>  
   
-2.  在“打开项目”对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。 单击“应用程序”  选项卡。 单击“程序集信息”按钮。 将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。  
+2.  <span data-ttu-id="7cf02-225">在“打开项目”对话框中，右键单击 TypeEquivalenceRuntime 项目，然后单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-225">In the **Open Project** dialog box, right-click the TypeEquivalenceRuntime project and click **Properties**.</span></span> <span data-ttu-id="7cf02-226">单击“应用程序”  选项卡。单击“程序集信息”按钮。</span><span class="sxs-lookup"><span data-stu-id="7cf02-226">Click the **Application** tab. Click the **Assembly Information** button.</span></span> <span data-ttu-id="7cf02-227">将“程序集版本”和“文件版本”的值更改为 `2.0.0.0`。</span><span class="sxs-lookup"><span data-stu-id="7cf02-227">Change the **Assembly Version** and **File Version** values to `2.0.0.0`.</span></span>  
   
-3.  打开 SampleClass.cs 文件。 将以下代码行添加到 SampleClass 类。  
+3.  <span data-ttu-id="7cf02-228">打开 SampleClass.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-228">Open the SampleClass.cs file.</span></span> <span data-ttu-id="7cf02-229">将以下代码行添加到 SampleClass 类。</span><span class="sxs-lookup"><span data-stu-id="7cf02-229">Add the following lines of code to the SampleClass class.</span></span>  
   
     ```csharp  
     public DateTime GetDate()  
@@ -241,17 +232,16 @@ ms.lasthandoff: 07/28/2017
     }  
     ```  
   
-     保存该文件。  
+     <span data-ttu-id="7cf02-230">保存该文件。</span><span class="sxs-lookup"><span data-stu-id="7cf02-230">Save the file.</span></span>  
   
-4.  保存项目。  
+4.  <span data-ttu-id="7cf02-231">保存项目。</span><span class="sxs-lookup"><span data-stu-id="7cf02-231">Save the project.</span></span>  
   
-5.  右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。 此时将编译更新版本的类库 .dll 文件，并保存到之前指定的生成输出路径中（如 C:\TypeEquivalenceSample）。  
+5.  <span data-ttu-id="7cf02-232">右键单击 TypeEquivalenceRuntime 项目，然后单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="7cf02-232">Right-click the TypeEquivalenceRuntime project and click **Build**.</span></span> <span data-ttu-id="7cf02-233">此时将编译更新版本的类库 .dll 文件，并保存到之前指定的生成输出路径中（如 C:\TypeEquivalenceSample）。</span><span class="sxs-lookup"><span data-stu-id="7cf02-233">An updated version of the class library .dll file is compiled and saved in the previously specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-6.  在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。  
+6.  <span data-ttu-id="7cf02-234">在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。</span><span class="sxs-lookup"><span data-stu-id="7cf02-234">In File Explorer, open the output path folder (for example, C:\TypeEquivalenceSample).</span></span> <span data-ttu-id="7cf02-235">双击 TypeEquivalenceClient.exe 运行该程序。</span><span class="sxs-lookup"><span data-stu-id="7cf02-235">Double-click the TypeEquivalenceClient.exe to run the program.</span></span> <span data-ttu-id="7cf02-236">程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。</span><span class="sxs-lookup"><span data-stu-id="7cf02-236">The program will reflect the new version of the TypeEquivalenceRuntime assembly without having been recompiled.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)   
- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="7cf02-237">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7cf02-237">See Also</span></span>  
+ [<span data-ttu-id="7cf02-238">/link（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="7cf02-238">/link (C# Compiler Options)</span></span>](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [<span data-ttu-id="7cf02-239">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="7cf02-239">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="7cf02-240">使用程序集编程</span><span class="sxs-lookup"><span data-stu-id="7cf02-240">Programming with Assemblies</span></span>](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="7cf02-241">程序集和全局程序集缓存 (C#)</span><span class="sxs-lookup"><span data-stu-id="7cf02-241">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

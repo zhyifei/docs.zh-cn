@@ -1,31 +1,27 @@
 ---
 title: "如何：查找命名空间中的所有节点 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 766b0b4ff535703e6acdfeb409a51bb09a265e43
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e3a132834527f3a13a678fc56a593f7b442deb56
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何：查找命名空间中的所有节点 (C#)
-您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="8aa2a-102">如何：查找命名空间中的所有节点 (C#)</span><span class="sxs-lookup"><span data-stu-id="8aa2a-102">How to: Find All Nodes in a Namespace (C#)</span></span>
+<span data-ttu-id="8aa2a-103">您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="8aa2a-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例创建一个包含两个命名空间的 XML 树。 然后循环访问该树并将打印其中一个命名空间中所有元素和属性的名称。  
+## <a name="example"></a><span data-ttu-id="8aa2a-104">示例</span><span class="sxs-lookup"><span data-stu-id="8aa2a-104">Example</span></span>  
+ <span data-ttu-id="8aa2a-105">下面的示例创建一个包含两个命名空间的 XML 树。</span><span class="sxs-lookup"><span data-stu-id="8aa2a-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="8aa2a-106">然后循环访问该树并将打印其中一个命名空间中所有元素和属性的名称。</span><span class="sxs-lookup"><span data-stu-id="8aa2a-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -47,7 +43,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="8aa2a-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="8aa2a-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -55,10 +51,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a>示例  
- 下面的查询所访问的 XML 文件包含两个位于不同命名空间中的采购订单。 该查询只用其中一个命名空间中的元素创建一个新树。  
+## <a name="example"></a><span data-ttu-id="8aa2a-108">示例</span><span class="sxs-lookup"><span data-stu-id="8aa2a-108">Example</span></span>  
+ <span data-ttu-id="8aa2a-109">下面的查询所访问的 XML 文件包含两个位于不同命名空间中的采购订单。</span><span class="sxs-lookup"><span data-stu-id="8aa2a-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="8aa2a-110">该查询只用其中一个命名空间中的元素创建一个新树。</span><span class="sxs-lookup"><span data-stu-id="8aa2a-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：合并的采购订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
+ <span data-ttu-id="8aa2a-111">本示例使用以下 XML 文档：[示例 XML 文件：合并的采购订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="8aa2a-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -71,7 +67,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="8aa2a-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="8aa2a-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +103,5 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="8aa2a-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8aa2a-113">See Also</span></span>  
+ [<span data-ttu-id="8aa2a-114">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8aa2a-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

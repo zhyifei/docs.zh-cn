@@ -10,69 +10,66 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="expression-trees-explained"></a><span data-ttu-id="d3699-104">表达式树说明</span><span class="sxs-lookup"><span data-stu-id="d3699-104">Expression Trees Explained</span></span>
 
-# <a name="expression-trees-explained"></a>表达式树说明
+[<span data-ttu-id="d3699-105">上一步 - 概述</span><span class="sxs-lookup"><span data-stu-id="d3699-105">Previous -- Overview</span></span>](expression-trees.md)
 
-[上一步 - 概述](expression-trees.md)
-
-表达式树是定义代码的数据结构。 它们基于编译器用于分析代码和生成已编译输出的相同结构。 读完本教程后，你会注意到表达式树和 Roslyn API 中用于生成[分析器和 CodeFixes](https://github.com/dotnet/roslyn-analyzers) 的类型之间存在很多相似之处。
-（分析器和 CodeFixes 是 NuGet 包，用于对代码执行静态分析，并可为开发人员建议可能的修补程序。）两者概念相似，且最终结果是一种数据结构，该结构允许以有意义的方式对源代码进行检查。 但是，表达式树基于一组与 Roslyn API 完全不同的类和 API。
+<span data-ttu-id="d3699-106">表达式树是定义代码的数据结构。</span><span class="sxs-lookup"><span data-stu-id="d3699-106">An Expression Tree is a data structure that defines code.</span></span> <span data-ttu-id="d3699-107">它们基于编译器用于分析代码和生成已编译输出的相同结构。</span><span class="sxs-lookup"><span data-stu-id="d3699-107">They are based on the same structures that a compiler uses to analyze code and generate the compiled output.</span></span> <span data-ttu-id="d3699-108">读完本教程后，你会注意到表达式树和 Roslyn API 中用于生成[分析器和 CodeFixes](https://github.com/dotnet/roslyn-analyzers) 的类型之间存在很多相似之处。</span><span class="sxs-lookup"><span data-stu-id="d3699-108">As you read through this tutorial, you will notice quite a bit of similarity between Expression Trees and the types used in the Roslyn APIs to build [Analyzers and CodeFixes](https://github.com/dotnet/roslyn-analyzers).</span></span>
+<span data-ttu-id="d3699-109">（分析器和 CodeFixes 是 NuGet 包，用于对代码执行静态分析，并可为开发人员建议可能的修补程序。）两者概念相似，且最终结果是一种数据结构，该结构允许以有意义的方式对源代码进行检查。</span><span class="sxs-lookup"><span data-stu-id="d3699-109">(Analyzers and CodeFixes are NuGet packages that perform static analysis on code and can suggest potential fixes for a developer.) The concepts are similar, and the end result is a data structure that allows examination of the source code in a meaningful way.</span></span> <span data-ttu-id="d3699-110">但是，表达式树基于一组与 Roslyn API 完全不同的类和 API。</span><span class="sxs-lookup"><span data-stu-id="d3699-110">However, Expression Trees are based on a totally different set of classes and APIs than the Roslyn APIs.</span></span>
     
-让我们来举一个简单的示例。
-以下是一个代码行：
+<span data-ttu-id="d3699-111">让我们来举一个简单的示例。</span><span class="sxs-lookup"><span data-stu-id="d3699-111">Let's look at a simple example.</span></span>
+<span data-ttu-id="d3699-112">以下是一个代码行：</span><span class="sxs-lookup"><span data-stu-id="d3699-112">Here's a line of code:</span></span>
 ```csharp
 var sum = 1 + 2;
 ```
-如果要将其作为一个表达式树进行分析，则该树包含多个节点。
-最外面的节点是具有赋值 (`var sum = 1 + 2;`) 的变量声明语句，该节点包含若干子节点：变量声明、赋值运算符和一个表示等于号右侧的表达式。 该表达式被进一步细分为表示加法运算、该加法左操作数和右操作数的表达式。
+<span data-ttu-id="d3699-113">如果要将其作为一个表达式树进行分析，则该树包含多个节点。</span><span class="sxs-lookup"><span data-stu-id="d3699-113">If you were to analyze this as an expression tree, the tree contains several nodes.</span></span>
+<span data-ttu-id="d3699-114">最外面的节点是具有赋值 (`var sum = 1 + 2;`) 的变量声明语句，该节点包含若干子节点：变量声明、赋值运算符和一个表示等于号右侧的表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-114">The outermost node is a variable declaration statement with assignment (`var sum = 1 + 2;`) That outermost node contains several child nodes: a variable declaration, an assignment operator, and an expression representing the right hand side of the equals sign.</span></span> <span data-ttu-id="d3699-115">该表达式被进一步细分为表示加法运算、该加法左操作数和右操作数的表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-115">That expression is further subdivided into expressions that represent the addition operation, and left and right operands of the addition.</span></span>
 
-让我们稍微深入了解一下构成等于号右侧的表达式。
-该表达式是 `1 + 2`。 这是一个二进制表达式。 更具体地说，它是一个二进制加法表达式。 二进制加法表达式有两个子表达式，表示加法表达式的左侧和右侧节点。 此处，这两个节点均为常数表达式：左操作数是值 `1`，右操作数是值 `2`。
+<span data-ttu-id="d3699-116">让我们稍微深入了解一下构成等于号右侧的表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-116">Let's drill down a bit more into the expressions that make up the right side of the equals sign.</span></span>
+<span data-ttu-id="d3699-117">该表达式是 `1 + 2`。</span><span class="sxs-lookup"><span data-stu-id="d3699-117">The expression is `1 + 2`.</span></span> <span data-ttu-id="d3699-118">这是一个二进制表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-118">That's a binary expression.</span></span> <span data-ttu-id="d3699-119">更具体地说，它是一个二进制加法表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-119">More specifically, it's a binary addition expression.</span></span> <span data-ttu-id="d3699-120">二进制加法表达式有两个子表达式，表示加法表达式的左侧和右侧节点。</span><span class="sxs-lookup"><span data-stu-id="d3699-120">A binary addition expression has two children, representing the left and right nodes of the addition expression.</span></span> <span data-ttu-id="d3699-121">此处，这两个节点均为常数表达式：左操作数是值 `1`，右操作数是值 `2`。</span><span class="sxs-lookup"><span data-stu-id="d3699-121">Here, both nodes are constant expressions: The left operand is the value `1`, and the right operand is the value `2`.</span></span>
 
-直观地看，整个语句是一棵树：应从根节点开始，浏览到树中的每个节点，以查看构成该语句的代码：
+<span data-ttu-id="d3699-122">直观地看，整个语句是一棵树：应从根节点开始，浏览到树中的每个节点，以查看构成该语句的代码：</span><span class="sxs-lookup"><span data-stu-id="d3699-122">Visually, the entire statement is a tree: You could start at the root node, and travel to each node in the tree to see the code that makes up the statement:</span></span>
 
-- 具有赋值 (`var sum = 1 + 2;`) 的变量声明语句
-    * 隐式变量类型声明 (`var sum`)
-        - 隐式 var 关键字 (`var`)
-        - 变量名称声明 (`sum`)
-    * 赋值运算符 (`=`)
-    * 二进制加法表达式 (`1 + 2`)
-        - 左操作数 (`1`)
-        - 加法运算符 (`+`)
-        - 右操作数 (`2`)
+- <span data-ttu-id="d3699-123">具有赋值 (`var sum = 1 + 2;`) 的变量声明语句</span><span class="sxs-lookup"><span data-stu-id="d3699-123">Variable declaration statement with assignment (`var sum = 1 + 2;`)</span></span>
+    * <span data-ttu-id="d3699-124">隐式变量类型声明 (`var sum`)</span><span class="sxs-lookup"><span data-stu-id="d3699-124">Implicit variable type declaration (`var sum`)</span></span>
+        - <span data-ttu-id="d3699-125">隐式 var 关键字 (`var`)</span><span class="sxs-lookup"><span data-stu-id="d3699-125">Implicit var keyword (`var`)</span></span>
+        - <span data-ttu-id="d3699-126">变量名称声明 (`sum`)</span><span class="sxs-lookup"><span data-stu-id="d3699-126">Variable name declaration (`sum`)</span></span>
+    * <span data-ttu-id="d3699-127">赋值运算符 (`=`)</span><span class="sxs-lookup"><span data-stu-id="d3699-127">Assignment operator (`=`)</span></span>
+    * <span data-ttu-id="d3699-128">二进制加法表达式 (`1 + 2`)</span><span class="sxs-lookup"><span data-stu-id="d3699-128">Binary addition expression (`1 + 2`)</span></span>
+        - <span data-ttu-id="d3699-129">左操作数 (`1`)</span><span class="sxs-lookup"><span data-stu-id="d3699-129">Left operand (`1`)</span></span>
+        - <span data-ttu-id="d3699-130">加法运算符 (`+`)</span><span class="sxs-lookup"><span data-stu-id="d3699-130">Addition operator (`+`)</span></span>
+        - <span data-ttu-id="d3699-131">右操作数 (`2`)</span><span class="sxs-lookup"><span data-stu-id="d3699-131">Right operand (`2`)</span></span>
 
-这可能看起来很复杂，但它功能强大。 按照相同的过程，可以分解更加复杂的表达式。 请思考此表达式：
+<span data-ttu-id="d3699-132">这可能看起来很复杂，但它功能强大。</span><span class="sxs-lookup"><span data-stu-id="d3699-132">This may look complicated, but it is very powerful.</span></span> <span data-ttu-id="d3699-133">按照相同的过程，可以分解更加复杂的表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-133">Following the same process, you can decompose much more complicated expressions.</span></span> <span data-ttu-id="d3699-134">请思考此表达式：</span><span class="sxs-lookup"><span data-stu-id="d3699-134">Consider this expression:</span></span>
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
 ```
 
-上述表达式也是具有赋值的变量声明。
-在此情况下，赋值的右侧是一棵更加复杂的树。
-我不打算分解此表达式，但请思考一下不同的节点可能是什么。 存在使用当前对象作为接收方的方法调用，其中一个调用具有显式 `this` 接收方，一个调用不具有此接收方。 存在使用其他接收方对象的方法调用，存在不同类型的常量参数。 最后，存在二进制加法运算符。 该二进制加法运算符可能是对重写的加法运算符的方法调用（具体取决于 `SecretSauceFunction()` 或 `MoreSecretSauce()` 的返回类型），解析为对为类定义的二进制加法运算符的静态方法调用。
+<span data-ttu-id="d3699-135">上述表达式也是具有赋值的变量声明。</span><span class="sxs-lookup"><span data-stu-id="d3699-135">The expression above is also a variable declaration with an assignment.</span></span>
+<span data-ttu-id="d3699-136">在此情况下，赋值的右侧是一棵更加复杂的树。</span><span class="sxs-lookup"><span data-stu-id="d3699-136">In this instance, the right hand side of the assignment is a much more complicated tree.</span></span>
+<span data-ttu-id="d3699-137">我不打算分解此表达式，但请思考一下不同的节点可能是什么。</span><span class="sxs-lookup"><span data-stu-id="d3699-137">I'm not going to decompose this expression, but consider what the different nodes might be.</span></span> <span data-ttu-id="d3699-138">存在使用当前对象作为接收方的方法调用，其中一个调用具有显式 `this` 接收方，一个调用不具有此接收方。</span><span class="sxs-lookup"><span data-stu-id="d3699-138">There are method calls using the current object as a receiver, one that has an explicit `this` receiver, one that does not.</span></span> <span data-ttu-id="d3699-139">存在使用其他接收方对象的方法调用，存在不同类型的常量参数。</span><span class="sxs-lookup"><span data-stu-id="d3699-139">There are method calls using other receiver objects, there are constant arguments of different types.</span></span> <span data-ttu-id="d3699-140">最后，存在二进制加法运算符。</span><span class="sxs-lookup"><span data-stu-id="d3699-140">And finally, there is a binary addition operator.</span></span> <span data-ttu-id="d3699-141">该二进制加法运算符可能是对重写的加法运算符的方法调用（具体取决于 `SecretSauceFunction()` 或 `MoreSecretSauce()` 的返回类型），解析为对为类定义的二进制加法运算符的静态方法调用。</span><span class="sxs-lookup"><span data-stu-id="d3699-141">Depending on the return type of `SecretSauceFunction()` or `MoreSecretSauce()`, that binary addition operator may be a method call to an overridden addition operator, resolving to a static method call to the binary addition operator defined for a class.</span></span>
 
-尽管具有这种感知上的复杂性，但上面的表达式创建了一种树形结构，可以像第一个示例那样轻松地导航此结构。 可以保持遍历子节点，以查找表达式中的叶节点。 父节点将具有对其子节点的引用，且每个节点均具有一个用于介绍节点类型的属性。
+<span data-ttu-id="d3699-142">尽管具有这种感知上的复杂性，但上面的表达式创建了一种树形结构，可以像第一个示例那样轻松地导航此结构。</span><span class="sxs-lookup"><span data-stu-id="d3699-142">Despite this perceived complexity, the expression above creates a tree structure that can be navigated as easily as the first sample.</span></span> <span data-ttu-id="d3699-143">可以保持遍历子节点，以查找表达式中的叶节点。</span><span class="sxs-lookup"><span data-stu-id="d3699-143">You can keep traversing child nodes to find leaf nodes in the expression.</span></span> <span data-ttu-id="d3699-144">父节点将具有对其子节点的引用，且每个节点均具有一个用于介绍节点类型的属性。</span><span class="sxs-lookup"><span data-stu-id="d3699-144">Parent nodes will have references to their children, and each node has a property that describes what kind of node it is.</span></span>
 
-表达式树的结构非常一致。 了解基础知识后，你甚至可以理解以表达式树形式表示的最复杂的代码。 优美的数据结构说明了 C# 编译器如何分析最复杂的 C# 程序并从该复杂的源代码创建正确的输出。
+<span data-ttu-id="d3699-145">表达式树的结构非常一致。</span><span class="sxs-lookup"><span data-stu-id="d3699-145">The structure of an expression tree is very consistent.</span></span> <span data-ttu-id="d3699-146">了解基础知识后，你甚至可以理解以表达式树形式表示的最复杂的代码。</span><span class="sxs-lookup"><span data-stu-id="d3699-146">Once you've learned the basics, you can understand even the most complex code when it is represented as an expression tree.</span></span> <span data-ttu-id="d3699-147">优美的数据结构说明了 C# 编译器如何分析最复杂的 C# 程序并从该复杂的源代码创建正确的输出。</span><span class="sxs-lookup"><span data-stu-id="d3699-147">The elegance in the data structure explains how the C# compiler can analyze the most complex C# programs and create proper output from that complicated source code.</span></span>
 
-熟悉表达式树的结构后，你会发现通过快速获得的知识，你可处理许多越来越高级的方案。 表达式树的功能非常强大。
+<span data-ttu-id="d3699-148">熟悉表达式树的结构后，你会发现通过快速获得的知识，你可处理许多越来越高级的方案。</span><span class="sxs-lookup"><span data-stu-id="d3699-148">Once you become familiar with the structure of expression trees, you will find that knowledge you've gained quickly enables you to work with many more and more advanced scenarios.</span></span> <span data-ttu-id="d3699-149">表达式树的功能非常强大。</span><span class="sxs-lookup"><span data-stu-id="d3699-149">There is incredible power to expression trees.</span></span>
 
-除了转换算法以在其他环境中执行之外，表达式树还可用于在执行代码前轻松编写检查代码的算法。 可以编写参数为表达式的方法，然后在执行代码之前检查这些表达式。 表达式树是代码的完整表示形式：可以看到任何子表达式的值。
-可以看到方法和属性名称。 可以看到任何常数表达式的值。
-还可以将表达式树转换为可执行的委托，并执行代码。
+<span data-ttu-id="d3699-150">除了转换算法以在其他环境中执行之外，表达式树还可用于在执行代码前轻松编写检查代码的算法。</span><span class="sxs-lookup"><span data-stu-id="d3699-150">In addition to translating algorithms to execute in other environments, expression trees can be used to make it easier to write algorithms that inspect code before executing it.</span></span> <span data-ttu-id="d3699-151">可以编写参数为表达式的方法，然后在执行代码之前检查这些表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-151">You can write a method whose arguments are expressions and then examine those expressions before executing the code.</span></span> <span data-ttu-id="d3699-152">表达式树是代码的完整表示形式：可以看到任何子表达式的值。</span><span class="sxs-lookup"><span data-stu-id="d3699-152">The Expression Tree is a full representation of the code: you can see values of any sub-expression.</span></span>
+<span data-ttu-id="d3699-153">可以看到方法和属性名称。</span><span class="sxs-lookup"><span data-stu-id="d3699-153">You can see method and property names.</span></span> <span data-ttu-id="d3699-154">可以看到任何常数表达式的值。</span><span class="sxs-lookup"><span data-stu-id="d3699-154">You can see the value of any constant expressions.</span></span>
+<span data-ttu-id="d3699-155">还可以将表达式树转换为可执行的委托，并执行代码。</span><span class="sxs-lookup"><span data-stu-id="d3699-155">You can also convert an expression tree into an executable delegate, and execute the code.</span></span>
 
-通过表达式树的 API，可创建表示几乎任何有效代码构造的树。 但是，出于尽可能简化的考虑，不能在表达式树中创建某些 C# 习惯用语。 其中一个示例就是异步表达式（使用 `async` 和 `await` 关键字）。 如果需要异步算法，则需要直接操作 `Task` 对象，而不是依赖于编译器支持。 另一个示例是创建循环。 通常，通过使用 `for`、`foreach`、`while` 或 `do` 循环对其进行创建。 正如稍后可以[在本系列](expression-trees-building.md)中看到的那样，表达式树的 API 支持单个循环表达式，该表达式包含控制重复循环的 `break` 和 `continue` 表达式。
+<span data-ttu-id="d3699-156">通过表达式树的 API，可创建表示几乎任何有效代码构造的树。</span><span class="sxs-lookup"><span data-stu-id="d3699-156">The APIs for Expression Trees enable you to create trees that represent almost any valid code construct.</span></span> <span data-ttu-id="d3699-157">但是，出于尽可能简化的考虑，不能在表达式树中创建某些 C# 习惯用语。</span><span class="sxs-lookup"><span data-stu-id="d3699-157">However, to keep things as simple as possible, some C# idioms cannot be created in an expression tree.</span></span> <span data-ttu-id="d3699-158">其中一个示例就是异步表达式（使用 `async` 和 `await` 关键字）。</span><span class="sxs-lookup"><span data-stu-id="d3699-158">One example is asynchronous expressions (using the `async` and `await` keywords).</span></span> <span data-ttu-id="d3699-159">如果需要异步算法，则需要直接操作 `Task` 对象，而不是依赖于编译器支持。</span><span class="sxs-lookup"><span data-stu-id="d3699-159">If your needs require asynchronous algorithms, you would need to manipulate the `Task` objects directly, rather than rely on the compiler support.</span></span> <span data-ttu-id="d3699-160">另一个示例是创建循环。</span><span class="sxs-lookup"><span data-stu-id="d3699-160">Another is in creating loops.</span></span> <span data-ttu-id="d3699-161">通常，通过使用 `for`、`foreach`、`while` 或 `do` 循环对其进行创建。</span><span class="sxs-lookup"><span data-stu-id="d3699-161">Typically, you create these by using `for`, `foreach`, `while` or `do` loops.</span></span> <span data-ttu-id="d3699-162">正如稍后可以[在本系列](expression-trees-building.md)中看到的那样，表达式树的 API 支持单个循环表达式，该表达式包含控制重复循环的 `break` 和 `continue` 表达式。</span><span class="sxs-lookup"><span data-stu-id="d3699-162">As you'll see [later in this series](expression-trees-building.md), the APIs for expression trees support a single loop expression, with `break` and `continue` expressions that control repeating the loop.</span></span>
 
-不能执行的操作是修改表达式树。  表达式树是不可变的数据结构。 如果想要改变（更改）表达式树，则必须创建基于原始树副本但包含所需更改的新树。 
+<span data-ttu-id="d3699-163">不能执行的操作是修改表达式树。</span><span class="sxs-lookup"><span data-stu-id="d3699-163">The one thing you can't do is modify an expression tree.</span></span>  <span data-ttu-id="d3699-164">表达式树是不可变的数据结构。</span><span class="sxs-lookup"><span data-stu-id="d3699-164">Expression Trees are immutable data structures.</span></span> <span data-ttu-id="d3699-165">如果想要改变（更改）表达式树，则必须创建基于原始树副本但包含所需更改的新树。</span><span class="sxs-lookup"><span data-stu-id="d3699-165">If you want to mutate (change) an expression tree, you must create a new tree that is a copy of the original, but with your desired changes.</span></span> 
 
-[下一步 - 框架类型支持表达式树](expression-classes.md)
-
+[<span data-ttu-id="d3699-166">下一步 - 框架类型支持表达式树</span><span class="sxs-lookup"><span data-stu-id="d3699-166">Next -- Framework Types Supporting Expression Trees</span></span>](expression-classes.md)

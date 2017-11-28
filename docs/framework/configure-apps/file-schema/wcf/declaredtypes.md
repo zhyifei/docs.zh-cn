@@ -1,36 +1,42 @@
 ---
-title: "&lt;declaredTypes&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "<declaredTypes> 元素"
-  - "DataContractSerializer"
-  - "dataContractSerializer 元素"
-  - "declaredTypes 元素"
-  - "KnownTypes"
+title: '&lt;declaredTypes&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dataContractSerializer element
+- declaredTypes element
+- DataContractSerializer
+- KnownTypes
+- <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 138bc800625a8334d692bd46a3ceb7dfe2ea4ae1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;declaredTypes&gt;
-包含在进行反序列化时 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知类型。  
+# <a name="ltdeclaredtypesgt"></a><span data-ttu-id="7d60b-102">&lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="7d60b-102">&lt;declaredTypes&gt;</span></span>
+<span data-ttu-id="7d60b-103">包含在进行反序列化时 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知类型。</span><span class="sxs-lookup"><span data-stu-id="7d60b-103">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  
   
- 有关数据协定和已知类型的更多信息，请参见[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ <span data-ttu-id="7d60b-104">有关数据协定和已知的类型的详细信息，请参阅[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。</span><span class="sxs-lookup"><span data-stu-id="7d60b-104">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
   
-## 语法  
+ <span data-ttu-id="7d60b-105">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="7d60b-105">system.runtime.serialization</span></span>  
+<span data-ttu-id="7d60b-106">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="7d60b-106">\<dataContractSerializer></span></span>  
+<span data-ttu-id="7d60b-107">\<d d ></span><span class="sxs-lookup"><span data-stu-id="7d60b-107">\<declaredTypes></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7d60b-108">语法</span><span class="sxs-lookup"><span data-stu-id="7d60b-108">Syntax</span></span>  
   
+```xml  
 <configuration>  
   <system.runtime.serialization>  
     <dataContractSerializer>  
@@ -46,31 +52,31 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7d60b-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="7d60b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7d60b-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="7d60b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="7d60b-111">特性</span><span class="sxs-lookup"><span data-stu-id="7d60b-111">Attributes</span></span>  
+ <span data-ttu-id="7d60b-112">无。</span><span class="sxs-lookup"><span data-stu-id="7d60b-112">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="7d60b-113">子元素</span><span class="sxs-lookup"><span data-stu-id="7d60b-113">Child Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<添加\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|添加需要已知类型的类型。|  
+|<span data-ttu-id="7d60b-114">元素</span><span class="sxs-lookup"><span data-stu-id="7d60b-114">Element</span></span>|<span data-ttu-id="7d60b-115">说明</span><span class="sxs-lookup"><span data-stu-id="7d60b-115">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7d60b-116">\<add></span><span class="sxs-lookup"><span data-stu-id="7d60b-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|<span data-ttu-id="7d60b-117">添加需要已知类型的类型。</span><span class="sxs-lookup"><span data-stu-id="7d60b-117">Adds types that require known types.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="7d60b-118">父元素</span><span class="sxs-lookup"><span data-stu-id="7d60b-118">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。|  
+|<span data-ttu-id="7d60b-119">元素</span><span class="sxs-lookup"><span data-stu-id="7d60b-119">Element</span></span>|<span data-ttu-id="7d60b-120">描述</span><span class="sxs-lookup"><span data-stu-id="7d60b-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7d60b-121">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="7d60b-121">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="7d60b-122">包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。</span><span class="sxs-lookup"><span data-stu-id="7d60b-122">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## 备注  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]已知类型的更多信息，请参见[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和 <xref:System.Runtime.Serialization.DataContractSerializer>。  
+## <a name="remarks"></a><span data-ttu-id="7d60b-123">备注</span><span class="sxs-lookup"><span data-stu-id="7d60b-123">Remarks</span></span>  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="7d60b-124">已知类型，请参阅[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="7d60b-124"> known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## 示例  
- 下面的 XML 代码演示声明类型和添加到 `DataContractSerializer` 元素的已知类型。  此示例演示要添加的三个类型。  第一个类型是名为“Orders”的自定义类型，它使用一个名为“Item”的已知类型。  第二个声明类型 <xref:System.Collections.Generic.List%601>，它使用 `Item` 作为已知类型。  最后，第三个声明类型是 <xref:System.Collections.Generic.Dictionary%602>。  <xref:System.Collections.Generic.Dictionary%602> 类类型是泛型类型，并带有两个类型参数。  第一个参数表示键，第二个参数表示值。  下面的示例将第二个类型的 <xref:System.Collections.Generic.List%601>（值）添加到已知类型的列表中。  必须使用 `index` 属性来指定在已知类型中使用的类型参数。  在此例中，通过将 index 属性设置为“1”（基于零的集合）来指示值类型。  
+## <a name="example"></a><span data-ttu-id="7d60b-125">示例</span><span class="sxs-lookup"><span data-stu-id="7d60b-125">Example</span></span>  
+ <span data-ttu-id="7d60b-126">下面的 XML 代码演示声明的类型和已知的类型添加到`DataContractSerializer`元素。</span><span class="sxs-lookup"><span data-stu-id="7d60b-126">The following XML code shows declared types and known types added to a `DataContractSerializer` element.</span></span> <span data-ttu-id="7d60b-127">此示例演示要添加的三个类型。</span><span class="sxs-lookup"><span data-stu-id="7d60b-127">The example shows three types being added.</span></span> <span data-ttu-id="7d60b-128">第一个类型是名为“Orders”的自定义类型，它使用一个名为“Item”的已知类型。</span><span class="sxs-lookup"><span data-stu-id="7d60b-128">The first is a custom type named "Orders" that uses a known type named "Item".</span></span> <span data-ttu-id="7d60b-129">第二个声明类型 <xref:System.Collections.Generic.List%601>，它使用 `Item` 作为已知类型。</span><span class="sxs-lookup"><span data-stu-id="7d60b-129">The second declared type is a <xref:System.Collections.Generic.List%601> that uses `Item` as a known type.</span></span> <span data-ttu-id="7d60b-130">最后，第三个声明类型是 <xref:System.Collections.Generic.Dictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="7d60b-130">Finally the third declared type is a <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="7d60b-131"><xref:System.Collections.Generic.Dictionary%602> 类类型是泛型类型，并带有两个类型参数。</span><span class="sxs-lookup"><span data-stu-id="7d60b-131">The <xref:System.Collections.Generic.Dictionary%602> class type is a generic type, with two type parameters.</span></span> <span data-ttu-id="7d60b-132">第一个参数表示键，第二个参数表示值。</span><span class="sxs-lookup"><span data-stu-id="7d60b-132">The first represents the key and the second represents the value.</span></span> <span data-ttu-id="7d60b-133">下面的示例将第二个类型的 <xref:System.Collections.Generic.List%601>（值）添加到已知类型的列表中。</span><span class="sxs-lookup"><span data-stu-id="7d60b-133">The following example adds a <xref:System.Collections.Generic.List%601> of the second type (the value) to the list of known types.</span></span> <span data-ttu-id="7d60b-134">必须使用 `index` 属性来指定在已知类型中使用的类型参数。</span><span class="sxs-lookup"><span data-stu-id="7d60b-134">You must use the `index` attribute to specify which type parameter to use in the known type.</span></span> <span data-ttu-id="7d60b-135">在此例中，通过将 index 属性设置为“1”（基于零的集合）来指示值类型。</span><span class="sxs-lookup"><span data-stu-id="7d60b-135">In this case, the value type is indicated by the index attribute set to "1" (the collection is zero-based).</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.runtime.serialization>  
     <dataContractSerializer>  
@@ -92,8 +98,8 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)   
- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [\<添加\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a><span data-ttu-id="7d60b-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7d60b-136">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [<span data-ttu-id="7d60b-137">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="7d60b-137">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [<span data-ttu-id="7d60b-138">数据协定已知的类型</span><span class="sxs-lookup"><span data-stu-id="7d60b-138">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="7d60b-139">\<add></span><span class="sxs-lookup"><span data-stu-id="7d60b-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

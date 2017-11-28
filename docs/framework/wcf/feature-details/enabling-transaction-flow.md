@@ -1,85 +1,87 @@
 ---
-title: "启用事务流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务 [WCF], 启用流"
+title: "启用事务流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ef6880502a4d25f74d3c1cd72664c1ab818424b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 启用事务流
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用于控制事务流的灵活性较高的选项。服务事务流设置可以使用属性与配置的组合来表示。  
+# <a name="enabling-transaction-flow"></a><span data-ttu-id="703af-102">启用事务流</span><span class="sxs-lookup"><span data-stu-id="703af-102">Enabling Transaction Flow</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="703af-103"> 提供用于控制事务流的灵活性较高的选项。</span><span class="sxs-lookup"><span data-stu-id="703af-103"> provides highly flexible options for controlling transaction flow.</span></span> <span data-ttu-id="703af-104">服务事务流设置可以使用属性与配置的组合来表示。</span><span class="sxs-lookup"><span data-stu-id="703af-104">A service's transaction flow settings can be expressed using a combination of attributes and configuration.</span></span>  
   
-## 事务流设置  
- 服务终结点的事务流设置根据下列三个值的交集生成：  
+## <a name="transaction-flow-settings"></a><span data-ttu-id="703af-105">事务流设置</span><span class="sxs-lookup"><span data-stu-id="703af-105">Transaction Flow Settings</span></span>  
+ <span data-ttu-id="703af-106">服务终结点的事务流设置根据下列三个值的交集生成：</span><span class="sxs-lookup"><span data-stu-id="703af-106">Transaction flow settings are generated for a service endpoint as a result of the intersection of the following three values:</span></span>  
   
--   为服务协定中的每个方法指定的 <xref:System.ServiceModel.TransactionFlowAttribute> 属性。  
+-   <span data-ttu-id="703af-107">为服务协定中的每个方法指定的 <xref:System.ServiceModel.TransactionFlowAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="703af-107">The <xref:System.ServiceModel.TransactionFlowAttribute> attribute specified for each method in the service contract.</span></span>  
   
--   特定绑定中的 `TransactionFlow` 绑定属性。  
+-   <span data-ttu-id="703af-108">特定绑定中的 `TransactionFlow` 绑定属性。</span><span class="sxs-lookup"><span data-stu-id="703af-108">The `TransactionFlow` binding property in the specific binding.</span></span>  
   
--   特定绑定中的 `TransactionFlowProtocol` 绑定属性。`TransactionFlowProtocol` 绑定属性允许您在可用于流动事务的两个不同事务协议之间进行选择。后面几节将对这些协议逐一进行简要描述。  
+-   <span data-ttu-id="703af-109">特定绑定中的 `TransactionFlowProtocol` 绑定属性。</span><span class="sxs-lookup"><span data-stu-id="703af-109">The `TransactionFlowProtocol` binding property in the specific binding.</span></span> <span data-ttu-id="703af-110">`TransactionFlowProtocol` 绑定属性允许您在可用于流动事务的两个不同事务协议之间进行选择。</span><span class="sxs-lookup"><span data-stu-id="703af-110">The `TransactionFlowProtocol` binding property enables you to choose among two different transaction protocols that you can use to flow a transaction.</span></span> <span data-ttu-id="703af-111">后面几节将对这些协议逐一进行简要描述。</span><span class="sxs-lookup"><span data-stu-id="703af-111">The following sections briefly describe each of them.</span></span>  
   
-### WS\-AtomicTransaction 协议  
- WS\-AtomicTransaction \(WS\-AT\) 协议对于要求第三方协议堆栈具有互操作性时的情形非常有用。  
+### <a name="ws-atomictransaction-protocol"></a><span data-ttu-id="703af-112">WS-AtomicTransaction 协议</span><span class="sxs-lookup"><span data-stu-id="703af-112">WS-AtomicTransaction Protocol</span></span>  
+ <span data-ttu-id="703af-113">WS-AtomicTransaction (WS-AT) 协议对于要求第三方协议堆栈具有互操作性时的情形非常有用。</span><span class="sxs-lookup"><span data-stu-id="703af-113">The WS-AtomicTransaction (WS-AT) protocol is useful for scenarios when interoperability with third-party protocol stacks is required.</span></span>  
   
-### OleTransactions 协议  
- OleTransactions 协议对于如下的情形非常有用：即不要求第三方协议堆栈具有互操作性，并且服务部署人员预先知道 WS\-AT 协议服务将在本地禁用或者现有网络拓扑不支持使用 WS\-AT。  
+### <a name="oletransactions-protocol"></a><span data-ttu-id="703af-114">OleTransactions 协议</span><span class="sxs-lookup"><span data-stu-id="703af-114">OleTransactions Protocol</span></span>  
+ <span data-ttu-id="703af-115">OleTransactions 协议对于如下的情形非常有用：即不要求第三方协议堆栈具有互操作性，并且服务部署人员预先知道 WS-AT 协议服务将在本地禁用或者现有网络拓扑不支持使用 WS-AT。</span><span class="sxs-lookup"><span data-stu-id="703af-115">The OleTransactions protocol is useful for scenarios when interoperability with third-party protocol stacks is not required, and the deployer of a service knows in advance that the WS-AT protocol service is disabled locally or the existing network topology does not favor the usage of WS-AT.</span></span>  
   
- 下表列出了可以使用这些不同组合生成的不同类型的事务流。  
+ <span data-ttu-id="703af-116">下表列出了可以使用这些不同组合生成的不同类型的事务流。</span><span class="sxs-lookup"><span data-stu-id="703af-116">The following table shows the different types of transaction flows that can be generated using these various combinations.</span></span>  
   
-|TransactionFlow<br /><br /> 绑定|TransactionFlow 绑定属性|TransactionFlowProtocol 绑定协议|事务流的类型|  
-|----------------------------|--------------------------|----------------------------------|------------|  
-|Mandatory|true|WS\-AT|事务必须以可以互操作的 WS\-AT 格式流动。|  
-|Mandatory|true|OleTransactions|事务必须以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。|  
-|Mandatory|false|不适用|不适用，因为这是无效的配置。|  
-|Allowed|true|WS\-AT|事务可以以可互操作的 WS\-AT 格式流动。|  
-|Allowed|true|OleTransactions|事务可以以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。|  
-|Allowed|false|任意值|不流动事务。|  
-|NotAllowed|任意值|任意值|不流动事务。|  
+|<span data-ttu-id="703af-117">TransactionFlow</span><span class="sxs-lookup"><span data-stu-id="703af-117">TransactionFlow</span></span><br /><br /> <span data-ttu-id="703af-118">绑定</span><span class="sxs-lookup"><span data-stu-id="703af-118">binding</span></span>|<span data-ttu-id="703af-119">TransactionFlow 绑定属性</span><span class="sxs-lookup"><span data-stu-id="703af-119">TransactionFlow binding property</span></span>|<span data-ttu-id="703af-120">TransactionFlowProtocol 绑定协议</span><span class="sxs-lookup"><span data-stu-id="703af-120">TransactionFlowProtocol binding protocol</span></span>|<span data-ttu-id="703af-121">事务流的类型</span><span class="sxs-lookup"><span data-stu-id="703af-121">Type of transaction flow</span></span>|  
+|---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
+|<span data-ttu-id="703af-122">必需</span><span class="sxs-lookup"><span data-stu-id="703af-122">Mandatory</span></span>|<span data-ttu-id="703af-123">true</span><span class="sxs-lookup"><span data-stu-id="703af-123">true</span></span>|<span data-ttu-id="703af-124">WS-AT</span><span class="sxs-lookup"><span data-stu-id="703af-124">WS-AT</span></span>|<span data-ttu-id="703af-125">事务必须以可以互操作的 WS-AT 格式流动。</span><span class="sxs-lookup"><span data-stu-id="703af-125">Transaction must be flowed in the interoperable WS-AT format.</span></span>|  
+|<span data-ttu-id="703af-126">必需</span><span class="sxs-lookup"><span data-stu-id="703af-126">Mandatory</span></span>|<span data-ttu-id="703af-127">true</span><span class="sxs-lookup"><span data-stu-id="703af-127">true</span></span>|<span data-ttu-id="703af-128">OleTransactions</span><span class="sxs-lookup"><span data-stu-id="703af-128">OleTransactions</span></span>|<span data-ttu-id="703af-129">事务必须以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。</span><span class="sxs-lookup"><span data-stu-id="703af-129">Transaction must be flowed in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions format.</span></span>|  
+|<span data-ttu-id="703af-130">必需</span><span class="sxs-lookup"><span data-stu-id="703af-130">Mandatory</span></span>|<span data-ttu-id="703af-131">false</span><span class="sxs-lookup"><span data-stu-id="703af-131">false</span></span>|<span data-ttu-id="703af-132">不适用</span><span class="sxs-lookup"><span data-stu-id="703af-132">Not applicable</span></span>|<span data-ttu-id="703af-133">不适用，因为这是无效的配置。</span><span class="sxs-lookup"><span data-stu-id="703af-133">Not applicable because this is an invalid configuration.</span></span>|  
+|<span data-ttu-id="703af-134">Allowed</span><span class="sxs-lookup"><span data-stu-id="703af-134">Allowed</span></span>|<span data-ttu-id="703af-135">true</span><span class="sxs-lookup"><span data-stu-id="703af-135">true</span></span>|<span data-ttu-id="703af-136">WS-AT</span><span class="sxs-lookup"><span data-stu-id="703af-136">WS-AT</span></span>|<span data-ttu-id="703af-137">事务可以以可互操作的 WS-AT 格式流动。</span><span class="sxs-lookup"><span data-stu-id="703af-137">Transaction may be flowed in the interoperable WS-AT format.</span></span>|  
+|<span data-ttu-id="703af-138">Allowed</span><span class="sxs-lookup"><span data-stu-id="703af-138">Allowed</span></span>|<span data-ttu-id="703af-139">true</span><span class="sxs-lookup"><span data-stu-id="703af-139">true</span></span>|<span data-ttu-id="703af-140">OleTransactions</span><span class="sxs-lookup"><span data-stu-id="703af-140">OleTransactions</span></span>|<span data-ttu-id="703af-141">事务可以以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。</span><span class="sxs-lookup"><span data-stu-id="703af-141">Transaction may be flowed in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions format.</span></span>|  
+|<span data-ttu-id="703af-142">Allowed</span><span class="sxs-lookup"><span data-stu-id="703af-142">Allowed</span></span>|<span data-ttu-id="703af-143">false</span><span class="sxs-lookup"><span data-stu-id="703af-143">false</span></span>|<span data-ttu-id="703af-144">任意值</span><span class="sxs-lookup"><span data-stu-id="703af-144">Any value</span></span>|<span data-ttu-id="703af-145">不流动事务。</span><span class="sxs-lookup"><span data-stu-id="703af-145">A transaction is not flowed.</span></span>|  
+|<span data-ttu-id="703af-146">NotAllowed</span><span class="sxs-lookup"><span data-stu-id="703af-146">NotAllowed</span></span>|<span data-ttu-id="703af-147">任意值</span><span class="sxs-lookup"><span data-stu-id="703af-147">Any value</span></span>|<span data-ttu-id="703af-148">任意值</span><span class="sxs-lookup"><span data-stu-id="703af-148">Any value</span></span>|<span data-ttu-id="703af-149">不流动事务。</span><span class="sxs-lookup"><span data-stu-id="703af-149">A transaction is not flowed.</span></span>|  
   
- 下表对消息处理结果做了总结。  
+ <span data-ttu-id="703af-150">下表对消息处理结果做了总结。</span><span class="sxs-lookup"><span data-stu-id="703af-150">The following table summarizes the message processing result.</span></span>  
   
-|传入消息|TransactionFlow 设置|事务标头|消息处理结果|  
-|----------|------------------------|----------|------------|  
-|事务与预期的协议格式匹配|Allowed 或 Mandatory|`MustUnderstand` 等于 `true`。|处理|  
-|事务不与预期的协议格式匹配|Mandatory|`MustUnderstand` 等于 `false`。|因要求一个事务而拒绝|  
-|事务不与预期的协议格式匹配|Allowed|`MustUnderstand` 等于 `false`。|因无法理解标头而拒绝|  
-|使用任何协议格式的事务|NotAllowed|`MustUnderstand` 等于 `false`。|因无法理解标头而拒绝|  
-|无事务|Mandatory|N\/A|因要求一个事务而拒绝|  
-|无事务|Allowed|不可用|处理|  
-|无事务|NotAllowed|不可用|进程|  
+|<span data-ttu-id="703af-151">传入消息</span><span class="sxs-lookup"><span data-stu-id="703af-151">Incoming message</span></span>|<span data-ttu-id="703af-152">TransactionFlow 设置</span><span class="sxs-lookup"><span data-stu-id="703af-152">TransactionFlow setting</span></span>|<span data-ttu-id="703af-153">事务标头</span><span class="sxs-lookup"><span data-stu-id="703af-153">Transaction header</span></span>|<span data-ttu-id="703af-154">消息处理结果</span><span class="sxs-lookup"><span data-stu-id="703af-154">Message processing result</span></span>|  
+|----------------------|-----------------------------|------------------------|-------------------------------|  
+|<span data-ttu-id="703af-155">事务与预期的协议格式匹配</span><span class="sxs-lookup"><span data-stu-id="703af-155">Transaction matches expected protocol format</span></span>|<span data-ttu-id="703af-156">Allowed 或 Mandatory</span><span class="sxs-lookup"><span data-stu-id="703af-156">Allowed or Mandatory</span></span>|<span data-ttu-id="703af-157">`MustUnderstand` 等于 `true`。</span><span class="sxs-lookup"><span data-stu-id="703af-157">`MustUnderstand` equals `true`.</span></span>|<span data-ttu-id="703af-158">进程</span><span class="sxs-lookup"><span data-stu-id="703af-158">Process</span></span>|  
+|<span data-ttu-id="703af-159">事务不与预期的协议格式匹配</span><span class="sxs-lookup"><span data-stu-id="703af-159">Transaction does not match expected protocol format</span></span>|<span data-ttu-id="703af-160">强制</span><span class="sxs-lookup"><span data-stu-id="703af-160">Mandatory</span></span>|<span data-ttu-id="703af-161">`MustUnderstand` 等于 `false`。</span><span class="sxs-lookup"><span data-stu-id="703af-161">`MustUnderstand` equals `false`.</span></span>|<span data-ttu-id="703af-162">因要求一个事务而拒绝</span><span class="sxs-lookup"><span data-stu-id="703af-162">Rejected because a transaction is required</span></span>|  
+|<span data-ttu-id="703af-163">事务不与预期的协议格式匹配</span><span class="sxs-lookup"><span data-stu-id="703af-163">Transaction does not match expected protocol format</span></span>|<span data-ttu-id="703af-164">Allowed</span><span class="sxs-lookup"><span data-stu-id="703af-164">Allowed</span></span>|<span data-ttu-id="703af-165">`MustUnderstand` 等于 `false`。</span><span class="sxs-lookup"><span data-stu-id="703af-165">`MustUnderstand` equals `false`.</span></span>|<span data-ttu-id="703af-166">因无法理解标头而拒绝</span><span class="sxs-lookup"><span data-stu-id="703af-166">Rejected because the header is not understood</span></span>|  
+|<span data-ttu-id="703af-167">使用任何协议格式的事务</span><span class="sxs-lookup"><span data-stu-id="703af-167">Transaction using any protocol format</span></span>|<span data-ttu-id="703af-168">NotAllowed</span><span class="sxs-lookup"><span data-stu-id="703af-168">NotAllowed</span></span>|<span data-ttu-id="703af-169">`MustUnderstand` 等于 `false`。</span><span class="sxs-lookup"><span data-stu-id="703af-169">`MustUnderstand` equals `false`.</span></span>|<span data-ttu-id="703af-170">因无法理解标头而拒绝</span><span class="sxs-lookup"><span data-stu-id="703af-170">Rejected because the header is not understood</span></span>|  
+|<span data-ttu-id="703af-171">无事务</span><span class="sxs-lookup"><span data-stu-id="703af-171">No transaction</span></span>|<span data-ttu-id="703af-172">必需</span><span class="sxs-lookup"><span data-stu-id="703af-172">Mandatory</span></span>|<span data-ttu-id="703af-173">不可用</span><span class="sxs-lookup"><span data-stu-id="703af-173">N/A</span></span>|<span data-ttu-id="703af-174">因要求一个事务而拒绝</span><span class="sxs-lookup"><span data-stu-id="703af-174">Rejected because a transaction is required</span></span>|  
+|<span data-ttu-id="703af-175">无事务</span><span class="sxs-lookup"><span data-stu-id="703af-175">No transaction</span></span>|<span data-ttu-id="703af-176">Allowed</span><span class="sxs-lookup"><span data-stu-id="703af-176">Allowed</span></span>|<span data-ttu-id="703af-177">不可用</span><span class="sxs-lookup"><span data-stu-id="703af-177">N/A</span></span>|<span data-ttu-id="703af-178">进程</span><span class="sxs-lookup"><span data-stu-id="703af-178">Process</span></span>|  
+|<span data-ttu-id="703af-179">无事务</span><span class="sxs-lookup"><span data-stu-id="703af-179">No transaction</span></span>|<span data-ttu-id="703af-180">NotAllowed</span><span class="sxs-lookup"><span data-stu-id="703af-180">NotAllowed</span></span>|<span data-ttu-id="703af-181">不可用</span><span class="sxs-lookup"><span data-stu-id="703af-181">N/A</span></span>|<span data-ttu-id="703af-182">进程</span><span class="sxs-lookup"><span data-stu-id="703af-182">Process</span></span>|  
   
- 虽然协定上的每个方法都有不同的事务流要求，但事务流协议设置的范围处于绑定级别。这意味着，共享同一个终结点（并因此共享同一绑定）的所有方法也共享允许或要求事务流的同一个策略以及同一个事务协议（如果适用）。  
+ <span data-ttu-id="703af-183">虽然协定上的每个方法都有不同的事务流要求，但事务流协议设置的范围处于绑定级别。</span><span class="sxs-lookup"><span data-stu-id="703af-183">While each method on a contract can have different transaction flow requirements, the transaction flow protocol setting is scoped at the level of the binding.</span></span> <span data-ttu-id="703af-184">这意味着，共享同一个终结点（并因此共享同一绑定）的所有方法也共享允许或要求事务流的同一个策略以及同一个事务协议（如果适用）。</span><span class="sxs-lookup"><span data-stu-id="703af-184">This means that all methods that share the same endpoint (and therefore the same binding) also share the same policy allowing or requiring transaction flow, as well as the same transaction protocol if applicable.</span></span>  
   
-## 在方法级别启用事务流  
- 对于服务协定中的所有方法，事务流要求并不总是相同。因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供基于属性的机制以允许表示每个方法的事务流首选项。这通过指定服务操作接受事务标头所处的级别的 <xref:System.ServiceModel.TransactionFlowAttribute> 来实现。如果需要启用事务流，则应使用此属性标记服务协定方法。此属性采用 <xref:System.ServiceModel.TransactionFlowOption> 枚举值之一，其中默认值为 <xref:System.ServiceModel.TransactionFlowOption>。如果指定除 <xref:System.ServiceModel.TransactionFlowOption> 以外的任何值，则要求该方法不要成为单向方法。开发人员可以使用此属性在设计时指定方法级别的事务流要求或约束。  
+## <a name="enabling-transaction-flow-at-the-method-level"></a><span data-ttu-id="703af-185">在方法级别启用事务流</span><span class="sxs-lookup"><span data-stu-id="703af-185">Enabling Transaction Flow at the Method Level</span></span>  
+ <span data-ttu-id="703af-186">对于服务协定中的所有方法，事务流要求并不总是相同。</span><span class="sxs-lookup"><span data-stu-id="703af-186">Transaction flow requirements are not always the same for all methods in a service contract.</span></span> <span data-ttu-id="703af-187">因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供基于属性的机制以允许表示每个方法的事务流首选项。</span><span class="sxs-lookup"><span data-stu-id="703af-187">Therefore, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] also provides an attribute-based mechanism to allow each method's transaction flow preferences to be expressed.</span></span> <span data-ttu-id="703af-188">这通过指定服务操作接受事务标头所处的级别的 <xref:System.ServiceModel.TransactionFlowAttribute> 来实现。</span><span class="sxs-lookup"><span data-stu-id="703af-188">This is achieved by the <xref:System.ServiceModel.TransactionFlowAttribute> that specifies the level in which a service operation accepts a transaction header.</span></span> <span data-ttu-id="703af-189">如果需要启用事务流，则应使用此属性标记服务协定方法。</span><span class="sxs-lookup"><span data-stu-id="703af-189">You should mark your service contract methods with this attribute if you want to enable transaction flow.</span></span> <span data-ttu-id="703af-190">此属性采用 <xref:System.ServiceModel.TransactionFlowOption> 枚举值之一，其中默认值为 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。</span><span class="sxs-lookup"><span data-stu-id="703af-190">This attribute takes one of the values of the <xref:System.ServiceModel.TransactionFlowOption> enumeration, in which the default value is <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>.</span></span> <span data-ttu-id="703af-191">如果指定除 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> 以外的任何值，则要求该方法不要成为单向方法。</span><span class="sxs-lookup"><span data-stu-id="703af-191">If any value except <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> is specified, the method is required to not be one-way.</span></span> <span data-ttu-id="703af-192">开发人员可以使用此属性在设计时指定方法级别的事务流要求或约束。</span><span class="sxs-lookup"><span data-stu-id="703af-192">A developer can use this attribute to specify method-level transaction flow requirements or constraints at design time.</span></span>  
   
-## 在终结点级别启用事务流  
- 除了 <xref:System.ServiceModel.TransactionFlowAttribute> 属性提供的方法级别的事务流设置以外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也为事务流提供终结点范围的设置，以允许管理员可以在较高级别控制事务流。  
+## <a name="enabling-transaction-flow-at-the-endpoint-level"></a><span data-ttu-id="703af-193">在终结点级别启用事务流</span><span class="sxs-lookup"><span data-stu-id="703af-193">Enabling Transaction Flow at the Endpoint Level</span></span>  
+ <span data-ttu-id="703af-194">除了 <xref:System.ServiceModel.TransactionFlowAttribute> 属性提供的方法级别的事务流设置以外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也为事务流提供终结点范围的设置，以允许管理员可以在较高级别控制事务流。</span><span class="sxs-lookup"><span data-stu-id="703af-194">In addition to the method-level transaction flow setting  the <xref:System.ServiceModel.TransactionFlowAttribute> attribute provides, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides an endpoint-wide setting for transaction flow to allow administrators to control transaction flow at a higher level.</span></span>  
   
- 这可以通过 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 来实现，该类允许您在终结点绑定设置中启用或禁用传入事务流，并允许指定传入事务所需的事务协议格式。  
+ <span data-ttu-id="703af-195">这可以通过 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 来实现，该类允许您在终结点绑定设置中启用或禁用传入事务流，并允许指定传入事务所需的事务协议格式。</span><span class="sxs-lookup"><span data-stu-id="703af-195">This is achieved by the <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, which enables you to enable or disable incoming transaction flow in an endpoint’s binding settings, as well as to specify the desired transaction protocol format for incoming transactions.</span></span>  
   
- 如果该绑定已禁用事务流，但对服务协定的操作之一要求一个传入事务，则将在服务启动时引发验证异常。  
+ <span data-ttu-id="703af-196">如果该绑定已禁用事务流，但对服务协定的操作之一要求一个传入事务，则将在服务启动时引发验证异常。</span><span class="sxs-lookup"><span data-stu-id="703af-196">If the binding has disabled transaction flow, but one of the operations on a service contract requires an incoming transaction, then a validation exception is thrown at service startup.</span></span>  
   
- 大多数持续绑定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 都提供某些 `transactionFlow` 和 `transactionProtocol` 特性，以允许您将特定的绑定配置为接受传入事务。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置配置元素的更多信息，请参见 [\<绑定\>](../../../../docs/framework/misc/binding.md) 。  
+ <span data-ttu-id="703af-197">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的大多数持续绑定都包含 `transactionFlow` 和 `transactionProtocol` 特性，以允许您将特定的绑定配置为接受传入事务。</span><span class="sxs-lookup"><span data-stu-id="703af-197">Most of the standing bindings [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides contain the `transactionFlow` and `transactionProtocol` attributes to enable you to configure the specific binding to accept incoming transactions.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="703af-198">设置的配置元素，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)。</span><span class="sxs-lookup"><span data-stu-id="703af-198"> setting the configuration elements, see [\<binding>](../../../../docs/framework/misc/binding.md).</span></span>  
   
- 管理员或部署人员可以使用终结点级别的事务流在部署时使用配置文件来配置事务流要求或约束。  
+ <span data-ttu-id="703af-199">管理员或部署人员可以使用终结点级别的事务流在部署时使用配置文件来配置事务流需求或约束。</span><span class="sxs-lookup"><span data-stu-id="703af-199">An administrator or deployer can use endpoint-level transaction flow to configure transaction flow requirements or constraints at deployment time using the configuration file.</span></span>  
   
-## 安全性  
- 若要确保系统的安全性和完整性，您必须在应用程序之间流动事务时保护消息交换。您不应向无资格参与某一事务的任何应用程序流动或透露该事务的详细信息。  
+## <a name="security"></a><span data-ttu-id="703af-200">安全性</span><span class="sxs-lookup"><span data-stu-id="703af-200">Security</span></span>  
+ <span data-ttu-id="703af-201">若要确保系统的安全性和完整性，您必须在应用程序之间流动事务时保护消息交换。</span><span class="sxs-lookup"><span data-stu-id="703af-201">To ensure system security and integrity, you must secure message exchanges when flowing transactions between applications.</span></span> <span data-ttu-id="703af-202">您不应向无资格参与某一事务的任何应用程序流动或透露该事务的详细信息。</span><span class="sxs-lookup"><span data-stu-id="703af-202">You should not flow or disclose transaction details to any application that is not entitled to participate in the same transaction.</span></span>  
   
- 在使用元数据交换向未知或不受信任的 Web 服务生成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端时，对这些 Web 服务上的操作的调用应取消当前的事务（如可能）。下面的示例演示如何执行此操作。  
+ <span data-ttu-id="703af-203">在使用元数据交换向未知或不受信任的 Web 服务生成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端时，对这些 Web 服务上的操作的调用应取消当前的事务（如可能）。</span><span class="sxs-lookup"><span data-stu-id="703af-203">When generating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients to unknown or untrusted Web services through the use of metadata exchange, calls to operations on these Web services should suppress the current transaction if possible.</span></span> <span data-ttu-id="703af-204">下面的示例演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="703af-204">The following example demonstrates how to do this.</span></span>  
   
 ```  
 //client code which has an ambient transaction  
@@ -92,11 +94,11 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Supp
 //remainder of client code  
 ```  
   
- 此外，还应将这些服务配置为仅接受来自它们已对其进行身份验证和授权的客户端的传入事务。如果传入事务来自高度受信任的客户端，则应仅接受传入事务。  
+ <span data-ttu-id="703af-205">此外，还应将这些服务配置为仅接受来自它们已对其进行身份验证和授权的客户端的传入事务。</span><span class="sxs-lookup"><span data-stu-id="703af-205">In addition, services should be configured to accept incoming transactions only from clients that they have authenticated and authorized.</span></span> <span data-ttu-id="703af-206">如果传入事务来自高度受信任的客户端，则应仅接受传入事务。</span><span class="sxs-lookup"><span data-stu-id="703af-206">Incoming transactions should only be accepted if they come from highly trusted clients.</span></span>  
   
-## 策略断言  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用策略断言来控制事务流。可以在服务的策略文档中找到策略断言，该断言是通过聚合协定、配置和属性而生成的。客户端可以使用 HTTP GET 或 WS\-MetadataExchange 请求\-回复来获取服务的策略文档。然后，客户端可以通过处理策略文档来确定服务协定上的哪些操作可以支持或要求事务流。  
+## <a name="policy-assertions"></a><span data-ttu-id="703af-207">策略断言</span><span class="sxs-lookup"><span data-stu-id="703af-207">Policy Assertions</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="703af-208"> 使用策略断言来控制事务流。</span><span class="sxs-lookup"><span data-stu-id="703af-208"> uses policy assertions to control transaction flow.</span></span> <span data-ttu-id="703af-209">可以在服务的策略文档中找到策略断言，该断言是通过聚合协定、配置和属性而生成的。</span><span class="sxs-lookup"><span data-stu-id="703af-209">Policy assertions can be found in a service’s policy document, which is generated by aggregating contracts, configuration, and attributes.</span></span> <span data-ttu-id="703af-210">客户端可以使用 HTTP GET 或 WS-MetadataExchange 请求-回复来获取服务的策略文档。</span><span class="sxs-lookup"><span data-stu-id="703af-210">The client can obtain the service’s policy document using an HTTP GET or a WS-MetadataExchange request-reply.</span></span> <span data-ttu-id="703af-211">然后，客户端可以通过处理策略文档来确定服务协定上的哪些操作可以支持或要求事务流。</span><span class="sxs-lookup"><span data-stu-id="703af-211">Clients can then process the policy document to determine which operations on a service contract may support or require transaction flow.</span></span>  
   
- 事务流策略断言通过指定客户端应发送给服务以表示事务的 SOAP 标头来影响事务流。所有事务标头都必须标记为 `MustUnderstand` 等于 `true`。以其他方式标记标头的任何消息都将被拒绝，并出现 SOAP 错误。  
+ <span data-ttu-id="703af-212">事务流策略断言通过指定客户端应发送给服务以表示事务的 SOAP 标头来影响事务流。</span><span class="sxs-lookup"><span data-stu-id="703af-212">Transaction flow policy assertions affect transaction flow by specifying the SOAP headers that a client should send to a service to represent a transaction.</span></span> <span data-ttu-id="703af-213">所有事务标头都必须标记为 `MustUnderstand` 等于 `true`。</span><span class="sxs-lookup"><span data-stu-id="703af-213">All transaction headers must be marked with `MustUnderstand` equal to `true`.</span></span> <span data-ttu-id="703af-214">以其他方式标记标头的任何消息都将被拒绝，并出现 SOAP 错误。</span><span class="sxs-lookup"><span data-stu-id="703af-214">Any message with a header marked otherwise is rejected with a SOAP fault.</span></span>  
   
- 一个操作上只能出现一个与事务相关的策略断言。在一个操作上具有多个事务断言的策略文档将被视为无效，并且将被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 拒绝。此外，每个端口类型内仅可出现一个事务协议。操作在一个端口类型内引用多个事务协议的策略文档将被视为无效，并将被 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)拒绝。事务断言出现在输出消息或单向输入消息上的策略文档也将被视为无效。
+ <span data-ttu-id="703af-215">一个操作上只能出现一个与事务相关的策略断言。</span><span class="sxs-lookup"><span data-stu-id="703af-215">Only one transaction-related policy assertion can be present on a single operation.</span></span> <span data-ttu-id="703af-216">在一个操作上具有多个事务断言的策略文档将被视为无效，并且将被 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 拒绝。</span><span class="sxs-lookup"><span data-stu-id="703af-216">Policy documents with more than one transaction assertion on an operation are considered invalid and are rejected by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="703af-217">此外，每个端口类型内仅可出现一个事务协议。</span><span class="sxs-lookup"><span data-stu-id="703af-217">In addition, only a single transaction protocol can be present inside each port type.</span></span> <span data-ttu-id="703af-218">具有引用单个端口类型内的多个事务处理协议的操作的策略文档将被视为无效，并且会拒绝被[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="703af-218">Policy documents with operations referencing more than one transaction protocol inside a single port type are considered invalid, and are rejected by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="703af-219">事务断言出现在输出消息或单向输入消息上的策略文档也将被视为无效。</span><span class="sxs-lookup"><span data-stu-id="703af-219">Policy documents with transaction assertions present on output messages or one-way input messages are also considered invalid.</span></span>

@@ -1,62 +1,68 @@
 ---
-title: "单次批量复制操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "单个批量复制操作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 001bd24d46d0106887ad693534c51d152eedfb1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 单次批量复制操作
-执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。  默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。  
+# <a name="single-bulk-copy-operations"></a><span data-ttu-id="bdf9c-102">单个批量复制操作</span><span class="sxs-lookup"><span data-stu-id="bdf9c-102">Single Bulk Copy Operations</span></span>
+<span data-ttu-id="bdf9c-103">执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-103">The simplest approach to performing a SQL Server bulk copy operation is to perform a single operation against a database.</span></span> <span data-ttu-id="bdf9c-104">默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-104">By default, a bulk copy operation is performed as an isolated operation: the copy operation occurs in a non-transacted way, with no opportunity for rolling it back.</span></span>  
   
 > [!NOTE]
->  如果需要在出错时回滚批量复制的全部或部分，可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的事务，或在现有事务中执行批量复制操作。  如果连接在 **System.Transactions** 事务中（显式或隐式）登记，**SqlBulkCopy** 也将适用于 <xref:System.Transactions>。  
+>  <span data-ttu-id="bdf9c-105">如果需要在出错时回滚批量复制的全部或部分，可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 管理的事务，或在现有事务中执行批量复制操作。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-105">If you need to roll back all or part of the bulk copy when an error occurs, you can either use a <xref:System.Data.SqlClient.SqlBulkCopy>-managed transaction, or perform the bulk copy operation within an existing transaction.</span></span> <span data-ttu-id="bdf9c-106">**SqlBulkCopy**还会使用<xref:System.Transactions>如果连接将登记 （隐式或显式） 到**System.Transactions**事务。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-106">**SqlBulkCopy** will also work with <xref:System.Transactions> if the connection is enlisted (implicitly or explicitly) into a **System.Transactions** transaction.</span></span>  
 >   
->  有关详细信息，请参阅[事务和批量复制操作](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)。  
+>  <span data-ttu-id="bdf9c-107">有关详细信息，请参阅[事务和批量复制操作](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-107">For more information, see [Transaction and Bulk Copy Operations](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).</span></span>  
   
- 执行批量复制操作的一般步骤如下所示：  
+ <span data-ttu-id="bdf9c-108">执行批量复制操作的一般步骤如下所示：</span><span class="sxs-lookup"><span data-stu-id="bdf9c-108">The general steps for performing a bulk copy operation are as follows:</span></span>  
   
-1.  连接到源服务器上并获取要复制的数据。  如果可以从 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 对象检索数据，则这些数据还可能来自其他源。  
+1.  <span data-ttu-id="bdf9c-109">连接到源服务器上并获取要复制的数据。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-109">Connect to the source server and obtain the data to be copied.</span></span> <span data-ttu-id="bdf9c-110">如果可以从 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 对象检索数据，则这些数据还可能来自其他源。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-110">Data can also come from other sources, if it can be retrieved from an <xref:System.Data.IDataReader> or <xref:System.Data.DataTable> object.</span></span>  
   
-2.  连接到目标服务器（除非您希望 **SqlBulkCopy** 为您建立连接）。  
+2.  <span data-ttu-id="bdf9c-111">连接到目标服务器 (除非你想**SqlBulkCopy**来为你建立的连接)。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-111">Connect to the destination server (unless you want **SqlBulkCopy** to establish a connection for you).</span></span>  
   
-3.  创建一个 <xref:System.Data.SqlClient.SqlBulkCopy> 对象，设置任何必要的属性。  
+3.  <span data-ttu-id="bdf9c-112">创建一个 <xref:System.Data.SqlClient.SqlBulkCopy> 对象，设置任何必要的属性。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-112">Create a <xref:System.Data.SqlClient.SqlBulkCopy> object, setting any necessary properties.</span></span>  
   
-4.  设置 **DestinationTableName** 属性以指示执行批量插入操作的目标表。  
+4.  <span data-ttu-id="bdf9c-113">设置**DestinationTableName**属性指示的目标表大容量插入操作。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-113">Set the **DestinationTableName** property to indicate the target table for the bulk insert operation.</span></span>  
   
-5.  调用一个 **WriteToServer** 方法。  
+5.  <span data-ttu-id="bdf9c-114">调用之一**WriteToServer**方法。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-114">Call one of the **WriteToServer** methods.</span></span>  
   
-6.  可以选择更新属性并根据需要再次调用 **WriteToServer**。  
+6.  <span data-ttu-id="bdf9c-115">（可选），更新属性并调用**WriteToServer**根据需要再次。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-115">Optionally, update properties and call **WriteToServer** again as necessary.</span></span>  
   
-7.  调用 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或将批量复制操作包装在 `Using` 语句中。  
+7.  <span data-ttu-id="bdf9c-116">调用 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或将批量复制操作包装在 `Using` 语句中。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-116">Call <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, or wrap the bulk copy operations within a `Using` statement.</span></span>  
   
 > [!CAUTION]
->  我们建议源列和目标列的数据类型匹配。  如果数据类型不匹配，则 **SqlBulkCopy** 会尝试使用由 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 部署的规则将每个源值转换为目标数据类型。  转换可能会影响性能，还可能会导致意外的错误。  例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。  
+>  <span data-ttu-id="bdf9c-117">我们建议源列和目标列的数据类型匹配。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-117">We recommend that the source and target column data types match.</span></span> <span data-ttu-id="bdf9c-118">如果数据类型不匹配， **SqlBulkCopy**尝试将每个源值转换为目标数据类型，使用由规则<xref:System.Data.SqlClient.SqlParameter.Value%2A>。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-118">If the data types do not match, **SqlBulkCopy** attempts to convert each source value to the target data type, using the rules employed by <xref:System.Data.SqlClient.SqlParameter.Value%2A>.</span></span> <span data-ttu-id="bdf9c-119">转换可能会影响性能，还可能会导致意外的错误。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-119">Conversions can affect performance, and also can result in unexpected errors.</span></span> <span data-ttu-id="bdf9c-120">例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-120">For example, a `Double` data type can be converted to a `Decimal` data type most of the time, but not always.</span></span>  
   
-## 示例  
- 以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。  在此示例中，<xref:System.Data.SqlClient.SqlDataReader> 用于将数据从 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks** 数据库的 **Production.Product** 表复制到相同数据库的一个类似的表中。  
+## <a name="example"></a><span data-ttu-id="bdf9c-121">示例</span><span class="sxs-lookup"><span data-stu-id="bdf9c-121">Example</span></span>  
+ <span data-ttu-id="bdf9c-122">以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-122">The following console application demonstrates how to load data using the <xref:System.Data.SqlClient.SqlBulkCopy> class.</span></span> <span data-ttu-id="bdf9c-123">在此示例中，<xref:System.Data.SqlClient.SqlDataReader>用于将数据从复制**Production.Product**表中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks**到同一个数据库中的类似表的数据库。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-123">In this example, a <xref:System.Data.SqlClient.SqlDataReader> is used to copy data from the **Production.Product** table in the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]**AdventureWorks** database to a similar table in the same database.</span></span>  
   
 > [!IMPORTANT]
->  除非已按照[批量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)中所述创建了工作表，否则此示例将不会运行。  提供此代码是为了演示仅使用 **SqlBulkCopy** 时的语法。  如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact\-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  
+>  <span data-ttu-id="bdf9c-124">除非你已创建了工作表中所述，将不会运行此示例[批量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-124">This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md).</span></span> <span data-ttu-id="bdf9c-125">提供此代码是为了演示使用的语法**SqlBulkCopy**仅。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-125">This code is provided to demonstrate the syntax for using **SqlBulkCopy** only.</span></span> <span data-ttu-id="bdf9c-126">如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-126">If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.</span></span>  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
   
-## 使用 Transact\-SQL 和命令类执行批量复制操作  
- 以下示例说明如何使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 方法执行 BULK INSERT 语句。  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a><span data-ttu-id="bdf9c-127">使用 Transact-SQL 和命令类执行批量复制操作</span><span class="sxs-lookup"><span data-stu-id="bdf9c-127">Performing a Bulk Copy Operation Using Transact-SQL and the Command Class</span></span>  
+ <span data-ttu-id="bdf9c-128">以下示例说明如何使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 方法执行 BULK INSERT 语句。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-128">The following example illustrates how to use the <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method to execute the BULK INSERT statement.</span></span>  
   
 > [!NOTE]
->  数据源的文件路径相对于服务器。  要成功执行批量复制操作，服务器进程必须具有对该路径的访问权限。  
+>  <span data-ttu-id="bdf9c-129">数据源的文件路径相对于服务器。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-129">The file path for the data source is relative to the server.</span></span> <span data-ttu-id="bdf9c-130">要成功执行批量复制操作，服务器进程必须具有对该路径的访问权限。</span><span class="sxs-lookup"><span data-stu-id="bdf9c-130">The server process must have access to that path in order for the bulk copy operation to succeed.</span></span>  
   
 ```vb  
 Using connection As SqlConnection = New SqlConnection(connectionString)  
@@ -83,6 +89,6 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## 请参阅  
- [SQL Server 中的批量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="bdf9c-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bdf9c-131">See Also</span></span>  
+ [<span data-ttu-id="bdf9c-132">SQL Server 中的大容量复制操作</span><span class="sxs-lookup"><span data-stu-id="bdf9c-132">Bulk Copy Operations in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [<span data-ttu-id="bdf9c-133">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="bdf9c-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

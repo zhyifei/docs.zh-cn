@@ -1,55 +1,58 @@
 ---
-title: "泛型接口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "相等比较 [.NET Framework]"
-  - "泛型接口 [.NET Framework]"
-  - "泛型 [.NET Framework], 接口"
-  - "排序比较 [.NET Framework]"
+title: "泛型接口"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generic interfaces [.NET Framework]
+- equality comparisons [.NET Framework]
+- generics [.NET Framework], interfaces
+- ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 71cc1410a13fc73cce931a063a929ba94aab91be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 泛型接口
-本主题概述跨泛型类型系列提供通用功能的泛型接口。  
+# <a name="generic-interfaces"></a><span data-ttu-id="e47a4-102">泛型接口</span><span class="sxs-lookup"><span data-stu-id="e47a4-102">Generic Interfaces</span></span>
+<span data-ttu-id="e47a4-103">本主题概述跨泛型类型系列提供通用功能的泛型接口。</span><span class="sxs-lookup"><span data-stu-id="e47a4-103">This topic provides an overview of generic interfaces that provide common functionality across families of generic types.</span></span>  
   
-## 泛型接口  
- 泛型接口提供与非泛型接口对应的类型安全接口，用于实现排序比较、相等比较以及泛型集合类型所共享的功能。  
+## <a name="generic-interfaces"></a><span data-ttu-id="e47a4-104">泛型接口</span><span class="sxs-lookup"><span data-stu-id="e47a4-104">Generic Interfaces</span></span>  
+ <span data-ttu-id="e47a4-105">泛型接口提供与非泛型接口对应的类型安全接口，用于实现排序比较、相等比较以及泛型集合类型所共享的功能。</span><span class="sxs-lookup"><span data-stu-id="e47a4-105">Generic interfaces provide type-safe counterparts to nongeneric interfaces for ordering and equality comparisons and for functionality that is shared by generic collection types.</span></span>  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，多个泛型接口的类型参数标记为协变或逆变，这为分配和使用实现这些接口的类型提供了更好的灵活性。  请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+>  <span data-ttu-id="e47a4-106">自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，多个泛型接口的类型参数标记为协变或逆变，这为分配和使用实现这些接口的类型提供了更好的灵活性。</span><span class="sxs-lookup"><span data-stu-id="e47a4-106">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the type parameters of several generic interfaces are marked covariant or contravariant, providing greater flexibility in assigning and using types that implement these interfaces.</span></span> <span data-ttu-id="e47a4-107">请参阅 [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。</span><span class="sxs-lookup"><span data-stu-id="e47a4-107">See [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md).</span></span>  
   
-### 相等比较和排序比较  
- 在 <xref:System> 命名空间中，<xref:System.IComparable%601?displayProperty=fullName> 和 <xref:System.IEquatable%601?displayProperty=fullName> 泛型接口与它们对应的非泛型接口一样，各自定义了用于排序比较和相等比较的方法。  类型通过实现这些接口来提供执行这些比较的能力。  
+### <a name="equality-and-ordering-comparisons"></a><span data-ttu-id="e47a4-108">相等比较和排序比较</span><span class="sxs-lookup"><span data-stu-id="e47a4-108">Equality and Ordering Comparisons</span></span>  
+ <span data-ttu-id="e47a4-109">在 <xref:System> 命名空间中，<xref:System.IComparable%601?displayProperty=nameWithType> 和 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口与它们对应的非泛型接口一样，各自定义了用于排序比较和相等比较的方法。</span><span class="sxs-lookup"><span data-stu-id="e47a4-109">In the <xref:System> namespace, the <xref:System.IComparable%601?displayProperty=nameWithType> and <xref:System.IEquatable%601?displayProperty=nameWithType> generic interfaces, like their nongeneric counterparts, define methods for ordering comparisons and equality comparisons, respectively.</span></span> <span data-ttu-id="e47a4-110">类型通过实现这些接口来提供执行这些比较的能力。</span><span class="sxs-lookup"><span data-stu-id="e47a4-110">Types implement these interfaces to provide the ability to perform such comparisons.</span></span>  
   
- 在 <xref:System.Collections.Generic> 命名空间中，<xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口为没有实现 <xref:System.IComparable%601?displayProperty=fullName> 或 <xref:System.IEquatable%601?displayProperty=fullName> 泛型接口的类型提供一种定义排序比较和相等比较的方式，并为实现了上述泛型接口的类型提供了重新定义这些关系的方式。  这些接口由许多泛型集合类的方法和构造函数使用。  例如，可以将泛型 <xref:System.Collections.Generic.IComparer%601> 对象传递至 <xref:System.Collections.Generic.SortedDictionary%602> 类的构造函数，以便为没有实现泛型 <xref:System.IComparable%601?displayProperty=fullName> 的类型指定排列顺序。  存在 <xref:System.Array.Sort%2A?displayProperty=fullName> 泛型静态方法与通过泛型 <xref:System.Collections.Generic.IComparer%601> 实现对数组和列表进行排序的 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> 实例方法的重载。  
+ <span data-ttu-id="e47a4-111">在 <xref:System.Collections.Generic> 命名空间中，<xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口为没有实现 <xref:System.IComparable%601?displayProperty=nameWithType> 或 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口的类型提供一种定义排序比较和相等比较的方式，并为实现了上述泛型接口的类型提供了重新定义这些关系的方式。</span><span class="sxs-lookup"><span data-stu-id="e47a4-111">In the <xref:System.Collections.Generic> namespace, the <xref:System.Collections.Generic.IComparer%601> and <xref:System.Collections.Generic.IEqualityComparer%601> generic interfaces offer a way to define an ordering or equality comparison for types that do not implement the <xref:System.IComparable%601?displayProperty=nameWithType> or <xref:System.IEquatable%601?displayProperty=nameWithType> generic interface, and they provide a way to redefine those relationships for types that do.</span></span> <span data-ttu-id="e47a4-112">这些接口由许多泛型集合类的方法和构造函数使用。</span><span class="sxs-lookup"><span data-stu-id="e47a4-112">These interfaces are used by methods and constructors of many of the generic collection classes.</span></span> <span data-ttu-id="e47a4-113">例如，可以将泛型 <xref:System.Collections.Generic.IComparer%601> 对象传递至 <xref:System.Collections.Generic.SortedDictionary%602> 类的构造函数，以便为没有实现泛型 <xref:System.IComparable%601?displayProperty=nameWithType> 的类型指定排列顺序。</span><span class="sxs-lookup"><span data-stu-id="e47a4-113">For example, you can pass a generic <xref:System.Collections.Generic.IComparer%601> object to the constructor of the <xref:System.Collections.Generic.SortedDictionary%602> class to specify a sort order for a type that does not implement generic <xref:System.IComparable%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e47a4-114">存在 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 泛型静态方法与通过泛型 <xref:System.Collections.Generic.IComparer%601> 实现对数组和列表进行排序的 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 实例方法的重载。</span><span class="sxs-lookup"><span data-stu-id="e47a4-114">There are overloads of the <xref:System.Array.Sort%2A?displayProperty=nameWithType> generic static method and the <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> instance method for sorting arrays and lists using generic <xref:System.Collections.Generic.IComparer%601> implementations.</span></span>  
   
- <xref:System.Collections.Generic.Comparer%601> 和 <xref:System.Collections.Generic.EqualityComparer%601> 泛型类为 <xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口的实现提供基类，同时还通过其各自的 <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=fullName> 和 <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=fullName> 属性提供默认排序比较和相等比较。  
+ <span data-ttu-id="e47a4-115"><xref:System.Collections.Generic.Comparer%601> 和 <xref:System.Collections.Generic.EqualityComparer%601> 泛型类为 <xref:System.Collections.Generic.IComparer%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601> 泛型接口的实现提供基类，同时还通过其各自的 <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> 属性提供默认排序比较和相等比较。</span><span class="sxs-lookup"><span data-stu-id="e47a4-115">The <xref:System.Collections.Generic.Comparer%601> and <xref:System.Collections.Generic.EqualityComparer%601> generic classes provide base classes for implementations of the <xref:System.Collections.Generic.IComparer%601> and <xref:System.Collections.Generic.IEqualityComparer%601> generic interfaces, and also provide default ordering and equality comparisons through their respective <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> and <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> properties.</span></span>  
   
-### 集合功能  
- <xref:System.Collections.Generic.ICollection%601> 泛型接口是泛型集合类型的基本接口。  它提供添加、删除、复制和枚举元素的基本功能。  <xref:System.Collections.Generic.ICollection%601> 继承自泛型 <xref:System.Collections.Generic.IEnumerable%601> 和非泛型 <xref:System.Collections.IEnumerable>。  
+### <a name="collection-functionality"></a><span data-ttu-id="e47a4-116">集合功能</span><span class="sxs-lookup"><span data-stu-id="e47a4-116">Collection Functionality</span></span>  
+ <span data-ttu-id="e47a4-117"><xref:System.Collections.Generic.ICollection%601> 泛型接口是泛型集合类型的基本接口。</span><span class="sxs-lookup"><span data-stu-id="e47a4-117">The <xref:System.Collections.Generic.ICollection%601> generic interface is the basic interface for generic collection types.</span></span> <span data-ttu-id="e47a4-118">它提供添加、删除、复制和枚举元素的基本功能。</span><span class="sxs-lookup"><span data-stu-id="e47a4-118">It provides basic functionality for adding, removing, copying, and enumerating elements.</span></span> <span data-ttu-id="e47a4-119"><xref:System.Collections.Generic.ICollection%601> 继承自泛型 <xref:System.Collections.Generic.IEnumerable%601> 和非泛型 <xref:System.Collections.IEnumerable>。</span><span class="sxs-lookup"><span data-stu-id="e47a4-119"><xref:System.Collections.Generic.ICollection%601> inherits from both generic <xref:System.Collections.Generic.IEnumerable%601> and nongeneric <xref:System.Collections.IEnumerable>.</span></span>  
   
- <xref:System.Collections.Generic.IList%601> 泛型接口使用索引检索的方法扩展 <xref:System.Collections.Generic.ICollection%601> 泛型接口。  
+ <span data-ttu-id="e47a4-120"><xref:System.Collections.Generic.IList%601> 泛型接口使用索引检索的方法扩展 <xref:System.Collections.Generic.ICollection%601> 泛型接口。</span><span class="sxs-lookup"><span data-stu-id="e47a4-120">The <xref:System.Collections.Generic.IList%601> generic interface extends the <xref:System.Collections.Generic.ICollection%601> generic interface with methods for indexed retrieval.</span></span>  
   
- <xref:System.Collections.Generic.IDictionary%602> 泛型接口使用键控检索的方法扩展 <xref:System.Collections.Generic.ICollection%601> 泛型接口。  .NET Framework 基类库中的泛型字典类型还实现非泛型 <xref:System.Collections.IDictionary> 接口。  
+ <span data-ttu-id="e47a4-121"><xref:System.Collections.Generic.IDictionary%602> 泛型接口使用键控检索的方法扩展 <xref:System.Collections.Generic.ICollection%601> 泛型接口。</span><span class="sxs-lookup"><span data-stu-id="e47a4-121">The <xref:System.Collections.Generic.IDictionary%602> generic interface extends the <xref:System.Collections.Generic.ICollection%601> generic interface with methods for keyed retrieval.</span></span> <span data-ttu-id="e47a4-122">.NET Framework 基类库中的泛型字典类型还实现非泛型 <xref:System.Collections.IDictionary> 接口。</span><span class="sxs-lookup"><span data-stu-id="e47a4-122">Generic dictionary types in the .NET Framework base class library also implement the nongeneric <xref:System.Collections.IDictionary> interface.</span></span>  
   
- <xref:System.Collections.Generic.IEnumerable%601> 泛型接口提供泛型枚举器结构。  泛型枚举器实现的 <xref:System.Collections.Generic.IEnumerator%601> 泛型接口继承自非泛型 <xref:System.Collections.IEnumerator> 接口；<xref:System.Collections.IEnumerator.MoveNext%2A> 和 <xref:System.Collections.IEnumerator.Reset%2A> 成员（不依赖于类型参数 `T`）仅出现在非泛型接口中。  这意味着非泛型接口的任何使用者还可以使用泛型接口。  
+ <span data-ttu-id="e47a4-123"><xref:System.Collections.Generic.IEnumerable%601> 泛型接口提供泛型枚举器结构。</span><span class="sxs-lookup"><span data-stu-id="e47a4-123">The <xref:System.Collections.Generic.IEnumerable%601> generic interface provides a generic enumerator structure.</span></span> <span data-ttu-id="e47a4-124">泛型枚举器实现的 <xref:System.Collections.Generic.IEnumerator%601> 泛型接口继承自非泛型 <xref:System.Collections.IEnumerator> 接口；<xref:System.Collections.IEnumerator.MoveNext%2A> 和 <xref:System.Collections.IEnumerator.Reset%2A> 成员（不依赖于类型参数 `T`）仅出现在非泛型接口中。</span><span class="sxs-lookup"><span data-stu-id="e47a4-124">The <xref:System.Collections.Generic.IEnumerator%601> generic interface implemented by generic enumerators inherits the nongeneric <xref:System.Collections.IEnumerator> interface; the <xref:System.Collections.IEnumerator.MoveNext%2A> and <xref:System.Collections.IEnumerator.Reset%2A> members, which do not depend on the type parameter `T`, appear only on the nongeneric interface.</span></span> <span data-ttu-id="e47a4-125">这意味着非泛型接口的任何使用者还可以使用泛型接口。</span><span class="sxs-lookup"><span data-stu-id="e47a4-125">This means that any consumer of the nongeneric interface can also consume the generic interface.</span></span>  
   
-## 请参阅  
- <xref:System.Collections.Generic?displayProperty=fullName>   
- <xref:System.Collections.ObjectModel?displayProperty=fullName>   
- [泛型](../../../docs/standard/generics/index.md)   
- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)   
- [用于操作数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)   
- [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a><span data-ttu-id="e47a4-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e47a4-126">See Also</span></span>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
+ <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+ [<span data-ttu-id="e47a4-127">泛型</span><span class="sxs-lookup"><span data-stu-id="e47a4-127">Generics</span></span>](../../../docs/standard/generics/index.md)  
+ [<span data-ttu-id="e47a4-128">.NET Framework 中的泛型集合</span><span class="sxs-lookup"><span data-stu-id="e47a4-128">Generic Collections in the .NET Framework</span></span>](../../../docs/standard/generics/collections.md)  
+ [<span data-ttu-id="e47a4-129">用于控制数组和列表的泛型委托</span><span class="sxs-lookup"><span data-stu-id="e47a4-129">Generic Delegates for Manipulating Arrays and Lists</span></span>](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+ [<span data-ttu-id="e47a4-130">协变和逆变</span><span class="sxs-lookup"><span data-stu-id="e47a4-130">Covariance and Contravariance</span></span>](../../../docs/standard/generics/covariance-and-contravariance.md)

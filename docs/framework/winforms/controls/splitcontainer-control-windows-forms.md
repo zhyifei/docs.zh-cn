@@ -1,56 +1,57 @@
 ---
-title: "SplitContainer 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer 控件 [Windows 窗体]"
-  - "拆分窗口"
+title: "SplitContainer 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- splitter windows
+- SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 336243cc4db7039225ba272cac1ba7a3f173f361
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# SplitContainer 控件（Windows 窗体）
-Windows 窗体 `SplitContainer` 控件可视为一个复合控件；它是由可移动条隔开的两个面板。  当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
+# <a name="splitcontainer-control-windows-forms"></a><span data-ttu-id="75907-102">SplitContainer 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="75907-102">SplitContainer Control (Windows Forms)</span></span>
+<span data-ttu-id="75907-103">Windows 窗体 `SplitContainer` 控件可视为一个复合控件；它是由可移动条隔开的两个面板。</span><span class="sxs-lookup"><span data-stu-id="75907-103">The Windows Forms `SplitContainer` control can be thought of as a composite; it is two panels separated by a movable bar.</span></span> <span data-ttu-id="75907-104">当鼠标指针位于条上方时，指针将改变形状以表示条可移动。</span><span class="sxs-lookup"><span data-stu-id="75907-104">When the mouse pointer is over the bar, the pointer changes shape to show that the bar is movable.</span></span>  
   
 > [!NOTE]
->  在**工具箱**中，此控件替代 Visual Studio 早期版本中的 <xref:System.Windows.Forms.Splitter> 控件。  相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 `SplitContainer` 控件。  <xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 `SplitContainer` 控件。  
+>  <span data-ttu-id="75907-105">在**工具箱**，则此控件替代<xref:System.Windows.Forms.Splitter>以前版本的 Visual Studio 中的控件。</span><span class="sxs-lookup"><span data-stu-id="75907-105">In the **Toolbox**, this control replaces the <xref:System.Windows.Forms.Splitter> control that was there in the previous version of Visual Studio.</span></span> <span data-ttu-id="75907-106">相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 `SplitContainer` 控件。</span><span class="sxs-lookup"><span data-stu-id="75907-106">The `SplitContainer` control is much preferred over the <xref:System.Windows.Forms.Splitter> control.</span></span> <span data-ttu-id="75907-107"><xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 `SplitContainer` 控件。</span><span class="sxs-lookup"><span data-stu-id="75907-107">The <xref:System.Windows.Forms.Splitter> class is still included in the .NET Framework for compatibility with existing applications, but we strongly encourage you to use the `SplitContainer` control for new projects.</span></span>  
   
- `SplitContainer` 控件允许你创建复杂的用户界面；通常情况下，在一个面板中的选择将决定显示在另一个面板中的对象。  这种安排对于显示和浏览信息非常有效。  拥有两个面板使你能够在区域、条或“拆分器”中聚合信息，使用户可轻松地调整面板大小。  
+ <span data-ttu-id="75907-108">`SplitContainer` 控件允许你创建复杂的用户界面；通常情况下，在一个面板中的选择将决定显示在另一个面板中的对象。</span><span class="sxs-lookup"><span data-stu-id="75907-108">The `SplitContainer` control lets you create complex user interfaces; often, a selection in one panel determines what objects are shown in the other panel.</span></span> <span data-ttu-id="75907-109">这种安排对于显示和浏览信息非常有效。</span><span class="sxs-lookup"><span data-stu-id="75907-109">This arrangement is very effective for displaying and browsing information.</span></span> <span data-ttu-id="75907-110">拥有两个面板使你能够在区域、条或“拆分器”中聚合信息，使用户可轻松地调整面板大小。</span><span class="sxs-lookup"><span data-stu-id="75907-110">Having two panels allow you to aggregate information in areas, and the bar, or "splitter," makes it easy for users to resize the panels.</span></span>  
   
-## 本节内容  
- [SplitContainer 控件概述](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
- 介绍 `SplitContainer` 控件并描述常用的属性、方法和事件。  
+## <a name="in-this-section"></a><span data-ttu-id="75907-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="75907-111">In This Section</span></span>  
+ [<span data-ttu-id="75907-112">SplitContainer 控件概述</span><span class="sxs-lookup"><span data-stu-id="75907-112">SplitContainer Control Overview</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
+ <span data-ttu-id="75907-113">介绍 `SplitContainer` 控件并描述常用的属性、方法和事件。</span><span class="sxs-lookup"><span data-stu-id="75907-113">Introduces the `SplitContainer` control and describes the commonly used properties, methods, and events.</span></span>  
   
- [如何：定义拆分窗口中的大小调整和定位行为](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- 描述如何在 `SplitContainer` 控件中控制拆分器。  
+ [<span data-ttu-id="75907-114">如何：定义拆分窗口中的重设大小和定位行为</span><span class="sxs-lookup"><span data-stu-id="75907-114">How to: Define Resize and Positioning Behavior in a Split Window</span></span>](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ <span data-ttu-id="75907-115">描述如何在 `SplitContainer` 控件中控制拆分器。</span><span class="sxs-lookup"><span data-stu-id="75907-115">Describes how to control the splitter within the `SplitContainer` control.</span></span>  
   
- [如何：水平拆分窗口](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- 描述如何在 `SplitContainer` 控件中控制拆分器的方向。  
+ [<span data-ttu-id="75907-116">如何：水平拆分窗口</span><span class="sxs-lookup"><span data-stu-id="75907-116">How to: Split a Window Horizontally</span></span>](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ <span data-ttu-id="75907-117">描述如何在 `SplitContainer` 控件中控制拆分器的方向。</span><span class="sxs-lookup"><span data-stu-id="75907-117">Describes how to control the orientation of the splitter within the `SplitContainer` control.</span></span>  
   
- [如何：用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- 创建一个与 Microsoft Outlook 中使用的多窗格用户界面相似的多窗格用户界面。  
+ [<span data-ttu-id="75907-118">如何：使用 Windows 窗体创建多窗格用户界面</span><span class="sxs-lookup"><span data-stu-id="75907-118">How to: Create a Multipane User Interface with Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ <span data-ttu-id="75907-119">创建一个与 Microsoft Outlook 中使用的多窗格用户界面相似的多窗格用户界面。</span><span class="sxs-lookup"><span data-stu-id="75907-119">Creates a multi-pane user interface that is similar to the one used in Microsoft Outlook.</span></span>  
   
- 另请参阅[如何：使用设计器水平拆分窗口](http://msdn.microsoft.com/library/ms233667%20\(v=vs.110\))，[如何：在 Windows 窗体上创建 Windows 资源管理器样式的界面](http://msdn.microsoft.com/library/zh2fe5a5%20\(v=vs.110\))，[如何：使用设计器用 Windows 窗体创建多窗格用户界面](http://msdn.microsoft.com/library/ms233661%20\(v=vs.110\))。  
+ <span data-ttu-id="75907-120">另请参阅[如何： 拆分窗口水平使用设计器](http://msdn.microsoft.com/library/ms233667\(v=vs.110\))，[如何： 在 Windows 窗体上创建 Windows 资源管理器样式界面](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\))，[如何： 创建与 Multipane 用户界面使用设计器的 Windows 窗体](http://msdn.microsoft.com/library/ms233661\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="75907-120">Also see [How to: Split a Window Horizontally Using the Designer](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [How to: Create a Windows Explorer–Style Interface on a Windows Form](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [How to: Create a Multipane User Interface with Windows Forms Using the Designer](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).</span></span>  
   
-## 参考  
- <xref:System.Windows.Forms.SplitContainer> 类  
- 对此类进行描述，并提供指向其所有成员的链接。  
+## <a name="reference"></a><span data-ttu-id="75907-121">参考</span><span class="sxs-lookup"><span data-stu-id="75907-121">Reference</span></span>  
+ <span data-ttu-id="75907-122"><xref:System.Windows.Forms.SplitContainer> 类</span><span class="sxs-lookup"><span data-stu-id="75907-122"><xref:System.Windows.Forms.SplitContainer> class</span></span>  
+ <span data-ttu-id="75907-123">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="75907-123">Describes this class and has links to all its members.</span></span>  
   
-## 相关章节  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
- 提供指向有关专用于使用 Windows 窗体的控件的主题链接。  
+## <a name="related-sections"></a><span data-ttu-id="75907-124">相关章节</span><span class="sxs-lookup"><span data-stu-id="75907-124">Related Sections</span></span>  
+ [<span data-ttu-id="75907-125">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="75907-125">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="75907-126">提供指向有关专用于使用 Windows 窗体的控件的主题链接。</span><span class="sxs-lookup"><span data-stu-id="75907-126">Provides links to topics about the controls designed specifically to work with Windows Forms.</span></span>  
   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。
+ [<span data-ttu-id="75907-127">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="75907-127">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="75907-128">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="75907-128">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

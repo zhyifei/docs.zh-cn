@@ -1,103 +1,106 @@
 ---
-title: "选择消息交换模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "选择消息交换模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fd45d9522d40c0760c3aa231b6a0f07c9bcbc9af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 选择消息交换模式
-写自定义传输的第一步是决定您正在开发的通道要求哪一种消息交换模式（或 MEP）。本主题说明可用的选项，并讨论各种不同的要求。这是[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)中说明的通道开发任务列表中的第一项任务。  
+# <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="f3556-102">选择消息交换模式</span><span class="sxs-lookup"><span data-stu-id="f3556-102">Choosing a Message Exchange Pattern</span></span>
+<span data-ttu-id="f3556-103">编写自定义传输的第一步是确定哪个*消息交换模式*（或 Mep） 所需的正在开发的通道。</span><span class="sxs-lookup"><span data-stu-id="f3556-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="f3556-104">本主题说明可用的选项，并讨论各种不同的需求。</span><span class="sxs-lookup"><span data-stu-id="f3556-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="f3556-105">这是通道开发任务列表中所述的第一个任务[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。</span><span class="sxs-lookup"><span data-stu-id="f3556-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  
   
-## 六种消息交换模式  
- 有三种 MEP 可选择：  
+## <a name="six-message-exchange-patterns"></a><span data-ttu-id="f3556-106">六种消息交换模式</span><span class="sxs-lookup"><span data-stu-id="f3556-106">Six Message Exchange Patterns</span></span>  
+ <span data-ttu-id="f3556-107">有三种 MEP 可供选择：</span><span class="sxs-lookup"><span data-stu-id="f3556-107">There are three MEPs to choose from:</span></span>  
   
--   数据报（<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>）  
+-   <span data-ttu-id="f3556-108">数据报（<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>）</span><span class="sxs-lookup"><span data-stu-id="f3556-108">Datagram (<xref:System.ServiceModel.Channels.IInputChannel> and <xref:System.ServiceModel.Channels.IOutputChannel>)</span></span>  
   
-     使用数据报 MEP 时，客户端使用“启动后不管”的交换形式发送消息。“启动后不管”交换形式是一种要求对成功传递做带外确认的交换形式。消息在传输过程中可能会丢失，而永远不能到达服务。如果在客户端成功完成发送操作，这并不保证远程终结点已经收到消息。数据报是消息传递的基本构造块，因为您可以在它上面构建自己的协议，包括可靠的协议和安全的协议。客户端数据报通道实现 <xref:System.ServiceModel.Channels.IOutputChannel> 接口，而服务数据报通道实现 <xref:System.ServiceModel.Channels.IInputChannel> 接口。  
+     <span data-ttu-id="f3556-109">在使用数据报 MEP 时，客户端发送消息使用*发后不理*exchange。</span><span class="sxs-lookup"><span data-stu-id="f3556-109">When using a datagram MEP, a client sends a message using a *fire and forget* exchange.</span></span> <span data-ttu-id="f3556-110">“发后不理”交换形式是一种要求带外确认成功传递的交换形式。</span><span class="sxs-lookup"><span data-stu-id="f3556-110">A fire and forget exchange is one that requires out-of-band confirmation of successful delivery.</span></span> <span data-ttu-id="f3556-111">消息在传输过程中可能会丢失，而永远不能到达服务。</span><span class="sxs-lookup"><span data-stu-id="f3556-111">The message might be lost in transit and never reach the service.</span></span> <span data-ttu-id="f3556-112">如果在客户端成功完成发送操作，这并不保证远程终结点已经收到消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-112">If the send operation completes successfully at the client end, it does not guarantee that the remote endpoint has received the message.</span></span> <span data-ttu-id="f3556-113">数据报是消息传递的基本构造块，因为您可以在它上面构建自己的协议，包括可靠的协议和安全的协议。</span><span class="sxs-lookup"><span data-stu-id="f3556-113">The datagram is a fundamental building block for messaging, as you can build your own protocols on top of it—including reliable protocols and secure protocols.</span></span> <span data-ttu-id="f3556-114">客户端数据报通道实现 <xref:System.ServiceModel.Channels.IOutputChannel> 接口，而服务数据报通道实现 <xref:System.ServiceModel.Channels.IInputChannel> 接口。</span><span class="sxs-lookup"><span data-stu-id="f3556-114">Client datagram channels implement the <xref:System.ServiceModel.Channels.IOutputChannel> interface and service datagram channels implement the <xref:System.ServiceModel.Channels.IInputChannel> interface.</span></span>  
   
--   请求\-响应（<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>）  
+-   <span data-ttu-id="f3556-115">请求-响应（<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>）</span><span class="sxs-lookup"><span data-stu-id="f3556-115">Request-Response (<xref:System.ServiceModel.Channels.IRequestChannel> and <xref:System.ServiceModel.Channels.IReplyChannel>)</span></span>  
   
-     在此 MEP 中会发送一个消息并收到一个答复。此模式由请求\-响应对组成。请求\-响应调用的示例是远程过程调用 \(RPC\) 和浏览器的 GET 请求。此模式也称为半双工。在此 MEP 中，客户端通道实现 <xref:System.ServiceModel.Channels.IRequestChannel>，而服务通道实现 <xref:System.ServiceModel.Channels.IReplyChannel>。  
+     <span data-ttu-id="f3556-116">在此 MEP 中，将发送一个消息并接收一个答复。</span><span class="sxs-lookup"><span data-stu-id="f3556-116">In this MEP, a message is sent, and a reply is received.</span></span> <span data-ttu-id="f3556-117">此模式由请求-响应对组成。</span><span class="sxs-lookup"><span data-stu-id="f3556-117">The pattern consists of request-response pairs.</span></span> <span data-ttu-id="f3556-118">请求-响应调用的示例包括远程过程调用 (RPC) 和浏览器的 GET 请求。</span><span class="sxs-lookup"><span data-stu-id="f3556-118">Examples of request-response calls are remote procedure calls (RPC) and browser GET requests.</span></span> <span data-ttu-id="f3556-119">此模式也称为半双工。</span><span class="sxs-lookup"><span data-stu-id="f3556-119">This pattern is also known as half-duplex.</span></span> <span data-ttu-id="f3556-120">在此 MEP 中，客户端通道实现 <xref:System.ServiceModel.Channels.IRequestChannel>，而服务通道实现 <xref:System.ServiceModel.Channels.IReplyChannel>。</span><span class="sxs-lookup"><span data-stu-id="f3556-120">In this MEP, client channels implement <xref:System.ServiceModel.Channels.IRequestChannel> and service channels implement <xref:System.ServiceModel.Channels.IReplyChannel>.</span></span>  
   
--   双工 \(<xref:System.ServiceModel.Channels.IDuplexChannel>\)  
+-   <span data-ttu-id="f3556-121">双工 (<xref:System.ServiceModel.Channels.IDuplexChannel>)</span><span class="sxs-lookup"><span data-stu-id="f3556-121">Duplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)</span></span>  
   
-     双工 MEP 允许客户端发送任意数量的消息，并且这些消息可以以任何顺序接收。双工 MEP 就像电话通话，所说的每一个字都是一条消息。由于在这种 MEP 下双方都能发送和接收，由客户端和服务通道实现的接口是 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
+     <span data-ttu-id="f3556-122">通过双工 MEP，客户端可以发送任意数目的消息，并以任意顺序接收消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-122">The duplex MEP allows an arbitrary number of messages to be sent by a client and received in any order.</span></span> <span data-ttu-id="f3556-123">双工 MEP 就像电话通话，所说的每一个字都是一条消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-123">The duplex MEP is like a phone conversation, where each word being spoken is a message.</span></span> <span data-ttu-id="f3556-124">由于在这种 MEP 中两端都可发送和接收，因此，由客户端和服务通道实现的接口为 <xref:System.ServiceModel.Channels.IDuplexChannel>。</span><span class="sxs-lookup"><span data-stu-id="f3556-124">Because both sides can send and receive in this MEP, the interface implemented by the client and service channels is <xref:System.ServiceModel.Channels.IDuplexChannel>.</span></span>  
   
- ![选择消息交换模式](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc\_BasicThreeMEPsc")  
-三种基本的消息交换模式。从上到下：数据报、请求\-响应和双工。  
+ <span data-ttu-id="f3556-125">![选择消息交换模式](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")</span><span class="sxs-lookup"><span data-stu-id="f3556-125">![Choosing a message exchange pattern](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")</span></span>  
+<span data-ttu-id="f3556-126">三种基本的消息交换模式。</span><span class="sxs-lookup"><span data-stu-id="f3556-126">The three basic message exchange patterns.</span></span> <span data-ttu-id="f3556-127">从上到下：数据报、请求-响应和双工。</span><span class="sxs-lookup"><span data-stu-id="f3556-127">Top to bottom: datagram, request-response, and duplex.</span></span>  
   
- 这些 MEP 还都能支持会话。会话（和<xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=fullName> 类型的 <xref:System.ServiceModel.Channels.ISession?displayProperty=fullName> 的实现）会将通道上发送和接收的所有消息关联在一起。请求\-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。与此形成对照的是，支持会话的请求\-响应模式意味着该通道上的所有请求\-响应对都是相关的。这使您总共有六种 MEP 可以选择：  
+ <span data-ttu-id="f3556-128">每个 Mep 还可以支持*会话*。</span><span class="sxs-lookup"><span data-stu-id="f3556-128">Each of these MEPs can also support *sessions*.</span></span> <span data-ttu-id="f3556-129">会话（和 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType><xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>类型的 的实现）会将通道上发送和接收的所有消息关联在一起。</span><span class="sxs-lookup"><span data-stu-id="f3556-129">A session (and implementation of <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> of type <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) correlates all messages sent and received on a channel.</span></span> <span data-ttu-id="f3556-130">请求-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。</span><span class="sxs-lookup"><span data-stu-id="f3556-130">The request-response pattern is a stand-alone two-message session, as the request and reply are correlated.</span></span> <span data-ttu-id="f3556-131">与此形成对照的是，支持会话的请求-响应模式意味着该通道上的所有请求-响应对都是相关的。</span><span class="sxs-lookup"><span data-stu-id="f3556-131">In contrast, the request-response pattern that supports sessions implies that all request/response pairs on that channel are correlated with each other.</span></span> <span data-ttu-id="f3556-132">这使您总共有六种 MEP 可以选择：</span><span class="sxs-lookup"><span data-stu-id="f3556-132">This gives you a total of six MEPs to choose from:</span></span>  
   
--   数据报  
+-   <span data-ttu-id="f3556-133">数据报</span><span class="sxs-lookup"><span data-stu-id="f3556-133">Datagram</span></span>  
   
--   请求\-响应  
+-   <span data-ttu-id="f3556-134">请求-响应</span><span class="sxs-lookup"><span data-stu-id="f3556-134">Request-response</span></span>  
   
--   双工  
+-   <span data-ttu-id="f3556-135">双工</span><span class="sxs-lookup"><span data-stu-id="f3556-135">Duplex</span></span>  
   
--   带会话的数据报  
+-   <span data-ttu-id="f3556-136">带会话的数据报</span><span class="sxs-lookup"><span data-stu-id="f3556-136">Datagram with sessions</span></span>  
   
--   带会话的请求\-响应  
+-   <span data-ttu-id="f3556-137">带会话的请求-响应</span><span class="sxs-lookup"><span data-stu-id="f3556-137">Request-response with sessions</span></span>  
   
--   带会话的双工  
+-   <span data-ttu-id="f3556-138">带会话的双工</span><span class="sxs-lookup"><span data-stu-id="f3556-138">Duplex with sessions</span></span>  
   
 > [!NOTE]
->  对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。  
+>  <span data-ttu-id="f3556-139">对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。</span><span class="sxs-lookup"><span data-stu-id="f3556-139">For the UDP transport, the only MEP that is supported is datagram, because UDP is inherently a fire and forget protocol.</span></span>  
   
-## 会话和会话通道  
- 在网络世界里，有面向连接的协议（例如 TCP）和无连接的协议（例如 UDP）。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用会话的术语来表示类似的连接的逻辑抽象。会话 WCF 协议类似于面向连接的网络协议，而无会话 WCF 协议则类似于无连接的网络协议。  
+## <a name="sessions-and-sessionful-channels"></a><span data-ttu-id="f3556-140">会话和会话通道</span><span class="sxs-lookup"><span data-stu-id="f3556-140">Sessions and Sessionful Channels</span></span>  
+ <span data-ttu-id="f3556-141">在网络世界中，有面向连接的协议（例如 TCP）和无连接的协议（例如 UDP）。</span><span class="sxs-lookup"><span data-stu-id="f3556-141">In the networking world, there are connection-oriented protocols (for example, TCP) and connection-less protocols (for example, UDP).</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f3556-142"> 使用术语“会话”来表示与连接类似的逻辑抽象。</span><span class="sxs-lookup"><span data-stu-id="f3556-142"> uses the term session to mean a connection-like logical abstraction.</span></span> <span data-ttu-id="f3556-143">会话 WCF 协议类似于面向连接的网络协议，而无会话 WCF 协议则类似于无连接的网络协议。</span><span class="sxs-lookup"><span data-stu-id="f3556-143">Sessionful WCF protocols are similar to connection-oriented network protocols and sessionless WCF protocols are similar to connection-less network protocols.</span></span>  
   
- 在通道目标模型中，每个逻辑会话都表现为一个会话通道的实例。因此，由客户端创建并在服务端接受的每个新会话都与每一端的一个新会话通道相对应。下面的关系图的上部显示无会话通道的结构，下部显示会话通道的结构。  
+ <span data-ttu-id="f3556-144">在通道目标模型中，每个逻辑会话都表现为一个会话通道的实例。</span><span class="sxs-lookup"><span data-stu-id="f3556-144">In the channel object model, each logical session manifests as an instance of a sessionful channel.</span></span> <span data-ttu-id="f3556-145">因此，由客户端创建并在服务端接受的每个新会话都与每一端的一个新会话通道相对应。</span><span class="sxs-lookup"><span data-stu-id="f3556-145">Therefore every new session created by the client, and accepted on the service, corresponds to a new sessionful channel on each side.</span></span> <span data-ttu-id="f3556-146">下面的关系图的上部显示无会话通道的结构，下部显示会话通道的结构。</span><span class="sxs-lookup"><span data-stu-id="f3556-146">The following diagram shows, on the top, the structure of sessionless channels, and on the bottom, the structure of sessionful channels.</span></span>  
   
- ![选择消息交换模式](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc\_SessionAndSessionlessChannelsc")  
+ <span data-ttu-id="f3556-147">![选择消息交换模式](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")</span><span class="sxs-lookup"><span data-stu-id="f3556-147">![Choosing a message exchange pattern](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")</span></span>  
   
- 客户端创建新的会话通道并发送消息。在服务端，通道侦听器收到此消息并检测到它属于新会话，于是就创建新的会话通道，并将其交给应用程序（以响应在通道侦听器上调用 AcceptChannel 的应用程序）。然后应用程序会收到此消息，以及通过同一个会话通道在同一个会话中发送的所有后续消息。  
+ <span data-ttu-id="f3556-148">客户端创建新的会话通道并发送消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-148">A client creates a new sessionful channel and sends a message.</span></span> <span data-ttu-id="f3556-149">在服务端，通道侦听器收到此消息并检测到它属于新会话，于是就创建新的会话通道，并将其交给应用程序（以响应在通道侦听器上调用 AcceptChannel 的应用程序）。</span><span class="sxs-lookup"><span data-stu-id="f3556-149">On the service side, the channel listener receives this message and detects that it belongs to a new session so it creates a new sessionful channel and hands it to the application (in response to the application calling AcceptChannel on the channel listener).</span></span> <span data-ttu-id="f3556-150">然后应用程序会收到此消息，以及通过同一个会话通道在同一个会话中发送的所有后续消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-150">The application then receives this message and all subsequent messages sent in the same session through the same sessionful channel.</span></span>  
   
- 另一个客户端（或同一个客户端）创建新的会话通道并发送消息。通道侦听器检测到此消息属于新的会话，于是便创建新会话通道；此过程不断重复。  
+ <span data-ttu-id="f3556-151">另一个客户端（或同一个客户端）创建新的会话通道并发送消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-151">Another client (or the same client) creates a new sessionful and sends a message.</span></span> <span data-ttu-id="f3556-152">通道侦听器检测到此消息属于新的会话，于是便创建新会话通道；此过程不断重复。</span><span class="sxs-lookup"><span data-stu-id="f3556-152">The channel listener detects this message is in a new session and creates a new sessionful channel and the process repeats.</span></span>  
   
- 没有会话，就没有通道和会话之间的相关性。因此通道侦听器只创建一个通道，接收到的所有消息都通过该通道传递给应用程序。也不会有消息的排序，因为没有会话可供在其中维护消息顺序。上图的上部描述了无会话消息交换。  
+ <span data-ttu-id="f3556-153">没有会话，就没有通道和会话之间的相关性。</span><span class="sxs-lookup"><span data-stu-id="f3556-153">Without sessions, there is no correlation between channels and sessions.</span></span> <span data-ttu-id="f3556-154">因此通道侦听器只创建一个通道，接收到的所有消息都通过该通道传递给应用程序。</span><span class="sxs-lookup"><span data-stu-id="f3556-154">Therefore a channel listener creates only one channel through which all received messages are delivered to the application.</span></span> <span data-ttu-id="f3556-155">也不会有消息的排序，因为没有会话可供在其中维护消息顺序。</span><span class="sxs-lookup"><span data-stu-id="f3556-155">There is also no message ordering because there is no session within which to maintain message order.</span></span> <span data-ttu-id="f3556-156">上图的上部描述了无会话消息交换。</span><span class="sxs-lookup"><span data-stu-id="f3556-156">The top portion of the preceding graphic illustrates a sessionless message exchange.</span></span>  
   
-## 开始和终止会话  
- 只需创建一个新的会话通道，即可在客户端开始会话。当服务收到在新会话中发送的消息时，会话即在服务上开始。同样，关闭或中止会话通道即可终止会话。  
+## <a name="starting-and-terminating-sessions"></a><span data-ttu-id="f3556-157">开始和终止会话</span><span class="sxs-lookup"><span data-stu-id="f3556-157">Starting and Terminating Sessions</span></span>  
+ <span data-ttu-id="f3556-158">只需创建一个新的会话通道，即可在客户端开始会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-158">Sessions are started on the client by simply creating a new sessionful channel.</span></span> <span data-ttu-id="f3556-159">当服务收到在新会话中发送的消息时，会话即在服务上开始。</span><span class="sxs-lookup"><span data-stu-id="f3556-159">They are started on the service when the service receives a message that was sent in a new session.</span></span> <span data-ttu-id="f3556-160">同样，关闭或中止会话通道即可终止会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-160">Likewise, sessions are terminated by closing or aborting a sessionful channel.</span></span>  
   
- 这种情况的例外是 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>，它用于以双工会话通信模式发送和接收消息。有可能一端希望停止发送消息，但是希望继续接收消息，因此在使用 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 时，有一种机制能让您关闭输出会话，显示您不再发送更多消息，但是保持输入会话打开，以允许您继续接收消息。  
+ <span data-ttu-id="f3556-161">这种情况的例外是 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>，它用于以双工会话通信模式发送和接收消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-161">The exception to this is <xref:System.ServiceModel.Channels.IDuplexSessionChannel> which is used for both sending and receiving messages in a duplex, sessionful communication pattern.</span></span> <span data-ttu-id="f3556-162">有可能一端希望停止发送消息，但是希望继续接收消息，因此在使用 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 时，有一种机制能让您关闭输出会话，显示您不再发送更多消息，但是保持输入会话打开，以允许您继续接收消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-162">It is possible that one side will want to stop sending messages but continue to receive messages therefore when using <xref:System.ServiceModel.Channels.IDuplexSessionChannel> there is a mechanism that lets you close the output session indicating you will not send any more messages but keep the input session opened allowing you to continue to receive messages.</span></span>  
   
- 通常是在传出端关闭对话，而不在传入端关闭对话。也就是说，会话输出通道可能关闭，从而完全终止会话。关闭会话输出通道会使相应的会话输入通道向在 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=fullName> 上调用 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的应用程序返回空值。  
+ <span data-ttu-id="f3556-163">通常是在传出端关闭对话，而不在传入端关闭对话。</span><span class="sxs-lookup"><span data-stu-id="f3556-163">In general, sessions are closed on the outgoing side and not on the incoming side.</span></span> <span data-ttu-id="f3556-164">也就是说，会话输出通道可能关闭，从而完全终止会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-164">That is, sessionful output channels can be closed, thereby cleanly terminating the session.</span></span> <span data-ttu-id="f3556-165">关闭会话输出通道会使相应的会话输入通道向在 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> 上调用 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的应用程序返回空值。</span><span class="sxs-lookup"><span data-stu-id="f3556-165">Closing a sessionful output channel causes the corresponding sessionful input channel to return null to the application calling <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> on the <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.</span></span>  
   
- 然而会话输入通道不应该关闭，除非 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=fullName> 上的 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 返回空值，指示该会话已经关闭。如果 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=fullName> 上的 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 没有返回空值，则关闭会话输入通道可能引发异常，因为当通道关闭时可能收到意外的消息。如果在发送方终止会话之前接收方希望终止会话，接收方应该在输入通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>，这可以突然终止会话。  
+ <span data-ttu-id="f3556-166">然而会话输入通道不应该关闭，除非 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> 上的 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 返回空值，指示该会话已经关闭。</span><span class="sxs-lookup"><span data-stu-id="f3556-166">However sessionful input channels should not be closed unless <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> on the <xref:System.ServiceModel.Channels.IDuplexSessionChannel> returns null, indicating that the session is already closed.</span></span> <span data-ttu-id="f3556-167">如果 <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> 上的 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 没有返回空值，则关闭会话输入通道可能引发异常，因为当通道关闭时可能收到意外的消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-167">If <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> on the <xref:System.ServiceModel.Channels.IDuplexSessionChannel> has not returned null, closing a sessionful input channel may throw an exception because it may receive unexpected messages while closing.</span></span> <span data-ttu-id="f3556-168">如果在发送方终止会话之前接收方希望终止会话，接收方应该在输入通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>，这可以突然终止会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-168">If a receiver wishes to terminate a session before the sender does, it should call <xref:System.ServiceModel.ICommunicationObject.Abort%2A> on the input channel, which abruptly terminates the session.</span></span>  
   
-## 编写会话通道  
- 作为会话通道作者，有几件事是您的通道为了提供会话所必须做的。在发送端，您的通道需要：  
+## <a name="writing-sessionful-channels"></a><span data-ttu-id="f3556-169">编写会话通道</span><span class="sxs-lookup"><span data-stu-id="f3556-169">Writing Sessionful Channels</span></span>  
+ <span data-ttu-id="f3556-170">作为会话通道作者，有几件事是您的通道为了提供会话所必须做的。</span><span class="sxs-lookup"><span data-stu-id="f3556-170">As a sessionful channel author, there are a few things your channel must do to provide sessions.</span></span> <span data-ttu-id="f3556-171">在发送端，您的通道需要：</span><span class="sxs-lookup"><span data-stu-id="f3556-171">On the send side, your channel needs to:</span></span>  
   
--   为每个新通道创建一个新会话，并将其与一个新的会话标识关联，该标识是一个唯一的字符串。或者从堆栈中位于您下方的会话通道获取一个新会话。  
+-   <span data-ttu-id="f3556-172">为每个新通道创建一个新会话，并将其与一个新的会话标识关联，该标识是一个唯一的字符串。</span><span class="sxs-lookup"><span data-stu-id="f3556-172">For each new channel, create a new session and associate it with a new session id which is a unique string.</span></span> <span data-ttu-id="f3556-173">或者从堆栈中位于您下方的会话通道获取一个新会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-173">Or obtain a new session from the sessionful channel below you in the stack.</span></span>  
   
--   对于用此通道发送的每条消息，如果您的通道创建了会话（而不是从您下面的层获取会话），您需要将此消息与会话关联。对于协议通道，这通常通过添加 SOAP 标头来完成。对于传输通道，这通常通过创建一个新的传输连接或向组帧协议添加会话信息来完成。  
+-   <span data-ttu-id="f3556-174">对于用此通道发送的每条消息，如果您的通道创建了会话（而不是从您下面的层获取会话），您需要将此消息与会话关联。</span><span class="sxs-lookup"><span data-stu-id="f3556-174">For each message sent using this channel, if your channel created the session (as opposed to obtaining it from the layer below you), you need to associate the message with the session.</span></span> <span data-ttu-id="f3556-175">对于协议通道，这通常通过添加 SOAP 标头来完成。</span><span class="sxs-lookup"><span data-stu-id="f3556-175">For protocol channels, this is typically done by adding a SOAP header.</span></span> <span data-ttu-id="f3556-176">对于传输通道，这通常通过创建一个新的传输连接或向组帧协议添加会话信息来完成。</span><span class="sxs-lookup"><span data-stu-id="f3556-176">For transport channels, this is typically done by creating a new transport connection or adding session information to the framing protocol.</span></span>  
   
--   对于每个使用此通道发送的消息，都需要提供上面提到的传递保证。如果依靠位于您下面的通道来提供会话，该通道也应提供传递保证。如果您自己提供会话，您需要把这些保证作为您的协议的一部分加以实现。通常，如果您编写在两端都采用 WCF 的协议通道，您可能需要 TCP 传输或可靠消息通道，并依靠其中一种方法来提供会话。  
+-   <span data-ttu-id="f3556-177">对于每个使用此通道发送的消息，都需要提供上面提到的传递保证。</span><span class="sxs-lookup"><span data-stu-id="f3556-177">For each message sent using this channel, you need to provide the delivery guarantees mentioned above.</span></span> <span data-ttu-id="f3556-178">如果依靠位于您下面的通道来提供会话，该通道也应提供传递保证。</span><span class="sxs-lookup"><span data-stu-id="f3556-178">If you are relying on the channel below you to provide the session, that channel will also provide the delivery guarantees.</span></span> <span data-ttu-id="f3556-179">如果您自己提供会话，您需要把这些保证作为您的协议的一部分加以实现。</span><span class="sxs-lookup"><span data-stu-id="f3556-179">If you’re providing the session yourself, you need to implement those guarantees as part of your protocol.</span></span> <span data-ttu-id="f3556-180">通常，如果您编写在两端都采用 WCF 的协议通道，您可能需要 TCP 传输或可靠消息通道，并依靠其中一种方法来提供会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-180">In general, if you are writing a protocol channel that assumes WCF on both sides you may require the TCP transport or the Reliable Messaging channel and rely on either one to provide a session.</span></span>  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=fullName> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。这可能很简单，只需在位于您下面的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A>（如果您只从它获取了会话）、发送特殊 SOAP 消息或关闭传输连接。  
+-   <span data-ttu-id="f3556-181">当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-181">When <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> is called on your channel, perform the necessary work to close the session using either the specified timeout or the default one.</span></span> <span data-ttu-id="f3556-182">这可能很简单，只需在位于您下面的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A>（如果您只从它获取了会话）、发送特殊 SOAP 消息或关闭传输连接。</span><span class="sxs-lookup"><span data-stu-id="f3556-182">This can be as simple as calling <xref:System.ServiceModel.ICommunicationObject.Close%2A> on the channel below you (if you just obtained the session from it) or sending a special SOAP message or closing a transport connection.</span></span>  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I\/O。这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
+-   <span data-ttu-id="f3556-183">当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。</span><span class="sxs-lookup"><span data-stu-id="f3556-183">When <xref:System.ServiceModel.ICommunicationObject.Abort%2A> is called on your channel, terminate the session abruptly without performing I/O.</span></span> <span data-ttu-id="f3556-184">这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。</span><span class="sxs-lookup"><span data-stu-id="f3556-184">This may mean doing nothing or may involve aborting a network connection or some other resource.</span></span>  
   
- 在接收端，您的通道需要：  
+ <span data-ttu-id="f3556-185">在接收端，您的通道需要：</span><span class="sxs-lookup"><span data-stu-id="f3556-185">On the receive side, your channel needs to:</span></span>  
   
--   对于每个传入消息，通道侦听器必须检测到消息所属的会话。如果这是会话中的第一个消息，通道侦听器必须创建一个新通道，并将其从调用返回到 <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=fullName>。否则，通道侦听器必须找到与该会话对应的现有通道，并通过该通道传递消息。  
+-   <span data-ttu-id="f3556-186">对于每个传入消息，通道侦听器必须检测到消息所属的会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-186">For each incoming message, the channel listener must detect the session it belongs to.</span></span> <span data-ttu-id="f3556-187">如果这是会话中的第一个消息，通道侦听器必须创建一个新通道，并将其从调用返回到 <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="f3556-187">If this is the first message in the session, the channel listener must create a new channel and return it from the call to <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f3556-188">否则，通道侦听器必须找到与该会话对应的现有通道，并通过该通道传递消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-188">Otherwise the channel listener must find the existing channel that corresponds to the session and deliver the message through that channel.</span></span>  
   
--   如果您的通道正在提供会话（连同所要求的传递保证），可能会要求接收方执行某些操作，例如重新排列消息或发送确认消息。  
+-   <span data-ttu-id="f3556-189">如果您的通道正在提供会话（连同所要求的传递保证），可能会要求接收方执行某些操作，例如重新排列消息或发送确认消息。</span><span class="sxs-lookup"><span data-stu-id="f3556-189">If your channel is providing the session (along with the required delivery guarantees) the receive side may be required to perform some actions such as re-order messages or send acknowledgements.</span></span>  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。如果通道在等待关闭超时到期时收到消息，则可能会导致异常。这是因为通道将处于关闭状态，却突然收到消息，所以会引发异常。  
+-   <span data-ttu-id="f3556-190">当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。</span><span class="sxs-lookup"><span data-stu-id="f3556-190">When <xref:System.ServiceModel.ICommunicationObject.Close%2A> is called on your channel, perform the necessary work to close the session either the specified timeout or the default one.</span></span> <span data-ttu-id="f3556-191">如果通道在等待关闭超时到期时收到消息，则可能会导致异常。</span><span class="sxs-lookup"><span data-stu-id="f3556-191">This could result in exceptions if the channel receives a message while waiting for the close timeout to expire.</span></span> <span data-ttu-id="f3556-192">这是因为通道将处于关闭状态，却突然收到消息，所以会引发异常。</span><span class="sxs-lookup"><span data-stu-id="f3556-192">That’s because the channel will be in the Closing state when it receives a message so it would throw.</span></span>  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I\/O。同样，这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
+-   <span data-ttu-id="f3556-193">当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。</span><span class="sxs-lookup"><span data-stu-id="f3556-193">When <xref:System.ServiceModel.ICommunicationObject.Abort%2A> is called on your channel, terminate the session abruptly without performing I/O.</span></span> <span data-ttu-id="f3556-194">同样，这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。</span><span class="sxs-lookup"><span data-stu-id="f3556-194">Again, this may mean doing nothing or may involve aborting a network connection or some other resource.</span></span>  
   
-## 请参阅  
- [通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f3556-195">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f3556-195">See Also</span></span>  
+ [<span data-ttu-id="f3556-196">通道模型概述</span><span class="sxs-lookup"><span data-stu-id="f3556-196">Channel Model Overview</span></span>](../../../../docs/framework/wcf/extending/channel-model-overview.md)

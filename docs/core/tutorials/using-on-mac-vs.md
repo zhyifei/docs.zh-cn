@@ -9,58 +9,55 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
+ms.openlocfilehash: 893999f9abcc299da4fb0923fe47c371079f695c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e11515031716a66ead866e52504137cb4e1df137
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a><span data-ttu-id="99c05-104">借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core</span><span class="sxs-lookup"><span data-stu-id="99c05-104">Getting started with .NET Core on macOS using Visual Studio for Mac</span></span>
 
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
-
-Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
+<span data-ttu-id="99c05-105">Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。</span><span class="sxs-lookup"><span data-stu-id="99c05-105">Visual Studio for Mac provides a full-featured Integrated Development Environment (IDE) for developing .NET Core applications.</span></span> <span data-ttu-id="99c05-106">本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="99c05-106">This topic walks you through building a simple console application using Visual Studio for Mac and .NET Core.</span></span>
 
 > [!NOTE]
-> 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
-> * 在 Visual Studio for Mac 中，从菜单中选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。
-> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac UserVoice 网页](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。
+> <span data-ttu-id="99c05-107">你的反馈非常有价值。</span><span class="sxs-lookup"><span data-stu-id="99c05-107">Your feedback is highly valued.</span></span> <span data-ttu-id="99c05-108">有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：</span><span class="sxs-lookup"><span data-stu-id="99c05-108">There are a two ways you can provide feedback to the development team on Visual Studio for Mac:</span></span>
+> * <span data-ttu-id="99c05-109">在 Visual Studio for Mac 中，从菜单中选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。</span><span class="sxs-lookup"><span data-stu-id="99c05-109">In Visual Studio for Mac, select **Help** > **Report a Problem** from the menu or **Report a Problem** from the Welcome screen, which will open a window for filing a bug report.</span></span> <span data-ttu-id="99c05-110">可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。</span><span class="sxs-lookup"><span data-stu-id="99c05-110">You can track your feedback in the [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) portal.</span></span>
+> * <span data-ttu-id="99c05-111">若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac UserVoice 网页](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。</span><span class="sxs-lookup"><span data-stu-id="99c05-111">To make a suggestion, select **Help** > **Provide a Suggestion** from the menu or **Provide a Suggestion** from the Welcome screen, which will take you to the [Visual Studio for Mac UserVoice webpage](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).</span></span>
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a><span data-ttu-id="99c05-112">先决条件</span><span class="sxs-lookup"><span data-stu-id="99c05-112">Prerequisites</span></span>
 
-请参阅 [Mac 上 .NET Core 的先决条件](../../core/macos-prerequisites.md)主题。
+<span data-ttu-id="99c05-113">请参阅 [Mac 上 .NET Core 的先决条件](../../core/macos-prerequisites.md)主题。</span><span class="sxs-lookup"><span data-stu-id="99c05-113">See the [Prerequisites for .NET Core on Mac](../../core/macos-prerequisites.md) topic.</span></span>
 
-## <a name="getting-started"></a>入门
+## <a name="getting-started"></a><span data-ttu-id="99c05-114">入门</span><span class="sxs-lookup"><span data-stu-id="99c05-114">Getting started</span></span>
 
-如果已安装先决条件和 Visual Studio for Mac，请跳过此部分，并继续[创建项目](#creating-a-project)。 请按照以下步骤安装先决条件和 Visual Studio for Mac：
+<span data-ttu-id="99c05-115">如果已安装先决条件和 Visual Studio for Mac，请跳过此部分，并继续[创建项目](#creating-a-project)。</span><span class="sxs-lookup"><span data-stu-id="99c05-115">If you've already installed the prerequisites and Visual Studio for Mac, skip this section and proceed to [Creating a project](#creating-a-project).</span></span> <span data-ttu-id="99c05-116">请按照以下步骤安装先决条件和 Visual Studio for Mac：</span><span class="sxs-lookup"><span data-stu-id="99c05-116">Follow these steps to install the prerequisites and Visual Studio for Mac:</span></span>
 
-下载 [Visual Studio for Mac 安装程序](https://www.visualstudio.com/vs/visual-studio-mac/)。 运行安装程序。 阅读并同意许可协议。 在安装过程中，为你提供安装 Xamarin（一个跨平台移动应用开发技术）的机会。 安装 Xamarin 及其相关组件对于 .NET Core 开发而言是可选项。 有关 Visual Studio for Mac 安装过程的分步介绍，请参阅 [Visual Studio for Mac 简介](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安装完成后，启动 Visual Studio for Mac IDE。
+<span data-ttu-id="99c05-117">下载 [Visual Studio for Mac 安装程序](https://www.visualstudio.com/vs/visual-studio-mac/)。</span><span class="sxs-lookup"><span data-stu-id="99c05-117">Download the [Visual Studio for Mac installer](https://www.visualstudio.com/vs/visual-studio-mac/).</span></span> <span data-ttu-id="99c05-118">运行安装程序。</span><span class="sxs-lookup"><span data-stu-id="99c05-118">Run the installer.</span></span> <span data-ttu-id="99c05-119">阅读并同意许可协议。</span><span class="sxs-lookup"><span data-stu-id="99c05-119">Read and accept the license agreement.</span></span> <span data-ttu-id="99c05-120">在安装过程中，为你提供安装 Xamarin（一个跨平台移动应用开发技术）的机会。</span><span class="sxs-lookup"><span data-stu-id="99c05-120">During the install, you're provided the opportunity to install Xamarin, a cross-platform mobile app development technology.</span></span> <span data-ttu-id="99c05-121">安装 Xamarin 及其相关组件对于 .NET Core 开发而言是可选项。</span><span class="sxs-lookup"><span data-stu-id="99c05-121">Installing Xamarin and its related components is optional for .NET Core development.</span></span> <span data-ttu-id="99c05-122">有关 Visual Studio for Mac 安装过程的分步介绍，请参阅 [Visual Studio for Mac 简介](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。</span><span class="sxs-lookup"><span data-stu-id="99c05-122">For a walk-through of the Visual Studio for Mac install process, see [Introducing Visual Studio for Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/).</span></span> <span data-ttu-id="99c05-123">安装完成后，启动 Visual Studio for Mac IDE。</span><span class="sxs-lookup"><span data-stu-id="99c05-123">When the install is complete, start the Visual Studio for Mac IDE.</span></span>
 
-## <a name="creating-a-project"></a>创建项目
+## <a name="creating-a-project"></a><span data-ttu-id="99c05-124">创建项目</span><span class="sxs-lookup"><span data-stu-id="99c05-124">Creating a project</span></span>
 
-1. 选择欢迎屏幕上的“新建项目”。
+1. <span data-ttu-id="99c05-125">选择欢迎屏幕上的“新建项目”。</span><span class="sxs-lookup"><span data-stu-id="99c05-125">Select **New Project** on the Welcome screen.</span></span>
 
    ![Visual Studio for Mac 欢迎屏幕上的新建项目按钮](./media/using-on-mac-vs/vsmac1.png)
 
-1. 在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。 单击“下一步”，然后选择“控制台应用程序”模板。
+1. <span data-ttu-id="99c05-127">在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。</span><span class="sxs-lookup"><span data-stu-id="99c05-127">In the **New Project** dialog, select **App** under the **.NET Core** node.</span></span> <span data-ttu-id="99c05-128">单击“下一步”，然后选择“控制台应用程序”模板。</span><span class="sxs-lookup"><span data-stu-id="99c05-128">Select the **Console Application** template followed by **Next**.</span></span>
 
    ![新项目模板列表](./media/using-on-mac-vs/vsmac2.png)
 
-1. 为“项目名称”键入“HelloWorld”。 选择“创建”。
+1. <span data-ttu-id="99c05-130">为“项目名称”键入“HelloWorld”。</span><span class="sxs-lookup"><span data-stu-id="99c05-130">Type "HelloWorld" for the **Project Name**.</span></span> <span data-ttu-id="99c05-131">选择“创建”。</span><span class="sxs-lookup"><span data-stu-id="99c05-131">Select **Create**.</span></span>
 
    ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/vsmac3.png)
 
-1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Main` 方法的 `Program` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
+1. <span data-ttu-id="99c05-133">等待还原项目的依赖项。</span><span class="sxs-lookup"><span data-stu-id="99c05-133">Wait while the project's dependencies are restored.</span></span> <span data-ttu-id="99c05-134">该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Main` 方法的 `Program` 类。</span><span class="sxs-lookup"><span data-stu-id="99c05-134">The project has a single C# file, *Program.cs*, containing a `Program` class with a `Main` method.</span></span> <span data-ttu-id="99c05-135">运行应用时，`Console.WriteLine` 语句将“Hello World!”</span><span class="sxs-lookup"><span data-stu-id="99c05-135">The `Console.WriteLine` statement will output "Hello World!"</span></span> <span data-ttu-id="99c05-136">输出至控制台。</span><span class="sxs-lookup"><span data-stu-id="99c05-136">to the console when the app is run.</span></span>
 
    ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/vsmac4.png)
 
-## <a name="run-the-application"></a>运行此应用程序
+## <a name="run-the-application"></a><span data-ttu-id="99c05-138">运行此应用程序</span><span class="sxs-lookup"><span data-stu-id="99c05-138">Run the application</span></span>
 
-使用 <kbd>F5</kbd> 在调试模式下运行此应用，或使用 <kbd>Ctrl</kbd>+<kbd>F5</kbd> 在发布模式下运行此应用。
+<span data-ttu-id="99c05-139">使用 <kbd>F5</kbd> 在调试模式下运行此应用，或使用 <kbd>Ctrl</kbd>+<kbd>F5</kbd> 在发布模式下运行此应用。</span><span class="sxs-lookup"><span data-stu-id="99c05-139">Run the app in Debug mode using <kbd>F5</kbd> or in Release mode using <kbd>CTRL</kbd>+<kbd>F5</kbd>.</span></span>
 
 ![应用程序输出窗格显示 Hello World!](./media/using-on-mac-vs/vsmac5.png)
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a><span data-ttu-id="99c05-141">下一步</span><span class="sxs-lookup"><span data-stu-id="99c05-141">Next step</span></span>
 
-[使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](using-on-mac-vs-full-solution.md)主题为你演示如何构建包含可重用的库和单元测试的完整的 .NET Core 解决方案。
-
+<span data-ttu-id="99c05-142">[使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](using-on-mac-vs-full-solution.md)主题为你演示如何构建包含可重用的库和单元测试的完整的 .NET Core 解决方案。</span><span class="sxs-lookup"><span data-stu-id="99c05-142">The [Building a complete .NET Core solution on macOS using Visual Studio for Mac](using-on-mac-vs-full-solution.md) topic shows you how to build a complete .NET Core solution that includes a reusable library and unit testing.</span></span>
