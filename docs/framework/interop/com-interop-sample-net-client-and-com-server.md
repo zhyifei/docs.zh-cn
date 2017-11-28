@@ -5,29 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3a2db2aba0904aac89bf5fe73c715ff7a5eeb5f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM 互操作示例：.NET 客户端和 COM 服务器
 本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。  
@@ -312,4 +309,3 @@ static double Round(double value, short digits)
   
 ## <a name="see-also"></a>另请参阅  
  [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)
-

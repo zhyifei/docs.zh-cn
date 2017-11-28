@@ -1,29 +1,35 @@
 ---
-title: "处理 DataView 事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "处理数据视图事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2abade8bbbf5ab8a9d2cf146271e89703ec34cb9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 处理 DataView 事件
-可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataView.ListChanged> 事件确定某个视图是否已更新。  引发该事件的更新包括添加、删除或修改基础表中的某行；在基础表的架构中添加或删除某列；更改父或子关系。  **ListChanged** 事件还将通知您所查看的行列表是否已经由于应用新的排序顺序或筛选器而发生重大更改。  
+# <a name="handling-dataview-events"></a>处理数据视图事件
+可以使用 <xref:System.Data.DataView.ListChanged> 的 <xref:System.Data.DataView> 事件确定某个视图是否已更新。 引发该事件的更新包括添加、删除或修改基础表中的某行；在基础表的架构中添加或删除某列；更改父或子关系。 **ListChanged**事件还将通知你如果你正在查看的行的列表已显著更改由于新的排序顺序或筛选器的应用程序。  
   
- **ListChanged** 事件实现 <xref:System.ComponentModel> 命名空间的 **ListChangedEventHandler** 委托，并将 <xref:System.ComponentModel.ListChangedEventArgs> 对象用作输入。  您可以使用 **ListChangedEventArgs** 对象的 **ListChangedType** 属性中的 <xref:System.ComponentModel.ListChangedType> 枚举值来确定发生了哪一种类型的更改。  对于涉及添加、删除或移动行的更改，可以使用 **ListChangedEventArgs** 对象的 **NewIndex** 属性来访问已添加或已移动的行的新索引以及已删除的行的先前索引。  对于已移动的行，可以使用 **ListChangedEventArgs** 对象的 **OldIndex** 属性来访问已移动的行的先前索引。  
+ **ListChanged**事件实现**ListChangedEventHandler**委托的<xref:System.ComponentModel>命名空间和接受的输入<xref:System.ComponentModel.ListChangedEventArgs>对象。 你可以确定哪种类型的更改发生使用<xref:System.ComponentModel.ListChangedType>中的枚举值**ListChangedType**属性**ListChangedEventArgs**对象。 对于涉及添加的更改，删除或移动行，添加或移动行的新索引以及已删除的行的先前索引可以访问使用**NewIndex**属性**ListChangedEventArgs**对象。 在移动行的情况下移动行的先前索引可以访问使用**OldIndex**属性**ListChangedEventArgs**对象。  
   
- **DataViewManager** 还会公开一个 **ListChanged** 事件来通知您是否已添加或移除表，或者是否已对基础 **DataSet** 的 **Relations** 集合做出更改。  
+ **DataViewManager**还公开**ListChanged**事件来通知您如果表已添加或删除，或者如果已对进行了更改**关系**的集合基础**数据集**。  
   
- 以下代码示例显示如何添加 **ListChanged** 事件处理程序。  
+ 下面的代码示例演示如何添加**ListChanged**事件处理程序。  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -39,7 +45,6 @@ Private Shared Sub OnListChanged( _
   Console.WriteLine(vbTab & "OldIndex = " & args.OldIndex)  
   Console.WriteLine(vbTab & "NewIndex = " & args.NewIndex)  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -56,8 +61,8 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataView>   
- <xref:System.ComponentModel.ListChangedEventHandler>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.DataView>  
+ <xref:System.ComponentModel.ListChangedEventHandler>  
+ [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

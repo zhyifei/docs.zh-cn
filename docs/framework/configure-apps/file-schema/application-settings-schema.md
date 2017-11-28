@@ -1,99 +1,104 @@
 ---
-title: "应用程序设置架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序设置, 架构 [Windows 窗体]"
-  - "配置架构 [.NET Framework], 应用程序设置"
-  - "架构应用程序设置"
-  - "Windows 窗体, 应用程序设置架构"
+title: "应用程序设置架构"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema application settings
+- application settings, schema [Windows Forms]
+- Windows Forms, application settings schema
+- configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: 3
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d93a18b17e0d6b8e413903fb84dc6b427d94f6af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 应用程序设置架构
-应用程序设置允许 Windows 窗体或 ASP.NET 应用程序存储和检索应用程序范围和用户范围的设置。  本上下文中的“设置”是可能特定于应用程序或特定于当前用户的任何信息 \-\- 从数据库连接字符串到用户的首选默认窗口大小的任何内容。  
-  
- 默认情况下，Windows 窗体应用程序中的应用程序设置使用 <xref:System.Configuration.LocalFileSettingsProvider>，后者使用 .NET 配置系统将设置存储在一个 XML 配置文件中。  有关应用程序设置所使用的文件的更多信息，请参见 [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
-  
- 应用程序设置将下列元素定义为它使用的配置文件的一部分。  
-  
-|元素|说明|  
-|--------|--------|  
-|`<applicationSettings>` 元素|包含特定于应用程序的所有 `<setting>` 标记。|  
-|`<userSettings>` 元素|包含特定于当前用户的所有 `<setting>` 标记。|  
-|`<setting>` 元素|定义设置。  `<applicationSettings>` 或 `<userSettings>` 的子项。|  
-|`<value>` 元素|定义设置的值。  `<setting>` 的子项。|  
-  
-## \<applicationSettings\> 元素  
- 这个元素包含所有的被指定为客户端计算机上的应用程序的实例的\<setting\>标签。  它不定义任何特性。  
-  
-## \<userSettings\>元素  
- 这个元素包含所有的被指定到当前应用程序的使用者的\<setting\>标签。  它不定义任何特性。  
-  
-## \<setting\> 元素  
- 此元素定义设置。  它具有以下特性：  
-  
-|元素|说明|  
-|--------|--------|  
-|`name`|必选。  设置的唯一 ID。  通过 Visual Studio 创建的设置使用名称 `ProjectName``.Properties.Settings` 进行保存。|  
-|`serializedAs`|必选。  用于将值序列化为文本的格式。  有效值为：<br /><br /> -   `string`。  值使用 <xref:System.ComponentModel.TypeConverter> 被序列化为字符串。<br />-   `xml`。  值使用 XML 序列化进行序列化。<br />-   `binary`。  值使用二进制序列化被序列化为文本编码的二进制。<br />-   `custom`。  设置提供程序本身知道存在此设置，并将对其进行序列化和反序列化。<br />-   若要使用二进制或自定义序列化，您必须定义自己的设置类并使用 <xref:System.Configuration.SettingsSerializeAsAttribute> 指定二进制或自定义序列化。|  
-  
-## \<value\> 元素  
- 此元素包含设置的值。  
-  
-## 示例  
- 下面的代码示例演示一个应用程序设置文件，该文件定义两个应用程序范围的设置和两个用户范围的设置。  
-  
-```  
-<?xml version="1.0" encoding="utf-8" ?>  
-<configuration>  
-    <configSections>  
-        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >  
-            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
-        </sectionGroup>  
-        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >  
-            <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />  
-        </sectionGroup>  
-    </configSections>  
-    <applicationSettings>  
-        <WindowsApplication1.Properties.Settings>  
-            <setting name="Cursor" serializeAs="String">  
-                <value>Default</value>  
-            </setting>  
-            <setting name="DoubleBuffering" serializeAs="String">  
-                <value>False</value>  
-            </setting>  
-        </WindowsApplication1.Properties.Settings>  
-    </applicationSettings>  
-    <userSettings>  
-        <WindowsApplication1.Properties.Settings>  
-            <setting name="FormTitle" serializeAs="String">  
-                <value>Form1</value>  
-            </setting>  
-            <setting name="FormSize" serializeAs="String">  
-                <value>595, 536</value>  
-            </setting>  
-        </WindowsApplication1.Properties.Settings>  
-    </userSettings>  
-</configuration>  
-```  
-  
-## 请参阅  
- [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+# <a name="application-settings-schema"></a>应用程序设置架构
+
+应用程序设置允许 Windows 窗体或 ASP.NET 应用程序来存储和检索应用程序范围和用户范围的设置。 在此上下文中，*设置*是任何可能是特定于应用程序或特定于当前用户的信息 — 用户的数据库连接字符串中的任何内容的首选默认窗口大小。
+
+默认情况下，应用程序设置 Windows 窗体应用程序中的使用<xref:System.Configuration.LocalFileSettingsProvider>类，该类使用.NET 配置系统来 XML 配置文件中存储设置。 有关使用应用程序设置的文件的详细信息，请参阅[应用程序设置体系结构](~/docs/framework/winforms/advanced/application-settings-architecture.md)。
+
+应用程序设置定义了以下元素作为它使用的配置文件的一部分。
+
+| 元素                    | 描述                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| **\<applicationSettings >** | 包含所有**\<设置 >**标记特定于应用程序。                         |
+| **\<g s >**        | 包含所有**\<设置 >**特定于当前用户的标记。                        |
+| **\<设置 >**             | 定义设置。 子 **\<applicationSettings >**或 **\<g s >**。 |
+| **\<value>**               | 定义设置的值。 子**\<设置 >**。                                   |
+
+## <a name="applicationsettings-element"></a>\<applicationSettings > 元素
+
+此元素包含所有**\<设置 >**是特定于客户端计算机上的应用程序实例的标记。 未定义任何属性。
+
+## <a name="usersettings-element"></a>\<g s > 元素
+
+此元素包含所有**\<设置 >**特定于当前正在使用应用程序的用户的标记。 未定义任何属性。
+
+## <a name="setting-element"></a>\<设置 > 元素
+
+此元素定义设置。 它具有以下属性。
+
+| 特性        | 描述 |
+| ---------------- | ----------- |
+| **name**         | 必需。 设置的唯一 ID。 通过 Visual Studio 创建的设置保存同名`ProjectName.Properties.Settings`。 |
+| **serializedAs** | 必需。 要用于序列化到文本值的格式。 有效值为：<br><br>- `string`. 值序列化为字符串使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 值是使用 XML 序列化序列化。<br>- `binary`. 值序列化为文本编码的二进制文件使用二进制序列化。<br />- `custom`. 设置提供程序具有本身并知道此设置和序列化和反序列化。 |
+
+## <a name="value-element"></a>\<值 > 元素
+
+此元素包含设置的值。
+
+## <a name="example"></a>示例
+
+下面的示例演示应用程序设置文件，用于定义两个应用程序范围的设置和两个用户范围的设置：
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    </sectionGroup>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="WindowsApplication1.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" />
+    </sectionGroup>
+  </configSections>
+  <applicationSettings>
+    <WindowsApplication1.Properties.Settings>
+      <setting name="Cursor" serializeAs="String">
+        <value>Default</value>
+      </setting>
+      <setting name="DoubleBuffering" serializeAs="String">
+        <value>False</value>
+      </setting>
+    </WindowsApplication1.Properties.Settings>
+  </applicationSettings>
+  <userSettings>
+    <WindowsApplication1.Properties.Settings>
+      <setting name="FormTitle" serializeAs="String">
+        <value>Form1</value>
+      </setting>
+      <setting name="FormSize" serializeAs="String">
+        <value>595, 536</value>
+      </setting>
+    </WindowsApplication1.Properties.Settings>
+  </userSettings>
+</configuration>
+```
+
+## <a name="see-also"></a>请参阅
+
+[应用程序设置概述](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+[应用程序设置体系结构](~/docs/framework/winforms/advanced/application-settings-architecture.md)

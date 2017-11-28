@@ -1,26 +1,29 @@
 ---
-title: "LINQ to DataSet 示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to DataSet 示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to DataSet 示例
-本节提供使用标准查询运算符的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 编程示例。  这些示例中所使用的 <xref:System.Data.DataSet> 已通过使用[向数据集中加载数据](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)中指定的 `FillDataSet` 方法进行填充。有关更多信息，请参见[Standard Query Operators Overview](../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+# <a name="linq-to-dataset-examples"></a>LINQ to DataSet 示例
+本部分提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]编程使用标准查询运算符的示例。 <xref:System.Data.DataSet>这些示例中使用填充使用`FillDataSet`方法，指定在[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
-## 本节内容  
- [查询表达式示例：](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+## <a name="in-this-section"></a>本节内容  
+ [查询表达式示例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
  包含下面的示例：  
   
 -   [投影](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
@@ -29,7 +32,7 @@ caps.handback.revision: 2
   
 -   [分区](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [Ordering](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [排序](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [元素运算符](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
@@ -37,16 +40,16 @@ caps.handback.revision: 2
   
 -   [联接运算符](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [基于方法的查询示例：](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [基于方法的查询示例](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
  包含下面的示例：  
   
 -   [投影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
 -   [分区](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [Ordering](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [排序](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [集合运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [集运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
 -   [转换运算符](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
@@ -59,6 +62,6 @@ caps.handback.revision: 2
  [数据集特定的运算符示例](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
  包含演示如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 类的示例。  
   
-## 请参阅  
- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)   
- [向数据集中加载数据](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a>另请参阅  
+ [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [数据加载到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

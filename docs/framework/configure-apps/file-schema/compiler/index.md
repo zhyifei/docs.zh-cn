@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - configuration settings [.NET Framework], compilers
 - compiler configuration elements, schema
@@ -24,21 +18,20 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb1eb3078714e0de5416fc4c7f9695f52bab3a96
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 3e020fcc63c0eff38dc602aacae31a6e0d2d2fe5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>编译器和语言提供程序设置架构
 编译器和语言提供程序设置指定可用语言提供程序的编译器配置元素。 每个编译器配置元素指定代码提供程序类型名称、编译器参数、支持语言名称以及支持的文件扩展名。  
   
- .NET Framework 在计算机配置文件 (Machine.config) 中定义初始编译器设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  
+ .NET Framework 在计算机配置文件 (Machine.config) 中定义初始编译器设置。 开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现的配置设置。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。  
   
  [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
@@ -74,8 +67,7 @@ ms.lasthandoff: 09/05/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
-

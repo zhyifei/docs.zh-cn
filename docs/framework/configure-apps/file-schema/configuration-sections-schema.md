@@ -1,55 +1,43 @@
 ---
-title: "配置节架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "配置架构 [.NET Framework], 配置文件中的自定义设置"
-  - "配置节 [.NET Framework]"
-  - "配置设置 [.NET Framework], 自定义"
-  - "自定义元素"
-  - "元素 [.NET Framework], 配置文件中的自定义设置"
-  - "架构配置设置"
+title: "配置节架构"
+ms.date: 05/02/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration settings [.NET Framework], custom
+- schema configuration settings
+- configuration sections [.NET Framework]
+- custom elements
+- configuration schema [.NET Framework], custom settings in configuration files
+- elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: guardrex
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c668cf3d2f2c0bcffda185cea01edfb9e55c6d6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 配置节架构
-配置节架构包含将自定义设置放置在配置文件中的元素。  
-  
- [\<configuration\>](../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-  
- [\<configSections\>](http://msdn.microsoft.com/zh-cn/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)  
-  
- [\<clear\>](http://msdn.microsoft.com/zh-cn/b0ce3c91-89fa-4bb5-a995-30e21a61036b)  
-  
- [\<remove\>](http://msdn.microsoft.com/zh-cn/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)  
-  
- [\<section\>](http://msdn.microsoft.com/zh-cn/51c9d658-c275-4ab2-aa66-c5d5b5289570)  
-  
- [\<sectionGroup\>](http://msdn.microsoft.com/zh-cn/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)  
-  
-|元素|说明|  
-|--------|--------|  
-|[configSections 的 clear 元素（常规设置架构）](http://msdn.microsoft.com/zh-cn/b0ce3c91-89fa-4bb5-a995-30e21a61036b)|清除所有以前定义的节和节组。|  
-|[configSections 元素（常规设置架构）](http://msdn.microsoft.com/zh-cn/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)|包含配置节和命名空间声明。|  
-|[configSections 的 remove 元素（常规设置架构）](http://msdn.microsoft.com/zh-cn/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)|移除预定义的节或节组。|  
-|[configSections 的 section 元素（常规设置架构）](http://msdn.microsoft.com/zh-cn/51c9d658-c275-4ab2-aa66-c5d5b5289570)|包含配置节声明。|  
-|[configSections 的 sectionGroup 元素（常规设置架构）](http://msdn.microsoft.com/zh-cn/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)|为配置节定义命名空间。|  
-  
-## 请参阅  
- [配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)
+# <a name="configuration-sections-schema"></a>配置节架构
+
+配置节架构包含在配置文件中定义自定义设置的元素。 有关配置文件和架构的常规信息，请参阅[的.NET Framework 配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)。
+
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[**\<清除 >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
+[**\<删除 >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
+[**\<部分 >**](~/docs/framework/configure-apps/file-schema/section-element.md)   
+[**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+
+|     | 描述 |
+| --- | ----------- |
+| [**\<清除 >**为 **\<configSections >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有以前定义的节和节组。 |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有以前定义的节和节组。 |
+| [**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [**\<删除 >**为 **\<configSections >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 删除预定义的节或节组。 |
+| [**\<部分 >**为 **\<configSections >**和 **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含配置节声明。 |
+| [**\<sectionGroup >**为 **\<configSections >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |

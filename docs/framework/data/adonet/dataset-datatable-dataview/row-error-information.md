@@ -1,23 +1,29 @@
 ---
-title: "行错误信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "行错误信息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 95cbac7f5bf2c28a3db206faca443edacc5b7be1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 行错误信息
-为了避免在编辑 <xref:System.Data.DataTable> 中的值时对行错误做出响应，可以将错误信息添加到该行，供以后使用。  因此，<xref:System.Data.DataRow> 对象在每行上提供 <xref:System.Data.DataRow.RowError%2A> 属性。  将数据添加到 **DataRow** 的 **RowError** 属性会将 **DataRow** 的 <xref:System.Data.DataRow.HasErrors%2A> 属性设置为 **true**。  如果 **DataRow** 是 **DataTable** 的组成部分，且 **DataRow.HasErrors** 是 **true**，则 **DataTable.HasErrors** 属性也是 **true**。  这也适用于 **DataTable** 所属的 **DataSet**。  当测试是否有错误时，可以检查 **HasErrors** 属性以确定是否已在任何行中添加了错误信息。  如果 **HasErrors** 为 **true**，则可使用 **DataTable** 的 <xref:System.Data.DataTable.GetErrors%2A> 方法，以便只返回和检查有错误的行，如下例所示。  
+# <a name="row-error-information"></a>行错误信息
+为了避免在编辑 <xref:System.Data.DataTable> 中的值时对行错误做出响应，可以将错误信息添加到该行，供以后使用。 因此，<xref:System.Data.DataRow> 对象在每行上提供 <xref:System.Data.DataRow.RowError%2A> 属性。 将数据添加到**RowError**属性**DataRow**设置<xref:System.Data.DataRow.HasErrors%2A>属性**DataRow**到**true**。 如果**DataRow**属于**DataTable**，和**DataRow.HasErrors**是**true**、 **DataTable.HasErrors**属性也为**true**。 这也适用于**数据集**到**DataTable**所属。 当测试是否有错误，可以检查**HasErrors**属性来确定是否已对任何行添加错误信息。 如果**HasErrors**是**true**，你可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**返回并检查仅包含错误的行，如下面的示例中所示。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -49,7 +55,6 @@ Private Shared Sub OnRowChanged( _
   If CDbl(args.Row("Total")) = 0 Then args.Row.RowError = _  
       "Total cannot be 0."  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -82,9 +87,9 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataTable>   
- [在 DataTable 中处理数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataTable>  
+ [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

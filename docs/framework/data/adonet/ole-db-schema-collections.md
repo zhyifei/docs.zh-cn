@@ -1,26 +1,29 @@
 ---
-title: "OLE DB 架构集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "OLE DB 架构集合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9b88308c5dad69ed1ba6f48f525931e94f13ef1a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# OLE DB 架构集合
+# <a name="ole-db-schema-collections"></a>OLE DB 架构集合
 本节讨论对适用于 Microsoft SQL Server、Oracle 和 Microsoft Jet 的 OLE DB 提供程序的架构集合支持  
   
-## Microsoft SQL Server OLE DB 提供程序  
- 除了通用架构集合之外，Microsoft SQL Server OLE DB 驱动程序还支持下列特定的架构集合：  
+## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 提供程序  
+ Microsoft SQL Server OLE DB 驱动程序还支持下列特定的架构集合除了通用架构集合：  
   
 -   表  
   
@@ -34,131 +37,131 @@ caps.handback.revision: 3
   
 -   索引  
   
-### 表  
+### <a name="tables"></a>表  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
-|TABLE\_GUID|Guid|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|String|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|String|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|String|  
-|CHARACTER\_SET\_SCHEMA|String|  
-|CHARACTER\_SET\_NAME|String|  
-|COLLATION\_CATALOG|String|  
-|COLLATION\_SCHEMA|String|  
-|COLLATION\_NAME|String|  
-|DOMAIN\_CATALOG|String|  
-|DOMAIN\_SCHEMA|String|  
-|DOMAIN\_NAME|String|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|String|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|String|  
+|CHARACTER_SET_SCHEMA|String|  
+|CHARACTER_SET_NAME|String|  
+|COLLATION_CATALOG|String|  
+|COLLATION_SCHEMA|String|  
+|COLLATION_NAME|String|  
+|DOMAIN_CATALOG|String|  
+|DOMAIN_SCHEMA|String|  
+|DOMAIN_NAME|String|  
 |DESCRIPTION|String|  
-|COLUMN\_LCID|Int32|  
-|COLUMN\_COMPFLAGS|Int32|  
-|COLUMN\_SORTID|Int32|  
-|COLUMN\_TDSCOLLATION|Byte\[\]|  
-|IS\_COMPUTED|Boolean|  
+|COLUMN_LCID|Int32|  
+|COLUMN_COMPFLAGS|Int32|  
+|COLUMN_SORTID|Int32|  
+|COLUMN_TDSCOLLATION|Byte[]|  
+|IS_COMPUTED|Boolean|  
   
-### 过程  
+### <a name="procedures"></a>过程  
   
 |列名|数据类型|  
-|--------|----------|  
-|PROCEDURE\_CATALOG|String|  
-|PROCEDURE\_SCHEMA|String|  
-|PROCEDURE\_NAME|String|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|String|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|String|  
+|PROCEDURE_SCHEMA|String|  
+|PROCEDURE_NAME|String|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|String|  
 |DESCRIPTION|String|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |列名|数据类型|  
-|--------|----------|  
-|PROCEDURE\_CATALOG|String|  
-|PROCEDURE\_SCHEMA|String|  
-|PROCEDURE\_NAME|String|  
-|PARAMETER\_NAME|String|  
-|ORDINAL\_POSITION|Int32|  
-|PARAMETER\_TYPE|Int32|  
-|PARAMETER\_HASDEFAULT|Boolean|  
-|PARAMETER\_DEFAULT|String|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|String|  
+|PROCEDURE_SCHEMA|String|  
+|PROCEDURE_NAME|String|  
+|PARAMETER_NAME|String|  
+|ORDINAL_POSITION|Int32|  
+|PARAMETER_TYPE|Int32|  
+|PARAMETER_HASDEFAULT|Boolean|  
+|PARAMETER_DEFAULT|String|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
 |DESCRIPTION|String|  
-|TYPE\_NAME|String|  
-|LOCAL\_TYPE\_NAME|String|  
+|TYPE_NAME|String|  
+|LOCAL_TYPE_NAME|String|  
   
-### Catalog  
+### <a name="catalog"></a>Catalog  
   
 |列名|数据类型|  
-|--------|----------|  
-|CATALOG\_NAME|String|  
+|----------------|--------------|  
+|CATALOG_NAME|String|  
 |DESCRIPTION|String|  
   
-### 索引  
+### <a name="indexes"></a>索引  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|INDEX\_CATALOG|String|  
-|INDEX\_SCHEMA|String|  
-|INDEX\_NAME|String|  
-|PRIMARY\_KEY|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|INDEX_CATALOG|String|  
+|INDEX_SCHEMA|String|  
+|INDEX_NAME|String|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|String|  
+|FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
-## Microsoft Oracle OLE DB 提供程序  
+## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB 提供程序  
  除了通用架构集合之外，Microsoft Oracle OLE DB 驱动程序还支持下列特定的架构集合：  
   
 -   表  
@@ -175,133 +178,133 @@ caps.handback.revision: 3
   
 -   索引  
   
-### 表  
+### <a name="tables"></a>表  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
-|TABLE\_GUID|Guid|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|String|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|String|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|String|  
-|CHARACTER\_SET\_SCHEMA|String|  
-|CHARACTER\_SET\_NAME|String|  
-|COLLATION\_CATALOG|String|  
-|COLLATION\_SCHEMA|String|  
-|COLLATION\_NAME|String|  
-|DOMAIN\_CATALOG|String|  
-|DOMAIN\_SCHEMA|String|  
-|DOMAIN\_NAME|String|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|String|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|String|  
+|CHARACTER_SET_SCHEMA|String|  
+|CHARACTER_SET_NAME|String|  
+|COLLATION_CATALOG|String|  
+|COLLATION_SCHEMA|String|  
+|COLLATION_NAME|String|  
+|DOMAIN_CATALOG|String|  
+|DOMAIN_SCHEMA|String|  
+|DOMAIN_NAME|String|  
 |DESCRIPTION|String|  
   
-### 过程  
+### <a name="procedures"></a>过程  
   
 |列名|数据类型|  
-|--------|----------|  
-|PROCEDURE\_CATALOG|String|  
-|PROCEDURE\_SCHEMA|String|  
-|PROCEDURE\_NAME|String|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|String|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|String|  
+|PROCEDURE_SCHEMA|String|  
+|PROCEDURE_NAME|String|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|String|  
 |DESCRIPTION|String|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |列名|数据类型|  
-|--------|----------|  
-|PROCEDURE\_CATALOG|String|  
-|PROCEDURE\_SCHEMA|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ROWSET\_NUMBER|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|String|  
+|PROCEDURE_SCHEMA|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ROWSET_NUMBER|Int64|  
+|ORDINAL_POSITION|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
 |DESCRIPTION|String|  
 |OVERLOAD|Int16|  
   
-### 视图  
+### <a name="views"></a>视图  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|VIEW\_DEFINITION|String|  
-|CHECK\_OPTION|Boolean|  
-|IS\_UPDATABLE|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|VIEW_DEFINITION|String|  
+|CHECK_OPTION|Boolean|  
+|IS_UPDATABLE|Boolean|  
 |DESCRIPTION|String|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### 索引  
+### <a name="indexes"></a>索引  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|INDEX\_CATALOG|String|  
-|INDEX\_SCHEMA|String|  
-|INDEX\_NAME|String|  
-|PRIMARY\_KEY|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|INDEX_CATALOG|String|  
+|INDEX_SCHEMA|String|  
+|INDEX_NAME|String|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|String|  
+|FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
-## Microsoft Jet OLE DB  
+## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB       
  除了通用架构集合之外，Microsoft Jet OLE DB 驱动程序还支持下列特定的架构集合：  
   
 -   表  
@@ -314,109 +317,109 @@ caps.handback.revision: 3
   
 -   索引  
   
-### 表  
+### <a name="tables"></a>表  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
-|TABLE\_GUID|Guid|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|String|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Columns  
+### <a name="columns"></a>Columns  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|String|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|String|  
-|CHARACTER\_SET\_SCHEMA|String|  
-|CHARACTER\_SET\_NAME|String|  
-|COLLATION\_CATALOG|String|  
-|COLLATION\_SCHEMA|String|  
-|COLLATION\_NAME|String|  
-|DOMAIN\_CATALOG|String|  
-|DOMAIN\_SCHEMA|String|  
-|DOMAIN\_NAME|String|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|String|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|String|  
+|CHARACTER_SET_SCHEMA|String|  
+|CHARACTER_SET_NAME|String|  
+|COLLATION_CATALOG|String|  
+|COLLATION_SCHEMA|String|  
+|COLLATION_NAME|String|  
+|DOMAIN_CATALOG|String|  
+|DOMAIN_SCHEMA|String|  
+|DOMAIN_NAME|String|  
 |DESCRIPTION|String|  
   
-### 过程  
+### <a name="procedures"></a>过程  
   
 |列名|数据类型|  
-|--------|----------|  
-|PROCEDURE\_CATALOG|String|  
-|PROCEDURE\_SCHEMA|String|  
-|PROCEDURE\_NAME|String|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|String|  
+|----------------|--------------|  
+|PROCEDURE_CATALOG|String|  
+|PROCEDURE_SCHEMA|String|  
+|PROCEDURE_NAME|String|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|String|  
 |DESCRIPTION|String|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### 视图  
+### <a name="views"></a>视图  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|VIEW\_DEFINITION|String|  
-|CHECK\_OPTION|Boolean|  
-|IS\_UPDATABLE|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|VIEW_DEFINITION|String|  
+|CHECK_OPTION|Boolean|  
+|IS_UPDATABLE|Boolean|  
 |DESCRIPTION|String|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### 索引  
+### <a name="indexes"></a>索引  
   
 |列名|数据类型|  
-|--------|----------|  
-|TABLE\_CATALOG|String|  
-|TABLE\_SCHEMA|String|  
-|TABLE\_NAME|String|  
-|INDEX\_CATALOG|String|  
-|INDEX\_SCHEMA|String|  
-|INDEX\_NAME|String|  
-|PRIMARY\_KEY|Boolean|  
+|----------------|--------------|  
+|TABLE_CATALOG|String|  
+|TABLE_SCHEMA|String|  
+|TABLE_NAME|String|  
+|INDEX_CATALOG|String|  
+|INDEX_SCHEMA|String|  
+|INDEX_NAME|String|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|String|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|String|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|String|  
+|FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

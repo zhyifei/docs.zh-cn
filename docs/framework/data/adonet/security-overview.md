@@ -1,57 +1,60 @@
 ---
-title: "安全性概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安全 Overview2"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d7288eeffeb642d1e897e11153802633d71747bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 安全性概述
-保护应用程序的安全是一个持续的过程。  因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。  仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。  在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  
+# <a name="security-overview"></a>安全性概述
+保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  
   
-## 安全性设计  
- 在开发安全应用程序时遇到的最大问题之一是安全通常是事后的补救办法，即在项目的代码完成后才想起需要实现某些内容。  因为未考虑如何维护应用程序的安全，所以在开始阶段未注重应用程序安全性将导致所开发的应用程序不安全。  
+## <a name="design-for-security"></a>安全性设计  
+ 在开发安全应用程序时遇到的最大问题之一是安全通常是事后的补救办法，即在项目的代码完成后才想起需要实现某些内容。 因为未考虑如何维护应用程序的安全，所以在开始阶段未注重应用程序安全性将导致所开发的应用程序不安全。  
   
- 到最后关头再实现安全性将导致更多 Bug，因为软件无法承受新的制约，或必须重写才能容纳未预想到的功能。  每行修订的代码都可能引入新 Bug。  因此，您在开发过程的初始阶段就应考虑安全性，使得安全性可与新功能的开发同步进行。  
+ 到最后关头再实现安全性将导致更多 Bug，因为软件无法承受新的制约，或必须重写才能容纳未预想到的功能。 每行修订的代码都可能引入新 Bug。 因此，您在开发过程的初始阶段就应考虑安全性，使得安全性可与新功能的开发同步进行。  
   
-### 威胁建模  
- 您只有了解系统可能会受到的所有攻击，才能使系统免受这些攻击。  评估安全威胁的过程称为“威胁建模”，该过程是确定 ADO.NET 应用程序中违反安全性的可能性及后果所必要的。  
+### <a name="threat-modeling"></a>威胁建模  
+ 您只有了解系统可能会受到的所有攻击，才能使系统免受这些攻击。 评估安全威胁的过程称为*威胁建模*，必须确定的可能性及后果的 ADO.NET 应用程序中的安全违反情况。  
   
  威胁建模由三个高级步骤组成：了解攻击者的目的、辨别系统安全性和确定威胁。  
   
- 威胁建模是一种迭代方法，用于评估应用程序中的漏洞，以找到可公开敏感数据的最危险的漏洞。  一旦确定了漏洞，您就可以按安全性对其进行排列，并创建一组按优先顺序排列的措施以应对威胁。  
+ 威胁建模是一种迭代方法，用于评估应用程序中的漏洞，以找到可公开敏感数据的最危险的漏洞。 一旦确定了漏洞，您就可以按安全性对其进行排列，并创建一组按优先顺序排列的措施以应对威胁。  
   
  有关更多信息，请参见以下资源。  
   
 |资源|描述|  
-|--------|--------|  
-|MSDN 安全性开发中心上的[威胁建模](http://go.microsoft.com/fwlink/?LinkId=98353)（可能为英文网页）网站|此页上的资源将帮助您了解威胁建模的过程，并帮助您创建可以用于保护自己的应用程序的威胁模型|  
+|--------------|-----------------|  
+|[威胁建模](http://go.microsoft.com/fwlink/?LinkId=98353)MSDN 安全开发人员中心上的站点|此页上的资源将帮助您了解威胁建模的过程，并帮助您创建可以用于保护自己的应用程序的威胁模型|  
   
-## 最低特权原则  
- 当设计、构建及部署应用程序时，您必须假定您的应用程序将受到攻击。  通常，这些攻击来自使用运行此代码的用户的权限执行的恶意代码，  其他攻击可能源自被攻击者利用的善意代码。  在规划安全性时，始终假设将出现最糟糕的情况。  
+## <a name="the-principle-of-least-privilege"></a>最低特权原则  
+ 当设计、构建及部署应用程序时，您必须假定您的应用程序将受到攻击。 通常，这些攻击来自使用运行此代码的用户的权限执行的恶意代码， 其他攻击可能源自被攻击者利用的善意代码。 在规划安全性时，始终假设将出现最糟糕的情况。  
   
- 您可以使用的一种措施是：尝试使用最小特权来运行代码，在代码周围树立尽可能多的障碍。  最小特权原则指出，应在完成工作所需的最短时间内向所需的最少代码授予任何给定的特权。  
+ 您可以使用的一种措施是：尝试使用最小特权来运行代码，在代码周围树立尽可能多的障碍。 最小特权原则指出，应在完成工作所需的最短时间内向所需的最少代码授予任何给定的特权。  
   
- 创建安全应用程序的最好方法是在开始阶段不授予任何权限，然后对执行的特定任务添加最有限的权限。  相反，如果开始具有所有权限而以后拒绝个别权限，就会导致难以测试和维护的不安全应用程序，因为无意中授予过多的权限会造成完全漏洞。  
+ 创建安全应用程序的最好方法是在开始阶段不授予任何权限，然后对执行的特定任务添加最有限的权限。 相反，如果开始具有所有权限而以后拒绝个别权限，就会导致难以测试和维护的不安全应用程序，因为无意中授予过多的权限会造成完全漏洞。  
   
  有关保护应用程序的更多信息，请参见下列资源。  
   
 |资源|描述|  
-|--------|--------|  
-|[保证应用程序的安全](../Topic/Securing%20Applications.md)|包含一般安全性主题的链接，  还包含保护分布式应用程序、Web 应用程序、移动应用程序和桌面应用程序的主题的链接。|  
+|--------------|-----------------|  
+|[保护应用程序](/visualstudio/ide/securing-applications)|包含一般安全性主题的链接， 还包含保护分布式应用程序、Web 应用程序、移动应用程序和桌面应用程序的主题的链接。|  
   
-## 代码访问安全性 \(CAS\)  
- 代码访问安全性 \(CAS\) 是帮助限制代码对受保护资源和操作的访问权限的一种机制。  在 .NET Framework 中，CAS 执行下列功能：  
+## <a name="code-access-security-cas"></a>代码访问安全性 (CAS)  
+ 代码访问安全性 (CAS) 是帮助限制代码对受保护资源和操作的访问权限的一种机制。 在 .NET Framework 中，CAS 执行下列功能：  
   
 -   定义权限和权限集，它们表示访问各种系统资源的权限。  
   
@@ -72,12 +75,12 @@ caps.handback.revision: 4
  有关更多信息，请参见以下资源。  
   
 |资源|描述|  
-|--------|--------|  
+|--------------|-----------------|  
 |[代码访问安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|从 ADO.NET 应用程序角度描述代码访问安全性、基于角色安全性以及部分受信任环境之间的交互。|  
-|[Code Access Security](http://msdn.microsoft.com/zh-cn/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
+|[代码访问安全性](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
   
-## 数据库安全性  
- 最小特权原则也适用于数据源。  数据库安全性一般准则包括：  
+## <a name="database-security"></a>数据库安全性  
+ 最小特权原则也适用于数据源。 数据库安全性一般准则包括：  
   
 -   使用最低可能的特权创建帐户。  
   
@@ -94,22 +97,22 @@ caps.handback.revision: 4
  有关更多信息，请参见以下资源。  
   
 |资源|描述|  
-|--------|--------|  
+|--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|提供 SQL Server 安全性和应用方案的概述，这些应用方案提供用于创建针对 SQL Server 的安全 ADO.NET 应用程序的指南。|  
-|[Recommendations for Data Access Strategies](http://msdn.microsoft.com/zh-cn/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
+|[数据访问策略的建议](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
   
-## 安全策略和管理  
- 不正确管理代码访问安全性 \(CAS\) 策略可能会导致安全漏洞。  应用程序一旦部署，就应使用监视安全性的技术，因为将出现评估为新威胁的风险。  
+## <a name="security-policy-and-administration"></a>安全策略和管理  
+ 不正确管理代码访问安全性 (CAS) 策略可能会导致安全漏洞。 应用程序一旦部署，就应使用监视安全性的技术，因为将出现评估为新威胁的风险。  
   
  有关更多信息，请参见以下资源。  
   
 |资源|描述|  
-|--------|--------|  
-|[NIB: Security Policy Management](http://msdn.microsoft.com/zh-cn/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
-|[NIB: Security Policy Best Practices](http://msdn.microsoft.com/zh-cn/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
+|--------------|-----------------|  
+|[NIB： 安全策略管理](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
+|[NIB： 安全策略最佳实践](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
   
-## 请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/zh-cn/bd61be84-c143-409a-a75a-44253724f784)   
- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [本机代码和 .NET Framework 代码的安全性](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 当线程尝试将异步中止引入到另一个线程时，将激活 `asynchronousThreadAbort` 托管调试助手 (MDA)。 同步线程中止不会激活 `asynchronousThreadAbort` MDA。
@@ -43,7 +36,7 @@ ms.lasthandoff: 08/21/2017
  由于问题固有的随机性，因此问题的具体表现可能有极大差异。
 
 ## <a name="cause"></a>原因
- 一个线程中的代码对目标线程调用 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 方法来引入异步线程中止。 线程中止是异步的，因为对 <xref:System.Threading.Thread.Abort%2A> 进行调用的代码运行在与中止操作的目标不同的线程上。 同步线程中止不应导致此问题，因为执行 <xref:System.Threading.Thread.Abort%2A> 的线程应只在应用程序状态一致的安全检查点执行此操作。
+ 一个线程中的代码对目标线程调用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法来引入异步线程中止。 线程中止是异步的，因为对 <xref:System.Threading.Thread.Abort%2A> 进行调用的代码运行在与中止操作的目标不同的线程上。 同步线程中止不应导致此问题，因为执行 <xref:System.Threading.Thread.Abort%2A> 的线程应只在应用程序状态一致的安全检查点执行此操作。
 
  异步线程中止出现问题，因为它们在目标线程的执行过程中是在不可预测的点被处理的。 若要避免此问题，所编写的代码（为了在可能以此方式被中止的线程上运行）需要在几乎每个代码行上处理 <xref:System.Threading.ThreadAbortException>，负责将应用程序数据放回到一致状态。 在编写代码时考虑到此问题，或编写防止可能出现的所有情况的代码都是不现实的。
 
@@ -87,4 +80,3 @@ void FireMda()
 
 ## <a name="see-also"></a>另请参阅
  <xref:System.Threading.Thread>[使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

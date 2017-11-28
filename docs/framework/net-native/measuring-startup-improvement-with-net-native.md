@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2486aa4daa5682f09b9cd5da8eac4b9071671a3c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>使用 .NET Native 衡量启动改善
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 显著地缩短了应用的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/21/2017
   
 -   `MainPage` 构造函数得到调用所花时间。  
   
- [!code-csharp[ProjectN_ETW # 1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
+ [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
  有几个需要记住的要点。 首先，在 `AppEventSource.Log` 中创建一个单独实例。 该实例将用于所有记录。 其次，每个事件方法都有一个 <xref:System.Diagnostics.Tracing.EventAttribute>。 这将帮助工具将 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法的索引与在 `AppEventSource` 上调用的方法关联起来。  
   
@@ -109,4 +107,3 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Diagnostics.Tracing.EventSource>
-

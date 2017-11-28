@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -22,22 +16,21 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e78cdcc5bcf69902675fceacc9dac245bfec336
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 当程序集加载失败时，将激活 `bindingFailure` 托管调试助手 (MDA)。  
   
 ## <a name="symptoms"></a>症状  
- 代码已尝试使用静态引用或一种加载程序方法（<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>）加载程序集。 程序集未加载，且引发 <xref:System.IO.FileNotFoundException> 或 <xref:System.IO.FileLoadException> 异常。  
+ 代码已尝试使用静态引用或一种加载程序方法（<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>）加载程序集。 程序集未加载，且引发 <xref:System.IO.FileNotFoundException> 或 <xref:System.IO.FileLoadException> 异常。  
   
 ## <a name="cause"></a>原因  
  当运行时无法加载程序集时，会发生绑定失败。 绑定失败的原因可能是下列情况之一：  
@@ -115,4 +108,3 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>另请参阅  
  [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
