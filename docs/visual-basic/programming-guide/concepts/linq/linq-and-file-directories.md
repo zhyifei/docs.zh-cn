@@ -1,61 +1,53 @@
 ---
-title: "LINQ 和文件目录 (Visual Basic 中) |Microsoft 文档"
+title: "LINQ 和文件目录 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5536ae95b42cdaddda2c4cae97a114681e94b0ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 470ad8e783eb05cc56949982b2d2d79d5aaefdc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-and-file-directories-visual-basic"></a>LINQ 和文件目录 (Visual Basic)
-许多文件系统操作实质上是查询，因此非常适合 LINQ 方法。  
+# <a name="linq-and-file-directories-visual-basic"></a><span data-ttu-id="08981-102">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08981-102">LINQ and File Directories (Visual Basic)</span></span>
+<span data-ttu-id="08981-103">许多文件系统操作实质上是查询，因此非常适合使用 LINQ 方法。</span><span class="sxs-lookup"><span data-stu-id="08981-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  
   
- 请注意，本部分中的查询非破坏性。 它们不用于更改原始文件或文件夹的内容。 这遵循该规则查询不应引起任何副作用。 一般情况下，修改源数据的任何代码 （包括执行的查询创建 / 更新 / 删除运算符） 应始终独立于只查询数据的代码。  
+ <span data-ttu-id="08981-104">请注意，本部分中的查询是非破坏性查询。</span><span class="sxs-lookup"><span data-stu-id="08981-104">Note that the queries in this section are non-destructive.</span></span> <span data-ttu-id="08981-105">它们不用于更改原始文件或文件夹的内容。</span><span class="sxs-lookup"><span data-stu-id="08981-105">They are not used to change the contents of the original files or folders.</span></span> <span data-ttu-id="08981-106">这遵循了查询不应引起任何副作用这条规则。</span><span class="sxs-lookup"><span data-stu-id="08981-106">This follows the rule that queries should not cause any side-effects.</span></span> <span data-ttu-id="08981-107">通常，修改源数据的任何代码（包括执行创建/更新/删除运算符的查询）应与只查询数据的代码分开。</span><span class="sxs-lookup"><span data-stu-id="08981-107">In general, any code (including queries that perform create / update / delete operators) that modifies source data should be kept separate from the code that just queries the data.</span></span>  
   
- 本节包含下列主题：  
+ <span data-ttu-id="08981-108">本节包含下列主题：</span><span class="sxs-lookup"><span data-stu-id="08981-108">This section contains the following topics:</span></span>  
   
- [如何︰ 查询具有指定的特性或名称 (Visual Basic 中) 的文件](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- 演示如何通过检查一个或多个属性文件中搜索其<xref:System.IO.FileInfo>对象。</xref:System.IO.FileInfo>  
+ [<span data-ttu-id="08981-109">如何： 查询具有指定的特性或名称 (Visual Basic) 的文件</span><span class="sxs-lookup"><span data-stu-id="08981-109">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ <span data-ttu-id="08981-110">演示如何通过检查文件的 <xref:System.IO.FileInfo> 对象的一个或多个属性来搜索文件。</span><span class="sxs-lookup"><span data-stu-id="08981-110">Shows how to search for files by examining one or more properties of its <xref:System.IO.FileInfo> object.</span></span>  
   
- [如何︰ 通过扩展 (LINQ) (Visual Basic 中) 的文件进行分组](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- 演示如何返回组<xref:System.IO.FileInfo>对象基于其文件扩展名。</xref:System.IO.FileInfo>  
+ [<span data-ttu-id="08981-111">如何： 文件分组依据扩展 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08981-111">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ <span data-ttu-id="08981-112">演示如何根据文件扩展名返回 <xref:System.IO.FileInfo> 对象组。</span><span class="sxs-lookup"><span data-stu-id="08981-112">Shows how to return groups of <xref:System.IO.FileInfo> object based on their file name extension.</span></span>  
   
- [如何︰ 查询一组文件夹 (LINQ) (Visual Basic 中) 中的字节总数](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
- 演示如何返回指定的目录树中的所有文件中的总字节数。  
+ [<span data-ttu-id="08981-113">如何： 查询一组文件夹 (LINQ) (Visual Basic 中) 中的字节总数</span><span class="sxs-lookup"><span data-stu-id="08981-113">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ <span data-ttu-id="08981-114">演示如何返回指定目录树中所有文件的总字节数。</span><span class="sxs-lookup"><span data-stu-id="08981-114">Shows how to return the total number of bytes in all the files in a specified directory tree.</span></span>  
   
- [如何︰ 比较两个文件夹 (LINQ) (Visual Basic 中) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
- 演示如何返回两个指定的文件夹中存在的所有文件和也的所有文件都位于一个文件夹，但不是在其他。  
+ <span data-ttu-id="08981-115">[如何： 比较两个文件夹 (LINQ) (Visual Basic) 的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span><span class="sxs-lookup"><span data-stu-id="08981-115">[How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span></span>  
+ <span data-ttu-id="08981-116">演示如何返回位于两个指定文件夹中的所有文件，以及仅位于其中一个文件夹中的所有文件。</span><span class="sxs-lookup"><span data-stu-id="08981-116">Shows how to return all the files that are present in two specified folders, and also all the files that are present in one folder but not the other.</span></span>  
   
- [如何︰ 查询多个最大文件或目录树 (LINQ) (Visual Basic 中) 中的文件](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- 演示如何在目录树中返回的最大或最小的文件或指定的数量的文件。  
+ [<span data-ttu-id="08981-117">如何： 查询多个最大文件或目录树 (LINQ) (Visual Basic 中) 中的文件</span><span class="sxs-lookup"><span data-stu-id="08981-117">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ <span data-ttu-id="08981-118">演示如何返回目录树中的最大文件、最小文件或指定数量的文件。</span><span class="sxs-lookup"><span data-stu-id="08981-118">Shows how to return the largest or smallest file, or a specified number of files, in a directory tree.</span></span>  
   
- [如何︰ 查询目录树 (LINQ) (Visual Basic 中) 中的重复文件](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
- 演示如何在指定的目录树中的多个位置中发生的所有文件名称的都组。 此外演示如何执行更复杂的比较基于自定义比较器。  
+ [<span data-ttu-id="08981-119">如何： 查询目录树 (LINQ) (Visual Basic 中) 中的重复文件</span><span class="sxs-lookup"><span data-stu-id="08981-119">How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ <span data-ttu-id="08981-120">演示如何对出现在指定目录树中多个位置的所有文件名进行分组。</span><span class="sxs-lookup"><span data-stu-id="08981-120">Shows how to group for all file names that occur in more than one location in a specified directory tree.</span></span> <span data-ttu-id="08981-121">此外，还演示如何根据自定义比较器执行更复杂的比较。</span><span class="sxs-lookup"><span data-stu-id="08981-121">Also shows how to perform more complex comparisons based on a custom comparer.</span></span>  
   
- [如何︰ 查询文件夹 (LINQ) (Visual Basic 中) 中的文件的内容](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
- 演示如何遍历树中的文件夹，打开每个文件，以及查询文件的内容。  
+ [<span data-ttu-id="08981-122">如何： 查询文件夹 (LINQ) (Visual Basic 中) 中的文件的内容</span><span class="sxs-lookup"><span data-stu-id="08981-122">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
+ <span data-ttu-id="08981-123">演示如何循环访问树中的文件夹，打开每个文件以及查询文件的内容。</span><span class="sxs-lookup"><span data-stu-id="08981-123">Shows how to iterate through folders in a tree, open each file, and query the file's contents.</span></span>  
   
-## <a name="comments"></a>注释  
- 在创建的数据源，准确地表示文件系统的内容，并能正确处理异常时涉及是某种程度的复杂性。 本部分中的示例创建的快照集合<xref:System.IO.FileInfo>对象，表示指定的根文件夹下的所有文件和所有子文件夹。</xref:System.IO.FileInfo> 实际状态的每个<xref:System.IO.FileInfo>在何时开始和结束执行查询之间的时间可能会更改。</xref:System.IO.FileInfo> 例如，您可以创建一份<xref:System.IO.FileInfo>要用作数据源对象。</xref:System.IO.FileInfo> 如果您尝试访问`Length`属性在查询中，<xref:System.IO.FileInfo>对象将尝试访问文件系统来更新的值`Length`。</xref:System.IO.FileInfo> 如果该文件不再存在，则会出现<xref:System.IO.FileNotFoundException>在查询中，即使您不文件系统直接查询。</xref:System.IO.FileNotFoundException> 本部分中的某些查询使用一个单独的方法使用在某些情况下这些特定异常。 另一个选项是使您通过使用<xref:System.IO.FileSystemWatcher>。</xref:System.IO.FileSystemWatcher>动态更新的数据源  
+## <a name="comments"></a><span data-ttu-id="08981-124">注释</span><span class="sxs-lookup"><span data-stu-id="08981-124">Comments</span></span>  
+ <span data-ttu-id="08981-125">创建准确表示文件系统的内容并适当处理异常的数据源，存在一定难度。</span><span class="sxs-lookup"><span data-stu-id="08981-125">There is some complexity involved in creating a data source that accurately represents the contents of the file system and handles exceptions gracefully.</span></span> <span data-ttu-id="08981-126">本部分中的示例创建 <xref:System.IO.FileInfo> 对象的快照集合，该集合表示指定的根文件夹及其所有子文件夹下的所有文件。</span><span class="sxs-lookup"><span data-stu-id="08981-126">The examples in this section create a snapshot collection of <xref:System.IO.FileInfo> objects that represents all the files under a specified root folder and all its subfolders.</span></span> <span data-ttu-id="08981-127">每个 <xref:System.IO.FileInfo> 的实际状态可能会在开始和结束执行查询期间发生更改。</span><span class="sxs-lookup"><span data-stu-id="08981-127">The actual state of each <xref:System.IO.FileInfo> may change in the time between when you begin and end executing a query.</span></span> <span data-ttu-id="08981-128">例如，可以创建 <xref:System.IO.FileInfo> 对象的列表来用作数据源。</span><span class="sxs-lookup"><span data-stu-id="08981-128">For example, you can create a list of <xref:System.IO.FileInfo> objects to use as a data source.</span></span> <span data-ttu-id="08981-129">如果尝试通过查询访问 `Length` 属性，则 <xref:System.IO.FileInfo> 对象会尝试访问文件系统来更新 `Length` 的值。</span><span class="sxs-lookup"><span data-stu-id="08981-129">If you try to access the `Length` property in a query, the <xref:System.IO.FileInfo> object will try to access the file system to update the value of `Length`.</span></span> <span data-ttu-id="08981-130">如果该文件不再存在，则你会在查询中获得 <xref:System.IO.FileNotFoundException>，即使未直接查询文件系统也是如此。</span><span class="sxs-lookup"><span data-stu-id="08981-130">If the file no longer exists, you will get a <xref:System.IO.FileNotFoundException> in your query, even though you are not querying the file system directly.</span></span> <span data-ttu-id="08981-131">本部分中的一些查询使用不同的方法，在某些情况下使用该方法不会出现这些特定异常。</span><span class="sxs-lookup"><span data-stu-id="08981-131">Some queries in this section use a separate method that consumes these particular exceptions in certain cases.</span></span> <span data-ttu-id="08981-132">另一种方法是使用 <xref:System.IO.FileSystemWatcher> 保持数据源动态更新。</span><span class="sxs-lookup"><span data-stu-id="08981-132">Another option is to keep your data source updated dynamically by using the <xref:System.IO.FileSystemWatcher>.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="08981-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="08981-133">See Also</span></span>  
+ [<span data-ttu-id="08981-134">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08981-134">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

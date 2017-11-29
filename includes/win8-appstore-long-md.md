@@ -1,1 +1,1 @@
-Windows 应用商店
+<span data-ttu-id="09a63-101">Windows 应用商店</span><span class="sxs-lookup"><span data-stu-id="09a63-101">Windows Store</span></span>

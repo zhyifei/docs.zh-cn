@@ -1,75 +1,67 @@
 ---
-title: "Set 运算 (Visual Basic 中) |Microsoft 文档"
+title: "设置操作 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e835737b388427445a15b6658c7d148801f29b79
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2e30c521635326afeea4aad9ce932d5206d06c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="set-operations-visual-basic"></a>Set 运算 (Visual Basic)
-LINQ 中的集运算是指生成基于存在相同或不同集合 （或集） 中的等效元素的结果集的查询操作。  
+# <a name="set-operations-visual-basic"></a><span data-ttu-id="6258e-102">设置操作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6258e-102">Set Operations (Visual Basic)</span></span>
+<span data-ttu-id="6258e-103">LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。</span><span class="sxs-lookup"><span data-stu-id="6258e-103">Set operations in LINQ refer to query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate collections (or sets).</span></span>  
   
- 下一节中列出了执行集合操作的标准查询运算符方法。  
+ <span data-ttu-id="6258e-104">下节列出了执行集运算的标准查询运算符方法。</span><span class="sxs-lookup"><span data-stu-id="6258e-104">The standard query operator methods that perform set operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="6258e-105">方法</span><span class="sxs-lookup"><span data-stu-id="6258e-105">Methods</span></span>  
   
-|方法名|描述|Visual Basic 查询表达式语法|更多信息|  
+|<span data-ttu-id="6258e-106">方法名</span><span class="sxs-lookup"><span data-stu-id="6258e-106">Method Name</span></span>|<span data-ttu-id="6258e-107">描述</span><span class="sxs-lookup"><span data-stu-id="6258e-107">Description</span></span>|<span data-ttu-id="6258e-108">Visual Basic 查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="6258e-108">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="6258e-109">详细信息</span><span class="sxs-lookup"><span data-stu-id="6258e-109">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Distinct|中删除重复的集合中的值。|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName></xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName>|  
-|不包括|返回的差集，这意味着第二个集合中不会出现一个集合中的元素。|不适用。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName></xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
-|相交|返回组重叠，这意味着每两个集合中显示的元素。|不适用。|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName></xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
-|联合|返回并集，这意味着显示在上述两个集合的唯一元素。|不适用。|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName></xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
+|<span data-ttu-id="6258e-110">Distinct</span><span class="sxs-lookup"><span data-stu-id="6258e-110">Distinct</span></span>|<span data-ttu-id="6258e-111">删除集合中的重复值。</span><span class="sxs-lookup"><span data-stu-id="6258e-111">Removes duplicate values from a collection.</span></span>|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="6258e-112">Except</span><span class="sxs-lookup"><span data-stu-id="6258e-112">Except</span></span>|<span data-ttu-id="6258e-113">返回差集，差集指位于一个集合但不位于另一个集合的元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-113">Returns the set difference, which means the elements of one collection that do not appear in a second collection.</span></span>|<span data-ttu-id="6258e-114">不适用。</span><span class="sxs-lookup"><span data-stu-id="6258e-114">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="6258e-115">相交</span><span class="sxs-lookup"><span data-stu-id="6258e-115">Intersect</span></span>|<span data-ttu-id="6258e-116">返回交集，交集指同时出现在两个集合中的元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-116">Returns the set intersection, which means elements that appear in each of two collections.</span></span>|<span data-ttu-id="6258e-117">不适用。</span><span class="sxs-lookup"><span data-stu-id="6258e-117">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="6258e-118">联合</span><span class="sxs-lookup"><span data-stu-id="6258e-118">Union</span></span>|<span data-ttu-id="6258e-119">返回并集，并集指位于两个集合中任一集合的唯一的元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-119">Returns the set union, which means unique elements that appear in either of two collections.</span></span>|<span data-ttu-id="6258e-120">不适用。</span><span class="sxs-lookup"><span data-stu-id="6258e-120">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
-## <a name="comparison-of-set-operations"></a>集运算的比较  
+## <a name="comparison-of-set-operations"></a><span data-ttu-id="6258e-121">比较集运算</span><span class="sxs-lookup"><span data-stu-id="6258e-121">Comparison of Set Operations</span></span>  
   
-### <a name="distinct"></a>Distinct  
- 下图描绘了的行为<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName>方法上的字符序列。</xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> 返回的序列包含输入序列中的唯一元素。  
+### <a name="distinct"></a><span data-ttu-id="6258e-122">Distinct</span><span class="sxs-lookup"><span data-stu-id="6258e-122">Distinct</span></span>  
+ <span data-ttu-id="6258e-123">下图演示字符序列上 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> 方法的行为。</span><span class="sxs-lookup"><span data-stu-id="6258e-123">The following illustration depicts the behavior of the <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> method on a sequence of characters.</span></span> <span data-ttu-id="6258e-124">返回的序列包含输入序列的唯一元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-124">The returned sequence contains the unique elements from the input sequence.</span></span>  
   
- ![显示 distinct （） 的行为的图。](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "不同")  
+ <span data-ttu-id="6258e-125">![演示 Distinct&#40;&#41; 的行为的图。](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")</span><span class="sxs-lookup"><span data-stu-id="6258e-125">![Graphic showing the behavior of Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")</span></span>  
   
-### <a name="except"></a>不包括  
- 下图描绘了<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>。</xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>的行为 返回的序列仅包含元素的第一个输入序列中不在第二个输入序列中。  
+### <a name="except"></a><span data-ttu-id="6258e-126">Except</span><span class="sxs-lookup"><span data-stu-id="6258e-126">Except</span></span>  
+ <span data-ttu-id="6258e-127">下图演示 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行为。</span><span class="sxs-lookup"><span data-stu-id="6258e-127">The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6258e-128">返回的序列只包含位于第一个输入序列但不位于第二个输入序列的元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-128">The returned sequence contains only the elements from the first input sequence that are not in the second input sequence.</span></span>  
   
- ![图形显示操作的图。](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ <span data-ttu-id="6258e-129">![显示 Except&#40;&#41; 的操作的图。](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")</span><span class="sxs-lookup"><span data-stu-id="6258e-129">![Graphic showing the action of Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")</span></span>  
   
-### <a name="intersect"></a>相交  
- 下图描绘了<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>。</xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>的行为 返回的序列包含的元素所共有的这两个输入序列。  
+### <a name="intersect"></a><span data-ttu-id="6258e-130">相交</span><span class="sxs-lookup"><span data-stu-id="6258e-130">Intersect</span></span>  
+ <span data-ttu-id="6258e-131">下图演示 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行为。</span><span class="sxs-lookup"><span data-stu-id="6258e-131">The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6258e-132">返回的序列包含两个输入序列共有的元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-132">The returned sequence contains the elements that are common to both of the input sequences.</span></span>  
   
- ![显示两个序列的交集的图。](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "相交")  
+ <span data-ttu-id="6258e-133">![显示两个序列的交集的图。](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")</span><span class="sxs-lookup"><span data-stu-id="6258e-133">![Graphic showing the intersection of two sequences.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")</span></span>  
   
-### <a name="union"></a>联合  
- 下图描绘了 union 运算对两个序列的字符。 返回的序列中不包含这两个输入序列中的唯一元素。  
+### <a name="union"></a><span data-ttu-id="6258e-134">联合</span><span class="sxs-lookup"><span data-stu-id="6258e-134">Union</span></span>  
+ <span data-ttu-id="6258e-135">下图演示对两个字符序列执行的联合操作。</span><span class="sxs-lookup"><span data-stu-id="6258e-135">The following illustration depicts a union operation on two sequences of characters.</span></span> <span data-ttu-id="6258e-136">返回的序列包含两个输入序列的唯一元素。</span><span class="sxs-lookup"><span data-stu-id="6258e-136">The returned sequence contains the unique elements from both input sequences.</span></span>  
   
- ![显示两个序列的联合的图。](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
+ <span data-ttu-id="6258e-137">![显示两个序列的联合的图。](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")</span><span class="sxs-lookup"><span data-stu-id="6258e-137">![Graphic showing the union of two sequences.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")</span></span>  
   
-## <a name="query-expression-syntax-example"></a>查询表达式语法示例  
- 下面的示例使用`Distinct`LINQ 查询以返回唯一的编号从整数列表中的子句。  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="6258e-138">查询表达式语法示例</span><span class="sxs-lookup"><span data-stu-id="6258e-138">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="6258e-139">下面的示例使用`Distinct`LINQ 查询以返回唯一的编号，从整数列表中的子句。</span><span class="sxs-lookup"><span data-stu-id="6258e-139">The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.</span></span>  
   
- [!code-vb[CsLINQSetOps #&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Linq></xref:System.Linq>   
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)   
- [如何︰ 组合和比较字符串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
- [如何︰ 查找两个列表 (LINQ) (Visual Basic 中) 之间的差集](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a><span data-ttu-id="6258e-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6258e-140">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="6258e-141">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6258e-141">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="6258e-142">Distinct 子句</span><span class="sxs-lookup"><span data-stu-id="6258e-142">Distinct Clause</span></span>](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [<span data-ttu-id="6258e-143">如何： 组合和比较字符串集合 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6258e-143">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
+ [<span data-ttu-id="6258e-144">如何： 查找两个列表 (LINQ) (Visual Basic 中) 之间的差集</span><span class="sxs-lookup"><span data-stu-id="6258e-144">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

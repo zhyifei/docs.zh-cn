@@ -17,6 +17,3 @@
 ### [如何：访问 XML 子元素](how-to-access-xml-child-elements.md)
 ### [如何：访问 XML 特性](how-to-access-xml-attributes.md)
 ### [如何：声明和使用 XML 命名空间前缀](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [XML IntelliSense](xml-intellisense.md)
-### [如何：启用 XML IntelliSense](how-to-enable-xml-intellisense.md)
-### [架构向导 XML](xml-to-schema-wizard.md)

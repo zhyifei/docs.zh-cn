@@ -1,77 +1,60 @@
 ---
-title: "如何︰ 使用类定义的运算符 (Visual Basic 中) |Microsoft 文档"
+title: "如何：使用定义运算符的类 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operator procedures, calling
-- procedures, operator
-- procedures, calling
+- operator procedures [Visual Basic], calling
+- procedures [Visual Basic], operator
+- procedures [Visual Basic], calling
 - examples [Visual Basic], CType
-- syntax, Operator procedures
+- syntax [Visual Basic], Operator procedures
 - operators [Visual Basic], overloading
-- return values, Operator procedures
+- return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1db7c0b2a6fd8160baa48892b5f2214df24674e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定义运算符的类 (Visual Basic)
-如果使用类或结构，它定义自己的运算符，您可以访问这些运算符从[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a><span data-ttu-id="5bf65-102">如何：使用定义运算符的类 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5bf65-102">How to: Use a Class that Defines Operators (Visual Basic)</span></span>
+<span data-ttu-id="5bf65-103">如果你使用的类或结构，它定义自己的运算符，则可以访问这些运算符从[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5bf65-103">If you are using a class or structure that defines its own operators, you can access those operators from [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- 也称为上类或结构定义一个运算符*重载*运算符。  
+ <span data-ttu-id="5bf65-104">在类或结构上定义一个运算符也称为*重载*运算符。</span><span class="sxs-lookup"><span data-stu-id="5bf65-104">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a>示例  
- 以下示例将访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，它定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串之间进行双向和[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]字符串。</xref:System.Data.SqlTypes.SqlString> 使用`CType(` *SQL 字符串表达式*， `String)` SQL 将字符串转换为[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]字符串，并`CType(` *Visual Basic 字符串表达式*，<xref:System.Data.SqlTypes.SqlString>`)`在反向转换。</xref:System.Data.SqlTypes.SqlString>  
+## <a name="example"></a><span data-ttu-id="5bf65-105">示例</span><span class="sxs-lookup"><span data-stu-id="5bf65-105">Example</span></span>  
+ <span data-ttu-id="5bf65-106">以下示例访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，后者定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串之间进行双向和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串。</span><span class="sxs-lookup"><span data-stu-id="5bf65-106">The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] string.</span></span> <span data-ttu-id="5bf65-107">使用`CType(` *SQL 字符串表达式*， `String)` SQL 将字符串转换为[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串，和`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString>`)`在另一个方向转换。</span><span class="sxs-lookup"><span data-stu-id="5bf65-107">Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.</span></span>  
   
- [!code-vb[VbVbcnProcedures #&30;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures #&31;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- <xref:System.Data.SqlTypes.SqlString>结构定义的转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 从`String`到<xref:System.Data.SqlTypes.SqlString>，另一个从<xref:System.Data.SqlTypes.SqlString>到`String`。</xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> 将分配的语句`title`到`jobTitle`利用了第一个运算符，与<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数调用时，使用第二个。</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
+ <span data-ttu-id="5bf65-108"><xref:System.Data.SqlTypes.SqlString>结构定义的转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 从`String`到<xref:System.Data.SqlTypes.SqlString>，另一个从<xref:System.Data.SqlTypes.SqlString>到`String`。</span><span class="sxs-lookup"><span data-stu-id="5bf65-108">The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`.</span></span> <span data-ttu-id="5bf65-109">将分配的语句`title`到`jobTitle`使用第一个运算符，与<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数调用使用第二个。</span><span class="sxs-lookup"><span data-stu-id="5bf65-109">The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 请确保类或结构正在使用定义你想要使用的运算符。 不要假定类或结构已定义每个运算符可进行重载。 可用运算符的列表，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
+## <a name="compiling-the-code"></a><span data-ttu-id="5bf65-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="5bf65-110">Compiling the Code</span></span>  
+ <span data-ttu-id="5bf65-111">请确保类或结构将定义你想要使用的运算符。</span><span class="sxs-lookup"><span data-stu-id="5bf65-111">Be sure the class or structure you are using defines the operator you want to use.</span></span> <span data-ttu-id="5bf65-112">不要假定的类或结构已定义每个可用于重载的运算符。</span><span class="sxs-lookup"><span data-stu-id="5bf65-112">Do not assume that the class or structure has defined every operator available for overloading.</span></span> <span data-ttu-id="5bf65-113">可用运算符的列表，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="5bf65-113">For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
- 包括相应`Imports`SQL 字符串的开头的源文件的语句 (在这种情况下<xref:System.Data.SqlTypes>)。</xref:System.Data.SqlTypes>  
+ <span data-ttu-id="5bf65-114">应包括适当`Imports`SQL 字符串的开头的源文件的语句 (在这种情况下<xref:System.Data.SqlTypes>)。</span><span class="sxs-lookup"><span data-stu-id="5bf65-114">Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).</span></span>  
   
- 您的项目必须具有对 System.Data 和 System.XML 的引用。  
+ <span data-ttu-id="5bf65-115">你的项目必须具有对 System.Data 和 System.XML 的引用。</span><span class="sxs-lookup"><span data-stu-id="5bf65-115">Your project must have references to System.Data and System.XML.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [运算符过程](./operator-procedures.md)   
- [如何︰ 定义运算符](./how-to-define-an-operator.md)   
- [如何︰ 定义转换运算符](./how-to-define-a-conversion-operator.md)   
- [如何︰ 调用运算符过程](./how-to-call-an-operator-procedure.md)   
- [扩大转换](../../../../visual-basic/language-reference/modifiers/widening.md)   
- [收缩转换](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [如何︰ 声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [隐式和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="5bf65-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5bf65-116">See Also</span></span>  
+ [<span data-ttu-id="5bf65-117">运算符过程</span><span class="sxs-lookup"><span data-stu-id="5bf65-117">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="5bf65-118">如何：定义运算符</span><span class="sxs-lookup"><span data-stu-id="5bf65-118">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
+ [<span data-ttu-id="5bf65-119">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="5bf65-119">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="5bf65-120">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="5bf65-120">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)  
+ [<span data-ttu-id="5bf65-121">Widening</span><span class="sxs-lookup"><span data-stu-id="5bf65-121">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="5bf65-122">Narrowing</span><span class="sxs-lookup"><span data-stu-id="5bf65-122">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="5bf65-123">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="5bf65-123">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="5bf65-124">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="5bf65-124">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="5bf65-125">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="5bf65-125">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="5bf65-126">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="5bf65-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

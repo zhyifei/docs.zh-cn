@@ -1,39 +1,38 @@
 ---
-title: "结构和其他编程元素 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "数组 [Visual Basic], 结构元素"
-  - "嵌套结构"
-  - "对象 [Visual Basic], 结构元素"
-  - "过程, 作为参数的结构"
-  - "结构, 数组"
+title: "结构和其他编程元素 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- structures [Visual Basic], arrays
+- procedures [Visual Basic], structures as arguments to
+- objects [Visual Basic], structure elements
+- arrays [Visual Basic], structure elements
+- nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 结构和其他编程元素 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-可以将结构与数组、对象和程序一起，以及其他。  交互使用与这些元素单独使用的语法。  
+# <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="d99bb-102">结构和其他编程元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d99bb-102">Structures and Other Programming Elements (Visual Basic)</span></span>
+<span data-ttu-id="d99bb-103">你可以结合使用数组、 对象和过程，以及与每个其他使用结构。</span><span class="sxs-lookup"><span data-stu-id="d99bb-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="d99bb-104">交互使用相同的语法，如单独使用这些元素。</span><span class="sxs-lookup"><span data-stu-id="d99bb-104">The interactions use the same syntax as these elements use individually.</span></span>  
   
 > [!NOTE]
->  无法初始化任何一个在结构声明的结构元素。  只能将值分配给声明为结构类型的变量的元素。  
+>  <span data-ttu-id="d99bb-105">无法初始化任何结构声明中的结构元素。</span><span class="sxs-lookup"><span data-stu-id="d99bb-105">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="d99bb-106">您可以分配到已被声明为结构类型的变量的元素的值。</span><span class="sxs-lookup"><span data-stu-id="d99bb-106">You can assign values only to elements of a variable that has been declared to be of a structure type.</span></span>  
   
-## 结构和数组  
- 结构可以包含数组作为它的一个或多个元素。  下面的示例阐释了这一点。  
+## <a name="structures-and-arrays"></a><span data-ttu-id="d99bb-107">结构和数组</span><span class="sxs-lookup"><span data-stu-id="d99bb-107">Structures and Arrays</span></span>  
+ <span data-ttu-id="d99bb-108">结构可以包含数组作为一个或多个它的元素。</span><span class="sxs-lookup"><span data-stu-id="d99bb-108">A structure can contain an array as one or more of its elements.</span></span> <span data-ttu-id="d99bb-109">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-109">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Public Structure systemInfo  
     Public cPU As String  
     Public memory As Long  
@@ -42,32 +41,32 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- 您访问一个结构内数组的值的方式与访问对象的属性。  下面的示例阐释了这一点。  
+ <span data-ttu-id="d99bb-110">你可以访问数组结构中的值相同的方式访问对象的属性。</span><span class="sxs-lookup"><span data-stu-id="d99bb-110">You access the values of an array within a structure the same way you access a property on an object.</span></span> <span data-ttu-id="d99bb-111">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-111">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Dim mySystem As systemInfo  
 ReDim mySystem.diskDrives(3)  
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- 还可以声明结构数组。  下面的示例阐释了这一点。  
+ <span data-ttu-id="d99bb-112">你也可以声明结构的数组。</span><span class="sxs-lookup"><span data-stu-id="d99bb-112">You can also declare an array of structures.</span></span> <span data-ttu-id="d99bb-113">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-113">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- 要遵循相同的规则访问此数据结构元素。  下面的示例阐释了这一点。  
+ <span data-ttu-id="d99bb-114">按照相同的规则来访问此数据体系结构的组件。</span><span class="sxs-lookup"><span data-stu-id="d99bb-114">You follow the same rules to access the components of this data architecture.</span></span> <span data-ttu-id="d99bb-115">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-115">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 ReDim allSystems(5).diskDrives(3)  
 allSystems(5).CPU = "386SX"  
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## 结构和对象  
- 结构可以包含对象作为它的一个或多个元素。  下面的示例阐释了这一点。  
+## <a name="structures-and-objects"></a><span data-ttu-id="d99bb-116">结构和对象</span><span class="sxs-lookup"><span data-stu-id="d99bb-116">Structures and Objects</span></span>  
+ <span data-ttu-id="d99bb-117">结构只能包含一个作为一个或多个它的元素的对象。</span><span class="sxs-lookup"><span data-stu-id="d99bb-117">A structure can contain an object as one or more of its elements.</span></span> <span data-ttu-id="d99bb-118">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-118">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Protected Structure userInput  
     Public userName As String  
     Public inputForm As System.Windows.Forms.Form  
@@ -75,12 +74,12 @@ Protected Structure userInput
 End Structure  
 ```  
   
- 在这样的声明中使用特定的对象类，而不是 `Object`。  
+ <span data-ttu-id="d99bb-119">应在此类声明中，使用特定的对象类而不是`Object`。</span><span class="sxs-lookup"><span data-stu-id="d99bb-119">You should use a specific object class in such a declaration, rather than `Object`.</span></span>  
   
-## 结构和过程  
- 可以将结构作为过程参数。  下面的示例阐释了这一点。  
+## <a name="structures-and-procedures"></a><span data-ttu-id="d99bb-120">结构和过程</span><span class="sxs-lookup"><span data-stu-id="d99bb-120">Structures and Procedures</span></span>  
+ <span data-ttu-id="d99bb-121">可以将结构作为过程自变量传递。</span><span class="sxs-lookup"><span data-stu-id="d99bb-121">You can pass a structure as a procedure argument.</span></span> <span data-ttu-id="d99bb-122">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-122">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
 Public currentMemorySize As Long = 256  
 Public Sub fillSystem(ByRef someSystem As systemInfo)  
@@ -90,11 +89,11 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 前面的示例通过 *引用*来传递结构，这允许过程修改其元素，以使更改生效在调用代码中。  如果要保护结构避免这种修改，将它值。  
+ <span data-ttu-id="d99bb-123">前面的示例将此结构传递*通过引用*，这样，过程来修改其元素，以便在调用代码中所做的更改生效。</span><span class="sxs-lookup"><span data-stu-id="d99bb-123">The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code.</span></span> <span data-ttu-id="d99bb-124">如果你想要保护避免这种修改的结构，则按值传递它。</span><span class="sxs-lookup"><span data-stu-id="d99bb-124">If you want to protect a structure against such modification, pass it by value.</span></span>  
   
- 还可以从返回 `Function` 程序的结构。  下面的示例阐释了这一点。  
+ <span data-ttu-id="d99bb-125">你还可以返回的结构从`Function`过程。</span><span class="sxs-lookup"><span data-stu-id="d99bb-125">You can also return a structure from a `Function` procedure.</span></span> <span data-ttu-id="d99bb-126">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-126">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 Function findByDate(ByVal searchDate As Date) As systemInfo  
     Dim i As Integer  
@@ -105,10 +104,10 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## 结构中的结构  
- 结构可以包含其他结构。  下面的示例阐释了这一点。  
+## <a name="structures-within-structures"></a><span data-ttu-id="d99bb-127">结构中的结构</span><span class="sxs-lookup"><span data-stu-id="d99bb-127">Structures Within Structures</span></span>  
+ <span data-ttu-id="d99bb-128">结构可以包含其他结构。</span><span class="sxs-lookup"><span data-stu-id="d99bb-128">Structures can contain other structures.</span></span> <span data-ttu-id="d99bb-129">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="d99bb-129">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Public Structure driveInfo  
     Public type As String  
     Public size As Long  
@@ -121,24 +120,24 @@ Public Structure systemInfo
 End Structure  
 ```  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ReDim allSystems(1).diskDrives(3)  
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 也可以使用此方法封装在另的模块中定义的结构中的一个模块中定义的结构。  
+ <span data-ttu-id="d99bb-130">此方法还可用于封装在另一个模块中定义结构中的一个模块中定义的结构。</span><span class="sxs-lookup"><span data-stu-id="d99bb-130">You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.</span></span>  
   
- 结构可以包含其他结构到任意深度。  
+ <span data-ttu-id="d99bb-131">结构可以包含其他结构到任意深度。</span><span class="sxs-lookup"><span data-stu-id="d99bb-131">Structures can contain other structures to an arbitrary depth.</span></span>  
   
-## 请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [如何：声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [结构变量](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [结构和类](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d99bb-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d99bb-132">See Also</span></span>  
+ [<span data-ttu-id="d99bb-133">数据类型</span><span class="sxs-lookup"><span data-stu-id="d99bb-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="d99bb-134">基本数据类型</span><span class="sxs-lookup"><span data-stu-id="d99bb-134">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="d99bb-135">复合数据类型</span><span class="sxs-lookup"><span data-stu-id="d99bb-135">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="d99bb-136">值类型和引用类型</span><span class="sxs-lookup"><span data-stu-id="d99bb-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="d99bb-137">结构</span><span class="sxs-lookup"><span data-stu-id="d99bb-137">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="d99bb-138">数据类型疑难解答</span><span class="sxs-lookup"><span data-stu-id="d99bb-138">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="d99bb-139">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="d99bb-139">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="d99bb-140">结构变量</span><span class="sxs-lookup"><span data-stu-id="d99bb-140">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [<span data-ttu-id="d99bb-141">结构和类</span><span class="sxs-lookup"><span data-stu-id="d99bb-141">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="d99bb-142">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="d99bb-142">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)

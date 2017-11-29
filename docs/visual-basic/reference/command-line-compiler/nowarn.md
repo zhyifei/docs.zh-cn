@@ -1,83 +1,66 @@
 ---
-title: "/nowarn |Microsoft 文档"
-ms.date: 2015-07-20
+title: /nowarn
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - nowarn compiler option [Visual Basic]
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61b145a9eb95f5357c7aa2983a96c31e8f2cef6a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8da27ea2f9f0a4d370928d70cda1a796b822d97c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nowarn"></a>/nowarn
-禁止编译器生成警告的能力。  
+# <a name="nowarn"></a><span data-ttu-id="c7836-102">/nowarn</span><span class="sxs-lookup"><span data-stu-id="c7836-102">/nowarn</span></span>
+<span data-ttu-id="c7836-103">禁止编译器生成警告的能力。</span><span class="sxs-lookup"><span data-stu-id="c7836-103">Suppresses the compiler's ability to generate warnings.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="c7836-104">语法</span><span class="sxs-lookup"><span data-stu-id="c7836-104">Syntax</span></span>  
   
 ```  
 /nowarn[:numberList]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="c7836-105">参数</span><span class="sxs-lookup"><span data-stu-id="c7836-105">Arguments</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="c7836-106">术语</span><span class="sxs-lookup"><span data-stu-id="c7836-106">Term</span></span>|<span data-ttu-id="c7836-107">定义</span><span class="sxs-lookup"><span data-stu-id="c7836-107">Definition</span></span>|  
 |---|---|  
-|`numberList`|可选。 应该禁止显示编译器警告 ID 号的以逗号分隔列表。 如果未指定 Id 的警告，则会抑制所有警告。|  
+|`numberList`|<span data-ttu-id="c7836-108">可选。</span><span class="sxs-lookup"><span data-stu-id="c7836-108">Optional.</span></span> <span data-ttu-id="c7836-109">应禁止显示编译器警告 ID 号的逗号分隔列表。</span><span class="sxs-lookup"><span data-stu-id="c7836-109">Comma-delimited list of the warning ID numbers that the compiler should suppress.</span></span> <span data-ttu-id="c7836-110">如果未指定警告 Id，则取消所有警告。</span><span class="sxs-lookup"><span data-stu-id="c7836-110">If the warning IDs are not specified, all warnings are suppressed.</span></span>|  
   
-## <a name="remarks"></a>备注  
- `/nowarn`选项将使编译器不生成警告。 若要禁止显示个别警告，请提供警告 ID`/nowarn`冒号之后的选项。 用逗号分隔多个警告编号。  
+## <a name="remarks"></a><span data-ttu-id="c7836-111">备注</span><span class="sxs-lookup"><span data-stu-id="c7836-111">Remarks</span></span>  
+ <span data-ttu-id="c7836-112">`/nowarn`选项使编译器不会生成警告。</span><span class="sxs-lookup"><span data-stu-id="c7836-112">The `/nowarn` option causes the compiler to not generate warnings.</span></span> <span data-ttu-id="c7836-113">若要禁止显示个别警告，提供到的警告 ID`/nowarn`冒号之后的选项。</span><span class="sxs-lookup"><span data-stu-id="c7836-113">To suppress an individual warning, supply the warning ID to the `/nowarn` option following the colon.</span></span> <span data-ttu-id="c7836-114">用逗号分隔多个警告编号。</span><span class="sxs-lookup"><span data-stu-id="c7836-114">Separate multiple warning numbers with commas.</span></span>  
   
- 您需要指定只有警告标识符的数值部分。 例如，如果您想要禁止显示 BC42024，未使用的局部变量，该警告指定`/nowarn:42024`。  
+ <span data-ttu-id="c7836-115">你需要指定只有警告标识符数字部分。</span><span class="sxs-lookup"><span data-stu-id="c7836-115">You need to specify only the numeric part of the warning identifier.</span></span> <span data-ttu-id="c7836-116">例如，如果你想要禁止显示 BC42024，对于未使用的本地变量，警告指定`/nowarn:42024`。</span><span class="sxs-lookup"><span data-stu-id="c7836-116">For example, if you want to suppress BC42024, the warning for unused local variables, specify `/nowarn:42024`.</span></span>  
   
- 警告 ID 号的详细信息，请参阅[在 Visual Basic 中配置警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ <span data-ttu-id="c7836-117">警告 ID 号的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="c7836-117">For more information on the warning ID numbers, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
-|在 Visual Studio 中设置 /nowarn 集成开发环境|  
+|<span data-ttu-id="c7836-118">在 Visual Studio 中设置 /nowarn 集成开发环境</span><span class="sxs-lookup"><span data-stu-id="c7836-118">To set /nowarn in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击“编译”****选项卡。<br />3.选择**禁用所有警告**复选框以都禁用所有警告。<br />     - 或 -<br />     若要禁用特定警告，请单击**无**警告旁边的下拉列表中。|  
+|<span data-ttu-id="c7836-119">1.在 “解决方案资源管理器”中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="c7836-119">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="c7836-120">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="c7836-120">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="c7836-121">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="c7836-121">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span><br /><span data-ttu-id="c7836-122">2.单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="c7836-122">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="c7836-123">3.选择**禁用所有警告**复选框以都禁用所有警告。</span><span class="sxs-lookup"><span data-stu-id="c7836-123">3.  Select the **Disable all warnings** check box to disable all warnings.</span></span><br />     <span data-ttu-id="c7836-124">- 或 -</span><span class="sxs-lookup"><span data-stu-id="c7836-124">- or -</span></span><br />     <span data-ttu-id="c7836-125">若要禁用特定警告，请单击**无**对此警告旁边的下拉列表中。</span><span class="sxs-lookup"><span data-stu-id="c7836-125">To disable a particular warning, click **None** from the drop-down list adjacent to the warning.</span></span>|  
   
-## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`并且不显示任何警告。  
+## <a name="example"></a><span data-ttu-id="c7836-126">示例</span><span class="sxs-lookup"><span data-stu-id="c7836-126">Example</span></span>  
+ <span data-ttu-id="c7836-127">下面的代码编译`T2.vb`并且不显示任何警告。</span><span class="sxs-lookup"><span data-stu-id="c7836-127">The following code compiles `T2.vb` and does not display any warnings.</span></span>  
   
 ```  
 vbc /nowarn t2.vb  
 ```  
   
-## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`并且不显示未使用的局部变量 (42024) 的警告。  
+## <a name="example"></a><span data-ttu-id="c7836-128">示例</span><span class="sxs-lookup"><span data-stu-id="c7836-128">Example</span></span>  
+ <span data-ttu-id="c7836-129">下面的代码编译`T2.vb`并且不显示为未使用的局部变量 (42024) 的警告。</span><span class="sxs-lookup"><span data-stu-id="c7836-129">The following code compiles `T2.vb` and does not display the warnings for unused local variables (42024).</span></span>  
   
 ```  
 vbc /nowarn:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [在 Visual Basic 中配置警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)
+## <a name="see-also"></a><span data-ttu-id="c7836-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c7836-130">See Also</span></span>  
+ [<span data-ttu-id="c7836-131">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="c7836-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="c7836-132">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="c7836-132">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="c7836-133">在 Visual Basic 中配置警告</span><span class="sxs-lookup"><span data-stu-id="c7836-133">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)

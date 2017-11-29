@@ -1,86 +1,69 @@
 ---
-title: "/libpath |Microsoft 文档"
-ms.date: 2015-07-20
+title: /libpath
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc534e782cff34f0c4882f3da2af973fed69ff80
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2be2c460fddf2e8ea4fe1239ec073f208c072d34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="libpath"></a>/libpath
-指定引用的程序集的位置。  
+# <a name="libpath"></a><span data-ttu-id="cb6dd-102">/libpath</span><span class="sxs-lookup"><span data-stu-id="cb6dd-102">/libpath</span></span>
+<span data-ttu-id="cb6dd-103">指定引用的程序集的位置。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-103">Specifies the location of referenced assemblies.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="cb6dd-104">语法</span><span class="sxs-lookup"><span data-stu-id="cb6dd-104">Syntax</span></span>  
   
 ```  
 /libpath:dirList  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="cb6dd-105">参数</span><span class="sxs-lookup"><span data-stu-id="cb6dd-105">Arguments</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="cb6dd-106">术语</span><span class="sxs-lookup"><span data-stu-id="cb6dd-106">Term</span></span>|<span data-ttu-id="cb6dd-107">定义</span><span class="sxs-lookup"><span data-stu-id="cb6dd-107">Definition</span></span>|  
 |---|---|  
-|`dirList`|必需。 以分号分隔的编译器进行查找的引用的程序集的目录列表中未找到任何一个当前工作目录 （调用编译器的目录） 或公共语言运行时的系统目录。 如果目录名称包含空格，则将名称括在双引号 ("")。|  
+|`dirList`|<span data-ttu-id="cb6dd-108">必需。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-108">Required.</span></span> <span data-ttu-id="cb6dd-109">以分号分隔的编译器进行查找的引用的程序集的目录的列表中未找到或者当前工作目录 （从其调用编译器的目录） 或公共语言运行时的系统目录。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="cb6dd-110">如果目录名称包含空格，则将名称括在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
   
-## <a name="remarks"></a>备注  
- `/libpath`选项指定引用的程序集的位置[/引用](../../../visual-basic/reference/command-line-compiler/reference.md)选项。  
+## <a name="remarks"></a><span data-ttu-id="cb6dd-111">备注</span><span class="sxs-lookup"><span data-stu-id="cb6dd-111">Remarks</span></span>  
+ <span data-ttu-id="cb6dd-112">`/libpath`选项指定引用的程序集的位置[/参考](../../../visual-basic/reference/command-line-compiler/reference.md)选项。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-112">The `/libpath` option specifies the location of assemblies referenced by the [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
   
- 编译器将搜索未按以下顺序完全限定的程序集引用︰  
+ <span data-ttu-id="cb6dd-113">编译器按以下顺序搜索未完全限定的程序集引用：</span><span class="sxs-lookup"><span data-stu-id="cb6dd-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1.  当前工作目录。 这是从中调用编译器的目录。  
+1.  <span data-ttu-id="cb6dd-114">当前工作目录。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-114">Current working directory.</span></span> <span data-ttu-id="cb6dd-115">该目录为从其调用编译器的目录。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-115">This is the directory from which the compiler is invoked.</span></span>  
   
-2.  公共语言运行时的系统目录。  
+2.  <span data-ttu-id="cb6dd-116">公共语言运行时系统目录。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-116">The common language runtime system directory.</span></span>  
   
-3.  由指定的目录`/libpath`。  
+3.  <span data-ttu-id="cb6dd-117">指定目录`/libpath`。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-117">Directories specified by `/libpath`.</span></span>  
   
-4.  LIB 环境变量所指定的目录。  
+4.  <span data-ttu-id="cb6dd-118">由 LIB 环境变量指定的目录。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-118">Directories specified by the LIB environment variable.</span></span>  
   
- `/libpath`选项是累加性; 指定其超过一次将追加到任何以前的值。  
+ <span data-ttu-id="cb6dd-119">`/libpath`选项是累加性; 指定它超过一次将追加到任何以前的值。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-119">The `/libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
   
- 使用`/reference`来指定程序集引用。  
+ <span data-ttu-id="cb6dd-120">使用`/reference`来指定程序集引用。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-120">Use `/reference` to specify an assembly reference.</span></span>  
   
-|在 Visual Studio 中设置 /libpath 集成开发环境|  
+|<span data-ttu-id="cb6dd-121">在 Visual Studio 中设置 /libpath 集成开发环境</span><span class="sxs-lookup"><span data-stu-id="cb6dd-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击**引用**选项卡。<br />3.单击**引用路径...**按钮。<br />4.在**引用路径**对话框框中，输入中的目录名称**文件夹︰**框。<br />5.单击**将文件夹添加**。|  
+|<span data-ttu-id="cb6dd-122">1.在 “解决方案资源管理器”中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="cb6dd-123">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-123">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="cb6dd-124">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-124">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span><br /><span data-ttu-id="cb6dd-125">2.单击“引用”选项卡。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-125">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="cb6dd-126">3.单击**引用路径...**按钮。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-126">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="cb6dd-127">4.在**引用路径**对话框框中，输入中的目录名称**文件夹：**框。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-127">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="cb6dd-128">5.单击**将文件夹添加**。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-128">5.  Click **Add Folder**.</span></span>|  
   
-## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`若要创建的.exe 文件。 对于程序集引用，则编译器查找的工作目录中、 c︰ 驱动器的根目录中和 c︰ 驱动器的新的程序集目录中。  
+## <a name="example"></a><span data-ttu-id="cb6dd-129">示例</span><span class="sxs-lookup"><span data-stu-id="cb6dd-129">Example</span></span>  
+ <span data-ttu-id="cb6dd-130">下面的代码编译`T2.vb`若要创建的.exe 文件。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-130">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="cb6dd-131">编译器查找程序集引用中的工作目录、 c： 驱动器的根目录中和 c： 驱动器的新的程序集目录中。</span><span class="sxs-lookup"><span data-stu-id="cb6dd-131">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
   
 ```  
 vbc /libpath:c:\;"c:\New Assemblies" /reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="cb6dd-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cb6dd-132">See Also</span></span>  
+ [<span data-ttu-id="cb6dd-133">程序集和全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="cb6dd-133">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="cb6dd-134">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="cb6dd-134">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="cb6dd-135">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="cb6dd-135">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

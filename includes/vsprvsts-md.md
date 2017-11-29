@@ -1,1 +1,1 @@
-Visual Studio 应用程序生命周期管理
+<span data-ttu-id="69f8d-101">Visual Studio 应用程序生命周期管理</span><span class="sxs-lookup"><span data-stu-id="69f8d-101">Visual Studio Application Lifecycle Management</span></span>

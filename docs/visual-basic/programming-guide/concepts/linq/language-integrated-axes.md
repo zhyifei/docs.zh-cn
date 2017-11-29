@@ -1,38 +1,34 @@
 ---
-title: "语言集成的轴，在 Visual Basic (LINQ to XML) |Microsoft 文档"
+title: "Visual Basic 中语言集成的轴 (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d450a556-a134-4261-b011-44e399660894
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75310e3b6356c0414cb9ac72f189af62049d3a2a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d648ba7c8710f73c4aeb8dad3983f219c5fe1815
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Visual Basic 中语言集成的轴 (LINQ to XML)
-本部分介绍功能直接内置于[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]以便可以方便地访问 XML 的语言。 LINQ to XML 文档中的很多示例都使用这些集成的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 轴。  
+# <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a><span data-ttu-id="e75d4-102">Visual Basic 中语言集成的轴 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e75d4-102">Language-Integrated Axes in Visual Basic (LINQ to XML)</span></span>
+<span data-ttu-id="e75d4-103">本部分介绍功能直接内置到[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]以便可以方便地访问 XML 的语言。</span><span class="sxs-lookup"><span data-stu-id="e75d4-103">This section describes features built directly into the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language to make it easy to access XML.</span></span> <span data-ttu-id="e75d4-104">LINQ to XML 文档中的很多示例都使用这些集成的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 轴。</span><span class="sxs-lookup"><span data-stu-id="e75d4-104">Many of the examples in the LINQ to XML documentation use these integrated [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] axes.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="e75d4-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="e75d4-105">In This Section</span></span>  
   
-|主题|说明|  
+|<span data-ttu-id="e75d4-106">主题</span><span class="sxs-lookup"><span data-stu-id="e75d4-106">Topic</span></span>|<span data-ttu-id="e75d4-107">描述</span><span class="sxs-lookup"><span data-stu-id="e75d4-107">Description</span></span>|  
 |-----------|-----------------|  
-|[XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|提供对以下一项的子级的访问︰<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一套<xref:System.Xml.Linq.XElement>对象或一套<xref:System.Xml.Linq.XDocument>对象。</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> 此轴等效于<xref:System.Xml.Linq.XContainer.Elements%2A>轴。</xref:System.Xml.Linq.XContainer.Elements%2A>|  
-|[XML 子代轴属性](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|提供对以下的后代的访问︰<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象或集合的<xref:System.Xml.Linq.XElement>对象。</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> 此轴等效于<xref:System.Xml.Linq.XContainer.Descendants%2A>轴。</xref:System.Xml.Linq.XContainer.Descendants%2A>|  
-|[XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|提供对属性的访问<xref:System.Xml.Linq.XElement>对象。</xref:System.Xml.Linq.XElement> 此轴是大致相当于<xref:System.Xml.Linq.XElement.Attribute%2A>轴。</xref:System.Xml.Linq.XElement.Attribute%2A> 此轴不同于<xref:System.Xml.Linq.XElement.Attribute%2A>它不返回该属性的值中的轴<xref:System.Xml.Linq.XAttribute>对象。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement.Attribute%2A>|  
-|[扩展索引器属性](../../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|提供对集合中各个元素的访问。|  
+|[<span data-ttu-id="e75d4-108">XML 子轴属性</span><span class="sxs-lookup"><span data-stu-id="e75d4-108">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|<span data-ttu-id="e75d4-109">提供对以下一项的子级的访问：<xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="e75d4-109">Provides access to the children of one of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="e75d4-110">此轴等效于 <xref:System.Xml.Linq.XContainer.Elements%2A> 轴。</span><span class="sxs-lookup"><span data-stu-id="e75d4-110">This axis is equivalent to the <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>|  
+|[<span data-ttu-id="e75d4-111">XML 子代轴属性</span><span class="sxs-lookup"><span data-stu-id="e75d4-111">XML Descendant Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|<span data-ttu-id="e75d4-112">提供对以下各项的后代的访问：<xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象或 <xref:System.Xml.Linq.XElement> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="e75d4-112">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, or a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="e75d4-113">此轴等效于 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴。</span><span class="sxs-lookup"><span data-stu-id="e75d4-113">This axis is equivalent to the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>|  
+|[<span data-ttu-id="e75d4-114">XML 特性轴属性</span><span class="sxs-lookup"><span data-stu-id="e75d4-114">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|<span data-ttu-id="e75d4-115">提供对 <xref:System.Xml.Linq.XElement> 对象的属性的访问。</span><span class="sxs-lookup"><span data-stu-id="e75d4-115">Provides access to an attribute of an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="e75d4-116">此轴大致等效于 <xref:System.Xml.Linq.XElement.Attribute%2A> 轴。</span><span class="sxs-lookup"><span data-stu-id="e75d4-116">This axis is roughly equivalent to the <xref:System.Xml.Linq.XElement.Attribute%2A> axis.</span></span> <span data-ttu-id="e75d4-117">此轴与 <xref:System.Xml.Linq.XElement.Attribute%2A> 轴的不同之处在于它返回属性的值而不是一个 <xref:System.Xml.Linq.XAttribute> 对象。</span><span class="sxs-lookup"><span data-stu-id="e75d4-117">This axis differs from the <xref:System.Xml.Linq.XElement.Attribute%2A> axis in that it returns the value of the attribute, not an <xref:System.Xml.Linq.XAttribute> object.</span></span>|  
+|[<span data-ttu-id="e75d4-118">扩展索引器属性</span><span class="sxs-lookup"><span data-stu-id="e75d4-118">Extension Indexer Property</span></span>](../../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|<span data-ttu-id="e75d4-119">提供对集合中各个元素的访问。</span><span class="sxs-lookup"><span data-stu-id="e75d4-119">Provides access to individual elements in a collection.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="e75d4-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e75d4-120">See Also</span></span>  
+ [<span data-ttu-id="e75d4-121">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e75d4-121">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

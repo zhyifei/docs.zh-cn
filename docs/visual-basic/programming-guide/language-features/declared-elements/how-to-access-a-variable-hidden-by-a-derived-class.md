@@ -1,42 +1,41 @@
 ---
-title: "如何：访问被派生类隐藏的变量 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "基类, 访问元素"
-  - "已声明的元素, 引用"
-  - "元素名称, 限定"
-  - "限定, 元素名称"
-  - "引用, 已声明的元素"
-  - "变量 [Visual Basic], 访问隐藏"
+title: "如何：访问被派生类隐藏的变量 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- base classes [Visual Basic], accessing elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declared elements [Visual Basic], referencing
+- variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：访问被派生类隐藏的变量 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-如果派生类的代码访问变量，编译器通常将引用解析到最近的可访问版本，即从访问类向上，派生步骤最少的可访问版本。  如果变量是在该派生类中定义的，则代码通常访问该定义。  
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a><span data-ttu-id="20603-102">如何：访问被派生类隐藏的变量 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20603-102">How to: Access a Variable Hidden by a Derived Class (Visual Basic)</span></span>
+<span data-ttu-id="20603-103">当在派生类中的代码访问的变量时，编译器通常将到最接近的可访问版本，即的可访问版本引用解析派生步骤最少向后从访问的类。</span><span class="sxs-lookup"><span data-stu-id="20603-103">When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class.</span></span> <span data-ttu-id="20603-104">如果变量在派生类中定义的则代码通常会访问该定义。</span><span class="sxs-lookup"><span data-stu-id="20603-104">If the variable is defined in the derived class, the code normally accesses that definition.</span></span>  
   
- 如果该派生类变量隐藏了基类的某个变量，则它隐藏了基类版本。  但是，通过使用 `MyBase` 关键字限定基类变量，可以访问该基类变量。  
+ <span data-ttu-id="20603-105">如果派生的类变量隐藏基类中的变量，它会隐藏基类版本。</span><span class="sxs-lookup"><span data-stu-id="20603-105">If the derived class variable shadows a variable in the base class, it hides the base class version.</span></span> <span data-ttu-id="20603-106">但是，可以通过限定其与访问基类变量`MyBase`关键字。</span><span class="sxs-lookup"><span data-stu-id="20603-106">However, you can access the base class variable by qualifying it with the `MyBase` keyword.</span></span>  
   
-### 访问被派生类隐藏的基类变量  
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a><span data-ttu-id="20603-107">若要访问由派生类隐藏的基类变量</span><span class="sxs-lookup"><span data-stu-id="20603-107">To access a base class variable hidden by a derived class</span></span>  
   
--   在表达式或赋值语句中，在变量名称前面加 `MyBase` 关键字和一个句点 \(`.`\)。  
+-   <span data-ttu-id="20603-108">在表达式或赋值语句中，变量名称前面加`MyBase`关键字和一个句点 (`.`)。</span><span class="sxs-lookup"><span data-stu-id="20603-108">In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).</span></span>  
   
-     编译器将引用解析到该变量的基类版本。  
+     <span data-ttu-id="20603-109">编译器将解析对变量的基类版本的引用。</span><span class="sxs-lookup"><span data-stu-id="20603-109">The compiler resolves the reference to the base class version of the variable.</span></span>  
   
-     下面的示例阐释了如何通过继承进行隐藏。  这里有两个引用，一个访问隐藏变量，另一个绕开隐藏。  
+     <span data-ttu-id="20603-110">下面的示例演示通过继承进行隐藏。</span><span class="sxs-lookup"><span data-stu-id="20603-110">The following example illustrates shadowing through inheritance.</span></span> <span data-ttu-id="20603-111">它使两个引用，一个访问隐藏的变量，一个绕开隐藏。</span><span class="sxs-lookup"><span data-stu-id="20603-111">It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.</span></span>  
   
     ```  
     Public Class shadowBaseClass  
@@ -53,18 +52,18 @@ caps.handback.revision: 20
     End Class  
     ```  
   
-     上一个示例在基类中声明变量 `shadowString`，而在派生类中隐藏该变量。  当名称 `shadowString` 没有限定时，派生类中的过程 `showStrings` 显示字符串的隐藏版本。  如果 `shadowString` 由 `MyBase`  关键字限定，则显示被隐藏的版本。  
+     <span data-ttu-id="20603-112">前面的示例声明了变量`shadowString`中的基类和派生类中隐藏它。</span><span class="sxs-lookup"><span data-stu-id="20603-112">The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class.</span></span> <span data-ttu-id="20603-113">该过程`showStrings`派生类中显示隐藏版本的字符串时名称`shadowString`未限定。</span><span class="sxs-lookup"><span data-stu-id="20603-113">The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified.</span></span> <span data-ttu-id="20603-114">然后，它显示隐藏的版本时`shadowString`是用限定`MyBase`关键字。</span><span class="sxs-lookup"><span data-stu-id="20603-114">It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.</span></span>  
   
-## 可靠编程  
- 要降低引用被隐藏变量的意外版本的风险，可以完全限定对被隐藏变量的所有引用。  隐藏使用同一名称引入了变量的多个版本。  如果代码语句引用该变量名，则编译器将引用解析到的版本取决于代码语句的位置以及是否存在限定字符串等因素。  这会增加引用错误变量版本的风险。  
+## <a name="robust-programming"></a><span data-ttu-id="20603-115">可靠编程</span><span class="sxs-lookup"><span data-stu-id="20603-115">Robust Programming</span></span>  
+ <span data-ttu-id="20603-116">要降低引用隐藏的变量的非预期版本的风险，则可以完全限定到隐藏的变量的所有引用。</span><span class="sxs-lookup"><span data-stu-id="20603-116">To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable.</span></span> <span data-ttu-id="20603-117">隐藏引入了多个版本具有相同名称的变量。</span><span class="sxs-lookup"><span data-stu-id="20603-117">Shadowing introduces more than one version of a variable with the same name.</span></span> <span data-ttu-id="20603-118">当代码语句引用的变量的名称时，编译器将该引用解析的版本取决于因素，如代码语句的位置和限定字符串的状态。</span><span class="sxs-lookup"><span data-stu-id="20603-118">When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string.</span></span> <span data-ttu-id="20603-119">这会增加到了错误版本的该变量引用的风险。</span><span class="sxs-lookup"><span data-stu-id="20603-119">This can increase the risk of referring to the wrong version of the variable.</span></span>  
   
-## 请参阅  
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="20603-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20603-120">See Also</span></span>  
+ [<span data-ttu-id="20603-121">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="20603-121">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="20603-122">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="20603-122">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="20603-123">隐藏和重写之间的差异</span><span class="sxs-lookup"><span data-stu-id="20603-123">Differences Between Shadowing and Overriding</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [<span data-ttu-id="20603-124">如何：隐藏与你的变量同名的变量</span><span class="sxs-lookup"><span data-stu-id="20603-124">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="20603-125">如何：隐藏继承的变量</span><span class="sxs-lookup"><span data-stu-id="20603-125">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="20603-126">Shadows</span><span class="sxs-lookup"><span data-stu-id="20603-126">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="20603-127">Overrides</span><span class="sxs-lookup"><span data-stu-id="20603-127">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="20603-128">Me、My、MyBase 和 MyClass</span><span class="sxs-lookup"><span data-stu-id="20603-128">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="20603-129">继承的基础知识</span><span class="sxs-lookup"><span data-stu-id="20603-129">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

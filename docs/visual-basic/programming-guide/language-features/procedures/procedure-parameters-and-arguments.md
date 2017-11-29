@@ -1,81 +1,80 @@
 ---
-title: "过程参数和变量 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "参数列表"
-  - "变量 [Visual Basic], 传递"
-  - "变量 [Visual Basic], 过程"
-  - "变量 [Visual Basic], Visual Basic 过程"
-  - "参数列表"
-  - "参数, 列表"
-  - "参数, Visual Basic 过程"
-  - "过程, 参数列表"
-  - "过程, 参数"
-  - "过程, 参数列表"
-  - "过程, 参数"
-  - "values, 传递给过程"
-  - "Visual Basic 代码, 参数列表"
-  - "Visual Basic 代码, 参数列表"
-  - "Visual Basic 代码, 过程"
+title: "过程参数和自变量 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], argument lists
+- values [Visual Basic], passing to procedures
+- arguments [Visual Basic], passing
+- procedures [Visual Basic], parameters
+- Visual Basic code, argument lists
+- Visual Basic code, procedures
+- parameters [Visual Basic], Visual Basic procedures
+- parameters [Visual Basic], lists
+- arguments [Visual Basic], Visual Basic procedures
+- arguments [Visual Basic], procedures
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- argument lists [Visual Basic]
+- procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 过程参数和变量 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-多数情况下，一个过程需要有关调用环境的一些信息。  执行重复或共享任务的过程对每次调用使用不同的信息。  此信息包含每次调用过程时传递给它的变量、常量和表达式。  
+# <a name="procedure-parameters-and-arguments-visual-basic"></a><span data-ttu-id="9cafc-102">过程参数和自变量 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9cafc-102">Procedure Parameters and Arguments (Visual Basic)</span></span>
+<span data-ttu-id="9cafc-103">在大多数情况下，一个过程需要已在其中调用它的情况有关的一些信息。</span><span class="sxs-lookup"><span data-stu-id="9cafc-103">In most cases, a procedure needs some information about the circumstances in which it has been called.</span></span> <span data-ttu-id="9cafc-104">执行重复或共享任务过程每个调用使用不同的信息。</span><span class="sxs-lookup"><span data-stu-id="9cafc-104">A procedure that performs repeated or shared tasks uses different information for each call.</span></span> <span data-ttu-id="9cafc-105">此信息包含变量、 常量和调用它时传递给过程的表达式。</span><span class="sxs-lookup"><span data-stu-id="9cafc-105">This information consists of variables, constants, and expressions that you pass to the procedure when you call it.</span></span>  
   
- “参数”是指您在调用过程时过程期待您提供的值。  过程的声明定义过程的参数。  
+ <span data-ttu-id="9cafc-106">A*参数*表示过程需要您提供时调用它的值。</span><span class="sxs-lookup"><span data-stu-id="9cafc-106">A *parameter* represents a value that the procedure expects you to supply when you call it.</span></span> <span data-ttu-id="9cafc-107">过程声明定义其参数。</span><span class="sxs-lookup"><span data-stu-id="9cafc-107">The procedure's declaration defines its parameters.</span></span>  
   
- 可以定义一个不带参数、带一个参数或带多个参数的过程。  指定参数的过程定义部分称为“参数列表”。  
+ <span data-ttu-id="9cafc-108">你可以定义不使用参数、 一个参数，或者多个过程。</span><span class="sxs-lookup"><span data-stu-id="9cafc-108">You can define a procedure with no parameters, one parameter, or more than one.</span></span> <span data-ttu-id="9cafc-109">指定的参数的过程定义的一部分被称作*参数列表*。</span><span class="sxs-lookup"><span data-stu-id="9cafc-109">The part of the procedure definition that specifies the parameters is called the *parameter list*.</span></span>  
   
- “变量”是指您在调用过程时提供给过程参数的值。  调用代码在调用过程时提供参数。  指定变量的过程调用部分称为“变量列表”。  
+ <span data-ttu-id="9cafc-110">*参数*调用过程时，该过程参数表示所提供的值。</span><span class="sxs-lookup"><span data-stu-id="9cafc-110">An *argument* represents the value you supply to a procedure parameter when you call the procedure.</span></span> <span data-ttu-id="9cafc-111">在调用该过程时，调用代码将提供自变量。</span><span class="sxs-lookup"><span data-stu-id="9cafc-111">The calling code supplies the arguments when it calls the procedure.</span></span> <span data-ttu-id="9cafc-112">指定的参数的过程调用的一部分被称作*自变量列表*。</span><span class="sxs-lookup"><span data-stu-id="9cafc-112">The part of the procedure call that specifies the arguments is called the *argument list*.</span></span>  
   
- 下面的阐释显示从两个不同位置调用过程 `safeSquareRoot` 的代码。  第一个调用将变量 `x` 的值 \(4.0\) 传递给参数 `number`，`root` 中的返回值 \(2.0\) 被赋给变量 `y`。  第二个调用将文本值 9.0 传递给 `number`，并将返回值 \(3.0\) 赋给变量 `z`。  
+ <span data-ttu-id="9cafc-113">下图显示代码调用过程`safeSquareRoot`从两个不同的位置。</span><span class="sxs-lookup"><span data-stu-id="9cafc-113">The following illustration shows code calling the procedure `safeSquareRoot` from two different places.</span></span> <span data-ttu-id="9cafc-114">第一次调用将变量的值传递`x`(4.0) 到参数`number`，和中的返回值`root`(2.0) 分配给变量`y`。</span><span class="sxs-lookup"><span data-stu-id="9cafc-114">The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`.</span></span> <span data-ttu-id="9cafc-115">第二个调用将传递到的文本值 9.0 `number`，并将返回值 (3.0) 赋给变量`z`。</span><span class="sxs-lookup"><span data-stu-id="9cafc-115">The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.</span></span>  
   
- ![将实参传递给形参的示意图](../../../../visual-basic/programming-guide/language-features/procedures/media/parametersargue.gif "ParametersArgue")  
-将变量传递给参数  
+ <span data-ttu-id="9cafc-116">![将自变量传递给参数的示意图](./media/parametersargue.gif "ParametersArgue")</span><span class="sxs-lookup"><span data-stu-id="9cafc-116">![Graphic diagram of passing argument to parameter](./media/parametersargue.gif "ParametersArgue")</span></span>  
+<span data-ttu-id="9cafc-117">传递自变量传递给参数</span><span class="sxs-lookup"><span data-stu-id="9cafc-117">Passing an argument to a parameter</span></span>  
   
- 有关更多信息，请参见 [参数和变量之间的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。  
+ <span data-ttu-id="9cafc-118">有关详细信息，请参阅[参数之间的差异和自变量](./differences-between-parameters-and-arguments.md)。</span><span class="sxs-lookup"><span data-stu-id="9cafc-118">For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).</span></span>  
   
-## 参数数据类型  
- 通过在参数声明中使用 `As` 子句为参数定义数据类型。  例如，以下函数接受字符串和整数：  
+## <a name="parameter-data-type"></a><span data-ttu-id="9cafc-119">参数数据类型</span><span class="sxs-lookup"><span data-stu-id="9cafc-119">Parameter Data Type</span></span>  
+ <span data-ttu-id="9cafc-120">通过定义参数的数据类型`As`其声明中的子句。</span><span class="sxs-lookup"><span data-stu-id="9cafc-120">You define a data type for a parameter by using the `As` clause in its declaration.</span></span> <span data-ttu-id="9cafc-121">例如，以下函数接受一个字符串和整数。</span><span class="sxs-lookup"><span data-stu-id="9cafc-121">For example, the following function accepts a string and an integer.</span></span>  
   
  [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
- 如果类型检查开关 \([Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) 为 `Off`，则 `As` 子句是可选的，不过，只要有任何一个参数使用它，则所有参数都必须使用它。  如果类型检查为 `On`，则 `As` 子句对于所有过程参数都是必选的。  
+ <span data-ttu-id="9cafc-122">如果类型检查开关 ([Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off,``As`子句是可选的只不过如果任何一个参数使用它，则所有参数必须都使用它。</span><span class="sxs-lookup"><span data-stu-id="9cafc-122">If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it.</span></span> <span data-ttu-id="9cafc-123">如果类型检查无效`On`、`As`子句是必需的所有过程参数。</span><span class="sxs-lookup"><span data-stu-id="9cafc-123">If type checking is `On`, the `As` clause is required for all procedure parameters.</span></span>  
   
- 如果调用代码需要提供的变量数据类型不同于它的对应参数（例如 `Byte` 对应于 `String` 参数），则调用代码必须执行下面一项操作：  
+ <span data-ttu-id="9cafc-124">如果希望具有数据类型不同于其对应的参数，如提供的参数调用代码`Byte`到`String`参数，它必须执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="9cafc-124">If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:</span></span>  
   
--   仅提供数据类型扩大到参数数据类型的变量；  
+-   <span data-ttu-id="9cafc-125">提供具有扩大到参数数据类型; 的数据类型的唯一参数</span><span class="sxs-lookup"><span data-stu-id="9cafc-125">Supply only arguments with data types that widen to the parameter data type;</span></span>  
   
--   设置 `Option Strict Off` 以允许隐式收缩转换；或者  
+-   <span data-ttu-id="9cafc-126">设置`Option Strict Off`以允许隐式收缩转换; 或</span><span class="sxs-lookup"><span data-stu-id="9cafc-126">Set `Option Strict Off` to allow implicit narrowing conversions; or</span></span>  
   
--   使用转换关键字显式转换数据类型。  
+-   <span data-ttu-id="9cafc-127">使用转换关键字显式转换的数据类型。</span><span class="sxs-lookup"><span data-stu-id="9cafc-127">Use a conversion keyword to explicitly convert the data type.</span></span>  
   
-### 类型参数  
- 除了其正常参数外，“泛型过程”还定义一个或多个“类型参数”。  泛型过程允许调用代码每次调用该过程时传递不同的数据类型，这样可定制数据类型以适应每个调用的要求。  请参见 [Visual Basic 中的泛型过程](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
+### <a name="type-parameters"></a><span data-ttu-id="9cafc-128">类型参数</span><span class="sxs-lookup"><span data-stu-id="9cafc-128">Type Parameters</span></span>  
+ <span data-ttu-id="9cafc-129">A*泛型过程*还定义了一个或多个*类型参数*除了其普通的参数。</span><span class="sxs-lookup"><span data-stu-id="9cafc-129">A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters.</span></span> <span data-ttu-id="9cafc-130">泛型过程允许调用代码调用该过程，以便它可以定制数据类型的每个单个调用要求每次传递不同的数据类型。</span><span class="sxs-lookup"><span data-stu-id="9cafc-130">A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call.</span></span> <span data-ttu-id="9cafc-131">请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="9cafc-131">See [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).</span></span>  
   
-## 请参阅  
- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub 过程](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Function 过程](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Property 过程](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [运算符过程](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [如何：为过程定义参数](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [如何：将参数传递给过程](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [通过值和通过引用传递参数](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [过程重载](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="9cafc-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9cafc-132">See Also</span></span>  
+ [<span data-ttu-id="9cafc-133">过程</span><span class="sxs-lookup"><span data-stu-id="9cafc-133">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="9cafc-134">Sub 过程</span><span class="sxs-lookup"><span data-stu-id="9cafc-134">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="9cafc-135">Function 过程</span><span class="sxs-lookup"><span data-stu-id="9cafc-135">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="9cafc-136">属性过程</span><span class="sxs-lookup"><span data-stu-id="9cafc-136">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="9cafc-137">运算符过程</span><span class="sxs-lookup"><span data-stu-id="9cafc-137">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="9cafc-138">如何：为过程定义参数</span><span class="sxs-lookup"><span data-stu-id="9cafc-138">How to: Define a Parameter for a Procedure</span></span>](./how-to-define-a-parameter-for-a-procedure.md)  
+ [<span data-ttu-id="9cafc-139">如何：将自变量传递给过程</span><span class="sxs-lookup"><span data-stu-id="9cafc-139">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="9cafc-140">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="9cafc-140">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="9cafc-141">过程重载</span><span class="sxs-lookup"><span data-stu-id="9cafc-141">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="9cafc-142">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="9cafc-142">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

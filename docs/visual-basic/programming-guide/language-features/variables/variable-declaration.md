@@ -1,85 +1,67 @@
 ---
-title: "在 Visual Basic 中的变量声明 |Microsoft 文档"
+title: "Visual Basic 中的变量声明"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic], declaring
-- member variables, declarations
-- Dim statement, variable declaration
-- declaring variables
+- member variables [Visual Basic], declarations
+- Dim statement [Visual Basic], variable declaration
+- declaring variables [Visual Basic]
 - variables [Visual Basic], scope
 - variables [Visual Basic], data types
 - data types [Visual Basic], variable declarations
-- lifetime, variables
+- lifetime [Visual Basic], variables
 - variables [Visual Basic], lifetime
-- access levels, variables
-- scope, declaration statements
+- access levels [Visual Basic], variables
+- scope [Visual Basic], declaration statements
 - variables [Visual Basic], access level
-- local variables, declarations
-- scope, variables
+- local variables [Visual Basic], declarations
+- scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8cabb2d319288653c80099c816e46e822429d6ec
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的变量声明
-声明一个变量来指定其名称和特性。 变量的声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和内容确定变量的特征。  
+# <a name="variable-declaration-in-visual-basic"></a><span data-ttu-id="ca741-102">Visual Basic 中的变量声明</span><span class="sxs-lookup"><span data-stu-id="ca741-102">Variable Declaration in Visual Basic</span></span>
+<span data-ttu-id="ca741-103">声明一个变量以指定其名称和特性。</span><span class="sxs-lookup"><span data-stu-id="ca741-103">You declare a variable to specify its name and characteristics.</span></span> <span data-ttu-id="ca741-104">变量的声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-104">The declaration statement for variables is the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="ca741-105">其位置和内容确定变量的特征。</span><span class="sxs-lookup"><span data-stu-id="ca741-105">Its location and contents determine the variable's characteristics.</span></span>  
   
- 有关变量的命名规则和注意事项，请参阅[声明元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ <span data-ttu-id="ca741-106">变量命名规则和注意事项，请参阅[声明元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-106">For variable naming rules and considerations, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
-## <a name="declaration-levels"></a>声明级别  
+## <a name="declaration-levels"></a><span data-ttu-id="ca741-107">声明级别</span><span class="sxs-lookup"><span data-stu-id="ca741-107">Declaration Levels</span></span>  
   
-### <a name="local-and-member-variables"></a>本地和成员变量  
- 一个*局部变量*是指在过程内声明。 一个*成员变量*属于[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]类型; 它在模块级别，在类、 结构或模块，但不是能在内部的类、 结构或模块的任何过程声明。  
+### <a name="local-and-member-variables"></a><span data-ttu-id="ca741-108">本地和成员变量</span><span class="sxs-lookup"><span data-stu-id="ca741-108">Local and Member Variables</span></span>  
+ <span data-ttu-id="ca741-109">A*局部变量*是指在过程内声明。</span><span class="sxs-lookup"><span data-stu-id="ca741-109">A *local variable* is one that is declared within a procedure.</span></span> <span data-ttu-id="ca741-110">A*成员变量*为属于[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]键入; 在模块级别，在类、 结构或模块，但不是能在该类、 结构或模块的内部任何过程声明。</span><span class="sxs-lookup"><span data-stu-id="ca741-110">A *member variable* is a member of a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] type; it is declared at module level, inside a class, structure, or module, but not within any procedure internal to that class, structure, or module.</span></span>  
   
-### <a name="shared-and-instance-variables"></a>共享变量和实例变量  
- 在类或结构中，成员变量的类别取决于共享它。 如果使用声明[共享](../../../../visual-basic/language-reference/modifiers/shared.md)关键字，它是*共享的变量*，并且它存在于类或结构的所有实例都共享的单个副本中。  
+### <a name="shared-and-instance-variables"></a><span data-ttu-id="ca741-111">共享和实例变量</span><span class="sxs-lookup"><span data-stu-id="ca741-111">Shared and Instance Variables</span></span>  
+ <span data-ttu-id="ca741-112">在类或结构中，成员变量的类别取决于共享。</span><span class="sxs-lookup"><span data-stu-id="ca741-112">In a class or structure, the category of a member variable depends on whether or not it is shared.</span></span> <span data-ttu-id="ca741-113">如果它用声明[共享](../../../../visual-basic/language-reference/modifiers/shared.md)关键字，它是*共享的变量*，并且它在类或结构的所有实例间共享的单个副本中存在。</span><span class="sxs-lookup"><span data-stu-id="ca741-113">If it is declared with the [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) keyword, it is a *shared variable*, and it exists in a single copy shared among all instances of the class or structure.</span></span>  
   
- 否则，很*实例变量*，并为类或结构的每个实例创建的单独副本。 给定的实例变量副本是仅对类或结构在其中创建的实例可用。 它不依赖于类或结构的任何其他实例中实例变量的副本。  
+ <span data-ttu-id="ca741-114">否则它是*实例变量*，并且为每个实例的类或结构创建的单独副本。</span><span class="sxs-lookup"><span data-stu-id="ca741-114">Otherwise it is an *instance variable*, and a separate copy of it is created for each instance of the class or structure.</span></span> <span data-ttu-id="ca741-115">仅适用于类或结构在其中创建的实例的给定的实例变量的副本。</span><span class="sxs-lookup"><span data-stu-id="ca741-115">A given copy of an instance variable is available only to the instance of the class or structure in which it was created.</span></span> <span data-ttu-id="ca741-116">它是独立的类或结构的任何其他实例中的实例变量的副本。</span><span class="sxs-lookup"><span data-stu-id="ca741-116">It is independent of a copy of the instance variable in any other instance of the class or structure.</span></span>  
   
-## <a name="declaring-data-type"></a>将数据类型声明  
- [作为](../../../../visual-basic/language-reference/statements/as-clause.md)声明语句中的子句可用于定义数据类型或所声明的变量的对象类型。 你可以指定任何以下类型的变量︰  
+## <a name="declaring-data-type"></a><span data-ttu-id="ca741-117">声明数据类型</span><span class="sxs-lookup"><span data-stu-id="ca741-117">Declaring Data Type</span></span>  
+ <span data-ttu-id="ca741-118">[作为](../../../../visual-basic/language-reference/statements/as-clause.md)声明语句中的子句允许你定义的数据类型或正在声明的变量的对象类型。</span><span class="sxs-lookup"><span data-stu-id="ca741-118">The [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause in the declaration statement allows you to define the data type or object type of the variable you are declaring.</span></span> <span data-ttu-id="ca741-119">你可以指定任何以下类型的变量：</span><span class="sxs-lookup"><span data-stu-id="ca741-119">You can specify any of the following types for a variable:</span></span>  
   
--   基本数据类型，如`Boolean`， `Long`，或`Decimal`  
+-   <span data-ttu-id="ca741-120">基本数据类型，如`Boolean`， `Long`，或`Decimal`</span><span class="sxs-lookup"><span data-stu-id="ca741-120">An elementary data type, such as `Boolean`, `Long`, or `Decimal`</span></span>  
   
--   复合数据类型，如数组或结构  
+-   <span data-ttu-id="ca741-121">复合数据类型，如数组或结构</span><span class="sxs-lookup"><span data-stu-id="ca741-121">A composite data type, such as an array or structure</span></span>  
   
--   对象类型或在您的应用程序或其他应用程序中定义的类  
+-   <span data-ttu-id="ca741-122">对象类型或在你的应用程序或其他应用程序中定义的类</span><span class="sxs-lookup"><span data-stu-id="ca741-122">An object type, or class, defined either in your application or in another application</span></span>  
   
--   一个[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]类，如<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.TextBox></xref:System.Windows.Forms.TextBox></xref:System.Windows.Forms.Label>  
+-   <span data-ttu-id="ca741-123">A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类，如<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.TextBox></span><span class="sxs-lookup"><span data-stu-id="ca741-123">A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class, such as <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.TextBox></span></span>  
   
--   接口类型，如<xref:System.IComparable>或<xref:System.IDisposable></xref:System.IDisposable></xref:System.IComparable>  
+-   <span data-ttu-id="ca741-124">接口类型，如<xref:System.IComparable>或<xref:System.IDisposable></span><span class="sxs-lookup"><span data-stu-id="ca741-124">An interface type, such as <xref:System.IComparable> or <xref:System.IDisposable></span></span>  
   
- 您可以声明在一个语句中的几个变量，而无需重复的数据类型。 在下面的语句中，变量`i`， `j`，和`k`都声明为类型`Integer`，`l`和`m`作为`Long`，和`x`和`y`作为`Single`:  
+ <span data-ttu-id="ca741-125">您可以声明在一个语句中的多个变量，而无需重复的数据类型。</span><span class="sxs-lookup"><span data-stu-id="ca741-125">You can declare several variables in one statement without having to repeat the data type.</span></span> <span data-ttu-id="ca741-126">在下面的语句中，变量`i`， `j`，和`k`声明为类型`Integer`，`l`和`m`作为`Long`，和`x`和`y`作为`Single`:</span><span class="sxs-lookup"><span data-stu-id="ca741-126">In the following statements, the variables `i`, `j`, and `k` are declared as type `Integer`, `l` and `m` as `Long`, and `x` and `y` as `Single`:</span></span>  
   
 ```  
 Dim i, j, k As Integer  
@@ -88,29 +70,29 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- 数据类型的详细信息，请参阅[数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)。 对象的详细信息，请参阅[对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)和[使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。  
+ <span data-ttu-id="ca741-127">数据类型的详细信息，请参阅[数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-127">For more information on data types, see [Data Types](../../../../visual-basic/programming-guide/language-features/data-types/index.md).</span></span> <span data-ttu-id="ca741-128">对象的详细信息，请参阅[对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)和[使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。</span><span class="sxs-lookup"><span data-stu-id="ca741-128">For more information on objects, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Programming with Components](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span></span>  
   
-## <a name="local-type-inference"></a>局部类型推理  
- *类型推理*用来确定未声明的局部变量的数据类型`As`子句。 编译器推断出类型的变量的初始化表达式的类型。 这使您无需显式声明一个类型声明变量。 在下面的示例中，同时`num1`和`num2`强类型化为整数。  
+## <a name="local-type-inference"></a><span data-ttu-id="ca741-129">局部类型推理</span><span class="sxs-lookup"><span data-stu-id="ca741-129">Local Type Inference</span></span>  
+ <span data-ttu-id="ca741-130">*类型推理*用于确定未声明的本地变量的数据类型`As`子句。</span><span class="sxs-lookup"><span data-stu-id="ca741-130">*Type inference* is used to determine the data types of local variables declared without an `As` clause.</span></span> <span data-ttu-id="ca741-131">编译器推断出从初始化表达式的类型变量的类型。</span><span class="sxs-lookup"><span data-stu-id="ca741-131">The compiler infers the type of the variable from the type of the initialization expression.</span></span> <span data-ttu-id="ca741-132">这使您可以声明变量，而无需显式声明类型。</span><span class="sxs-lookup"><span data-stu-id="ca741-132">This enables you to declare variables without explicitly stating a type.</span></span> <span data-ttu-id="ca741-133">在下面的示例中，同时`num1`和`num2`强类型为整数。</span><span class="sxs-lookup"><span data-stu-id="ca741-133">In the following example, both `num1` and `num2` are strongly typed as integers.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&1;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
- 如果你想要使用局部类型推理`Option Infer`必须设置为`On`。 有关详细信息，请参阅[本地类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)和[Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
+ <span data-ttu-id="ca741-134">如果你想要使用局部类型推理`Option Infer`必须设置为`On`。</span><span class="sxs-lookup"><span data-stu-id="ca741-134">If you want to use local type inference, `Option Infer` must be set to `On`.</span></span> <span data-ttu-id="ca741-135">有关详细信息，请参阅[本地类型推断](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)和 [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-135">For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) and [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span></span>  
   
-## <a name="characteristics-of-declared-variables"></a>已声明的变量的特征  
- *生存期*的变量是一段时间期间它是可供使用。 一般情况下，变量存在，只要继续存在 （如过程或类） 中声明的元素。 如果该变量并不需要它的包含元素的生存期过后继续存在，您不需要执行任何特殊的声明中。 如果变量需要继续存在时间超过其包含元素，则可以包括`Static`或`Shared`关键字在其`Dim`语句。 有关详细信息，请参阅[Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+## <a name="characteristics-of-declared-variables"></a><span data-ttu-id="ca741-136">声明变量的特征</span><span class="sxs-lookup"><span data-stu-id="ca741-136">Characteristics of Declared Variables</span></span>  
+ <span data-ttu-id="ca741-137">*生存期*的变量是的时间段期间它是可供使用。</span><span class="sxs-lookup"><span data-stu-id="ca741-137">The *lifetime* of a variable is the period of time during which it is available for use.</span></span> <span data-ttu-id="ca741-138">一般情况下，只要声明 （如过程或类） 的元素将继续存在，将存在的变量。</span><span class="sxs-lookup"><span data-stu-id="ca741-138">In general, a variable exists as long as the element that declares it (such as a procedure or class) continues to exist.</span></span> <span data-ttu-id="ca741-139">如果该变量并不需要继续现有其包含元素的生存期结束后，你不需要执行任何特殊操作在声明中。</span><span class="sxs-lookup"><span data-stu-id="ca741-139">If the variable does not need to continue existing beyond the lifetime of its containing element, you do not need to do anything special in the declaration.</span></span> <span data-ttu-id="ca741-140">如果变量需要继续超过其包含元素存在，则可以包括`Static`或`Shared`中的关键字其`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="ca741-140">If the variable needs to continue to exist longer than its containing element, you can include the `Static` or `Shared` keyword in its `Dim` statement.</span></span> <span data-ttu-id="ca741-141">有关详细信息，请参阅[Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-141">For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
- *范围*的变量是一组的所有代码都可以引用它，而不用限定其名称。 声明位置取决于该变量的作用域。 位于某个给定区域中的代码可以使用而不必限定它们的名称在该区域中定义的变量。 有关详细信息，请参阅[在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
+ <span data-ttu-id="ca741-142">*作用域*的变量是一组的所有代码都可以引用它而无须限定其名称。</span><span class="sxs-lookup"><span data-stu-id="ca741-142">The *scope* of a variable is the set of all code that can refer to it without qualifying its name.</span></span> <span data-ttu-id="ca741-143">变量的作用域由声明它的位置决定。</span><span class="sxs-lookup"><span data-stu-id="ca741-143">A variable's scope is determined by where it is declared.</span></span> <span data-ttu-id="ca741-144">位于给定区域的代码可以使用而无需限定其名称在该区域中定义的变量。</span><span class="sxs-lookup"><span data-stu-id="ca741-144">Code located in a given region can use the variables defined in that region without having to qualify their names.</span></span> <span data-ttu-id="ca741-145">有关详细信息，请参阅[在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-145">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
   
- 变量的*访问级别*是有权访问它的代码的范围。 这由访问修饰符 (如[公共](../../../../visual-basic/language-reference/modifiers/public.md)或[专用](../../../../visual-basic/language-reference/modifiers/private.md)) 中使用`Dim`语句。 有关详细信息，请参阅[Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="ca741-146">变量的*访问级别*是有权访问它的代码的范围。</span><span class="sxs-lookup"><span data-stu-id="ca741-146">A variable's *access level* is the extent of code that has permission to access it.</span></span> <span data-ttu-id="ca741-147">这由访问修饰符 (如[公共](../../../../visual-basic/language-reference/modifiers/public.md)或[私有](../../../../visual-basic/language-reference/modifiers/private.md)) 在中使用`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="ca741-147">This is determined by the access modifier (such as [Public](../../../../visual-basic/language-reference/modifiers/public.md) or [Private](../../../../visual-basic/language-reference/modifiers/private.md)) that you use in the `Dim` statement.</span></span> <span data-ttu-id="ca741-148">有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="ca741-148">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [如何︰ 创建新变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)   
- [如何︰ 将数据移入和移出变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
- [数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [受保护](../../../../visual-basic/language-reference/modifiers/protected.md)   
- [友元](../../../../visual-basic/language-reference/modifiers/friend.md)   
- [静态](../../../../visual-basic/language-reference/modifiers/static.md)   
- [已声明的元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ca741-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ca741-149">See Also</span></span>  
+ [<span data-ttu-id="ca741-150">如何：创建新变量</span><span class="sxs-lookup"><span data-stu-id="ca741-150">How to: Create a New Variable</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
+ [<span data-ttu-id="ca741-151">如何：将数据移入和移出变量</span><span class="sxs-lookup"><span data-stu-id="ca741-151">How to: Move Data Into and Out of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [<span data-ttu-id="ca741-152">数据类型</span><span class="sxs-lookup"><span data-stu-id="ca741-152">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="ca741-153">Protected</span><span class="sxs-lookup"><span data-stu-id="ca741-153">Protected</span></span>](../../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="ca741-154">Friend</span><span class="sxs-lookup"><span data-stu-id="ca741-154">Friend</span></span>](../../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="ca741-155">Static</span><span class="sxs-lookup"><span data-stu-id="ca741-155">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="ca741-156">已声明元素的特性</span><span class="sxs-lookup"><span data-stu-id="ca741-156">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="ca741-157">局部类型推理</span><span class="sxs-lookup"><span data-stu-id="ca741-157">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="ca741-158">Option Infer 语句</span><span class="sxs-lookup"><span data-stu-id="ca741-158">Option Infer Statement</span></span>](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

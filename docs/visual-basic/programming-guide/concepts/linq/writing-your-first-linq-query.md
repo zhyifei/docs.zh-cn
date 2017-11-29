@@ -1,115 +1,102 @@
 ---
-title: "编写第一个 LINQ 查询 (Visual Basic 中) |Microsoft 文档"
+title: "编写第一个 LINQ 查询 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: 56
-author: stevehoag
-ms.author: shoag
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48f1c5e15654580b6e4d060860a0d7001af5e2ef
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "56"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="writing-your-first-linq-query-visual-basic"></a>编写第一个 LINQ 查询 (Visual Basic)
-一个*查询*是从数据源检索数据的表达式。 查询用专用的查询语言表示。 随着时间推移，不同的语言已开发为不同类型的数据源，例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 这样，就需要为应用程序开发人员若要了解有关每种类型的数据源或数据格式，支持新的查询语言。  
+# <a name="writing-your-first-linq-query-visual-basic"></a><span data-ttu-id="0ced4-102">编写第一个 LINQ 查询 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ced4-102">Writing Your First LINQ Query (Visual Basic)</span></span>
+<span data-ttu-id="0ced4-103">*查询*是一种从数据源检索数据的表达式。</span><span class="sxs-lookup"><span data-stu-id="0ced4-103">A *query* is an expression that retrieves data from a data source.</span></span> <span data-ttu-id="0ced4-104">专用的查询语言来表述查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-104">Queries are expressed in a dedicated query language.</span></span> <span data-ttu-id="0ced4-105">随着时间推移，不同的语言已针对开发了不同类型的数据源，例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。</span><span class="sxs-lookup"><span data-stu-id="0ced4-105">Over time, different languages have been developed for different types of data sources, for example, SQL for relational databases and XQuery for XML.</span></span> <span data-ttu-id="0ced4-106">这使得应用程序开发人员，若要了解每种类型的数据源或数据格式受支持的新查询语言的必要条件。</span><span class="sxs-lookup"><span data-stu-id="0ced4-106">This makes it necessary for the application developer to learn a new query language for each type of data source or data format that is supported.</span></span>  
   
- [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]通过提供跨各种数据源和格式处理数据的一致模型，简化了这种情况。 在[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查询，则会始终处理的对象。 使用相同的基本编码模式来查询和将 XML 文档中的数据、 SQL 数据库、 ADO.NET 数据集和实体、.NET Framework 集合和任何其他源或格式转换为其[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]提供程序。 本文档介绍的三个阶段创建和使用基本[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查询。  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]<span data-ttu-id="0ced4-107">通过提供跨各种类型的数据源和格式处理数据的一致模型，来简化这种情况。</span><span class="sxs-lookup"><span data-stu-id="0ced4-107"> simplifies the situation by offering a consistent model for working with data across various kinds of data sources and formats.</span></span> <span data-ttu-id="0ced4-108">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，始终会用到对象。</span><span class="sxs-lookup"><span data-stu-id="0ced4-108">In a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, you are always working with objects.</span></span> <span data-ttu-id="0ced4-109">使用相同的基本编码模式来查询和转换 XML 文档中的数据，SQL 数据库、 ADO.NET 数据集和实体、.NET Framework 集合和任何其他源或格式为其[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]提供程序。</span><span class="sxs-lookup"><span data-stu-id="0ced4-109">You use the same basic coding patterns to query and transform data in XML documents, SQL databases, ADO.NET datasets and entities, .NET Framework collections, and any other source or format for which a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is available.</span></span> <span data-ttu-id="0ced4-110">本文档介绍的三个阶段的创建和使用基本[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-110">This document describes the three phases of the creation and use of basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.</span></span>  
   
-## <a name="three-stages-of-a-query-operation"></a>查询操作的三个阶段  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查询操作包含三个操作︰  
+## <a name="three-stages-of-a-query-operation"></a><span data-ttu-id="0ced4-111">查询操作的三个阶段</span><span class="sxs-lookup"><span data-stu-id="0ced4-111">Three Stages of a Query Operation</span></span>  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="0ced4-112">查询操作包括以下三个操作：</span><span class="sxs-lookup"><span data-stu-id="0ced4-112"> query operations consist of three actions:</span></span>  
   
-1.  获取数据源。  
+1.  <span data-ttu-id="0ced4-113">获取数据源。</span><span class="sxs-lookup"><span data-stu-id="0ced4-113">Obtain the data source or sources.</span></span>  
   
-2.  创建查询。  
+2.  <span data-ttu-id="0ced4-114">创建查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-114">Create the query.</span></span>  
   
-3.  执行查询。  
+3.  <span data-ttu-id="0ced4-115">执行查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-115">Execute the query.</span></span>  
   
- 在[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]，执行的查询是不同于创建查询。 不要只需通过创建一个查询中检索任何数据。 此时将在本主题稍后部分详细讨论。  
+ <span data-ttu-id="0ced4-116">在[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，执行的查询是从查询创建不同。</span><span class="sxs-lookup"><span data-stu-id="0ced4-116">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], the execution of a query is distinct from the creation of the query.</span></span> <span data-ttu-id="0ced4-117">不要仅通过创建一个查询中检索任何数据。</span><span class="sxs-lookup"><span data-stu-id="0ced4-117">You do not retrieve any data just by creating a query.</span></span> <span data-ttu-id="0ced4-118">这一点将在本主题后面部分进行更详细的讨论。</span><span class="sxs-lookup"><span data-stu-id="0ced4-118">This point is discussed in more detail later in this topic.</span></span>  
   
- 下面的示例说明了查询操作的三个部分。 该示例出于演示目的，作为方便的数据源使用整数的数组。 但是，相同的概念也适用于其他数据源。  
+ <span data-ttu-id="0ced4-119">下面的示例演示查询操作的三个部分。</span><span class="sxs-lookup"><span data-stu-id="0ced4-119">The following example illustrates the three parts of a query operation.</span></span> <span data-ttu-id="0ced4-120">示例出于演示目的，作为方便的数据源使用整数的数组。</span><span class="sxs-lookup"><span data-stu-id="0ced4-120">The example uses an array of integers as a convenient data source for demonstration purposes.</span></span> <span data-ttu-id="0ced4-121">但是，相同的概念也适用于其他数据源。</span><span class="sxs-lookup"><span data-stu-id="0ced4-121">However, the same concepts also apply to other data sources.</span></span>  
   
 > [!NOTE]
->  在[编译页，项目设计器 (Visual Basic 中)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，确保**Option infer**设置为**上**。  
+>  <span data-ttu-id="0ced4-122">上[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，确保**Option infer**设置为**上**。</span><span class="sxs-lookup"><span data-stu-id="0ced4-122">On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
- 输出：  
+ <span data-ttu-id="0ced4-123">输出：</span><span class="sxs-lookup"><span data-stu-id="0ced4-123">Output:</span></span>  
   
  `0 2 4 6`  
   
-## <a name="the-data-source"></a>数据源  
- 由于前面的示例中的数据源是一个数组，它隐式支持泛型<xref:System.Collections.Generic.IEnumerable%601>接口。</xref:System.Collections.Generic.IEnumerable%601> 这一事实，您可以作为数据源使用数组[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查询。 类型支持<xref:System.Collections.Generic.IEnumerable%601>或派生的接口如通用<xref:System.Linq.IQueryable%601>称为*可查询类型*。</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601>  
+## <a name="the-data-source"></a><span data-ttu-id="0ced4-124">数据源</span><span class="sxs-lookup"><span data-stu-id="0ced4-124">The Data Source</span></span>  
+ <span data-ttu-id="0ced4-125">由于前面的示例中的数据源是一个数组，它隐式支持泛型<xref:System.Collections.Generic.IEnumerable%601>接口。</span><span class="sxs-lookup"><span data-stu-id="0ced4-125">Because the data source in the previous example is an array, it implicitly supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="0ced4-126">这一事实，使你能够作为数据源使用数组[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-126">It is this fact that enables you to use an array as a data source for a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span></span> <span data-ttu-id="0ced4-127">支持 <xref:System.Collections.Generic.IEnumerable%601> 或派生接口（如泛型 <xref:System.Linq.IQueryable%601>）的类型称为可查询类型。</span><span class="sxs-lookup"><span data-stu-id="0ced4-127">Types that support <xref:System.Collections.Generic.IEnumerable%601> or a derived interface such as the generic <xref:System.Linq.IQueryable%601> are called *queryable types*.</span></span>  
   
- 作为隐式可查询的类型，该数组需要进行任何修改或特殊处理，就可以用作[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]数据源。 这同样适用于支持的所有集合类型<xref:System.Collections.Generic.IEnumerable%601>，包括泛型<xref:System.Collections.Generic.List%601>， <xref:System.Collections.Generic.Dictionary%602>，和.NET Framework 类库中的其他类。</xref:System.Collections.Generic.Dictionary%602> </xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.IEnumerable%601>  
+ <span data-ttu-id="0ced4-128">用作隐式可查询类型，数组需要进行任何修改或特殊处理，就可以用作[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源。</span><span class="sxs-lookup"><span data-stu-id="0ced4-128">As an implicitly queryable type, the array requires no modification or special treatment to serve as a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source.</span></span> <span data-ttu-id="0ced4-129">同样适用于任何支持的集合类型<xref:System.Collections.Generic.IEnumerable%601>，包括泛型<xref:System.Collections.Generic.List%601>， <xref:System.Collections.Generic.Dictionary%602>，和.NET Framework 类库中的其他类。</span><span class="sxs-lookup"><span data-stu-id="0ced4-129">The same is true for any collection type that supports <xref:System.Collections.Generic.IEnumerable%601>, including the generic <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, and other classes in the .NET Framework class library.</span></span>  
   
- 如果源数据未实现<xref:System.Collections.Generic.IEnumerable%601>、[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]实现的功能所需的提供程序*标准查询运算符*为该数据源。</xref:System.Collections.Generic.IEnumerable%601> 例如，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]处理 XML 文档加载到可查询的工作<xref:System.Xml.Linq.XElement>类型，如下面的示例中所示。</xref:System.Xml.Linq.XElement> 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述 (Visual Basic 中)](standard-query-operators-overview.md)。  
+ <span data-ttu-id="0ced4-130">如果源数据不实现<xref:System.Collections.Generic.IEnumerable%601>、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]实现的功能所需的提供程序*标准查询运算符*为该数据源。</span><span class="sxs-lookup"><span data-stu-id="0ced4-130">If the source data does not already implement <xref:System.Collections.Generic.IEnumerable%601>, a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is needed to implement the functionality of the *standard query operators* for that data source.</span></span> <span data-ttu-id="0ced4-131">例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]处理的工作的 XML 文档加载到可查询<xref:System.Xml.Linq.XElement>类型，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="0ced4-131">For example, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] handles the work of loading an XML document into a queryable <xref:System.Xml.Linq.XElement> type, as shown in the following example.</span></span> <span data-ttu-id="0ced4-132">有关标准查询运算符的详细信息，请参阅[标准查询运算符概述 (Visual Basic 中)](standard-query-operators-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-132">For more information about standard query operators, see [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md).</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
- 与[!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]，您首先创建一个对象关系映射在设计时，手动或通过使用[LINQ to SQL 工具在 Visual Studio 中](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)Visual Studio 中。 编写查询针对的对象，而是在运行时[!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]处理与数据库通信。 在下面的示例中，`customers`表示的特定表中的数据库，并<xref:System.Data.Linq.Table%601>支持泛型<xref:System.Linq.IQueryable%601>。</xref:System.Linq.IQueryable%601> </xref:System.Data.Linq.Table%601>  
+ <span data-ttu-id="0ced4-133">与[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，你首先创建一个对象关系映射在设计时，手动或通过使用[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="0ced4-133">With [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], you first create an object-relational mapping at design time, either manually or by using the [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) in Visual Studio.</span></span> <span data-ttu-id="0ced4-134">针对这些对象编写查询，然后由 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 在运行时处理与数据库的通信。</span><span class="sxs-lookup"><span data-stu-id="0ced4-134">You write your queries against the objects, and at run-time [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] handles the communication with the database.</span></span> <span data-ttu-id="0ced4-135">在下面的示例中，`customers`表示在数据库中，特定表和<xref:System.Data.Linq.Table%601>支持泛型<xref:System.Linq.IQueryable%601>。</span><span class="sxs-lookup"><span data-stu-id="0ced4-135">In the following example, `customers` represents a specific table in the database, and <xref:System.Data.Linq.Table%601> supports generic <xref:System.Linq.IQueryable%601>.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- 有关如何创建特定类型的数据源的详细信息，请参阅各种文档[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]提供程序。 (有关这些提供程序的列表，请参阅[LINQ （语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本规则很简单︰[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]数据源是任何支持的泛型<xref:System.Collections.Generic.IEnumerable%601>接口或从其继承的接口</xref:System.Collections.Generic.IEnumerable%601>的对象  
+```vb  
+' Create a data source from a SQL table.  
+Dim db As New DataContext("C:\Northwind\Northwnd.mdf")  
+Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
+```  
+  
+ <span data-ttu-id="0ced4-136">有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。</span><span class="sxs-lookup"><span data-stu-id="0ced4-136">For more information about how to create specific types of data sources, see the documentation for the various [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] providers.</span></span> <span data-ttu-id="0ced4-137">(有关这些提供程序的列表，请参阅[LINQ （语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。)基本规则很简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源是支持泛型的任何对象<xref:System.Collections.Generic.IEnumerable%601>接口或从其继承的接口。</span><span class="sxs-lookup"><span data-stu-id="0ced4-137">(For a list of these providers, see [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) The basic rule is simple: a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source is any object that supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface, or an interface that inherits from it.</span></span>  
   
 > [!NOTE]
->  类型，如<xref:System.Collections.ArrayList>支持非泛型<xref:System.Collections.IEnumerable>接口也可以用作[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]数据源。</xref:System.Collections.IEnumerable> </xref:System.Collections.ArrayList> 有关使用示例， <xref:System.Collections.ArrayList>，请参阅[如何︰ 使用 (Visual Basic 中) 的 LINQ 查询 ArrayList](how-to-query-an-arraylist-with-linq.md)。</xref:System.Collections.ArrayList>  
+>  <span data-ttu-id="0ced4-138">类型，如<xref:System.Collections.ArrayList>支持非泛型<xref:System.Collections.IEnumerable>接口也可以用作[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源。</span><span class="sxs-lookup"><span data-stu-id="0ced4-138">Types such as <xref:System.Collections.ArrayList> that support the non-generic <xref:System.Collections.IEnumerable> interface can also be used as [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data sources.</span></span> <span data-ttu-id="0ced4-139">有关示例，使用<xref:System.Collections.ArrayList>，请参阅[如何： 查询使用 LINQ (Visual Basic 中) ArrayList](how-to-query-an-arraylist-with-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-139">For an example that uses an <xref:System.Collections.ArrayList>, see [How to: Query an ArrayList with LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).</span></span>  
   
-## <a name="the-query"></a>查询  
- 在查询中，您可以指定您想要从数据源中检索哪些的信息。 此外可以指定如何应排序、 分组，或结构化之前它将返回该信息。 若要启用查询创建，Visual Basic 已合并到该语言的新的查询语法。  
+## <a name="the-query"></a><span data-ttu-id="0ced4-140">查询</span><span class="sxs-lookup"><span data-stu-id="0ced4-140">The Query</span></span>  
+ <span data-ttu-id="0ced4-141">在查询中，你可以指定你想要从数据源或源检索哪些的信息。</span><span class="sxs-lookup"><span data-stu-id="0ced4-141">In the query, you specify what information you want to retrieve from the data source or sources.</span></span> <span data-ttu-id="0ced4-142">此外可以指定如何应排序、 分组或结构化返回前该信息。</span><span class="sxs-lookup"><span data-stu-id="0ced4-142">You also have the option of specifying how that information should be sorted, grouped, or structured before it is returned.</span></span> <span data-ttu-id="0ced4-143">若要启用查询创建，Visual Basic 已合并到语言中新的查询语法。</span><span class="sxs-lookup"><span data-stu-id="0ced4-143">To enable query creation, Visual Basic has incorporated new query syntax into the language.</span></span>  
   
- 下面的示例中的查询时执行，从整数数组中，返回所有偶数`numbers`。  
+ <span data-ttu-id="0ced4-144">下面的示例中的查询时执行，从整数数组，返回所有偶数`numbers`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-144">When it is executed, the query in the following example returns all the even numbers from an integer array, `numbers`.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
- 查询表达式包含三个子句︰ `From`， `Where`，和`Select`。 中所述的特定功能和用途的每个查询表达式子句[基本查询操作 (Visual Basic 中)](basic-query-operations.md)。 有关详细信息，请参阅[查询](../../../../visual-basic/language-reference/queries/queries.md)。 请注意，在[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]，查询定义通常存储在一个变量，并在以后执行。 查询变量，如`evensQuery`在上一示例中，必须为可查询类型。 一种`evensQuery`是`IEnumerable(Of Integer)`、 分配由编译器使用局部类型推理。  
+ <span data-ttu-id="0ced4-145">查询表达式包含三个子句： `From`， `Where`，和`Select`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-145">The query expression contains three clauses: `From`, `Where`, and `Select`.</span></span> <span data-ttu-id="0ced4-146">中所述的特定功能和用途的每个查询表达式子句[基本查询操作 (Visual Basic)](basic-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-146">The specific function and purpose of each query expression clause is discussed in [Basic Query Operations (Visual Basic)](basic-query-operations.md).</span></span> <span data-ttu-id="0ced4-147">有关详细信息，请参阅[查询](../../../../visual-basic/language-reference/queries/queries.md)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-147">For more information, see [Queries](../../../../visual-basic/language-reference/queries/queries.md).</span></span> <span data-ttu-id="0ced4-148">请注意，在[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，查询定义通常是存储在变量和执行更高版本。</span><span class="sxs-lookup"><span data-stu-id="0ced4-148">Note that in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a query definition often is stored in a variable and executed later.</span></span> <span data-ttu-id="0ced4-149">查询变量，如`evensQuery`在前面的示例中，必须是可查询的类型。</span><span class="sxs-lookup"><span data-stu-id="0ced4-149">The query variable, such as `evensQuery` in the previous example, must be a queryable type.</span></span> <span data-ttu-id="0ced4-150">一种`evensQuery`是`IEnumerable(Of Integer)`、 分配由编译器使用局部类型推理。</span><span class="sxs-lookup"><span data-stu-id="0ced4-150">The type of `evensQuery` is `IEnumerable(Of Integer)`, assigned by the compiler using local type inference.</span></span>  
   
- 请务必请记住，则查询变量本身不执行任何操作，并且不返回任何数据。 它只存储查询定义。 在上例中，它是`For Each`执行查询的循环。  
+ <span data-ttu-id="0ced4-151">请务必请记住，则查询变量本身不执行任何操作，并且不返回任何数据。</span><span class="sxs-lookup"><span data-stu-id="0ced4-151">It is important to remember that the query variable itself takes no action and returns no data.</span></span> <span data-ttu-id="0ced4-152">它只存储查询定义。</span><span class="sxs-lookup"><span data-stu-id="0ced4-152">It only stores the query definition.</span></span> <span data-ttu-id="0ced4-153">在前面的示例中，它是`For Each`执行查询的循环。</span><span class="sxs-lookup"><span data-stu-id="0ced4-153">In the previous example, it is the `For Each` loop that executes the query.</span></span>  
   
-## <a name="query-execution"></a>查询执行  
- 从查询创建单独查询执行。 创建查询定义查询，但由不同的机制时将触发执行。 可以执行查询，只要它定义 (*立即执行*)，或定义可以存储和更高版本执行查询 (*延迟执行*)。  
+## <a name="query-execution"></a><span data-ttu-id="0ced4-154">查询执行</span><span class="sxs-lookup"><span data-stu-id="0ced4-154">Query Execution</span></span>  
+ <span data-ttu-id="0ced4-155">正在从查询创建单独查询执行。</span><span class="sxs-lookup"><span data-stu-id="0ced4-155">Query execution is separate from query creation.</span></span> <span data-ttu-id="0ced4-156">查询创建定义查询，但由不同的机制触发执行。</span><span class="sxs-lookup"><span data-stu-id="0ced4-156">Query creation defines the query, but execution is triggered by a different mechanism.</span></span> <span data-ttu-id="0ced4-157">只要定义它，可以执行查询 (*立即执行*)，或该定义可以存储和更高版本执行查询 (*延迟执行*)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-157">A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).</span></span>  
   
-### <a name="deferred-execution"></a>延迟执行  
- 典型[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查询与在上一示例中，在其中一个示例相似`evensQuery`定义。 它创建了查询，但不立即执行查询。 相反，在查询变量中存储的查询定义`evensQuery`。 执行查询更高版本，通常需要使用`For Each`循环，它返回序列的值，或通过应用一个标准查询运算符，如`Count`或`Max`。 此过程称为*延迟执行*。  
+### <a name="deferred-execution"></a><span data-ttu-id="0ced4-158">延迟执行</span><span class="sxs-lookup"><span data-stu-id="0ced4-158">Deferred Execution</span></span>  
+ <span data-ttu-id="0ced4-159">典型[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询类似于在上一示例中，在其中一个`evensQuery`定义。</span><span class="sxs-lookup"><span data-stu-id="0ced4-159">A typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query resembles the one in the previous example, in which `evensQuery` is defined.</span></span> <span data-ttu-id="0ced4-160">它创建查询，但不立即执行查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-160">It creates the query but does not execute it immediately.</span></span> <span data-ttu-id="0ced4-161">相反，查询定义存储在查询变量`evensQuery`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-161">Instead, the query definition is stored in the query variable `evensQuery`.</span></span> <span data-ttu-id="0ced4-162">执行查询更高版本，通常通过使用`For Each`循环，返回的序列的值，或通过应用一个标准查询运算符，如`Count`或`Max`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-162">You execute the query later, typically by using a `For Each` loop, which returns a sequence of values, or by applying a standard query operator, such as `Count` or `Max`.</span></span> <span data-ttu-id="0ced4-163">此过程称为*延迟执行*。</span><span class="sxs-lookup"><span data-stu-id="0ced4-163">This process is referred to as *deferred execution*.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
- 通过使用中的迭代变量的检索到的数据访问的一系列值，`For Each`循环 (`number`在前面的示例)。 因为查询变量`evensQuery`，保存的查询定义，而不是查询结果中，您可以根据需要使用一次以上的查询变量的频繁执行查询。 例如，您可能会在单独的应用程序的持续更新的应用程序中有一个数据库。 创建从该数据库中检索数据的查询后，可以使用`For Each`循环反复执行查询，每次都检索最新的数据。  
+ <span data-ttu-id="0ced4-164">通过使用中的迭代变量的检索到的数据访问值的序列，`For Each`循环 (`number`在前面的示例)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-164">For a sequence of values, you access the retrieved data by using the iteration variable in the `For Each` loop (`number` in the previous example).</span></span> <span data-ttu-id="0ced4-165">因为查询变量， `evensQuery`，保存的查询定义，而不是查询结果中，你可以按你想通过使用查询变量不止一次的频率执行查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-165">Because the query variable, `evensQuery`, holds the query definition rather than the query results, you can execute a query as often as you want by using the query variable more than one time.</span></span> <span data-ttu-id="0ced4-166">例如，你可能正在由单独的应用程序不断更新的应用程序有了数据库。</span><span class="sxs-lookup"><span data-stu-id="0ced4-166">For example, you might have a database in your application that is being updated continually by a separate application.</span></span> <span data-ttu-id="0ced4-167">创建用于从该数据库中检索数据的查询后，你可以使用`For Each`循环反复执行查询，每次都检索最新数据。</span><span class="sxs-lookup"><span data-stu-id="0ced4-167">After you have created a query that retrieves data from that database, you can use a `For Each` loop to execute the query repeatedly, retrieving the most recent data every time.</span></span>  
   
- 下面的示例演示如何延迟的执行的工作。 之后`evensQuery2`定义并的情况下执行`For Each`循环中，与前面的示例中，数据源中的某些元素`numbers`发生更改。 然后，另一个`For Each`循环运行`evensQuery2`再次。 结果将不同的第二个时间，因为`For Each`循环执行查询同样，使用中的新值`numbers`。  
+ <span data-ttu-id="0ced4-168">下面的示例演示如何延迟的执行的工作。</span><span class="sxs-lookup"><span data-stu-id="0ced4-168">The following example demonstrates how deferred execution works.</span></span> <span data-ttu-id="0ced4-169">后`evensQuery2`定义并的情况下执行`For Each`循环中，如下所示上述示例中，数据源中的某些元素`numbers`更改。</span><span class="sxs-lookup"><span data-stu-id="0ced4-169">After `evensQuery2` is defined and executed with a `For Each` loop, as in the previous examples, some elements in the data source `numbers` are changed.</span></span> <span data-ttu-id="0ced4-170">然后，另一个`For Each`循环运行`evensQuery2`试。</span><span class="sxs-lookup"><span data-stu-id="0ced4-170">Then a second `For Each` loop runs `evensQuery2` again.</span></span> <span data-ttu-id="0ced4-171">结果不一样，第二次，因为`For Each`循环执行查询同样，使用中的新值`numbers`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-171">The results are different the second time, because the `For Each` loop executes the query again, using the new values in `numbers`.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
- 输出：  
+ <span data-ttu-id="0ced4-172">输出：</span><span class="sxs-lookup"><span data-stu-id="0ced4-172">Output:</span></span>  
   
  `Evens in original array:`  
   
@@ -119,31 +106,31 @@ ms.lasthandoff: 03/13/2017
   
  `0  10  2  22  8`  
   
-### <a name="immediate-execution"></a>立即执行  
- 在延迟执行的查询中，查询定义存储在查询变量中以供以后执行。 立即执行，而在其定义时执行查询。 当应用需要访问的各个元素的查询结果的方法时，将触发执行。 立即执行通常会强制使用返回单个值的标准查询运算符之一。 Examples are `Count`, `Max`, `Average`, and `First`. 这些标准查询运算符执行的查询，只要它们应用以便计算并返回单一实例结果。 有关返回单个值的标准查询运算符的详细信息，请参阅[聚合操作](aggregation-operations.md)，[元素操作](element-operations.md)，和[限定符操作](quantifier-operations.md)。  
+### <a name="immediate-execution"></a><span data-ttu-id="0ced4-173">立即执行</span><span class="sxs-lookup"><span data-stu-id="0ced4-173">Immediate Execution</span></span>  
+ <span data-ttu-id="0ced4-174">延迟执行的查询，在查询定义存储在更高版本执行的查询变量。</span><span class="sxs-lookup"><span data-stu-id="0ced4-174">In deferred execution of queries, the query definition is stored in a query variable for later execution.</span></span> <span data-ttu-id="0ced4-175">立即执行，而在其定义时执行查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-175">In immediate execution, the query is executed at the time of its definition.</span></span> <span data-ttu-id="0ced4-176">应用要求对查询结果的单个元素的访问的方法时，将触发执行。</span><span class="sxs-lookup"><span data-stu-id="0ced4-176">Execution is triggered when you apply a method that requires access to individual elements of the query result.</span></span> <span data-ttu-id="0ced4-177">立即执行通常会强制使用返回单个值的标准查询运算符之一。</span><span class="sxs-lookup"><span data-stu-id="0ced4-177">Immediate execution often is forced by using one of the standard query operators that return single values.</span></span> <span data-ttu-id="0ced4-178">示例包括`Count`， `Max`， `Average`，和`First`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-178">Examples are `Count`, `Max`, `Average`, and `First`.</span></span> <span data-ttu-id="0ced4-179">只要它们应用才能计算并返回单一实例结果，这些标准查询运算符将执行查询。</span><span class="sxs-lookup"><span data-stu-id="0ced4-179">These standard query operators execute the query as soon as they are applied in order to calculate and return a singleton result.</span></span> <span data-ttu-id="0ced4-180">有关返回单个值的标准查询运算符的详细信息，请参阅[聚合操作](aggregation-operations.md)，[元素操作](element-operations.md)，和[限定符操作](quantifier-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-180">For more information about standard query operators that return single values, see [Aggregation Operations](aggregation-operations.md), [Element Operations](element-operations.md), and [Quantifier Operations](quantifier-operations.md).</span></span>  
   
- 下面的查询返回一个整数数组中的偶数的计数。 查询定义不保存，和`numEvens`是一个简单`Integer`。  
+ <span data-ttu-id="0ced4-181">以下查询返回的整数数组中的偶数的计数。</span><span class="sxs-lookup"><span data-stu-id="0ced4-181">The following query returns a count of the even numbers in an array of integers.</span></span> <span data-ttu-id="0ced4-182">未保存的查询定义，和`numEvens`是一个简单`Integer`。</span><span class="sxs-lookup"><span data-stu-id="0ced4-182">The query definition is not saved, and `numEvens` is a simple `Integer`.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
- 可以通过使用实现相同的结果`Aggregate`方法。  
+ <span data-ttu-id="0ced4-183">你可以通过使用实现相同的结果`Aggregate`方法。</span><span class="sxs-lookup"><span data-stu-id="0ced4-183">You can achieve the same result by using the `Aggregate` method.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
- 您也可以通过调用强制执行的查询`ToList`或`ToArray`（立即） 的查询或查询变量 （延迟），如下面的代码中所示的方法。  
+ <span data-ttu-id="0ced4-184">你还可以通过调用来强制执行的查询`ToList`或`ToArray`（即时） 的查询或查询变量 （延迟），如下面的代码中所示的方法。</span><span class="sxs-lookup"><span data-stu-id="0ced4-184">You can also force execution of a query by calling the `ToList` or `ToArray` method on a query (immediate) or query variable (deferred), as shown in the following code.</span></span>  
   
- [!code-vb[VbLINQFirstQuery #&6;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
- 在前面的示例中，`evensQuery3`是一个查询变量，而`evensList`是列表和`evensArray`是一个数组。  
+ <span data-ttu-id="0ced4-185">在前面的示例中，`evensQuery3`是查询变量，而`evensList`是列表和`evensArray`是数组。</span><span class="sxs-lookup"><span data-stu-id="0ced4-185">In the previous examples, `evensQuery3` is a query variable, but `evensList` is a list and `evensArray` is an array.</span></span>  
   
- 使用`ToList`或`ToArray`强制立即执行是在想要立即执行查询并将结果缓存在单个集合对象的方案中尤其有用。 有关这些方法的详细信息，请参阅[转换数据类型](converting-data-types.md)。  
+ <span data-ttu-id="0ced4-186">使用`ToList`或`ToArray`强制立即执行已想要立即执行查询并缓存单个集合对象中的结果的方案中尤其有用。</span><span class="sxs-lookup"><span data-stu-id="0ced4-186">Using `ToList` or `ToArray` to force immediate execution is especially useful in scenarios in which you want to execute the query immediately and cache the results in a single collection object.</span></span> <span data-ttu-id="0ced4-187">有关这些方法的详细信息，请参阅[转换数据类型](converting-data-types.md)。</span><span class="sxs-lookup"><span data-stu-id="0ced4-187">For more information about these methods, see [Converting Data Types](converting-data-types.md).</span></span>  
   
- 您也可以使查询以使用执行`IEnumerable`方法如<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>方法。</xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>  
+ <span data-ttu-id="0ced4-188">也可能会导致查询执行使用`IEnumerable`如方法<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="0ced4-188">You can also cause a query to be executed by using an `IEnumerable` method such as the <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> method.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在 Visual Basic 中的 LINQ 入门](getting-started-with-linq.md)   
- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [标准查询运算符概述 (Visual Basic)](standard-query-operators-overview.md)   
- [在 Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [查询](../../../../visual-basic/language-reference/queries/queries.md)
+## <a name="see-also"></a><span data-ttu-id="0ced4-189">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0ced4-189">See Also</span></span>  
+ [<span data-ttu-id="0ced4-190">Visual Basic 中的 LINQ 入门</span><span class="sxs-lookup"><span data-stu-id="0ced4-190">Getting Started with LINQ in Visual Basic</span></span>](getting-started-with-linq.md)  
+ [<span data-ttu-id="0ced4-191">局部类型推理</span><span class="sxs-lookup"><span data-stu-id="0ced4-191">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="0ced4-192">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0ced4-192">Standard Query Operators Overview (Visual Basic)</span></span>](standard-query-operators-overview.md)  
+ [<span data-ttu-id="0ced4-193">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="0ced4-193">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="0ced4-194">LINQ</span><span class="sxs-lookup"><span data-stu-id="0ced4-194">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="0ced4-195">查询</span><span class="sxs-lookup"><span data-stu-id="0ced4-195">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

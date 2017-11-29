@@ -1,41 +1,40 @@
 ---
-title: "如何：确定对象变量引用的类型 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "对象变量, 确定类型"
-  - "TypeOf 运算符 [Visual Basic], 确定对象变量类型"
-  - "变量 [Visual Basic], 对象"
+title: "如何：确定对象变量引用的类型 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TypeOf operator [Visual Basic], determining object variable type
+- variables [Visual Basic], object
+- object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5dd6785ecd48be3f0455de63b9e3f13a485ddbb2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：确定对象变量引用的类型 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-对象变量包含一个指针，它指向存储在其他位置的数据。  该数据的类型可在运行时更改。  任何时候，都可以使用 <xref:System.Type.GetTypeCode%2A> 方法确定当前运行时类型，或者使用 [TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md) 检查当前运行时类型是否与指定类型兼容。  
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a><span data-ttu-id="1e25c-102">如何：确定对象变量引用的类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e25c-102">How to: Determine What Type an Object Variable Refers To (Visual Basic)</span></span>
+<span data-ttu-id="1e25c-103">对象变量包含指向存储在其他位置的数据的指针。</span><span class="sxs-lookup"><span data-stu-id="1e25c-103">An object variable contains a pointer to data that is stored elsewhere.</span></span> <span data-ttu-id="1e25c-104">在运行时可以更改该数据的类型。</span><span class="sxs-lookup"><span data-stu-id="1e25c-104">The type of that data can change during run time.</span></span> <span data-ttu-id="1e25c-105">在任何时刻，你可以使用<xref:System.Type.GetTypeCode%2A>方法来确定当前的运行时类型，或[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)若要查明当前运行时类型是否与指定的类型兼容。</span><span class="sxs-lookup"><span data-stu-id="1e25c-105">At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.</span></span>  
   
-### 确定对象变量当前引用的精确类型  
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a><span data-ttu-id="1e25c-106">若要确定确切类型的对象变量当前引用</span><span class="sxs-lookup"><span data-stu-id="1e25c-106">To determine the exact type an object variable currently refers to</span></span>  
   
-1.  在对象变量上，调用 <xref:System.Object.GetType%2A> 方法检索 <xref:System.Type?displayProperty=fullName> 对象。  
+1.  <span data-ttu-id="1e25c-107">对象变量上调用<xref:System.Object.GetType%2A>方法来检索<xref:System.Type?displayProperty=nameWithType>对象。</span><span class="sxs-lookup"><span data-stu-id="1e25c-107">On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
   
     ```  
     Dim myObject As Object  
     myObject.GetType()  
     ```  
   
-2.  在 <xref:System.Type?displayProperty=fullName> 类上，调用共享方法 <xref:System.Type.GetTypeCode%2A> 检索对象类型的 <xref:System.TypeCode> 枚举值。  
+2.  <span data-ttu-id="1e25c-108">上<xref:System.Type?displayProperty=nameWithType>类中，调用共享的方法<xref:System.Type.GetTypeCode%2A>检索<xref:System.TypeCode>对象的类型的枚举值。</span><span class="sxs-lookup"><span data-stu-id="1e25c-108">On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.</span></span>  
   
     ```  
     Dim myObject As Object  
@@ -43,11 +42,11 @@ caps.handback.revision: 13
     MsgBox("myObject currently has type code " & CStr(datTyp))  
     ```  
   
-     对任何感兴趣的枚举成员都可以测试 <xref:System.TypeCode> 枚举值，例如 `Double`。  
+     <span data-ttu-id="1e25c-109">你可以测试<xref:System.TypeCode>针对任何枚举成员感兴趣，例如的枚举值`Double`。</span><span class="sxs-lookup"><span data-stu-id="1e25c-109">You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.</span></span>  
   
-### 确定对象变量的类型是否与指定类型兼容  
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a><span data-ttu-id="1e25c-110">若要确定是否一个对象变量的类型与指定的类型兼容</span><span class="sxs-lookup"><span data-stu-id="1e25c-110">To determine whether an object variable's type is compatible with a specified type</span></span>  
   
--   组合使用 `TypeOf` 运算符和 [Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)，使用 `TypeOf`...`Is` 表达式测试对象。  
+-   <span data-ttu-id="1e25c-111">使用`TypeOf`结合运算符[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)与对象进行测试`TypeOf`...`Is`表达式。</span><span class="sxs-lookup"><span data-stu-id="1e25c-111">Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.</span></span>  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  
@@ -55,18 +54,18 @@ caps.handback.revision: 13
     End If  
     ```  
   
-     如果对象的运行时类型和指定类型兼容，则 `TypeOf`...`Is` 表达式返回 `True`。  
+     <span data-ttu-id="1e25c-112">`TypeOf`...`Is`表达式返回`True`对象的运行时类型是否与指定的类型兼容。</span><span class="sxs-lookup"><span data-stu-id="1e25c-112">The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.</span></span>  
   
-     兼容性标准取决于指定类型是类、结构还是接口。  通常，如果对象的类型与指定类型相同，或者，继承或实现了指定类型，则类型是兼容的。  有关更多信息，请参见 [TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)。  
+     <span data-ttu-id="1e25c-113">兼容性的条件取决于指定的类型是类、 结构或接口。</span><span class="sxs-lookup"><span data-stu-id="1e25c-113">The criterion for compatibility depends on whether the specified type is a class, structure, or interface.</span></span> <span data-ttu-id="1e25c-114">一般情况下，则类型是兼容的如果将对象与同一类型、 继承自，或实现指定的类型。</span><span class="sxs-lookup"><span data-stu-id="1e25c-114">In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type.</span></span> <span data-ttu-id="1e25c-115">有关详细信息，请参阅[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="1e25c-115">For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span></span>  
   
-## 编译代码  
- 注意，指定类型不能是变量或表达式。  它必须是已定义类型（例如，类、结构或接口）的名称。  包括内部类型，例如 `Integer` 和 `String`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="1e25c-116">编译代码</span><span class="sxs-lookup"><span data-stu-id="1e25c-116">Compiling the Code</span></span>  
+ <span data-ttu-id="1e25c-117">请注意指定的类型不能为变量或表达式。</span><span class="sxs-lookup"><span data-stu-id="1e25c-117">Note that the specified type cannot be a variable or expression.</span></span> <span data-ttu-id="1e25c-118">它必须已定义的类型，如类、 结构或接口的名称。</span><span class="sxs-lookup"><span data-stu-id="1e25c-118">It must be the name of a defined type, such as a class, structure, or interface.</span></span> <span data-ttu-id="1e25c-119">这包括内部类型，如`Integer`和`String`。</span><span class="sxs-lookup"><span data-stu-id="1e25c-119">This includes intrinsic types such as `Integer` and `String`.</span></span>  
   
-## 请参阅  
- <xref:System.Object.GetType%2A>   
- <xref:System.Type?displayProperty=fullName>   
- <xref:System.Type.GetTypeCode%2A>   
- <xref:System.TypeCode>   
- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="1e25c-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1e25c-120">See Also</span></span>  
+ <xref:System.Object.GetType%2A>  
+ <xref:System.Type?displayProperty=nameWithType>  
+ <xref:System.Type.GetTypeCode%2A>  
+ <xref:System.TypeCode>  
+ [<span data-ttu-id="1e25c-121">对象变量</span><span class="sxs-lookup"><span data-stu-id="1e25c-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="1e25c-122">对象变量值</span><span class="sxs-lookup"><span data-stu-id="1e25c-122">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [<span data-ttu-id="1e25c-123">Object 数据类型</span><span class="sxs-lookup"><span data-stu-id="1e25c-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
