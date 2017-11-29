@@ -1,93 +1,93 @@
 ---
-title: "&lt;gcServer&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcServer> 元素"
-  - "gcServer 元素"
+title: "&lt;gcServer&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer
+helpviewer_keywords:
+- gcServer element
+- <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 54142a75d178eb1c12e4b182df1dab9bff957ec6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;gcServer&gt; 元素
-指定公共语言运行时是否运行服务器垃圾回收。  
+# <a name="ltgcservergt-element"></a><span data-ttu-id="ad719-102">&lt;gcServer&gt;元素</span><span class="sxs-lookup"><span data-stu-id="ad719-102">&lt;gcServer&gt; Element</span></span>
+<span data-ttu-id="ad719-103">指定公共语言运行时是否运行服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
-## 语法  
+ <span data-ttu-id="ad719-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ad719-104">\<configuration></span></span>  
+<span data-ttu-id="ad719-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="ad719-105">\<runtime></span></span>  
+<span data-ttu-id="ad719-106">\<gcServer ></span><span class="sxs-lookup"><span data-stu-id="ad719-106">\<gcServer></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ad719-107">语法</span><span class="sxs-lookup"><span data-stu-id="ad719-107">Syntax</span></span>  
+  
+```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ad719-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="ad719-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ad719-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="ad719-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="ad719-110">特性</span><span class="sxs-lookup"><span data-stu-id="ad719-110">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指定运行时是否运行服务器垃圾回收。|  
+|<span data-ttu-id="ad719-111">特性</span><span class="sxs-lookup"><span data-stu-id="ad719-111">Attribute</span></span>|<span data-ttu-id="ad719-112">描述</span><span class="sxs-lookup"><span data-stu-id="ad719-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="ad719-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="ad719-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="ad719-114">指定运行时是否运行服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a><span data-ttu-id="ad719-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="ad719-115">enabled Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|`false`|请勿运行服务器垃圾回收。  这是默认设置。|  
-|`true`|运行服务器垃圾回收。|  
+|<span data-ttu-id="ad719-116">值</span><span class="sxs-lookup"><span data-stu-id="ad719-116">Value</span></span>|<span data-ttu-id="ad719-117">描述</span><span class="sxs-lookup"><span data-stu-id="ad719-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="ad719-118">请勿运行服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-118">Does not run server garbage collection.</span></span> <span data-ttu-id="ad719-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="ad719-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="ad719-120">运行服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-120">Runs server garbage collection.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="ad719-121">子元素</span><span class="sxs-lookup"><span data-stu-id="ad719-121">Child Elements</span></span>  
+ <span data-ttu-id="ad719-122">无。</span><span class="sxs-lookup"><span data-stu-id="ad719-122">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="ad719-123">父元素</span><span class="sxs-lookup"><span data-stu-id="ad719-123">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
+|<span data-ttu-id="ad719-124">元素</span><span class="sxs-lookup"><span data-stu-id="ad719-124">Element</span></span>|<span data-ttu-id="ad719-125">描述</span><span class="sxs-lookup"><span data-stu-id="ad719-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ad719-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="ad719-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ad719-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="ad719-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 备注  
- 公共语言运行时 \(CLR\) 支持两种类型的垃圾回收：工作站垃圾回收（适用于所有系统）和服务器垃圾回收（适用于多处理器系统）。  使用 `<gcServer>` 元素以控制 CLR 执行的垃圾回收类型。  使用 <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=fullName> 属性以确定是否启用服务器垃圾回收。  
+## <a name="remarks"></a><span data-ttu-id="ad719-128">备注</span><span class="sxs-lookup"><span data-stu-id="ad719-128">Remarks</span></span>  
+ <span data-ttu-id="ad719-129">公共语言运行时 (CLR) 支持两种类型的垃圾回收：工作站垃圾回收（适用于所有系统）和服务器垃圾回收（适用于多处理器系统）。</span><span class="sxs-lookup"><span data-stu-id="ad719-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="ad719-130">使用 `<gcServer>` 元素以控制 CLR 执行的垃圾回收类型。</span><span class="sxs-lookup"><span data-stu-id="ad719-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="ad719-131">使用 <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> 属性以确定是否启用服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- 对于单处理器计算机，默认的工作站垃圾回收应该是最快捷的选项。  对于双处理器计算机，最快捷的选项既可以是工作站垃圾回收又可以是服务器垃圾回收。  对于两个以上处理器的计算机，服务器垃圾回收应该是最快捷的选项。  
+ <span data-ttu-id="ad719-132">对于单处理器计算机，默认的工作站垃圾回收应该是最快捷的选项。</span><span class="sxs-lookup"><span data-stu-id="ad719-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="ad719-133">对于双处理器计算机，最快捷的选项既可以是工作站垃圾回收又可以是服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="ad719-134">对于两个以上处理器的计算机，服务器垃圾回收应该是最快捷的选项。</span><span class="sxs-lookup"><span data-stu-id="ad719-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- 此元素只能在应用程序配置文件中使用；如果此元素在计算机配置文件中，请忽略。  
+ <span data-ttu-id="ad719-135">此元素只能在应用程序配置文件中使用；如果此元素在计算机配置文件中，请忽略。</span><span class="sxs-lookup"><span data-stu-id="ad719-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  在 .NET Framework 4 和更低版本中，启用服务器垃圾回收之后，并发垃圾回收不可用。  自 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 起，服务器垃圾回收就是并发回收。  若要使用非并发服务器垃圾回收，请将 `<gcServer>` 元素设置为  `true` 并将 [\<gcConcurrent\> 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)设置为 `false`。  
+>  <span data-ttu-id="ad719-136">在 .NET Framework 4 和更低版本中，启用服务器垃圾回收之后，并发垃圾回收不可用。</span><span class="sxs-lookup"><span data-stu-id="ad719-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="ad719-137">自 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 起，服务器垃圾回收就是并发回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="ad719-138">若要使用非并发服务器垃圾回收，设置`<gcServer>`元素`true`和[ \<gcConcurrent > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)到`false`。</span><span class="sxs-lookup"><span data-stu-id="ad719-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## 示例  
- 下面的示例启用服务器垃圾回收。  
+## <a name="example"></a><span data-ttu-id="ad719-139">示例</span><span class="sxs-lookup"><span data-stu-id="ad719-139">Example</span></span>  
+ <span data-ttu-id="ad719-140">下面的示例启用服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="ad719-140">The following example enables server garbage collection.</span></span>  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcServer enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## 请参阅  
- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=fullName>   
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/zh-cn/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a><span data-ttu-id="ad719-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ad719-141">See Also</span></span>  
+ <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="ad719-142">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="ad719-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="ad719-143">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="ad719-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ad719-144">如何： 禁用并发垃圾回收</span><span class="sxs-lookup"><span data-stu-id="ad719-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)

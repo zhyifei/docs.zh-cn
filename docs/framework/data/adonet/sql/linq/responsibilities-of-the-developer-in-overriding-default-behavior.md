@@ -1,37 +1,40 @@
 ---
-title: "开发人员在重写默认行为方面的责任 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "开发人员在重写默认行为中的责任"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 开发人员在重写默认行为方面的责任
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不强制满足以下要求，但如果这些要求未得到满足，就会导致行为不明确。  
+# <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a><span data-ttu-id="36fc9-102">开发人员在重写默认行为中的责任</span><span class="sxs-lookup"><span data-stu-id="36fc9-102">Responsibilities of the Developer In Overriding Default Behavior</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="36fc9-103">不会强制以下要求，但如果未满足这些要求，则行为是不确定。</span><span class="sxs-lookup"><span data-stu-id="36fc9-103"> does not enforce the following requirements, but behavior is undefined if these requirements are not satisfied.</span></span>  
   
--   重写方法不能调用<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 或 <xref:System.Data.Linq.Table%601.Attach%2A>。  如果在重写方法中调用这些方法，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会引发异常。  
+-   <span data-ttu-id="36fc9-104">重写方法不能调用<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 或 <xref:System.Data.Linq.Table%601.Attach%2A>。</span><span class="sxs-lookup"><span data-stu-id="36fc9-104">The overriding method must not call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> or <xref:System.Data.Linq.Table%601.Attach%2A>.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="36fc9-105">如果重写方法中调用这些方法，将引发异常。</span><span class="sxs-lookup"><span data-stu-id="36fc9-105"> throws an exception if these methods are called in an override method.</span></span>  
   
--   重写方法不能用来启动、提交或停止事务。  <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 操作以事务的形式执行。  内嵌的事务可能会干扰外层事务。  加载重写方法只能在它们确定 <xref:System.Transactions.Transaction> 中未在执行相应操作后启动事务。  
+-   <span data-ttu-id="36fc9-106">重写方法不能用来启动、提交或停止事务。</span><span class="sxs-lookup"><span data-stu-id="36fc9-106">Override methods cannot be used to start, commit, or stop a transaction.</span></span> <span data-ttu-id="36fc9-107"><xref:System.Data.Linq.DataContext.SubmitChanges%2A> 操作以事务的形式执行。</span><span class="sxs-lookup"><span data-stu-id="36fc9-107">The <xref:System.Data.Linq.DataContext.SubmitChanges%2A> operation is performed under a transaction.</span></span> <span data-ttu-id="36fc9-108">内嵌的事务可能会干扰外层事务。</span><span class="sxs-lookup"><span data-stu-id="36fc9-108">An inner nested transaction can interfere with the outer transaction.</span></span> <span data-ttu-id="36fc9-109">加载重写方法只能在它们确定 <xref:System.Transactions.Transaction> 中未在执行相应操作后启动事务。</span><span class="sxs-lookup"><span data-stu-id="36fc9-109">Load override methods can start a transaction only after they determine that the operation is not being performed in a <xref:System.Transactions.Transaction>.</span></span>  
   
--   重写方法应遵循适用的开放式并发映射。  发生开放式并发冲突时，重写方法应引发 <xref:System.Data.Linq.ChangeConflictException>。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会捕获此异常，以便您可以正确处理 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时提供的 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 选项。  
+-   <span data-ttu-id="36fc9-110">重写方法应遵循适用的开放式并发映射。</span><span class="sxs-lookup"><span data-stu-id="36fc9-110">Override methods are expected to follow the applicable optimistic concurrency mapping.</span></span> <span data-ttu-id="36fc9-111">发生开放式并发冲突时，重写方法应引发 <xref:System.Data.Linq.ChangeConflictException>。</span><span class="sxs-lookup"><span data-stu-id="36fc9-111">The override method is expected to throw a <xref:System.Data.Linq.ChangeConflictException> when an optimistic concurrency conflict occurs.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="36fc9-112">捕获此异常，以便可以正确处理<xref:System.Data.Linq.DataContext.SubmitChanges%2A>上提供的选项<xref:System.Data.Linq.DataContext.SubmitChanges%2A>。</span><span class="sxs-lookup"><span data-stu-id="36fc9-112"> catches this exception so that you can correctly process the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> option provided on <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span>  
   
--   Create \(`Insert`\) 和 `Update` 重写方法在相应操作成功完成后应使数据库生成的列的值流回对应的对象成员。  
+-   <span data-ttu-id="36fc9-113">Create (`Insert`) 和 `Update` 重写方法在相应操作成功完成后应使数据库生成的列的值流回对应的对象成员。</span><span class="sxs-lookup"><span data-stu-id="36fc9-113">Create (`Insert`) and `Update` override methods are expected to flow back the values for database-generated columns to corresponding object members when the operation is successfully completed.</span></span>  
   
-     例如，如果 `Order.OrderID` 映射到标识列（autoincrement 主键），则 `InsertOrder()` 重写方法必须检索数据库生成的 ID 并将 `Order.OrderID` 成员设置为该 ID。  同样，时间戳成员必须更新为数据库生成的时间戳值，以确保更新后的对象一致。  如果未能传播数据库生成的值，则会造成数据库与 <xref:System.Data.Linq.DataContext> 跟踪的对象之间不一致。  
+     <span data-ttu-id="36fc9-114">例如，如果`Order.OrderID`映射到标识列 (*autoincrement*主键)，则`InsertOrder()`重写方法必须检索数据库生成的 ID 和设置`Order.OrderID`成员为该 id。</span><span class="sxs-lookup"><span data-stu-id="36fc9-114">For example, if `Order.OrderID` is mapped to an identity column (*autoincrement* primary key), then the `InsertOrder()` override method must retrieve the database-generated ID and set the `Order.OrderID` member to that ID.</span></span> <span data-ttu-id="36fc9-115">同样，时间戳成员必须更新为数据库生成的时间戳值，以确保更新后的对象一致。</span><span class="sxs-lookup"><span data-stu-id="36fc9-115">Likewise, timestamp members must be updated to the database-generated timestamp values to make sure that the updated objects are consistent.</span></span> <span data-ttu-id="36fc9-116">如果未能传播数据库生成的值，则会造成数据库与 <xref:System.Data.Linq.DataContext> 跟踪的对象之间不一致。</span><span class="sxs-lookup"><span data-stu-id="36fc9-116">Failure to propagate the database-generated values can cause an inconsistency between the database and the objects tracked by the <xref:System.Data.Linq.DataContext>.</span></span>  
   
--   调用正确的动态 API 是用户的责任。  例如，在更新重写方法中，只能调用 <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A>。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不检测或验证调用的动态方法是否与适用的操作相匹配。  如果调用了不适用的方法（例如，为要更新的对象调用了 <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A>），则结果是不明确的。  
+-   <span data-ttu-id="36fc9-117">调用正确的动态 API 是用户的责任。</span><span class="sxs-lookup"><span data-stu-id="36fc9-117">It is the user's responsibility to invoke the correct dynamic API.</span></span> <span data-ttu-id="36fc9-118">例如，在更新重写方法中，只能调用 <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A>。</span><span class="sxs-lookup"><span data-stu-id="36fc9-118">For example, in the update override method, only the <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A> can be called.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="36fc9-119"> 不检测或验证调用的动态方法是否与适用的操作相匹配。</span><span class="sxs-lookup"><span data-stu-id="36fc9-119"> does not detect or verify whether the invoked dynamic method matches the applicable operation.</span></span> <span data-ttu-id="36fc9-120">如果调用了不适用的方法（例如，为要更新的对象调用了 <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A>），则结果是不明确的。</span><span class="sxs-lookup"><span data-stu-id="36fc9-120">If an inapplicable method is called (for example, <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> for an object to be updated), the results are undefined.</span></span>  
   
--   最后，重写方法应执行明确的操作。  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 操作（如预先加载、延迟加载和 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>））的语义要求重写提供明确的服务。例如，只返回空集合而不检查数据库内容的加载重写有可能会造成数据不一致。  
+-   <span data-ttu-id="36fc9-121">最后，重写方法应执行明确的操作。</span><span class="sxs-lookup"><span data-stu-id="36fc9-121">Finally, the overriding method is expected to perform the stated operation.</span></span> <span data-ttu-id="36fc9-122">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 操作（如紧急加载、延迟加载和 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>）的语义要求重写提供明确的服务。</span><span class="sxs-lookup"><span data-stu-id="36fc9-122">The semantics of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operations such as eager loading, deferred loading, and <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) require the overrides to provide the stated service.</span></span> <span data-ttu-id="36fc9-123">例如，只返回空集合而不检查数据库内容的加载重写有可能会造成数据不一致。</span><span class="sxs-lookup"><span data-stu-id="36fc9-123">For example, a load override that just returns an empty collection without checking the contents in the database will likely lead to inconsistent data.</span></span>  
   
-## 请参阅  
- [自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a><span data-ttu-id="36fc9-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="36fc9-124">See Also</span></span>  
+ [<span data-ttu-id="36fc9-125">自定义插入、 更新和删除操作</span><span class="sxs-lookup"><span data-stu-id="36fc9-125">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

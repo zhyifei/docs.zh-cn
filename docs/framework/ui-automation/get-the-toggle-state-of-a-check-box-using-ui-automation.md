@@ -1,33 +1,39 @@
 ---
-title: "Get the Toggle State of a Check Box Using UI Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, getting toggle states of check boxes"
-  - "check boxes, getting toggle states of"
-  - "getting, toggle states of check boxes"
+title: "使用 UI 自动化获取复选框的切换状态"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- UI Automation, getting toggle states of check boxes
+- check boxes, getting toggle states of
+- getting, toggle states of check boxes
 ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
-caps.latest.revision: 10
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 3e2e36702a6c921d095199c50c73f0815346edc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Get the Toggle State of a Check Box Using UI Automation
+# <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a><span data-ttu-id="50af6-102">使用 UI 自动化获取复选框的切换状态</span><span class="sxs-lookup"><span data-stu-id="50af6-102">Get the Toggle State of a Check Box Using UI Automation</span></span>
 > [!NOTE]
->  本文档的目标读者是欲使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]类的 .NET Framework 开发人员。  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参见 [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746)（Windows 自动化 API：UI 自动化）。  
+>  <span data-ttu-id="50af6-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="50af6-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="50af6-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="50af6-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题演示如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]来获取控件的切换状态。  
+ <span data-ttu-id="50af6-105">本主题演示如何使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]以获取切换状态的控件。</span><span class="sxs-lookup"><span data-stu-id="50af6-105">This topic shows how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to get the toggle state of a control.</span></span>  
   
-## 示例  
- 此示例使用 <xref:System.Windows.Automation.AutomationElement> 类的 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 方法从控件中获取 <xref:System.Windows.Automation.TogglePattern> 对象，并返回它的 <xref:System.Windows.Automation.ToggleState> 属性。  
+## <a name="example"></a><span data-ttu-id="50af6-106">示例</span><span class="sxs-lookup"><span data-stu-id="50af6-106">Example</span></span>  
+ <span data-ttu-id="50af6-107">此示例使用<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>方法<xref:System.Windows.Automation.AutomationElement>类来获取<xref:System.Windows.Automation.TogglePattern>从控件对象并返回其<xref:System.Windows.Automation.ToggleState>属性。</span><span class="sxs-lookup"><span data-stu-id="50af6-107">This example uses the <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> method of the <xref:System.Windows.Automation.AutomationElement> class to obtain a <xref:System.Windows.Automation.TogglePattern> object from a control and return its <xref:System.Windows.Automation.ToggleState> property.</span></span>  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]

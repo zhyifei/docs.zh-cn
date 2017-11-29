@@ -1,98 +1,101 @@
 ---
-title: "通过演练学习 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通过演练学习"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 38961451a51ae47d05d7625ee0e83da97261eb0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 通过演练学习
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 文档提供了一些演练。  本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
+# <a name="learning-by-walkthroughs"></a><span data-ttu-id="965ac-102">通过演练学习</span><span class="sxs-lookup"><span data-stu-id="965ac-102">Learning by Walkthroughs</span></span>
+<span data-ttu-id="965ac-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。</span><span class="sxs-lookup"><span data-stu-id="965ac-103">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation provides several walkthroughs.</span></span> <span data-ttu-id="965ac-104">本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。</span><span class="sxs-lookup"><span data-stu-id="965ac-104">This topic addresses some general walkthrough issues (including troubleshooting), and provides links to several entry-level walkthroughs for learning about [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
 > [!NOTE]
->  此“入门”部分中的演练向您展示了支持 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术的基本代码。  在实际操作中，您通常会使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 Windows 窗体项目来实现您的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序。  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 文档提供用于此目的的示例和演练。  
+>  <span data-ttu-id="965ac-105">此“入门”部分中的演练向您展示了支持 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术的基本代码。</span><span class="sxs-lookup"><span data-stu-id="965ac-105">The walkthroughs in this Getting Started section expose you to the basic code that supports [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology.</span></span> <span data-ttu-id="965ac-106">在实际操作中，您通常会使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 Windows 窗体项目来实现您的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="965ac-106">In actual practice, you will typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] and Windows Forms projects to implement your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications.</span></span> <span data-ttu-id="965ac-107">[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 文档提供用于此目的的示例和演练。</span><span class="sxs-lookup"><span data-stu-id="965ac-107">The [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] documentation provides examples and walkthroughs for this purpose.</span></span>  
   
-## 入门演练  
- 本节中提供了若干演练。  这些演练基于 Northwind 示例数据库，以最不复杂的方式循序渐进地展示了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的功能。  
+## <a name="getting-started-walkthroughs"></a><span data-ttu-id="965ac-108">入门演练</span><span class="sxs-lookup"><span data-stu-id="965ac-108">Getting Started Walkthroughs</span></span>  
+ <span data-ttu-id="965ac-109">本节中提供了若干演练。</span><span class="sxs-lookup"><span data-stu-id="965ac-109">Several walkthroughs are available in this section.</span></span> <span data-ttu-id="965ac-110">这些演练基于 Northwind 示例数据库，以最不复杂的方式循序渐进地展示了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的功能。</span><span class="sxs-lookup"><span data-stu-id="965ac-110">These walkthroughs are based on the sample Northwind database, and present [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] features at a gentle pace with minimal complexities.</span></span>  
   
- 应遵循的典型进展方案如下：  
+ <span data-ttu-id="965ac-111">应遵循的典型进展方案如下：</span><span class="sxs-lookup"><span data-stu-id="965ac-111">A typical progression to follow would be as follows:</span></span>  
   
-|目标|Visual Basic|C\#|  
-|--------|------------------|---------|  
-|创建一个实体类并执行一个简单查询。|[演练：简单对象模型和查询 \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[演练：简单对象模型和查询 \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|添加第二个类并执行一个更为复杂的查询。<br /><br /> （需要完成前一个演练。）|[演练：跨关系查询 \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[演练：跨关系查询 \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|向数据库中添加项、更改并删除其中的项。|[演练：操作数据 \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[演练：操作数据 \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|使用存储过程。|[仅使用存储过程 \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[演练：仅使用存储过程 \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|<span data-ttu-id="965ac-112">目标</span><span class="sxs-lookup"><span data-stu-id="965ac-112">Objective</span></span>|<span data-ttu-id="965ac-113">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="965ac-113">Visual Basic</span></span>|<span data-ttu-id="965ac-114">C#</span><span class="sxs-lookup"><span data-stu-id="965ac-114">C#</span></span>|  
+|---------------|------------------|---------|  
+|<span data-ttu-id="965ac-115">创建一个实体类并执行一个简单查询。</span><span class="sxs-lookup"><span data-stu-id="965ac-115">Create an entity class and execute a simple query.</span></span>|[<span data-ttu-id="965ac-116">演练： 简单对象模型和查询 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="965ac-116">Walkthrough: Simple Object Model and Query (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[<span data-ttu-id="965ac-117">演练： 简单对象模型和查询 (C#)</span><span class="sxs-lookup"><span data-stu-id="965ac-117">Walkthrough: Simple Object Model and Query (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|<span data-ttu-id="965ac-118">添加第二个类并执行一个更为复杂的查询。</span><span class="sxs-lookup"><span data-stu-id="965ac-118">Add a second class and execute a more complex query.</span></span><br /><br /> <span data-ttu-id="965ac-119">（需要完成前一个演练。）</span><span class="sxs-lookup"><span data-stu-id="965ac-119">(Requires completion of previous walkthrough).</span></span>|[<span data-ttu-id="965ac-120">演练： 跨关系查询 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="965ac-120">Walkthrough: Querying Across Relationships (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[<span data-ttu-id="965ac-121">演练： 跨关系查询 (C#)</span><span class="sxs-lookup"><span data-stu-id="965ac-121">Walkthrough: Querying Across Relationships (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|<span data-ttu-id="965ac-122">向数据库中添加项、更改并删除其中的项。</span><span class="sxs-lookup"><span data-stu-id="965ac-122">Add, change, and delete items in the database.</span></span>|[<span data-ttu-id="965ac-123">演练： 操作数据 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="965ac-123">Walkthrough: Manipulating Data (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[<span data-ttu-id="965ac-124">演练： 操作数据 (C#)</span><span class="sxs-lookup"><span data-stu-id="965ac-124">Walkthrough: Manipulating Data (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|<span data-ttu-id="965ac-125">使用存储过程。</span><span class="sxs-lookup"><span data-stu-id="965ac-125">Use stored procedures.</span></span>|[<span data-ttu-id="965ac-126">演练： 仅使用存储过程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="965ac-126">Walkthrough: Using Only Stored Procedures (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[<span data-ttu-id="965ac-127">演练： 仅使用存储过程 (C#)</span><span class="sxs-lookup"><span data-stu-id="965ac-127">Walkthrough: Using Only Stored Procedures (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
-## 常规  
- 以下信息大致介绍了这些演练：  
+## <a name="general"></a><span data-ttu-id="965ac-128">常规</span><span class="sxs-lookup"><span data-stu-id="965ac-128">General</span></span>  
+ <span data-ttu-id="965ac-129">以下信息大致介绍了这些演练：</span><span class="sxs-lookup"><span data-stu-id="965ac-129">The following information pertains to these walkthroughs in general:</span></span>  
   
--   环境：每个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 作为其集成开发环境 \(IDE\)。  
+-   <span data-ttu-id="965ac-130">环境：每个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 作为其集成开发环境 (IDE)。</span><span class="sxs-lookup"><span data-stu-id="965ac-130">Environment: Each [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthrough uses [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] as its integrated development environment (IDE).</span></span>  
   
--   SQL 引擎：所编写的这些演练需使用 SQL Server Express 来执行。  如果您没有 SQL Server Express，可以免费下载。  有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+-   <span data-ttu-id="965ac-131">SQL 引擎：所编写的这些演练需使用 SQL Server Express 来执行。</span><span class="sxs-lookup"><span data-stu-id="965ac-131">SQL engines: These walkthroughs are written to be implemented by using SQL Server Express.</span></span> <span data-ttu-id="965ac-132">如果您没有 SQL Server Express，可以免费下载。</span><span class="sxs-lookup"><span data-stu-id="965ac-132">If you do not have SQL Server Express, you can download it free of charge.</span></span> <span data-ttu-id="965ac-133">有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。</span><span class="sxs-lookup"><span data-stu-id="965ac-133">For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span>  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用文件名作为连接字符串。  只需指定文件名即可，这是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 为 SQL Server Express 用户提供的便捷之处。  始终要注意安全问题。  有关详细信息，请参阅 [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
+    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="965ac-134"> 演练使用文件名作为连接字符串。</span><span class="sxs-lookup"><span data-stu-id="965ac-134"> walkthroughs use a file name as a connection string.</span></span> <span data-ttu-id="965ac-135">只需指定文件名即可，这是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 为 SQL Server Express 用户提供的便捷之处。</span><span class="sxs-lookup"><span data-stu-id="965ac-135">Simply specifying a file name is a convenience that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for SQL Server Express users.</span></span> <span data-ttu-id="965ac-136">始终要注意安全问题。</span><span class="sxs-lookup"><span data-stu-id="965ac-136">Always pay attention to security issues.</span></span> <span data-ttu-id="965ac-137">有关详细信息，请参阅[LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="965ac-137">For more information, see [Security in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).</span></span>  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练通常需要 Northwind 示例数据库。  有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="965ac-138"> 演练通常需要 Northwind 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="965ac-138"> walkthroughs typically require the Northwind sample database.</span></span> <span data-ttu-id="965ac-139">有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。</span><span class="sxs-lookup"><span data-stu-id="965ac-139">For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span>  
   
--   您在演练中看到的对话框和菜单命令可能会与“帮助”中描述的有所不同，具体取决于您现用的设置或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本。  若要更改设置，请单击**“工具”**菜单上的**“导入和导出设置”**。  有关详细信息，请参阅 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+-   <span data-ttu-id="965ac-140">您在演练中看到的对话框和菜单命令可能会与“帮助”中描述的有所不同，具体取决于您现用的设置或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="965ac-140">The dialog boxes and menu commands you see in walkthroughs might differ from those described in Help, depending on your active settings or [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] edition.</span></span> <span data-ttu-id="965ac-141">若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="965ac-141">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="965ac-142">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="965ac-142">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
--   对于介绍多层方案的演练，服务器必须位于与开发计算机不同的计算机上，并且您必须具有访问此服务器的相应权限。  
+-   <span data-ttu-id="965ac-143">对于介绍多层方案的演练，服务器必须位于与开发计算机不同的计算机上，并且您必须具有访问此服务器的相应权限。</span><span class="sxs-lookup"><span data-stu-id="965ac-143">For walkthroughs that address multi-tier scenarios, a server must be located on a computer that is distinct from the development computer, and you must have appropriate permissions to access the server.</span></span>  
   
--   通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。  这种转义是必需的，因为 `Order` 是 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的一个关键字。  
+-   <span data-ttu-id="965ac-144">通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。</span><span class="sxs-lookup"><span data-stu-id="965ac-144">The name of the class that typically represents the Orders table in the Northwind sample database is `[Order]`.</span></span> <span data-ttu-id="965ac-145">这种转义是必需的，因为 `Order` 是 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的一个关键字。</span><span class="sxs-lookup"><span data-stu-id="965ac-145">The escaping is required because `Order` is a keyword in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].</span></span>  
   
-## 疑难解答  
- 发生运行时错误的原因可能是您没有足够的权限来访问这些演练中使用的数据库。  请参见以下步骤以帮助解决最常见的此类问题。  
+## <a name="troubleshooting"></a><span data-ttu-id="965ac-146">疑难解答</span><span class="sxs-lookup"><span data-stu-id="965ac-146">Troubleshooting</span></span>  
+ <span data-ttu-id="965ac-147">发生运行时错误的原因可能是您没有足够的权限来访问这些演练中使用的数据库。</span><span class="sxs-lookup"><span data-stu-id="965ac-147">Run-time errors can occur because you do not have sufficient permissions to access the databases used in these walkthroughs.</span></span> <span data-ttu-id="965ac-148">请参见以下步骤以帮助解决最常见的此类问题。</span><span class="sxs-lookup"><span data-stu-id="965ac-148">See the following steps to help resolve the most common of these issues.</span></span>  
   
-### 登录问题  
- 您的应用程序可能尝试使用数据库不接受的数据库登录名来访问数据库。  
+### <a name="log-on-issues"></a><span data-ttu-id="965ac-149">登录问题</span><span class="sxs-lookup"><span data-stu-id="965ac-149">Log-On Issues</span></span>  
+ <span data-ttu-id="965ac-150">您的应用程序可能尝试使用数据库不接受的数据库登录名来访问数据库。</span><span class="sxs-lookup"><span data-stu-id="965ac-150">Your application might be trying to access the database by way of a database logon it does not accept.</span></span>  
   
-##### 验证或更改数据库登录名  
+##### <a name="to-verify-or-change-the-database-log-on"></a><span data-ttu-id="965ac-151">验证或更改数据库登录名</span><span class="sxs-lookup"><span data-stu-id="965ac-151">To verify or change the database log on</span></span>  
   
-1.  在 Windows 的**“开始”**菜单上，依次指向**“所有程序”**、**“Microsoft SQL Server 2005”**、**“配置工具”**，然后单击**“SQL Server 配置管理器”**。  
+1.  <span data-ttu-id="965ac-152">在 Windows**启动**菜单上，指向**所有程序**， **Microsoft SQL Server 2005**，指向**配置工具**，然后单击**SQL Server 配置管理器**。</span><span class="sxs-lookup"><span data-stu-id="965ac-152">On the Windows **Start** menu, point to **All Programs**, **Microsoft SQL Server 2005**, point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.</span></span>  
   
-2.  在**“SQL Server 配置管理器”**的左窗格中，单击**“SQL Server 2005 服务”**。  
+2.  <span data-ttu-id="965ac-153">在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。</span><span class="sxs-lookup"><span data-stu-id="965ac-153">In the left pane of the **SQL Server Configuration Manager**, click **SQL Server 2005 Services**.</span></span>  
   
-3.  在右窗格中，右击**“SQL Server \(SQLEXPRESS\)”**，然后单击**“属性”**。  
+3.  <span data-ttu-id="965ac-154">在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**属性**。</span><span class="sxs-lookup"><span data-stu-id="965ac-154">In the right pane, right-click **SQL Server (SQLEXPRESS)**, and then click **Properties**.</span></span>  
   
-4.  单击**“登录”**选项卡，验证您尝试登录到服务器的方式。  
+4.  <span data-ttu-id="965ac-155">单击**Log On**选项卡并验证您尝试登录到服务器的方式。</span><span class="sxs-lookup"><span data-stu-id="965ac-155">Click the **Log On** tab and verify how you are trying to log on to the server.</span></span>  
   
-     在大多数情况下，使用**“Local System”**即可登录。  
+     <span data-ttu-id="965ac-156">在大多数情况下，**本地系统**工作原理。</span><span class="sxs-lookup"><span data-stu-id="965ac-156">In most cases, **Local System** works.</span></span>  
   
-     如果您做了更改，请单击**“重新启动”**以重新启动此服务。  
+     <span data-ttu-id="965ac-157">如果进行了更改，请单击**重新启动**重新启动服务。</span><span class="sxs-lookup"><span data-stu-id="965ac-157">If you make a change, click **Restart** to restart the service.</span></span>  
   
-### 协议  
- 有时，您的应用程序用来访问数据库的协议可能未设置正确。  例如， **中的演练需要的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]“Named Pipes”**协议默认是未启用的。  
+### <a name="protocols"></a><span data-ttu-id="965ac-158">协议</span><span class="sxs-lookup"><span data-stu-id="965ac-158">Protocols</span></span>  
+ <span data-ttu-id="965ac-159">有时，您的应用程序用来访问数据库的协议可能未设置正确。</span><span class="sxs-lookup"><span data-stu-id="965ac-159">At times, protocols might not be set correctly for your application to access the database.</span></span> <span data-ttu-id="965ac-160">例如， **Named Pipes**协议中的演练需要的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，默认情况下未启用。</span><span class="sxs-lookup"><span data-stu-id="965ac-160">For example, the **Named Pipes** protocol, which is required for walkthroughs in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], is not enabled by default.</span></span>  
   
-##### 启用 Named Pipes 协议  
+##### <a name="to-enable-the-named-pipes-protocol"></a><span data-ttu-id="965ac-161">启用 Named Pipes 协议</span><span class="sxs-lookup"><span data-stu-id="965ac-161">To enable the Named Pipes protocol</span></span>  
   
-1.  在**“SQL Server 配置管理器”**的左窗格中，展开**“SQL Server 2005 网络配置”**，然后单击**“SQLEXPRESS 的协议”**。  
+1.  <span data-ttu-id="965ac-162">在左窗格中**SQL Server 配置管理器**，展开**SQL Server 2005 网络配置**，然后单击**SQLEXPRESS 的协议**。</span><span class="sxs-lookup"><span data-stu-id="965ac-162">In the left pane of the **SQL Server Configuration Manager**, expand **SQL Server 2005 Network Configuration**, and then click **Protocols for SQLEXPRESS**.</span></span>  
   
-2.  在右窗格中，确保**“Named Pipes”**协议已启用。  如果它未启用，请右击**“Name Pipes”**，然后单击**“启用”**。  
+2.  <span data-ttu-id="965ac-163">在右窗格中，请确保**Named Pipes**启用协议。</span><span class="sxs-lookup"><span data-stu-id="965ac-163">In the right pane, make sure that the **Named Pipes** protocol is enabled.</span></span> <span data-ttu-id="965ac-164">如果不存在，请右键单击**命名管道**，然后单击**启用**。</span><span class="sxs-lookup"><span data-stu-id="965ac-164">If it is not, right-click **Name Pipes** and then click **Enable**.</span></span>  
   
-     您将需要停止此服务，再重新启动它。  请按下一部分中的步骤操作。  
+     <span data-ttu-id="965ac-165">您将需要停止此服务，再重新启动它。</span><span class="sxs-lookup"><span data-stu-id="965ac-165">You will have to stop and restart the service.</span></span> <span data-ttu-id="965ac-166">请按下一部分中的步骤操作。</span><span class="sxs-lookup"><span data-stu-id="965ac-166">Follow the steps in the next block.</span></span>  
   
-### 停止并重新启动服务  
- 您必须先停止并重新启动服务，所做的更改才能生效。  
+### <a name="stopping-and-restarting-the-service"></a><span data-ttu-id="965ac-167">停止并重新启动服务</span><span class="sxs-lookup"><span data-stu-id="965ac-167">Stopping and Restarting the Service</span></span>  
+ <span data-ttu-id="965ac-168">您必须先停止并重新启动服务，所做的更改才能生效。</span><span class="sxs-lookup"><span data-stu-id="965ac-168">You must stop and restart services before your changes can take effect.</span></span>  
   
-##### 停止并重新启动服务  
+##### <a name="to-stop-and-restart-the-service"></a><span data-ttu-id="965ac-169">停止并重新启动服务</span><span class="sxs-lookup"><span data-stu-id="965ac-169">To stop and restart the service</span></span>  
   
-1.  在**“SQL Server 配置管理器”**的左窗格中，单击**“SQL Server 2005 服务”**。  
+1.  <span data-ttu-id="965ac-170">在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。</span><span class="sxs-lookup"><span data-stu-id="965ac-170">In the left pane of the **SQL Server Configuration Manager**, click **SQL Server 2005 Services**.</span></span>  
   
-2.  在右窗格中，右击**“SQL Server \(SQLEXPRESS\)”**，然后单击**“停止”**。  
+2.  <span data-ttu-id="965ac-171">在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**停止**。</span><span class="sxs-lookup"><span data-stu-id="965ac-171">In the right pane, right-click **SQL Server (SQLEXPRESS)**, and then click **Stop**.</span></span>  
   
-3.  右击**“SQL Server \(SQLEXPRESS\)”**，然后单击**“重新启动”**。  
+3.  <span data-ttu-id="965ac-172">右键单击**SQL Server (SQLEXPRESS)**，然后单击**重新启动**。</span><span class="sxs-lookup"><span data-stu-id="965ac-172">Right-click **SQL Server (SQLEXPRESS)**, and then click **Restart**.</span></span>  
   
-## 请参阅  
- [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="965ac-173">另请参阅</span><span class="sxs-lookup"><span data-stu-id="965ac-173">See Also</span></span>  
+ [<span data-ttu-id="965ac-174">入门</span><span class="sxs-lookup"><span data-stu-id="965ac-174">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

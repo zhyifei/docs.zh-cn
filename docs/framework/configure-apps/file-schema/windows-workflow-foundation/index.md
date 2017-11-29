@@ -8,23 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e83b85d970f36745bb1a0bcf04253c678764805e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation 配置架构
-使用 [!INCLUDE[wf](../../../../../includes/wf-md.md)] 配置元素可以配置工作流应用程序。 对于工作流应用程序，除配置其他内容外，还可以配置跟踪。 有关跟踪的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 对于工作流服务，还可以使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素。 有关 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 的详细信息，请参阅 [WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+# <a name="windows-workflow-foundation-configuration-schema"></a><span data-ttu-id="9fb17-102">Windows Workflow Foundation 配置架构</span><span class="sxs-lookup"><span data-stu-id="9fb17-102">Windows Workflow Foundation Configuration Schema</span></span>
+<span data-ttu-id="9fb17-103">使用 [!INCLUDE[wf](../../../../../includes/wf-md.md)] 配置元素可以配置工作流应用程序。</span><span class="sxs-lookup"><span data-stu-id="9fb17-103">[!INCLUDE[wf](../../../../../includes/wf-md.md)] configuration elements enable you to configure workflow applications.</span></span> <span data-ttu-id="9fb17-104">对于工作流应用程序，除配置其他内容外，还可以配置跟踪。</span><span class="sxs-lookup"><span data-stu-id="9fb17-104">For a workflow application, you can configure among other things, tracking and tracing.</span></span> <span data-ttu-id="9fb17-105">有关跟踪的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。</span><span class="sxs-lookup"><span data-stu-id="9fb17-105">For more information about tracking and tracing, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span> <span data-ttu-id="9fb17-106">对于工作流服务，还可以使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素。</span><span class="sxs-lookup"><span data-stu-id="9fb17-106">For workflow services, you can also use [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] configuration elements.</span></span> <span data-ttu-id="9fb17-107">有关 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 的详细信息，请参阅 [WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9fb17-107">For more details about [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], see [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).</span></span>  
   
- 由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。 否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。 这是因为 XML 元素标记和特性是区分大小写的。  
+ <span data-ttu-id="9fb17-108">由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。</span><span class="sxs-lookup"><span data-stu-id="9fb17-108">Because configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="9fb17-109">否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。</span><span class="sxs-lookup"><span data-stu-id="9fb17-109">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="9fb17-110">这是因为 XML 元素标记和特性是区分大小写的。</span><span class="sxs-lookup"><span data-stu-id="9fb17-110">This is because XML element tags and attributes are case-sensitive.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/system-servicemodel-of-workflow.md)  
- 描述 **ServiceModel** 元素。
-
+## <a name="in-this-section"></a><span data-ttu-id="9fb17-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="9fb17-111">In This Section</span></span>  
+ [<span data-ttu-id="9fb17-112">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="9fb17-112">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/system-servicemodel-of-workflow.md)  
+ <span data-ttu-id="9fb17-113">描述 **ServiceModel** 元素。</span><span class="sxs-lookup"><span data-stu-id="9fb17-113">Describes the **ServiceModel** element.</span></span>

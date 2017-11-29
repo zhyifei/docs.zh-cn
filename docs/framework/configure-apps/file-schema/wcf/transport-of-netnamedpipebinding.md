@@ -1,28 +1,37 @@
 ---
-title: "&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 00f4ddfd218e8797aa2089a21081ee711be316d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;
-定义命名管道的传输安全设置。  
+# <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="3af9a-102">&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="3af9a-102">&lt;transport&gt; of &lt;netNamedPipeBinding&gt;</span></span>
+<span data-ttu-id="3af9a-103">定义命名管道的传输安全设置。</span><span class="sxs-lookup"><span data-stu-id="3af9a-103">Defines the transport security settings for a named pipe.</span></span>  
   
-## 语法  
+ <span data-ttu-id="3af9a-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="3af9a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="3af9a-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="3af9a-105">\<bindings></span></span>  
+<span data-ttu-id="3af9a-106">\<netNamedPipeBinding ></span><span class="sxs-lookup"><span data-stu-id="3af9a-106">\<netNamedPipeBinding></span></span>  
+<span data-ttu-id="3af9a-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="3af9a-107">\<binding></span></span>  
+<span data-ttu-id="3af9a-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="3af9a-108">\<security></span></span>  
+<span data-ttu-id="3af9a-109">\<传输 ></span><span class="sxs-lookup"><span data-stu-id="3af9a-109">\<transport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="3af9a-110">语法</span><span class="sxs-lookup"><span data-stu-id="3af9a-110">Syntax</span></span>  
   
+```xml  
 <netNamedPipeBinding>  
    <binding>  
       <security mode="None/Transport">  
@@ -32,31 +41,31 @@ caps.handback.revision: 12
 </netNamedPipeBinding>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3af9a-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="3af9a-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="3af9a-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="3af9a-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="3af9a-113">特性</span><span class="sxs-lookup"><span data-stu-id="3af9a-113">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|protectionLevel|定义命名管道的保护级别。  对消息进行签名可以降低该消息在传输过程中被第三方篡改的风险。  加密可以在传输过程中提供数据级保密。  包括以下有效值：<br /><br /> -   None：无保护。<br />-   Sign：对消息进行签名。<br />-   EncryptAndSign：对消息进行加密和签名。<br /><br /> 默认值为 EncryptAndSign。|  
+|<span data-ttu-id="3af9a-114">特性</span><span class="sxs-lookup"><span data-stu-id="3af9a-114">Attribute</span></span>|<span data-ttu-id="3af9a-115">描述</span><span class="sxs-lookup"><span data-stu-id="3af9a-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="3af9a-116">protectionLevel</span><span class="sxs-lookup"><span data-stu-id="3af9a-116">protectionLevel</span></span>|<span data-ttu-id="3af9a-117">定义命名管道的保护级别。</span><span class="sxs-lookup"><span data-stu-id="3af9a-117">Defines protection level of the named pipe.</span></span> <span data-ttu-id="3af9a-118">对消息进行签名可以降低该消息在传输过程中被第三方篡改的风险。</span><span class="sxs-lookup"><span data-stu-id="3af9a-118">Signing messages mitigates the risk of a third party tampering with the message while it is being transferred.</span></span> <span data-ttu-id="3af9a-119">加密可以在传输过程中提供数据级保密。</span><span class="sxs-lookup"><span data-stu-id="3af9a-119">Encryption provides data-level privacy during transport.</span></span> <span data-ttu-id="3af9a-120">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="3af9a-120">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="3af9a-121">-None： 无保护。</span><span class="sxs-lookup"><span data-stu-id="3af9a-121">-   None: No protection.</span></span><br /><span data-ttu-id="3af9a-122">-Sign： 消息进行签名。</span><span class="sxs-lookup"><span data-stu-id="3af9a-122">-   Sign: Messages are signed.</span></span><br /><span data-ttu-id="3af9a-123">-EncryptAndSign： 消息进行加密和签名。</span><span class="sxs-lookup"><span data-stu-id="3af9a-123">-   EncryptAndSign: Messages are encrypted and signed.</span></span><br /><br /> <span data-ttu-id="3af9a-124">默认值为 EncryptAndSign。</span><span class="sxs-lookup"><span data-stu-id="3af9a-124">The default value is EncryptAndSign.</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="3af9a-125">子元素</span><span class="sxs-lookup"><span data-stu-id="3af9a-125">Child Elements</span></span>  
+ <span data-ttu-id="3af9a-126">无</span><span class="sxs-lookup"><span data-stu-id="3af9a-126">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="3af9a-127">父元素</span><span class="sxs-lookup"><span data-stu-id="3af9a-127">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|定义绑定的安全设置。|  
+|<span data-ttu-id="3af9a-128">元素</span><span class="sxs-lookup"><span data-stu-id="3af9a-128">Element</span></span>|<span data-ttu-id="3af9a-129">描述</span><span class="sxs-lookup"><span data-stu-id="3af9a-129">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="3af9a-130">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="3af9a-130">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|<span data-ttu-id="3af9a-131">定义绑定的安全设置。</span><span class="sxs-lookup"><span data-stu-id="3af9a-131">Defines the security settings for a binding.</span></span>|  
   
-## 请参阅  
- <xref:System.ServiceModel.NamedPipeTransportSecurity>   
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="3af9a-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3af9a-132">See Also</span></span>  
+ <xref:System.ServiceModel.NamedPipeTransportSecurity>  
+ <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>  
+ [<span data-ttu-id="3af9a-133">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="3af9a-133">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="3af9a-134">绑定</span><span class="sxs-lookup"><span data-stu-id="3af9a-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="3af9a-135">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="3af9a-135">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="3af9a-136">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="3af9a-136">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="3af9a-137">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="3af9a-137">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

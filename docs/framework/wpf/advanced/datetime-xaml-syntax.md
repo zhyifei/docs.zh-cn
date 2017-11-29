@@ -1,86 +1,88 @@
 ---
-title: "DateTime XAML 语法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DateTime XAML 语法 [WPF]"
-  - "DateTime XAML 语法 [WPF], 格式字符串"
-  - "DateTime XAML 语法 [WPF], 字符串"
-  - "DateTime XAML 语法 [WPF], 使用场合"
-  - "DateTime XAML 文本 [WPF]"
-  - "短日期格式 [WPF], DateTime"
+title: "DateTime XAML 语法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DateTime XAML syntax [WPF], strings for
+- DateTime XAML syntax [WPF], where used
+- short date format [WPF], DateTime
+- DateTime XAML syntax [WPF]
+- DateTime XAML text [WPF]
+- DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55e261018e6c7b9fea9ad449c5e92a131df40807
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# DateTime XAML 语法
-一些控件，如 <xref:System.Windows.Controls.Calendar> 和 <xref:System.Windows.Controls.DatePicker>，具有使用 <xref:System.DateTime> 类型的属性。  虽然通常会在运行时在代码隐藏文件中指定这些控件的初始日期或时间，但您可以在 XAML 中指定初始日期或时间。  WPF XAML 分析器使用内置的 XAML 文本语法对 <xref:System.DateTime> 的值进行分析。  本主题介绍 <xref:System.DateTime> XAML 文本语法的具体内容。  
+# <a name="datetime-xaml-syntax"></a><span data-ttu-id="c803f-102">DateTime XAML 语法</span><span class="sxs-lookup"><span data-stu-id="c803f-102">DateTime XAML Syntax</span></span>
+<span data-ttu-id="c803f-103">某些控件，如<xref:System.Windows.Controls.Calendar>和<xref:System.Windows.Controls.DatePicker>，已使用的属性<xref:System.DateTime>类型。</span><span class="sxs-lookup"><span data-stu-id="c803f-103">Some controls, such as <xref:System.Windows.Controls.Calendar> and <xref:System.Windows.Controls.DatePicker>, have properties that use the <xref:System.DateTime> type.</span></span> <span data-ttu-id="c803f-104">虽然通常会在运行时在代码隐藏中指定这些控件的初始日期或时间，但可以在 XAML 中指定初始日期或时间。</span><span class="sxs-lookup"><span data-stu-id="c803f-104">Although you typically specify an initial date or time for these controls in the code-behind at run time, you can specify an initial date or time in XAML.</span></span> <span data-ttu-id="c803f-105">WPF XAML 分析器处理分析<xref:System.DateTime>值使用内置的 XAML 文本语法。</span><span class="sxs-lookup"><span data-stu-id="c803f-105">The WPF XAML parser handles parsing of <xref:System.DateTime> values using a built-in XAML text syntax.</span></span> <span data-ttu-id="c803f-106">本主题描述的细节<xref:System.DateTime>XAML 文本语法。</span><span class="sxs-lookup"><span data-stu-id="c803f-106">This topic describes the specifics of the <xref:System.DateTime> XAML text syntax.</span></span>  
   
-   
   
 <a name="where_datetime_xaml_syntax_is_used"></a>   
-## 使用 DateTime XAML 语法的时间  
- 无需经常对 XAML 中的日期进行设置，而且设置也可能并不合适。  例如，可以使用 <xref:System.DateTime.Now%2A?displayProperty=fullName> 属性在运行时初始化一个日期，或者可以基于用户输入的代码隐藏为日历的所有日期进行调整。  但是，有些情况下，您可能要硬编码日期到控件模板的 <xref:System.Windows.Controls.Calendar> 和 <xref:System.Windows.Controls.DatePicker> 中。  这些场合必须使用 <xref:System.DateTime> XAML 语法。  
+## <a name="when-to-use-datetime-xaml-syntax"></a><span data-ttu-id="c803f-107">DateTime XAML 语法的使用场合</span><span class="sxs-lookup"><span data-stu-id="c803f-107">When To Use DateTime XAML Syntax</span></span>  
+ <span data-ttu-id="c803f-108">无需经常对 XAML 中的日期进行设置，而且设置也可能并不合适。</span><span class="sxs-lookup"><span data-stu-id="c803f-108">Setting dates in XAML is not always necessary and may not even be desirable.</span></span> <span data-ttu-id="c803f-109">例如，可以使用<xref:System.DateTime.Now%2A?displayProperty=nameWithType>初始化在运行的时，或你的日期的属性无法执行所有的日期调整此根据用户输入的代码隐藏文件中的日历。</span><span class="sxs-lookup"><span data-stu-id="c803f-109">For example, you could use the <xref:System.DateTime.Now%2A?displayProperty=nameWithType> property to initialize a date at run time, or you could do all your date adjustments for a calendar in the code-behind based on user input.</span></span> <span data-ttu-id="c803f-110">但是，有一些情况下你可能想为硬编码日期到<xref:System.Windows.Controls.Calendar>和<xref:System.Windows.Controls.DatePicker>控件模板中。</span><span class="sxs-lookup"><span data-stu-id="c803f-110">However, there are scenarios where you may want to hard-code dates into a <xref:System.Windows.Controls.Calendar> and <xref:System.Windows.Controls.DatePicker> in a control template.</span></span> <span data-ttu-id="c803f-111"><xref:System.DateTime> XAML 语法必须可用于这些方案。</span><span class="sxs-lookup"><span data-stu-id="c803f-111">The <xref:System.DateTime> XAML syntax must be used for these scenarios.</span></span>  
   
-### Datetime XAML 语法是本机行为  
- <xref:System.DateTime> 是在 CLR 基类库中定义的类。  出于基类库与 CLR 的其余部分相关的方法的原因，所以不可能将 <xref:System.ComponentModel.TypeConverterAttribute> 应用于类，也不可能在运行时对象模式下使用类型转换器处理 XAML 中的字符串并将它们转换为 <xref:System.DateTime>。  没有提供转换类型的 `DateTimeConverter` 类；本主题中描述的转换类型派生至 WPF XAML 分析器。  
+### <a name="datetime-xaml-syntax-is-a-native-behavior"></a><span data-ttu-id="c803f-112">DateTime XAML 语法是本机行为</span><span class="sxs-lookup"><span data-stu-id="c803f-112">DateTime XAML Syntax is a Native Behavior</span></span>  
+ <span data-ttu-id="c803f-113"><xref:System.DateTime>是在 CLR 基类库中定义的类。</span><span class="sxs-lookup"><span data-stu-id="c803f-113"><xref:System.DateTime> is a class that is defined in the base class libraries of the CLR.</span></span> <span data-ttu-id="c803f-114">由于如何基类库与 CLR 的其余部分，它不能应用<xref:System.ComponentModel.TypeConverterAttribute>到类，然后使用用于处理 XAML 中的字符串，并将它们转换为的类型转换器<xref:System.DateTime>运行的时对象模型中。</span><span class="sxs-lookup"><span data-stu-id="c803f-114">Because of how the base class libraries relate to the rest of the CLR, it is not possible to apply <xref:System.ComponentModel.TypeConverterAttribute> to the class and use a type converter to process strings from XAML and convert them to <xref:System.DateTime> in the run time object model.</span></span> <span data-ttu-id="c803f-115">没有提供转换行为的 `DateTimeConverter` 类；本主题中描述的转换行为源于 WPF XAML 分析器。</span><span class="sxs-lookup"><span data-stu-id="c803f-115">There is no `DateTimeConverter` class that provides the conversion behavior; the conversion behavior described in this topic is native to the WPF XAML parser.</span></span>  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
-## DateTime XAML 语法的格式字符串  
- 可通过格式字符串指定 <xref:System.DateTime> 的格式。  格式字符串会规范可用于创建值的文本语法。  现有 WPF 的 <xref:System.DateTime> 值通常只使用 <xref:System.DateTime> 的日期组件而不是时间组件。  
+## <a name="format-strings-for-datetime-xaml-syntax"></a><span data-ttu-id="c803f-116">DateTime XAML 语法的格式字符串</span><span class="sxs-lookup"><span data-stu-id="c803f-116">Format Strings for DateTime XAML Syntax</span></span>  
+ <span data-ttu-id="c803f-117">您可以指定的格式<xref:System.DateTime>使用格式字符串。</span><span class="sxs-lookup"><span data-stu-id="c803f-117">You can specify the format of a <xref:System.DateTime> with a format string.</span></span> <span data-ttu-id="c803f-118">格式字符串会规范可用于创建值的文本语法。</span><span class="sxs-lookup"><span data-stu-id="c803f-118">Format strings formalize the text syntax that can be used to create a value.</span></span> <span data-ttu-id="c803f-119"><xref:System.DateTime>值对于现有 WPF 控件通常只使用的日期组件<xref:System.DateTime>并不是时间组件。</span><span class="sxs-lookup"><span data-stu-id="c803f-119"><xref:System.DateTime> values for the existing WPF controls generally only use the date components of <xref:System.DateTime> and not the time components.</span></span>  
   
- 当指定 XAML 中的 <xref:System.DateTime> 时，可以交替使用任何格式字符串。  
+ <span data-ttu-id="c803f-120">指定时<xref:System.DateTime>在 XAML 中，你可以使用任何格式字符串的互换。</span><span class="sxs-lookup"><span data-stu-id="c803f-120">When specifying a <xref:System.DateTime> in XAML, you can use any of the format strings interchangeably.</span></span>  
   
- 您还可以使用格式和未在本主题中专门显示的格式字符串。  从技术上讲，指定的并之后由 WPF XAML 解析的 <xref:System.DateTime> 值使用内部 <xref:System.DateTime.Parse%2A?displayProperty=fullName> 调用，因此可使用 <xref:System.DateTime.Parse%2A?displayProperty=fullName> 接受的任何字符串用于 XAML 输入。  有关更多信息，请参见 <xref:System.DateTime.Parse%2A?displayProperty=fullName>。  
+ <span data-ttu-id="c803f-121">还可以使用未在本主题中专门显示的格式和格式字符串。</span><span class="sxs-lookup"><span data-stu-id="c803f-121">You can also use formats and format strings that are not specifically shown in this topic.</span></span> <span data-ttu-id="c803f-122">从技术上讲，任何 XAML<xref:System.DateTime>值，然后分析 WPF XAML 分析器并指定使用对的内部调用<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>，因此您无法使用接受任意字符串<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>用于 XAML 输入。</span><span class="sxs-lookup"><span data-stu-id="c803f-122">Technically, the XAML for any <xref:System.DateTime> value that is specified and then parsed by the WPF XAML parser uses an internal  call to <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, therefore you could use any string accepted by <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> for your XAML input.</span></span> <span data-ttu-id="c803f-123">有关更多信息，请参见<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c803f-123">For more information, see <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span></span>  
   
 > [!IMPORTANT]
->  DateTime XAML 语法中始终将 `en-us` 用作 <xref:System.Globalization.CultureInfo>，用于其固有转换。  这不会受 <xref:System.Windows.FrameworkElement.Language%2A> 值或在 XAML 中的 `xml:lang` 值影响，这是由于 XAML 特性级别类型转换可在没上下文情况下作用。  出于区域性差异的原因，请不要尝试插入此处显示的格式字符串，如显示日和月的顺序。  如下所示的格式字符串是准确的格式字符串，其在解析 XAML 时使用，而不考虑其他区域性设置。  
+>  <span data-ttu-id="c803f-124">DateTime XAML 语法始终使用`en-us`作为<xref:System.Globalization.CultureInfo>为其本机的转换。</span><span class="sxs-lookup"><span data-stu-id="c803f-124">The DateTime XAML syntax always uses `en-us` as the <xref:System.Globalization.CultureInfo> for its native conversion.</span></span> <span data-ttu-id="c803f-125">这不受<xref:System.Windows.FrameworkElement.Language%2A>值或`xml:lang`值在 XAML 中，这是因为 XAML 特性级类型转换操作而无需该上下文。</span><span class="sxs-lookup"><span data-stu-id="c803f-125">This is not influenced by <xref:System.Windows.FrameworkElement.Language%2A> value or `xml:lang` value in the XAML, because XAML attribute-level type conversion acts without that context.</span></span> <span data-ttu-id="c803f-126">出于区域性差异的原因，请不要尝试插入此处所示的格式字符串，例如，日期和月份的显示顺序。</span><span class="sxs-lookup"><span data-stu-id="c803f-126">Do not attempt to interpolate the format strings shown here due to cultural variations, such as the order in which day and month appear.</span></span> <span data-ttu-id="c803f-127">此处所示的格式字符串是在分析 XAML 时（不考虑其他区域性设置）使用的确切格式字符串。</span><span class="sxs-lookup"><span data-stu-id="c803f-127">The format strings shown here are the exact format strings used when parsing the XAML regardless of other culture settings.</span></span>  
   
- 以下各节描述一些 <xref:System.DateTime> 格式字符串。  
+ <span data-ttu-id="c803f-128">以下各节描述了一些常见<xref:System.DateTime>格式字符串。</span><span class="sxs-lookup"><span data-stu-id="c803f-128">The following sections describe some of the common <xref:System.DateTime> format strings.</span></span>  
   
-### 短日期模式（“d”）  
- 如下显示了 XAML 中 <xref:System.DateTime> 的短日期格式：  
+### <a name="short-date-pattern-d"></a><span data-ttu-id="c803f-129">短日期模式（“d”）</span><span class="sxs-lookup"><span data-stu-id="c803f-129">Short Date Pattern ("d")</span></span>  
+ <span data-ttu-id="c803f-130">下面的示例演示的短日期格式<xref:System.DateTime>在 XAML 中：</span><span class="sxs-lookup"><span data-stu-id="c803f-130">The following shows the short date format for a <xref:System.DateTime> in XAML:</span></span>  
   
  `M/d/YYYY`  
   
- 这是最简单的形式，指定 WPF 控件一般使用的必需信息，并且不受偶然时区偏移和时间组件影响，因此比其他格式更适用。  
+ <span data-ttu-id="c803f-131">这是最简单的形式，可指定 WPF 控件一般使用的所有必要信息，并且不受针对时间部分的偶然时区偏移的影响，因此比其他格式更适用。</span><span class="sxs-lookup"><span data-stu-id="c803f-131">This is the simplest form that specifies all necessary information for typical usages by WPF controls, and cannot be influenced by accidental time zone offsets versus a time component, and is therefore recommended over the other formats.</span></span>  
   
- 例如，要指定日期 2010 年 6 月 1 日，则使用下列字符串：  
+ <span data-ttu-id="c803f-132">例如，若要指定日期 2010 年 6 月 1 日，可使用以下字符串：</span><span class="sxs-lookup"><span data-stu-id="c803f-132">For example, to specify the date of June 1, 2010, use the following string:</span></span>  
   
  `3/1/2010`  
   
- 有关更多信息，请参见 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=fullName>。  
+ <span data-ttu-id="c803f-133">有关更多信息，请参见<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c803f-133">For more information, see <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>.</span></span>  
   
-### 可排序 DateTime 模式（“s”）  
- 以下显示 XAML中可排序的 <xref:System.DateTime> 模式。  
+### <a name="sortable-datetime-pattern-s"></a><span data-ttu-id="c803f-134">可排序 DateTime 模式（“s”）</span><span class="sxs-lookup"><span data-stu-id="c803f-134">Sortable DateTime Pattern ("s")</span></span>  
+ <span data-ttu-id="c803f-135">下面的示例演示可排序<xref:System.DateTime>在 XAML 中的模式：</span><span class="sxs-lookup"><span data-stu-id="c803f-135">The following shows the sortable <xref:System.DateTime> pattern in XAML:</span></span>  
   
  `yyyy'-'MM'-'dd'T'HH':'mm':'ss`  
   
- 例如，要指定日期 2010 年 6 月 1 日，则使用下列字符串（时间组件全部输入为 0）：  
+ <span data-ttu-id="c803f-136">例如，若要指定日期 2010 年 6 月 1 日，可使用以下字符串（时间部分全部输入为 0）：</span><span class="sxs-lookup"><span data-stu-id="c803f-136">For example, to specify the date of June 1, 2010, use the following string (time components are all entered as 0):</span></span>  
   
  `2010-06-01T000:00:00`  
   
-### RFC1123 模式 \("r"\)  
- RFC1123 模式很有用，因为它可以是来自其他字符生成器的字符串输入，这个字符生成器出于区域性固定原因同样使用 RFC1123。  以下显示 XAML中的 RFC1123 <xref:System.DateTime> 模式。  
+### <a name="rfc1123-pattern-r"></a><span data-ttu-id="c803f-137">RFC1123 模式（“r”）</span><span class="sxs-lookup"><span data-stu-id="c803f-137">RFC1123 Pattern ("r")</span></span>  
+ <span data-ttu-id="c803f-138">RFC1123 模式很有用，因为它可以是来自其他日期生成器的字符串输入，这些字符生成器出于区域性固定原因同样使用 RFC1123 模式。</span><span class="sxs-lookup"><span data-stu-id="c803f-138">The RFC1123 pattern is useful because it could be a string input from other date generators that also use the RFC1123 pattern for culture invariant reasons.</span></span> <span data-ttu-id="c803f-139">下面的示例演示 RFC1123<xref:System.DateTime>在 XAML 中的模式：</span><span class="sxs-lookup"><span data-stu-id="c803f-139">The following shows the RFC1123 <xref:System.DateTime> pattern in XAML:</span></span>  
   
  `ddd, dd MMM yyyy HH':'mm':'ss 'UTC'`  
   
- 例如，要指定日期 2010 年 6 月 1 日，则使用下列字符串（时间组件全部输入为 0）：  
+ <span data-ttu-id="c803f-140">例如，若要指定日期 2010 年 6 月 1 日，可使用以下字符串（时间部分全部输入为 0）：</span><span class="sxs-lookup"><span data-stu-id="c803f-140">For example, to specify the date of June 1, 2010, use the following string (time components are all entered as 0):</span></span>  
   
  `Mon, 01 Jun 2010 00:00:00 UTC`  
   
-### 其他格式和模式  
- 如上所述，XAML 中的 <xref:System.DateTime> 可以指定为任何可接受的，作为 <xref:System.DateTime.Parse%2A?displayProperty=fullName> 输入的字符串。  这包括其他正式的格式（例如 <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>\) 和不规范化为特定的 <xref:System.Globalization.DateTimeFormatInfo> 窗体的格式。  例如，作为 <xref:System.DateTime.Parse%2A?displayProperty=fullName>输入的窗体 `YYYY/mm/dd` 可被接受。  本主题不会尝试描述所有可能的格式的工作，并转而推荐作为标准做法的短日期模式。  
+### <a name="other-formats-and-patterns"></a><span data-ttu-id="c803f-141">其他格式和模式</span><span class="sxs-lookup"><span data-stu-id="c803f-141">Other Formats and Patterns</span></span>  
+ <span data-ttu-id="c803f-142">如前所述，<xref:System.DateTime>在 XAML 中可以将它指定为任何字符串都是可接受的作为输入<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c803f-142">As stated previously, a <xref:System.DateTime> in XAML can be specified as any string that is acceptable as input for <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c803f-143">这包括其他正式的格式 (例如<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>)，和不规范化为特定的格式<xref:System.Globalization.DateTimeFormatInfo>窗体。</span><span class="sxs-lookup"><span data-stu-id="c803f-143">This includes other formalized formats (for example <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>), and formats that are not formalized as a particular <xref:System.Globalization.DateTimeFormatInfo> form.</span></span> <span data-ttu-id="c803f-144">例如，窗体`YYYY/mm/dd`是可接受的作为输入<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c803f-144">For example, the form `YYYY/mm/dd` is acceptable as input for <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c803f-145">本主题并没有试图介绍所有可能有效的格式，而是推荐将短日期模式作为一种标准做法。</span><span class="sxs-lookup"><span data-stu-id="c803f-145">This topic does not attempt to describe all possible formats that work, and instead recommends the short date pattern as a standard practice.</span></span>  
   
-## 请参阅  
- [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="c803f-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c803f-146">See Also</span></span>  
+ [<span data-ttu-id="c803f-147">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="c803f-147">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

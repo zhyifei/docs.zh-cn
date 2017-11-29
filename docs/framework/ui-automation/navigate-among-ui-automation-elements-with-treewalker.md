@@ -1,43 +1,49 @@
 ---
-title: "Navigate Among UI Automation Elements with TreeWalker | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classes, TreeWalker"
-  - "TreeWalker class"
-  - "elements, navigating among"
-  - "UI Automation, navigating among elements"
+title: "使用 TreeWalker 在 UI 自动化元素之间导航"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- classes, TreeWalker
+- TreeWalker class
+- elements, navigating among
+- UI Automation, navigating among elements
 ms.assetid: afcd21dc-2ffa-48c9-9332-51269f44b7e9
-caps.latest.revision: 8
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 3f237184cb4364b90d8a16cd078faeaec62bb693
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Navigate Among UI Automation Elements with TreeWalker
+# <a name="navigate-among-ui-automation-elements-with-treewalker"></a><span data-ttu-id="77a52-102">使用 TreeWalker 在 UI 自动化元素之间导航</span><span class="sxs-lookup"><span data-stu-id="77a52-102">Navigate Among UI Automation Elements with TreeWalker</span></span>
 > [!NOTE]
->  本文档的目标读者是欲使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]类的 .NET Framework 开发人员。  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参见 [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746)（Windows 自动化 API：UI 自动化）。  
+>  <span data-ttu-id="77a52-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="77a52-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="77a52-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="77a52-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题包含代码示例，该代码示例演示如何通过使用 <xref:System.Windows.Automation.TreeWalker> 类在各个 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]元素之间导航。  
+ <span data-ttu-id="77a52-105">本主题包含演示如何在之间导航的示例代码[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]元素通过使用<xref:System.Windows.Automation.TreeWalker>类。</span><span class="sxs-lookup"><span data-stu-id="77a52-105">This topic contains example code that shows how to navigate among [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elements by using the <xref:System.Windows.Automation.TreeWalker> class.</span></span>  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Automation.TreeWalker.GetParent%2A> 遍历 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]树，直至找到根元素或桌面。  紧靠根元素或桌面下方的元素是指定元素的父窗口。  
+## <a name="example"></a><span data-ttu-id="77a52-106">示例</span><span class="sxs-lookup"><span data-stu-id="77a52-106">Example</span></span>  
+ <span data-ttu-id="77a52-107">下面的示例使用<xref:System.Windows.Automation.TreeWalker.GetParent%2A>向上遍历[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]树，直到它找到的根元素或桌面。</span><span class="sxs-lookup"><span data-stu-id="77a52-107">The following example uses <xref:System.Windows.Automation.TreeWalker.GetParent%2A> to walk up the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tree until it finds the root element, or desktop.</span></span> <span data-ttu-id="77a52-108">正下方，该元素是指定元素的父窗口。</span><span class="sxs-lookup"><span data-stu-id="77a52-108">The element just below that is the parent window of the specified element.</span></span>  
   
  [!code-csharp[UIAFocusTracker_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFocusTracker_snip/CSharp/FocusTracker.cs#102)]
  [!code-vb[UIAFocusTracker_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFocusTracker_snip/VisualBasic/FocusTracker.vb#102)]  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%2A> 和 <xref:System.Windows.Automation.TreeWalker.GetNextSibling%2A> 创建一个 <xref:System.Windows.Forms.TreeView>，它显示位于控件视图中并且已启用的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]元素的完整子树。  
+## <a name="example"></a><span data-ttu-id="77a52-109">示例</span><span class="sxs-lookup"><span data-stu-id="77a52-109">Example</span></span>  
+ <span data-ttu-id="77a52-110">下面的示例使用<xref:System.Windows.Automation.TreeWalker.GetFirstChild%2A>和<xref:System.Windows.Automation.TreeWalker.GetNextSibling%2A>创建<xref:System.Windows.Forms.TreeView>显示的整个子树[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]元素中的控件视图和启用。</span><span class="sxs-lookup"><span data-stu-id="77a52-110">The following example uses <xref:System.Windows.Automation.TreeWalker.GetFirstChild%2A> and <xref:System.Windows.Automation.TreeWalker.GetNextSibling%2A> to create a <xref:System.Windows.Forms.TreeView> that shows an entire subtree of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elements that are in the control view and that are enabled.</span></span>  
   
  [!code-csharp[UIAClient_snip#174](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#174)]
  [!code-vb[UIAClient_snip#174](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#174)]  
   
-## 请参阅  
- [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+## <a name="see-also"></a><span data-ttu-id="77a52-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="77a52-111">See Also</span></span>  
+ [<span data-ttu-id="77a52-112">获取 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="77a52-112">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)

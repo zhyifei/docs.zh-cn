@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - overlapped pointers
 - managed debugging assistants (MDAs), overlapped pointers
@@ -22,62 +16,61 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bafadcaf244cb9c4d6a36bcc10c74f8526df5c0c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1bcfc6411e5f849728f0548b76fa01b3864af640
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
-当不是在垃圾回收堆上创建的重叠指针传递到特定的 Win32 函数时，会激活 `invalidOverlappedToPinvoke` 托管调试助手（MDA）。  
+# <a name="invalidoverlappedtopinvoke-mda"></a><span data-ttu-id="2ab19-102">invalidOverlappedToPinvoke MDA</span><span class="sxs-lookup"><span data-stu-id="2ab19-102">invalidOverlappedToPinvoke MDA</span></span>
+<span data-ttu-id="2ab19-103">当不是在垃圾回收堆上创建的重叠指针传递到特定的 Win32 函数时，会激活 `invalidOverlappedToPinvoke` 托管调试助手（MDA）。</span><span class="sxs-lookup"><span data-stu-id="2ab19-103">The `invalidOverlappedToPinvoke` managed debugging assistant (MDA) is activated when an overlapped pointer that was not created on the garbage collection heap is passed to specific Win32 functions.</span></span>  
   
 > [!NOTE]
->  默认情况下，仅当代码中定义了平台调用，并且调试器报告每个方法的 JustMyCode 状态时，才会激活此 MDA。 不理解 JustMyCode 的调试程序（如没有扩展的 MDbg.exe）将不会激活此 MDA。 通过使用配置文件和显式设置 .mda 配置文件中的 `justMyCode="false"` 可以为这些调试程序启用此 MDA `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`)。  
+>  <span data-ttu-id="2ab19-104">默认情况下，仅当代码中定义了平台调用，并且调试器报告每个方法的 JustMyCode 状态时，才会激活此 MDA。</span><span class="sxs-lookup"><span data-stu-id="2ab19-104">By default, this MDA is activated only if the platform invoke call is defined in your code and the debugger reports the JustMyCode status of each method.</span></span> <span data-ttu-id="2ab19-105">不理解 JustMyCode 的调试程序（如没有扩展的 MDbg.exe）将不会激活此 MDA。</span><span class="sxs-lookup"><span data-stu-id="2ab19-105">A debugger that does not understand JustMyCode (such as MDbg.exe with no extensions) will not activate this MDA.</span></span> <span data-ttu-id="2ab19-106">通过使用配置文件和显式设置 .mda 配置文件中的 `justMyCode="false"` 可以为这些调试程序启用此 MDA `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`)。</span><span class="sxs-lookup"><span data-stu-id="2ab19-106">This MDA can be enabled for those debuggers by using a configuration file and explicitly settting `justMyCode="false"` in the .mda.config file `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).</span></span>  
   
-## <a name="symptoms"></a>症状  
- 故障或无法解释的堆损坏。  
+## <a name="symptoms"></a><span data-ttu-id="2ab19-107">症状</span><span class="sxs-lookup"><span data-stu-id="2ab19-107">Symptoms</span></span>  
+ <span data-ttu-id="2ab19-108">故障或无法解释的堆损坏。</span><span class="sxs-lookup"><span data-stu-id="2ab19-108">Crashes or unexplainable heap corruptions.</span></span>  
   
-## <a name="cause"></a>原因  
- 不是在垃圾回收堆上创建的重叠指针被传递到特定的操作系统函数。  
+## <a name="cause"></a><span data-ttu-id="2ab19-109">原因</span><span class="sxs-lookup"><span data-stu-id="2ab19-109">Cause</span></span>  
+ <span data-ttu-id="2ab19-110">不是在垃圾回收堆上创建的重叠指针被传递到特定的操作系统函数。</span><span class="sxs-lookup"><span data-stu-id="2ab19-110">An overlapped pointer that was not created on the garbage collection heap is passed to specific operating system functions.</span></span>  
   
- 下表显示了此 MDA 跟踪的函数。  
+ <span data-ttu-id="2ab19-111">下表显示了此 MDA 跟踪的函数。</span><span class="sxs-lookup"><span data-stu-id="2ab19-111">The following table shows the functions that this MDA tracks.</span></span>  
   
-|模块|函数|  
+|<span data-ttu-id="2ab19-112">模块</span><span class="sxs-lookup"><span data-stu-id="2ab19-112">Module</span></span>|<span data-ttu-id="2ab19-113">函数</span><span class="sxs-lookup"><span data-stu-id="2ab19-113">Function</span></span>|  
 |------------|--------------|  
-|HttpApi.dll|`HttpReceiveHttpRequest`|  
-|IpHlpApi.dll|`NotifyAddrChange`|  
-|Kernel32.dll|`ReadFile`|  
-|Kernel32.dll|`ReadFileEx`|  
-|Kernel32.dll|`WriteFile`|  
-|Kernel32.dll|`WriteFileEx`|  
-|Kernel32.dll|`ReadDirectoryChangesW`|  
-|Kernel32.dll|`PostQueuedCompletionStatus`|  
-|MSWSock.dll|`ConnectEx`|  
-|WS2_32.dll|`WSASend`|  
-|WS2_32.dll|`WSASendTo`|  
-|WS2_32.dll|`WSARecv`|  
-|WS2_32.dll|`WSARecvFrom`|  
-|MQRT.dll|`MQReceiveMessage`|  
+|<span data-ttu-id="2ab19-114">HttpApi.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-114">HttpApi.dll</span></span>|`HttpReceiveHttpRequest`|  
+|<span data-ttu-id="2ab19-115">IpHlpApi.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-115">IpHlpApi.dll</span></span>|`NotifyAddrChange`|  
+|<span data-ttu-id="2ab19-116">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-116">kernel32.dll</span></span>|`ReadFile`|  
+|<span data-ttu-id="2ab19-117">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-117">kernel32.dll</span></span>|`ReadFileEx`|  
+|<span data-ttu-id="2ab19-118">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-118">kernel32.dll</span></span>|`WriteFile`|  
+|<span data-ttu-id="2ab19-119">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-119">kernel32.dll</span></span>|`WriteFileEx`|  
+|<span data-ttu-id="2ab19-120">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-120">kernel32.dll</span></span>|`ReadDirectoryChangesW`|  
+|<span data-ttu-id="2ab19-121">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-121">kernel32.dll</span></span>|`PostQueuedCompletionStatus`|  
+|<span data-ttu-id="2ab19-122">MSWSock.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-122">MSWSock.dll</span></span>|`ConnectEx`|  
+|<span data-ttu-id="2ab19-123">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-123">WS2_32.dll</span></span>|`WSASend`|  
+|<span data-ttu-id="2ab19-124">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-124">WS2_32.dll</span></span>|`WSASendTo`|  
+|<span data-ttu-id="2ab19-125">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-125">WS2_32.dll</span></span>|`WSARecv`|  
+|<span data-ttu-id="2ab19-126">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-126">WS2_32.dll</span></span>|`WSARecvFrom`|  
+|<span data-ttu-id="2ab19-127">MQRT.dll</span><span class="sxs-lookup"><span data-stu-id="2ab19-127">MQRT.dll</span></span>|`MQReceiveMessage`|  
   
- 在这种情况下，堆损坏的可能性很大，因为进行调用的 <xref:System.AppDomain> 可能会卸载。 如果 <xref:System.AppDomain> 卸载，应用程序代码将释放重叠指针的内存，导致操作完成时发生损坏，或者代码将泄漏内存，导致以后发生问题。  
+ <span data-ttu-id="2ab19-128">在这种情况下，堆损坏的可能性很大，因为进行调用的 <xref:System.AppDomain> 可能会卸载。</span><span class="sxs-lookup"><span data-stu-id="2ab19-128">The potential for heap corruption is high for this condition because the <xref:System.AppDomain> making the call might unload.</span></span> <span data-ttu-id="2ab19-129">如果 <xref:System.AppDomain> 卸载，应用程序代码将释放重叠指针的内存，导致操作完成时发生损坏，或者代码将泄漏内存，导致以后发生问题。</span><span class="sxs-lookup"><span data-stu-id="2ab19-129">If the <xref:System.AppDomain> unloads, the application code will either free the memory for the overlapped pointer, causing corruption when the operation finishes, or the code will leak the memory, causing difficulties later.</span></span>  
   
-## <a name="resolution"></a>解决方法  
- 使用 <xref:System.Threading.Overlapped> 对象，调用 <xref:System.Threading.Overlapped.Pack%2A> 方法以获取可以传递给函数的 <xref:System.Threading.NativeOverlapped> 结构。 如果卸载 <xref:System.AppDomain>，在释放指针之前，CLR 等待异步操作完成。  
+## <a name="resolution"></a><span data-ttu-id="2ab19-130">解决方法</span><span class="sxs-lookup"><span data-stu-id="2ab19-130">Resolution</span></span>  
+ <span data-ttu-id="2ab19-131">使用 <xref:System.Threading.Overlapped> 对象，调用 <xref:System.Threading.Overlapped.Pack%2A> 方法以获取可以传递给函数的 <xref:System.Threading.NativeOverlapped> 结构。</span><span class="sxs-lookup"><span data-stu-id="2ab19-131">Use an <xref:System.Threading.Overlapped> object, calling the <xref:System.Threading.Overlapped.Pack%2A> method to get a <xref:System.Threading.NativeOverlapped> structure that can be passed to the function.</span></span> <span data-ttu-id="2ab19-132">如果卸载 <xref:System.AppDomain>，在释放指针之前，CLR 等待异步操作完成。</span><span class="sxs-lookup"><span data-stu-id="2ab19-132">If the <xref:System.AppDomain> unloads, the CLR waits until the asynchronous operation completes before freeing the pointer.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>对运行时的影响  
- 此 MDA 对 CLR 无任何影响。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="2ab19-133">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="2ab19-133">Effect on the Runtime</span></span>  
+ <span data-ttu-id="2ab19-134">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="2ab19-134">This MDA had no effect on the CLR.</span></span>  
   
-## <a name="output"></a>输出  
- 以下是来自此 MDA 的输出示例。  
+## <a name="output"></a><span data-ttu-id="2ab19-135">输出</span><span class="sxs-lookup"><span data-stu-id="2ab19-135">Output</span></span>  
+ <span data-ttu-id="2ab19-136">以下是来自此 MDA 的输出示例。</span><span class="sxs-lookup"><span data-stu-id="2ab19-136">The following is an example of output from this MDA.</span></span>  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
-## <a name="configuration"></a>配置  
+## <a name="configuration"></a><span data-ttu-id="2ab19-137">配置</span><span class="sxs-lookup"><span data-stu-id="2ab19-137">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -87,8 +80,7 @@ ms.lasthandoff: 08/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="2ab19-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2ab19-138">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="2ab19-139">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="2ab19-139">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="2ab19-140">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="2ab19-140">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

@@ -1,89 +1,91 @@
 ---
-title: "&lt;generatePublisherEvidence&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<generatePublisherEvidence> 元素"
-  - "generatePublisherEvidence 元素"
+title: "&lt;generatePublisherEvidence&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generatePublisherEvidence element
+- <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 78293c396687f9c0c99ffdfbe94cf1f3c548289d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;generatePublisherEvidence&gt; 元素
-指定运行时是否为代码访问安全性 \(CAS\) 创建 <xref:System.Security.Policy.Publisher> 证据。  
+# <a name="ltgeneratepublisherevidencegt-element"></a><span data-ttu-id="935f9-102">&lt;generatePublisherEvidence&gt;元素</span><span class="sxs-lookup"><span data-stu-id="935f9-102">&lt;generatePublisherEvidence&gt; Element</span></span>
+<span data-ttu-id="935f9-103">指定运行时是否创建<xref:System.Security.Policy.Publisher>代码访问安全性 (CAS) 的证据。</span><span class="sxs-lookup"><span data-stu-id="935f9-103">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence for code access security (CAS).</span></span>  
   
-## 语法  
+ <span data-ttu-id="935f9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="935f9-104">\<configuration></span></span>  
+<span data-ttu-id="935f9-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="935f9-105">\<runtime></span></span>  
+<span data-ttu-id="935f9-106">\<generatePublisherEvidence ></span><span class="sxs-lookup"><span data-stu-id="935f9-106">\<generatePublisherEvidence></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="935f9-107">语法</span><span class="sxs-lookup"><span data-stu-id="935f9-107">Syntax</span></span>  
+  
+```xml  
 <generatePublisherEvidence    
    enabled="true|false"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="935f9-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="935f9-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="935f9-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="935f9-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="935f9-110">特性</span><span class="sxs-lookup"><span data-stu-id="935f9-110">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指定运行时是否创建 <xref:System.Security.Policy.Publisher> 证据。|  
+|<span data-ttu-id="935f9-111">特性</span><span class="sxs-lookup"><span data-stu-id="935f9-111">Attribute</span></span>|<span data-ttu-id="935f9-112">描述</span><span class="sxs-lookup"><span data-stu-id="935f9-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="935f9-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="935f9-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="935f9-114">指定运行时是否创建<xref:System.Security.Policy.Publisher>证据。</span><span class="sxs-lookup"><span data-stu-id="935f9-114">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence.</span></span>|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a><span data-ttu-id="935f9-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="935f9-115">enabled Attribute</span></span>  
   
-|值|说明|  
-|-------|--------|  
-|`false`|不会创建 <xref:System.Security.Policy.Publisher> 证据。|  
-|`true`|创建 <xref:System.Security.Policy.Publisher> 证据。  这是默认设置。|  
+|<span data-ttu-id="935f9-116">值</span><span class="sxs-lookup"><span data-stu-id="935f9-116">Value</span></span>|<span data-ttu-id="935f9-117">描述</span><span class="sxs-lookup"><span data-stu-id="935f9-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="935f9-118">不会创建<xref:System.Security.Policy.Publisher>证据。</span><span class="sxs-lookup"><span data-stu-id="935f9-118">Does not create <xref:System.Security.Policy.Publisher> evidence.</span></span>|  
+|`true`|<span data-ttu-id="935f9-119">创建<xref:System.Security.Policy.Publisher>证据。</span><span class="sxs-lookup"><span data-stu-id="935f9-119">Creates <xref:System.Security.Policy.Publisher> evidence.</span></span> <span data-ttu-id="935f9-120">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="935f9-120">This is the default.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="935f9-121">子元素</span><span class="sxs-lookup"><span data-stu-id="935f9-121">Child Elements</span></span>  
+ <span data-ttu-id="935f9-122">无。</span><span class="sxs-lookup"><span data-stu-id="935f9-122">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="935f9-123">父元素</span><span class="sxs-lookup"><span data-stu-id="935f9-123">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含关于运行时初始化选项的信息。|  
+|<span data-ttu-id="935f9-124">元素</span><span class="sxs-lookup"><span data-stu-id="935f9-124">Element</span></span>|<span data-ttu-id="935f9-125">描述</span><span class="sxs-lookup"><span data-stu-id="935f9-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="935f9-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="935f9-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="935f9-127">包含有关运行时初始化选项的信息。</span><span class="sxs-lookup"><span data-stu-id="935f9-127">Contains information about runtime initialization options.</span></span>|  
   
-## 备注  
-  
-> [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 和更高版本中，此元素对程序集加载时间没有影响。  有关更多信息，请参见 [安全更改](../../../../../docs/framework/security/security-changes.md)中的“安全策略简化”一节。  
-  
- 公共语言运行时 \(CLR\) 尝试在加载时验证 Authenticode 签名，以便为程序集创建 <xref:System.Security.Policy.Publisher> 证据。  但在默认情况下，大部分应用程序都不需要 <xref:System.Security.Policy.Publisher> 证据。  标准的 CAS 策略不依赖于 <xref:System.Security.Policy.PublisherMembershipCondition>。  除非在使用自定义 CAS 策略的计算机上执行应用程序或者应用程序要满足部分信任环境中对 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求，否则应避免与验证发行者签名相关的不必要的启动成本。（在完全受信任的环境中，标识权限的要求总是会成功。）  
+## <a name="remarks"></a><span data-ttu-id="935f9-128">备注</span><span class="sxs-lookup"><span data-stu-id="935f9-128">Remarks</span></span>  
   
 > [!NOTE]
->  建议服务使用 `<generatePublisherEvidence>` 元素来改进启动性能。使用此元素还有助于避免会导致超时和取消服务启动的延迟。  
+>  <span data-ttu-id="935f9-129">在[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更高版本，此元素不会影响程序集加载时间。</span><span class="sxs-lookup"><span data-stu-id="935f9-129">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later, this element has no effect on assembly load times.</span></span> <span data-ttu-id="935f9-130">有关详细信息，请参阅中的"安全策略简化"一节[安全更改](../../../../../docs/framework/security/security-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="935f9-130">For more information, see the "Security Policy Simplification" section in [Security Changes](../../../../../docs/framework/security/security-changes.md).</span></span>  
   
-## 配置文件  
- 此元素只可用于应用程序配置文件中。  
+ <span data-ttu-id="935f9-131">公共语言运行时 (CLR) 尝试在加载时创建验证验证码签名<xref:System.Security.Policy.Publisher>程序集的证据。</span><span class="sxs-lookup"><span data-stu-id="935f9-131">The common language runtime (CLR) tries to verify the Authenticode signature at load time to create <xref:System.Security.Policy.Publisher> evidence for the assembly.</span></span> <span data-ttu-id="935f9-132">但是，默认情况下，大多数应用程序不需要<xref:System.Security.Policy.Publisher>证据。</span><span class="sxs-lookup"><span data-stu-id="935f9-132">However, by default, most applications do not need <xref:System.Security.Policy.Publisher> evidence.</span></span> <span data-ttu-id="935f9-133">标准的 CAS 策略不依赖于<xref:System.Security.Policy.PublisherMembershipCondition>。</span><span class="sxs-lookup"><span data-stu-id="935f9-133">Standard CAS policy does not rely on the <xref:System.Security.Policy.PublisherMembershipCondition>.</span></span> <span data-ttu-id="935f9-134">应避免与验证发布者签名，除非你的应用程序具有自定义的 CAS 策略的计算机上执行，或想要满足的需求相关的不必要的启动成本<xref:System.Security.Permissions.PublisherIdentityPermission>在部分信任环境中。</span><span class="sxs-lookup"><span data-stu-id="935f9-134">You should avoid the unnecessary startup cost associated with verifying the publisher signature unless your application executes on a computer with custom CAS policy, or is intending to satisfy demands for <xref:System.Security.Permissions.PublisherIdentityPermission> in a partial-trust environment.</span></span> <span data-ttu-id="935f9-135">（标识权限的要求总是在完全信任环境中成功。）</span><span class="sxs-lookup"><span data-stu-id="935f9-135">(Demands for identity permissions always succeed in a full-trust environment.)</span></span>  
   
-## 示例  
- 下面的示例演示如何使用 `<generatePublisherEvidence>` 元素为应用程序禁用 CAS 发行者策略检查。  
+> [!NOTE]
+>  <span data-ttu-id="935f9-136">我们建议，服务使用`<generatePublisherEvidence>`元素以提高启动性能。</span><span class="sxs-lookup"><span data-stu-id="935f9-136">We recommend that services use the `<generatePublisherEvidence>` element to improve startup performance.</span></span>  <span data-ttu-id="935f9-137">使用此元素还可以帮助避免可能导致超时和服务启动后的取消操作的延迟。</span><span class="sxs-lookup"><span data-stu-id="935f9-137">Using this element can also help avoid delays that can cause a time-out and the cancellation of the service startup.</span></span>  
   
-```  
+## <a name="configuration-file"></a><span data-ttu-id="935f9-138">配置文件</span><span class="sxs-lookup"><span data-stu-id="935f9-138">Configuration File</span></span>  
+ <span data-ttu-id="935f9-139">仅在应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="935f9-139">This element can be used only in the application configuration file.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="935f9-140">示例</span><span class="sxs-lookup"><span data-stu-id="935f9-140">Example</span></span>  
+ <span data-ttu-id="935f9-141">下面的示例演示如何使用`<generatePublisherEvidence>`要禁用的应用程序的 CA 发布服务器策略检查元素。</span><span class="sxs-lookup"><span data-stu-id="935f9-141">The following example shows how to use the `<generatePublisherEvidence>` element to disable checking for CAS publisher policy for an application.</span></span>  
+  
+```xml  
 <configuration>  
-    <runtime>  
-        <generatePublisherEvidence enabled="false"/>  
-    </runtime>  
+    <runtime>  
+        <generatePublisherEvidence enabled="false"/>  
+    </runtime>  
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="935f9-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="935f9-142">See Also</span></span>  
+ [<span data-ttu-id="935f9-143">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="935f9-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="935f9-144">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="935f9-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
