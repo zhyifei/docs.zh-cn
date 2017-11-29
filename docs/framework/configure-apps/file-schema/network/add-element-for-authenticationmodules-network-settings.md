@@ -1,76 +1,78 @@
 ---
-title: "authenticationModules -&gt; &lt;add&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 元素, authenticationModules"
-  - "<authenticationModules>, add 元素"
-  - "add 元素, authenticationModules"
-  - "authenticationModules, add 元素"
+title: "&lt;添加&gt;authenticationModules （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add
+helpviewer_keywords:
+- authenticationModules, add element
+- add element, authenticationModules
+- <authenticationModules>, add element
+- <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 60909a738afbe2ec14d0f67846b06578a7393601
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# authenticationModules -&gt; &lt;add&gt; 元素（网络设置）
-将身份验证模块添加到应用程序中。  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;添加&gt;authenticationModules （网络设置） 的元素
+向应用程序添加身份验证模块。  
   
-## 语法  
+ \<configuration>  
+\<system.net >  
+\<authenticationModules >  
+\<add>  
   
-```  
+## <a name="syntax"></a>语法  
   
-      <add   
-   type = "client type", System, Version="version number", Culture="culture", PublicKeyToken="token"   
+```xml  
+<add
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|`type`|用来实现身份验证的模块的类名和详细信息。|  
+|**特性**|**描述**|  
+|-------------------|---------------------|  
+|`type`|完全限定的类型名称 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)，用逗号分隔。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[授权组件](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用于对网络请求进行身份验证的模块。|  
+|**元素**|**描述**|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用来验证网络请求的模块。|  
   
-## 备注  
- `add`元素将一个授权组件增加到注册的授权组件的列表的末尾。  身份验证模块按照向列表中添加它们的顺序被调用。  
+## <a name="remarks"></a>备注  
+ `add` 元素会在已注册的身份验证模块列表末尾添加一个身份验证模块。 添加到列表的顺序在称为身份验证模块。  
   
- `type` 特性的值应当是有效的 DLL 名称和对应的类名，二者之间用逗号分隔。  
+ 值`type`属性应为有效类型名称和相应的程序集名称，用逗号分隔。  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a>配置文件  
+ 此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## 示例  
- 下面的代码示例启用默认身份验证模块。  应当将 Version 和 PublicKeyToken 的值替换为指定模块的正确值。  
+## <a name="example"></a>示例  
+ 以下示例启用默认身份验证模块。 版本和 PublicKeyToken 提供值应替换为指定的模块的正确值。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
         <authenticationModules>  
@@ -89,7 +91,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

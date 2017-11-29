@@ -1,92 +1,94 @@
 ---
-title: "&lt;sharedListeners&gt; 的 &lt;add&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sharedListeners> 的 <add> 元素"
-  - "<sharedListeners> 的 add 元素"
-  - "initializeData 特性"
+title: "&lt;添加&gt;元素&lt;sharedListeners&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
+helpviewer_keywords:
+- initializeData attribute
+- <add> element for <sharedListeners>
+- add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd8e7d18ca72cbeb558876eefcde17ebdc6c095f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sharedListeners&gt; 的 &lt;add&gt; 元素
-将侦听器添加到 `sharedListeners` 集合中。  `sharedListeners` 是任何 [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 或 [\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) 可以引用的侦听器的集合。默认情况下，`sharedListeners` 集合中的侦听器未放在 `Listeners` 集合中。  必须将它们按名称添加到 [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 或 [\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。  不能在运行时在代码中获取 `sharedListeners` 集合中的侦听器。  
+# <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;添加&gt;元素&lt;sharedListeners&gt;
+将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners`是的侦听器集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，侦听器中`sharedListeners`集合不都将置于`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  
   
-## 语法  
+ \<configuration>  
+\<system.diagnostics >  
+\<sharedListeners > 元素  
+\<add>  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
   initializeData="data"/>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|`name`|必需的特性。<br /><br /> 指定用于将共享侦听器添加到 `Listeners` 集合的侦听器的名称。|  
-|`type`|必需的特性。<br /><br /> 指定侦听器的类型。  必须使用满足[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的字符串。|  
-|`initializeData`|可选特性。<br /><br /> 传递到指定类的构造函数的字符串。|  
+|特性|描述|  
+|---------------|-----------------|  
+|`name`|必需的特性。<br /><br /> 指定用于将共享的侦听器添加到侦听器的名称`Listeners`集合。|  
+|`type`|必需的特性。<br /><br /> 指定侦听器的类型。 你必须使用满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|`initializeData`|可选特性。<br /><br /> 传递给构造函数指定类的字符串。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
-|--------|--------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|向 `sharedListeners` 集合中的侦听器添加筛选器。|  
+|元素|描述|  
+|-------------|-----------------|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|将筛选器添加到 `sharedListeners` 集合中的侦听器。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`system.diagnostics`|指定对消息进行收集、存储和路由的跟踪侦听器以及设置跟踪开关的级别。|  
-|`sharedListeners`|任何源或跟踪元素都能引用的侦听器的集合。|  
+|`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
+|`sharedListeners`|任何源或跟踪元素可以引用的侦听器集合。|  
   
-## 备注  
- 随 .NET Framework 一起提供的侦听器类从 <xref:System.Diagnostics.TraceListener> 类派生。  `name` 特性的值用于将共享侦听器添加到跟踪或跟踪源的 `Listeners` 集合。  `initializeData` 特性的值取决于您创建的侦听器的类型。  并非所有跟踪侦听器都要求您指定 `initializeData`。  
+## <a name="remarks"></a>备注  
+ 随.NET Framework 提供的侦听器类派生自<xref:System.Diagnostics.TraceListener>类。 值`name`特性用于将共享的侦听器添加到`Listeners`跟踪或跟踪源的集合。 值`initializeData`属性取决于你创建的侦听器的类型。 并非所有的跟踪侦听器需要你指定`initializeData`。  
   
 > [!NOTE]
->  当您使用 `initializeData` 特性时，可能会收到编译器警告“未声明‘initializeData’特性”。出现此警告是因为，在根据抽象基类 <xref:System.Diagnostics.TraceListener> 验证配置设置时，该基类不能识别 `initializeData` 特性。  通常，如果跟踪侦听器实现具有带参数的构造函数，则可以忽略此警告。  
+>  当你使用`initializeData`属性中，你可能会收到编译器警告"未声明 initializeData 特性。" 因为配置设置验证针对的抽象基类，会出现此警告<xref:System.Diagnostics.TraceListener>，这不能识别`initializeData`属性。 通常情况下，你可以忽略此警告的具有构造函数采用参数的跟踪侦听器实现。  
   
- 下表说明 .NET Framework 中包含的跟踪侦听器，同时描述了这些侦听器的 `initializeData` 特性值。  
+ 下表显示.NET Framework 附带的跟踪侦听器，并描述的值的其`initializeData`属性。  
   
 |跟踪侦听器类|initializeData 特性值|  
-|------------|------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 构造函数的 `useErrorStream` 值。将 `initializeData` 特性设置为“`true`”可将跟踪和调试输出写入标准错误流；将它设置为“`false`”可写入标准输出流。|  
-|<xref:System.Diagnostics.DelimitedListTraceListener>|<xref:System.Diagnostics.DelimitedListTraceListener> 写入的文件名。|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|现有的事件日志源的名称。|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.EventSchemaTraceListener> 写入的文件的名称。|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.TextWriterTraceListener> 写入的文件的名称。|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|<xref:System.Diagnostics.XmlWriterTraceListener> 写入的文件的名称。|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|`useErrorStream`值<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>构造函数。  设置`initializeData`属性设为"`true`"编写跟踪和调试输出发送到标准错误流; 将其设置为"`false`"要写入到标准输出流。|  
+|<xref:System.Diagnostics.DelimitedListTraceListener>|文件的名称<xref:System.Diagnostics.DelimitedListTraceListener>写入。|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|现有的事件日志源的名称。|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|文件的名称，<xref:System.Diagnostics.EventSchemaTraceListener>写入。|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|文件的名称，<xref:System.Diagnostics.TextWriterTraceListener>写入。|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|文件的名称，<xref:System.Diagnostics.XmlWriterTraceListener>写入。|  
   
-## 配置文件  
- 此元素可用于计算机配置文件 \(Machine.config\) 和应用程序配置文件。  
+## <a name="configuration-file"></a>配置文件  
+ 计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
-## 示例  
- 如下的例子演示了如何使用`<add>`元素来增加 <xref:System.Diagnostics.TextWriterTraceListener> `textListener`到`sharedListeners` 集合。`textListener`按名字被增加到查找资源`TraceSourceApp`的`Listeners`集合。  `textListener` 侦听器将跟踪输出写入文件 myListener.log。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用`<add>`要添加元素<xref:System.Diagnostics.TextWriterTraceListener>`textListener`到`sharedListeners`集合。   `textListener`按名称添加到`Listeners`跟踪源集合`TraceSourceApp`。 `textListener`侦听器将跟踪输出写入文件 myListener.log。  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -112,8 +114,8 @@ caps.handback.revision: 13
 </configuration>   
 ```  
   
-## 请参阅  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

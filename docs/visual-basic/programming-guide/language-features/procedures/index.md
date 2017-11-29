@@ -1,45 +1,27 @@
 ---
 title: "Visual Basic 中的过程"
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的过程
 过程是由声明语句（`Function`、`Sub`、`Operator`、`Get`、`Set`）和匹配的 `End` 声明所包围的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语句块。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的所有可执行语句必须位于某一过程内。  
@@ -88,14 +70,13 @@ ms.lasthandoff: 07/28/2017
 -   开发可供某一程序使用的过程后，也可在其他程序中使用它们，通常只需很少修改或无需修改。 这有助于避免代码重复。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：创建过程](./how-to-create-a-procedure.md)   
- [Sub 过程](./sub-procedures.md)   
- [Function 过程](./function-procedures.md)   
- [属性过程](./property-procedures.md)   
- [运算符过程](./operator-procedures.md)   
- [过程形参和实参](./procedure-parameters-and-arguments.md)   
- [递归过程](./recursive-procedures.md)   
- [过程重载](./procedure-overloading.md)   
- [Visual Basic 中的泛型过程](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+ [如何：创建过程](./how-to-create-a-procedure.md)  
+ [Sub 过程](./sub-procedures.md)  
+ [Function 过程](./function-procedures.md)  
+ [属性过程](./property-procedures.md)  
+ [运算符过程](./operator-procedures.md)  
+ [过程参数和自变量](./procedure-parameters-and-arguments.md)  
+ [递归过程](./recursive-procedures.md)  
+ [过程重载](./procedure-overloading.md)  
+ [在 Visual Basic 中的泛型过程](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-

@@ -1,35 +1,38 @@
 ---
-title: "DataTableReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataTableReader
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ed9094a036262bac2e101e7b4268aac2e66a0d10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataTableReader
+# <a name="datatablereaders"></a>DataTableReader
 <xref:System.Data.DataTableReader> 以一个或多个只读、只进结果集的形式提供 <xref:System.Data.DataTable> 或的 <xref:System.Data.DataSet> 的内容。  
   
- 在使用 **DataTable** 创建 **DataTableReader** 时，生成的 **DataTableReader** 对象包含一个结果集，其中的数据与创建该结果集的 **DataTable** 相同，所有已标记为已删除的行除外。  列出现的顺序与在原始 **DataTable** 中相同。  
+ 当你创建**DataTableReader**从**DataTable**，生成**DataTableReader**对象包含一个结果集具有相同的数据**DataTable**从创建它，除已标记为删除任何行。 列将显示在相同的顺序与在原始**DataTable**。  
   
- 如果 **DataTableReader** 是通过调用 <xref:System.Data.DataSet.CreateDataReader%2A> 创建，可以包含多个结果集。  结果的顺序与 **DataSet** 对象的 <xref:System.Data.DataSet.Tables%2A> 集合中的 **DataTables** 相同。  
+ A **DataTableReader**可能包含多个结果集，如果它由调用<xref:System.Data.DataSet.CreateDataReader%2A>。 结果采用的顺序相同**数据表**中**数据集**对象的<xref:System.Data.DataSet.Tables%2A>集合。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [创建 DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
- 讨论如何创建 **DataTableReader** 对象。  
+ 讨论如何创建**DataTableReader**对象。  
   
  [导航数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
- 描述如何使用 **Read** 方法浏览 **DataTableReader** 的内容。  
+ 描述如何使用**读取**方法来移动的内容通过**DataTableReader**。  
   
-## 请参阅  
- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

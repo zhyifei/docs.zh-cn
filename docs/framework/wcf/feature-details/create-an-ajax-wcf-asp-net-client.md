@@ -1,37 +1,40 @@
 ---
-title: "如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a45a186b0d281976f3d6ad554d75742ba0f1cd50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
 本主题演示如何使用 Visual Studio 2008 创建一个支持 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和一个访问该服务的 ASP.NET 客户端。 在“过程”一节中描述了创建服务和客户端的代码的步骤之后，在“示例”一节中提供了相应的代码。  
   
 ### <a name="to-create-the-aspnet-client-application"></a>创建 ASP.NET 客户端应用程序  
   
 1.  打开 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   
-2.  从**文件**菜单上，选择**新建**，然后**项目**，然后**Web**，然后选择**ASP.NET Web 应用程序**。  
+2.  从**文件**菜单上，选择**新建**，然后**项目**，然后**Web**，然后选择**ASP.NET Web 应用程序**.  
   
-3.  将项目命名为`SandwichServices`，然后单击**确定**。  
+3.  将项目`SandwichServices`单击**确定**。  
   
 ### <a name="to-create-the-wcf-ajax-enabled-service"></a>创建 WCF 支持 AJAX 的服务  
   
-1.  用鼠标右键单击`SandwichServices`项目中**解决方案资源管理器**窗口，然后选择**添加**，然后**新项**，然后**启用 AJAX 的 WCF 服务**。  
+1.  右键单击`SandwichServices`项目中**解决方案资源管理器**窗口，然后选择**添加**，然后**新项**，，然后**启用了 AJAX 的 WCF 服务**.  
   
-2.  命名服务`CostService`中**名称**框中，单击**添加**。  
+2.  将服务`CostService`中**名称**框中，单击**添加**。  
   
 3.  打开 CostService.svc.cs 文件。  
   
@@ -49,7 +52,7 @@ caps.handback.revision: 9
      }  
     ```  
   
-5.  在服务中实现操作。 添加<xref:System.ServiceModel.OperationContractAttribute>到每个操作，以表明它们是协定的一部分。 下面的示例实现一个返回给定数量的三明治的费用的方法。  
+5.  在服务中实现操作。 将 <xref:System.ServiceModel.OperationContractAttribute> 添加到每个操作，以指定这些操作属于协定的一部分。 下面的示例实现一个返回给定数量的三明治的费用的方法。  
   
     ```  
     public class CostService  
@@ -72,21 +75,21 @@ caps.handback.revision: 9
   
 3.  展开**AJAX Extensions**节点和拖放**ScriptManager**到 Default.aspx 页。  
   
-4.  用鼠标右键单击**ScriptManager** ，然后选择**属性**。  
+4.  右键单击**ScriptManager**和选择**属性**。  
   
-5.  展开**服务**中的集合**属性**窗口，以打开**ServiceReference 集合编辑器**窗口。  
+5.  展开**服务**中的集合**属性**窗口以打开**ServiceReference 集合编辑器**窗口。  
   
 6.  单击**添加**，指定`CostService.svc`作为**路径**引用，并且单击**确定**。  
   
 7.  展开**HTML**中的节点**工具箱**和拖放**Input (Button)**到 Default.aspx 页。  
   
-8.  用鼠标右键单击**按钮**，然后选择**属性**。  
+8.  右键单击**按钮**和选择**属性**。  
   
-9. 更改**值**字段拖至`Price for 3 Sandwiches`。  
+9. 更改**值**字段`Price for 3 Sandwiches`。  
   
 10. 双击**按钮**以访问 JavaScript 代码。  
   
-11. 在下面的 JavaScript 代码中传递`script`1> 元素。  
+11. 中的以下 JavaScript 代码传递 <`script`> 元素。  
   
     ```  
     function Button1_onclick() {  
@@ -175,7 +178,4 @@ alert(result);
         <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
 </body>  
 </html>  
-  
-```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->
+```     

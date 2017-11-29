@@ -1,28 +1,34 @@
 ---
-title: "更新数据源中的数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "更新数据源中的数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 91e6a5f2b956816b5e001701a7fbe4a40e7866e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 更新数据源中的数据
-修改数据的 SQL 语句（如 INSERT、UPDATE 或 DELETE）不返回行。  同样，许多存储过程执行操作但不返回行。  要执行不返回行的命令，使用相应 SQL 命令创建一个 **Command** 对象，并创建一个 **Connection**，包括所有必需的 **Parameters**。  使用 **Command** 对象的 **ExecuteNonQuery** 方法来执行该命令。  
+# <a name="updating-data-in-a-data-source"></a>更新数据源中的数据
+修改数据的 SQL 语句（如 INSERT、UPDATE 或 DELETE）不返回行。 同样，许多存储过程执行操作但不返回行。 若要执行不返回行的命令，创建**命令**使用相应的 SQL 命令的对象和一个**连接**，包括所有必需**参数**。 执行该命令与**ExecuteNonQuery**方法**命令**对象。  
   
- **ExecuteNonQuery** 方法返回一个整数，表示受已执行的语句或存储过程影响的行数。  如果执行了多个语句，则返回的值为受所有已执行语句影响的记录的总数。  
+ **ExecuteNonQuery**方法返回一个整数，表示的语句或存储的过程执行受影响的行数。 如果执行了多个语句，则返回的值为受所有已执行语句影响的记录的总数。  
   
-## 示例  
- 以下代码示例执行一个 INSERT 语句，以使用 **ExecuteNonQuery** 将一个记录插入数据库中。  
+## <a name="example"></a>示例  
+ 下面的代码示例执行一个 INSERT 语句，以将一个记录插入数据库使用**ExecuteNonQuery**。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -46,9 +52,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- 以下代码示例执行由[执行编录操作](../../../../docs/framework/data/adonet/performing-catalog-operations.md)中的示例代码创建的存储过程。  该存储过程没有返回任何行，因此将使用 **ExecuteNonQuery** 方法，但该存储过程会接收输入参数并返回输出参数和返回值。  
+ 下面的代码示例执行中的示例代码所创建的存储的过程[执行编录操作](../../../../docs/framework/data/adonet/performing-catalog-operations.md)。 通过存储过程中，会返回任何行因此**ExecuteNonQuery**方法，但使用该存储的过程未接收输入的参数并返回一个输出参数和返回值。  
   
- 对于 <xref:System.Data.OleDb.OleDbCommand> 对象，必须先将 **ReturnValue** 参数添加到 **Parameters** 集合。  
+ 有关<xref:System.Data.OleDb.OleDbCommand>对象， **ReturnValue**必须将参数添加到**参数**集合第一个。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -95,8 +101,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## 请参阅  
- [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

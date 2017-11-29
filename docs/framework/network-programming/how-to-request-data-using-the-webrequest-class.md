@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - downloading Internet resources, steps
 - requesting data from Internet, steps
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何使用 WebRequest 类请求数据
 以下过程描述从服务器请求资源（如 Web 页或文件）所需的步骤。 资源必须由 URI 标识。  
@@ -79,7 +76,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
     > [!NOTE]
-    >  使用完 <xref:System.Net.WebResponse> 对象后，必须通过调用 <xref:System.Net.WebResponse.Close%2A> 方法将其关闭。 或者，如果已从响应对象获取响应流，可以通过调用 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 方法关闭流。 如果不关闭响应或流，应用程序会耗尽与服务器的连接，并变得无法处理其他请求。  
+    >  使用完 <xref:System.Net.WebResponse> 对象后，必须通过调用 <xref:System.Net.WebResponse.Close%2A> 方法将其关闭。 或者，如果已从响应对象获取响应流，可以通过调用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭流。 如果不关闭响应或流，应用程序会耗尽与服务器的连接，并变得无法处理其他请求。  
   
 4.  可以访问 WebResponse 的属性或将 WebResponse 转换为特定于协议的实例来读取特定于协议的属性。 例如，要访问 <xref:System.Net.HttpWebResponse> 特定于 HTTP 的属性，请将 WebResponse 转换为 HttpWebResponse 引用。 以下代码示例演示如何显示与响应一起发送的状态信息。  
   
@@ -185,9 +182,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [请求数据](../../../docs/framework/network-programming/requesting-data.md)   
+ [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [请求数据](../../../docs/framework/network-programming/requesting-data.md)  
  [如何：使用 WebRequest 类发送数据](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
-

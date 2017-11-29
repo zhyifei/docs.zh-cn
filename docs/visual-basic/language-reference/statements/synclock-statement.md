@@ -1,33 +1,32 @@
 ---
-title: "SyncLock 语句 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.SyncLock"
-  - "SyncLock"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "锁定, 线程"
-  - "SyncLock 语句"
-  - "线程处理 [Visual Basic], 锁定"
+title: "SyncLock 语句"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.SyncLock
+- SyncLock
+helpviewer_keywords:
+- threading [Visual Basic], locks
+- SyncLock statement [Visual Basic]
+- locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# SyncLock 语句
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-在执行一个语句块前获取此块的独占锁。  
+# <a name="synclock-statement"></a>SyncLock 语句
+在执行块之前获取语句块的排他的锁。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 SyncLock lockobject  
@@ -35,72 +34,72 @@ SyncLock lockobject
 End SyncLock  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `lockobject`  
- 必需。  计算结果等于对象引用的表达式。  
+ 必需。 计算结果为一个对象引用的表达式。  
   
  `block`  
- 可选。  获取独占锁时要执行的语句块。  
+ 可选。 若要获取锁时执行的语句块。  
   
  `End SyncLock`  
- 终止 `SyncLock` 块。  
+ 终止`SyncLock`块。  
   
-## 备注  
- `SyncLock` 语句可确保多个线程不在同一时间执行语句块。  `SyncLock` 防止各个线程进入该语句块，直到没有其他线程执行它为止。  
+## <a name="remarks"></a>备注  
+ `SyncLock`语句可确保多个线程不会在同一时间中执行的语句块。 `SyncLock`防止每个线程正在进入块，直到没有其他线程正在执行它。  
   
- `SyncLock` 的最常见作用是保护数据不被多个线程同时更新。  如果操作数据的语句必须在没有中断的情况下完成，请将它们放入 `SyncLock` 块。  
+ 最常见的用途`SyncLock`是为了防止数据由多个线程同时更新。 如果操作数据的语句必须转到完成而不会中断，则将它们放`SyncLock`块。  
   
- 有时将受独占锁保护的语句块称为“临界区”。  
+ 有时称为受的排他锁的语句块*临界区*。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   分支。  您不能从此块的外部分支到 `SyncLock` 块。  
+-   分支。 不能分支到`SyncLock`阻止其在块外部。  
   
--   锁定对象值。  `lockobject` 的值不能为 `Nothing`。  必须先创建锁定对象，才能在 `SyncLock` 语句中使用此对象。  
+-   锁定对象值。 值`lockobject`不能为`Nothing`。 你必须使用在之前创建的锁对象`SyncLock`语句。  
   
-     在执行 `SyncLock` 块时，不能更改 `lockobject` 的值。  机制要求锁定对象保持不变。  
+     无法更改值`lockobject`执行时`SyncLock`块。 机制都要求的锁对象保持不变。  
   
--   在 `SyncLock` 不能使用 [等待](../../../visual-basic/language-reference/operators/await-operator.md) 运算符块。  
+-   不能使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)中的运算符`SyncLock`块。  
   
-## 行为  
+## <a name="behavior"></a>行为  
   
--   机制。  线程到达 `SyncLock` 语句时，它将计算 `lockobject` 表达式，并挂起执行，直到获取了由表达式返回的对象上的独占锁。  当另一线程到达 `SyncLock` 语句时，它将不能获取独占锁，直到第一个线程执行 `End SyncLock` 语句。  
+-   机制。 在线程到达`SyncLock`语句，它的计算结果`lockobject`表达式将暂停执行，直到它将获取由表达式返回的对象的排他锁。 在另一个线程到达`SyncLock`语句，它不会获取锁直到第一个线程执行`End SyncLock`语句。  
   
--   受保护的数据。  如果 `lockobject` 为 `Shared` 变量，独占锁将防止类的任何实例中的线程在任何其他线程执行 `SyncLock` 块时执行该块。  这会保护所有实例所共享的数据。  
+-   受保护的数据。 如果`lockobject`是`Shared`变量，阻止类的任何实例中的线程执行的排他锁`SyncLock`阻止其他任何线程执行它时。 这可在所有实例间共享的数据。  
   
-     如果 `lockobject` 为实例变量（非 `Shared`），此锁将防止当前实例中正在运行的线程与相同实例中的另一线程同时执行 `SyncLock` 块。  这会保护由单个实例维护的数据。  
+     如果`lockobject`是一个实例变量 (不`Shared`)，此锁将防止执行从当前实例中运行的线程`SyncLock`处的同一实例中的另一个线程在同一时间块。 这可维护的单个实例数据。  
   
--   捕获和释放。  `SyncLock` 块的操作就像 `Try...Finally` 结构，其中 `Try` 块获取 `lockobject` 上的独占锁，而 `Finally` 块则释放此锁。  因此，`SyncLock` 块确保锁的释放，不管您如何退出块。  即使发生未经处理的异常，也是如此。  
+-   获取和发布。 A`SyncLock`块的行为类似`Try...Finally`顺序构造`Try`块上获取排他锁`lockobject`和`Finally`块释放它。 因此，`SyncLock`块都可确保释放锁，不管您如何退出块。 这是 true 即使发生未经处理的异常。  
   
--   Framework 调用。  `SyncLock` 块通过调用 <xref:System.Threading> 命名空间中的 `Monitor` 类的 `Enter` 方法和 `Exit` 方法获取和释放独占锁。  
+-   框架调用。 `SyncLock`块获取，并通过调用释放排他锁`Enter`和`Exit`方法`Monitor`类<xref:System.Threading>命名空间。  
   
-## 编程惯例  
- `lockobject` 表达式应始终计算仅属于您的类的对象。  您应该声明一个 `Private` 对象变量，以保护属于当前实例的数据，或声明一个 `Private Shared` 对象变量，以保护所有实例共有的数据。  
+## <a name="programming-practices"></a>编程做法  
+ `lockobject`表达式应计算结果始终为仅属于你的类的对象。 应声明`Private`对象变量来保护数据属于当前实例，或`Private Shared`对象变量来保护数据普遍适用于所有实例。  
   
- 不应使用 `Me` 关键字为实例数据提供锁定对象。  如果类之外的代码引用了您的类的实例，它可以使用该引用作为 `SyncLock` 块的锁定对象（与您的锁定对象完全不同），从而保护不同数据。  通过这种方式，您的类和其他类将相互阻止执行与它们无关的 `SyncLock` 块。  由于使用相同字符串的进程中的任何其他代码将共享相同的锁，所以对一个字符串进行相似锁定可能会有问题。  
+ 不应使用`Me`关键字提供锁定的实例对象数据。 如果你的类的外部的代码可以对你的类的实例的引用，它可以使用该引用的锁对象作为`SyncLock`块完全不同于你的帐户，保护不同的数据。 这种方式，你的类和其他类将无法相互阻止执行其不相关`SyncLock`块。 因为使用相同的字符串的进程中的任何其他代码将共享同一个锁，则同样锁定对字符串可能会产生问题。  
   
- 也不应使用 `Me.GetType` 方法为共享数据提供锁定对象。  这是因为 `GetType` 始终为给定类名称返回相同的 `Type` 对象。  外部代码可以调用您的类上的 `GetType`，并可以获取与您正在使用的锁定对象相同的锁定对象。  这将导致两个类相互阻止它们的 `SyncLock` 块。  
+ 你也不应使用`Me.GetType`方法以提供的锁对象共享数据。 这是因为`GetType`始终返回相同`Type`给定的类名称的对象。 外部代码可以调用`GetType`类并获取正在使用相同的锁对象。 这将导致两个类相互阻止其`SyncLock`块。  
   
-## 示例  
+## <a name="examples"></a>示例  
   
-### 说明  
- 下面的示例演示维护简单消息列表的类。  它将消息保存在数组中，并将最近使用的该数组的元素保存在变量中。  `addAnotherMessage` 过程增加最近使用的元素，并存储新消息。  这两个操作受到 `SyncLock` 和 `End SyncLock` 语句的保护，因为一旦增加了最近的元素，就必须先存储新消息，然后任何其他线程才可以再次增加最近的元素。  
+### <a name="description"></a>描述  
+ 下面的示例演示维护一个简单的消息列表的类。 它包含在一个数组中的消息，而且在变量中使用该数组的元素的最后一个。 `addAnotherMessage`过程递增的最后一个元素，并将存储新消息。 这两项操作受`SyncLock`和`End SyncLock`语句，因为后递增的最后一个元素，其他任何线程可以再次递增的最后一个元素之前，必须将存储新消息。  
   
- 如果 `simpleMessageList` 类在其所有实例中共享一个消息列表，则变量 `messagesList` 和 `messagesLast` 将被声明为 `Shared`。  此时，变量 `messagesLock` 也应为 `Shared`，从而每个实例都将使用单个锁定对象。  
+ 如果`simpleMessageList`类共享其所有实例，变量之间的消息的一个列表`messagesList`和`messagesLast`将声明为`Shared`。 在此情况下，该变量`messagesLock`还应`Shared`，以便将每个实例所使用的单个锁对象。  
   
-### 代码  
+### <a name="code"></a>代码  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### 说明  
- 下面的示例使用线程和 `SyncLock`。  只要 `SyncLock` 语句存在，语句块就是临界区并且 `balance` 永远不会是负数。  可以注释掉 `SyncLock` 和 `End SyncLock` 语句，以查看省去 `SyncLock` 关键字的效果。  
+### <a name="description"></a>描述  
+ 下面的示例使用线程和`SyncLock`。 只要`SyncLock`语句是存在，此语句块就是临界区和`balance`永远不会为负数。 你可以注释`SyncLock`和`End SyncLock`语句，以查看省去的效果`SyncLock`关键字。  
   
-### 代码  
+### <a name="code"></a>代码  
  [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
-### 注释  
+### <a name="comments"></a>注释  
   
-## 请参阅  
- <xref:System.Threading>   
- <xref:System.Threading.Monitor>   
- [线程同步](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)   
- [线程](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Threading>  
+ <xref:System.Threading.Monitor>  
+ [线程同步](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
+ [线程处理](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)

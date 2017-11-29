@@ -1,45 +1,27 @@
 ---
 title: "委托 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="delegates-visual-basic"></a>委托 (Visual Basic)
-委托是引用方法的对象。 有时亦称为*类型安全函数指针*，因为它们与其他编程语言中使用的函数指针类似。 不过，与函数指针不同的是，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 委托是基于类 <xref:System.Delegate?displayProperty=fullName> 的引用类型。 委托既可以引用共享方法（无需特定类实例即可调用的方法），也可以引用实例方法。  
+委托是引用方法的对象。 有时亦称为*类型安全函数指针*，因为它们与其他编程语言中使用的函数指针类似。 不过，与函数指针不同的是，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 委托是基于类 <xref:System.Delegate?displayProperty=nameWithType> 的引用类型。 委托既可以引用共享方法（无需特定类实例即可调用的方法），也可以引用实例方法。  
   
 ## <a name="delegates-and-events"></a>委托和事件  
  在过程调用方和被调用的过程之间需要中介的情况下，委托非常有用。 例如，你希望引发事件的对象能够在不同的情况下调用不同的事件处理程序。 遗憾的是，引发事件的对象无法提前确定用于处理特定事件的事件处理程序。 借助 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，可以在使用 `AddHandler` 语句时创建委托，动态地将事件处理程序与事件相关联。 在运行时，委托会将调用转接到相应的事件处理程序。  
@@ -91,4 +73,3 @@ ms.lasthandoff: 07/28/2017
 |[如何：在 Visual Basic 中将过程传递给另一过程](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|介绍了如何使用委托将一个过程传递给另一个过程。|  
 |[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|介绍了如何向委托或处理程序分配 Sub 和函数，即使是在它们的签名不一致时|  
 |[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)|概述了 Visual Basic 中的事件。|
-

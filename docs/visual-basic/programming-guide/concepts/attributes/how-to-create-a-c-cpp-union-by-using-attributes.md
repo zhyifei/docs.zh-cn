@@ -1,36 +1,28 @@
 ---
-title: "如何︰ 使用特性 (Visual Basic 中) 创建一个 C + + 联合 |Microsoft 文档"
+title: "如何： 创建 C-c + + 联合使用属性 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ff1686328630b233b25839c79d0009d48aab5ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何︰ 使用特性 (Visual Basic) 创建 C/c + + 联合
-通过使用属性可以自定义结构在内存中的布局方式。 例如，您可以创建所谓的 C/c + + 中联合使用`StructLayout(LayoutKind.Explicit)`和`FieldOffset`属性。  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何： 创建 C/c + + 联合使用属性 (Visual Basic)
+通过使用特性，可自定义结构在内存中的布局方式。 例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。  
   
 ## <a name="example"></a>示例  
- 在此代码段中，所有的域中`TestUnion`在内存中的同一位置启动。  
+ 在此代码段中，`TestUnion` 的所有字段均从内存中的同一位置开始。  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -53,12 +45,12 @@ End Structure
 ```  
   
 ## <a name="example"></a>示例  
- 下面是另一个示例从不同的字段开始显式设置的位置。  
+ 下面是另一个示例，其中的字段从不同的显式设置位置开始。  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
   
- <System.Runtime.InteropServices.StructLayout(   
+ <System.Runtime.InteropServices.StructLayout(  
       System.Runtime.InteropServices.LayoutKind.Explicit)>   
 Structure TestExplicit  
      <System.Runtime.InteropServices.FieldOffset(0)>   
@@ -81,14 +73,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- 两个整数字段，`i1`和`i2`，共享相同的内存位置作为`lg`。 使用平台调用时，这种结构布局控制很有用。  
+ 两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。 使用平台调用时，这种对结构布局的控制很有用。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)   
- [属性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [特性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [使用反射 (Visual Basic 中) 访问特性](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
+ [特性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

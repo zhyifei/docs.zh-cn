@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c67018df35816b38828e548a88d25efe16d6a15a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的性能计数器
 本主题提供可在[性能监视器](http://technet.microsoft.com/library/cc749249.aspx)中找到的性能计数器列表。  
@@ -137,7 +130,7 @@ ms.lasthandoff: 08/21/2017
 |**第 0 代回收次数**|显示自应用程序启动以来第 0 代对象（即最年轻、最近分配的对象）进行垃圾回收的次数。<br /><br /> 第 0 代中的可用内存不能满足分配请求时，会出现第 0 代垃圾回收。 此计数器在第 0 代垃圾回收结束时递增。 较高代的垃圾回收包含所有较低代的垃圾回收。 此计数器在较高代（第 1 或第 2 代）垃圾回收发生时显示递增。<br /><br /> 此计数器显示上次观测的值。 _Global\_ 计数器值不准确，应当忽略。|  
 |**第 1 代回收次数**|显示自应用程序启动以来第 1 代对象进行垃圾回收的次数。<br /><br /> 此计数器在第 1 代垃圾回收结束时递增。 较高代的垃圾回收包含所有较低代的垃圾回收。 此计数器在较高代（第 2 代）垃圾回收发生时显式递增。<br /><br /> 此计数器显示上次观测的值。 _Global\_ 计数器值不准确，应当忽略。|  
 |**第 2 代回收次数**|显示自应用程序启动以来第 2 代对象进行垃圾回收的次数。 此计数器在第 2 代垃圾回收结束时递增。<br /><br /> 此计数器显示上次观测的值。 _Global\_ 计数器值不准确，应当忽略。|  
-|**已引发 GC 数**|显示因显式调用 <xref:System.GC.Collect%2A?displayProperty=fullName> 而执行的垃圾回收最大次数。 建议让垃圾回收器微调其回收的频率。|  
+|**已引发 GC 数**|显示因显式调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 而执行的垃圾回收最大次数。 建议让垃圾回收器微调其回收的频率。|  
 |**固定对象数目**|显示在上一次垃圾回收中遇到的固定对象的数目。 钉住的对象是垃圾回收器不能移入内存的对象。 此计数器只跟踪经过垃圾回收的堆中钉住的对象。 例如，第 0 代垃圾回收只导致对第 0 代堆中的固定对象进行枚举。|  
 |**正在使用的接收器块数目**|显示正在使用的同步块的当前数目。 同步块是分配的每个对象的数据结构，用于存储同步信息。 它们保留对托管对象的弱引用并且必须由垃圾回收器扫描。 同步块不限于只存储同步信息，也可以存储 COM 互操作元数据。 此计数器指示有关大量使用同步基元的性能问题。|  
 |**已提交的字节总数**|显示垃圾回收器当前已提交的虚拟内存量（以字节为单位）。 提交内存是磁盘页面文件上为其保留了空间的物理内存。|  
@@ -267,6 +260,5 @@ for (int i = 0; i < Array.Length; i++)
 |**运行时检查总数**|显示自应用程序启动以来执行的运行时代码访问安全检查的总数。 当调用方要求特定权限时，执行运行时代码访问安全检查。 运行时检查在调用方每次调用时都会执行，并会检查调用方的当前线程堆栈。 此计数器与“堆栈审阅深度”计数器一起使用时可指示安全检查出现的性能损失。|  
   
 ## <a name="see-also"></a>另请参阅  
- [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)   
+ [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [运行时分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-

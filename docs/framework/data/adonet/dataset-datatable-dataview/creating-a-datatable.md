@@ -1,53 +1,57 @@
 ---
-title: "创建 DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建数据表"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 923d19e9539c6d93f3714efcdaa6fe7a5da843ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 创建 DataTable
+# <a name="creating-a-datatable"></a>创建数据表
 <xref:System.Data.DataTable> 表示一个内存内关系数据的表，可以独立创建和使用，也可以由其他 .NET Framework 对象使用，最常见的情况是作为 <xref:System.Data.DataSet> 的成员使用。  
   
- 可以使用相应的 **DataTable** 构造函数创建 **DataTable** 对象。  可以通过使用 **Add** 方法将其添加到 **DataTable** 对象的 **Tables** 集合中，将其添加到 **DataSet** 中。  
+ 你可以创建**DataTable**对象使用合适的**DataTable**构造函数。 你可以将其添加到**数据集**使用**添加**方法以将其添加到**DataTable**对象的**表**集合。  
   
- 也可以通过以下方法创建 **DataTable** 对象：使用 **DataAdapter** 对象的 **Fill** 方法或 **FillSchema** 方法在 **DataSet** 中创建，或者使用 **DataSet** 的 **ReadXml**、**ReadXmlSchema** 或 **InferXmlSchema** 方法从预定义的或推断的 XML 架构中创建。  请注意，将一个 **DataTable** 作为成员添加到一个 **DataSet** 的 **Tables** 集合中后，不能再将其添加到任何其他 **DataSet** 的表集合中。  
+ 你还可以创建**DataTable**对象内**数据集**使用**填充**或**FillSchema**方法**DataAdapter**对象，或从预定义或推断 XML 架构使用**ReadXml**， **ReadXmlSchema**，或**InferXmlSchema**方法的**数据集**。 请注意，添加之后**DataTable**作为的成员**表**的一个集合**数据集**，不能将其添加到的任何其他表集合**数据集**。  
   
- 初次创建 **DataTable** 时，是没有架构（即结构）的。  要定义表的架构，必须创建 <xref:System.Data.DataColumn> 对象并将其添加到表的 **Columns** 集合中。  您也可以为表定义主键列，并且可以创建 **Constraint** 对象并将其添加到表的 **Constraints** 集合中。  在为 **DataTable** 定义了架构之后，可通过将 **DataRow** 对象添加到表的 **Rows** 集合中来将数据行添加到表中。  
+ 当你首次创建**DataTable**，它不具有架构 （即结构）。 若要定义表的架构，必须创建并添加<xref:System.Data.DataColumn>对象添加到**列**表的集合。 此外可以定义主键列对于表，并创建并添加**约束**对象添加到**约束**表的集合。 在定义的架构后**DataTable**，您可以通过添加行数据添加到表**DataRow**对象添加到**行**表的集合。  
   
- 创建 **DataTable** 时，不需要为 <xref:System.Data.DataTable.TableName%2A> 属性提供值，您可以在其他时间指定该属性，或者将其保留为空。  但是，在将一个没有 **TableName** 值的表添加到 **DataSet** 中时，该表会得到一个从“Table”（表示 Table0）开始递增的默认名称 Table*N*。  
+ 不要求你提供的值<xref:System.Data.DataTable.TableName%2A>属性在创建时**DataTable**; 你可以在另一个时，指定该属性，或者可以将它保留为空。 但是，当你添加不包含的表时，才**TableName**值赋给**数据集**，表将给定表的递增的默认名称*N*，第一页为 Table0"表"。  
   
 > [!NOTE]
->  建议在提供 **TableName** 值时避免使用“Table*N*”命名约定，因为那样提供的名称可能与 **DataSet** 中现有的默认表名冲突。  如果提供的名称已经存在，将引发异常。  
+>  我们建议你避免"表*N*"命名约定，如果你提供**TableName**值，因为所提供的名称可能与中的现有默认表名称发生冲突**数据集**. 如果提供的名称已经存在，将引发异常。  
   
- 以下示例创建 **DataTable** 对象的实例，并为其指定名称“Customers”。  
+ 下面的示例创建的实例**DataTable**对象并将其分配的名称"Customers。  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
-  
 ```  
   
 ```csharp  
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- 以下示例创建 **DataTable** 实例，方法是：将其添加到 **DataSet** 的 **Tables** 集合中。  
+ 下面的示例创建的实例**DataTable**通过将其添加到**表**集合**数据集**。  
   
 ```vb  
 Dim customers As DataSet = New DataSet  
 Dim customersTable As DataTable = _  
    customers.Tables.Add("CustomersTable")  
-  
 ```  
   
 ```csharp  
@@ -55,11 +59,11 @@ DataSet customers = new DataSet();
 DataTable customersTable = customers.Tables.Add("CustomersTable");  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataTableCollection>   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [从 DataAdapter 填充数据集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)   
- [从 XML 中加载 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [从 XML 中加载 DataSet 架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataTableCollection>  
+ [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [从 DataAdapter 填充数据集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [从 XML 加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

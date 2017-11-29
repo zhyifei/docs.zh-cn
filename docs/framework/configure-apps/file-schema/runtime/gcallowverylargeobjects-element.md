@@ -1,81 +1,83 @@
 ---
-title: "&lt;gcAllowVeryLargeObjects&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcAllowVeryLargeObjects> 元素"
-  - "gcAllowVeryLargeObjects 元素"
+title: "&lt;gcAllowVeryLargeObjects&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- gcAllowVeryLargeObjects element
+- <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 49046c343ef749e597402f7e19a08fe1f2c98ca0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;gcAllowVeryLargeObjects&gt; 元素
-在64位平台上，可以允许总共大于2千兆字节的数组。  
+# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt;元素
+在 64 位平台上，启用总大小大于 2 千兆字节 (GB) 的数组。  
   
-## 语法  
+ \<配置 > 元素  
+\<运行时 > 元素  
+\<gcAllowVeryLargeObjects > 元素  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <gcAllowVeryLargeObjects    
    enabled="true|false" />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
 |特性|描述|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指定总大小大于 2 GB的数组是否可以在 64 位平台上。|  
+|---------------|-----------------|  
+|`enabled`|必需的特性。<br /><br /> 指定是否在 64 位平台上启用的总大小大于 2 GB 的数组。|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
-|-------|--------|  
-|`false`|总大小超过2GB的数组是不被允许的。  这是默认值。|  
-|`true`|总大小大于2GB的数组在64位平台上是被允许的。|  
+|-----------|-----------------|  
+|`false`|未启用大于总大小中的 2 GB 的数组。 这是默认设置。|  
+|`true`|在 64 位平台上启用大于总大小中的 2 GB 的数组。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含关于运行时初始化选项的信息。|  
+|`runtime`|包含有关运行时初始化选项的信息。|  
   
-## 备注  
- 通过在应用程序的配置文件使用此元素启用超过 2 GB 的大小的数组，但是这不会更改对象范围或数组大小的其他限制：  
+## <a name="remarks"></a>备注  
+ 在应用程序配置文件中使用此元素启用数组是大于 2 GB 的大小，但不会更改对象大小或数组大小上的其他限制：  
   
--   数组中的元素最大值是 <xref:System.UInt32.MaxValue?displayProperty=fullName>。  
+-   数组中元素的最大数目是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
--   在所有一维的字节数组和数组的单字节结构最大索引为 2,147,483,591 \(0x7FFFFFC7\)， 其他类型的索引为2,146,435,071 \(0X7FEFFFFF\)。  
+-   任何单个维度中的最大索引是 2,147,483,591 字节数组和单字节结构的数组 (0x7FFFFFC7) 和其他类型的 2,146,435,071 (0X7FEFFFFF)。  
   
 -   字符串和其他非数组对象的最大大小保持不变。  
   
 > [!CAUTION]
->  在启用此功能之前，请确保您的应用程序不包括不安全代码，假定所有数组的大小小于 2 GB。  例如，使用不安全的数组代码作为缓冲区，可能容易引起缓冲区溢出，假设编写数组不会超过 2 GB。  
+>  启用此功能前，请确保你的应用程序不包括假设所有数组小于 2 GB 大小的不安全代码。 例如，使用数组作为缓冲区的不安全代码可能容易受到缓冲区溢出如果写入假定数组将不会超过 2 GB。  
   
-## 示例  
- 下面的示例演示如何为某个应用程序启用这项功能。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何对应用程序启用此功能。  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <gcAllowVeryLargeObjects enabled="true" />  
@@ -83,6 +85,6 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

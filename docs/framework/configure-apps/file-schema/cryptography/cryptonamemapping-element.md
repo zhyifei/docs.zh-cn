@@ -1,69 +1,71 @@
 ---
-title: "&lt;cryptoNameMapping&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoNameMapping> 元素"
-  - "cryptoNameMapping 元素"
+title: "&lt;cryptoNameMapping&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping
+helpviewer_keywords:
+- <cryptoNameMapping> element
+- cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 2156c6441190b530c48a70e67e93e4806d20b199
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cryptoNameMapping&gt; 元素
+# <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;元素
 包含类到友好名称的映射。  
   
-## 语法  
+ \<configuration>  
+\<mscorlib >  
+\<g s >  
+\<cryptoNameMapping >  
   
-```  
+## <a name="syntax"></a>语法  
   
-      <cryptoNameMapping>   
+```xml  
+      <cryptoNameMapping>   
 </cryptoNameMapping>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
-|--------|--------|  
-|`cryptoClasses`|包含密码类的列表，这些类具有到**\<nameEntry\>**元素中的友好名称的映射。|  
-|`nameEntry`|将类名映射为友好算法名称，这样允许一个类具有多个友好名称。|  
+|元素|描述|  
+|-------------|-----------------|  
+|`cryptoClasses`|包含密码类的列表，这些类具有到 **\<nameEntry>** 元素中的友好名称的映射。|  
+|`nameEntry`|将类名称映射到友好算法名称，允许一个类具有多个友好名称。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`cryptographySettings`|包含密码设置。|  
+|`cryptographySettings`|包含加密设置。|  
 |`cryptoNameMapping`|包含类到友好名称的映射。|  
-|`mscorlib`|包含\<cryptographySettings\>元素。|  
+|`mscorlib`|包含\<g s > 元素。|  
   
-## 示例  
- 下面的示例演示如何使用**\<cryptoNameMapping\>**元素来引用密码类和配置运行时。  然后，您就可以将字符串“RSA”传递到 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> 方法并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回一个 `MyCryptoRSAClass` 对象。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用 **\<cryptoNameMapping >**元素来引用密码类并配置运行时。 然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -82,8 +84,8 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## 请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  
  [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

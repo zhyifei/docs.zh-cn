@@ -1,113 +1,112 @@
 ---
-title: "Module 语句 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Module"
-  - "vb.Module"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "类 [Visual Basic], 与模块"
-  - "声明, 模块"
-  - "模块语句"
-  - "模块"
-  - "模块, 类"
-  - "模块, 声明"
-  - "标准模块"
+title: "Module 语句"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Module
+- vb.Module
+helpviewer_keywords:
+- modules, classes
+- modules
+- Module statement [Visual Basic]
+- modules, declaring
+- standard modules
+- classes [Visual Basic], vs. modules
+- declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Module 语句
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-声明模块的名称，并引入模块包含的变量、属性、事件和过程的定义。  
+# <a name="module-statement"></a>Module 语句
+声明的模块的名称，并引入的变量、 属性、 事件和模块包含的过程的定义。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-[ <attributelist> ] [ accessmodifier ]  Module name  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ]  Module name  
+    [ statements ]  
 End Module  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `attributelist`  
- 可选。  请参见 [特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ 可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `accessmodifier`  
- 可选。  可以是如下内容之一：  
+ 可选。 可以是以下各项之一：  
   
 -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- 请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `name`  
- 必选。  此模块的名称。  请参见 [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必需。 此模块的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
- 可选。  定义此模块的变量、属性、事件、过程和嵌套类型的语句。  
+ 可选。 定义变量、 属性、 事件、 过程和嵌套的类型，此模块的语句。  
   
  `End Module`  
- 终止 `Module` 定义。  
+ 终止`Module`定义。  
   
-## 备注  
- `Module` 语句定义了在其整个命名空间中都可用的引用类型。  “模块”（有时称为“标准模块”）类似于类，但有一些重要的差别。  每个模块均正好有一个实例，并且无需创建此实例或将其赋给变量。  模块不支持继承，也不实现接口。  请注意，从类或结构是类型这一意义上说，模块并非类型 \- 您无法将编程元素声明为具有模块的数据类型。  
+## <a name="remarks"></a>备注  
+ A`Module`语句定义引用类型可在其命名空间可用。 A*模块*(有时称为*标准模块*) 类似于类，但有一些重要区别。 每个模块具有恰好一个实例，不需要创建或分配给变量。 模块不支持继承或实现接口。 请注意，模块不是*类型*在类或结构的意义上，你不能声明为具有模块的数据类型的编程元素。  
   
- 仅可以在命名空间级别使用 `Module`。  这意味着模块的声明上下文必须是源文件或命名空间，而不能是类、结构、模块、接口、过程或块。  无法在一个模块或任何类型中嵌套另一个模块。  有关更多信息，请参见[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 你可以使用`Module`只能在命名空间级别。 这意味着*声明上下文*模块必须为源文件或命名空间，并且不能为类、 结构、 模块、 接口、 过程或块。 不能嵌套在另一个模块内的任何类型或模块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 模块具有与程序相同的生存期。  由于它的成员全都为 `Shared`，因此，它们也都具有与程序相同的生存期。  
+ 模块具有程序相同的生存期。 因为所有其成员`Shared`，它们还具有相等的程序的生存期。  
   
- 模块默认为 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 访问级别。  可以使用访问修饰符来调整它们的访问级别。  有关更多信息，请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 模块默认为[友元](../../../visual-basic/language-reference/modifiers/friend.md)访问。 你可以调整其访问级别有访问修饰符。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
- 模块的所有成员均隐式地为 `Shared`。  
+ 模块的所有成员都都隐式`Shared`。  
   
-## 类和模块  
- 这些元素具有许多相似性，但是也存在一些重要的差异。  
+## <a name="classes-and-modules"></a>类和模块  
+ 这些元素包含的许多相似之处，但有一些重要的区别。  
   
--   **术语。**以前的 Visual Basic 版本识别两种类型的模块：类模块（.cls 文件）和标准模块（.bas 文件）。  当前版本会分别调用这些类和模块。  
+-   **术语。** Visual Basic 早期版本识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。 当前版本调用这些*类*和*模块*分别。  
   
--   **共享成员。**可以控制类的成员是共享成员还是实例成员。  
+-   **共享的成员。** 你可以控制类的成员是共享成员还是实例成员。  
   
--   **面向对象。**类是面向对象的，但模块不是。  因此，只能将类实例化为对象。  有关更多信息，请参见 [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+-   **面向对象。** 类是面向对象的但模块不是。 因此，只能将类可以将实例化为对象。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   **修饰符。**所有模块成员均隐式地为 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)。  在声明成员时，无法使用 `Shared` 关键字，而且无法更改任何成员的共享状态。  
+-   **修饰符。** 所有的模块成员为隐式[共享](../../../visual-basic/language-reference/modifiers/shared.md)。 不能使用`Shared`关键字时声明成员，并且你无法更改任何成员的共享的状态。  
   
--   **继承。**模块无法从除 <xref:System.Object>（所有模块均从它继承）外的任何类型继承。  特别地，一个模块无法从另一个模块继承。  
+-   **继承。** 模块不能从继承任何类型以外<xref:System.Object>，哪些所有模块从继承。 具体而言，一个模块不能继承自另一个。  
   
-     无法在模块定义中使用 [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，即使是指定 <xref:System.Object> 亦为如此。  
+     不能使用[继承语句](../../../visual-basic/language-reference/statements/inherits-statement.md)在模块定义中，即使指定<xref:System.Object>。  
   
--   **默认属性。**不能在模块中定义任何默认属性。  有关更多信息，请参见[Default](../../../visual-basic/language-reference/modifiers/default.md)。  
+-   **默认属性。** 不能在模块中定义的任何默认属性。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
   
-## 行为  
+## <a name="behavior"></a>行为  
   
--   **访问级别。**在模块中，可以利用成员自己的访问级别来声明每个成员。  模块成员默认为 [Public](../../../visual-basic/language-reference/modifiers/public.md) 访问级别，但变量和常数除外，它们默认为 [Private](../../../visual-basic/language-reference/modifiers/private.md) 访问级别。  如果模块的访问级别在限制性上高于其一个成员的访问级别，则指定的模块访问级别将具有优先权。  
+-   **访问级别。** 在模块中，你可以声明每个成员使用其自己的访问级别。 模块成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量，哪些默认为[私有](../../../visual-basic/language-reference/modifiers/private.md)访问。 如果模块具有相比限制更多访问其成员之一，指定的模块访问级别优先。  
   
--   **范围。**模块的范围贯穿其命名空间。  
+-   **作用域。** 模块是在整个命名空间范围内。  
   
-     每个模块成员的范围是整个模块。  请注意，所有成员都会经受类型提升，这将使它们的范围提升到包含模块的命名空间。  有关更多信息，请参见 [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
+     每个模块成员的作用域是整个模块。 请注意，所有成员都会都经受*类型提升*，这将导致它们提升为包含该模块的命名空间的范围。 有关详细信息，请参阅[类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
--   **限定。**可以在一个项目中具有多个模块，而且可以在两个或更多个模块中声明名称相同的成员。  但是，如果从模块外引用此类成员，则必须用适当的模块名称来限定此类成员。  有关更多信息，请参见 [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+-   **限定。** 你可以在项目中，有多个模块，你可以声明具有两个或多个模块中的同名成员。 但是，如果从该模块以外的引用为必须限定对具有适当的模块名称的此类的成员的任何引用。 有关详细信息，请参阅[对声明的元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## 请参阅  
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)   
+## <a name="see-also"></a>另请参阅  
+ [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
  [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

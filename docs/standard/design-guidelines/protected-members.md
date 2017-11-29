@@ -1,48 +1,46 @@
 ---
-title: "受保护的成员 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "受保护成员 [.NET Framework]"
-  - "受保护的成员"
-  - "未密封的类 [.NET Framework]"
-  - "类 [.NET Framework]，受保护成员"
-  - "未密封的类"
-  - "自定义类行为"
+title: "受保护的成员"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- members [.NET Framework], protected
+- protected members
+- classes [.NET Framework], unsealed
+- classes [.NET Framework], protected members
+- unsealed classes
+- customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7c3aacd0f08641c01200f0b1791a78413a306590
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 受保护的成员
-受保护的成员本身不提供任何可扩展性，但这些用户可通过子类化可扩展性功能更强大。 它们可以用于公开高级自定义选项，而不必要地复杂化的主公共接口。  
+# <a name="protected-members"></a>受保护的成员
+受保护的成员本身不提供任何可扩展性，但它们可以使通过子类化的扩展性功能更强大。 它们可以用于公开高级自定义选项，而不必要地并发的主要公共接口。  
   
- 框架设计人员需要请慎用受保护的成员，因为"保护"的名称可以提供安全的错觉。 任何人都能够对子类的未密封类和访问受保护成员，并用于公共成员的防御性编码做法适用于受保护成员，因此完全相同。  
+ 请小心使用受保护的成员，因为"保护"的名称可以提供安全的 false 意义上所需要的 framework 设计器。 任何人都可以为子类未密封的类和访问受保护成员，以及用于公共成员的防御性编码做法适用于受保护的成员的因此完全相同。  
   
- **✓ 请考虑** 使用受保护的高级自定义的成员。  
+ **请考虑 ✓**使用受保护的高级自定义的成员。  
   
- **✓ 执行** 处理为在为进行安全、 文档和兼容性分析的公共未密封类为受保护的成员。  
+ **✓ 执行**处理未密封类作为公共以便进行安全、 文档和兼容性分析中的受保护的成员。  
   
- 任何人都可以继承自的类，以及访问受保护的成员。  
+ 任何人都可以从类继承，并且可以访问受保护的成员。  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## 请参阅  
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
  [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

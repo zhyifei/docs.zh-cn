@@ -1,29 +1,24 @@
 ---
-title: "如何︰ 查找 Namespace (Visual Basic 中) 中的所有节点 |Microsoft 文档"
+title: "如何： 查找 Namespace (Visual Basic 中) 中的所有节点"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4216ba0ab8c8026705a82f505807fb4b1f31e424
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 8664d29e27673e1ad08d3d72b29d8dc9c711a9fb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何︰ 查找 Namespace (Visual Basic 中) 中的所有节点
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何： 查找 Namespace (Visual Basic 中) 中的所有节点
 您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  
   
 ## <a name="example"></a>示例  
@@ -68,7 +63,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>示例  
  下面的查询所访问的 XML 文件包含两个位于不同命名空间中的采购订单。 该查询只用其中一个命名空间中的元素创建一个新树。  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 合并的采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：合并的采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -125,4 +120,3 @@ End Module
   
 ## <a name="see-also"></a>另请参阅  
  [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

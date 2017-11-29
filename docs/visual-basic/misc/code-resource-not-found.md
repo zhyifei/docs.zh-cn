@@ -1,24 +1,26 @@
 ---
-title: "未找到代码资源 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID454"
+title: "未找到代码资源"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID454
 ms.assetid: f0e53e96-c3de-41e2-bf98-e72f93802dfa
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 181921f2bebc56e98291e99c8f7fa868e02c7826
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 未找到代码资源
+# <a name="code-resource-not-found"></a>未找到代码资源
 对代码资源中的过程进行了调用，但找不到代码资源。  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
 -   检查资源是否可用以及是否引用正确。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,33 +1,39 @@
 ---
-title: "查找行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查找行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 96a65761cb6ddf31c0bb4c14077aed37336183f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 查找行
-可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法，根据排序关键字值搜索行。  **Find** 和 **FindRows** 方法中的搜索值是否区分大小写取决于基础 <xref:System.Data.DataTable> 的 **CaseSensitive** 属性。  搜索值必须完全匹配现有排序关键字值才能返回结果。  
+# <a name="finding-rows"></a>查找行
+可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，根据排序关键字值搜索行。 中值的区分大小写的搜索**查找**和**FindRows**方法由**CaseSensitive**基础属性<xref:System.Data.DataTable>。 搜索值必须完全匹配现有排序关键字值才能返回结果。  
   
- **Find** 方法返回一个整数，该整数表示匹配搜索条件的 <xref:System.Data.DataRowView> 的索引。  如果多个行匹配搜索条件，则只返回第一个匹配 **DataRowView** 的索引。  如果未找到匹配项，**Find** 将返回 \-1。  
+ **查找**方法返回一个整数，它的索引<xref:System.Data.DataRowView>匹配搜索条件。 如果多个行匹配搜索条件，仅第一个匹配的索引**DataRowView**返回。 如果不找到任何匹配项，**查找**返回-1。  
   
- 若要返回匹配多个行的搜索结果，可以使用 **FindRows** 方法。  **FindRows** 的工作方式与 **Find** 方法类似，不同的只是前者返回引用 **DataView** 中所有匹配行的 **DataRowView** 数组。  如果未找到匹配项，**DataRowView** 数组将为空。  
+ 若要返回匹配多个行的搜索结果，请使用**FindRows**方法。 **FindRows**工作方式就像**查找**方法，它返回不同**DataRowView**引用中的所有匹配行的数组**DataView**。 如果不找到任何匹配项， **DataRowView**数组将为空。  
   
- 若要使用 **Find** 或 **FindRows** 方法，必须通过将 **ApplyDefaultSort** 设置为 **true** 或通过使用 **Sort** 属性来指定排序顺序。  如果未指定排序顺序，则将引发异常。  
+ 若要使用**查找**或**FindRows**方法必须指定排序顺序通过设置**ApplyDefaultSort**到**true**或通过使用**排序**属性。 如果未指定排序顺序，则将引发异常。  
   
- **Find** 和 **FindRows** 方法将一个值数组用作输入，该数组的长度与排序顺序所包含的列数相匹配。  在对单个列进行排序的情况下，可以传递单个值。  对于包含多个列的排序顺序，可传递一个对象数组。  请注意，当对多个列进行排序时，对象数组中的值必须匹配在 **DataView** 的 **Sort** 属性中指定的列的顺序。  
+ **查找**和**FindRows**方法将一个值数组作为输入长度与匹配的排序顺序中的列数。 在对单个列进行排序的情况下，可以传递单个值。 对于包含多个列的排序顺序，可传递一个对象数组。 请注意，对多个列进行排序，对象数组中的值必须匹配中指定的列的顺序**排序**属性**DataView**。  
   
- 以下代码示例显示对具有单个列排序顺序的 **DataView** 调用的 **Find** 方法。  
+ 下面的代码示例演示**查找**针对正在调用的方法**DataView**具有单个列排序顺序。  
   
 ```vb  
 Dim custView As DataView = _  
@@ -43,7 +49,6 @@ Else
     custView(rowIndex)("CustomerID").ToString(), _  
     custView(rowIndex)("CompanyName").ToString())  
 End If  
-  
 ```  
   
 ```csharp  
@@ -60,7 +65,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- 如果 **Sort** 属性指定多个列，则必须按 **Sort** 属性指定的顺序为每个列传递包含搜索值的对象数组，如以下代码示例所示。  
+ 如果你**排序**属性指定多个列，必须传递包含每个列的搜索值的对象数组中指定的顺序**排序**属性，如下面的代码示例所示。  
   
 ```vb  
 Dim custView As DataView = _  
@@ -80,7 +85,6 @@ Else
       myDRV("CompanyName").ToString(), myDRV("ContactName").ToString())  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -99,8 +103,8 @@ else
       myDRV["ContactName"].ToString());  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,49 +1,48 @@
 ---
-title: "MustOverride (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.MustOverride"
-  - "MustOverride"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "元素, 纯虚拟"
-  - "MustOverride 关键字"
-  - "重写, MustOverride 关键字"
-  - "过程, 重写"
-  - "过程, 重新定义"
-  - "属性 [Visual Basic], 重写"
-  - "属性 [Visual Basic], 重新定义"
-  - "纯虚拟元素"
-  - "虚拟元素, 纯"
+title: MustOverride (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.MustOverride
+- MustOverride
+helpviewer_keywords:
+- virtual elements [Visual Basic], pure
+- elements [Visual Basic], pure virtual
+- properties [Visual Basic], redefining
+- procedures [Visual Basic], overriding
+- overriding, MustOverride keyword
+- procedures [Visual Basic], redefining
+- pure virtual elements [Visual Basic]
+- MustOverride keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a2f7bdba4b01bd307e0c52802509669f772b5eb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# MustOverride (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定在这个类中没有实现的属性或过程，且必须在派生类中重写属性或过程后才可以使用。  
+# <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
+指定属性或过程中此类未实现，并且必须重写派生类中才可以使用。  
   
-## 备注  
- 只能在属性和过程声明语句中使用 `MustOverride`。  指定 `MustOverride` 的属性或过程必须是类的成员，并且该类必须标记为 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
+## <a name="remarks"></a>备注  
+ 只能在属性或过程声明语句中使用 `MustOverride`。 属性或过程的指定`MustOverride`必须是类的成员并且类必须加以标记[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   **不完整的声明。**在指定 `MustOverride` 时，请勿为属性或过程提供任何其他代码行，即使 `End Function`、`End Property` 或 `End Sub` 语句也不提供。  
+-   **不完整的声明。** 当指定`MustOverride`，不会不提供任何其他代码行的属性或过程，即使`End Function`， `End Property`，或`End Sub`语句。  
   
--   **组合修饰符。**不能在同一个声明中同时指定 `MustOverride` 与 `NotOverridable`、`Overridable` 或 `Shared`。  
+-   **组合的修饰符。** 不能指定`MustOverride`连同`NotOverridable`， `Overridable`，或`Shared`同一声明中。  
   
--   **隐藏与重写。**隐藏和重写均重新定义继承的元素，但是两种方法之间存在重大差异。  有关更多信息，请参见 [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+-   **隐藏和重写。** 隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。 有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
--   **替换术语。**除用在重写中之外，不能再在其他地方使用的元素有时称为“纯虚拟”元素。  
+-   **替换术语。** 除不能用作重写中的元素有时称为*纯虚拟*元素。  
   
  `MustOverride` 修饰符可用于下面的上下文中：  
   
@@ -53,10 +52,10 @@ caps.handback.revision: 17
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 请参阅  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>另请参阅  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [关键字](../../../visual-basic/language-reference/keywords/index.md)  
+ [在 Visual Basic 中隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

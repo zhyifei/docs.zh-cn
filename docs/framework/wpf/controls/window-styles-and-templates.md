@@ -1,60 +1,62 @@
 ---
-title: "Window 样式和模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], 窗口"
-  - "部件 [WPF], 窗口"
-  - "状态 [WPF], 窗口"
-  - "样式 [WPF], 窗口"
-  - "模板 [WPF], 窗口"
-  - "窗口 [WPF], 样式和模板"
+title: "Window 样式和模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], Window
+- templates [WPF], Window
+- styles [WPF], Window
+- ControlTemplate [WPF], Window
+- Window [WPF], styles and templates
+- states [WPF], Window
 ms.assetid: 2dfdf025-347b-4342-bf28-95206c273f35
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0415bfae8e1065759efaac1a779655444451fa24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Window 样式和模板
-本主题介绍 <xref:System.Windows.Window> 控件的样式和模板。  您可以修改默认的 <xref:System.Windows.Controls.ControlTemplate>，以便为控件提供一个独特的外观。  有关更多信息，请参见[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="window-styles-and-templates"></a>Window 样式和模板
+本主题介绍的样式和模板的<xref:System.Windows.Window>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## 窗口部件  
- <xref:System.Windows.Window> 控件没有任何命名部件。  
+## <a name="window-parts"></a>窗口部分  
+ <xref:System.Windows.Window>控件不具有任何已命名的部件。  
   
-## 窗口状态  
- 下表列出了 <xref:System.Windows.Window> 控件的可视状态。  
+## <a name="window-states"></a>窗口状态  
+ 下表列出的可视状态<xref:System.Windows.Window>控件。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Valid|ValidationStates|该控件使用 <xref:System.Windows.Controls.Validation> 类，<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `false`。|  
-|InvalidFocused|ValidationStates|当 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `true` 时，控件具有焦点。|  
-|InvalidUnfocused|ValidationStates|当 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `true` 时，控件没有焦点。|  
+|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`已在控件有焦点。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`具有该控件没有焦点。|  
   
-## Window ControlTemplate 示例  
- 下面的示例演示如何为 <xref:System.Windows.Window> 控件定义 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="window-controltemplate-example"></a>窗口 ControlTemplate 示例  
+ 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Window>控件。  
   
- [!code-xml[ControlTemplateExamples#Window](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/window.xaml#window)]  
+ [!code-xaml[ControlTemplateExamples#Window](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/window.xaml#window)]  
   
- <xref:System.Windows.Controls.ControlTemplate> 使用下面的一个或多个资源。  
+ <xref:System.Windows.Controls.ControlTemplate>使用一个或多个以下资源。  
   
- [!code-xml[ControlTemplateExamples#ResizeGrip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/resizegrip.xaml#resizegrip)]  
-[!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#ResizeGrip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/resizegrip.xaml#resizegrip)]  
+[!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 有关完整示例，请参见 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)（使用 ControlTemplates 设置样式的示例）。  
+ 有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 请参阅  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
