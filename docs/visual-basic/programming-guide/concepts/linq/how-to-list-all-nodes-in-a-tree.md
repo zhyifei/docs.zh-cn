@@ -1,31 +1,27 @@
 ---
-title: "如何︰ 列出树 (Visual Basic 中) 中的所有节点 |Microsoft 文档"
+title: "如何： 列出树 (Visual Basic 中) 中的所有节点"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何︰ 列出树 (Visual Basic 中) 中的所有节点
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何： 列出树 (Visual Basic 中) 中的所有节点
 有时，列出树中的所有节点会有帮助。 它可帮助准确了解方法或属性是如何影响树的。 以文本形式列出所有节点的一种方法是生成准确逐一地标识树中所有节点的 XPath 表达式。  
   
- 使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 执行 XPath 表达式不特别有用。 XPath 表达式的性能不如 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询，并且 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询的功能更强大。 但作为标识 XML 树中节点的一种方式，XPath 可以有效地工作。  
+ 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 执行 XPath 表达式不特别有用。 XPath 表达式的性能不如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询，并且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的功能更强大。 但作为标识 XML 树中节点的一种方式，XPath 可以有效地工作。  
   
 ## <a name="example"></a>示例  
  本示例演示一个名为 `GetXPath` 的函数，该函数为 XML 树中的每个节点生成一个特定的 XPath 表达式。 即使节点位于命名空间中，此示例也可生成相应的 XPath 表达式。 这些 XPath 表达式通过使用命名空间前缀生成。  
@@ -245,7 +241,7 @@ End Module
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 13cbd3a5b53ea9b0f1acb22684b6a28639d00751
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="classes"></a>类
 *类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码就可以通过创建分配给变量的*对象*或*实例*来使用该类。 变量会一直保留在内存中，直至对变量的所有引用超出范围为止。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](language-reference/keywords/static.md)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是*实例变量*来访问它。 有关详细信息，请参阅[静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
 
@@ -84,5 +82,4 @@ ms.lasthandoff: 09/14/2017
 [构造函数](programming-guide/classes-and-structs/constructors.md)   
 [终结器](programming-guide/classes-and-structs/destructors.md)   
 [对象](programming-guide/classes-and-structs/objects.md)
-
 

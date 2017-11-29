@@ -1,43 +1,23 @@
 ---
 title: "集合初始值设定项 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.CollectionInitializer
-dev_langs:
-- VB
-helpviewer_keywords:
-- collection initializers [Visual Basic]
+f1_keywords: vb.CollectionInitializer
+helpviewer_keywords: collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5ec0179df50df453d6058a4b910d17561394140d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始值设定项 (Visual Basic)
 集合初始值设定项提供了用于创建集合并在其中填充一组初始值的缩短语法。 若要通过一组已知值（例如，菜单选项或类别列表、一组初始数字值、字符串（如日期或月份名称）或地理位置（如用于验证的州或省/自治区/直辖市列表）静态列表）创建集合，将会发现集合初始值设定项非常有用。  
@@ -103,14 +83,13 @@ ms.lasthandoff: 07/28/2017
 |[如何：创建集合初始值设定项所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|展示了如何在实现 `IEnumerable` 的集合类中添加 `Add` 方法，从而启用集合初始值设定项。|  
   
 ## <a name="see-also"></a>另请参阅  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [自动实现的属性](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [如何：在 Visual Basic 中初始化数组变量](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)   
- [本地类型推断](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+ [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [自动实现的属性](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [如何：在 Visual Basic 中初始化数组变量](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
+ [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [如何：创建项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-

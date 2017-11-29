@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化错误：管理用户体验
 公共语言运行时 (CLR) 激活系统确定将用于运行托管应用程序代码的 CLR 版本。 在某些情况下，激活系统可能无法找到要加载的 CLR 版本。 如果应用程序所需的 CLR 版本无效或未安装在指定计算机上，则通常会出现这种情况。 如果找不到请求的版本，CLR 激活系统将从调用的函数或接口返回一个 HRESULT 错误代码，并且会向正在运行该应用程序的用户显示一条错误消息。 这篇文章提供 HRESULT 代码的列表，并解释如何才能防止显示错误消息。  
@@ -102,8 +95,7 @@ ms.lasthandoff: 07/28/2017
  从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，CLR 激活日志记录获得了极大的改进，包括何时和为什么会显示初始化错误消息的日志条目。 有关详细信息，请参阅[如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
- [如何：配置应用以支持 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
- [如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
+ [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ [如何：将应用程序配置为支持 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+ [如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  [在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)
-

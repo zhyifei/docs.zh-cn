@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - runtime, metadata
 - languages, interoperability
@@ -18,16 +21,15 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5469f649d594553e1567d6d611cfafcd28e2c5b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>元数据和自描述组件
 在过去，以一种语言编写的软件组件（.exe 或 .dll）不能方便地使用以另一种语言编写的软件组件。 在这个问题的解决上，COM 向前迈进了一步。 .NET Framework 允许编译器向所有的模块和程序集发出附加的说明性信息，从而使组件互用更加简单。 这种叫做“元数据”的信息有助于组件无缝交互。  
@@ -176,4 +178,3 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 |标题|描述|  
 |-----------|-----------------|  
 |[特性](../../docs/standard/attributes/index.md)|描述如何应用特性、编写自定义特性及检索存储在特性中的信息。|
-

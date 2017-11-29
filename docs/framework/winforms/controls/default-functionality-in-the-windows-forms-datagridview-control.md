@@ -1,60 +1,61 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的默认功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据网格, DataGridView 控件中的默认功能"
-  - "DataGridView 控件 [Windows 窗体], 默认功能"
+title: "Windows 窗体 DataGridView 控件中的默认功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体 DataGridView 控件中的默认功能
-Windows 窗体控件 <xref:System.Windows.Forms.DataGridView> 为用户提供大量的默认功能。  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的默认功能
+Windows 窗体<xref:System.Windows.Forms.DataGridView>控件向用户提供大量的默认功能。  
   
-## 默认功能  
- 默认情况下，<xref:System.Windows.Forms.DataGridView> 控件具有下列特点：  
+## <a name="default-functionality"></a>默认功能  
+ 默认情况下，<xref:System.Windows.Forms.DataGridView>控件：  
   
--   自动显示垂直滚动表时保持可见的列标头和行标头。  
+-   自动显示列标题和垂直滚动表时保持可见的行标题。  
   
--   拥有行标头，其中包含当前行的选中指示符。  
+-   具有行标头，其中包含当前行的选择指示器。  
   
--   在第一个单元格中拥有选择矩形。  
+-   已选择矩形中的第一个单元。  
   
--   拥有列，当用户双击列分隔符时可自动调整大小。  
+-   具有当用户双击列分隔线可以自动调整的列。  
   
--   通过应用程序的 `Main` 方法调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法时，自动支持 Windows XP 和 Windows Server 2003 系列中的视觉样式。  
+-   自动支持在 Windows XP 和 Windows Server 2003 系列上的视觉样式时<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>从应用程序的调用方法`Main`方法。  
   
- 此外，默认情况下可以编辑 <xref:System.Windows.Forms.DataGridView> 控件的内容：  
+ 此外，内容<xref:System.Windows.Forms.DataGridView>控件可以编辑默认情况下：  
   
--   用户在某个单元格中双击或按 F2 时，此控件将自动使该单元格自动进入编辑模式，并在用户键入时自动更新单元格的内容。  
+-   如果用户双击或按下 F2 在单元格中，该控件将自动将单元格置于编辑模式，并更新的用户类型作为单元格的内容。  
   
--   如果用户滚动至网格的结尾，将会看到用于添加新记录的行。  用户单击此行时，会向 <xref:System.Windows.Forms.DataGridView> 控件添加使用默认值的新行。  用户按 Esc 时，此新行将消失。  
+-   如果用户滚动到网格的结尾时，用户将看到用于添加新记录行是否存在。 当用户单击此行时，将新行添加到<xref:System.Windows.Forms.DataGridView>控件，使用默认值。 当用户按 ESC 时，此新行将会消失。  
   
--   如果用户单击行标头，将会选中整行。  
+-   如果用户单击行标题，则选择整个行。  
   
- 通过设置 <xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性将其绑定到数据源时，该控件可以：  
+ 当绑定<xref:System.Windows.Forms.DataGridView>控件添加到数据源通过设置其<xref:System.Windows.Forms.DataGridView.DataSource%2A>属性、 控件：  
   
--   将数据源列的名称自动用作列标头文本。  
+-   自动使用数据源的列的名称作为列标题文本。  
   
--   用数据源的内容进行填充。  <xref:System.Windows.Forms.DataGridView> 列是为数据源中的每个列自动创建的。  
+-   使用数据源的内容填充。 <xref:System.Windows.Forms.DataGridView>为数据源中的每一列自动创建列。  
   
--   为表中的每个可见行创建一行。  
+-   表中创建每个可见行的行。  
   
--   用户单击列标头时，将根据基础数据自动对行进行排序。  
+-   自动对基于基础数据，当用户单击列标题行进行排序。  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

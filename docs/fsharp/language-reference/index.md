@@ -1,6 +1,6 @@
 ---
 title: "F# 语言参考"
-description: "F# 语言参考"
+description: "F # 语言功能从查找信息语言令牌、 概念、 类型、 表达式和编译器支持的结构主题对此引用。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e0b7058513b0487902b2a57b889e77df1abfef98
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="f-language-reference"></a>F# 语言参考
 
-本部分提供对 F# 语言的参考，F# 语言是面向 .NET 平台的多范例编程语言。 F# 语言支持函数式、命令式、面向对象的编程模式。
+本部分是对 F # 语言，面向.NET 多范例编程语言的引用。 F# 语言支持函数式、命令式、面向对象的编程模式。
 
 
 ## <a name="f-tokens"></a>F# 标记

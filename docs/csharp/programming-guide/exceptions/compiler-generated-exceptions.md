@@ -1,38 +1,19 @@
 ---
 title: "编译器生成的异常（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], compiler-generated
+helpviewer_keywords: exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d1417e42f588978d5fc1beca4ad55463502ee219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>编译器生成的异常（C# 编程指南）
 当基本操作失败时，.NET Framework 的公共语言运行时 (CLR) 会自动引发一些异常。 这些异常及其错误条件在下表中列出。  
@@ -51,10 +32,9 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.TypeInitializationException>|静态构造函数引发异常并且没有兼容的 `catch` 子句来捕获异常时引发。|  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)   
- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
+ [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
-

@@ -1,46 +1,27 @@
 ---
 title: "如何：在同一目录中创建文件副本 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- File.Copy
-dev_langs:
-- VB
+f1_keywords: File.Copy
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
-- files, copying
-- CopyFile method, copying files in Visual Basic
+- files [Visual Basic], copying
+- CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: af592e16bb1f7f0bbb188b2ea39394ec1074d302
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7e15b85a72c9b2504551174f5b104bdbb01cf3f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>如何：在同一目录中创建文件副本 (Visual Basic)
 使用 `My.Computer.FileSystem.CopyFile` 方法复制文件。 使用参数可以覆盖现有文件、重命名文件、显示操作的进度以及允许用户取消操作。  
@@ -89,11 +70,10 @@ ms.lasthandoff: 07/28/2017
 -   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>   
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   
- [如何：将具有特定模式的文件复制到目录中](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)   
- [如何：在不同的目录中创建文件的副本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
- [如何：将一个目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
+ [如何：将具有特定模式的文件复制到目录中](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [如何：在不同的目录中创建文件的副本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [如何：将一个目录复制到另一个目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  [如何：重命名文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
-

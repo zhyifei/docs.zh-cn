@@ -1,76 +1,79 @@
 ---
-title: "在 Win32 和 WPF 之间共享消息循环 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "互操作性 [WPF], Win32"
-  - "消息循环 [WPF]"
-  - "共享消息循环"
-  - "Win32 代码, 共享消息循环"
+title: "在 Win32 和 WPF 之间共享消息循环"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Win32 code [WPF], sharing message loops
+- message loops [WPF]
+- sharing message loops [WPF]
+- interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dcf8baa87038bc5625d46968b39d759daae25cbc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Win32 和 WPF 之间共享消息循环
-本主题介绍如何通过使用 <xref:System.Windows.Threading.Dispatcher> 中公开的现有消息循环，或者通过在互操作代码的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 一端创建单独的消息循环来实现消息循环，以便与 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 进行互操作。  
+# <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之间共享消息循环
+本主题介绍如何实现与互操作的消息循环[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，通过使用现有消息中的循环公开<xref:System.Windows.Threading.Dispatcher>或通过创建单独的消息循环上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]侧的互操作代码。  
   
-## ComponentDispatcher 和消息循环  
- 互操作和键盘事件支持的一般方案是实现 <xref:System.Windows.Interop.IKeyboardInputSink>，或者从已经实现 <xref:System.Windows.Interop.IKeyboardInputSink> 的类（如 <xref:System.Windows.Interop.HwndSource> 和 <xref:System.Windows.Interop.HwndHost>）创建子类。  但是，键盘接收器支持不能解决您在通过互操作边界发送和接收消息时产生的所有可能的消息循环需要。  为了帮助规范化应用程序消息循环体系结构，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了 <xref:System.Windows.Interop.ComponentDispatcher> 类，它为消息循环定义了一个必须遵循的简单协议。  
+## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher 和消息循环  
+ 间的互操作和键盘事件支持的一般方案是实现<xref:System.Windows.Interop.IKeyboardInputSink>，或从已实现的类的子类化<xref:System.Windows.Interop.IKeyboardInputSink>，如<xref:System.Windows.Interop.HwndSource>或<xref:System.Windows.Interop.HwndHost>。 但是，键盘接收器支持不能解决你可能必须发送和接收跨互操作边界的消息时的所有可能的消息循环需求。 若要帮助正式化应用程序消息循环的体系结构，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供<xref:System.Windows.Interop.ComponentDispatcher>类，该类定义消息循环，以按照简单协议。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 是一个可公开若干成员的静态类。  每个方法的范围都隐式依赖于调用线程。  消息循环必须在关键时刻（如下一节所定义）调用某些 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。  
+ <xref:System.Windows.Interop.ComponentDispatcher>是一个静态类，公开多个成员。 每个方法的作用域是隐式绑定到调用的线程。 消息循环必须调用其中一些[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]在关键时刻 （如在下一节中定义）。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 提供了其他组件（如键盘接收器）可以侦听的事件。  <xref:System.Windows.Threading.Dispatcher> 类按照正确的顺序调用所有适用的 <xref:System.Windows.Interop.ComponentDispatcher> 方法。  如果您要实现自己的消息循环，您的代码需要以类似的方式调用 <xref:System.Windows.Interop.ComponentDispatcher> 方法。  
+ <xref:System.Windows.Interop.ComponentDispatcher>提供 （例如键盘接收器中） 的其他组件可以侦听的事件。 <xref:System.Windows.Threading.Dispatcher>类调用所有相应<xref:System.Windows.Interop.ComponentDispatcher>恰当的顺序的方法。 如果你要实现您自己的消息循环，你的代码负责调用<xref:System.Windows.Interop.ComponentDispatcher>以类似的方式的方法。  
   
- 在线程上调用 <xref:System.Windows.Interop.ComponentDispatcher> 方法将只会调用在该线程上注册的事件处理程序。  
+ 调用<xref:System.Windows.Interop.ComponentDispatcher>在线程上的方法将仅调用在该线程注册的事件处理程序。  
   
-## 编写消息循环  
- 下面是编写您自己的消息循环时将要使用的 <xref:System.Windows.Interop.ComponentDispatcher> 成员检查表：  
+## <a name="writing-message-loops"></a>写入消息循环  
+ 下面是清单<xref:System.Windows.Interop.ComponentDispatcher>如果你编写您自己的消息循环将使用的成员：  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>：您的消息循环应调用此成员，以指明线程是模式线程。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>： 您的消息循环应调用此成员以指示该线程是模式。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>：您的消息循环应调用此成员，以指明线程已还原为非模式线程。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>： 您的消息循环应调用此成员以指示线程已还原为非模式线程。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>：消息循环应调用此成员，以指明 <xref:System.Windows.Interop.ComponentDispatcher> 应引发 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> 事件。  如果 <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> 为 `true`，<xref:System.Windows.Interop.ComponentDispatcher> 将不会引发 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>，但即使 <xref:System.Windows.Interop.ComponentDispatcher> 无法在模式状态下响应该事件，消息循环也可以选择调用 <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>： 您的消息循环应调用此成员，则指示<xref:System.Windows.Interop.ComponentDispatcher>应引发<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>事件。 <xref:System.Windows.Interop.ComponentDispatcher>不会引发<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>如果<xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>是`true`，但也可以选择消息循环调用<xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>即使<xref:System.Windows.Interop.ComponentDispatcher>无法响应在模式状态。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>：您的消息循环应调用此成员，以指明具有新消息。  返回值指明 <xref:System.Windows.Interop.ComponentDispatcher> 事件的侦听器是否处理了该消息。  如果 <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> 返回 `true`（已处理），则调度程序不应再对消息进行任何进一步的处理。  如果返回值为 `false`，则调度程序应调用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函数 `TranslateMessage`，然后调用 `DispatchMessage`。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>： 您的消息循环应调用它表示一条新消息是否可用。 返回值指示是否为侦听器<xref:System.Windows.Interop.ComponentDispatcher>处理事件的消息。 如果<xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>返回`true`（处理），调度程序应进行任何进一步的消息。 如果返回值为`false`，调度程序需要调用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数`TranslateMessage`，然后调用`DispatchMessage`。  
   
-## 使用 ComponentDispatcher 和现有消息处理  
- 如果您依赖固有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 消息循环，下面是您要使用的 <xref:System.Windows.Interop.ComponentDispatcher> 成员检查表。  
+## <a name="using-componentdispatcher-and-existing-message-handling"></a>使用 ComponentDispatcher 和现有消息处理  
+ 下面是清单<xref:System.Windows.Interop.ComponentDispatcher>成员将使用如果依赖于固有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]消息循环。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>：返回应用程序是否已进入模式状态（例如，已推入模式消息循环）。  <xref:System.Windows.Interop.ComponentDispatcher> 可以跟踪此状态，因为该类维护来自消息循环的 <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> 和 <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> 调用的计数。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>： 返回应用程序是否已进入模式状态 （例如，模式的消息循环已推送）。 <xref:System.Windows.Interop.ComponentDispatcher>可以跟踪此状态，因为该类维护的计数<xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>和<xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>从消息循环的调用。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 和 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 事件按照标准规则进行委托调用。  委托按照未指定的顺序进行调用，而所有委托都将得到调用，即使第一个委托将消息标记为已处理时也将如此。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>和<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件遵循标准规则进行委托调用。 未指定顺序调用委托和即使第一个将该消息标记为已处理调用所有委托。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>：指示执行闲置处理（线程没有其他挂起的消息）的适当有效的时间。  如果线程是模式线程，将不会引发 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>： 指示执行空闲处理适当和有效时间 （没有其他挂起消息线程）。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>将不会引发如果线程是模式。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>：针对消息泵处理的所有消息引发。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>： 引发的所有消息泵处理的消息。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>：为 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 期间尚未处理的所有消息引发。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>： 为期间尚未处理的所有消息引发<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>。  
   
- 如果在 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 事件和 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 事件后，事件数据中的引用传递的 `handled` 参数为 `true`，即认为消息已被处理。  如果 `handled` 为 `true`，事件处理程序应忽略该消息，因为这表示不同的处理程序已首先处理该消息。  两个事件的事件处理程序都可以修改该消息。  调度程序应调度修改后的消息，而不是未修改的原始消息。  <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 虽然提供给所有侦听器，但体系结构的意图是，只有包含消息针对的 HWND 的顶级窗口才应调用代码以响应该消息。  
+ 则认为该消息后的处理的如果<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>事件或<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件，`handled`通过在事件数据中的引用传递的参数是`true`。 事件处理程序应忽略该消息，如果`handled`是`true`，因为这意味着不同的处理程序首先处理该消息。 这两个事件的事件处理程序可以修改该消息。 调度程序应调度修改后的消息而非原始不变的消息。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>传递到所有的侦听器，但体系结构的意图是仅包含目标的消息应从该处调用代码以响应消息的 HWND 的顶级窗口。  
   
-## HwndSource 如何处理 ComponentDispatcher 事件  
- 如果 <xref:System.Windows.Interop.HwndSource> 是顶级窗口（没有父 HWND），它将在 <xref:System.Windows.Interop.ComponentDispatcher> 中注册。  如果引发了 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>，并且如果该消息针对的是 <xref:System.Windows.Interop.HwndSource> 或子窗口，则 <xref:System.Windows.Interop.HwndSource> 将调用其 <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TranslateAccelerator%2A>、<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> 和 <xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A> 键盘接收器序列。  
+## <a name="how-hwndsource-treats-componentdispatcher-events"></a>HwndSource 如何处理 ComponentDispatcher 事件  
+ 如果<xref:System.Windows.Interop.HwndSource>为顶级窗口 （没有父级 HWND），它将注册<xref:System.Windows.Interop.ComponentDispatcher>。 如果<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>引发时，如果消息是否适用于<xref:System.Windows.Interop.HwndSource>或子窗口<xref:System.Windows.Interop.HwndSource>调用其<xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TranslateAccelerator%2A>， <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>，<xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A>键盘接收器序列。  
   
- 如果 <xref:System.Windows.Interop.HwndSource> 不是顶级窗口（具有父 HWND），则将不会进行任何处理。  只有顶级窗口应执行处理，而任何互操作方案中都应该存在一个具有键盘接收器支持的顶级窗口。  
+ 如果<xref:System.Windows.Interop.HwndSource>不是顶级窗口 （具有父 HWND），不将任何处理。 只有顶级窗口应执行的处理，且存在预计会具有键盘接收器支持的最上层窗口作为任何互操作方案的一部分。  
   
- 如果在未调用相应的键盘接收器方法之前对 <xref:System.Windows.Interop.HwndSource> 调用了 <xref:System.Windows.Interop.HwndHost.WndProc%2A>，您的应用程序将收到更高级别的键盘事件，如 <xref:System.Windows.UIElement.KeyDown>。  但是，不会调用任何键盘接收器方法，从而避开了所需的键盘输入模型功能，如快捷键支持。  发生这种情况可能是因为消息循环未正确通知 <xref:System.Windows.Interop.ComponentDispatcher> 上的相关线程，或者父 HWND 未调用相应的键盘接收器响应。  
+ 如果<xref:System.Windows.Interop.HwndHost.WndProc%2A>上<xref:System.Windows.Interop.HwndSource>调用而无需首先调用相应的键盘接收器方法，你的应用程序将接收更高的级别的键盘事件如<xref:System.Windows.UIElement.KeyDown>。 但是，任何键盘接收器方法将不调用，从而避开了所需的键盘输入的模型功能，例如访问密钥支持。 这可能是因为消息循环没有正确上通知相关线程<xref:System.Windows.Interop.ComponentDispatcher>，或因为父 HWND 未调用正确键盘接收器响应。  
   
- 如果您使用 <xref:System.Windows.Interop.HwndSource.AddHook%2A> 方法为传递给键盘接收器的消息添加了挂钩，该消息可能不会发送给 HWND。  该消息可能已直接在消息泵级进行了处理，而未提交给 `DispatchMessage` 函数。  
+ 如果通过使用添加挂钩，该消息将转到键盘接收器一条消息可能不为 HWND 会发送<xref:System.Windows.Interop.HwndSource.AddHook%2A>方法。 消息可能已处理在消息泵级别直接而未提交给`DispatchMessage`函数。  
   
-## 请参阅  
- <xref:System.Windows.Interop.ComponentDispatcher>   
- <xref:System.Windows.Interop.IKeyboardInputSink>   
- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [线程处理模型](../../../../docs/framework/wpf/advanced/threading-model.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Interop.ComponentDispatcher>  
+ <xref:System.Windows.Interop.IKeyboardInputSink>  
+ [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)  
  [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)

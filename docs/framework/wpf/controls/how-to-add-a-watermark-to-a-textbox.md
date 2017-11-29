@@ -1,38 +1,44 @@
 ---
-title: "如何：在 TextBox 中添加水印 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "使用背景图像来帮助提高 TextBox 的可用性 [WPF]"
-  - "在文本框内显示背景图像以帮助用户进行输入 [WPF]"
+title: "如何：在 TextBox 中添加水印"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- displaying a background image inside a text box to aid user input [WPF]
+- aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4497b72f229a8f3d62ecb1829fda88ea3d76bbb0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 TextBox 中添加水印
-下面的示例演示在用户输入文本之前，如何通过在 <xref:System.Windows.Controls.TextBox> 的内部显示解释性背景图像来帮助提高 <xref:System.Windows.Controls.TextBox> 的可用性。在用户输入文本时，该图像将被移除。  另外，如果用户移除他们所输入的内容，背景图像会再次还原。  请参见下图。  
+# <a name="how-to-add-a-watermark-to-a-textbox"></a>如何：在 TextBox 中添加水印
+下面的示例演示如何帮助的用途<xref:System.Windows.Controls.TextBox>通过显示内的解释性背景图像<xref:System.Windows.Controls.TextBox>直到用户输入文本，此时删除映像。 此外，背景图像会再次还原如果用户中删除其输入。 请参阅下图中。  
   
- ![具有背景图像的 TextBox](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing\_TextBox\_using\_background\_image")  
+ ![具有背景图像的 TextBox](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  在本示例中，之所以使用背景图像而不只是操作 <xref:System.Windows.Controls.TextBox> 的 <xref:System.Windows.Controls.TextBox.Text%2A> 属性，是因为背景图像不会干扰数据绑定。  
+>  而只操作此示例中使用的背景图像的原因<xref:System.Windows.Controls.TextBox.Text%2A>属性<xref:System.Windows.Controls.TextBox>，是背景图像不会影响使用数据绑定。  
   
-## 示例  
- [!code-xml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
+## <a name="example"></a>示例  
+ [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
   
  [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
-## 请参阅  
- [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)   
+## <a name="see-also"></a>另请参阅  
+ [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

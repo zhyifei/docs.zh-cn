@@ -1,12 +1,9 @@
 ---
 title: "C# 参考"
-ms.date: 2017-02-14
+ms.date: 02/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - Visual C#, language reference
 - language reference [C#]
@@ -14,30 +11,14 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6f885dcf17bb1e6d6cf4ba628b586f2107675c4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="c-reference"></a>C# 参考
 此部分收录了有关 C# 关键字、运算符、特殊字符、预处理器指令、编译器选项以及编译器错误与警告的参考资料。  
@@ -65,13 +46,7 @@ ms.lasthandoff: 09/02/2017
  提供指向 Microsoft Word 格式中的 C# 语言规范的最新版本的指针。  
   
 ## <a name="related-sections"></a>相关章节  
-<!--
- [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
- Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
--->  
- [Microsoft 知识库中的 C# 知识库文章](http://go.microsoft.com/fwlink/?LinkId=70368)  
- 打开 Microsoft 搜索页面，以搜索 MSDN 上提供的知识库文章。  
-  
+
  [C#](../../csharp/index.md) 提供 Visual C# 文档的入口。  
   
  [使用 Visual Studio C# 开发环境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
@@ -79,4 +54,3 @@ ms.lasthandoff: 09/02/2017
   
  [C# 编程指南](../../csharp/programming-guide/index.md)  
  包括有关如何使用 C# 编程语言的信息。
-

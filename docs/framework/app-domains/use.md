@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2dac2238ae9117d3678335748c680d594a8b5c6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-application-domains"></a>使用应用程序域
 应用程序域为公共语言运行时提供隔离单元。 它们在进程中创建和运行。 应用程序域通常由运行时主机创建，运行时主机是一种应用程序，负责向进程加载运行时，并在应用程序域内执行用户代码。 运行时主机创建进程和默认应用程序域，并在其中运行托管代码。 运行时主机包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 07/28/2017
  说明在公共语言运行时开始搜索异常处理程序之前，可如何接收已引发异常的通知。  
   
  [解析程序集加载](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- 提供有关使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件处理程序集加载故障的指导。  
+ 提供有关使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件处理程序集加载故障的指导。  
   
 ## <a name="reference"></a>参考  
  <xref:System.AppDomain>  
@@ -77,4 +75,3 @@ ms.lasthandoff: 07/28/2017
   
  [反射概述](../../../docs/framework/reflection-and-codedom/reflection.md)  
  介绍了如何使用 **Reflection** 类获取程序集的信息。
-

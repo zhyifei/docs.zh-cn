@@ -1,28 +1,31 @@
 ---
-title: "如何：使用配置文件发布服务的元数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用配置文件发布服务的元数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e94fe7135d51c4e1578ca69768b6d0ba2aa6ae6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用配置文件发布服务的元数据
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：使用配置文件发布服务的元数据
 这是演示发布 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的元数据的两个帮助主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用配置文件发布服务的元数据。  
   
 > [!CAUTION]
 >  本主题演示如何以不安全的方式发布元数据。 任何客户端都可以检索服务的元数据。 如果您要求服务以安全方式发布元数据，请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发布元数据在代码中，请参阅[如何︰ 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。 若要确保代码能够工作，必须创建一个基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 为了简单起见，将在以下代码中提供一个基本的自承载服务。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发布元数据在代码中，请参阅[如何： 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 通过发布元数据，客户端可以使用 WS-Transfer GET 请求或使用 `?wsdl` 查询字符串的 HTTP/GET 来检索元数据。 若要确保代码能够工作，必须创建一个基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 为了简单起见，将在以下代码中提供一个基本的自承载服务。  
   
 ```csharp  
 using System;  
@@ -95,7 +98,6 @@ namespace Metadata.Samples
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>使用应用程序配置文件发布 WCF 服务的元数据  
@@ -178,7 +180,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>使用默认终结点  
   
-1.  若要配置使用默认终结点的服务的元数据，请指定<xref:System.ServiceModel.Description.ServiceMetadataBehavior>在配置文件如下所示的上一示例中，但不是指定任何终结点。 配置文件将类似如下所示。  
+1.  若要配置使用默认终结点的服务上的元数据，请在上一个示例中的配置文件中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，但不要指定任何终结点。 配置文件将类似如下所示。  
   
     ```xml  
     <configuration>  
@@ -195,7 +197,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     由于该服务有<xref:System.ServiceModel.Description.ServiceMetadataBehavior>与`httpGetEnabled`设置为`true`，因此服务了发布元数据启用，因为未显式不添加任何终结点，则运行时添加默认终结点。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+     由于该服务有一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 设置为 `httpGetEnabled` 的 `true`，因此该服务启用了发布元数据，但是由于未显式添加任何终结点，因此运行时添加默认终结点。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的实现，以及发布服务的元数据的配置文件。  
@@ -270,9 +272,9 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>   
- [如何︰ 承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [自承载](../../../../docs/framework/wcf/samples/self-host.md)   
- [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)   
- [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
- [如何︰ 使用代码为服务中发布元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
+ [如何：在托管应用程序中托管 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [自承载](../../../../docs/framework/wcf/samples/self-host.md)  
+ [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [如何： 使用代码为服务中发布元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

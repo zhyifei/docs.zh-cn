@@ -5,38 +5,40 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - custom attributes, accessibility
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8ac4bec06f2d5c7f8876c8e4e18a9d5c59f094fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 393fb3516756438325c9f3fd00941b963b3f2a2e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-custom-attributes"></a>访问自定义特性
 特性与程序元素相关联后，可使用反射来查询它们是否存在以及它们的值。 在 .NET Framework 1.0 和 1.1 版本中，在执行上下文中检查自定义特性。 .NET Framework 2.0 版本提供了新的加载上下文（仅反射上下文），可用于检查无法加载执行的代码。  
   
 ## <a name="the-reflection-only-context"></a>仅反射上下文  
- 加载到仅反射上下文中的代码无法执行。 这意味着不能创建自定义特性的实例，因为这将需要执行其构造函数。 若要在仅反射上下文中加载和检查自定义特性，请使用 <xref:System.Reflection.CustomAttributeData> 类。 可以通过使用静态 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> 方法的相应重载来获取此类的实例。 请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+ 加载到仅反射上下文中的代码无法执行。 这意味着不能创建自定义特性的实例，因为这将需要执行其构造函数。 若要在仅反射上下文中加载和检查自定义特性，请使用 <xref:System.Reflection.CustomAttributeData> 类。 可以通过使用静态 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 方法的相应重载来获取此类的实例。 请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 ## <a name="the-execution-context"></a>执行上下文  
- 用于查询执行上下文中的特性的主要反射方法是 <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=fullName> 和 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>。  
+ 用于查询执行上下文中的特性的主要反射方法是 <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> 和 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>。  
   
  自定义特性的可访问性根据附加该特性的程序集来进行检查。 这相当于在附加自定义特性的程序集中检查一种类型的方法能否调用该自定义特性的构造函数。  
   
- <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=fullName> 等方法检查类型参数的可见性和可访问性。 只有包含用户定义类型的程序集中的代码才能使用 GetCustomAttributes 检索该类型的自定义特性。  
+ <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> 等方法检查类型参数的可见性和可访问性。 只有包含用户定义类型的程序集中的代码才能使用 GetCustomAttributes 检索该类型的自定义特性。  
   
  以下 C# 示例是一种典型的自定义特性设计模式。 它说明运行时自定义特性反射模型。  
   
@@ -70,15 +72,16 @@ public class LocalizationExtenderProvider
   
 4.  运行时调用带有自定义特性参数的 MyDescriptionAttribute 的构造函数，然后将新对象返回给调用方。  
   
- 自定义特性反射模型可能会在定义类型的程序集外泄漏用户定义类型的实例。 这与运行时系统库中返回用户定义类型的实例的成员（例如返回 RuntimeMethodInfo 对象数组的 <xref:System.Type.GetMethods%2A?displayProperty=fullName>）相同。 为了防止客户端发现关于用户定义的自定义特性类型的信息，请将该类型的成员定义为非公共成员。  
+ 自定义特性反射模型可能会在定义类型的程序集外泄漏用户定义类型的实例。 这与运行时系统库中返回用户定义类型的实例的成员（例如返回 RuntimeMethodInfo 对象数组的 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>）相同。 为了防止客户端发现关于用户定义的自定义特性类型的信息，请将该类型的成员定义为非公共成员。  
   
  以下示例说明使用反射访问自定义特性的基本方法。  
   
- [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)] [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)] [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
+ [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)]
+ [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
+ [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=fullName>   
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>   
- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
+ <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>  
+ <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+ [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
  [反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
-

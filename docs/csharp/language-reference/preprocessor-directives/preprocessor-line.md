@@ -1,40 +1,20 @@
 ---
 title: "#<a name=\"line-c-reference\"></a>line（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#line'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#line directive [C#]'
+f1_keywords: '#line'
+helpviewer_keywords: '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="line-c-reference"></a>#line（C# 参考）
 `#line` 可修改编译器的行号及（可选）用于错误和警告的文件名输出。 此示例演示如何报告与行号相关联的两个警告。 `#line 200` 指令将行号强制设为 200（尽管默认值为 #7），直到下一个 #line 指令前，文件名都将报告为“特殊”。 #line 默认指令将行号返回至其默认行号，默认行号对由上个指令重新编号的行进行计数。  
@@ -88,7 +68,6 @@ class MainClass
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
-

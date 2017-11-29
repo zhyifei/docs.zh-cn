@@ -1,43 +1,24 @@
 ---
 title: "&lt;summary&gt;（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - <summary>
 - summary
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5a8aa1f8a07019ff6ccefe90f03b217067ae22c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd96e58494196fcfdeb46e9e59481666ec9466f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -58,7 +39,7 @@ ms.lasthandoff: 07/28/2017
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  前面的示例生成下面的 XML 文件。  
   
@@ -88,7 +69,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>示例  
  下面的示例演示如何对泛型类型进行 `cref` 引用。  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
+ [!code-csharp[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
  前面的示例生成下面的 XML 文件。  
   
@@ -116,7 +97,6 @@ ms.lasthandoff: 07/28/2017
 </doc>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

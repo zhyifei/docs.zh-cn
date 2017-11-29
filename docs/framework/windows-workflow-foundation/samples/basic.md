@@ -1,23 +1,27 @@
 ---
-title: "Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Basic1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fb0f04b2d0ee053ee2efe7f01ef9f73ed30c6e09
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Basic
+# <a name="basic"></a>Basic
 本节提供演示基本 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的示例。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [内置活动](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
  包含使用内置活动库的示例。  
   
@@ -54,10 +58,10 @@ caps.handback.revision: 9
  [跟踪](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
  包含演示工作流跟踪的示例。  
   
- [事务](../../../../docs/framework/windows-workflow-foundation/samples/basic-transactions.md)  
+ [事务](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  包含演示工作流事务的示例。  
   
  [验证](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
  包含演示 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 中的验证的示例。  
   
-## 参考
+## <a name="reference"></a>参考

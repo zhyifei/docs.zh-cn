@@ -1,30 +1,21 @@
 ---
 title: "特性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2993ef3f424aa6487681e194f21e0f82193342ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ab55021a073f914905e29163ba2a669f69d6dcab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributes-c"></a>特性 (C#)
 使用特性，可以有效地将元数据或声明性信息与代码（程序集、类型、方法、属性等）相关联。 将特性与程序实体相关联后，可以在运行时使用*反射*这项技术查询特性。 有关详细信息，请参阅[反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)。  
@@ -189,7 +180,6 @@ int Method3() { return 0; }
 -   [调用方信息 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+ [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [特性](https://msdn.microsoft.com/library/5x6cd29c)
-

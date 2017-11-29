@@ -1,21 +1,25 @@
 ---
-title: "如何：对实例数据属性进行反序列化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：对实例数据属性进行反序列化"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4c29c9c0151c253ec1e981413aea2d6d2a0672ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：对实例数据属性进行反序列化
-在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供实例表上的视图，该表公开以下四个列：  
+# <a name="how-to-deserialize-instance-data-properties"></a>如何：对实例数据属性进行反序列化
+在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：  
   
 -   ReadWritePrimitiveDataProperties  
   
@@ -25,16 +29,15 @@ caps.handback.revision: 9
   
 -   WriteOnlyComplexDataProperties  
   
- 基元数据属性指的是那些具有“通用”的 .NET Framework 类型（如 Int32 和 String）的属性，而复杂数据属性指的是其他所有类型。在此代码示例的后面提供了基元类型的完整枚举。  
+ 基元数据属性指.NET Framework 类型被视为是"common"（例如，Int32 和 String），而复杂数据属性指的所有其他类型的属性。 在此代码示例的后面提供了基元类型的完整枚举。  
   
- Read\/Write 属性指的是那些在加载实例时返回到工作流运行时的属性。WriteOnly 属性将写入到数据库，然后再也不会读取。  
+ Read/write 属性指的是那些在加载实例时返回到工作流运行时的属性。 WriteOnly 属性将写入到数据库，然后再也不会读取。  
   
- 此示例提供使用户能够将基元数据属性反序列化的代码。假定有一个从 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 列读取的字节数组，此代码将二进制大型对象 \(BLOB\) 转换为 \<XName, object\> 类型的 <xref:System.Collections.Generic.Dictionary%601>（其中的每个键\/值对表示一个属性名及其对应的值）。  
+ 此示例提供使用户能够将基元数据属性反序列化的代码。 提供一个从 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 列读取的字节数组，此代码会将二进制大型对象 (BLOB) 转换<xref:System.Collections.Generic.Dictionary%602>类型的\<XName，对象 > 其中每个密钥值对表示一个属性名及其对应的值。  
   
  此示例没有演示如何将复杂数据属性反序列化，因为当前不支持该操作。  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -252,5 +255,4 @@ namespace PropertyReader
         }  
     }  
 }  
-  
 ```

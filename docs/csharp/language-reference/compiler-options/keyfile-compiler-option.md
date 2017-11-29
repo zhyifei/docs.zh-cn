@@ -1,42 +1,23 @@
 ---
 title: "-keyfile（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /keyfile
-dev_langs:
-- CSharp
+f1_keywords: /keyfile
 helpviewer_keywords:
 - /keyfile compiler option [C#]
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5098067f640c13429c3e2524df0d87364980bb1c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="keyfile-c-compiler-options"></a>/keyfile（C# 编译器选项）
 指定包含加密密钥的文件名。  
@@ -64,7 +45,7 @@ ms.lasthandoff: 07/28/2017
   
  请注意，密钥文件可能仅包含公钥。  
   
- 有关详细信息，请参阅[创建和使用具有强名称的程序集](https://msdn.microsoft.com/library/xwb8f617)和[延迟为程序集签名](../../../framework/app-domains/delay-sign-assembly.md)。  
+ 有关详细信息，请参阅[创建和使用具有强名称的程序集](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)和[延迟为程序集签名](../../../framework/app-domains/delay-sign-assembly.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -77,6 +58,5 @@ ms.lasthandoff: 07/28/2017
  可通过 <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A> 以编程方式访问此编译器选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

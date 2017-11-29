@@ -1,39 +1,20 @@
 ---
 title: "对象 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- objects [Visual Basic]
+helpviewer_keywords: objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98503c5764690d6dea90bf46a229e9ee2fd81df7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 61c0967521acda8ac3bf8147b817afcf4ca51165
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="objects-visual-basic"></a>对象 (Visual Basic)
 本主题收录了记录 Visual Basic 运行时对象的其他主题的链接，并包含这些对象的成员过程、属性和事件表。  
@@ -70,6 +51,5 @@ ms.lasthandoff: 07/28/2017
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|提供分析结构化文本文件的方法和属性。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)   
+ [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../../visual-basic/index.md)
-

@@ -1,54 +1,57 @@
 ---
-title: "x:Reference Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Reference markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Reference Markup Extension"
-  - "Reference markup extension [XAML Services]"
+title: "x:Reference 标记扩展"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Reference markup extension [XAML Services]
+- XAML [XAML Services], x:Reference Markup Extension
+- Reference markup extension [XAML Services]
 ms.assetid: 2982e68b-d26b-4aa3-826a-34c57a9c5199
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 06e59e7686004f8fd44473bd9572ed07a0118d1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# x:Reference Markup Extension
-引用在 XAML 标记中其他地方声明的实例。  参考涉及元素的 `x:Name`。  
+# <a name="xreference-markup-extension"></a>x:Reference 标记扩展
+在 XAML 标记中其他位置声明的实例的引用。 引用所引用的元素`x:Name`。  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
+```xaml  
+<object property="{x:Reference instancexName}" .../>  
 ```  
-<object property="{x:Reference instancexName}" .../>  
-```  
   
-## XAML 对象元素用法  
+## <a name="xaml-object-element-usage"></a>XAML 对象元素用法  
   
-```  
+```xaml  
 <object>  
   <object.property>  
-    <x:Reference Name="instancexName"/>  
+    <x:Reference Name="instancexName"/>  
   </object.property>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`instancexName`|引用实例的 `x:Name` 值（或 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 标识的属性值）。|  
+|`instancexName`|`x:Name`值 (或值<xref:System.Windows.Markup.RuntimeNamePropertyAttribute>-标识属性) 的引用的实例。|  
   
-## 备注  
- `x:Reference` 为元素引用概念提供 XAML 语言级别支持，该概念会在具体框架（如 WPF）中实现。  
+## <a name="remarks"></a>备注  
+ `x:Reference`提供对否则在特定的框架，例如 WPF 中实现的一个元素引用概念 XAML 语言级别支持。  
   
-## x:Reference 和 WPF  
- 在 WPF 和 XAML 2006，元素引用解决由框架级功能的 <xref:System.Windows.Data.Binding.ElementName%2A> 绑定中。  对于大多数 WPF 应用程序和方案，仍应使用 <xref:System.Windows.Data.Binding.ElementName%2A> 绑定。  此一般性指导的例外情况可能包括存在数据上下文或让数据绑定变得不切实际的其他范围考量的情况，以及不涉及标记编译的情况。  
+## <a name="xreference-and-wpf"></a>X:reference 和 WPF  
+ 在 WPF 和 XAML 2006 中，元素引用都由框架级别功能的<xref:System.Windows.Data.Binding.ElementName%2A>绑定。 对于大多数 WPF 应用程序和方案，<xref:System.Windows.Data.Binding.ElementName%2A>应仍使用绑定。 此一般性指导异常可能包含情况下，有数据上下文或使数据绑定显得不切实际其他作用域注意事项以及标记编译不涉及到在其中。  
   
- `x:Reference` 是 XAML 2009 中定义的一个构造。  在 WPF 中，可以使用 XAML 2009 功能，但仅针对未进行 WPF 标记编译的 XAML。  标记编译的 XAML 以及BAML 形式的 XAML 当前不支持 XAML 2009 关键字和功能。
+ `x:Reference`在 XAML 2009 中定义一个构造。 在 WPF 中，可以使用 XAML 2009 功能，但仅针对未进行 WPF 标记编译的 XAML。 标记编译的 XAML 以及 BAML 形式的 XAML 当前不支持 XAML 2009 语言关键字和功能。

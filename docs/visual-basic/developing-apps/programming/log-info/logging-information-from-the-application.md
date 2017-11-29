@@ -1,15 +1,12 @@
 ---
 title: "记录来自应用程序的信息 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Log object
 - My.Log object
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4e52aaf4c26b4fa60ee04d7df6aa96980ebbf491
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 58f21df20425b0164586143ad5af6f363a90c3ef
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>记录来自应用程序的信息 (Visual Basic)
 本节包含的主题介绍如何使用 `My.Application.Log` 或 `My.Log` 对象记录来自应用程序的信息，以及如何扩展应用程序的日志记录功能。  
@@ -64,7 +46,6 @@ ms.lasthandoff: 07/28/2017
 |筛选 `My.Application.Log` 日志的输出。|[演练：筛选 My.Application.Log 输出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
  [疑难解答：日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
-

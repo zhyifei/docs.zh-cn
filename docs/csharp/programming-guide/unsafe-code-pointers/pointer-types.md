@@ -1,39 +1,21 @@
 ---
 title: "指针类型（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4ebc69762f18dc630100b544c18df0f43734ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：  
@@ -150,14 +132,13 @@ Console.ReadLine();
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [指针转换](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [类型](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [指针转换](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
+ [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [类型](../../../csharp/language-reference/keywords/types.md)  
+ [不安全](../../../csharp/language-reference/keywords/unsafe.md)  
+ [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)  
  [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
-

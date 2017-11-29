@@ -1,56 +1,61 @@
 ---
-title: "如何：在 Windows 窗体 RichTextBox 控件中保存文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".rtf 文件, 在 RichTextBox 控件中保存"
-  - "示例 [Windows 窗体], 文本框"
-  - "文件, 用 RichTextBox 控件保存"
-  - "RichTextBox 控件 [Windows 窗体], 保存文件"
-  - "RTF 文件, 在 RichTextBox 控件中保存"
-  - "保存文件"
-  - "保存文件, RichTextBox 控件"
-  - "文本文件, 从 RichTextBox 控件中保存"
+title: "如何：在 Windows 窗体 RichTextBox 控件中保存文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- saving files
+- RTF files [Windows Forms], saving in RichTextBox control
+- examples [Windows Forms], text boxes
+- saving files [Windows Forms], RichTextBox control
+- files [Windows Forms], saving with RichTextBox control
+- RichTextBox control [Windows Forms], saving files
+- .rtf files [Windows Forms], saving in RichTextBox control
+- text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d28aeaefca6f8aa13607f1c1e6f72557ef536754
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体 RichTextBox 控件中保存文件
-Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以用下面几种格式之一写入它显示的信息：  
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中保存文件
+Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以编写它在几种格式之一显示的信息：  
   
 -   纯文本  
   
 -   Unicode 纯文本  
   
--   RTF 格式  
+-   丰富文本格式 (RTF)  
   
--   用空格取代 OLE 对象的 RTF  
+-   RTF 空格代替 OLE 对象  
   
--   带有 OLE 对象的文本化表示形式的纯文本  
+-   使用的 OLE 对象文本表示形式的纯文本  
   
- 若要保存文件，请调用 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法。  也可以使用 **SaveFile** 方法将数据保存到流中。  有关更多信息，请参见 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
+ 若要保存文件时，调用<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法。 你还可以使用**SaveFile**方法以将数据保存到流。 有关更多信息，请参见<xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
   
-### 将控件的内容保存到文件  
+### <a name="to-save-the-contents-of-the-control-to-a-file"></a>将控件的内容保存到文件  
   
 1.  确定要保存的文件的路径。  
   
-     若要在实际应用程序中实现此操作，通常可使用 <xref:System.Windows.Forms.SaveFileDialog> 组件。  有关概述，请参见[SaveFileDialog 组件概述](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)。  
+     若要在实际应用程序中执行此操作，通常可以使用<xref:System.Windows.Forms.SaveFileDialog>组件。 有关概述，请参阅[SaveFileDialog 组件概述](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)。  
   
-2.  调用 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法，指定要保存的文件以及可选文件类型。  如果调用该方法时仅使用文件名作为其唯一参数，则该文件将保存为 RTF 文件。  若要指定其他文件类型，请以 <xref:System.Windows.Forms.RichTextBoxStreamType> 枚举的值作为其第二个参数来调用该方法。  
+2.  调用<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法<xref:System.Windows.Forms.RichTextBox>控件中，指定要保存的文件和 （可选） 的文件类型。 如果调用具有一个文件名称作为其唯一的自变量的方法，则将为 rtf 格式保存该文件。 若要指定其他文件类型，请使用 <xref:System.Windows.Forms.RichTextBoxStreamType> 枚举的值作为其第二个参数来调用该方法。  
   
-     在下面的示例中，RTF 文件位置的路径设置为**“我的文档”**文件夹。  使用此位置是因为可假定大多数运行 Windows 操作系统的计算机都包含该文件夹。  选择此位置还允许具有最低系统访问级别的用户安全地运行应用程序。  下面的示例假定一个已添加了 <xref:System.Windows.Forms.RichTextBox> 控件的窗体。  
+     在下面的示例中，路径为设置多格式文本文件的位置为**我的文档**文件夹。 使用此位置是因为你可以采用大多数计算机运行 Windows 操作系统，将包含此文件夹。 选择此位置还允许具有最少的系统访问级别的用户安全地运行该应用程序。 下面的示例假定的窗体具有<xref:System.Windows.Forms.RichTextBox>已添加的控件。  
   
     ```vb  
     Public Sub SaveFile()  
@@ -61,7 +66,6 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以用下面几�
        & "\Testdoc.rtf", _  
           RichTextBoxStreamType.RichNoOleObjs)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -75,7 +79,6 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以用下面几�
        + @"\Testdoc.rtf",  
           RichTextBoxStreamType.RichNoOleObjs);  
     }  
-  
     ```  
   
     ```cpp  
@@ -92,10 +95,10 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以用下面几�
     ```  
   
     > [!IMPORTANT]
-    >  本示例创建新的文件（如果该文件尚未存在）。  如果应用程序需要创建文件，则应用程序需要文件夹的“创建”访问权限。  权限是使用访问控制列表设置的。  如果该文件已经存在，则应用程序仅需要“写入”访问权限（它是一个权限较弱的特权）。  应尽可能在部署过程中创建文件并仅授予单个文件的“读取”访问权限，而不是授予文件夹的“创建”访问权限，这样做更安全。  而且，更为安全的方法是将数据写入用户文件夹，而不是写入根文件夹或“Program Files”文件夹。  
+    >  此示例在文件尚未存在时创建新文件。 如果应用程序需要创建一个文件，该应用程序将需要的文件夹的创建访问权限。 可使用访问控制列表设置权限。 如果该文件已存在，应用程序需要只写访问权限，较弱的特权。 如果可能，它会在部署期间，创建文件和仅授予读取访问权限单个文件，而不是创建一个文件夹的访问更安全。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。  
   
-## 请参阅  
- <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

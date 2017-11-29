@@ -1,32 +1,36 @@
 ---
-title: "利用证书身份验证的传输安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "利用证书身份验证的传输安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 利用证书身份验证的传输安全
-本主题探讨使用传输安全性时如何使用 X.509 证书进行服务器和客户端身份验证。有关 X.509 证书的更多信息，请参见 [X.509 公钥证书](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。证书必须由证书颁发机构（通常是第三方证书颁发机构）颁发。在 Windows Server 域中，可以使用 Active Directory 证书服务向域中的客户端计算机颁发证书。有关更多信息，请参见 [Windows 2008 R2 证书服务](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x804)。在此方案中，该服务承载在使用安全套接字层 \(SSL\) 配置的 Internet Information Services \(IIS\) 之下。该服务使用 SSL \(X.509\) 证书进行配置，以允许客户端验证服务器的身份。客户端也使用 X.509 证书进行配置，以允许服务验证客户端的身份。客户端必须信任服务器的证书，服务器也必须信任客户端的证书。服务和客户端如何验证彼此身份的实际机制不在本主题讨论范围之内。有关更多信息，请参见[维基百科上的“数字签名”](http://go.microsoft.com/fwlink/?LinkId=253157)。  
+# <a name="transport-security-with-certificate-authentication"></a>利用证书身份验证的传输安全
+本主题探讨使用传输安全性时如何使用 X.509 证书进行服务器和客户端身份验证。 有关 X.509 证书，请查看[X.509 公钥证书](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。 必须由证书颁发机构，这通常是证书的第三方颁发者颁发证书。 在 Windows Server 域中，可以使用 Active Directory 证书服务向域中的客户端计算机颁发证书。 有关详细信息请参阅[Windows 2008 R2 证书服务](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此方案中，该服务承载在使用安全套接字层 (SSL) 配置的 Internet Information Services (IIS) 之下。 该服务使用 SSL (X.509) 证书进行配置，以允许客户端验证服务器的身份。 客户端也使用 X.509 证书进行配置，以允许服务验证客户端的身份。 客户端必须信任服务器的证书，服务器也必须信任客户端的证书。 服务和客户端如何验证彼此身份的实际机制不在本主题讨论范围之内。 有关详细信息请参阅[Wikipedia 上的数字签名](http://go.microsoft.com/fwlink/?LinkId=253157)。  
   
- 该方案实现一个请求\/回复消息模式，如下图所示。  
+ 该方案实现一个请求/回复消息模式，如下图所示。  
   
- ![使用证书保护传输安全](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968\-899f\-4538\-a9e8\-0eaa872a291c")  
+ ![使用证书确保传输安全](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]将证书用于服务的更多信息，请参见[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。下表描述了该方案的各项特征。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用证书与服务，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。 下表描述了该方案的各项特征。  
   
-|特征|说明|  
-|--------|--------|  
+|特征|描述|  
+|--------------------|-----------------|  
 |安全模式|传输|  
 |互操作性|与现有 Web 服务客户端和服务。|  
 |身份验证（服务器）<br /><br /> 身份验证（客户端）|是（使用 SSL 证书）<br /><br /> 是（使用 X.509 证书）|  
@@ -35,8 +39,8 @@ caps.handback.revision: 20
 |传输|HTTPS|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## 配置服务  
- 由于该方案中的服务承载于 IIS 之下，因此它是使用 web.config 文件配置的。以下 web.config 揭示了如何配置  <xref:System.ServiceModel.WSHttpBinding> 以使用传输安全性和 X.509 客户端凭据。  
+## <a name="configure-the-service"></a>配置服务  
+ 由于该方案中的服务承载于 IIS 之下，因此它是使用 web.config 文件配置的。 以下 web.config 揭示了如何配置  <xref:System.ServiceModel.WSHttpBinding> 以使用传输安全性和 X.509 客户端凭据。  
   
 ```xml  
 <configuration>  
@@ -64,11 +68,10 @@ caps.handback.revision: 20
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 配置客户端  
- 可以在代码中或在 app.config 文件中配置客户端。下例揭示了如何在代码中配置客户端。  
+## <a name="configure-the-client"></a>配置客户端  
+ 可以在代码中或在 app.config 文件中配置客户端。 下例揭示了如何在代码中配置客户端。  
   
 ```vb  
 // Create the binding.  
@@ -100,7 +103,6 @@ cc.ClientCredentials.ClientCertificate.SetCertificate(
 Console.WriteLine(cc.Add(100, 1111));  
 //...  
 cc.Close();  
-  
 ```  
   
  也可以在 app.config 文件中配置客户端，如下例所示：  
@@ -142,9 +144,8 @@ cc.Close();
   </system.serviceModel>  
   
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
-  
 ```  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a>另请参阅  
+ [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,39 +1,43 @@
 ---
-title: "如何：响应 Windows 窗体 DataGrid 控件中的单击 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "单元格, 在 DataGrid 中的位置"
-  - "Click 事件, 在 DataGrid 控件中监视"
-  - "DataGrid 控件 [Windows 窗体], Click 事件"
-  - "DataGrid 控件 [Windows 窗体], 示例"
-  - "DataGrid 控件 [Windows 窗体], 返回单击过的单元格的值"
-  - "示例 [Windows 窗体], DataGrid 控件"
+title: "如何：响应 Windows 窗体 DataGrid 控件中的单击"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Click event [Windows Forms], monitoring in DataGrid controls
+- DataGrid control [Windows Forms], examples
+- DataGrid control [Windows Forms], returning clicked cell value
+- cells [Windows Forms], location in DataGrid
+- examples [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ae228835fb150b1d65f7405a10813f24e707268f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：响应 Windows 窗体 DataGrid 控件中的单击
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>如何：响应 Windows 窗体 DataGrid 控件中的单击
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 当 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 连接到数据库后，您可以监视用户单击的单元格。  
+ Windows 窗体后<xref:System.Windows.Forms.DataGrid>已连接到数据库，你可以监视该单元格用户单击了。  
   
-### 检测 DataGrid 的用户何时选择另一个单元格  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>若要检测 DataGrid 的用户，请选择不同的单元格  
   
--   在 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件处理程序中，编写代码进行适当地响应。  
+-   在<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>事件处理程序中，编写代码以做出相应响应。  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -41,7 +45,6 @@ caps.handback.revision: 11
           & ", Row is " & myDataGrid.CurrentCell.RowNumber _  
           & ", Value is " & myDataGrid.Item(myDataGrid.CurrentCell))  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,18 +57,18 @@ caps.handback.revision: 11
     }  
     ```  
   
-     \(Visual C\#\) 在窗体的构造函数中放置以下代码以注册事件处理程序。  
+     (Visual C#)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### 确定用户所单击的 DataGrid 部分  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>若要确定用户单击的哪一部分数据网格  
   
--   在适当的事件处理程序（例如 <xref:System.Windows.Forms.Control.MouseDown> 或 <xref:System.Windows.Forms.Control.Click> 事件处理程序）中调用 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法。  
+-   调用<xref:System.Windows.Forms.DataGrid.HitTest%2A>中相应的事件处理程序，例如对于方法<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法返回包含所单击区域的行和列的 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 对象。  
+     <xref:System.Windows.Forms.DataGrid.HitTest%2A>方法返回<xref:System.Windows.Forms.DataGrid.HitTestInfo>对象，其中包含的行和列被单击区域。  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -96,7 +99,6 @@ caps.handback.revision: 11
   
        Console.WriteLine(message)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -140,7 +142,7 @@ caps.handback.revision: 11
     }  
     ```  
   
-     \(Visual C\#\) 在窗体的构造函数中放置以下代码以注册事件处理程序。  
+     (Visual C#)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -148,6 +150,6 @@ caps.handback.revision: 11
        (this.myDataGrid_MouseDown);  
     ```  
   
-## 请参阅  
- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  [如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

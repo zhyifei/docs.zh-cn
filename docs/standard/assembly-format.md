@@ -1,7 +1,7 @@
 ---
 title: ".NET 程序集文件格式"
 description: "了解 .NET 程序集文件格式，使用它描述和包含 .NET 应用和库。"
-keywords: ".NET、.NET Core"
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
+ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 47e895274f6d400639878e0bd5c700e04b554ce5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-assembly-file-format"></a>.NET 程序集文件格式
 
 .NET 定义用于充分描述和包含 .NET 程序的二进制文件格式 -“程序集”。 程序集用于程序本身以及所有依赖库。 一个 .NET 程序可作为多个程序集中的其中一个运行，除了相应的 .NET 实现外，无需其他项目。 本机依赖项（包括操作系统 API）是一个需要单独考虑的问题，虽然有时会使用 .NET 程序集格式来描述它，但并未将它包含在此格式内（例如，WinRT）。
@@ -40,5 +38,4 @@ ms.lasthandoff: 08/21/2017
 
 ## <a name="processing-the-assemblies"></a>处理程序集
 
-可以编写工具或 API 来处理程序集。 程序集信息能够在运行时做出程序化决策、重新编写程序集、在编辑器中提供 API IntelliSense 以及生成文档。 <xref:System.Reflection?displayProperty=fullName> 和 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用于此目的的典型工具。
-
+可以编写工具或 API 来处理程序集。 程序集信息能够在运行时做出程序化决策、重新编写程序集、在编辑器中提供 API IntelliSense 以及生成文档。 <xref:System.Reflection?displayProperty=nameWithType> 和 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用于此目的的典型工具。

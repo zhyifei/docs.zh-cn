@@ -1,7 +1,7 @@
 ---
 title: ".NET 平台指南"
 description: "了解 .NET 平台。"
-keywords: ".NET、.NET Core"
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: ronpet
 ms.date: 05/02/2017
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-guide"></a>.NET 指南
 
 .NET 指南提供大量关于 .NET 的信息。  根据对 .NET 的熟悉程度，可浏览本指南的不同部分以及 .NET 文档的其他部分。
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/14/2017
 ## <a name="api-reference"></a>API 参考
 
 请查看 [.NET API 参考](../../api/index.md)，了解各种可用的 API。
-

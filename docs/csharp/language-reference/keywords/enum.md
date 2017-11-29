@@ -1,41 +1,22 @@
 ---
 title: "enum（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- enum keyword [C#]
+helpviewer_keywords: enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 `enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。  
@@ -89,17 +70,17 @@ int x = (int)Days.Sun;
 ## <a name="example"></a>示例  
  在下面的示例中，已声明枚举 `Days`。 已将两个枚举数显式转换为整数，并赋值为整数变量。  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## <a name="example"></a>示例  
  以下示例中，使用基类型选项来声明其成员是 `enum` 类型的 `long`。 请注意，即使该枚举的基础类型是 `long`，仍然需通过使用转换将枚举成员显式转换为类型 `long` 。  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>示例  
  下面的代码示例说明了 <xref:System.FlagsAttribute?displayProperty=nameWithType> 声明中 `enum` 特性的使用和作用。  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
+ [!code-csharp[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## <a name="comments"></a>注释  
  如果删除 `Flags`，则示例将显示以下值：  
@@ -111,12 +92,11 @@ int x = (int)Days.Sun;
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [枚举类型](../../../csharp/programming-guide/enumeration-types.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [枚举类型](../../../csharp/programming-guide/enumeration-types.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

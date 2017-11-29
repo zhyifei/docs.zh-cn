@@ -1,27 +1,30 @@
 ---
-title: "如何：实现使用发现代理查找服务的客户端应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：实现使用发现代理查找服务的客户端应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：实现使用发现代理查找服务的客户端应用程序
-本主题是讨论如何实现发现代理的三个主题中的第三个。在上一个主题[如何：实现向发现代理注册的可检测到的服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)中，您实现了向发现代理注册自身的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。在本主题中，您将创建一个使用发现代理查找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
+本主题是讨论如何实现发现代理的三个主题中的第三个。 在前面的主题中，[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，你实现[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]向发现代理注册自身的服务。 在本主题中，您将创建一个使用发现代理查找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。  
   
-### 实现客户端  
+### <a name="implement-the-client"></a>实现客户端  
   
-1.  将一个新控制台应用程序项目添加到名为 `Client` 的 `DiscoveryProxyExample` 解决方案。  
+1.  将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Client` 解决方案。  
   
 2.  添加对下列程序集的引用：  
   
@@ -32,9 +35,9 @@ caps.handback.revision: 12
 3.  将位于此主题底部的 GeneratedClient.cs 添加到该项目。  
   
     > [!NOTE]
-    >  此文件通常是使用 Svcutil.exe 等工具生成的。此主题中提供的该文件是为了将任务简化。  
+    >  此文件通常是使用 Svcutil.exe 等工具生成的。 此主题中提供的该文件是为了将任务简化。  
   
-4.  打开 Program.cs 文件并添加以下方法。此方法使用一个终结点地址，并使用该地址来初始化服务客户端（代理）。  
+4.  打开 Program.cs 文件并添加以下方法。 此方法使用一个终结点地址，并使用该地址来初始化服务客户端（代理）。  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -67,10 +70,9 @@ caps.handback.revision: 12
                 // Closing the client gracefully closes the connection and cleans up resources  
                 client.Close();  
             }  
-  
     ```  
   
-5.  将以下代码添加到 `Main` 方法。  
+5.  将以下代码添加到 `Main` 方法中。  
   
     ```  
     public static void Main()  
@@ -107,12 +109,11 @@ caps.handback.revision: 12
                 Console.WriteLine("Press <ENTER> to exit.");  
                 Console.ReadLine();  
             }  
-  
     ```  
   
- 您已完成客户端应用程序的实现。请继续阅读[如何：测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
+ 您已完成客户端应用程序的实现。 继续[如何： 测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面是此主题的完整代码清单。  
   
 ```  
@@ -205,7 +206,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## 请参阅  
- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [如何：实现向发现代理注册的可检测到的服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a>另请参阅  
+ [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

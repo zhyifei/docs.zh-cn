@@ -1,15 +1,12 @@
 ---
 title: "将数据存储到剪贴板以及从剪贴板读取数据 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
 - Clipboard, reading from (My.Computer.Clipboard)
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7bb4ad56f0a039aa7b23d7f0612aaab9366cb9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3b60942cf3e3a7f588a7838bcae0cb7b6fae2278
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>将数据存储到剪贴板以及从剪贴板读取数据 (Visual Basic)
 剪贴板可用于存储文本和图像等数据。 由于所有活动进程都共享剪贴板，因此它可用于在这些活动进程之间传输数据。 使用 `My.Computer.Clipboard` 对象可轻松访问剪贴板并从中读取和向其写入数据。  
@@ -95,9 +77,8 @@ ms.lasthandoff: 07/28/2017
 >  由于其他用户可访问剪贴板，不要将其用于存储密码或机密数据等敏感信息。  
   
 ## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
- [如何：从 XML 文件中读取对象数据](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
+ [如何：从 XML 文件中读取对象数据](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  [如何：将对象数据写入 XML 文件](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-

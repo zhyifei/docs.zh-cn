@@ -1,44 +1,26 @@
 ---
 title: "如何：重写 ToString 方法（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5b0f7bf35e5bd565e0bfa46fe91cf86aedcd2d8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 60cec855286a3bb572a0bacd08c0f7920a1fc912
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何：重写 ToString 方法（C# 编程指南）
 C# 中的每个类或结构都可隐式继承 <xref:System.Object> 类。 因此，C# 中的每个对象都会获取 <xref:System.Object.ToString%2A> 方法，该方法返回该对象的字符串表示形式。 例如，类型为 `int` 的所有变量都有一个 `ToString` 方法，使它们可以将其内容作为字符串返回：  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  创建自定义类或结构时，应替代 <xref:System.Object.ToString%2A> 方法，以向客户端代码提供有关你的类型的信息。  
   
@@ -59,20 +41,19 @@ C# 中的每个类或结构都可隐式继承 <xref:System.Object> 类。 因此
   
      下面的示例返回类的名称，但特定于该类的特定实例的数据除外。  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
+     [!code-csharp[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      可以测试 `ToString` 方法，如以下代码示例所示：  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
+     [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.IFormattable>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [字符串](../../../csharp/programming-guide/strings/index.md)   
- [string](../../../csharp/language-reference/keywords/string.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
+ <xref:System.IFormattable>  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [字符串](../../../csharp/programming-guide/strings/index.md)  
+ [字符串](../../../csharp/language-reference/keywords/string.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
+ [替代](../../../csharp/language-reference/keywords/override.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
  [格式设置类型](../../../standard/base-types/formatting-types.md)
-

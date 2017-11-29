@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
+ms.openlocfilehash: 62c81bf070a435f6105c313ae95340a5504233df
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令行组织和测试项目
 
 本教程遵循[使用命令行在 Windows/Linux/macOS 上实现 .NET Core 入门](using-with-xplat-cli.md)，演示如何超越简单的创建控制台应用，开发更高级和组织更良好的应用程序。 在演示如何使用文件夹来组织代码后，本教程还将说明如何使用 [xUnit](https://xunit.github.io/) 测试框架扩展控制台应用程序。
@@ -94,7 +92,6 @@ NewTypes.csproj:
 执行以下命令：
 
 ```console
-dotnet restore
 dotnet run
 ```
 
@@ -191,6 +188,9 @@ public class PetTests
 ```
 
 在 test/NewTypesTests 目录中开始。 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原测试项目。 使用 [`dotnet test`](../tools/dotnet-test.md) 命令运行测试。 此命令启动项目文件中指定的测试运行程序。
+
+ [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
  
 测试按预期失败，控制台显示以下输出：
  

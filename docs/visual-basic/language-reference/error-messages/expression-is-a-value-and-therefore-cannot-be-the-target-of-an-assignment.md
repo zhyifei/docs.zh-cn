@@ -1,29 +1,27 @@
 ---
-title: "表达式是一个值，因此不能作为赋值目标 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30068"
-  - "vbc30068"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30068"
+title: "表达式是一个值，因此不能作为赋值目标"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30068
+- vbc30068
+helpviewer_keywords: BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 表达式是一个值，因此不能作为赋值目标
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-某个语句尝试为表达式赋值。  在运行时只能对可写的变量、属性或数组元素赋值。  下面的示例阐释此错误是如何发生的。  
+# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>表达式是一个值，因此不能作为赋值目标
+语句试图将值分配给表达式。 在运行时，可以仅向可写的变量、 属性或数组元素分配一个值。 下面的示例演示如何可能出现此错误。  
   
 ```  
 Dim yesterday As Integer  
@@ -34,9 +32,9 @@ maximum = 50
 ' The preceding line is an ERROR because maximum is declared ReadOnly.  
 ```  
   
- 类似示例可能适用于属性和数组元素。  
+ 相似的示例可能适用于属性和数组元素。  
   
- **间接访问。**通过值类型的间接访问也可能会生成此错误。  请考虑下面的代码示例，这段代码尝试通过 <xref:System.Windows.Forms.Control.Location%2A> 间接访问 <xref:System.Drawing.Point> 来设置它的值。  
+ **间接访问。** 通过值类型的间接访问还会生成此错误。 请考虑下面的代码示例，它会尝试设置的值<xref:System.Drawing.Point>通过访问间接通过<xref:System.Windows.Forms.Control.Location%2A>。  
   
 ```  
 ' Assume this code runs inside Form1.  
@@ -46,26 +44,26 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.  
 ```  
   
- 以上示例的最后一条语句失败，因为它仅为 <xref:System.Windows.Forms.Control.Location%2A> 属性返回的 <xref:System.Drawing.Point> 结构提供了临时的分配。  这是一个值类型的结构，该语句运行后不保留临时结构。  解决该问题的方法是：声明并使用 <xref:System.Windows.Forms.Control.Location%2A> 的变量，从而为 <xref:System.Drawing.Point> 结构创建更为永久的分配。  下面的示例演示的代码可用于替换以上示例的最后一条语句。  
+ 前面的示例中的最后一个语句失败，因为它创建仅用于临时分配<xref:System.Drawing.Point>结构返回<xref:System.Windows.Forms.Control.Location%2A>属性。 结构是值类型，并运行该语句后的临时结构不会保留。 通过声明和使用的变量解决该问题<xref:System.Windows.Forms.Control.Location%2A>，从而创建更永久分配<xref:System.Drawing.Point>结构。 下面的示例演示可以替换前面的示例中的最后一个语句的代码。  
   
 ```  
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
 exitButton.Location = exitLocation  
 ```  
   
- **错误 ID：**BC30068  
+ **错误 ID:** BC30068  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果相应语句为某个表达式赋值，请用一个可写的变量、属性或数组元素替换该表达式。  
+-   如果该语句将值分配给一个表达式，将表达式替换单个可写的变量、 属性或数组元素。  
   
--   如果相应语句通过值类型（通常为结构）进行间接访问，请创建一个变量来保存值类型。  
+-   如果该语句进行间接访问通过值类型 （通常是一个结构），创建一个变量以保存值类型。  
   
--   将相应的结构（或其他值类型）赋给变量。  
+-   分配给变量的适当结构 （或其他值类型）。  
   
--   使用变量来访问属性，以便为该变量赋值。  
+-   使用变量来访问要为其分配值的属性。  
   
-## 请参阅  
- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [语句](../../../visual-basic/programming-guide/language-features/statements.md)   
+## <a name="see-also"></a>另请参阅  
+ [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [语句](../../../visual-basic/programming-guide/language-features/statements.md)  
  [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

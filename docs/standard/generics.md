@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>泛型类型（泛型）概述
 
 在 C# 中，我们随时会使用泛型，有时隐式使用，有时显式使用。 在 C# 中使用 LINQ 时，你是否曾经注意到，使用的正是 IEnumerable<T>？ 或者，你是否曾经看到过有关使用实体框架来与数据库通信的“泛型存储库”在线示例，其中的大多数方法返回 IQueryable<T>？ 你可能很想知道，这些示例中的 **T** 是什么意思，为什么要使用它？
@@ -75,4 +73,3 @@ Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
 
 *   [C# 泛型简介](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [C# 编程指南 - 泛型](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

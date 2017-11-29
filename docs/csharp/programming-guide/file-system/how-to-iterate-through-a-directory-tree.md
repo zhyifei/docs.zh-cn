@@ -1,42 +1,24 @@
 ---
 title: "如何：循环访问目录树（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
-短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=fullName> 或 <xref:System.IO.DirectoryInfo?displayProperty=fullName> 对象的形式检索其他信息。  
+短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
   
 > [!NOTE]
 >  在 Windows 中，术语“目录”和“文件夹”可以互换使用。 大多数文档和用户界面文本使用术语“文件夹”，但 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库使用术语“目录”。  
@@ -63,14 +45,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  在每个文件或文件夹上处理的特定异常和执行的特定操作仅作为示例提供。 你可以修改此代码来满足你的特定要求。 有关详细信息，请参阅代码中的注释。  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何不使用递归方式遍历目录树中的文件和文件夹。 此方法使用泛型 <xref:System.Collections.Generic.Stack%601> 集合类型，此集合类型是一个后进先出 (LIFO) 堆栈。  
   
  在每个文件或文件夹上处理的特定异常和执行的特定操作仅作为示例提供。 你可以修改此代码来满足你的特定要求。 有关详细信息，请参阅代码中的注释。  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  通常，检测每个文件夹以确定应用程序是否有权限打开它是一个很费时的过程。 因此，此代码示例只将此部分操作封装在 `try/catch` 块中。 你可以修改 `catch` 块，以便在拒绝访问某个文件夹时，可以尝试提升权限，然后再次访问此文件夹。 一般来说，仅捕获可以处理的、不会将应用程序置于未知状态的异常。  
   
@@ -80,7 +62,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关详细信息，请参阅 [NTFS 技术参考](http://go.microsoft.com/fwlink/?LinkId=79488)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.IO>   
- [LINQ 和文件目录](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)   
+ <xref:System.IO>  
+ [LINQ 和文件目录](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
  [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
-

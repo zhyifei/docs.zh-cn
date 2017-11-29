@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - design-time attributes
 - .NET Framework, exposing components to COM
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dffb4cc5408e78e794cae0d28ef54150d38b2c6c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 160a9597ff22ffc044cf3a35d345ba7d7e1606e4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="applying-interop-attributes"></a>应用互操作特性
 <xref:System.Runtime.InteropServices> 命名空间提供三类特定于互操作的特性：在设计时由你应用的特性、在转换进程中由 COM 互操作工具和 API 应用的特性以及由你或 COM 互操作应用的特性。  
@@ -83,9 +76,8 @@ ms.lasthandoff: 08/21/2017
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|包含最初从 COM 类型库为此变量导入的 VARFLAGS。|  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices>   
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [特性](../../../docs/standard/attributes/index.md)   
- [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices>  
+ [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [特性](../../../docs/standard/attributes/index.md)  
+ [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-

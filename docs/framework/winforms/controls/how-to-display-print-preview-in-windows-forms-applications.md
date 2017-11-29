@@ -1,44 +1,49 @@
 ---
-title: "如何：在 Windows 窗体应用程序中显示打印预览 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], 打印预览"
-  - "打印预览, 显示"
-  - "打印 [Windows 窗体], 打印预览"
+title: "如何：在 Windows 窗体应用程序中显示打印预览"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print preview [Windows Forms], displaying
+- printing [Windows Forms], print preview
+- examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e705575b8c3acdcc3d92b985c59b60e7310dce7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体应用程序中显示打印预览
-用户可以使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控件显示文档，通常是在打印前显示文档。  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows 窗体应用程序中显示打印预览
+你可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控件使用户能够通常显示文档时，才要打印它。  
   
- 为此，需要指定 <xref:System.Drawing.Printing.PrintDocument> 类的一个实例；该类是要打印的文档。  有关使用 <xref:System.Drawing.Printing.PrintDocument> 组件进行打印预览的更多信息，请参见[如何：使用打印预览在 Windows 窗体中进行打印](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
+ 若要执行此操作，你需要指定的实例<xref:System.Drawing.Printing.PrintDocument>类; 这是要打印的文档。 有关使用与打印预览<xref:System.Drawing.Printing.PrintDocument>组件，请参阅[如何： 打印 Windows 窗体使用打印预览中](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
   
 > [!NOTE]
->  要在运行时使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控件，用户必须在计算机上安装打印机（本地安装或通过网络安装），因为这是 <xref:System.Windows.Forms.PrintPreviewDialog> 组件确定打印时文档显示方式的一种方法。  
+>  若要使用<xref:System.Windows.Forms.PrintPreviewDialog>控件在运行时，用户必须具有打印机安装在其计算机，本地或通过网络，因为这会影响如何<xref:System.Windows.Forms.PrintPreviewDialog>组件确定文档打印时的外观。  
   
- <xref:System.Windows.Forms.PrintPreviewDialog> 控件使用 <xref:System.Drawing.Printing.PrinterSettings> 类。  此外，与 <xref:System.Windows.Forms.PrintPreviewDialog> 组件一样，<xref:System.Windows.Forms.PrintPreviewDialog> 控件也使用 <xref:System.Drawing.Printing.PageSettings> 类。  在 <xref:System.Windows.Forms.PrintPreviewDialog> 控件的 <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> 属性中指定的打印文档引用 <xref:System.Drawing.Printing.PrinterSettings> 和 <xref:System.Drawing.Printing.PageSettings> 类的实例，而这些实例用于在预览窗口中呈现文档。  
+ <xref:System.Windows.Forms.PrintPreviewDialog>控件使用<xref:System.Drawing.Printing.PrinterSettings>类。 此外，<xref:System.Windows.Forms.PrintPreviewDialog>控件使用<xref:System.Drawing.Printing.PageSettings>类，就像<xref:System.Windows.Forms.PrintPreviewDialog>组件的作用。 中指定的打印文档<xref:System.Windows.Forms.PrintPreviewDialog>控件的<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>属性引用的同时实例<xref:System.Drawing.Printing.PrinterSettings>和<xref:System.Drawing.Printing.PageSettings>类，并将这些用于呈现预览窗口中的文档。  
   
-### 使用 PrintPreviewDialog 控件查看页  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>若要查看使用 PrintPreviewDialog 控件的网页  
   
--   可使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法显示对话框，指定要使用的 <xref:System.Drawing.Printing.PrintDocument>。  
+-   使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法可显示对话框，从而指定要使用的 <xref:System.Drawing.Printing.PrintDocument> 。  
   
-     在下面的代码示例中，<xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件处理程序打开 <xref:System.Windows.Forms.PrintPreviewDialog> 控件的实例。  打印文档是在 <xref:System.Windows.Forms.PrintDialog.Document%2A> 属性中指定的。  在下面的示例中，未指定任何打印文档。  
+     在下面的代码示例中，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件处理程序将打开的实例<xref:System.Windows.Forms.PrintPreviewDialog>控件。 在指定打印文档<xref:System.Windows.Forms.PrintDialog.Document%2A>属性。 在下面的示例中，未不指定任何打印文档。  
   
-     该示例要求窗体具有一个 <xref:System.Windows.Forms.Button> 控件、一个名为 `myDocument` 的 <xref:System.Drawing.Printing.PrintDocument> 组件以及一个 <xref:System.Windows.Forms.PrintPreviewDialog> 控件。  
+     该示例要求你的窗体具有<xref:System.Windows.Forms.Button>控件，<xref:System.Drawing.Printing.PrintDocument>组件名为`myDocument`，和一个<xref:System.Windows.Forms.PrintPreviewDialog>控件。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -49,7 +54,6 @@ caps.handback.revision: 19
        PrintPreviewDialog1.Document = myDocument  
        PrintPreviewDialog1.ShowDialog()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ caps.handback.revision: 19
        printPreviewDialog1.Document = myDocument;  
        printPreviewDialog1.ShowDialog();  
     }  
-  
     ```  
   
     ```cpp  
@@ -77,11 +80,10 @@ caps.handback.revision: 19
        }  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）在窗体的构造函数中放置以下代码以注册事件处理程序。  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -89,8 +91,8 @@ caps.handback.revision: 19
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## 请参阅  
- [PrintDocument 组件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)   
- [PrintPreviewDialog 控件](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
+## <a name="see-also"></a>另请参阅  
+ [PrintDocument 组件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [PrintPreviewDialog 控件](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [Windows 窗体](../../../../docs/framework/winforms/index.md)

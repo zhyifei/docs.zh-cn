@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="samples-and-tutorials"></a>示例和教程
 
 .NET 文档包含指导用户如何使用 .NET 的一系列示例和教程。 本主题介绍如何查找、查看和下载 .NET Core、ASP.NET Core 和 C# 示例和教程。 可在 [F# 基础站点](http://fsharp.org/learn.html)找到学习 F# 编程语言的资源。 如果对使用在线代码编辑器探索 C# 感兴趣，可尝试这些[交互式教程](http://go.microsoft.com/fwlink/p/?LinkId=817234)。 有关如何查看和下载示例代码的说明，请参阅[查看和下载示例](#viewing-and-downloading-samples)部分。
@@ -117,4 +115,3 @@ ms.lasthandoff: 07/28/2017
    * 使用 [Visual Studio ](https://www.visualstudio.com/) 或 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)：从菜单栏中依次选择“文件”>“打开”>“项目/解决方案”来打开示例，导航到示例项目文件夹，然后选择项目文件（*.csproj* 或 *.fsproj*）。
    * 使用 [Visual Studio Code](https://code.visualstudio.com/)：从菜单栏中选择“文件”>“打开文件夹”来打开示例，然后选择示例的项目文件夹。
    * 使用支持 .NET Core 项目的其他 IDE。
-

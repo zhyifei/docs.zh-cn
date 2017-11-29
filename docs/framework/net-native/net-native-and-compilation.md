@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-and-compilation"></a>.NET Native 和编译
 面向 .Net Framework 的 Windows 8.1 应用程序和 Windows 桌面应用程序由特定的编程语言进行编写并编译为中间语言 (IL)。 在运行时，实时 (JIT) 编译器负责恰好在首次执行方法前为本地计算机将 IL 编译到本机代码中。 与此相反，.NET 本机工具链在编译时将源代码转换为本机代码。 本主题将 .NET 本机与其他可用于 .NET Framework 应用程序的编译技术进行比较，还提供了 .NET 本机如何生成本机代码的实用概述，可帮助用户了解使用 .NET 本机编译的代码中发生的异常为什么不会出现在 JIT 编译的代码中。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/21/2017
   
  在将应用程序从 IL 转换为本机代码的过程中，.NET 本机工具链执行如下所示的操作：  
   
--   对于某些代码路径，它将依靠反射和元数据的代码替换为静态本机代码。 例如，如果值类型未重写 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法，默认的相等性测试将使用反射来检索表示值类型字段的 <xref:System.Reflection.FieldInfo> 对象，然后将两个实例的字段值进行比较。 编译为本机代码时，.NET 本机工具链将反射代码和元数据替换为字段值的静态比较。  
+-   对于某些代码路径，它将依靠反射和元数据的代码替换为静态本机代码。 例如，如果值类型未重写 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 方法，默认的相等性测试将使用反射来检索表示值类型字段的 <xref:System.Reflection.FieldInfo> 对象，然后将两个实例的字段值进行比较。 编译为本机代码时，.NET 本机工具链将反射代码和元数据替换为字段值的静态比较。  
   
 -   如果可能，它会尝试消除所有元数据。  
   
@@ -111,8 +109,7 @@ ms.lasthandoff: 08/21/2017
 -   NGEN 映像往往非常脆弱。 例如，如果修补或更改了依赖项，通常需要使用它的程序集也重新执行 NGEN 操作。 对于 .NET Framework 类库中的系统程序集尤其如此。 相反，.NET 本机允许独立提供应用程序。  
   
 ## <a name="see-also"></a>另请参阅  
- [元数据和自描述组件](../../../docs/standard/metadata-and-self-describing-components.md)   
- [内部 .NET Native（第 9 频道视频）](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)   
- [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
+ [元数据和自描述组件](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [内部.NET Native （第 9 频道视频）](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native 一般疑难解答](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
-

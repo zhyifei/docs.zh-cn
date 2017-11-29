@@ -1,44 +1,25 @@
 ---
 title: "筛选 My.Application.Log 输出 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>演练：筛选 My.Application.Log 输出 (Visual Basic)
 本演练演示如何更改对 `My.Application.Log` 对象的默认日志筛选，以控制哪些信息可从 `Log` 对象传递到侦听器以及哪些信息可由侦听器编写。 生成应用程序后仍可以更改日志记录行为，因为配置信息存储在应用程序的配置文件中。  
@@ -162,7 +143,7 @@ ms.lasthandoff: 07/28/2017
 9. 将 `value` 属性的值改回“信息”。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 开关设置仅控制 `My.Application.Log`。 它不会更改 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Diagnostics.Trace?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug?displayProperty=fullName> 类的行为方式。  
+    >  `DefaultSwitch` 开关设置仅控制 `My.Application.Log`。 它不会更改 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 类的行为方式。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>对 My.Application.Log 侦听器的单独筛选  
  上面的示例演示如何更改对所有 `My.Application.Log` 输出的筛选。 此示例演示如何筛选单个日志侦听器。 默认情况下，应用程序有两个可写入应用程序的调试输出和日志文件的侦听器。  
@@ -274,11 +255,10 @@ ms.lasthandoff: 07/28/2017
   
  有关在部署后更改日志设置的详细信息，请参阅[使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。  
   
-## <a name="see-also"></a>请参阅  
- [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [演练：创建自定义日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [跟踪开关](../../../../framework/debug-trace-profile/trace-switches.md)   
+## <a name="see-also"></a>另请参阅  
+ [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [演练：创建自定义日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [跟踪开关](../../../../framework/debug-trace-profile/trace-switches.md)  
  [记录来自应用程序的信息](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

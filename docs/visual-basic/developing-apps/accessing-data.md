@@ -1,39 +1,21 @@
 ---
 title: "在 Visual Basic 应用程序中访问数据"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4ff9885f66171ee0454bff058b342d1b5683d3e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 应用程序中访问数据
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 包括多种新功能，以帮助开发访问数据的应用程序。 通过将项从[“数据源”窗口](/visualstudio/data-tools/add-new-data-sources)拖到窗体上来创建 Windows 应用程序的数据绑定窗体。 通过将项从“数据源窗口”拖动到现有控件上来将控件绑定到数据。  
@@ -80,4 +62,3 @@ ms.lasthandoff: 07/28/2017
 
  [Office 解决方案中的数据](https://msdn.microsoft.com/library/xx069ybh)  
  包含相关页面的链接，这些页面阐释了数据在 Office 解决方案中的工作方式（包括有关面向架构的编程、数据缓存和服务器端数据访问的信息）。
-

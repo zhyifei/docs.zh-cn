@@ -1,30 +1,21 @@
 ---
 title: "演练：利用 BackgroundWorker 组件进行多线程处理 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>演练：利用 BackgroundWorker 组件进行多线程处理 (C#)
 本演练演示如何创建在文本文件中搜索单词出现次数的多线程 Windows 窗体应用程序。 演示内容包括：  
@@ -291,7 +282,6 @@ ms.lasthandoff: 07/28/2017
 ## <a name="next-steps"></a>后续步骤  
  此应用程序包含一些基本错误处理。 它可检测空白搜索字符串。 可以通过处理其他错误（如超过可以计数的最大字词数或行数）使该程序更加可靠。  
   
-## <a name="see-also"></a>请参阅  
- [线程处理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [线程处理 [C#]](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [如何：订阅和取消订阅事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
-

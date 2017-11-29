@@ -4,22 +4,21 @@ ms.date: 03/30/2017
 ms.prod: .net
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: ff2b5bc2e34a061f577dd839de8b5e834af102b8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a09db57aab479b5b1a96dca8f4b37bc112e05810
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="serialization-guidelines"></a>序列化准则
 本文档列出了在设计要序列化的 API 时要考虑的准则。  
@@ -58,19 +57,22 @@ ms.lasthandoff: 08/21/2017
 #### <a name="supporting-data-contract-serialization"></a>支持数据协定序列化  
  通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 应用到类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 应用到类型的成员（字段和属性），类型可支持数据协定序列化。  
   
- [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)] [!code-vb[SerializationGuidelines#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#1)]  
+ [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
+ [!code-vb[SerializationGuidelines#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#1)]  
   
 1.  如果可以在部分信任模式下使用类型，则考虑将类型的数据成员标记为公共的。 在完全信任模式下，数据协定序列化程序可对非公共类型和成员进行序列化和反序列化，但在部分信任模式下，仅可对公共成员进行序列化和反序列化。  
   
 2.  请务必在包含 Data-MemberAttribute 的所有属性上实现 getter 和 setter。 对于考虑可进行序列化的类型，数据协定序列化程序要求同时具备 getter 和 setter。 如果不会在部分信任模式下使用类型，则这两个属性访问器中的一个或两个都可以是非公共的。  
   
-     [!code-csharp[SerializationGuidelines#2](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#2)]  [!code-vb[SerializationGuidelines#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#2)]  
+     [!code-csharp[SerializationGuidelines#2](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#2)]
+     [!code-vb[SerializationGuidelines#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#2)]  
   
 3.  对于反序列化实例的初始化，应考虑使用序列化回调。  
   
      反序列化对象时，不调用任何构造函数。 因此，在正常构造期间执行的任何逻辑都需要作为一个序列化回调实现。  
   
-     [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]  [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
+     [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
+     [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
      <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性是最常用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
     <xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些属性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
@@ -79,7 +81,8 @@ ms.lasthandoff: 08/21/2017
   
      例如，如果使用一个抽象类表示反序列化数据成员的类型，则序列化程序将需要已知类型信息，以便决定要实例化并分配给成员的具体类型。 如果未使用相关属性指定已知类型，则需要将已知类型显式传递给序列化程序（可通过将已知类型传递给序列化程序构造函数来执行此操作），或者需要在配置文件中指定已知类型。  
   
-     [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]  [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
+     [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
+     [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
      在无法通过静态方式了解已知类型列表的情况下（当编译 Person 类时），KnownTypeAttribute 还可指向一个在运行时返回已知类型列表的方法。  
   
@@ -91,7 +94,8 @@ ms.lasthandoff: 08/21/2017
   
      序列化程序可通过此接口确保在往返期间不丢失任何数据。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性可存储类型的未来版本中不为当前版本所知的任何数据。 在随后序列化当前版本并将其反序列化为未来版本时，可通过 ExtensionData 属性值在序列化流中使用附加数据。  
   
-     [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]  [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
+     [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
+     [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
      有关详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
@@ -102,9 +106,10 @@ ms.lasthandoff: 08/21/2017
   
      换句话说，不要将 <xref:System.Runtime.Serialization> 命名空间中的属性应用到新类型，除非您清楚该类型将会用于 XML 序列化。 以下示例展示如何使用 System.Xml.Serialization 来控制生成的 XML 的形状。  
   
-     [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]  [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
+     [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
+     [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2.  如果通过应用 XML 序列化属性所提供的对于序列化 XML 的形状的控制还无法满足您的需要，则可考虑实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口。 利用此接口的两种方法（<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>），您可以完全控制序列化 XML 流。 还可以通过应用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性来控制为类型生成的 XML 架构。  
+2.  如果通过应用 XML 序列化属性所提供的对于序列化 XML 的形状的控制还无法满足您的需要，则可考虑实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口。 两种方法的接口，<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>，允许你完全控制的序列化的 XML 流。 还可以通过应用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性来控制为类型生成的 XML 架构。  
   
 #### <a name="supporting-runtime-serialization"></a>支持运行时序列化  
  运行时序列化是 .NET 远程处理所使用的一项技术。 如果您认为将会使用 .NET 远程处理传输类型，则需要确保类型支持运行时序列化。  
@@ -113,32 +118,36 @@ ms.lasthandoff: 08/21/2017
   
 1.  如果您的类型将要用于 .NET 远程处理，则应考虑支持运行时序列化。 例如，<xref:System.AddIn> 命名空间使用 .NET 远程处理，因此在 System.AddIn 加载项之间交换的所有类型都需要支持运行时序列化。  
   
-     [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]  [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
+     [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
+     [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
 2.  如果需要完全控制序列化过程，则应考虑实现运行时可序列化模式。 例如，如果您需要在对数据进行序列化或反序列化时转换数据。  
   
      此模式非常简单。 您需要执行的全部操作就是实现 <xref:System.Runtime.Serialization.ISerializable> 接口，并提供在反序列化对象时使用的特殊构造函数。  
   
-     [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]  [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
+     [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]
+     [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
   
 3.  请务必保护序列化构造函数，并提供完全按照此处示例中的显示类型化和命名的两个参数。  
   
-     [!code-csharp[SerializationGuidelines#9](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#9)]  [!code-vb[SerializationGuidelines#9](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#9)]  
+     [!code-csharp[SerializationGuidelines#9](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#9)]
+     [!code-vb[SerializationGuidelines#9](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#9)]  
   
 4.  请务必显式实现 ISerializable 成员。  
   
-     [!code-csharp[SerializationGuidelines#10](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#10)]  [!code-vb[SerializationGuidelines#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#10)]  
+     [!code-csharp[SerializationGuidelines#10](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#10)]
+     [!code-vb[SerializationGuidelines#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#10)]  
   
 5.  请务必向 **ISerializable.GetObjectData** 实现应用链接要求。 这将确保只有完全受信任的核心和运行时序列化程序才有权访问成员。  
   
-     [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]  [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
+     [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
+     [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
 ## <a name="see-also"></a>请参阅  
- [使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [数据协定序列化程序](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)   
- [数据协定序列化程序支持的类型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)   
- [二进制序列化](binary-serialization.md)   
- [远程对象](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)   
- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)   
+ [使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [数据协定序列化程序](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ [支持的数据协定序列化程序类型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [二进制序列化](binary-serialization.md)  
+ [远程对象](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
  [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)
-

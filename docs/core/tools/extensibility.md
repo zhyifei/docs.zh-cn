@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
+ms.openlocfilehash: a8f70505d1bb043ab21f87edbb5aa2d9f18a7071
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
-ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
 本文档介绍扩展 .NET Core 命令行接口 (CLI) 工具的多种方式，并解释驱动每个方式的不同方案。
@@ -49,6 +47,8 @@ ms.lasthandoff: 08/09/2017
 
 ### <a name="consuming-per-project-tools"></a>使用基于项目的工具
 使用这些工具要求将想要使用的每个工具的 `<DotNetCliToolReference>` 元素添加到项目文件。 在 `<DotNetCliToolReference>` 元素中，引用该工具所在的包并指定所需的版本。 运行 [`dotnet restore`](dotnet-restore.md) 后，将还原该工具及其依赖项。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 对于需要加载用于执行的项目生成输出的工具，通常还有一个依赖项，它位于项目文件中的常规依赖项下。 由于 CLI 使用 MSBuild 作为其生成引擎，因此建议将该工具的这些部分作为自定义 MSBuild [目标](/visualstudio/msbuild/msbuild-targets)和[任务](/visualstudio/msbuild/msbuild-tasks)写入，以便这些部分可以参与整个生成过程。 此外，它们还可以轻松获取通过该生成产生的所有数据（例如，输出文件的位置、正在生成的当前配置等）。所有此类信息将成为一组可从任意目标中读取的 MSBuild 属性。 本文档的后面将介绍如何使用 NuGet 添加自定义目标。
 
@@ -165,4 +165,3 @@ echo "Hello World"
 在 macOS 上，可以将此脚本另存为 `dotnet-hello` 并使用 `chmod +x dotnet-hello` 设置其可执行位。 然后，可以使用命令 `ln -s <full_path>/dotnet-hello /usr/local/bin/` 在 `/usr/local/bin` 中创建其符号链接。 这样，就可以使用 `dotnet hello` 语法调用命令。
 
 在 Windows 上，可将此脚本另存为 `dotnet-hello.cmd`，并放在系统路径中（也可以将其添加到已位于该路径中的文件夹内）。 然后，只需使用 `dotnet hello` 即可运行此示例。
-

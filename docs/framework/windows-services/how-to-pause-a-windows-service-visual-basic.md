@@ -1,58 +1,61 @@
 ---
-title: "如何：暂停 Windows 服务 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController.Pause"
-helpviewer_keywords: 
-  - "暂停 Windows 服务应用程序"
-  - "Windows 服务应用程序, 暂停"
+title: "如何：暂停 Windows 服务 (Visual Basic)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: ServiceController.Pause
+helpviewer_keywords:
+- Windows Service applications, pausing
+- pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
-caps.latest.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: d44358d3f76f50a06ede5e7d720f4f48d80893de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：暂停 Windows 服务 (Visual Basic)
-此示例使用 <xref:System.ServiceProcess.ServiceController> 组件暂停本地计算机上的 IIS 管理服务。  
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>如何：暂停 Windows 服务 (Visual Basic)
+此示例使用<xref:System.ServiceProcess.ServiceController>组件暂停本地计算机上的 IIS Admin 服务。  
   
-## 示例  
+## <a name="example"></a>示例  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- 此代码示例也可用作 IntelliSense 代码段。  在代码段选择器中，它位于**“Windows 操作系统”\>“Windows 服务”**中。  有关更多信息，请参见 [代码段](../Topic/Code%20Snippets.md)。  
+ 此代码示例也可作为 IntelliSense 代码片段。 代码段选择器，在位于**Windows 操作系统 > Windows 服务**。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
   
-## 编译代码  
+## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
 -   对 System.serviceprocess.dll 的项目引用。  
   
--   对 <xref:System.ServiceProcess> 命名空间中的成员的访问权限。  如果代码中的成员名称没有完全限定，则需要添加一条 `Imports` 语句。  有关更多信息，请参见 [Imports 语句（.NET 命名空间和类型）](../../../ocs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+-   对 <xref:System.ServiceProcess> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
-## 可靠编程  
- 默认情况下，<xref:System.ServiceProcess.ServiceController> 类的 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 属性是本地计算机。  若要引用另一台计算机上的 Windows 服务，请将 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 属性更改为该计算机的名称。  
+## <a name="robust-programming"></a>可靠编程  
+ <xref:System.ServiceProcess.ServiceController.MachineName%2A>属性<xref:System.ServiceProcess.ServiceController>类是默认情况下的在本地计算机。 若要引用另一台计算机上的 Windows 服务，更改<xref:System.ServiceProcess.ServiceController.MachineName%2A>属性设置为该计算机的名称。  
   
  以下情况可能会导致异常：  
   
--   服务不能被暂停。  （[InvalidOperationException 类](frlrfSystemInvalidOperationExceptionClassTopic)）  
+-   不能暂停服务。 (<xref:System.InvalidOperationException>)  
   
--   在访问系统 API 时发生错误。  （[Win32Exception 类](frlrfSystemComponentModelWin32ExceptionClassTopic)）  
+-   访问 API 时出错。 (<xref:System.ComponentModel.Win32Exception>)  
   
-## .NET Framework 安全性  
- 可以对计算机上的服务控制加以限制，方法是使用 [ServiceControllerPermissionAccess 枚举](frlrfSystemServiceProcessServiceControllerPermissionAccessClassTopic)在 [ServiceControllerPermission 类](frlrfSystemServiceProcessServiceControllerPermissionClassTopic)中设置权限。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 控制的服务的计算机上可能会限制通过<xref:System.ServiceProcess.ServiceControllerPermissionAccess>在中设置权限<xref:System.ServiceProcess.ServiceControllerPermission>。  
   
- 可以对服务信息访问加以限制，方法是使用 [PermissionState 枚举](frlrfSystemSecurityPermissionsPermissionStateClassTopic)在 [SecurityPermission 类](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic)中设置权限。  
+ 服务信息的访问权限可能会限制通过<xref:System.Security.Permissions.PermissionState>在中设置权限<xref:System.Security.Permissions.SecurityPermission>。  
   
-## 请参阅  
- <xref:System.ServiceProcess.ServiceController>   
- <xref:System.ServiceProcess.ServiceControllerStatus>   
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>   
- [如何：继续 Windows 服务 \(Visual Basic\)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceProcess.ServiceController>  
+ <xref:System.ServiceProcess.ServiceControllerStatus>  
+ <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
+ [如何： 继续 Windows 服务 (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

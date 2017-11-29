@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f65251d5712f981eaa038cd8fbfe66b5e690b4b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
 .NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。 此工具使用运行时调试 API 提供调试服务。 可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。  
@@ -122,6 +115,5 @@ mdbg>
 ## <a name="examples"></a>示例  
   
 ## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
+ [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

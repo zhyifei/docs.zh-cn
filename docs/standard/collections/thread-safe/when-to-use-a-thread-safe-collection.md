@@ -8,19 +8,17 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, when to upgrade
+helpviewer_keywords: thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0bfb5ef2679c4e20e99a10dcf82a251673811b41
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5166b7b7be38fae9bf809cb0b3aa79b76efd41ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>何时使用线程安全集合
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 新引入了五个专为支持多线程添加和删除操作而设计的集合类型。 为了实现线程安全性，这些新类型使用多种高效的锁定和免锁定同步机制。 同步会增加操作的开销。 开销数取决于所用的同步类型、执行的操作类型和其他因素，例如尝试并行访问该集合的线程数。  
@@ -42,36 +40,35 @@ ms.lasthandoff: 07/28/2017
  与计算机内核数相称的性能提升。 一种可伸缩的算法，相比两个内核，八个内核上的执行速度更快。  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) 与 Queue(T)  
- 在纯制造者-使用者方案中，每个元素的处理时间都非常短（几条指令），而相比带有外部锁的 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>，<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName> 可提供适度的性能优势。 在此方案中，当某一专用线程排队，而另一专用线程取消排队时，<xref:System.Collections.Concurrent.ConcurrentQueue%601> 的性能最佳。 如果不强制执行此规则，那么 <xref:System.Collections.Generic.Queue%601> 在多内核计算机上的执行速度甚至可能稍快于 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。  
+ 在纯制造者-使用者方案中，每个元素的处理时间都非常短（几条指令），而相比带有外部锁的 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>，<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> 可提供适度的性能优势。 在此方案中，当某一专用线程排队，而另一专用线程取消排队时，<xref:System.Collections.Concurrent.ConcurrentQueue%601> 的性能最佳。 如果不强制执行此规则，那么 <xref:System.Collections.Generic.Queue%601> 在多内核计算机上的执行速度甚至可能稍快于 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。  
   
  处理时间大约为 500 FLOPS（浮点运算）或更长时，该双线程规则不适用于 <xref:System.Collections.Concurrent.ConcurrentQueue%601>，这将具有很好的可伸缩性。 <xref:System.Collections.Generic.Queue%601> 在此情况下无法正常伸缩。  
   
  在混合制造者-使用者方案中，处理时间非常短时，带外部锁的 <xref:System.Collections.Generic.Queue%601> 的伸缩性优于 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。 但是，处理时间大约为 500 FLOPS 或更长时，<xref:System.Collections.Concurrent.ConcurrentQueue%601> 的伸缩性更佳。  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack 与堆栈  
- 在纯制造者-使用者方案中，当处理时间非常短时，<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> 和带外部锁的 <xref:System.Collections.Generic.Stack%601?displayProperty=fullName> 在使用一个专用推送线程和一个专用弹出线程时的执行性能可能大致相同。 但是，随着线程数的增加，这两种类型的执行性能会因争用增加而降低，并且 <xref:System.Collections.Generic.Stack%601> 的执行性能可能优于 <xref:System.Collections.Concurrent.ConcurrentStack%601>。 处理时间大约为 500 FLOPS 或更长时，这两种类型的伸缩速率大致相同。  
+ 在纯制造者-使用者方案中，当处理时间非常短时，<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> 和带外部锁的 <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> 在使用一个专用推送线程和一个专用弹出线程时的执行性能可能大致相同。 但是，随着线程数的增加，这两种类型的执行性能会因争用增加而降低，并且 <xref:System.Collections.Generic.Stack%601> 的执行性能可能优于 <xref:System.Collections.Concurrent.ConcurrentStack%601>。 处理时间大约为 500 FLOPS 或更长时，这两种类型的伸缩速率大致相同。  
   
  在混合制造者-使用者方案中，对于小型和大型工作负荷，<xref:System.Collections.Concurrent.ConcurrentStack%601> 的速度更快。  
   
  使用 <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> 可能会大大加快访问速度。  
   
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary 与词典  
- 通常，在从多个线程中并行添加和更新键或值的任何方案中，会使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>。 在涉及频繁更新和相对较少读取操作的方案中，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 通常具备一些优势。 在涉及许多读取和更新操作的方案中，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 通常在具备任意数量内核的计算机上运行速度更快。  
+ 通常，在从多个线程中并行添加和更新键或值的任何方案中，会使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>。 在涉及频繁更新和相对较少读取操作的方案中，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 通常具备一些优势。 在涉及许多读取和更新操作的方案中，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 通常在具备任意数量内核的计算机上运行速度更快。  
   
  在涉及频繁更新的方案中，可以提高 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的并发度，然后进行衡量，查看含有多个内核的计算机的性能是否有所提升。 如果更改并发级别，请尽可能避免全局操作。  
   
  如果仅读取键或值，<xref:System.Collections.Generic.Dictionary%602> 的速度会更快，因为如果字典未被任何线程修改，则无需同步。  
   
 ## <a name="concurrentbag"></a>ConcurrentBag  
- 在纯制造者-使用者方案中，<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName> 的执行速度可能慢于其他并发集合类型。  
+ 在纯制造者-使用者方案中，<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 的执行速度可能慢于其他并发集合类型。  
   
  在混合制造者-使用者方案中，对于大型和小型工作负荷，相比其他任何并发集合类型，往往 <xref:System.Collections.Concurrent.ConcurrentBag%601> 的执行速度更快且伸缩性更佳。  
   
 ## <a name="blockingcollection"></a>BlockingCollection  
- 需要限制和阻止语义时，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> 的执行速度可能优于任何自定义实现。 它还支持诸多取消、枚举和异常处理操作。  
+ 需要限制和阻止语义时，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的执行速度可能优于任何自定义实现。 它还支持诸多取消、枚举和异常处理操作。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)  
  [并行编程](../../../../docs/standard/parallel-programming/index.md)
-

@@ -1,56 +1,55 @@
 ---
-title: "如何：声明具有混合访问级别的属性 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "访问级别, 属性"
-  - "混合访问级别"
-  - "过程, 定义"
-  - "属性 [Visual Basic], 访问级别"
-  - "Property 语句, 声明混合访问级别"
-  - "Visual Basic 代码, 过程"
-  - "Visual Basic 代码, 属性"
+title: "如何：声明具有混合访问级别的属性 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- access levels [Visual Basic], properties
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- mixed access levels
+- Visual Basic code, properties
+- properties [Visual Basic], access levels
+- Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 90fe20303f6f2ed692e54e44ee8cc65897531543
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：声明具有混合访问级别的属性 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-如果需要属性上的 `Get` 和 `Set` 过程具有不同的访问级别，可以对 `Property` 语句使用更高的许可级别，对 `Get` 或 `Set` 语句使用更高的限制级别。  如果希望代码的某些部分能够获取属性值，而其他某些部分能够更改属性值，则可以在属性上使用混合访问级别。  
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：声明具有混合访问级别的属性 (Visual Basic)
+如果你想`Get`和`Set`要具有不同的访问级别的属性的过程，你可以使用中的更多的权限级别`Property`语句和中限制性更强的级别`Get`或`Set`语句。 当你想要能够获取属性的值的代码的某些部分和某些其他部分的代码将无法更改的值时，可以在属性上使用混合的访问级别。  
   
- 有关访问级别的更多信息，请参见 [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ 有关访问级别的详细信息，请参阅[访问 Visual Basic 中的级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-### 声明带有混合访问级别的属性  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a>若要声明具有混合的访问级别的属性  
   
-1.  按通常的方法声明属性，在 `Property` 语句中指定较低的限制访问级别（例如 `Public`）。  
+1.  将该属性声明以常规方式，并指定限制性较弱的访问级别 (如`Public`) 中`Property`语句。  
   
-2.  声明 `Get` 或 `Set` 过程，指定更高的限制访问级别（例如 `Friend`）。  
+2.  声明是`Get`或`Set`指定限制性更强的访问级别的过程 (如`Friend`)。  
   
-3.  不要在其他属性过程上指定访问级别。  它假定已在 `Property` 语句中声明了访问级别。  可以仅在一个属性过程上限制访问权限。  
+3.  不要在另一个属性过程指定访问级别。 它假定中声明的访问级别`Property`语句。 你可以限制仅其中一个属性过程上的访问。  
   
      [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
-     在前面的示例中，`Get` 过程具有与属性自身相同的 `Protected` 访问权限，而 `Set` 过程具有 `Private` 访问权限。  派生自 `employee` 的类可以读取 `salary` 值，但只有 `employee` 类可以对它进行设置。  
+     在前面的示例中，`Get`过程具有相同`Protected`访问属性本身，而`Set`过程有`Private`访问。 从派生的类`employee`可以读取`salary`值，但只有`employee`类可将其设置。  
   
-## 请参阅  
- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Property 过程](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [过程参数和自变量](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Visual Basic 中属性和变量的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [如何：创建属性](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [如何：调用 Property 过程](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [如何：在 Visual Basic 中声明和调用默认属性](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [如何：在属性中放置值](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [如何：从属性获取值](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>另请参阅  
+ [过程](./index.md)  
+ [属性过程](./property-procedures.md)  
+ [过程参数和自变量](./procedure-parameters-and-arguments.md)  
+ [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [在 Visual Basic 中属性和变量之间的差异](./differences-between-properties-and-variables.md)  
+ [如何：创建属性](./how-to-create-a-property.md)  
+ [如何：调用 Property 过程](./how-to-call-a-property-procedure.md)  
+ [如何： 声明和 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)  
+ [如何：在属性中放置值](./how-to-put-a-value-in-a-property.md)  
+ [如何：从属性获取值](./how-to-get-a-value-from-a-property.md)

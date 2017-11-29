@@ -1,14 +1,10 @@
 ---
 title: "-filealign（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /filealign
-dev_langs:
-- CSharp
+f1_keywords: /filealign
 helpviewer_keywords:
 - /alignment compiler option [C#]
 - filealign compiler option [C#]
@@ -22,29 +18,14 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b13dee0a221bc0b97349be5897a04188304ff16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="filealign-c-compiler-options"></a>/filealign（C# 编译器选项）
 **/filealign** 选项用于指定输出文件中各节的大小。  
@@ -79,6 +60,5 @@ ms.lasthandoff: 07/28/2017
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

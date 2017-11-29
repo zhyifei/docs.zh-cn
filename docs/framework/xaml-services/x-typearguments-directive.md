@@ -1,95 +1,98 @@
 ---
-title: "x:TypeArguments Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:TypeArguments"
-  - "xTypeArguments"
-  - "TypeArguments"
-helpviewer_keywords: 
-  - "x:TypeArguments attribute [XAML Services]"
-  - "TypeArguments attribute in XAML [XAML Services]"
-  - "XAML [XAML Services], x:TypeArguments attribute"
+title: "x:TypeArguments 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:TypeArguments
+- xTypeArguments
+- TypeArguments
+helpviewer_keywords:
+- x:TypeArguments attribute [XAML Services]
+- TypeArguments attribute in XAML [XAML Services]
+- XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: 18
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: a63a8080c71ad026664e2e14fc1762fcdd4bdb36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:TypeArguments Directive
-将泛型的约束类型参数传递给泛型类型的构造函数。  
+# <a name="xtypearguments-directive"></a>x:TypeArguments 指令
+约束类型参数传递给泛型类型的构造函数的泛型。  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
+```xaml  
+<object x:TypeArguments="typeString" .../>  
 ```  
-<object x:TypeArguments="typeString" .../>  
-```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`object`|由 CLR 泛型类型支持的 XAML 类型的对象元素声明。  如果 `object` 不是来自默认 XAML 命名空间的 XAML 类型，则  `object` 需要一个指示 XAML 命名空间的前缀，且该命名空间需有  `object`存在。|  
-|`typeString`|将一个或多个 XAML 类型名称声明为字符串的字符串，为 CLR 泛型类型提供类型参数。  有关其他语法说明，请参见备注。|  
+|`object`|由 CLR 泛型类型的 XAML 类型的对象元素声明。 如果`object`不是来自默认 XAML 命名空间，将 XAML 类型是指`object`需要一个指示 XAML 命名空间前缀其中`object`存在。|  
+|`typeString`|一个字符串，声明一个或多个 XAML 类型名称作为字符串，其中提供 CLR 泛型类型的类型参数。 其他语法说明，请参阅备注。|  
   
-## 备注  
- 在大多数情况下，以用作 `typeString` 字符串中的信息项的 XAML 类型为前缀。  CLR 泛型约束的典型类型（例如 <xref:System.Int32> 和 <xref:System.String>）来自 CLR 基类库。  这些库未映射到典型的特定于框架的默认 XAML 命名空间，因此需要为 XAML 用法进行前缀映射。  
+## <a name="remarks"></a>备注  
+ 在大多数情况下，用作的信息项中的 XAML 类型`typeString`字符串作为前缀。 典型类型的 CLR 泛型约束 (例如，<xref:System.Int32>和<xref:System.String>) 来自 CLR 基类库。 这些库不映射到典型的特定于框架的默认 XAML 命名空间，因此，XAML 用法中需要的前缀映射。  
   
- 可通过使用命令分隔符指定多个 XAML 类型名称。  
+ 可以使用逗号分隔符来指定多个 XAML 类型名称。  
   
- 泛型约束自身使用泛型类型，则嵌套的约束类型参数可以用括号 \(\) 括起来。  
+ 如果泛型约束自身使用泛型类型，括号 （） 可以包含嵌套的约束类型参数。  
   
- 请注意，`x:TypeArguments` 的定义特定于 .NET Framework XAML 服务并使用 CLR 支持。  有关语言级别定义，请参见 [\[MS\-XAML\] Section 5.3.11](http://go.microsoft.com/fwlink/?LinkId=114525)（\[MS\-XAML\] 第 5.3.11 节）。  
+ 请注意，此定义`x:TypeArguments`特定于.NET Framework XAML 服务和使用 CLR 支持。 在找不到语言级别定义[ \[MS-XAML\]部分 5.3.11](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
-## 用法示例  
- 对于这些示例，假定声明了以下 XAML 命名空间定义：  
+## <a name="usage-examples"></a>用法示例  
+ 这些示例，假定，声明以下 XAML 命名空间定义：  
   
 ```  
 xmlns:sys="clr-namespace:System;assembly=mscorlib"  
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
 ```  
   
-### List\<字符串\>  
- `<scg:List x:TypeArguments="sys:String" ...>` 实例化新的带有两个 <xref:System.String> 类型参数的 <xref:System.Collections.Generic.List%601>。  
+### <a name="liststring"></a>列表\<字符串 >  
+ `<scg:List x:TypeArguments="sys:String" ...>`实例化一个新<xref:System.Collections.Generic.List%601>与<xref:System.String>的类型自变量。  
   
-### Dictionary\<字符串,字符串\>  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` 实例化新的带有两个 <xref:System.String> 类型参数的 <xref:System.Collections.Generic.Dictionary%602>。  
+### <a name="dictionarystringstring"></a>字典\<字符串、 字符串 >  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`实例化一个新<xref:System.Collections.Generic.Dictionary%602>包含两个<xref:System.String>类型参数。  
   
-### Queue\<KeyValuePair\<字符串,字符串\>\>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` 实例化新的具有 <xref:System.Collections.Generic.KeyValuePair%602> 约束，带有内部约束类型参数 <xref:System.String> 和 <xref:System.String> 的 <xref:System.Collections.Generic.Queue%601>。  
+### <a name="queuekeyvaluepairstringstring"></a>队列 < KeyValuePair\<String，String >>  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`实例化一个新<xref:System.Collections.Generic.Queue%601>具有的约束<xref:System.Collections.Generic.KeyValuePair%602>为内部的约束的类型实参<xref:System.String>和<xref:System.String>。  
   
-## XAML 2006 和 WPF 泛型 XAML 用法  
- 对于 XAML 2006 用法和用于 WPF 应用程序的 XAML，针对 `x:TypeArguments` 和 XAML 的一般泛型类型用法存在以下限制：  
+## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 和 WPF 泛型 XAML 用法  
+ 有关 XAML 2006 使用情况和适用于 WPF 应用程序的 XAML，对于将存在以下限制`x:TypeArguments`和从 XAML 通常的泛型类型用法：  
   
--   仅有 XAML 文件的根元素可以支持引用泛型类型的泛型 XAML 用法。  
+-   仅 XAML 文件的根元素可以支持引用泛型类型的泛型 XAML 用法。  
   
--   根元素必须映射到至少具有一个类型参数的泛型类型。  一个示例是 <xref:System.Windows.Navigation.PageFunction%601>。  这些页面函数是用于 WPF 中的 XAML 泛型用法支持的主要方案。  
+-   根元素必须映射到具有至少一个类型参数的泛型类型。 一个示例是<xref:System.Windows.Navigation.PageFunction%601>。 页函数是在 WPF 中支持的 XAML 泛型用法的主要方案。  
   
--   用于泛型的根元素 XAML 对象元素必须也使用 `x:Class`声明一个分部类。  即使定义了 WPF 生成操作，这也为 true。  
+-   泛型的根元素 XAML 对象元素还必须声明分部类使用`x:Class`。 即使定义 WPF 生成操作，情况也是如此。  
   
--   `x:TypeArguments` 不能引用嵌套的泛型约束。  
+-   `x:TypeArguments`不能引用嵌套的泛型约束。  
   
-## 无 WPF 3.0 或 WPF 3.5 依赖项的 XAML 2009 或 XAML 2006  
- 在 XAML 2006 或 XAML 2009 的 .NET Framework XAML 服务中，放宽了泛型 XAML 用法中的相关 WPF 限制。  您可以实例化泛型对象元素，可以支持后备类型系统和对象模型的 XAML 标记中的任何位置处。  
+## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或没有 WPF 3.0 或 3.5 WPF XAML 2006 依赖项  
+ 在.NET Framework XAML 服务 XAML 2006 或 XAML 2009，放宽了对泛型的 XAML 用法的 WPF 相关限制。 可以实例化泛型对象元素，在后备类型系统和对象模型可支持的 XAML 标记中任何位置。  
   
- 如果使用 XAML 2009，而不是映射 CLR 基类来获取常用语言基元的 XAML 类型，则可以使用 [常用 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)作为 `typeString` 中的信息项。  例如，可以声明以下内容（不显示前缀映射，但 x 是用于 XAML 2009 的 XAML 语言 XAML 命名空间）：  
+ 如果使用 XAML 2009 而不是将 CLR 映射基类型，用于获取的公共语言基元的 XAML 类型转换，则可以使用[常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)信息在中作为项`typeString`。 例如，可以声明以下 （前缀映射未显示，但 x 是 XAML 2009 的 XAML 语言 XAML 命名空间）：  
   
-```  
+```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- 在 WPF 中面向 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]时，您可将 XAML 2009 功能与 `x:TypeArguments` 结合在一起使用，但仅用于宽松 XAML（未进行标记编译的 XAML）。  WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  如果需要标记编译 XAML，则您必须在“XAML 2006 和 WPF 通用 XAML 用法”一节中说明的限制下进行操作。  
+ 在 WPF 和面向[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，你可以使用 XAML 2009 功能以及`x:TypeArguments`但仅针对宽松 XAML (未标记编译的 XAML)。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。 如果你需要为标记编译 XAML，你必须在"XAML 2006 and WPF 泛型 XAML 用法"节中所述的限制下进行操作。  
   
-## 请参阅  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   
- [常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)   
- [Generics in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>另请参阅  
+ [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [x:Type 标记扩展](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
+ [XAML 中的泛型](../../../docs/framework/xaml-services/generics-in-xaml.md)

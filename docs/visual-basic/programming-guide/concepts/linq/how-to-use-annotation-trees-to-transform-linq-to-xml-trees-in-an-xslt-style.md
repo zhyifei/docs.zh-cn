@@ -1,32 +1,24 @@
 ---
-title: "如何︰ 使用批注来转换 LINQ to XML 树的 XSLT 样式 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17324fb6dca653aa3c15e3bad2fcc5ac35828bef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何︰ 使用批注来转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
 使用批注可帮助进行 XML 树的转换。  
   
  有些 XML 文档“以文档为中心兼有混合内容”。 对于这样的文档，您不必知道元素的子节点的形状。 例如，包含文本的节点可能具有像下面这样的外观：  
@@ -35,7 +27,7 @@ ms.lasthandoff: 03/13/2017
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况下︰ 例如，页面可以包含各种子元素，如规则段落、 带项目符号的段落和位图。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
+ 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况： 例如，可以包含各种子元素，如规则段落、 带项目符号的段落和位图的页。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
   
  如果在转换树中的元素时不必知道有关要转换元素的子级的太多信息，则这种方法（使用批注）就是一种有效的方法。  
   
@@ -47,15 +39,15 @@ ms.lasthandoff: 03/13/2017
   
  具体地说，此方法包括：  
   
--   执行一个或多个 LINQ to XML 查询，用这些查询返回要从一种形状转换为另一种形状的元素集。 对于每个元素在查询中，添加一个新<xref:System.Xml.Linq.XElement>对象作为元素的批注。</xref:System.Xml.Linq.XElement> 在转换的新树中会用此新元素替换批注的元素。 这是示例中所示的唯一需要编写的代码。  
+-   执行一个或多个 LINQ to XML 查询，用这些查询返回要从一种形状转换为另一种形状的元素集。 对于查询中的每个元素，添加一个新 <xref:System.Xml.Linq.XElement> 对象作为该元素的批注。 在转换的新树中会用此新元素替换批注的元素。 这是示例中所示的唯一需要编写的代码。  
   
 -   作为批注添加的新元素可以包含新的子节点，它可以形成一个具有任意形状的子树。  
   
 -   有一条特殊规则：如果新元素的子节点位于不同的命名空间，即专门为此建立的命名空间（在本示例中，此命名空间为 `http://www.microsoft.com/LinqToXmlTransform/2007`），则不会将该子元素复制到新树。 而如果命名空间是上面提到的特殊命名空间，并且元素的本地名称为 `ApplyTransforms`，则会迭代源树中该元素的子节点并将其复制到新树（但批注的子元素本身例外，它们将根据这些规则进行转换）。  
   
--   这有些类似于 XSL 中的转换规范。 用于选择一组节点的查询类似于用于模板的 XPath 表达式。 用于创建新的代码<xref:System.Xml.Linq.XElement>，保存为批注是类似于 XSL 中的序列构造和`ApplyTransforms`元素的功能类似的功能与`xsl:apply-templates`XSL 中的元素。</xref:System.Xml.Linq.XElement>  
+-   这有些类似于 XSL 中的转换规范。 用于选择一组节点的查询类似于用于模板的 XPath 表达式。 用于创建以批注形式保存的新 <xref:System.Xml.Linq.XElement> 的代码类似于 XSL 中的序列构造函数，`ApplyTransforms` 元素的功能类似于 XSL 中的 `xsl:apply-templates` 元素。  
   
--   采用此方法的优势之一是在用公式表述查询时，你始终是对未修改的源树编写查询。 您不必担心对树所做的修改如何影响要编写的查询。  
+-   采用此方法的优势之一是在用公式表述查询时，您始终是对未修改的源树编写查询。 您不必担心对树所做的修改如何影响要编写的查询。  
   
 ## <a name="transforming-a-tree"></a>转换一个树  
  下面的第一个示例将所有 `Paragraph` 节点重命名为 `para`。  

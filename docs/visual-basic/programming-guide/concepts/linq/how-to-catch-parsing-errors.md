@@ -1,35 +1,27 @@
 ---
-title: "如何︰ 捕捉分析错误 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 捕捉分析错误 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c4ba619d1f269352b3288f6cadf3b6f37a0dc2d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82b7c51aa8d0f9f64094211c56875e6595607c00
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>如何︰ 捕捉分析错误 (Visual Basic)
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>如何： 捕捉分析错误 (Visual Basic)
 本主题演示如何检测格式不正确或无效的 XML。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]使用<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>实现 如果不正确或无效的 XML 传递给[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，基础<xref:System.Xml.XmlReader>类将引发异常。</xref:System.Xml.XmlReader> 分析 XML，如的各种方法<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>，不会捕捉异常; 然后可以通过您的应用程序捕捉异常。</xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过使用 <xref:System.Xml.XmlReader> 实现。 如果将格式不正确或无效的 XML 传递给 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，则基础 <xref:System.Xml.XmlReader> 类将引发异常。 用于分析 XML 的各种方法（如 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>）不会捕捉异常；应用程序可以捕捉异常。  
   
  请注意，如果使用 XML 文本，则无法获取分析错误。 Visual Basic 编译器将捕捉格式不正确或无效的 XML 错误。  
   
@@ -56,7 +48,7 @@ End Try
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- 您可以预计的异常的相关信息<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>， <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>， <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>，和<xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>方法引发，请参阅<xref:System.Xml.XmlReader>文档。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>  
+ 有关 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 方法可能会引发的异常的更多信息，请参见 <xref:System.Xml.XmlReader> 文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

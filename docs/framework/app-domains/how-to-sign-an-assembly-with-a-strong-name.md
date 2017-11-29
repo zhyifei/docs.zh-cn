@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 可通过许多方法为程序集签署强名称：  
@@ -76,16 +78,18 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>使用特性为程序集签署强名称  
   
-1.  将 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性添加到源代码文件中，并指定包含为程序集签署强名称时要使用的密钥对的文件或容器的名称。  
+1.  将 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性添加到源代码文件中，并指定包含为程序集签署强名称时要使用的密钥对的文件或容器的名称。  
   
 2.  通常会编译源代码文件。  
   
 > [!NOTE]
 >  当 C# 和 Visual Basic 编译器在源代码中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性时，会发出编译器警告（分别为 CS1699 和 BC41008）。 你可以忽略这些警告。  
   
- 下面的代码示例将 <xref:System.Reflection.AssemblyKeyFileAttribute> 特性用于名为 `keyfile.snk` 的密钥文件（位于编译程序集的目录中）。  
+ 下面的代码示例将 <xref:System.Reflection.AssemblyKeyFileAttribute> 特性用于名为 `keyfile.snk`的密钥文件（位于编译程序集的目录中）。  
   
- [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)] [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)] [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
+ [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
+ [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
+ [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
  在编译源文件时，也可以延迟为程序集签名。 有关更多信息，请参见 [延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)。  
   
@@ -102,10 +106,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)   
- [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [管理程序集签名和清单签名](/visualstudio/ide/managing-assembly-and-manifest-signing)   
+ [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+ [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [管理程序集签名和清单签名](/visualstudio/ide/managing-assembly-and-manifest-signing)  
  [“项目设计器”->“签名”页](https://msdn.microsoft.com/library/0k50fs3b)
-

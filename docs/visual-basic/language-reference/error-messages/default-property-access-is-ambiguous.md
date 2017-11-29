@@ -1,29 +1,27 @@
 ---
-title: "默认属性访问在接口“&lt;接口名 1&gt;”的继承接口成员“&lt;默认属性名&gt;”和接口“&lt;接口名 2&gt;”的“&lt;默认属性名&gt;”之间不明确 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: "默认属性访问之间不明确继承的接口成员 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename1&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 默认属性访问在接口“&lt;接口名 1&gt;”的继承接口成员“&lt;默认属性名&gt;”和接口“&lt;接口名 2&gt;”的“&lt;默认属性名&gt;”之间不明确
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-某个接口从两个接口继承，这两个接口的每个接口都声明一个同名的默认属性。  编译器无法不加限定地将某个访问解析到此默认属性。  下面的示例阐释了这一点。  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>默认属性访问之间不明确继承的接口成员 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename1&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 的接口 &#39;&lt;interfacename2&gt;&#39;
+接口继承自两个接口，其中每个声明具有相同名称的默认属性。 编译器无法解析访问而无需限定此默认属性。 下面的示例阐释了这一点。  
   
 ```  
 Public Interface Iface1  
@@ -43,21 +41,21 @@ Public Class testClass
 End Class  
 ```  
   
- 当您指定 `testObj(1)` 时，编译器尝试将其解析到默认属性。  但是，由于是继承的接口，有两个可能的默认属性，所以，编译器会发出信号告知此错误。  
+ 当指定`testObj(1)`，编译器会尝试将它解析为默认属性。 但是，有两个可能的默认属性由于继承的接口，因此，编译器将引发此错误。  
   
- **错误 ID：**BC30686  
+ **错误 ID:** BC30686  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
--   避免继承任何同名成员。  在前面的示例中，如果 `testObj` 不需要任何成员（例如 `Iface2` 的成员），则按如下所示声明它：  
+-   避免继承具有相同名称的任何成员。 在前面的示例中，如果`testObj`不需要的任何成员，即`Iface2`，然后将其声明，如下所示：  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     \- 或 \-  
+     - 或 -  
   
--   在类中实现继承接口。  然后，您可以实现每个不同名称的继承属性。  但是，它们中只有一个可以是实现类的默认属性。  下面的示例阐释了这一点。  
+-   在类中实现继承的接口。 然后你可以实现每个具有不同名称的继承属性。 但是，仅有一种可以实现的类的默认属性。 下面的示例阐释了这一点。  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

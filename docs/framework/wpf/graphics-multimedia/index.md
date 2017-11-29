@@ -1,34 +1,37 @@
 ---
-title: "图形和多媒体| Microsoft Docs"
+title: "图形和多媒体"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-wpf
+ms.technology: dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
-- media, features
-- video effects
-- sound effects
-- animation, features
-- graphics features
-- transition effects
+- media [WPF], features
+- video effects [WPF]
+- sound effects [WPF]
+- animation [WPF], features
+- graphics features [WPF]
+- transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: ea78944133412f43075d8d094cd5fa93685299f9
-ms.lasthandoff: 04/08/2017
-
+ms.openlocfilehash: e212de5f1f92a2a797da7f2534d28ff8b6dbdd12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="graphics-and-multimedia"></a>图形和多媒体
-<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为多媒体、矢量图形、动画和内容复合提供支持，使开发者可以轻松生成有趣的用户界面和内容。 使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，可以创建矢量图形或复杂动画，并将媒体集成到应用程序中。  
+<a name="introduction"></a>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]为多媒体、 矢量图形、 动画和内容的组合，因此可以方便开发人员可以构建感兴趣的用户界面和内容提供支持。 使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，可以创建矢量图形或复杂动画，并将媒体集成到应用程序中。  
   
  本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的图形、动画和媒体功能，可用于向应用程序添加图形、转换效果、声音和视频。  
   
@@ -41,33 +44,33 @@ ms.lasthandoff: 04/08/2017
   
 -   布局舍入  
   
-     当对象边缘落在像素设备中间位置时，与 DPI 无关的图形系统可以创建呈现项目，如模糊或半透明边缘。 WPF 的以前版本包含像素捕捉以帮助处理这种情况。 Silverlight 2 引入了布局舍入，这是移动元素以使边缘落在整个像素边界上的另一种方法。 WPF 现在支持在 <xref:System.Windows.FrameworkElement> 上使用 <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> 附加属性的布局舍入。  
+     当对象边缘落在像素设备中间位置时，与 DPI 无关的图形系统可以创建呈现项目，如模糊或半透明边缘。 WPF 的以前版本包含像素捕捉以帮助处理这种情况。 Silverlight 2 引入了布局舍入，这是移动元素以使边缘落在整个像素边界上的另一种方法。 WPF 现在支持使用舍入的布局<xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>上附加属性<xref:System.Windows.FrameworkElement>。  
   
 -   缓存复合  
   
-     通过使用新的 <xref:System.Windows.Media.BitmapCache> 和 <xref:System.Windows.Media.BitmapCacheBrush> 类，可以缓存可视化树的复杂部分作为位图，并大幅缩短呈现时间。 位图仍然能够响应用户输入（如鼠标单击），并且可以像任何画笔一样将其绘制到其他元素上。  
+     使用新的<xref:System.Windows.Media.BitmapCache>和<xref:System.Windows.Media.BitmapCacheBrush>类，可以缓存以位图格式的可视化树的复杂部分并极大地提高呈现时间。 位图仍然能够响应用户输入（如鼠标单击），并且可以像任何画笔一样将其绘制到其他元素上。  
   
 -   像素着色器 3 支持  
   
-     WPF 4 基于 WPF 3.5 SP1 中引入的 <xref:System.Windows.Media.Effects.ShaderEffect> 支持而生成，允许应用程序使用像素着色器 (PS) 版本 3.0 写入效果。 PS 3.0 着色器模型比 PS 2.0 更复杂，从而允许在支持的硬件上使用更多效果。  
+     WPF 4 上的基础上生成<xref:System.Windows.Media.Effects.ShaderEffect>允许应用程序使用像素着色器 (PS) 版本 3.0 写入效果 WPF 3.5 SP1 中引入的支持。 PS 3.0 着色器模型比 PS 2.0 更复杂，从而允许在支持的硬件上使用更多效果。  
   
 -   缓动函数  
   
-     可以使用缓动函数增强动画，从而提供对动画行为的额外控制。 例如，可以将 <xref:System.Windows.Media.Animation.ElasticEase> 应用到动画，以提供类似弹簧的行为。 有关详细信息，请参阅 <xref:System.Windows.Media.Animation> 命名空间中的缓动类型。  
+     可以使用缓动函数增强动画，从而提供对动画行为的额外控制。 例如，你可以将应用<xref:System.Windows.Media.Animation.ElasticEase>到动画以使弹出行为的动画。 有关详细信息，请参阅中的缓动类型<xref:System.Windows.Media.Animation>命名空间。  
   
 <a name="graphics_and_rendering"></a>   
 ## <a name="graphics-and-rendering"></a>图形和呈现  
- WPF 引入了对高质量 2-D 图形的支持。 功能包括画笔、几何、图像、形状和转换。 有关详细信息，请参阅[图形](../../../../docs/framework/wpf/graphics-multimedia/graphics.md)。 图形元素的呈现基于 <xref:System.Windows.Media.Visual> 类。 屏幕上的视觉对象的结构由可视化树描述。 有关详细信息，请参阅 [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
+ WPF 引入了对高质量 2-D 图形的支持。 功能包括画笔、几何、图像、形状和转换。 有关详细信息，请参阅[图形](../../../../docs/framework/wpf/graphics-multimedia/graphics.md)。 图形元素的呈现基于<xref:System.Windows.Media.Visual>类。 屏幕上的视觉对象的结构由可视化树描述。 有关详细信息，请参阅 [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
   
 ### <a name="2-d-shapes"></a>二维形状  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供常用矢量绘制的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 形状库，如下图中所示的矩形和椭圆形。  
   
  ![椭圆和矩形](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
- 这些内部 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 形状不仅仅是形状：它们是可编程的元素，用于实现常见控件的许多预期功能，包括键盘和鼠标输入。 以下示例演示如何处理由单击 <xref:System.Windows.Shapes.Ellipse> 元素引发的 <xref:System.Windows.UIElement.MouseUp> 事件。  
+ 这些内部 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 形状不仅仅是形状：它们是可编程的元素，用于实现常见控件的许多预期功能，包括键盘和鼠标输入。 下面的示例演示如何处理<xref:System.Windows.UIElement.MouseUp>通过单击引发事件<xref:System.Windows.Shapes.Ellipse>元素。  
   
 ```xaml  
-\<Window  
+<Window  
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
   x:Class="Window1" >  
@@ -92,7 +95,6 @@ Partial Public Class Window1
         MessageBox.Show("You clicked the ellipse!")  
     End Sub  
 End Class  
-  
 ```  
   
  下图显示前面的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记和代码隐藏的输出。  
@@ -149,18 +151,18 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement> 能够播放视频和音频，并且可扩展，足以轻松创建自定义的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  
+ <xref:System.Windows.Controls.MediaElement>能够播放视频和音频，且可扩展，足以方便地创建的自定义[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  
   
  有关详细信息，请参阅[多媒体概述](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Windows.Media>   
- <xref:System.Windows.Media.Animation>   
- <xref:System.Windows.Media.Media3D>   
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)   
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [动画和计时](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [3-D 图形](http://msdn.microsoft.com/en-us/565c1f3c-235b-47de-b05b-3b53ed63f1b8)   
+ <xref:System.Windows.Media>  
+ <xref:System.Windows.Media.Animation>  
+ <xref:System.Windows.Media.Media3D>  
+ [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [动画和计时](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [3d 图形](http://msdn.microsoft.com/en-us/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
  [多媒体](http://msdn.microsoft.com/en-us/44a8dcd0-80cb-4db0-a222-87cde68c2fac)

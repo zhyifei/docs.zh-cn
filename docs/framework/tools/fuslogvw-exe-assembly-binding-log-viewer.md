@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - failed assembly binds
 - Fuslogvw.exe
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ad02ade9c9e60e53fa8fb91d9a38d6ec12bc2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 程序集绑定日志查看器显示程序集绑定的详细信息。 这些信息有助于你诊断 .NET Framework 无法在运行时找到程序集的原因。 这些失败通常由以下因素导致：部署到错误位置的程序集、不再有效的本机映像或者版本号或区域性不匹配。 如果公共语言运行时未能找到程序集，则通常会在你的应用程序中表现为 <xref:System.TypeLoadException>。  
@@ -56,7 +49,7 @@ fuslogvw
 2.  选择“自定义”选项按钮以查看指定的自定义目录中的绑定失败。 必须指定希望运行时存储日志的自定义位置，方法是在“日志设置”对话框中将自定义日志位置设置为有效的目录名。 此目录应是干净的，并且仅包含运行时所生成的文件。 如果该目录中包含了一个生成要记录下来的失败的可执行文件，则将不会记录该失败，因为此工具会尝试创建一个与该可执行文件同名的目录。 此外，从日志位置运行可执行文件的尝试也将失败。  
   
     > [!NOTE]
-    >  默认的绑定位置优于自定义绑定位置。 运行时将默认绑定位置存储在 wininet 缓存中，因而可以自动清除该位置。 如果你指定了自定义绑定位置，则需负责将其清除。  
+    >  默认的绑定位置优于自定义绑定位置。 运行时将默认绑定位置存储在 wininet 缓存中，因而可以自动清除该位置。如果你指定了自定义绑定位置，则需负责将其清除。  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>查看有关特定失败的详细信息  
   
@@ -221,7 +214,7 @@ Discarding native image.
      请参见有关以非特定域方式加载的程序集的“重要事项”说明。  
   
 > [!IMPORTANT]
->  当程序集以非特定域方式加载时（例如，将 <xref:System.AppDomainSetup.LoaderOptimization%2A> 属性设置为 <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> 或 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>），打开日志记录可能会在某些情况下泄露内存。 如果在将非特定域的模块载入一个应用程序域中时记录日志条目，随后又卸载该应用程序域，则将可能出现这种情况。 在进程结束前可能不会释放该日志条目。 一些调试器会自动启用日志记录。  
+>  当程序集以非特定域方式加载时（例如，将 <xref:System.AppDomainSetup.LoaderOptimization%2A> 属性设置为 <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 或 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>），打开日志记录可能会在某些情况下泄露内存。 如果在将非特定域的模块载入一个应用程序域中时记录日志条目，随后又卸载该应用程序域，则将可能出现这种情况。 在进程结束前可能不会释放该日志条目。 一些调试器会自动启用日志记录。  
   
 #### <a name="to-enable-a-custom-log-path"></a>启用自定义日志路径  
   
@@ -244,9 +237,8 @@ Discarding native image.
     >  此框只能在 Windows 8 或更高版本上启用。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.TypeLoadException>   
- [工具](../../../docs/framework/tools/index.md)   
- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)   
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.TypeLoadException>  
+ [工具](../../../docs/framework/tools/index.md)  
+ [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
+ [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

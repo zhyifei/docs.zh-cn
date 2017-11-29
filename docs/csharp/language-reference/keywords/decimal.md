@@ -1,48 +1,29 @@
 ---
 title: "decimal（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- decimal keyword [C#]
+helpviewer_keywords: decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 114c2c68f50704595b71f22386625091b5b05e8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
 `decimal` 关键字指示 128 位数据类型。 与其他浮点型相比，`decimal` 类型具有更高的精度和更小的范围，这使它适合于财务和货币计算。 `decimal` 类型的大致范围和精度如下表所示。  
   
 |类型|大致范围|精度|.NET Framework 类型|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(-7.9 x 10<sup>28</sup> - 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> - 10<sup>28</sup>)|28-29 个有效位|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|(-7.9 x 10<sup>28</sup> - 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> - 10<sup>28</sup>)|28-29 个有效位|<xref:System.Decimal?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>文本  
  如果希望实数被视为 `decimal` 类型，请使用后缀 m 或 M，例如：  
@@ -75,7 +56,7 @@ myMoney = (decimal)x;
  有关显式数值转换的详细信息，请参阅[显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)。  
   
 ## <a name="formatting-decimal-output"></a>设置十进制输出的格式  
- 你可以通过使用 `String.Format` 方法或 <xref:System.Console.Write%2A?displayProperty=fullName> 方法（其调用 `String.Format()`）来设置结果的格式。 货币格式是使用标准货币格式字符串“C”或“c”指定的，如本文后面的第二个示例所示。 有关 `String.Format` 方法的更多信息，请参见 <xref:System.String.Format%2A?displayProperty=fullName>。  
+ 你可以通过使用 `String.Format` 方法或 <xref:System.Console.Write%2A?displayProperty=nameWithType> 方法（其调用 `String.Format()`）来设置结果的格式。 货币格式是使用标准货币格式字符串“C”或“c”指定的，如本文后面的第二个示例所示。 有关 `String.Format` 方法的更多信息，请参见 <xref:System.String.Format%2A?displayProperty=nameWithType>。  
   
 ## <a name="example"></a>示例  
  下面的示例尝试添加 [double](../../../csharp/language-reference/keywords/double.md) 和 `decimal` 变量，这会导致编译器错误。  
@@ -97,24 +78,23 @@ Console.WriteLine((double)dec + dub);
   
  在此示例中，同一个表达式中混合使用了 `decimal` 和 [int](../../../csharp/language-reference/keywords/int.md)。 计算结果为 `decimal` 类型。  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
   
 ## <a name="example"></a>示例  
  在此示例中，通过使用货币格式字符串来设置输出的格式。 请注意，`x` 被舍入，因为其小数位数超出了 $0.99。 表示最大精确位数的变量 `y` 严格按照正确的格式显示。  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Decimal>   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
+ <xref:System.Decimal>  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
  [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
-

@@ -1,40 +1,44 @@
 ---
-title: "如何：将数据发送到活动的 MDI 子窗体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "子窗体"
-  - "剪贴板, 获取数据"
-  - "剪贴板, 粘贴"
-  - "MDI, 将数据发送到窗体"
+title: "如何：将数据发送到活动的 MDI 子窗体"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- child forms
+- MDI [Windows Forms], sending data to forms
+- Clipboard [Windows Forms], pasting
+- Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7f505d68bfd6d8c65104244f9583fd3cf975dd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：将数据发送到活动的 MDI 子窗体
-通常，在[多文档界面 \(MDI\) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)的上下文中，需要将数据发送到活动子窗口，例如用户将数据从剪贴板中粘贴到 MDI 应用程序中。  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>如何：将数据发送到活动的 MDI 子窗体
+通常情况下中的上下文[多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)，你将需要将数据发送到活动子窗口，如当用户将数据从剪贴板粘贴到 MDI 应用程序。  
   
 > [!NOTE]
->  有关检验哪个子窗口具有焦点以及将子窗口内容发送到剪贴板的信息，请参见[确定活动 MDI 子窗口](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)。  
+>  有关验证的子窗口具有焦点并将其内容发送到剪贴板的信息，请参阅[确定活动 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)。  
   
-### 将数据从剪贴板发送到活动 MDI 子窗口  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>若要从剪贴板将数据发送到活动的 MDI 子窗口  
   
-1.  在方法中，将剪贴板上的文本复制到活动子窗体的活动控件。  
+1.  在方法中，将在剪贴板上的文本复制到活动子窗体的活动控件。  
   
     > [!NOTE]
-    >  此示例假定有一个 MDI 父窗体 \(`Form1`\)，其中包含一个或多个含有 <xref:System.Windows.Forms.RichTextBox> 控件的 MDI 子窗口。  有关更多信息，请参见[创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
+    >  此示例假定有一个 MDI 父窗体 (`Form1`)，其包含一个或多个 MDI 子窗口<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -62,7 +66,6 @@ caps.handback.revision: 12
           End Try  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -96,12 +99,11 @@ caps.handback.revision: 12
           }  
        }  
     }  
-  
     ```  
   
-## 请参阅  
- [多文档界面 \(MDI\) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [如何：确定活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)   
+## <a name="see-also"></a>另请参阅  
+ [多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [如何：确定活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
  [如何：排列 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

@@ -1,28 +1,24 @@
 ---
 title: "如何：使用 XPath 查询 LINQ to XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 1cb47b5b4b85536feeb5006fe6dd31580ca651b3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d7acf7519e6ab3384f2f34b8435fe96307921f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>如何：使用 XPath 查询 LINQ to XML (C#)
-本主题介绍一些扩展方法，通过这些扩展方法可以使用 XPath 查询 XML 树。 有关使用这些扩展方法的详细信息，请参见 <xref:System.Xml.XPath.Extensions?displayProperty=fullName>。  
+本主题介绍一些扩展方法，通过这些扩展方法可以使用 XPath 查询 XML 树。 有关使用这些扩展方法的详细信息，请参见 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
  除非有很特别的理由（例如大量使用旧代码）需要使用 XPath 进行查询，否则不建议将 XPath 用于 LINQ to XML。 XPath 查询的执行性能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询低。  
   
@@ -53,4 +49,3 @@ foreach (XElement el in list)
   
 ## <a name="see-also"></a>请参阅  
  [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

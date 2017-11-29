@@ -1,42 +1,23 @@
 ---
 title: "Visual Basic 的新增功能"
-ms.date: 2017-04-27
+ms.date: 04/27/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- VB.StartPage.WhatsNew
-dev_langs:
-- VB
+f1_keywords: VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 145
+caps.latest.revision: "145"
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -85,7 +66,7 @@ Visual Basic.NET 的首次发布
  
 通过 Visual Basic 对元组的支持，可快速定义元组、为其值分配语义名称（可选），并快速检索其值。 以下示例包装对 <xref:System.Int32.TryParse%2A> 方法的调用，并返回一个元组。
 
-[!code-vb[元组](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
+[!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
 然后，可以调用该方法并使用如下所示的代码处理返回的元组。
 
@@ -95,7 +76,7 @@ Visual Basic.NET 的首次发布
 
 可通过使用前缀 `&B` 或 `&b` 定义二进制文本。 此外，可以将下划线字符 `_` 用作数字分隔符，以增强可读性。 以下示例使用这两项功能分配 `Byte` 值，并将其显示为十进制、十六进制和二进制数字。
 
-[!code-vb[二进制](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
+[!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
 有关详细信息，请参阅 [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments)、[Integer](../language-reference/data-types/integer-data-type.md#literal-assignments)、[Long](../language-reference/data-types/long-data-type.md#literal-assignments)、[Short](../language-reference/data-types/short-data-type.md#literal-assignments)、[SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments)、[UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments)、[ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 和 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 数据类型的“文本分配”部分。
 
@@ -192,4 +173,3 @@ End Interface
   
 ## <a name="see-also"></a>请参阅  
  [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)
-

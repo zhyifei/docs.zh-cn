@@ -1,45 +1,27 @@
 ---
 title: "如何：在 Visual Basic 中读取文本文件"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- extended characters, reading
-- reading text files
+- extended characters [Visual Basic], reading
+- reading text files [Visual Basic]
 - reading data, text files
 - examples [Visual Basic], reading text files
-- text files, reading
+- text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f75d89fb4ab10a8c116d4a0ab79c17ceb3efd0ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9b38b7f869a1d4ff290042a18a9bc2e0fa2709b7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取文本文件
 通过 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 对象的 `My.Computer.FileSystem` 方法，可以读取文本文件。 如果文件的内容使用类似 ASCII 或 UTF-8 的编码，则可以指定文件编码。  
@@ -85,13 +67,12 @@ ms.lasthandoff: 07/28/2017
  在应用程序中使用输入的数据之前，需验证所有的输入内容。 文件的内容可能不是预期内容，并且用来读取该文件的方法可能失败。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>   
- [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [如何：读取逗号分隔的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [如何：读取固定宽度的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
- [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
- [疑难解答：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
- [演练：在 Visual Basic 中操作文件和目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
+ [从文件读取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [如何：读取逗号分隔的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [如何：读取固定宽度的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [疑难解答：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
+ [演练：在 Visual Basic 中操作文件和目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  [文件编码](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
-

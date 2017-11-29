@@ -1,40 +1,20 @@
 ---
 title: "#<a name=\"pragma-checksum-c-reference\"></a>杂注校验和（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#pragma checksum'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#pragma checksum [C#]'
+f1_keywords: '#pragma checksum'
+helpviewer_keywords: '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0604a559be25c300fcdc6041975306b465fc595f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c48d99843b9ba398dfe8dc3cf0d2264aaf72be9f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum（C# 参考）
 为源文件生成校验和，以帮助调试校验 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 页。  
@@ -76,8 +56,7 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
-

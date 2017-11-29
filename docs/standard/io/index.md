@@ -16,16 +16,15 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，[System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 09/05/2017
  文件是一个由字节组成的有序的命名集合，它具有永久存储。 在处理文件时，你将处理目录路径、磁盘存储、文件和目录名称。 相反，流是一个字节序列，可用于对后备存储进行读取和写入操作，后备存储可以是多个存储媒介之一（例如，磁盘或内存）。 正如存在除磁盘之外的多种后备存储一样，也存在除文件流之外的多种流（如网络、内存和管道流）。  
   
 ## <a name="files-and-directories"></a>文件和目录  
- 你可以使用 <xref:System.IO?displayProperty=fullName> 命名空间中的类型与文件和目录进行交互。 例如，你可以获取和设置文件和目录的属性，并基于搜索条件检索文件和目录的集合。  
+ 你可以使用 <xref:System.IO?displayProperty=nameWithType> 命名空间中的类型与文件和目录进行交互。 例如，你可以获取和设置文件和目录的属性，并基于搜索条件检索文件和目录的集合。  
   
  下面是一些常用的文件和目录类：  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/05/2017
   
 -   <xref:System.IO.Path> - 提供用于以跨平台的方式处理目录字符串的方法和属性。  
   
- 除了使用这些类之外，Visual Basic 用户还可以对文件 I/O 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> 类提供的方法和属性。  
+ 除了使用这些类之外，Visual Basic 用户还可以对文件 I/O 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 类提供的方法和属性。  
   
  请参阅[如何：复制目录](../../../docs/standard/io/how-to-copy-directories.md)、[如何：创建目录列表](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)和[如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/05/2017
  有关异步使用流的示例，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
 ## <a name="readers-and-writers"></a>读取器和编写器  
- <xref:System.IO?displayProperty=fullName> 命名空间还提供用于在流中读取和写入已编码字符的类型。 通常，流用于字节输入和输出。 读取器和编写器类型处理编码字符与字节之间的来回转换，以便流可以完成操作。 每个读取器和编写器类都与流关联，可以通过类的 `BaseStream` 属性进行检索。  
+ <xref:System.IO?displayProperty=nameWithType> 命名空间还提供用于在流中读取和写入已编码字符的类型。 通常，流用于字节输入和输出。 读取器和编写器类型处理编码字符与字节之间的来回转换，以便流可以完成操作。 每个读取器和编写器类都与流关联，可以通过类的 `BaseStream` 属性进行检索。  
   
  下面是一些常用的读取器和编写器类：  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 09/05/2017
  有关详细信息，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
 ## <a name="compression"></a>压缩  
- 压缩是指减小文件大小以便存储的过程。 解压缩是提取压缩文件的内容以使这些内容采用可用格式的过程。 <xref:System.IO.Compression?displayProperty=fullName> 命名空间包含用于对文件和流进行压缩或解压缩的类型。  
+ 压缩是指减小文件大小以便存储的过程。 解压缩是提取压缩文件的内容以使这些内容采用可用格式的过程。 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空间包含用于对文件和流进行压缩或解压缩的类型。  
   
  在对文件和流进行压缩和解压缩时，经常使用以下类：  
   
@@ -156,7 +155,7 @@ ms.lasthandoff: 09/05/2017
  若要深入了解 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的 I/O 操作，请参阅 Windows 开发人员中心的[快速入门：读取和写入文件](http://go.microsoft.com/fwlink/p/?LinkId=243072)。  
   
 ## <a name="io-and-security"></a>I/O 和安全性  
- 在使用 <xref:System.IO?displayProperty=fullName> 命名空间中的类时，你必须遵循操作系统安全性要求（如访问控制列表 (ACL)）来控制对文件和目录的访问。 此要求是在所有 <xref:System.Security.Permissions.FileIOPermission> 要求之外的要求。 可以用编程方式管理 ACL。 有关详细信息，请参阅[如何：添加或移除访问控制列表项](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
+ 在使用 <xref:System.IO?displayProperty=nameWithType> 命名空间中的类时，你必须遵循操作系统安全性要求（如访问控制列表 (ACL)）来控制对文件和目录的访问。 此要求是在所有 <xref:System.Security.Permissions.FileIOPermission> 要求之外的要求。 可以用编程方式管理 ACL。 有关详细信息，请参阅[如何：添加或移除访问控制列表项](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
   
  默认安全策略将阻止 Internet 或 Intranet 应用程序访问用户计算机上的文件。 因此，在编写将通过 Internet 或 Intranet 下载的代码时，请不要使用需要物理文件路径的 I/O 类。 请转而将[独立存储](../../../docs/standard/io/isolated-storage.md)用于传统 .NET Framework 应用程序，或将[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
   
@@ -183,4 +182,3 @@ ms.lasthandoff: 09/05/2017
 -   [内存映射文件](../../../docs/standard/io/memory-mapped-files.md)  
   
  描述内存映射文件，这些文件包含虚拟内存中磁盘上文件的内容。 可以使用内存映射文件编辑非常大的文件和创建共享内存以进行进程间通信。
-

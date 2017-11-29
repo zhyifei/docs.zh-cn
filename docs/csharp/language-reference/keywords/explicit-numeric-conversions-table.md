@@ -1,12 +1,9 @@
 ---
 title: "显式数值转换表（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 显式数值转换用于使用强制转换表达式将任何数值类型转换为任何其他数值类型，其中不存在任何隐式转换。 下表显示了这些转换。  
@@ -80,11 +62,10 @@ ms.lasthandoff: 07/28/2017
  有关显式转换的详细信息，请参阅 C# 语言规范中的显式。 有关如何访问此规范的详细信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)   
- [整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-

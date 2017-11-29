@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>.NET Framework 类库概述
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包括可加快和优化开发过程并提供对系统功能的访问的类、接口和值类型。 为了便于语言之间进行交互操作，大多数 .NET Framework 类型都符合 CLS，因而可在编译器符合公共语言规范 (CLS) 的任何编程语言中使用。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 08/21/2017
 |浮点|<xref:System.Single>|单精度（32 位）浮点数字。|**单精度**|**float**|**float**|**float**|  
 ||<xref:System.Double>|双精度（64 位）浮点数字。|**双精度**|**double**|**double**|**double**|  
 |逻辑运算|<xref:System.Boolean>|布尔值（真或假）。|**布尔值**|**bool**|**bool**|**bool**|  
-|其他|<xref:System.Char>|Unicode（16 位）字符。|**Char**|**char**|wchar_t|**char**|  
+|其他|<xref:System.Char>|Unicode（16 位）字符。|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|十进制（128 位）值。|**小数**|**小数**|**小数**|**小数**|  
 ||<xref:System.IntPtr>|大小取决于基础平台（32 位平台上为 32 位值，64 位平台上为 64 位值）的有符号整数。|**IntPtr**<br /><br /> 无内置类型。|**IntPtr**<br /><br /> 无内置类型。|**IntPtr**<br /><br /> 无内置类型。|**IntPtr**|  
 ||<xref:System.UIntPtr>|大小取决于基础平台的无符号整数（32 位平台上为 32 位值，64 位平台上为 64 位值）。<br /><br /> 不符合 CLS。|**UIntPtr**<br /><br /> 无内置类型。|**UIntPtr**<br /><br /> 无内置类型。|**UIntPtr**<br /><br /> 无内置类型。|**UIntPtr**|  
@@ -114,7 +113,6 @@ ass 对象|<xref:System.Object>|对象层次结构的根。|**对象**|**对象*
  有关命名空间的详细信息，请浏览 [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)。 此参考文档提供对每个命名空间的简要概述以及对每种类型及其成员的正式说明。  
   
 ## <a name="see-also"></a>另请参阅  
- [通用类型系统](../../docs/standard/base-types/common-type-system.md)   
- [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [常规类型系统](../../docs/standard/base-types/common-type-system.md)  
+ [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [概述](../../docs/framework/get-started/overview.md)
-

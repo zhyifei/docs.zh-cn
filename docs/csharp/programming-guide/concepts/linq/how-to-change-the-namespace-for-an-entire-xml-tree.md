@@ -1,28 +1,24 @@
 ---
 title: "如何：更改整个 XML 树的命名空间 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 80e3e4d7d352cb479eda66fb6eca1a76748511b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ffebf1bda275eb815ff3e15538fd69de6d3b0c1a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>如何：更改整个 XML 树的命名空间 (C#)
-有时需要以编程方式更改元素或属性的命名空间。 LINQ to XML 可简化此任务。 可以设置 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> 属性。 不能设置 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> 属性 (Property)，但是很容易将属性 (Attribute) 复制到 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 中，移除现有属性 (Attribute)，然后添加位于新命名空间中的新属性 (Attribute)。  
+有时需要以编程方式更改元素或属性的命名空间。 LINQ to XML 可简化此任务。 可以设置 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> 属性。 不能设置 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> 属性 (Property)，但是很容易将属性 (Attribute) 复制到 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 中，移除现有属性 (Attribute)，然后添加位于新命名空间中的新属性 (Attribute)。  
   
  有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
@@ -91,4 +87,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>另请参阅  
  [修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

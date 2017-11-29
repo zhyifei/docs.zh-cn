@@ -1,45 +1,26 @@
 ---
 title: "访问计算机资源 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- computer resources
-- My.Computer object, tasks
-- computer resources, accessing
+- computer resources [Visual Basic]
+- My.Computer object [Visual Basic], tasks
+- computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 20c9d23570ec986598ad697f559aaf3a3153a8a0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae9517d2c06c2583a90b2bb503094094bb6e938c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-
 # <a name="accessing-computer-resources-visual-basic"></a>访问计算机资源 (Visual Basic)
 
 `My.Computer` 对象是 `My` 中的三个中心对象之一，提供对信息和常用功能的访问权限。 `My.Computer` 提供用于访问运行应用程序的计算机的方法、属性和事件。 其对象包括：  
@@ -80,4 +61,3 @@ ms.lasthandoff: 07/28/2017
 
 [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
 列出与 `My.Computer.Registry` 关联的任务，例如从注册表项读取数据或向注册表项写入数据。
-

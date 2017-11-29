@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
+ms.openlocfilehash: 0c28c85bf933a411403aefcb91801d28fe1c268e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-left-outer-joins"></a>执行左外部联接
 左外部联接是这样定义的：返回第一个集合的每个元素，无论该元素在第二个集合中是否有任何相关元素。 可以使用 LINQ 通过对分组联接的结果调用 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 方法来执行左外部联接。  
@@ -31,13 +29,12 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  引用类型的默认值为 `null`；因此，该示例在访问每个 `Pet` 集合的每个元素之前会先检查是否存在空引用。  
   
- [!code-cs[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
  
 ## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [执行内部联接](perform-inner-joins.md)   
- [执行分组联接](perform-grouped-joins.md)   
- [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [执行内部联接](perform-inner-joins.md)  
+ [执行分组联接](perform-grouped-joins.md)  
+ [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

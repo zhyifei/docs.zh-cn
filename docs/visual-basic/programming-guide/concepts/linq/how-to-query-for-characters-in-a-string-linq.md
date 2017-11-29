@@ -1,41 +1,71 @@
 ---
-title: "如何︰ 查询 (LINQ) (Visual Basic 中) 的字符串中的字符 |Microsoft 文档"
+title: "如何： 查询字符串 (LINQ) (Visual Basic 中) 中的字符"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-caps.latest.revision: 4
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dabd63e52707f3078c6cdc41db8c4f0e7dfbf70e
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ebc832763e271cc53e9c95827c301f82e9a7578a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>如何︰ 查询 (LINQ) (Visual Basic 中) 的字符串中的字符
-因为<xref:System.String>类实现泛型<xref:System.Collections.Generic.IEnumerable%601>接口，可以为字符序列的查询的任何字符串。</xref:System.Collections.Generic.IEnumerable%601> </xref:System.String> 但是，这不是 LINQ 的一个常见用途。 对于复杂的模式匹配操作中，使用<xref:System.Text.RegularExpressions.Regex>类。</xref:System.Text.RegularExpressions.Regex>  
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>如何： 查询字符串 (LINQ) (Visual Basic 中) 中的字符
+因为 <xref:System.String> 类可实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，因此任何字符串都可以字符序列的形式进行查询。 但是，这不是 LINQ 的一般用法。 对于复杂的模式匹配操作，请使用 <xref:System.Text.RegularExpressions.Regex> 类。  
   
 ## <a name="example"></a>示例  
- 下面的示例查询字符串以确定它包含的数字位数。 请注意，该查询"重用"后它会在执行第一次。 这可能是因为查询本身不存储任何实际的结果。  
+ 以下示例查询一个字符串以确定它所包含的数字数量。 请注意，在第一次执行此查询后将“重用”此查询。 这是可能的，因为查询本身并不存储任何实际的结果。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+Class QueryAString  
+  
+    Shared Sub Main()  
+  
+        ' A string is an IEnumerable data source.  
+        Dim aString As String = "ABCDE99F-J74-12-89A"  
+  
+        ' Select only those characters that are numbers  
+        Dim stringQuery = From ch In aString   
+                          Where Char.IsDigit(ch)   
+                          Select ch  
+        ' Execute the query  
+        For Each c As Char In stringQuery  
+            Console.Write(c & " ")  
+        Next  
+  
+        ' Call the Count method on the existing query.  
+        Dim count As Integer = stringQuery.Count()  
+        Console.WriteLine(System.Environment.NewLine & "Count = " & count)  
+  
+        ' Select all characters before the first '-'  
+        Dim stringQuery2 = aString.TakeWhile(Function(c) c <> "-")  
+  
+        ' Execute the second query  
+        For Each ch In stringQuery2  
+            Console.Write(ch)  
+        Next  
+  
+        Console.WriteLine(System.Environment.NewLine & "Press any key to exit")  
+        Console.ReadKey()  
+    End Sub  
+End Class  
+' Output:  
+' 9 9 7 4 1 2 8 9   
+' Count = 8  
+' ABCDE99F  
+```  
+  
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+ 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [如何︰ 将 LINQ 查询与正则表达式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+ [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [如何： 合并 LINQ 查询中的使用正则表达式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

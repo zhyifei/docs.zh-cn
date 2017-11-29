@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8fda91296ffb27a7661f8e9c5ea4bc664e570ce8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0c051e1513f8e8ad1735085cb93f106b4fb9b0d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 方法没有可靠性协定或具有过弱协定时，如果受约束的执行区域 (CER) 图内存在对此类方法的调用，将激活 `invalidCERCall` 托管调试助手 (MDA)。 弱协定是这样的一种协定：它声明最坏情况下的状态损坏的范围超出传递给调用的实例，即 <xref:System.AppDomain> 或进程状态可能会损坏，或者在 CER 中调用它时不可始终明确地计算其结果。  
@@ -70,7 +63,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
+ <xref:System.Runtime.ConstrainedExecution>  
  [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

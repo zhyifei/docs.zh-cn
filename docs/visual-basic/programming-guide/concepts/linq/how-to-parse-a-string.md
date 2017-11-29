@@ -1,38 +1,30 @@
 ---
-title: "如何︰ 分析字符串 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 分析字符串 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d062efd2e207f5db39e3be044450fd3f9a5d9e11
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>如何︰ 分析字符串 (Visual Basic)
+# <a name="how-to-parse-a-string-visual-basic"></a>如何： 分析字符串 (Visual Basic)
 本主题演示如何在 C# 中创建 XML 树。  
   
 ## <a name="example"></a>示例  
- 您可以分析中的字符串[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]使用`XElement.Parse`方法。 但是，它是更高效地使用 XML 文本中所示下面的代码，因为 XML 文本不会像那样要牺牲性能从字符串分析 XML。  
+ 你可以分析中的字符串[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使用`XElement.Parse`方法。 但是，它是使用 XML 文本，如下面的代码中所示，因为 XML 文本不会受到那样要牺牲性能从字符串分析 XML 那样更加高效。  
   
- 通过使用 XML 文本，可以将 XML 复制和粘贴到 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 程序中。  
+ 通过使用 XML 文本，可以将 XML 复制和粘贴到 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程序中。  
   
 > [!NOTE]
 >  分析文本或从文本文件加载 XML 文档比函数构造的效率更低。 如果要从代码初始化 XML 树，使用函数构造比分析文本所占用的处理器时间更少。  

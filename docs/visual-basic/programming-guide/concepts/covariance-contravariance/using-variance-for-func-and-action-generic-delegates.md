@@ -1,38 +1,27 @@
 ---
-title: "对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体 |Microsoft 文档"
-ms.custom: 
-ms.date: 2015-07-20
+title: "对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c3f84d21f9fbc7e57ba079461194acf7612add
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f9b2ebf758bc0d67b2b623038a4beeb7149261
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体
-这些示例演示如何使用协变和逆变在`Func`和`Action`要启用重用方法，并提供更多的灵活性，在代码中的泛型委托。  
+这些示例演示如何使用 `Func` 和 `Action` 泛型委托中的协变和逆变来启用重用方法并为代码中提供更多的灵活性。  
   
  有关协变和逆变的详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有协变类型参数的委托  
- 下面的示例阐释了协变支持在泛型的优点`Func`委托。 `FindByTitle`方法采用一个参数的`String`类型，并返回的对象`Employee`类型。 但是，将分配给此方法`Func(Of String, Person)`委托原因`Employee`继承`Person`。  
+ 下例阐释了泛型 `Func` 委托中的协变支持的益处。 `FindByTitle` 方法采用 `String` 类型的一个参数，并返回 `Employee` 类型的一个对象。 但是，可将此方法分配给 `Func(Of String, Person)` 委托，因为 `Employee` 继承 `Person`。  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -70,7 +59,7 @@ End Class
 ```  
   
 ## <a name="using-delegates-with-contravariant-type-parameters"></a>使用具有逆变类型参数的委托  
- 下面的示例阐释了逆变支持泛型中的好处`Action`委托。 `AddToContacts`方法采用一个参数的`Person`类型。 但是，将分配给此方法`Action(Of Employee)`委托原因`Employee`继承`Person`。  
+ 下例阐释了泛型 `Action` 委托中的逆变支持的益处。 `AddToContacts` 方法采用 `Person` 类型的一个参数。 但是，可将此方法分配给 `Action(Of Employee)` 委托，因为 `Employee` 继承 `Person`。  
   
 ```vb  
 Public Class Person  
@@ -107,5 +96,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)   
- [泛型](https://msdn.microsoft.com/library/ms172192)
+ [协变和逆变 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
+ [泛型](~/docs/standard/generics/index.md)

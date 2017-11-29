@@ -1,47 +1,50 @@
 ---
-title: "如何：使用关键帧对大小变化进行动画处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 使用关键帧对大小更改进行动画处理"
-  - "关键帧, 对大小更改进行动画处理"
-  - "大小更改, 使用关键帧进行动画处理"
+title: "如何：使用关键帧对大小变化进行动画处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- key frames [WPF], animating size changes with
+- animation [WPF], size changes with key frames
+- size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9577f9f08fa1d19aa214bda5a1aef997c2cfa2a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用关键帧对大小变化进行动画处理
+# <a name="how-to-animate-size-changes-by-using-key-frames"></a>如何：使用关键帧对大小变化进行动画处理
 此示例演示如何使用关键帧对大小变化进行动画处理。  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> 类对 <xref:System.Windows.Media.ArcSegment> 的 <xref:System.Windows.Media.ArcSegment.Size%2A> 属性进行动画处理。  此动画按下列方式使用三个关键帧：  
+## <a name="example"></a>示例  
+ 下面的示例使用<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Media.ArcSegment.Size%2A>属性<xref:System.Windows.Media.ArcSegment>。 此动画按以下方式使用三个关键帧：  
   
-1.  在动画的前半秒中，使用 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 类的实例逐渐增加弧的大小。  诸如 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 的线性关键帧在值之间创建平滑的线性过渡。  
+1.  在第一个半秒的动画，使用的是实例<xref:System.Windows.Media.Animation.LinearSizeKeyFrame>类，以逐渐增加弧的大小。之类的线性的关键帧<xref:System.Windows.Media.Animation.LinearSizeKeyFrame>创建平滑的值之间的线性转换。  
   
-2.  在接下来的半秒结束时，使用 <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> 类的实例突然增加弧的大小。  离散关键帧（如 <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>）将使值发生突变，也就是说，大小变化是突然发生的，并且不是细微变化。  
+2.  在下一步的末尾半秒，将使用的实例<xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>类突然增加弧的大小。之类的离散的关键帧<xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>突变值，即，大小更改突然发生，并且不是细微。  
   
-3.  在最后两秒钟内，使用 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> 类的实例增加弧的大小。  [样条](GTMT)关键帧（如 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>）将会根据 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> 属性的值在各个值之间创建可变过渡。  在本例中，弧的大小首先慢慢增加，然后呈指数方式增加直至时间段结束。  
+3.  通过最后两秒内，使用的实例<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>类以增加弧的大小。之类的样条关键帧<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>创建变量的值根据值之间转换<xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A>属性。 在本例中，弧的大小开始时缓慢增加，然后以指数方式增加，直到时间段结束。  
   
- [!code-xml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
- 有关完整示例，请参见 [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012)（KeyFrame 动画示例）。  
+ 有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## 请参阅  
- <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>   
- <xref:System.Windows.Media.ArcSegment.Size%2A>   
- <xref:System.Windows.Media.ArcSegment>   
- <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>   
- <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>   
- <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>   
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [关键帧动画帮助主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>  
+ <xref:System.Windows.Media.ArcSegment.Size%2A>  
+ <xref:System.Windows.Media.ArcSegment>  
+ <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>  
+ <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>  
+ <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>  
+ [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

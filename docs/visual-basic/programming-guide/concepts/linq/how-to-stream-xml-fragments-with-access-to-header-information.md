@@ -1,40 +1,31 @@
 ---
-title: "如何︰ 访问标头信息 (Visual Basic 中) 的 XML 片段进行流式处理 |Microsoft 文档"
+title: "如何： 访问标头信息 (Visual Basic) 的 XML 片段进行流式处理"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何︰ 访问标头信息 (Visual Basic 中) 的 XML 片段进行流式处理
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>如何： 访问标头信息 (Visual Basic) 的 XML 片段进行流式处理
 有时，您必须读取任意大的 XML 文件并在编写您的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
   
- 一种方法是编写使用<xref:System.Xml.XmlReader>。</xref:System.Xml.XmlReader>对应用程序 但您可能需要使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 来查询 XML 树。 在这种情况下，您可以编写自己的自定义轴方法。 有关详细信息，请参阅[如何︰ 编写 LINQ to XML 轴方法 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
+ 一种选择是使用 <xref:System.Xml.XmlReader> 来编写应用程序。 但您可能需要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 来查询 XML 树。 在这种情况下，您可以编写自己的自定义轴方法。 有关详细信息，请参阅[如何： 编写 LINQ to XML 轴方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
   
- 若要编写您自己的轴方法，您编写一个小的方法使用<xref:System.Xml.XmlReader>来读取各个节点，直到它达到您感兴趣的节点之一。</xref:System.Xml.XmlReader> 该方法随后调用<xref:System.Xml.Linq.XNode.ReadFrom%2A>，从其读取<xref:System.Xml.XmlReader>并实例化 XML 片段。</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> 然后，您可以对自定义轴方法编写 LINQ 查询。  
+ 若要编写您自己的轴方法，请编写一个小方法，让该方法使用 <xref:System.Xml.XmlReader> 来读取各个节点，直到达到您感兴趣的节点之一。 该方法然后调用 <xref:System.Xml.Linq.XNode.ReadFrom%2A>，后者将从 <xref:System.Xml.XmlReader> 中读取数据并实例化 XML 片段。 然后，您可以对自定义轴方法编写 LINQ 查询。  
   
- 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符，如<xref:System.Linq.Enumerable.OrderBy%2A>、 循环访问其源、 收集的所有数据、 进行排序，以及最后生成序列中的第一项。</xref:System.Linq.Enumerable.OrderBy%2A> 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会保持小的内存需求量。  
+ 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符（如 <xref:System.Linq.Enumerable.OrderBy%2A>）可以循环访问其源、收集所有数据、对数据排序，最后生成序列中的第一项。 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会保持小的内存需求量。  
   
 ## <a name="example"></a>示例  
  有时，问题会变得更有意思。 在下面的 XML 文档中，自定义轴方法的使用方也必须知道每一项所属的使用方名称。  
@@ -250,4 +241,3 @@ End Class
   
 ## <a name="see-also"></a>另请参阅  
  [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

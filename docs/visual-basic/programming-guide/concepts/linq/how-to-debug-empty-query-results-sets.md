@@ -1,28 +1,24 @@
 ---
-title: "如何︰ 调试空查询结果集 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 调试空查询结果集 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5564e88d1a861f2ce3760e9450d68aee5b57a64
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c483153f8ff41c08cfaa0141fed056de7f5f680
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何︰ 调试空查询结果集 (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何： 调试空查询结果集 (Visual Basic)
 查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。  
   
  本主题的第一个示例集演示一种加载并按不正确方式查询默认命名空间中的 XML 的典型方式。  

@@ -1,41 +1,47 @@
 ---
-title: "如何：检索文本选定内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "检索文本"
-  - "文本, 检索"
-  - "TextBox 控件, 检索文本"
+title: "如何：检索文本选定内容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [WPF], retrieving
+- TextBox control [WPF], retrieving text
+- retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8d5e1c362c02d2d1d9e1840ea2a55df6875a80ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：检索文本选定内容
-此示例演示一种执行如下操作的方法：使用 <xref:System.Windows.Controls.TextBox.SelectedText%2A> 属性来检索用户已经在 <xref:System.Windows.Controls.TextBox> 控件中选择的文本。  
+# <a name="how-to-retrieve-a-text-selection"></a>如何：检索文本选定内容
+此示例演示使用一种方法<xref:System.Windows.Controls.TextBox.SelectedText%2A>属性以检索中的用户具有选定的文本<xref:System.Windows.Controls.TextBox>控件。  
   
-## 示例  
- 下面的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 示例演示 <xref:System.Windows.Controls.TextBox> 控件（包含要选择的部分文本）和 <xref:System.Windows.Controls.Button> 控件（具有指定的 <xref:System.Windows.Controls.Button.OnClick%2A> 方法）的定义。  
+## <a name="example"></a>示例  
+ 以下[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]示例演示定义<xref:System.Windows.Controls.TextBox>包含要选择，某些文本的控件和<xref:System.Windows.Controls.Button>与指定的控件<xref:System.Windows.Controls.Button.OnClick%2A>方法。  
   
- 在本示例中，具有相关 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件处理程序的按钮用来检索文本选定内容。  当用户单击该按钮时，<xref:System.Windows.Controls.Button.OnClick%2A> 方法会将文本框中任何选定的文本复制到字符串中。  可以方便地修改用来检索文本选定内容的具体方法（单击按钮）以及针对该选定内容执行的操作（将文本选定内容复制到字符串），以便使其适应各种不同的情形。  
+ 在此示例中，一个具有一个关联的按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序用于检索文本选择。 当用户单击此按钮时，<xref:System.Windows.Controls.Button.OnClick%2A>方法将任何所选的文本在文本框中复制到一个字符串。 特定的情况下依据文本选择检索 （单击的按钮），也可以对该选择 （将复制到一个字符串的文本选择），采取的操作可以轻松地修改以适应各种方案。  
   
- [!code-xml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
   
-## 示例  
- 下面的 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 示例演示了在上例的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中所定义按钮的 <xref:System.Windows.Controls.Button.OnClick%2A> 事件处理程序。  
+## <a name="example"></a>示例  
+ 以下[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]的示例演示<xref:System.Windows.Controls.Button.OnClick%2A>事件处理程序中定义的按钮[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]对于此示例。  
   
  [!code-csharp[TextBox_MiscCode#_SelectText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_selecttext)]
  [!code-vb[TextBox_MiscCode#_SelectText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
-## 请参阅  
- [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)   
+## <a name="see-also"></a>另请参阅  
+ [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

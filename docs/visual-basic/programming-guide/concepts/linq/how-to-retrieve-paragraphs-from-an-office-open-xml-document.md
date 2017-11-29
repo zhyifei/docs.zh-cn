@@ -1,40 +1,36 @@
 ---
-title: "如何︰ 从 Office Open XML 文档 (Visual Basic 中) 中检索段落 |Microsoft 文档"
+title: "如何： 从 Office Open XML 文档 (Visual Basic 中) 中检索段落"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>如何︰ 从 Office Open XML 文档 (Visual Basic 中) 中检索段落
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>如何： 从 Office Open XML 文档 (Visual Basic 中) 中检索段落
 本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。  
   
- 有关 Office Open XML 的详细信息，请参阅[www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)。  
+ 有关 Office Open XML 的详细信息，请参阅 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)。  
   
 ## <a name="example"></a>示例  
- 此示例打开一个 Office Open XML 包，使用 Open XML 包中的关系查找文档和样式部件。 然后，它查询文档，投影匿名类型包含段落的集合<xref:System.Xml.Linq.XElement>节点、 每个段落的样式名称和每个段落的文本。</xref:System.Xml.Linq.XElement>  
+ 此示例打开一个 Office Open XML 包，使用 Open XML 包中的关系查找文档和样式部件。 然后，它查询文档，投影一个匿名类型的集合，该集合包含段落 <xref:System.Xml.Linq.XElement> 节点、每个段落的样式名称和每个段落的文本。  
   
  此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。  
   
- 介绍了此示例的工作原理的详细教程，请参阅[纯功能转换的 XML (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
+ 介绍在此示例中的工作原理的详细教程，请参阅[纯功能转换的 XML (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName>  
+ 本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -165,7 +161,7 @@ Module Module1
 End Module  
 ```  
   
- 当使用示例 Open XML 文档中所述运行[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，该示例产生下面的输出︰  
+ 当运行与示例打开 XML 文档中所述[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，该示例产生下面的输出：  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

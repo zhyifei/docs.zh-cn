@@ -1,0 +1,74 @@
+---
+title: "IHostTask::Join 方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: IHostTask.Join
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: IHostTask::Join
+helpviewer_keywords:
+- IHostTask::Join method [.NET Framework hosting]
+- Join method, IHostTask interface [.NET Framework hosting]
+ms.assetid: 2cffcc52-19e0-4ced-a440-fc7375078ac9
+topic_type: apiref
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b5dbfcfc87a520925f36e09d4f2d21dbffadfe1e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="ihosttaskjoin-method"></a>IHostTask::Join 方法
+阻止调用的任务，直到表示由当前的任务[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例完成后，在指定的时间间隔结束，或[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)调用。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+HRESULT Join (  
+    [in] DWORD milliseconds,  
+    [in] DWORD option  
+);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ `milliseconds`  
+ [in]时间间隔，以毫秒为单位，以等待任务终止。 如果此时间间隔过后任务终止之前，将取消阻止调用的任务。  
+  
+ `option`  
+ [in]之一[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值。 值为 WAIT_ALERTABLE 指示如果唤醒任务宿主`Alert`之前调用`milliseconds`间隔。  
+  
+## <a name="return-value"></a>返回值  
+  
+|HRESULT|描述|  
+|-------------|-----------------|  
+|S_OK|`Join`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
+|HOST_E_TIMEOUT|调用操作已超时。|  
+|HOST_E_NOT_OWNER|调用方不拥有该锁。|  
+|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它，或者当前`IHostTask`实例不是与任务关联。|  
+|E_FAIL|出现未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再可用进程内。 到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
+  
+## <a name="requirements"></a>要求  
+ **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+  
+ **标头：** MSCorEE.h  
+  
+ **库：**作为 MSCorEE.dll 中的资源  
+  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>另请参阅  
+ [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
+ [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
+ [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
+ [IHostTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+ [WAIT_OPTION 枚举](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)

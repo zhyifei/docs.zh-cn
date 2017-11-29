@@ -1,154 +1,155 @@
 ---
-title: "缩放 Windows 窗体 DataGridView 控件的最佳做法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "最佳做法, DataGridView 控件"
-  - "数据网格, 最佳做法"
-  - "DataGridView 控件 [Windows 窗体], 最佳做法"
-  - "DataGridView 控件 [Windows 窗体], 行共享"
-  - "DataGridView 控件 [Windows 窗体], 缩放"
-  - "DataGridView 控件 [Windows 窗体], 共享行"
+title: "缩放 Windows 窗体 DataGridView 控件的最佳做法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], row sharing
+- data grids [Windows Forms], best practices
+- DataGridView control [Windows Forms], shared rows
+- DataGridView control [Windows Forms], best practices
+- best practices [Windows Forms], dataGridView control
+- DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bfefd41a4773c81757f73e725095057f988cef2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 缩放 Windows 窗体 DataGridView 控件的最佳做法
-<xref:System.Windows.Forms.DataGridView> 控件的设计目的是提供最大的伸缩性。  如果需要显示大量数据，请遵循本主题中所描述的准则，以避免耗费大量内存或降低用户界面（UI）的响应能力。  本主题讨论下列问题：  
+# <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>缩放 Windows 窗体 DataGridView 控件的最佳做法
+<xref:System.Windows.Forms.DataGridView>控件旨在提供最大可伸缩性。 如果想要显示的数据量大，则应遵循避免使用大量的内存或降低用户界面 (UI) 的响应能力本主题中所述准则。 本主题讨论了以下问题：  
   
 -   有效使用单元格样式  
   
 -   有效使用快捷菜单  
   
--   有效使用自动大小调整  
+-   使用自动调整大小有效地  
   
--   有效使用选定单元格、行和列的集合  
+-   有效使用所选的单元格、 行和列集合  
   
--   使用共享行  
+-   使用共享的行  
   
--   防止行成为非共享行  
+-   阻止行成为非共享行  
   
- 如果有特殊的性能需求，您可以实现虚拟模式并提供自己的数据管理操作。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)。  
+ 如果你有特殊的性能需求，可以实现虚拟模式，并提供你自己的数据管理操作。 有关详细信息，请参阅[在 Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)。  
   
-## 有效使用单元格样式  
- 每一个单元格、行和列都有其自己的样式信息。  样式信息存储在 <xref:System.Windows.Forms.DataGridViewCellStyle> 对象中。  为许多单个 <xref:System.Windows.Forms.DataGridView> 元素创建单元格样式对象是低效的，特别是处理大量数据时。  为避免对性能的影响，请遵循以下准则：  
+## <a name="using-cell-styles-efficiently"></a>有效使用单元格样式  
+ 每个单元格、 行和列可以具有其自己的样式信息。 样式信息存储在<xref:System.Windows.Forms.DataGridViewCellStyle>对象。 创建多个独立单元格样式对象<xref:System.Windows.Forms.DataGridView>元素可以是效率低下，尤其是在使用大量的数据。 若要避免对性能有影响，请使用以下准则：  
   
--   避免为单个 <xref:System.Windows.Forms.DataGridViewCell> 或 <xref:System.Windows.Forms.DataGridViewRow> 对象设置单元格样式属性。  这包括由 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 属性指定的行对象。  每一个从行模板克隆出来的新行将接收模板单元格样式对象的自身复制。  为了具有最大的伸缩性，请在 <xref:System.Windows.Forms.DataGridView> 级别设置单元格样式属性。  例如，设置 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName> 属性而不是设置 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName> 属性。  
+-   避免将设置为各个单元格样式属性<xref:System.Windows.Forms.DataGridViewCell>或<xref:System.Windows.Forms.DataGridViewRow>对象。 这包括指定的行对象<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性。 每个克隆从行模板的新行将收到其自己的模板的单元格样式对象副本。 对于最大可伸缩性，设置在单元格样式属性<xref:System.Windows.Forms.DataGridView>级别。 例如，设置<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>属性而不是<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>属性。  
   
--   如果某些单元格需要默认格式以外的其他格式，可在单元格、行或列组中使用同一个 <xref:System.Windows.Forms.DataGridViewCellStyle> 实例。  避免在单个单元格、行和列上直接设置 <xref:System.Windows.Forms.DataGridViewCellStyle> 类型的属性。  有关单元格样式共享的示例，请参见 [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  当通过处理 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件处理程序来分别设置单元格样式时，也可以避免对性能的影响。  有关示例，请参见[如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
+-   如果某些单元格需要比默认格式设置的其他格式，使用相同<xref:System.Windows.Forms.DataGridViewCellStyle>跨的单元格、 行或列组的实例。 避免直接设置类型的属性<xref:System.Windows.Forms.DataGridViewCellStyle>上各个单元格、 行和列。 单元格样式共享的示例，请参阅[如何： 设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 通过处理单独设置单元格样式时，也可以避免对性能产生负面影响<xref:System.Windows.Forms.DataGridView.CellFormatting>事件处理程序。 有关示例，请参阅[如何： 在 Windows 窗体 DataGridView 控件中自定义数据格式](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
   
--   当确定一个单元格样式时，请使用 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=fullName> 属性而不要使用 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName> 属性。  如果该属性尚未使用，访问 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 属性可以创建 <xref:System.Windows.Forms.DataGridViewCellStyle> 类的新实例。  另外，如果某些样式是从行、列或者控件继承的，该对象可能不包含完整的单元格样式信息。  有关单元格样式继承的更多信息，请参见 [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+-   在确定单元格的样式时，使用<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>属性而不是<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>属性。 访问<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性创建的新实例<xref:System.Windows.Forms.DataGridViewCellStyle>类如果尚未使用属性。 此外，此对象可能不包含该单元格的完整的样式信息，如果某些样式继承自行、 列或控件。 有关单元格样式继承的详细信息，请参阅[在 Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
-## 有效使用快捷菜单  
- 每一个单元格、行和列都有其自己的快捷菜单。  <xref:System.Windows.Forms.DataGridView> 控件中的快捷菜单由 <xref:System.Windows.Forms.ContextMenuStrip> 控件表示。  正如单元格样式对象一样，逐个地为众多 <xref:System.Windows.Forms.DataGridView> 元素创建快捷菜单将会给性能带来负面影响。  为了避免这种性能影响，请遵循以下准则：  
+## <a name="using-shortcut-menus-efficiently"></a>有效使用快捷菜单  
+ 每个单元格、 行和列可以具有其自己的快捷菜单。 中的快捷菜单<xref:System.Windows.Forms.DataGridView>控件由<xref:System.Windows.Forms.ContextMenuStrip>控件。 就像使用单元格样式对象创建的多个独立的快捷菜单<xref:System.Windows.Forms.DataGridView>元素将会对性能产生负面影响。 若要避免这种下降，请使用以下准则：  
   
--   避免为单个单元格和行创建快捷菜单。  这包括行模板，向控件添加新行时行模板与其快捷菜单一起被复制。  为了获得最大的伸缩性，仅使用控件的 <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> 属性为整个控件指定同一个快捷菜单。  
+-   避免创建各个单元格和行的快捷菜单。 这包括行模板，新行添加到控件时，会克隆以及其快捷菜单。 要获得最大可伸缩性，使用仅控制的<xref:System.Windows.Forms.Control.ContextMenuStrip%2A>属性指定整个控件的单个快捷菜单。  
   
--   如果有多个行或单元格需要多个快捷菜单，可处理 <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> 或 <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> 事件。  这些事件使您可以自己管理快捷菜单对象，从而允许您对性能进行调整。  
+-   如果你需要多个行或单元格多个快捷菜单，处理<xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded>或<xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded>事件。 这些事件能够让你管理的快捷菜单对象你自己，允许您优化性能。  
   
-## 有效使用自动大小调整  
- 如果单元格内容发生更改，行、列和标题可以自动调整大小，以使单元格的整个内容能够完整地显示。  更改调整大小模式也可以调整行、列和标题的大小。  为了确定正确的大小，<xref:System.Windows.Forms.DataGridView> 控件必须检查每一个单元格所容纳的值。  当处理大数据集时，如果发生自动大小调整，这种分析可使控件的性能下降。  为了避免性能下降，请遵循以下准则：  
+## <a name="using-automatic-resizing-efficiently"></a>使用自动调整大小有效地  
+ 行、 列和标头可以自动调整单元格内容发生变化，以便单元格的整个内容显示会不经剪辑。 更改大小调整模式还可以调整行、 列和标头。 若要确定正确的大小，<xref:System.Windows.Forms.DataGridView>控件必须检查必须适应每个单元格的值。 在使用大型数据集，这种分析可以性能带来负面影响的控件自动调整大小发生时。 若要避免性能损失，使用以下准则：  
   
--   在具有大型行集的 <xref:System.Windows.Forms.DataGridView> 控件上，避免使用自动大小调整。  如果一定要使用自动大小调整，请仅对所显示的行进行大小调整。  在虚拟模式下也仅调整所显示的行的大小。  
+-   避免在使用自动调整大小<xref:System.Windows.Forms.DataGridView>与大量的行集的控件。 如果你使用自动调整大小，调整大小，基于所显示的行。 在虚拟模式下以及使用显示的行。  
   
-    -   对于行和列，使用 <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>、<xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode> 和 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> 枚举的 `DisplayedCells` 或 `DisplayedCellsExceptHeaders` 字段。  
+    -   对于行和列，使用`DisplayedCells`或`DisplayedCellsExceptHeaders`字段<xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>， <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>，和<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>枚举。  
   
-    -   对于行标题，使用 <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode> 枚举的 <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode> 或 <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode> 字段。  
+    -   有关行标头，使用<xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders>或<xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader>字段<xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>枚举。  
   
--   为了获得最大的伸缩性，请关闭自动大小调整并通过编程来重新调整大小。  
+-   对于最大可伸缩性，关闭自动调整大小并使用以编程方式调整大小。  
   
- 有关更多信息，请参见 [Windows 窗体 DataGridView 控件中的大小调整选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+ 有关详细信息，请参阅[在 Windows 窗体 DataGridView 控件中调整选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
-## 有效使用选定单元格、行和列的集合  
- <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合的执行对于大型选择是低效的。  使用 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 和 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 集合执行效率也不高，但是程度要轻一些，因为在一个典型的 <xref:System.Windows.Forms.DataGridView> 控件中行远远少于单元格，列远远少于行。  为了避免由于使用以上集合而造成性能下降，请遵循以下准则：  
+## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>有效使用选定的单元格、 行和列集合  
+ <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>集合不对于大型选择有效地执行。 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>和<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>集合还可能效率很低，尽管到较小度因为有许多更少的行，比在典型的单元格<xref:System.Windows.Forms.DataGridView>控制和许多较少的列比行。 若要避免性能损失，使用这些集合时，使用以下准则：  
   
--   若要在访问 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合内容之前确定是否已经在 <xref:System.Windows.Forms.DataGridView> 中选择了所有单元格，请检查 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 方法的返回值。  然而，请注意，此方法可导致行成为非共享行。  有关更多信息，请参见下一节。  
+-   若要确定是否中的所有单元格<xref:System.Windows.Forms.DataGridView>之前访问的内容已选择<xref:System.Windows.Forms.DataGridView.SelectedCells%2A>集合，检查返回值的<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>方法。 但是，请注意，此方法可导致行变为非共享。 有关更多信息，请参见下一节。  
   
--   避免使用 <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=fullName> 的 <xref:System.Collections.ICollection.Count%2A> 属性确定所选单元格的数量。  而是使用 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=fullName> 方法并传入 <xref:System.Windows.Forms.DataGridViewElementStates?displayProperty=fullName> 值。  同样，可使用 <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=fullName> 和 <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=fullName> 方法来确定所选元素的数量，而不是通过访问所选行和列的集合来确定。  
+-   避免使用<xref:System.Collections.ICollection.Count%2A>属性<xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=nameWithType>确定选定的单元格的数目。 请改用<xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=nameWithType>方法并传入<xref:System.Windows.Forms.DataGridViewElementStates.Selected?displayProperty=nameWithType>值。 同样，使用<xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=nameWithType>和<xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=nameWithType>方法，以确定所选的元素，而不是访问所选的行和列集合的数目。  
   
--   避免基于单元格的选择模式。  应将 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName> 属性设置为 <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName>。  
+-   避免基于单元格的选择模式。 与此相反，设置<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>属性<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect?displayProperty=nameWithType>。  
   
-## 使用共享行  
- 在 <xref:System.Windows.Forms.DataGridView> 控件中可通过共享行实现内存的高效使用。  通过共享 <xref:System.Windows.Forms.DataGridViewRow> 类的实例，行将共享尽可能多的有关自身外观和行为的信息。  
+## <a name="using-shared-rows"></a>使用共享行  
+ 在实现高效的内存使用<xref:System.Windows.Forms.DataGridView>控制通过共享行。 行将通过共享的实例共享尽可能多的信息有关其外观和行为可能<xref:System.Windows.Forms.DataGridViewRow>类。  
   
- 虽然共享行实例节省内存，但是行很容易成为非共享行。  例如，每当用户直接同单元格进行交互时，单元格的行成为非共享行。  由于这是不能避免的，所以仅当处理大量数据，以及仅当用户在运行您的程序时与相对少的部分数据进行交互的情况下，本主题中的准则才是有用的。  
+ 虽然共享行实例节省内存，行可以轻松地成为非共享行。 例如，每当用户交互直接与单元格时，其行成为非共享行。 由于不能避免这种情况，本主题中的准则十分有用，仅当使用的数据量非常大并只在用户将交互具有相对较小部分数据的每次运行程序时。  
   
- 如果行中的任意单元格包含值，在未绑定的 <xref:System.Windows.Forms.DataGridView> 控件中不能共享行。  当 <xref:System.Windows.Forms.DataGridView> 控件绑定到外部数据源或当您实现虚拟模式并且提供自己的数据源时，单元格的值被存储在控件外而不是单元格对象中，因而允许行共享。  
+ 不能共享行中未绑定<xref:System.Windows.Forms.DataGridView>控制如果任何其单元格包含值。 当<xref:System.Windows.Forms.DataGridView>控件绑定到外部数据源，或当您实现虚拟模式，并且提供您自己的数据源，这些单元格值存储到控件而不是单元格对象，允许要共享的行。  
   
- 仅当行中所有单元格的状态可以由包含这些单元格的行状态和列状态确定时，行对象才能共享。  如果您更改单元格状态以使其不再派生自所处行和列的状态，则不能共享行。  
+ 如果可以从行的状态和包含的单元格的列的状态确定其所有单元格的状态，则仅可以共享行对象。 如果你更改单元格的状态，以便它不再可以推导从其行和列的状态，则不能共享行。  
   
- 例如，在下列任何情况均不能共享行：  
+ 例如，在任何以下情况下不能共享行：  
   
--   行包含一个不在所选列中的选定的单元格。  
+-   该行中包含一个不在所选列中的所选的单元。  
   
--   行包含一个设置了 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 或 <xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A> 属性的单元格。  
+-   行包含包含的单元格其<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>或<xref:System.Windows.Forms.DataGridViewCell.ContextMenuStrip%2A>属性集。  
   
--   行包含一个设置了 <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A> 属性的 <xref:System.Windows.Forms.DataGridViewComboBoxCell>。  
+-   行包含<xref:System.Windows.Forms.DataGridViewComboBoxCell>与其<xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A>属性集。  
   
- 在绑定模式或虚拟模式中，您可以通过处理 <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> 和 <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> 事件为每个单元格提供 工具提示和快捷菜单。  
+ 在绑定的模式或虚拟模式中，你可以提供工具提示和快捷菜单为单个单元格通过处理<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>和<xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded>事件。  
   
- 每当向 <xref:System.Windows.Forms.DataGridViewRowCollection> 添加行时，<xref:System.Windows.Forms.DataGridView> 控件将自动尝试使用共享行。  为确保行被共享，请遵循以下准则：  
+ <xref:System.Windows.Forms.DataGridView>控件将自动尝试使用共享的行，每当行添加到<xref:System.Windows.Forms.DataGridViewRowCollection>。 使用以下准则以确保共享行：  
   
--   避免调用 <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName> 集合的 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A> 方法的 `Add(Object[])` 重载和 <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A> 方法的 `Insert(Object[])` 重载。  以上重载自动创建非共享行。  
+-   避免调用`Add(Object[])`重载<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>方法和`Insert(Object[])`重载<xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A>方法<xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType>集合。 这些重载自动创建非共享的行。  
   
--   请确保在 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=fullName> 属性中指定的行可以在以下情况中共享：  
+-   请确保在指定的行<xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>可以在以下情况下共享属性：  
   
-    -   当调用 <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName> 集合的 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A> 方法的 `Add()` 或 `Add(Int32)` 重载或 <xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A> 方法的 `Insert(Int32,Int32)` 重载时。  
+    -   在调用时`Add()`或`Add(Int32)`的重载<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>方法或`Insert(Int32,Int32)`重载<xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A>方法<xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType>集合。  
   
-    -   当增大 <xref:System.Windows.Forms.DataGridView.RowCount%2A?displayProperty=fullName> 属性的值时。  
+    -   增加的值时<xref:System.Windows.Forms.DataGridView.RowCount%2A?displayProperty=nameWithType>属性。  
   
-    -   当设置 <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName> 属性时。  
+    -   设置时<xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>属性。  
   
--   请确保在调用 <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName> 集合的 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>、<xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopy%2A> 和 <xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopies%2A> 方法时可以共享 `indexSource` 参数指定的行。  
+-   请确保指定的行`indexSource`调用时，可以共享参数<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.InsertCopies%2A>方法<xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType>集合。  
   
--   请确保在调用 <xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=fullName> 集合的 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A> 方法的 `Add(DataGridViewRow)` 重载、<xref:System.Windows.Forms.DataGridViewRowCollection.AddRange%2A> 方法、<xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A> 方法的 `Insert(Int32,DataGridViewRow)` 重载以及 <xref:System.Windows.Forms.DataGridViewRowCollection.InsertRange%2A> 方法时可以共享指定的行。  
+-   请确保在调用时，可以共享的指定的行`Add(DataGridViewRow)`重载<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>方法，<xref:System.Windows.Forms.DataGridViewRowCollection.AddRange%2A>方法，`Insert(Int32,DataGridViewRow)`重载<xref:System.Windows.Forms.DataGridViewRowCollection.Insert%2A>方法，与<xref:System.Windows.Forms.DataGridViewRowCollection.InsertRange%2A>方法<xref:System.Windows.Forms.DataGridView.Rows%2A?displayProperty=nameWithType>集合。  
   
- 若要确定行是否共享，请使用 <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=fullName> 方法检索行对象，然后检查该对象的 <xref:System.Windows.Forms.DataGridViewBand.Index%2A> 属性。  共享行的 <xref:System.Windows.Forms.DataGridViewBand.Index%2A> 属性值始终为 –1。  
+ 若要确定是否共享行，使用<xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>方法来检索行对象，然后检查对象的<xref:System.Windows.Forms.DataGridViewBand.Index%2A>属性。 共享的行始终具有<xref:System.Windows.Forms.DataGridViewBand.Index%2A>– 1 的属性值。  
   
-## 防止行成为非共享行  
- 共享行可以由于程序代码或用户操作而成为非共享行。  为了避免对性能的影响，您应该避免使行成为非共享行。  在应用程序开发过程中，可以处理 <xref:System.Windows.Forms.DataGridView.RowUnshared> 事件来确定行何时成为非共享行。  这在调试行共享问题时十分有用。  
+## <a name="preventing-rows-from-becoming-unshared"></a>阻止行成为非共享行  
+ 共享的行可以成为非共享行代码或用户操作的结果。 若要避免对性能有影响，应避免使行成为非共享行。 应用程序在开发期间，你可以处理<xref:System.Windows.Forms.DataGridView.RowUnshared>事件，以确定何时成为非共享行。 在调试行共享问题时，这很有用。  
   
- 若要防止行成为非共享行，请遵循以下准则：  
+ 若要防止行成为非共享行，使用以下准则：  
   
--   避免对 <xref:System.Windows.Forms.DataGridView.Rows%2A> 集合进行索引或者避免使用 `foreach` 循环通过该集合进行迭代。  您通常不需要直接访问行。  对行进行操作的 <xref:System.Windows.Forms.DataGridView> 方法以行索引而不是行实例作为参数。  另外，与行相关的事件的处理程序接收具有行属性的事件参数对象，您可以使用行属性对行执行操作，而不会使行变为非共享行。  
+-   避免索引<xref:System.Windows.Forms.DataGridView.Rows%2A>集合或循环访问其与`foreach`循环。 您将通常不必直接访问的行。 <xref:System.Windows.Forms.DataGridView>对行进行操作的方法采用行索引自变量，而不是行实例。 此外，行相关的事件的处理程序接收具有可用于操作而不会导致它们成为非共享行的行的行属性的事件参数对象。  
   
--   如果需要访问行对象，请使用 <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=fullName> 方法并传入行的实际索引。  然而，请注意，修改一个通过此方法检索的共享行对象将修改所有共享该对象的行。  但是，新记录行不与其他行共享，因此当修改任意其他行时不会影响新记录行。  还应该注意到由一个共享行表示的不同的行可能有不同的快捷菜单。  若要从一个被共享的行实例中检索正确的快捷菜单，请使用 <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> 方法并传入行的实际索引。  如果您访问共享行的 <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> 属性，它将使用共享行的索引值 \-1 并且不检索正确的快捷菜单。  
+-   如果你需要访问行对象，请使用<xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>方法并传入行的实际的索引。 但是，请注意，修改通过此方法检索到一个共享的行对象将修改共享此对象的所有行。 用于新纪录的行不与共享其他行，但是，因此它不会受到影响时修改任何其他行。 另请注意，不同的行表示一个共享行可能有不同的快捷菜单。 若要从共享的行实例检索正确的快捷菜单，使用<xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A>方法并传入行的实际的索引。 如果访问共享的行<xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A>属性相反，它将使用共享的行的索引为-1 并将检索正确的快捷菜单。  
   
--   避免对 <xref:System.Windows.Forms.DataGridViewRow.Cells%2A?displayProperty=fullName> 集合进行索引。  直接访问单元格将导致其父行成为非共享行，从而实例化一个新的 <xref:System.Windows.Forms.DataGridViewRow>。  与单元格相关的事件的处理程序接收具有单元格属性的事件参数对象，您可以使用行属性对行执行操作，而不会使行变为非共享行。  也可以使用 <xref:System.Windows.Forms.DataGridView.CurrentCellAddress%2A> 属性，在无需直接访问单元格的情况下检索当前单元格的行和列索引。  
+-   避免索引<xref:System.Windows.Forms.DataGridViewRow.Cells%2A?displayProperty=nameWithType>集合。 直接访问单元格将导致其成为非共享行，实例化一个新的父行<xref:System.Windows.Forms.DataGridViewRow>。 单元格相关事件的处理程序接收具有可用于对行执行操作而不会导致要成为非共享行的行的单元属性的事件参数对象。 你还可以使用<xref:System.Windows.Forms.DataGridView.CurrentCellAddress%2A>属性来检索当前的单元格的行和列索引，而无需直接访问该单元格。  
   
--   避免基于单元格的选择模式。  这些模式可导致行成为非共享行。  应将 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName> 属性设置为 <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode?displayProperty=fullName>。  
+-   避免基于单元格的选择模式。 这些模式将使行成为非共享行。 与此相反，设置<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>属性<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect?displayProperty=nameWithType>。  
   
--   不要处理 <xref:System.Windows.Forms.DataGridViewRowCollection.CollectionChanged?displayProperty=fullName> 或 <xref:System.Windows.Forms.DataGridView.RowStateChanged?displayProperty=fullName> 事件。  这些事件可导致行成为非共享行。  也不要调用引发这些事件的 <xref:System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged%2A?displayProperty=fullName> 或 <xref:System.Windows.Forms.DataGridView.OnRowStateChanged%2A?displayProperty=fullName> 方法。  
+-   不处理<xref:System.Windows.Forms.DataGridViewRowCollection.CollectionChanged?displayProperty=nameWithType>或<xref:System.Windows.Forms.DataGridView.RowStateChanged?displayProperty=nameWithType>事件。 这些事件将使行成为非共享行。 此外，请勿调用<xref:System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged%2A?displayProperty=nameWithType>或<xref:System.Windows.Forms.DataGridView.OnRowStateChanged%2A?displayProperty=nameWithType>引发这些事件的方法。  
   
--   当 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName> 属性值是 <xref:System.Windows.Forms.DataGridViewSelectionMode>、<xref:System.Windows.Forms.DataGridViewSelectionMode>、<xref:System.Windows.Forms.DataGridViewSelectionMode> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode> 时，不要访问 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A?displayProperty=fullName> 集合。  这会导致所有选中行成为非共享行。  
+-   不能访问<xref:System.Windows.Forms.DataGridView.SelectedCells%2A?displayProperty=nameWithType>集合时<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>属性值是<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>， <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>， <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>，或<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>。 这将导致所有所选的行变为非共享。  
   
--   不要调用 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A?displayProperty=fullName> 方法。  此方法会导致行成为非共享行。  
+-   不要调用<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A?displayProperty=nameWithType>方法。 此方法可以使行成为非共享行。  
   
--   当 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName> 属性值是 <xref:System.Windows.Forms.DataGridViewSelectionMode> 时，不要调用 <xref:System.Windows.Forms.DataGridView.SelectAll%2A?displayProperty=fullName> 方法。  这会导致所有行成为非共享行。  
+-   不要调用<xref:System.Windows.Forms.DataGridView.SelectAll%2A?displayProperty=nameWithType>方法时<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>属性值是<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>。 这将导致所有行变为非共享。  
   
--   当单元格列的相应属性设置为 `true` 时，不要将单元格的 <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A> 或 <xref:System.Windows.Forms.DataGridViewCell.Selected%2A> 属性设置为 `false`。  这会导致所有行成为非共享行。  
+-   未设置<xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A>或<xref:System.Windows.Forms.DataGridViewCell.Selected%2A>到单元格的属性`false`时在其列中的相应属性设置为`true`。 这将导致所有行变为非共享。  
   
--   不要访问 <xref:System.Windows.Forms.DataGridViewRowCollection.List%2A?displayProperty=fullName> 属性。  这会导致所有行成为非共享行。  
+-   不能访问<xref:System.Windows.Forms.DataGridViewRowCollection.List%2A?displayProperty=nameWithType>属性。 这将导致所有行变为非共享。  
   
--   不要调用 <xref:System.Windows.Forms.DataGridView.Sort%2A> 方法的 `Sort(IComparer)` 重载。  使用自定义比较器排序可导致所有行成为非共享行。  
+-   不要调用`Sort(IComparer)`重载<xref:System.Windows.Forms.DataGridView.Sort%2A>方法。 使用自定义比较器进行排序，则会导致所有行成为非共享行。  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- [Windows 窗体 DataGridView 控件中的性能优化](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)   
- [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)   
- [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)   
- [Windows 窗体 DataGridView 控件中的大小调整选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.DataGridView>  
+ [Windows 窗体 DataGridView 控件中的性能调整](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的重设大小选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)

@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
+ms.openlocfilehash: 21f42bbf4693c78a5be271b7769ef4489ed6d476
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b982d72b92cefb015c584ea6827dc60999ca9a00
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理依赖项
 
 在 .NET Core 项目从 project.json 移动到 csproj 和 MSBuild 的同时，还投入了大笔资金将项目文件和资产统一，以便跟踪依赖项。 对于 .NET Core 项目，这与 project.json 的做法类似。 没有单独的 JSON 或 XML 文件来跟踪 NuGet 依赖项。 通过这种改变，我们还在名为 `<PackageReference>` 的 csproj 语法中引入了另一种类型的引用。 
@@ -56,6 +54,8 @@ ms.lasthandoff: 07/28/2017
 ```
 之后，保存项目并运行 `dotnet restore` 命令以安装依赖项。 
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 完整项目如下所示：
 
 ```xml
@@ -73,4 +73,3 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="removing-a-dependency-from-the-project"></a>从项目中删除依赖项
 从项目文件中删除依赖项仅包含从项目文件中删除 `<PackageReference>`。
-

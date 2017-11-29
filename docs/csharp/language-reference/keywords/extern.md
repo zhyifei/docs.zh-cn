@@ -1,42 +1,24 @@
 ---
 title: "extern（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - extern_CSharpKeyword
 - extern
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 106ceb6a4acf57daa01919acb38e4245655fca2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 796a904ec40dd8cdf59f093a4b89d7a2e1f99005
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extern-c-reference"></a>extern（C# 参考）
 `extern` 修饰符用于声明在外部实现的方法。 `extern` 修饰符的常见用法是在使用 Interop 服务调入非托管代码时与 `DllImport` 特性一起使用。 在这种情况下，还必须将方法声明为 `static`，如下面的示例所示：  
@@ -55,7 +37,7 @@ private static extern void AVIFileInit();
 ## <a name="example"></a>示例  
  **示例 1.** 在此示例中，程序接收来自用户的字符串并将该字符串显示在消息框中。 程序使用从 User32.dll 库导入的 `MessageBox` 方法。  
   
- [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
   
 ## <a name="example"></a>示例  
  **示例 2.** 此示例阐释了调入 C 库（本机 DLL）的 C# 程序。  
@@ -111,9 +93,8 @@ SampleMethod() returns 50.
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
-

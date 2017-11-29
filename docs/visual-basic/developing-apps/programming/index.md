@@ -1,40 +1,22 @@
 ---
 title: "Visual Basic 编程"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- programming, Visual Basic
+- programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3c19b68746cf32bf405a6ce1d8a12b203f27f03c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cabdb8b0b297f92f3ff323a989a812cc822c2ad5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 编程
 此部分将介绍在创建 Visual Basic 应用程序过程中可能想要详细了解的编程任务。  
@@ -62,8 +44,7 @@ ms.lasthandoff: 07/28/2017
  所含文档介绍了如何使用 `My.Computer.FileSystem` 对象访问文件系统。  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual Basic 语言功能](../../../visual-basic/programming-guide/language-features/index.md)   
- [编程概念](../../../visual-basic/programming-guide/concepts/index.md)   
- [集合](../../../visual-basic/programming-guide/concepts/collections.md)   
+ [Visual Basic 语言功能](../../../visual-basic/programming-guide/language-features/index.md)  
+ [编程概念](../../../visual-basic/programming-guide/concepts/index.md)  
+ [集合](../../../visual-basic/programming-guide/concepts/collections.md)  
  [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)
-

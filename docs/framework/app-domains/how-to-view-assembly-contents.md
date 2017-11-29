@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assembly manifest, viewing information
 - Ildasm.exe
@@ -18,16 +21,15 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ddbbf9fda01328986bf586203116fdabbcd9b55e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3583e69e90080eb830bb61a5e0c7b6e944f7d654
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：查看程序集内容
 可使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)查看文件中的 Microsoft 中间语言 (MSIL) 信息。 如果要检查的文件是程序集，此信息可包括程序集的属性以及对其他模块和程序集的引用。 此信息有助于确定文件是程序集还是程序集的一部分，以及文件是否具有对其他模块或程序集的引用。  
@@ -47,7 +49,9 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>示例  
  下例以基本的“Hello, World”程序开始。 编译该程序后，使用 Ildasm.exe 反汇编 Hello.exe 程序集并查看程序集清单。  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)]
+ [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)]
+ [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
   
  在 Hello.exe 程序集上运行 ildasm.exe 命令，然后在 IL DASM 窗口中双击“清单”图标生成以下输出：  
   
@@ -93,7 +97,6 @@ ms.lasthandoff: 07/28/2017
  根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II: Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III: CIL Instruction Set”（第 3 部分：CIL 指令集）。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](http://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。  
   
 ## <a name="see-also"></a>另请参阅  
- [应用程序域和程序集](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
- [应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
+ [应用程序域和程序集](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)  
+ [应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
  [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-

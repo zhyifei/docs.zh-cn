@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 组合和比较字符串集合 (LINQ) (Visual Basic 中) |Microsoft 文档"
+title: "如何： 组合和比较字符串集合 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7240f9a8923060634e8824f2516c220b376e2e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何︰ 组合和比较字符串集合 (LINQ) (Visual Basic)
-此示例演示如何合并文件，包含的文本行，然后对结果进行排序。 具体而言，它演示如何在两个文本行集上执行简单的串联、 联合和交集。  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何： 组合和比较字符串集合 (LINQ) (Visual Basic)
+此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>若要设置项目和文本的文件  
+### <a name="to-set-up-the-project-and-the-text-files"></a>设置项目和文本文件  
   
-1.  将这些名称复制到名为 names1.txt 的文本文件，并将其保存在项目文件夹中︰  
+1.  将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  将这些名称复制到名为 names2.txt 的文本文件，并将其保存在项目文件夹中。 请注意，这两个文件都有一些名称共同点。  
+2.  将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。 请注意，这两个文件拥有一些共同的名称。  
   
     ```  
     Liu, Jinghao  
@@ -180,8 +172,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+ 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

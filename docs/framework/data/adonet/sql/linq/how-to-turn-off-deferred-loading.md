@@ -1,33 +1,39 @@
 ---
-title: "如何：如何关闭延迟加载 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：禁用推迟加载"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d98b190ef4454ff29318eb6ef0f20624c85b62a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：如何关闭延迟加载
-可以通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。  有关详细信息，请参阅[延迟加载与立即加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
+# <a name="how-to-turn-off-deferred-loading"></a>如何：禁用推迟加载
+可以通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。 有关详细信息，请参阅[延迟执行与立即加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
   
 > [!NOTE]
->  关闭对象跟踪时，也隐式地关闭了延迟加载。  有关详细信息，请参阅[如何：将信息作为只读信息检索](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)。  
+>  关闭对象跟踪时，也隐式地关闭了延迟加载。 有关详细信息，请参阅[如何： 检索信息作为只读](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例演示如何通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。  
   
  [!code-csharp[DLinqQuerying#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#3)]
  [!code-vb[DLinqQuerying#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#3)]  
   
-## 请参阅  
- [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)   
+## <a name="see-also"></a>另请参阅  
+ [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  [查询数据库](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

@@ -1,56 +1,56 @@
 ---
-title: "如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.DataGridViewAddColumnDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView 控件 [Windows 窗体], 添加列"
-  - "DataGridView 控件 [Windows 窗体], 移除列"
+title: "如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.DataGridViewAddColumnDialog
+helpviewer_keywords:
+- DataGridView control [Windows Forms], adding columns
+- DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 71b02124dd68299552737df35163e3b766d4df73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列
-要显示数据，Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件必须包含列。  如果您计划手动填充控件，则必须自己添加列。  否则，可以将控件绑定到数据源，从而自动生成并填充列。  如果数据源包含的列多于您要显示的，可移除不需要的列。  
+# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列
+Windows 窗体<xref:System.Windows.Forms.DataGridView>控件必须包含才能显示数据的列。 如果你计划手动填充该控件，你必须自己添加列。 或者，你可以将控件绑定到数据源，也不能生成自动填充列。 如果数据源包含多于你想要显示的列数，则可以删除不需要的列。  
   
- 下面的过程要求有一个带窗体的**“Windows 应用程序”**项目，且窗体中要包括一个 <xref:System.Windows.Forms.DataGridView> 控件。  有关设置此类项目的信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下面的过程要求**Windows 应用程序**具有一个窗体包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 使用设计器添加列  
+### <a name="to-add-a-column-using-the-designer"></a>若要添加使用设计器的列  
   
-1.  单击 <xref:System.Windows.Forms.DataGridView> 控件右上角的智能标记标志符号 \(![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)，然后选择**“添加列”**。  
+1.  单击智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 右上角<xref:System.Windows.Forms.DataGridView>控制，，然后选择**添加列**。  
   
-2.  在**“添加列”**对话框中，选择**“数据绑定列”**选项并从数据源中选择一列，或者选择**“未绑定的列”**选项并使用提供的字段来定义列。  
+2.  在**添加列**对话框框中，选择**数据绑定列**选项和从数据源中，选择一列或选择**未绑定列**选项和定义列使用提供的字段。  
   
-3.  单击**“添加”**按钮添加列，使其在现有列尚未填入控件显示区域的情况下出现在设计器中。  
+3.  单击**添加**按钮以添加列，使其出现在设计器中的现有列不能已填充控件显示区域时。  
   
     > [!NOTE]
-    >  可在**“编辑列”**对话框中修改列属性，该对话框可通过控件的智能标记来访问。  
+    >  你可以修改中的列属性**编辑列**对话框中，你可以访问从控件的智能标记。  
   
-### 使用设计器移除列  
+### <a name="to-remove-a-column-using-the-designer"></a>若要删除某一列使用设计器  
   
-1.  从控件的智能标记中选择**“编辑列”**。  
+1.  选择**编辑列**从控件的智能标记。  
   
-2.  从**“选定的列”**列表中选择一列。  
+2.  选择从列**选定的列**列表。  
   
-3.  单击**“移除”**按钮删除该列，使其从设计器中消失。  
+3.  单击**删除**按钮以删除列，使其从设计器中消失。  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.DataGridView>  
+ [如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
  [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

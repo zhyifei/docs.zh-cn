@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ba734dd3a9585b52b96cb2d27743da6190961126
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>如何：确定安装了哪些 .NET Framework 更新
 安装在计算机上的各个版本 .NET Framework 已安装的更新都列在 Windows 注册表中。 可以使用注册表编辑器 (regedit.exe) 查看此信息。  
@@ -80,4 +81,3 @@ Microsoft .NET Framework 4 Extended
 [如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [安装 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
 [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-

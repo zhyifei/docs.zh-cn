@@ -1,40 +1,46 @@
 ---
-title: "如何：使用径向渐变绘制区域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "画笔, 使用径向渐变进行绘制"
-  - "绘制, 使用径向渐变"
-  - "径向渐变, 绘制"
+title: "如何：使用径向渐变绘制区域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], painting with radial gradients
+- radial gradients [WPF], painting with
+- painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55b707e4738a77a8fb093071ef6f5105b2200c16
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用径向渐变绘制区域
-本示例演示如何使用 <xref:System.Windows.Media.RadialGradientBrush> 类来绘制带有径向渐变的区域。  
+# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>如何：使用径向渐变绘制区域
+此示例演示如何使用<xref:System.Windows.Media.RadialGradientBrush>类，以使用径向渐变绘制区域。  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.RadialGradientBrush> 来绘制一个具有径向渐变的矩形，此渐变从黄色依次过渡到红色、蓝色和浅绿色。  
+## <a name="example"></a>示例  
+ 下面的示例使用<xref:System.Windows.Media.RadialGradientBrush>来绘制一个具有红色以蓝色和浅绿色从黄色转换的径向渐变的矩形。  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
- [!code-xml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
+ [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- 下图显示了上述示例中的渐变。  其中突出显示了渐变的停止点。  
+ 下图显示了前面示例中的渐变。 其中突出显示的渐变停止点。  
   
- ![径向渐变中的渐变停止点](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk\_graphicsmm\_4gradientstops\_rg")  
+ ![径向渐变中的梯度停止点](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  本主题中的示例使用默认坐标系来设置控制点。  默认坐标系是相对于边界框的：0 表示边界框的 0%，1 表示边界框的 100%。  可以通过将 <xref:System.Windows.Media.GradientBrush.MappingMode%2A> 属性设置为值 <xref:System.Windows.Media.BrushMappingMode>，更改此坐标系。  绝对坐标系与边界框不相关。  值直接在本地坐标系中解释。  
+>  本主题中的示例使用默认坐标系统设置控点。 默认坐标系统是相对于边界框： 0 表示的边界框中，0%和 1 表示 100%的边界框。 你可以通过设置来更改此坐标系<xref:System.Windows.Media.GradientBrush.MappingMode%2A>属性值<xref:System.Windows.Media.BrushMappingMode.Absolute>。 绝对坐标系与范围框无关。 值直接在本地空间中解释。  
   
- 有关其他 <xref:System.Windows.Media.RadialGradientBrush> 示例，请参见 [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973)（画笔示例）。  有关渐变以及其他类型的画笔的更多信息，请参见[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。
+ 有关其他<xref:System.Windows.Media.RadialGradientBrush>示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。 有关渐变和画笔的其他类型的详细信息，请参阅[使用纯色和渐变概述绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。

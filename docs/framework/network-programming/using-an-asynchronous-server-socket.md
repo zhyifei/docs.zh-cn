@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用异步服务器套接字
 异步服务器套接字使用 .NET Framework 异步编程模型处理网络服务请求。 <xref:System.Net.Sockets.Socket> 类遵循标准 .NET Framework 异步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
@@ -69,7 +66,7 @@ listener.BeginAccept(
     listener);  
 ```  
   
- 异步套接字使用系统线程池中的线程处理传入的连接。 一个线程负责接受连接，另一个线程则用于处理每个传入的连接，还有一个线程负责接收来自连接的数据。 这些线程可以是同一个线程，具体取决于线程池分配了哪一个线程。 在下面的示例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 类将挂起主线程的执行并在执行可以继续时发出信号。  
+ 异步套接字使用系统线程池中的线程处理传入的连接。 一个线程负责接受连接，另一个线程则用于处理每个传入的连接，还有一个线程负责接收来自连接的数据。 这些线程可以是同一个线程，具体取决于线程池分配了哪一个线程。 在下面的示例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 类将挂起主线程的执行并在执行可以继续时发出信号。  
   
  下面的示例演示在本地计算机上创建异步 TCP/IP 套接字并开始接受连接的异步方法。 它假定存在一个名为 `allDone` 的全局 ManualResetEvent，该方法是名为 `SocketListener` 的类的成员，并且假定定义了一个名为 `acceptCallback` 的回调方法。  
   
@@ -274,8 +271,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [线程处理](../../../docs/standard/threading/index.md)   
+ [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [线程处理](../../../docs/standard/threading/index.md)  
  [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
-

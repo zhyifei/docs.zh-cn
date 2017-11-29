@@ -1,39 +1,45 @@
 ---
-title: "如何：为依赖项属性添加所有者类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "类, 添加为依赖项属性的所有者"
-  - "依赖项属性, 添加类作为所有者"
+title: "如何：为依赖项属性添加所有者类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- classes [WPF], adding as owners of dependency properties
+- dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 079f08e1c330b710748ea6bb1aab8ccfb7ae7016
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：为依赖项属性添加所有者类型
-此示例演示如何将类添加为针对不同类型注册的依赖性属性的所有者。  通过执行此操作，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 读取器和属性系统都可以将该类识别为属性的其他所有者。  添加所有者时，也可以选择添加类来提供类型特定的元数据。  
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>如何：为依赖项属性添加所有者类型
+此示例演示如何作为为不同类型注册依赖属性所有者添加类。 通过执行此操作，请[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]读取器和属性系统都能够识别类作为其他所有者的属性。 （可选） 添加作为所有者可以选择添加类以提供特定类型的元数据。  
   
- 在下面的示例中，`StateProperty` 是由 `MyStateControl` 类注册的属性。  类 `UnrelatedStateControl` 使用 <xref:System.Windows.DependencyProperty.AddOwner%2A> 方法将本身添加为 `StateProperty` 的所有者，当添加类型上存在依赖项属性时，则专门使用依赖项属性的新元数据允许的签名。  请注意，对于与[实现依赖项属性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)示例中所示的示例类似的属性，应提供[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 访问器，并在要添加为所有者的类上重新公开依赖项属性标识符。  
+ 在下面的示例中，`StateProperty`属性由就注册`MyStateControl`类。 类`UnrelatedStateControl`其自身添加的所有者为`StateProperty`使用<xref:System.Windows.DependencyProperty.AddOwner%2A>专门使用的签名，以便新的依赖项属性的元数据，因为它存在于添加类型的方法。 请注意，应提供[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]类似于示例中所示的属性的访问器[实现一个依赖项属性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)示例中，以及重新公开要添加的类上的依赖项属性标识符作为所有者。  
   
- 未使用包装时，从使用 <xref:System.Windows.DependencyObject.GetValue%2A> 或 <xref:System.Windows.DependencyObject.SetValue%2A> 的程序访问的角度来看，依赖项属性仍将有效。  但是，您通常需要将此属性系统的行为与 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性包装并行处理。  包装使以编程方式对依赖项属性进行设置的操作更加容易，并可以将属性设置为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 特性。  
+ 如果没有包装器，依赖项属性将仍正常工作的以编程方式访问使用角度<xref:System.Windows.DependencyObject.GetValue%2A>或<xref:System.Windows.DependencyObject.SetValue%2A>。 但你通常想要使用此属性系统的行为的并行[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]属性包装器。 此包装器更加轻松地设置依赖项属性以编程方式，并使其可以设置属性为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性。  
   
- 若要了解如何重写默认元数据，请参见[重写依赖项属性的元数据](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)。  
+ 若要了解如何重写默认元数据，请参阅[重写依赖项属性的元数据](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
 [!code-csharp[PropertySystemEsoterics#UnrelatedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#unrelatedstatecontrol)]
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
-## 请参阅  
- [自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
+## <a name="see-also"></a>另请参阅  
+ [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

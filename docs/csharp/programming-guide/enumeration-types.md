@@ -2,8 +2,7 @@
 title: "枚举类型（C# 编程指南）"
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enumeration-types-c-programming-guide"></a>枚举类型（C# 编程指南）
 
@@ -68,7 +66,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 可以使用枚举类型来定义位标志，这使枚举类型的实例能够存储枚举器列表中定义的值的任何组合。 （当然，某些组合在你的程序代码中可能没有意义或不允许使用。）
 
-创建位标志枚举的方法是，应用 <xref:System.FlagsAttribute?displayProperty=fullName> 属性并适当定义一些值，以便可以对这些值执行 `AND`、`OR`、`NOT` 和 `XOR` 按位运算。 在位标志枚举中，包括一个值为零（表示“未设置任何标志”）的命名常量。 如果零值不表示“未设置任何标志”，请勿为标志指定零值。
+创建位标志枚举的方法是，应用 <xref:System.FlagsAttribute?displayProperty=nameWithType> 属性并适当定义一些值，以便可以对这些值执行 `AND`、`OR`、`NOT` 和 `XOR` 按位运算。 在位标志枚举中，包括一个值为零（表示“未设置任何标志”）的命名常量。 如果零值不表示“未设置任何标志”，请勿为标志指定零值。
 
 在以下示例中，定义了名为 `Days` 枚举的另一个版本，命名为 `Day`。 `Days` 具有 `Flags` 属性，且它的每个值都是 2 的若干次幂，指数依次递增。 这样，你就能够创建值为 `Days.Tuesday | Days.Thursday` 的 `Days` 变量。
 
@@ -82,20 +80,19 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-有关使用 <xref:System.FlagsAttribute?displayProperty=fullName> 特性定义枚举类型时应考虑事项的详细信息，请参阅 <xref:System.Enum?displayProperty=fullName>。
+有关使用 <xref:System.FlagsAttribute?displayProperty=nameWithType> 特性定义枚举类型时应考虑事项的详细信息，请参阅 <xref:System.Enum?displayProperty=nameWithType>。
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>使用 System.Enum 方法来发现和操作枚举值
 
-所有枚举都是 <xref:System.Enum?displayProperty=fullName> 类型的实例。 不能从 <xref:System.Enum?displayProperty=fullName> 中派生新类，但可以使用它的方法来发现有关枚举实例中操作值的信息。
+所有枚举都是 <xref:System.Enum?displayProperty=nameWithType> 类型的实例。 不能从 <xref:System.Enum?displayProperty=nameWithType> 中派生新类，但可以使用它的方法来发现有关枚举实例中操作值的信息。
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-有关更多信息，请参见<xref:System.Enum?displayProperty=fullName>。
+有关更多信息，请参见<xref:System.Enum?displayProperty=nameWithType>。
 
 还可以使用扩展方法创建枚举的新方法。 有关详细信息，请参阅[如何：为枚举创建新方法](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ## <a name="see-also"></a>请参阅
- <xref:System.Enum?displayProperty=fullName>   
- [C# 编程指南](../../csharp/programming-guide/index.md)   
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [C# 编程指南](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
-

@@ -1,44 +1,44 @@
 ---
-title: "MaskedTextBox 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MaskedTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MaskedTextBox 控件 [Windows 窗体]"
-  - "文本框, 验证用户输入"
-  - "用户输入, 在 Windows 窗体中验证"
-  - "验证用户输入, Windows 窗体"
+title: "MaskedTextBox 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MaskedTextBox
+helpviewer_keywords:
+- MaskedTextBox control [Windows Forms]
+- user input [Windows Forms], validating in Windows Forms
+- validating user input [Windows Forms], Windows Forms
+- text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# MaskedTextBox 控件（Windows 窗体）
-本主题提供与 `MaskedTextBox` 控件有关的其他主题的链接。  
+# <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 控件（Windows 窗体）
+本主题链接到其他有关`MaskedTextBox`控件。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [演练：使用 MaskedTextBox 控件](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- 演示 `MaskedTextBox` 控件的主要功能。  
+ 演示的主要功能`MaskedTextBox`控件。  
   
  [如何：将数据绑定到 MaskedTextBox 控件](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- 演示当数据库中的数据与掩码定义所需的格式不匹配时如何重新设置数据格式。  
+ 演示如何在数据库中的数据与掩码定义所需的格式不匹配时重新设置数据格式。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.MaskedTextBox>  
- 用于实现掩码文本框控件的主要类。  
+ 掩码的文本框控件的实现主类。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+ 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。

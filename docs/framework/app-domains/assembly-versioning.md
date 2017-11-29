@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
 使用公共语言运行时的程序集的所有版本控制都在程序集级别上进行。 一个程序集的特定版本和依赖程序集的版本在该程序集的清单中记录下来。 除非被配置文件（应用程序配置文件、发行者策略文件和计算机的管理员配置文件）中的显式版本策略重写，否则运行时的默认版本策略是，应用程序只与它们生成和测试时所用的程序集版本一起运行。  
@@ -78,11 +76,10 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  虽然可以指定任意文本，但是如果字符串的格式不是程序集版本号使用的格式，或者虽然是这种格式但包含通配符，则在编译时会显示一条警告消息。 此警告无碍。  
   
- 信息性版本用自定义特性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName> 表示。 有关信息性版本特性的更多信息，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
+ 信息性版本用自定义特性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 有关信息性版本特性的更多信息，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [配置应用](../../../docs/framework/configure-apps/index.md)   
- [设置程序集属性](../../../docs/framework/app-domains/set-assembly-attributes.md)   
+ [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [配置应用程序](../../../docs/framework/configure-apps/index.md)  
+ [设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)  
  [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
-

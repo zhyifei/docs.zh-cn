@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 联接不同文件 (LINQ) (Visual Basic 中) 的内容 |Microsoft 文档"
+title: "如何： 联接不同文件 (LINQ) (Visual Basic) 的内容"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00a3e776afbed3fd87a1f91eb83ada5d505aadfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何︰ 联接不同文件 (LINQ) (Visual Basic 中) 的内容
-此示例演示如何将共享一个公共值，用作匹配的键的两个以逗号分隔文件中的数据。 如果必须组合来自两个电子表格数据或从电子表格，而是从文件具有另一种格式，为一个新文件，此技术很有用。 您可以修改该示例能工作与任何类型的结构化文本。  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何： 联接不同文件 (LINQ) (Visual Basic) 的内容
+本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。 如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。 可以修改此示例以用于任何类型的结构化文本。  
   
-### <a name="to-create-the-data-files"></a>若要创建的数据文件  
+### <a name="to-create-the-data-files"></a>创建数据文件  
   
-1.  将以下行复制到名为 scores.csv 文件并将其保存到您的项目文件夹。 该文件表示电子表格数据。 第 1 列是学生的 ID，以及 2 至 5 列是测验分数。  
+1.  将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。 此文件表示电子表格数据。 第 1 列是学生的 ID，第 2 至 5 列是测验分数。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  将以下行复制到名为 names.csv 文件并将其保存到您的项目文件夹。 该文件表示电子表格，其中包含学生的姓氏、 名字和学生 id。  
+2.  将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。 此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -135,8 +127,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+ 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

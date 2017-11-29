@@ -1,36 +1,41 @@
 ---
-title: "如何：禁用 ToolStripMenuItems | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "禁用菜单项"
-  - "菜单项, 禁用"
-  - "菜单项, 启用"
-  - "菜单, 禁用菜单项"
-  - "ToolStripMenuItems, 禁用"
-  - "ToolStripMenuItems, 启用"
+title: "如何：禁用 ToolStripMenuItems"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], enabling
+- ToolStripMenuItems [Windows Forms], disabling
+- menu items [Windows Forms], disabling
+- disabling menu items
+- menu items [Windows Forms], enabling
+- menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e3307da3e0810ea775c799a4b065e1f7484b5779
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：禁用 ToolStripMenuItems
-可通过启用或禁用响应用户操作的菜单项来限制或放宽用户可发出的命令。  菜单项创建完后是默认启用的，但是这可以通过 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 属性进行调整。  可在设计时在**“属性”**窗口中使用此属性，也可通过编程方式在代码中进行设置。  
+# <a name="how-to-disable-toolstripmenuitems"></a>如何：禁用 ToolStripMenuItems
+你可以限制或扩大用户可通过启用和禁用菜单项以响应用户活动的命令。 当创建，但这可以通过调整时，默认情况下启用菜单项<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。 在设计时使用此属性可**属性**窗口或以编程方式通过在代码中设置。  
   
-### 以编程方式禁用菜单项  
+### <a name="to-disable-a-menu-item-programmatically"></a>若要以编程方式禁用菜单项  
   
--   在设置菜单项属性的方法内，添加将 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 属性设置为 `false` 的代码。  
+-   在其中设置菜单项的属性方法中，添加代码以设置<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性`false`。  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -45,10 +50,10 @@ caps.handback.revision: 15
     ```  
   
     > [!TIP]
-    >  禁用菜单中的第一个或顶层菜单项将隐藏包含在该菜单中的所有菜单项，但不会禁用它们。  同样，禁用包含子菜单项的菜单项也会隐藏这些子菜单项，但不会禁用它们。  如果给定菜单上的所有命令对于用户都不可用，则隐藏并且禁用整个菜单是一种良好的编程方法，因为它显示的是干净的用户界面。  应该隐藏和禁用菜单，并禁用该菜单中的每个项和子菜单项，因为仅通过隐藏不能防止他人使用快捷键访问菜单命令。  将顶层菜单项的 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 属性设置为 `false` 以隐藏整个菜单。  
+    >  禁用菜单中的第一个或顶级菜单项隐藏包含在该菜单中，所有菜单项，但不会禁用它们。 同样，禁用菜单项具有子菜单项隐藏这些子菜单项，但不会禁用它们。 如果给定的菜单上的所有命令都都向用户不可用，它则被视为良好编程习惯隐藏和禁用整个菜单上，这会带来全新的用户界面。 你应隐藏和禁用菜单上，禁用每个项和子菜单项在菜单中，因为仅靠隐藏不会向菜单命令的快捷键通过阻止访问。 设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>顶级菜单项的属性`false`若要隐藏整个菜单。  
   
-## 请参阅  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [如何：隐藏 ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [如何：隐藏 ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

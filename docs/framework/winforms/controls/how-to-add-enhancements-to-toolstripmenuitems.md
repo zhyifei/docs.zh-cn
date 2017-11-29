@@ -1,96 +1,98 @@
 ---
-title: "如何：向 ToolStripMenuItem 添加增强功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "选中标记, 添加到菜单"
-  - "命令 [Windows 窗体], 对菜单进行分组"
-  - "图像 [Windows 窗体], 添加到菜单"
-  - "键盘快捷键, 在菜单上显示"
-  - "菜单项, 添加选中标记"
-  - "菜单项, 添加图像"
-  - "菜单项, 显示访问键"
-  - "菜单项, 显示快捷键"
-  - "菜单项, 显示分隔符"
-  - "菜单, 分组命令"
-  - "分隔符, 在菜单上显示"
-  - "ToolStripMenuItems"
-  - "ToolStripMenuItems, 添加选中标记"
-  - "ToolStripMenuItems, 添加图像"
-  - "ToolStripMenuItems, 显示访问键"
-  - "ToolStripMenuItems, 显示快捷键"
-  - "ToolStripMenuItems, 显示分隔线"
-  - "ToolStripSeparators, 在 MenuStrips 上显示"
+title: "如何：向 ToolStripMenuItem 添加增强功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- commands [Windows Forms], grouping on menus
+- check marks [Windows Forms], adding to menus
+- ToolStripMenuItems [Windows Forms], displaying access keys
+- menus [Windows Forms], grouping commands
+- menu items [Windows Forms], displaying shortcut keys
+- ToolStripMenuItems
+- separators [Windows Forms], displaying on menus
+- menu items [Windows Forms], showing separators
+- menu items [Windows Forms], adding check marks
+- ToolStripMenuItems [Windows Forms], adding check marks
+- menu items [Windows Forms], adding images
+- ToolStripSeparators [Windows Forms], displaying on MenuStrips
+- menu items [Windows Forms], displaying access keys
+- ToolStripMenuItems [Windows Forms], displaying shortcut keys
+- ToolStripMenuItems [Windows Forms], adding images
+- keyboard shortcuts [Windows Forms], displaying on menus
+- images [Windows Forms], adding to menus
+- ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2701094ffcbcf7eeb14444163b995816398876fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：向 ToolStripMenuItem 添加增强功能
-可以采用下列方式增强 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ContextMenuStrip> 控件的可用性：  
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>如何：向 ToolStripMenuItem 添加增强功能
+你可以增强的可用性<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>通过以下方式控件：  
   
--   添加选中标记以指定打开或关闭某项功能（例如是否沿字处理应用程序的边距显示标尺），或指示显示的是一列文件中的哪一个（如在**“窗口”**菜单上）。  
+-   添加复选标记来指定是否打开或关闭，打开某项功能，如是否沿字处理应用程序，边距显示标尺或来表示文件的文件的列表中的哪正在显示，此类上**窗口**菜单。  
   
--   添加可视化地表示菜单命令的图像。  
+-   添加以可视方式表示菜单命令的图像。  
   
--   显示快捷键以提供代替鼠标执行命令的键盘。  例如，按 Ctrl\+C 执行 **Copy** 命令。  
+-   显示键盘快捷方式，以用于执行命令提供鼠标键盘代替。 例如，按 CTRL + C 执行**复制**命令。  
   
--   显示访问键以提供代替鼠标进行菜单导航的键盘。  例如，按 Alt\+F 选择**“文件”**菜单。  
+-   显示访问键，以提供了键盘替代方式鼠标菜单导航。 例如，按 ALT + F 选择**文件**菜单。  
   
--   显示分隔线以便对相关命令进行分组，提高菜单的可读性。  
+-   显示分隔条来分组相关命令，并使菜单更具可读性。  
   
-### 显示菜单命令的选中标记  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a>在菜单命令上显示一个复选标记  
   
--   将其 <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> 属性设置为 `true`。  
+-   设置其<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>属性`true`。  
   
-     这会将 <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> 属性也设置为 `true`。  仅在以下情况使用此过程：无论是否选择菜单命令，只要该命令出现，都希望默认情况下为选中状态。  
+     这还将设置<xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A>属性`true`。 只有当您想要显示默认情况下，无论是否选中的菜单命令，请使用此过程。  
   
-### 显示随每次单击更改状态的选中标记  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>若要显示每个只需单击的状态更改的选中标记  
   
--   将菜单命令的 <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> 属性设置为 `true`。  
+-   设置该菜单命令的<xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>属性`true`。  
   
-### 向菜单命令添加图像  
+### <a name="to-add-an-image-to-a-menu-command"></a>若要将图像添加到菜单命令  
   
--   将菜单命令的 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 属性设置为图像的名称。  如果此菜单命令的 <xref:System.Windows.Forms.ToolStripItemDisplayStyle> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle> 或 <xref:System.Windows.Forms.ToolStripItemDisplayStyle>，则无法显示该图像。  
-  
-> [!NOTE]
->  图像边距也可以显示选中标记（如果您选择）。  此外，您还可以将图像的 <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> 属性设置为 `true`，这样，在运行时显示的图像周围将带有一个阴影框。  
-  
-### 显示菜单命令的快捷键  
-  
--   将菜单命令的 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> 属性设置为所需的键盘组合（如 Ctrl\+O 表示**“打开”**菜单命令），并将 <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 属性设置为 `true`。  
-  
-### 显示菜单命令的自定义快捷键  
-  
--   将菜单命令的 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> 属性设置为所需的键盘组合（如 Ctrl\+Shift\+O，而不是 Shift\+Ctrl\+O），并将 <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 属性设置为 `true`。  
-  
-### 显示菜单命令的访问键  
-  
--   设置菜单命令的 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性时，在您要为其加上下划线以作为访问键的字母前面输入一个“and”符 \(&\)。  例如，键入  `&Open`  作为菜单项的 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性将使菜单命令显示为 **O**pen。  
-  
-     若要定位到此菜单命令，请按 Alt 键使 <xref:System.Windows.Forms.MenuStrip> 得到焦点，然后按该菜单名的访问键。  当菜单打开并显示带访问键的项时，只需按访问键就可选择菜单命令。  
+-   设置该菜单命令的<xref:System.Windows.Forms.ToolStripItem.Image%2A>到的映像名称的属性。 如果<xref:System.Windows.Forms.ToolStripItemDisplayStyle>此菜单命令属性设置为<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>或<xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>，无法显示图像。  
   
 > [!NOTE]
->  避免定义重复的访问键，如在同一个菜单系统中两次定义 Alt\+F。  重复访问键的选择顺序无法保证。  
+>  图像边距还可以显示一个复选标记是否您选择。 此外，你可以设置<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>属性使图像的`true`，并且该映像将在运行时显示阴影边框。  
   
-### 在菜单命令之间显示分隔线  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>若要显示的菜单命令的快捷键  
   
--   定义了 <xref:System.Windows.Forms.MenuStrip> 及其包含的项之后，请使用 <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> 或 <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> 方法将菜单命令和 <xref:System.Windows.Forms.ToolStripSeparator> 控件按所需顺序添加到 <xref:System.Windows.Forms.MenuStrip> 中。  
+-   设置该菜单命令的<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>属性设置为所需的键盘相结合，例如 CTRL + O 如**打开**菜单命令和组<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>属性`true`。  
   
-     \[Visual Basic\]  
+### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>若要显示的菜单命令的自定义快捷键  
   
-    ```  
+-   设置该菜单命令的<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A>属性设置为所需的键盘相结合，例如 CTRL + SHIFT + O 而不是 SHIFT + CTRL + O，和组<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>属性`true`。  
+  
+### <a name="to-display-an-access-key-for-a-menu-command"></a>若要显示的菜单命令的访问密钥  
+  
+-   当你将设置<xref:System.Windows.Forms.ToolStripItem.Text%2A>属性菜单命令中，输入与号 (&) 你想要为访问键显示为带有下划线的字母前。 例如，键入`&Open`作为<xref:System.Windows.Forms.ToolStripItem.Text%2A>的菜单项的属性将导致显示为菜单命令**O**钢笔。  
+  
+     若要导航到此菜单命令，请按 alt 键，将焦点移到<xref:System.Windows.Forms.MenuStrip>，按菜单名称的访问密钥。 当菜单打开并显示带访问键的项时，你只需按下访问键来选择菜单命令。  
+  
+> [!NOTE]
+>  避免定义重复的访问键，如两次在同一个菜单系统中定义 ALT + F。 不能保证重复的访问键的选择顺序。  
+  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a>若要显示的菜单命令之间的分隔条  
+  
+-   在定义后你<xref:System.Windows.Forms.MenuStrip>和它将包含的项使用<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>或<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法将添加菜单命令和<xref:System.Windows.Forms.ToolStripSeparator>控件添加到<xref:System.Windows.Forms.MenuStrip>你希望的顺序。  
+  
+    ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  
     Me.menuStrip1.Items.Add(New ToolStripMenuItem() _  
     {Me.fileToolStripMenuItem})  
@@ -102,12 +104,9 @@ caps.handback.revision: 10
     ToolStripMenuItem() {Me.newToolStripMenuItem, _  
     Me.openToolStripMenuItem, Me.toolStripSeparator1, _  
     Me.saveToolStripMenuItem, Me.exitToolStripMenuItem})  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // This code adds a top-level File menu to the MenuStrip.  
     this.menuStrip1.Items.Add(new ToolStripItem[]_  
     {this.fileToolStripMenuItem});  
@@ -124,7 +123,7 @@ caps.handback.revision: 10
     this.exitToolStripMenuItem});  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
  [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

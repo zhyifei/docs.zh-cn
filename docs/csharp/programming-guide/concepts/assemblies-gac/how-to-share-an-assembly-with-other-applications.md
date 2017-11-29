@@ -1,30 +1,21 @@
 ---
 title: "如何：与其他应用程序共享程序集 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: dedbd90cdc6f33bfa03ce5e38138ca3b23178b95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 85117cfdc9b12a93891e89727412a03acc83289b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>如何：与其他应用程序共享程序集 (C#)
 程序集可以是私有或共享程序集：默认情况下，大多数简单程序都包含一个私有程序集，因为它们并不打算由其他应用程序使用。  
@@ -43,7 +34,6 @@ ms.lasthandoff: 07/28/2017
   
 5.  从其他应用程序访问该程序集中包含的类型。 有关详细信息，请参阅[如何：引用具有强名称的程序集](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813)。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
  [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)
-

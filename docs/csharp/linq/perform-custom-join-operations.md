@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
+ms.openlocfilehash: fef146c92a5cbbf21f8f1688f221c2bd45c99de7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 51bdae75346022a7564fdb50e582c143e7762a1f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-custom-join-operations"></a>执行自定义联接操作
 
@@ -40,15 +38,14 @@ ms.lasthandoff: 07/28/2017
   
  第二个方法会生成其类别 ID 在左侧类别列表中列出的所有产品的序列。 请注意，其中使用 `let` 子句和 `Contains` 方法创建临时数组。 还可以在查询前创建数组并去掉第一个 `from` 子句。  
   
- [!code-cs[csProgGuideLINQ#64](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#64](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]  
   
 ## <a name="example"></a>示例  
  在下面的示例中，查询必须基于匹配键（对于内部（右侧）序列，无法在 join 子句本身之前获取这些键）联接两个序列。 如果使用 `join` 子句执行了此联接，则必须为每个元素调用 `Split` 方法。 使用多个 `from` 子句可使查询避免重复进行方法调用的开销。 但是，因为 `join` 经过了优化，所有在此特定情况下，它可能仍然比使用多个 `from` 子句更快。 结果的变化主要取决于方法调用的成本高低。  
   
- [!code-cs[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
   
 ## <a name="see-also"></a>请参阅  
- [LINQ 查询表达式](index.md)   
- [join 子句](../language-reference/keywords/join-clause.md)   
+ [LINQ 查询表达式](index.md)  
+ [join 子句](../language-reference/keywords/join-clause.md)  
  [对 Join 子句的结果进行排序](order-the-results-of-a-join-clause.md)
-

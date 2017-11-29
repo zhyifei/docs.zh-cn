@@ -1,51 +1,52 @@
 ---
-title: "CheckedListBox 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "选中标记"
-  - "选中的列表项, Windows 窗体控件"
-  - "CheckedListBox 控件 [Windows 窗体]"
-  - "CheckedListBox 控件 [Windows 窗体], 参考"
-  - "列表框控件"
-  - "列表框"
-  - "列表框, 显示选中标记"
-  - "列表框, Windows 窗体控件"
-  - "列表控件, Windows 窗体"
-  - "列表项, 显示的 Windows 窗体控件"
+title: "CheckedListBox 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CheckedListBox control [Windows Forms], reference
+- checked list items [Windows Forms], Windows Forms controls
+- list controls [Windows Forms], Windows Forms
+- CheckedListBox control [Windows Forms]
+- list box controls [Windows Forms]
+- check marks
+- list boxes [Windows Forms], displaying check marks
+- list boxes [Windows Forms], Windows Forms controls
+- list items [Windows Forms], Windows Forms controls that display
+- list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# CheckedListBox 控件（Windows 窗体）
-Windows 窗体 `CheckedListBox` 控件显示项的列表（与 <xref:System.Windows.Forms.ListBox> 控件类似），同时还可以在列表中的项的旁边显示选中标记。  
+# <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控件（Windows 窗体）
+Windows 窗体`CheckedListBox`控件显示的列表项，如<xref:System.Windows.Forms.ListBox>控制，并还可以在列表中显示项旁边的复选标记。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [CheckedListBox 控件概述](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+ 说明此控件的本质及其主要功能和属性。  
   
- [如何：确定 Windows 窗体 CheckedListBox 控件中的选定项](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- 描述如何逐项通过列表以确定哪些项已选中。  
+ [如何：确定 Windows 窗体 CheckedListBox 控件中的选中项](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ 描述如何逐句通过用于确定选中了哪些项的列表。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.CheckedListBox> 类  
- 描述该类并提供指向其所有成员的链接。  
+ 对此类进行描述，并提供指向其所有成员的链接。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- 提供可使用列表框、组合框和复选列表框来完成的操作的列表。  
+ 提供你可以使用列表框、 组合框和选中的列表框中执行操作的列表。  
   
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+ 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。

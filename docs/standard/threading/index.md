@@ -12,22 +12,21 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 61cd2317b5690573532af2a25c0b84b1fe136fd9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f2a8792818e837f019403aa84c2c2e98db0b2b89
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="managed-threading"></a>托管线程处理
 无论是要为具有一个还是多个处理器的计算机进行开发，你都希望应用程序能够提供响应最为迅速的用户交互，即使应用程序当前正在执行其他操作，也不例外。 使用多线程执行是让应用程序一直迅速响应用户的最有效方式，同时也是在用户事件之间或在用户事件期间使用处理器的最有效方式。 虽然本部分介绍的是线程基本概念，但将会重点介绍托管线程概念和如何使用托管线程。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 类、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=fullName> 命名空间中的新并发集合类以及基于任务（而非线程）概念的新编程模型，多线程编程大大得到了简化。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
+>  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类以及基于任务（而非线程）概念的新编程模型，多线程编程大大得到了简化。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/05/2017
   
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
  介绍了为利用多个处理器而并行运行查询的系统。
-

@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值 |Microsoft 文档"
+title: "如何： 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何︰ 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
-此示例演示如何在.csv 文件的列上执行聚合计算，如总和、 平均值、 最小值、 和最大值。 如下所示的示例原则可以应用于其他类型的结构化文本。  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何： 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
+此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。 此处所示的示例原则可以应用于其他类型的结构化文本。  
   
-### <a name="to-create-the-source-file"></a>若要创建的源文件  
+### <a name="to-create-the-source-file"></a>创建源文件  
   
-1.  将以下行复制到名为 scores.csv 文件并将其保存在项目文件夹中。 假定第一列代表一个学生 ID，并且后续列表示四次考试的分数。  
+1.  将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。 假定第一列表示学生 ID，后面几列表示四次考试的分数。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- 查询的工作方式是使用<xref:System.String.Split%2A>方法将每个文本行转换为数组。</xref:System.String.Split%2A> 每个数组元素表示的列。 最后，每个列中的文本将转换为其数字表示形式。 如果您的文件是一个制表符分隔的文件，只需更新中的参数`Split`方法`\t`。  
+ 查询的工作原理是使用 <xref:System.String.Split%2A> 方法将每一行文本转换为数组。 每个数组元素表示一列。 最后，每一列中的文本都转换为其数字表示形式。 如果文件是制表符分隔文件，只需将 `Split` 方法中的参数更新为 `\t`。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+ 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

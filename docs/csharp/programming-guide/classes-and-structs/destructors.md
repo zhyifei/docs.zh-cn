@@ -1,40 +1,22 @@
 ---
 title: "终结器（C# 编程指南）"
-ms.date: 2017-05-10
+ms.date: 05/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43bb7e6488da5eda863e7ad70b25c9bf55bebb52
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
 终结器用于析构类的实例。  
@@ -53,11 +35,11 @@ ms.lasthandoff: 07/28/2017
   
  例如，以下是类 `Car` 的终结器声明。
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
 
 终结器也可以作为表达式主体定义实现，如下面的示例所示。
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+[!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
  终结器隐式调用对象基类上的 <xref:System.Object.Finalize%2A>。 因此，对终结器的调用会隐式转换为以下代码：  
   
@@ -101,14 +83,13 @@ protected override void Finalize()
 ## <a name="example"></a>示例  
  以下示例创建了三个类，并且这三个类构成了一个继承链。 类 `First` 是基类，`Second` 派生自 `First`，`Third` 派生自 `Second`。 这三个类都具有终结器。 在 `Main` 中，已创建派生程度最高的类的一个实例。 程序运行时，请注意，将按顺序（从派生程度最高到派生程度最低）自动调用这三个类的终结器。  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.IDisposable>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
+ <xref:System.IDisposable>  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [垃圾回收](../../../standard/garbage-collection/index.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ccc48745918081663317e746953be6e0f09cdd8a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b074f6f1a1c1e2e6528ed1e63ccbdff57057f374
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (C#)
 下面的示例演示如何按行中的任何字段对结构化文本（如以逗号分隔的值）行进行排序。 可以在运行时动态指定字段。 假定 scores.csv 中的字段表示学生的 ID 号，后跟一系列四个测试分数。  
@@ -96,4 +87,3 @@ public class SortLines
   
 ## <a name="see-also"></a>请参阅  
  [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-

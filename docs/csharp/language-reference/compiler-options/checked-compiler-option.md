@@ -1,42 +1,23 @@
 ---
 title: "-checked（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /checked
-dev_langs:
-- CSharp
+f1_keywords: /checked
 helpviewer_keywords:
 - checked compiler option [C#]
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e02f82bb0dd2952bd2f192af7ff233194a045619
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63ba89ec42748ccea065bf0fd258fb559abca099
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="checked-c-compiler-options"></a>/checked（C# 编译器选项）
 **/checked** 选项指定，不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 关键字的范围内、并且产生的值超出数据类型范围的整数算法语句是否将导致运行时异常。  
@@ -74,7 +55,5 @@ csc t2.cs /checked
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)   
- [项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)
-
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  

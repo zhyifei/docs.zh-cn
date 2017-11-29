@@ -1,41 +1,36 @@
 ---
-title: "如何︰ 查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90fe1bd9a7992c5e3f4c57f5596a88e5be506917
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c15ef409500a07d922563309301ea8f1442feee6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何︰ 查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何： 查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)
 使用 XPath 可以查找两个 XPath 位置路径结果的联合。  
   
  XPath 表达式为：  
   
  `//Category|//Price`  
   
- 可以通过使用实现相同的结果<xref:System.Linq.Enumerable.Concat%2A>标准查询运算符。</xref:System.Linq.Enumerable.Concat%2A>  
+ 通过使用 <xref:System.Linq.Enumerable.Concat%2A> 标准查询运算符可以获得相同的结果。  
   
 ## <a name="example"></a>示例  
- 本示例查找所有 `Category` 元素和所有 `Price` 元素，并将它们连接到单个集合中。 请注意，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]查询调用<xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>对结果进行排序。</xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> XPath 表达式的计算结果也按文档顺序排列。  
+ 本示例查找所有 `Category` 元素和所有 `Price` 元素，并将它们连接到单个集合中。 请注意，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询会调用 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> 以对结果进行排序。 XPath 表达式的计算结果也按文档顺序排列。  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -81,4 +76,3 @@ Results are identical
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

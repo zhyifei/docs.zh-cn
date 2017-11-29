@@ -1,30 +1,21 @@
 ---
 title: "创建变体泛型接口 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0a6ba6bd85d0bdfa7e98dd85886fee89527b59fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 122b56e34582fdd84424fd3f5d2fd5904b401775
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>创建变体泛型接口 (C#)
 接口中的泛型类型参数可以声明为协变或逆变。 协变允许接口方法具有与泛型类型参数定义的返回类型相比，派生程度更大的返回类型。 逆变允许接口方法具有与泛型形参指定的实参类型相比，派生程度更小的实参类型。 具有协变或逆变泛型类型参数的泛型接口称为“变体”。  
@@ -203,6 +194,5 @@ class Program
  在此示例中，没有指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之间选择。 这可能导致代码中出现问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
+ [泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-

@@ -1,45 +1,50 @@
 ---
-title: "如何：创建自定义路由事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "创建, 路由事件"
-  - "事件, 路由"
-  - "路由事件, 创建"
+title: "如何：创建自定义路由事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- routed events [WPF], creating
+- events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e901242b265e0012f9ad65d9eaab89b1b63b40ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建自定义路由事件
-若要使您的自定义事件支持[事件路由](GTMT)，需要使用 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 方法注册 <xref:System.Windows.RoutedEvent>。  本示例演示创建自定义路由事件的基本原理。  
+# <a name="how-to-create-a-custom-routed-event"></a>如何：创建自定义路由事件
+若要支持事件路由你自定义事件，你需要注册<xref:System.Windows.RoutedEvent>使用<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>方法。 本示例演示了创建自定义路由事件的基本原理。  
   
-## 示例  
- 如下面的示例所示，首先使用 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 方法注册一个 <xref:System.Windows.RoutedEvent>。  按照约定，<xref:System.Windows.RoutedEvent> 静态字段名称应当以后缀 ***Event*** 结束。  在本示例中，事件的名称是 `Tap`，事件的路由策略是 <xref:System.Windows.RoutingStrategy>。  在注册调用之后，可以为该事件提供添加和移除[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件访问器。  
+## <a name="example"></a>示例  
+ 下面的示例中所示，请先注册<xref:System.Windows.RoutedEvent>使用<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>方法。 按照约定，<xref:System.Windows.RoutedEvent>静态字段名称应以后缀结尾***事件***。 在此示例中，事件的名称是`Tap`和事件的路由策略是<xref:System.Windows.RoutingStrategy.Bubble>。 在注册调用之后，可以为该事件提供添加和删除 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件访问器。  
   
- 请注意，尽管该事件在本特定示例中是通过 `OnTap` 虚方法引发的，但您引发事件的方式或者事件响应更改的方式取决于您的需要。  
+ 请注意，尽管事件在此特定示例中是通过 `OnTap` 虚拟方法引发的，但引发事件的方式或事件响应更改的方式取决于你的需要。  
   
- 还要注意，本示例主要实现 <xref:System.Windows.Controls.Button> 的一整个子类；该子类是作为单独的程序集构建的，之后将在单独的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页上实例化为一个自定义类。  这是为了说明这样一个概念：创建子类的控件可以插入到由其他控件组成的树中，在这种情况下，这些控件上的自定义事件具有与任何固有的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 元素完全相同的事件路由功能。  
+ 本示例基本上实现的整个子类另请注意<xref:System.Windows.Controls.Button>; 该子类为生成为单独的程序集，然后为在单独的自定义类实例化[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页。 这是为了说明这样一个概念：子类化的控件可以插入到由其他控件组成的树中，在这种情况下，这些控件上的自定义事件具有与任何固有 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 元素完全相同的事件路由功能。  
   
  [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
  [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
- [!code-xml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
+ [!code-xaml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
- 隧道事件是以这种方式创建的，但在注册调用中，<xref:System.Windows.RoutedEvent.RoutingStrategy%2A> 设置为 <xref:System.Windows.RoutingStrategy>。  按照约定，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的隧道事件以单词“Preview”开头。  
+ 隧道创建事件的相同方式，但与<xref:System.Windows.RoutedEvent.RoutingStrategy%2A>设置为<xref:System.Windows.RoutingStrategy.Tunnel>注册调用中。 按照约定，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的隧道事件以单词“Preview”开头。  
   
- 若要查看说明冒泡事件的工作原理的示例，请参见[处理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)。  
+ 若要查看浮升事件的工作原理示例，请参阅[处理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)。  
   
-## 请参阅  
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)   
+## <a name="see-also"></a>另请参阅  
+ [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

@@ -1,52 +1,33 @@
 ---
 title: "命令行参数（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- command-line arguments [C#]
+helpviewer_keywords: command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  若要在 Windows 窗体应用程序中的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=fullName> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> 从控制台或 Windows 应用程序的任意位置访问命令行参数。  
+>  若要在 Windows 窗体应用程序中的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。  
   
  `Main` 方法的参数是一个表示命令行参数的 <xref:System.String> 数组。 通常，通过测试 `Length` 属性来确定参数是否存在，例如：  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  还可以使用 <xref:System.Convert> 类或 `Parse` 方法将字符串参数转换为数字类型。 例如，以下语句使用 <xref:System.Int64.Parse%2A> 方法将 `string` 转换为 `long` 数字：  
   
@@ -75,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  将以下代码粘贴到任何文本编辑器中，然后将该文件保存为名为 `Factorial.cs` 的文本文件。  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  从“开始”屏幕或“开始”菜单中，打开 Visual Studio“开发人员命令提示”窗口，然后导航到包含刚刚创建的文件的文件夹。  
   
@@ -97,11 +78,10 @@ long num = Convert.ToInt64(s);
  有关如何使用命令行参数的更多示例，请参阅[如何：使用命令行创建和使用程序集](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Environment?displayProperty=fullName>   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [Main() 和命令行自变量](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
+ <xref:System.Environment?displayProperty=nameWithType>  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
  [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
-

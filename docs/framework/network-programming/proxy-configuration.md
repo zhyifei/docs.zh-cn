@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2576050310c9b1926ee413e4fb1bbcf0c4bf4be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b543097d0fc85c502bd36f22225958f9239ccd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  
@@ -113,7 +107,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Net.WebProxy>   
- <xref:System.Net.GlobalProxySelection>   
+ <xref:System.Net.WebProxy>  
+ <xref:System.Net.GlobalProxySelection>  
  [自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)
-

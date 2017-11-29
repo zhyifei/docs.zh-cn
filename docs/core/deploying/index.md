@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-application-deployment"></a>.NET Core 应用程序部署
 
 可以为 .NET Core 应用程序创建两种部署：
@@ -31,7 +29,7 @@ ms.lasthandoff: 07/28/2017
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>为什么创建依赖框架的部署？
 
-部署 FDD 具有很多优点：
+部署 FDD 具有很多有点：
 
 - 不需要提前定义 .NET Core 应用将在其上运行的目标操作系统。 因为无论什么操作系统，.NET Core 的可执行文件和库都是用通用的 PE 文件格式，因此，无论什么基础操作系统，.NET Core 都可执行应用。 有关 PE 文件格式的详细信息，请参阅 [.NET 程序集文件格式](../../standard/assembly-format.md)。
 
@@ -82,4 +80,3 @@ FDD 和 SCD 部署使用单独的主机可执行文件，使你可以使用发�
 [使用 Visual Studio 部署 .NET Core 应用](deploy-with-vs.md)   
 [包、元包和框架](../packages.md)   
 [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
-

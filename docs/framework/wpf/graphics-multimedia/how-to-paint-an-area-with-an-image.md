@@ -1,43 +1,49 @@
 ---
-title: "如何：使用图像绘制区域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "画笔, 使用图像进行绘制"
-  - "图像, 绘制"
-  - "绘制, 使用图像"
+title: "如何：使用图像绘制区域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [WPF], painting with
+- painting [WPF], with images
+- brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3edbe30347580bb4f9677d7fb98d3b4fd8b92cff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用图像绘制区域
-此示例演示如何使用 <xref:System.Windows.Media.ImageBrush> 类来绘制带有图像的区域。  <xref:System.Windows.Media.ImageBrush> 显示由其 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 属性指定的单个图像。  
+# <a name="how-to-paint-an-area-with-an-image"></a>如何：使用图像绘制区域
+此示例演示如何使用<xref:System.Windows.Media.ImageBrush>类来绘制图像的区域。 <xref:System.Windows.Media.ImageBrush>显示一幅图像，通过指定其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性。  
   
-## 示例  
- 下面的示例通过使用 <xref:System.Windows.Media.ImageBrush> 绘制按钮的 <xref:System.Windows.Controls.Control.Background%2A>。  
+## <a name="example"></a>示例  
+ 以下示例绘制<xref:System.Windows.Controls.Control.Background%2A>使用按钮的<xref:System.Windows.Media.ImageBrush>。  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/PaintingWithImagesExample.cs#imagebrushexamplewholepage)]  
   
- 默认情况下，<xref:System.Windows.Media.ImageBrush> 拉伸其图像以完全填充您绘制的区域。  在上面的示例中，拉伸图像以填充按钮，可能扭曲图像。  可以通过将 <xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 属性设置为 <xref:System.Windows.Media.Stretch> 或 <xref:System.Windows.Media.Stretch> 来控制此行为，这样会使画笔保留图像的[纵横比](GTMT)。  
+ 默认情况下，<xref:System.Windows.Media.ImageBrush>拉伸其图像以完全填充你正在绘画的区域。 在以上示例中，拉伸图像以填充按钮，可能会使图像失真。 你可以通过设置来控制此行为<xref:System.Windows.Media.TileBrush.Stretch%2A>属性<xref:System.Windows.Media.TileBrush>到<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>，这将导致保留图像的纵横比的画笔。  
   
- 如果设置 <xref:System.Windows.Media.ImageBrush> 的 <xref:System.Windows.Media.TileBrush.Viewport%2A> 和 <xref:System.Windows.Media.TileBrush.TileMode%2A> 属性，则可以创建重复的图案。  下面的示例通过使用从图像创建的图案来绘制按钮。  
+ 如果你设置<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.TileMode%2A>属性<xref:System.Windows.Media.ImageBrush>，你可以创建重复的模式。 以下示例通过使用从图像创建的图案来绘制按钮。  
   
  [!code-csharp[UsingImageBrush_snip#TiledImageBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TiledImageBrushExample.cs#tiledimagebrushexamplewholepage)]
  [!code-vb[UsingImageBrush_snip#TiledImageBrushExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UsingImageBrush_snip/VisualBasic/TiledImageBrushExample.vb#tiledimagebrushexamplewholepage)]  
   
- 有关 <xref:System.Windows.Media.ImageBrush> 类的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ 有关详细信息<xref:System.Windows.Media.ImageBrush>类，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
- 此代码示例摘自一个为 <xref:System.Windows.Media.ImageBrush> 类提供的更大的示例。  有关完整示例，请参见 [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005)（ImageBrush 示例）。  
+ 此代码示例是一个更大的示例为提供的一部分<xref:System.Windows.Media.ImageBrush>类。 有关完整的示例，请参阅[ImageBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160005)。  
   
-## 请参阅  
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>另请参阅  
+ [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

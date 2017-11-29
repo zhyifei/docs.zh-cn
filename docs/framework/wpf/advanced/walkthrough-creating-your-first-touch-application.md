@@ -1,93 +1,99 @@
 ---
-title: "演练：创建您的第一个触控应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "创建触摸屏应用程序 [WPF]"
-  - "创建触控敏感型应用程序 [WPF]"
-  - "触摸屏应用程序 [WPF], 创建"
-  - "触控敏感型应用程序 [WPF], 创建"
+title: "演练：创建您的第一个触控应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating a touch-sensitive application [WPF]
+- touchscreen applications [WPF], creating
+- touch-sensitive applications [WPF], creating
+- creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：创建您的第一个触控应用程序
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使应用程序可以对触控做出响应。  例如，您可以通过用一个或多个手指操纵触控敏感型设备（如触摸屏）来与应用程序交互。此演练将创建一个使用户可以使用触控功能移动、旋转一个对象或调整其大小的应用程序。  
+# <a name="walkthrough-creating-your-first-touch-application"></a>演练：创建您的第一个触控应用程序
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]允许应用程序响应触摸屏。 例如，你可以通过使用一个与应用程序交互或多个手指触摸式设备，如本演练中创建的应用程序使用户能够移动，请触摸屏上调整大小，或通过使用触摸旋转单个对象。  
   
-## 必备组件  
- 您需要以下组件来完成本演练：  
+## <a name="prerequisites"></a>先决条件  
+ 你需要以下组件来完成本演练：  
   
--   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
+-   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]。  
   
 -   Windows 7。  
   
--   接受触控输入的设备，如支持 Windows 触摸屏技术的触摸屏。  
+-   接受触摸屏输入，如触摸屏，能够支持 Windows 触摸屏的设备。  
   
- 此外，您应该大致了解如何在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建应用程序，尤其是如何订阅和处理事件。  有关更多信息，请参见 [演练：开始使用 WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+ 此外，应该基本了解如何创建中的应用程序的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是如何订阅和处理事件。 有关详细信息，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
-## 创建应用程序  
+## <a name="creating-the-application"></a>创建应用程序  
   
-#### 创建应用程序  
+#### <a name="to-create-the-application"></a>创建应用程序  
   
-1.  使用 Visual Basic 或 Visual C\# 新建一个名为 `BasicManipulation` 的 WPF 应用程序项目。  有关更多信息，请参见[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/zh-cn/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
+1.  在 Visual Basic 或 Visual C# 中创建名为 `BasicManipulation` 的新 WPF 应用程序项目。 有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
   
-2.  用以下 XAML 替换 MainWindow.xaml 的内容。  
+2.  MainWindow.xaml 的内容替换为以下 XAML。  
   
-     此标记会创建一个在 <xref:System.Windows.Controls.Canvas> 上包含红色 <xref:System.Windows.Shapes.Rectangle> 的简单应用程序。  <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.UIElement.IsManipulationEnabled%2A> 属性设置为 true，以使其可以接收操作事件。  该应用程序订阅 <xref:System.Windows.UIElement.ManipulationStarting>、<xref:System.Windows.UIElement.ManipulationDelta> 和 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 事件。  这些事件包含在用户操作 <xref:System.Windows.Shapes.Rectangle> 时对该形状进行移动的逻辑。  
+     此标记创建的简单应用程序包含一个红色<xref:System.Windows.Shapes.Rectangle>上<xref:System.Windows.Controls.Canvas>。 <xref:System.Windows.UIElement.IsManipulationEnabled%2A>属性<xref:System.Windows.Shapes.Rectangle>设置为 true，因此，它将收到操作事件。 应用程序订阅<xref:System.Windows.UIElement.ManipulationStarting>， <xref:System.Windows.UIElement.ManipulationDelta>，和<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。 这些事件包含要移动的逻辑<xref:System.Windows.Shapes.Rectangle>用户处理。  
   
-     [!code-xml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  如果使用的是 Visual Basic，请在 MainWindow.xaml 的第一行中将 `x:Class="BasicManipulation.MainWindow"` 替换为 `x:Class="MainWindow"`。  
+3.  如果使用的 Visual Basic 中，在 MainWindow.xaml 的第一行中，将`x:Class="BasicManipulation.MainWindow"`与`x:Class="MainWindow"`。  
   
-4.  在 `MainWindow` 类中，添加以下 <xref:System.Windows.UIElement.ManipulationStarting> 事件处理程序。  
+4.  在`MainWindow`类中，添加以下<xref:System.Windows.UIElement.ManipulationStarting>事件处理程序。  
   
-     当 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 检测到触控输入开始操作对象时，会发生 <xref:System.Windows.UIElement.ManipulationStarting> 事件。  该代码通过设置 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 属性指定操作位置应相对于 <xref:System.Windows.Window>。  
+     <xref:System.Windows.UIElement.ManipulationStarting>事件发生时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]检测到触控输入开始的对象执行操作。 该代码指定操作的位置应为相对于<xref:System.Windows.Window>通过设置<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>属性。  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
   
-5.  在 `MainWindow` 类中，添加以下 <xref:System.Windows.Input.ManipulationDelta> 事件处理程序。  
+5.  在`MainWindow`类中，添加以下<xref:System.Windows.Input.ManipulationDelta>事件处理程序。  
   
-     <xref:System.Windows.Input.ManipulationDelta> 事件会在触控输入改变位置时发生，并且会在操作期间多次发生。  此事件还会在抬起手指后发生。  例如，如果用户在屏幕上拖动手指，则在手指移动时，会多次发生 <xref:System.Windows.Input.ManipulationDelta> 事件。  当用户将手指从屏幕上抬起时，<xref:System.Windows.Input.ManipulationDelta> 事件会不断发生以模拟惯性。  
+     <xref:System.Windows.Input.ManipulationDelta>触摸输入更改位置，并且可以在操作过程中发生多次时发生事件。 引发手指后，也可能发生此事件。 例如，如果用户在屏幕上拖动手指<xref:System.Windows.Input.ManipulationDelta>事件在手指移动时出现多次。 当用户悬停在屏幕中，为指<xref:System.Windows.Input.ManipulationDelta>事件会不断发生以模拟惯性。  
   
-     该代码将 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 应用到 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.UIElement.RenderTransform%2A> 以在用户移动触控输入时移动该元素。  它还检查当在惯性期间发生该事件时 <xref:System.Windows.Shapes.Rectangle> 是否在 <xref:System.Windows.Window> 的边界之外。  如果是，则应用程序会调用 <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=fullName> 方法来结束操作。  
+     该代码将应用<xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>到<xref:System.Windows.UIElement.RenderTransform%2A>的<xref:System.Windows.Shapes.Rectangle>将其移动在用户移动触控输入。 它还检查是否<xref:System.Windows.Shapes.Rectangle>超出数组界限的<xref:System.Windows.Window>事件惯性过程中发生时。 如果是，应用程序调用<xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType>方法来结束操作。  
   
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
   
-6.  在 `MainWindow` 类中，添加以下 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 事件处理程序。  
+6.  在`MainWindow`类中，添加以下<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件处理程序。  
   
-     当用户将所有手指从屏幕上抬起时，会发生 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 事件。  该代码会为矩形的移动、展开和旋转设置初始速度和减速。  
+     <xref:System.Windows.UIElement.ManipulationInertiaStarting>用户悬停在屏幕中的所有指时发生事件。 该代码设置的初始速度和减速移动、 扩展以及在该矩形的旋转。  
   
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
   
 7.  生成并运行该项目。  
   
-     您应该会看到窗口中显示一个红色的正方形。  
+     你应看到在窗口中显示一个红色正方形。  
   
-## 测试应用程序  
- 若要测试应用程序，请尝试执行下列操作。  请注意，您可以同时执行以下多项操作。  
+## <a name="testing-the-application"></a>测试应用程序  
+ 若要测试应用程序，请尝试执行下列操作。 请注意你可以执行多个以下项之一在同一时间进行操作。  
   
--   若要移动 <xref:System.Windows.Shapes.Rectangle>，请将手指放在 <xref:System.Windows.Shapes.Rectangle> 上并在屏幕上移动手指。  
+-   若要移动<xref:System.Windows.Shapes.Rectangle>，置于手指<xref:System.Windows.Shapes.Rectangle>和在屏幕上移动上方的手指。  
   
--   若要调整 <xref:System.Windows.Shapes.Rectangle> 的大小，请将两个手指放在 <xref:System.Windows.Shapes.Rectangle> 上，并将两个手指靠拢或将其分开。  
+-   若要调整大小<xref:System.Windows.Shapes.Rectangle>，放入两根手指<xref:System.Windows.Shapes.Rectangle>并移动指，或将其彼此。  
   
--   若要旋转 <xref:System.Windows.Shapes.Rectangle>，请将两个手指放在 <xref:System.Windows.Shapes.Rectangle> 上，然后将一个手指围绕另一个手指旋转。  
+-   要旋转<xref:System.Windows.Shapes.Rectangle>，放入两根手指<xref:System.Windows.Shapes.Rectangle>并旋转相互环绕指。  
   
- 若要产生惯性，请在执行前面的操作时快速将手指从屏幕上抬起。  <xref:System.Windows.Shapes.Rectangle> 将继续移动、调整大小或旋转几秒钟，然后再停止。  
+ 若要使惯性，快速执行上一操作时引发手指从屏幕。 <xref:System.Windows.Shapes.Rectangle>将继续移动、 调整大小，或旋转它停止前几秒钟。  
   
-## 请参阅  
- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=fullName>
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

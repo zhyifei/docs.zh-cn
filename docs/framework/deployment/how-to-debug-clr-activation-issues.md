@@ -5,28 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- CLR activation, debugging issues
+helpviewer_keywords: CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f1f1f3393457c783fe8f73d987a287f1afb18f40
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何：调试 CLR 激活问题
 如果在使用正确版本的公共语言运行时 (CLR) 运行应用程序时遇到问题，可以查看和调试 CLR 激活日志。 如果应用程序加载不同于预期的 CLR 版本或者根本未加载 CLR，这些日志对于确定激活问题的根本原因非常有用。 [.NET Framework 初始化错误：管理用户体验](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)中探讨了未能找到应用程序 CLR 的体验。  
@@ -132,6 +124,5 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [部署](../../../docs/framework/deployment/index.md)   
+ [部署](../../../docs/framework/deployment/index.md)  
  [如何：将应用程序配置为支持 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-

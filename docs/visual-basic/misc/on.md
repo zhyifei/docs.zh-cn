@@ -1,30 +1,30 @@
 ---
-title: "On (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.on"
-  - "vb.QueryOn"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "On 关键字"
+title: On (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.on
+- vb.QueryOn
+helpviewer_keywords: On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 83d6664a098b06cc669dc1930ff6fe5fa1f78f69
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# On (Visual Basic)
+# <a name="on-visual-basic"></a>On (Visual Basic)
 引入了对运行时错误的响应，或打开编译器选项。  
   
- 在查询中，标识要联接的集合的键。  
+ 在查询中，标识被联接集合的键。  
   
-## 备注  
- `On` 关键字在两个上下文中使用︰  
+## <a name="remarks"></a>备注  
+ `On`关键字用于以下上下文中：  
   
  [Group Join 子句](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -38,5 +38,5 @@ caps.handback.revision: 10
   
  [Option Strict 语句](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [关键字](../../visual-basic/language-reference/keywords/index.md)

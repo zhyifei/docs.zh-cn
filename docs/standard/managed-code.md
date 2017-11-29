@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="what-is-managed-code"></a>什么是“托管代码”？
 
 使用 .NET Framework 时，我们经常会遇到“托管代码”这个术语。 本文档解释这个术语的含义及其更多相关信息。
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/21/2017
 *   [.NET Framework 概念性概述](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [不安全代码和指针](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [互操作性（C# 编程指南）](https://msdn.microsoft.com/library/ms173184.aspx)
-

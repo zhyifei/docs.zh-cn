@@ -7,21 +7,20 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: a4c125493e1b59d329bf4626c45f48b2b222d308
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cc6df422359826bc908bd412aaf89aa784be59ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="steps-in-the-serialization-process"></a>序列化过程中的步骤
 对[格式化程序](xref:System.Runtime.Serialization.Formatter)调用 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法时，将按照以下规则顺序进行对象序列化：
 
-- 进行检查以确定格式化程序是否具有代理项选择器。 如果有，则检查代理项选择器是否处理给定类型的对象。 如果选择器处理该对象类型，则在代理项选择器上调用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=fullName>。
+- 进行检查以确定格式化程序是否具有代理项选择器。 如果有，则检查代理项选择器是否处理给定类型的对象。 如果选择器处理该对象类型，则在代理项选择器上调用 <xref:System.Runtime.Serialization.ISerializable.GetObjectData*?displayProperty=nameWithType>。
 
 - 如果没有代理项选择器，或者代理项选择器不处理该对象类型，则进行检查以确定是否用 [Serializable](xref:System.SerializableAttribute) 属性标记了该对象。 如果未标记该对象，则会引发 <xref:System.Runtime.Serialization.SerializationException>。
 
@@ -32,5 +31,5 @@ ms.lasthandoff: 08/21/2017
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 ## <a name="see-also"></a>另请参阅  
- [二进制序列化](binary-serialization.md)   
+ [二进制序列化](binary-serialization.md)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

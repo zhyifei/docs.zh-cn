@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df74599b5f68324540703bce6c5ca8e8805df3e7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 073a526e72f46864b2e08d33ec14a53034c144b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltassemblygt-element-net-native"></a>&lt;程序集&gt;元素 (.NET Native)
 将运行时反射策略应用到指定程序集中的所有类型。  
@@ -52,9 +50,9 @@ ms.lasthandoff: 08/21/2017
 |`Browse`|映像|可选特性。 控制查询或列举程序集中的类型的信息，但并不在运行时间启用任何动态访问。|  
 |`Dynamic`|映像|可选特性。 控制运行时对所有类型成员的访问，包括构造函数、方法、字段、属性和事件，以启用动态编程。|  
 |`Serialize`|序列化|可选特性。 控制运行时对构造函数、字段和属性的访问，使类型实例得到序列化和反序列化处理，这是通过库进行的，例如 Newtonsoft JSON 序列化程序。|  
-|`DataContractSerializer`|序列化|可选特性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 类的序列化策略。|  
-|`DataContractJsonSerializer`|序列化|可选特性。 控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> 类的 JSON 序列化策略。|  
-|`XmlSerializer`|序列化|可选特性。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 类的 XML 序列化策略。|  
+|`DataContractSerializer`|序列化|可选特性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 类的序列化策略。|  
+|`DataContractJsonSerializer`|序列化|可选特性。 控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> 类的 JSON 序列化策略。|  
+|`XmlSerializer`|序列化|可选特性。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 类的 XML 序列化策略。|  
 |`MarshalObject`|Interop|可选特性。 控制封送引用类型到 Windows 运行时和 COM 的策略。|  
 |`MarshalDelegate`|Interop|可选特性。 控制将委托类型作为函数指针封送到本机代码的策略。|  
 |`MarshalStructure`|Interop|可选特性。 控制封送结构到本机代码的策略。|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/21/2017
   
 |值|描述|  
 |-----------|-----------------|  
-|assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=fullName> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。<br /><br /> 你也可以指定文本字符串 `*Application*`，从而将策略应用到你的程序包中的所有程序集，而不管这些程序集是否已加载。 `*Application*` 从不会将策略应用到 .NET Framework 程序集。|  
+|assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。<br /><br /> 你也可以指定文本字符串 `*Application*`，从而将策略应用到你的程序包中的所有程序集，而不管这些程序集是否已加载。 `*Application*` 从不会将策略应用到 .NET Framework 程序集。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
@@ -102,7 +100,6 @@ ms.lasthandoff: 08/21/2017
  `Activate`、`Browse`、`Dynamic` 和 `Serialize` 特性都是可选项。 然而，`<Assembly>` 元素必须至少包含这些属性中的一个。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-

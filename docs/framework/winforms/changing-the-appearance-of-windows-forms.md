@@ -1,33 +1,33 @@
 ---
-title: "更改 Windows 窗体外观 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows 窗体, 更改外观"
+title: "更改 Windows 窗体外观"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ceeedf3d6b73d08ce8aeade74288dc797d462123
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 更改 Windows 窗体外观
+# <a name="changing-the-appearance-of-windows-forms"></a>更改 Windows 窗体外观
 可以按多种不同的方式自定义 Windows 窗体应用程序的外观，例如，更改 Windows 窗体应用程序的边框、不透明度、形状、样式，或设置它的背景图像。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [如何：更改 Windows 窗体的边框](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
  显示如何更改窗体的边框样式。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Form>  
  对此类进行描述，并提供指向其所有成员的链接。  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 6
  <xref:System.Drawing.Color>  
  对此类进行描述，并提供指向其所有成员的链接。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [调整 Windows 窗体的大小和比例](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
  包含指向一些主题的链接，这些主题显示如何更改窗体的大小和比例。  
   

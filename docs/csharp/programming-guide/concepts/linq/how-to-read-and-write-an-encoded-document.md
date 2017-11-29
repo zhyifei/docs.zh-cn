@@ -1,30 +1,21 @@
 ---
 title: "如何：读取和写入编码的文档 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a08fa9404c92bd64b07059df2f419bff5f80da3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc7c21c1aa6f4035bfaee509c7bc542542635313
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>如何：读取和写入编码的文档 (C#)
 若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。  
@@ -93,7 +84,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
+## <a name="see-also"></a>请参阅  
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
  [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

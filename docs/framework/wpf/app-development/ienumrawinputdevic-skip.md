@@ -1,36 +1,38 @@
 ---
-title: "IEnumRAWINPUTDEVIC:Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Skip 方法"
+title: IEnumRAWINPUTDEVIC:Skip
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Skip method [WPF]
 ms.assetid: c967b0f8-1c6a-459c-8c16-d4f08918ab65
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 216be1bc48a140bdd326010a87899cc342feb41d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# IEnumRAWINPUTDEVIC:Skip
-指示枚举数跳过枚举中的后续 `celt` 元素，以便下次调用 [IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md) 时将不返回这些元素。  
+# <a name="ienumrawinputdevicskip"></a>IEnumRAWINPUTDEVIC:Skip
+指示枚举数跳过下一步`celt`枚举中的元素，以便下一次调用到[IEnumRAWINPUTDEVIC:Next](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-next.md)不会返回这些元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 HRESULT Skip( [in] ULONG celt);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `celt`  
   
- \[in\] 要跳过的元素数。  
+ [in]要跳过的元素数。  
   
-## 属性值\/返回值  
- HRESULT：如果提供的元素数目为 `celt`，则为 S\_OK；否则为 S\_FALSE。
+## <a name="property-valuereturn-value"></a>属性值/返回值  
+ HRESULT：如果提供的元素数量为 `celt`，则值为 S_OK；否则为 S_FALSE。

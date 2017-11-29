@@ -1,7 +1,7 @@
 ---
 title: "LINQ（语言集成查询）"
 description: "了解 LINQ 如何向 C# 和 VB 中提供语言级查询功能和 API，以便能够编写具有表达力度的声明性代码。"
-keywords: ".NET、.NET Core"
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="linq-language-integrated-query"></a>LINQ（语言集成查询）
 
 ## <a name="what-is-it"></a>什么是 LINQ？
@@ -263,4 +261,3 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 *   [101 LINQ 示例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/)，适用于 C#/F#/VB 的演练环境和数据库查询引擎
 *   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，帮助用户了解如何实现 LINQ 到对象的电子书
-

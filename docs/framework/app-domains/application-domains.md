@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains"></a>应用程序域
 操作系统和运行时环境通常会在应用程序间提供某种形式的隔离。 例如，Windows 使用进程来隔离应用程序。 为确保在一个应用程序中运行的代码不会对其他不相关的应用程序产生不良影响，这种隔离是必需的。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 07/28/2017
     > [!NOTE]
     >  不能卸载单个程序集或类型。 只能卸载整个域。  
   
--   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 **System.IO.FileNotFound** 的异常。 有关详细信息，请参阅[远程对象](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)。 确定如何跨域访问对象的机制是由该对象决定的。 有关详细信息，请参阅<xref:System.MarshalByRefObject?displayProperty=fullName>。  
+-   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 **System.IO.FileNotFound** 的异常。 有关详细信息，请参阅[远程对象](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)。 确定如何跨域访问对象的机制是由该对象决定的。 有关详细信息，请参阅<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 -   代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
   
@@ -110,12 +108,12 @@ ms.lasthandoff: 07/28/2017
   
  应用程序域和线程之间不具有一对一的相关性。 在任意给定时间，可以在单个应用程序域中执行几个线程，而且特定线程并不局限在单个应用程序域内。 也就是说，线程可以自由跨越应用程序域边界；不为每个应用程序域创建新线程。  
   
- 在任意给定时间，每个线程都在一个应用程序域中执行。 在任何给定的应用程序域中，可能正在执行零个、一个或多个线程。 运行时会跟踪在哪些应用程序域中有哪些线程正在运行。 通过调用 <xref:System.Threading.Thread.GetDomain%2A?displayProperty=fullName> 方法，您可以随时确定线程执行所在的域。  
+ 在任意给定时间，每个线程都在一个应用程序域中执行。 在任何给定的应用程序域中，可能正在执行零个、一个或多个线程。 运行时会跟踪在哪些应用程序域中有哪些线程正在运行。 通过调用 <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> 方法，您可以随时确定线程执行所在的域。  
   
 ### <a name="application-domains-and-cultures"></a>应用程序域和区域性  
- 区域性（由 <xref:System.Globalization.CultureInfo> 对象表示）与线程关联。 您可以通过使用 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性获取与当前正在执行的线程关联的区域性，并且您可以通过使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 属性获取或设置与当前正在执行的线程关联的区域性。 如果已使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 属性显式设置与线程关联的区域性，则当线程跨越应用程序域边界时，它将继续与该线程关联。 否则，在任何给定时间内与线程关联的区域性将由线程执行所在的应用程序域中的 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=fullName> 属性的值确定：  
+ 区域性（由 <xref:System.Globalization.CultureInfo> 对象表示）与线程关联。 您可以通过使用 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性获取与当前正在执行的线程关联的区域性，并且您可以通过使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性获取或设置与当前正在执行的线程关联的区域性。 如果已使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性显式设置与线程关联的区域性，则当线程跨越应用程序域边界时，它将继续与该线程关联。 否则，在任何给定时间内与线程关联的区域性将由线程执行所在的应用程序域中的 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 属性的值确定：  
   
--   如果该属性的值不是 `null`，则由该属性返回的区域性与线程（并因此由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性返回）关联。  
+-   如果该属性的值不是 `null`，则由该属性返回的区域性与线程（并因此由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性返回）关联。  
   
 -   如果该属性的值为 `null`，则当前系统区域性与线程关联。  
   
@@ -171,5 +169,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
   
 <a name="reference"></a>   
 ## <a name="reference"></a>参考  
- <xref:System.MarshalByRefObject?displayProperty=fullName>
-
+ <xref:System.MarshalByRefObject?displayProperty=nameWithType>

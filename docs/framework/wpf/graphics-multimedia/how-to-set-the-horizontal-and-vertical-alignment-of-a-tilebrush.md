@@ -1,83 +1,89 @@
 ---
-title: "如何：设置 TileBrush 的水平对齐方式和垂直对齐方式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "对齐, TileBrush"
-  - "TileBrush 的水平对齐"
-  - "TileBrush, 对齐方式"
-  - "TileBrush 的垂直对齐"
+title: "如何：设置 TileBrush 的水平对齐方式和垂直对齐方式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF], alignment of
+- vertical alignment of TileBrushes [WPF]
+- aligning [WPF], TileBrushes
+- horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c581bb167c020e9e4f0de26b0e17e7a1d70704e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：设置 TileBrush 的水平对齐方式和垂直对齐方式
-本示例演示如何控制图块内容的水平对齐方式和垂直对齐方式。  若要控制 <xref:System.Windows.Media.TileBrush> 的水平对齐方式和垂直对齐方式，请使用其 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 和 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性。  
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>如何：设置 TileBrush 的水平对齐方式和垂直对齐方式
+本示例演示如何控制平铺内容的水平对齐方式和垂直对齐方式。 若要控制的水平和垂直对齐方式<xref:System.Windows.Media.TileBrush>，使用其<xref:System.Windows.Media.TileBrush.AlignmentX%2A>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>属性。  
   
- 当满足以下任一条件时将使用 <xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 和 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性：  
+ <xref:System.Windows.Media.TileBrush.AlignmentX%2A>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>属性<xref:System.Windows.Media.TileBrush>使用满足以下条件之一时：  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> 属性为 <xref:System.Windows.Media.Stretch> 或 <xref:System.Windows.Media.Stretch>，而 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 和 <xref:System.Windows.Media.TileBrush.Viewport%2A> 的[纵横比](GTMT)不同。  
+-   <xref:System.Windows.Media.TileBrush.Stretch%2A>属性是<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>和<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>具有不同的纵横比。  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> 属性为 <xref:System.Windows.Media.Stretch> 并且<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>具有不同的大小。  
+-   <xref:System.Windows.Media.TileBrush.Stretch%2A>属性是<xref:System.Windows.Media.Stretch.None>和<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>具有不同大小。  
   
-## 示例  
- 下面的示例将类型为 <xref:System.Windows.Media.TileBrush> 的 <xref:System.Windows.Media.DrawingBrush> 的内容与其图块的左上角对齐。  为了对齐内容，此示例将 <xref:System.Windows.Media.DrawingBrush> 的 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 属性设置为 <xref:System.Windows.Media.AlignmentX>，将 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性设置为 <xref:System.Windows.Media.AlignmentY>。  该示例产生下面的输出。  
+## <a name="example"></a>示例  
+ 下面的示例将对齐的内容<xref:System.Windows.Media.DrawingBrush>，这是一种<xref:System.Windows.Media.TileBrush>，到其磁贴的左上角。 若要对齐的内容，该示例设置<xref:System.Windows.Media.TileBrush.AlignmentX%2A>属性<xref:System.Windows.Media.DrawingBrush>到<xref:System.Windows.Media.AlignmentX.Left>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>属性<xref:System.Windows.Media.AlignmentY.Top>。 本示例生成以下输出。  
   
- ![左上角对齐的 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm\_TileBrushAlignmentExampleTopLeft")  
+ ![TileBrush 顶部 &#45; 左的对齐](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
 内容与左上角对齐的 TileBrush  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushtopleftalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmentinline)]  
   
-## 示例  
- 下一个示例通过将 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 属性设置为 <xref:System.Windows.Media.AlignmentX>，将 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性设置为 <xref:System.Windows.Media.AlignmentY>，将 <xref:System.Windows.Media.DrawingBrush> 的内容与其图块的右下角对齐。  该示例产生下面的输出。  
+## <a name="example"></a>示例  
+ 下一步的示例将对齐的内容<xref:System.Windows.Media.DrawingBrush>到通过设置其磁贴右下角<xref:System.Windows.Media.TileBrush.AlignmentX%2A>属性<xref:System.Windows.Media.AlignmentX.Right>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>属性<xref:System.Windows.Media.AlignmentY.Bottom>。 该示例生成以下输出。  
   
- ![右下角对齐的 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm\_TileBrushAlignmentExampleBottomRight")  
+ ![TileBrush 底部 &#45; 右对齐](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
 内容与右下角对齐的 TileBrush  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushbottomrightalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
   
-## 示例  
- 下一个示例通过将 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 属性设置为 <xref:System.Windows.Media.AlignmentX>，将 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性设置为 <xref:System.Windows.Media.AlignmentY>，将 <xref:System.Windows.Media.DrawingBrush> 的内容与其图块的左上角对齐。  它还设置了 <xref:System.Windows.Media.DrawingBrush> 的<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.TileMode%2A>以生成图块图案。  该示例产生下面的输出。  
+## <a name="example"></a>示例  
+ 下一步的示例将对齐的内容<xref:System.Windows.Media.DrawingBrush>到通过设置其磁贴的左上角<xref:System.Windows.Media.TileBrush.AlignmentX%2A>属性<xref:System.Windows.Media.AlignmentX.Left>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>属性<xref:System.Windows.Media.AlignmentY.Top>。 它还将设置<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.TileMode%2A>的<xref:System.Windows.Media.DrawingBrush>生成平铺模式。 该示例生成以下输出。  
   
- ![左上角对齐的平铺 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm\_TileBrushAlignmentExampleTopLeftTiled")  
-内容与基本图块的左上角对齐的图块图案  
+ ![平铺的 TileBrush 顶部 &#45; 左的对齐](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
+内容与基本平铺图案的左上角对齐的平铺图案  
   
- 上图突出显示了基本图块，以便显示其内容的对齐方式。  请注意，<xref:System.Windows.Media.TileBrush.AlignmentX%2A> 设置不起作用，因为 <xref:System.Windows.Media.DrawingBrush> 的内容完全水平填充了基本图块。  
+ 上图突出显示了基本平铺图案，以便显示其内容的对齐方式。 请注意，<xref:System.Windows.Media.TileBrush.AlignmentX%2A>设置无任何影响，因为内容<xref:System.Windows.Media.DrawingBrush>完全水平填充基本磁贴。  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmenttiledinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushtopleftalignmenttiledinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmenttiledinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmenttiledinline)]  
   
-## 示例  
- 最后一个示例通过将 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 属性设置为 <xref:System.Windows.Media.AlignmentX>，将 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性设置为 <xref:System.Windows.Media.AlignmentY>，将已图块的 <xref:System.Windows.Media.DrawingBrush> 的内容与其基本图块的右下角对齐。  该示例产生下面的输出。  
+## <a name="example"></a>示例  
+ 最后一个示例将对齐的平铺内容<xref:System.Windows.Media.DrawingBrush>到通过设置其基本磁贴右下角<xref:System.Windows.Media.TileBrush.AlignmentX%2A>属性<xref:System.Windows.Media.AlignmentX.Right>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>属性<xref:System.Windows.Media.AlignmentY.Bottom>。 该示例生成以下输出。  
   
- ![右下角对齐的平铺 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm\_TileBrushAlignmentExampleBottomRightTiled")  
-内容与基本图块的右下角对齐的图块图案  
+ ![一个平铺 TileBrush 底部 &#45; 右对齐](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
+内容与基本平铺图案的右下角对齐的平铺图案  
   
- 同样，<xref:System.Windows.Media.TileBrush.AlignmentX%2A> 设置不起作用，因为 <xref:System.Windows.Media.DrawingBrush> 的内容完全水平填充了基本图块。  
+ 同样，<xref:System.Windows.Media.TileBrush.AlignmentX%2A>设置无任何影响，因为内容<xref:System.Windows.Media.DrawingBrush>完全水平填充基本磁贴。  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushbottomrightalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
   
- 这些示例使用 <xref:System.Windows.Media.DrawingBrush> 对象演示如何使用 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 和 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 属性。  这些属性的行为对于所有图块画笔都相同：<xref:System.Windows.Media.DrawingBrush>、<xref:System.Windows.Media.ImageBrush> 和 <xref:System.Windows.Media.VisualBrush>。  有关图块画笔的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ 示例使用<xref:System.Windows.Media.DrawingBrush>对象来演示如何<xref:System.Windows.Media.TileBrush.AlignmentX%2A>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>使用属性。 这些属性具有相同行为对于所有磁贴画笔： <xref:System.Windows.Media.DrawingBrush>， <xref:System.Windows.Media.ImageBrush>，和<xref:System.Windows.Media.VisualBrush>。 有关平铺画笔的详细信息，请参阅[使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
-## 请参阅  
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.VisualBrush>   
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
+ [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

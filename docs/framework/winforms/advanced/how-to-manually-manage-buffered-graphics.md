@@ -1,50 +1,53 @@
 ---
-title: "如何：手动管理缓冲图形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BufferedGraphicsContext 类"
-  - "闪烁, 通过手动管理图形来减少"
-  - "图形, 管理缓冲的"
+title: "如何：手动管理缓冲图形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing by manually managing graphics
+- graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：手动管理缓冲图形
-对于更高级的双缓存情形，可以使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类实现自己的双缓存逻辑。  负责单独分配和管理图形缓冲区的类是 <xref:System.Drawing.BufferedGraphicsContext> 类。  每个应用程序都有自己的默认 <xref:System.Drawing.BufferedGraphicsContext> 来管理此应用程序的所有默认双缓冲。  提供调用 <xref:System.Drawing.BufferedGraphicsManager.Current%2A> 可以检索对此实例的引用。  
+# <a name="how-to-manually-manage-buffered-graphics"></a>如何：手动管理缓冲图形
+对于更高级的双缓冲方案，你可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]类来实现您自己双缓冲的逻辑。 类负责分配和管理各自的图形缓冲区是<xref:System.Drawing.BufferedGraphicsContext>类。 每个应用程序具有自己的默认<xref:System.Drawing.BufferedGraphicsContext>，管理所有默认双缓冲为该应用程序。 你可以通过调用检索到此实例的引用<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。  
   
-### 获得对默认 BufferedGraphicsContext 的引用  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>若要获取对默认 BufferedGraphicsContext 的引用  
   
--   设置 <xref:System.Drawing.BufferedGraphicsManager.Current%2A> 属性，如下面的代码示例所示。  
+-   设置<xref:System.Drawing.BufferedGraphicsManager.Current%2A>属性，如下面的代码示例中所示。  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  对于从 <xref:System.Drawing.BufferedGraphicsManager> 类获得的 <xref:System.Drawing.BufferedGraphicsContext> 引用，不需要调用 `Dispose` 方法。  <xref:System.Drawing.BufferedGraphicsManager> 负责处理默认 <xref:System.Drawing.BufferedGraphicsContext> 实例的所有内存分配和分发。  
+    >  不需要调用`Dispose`方法<xref:System.Drawing.BufferedGraphicsContext>收到的引用<xref:System.Drawing.BufferedGraphicsManager>类。 <xref:System.Drawing.BufferedGraphicsManager>处理所有的内存分配和默认分发<xref:System.Drawing.BufferedGraphicsContext>实例。  
   
-     对于图形密集型应用程序（如动画），有时可通过使用专用的 <xref:System.Drawing.BufferedGraphicsContext>（而不是 <xref:System.Drawing.BufferedGraphicsManager> 提供的 <xref:System.Drawing.BufferedGraphicsContext>）来提高性能。  这样，您可以单独创建并管理图形缓冲区，尽管该应用程序会占用更多内存，但可以避免因管理其他所有与应用程序关联的缓冲图形而导致的性能开销。  
+     对于如动画的图形密集型应用程序，你有时可以提高性能通过使用专用<xref:System.Drawing.BufferedGraphicsContext>而不是<xref:System.Drawing.BufferedGraphicsContext>由<xref:System.Drawing.BufferedGraphicsManager>。 这使您可以创建和管理图形缓冲区单独进行，而不会导致管理所有其他缓冲的图形与你的应用程序，但应用程序占用的内存将更大的性能开销。  
   
-### 创建专用的 BufferedGraphicsContext  
+### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>若要创建专用的 BufferedGraphicsContext  
   
--   声明并创建 <xref:System.Drawing.BufferedGraphicsContext> 类的新实例，如下面的代码示例所示。  
+-   声明和创建的新实例<xref:System.Drawing.BufferedGraphicsContext>类，如下面的代码示例中所示。  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
   
-## 请参阅  
- <xref:System.Drawing.BufferedGraphicsContext>   
- [双缓冲图形](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [如何：手动呈现缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ [双缓冲的图形](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [如何：手动呈现缓冲的图形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)

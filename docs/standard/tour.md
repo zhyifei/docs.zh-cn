@@ -1,5 +1,5 @@
 ---
-title: ".NET 教程 | Microsoft Docs"
+title: ".NET 教程"
 description: ".NET 的一些重要功能指导教程。"
 keywords: ".NET, .NET Core, 教程, 编程语言, 不安全, 内存管理, 类型安全, 异步"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>.NET 教程
 
 .NET 是一个通用开发平台。 它具有几项关键功能，例如支持多种编程语言、异步和并发编程模型以及本机互操作性，可以支持跨多个平台的各种方案。
@@ -149,4 +147,3 @@ LINQ 是适用于 C# 和 VB 的强大功能集，可用于编写简单的声明�
 如果想开始自己编写代码，请访问[入门](get-started.md)。
 
 要了解 .NET 的重要组件，请参阅 [.NET 体系结构组件](components.md)。
-

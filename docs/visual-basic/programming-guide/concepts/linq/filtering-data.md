@@ -1,46 +1,38 @@
 ---
-title: "筛选数据 (Visual Basic 中) |Microsoft 文档"
+title: "筛选数据 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3751164b7697b63937611c77d9fda0e2873625d8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 31e3a4729a98e1f4b588cd415a15fff270587234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="filtering-data-visual-basic"></a>筛选数据 (Visual Basic)
-筛选是指将结果集包含满足指定的条件的这些元素限制的操作。 它也称为是所选内容。  
+筛选是指将结果集限制为仅包含满足指定条件的元素的操作。 它也称为选定内容。  
   
- 下图显示的字符序列进行筛选的结果。 筛选操作谓词指定的字符必须是 A。  
+ 下图演示了对字符序列进行筛选的结果。 筛选操作的谓词指定字符必须为“A”。  
   
  ![LINQ 筛选操作](../../../../csharp/programming-guide/concepts/linq/media/linq_filter.png "LINQ_Filter")  
   
- 执行所选内容的标准查询运算符方法下一节中列出。  
+ 下面一节列出了执行所选内容的标准查询运算符方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法名|描述|Visual Basic 查询表达式语法|更多信息|  
+|方法名|描述|Visual Basic 查询表达式语法|详细信息|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|OfType|选择值，具体取决于他们可强制转换为指定类型的能力。|不适用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName></xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName></xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
-|Where|选择基于谓词的函数的值。|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName></xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>|  
+|OfType|根据其转换为特定类型的能力选择值。|不适用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|Where|选择基于谓词函数的值。|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例  
  下面的示例使用`Where`若要从数组中筛选这些具有特定长度的字符串。  
@@ -67,10 +59,10 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Linq></xref:System.Linq>   
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [其中子句](../../../../visual-basic/language-reference/queries/where-clause.md)   
- [如何︰ 筛选查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)   
- [如何︰ 查询使用反射 (LINQ) (Visual Basic 中) 的程序集的元数据](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)   
- [如何︰ 查询具有指定的特性或名称 (Visual Basic 中) 的文件](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)   
- [如何︰ 进行排序或筛选器按任意词或字段 (LINQ) (Visual Basic 中) 的文本数据](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+ <xref:System.Linq>  
+ [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)  
+ [如何：筛选查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
+ [如何： 查询使用反射 (LINQ) (Visual Basic) 的程序集的元数据](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ [如何： 查询具有指定的特性或名称 (Visual Basic) 的文件](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [如何： 排序或筛选器文本数据按任意词或字段 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

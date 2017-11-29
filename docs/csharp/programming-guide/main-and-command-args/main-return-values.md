@@ -1,49 +1,29 @@
 ---
 title: "Main() 返回值（C# 编程指南）"
-ms.date: 2017-08-02
+ms.date: 08/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- Main method [C#], return values
+helpviewer_keywords: Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f317879a4941adfd3d125c7697226f8a510254c
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: d019d1c5757a961c03439d756e808ae13fd8a67b
-ms.openlocfilehash: 50943bdd0b7726145797faf82719537a388dad89
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
 
 `Main` 方法可以返回 `void`：
 
-[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+[!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
 
 还可以返回 `int`：
 
-[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+[!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
 
 如果未使用 `Main` 的返回值，则返回 `void` 可以使代码变得略微简单。 但是，返回整数可使程序将状态信息传递给调用可执行文件的其他程序或脚本。 来自 `Main` 的返回值视为进程的退出代码。 以下示例演示了如何访问 `Main` 的返回值。
 
@@ -53,7 +33,7 @@ ms.lasthandoff: 08/03/2017
 
 修改 program.cs 中的 `Main` 方法，如下所示：
 
-[!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+[!code-csharp[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
 
 在 Windows 中执行程序时，从 `Main` 函数返回的任何值都存储在环境变量中。 可使用批处理文件中的 `ERRORLEVEL` 或 PowerShell 中的 `$LastExitCode` 来检索此环境变量。
 
@@ -122,4 +102,3 @@ private static async Task<int> AsyncConsoleWork()
 [Main() 和命令行参数](index.md)
 [如何：显示命令行参数](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 [如何：使用 foreach 访问命令行参数](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
-

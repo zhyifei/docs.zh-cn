@@ -17,16 +17,15 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>对 .NET Framework 应用程序进行全球化和本地化
 开发[全球通用的应用程序](http://msdn.microsoft.com/goglobal/bb978433.aspx)（包括可本地化为一种或多种语言的应用程序）分为三步：全球化、可本地化性审核和本地化。  
@@ -67,7 +66,7 @@ ms.lasthandoff: 09/05/2017
  描述在全球化、本地化和开发全球通用的 ASP.NET 应用程序时遵循的最佳做法。  
   
 ## <a name="reference"></a>参考  
- <xref:System.Globalization?displayProperty=fullName> 命名空间  
+ <xref:System.Globalization?displayProperty=nameWithType> 命名空间  
  包含定义区域性相关信息的类，这些信息包括语言、国家/地区、正在使用的日历、日期的格式模式、货币、数字以及字符串的排序顺序。  
   
  <xref:System.Resources> 命名空间  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/05/2017
   
  [Winres.exe（Windows 窗体资源编辑器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  描述如何使用 Winres.exe 本地化 Windows 窗体。
-

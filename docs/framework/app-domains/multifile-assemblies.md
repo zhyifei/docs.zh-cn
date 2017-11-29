@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multifile-assemblies"></a>多文件程序集
 可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 和 Visual C++，创建多文件程序集。 程序集中的一个文件必须包含程序集清单。 启动应用程序的程序集还必须包含入口点，如 Main 或 WinMain 方法。  
@@ -51,6 +49,5 @@ ms.lasthandoff: 07/28/2017
  创建程序集后，可为包含程序集清单（并因此包含程序集）的文件签名，或者为文件（及程序集）指定强名称并将其放在全局程序集缓存中。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4ab52cc46a7d735ebe60f1d3822d5ae39c2a1234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22bb97865e13722f35aa716ca2bd829989330ab6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)
 此示例演示与文件大小（以字节为单位）相关的五个查询：  
@@ -162,7 +153,6 @@ class QueryBySize
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
+## <a name="see-also"></a>另请参阅  
+ [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-

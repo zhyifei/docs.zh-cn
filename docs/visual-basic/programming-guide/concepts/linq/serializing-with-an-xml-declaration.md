@@ -1,41 +1,33 @@
 ---
-title: "使用 XML 声明 (Visual Basic 中) 进行序列化 |Microsoft 文档"
+title: "使用 XML 声明 (Visual Basic) 进行序列化"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 373df9b28ae7434d33ae81eba701d289cf1aa4f7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e8544157104b202a36f2ef75b069bcdd297b9158
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>使用 XML 声明 (Visual Basic 中) 进行序列化
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>使用 XML 声明 (Visual Basic) 进行序列化
 本主题说明如何控制序列化是否生成 XML 声明。  
   
 ## <a name="xml-declaration-generation"></a>XML 声明的生成  
- 序列化为<xref:System.IO.File>或<xref:System.IO.TextWriter>使用<xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>方法或<xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>方法生成 XML 声明。</xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> </xref:System.IO.TextWriter> </xref:System.IO.File> 在序列化为<xref:System.Xml.XmlWriter>，编写器设置 (在指定<xref:System.Xml.XmlWriterSettings>对象) 确定是否生成 XML 声明。</xref:System.Xml.XmlWriterSettings> </xref:System.Xml.XmlWriter>  
+ 使用 <xref:System.IO.File> 方法或 <xref:System.IO.TextWriter> 方法序列化为 <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> 将生成 XML 声明。 在序列化为 <xref:System.Xml.XmlWriter> 时，编写器设置（在 <xref:System.Xml.XmlWriterSettings> 对象中指定）将确定是否生成 XML 声明。  
   
  如果要使用 `ToString` 方法序列化为字符串，则生成的 XML 不会包括 XML 声明。  
   
 ### <a name="serializing-with-an-xml-declaration"></a>使用 XML 声明进行序列化  
- 下面的示例创建<xref:System.Xml.Linq.XElement>、 将文档保存到文件中，并打印到控制台文件︰</xref:System.Xml.Linq.XElement>  
+ 下面的示例创建一个 <xref:System.Xml.Linq.XElement>，将文档保存到文件，然后将文件打印到控制台：  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -56,7 +48,7 @@ Console.WriteLine(str)
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>不带 XML 声明的序列化  
- 下面的示例演示如何将保存<xref:System.Xml.Linq.XElement>到<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XElement>  
+ 下面的示例演示如何将一个 <xref:System.Xml.Linq.XElement> 保存到一个 <xref:System.Xml.XmlWriter>。  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  

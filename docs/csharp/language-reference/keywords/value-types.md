@@ -1,42 +1,23 @@
 ---
 title: "值类型（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 值类型包含两个主要类别：  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="main-features-of-value-types"></a>值类型的主要功能  
  直接基于值类型的变量包含值。 将一个值类型变量分配给另一个值类型变量将复制包含的值。 这不同于分配引用类型变量，后者复制对对象的引用，但不复制对象本身。  
   
- 所有值类型都隐式派生自 <xref:System.ValueType?displayProperty=fullName>。  
+ 所有值类型都隐式派生自 <xref:System.ValueType?displayProperty=nameWithType>。  
   
  与引用类型不同，不能从值类型派生新类型。 但是，与引用类型一样，结构可以实现接口。  
   
@@ -71,7 +52,7 @@ ms.lasthandoff: 07/28/2017
  每个值类型都具有一个初始化该类型的默认值的隐式默认构造函数。 有关值类型的默认值的信息，请参阅[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)。  
   
 ## <a name="main-features-of-simple-types"></a>简单类型的主要功能  
- 所有简单类型（在 C# 语言中必不可少）都是 .NET Framework 系统类型的别名。 例如， [int](../../../csharp/language-reference/keywords/int.md) 是 <xref:System.Int32?displayProperty=fullName> 的别名。 有关别名的完整列表，请参阅[内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)。  
+ 所有简单类型（在 C# 语言中必不可少）都是 .NET Framework 系统类型的别名。 例如， [int](../../../csharp/language-reference/keywords/int.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的别名。 有关别名的完整列表，请参阅[内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)。  
   
  其操作数都是简单类型常数的常量表达式在编译时进行评估。  
   
@@ -123,10 +104,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
  有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [类型](../../../csharp/language-reference/keywords/types.md)   
- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [类型](../../../csharp/language-reference/keywords/types.md)  
+ [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
-

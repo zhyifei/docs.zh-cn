@@ -1,52 +1,53 @@
 ---
-title: "如何：向 Windows 窗体添加 ActiveX 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ActiveX 控件 [Windows 窗体], 添加"
-  - "窗体, 添加 ActiveX 控件"
-  - "Windows 窗体控件, ActiveX 控件"
+title: "如何：向 Windows 窗体添加 ActiveX 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- forms [Windows Forms], adding ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：向 Windows 窗体添加 ActiveX 控件
-虽然 Windows 窗体设计器是为了承载 Windows 窗体控件而优化，但您也可以将 ActiveX 控件放在 Windows 窗体上。  
+# <a name="how-to-add-activex-controls-to-windows-forms"></a>如何：向 Windows 窗体添加 ActiveX 控件
+虽然 Windows 窗体设计器已经过优化，主机 Windows 窗体控件，您还可将 Windows 窗体上的 ActiveX 控件。  
   
 > [!CAUTION]
->  将 ActiveX 控件添加到 Windows 窗体时，对于 Windows 窗体有一些性能限制。  
+>  ActiveX 控件添加到它们时，有一些 Windows 窗体的性能限制。  
   
- 在将 ActiveX 控件添加到窗体之前，必须将其添加到“工具箱”中。  有关更多信息，请参见[“自定义工具箱”对话框 \-\>“COM 组件”](http://msdn.microsoft.com/zh-cn/171333f3-f207-4e02-bbdc-17862556212c)。  
+ 在向窗体添加 ActiveX 控件之前，必须将它们添加到工具箱中。 有关详细信息，请参阅[COM 组件、 自定义工具箱对话框](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请单击**“工具”**菜单上的**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 向 Windows 窗体添加 ActiveX 控件  
+### <a name="to-add-an-activex-control-to-your-windows-form"></a>若要向 Windows 窗体添加 ActiveX 控件  
   
--   在“工具箱”上双击该控件。  
+-   双击工具箱上的控件。  
   
-     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 将对该控件的所有引用都添加到项目中。  有关使用 Windows 窗体上的 ActiveX 控件时需要注意的事项的更多信息，请参见[在 Windows 窗体上承载 ActiveX 控件时的注意事项](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)。  
+     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]在你的项目中添加到控件的所有引用。 使用 Windows 窗体上的 ActiveX 控件时，需要注意的事项的详细信息，请参阅[承载 Windows 窗体上的 ActiveX 控件时的注意事项](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)。  
   
     > [!NOTE]
-    >  Windows 窗体 ActiveX 控件导入程序 \(AxImp.exe\) 创建的事件参数的类型不同于导入 ActiveX 动态链接库时所需的事件参数类型。  AxImp.exe 创建的参数类似于：`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，而所需参数为 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`。  注意，这种不正常情况并不影响代码的正常使用。  有关详细信息，请参见 [Windows 窗体 ActiveX 控件导入程序 \(Aximp.exe\)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
+    >  Windows 窗体 ActiveX 控件导入程序 (AxImp.exe) 创建不同类型的事件自变量比预期时 ActiveX 动态链接库中导入。 AxImp.exe 所创建的自变量是类似于以下： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，当`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`预期。 请注意，此不一致情况不会阻止代码工作正常。 有关详细信息，请参阅[Windows 窗体 ActiveX 控件导入程序 (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
   
-## 请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/zh-cn/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [排列 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [标记单个 Windows 窗体控件并提供它们的快捷方式](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [根据功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>另请参阅  
+ [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
+ [不同语言和库中的控件和可编程对象的比较](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

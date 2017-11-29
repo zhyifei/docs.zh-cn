@@ -4,8 +4,8 @@ ms.date: 08/08/2017
 ms.prod: .net
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
+- csharp
+- vb
 helpviewer_keywords:
 - version tolerant serialization
 - serialization, custom serialization
@@ -15,16 +15,15 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 6d21687a7147c7f3f0419c2f63030cc9d43d9c05
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90f2b1e73a24b0f732eaba4422faa9a1dcc15135
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="version-tolerant-serialization"></a>版本容错序列化
 在 .NET Framework 1.0 和 1.1 版本中，创建可从应用程序的一个版本重用至下一个版本的可序列化类型时会产生问题。 如果通过添加额外字段来修改类型，则会出现以下问题：  
@@ -263,7 +262,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- 由于服务器和客户端要求使用不同的类版本，因此，有些用户可能需要控制要序列化和反序列化哪些类。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象类，用于控制在序列化和反序列化期间使用的实际类型。  若要使用此类，请从 <xref:System.Runtime.Serialization.SerializationBinder> 派生类，并重写 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用 SerializationBinder 控制序列化和反序列化](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。  
+ 由于服务器和客户端要求使用不同的类版本，因此，有些用户可能需要控制要序列化和反序列化哪些类。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象类，用于控制在序列化和反序列化期间使用的实际类型。  若要使用此类，请从 <xref:System.Runtime.Serialization.SerializationBinder> 派生类，并重写 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][控制序列化和反序列化使用 SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
  要确保版本管理行为正确，修改类型版本时请遵循以下规则：  
@@ -287,16 +286,15 @@ End Class
 -   避免版本管理分支。  
   
 ## <a name="see-also"></a>请参阅  
- <xref:System.SerializableAttribute>   
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>   
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>   
- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>   
- <xref:System.Runtime.Serialization.OptionalFieldAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnSerializedAttribute>   
- <xref:System.Runtime.Serialization.StreamingContext>   
- <xref:System.NonSerializedAttribute>   
+ <xref:System.SerializableAttribute>  
+ <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+ <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+ <xref:System.Runtime.Serialization.StreamingContext>  
+ <xref:System.NonSerializedAttribute>  
  [二进制序列化](binary-serialization.md)
-

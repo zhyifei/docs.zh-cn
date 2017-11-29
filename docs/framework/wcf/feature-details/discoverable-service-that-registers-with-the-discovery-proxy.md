@@ -1,23 +1,26 @@
 ---
-title: "如何：实现向发现代理注册的可检测到的服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：实现向发现代理注册的可检测到的服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：实现向发现代理注册的可检测到的服务
-本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在上一主题中，[如何︰ 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，您将创建一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，该服务向发现代理发送公告消息（`Hello` 和 `Bye`），从而在发现代理中注册和注销服务自身。  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可检测到的服务
+本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在前面的主题中，[如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，您将创建一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，该服务向发现代理发送公告消息（`Hello` 和 `Bye`），从而在发现代理中注册和注销服务自身。  
   
 ### <a name="to-define-the-service-contract"></a>定义服务协定  
   
@@ -33,14 +36,14 @@ caps.handback.revision: 14
   
 4.  添加下面的 using 语句。  
   
-    ```  
+    ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
 5.  在 CalculatorService.cs 中，定义服务协定。  
   
-    ```  
+    ```csharp  
     // Define a service contract.  
         [ServiceContract(Namespace = "http://Microsoft.Samples.Discovery")]  
         public interface ICalculatorService  
@@ -54,12 +57,11 @@ caps.handback.revision: 14
             [OperationContract]  
             double Divide(double n1, double n2);  
         }  
-  
     ```  
   
 6.  同样，在 CalculatorService.cs 中，实现服务协定。  
   
-    ```  
+    ```csharp  
     // Service class which implements the service contract.      
         public class CalculatorService : ICalculatorService  
         {  
@@ -95,7 +97,6 @@ caps.handback.revision: 14
                 return result;  
             }  
         }  
-  
     ```  
   
 ### <a name="to-host-the-service"></a>承载服务  
@@ -104,18 +105,16 @@ caps.handback.revision: 14
   
 2.  添加下面的 using 语句。  
   
-    ```  
+    ```csharp 
     using System;  
     using System.ServiceModel;  
     using System.ServiceModel.Description;  
     using System.ServiceModel.Discovery;  
-  
     ```  
   
 3.  在 `Main()` 方法中，添加下面的代码：  
   
-    ```  
-  
+    ```csharp  
     // Define the base address of the service  
     Uri baseAddress = new Uri("net.tcp://localhost:9002/CalculatorService/" + Guid.NewGuid().ToString());  
     // Define the endpoint address where announcement messages will be sent  
@@ -165,12 +164,12 @@ caps.handback.revision: 14
     }  
     ```  
   
- 至此您已完成可检测到的服务的实现过程。 继续阅读[如何︰ 实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。  
+ 至此您已完成可检测到的服务的实现过程。 继续[如何： 实现使用发现代理查找服务的客户端应用](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。  
   
 ## <a name="example"></a>示例  
  下面是本主题中使用的代码的完整清单。  
   
-```  
+```csharp  
 // CalculatorService.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -231,10 +230,9 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -295,10 +293,8 @@ namespace Microsoft.Samples.Discovery
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>另请参阅  
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)   
- [如何︰ 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [如何︰ 实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何： 实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

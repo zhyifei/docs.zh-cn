@@ -1,40 +1,22 @@
 ---
 title: "装箱可以为 null 的类型（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - boxing [C#], nullable types
 - unboxing [C#], nullable types
 - nullable types [C#], boxing and unboxing
 ms.assetid: bdb5b626-abc0-405d-8f64-0f0a0bf883a4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 29fccba56f6758fdfd407fa1879baa9260b69187
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>装箱可以为 null 的类型（C# 编程指南）
 基于可以为 null 的类型的对象仅在其不为 null 时才可装箱。 如果 <xref:System.Nullable%601.HasValue%2A> 为 `false`，则对象引用将分配给 `null` 而不是进行装箱。 例如：  
@@ -45,7 +27,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- 假如对象为非 null，即如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则将发生装箱，但仅装箱可以为 null 的对象所基于的基础类型。 装箱某个可以为 null 的非 null 值类型将装箱该值类型本身，而不是包装该值类型的 <xref:System.Nullable%601?displayProperty=fullName>。 例如：  
+ 假如对象为非 null，即如果 <xref:System.Nullable%601.HasValue%2A> 为 `true`，则将发生装箱，但仅装箱可以为 null 的对象所基于的基础类型。 装箱某个可以为 null 的非 null 值类型将装箱该值类型本身，而不是包装该值类型的 <xref:System.Nullable%601?displayProperty=nameWithType>。 例如：  
   
 ```csharp  
 bool? b = false;  
@@ -91,7 +73,6 @@ int? i2 = (int?)iBoxed;
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)   
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
  [如何：标识可以为 null 的类型](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
-

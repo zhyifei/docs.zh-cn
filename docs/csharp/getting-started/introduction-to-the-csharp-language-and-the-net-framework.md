@@ -1,40 +1,22 @@
 ---
 title: "C# 语言和 .NET Framework 介绍"
 description: "了解 C# 和 .NET 的基础知识。 概述了 C# 语言和 .NET 生态系统。"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2bc7dfbca102a5d2e891b48b676347822eae56f7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: c7fac541dd233111bfffb9c0f67ba048f8d271be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的应用程序。  
@@ -69,10 +51,8 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
   
 -   有关 C# 语言特定方面的详细信息，请参阅 [C# 参考](../../csharp/language-reference/index.md)。  
   
--   有关 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的详细信息，请参阅 [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
-  
--   若要获取 Visual C# 团队发布的最新文章和资源，请访问 [Visual C# 开发者中心](http://go.microsoft.com/fwlink/?LinkId=47811)。  
-  
+-   有关 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的详细信息，请参阅 [LINQ（语言集成查询）](../programming-guide/concepts/linq/index.md)。  
+
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 平台体系结构  
  C# 程序在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行，这是 Windows 不可或缺的一部分，包括名为“公共语言运行时 (CLR)”的虚执行系统和一组统一的类库。 CLR 是由 Microsoft 执行的公共语言基础结构 (CLI) 的商业实现，CLI 是作为执行和开发环境（语言和库在其中无缝协作）创建依据的国际标准。  
   
@@ -86,8 +66,7 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
   
  除了运行时服务之外，[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 还包括一个由 4000 多个已整理到命名空间中的类构成的扩展库，这些类提供各种实用功能，包括文件输入输出、字符串控制、XML 分析和 Windows 窗体控件。 典型的 C# 应用程序广泛使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库来处理常见的“管道”零碎工作。  
   
- 有关 .NET Framework 的详细信息，请参阅 [Microsoft.NET Framework 概述](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355)。  
+ 有关 .NET Framework 的详细信息，请参阅 [Microsoft.NET Framework 概述](../../framework/get-started/overview.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [C#](../../csharp/index.md) [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

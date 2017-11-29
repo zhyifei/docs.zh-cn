@@ -1,45 +1,27 @@
 ---
 title: "如何：在 Visual Basic 中读取定宽文本文件"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - fixed-width text file
-- reading text files, fixed-width
-- files, parsing
-- text files, tasks
-- text files, reading
+- reading text files [Visual Basic], fixed-width
+- files [Visual Basic], parsing
+- text files [Visual Basic], tasks
+- text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a5caa124af1bf4681a4c061f453ce5e09ec2dae7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc45c6d6e4301b2786fefe947ed011ca95f8a79c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取定宽文本文件
 `TextFieldParser` 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。  
@@ -83,11 +65,10 @@ ms.lasthandoff: 07/28/2017
 -   用户没有足够的权限访问文件 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   
- [如何：读取逗号分隔的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
- [使用 TextFieldParser 对象分析文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)   
- [演练：在 Visual Basic 中操作文件和目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)   
- [疑难解答：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>  
+ [如何：读取逗号分隔的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [使用 TextFieldParser 对象分析文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [演练：在 Visual Basic 中操作文件和目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [疑难解答：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  
-

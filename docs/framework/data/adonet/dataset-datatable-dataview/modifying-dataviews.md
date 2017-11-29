@@ -1,33 +1,39 @@
 ---
-title: "修改 DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改 DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0a8478e9b21c6c2abdc02677305e468109e7b9fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 修改 DataView
-可以使用 <xref:System.Data.DataView> 在基础表中添加、删除或修改数据行。  通过设置 **DataView** 的三个布尔值属性之一，可以控制使用 **DataView** 修改基础表数据的能力。  这三个属性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。  默认情况下，它们设置为 **true**。  
+# <a name="modifying-dataviews"></a>修改 DataView
+可以使用 <xref:System.Data.DataView> 在基础表中添加、删除或修改数据行。 能够使用**DataView**修改基础表中的数据通过设置三个布尔值属性之一控制**DataView**。 这三个属性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。 它们将设置为**true**默认情况下。  
   
- 如果 **AllowNew** 为 **true**，则可以使用 **DataView** 的 <xref:System.Data.DataView.AddNew%2A> 方法来创建新的 <xref:System.Data.DataRowView>。  请注意，在调用 **DataRowView** 的 <xref:System.Data.DataRowView.EndEdit%2A> 方法之前，新行实际上不会添加到基础 <xref:System.Data.DataTable> 中。  如果调用 **DataRowView** 的 <xref:System.Data.DataRowView.CancelEdit%2A> 方法，则将丢弃新行。  另请注意，一次只能编辑一个 **DataRowView**。  如果在存在挂起行时调用 **DataRowView** 的 **AddNew** 或 **BeginEdit** 方法，则会对该挂起行隐式调用 **EndEdit**。  当调用 **EndEdit** 时，更改将应用于基础 **DataTable**，并且随后可以使用 **DataTable**、**DataSet** 或 **DataRow** 对象的 **AcceptChanges** 或 **RejectChanges** 方法来提交或拒绝更改。  如果 **AllowNew** 为 **false**，则当调用 **DataRowView** 的 **AddNew** 方法时，将引发异常。  
+ 如果**AllowNew**是**true**，你可以使用<xref:System.Data.DataView.AddNew%2A>方法**DataView**创建新<xref:System.Data.DataRowView>。 请注意，新行不会实际添加到基础<xref:System.Data.DataTable>直到<xref:System.Data.DataRowView.EndEdit%2A>方法**DataRowView**调用。 如果<xref:System.Data.DataRowView.CancelEdit%2A>方法**DataRowView**是调用，将丢弃新行。 还要注意，您可以编辑只有一个**DataRowView**一次。 如果调用**AddNew**或**BeginEdit**方法**DataRowView**虽然存在挂起行， **EndEdit**对隐式调用挂起的行。 当**EndEdit**是调用，所做的更改应用于基础**DataTable**和更高版本可以提交或拒绝使用**AcceptChanges**或**RejectChanges**方法**DataTable**，**数据集**，或**DataRow**对象。 如果**AllowNew**是**false**，如果调用引发异常**AddNew**方法**DataRowView**。  
   
- 如果 **AllowEdit** 为 **true**，可以通过 **DataRowView** 来修改 **DataRow** 的内容。  可以使用 **DataRowView.EndEdit** 确认对基础行的更改，或使用 **DataRowView.CancelEdit** 拒绝更改。  注意，一次只能编辑一行。  如果在存在挂起行时调用 **DataRowView** 的 **AddNew** 或 **BeginEdit** 方法，则会对该挂起行隐式调用 **EndEdit**。  当调用 **EndEdit** 时，建议更改将放置在基础 **DataRow** 的 **Current** 行版本中，随后可以使用 **DataTable**、**DataSet** 或 **DataRow** 对象的 **AcceptChanges** 或 **RejectChanges** 方法来提交或拒绝这些更改。  如果 **AllowEdit** 为 **false**，则当试图修改 **DataView** 中的值时，将引发异常。  
+ 如果**AllowEdit**是**true**，你可以修改的内容**DataRow**通过**DataRowView**。 你可以确认对基础行使用的更改**DataRowView.EndEdit**或拒绝更改使用**DataRowView.CancelEdit**。 注意，一次只能编辑一行。 如果调用**AddNew**或**BeginEdit**方法**DataRowView**虽然存在挂起行， **EndEdit**对隐式调用挂起的行。 当**EndEdit**调用时，建议的更改都将置于**当前**的基础的行版本**DataRow**和更高版本可以提交或拒绝使用**AcceptChanges**或**RejectChanges**方法**DataTable**，**数据集**，或**DataRow**对象。 如果**AllowEdit**是**false**，如果您尝试修改中的值将引发异常**DataView**。  
   
- 当编辑现有 **DataRowView** 时，仍将引发基础 **DataTable** 的事件，并提供建议更改。  请注意，如果对基础 **DataRow** 调用 **EndEdit** 或 **CancelEdit**，那么无论是否对 **DataRowView** 调用 **EndEdit** 或 **CancelEdit**，都将应用或取消挂起的更改。  
+ 如果现有**DataRowView**正在编辑的基础事件**DataTable**仍将引发与建议的更改。 请注意，如果你调用**EndEdit**或**CancelEdit**基础**DataRow**、 挂起的更改将应用或取消而不管是否**EndEdit**或**CancelEdit**上调用**DataRowView**。  
   
- 如果 **AllowDelete** 为 **true**，则可以使用 **DataView** 或 **DataRowView** 对象的 **Delete** 方法删除 **DataView** 中的行，这些行也将从基础 **DataTable** 中删除。  随后可以分别使用 **AcceptChanges** 或 **RejectChanges** 来提交或拒绝删除。  如果 **AllowDelete** 为 **false**，当调用 **DataView** 或 **DataRowView** 的 **Delete** 方法时，将引发异常。  
+ 如果**AllowDelete**是**true**，你可以删除行从**DataView**使用**删除**方法**DataView**或**DataRowView**从基础删除对象，并且行**DataTable**。 以后可以提交或拒绝删除使用**AcceptChanges**或**RejectChanges**分别。 如果**AllowDelete**是**false**，如果调用引发异常**删除**方法**DataView**或**DataRowView**。  
   
- 以下代码示例禁用通过 **DataView** 删除行的功能，并使用 **DataView** 向基础表中添加新行。  
+ 下面的代码示例禁用通过**DataView**到删除的行，并将新行添加到基础表使用**DataView**。  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -40,7 +46,6 @@ Dim newDRV As DataRowView = custView.AddNew()
 newDRV("CustomerID") = "ABCDE"  
 newDRV("CompanyName") = "ABC Products"  
 newDRV.EndEdit()  
-  
 ```  
   
 ```csharp  
@@ -56,9 +61,9 @@ newDRV["CompanyName"] = "ABC Products";
 newDRV.EndEdit();  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,48 +1,51 @@
 ---
-title: "LINQ to SQL 中的代码生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to SQL 中的代码生成"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5720ca8adbfb4a25e6c1360ac156e950a2f1ce52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to SQL 中的代码生成
-可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。  在任一情况下，端到端代码生成都分成三个阶段：  
+# <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的代码生成
+可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。 在任一情况下，端到端代码生成都分成三个阶段：  
   
-1.  DBML 提取器从数据库中提取架构信息，然后将信息重新组合到 XML 格式的 DBML 文件中。  
+1.  *DBML 提取器*从数据库中提取架构信息并重新组合到一个 XML 格式的 DBML 文件的信息。  
   
-2.  DBML 验证程序对 DBML 文件进行扫描，检查是否有错误。  
+2.  通过将扫描该 DBML 文件*DBML 验证程序*是否有错误。  
   
 3.  如果未显示验证错误，文件将传递到代码生成器。  
   
- 有关详细信息，请参阅[SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员也可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来生成代码。  请参阅[LINQ to SQL 工具在 Visual Studio 中](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md)。  
+ 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用开发人员[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]生成代码。 请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
-## DBML 提取器  
+## <a name="dbml-extractor"></a>DBML 提取器  
  DBML 提取器是一个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 组件，它采用数据库元数据作为输入，生成 DBML 文件作为输出。  
   
-## 代码生成器  
- 代码生成器是一个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 组件，该组件将 DBML 文件转换为 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]、C\# 或 XML 映射文件。  
+## <a name="code-generator"></a>代码生成器  
+ 代码生成器是一个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 组件，该组件将 DBML 文件转换为 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]、C# 或 XML 映射文件。  
   
-## XML 架构定义文件  
+## <a name="xml-schema-definition-file"></a>XML 架构定义文件  
  DBML 文件必须对下面的 XSD 架构定义文件有效。  
   
- 请将此架构定义文件与用于验证外部映射文件的架构定义文件区分开来。  有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+ 请将此架构定义文件与用于验证外部映射文件的架构定义文件区分开来。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 用户还会发现此 XSD 文件在“XML 架构”对话框中名为“DbmlSchema.xsd”。  若要正确使用 XSD 文件来验证 DBML 文件，请参阅[如何：验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+>  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 用户还会发现此 XSD 文件在“XML 架构”对话框中名为“DbmlSchema.xsd”。 若要正确使用 XSD 文件，用于验证 DBML 文件，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```  
-﻿?<?xml version="1.0" encoding="utf-16"?>  
+?<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -249,10 +252,10 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## DBML 文件示例  
- 下面的代码摘自从 Northwind 示例数据库创建的 DBML 文件。  可以使用带 **\/xml** 选项的 SQLMetal 生成整个文件。  有关详细信息，请参阅[SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+## <a name="sample-dbml-file"></a>DBML 文件示例  
+ 下面的代码摘自从 Northwind 示例数据库创建的 DBML 文件。 你可以通过使用 SQLMetal 生成整个文件**/xml**选项。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <Database Name="northwnd" Class="Northwnd" xmlns="http://schemas.microsoft.com/dsltools/DLinqML">  
   
@@ -276,9 +279,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## 请参阅  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)   
- [如何：将对象模型生成为外部文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)   
- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
+## <a name="see-also"></a>另请参阅  
+ [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [如何： 生成对象模型作为外部文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

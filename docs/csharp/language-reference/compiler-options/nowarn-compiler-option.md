@@ -1,42 +1,23 @@
 ---
 title: "-nowarn（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /nowarn
-dev_langs:
-- CSharp
+f1_keywords: /nowarn
 helpviewer_keywords:
 - nowarn compiler option [C#]
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bae7e6d16c044b8f1aeba26de434cdf17479e82
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nowarn-c-compiler-options"></a>/nowarn（C# 编译器选项）
 **/nowarn** 选项使你可以禁止编译器显示一个或多个警告。 使用逗号分隔多个警告编号。  
@@ -75,7 +56,6 @@ ms.lasthandoff: 07/28/2017
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)   
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
  [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)
-

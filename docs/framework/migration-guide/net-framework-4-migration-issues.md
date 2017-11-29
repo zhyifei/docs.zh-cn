@@ -2,8 +2,7 @@
 title: ".NET Framework 4 迁移问题"
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
 本主题描述 .NET Framework 3.5 Service Pack 1 和 .NET Framework 4 之间的迁移问题，包括针对标准符合性和安全性的修复和更改以及基于客户反馈的更改。 这些更改中的大多数更改不需要在应用程序中进行任何编程修改。 有关可能涉及这些修改的更改，请参阅表的“建议的更改”一列。
@@ -263,7 +260,7 @@ ms.lasthandoff: 08/28/2017
 | **绑定命令实例** | 为了提供一种机制，用于将基于视图模型的命令实例绑定到基于视图的输入笔势，<xref:System.Windows.Input.InputBinding> 类现从 <xref:System.Windows.Freezable> 而非 <xref:System.Windows.DependencyObject> 继承。 以下属性现为依赖项属性：<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>此更改产生以下结果：<br><br>* 注册之后，<xref:System.Windows.Input.InputBinding> 对象现处于冻结状态，而不是仍可变。<br>* 无法从多个线程访问实例级别的 <xref:System.Windows.Input.InputBinding> 对象，因为存在 <xref:System.Windows.DependencyObject> 类的限制。<br>* 无法在注册类级别的输入绑定后对其进行转换，因为存在 <xref:System.Windows.Freezable> 类的限制。<br>* 无法对视图模型中创建的命令实例指定输入绑定。 | 如果绑定可变，则在单独的线程上创建 <xref:System.Windows.Input.InputBinding> 类的单独实例，否则请冻结这些绑定。 不要在注册类级别静态 <xref:System.Windows.Input.InputBinding> 后更改它。 |
 | **浏览器应用程序** | WPF 浏览器应用程序 (.XBAP) 现使用与独立 WPF 应用程序相同的方式处理键事件，以便对象以正确顺序接收路由键事件。 | 无。 |
 | **语音符号键组合** | WPF 会对语音符号键进行模糊处理，这不会生成任何可见字符，而是指示该键将与下一个字母键组合使用以生成一个字符。 通过将 <xref:System.Windows.Input.KeyEventArgs.Key> 属性设置为 <xref:System.Windows.Input.Key> 值，键输入事件（如 <xref:System.Windows.Input.Keyboard.KeyDownEvent> 事件）会在键成为语音符号键时进行报告。 这通常属于预期行为，因为应用程序一般不会对创建组合字符的键盘输入做出响应。 | 期望读取组合字符组成键的应用程序可通过使用 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 属性，获取现经过模糊处理的键。 |
-| **焦点管理器** | 如果向 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> 方法传递将 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 附加属性设置为 `true` 的元素，那么当且仅当返回的元素与传递给此方法的元素属于同一 <xref:System.Windows.PresentationSource> 对象时，此方法返回的元素才是相应焦点范围内的上一个键盘焦点元素。 | 无。 |
+| **焦点管理器** | 如果向 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> 方法传递将 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 附加属性设置为 `true` 的元素，那么当且仅当返回的元素与传递给此方法的元素属于同一 <xref:System.Windows.PresentationSource> 对象时，此方法返回的元素才是相应焦点范围内的上一个键盘焦点元素。 | 无。 |
 
 ### <a name="ui-automation"></a>UI 自动化
 
@@ -340,4 +337,3 @@ ms.lasthandoff: 08/28/2017
 
 [.NET Framework 中的过时功能](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](http://go.microsoft.com/fwlink/?LinkId=191505)（.NET Framework 4 应用程序的迁移问题：Beta 2 到 RTM）
-

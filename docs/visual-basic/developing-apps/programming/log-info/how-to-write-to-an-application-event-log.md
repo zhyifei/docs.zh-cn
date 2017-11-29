@@ -1,45 +1,26 @@
 ---
 title: "如何：写入应用程序事件日志 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Computer.EventLog element
-- WriteEntry method
+- WriteEntry method [Visual Basic]
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 018aff8dc130bfe7217c861a7d7bc8ae275ccc66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7cc73b0644003f8231a7792b0b62d143159da075
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>如何：写入应用程序事件日志 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来写入有关应用程序中所发生事件的信息。 本示例将演示如何配置事件日志侦听器，以便 `My.Application.Log` 将跟踪信息写入应用程序事件日志。  
@@ -97,10 +78,9 @@ ms.lasthandoff: 07/28/2017
      为程序集配置事件日志侦听器后，它将接收该程序集写入 `My.Applcation.Log` 的所有消息。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
+ [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
  [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-

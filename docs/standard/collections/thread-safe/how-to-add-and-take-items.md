@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, blocking dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b365d6d3236919f65c840343ec3b33edebea758b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66b4e921a4c7285976694f4633ce1eeaadcb7cf9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：在 BlockingCollection 中逐个添加和取出项
 此示例演示如何以阻止和非阻止方式在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中添加项和删除其中的项。 有关 <xref:System.Collections.Concurrent.BlockingCollection%601> 的详细信息，请参阅 [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
@@ -40,6 +41,5 @@ ms.lasthandoff: 09/19/2017
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
-

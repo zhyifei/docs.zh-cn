@@ -1,33 +1,36 @@
 ---
-title: "在 WPF 中承载 Win32 内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "互操作性 [WPF], 教程"
-  - "互操作性 [WPF], Win32"
-  - "Win32 代码, WPF 互操作"
+title: "在 WPF 中承载 Win32 内容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interoperability [WPF], tutorials
+- Win32 code [WPF], WPF interoperation
+- interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e82d18cd765fc3ac4f4982a71d187a3741f4f03a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 在 WPF 中承载 Win32 内容
-## 系统必备  
- 请参见 [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+# <a name="hosting-win32-content-in-wpf"></a>在 WPF 中承载 Win32 内容
+## <a name="prerequisites"></a>先决条件  
+ 请参阅[WPF 和 Win32 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
   
-## 在 Windows Presentation Framework 中承载 Win32 的演练 \(HwndHost\)  
- 若要在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中重复使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容，请使用 <xref:System.Windows.Interop.HwndHost>，该控件使 HWND 看起来像是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。  与 <xref:System.Windows.Interop.HwndSource> 一样，<xref:System.Windows.Interop.HwndHost> 简单易用：从 <xref:System.Windows.Interop.HwndHost> 派生，并实现 `BuildWindowCore` 和 `DestroyWindowCore` 方法，然后实例化 <xref:System.Windows.Interop.HwndHost> 派生类，最后将其放入 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
+## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>在 Windows Presentation Framework (HwndHost) 内的 Win32 一个演练  
+ 若要重用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内容内[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，使用<xref:System.Windows.Interop.HwndHost>，这是使如下所示的 Hwnd 的控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。  如<xref:System.Windows.Interop.HwndSource>，<xref:System.Windows.Interop.HwndHost>简单地使用： 派生自<xref:System.Windows.Interop.HwndHost>和实现`BuildWindowCore`和`DestroyWindowCore`方法，然后实例化你<xref:System.Windows.Interop.HwndHost>派生类并将其置于你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
- 如果 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 逻辑已经打包为一个控件，则调用 `CreateWindow` 并执行少量的操作便可以完成 `BuildWindowCore` 实现。  例如，若要在 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 中创建 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] LISTBOX 控件：  
+ 如果你[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]逻辑已打包为一个控件，则`BuildWindowCore`实现是略高于调用`CreateWindow`。  例如，若要创建[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]LISTBOX 控件中的[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]:  
   
 ```  
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {  
@@ -50,44 +53,44 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }  
 ```  
   
- 但是，如果 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码并非如此独立，那么该怎么办？  如果是这样，则可以创建一个 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 对话框，然后将其内容嵌入到一个更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中。  该示例中使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 和 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 演示此操作，不过您也可以使用其他语言或者在命令行上完成此操作。  
+ 但是，假设[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]代码不是那么自包含？ 如果这样，你可以创建[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]对话框框中，并将其内容嵌入到更大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  此示例演示在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]和[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]，但它还可以用不同语言或命令行执行此操作。  
   
- 首先，创建一个编译为 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 项目的简单对话框。  
+ 启动一个简单的对话框，将编译为[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)][!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]项目。  
   
- 接下来，将该对话框引入到更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中：  
+ 接下来，将该对话框引入到更大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序：  
   
--   将 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 编译为托管 \(`/clr`\)  
+-   编译[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]为托管 (`/clr`)  
   
--   将对话框转换为控件  
+-   将转换为控件的对话框  
   
--   使用 `BuildWindowCore` 和 `DestroyWindowCore` 方法定义 <xref:System.Windows.Interop.HwndHost> 的派生类  
+-   定义的派生的类<xref:System.Windows.Interop.HwndHost>与`BuildWindowCore`和`DestroyWindowCore`方法  
   
--   重写 `TranslateAccelerator` 方法以处理对话框键  
+-   重写`TranslateAccelerator`方法以处理对话框键  
   
--   重写 `TabInto` 方法以支持 Tab 键控  
+-   重写`TabInto`方法，以支持按 tab 键  
   
--   重写 `OnMnemonic` 方法以支持助记键  
+-   重写`OnMnemonic`方法，以支持助记键  
   
--   实例化 <xref:System.Windows.Interop.HwndHost> 子类，并将其放置在正确的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素下  
+-   实例化<xref:System.Windows.Interop.HwndHost>子类并将其放在右侧[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素  
   
-### 将对话框转换为控件  
- 您可以使用 WS\_CHILD 和 DS\_CONTROL 样式将对话框转换为子 HWND。  转到定义对话框的资源文件 \(.rc\)，找到对话框定义的开始位置：  
+### <a name="turn-the-dialog-into-a-control"></a>将转换为控件的对话框  
+ 对话框中可以变为子使用 WS_CHILD 和 DS_CONTROL 样式的 HWND。  转到在其中定义的对话框，该资源文件 (.rc)，查找对话框定义的开头：  
   
 ```  
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121  
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU  
 ```  
   
- 将第二行代码更改为：  
+ 更改到的第二行：  
   
 ```  
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL  
 ```  
   
- 此操作不会将其完全打包为独立控件；尽管您仍需要调用 `IsDialogMessage()` 以便 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 可以处理某些消息，但是控件更改确实提供了一种可将这些控件放入另一个 HWND 的简便方法。  
+ 此操作不会不完全将其打包成自包含的控件;你仍需要调用`IsDialogMessage()`以便[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]可以处理特定消息，但控件更改提供将放置在另一个 HWND 这些控件的一个简单方法。  
   
-## 子类 HwndHost  
- 导入下列命名空间：  
+## <a name="subclass-hwndhost"></a>子类 HwndHost  
+ 导入以下命名空间：  
   
 ```  
 namespace ManagedCpp  
@@ -100,7 +103,7 @@ namespace ManagedCpp
     using namespace System::Runtime::InteropServices;  
 ```  
   
- 然后创建 <xref:System.Windows.Interop.HwndHost> 的派生类，并重写 `BuildWindowCore` 和 `DestroyWindowCore` 方法：  
+ 然后创建的派生的类<xref:System.Windows.Interop.HwndHost>，并重写`BuildWindowCore`和`DestroyWindowCore`方法：  
   
 ```  
 public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {  
@@ -122,7 +125,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }  
 ```  
   
- 现在，请使用 `CreateDialog` 创建对话框，该对话框实际上是一个控件。  因为这是在 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 中调用的前几个方法之一，所以还应当通过调用您稍后定义的函数 `InitializeGlobals()` 来进行一些标准的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 初始化。  
+ 在本例中使用`CreateDialog`创建实际上是一个控件的对话框。  由于这是一个内部调用的第一个方法[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]，你还应执行某些标准[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]初始化通过调用更高版本，你将定义的函数调用`InitializeGlobals()`:  
   
 ```  
 bool initialized = false;  
@@ -138,14 +141,12 @@ bool initialized = false;
         LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);  
         LoadString(hInstance, IDC_TYPICALWIN32DIALOG, szWindowClass, MAX_LOADSTRING);  
         MyRegisterClass(hInstance);  
-  
 ```  
   
-### 重写 TranslateAccelerator 方法以处理对话框键  
- 如果您现在运行此示例，则可以看到一个显示的对话框控件，但是该示例会忽略所有能够使某个对话框变成有用对话框的键盘处理。  您现在应当重写 `TranslateAccelerator` 实现（来自 <xref:System.Windows.Interop.HwndHost> 实现的接口 `IKeyboardInputSink`）。  当应用程序收到 WM\_KEYDOWN 和 WM\_SYSKEYDOWN 时会调用该方法。  
+### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>重写 TranslateAccelerator 方法以处理对话框键  
+ 如果运行此示例现在，你会收到一个对话框控件显示，但它会忽略所有键盘处理能够使对话框功能的对话框。  你现在应重写`TranslateAccelerator`实现 (来自`IKeyboardInputSink`，一个接口，<xref:System.Windows.Interop.HwndHost>实现)。  当应用程序收到 WM_KEYDOWN 和 WM_SYSKEYDOWN 时，获取调用此方法。  
   
 ```  
-  
 #undef TranslateAccelerator  
         virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,   
             ModifierKeys modifiers) override   
@@ -196,25 +197,24 @@ bool initialized = false;
         }  
 ```  
   
- 这段包含很多代码，需要进行详细解释。  首先，该代码使用 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 和 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 宏；您需要知道已经存在一个名为 `TranslateAccelerator` 的宏，它是在 winuser.h 中定义的：  
+ 这将是代码的大量中的一个段内，因此它无法使用某些更详细的解释。  首先，该代码使用[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]和[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]宏; 你需要注意是否已有一个名为宏`TranslateAccelerator`，参见 winuser.h 中定义：  
   
 ```  
 #define TranslateAccelerator  TranslateAcceleratorW  
 ```  
   
- 因此，请确保定义的是 `TranslateAccelerator` 方法而不是 `TranslateAcceleratorW` 方法。  
+ 所以请确保定义`TranslateAccelerator`方法而不`TranslateAcceleratorW`方法。  
   
- 同样，同时存在非托管 winuser.h MSG 和托管 `Microsoft::Win32::MSG` 结构。  您可以使用 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::` 运算符来消除两者之间的歧义。  
+ 同样，没有非托管参见 winuser.h 消息和托管`Microsoft::Win32::MSG`结构。  你可以使用这两者之间区分[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]`::`运算符。  
   
 ```  
-  
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,   
     ModifierKeys modifiers) override   
 {  
     ::MSG m = ConvertMessage(msg);  
 ```  
   
- 两个 MSG 有相同的数据，但是有时使用非托管定义更容易，因此在本示例中，您可以定义明显转换例程：  
+ 两个消息数具有相同的数据，但是有时很容易地使用的非托管的定义，因此在此示例中，您可以定义明显转换例程：  
   
 ```  
 ::MSG ConvertMessage(System::Windows::Interop::MSG% msg) {  
@@ -235,7 +235,7 @@ virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
 }  
 ```  
   
- 返回到 `TranslateAccelerator`。  基本原则是调用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函数 `IsDialogMessage` 以尽量执行更多的操作，但是 `IsDialogMessage` 无权访问对话框外部的任何内容。当用户在对话框中按 Tab 键，并且 Tab 键遍历了对话框中的最后一个控件时，您需要通过调用 `IKeyboardInputSite::OnNoMoreStops` 来将焦点设置到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 部分。  
+ 返回到`TranslateAccelerator`。  基本原则是调用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数`IsDialogMessage`完成尽可能工作但`IsDialogMessage`不具有访问对话框外部的任何内容。 在对话框中，按 tab 键周围的用户选项卡运行之后我们对话框中的最后一个控件时，你需要将焦点设置到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]部分通过调用`IKeyboardInputSite::OnNoMoreStops`。  
   
 ```  
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know   
@@ -257,7 +257,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }  
 ```  
   
- 最后，调用 `IsDialogMessage`。  但是 `TranslateAccelerator` 方法的责任之一是通知 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 您是否处理了键击。  如果您尚未处理，则输入事件可以向下或向上传递到应用程序的其他部分。  此时，您需要公开键盘消息处理的杂项和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 中输入体系结构的性质。  不过，`IsDialogMessage` 无论如何不会返回它是否处理了特定键击。  更糟糕的是，它会对不应处理的键击调用 `DispatchMessage()`！  因此，您不得不对 `IsDialogMessage` 进行反向工程处理，并仅针对已知它将处理的键来调用它：  
+ 最后，调用 `IsDialogMessage`。  但其中一个的职责`TranslateAccelerator`方法将告诉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是否处理击键。 如果你没有处理它，输入的事件可以进行隧道和完成的应用程序的其余部分的气泡。 在这里，你将在其中公开的杂项键盘消息处理和中的输入体系结构的性质[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]。 遗憾的是，`IsDialogMessage`不返回以任何方式它是否处理特定击键。  更糟的是，它将调用`DispatchMessage()`上不应处理的键击 ！  因此，你将需要反向工程处理`IsDialogMessage`，并仅为你知道的密钥将处理调用它：  
   
 ```  
 // Only call IsDialogMessage for keys it will do something with.  
@@ -280,11 +280,10 @@ if (msg.message == WM_SYSKEYDOWN || msg.message == WM_KEYDOWN) {
     }  
 ```  
   
-### 重写 TabInto 方法以支持 Tab 键控  
- 既然实现了 `TranslateAccelerator`，用户现在可以在对话框中按 Tab 键离开对话框，转移到更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  但是，用户不能按 Tab 键返回该对话框。  要解决这个问题，您需要重写 `TabInto`：  
+### <a name="override-tabinto-method-to-support-tabbing"></a>重写到支持按 tab 键的 TabInto 方法  
+ 现在，已实现`TranslateAccelerator`，用户可以按 tab 键围绕内对话框框并移出到更大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  但是，用户不能恢复到对话框中按 tab 键。  若要解决这个问题，重写`TabInto`:  
   
 ```  
-  
 public:   
     virtual bool TabInto(TraversalRequest^ request) override {  
         if (request->FocusNavigationDirection == FocusNavigationDirection::Last) {  
@@ -297,13 +296,12 @@ public:
         }  
         return true;  
     }  
-  
 ```  
   
- `TraversalRequest` 参数通知您 Tab 操作是普通的 Tab 还是 Shift Tab。  
+ `TraversalRequest`参数指示你的选项卡操作是一个选项卡或 shift 选项卡。  
   
-### 重写 OnMnemonic 方法以支持助记键  
- 键盘处理已基本完成，但是还有一件事情需要处理 \- 助记键还不能工作。  如果用户按 Alt\-F，焦点不会跳到“First name:”（名字:）编辑框。  因此，请重写 `OnMnemonic` 方法：  
+### <a name="override-onmnemonic-method-to-support-mnemonics"></a>重写 OnMnemonic 方法，以支持助记键  
+ 键盘处理的方法是几乎已完成，但是还有一件事缺少 – 助记键不起作用。  如果用户按下 alt F，焦点 doe 不跳转到"第一个名称:"编辑框。 因此，重写`OnMnemonic`方法：  
   
 ```  
 virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifiers) override {  
@@ -333,10 +331,10 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 };  
 ```  
   
- 为什么不在此调用 `IsDialogMessage`？  与前面的问题相同：您需要能够通知 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 代码您的代码是否已处理键击，但 `IsDialogMessage` 不能实现这一点。  同时，还存在另一个原因：如果获得焦点的 HWND 不在对话框内，`IsDialogMessage` 会拒绝处理助记键。  
+ 为什么不调用`IsDialogMessage`此处？  根据需要之前-若要能够通知具有同样的问题[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]代码不管是你的代码，处理键击和`IsDialogMessage`无法做到这一点。  此外还有第二个问题，因为`IsDialogMessage`拒绝处理助记键，如果已设定焦点的 HWND 不在对话框中。  
   
-### 实例化 HwndHost 派生类  
- 最后，既然所有键和 Tab 键控支持都已准备就绪，您可以将您的 <xref:System.Windows.Interop.HwndHost> 放入更大的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序中。  如果主应用程序是使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 编写的，将其放入正确位置的最简便方式是在您想放入 <xref:System.Windows.Interop.HwndHost> 的位置保留一个空的 <xref:System.Windows.Controls.Border> 元素。  您可以在这里创建一个名为 `insertHwndHostHere` 的 <xref:System.Windows.Controls.Border>：  
+### <a name="instantiate-the-hwndhost-derived-class"></a>实例化 HwndHost 派生类  
+ 最后，既然所有密钥和选项卡支持都已到位，你可以将你<xref:System.Windows.Interop.HwndHost>到更大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  如果主应用程序用编写[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，将其放在正确的位置的最简单方法是保留一个空<xref:System.Windows.Controls.Border>您想要放置的元素<xref:System.Windows.Interop.HwndHost>。  此处创建<xref:System.Windows.Controls.Border>名为`insertHwndHostHere`:  
   
 ```  
 <Window x:Class="WPFApplication1.Window1"  
@@ -353,7 +351,7 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 </Window>  
 ```  
   
- 至此，剩下的操作就是在代码序列中找到一个适当的位置来实例化 <xref:System.Windows.Interop.HwndHost>，并将其连接到 <xref:System.Windows.Controls.Border>。  在以下示例中，您可以将其放置到 <xref:System.Windows.Window> 派生类的构造函数中：  
+ 然后剩下的就是在用于实例化的代码序列中查找的良好开端<xref:System.Windows.Interop.HwndHost>并连接到<xref:System.Windows.Controls.Border>。  在此示例中，你会将它放在构造函数内<xref:System.Windows.Window>派生类：  
   
 ```  
 public partial class Window1 : Window {  
@@ -367,9 +365,9 @@ public partial class Window1 : Window {
 }  
 ```  
   
- 您会得到以下结果：  
+ 它会为你提供：  
   
- ![WPF 应用程序屏幕快照](../../../../docs/framework/wpf/advanced/media/interoparch09.png "InteropArch09")  
+ ![WPF 应用程序屏幕快照](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

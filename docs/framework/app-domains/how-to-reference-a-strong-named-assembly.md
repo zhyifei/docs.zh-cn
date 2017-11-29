@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
 - compile-time assembly referencing
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b005926f99b7c151e5916a95a9852dd8b448a928
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aa46bfdfe42dca9509e39d4b6218473aa00a1877
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：引用具有强名称的程序集
 引用强名称程序集中的类型或资源的过程通常是透明的。 可在编译时（早期绑定）或在运行时进行引用。  
@@ -50,7 +52,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>对强名称程序集进行运行时引用  
   
-1.  对强名称程序集进行运行时引用时（例如，通过使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 方法），必须使用引用的强名称程序集的显示名称。 显示名称的语法如下：  
+1.  对强名称程序集进行运行时引用时（例如，通过使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法），必须使用引用的强名称程序集的显示名称。 显示名称的语法如下：  
   
      \<assembly name>, \<version number>, \<culture>, \<public key token>  
   
@@ -62,9 +64,11 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
      在此示例中，`PublicKeyToken` 是十六进制格式的公钥标记。 如果没有区域性值，请使用 `Culture=neutral`。  
   
- 下面的代码示例演示如何将此信息用于 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法。  
+ 下面的代码示例演示如何将此信息用于 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法。  
   
- [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)][!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)][!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
+ [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)]
+ [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)]
+ [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
   
  可使用以下[强名称 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令为特定程序集打印十六进制格式的公钥和公钥标记：  
   
@@ -76,4 +80,3 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ## <a name="see-also"></a>另请参阅  
  [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

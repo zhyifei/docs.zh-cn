@@ -1,44 +1,36 @@
 ---
-title: "如何︰ 执行大型 XML 文档 (Visual Basic 中) 的流式转换 |Microsoft 文档"
+title: "如何： 执行大型 XML 文档 (Visual Basic) 的流式转换"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>如何︰ 执行大型 XML 文档 (Visual Basic 中) 的流式转换
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>如何： 执行大型 XML 文档 (Visual Basic) 的流式转换
 有时，你必须转换任意大的 XML 文件并在编写你的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
   
- 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符，如<xref:System.Linq.Enumerable.OrderBy%2A>、 循环访问其源、 收集的所有数据、 进行排序，以及最后生成序列中的第一项。</xref:System.Linq.Enumerable.OrderBy%2A> 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会使应用程序保持小的内存需求量。  
+ 流处理技术最适合只需处理一次源文档的情况，您可以按文档顺序处理各个元素。 某些标准查询运算符（如 <xref:System.Linq.Enumerable.OrderBy%2A>）可以循环访问其源、收集所有数据、对数据排序，最后生成序列中的第一项。 请注意，如果使用可在生成第一项之前具体化源的查询运算符，则不会使应用程序保持小的内存需求量。  
   
- 即使您使用中所述的技术[如何︰ 流处理可访问标头信息 (Visual Basic 中) 的 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)，如果您试图装配包含转换后的文档中，内存使用量将会非常大的 XML 树。  
+ 即使使用中所述的技术[如何： 流处理可访问标头信息 (Visual Basic 中) 的 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)，如果试图装配包含转换后的文档中，内存使用量将会非常大的 XML 树。  
   
- 主要方法有两种。 一种方法是使用<xref:System.Xml.Linq.XStreamingElement>。</xref:System.Xml.Linq.XStreamingElement>的延迟的处理特性 另一种方法是创建<xref:System.Xml.XmlWriter>，并使用的功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]将元素写入到<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> 本主题演示这两种方法。  
+ 主要方法有两种。 一种方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延迟处理特性。 另一种方法是创建一个 <xref:System.Xml.XmlWriter> 并使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能将元素写入 <xref:System.Xml.XmlWriter>。 本主题演示这两种方法。  
   
 ## <a name="example"></a>示例  
- 下面的示例中的示例在生成[如何︰ 流处理可访问标头信息 (Visual Basic 中) 的 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下面的示例生成中的示例在[如何： 流处理可访问标头信息 (Visual Basic 中) 的 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
- 此示例使用延迟的执行功能<xref:System.Xml.Linq.XStreamingElement>输出进行流式处理。</xref:System.Xml.Linq.XStreamingElement> 本示例可在保持很小的内存需求量的同时转换非常大的文档。  
+ 本示例使用 <xref:System.Xml.Linq.XStreamingElement> 的延迟执行功能对输出进行流式处理。 本示例可在保持很小的内存需求量的同时转换非常大的文档。  
   
  请注意，自定义轴 (`StreamCustomerItem`) 经过专门编写，可以处理具有 `Customer`、`Name` 和 `Item` 元素，并且这些元素将按下面 Source.xml 文档排列的文档。 不过，将会准备一个更可靠的实现以分析无效文档。  
   
@@ -263,15 +255,15 @@ End Class
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例也生成中的示例在[如何︰ 流处理可访问标头信息 (Visual Basic 中) 的 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下面的示例也生成中的示例在[如何： 流处理可访问标头信息 (Visual Basic 中) 的 XML 片段](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)。  
   
- 此示例使用的功能[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]将元素写入到<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> 本示例可在保持很小的内存需求量的同时转换非常大的文档。  
+ 本示例使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能将元素写入 <xref:System.Xml.XmlWriter>。 本示例可在保持很小的内存需求量的同时转换非常大的文档。  
   
  请注意，自定义轴 (`StreamCustomerItem`) 经过专门编写，可以处理具有 `Customer`、`Name` 和 `Item` 元素，并且这些元素将按下面 Source.xml 文档排列的文档。 不过，更可靠的实现将会使用 XSD 验证源文档或将会准备一个更可靠的实现以分析无效文档。  
   
  本示例与本主题中的前一示例使用同一个源文档 Source.xml。 它也生成完全相同的输出。  
   
- 用于<xref:System.Xml.Linq.XStreamingElement>流式处理 XML 是首选于写入到<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter>输出</xref:System.Xml.Linq.XStreamingElement>  
+ 使用 <xref:System.Xml.Linq.XStreamingElement> 对输出 XML 进行流式处理胜于写入到 <xref:System.Xml.XmlWriter>。  
   
 ```vb  
 Module Module1  

@@ -1,25 +1,21 @@
 ---
 title: "教程：将查询链接在一起 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 08196f4780e566cc05e36b6cfe78caad3e9c96a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6048ce6a5b477daef5271f75ea1e988725452fcd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>教程：将查询链接在一起 (C#)
 本教程阐释将查询链接在一起时的处理模型。 将查询链接在一起是编写函数转换的一个关键部分。 确切理解链接的查询如何工作非常重要。  
@@ -38,4 +34,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>请参阅  
  [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
-

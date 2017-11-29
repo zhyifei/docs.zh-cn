@@ -1,33 +1,24 @@
 ---
 title: "启动多个异步任务并在其完成时进行处理 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bf70bd5e79e962d8edaea2dc037f191707f4e047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
-通过使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>，可以同时启动多个任务，并在它们完成时逐个对它们进行处理，而不是按照它们的启动顺序进行处理。  
+通过使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，可以同时启动多个任务，并在它们完成时逐个对它们进行处理，而不是按照它们的启动顺序进行处理。  
   
  下面的示例使用查询来创建一组任务。 每个任务都下载指定网站的内容。 在对 while 循环的每次迭代中，对 `WhenAny` 的等待调用返回任务集合中首先完成下载的任务。 此任务从集合中删除并进行处理。 循环重复进行，直到集合中不包含任何任务。  
   
@@ -67,7 +58,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  在项目的 MainWindow.xaml.cs 文件中，对 `AccessTheWebAsync` 方法进行以下更改。  
   
--   通过应用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 而非 <xref:System.Linq.Enumerable.ToArray%2A> 执行查询。  
+-   通过应用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 而非 <xref:System.Linq.Enumerable.ToArray%2A> 执行查询。  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -243,8 +234,7 @@ namespace ProcessTasksAsTheyFinish
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）
-

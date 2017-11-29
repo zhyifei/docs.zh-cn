@@ -1,42 +1,41 @@
 ---
-title: "如何：访问被派生类隐藏的变量 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "基类, 访问元素"
-  - "已声明的元素, 引用"
-  - "元素名称, 限定"
-  - "限定, 元素名称"
-  - "引用, 已声明的元素"
-  - "变量 [Visual Basic], 访问隐藏"
+title: "如何：访问被派生类隐藏的变量 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- base classes [Visual Basic], accessing elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declared elements [Visual Basic], referencing
+- variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：访问被派生类隐藏的变量 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-如果派生类的代码访问变量，编译器通常将引用解析到最近的可访问版本，即从访问类向上，派生步骤最少的可访问版本。  如果变量是在该派生类中定义的，则代码通常访问该定义。  
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>如何：访问被派生类隐藏的变量 (Visual Basic)
+当在派生类中的代码访问的变量时，编译器通常将到最接近的可访问版本，即的可访问版本引用解析派生步骤最少向后从访问的类。 如果变量在派生类中定义的则代码通常会访问该定义。  
   
- 如果该派生类变量隐藏了基类的某个变量，则它隐藏了基类版本。  但是，通过使用 `MyBase` 关键字限定基类变量，可以访问该基类变量。  
+ 如果派生的类变量隐藏基类中的变量，它会隐藏基类版本。 但是，可以通过限定其与访问基类变量`MyBase`关键字。  
   
-### 访问被派生类隐藏的基类变量  
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>若要访问由派生类隐藏的基类变量  
   
--   在表达式或赋值语句中，在变量名称前面加 `MyBase` 关键字和一个句点 \(`.`\)。  
+-   在表达式或赋值语句中，变量名称前面加`MyBase`关键字和一个句点 (`.`)。  
   
-     编译器将引用解析到该变量的基类版本。  
+     编译器将解析对变量的基类版本的引用。  
   
-     下面的示例阐释了如何通过继承进行隐藏。  这里有两个引用，一个访问隐藏变量，另一个绕开隐藏。  
+     下面的示例演示通过继承进行隐藏。 它使两个引用，一个访问隐藏的变量，一个绕开隐藏。  
   
     ```  
     Public Class shadowBaseClass  
@@ -53,18 +52,18 @@ caps.handback.revision: 20
     End Class  
     ```  
   
-     上一个示例在基类中声明变量 `shadowString`，而在派生类中隐藏该变量。  当名称 `shadowString` 没有限定时，派生类中的过程 `showStrings` 显示字符串的隐藏版本。  如果 `shadowString` 由 `MyBase`  关键字限定，则显示被隐藏的版本。  
+     前面的示例声明了变量`shadowString`中的基类和派生类中隐藏它。 该过程`showStrings`派生类中显示隐藏版本的字符串时名称`shadowString`未限定。 然后，它显示隐藏的版本时`shadowString`是用限定`MyBase`关键字。  
   
-## 可靠编程  
- 要降低引用被隐藏变量的意外版本的风险，可以完全限定对被隐藏变量的所有引用。  隐藏使用同一名称引入了变量的多个版本。  如果代码语句引用该变量名，则编译器将引用解析到的版本取决于代码语句的位置以及是否存在限定字符串等因素。  这会增加引用错误变量版本的风险。  
+## <a name="robust-programming"></a>可靠编程  
+ 要降低引用隐藏的变量的非预期版本的风险，则可以完全限定到隐藏的变量的所有引用。 隐藏引入了多个版本具有相同名称的变量。 当代码语句引用的变量的名称时，编译器将该引用解析的版本取决于因素，如代码语句的位置和限定字符串的状态。 这会增加到了错误版本的该变量引用的风险。  
   
-## 请参阅  
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
+## <a name="see-also"></a>另请参阅  
+ [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [如何：隐藏与你的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

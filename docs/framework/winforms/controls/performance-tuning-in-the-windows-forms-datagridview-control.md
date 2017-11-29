@@ -1,50 +1,51 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的性能优化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView 控件 [Windows 窗体], 性能优化"
-  - "性能优化, 数据网格"
-  - "性能, DataGridView 控件"
+title: "Windows 窗体 DataGridView 控件中的性能优化"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], performance tuning
+- performance [Windows Forms], DataGridView control
+- performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 452c55d38a896ec96e0992a4b9826f08dc4caa0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体 DataGridView 控件中的性能优化
-当处理大量数据时，除非谨慎地使用 `DataGridView` 控件，否则该控件可能占用大量内存，从而增加系统开销。  在具有有限内存的客户端上，可以避免使用具有高内存成本的功能，从而避免一定的系统开销。  还可以使用虚拟模式来自己管理部分或全部数据维护和检索任务，这样您便可以根据具体的情况来自定义内存使用。  
+# <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的性能优化
+在使用大量的数据，`DataGridView`控件可以使用大量的内存开销，除非谨慎使用。 上内存有限的客户端，你可以避免此开销的一些通过避免功能，具有高内存成本。 你还可以管理的部分或全部数据维护和检索任务自己使用的虚拟模式以便自定义你的方案的内存使用量。  
   
-## 本节内容  
- [缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- 描述在处理大量数据时，如何正确使用 `DataGridView` 控件，以避免不必要的内存使用和性能影响。  
+## <a name="in-this-section"></a>本节内容  
+ [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ 介绍如何使用`DataGridView`控件的方式来处理大量数据时避免不必要的内存使用情况和性能损失。  
   
  [Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
- 描述如何使用虚拟模式来补充或取代标准数据绑定机制。  
+ 介绍如何使用虚拟模式来补充或取代的标准的数据绑定机制。  
   
  [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
- 描述如何实现几个虚拟模式事件的处理程序。  还演示如何实现用户编辑的行级回滚和提交。  
+ 描述如何实现多个虚拟模式事件的处理程序。 此外演示如何实现行级回滚和提交用户编辑。  
   
  [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
- 描述如何按需加载数据，当要显示的数据比可用客户端内存可以存储的数据多时，按需加载非常有用。  
+ 介绍如何加载点播情况下，这很有用，如果你具有要显示与可用的客户端内存可以存储的详细数据的数据。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
- 提供 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
+ 提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- 提供 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性的参考文档。  
+ 提供的参考文档<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性。  
   
-## 请参阅  
- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

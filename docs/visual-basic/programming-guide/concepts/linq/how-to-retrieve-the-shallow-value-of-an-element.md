@@ -1,32 +1,27 @@
 ---
-title: "如何︰ 检索浅值的元素 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 检索浅值的元素 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 39a0648bb3fd09b9e323560b447be3cc445d5b7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 673b890ab842d1c18c8020eefe03d90086d1bf4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>如何︰ 检索浅值的元素 (Visual Basic)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>如何： 检索浅值的元素 (Visual Basic)
 本主题说明如何获取元素的浅值。 浅值只是特定元素的值，与深值相反，包括串联成一个单一字符串的所有子元素的值。  
   
- 当使用强制转换检索元素值或<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>属性，您可以检索深值。</xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> 要检索浅值，您可以使用 `ShallowValue` 扩展方法，如以下示例所示。 当根据内容选择元素时，检索浅值十分有用。  
+ 使用强制转换或 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性检索元素值时，您可以检索深值。 要检索浅值，您可以使用 `ShallowValue` 扩展方法，如以下示例所示。 当根据内容选择元素时，检索浅值十分有用。  
   
  下面的示例声明了检索元素浅值的扩展方法。 然后在查询中使用该扩展方法列出包含计算得出的值的所有元素。  
   

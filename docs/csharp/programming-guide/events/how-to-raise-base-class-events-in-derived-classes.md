@@ -1,38 +1,19 @@
 ---
 title: "如何：在派生类中引发基类事件（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- events [C#], in derived classes
+helpviewer_keywords: events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 548409d3f632213f3ff1de0a27a70b9f42b18332
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 13501f51a1e99eb6fb792a1c6abe5c7029cc020a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何：在派生类中引发基类事件（C# 编程指南）
 下面的简单示例演示用于在基类中声明事件，以便也可以从派生类引发它们的标准方法。 在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库的 Windows 窗体类中广泛使用了此模式。  
@@ -43,12 +24,11 @@ ms.lasthandoff: 07/28/2017
 >  不要在基类中声明虚拟事件并在派生类中重写它们。 C# 编译器不会处理这些事件，并且无法预知派生事件的订阅者是否实际上会订阅基类事件。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
+ [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [事件](../../../csharp/programming-guide/events/index.md)   
- [委托](../../../csharp/programming-guide/delegates/index.md)   
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [事件](../../../csharp/programming-guide/events/index.md)  
+ [委托](../../../csharp/programming-guide/delegates/index.md)  
+ [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)
-

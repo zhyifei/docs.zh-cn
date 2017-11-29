@@ -1,38 +1,41 @@
 ---
-title: "在可移植子集项目中添加服务引用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在可移植子集项目中添加服务引用"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7bd456b8c89c315321ad23683708d9dacc1dda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在可移植子集项目中添加服务引用
-通过可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 XBOX）。可移植子集项目只引用 .NET 可移植库，后者是 .NET Framework 程序集，可在任何核心 .NET 平台上使用。  
+# <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
+可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以在任何.NET 实现中使用的.NET framework 程序集。  
   
-## 添加服务引用详细信息  
- 在可移植子集项目中添加服务引用时，将强制执行以下限制：  
+## <a name="add-service-reference-details"></a>添加服务引用详细信息  
+ 在可移植子集项目中添加服务引用时，将强制执行以下限制：   
   
-1.  对于 <xref:System.Xml.Serialization.XmlSerializer>，仅允许文本编码。SOAP 编码在导入过程中生成错误。  
+1.  对于 <xref:System.Xml.Serialization.XmlSerializer>，仅允许文本编码。 SOAP 编码在导入过程中生成错误。  
   
 2.  针对使用 <xref:System.Runtime.Serialization.DataContractSerializer> 方案的服务，提供了数据协定代理项以确保重用的类型仅来自可移植子集。  
   
-3.  将忽略依赖可移植库中不支持的绑定的终结点（除没有事务流、可靠会话或 MTOM 编码的 <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WsHttpBinding> 的绑定以及等效的自定义绑定之外的所有绑定）。  
+3.  将忽略依赖可移植库中不支持的绑定的终结点（除没有事务流、可靠会话或 MTOM 编码的 <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSHttpBinding> 的绑定以及等效的自定义绑定之外的所有绑定）。  
   
 4.  在导入之前的所有操作中，将从所有消息描述删除消息标头。  
   
-5.  将从生成的客户端代理代码删除不可移植的特性 <xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.Serializable> 和 <xref:System.ServiceModel.TransactionFlow>。  
+5.  将从生成的客户端代理代码删除不可移植的特性 <xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute> 和 <xref:System.ServiceModel.TransactionFlowAttribute>。  
   
-6.  将从 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContract> 和 <xref:System.ServiceModel.FaultContract> 删除不可移植的属性 ProtectionLevel、SessionMode、IsInitiating、IsTerminating。  
+6.  将从 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和 <xref:System.ServiceModel.FaultContractAttribute> 删除不可移植的属性 ProtectionLevel、SessionMode、IsInitiating、IsTerminating。  
   
 7.  所有服务操作都是作为客户端代理上的异步操作生成的。  
   
@@ -50,6 +53,6 @@ caps.handback.revision: 3
   
 14. 可移植子集项目中不支持 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>。  
   
-## 请参阅  
- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  [可移植类库](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))

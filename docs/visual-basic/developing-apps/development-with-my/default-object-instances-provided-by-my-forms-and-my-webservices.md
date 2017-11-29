@@ -1,39 +1,38 @@
 ---
-title: "My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Forms 对象, 开发应用程序"
-  - "My.WebServices 对象, 开发应用程序"
-  - "快速应用程序开发 (RAD), My.Forms"
-  - "快速应用程序开发 (RAD), My.WebServices"
+title: "My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.WebServices object [Visual Basic], developing applications
+- My.Forms object [Visual Basic], developing applications
+- rapid application development (RAD), My.Forms
+- rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 44265c3f6f38a001192a8d92f2fbb6edeaca21cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-[My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) 和 [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) 对象提供对应用程序所使用的窗体、数据源以及 XML Web services 的访问。  它们通过提供每个对象的*“默认实例”*集合实现此功能。  
+# <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 和 My.WebServices 提供的默认对象实例 (Visual Basic)
+[My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)和[My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)对象提供到窗体、 数据源和应用程序使用的 XML Web 服务的访问权限。 它们执行此操作通过提供的集合*默认实例*的每个对象。  
   
-## 默认实例  
- 默认实例是由运行时提供的类的实例，它不需要使用 `Dim` 和 `New` 语句进行声明和实例化。  下面的示例演示如何声明和实例化称为 `Form1` 的 <xref:System.Windows.Forms.Form> 类的实例，以及如何通过 `My.Forms` 获得此 <xref:System.Windows.Forms.Form> 类的默认实例。  
+## <a name="default-instances"></a>默认实例  
+ 默认实例是由运行时提供，不需要为的类声明并实例化使用`Dim`和`New`语句。 下面的示例演示如何你可能会声明并实例化的实例<xref:System.Windows.Forms.Form>类调用`Form1`，以及如何你现在能够获取的默认实例<xref:System.Windows.Forms.Form>类通过`My.Forms`。  
   
  [!code-vb[VbVbcnMy#5](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_1.vb)]  
   
  [!code-vb[VbVbcnMy#6](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_2.vb)]  
   
- `My.Forms` 对象会返回项目中每个 `Form` 类的默认实例的集合。  同样，对于您已在应用程序中创建引用的每一项 Web 服务，`My.WebServices` 都会为其代理类提供一个默认实例。  
+ `My.Forms`对象返回的默认实例的集合，每个`Form`存在于项目中的类。 同样，`My.WebServices`提供在你的应用程序中创建了对引用的每个 Web 服务代理类的默认实例。  
   
-## 请参阅  
- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)   
+## <a name="see-also"></a>另请参阅  
+ [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
  [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

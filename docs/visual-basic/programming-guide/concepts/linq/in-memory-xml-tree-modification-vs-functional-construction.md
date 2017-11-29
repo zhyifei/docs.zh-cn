@@ -1,31 +1,27 @@
 ---
-title: "内存中 XML 树修改与功能构造 (LINQ to XML) (Visual Basic 中) |Microsoft 文档"
+title: "内存中 XML 树修改与功能构造 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0456d221f01573e6ef1c67a3e0d1db585e6f3b0c
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3652933a5d25b298167f54525800eceee16264e8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>内存中 XML 树修改与功能构造 (LINQ to XML) (Visual Basic)
-就地修改 XML 树是更改 XML 文档形状的传统方法。 典型的应用程序将文档加载到数据存储区（如 DOM 或 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]）；使用编程接口插入节点、删除节点或更改节点的内容；然后将 XML 保存到文件或通过网络传输。  
+就地修改 XML 树是更改 XML 文档形状的传统方法。 典型的应用程序将文档加载到数据存储区（如 DOM 或 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]）；使用编程接口插入节点、删除节点或更改节点的内容；然后将 XML 保存到文件或通过网络传输。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]允许在许多方案中非常有用的另一种方法*︰ 函数构造*。 函数构造将修改数据视为转换问题，而不是数据存储区的具体操作。 如果您采用某种数据表示形式并有效地将其从一种形式转换为另一种形式，其结果等效于您采用一个数据存储区并对其以某种方式进行操作以采用另一种形状。 函数构造方法的关键是要传递到查询的结果<xref:System.Xml.Linq.XDocument>和<xref:System.Xml.Linq.XElement>构造函数。</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许使用另一种可在许多方案中使用的方法：*函数构造*。 函数构造将修改数据视为转换问题，而不是数据存储区的具体操作。 如果您采用某种数据表示形式并有效地将其从一种形式转换为另一种形式，其结果等效于您采用一个数据存储区并对其以某种方式进行操作以采用另一种形状。 函数构造方法的关键是将查询的结果传递给 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 构造函数。  
   
  在许多情况下，您可以在操作数据存储区所需的很短时间内编写转换代码，并且该代码更稳定、更易于维护。 在这些情况下，虽然转换方法可能具有较强的处理能力，但它更适合用于修改数据。 如果开发人员熟悉函数方法，则在很多情况下，生成的代码会更易于理解。 可以很容易地找到修改树的每部分的代码。  
   

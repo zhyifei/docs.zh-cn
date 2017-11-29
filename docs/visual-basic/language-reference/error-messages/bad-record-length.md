@@ -1,43 +1,41 @@
 ---
-title: "错误的记录长度 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID59"
-dev_langs: 
-  - "VB"
+title: "错误的记录长度"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 747d62cb41ef841b4486e0c7108c37a86929683e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 错误的记录长度
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-该错误可能的原因包括：  
+# <a name="bad-record-length"></a>错误的记录长度
+此错误的可能原因包括：  
   
--   在 `FileGet`、`FileGetObject`、`FilePut` 或 `FilePutObject` 语句中指定的记录变量的长度与在对应的 `FileOpen` 语句中指定的长度不同。  
+-   记录变量中指定的长度`FileGet`， `FileGetObject`，`FilePut`或`FilePutObject`语句不同于指定的相应的长度`FileOpen`语句。  
   
--   `FilePut` 或 `FilePutObject` 语句中的变量是变长字符串或者包括变长字符串。  
+-   中的变量`FilePut`或`FilePutObject`语句或者包括可变长度字符串。  
   
--   `FilePut` 或 `FilePutObject` 中的变量是 `Variant` 类型或者包括此类型。  
+-   中的变量`FilePut`或`FilePutObject`长字符串或者包括`Variant`类型。  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  确保定义记录变量类型的用户定义类型中的定长变量的大小总和与 `FileOpen` 语句的 `Len` 子句中声明的值相同。  
+1.  请确保记录变量的类型定义的用户定义类型中的固定长度变量的大小的总和是相同的值中所述`FileOpen`语句的`Len`子句。  
   
-2.  如果 `FilePut` 或 `FilePutObject` 语句中的变量是变长字符串或者包括变长字符串，确保变长字符串比 `FileOpen` 语句的 `Len` 子句中指定的记录长度至少少 2 个字符。  
+2.  如果中的变量`FilePut`或`FilePutObject`语句或者包括可变长度字符串，请确保可变长度字符串是短于中指定的记录长度至少 2 个字符`Len`子句`FileOpen`语句。  
   
-3.  如果 `FilePut` 或 `FilePutObject` 中的变量是 `Variant` 类型或包括此类型，则确保变长字符串比 `FileOpen` 语句的 `Len` 子句中指定的记录长度至少少 4 个字节。  
+3.  如果中的变量`FilePut`或`FilePutObject`长字符串或者包括`Variant`确保可变长度字符串至少 4 个字节短于中指定的记录长度`Len`子句`FileOpen`语句。  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>   
- <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>   
- <xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>   
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>  
+ <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>  
+ <xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>  
  <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>

@@ -1,30 +1,21 @@
 ---
 title: "如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 11b6fef5356f97c53dc973b13eb5f1e8c31dbe72
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bfa7781241b837f353fe34d43b8cc6ab82f15564
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)
 在 async 方法中，任务在创建后即启动。 在任务完成前处理无法继续的方法中将 [await](../../../../csharp/language-reference/keywords/await.md) 运算符应用于任务。 通常任务被创建后即等待，如下面的示例所示。  
@@ -243,8 +234,7 @@ namespace AsyncExample_MultipleTasks
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-

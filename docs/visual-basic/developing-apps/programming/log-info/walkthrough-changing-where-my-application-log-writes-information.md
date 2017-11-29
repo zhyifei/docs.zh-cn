@@ -1,43 +1,24 @@
 ---
 title: "更改 My.Application.Log 写入信息的位置 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>演练：更改 My.Application.Log 写入信息的位置 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。 本演练将演示如何重写默认设置，以及如何使 `Log` 对象将信息写入其他日志侦听器。  
@@ -180,13 +161,13 @@ ms.lasthandoff: 07/28/2017
   
      可以使用的类型有：  
   
-    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 侦听器，它将信息写入文件日志。  
+    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入文件日志。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 侦听器，它将信息写入 `initializeData` 参数指定的计算机事件日志。  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入 `initializeData` 参数指定的计算机事件日志。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 侦听器，它们将信息写入 `initializeData` 参数指定的文件。  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 侦听器，它们将信息写入 `initializeData` 参数指定的文件。  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 侦听器，它将信息写入命令行控制台。  
+    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入命令行控制台。  
   
      有关其他类型的日志侦听器写入信息的位置的信息，请参阅该类型的文档。  
   
@@ -209,10 +190,9 @@ ms.lasthandoff: 07/28/2017
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
+ [如何：将事件信息写入文本文件](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
  [如何：写入应用程序事件日志](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
-

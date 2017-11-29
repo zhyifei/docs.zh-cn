@@ -1,39 +1,45 @@
 ---
-title: "如何：打开放置在 RichTextBox 控件上的文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "拖放 [WPF], 打开放置的文件"
-  - "拖放 [WPF], RichTextBox"
-  - "RichTextBox [WPF], 拖放"
+title: "如何：打开放置在 RichTextBox 控件上的文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drag-and-drop [WPF], RichTextBox
+- RichTextBox [WPF], drag-and-drop
+- drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f65ecaf9c6ef34176967e1ebf9134ceee195036b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：打开放置在 RichTextBox 控件上的文件
-在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，<xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.RichTextBox> 和 <xref:System.Windows.Documents.FlowDocument> 控件都具有内置拖放功能。  通过该内置功能，可在控件内和控件之间拖放文本。  但是，该功能不支持通过将文件放到控件上来打开文件。  这些控件还会将拖放事件标记为已处理。  因此，在默认情况下，您无法添加自己的事件处理程序以提供用于打开所放置文件的功能。  
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>如何：打开放置在 RichTextBox 控件上的文件
+在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、 <xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>控件所有具有内置拖放功能。 内置功能，可拖放文本内部或之间控件。 但是，它不支持通过删除该控件上的文件打开的文件。 这些控件还会将拖放事件标记为已处理。 因此，默认情况下，无法添加你自己的事件处理程序来提供功能以打开拖放的文件。  
   
- 若要为这些控件中的拖放事件添加其他处理，请使用 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 方法为拖放事件添加事件处理程序。  将 `handledEventsToo` 参数设置为 `true`，以便为已标记为由其他元素在事件路由过程中处理的路由事件调用指定的处理程序。  
+ 若要添加这些控件中的拖放事件的其他处理，使用<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>方法以添加事件处理程序的拖放事件。 设置`handledEventsToo`参数`true`为具有已标记为由事件路由的其他元素处理的路由事件调用所指定的处理程序。  
   
 > [!TIP]
->  可通过处理预览版本的拖放事件并将预览事件标记为已处理来替换 <xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.RichTextBox> 和 <xref:System.Windows.Documents.FlowDocument> 的内置拖放功能。  但是，此操作会禁用内置拖放功能，因此不建议执行此操作。  
+>  你可以替换内置的拖放功能的<xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>通过处理拖放事件的预览版本并将预览事件标记为已处理。 但是，这将禁用与内置的拖放功能，并且不建议。  
   
-## 示例  
- 下面的示例演示如何为 <xref:System.Windows.Controls.RichTextBox> 上的 <xref:System.Windows.DragDrop.DragOver> 和 <xref:System.Windows.DragDrop.Drop> 事件添加处理程序。  此示例使用 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 方法并将 `handledEventsToo` 参数设置为 `true`，这样，即使 <xref:System.Windows.Controls.RichTextBox> 将这些事件标记为已处理，也会调用这些事件处理程序。  事件处理程序中的代码可添加功能，用于打开放置到 <xref:System.Windows.Controls.RichTextBox> 上的文本文件。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何添加处理程序<xref:System.Windows.DragDrop.DragOver>和<xref:System.Windows.DragDrop.Drop>上的事件<xref:System.Windows.Controls.RichTextBox>。 此示例使用<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>方法和集`handledEventsToo`参数`true`，以便将即使调用事件处理程序<xref:System.Windows.Controls.RichTextBox>标记为已处理这些事件。 中的事件处理程序的代码的新增功能可打开放置一个文本文件<xref:System.Windows.Controls.RichTextBox>。  
   
- 若要测试此示例，请将一个文本文件或 RTF 格式文件从 Windows 资源管理器拖动到 <xref:System.Windows.Controls.RichTextBox>。  该文件将在 <xref:System.Windows.Controls.RichTextBox> 中打开。  如果在放置该文件前按 Shift 键，则该文件将以纯文本形式打开。  
+ 若要测试此示例，请将拖动的文本文件或丰富文本格式 (RTF) 文件从 Windows 资源管理器到<xref:System.Windows.Controls.RichTextBox>。 将在中打开文件<xref:System.Windows.Controls.RichTextBox>。 如果你在按住 SHIFT 键之前删除该文件，将以纯文本格式打开文件。  
   
- [!code-xml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
+ [!code-xaml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
   
  [!code-csharp[DragDropSnippets#RtbHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#rtbhandlers)]
  [!code-vb[DragDropSnippets#RtbHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#rtbhandlers)]

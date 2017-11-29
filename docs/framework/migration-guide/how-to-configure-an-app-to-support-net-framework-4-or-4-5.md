@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fea03fd2b660368b72ad111effffe7a64e381f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>如何：配置应用程序以支持 .NET Framework 4 或 4.5
 托管公共语言运行时 (CLR) 的所有应用程序都必须启动（或*激活*）CLR，才能运行托管代码。 通常，.NET Framework 应用程序在生成它的 CLR 版本上运行，但您可以使用应用程序配置文件（有时称为 app.config 文件）来更改桌面应用程序的此行为。 但是，您不能使用应用程序配置文件来更改 Windows 应用商店应用或 Windows Phone 应用程序的默认激活行为。 本文说明如何使桌面应用程序能够在 .NET Framework 的其他版本上运行，并提供了如何定位版本 4 或 4.5 的示例。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  添加或查找 .NET Framework 项目的配置文件。 应用程序的配置文件与该应用程序位于相同的目录中，并且具有相同的名称，只不过它具有扩展名 .config。 例如，对于名为 MyExecutable.exe 的应用程序，应用程序配置文件的名称为 MyExecutable.exe.config。  
   
-     若要添加配置文件，请在 Visual Studio 菜单栏上依次选择“项目”和“添加新项”。 在左侧窗格中，依次选择“常规”和“配置文件”。  将配置文件命名为 *appName*.exe.config。 这些菜单选项对于 Windows 应用商店应用或 Windows Phone 应用程序项目不可用，因为您无法在这些平台上更改激活策略。  
+     若要添加配置文件，请在 Visual Studio 菜单栏上依次选择“项目”和“添加新项”。 在左侧窗格中，依次选择“常规”和“配置文件”。  将配置文件命名为 *appName*.exe.config。这些菜单选项对于 Windows 应用商店应用或 Windows Phone 应用程序项目不可用，因为您无法在这些平台上更改激活策略。  
   
 2.  在应用程序配置文件中添加如下 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素：  
   
@@ -92,6 +90,5 @@ ms.lasthandoff: 07/28/2017
  \*若要详细了解此错误消息以及如何避免它，请参阅 [.NET Framework 初始化错误：管理用户体验](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [从 .NET Framework 1.1 迁移](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
+ [从 .NET Framework 1.1 迁移](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
  [迁移指南](../../../docs/framework/migration-guide/index.md)
-

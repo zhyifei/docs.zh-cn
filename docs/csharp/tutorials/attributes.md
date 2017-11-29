@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
+ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc8f38d96f7f1c41f04d64c2acc2f53805b6b012
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="using-attributes-in-c"></a>在 C# 中使用属性 #
 
 使用特性，可以声明的方式将信息与代码相关联。 特性还可以提供能够应用于各种目标的可重用元素。
@@ -38,6 +36,8 @@ ms.lasthandoff: 07/28/2017
 
 此命令将创建基本的 .NET Core 项目文件。 需要执行 `dotnet restore` 来还原编译此项目所需的依赖项。
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 若要运行程序，请使用 `dotnet run`。 此时，应该可以在控制台中看到“Hello, World”输出。
 
 ## <a name="how-to-add-attributes-to-code"></a>如何将特性添加到代码中
@@ -45,14 +45,14 @@ ms.lasthandoff: 07/28/2017
 在 C# 中，特性是继承自 `Attribute` 基类的类。 所有继承自 `Attribute` 的类都可以用作其他代码块的一种“标记”。
 例如，有一个名为 `ObsoleteAttribute` 的特性。 它用于示意代码已过时，不得再使用。 可以将此特性应用于类（比如说，使用方括号）。
 
-[!code-csharp[Obsolete 特性示例](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
 
 请注意，虽然此类的名称为 `ObsoleteAttribute`，但只需在代码中使用 `[Obsolete]`。 这是 C# 遵循一项约定。
 如果愿意，也可以使用全名 `[ObsoleteAttribute]`。
 
 如果将类标记为已过时，最好说明已过时的*原因*和/或改用的*类*。 为此，可将字符串参数传递给 Obsolete 特性。
 
-[!code-csharp[带参数的 Obsolete 特性示例](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
+[!code-csharp[Obsolete attribute example with parameters](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
 
 此字符串会作为自变量传递给 `ObsoleteAttribute` 构造函数，就像在编写 `var attr = new ObsoleteAttribute("some string")` 一样。
 
@@ -63,21 +63,21 @@ ms.lasthandoff: 07/28/2017
 
 创建特性与从 `Attribute` 基类继承一样简单。
 
-[!code-csharp[创建你自己的特性](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
+[!code-csharp[Create your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
 
 执行上述操作后，我现在可以在基本代码中的其他位置使用 `[MySpecial]`（或 `[MySpecialAttribute]`）特性。
 
-[!code-csharp[使用你自己的特性](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
 
 .NET 基类库中的特性（如 `ObsoleteAttribute`）会在编译器中触发某些行为。 不过，你创建的任何特性只作元数据之用，并不会在执行的特性类中生成任何代码。 是否在代码的其他位置使用此元数据由你自行决定（此教程稍后将对此进行详细介绍）。
 
 这里要注意的是“gotcha”。 如上所述，使用特性时，只允许将某些类型的参数作为自变量传递。 不过，在创建特性类型时，C# 编译器不会阻止你创建这些参数。 在以下示例中，我使用可正常编译的构造函数创建了特性。
 
-[!code-csharp[在特性中使用了有效构造函数](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
+[!code-csharp[Valid constructor used in an attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
 
 不过，无法将此构造函数与特性语法结合使用。
 
-[!code-csharp[尝试使用特性构造函数无效](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
+[!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
 上述做法会导致生成编译器错误，如 `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
@@ -103,11 +103,11 @@ ms.lasthandoff: 07/28/2017
 
 创建特性类时，C# 默认允许对所有可能的特性目标使用此特性。 如果要将特性限制为只能用于特定目标，可以对特性类使用 `AttributeUsageAttribute` 来实现。 没错，就是将特性应用于特性！
 
-[!code-csharp[使用你自己的特性](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
 如果尝试将上述特性应用于不是类也不是结构的对象，则会看到编译器错误，如 `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
-[!code-csharp[使用你自己的特性](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
 ## <a name="how-to-use-attributes-attached-to-a-code-element"></a>如何使用附加到代码元素的特性
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 07/28/2017
 
 例如，可以使用反射获取类的相关信息： 
 
-[!code-csharp[使用反射获取类型信息](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
+[!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
 此代码的打印输出如下：`The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 07/28/2017
 
 下面的示例展示了对 `MyClass`（在上文中，它包含 `[Obsolete]` 特性）的 `MemberInfo` 实例使用 `GetCustomAttributes`。
 
-[!code-csharp[使用反射获取类型信息](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
+[!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
 
 这将在控制台中打印输出 `Attribute on MyClass: ObsoleteAttribute`。 请尝试向 `MyClass` 添加其他特性。
 
@@ -146,11 +146,10 @@ ms.lasthandoff: 07/28/2017
 
 * `[CallerMemberName]`。 此特性可应用于参数，位于 `System.Runtime.CompilerServices` 命名空间中。 可用于插入正在调用另一方法的方法的名称。 此特性通常用于在各种 UI 框架中实现 INotifyPropertyChanged 时清除“神奇字符串”。 例如：
 
-[!code-csharp[实现 INotifyPropertyChanged 时使用 CallerMemberName](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
+[!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
 在上面的代码中，无需使用文本类型 `"Name"` 字符串。 这样既有助于防止出现与拼写错误相关的 bug，也可以让重构/重命名操作变得更加顺畅。
 
 ## <a name="summary"></a>摘要
 
 特性将声明性功能引入 C#。 但它们只是代码形式的元数据，不会自发起作用。
-

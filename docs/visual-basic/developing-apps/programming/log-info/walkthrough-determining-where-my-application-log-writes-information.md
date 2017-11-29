@@ -1,15 +1,12 @@
 ---
 title: "确定 My.Application.Log 写入信息的位置 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, output location
 - output, application log location
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4df7a80907b29a5eea79992f46c46603cbe2cc81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>演练：确定 My.Application.Log 写入信息的位置 (Visual Basic)
 `My.Application.Log` 对象可以将信息写入多个日志侦听器。 日志侦听器由计算机的配置文件配置，并且可以通过应用程序的配置文件重写。 本主题介绍默认设置以及如何确定应用程序的设置。  
@@ -79,28 +60,27 @@ ms.lasthandoff: 07/28/2017
   
 5.  对于许多类型的共享侦听器，该侦听器的初始化数据说明了侦听器写入数据的位置：  
   
-    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 侦听器将信息写入文件日志，如简介中所述。  
+    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 侦听器将信息写入文件日志，如简介中所述。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 侦听器将信息写入 `initializeData` 参数指定的计算机事件日志。 若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器” 。 有关详细信息，请参阅 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 侦听器将信息写入 `initializeData` 参数指定的计算机事件日志。 若要查看事件日志，可以使用“服务器资源管理器”  或“Windows 事件查看器” 。 有关详细信息，请参阅 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 侦听器将信息写入 `initializeData` 参数指定的文件。  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 侦听器将信息写入 `initializeData` 参数指定的文件。  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 侦听器将信息写入命令行控制台。  
+    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 侦听器将信息写入命令行控制台。  
   
     -   有关其他类型的日志侦听器写入信息的位置的信息，请参阅该类型的文档。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DelimitedListTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics>   
- [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
- [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [.NET Framework 中的 ETW 事件](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.DelimitedListTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics>  
+ [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [.NET Framework 中的 ETW 事件](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  
  [疑难解答：日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
-
