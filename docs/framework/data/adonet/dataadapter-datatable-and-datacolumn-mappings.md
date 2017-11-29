@@ -1,23 +1,29 @@
 ---
-title: "DataAdapter DataTable 和 DataColumn 映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataAdapter 数据表和 DataColumn 映射"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e96eb8e48b5787db5296458af650133747687295
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataAdapter DataTable 和 DataColumn 映射
-**DataAdapter** 在其 **TableMappings** 属性中包含零个或更多个 <xref:System.Data.Common.DataTableMapping> 对象的集合。  **DataTableMapping** 提供对数据源的查询所返回的数据与 <xref:System.Data.DataTable> 之间的主映射。  **DataTableMapping** 名称可以代替 **DataTable** 名称传递到 **DataAdapter** 的 **Fill** 方法。  以下示例为 **Authors** 表创建名为 **AuthorsMapping** 的 **DataTableMapping**。  
+# <a name="dataadapter-datatable-and-datacolumn-mappings"></a><span data-ttu-id="face1-102">DataAdapter 数据表和 DataColumn 映射</span><span class="sxs-lookup"><span data-stu-id="face1-102">DataAdapter DataTable and DataColumn Mappings</span></span>
+<span data-ttu-id="face1-103">A **DataAdapter**包含零个或多集合<xref:System.Data.Common.DataTableMapping>对象在其**TableMappings**属性。</span><span class="sxs-lookup"><span data-stu-id="face1-103">A **DataAdapter** contains a collection of zero or more <xref:System.Data.Common.DataTableMapping> objects in its **TableMappings** property.</span></span> <span data-ttu-id="face1-104">A **DataTableMapping**提供从针对数据源，查询返回的数据之间的主映射和<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="face1-104">A **DataTableMapping** provides a master mapping between the data returned from a query against a data source, and a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="face1-105">**DataTableMapping**名称可以代替了传递**DataTable**名称到**填充**方法**DataAdapter**。</span><span class="sxs-lookup"><span data-stu-id="face1-105">The **DataTableMapping** name can be passed in place of the **DataTable** name to the **Fill** method of the **DataAdapter**.</span></span> <span data-ttu-id="face1-106">下面的示例创建**DataTableMapping**名为**AuthorsMapping**为**作者**表。</span><span class="sxs-lookup"><span data-stu-id="face1-106">The following example creates a **DataTableMapping** named **AuthorsMapping** for the **Authors** table.</span></span>  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,11 +33,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- **DataTableMapping** 使您能够使用 **DataTable** 中与数据库中的列名不同的列名。  当该表被更新时，**DataAdapter** 将使用此映射来匹配列。  
+ <span data-ttu-id="face1-107">A **DataTableMapping**使你能够使用中的列名称**DataTable**不同的数据库中。</span><span class="sxs-lookup"><span data-stu-id="face1-107">A **DataTableMapping** enables you to use column names in a **DataTable** that are different from those in the database.</span></span> <span data-ttu-id="face1-108">**DataAdapter**使用此映射来更新表时的列匹配。</span><span class="sxs-lookup"><span data-stu-id="face1-108">The **DataAdapter** uses the mapping to match the columns when the table is updated.</span></span>  
   
- 如果在调用 **DataAdapter** 的 **Fill** 或 **Update** 方法时未指定 **TableName** 或 **DataTableMapping** 名称，**DataAdapter** 将查找名为“Table”的 **DataTableMapping**。  如果该 **DataTableMapping** 不存在，**DataTable** 的 **TableName** 将为“Table”。  可以通过创建名为“Table”的 **DataTableMapping** 来指定默认的 **DataTableMapping**。  
+ <span data-ttu-id="face1-109">如果不指定**TableName**或**DataTableMapping**时调用的名称**填充**或**更新**方法**DataAdapter**、 **DataAdapter**查找**DataTableMapping**名为"Table"。</span><span class="sxs-lookup"><span data-stu-id="face1-109">If you do not specify a **TableName** or a **DataTableMapping** name when calling the **Fill** or **Update** method of the **DataAdapter**, the **DataAdapter** looks for a **DataTableMapping** named "Table".</span></span> <span data-ttu-id="face1-110">如果该**DataTableMapping**不存在， **TableName**的**DataTable**为"Table"。</span><span class="sxs-lookup"><span data-stu-id="face1-110">If that **DataTableMapping** does not exist, the **TableName** of the **DataTable** is "Table".</span></span> <span data-ttu-id="face1-111">你可以指定默认值**DataTableMapping**通过创建**DataTableMapping**替换为"Table"的名称。</span><span class="sxs-lookup"><span data-stu-id="face1-111">You can specify a default **DataTableMapping** by creating a **DataTableMapping** with the name of "Table".</span></span>  
   
- 以下代码示例创建一个 **DataTableMapping**（从 <xref:System.Data.Common> 命名空间）并通过将其命名为“Table”来使其成为指定 **DataAdapter** 的默认映射。  然后，该示例将查询结果中第一个表（**Northwind** 数据库的 **Customers** 表）中的列映射到 <xref:System.Data.DataSet> 的 **Northwind Customers** 表中的一组更为用户友好的名称。  对于未映射的列，将使用数据源中的列名称。  
+ <span data-ttu-id="face1-112">下面的代码示例创建**DataTableMapping** (从<xref:System.Data.Common>命名空间) 并使其成为指定的默认映射**DataAdapter**通过其命名为"Table"。</span><span class="sxs-lookup"><span data-stu-id="face1-112">The following code example creates a **DataTableMapping** (from the <xref:System.Data.Common> namespace) and makes it the default mapping for the specified **DataAdapter** by naming it "Table".</span></span> <span data-ttu-id="face1-113">然后该示例从查询结果中的第一个表的列的映射 (**客户**表**Northwind**数据库) 到一组中的更加友好的用户名称**Northwind 客户**表中<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="face1-113">The example then maps the columns from the first table in the query result (the **Customers** table of the **Northwind** database) to a set of more user-friendly names in the **Northwind Customers** table in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="face1-114">对于未映射的列，将使用数据源中的列名称。</span><span class="sxs-lookup"><span data-stu-id="face1-114">For columns that are not mapped, the name of the column from the data source is used.</span></span>  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -41,7 +47,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIPCode")  
   
 adapter.Fill(custDS)  
-  
 ```  
   
 ```csharp  
@@ -54,11 +59,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- 在更为先进的情况下，您可以决定需要使用相同的 **DataAdapter** 来支持为不同的表加载不同的映射。  若要完成此任务，只需添加附加的 **DataTableMapping** 对象。  
+ <span data-ttu-id="face1-115">在更高级的情况下，你可能决定你想相同**DataAdapter**以支持不同的映射不同的表加载。</span><span class="sxs-lookup"><span data-stu-id="face1-115">In more advanced situations, you may decide that you want the same **DataAdapter** to support loading different tables with different mappings.</span></span> <span data-ttu-id="face1-116">若要执行此操作，只需添加附加**DataTableMapping**对象。</span><span class="sxs-lookup"><span data-stu-id="face1-116">To do this, simply add additional **DataTableMapping** objects.</span></span>  
   
- 当 **Fill** 方法以 **DataSet** 实例和 **DataTableMapping** 名称的形式进行传递时，如果存在具有该名称的映射，则使用该映射；否则将使用具有该名称的 **DataTable**。  
+ <span data-ttu-id="face1-117">当**填充**方法传递的实例**数据集**和**DataTableMapping**名称，如果存在具有该名称的映射; 否则为将使用， **DataTable**的名称，将使用。</span><span class="sxs-lookup"><span data-stu-id="face1-117">When the **Fill** method is passed an instance of a **DataSet** and a **DataTableMapping** name, if a mapping with that name exists it is used; otherwise, a **DataTable** with that name is used.</span></span>  
   
- 以下示例创建一个名称为 **Customers** 而 **DataTable** 名称为 **BizTalkSchema** 的 **DataTableMapping**。  然后，该示例将 SELECT 语句所返回的行映射到 **BizTalkSchema** **DataTable**。  
+ <span data-ttu-id="face1-118">下面的示例创建**DataTableMapping**名称为**客户**和**DataTable**名称**BizTalkSchema**。</span><span class="sxs-lookup"><span data-stu-id="face1-118">The following examples create a **DataTableMapping** with a name of **Customers** and a **DataTable** name of **BizTalkSchema**.</span></span> <span data-ttu-id="face1-119">示例然后映射到的 SELECT 语句返回的行**BizTalkSchema** **DataTable**。</span><span class="sxs-lookup"><span data-stu-id="face1-119">The example then maps the rows returned by the SELECT statement to the **BizTalkSchema** **DataTable**.</span></span>  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -69,7 +74,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIP")  
   
 adapter.Fill(custDS, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -84,26 +88,26 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  如果没有为列映射提供源列名称或者没有为表映射提供源表名称，则将自动生成默认名称。  如果没有为列映射提供源列，则将给列映射提供递增的默认名称 **SourceColumn** *N*，这些名称从 **SourceColumn1** 开始。  如果没有为表映射提供源表名称，则将给该表映射提供递增的默认名称 **SourceTable** *N*，这些名称从 **SourceTable1** 开始。  
+>  <span data-ttu-id="face1-120">如果没有为列映射提供源列名称或者没有为表映射提供源表名称，则将自动生成默认名称。</span><span class="sxs-lookup"><span data-stu-id="face1-120">If a source column name is not supplied for a column mapping or a source table name is not supplied for a table mapping, default names will be automatically generated.</span></span> <span data-ttu-id="face1-121">如果为列映射提供没有源列，则列映射提供递增的默认名称的**SourceColumn** *N，*开头**SourceColumn1**。</span><span class="sxs-lookup"><span data-stu-id="face1-121">If no source column is supplied for a column mapping, the column mapping is given an incremental default name of **SourceColumn** *N,* starting with **SourceColumn1**.</span></span> <span data-ttu-id="face1-122">如果为表映射提供没有源表名称，则表映射提供递增的默认名称的**SourceTable** *N*，第一页为**SourceTable1**。</span><span class="sxs-lookup"><span data-stu-id="face1-122">If no source table name is supplied for a table mapping, the table mapping is given an incremental default name of **SourceTable** *N*, starting with **SourceTable1**.</span></span>  
   
 > [!NOTE]
->  我们建议您避免采用列映射的 **SourceColumn** *N* 的命名约定，或表映射的 **SourceTable** *N* 的命名约定，因为您提供的名称可能会与 **ColumnMappingCollection** 中的现有默认列映射名称或 **DataTableMappingCollection** 中的现有默认表映射名称冲突。  如果提供的名称已经存在，将引发异常。  
+>  <span data-ttu-id="face1-123">我们建议你避免的命名约定**SourceColumn** *N*为列映射，或**SourceTable** *N*表映射，因为所提供的名称可能与中的现有默认列映射名称冲突**ColumnMappingCollection**或中的表映射名称**DataTableMappingCollection**.</span><span class="sxs-lookup"><span data-stu-id="face1-123">We recommend that you avoid the naming convention of **SourceColumn** *N* for a column mapping, or **SourceTable** *N* for a table mapping, because the name you supply may conflict with an existing default column mapping name in the **ColumnMappingCollection** or table mapping name in the **DataTableMappingCollection**.</span></span> <span data-ttu-id="face1-124">如果提供的名称已经存在，将引发异常。</span><span class="sxs-lookup"><span data-stu-id="face1-124">If the supplied name already exists, an exception will be thrown.</span></span>  
   
-## 处理多个结果集  
- 如果 **SelectCommand** 返回多个表，**Fill** 将自动使用递增值为 **DataSet** 中的表生成表名称，这些表名称从指定表名称开始，并以 **TableName** *N* 格式（从 **TableName1** 开始）继续。  可以使用表映射将自动生成的表名称映射到要为 **DataSet** 中的表指定的名称。  例如，对于返回两个表（**Customers** 和 **Orders**）的 **SelectCommand**，可对 **Fill** 发出以下调用。  
+## <a name="handling-multiple-result-sets"></a><span data-ttu-id="face1-125">处理多个结果集</span><span class="sxs-lookup"><span data-stu-id="face1-125">Handling Multiple Result Sets</span></span>  
+ <span data-ttu-id="face1-126">如果你**SelectCommand**返回多个表，**填充**自动生成具有递增的值中的表的表名称**数据集**，第一页为在窗体上指定表名称和继续**TableName** *N*，第一页为**TableName1**。</span><span class="sxs-lookup"><span data-stu-id="face1-126">If your **SelectCommand** returns multiple tables, **Fill** automatically generates table names with incremental values for the tables in the **DataSet**, starting with the specified table name and continuing on in the form **TableName** *N*, starting with **TableName1**.</span></span> <span data-ttu-id="face1-127">你可以使用表映射将自动生成的表名称映射到要为表中指定的名称**数据集**。</span><span class="sxs-lookup"><span data-stu-id="face1-127">You can use table mappings to map the automatically generated table name to a name you want specified for the table in the **DataSet**.</span></span> <span data-ttu-id="face1-128">例如，对于**SelectCommand**返回两个表，**客户**和**订单**，发出以下调用**填充**。</span><span class="sxs-lookup"><span data-stu-id="face1-128">For example, for a **SelectCommand** that returns two tables, **Customers** and **Orders**, issue the following call to **Fill**.</span></span>  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- 在 **DataSet** 中创建了两个表：**Customers** 和 **Customers1**。  可以使用表映射来确保第二个表名为 **Orders** 而不是 **Customers1**。  若要完成此任务，请将 **Customers1** 的源表映射到 **DataSet** 表 **Orders**，如以下示例所示。  
+ <span data-ttu-id="face1-129">在创建两个表**数据集**:**客户**和**Customers1**。</span><span class="sxs-lookup"><span data-stu-id="face1-129">Two tables are created in the **DataSet**: **Customers** and **Customers1**.</span></span> <span data-ttu-id="face1-130">你可以使用表映射以确保第二个表名为**订单**而不是**Customers1**。</span><span class="sxs-lookup"><span data-stu-id="face1-130">You can use table mappings to ensure that the second table is named **Orders** instead of **Customers1**.</span></span> <span data-ttu-id="face1-131">若要执行此操作，将映射的源表**Customers1**到**数据集**表**订单**，下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="face1-131">To do this, map the source table of **Customers1** to the **DataSet** table **Orders**, as shown in the following example.</span></span>  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## 请参阅  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="face1-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="face1-132">See Also</span></span>  
+ [<span data-ttu-id="face1-133">Dataadapter 和 Datareader</span><span class="sxs-lookup"><span data-stu-id="face1-133">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="face1-134">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="face1-134">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="face1-135">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="face1-135">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,52 +1,55 @@
 ---
-title: "本地化特性和注释 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Localization — 本地化, 特性"
-  - "Localization — 本地化, 注释"
+title: "本地化特性和注释"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- localization [WPF], attributes
+- localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 本地化特性和注释
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用来提供本地化规则和提示。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释中包含两组信息：可本地化特性和任意形式的本地化注释。  可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用来指示将对哪些资源进行本地化。  任意形式的本地化注释是指应用程序作者希望包括的任何信息。  
+# <a name="localization-attributes-and-comments"></a><span data-ttu-id="981de-102">本地化特性和注释</span><span class="sxs-lookup"><span data-stu-id="981de-102">Localization Attributes and Comments</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="981de-103"> 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用于提供本地化规则和提示。</span><span class="sxs-lookup"><span data-stu-id="981de-103"> localization comments are properties, inside [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] source code, supplied by developers to provide rules and hints for localization.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="981de-104"> 本地化注释包含两组信息：可本地化特性和任意形式的本地化注释。</span><span class="sxs-lookup"><span data-stu-id="981de-104"> localization comments contain two sets of information: localizability attributes and free-form localization comments.</span></span> <span data-ttu-id="981de-105">可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。</span><span class="sxs-lookup"><span data-stu-id="981de-105">Localizability attributes are used by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Localization API to indicate which resources are to be localized.</span></span> <span data-ttu-id="981de-106">任意形式的注释是应用程序作者希望包含的任何信息。</span><span class="sxs-lookup"><span data-stu-id="981de-106">Free-form comments are any information that the application author wants to include.</span></span>  
   
-   
+
   
 <a name="Localizer_Comments_"></a>   
-## 本地化注释  
- 如果标记应用程序的作者对 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中的特定元素具有一定的要求（如对文本长度、字体系列或字号进行约束），那么，他们可以借助于 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 代码中的注释将该信息传达给本地化人员。  下面是用来向源代码中添加注释的过程：  
+## <a name="localization-comments"></a><span data-ttu-id="981de-107">本地化注释</span><span class="sxs-lookup"><span data-stu-id="981de-107">Localization Comments</span></span>  
+ <span data-ttu-id="981de-108">如果标记应用程序作者对 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中的特定元素具有一定的要求（如对文本长度、字体系列或字号进行约束），则他们可以借助于 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 代码中的注释将此信息传达给本地化人员。</span><span class="sxs-lookup"><span data-stu-id="981de-108">If markup application authors have requirements for specific elements in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], such as constraints on text length, font family, or font size, they can convey this information to localizers with comments in the [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] code.</span></span> <span data-ttu-id="981de-109">下面是用来向源代码中添加注释的过程：</span><span class="sxs-lookup"><span data-stu-id="981de-109">The process for adding comments to source code is as follows:</span></span>  
   
-1.  应用程序开发人员向 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中添加本地化注释。  
+1.  <span data-ttu-id="981de-110">应用程序开发人员向 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中添加本地化注释。</span><span class="sxs-lookup"><span data-stu-id="981de-110">Application developer adds localization comments to [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] source code.</span></span>  
   
-2.  在生成过程中，可以在 .proj 文件中指定是将任意形式的本地化注释留在程序集内、去掉部分注释还是去掉所有的注释。  已去掉的注释将放在一个单独的文件中。  您可以使用如下所示的 `LocalizationDirectivesToLocFile` 标记来指定您的选项：  
+2.  <span data-ttu-id="981de-111">在生成过程中，可以在 .proj 文件中指定是将任意形式的本地化注释留在程序集内、去掉部分注释还是去掉所有注释。</span><span class="sxs-lookup"><span data-stu-id="981de-111">During the build process, you can specify in the .proj file whether to leave the free-form localization comments in the assembly, strip out part of the comments, or strip out all the comments.</span></span> <span data-ttu-id="981de-112">去掉的注释放在一个单独的文件中。</span><span class="sxs-lookup"><span data-stu-id="981de-112">The stripped-out comments are placed in a separate file.</span></span> <span data-ttu-id="981de-113">可以使用 `LocalizationDirectivesToLocFile` 标记指定你的选项，例如：</span><span class="sxs-lookup"><span data-stu-id="981de-113">You specify your option using a `LocalizationDirectivesToLocFile` tag, eg:</span></span>  
   
-     `<LocalizationDirectivesToLocFile>` *值* `</LocalizationDirectivesToLocFile>`  
+     <span data-ttu-id="981de-114">`<LocalizationDirectivesToLocFile>` 值 `</LocalizationDirectivesToLocFile>`</span><span class="sxs-lookup"><span data-stu-id="981de-114">`<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`</span></span>  
   
-3.  下面是可以赋予的值：  
+3.  <span data-ttu-id="981de-115">可以分配的值包括：</span><span class="sxs-lookup"><span data-stu-id="981de-115">The values that can be assigned are:</span></span>  
   
-    -   **None** \- 注释和特性均留在程序集内，而且不生成单独的文件。  
+    -   <span data-ttu-id="981de-116">**None** - 注释和特性都保留在程序集中，不会生成单独的文件。</span><span class="sxs-lookup"><span data-stu-id="981de-116">**None** - Both comments and attributes stay inside the assembly and no separate file is generated.</span></span>  
   
-    -   **CommentsOnly** \- 仅去掉程序集内的注释，并将它们放在一个单独的 LocFile 中。  
+    -   <span data-ttu-id="981de-117">**CommentsOnly** - 仅从程序集中去掉注释，并将它们放在单独的 LocFile 中。</span><span class="sxs-lookup"><span data-stu-id="981de-117">**CommentsOnly** - Strips only the comments from the assembly and places them in the separate LocFile.</span></span>  
   
-    -   **All** \- 去掉程序集内的注释和特性，并将它们放在一个单独的 LocFile 文件中。  
+    -   <span data-ttu-id="981de-118">**All** - 从程序集中去掉注释和特性，并将它们两者都放在单独的 LocFile 中。</span><span class="sxs-lookup"><span data-stu-id="981de-118">**All** - Strips both the comments and the attributes from the assembly and places them both in a separate LocFile.</span></span>  
   
-4.  当从 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 中提取可本地化的资源时，可本地化特性将由 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 本地化 API 保留。  
+4.  <span data-ttu-id="981de-119">从 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 中提取可本地化资源时，可本地化性特性将由 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 本地化 API 保留。</span><span class="sxs-lookup"><span data-stu-id="981de-119">When localizable resources are extracted from [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], the localizability attributes are respected by the [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] Localization API.</span></span>  
   
-5.  以后可以将仅包含任意形式注释的本地化注释文件合并到本地化过程中。  
+5.  <span data-ttu-id="981de-120">以后可以将仅包含任意形式的注释的本地化注释文件合并到本地化过程中。</span><span class="sxs-lookup"><span data-stu-id="981de-120">Localization comment files, containing only free-form comments, are incorporated into the localization process at a later time.</span></span>  
   
- 下面的示例演示如何向 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 文件中添加本地化注释。  
+ <span data-ttu-id="981de-121">以下示例演示如何将本地化注释添加到 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 文件中。</span><span class="sxs-lookup"><span data-stu-id="981de-121">The following example shows how to add localization comments to a [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file.</span></span>  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -66,48 +69,48 @@ caps.handback.revision: 14
   
  `</TextBlock>`  
   
- 在上面的示例中，Localization.Attributes 部分包含本地化特性，Localization.Comments 部分包含自由形式的注释。  下面的几个表显示了各个特性和注释及其对于本地化人员的含义。  
+ <span data-ttu-id="981de-122">在上一示例中，Localization.Attributes 部分包含本地化特性，Localization.Comments 部分包含任意形式的注释。</span><span class="sxs-lookup"><span data-stu-id="981de-122">In the previous sample the Localization.Attributes section contains the localization attributes and the Localization.Comments section the free-form comments.</span></span> <span data-ttu-id="981de-123">下表显示了特性和注释及其对于本地化人员的含义。</span><span class="sxs-lookup"><span data-stu-id="981de-123">The following tables show the attributes and comments and their meaning to the localizer.</span></span>  
   
-|本地化特性|含义|  
-|-----------|--------|  
-|$Content（无法修改的可读文本）|TextBlock 元素的内容无法修改。  本地化人员不能更改“Microsoft”一词。  该内容对于本地化人员来说是可见的（可读的）。  该内容属于文本类别。|  
-|FontFamily（无法修改的可读文本）|TextBlock 元素的字体系列属性无法更改，但是它对于本地化人员是可见的。|  
+|<span data-ttu-id="981de-124">本地化特性</span><span class="sxs-lookup"><span data-stu-id="981de-124">Localization attributes</span></span>|<span data-ttu-id="981de-125">含义</span><span class="sxs-lookup"><span data-stu-id="981de-125">Meaning</span></span>|  
+|-----------------------------|-------------|  
+|<span data-ttu-id="981de-126">$Content（不可修改的可读文本）</span><span class="sxs-lookup"><span data-stu-id="981de-126">$Content (Unmodifiable Readable Text)</span></span>|<span data-ttu-id="981de-127">无法修改 TextBlock 元素的内容。</span><span class="sxs-lookup"><span data-stu-id="981de-127">Contents of the TextBlock element cannot be modified.</span></span> <span data-ttu-id="981de-128">本地化人员不能更改单词“Microsoft”。</span><span class="sxs-lookup"><span data-stu-id="981de-128">Localizers cannot change the word "Microsoft".</span></span> <span data-ttu-id="981de-129">内容对本地化人员可见（可读）。</span><span class="sxs-lookup"><span data-stu-id="981de-129">The content is visible (Readable) to the localizer.</span></span> <span data-ttu-id="981de-130">内容为文本类别。</span><span class="sxs-lookup"><span data-stu-id="981de-130">The category of the content is text.</span></span>|  
+|<span data-ttu-id="981de-131">FontFamily（不可修改但可读）</span><span class="sxs-lookup"><span data-stu-id="981de-131">FontFamily (Unmodifiable Readable)</span></span>|<span data-ttu-id="981de-132">无法更改 TextBlock 元素的字体系列属性，但该属性对本地化人员可见。</span><span class="sxs-lookup"><span data-stu-id="981de-132">The font family property of the TextBlock element cannot be changed but it is visible to the localizer.</span></span>|  
   
-|任意形式的本地化注释|含义|  
-|----------------|--------|  
-|$Content（商标）|应用程序作者告诉本地化人员 TextBlock 元素中的内容是商标。|  
-|FontSize（商标的字号）|应用程序作者指示字号属性应当遵循标准商标大小。|  
+|<span data-ttu-id="981de-133">本地化任意形式的注释</span><span class="sxs-lookup"><span data-stu-id="981de-133">Localization free-form comments</span></span>|<span data-ttu-id="981de-134">含义</span><span class="sxs-lookup"><span data-stu-id="981de-134">Meaning</span></span>|  
+|--------------------------------------|-------------|  
+|<span data-ttu-id="981de-135">$Content（商标）</span><span class="sxs-lookup"><span data-stu-id="981de-135">$Content (Trademark)</span></span>|<span data-ttu-id="981de-136">应用程序作者告知本地化人员 TextBlock 元素中的内容是商标。</span><span class="sxs-lookup"><span data-stu-id="981de-136">The application author tells the localizer that the content in the TextBlock element is a trademark.</span></span>|  
+|<span data-ttu-id="981de-137">FontSize（商标字号）</span><span class="sxs-lookup"><span data-stu-id="981de-137">FontSize (Trademark font size)</span></span>|<span data-ttu-id="981de-138">应用程序作者指示字号属性应遵循标准商标大小。</span><span class="sxs-lookup"><span data-stu-id="981de-138">The application author indicates that the font size property should follow the standard trademark size.</span></span>|  
   
-### 可本地化特性  
- Localization.Attributes 中的信息包含一系列信息对：目标值名称及其相关的可本地化值。  目标名称可以是属性名称或者特殊的 $Content 名称。  如果这是属性名称，则目标值是该属性的值。  如果这是 $Content，则目标值是该元素的内容。  
+### <a name="localizability-attributes"></a><span data-ttu-id="981de-139">可本地化特性</span><span class="sxs-lookup"><span data-stu-id="981de-139">Localizability Attributes</span></span>  
+ <span data-ttu-id="981de-140">Localization.Attributes 中的信息包含对的列表：目标值名称和关联的可本地化值。</span><span class="sxs-lookup"><span data-stu-id="981de-140">The information in Localization.Attributes contains a list of pairs: the targeted value name and the associated localizability values.</span></span> <span data-ttu-id="981de-141">目标名称可以是属性名称或特殊 $Content 名称。</span><span class="sxs-lookup"><span data-stu-id="981de-141">The target name can be a property name or the special $Content name.</span></span> <span data-ttu-id="981de-142">如果是属性名称，则目标值为属性的值。</span><span class="sxs-lookup"><span data-stu-id="981de-142">If it is a property name, the targeted value is the value of the property.</span></span> <span data-ttu-id="981de-143">如果是 $Content，则目标值为元素的内容。</span><span class="sxs-lookup"><span data-stu-id="981de-143">If it is $Content, the target value is the content of the element.</span></span>  
   
- 有三种类型的特性：  
+ <span data-ttu-id="981de-144">有三种类型的特性：</span><span class="sxs-lookup"><span data-stu-id="981de-144">There are three types of attributes:</span></span>  
   
--   **Category**。  该属性指定某个值是否应当从本地化工具中修改。  请参见 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
+-   <span data-ttu-id="981de-145">**Category**。</span><span class="sxs-lookup"><span data-stu-id="981de-145">**Category**.</span></span> <span data-ttu-id="981de-146">它指定是否可以从本地化工具修改值。</span><span class="sxs-lookup"><span data-stu-id="981de-146">This specifies whether a value should be modifiable from a localizer tool.</span></span> <span data-ttu-id="981de-147">请参阅<xref:System.Windows.LocalizabilityAttribute.Category%2A>。</span><span class="sxs-lookup"><span data-stu-id="981de-147">See <xref:System.Windows.LocalizabilityAttribute.Category%2A>.</span></span>  
   
--   **Readability**。  该属性指定某个值是否应当从本地化工具中读取（和显示）。  请参见 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
+-   <span data-ttu-id="981de-148">**Readability**。</span><span class="sxs-lookup"><span data-stu-id="981de-148">**Readability**.</span></span> <span data-ttu-id="981de-149">它指定本地化工具是否可读取（和显示）值。</span><span class="sxs-lookup"><span data-stu-id="981de-149">This specifies whether a localizer tool should read (and display) a value.</span></span> <span data-ttu-id="981de-150">请参阅<xref:System.Windows.LocalizabilityAttribute.Readability%2A>。</span><span class="sxs-lookup"><span data-stu-id="981de-150">See <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.</span></span>  
   
--   **Modifiability**。  该属性指定本地化工具是否允许对某个值进行修改。  请参见 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
+-   <span data-ttu-id="981de-151">**Modifiability**。</span><span class="sxs-lookup"><span data-stu-id="981de-151">**Modifiability**.</span></span> <span data-ttu-id="981de-152">它指定本地化工具是否允许修改值。</span><span class="sxs-lookup"><span data-stu-id="981de-152">This specifies whether a localizer tool allows a value to be modified.</span></span> <span data-ttu-id="981de-153">请参阅<xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。</span><span class="sxs-lookup"><span data-stu-id="981de-153">See <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.</span></span>  
   
- 这些特性可以按照由空格分开的任何顺序来指定。  如果指定了重复特性，则最后一个特性将重写前面的特性。  例如，Localization.Attributes \= "Unmodifiable Modifiable" 会将 Modifiability 设置为 Modifiable，因为最后一个值是 Modifiable。  
+ <span data-ttu-id="981de-154">这些特性可以按照由空格分开的任何顺序进行指定。</span><span class="sxs-lookup"><span data-stu-id="981de-154">These attributes can be specified in any order delimited by a space.</span></span> <span data-ttu-id="981de-155">如果指定了重复特性，则最后一个特性将替代前面的特性。</span><span class="sxs-lookup"><span data-stu-id="981de-155">In case duplicate attributes are specified, the last attribute will override former ones.</span></span> <span data-ttu-id="981de-156">例如，Localization.Attributes = "Unmodifiable Modifiable" 会将 Modifiability 设置为 Modifiable，因为最后一个值是 Modifiable。</span><span class="sxs-lookup"><span data-stu-id="981de-156">For example, Localization.Attributes = "Unmodifiable Modifiable" sets Modifiability to Modifiable because it is the last value.</span></span>  
   
- Modifiability 和 Readability 的名称已经揭示了自身的含义。  Category 特性提供的预定义类别可帮助本地化人员翻译文本。  类别（如 Text、Label 和 Title）为本地化人员提供了有关如何翻译文本的信息。  还有一些特殊类别：None、Inherit、Ignore 和 NeverLocalize。  
+ <span data-ttu-id="981de-157">Modifiability 和 Readability 的名称已经揭示了自身的含义。</span><span class="sxs-lookup"><span data-stu-id="981de-157">Modifiability and Readability are self-explanatory.</span></span> <span data-ttu-id="981de-158">“Category”特性提供的预定义类别可帮助本地化人员翻译文本。</span><span class="sxs-lookup"><span data-stu-id="981de-158">The Category attribute provides predefined categories that help the localizer when translating text.</span></span> <span data-ttu-id="981de-159">类别（如 Text、Label 和 Title）为本地化人员提供了有关如何翻译文本的信息。</span><span class="sxs-lookup"><span data-stu-id="981de-159">Categories, such as, Text, Label, and Title give the localizer information about how to translate the text.</span></span> <span data-ttu-id="981de-160">另外，还有一些特殊类别：None、Inherit、Ignore 和 NeverLocalize。</span><span class="sxs-lookup"><span data-stu-id="981de-160">There are also special categories: None, Inherit, Ignore, and NeverLocalize.</span></span>  
   
- 下表显示了这些特殊类别的含义。  
+ <span data-ttu-id="981de-161">下表显示了这些特殊类别的含义。</span><span class="sxs-lookup"><span data-stu-id="981de-161">The following table shows the meaning of the special categories.</span></span>  
   
-|类别|含义|  
-|--------|--------|  
-|无|没有为目标值定义类别。|  
-|Inherit|目标值从其父级继承类别。|  
-|忽略|在本地化过程中忽略目标值。  Ignore 仅影响当前值，  而不会影响子节点。|  
-|NeverLocalize|不能对当前值进行本地化。  元素的子级可以继承此类别。|  
+|<span data-ttu-id="981de-162">类别</span><span class="sxs-lookup"><span data-stu-id="981de-162">Category</span></span>|<span data-ttu-id="981de-163">含义</span><span class="sxs-lookup"><span data-stu-id="981de-163">Meaning</span></span>|  
+|--------------|-------------|  
+|<span data-ttu-id="981de-164">无</span><span class="sxs-lookup"><span data-stu-id="981de-164">None</span></span>|<span data-ttu-id="981de-165">没有为目标值定义类别。</span><span class="sxs-lookup"><span data-stu-id="981de-165">Targeted value has no defined category.</span></span>|  
+|<span data-ttu-id="981de-166">继承</span><span class="sxs-lookup"><span data-stu-id="981de-166">Inherit</span></span>|<span data-ttu-id="981de-167">目标值从其父级继承其类别。</span><span class="sxs-lookup"><span data-stu-id="981de-167">Targeted value inherits its category from its parent.</span></span>|  
+|<span data-ttu-id="981de-168">忽略</span><span class="sxs-lookup"><span data-stu-id="981de-168">Ignore</span></span>|<span data-ttu-id="981de-169">在本地化过程中将忽略目标值。</span><span class="sxs-lookup"><span data-stu-id="981de-169">Targeted value is ignored in the localization process.</span></span> <span data-ttu-id="981de-170">Ignore 仅影响当前值。</span><span class="sxs-lookup"><span data-stu-id="981de-170">Ignore affects only the current value.</span></span> <span data-ttu-id="981de-171">它不会影响子节点。</span><span class="sxs-lookup"><span data-stu-id="981de-171">It will not affect child nodes.</span></span>|  
+|<span data-ttu-id="981de-172">NeverLocalize</span><span class="sxs-lookup"><span data-stu-id="981de-172">NeverLocalize</span></span>|<span data-ttu-id="981de-173">无法对当前值进行本地化。</span><span class="sxs-lookup"><span data-stu-id="981de-173">Current value cannot be localized.</span></span> <span data-ttu-id="981de-174">此类别由元素的子级继承。</span><span class="sxs-lookup"><span data-stu-id="981de-174">This category is inherited by the children of an element.</span></span>|  
   
 <a name="Localization_Comments"></a>   
-## 本地化注释  
- Localization.Comments 包含与目标值有关的任意形式的字符串。  应用程序开发人员可以添加一些信息，以便为本地化人员提供有关如何翻译应用程序文本的提示。  注释的格式可以是由“\(\)”括起来的任何字符串。  可以使用“\\”来对字符进行转义。  
+## <a name="localization-comments"></a><span data-ttu-id="981de-175">本地化注释</span><span class="sxs-lookup"><span data-stu-id="981de-175">Localization Comments</span></span>  
+ <span data-ttu-id="981de-176">Localization.Comments 包含与目标值有关的任意形式的字符串。</span><span class="sxs-lookup"><span data-stu-id="981de-176">Localization.Comments contains free-form strings concerning the targeted value.</span></span> <span data-ttu-id="981de-177">应用程序开发人员可以添加一些信息，以便为本地化人员提供有关如何翻译应用程序文本的提示。</span><span class="sxs-lookup"><span data-stu-id="981de-177">Application developers can add information to give localizers hints about how the applications text should be translated.</span></span> <span data-ttu-id="981de-178">注释格式可以是由“()”括起来的任何字符串。</span><span class="sxs-lookup"><span data-stu-id="981de-178">The format of the comments can be any string surrounded by "()".</span></span> <span data-ttu-id="981de-179">可以使用“\\”对字符进行转义。</span><span class="sxs-lookup"><span data-stu-id="981de-179">Use '\\' to escape characters.</span></span>  
   
-## 请参阅  
- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)   
- [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)   
- [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a><span data-ttu-id="981de-180">另请参阅</span><span class="sxs-lookup"><span data-stu-id="981de-180">See Also</span></span>  
+ [<span data-ttu-id="981de-181">WPF 全球化</span><span class="sxs-lookup"><span data-stu-id="981de-181">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="981de-182">使用自动布局创建按钮</span><span class="sxs-lookup"><span data-stu-id="981de-182">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="981de-183">使用网格进行自动布局</span><span class="sxs-lookup"><span data-stu-id="981de-183">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="981de-184">对应用程序进行本地化</span><span class="sxs-lookup"><span data-stu-id="981de-184">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

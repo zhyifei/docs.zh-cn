@@ -1,61 +1,60 @@
 ---
-title: "Line 和 Shape 控件简介 (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Line 控件, 概述"
-  - "文本行, 绘图"
-  - "Shape 控件, 概述"
-  - "形状, 绘图"
+title: "Line 和 Shape 控件简介 (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Line control [Visual Basic], overview
+- Shape control [Visual Basic], overview
+- lines, drawing
+- shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Line 和 Shape 控件简介 (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic Power Pack Line 和 Shape 控件由三个图形控件组成，使您可以在窗体和容器上绘制直线和形状。  <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 控件用于绘制水平线、垂直线和对角线。  <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 控件用于绘制圆形和椭圆形，<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 控件用于绘制矩形和正方形。  
+# <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a><span data-ttu-id="1ebc3-102">Line 和 Shape 控件简介 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="1ebc3-102">Introduction to the Line and Shape Controls (Visual Studio)</span></span>
+<span data-ttu-id="1ebc3-103">Visual Basic Power Pack Line 和 Shape 控件是一组可用于在窗体和容器上绘制线条和形状的三个图形控件。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-103">The Visual Basic Power Packs Line and Shape controls are a set of three graphical controls that enable you to draw lines and shapes on forms and containers.</span></span> <span data-ttu-id="1ebc3-104"><xref:Microsoft.VisualBasic.PowerPacks.LineShape>控件用于绘制水平线、 垂线、 对角线和行。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-104">The <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control is used to draw horizontal, vertical, and diagonal lines.</span></span> <span data-ttu-id="1ebc3-105"><xref:Microsoft.VisualBasic.PowerPacks.OvalShape>控件用于绘制圆形和椭圆形，和<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>控件用于绘制矩形和正方形。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-105">The <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> control is used to draw circles and ovals, and the <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control is used to draw rectangles and squares.</span></span>  
   
-## Line 和 Shape 控件  
- Line 和 Shape 控件封装了许多图形方法，这些方法包含在 <xref:System.Drawing> 命名空间中。  这样您就可以通过一步操作来绘制直线和形状，而不必创建图形对象、钢笔和画笔。  复杂的图形技术（如渐变填充）也只需通过设置一些属性即可完成。  
+## <a name="line-and-shape-controls"></a><span data-ttu-id="1ebc3-106">Line 和 Shape 控件</span><span class="sxs-lookup"><span data-stu-id="1ebc3-106">Line and Shape Controls</span></span>  
+ <span data-ttu-id="1ebc3-107">Line 和 Shape 控件封装许多中包含的图形方法<xref:System.Drawing>命名空间。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-107">Line and Shape controls encapsulate many of the graphics methods that are contained in the <xref:System.Drawing> namespace.</span></span> <span data-ttu-id="1ebc3-108">这使您可以在单个步骤中绘制线条和形状，而无需创建图形对象、 钢笔和画笔。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-108">This enables you to draw lines and shapes in a single step without having to create graphics objects, pens, and brushes.</span></span> <span data-ttu-id="1ebc3-109">只需通过设置某些属性，可以实现复杂的图形技术，如渐变填充。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-109">Complex graphics techniques such as gradient fills can be accomplished by just setting some properties.</span></span>  
   
- 尽管还可以通过使用图形方法来绘制直线和形状，但使用 Line 和 Shape 控件有下面几个好处：  
+ <span data-ttu-id="1ebc3-110">尽管还有可能要通过使用图形方法绘制线条和形状，但有以下几个使用 Line 和 Shape 控件优点：</span><span class="sxs-lookup"><span data-stu-id="1ebc3-110">Although it is also possible to draw lines and shapes by using graphics methods, there are several advantages to using the Line and Shape controls:</span></span>  
   
--   图形方法只能在运行时调用。  Line 和 Shape 控件可以在设计时添加到窗体。  这样您便能够看到它们的外观并对它们进行精确定位；也可以在运行时添加它们。  
+-   <span data-ttu-id="1ebc3-111">图形方法可以调用仅在运行时。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-111">Graphics methods can be called only at run time.</span></span> <span data-ttu-id="1ebc3-112">Line 和 Shape 控件可以在设计时添加到表单。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-112">Line and Shape controls can be added to a form at design time.</span></span> <span data-ttu-id="1ebc3-113">这使你若要查看它们的外观并将它们放置在完全;它们也可以添加在运行时。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-113">This enables you to see what they look like and to position them exactly; they can also be added at run time.</span></span>  
   
--   Line 和 Shape 控件在运行时是可选择的，并提供 <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> 和 <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A> 等事件。  图形方法的输出是不可选择的并且不提供事件。  
+-   <span data-ttu-id="1ebc3-114">Line 和 Shape 控件是可选择在运行时，如提供事件<xref:Microsoft.VisualBasic.PowerPacks.Shape.Click>和<xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-114">Line and Shape controls are selectable at run time, providing events such as <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> and <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>.</span></span> <span data-ttu-id="1ebc3-115">图形方法的输出是不可选择的并且不提供事件。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-115">The outputs of graphics methods are not selectable and do not provide events.</span></span>  
   
--   Line 和 Shape 控件提供 <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> 和 <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> 方法，使您可以在设计时和运行时控制它们的 Z 顺序。  而对于图形方法，只能通过在运行时更改它们的执行顺序来控制它们的 Z 顺序。  
+-   <span data-ttu-id="1ebc3-116">Line 和 Shape 控件提供<xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A>和<xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A>使您可以在设计时和在运行时控制其 z 顺序的方法。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-116">Line and Shape controls provide <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> and <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> methods that enable you to control their z-order at design time and at run time.</span></span> <span data-ttu-id="1ebc3-117">可以仅通过更改其顺序在运行时执行的控制 z 顺序的图形方法。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-117">The z-order of graphics methods can be controlled only by changing their order of execution at run time.</span></span>  
   
--   Line 和 Shape 控件是无窗口控件；它们没有窗口句柄，因此使用的系统资源较少。  
+-   <span data-ttu-id="1ebc3-118">Line 和 Shape 控件是无窗口控件;它们没有窗口句柄，因此使用少的系统资源。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-118">Line and Shape controls are windowless controls; they have no window handles and therefore use less system resources.</span></span>  
   
-### 对象模型  
- Line 和 Shape 控件均派生自 <xref:Microsoft.VisualBasic.PowerPacks.Shape> 基类，该类定义它们的共享属性、方法和事件。  
+### <a name="object-model"></a><span data-ttu-id="1ebc3-119">对象模型</span><span class="sxs-lookup"><span data-stu-id="1ebc3-119">Object Model</span></span>  
+ <span data-ttu-id="1ebc3-120">Line 和 Shape 控件派生自基<xref:Microsoft.VisualBasic.PowerPacks.Shape>定义其共享的属性、 方法和事件的类。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-120">Line and Shape controls derive from a base <xref:Microsoft.VisualBasic.PowerPacks.Shape> class that defines their shared properties, methods, and events.</span></span>  
   
- 下图演示 Line 和 Shape 对象层次结构。  
+ <span data-ttu-id="1ebc3-121">下图显示 Line 和 Shape 对象层次结构。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-121">The following illustration shows the Line and Shape object hierarchy.</span></span>  
   
- ![Line 和 Shape 对象层次结构示意图](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
-Line 和 Shape 对象层次结构  
+ <span data-ttu-id="1ebc3-122">![Line 和 Shape 对象层次结构关系图](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")</span><span class="sxs-lookup"><span data-stu-id="1ebc3-122">![A diagram of the Line and Shape object hierarchy](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")</span></span>  
+<span data-ttu-id="1ebc3-123">Line 和 Shape 对象层次结构</span><span class="sxs-lookup"><span data-stu-id="1ebc3-123">Line and Shape object hierarchy</span></span>  
   
- 派生类 <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 包含直线所特有的属性、方法和事件。  派生类 <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> 是 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 和 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 的基类；它包含所有形状所共有的属性、方法和事件。  您还可以通过从 <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> 派生来创建自己的 `Shape` 控件。  
+ <span data-ttu-id="1ebc3-124">派生<xref:Microsoft.VisualBasic.PowerPacks.LineShape>类包含属性、 方法和事件是唯一的行。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-124">The derived <xref:Microsoft.VisualBasic.PowerPacks.LineShape> class contains properties, methods, and events that are unique to lines.</span></span> <span data-ttu-id="1ebc3-125">派生<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>类是适用于基<xref:Microsoft.VisualBasic.PowerPacks.OvalShape>和<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; 它包含属性、 方法和事件普遍适用于所有形状。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-125">The derived <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> class is the base class for <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; it contains properties, methods, and events common to all shapes.</span></span> <span data-ttu-id="1ebc3-126">你还可以从派生<xref:Microsoft.VisualBasic.PowerPacks.SimpleShape>要创建你自己`Shape`控件。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-126">You can also derive from <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> to create your own `Shape` controls.</span></span>  
   
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 和 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 类可用于绘制圆形、椭圆形、矩形和圆角矩形。  
+ <span data-ttu-id="1ebc3-127"><xref:Microsoft.VisualBasic.PowerPacks.OvalShape>和<xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>类可以用于绘制圆形、 椭圆、 矩形和圆角矩形。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-127">The <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> classes can be used to draw circles, ovals, rectangles, and rectangles with rounded corners.</span></span>  
   
- 将 Line 或 Shape 控件添加到窗体或容器中后，随即会创建一个不可见的 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 对象。  <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 充当每个容器控件中各个形状的画布；每个 <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 均有一个对应的 <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>，使您可以循环访问 Line 和 Shape 控件。  可以使用剪切和粘贴或通过拖放操作将形状从一个容器移动到另一个容器。  当从容器中移除最后一个形状时，<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> 也将随即移除。  
+ <span data-ttu-id="1ebc3-128">线条或形状控件添加到窗体或容器，不可见时<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>创建对象。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-128">When a Line or Shape control is added to a form or container, an invisible <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> object is created.</span></span> <span data-ttu-id="1ebc3-129"><xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>充当用于每个容器控件中的形状的画布; 每个<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>都有一个相应<xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection>，可用于循环访问 Line 和 Shape 控件。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-129">The <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> acts as a canvas for the shapes within each container control; each <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> has a corresponding <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> that enables you to iterate through the Line and Shape controls.</span></span> <span data-ttu-id="1ebc3-130">你可以形状在一个容器之间移动通过剪切和粘贴或通过拖放。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-130">You can move shapes from one container to another by using cut and paste or by dragging and dropping.</span></span> <span data-ttu-id="1ebc3-131">当从一个容器，删除最后一个形状<xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>还删除。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-131">When the last shape is removed from a container, the <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> is removed also.</span></span>  
   
 > [!NOTE]
->  并不是所有容器控件都支持 Line 和 Shape 控件。  不能在 <xref:System.Windows.Forms.TableLayoutPanel> 或 <xref:System.Windows.Forms.FlowLayoutPanel> 上承载 Line 或 Shape 控件。  
+>  <span data-ttu-id="1ebc3-132">并非所有的容器控件支持 Line 和 Shape 控件。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-132">Not all container controls support the Line and Shape controls.</span></span> <span data-ttu-id="1ebc3-133">你不能在托管线条或形状控件<xref:System.Windows.Forms.TableLayoutPanel>或<xref:System.Windows.Forms.FlowLayoutPanel>。</span><span class="sxs-lookup"><span data-stu-id="1ebc3-133">You cannot host a Line or Shape control on a <xref:System.Windows.Forms.TableLayoutPanel> or a <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span>  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.PowerPacks>   
- [如何：使用 LineShape 控件绘制直线](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)   
- [如何：使用 OvalShape 和 RectangleShape 控件绘制形状](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)   
- [如何：使用 Tab 键在形状之间切换](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="1ebc3-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1ebc3-134">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks>  
+ [<span data-ttu-id="1ebc3-135">如何：使用 LineShape 控件绘制直线</span><span class="sxs-lookup"><span data-stu-id="1ebc3-135">How to: Draw Lines with the LineShape Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ [<span data-ttu-id="1ebc3-136">如何：使用 OvalShape 和 RectangleShape 控件绘制形状</span><span class="sxs-lookup"><span data-stu-id="1ebc3-136">How to: Draw Shapes with the OvalShape and RectangleShape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ [<span data-ttu-id="1ebc3-137">如何：使用 Tab 键在形状之间切换</span><span class="sxs-lookup"><span data-stu-id="1ebc3-137">How to: Enable Tabbing Between Shapes</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

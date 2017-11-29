@@ -1,88 +1,86 @@
 ---
-title: "&lt;iriParsing&gt; 元素（Uri 设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;iriParsing&gt;元素 （Uri 设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: aad2ea9a9255a6fc11465bae92f693065db21cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;iriParsing&gt; 元素（Uri 设置）
-指定是否对 <xref:System.Uri> 应用国际化资源标识符 \(IRI\) 分析以及是否应该应用 IRI 分析规则。  
+# <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="1ed0b-102">&lt;iriParsing&gt;元素 （Uri 设置）</span><span class="sxs-lookup"><span data-stu-id="1ed0b-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="1ed0b-103">指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  
   
-## 架构层次结构  
- [\<configuration\> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="1ed0b-104">架构层次结构</span><span class="sxs-lookup"><span data-stu-id="1ed0b-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="1ed0b-105">\<configuration> 元素</span><span class="sxs-lookup"><span data-stu-id="1ed0b-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri\> 元素（URI 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="1ed0b-106">\<Uri > 元素 （Uri 设置）</span><span class="sxs-lookup"><span data-stu-id="1ed0b-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<iriParsing\>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [<span data-ttu-id="1ed0b-107">\<iriParsing ></span><span class="sxs-lookup"><span data-stu-id="1ed0b-107">\<iriParsing></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="1ed0b-108">语法</span><span class="sxs-lookup"><span data-stu-id="1ed0b-108">Syntax</span></span>  
   
-```  
-<idn  
+```xml  
+<iriParsing  
   enabled="true|false"  
-/idn>  
+/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1ed0b-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1ed0b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="1ed0b-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="1ed0b-111">特性</span><span class="sxs-lookup"><span data-stu-id="1ed0b-111">Attributes</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|`enabled`|指定是否启用 IRI 分析。  默认值为 `false`。|  
+|<span data-ttu-id="1ed0b-112">**元素**</span><span class="sxs-lookup"><span data-stu-id="1ed0b-112">**Element**</span></span>|<span data-ttu-id="1ed0b-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="1ed0b-113">**Description**</span></span>|  
+|-----------------|---------------------|  
+|`enabled`|<span data-ttu-id="1ed0b-114">指定是否启用 IRI 分析。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-114">Specifies whether IRI parsing is enabled.</span></span> <span data-ttu-id="1ed0b-115">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-115">The default value is `false`.</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="1ed0b-116">子元素</span><span class="sxs-lookup"><span data-stu-id="1ed0b-116">Child Elements</span></span>  
+ <span data-ttu-id="1ed0b-117">无</span><span class="sxs-lookup"><span data-stu-id="1ed0b-117">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="1ed0b-118">父元素</span><span class="sxs-lookup"><span data-stu-id="1ed0b-118">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含一些设置，用于指定 .NET Framework 如何处理使用统一资源标识符 \(URI\) 表示的 Web 地址。|  
+|<span data-ttu-id="1ed0b-119">**元素**</span><span class="sxs-lookup"><span data-stu-id="1ed0b-119">**Element**</span></span>|<span data-ttu-id="1ed0b-120">**描述**</span><span class="sxs-lookup"><span data-stu-id="1ed0b-120">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="1ed0b-121">uri</span><span class="sxs-lookup"><span data-stu-id="1ed0b-121">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="1ed0b-122">包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## 备注  
- 现有的 <xref:System.Uri> 类已在 .NET Framework 3.5 中进行了扩展。3.0 SP1 和支持国际资源标识符 \(IRI\) 和国际化域名 \(IDN\) 的 2.0 SP1。  当前用户将不会看到 .NET Framework 2.0 行为的任何变化，除非他们专门启用 IRI 和 IDN 支持。  这确保了应用程序与以前版本的 .NET Framework 的兼容性。  
+## <a name="remarks"></a><span data-ttu-id="1ed0b-123">备注</span><span class="sxs-lookup"><span data-stu-id="1ed0b-123">Remarks</span></span>  
+ <span data-ttu-id="1ed0b-124">现有<xref:System.Uri>已在.NET Framework 3.5 扩展类。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-124">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="1ed0b-125">3.0 SP1 和 2.0 SP1，以便对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-125">3.0 SP1, and 2.0 SP1 to provide support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="1ed0b-126">当前用户将不会看到从.NET Framework 2.0 行为的任何更改，除非专门允许 IRI 和 IDN 支持。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-126">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="1ed0b-127">这确保了 NET Framework 以前版本的应用程序兼容性。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-127">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- 若要启用对 IRI 的支持，必须进行以下两项更改：  
+ <span data-ttu-id="1ed0b-128">若要启用对 IRI 的支持，以下两项更改是必需的：</span><span class="sxs-lookup"><span data-stu-id="1ed0b-128">To enable support for IRI, the following two changes are required:</span></span>  
   
-1.  在 .NET Framework 2.0 目录下的 machine.config 文件中添加以下代码行  
+1.  <span data-ttu-id="1ed0b-129">将以下行添加到.NET Framework 2.0 目录下的 machine.config 文件</span><span class="sxs-lookup"><span data-stu-id="1ed0b-129">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
   
-    ```  
+    ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  指定是否应启用 IRI 分析规则。  这可以在 machine.config 或 app.config 文件中完成。  
+2.  <span data-ttu-id="1ed0b-130">指定是否应应用 IRI 分析规则。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-130">Specify whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="1ed0b-131">这可以在 machine.config 或应用配置文件中完成。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-131">This can be done in the machine.config or in the app.config file.</span></span>  
   
- 启用 IRI 分析 \(iriParsing enabled \= `true`\) 将根据 RFC 3987 中的最新 IRI 规则执行规范化和字符检查。  默认值为 `false`，此时将根据 RFC 2396 和 RFC 3986（针对 IPv6 文本）执行规范化和字符检查。  
+ <span data-ttu-id="1ed0b-132">启用 IRI 分析 (启用 iriParsing = `true`) 将执行规范化和字符根据最新 IRI 检查规则中 RFC 3987。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-132">Enabling IRI parsing (iriParsing enabled = `true`) will do normalization and character checking according to the latest IRI rules in RFC 3987.</span></span> <span data-ttu-id="1ed0b-133">默认值是`false`，将执行规范化和字符根据 RFC 2396 检查和 RFC 3986 （对于 IPv6 文本）。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-133">The default value is `false` and will do normalization and character checking according to RFC 2396 and RFC 3986 (for IPv6 literals).</span></span>  
   
-### 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+### <a name="configuration-files"></a><span data-ttu-id="1ed0b-134">配置文件</span><span class="sxs-lookup"><span data-stu-id="1ed0b-134">Configuration Files</span></span>  
+ <span data-ttu-id="1ed0b-135">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="1ed0b-136">示例</span><span class="sxs-lookup"><span data-stu-id="1ed0b-136">Example</span></span>  
   
-### 说明  
- 下面的代码示例演示 <xref:System.Uri> 类为支持 IRI 分析和 IDN 名称所使用的配置。  
+### <a name="description"></a><span data-ttu-id="1ed0b-137">描述</span><span class="sxs-lookup"><span data-stu-id="1ed0b-137">Description</span></span>  
+ <span data-ttu-id="1ed0b-138">下面的示例演示使用的配置<xref:System.Uri>类，以支持 IRI 分析和 IDN 名称。</span><span class="sxs-lookup"><span data-stu-id="1ed0b-138">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
   
-### 代码  
+### <a name="code"></a><span data-ttu-id="1ed0b-139">代码</span><span class="sxs-lookup"><span data-stu-id="1ed0b-139">Code</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -91,7 +89,7 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="1ed0b-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1ed0b-140">See Also</span></span>  
+ <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ [<span data-ttu-id="1ed0b-141">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="1ed0b-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

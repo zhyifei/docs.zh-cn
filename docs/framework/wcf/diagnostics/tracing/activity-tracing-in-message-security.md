@@ -1,63 +1,66 @@
 ---
-title: "消息安全中的活动跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "消息安全中的活动跟踪"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 60156e284c55d765de417fe891185d1aba720816
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 消息安全中的活动跟踪
-本主题描述用于安全处理的活动跟踪，这些活动跟踪发生在以下三个阶段。  
+# <a name="activity-tracing-in-message-security"></a><span data-ttu-id="db506-102">消息安全中的活动跟踪</span><span class="sxs-lookup"><span data-stu-id="db506-102">Activity Tracing in Message Security</span></span>
+<span data-ttu-id="db506-103">本主题描述用于安全处理的活动跟踪，这些活动跟踪发生在以下三个阶段。</span><span class="sxs-lookup"><span data-stu-id="db506-103">This topic describes activity tracing for security processing, which happens in the following three phases.</span></span>  
   
--   协商\/SCT 交换。这可能发生在传输层（通过二进制数据交换）或消息层（通过 SOAP 消息交换）。  
+-   <span data-ttu-id="db506-104">协商/SCT 交换。</span><span class="sxs-lookup"><span data-stu-id="db506-104">Negotiation/SCT exchange.</span></span> <span data-ttu-id="db506-105">这可能发生在传输层（通过二进制数据交换）或消息层（通过 SOAP 消息交换）。</span><span class="sxs-lookup"><span data-stu-id="db506-105">This can happen at the transport later (through binary data exchange) or message layer (through SOAP message exchanges).</span></span>  
   
--   消息加密\/解密（带有签名验证和身份验证）。跟踪出现在环境活动（通常为“进程操作”）中。  
+-   <span data-ttu-id="db506-106">消息加密/解密（带有签名验证和身份验证）。</span><span class="sxs-lookup"><span data-stu-id="db506-106">Message encryption/decryption, with signature verification and authentication.</span></span> <span data-ttu-id="db506-107">跟踪出现在环境活动（通常为“进程操作”）中。</span><span class="sxs-lookup"><span data-stu-id="db506-107">Traces appear in the ambient activity, typically "Process Action."</span></span>  
   
--   授权和验证。这可能在本地发生，或是在终结点之间进行通信时发生。  
+-   <span data-ttu-id="db506-108">授权和验证。</span><span class="sxs-lookup"><span data-stu-id="db506-108">Authorization and verification.</span></span> <span data-ttu-id="db506-109">这可能在本地发生，或是在终结点之间进行通信时发生。</span><span class="sxs-lookup"><span data-stu-id="db506-109">This can happen locally or when communicating between endpoints.</span></span>  
   
-## 协商\/SCT 交换  
- 在协商\/SCT 交换阶段，将在客户端上创建两种活动类型：“设置安全会话”和“关闭安全会话”。“设置安全会话”包括对 RST\/RSTR\/SCT 消息交换的跟踪，而“关闭安全会话”包括对“取消”消息的跟踪。  
+## <a name="negotiationsct-exchange"></a><span data-ttu-id="db506-110">协商/SCT 交换</span><span class="sxs-lookup"><span data-stu-id="db506-110">Negotiation/SCT exchange</span></span>  
+ <span data-ttu-id="db506-111">在协商/SCT 交换阶段，将在客户端上创建两种活动类型：“设置安全会话”和“关闭安全会话”。</span><span class="sxs-lookup"><span data-stu-id="db506-111">In the negotiation/SCT exchange phase, two activity types are created on the client: "Set up Secure Session" and "Close Secure Session."</span></span> <span data-ttu-id="db506-112">“设置安全会话”包括对 RST/RSTR/SCT 消息交换的跟踪，而“关闭安全会话”包括对“取消”消息的跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-112">"Set up Secure Session" encompasses traces for the RST/RSTR/SCT message exchanges, while "Close Secure Session" includes traces for the Cancel message.</span></span>  
   
- 在服务器上，RST\/RSTR\/SCT 的每个请求\/答复都出现在它自己的活动中。如果在服务器和客户端上都设置了 `propagateActivity`\=`true`，则服务器上的活动具有相同的 ID，并且在通过服务跟踪查看器查看时一起出现在“设置安全会话”中。  
+ <span data-ttu-id="db506-113">在服务器上，RST/RSTR/SCT 的每个请求/答复都出现在它自己的活动中。</span><span class="sxs-lookup"><span data-stu-id="db506-113">On the server, each request/reply for the RST/RSTR/SCT appears in its own activity.</span></span> <span data-ttu-id="db506-114">如果`propagateActivity` = `true`在服务器和客户端上，在服务器上的活动具有相同的 ID，并在"设置安全会话"查看通过服务跟踪查看器时出现在一起。</span><span class="sxs-lookup"><span data-stu-id="db506-114">If `propagateActivity`=`true` on both the server and client, activities on the server have the same ID, and appear together in the "Setup Secure Session" when viewed through Service Trace Viewer.</span></span>  
   
- 此活动跟踪模型对于用户名\/密码身份验证、证书身份验证和 NTLM 身份验证都有效。  
+ <span data-ttu-id="db506-115">此活动跟踪模型对于用户名/密码身份验证、证书身份验证和 NTLM 身份验证都有效。</span><span class="sxs-lookup"><span data-stu-id="db506-115">This activity tracing model is valid for user name/password authentication, certificate authentication, and NTLM authentication.</span></span>  
   
- 下表列出了用于协商和 SCT 交换的活动和跟踪。  
+ <span data-ttu-id="db506-116">下表列出了用于协商和 SCT 交换的活动和跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-116">The following table lists the activities and traces for negotiation and SCT exchange.</span></span>  
   
-||发生协商\/SCT 交换的时间|活动|跟踪|  
-|-|---------------------|--------|--------|  
-|安全传输<br /><br /> （HTTPS、SSL）|在接收到第一个消息时。|在环境活动中发出跟踪。|-   交换跟踪<br />-   已建立安全通道<br />-   已获取共享机密。|  
-|安全消息层<br /><br /> \(WSHTTP\)|在接收到第一个消息时。|在客户端上：<br /><br /> -   源自第一个消息的“进程操作”的“设置安全会话”，对应于 RST\/RSTR\/SCT 的每个请求\/答复。<br />-   “取消”交换的“关闭安全会话”，源自“关闭代理活动”。此活动可能源自其他某个环境活动，具体取决于关闭安全会话的时间。<br /><br /> 在服务器上：<br /><br /> -   对于服务器上的 RST\/SCT\/取消的每个请求\/答复，都有一个“进程操作”活动。如果 `propagateActivity`\=`true`，则 RST\/RSTR\/SCT 活动与“设置安全会话”合并，而“取消”与来自客户端的“关闭”活动合并。<br /><br /> “设置安全会话”有两个阶段：<br /><br /> 1.  身份验证协商。如果客户端已拥有正确的凭据，则此阶段是可选的。可以通过安全传输或通过消息交换完成此阶段。在后一种情况下，可能发生 1 次或 2 次 RST\/RSTR 交换。对于这些交换，将在新的请求\/答复活动中发出跟踪，如同以前设计的一样。<br />2.  安全会话建立 \(SCT\)，此阶段会发生一次 RST\/RSTR 交换。此阶段具有与之前所述相同的环境活动。|-   交换跟踪<br />-   已建立安全通道<br />-   已获取共享机密。|  
-  
-> [!NOTE]
->  在混合安全模式中，协商身份验证发生在二进制交换中，但 SCT 发生在消息交换中。在纯粹的传输模式中，协商仅发生在传输中，并且没有其他活动。  
-  
-## 消息加密和解密  
- 下表列出了消息加密\/解密以及签名身份验证的活动和跟踪。  
-  
-||安全传输<br /><br /> （HTTPS、SSL）和安全消息层<br /><br /> \(WSHTTP\)|  
-|-|-----------------------------------------------|  
-|发生消息加密\/解密以及签名身份验证的时间|在接收到消息时|  
-|活动|在客户端和服务器上的“进程操作”活动中发出跟踪。|  
-|跟踪|-   sendSecurityHeader（发送方）：<br />-   对消息进行签名<br />-   对请求数据进行加密<br />-   receiveSecurityHeader（接收方）：<br />-   验证签名<br />-   对响应数据进行解密<br />-   身份验证|  
+||<span data-ttu-id="db506-117">发生协商/SCT 交换的时间</span><span class="sxs-lookup"><span data-stu-id="db506-117">Time when Negotiation/SCT exchange happens</span></span>|<span data-ttu-id="db506-118">活动</span><span class="sxs-lookup"><span data-stu-id="db506-118">Activities</span></span>|<span data-ttu-id="db506-119">跟踪</span><span class="sxs-lookup"><span data-stu-id="db506-119">Traces</span></span>|  
+|-|-------------------------------------------------|----------------|------------|  
+|<span data-ttu-id="db506-120">安全传输</span><span class="sxs-lookup"><span data-stu-id="db506-120">Secure Transport</span></span><br /><br /> <span data-ttu-id="db506-121">（HTTPS、SSL）</span><span class="sxs-lookup"><span data-stu-id="db506-121">(HTTPS, SSL)</span></span>|<span data-ttu-id="db506-122">在接收到第一个消息时。</span><span class="sxs-lookup"><span data-stu-id="db506-122">On first message received.</span></span>|<span data-ttu-id="db506-123">在环境活动中发出跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-123">Traces are emitted in the ambient activity.</span></span>|<span data-ttu-id="db506-124">交换跟踪</span><span class="sxs-lookup"><span data-stu-id="db506-124">-   Exchange traces</span></span><br /><span data-ttu-id="db506-125">-已建立安全通道</span><span class="sxs-lookup"><span data-stu-id="db506-125">-   Secure channel established</span></span><br /><span data-ttu-id="db506-126">-获取共享机密。</span><span class="sxs-lookup"><span data-stu-id="db506-126">-   Share secrets obtained.</span></span>|  
+|<span data-ttu-id="db506-127">安全消息层</span><span class="sxs-lookup"><span data-stu-id="db506-127">Secure Message Layer</span></span><br /><br /> <span data-ttu-id="db506-128">(WSHTTP)</span><span class="sxs-lookup"><span data-stu-id="db506-128">(WSHTTP)</span></span>|<span data-ttu-id="db506-129">在接收到第一个消息时。</span><span class="sxs-lookup"><span data-stu-id="db506-129">On first message received.</span></span>|<span data-ttu-id="db506-130">在客户端上：</span><span class="sxs-lookup"><span data-stu-id="db506-130">On the client:</span></span><br /><br /> <span data-ttu-id="db506-131">-"设置安全会话"超出"进程操作"的该第一条消息，每个请求/答复的 RST/RSTR/SCT。</span><span class="sxs-lookup"><span data-stu-id="db506-131">-   "Setup Secure Session" out of "Process Action" of that first message, for each request/reply for RST/RSTR/SCT.</span></span><br /><span data-ttu-id="db506-132">-"关闭安全会话"，取消交换，超出的"关闭代理活动"。</span><span class="sxs-lookup"><span data-stu-id="db506-132">-   "Close Secure Session" for the CANCEL exchange, out of the "Close Proxy activity."</span></span> <span data-ttu-id="db506-133">此活动可能源自其他某个环境活动，具体取决于关闭安全会话的时间。</span><span class="sxs-lookup"><span data-stu-id="db506-133">This activity may happen out of some other ambient activity, depending on when the secure session is closed.</span></span><br /><br /> <span data-ttu-id="db506-134">在服务器上：</span><span class="sxs-lookup"><span data-stu-id="db506-134">On the server:</span></span><br /><br /> <span data-ttu-id="db506-135">的每个请求/答复的 RST/SCT/取消服务器上的"进程操作"活动一个。</span><span class="sxs-lookup"><span data-stu-id="db506-135">-   One "Process Action" activity for each request/reply for RST/SCT/Cancel on the server.</span></span> <span data-ttu-id="db506-136">如果`propagateActivity` = `true`、 RST/RSTR/SCT 活动与"设置安全会话"，而取消与从客户端的"关闭"活动合并。</span><span class="sxs-lookup"><span data-stu-id="db506-136">If `propagateActivity`=`true`, RST/RSTR/SCT activities are merged with "Set up Security Session", and Cancel is merged with the "Close" activity from the client.</span></span><br /><br /> <span data-ttu-id="db506-137">“设置安全会话”有两个阶段：</span><span class="sxs-lookup"><span data-stu-id="db506-137">There are two stages for "Set up Secure Session":</span></span><br /><br /> <span data-ttu-id="db506-138">1.身份验证协商。</span><span class="sxs-lookup"><span data-stu-id="db506-138">1.  Authentication negotiation.</span></span> <span data-ttu-id="db506-139">如果客户端已拥有正确的凭据，则此阶段是可选的。</span><span class="sxs-lookup"><span data-stu-id="db506-139">This is optional if the client already has the proper credentials.</span></span> <span data-ttu-id="db506-140">可以通过安全传输或通过消息交换完成此阶段。</span><span class="sxs-lookup"><span data-stu-id="db506-140">This phase can be done through secure transport, or through message exchanges.</span></span> <span data-ttu-id="db506-141">在后一种情况下，可能发生 1 次或 2 次 RST/RSTR 交换。</span><span class="sxs-lookup"><span data-stu-id="db506-141">In the latter case, 1 or 2 RST/RSTR exchanges can happen.</span></span> <span data-ttu-id="db506-142">对于这些交换，将在新的请求/答复活动中发出跟踪，如同以前设计的一样。</span><span class="sxs-lookup"><span data-stu-id="db506-142">For these exchanges, traces are emitted in new request/reply activities as previously designed.</span></span><br /><span data-ttu-id="db506-143">2.安全会话建立 (SCT)，此阶段会发生一次 RST/RSTR 交换。</span><span class="sxs-lookup"><span data-stu-id="db506-143">2.  Secure session establishment (SCT), in which one RST/RSTR exchange happens here.</span></span> <span data-ttu-id="db506-144">此阶段具有与之前所述相同的环境活动。</span><span class="sxs-lookup"><span data-stu-id="db506-144">This has the same ambient activities as described previously.</span></span>|<span data-ttu-id="db506-145">交换跟踪</span><span class="sxs-lookup"><span data-stu-id="db506-145">-   Exchange traces</span></span><br /><span data-ttu-id="db506-146">-已建立安全通道</span><span class="sxs-lookup"><span data-stu-id="db506-146">-   Secure channel established</span></span><br /><span data-ttu-id="db506-147">-获取共享机密。</span><span class="sxs-lookup"><span data-stu-id="db506-147">-   Share secrets obtained.</span></span>|  
   
 > [!NOTE]
->  在纯粹的传输模式中，消息加密\/解密仅发生在传输中，并且没有其他活动。  
+>  <span data-ttu-id="db506-148">在混合安全模式中，协商身份验证发生在二进制交换中，但 SCT 发生在消息交换中。</span><span class="sxs-lookup"><span data-stu-id="db506-148">In mixed security mode, negotiation authentication happens in binary exchanges, but SCT happens in message exchange.</span></span> <span data-ttu-id="db506-149">在纯粹的传输模式中，协商仅发生在传输中，并且没有其他活动。</span><span class="sxs-lookup"><span data-stu-id="db506-149">In pure transport mode, negotiation happens only in transport with no additional activities.</span></span>  
   
-## 授权和验证  
- 下表列出了授权的活动和跟踪。  
+## <a name="message-encryption-and-decryption"></a><span data-ttu-id="db506-150">消息加密和解密</span><span class="sxs-lookup"><span data-stu-id="db506-150">Message Encryption and Decryption</span></span>  
+ <span data-ttu-id="db506-151">下表列出了消息加密/解密以及签名身份验证的活动和跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-151">The following table lists the activities and traces for message encryption/decryption, as well as signature authentication.</span></span>  
   
-||发生授权的时间|活动|跟踪|  
-|-|-------------|--------|--------|  
-|本地（默认）|在服务器上对消息进行解密之后|在服务器上的“进程操作”活动中发出跟踪。|已授权用户。|  
-|远程|在服务器上对消息进行解密之后|在由“进程操作”活动调用的新活动中发出跟踪。|已授权用户。|
+||<span data-ttu-id="db506-152">安全传输</span><span class="sxs-lookup"><span data-stu-id="db506-152">Secure Transport</span></span><br /><br /> <span data-ttu-id="db506-153">（HTTPS、SSL）和安全消息层</span><span class="sxs-lookup"><span data-stu-id="db506-153">(HTTPS, SSL) and Secure Message Layer</span></span><br /><br /> <span data-ttu-id="db506-154">(WSHTTP)</span><span class="sxs-lookup"><span data-stu-id="db506-154">(WSHTTP)</span></span>|  
+|-|---------------------------------------------------------------------------------|  
+|<span data-ttu-id="db506-155">发生消息加密/解密以及签名身份验证的时间</span><span class="sxs-lookup"><span data-stu-id="db506-155">Time when message encryption/decryption, as well as signature authentication happens</span></span>|<span data-ttu-id="db506-156">在接收到消息时</span><span class="sxs-lookup"><span data-stu-id="db506-156">On message received</span></span>|  
+|<span data-ttu-id="db506-157">活动</span><span class="sxs-lookup"><span data-stu-id="db506-157">Activities</span></span>|<span data-ttu-id="db506-158">在客户端和服务器上的“进程操作”活动中发出跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-158">Traces are emitted in the ProcessAction activity on the client and server.</span></span>|  
+|<span data-ttu-id="db506-159">跟踪</span><span class="sxs-lookup"><span data-stu-id="db506-159">Traces</span></span>|<span data-ttu-id="db506-160">-sendSecurityHeader （发送方）：</span><span class="sxs-lookup"><span data-stu-id="db506-160">-   sendSecurityHeader (sender):</span></span><br /><span data-ttu-id="db506-161">登录消息</span><span class="sxs-lookup"><span data-stu-id="db506-161">-   Sign message</span></span><br /><span data-ttu-id="db506-162">-加密请求数据</span><span class="sxs-lookup"><span data-stu-id="db506-162">-   Encrypt request data</span></span><br /><span data-ttu-id="db506-163">-receiveSecurityHeader （接收方）：</span><span class="sxs-lookup"><span data-stu-id="db506-163">-   receiveSecurityHeader (receiver):</span></span><br /><span data-ttu-id="db506-164">-验证签名</span><span class="sxs-lookup"><span data-stu-id="db506-164">-   Verify signature</span></span><br /><span data-ttu-id="db506-165">-解密响应数据</span><span class="sxs-lookup"><span data-stu-id="db506-165">-   Decrypt response data</span></span><br /><span data-ttu-id="db506-166">身份验证</span><span class="sxs-lookup"><span data-stu-id="db506-166">-   Authentication</span></span>|  
+  
+> [!NOTE]
+>  <span data-ttu-id="db506-167">在纯粹的传输模式中，消息加密/解密仅发生在传输中，并且没有其他活动。</span><span class="sxs-lookup"><span data-stu-id="db506-167">In pure transport mode, message encryption/decryption happens only in transport with no additional activities.</span></span>  
+  
+## <a name="authorization-and-verification"></a><span data-ttu-id="db506-168">授权和验证</span><span class="sxs-lookup"><span data-stu-id="db506-168">Authorization and Verification</span></span>  
+ <span data-ttu-id="db506-169">下表列出了授权的活动和跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-169">The following table lists the activities and traces for authorization.</span></span>  
+  
+||<span data-ttu-id="db506-170">发生授权的时间</span><span class="sxs-lookup"><span data-stu-id="db506-170">Time when authorization happens</span></span>|<span data-ttu-id="db506-171">活动</span><span class="sxs-lookup"><span data-stu-id="db506-171">Activities</span></span>|<span data-ttu-id="db506-172">跟踪</span><span class="sxs-lookup"><span data-stu-id="db506-172">Traces</span></span>|  
+|-|-------------------------------------|----------------|------------|  
+|<span data-ttu-id="db506-173">本地（默认）</span><span class="sxs-lookup"><span data-stu-id="db506-173">Local (default)</span></span>|<span data-ttu-id="db506-174">在服务器上对消息进行解密之后</span><span class="sxs-lookup"><span data-stu-id="db506-174">After the message is decrypted on the server</span></span>|<span data-ttu-id="db506-175">在服务器上的“进程操作”活动中发出跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-175">Traces are emitted in the ProcessAction activity at the server.</span></span>|<span data-ttu-id="db506-176">已授权用户。</span><span class="sxs-lookup"><span data-stu-id="db506-176">User authorized.</span></span>|  
+|<span data-ttu-id="db506-177">远程</span><span class="sxs-lookup"><span data-stu-id="db506-177">Remote</span></span>|<span data-ttu-id="db506-178">在服务器上对消息进行解密之后</span><span class="sxs-lookup"><span data-stu-id="db506-178">After the message is decrypted on the server</span></span>|<span data-ttu-id="db506-179">在由“进程操作”活动调用的新活动中发出跟踪。</span><span class="sxs-lookup"><span data-stu-id="db506-179">Traces are emitted in a new activity invoked by the ProcessAction activity.</span></span>|<span data-ttu-id="db506-180">已授权用户。</span><span class="sxs-lookup"><span data-stu-id="db506-180">User authorized.</span></span>|

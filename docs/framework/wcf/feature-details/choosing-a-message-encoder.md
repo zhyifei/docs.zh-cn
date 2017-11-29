@@ -1,84 +1,97 @@
 ---
-title: "选择消息编码器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "选择消息编码器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d19a4e925fef7fa904b6f866719d593b93db6fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 选择消息编码器
-本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包括的以下消息编码器的条件：二进制、文本和消息传输优化机制 \(MTOM\)。  
+# <a name="choosing-a-message-encoder"></a><span data-ttu-id="d1e7d-102">选择消息编码器</span><span class="sxs-lookup"><span data-stu-id="d1e7d-102">Choosing a Message Encoder</span></span>
+<span data-ttu-id="d1e7d-103">本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包括的以下消息编码器的条件：二进制、文本和消息传输优化机制 (MTOM)。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-103">This topic discusses criteria for choosing among the message encoders that are included in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: binary, text, and Message Transmission Optimization Mechanism (MTOM).</span></span>  
   
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，您可以通过绑定（由一系列绑定元素组成）来确定如何在终结点之间通过网络传输数据。消息编码器由绑定堆栈中的消息编码绑定元素表示。绑定包括多个可选协议绑定元素（如安全绑定元素或可靠消息绑定元素）、一个必需的消息编码绑定元素以及一个必需的传输绑定元素。  
+ <span data-ttu-id="d1e7d-104">在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，指定如何通过终结点之间跨网络传输数据*绑定*，这组成的序列*绑定元素*。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-104">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], you specify how to transfer data across a network between endpoints by means of a *binding*, which is made up of a sequence of *binding elements*.</span></span> <span data-ttu-id="d1e7d-105">消息编码器由绑定堆栈中的消息编码绑定元素表示。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-105">A message encoder is represented by a message encoding binding element in the binding stack.</span></span> <span data-ttu-id="d1e7d-106">绑定包括多个可选协议绑定元素（如安全绑定元素或可靠消息绑定元素）、一个必需的消息编码绑定元素以及一个必需的传输绑定元素。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-106">A binding includes optional protocol binding elements, such as a security binding element or reliable messaging binding element, a required message encoding binding element, and a required transport binding element.</span></span>  
   
- 消息编码绑定元素位于可选协议绑定元素之下和必需的传输绑定元素之上。在传出端，消息编码器序列化传出 <xref:System.ServiceModel.Channels.Message> 并将其传递到传输层。在传入端，消息编码器从传输层接收已序列化的 <xref:System.ServiceModel.Channels.Message> 并将其传递到更高的协议层（如果存在），如果不存在此协议层，则传递到应用程序。  
+ <span data-ttu-id="d1e7d-107">消息编码绑定元素位于可选协议绑定元素之下和必需的传输绑定元素之上。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-107">The message encoding binding element sits below the optional protocol binding elements and above the required transport binding element.</span></span> <span data-ttu-id="d1e7d-108">在传出端，消息编码器序列化传出 <xref:System.ServiceModel.Channels.Message> 并将其传递到传输层。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-108">On the outgoing side, a message encoder serializes the outgoing <xref:System.ServiceModel.Channels.Message> and passes it to the transport.</span></span> <span data-ttu-id="d1e7d-109">在传入端，消息编码器从传输层接收已序列化的 <xref:System.ServiceModel.Channels.Message> 并将其传递到更高的协议层（如果存在），如果不存在此协议层，则传递到应用程序。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-109">On the incoming side, a message encoder receives the serialized form of a <xref:System.ServiceModel.Channels.Message> from the transport and passes it to the higher protocol layer, if present, or to the application, if not.</span></span>  
   
- 当连接到预先存在的客户端或服务器时，因为您需要将消息以另一端预期的方式来解码，所以您不能选择使用特定消息编码。但是，如果您正在编写一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，您可以通过多个终结点公开服务，每个终结点使用不同的消息编码。这使客户端可以选择最佳的编码以通过最适合的终结点与您的服务通话，还使客户端可以灵活地选择最适合的编码。使用多个终结点还使您可以将不同消息编码的优点与其他绑定元素结合起来。  
+ <span data-ttu-id="d1e7d-110">当连接到预先存在的客户端或服务器时，因为您需要将消息以另一端预期的方式来解码，所以您不能选择使用特定消息编码。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-110">When connecting to a pre-existing client or server, you may not have a choice about using a particular message encoding since you need to encode your messages in a way that the other side is expecting.</span></span> <span data-ttu-id="d1e7d-111">但是，如果您正在编写一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，您可以通过多个终结点公开服务，每个终结点使用不同的消息编码。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-111">However, if you are writing an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, you can expose your service through multiple endpoints, each using a different message encoding.</span></span> <span data-ttu-id="d1e7d-112">这使客户端可以选择最佳的编码以通过最适合的终结点与您的服务通话，还使客户端可以灵活地选择最适合的编码。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-112">This allows clients to choose the best encoding for talking to your service over the endpoint that is best for them, as well as giving your clients the flexibility to choose the encoding that is best for them.</span></span> <span data-ttu-id="d1e7d-113">使用多个终结点还使您可以将不同消息编码的优点与其他绑定元素结合起来。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-113">Using multiple endpoints also allows you to combine the advantages of different message encodings with other binding elements.</span></span>  
   
-## 系统提供的编码器  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含三种消息编码器，它们由下面的三个类表示：  
+## <a name="system-provided-encoders"></a><span data-ttu-id="d1e7d-114">系统提供的编码器</span><span class="sxs-lookup"><span data-stu-id="d1e7d-114">System-Provided Encoders</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d1e7d-115"> 包含三种消息编码器，它们由下面的三个类表示：</span><span class="sxs-lookup"><span data-stu-id="d1e7d-115"> includes three message encoders, which are represented by the following three classes:</span></span>  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>，文本消息编码器，同时支持纯 XML 编码和 SOAP 编码。文本消息编码器的纯 XML 编码模式称为“纯旧式 XML”\(POX\)，以便与基于文本的 SOAP 编码进行区分。若要启用 POX，请将 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 属性设置为 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。使用文本消息编码器可以与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点交互操作。  
+-   <span data-ttu-id="d1e7d-116"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>，文本消息编码器，同时支持纯 XML 编码和 SOAP 编码。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-116"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, the text message encoder, supports both plain XML encoding and SOAP encoding.</span></span> <span data-ttu-id="d1e7d-117">文本消息编码器的纯 XML 编码模式称为“纯旧式 XML”(POX)，以便与基于文本的 SOAP 编码进行区分。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-117">The plain XML encoding mode of the text message encoder is called "plain old XML" (POX) to distinguish it from text-based SOAP encoding.</span></span> <span data-ttu-id="d1e7d-118">若要启用 POX，请将 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 属性设置为 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-118">To enable POX, set the <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> property to <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="d1e7d-119">使用文本消息编码器可以与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点交互操作。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-119">Use the text message encoder to interoperate with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoints.</span></span>  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>，二进制消息编码器，使用精简的二进制格式并为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通信进行了优化，因此不可互操作。它也是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的所有编码器中性能最佳的编码器。  
+-   <span data-ttu-id="d1e7d-120"><xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>，二进制消息编码器，使用精简的二进制格式并为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通信进行了优化，因此不可互操作。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-120"><xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, the binary message encoder, uses a compact binary format and is optimized for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] communication, and hence is not interoperable.</span></span> <span data-ttu-id="d1e7d-121">它也是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的所有编码器中性能最佳的编码器。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-121">This is also the most performant encoder of all the encoders [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides.</span></span>  
   
--   <xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement>，绑定元素，指定使用 MTOM 编码的消息的字符编码和消息版本。MTOM 是一种用于在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息中传输二进制数据的有效技术。MTOM 编码器会尝试在效率和互操作性之间建立平衡。MTOM 编码以文本形式传输大多数 XML，但是按原样传输较大的二进制数据块，而不是将其转换为文本，以此对其进行优化。就效率而言，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的编码器中，MTOM 介于在文本编码器（最慢）和二进制编码器（最快）之间。  
+-   <span data-ttu-id="d1e7d-122"><<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>、 绑定元素，指定的字符编码和消息版本管理的消息使用 MTOM 编码。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-122"><<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>, the binding element, specifies the character encoding and message versioning for messages using MTOM encoding.</span></span> <span data-ttu-id="d1e7d-123">MTOM 是一种用于在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息中传输二进制数据的有效技术。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-123">MTOM is an efficient technology for transmitting binary data in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] messages.</span></span> <span data-ttu-id="d1e7d-124">MTOM 编码器会尝试在效率和互操作性之间建立平衡。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-124">The MTOM encoder attempts to create a balance between efficiency and interoperability.</span></span> <span data-ttu-id="d1e7d-125">MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-125">The MTOM encoding transmits most XML in textual form, but optimizes large blocks of binary data by transmitting them as-is, without conversion to text.</span></span> <span data-ttu-id="d1e7d-126">就效率而言，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的编码器中，MTOM 介于在文本编码器（最慢）和二进制编码器（最快）之间。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-126">In terms of efficiency, among the encoders [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides, MTOM is in-between text (the slowest) and binary (the fastest).</span></span>  
   
-## 如何选择消息编码器  
- 下表说明了用于选择消息编码器的常用因素。确定因素对于您的应用程序重要性顺序，然后选择最适用于这些因素的消息编码器。请确保考虑此表中未列出的其他因素和在您的应用程序中可能需要的任何自定义消息编码器。  
+## <a name="how-to-choose-a-message-encoder"></a><span data-ttu-id="d1e7d-127">如何选择消息编码器</span><span class="sxs-lookup"><span data-stu-id="d1e7d-127">How to Choose a Message Encoder</span></span>  
+ <span data-ttu-id="d1e7d-128">下表说明了用于选择消息编码器的常用因素。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-128">The following table describes common factors used to choose a message encoder.</span></span> <span data-ttu-id="d1e7d-129">确定因素对于您的应用程序重要性顺序，然后选择最适用于这些因素的消息编码器。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-129">Prioritize the factors that are important for your application, and then choose the message encoders that work best with these factors.</span></span> <span data-ttu-id="d1e7d-130">请确保考虑此表中未列出的其他因素和在您的应用程序中可能需要的任何自定义消息编码器。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-130">Be sure to consider any additional factors not listed in this table and any custom message encoders that may be required in your application.</span></span>  
   
-|因素|说明|支持此因素的编码器|  
-|--------|--------|---------------|  
-|支持的字符集|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 仅支持 UTF8 和 UTF16 Unicode（“big\-endian”和“little\-endian”）编码。如果需要其他编码（如 UTF7 或 ASCII），则必须使用自定义编码器。有关自定义编码器示例，请参见[自定义消息编码器](http://go.microsoft.com/fwlink/?LinkId=119857)（可能为英文网页）。|文本|  
-|检查|检查是在传送期间检查消息的功能。使用或不使用 SOAP 的文本编码使很多程序不用专用工具就可以检查和分析消息。请注意，使用传输安全（在消息或传输级别）影响检查消息的能力。保密性会保护消息免于检查，完整性会保护消息免于修改。|文本|  
-|可靠性|可靠性是编码器传输错误的复原能力。也可以在消息层、传输层和应用程序层提供可靠性。所有的标准 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编码器都假定其他层提供可靠性。编码器几乎没有从传输错误恢复的能力。|无|  
-|简单性|简单性表示为编码规范创建编码器和解码器的简便性。文本编码在简单性方面具有明显的优势，POX 文本编码的另一个优点在于不需要支持处理 SOAP。|文本 \(POX\)|  
-|大小|编码确定在内容上施加的开销数量。编码消息的大小与服务操作的最大吞吐量直接相关。二进制编码通常比文本编码更精简。当消息大小超出限制时，还可以考虑在编码过程中压缩消息内容。但是，压缩增加了消息发送方和接收方的处理开销。|二进制|  
-|流处理|流处理使应用程序可以在整个消息到达之前开始处理此消息。有效地使用流处理要求消息的重要数据位于消息的开始处，以便接收应用程序无需等待这些数据到达。而且，使用流传输的应用程序必须在消息中以增量方式组织数据，以使内容没有前向相关性。在很多情况下，您必须在对内容进行流处理和使内容具有尽可能小的传输大小之间进行折衷选择。|无|  
-|第三方工具支持|编码的支持范围包括开发和诊断。对于用于处理以 POX 格式编码的消息的库和工具包，第三方开发人员已经进行了很大的投入。|文本 \(POX\)|  
-|互操作性|此因素表示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编码器与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务交互操作的能力。|Text<br /><br /> MTOM（部分）|  
+|<span data-ttu-id="d1e7d-131">因素</span><span class="sxs-lookup"><span data-stu-id="d1e7d-131">Factor</span></span>|<span data-ttu-id="d1e7d-132">描述</span><span class="sxs-lookup"><span data-stu-id="d1e7d-132">Description</span></span>|<span data-ttu-id="d1e7d-133">支持此因素的编码器</span><span class="sxs-lookup"><span data-stu-id="d1e7d-133">Encoders that support this factor</span></span>|  
+|------------|-----------------|---------------------------------------|  
+|<span data-ttu-id="d1e7d-134">支持的字符集</span><span class="sxs-lookup"><span data-stu-id="d1e7d-134">Supported Character Sets</span></span>|<span data-ttu-id="d1e7d-135"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>和 <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> 仅支持 UTF8 和 UTF16 Unicode (*big endian*和*小 endian*) 编码。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-135"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> and <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> support only the UTF8 and UTF16 Unicode (*big-endian* and *little-endian*) encodings.</span></span> <span data-ttu-id="d1e7d-136">如果需要其他编码（如 UTF7 或 ASCII），则必须使用自定义编码器。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-136">If other encodings are required, such as UTF7 or ASCII, a custom encoder must be used.</span></span> <span data-ttu-id="d1e7d-137">有关示例自定义编码器，请参阅[自定义消息编码器](http://go.microsoft.com/fwlink/?LinkId=119857)。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-137">For a sample custom encoder, see [Custom Message Encoder](http://go.microsoft.com/fwlink/?LinkId=119857).</span></span>|<span data-ttu-id="d1e7d-138">Text</span><span class="sxs-lookup"><span data-stu-id="d1e7d-138">Text</span></span>|  
+|<span data-ttu-id="d1e7d-139">检查</span><span class="sxs-lookup"><span data-stu-id="d1e7d-139">Inspection</span></span>|<span data-ttu-id="d1e7d-140">检查是在传送期间检查消息的功能。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-140">Inspection is the ability to examine messages during transmission.</span></span> <span data-ttu-id="d1e7d-141">使用或不使用 SOAP 的文本编码使很多程序不用专用工具就可以检查和分析消息。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-141">Text encodings, either with or without the use of SOAP, allow messages to be inspected and analyzed by many applications without the use of specialized tools.</span></span> <span data-ttu-id="d1e7d-142">请注意，使用传输安全（在消息或传输级别）影响检查消息的能力。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-142">Note that the use of transfer security, at either the message or transport level, affects your ability to inspect messages.</span></span> <span data-ttu-id="d1e7d-143">保密性会保护消息免于检查，完整性会保护消息免于修改。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-143">Confidentiality protects a message from being examined and integrity protects a message from being modified.</span></span>|<span data-ttu-id="d1e7d-144">Text</span><span class="sxs-lookup"><span data-stu-id="d1e7d-144">Text</span></span>|  
+|<span data-ttu-id="d1e7d-145">可靠性</span><span class="sxs-lookup"><span data-stu-id="d1e7d-145">Reliability</span></span>|<span data-ttu-id="d1e7d-146">可靠性是编码器传输错误的复原能力。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-146">Reliability is the resiliency of an encoder to transmission errors.</span></span> <span data-ttu-id="d1e7d-147">也可以在消息层、传输层和应用程序层提供可靠性。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-147">Reliability can also be provided at the message, transport, or application layer.</span></span> <span data-ttu-id="d1e7d-148">所有的标准 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编码器都假定其他层提供可靠性。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-148">All of the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encoders assume that another layer is providing reliability.</span></span> <span data-ttu-id="d1e7d-149">编码器几乎没有从传输错误恢复的能力。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-149">The encoder has little ability to recover from a transmission error.</span></span>|<span data-ttu-id="d1e7d-150">无</span><span class="sxs-lookup"><span data-stu-id="d1e7d-150">None</span></span>|  
+|<span data-ttu-id="d1e7d-151">简单性</span><span class="sxs-lookup"><span data-stu-id="d1e7d-151">Simplicity</span></span>|<span data-ttu-id="d1e7d-152">简单性表示为编码规范创建编码器和解码器的简便性。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-152">Simplicity represents the ease with which you can create encoders and decoders for an encoding specification.</span></span> <span data-ttu-id="d1e7d-153">文本编码在简单性方面具有明显的优势，POX 文本编码的另一个优点在于不需要支持处理 SOAP。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-153">Text encodings are particularly advantageous for simplicity, and the POX text encoding has the additional advantage of not requiring support for processing SOAP.</span></span>|<span data-ttu-id="d1e7d-154">文本 (POX)</span><span class="sxs-lookup"><span data-stu-id="d1e7d-154">Text (POX)</span></span>|  
+|<span data-ttu-id="d1e7d-155">大小</span><span class="sxs-lookup"><span data-stu-id="d1e7d-155">Size</span></span>|<span data-ttu-id="d1e7d-156">编码确定在内容上施加的开销数量。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-156">The encoding determines the amount of overhead imposed on content.</span></span> <span data-ttu-id="d1e7d-157">编码消息的大小与服务操作的最大吞吐量直接相关。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-157">The size of encoded messages is directly related to the maximum throughput of service operations.</span></span> <span data-ttu-id="d1e7d-158">二进制编码通常比文本编码更精简。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-158">Binary encodings are generally more compact than text encodings.</span></span> <span data-ttu-id="d1e7d-159">当消息大小超出限制时，还可以考虑在编码过程中压缩消息内容。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-159">When message size is at a premium, consider also compressing the message contents during encoding.</span></span> <span data-ttu-id="d1e7d-160">但是，压缩增加了消息发送方和接收方的处理开销。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-160">However, compression adds processing costs for both the message sender and receiver.</span></span>|<span data-ttu-id="d1e7d-161">二进制</span><span class="sxs-lookup"><span data-stu-id="d1e7d-161">Binary</span></span>|  
+|<span data-ttu-id="d1e7d-162">流式处理</span><span class="sxs-lookup"><span data-stu-id="d1e7d-162">Streaming</span></span>|<span data-ttu-id="d1e7d-163">流处理使应用程序可以在整个消息到达之前开始处理此消息。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-163">Streaming allows applications to begin processing a message before the entire message has arrived.</span></span> <span data-ttu-id="d1e7d-164">有效地使用流处理要求消息的重要数据位于消息的开始处，以便接收应用程序无需等待这些数据到达。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-164">Effectively using streaming requires that the important data for a message be available at the beginning of the message so that the receiving application is not required to wait for it to arrive.</span></span> <span data-ttu-id="d1e7d-165">而且，使用流传输的应用程序必须在消息中以增量方式组织数据，以使内容没有前向相关性。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-165">Moreover, applications that use streamed transfer must organize data in the message incrementally so that the content does not have forward dependencies.</span></span> <span data-ttu-id="d1e7d-166">在很多情况下，您必须在对内容进行流处理和使内容具有尽可能小的传输大小之间进行折衷选择。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-166">In many cases, you must compromise between streaming content and having the smallest possible transfer size for that content.</span></span>|<span data-ttu-id="d1e7d-167">无</span><span class="sxs-lookup"><span data-stu-id="d1e7d-167">None</span></span>|  
+|<span data-ttu-id="d1e7d-168">第三方工具支持</span><span class="sxs-lookup"><span data-stu-id="d1e7d-168">3rd Party Tool Support</span></span>|<span data-ttu-id="d1e7d-169">编码的支持范围包括开发和诊断。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-169">Support areas for an encoding include development and diagnosis.</span></span> <span data-ttu-id="d1e7d-170">对于用于处理以 POX 格式编码的消息的库和工具包，第三方开发人员已经进行了很大的投入。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-170">Third-party developers have made a large investment in libraries and toolkits for handling messages encoded in the POX format.</span></span>|<span data-ttu-id="d1e7d-171">文本 (POX)</span><span class="sxs-lookup"><span data-stu-id="d1e7d-171">Text (POX)</span></span>|  
+|<span data-ttu-id="d1e7d-172">互操作性</span><span class="sxs-lookup"><span data-stu-id="d1e7d-172">Interoperability</span></span>|<span data-ttu-id="d1e7d-173">此因素表示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编码器与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务交互操作的能力。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-173">This factor refers to the ability of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encoder to interoperate with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>|<span data-ttu-id="d1e7d-174">Text</span><span class="sxs-lookup"><span data-stu-id="d1e7d-174">Text</span></span><br /><br /> <span data-ttu-id="d1e7d-175">MTOM（部分）</span><span class="sxs-lookup"><span data-stu-id="d1e7d-175">MTOM (partial)</span></span>|  
   
- 注：使用二进制编码器时，创建 XMLReader 时使用 IgnoreWhitespace 设置不会有影响。例如，如果您在服务操作内执行以下内容：  
-  
-```csharp  
-public void OperationContract(XElement input)  
-        {  
-            Console.WriteLine("{0}", input.Value);  
-            int counter = 0;  
-            var xreader = input.CreateReader();  
-            var reader = XmlReader.Create(xreader, new XmlReaderSettings() { IgnoreWhitespace = true });  
-            while (reader.Read())  
-            {  
-                counter++;  
-            }  
-  
-            Console.WriteLine("Read {0} lines with reader", counter);  
-        }  
-  
+<span data-ttu-id="d1e7d-176">注意：使用二进制编码器时，在创建 XMLReader 时使用 IgnoreWhitespace 设置不会有任何影响。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-176">Note: When using the Binary Encoder, using the IgnoreWhitespace setting when creating a XMLReader will have no effect.</span></span>  <span data-ttu-id="d1e7d-177">例如，如果您在服务操作内执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="d1e7d-177">For example, if you do the following inside a service operation:</span></span>  
+
+```csharp
+public void OperationContract(XElement input)
+{
+    Console.WriteLine("{0}", input.Value);
+    int counter = 0;
+    var xreader = input.CreateReader();
+    var reader = XmlReader.Create(xreader, new XmlReaderSettings() { IgnoreWhitespace = true });
+    while (reader.Read())
+    {
+        counter++;
+    }
+
+    Console.WriteLine("Read {0} lines with reader", counter);
+}
 ```  
   
- IgnoreWhitespace 设置被忽略。  
+<span data-ttu-id="d1e7d-178">IgnoreWhitespace 设置被忽略。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-178">The IgnoreWhitespace setting is ignored.</span></span>  
   
-## 压缩和二进制编码器  
- 从 WCF4.5 开始，WCF 二进制编码器的添加对压缩的支持。这使您能够使用 gzip\/deflate 算法从 WCF 客户端发送压缩的消息，并以来自自承载 WCF 服务的压缩消息进行响应。此功能启用 HTTP 和 TCP 传输上的压缩。可以始终启用IIS 承载的 WCF 服务，以通过配置 IIS 主机服务器发送压缩的响应。压缩的类型使用 <xref:System.ServiceModel.Channels.BinaryMessageEncodingElement.CompressionFormat%2A> 属性配置。此属性设置为 <xref:System.ServiceModel.Channels.CompressionFormat> 枚举值之一：  
+## <a name="compression-and-the-binary-encoder"></a><span data-ttu-id="d1e7d-179">压缩和二进制编码器</span><span class="sxs-lookup"><span data-stu-id="d1e7d-179">Compression and the Binary Encoder</span></span>
+
+<span data-ttu-id="d1e7d-180">从 WCF 4.5 开始，WCF 二进制编码器添加了对压缩的支持。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-180">Beginning with WCF 4.5 the WCF binary encoder adds support for compression.</span></span> <span data-ttu-id="d1e7d-181">这使您能够使用 gzip/deflate 算法从 WCF 客户端发送压缩的消息，此外还以来自自承载 WCF 服务的压缩消息进行响应。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-181">This enables you to use the gzip/deflate algorithm for sending compressed messages from a WCF client and also respond with compressed messages from a self-hosted WCF service.</span></span> <span data-ttu-id="d1e7d-182">此功能同时对 HTTP 和 TCP 传输启用压缩。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-182">This feature enables compression on both the HTTP and TCP transports.</span></span> <span data-ttu-id="d1e7d-183">可以始终启用 IIS 承载的 WCF 服务，以通过配置 IIS 主机服务器发送压缩的响应。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-183">An IIS hosted WCF service can always be enabled for sending compressed responses by configuring the IIS host server.</span></span> <span data-ttu-id="d1e7d-184">可使用 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> 属性来配置压缩类型。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-184">The type of compression is configured with the <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="d1e7d-185">此属性设置为 <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> 枚举值之一：</span><span class="sxs-lookup"><span data-stu-id="d1e7d-185">This property is set to one of the <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> enum values:</span></span>
+
+* `CompressionFormat.Deflate`
+* `CompressionFormat.GZip`
+* `CompressionFormat.None`
   
-|CompressionFormat 值|说明|  
-|-------------------------|--------|  
-|F:System.ServiceModel.Channels.CompressionFormat.Deflate|使用 Deflate 压缩。|  
-|F:System.ServiceModel.Channels.CompressionFormat.GZip|使用 GZip 压缩|  
-|F:System.ServiceModel.Channels.CompressionFormat.None|不使用任何压缩|  
+<span data-ttu-id="d1e7d-186">由于此属性只在 binaryMessageEncodingBindingElement 上公开，你将需要创建类似于下面的自定义绑定，若要使用此功能：</span><span class="sxs-lookup"><span data-stu-id="d1e7d-186">Since this property is only exposed on the binaryMessageEncodingBindingElement, you will need to create a custom binding like the following to use this feature:</span></span>
+
+ ```xml
+ <customBinding>
+   <binding name="BinaryCompressionBinding">
+     <binaryMessageEncoding compressionFormat ="GZip" />
+     <httpTransport />
+  </binding>
+</customBinding>
+ ```
+
+<span data-ttu-id="d1e7d-187">客户端和服务需要同意发送和接收压缩的消息并且因此必须在客户端和服务上的 binaryMessageEncoding 元素上配置 compressionFormat 属性。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-187">Both the client and the service need to agree to send and receive compressed messages and therefore the compressionFormat property must be configured on the binaryMessageEncoding element on both client and service.</span></span> <span data-ttu-id="d1e7d-188">如果未配置服务或客户端使用压缩，则会引发 ProtocolException；但另一方面，启用压缩时应仔细考虑。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-188">A ProtocolException is thrown if either the service or client is not configured for compression but the other side is.Enabling compression should be carefully considered.</span></span> <span data-ttu-id="d1e7d-189">如果网络带宽是一个瓶颈，则压缩非常有用。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-189">Compression is mostly useful if network bandwidth is a bottleneck.</span></span> <span data-ttu-id="d1e7d-190">如果 CPU 是瓶颈，则压缩会减小吞吐量。</span><span class="sxs-lookup"><span data-stu-id="d1e7d-190">In the case where the CPU is the bottleneck, compression will decrease throughput.</span></span> <span data-ttu-id="d1e7d-191">必须在模拟环境中进行相应的测试，以确定这对于应用程序是否有好处</span><span class="sxs-lookup"><span data-stu-id="d1e7d-191">Appropriate testing must be done in a simulated environment to find out if this benefits the application</span></span>  
   
- 由于此属性旨在 binaryMessageEncodingBindingElement 上公开，您将需要创建类似以下绑定的自定义绑定，以使用此功能：\<customBinding\>        \<绑定名称\=“BinaryCompressionBinding”\>          \<binaryMessageEncoding compressionFormat \="GZip"\/\>          \<httpTransport \/\>        \<\/binding\>      \<\/customBinding\>客户端和服务均需要同意发送和接收压缩消息，因此，在客户端和服务上，均必须在 binaryMessageEncoding 元素上配置 compressionFormat 属性。如果未针对压缩配置服务或客户端，则引发 ProtocolException，但另一方面，启用压缩应仔细考虑。如果网络带宽是一个瓶颈，则压缩非常有用。如果 CPU 是瓶颈，则压缩会减小吞吐量。必须在模拟环境中进行相应的测试，以明白这是否对应用程序有好处  
-  
-## 请参阅  
- [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)
+## <a name="see-also"></a><span data-ttu-id="d1e7d-192">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d1e7d-192">See Also</span></span>
+
+[<span data-ttu-id="d1e7d-193">绑定</span><span class="sxs-lookup"><span data-stu-id="d1e7d-193">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)

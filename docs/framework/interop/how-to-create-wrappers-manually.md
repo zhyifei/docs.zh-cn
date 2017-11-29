@@ -5,54 +5,46 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- wrappers, creating manually
+helpviewer_keywords: wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 218e92b379d562be66c72cb731654907766f2ec4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19f605203a79f8435d414fb3c2eb7041c9824640
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装
-如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。 不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。  
+# <a name="how-to-create-wrappers-manually"></a><span data-ttu-id="360e4-102">如何：手动创建包装</span><span class="sxs-lookup"><span data-stu-id="360e4-102">How to: Create Wrappers Manually</span></span>
+<span data-ttu-id="360e4-103">如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。</span><span class="sxs-lookup"><span data-stu-id="360e4-103">If you decide to declare COM types manually in managed source code, the best place to start is with an existing Interface Definition Language (IDL) file or type library.</span></span> <span data-ttu-id="360e4-104">不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。</span><span class="sxs-lookup"><span data-stu-id="360e4-104">When you do not have the IDL file or cannot generate a type library file, you can simulate the COM types by creating managed declarations and exporting the resulting assembly to a type library.</span></span>  
   
-### <a name="to-simulate-com-types-from-managed-source"></a>从托管源模拟 COM 类型  
+### <a name="to-simulate-com-types-from-managed-source"></a><span data-ttu-id="360e4-105">从托管源模拟 COM 类型</span><span class="sxs-lookup"><span data-stu-id="360e4-105">To simulate COM types from managed source</span></span>  
   
-1.  在符合公共语言规范 (CLS) 的语言中声明类型并编译文件。  
+1.  <span data-ttu-id="360e4-106">在符合公共语言规范 (CLS) 的语言中声明类型并编译文件。</span><span class="sxs-lookup"><span data-stu-id="360e4-106">Declare the types in a language that is compliant with the Common Language Specification (CLS) and compile the file.</span></span>  
   
-2.  使用[类型库导出程序 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 导出包含类型的程序集。  
+2.  <span data-ttu-id="360e4-107">使用[类型库导出程序 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 导出包含类型的程序集。</span><span class="sxs-lookup"><span data-stu-id="360e4-107">Export the assembly containing the types with the [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span>  
   
-3.  将导出的 COM 类型库用作声明面向 COM 托管类型的基础。  
+3.  <span data-ttu-id="360e4-108">将导出的 COM 类型库用作声明面向 COM 托管类型的基础。</span><span class="sxs-lookup"><span data-stu-id="360e4-108">Use the exported COM type library as a basis for declaring COM-oriented managed types.</span></span>  
   
-### <a name="to-create-a-runtime-callable-wrapper-rcw"></a>创建运行时可调用包装器 (RCW)  
+### <a name="to-create-a-runtime-callable-wrapper-rcw"></a><span data-ttu-id="360e4-109">创建运行时可调用包装器 (RCW)</span><span class="sxs-lookup"><span data-stu-id="360e4-109">To create a runtime callable wrapper (RCW)</span></span>  
   
-1.  假设你有一个 IDL 文件或类型库文件，请决定要在自定义 RCW 中包含哪些类和接口。 可以排除不打算在应用程序中直接或间接使用的任何类型。  
+1.  <span data-ttu-id="360e4-110">假设你有一个 IDL 文件或类型库文件，请决定要在自定义 RCW 中包含哪些类和接口。</span><span class="sxs-lookup"><span data-stu-id="360e4-110">Assuming that you have an IDL file or type library file, decide which classes and interfaces you want to include in the custom RCW.</span></span> <span data-ttu-id="360e4-111">可以排除不打算在应用程序中直接或间接使用的任何类型。</span><span class="sxs-lookup"><span data-stu-id="360e4-111">You can exclude any types that you do not intend to use directly or indirectly in your application.</span></span>  
   
-2.  在符合 CLS 的语言中创建一个源文件，并声明类型。 有关导入转换过程的完整说明，请参阅[有关从类型库转换到程序集的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)。 实际上，创建自定义 RCW 时，需要手动执行由[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 所提供的类型转换活动。 下一章节的示例显示 IDL 或类型库文件中的类型以及它们在 C# 代码中的对应类型。  
+2.  <span data-ttu-id="360e4-112">在符合 CLS 的语言中创建一个源文件，并声明类型。</span><span class="sxs-lookup"><span data-stu-id="360e4-112">Create a source file in a CLS-compliant language and declare the types.</span></span> <span data-ttu-id="360e4-113">有关导入转换过程的完整说明，请参阅[有关从类型库转换到程序集的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)。</span><span class="sxs-lookup"><span data-stu-id="360e4-113">See [Type Library to Assembly Conversion Summary](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) for a complete description of the import conversion process.</span></span> <span data-ttu-id="360e4-114">实际上，创建自定义 RCW 时，需要手动执行由[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 所提供的类型转换活动。</span><span class="sxs-lookup"><span data-stu-id="360e4-114">Effectively, when you create a custom RCW, you are manually performing the type conversion activity provided by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="360e4-115">下一章节的示例显示 IDL 或类型库文件中的类型以及它们在 C# 代码中的对应类型。</span><span class="sxs-lookup"><span data-stu-id="360e4-115">The example in the next section shows types in an IDL or type library file and their corresponding types in C# code.</span></span>  
   
-3.  完成声明后，请像编译任何其他托管源代码一样编译此文件。  
+3.  <span data-ttu-id="360e4-116">完成声明后，请像编译任何其他托管源代码一样编译此文件。</span><span class="sxs-lookup"><span data-stu-id="360e4-116">When the declarations are complete, compile the file as you compile any other managed source code.</span></span>  
   
-4.  与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。 有关详细信息，请参阅[如何：编辑互操作程序集](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)。  
+4.  <span data-ttu-id="360e4-117">与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。</span><span class="sxs-lookup"><span data-stu-id="360e4-117">As with the types imported with Tlbimp.exe, some require additional information, which you can add directly to your code.</span></span> <span data-ttu-id="360e4-118">有关详细信息，请参阅[如何：编辑互操作程序集](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)。</span><span class="sxs-lookup"><span data-stu-id="360e4-118">For details, see [How to: Edit Interop Assemblies](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).</span></span>  
   
-## <a name="example"></a>示例  
- 以下代码演示了 IDL 中的 `ISATest` 接口和 `SATest` 类以及 C# 源代码中相应类型的示例。  
+## <a name="example"></a><span data-ttu-id="360e4-119">示例</span><span class="sxs-lookup"><span data-stu-id="360e4-119">Example</span></span>  
+ <span data-ttu-id="360e4-120">以下代码演示了 IDL 中的 `ISATest` 接口和 `SATest` 类以及 C# 源代码中相应类型的示例。</span><span class="sxs-lookup"><span data-stu-id="360e4-120">The following code shows an example of the `ISATest` interface and `SATest` class in IDL and the corresponding types in C# source code.</span></span>  
   
- **IDL 或类型库文件**  
+ <span data-ttu-id="360e4-121">**IDL 或类型库文件**</span><span class="sxs-lookup"><span data-stu-id="360e4-121">**IDL or type library file**</span></span>  
   
 ```  
  [  
@@ -77,7 +69,7 @@ coclass SATest
  };  
 ```  
   
- **托管源代码的包装器**  
+ <span data-ttu-id="360e4-122">**托管源代码的包装器**</span><span class="sxs-lookup"><span data-stu-id="360e4-122">**Wrapper in managed source code**</span></span>  
   
 ```csharp  
 using System;  
@@ -101,9 +93,9 @@ namespace SAServer
  }   
  [ComImport]  
  [Guid("116CCA1E-7E39-4515-9849-90790DA6431E")]  
- [ClassInterface(ClassInterfaceType.None)]   
+ [ClassInterface(ClassInterfaceType.None)]  
  [TypeLibType(TypeLibTypeFlags.FCanCreate)]  
- public class SATest : ISATest   
+ public class SATest : ISATest  
  {  
   [DispId(1)]  
   [MethodImpl(MethodImplOptions.InternalCall,   
@@ -114,11 +106,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [自定义运行时可调用包装器](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)   
- [COM 数据类型](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)   
- [如何：编辑互操作程序集](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)   
- [有关从类型库转换到程序集的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Tlbexp.exe（类型库导出程序）](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
-
+## <a name="see-also"></a><span data-ttu-id="360e4-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="360e4-123">See Also</span></span>  
+ [<span data-ttu-id="360e4-124">自定义运行时可调用包装器</span><span class="sxs-lookup"><span data-stu-id="360e4-124">Customizing Runtime Callable Wrappers</span></span>](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [<span data-ttu-id="360e4-125">COM 数据类型</span><span class="sxs-lookup"><span data-stu-id="360e4-125">COM Data Types</span></span>](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [<span data-ttu-id="360e4-126">如何： 编辑互操作程序集</span><span class="sxs-lookup"><span data-stu-id="360e4-126">How to: Edit Interop Assemblies</span></span>](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [<span data-ttu-id="360e4-127">有关从类型库转换到程序集的摘要</span><span class="sxs-lookup"><span data-stu-id="360e4-127">Type Library to Assembly Conversion Summary</span></span>](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [<span data-ttu-id="360e4-128">Tlbimp.exe（类型库导入程序）</span><span class="sxs-lookup"><span data-stu-id="360e4-128">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [<span data-ttu-id="360e4-129">Tlbexp.exe（类型库导出程序）</span><span class="sxs-lookup"><span data-stu-id="360e4-129">Tlbexp.exe (Type Library Exporter)</span></span>](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)

@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 查找具有特定属性 (Visual Basic 中) 的元素 |Microsoft 文档"
+title: "如何： 查找具有特定属性 (Visual Basic) 的元素"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce57f1c7e0e1860d858d36ccaff256aa4afe7e2b
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 97842cc0c42ca531c0965914d086f4c2a1faa6f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>如何︰ 查找具有特定属性 (Visual Basic 中) 的元素
-本主题演示如何查找其属性具有特定值的元素。  
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a><span data-ttu-id="bfa8f-102">如何： 查找具有特定属性 (Visual Basic) 的元素</span><span class="sxs-lookup"><span data-stu-id="bfa8f-102">How to: Find an Element with a Specific Attribute (Visual Basic)</span></span>
+<span data-ttu-id="bfa8f-103">本主题演示如何查找其属性具有特定值的元素。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
   
-## <a name="example"></a>示例  
- 本示例演示如何查找具有值为“Billing”的 `Address` 属性的 `Type` 元素。  
+## <a name="example"></a><span data-ttu-id="bfa8f-104">示例</span><span class="sxs-lookup"><span data-stu-id="bfa8f-104">Example</span></span>  
+ <span data-ttu-id="bfa8f-105">本示例演示如何查找具有值为“Billing”的 `Address` 属性的 `Type` 元素。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ <span data-ttu-id="bfa8f-106">本示例使用以下 XML 文档：[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,10 +37,9 @@ For Each el As XElement In address
 Next  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="bfa8f-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="bfa8f-107">This code produces the following output:</span></span>  
   
 ```xml  
-  
           <Address Type="Billing">  
   <Name>Tai Yee</Name>  
   <Street>8 Oak Avenue</Street>  
@@ -55,12 +50,12 @@ Next
 </Address>  
 ```  
   
- 请注意，此示例使用[XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)，和[XML Value 属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ <span data-ttu-id="bfa8f-108">请注意，此示例使用[XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)，和[XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="bfa8f-109">示例</span><span class="sxs-lookup"><span data-stu-id="bfa8f-109">Example</span></span>  
+ <span data-ttu-id="bfa8f-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="bfa8f-111">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 典型采购订单中 Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
+ <span data-ttu-id="bfa8f-112">本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的典型采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="bfa8f-112">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -79,7 +74,7 @@ Module Module1
 End Module  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="bfa8f-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="bfa8f-113">This code produces the following output:</span></span>  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -92,9 +87,9 @@ End Module
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Xml.Linq.XElement.Attribute%2A></xref:System.Xml.Linq.XElement.Attribute%2A>   
- <xref:System.Xml.Linq.XContainer.Elements%2A></xref:System.Xml.Linq.XContainer.Elements%2A>   
- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [投影运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a><span data-ttu-id="bfa8f-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bfa8f-114">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A>  
+ [<span data-ttu-id="bfa8f-115">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfa8f-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [<span data-ttu-id="bfa8f-116">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfa8f-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="bfa8f-117">投影运算 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfa8f-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

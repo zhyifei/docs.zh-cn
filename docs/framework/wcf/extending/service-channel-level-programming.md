@@ -1,65 +1,71 @@
 ---
-title: "服务通道级编程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "服务通道级编程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e296cc2d8960280c6af278a79eaeaa3984f07eff
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 服务通道级编程
-本主题介绍如何在不使用 <xref:System.ServiceModel.ServiceHost?displayProperty=fullName> 及其关联的对象模型的情况下编写 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务应用程序。  
+# <a name="service-channel-level-programming"></a><span data-ttu-id="7db2b-102">服务通道级编程</span><span class="sxs-lookup"><span data-stu-id="7db2b-102">Service Channel-Level Programming</span></span>
+<span data-ttu-id="7db2b-103">本主题介绍如何在不使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 及其关联的对象模型的情况下编写 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="7db2b-103">This topic describes how to write a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service application without using the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> and its associated object model.</span></span>  
   
-## 接收消息  
- 若要准备接收并处理消息，必须执行下列步骤：  
+## <a name="receiving-messages"></a><span data-ttu-id="7db2b-104">接收消息</span><span class="sxs-lookup"><span data-stu-id="7db2b-104">Receiving Messages</span></span>  
+ <span data-ttu-id="7db2b-105">若要准备接收并处理消息，必须执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="7db2b-105">To be ready to receive and process messages, the following steps are required:</span></span>  
   
-1.  创建绑定。  
+1.  <span data-ttu-id="7db2b-106">创建绑定。</span><span class="sxs-lookup"><span data-stu-id="7db2b-106">Create a binding.</span></span>  
   
-2.  生成通道侦听器。  
+2.  <span data-ttu-id="7db2b-107">生成通道侦听器。</span><span class="sxs-lookup"><span data-stu-id="7db2b-107">Build a channel listener.</span></span>  
   
-3.  打开通道侦听器。  
+3.  <span data-ttu-id="7db2b-108">打开通道侦听器。</span><span class="sxs-lookup"><span data-stu-id="7db2b-108">Open the channel listener.</span></span>  
   
-4.  读取请求并发送答复。  
+4.  <span data-ttu-id="7db2b-109">读取请求并发送答复。</span><span class="sxs-lookup"><span data-stu-id="7db2b-109">Read the request and send a reply.</span></span>  
   
-5.  关闭所有通道对象。  
+5.  <span data-ttu-id="7db2b-110">关闭所有通道对象。</span><span class="sxs-lookup"><span data-stu-id="7db2b-110">Close all channel objects.</span></span>  
   
-#### 创建绑定  
- 侦听和接收消息的第一步创建一个绑定。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有几个可以直接通过实例化一个人使用的内置或系统提供的绑定。另外，您还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
+#### <a name="creating-a-binding"></a><span data-ttu-id="7db2b-111">创建绑定</span><span class="sxs-lookup"><span data-stu-id="7db2b-111">Creating a Binding</span></span>  
+ <span data-ttu-id="7db2b-112">侦听和接收消息的第一步是创建绑定。</span><span class="sxs-lookup"><span data-stu-id="7db2b-112">The first step in listening for and receiving messages is creating a binding.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="7db2b-113"> 随附几个内置或系统提供的绑定，可以通过实例化这些绑定之一来直接使用它们。</span><span class="sxs-lookup"><span data-stu-id="7db2b-113"> ships with several built-in or system-provided bindings that can be used directly by instantiating one of them.</span></span> <span data-ttu-id="7db2b-114">另外，您还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。</span><span class="sxs-lookup"><span data-stu-id="7db2b-114">In addition, you can also create your own custom binding by instantiating a CustomBinding class which is what the code in listing 1 does.</span></span>  
   
- 下面的代码示例创建了 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName> 的一个实例，并将 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=fullName> 添加到其 Elements 集合（这是用于生成通道堆栈的绑定元素的集合）。在此示例中，由于元素集合只有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，所以生成的通道堆栈仅具有 HTTP 传输通道。  
+ <span data-ttu-id="7db2b-115">下面的代码示例创建了 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 的一个实例，并将 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 添加到其 Elements 集合（这是用于生成通道堆栈的绑定元素的集合）。</span><span class="sxs-lookup"><span data-stu-id="7db2b-115">The code example below creates an instance of <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> and adds an <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> to its Elements collection which is a collection of binding elements that are used to build the channel stack.</span></span> <span data-ttu-id="7db2b-116">在此示例中，由于元素集合只有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，所以生成的通道堆栈仅具有 HTTP 传输通道。</span><span class="sxs-lookup"><span data-stu-id="7db2b-116">In this example, because the elements collection has only the <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, the resulting channel stack has only the HTTP transport channel.</span></span>  
   
-#### 生成 ChannelListener  
- 在创建绑定后，我们调用 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=fullName> 来生成通道侦听器，其中类型参数就是要创建的通道形状。在此示例中使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=fullName>，这是因为我们希望以请求\/答复消息交换模式侦听传入的消息。  
+#### <a name="building-a-channellistener"></a><span data-ttu-id="7db2b-117">生成 ChannelListener</span><span class="sxs-lookup"><span data-stu-id="7db2b-117">Building a ChannelListener</span></span>  
+ <span data-ttu-id="7db2b-118">在创建绑定时之后，我们调用<!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>-->`System.ServiceModel.Channels.Binding.BuildChannelListener`来生成通道侦听器，其中类型参数是要创建的通道形状。</span><span class="sxs-lookup"><span data-stu-id="7db2b-118">After creating a binding, we call <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` to build the channel listener where the type parameter is the channel shape to create.</span></span> <span data-ttu-id="7db2b-119">在此示例中使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，这是因为我们希望以请求/答复消息交换模式侦听传入的消息。</span><span class="sxs-lookup"><span data-stu-id="7db2b-119">In this example we are using <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> because we want to listen for incoming messages in a request/reply message exchange pattern.</span></span>  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息，并发回答复消息。调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=fullName> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=fullName>，可以用于接收请求消息以及发回答复消息。  
+ <span data-ttu-id="7db2b-120"><xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息，并发回答复消息。</span><span class="sxs-lookup"><span data-stu-id="7db2b-120"><xref:System.ServiceModel.Channels.IReplyChannel> is used for receiving request messages and sending back reply messages.</span></span> <span data-ttu-id="7db2b-121">调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，可以用于接收请求消息以及发回答复消息。</span><span class="sxs-lookup"><span data-stu-id="7db2b-121">Calling <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> returns an <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, which can be used to receive the request message and to send back a reply message.</span></span>  
   
- 当创建侦听器时，我们传递发生侦听的网络地址，在此示例中为 `http://localhost:8080/channelapp`。通常，每个传输通道支持一个或可能多个地址方案，例如，HTTP 传输对 http 和 https 方案均予以支持。  
+ <span data-ttu-id="7db2b-122">当创建侦听器时，我们传递发生侦听的网络地址，在此示例中为 `http://localhost:8080/channelapp`。</span><span class="sxs-lookup"><span data-stu-id="7db2b-122">When creating the listener, we pass the network address on which it listens, in this case `http://localhost:8080/channelapp`.</span></span> <span data-ttu-id="7db2b-123">通常，每个传输通道支持一个或可能多个地址方案，例如，HTTP 传输对 http 和 https 方案均予以支持。</span><span class="sxs-lookup"><span data-stu-id="7db2b-123">In general, each transport channel supports one or possibly several address schemes, for example, the HTTP transport supports both http and https schemes.</span></span>  
   
- 在创建侦听器时，我们还传递空的 <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=fullName>。绑定参数是一种机制，用于传递那些控制侦听器生成方式的参数。在此示例中，我们不使用任何此类参数，所以我们传递的是一个空集合。  
+ <span data-ttu-id="7db2b-124">在创建侦听器时，我们还传递空的 <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="7db2b-124">We also pass an empty <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType> when creating the listener.</span></span> <span data-ttu-id="7db2b-125">绑定参数是一种机制，用于传递那些控制侦听器生成方式的参数。</span><span class="sxs-lookup"><span data-stu-id="7db2b-125">A binding parameter is a mechanism to pass parameters that control how the listener should be built.</span></span> <span data-ttu-id="7db2b-126">在此示例中，我们不使用任何此类参数，所以我们传递的是一个空集合。</span><span class="sxs-lookup"><span data-stu-id="7db2b-126">In our example, we are not using any such parameters so we pass an empty collection.</span></span>  
   
-#### 侦听传入消息  
- 然后，我们对侦听器调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName>，开始接受通道。<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=fullName> 的行为取决于传输是面向连接还是与连接无关。对于面向连接的传输，<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> 会一直阻止，直到新的连接请求传入（此时它会返回一个表示该新连接的新通道）。对于与连接无关的传输（如 HTTP），<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> 会立即返回传输侦听器创建的唯一通道。  
+#### <a name="listening-for-incoming-messages"></a><span data-ttu-id="7db2b-127">侦听传入消息</span><span class="sxs-lookup"><span data-stu-id="7db2b-127">Listening for Incoming Messages</span></span>  
+ <span data-ttu-id="7db2b-128">然后，我们对侦听器调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>，开始接受通道。</span><span class="sxs-lookup"><span data-stu-id="7db2b-128">We then call <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> on the listener and start accepting channels.</span></span> <span data-ttu-id="7db2b-129"><xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> 的行为取决于传输是面向连接还是与连接无关。</span><span class="sxs-lookup"><span data-stu-id="7db2b-129">The behavior of <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> depends on whether the transport is connection-oriented or connection-less.</span></span> <span data-ttu-id="7db2b-130">对于面向连接的传输，<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> 会一直阻止，直到新的连接请求传入（此时它会返回一个表示该新连接的新通道）。</span><span class="sxs-lookup"><span data-stu-id="7db2b-130">For connection-oriented transports, <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> blocks until a new connection request comes in at which point it returns a new channel that represents that new connection.</span></span> <span data-ttu-id="7db2b-131">对于与连接无关的传输（如 HTTP），<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> 会立即返回传输侦听器创建的唯一通道。</span><span class="sxs-lookup"><span data-stu-id="7db2b-131">For connection-less transports, such as HTTP, <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> returns immediately with the one and only channel that the transport listener creates.</span></span>  
   
- 在此示例中，侦听器返回一个实现 <xref:System.ServiceModel.Channels.IReplyChannel> 的通道。为了在此通道上接收消息，我们首先对其调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName>，以便将其置于一个准备进行通信的状态。然后，我们调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>，它会处于阻止状态，直到消息达到。  
+ <span data-ttu-id="7db2b-132">在此示例中，侦听器返回一个实现 <xref:System.ServiceModel.Channels.IReplyChannel> 的通道。</span><span class="sxs-lookup"><span data-stu-id="7db2b-132">In this example, the listener returns a channel that implements <xref:System.ServiceModel.Channels.IReplyChannel>.</span></span> <span data-ttu-id="7db2b-133">为了在此通道上接收消息，我们首先对其调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>，以便将其置于一个准备进行通信的状态。</span><span class="sxs-lookup"><span data-stu-id="7db2b-133">To receive messages on this channel we first call <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> on it to place it in a state ready for communication.</span></span> <span data-ttu-id="7db2b-134">然后，我们调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>，它会处于阻止状态，直到消息达到。</span><span class="sxs-lookup"><span data-stu-id="7db2b-134">We then call <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> which blocks until a message arrives.</span></span>  
   
-#### 读取请求并发送答复  
- 当 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 返回一个 <xref:System.ServiceModel.Channels.RequestContext>，我们使用其 <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> 属性获取收到的消息。我们写出消息的操作和正文内容（假设它是一个字符串）。  
+#### <a name="reading-the-request-and-sending-a-reply"></a><span data-ttu-id="7db2b-135">读取请求并发送答复</span><span class="sxs-lookup"><span data-stu-id="7db2b-135">Reading the Request and Sending a Reply</span></span>  
+ <span data-ttu-id="7db2b-136">当 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 返回一个 <xref:System.ServiceModel.Channels.RequestContext>，我们使用其 <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> 属性获取收到的消息。</span><span class="sxs-lookup"><span data-stu-id="7db2b-136">When <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> returns a <xref:System.ServiceModel.Channels.RequestContext>, we get the received message using its <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> property.</span></span> <span data-ttu-id="7db2b-137">我们写出消息的操作和正文内容（假设它是一个字符串）。</span><span class="sxs-lookup"><span data-stu-id="7db2b-137">We write out the message’s action and body content, (which we assume is a string).</span></span>  
   
- 为了发送答复，我们在此例中创建一个新的答复消息，它会将我们在请求中收到的字符串数据传递回去。然后，我们调用 <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> 以发送答复消息。  
+ <span data-ttu-id="7db2b-138">为了发送答复，我们在此例中创建一个新的答复消息，它会将我们在请求中收到的字符串数据传递回去。</span><span class="sxs-lookup"><span data-stu-id="7db2b-138">To send a reply, we create a new reply message in this case passing back the string data we received in the request.</span></span> <span data-ttu-id="7db2b-139">然后，我们调用 <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> 以发送答复消息。</span><span class="sxs-lookup"><span data-stu-id="7db2b-139">We then call <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> to send the reply message.</span></span>  
   
-#### 关闭对象  
- 为避免泄漏资源，很重要的一点就是关闭通信中不再需要使用的对象。在此示例中，我们关闭了请求消息、请求上下文、通道和侦听器。  
+#### <a name="closing-objects"></a><span data-ttu-id="7db2b-140">关闭对象</span><span class="sxs-lookup"><span data-stu-id="7db2b-140">Closing Objects</span></span>  
+ <span data-ttu-id="7db2b-141">为避免泄漏资源，很重要的一点就是关闭通信中不再需要使用的对象。</span><span class="sxs-lookup"><span data-stu-id="7db2b-141">To avoid leaking resources, it is very important to close objects used in communications when they are no longer required.</span></span> <span data-ttu-id="7db2b-142">在此示例中，我们关闭了请求消息、请求上下文、通道和侦听器。</span><span class="sxs-lookup"><span data-stu-id="7db2b-142">In this example we close the request message, the request context, the channel and the listener.</span></span>  
   
- 下面的代码示例演示通道侦听器仅接收一条消息所用的基本服务。实际的服务会一直接受通道及接收消息，直到服务退出。  
+ <span data-ttu-id="7db2b-143">下面的代码示例演示通道侦听器仅接收一条消息所用的基本服务。</span><span class="sxs-lookup"><span data-stu-id="7db2b-143">The following code example shows a basic service in which a channel listener receives only one message.</span></span> <span data-ttu-id="7db2b-144">实际的服务会一直接受通道及接收消息，直到服务退出。</span><span class="sxs-lookup"><span data-stu-id="7db2b-144">A real service keeps accepting channels and receiving messages until the service exits.</span></span>  
   
  [!code-csharp[ChannelProgrammingBasic#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/channelprogrammingbasic/cs/serviceprogram.cs#1)]
  [!code-vb[ChannelProgrammingBasic#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelprogrammingbasic/vb/serviceprogram.vb#1)]

@@ -1,65 +1,65 @@
 ---
-title: "加密设置的 &lt;mscorlib&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<mscorlib> 元素"
-  - "mscorlib 元素"
+title: "&lt;mscorlib&gt;加密设置的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib
+helpviewer_keywords:
+- mscorlib element
+- <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 992e62575dccae3f68df27fb7dd027dceab91ffc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 加密设置的 &lt;mscorlib&gt; 元素
-包含[\<cryptographySettings\> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。  
+# <a name="ltmscorlibgt-element-for-cryptography-settings"></a><span data-ttu-id="05226-102">&lt;mscorlib&gt;加密设置的元素</span><span class="sxs-lookup"><span data-stu-id="05226-102">&lt;mscorlib&gt; Element for Cryptography Settings</span></span>
+<span data-ttu-id="05226-103">包含[ \<g s > 元素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。</span><span class="sxs-lookup"><span data-stu-id="05226-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  
   
-## 语法  
+ <span data-ttu-id="05226-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="05226-104">\<configuration></span></span>  
+<span data-ttu-id="05226-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="05226-105">\<mscorlib></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="05226-106">语法</span><span class="sxs-lookup"><span data-stu-id="05226-106">Syntax</span></span>  
   
-      <mscorlib>   
+```xml  
+      <mscorlib>   
 </mscorlib>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="05226-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="05226-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="05226-108">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="05226-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="05226-109">特性</span><span class="sxs-lookup"><span data-stu-id="05226-109">Attributes</span></span>  
+ <span data-ttu-id="05226-110">无。</span><span class="sxs-lookup"><span data-stu-id="05226-110">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="05226-111">子元素</span><span class="sxs-lookup"><span data-stu-id="05226-111">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`cryptographySettings`|包含密码设置。|  
+|<span data-ttu-id="05226-112">元素</span><span class="sxs-lookup"><span data-stu-id="05226-112">Element</span></span>|<span data-ttu-id="05226-113">描述</span><span class="sxs-lookup"><span data-stu-id="05226-113">Description</span></span>|  
+|-------------|-----------------|  
+|`cryptographySettings`|<span data-ttu-id="05226-114">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="05226-114">Contains cryptography settings.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="05226-115">父元素</span><span class="sxs-lookup"><span data-stu-id="05226-115">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|<span data-ttu-id="05226-116">元素</span><span class="sxs-lookup"><span data-stu-id="05226-116">Element</span></span>|<span data-ttu-id="05226-117">描述</span><span class="sxs-lookup"><span data-stu-id="05226-117">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="05226-118">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="05226-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## 示例  
- 下面的示例演示如何使用**\<mscorlib\>**元素来引用密码类和配置运行时。  然后，您就可以将字符串“RSA”传递到 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> 方法并使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法返回一个 `MyCryptoRSAClass` 对象。  
+## <a name="example"></a><span data-ttu-id="05226-119">示例</span><span class="sxs-lookup"><span data-stu-id="05226-119">Example</span></span>  
+ <span data-ttu-id="05226-120">下面的示例演示如何使用 **\<mscorlib >**元素来引用密码类并配置运行时。</span><span class="sxs-lookup"><span data-stu-id="05226-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="05226-121">然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。</span><span class="sxs-lookup"><span data-stu-id="05226-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -78,10 +78,10 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>   
- <xref:System.Security.Cryptography>   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)   
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="05226-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="05226-122">See Also</span></span>  
+ <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
+ <xref:System.Security.Cryptography>  
+ [<span data-ttu-id="05226-123">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="05226-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="05226-124">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="05226-124">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="05226-125">加密服务</span><span class="sxs-lookup"><span data-stu-id="05226-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="05226-126">配置加密类</span><span class="sxs-lookup"><span data-stu-id="05226-126">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -1,60 +1,68 @@
 ---
-title: "dataContractSerializer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: dataContractSerializer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4044e81b7c33c7a755678e79586dd4f37cf54ed5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# dataContractSerializer
-包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。  
+# <a name="datacontractserializer"></a><span data-ttu-id="886a5-102">dataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="886a5-102">dataContractSerializer</span></span>
+<span data-ttu-id="886a5-103">包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。</span><span class="sxs-lookup"><span data-stu-id="886a5-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## 语法  
+ <span data-ttu-id="886a5-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="886a5-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="886a5-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="886a5-105">\<behaviors></span></span>  
+<span data-ttu-id="886a5-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="886a5-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="886a5-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="886a5-107">\<behavior></span></span>  
+<span data-ttu-id="886a5-108">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="886a5-108">\<dataContractSerializer></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="886a5-109">语法</span><span class="sxs-lookup"><span data-stu-id="886a5-109">Syntax</span></span>  
   
+```xml  
 <dataContractSerializer ignoreExtensionDataObject="Boolean"  
       maxItemsInObjectGraph="Integer" />  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="886a5-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="886a5-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="886a5-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="886a5-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="886a5-112">特性</span><span class="sxs-lookup"><span data-stu-id="886a5-112">Attributes</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|ignoreExtensionDataObject|一个布尔值，指定在对终结点进行序列化或反序列化时，是否要忽略由该终结点提供的数据。|  
-|maxItemsInObjectGraph|一个整数，指定要序列化或反序列化的最大项数。|  
+|<span data-ttu-id="886a5-113">元素</span><span class="sxs-lookup"><span data-stu-id="886a5-113">Element</span></span>|<span data-ttu-id="886a5-114">描述</span><span class="sxs-lookup"><span data-stu-id="886a5-114">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="886a5-115">ignoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="886a5-115">ignoreExtensionDataObject</span></span>|<span data-ttu-id="886a5-116">一个布尔值，指定在对终结点进行序列化或反序列化时，是否要忽略由该终结点提供的数据。</span><span class="sxs-lookup"><span data-stu-id="886a5-116">A Boolean value that specifies whether to ignore data supplied by the endpoint, when it is being serialized or deserialized.</span></span>|  
+|<span data-ttu-id="886a5-117">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="886a5-117">maxItemsInObjectGraph</span></span>|<span data-ttu-id="886a5-118">一个整数，指定要序列化或反序列化的最大项数。</span><span class="sxs-lookup"><span data-stu-id="886a5-118">An integer that specifies the maximum number of items to serialize or deserialize.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="886a5-119">子元素</span><span class="sxs-lookup"><span data-stu-id="886a5-119">Child Elements</span></span>  
+ <span data-ttu-id="886a5-120">无。</span><span class="sxs-lookup"><span data-stu-id="886a5-120">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="886a5-121">父元素</span><span class="sxs-lookup"><span data-stu-id="886a5-121">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<行为\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|<span data-ttu-id="886a5-122">元素</span><span class="sxs-lookup"><span data-stu-id="886a5-122">Element</span></span>|<span data-ttu-id="886a5-123">描述</span><span class="sxs-lookup"><span data-stu-id="886a5-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="886a5-124">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="886a5-124">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="886a5-125">指定终结点行为。</span><span class="sxs-lookup"><span data-stu-id="886a5-125">Specifies an endpoint behavior.</span></span>|  
   
-## 备注  
- 有关已知类型的更多信息，请参见 <xref:System.Runtime.Serialization.DataContractSerializer> 文档。  
+## <a name="remarks"></a><span data-ttu-id="886a5-126">备注</span><span class="sxs-lookup"><span data-stu-id="886a5-126">Remarks</span></span>  
+ <span data-ttu-id="886a5-127">有关已知类型的更多信息，请参见 <xref:System.Runtime.Serialization.DataContractSerializer> 文档。</span><span class="sxs-lookup"><span data-stu-id="886a5-127">See the <xref:System.Runtime.Serialization.DataContractSerializer> documentation for more information about known types.</span></span>  
   
 > [!CAUTION]
->  在配置文件中，`<dataContractSerializer>` 行为元素（如果有）应始终在 `<enableWebScript>` 行为元素之前出现。  否则，产生的行为将是不确定的。  
+>  <span data-ttu-id="886a5-128">在配置文件中，`<dataContractSerializer>` 行为元素（如果有）应始终在 `<enableWebScript>` 行为元素之前出现。</span><span class="sxs-lookup"><span data-stu-id="886a5-128">The `<dataContractSerializer>` behavior element (if present) should always appear before the `<enableWebScript>` behavior element in the configuration file.</span></span> <span data-ttu-id="886a5-129">否则，产生的行为将是不确定的。</span><span class="sxs-lookup"><span data-stu-id="886a5-129">Otherwise, the resulting behavior is undefined.</span></span>  
   
-## 请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>   
- <xref:System.ServiceModel.Configuration.DataContractSerializerElement>   
- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [数据传输和序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="886a5-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="886a5-130">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
+ <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
+ [<span data-ttu-id="886a5-131">数据协定已知的类型</span><span class="sxs-lookup"><span data-stu-id="886a5-131">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="886a5-132">数据传输和序列化</span><span class="sxs-lookup"><span data-stu-id="886a5-132">Data Transfer and Serialization</span></span>](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

@@ -1,70 +1,69 @@
 ---
-title: "Overridable (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overridable"
-  - "vb.Overridable"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "具体元素"
-  - "元素, 具体"
-  - "元素, virtual"
-  - "Overridable 关键字"
-  - "重写, Overridable 关键字"
-  - "过程, 重写"
-  - "过程, 重新定义"
-  - "属性 [Visual Basic], 重写"
-  - "属性 [Visual Basic], 重新定义"
-  - "虚拟元素"
+title: Overridable (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overridable
+- vb.Overridable
+helpviewer_keywords:
+- elements [Visual Basic], concrete
+- properties [Visual Basic], redefining
+- overriding, Overridable keyword
+- elements [Visual Basic], virtual
+- virtual [elements VB]
+- procedures [Visual Basic], overriding
+- concrete [elements VB]
+- procedures [Visual Basic], redefining
+- Overridable keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Overridable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定属性或过程可由派生类中同名的属性或过程进行重写。  
+# <a name="overridable-visual-basic"></a><span data-ttu-id="09af8-102">Overridable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09af8-102">Overridable (Visual Basic)</span></span>
+<span data-ttu-id="09af8-103">指定属性或过程可以覆盖具有相同名称的属性或派生类中的过程。</span><span class="sxs-lookup"><span data-stu-id="09af8-103">Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.</span></span>  
   
-## 备注  
- `Overridable` 修饰符允许一个属性或方法在派生类中重写类。  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) 修饰符在派生类防止方法或属性重写。  有关更多信息，请参见 [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+## <a name="remarks"></a><span data-ttu-id="09af8-104">备注</span><span class="sxs-lookup"><span data-stu-id="09af8-104">Remarks</span></span>  
+ <span data-ttu-id="09af8-105">`Overridable`修饰符在派生类中重写的类中允许的属性或方法。</span><span class="sxs-lookup"><span data-stu-id="09af8-105">The `Overridable` modifier allows a property or method in a class to be overridden in a derived class.</span></span> <span data-ttu-id="09af8-106">[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)修饰符防止属性或方法被重写派生类中。</span><span class="sxs-lookup"><span data-stu-id="09af8-106">The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.</span></span>  <span data-ttu-id="09af8-107">有关详细信息，请参阅[继承基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="09af8-107">For more information, see [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span></span>  
   
- 如果 `Overridable` 或 `NotOverridable` 修饰符未指定，则的默认设置取决于属性或方法是否重写基类的属性或方法。  如果属性或方法重写基类的属性或方法，默认设置为 `Overridable`;否则，为 `NotOverridable`。  
+ <span data-ttu-id="09af8-108">如果`Overridable`或`NotOverridable`修饰符未指定，则默认设置取决于是否属性或方法重写基类属性或方法。</span><span class="sxs-lookup"><span data-stu-id="09af8-108">If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method.</span></span> <span data-ttu-id="09af8-109">如果属性或方法重写基类属性或方法，默认设置是`Overridable`; 否则为它是`NotOverridable`。</span><span class="sxs-lookup"><span data-stu-id="09af8-109">If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.</span></span>  
   
- 可以通过隐藏或重写来重新定义继承的元素，但是这两种方法之间存在重大差异。  有关更多信息，请参见 [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ <span data-ttu-id="09af8-110">你可以通过隐藏或重写以重新定义继承的元素，但有两种方法之间的重要差异。</span><span class="sxs-lookup"><span data-stu-id="09af8-110">You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="09af8-111">有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。</span><span class="sxs-lookup"><span data-stu-id="09af8-111">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
- 可被重写的元素有时称为“虚拟”元素。  如果它可被重写，但是无需重写，有时又称为“具体”元素。  
+ <span data-ttu-id="09af8-112">可以重写的元素有时称为*虚拟*元素。</span><span class="sxs-lookup"><span data-stu-id="09af8-112">An element that can be overridden is sometimes referred to as a *virtual* element.</span></span> <span data-ttu-id="09af8-113">如果它可以重写，但不一定要它有时也称为*具体*元素。</span><span class="sxs-lookup"><span data-stu-id="09af8-113">If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.</span></span>  
   
- 只能在属性和过程声明语句中使用 `Overridable`。  
+ <span data-ttu-id="09af8-114">只能在属性或过程声明语句中使用 `Overridable`。</span><span class="sxs-lookup"><span data-stu-id="09af8-114">You can use `Overridable` only in a property or procedure declaration statement.</span></span>  
   
-## 合并修饰符  
- 不能为 `Private` 方法指定 `Overridable` 或 `NotOverridable` 。  
+## <a name="combined-modifiers"></a><span data-ttu-id="09af8-115">组合的修饰符</span><span class="sxs-lookup"><span data-stu-id="09af8-115">Combined Modifiers</span></span>  
+ <span data-ttu-id="09af8-116">不能指定`Overridable`或`NotOverridable`为`Private`方法。</span><span class="sxs-lookup"><span data-stu-id="09af8-116">You cannot specify `Overridable` or `NotOverridable` for a `Private` method.</span></span>  
   
- 不能在同一个声明中同时指定 `Overridable` 与 `MustOverride`、`NotOverridable` 或 `Shared`。  
+ <span data-ttu-id="09af8-117">不能指定`Overridable`连同`MustOverride`， `NotOverridable`，或`Shared`同一声明中。</span><span class="sxs-lookup"><span data-stu-id="09af8-117">You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.</span></span>  
   
- 因为重写元素隐式可重写，所以无法将 `Overridable` 与 `Overrides` 组合在一起。  
+ <span data-ttu-id="09af8-118">由于重写元素是隐式可重写的，因此不能将 `Overridable` 与 `Overrides` 组合到一起。</span><span class="sxs-lookup"><span data-stu-id="09af8-118">Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.</span></span>  
   
-## 用法  
- `Overridable` 修饰符可用于下面的上下文中：  
+## <a name="usage"></a><span data-ttu-id="09af8-119">用法</span><span class="sxs-lookup"><span data-stu-id="09af8-119">Usage</span></span>  
+ <span data-ttu-id="09af8-120">`Overridable` 修饰符可用于下面的上下文中：</span><span class="sxs-lookup"><span data-stu-id="09af8-120">The `Overridable` modifier can be used in these contexts:</span></span>  
   
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="09af8-121">Function 语句</span><span class="sxs-lookup"><span data-stu-id="09af8-121">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="09af8-122">Property 语句</span><span class="sxs-lookup"><span data-stu-id="09af8-122">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="09af8-123">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="09af8-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 请参阅  
- [修饰符](../../../visual-basic/language-reference/modifiers/index.md)   
- [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a><span data-ttu-id="09af8-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="09af8-124">See Also</span></span>  
+ [<span data-ttu-id="09af8-125">修饰符</span><span class="sxs-lookup"><span data-stu-id="09af8-125">Modifiers</span></span>](../../../visual-basic/language-reference/modifiers/index.md)  
+ [<span data-ttu-id="09af8-126">继承的基础知识</span><span class="sxs-lookup"><span data-stu-id="09af8-126">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [<span data-ttu-id="09af8-127">MustOverride</span><span class="sxs-lookup"><span data-stu-id="09af8-127">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [<span data-ttu-id="09af8-128">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="09af8-128">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="09af8-129">Overrides</span><span class="sxs-lookup"><span data-stu-id="09af8-129">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="09af8-130">关键字</span><span class="sxs-lookup"><span data-stu-id="09af8-130">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="09af8-131">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="09af8-131">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

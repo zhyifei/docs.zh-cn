@@ -1,62 +1,61 @@
 ---
-title: "MustOverride (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.MustOverride"
-  - "MustOverride"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "元素, 纯虚拟"
-  - "MustOverride 关键字"
-  - "重写, MustOverride 关键字"
-  - "过程, 重写"
-  - "过程, 重新定义"
-  - "属性 [Visual Basic], 重写"
-  - "属性 [Visual Basic], 重新定义"
-  - "纯虚拟元素"
-  - "虚拟元素, 纯"
+title: MustOverride (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.MustOverride
+- MustOverride
+helpviewer_keywords:
+- virtual elements [Visual Basic], pure
+- elements [Visual Basic], pure virtual
+- properties [Visual Basic], redefining
+- procedures [Visual Basic], overriding
+- overriding, MustOverride keyword
+- procedures [Visual Basic], redefining
+- pure virtual elements [Visual Basic]
+- MustOverride keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a2f7bdba4b01bd307e0c52802509669f772b5eb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# MustOverride (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定在这个类中没有实现的属性或过程，且必须在派生类中重写属性或过程后才可以使用。  
+# <a name="mustoverride-visual-basic"></a><span data-ttu-id="aae7f-102">MustOverride (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aae7f-102">MustOverride (Visual Basic)</span></span>
+<span data-ttu-id="aae7f-103">指定属性或过程中此类未实现，并且必须重写派生类中才可以使用。</span><span class="sxs-lookup"><span data-stu-id="aae7f-103">Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.</span></span>  
   
-## 备注  
- 只能在属性和过程声明语句中使用 `MustOverride`。  指定 `MustOverride` 的属性或过程必须是类的成员，并且该类必须标记为 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
+## <a name="remarks"></a><span data-ttu-id="aae7f-104">备注</span><span class="sxs-lookup"><span data-stu-id="aae7f-104">Remarks</span></span>  
+ <span data-ttu-id="aae7f-105">只能在属性或过程声明语句中使用 `MustOverride`。</span><span class="sxs-lookup"><span data-stu-id="aae7f-105">You can use `MustOverride` only in a property or procedure declaration statement.</span></span> <span data-ttu-id="aae7f-106">属性或过程的指定`MustOverride`必须是类的成员并且类必须加以标记[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。</span><span class="sxs-lookup"><span data-stu-id="aae7f-106">The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span></span>  
   
-## 规则  
+## <a name="rules"></a><span data-ttu-id="aae7f-107">规则</span><span class="sxs-lookup"><span data-stu-id="aae7f-107">Rules</span></span>  
   
--   **不完整的声明。**在指定 `MustOverride` 时，请勿为属性或过程提供任何其他代码行，即使 `End Function`、`End Property` 或 `End Sub` 语句也不提供。  
+-   <span data-ttu-id="aae7f-108">**不完整的声明。**</span><span class="sxs-lookup"><span data-stu-id="aae7f-108">**Incomplete Declaration.**</span></span> <span data-ttu-id="aae7f-109">当指定`MustOverride`，不会不提供任何其他代码行的属性或过程，即使`End Function`， `End Property`，或`End Sub`语句。</span><span class="sxs-lookup"><span data-stu-id="aae7f-109">When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.</span></span>  
   
--   **组合修饰符。**不能在同一个声明中同时指定 `MustOverride` 与 `NotOverridable`、`Overridable` 或 `Shared`。  
+-   <span data-ttu-id="aae7f-110">**组合的修饰符。**</span><span class="sxs-lookup"><span data-stu-id="aae7f-110">**Combined Modifiers.**</span></span> <span data-ttu-id="aae7f-111">不能指定`MustOverride`连同`NotOverridable`， `Overridable`，或`Shared`同一声明中。</span><span class="sxs-lookup"><span data-stu-id="aae7f-111">You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.</span></span>  
   
--   **隐藏与重写。**隐藏和重写均重新定义继承的元素，但是两种方法之间存在重大差异。  有关更多信息，请参见 [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+-   <span data-ttu-id="aae7f-112">**隐藏和重写。**</span><span class="sxs-lookup"><span data-stu-id="aae7f-112">**Shadowing and Overriding.**</span></span> <span data-ttu-id="aae7f-113">隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。</span><span class="sxs-lookup"><span data-stu-id="aae7f-113">Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="aae7f-114">有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。</span><span class="sxs-lookup"><span data-stu-id="aae7f-114">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
--   **替换术语。**除用在重写中之外，不能再在其他地方使用的元素有时称为“纯虚拟”元素。  
+-   <span data-ttu-id="aae7f-115">**替换术语。**</span><span class="sxs-lookup"><span data-stu-id="aae7f-115">**Alternate Terms.**</span></span> <span data-ttu-id="aae7f-116">除不能用作重写中的元素有时称为*纯虚拟*元素。</span><span class="sxs-lookup"><span data-stu-id="aae7f-116">An element that cannot be used except in an override is sometimes called a *pure virtual* element.</span></span>  
   
- `MustOverride` 修饰符可用于下面的上下文中：  
+ <span data-ttu-id="aae7f-117">`MustOverride` 修饰符可用于下面的上下文中：</span><span class="sxs-lookup"><span data-stu-id="aae7f-117">The `MustOverride` modifier can be used in these contexts:</span></span>  
   
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="aae7f-118">Function 语句</span><span class="sxs-lookup"><span data-stu-id="aae7f-118">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="aae7f-119">Property 语句</span><span class="sxs-lookup"><span data-stu-id="aae7f-119">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="aae7f-120">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="aae7f-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 请参阅  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a><span data-ttu-id="aae7f-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="aae7f-121">See Also</span></span>  
+ [<span data-ttu-id="aae7f-122">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="aae7f-122">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="aae7f-123">Overridable</span><span class="sxs-lookup"><span data-stu-id="aae7f-123">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [<span data-ttu-id="aae7f-124">Overrides</span><span class="sxs-lookup"><span data-stu-id="aae7f-124">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="aae7f-125">MustInherit</span><span class="sxs-lookup"><span data-stu-id="aae7f-125">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [<span data-ttu-id="aae7f-126">关键字</span><span class="sxs-lookup"><span data-stu-id="aae7f-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="aae7f-127">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="aae7f-127">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

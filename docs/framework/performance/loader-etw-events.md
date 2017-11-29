@@ -5,223 +5,220 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="loader-etw-events"></a>加载程序 ETW 事件
-<a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
+# <a name="loader-etw-events"></a><span data-ttu-id="ffb1d-102">加载程序 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-102">Loader ETW Events</span></span>
+<span data-ttu-id="ffb1d-103"><a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-103"><a name="top"></a> These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
   
- 所有加载程序事件均在 `LoaderKeyword` (0x8) 关键字下引发。 `DCStart` 和 `DCEnd` 事件在 `LoaderRundownKeyword` (0x8) 下引发（启用了 `StartRundown`/`EndRundown`）。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ <span data-ttu-id="ffb1d-104">所有加载程序事件均在 `LoaderKeyword` (0x8) 关键字下引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-104">All loader events are raised under the `LoaderKeyword` (0x8) keyword.</span></span> <span data-ttu-id="ffb1d-105">`DCStart` 和 `DCEnd` 事件在 `LoaderRundownKeyword` (0x8) 下引发（启用了 `StartRundown`/`EndRundown`）。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-105">The `DCStart` and the `DCEnd` events are raised under `LoaderRundownKeyword` (0x8) with `StartRundown`/`EndRundown` enabled.</span></span> <span data-ttu-id="ffb1d-106">（有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
- 加载程序事件可细分为以下几类：  
+ <span data-ttu-id="ffb1d-107">加载程序事件可细分为以下几类：</span><span class="sxs-lookup"><span data-stu-id="ffb1d-107">Loader events are subdivided into the following:</span></span>  
   
--   [应用程序域事件](#application_domain_events)  
+-   [<span data-ttu-id="ffb1d-108">应用程序域事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-108">Application Domain Events</span></span>](#application_domain_events)  
   
--   [CLR 加载程序程序集事件](#clr_loader_assembly_events)  
+-   [<span data-ttu-id="ffb1d-109">CLR 加载程序程序集事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-109">CLR Loader Assembly Events</span></span>](#clr_loader_assembly_events)  
   
--   [模块事件](#module_events)  
+-   [<span data-ttu-id="ffb1d-110">模块事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-110">Module Events</span></span>](#module_events)  
   
--   [CLR 域模块事件](#clr_domain_module_events)  
+-   [<span data-ttu-id="ffb1d-111">CLR 域模块事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-111">CLR Domain Module Events</span></span>](#clr_domain_module_events)  
   
--   [模块范围事件](#module_range_events)  
+-   [<span data-ttu-id="ffb1d-112">模块范围事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-112">Module Range Events</span></span>](#module_range_events)  
   
 <a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>应用程序域事件  
- 下表显示了关键字和级别。  
+## <a name="application-domain-events"></a><span data-ttu-id="ffb1d-113">应用程序域事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-113">Application Domain Events</span></span>  
+ <span data-ttu-id="ffb1d-114">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-114">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|事件|级别|  
+|<span data-ttu-id="ffb1d-115">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="ffb1d-115">Keyword for raising the event</span></span>|<span data-ttu-id="ffb1d-116">事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-116">Event</span></span>|<span data-ttu-id="ffb1d-117">级别</span><span class="sxs-lookup"><span data-stu-id="ffb1d-117">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|信息性 (4)|  
+|<span data-ttu-id="ffb1d-118">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-118">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="ffb1d-119">`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`</span><span class="sxs-lookup"><span data-stu-id="ffb1d-119">`AppDomainLoad_V1` and `AppDomainUnLoad_V1`</span></span>|<span data-ttu-id="ffb1d-120">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-120">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-121">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-121">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|<span data-ttu-id="ffb1d-122">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-122">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-123">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-123">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|<span data-ttu-id="ffb1d-124">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-124">Informational (4)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="ffb1d-125">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-125">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|说明|  
+|<span data-ttu-id="ffb1d-126">Event</span><span class="sxs-lookup"><span data-stu-id="ffb1d-126">Event</span></span>|<span data-ttu-id="ffb1d-127">事件 ID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-127">Event ID</span></span>|<span data-ttu-id="ffb1d-128">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-128">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` （为所有应用程序域记录）|156|每当在进程生存期内创建应用程序域时引发。|  
-|`AppDomainUnLoad_V1`|157|每当在进程生存期内销毁应用程序域时引发。|  
-|`AppDomainDCStart_V1`|157|在启动断开期间枚举应用程序域。|  
-|`AppDomainDCEnd_V1`|158|在结束断开期间枚举应用程序域。|  
+|<span data-ttu-id="ffb1d-129">`AppDomainLoad_V1` （为所有应用程序域记录）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-129">`AppDomainLoad_V1` (logged for all application domains)</span></span>|<span data-ttu-id="ffb1d-130">156</span><span class="sxs-lookup"><span data-stu-id="ffb1d-130">156</span></span>|<span data-ttu-id="ffb1d-131">每当在进程生存期内创建应用程序域时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-131">Raised whenever an application domain is created during the lifetime of a process.</span></span>|  
+|`AppDomainUnLoad_V1`|<span data-ttu-id="ffb1d-132">157</span><span class="sxs-lookup"><span data-stu-id="ffb1d-132">157</span></span>|<span data-ttu-id="ffb1d-133">每当在进程生存期内销毁应用程序域时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-133">Raised whenever an application domain is destroyed during the lifetime of a process.</span></span>|  
+|`AppDomainDCStart_V1`|<span data-ttu-id="ffb1d-134">157</span><span class="sxs-lookup"><span data-stu-id="ffb1d-134">157</span></span>|<span data-ttu-id="ffb1d-135">在启动断开期间枚举应用程序域。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-135">Enumerates the application domains during a start rundown.</span></span>|  
+|`AppDomainDCEnd_V1`|<span data-ttu-id="ffb1d-136">158</span><span class="sxs-lookup"><span data-stu-id="ffb1d-136">158</span></span>|<span data-ttu-id="ffb1d-137">在结束断开期间枚举应用程序域。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-137">Enumerates the application domains during an end rundown.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="ffb1d-138">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-138">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
+|<span data-ttu-id="ffb1d-139">字段名</span><span class="sxs-lookup"><span data-stu-id="ffb1d-139">Field name</span></span>|<span data-ttu-id="ffb1d-140">数据类型</span><span class="sxs-lookup"><span data-stu-id="ffb1d-140">Data type</span></span>|<span data-ttu-id="ffb1d-141">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-141">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AppDomainID|win:UInt64|应用程序域的唯一标识符。|  
-|AppDomainFlags|win:UInt32|0x1：默认域。<br /><br /> 0x2：可执行。<br /><br /> 0x4：应用程序域，位 28-31：共享此域的策略。<br /><br /> 0：一个共享域。|  
-|AppDomainName|win:UnicodeString|友好的应用程序域名。 可能会在进程生存期内更改。|  
-|AppDomainIndex|win:UInt32|此应用程序域的索引。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="ffb1d-142">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-142">AppDomainID</span></span>|<span data-ttu-id="ffb1d-143">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-143">win:UInt64</span></span>|<span data-ttu-id="ffb1d-144">应用程序域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-144">The unique identifier for an application domain.</span></span>|  
+|<span data-ttu-id="ffb1d-145">AppDomainFlags</span><span class="sxs-lookup"><span data-stu-id="ffb1d-145">AppDomainFlags</span></span>|<span data-ttu-id="ffb1d-146">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-146">win:UInt32</span></span>|<span data-ttu-id="ffb1d-147">0x1：默认域。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-147">0x1: Default domain.</span></span><br /><br /> <span data-ttu-id="ffb1d-148">0x2：可执行。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-148">0x2: Executable.</span></span><br /><br /> <span data-ttu-id="ffb1d-149">0x4：应用程序域，位 28-31：共享此域的策略。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-149">0x4: Application domain, bit 28-31: Sharing policy of this domain.</span></span><br /><br /> <span data-ttu-id="ffb1d-150">0：一个共享域。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-150">0: A shared domain.</span></span>|  
+|<span data-ttu-id="ffb1d-151">AppDomainName</span><span class="sxs-lookup"><span data-stu-id="ffb1d-151">AppDomainName</span></span>|<span data-ttu-id="ffb1d-152">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-152">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-153">友好的应用程序域名。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-153">Friendly application domain name.</span></span> <span data-ttu-id="ffb1d-154">可能会在进程生存期内更改。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-154">Might change during the lifetime of the process.</span></span>|  
+|<span data-ttu-id="ffb1d-155">AppDomainIndex</span><span class="sxs-lookup"><span data-stu-id="ffb1d-155">AppDomainIndex</span></span>|<span data-ttu-id="ffb1d-156">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-156">Win:UInt32</span></span>|<span data-ttu-id="ffb1d-157">此应用程序域的索引。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-157">The index of this application domain.</span></span>|  
+|<span data-ttu-id="ffb1d-158">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-158">ClrInstanceID</span></span>|<span data-ttu-id="ffb1d-159">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ffb1d-159">win:UInt16</span></span>|<span data-ttu-id="ffb1d-160">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-160">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="ffb1d-161">返回页首</span><span class="sxs-lookup"><span data-stu-id="ffb1d-161">Back to top</span></span>](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
-## <a name="clr-loader-assembly-events"></a>CLR 加载程序程序集事件  
- 下表显示了关键字和级别。  
+## <a name="clr-loader-assembly-events"></a><span data-ttu-id="ffb1d-162">CLR 加载程序程序集事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-162">CLR Loader Assembly Events</span></span>  
+ <span data-ttu-id="ffb1d-163">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-163">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|事件|级别|  
+|<span data-ttu-id="ffb1d-164">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="ffb1d-164">Keyword for raising the event</span></span>|<span data-ttu-id="ffb1d-165">事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-165">Event</span></span>|<span data-ttu-id="ffb1d-166">级别</span><span class="sxs-lookup"><span data-stu-id="ffb1d-166">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|信息性 (4)|  
+|<span data-ttu-id="ffb1d-167">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-167">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="ffb1d-168">`AssemblyLoad` 和 `AssemblyUnload`</span><span class="sxs-lookup"><span data-stu-id="ffb1d-168">`AssemblyLoad` and `AssemblyUnload`</span></span>|<span data-ttu-id="ffb1d-169">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-169">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-170">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-170">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|<span data-ttu-id="ffb1d-171">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-171">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-172">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-172">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|<span data-ttu-id="ffb1d-173">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-173">Informational (4)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="ffb1d-174">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-174">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|说明|  
+|<span data-ttu-id="ffb1d-175">Event</span><span class="sxs-lookup"><span data-stu-id="ffb1d-175">Event</span></span>|<span data-ttu-id="ffb1d-176">事件 ID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-176">Event ID</span></span>|<span data-ttu-id="ffb1d-177">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AssemblyLoad_V1`|154|在加载程序集时引发。|  
-|`AssemblyUnload_V1`|155|在卸载程序集时引发。|  
-|`AssemblyDCStart_V1`|155|在启动断开期间枚举程序集。|  
-|`AssemblyDCEnd_V1`|156|在结束断开期间枚举程序集。|  
+|`AssemblyLoad_V1`|<span data-ttu-id="ffb1d-178">154</span><span class="sxs-lookup"><span data-stu-id="ffb1d-178">154</span></span>|<span data-ttu-id="ffb1d-179">在加载程序集时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-179">Raised when an assembly is loaded.</span></span>|  
+|`AssemblyUnload_V1`|<span data-ttu-id="ffb1d-180">155</span><span class="sxs-lookup"><span data-stu-id="ffb1d-180">155</span></span>|<span data-ttu-id="ffb1d-181">在卸载程序集时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-181">Raised when an assembly is unloaded.</span></span>|  
+|`AssemblyDCStart_V1`|<span data-ttu-id="ffb1d-182">155</span><span class="sxs-lookup"><span data-stu-id="ffb1d-182">155</span></span>|<span data-ttu-id="ffb1d-183">在启动断开期间枚举程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-183">Enumerates assemblies during a start rundown.</span></span>|  
+|`AssemblyDCEnd_V1`|<span data-ttu-id="ffb1d-184">156</span><span class="sxs-lookup"><span data-stu-id="ffb1d-184">156</span></span>|<span data-ttu-id="ffb1d-185">在结束断开期间枚举程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-185">Enumerates assemblies during an end rundown.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="ffb1d-186">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-186">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
+|<span data-ttu-id="ffb1d-187">字段名</span><span class="sxs-lookup"><span data-stu-id="ffb1d-187">Field name</span></span>|<span data-ttu-id="ffb1d-188">数据类型</span><span class="sxs-lookup"><span data-stu-id="ffb1d-188">Data type</span></span>|<span data-ttu-id="ffb1d-189">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-189">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AssemblyID|win:UInt64|程序集的唯一 ID。|  
-|AppDomainID|win:UInt64|此程序集的域的 ID。|  
-|BindingID|win:UInt64|唯一地标识程序集绑定的 ID。|  
-|AssemblyFlags|win:UInt32|0x1：非特定于域的程序集。<br /><br /> 0x2：动态程序集。<br /><br /> 0x4：程序集具有本机映像。<br /><br /> 0x8：可回收程序集。|  
-|AssemblyName|win:UnicodeString|完全限定程序集名称。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="ffb1d-190">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-190">AssemblyID</span></span>|<span data-ttu-id="ffb1d-191">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-191">win:UInt64</span></span>|<span data-ttu-id="ffb1d-192">程序集的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-192">Unique ID for the assembly.</span></span>|  
+|<span data-ttu-id="ffb1d-193">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-193">AppDomainID</span></span>|<span data-ttu-id="ffb1d-194">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-194">win:UInt64</span></span>|<span data-ttu-id="ffb1d-195">此程序集的域的 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-195">ID of the domain of this assembly.</span></span>|  
+|<span data-ttu-id="ffb1d-196">BindingID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-196">BindingID</span></span>|<span data-ttu-id="ffb1d-197">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-197">win:UInt64</span></span>|<span data-ttu-id="ffb1d-198">唯一地标识程序集绑定的 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-198">ID that uniquely identifies the assembly binding.</span></span>|  
+|<span data-ttu-id="ffb1d-199">AssemblyFlags</span><span class="sxs-lookup"><span data-stu-id="ffb1d-199">AssemblyFlags</span></span>|<span data-ttu-id="ffb1d-200">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-200">win:UInt32</span></span>|<span data-ttu-id="ffb1d-201">0x1：非特定于域的程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-201">0x1: Domain neutral assembly.</span></span><br /><br /> <span data-ttu-id="ffb1d-202">0x2：动态程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-202">0x2: Dynamic assembly.</span></span><br /><br /> <span data-ttu-id="ffb1d-203">0x4：程序集具有本机映像。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-203">0x4: Assembly has a native image.</span></span><br /><br /> <span data-ttu-id="ffb1d-204">0x8：可回收程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-204">0x8: Collectible assembly.</span></span>|  
+|<span data-ttu-id="ffb1d-205">AssemblyName</span><span class="sxs-lookup"><span data-stu-id="ffb1d-205">AssemblyName</span></span>|<span data-ttu-id="ffb1d-206">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-206">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-207">完全限定程序集名称。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-207">Fully qualified assembly name.</span></span>|  
+|<span data-ttu-id="ffb1d-208">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-208">ClrInstanceID</span></span>|<span data-ttu-id="ffb1d-209">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ffb1d-209">win:UInt16</span></span>|<span data-ttu-id="ffb1d-210">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-210">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="ffb1d-211">返回页首</span><span class="sxs-lookup"><span data-stu-id="ffb1d-211">Back to top</span></span>](#top)  
   
 <a name="module_events"></a>   
-## <a name="module-events"></a>模块事件  
- 下表显示了关键字和级别。  
+## <a name="module-events"></a><span data-ttu-id="ffb1d-212">模块事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-212">Module Events</span></span>  
+ <span data-ttu-id="ffb1d-213">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-213">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|事件|级别|  
+|<span data-ttu-id="ffb1d-214">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="ffb1d-214">Keyword for raising the event</span></span>|<span data-ttu-id="ffb1d-215">事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-215">Event</span></span>|<span data-ttu-id="ffb1d-216">级别</span><span class="sxs-lookup"><span data-stu-id="ffb1d-216">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|信息性 (4)|  
+|<span data-ttu-id="ffb1d-217">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-217">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="ffb1d-218">`ModuleLoad_V2` 和 `ModuleUnload_V2`</span><span class="sxs-lookup"><span data-stu-id="ffb1d-218">`ModuleLoad_V2` and `ModuleUnload_V2`</span></span>|<span data-ttu-id="ffb1d-219">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-219">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-220">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-220">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|<span data-ttu-id="ffb1d-221">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-221">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-222">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-222">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|<span data-ttu-id="ffb1d-223">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-223">Informational (4)</span></span>|  
 ||||  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="ffb1d-224">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-224">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|说明|  
+|<span data-ttu-id="ffb1d-225">Event</span><span class="sxs-lookup"><span data-stu-id="ffb1d-225">Event</span></span>|<span data-ttu-id="ffb1d-226">事件 ID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-226">Event ID</span></span>|<span data-ttu-id="ffb1d-227">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-227">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleLoad_V2`|152|在进程的生存期内加载模块时引发。|  
-|`ModuleUnload_V2`|153|在进程的生存期内卸载模块时引发。|  
-|`ModuleDCStart_V2`|153|在启动断开期间枚举模块。|  
-|`ModuleDCEnd_V2`|154|在结束断开期间枚举模块。|  
+|`ModuleLoad_V2`|<span data-ttu-id="ffb1d-228">152</span><span class="sxs-lookup"><span data-stu-id="ffb1d-228">152</span></span>|<span data-ttu-id="ffb1d-229">在进程的生存期内加载模块时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-229">Raised when a module is loaded during the lifetime of a process.</span></span>|  
+|`ModuleUnload_V2`|<span data-ttu-id="ffb1d-230">153</span><span class="sxs-lookup"><span data-stu-id="ffb1d-230">153</span></span>|<span data-ttu-id="ffb1d-231">在进程的生存期内卸载模块时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-231">Raised when a module is unloaded during the lifetime of a process.</span></span>|  
+|`ModuleDCStart_V2`|<span data-ttu-id="ffb1d-232">153</span><span class="sxs-lookup"><span data-stu-id="ffb1d-232">153</span></span>|<span data-ttu-id="ffb1d-233">在启动断开期间枚举模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-233">Enumerates modules during a start rundown.</span></span>|  
+|`ModuleDCEnd_V2`|<span data-ttu-id="ffb1d-234">154</span><span class="sxs-lookup"><span data-stu-id="ffb1d-234">154</span></span>|<span data-ttu-id="ffb1d-235">在结束断开期间枚举模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-235">Enumerates modules during an end rundown.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="ffb1d-236">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-236">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
+|<span data-ttu-id="ffb1d-237">字段名</span><span class="sxs-lookup"><span data-stu-id="ffb1d-237">Field name</span></span>|<span data-ttu-id="ffb1d-238">数据类型</span><span class="sxs-lookup"><span data-stu-id="ffb1d-238">Data type</span></span>|<span data-ttu-id="ffb1d-239">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-239">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|模块的唯一 ID。|  
-|AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
-|ModuleFlags|win:UInt32|0x1：非特定于域的模块。<br /><br /> 0x2：模块具有本机映像。<br /><br /> 0x4：动态模块。<br /><br /> 0x8：清单模块。|  
-|Reserved1|win:UInt32|保留的字段。|  
-|ModuleILPath|win:UnicodeString|模块的 Microsoft 中间语言 (MSIL) 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。|  
-|ModuleNativePath|win:UnicodeString|如果存在（以 null 结尾），则为模块本机映像的路径。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
-|ManagedPdbSignature|win:GUID|匹配此模块的托管程序数据库 (PDB) 的 GUID 签名。 （请参阅“备注”。）|  
-|ManagedPdbAge|win:UInt32|写入匹配此模块的托管 PDB 的年限数。 （请参阅“备注”。）|  
-|ManagedPdbBuildPath|win:UnicodeString|生成匹配此模块的托管 PDB 的位置的路径。 在某些情况下，这可能只是一个文件名。 （请参阅“备注”。）|  
-|NativePdbSignature|win:GUID|匹配此模块的本机映像生成器 (NGen) PDB 的 GUID 签名（如果适用）。 （请参阅“备注”。）|  
-|NativePdbAge|win:UInt32|写入匹配此模块的 NGen PDB 的年限数（如果适用）。 （请参阅“备注”。）|  
-|NativePdbBuildPath|win:UnicodeString|生成匹配此模块的 NGen PDB 的位置的路径（如果适用）。 在某些情况下，这可能只是一个文件名。 （请参阅“备注”。）|  
+|<span data-ttu-id="ffb1d-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-240">ModuleID</span></span>|<span data-ttu-id="ffb1d-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-241">win:UInt64</span></span>|<span data-ttu-id="ffb1d-242">模块的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-242">Unique ID for the module.</span></span>|  
+|<span data-ttu-id="ffb1d-243">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-243">AssemblyID</span></span>|<span data-ttu-id="ffb1d-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-244">win:UInt64</span></span>|<span data-ttu-id="ffb1d-245">此模块所驻留的程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-245">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="ffb1d-246">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="ffb1d-246">ModuleFlags</span></span>|<span data-ttu-id="ffb1d-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-247">win:UInt32</span></span>|<span data-ttu-id="ffb1d-248">0x1：非特定于域的模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-248">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="ffb1d-249">0x2：模块具有本机映像。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-249">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="ffb1d-250">0x4：动态模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-250">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="ffb1d-251">0x8：清单模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-251">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="ffb1d-252">Reserved1</span><span class="sxs-lookup"><span data-stu-id="ffb1d-252">Reserved1</span></span>|<span data-ttu-id="ffb1d-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-253">win:UInt32</span></span>|<span data-ttu-id="ffb1d-254">保留的字段。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-254">Reserved field.</span></span>|  
+|<span data-ttu-id="ffb1d-255">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="ffb1d-255">ModuleILPath</span></span>|<span data-ttu-id="ffb1d-256">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-256">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-257">模块的 Microsoft 中间语言 (MSIL) 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-257">Path of the Microsoft intermediate language (MSIL) image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="ffb1d-258">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="ffb1d-258">ModuleNativePath</span></span>|<span data-ttu-id="ffb1d-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-259">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-260">如果存在（以 null 结尾），则为模块本机映像的路径。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-260">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="ffb1d-261">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-261">ClrInstanceID</span></span>|<span data-ttu-id="ffb1d-262">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ffb1d-262">win:UInt16</span></span>|<span data-ttu-id="ffb1d-263">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-263">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="ffb1d-264">ManagedPdbSignature</span><span class="sxs-lookup"><span data-stu-id="ffb1d-264">ManagedPdbSignature</span></span>|<span data-ttu-id="ffb1d-265">win:GUID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-265">win:GUID</span></span>|<span data-ttu-id="ffb1d-266">匹配此模块的托管程序数据库 (PDB) 的 GUID 签名。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-266">GUID signature of the managed program database (PDB) that matches this module.</span></span> <span data-ttu-id="ffb1d-267">（请参阅“备注”。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-267">(See Remarks.)</span></span>|  
+|<span data-ttu-id="ffb1d-268">ManagedPdbAge</span><span class="sxs-lookup"><span data-stu-id="ffb1d-268">ManagedPdbAge</span></span>|<span data-ttu-id="ffb1d-269">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-269">win:UInt32</span></span>|<span data-ttu-id="ffb1d-270">写入匹配此模块的托管 PDB 的年限数。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-270">Age number written to the managed PDB that matches this module.</span></span> <span data-ttu-id="ffb1d-271">（请参阅“备注”。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-271">(See Remarks.)</span></span>|  
+|<span data-ttu-id="ffb1d-272">ManagedPdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="ffb1d-272">ManagedPdbBuildPath</span></span>|<span data-ttu-id="ffb1d-273">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-273">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-274">生成匹配此模块的托管 PDB 的位置的路径。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-274">Path to the location where the managed PDB that matches this module was built.</span></span> <span data-ttu-id="ffb1d-275">在某些情况下，这可能只是一个文件名。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-275">In some cases, this may just be a file name.</span></span> <span data-ttu-id="ffb1d-276">（请参阅“备注”。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-276">(See Remarks.)</span></span>|  
+|<span data-ttu-id="ffb1d-277">NativePdbSignature</span><span class="sxs-lookup"><span data-stu-id="ffb1d-277">NativePdbSignature</span></span>|<span data-ttu-id="ffb1d-278">win:GUID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-278">win:GUID</span></span>|<span data-ttu-id="ffb1d-279">匹配此模块的本机映像生成器 (NGen) PDB 的 GUID 签名（如果适用）。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-279">GUID signature of the Native Image Generator (NGen) PDB that matches this module, if applicable.</span></span> <span data-ttu-id="ffb1d-280">（请参阅“备注”。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-280">(See Remarks.)</span></span>|  
+|<span data-ttu-id="ffb1d-281">NativePdbAge</span><span class="sxs-lookup"><span data-stu-id="ffb1d-281">NativePdbAge</span></span>|<span data-ttu-id="ffb1d-282">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-282">win:UInt32</span></span>|<span data-ttu-id="ffb1d-283">写入匹配此模块的 NGen PDB 的年限数（如果适用）。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-283">Age number written to the NGen PDB that matches this module, if applicable.</span></span> <span data-ttu-id="ffb1d-284">（请参阅“备注”。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-284">(See Remarks.)</span></span>|  
+|<span data-ttu-id="ffb1d-285">NativePdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="ffb1d-285">NativePdbBuildPath</span></span>|<span data-ttu-id="ffb1d-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-286">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-287">生成匹配此模块的 NGen PDB 的位置的路径（如果适用）。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-287">Path to the location where the NGen PDB that matches this module was built, if applicable.</span></span> <span data-ttu-id="ffb1d-288">在某些情况下，这可能只是一个文件名。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-288">In some cases, this may just be a file name.</span></span> <span data-ttu-id="ffb1d-289">（请参阅“备注”。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-289">(See Remarks.)</span></span>|  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a><span data-ttu-id="ffb1d-290">备注</span><span class="sxs-lookup"><span data-stu-id="ffb1d-290">Remarks</span></span>  
   
--   可通过分析工具使用名称中具有“Pdb”的字段，以便查找匹配分析会话期间所加载的模块的 PDB。 这些字段的值对应写入模块 IMAGE_DIRECTORY_ENTRY_DEBUG 部分的数据，调试器通常使用此模块来帮助查找匹配已加载模块的 PDB。  
+-   <span data-ttu-id="ffb1d-291">可通过分析工具使用名称中具有“Pdb”的字段，以便查找匹配分析会话期间所加载的模块的 PDB。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-291">The fields that have "Pdb" in their names can be used by profiling tools to locate PDBs that match the modules that were loaded during the profiling session.</span></span> <span data-ttu-id="ffb1d-292">这些字段的值对应写入模块 IMAGE_DIRECTORY_ENTRY_DEBUG 部分的数据，调试器通常使用此模块来帮助查找匹配已加载模块的 PDB。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-292">The values of these fields correspond to the data written into the IMAGE_DIRECTORY_ENTRY_DEBUG sections of the module normally used by debuggers to help locate PDBs that match the loaded modules.</span></span>  
   
--   以“ManagedPdb”开头的字段名是指对应于由托管编译器 （如 C# 或 Visual Basic 编译器）生成的 MSIL 模块的托管 PDB。 此 PDB 使用托管的 PDB 格式，并介绍原始托管源代码中的元素（如文件、行号和符号名）如何映射到被编译到 MSIL 模块中的 MSIL 元素。  
+-   <span data-ttu-id="ffb1d-293">以“ManagedPdb”开头的字段名是指对应于由托管编译器 （如 C# 或 Visual Basic 编译器）生成的 MSIL 模块的托管 PDB。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-293">The field names that begin with "ManagedPdb" refer to the managed PDB corresponding to the MSIL module that was generated by the managed compiler (such as the C# or Visual Basic compiler).</span></span> <span data-ttu-id="ffb1d-294">此 PDB 使用托管的 PDB 格式，并介绍原始托管源代码中的元素（如文件、行号和符号名）如何映射到被编译到 MSIL 模块中的 MSIL 元素。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-294">This PDB uses the managed PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to MSIL elements that are compiled into the MSIL module.</span></span>  
   
--   以“NativePdb”开头的字段名是指通过调用 `NGEN createPDB`而生成的 NGen PDB。 此 PDB 使用本机 PDB 格式，并介绍元素如何从原始托管的源代码中（如文件、行号和符号名）映射到被编译到 NGen 模块的本机元素。  
+-   <span data-ttu-id="ffb1d-295">以“NativePdb”开头的字段名是指通过调用 `NGEN createPDB`而生成的 NGen PDB。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-295">The field names that begin with "NativePdb" refer to the NGen PDB generated by calling `NGEN createPDB`.</span></span> <span data-ttu-id="ffb1d-296">此 PDB 使用本机 PDB 格式，并介绍元素如何从原始托管的源代码中（如文件、行号和符号名）映射到被编译到 NGen 模块的本机元素。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-296">This PDB uses the native PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to native elements that are compiled into the NGen module.</span></span>  
   
- [返回页首](#top)  
+ [<span data-ttu-id="ffb1d-297">返回页首</span><span class="sxs-lookup"><span data-stu-id="ffb1d-297">Back to top</span></span>](#top)  
   
 <a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>CLR 域模块事件  
- 下表显示了关键字和级别。  
+## <a name="clr-domain-module-events"></a><span data-ttu-id="ffb1d-298">CLR 域模块事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-298">CLR Domain Module Events</span></span>  
+ <span data-ttu-id="ffb1d-299">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-299">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|事件|级别|  
+|<span data-ttu-id="ffb1d-300">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="ffb1d-300">Keyword for raising the event</span></span>|<span data-ttu-id="ffb1d-301">事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-301">Event</span></span>|<span data-ttu-id="ffb1d-302">级别</span><span class="sxs-lookup"><span data-stu-id="ffb1d-302">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|信息性 (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|信息性 (4)|  
+|<span data-ttu-id="ffb1d-303">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-303">`LoaderKeyword` (0x8)</span></span>|`DomainModuleLoad_V1`|<span data-ttu-id="ffb1d-304">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-304">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-305">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-305">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|<span data-ttu-id="ffb1d-306">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-306">Informational (4)</span></span>|  
+|<span data-ttu-id="ffb1d-307">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="ffb1d-307">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|<span data-ttu-id="ffb1d-308">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-308">Informational (4)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="ffb1d-309">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-309">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|说明|  
+|<span data-ttu-id="ffb1d-310">Event</span><span class="sxs-lookup"><span data-stu-id="ffb1d-310">Event</span></span>|<span data-ttu-id="ffb1d-311">事件 ID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-311">Event ID</span></span>|<span data-ttu-id="ffb1d-312">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-312">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`DomainModuleLoad_V1`|151|在为应用程序域加载模块时引发。|  
-|`DomainModuleDCStart_V1`|151|在启动断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。|  
-|`DomainModuleDCEnd_V1`|152|在结束断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。|  
+|`DomainModuleLoad_V1`|<span data-ttu-id="ffb1d-313">151</span><span class="sxs-lookup"><span data-stu-id="ffb1d-313">151</span></span>|<span data-ttu-id="ffb1d-314">在为应用程序域加载模块时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-314">Raised when a module is loaded for an application domain.</span></span>|  
+|`DomainModuleDCStart_V1`|<span data-ttu-id="ffb1d-315">151</span><span class="sxs-lookup"><span data-stu-id="ffb1d-315">151</span></span>|<span data-ttu-id="ffb1d-316">在启动断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-316">Enumerates modules loaded for an application domain during a start rundown, and is logged for all application domains.</span></span>|  
+|`DomainModuleDCEnd_V1`|<span data-ttu-id="ffb1d-317">152</span><span class="sxs-lookup"><span data-stu-id="ffb1d-317">152</span></span>|<span data-ttu-id="ffb1d-318">在结束断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-318">Enumerates modules loaded for an application domain during an end rundown, and is logged for all application domains.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="ffb1d-319">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-319">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|说明|  
+|<span data-ttu-id="ffb1d-320">字段名</span><span class="sxs-lookup"><span data-stu-id="ffb1d-320">Field name</span></span>|<span data-ttu-id="ffb1d-321">数据类型</span><span class="sxs-lookup"><span data-stu-id="ffb1d-321">Data type</span></span>|<span data-ttu-id="ffb1d-322">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-322">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|标识此模块所属的程序集。|  
-|AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
-|AppDomainID|win:UInt64|其中使用此模块的应用程序域的 ID。|  
-|ModuleFlags|win:UInt32|0x1：非特定于域的模块。<br /><br /> 0x2：模块具有本机映像。<br /><br /> 0x4：动态模块。<br /><br /> 0x8：清单模块。|  
-|Reserved1|win:UInt32|保留的字段。|  
-|ModuleILPath|win:UnicodeString|模块的 MSIL 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。|  
-|ModuleNativePath|win:UnicodeString|如果存在（以 null 结尾），则为模块本机映像的路径。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
+|<span data-ttu-id="ffb1d-323">ModuleID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-323">ModuleID</span></span>|<span data-ttu-id="ffb1d-324">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-324">win:UInt64</span></span>|<span data-ttu-id="ffb1d-325">标识此模块所属的程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-325">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="ffb1d-326">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-326">AssemblyID</span></span>|<span data-ttu-id="ffb1d-327">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-327">win:UInt64</span></span>|<span data-ttu-id="ffb1d-328">此模块所驻留的程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-328">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="ffb1d-329">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-329">AppDomainID</span></span>|<span data-ttu-id="ffb1d-330">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-330">win:UInt64</span></span>|<span data-ttu-id="ffb1d-331">其中使用此模块的应用程序域的 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-331">ID of the application domain in which this module is used.</span></span>|  
+|<span data-ttu-id="ffb1d-332">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="ffb1d-332">ModuleFlags</span></span>|<span data-ttu-id="ffb1d-333">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-333">win:UInt32</span></span>|<span data-ttu-id="ffb1d-334">0x1：非特定于域的模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-334">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="ffb1d-335">0x2：模块具有本机映像。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-335">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="ffb1d-336">0x4：动态模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-336">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="ffb1d-337">0x8：清单模块。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-337">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="ffb1d-338">Reserved1</span><span class="sxs-lookup"><span data-stu-id="ffb1d-338">Reserved1</span></span>|<span data-ttu-id="ffb1d-339">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-339">win:UInt32</span></span>|<span data-ttu-id="ffb1d-340">保留的字段。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-340">Reserved field.</span></span>|  
+|<span data-ttu-id="ffb1d-341">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="ffb1d-341">ModuleILPath</span></span>|<span data-ttu-id="ffb1d-342">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-342">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-343">模块的 MSIL 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-343">Path of the MSIL image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="ffb1d-344">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="ffb1d-344">ModuleNativePath</span></span>|<span data-ttu-id="ffb1d-345">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-345">win:UnicodeString</span></span>|<span data-ttu-id="ffb1d-346">如果存在（以 null 结尾），则为模块本机映像的路径。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-346">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="ffb1d-347">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-347">ClrInstanceID</span></span>|<span data-ttu-id="ffb1d-348">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ffb1d-348">win:UInt16</span></span>|<span data-ttu-id="ffb1d-349">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-349">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="ffb1d-350">返回页首</span><span class="sxs-lookup"><span data-stu-id="ffb1d-350">Back to top</span></span>](#top)  
   
 <a name="module_range_events"></a>   
-## <a name="module-range-events"></a>模块范围事件  
- 下表显示了关键字和级别。  
+## <a name="module-range-events"></a><span data-ttu-id="ffb1d-351">模块范围事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-351">Module Range Events</span></span>  
+ <span data-ttu-id="ffb1d-352">下表显示了关键字和级别。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-352">The following table shows the keyword and level.</span></span>  
   
-|引发事件的关键字|事件|级别|  
+|<span data-ttu-id="ffb1d-353">引发事件的关键字</span><span class="sxs-lookup"><span data-stu-id="ffb1d-353">Keyword for raising the event</span></span>|<span data-ttu-id="ffb1d-354">事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-354">Event</span></span>|<span data-ttu-id="ffb1d-355">级别</span><span class="sxs-lookup"><span data-stu-id="ffb1d-355">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`PerfTrackKeyWord`)|`ModuleRange`|信息性 (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCStart`|信息性 (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|信息性 (4)|  
+|<span data-ttu-id="ffb1d-356">`PerfTrackKeyWord`)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-356">`PerfTrackKeyWord`)</span></span>|`ModuleRange`|<span data-ttu-id="ffb1d-357">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-357">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCStart`|<span data-ttu-id="ffb1d-358">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-358">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|<span data-ttu-id="ffb1d-359">信息性 (4)</span><span class="sxs-lookup"><span data-stu-id="ffb1d-359">Informational (4)</span></span>|  
   
- 下表显示了事件信息。  
+ <span data-ttu-id="ffb1d-360">下表显示了事件信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-360">The following table shows the event information.</span></span>  
   
-|Event|事件 ID|说明|  
+|<span data-ttu-id="ffb1d-361">Event</span><span class="sxs-lookup"><span data-stu-id="ffb1d-361">Event</span></span>|<span data-ttu-id="ffb1d-362">事件 ID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-362">Event ID</span></span>|<span data-ttu-id="ffb1d-363">说明</span><span class="sxs-lookup"><span data-stu-id="ffb1d-363">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleRange`|158|如果加载的本机映像生成器 (NGen) 映像已使用 IBC 进行优化，并且包含有关 NGen 映像热区的信息，则此事件存在。|  
-|`ModuleRangeDCStart`|160|`ModuleRange` 事件在断开开始时引发。|  
-|`ModuleRangeDCEnd`|161|`ModuleRange` 事件在断开结束时引发。|  
+|`ModuleRange`|<span data-ttu-id="ffb1d-364">158</span><span class="sxs-lookup"><span data-stu-id="ffb1d-364">158</span></span>|<span data-ttu-id="ffb1d-365">如果加载的本机映像生成器 (NGen) 映像已使用 IBC 进行优化，并且包含有关 NGen 映像热区的信息，则此事件存在。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-365">This event is present if a loaded Native Image Generator (NGen) image has been optimized with IBC and contains information about the hot sections of the NGen image.</span></span>|  
+|`ModuleRangeDCStart`|<span data-ttu-id="ffb1d-366">160</span><span class="sxs-lookup"><span data-stu-id="ffb1d-366">160</span></span>|<span data-ttu-id="ffb1d-367">`ModuleRange` 事件在断开开始时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-367">A `ModuleRange` event fired at the start of a rundown.</span></span>|  
+|`ModuleRangeDCEnd`|<span data-ttu-id="ffb1d-368">161</span><span class="sxs-lookup"><span data-stu-id="ffb1d-368">161</span></span>|<span data-ttu-id="ffb1d-369">`ModuleRange` 事件在断开结束时引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-369">A `ModuleRange` event fired at the end of a rundown.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="ffb1d-370">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-370">The following table shows the event data.</span></span>  
   
-|字段名|数据类型|描述|  
+|<span data-ttu-id="ffb1d-371">字段名</span><span class="sxs-lookup"><span data-stu-id="ffb1d-371">Field name</span></span>|<span data-ttu-id="ffb1d-372">数据类型</span><span class="sxs-lookup"><span data-stu-id="ffb1d-372">Data type</span></span>|<span data-ttu-id="ffb1d-373">描述</span><span class="sxs-lookup"><span data-stu-id="ffb1d-373">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|如果加载了 CLR 的多个实例，则唯一标识进程中 CLR 的特定实例。|  
-|ModuleID|win:UInt64|标识此模块所属的程序集。|  
-|RangeBegin|win:UInt32|模块中表示指定范围类型的范围开始位置的偏移量。|  
-|RangeSize|win:UInt32|指定的范围大小（以字节为单位）。|  
-|RangeType|win:UInt32|单个值，0x4，表示 Cold IBC 范围。 此字段未来可以表示多个值。|  
-|RangeSize1|win:UInt32|0 指示不良数据。|  
-|RangeBegin2|win:UnicodeString||  
+|<span data-ttu-id="ffb1d-374">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-374">ClrInstanceID</span></span>|<span data-ttu-id="ffb1d-375">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ffb1d-375">win:UInt16</span></span>|<span data-ttu-id="ffb1d-376">如果加载了 CLR 的多个实例，则唯一标识进程中 CLR 的特定实例。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-376">Uniquely identifies a specific instance of the CLR in a process if multiple instances of the CLR are loaded.</span></span>|  
+|<span data-ttu-id="ffb1d-377">ModuleID</span><span class="sxs-lookup"><span data-stu-id="ffb1d-377">ModuleID</span></span>|<span data-ttu-id="ffb1d-378">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ffb1d-378">win:UInt64</span></span>|<span data-ttu-id="ffb1d-379">标识此模块所属的程序集。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-379">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="ffb1d-380">RangeBegin</span><span class="sxs-lookup"><span data-stu-id="ffb1d-380">RangeBegin</span></span>|<span data-ttu-id="ffb1d-381">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-381">win:UInt32</span></span>|<span data-ttu-id="ffb1d-382">模块中表示指定范围类型的范围开始位置的偏移量。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-382">The offset in the module that represents the start of the range for the specified range type.</span></span>|  
+|<span data-ttu-id="ffb1d-383">RangeSize</span><span class="sxs-lookup"><span data-stu-id="ffb1d-383">RangeSize</span></span>|<span data-ttu-id="ffb1d-384">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-384">win:UInt32</span></span>|<span data-ttu-id="ffb1d-385">指定的范围大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-385">The size of the specified range in bytes.</span></span>|  
+|<span data-ttu-id="ffb1d-386">RangeType</span><span class="sxs-lookup"><span data-stu-id="ffb1d-386">RangeType</span></span>|<span data-ttu-id="ffb1d-387">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-387">win:UInt32</span></span>|<span data-ttu-id="ffb1d-388">单个值，0x4，表示 Cold IBC 范围。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-388">A single value, 0x4, to represent Cold IBC ranges.</span></span> <span data-ttu-id="ffb1d-389">此字段未来可以表示多个值。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-389">This field can represent more values in the future.</span></span>|  
+|<span data-ttu-id="ffb1d-390">RangeSize1</span><span class="sxs-lookup"><span data-stu-id="ffb1d-390">RangeSize1</span></span>|<span data-ttu-id="ffb1d-391">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ffb1d-391">win:UInt32</span></span>|<span data-ttu-id="ffb1d-392">0 指示不良数据。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-392">0 indicates bad data.</span></span>|  
+|<span data-ttu-id="ffb1d-393">RangeBegin2</span><span class="sxs-lookup"><span data-stu-id="ffb1d-393">RangeBegin2</span></span>|<span data-ttu-id="ffb1d-394">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ffb1d-394">win:UnicodeString</span></span>||  
   
-### <a name="remarks"></a>备注  
- 如果已使用 IBC 优化了 .NET Framework 进程中加载的 NGen 映像，则包含 NGen 映像中热度范围的 `ModuleRange` 事件将与其 `moduleID` 和 `ClrInstanceID`一起记录。  如果未使用 IBC 优化 NGen 映像，则不记录此事件。 若要确定模块名，则此事件必须与模块加载 ETW 事件进行整理。  
+### <a name="remarks"></a><span data-ttu-id="ffb1d-395">备注</span><span class="sxs-lookup"><span data-stu-id="ffb1d-395">Remarks</span></span>  
+ <span data-ttu-id="ffb1d-396">如果已使用 IBC 优化了 .NET Framework 进程中加载的 NGen 映像，则包含 NGen 映像中热度范围的 `ModuleRange` 事件将与其 `moduleID` 和 `ClrInstanceID`一起记录。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-396">If a loaded NGen image in a .NET Framework process has been optimized with IBC, the `ModuleRange` event that contains the hot ranges in the NGen image is logged along with its `moduleID` and `ClrInstanceID`.</span></span>  <span data-ttu-id="ffb1d-397">如果未使用 IBC 优化 NGen 映像，则不记录此事件。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-397">If the NGen image is not optimized with IBC, this event isn't logged.</span></span> <span data-ttu-id="ffb1d-398">若要确定模块名，则此事件必须与模块加载 ETW 事件进行整理。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-398">To determine the module name, this event must be collated with the module load ETW events.</span></span>  
   
- 此事件的负载大小可变； `Count` 字段指示事件中包含的范围偏移量数。  此事件必须与 Windows `IStart` 事件进行整理，以确定实际范围。 每当加载映像且包含已加载映像的虚拟地址时，将记录 Windows 映像加载事件。  
+ <span data-ttu-id="ffb1d-399">此事件的负载大小可变； `Count` 字段指示事件中包含的范围偏移量数。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-399">The payload size for this event is variable; the `Count` field indicates the number of range offsets contained in the event.</span></span>  <span data-ttu-id="ffb1d-400">此事件必须与 Windows `IStart` 事件进行整理，以确定实际范围。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-400">This event has to be collated with the Windows `IStart` event to determine the actual ranges.</span></span> <span data-ttu-id="ffb1d-401">每当加载映像且包含已加载映像的虚拟地址时，将记录 Windows 映像加载事件。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-401">The Windows Image Load event is logged whenever an image is loaded, and contains the virtual address of the loaded image.</span></span>  
   
- 在任何大于或等于 4 的 ETW 级别下引发模块范围事件，并将其归类为信息性事件。  
+ <span data-ttu-id="ffb1d-402">在任何大于或等于 4 的 ETW 级别下引发模块范围事件，并将其归类为信息性事件。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-402">Module range events are fired under any ETW level greater than or equal to 4 and are classified as informational events.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="ffb1d-403">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ffb1d-403">See Also</span></span>  
+ [<span data-ttu-id="ffb1d-404">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-404">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

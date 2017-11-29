@@ -1,67 +1,65 @@
 ---
-title: "MULTISET (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: MULTISET (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e72605225d214ccd2283aaae3f0c2071ceb92d91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# MULTISET (Entity SQL)
-根据值列表创建多集的实例。 MULTISET 构造函数中的所有值都必须具有兼容类型 `T`。 不允许使用空的多集构造函数。  
+# <a name="multiset-entity-sql"></a><span data-ttu-id="e0ef4-102">MULTISET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e0ef4-102">MULTISET (Entity SQL)</span></span>
+<span data-ttu-id="e0ef4-103">根据值列表创建多集的实例。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="e0ef4-104">MULTISET 构造函数中的所有值都必须具有兼容类型 `T`。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="e0ef4-105">不允许使用空的多集构造函数。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-105">Empty multiset constructors are not allowed.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="e0ef4-106">语法</span><span class="sxs-lookup"><span data-stu-id="e0ef4-106">Syntax</span></span>  
   
 ```  
-  
-MULTISET (expression [{, expression }] )  
+MULTISET ( expression [{, expression }] )  
 or  
 { expression [{, expression }] }  
 ```  
   
-## 参数  
+## <a name="arguments"></a><span data-ttu-id="e0ef4-107">参数</span><span class="sxs-lookup"><span data-stu-id="e0ef4-107">Arguments</span></span>  
  `expression`  
- 任何有效的值列表。  
+ <span data-ttu-id="e0ef4-108">任何有效的值列表。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-108">Any valid list of values.</span></span>  
   
-## 返回值  
- MULTISET\<T\> 类型的集合。  
+## <a name="return-value"></a><span data-ttu-id="e0ef4-109">返回值</span><span class="sxs-lookup"><span data-stu-id="e0ef4-109">Return Value</span></span>  
+ <span data-ttu-id="e0ef4-110">类型多重集的集合\<T >。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-110">A collection of type MULTISET\<T>.</span></span>  
   
-## 备注  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数：行构造函数、对象构造函数和多集（或集合）构造函数。 有关更多信息，请参见[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
+## <a name="remarks"></a><span data-ttu-id="e0ef4-111">备注</span><span class="sxs-lookup"><span data-stu-id="e0ef4-111">Remarks</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="e0ef4-112"> 提供了三种构造函数：行构造函数、对象构造函数和多集（或集合）构造函数。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-112"> provides three kinds of constructors: row constructors, object constructors, and multiset (or collection) constructors.</span></span> <span data-ttu-id="e0ef4-113">有关详细信息，请参阅[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-113">For more information, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span></span>  
   
- 多集构造函数根据值列表创建多集的实例。 该构造函数中的所有值都必须具有兼容类型。  
+ <span data-ttu-id="e0ef4-114">多集构造函数根据值列表创建多集的实例。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-114">The multiset constructor creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="e0ef4-115">该构造函数中的所有值都必须具有兼容类型。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-115">All the values in the constructor must be of a compatible type.</span></span>  
   
- 例如，下面的表达式创建整数的多集。  
+ <span data-ttu-id="e0ef4-116">例如，下面的表达式创建整数的多集。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-116">For example, the following expression creates a multiset of integers.</span></span>  
   
  `MULTISET(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
 > [!NOTE]
->  仅当包装多集只有一个多集元素时才支持嵌套多集文本；例如 `{{1, 2, 3}}`。 当包装多集具有多个多集元素（如 `{{1, 2}, {3, 4}}`）时，不支持嵌套多集文本。  
+>  <span data-ttu-id="e0ef4-117">仅当包装多集只有一个多集元素时才支持嵌套多集文本；例如 `{{1, 2, 3}}`。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-117">Nested multiset literals are only supported when a wrapping mutiset has a single multiset element; for example, `{{1, 2, 3}}`.</span></span> <span data-ttu-id="e0ef4-118">当包装多集具有多个多集元素（如 `{{1, 2}, {3, 4}}`）时，不支持嵌套多集文本。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-118">When the wrapping multiset has multiple multiset elements (for example, `{{1, 2}, {3, 4}}`), nested multiset literals are not supported.</span></span>  
   
-## 示例  
- 下面的 Entity SQL 查询使用 MULTISET 运算符根据值列表创建多集的实例。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
+## <a name="example"></a><span data-ttu-id="e0ef4-119">示例</span><span class="sxs-lookup"><span data-stu-id="e0ef4-119">Example</span></span>  
+ <span data-ttu-id="e0ef4-120">下面的 Entity SQL 查询使用 MULTISET 运算符根据值列表创建多集的实例。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-120">The following Entity SQL query uses the MULTISET operator to create an instance of a multiset from a list of values.</span></span> <span data-ttu-id="e0ef4-121">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-121">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e0ef4-122">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="e0ef4-122">To compile and run this query, follow these steps:</span></span>  
   
-1.  执行 [如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md) 中的过程。  
+1.  <span data-ttu-id="e0ef4-123">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="e0ef4-123">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
+2.  <span data-ttu-id="e0ef4-124">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="e0ef4-124">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
   
-## 请参阅  
- [构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)   
- [Entity SQL 参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="e0ef4-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e0ef4-125">See Also</span></span>  
+ [<span data-ttu-id="e0ef4-126">构造类型</span><span class="sxs-lookup"><span data-stu-id="e0ef4-126">Constructing Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
+ [<span data-ttu-id="e0ef4-127">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="e0ef4-127">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

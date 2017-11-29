@@ -1,52 +1,54 @@
 ---
-title: "绑定和绑定元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "绑定元素 [WCF]"
+title: "绑定和绑定元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 98086ca5a5cc7d4680756819a31838fa14852bd5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 绑定和绑定元素
-绑定是特殊配置元素（称作“绑定元素”）的集合，服务运行库在每次构造客户端或服务终结点时都对这些元素进行评估。绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。  
+# <a name="bindings-and-binding-elements"></a><span data-ttu-id="de9ea-102">绑定和绑定元素</span><span class="sxs-lookup"><span data-stu-id="de9ea-102">Bindings and Binding Elements</span></span>
+<span data-ttu-id="de9ea-103">绑定是特殊配置元素，调用组成的集合*绑定元素*、 其计算由服务运行时每当客户端或正在构建服务终结点。</span><span class="sxs-lookup"><span data-stu-id="de9ea-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="de9ea-104">绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。</span><span class="sxs-lookup"><span data-stu-id="de9ea-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  
   
- 绑定（尤其是系统提供的绑定）通常还具有很多配置属性，这些属性反映了已封装绑定元素的最经常修改的属性。  
+ <span data-ttu-id="de9ea-105">绑定（尤其是系统提供的绑定）通常还具有很多配置属性，这些属性反映了已封装绑定元素的最经常修改的属性。</span><span class="sxs-lookup"><span data-stu-id="de9ea-105">Bindings, especially the system-provided bindings, usually also have a number of configuration properties that reflect the most commonly modified properties of the encapsulated binding elements.</span></span>  
   
- 绑定必须恰好包含一个传输协议绑定元素。每个传输协议绑定元素都隐含一个默认的消息编码绑定元素，该元素可以通过向绑定中最多添加一个消息编码绑定元素进行重写。除了传输协议和编码器绑定元素以外，绑定还可能包含任意数量的协议绑定元素，这些元素共同实现从一个终结点向其他终结点提供和发送 SOAP 消息所需的功能。有关详细信息，请参见[使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+ <span data-ttu-id="de9ea-106">绑定必须恰好包含一个传输协议绑定元素。</span><span class="sxs-lookup"><span data-stu-id="de9ea-106">A binding must contain exactly one transport binding element.</span></span> <span data-ttu-id="de9ea-107">每个传输协议绑定元素都隐含一个默认的消息编码绑定元素，该元素可以通过向绑定中最多添加一个消息编码绑定元素进行重写。</span><span class="sxs-lookup"><span data-stu-id="de9ea-107">Each transport binding element implies a default message encoding binding element, which can be overridden by adding at most one message encoding binding element to the binding.</span></span> <span data-ttu-id="de9ea-108">除了传输协议和编码器绑定元素以外，绑定还可能包含任意数量的协议绑定元素，这些元素共同实现从一个终结点向其他终结点提供和发送 SOAP 消息所需的功能。</span><span class="sxs-lookup"><span data-stu-id="de9ea-108">In addition to the transport and encoder binding elements, the binding may contain any number of protocol binding elements that together implement the functionality needed to service and send a SOAP message from one endpoint to another.</span></span> <span data-ttu-id="de9ea-109">有关详细信息，请参阅[到配置的服务和客户端使用的绑定](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="de9ea-109">For details, see [Using Bindings to Configure Services and Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).</span></span>  
   
-## 扩展绑定和绑定元素  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含系统提供的绑定，这些绑定涵盖了种类繁多的方案。（有关更多信息，请参见[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。）但是，您有时可能需要创建和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中未包含的绑定。下面的方案需要创建新绑定。  
+## <a name="extending-bindings-and-binding-elements"></a><span data-ttu-id="de9ea-110">扩展绑定和绑定元素</span><span class="sxs-lookup"><span data-stu-id="de9ea-110">Extending Bindings and Binding Elements</span></span>  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="de9ea-111"> 包含系统提供的绑定，这些绑定涵盖了种类繁多的方案。</span><span class="sxs-lookup"><span data-stu-id="de9ea-111"> includes system-provided bindings that cover a wide range of scenarios.</span></span> <span data-ttu-id="de9ea-112">(有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。)但是，您有时可能需要创建和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中未包含的绑定。</span><span class="sxs-lookup"><span data-stu-id="de9ea-112">(For more, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).) There may be times, however, when you need to create and use a binding that is not included in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="de9ea-113">下面的方案需要创建新绑定。</span><span class="sxs-lookup"><span data-stu-id="de9ea-113">The following scenarios require the creation of a new binding.</span></span>  
   
--   若要使用新的绑定元素（例如，新的传输协议、编码或协议绑定元素），您必须创建一个包含该绑定元素的新绑定。例如，如果您为 UDP 传输协议添加了一个自定义 `UdpTransportBindingElement`，则需要创建一个新绑定来利用它。有关使用 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName> 类型完成此行为的信息，请参见[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+-   <span data-ttu-id="de9ea-114">若要使用新的绑定元素（例如，新的传输协议、编码或协议绑定元素），您必须创建一个包含该绑定元素的新绑定。</span><span class="sxs-lookup"><span data-stu-id="de9ea-114">To use a new binding element (such as a new transport, encoding, or protocol binding element), you must create a new binding that includes that binding element.</span></span> <span data-ttu-id="de9ea-115">例如，如果您为 UDP 传输协议添加了一个自定义 `UdpTransportBindingElement`，则需要创建一个新绑定来利用它。</span><span class="sxs-lookup"><span data-stu-id="de9ea-115">For example, if you added a custom `UdpTransportBindingElement` for UDP transport, you would need to create a new binding to make use of it.</span></span> <span data-ttu-id="de9ea-116">有关执行此行为使用信息<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>类型，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="de9ea-116">For information about performing this behavior using the <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> type, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
--   以系统提供的绑定没有在公共属性上公开的方式配置现有绑定元素。例如，必须创建一个新绑定以更改签名和加密操作的执行顺序。有关完成此行为的信息，请参见[如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+-   <span data-ttu-id="de9ea-117">以系统提供的绑定没有在公共属性上公开的方式配置现有绑定元素。</span><span class="sxs-lookup"><span data-stu-id="de9ea-117">To configure existing binding elements in a way that the system-provided bindings to not expose on public properties.</span></span> <span data-ttu-id="de9ea-118">例如，必须创建一个新绑定以更改签名和加密操作的执行顺序。</span><span class="sxs-lookup"><span data-stu-id="de9ea-118">For example, you must create a new binding to change the order in which signing and encryption operations are performed.</span></span> <span data-ttu-id="de9ea-119">有关执行此行为的信息，请参阅[如何： 自定义系统提供绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="de9ea-119">For information about performing this behavior, see [How to: Customize a System-Provided Binding](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
   
--   建立仅公开特定配置选项的公司标准绑定。例如，若要为您的公司创建不能禁用安全的 <xref:System.ServiceModel.WSHttpBinding> 变体，可以创建一个行为方式类似于 <xref:System.ServiceModel.WSHttpBinding> 但总是启用安全的新绑定。有关详细信息，请参见[创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
+-   <span data-ttu-id="de9ea-120">建立仅公开特定配置选项的公司标准绑定。</span><span class="sxs-lookup"><span data-stu-id="de9ea-120">To establish corporate standard bindings that expose only specific configuration options.</span></span> <span data-ttu-id="de9ea-121">例如，若要为您的公司创建不能禁用安全的 <xref:System.ServiceModel.WSHttpBinding> 变体，可以创建一个行为方式类似于 <xref:System.ServiceModel.WSHttpBinding> 但总是启用安全的新绑定。</span><span class="sxs-lookup"><span data-stu-id="de9ea-121">For example, to create for your company a variant of the <xref:System.ServiceModel.WSHttpBinding> for your company in which security cannot be disabled, create a new binding that behaves like the <xref:System.ServiceModel.WSHttpBinding>, but with security always on.</span></span> <span data-ttu-id="de9ea-122">有关详细信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="de9ea-122">For details, see [Creating User-Defined Bindings](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).</span></span>  
   
--   若要执行某种元数据自定义，通常可以配置或使用某个自定义绑定元素，但并非必须这样做。有关向绑定和绑定元素提供元数据支持的更多信息，请参见[配置和元数据支持](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)。  
+-   <span data-ttu-id="de9ea-123">若要执行某种元数据自定义，通常可以配置或使用某个自定义绑定元素，但并非必须这样做。</span><span class="sxs-lookup"><span data-stu-id="de9ea-123">To perform some customization of metadata, typically but not necessarily to configure or use some custom binding element.</span></span> <span data-ttu-id="de9ea-124">有关向绑定和绑定元素提供元数据支持的详细信息，请参阅[配置和元数据支持](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)。</span><span class="sxs-lookup"><span data-stu-id="de9ea-124">For more information about providing metadata support to bindings and binding elements, see [Configuration and Metadata Support](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).</span></span>  
   
 -  
   
-## 通道、绑定和绑定元素  
- 绑定和绑定元素是应用程序编程模型（包括属性和行为）与通道模型（包括工厂和侦听器、消息编码器以及传输协议和协议实现）之间的联系。通常，实现绑定元素和绑定的目的是使通道能够被应用程序层使用。  
+## <a name="channels-bindings-and-binding-elements"></a><span data-ttu-id="de9ea-125">通道、绑定和绑定元素</span><span class="sxs-lookup"><span data-stu-id="de9ea-125">Channels, Bindings, and Binding Elements</span></span>  
+ <span data-ttu-id="de9ea-126">绑定和绑定元素是应用程序编程模型（包括属性和行为）与通道模型（包括工厂和侦听器、消息编码器以及传输协议和协议实现）之间的联系。</span><span class="sxs-lookup"><span data-stu-id="de9ea-126">Bindings and binding elements are the connection between the application programming model, which includes the attributes and behaviors, and the channel model, which includes the factories and listeners, message encoders, and transport and protocol implementations.</span></span> <span data-ttu-id="de9ea-127">通常，实现绑定元素和绑定的目的是使通道能够被应用程序层使用。</span><span class="sxs-lookup"><span data-stu-id="de9ea-127">Typically, binding elements and bindings are implemented to enable channels to be used by the application layer.</span></span>  
   
- 通道层向服务层发送消息或从服务层接收消息，并且在终结点之间传输这些消息。在客户端上，通道层是一个通道工厂堆栈，这些通道工厂创建通向网络终结点的通道。在服务上，通道层是一个通道侦听器堆栈，这些侦听器接受在网络终结点收到的通道。  
+ <span data-ttu-id="de9ea-128">通道层向服务层发送消息或从服务层接收消息，并且在终结点之间传输这些消息。</span><span class="sxs-lookup"><span data-stu-id="de9ea-128">The channel layer hands off or receives messages to and from the service layer and transports those messages between endpoints.</span></span> <span data-ttu-id="de9ea-129">在客户端上，通道层是一个通道工厂堆栈，这些通道工厂创建通向网络终结点的通道。</span><span class="sxs-lookup"><span data-stu-id="de9ea-129">On a client, the channel layer is a stack of channel factories that create channels to a network endpoint.</span></span> <span data-ttu-id="de9ea-130">在服务上，通道层是一个通道侦听器堆栈，这些侦听器接受在网络终结点收到的通道。</span><span class="sxs-lookup"><span data-stu-id="de9ea-130">On a service, the channel layer is a stack of channel listeners that accept channels received at a network endpoint.</span></span>  
   
- 有两种常规类型的通道：协议通道和传输通道。传输通道负责在网络终结点之间实际传输消息。传输通道必须具有默认消息编码器，并且应该能够使用通过消息编码器绑定元素提供的备用消息编码器。消息编码器负责将 <xref:System.ServiceModel.Channels.Message?displayProperty=fullName> 转换为网络表示以及执行反向转换。协议通道负责实现 SOAP 级协议（例如，WS\-Security 或 WS\-ReliableMessaging）。  
+ <span data-ttu-id="de9ea-131">有两种常规类型的通道：协议通道和传输通道。</span><span class="sxs-lookup"><span data-stu-id="de9ea-131">There are two general types of channels: protocol channels and transport channels.</span></span> <span data-ttu-id="de9ea-132">传输通道负责在网络终结点之间实际传输消息。</span><span class="sxs-lookup"><span data-stu-id="de9ea-132">Transport channels are responsible for the actual transmission of a message from one network endpoint to another.</span></span> <span data-ttu-id="de9ea-133">传输通道必须具有默认消息编码器，并且应该能够使用通过消息编码器绑定元素提供的备用消息编码器。</span><span class="sxs-lookup"><span data-stu-id="de9ea-133">Transport channels must have a default message encoder and should be able to use an alternate message encoder supplied through a message encoder binding element.</span></span> <span data-ttu-id="de9ea-134">消息编码器负责将 <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 转换为网络表示以及执行反向转换。</span><span class="sxs-lookup"><span data-stu-id="de9ea-134">A message encoder is responsible for turning a <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> into a wire representation and vice-versa.</span></span> <span data-ttu-id="de9ea-135">协议通道负责实现 SOAP 级协议（例如，WS-Security 或 WS-ReliableMessaging）。</span><span class="sxs-lookup"><span data-stu-id="de9ea-135">Protocol channels are responsible for implementing SOAP-level protocols (for example, WS-Security or WS-ReliableMessaging).</span></span>  
   
- 传输通道和协议通道的主要要求是它们需要实现必需的通道接口。若要创建有效的通道层，它们必须具有关联的工厂和侦听器，等等。若要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的通道实现，对于每个通道，都需要有一个派生自 <xref:System.ServiceModel.Channels.BindingElement> 的关联绑定元素，并且应该有一个派生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 的相关绑定扩展元素，以便包括到配置文件中。  
+ <span data-ttu-id="de9ea-136">传输通道和协议通道的主要要求是它们需要实现必需的通道接口。</span><span class="sxs-lookup"><span data-stu-id="de9ea-136">The primary requirement for transport and protocol channels is that they implement the required channel interfaces.</span></span> <span data-ttu-id="de9ea-137">若要创建有效的通道层，它们必须具有关联的工厂和侦听器，等等。</span><span class="sxs-lookup"><span data-stu-id="de9ea-137">To create a working channel layer they must have associated factories and listeners, and so on.</span></span> <span data-ttu-id="de9ea-138">若要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的通道实现，对于每个通道，都需要有一个派生自 <xref:System.ServiceModel.Channels.BindingElement> 的关联绑定元素，并且应该有一个派生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 的相关绑定扩展元素，以便包括到配置文件中。</span><span class="sxs-lookup"><span data-stu-id="de9ea-138">To use the channel implementations from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] there needs to be an associated binding elements derived from <xref:System.ServiceModel.Channels.BindingElement> for each channel and there should be a related binding extension element for inclusion into configuration files that derives from <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.</span></span>  
   
- 如前所述，可以将消息编码器、协议和传输通道实现的绑定元素堆叠起来，以形成一个通道堆栈，而用来将它们组织成一个有序集的机制就是绑定。绑定和绑定元素将应用程序编程模型与通道模型联系起来。您可以在代码中直接使用自己的通道实现，但是除非将编码器、传输和协议实现为绑定元素，否则无法在服务层编程模型中使用它们。  
+ <span data-ttu-id="de9ea-139">如前所述，可以将消息编码器、协议和传输通道实现的绑定元素堆叠起来，以形成一个通道堆栈，而用来将它们组织成一个有序集的机制就是绑定。</span><span class="sxs-lookup"><span data-stu-id="de9ea-139">As mentioned earlier, binding elements for message encoders, protocol, and transport channel implementations can be stacked to form a channel stack and the mechanism to line them up into an ordered set is the binding.</span></span> <span data-ttu-id="de9ea-140">绑定和绑定元素将应用程序编程模型与通道模型联系起来。</span><span class="sxs-lookup"><span data-stu-id="de9ea-140">Bindings and binding elements connect the application programming model to the channel model.</span></span> <span data-ttu-id="de9ea-141">你可以在代码中直接使用自己的通道实现，但是除非将编码器、传输和协议实现为绑定元素，否则无法在服务层编程模型中使用它们。</span><span class="sxs-lookup"><span data-stu-id="de9ea-141">You can use your channel implementations from code directly, but unless encoders, transports, and protocols are implemented as binding elements they cannot be used from the service layer programming model.</span></span>  
   
- 有关开发通道及其绑定元素的详细信息，请参见[扩展通道层](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。
+ <span data-ttu-id="de9ea-142">有关开发通道和其绑定元素的详细信息，请参阅[扩展通道层](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。</span><span class="sxs-lookup"><span data-stu-id="de9ea-142">For details about developing channels and their binding elements, see [Extending the Channel Layer](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).</span></span>

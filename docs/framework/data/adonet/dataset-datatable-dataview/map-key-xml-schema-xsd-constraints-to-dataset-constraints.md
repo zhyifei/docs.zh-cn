@@ -1,38 +1,41 @@
 ---
-title: "将键 XML 架构 (XSD) 约束映射为数据集约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将关键 XML 架构 (XSD) 约束映射到数据集约束"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 将键 XML 架构 (XSD) 约束映射为数据集约束
-在架构中可以使用 **key** 元素对元素或属性指定键约束。  对其指定键约束的元素或属性必须在任何架构实例中都具有唯一值，并且不能具有空值。  
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="85709-102">将关键 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="85709-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="85709-103">在架构中，你可以指定元素的键约束或属性使用**密钥**元素。</span><span class="sxs-lookup"><span data-stu-id="85709-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="85709-104">对其指定键约束的元素或属性必须在任何架构实例中都具有唯一值，并且不能具有空值。</span><span class="sxs-lookup"><span data-stu-id="85709-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  
   
- 除了对其定义键约束的列不能具有空值之外，键约束与唯一约束类似。  
+ <span data-ttu-id="85709-105">除了对其定义键约束的列不能具有空值之外，键约束与唯一约束类似。</span><span class="sxs-lookup"><span data-stu-id="85709-105">The key constraint is similar to the unique constraint, except that the column on which a key constraint is defined cannot have null values.</span></span>  
   
- 下表概括了可在 **key** 元素中指定的 **msdata** 属性。  
+ <span data-ttu-id="85709-106">下表概括了**msdata**属性可以在中指定**密钥**元素。</span><span class="sxs-lookup"><span data-stu-id="85709-106">The following table outlines the **msdata** attributes that you can specify in the **key** element.</span></span>  
   
-|特性名|描述|  
-|---------|--------|  
-|**msdata:ConstraintName**|如果指定了该属性，它的值将用作约束名。  否则，**name** 属性会提供约束名的值。|  
-|**msdata:PrimaryKey**|如果存在 `PrimaryKey="true"`，**IsPrimaryKey** 约束属性将设置为 **true**，从而使其成为主键。  由于主键不能具有空值，所以 **AllowDBNull** 列属性将设置为 **false**。|  
+|<span data-ttu-id="85709-107">特性名</span><span class="sxs-lookup"><span data-stu-id="85709-107">Attribute name</span></span>|<span data-ttu-id="85709-108">描述</span><span class="sxs-lookup"><span data-stu-id="85709-108">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="85709-109">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="85709-109">**msdata:ConstraintName**</span></span>|<span data-ttu-id="85709-110">如果指定了该属性，它的值将用作约束名。</span><span class="sxs-lookup"><span data-stu-id="85709-110">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="85709-111">否则为**名称**属性会提供约束名的值。</span><span class="sxs-lookup"><span data-stu-id="85709-111">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="85709-112">**msdata: primarykey**</span><span class="sxs-lookup"><span data-stu-id="85709-112">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="85709-113">如果`PrimaryKey="true"`存在， **IsPrimaryKey**约束属性设置为**true**，从而使其为主键。</span><span class="sxs-lookup"><span data-stu-id="85709-113">If `PrimaryKey="true"` is present, the **IsPrimaryKey** constraint property is set to **true**, thus making it a primary key.</span></span> <span data-ttu-id="85709-114">**AllowDBNull**列属性设置为**false**，这是因为主键不能具有 null 值。</span><span class="sxs-lookup"><span data-stu-id="85709-114">The **AllowDBNull** column property is set to **false**, because primary keys cannot have null values.</span></span>|  
   
- 当转换指定了键约束的架构时，映射过程会在为约束中的每一列将 **AllowDBNull** 列属性设置为 **false** 的情况下在表上创建唯一约束。  除非对 **key** 元素指定 `msdata:PrimaryKey="true"`，否则唯一约束的 **IsPrimaryKey** 属性也将设置为 **false**。  它与 `PrimaryKey="true"` 的架构中的唯一约束相同。  
+ <span data-ttu-id="85709-115">在转换在其中指定的键约束的架构，映射过程将创建具有表的唯一约束**AllowDBNull**列属性设置为**false**中每一列约束。</span><span class="sxs-lookup"><span data-stu-id="85709-115">In converting schema in which a key constraint is specified, the mapping process creates a unique constraint on the table with the **AllowDBNull** column property set to **false** for each column in the constraint.</span></span> <span data-ttu-id="85709-116">**IsPrimaryKey**唯一约束的属性也设置为**false**除非已指定`msdata:PrimaryKey="true"`上**密钥**元素。</span><span class="sxs-lookup"><span data-stu-id="85709-116">The **IsPrimaryKey** property of the unique constraint is also set to **false** unless you have specified `msdata:PrimaryKey="true"` on the **key** element.</span></span> <span data-ttu-id="85709-117">它与 `PrimaryKey="true"` 的架构中的唯一约束相同。</span><span class="sxs-lookup"><span data-stu-id="85709-117">This is identical to a unique constraint in the schema in which `PrimaryKey="true"`.</span></span>  
   
- 在以下架构示例中，**key** 元素对 **CustomerID** 元素指定键约束。  
+ <span data-ttu-id="85709-118">在以下架构示例中，**密钥**元素上指定的键约束**CustomerID**元素。</span><span class="sxs-lookup"><span data-stu-id="85709-118">In the following schema example, the **key** element specifies the key constraint on the **CustomerID** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="cod"  
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,15 @@ caps.handback.revision: 4
 </xs:schema>   
 ```  
   
- **key** 元素指定 **Customers** 元素的 **CustomerID** 子元素的值必须是唯一值，并且不能具有空值。  在转换 XML 架构定义语言 \(XSD\) 架构时，映射过程将创建下表：  
+ <span data-ttu-id="85709-119">**密钥**元素指定的值**CustomerID**的子元素**客户**元素必须具有唯一值并且不能具有 null 值。</span><span class="sxs-lookup"><span data-stu-id="85709-119">The **key** element specifies that the values of the **CustomerID** child element of the **Customers** element must have unique values and cannot have null values.</span></span> <span data-ttu-id="85709-120">在转换 XML 架构定义语言 (XSD) 架构时，映射过程将创建下表：</span><span class="sxs-lookup"><span data-stu-id="85709-120">In translating the XML Schema definition language (XSD) schema, the mapping process creates the following table:</span></span>  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- XML 架构映射还会在 **CustomerID** 列上创建 **UniqueConstraint**，如以下 <xref:System.Data.DataSet> 所示。  （为简便起见，只显示相关属性。）  
+ <span data-ttu-id="85709-121">XML 架构映射还会创建**UniqueConstraint**上**CustomerID**列，如下所示<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="85709-121">The XML Schema mapping also creates a **UniqueConstraint** on the **CustomerID** column, as shown in the following <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="85709-122">（为简便起见，只显示相关属性。）</span><span class="sxs-lookup"><span data-stu-id="85709-122">(For simplicity, only relevant properties are shown.)</span></span>  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: customers  
   ColumnName: CustomerID  
@@ -82,11 +84,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- 在所生成的 **DataSet** 中，由于该架构在 **key** 元素中指定 `msdata:PrimaryKey="true"`，所以 **UniqueConstraint** 的 **IsPrimaryKey** 属性将设置为 **true**。  
+ <span data-ttu-id="85709-123">在**数据集**生成， **IsPrimaryKey**属性**UniqueConstraint**设置为**true**因为架构指定`msdata:PrimaryKey="true"`中**密钥**元素。</span><span class="sxs-lookup"><span data-stu-id="85709-123">In the **DataSet** that is generated, the **IsPrimaryKey** property of the **UniqueConstraint** is set to **true** because the schema specifies `msdata:PrimaryKey="true"` in the **key** element.</span></span>  
   
- **DataSet** 中 **UniqueConstraint** 的 **ConstraintName** 属性值是在该架构的 **key** 元素中指定的 **msdata:ConstraintName** 属性值。  
+ <span data-ttu-id="85709-124">值**ConstraintName**属性**UniqueConstraint**中**数据集**是值**msdata:ConstraintName**属性中指定**密钥**架构中的元素。</span><span class="sxs-lookup"><span data-stu-id="85709-124">The value of the **ConstraintName** property of the **UniqueConstraint** in the **DataSet** is the value of the **msdata:ConstraintName** attribute specified in the **key** element in the schema.</span></span>  
   
-## 请参阅  
- [将 XML 架构 \(XSD\) 约束映射到 DataSet 约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [从 XML 架构 \(XSD\) 生成 DataSet 关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="85709-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="85709-125">See Also</span></span>  
+ [<span data-ttu-id="85709-126">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="85709-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="85709-127">从 XML 架构 (XSD) 生成数据集关系</span><span class="sxs-lookup"><span data-stu-id="85709-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="85709-128">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="85709-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

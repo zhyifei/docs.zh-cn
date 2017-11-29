@@ -1,47 +1,48 @@
 ---
-title: "常见数据类型（非托管 API 参考） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "常见数据类型（非托管 API 参考）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 03350825b3de4515a0d30e8644f34df71efa25db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 常见数据类型（非托管 API 参考）
-本主题列出了由 C\/C\+\+ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。 这些数据类型通常是 C\/C\+\+ 基元数据类型的别名。 通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。  
+# <a name="common-data-types-unmanaged-api-reference"></a><span data-ttu-id="df561-102">常见数据类型（非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="df561-102">Common Data Types (Unmanaged API Reference)</span></span>
+<span data-ttu-id="df561-103">本主题列出了由 C/C++ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。</span><span class="sxs-lookup"><span data-stu-id="df561-103">This topic lists simple data types used by the unmanaged APIs for the .NET Framework that are defined by C/C++ `typedef` statements.</span></span> <span data-ttu-id="df561-104">这些数据类型通常是 C/C++ 基元数据类型的别名。</span><span class="sxs-lookup"><span data-stu-id="df561-104">These data types are typically aliases for C/C++ primitive data types.</span></span> <span data-ttu-id="df561-105">通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。</span><span class="sxs-lookup"><span data-stu-id="df561-105">Typically, the values of these data types are opaque; that is, they are returned by a particular function or method so that they can be passed to other functions or methods without modification.</span></span>  
   
-|数据类型|定义|定义位置|描述|  
-|----------|--------|----------|--------|  
-|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|应用程序域的标识符。|  
-|AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|程序集的标识符。|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|托管类的标识符。|  
-|CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|已连接到 Microsoft SQL Server 实例的线程的连接标识符。|  
-|ContextID|`typedef UINT_PTR ContextID;`|corprof.h|与特定托管线程关联的上下文的标识符。|  
-|COR\_PRF\_ELT\_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|表示有关特定堆栈帧的信息的不透明的句柄。|  
-|COR\_PRF\_FRAME\_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|指向堆栈帧的不透明的句柄。 此句柄仅在其传递到的回调过程中有效。|  
-|CORDB\_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|内存中的地址。|  
-|CORDB\_CONTINUE\_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|继续状态。|  
-|CORDB\_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU 寄存器的值。|  
-|FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|函数或方法的标识符。|  
-|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|垃圾回收句柄。|  
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|元数据标记（元数据表中的某行）。|  
-|ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|程序集模块的标识符。|  
-|ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|对象的标识符。|  
-|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|托管进程的标识符。|  
-|ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|实时编译的函数的标识符。|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](../../../ocs/framework/unmanaged-api/hosting/iclrtask-interface.md) 实例的标识符。|  
-|ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|托管线程的标识符。|  
+|<span data-ttu-id="df561-106">数据类型</span><span class="sxs-lookup"><span data-stu-id="df561-106">Data type</span></span>|<span data-ttu-id="df561-107">定义</span><span class="sxs-lookup"><span data-stu-id="df561-107">Definition</span></span>|<span data-ttu-id="df561-108">定义位置</span><span class="sxs-lookup"><span data-stu-id="df561-108">Defined in</span></span>|<span data-ttu-id="df561-109">描述</span><span class="sxs-lookup"><span data-stu-id="df561-109">Description</span></span>|  
+|---------------|----------------|----------------|-----------------|  
+|<span data-ttu-id="df561-110">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="df561-110">AppDomainID</span></span>|`typedef UINT_PTR AppDomainID;`|<span data-ttu-id="df561-111">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-111">corprof.h</span></span>|<span data-ttu-id="df561-112">应用程序域的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-112">The identifier of an application domain.</span></span>|  
+|<span data-ttu-id="df561-113">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="df561-113">AssemblyID</span></span>|`typedef UINT_PTR AssemblyID;`|<span data-ttu-id="df561-114">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-114">corprof.h</span></span>|<span data-ttu-id="df561-115">程序集的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-115">The identifier of an assembly.</span></span>|  
+|<span data-ttu-id="df561-116">ClassID</span><span class="sxs-lookup"><span data-stu-id="df561-116">ClassID</span></span>|`typedef UINT_PTR ClassID;`|<span data-ttu-id="df561-117">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-117">corprof.h</span></span>|<span data-ttu-id="df561-118">托管类的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-118">The identifier of a managed class.</span></span>|  
+|<span data-ttu-id="df561-119">CONNID</span><span class="sxs-lookup"><span data-stu-id="df561-119">CONNID</span></span>|`typedef DWORD CONNID;`|<span data-ttu-id="df561-120">cordebug.h、mscoree.h</span><span class="sxs-lookup"><span data-stu-id="df561-120">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="df561-121">已连接到 Microsoft SQL Server 实例的线程的连接标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-121">The connection identifier for a thread that is connected to an instance of Microsoft SQL Server.</span></span>|  
+|<span data-ttu-id="df561-122">ContextID</span><span class="sxs-lookup"><span data-stu-id="df561-122">ContextID</span></span>|`typedef UINT_PTR ContextID;`|<span data-ttu-id="df561-123">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-123">corprof.h</span></span>|<span data-ttu-id="df561-124">与特定托管线程关联的上下文的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-124">The identifier of the context associated with a particular managed thread.</span></span>|  
+|<span data-ttu-id="df561-125">COR_PRF_ELT_INFO</span><span class="sxs-lookup"><span data-stu-id="df561-125">COR_PRF_ELT_INFO</span></span>|`typedef UINT_PTR COR_PRF_ELT_INFO;`|<span data-ttu-id="df561-126">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-126">corprof.h</span></span>|<span data-ttu-id="df561-127">表示有关特定堆栈帧的信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="df561-127">An opaque handle that represents information about a particular stack frame.</span></span>|  
+|<span data-ttu-id="df561-128">COR_PRF_FRAME_INFO</span><span class="sxs-lookup"><span data-stu-id="df561-128">COR_PRF_FRAME_INFO</span></span>|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|<span data-ttu-id="df561-129">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-129">corprof.h</span></span>|<span data-ttu-id="df561-130">指向堆栈帧的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="df561-130">An opaque handle that points to a stack frame.</span></span> <span data-ttu-id="df561-131">此句柄仅在其传递到的回调过程中有效。</span><span class="sxs-lookup"><span data-stu-id="df561-131">It is valid only during the callback to which it is passed.</span></span>|  
+|<span data-ttu-id="df561-132">CORDB_ADDRESS</span><span class="sxs-lookup"><span data-stu-id="df561-132">CORDB_ADDRESS</span></span>|`typedef ULONG64 CORDB_ADDRESS;`|<span data-ttu-id="df561-133">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="df561-133">cordebug.h</span></span>|<span data-ttu-id="df561-134">内存中的地址。</span><span class="sxs-lookup"><span data-stu-id="df561-134">An address in memory.</span></span>|  
+|<span data-ttu-id="df561-135">CORDB_CONTINUE_STATUS</span><span class="sxs-lookup"><span data-stu-id="df561-135">CORDB_CONTINUE_STATUS</span></span>|`typedef DWORD CORDB_CONTINUE_STATUS;`|<span data-ttu-id="df561-136">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="df561-136">cordebug.h</span></span>|<span data-ttu-id="df561-137">继续状态。</span><span class="sxs-lookup"><span data-stu-id="df561-137">The continuation status.</span></span>|  
+|<span data-ttu-id="df561-138">CORDB_REGISTER</span><span class="sxs-lookup"><span data-stu-id="df561-138">CORDB_REGISTER</span></span>|`typedef ULONG64 CORDB_REGISTER;`|<span data-ttu-id="df561-139">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="df561-139">cordebug.h</span></span>|<span data-ttu-id="df561-140">CPU 寄存器的值。</span><span class="sxs-lookup"><span data-stu-id="df561-140">The value of a CPU register.</span></span>|  
+|<span data-ttu-id="df561-141">FunctionID</span><span class="sxs-lookup"><span data-stu-id="df561-141">FunctionID</span></span>|`typedef UINT_PTR FunctionID;`|<span data-ttu-id="df561-142">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-142">corprof.h</span></span>|<span data-ttu-id="df561-143">函数或方法的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-143">The identifier of a function or method.</span></span>|  
+|<span data-ttu-id="df561-144">GCHandleID</span><span class="sxs-lookup"><span data-stu-id="df561-144">GCHandleID</span></span>|`typedef UINT_PTR GCHandleID;`|<span data-ttu-id="df561-145">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-145">corprof.h</span></span>|<span data-ttu-id="df561-146">垃圾回收句柄。</span><span class="sxs-lookup"><span data-stu-id="df561-146">A garbage collection handle.</span></span>|  
+|<span data-ttu-id="df561-147">mdToken</span><span class="sxs-lookup"><span data-stu-id="df561-147">mdToken</span></span>|`typedef UINT32 mdToken;`|<span data-ttu-id="df561-148">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-148">corprof.h</span></span>|<span data-ttu-id="df561-149">元数据标记（元数据表中的某行）。</span><span class="sxs-lookup"><span data-stu-id="df561-149">A   metadata token (a row in a metadata table).</span></span>|  
+|<span data-ttu-id="df561-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="df561-150">ModuleID</span></span>|`typedef UINT_PTR ModuleID;`|<span data-ttu-id="df561-151">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-151">corprof.h</span></span>|<span data-ttu-id="df561-152">程序集模块的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-152">The identifier of an assembly module.</span></span>|  
+|<span data-ttu-id="df561-153">ObjectID</span><span class="sxs-lookup"><span data-stu-id="df561-153">ObjectID</span></span>|`typedef UINT_PTR ObjectID;`|<span data-ttu-id="df561-154">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-154">corprof.h</span></span>|<span data-ttu-id="df561-155">对象的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-155">The identifier of an object.</span></span>|  
+|<span data-ttu-id="df561-156">ProcessID</span><span class="sxs-lookup"><span data-stu-id="df561-156">ProcessID</span></span>|`typedef UINT_PTR ProcessID;`|<span data-ttu-id="df561-157">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-157">corprof.h</span></span>|<span data-ttu-id="df561-158">托管进程的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-158">The identifier of a managed process.</span></span>|  
+|<span data-ttu-id="df561-159">ReJITID</span><span class="sxs-lookup"><span data-stu-id="df561-159">ReJITID</span></span>|`typedef UINT_PTR ReJITID;`|<span data-ttu-id="df561-160">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-160">corprof.h</span></span>|<span data-ttu-id="df561-161">实时编译的函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-161">The identifier of a jitted function.</span></span>|  
+|<span data-ttu-id="df561-162">TASKID</span><span class="sxs-lookup"><span data-stu-id="df561-162">TASKID</span></span>|`typedef UINT64 TASKID;`|<span data-ttu-id="df561-163">cordebug.h、mscoree.h</span><span class="sxs-lookup"><span data-stu-id="df561-163">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="df561-164">标识符[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="df561-164">The identifier of an [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>|  
+|<span data-ttu-id="df561-165">ThreadID</span><span class="sxs-lookup"><span data-stu-id="df561-165">ThreadID</span></span>|`typedef UINT_PTR ThreadID;`|<span data-ttu-id="df561-166">corprof.h</span><span class="sxs-lookup"><span data-stu-id="df561-166">corprof.h</span></span>|<span data-ttu-id="df561-167">托管线程的标识符。</span><span class="sxs-lookup"><span data-stu-id="df561-167">The identifier of a managed thread.</span></span>|  
   
-## 请参阅  
- [非托管 API 参考](../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a><span data-ttu-id="df561-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="df561-168">See Also</span></span>  
+ [<span data-ttu-id="df561-169">非托管 API 参考</span><span class="sxs-lookup"><span data-stu-id="df561-169">Unmanaged API Reference</span></span>](../../../docs/framework/unmanaged-api/index.md)

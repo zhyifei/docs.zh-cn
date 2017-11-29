@@ -1,43 +1,26 @@
 ---
-title: "图片不是有效 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "图片无效"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID481
+f1_keywords: vbrID481
 ms.assetid: 6ac18c39-042b-423a-9d95-25a7745c84dd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1fd4a2098ce99e43e3ffcadee4aae42ac55f043c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6a04c81583ceb8a3590f42d4677ce6fa1d5d3386
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="picture-is-not-valid"></a>图片无效
-你尝试向窗体或控件的 `Picture` 属性分配的图形格式不是位图、图标，也不是 Windows 图元文件。  
+# <a name="picture-is-not-valid"></a><span data-ttu-id="51fec-102">图片无效</span><span class="sxs-lookup"><span data-stu-id="51fec-102">Picture is not valid</span></span>
+<span data-ttu-id="51fec-103">你尝试向窗体或控件的 `Picture` 属性分配的图形格式不是位图、图标，也不是 Windows 图元文件。</span><span class="sxs-lookup"><span data-stu-id="51fec-103">You tried to assign a graphics format other than a bitmap, icon, or Windows metafile to the `Picture` property of a form or control.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="51fec-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="51fec-104">To correct this error</span></span>  
   
-1.  确保您尝试加载了文件`Picture`属性是支持的一个有效的图形文件[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+1.  <span data-ttu-id="51fec-105">确保尝试向 `Picture` 属性加载的文件是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]支持的有效图形文件。</span><span class="sxs-lookup"><span data-stu-id="51fec-105">Ensure that the file you are trying to load into the `Picture` property is a valid graphics file supported by [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在 Visual Basic.NET 中的图形更改](http://msdn.microsoft.com/en-us/24cd2d55-ebf1-42d6-b755-00e9001f1cb8)
+## <a name="see-also"></a><span data-ttu-id="51fec-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="51fec-106">See Also</span></span>  
+ [<span data-ttu-id="51fec-107">在 Visual Basic.NET 中的图形更改</span><span class="sxs-lookup"><span data-stu-id="51fec-107">Graphics Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/24cd2d55-ebf1-42d6-b755-00e9001f1cb8)

@@ -1,66 +1,69 @@
 ---
-title: "&lt;oidMap&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidMap> 元素"
-  - "oidMap 元素"
+title: "&lt;oidMap&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap
+helpviewer_keywords:
+- <oidMap> element
+- oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;oidMap&gt; 元素
-包含到类的 ASN.1 对象标识符 \(OID\) 映射。  
+# <a name="ltoidmapgt-element"></a><span data-ttu-id="19df3-102">&lt;oidMap&gt;元素</span><span class="sxs-lookup"><span data-stu-id="19df3-102">&lt;oidMap&gt; Element</span></span>
+<span data-ttu-id="19df3-103">包含 ASN.1 对象标识符 (OID) 映射到类。</span><span class="sxs-lookup"><span data-stu-id="19df3-103">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>  
   
-## 语法  
+ <span data-ttu-id="19df3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="19df3-104">\<configuration></span></span>  
+<span data-ttu-id="19df3-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="19df3-105">\<mscorlib></span></span>  
+<span data-ttu-id="19df3-106">\<g s ></span><span class="sxs-lookup"><span data-stu-id="19df3-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="19df3-107">\<oidMap ></span><span class="sxs-lookup"><span data-stu-id="19df3-107">\<oidMap></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="19df3-108">语法</span><span class="sxs-lookup"><span data-stu-id="19df3-108">Syntax</span></span>  
+  
+```xml  
 <oidMap>   
 </oidMap>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="19df3-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="19df3-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="19df3-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="19df3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="19df3-111">特性</span><span class="sxs-lookup"><span data-stu-id="19df3-111">Attributes</span></span>  
+ <span data-ttu-id="19df3-112">无。</span><span class="sxs-lookup"><span data-stu-id="19df3-112">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="19df3-113">子元素</span><span class="sxs-lookup"><span data-stu-id="19df3-113">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<oidEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
+|<span data-ttu-id="19df3-114">元素</span><span class="sxs-lookup"><span data-stu-id="19df3-114">Element</span></span>|<span data-ttu-id="19df3-115">描述</span><span class="sxs-lookup"><span data-stu-id="19df3-115">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="19df3-116">\<oidEntry ></span><span class="sxs-lookup"><span data-stu-id="19df3-116">\<oidEntry></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|<span data-ttu-id="19df3-117">将 ASN.1 OID 映射到一个友好名称。</span><span class="sxs-lookup"><span data-stu-id="19df3-117">Maps an ASN.1 OID to a friendly name.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="19df3-118">父元素</span><span class="sxs-lookup"><span data-stu-id="19df3-118">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`cryptographySettings`|包含密码设置。|  
-|`mscorlib`|包含 `cryptographySettings` 元素。|  
+|<span data-ttu-id="19df3-119">元素</span><span class="sxs-lookup"><span data-stu-id="19df3-119">Element</span></span>|<span data-ttu-id="19df3-120">描述</span><span class="sxs-lookup"><span data-stu-id="19df3-120">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="19df3-121">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="19df3-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="19df3-122">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="19df3-122">Contains cryptography settings.</span></span>|  
+|`mscorlib`|<span data-ttu-id="19df3-123">包含`cryptographySettings`元素。</span><span class="sxs-lookup"><span data-stu-id="19df3-123">Contains the `cryptographySettings` element.</span></span>|  
   
-## 示例  
- 下面的示例演示如何使用**\<oidMap\>**元素来包含一个RIPEMD\-160哈希算法的OID的到那个哈希算法的实现的映射。  
+## <a name="example"></a><span data-ttu-id="19df3-124">示例</span><span class="sxs-lookup"><span data-stu-id="19df3-124">Example</span></span>  
+ <span data-ttu-id="19df3-125">下面的示例演示如何使用 **\<oidMap >**元素以包含该哈希算法的实现的 ripemd-160 哈希算法的 oid 的映射。</span><span class="sxs-lookup"><span data-stu-id="19df3-125">The following example shows how to use the **\<oidMap>** element to contain a mapping of an OID for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -80,9 +83,9 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)   
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+## <a name="see-also"></a><span data-ttu-id="19df3-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="19df3-126">See Also</span></span>  
+ [<span data-ttu-id="19df3-127">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="19df3-127">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="19df3-128">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="19df3-128">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="19df3-129">加密服务</span><span class="sxs-lookup"><span data-stu-id="19df3-129">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="19df3-130">配置加密类</span><span class="sxs-lookup"><span data-stu-id="19df3-130">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [<span data-ttu-id="19df3-131">将对象标识符映射到加密算法</span><span class="sxs-lookup"><span data-stu-id="19df3-131">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

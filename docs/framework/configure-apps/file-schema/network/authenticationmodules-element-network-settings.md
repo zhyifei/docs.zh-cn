@@ -1,73 +1,74 @@
 ---
-title: "&lt;authenticationModules&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules> 元素"
-  - "authenticationModules 元素"
+title: "&lt;authenticationModules&gt;元素 （网络设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules
+helpviewer_keywords:
+- authenticationModules element
+- <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fe2e1757a3e2da5c2aa6084c0eb21164de3ece0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;authenticationModules&gt; 元素（网络设置）
-指定用于对网络请求进行身份验证的模块。  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="70a59-102">&lt;authenticationModules&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="70a59-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="70a59-103">指定用来验证网络请求的模块。</span><span class="sxs-lookup"><span data-stu-id="70a59-103">Specifies modules used to authenticate network requests.</span></span>  
   
-## 语法  
+ <span data-ttu-id="70a59-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="70a59-104">\<configuration></span></span>  
+<span data-ttu-id="70a59-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="70a59-105">\<system.net></span></span>  
+<span data-ttu-id="70a59-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="70a59-106">\<authenticationModules></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="70a59-107">语法</span><span class="sxs-lookup"><span data-stu-id="70a59-107">Syntax</span></span>  
   
-      <authenticationModules>   
+```xml  
+<authenticationModules>   
 </authenticationModules>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="70a59-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="70a59-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="70a59-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="70a59-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="70a59-110">特性</span><span class="sxs-lookup"><span data-stu-id="70a59-110">Attributes</span></span>  
+ <span data-ttu-id="70a59-111">无。</span><span class="sxs-lookup"><span data-stu-id="70a59-111">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="70a59-112">子元素</span><span class="sxs-lookup"><span data-stu-id="70a59-112">Child Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[添加](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|将身份验证模块添加到应用程序中。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|从应用程序清除所有身份验证模块。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|从应用程序中移除身份验证模块。|  
+|<span data-ttu-id="70a59-113">**元素**</span><span class="sxs-lookup"><span data-stu-id="70a59-113">**Element**</span></span>|<span data-ttu-id="70a59-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="70a59-114">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="70a59-115">add</span><span class="sxs-lookup"><span data-stu-id="70a59-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="70a59-116">向应用程序添加身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="70a59-116">Adds an authentication module to the application.</span></span>|  
+|[<span data-ttu-id="70a59-117">clear</span><span class="sxs-lookup"><span data-stu-id="70a59-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="70a59-118">清除从应用程序的所有身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="70a59-118">Clears all authentication modules from the application.</span></span>|  
+|[<span data-ttu-id="70a59-119">remove</span><span class="sxs-lookup"><span data-stu-id="70a59-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="70a59-120">从应用程序中移除一个身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="70a59-120">Removes an authentication module from the application.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="70a59-121">父元素</span><span class="sxs-lookup"><span data-stu-id="70a59-121">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 与网络的连接方式的设置。|  
+|<span data-ttu-id="70a59-122">**元素**</span><span class="sxs-lookup"><span data-stu-id="70a59-122">**Element**</span></span>|<span data-ttu-id="70a59-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="70a59-123">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="70a59-124">system.net</span><span class="sxs-lookup"><span data-stu-id="70a59-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="70a59-125">包含指定 .NET Framework 如何连接到网络的设置。</span><span class="sxs-lookup"><span data-stu-id="70a59-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## 备注  
- `authenticationModule` 元素指定身份验证模块，这些模块通过服务器执行身份验证进程。  身份验证模块必须实现 <xref:System.Net.IAuthenticationModule> 接口。  
+## <a name="remarks"></a><span data-ttu-id="70a59-126">备注</span><span class="sxs-lookup"><span data-stu-id="70a59-126">Remarks</span></span>  
+ <span data-ttu-id="70a59-127">`authenticationModule`元素指定执行身份验证过程与服务器的身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="70a59-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="70a59-128">身份验证模块必须实现<xref:System.Net.IAuthenticationModule>接口。</span><span class="sxs-lookup"><span data-stu-id="70a59-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a><span data-ttu-id="70a59-129">配置文件</span><span class="sxs-lookup"><span data-stu-id="70a59-129">Configuration Files</span></span>  
+ <span data-ttu-id="70a59-130">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="70a59-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 示例  
- 下面的代码示例启用身份验证模块。  应当将 Version 和 PublicKeyToken 的值替换为指定模块的正确值。  
+## <a name="example"></a><span data-ttu-id="70a59-131">示例</span><span class="sxs-lookup"><span data-stu-id="70a59-131">Example</span></span>  
+ <span data-ttu-id="70a59-132">以下示例启用一个身份验证模块。</span><span class="sxs-lookup"><span data-stu-id="70a59-132">The following example enables an authentication module.</span></span> <span data-ttu-id="70a59-133">版本和 PublicKeyToken 提供值应替换为指定的模块的正确值。</span><span class="sxs-lookup"><span data-stu-id="70a59-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -78,7 +79,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="70a59-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="70a59-134">See Also</span></span>  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [<span data-ttu-id="70a59-135">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="70a59-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

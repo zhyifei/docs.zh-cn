@@ -1,71 +1,77 @@
 ---
-title: "Use Caching in UI Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "caching, UI Automation"
-  - "UI Automation, caching"
+title: "在 UI 自动化中使用缓存"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- caching, UI Automation
+- UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-caps.latest.revision: 14
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 9576389c7245810eeef3c86926e479dedfdfbb69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Use Caching in UI Automation
+# <a name="use-caching-in-ui-automation"></a><span data-ttu-id="fba23-102">在 UI 自动化中使用缓存</span><span class="sxs-lookup"><span data-stu-id="fba23-102">Use Caching in UI Automation</span></span>
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="fba23-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="fba23-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="fba23-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="fba23-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本部分演示如何实现 <xref:System.Windows.Automation.AutomationElement> 属性和控件模式的缓存。  
+ <span data-ttu-id="fba23-105">本部分演示如何实现 <xref:System.Windows.Automation.AutomationElement> 属性和控件模式的缓存。</span><span class="sxs-lookup"><span data-stu-id="fba23-105">This section shows how to implement caching of <xref:System.Windows.Automation.AutomationElement> properties and control patterns.</span></span>  
   
-### 激活缓存请求  
+### <a name="activate-a-cache-request"></a><span data-ttu-id="fba23-106">激活缓存请求</span><span class="sxs-lookup"><span data-stu-id="fba23-106">Activate a Cache Request</span></span>  
   
-1.  创建 <xref:System.Windows.Automation.CacheRequest>。  
+1.  <span data-ttu-id="fba23-107">创建 <xref:System.Windows.Automation.CacheRequest>。</span><span class="sxs-lookup"><span data-stu-id="fba23-107">Create a <xref:System.Windows.Automation.CacheRequest>.</span></span>  
   
-2.  使用 <xref:System.Windows.Automation.CacheRequest.Add%2A> 指定要缓存的属性和模式。  
+2.  <span data-ttu-id="fba23-108">使用 <xref:System.Windows.Automation.CacheRequest.Add%2A>指定要缓存的属性和模式。</span><span class="sxs-lookup"><span data-stu-id="fba23-108">Specify properties and patterns to cache by using <xref:System.Windows.Automation.CacheRequest.Add%2A>.</span></span>  
   
-3.  通过设置 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> 属性来指定缓存的范围。  
+3.  <span data-ttu-id="fba23-109">通过设置 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> 属性来指定缓存的范围。</span><span class="sxs-lookup"><span data-stu-id="fba23-109">Specify the scope of caching by setting the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> property.</span></span>  
   
-4.  通过设置 <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> 属性来指定子树视图。  
+4.  <span data-ttu-id="fba23-110">通过设置 <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> 属性来指定子树视图。</span><span class="sxs-lookup"><span data-stu-id="fba23-110">Specify the view of the subtree by setting the <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> property.</span></span>  
   
-5.  如果想通过不检索对对象的完全引用来提高效率，请将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode>。 （这将导致无法从那些对象中检索当前值。）  
+5.  <span data-ttu-id="fba23-111">如果想通过不检索对对象的完全引用来提高效率，请将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode.None> 。</span><span class="sxs-lookup"><span data-stu-id="fba23-111">Set the <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> property to <xref:System.Windows.Automation.AutomationElementMode.None> if you wish to increase efficiency by not retrieving a full reference to objects.</span></span> <span data-ttu-id="fba23-112">（这将导致无法从那些对象中检索当前值。）</span><span class="sxs-lookup"><span data-stu-id="fba23-112">(This will make it impossible to retrieve current values from those objects.)</span></span>  
   
-6.  使用 `using` 块（[!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)] 中的 `Using`）中的 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 激活请求。  
+6.  <span data-ttu-id="fba23-113">使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 块（ `using` 中的`Using` ）中的 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]激活请求。</span><span class="sxs-lookup"><span data-stu-id="fba23-113">Activate the request by using <xref:System.Windows.Automation.CacheRequest.Activate%2A> within a `using` block (`Using` in [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).</span></span>  
   
- 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A>（如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A>）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 创建的对象来禁用请求。 使用 `using` 块（[!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)] 中的 `Using`）中的 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。  
+ <span data-ttu-id="fba23-114">在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。</span><span class="sxs-lookup"><span data-stu-id="fba23-114">After obtaining <xref:System.Windows.Automation.AutomationElement> objects or subscribing to events, deactivate the request by using <xref:System.Windows.Automation.CacheRequest.Pop%2A> (if <xref:System.Windows.Automation.CacheRequest.Push%2A> was used) or by disposing the object created by <xref:System.Windows.Automation.CacheRequest.Activate%2A>.</span></span> <span data-ttu-id="fba23-115">使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 块（ `using` 中的`Using` ）中的 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="fba23-115">(Use <xref:System.Windows.Automation.CacheRequest.Activate%2A> in a `using` block (`Using` in [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).</span></span>  
   
-### 缓存 AutomationElement 属性  
+### <a name="cache-automationelement-properties"></a><span data-ttu-id="fba23-116">缓存 AutomationElement 属性</span><span class="sxs-lookup"><span data-stu-id="fba23-116">Cache AutomationElement Properties</span></span>  
   
-1.  当 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时，使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 或 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 获取 <xref:System.Windows.Automation.AutomationElement> 对象，或者获取 <xref:System.Windows.Automation.AutomationElement> 并将其作为 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时注册的事件的源。 （也可以通过下面的方法创建缓存：将 <xref:System.Windows.Automation.CacheRequest> 传递给 GetUpdatedCache 或 <xref:System.Windows.Automation.TreeWalker> 方法之一。）  
+1.  <span data-ttu-id="fba23-117">当 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时，使用 <xref:System.Windows.Automation.AutomationElement> 或 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 获取 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>对象，或者获取 <xref:System.Windows.Automation.AutomationElement> 并将其作为 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时注册的事件的源。</span><span class="sxs-lookup"><span data-stu-id="fba23-117">While a <xref:System.Windows.Automation.CacheRequest> is active, obtain <xref:System.Windows.Automation.AutomationElement> objects by using <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> or <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; or obtain an <xref:System.Windows.Automation.AutomationElement> as the source of an event that you registered for when the <xref:System.Windows.Automation.CacheRequest> was active.</span></span> <span data-ttu-id="fba23-118">（也可以通过下面的方法创建缓存：将 <xref:System.Windows.Automation.CacheRequest> 传递给 GetUpdatedCache 或 <xref:System.Windows.Automation.TreeWalker> 方法之一。）</span><span class="sxs-lookup"><span data-stu-id="fba23-118">(You can also create a cache by passing a <xref:System.Windows.Automation.CacheRequest> to GetUpdatedCache or one of the <xref:System.Windows.Automation.TreeWalker> methods.)</span></span>  
   
-2.  使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> 或从 <xref:System.Windows.Automation.AutomationElement> 的 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性中检索属性。  
+2.  <span data-ttu-id="fba23-119">使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> 或从 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 的 <xref:System.Windows.Automation.AutomationElement>属性中检索属性。</span><span class="sxs-lookup"><span data-stu-id="fba23-119">Use <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> or retrieve a property from the <xref:System.Windows.Automation.AutomationElement.Cached%2A> property of the <xref:System.Windows.Automation.AutomationElement>.</span></span>  
   
-### 获取缓存模式及其属性  
+### <a name="obtain-cached-patterns-and-their-properties"></a><span data-ttu-id="fba23-120">获取缓存模式及其属性</span><span class="sxs-lookup"><span data-stu-id="fba23-120">Obtain Cached Patterns and Their Properties</span></span>  
   
-1.  当 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时，使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 或 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 获取 <xref:System.Windows.Automation.AutomationElement> 对象，或者获取 <xref:System.Windows.Automation.AutomationElement> 并将其作为 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时注册的事件的源。 （也可以通过下面的方法创建缓存：将 <xref:System.Windows.Automation.CacheRequest> 传递给 GetUpdatedCache 或 <xref:System.Windows.Automation.TreeWalker> 方法之一。）  
+1.  <span data-ttu-id="fba23-121">当 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时，使用 <xref:System.Windows.Automation.AutomationElement> 或 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 获取 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>对象，或者获取 <xref:System.Windows.Automation.AutomationElement> 并将其作为 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时注册的事件的源。</span><span class="sxs-lookup"><span data-stu-id="fba23-121">While a <xref:System.Windows.Automation.CacheRequest> is active, obtain <xref:System.Windows.Automation.AutomationElement> objects by using <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> or <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; or obtain an <xref:System.Windows.Automation.AutomationElement> as the source of an event that you registered for when the <xref:System.Windows.Automation.CacheRequest> was active.</span></span> <span data-ttu-id="fba23-122">（也可以通过下面的方法创建缓存：将 <xref:System.Windows.Automation.CacheRequest> 传递给 GetUpdatedCache 或 <xref:System.Windows.Automation.TreeWalker> 方法之一。）</span><span class="sxs-lookup"><span data-stu-id="fba23-122">(You can also create a cache by passing a <xref:System.Windows.Automation.CacheRequest> to GetUpdatedCache or one of the <xref:System.Windows.Automation.TreeWalker> methods.)</span></span>  
   
-2.  使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> 检索缓存的模式。  
+2.  <span data-ttu-id="fba23-123">使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> 检索缓存的模式。</span><span class="sxs-lookup"><span data-stu-id="fba23-123">Use <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> or <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> to retrieve a cached pattern.</span></span>  
   
-3.  控件模式的 `Cached` 属性中检索属性值。  
+3.  <span data-ttu-id="fba23-124">控件模式的 `Cached` 属性中检索属性值。</span><span class="sxs-lookup"><span data-stu-id="fba23-124">Retrieve property values from the `Cached` property of the control pattern.</span></span>  
   
-## 示例  
- 下面的代码示例使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 激活 <xref:System.Windows.Automation.CacheRequest>，演示了缓存的各个方面。  
+## <a name="example"></a><span data-ttu-id="fba23-125">示例</span><span class="sxs-lookup"><span data-stu-id="fba23-125">Example</span></span>  
+ <span data-ttu-id="fba23-126">下面的代码示例使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 激活 <xref:System.Windows.Automation.CacheRequest>，演示了缓存的各个方面。</span><span class="sxs-lookup"><span data-stu-id="fba23-126">The following code example shows various aspects of caching, using <xref:System.Windows.Automation.CacheRequest.Activate%2A> to activate the <xref:System.Windows.Automation.CacheRequest>.</span></span>  
   
  [!code-csharp[UIAClient_snip#107](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
  [!code-vb[UIAClient_snip#107](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
   
-## 示例  
- 下面的代码示例使用 <xref:System.Windows.Automation.CacheRequest.Push%2A> 激活 <xref:System.Windows.Automation.CacheRequest>，演示了缓存的各个方面。 除非希望嵌套缓存请求，否则最好是使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。  
+## <a name="example"></a><span data-ttu-id="fba23-127">示例</span><span class="sxs-lookup"><span data-stu-id="fba23-127">Example</span></span>  
+ <span data-ttu-id="fba23-128">下面的代码示例使用 <xref:System.Windows.Automation.CacheRequest.Push%2A> 激活 <xref:System.Windows.Automation.CacheRequest>，演示了缓存的各个方面。</span><span class="sxs-lookup"><span data-stu-id="fba23-128">The following code example shows various aspects of caching, using <xref:System.Windows.Automation.CacheRequest.Push%2A> to activate the <xref:System.Windows.Automation.CacheRequest>.</span></span> <span data-ttu-id="fba23-129">除非希望嵌套缓存请求，否则最好是使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。</span><span class="sxs-lookup"><span data-stu-id="fba23-129">Except when you wish to nest cache requests, it is preferable to use <xref:System.Windows.Automation.CacheRequest.Activate%2A>.</span></span>  
   
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
-## 请参阅  
- [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+## <a name="see-also"></a><span data-ttu-id="fba23-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fba23-130">See Also</span></span>  
+ [<span data-ttu-id="fba23-131">在 UI 自动化客户端中缓存</span><span class="sxs-lookup"><span data-stu-id="fba23-131">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

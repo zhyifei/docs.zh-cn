@@ -1,51 +1,57 @@
 ---
-title: "获取受支持的 UI 自动化控件模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "获取控件模式"
-  - "获取控件模式的 UI 自动化"
-  - "获取控件模式"
+title: "获取受支持的 UI 自动化控件模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- control patterns, getting
+- UI Automation, getting control patterns
+- getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-caps.latest.revision: 10
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 8917890d86f059d85ad9b6a0bcf6d9a41d65585a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 获取受支持的 UI 自动化控件模式
+# <a name="get-supported-ui-automation-control-patterns"></a><span data-ttu-id="2ef11-102">获取受支持的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="2ef11-102">Get Supported UI Automation Control Patterns</span></span>
 > [!NOTE]
->  本文档适用于.NET Framework 开发人员想要使用托管[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定义的类<xref:System.Windows.Automation>命名空间。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="2ef11-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="2ef11-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="2ef11-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="2ef11-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题演示如何检索控件模式对象从[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]元素。  
+ <span data-ttu-id="2ef11-105">本主题演示如何检索控件模式对象从[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="2ef11-105">This topic shows how to retrieve control pattern objects from [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elements.</span></span>  
   
-### <a name="obtain-all-control-patterns"></a>获取所有控件模式  
+### <a name="obtain-all-control-patterns"></a><span data-ttu-id="2ef11-106">获取所有控件模式</span><span class="sxs-lookup"><span data-stu-id="2ef11-106">Obtain All Control Patterns</span></span>  
   
-1.  获取<xref:System.Windows.Automation.AutomationElement>其控件模式您感兴趣。  
+1.  <span data-ttu-id="2ef11-107">获取<xref:System.Windows.Automation.AutomationElement>你对其控件模式感兴趣。</span><span class="sxs-lookup"><span data-stu-id="2ef11-107">Get the <xref:System.Windows.Automation.AutomationElement> whose control patterns you are interested in.</span></span>  
   
-2.  调用<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>来从元素中获取所有控件模式。  
+2.  <span data-ttu-id="2ef11-108">调用<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>若要从该元素获取所有控件模式。</span><span class="sxs-lookup"><span data-stu-id="2ef11-108">Call <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> to get all control patterns from the element.</span></span>  
   
 > [!CAUTION]
->  强烈建议客户端不使用<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>。 性能会受到严重影响与此方法通过调用<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>内部为每个现有的控件模式。 如果可能，应调用客户端<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>感兴趣的关键模式。  
+>  <span data-ttu-id="2ef11-109">强烈建议客户端不使用<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>。</span><span class="sxs-lookup"><span data-stu-id="2ef11-109">It is strongly recommended that a client not use <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>.</span></span> <span data-ttu-id="2ef11-110">与此方法调用，性能会受到严重影响<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>内部的每个现有的控件模式。</span><span class="sxs-lookup"><span data-stu-id="2ef11-110">Performance can be severely affected as this method calls <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> internally for each existing control pattern.</span></span> <span data-ttu-id="2ef11-111">如果可能，应调用客户端<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>针对感兴趣的关键模式。</span><span class="sxs-lookup"><span data-stu-id="2ef11-111">If possible, a client should call <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> for the key patterns of interest.</span></span>  
   
-### <a name="obtain-a-specific-control-pattern"></a>获取特定的控件模式  
+### <a name="obtain-a-specific-control-pattern"></a><span data-ttu-id="2ef11-112">获取特定的控件模式</span><span class="sxs-lookup"><span data-stu-id="2ef11-112">Obtain a Specific Control Pattern</span></span>  
   
-1.  获取<xref:System.Windows.Automation.AutomationElement>其控件模式您感兴趣。  
+1.  <span data-ttu-id="2ef11-113">获取<xref:System.Windows.Automation.AutomationElement>你对其控件模式感兴趣。</span><span class="sxs-lookup"><span data-stu-id="2ef11-113">Get the <xref:System.Windows.Automation.AutomationElement> whose control patterns you are interested in.</span></span>  
   
-2.  调用<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>或<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>特定模式的查询。 这些方法很相似，但是，如果未找到该模式， <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>会抛出异常和<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>返回`false`。  
+2.  <span data-ttu-id="2ef11-114">调用<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>或<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>以查询特定模式。</span><span class="sxs-lookup"><span data-stu-id="2ef11-114">Call <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> or <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> to query for a specific pattern.</span></span> <span data-ttu-id="2ef11-115">这些方法非常相似，但是，如果未找到该模式，<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>引发异常，和<xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>返回`false`。</span><span class="sxs-lookup"><span data-stu-id="2ef11-115">These methods are similar, but if the pattern is not found, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> raises an exception, and <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> returns `false`.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例检索<xref:System.Windows.Automation.AutomationElement>列表项，并获取<xref:System.Windows.Automation.SelectionItemPattern>从该元素。  
+## <a name="example"></a><span data-ttu-id="2ef11-116">示例</span><span class="sxs-lookup"><span data-stu-id="2ef11-116">Example</span></span>  
+ <span data-ttu-id="2ef11-117">下面的示例检索<xref:System.Windows.Automation.AutomationElement>的列表项，并获取<xref:System.Windows.Automation.SelectionItemPattern>从该元素。</span><span class="sxs-lookup"><span data-stu-id="2ef11-117">The following example retrieves an <xref:System.Windows.Automation.AutomationElement> for a list item and obtains a <xref:System.Windows.Automation.SelectionItemPattern> from that element.</span></span>  
   
  [!code-csharp[UIAClient_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#103)]
  [!code-vb[UIAClient_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#103)]  
   
-## <a name="see-also"></a>另请参阅  
- [客户端 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+## <a name="see-also"></a><span data-ttu-id="2ef11-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2ef11-118">See Also</span></span>  
+ [<span data-ttu-id="2ef11-119">客户端的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="2ef11-119">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

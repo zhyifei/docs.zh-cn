@@ -1,58 +1,41 @@
 ---
-title: "Event 语句 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "Event 语句"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
-dev_langs:
-- VB
 helpviewer_keywords:
-- Event statement
-- declaring events, syntax
-- Public keyword, Event statements
-- Custom keyword
-- declarations, events
+- Event statement [Visual Basic]
+- declaring events [Visual Basic], syntax
+- Public keyword [Visual Basic], Event statements
+- Custom keyword [Visual Basic]
+- declarations [Visual Basic], events
 - event keyword [Visual Basic]
-- WithEvents keyword, Event statements
+- WithEvents keyword [Visual Basic], Event statements
 - events [Visual Basic], declaring
-- ByVal keyword, Event statements
+- ByVal keyword [Visual Basic], Event statements
 - events [Visual Basic], custom
-- ByRef keyword, Event statements
+- ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b0ea8074f996622df3cd88a7e87fc1156b63dcaf
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="event-statement"></a>Event 语句
-声明用户定义的事件。  
+# <a name="event-statement"></a><span data-ttu-id="7c542-102">Event 语句</span><span class="sxs-lookup"><span data-stu-id="7c542-102">Event Statement</span></span>
+<span data-ttu-id="7c542-103">声明用户定义的事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-103">Declares a user-defined event.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="7c542-104">语法</span><span class="sxs-lookup"><span data-stu-id="7c542-104">Syntax</span></span>  
   
 ```  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -78,78 +61,78 @@ ms.lasthandoff: 03/13/2017
 End Event  
 ```  
   
-## <a name="parts"></a>部件  
+## <a name="parts"></a><span data-ttu-id="7c542-105">部件</span><span class="sxs-lookup"><span data-stu-id="7c542-105">Parts</span></span>  
   
-|部件|说明|  
+|<span data-ttu-id="7c542-106">部件</span><span class="sxs-lookup"><span data-stu-id="7c542-106">Part</span></span>|<span data-ttu-id="7c542-107">描述</span><span class="sxs-lookup"><span data-stu-id="7c542-107">Description</span></span>|  
 |---|---|  
-|`attrlist`|可选。 应用于此事件的特性列表。 用逗号分隔多个属性。 必须将括[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)在尖括号 ("`<`"和"`>`")。|  
-|`accessmodifier`|可选。 指定哪些代码可以访问事件。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)— 任何代码都可以访问声明它的元素可以访问它。<br />-   [受保护的](../../../visual-basic/language-reference/modifiers/protected.md)— 只有它的类或派生的类中的代码可以访问它。<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)— 只有同一个程序集中的代码可以访问它。<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)— 仅在声明它的元素中的代码可以访问它。<br /><br /> 可以指定 `Protected Friend` 以便可以从事件的类、派生类或相同程序集中的代码进行访问。|  
-|`Shared`|可选。 指定此事件不与类或结构的特定实例关联。|  
-|`Shadows`|可选。 指示此事件重新声明并隐藏基类中具有相同名称的编程元素（或重载元素集）。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果 `Private` 元素隐藏一个基类元素，则无权访问 `Private` 元素的代码会改为访问该基类元素。|  
-|`eventname`|必需。 事件的名称；遵循标准变量命名约定。|  
-|`parameterlist`|可选。 表示此事件的参数的本地变量列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
-|`Implements`|可选。 指示此事件实现接口的事件。|  
-|`implementslist`|如果提供 `Implements`，则是必需的。 所实现的 `Sub` 过程的列表。 用逗号分隔多个过程：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每个 `implementedprocedure` 都具有以下语法和部件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-必需。 此过程的包含类或结构所实现的接口的名称。<br />-   `Definedname`-必需。 在 `interface` 中用于定义过程的名称。 这不必与 `name`（此过程用于实现定义的过程的名称）相同。|  
-|`Custom`|必需。 声明为 `Custom` 的事件必须定义自定义 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 访问器。|  
-|`delegatename`|可选。 指定事件处理程序签名的委托的名称。|  
-|`AddHandler`|必需。 声明 `AddHandler` 访问器，它指定要在添加事件处理程序（显式使用 `AddHandler` 语句或隐式使用 `Handles` 子句）时执行的语句。|  
-|`End AddHandler`|必需。 终止 `AddHandler` 块。|  
-|`value`|必需。 参数名。|  
-|`RemoveHandler`|必需。 声明 `RemoveHandler` 访问器，它指定要在使用 `RemoveHandler` 语句移除事件处理程序时执行的语句。|  
-|`End RemoveHandler`|必需。 终止 `RemoveHandler` 块。|  
-|`RaiseEvent`|必需。 声明 `RaiseEvent` 访问器，它指定要在使用 `RaiseEvent` 语句引发事件时执行的语句。 通常这会调用由 `AddHandler` 和 `RemoveHandler` 访问器维护的委托的列表。|  
-|`End RaiseEvent`|必需。 终止 `RaiseEvent` 块。|  
-|`delegatesignature`|必需。 与 `delegatename` 委托需要的参数匹配的参数列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
-|`statements`|可选。 包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法体的语句。|  
-|`End Event`|必需。 终止 `Event` 块。|  
+|`attrlist`|<span data-ttu-id="7c542-108">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-108">Optional.</span></span> <span data-ttu-id="7c542-109">应用于此事件的特性列表。</span><span class="sxs-lookup"><span data-stu-id="7c542-109">List of attributes that apply to this event.</span></span> <span data-ttu-id="7c542-110">用逗号分隔多个属性。</span><span class="sxs-lookup"><span data-stu-id="7c542-110">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="7c542-111">必须将括[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)中命令的尖括号 ("`<`"和"`>`")。</span><span class="sxs-lookup"><span data-stu-id="7c542-111">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>|  
+|`accessmodifier`|<span data-ttu-id="7c542-112">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-112">Optional.</span></span> <span data-ttu-id="7c542-113">指定哪些代码可以访问事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-113">Specifies what code can access the event.</span></span> <span data-ttu-id="7c542-114">可以是以下各项之一：</span><span class="sxs-lookup"><span data-stu-id="7c542-114">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="7c542-115">-   [公共](../../../visual-basic/language-reference/modifiers/public.md)— 可以访问声明它的元素的任何代码都可以访问它。</span><span class="sxs-lookup"><span data-stu-id="7c542-115">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)—any code that can access the element that declares it can access it.</span></span><br /><span data-ttu-id="7c542-116">-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)— 只有其类或派生的类中的代码可以访问它。</span><span class="sxs-lookup"><span data-stu-id="7c542-116">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)—only code within its class or a derived class can access it.</span></span><br /><span data-ttu-id="7c542-117">-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)— 只有相同程序集中的代码可以访问它。</span><span class="sxs-lookup"><span data-stu-id="7c542-117">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)—only code in the same assembly can access it.</span></span><br /><span data-ttu-id="7c542-118">-   [私有](../../../visual-basic/language-reference/modifiers/private.md)— 只有声明它的元素中的代码可以访问它。</span><span class="sxs-lookup"><span data-stu-id="7c542-118">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)—only code in the element that declares it can access it.</span></span><br /><br /> <span data-ttu-id="7c542-119">可以指定 `Protected Friend` 以便可以从事件的类、派生类或相同程序集中的代码进行访问。</span><span class="sxs-lookup"><span data-stu-id="7c542-119">You can specify `Protected Friend` to enable access from code in the event's class, a derived class, or the same assembly.</span></span>|  
+|`Shared`|<span data-ttu-id="7c542-120">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-120">Optional.</span></span> <span data-ttu-id="7c542-121">指定此事件不与类或结构的特定实例关联。</span><span class="sxs-lookup"><span data-stu-id="7c542-121">Specifies that this event is not associated with a specific instance of a class or structure.</span></span>|  
+|`Shadows`|<span data-ttu-id="7c542-122">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-122">Optional.</span></span> <span data-ttu-id="7c542-123">指示此事件重新声明并隐藏基类中具有相同名称的编程元素（或重载元素集）。</span><span class="sxs-lookup"><span data-stu-id="7c542-123">Indicates that this event redeclares and hides an identically named programming element, or set of overloaded elements, in a base class.</span></span> <span data-ttu-id="7c542-124">可以与任何其他类型一起隐藏任何类型的已声明元素。</span><span class="sxs-lookup"><span data-stu-id="7c542-124">You can shadow any kind of declared element with any other kind.</span></span><br /><br /> <span data-ttu-id="7c542-125">隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。</span><span class="sxs-lookup"><span data-stu-id="7c542-125">A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible.</span></span> <span data-ttu-id="7c542-126">例如，如果 `Private` 元素隐藏一个基类元素，则无权访问 `Private` 元素的代码会改为访问该基类元素。</span><span class="sxs-lookup"><span data-stu-id="7c542-126">For example, if a `Private` element shadows a base-class element, code that does not have permission to access the `Private` element accesses the base-class element instead.</span></span>|  
+|`eventname`|<span data-ttu-id="7c542-127">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-127">Required.</span></span> <span data-ttu-id="7c542-128">事件的名称；遵循标准变量命名约定。</span><span class="sxs-lookup"><span data-stu-id="7c542-128">Name of the event; follows standard variable naming conventions.</span></span>|  
+|`parameterlist`|<span data-ttu-id="7c542-129">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-129">Optional.</span></span> <span data-ttu-id="7c542-130">表示此事件的参数的本地变量列表。</span><span class="sxs-lookup"><span data-stu-id="7c542-130">List of local variables that represent the parameters of this event.</span></span> <span data-ttu-id="7c542-131">必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。</span><span class="sxs-lookup"><span data-stu-id="7c542-131">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`Implements`|<span data-ttu-id="7c542-132">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-132">Optional.</span></span> <span data-ttu-id="7c542-133">指示此事件实现接口的事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-133">Indicates that this event implements an event of an interface.</span></span>|  
+|`implementslist`|<span data-ttu-id="7c542-134">如果提供 `Implements`，则是必需的。</span><span class="sxs-lookup"><span data-stu-id="7c542-134">Required if `Implements` is supplied.</span></span> <span data-ttu-id="7c542-135">所实现的 `Sub` 过程的列表。</span><span class="sxs-lookup"><span data-stu-id="7c542-135">List of `Sub` procedures being implemented.</span></span> <span data-ttu-id="7c542-136">用逗号分隔多个过程：</span><span class="sxs-lookup"><span data-stu-id="7c542-136">Multiple procedures are separated by commas:</span></span><br /><br /> <span data-ttu-id="7c542-137">*implementedprocedure* [， *implementedprocedure* ...]</span><span class="sxs-lookup"><span data-stu-id="7c542-137">*implementedprocedure* [ , *implementedprocedure* ... ]</span></span><br /><br /> <span data-ttu-id="7c542-138">每个 `implementedprocedure` 都具有以下语法和部件：</span><span class="sxs-lookup"><span data-stu-id="7c542-138">Each `implementedprocedure` has the following syntax and parts:</span></span><br /><br /> <span data-ttu-id="7c542-139">`interface`.`definedname`</span><span class="sxs-lookup"><span data-stu-id="7c542-139">`interface`.`definedname`</span></span><br /><br /> <span data-ttu-id="7c542-140">-   `interface`必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-140">-   `interface` - Required.</span></span> <span data-ttu-id="7c542-141">此过程的包含类或结构所实现的接口的名称。</span><span class="sxs-lookup"><span data-stu-id="7c542-141">Name of an interface that this procedure's containing class or structure is implementing.</span></span><br /><span data-ttu-id="7c542-142">-   `Definedname`必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-142">-   `Definedname` - Required.</span></span> <span data-ttu-id="7c542-143">在 `interface` 中用于定义过程的名称。</span><span class="sxs-lookup"><span data-stu-id="7c542-143">Name by which the procedure is defined in `interface`.</span></span> <span data-ttu-id="7c542-144">这不必与 `name`（此过程用于实现定义的过程的名称）相同。</span><span class="sxs-lookup"><span data-stu-id="7c542-144">This does not have to be the same as `name`, the name that this procedure is using to implement the defined procedure.</span></span>|  
+|`Custom`|<span data-ttu-id="7c542-145">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-145">Required.</span></span> <span data-ttu-id="7c542-146">声明为 `Custom` 的事件必须定义自定义 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 访问器。</span><span class="sxs-lookup"><span data-stu-id="7c542-146">Events declared as `Custom` must define custom `AddHandler`, `RemoveHandler`, and `RaiseEvent` accessors.</span></span>|  
+|`delegatename`|<span data-ttu-id="7c542-147">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-147">Optional.</span></span> <span data-ttu-id="7c542-148">指定事件处理程序签名的委托的名称。</span><span class="sxs-lookup"><span data-stu-id="7c542-148">The name of a delegate that specifies the event-handler signature.</span></span>|  
+|`AddHandler`|<span data-ttu-id="7c542-149">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-149">Required.</span></span> <span data-ttu-id="7c542-150">声明 `AddHandler` 访问器，它指定要在添加事件处理程序（显式使用 `AddHandler` 语句或隐式使用 `Handles` 子句）时执行的语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-150">Declares an `AddHandler` accessor, which specifies the statements to execute when an event handler is added, either explicitly by using the `AddHandler` statement or implicitly by using the `Handles` clause.</span></span>|  
+|`End AddHandler`|<span data-ttu-id="7c542-151">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-151">Required.</span></span> <span data-ttu-id="7c542-152">终止 `AddHandler` 块。</span><span class="sxs-lookup"><span data-stu-id="7c542-152">Terminates the `AddHandler` block.</span></span>|  
+|`value`|<span data-ttu-id="7c542-153">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-153">Required.</span></span> <span data-ttu-id="7c542-154">参数名。</span><span class="sxs-lookup"><span data-stu-id="7c542-154">Parameter name.</span></span>|  
+|`RemoveHandler`|<span data-ttu-id="7c542-155">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-155">Required.</span></span> <span data-ttu-id="7c542-156">声明 `RemoveHandler` 访问器，它指定要在使用 `RemoveHandler` 语句移除事件处理程序时执行的语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-156">Declares a `RemoveHandler` accessor, which specifies the statements to execute when an event handler is removed using the `RemoveHandler` statement.</span></span>|  
+|`End RemoveHandler`|<span data-ttu-id="7c542-157">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-157">Required.</span></span> <span data-ttu-id="7c542-158">终止 `RemoveHandler` 块。</span><span class="sxs-lookup"><span data-stu-id="7c542-158">Terminates the `RemoveHandler` block.</span></span>|  
+|`RaiseEvent`|<span data-ttu-id="7c542-159">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-159">Required.</span></span> <span data-ttu-id="7c542-160">声明 `RaiseEvent` 访问器，它指定要在使用 `RaiseEvent` 语句引发事件时执行的语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-160">Declares a `RaiseEvent` accessor, which specifies the statements to execute when the event is raised using the `RaiseEvent` statement.</span></span> <span data-ttu-id="7c542-161">通常这会调用由 `AddHandler` 和 `RemoveHandler` 访问器维护的委托的列表。</span><span class="sxs-lookup"><span data-stu-id="7c542-161">Typically, this invokes a list of delegates maintained by the `AddHandler` and `RemoveHandler` accessors.</span></span>|  
+|`End RaiseEvent`|<span data-ttu-id="7c542-162">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-162">Required.</span></span> <span data-ttu-id="7c542-163">终止 `RaiseEvent` 块。</span><span class="sxs-lookup"><span data-stu-id="7c542-163">Terminates the `RaiseEvent` block.</span></span>|  
+|`delegatesignature`|<span data-ttu-id="7c542-164">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-164">Required.</span></span> <span data-ttu-id="7c542-165">与 `delegatename` 委托需要的参数匹配的参数列表。</span><span class="sxs-lookup"><span data-stu-id="7c542-165">List of parameters that matches the parameters required by the `delegatename` delegate.</span></span> <span data-ttu-id="7c542-166">必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。</span><span class="sxs-lookup"><span data-stu-id="7c542-166">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`statements`|<span data-ttu-id="7c542-167">可选。</span><span class="sxs-lookup"><span data-stu-id="7c542-167">Optional.</span></span> <span data-ttu-id="7c542-168">包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法体的语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-168">Statements that contain the bodies of the `AddHandler`, `RemoveHandler`, and `RaiseEvent` methods.</span></span>|  
+|`End Event`|<span data-ttu-id="7c542-169">必需。</span><span class="sxs-lookup"><span data-stu-id="7c542-169">Required.</span></span> <span data-ttu-id="7c542-170">终止 `Event` 块。</span><span class="sxs-lookup"><span data-stu-id="7c542-170">Terminates the `Event` block.</span></span>|  
   
-## <a name="remarks"></a>备注  
- 一旦声明了事件，便可使用 `RaiseEvent` 语句引发事件。 可以按以下片段所示声明和引发典型事件：  
+## <a name="remarks"></a><span data-ttu-id="7c542-171">备注</span><span class="sxs-lookup"><span data-stu-id="7c542-171">Remarks</span></span>  
+ <span data-ttu-id="7c542-172">一旦声明了事件，便可使用 `RaiseEvent` 语句引发事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-172">Once the event has been declared, use the `RaiseEvent` statement to raise the event.</span></span> <span data-ttu-id="7c542-173">可以按以下片段所示声明和引发典型事件：</span><span class="sxs-lookup"><span data-stu-id="7c542-173">A typical event might be declared and raised as shown in the following fragments:</span></span>  
   
- [!code-vb[VbVbalrEvents #&13;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
-  
-> [!NOTE]
->  可以正如处理过程的参数一样来声明事件参数，不过有以下例外：事件不能具有命名参数、`ParamArray` 参数或 `Optional` 参数。 事件没有返回值。  
-  
- 若要处理事件，必须使用 `Handles` 或 `AddHandler` 语句将它与事件处理程序子例程关联。 子例程和事件的签名必须匹配。 若要处理共享事件，必须使用 `AddHandler` 语句。  
-  
- 只能在模块级别使用 `Event`。 这意味着*声明上下文*事件必须是类、 结构、 模块或接口，并且不能为源文件、 命名空间、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
-  
- 在大多数情况下，可以使用本主题的“语法”部分中的第一个语法来声明事件。 但是，某些情况要求更好地控制事件的详细行为。 使用本主题“语法”部分中的最后一个语法（该语法使用 `Custom` 关键字）可通过使你可以定义自定义事件来提供这种控制。 在自定义事件中，可精确地指定在代码对事件添加或移除事件处理程序时，或是代码引发事件时发生的情况。 有关示例，请参阅[如何︰ 声明节省内存到自定义事件](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)和[如何︰ 声明自定义事件为避免阻塞](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)。  
-  
-## <a name="example"></a>示例  
- 下面的示例使用事件从 10 秒到 0 秒进行倒计时。 代码演示了几个与事件相关的方法、属性和语句。 这包括 `RaiseEvent` 语句。  
-  
- 引发事件的类是事件源，处理事件的方法是事件处理程序。 事件源对于它生成的事件可以具有多个处理程序。 类引发事件时，会在选择用于为对象的该实例处理事件的每个类上引发该事件。  
-  
- 该示例还使用一个窗体 (`Form1`)，其中包含一个按钮 (`Button1`) 和一个文本框 (`TextBox1`)。 单击该按钮时，第一个文本框显示从 10 秒到 0 秒的倒计时。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
-  
- `Form1` 的代码指定窗体的初始和最终状态。 它还包含引发事件时执行的代码。  
-  
- 若要使用此示例，请打开新的 Windows 窗体项目。 然后向名为 `Form1` 的主窗体添加一个名为 `Button1` 的按钮和一个名为 `TextBox1` 的文本框。 右键单击该表单，然后单击**查看代码**以打开代码编辑器。  
-  
- 向 `Form1` 类的声明部分添加一个 `WithEvents` 变量：  
-  
- [!code-vb[VbVbalrEvents #&14;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
-  
- 将下面的代码添加到 `Form1` 的代码： 替换可能存在的任何重复过程，如 `Form_Load` 或 `Button_Click`。  
-  
- [!code-vb[VbVbalrEvents #&15;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
-  
- 按 F5 以运行前面的示例中，并单击标记为按钮**启动**。 第一个文本框中开始倒计时秒数。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
->  `My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。 若要使窗体可以直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
+>  <span data-ttu-id="7c542-174">可以正如处理过程的参数一样来声明事件参数，不过有以下例外：事件不能具有命名参数、`ParamArray` 参数或 `Optional` 参数。</span><span class="sxs-lookup"><span data-stu-id="7c542-174">You can declare event arguments just as you do arguments of procedures, with the following exceptions: events cannot have named arguments, `ParamArray` arguments, or `Optional` arguments.</span></span> <span data-ttu-id="7c542-175">事件没有返回值。</span><span class="sxs-lookup"><span data-stu-id="7c542-175">Events do not have return values.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
- [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)   
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [句柄](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [如何︰ 声明自定义事件以节省内存](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)   
- [如何︰ 声明自定义事件以避免阻止](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)   
- [共享](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+ <span data-ttu-id="7c542-176">若要处理事件，必须使用 `Handles` 或 `AddHandler` 语句将它与事件处理程序子例程关联。</span><span class="sxs-lookup"><span data-stu-id="7c542-176">To handle an event, you must associate it with an event handler subroutine using either the `Handles` or `AddHandler` statement.</span></span> <span data-ttu-id="7c542-177">子例程和事件的签名必须匹配。</span><span class="sxs-lookup"><span data-stu-id="7c542-177">The signatures of the subroutine and the event must match.</span></span> <span data-ttu-id="7c542-178">若要处理共享事件，必须使用 `AddHandler` 语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-178">To handle a shared event, you must use the `AddHandler` statement.</span></span>  
+  
+ <span data-ttu-id="7c542-179">只能在模块级别使用 `Event`。</span><span class="sxs-lookup"><span data-stu-id="7c542-179">You can use `Event` only at module level.</span></span> <span data-ttu-id="7c542-180">这意味着*声明上下文*事件必须为类、 结构、 模块或接口，并且不能是源文件、 命名空间、 过程中或块。</span><span class="sxs-lookup"><span data-stu-id="7c542-180">This means the *declaration context* for an event must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block.</span></span> <span data-ttu-id="7c542-181">有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="7c542-181">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
+  
+ <span data-ttu-id="7c542-182">在大多数情况下，可以使用本主题的“语法”部分中的第一个语法来声明事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-182">In most circumstances, you can use the first syntax in the Syntax section of this topic for declaring events.</span></span> <span data-ttu-id="7c542-183">但是，某些情况要求更好地控制事件的详细行为。</span><span class="sxs-lookup"><span data-stu-id="7c542-183">However, some scenarios require that you have more control over the detailed behavior of the event.</span></span> <span data-ttu-id="7c542-184">使用本主题“语法”部分中的最后一个语法（该语法使用 `Custom` 关键字）可通过使你可以定义自定义事件来提供这种控制。</span><span class="sxs-lookup"><span data-stu-id="7c542-184">The last syntax in the Syntax section of this topic, which uses the `Custom` keyword, provides that control by enabling you to define custom events.</span></span> <span data-ttu-id="7c542-185">在自定义事件中，可精确地指定在代码对事件添加或移除事件处理程序时，或是代码引发事件时发生的情况。</span><span class="sxs-lookup"><span data-stu-id="7c542-185">In a custom event, you specify exactly what occurs when code adds or removes an event handler to or from the event, or when code raises the event.</span></span> <span data-ttu-id="7c542-186">有关示例，请参阅[如何： 声明节省内存到自定义事件](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)和[如何： 声明自定义事件到避免阻止](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)。</span><span class="sxs-lookup"><span data-stu-id="7c542-186">For examples, see [How to: Declare Custom Events To Conserve Memory](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) and [How to: Declare Custom Events To Avoid Blocking](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="7c542-187">示例</span><span class="sxs-lookup"><span data-stu-id="7c542-187">Example</span></span>  
+ <span data-ttu-id="7c542-188">下面的示例使用事件从 10 秒到 0 秒进行倒计时。</span><span class="sxs-lookup"><span data-stu-id="7c542-188">The following example uses events to count down seconds from 10 to 0.</span></span> <span data-ttu-id="7c542-189">代码演示了几个与事件相关的方法、属性和语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-189">The code illustrates several of the event-related methods, properties, and statements.</span></span> <span data-ttu-id="7c542-190">这包括 `RaiseEvent` 语句。</span><span class="sxs-lookup"><span data-stu-id="7c542-190">This includes the `RaiseEvent` statement.</span></span>  
+  
+ <span data-ttu-id="7c542-191">引发事件的类是事件源，处理事件的方法是事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="7c542-191">The class that raises an event is the event source, and the methods that process the event are the event handlers.</span></span> <span data-ttu-id="7c542-192">事件源对于它生成的事件可以具有多个处理程序。</span><span class="sxs-lookup"><span data-stu-id="7c542-192">An event source can have multiple handlers for the events it generates.</span></span> <span data-ttu-id="7c542-193">类引发事件时，会在选择用于为对象的该实例处理事件的每个类上引发该事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-193">When the class raises the event, that event is raised on every class that has elected to handle events for that instance of the object.</span></span>  
+  
+ <span data-ttu-id="7c542-194">该示例还使用一个窗体 (`Form1`)，其中包含一个按钮 (`Button1`) 和一个文本框 (`TextBox1`)。</span><span class="sxs-lookup"><span data-stu-id="7c542-194">The example also uses a form (`Form1`) with a button (`Button1`) and a text box (`TextBox1`).</span></span> <span data-ttu-id="7c542-195">单击该按钮时，第一个文本框显示从 10 秒到 0 秒的倒计时。</span><span class="sxs-lookup"><span data-stu-id="7c542-195">When you click the button, the first text box displays a countdown from 10 to 0 seconds.</span></span> <span data-ttu-id="7c542-196">经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。</span><span class="sxs-lookup"><span data-stu-id="7c542-196">When the full time (10 seconds) has elapsed, the first text box displays "Done".</span></span>  
+  
+ <span data-ttu-id="7c542-197">`Form1` 的代码指定窗体的初始和最终状态。</span><span class="sxs-lookup"><span data-stu-id="7c542-197">The code for `Form1` specifies the initial and terminal states of the form.</span></span> <span data-ttu-id="7c542-198">它还包含引发事件时执行的代码。</span><span class="sxs-lookup"><span data-stu-id="7c542-198">It also contains the code executed when events are raised.</span></span>  
+  
+ <span data-ttu-id="7c542-199">若要使用此示例，请打开新的 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="7c542-199">To use this example, open a new Windows Forms project.</span></span> <span data-ttu-id="7c542-200">然后向名为 `Form1` 的主窗体添加一个名为 `Button1` 的按钮和一个名为 `TextBox1` 的文本框。</span><span class="sxs-lookup"><span data-stu-id="7c542-200">Then add a button named `Button1` and a text box named `TextBox1` to the main form, named `Form1`.</span></span> <span data-ttu-id="7c542-201">右键单击该表单，然后单击**查看代码**以打开代码编辑器。</span><span class="sxs-lookup"><span data-stu-id="7c542-201">Then right-click the form and click **View Code** to open the code editor.</span></span>  
+  
+ <span data-ttu-id="7c542-202">向 `Form1` 类的声明部分添加一个 `WithEvents` 变量：</span><span class="sxs-lookup"><span data-stu-id="7c542-202">Add a `WithEvents` variable to the declarations section of the `Form1` class:</span></span>  
+  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+  
+ <span data-ttu-id="7c542-203">将下面的代码添加到 `Form1` 的代码：</span><span class="sxs-lookup"><span data-stu-id="7c542-203">Add the following code to the code for `Form1`.</span></span> <span data-ttu-id="7c542-204">替换可能存在的任何重复过程，如 `Form_Load` 或 `Button_Click`。</span><span class="sxs-lookup"><span data-stu-id="7c542-204">Replace any duplicate procedures that may exist, such as `Form_Load` or `Button_Click`.</span></span>  
+  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+  
+ <span data-ttu-id="7c542-205">按 F5 以运行前面的示例中，并单击标记按钮**启动**。</span><span class="sxs-lookup"><span data-stu-id="7c542-205">Press F5 to run the previous example, and click the button labeled **Start**.</span></span> <span data-ttu-id="7c542-206">第一个文本框中开始倒计时秒数。</span><span class="sxs-lookup"><span data-stu-id="7c542-206">The first text box starts to count down the seconds.</span></span> <span data-ttu-id="7c542-207">经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。</span><span class="sxs-lookup"><span data-stu-id="7c542-207">When the full time (10 seconds) has elapsed, the first text box displays "Done".</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="7c542-208">`My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。</span><span class="sxs-lookup"><span data-stu-id="7c542-208">The `My.Application.DoEvents` method does not process events in the same way the form does.</span></span> <span data-ttu-id="7c542-209">若要使窗体可以直接处理事件，可以使用多线程处理。</span><span class="sxs-lookup"><span data-stu-id="7c542-209">To enable the form to handle the events directly, you can use multithreading.</span></span> <span data-ttu-id="7c542-210">有关详细信息，请参阅[线程处理](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。</span><span class="sxs-lookup"><span data-stu-id="7c542-210">For more information, see [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="7c542-211">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7c542-211">See Also</span></span>  
+ [<span data-ttu-id="7c542-212">RaiseEvent 语句</span><span class="sxs-lookup"><span data-stu-id="7c542-212">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
+ [<span data-ttu-id="7c542-213">Implements 语句</span><span class="sxs-lookup"><span data-stu-id="7c542-213">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [<span data-ttu-id="7c542-214">事件</span><span class="sxs-lookup"><span data-stu-id="7c542-214">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="7c542-215">AddHandler 语句</span><span class="sxs-lookup"><span data-stu-id="7c542-215">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [<span data-ttu-id="7c542-216">RemoveHandler 语句</span><span class="sxs-lookup"><span data-stu-id="7c542-216">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [<span data-ttu-id="7c542-217">Handles</span><span class="sxs-lookup"><span data-stu-id="7c542-217">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [<span data-ttu-id="7c542-218">Delegate 语句</span><span class="sxs-lookup"><span data-stu-id="7c542-218">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="7c542-219">如何：声明自定义事件以节省内存</span><span class="sxs-lookup"><span data-stu-id="7c542-219">How to: Declare Custom Events To Conserve Memory</span></span>](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [<span data-ttu-id="7c542-220">如何：声明自定义事件以避免阻止</span><span class="sxs-lookup"><span data-stu-id="7c542-220">How to: Declare Custom Events To Avoid Blocking</span></span>](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [<span data-ttu-id="7c542-221">Shared</span><span class="sxs-lookup"><span data-stu-id="7c542-221">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="7c542-222">Shadows</span><span class="sxs-lookup"><span data-stu-id="7c542-222">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)

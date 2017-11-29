@@ -1,32 +1,28 @@
 ---
-title: "如何︰ 筛选可选元素 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 筛选可选元素 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5a02df0f6f9d8ea0821b0af2a1af164c518e7b27
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 32183a26a02640c655030eff18d62329fb1c125a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>如何︰ 筛选可选元素 (Visual Basic)
-有时，尽管不能确定某个元素是否存在于 XML 文档中，您还是会尝试筛选该元素。 应当执行搜索，这样如果特定元素没有子元素，就不会因为筛选它而触发空引用异常。 在下面的示例中，`Child5` 元素没有 `Type` 子元素，但是查询仍可以正确执行。  
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a><span data-ttu-id="5e0fa-102">如何： 筛选可选元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e0fa-102">How to: Filter on an Optional Element (Visual Basic)</span></span>
+<span data-ttu-id="5e0fa-103">有时，尽管不能确定某个元素是否存在于 XML 文档中，您还是会尝试筛选该元素。</span><span class="sxs-lookup"><span data-stu-id="5e0fa-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="5e0fa-104">应当执行搜索，这样如果特定元素没有子元素，就不会因为筛选它而触发空引用异常。</span><span class="sxs-lookup"><span data-stu-id="5e0fa-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="5e0fa-105">在下面的示例中，`Child5` 元素没有 `Type` 子元素，但是查询仍可以正确执行。</span><span class="sxs-lookup"><span data-stu-id="5e0fa-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a>示例  
- 此示例使用<xref:System.Xml.Linq.Extensions.Elements%2A>扩展方法。</xref:System.Xml.Linq.Extensions.Elements%2A>  
+## <a name="example"></a><span data-ttu-id="5e0fa-106">示例</span><span class="sxs-lookup"><span data-stu-id="5e0fa-106">Example</span></span>  
+ <span data-ttu-id="5e0fa-107">本示例使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 扩展方法。</span><span class="sxs-lookup"><span data-stu-id="5e0fa-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```vb  
 Dim root As XElement = _   
@@ -61,7 +57,7 @@ For Each str In cList
 Next  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="5e0fa-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="5e0fa-108">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -69,8 +65,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="5e0fa-109">示例</span><span class="sxs-lookup"><span data-stu-id="5e0fa-109">Example</span></span>  
+ <span data-ttu-id="5e0fa-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="5e0fa-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="5e0fa-111">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="5e0fa-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,7 +107,7 @@ Module Module1
 End Module  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="5e0fa-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="5e0fa-112">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -119,13 +115,13 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName></xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>   
- [基本查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)   
- [XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)   
- [XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)   
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [投影运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a><span data-ttu-id="5e0fa-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5e0fa-113">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="5e0fa-114">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e0fa-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [<span data-ttu-id="5e0fa-115">XML 子轴属性</span><span class="sxs-lookup"><span data-stu-id="5e0fa-115">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
+ [<span data-ttu-id="5e0fa-116">XML 特性轴属性</span><span class="sxs-lookup"><span data-stu-id="5e0fa-116">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
+ [<span data-ttu-id="5e0fa-117">XML 值属性</span><span class="sxs-lookup"><span data-stu-id="5e0fa-117">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
+ [<span data-ttu-id="5e0fa-118">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e0fa-118">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="5e0fa-119">投影运算 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e0fa-119">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

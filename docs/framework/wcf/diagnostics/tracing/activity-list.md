@@ -1,64 +1,67 @@
 ---
-title: "活动列表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "活动列表"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 81cf157070686885677002ec21880519bd4508f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 活动列表
-本主题列出了 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 所定义的所有活动。  
+# <a name="activity-list"></a><span data-ttu-id="5dedb-102">活动列表</span><span class="sxs-lookup"><span data-stu-id="5dedb-102">Activity List</span></span>
+<span data-ttu-id="5dedb-103">本主题列出了 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 所定义的所有活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-103">This topic lists all the activities defined by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>  
   
 > [!NOTE]
->  您还可以用编程方式定义活动，以便对用户跟踪进行分组。有关更多信息，请参见[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
+>  <span data-ttu-id="5dedb-104">您还可以用编程方式定义活动，以便对用户跟踪进行分组。</span><span class="sxs-lookup"><span data-stu-id="5dedb-104">You can also define activities programmatically to group user traces.</span></span> <span data-ttu-id="5dedb-105">有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。</span><span class="sxs-lookup"><span data-stu-id="5dedb-105">For more information, see [Emitting User-Code Traces](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).</span></span>  
   
-## ServiceModel 活动  
- 下表列出了用于主要使用方案的所有活动。  
+## <a name="servicemodel-activities"></a><span data-ttu-id="5dedb-106">ServiceModel 活动</span><span class="sxs-lookup"><span data-stu-id="5dedb-106">ServiceModel Activities</span></span>  
+ <span data-ttu-id="5dedb-107">下表列出了用于主要使用方案的所有活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-107">The following table lists all activities for major usage scenarios.</span></span>  
   
-|标签|活动名称|活动类型|说明|  
-|--------|----------|----------|--------|  
-|A、M|环境活动|N\/A（不受 ServiceModel 控制）|该活动的 ID 是在调用任何 ServiceModel 代码（客户端或服务器端）之前，在 TLS 中设置的。<br /><br /> 示例：对 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 客户端调用 open 或调用 serviceHost.open 的活动。|  
-|B|Construct<br /><br /> ChannelFactory。ContractType：‘\[Type\]’。|Construct||  
-|C|Open<br /><br /> \[ClientBase&#124;ChannelFactory\]。ContractType：‘\[Type\]’。|Open||  
-|I|关闭 \[ClientBase&#124;ChannelFactory\]。ContractType：‘\[Type\]’。|Close||  
-|M|构造 ServiceHost。ServiceType：‘\[Type\]’。|Construct||  
-|N|打开 ServiceHost。ServiceType：‘\[Type\]’。|打开||  
-|Z|关闭 ServiceHost。ServiceType：‘\[Type\]’。|Close||  
-|O|在“\[address\]”上侦听。|ListenAt|此活动以及下一个活动都是特定于传输的。ListenAt 活动表示映射到通道侦听器所侦听的地址的内容。对于 MSMQ，它是队列本身，因为队列映射到一个地址。对于面向连接的传输，此活动侦听传入的连接；对于 MSMQ，此活动侦听 MSMQ 消息。此活动在 ServiceHost.Open\(\) 期间创建，并且包含与创建和释放侦听器以及向所有 ReceiveBytes 活动传输数据有关的跟踪。|  
-|P|接收连接“\[address\]”上的字节。接收 MSMQ 消息。|ReceiveBytes|在此活动中，将处理最终变成 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 消息的数据。在面向连接的传输或 http 中，需要等待传入的字节。对于 TCP\/命名管道，此活动的生存期就是连接的生存期，因为它是在创建连接时创建的。对于 http，它是消息请求的生存期并且在发送消息时创建。此活动包含与创建和释放连接（如果适用）以及向所有消息（对象）处理活动传输数据有关的跟踪。<br /><br /> 对于 MSMQ，它就是用来检索 MSMQ 消息的活动。|  
-|Q|处理消息 \[number\]。（注意，\[number\] 是一个从 1 开始单调递增的值。）|ProcessMessage|处理传入的消息。此活动在接收到形成 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 消息对象所需的所有数据（字节、MSMQ 消息）时启动。此活动内的跟踪负责进行标头处理。<br /><br /> 一旦形成可以调度的消息，在查找对应的活动 ID 后，随即切换到 ServiceHost“处理操作”活动。|  
-|D、S|处理操作“\[action\]”。|ProcessAction|通过传输\/安全\/RM 堆栈处理消息，以便在接收到消息时将消息调度到用户代码，而在发送消息时按相反顺序进行处理。<br /><br /> 在服务器上，如果活动 ID 是在消息头中通过“活动传播”发送的，则此活动使用传播的活动 ID；否则，创建一个新的 GUID。<br /><br /> 请求\/答复协定的响应消息也是在该活动中处理的。|  
-|T|执行“\[IContract.Operation\]”。|ExecuteUserCode|在服务端调度后执行用户代码。此活动提供了用于勾画用户提供代码中的 ServiceHost 代码的边界。|  
+|<span data-ttu-id="5dedb-108">Label</span><span class="sxs-lookup"><span data-stu-id="5dedb-108">Label</span></span>|<span data-ttu-id="5dedb-109">活动名称</span><span class="sxs-lookup"><span data-stu-id="5dedb-109">Activity Name</span></span>|<span data-ttu-id="5dedb-110">活动类型</span><span class="sxs-lookup"><span data-stu-id="5dedb-110">Activity Type</span></span>|<span data-ttu-id="5dedb-111">描述</span><span class="sxs-lookup"><span data-stu-id="5dedb-111">Description</span></span>|  
+|-----------|-------------------|-------------------|-----------------|  
+|<span data-ttu-id="5dedb-112">A、M</span><span class="sxs-lookup"><span data-stu-id="5dedb-112">A, M</span></span>|<span data-ttu-id="5dedb-113">环境活动</span><span class="sxs-lookup"><span data-stu-id="5dedb-113">Ambient activity</span></span>|<span data-ttu-id="5dedb-114">N/A（不受 ServiceModel 控制）</span><span class="sxs-lookup"><span data-stu-id="5dedb-114">N/A (this is not controlled by ServiceModel)</span></span>|<span data-ttu-id="5dedb-115">该活动的 ID 是在调用任何 ServiceModel 代码（客户端或服务器端）之前，在 TLS 中设置的。</span><span class="sxs-lookup"><span data-stu-id="5dedb-115">The activity whose ID is set in TLS before any calls to ServiceModel code (client side or server side).</span></span><br /><br /> <span data-ttu-id="5dedb-116">示例：对 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 客户端调用 open 或调用 serviceHost.open 的活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-116">Example: An activity where  open is called on the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] client or serviceHost.open is called.</span></span>|  
+|<span data-ttu-id="5dedb-117">B</span><span class="sxs-lookup"><span data-stu-id="5dedb-117">B</span></span>|<span data-ttu-id="5dedb-118">构造</span><span class="sxs-lookup"><span data-stu-id="5dedb-118">Construct</span></span><br /><br /> <span data-ttu-id="5dedb-119">ChannelFactory。</span><span class="sxs-lookup"><span data-stu-id="5dedb-119">ChannelFactory.</span></span> <span data-ttu-id="5dedb-120">ContractType : ‘[Type]’。</span><span class="sxs-lookup"><span data-stu-id="5dedb-120">ContractType : ‘[Type]’.</span></span>|<span data-ttu-id="5dedb-121">构造</span><span class="sxs-lookup"><span data-stu-id="5dedb-121">Construct</span></span>||  
+|<span data-ttu-id="5dedb-122">C</span><span class="sxs-lookup"><span data-stu-id="5dedb-122">C</span></span>|<span data-ttu-id="5dedb-123">打开</span><span class="sxs-lookup"><span data-stu-id="5dedb-123">Open</span></span><br /><br /> <span data-ttu-id="5dedb-124">[ClientBase &#124;ChannelFactory]。</span><span class="sxs-lookup"><span data-stu-id="5dedb-124">[ClientBase&#124;ChannelFactory].</span></span> <span data-ttu-id="5dedb-125">ContractType : ‘[Type]’。</span><span class="sxs-lookup"><span data-stu-id="5dedb-125">ContractType : ‘[Type]’.</span></span>|<span data-ttu-id="5dedb-126">打开</span><span class="sxs-lookup"><span data-stu-id="5dedb-126">Open</span></span>||  
+|<span data-ttu-id="5dedb-127">I</span><span class="sxs-lookup"><span data-stu-id="5dedb-127">I</span></span>|<span data-ttu-id="5dedb-128">关闭 [ClientBase &#124;ChannelFactory]。</span><span class="sxs-lookup"><span data-stu-id="5dedb-128">Close [ClientBase&#124;ChannelFactory].</span></span> <span data-ttu-id="5dedb-129">ContractType : ‘[Type]’。</span><span class="sxs-lookup"><span data-stu-id="5dedb-129">ContractType : ‘[Type]’.</span></span>|<span data-ttu-id="5dedb-130">关闭</span><span class="sxs-lookup"><span data-stu-id="5dedb-130">Close</span></span>||  
+|<span data-ttu-id="5dedb-131">M</span><span class="sxs-lookup"><span data-stu-id="5dedb-131">M</span></span>|<span data-ttu-id="5dedb-132">构造 ServiceHost。</span><span class="sxs-lookup"><span data-stu-id="5dedb-132">Construct ServiceHost.</span></span> <span data-ttu-id="5dedb-133">ServiceType: ‘[Type]’。</span><span class="sxs-lookup"><span data-stu-id="5dedb-133">ServiceType: ‘[Type]’.</span></span>|<span data-ttu-id="5dedb-134">构造</span><span class="sxs-lookup"><span data-stu-id="5dedb-134">Construct</span></span>||  
+|<span data-ttu-id="5dedb-135">N</span><span class="sxs-lookup"><span data-stu-id="5dedb-135">N</span></span>|<span data-ttu-id="5dedb-136">打开 ServiceHost。</span><span class="sxs-lookup"><span data-stu-id="5dedb-136">Open ServiceHost.</span></span> <span data-ttu-id="5dedb-137">ServiceType: ‘[Type]’。</span><span class="sxs-lookup"><span data-stu-id="5dedb-137">ServiceType: ‘[Type]’.</span></span>|<span data-ttu-id="5dedb-138">打开</span><span class="sxs-lookup"><span data-stu-id="5dedb-138">Open</span></span>||  
+|<span data-ttu-id="5dedb-139">Z</span><span class="sxs-lookup"><span data-stu-id="5dedb-139">Z</span></span>|<span data-ttu-id="5dedb-140">关闭 ServiceHost。</span><span class="sxs-lookup"><span data-stu-id="5dedb-140">Close ServiceHost.</span></span> <span data-ttu-id="5dedb-141">ServiceType: ‘[Type]’。</span><span class="sxs-lookup"><span data-stu-id="5dedb-141">ServiceType: ‘[Type]’.</span></span>|<span data-ttu-id="5dedb-142">关闭</span><span class="sxs-lookup"><span data-stu-id="5dedb-142">Close</span></span>||  
+|<span data-ttu-id="5dedb-143">O</span><span class="sxs-lookup"><span data-stu-id="5dedb-143">O</span></span>|<span data-ttu-id="5dedb-144">在“[address]”上侦听。</span><span class="sxs-lookup"><span data-stu-id="5dedb-144">Listen at ‘[address]’.</span></span>|<span data-ttu-id="5dedb-145">ListenAt</span><span class="sxs-lookup"><span data-stu-id="5dedb-145">ListenAt</span></span>|<span data-ttu-id="5dedb-146">此活动以及下一个活动都是特定于传输的。</span><span class="sxs-lookup"><span data-stu-id="5dedb-146">This and the next activity are transport-specific.</span></span> <span data-ttu-id="5dedb-147">ListenAt 活动表示映射到通道侦听器所侦听的地址的内容。</span><span class="sxs-lookup"><span data-stu-id="5dedb-147">The ListenAt activity represents the content that maps to the address where the channel listener listens at.</span></span> <span data-ttu-id="5dedb-148">对于 MSMQ，它是队列本身，因为队列映射到一个地址。</span><span class="sxs-lookup"><span data-stu-id="5dedb-148">In the case of MSMQ, it is the queue itself since the queue maps to one address.</span></span> <span data-ttu-id="5dedb-149">对于面向连接的传输，此活动侦听传入的连接；对于 MSMQ，此活动侦听 MSMQ 消息。</span><span class="sxs-lookup"><span data-stu-id="5dedb-149">This activity listens for incoming connections in the case of connection-oriented transports, for MSMQ messages in the case of MSMQ.</span></span> <span data-ttu-id="5dedb-150">此活动在 ServiceHost.Open() 期间创建，并且包含与创建和释放侦听器以及向所有 ReceiveBytes 活动传输数据有关的跟踪。</span><span class="sxs-lookup"><span data-stu-id="5dedb-150">This activity is created during ServiceHost.Open(), and contains the traces related to creating and disposing the listener, as well as transferring out to all ReceiveBytes activities.</span></span>|  
+|<span data-ttu-id="5dedb-151">P</span><span class="sxs-lookup"><span data-stu-id="5dedb-151">P</span></span>|<span data-ttu-id="5dedb-152">接收连接“[address]”上的字节。</span><span class="sxs-lookup"><span data-stu-id="5dedb-152">Receive bytes on connection ‘[address]’.</span></span> <span data-ttu-id="5dedb-153">接收 MSMQ 消息。</span><span class="sxs-lookup"><span data-stu-id="5dedb-153">Receive MSMQ message.</span></span>|<span data-ttu-id="5dedb-154">ReceiveBytes</span><span class="sxs-lookup"><span data-stu-id="5dedb-154">ReceiveBytes</span></span>|<span data-ttu-id="5dedb-155">在此活动中，将处理最终变成 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 消息的数据。</span><span class="sxs-lookup"><span data-stu-id="5dedb-155">In this activity, data that will eventually get a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is processed.</span></span> <span data-ttu-id="5dedb-156">在面向连接的传输或 http 中，需要等待传入的字节。</span><span class="sxs-lookup"><span data-stu-id="5dedb-156">Incoming bytes are waited in the case of connection-oriented transport or http.</span></span> <span data-ttu-id="5dedb-157">对于 TCP/命名管道，此活动的生存期就是连接的生存期，因为它是在创建连接时创建的。</span><span class="sxs-lookup"><span data-stu-id="5dedb-157">For TCP/named-pipe, the lifetime of this activity is the lifetime of the connection, as it is created when the connection is created.</span></span> <span data-ttu-id="5dedb-158">对于 http，它是消息请求的生存期并且在发送消息时创建。</span><span class="sxs-lookup"><span data-stu-id="5dedb-158">For http, it is of the lifetime of a message request and is created when the message is sent.</span></span> <span data-ttu-id="5dedb-159">此活动包含与创建和释放连接（如果适用）以及向所有消息（对象）处理活动传输数据有关的跟踪。</span><span class="sxs-lookup"><span data-stu-id="5dedb-159">This activity contains the traces related to creating and disposing the connection if applicable, as well as transfers out to all message (object) processing activities.</span></span><br /><br /> <span data-ttu-id="5dedb-160">对于 MSMQ，它就是用来检索 MSMQ 消息的活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-160">In the case of MSMQ, it is the activity where the MSMQ message is retrieved.</span></span>|  
+|<span data-ttu-id="5dedb-161">Q</span><span class="sxs-lookup"><span data-stu-id="5dedb-161">Q</span></span>|<span data-ttu-id="5dedb-162">处理消息 [number]。</span><span class="sxs-lookup"><span data-stu-id="5dedb-162">Process message [number].</span></span> <span data-ttu-id="5dedb-163">（注意，[number] 是一个从 1 开始单调递增的值。）</span><span class="sxs-lookup"><span data-stu-id="5dedb-163">(Note, [number] is a monotonically increasing value which starts at 1.)</span></span>|<span data-ttu-id="5dedb-164">ProcessMessage</span><span class="sxs-lookup"><span data-stu-id="5dedb-164">ProcessMessage</span></span>|<span data-ttu-id="5dedb-165">处理传入的消息。</span><span class="sxs-lookup"><span data-stu-id="5dedb-165">Process an incoming message.</span></span> <span data-ttu-id="5dedb-166">此活动在接收到形成 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 消息对象所需的所有数据（字节、MSMQ 消息）时启动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-166">This activity starts when all the data (bytes, MSMQ message) are received to form a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message object.</span></span> <span data-ttu-id="5dedb-167">此活动内的跟踪负责进行标头处理。</span><span class="sxs-lookup"><span data-stu-id="5dedb-167">Traces within this activity deal with header processing.</span></span><br /><br /> <span data-ttu-id="5dedb-168">一旦形成可以调度的消息，在查找对应的活动 ID 后，随即切换到 ServiceHost“处理操作”活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-168">Once a message that can be dispatched is formed, the ServiceHost ProcessAction activity is switched to after looking up the corresponding Activity ID.</span></span>|  
+|<span data-ttu-id="5dedb-169">D、S</span><span class="sxs-lookup"><span data-stu-id="5dedb-169">D, S</span></span>|<span data-ttu-id="5dedb-170">处理操作“[action]”。</span><span class="sxs-lookup"><span data-stu-id="5dedb-170">Process action ‘[action]’.</span></span>|<span data-ttu-id="5dedb-171">ProcessAction</span><span class="sxs-lookup"><span data-stu-id="5dedb-171">ProcessAction</span></span>|<span data-ttu-id="5dedb-172">通过传输/安全/RM 堆栈处理消息，以便在接收到消息时将消息调度到用户代码，而在发送消息时按相反顺序进行处理。</span><span class="sxs-lookup"><span data-stu-id="5dedb-172">Process the message through the Transport/Security/RM stack for dispatching the message to user code on receive, and in the reverse order on send.</span></span><br /><br /> <span data-ttu-id="5dedb-173">在服务器上，则此活动使用传播的活动 ID 如果通过"活动传播"; 消息标头中发送否则，创建新的 GUID。</span><span class="sxs-lookup"><span data-stu-id="5dedb-173">On the server, this activity uses the propagated Activity ID if it is sent in the message header via "Activity Propagation"; otherwise, a new GUID is created.</span></span><br /><br /> <span data-ttu-id="5dedb-174">请求/答复协定的响应消息也是在该活动中处理的。</span><span class="sxs-lookup"><span data-stu-id="5dedb-174">The response message for request/reply contracts is also processed in that activity.</span></span>|  
+|<span data-ttu-id="5dedb-175">T</span><span class="sxs-lookup"><span data-stu-id="5dedb-175">T</span></span>|<span data-ttu-id="5dedb-176">执行“[IContract.Operation]”。</span><span class="sxs-lookup"><span data-stu-id="5dedb-176">Execute ‘[IContract.Operation]’.</span></span>|<span data-ttu-id="5dedb-177">ExecuteUserCode</span><span class="sxs-lookup"><span data-stu-id="5dedb-177">ExecuteUserCode</span></span>|<span data-ttu-id="5dedb-178">在服务端调度后执行用户代码。</span><span class="sxs-lookup"><span data-stu-id="5dedb-178">Execute user code after dispatch on the service side.</span></span> <span data-ttu-id="5dedb-179">此活动提供了用于勾画用户提供代码中的 ServiceHost 代码的边界。</span><span class="sxs-lookup"><span data-stu-id="5dedb-179">This activity provides a boundary to delineate ServiceHost code from user-provided code.</span></span>|  
   
-## 安全活动  
- 下表列出了所有与安全有关的活动。  
+## <a name="security-activities"></a><span data-ttu-id="5dedb-180">安全活动</span><span class="sxs-lookup"><span data-stu-id="5dedb-180">Security Activities</span></span>  
+ <span data-ttu-id="5dedb-181">下表列出了所有与安全有关的活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-181">The following table lists all activities related to Security.</span></span>  
   
-|活动名称|活动类型|说明|  
-|----------|----------|--------|  
-|设置安全会话|SetupSecurity|仅在客户端存在。包含用于身份验证和设置安全上下文的所有 RST\*\/SCT 交换。如果 `propagateActivity`\=`true`，此活动将与服务的对应“处理操作 RST\*\/SCT”活动合并。|  
-|关闭安全会话|SetupSecurity|存在于客户端。包含用于关闭安全会话的“取消”消息交换。如果 `propagateActivity`\=`true`，此活动将与来自服务的“处理操作‘取消’”合并。|  
+|<span data-ttu-id="5dedb-182">活动名称</span><span class="sxs-lookup"><span data-stu-id="5dedb-182">Activity Name</span></span>|<span data-ttu-id="5dedb-183">活动类型</span><span class="sxs-lookup"><span data-stu-id="5dedb-183">Activity Type</span></span>|<span data-ttu-id="5dedb-184">描述</span><span class="sxs-lookup"><span data-stu-id="5dedb-184">Description</span></span>|  
+|-------------------|-------------------|-----------------|  
+|<span data-ttu-id="5dedb-185">设置安全会话</span><span class="sxs-lookup"><span data-stu-id="5dedb-185">Setup secure session</span></span>|<span data-ttu-id="5dedb-186">SetupSecurity</span><span class="sxs-lookup"><span data-stu-id="5dedb-186">SetupSecurity</span></span>|<span data-ttu-id="5dedb-187">仅在客户端存在。</span><span class="sxs-lookup"><span data-stu-id="5dedb-187">Exists on the client side only.</span></span> <span data-ttu-id="5dedb-188">包含用于身份验证和设置安全上下文的所有 RST*/SCT 交换。</span><span class="sxs-lookup"><span data-stu-id="5dedb-188">Contains all RST*/SCT exchanges for authentication and setting the security context.</span></span> <span data-ttu-id="5dedb-189">如果`propagateActivity` = `true`，此活动将与服务的相应过程操作 RST 合并\*/SCT 活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-189">If `propagateActivity`=`true`, this activity is merged with the service’s corresponding Process Action RST\*/SCT activities.</span></span>|  
+|<span data-ttu-id="5dedb-190">关闭安全会话</span><span class="sxs-lookup"><span data-stu-id="5dedb-190">Close secure session</span></span>|<span data-ttu-id="5dedb-191">SetupSecurity</span><span class="sxs-lookup"><span data-stu-id="5dedb-191">SetupSecurity</span></span>|<span data-ttu-id="5dedb-192">存在于客户端。</span><span class="sxs-lookup"><span data-stu-id="5dedb-192">Exists on the client side.</span></span> <span data-ttu-id="5dedb-193">包含用于关闭安全会话的“取消”消息交换。</span><span class="sxs-lookup"><span data-stu-id="5dedb-193">Contains the Cancel message exchange for closing the secure session.</span></span> <span data-ttu-id="5dedb-194">如果`propagateActivity` = `true`，此活动将与处理操作"取消"合并从服务。</span><span class="sxs-lookup"><span data-stu-id="5dedb-194">If `propagateActivity`=`true`, this activity is merged with the Process Action "Cancel" from the service.</span></span>|  
   
- 下表列出了所有与 COM\+ 有关的活动。  
+ <span data-ttu-id="5dedb-195">下表列出了所有与 COM+ 有关的活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-195">The following table lists all activities related to COM+.</span></span>  
   
-|活动名称|活动类型|说明|  
-|----------|----------|--------|  
-|创建 COM\+ 实例。|TransferToCOMPlus|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 代码中的每个 COM\+ 调用对应于 1 个活动实例|  
-|执行 COM\+ \<操作\>|TransferToCOMPlus|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 代码中的每个 COM\+ 调用对应于 1 个活动实例|  
+|<span data-ttu-id="5dedb-196">活动名称</span><span class="sxs-lookup"><span data-stu-id="5dedb-196">Activity Name</span></span>|<span data-ttu-id="5dedb-197">活动类型</span><span class="sxs-lookup"><span data-stu-id="5dedb-197">Activity Type</span></span>|<span data-ttu-id="5dedb-198">描述</span><span class="sxs-lookup"><span data-stu-id="5dedb-198">Description</span></span>|  
+|-------------------|-------------------|-----------------|  
+|<span data-ttu-id="5dedb-199">创建 COM+ 实例。</span><span class="sxs-lookup"><span data-stu-id="5dedb-199">Create COM+ instance</span></span>|<span data-ttu-id="5dedb-200">TransferToCOMPlus</span><span class="sxs-lookup"><span data-stu-id="5dedb-200">TransferToCOMPlus</span></span>|<span data-ttu-id="5dedb-201">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 代码中的每个 COM+ 调用对应于 1 个活动实例</span><span class="sxs-lookup"><span data-stu-id="5dedb-201">1 activity instance for each COM+ call from [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] code</span></span>|  
+|<span data-ttu-id="5dedb-202">执行 COM +\<操作 ></span><span class="sxs-lookup"><span data-stu-id="5dedb-202">Execute COM+ \<operation></span></span>|<span data-ttu-id="5dedb-203">TransferToCOMPlus</span><span class="sxs-lookup"><span data-stu-id="5dedb-203">TransferToCOMPlus</span></span>|<span data-ttu-id="5dedb-204">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 代码中的每个 COM+ 调用对应于 1 个活动实例</span><span class="sxs-lookup"><span data-stu-id="5dedb-204">1 activity instance for each COM+ call from [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] code</span></span>|  
   
-## WMI 活动  
- 下表列出了所有与 WMI 有关的活动。  
+## <a name="wmi-activities"></a><span data-ttu-id="5dedb-205">WMI 活动</span><span class="sxs-lookup"><span data-stu-id="5dedb-205">WMI Activities</span></span>  
+ <span data-ttu-id="5dedb-206">下表列出了所有与 WMI 有关的活动。</span><span class="sxs-lookup"><span data-stu-id="5dedb-206">The following table lists all activities related to WMI.</span></span>  
   
-|活动名称|活动类型|说明|  
-|----------|----------|--------|  
-|WMI get|WMIGetObject|用户正从 WMI 检索数据。|  
-|WMI put|WmiPutInstance|用户正向 WMI 更新数据。|
+|<span data-ttu-id="5dedb-207">活动名称</span><span class="sxs-lookup"><span data-stu-id="5dedb-207">Activity Name</span></span>|<span data-ttu-id="5dedb-208">活动类型</span><span class="sxs-lookup"><span data-stu-id="5dedb-208">Activity Type</span></span>|<span data-ttu-id="5dedb-209">描述</span><span class="sxs-lookup"><span data-stu-id="5dedb-209">Description</span></span>|  
+|-------------------|-------------------|-----------------|  
+|<span data-ttu-id="5dedb-210">WMI get</span><span class="sxs-lookup"><span data-stu-id="5dedb-210">WMI get</span></span>|<span data-ttu-id="5dedb-211">WMIGetObject</span><span class="sxs-lookup"><span data-stu-id="5dedb-211">WMIGetObject</span></span>|<span data-ttu-id="5dedb-212">用户正从 WMI 检索数据。</span><span class="sxs-lookup"><span data-stu-id="5dedb-212">User is retrieving data from WMI.</span></span>|  
+|<span data-ttu-id="5dedb-213">WMI put</span><span class="sxs-lookup"><span data-stu-id="5dedb-213">WMI put</span></span>|<span data-ttu-id="5dedb-214">WmiPutInstance</span><span class="sxs-lookup"><span data-stu-id="5dedb-214">WmiPutInstance</span></span>|<span data-ttu-id="5dedb-215">用户正向 WMI 更新数据。</span><span class="sxs-lookup"><span data-stu-id="5dedb-215">User is updating data with WMI.</span></span>|

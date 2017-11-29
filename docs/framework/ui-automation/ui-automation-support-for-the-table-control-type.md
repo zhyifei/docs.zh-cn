@@ -1,88 +1,90 @@
 ---
-title: "UI Automation Support for the Table Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TableControl type"
-  - "control types, Table"
-  - "UI Automation, Table control type"
+title: "UI 自动化对 Table 控件类型的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TableControl type
+- control types, Table
+- UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 821f46665e6c5c4011f7b611d798d2d3a2e4892d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Table Control Type
+# <a name="ui-automation-support-for-the-table-control-type"></a><span data-ttu-id="11f61-102">UI 自动化对 Table 控件类型的支持</span><span class="sxs-lookup"><span data-stu-id="11f61-102">UI Automation Support for the Table Control Type</span></span>
 > [!NOTE]
->  本文档适用于想要使用 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 命名空间中定义的托管 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 类的 .NET Framework 开发人员。 有关 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 的最新信息，请参阅 Windows 自动化 API：UI 自动化[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)][!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)][UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+>  <span data-ttu-id="11f61-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="11f61-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="11f61-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="11f61-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题提供了 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 对于 Table 控件类型的支持信息。 在 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 中，控件类型是一组条件，控件必须满足这些条件才能使用 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 属性。 这些条件包括针对 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 树结构、[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 属性值和控件模式的特定准则。  
+ <span data-ttu-id="11f61-105">本主题提供了 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 对于 Table 控件类型的支持信息。</span><span class="sxs-lookup"><span data-stu-id="11f61-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Table control type.</span></span> <span data-ttu-id="11f61-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。</span><span class="sxs-lookup"><span data-stu-id="11f61-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="11f61-107">这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。</span><span class="sxs-lookup"><span data-stu-id="11f61-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- Table 控件包含文本的行和列和（可选）行标头和列标头。  
+ <span data-ttu-id="11f61-108">Table 控件包含文本的行和列和（可选）行标头和列标头。</span><span class="sxs-lookup"><span data-stu-id="11f61-108">Table controls contain rows and columns of text, and optionally, row headers and column headers.</span></span>  
   
- 以下几节定义了 Table 控件类型必需的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 树结构、属性、控件模式和事件。<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 要求适用于所有 Table 控件，无论控件是 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ <span data-ttu-id="11f61-109">以下几节定义了 Table 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。</span><span class="sxs-lookup"><span data-stu-id="11f61-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Table control type.</span></span> <span data-ttu-id="11f61-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有 Table 控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="11f61-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all table controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必需的 UI 自动化树结构  
- 下表描述了与 Table 控件有关的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 树的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="11f61-111">必需的 UI 自动化树结构</span><span class="sxs-lookup"><span data-stu-id="11f61-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="11f61-112">下表描述了与 Table 控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。</span><span class="sxs-lookup"><span data-stu-id="11f61-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to table controls and describes what can be contained in each view.</span></span> <span data-ttu-id="11f61-113">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f61-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|表<br /><br /> -   标头（0 个或 1 个）<br />-   Text（0 个或 1 个）<br />-   各种控件（0 个或多个）|表<br /><br /> -   Text（0 个或多个）<br />-   各种控件（0 个或多个）|  
+|<span data-ttu-id="11f61-114">控件视图</span><span class="sxs-lookup"><span data-stu-id="11f61-114">Control View</span></span>|<span data-ttu-id="11f61-115">内容视图</span><span class="sxs-lookup"><span data-stu-id="11f61-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="11f61-116">表</span><span class="sxs-lookup"><span data-stu-id="11f61-116">Table</span></span><br /><br /> <span data-ttu-id="11f61-117">标头 （0 或 1）</span><span class="sxs-lookup"><span data-stu-id="11f61-117">-   Header (0 or 1)</span></span><br /><span data-ttu-id="11f61-118">-Text （0 或 1）</span><span class="sxs-lookup"><span data-stu-id="11f61-118">-   Text (0 or 1)</span></span><br /><span data-ttu-id="11f61-119">-各种控件 （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="11f61-119">-   Various controls (0 or more)</span></span>|<span data-ttu-id="11f61-120">表</span><span class="sxs-lookup"><span data-stu-id="11f61-120">Table</span></span><br /><br /> <span data-ttu-id="11f61-121">-Text （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="11f61-121">-   Text (0 or more)</span></span><br /><span data-ttu-id="11f61-122">-各种控件 （0 个或多个）</span><span class="sxs-lookup"><span data-stu-id="11f61-122">-   Various controls (0 or more)</span></span>|  
   
- 如果 Table 控件具有标题行或列标头，则它们必须在 UI 自动化树的控件视图中公开。 内容视图不需要公开此信息，因为可以使用 TablePattern 进行访问。  
+ <span data-ttu-id="11f61-123">如果 Table 控件具有标题行或列标头，则它们必须在 UI 自动化树的控件视图中公开。</span><span class="sxs-lookup"><span data-stu-id="11f61-123">If a table control has row or column headers, they must be exposed in the Control View of the UI Automation tree.</span></span> <span data-ttu-id="11f61-124">内容视图不需要公开此信息，因为可以使用 TablePattern 进行访问。</span><span class="sxs-lookup"><span data-stu-id="11f61-124">The Content View does not need to expose this information because it can be accessed using the TablePattern.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必需的 UI 自动化属性  
- 下表列出了 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性，这些属性的值或定义与 Table 控件尤其相关。 有关 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="11f61-125">必需的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="11f61-125">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="11f61-126">下表列出了 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与 Table 控件尤其相关。</span><span class="sxs-lookup"><span data-stu-id="11f61-126">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to Table controls.</span></span> <span data-ttu-id="11f61-127">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="11f61-127">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性|值|备注|  
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果存在边界矩形，则受支持。 如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|Table 控件通常从静态文本标签中获取其名称。 如果没有静态文本标签，必须分配一个 Name 属性，该属性必须始终可用，以说明表的用途。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|如果没有静态文本标签，则此属性应公开对该控件的自动化元素的引用。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|表|此值对于所有 UI 框架均相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“表”|与 Table 控件类型相对应的已本地化字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|请参阅注释。|如果未通过访问 NameProperty 进行充分解释，应通过此属性公开更多有关表的用途的详细信息。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.DescribedByProperty>|请参阅注释。|如果该表由其他 UI 元素（例如，保存对表的说明的文本元素）进行了批注，则 DescribedBy 属性应公开对文本控件的自动化元素的引用。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Table 控件必须始终包含内容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Table 控件必须始终为一个控件。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="11f61-128"> 属性</span><span class="sxs-lookup"><span data-stu-id="11f61-128"> Property</span></span>|<span data-ttu-id="11f61-129">值</span><span class="sxs-lookup"><span data-stu-id="11f61-129">Value</span></span>|<span data-ttu-id="11f61-130">备注</span><span class="sxs-lookup"><span data-stu-id="11f61-130">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="11f61-131">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-131">See notes.</span></span>|<span data-ttu-id="11f61-132">此属性的值在应用程序的所有控件中都必须保持唯一。</span><span class="sxs-lookup"><span data-stu-id="11f61-132">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="11f61-133">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-133">See notes.</span></span>|<span data-ttu-id="11f61-134">包含整个控件的最外层矩形。</span><span class="sxs-lookup"><span data-stu-id="11f61-134">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="11f61-135">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-135">See notes.</span></span>|<span data-ttu-id="11f61-136">如果存在边界矩形，则受支持。</span><span class="sxs-lookup"><span data-stu-id="11f61-136">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="11f61-137">如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。</span><span class="sxs-lookup"><span data-stu-id="11f61-137">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="11f61-138">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-138">See notes.</span></span>|<span data-ttu-id="11f61-139">如果该控件可以接收键盘焦点，则它必须支持此属性。</span><span class="sxs-lookup"><span data-stu-id="11f61-139">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="11f61-140">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-140">See notes.</span></span>|<span data-ttu-id="11f61-141">Table 控件通常从静态文本标签中获取其名称。</span><span class="sxs-lookup"><span data-stu-id="11f61-141">The table control typically gets its name from a static text label.</span></span> <span data-ttu-id="11f61-142">如果没有静态文本标签，必须分配一个 Name 属性，该属性必须始终可用，以说明表的用途。</span><span class="sxs-lookup"><span data-stu-id="11f61-142">If there is no static text label, you must assign a Name property that must always be available to explain the purpose of the table.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="11f61-143">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-143">See notes.</span></span>|<span data-ttu-id="11f61-144">如果没有静态文本标签，则此属性应公开对该控件的自动化元素的引用。</span><span class="sxs-lookup"><span data-stu-id="11f61-144">If there is a static text label, this property should expose a reference to the automation element of the control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="11f61-145">表</span><span class="sxs-lookup"><span data-stu-id="11f61-145">Table</span></span>|<span data-ttu-id="11f61-146">此值对于所有 UI 框架均相同。</span><span class="sxs-lookup"><span data-stu-id="11f61-146">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="11f61-147">“表”</span><span class="sxs-lookup"><span data-stu-id="11f61-147">"table"</span></span>|<span data-ttu-id="11f61-148">与 Table 控件类型相对应的已本地化字符串。</span><span class="sxs-lookup"><span data-stu-id="11f61-148">Localized string corresponding to the Table control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|<span data-ttu-id="11f61-149">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="11f61-149">See notes.</span></span>|<span data-ttu-id="11f61-150">如果未通过访问 NameProperty 进行充分解释，应通过此属性公开更多有关表的用途的详细信息。</span><span class="sxs-lookup"><span data-stu-id="11f61-150">More details about the purpose of the table should be exposed through this property if it is not sufficiently explained by accessing the NameProperty.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="11f61-151">True</span><span class="sxs-lookup"><span data-stu-id="11f61-151">True</span></span>|<span data-ttu-id="11f61-152">Table 控件必须始终包含内容。</span><span class="sxs-lookup"><span data-stu-id="11f61-152">The table control must always be content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="11f61-153">True</span><span class="sxs-lookup"><span data-stu-id="11f61-153">True</span></span>|<span data-ttu-id="11f61-154">Table 控件必须始终为一个控件。</span><span class="sxs-lookup"><span data-stu-id="11f61-154">The table control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必需的 UI 自动化控件模式  
- 下表列出了需要由 Table 控件支持的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 控件模式。 有关控件模式的详细信息，请参阅 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="11f61-155">必需的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="11f61-155">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="11f61-156">下表列出了需要由 Table 控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。</span><span class="sxs-lookup"><span data-stu-id="11f61-156">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by Table controls.</span></span> <span data-ttu-id="11f61-157">有关控件模式的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f61-157">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控件模式|支持|备注|  
-|----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|是|Table 控件始终支持此控件模式，因为它包含的项具有在网格中显示的数据。|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|是（需要子对象）|一个表的内部对象应支持的 GridItem 和 TableItem 控件模式。 表本身不需要支持 GridItem 或 TableItem 控件模式，除非该表是另一个表的一部分。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|是|Table 控件始终具备拥有与内容相关的标头的能力。|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|是（需要子对象）|一个表的内部对象应支持的 GridItem 和 TableItem 控件模式。 表本身不需要支持 GridItem 或 TableItem 控件模式，除非该表是另一个表的一部分。|  
+|<span data-ttu-id="11f61-158">控件模式</span><span class="sxs-lookup"><span data-stu-id="11f61-158">Control Pattern</span></span>|<span data-ttu-id="11f61-159">支持</span><span class="sxs-lookup"><span data-stu-id="11f61-159">Support</span></span>|<span data-ttu-id="11f61-160">备注</span><span class="sxs-lookup"><span data-stu-id="11f61-160">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|<span data-ttu-id="11f61-161">是</span><span class="sxs-lookup"><span data-stu-id="11f61-161">Yes</span></span>|<span data-ttu-id="11f61-162">Table 控件始终支持此控件模式，因为它包含的项具有在网格中显示的数据。</span><span class="sxs-lookup"><span data-stu-id="11f61-162">The table control always supports this control pattern because the items that it contains have data that is presented in a grid.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|<span data-ttu-id="11f61-163">是（需要子对象）</span><span class="sxs-lookup"><span data-stu-id="11f61-163">Yes (required with child objects)</span></span>|<span data-ttu-id="11f61-164">一个表的内部对象应支持的 GridItem 和 TableItem 控件模式。</span><span class="sxs-lookup"><span data-stu-id="11f61-164">The inner objects of a table should support both the GridItem and TableItem control patterns.</span></span> <span data-ttu-id="11f61-165">表本身不需要支持 GridItem 或 TableItem 控件模式，除非该表是另一个表的一部分。</span><span class="sxs-lookup"><span data-stu-id="11f61-165">The table itself need not support the GridItem or TableItem control patterns unless the table is part of another table.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|<span data-ttu-id="11f61-166">是</span><span class="sxs-lookup"><span data-stu-id="11f61-166">Yes</span></span>|<span data-ttu-id="11f61-167">Table 控件始终具备拥有与内容相关的标头的能力。</span><span class="sxs-lookup"><span data-stu-id="11f61-167">The table control always has the capability of having headers associated with the content.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|<span data-ttu-id="11f61-168">是（需要子对象）</span><span class="sxs-lookup"><span data-stu-id="11f61-168">Yes (required with child objects)</span></span>|<span data-ttu-id="11f61-169">一个表的内部对象应支持的 GridItem 和 TableItem 控件模式。</span><span class="sxs-lookup"><span data-stu-id="11f61-169">The inner objects of a table should support both the GridItem and TableItem control patterns.</span></span> <span data-ttu-id="11f61-170">表本身不需要支持 GridItem 或 TableItem 控件模式，除非该表是另一个表的一部分。</span><span class="sxs-lookup"><span data-stu-id="11f61-170">The table itself need not support the GridItem or TableItem control patterns unless the table is part of another table.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必需的 UI 自动化事件  
- 下表列出了需要由所有 Table 控件支持的 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 事件。 有关事件的详细信息，请参阅 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="11f61-171">必需的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="11f61-171">Required UI Automation Events</span></span>  
+ <span data-ttu-id="11f61-172">下表列出了需要由所有 Table 控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="11f61-172">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all table controls.</span></span> <span data-ttu-id="11f61-173">有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="11f61-173">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 事件|支持|备注|  
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="11f61-174"> 事件</span><span class="sxs-lookup"><span data-stu-id="11f61-174"> Event</span></span>|<span data-ttu-id="11f61-175">支持</span><span class="sxs-lookup"><span data-stu-id="11f61-175">Support</span></span>|<span data-ttu-id="11f61-176">备注</span><span class="sxs-lookup"><span data-stu-id="11f61-176">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="11f61-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="11f61-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="11f61-178">必需</span><span class="sxs-lookup"><span data-stu-id="11f61-178">Required</span></span>|<span data-ttu-id="11f61-179">无</span><span class="sxs-lookup"><span data-stu-id="11f61-179">None</span></span>|  
+|<span data-ttu-id="11f61-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="11f61-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="11f61-181">必需</span><span class="sxs-lookup"><span data-stu-id="11f61-181">Required</span></span>|<span data-ttu-id="11f61-182">无</span><span class="sxs-lookup"><span data-stu-id="11f61-182">None</span></span>|  
+|<span data-ttu-id="11f61-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="11f61-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="11f61-184">必需</span><span class="sxs-lookup"><span data-stu-id="11f61-184">Required</span></span>|<span data-ttu-id="11f61-185">无</span><span class="sxs-lookup"><span data-stu-id="11f61-185">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="11f61-186">必需</span><span class="sxs-lookup"><span data-stu-id="11f61-186">Required</span></span>|<span data-ttu-id="11f61-187">无</span><span class="sxs-lookup"><span data-stu-id="11f61-187">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="11f61-188">必需</span><span class="sxs-lookup"><span data-stu-id="11f61-188">Required</span></span>|<span data-ttu-id="11f61-189">无</span><span class="sxs-lookup"><span data-stu-id="11f61-189">None</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Automation.ControlType.Table>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="11f61-190">另请参阅</span><span class="sxs-lookup"><span data-stu-id="11f61-190">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Table>  
+ [<span data-ttu-id="11f61-191">UI 自动化控件类型概述</span><span class="sxs-lookup"><span data-stu-id="11f61-191">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="11f61-192">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="11f61-192">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)
