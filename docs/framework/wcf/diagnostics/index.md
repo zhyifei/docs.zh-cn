@@ -1,61 +1,64 @@
 ---
-title: "管理和诊断 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "管理 [WCF]"
-  - "诊断 [WCF]"
-  - "WCF, 管理"
-  - "WCF, 诊断"
-  - "Windows Communication Foundation, 管理"
-  - "Windows Communication Foundation, 诊断"
+title: "管理和诊断"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 管理和诊断
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一组丰富的功能，可帮助监视应用程序生命周期的不同阶段。例如，您可以在部署时使用配置方式设置服务和客户端。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一个大型性能计数器集合，可帮助您衡量应用程序的性能。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation \(WMI\) 提供程序在运行时公开服务的检测数据。当应用程序出现错误或者开始错误操作时，可使用事件日志来了解是否有重大事件发生。此外，还可以使用消息日志记录和跟踪来从头至尾查看应用程序中发生了哪些事件。这些功能有助于开发人员和 IT 专业人员在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序运行不正常时进行故障诊断。  
+# <a name="administration-and-diagnostics"></a><span data-ttu-id="3e513-102">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="3e513-102">Administration and Diagnostics</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="3e513-103"> 提供了一组丰富的功能，可帮助监视应用程序生命周期的不同阶段。</span><span class="sxs-lookup"><span data-stu-id="3e513-103"> provides a rich set of functionalities that can help you monitor the different stages of an application’s life.</span></span> <span data-ttu-id="3e513-104">例如，您可以在部署时使用配置来设置服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="3e513-104">For example, you can use configuration to set up services and clients at deployment.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3e513-105"> 包含一个大型性能计数器集合，可帮助您衡量应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="3e513-105"> includes a large set of performance counters to help you gauge your application's performance.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3e513-106"> 还通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。</span><span class="sxs-lookup"><span data-stu-id="3e513-106"> also exposes inspection data of a service at runtime through a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) provider.</span></span> <span data-ttu-id="3e513-107">当应用程序出现错误或者开始错误操作时，可使用事件日志来了解是否有重大事件发生。</span><span class="sxs-lookup"><span data-stu-id="3e513-107">When the application experiences a failure or starts acting improperly, you can use the Event Log to see if anything significant has occurred.</span></span> <span data-ttu-id="3e513-108">此外，还可以使用消息日志记录和跟踪来从头至尾查看应用程序中发生了哪些事件。</span><span class="sxs-lookup"><span data-stu-id="3e513-108">You can also use Message Logging and Tracing to see what events are happening end-to-end in your application.</span></span> <span data-ttu-id="3e513-109">这些功能有助于开发人员和 IT 专业人员在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序运行不正常时进行故障诊断。</span><span class="sxs-lookup"><span data-stu-id="3e513-109">These features assist both developers and IT professionals to troubleshoot an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application when it is not behaving correctly.</span></span>  
   
 > [!NOTE]
->  如果收到没有具体详细信息的错误，则应启用 [\<serviceDebug\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) 配置元素的 `includeExceptionDetailInFaults` 属性。这会指示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将异常详细信息发送到客户端，使用这些详细信息，可以检测到很多常见问题，而不必进行更高级的诊断。有关更多信息，请参见[发送和接收错误](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+>  <span data-ttu-id="3e513-110">如果你收到任何特定详细信息的错误，则应启用`includeExceptionDetailInFaults`属性[ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)配置元素。</span><span class="sxs-lookup"><span data-stu-id="3e513-110">If you are receiving faults with no specific detail information, you should enable the `includeExceptionDetailInFaults` attribute of the [\<serviceDebug>](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) configuration element.</span></span> <span data-ttu-id="3e513-111">这会指示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将异常详细信息发送到客户端，使用这些详细信息，可以检测到很多常见问题，而不必进行更高级的诊断。</span><span class="sxs-lookup"><span data-stu-id="3e513-111">This instructs [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to send exception detail to clients, which enables you to detect many common problems without requiring more advanced diagnosis.</span></span> <span data-ttu-id="3e513-112">有关详细信息，请参阅[发送和接收错误](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。</span><span class="sxs-lookup"><span data-stu-id="3e513-112">For more information, see [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).</span></span>  
   
-## WCF 提供的诊断功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了以下诊断功能：  
+## <a name="diagnostics-features-provided-by-wcf"></a><span data-ttu-id="3e513-113">WCF 提供的诊断功能</span><span class="sxs-lookup"><span data-stu-id="3e513-113">Diagnostics Features Provided by WCF</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3e513-114"> 提供了以下诊断功能：</span><span class="sxs-lookup"><span data-stu-id="3e513-114"> provides the following diagnostics functionalities:</span></span>  
   
--   端到端跟踪提供的检测数据可用于对应用程序进行故障排除而无需使用调试器。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 输出跟踪进程的里程碑以及错误消息。这可能包括打开通道工厂或者通过服务主机发送和接收消息。可以为运行中的应用程序启用跟踪，以监视其进度。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][跟踪](../../../../docs/framework/wcf/diagnostics/tracing/index.md) 主题。若要了解如何使用跟踪调试应用程序，请参见[使用跟踪来排除应用程序故障](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)主题。  
+-   <span data-ttu-id="3e513-115">端到端跟踪提供的检测数据可用于对应用程序进行故障排除而无需使用调试器。</span><span class="sxs-lookup"><span data-stu-id="3e513-115">End-To-End tracing provides instrumentation data for troubleshooting an application without using a debugger.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3e513-116"> 输出跟踪进程的里程碑以及错误消息。</span><span class="sxs-lookup"><span data-stu-id="3e513-116"> outputs traces for process milestones, as well as error messages.</span></span> <span data-ttu-id="3e513-117">这可能包括打开通道工厂或者通过服务主机发送和接收消息。</span><span class="sxs-lookup"><span data-stu-id="3e513-117">This can include opening a channel factory or sending and receiving messages by a service host.</span></span> <span data-ttu-id="3e513-118">可以为运行中的应用程序启用跟踪，以监视其进度。</span><span class="sxs-lookup"><span data-stu-id="3e513-118">Tracing can be enabled for a running application to monitor its progress.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-119">[跟踪](../../../../docs/framework/wcf/diagnostics/tracing/index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-119"> the [Tracing](../../../../docs/framework/wcf/diagnostics/tracing/index.md) topic.</span></span> <span data-ttu-id="3e513-120">若要了解如何使用跟踪来调试你的应用程序，请参阅[解决应用程序中使用跟踪](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-120">To understand how you can use tracing to debug your application, see the [Using Tracing to Troubleshoot Your Application](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md) topic.</span></span>  
   
--   消息日志记录用于查看消息在传输前后的情况。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md) 主题。  
+-   <span data-ttu-id="3e513-121">消息日志记录用于查看消息在传输前后的情况。</span><span class="sxs-lookup"><span data-stu-id="3e513-121">Message logging allows you to see how messages look both before and after transmission.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-122">[消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-122"> the [Message Logging](../../../../docs/framework/wcf/diagnostics/message-logging.md) topic.</span></span>  
   
--   事件跟踪针对所有主要问题将事件写入事件日志。然后，使用事件查看器可以检查任何异常情况。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md) 主题。  
+-   <span data-ttu-id="3e513-123">事件跟踪针对所有主要问题将事件写入事件日志。</span><span class="sxs-lookup"><span data-stu-id="3e513-123">Event tracing writes events in the Event Log for any major issues.</span></span> <span data-ttu-id="3e513-124">然后，可以使用事件查看器检查任何异常情况。</span><span class="sxs-lookup"><span data-stu-id="3e513-124">You can then use the Event Viewer to examine any abnormalities.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-125">[事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-125"> the [Event Logging](../../../../docs/framework/wcf/diagnostics/event-logging/index.md) topic.</span></span>  
   
--   通过性能计数器公开的性能计数器，可用于监视应用程序和系统的运行状况。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][性能计数器](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md) 主题。  
+-   <span data-ttu-id="3e513-126">通过性能监视器公开的性能计数器可用于监视应用程序和系统的运行状况。</span><span class="sxs-lookup"><span data-stu-id="3e513-126">Performance counters exposed through Performance Monitor enable you to monitor your application and system's health.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-127">[性能计数器](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-127"> the [Performance Counters](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md) topic.</span></span>  
   
--   <xref:System.ServiceModel.Configuration> 命名空间用于加载配置文件和设置服务或客户端终结点。如果必须将更新部署到很多计算机，可使用对象模型通过脚本对很多应用程序进行更改。或者，可使用 [配置编辑器工具 \(SvcConfigEditor.exe\)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 通过 GUI 向导编辑配置设置。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][配置应用程序](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md) 主题。  
+-   <span data-ttu-id="3e513-128"><xref:System.ServiceModel.Configuration> 命名空间用于加载配置文件和设置服务或客户端终结点。</span><span class="sxs-lookup"><span data-stu-id="3e513-128">The <xref:System.ServiceModel.Configuration> namespace allows you to load configuration files and set up a service or client endpoint.</span></span> <span data-ttu-id="3e513-129">如果必须将更新部署到很多计算机，可使用对象模型通过脚本对很多应用程序进行更改。</span><span class="sxs-lookup"><span data-stu-id="3e513-129">You can use the object model to script changes to many applications when updates must be deployed to many computers.</span></span> <span data-ttu-id="3e513-130">或者，可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)编辑使用 GUI 向导的配置设置。</span><span class="sxs-lookup"><span data-stu-id="3e513-130">Alternatively, you can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to edit the configuration settings using a GUI wizard.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-131">[配置应用程序](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-131"> the [Configuring Your Application](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md) topic.</span></span>  
   
--   WMI 可以用于查找哪些服务正在计算机上进行侦听，以及正在使用哪些绑定。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md) 主题。  
+-   <span data-ttu-id="3e513-132">WMI 可用于查找哪些服务正在计算机上进行侦听，以及正在使用哪些绑定。</span><span class="sxs-lookup"><span data-stu-id="3e513-132">WMI enables you to find out what services are listening on a machine and the bindings that are in use.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-133">[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="3e513-133"> the [Using Windows Management Instrumentation for Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md) topic.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供了多个 GUI 和命令行工具，以使创建、部署和管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序更加容易。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Communication Foundation 工具](../../../../docs/framework/wcf/tools.md).例如，可使用[配置编辑器工具 \(SvcConfigEditor.exe\)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)通过向导来创建和编辑 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置设置，而不是直接编辑 XML。此外，还可以使用[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 来查看、分组和筛选跟踪消息，以便能够诊断、修复和验证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的问题。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3e513-134"> 还提供了多个 GUI 和命令行工具，以使创建、部署和管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序更加容易。</span><span class="sxs-lookup"><span data-stu-id="3e513-134"> also provides several GUI and command line tools to make it easier for you to create, deploy, and manage [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3e513-135">[Windows Communication Foundation 工具](../../../../docs/framework/wcf/tools.md)。</span><span class="sxs-lookup"><span data-stu-id="3e513-135"> [Windows Communication Foundation Tools](../../../../docs/framework/wcf/tools.md).</span></span> <span data-ttu-id="3e513-136">例如，你可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)创建和编辑[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用向导，而不直接编辑 XML 的配置设置。</span><span class="sxs-lookup"><span data-stu-id="3e513-136">For example, you can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and edit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration settings using a wizard, instead of editing XML directly.</span></span> <span data-ttu-id="3e513-137">你还可以使用[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)若要查看、 分组和筛选跟踪消息，以便可以诊断、 修复和验证问题[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。</span><span class="sxs-lookup"><span data-stu-id="3e513-137">You can also use the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) to view, group, and filter trace messages so that you can diagnose, repair, and verify issues with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
-## 请参阅  
- [配置应用程序](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)   
- [部署服务](../../../../docs/framework/wcf/diagnostics/deploying-services.md)   
- [关于异常的参考信息](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)   
- [事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)   
- [配置编辑器工具 \(SvcConfigEditor.exe\)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)   
- [服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)   
- [ServiceModel 注册工具](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)   
- [跟踪](../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)   
- [性能计数器](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)   
- [Windows Communication Foundation 工具](../../../../docs/framework/wcf/tools.md)
+## <a name="see-also"></a><span data-ttu-id="3e513-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3e513-138">See Also</span></span>  
+ [<span data-ttu-id="3e513-139">配置你的应用程序</span><span class="sxs-lookup"><span data-stu-id="3e513-139">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
+ [<span data-ttu-id="3e513-140">部署服务</span><span class="sxs-lookup"><span data-stu-id="3e513-140">Deploying Services</span></span>](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
+ [<span data-ttu-id="3e513-141">异常参考</span><span class="sxs-lookup"><span data-stu-id="3e513-141">Exceptions Reference</span></span>](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
+ [<span data-ttu-id="3e513-142">事件日志记录</span><span class="sxs-lookup"><span data-stu-id="3e513-142">Event Logging</span></span>](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="3e513-143">消息日志记录</span><span class="sxs-lookup"><span data-stu-id="3e513-143">Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [<span data-ttu-id="3e513-144">配置编辑器工具 (SvcConfigEditor.exe)</span><span class="sxs-lookup"><span data-stu-id="3e513-144">Configuration Editor Tool (SvcConfigEditor.exe)</span></span>](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
+ [<span data-ttu-id="3e513-145">服务跟踪查看器工具 (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="3e513-145">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
+ [<span data-ttu-id="3e513-146">ServiceModel 注册工具</span><span class="sxs-lookup"><span data-stu-id="3e513-146">ServiceModel Registration Tool</span></span>](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
+ [<span data-ttu-id="3e513-147">跟踪</span><span class="sxs-lookup"><span data-stu-id="3e513-147">Tracing</span></span>](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3e513-148">使用 Windows Management Instrumentation 进行诊断</span><span class="sxs-lookup"><span data-stu-id="3e513-148">Using Windows Management Instrumentation for Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [<span data-ttu-id="3e513-149">性能计数器</span><span class="sxs-lookup"><span data-stu-id="3e513-149">Performance Counters</span></span>](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
+ [<span data-ttu-id="3e513-150">Windows Communication Foundation 工具</span><span class="sxs-lookup"><span data-stu-id="3e513-150">Windows Communication Foundation Tools</span></span>](../../../../docs/framework/wcf/tools.md)

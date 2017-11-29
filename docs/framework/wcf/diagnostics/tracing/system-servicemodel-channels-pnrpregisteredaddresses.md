@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.PnrpRegisteredAddresses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PnrpRegisteredAddresses
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b770e042-0555-4668-9b41-e20da092c16a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 41def429e248fb9b9489138a9a4f45d29bc5a1aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PnrpRegisteredAddresses
-Pnrp 解析程序已注册本地节点的地址。  
+# <a name="systemservicemodelchannelspnrpregisteredaddresses"></a><span data-ttu-id="ed1bc-102">System.ServiceModel.Channels.PnrpRegisteredAddresses</span><span class="sxs-lookup"><span data-stu-id="ed1bc-102">System.ServiceModel.Channels.PnrpRegisteredAddresses</span></span>
+<span data-ttu-id="ed1bc-103">Pnrp 解析程序已注册本地节点的地址。</span><span class="sxs-lookup"><span data-stu-id="ed1bc-103">The Pnrp Resolver has registered the local node's addresses.</span></span>  
   
-## 描述  
- 此跟踪在 PNRP 服务成功注册本地节点的地址后发生。  
+## <a name="description"></a><span data-ttu-id="ed1bc-104">描述</span><span class="sxs-lookup"><span data-stu-id="ed1bc-104">Description</span></span>  
+ <span data-ttu-id="ed1bc-105">此跟踪在 PNRP 服务成功注册本地节点的地址后发生。</span><span class="sxs-lookup"><span data-stu-id="ed1bc-105">This trace occurs after the PNRP service successfully registers the local node's addressses.</span></span>  
   
-## 请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ed1bc-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ed1bc-106">See Also</span></span>  
+ [<span data-ttu-id="ed1bc-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="ed1bc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ed1bc-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="ed1bc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ed1bc-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="ed1bc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

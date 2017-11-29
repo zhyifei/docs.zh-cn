@@ -1,73 +1,76 @@
 ---
-title: "优化性能：利用硬件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "图形呈现层"
-  - "图形, 性能"
-  - "图形, 呈现层"
-  - "硬件呈现管道"
-  - "呈现层"
-  - "软件呈现管道"
+title: "优化性能：利用硬件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], performance
+- hardware rendering pipeline [WPF]
+- rendering tiers [WPF]
+- graphics rendering tiers [WPF]
+- graphics [WPF], rendering tiers
+- software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8828ff0f263943c6094af0073ec4cad6068c6e1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 优化性能：利用硬件
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的内部结构有两个呈现管道，即硬件和软件。  本主题提供有关这些呈现管道的信息，以帮助您在对应用程序进行性能优化时作出正确的决策。  
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a><span data-ttu-id="cd7b1-102">优化性能：利用硬件</span><span class="sxs-lookup"><span data-stu-id="cd7b1-102">Optimizing Performance: Taking Advantage of Hardware</span></span>
+<span data-ttu-id="cd7b1-103">内部体系结构的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有两个呈现管道、 硬件和软件。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-103">The internal architecture of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] has two rendering pipelines, hardware and software.</span></span> <span data-ttu-id="cd7b1-104">本主题提供有关这些呈现管道来帮助你判断你的应用程序的性能优化的信息。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-104">This topic provides information about these rendering pipelines to help you make decisions about performance optimizations of your applications.</span></span>  
   
-## 硬件呈现管道  
- 决定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 性能的最重要因素之一是它是呈现绑定的，即要呈现的像素越多，性能成本就越高。  但是，能转交给[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)] 来处理的呈现任务越多，能获得的性能改进就越多。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序硬件呈现管道充分利用支持 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 7.0 版最小功能的硬件上的 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 功能。  通过支持 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 7.0 版和 PixelShader 2.0\+ 功能的硬件，可实现进一步的优化。  
+## <a name="hardware-rendering-pipeline"></a><span data-ttu-id="cd7b1-105">硬件呈现管道</span><span class="sxs-lookup"><span data-stu-id="cd7b1-105">Hardware Rendering Pipeline</span></span>  
+ <span data-ttu-id="cd7b1-106">确定的最重要因素之一[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]性能是它是呈现绑定-你需要呈现性能成本就越高的多个像素。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-106">One of the most important factors in determining [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] performance is that it is render bound—the more pixels you have to render, the greater the performance cost.</span></span> <span data-ttu-id="cd7b1-107">但是，呈现，越可以卸载到[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]，你可以获得更多的性能优势。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-107">However, the more rendering that can be offloaded to the [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], the more performance benefits you can gain.</span></span> <span data-ttu-id="cd7b1-108">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序硬件呈现管道充分利用[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]上支持的最少的硬件功能[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]版本 7.0。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-108">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application hardware rendering pipeline takes full advantage of [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] features on hardware that supports a minimum of [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] version 7.0.</span></span> <span data-ttu-id="cd7b1-109">支持的硬件可以获得进一步优化[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]版本 7.0 和 PixelShader 2.0 + 功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-109">Further optimizations can be gained by hardware that supports [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] version 7.0 and PixelShader 2.0+ features.</span></span>  
   
-## 软件呈现管道  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 软件呈现管道是完全绑定 CPU 的。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 利用 CPU 中的 SSE 和 SSE2 指令集来实现优化的、功能全面的软件光栅器。  只要无法使用硬件呈现管道呈现应用程序功能，都可以非常顺利地转而使用软件。  
+## <a name="software-rendering-pipeline"></a><span data-ttu-id="cd7b1-110">软件呈现管道</span><span class="sxs-lookup"><span data-stu-id="cd7b1-110">Software Rendering Pipeline</span></span>  
+ <span data-ttu-id="cd7b1-111">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]软件呈现管道完全是 CPU 绑定。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-111">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] software rendering pipeline is entirely CPU bound.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="cd7b1-112">利用 SSE 和 SSE2 指令设置在 CPU 中实现经过优化的完整功能的软件光栅器。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-112"> takes advantage of the SSE and SSE2 instruction sets in the CPU to implement an optimized, fully-featured software rasterizer.</span></span> <span data-ttu-id="cd7b1-113">回退到软件是无缝应用程序功能无法使用硬件呈现管道呈现任何时间。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-113">Fallback to software is seamless any time application functionality cannot be rendered using the hardware rendering pipeline.</span></span>  
   
- 在以软件模式呈现时，遇到的最大的性能问题与填充率有关，该值定义为呈现的像素数目。  如果您关注采用软件呈现模式时的性能，请尝试将重绘像素的次数降至最少。  例如，如果您有一个具有蓝色背景的应用程序，随后要在该背景上呈现略微透明的图像，则要呈现两次应用程序中的所有像素。  因此，呈现具有该图像的应用程序所需的时间是呈现只有蓝色背景的应用程序的两倍。  
+ <span data-ttu-id="cd7b1-114">你会遇到的最大的性能问题时呈现在软件模式下相关填充率，指的呈现的像素数。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-114">The biggest performance issue you will encounter when rendering in software mode is related to fill rate, which is defined as the number of pixels that you are rendering.</span></span> <span data-ttu-id="cd7b1-115">如果您担心在软件呈现模式下的性能，请尝试最大程度减少在重绘像素的次数。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-115">If you are concerned about performance in software rendering mode, try to minimize the number of times a pixel is redrawn.</span></span> <span data-ttu-id="cd7b1-116">例如，如果你的应用程序包含一个蓝色背景，然后在其上呈现略微透明的图像，你将呈现所有两次，应用程序中的像素。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-116">For example, if you have an application with a blue background, which then renders a slightly transparent image over it, you will render all of the pixels in the application twice.</span></span> <span data-ttu-id="cd7b1-117">因此，它将需要两次长呈现具有比是否只有蓝色背景图像的应用程序。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-117">As a result, it will take twice as long to render the application with the image than if you had only the blue background.</span></span>  
   
-### 图形呈现层  
- 预测应用程序将运行于的硬件配置可能很难。  但是，您可能会考虑一种设计，它使应用程序在不同的硬件上运行时可以顺利地切换功能，从而充分利用各个不同的硬件配置。  
+### <a name="graphics-rendering-tiers"></a><span data-ttu-id="cd7b1-118">图形呈现层</span><span class="sxs-lookup"><span data-stu-id="cd7b1-118">Graphics Rendering Tiers</span></span>  
+ <span data-ttu-id="cd7b1-119">它可能很难预测将运行你的应用程序的硬件配置。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-119">It may be very difficult to predict the hardware configuration that your application will be running on.</span></span> <span data-ttu-id="cd7b1-120">但是，你可能想要考虑的设计允许你的应用程序无缝切换功能在不同的硬件上运行时，以便它可以充分利用每个不同的硬件配置。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-120">However, you might want to consider a design that allows your application to seamlessly switch features when running on different hardware, so that it can take full advantage of each different hardware configuration.</span></span>  
   
- 为了实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一个功能，它可以在运行时确定系统的图形功能。  通过将视频卡归类为三个呈现功能层之一来确定图形功能。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公开一个 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，该 API 使应用程序可以查询呈现功能层。  然后应用程序就可以在运行时根据硬件支持的呈现层采用不同的代码路径。  
+ <span data-ttu-id="cd7b1-121">若要实现此目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能来确定在运行时中的系统的图形功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-121">To achieve this, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides functionality to determine the graphics capability of a system at runtime.</span></span> <span data-ttu-id="cd7b1-122">分类为一个三个呈现功能层的视频卡取决于图形功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-122">Graphics capability is determined by categorizing the video card as one of three rendering capability tiers.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="cd7b1-123">公开[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，允许应用程序查询呈现功能层。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-123"> exposes an [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] that allows an application to query the rendering capability tier.</span></span> <span data-ttu-id="cd7b1-124">然后，你的应用程序可在具体取决于支持的硬件的呈现层的运行时执行不同的代码路径。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-124">Your application can then take different code paths at run time depending on the rendering tier supported by the hardware.</span></span>  
   
- 对呈现层级别影响最大的图形硬件功能包括：  
+ <span data-ttu-id="cd7b1-125">对呈现层级别影响最大的图形硬件功能包括：</span><span class="sxs-lookup"><span data-stu-id="cd7b1-125">The features of the graphics hardware that most impact the rendering tier levels are:</span></span>  
   
--   **视频 RAM** 图形硬件中的视频内存量决定了可用于合成图形的缓冲区的大小和数量。  
+-   <span data-ttu-id="cd7b1-126">**视频 RAM** - 图形硬件中的视频内存量决定了可用于合成图形的缓冲区大小和数量。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-126">**Video RAM** The amount of video memory on the graphics hardware determines the size and number of buffers that can be used for compositing graphics.</span></span>  
   
--   **像素着色器** 像素着色器是按像素计算效果的图形处理功能。  每个显示帧可能有数百万像素需要处理，具体取决于所显示的图形的分辨率。  
+-   <span data-ttu-id="cd7b1-127">**像素着色器** - 像素着色器是基于像素计算效果的图形处理功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-127">**Pixel Shader** A pixel shader is a graphics processing function that calculates effects on a per-pixel basis.</span></span> <span data-ttu-id="cd7b1-128">每个显示帧可能有数百万像素需要处理，具体取决于显示图形的分辨率。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-128">Depending on the resolution of the displayed graphics, there could be several million pixels that need to be processed for each display frame.</span></span>  
   
--   **顶点着色器** 顶点着色器是对对象的顶点数据执行数学运算的图形处理功能。  
+-   <span data-ttu-id="cd7b1-129">**顶点着色器** - 顶点着色器是对对象的顶点数据执行数学运算的图形处理功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-129">**Vertex Shader** A vertex shader is a graphics processing function that performs mathematical operations on the vertex data of the object.</span></span>  
   
--   **多纹理支持** 多纹理支持是指在对三维图形对象执行混合操作期间应用两个或更多个不同纹理的功能。  多纹理支持的程度由图形硬件中的多纹理单元数决定。  
+-   <span data-ttu-id="cd7b1-130">**多纹理支持** - 多纹理支持是指对 3D 图形对象执行混合操作期间应用两个或更多个不同纹理的功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-130">**Multitexture Support** Multitexture support refers to the ability to apply two or more distinct textures during a blending operation on a 3D graphics object.</span></span> <span data-ttu-id="cd7b1-131">多纹理支持的程度取决于图形硬件中的多纹理单元数。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-131">The degree of multitexture support is determined by the number of multitexture units on the graphics hardware.</span></span>  
   
- 像素着色器、顶点着色器和多纹理功能用于定义特定的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别，而版本级别又用于定义 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的不同呈现层。  
+ <span data-ttu-id="cd7b1-132">像素着色器、 顶点着色器和多纹理功能用于定义特定[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本级别，这反过来，用于定义中的不同的呈现层[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-132">The pixel shader, vertex shader, and multitexture features are used to define specific [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version levels, which, in turn, are used to define the different rendering tiers in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
- 图形硬件的功能决定了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的呈现功能。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系统定义了三个呈现层：  
+ <span data-ttu-id="cd7b1-133">图形硬件的功能决定了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的呈现功能。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-133">The features of the graphics hardware determine the rendering capability of a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="cd7b1-134">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系统定义了 3 个呈现层：</span><span class="sxs-lookup"><span data-stu-id="cd7b1-134">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system defines three rendering tiers:</span></span>  
   
--   **呈现层 0** 无图形硬件加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别低于 7.0。  
+-   <span data-ttu-id="cd7b1-135">**呈现层 0** - 无图形硬件加速。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-135">**Rendering Tier 0** No graphics hardware acceleration.</span></span> <span data-ttu-id="cd7b1-136">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本级别低于 7.0 版。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-136">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is less than version 7.0.</span></span>  
   
--   **呈现层 1** 部分图形硬件加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 7.0 且**低于** 9.0。  
+-   <span data-ttu-id="cd7b1-137">**呈现层 1**部分的图形硬件加速。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-137">**Rendering Tier 1** Partial graphics hardware acceleration.</span></span> <span data-ttu-id="cd7b1-138">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本级别为大于或等于版本 7.0，和**较小**比 9.0 版。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-138">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is greater than or equal to version 7.0, and **lesser** than version 9.0.</span></span>  
   
--   **呈现层 2** 大多数图形功能都使用图形硬件加速。  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。  
+-   <span data-ttu-id="cd7b1-139">**呈现层 2** - 大多数图形功能都使用图形硬件加速。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-139">**Rendering Tier 2** Most graphics features use graphics hardware acceleration.</span></span> <span data-ttu-id="cd7b1-140">[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本级别高于或等于 9.0。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-140">The [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version level is greater than or equal to version 9.0.</span></span>  
   
- 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈现层的更多信息，请参见[图形呈现层](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ <span data-ttu-id="cd7b1-141">有关详细信息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现层，请参阅[图形呈现层](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。</span><span class="sxs-lookup"><span data-stu-id="cd7b1-141">For more information on [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering tiers, see [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span></span>  
   
-## 请参阅  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [布局和设计](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [二维图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="cd7b1-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cd7b1-142">See Also</span></span>  
+ [<span data-ttu-id="cd7b1-143">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="cd7b1-143">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="cd7b1-144">规划应用程序性能</span><span class="sxs-lookup"><span data-stu-id="cd7b1-144">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="cd7b1-145">布局和示例</span><span class="sxs-lookup"><span data-stu-id="cd7b1-145">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="cd7b1-146">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="cd7b1-146">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="cd7b1-147">对象行为</span><span class="sxs-lookup"><span data-stu-id="cd7b1-147">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="cd7b1-148">应用程序资源</span><span class="sxs-lookup"><span data-stu-id="cd7b1-148">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="cd7b1-149">文本</span><span class="sxs-lookup"><span data-stu-id="cd7b1-149">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="cd7b1-150">数据绑定</span><span class="sxs-lookup"><span data-stu-id="cd7b1-150">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="cd7b1-151">其他性能建议</span><span class="sxs-lookup"><span data-stu-id="cd7b1-151">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

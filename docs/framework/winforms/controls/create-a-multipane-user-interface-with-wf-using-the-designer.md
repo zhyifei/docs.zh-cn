@@ -1,60 +1,61 @@
 ---
-title: "如何：使用设计器用 Windows 窗体创建多窗格用户界面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "多窗格用户界面"
-  - "SplitContainer 控件 [Windows 窗体], 使用设计器"
-  - "用户界面, 多窗格"
+title: "如何：使用设计器用 Windows 窗体创建多窗格用户界面"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user interface [Windows Forms], multipane
+- SplitContainer control [Windows Forms], using the designer
+- multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7b49f5440626fc7f6c869e87351680ec2f1de25e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器用 Windows 窗体创建多窗格用户界面
-在下面的过程中，将创建一个类似于在 Microsoft Outlook 中使用的多窗格用户界面，该界面中包含**“文件夹列表”**、**“邮件”**窗格和**“预览”**窗格。  这种排列主要是通过在窗体上停靠控件实现的。  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a><span data-ttu-id="a2e91-102">如何：使用设计器用 Windows 窗体创建多窗格用户界面</span><span class="sxs-lookup"><span data-stu-id="a2e91-102">How to: Create a Multipane User Interface with Windows Forms Using the Designer</span></span>
+<span data-ttu-id="a2e91-103">在下面的过程中，将创建多窗格用户界面类似于在 Microsoft Outlook 中与使用**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。</span><span class="sxs-lookup"><span data-stu-id="a2e91-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="a2e91-104">这种安排主要通过停靠处理该窗体控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  
   
- 在停靠控件时，可以确定控件要紧靠父容器的哪个边缘。  这样，如果将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle>，控件的右边缘将停靠在它的父控件的右边缘。  此外，控件停靠边缘的大小将调整为与它的容器控件的大小匹配。  有关 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性工作方式的更多信息，请参见 [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。  
+ <span data-ttu-id="a2e91-105">当你将控件停靠时，你确定控件固定的父容器的边缘。</span><span class="sxs-lookup"><span data-stu-id="a2e91-105">When you dock a control, you determine which edge of the parent container a control is fastened to.</span></span> <span data-ttu-id="a2e91-106">因此，如果你设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Right>，将其父控件的右边缘停靠的控件的右边缘。</span><span class="sxs-lookup"><span data-stu-id="a2e91-106">Thus, if you set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Right>, the right edge of the control will be docked to the right edge of its parent control.</span></span> <span data-ttu-id="a2e91-107">此外，该控件的停靠的边缘是调整大小，以匹配它的容器控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-107">Additionally, the docked edge of the control is resized to match that of its container control.</span></span> <span data-ttu-id="a2e91-108">有关详细信息，如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性会发生作用，请参阅[如何： 在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="a2e91-108">For more information about how the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property works, see [How to: Dock Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span></span>  
   
- 该过程的重点是在窗体上排列 <xref:System.Windows.Forms.SplitContainer> 和其他控件，而不是添加功能以使得应用程序类似于 Microsoft Outlook。  
+ <span data-ttu-id="a2e91-109">此过程侧重于排列<xref:System.Windows.Forms.SplitContainer>和其他控件在窗体上，而不添加使模拟 Microsoft Outlook 应用程序的功能。</span><span class="sxs-lookup"><span data-stu-id="a2e91-109">This procedure focuses on arranging the <xref:System.Windows.Forms.SplitContainer> and the other controls on the form, not on adding functionality to make the application mimic Microsoft Outlook.</span></span>  
   
- 若要创建该用户界面，请将所有控件放到 <xref:System.Windows.Forms.SplitContainer> 控件（其左侧面板中包含 <xref:System.Windows.Forms.TreeView> 控件）中。  <xref:System.Windows.Forms.SplitContainer> 控件的右侧面板中包含另一个 <xref:System.Windows.Forms.SplitContainer> 控件，其中 <xref:System.Windows.Forms.ListView> 控件在 <xref:System.Windows.Forms.RichTextBox> 控件上方。  这些 <xref:System.Windows.Forms.SplitContainer> 控件支持在窗体上分别调整其他控件的大小。  可以改编此过程中的方法，制作出您自己的自定义用户界面。  
+ <span data-ttu-id="a2e91-110">若要创建此用户界面，你将中的所有控件<xref:System.Windows.Forms.SplitContainer>控件，它包含<xref:System.Windows.Forms.TreeView>左侧面板中的控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-110">To create this user interface, you place all the controls within a <xref:System.Windows.Forms.SplitContainer> control, which contains a <xref:System.Windows.Forms.TreeView> control in the left-hand panel.</span></span> <span data-ttu-id="a2e91-111">右侧面板<xref:System.Windows.Forms.SplitContainer>控件包含第二个<xref:System.Windows.Forms.SplitContainer>控件替换为<xref:System.Windows.Forms.ListView>控件上述<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-111">The right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control contains a second <xref:System.Windows.Forms.SplitContainer> control with a <xref:System.Windows.Forms.ListView> control above a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="a2e91-112">这些<xref:System.Windows.Forms.SplitContainer>控件启用独立调整窗体上的其他控件的大小。</span><span class="sxs-lookup"><span data-stu-id="a2e91-112">These <xref:System.Windows.Forms.SplitContainer> controls enable independent resizing of the other controls on the form.</span></span> <span data-ttu-id="a2e91-113">你可以调整此过程制作出的你自己的自定义用户界面中的方法。</span><span class="sxs-lookup"><span data-stu-id="a2e91-113">You can adapt the techniques in this procedure to craft custom user interfaces of your own.</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="a2e91-114">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="a2e91-114">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a2e91-115">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="a2e91-115">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a2e91-116">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="a2e91-116">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 在设计时创建 Outlook 样式的用户界面  
+### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a><span data-ttu-id="a2e91-117">若要在设计时创建的 Outlook 样式的用户界面</span><span class="sxs-lookup"><span data-stu-id="a2e91-117">To create an Outlook-style user interface at design time</span></span>  
   
-1.  创建新的“Windows 应用程序”项目。  有关详细信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  <span data-ttu-id="a2e91-118">创建新的 Windows 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="a2e91-118">Create a new Windows Application project.</span></span> <span data-ttu-id="a2e91-119">有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="a2e91-119">For details, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.SplitContainer> 控件拖到窗体上。  在**“属性”**窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle>。  
+2.  <span data-ttu-id="a2e91-120">拖动<xref:System.Windows.Forms.SplitContainer>控件从**工具箱**到窗体。</span><span class="sxs-lookup"><span data-stu-id="a2e91-120">Drag a <xref:System.Windows.Forms.SplitContainer> control from the **Toolbox** to the form.</span></span> <span data-ttu-id="a2e91-121">在**属性**窗口中，设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Fill>。</span><span class="sxs-lookup"><span data-stu-id="a2e91-121">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
-3.  将 <xref:System.Windows.Forms.TreeView> 控件从**“工具箱”**拖到 <xref:System.Windows.Forms.SplitContainer> 控件的左侧面板中。  在**“属性”**窗口中，通过单击值编辑器（在单击向下键时显示）中的左侧面板将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle>。  
+3.  <span data-ttu-id="a2e91-122">拖动<xref:System.Windows.Forms.TreeView>控件从**工具箱**到左侧的面板<xref:System.Windows.Forms.SplitContainer>控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-122">Drag a <xref:System.Windows.Forms.TreeView> control from the **Toolbox** to the left-hand panel of the <xref:System.Windows.Forms.SplitContainer> control.</span></span> <span data-ttu-id="a2e91-123">在**属性**窗口中，设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Left>通过单击左侧面板中单击向下箭头时显示的值编辑器。</span><span class="sxs-lookup"><span data-stu-id="a2e91-123">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Left> by clicking the left hand panel in the value editor shown when the down arrow is clicked.</span></span>  
   
-4.  从**“工具箱”**拖动另一个 <xref:System.Windows.Forms.SplitContainer> 控件；然后将它放到窗体中添加的 <xref:System.Windows.Forms.SplitContainer> 控件的右侧面板中。  在**“属性”**窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle>，并将 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 属性设置为 <xref:System.Windows.Forms.Orientation>。  
+4.  <span data-ttu-id="a2e91-124">将另一个<xref:System.Windows.Forms.SplitContainer>控件从**工具箱**; 将其放在右侧面板中的<xref:System.Windows.Forms.SplitContainer>向窗体添加的控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-124">Drag another <xref:System.Windows.Forms.SplitContainer> control from the **Toolbox**; place it in the right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control you added to your form.</span></span> <span data-ttu-id="a2e91-125">在**属性**窗口中，设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Fill>和<xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性<xref:System.Windows.Forms.Orientation.Horizontal>。</span><span class="sxs-lookup"><span data-stu-id="a2e91-125">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill> and the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
   
-5.  将 <xref:System.Windows.Forms.ListView> 控件从**“工具箱”**拖到窗体中添加的第二个 <xref:System.Windows.Forms.SplitContainer> 控件的上方面板中。  将 <xref:System.Windows.Forms.ListView> 控件的 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle>。  
+5.  <span data-ttu-id="a2e91-126">拖动<xref:System.Windows.Forms.ListView>控件从**工具箱**到第二个面板右上<xref:System.Windows.Forms.SplitContainer>向窗体添加的控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-126">Drag a <xref:System.Windows.Forms.ListView> control from the **Toolbox** to the upper panel of the second <xref:System.Windows.Forms.SplitContainer> control you added to your form.</span></span> <span data-ttu-id="a2e91-127">将 <xref:System.Windows.Forms.ListView> 控件的 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。</span><span class="sxs-lookup"><span data-stu-id="a2e91-127">Set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property of the <xref:System.Windows.Forms.ListView> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
-6.  将 <xref:System.Windows.Forms.RichTextBox> 控件从**“工具箱”**拖到第二个 <xref:System.Windows.Forms.SplitContainer> 控件的下方面板中。  将 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle>。  
+6.  <span data-ttu-id="a2e91-128">拖动<xref:System.Windows.Forms.RichTextBox>控件从**工具箱**到第二个下方面板<xref:System.Windows.Forms.SplitContainer>控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-128">Drag a <xref:System.Windows.Forms.RichTextBox> control from the **Toolbox** to the lower panel of the second <xref:System.Windows.Forms.SplitContainer> control.</span></span> <span data-ttu-id="a2e91-129">将 <xref:System.Windows.Forms.RichTextBox> 控件的 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。</span><span class="sxs-lookup"><span data-stu-id="a2e91-129">Set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property of the <xref:System.Windows.Forms.RichTextBox> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
-     此时，如果按 F5 运行应用程序，窗体将显示由三部分组成的用户界面，这类似于 Microsoft Outlook 的用户界面。  
+     <span data-ttu-id="a2e91-130">此时，如果按 F5 运行该应用程序时，窗体将显示由三部分用户界面，类似于 Microsoft Outlook。</span><span class="sxs-lookup"><span data-stu-id="a2e91-130">At this point, if you press F5 to run the application, the form displays a three-part user interface, similar to that of Microsoft Outlook.</span></span>  
   
     > [!NOTE]
-    >  将鼠标指针放在 <xref:System.Windows.Forms.SplitContainer> 控件中的任一拆分器上时，可以调整内部尺寸的大小。  
+    >  <span data-ttu-id="a2e91-131">当将鼠标指针放在拆分条中在任一<xref:System.Windows.Forms.SplitContainer>控件，你可以调整内部维度的大小。</span><span class="sxs-lookup"><span data-stu-id="a2e91-131">When you put the mouse pointer over either of the splitters within the <xref:System.Windows.Forms.SplitContainer> controls, you can resize the internal dimensions.</span></span>  
   
-     在应用程序开发中，此时已经设计了一个复杂的用户界面。  下一步要做的就是应用程序本身的编程了（可能需要将 <xref:System.Windows.Forms.TreeView> 控件和 <xref:System.Windows.Forms.ListView> 控件连接到某种数据源）。  有关将控件连接到数据的更多信息，请参见 [数据绑定和 Windows 窗体](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)。  
+     <span data-ttu-id="a2e91-132">此时在应用程序开发中，具有制作复杂的用户界面。</span><span class="sxs-lookup"><span data-stu-id="a2e91-132">At this point in application development, you have crafted a sophisticated user interface.</span></span> <span data-ttu-id="a2e91-133">下一步的步骤再继续进行的编程的应用程序本身，可能是通过连接<xref:System.Windows.Forms.TreeView>控件和<xref:System.Windows.Forms.ListView>某种类型的数据源的控件。</span><span class="sxs-lookup"><span data-stu-id="a2e91-133">The next step is proceeding with the programming of the application itself, perhaps by connecting the <xref:System.Windows.Forms.TreeView> control and <xref:System.Windows.Forms.ListView> controls to some kind of data source.</span></span> <span data-ttu-id="a2e91-134">有关连接到数据的控件的详细信息，请参阅[数据绑定和 Windows 窗体](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="a2e91-134">For more information about connecting controls to data, see [Data Binding and Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a2e91-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a2e91-135">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="a2e91-136">SplitContainer 控件</span><span class="sxs-lookup"><span data-stu-id="a2e91-136">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

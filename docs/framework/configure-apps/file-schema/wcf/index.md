@@ -5,52 +5,46 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a651746abe22b8f5eecd571b10de07b08af26bb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 05aeeea7d10c012804fe083890bcc8516aa8c8bc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="wcf-configuration-schema"></a>WCF 配置架构
-使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素，您可以配置 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务和客户端应用程序。 可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 创建和修改客户端和服务的配置文件。 由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。 否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。 这是因为 XML 元素标记和特性是区分大小写的。  
+# <a name="wcf-configuration-schema"></a><span data-ttu-id="96e48-102">WCF 配置架构</span><span class="sxs-lookup"><span data-stu-id="96e48-102">WCF Configuration Schema</span></span>
+<span data-ttu-id="96e48-103">使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素，您可以配置 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务和客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="96e48-103">[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] configuration elements enable you to configure [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service and client applications.</span></span> <span data-ttu-id="96e48-104">可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 创建和修改客户端和服务的配置文件。</span><span class="sxs-lookup"><span data-stu-id="96e48-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="96e48-105">由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。</span><span class="sxs-lookup"><span data-stu-id="96e48-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="96e48-106">否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。</span><span class="sxs-lookup"><span data-stu-id="96e48-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="96e48-107">这是因为 XML 元素标记和特性是区分大小写的。</span><span class="sxs-lookup"><span data-stu-id="96e48-107">This is because XML element tags and attributes are case-sensitive.</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 配置系统基于 <xref:System.Configuration> 命名空间。 因此，您可以使用 <xref:System.Configuration> 命名空间提供的所有标准功能（如配置锁定、加密和合并）以提高应用程序及其配置的安全性。 有关这些概念的更多信息，请参见下列主题。  
+ <span data-ttu-id="96e48-108">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 配置系统基于 <xref:System.Configuration> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="96e48-108">The [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] configuration system is based on the <xref:System.Configuration> namespace.</span></span> <span data-ttu-id="96e48-109">因此，您可以使用 <xref:System.Configuration> 命名空间提供的所有标准功能（如配置锁定、加密和合并）以提高应用程序及其配置的安全性。</span><span class="sxs-lookup"><span data-stu-id="96e48-109">Therefore, you can use all the standard features provided by the <xref:System.Configuration> namespace, such as configuration locking, encryption and merging to increase the security of your application and its configuration.</span></span> <span data-ttu-id="96e48-110">有关这些概念的更多信息，请参见下列主题。</span><span class="sxs-lookup"><span data-stu-id="96e48-110">For more information on these concepts, see the following topics.</span></span>  
   
- [加密配置信息](http://go.microsoft.com/fwlink/?LinkId=95337)  
+ [<span data-ttu-id="96e48-111">加密配置信息</span><span class="sxs-lookup"><span data-stu-id="96e48-111">Encrypting Configuration Information</span></span>](http://go.microsoft.com/fwlink/?LinkId=95337)  
   
- [锁定配置设置](http://go.microsoft.com/fwlink/?LinkId=95338)  
+ [<span data-ttu-id="96e48-112">锁定配置设置</span><span class="sxs-lookup"><span data-stu-id="96e48-112">Locking Configuration Settings</span></span>](http://go.microsoft.com/fwlink/?LinkId=95338)  
   
- 本节描述每个配置项的所有可能的值，以及它如何与其他 WCF 配置元素进行交互。 下面的映射演示了 WCF 配置架构。  
+ <span data-ttu-id="96e48-113">本节描述每个配置项的所有可能的值，以及它如何与其他 WCF 配置元素进行交互。</span><span class="sxs-lookup"><span data-stu-id="96e48-113">This section describes all possible values of each configuration item, and how it interacts with other WCF configuration elements.</span></span> <span data-ttu-id="96e48-114">下面的映射演示了 WCF 配置架构。</span><span class="sxs-lookup"><span data-stu-id="96e48-114">The following map illustrates the WCF configuration schema.</span></span>  
   
- ![WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
+ <span data-ttu-id="96e48-115">![WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")</span><span class="sxs-lookup"><span data-stu-id="96e48-115">![WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")</span></span>  
   
 > [!CAUTION]
->  您应利用适合的访问控制列表 (ACL) 来保护应用程序配置文件 (app.config) 中的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 配置节，以防止任何潜在安全威胁。  例如，你应确保仅有适当的人员可以访问或修改有关应用程序绑定的安全设置或服务的配置文件的服务模型节。  
+>  <span data-ttu-id="96e48-116">您应利用适合的访问控制列表 (ACL) 来保护应用程序配置文件 (app.config) 中的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 配置节，以防止任何潜在安全威胁。</span><span class="sxs-lookup"><span data-stu-id="96e48-116">You should protect [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] configuration sections in your application configuration files (app.config) with appropriate Access Control Lists (ACL) to prevent any potential security threats.</span></span>  <span data-ttu-id="96e48-117">例如，你应确保仅有适当的人员可以访问或修改有关应用程序绑定的安全设置或服务的配置文件的服务模型节。</span><span class="sxs-lookup"><span data-stu-id="96e48-117">For example, you should make sure that only the appropriate people can access or modify the security settings on application bindings, or the service model section of the configuration file for a service.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
- 描述 `ServiceModel` 元素。  
+## <a name="in-this-section"></a><span data-ttu-id="96e48-118">本节内容</span><span class="sxs-lookup"><span data-stu-id="96e48-118">In This Section</span></span>  
+ [<span data-ttu-id="96e48-119">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="96e48-119">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+ <span data-ttu-id="96e48-120">描述 `ServiceModel` 元素。</span><span class="sxs-lookup"><span data-stu-id="96e48-120">Describes the `ServiceModel` element.</span></span>  
   
- [\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
- 配置 SMSvcHost.exe 工具。  
+ [<span data-ttu-id="96e48-121">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="96e48-121">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
+ <span data-ttu-id="96e48-122">配置 SMSvcHost.exe 工具。</span><span class="sxs-lookup"><span data-stu-id="96e48-122">Configures the SMSvcHost.exe tool.</span></span>  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
- 当使用序列化程序（如 <xref:System.Runtime.Serialization.DataContractSerializer>）时，用于设置选项的顶级元素。  
+ [<span data-ttu-id="96e48-123">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="96e48-123">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ <span data-ttu-id="96e48-124">当使用序列化程序（如 <xref:System.Runtime.Serialization.DataContractSerializer>）时，用于设置选项的顶级元素。</span><span class="sxs-lookup"><span data-stu-id="96e48-124">The top-level element for setting options when using serializers such as the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- [配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- 描述如何配置 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务和客户端。
-
+## <a name="related-sections"></a><span data-ttu-id="96e48-125">相关章节</span><span class="sxs-lookup"><span data-stu-id="96e48-125">Related Sections</span></span>  
+ [<span data-ttu-id="96e48-126">配置 Windows Communication Foundation 应用程序</span><span class="sxs-lookup"><span data-stu-id="96e48-126">Configuring Windows Communication Foundation Applications</span></span>](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ <span data-ttu-id="96e48-127">描述如何配置 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="96e48-127">Describes how to configure [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services and clients.</span></span>

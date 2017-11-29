@@ -1,82 +1,81 @@
 ---
-title: "Visual Basic 中的范围 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "块范围"
-  - "已声明的元素, 范围"
-  - "范围级别"
-  - "模块级别"
-  - "模块范围"
-  - "命名空间, 范围"
-  - "过程范围"
-  - "过程, 范围"
-  - "范围, 关于范围"
-  - "范围, 已声明的元素"
-  - "范围, 等级"
-  - "范围, Visual Basic"
+title: "Visual Basic 中的范围"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module scope [Visual Basic]
+- scope [Visual Basic], levels
+- module level
+- procedures [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- namespaces [Visual Basic], scope
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], about scope
+- levels of scope [Visual Basic]
+- block scope [Visual Basic]
+- scope [Visual Basic], Visual Basic
+- procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Visual Basic 中的范围
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-已声明的元素的范围为一个代码集合，其中包括所有不用限定元素的名称即可引用元素的代码，或所有不必通过 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 使元素可用即可引用元素的代码。  元素可以具有下列范围级别之一：  
+# <a name="scope-in-visual-basic"></a><span data-ttu-id="457d6-102">Visual Basic 中的范围</span><span class="sxs-lookup"><span data-stu-id="457d6-102">Scope in Visual Basic</span></span>
+<span data-ttu-id="457d6-103">*作用域*的已声明的元素是一组的所有代码都可以引用它而无需限定其名称或提供通过[Imports 语句 （.NET Namespace 和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。</span><span class="sxs-lookup"><span data-stu-id="457d6-103">The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span> <span data-ttu-id="457d6-104">元素可在以下级别之一具有作用域：</span><span class="sxs-lookup"><span data-stu-id="457d6-104">An element can have scope at one of the following levels:</span></span>  
   
-|级别|说明|  
-|--------|--------|  
-|块范围|只适用于在其中声明元素的代码块|  
-|过程范围|适用于在其中声明元素的过程中的所有代码|  
-|模块范围|适用于在其中声明元素的模块、类或结构中的所有代码|  
-|命名空间范围|适用于在其中声明元素的命名空间中的所有代码|  
+|<span data-ttu-id="457d6-105">级别</span><span class="sxs-lookup"><span data-stu-id="457d6-105">Level</span></span>|<span data-ttu-id="457d6-106">描述</span><span class="sxs-lookup"><span data-stu-id="457d6-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="457d6-107">块范围</span><span class="sxs-lookup"><span data-stu-id="457d6-107">Block scope</span></span>|<span data-ttu-id="457d6-108">仅在代码中的可用块中，在其中声明</span><span class="sxs-lookup"><span data-stu-id="457d6-108">Available only within the code block in which it is declared</span></span>|  
+|<span data-ttu-id="457d6-109">过程范围</span><span class="sxs-lookup"><span data-stu-id="457d6-109">Procedure scope</span></span>|<span data-ttu-id="457d6-110">适用于在其中声明过程中的所有代码</span><span class="sxs-lookup"><span data-stu-id="457d6-110">Available to all code within the procedure in which it is declared</span></span>|  
+|<span data-ttu-id="457d6-111">模块作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-111">Module scope</span></span>|<span data-ttu-id="457d6-112">适用于在模块、 类或结构声明它的所有代码</span><span class="sxs-lookup"><span data-stu-id="457d6-112">Available to all code within the module, class, or structure in which it is declared</span></span>|  
+|<span data-ttu-id="457d6-113">Namespace 作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-113">Namespace scope</span></span>|<span data-ttu-id="457d6-114">适用于在其中声明命名空间中的所有代码</span><span class="sxs-lookup"><span data-stu-id="457d6-114">Available to all code in the namespace in which it is declared</span></span>|  
   
- 这些范围级别从最窄（块）直到最宽（命名空间），其中“最窄的范围”是指不用限定即可引用元素的最小代码集。  有关更多信息，请参见本页中的“范围级别”。  
+ <span data-ttu-id="457d6-115">这些级别的作用域进度从窄 （块） 到最宽 （命名空间），其中*范围最小*意味着可以引用而无需限定元素的代码的最小集。</span><span class="sxs-lookup"><span data-stu-id="457d6-115">These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification.</span></span> <span data-ttu-id="457d6-116">有关详细信息，请参阅此页上的"级别的作用域"。</span><span class="sxs-lookup"><span data-stu-id="457d6-116">For more information, see "Levels of Scope" on this page.</span></span>  
   
-## 指定范围和定义变量  
- 在声明元素时指定元素的范围。  范围取决于下列因素：  
+## <a name="specifying-scope-and-defining-variables"></a><span data-ttu-id="457d6-117">指定作用域，以及定义变量</span><span class="sxs-lookup"><span data-stu-id="457d6-117">Specifying Scope and Defining Variables</span></span>  
+ <span data-ttu-id="457d6-118">在声明它时，你指定的元素的范围。</span><span class="sxs-lookup"><span data-stu-id="457d6-118">You specify the scope of an element when you declare it.</span></span> <span data-ttu-id="457d6-119">作用域可以依赖于以下因素：</span><span class="sxs-lookup"><span data-stu-id="457d6-119">The scope can depend on the following factors:</span></span>  
   
--   声明元素的区域（块、过程、模块、类或结构）  
+-   <span data-ttu-id="457d6-120">在其中声明该元素的区域 （块、 过程、 模块、 类或结构）</span><span class="sxs-lookup"><span data-stu-id="457d6-120">The region (block, procedure, module, class, or structure) in which you declare the element</span></span>  
   
--   包含元素声明的命名空间  
+-   <span data-ttu-id="457d6-121">包含元素的声明的命名空间</span><span class="sxs-lookup"><span data-stu-id="457d6-121">The namespace containing the element's declaration</span></span>  
   
--   为元素声明的访问级别  
+-   <span data-ttu-id="457d6-122">为元素声明其访问级别</span><span class="sxs-lookup"><span data-stu-id="457d6-122">The access level you declare for the element</span></span>  
   
- 在不同的范围内用相同的名称定义变量时要小心，因为这样做可能导致意外的结果。  有关更多信息，请参见 [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+ <span data-ttu-id="457d6-123">时务必小心你定义变量具有相同名称但不同的范围内，因为这样做会导致意外的结果。</span><span class="sxs-lookup"><span data-stu-id="457d6-123">Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results.</span></span> <span data-ttu-id="457d6-124">有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。</span><span class="sxs-lookup"><span data-stu-id="457d6-124">For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## 范围级别  
- 编程元素在声明它的整个区域内都可用。  同一区域内的所有代码不用限定元素的名称即可引用元素。  
+## <a name="levels-of-scope"></a><span data-ttu-id="457d6-125">级别的作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-125">Levels of Scope</span></span>  
+ <span data-ttu-id="457d6-126">编程元素是可在声明它的区域可用。</span><span class="sxs-lookup"><span data-stu-id="457d6-126">A programming element is available throughout the region in which you declare it.</span></span> <span data-ttu-id="457d6-127">同一区域中的所有代码中，可以都指无需限定其名称的元素。</span><span class="sxs-lookup"><span data-stu-id="457d6-127">All code in the same region can refer to the element without qualifying its name.</span></span>  
   
-### 块范围  
- 块是初始声明语句与终止声明语句之间的一组语句，如下所示：  
+### <a name="block-scope"></a><span data-ttu-id="457d6-128">块范围</span><span class="sxs-lookup"><span data-stu-id="457d6-128">Block Scope</span></span>  
+ <span data-ttu-id="457d6-129">块是一组语句括在启动和终止声明语句，如下所示：</span><span class="sxs-lookup"><span data-stu-id="457d6-129">A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:</span></span>  
   
--   `Do` 和 `Loop`  
+-   <span data-ttu-id="457d6-130">`Do` 和 `Loop`</span><span class="sxs-lookup"><span data-stu-id="457d6-130">`Do` and `Loop`</span></span>  
   
--   `For` \[`Each`\] 和 `Next`  
+-   <span data-ttu-id="457d6-131">`For`[`Each`] 和`Next`</span><span class="sxs-lookup"><span data-stu-id="457d6-131">`For` [`Each`] and `Next`</span></span>  
   
--   `If` 和 `End If`  
+-   <span data-ttu-id="457d6-132">`If` 和 `End If`</span><span class="sxs-lookup"><span data-stu-id="457d6-132">`If` and `End If`</span></span>  
   
--   `Select` 和 `End Select`  
+-   <span data-ttu-id="457d6-133">`Select` 和 `End Select`</span><span class="sxs-lookup"><span data-stu-id="457d6-133">`Select` and `End Select`</span></span>  
   
--   `SyncLock` 和 `End SyncLock`  
+-   <span data-ttu-id="457d6-134">`SyncLock` 和 `End SyncLock`</span><span class="sxs-lookup"><span data-stu-id="457d6-134">`SyncLock` and `End SyncLock`</span></span>  
   
--   `Try` 和 `End Try`  
+-   <span data-ttu-id="457d6-135">`Try` 和 `End Try`</span><span class="sxs-lookup"><span data-stu-id="457d6-135">`Try` and `End Try`</span></span>  
   
--   `While` 和 `End While`  
+-   <span data-ttu-id="457d6-136">`While` 和 `End While`</span><span class="sxs-lookup"><span data-stu-id="457d6-136">`While` and `End While`</span></span>  
   
--   `With` 和 `End With`  
+-   <span data-ttu-id="457d6-137">`With` 和 `End With`</span><span class="sxs-lookup"><span data-stu-id="457d6-137">`With` and `End With`</span></span>  
   
- 在某个块声明的变量只能在该块中使用。  在下面的示例中，整数变量 `cube` 的范围是 `If` 和 `End If` 之间的块，并且，在执行超出该块后便不能再引用 `cube`。  
+ <span data-ttu-id="457d6-138">如果声明块内的变量，则可以仅在该块中使用它。</span><span class="sxs-lookup"><span data-stu-id="457d6-138">If you declare a variable within a block, you can use it only within that block.</span></span> <span data-ttu-id="457d6-139">在下面的示例中，整数变量的作用域`cube`是之间块`If`和`End If`，和可以不再指`cube`时将执行传递到块之外。</span><span class="sxs-lookup"><span data-stu-id="457d6-139">In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.</span></span>  
   
 ```  
 If n < 1291 Then  
@@ -86,24 +85,24 @@ End If
 ```  
   
 > [!NOTE]
->  即使变量的范围被限制在某个块内，其生存期仍为整个过程的生存期。  如果您在过程的生存期内多次进入该块，则每个块变量会保留它的前一个值。  若要避免在这种情况下出现意外结果，最好在块的开头对块变量进行初始化。  
+>  <span data-ttu-id="457d6-140">即使变量的作用域仅限于一个块，其生存期内仍为整个过程。</span><span class="sxs-lookup"><span data-stu-id="457d6-140">Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure.</span></span> <span data-ttu-id="457d6-141">如果在过程不止一次进入该块，每个块变量将保留以前的值。</span><span class="sxs-lookup"><span data-stu-id="457d6-141">If you enter the block more than once during the procedure, each block variable retains its previous value.</span></span> <span data-ttu-id="457d6-142">若要避免这种情况中的出现意外的结果，明智的做法是在块的开头的块变量进行初始化。</span><span class="sxs-lookup"><span data-stu-id="457d6-142">To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.</span></span>  
   
-### 过程范围  
- 在某过程内声明的元素在该过程外不可用。  只有包含元素声明的过程才能使用该元素。  该级别的变量也称为“局部变量”。  使用 [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md) 声明这些变量，使用或不使用 [Static](../../../../visual-basic/language-reference/modifiers/static.md) 关键字。  
+### <a name="procedure-scope"></a><span data-ttu-id="457d6-143">过程范围</span><span class="sxs-lookup"><span data-stu-id="457d6-143">Procedure Scope</span></span>  
+ <span data-ttu-id="457d6-144">声明过程中的元素不可用该过程外。</span><span class="sxs-lookup"><span data-stu-id="457d6-144">An element declared within a procedure is not available outside that procedure.</span></span> <span data-ttu-id="457d6-145">仅包含声明的过程可以使用它。</span><span class="sxs-lookup"><span data-stu-id="457d6-145">Only the procedure that contains the declaration can use it.</span></span> <span data-ttu-id="457d6-146">在此级别的变量是也称为*局部变量*。</span><span class="sxs-lookup"><span data-stu-id="457d6-146">Variables at this level are also known as *local variables*.</span></span> <span data-ttu-id="457d6-147">声明它们与[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)、 带有或不带[静态](../../../../visual-basic/language-reference/modifiers/static.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="457d6-147">You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.</span></span>  
   
- 过程范围和块范围密切相关。  如果在过程内但在该过程内的任何块外声明变量，则可将该变量看作具有块范围，其中块就是整个过程。  
+ <span data-ttu-id="457d6-148">密切相关过程和块作用域。</span><span class="sxs-lookup"><span data-stu-id="457d6-148">Procedure and block scope are closely related.</span></span> <span data-ttu-id="457d6-149">如果声明的变量在过程中，而在该过程中的任何块外，你可以将该变量看作具有块范围，其中块就是整个过程。</span><span class="sxs-lookup"><span data-stu-id="457d6-149">If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.</span></span>  
   
 > [!NOTE]
->  所有的局部元素对它们出现在其中的过程来说都是私有的，即使它们是 `Static` 变量。  不能在过程中使用 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 关键字声明任何元素。  
+>  <span data-ttu-id="457d6-150">所有本地元素，即使它们是`Static`变量，是专用于在其中它们出现的过程。</span><span class="sxs-lookup"><span data-stu-id="457d6-150">All local elements, even if they are `Static` variables, are private to the procedure in which they appear.</span></span> <span data-ttu-id="457d6-151">你不能声明任何元素使用[公共](../../../../visual-basic/language-reference/modifiers/public.md)过程中的关键字。</span><span class="sxs-lookup"><span data-stu-id="457d6-151">You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.</span></span>  
   
-### 模块范围  
- 为方便起见，单个术语*“模块级别”*同等地应用于模块、类和结构。  可以通过将声明语句放在模块、类或结构中的任一过程或块的外部来声明该级别的元素。  
+### <a name="module-scope"></a><span data-ttu-id="457d6-152">模块作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-152">Module Scope</span></span>  
+ <span data-ttu-id="457d6-153">为方便起见，单个字词*模块级别*同样适用于模块、 类和结构。</span><span class="sxs-lookup"><span data-stu-id="457d6-153">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="457d6-154">可以通过将任何过程或块外部，但在模块、 类或结构内声明语句放在声明此级别的元素。</span><span class="sxs-lookup"><span data-stu-id="457d6-154">You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.</span></span>  
   
- 当在模块级声明时，由所选的访问级别确定范围。  包含模块、类或结构的命名空间也影响范围。  
+ <span data-ttu-id="457d6-155">当您在模块级别的声明，你选择的访问级别将确定的作用域。</span><span class="sxs-lookup"><span data-stu-id="457d6-155">When you make a declaration at the module level, the access level you choose determines the scope.</span></span> <span data-ttu-id="457d6-156">包含模块、 类或结构的命名空间还会影响范围。</span><span class="sxs-lookup"><span data-stu-id="457d6-156">The namespace that contains the module, class, or structure also affects the scope.</span></span>  
   
- 为其声明 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 访问级别的元素可用于该模块内的每个过程，但不能用于其他模块中的任何代码。  如果不使用任何访问级别关键字，则模块级 `Dim` 语句默认为 `Private`。  但是，通过在 `Dim` 语句中使用 `Private` 关键字，可以使范围和访问级别更明显。  
+ <span data-ttu-id="457d6-157">为其声明的元素[私有](../../../../visual-basic/language-reference/modifiers/private.md)访问级别有在该模块中，每个过程但不是属于另一个模块中的任何代码。</span><span class="sxs-lookup"><span data-stu-id="457d6-157">Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module.</span></span> <span data-ttu-id="457d6-158">`Dim`在模块级别的语句默认为`Private`如果不使用任何访问级别关键字。</span><span class="sxs-lookup"><span data-stu-id="457d6-158">The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords.</span></span> <span data-ttu-id="457d6-159">但是，你可以进行的作用域和访问级别更明显使用`Private`中的关键字`Dim`语句。</span><span class="sxs-lookup"><span data-stu-id="457d6-159">However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.</span></span>  
   
- 在下面的示例中，所有在模块中定义的过程均可以引用字符串变量 `strMsg`。  当调用第二个过程时，它在对话框中显示字符串变量 `strMsg` 的内容。  
+ <span data-ttu-id="457d6-160">在下面的示例中，在模块中定义的所有过程可以都引用的字符串变量`strMsg`。</span><span class="sxs-lookup"><span data-stu-id="457d6-160">In the following example, all procedures defined in the module can refer to the string variable `strMsg`.</span></span> <span data-ttu-id="457d6-161">当调用第二个过程时，它将显示的字符串变量的内容`strMsg`在对话框中。</span><span class="sxs-lookup"><span data-stu-id="457d6-161">When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
   
 ```  
 ' Put the following declaration at module level (not in any procedure).  
@@ -118,35 +117,35 @@ Sub usePrivateVariable()
 End Sub  
 ```  
   
-### 命名空间范围  
- 如果使用 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 或 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 关键字声明模块级元素，则该元素变为可用于在其中声明该元素的整个命名空间内的所有过程。  对上述示例进行如下更改后，字符串变量 `strMsg` 可由它的声明命名空间内任意位置的代码引用。  
+### <a name="namespace-scope"></a><span data-ttu-id="457d6-162">Namespace 作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-162">Namespace Scope</span></span>  
+ <span data-ttu-id="457d6-163">如果在模块级别使用的某个元素声明[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)关键字，它可供整个在其中声明该元素的命名空间的所有过程。</span><span class="sxs-lookup"><span data-stu-id="457d6-163">If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared.</span></span> <span data-ttu-id="457d6-164">与前面的示例中，字符串变量到以下内容有变更`strMsg`可以通过其声明的命名空间中的任意位置的代码引用。</span><span class="sxs-lookup"><span data-stu-id="457d6-164">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
   
 ```  
 ' Include this declaration at module level (not inside any procedure).  
 Public strMsg As String  
 ```  
   
- 命名空间范围包括嵌套命名空间。  可从命名空间内使用的元素同样可从该命名空间中的任何嵌套命名空间内使用。  
+ <span data-ttu-id="457d6-165">Namespace 作用域包括嵌套的命名空间。</span><span class="sxs-lookup"><span data-stu-id="457d6-165">Namespace scope includes nested namespaces.</span></span> <span data-ttu-id="457d6-166">可从命名空间内的元素也会从任何嵌套在该命名空间的命名空间内提供。</span><span class="sxs-lookup"><span data-stu-id="457d6-166">An element available from within a namespace is also available from within any namespace nested inside that namespace.</span></span>  
   
- 如果项目中不包含任何 [Namespace 语句](../../../../visual-basic/language-reference/statements/namespace-statement.md)，则该项目中的所有内容全部在同一命名空间中。  在这种情况下，可以将命名空间作用域视为项目作用域。  模块、类或结构中的 `Public` 元素也可供引用其项目的任何项目使用。  
+ <span data-ttu-id="457d6-167">如果你的项目不包含任何[Namespace 语句](../../../../visual-basic/language-reference/statements/namespace-statement.md)s，项目中的所有内容是相同的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="457d6-167">If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace.</span></span> <span data-ttu-id="457d6-168">在这种情况下，可以将命名空间范围看作项目作用域。</span><span class="sxs-lookup"><span data-stu-id="457d6-168">In this case, namespace scope can be thought of as project scope.</span></span> <span data-ttu-id="457d6-169">`Public`模块、 类或结构中的元素也是可用于任何引用其项目的项目。</span><span class="sxs-lookup"><span data-stu-id="457d6-169">`Public` elements in a module, class, or structure are also available to any project that references their project.</span></span>  
   
-## 范围选择  
- 声明变量时，应该在选择其范围时注意以下几点。  
+## <a name="choice-of-scope"></a><span data-ttu-id="457d6-170">选择的作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-170">Choice of Scope</span></span>  
+ <span data-ttu-id="457d6-171">在声明变量时，你应时需要牢记以下几点选择其作用域。</span><span class="sxs-lookup"><span data-stu-id="457d6-171">When you declare a variable, you should keep in mind the following points when choosing its scope.</span></span>  
   
-### 局部变量的优点  
- 对于任何类型的临时计算，局部变量都是很好的选择，原因如下：  
+### <a name="advantages-of-local-variables"></a><span data-ttu-id="457d6-172">本地变量的优点</span><span class="sxs-lookup"><span data-stu-id="457d6-172">Advantages of Local Variables</span></span>  
+ <span data-ttu-id="457d6-173">本地变量为适合于任何类型的临时计算，原因如下：</span><span class="sxs-lookup"><span data-stu-id="457d6-173">Local variables are a good choice for any kind of temporary calculation, for the following reasons:</span></span>  
   
--   **可避免名称冲突。**局部变量名称不易发生冲突。  例如，可以创建若干个不同的过程，每个过程都包含称为 `intTemp` 的变量。  只要每个 `intTemp` 都被声明为局部变量，各过程就只识别自己版本的 `intTemp` 变量。  任何一个过程都可以修改其局部变量 `intTemp` 的值，而不会影响到其他过程中的 `intTemp` 变量。  
+-   <span data-ttu-id="457d6-174">**避免名称冲突。**</span><span class="sxs-lookup"><span data-stu-id="457d6-174">**Name Conflict Avoidance.**</span></span> <span data-ttu-id="457d6-175">本地变量的名称不容易发生冲突。</span><span class="sxs-lookup"><span data-stu-id="457d6-175">Local variable names are not susceptible to conflict.</span></span> <span data-ttu-id="457d6-176">例如，你可以创建包含名为的变量的多个不同过程`intTemp`。</span><span class="sxs-lookup"><span data-stu-id="457d6-176">For example, you can create several different procedures containing a variable called `intTemp`.</span></span> <span data-ttu-id="457d6-177">只要每个`intTemp`声明为局部变量，则每个过程识别其自己的版本的`intTemp`。</span><span class="sxs-lookup"><span data-stu-id="457d6-177">As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`.</span></span> <span data-ttu-id="457d6-178">任何一个过程可以更改其本地中的值`intTemp`而不会影响`intTemp`其他过程中的变量。</span><span class="sxs-lookup"><span data-stu-id="457d6-178">Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.</span></span>  
   
--   **内存消耗。**局部变量只在其过程运行时占用内存。  当过程返回到调用代码时，会释放其内存。  相形之下，[Shared](../../../../visual-basic/language-reference/modifiers/shared.md) 和 [Static](../../../../visual-basic/language-reference/modifiers/static.md) 变量在应用程序停止运行前将一直占用内存资源，因此，仅在必要时使用这些变量。  实例变量在其实例继续存在的同时占用内存，因此不如局部变量有效，但可能会比 `Shared` 或 `Static` 变量更为有效。  
+-   <span data-ttu-id="457d6-179">**内存消耗。**</span><span class="sxs-lookup"><span data-stu-id="457d6-179">**Memory Consumption.**</span></span> <span data-ttu-id="457d6-180">仅在正在运行其过程时，本地变量占用的内存。</span><span class="sxs-lookup"><span data-stu-id="457d6-180">Local variables consume memory only while their procedure is running.</span></span> <span data-ttu-id="457d6-181">当过程返回到调用代码，会释放其内存。</span><span class="sxs-lookup"><span data-stu-id="457d6-181">Their memory is released when the procedure returns to the calling code.</span></span> <span data-ttu-id="457d6-182">与此相反，[共享](../../../../visual-basic/language-reference/modifiers/shared.md)和[静态](../../../../visual-basic/language-reference/modifiers/static.md)变量消耗内存资源，直到你的应用程序停止运行，因此，它们仅在必要时使用。</span><span class="sxs-lookup"><span data-stu-id="457d6-182">By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary.</span></span> <span data-ttu-id="457d6-183">*实例变量*占用内存时其实例将继续存在，这使它们成为小于效率低于本地变量，但可能比效率更高`Shared`或`Static`变量。</span><span class="sxs-lookup"><span data-stu-id="457d6-183">*Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.</span></span>  
   
-### 将范围最小化  
- 一般情况下，在声明任何变量或常数时，使其范围尽可能窄（块范围最窄）是好的编程习惯。  这有助于保留内存，并可最大限度地减少代码错误地引用错误变量的机会。  同样，仅当有必要在过程调用之间保留值时，才应将变量声明为 [Static](../../../../visual-basic/language-reference/modifiers/static.md)。  
+### <a name="minimizing-scope"></a><span data-ttu-id="457d6-184">最小化作用域</span><span class="sxs-lookup"><span data-stu-id="457d6-184">Minimizing Scope</span></span>  
+ <span data-ttu-id="457d6-185">一般情况下，声明的任何变量或常量，时很好的编程做法，应尽可能窄的范围 （块作用域是范围最小）。</span><span class="sxs-lookup"><span data-stu-id="457d6-185">In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest).</span></span> <span data-ttu-id="457d6-186">这有助于节省内存，并最大程度减少你错误地引用错误的变量的代码的可能性。</span><span class="sxs-lookup"><span data-stu-id="457d6-186">This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable.</span></span> <span data-ttu-id="457d6-187">同样，你应将变量声明为[静态](../../../../visual-basic/language-reference/modifiers/static.md)仅当有必要在保留其过程调用之间的值。</span><span class="sxs-lookup"><span data-stu-id="457d6-187">Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.</span></span>  
   
-## 请参阅  
- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [如何：控制变量的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
- [Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="457d6-188">另请参阅</span><span class="sxs-lookup"><span data-stu-id="457d6-188">See Also</span></span>  
+ [<span data-ttu-id="457d6-189">已声明元素的特性</span><span class="sxs-lookup"><span data-stu-id="457d6-189">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="457d6-190">如何：控制变量的范围</span><span class="sxs-lookup"><span data-stu-id="457d6-190">How to: Control the Scope of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [<span data-ttu-id="457d6-191">在 Visual Basic 中的生存期</span><span class="sxs-lookup"><span data-stu-id="457d6-191">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="457d6-192">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="457d6-192">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="457d6-193">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="457d6-193">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="457d6-194">变量声明</span><span class="sxs-lookup"><span data-stu-id="457d6-194">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

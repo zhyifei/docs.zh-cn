@@ -1,113 +1,114 @@
 ---
-title: "演练：设计时在 Windows 窗体上分配 WPF 内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ElementHost 控件, 在设计时分配 WPF 内容"
-  - "互操作性 [WPF]"
-  - "Windows 窗体, 内容分配"
-  - "WPF 内容 [Windows 窗体], 在设计时分配"
-  - "WPF 用户控件, 在 Windows 窗体中承载"
+title: "演练：设计时在 Windows 窗体上分配 WPF 内容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF content [Windows Forms], assigning at design time
+- ElementHost control [Windows Forms], assigning WPF content at design time
+- interoperability [WPF]
+- Windows Forms, content assignments
+- WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0fa9e40a0a32d0bc9484a86da0f94d62f5c25aa7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：设计时在 Windows 窗体上分配 WPF 内容
-本演练展示了如何选择要在窗体上显示的 Windows Presentation Foundation \(WPF\) 控件类型。  可选择项目中包含的任何 WPF 控件类型。  
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a><span data-ttu-id="b7e86-102">演练：设计时在 Windows 窗体上分配 WPF 内容</span><span class="sxs-lookup"><span data-stu-id="b7e86-102">Walkthrough: Assigning WPF Content on Windows Forms at Design Time</span></span>
+<span data-ttu-id="b7e86-103">本演练展示了如何选择要在窗体上显示的 Windows Presentation Foundation (WPF) 控件类型。</span><span class="sxs-lookup"><span data-stu-id="b7e86-103">This walkthrough show you how to select the Windows Presentation Foundation (WPF) control types you want to display on your form.</span></span> <span data-ttu-id="b7e86-104">可选择项目中包含的任何 WPF 控件类型。</span><span class="sxs-lookup"><span data-stu-id="b7e86-104">You can select any WPF control types which are included in your project.</span></span>  
   
- 在本演练中，你将要执行以下任务：  
+ <span data-ttu-id="b7e86-105">在本演练中，你将要执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="b7e86-105">In this walkthrough, you perform the following tasks:</span></span>  
   
--   创建项目。  
+-   <span data-ttu-id="b7e86-106">创建项目。</span><span class="sxs-lookup"><span data-stu-id="b7e86-106">Create the project.</span></span>  
   
--   创建 WPF 控件类型。  
+-   <span data-ttu-id="b7e86-107">创建 WPF 控件类型。</span><span class="sxs-lookup"><span data-stu-id="b7e86-107">Create the WPF control types.</span></span>  
   
--   选择 WPF 控件。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关详细信息，请参阅 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
-  
-## 系统必备  
- 你需要以下组件来完成本演练：  
-  
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]。  
-  
-## 创建项目  
- 第一步是创建 Windows 窗体项目。  
+-   <span data-ttu-id="b7e86-108">选择 WPF 控件。</span><span class="sxs-lookup"><span data-stu-id="b7e86-108">Select WPF controls.</span></span>  
   
 > [!NOTE]
->  承载 WPF 内容时，仅支持 C\# 和 Visual Basic 项目。  
+>  <span data-ttu-id="b7e86-109">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="b7e86-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="b7e86-110">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="b7e86-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="b7e86-111">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="b7e86-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-#### 创建项目  
+## <a name="prerequisites"></a><span data-ttu-id="b7e86-112">先决条件</span><span class="sxs-lookup"><span data-stu-id="b7e86-112">Prerequisites</span></span>  
+ <span data-ttu-id="b7e86-113">你需要以下组件来完成本演练：</span><span class="sxs-lookup"><span data-stu-id="b7e86-113">You need the following components to complete this walkthrough:</span></span>  
   
--   在 Visual Basic 或 Visual C\# 中创建名为 `SelectingWpfContent` 的新 Windows 窗体应用程序项目。  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]<span data-ttu-id="b7e86-114">。</span><span class="sxs-lookup"><span data-stu-id="b7e86-114">.</span></span>  
   
-## 创建 WPF 控件类型  
- 将 WPF 控件类型添加到项目后，可将其托管到不同的 <xref:System.Windows.Forms.Integration.ElementHost> 控件。  
+## <a name="creating-the-project"></a><span data-ttu-id="b7e86-115">创建项目</span><span class="sxs-lookup"><span data-stu-id="b7e86-115">Creating the Project</span></span>  
+ <span data-ttu-id="b7e86-116">第一步是创建 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="b7e86-116">The first step is to create the Windows Forms project.</span></span>  
   
-#### 创建 WPF 控件类型  
+> [!NOTE]
+>  <span data-ttu-id="b7e86-117">承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。</span><span class="sxs-lookup"><span data-stu-id="b7e86-117">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。  使用控件类型的默认名称，`UserControl1.xaml`。  有关详细信息，请参阅[演练：设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+#### <a name="to-create-the-project"></a><span data-ttu-id="b7e86-118">创建项目</span><span class="sxs-lookup"><span data-stu-id="b7e86-118">To create the project</span></span>  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。  有关详细信息，请参阅[如何：在设计图面上选择和移动元素](http://msdn.microsoft.com/zh-cn/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+-   <span data-ttu-id="b7e86-119">创建新的 Windows 窗体应用程序项目中 Visual Basic 或 Visual C# 名为`SelectingWpfContent`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-119">Create a new Windows Forms Application project in Visual Basic or Visual C# named `SelectingWpfContent`.</span></span>  
   
-3.  在“属性”窗口中，将 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A> 属性的值设置为 `200`。  
+## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="b7e86-120">创建 WPF 控件类型</span><span class="sxs-lookup"><span data-stu-id="b7e86-120">Creating the WPF Control Types</span></span>  
+ <span data-ttu-id="b7e86-121">将 WPF 控件类型添加到项目后，可将其托管到不同的 <xref:System.Windows.Forms.Integration.ElementHost> 控件。</span><span class="sxs-lookup"><span data-stu-id="b7e86-121">After you add WPF control types to the project, you can host them in different <xref:System.Windows.Forms.Integration.ElementHost> controls.</span></span>  
   
-4.  将 <xref:System.Windows.Controls.TextBox?displayProperty=fullName> 控件添加到 <xref:System.Windows.Controls.UserControl>，并将 <xref:System.Windows.Controls.TextBox.Text%2A> 属性的值设置为“所承载的内容”。  
+#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="b7e86-122">创建 WPF 控件类型</span><span class="sxs-lookup"><span data-stu-id="b7e86-122">To create WPF control types</span></span>  
   
-5.  将第二个 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。  使用控件类型的默认名称，`UserControl2.xaml`。  
+1.  <span data-ttu-id="b7e86-123">将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。</span><span class="sxs-lookup"><span data-stu-id="b7e86-123">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="b7e86-124">使用控件类型的默认名称，`UserControl1.xaml`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-124">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="b7e86-125">有关详细信息，请参阅[演练： 创建新 WPF 内容在设计时的 Windows 窗体上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="b7e86-125">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-6.  在“属性”窗口中，将 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A> 属性的值设置为 `200`。  
+2.  <span data-ttu-id="b7e86-126">在设计视图中，请确保已选中 `UserControl1`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-126">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="b7e86-127">有关详细信息，请参阅[如何： 选择和设计图面上移动元素](http://msdn.microsoft.com/en-us/54cb70b6-b35b-46e4-a0cc-65189399c474)。</span><span class="sxs-lookup"><span data-stu-id="b7e86-127">For more information, see [How to: Select and Move Elements on the Design Surface](http://msdn.microsoft.com/en-us/54cb70b6-b35b-46e4-a0cc-65189399c474).</span></span>  
   
-7.  将 <xref:System.Windows.Controls.TextBox?displayProperty=fullName> 控件添加到 <xref:System.Windows.Controls.UserControl>，并将 <xref:System.Windows.Controls.TextBox.Text%2A> 属性的值设置为“所承载的内容 2”。  
+3.  <span data-ttu-id="b7e86-128">在**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-128">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
- **注意** 一般情况下，你应承载更复杂的 WPF 内容。  此处，<xref:System.Windows.Controls.TextBox?displayProperty=fullName> 控件仅为了便于说明。  
+4.  <span data-ttu-id="b7e86-129">添加<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>控制转移到<xref:System.Windows.Controls.UserControl>和设置的值<xref:System.Windows.Controls.TextBox.Text%2A>属性**承载的内容**。</span><span class="sxs-lookup"><span data-stu-id="b7e86-129">Add a <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.TextBox.Text%2A> property to **Hosted Content**.</span></span>  
   
-1.  生成项目。  
+5.  <span data-ttu-id="b7e86-130">将第二个 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。</span><span class="sxs-lookup"><span data-stu-id="b7e86-130">Add a second WPF <xref:System.Windows.Controls.UserControl> to the project.</span></span> <span data-ttu-id="b7e86-131">使用控件类型的默认名称，`UserControl2.xaml`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-131">Use the default name for the control type, `UserControl2.xaml`.</span></span>  
   
-## 选择 WPF 控件  
- 可将不同的 WPF 内容分配到 <xref:System.Windows.Forms.Integration.ElementHost> 控件，该控件现已承载内容。  
+6.  <span data-ttu-id="b7e86-132">在**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-132">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
-#### 选择 WPF 控件  
+7.  <span data-ttu-id="b7e86-133">添加<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>控制转移到<xref:System.Windows.Controls.UserControl>和设置的值<xref:System.Windows.Controls.TextBox.Text%2A>属性**承载的内容 2**。</span><span class="sxs-lookup"><span data-stu-id="b7e86-133">Add a <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.TextBox.Text%2A> property to **Hosted Content 2**.</span></span>  
   
-1.  在 Windows 窗体设计器中打开 `Form1`。  
+ <span data-ttu-id="b7e86-134">**请注意**一般情况下，你应承载更复杂的 WPF 内容。</span><span class="sxs-lookup"><span data-stu-id="b7e86-134">**Note** In general, you should host more sophisticated WPF content.</span></span> <span data-ttu-id="b7e86-135">此处，<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控件仅为了便于说明。</span><span class="sxs-lookup"><span data-stu-id="b7e86-135">The <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control is used here for illustrative purposes only.</span></span>  
   
-2.  在“工具箱”中，双击 `UserControl1` 在窗体上创建 `UserControl1` 的实例。  
+1.  <span data-ttu-id="b7e86-136">生成项目。</span><span class="sxs-lookup"><span data-stu-id="b7e86-136">Build the project.</span></span>  
   
-     `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+## <a name="selecting-wpf-controls"></a><span data-ttu-id="b7e86-137">选择 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="b7e86-137">Selecting WPF Controls</span></span>  
+ <span data-ttu-id="b7e86-138">可将不同的 WPF 内容分配到 <xref:System.Windows.Forms.Integration.ElementHost> 控件，该控件现已承载内容。</span><span class="sxs-lookup"><span data-stu-id="b7e86-138">You can assign different WPF content to an <xref:System.Windows.Forms.Integration.ElementHost> control, which is already hosting content.</span></span>  
   
-3.  在 `elementHost1` 的智能标记面板中，打开**选择承载的内容**下拉列表。  
+#### <a name="to-select-wpf-controls"></a><span data-ttu-id="b7e86-139">选择 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="b7e86-139">To select WPF controls</span></span>  
   
-4.  从下拉列表框中选择 **UserControl2**。  
+1.  <span data-ttu-id="b7e86-140">在 Windows 窗体设计器中打开 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-140">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-     `elementHost1` 控件现承载 `UserControl2` 类型的实例。  
+2.  <span data-ttu-id="b7e86-141">在**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。</span><span class="sxs-lookup"><span data-stu-id="b7e86-141">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
   
-5.  在**属性**窗口中，请确认将 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 属性设置为 **UserControl2**。  
+     <span data-ttu-id="b7e86-142">`UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。</span><span class="sxs-lookup"><span data-stu-id="b7e86-142">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-6.  在“工具箱”中，请在“WPF 互操作性”组中，将 <xref:System.Windows.Forms.Integration.ElementHost> 控件拖放到窗体上。  
+3.  <span data-ttu-id="b7e86-143">在智能标记面板中`elementHost1`，打开**选择承载的内容**下拉列表。</span><span class="sxs-lookup"><span data-stu-id="b7e86-143">In the smart tag panel for `elementHost1`, open the **Select Hosted Content** drop-down list.</span></span>  
   
-     新控件的默认名称是 `elementHost2`。  
+4.  <span data-ttu-id="b7e86-144">选择**UserControl2**从下拉列表框。</span><span class="sxs-lookup"><span data-stu-id="b7e86-144">Select **UserControl2** from the drop-down list box.</span></span>  
   
-7.  在 `elementHost2` 的智能标记面板中，打开**选择承载的内容**下拉列表。  
+     <span data-ttu-id="b7e86-145">`elementHost1` 控件现承载 `UserControl2` 类型的实例。</span><span class="sxs-lookup"><span data-stu-id="b7e86-145">The `elementHost1` control now hosts an instance of the `UserControl2` type.</span></span>  
   
-8.  从下拉列表中选择 **UserControl1**。  
+5.  <span data-ttu-id="b7e86-146">在**属性**窗口中，确认<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>属性设置为**UserControl2**。</span><span class="sxs-lookup"><span data-stu-id="b7e86-146">In the **Properties** window, confirm that the <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> property is set to **UserControl2**.</span></span>  
   
-9. `elementHost2` 控件现承载 `UserControl1` 类型的实例。  
+6.  <span data-ttu-id="b7e86-147">从**工具箱**中**WPF 互操作性**组中，将<xref:System.Windows.Forms.Integration.ElementHost>拖到窗体控件。</span><span class="sxs-lookup"><span data-stu-id="b7e86-147">From the **Toolbox**, in the **WPF Interoperability** group, drag an <xref:System.Windows.Forms.Integration.ElementHost> control onto the form.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)   
- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)   
- [WPF 设计器](http://msdn.microsoft.com/zh-cn/c6c65214-8411-4e16-b254-163ed4099c26)
+     <span data-ttu-id="b7e86-148">新控件的默认名称是 `elementHost2`。</span><span class="sxs-lookup"><span data-stu-id="b7e86-148">The default name for the new control is `elementHost2`.</span></span>  
+  
+7.  <span data-ttu-id="b7e86-149">在智能标记面板中`elementHost2`，打开**选择承载的内容**下拉列表。</span><span class="sxs-lookup"><span data-stu-id="b7e86-149">In the smart tag panel for `elementHost2`, open the **Select Hosted Content** drop-down list.</span></span>  
+  
+8.  <span data-ttu-id="b7e86-150">选择**UserControl1**从下拉列表。</span><span class="sxs-lookup"><span data-stu-id="b7e86-150">Select **UserControl1** from the drop-down list.</span></span>  
+  
+9. <span data-ttu-id="b7e86-151">`elementHost2` 控件现承载 `UserControl1` 类型的实例。</span><span class="sxs-lookup"><span data-stu-id="b7e86-151">The `elementHost2` control now hosts an instance of the `UserControl1` type.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b7e86-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b7e86-152">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="b7e86-153">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="b7e86-153">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="b7e86-154">使用 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="b7e86-154">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [<span data-ttu-id="b7e86-155">WPF 设计器</span><span class="sxs-lookup"><span data-stu-id="b7e86-155">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

@@ -1,132 +1,138 @@
 ---
-title: "属性动画技术概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 属性, 方法"
-  - "属性, 用于动画处理的方法"
+title: "属性动画技术概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- animation [WPF], properties [WPF], methods for
+- properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a8c196ea15617b13abe8311f8501ab32fd320c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 属性动画技术概述
-本主题描述对属性进行动画处理的不同方法：演示图板、本地动画、时钟以及基于帧的动画。  
+# <a name="property-animation-techniques-overview"></a><span data-ttu-id="ffa1d-102">属性动画技术概述</span><span class="sxs-lookup"><span data-stu-id="ffa1d-102">Property Animation Techniques Overview</span></span>
+<span data-ttu-id="ffa1d-103">本主题介绍了处理动画属性的不同方法：情节提要、本地动画、时钟和基于帧的动画。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-103">This topic describes the different approaches for animating properties: storyboards, local animations, clocks, and per-frame animations.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 必备组件  
- 若要了解本主题，您应当熟悉[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)中介绍的基本动画功能。  
+## <a name="prerequisites"></a><span data-ttu-id="ffa1d-104">先决条件</span><span class="sxs-lookup"><span data-stu-id="ffa1d-104">Prerequisites</span></span>  
+ <span data-ttu-id="ffa1d-105">若要了解本主题，应熟悉[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)中描述的基本动画功能。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-105">To understand this topic, you should be familiar with the basic animation features described in the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
 <a name="summary"></a>   
-## 不同的动画处理方式  
- 由于对属性进行动画处理有多种不同的方案，因此 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 为属性的动画处理提供了多种方法。  
+## <a name="different-ways-to-animate"></a><span data-ttu-id="ffa1d-106">动画处理的不同方法</span><span class="sxs-lookup"><span data-stu-id="ffa1d-106">Different Ways to Animate</span></span>  
+ <span data-ttu-id="ffa1d-107">由于动画处理属性存在多种不同的方案，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供几种动画处理属性的方法。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-107">Because there are many different scenarios for animating properties, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides several approaches for animating properties.</span></span>  
   
- 下表指示每种方法是否可基于实例使用；是否可用于样式、控件模板或数据模板；是否可用于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及是否可以使用该方法以交互方式控制动画。  “基于实例”指的是直接将动画或演示图板应用于对象实例（而不是在样式、控件模板或数据模板中应用）的技术。  
+ <span data-ttu-id="ffa1d-108">对于每种方法，下表指明了每种方法是否可以基于实例在样式、控件模板或数据模板中使用；是否可以在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中使用；以及该方法是否能够以交互方式控制动画。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-108">For each approach, the following table indicates whether it can be used per-instance, in styles, in control templates, or in data templates; whether it can be used in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; and whether the approach enables you to interactively control the animation.</span></span>  <span data-ttu-id="ffa1d-109">“基于实例”是指直接将动画或情节提要应用于对象实例（而不是在样式、控件模板或数据模板中应用）的技术。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-109">"Per-Instance" refers to the technique of applying an animation or storyboard directly to instances of an object, rather than in a style, control template, or data template.</span></span>  
   
-|动画技术|方案|支持 XAML|可交互控制|  
-|----------|--------|-------------|-----------|  
-|演示图板动画|基于实例、<xref:System.Windows.Style>、<xref:System.Windows.Controls.ControlTemplate>、<xref:System.Windows.DataTemplate>|是|是|  
-|本地动画|基于实例|否|否|  
-|时钟动画|基于实例|否|是|  
-|基于帧的动画|基于实例|否|不可用|  
+|<span data-ttu-id="ffa1d-110">动画技术</span><span class="sxs-lookup"><span data-stu-id="ffa1d-110">Animation technique</span></span>|<span data-ttu-id="ffa1d-111">方案</span><span class="sxs-lookup"><span data-stu-id="ffa1d-111">Scenarios</span></span>|<span data-ttu-id="ffa1d-112">支持 XAML</span><span class="sxs-lookup"><span data-stu-id="ffa1d-112">Supports XAML</span></span>|<span data-ttu-id="ffa1d-113">可以交互方式控制</span><span class="sxs-lookup"><span data-stu-id="ffa1d-113">Interactively controllable</span></span>|  
+|-------------------------|---------------|-------------------|--------------------------------|  
+|<span data-ttu-id="ffa1d-114">情节提要动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-114">Storyboard animation</span></span>|<span data-ttu-id="ffa1d-115">每个实例<xref:System.Windows.Style>， <xref:System.Windows.Controls.ControlTemplate>，<xref:System.Windows.DataTemplate></span><span class="sxs-lookup"><span data-stu-id="ffa1d-115">Per-instance, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate></span></span>|<span data-ttu-id="ffa1d-116">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-116">Yes</span></span>|<span data-ttu-id="ffa1d-117">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-117">Yes</span></span>|  
+|<span data-ttu-id="ffa1d-118">本地动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-118">Local animation</span></span>|<span data-ttu-id="ffa1d-119">基于实例</span><span class="sxs-lookup"><span data-stu-id="ffa1d-119">Per-instance</span></span>|<span data-ttu-id="ffa1d-120">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-120">No</span></span>|<span data-ttu-id="ffa1d-121">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-121">No</span></span>|  
+|<span data-ttu-id="ffa1d-122">时钟动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-122">Clock animation</span></span>|<span data-ttu-id="ffa1d-123">基于实例</span><span class="sxs-lookup"><span data-stu-id="ffa1d-123">Per-instance</span></span>|<span data-ttu-id="ffa1d-124">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-124">No</span></span>|<span data-ttu-id="ffa1d-125">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-125">Yes</span></span>|  
+|<span data-ttu-id="ffa1d-126">基于帧的动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-126">Per-frame animation</span></span>|<span data-ttu-id="ffa1d-127">基于实例</span><span class="sxs-lookup"><span data-stu-id="ffa1d-127">Per-instance</span></span>|<span data-ttu-id="ffa1d-128">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-128">No</span></span>|<span data-ttu-id="ffa1d-129">不可用</span><span class="sxs-lookup"><span data-stu-id="ffa1d-129">N/A</span></span>|  
   
 <a name="storyboard_animations"></a>   
-## 演示图板动画  
- 在以下情形中使用 <xref:System.Windows.Media.Animation.Storyboard>：要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中定义并应用动画；在动画开始之后以交互的方式控制动画；创建一个复杂的动画树；或者在 <xref:System.Windows.Style>、<xref:System.Windows.Controls.ControlTemplate> 或 <xref:System.Windows.DataTemplate> 中进行动画处理。  对于需要通过 <xref:System.Windows.Media.Animation.Storyboard> 进行动画处理的对象，它必须是 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>，或者它必须用于设置 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>。  有关更多详细信息，请参见[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+## <a name="storyboard-animations"></a><span data-ttu-id="ffa1d-130">情节提要动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-130">Storyboard Animations</span></span>  
+ <span data-ttu-id="ffa1d-131">使用<xref:System.Windows.Media.Animation.Storyboard>如果想要定义并应用在动画[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、 以交互方式控制后它们启动、 创建动画，一个复杂树或中创建动画的动画<xref:System.Windows.Style>，<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-131">Use a <xref:System.Windows.Media.Animation.Storyboard> when you want to define and apply your animations in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], interactively control your animations after they start, create a complex tree of animations, or animate in a <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> or <xref:System.Windows.DataTemplate>.</span></span> <span data-ttu-id="ffa1d-132">若要进行动画处理的对象<xref:System.Windows.Media.Animation.Storyboard>，它必须是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>，或它必须用于设置<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-132">For an object to be animated by a <xref:System.Windows.Media.Animation.Storyboard>, it must be a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement>, or it must be used to set a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement>.</span></span> <span data-ttu-id="ffa1d-133">有关详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-133">For more details, see the [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
- <xref:System.Windows.Media.Animation.Storyboard> 是一种为其所包含的动画提供目标信息的特殊类型的容器 <xref:System.Windows.Media.Animation.Timeline>。  若要使用 <xref:System.Windows.Media.Animation.Storyboard> 进行动画处理，需要完成下列三个步骤。  
+ <span data-ttu-id="ffa1d-134">A<xref:System.Windows.Media.Animation.Storyboard>是一种特殊类型的容器<xref:System.Windows.Media.Animation.Timeline>提供为它包含的动画的目标信息。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-134">A <xref:System.Windows.Media.Animation.Storyboard> is a special type of container <xref:System.Windows.Media.Animation.Timeline> that provides targeting information for the animations it contains.</span></span> <span data-ttu-id="ffa1d-135">使用进行动画处理<xref:System.Windows.Media.Animation.Storyboard>，完成以下三个步骤。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-135">To animate with a <xref:System.Windows.Media.Animation.Storyboard>, you complete the following three steps.</span></span>  
   
-1.  声明一个 <xref:System.Windows.Media.Animation.Storyboard> 以及一个或多个动画。  
+1.  <span data-ttu-id="ffa1d-136">声明<xref:System.Windows.Media.Animation.Storyboard>和一个或多个动画。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-136">Declare a <xref:System.Windows.Media.Animation.Storyboard> and one or more animations.</span></span>  
   
-2.  使用 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 和 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> [附加属性](GTMT)指定每个动画的目标对象和属性。  
+2.  <span data-ttu-id="ffa1d-137">使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>附加属性以指定目标对象和每个动画的属性。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-137">Use the <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> and <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> attached properties to specify the target object and property of each animation.</span></span>  
   
-3.  （仅限代码）为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 定义一个 <xref:System.Windows.NameScope>。  对将要与该 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 进行动画处理的对象名称进行注册。  
+3.  <span data-ttu-id="ffa1d-138">（仅代码）定义<xref:System.Windows.NameScope>为<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-138">(Code only) Define a <xref:System.Windows.NameScope> for a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement>.</span></span> <span data-ttu-id="ffa1d-139">注册的使用，进行动画处理的对象名称<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-139">Register the names of the objects to animate with that <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement>.</span></span>  
   
-4.  启动 <xref:System.Windows.Media.Animation.Storyboard>。  
+4.  <span data-ttu-id="ffa1d-140">开始<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-140">Begin the <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
- 启动 <xref:System.Windows.Media.Animation.Storyboard> 会将动画应用到它们进行动画处理的属性并将其启动。  启动 <xref:System.Windows.Media.Animation.Storyboard> 的方法有两种：使用 <xref:System.Windows.Media.Animation.Storyboard> 类提供的 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法，或者使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 操作。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中进行动画处理的唯一方法是使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 操作。<xref:System.Windows.Media.Animation.BeginStoryboard> 操作可用于 <xref:System.Windows.EventTrigger>、属性 <xref:System.Windows.Trigger> 或 <xref:System.Windows.DataTrigger>。  
+ <span data-ttu-id="ffa1d-141">从开始<xref:System.Windows.Media.Animation.Storyboard>将动画应用到它们进行动画处理的属性并将其启动。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-141">Beginning a <xref:System.Windows.Media.Animation.Storyboard> applies animations to the properties they animate and starts them.</span></span> <span data-ttu-id="ffa1d-142">若要开始使用两种方式<xref:System.Windows.Media.Animation.Storyboard>： 你可以使用<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法提供的<xref:System.Windows.Media.Animation.Storyboard>类，也可以使用<xref:System.Windows.Media.Animation.BeginStoryboard>操作。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-142">There are two ways to begin a <xref:System.Windows.Media.Animation.Storyboard>: you can use the <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method provided by the <xref:System.Windows.Media.Animation.Storyboard> class, or you can use a <xref:System.Windows.Media.Animation.BeginStoryboard> action.</span></span> <span data-ttu-id="ffa1d-143">要进行动画处理中的唯一方法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是使用<xref:System.Windows.Media.Animation.BeginStoryboard>操作。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-143">The only way to animate in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is to use a <xref:System.Windows.Media.Animation.BeginStoryboard> action.</span></span> <span data-ttu-id="ffa1d-144">A<xref:System.Windows.Media.Animation.BeginStoryboard>操作可在<xref:System.Windows.EventTrigger>，属性<xref:System.Windows.Trigger>，或<xref:System.Windows.DataTrigger>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-144">A <xref:System.Windows.Media.Animation.BeginStoryboard> action can be used in an <xref:System.Windows.EventTrigger>, property <xref:System.Windows.Trigger>, or a <xref:System.Windows.DataTrigger>.</span></span>  
   
- 下表列出了支持每个 <xref:System.Windows.Media.Animation.Storyboard> 开始技术的不同方面：基于实例、样式、控件模板和数据模板。  
+ <span data-ttu-id="ffa1d-145">下表显示不同的位置其中每个<xref:System.Windows.Media.Animation.Storyboard>开始支持技术： 每个实例、 样式、 控件模板和数据模板。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-145">The following table shows the different places where each <xref:System.Windows.Media.Animation.Storyboard> begin technique is supported: per-instance, style, control template, and data template.</span></span>  
   
-|开始演示图板时使用…|基于实例|样式|控件模板|数据模板|示例|  
-|----------------|----------|--------|----------|----------|--------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用演示图板对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和属性 <xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[How to: Trigger an Animation When Data Changes](http://msdn.microsoft.com/zh-cn/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|否|否|否|[使用演示图板对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<span data-ttu-id="ffa1d-146">开始情节提要所使用的技术</span><span class="sxs-lookup"><span data-stu-id="ffa1d-146">Storyboard is begun using…</span></span>|<span data-ttu-id="ffa1d-147">基于实例</span><span class="sxs-lookup"><span data-stu-id="ffa1d-147">Per-instance</span></span>|<span data-ttu-id="ffa1d-148">样式</span><span class="sxs-lookup"><span data-stu-id="ffa1d-148">Style</span></span>|<span data-ttu-id="ffa1d-149">控件模板</span><span class="sxs-lookup"><span data-stu-id="ffa1d-149">Control template</span></span>|<span data-ttu-id="ffa1d-150">数据模板</span><span class="sxs-lookup"><span data-stu-id="ffa1d-150">Data template</span></span>|<span data-ttu-id="ffa1d-151">示例</span><span class="sxs-lookup"><span data-stu-id="ffa1d-151">Example</span></span>|  
+|--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
+|<span data-ttu-id="ffa1d-152"><xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.EventTrigger></span><span class="sxs-lookup"><span data-stu-id="ffa1d-152"><xref:System.Windows.Media.Animation.BeginStoryboard> and an <xref:System.Windows.EventTrigger></span></span>|<span data-ttu-id="ffa1d-153">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-153">Yes</span></span>|<span data-ttu-id="ffa1d-154">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-154">Yes</span></span>|<span data-ttu-id="ffa1d-155">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-155">Yes</span></span>|<span data-ttu-id="ffa1d-156">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-156">Yes</span></span>|[<span data-ttu-id="ffa1d-157">使用情节提要对属性进行动画处理</span><span class="sxs-lookup"><span data-stu-id="ffa1d-157">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<span data-ttu-id="ffa1d-158"><xref:System.Windows.Media.Animation.BeginStoryboard>和属性<xref:System.Windows.Trigger></span><span class="sxs-lookup"><span data-stu-id="ffa1d-158"><xref:System.Windows.Media.Animation.BeginStoryboard> and a property <xref:System.Windows.Trigger></span></span>|<span data-ttu-id="ffa1d-159">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-159">No</span></span>|<span data-ttu-id="ffa1d-160">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-160">Yes</span></span>|<span data-ttu-id="ffa1d-161">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-161">Yes</span></span>|<span data-ttu-id="ffa1d-162">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-162">Yes</span></span>|[<span data-ttu-id="ffa1d-163">在属性值更改时触发动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-163">Trigger an Animation When a Property Value Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<span data-ttu-id="ffa1d-164"><xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.DataTrigger></span><span class="sxs-lookup"><span data-stu-id="ffa1d-164"><xref:System.Windows.Media.Animation.BeginStoryboard> and a <xref:System.Windows.DataTrigger></span></span>|<span data-ttu-id="ffa1d-165">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-165">No</span></span>|<span data-ttu-id="ffa1d-166">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-166">Yes</span></span>|<span data-ttu-id="ffa1d-167">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-167">Yes</span></span>|<span data-ttu-id="ffa1d-168">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-168">Yes</span></span>|[<span data-ttu-id="ffa1d-169">如何：在数据更改时触发动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-169">How to: Trigger an Animation When Data Changes</span></span>](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<span data-ttu-id="ffa1d-170"><xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="ffa1d-170"><xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method</span></span>|<span data-ttu-id="ffa1d-171">是</span><span class="sxs-lookup"><span data-stu-id="ffa1d-171">Yes</span></span>|<span data-ttu-id="ffa1d-172">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-172">No</span></span>|<span data-ttu-id="ffa1d-173">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-173">No</span></span>|<span data-ttu-id="ffa1d-174">No</span><span class="sxs-lookup"><span data-stu-id="ffa1d-174">No</span></span>|[<span data-ttu-id="ffa1d-175">使用情节提要对属性进行动画处理</span><span class="sxs-lookup"><span data-stu-id="ffa1d-175">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- 有关 <xref:System.Windows.Media.Animation.Storyboard> 对象的更多信息，请参见[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ <span data-ttu-id="ffa1d-176">有关详细信息<xref:System.Windows.Media.Animation.Storyboard>对象，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-176">For more information about <xref:System.Windows.Media.Animation.Storyboard> objects, see the [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
-## 本地动画  
- 本地动画为对任何 <xref:System.Windows.Media.Animation.Animatable> 对象的[依赖项属性](GTMT)进行动画处理提供了一种简便的方法。  当需要将单个动画应用到属性并且在动画启动后无需以交互方式控制动画时，应使用本地动画。  与 <xref:System.Windows.Media.Animation.Storyboard> 动画不同，本地动画可以对与 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 不相关的对象进行动画处理。  您也不必为此类动画定义 <xref:System.Windows.NameScope>。  
+## <a name="local-animations"></a><span data-ttu-id="ffa1d-177">本地动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-177">Local Animations</span></span>  
+ <span data-ttu-id="ffa1d-178">本地动画提供要进行动画处理的依赖项属性的任何一种简便方式<xref:System.Windows.Media.Animation.Animatable>对象。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-178">Local animations provide a convenient way to animate a dependency property of any <xref:System.Windows.Media.Animation.Animatable> object.</span></span> <span data-ttu-id="ffa1d-179">如果想要将单一动画应用到属性中，可以使用本地动画，并且动画启动后不需要以交互方式控制动画。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-179">Use local animations when you want to apply a single animation to a property and you don't need to interactively control the animation after it starts.</span></span> <span data-ttu-id="ffa1d-180">与不同<xref:System.Windows.Media.Animation.Storyboard>动画，本地动画可以动态显示不与关联的对象<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-180">Unlike a <xref:System.Windows.Media.Animation.Storyboard> animation, a local animation can animate an object that isn't associated with a <xref:System.Windows.FrameworkElement> or a <xref:System.Windows.FrameworkContentElement>.</span></span> <span data-ttu-id="ffa1d-181">你还不必定义<xref:System.Windows.NameScope>此类型的动画。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-181">You also don't have to define a <xref:System.Windows.NameScope> for this type of animation.</span></span>  
   
- 本地动画只能在代码中使用，无法在样式、控件模板或数据模板中进行定义。  本地动画无法在启动后以交互方式控制。  
+ <span data-ttu-id="ffa1d-182">本地动画可能仅在代码中使用，无法在样式、控件模板或数据模板中定义。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-182">Local animations may only be used in code, and cannot be defined in styles, control templates, or data templates.</span></span> <span data-ttu-id="ffa1d-183">本地动画启动后，无法以交互方式控制。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-183">A local animation cannot be interactively controlled after it is started.</span></span>  
   
- 若要使用本地动画进行动画处理，请完成以下步骤。  
+ <span data-ttu-id="ffa1d-184">若要使用本地动画进行动画处理，应完成以下步骤。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-184">To animate using a local animation, complete the following steps.</span></span>  
   
-1.  创建 <xref:System.Windows.Media.Animation.AnimationTimeline> 对象。  
+1.  <span data-ttu-id="ffa1d-185">创建<xref:System.Windows.Media.Animation.AnimationTimeline>对象。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-185">Create an <xref:System.Windows.Media.Animation.AnimationTimeline> object.</span></span>  
   
-2.  使用需要进行动画处理的对象的 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法将 <xref:System.Windows.Media.Animation.AnimationTimeline> 应用到您指定的属性。  
+2.  <span data-ttu-id="ffa1d-186">使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>你想要进行动画处理，将该对象的方法<xref:System.Windows.Media.Animation.AnimationTimeline>到你指定的属性。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-186">Use the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method of the object that you want to animate to apply the <xref:System.Windows.Media.Animation.AnimationTimeline> to the property that you specify.</span></span>  
   
- 下面的示例演示如何对 <xref:System.Windows.Controls.Button> 的宽度和背景颜色进行动画处理。  
+ <span data-ttu-id="ffa1d-187">下面的示例演示如何进行动画处理的宽度和背景颜色<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-187">The following example shows how to animate the width and background color of a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
  [!code-csharp[animateproperty#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
  [!code-vb[animateproperty#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
-## 时钟动画  
- 在以下情形中使用 <xref:System.Windows.Media.MediaPlayer.Clock%2A> 对象：在不使用 <xref:System.Windows.Media.Animation.Storyboard> 的情况下需要进行动画处理；在动画启动后需要创建复杂的计时树或需要以交互方式控制动画。  可以使用 Clock 对象对任何 <xref:System.Windows.Media.Animation.Animatable> 对象的[依赖项属性](GTMT)进行动画处理。  
+## <a name="clock-animations"></a><span data-ttu-id="ffa1d-188">时钟动画</span><span class="sxs-lookup"><span data-stu-id="ffa1d-188">Clock Animations</span></span>  
+ <span data-ttu-id="ffa1d-189">使用<xref:System.Windows.Media.MediaPlayer.Clock%2A>对象时要进行动画处理，而无需使用<xref:System.Windows.Media.Animation.Storyboard>并且你想要创建复杂的计时树或启动后启动为交互式控制动画。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-189">Use <xref:System.Windows.Media.MediaPlayer.Clock%2A> objects when you want to animate without using a <xref:System.Windows.Media.Animation.Storyboard> and you want to create complex timing trees or interactively control animations after they start.</span></span> <span data-ttu-id="ffa1d-190">可以使用时钟对象进行动画处理的任何依赖项属性<xref:System.Windows.Media.Animation.Animatable>对象。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-190">You can use Clock objects to animate a dependency property of any <xref:System.Windows.Media.Animation.Animatable> object.</span></span>  
   
- 您不能使用 <xref:System.Windows.Media.Animation.Clock> 对象直接在样式、控件模板或数据模板中进行动画处理  （动画和计时系统确实使用 <xref:System.Windows.Media.Animation.Clock> 对象在样式、控件模板或数据模板中进行动画处理，但是它必须从 <xref:System.Windows.Media.Animation.Storyboard> 中为您创建这些 <xref:System.Windows.Media.Animation.Clock> 对象。  有关 <xref:System.Windows.Media.Animation.Storyboard> 对象与 <xref:System.Windows.Media.Animation.Clock> 对象之间的关系的更多信息，请参见[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)）。  
+ <span data-ttu-id="ffa1d-191">不能使用<xref:System.Windows.Media.Animation.Clock>对象直接动画样式、 控制模板或数据模板。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-191">You cannot use <xref:System.Windows.Media.Animation.Clock> objects directly to animate in styles, control templates, or data templates.</span></span> <span data-ttu-id="ffa1d-192">(动画和计时系统确实使用<xref:System.Windows.Media.Animation.Clock>对象要进行动画处理中样式，控件模板，并且数据模板，但它必须创建这些<xref:System.Windows.Media.Animation.Clock>对象为你从<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-192">(The animation and timing system actually does use <xref:System.Windows.Media.Animation.Clock> objects to animate in styles, control templates, and data templates, but it must create those <xref:System.Windows.Media.Animation.Clock> objects for you from a <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="ffa1d-193">有关之间的关系的详细信息<xref:System.Windows.Media.Animation.Storyboard>对象和<xref:System.Windows.Media.Animation.Clock>对象，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)</span><span class="sxs-lookup"><span data-stu-id="ffa1d-193">For more information about the relationship between <xref:System.Windows.Media.Animation.Storyboard> objects and <xref:System.Windows.Media.Animation.Clock> objects, see the [Animation and Timing System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).)</span></span>  
   
- 若要将单个 <xref:System.Windows.Media.Animation.Clock> 应用到属性，请完成以下步骤。  
+ <span data-ttu-id="ffa1d-194">将单个<xref:System.Windows.Media.Animation.Clock>给某个属性，完成以下步骤。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-194">To apply a single <xref:System.Windows.Media.Animation.Clock> to a property, you complete the following steps.</span></span>  
   
-1.  创建 <xref:System.Windows.Media.Animation.AnimationTimeline> 对象。  
+1.  <span data-ttu-id="ffa1d-195">创建<xref:System.Windows.Media.Animation.AnimationTimeline>对象。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-195">Create an <xref:System.Windows.Media.Animation.AnimationTimeline> object.</span></span>  
   
-2.  使用 <xref:System.Windows.Media.Animation.AnimationTimeline> 的 <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> 方法来创建 <xref:System.Windows.Media.Animation.AnimationClock>。  
+2.  <span data-ttu-id="ffa1d-196">使用<xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A>方法<xref:System.Windows.Media.Animation.AnimationTimeline>创建<xref:System.Windows.Media.Animation.AnimationClock>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-196">Use the <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> method of the <xref:System.Windows.Media.Animation.AnimationTimeline> to create an <xref:System.Windows.Media.Animation.AnimationClock>.</span></span>  
   
-3.  使用需要进行动画处理的对象的 <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> 方法将 <xref:System.Windows.Media.Animation.AnimationClock> 应用到您指定的属性。  
+3.  <span data-ttu-id="ffa1d-197">使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>你想要进行动画处理，将该对象的方法<xref:System.Windows.Media.Animation.AnimationClock>到你指定的属性。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-197">Use the <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> method of the object that you want to animate to apply the <xref:System.Windows.Media.Animation.AnimationClock> to the property you specify.</span></span>  
   
- 下面的示例演示如何创建一个 <xref:System.Windows.Media.Animation.AnimationClock> 并将其应用到两个相似的属性。  
+ <span data-ttu-id="ffa1d-198">下面的示例演示如何创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到两个类似的属性。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-198">The following example shows how to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to two similar properties.</span></span>  
   
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
- 若要创建一个计时树并用其对属性进行动画处理，需要完成以下步骤。  
+ <span data-ttu-id="ffa1d-199">如果想要创建一个计时树并用其处理动画属性，应完成以下几个步骤。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-199">To create a timing tree and use it animate properties, you complete the following steps.</span></span>  
   
-1.  使用 <xref:System.Windows.Media.Animation.ParallelTimeline> 和 <xref:System.Windows.Media.Animation.AnimationTimeline> 对象来创建计时树。  
+1.  <span data-ttu-id="ffa1d-200">使用<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.AnimationTimeline>对象以创建计时树。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-200">Use <xref:System.Windows.Media.Animation.ParallelTimeline> and <xref:System.Windows.Media.Animation.AnimationTimeline> objects to create the timing tree.</span></span>  
   
-2.  使用根 <xref:System.Windows.Media.Animation.ParallelTimeline> 的 <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> 来创建 <xref:System.Windows.Media.Animation.ClockGroup>。  
+2.  <span data-ttu-id="ffa1d-201">使用<xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A>根的<xref:System.Windows.Media.Animation.ParallelTimeline>创建<xref:System.Windows.Media.Animation.ClockGroup>。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-201">Use the <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> of the root <xref:System.Windows.Media.Animation.ParallelTimeline> to create a <xref:System.Windows.Media.Animation.ClockGroup>.</span></span>  
   
-3.  循环访问 <xref:System.Windows.Media.Animation.ClockGroup> 的 <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> 并应用其 <xref:System.Windows.Media.Animation.Clock> 子对象。  对于每个 <xref:System.Windows.Media.Animation.AnimationClock> 子级，使用需要对其进行动画处理的对象的 <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> 方法将 <xref:System.Windows.Media.Animation.AnimationClock> 应用到您指定的属性。  
+3.  <span data-ttu-id="ffa1d-202">循环访问<xref:System.Windows.Media.Animation.ClockGroup.Children%2A>的<xref:System.Windows.Media.Animation.ClockGroup>并应用其子<xref:System.Windows.Media.Animation.Clock>对象。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-202">Iterate through the <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> of the <xref:System.Windows.Media.Animation.ClockGroup> and apply its child <xref:System.Windows.Media.Animation.Clock> objects.</span></span> <span data-ttu-id="ffa1d-203">每个<xref:System.Windows.Media.Animation.AnimationClock>子级，使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>你想要进行动画处理，将该对象的方法<xref:System.Windows.Media.Animation.AnimationClock>到你指定的属性</span><span class="sxs-lookup"><span data-stu-id="ffa1d-203">For each <xref:System.Windows.Media.Animation.AnimationClock> child, use the <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> method of the object that you want to animate to apply the <xref:System.Windows.Media.Animation.AnimationClock> to the property you specify</span></span>  
   
- 有关 Clock 对象的更多信息，请参见[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
+ <span data-ttu-id="ffa1d-204">有关时钟对象的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-204">For more information about Clock objects, see the [Animation and Timing System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).</span></span>  
   
-## 基于帧的动画：跳过动画和计时系统  
- 当需要完全绕过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统时使用此方法。  此方法的一个方案是物理动画，其中动画中的每一步都需要基于最后一组对象交互重新计算对象。  
+## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a><span data-ttu-id="ffa1d-205">基于帧的动画：绕过动画和计时系统</span><span class="sxs-lookup"><span data-stu-id="ffa1d-205">Per-Frame Animation: Bypass the Animation and Timing System</span></span>  
+ <span data-ttu-id="ffa1d-206">如果需要完全绕过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统，可以使用此方法。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-206">Use this approach when you need to completely bypass the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system.</span></span> <span data-ttu-id="ffa1d-207">此方法的一个方案是物理动画，其中的每个动画步骤都要求基于最后一组对象交互来重新计算。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-207">One scenario for this approach is physics animations, where each step in the animation requires objects to be recomputed based on the last set of object interactions.</span></span>  
   
- 基于帧的动画无法在样式、控件模板或数据模板中进行定义。  
+ <span data-ttu-id="ffa1d-208">基于帧的动画无法在样式、控件模板或数据模板内定义。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-208">Per-frame animations cannot be defined inside styles, control templates, or data templates.</span></span>  
   
- 若要逐帧进行动画处理，您应注册对象（该对象包含需要进行动画处理的对象）的 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件。  每帧调用一次此事件处理程序方法。  每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将[可视化树](GTMT)中持久呈现的数据封送到组合树中时，都将调用事件处理程序方法。  
+ <span data-ttu-id="ffa1d-209">要进行动画处理请逐个框架，因此你注册<xref:System.Windows.Media.CompositionTarget.Rendering>包含你想要进行动画处理的对象的对象的事件。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-209">To animate frame-by-frame, you register for the <xref:System.Windows.Media.CompositionTarget.Rendering> event of the object that contains the objects you want to animate.</span></span> <span data-ttu-id="ffa1d-210">每帧会调用一次此事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-210">This event handler method gets called once per frame.</span></span> <span data-ttu-id="ffa1d-211">每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将可视化树中的持久呈现数据封送到复合树时，都将调用事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-211">Each time that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals the persisted rendering data in the visual tree across to the composition tree, your event handler method is called.</span></span>  
   
- 在事件处理程序中，需要对动画效果执行任意的计算，并设置需要使用这些值进行动画处理的对象的属性。  
+ <span data-ttu-id="ffa1d-212">在事件处理程序中，执行动画效果所需的任何计算，并设置想要使用这些值进行动画处理的对象的属性。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-212">In your event handler, perform whatever calculations are necessary for your animation effect and set the properties of the objects you want to animate with these values.</span></span>  
   
- 若要获取当前帧的显示时间，可以将与此事件相关的 <xref:System.EventArgs> 强制转换为 <xref:System.Windows.Media.RenderingEventArgs>，从而提供可用于获取当前帧呈现时间的 <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> 属性。  
+ <span data-ttu-id="ffa1d-213">若要获取当前帧，表示时间<xref:System.EventArgs>关联与此事件可以转换为<xref:System.Windows.Media.RenderingEventArgs>，它提供的信息<xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A>属性，可用于获取当前帧的呈现时间。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-213">To obtain the presentation time for the current frame, the <xref:System.EventArgs> associated with this event can be cast as <xref:System.Windows.Media.RenderingEventArgs>, which provide a <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> property that you can use to obtain the current frame's rendering time.</span></span>  
   
- 有关更多信息，请参见 <xref:System.Windows.Media.CompositionTarget.Rendering> 页。  
+ <span data-ttu-id="ffa1d-214">有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。</span><span class="sxs-lookup"><span data-stu-id="ffa1d-214">For more information, see the <xref:System.Windows.Media.CompositionTarget.Rendering> page.</span></span>  
   
-## 请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ffa1d-215">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ffa1d-215">See Also</span></span>  
+ [<span data-ttu-id="ffa1d-216">动画概述</span><span class="sxs-lookup"><span data-stu-id="ffa1d-216">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="ffa1d-217">演示图板概述</span><span class="sxs-lookup"><span data-stu-id="ffa1d-217">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [<span data-ttu-id="ffa1d-218">动画和计时系统概述</span><span class="sxs-lookup"><span data-stu-id="ffa1d-218">Animation and Timing System Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [<span data-ttu-id="ffa1d-219">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="ffa1d-219">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

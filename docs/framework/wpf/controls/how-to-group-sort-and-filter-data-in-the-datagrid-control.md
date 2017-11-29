@@ -1,161 +1,169 @@
 ---
-title: "如何：在 DataGrid 控件中对数据进行分组、排序和筛选 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DataGrid [WPF], 筛选器"
-  - "DataGrid [WPF], 组"
-  - "DataGrid [WPF], 排序"
+title: "如何：在 DataGrid 控件中对数据进行分组、排序和筛选"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGrid [WPF], sort
+- DataGrid [WPF], group
+- DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 DataGrid 控件中对数据进行分组、排序和筛选
-通过对数据进行分组、排序和筛选，以不同方式查看 <xref:System.Windows.Controls.DataGrid> 中的数据常常很有用。  若要在 <xref:System.Windows.Controls.DataGrid> 中对数据进行分组、排序和筛选，请将其绑定到支持这些功能的 <xref:System.Windows.Data.CollectionView>。  随后便可以在 <xref:System.Windows.Data.CollectionView> 中处理数据，而不会影响基础源数据。  该集合视图中的更改将反映在 <xref:System.Windows.Controls.DataGrid> 用户界面 \(UI\) 中。  
+# <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a><span data-ttu-id="c0d60-102">如何：在 DataGrid 控件中对数据进行分组、排序和筛选</span><span class="sxs-lookup"><span data-stu-id="c0d60-102">How to: Group, Sort, and Filter Data in the DataGrid Control</span></span>
+<span data-ttu-id="c0d60-103">通常很有用数据在<xref:System.Windows.Controls.DataGrid>通过分组、 排序和筛选的数据不同的方式。</span><span class="sxs-lookup"><span data-stu-id="c0d60-103">It is often useful to view data in a <xref:System.Windows.Controls.DataGrid> in different ways by grouping, sorting, and filtering the data.</span></span> <span data-ttu-id="c0d60-104">若要进行分组、 排序和筛选数据中的<xref:System.Windows.Controls.DataGrid>，你将其绑定到<xref:System.Windows.Data.CollectionView>支持这些功能。</span><span class="sxs-lookup"><span data-stu-id="c0d60-104">To group, sort, and filter the data in a <xref:System.Windows.Controls.DataGrid>, you bind it to a <xref:System.Windows.Data.CollectionView> that supports these functions.</span></span> <span data-ttu-id="c0d60-105">你可以然后使用中的数据<xref:System.Windows.Data.CollectionView>而不会影响基础数据源。</span><span class="sxs-lookup"><span data-stu-id="c0d60-105">You can then work with the data in the <xref:System.Windows.Data.CollectionView> without affecting the underlying source data.</span></span> <span data-ttu-id="c0d60-106">集合视图中的更改会反映在<xref:System.Windows.Controls.DataGrid>用户界面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="c0d60-106">The changes in the collection view are reflected in the <xref:System.Windows.Controls.DataGrid> user interface (UI).</span></span>  
   
- <xref:System.Windows.Data.CollectionView> 类为实现 <xref:System.Collections.IEnumerable> 接口的数据源提供分组和排序功能。  使用 <xref:System.Windows.Data.CollectionViewSource> 类可以从 XAML 设置 <xref:System.Windows.Data.CollectionView> 的属性。  
+ <span data-ttu-id="c0d60-107"><xref:System.Windows.Data.CollectionView>类提供了分组和排序的数据源，实现的功能<xref:System.Collections.IEnumerable>接口。</span><span class="sxs-lookup"><span data-stu-id="c0d60-107">The <xref:System.Windows.Data.CollectionView> class provides grouping and sorting functionality for a data source that implements the <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="c0d60-108"><xref:System.Windows.Data.CollectionViewSource>类使你能够设置的属性<xref:System.Windows.Data.CollectionView>从 XAML。</span><span class="sxs-lookup"><span data-stu-id="c0d60-108">The <xref:System.Windows.Data.CollectionViewSource> class enables you to set the properties of a <xref:System.Windows.Data.CollectionView> from XAML.</span></span>  
   
- 在此示例中，一个 `Task` 对象集合被绑定到一个 <xref:System.Windows.Data.CollectionViewSource>。  <xref:System.Windows.Data.CollectionViewSource> 用作 <xref:System.Windows.Controls.DataGrid> 的 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  对 <xref:System.Windows.Data.CollectionViewSource> 执行分组、排序和筛选并且结果显示在 <xref:System.Windows.Controls.DataGrid> UI 中。  
+ <span data-ttu-id="c0d60-109">在此示例中，一套`Task`对象绑定到<xref:System.Windows.Data.CollectionViewSource>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-109">In this example, a collection of `Task` objects is bound to a <xref:System.Windows.Data.CollectionViewSource>.</span></span> <span data-ttu-id="c0d60-110"><xref:System.Windows.Data.CollectionViewSource>用作<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-110">The <xref:System.Windows.Data.CollectionViewSource> is used as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.DataGrid>.</span></span> <span data-ttu-id="c0d60-111">对执行分组、 排序和筛选<xref:System.Windows.Data.CollectionViewSource>，并显示在<xref:System.Windows.Controls.DataGrid>UI。</span><span class="sxs-lookup"><span data-stu-id="c0d60-111">Grouping, sorting, and filtering are performed on the <xref:System.Windows.Data.CollectionViewSource> and are displayed in the <xref:System.Windows.Controls.DataGrid> UI.</span></span>  
   
- ![DataGrid 中的分组数据](../../../../docs/framework/wpf/controls/media/wpf-datagridgroups.png "WPF\_DataGridGroups")  
-在 DataGrid 中对数据分组  
+ <span data-ttu-id="c0d60-112">![DataGrid 中的数据分组](../../../../docs/framework/wpf/controls/media/wpf-datagridgroups.png "WPF_DataGridGroups")</span><span class="sxs-lookup"><span data-stu-id="c0d60-112">![Grouped data in a DataGrid](../../../../docs/framework/wpf/controls/media/wpf-datagridgroups.png "WPF_DataGridGroups")</span></span>  
+<span data-ttu-id="c0d60-113">DataGrid 中的分组的数据</span><span class="sxs-lookup"><span data-stu-id="c0d60-113">Grouped Data in a DataGrid</span></span>  
   
-## 使用 CollectionViewSource 作为 ItemsSource  
- 若要在 <xref:System.Windows.Controls.DataGrid> 控件中对数据进行分组、排序和筛选，请将 <xref:System.Windows.Controls.DataGrid> 绑定到支持这些功能的 <xref:System.Windows.Data.CollectionView>。  在本示例中，<xref:System.Windows.Controls.DataGrid> 绑定到 <xref:System.Windows.Data.CollectionViewSource>，后者为 `Task` 对象的 <xref:System.Collections.Generic.List%601> 提供这些功能。  
+## <a name="using-a-collectionviewsource-as-an-itemssource"></a><span data-ttu-id="c0d60-114">CollectionViewSource 用作 ItemsSource</span><span class="sxs-lookup"><span data-stu-id="c0d60-114">Using a CollectionViewSource as an ItemsSource</span></span>  
+ <span data-ttu-id="c0d60-115">组、 排序和筛选器中的数据到<xref:System.Windows.Controls.DataGrid>控件，你将绑定<xref:System.Windows.Controls.DataGrid>到<xref:System.Windows.Data.CollectionView>支持这些功能。</span><span class="sxs-lookup"><span data-stu-id="c0d60-115">To group, sort, and filter data in a <xref:System.Windows.Controls.DataGrid> control, you bind the <xref:System.Windows.Controls.DataGrid> to a <xref:System.Windows.Data.CollectionView> that supports these functions.</span></span> <span data-ttu-id="c0d60-116">在此示例中，<xref:System.Windows.Controls.DataGrid>绑定到<xref:System.Windows.Data.CollectionViewSource>，它提供有关这些函数<xref:System.Collections.Generic.List%601>的`Task`对象。</span><span class="sxs-lookup"><span data-stu-id="c0d60-116">In this example, the <xref:System.Windows.Controls.DataGrid> is bound to a <xref:System.Windows.Data.CollectionViewSource> that provides these functions for a <xref:System.Collections.Generic.List%601> of `Task` objects.</span></span>  
   
-#### 将 DataGrid 绑定到 CollectionViewSource  
+#### <a name="to-bind-a-datagrid-to-a-collectionviewsource"></a><span data-ttu-id="c0d60-117">将 DataGrid 绑定到 CollectionViewSource</span><span class="sxs-lookup"><span data-stu-id="c0d60-117">To bind a DataGrid to a CollectionViewSource</span></span>  
   
-1.  创建实现 <xref:System.Collections.IEnumerable> 接口的数据集合。  
+1.  <span data-ttu-id="c0d60-118">创建数据集合可实现<xref:System.Collections.IEnumerable>接口。</span><span class="sxs-lookup"><span data-stu-id="c0d60-118">Create a data collection that implements the <xref:System.Collections.IEnumerable> interface.</span></span>  
   
-     如果使用 <xref:System.Collections.Generic.List%601> 创建集合，则应创建一个继承自 <xref:System.Collections.Generic.List%601> 的新类，而不是实例化 <xref:System.Collections.Generic.List%601> 的实例。  这使您能够在 XAML 中将数据绑定到该集合。  
+     <span data-ttu-id="c0d60-119">如果你使用<xref:System.Collections.Generic.List%601>若要创建你的集合，你应创建新的类，该类继承<xref:System.Collections.Generic.List%601>而不是实例化的实例<xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-119">If you use <xref:System.Collections.Generic.List%601> to create your collection, you should create a new class that inherits from <xref:System.Collections.Generic.List%601> instead of instantiating an instance of <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="c0d60-120">这使你将数据绑定到 XAML 中的集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-120">This enables you to data bind to the collection in XAML.</span></span>  
   
     > [!NOTE]
-    >  该集合中的对象必须实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口和 <xref:System.ComponentModel.IEditableObject> 接口，以便 <xref:System.Windows.Controls.DataGrid> 对属性更改和编辑操作正确做出响应。  有关更多信息，请参见[实现属性更改通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)。  
+    >  <span data-ttu-id="c0d60-121">集合中的对象必须实现<xref:System.ComponentModel.INotifyPropertyChanged>已更改的接口和<xref:System.ComponentModel.IEditableObject>接口，以便<xref:System.Windows.Controls.DataGrid>正确响应属性更改和编辑。</span><span class="sxs-lookup"><span data-stu-id="c0d60-121">The objects in the collection must implement the <xref:System.ComponentModel.INotifyPropertyChanged> changed interface and the <xref:System.ComponentModel.IEditableObject> interface in order for the <xref:System.Windows.Controls.DataGrid> to respond correctly to property changes and edits.</span></span> <span data-ttu-id="c0d60-122">有关详细信息，请参阅[实现属性更改通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)。</span><span class="sxs-lookup"><span data-stu-id="c0d60-122">For more information, see [Implement Property Change Notification](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).</span></span>  
   
      [!code-csharp[DataGrid_GroupSortFilter#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
      [!code-vb[DataGrid_GroupSortFilter#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]  
   
-2.  在 XAML 中，创建集合类的一个实例并设置 [x:Key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)。  
+2.  <span data-ttu-id="c0d60-123">在 XAML 中，创建集合类的实例并设置[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="c0d60-123">In XAML, create an instance of the collection class and set the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md).</span></span>  
   
-3.  在 XAML 中，创建 <xref:System.Windows.Data.CollectionViewSource> 类的一个实例，设置 [x:Key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)，并将集合类的实例设置为 <xref:System.Windows.Data.CollectionViewSource.Source%2A>。  
+3.  <span data-ttu-id="c0d60-124">在 XAML 中，创建的实例<xref:System.Windows.Data.CollectionViewSource>类中，设置[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)，并设置你的集合类作为实例<xref:System.Windows.Data.CollectionViewSource.Source%2A>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-124">In XAML, create an instance of the <xref:System.Windows.Data.CollectionViewSource> class, set the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md), and set the instance of your collection class as the <xref:System.Windows.Data.CollectionViewSource.Source%2A>.</span></span>  
   
-     [!code-xml[DataGrid_GroupSortFilter#201](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]  
+     [!code-xaml[DataGrid_GroupSortFilter#201](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]  
   
-4.  创建 <xref:System.Windows.Controls.DataGrid> 类的一个实例，并将 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 属性设置为 <xref:System.Windows.Data.CollectionViewSource>。  
+4.  <span data-ttu-id="c0d60-125">创建的实例<xref:System.Windows.Controls.DataGrid>类，并将设置<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>属性<xref:System.Windows.Data.CollectionViewSource>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-125">Create an instance of the <xref:System.Windows.Controls.DataGrid> class, and set the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property to the <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
   
-     [!code-xml[DataGrid_GroupSortFilter#002](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#002)]  
+     [!code-xaml[DataGrid_GroupSortFilter#002](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#002)]  
   
-5.  若要从代码访问 <xref:System.Windows.Data.CollectionViewSource>，请使用 <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> 方法获取对 <xref:System.Windows.Data.CollectionViewSource> 的引用。  
+5.  <span data-ttu-id="c0d60-126">访问<xref:System.Windows.Data.CollectionViewSource>在代码中使用<xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A>方法要获取对引用<xref:System.Windows.Data.CollectionViewSource>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-126">To access the <xref:System.Windows.Data.CollectionViewSource> from your code, use the <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> method to get a reference to the <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
   
      [!code-csharp[DataGrid_GroupSortFilter#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#102)]
      [!code-vb[DataGrid_GroupSortFilter#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#102)]  
   
-## 对 DataGrid 中的项分组  
- 为了指定项在 <xref:System.Windows.Controls.DataGrid> 中的分组方式，使用 <xref:System.Windows.Data.PropertyGroupDescription> 类型对源视图中的项进行分组。  
+## <a name="grouping-items-in-a-datagrid"></a><span data-ttu-id="c0d60-127">DataGrid 中的分组项</span><span class="sxs-lookup"><span data-stu-id="c0d60-127">Grouping items in a DataGrid</span></span>  
+ <span data-ttu-id="c0d60-128">若要指定项中的分组方式<xref:System.Windows.Controls.DataGrid>，你使用<xref:System.Windows.Data.PropertyGroupDescription>类型在源视图中的项进行分组。</span><span class="sxs-lookup"><span data-stu-id="c0d60-128">To specify how items are grouped in a <xref:System.Windows.Controls.DataGrid>, you use the <xref:System.Windows.Data.PropertyGroupDescription> type to group the items in the source view.</span></span>  
   
-#### 使用 XAML 在 DataGrid 中对项分组  
+#### <a name="to-group-items-in-a-datagrid-using-xaml"></a><span data-ttu-id="c0d60-129">对使用 XAML DataGrid 中的项进行分组</span><span class="sxs-lookup"><span data-stu-id="c0d60-129">To group items in a DataGrid using XAML</span></span>  
   
-1.  创建一个 <xref:System.Windows.Data.PropertyGroupDescription>，它指定作为分组依据的属性。  可以在 XAML 或代码中指定该属性。  
+1.  <span data-ttu-id="c0d60-130">创建<xref:System.Windows.Data.PropertyGroupDescription>指定分组所依据的属性。</span><span class="sxs-lookup"><span data-stu-id="c0d60-130">Create a <xref:System.Windows.Data.PropertyGroupDescription> that specifies the property to group by.</span></span> <span data-ttu-id="c0d60-131">在 XAML 或代码中，你可以指定属性。</span><span class="sxs-lookup"><span data-stu-id="c0d60-131">You can specify the property in XAML or in code.</span></span>  
   
-    1.  在 XAML 中，将 <xref:System.Windows.Data.PropertyGroupDescription.PropertyName%2A> 设置为作为分组依据的属性的名称。  
+    1.  <span data-ttu-id="c0d60-132">在 XAML 中，设置<xref:System.Windows.Data.PropertyGroupDescription.PropertyName%2A>分组所依据的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="c0d60-132">In XAML, set the <xref:System.Windows.Data.PropertyGroupDescription.PropertyName%2A> to the name of the property to group by.</span></span>  
   
-    2.  在代码中，将作为分组依据的属性的名称传递给构造函数。  
+    2.  <span data-ttu-id="c0d60-133">在代码中，将传递给构造函数要分组的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="c0d60-133">In code, pass the name of the property to group by to the constructor.</span></span>  
   
-2.  将 <xref:System.Windows.Data.PropertyGroupDescription> 添加到 <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A?displayProperty=fullName> 集合。  
+2.  <span data-ttu-id="c0d60-134">添加<xref:System.Windows.Data.PropertyGroupDescription>到<xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A?displayProperty=nameWithType>集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-134">Add the <xref:System.Windows.Data.PropertyGroupDescription> to the <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A?displayProperty=nameWithType> collection.</span></span>  
   
-3.  将 <xref:System.Windows.Data.PropertyGroupDescription> 的附加实例添加到 <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> 集合，以便添加更多分组级别。  
+3.  <span data-ttu-id="c0d60-135">添加的其他实例<xref:System.Windows.Data.PropertyGroupDescription>到<xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A>要添加更多级别分组的集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-135">Add additional instances of <xref:System.Windows.Data.PropertyGroupDescription> to the <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> collection to add more levels of grouping.</span></span>  
   
-     [!code-xml[DataGrid_GroupSortFilter#012](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#012)]  
+     [!code-xaml[DataGrid_GroupSortFilter#012](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#012)]  
   
      [!code-csharp[DataGrid_GroupSortFilter#112](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#112)]
      [!code-vb[DataGrid_GroupSortFilter#112](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#112)]  
   
-4.  若要移除某个组，请从 <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> 集合中移除 <xref:System.Windows.Data.PropertyGroupDescription>。  
+4.  <span data-ttu-id="c0d60-136">若要删除某个组，请删除<xref:System.Windows.Data.PropertyGroupDescription>从<xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-136">To remove a group, remove the <xref:System.Windows.Data.PropertyGroupDescription> from the <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> collection.</span></span>  
   
-5.  若要移除所有组，请调用 <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> 集合的 <xref:System.Collections.ObjectModel.Collection%601.Clear%2A> 方法。  
+5.  <span data-ttu-id="c0d60-137">若要删除所有组，请调用<xref:System.Collections.ObjectModel.Collection%601.Clear%2A>方法<xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-137">To remove all groups, call the <xref:System.Collections.ObjectModel.Collection%601.Clear%2A> method of the <xref:System.Windows.Data.CollectionViewSource.GroupDescriptions%2A> collection.</span></span>  
   
      [!code-csharp[DataGrid_GroupSortFilter#114](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#114)]
      [!code-vb[DataGrid_GroupSortFilter#114](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#114)]  
   
- 在 <xref:System.Windows.Controls.DataGrid> 中对项分组时，可以定义用于指定每个组的外观的 <xref:System.Windows.Controls.GroupStyle>。  可应用 <xref:System.Windows.Controls.GroupStyle>，方法是将其添加到 DataGrid 的 <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> 集合。  如果您具有多个分组级别，则可以将不同的样式应用于每个组级别。  应用样式的顺序与定义它们的顺序相同。  例如，如果您定义两个样式，则第一个样式将应用于顶级行组。  第二个样式将应用于第二个级别及其下的所有行组。  <xref:System.Windows.Controls.GroupStyle> 的 <xref:System.Windows.FrameworkElement.DataContext%2A> 是组表示的 <xref:System.Windows.Data.CollectionViewGroup>。  
+ <span data-ttu-id="c0d60-138">项中的分组时<xref:System.Windows.Controls.DataGrid>，你可以定义<xref:System.Windows.Controls.GroupStyle>，它指定每个组的外观。</span><span class="sxs-lookup"><span data-stu-id="c0d60-138">When items are grouped in the <xref:System.Windows.Controls.DataGrid>, you can define a <xref:System.Windows.Controls.GroupStyle> that specifies the appearance of each group.</span></span> <span data-ttu-id="c0d60-139">你将应用<xref:System.Windows.Controls.GroupStyle>通过将其添加到<xref:System.Windows.Controls.ItemsControl.GroupStyle%2A>DataGrid 的集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-139">You apply the <xref:System.Windows.Controls.GroupStyle> by adding it to the <xref:System.Windows.Controls.ItemsControl.GroupStyle%2A> collection of the DataGrid.</span></span> <span data-ttu-id="c0d60-140">如果你有多个级别的分组，你可以将不同样式应用到每个分组级别。</span><span class="sxs-lookup"><span data-stu-id="c0d60-140">If you have multiple levels of grouping, you can apply different styles to each group level.</span></span> <span data-ttu-id="c0d60-141">在其中定义的顺序应用样式。</span><span class="sxs-lookup"><span data-stu-id="c0d60-141">Styles are applied in the order in which they are defined.</span></span> <span data-ttu-id="c0d60-142">例如，如果你定义两种样式，第一个将应用于顶级行组。</span><span class="sxs-lookup"><span data-stu-id="c0d60-142">For example, if you define two styles, the first will be applied to top level row groups.</span></span> <span data-ttu-id="c0d60-143">第二种样式将应用于第二个级别的所有行组和下限。</span><span class="sxs-lookup"><span data-stu-id="c0d60-143">The second style will be applied to all row groups at the second level and lower.</span></span> <span data-ttu-id="c0d60-144"><xref:System.Windows.FrameworkElement.DataContext%2A>的<xref:System.Windows.Controls.GroupStyle>是<xref:System.Windows.Data.CollectionViewGroup>组表示。</span><span class="sxs-lookup"><span data-stu-id="c0d60-144">The <xref:System.Windows.FrameworkElement.DataContext%2A> of the <xref:System.Windows.Controls.GroupStyle> is the <xref:System.Windows.Data.CollectionViewGroup> that the group represents.</span></span>  
   
-#### 更改行组标头的外观  
+#### <a name="to-change-the-appearance-of-row-group-headers"></a><span data-ttu-id="c0d60-145">若要更改的行组标题的外观</span><span class="sxs-lookup"><span data-stu-id="c0d60-145">To change the appearance of row group headers</span></span>  
   
-1.  创建定义行组外观的 <xref:System.Windows.Controls.GroupStyle>。  
+1.  <span data-ttu-id="c0d60-146">创建<xref:System.Windows.Controls.GroupStyle>定义行组的外观。</span><span class="sxs-lookup"><span data-stu-id="c0d60-146">Create a <xref:System.Windows.Controls.GroupStyle> that defines the appearance of the row group.</span></span>  
   
-2.  将 <xref:System.Windows.Controls.GroupStyle> 放入 `<DataGrid.GroupStyle>` 标记中。  
+2.  <span data-ttu-id="c0d60-147">Put<xref:System.Windows.Controls.GroupStyle>内`<DataGrid.GroupStyle>`标记。</span><span class="sxs-lookup"><span data-stu-id="c0d60-147">Put the <xref:System.Windows.Controls.GroupStyle> inside the `<DataGrid.GroupStyle>` tags.</span></span>  
   
-     [!code-xml[DataGrid_GroupSortFilter#003](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#003)]  
+     [!code-xaml[DataGrid_GroupSortFilter#003](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#003)]  
   
-## 对 DataGrid 中的项排序  
- 若要指定项在 <xref:System.Windows.Controls.DataGrid> 中的排序方式，使用 <xref:System.ComponentModel.SortDescription> 类型对源视图中的项进行排序。  
+## <a name="sorting-items-in-a-datagrid"></a><span data-ttu-id="c0d60-148">DataGrid 中的项进行排序</span><span class="sxs-lookup"><span data-stu-id="c0d60-148">Sorting items in a DataGrid</span></span>  
+ <span data-ttu-id="c0d60-149">若要指定项中的排序方式<xref:System.Windows.Controls.DataGrid>，你使用<xref:System.ComponentModel.SortDescription>类型进行排序的源视图中的项。</span><span class="sxs-lookup"><span data-stu-id="c0d60-149">To specify how items are sorted in a <xref:System.Windows.Controls.DataGrid>, you use the <xref:System.ComponentModel.SortDescription> type to sort the items in the source view.</span></span>  
   
-#### 对 DataGrid 中的项进行排序  
+#### <a name="to-sort-items-in-a-datagrid"></a><span data-ttu-id="c0d60-150">DataGrid 中的项进行排序</span><span class="sxs-lookup"><span data-stu-id="c0d60-150">To sort items in a DataGrid</span></span>  
   
-1.  创建一个 <xref:System.ComponentModel.SortDescription>，它指定作为排序方式的属性。  可以在 XAML 或代码中指定该属性。  
+1.  <span data-ttu-id="c0d60-151">创建<xref:System.ComponentModel.SortDescription>，它指定要作为排序依据的属性。</span><span class="sxs-lookup"><span data-stu-id="c0d60-151">Create a <xref:System.ComponentModel.SortDescription> that specifies the property to sort by.</span></span> <span data-ttu-id="c0d60-152">在 XAML 或代码中，你可以指定属性。</span><span class="sxs-lookup"><span data-stu-id="c0d60-152">You can specify the property in XAML or in code.</span></span>  
   
-    1.  在 XAML 中，将 <xref:System.ComponentModel.SortDescription.PropertyName%2A> 设置为作为排序方式的属性的名称。  
+    1.  <span data-ttu-id="c0d60-153">在 XAML 中，设置<xref:System.ComponentModel.SortDescription.PropertyName%2A>为要作为排序依据的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="c0d60-153">In XAML, set the <xref:System.ComponentModel.SortDescription.PropertyName%2A> to the name of the property to sort by.</span></span>  
   
-    2.  在代码中，将作为排序方式的属性的名称以及 <xref:System.ComponentModel.ListSortDirection> 传递给构造函数。  
+    2.  <span data-ttu-id="c0d60-154">在代码中，将名称传递给要作为排序依据的属性和<xref:System.ComponentModel.ListSortDirection>给构造函数。</span><span class="sxs-lookup"><span data-stu-id="c0d60-154">In code, pass the name of the property to sort by and the <xref:System.ComponentModel.ListSortDirection> to the constructor.</span></span>  
   
-2.  将 <xref:System.ComponentModel.SortDescription> 添加到 <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A?displayProperty=fullName> 集合。  
+2.  <span data-ttu-id="c0d60-155">添加<xref:System.ComponentModel.SortDescription>到<xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A?displayProperty=nameWithType>集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-155">Add the <xref:System.ComponentModel.SortDescription> to the <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A?displayProperty=nameWithType> collection.</span></span>  
   
-3.  将 <xref:System.ComponentModel.SortDescription> 的附加实例添加到 <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A> 集合，以便按附加的属性进行排序。  
+3.  <span data-ttu-id="c0d60-156">添加的其他实例<xref:System.ComponentModel.SortDescription>到<xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A>若要按其他属性的集合。</span><span class="sxs-lookup"><span data-stu-id="c0d60-156">Add additional instances of <xref:System.ComponentModel.SortDescription> to the <xref:System.Windows.Data.CollectionViewSource.SortDescriptions%2A> collection to sort by additional properties.</span></span>  
   
-     [!code-xml[DataGrid_GroupSortFilter#011](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#011)]  
+     [!code-xaml[DataGrid_GroupSortFilter#011](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#011)]  
   
      [!code-csharp[DataGrid_GroupSortFilter#211](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml.cs#211)]
      [!code-vb[DataGrid_GroupSortFilter#211](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#211)]  
   
-## 对 DataGrid 中的项进行筛选  
- 若要使用 <xref:System.Windows.Data.CollectionViewSource> 在 <xref:System.Windows.Controls.DataGrid> 中对项进行筛选，请在 <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=fullName> 事件的处理程序中提供筛选逻辑。  
+## <a name="filtering-items-in-a-datagrid"></a><span data-ttu-id="c0d60-157">筛选数据网格中的项</span><span class="sxs-lookup"><span data-stu-id="c0d60-157">Filtering items in a DataGrid</span></span>  
+ <span data-ttu-id="c0d60-158">中的筛选器项<xref:System.Windows.Controls.DataGrid>使用<xref:System.Windows.Data.CollectionViewSource>，提供的处理程序中的筛选逻辑<xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="c0d60-158">To filter items in a <xref:System.Windows.Controls.DataGrid> using a <xref:System.Windows.Data.CollectionViewSource>, you provide the filtering logic in the handler for the <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> event.</span></span>  
   
-#### 对 DataGrid 中的项进行筛选  
+#### <a name="to-filter-items-in-a-datagrid"></a><span data-ttu-id="c0d60-159">若要筛选数据网格中的项</span><span class="sxs-lookup"><span data-stu-id="c0d60-159">To filter items in a DataGrid</span></span>  
   
-1.  为 <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=fullName> 事件添加处理程序。  
+1.  <span data-ttu-id="c0d60-160">添加的处理程序<xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="c0d60-160">Add a handler for the <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> event.</span></span>  
   
-2.  在 <xref:System.Windows.Data.CollectionViewSource.Filter> 事件处理程序中，定义筛选逻辑。  
+2.  <span data-ttu-id="c0d60-161">在<xref:System.Windows.Data.CollectionViewSource.Filter>事件处理程序，定义筛选逻辑。</span><span class="sxs-lookup"><span data-stu-id="c0d60-161">In the <xref:System.Windows.Data.CollectionViewSource.Filter> event handler, define the filtering logic.</span></span>  
   
-     每次刷新视图时都会应用该筛选器。  
+     <span data-ttu-id="c0d60-162">每次刷新该视图时，将应用筛选器。</span><span class="sxs-lookup"><span data-stu-id="c0d60-162">The filter will be applied every time the view is refreshed.</span></span>  
   
-     [!code-xml[DataGrid_GroupSortFilter#013](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#013)]  
+     [!code-xaml[DataGrid_GroupSortFilter#013](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#013)]  
   
      [!code-csharp[DataGrid_GroupSortFilter#113](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#113)]
      [!code-vb[DataGrid_GroupSortFilter#113](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#113)]  
   
- 或者，也可以通过创建提供筛选逻辑的方法，并将 <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=fullName> 属性设置为应用该筛选器，在 <xref:System.Windows.Controls.DataGrid> 中对项进行筛选。  若要查看此方法的示例，请参见[筛选视图中的数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)。  
+ <span data-ttu-id="c0d60-163">或者，你可以筛选中的项<xref:System.Windows.Controls.DataGrid>通过创建一个提供的筛选的逻辑和设置方法<xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType>属性，将应用筛选器。</span><span class="sxs-lookup"><span data-stu-id="c0d60-163">Alternatively, you can filter items in a <xref:System.Windows.Controls.DataGrid> by creating a method that provides the filtering logic and setting the <xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType> property to apply the filter.</span></span> <span data-ttu-id="c0d60-164">若要查看此方法的示例，请参阅[的视图中的筛选器数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)。</span><span class="sxs-lookup"><span data-stu-id="c0d60-164">To see an example of this method, see [Filter Data in a View](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md).</span></span>  
   
-## 示例  
- 下面的示例演示如何在 <xref:System.Windows.Data.CollectionViewSource> 中对 `Task` 数据进行分组、排序和筛选，以及如何在 <xref:System.Windows.Controls.DataGrid> 中显示经过分组、排序和筛选的 `Task` 数据。  <xref:System.Windows.Data.CollectionViewSource> 用作 <xref:System.Windows.Controls.DataGrid> 的 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。  对 <xref:System.Windows.Data.CollectionViewSource> 执行分组、排序和筛选并且结果显示在 <xref:System.Windows.Controls.DataGrid> UI 中。  
+## <a name="example"></a><span data-ttu-id="c0d60-165">示例</span><span class="sxs-lookup"><span data-stu-id="c0d60-165">Example</span></span>  
+ <span data-ttu-id="c0d60-166">下面的示例演示分组、 排序和筛选`Task`中的数据<xref:System.Windows.Data.CollectionViewSource>和显示经过分组、 排序，并筛选`Task`中的数据<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-166">The following example demonstrates grouping, sorting, and filtering `Task` data in a <xref:System.Windows.Data.CollectionViewSource> and displaying the grouped, sorted, and filtered `Task` data in a <xref:System.Windows.Controls.DataGrid>.</span></span> <span data-ttu-id="c0d60-167"><xref:System.Windows.Data.CollectionViewSource>用作<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="c0d60-167">The <xref:System.Windows.Data.CollectionViewSource> is used as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.DataGrid>.</span></span> <span data-ttu-id="c0d60-168">对执行分组、 排序和筛选<xref:System.Windows.Data.CollectionViewSource>，并显示在<xref:System.Windows.Controls.DataGrid>UI。</span><span class="sxs-lookup"><span data-stu-id="c0d60-168">Grouping, sorting, and filtering are performed on the <xref:System.Windows.Data.CollectionViewSource> and are displayed in the <xref:System.Windows.Controls.DataGrid> UI.</span></span>  
   
- 若要测试此示例，需要将 DGGroupSortFilterExample 名称调整为与项目名称匹配。  如果您使用的是 Visual Basic，则需要将 <xref:System.Windows.Window> 的类名更改为以下名称。  
+ <span data-ttu-id="c0d60-169">若要测试此示例中，你将需要调整 DGGroupSortFilterExample 名称以匹配你的项目名称。</span><span class="sxs-lookup"><span data-stu-id="c0d60-169">To test this example, you will need to adjust the DGGroupSortFilterExample name to match your project name.</span></span> <span data-ttu-id="c0d60-170">如果你使用的 Visual Basic，你将需要更改的类名称<xref:System.Windows.Window>所示。</span><span class="sxs-lookup"><span data-stu-id="c0d60-170">If you are using Visual Basic, you will need to change the class name for <xref:System.Windows.Window> to the following.</span></span>  
   
  `<Window x:Class="MainWindow"`  
   
- [!code-xml[DataGrid_GroupSortFilter#000](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#000)]  
+ [!code-xaml[DataGrid_GroupSortFilter#000](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml#000)]  
   
  [!code-csharp[DataGrid_GroupSortFilter#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#100)]
  [!code-vb[DataGrid_GroupSortFilter#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#100)]  
   
-## 编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="c0d60-171">编译代码</span><span class="sxs-lookup"><span data-stu-id="c0d60-171">Compiling the Code</span></span>  
   
-## 可靠编程  
+-  
   
-## .NET Framework 安全性  
+## <a name="robust-programming"></a><span data-ttu-id="c0d60-172">可靠编程</span><span class="sxs-lookup"><span data-stu-id="c0d60-172">Robust Programming</span></span>  
   
-## 请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [创建和绑定到 ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)   
- [筛选视图中的数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)   
- [在视图中对数据进行排序](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)   
- [在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+## <a name="net-framework-security"></a><span data-ttu-id="c0d60-173">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="c0d60-173">.NET Framework Security</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c0d60-174">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c0d60-174">See Also</span></span>  
+ [<span data-ttu-id="c0d60-175">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="c0d60-175">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="c0d60-176">创建和绑定到 ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="c0d60-176">Create and Bind to an ObservableCollection</span></span>](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
+ [<span data-ttu-id="c0d60-177">在视图中筛选数据</span><span class="sxs-lookup"><span data-stu-id="c0d60-177">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
+ [<span data-ttu-id="c0d60-178">在视图中对数据进行排序</span><span class="sxs-lookup"><span data-stu-id="c0d60-178">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
+ [<span data-ttu-id="c0d60-179">在 XAML 中使用视图对数据进行排序和分组</span><span class="sxs-lookup"><span data-stu-id="c0d60-179">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)

@@ -1,77 +1,80 @@
 ---
-title: "ThemeDictionary 标记扩展 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ThemeDictionaryExtension"
-  - "ThemeDictionary"
-helpviewer_keywords: 
-  - "ThemeDictionary 标记扩展"
-  - "XAML, ThemeDictionary 标记扩展"
+title: "ThemeDictionary 标记扩展"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ThemeDictionaryExtension
+- ThemeDictionary
+helpviewer_keywords:
+- ThemeDictionary markup extension [WPF]
+- XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 45f878ce89dcf76ae800ade10a0e67f019741f65
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ThemeDictionary 标记扩展
-为集成第三方控件的自定义控件作者或应用程序提供了一种方法，以加载要在设置控件样式时使用的主题特定的资源字典。  
+# <a name="themedictionary-markup-extension"></a><span data-ttu-id="843e8-102">ThemeDictionary 标记扩展</span><span class="sxs-lookup"><span data-stu-id="843e8-102">ThemeDictionary Markup Extension</span></span>
+<span data-ttu-id="843e8-103">为集成第三方控件的自定义控件创作者或应用程序提供一种方法，用于加载要在设置控件样式时使用的特定于主题的资源字典。</span><span class="sxs-lookup"><span data-stu-id="843e8-103">Provides a way for custom control authors or applications that integrate third-party controls to load theme-specific resource dictionaries to use in styling the control.</span></span>  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="843e8-104">XAML 属性用法</span><span class="sxs-lookup"><span data-stu-id="843e8-104">XAML Attribute Usage</span></span>  
   
+```xml  
+<object property="{ThemeDictionary assemblyUri}" .../>  
 ```  
-<object property="{ThemeDictionary assemblyUri}" .../>  
-```  
   
-## XAML 对象元素用法  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="843e8-105">XAML 对象元素用法</span><span class="sxs-lookup"><span data-stu-id="843e8-105">XAML Object Element Usage</span></span>  
   
-```  
+```xml  
 <object>  
   <object.property>  
-    <ThemeDictionary AssemblyName="assemblyUri"/>  
+    <ThemeDictionary AssemblyName="assemblyUri"/>  
   <object.property>  
 <object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="843e8-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="843e8-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`assemblyUri`|包含主题信息的程序集的[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  通查，这是引用较大包中的程序集的 Pack URI。  程序集资源和 Pack URI 可以简化部署问题。  有关更多信息，请参见[WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。|  
+|`assemblyUri`|<span data-ttu-id="843e8-107">程序集的 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]，其中包含主题信息。</span><span class="sxs-lookup"><span data-stu-id="843e8-107">The [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] of the assembly that contains theme information.</span></span> <span data-ttu-id="843e8-108">通常，这是一个引用较大包中程序集的 Pack URI。</span><span class="sxs-lookup"><span data-stu-id="843e8-108">Typically, this is a pack URI that references an assembly in the larger package.</span></span> <span data-ttu-id="843e8-109">程序集资源和 Pack URI 可以简化部署问题。</span><span class="sxs-lookup"><span data-stu-id="843e8-109">Assembly resources and pack URIs simplify deployment issues.</span></span> <span data-ttu-id="843e8-110">有关详细信息，请参阅 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="843e8-110">For more information see [Pack URIs in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).</span></span>|  
   
-## 备注  
- 该扩展旨在仅填充一个特定属性值：<xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=fullName> 的一个值。  
+## <a name="remarks"></a><span data-ttu-id="843e8-111">备注</span><span class="sxs-lookup"><span data-stu-id="843e8-111">Remarks</span></span>  
+ <span data-ttu-id="843e8-112">此扩展用于填充只有一个特定属性值： 值<xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="843e8-112">This extension is intended to fill only one specific property value: a value for <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.</span></span>  
   
- 通过使用该扩展，您可以指定一个纯资源程序集，该程序集包含一些仅在向用户系统应用 [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] 主题时使用的样式、当 Luna 主题处于活动状态时的其他样式等。  通过使用该扩展，可以自动使控件特定的资源字典的内容无效，并在需要时重新加载这些内容，使其特定于其他主题。  
+ <span data-ttu-id="843e8-113">通过使用此扩展，可以指定一个纯资源程序集，该程序集包含一些仅在向用户系统应用 [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] 主题时使用的样式、当 Luna 主题处于活动状态时的其他样式等。</span><span class="sxs-lookup"><span data-stu-id="843e8-113">By using this extension, you can specify a single resources-only assembly that contains some styles to use only when the [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] theme is applied to the user's system, other styles when Luna theme is active, and so on.</span></span> <span data-ttu-id="843e8-114">通过使用此扩展，可以自动让特定于控件的资源字典的内容失效，并在需要时重新将其加载为特定于其他主题的内容。</span><span class="sxs-lookup"><span data-stu-id="843e8-114">By using this extension, the contents of a control-specific resource dictionary can be automatically invalidated and reloaded to be specific for another theme when required.</span></span>  
   
- `assemblyUri` 字符串（<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 属性值）构成了标识哪个字典应用于某个特殊主题的命名约定的基础。  `ThemeDictionary` 的 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 逻辑通过生成一个指向某个特殊主题字典变量（包含在预编译的资源程序集中）的[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 来完成该约定。  本文并未将该约定（即主题与一般控件样式设置和页\/应用程序级样式设置之间的交互）作为一个概念进行详细介绍。  使用 `ThemeDictionary` 的基本方案是指定在应用程序级声明的 `ResourceDictionary` 的 <xref:System.Windows.ResourceDictionary.Source%2A> 属性。  将 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 通过 `ThemeDictionary` 扩展而不是作为一个直接的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 提供给程序集时，扩展程序将提供每当系统主题更改时应用的失效逻辑。  
+ <span data-ttu-id="843e8-115">`assemblyUri`字符串 (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>属性值) 标识的词典适用于特定主题的命名约定的基础。</span><span class="sxs-lookup"><span data-stu-id="843e8-115">The `assemblyUri` string (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> property value) forms the basis of a naming convention that identifies which dictionary applies for a particular theme.</span></span> <span data-ttu-id="843e8-116"><xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>逻辑`ThemeDictionary`通过生成来完成该约定[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]的指向 variant 类型特定主题的字典，包含在预编译的资源程序集。</span><span class="sxs-lookup"><span data-stu-id="843e8-116">The <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> logic for `ThemeDictionary` completes the convention by generating a [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] that points to a particular theme dictionary variant, as contained within a precompiled resource assembly.</span></span> <span data-ttu-id="843e8-117">本文并未将该约定（即主题与一般控件样式设置和页/应用程序级样式设置之间的交互）作为一个概念进行详细介绍。</span><span class="sxs-lookup"><span data-stu-id="843e8-117">Describing this convention, or theme interactions with general control styling and page/application level styling as a concept, is not covered fully here.</span></span> <span data-ttu-id="843e8-118">使用的基本方案`ThemeDictionary`是指定<xref:System.Windows.ResourceDictionary.Source%2A>属性`ResourceDictionary`在应用程序级别声明。</span><span class="sxs-lookup"><span data-stu-id="843e8-118">The basic scenario for using `ThemeDictionary` is to specify the <xref:System.Windows.ResourceDictionary.Source%2A> property of a `ResourceDictionary` declared at the application level.</span></span> <span data-ttu-id="843e8-119">将 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 通过 `ThemeDictionary` 扩展而不是作为一个直接的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 提供给程序集时，扩展逻辑将提供系统主题更改时适用的失效逻辑。</span><span class="sxs-lookup"><span data-stu-id="843e8-119">When you provide a [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for the assembly through a `ThemeDictionary` extension rather than as a direct [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], the extension logic will provide invalidation logic that applies whenever the system theme changes.</span></span>  
   
- 特性语法是最常用于此标记扩展的语法。  在 `ThemeDictionary` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.ThemeDictionaryExtension> 扩展类的 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 值。  
+ <span data-ttu-id="843e8-120">特性语法是最常用于该标记扩展的语法。</span><span class="sxs-lookup"><span data-stu-id="843e8-120">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="843e8-121">在 `ThemeDictionary` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 扩展类的 <xref:System.Windows.ThemeDictionaryExtension> 值。</span><span class="sxs-lookup"><span data-stu-id="843e8-121">The string token provided after the `ThemeDictionary` identifier string is assigned as the <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> value of the underlying <xref:System.Windows.ThemeDictionaryExtension> extension class.</span></span>  
   
- `ThemeDictionary` 还可以在对象元素语法中使用。  在这种情况下，需要指定 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 属性的值。  
+ <span data-ttu-id="843e8-122">`ThemeDictionary` 还可以在对象元素语法中使用。</span><span class="sxs-lookup"><span data-stu-id="843e8-122">`ThemeDictionary` may also be used in object element syntax.</span></span> <span data-ttu-id="843e8-123">在这种情况下，指定的值<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>属性是必需的。</span><span class="sxs-lookup"><span data-stu-id="843e8-123">In this case, specifying the value of the <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> property is required.</span></span>  
   
- `ThemeDictionary` 还可以在将 <xref:System.Windows.Markup.StaticExtension.Member%2A> 属性指定为“属性\=值”对的详细特性用法中使用：  
+ <span data-ttu-id="843e8-124">`ThemeDictionary` 还可以在详细特性用法中使用，以便将 <xref:System.Windows.Markup.StaticExtension.Member%2A> 属性指定为一个 property=value 对：</span><span class="sxs-lookup"><span data-stu-id="843e8-124">`ThemeDictionary` can also be used in a verbose attribute usage that specifies the <xref:System.Windows.Markup.StaticExtension.Member%2A> property as a property=value pair:</span></span>  
   
+```xml  
+<object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
 ```  
-<object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
-```  
   
- 如果扩展具有一个以上的可设置属性，或者某些属性是可选的，则详细用法通常会很有用。  由于 `ThemeDictionary` 仅有一个可设置的属性，并且此属性是必需的，因此该详细用法不具有典型性。  
+ <span data-ttu-id="843e8-125">如果扩展具有一个以上的可设置属性，或者某些属性是可选的，则详细用法通常会很有用。</span><span class="sxs-lookup"><span data-stu-id="843e8-125">The verbose usage is often useful for extensions that have more than one settable property, or if some properties are optional.</span></span> <span data-ttu-id="843e8-126">由于 `ThemeDictionary` 仅有一个可设置的属性，并且此属性是必需的，因此该详细用法不具有典型性。</span><span class="sxs-lookup"><span data-stu-id="843e8-126">Because `ThemeDictionary` has only one settable property, which is required, this verbose usage is not typical.</span></span>  
   
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器实现中，对此标记扩展的处理由 <xref:System.Windows.ThemeDictionaryExtension> 类定义。  
+ <span data-ttu-id="843e8-127">在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器实现，对此标记扩展的处理定义的<xref:System.Windows.ThemeDictionaryExtension>类。</span><span class="sxs-lookup"><span data-stu-id="843e8-127">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor implementation, the handling for this markup extension is defined by the <xref:System.Windows.ThemeDictionaryExtension> class.</span></span>  
   
- `ThemeDictionary` 是标记扩展。  当要求转义属性 \(Attribute\) 值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性 \(Property\) 上放置类型转换器而言，此要求更具有全局性。  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。  有关更多信息，请参见 [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ <span data-ttu-id="843e8-128">`ThemeDictionary` 是标记扩展。</span><span class="sxs-lookup"><span data-stu-id="843e8-128">`ThemeDictionary` is a markup extension.</span></span> <span data-ttu-id="843e8-129">当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。</span><span class="sxs-lookup"><span data-stu-id="843e8-129">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="843e8-130">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。</span><span class="sxs-lookup"><span data-stu-id="843e8-130">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="843e8-131">有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="843e8-131">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## 请参阅  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a><span data-ttu-id="843e8-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="843e8-132">See Also</span></span>  
+ [<span data-ttu-id="843e8-133">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="843e8-133">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="843e8-134">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="843e8-134">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="843e8-135">标记扩展和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="843e8-135">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="843e8-136">WPF 应用程序资源、内容和数据文件</span><span class="sxs-lookup"><span data-stu-id="843e8-136">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

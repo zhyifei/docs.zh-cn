@@ -1,126 +1,132 @@
 ---
-title: "优化性能：对象行为 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "依赖项属性, 性能"
-  - "事件处理程序 [WPF]"
-  - "Freezable 对象, 性能"
-  - "对象性能注意事项"
-  - "用户界面虚拟化"
+title: "优化性能：对象行为"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- user interface virtualization [WPF]
+- dependency properties [WPF], performance
+- event handlers [WPF]
+- object performance considerations [WPF]
+- Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e929ec927bc0eb7494d8865fc5452cfc6910169
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 优化性能：对象行为
-了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象的内部行为，有助于您在功能和性能之间做出一个适当的取舍。  
+# <a name="optimizing-performance-object-behavior"></a><span data-ttu-id="e74e1-102">优化性能：对象行为</span><span class="sxs-lookup"><span data-stu-id="e74e1-102">Optimizing Performance: Object Behavior</span></span>
+<span data-ttu-id="e74e1-103">了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象的内部行为，有助于在功能和性能之间做出适当的取舍。</span><span class="sxs-lookup"><span data-stu-id="e74e1-103">Understanding the intrinsic behavior of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objects will help you make the right tradeoffs between functionality and performance.</span></span>  
   
-   
+
   
 <a name="Not_Removing_Event_Handlers"></a>   
-## 不移除对象的事件处理程序可能会使对象保持活动状态  
- 对象传递给其事件的委托是对该对象的有效引用。  因此，事件处理程序可以使对象保持活动状态的时间超过预期时间。  当对已注册为侦听对象事件的对象执行清理时，在释放对象前移除委托是非常必要的。  将不需要的对象保持为活动状态会增加应用程序内存使用量。  当对象为[逻辑树](GTMT)或[可视化树](GTMT)的根时更是如此。  
+## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a><span data-ttu-id="e74e1-104">不删除对象的事件处理程序可能会使对象保持活动状态</span><span class="sxs-lookup"><span data-stu-id="e74e1-104">Not Removing Event Handlers on Objects may Keep Objects Alive</span></span>  
+ <span data-ttu-id="e74e1-105">对象传递给其事件的委托是对该对象的有效引用。</span><span class="sxs-lookup"><span data-stu-id="e74e1-105">The delegate that an object passes to its event is effectively a reference to that object.</span></span> <span data-ttu-id="e74e1-106">因此，事件处理程序可以使对象保持活动状态的时间超过预期时间。</span><span class="sxs-lookup"><span data-stu-id="e74e1-106">Therefore, event handlers can keep objects alive longer than expected.</span></span> <span data-ttu-id="e74e1-107">当对已注册为侦听对象事件的对象执行清理时，在释放对象前删除委托是非常必要的。</span><span class="sxs-lookup"><span data-stu-id="e74e1-107">When performing clean up of an object that has registered to listen to an object's event, it is essential to remove that delegate before releasing the object.</span></span> <span data-ttu-id="e74e1-108">将不需要的对象保持为活动状态会增加应用程序的内存使用量。</span><span class="sxs-lookup"><span data-stu-id="e74e1-108">Keeping unneeded objects alive increases the application's memory usage.</span></span> <span data-ttu-id="e74e1-109">在对象为逻辑树或可视化树的根时更是如此。</span><span class="sxs-lookup"><span data-stu-id="e74e1-109">This is especially true when the object is the root of a logical tree or a visual tree.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 为事件引入了弱事件侦听器模式，当很难跟踪源和侦听器之间的对象生存期关系时，这种模式特别有用。  某些现有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件使用此模式。  如果您正在实现带有自定义事件的对象，此模式可能对您有用。  有关详细信息，请参见 [弱事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="e74e1-110"> 为事件引入了弱事件侦听器模式，在很难跟踪源和侦听器之间的对象生存期关系时，这种模式特别有用。</span><span class="sxs-lookup"><span data-stu-id="e74e1-110"> introduces a weak event listener pattern for events that can be useful in situations where the object lifetime relationships between source and listener are difficult to keep track of.</span></span> <span data-ttu-id="e74e1-111">某些现有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件使用此模式。</span><span class="sxs-lookup"><span data-stu-id="e74e1-111">Some existing [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] events use this pattern.</span></span> <span data-ttu-id="e74e1-112">如果要实现具有自定义事件的对象，此模式可能会有用。</span><span class="sxs-lookup"><span data-stu-id="e74e1-112">If you are implementing objects with custom events, this pattern may be of use to you.</span></span> <span data-ttu-id="e74e1-113">有关详细信息，请参阅[弱事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)。</span><span class="sxs-lookup"><span data-stu-id="e74e1-113">For details, see [Weak Event Patterns](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).</span></span>  
   
- 有若干工具（如 CLR 探查器和工作集查看器）可以提供有关指定进程的内存使用量的信息。  CLR 探查器包括分配配置文件的一组非常有用的视图，其中包括已分配类型的直方图、分配和调用关系图、显示各代垃圾回收及上述回收之后托管堆的结果状态的时间线，以及显示每个方法分配和程序集加载的调用树。  有关更多信息，请参见 [.NET Framework Developer Center](http://msdn.microsoft.com/zh-cn/netframework/aa497289\(en-us\).aspx)（.NET Framework 开发人员中心）。  
+ <span data-ttu-id="e74e1-114">有若干工具（如 CLR 探查器和工作集查看器）可以提供有关指定进程的内存使用量的信息。</span><span class="sxs-lookup"><span data-stu-id="e74e1-114">There are several tools, such as the CLR Profiler and the Working Set Viewer, that can provides information on the memory usage of a specified process.</span></span> <span data-ttu-id="e74e1-115">CLR 探查器包括分配配置文件的许多非常有用的视图，其中包括已分配类型的直方图、分配和调用关系图、显示各代垃圾回收及上述回收之后托管堆的生成状态的时间线，以及显示每个方法分配和程序集加载的调用树。</span><span class="sxs-lookup"><span data-stu-id="e74e1-115">The CLR Profiler includes a number of very useful views of the allocation profile, including a histogram of allocated types, allocation and call graphs, a time line showing garbage collections of various generations and the resulting state of the managed heap after those collections, and a call tree showing per-method allocations and assembly loads.</span></span> <span data-ttu-id="e74e1-116">有关详细信息，请参阅 [.NET Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=117435)。</span><span class="sxs-lookup"><span data-stu-id="e74e1-116">For more information, see [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=117435).</span></span>  
   
 <a name="DPs_and_Objects"></a>   
-## 依赖项属性和对象  
- 通常，访问 <xref:System.Windows.DependencyObject> 的[依赖项属性](GTMT)的速度不会慢于访问 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的速度。  由于设置属性值会导致产生一些小额的性能系统开销，因此获取值与从 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性获取值的速度一样快。  抵销一些小的性能系统开销是因为[依赖项属性](GTMT)支持可靠的功能，如数据绑定、动画、继承和样式设置。  有关更多信息，请参见[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+## <a name="dependency-properties-and-objects"></a><span data-ttu-id="e74e1-117">依赖属性和对象</span><span class="sxs-lookup"><span data-stu-id="e74e1-117">Dependency Properties and Objects</span></span>  
+ <span data-ttu-id="e74e1-118">一般情况下，访问依赖项属性的<xref:System.Windows.DependencyObject>不低于访问[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]属性。</span><span class="sxs-lookup"><span data-stu-id="e74e1-118">In general, accessing a dependency property of a <xref:System.Windows.DependencyObject> is not slower than accessing a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property.</span></span> <span data-ttu-id="e74e1-119">虽然设置属性值会产生一些小的性能开销，但是获取值与从 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性获取值的速度一样快。</span><span class="sxs-lookup"><span data-stu-id="e74e1-119">While there is a small performance overhead for setting a property value, getting a value is as fast as getting the value from a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property.</span></span> <span data-ttu-id="e74e1-120">抵销一些小的性能开销是因为依赖属性支持可靠的功能，如数据绑定、动画、继承和样式设置。</span><span class="sxs-lookup"><span data-stu-id="e74e1-120">Offsetting the small performance overhead is the fact that dependency properties support robust features, such as data binding, animation, inheritance, and styling.</span></span> <span data-ttu-id="e74e1-121">有关详细信息，请参阅[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e74e1-121">For more information, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
-### DependencyProperty 优化  
- 在应用程序中定义[依赖项属性](GTMT)时请务必谨慎。  如果 <xref:System.Windows.DependencyProperty> 仅影响呈现类型元数据选项，而不是其他元数据选项（如 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>），则您应通过重写其元数据来对其进行同样标记。  有关重写或获取属性元数据的更多信息，请参见[依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+### <a name="dependencyproperty-optimizations"></a><span data-ttu-id="e74e1-122">DependencyProperty 优化</span><span class="sxs-lookup"><span data-stu-id="e74e1-122">DependencyProperty Optimizations</span></span>  
+ <span data-ttu-id="e74e1-123">在应用程序中定义依赖属性时请务必谨慎。</span><span class="sxs-lookup"><span data-stu-id="e74e1-123">You should define dependency properties in your application very carefully.</span></span> <span data-ttu-id="e74e1-124">如果你<xref:System.Windows.DependencyProperty>仅影响呈现类型元数据选项，而不是其他元数据选项如<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>，你应将其标记为通过重写其元数据。</span><span class="sxs-lookup"><span data-stu-id="e74e1-124">If your <xref:System.Windows.DependencyProperty> affects only render type metadata options, rather than other metadata options such as <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, you should mark it as such by overriding its metadata.</span></span> <span data-ttu-id="e74e1-125">有关替代或获取属性元数据的详细信息，请参阅[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="e74e1-125">For more information about overriding or obtaining property metadata, see [Dependency Property Metadata](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).</span></span>  
   
- 如果并非所有属性更改都会实际影响测量、排列和呈现，则通过属性更改处理程序手动使测量、排列和呈现处理过程无效的做法可能会使效率更高。  例如，您可能决定仅在值大于设置的限制时才重新呈现背景。  在这种情况下，当值超过设置的限制时，您的属性更改处理程序仅会使呈现无效。  
+ <span data-ttu-id="e74e1-126">如果并非所有属性更改都会影响测量、排列和呈现，则通过属性更改处理程序手动使测量、排列和呈现阶段无效的做法可能会更高效。</span><span class="sxs-lookup"><span data-stu-id="e74e1-126">It may be more efficient to have a property change handler invalidate the measure, arrange, and render passes manually if not all property changes actually affect measure, arrange, and render.</span></span> <span data-ttu-id="e74e1-127">例如，你可能决定仅在值大于设置限制时才重新呈现背景。</span><span class="sxs-lookup"><span data-stu-id="e74e1-127">For instance, you might decide to re-render a background only when a value is greater than a set limit.</span></span> <span data-ttu-id="e74e1-128">在这种情况下，值超过设置限制时，属性更改处理程序仅会使呈现无效。</span><span class="sxs-lookup"><span data-stu-id="e74e1-128">In this case, your property change handler would only invalidate render when the value exceeds the set limit.</span></span>  
   
-### 将 DependencyProperty 设置为可继承的会影响性能  
- 默认情况下，注册的[依赖项属性](GTMT)是不可继承的。  不过，您可以显式地使所有属性变为可继承的。  尽管这是一个有用的功能，但是将属性转换为可继承的会影响性能，这是因为会增加属性无效的时间长度。  
+### <a name="making-a-dependencyproperty-inheritable-is-not-free"></a><span data-ttu-id="e74e1-129">将 DependencyProperty 设置为可继承会影响性能</span><span class="sxs-lookup"><span data-stu-id="e74e1-129">Making a DependencyProperty Inheritable is Not Free</span></span>  
+ <span data-ttu-id="e74e1-130">默认情况下，注册的依赖属性是不可继承的。</span><span class="sxs-lookup"><span data-stu-id="e74e1-130">By default, registered dependency properties are non-inheritable.</span></span> <span data-ttu-id="e74e1-131">但可以显式地将所有属性设置为可继承。</span><span class="sxs-lookup"><span data-stu-id="e74e1-131">However, you can explicitly make any property inheritable.</span></span> <span data-ttu-id="e74e1-132">尽管这是一个有用的功能，但是将属性转换为可继承会影响性能，因为会增加属性无效的时长。</span><span class="sxs-lookup"><span data-stu-id="e74e1-132">While this is a useful feature, converting a property to be inheritable impacts performance by increasing the length of time for property invalidation.</span></span>  
   
-### 谨慎使用 RegisterClassHandler  
- 调用 <xref:System.Windows.EventManager.RegisterClassHandler%2A> 会允许您保存实例状态，但是请注意将对每个实例调用处理程序，这将导致性能发生问题。  当应用程序要求您保存实例状态时，请仅使用 <xref:System.Windows.EventManager.RegisterClassHandler%2A>。  
+### <a name="use-registerclasshandler-carefully"></a><span data-ttu-id="e74e1-133">谨慎使用 RegisterClassHandler</span><span class="sxs-lookup"><span data-stu-id="e74e1-133">Use RegisterClassHandler Carefully</span></span>  
+ <span data-ttu-id="e74e1-134">虽然通过调用<xref:System.Windows.EventManager.RegisterClassHandler%2A>允许你保存实例状态，请务必注意，每个实例，这可能导致性能问题上调用处理程序。</span><span class="sxs-lookup"><span data-stu-id="e74e1-134">While calling <xref:System.Windows.EventManager.RegisterClassHandler%2A> allows you to save your instance state, it is important to be aware that the handler is called on every instance, which can cause performance problems.</span></span> <span data-ttu-id="e74e1-135">仅使用<xref:System.Windows.EventManager.RegisterClassHandler%2A>你的应用程序需要保存实例状态。</span><span class="sxs-lookup"><span data-stu-id="e74e1-135">Only use <xref:System.Windows.EventManager.RegisterClassHandler%2A> when your application requires that you save your instance state.</span></span>  
   
-### 在注册过程期间为 DependencyProperty 设置默认值  
- 当创建要求默认值的 <xref:System.Windows.DependencyProperty> 时，请将传递来的默认元数据用作 <xref:System.Windows.DependencyProperty> 的 <xref:System.Windows.DependencyProperty.Register%2A> 方法的参数来设置此值。  请使用此技术，而不要在构造函数中或在元素的每个实例上设置属性值。  
+### <a name="set-the-default-value-for-a-dependencyproperty-during-registration"></a><span data-ttu-id="e74e1-136">在注册过程中为 DependencyProperty 设置默认值</span><span class="sxs-lookup"><span data-stu-id="e74e1-136">Set the Default Value for a DependencyProperty during Registration</span></span>  
+ <span data-ttu-id="e74e1-137">在创建时<xref:System.Windows.DependencyProperty>需要默认值，将使用作为参数传递的默认元数据值设置<xref:System.Windows.DependencyProperty.Register%2A>方法<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="e74e1-137">When creating a <xref:System.Windows.DependencyProperty> that requires a default value, set the value using the default metadata passed as a parameter to the <xref:System.Windows.DependencyProperty.Register%2A> method of the <xref:System.Windows.DependencyProperty>.</span></span> <span data-ttu-id="e74e1-138">请使用此技术，而不要在构造函数中或在元素的每个实例上设置属性值。</span><span class="sxs-lookup"><span data-stu-id="e74e1-138">Use this technique rather than setting the property value in a constructor or on each instance of an element.</span></span>  
   
-### 使用 Register 设置 PropertyMetadata 值  
- 创建 <xref:System.Windows.DependencyProperty> 时，您可以选择是使用 <xref:System.Windows.DependencyProperty.Register%2A> 还是 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 方法来设置 <xref:System.Windows.PropertyMetadata>。  尽管您的对象可能有一个静态构造函数来调用 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>，但这不是最佳方案，它会影响性能。  为了获得最佳的性能，请在调用 <xref:System.Windows.DependencyProperty.Register%2A> 期间设置 <xref:System.Windows.PropertyMetadata>。  
+### <a name="set-the-propertymetadata-value-using-register"></a><span data-ttu-id="e74e1-139">使用 Register 设置 PropertyMetadata 值</span><span class="sxs-lookup"><span data-stu-id="e74e1-139">Set the PropertyMetadata Value using Register</span></span>  
+ <span data-ttu-id="e74e1-140">在创建时<xref:System.Windows.DependencyProperty>，你可以选择设置<xref:System.Windows.PropertyMetadata>使用<xref:System.Windows.DependencyProperty.Register%2A>或<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="e74e1-140">When creating a <xref:System.Windows.DependencyProperty>, you have the option of setting the <xref:System.Windows.PropertyMetadata> using either the <xref:System.Windows.DependencyProperty.Register%2A> or <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> methods.</span></span> <span data-ttu-id="e74e1-141">虽然你的对象可能具有一个静态构造函数来调用<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>，这不是最佳解决方案，并且会影响性能。</span><span class="sxs-lookup"><span data-stu-id="e74e1-141">Although your object could have a static constructor to call <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, this is not the optimal solution and will impact performance.</span></span> <span data-ttu-id="e74e1-142">为了获得最佳性能，设置<xref:System.Windows.PropertyMetadata>到在呼叫期间<xref:System.Windows.DependencyProperty.Register%2A>。</span><span class="sxs-lookup"><span data-stu-id="e74e1-142">For best performance, set the <xref:System.Windows.PropertyMetadata> during the call to <xref:System.Windows.DependencyProperty.Register%2A>.</span></span>  
   
 <a name="Freezable_Objects"></a>   
-## Freezable 对象  
- <xref:System.Windows.Freezable> 是一种特殊的对象类型，具有两个状态：解冻和冻结。  尽可能地冻结对象会改进应用程序性能，并缩小其工作集。  有关更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+## <a name="freezable-objects"></a><span data-ttu-id="e74e1-143">Freezable 对象</span><span class="sxs-lookup"><span data-stu-id="e74e1-143">Freezable Objects</span></span>  
+ <span data-ttu-id="e74e1-144">A<xref:System.Windows.Freezable>是有两种状态的对象的特殊类型： 解冻和冻结。</span><span class="sxs-lookup"><span data-stu-id="e74e1-144">A <xref:System.Windows.Freezable> is a special type of object that has two states: unfrozen and frozen.</span></span> <span data-ttu-id="e74e1-145">尽可能冻结对象会改进应用程序性能，并缩小其工作集。</span><span class="sxs-lookup"><span data-stu-id="e74e1-145">Freezing objects whenever possible improves the performance of your application and reduces its working set.</span></span> <span data-ttu-id="e74e1-146">有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e74e1-146">For more information, see [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
- 每个 <xref:System.Windows.Freezable> 都具有一个 <xref:System.Windows.Freezable.Changed> 事件，当前者发生更改时将引发此事件。  不过，更改通知会极大地降低应用程序的性能。  
+ <span data-ttu-id="e74e1-147">每个<xref:System.Windows.Freezable>具有<xref:System.Windows.Freezable.Changed>发生更改时引发的事件。</span><span class="sxs-lookup"><span data-stu-id="e74e1-147">Each <xref:System.Windows.Freezable> has a <xref:System.Windows.Freezable.Changed> event that is raised whenever it changes.</span></span> <span data-ttu-id="e74e1-148">不过，更改通知会降低应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="e74e1-148">However, change notifications are costly in terms of application performance.</span></span>  
   
- 我们以下面的示例为例，其中每个 <xref:System.Windows.Shapes.Rectangle> 都使用相同的 <xref:System.Windows.Media.Brush> 对象：  
+ <span data-ttu-id="e74e1-149">考虑下面的示例，其中的每个<xref:System.Windows.Shapes.Rectangle>使用相同<xref:System.Windows.Media.Brush>对象：</span><span class="sxs-lookup"><span data-stu-id="e74e1-149">Consider the following example in which each <xref:System.Windows.Shapes.Rectangle> uses the same <xref:System.Windows.Media.Brush> object:</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
  [!code-vb[Performance#PerformanceSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
   
- 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 为 <xref:System.Windows.Media.SolidColorBrush> 对象的 <xref:System.Windows.Freezable.Changed> 事件提供一个事件处理程序，以便使 <xref:System.Windows.Shapes.Rectangle> 对象的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性无效。  在这种情况下，每次 <xref:System.Windows.Media.SolidColorBrush> 不得不激发其 <xref:System.Windows.Freezable.Changed> 事件时，就必须为每个 <xref:System.Windows.Shapes.Rectangle> 调用回调函数，这些回调函数调用的累积将导致性能严重下降。  此外，此时添加和删除处理程序将会严重影响性能，这是因为应用程序将不得不遍历整个列表才能执行此操作。  如果您的应用程序方案从未更改 <xref:System.Windows.Media.SolidColorBrush>，您将为不必要地维护 <xref:System.Windows.Freezable.Changed> 事件处理程序付出代价。  
+ <span data-ttu-id="e74e1-150">默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供的事件处理程序<xref:System.Windows.Media.SolidColorBrush>对象的<xref:System.Windows.Freezable.Changed>事件，以使其无效<xref:System.Windows.Shapes.Rectangle>对象的<xref:System.Windows.Shapes.Shape.Fill%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e74e1-150">By default, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides an event handler for the <xref:System.Windows.Media.SolidColorBrush> object's <xref:System.Windows.Freezable.Changed> event in order to invalidate the <xref:System.Windows.Shapes.Rectangle> object's <xref:System.Windows.Shapes.Shape.Fill%2A> property.</span></span> <span data-ttu-id="e74e1-151">在这种情况下，每次<xref:System.Windows.Media.SolidColorBrush>不得不激发其<xref:System.Windows.Freezable.Changed>则需要在每个调用的回调函数的事件<xref:System.Windows.Shapes.Rectangle>— 这些回调函数调用的累积施加显著的性能损失。</span><span class="sxs-lookup"><span data-stu-id="e74e1-151">In this case, each time the <xref:System.Windows.Media.SolidColorBrush> has to fire its <xref:System.Windows.Freezable.Changed> event it is required to invoke the callback function for each <xref:System.Windows.Shapes.Rectangle>—the accumulation of these callback function invocations impose a significant performance penalty.</span></span> <span data-ttu-id="e74e1-152">此外，此时添加和删除处理程序将会严重影响性能，这是因为应用程序将不得不遍历整个列表才能执行此操作。</span><span class="sxs-lookup"><span data-stu-id="e74e1-152">In addition, it is very performance intensive to add and remove handlers at this point since the application would have to traverse the entire list to do so.</span></span> <span data-ttu-id="e74e1-153">如果你的应用场景永远不会更改<xref:System.Windows.Media.SolidColorBrush>，需付费的维护成本<xref:System.Windows.Freezable.Changed>事件处理程序不必要地。</span><span class="sxs-lookup"><span data-stu-id="e74e1-153">If your application scenario never changes the <xref:System.Windows.Media.SolidColorBrush>, you will be paying the cost of maintaining <xref:System.Windows.Freezable.Changed> event handlers unnecessarily.</span></span>  
   
- 冻结 <xref:System.Windows.Freezable> 会改善其性能，因为它不再需要因维护更改通知而消耗资源。  下表显示了简单的 <xref:System.Windows.Media.SolidColorBrush> 在其 <xref:System.Windows.Freezable.IsFrozen%2A> 属性设置为 `true` 时的大小，并列出该属性未设置为该值时的情况以供对比。  这是假设将一个画笔应用于十个 <xref:System.Windows.Shapes.Rectangle> 对象的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性。  
+ <span data-ttu-id="e74e1-154">冻结<xref:System.Windows.Freezable>可以提高其性能，因为它不再需要展开上维护更改通知的资源。</span><span class="sxs-lookup"><span data-stu-id="e74e1-154">Freezing a <xref:System.Windows.Freezable> can improve its performance, because it no longer needs to expend resources on maintaining change notifications.</span></span> <span data-ttu-id="e74e1-155">下表显示了一个简单的大小<xref:System.Windows.Media.SolidColorBrush>时其<xref:System.Windows.Freezable.IsFrozen%2A>属性设置为`true`、 与它不是相比。</span><span class="sxs-lookup"><span data-stu-id="e74e1-155">The table below shows the size of a simple <xref:System.Windows.Media.SolidColorBrush> when its <xref:System.Windows.Freezable.IsFrozen%2A> property is set to `true`, compared to when it is not.</span></span> <span data-ttu-id="e74e1-156">这假定应用到一个画笔<xref:System.Windows.Shapes.Shape.Fill%2A>10 个属性<xref:System.Windows.Shapes.Rectangle>对象。</span><span class="sxs-lookup"><span data-stu-id="e74e1-156">This assumes applying one brush to the <xref:System.Windows.Shapes.Shape.Fill%2A> property of ten <xref:System.Windows.Shapes.Rectangle> objects.</span></span>  
   
-|**省\/市\/自治区**|**大小**|  
-|-------------------|------------|  
-|冻结 <xref:System.Windows.Media.SolidColorBrush>|212 字节|  
-|非冻结 <xref:System.Windows.Media.SolidColorBrush>|972 字节|  
+|<span data-ttu-id="e74e1-157">**状态**</span><span class="sxs-lookup"><span data-stu-id="e74e1-157">**State**</span></span>|<span data-ttu-id="e74e1-158">**Size**</span><span class="sxs-lookup"><span data-stu-id="e74e1-158">**Size**</span></span>|  
+|---------------|--------------|  
+|<span data-ttu-id="e74e1-159">冻结<xref:System.Windows.Media.SolidColorBrush></span><span class="sxs-lookup"><span data-stu-id="e74e1-159">Frozen <xref:System.Windows.Media.SolidColorBrush></span></span>|<span data-ttu-id="e74e1-160">212 字节</span><span class="sxs-lookup"><span data-stu-id="e74e1-160">212 Bytes</span></span>|  
+|<span data-ttu-id="e74e1-161">非冻结<xref:System.Windows.Media.SolidColorBrush></span><span class="sxs-lookup"><span data-stu-id="e74e1-161">Non-frozen <xref:System.Windows.Media.SolidColorBrush></span></span>|<span data-ttu-id="e74e1-162">972 字节</span><span class="sxs-lookup"><span data-stu-id="e74e1-162">972 Bytes</span></span>|  
   
- 下面的代码示例演示了此概念：  
+ <span data-ttu-id="e74e1-163">以下代码示例演示了此概念：</span><span class="sxs-lookup"><span data-stu-id="e74e1-163">The following code sample demonstrates this concept:</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
  [!code-vb[Performance#PerformanceSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
   
-### 解冻的 Freezable 对象的已更改处理程序可以使对象保持活动状态  
- 对象传递给 <xref:System.Windows.Freezable> 对象的 <xref:System.Windows.Freezable.Changed> 事件的委托是对该对象的有效引用。  因此，<xref:System.Windows.Freezable.Changed> 事件处理程序可以使对象保持活动状态的时间超过预期时间。  当对已注册为侦听 <xref:System.Windows.Freezable> 对象的 <xref:System.Windows.Freezable.Changed> 事件的对象执行清理时，在释放对象前移除该委托是非常有必要的。  
+### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a><span data-ttu-id="e74e1-164">解冻的可冻结对象的已更改处理程序可以使对象保持活动状态</span><span class="sxs-lookup"><span data-stu-id="e74e1-164">Changed Handlers on Unfrozen Freezables may Keep Objects Alive</span></span>  
+ <span data-ttu-id="e74e1-165">对象传递给委托<xref:System.Windows.Freezable>对象的<xref:System.Windows.Freezable.Changed>事件实际上是对该对象的引用。</span><span class="sxs-lookup"><span data-stu-id="e74e1-165">The delegate that an object passes to a <xref:System.Windows.Freezable> object's <xref:System.Windows.Freezable.Changed> event is effectively a reference to that object.</span></span> <span data-ttu-id="e74e1-166">因此，<xref:System.Windows.Freezable.Changed>事件处理程序可以使对象保持活动状态时间超过预期时间。</span><span class="sxs-lookup"><span data-stu-id="e74e1-166">Therefore, <xref:System.Windows.Freezable.Changed> event handlers can keep objects alive longer than expected.</span></span> <span data-ttu-id="e74e1-167">已注册来侦听的对象执行清除时<xref:System.Windows.Freezable>对象的<xref:System.Windows.Freezable.Changed>事件，请务必在释放对象前移除该委托。</span><span class="sxs-lookup"><span data-stu-id="e74e1-167">When performing clean up of an object that has registered to listen to a <xref:System.Windows.Freezable> object's <xref:System.Windows.Freezable.Changed> event, it is essential to remove that delegate before releasing the object.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还在内部挂钩 <xref:System.Windows.Freezable.Changed> 事件。  例如，所有值为 <xref:System.Windows.Freezable> 的[依赖项属性](GTMT)将自动侦听 <xref:System.Windows.Freezable.Changed> 事件。  <xref:System.Windows.Shapes.Shape.Fill%2A> 属性（带一个 <xref:System.Windows.Media.Brush>）说明了此概念。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="e74e1-168">此外挂钩<xref:System.Windows.Freezable.Changed>事件内部。</span><span class="sxs-lookup"><span data-stu-id="e74e1-168"> also hooks up <xref:System.Windows.Freezable.Changed> events internally.</span></span> <span data-ttu-id="e74e1-169">例如，所有依赖项属性需要<xref:System.Windows.Freezable>为值将侦听到<xref:System.Windows.Freezable.Changed>事件自动。</span><span class="sxs-lookup"><span data-stu-id="e74e1-169">For example, all dependency properties which take <xref:System.Windows.Freezable> as a value will listen to <xref:System.Windows.Freezable.Changed> events automatically.</span></span> <span data-ttu-id="e74e1-170"><xref:System.Windows.Shapes.Shape.Fill%2A>属性，采用<xref:System.Windows.Media.Brush>，阐述了此概念。</span><span class="sxs-lookup"><span data-stu-id="e74e1-170">The <xref:System.Windows.Shapes.Shape.Fill%2A> property, which takes a <xref:System.Windows.Media.Brush>, illustrates this concept.</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
   
- 将 `myRectangle.Fill` 赋值为 `myBrush` 时，指回 <xref:System.Windows.Shapes.Rectangle> 对象的委托将添加到 <xref:System.Windows.Media.SolidColorBrush> 对象的 <xref:System.Windows.Freezable.Changed> 事件。  这意味着以下代码实际不会使 `myRect` 可以进行垃圾回收：  
+ <span data-ttu-id="e74e1-171">上的分配`myBrush`到`myRectangle.Fill`、 委托指回<xref:System.Windows.Shapes.Rectangle>对象将添加到<xref:System.Windows.Media.SolidColorBrush>对象的<xref:System.Windows.Freezable.Changed>事件。</span><span class="sxs-lookup"><span data-stu-id="e74e1-171">On the assignment of `myBrush` to `myRectangle.Fill`, a delegate pointing back to the <xref:System.Windows.Shapes.Rectangle> object will be added to the <xref:System.Windows.Media.SolidColorBrush> object's <xref:System.Windows.Freezable.Changed> event.</span></span> <span data-ttu-id="e74e1-172">这意味着以下代码实际上不会使 `myRect` 可以进行垃圾回收：</span><span class="sxs-lookup"><span data-stu-id="e74e1-172">This means the following code does not actually make `myRect` eligible for garbage collection:</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
  [!code-vb[Performance#PerformanceSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
   
- 在这种情况下，`myBrush` 仍会使 `myRectangle` 保持活动状态，并在其激发 <xref:System.Windows.Freezable.Changed> 事件时对其进行回调。  请注意，将新 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性赋值为 `myBrush` 时，仅将另一个事件处理程序添加到 `myBrush`。  
+ <span data-ttu-id="e74e1-173">在这种情况下`myBrush`仍保持`myRectangle`处于活动状态并将回调到它时激发其<xref:System.Windows.Freezable.Changed>事件。</span><span class="sxs-lookup"><span data-stu-id="e74e1-173">In this case `myBrush` is still keeping `myRectangle` alive and will call back to it when it fires its <xref:System.Windows.Freezable.Changed> event.</span></span> <span data-ttu-id="e74e1-174">请注意，分配`myBrush`到<xref:System.Windows.Shapes.Shape.Fill%2A>属性的新<xref:System.Windows.Shapes.Rectangle>将只需将添加到另一个事件处理程序`myBrush`。</span><span class="sxs-lookup"><span data-stu-id="e74e1-174">Note that assigning `myBrush` to the <xref:System.Windows.Shapes.Shape.Fill%2A> property of a new <xref:System.Windows.Shapes.Rectangle> will simply add another event handler to `myBrush`.</span></span>  
   
- 清理这些类型的对象的建议方式是从 <xref:System.Windows.Shapes.Shape.Fill%2A> 属性移除 <xref:System.Windows.Media.Brush>，这将依次移除 <xref:System.Windows.Freezable.Changed> 事件处理程序。  
+ <span data-ttu-id="e74e1-175">清理这些类型的对象的建议的方法是删除<xref:System.Windows.Media.Brush>从<xref:System.Windows.Shapes.Shape.Fill%2A>属性，这反过来将删除<xref:System.Windows.Freezable.Changed>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="e74e1-175">The recommended way to clean up these types of objects is to remove the <xref:System.Windows.Media.Brush> from the <xref:System.Windows.Shapes.Shape.Fill%2A> property, which will in turn remove the <xref:System.Windows.Freezable.Changed> event handler.</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
  [!code-vb[Performance#PerformanceSnippet6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
   
 <a name="User_Interface_Virtualization"></a>   
-## 使用接口虚拟化  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还提供 <xref:System.Windows.Controls.StackPanel> 元素的一个变体，用于自动“虚拟化”数据绑定子级内容。  在此上下文中，“虚拟化”一词指的是一种方法：通过此方法根据屏幕上哪些项可见，从较多的数据项中生成一个对象子集。  如果在指定时刻只有少量 UI 元素位于屏幕上，则此时生成大量元素对于内存和处理器来说都需要进行大量处理。  <xref:System.Windows.Controls.VirtualizingStackPanel>（通过 <xref:System.Windows.Controls.VirtualizingPanel> 提供的功能）计算可见项，并与来自 <xref:System.Windows.Controls.ItemsControl>（如 <xref:System.Windows.Controls.ListBox> 或 <xref:System.Windows.Controls.ListView>）的 <xref:System.Windows.Controls.ItemContainerGenerator> 协同工作，以便仅为可见项创建元素。  
+## <a name="user-interface-virtualization"></a><span data-ttu-id="e74e1-176">用户界面虚拟化</span><span class="sxs-lookup"><span data-stu-id="e74e1-176">User Interface Virtualization</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="e74e1-177">此外提供了一种变体<xref:System.Windows.Controls.StackPanel>自动"显示"数据绑定子内容的元素。</span><span class="sxs-lookup"><span data-stu-id="e74e1-177"> also provides a variation of the <xref:System.Windows.Controls.StackPanel> element that automatically "virtualizes" data-bound child content.</span></span> <span data-ttu-id="e74e1-178">在此上下文中，“虚拟化”一词指的是以下技术：通过此技术，从较多的数据项中生成一个对象子集，具体取决于屏幕上哪些项可见。</span><span class="sxs-lookup"><span data-stu-id="e74e1-178">In this context, the word virtualize refers to a technique by which a subset of objects are generated from a larger number of data items based upon which items are visible on-screen.</span></span> <span data-ttu-id="e74e1-179">如果在指定时刻只有少量 UI 元素位于屏幕上，则此时生成大量 UI 元素需要占用大量内存和处理器。</span><span class="sxs-lookup"><span data-stu-id="e74e1-179">It is intensive, both in terms of memory and processor, to generate a large number of UI elements when only a few may be on the screen at a given time.</span></span> <span data-ttu-id="e74e1-180"><xref:System.Windows.Controls.VirtualizingStackPanel>(由提供的功能通过<xref:System.Windows.Controls.VirtualizingPanel>) 计算可见的项，并处理<xref:System.Windows.Controls.ItemContainerGenerator>从<xref:System.Windows.Controls.ItemsControl>(如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 仅创建为可见项的元素。</span><span class="sxs-lookup"><span data-stu-id="e74e1-180"><xref:System.Windows.Controls.VirtualizingStackPanel> (through functionality provided by <xref:System.Windows.Controls.VirtualizingPanel>) calculates visible items and works with the <xref:System.Windows.Controls.ItemContainerGenerator> from an <xref:System.Windows.Controls.ItemsControl> (such as <xref:System.Windows.Controls.ListBox> or <xref:System.Windows.Controls.ListView>) to only create elements for visible items.</span></span>  
   
- 作为性能优化的结果，将仅生成这些项的可见对象，或如果它们在屏幕上是可见的，则保持活动状态。  当这些可视化对象不再位于控件的可视区域时，则说明它们可能已被移除。  这不会与数据虚拟化发生混淆，数据虚拟化中的数据对象不会全部出现在本地集合中 \- 而是根据需要进行流化。  
+ <span data-ttu-id="e74e1-181">作为性能优化的结果，将仅生成这些项的视觉对象，或如果它们在屏幕上是可见的，则保持活动状态。</span><span class="sxs-lookup"><span data-stu-id="e74e1-181">As a performance optimization, visual objects for these items are only generated or kept alive if they are visible on the screen.</span></span> <span data-ttu-id="e74e1-182">这些视觉对象不再位于控件的可视区域时，则可能已被删除。</span><span class="sxs-lookup"><span data-stu-id="e74e1-182">When they are no longer in the viewable area of the control, the visual objects may be removed.</span></span> <span data-ttu-id="e74e1-183">请勿将此与数据虚拟化发生混淆，数据虚拟化中的数据对象不会全部出现在本地集合中 - 而是根据需要进行流式处理。</span><span class="sxs-lookup"><span data-stu-id="e74e1-183">This is not to be confused with data virtualization, where data objects are not all present in the local collection- rather streamed in as needed.</span></span>  
   
- 下表显示了将 5000 个 <xref:System.Windows.Controls.TextBlock> 元素添加到 <xref:System.Windows.Controls.StackPanel> 和 <xref:System.Windows.Controls.VirtualizingStackPanel> 并使其呈现所需的时间。  在此情形中，测量的时间是指从将文本字符串附加到 <xref:System.Windows.Controls.ItemsControl> 对象的 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 属性至面板元素显示此文本字符串之间的时间。  
+ <span data-ttu-id="e74e1-184">下表显示了经过的时间添加和呈现 5000<xref:System.Windows.Controls.TextBlock>元素与<xref:System.Windows.Controls.StackPanel>和<xref:System.Windows.Controls.VirtualizingStackPanel>。</span><span class="sxs-lookup"><span data-stu-id="e74e1-184">The table below shows the elapsed time adding and rendering 5000 <xref:System.Windows.Controls.TextBlock> elements to a <xref:System.Windows.Controls.StackPanel> and a <xref:System.Windows.Controls.VirtualizingStackPanel>.</span></span> <span data-ttu-id="e74e1-185">测量值在此方案中，表示附加到的文本字符串之间的时间<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>属性<xref:System.Windows.Controls.ItemsControl>面板元素时显示的文本字符串的时间的对象。</span><span class="sxs-lookup"><span data-stu-id="e74e1-185">In this scenario, the measurements represent the time between attaching a text string to the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property of an <xref:System.Windows.Controls.ItemsControl> object to the time when the panel elements display the text string.</span></span>  
   
-|**主机面板**|**呈现时间（毫秒）**|  
-|--------------|------------------|  
-|<xref:System.Windows.Controls.StackPanel>|3210|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
+|<span data-ttu-id="e74e1-186">**主机面板**</span><span class="sxs-lookup"><span data-stu-id="e74e1-186">**Host panel**</span></span>|<span data-ttu-id="e74e1-187">**呈现时间 (ms)**</span><span class="sxs-lookup"><span data-stu-id="e74e1-187">**Render time (ms)**</span></span>|  
+|--------------------|----------------------------|  
+|<xref:System.Windows.Controls.StackPanel>|<span data-ttu-id="e74e1-188">3210</span><span class="sxs-lookup"><span data-stu-id="e74e1-188">3210</span></span>|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|<span data-ttu-id="e74e1-189">46</span><span class="sxs-lookup"><span data-stu-id="e74e1-189">46</span></span>|  
   
-## 请参阅  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [布局和设计](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [二维图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="e74e1-190">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e74e1-190">See Also</span></span>  
+ [<span data-ttu-id="e74e1-191">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="e74e1-191">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="e74e1-192">规划应用程序性能</span><span class="sxs-lookup"><span data-stu-id="e74e1-192">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="e74e1-193">利用硬件</span><span class="sxs-lookup"><span data-stu-id="e74e1-193">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="e74e1-194">布局和示例</span><span class="sxs-lookup"><span data-stu-id="e74e1-194">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="e74e1-195">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="e74e1-195">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="e74e1-196">应用程序资源</span><span class="sxs-lookup"><span data-stu-id="e74e1-196">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="e74e1-197">文本</span><span class="sxs-lookup"><span data-stu-id="e74e1-197">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="e74e1-198">数据绑定</span><span class="sxs-lookup"><span data-stu-id="e74e1-198">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="e74e1-199">其他性能建议</span><span class="sxs-lookup"><span data-stu-id="e74e1-199">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
