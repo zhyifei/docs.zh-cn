@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0332bca146041aa955ea000cfeee78d3f5287036
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自动配置
 IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以将节点插入 IPv6 网络，让其自动进行配置，无需任何人为干预。  
@@ -40,6 +34,5 @@ IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以�
  移动设备的激增引入了新的要求：设备必须能够随意改变 IPv6 Internet 上的位置，但是仍然保持现有连接。 为实现此功能，向移动节点分配一个始终可以到达的主地址。 当移动节点在其中时，它连接到主链接并使用其主地址。 当移动节点离开时，主代理（通常是路由器）在移动节点和其正与之通信的节点之间中继消息。  
   
 ## <a name="see-also"></a>另请参阅  
- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [套接字](../../../docs/framework/network-programming/sockets.md)
-

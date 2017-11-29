@@ -1,50 +1,53 @@
 ---
-title: "如何：服务版本控制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：服务版本控制"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: 6
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：服务版本控制
-本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` \(v1\) 和 `regularCalc` \(v2\)。这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
+# <a name="how-to-service-versioning"></a>如何：服务版本控制
+本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。 在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。 这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
   
 > [!WARNING]
->  为了将消息路由到特定服务版本，路由服务必须能够根据消息内容确定消息目标。在下面演示的方法中，客户端将信息插入消息头中来指定版本。存在几种无需客户端传递额外数据的服务版本控制方法。例如，可以将消息路由到服务的最新版本或最兼容的版本，或者路由器可以使用标准 SOAP 信封的一部分。  
+>  为了将消息路由到特定服务版本，路由服务必须能够根据消息内容确定消息目标。 在下面演示的方法中，客户端将信息插入消息头中来指定版本。 存在几种无需客户端传递额外数据的服务版本控制方法。 例如，可以将消息路由到服务的最新版本或最兼容的版本，或者路由器可以使用标准 SOAP 信封的一部分。  
   
- 这两个服务公开的操作为：  
+ 这两个服务公开的运算包括：  
   
--   Add  
+-   添加  
   
 -   Subtract  
   
--   Multiply  
+-   相乘  
   
 -   Divide  
   
- 由于两个服务实现可处理相同的操作，并且除了返回的数据之外基本上相同，因此客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。  
+ 由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。 例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。  
   
- 可以通过多种方式解决这个问题，例如针对服务的各个版本在路由器上公开特定终结点，或者将自定义标头元素添加到消息中以指示服务版本。这些方法均可以将传入消息唯一地路由到服务的特定版本，但利用唯一的消息内容是区分不同服务版本的请求的首选方法。  
+ 可以通过多种方式解决这个问题，例如针对服务的各个版本在路由器上公开特定终结点，或者将自定义标头元素添加到消息中以指示服务版本。  这些方法均可以将传入消息唯一地路由到服务的特定版本，但利用唯一的消息内容是区分不同服务版本的请求的首选方法。  
   
- 在本示例中，客户端应用程序将“CalcVer”自定义标头添加到请求消息中。此标头将包含一个值，指示应将消息路由到的服务版本。值“1”指示该消息必须由 roundingCalc 服务处理，而值“2”指示必须由 regularCalc 服务处理。这样，客户端应用程序就可以直接控制将由服务的哪个版本来处理消息。由于自定义标头是消息中包含的值，因此您可以使用一个终结点来接收将两个服务版本作为目标的消息。可以在客户端应用程序中使用下面的代码，将此自定义标头添加到消息中：  
+ 在本示例中，客户端应用程序将“CalcVer”自定义标头添加到请求消息中。 此标头将包含一个值，指示应将消息路由到的服务版本。 值“1”指示该消息必须由 roundingCalc 服务处理，而值“2”指示必须由 regularCalc 服务处理。 这样，客户端应用程序就可以直接控制将由服务的哪个版本来处理消息。  由于自定义标头是消息中包含的值，因此您可以使用一个终结点来接收将两个服务版本作为目标的消息。 可以在客户端应用程序中使用下面的代码，将此自定义标头添加到消息中：  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### 实现服务版本控制  
+### <a name="implement-service-versioning"></a>实现服务版本控制  
   
-1.  通过指定由服务公开的服务终结点，创建基本的路由服务配置。下面的示例将定义一个用于接收消息的服务终结点，还定义用于将消息发送到 `roundingCalc` \(v1\) 和 `regularCalc` \(v2\) 服务的客户端终结点。  
+1.  通过指定由服务公开的服务终结点，创建基本的路由服务配置。 下面的示例定义了一个用于接收消息的服务终结点， 还定义用于将消息发送到 `roundingCalc` (v1) 和 `regularCalc` (v2) 服务的客户端终结点。  
   
     ```xml  
     <services>  
@@ -74,10 +77,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
                     binding="wsHttpBinding"  
                     contract="*" />  
         </client>  
-  
     ```  
   
-2.  定义用于将消息路由到目标终结点的筛选器。在本示例中，将使用 XPath 筛选器检测“CalcVer”自定义标头的值，以确定应将消息路由到哪个版本。还可使用 XPath 筛选器检测不包含“CalcVer”标头的消息。下面的示例定义所需的筛选器和命名空间表。  
+2.  定义用于将消息路由到目标终结点的筛选器。  对于此示例中，XPath 筛选器用于检测"CalcVer"自定义标头以确定应将消息路由到哪个版本的值。 XPath 筛选器还用于检测到不包含"CalcVer"标头的消息。 下面的示例定义所需的筛选器和命名空间表。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -102,9 +104,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  默认情况下，在命名空间表中定义 s12 命名空间前缀，该前缀代表命名空间“http:\/\/www.w3.org\/2003\/05\/soap\-envelope”。  
+    >  S12 命名空间前缀默认情况下，在命名空间表中，定义并表示命名空间"http://www.w3.org/2003/05/soap-envelope"。  
   
-3.  定义筛选器表，该表将各个筛选器与客户端终结点相关联。如果消息包含值为 1 的“CalcVer”标头，则系统会将该消息发送到 regularCalc 服务。如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。如果没有标头，则系统将该消息路由到 regularCalc。  
+3.  定义筛选器表，该表将各个筛选器与客户端终结点相关联。 如果消息中包含"CalcVer"标头值为 1，则将发送到 regularCalc 服务中。 如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。 如果没有标头，则系统将该消息路由到 regularCalc。  
   
      以下代码定义筛选器表并添加前面定义的筛选器。  
   
@@ -125,7 +127,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。下面的示例演示将“filterTable1”与服务终结点相关联：  
+4.  若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。  下面的示例演示将"filterTable1"与服务终结点：  
   
     ```xml  
     <behaviors>  
@@ -136,10 +138,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面是配置文件的完整代码清单。  
   
 ```xml  
@@ -220,14 +221,12 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面是客户端应用程序的完整代码清单。  
   
 ```csharp  
-  
 using System;  
 using System.ServiceModel;  
 using System.ServiceModel.Channels;  
@@ -333,8 +332,7 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

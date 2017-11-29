@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
 在依赖方应用程序中，授权可确定允许已经过身份验证的标识访问的资源以及允许该标识对这些资源执行的操作。 授权不当会导致信息泄露和数据篡改。 本主题概述了可用于通过 Windows Identity Foundation (WIF) 和安全令牌服务 (STS) 来实现针对声明感知 ASP.NET Web 应用程序和服务（例如，Microsoft Azure 访问控制服务 (ACS)）的授权的方法。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/21/2017
 5.  如果结果为 true，则授予访问权；如果结果为 false，则拒绝访问。 例如，规则可能是年龄为 21 岁或以上且居住在华盛顿州的用户。  
   
  <xref:System.Security.Claims.ClaimsAuthorizationManager> 有助于在应用程序中具体化基于声明的授权的决策逻辑。 ClaimsAuthorizationManager 是作为 .NET 4.5 的一部分附带的 WIF 组件。 ClaimsAuthorizationManager 允许您拦截传入请求，并实现选定的任何逻辑以根据传入声明做出授权决策。 在需要更改授权逻辑时，这变得非常重要。 在这种情况下，使用 ClaimsAuthorizationManager 将不会影响应用程序的完整性，从而降低了更改导致应用程序错误的可能性。 了解有关如何使用 ClaimsAuthorizationManager 实现基于声明的访问控制的详细信息，请参阅[操作方法：使用 WIF 和 ACS 在声明感知 ASP.NET 应用程序中实现声明授权](http://go.microsoft.com/fwlink/?LinkID=247446)。
-

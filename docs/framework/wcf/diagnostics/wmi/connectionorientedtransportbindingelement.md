@@ -1,25 +1,28 @@
 ---
-title: "ConnectionOrientedTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ConnectionOrientedTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d28bedb67850b9bb77c25c8d29c6e39b056770a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ConnectionOrientedTransportBindingElement
+# <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
@@ -35,73 +38,73 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  ConnectionOrientedTransportBindingElement 类不定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  ConnectionOrientedTransportBindingElement 类具有以下属性：  
   
-### ChannelInitializationTimeout  
+### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
  数据类型：DateTime  
   
  访问类型：只读  
   
  指定在超时前可用于完成通道初始化的时间间隔。  
   
-### ConnectionBufferSize  
+### <a name="connectionbuffersize"></a>ConnectionBufferSize  
  数据类型：sint32  
   
  访问类型：只读  
   
  用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。  
   
-### HostNameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  数据类型：String  
   
  访问类型：只读  
   
  一个值，指示在对 URI 进行匹配时，是否使用主机名来访问服务。  
   
-### MaxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  数据类型：sint32  
   
  访问类型：只读  
   
  要使用的缓冲区最大大小。  
   
-### MaxOutputDelay  
+### <a name="maxoutputdelay"></a>MaxOutputDelay  
  数据类型：DateTime  
   
  访问类型：只读  
   
  消息块或完整消息在发出之前可以在内存中保持缓冲的最大时间间隔。  
   
-### MaxPendingAccepts  
+### <a name="maxpendingaccepts"></a>MaxPendingAccepts  
  数据类型：sint32  
   
  访问类型：只读  
   
  可用于处理服务上的传入连接的最大挂起异步接受线程数。  
   
-### MaxPendingConnections  
+### <a name="maxpendingconnections"></a>MaxPendingConnections  
  数据类型：sint32  
   
  访问类型：只读  
   
  最大挂起连接数。  
   
-### TransferMode  
+### <a name="transfermode"></a>TransferMode  
  数据类型：String  
   
  访问类型：只读  
   
  一个值，指定通过面向连接的传输对消息进行缓冲还是流处理。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

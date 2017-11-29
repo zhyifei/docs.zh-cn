@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版本中对 HttpWebRequest 的 NTLM 身份验证的更改
 在 .NET Framework 版本 3.5 SP1 及以上版本中做出了安全性更改，这些更改影响以下类处理集成式 Windows 身份验证的方式：<xref:System.Net.HttpWebRequest>、 <xref:System.Net.HttpListener>、 <xref:System.Net.Security.NegotiateStream>以及 System.Net 命名空间中的相关类。 这些更改会影响使用这些类来发出 Web 请求和接收响应的应用程序，这些应用程序使用基于 NTLM 的集成式 Windows 身份验证。 此更改会影响配置为使用集成式 Windows 身份验证的 Web 服务器和客户端应用程序。  
@@ -39,9 +33,9 @@ ms.lasthandoff: 08/21/2017
   
  为大型部署配置时，常见的情况是，将单个虚拟服务器名提供给部署，而客户端应用程序和最终用户从未使用过基础计算机名。 例如，可能会调用服务器 www.contoso.com，但在内部网络只需使用“contoso”。 在客户端 Web 请求中，此名称被称为主机标头。 根据 HTTP 协议所指定，主机请求标头字段指定所请求的资源的 Internet 主机和端口号。 从用户或引用资源提供的原始 URI（通常是 HTTP URL）中获取此信息。 在 .NET Framework 版本 4 中，此信息也可由使用新 <xref:System.Net.HttpWebRequest.Host%2A> 属性的客户端设置。  
   
- <xref:System.Net.AuthenticationManager> 类控制由 <xref:System.Net.WebRequest> 衍生类和 <xref:System.Net.WebClient> 类使用的托管身份验证组件（“模块”）。 <xref:System.Net.AuthenticationManager> 类提供一个属性，该属性公开由 URI 字符串变址的 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName> 对象，以便应用程序提供要在身份验证期间使用的自定义 SPN 字符串。  
+ <xref:System.Net.AuthenticationManager> 类控制由 <xref:System.Net.WebRequest> 衍生类和 <xref:System.Net.WebClient> 类使用的托管身份验证组件（“模块”）。 <xref:System.Net.AuthenticationManager> 类提供一个属性，该属性公开由 URI 字符串变址的 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType> 对象，以便应用程序提供要在身份验证期间使用的自定义 SPN 字符串。  
   
- 当 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 未设置属性时，3.5 SP1 现在默认指定在 NTLM（NT LAN 管理器）身份验证交换中 的 SPN 的请求 URL 中使用的主机名。 在请求 URL 中使用的主机名可能不同于在客户端请求中的 <xref:System.Net.HttpRequestHeader?displayProperty=fullName> 中指定的主机标头。 在请求 URL 中使用的主机名可能不同于服务器的实际主机名、服务器的计算机名、计算机的 IP 地址或环回地址。 在这些情况下，Windows 将无法通过身份验证请求。 要解决此问题，需要通知 Windows 客户端请求中的请求 URL 中使用的主机名（例如“contoso”）实际上是本地计算机的备用名称。  
+ 当 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 未设置属性时，3.5 SP1 现在默认指定在 NTLM（NT LAN 管理器）身份验证交换中 的 SPN 的请求 URL 中使用的主机名。 在请求 URL 中使用的主机名可能不同于在客户端请求中的 <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> 中指定的主机标头。 在请求 URL 中使用的主机名可能不同于服务器的实际主机名、服务器的计算机名、计算机的 IP 地址或环回地址。 在这些情况下，Windows 将无法通过身份验证请求。 要解决此问题，需要通知 Windows 客户端请求中的请求 URL 中使用的主机名（例如“contoso”）实际上是本地计算机的备用名称。  
   
  服务器应用程序有多种可行方法可暂时避开此更改所具有的问题。 建议的方法是将请求 URL 中所用主机名映射到服务器上注册表中的 `BackConnectionHostNames` 键。 `BackConnectionHostNames` 注册表项通常用于将主机名映射到环回地址。 下面列出了这些步骤。  
   
@@ -66,7 +60,6 @@ ms.lasthandoff: 08/21/2017
  如 [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657) 中所述，安全级别较低的变通方法是禁用环回检查。 这将禁用反射攻击保护。 因此，最好将一组备用名称限制为仅希望计算机实际使用的那些名称。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
- <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
-
+ <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
+ <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
+ <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

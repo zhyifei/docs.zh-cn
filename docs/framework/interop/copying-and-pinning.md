@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="copying-and-pinning"></a>复制和锁定
 封送数据时，互操作封送拆收器可以复制或锁定正在封送的数据。 复制数据会将数据副本放置从一个内存位置放到另一个内存位置。 下图显示从托管内存向非托管内存复制值类型和复制按引用传递的类型之间的差异。  
@@ -88,13 +81,12 @@ ms.lasthandoff: 08/21/2017
 > [!CAUTION]
 >  按值传递字符串时，被调用方绝不能改变封送拆收器传递的引用。 这样做会损坏托管堆。  
   
- 按引用传递 <xref:System.String?displayProperty=fullName> 时，封送拆收器将字符串内容复制到辅助缓冲区，再进行调用。 在从调用返回时，再将该缓冲区内容复制到新字符串中。 这种技术确保不可变托管字符串保持不变。  
+ 按引用传递 <xref:System.String?displayProperty=nameWithType> 时，封送拆收器将字符串内容复制到辅助缓冲区，再进行调用。 在从调用返回时，再将该缓冲区内容复制到新字符串中。 这种技术确保不可变托管字符串保持不变。  
   
- 按值传递 <xref:System.Text.StringBuilder?displayProperty=fullName> 时，封送拆收器将对 StringBuilder 的内部缓冲区的引用直接传递给调用方。 调用方和被调用方必须就缓冲区大小达成一致。 调用方负责创建具有足够长度的 StringBuilder。 被调用方必须采取必要措施确保不溢出缓冲区。 对于默认将按值传递的引用类型作为 In 参数传递的规则，StringBuilder 是一个例外。 它始终作为 In/Out 传递。  
+ 按值传递 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 时，封送拆收器将对 StringBuilder 的内部缓冲区的引用直接传递给调用方。 调用方和被调用方必须就缓冲区大小达成一致。 调用方负责创建具有足够长度的 StringBuilder。 被调用方必须采取必要措施确保不溢出缓冲区。 对于默认将按值传递的引用类型作为 In 参数传递的规则，StringBuilder 是一个例外。 它始终作为 In/Out 传递。  
   
 ## <a name="see-also"></a>另请参阅  
- [默认的封送行为](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [使用互操作封送拆收器进行内存管理](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [使用互操作封送处理程序的内存管理](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
-

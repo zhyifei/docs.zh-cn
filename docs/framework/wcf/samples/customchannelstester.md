@@ -1,31 +1,34 @@
 ---
-title: "CustomChannelsTester | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomChannelsTester
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d915d567a5918060ab5e7592d4cd49384249ab9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# CustomChannelsTester
-`CustomChannelsTester` 是一个可用于依据一组预定义的服务协定测试自定义通道实现的工具。  可以通过使用 XML 文件选择这组服务协定并将其传递给该工具。  然后，该工具将生成服务和客户端，该客户端会在消息交换过程中测试您的自定义通道实现。  
+# <a name="customchannelstester"></a>CustomChannelsTester
+`CustomChannelsTester` 是一个可用于依据一组预定义的服务协定测试自定义通道实现的工具。 可以通过使用 XML 文件选择这组服务协定并将其传递给该工具。 然后，该工具将生成服务和客户端，该客户端会在消息交换过程中测试您的自定义通道实现。  
   
-### 生成工具  
+### <a name="to-build-the-tool"></a>生成工具  
   
-1.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  生成该解决方案将会生成三个文件：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。  SampleRun.cmd 文件有一个示例命令行，可以演示如何使用此工具来测试[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例。  
+2.  生成该解决方案将会生成三个文件：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。 文件 SampleRun.cmd 具有命令行示例，演示如何使用此工具测试[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
-### 运行此工具  
+### <a name="to-run-the-tool"></a>运行此工具  
   
 -   在命令提示符处，键入下列命令：  
   
@@ -35,7 +38,7 @@ caps.handback.revision: 12
   
      需要使用 `/binding` 选项。  
   
-     如果“绑定”不是由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的系统提供绑定，则需要使用 `/dll`。  
+     如果“绑定”不是由 `/dll` 提供的系统提供绑定，则需要使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。  
   
      `/testspec` 是可选的。  
   
@@ -43,9 +46,9 @@ caps.handback.revision: 12
   
      执行该客户端和服务器并返回结果。  
   
-     下面是用于描述测试规范的示例 XML \(testspec.xml\)：  
+     下面是用于描述测试规范的示例 XML (testspec.xml)：  
   
-    ```  
+    ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
@@ -76,4 +79,4 @@ caps.handback.revision: 12
     </TestSpec>  
     ```  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

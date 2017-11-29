@@ -1,25 +1,28 @@
 ---
-title: "TcpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TcpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 180e954661319cb32edfd3180418fe9b1571ea5c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# TcpTransportBindingElement
+# <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -31,45 +34,45 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  TcpTransportBindingElement 类不定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  TcpTransportBindingElement 类具有以下属性：  
   
-### ConnectionPoolSettings  
+### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
  数据类型：TcpConnectionPoolSettings  
   
  访问类型：只读  
   
  连接池设置。  
   
-### ListenBacklog  
+### <a name="listenbacklog"></a>ListenBacklog  
  数据类型：sint32  
   
  访问类型：只读  
   
  可挂起的最大排队连接请求数。  
   
-### PortSharingEnabled  
+### <a name="portsharingenabled"></a>PortSharingEnabled  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个布尔值，指定是否为此连接启用 TCP 端口共享。  
   
-### TeredoEnabled  
+### <a name="teredoenabled"></a>TeredoEnabled  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个布尔值，指定是否启用 Teredo（一种用于对防火墙后的客户端进行寻址的技术）。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

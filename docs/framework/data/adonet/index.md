@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17872cf1052acd963933b2d444a638e790e2c946
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 93e631d8f8cc32943f7563495d9846a80822245f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。 它提供了对关系数据、XML 和应用程序数据的访问，因此是 .NET Framework 中不可缺少的一部分。 ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。  
@@ -75,6 +73,5 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  提供与 .NET Framework 关联的所有示例和 QuickStart 示例的完整列表。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)   
+ [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
-

@@ -1,0 +1,60 @@
+---
+title: "EInitializeNewDomainFlags 枚举"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: EInitializeNewDomainFlags
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: EInitializeNewDomainFlags
+helpviewer_keywords: EInitializeNewDomainFlags enumeration [.NET Framework hosting]
+ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: bee1c5086502a9675e8149e7d6c9bc72f573815c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 枚举
+使主机可以为运行时提供相关的应用程序域初始化信息。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+typedef enum {  
+    eInitializeNewDomainFlags_None              = 0x0000,  
+    eInitializeNewDomainFlags_NoSecurityChanges = 0x0002  
+} EInitializeNewDomainFlags;  
+```  
+  
+## <a name="members"></a>成员  
+  
+|成员|描述|  
+|------------|-----------------|  
+|`eInitializeNewDomainFlags_None`|任何标志。|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|通知公共语言运行时 (CLR) 主机中的应用程序域的安全状态将不进行更改<xref:System.AppDomainManager.InitializeNewDomain%2A>方法。|  
+  
+## <a name="remarks"></a>备注  
+ [Iclrdomainmanager:: Setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)方法采用一个参数类型`EInitializeNewDomainFlags`。  
+  
+## <a name="requirements"></a>要求  
+ **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+  
+ **标头：** MSCorEE.h  
+  
+ **库：** MSCorEE.dll  
+  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+  
+## <a name="see-also"></a>另请参阅  
+ [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
+ [SetAppDomainManagerType 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)

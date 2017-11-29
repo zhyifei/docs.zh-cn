@@ -1,35 +1,36 @@
 ---
-title: "BindingSource 组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource 组件 [Windows 窗体]"
-  - "数据绑定, Windows 窗体"
-  - "Windows 窗体, 数据绑定控件"
+title: "BindingSource 组件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [Windows Forms], Windows Forms
+- Windows Forms, data binding control
+- BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 006cafafdf8e3c3f4da77394d6155fa52e113b58
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# BindingSource 组件
-Encapsulates a data source for binding to controls.  
+# <a name="bindingsource-component"></a>BindingSource 组件
+封装数据源以绑定到控件。  
   
- <xref:System.Windows.Forms.BindingSource> 组件有两个用途。  首先，将一个窗体的控件绑定到数据时，该组件会提供一个间接层。  这是通过将 <xref:System.Windows.Forms.BindingSource> 组件与你的数据源绑定，然后将窗体上的控件绑定到 <xref:System.Windows.Forms.BindingSource> 组件完成的。  与数据的所有进一步交互（包括导航、排序、筛选和更新）都是通过调用 <xref:System.Windows.Forms.BindingSource> 组件来完成的。  
+ <xref:System.Windows.Forms.BindingSource> 组件有两个用途。 首先，将一个窗体的控件绑定到数据时，该组件会提供一个间接层。 这是通过将 <xref:System.Windows.Forms.BindingSource> 组件与你的数据源绑定，然后将窗体上的控件绑定到 <xref:System.Windows.Forms.BindingSource> 组件完成的。 与数据的所有进一步交互（包括导航、排序、筛选和更新）都是通过调用 <xref:System.Windows.Forms.BindingSource> 组件来完成的。  
   
- 第二，<xref:System.Windows.Forms.BindingSource> 组件可以充当强类型的数据源。  通过使用 <xref:System.Windows.Forms.BindingSource.Add%2A> 方法向 <xref:System.Windows.Forms.BindingSource> 组件添加一个类型来创建该类型的列表。  
+ 第二，<xref:System.Windows.Forms.BindingSource> 组件可以充当强类型的数据源。 通过使用 <xref:System.Windows.Forms.BindingSource.Add%2A> 方法向 <xref:System.Windows.Forms.BindingSource> 组件添加一个类型来创建该类型的列表。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [BindingSource 组件概述](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
  介绍 <xref:System.Windows.Forms.BindingSource> 组件的一般概念，这些概念使你能将数据源绑定到控件。  
   
@@ -66,15 +67,15 @@ Encapsulates a data source for binding to controls.
  [如何：使用 BindingSource 组件跨窗体共享绑定数据](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
  演示如何使用 <xref:System.Windows.Forms.BindingSource> 将多个窗体绑定到相同的数据源。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.BindingSource>  
  提供关于 <xref:System.Windows.Forms.BindingSource> 组件的参考文档。  
   
  <xref:System.Windows.Forms.BindingNavigator>  
  提供关于 <xref:System.Windows.Forms.BindingNavigator> 控件的参考文档。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  包含描述 Windows 窗体数据绑定体系结构的主题链接。  
   
- 另请参阅[在 Visual Studio 中将控件绑定到数据](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)。
+ 另请参阅[在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)。

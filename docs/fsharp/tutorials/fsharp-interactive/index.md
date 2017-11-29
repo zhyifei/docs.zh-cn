@@ -1,6 +1,6 @@
 ---
 title: "F# Interactive (fsi.exe) 参考"
-description: "F# Interactive (fsi.exe) 参考"
+description: "了解如何 F # Interactive (fsi.exe) 用于在控制台以交互方式运行 F # 代码或执行 F # 脚本。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,14 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 87980bada62b568ec8795ab3566089f1bb510652
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="interactive-programming-with-f"></a>使用 F 进行交互式编程# #
+# <a name="interactive-programming-with-f"></a>使用 F# 进行交互式编程 #
 
 > [!NOTE]
 本文目前仅介绍适用于 Windows 的体验。  它将被重写。
@@ -27,7 +26,7 @@ API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 F# Interactive (fsi.exe) 用于在控制台以交互方式运行 F# 代码，或执行 F# 脚本。 换句话说，F# Interactive 对 F# 语言执行 REPL（读取、计算、打印循环）。
 
-若要从控制台运行 F# Interactive，请运行 fsi.exe。  可以在“c:\Program Files (x86)\Microsoft SDKs\F#\<版本>\Framework\<版本>\”中找到 fsi.exe。 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](fsharp-interactive-options.md)。
+若要从控制台运行 F# Interactive，请运行 fsi.exe。  你可以找到 fsi.exe 中的"c:\Program 文件 (x86) \Microsoft SDKs\F#\<版本 > \Framework\<版本 >\"。 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](fsharp-interactive-options.md)。
 
 若要通过 Visual Studio 运行 F# Interactive，可以单击标记为“F# Interactive”的相应工具栏按钮，或使用组合键 **Ctrl+Alt+F**。 执行此操作将打开交互式窗口，该窗口是运行 F# Interactive 会话的工具窗口。 还可以选择一些希望在交互式窗口中运行的代码，然后点击组合键 **ALT+ENTER**。 F# Interactive 在标记为“F# Interactive”的工具窗口中启动。 当您使用此组合键时，请确保焦点位于编辑器窗口内。
 
@@ -44,7 +43,7 @@ F# Interactive 试图编译代码，如果成功，它将执行代码并打印�
 你可以通过调整设置控制 F# Interactive 命令行自变量（选项）。 在“工具”菜单上，选择“选项...”，然后展开“F# 工具”。 可以更改的两种设置是 F# Interactive 选项和“64 位F# Interactive”，只有在 64 位计算机上运行 F# Interactive 时，更改才有意义。 此设置确定是否需要运行 fsi.exe 或 fsianycpu.exe 的专用 64 位版本，它使用计算机体系结构确定是作为 32 位还是 64 位进程来运行。
 
 
-## <a name="scripting-with-f"></a>使用 F 编写脚本# #
+## <a name="scripting-with-f"></a>使用 F# 编写脚本 #
 脚本使用 **.fsx** 或 **.fsscript** 文件扩展名。 可以不编译源代码再运行编译的程序集，而仅运行 **fsi.exe** 并指定 F# 源代码脚本的文件名，F# Interactive 会实时读取并执行代码。
 
 

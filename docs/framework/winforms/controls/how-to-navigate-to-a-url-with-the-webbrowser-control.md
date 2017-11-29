@@ -1,36 +1,39 @@
 ---
-title: "如何：使用 WebBrowser 控件定位到 URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WebBrowser.Navigate"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], WebBrowser 控件"
-  - "URL, 定位到"
-  - "WebBrowser 控件 [Windows 窗体], 示例"
-  - "WebBrowser 控件 [Windows 窗体], 定位到 URL"
+title: "如何：使用 WebBrowser 控件定位到 URL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords: WebBrowser.Navigate
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], examples
+- URLs [Windows Forms], navigating to
+- WebBrowser control [Windows Forms], navigating to URLs
+- examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28ceb5e465b8737d047c9c0e65bd9efc8cd3c8ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 WebBrowser 控件定位到 URL
-下面的代码示例演示如何将 <xref:System.Windows.Forms.WebBrowser> 控件定位到特定的 URL。  
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>如何：使用 WebBrowser 控件定位到 URL
+下面的代码示例演示如何导航<xref:System.Windows.Forms.WebBrowser>控件添加到特定的 URL。  
   
- 若要确定完全加载新文档的时间，请处理 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件。  有关此事件的演示，请参见 [如何：使用 WebBrowser 控件打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)。  
+ 若要确定完全加载新文档时，处理<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件。 此事件的演示，请参阅[如何： 使用 WebBrowser 控件打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```vb  
 Me.webBrowser1.Navigate("http://www.microsoft.com")  
@@ -40,17 +43,17 @@ Me.webBrowser1.Navigate("http://www.microsoft.com")
 this.webBrowser1.Navigate("http://www.microsoft.com");  
 ```  
   
-## 编译代码  
+## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
 -   名为 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控件。  
   
 -   对 `System` 和 `System.Windows.Forms` 程序集的引用。  
   
-## 请参阅  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=fullName>   
- <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=fullName>   
- <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=fullName>   
- [WebBrowser 控件](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)   
- [如何：使用 WebBrowser 控件打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>  
+ [WebBrowser 控件](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+ [如何：使用 WebBrowser 控件进行打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

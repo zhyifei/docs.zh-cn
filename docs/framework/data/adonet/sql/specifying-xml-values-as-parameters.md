@@ -1,35 +1,41 @@
 ---
-title: "指定 XML 值作为参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将 XML 值指定为参数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 指定 XML 值作为参数
-如果查询需要值为 XML 字符串的参数，开发人员可以使用 **SqlXml** 数据类型的实例提供该值。  真的没有任何窍门；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 列接受参数值的方式与其他数据类型完全相同。  
+# <a name="specifying-xml-values-as-parameters"></a>将 XML 值指定为参数
+如果查询需要其值为一个 XML 字符串的参数，开发人员可以使用提供该值的实例**SqlXml**数据类型。 真的没有任何窍门；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 列接受参数值的方式与其他数据类型完全相同。  
   
-## 示例  
- 以下控制台应用程序在 **AdventureWorks** 数据库中新建一个表。  新表包括一个名为 **SalesID** 的列和一个名为 **SalesInfo** 的 XML 列。  
+## <a name="example"></a>示例  
+ 以下控制台应用程序创建的新表中**AdventureWorks**数据库。 新表包括一个名为**SalesID**和名为的 XML 列**SalesInfo**。  
   
 > [!NOTE]
->  默认情况下，在安装 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 时不安装 **AdventureWorks** 示例数据库。  可以通过运行 SQL Server 安装程序来安装。  
+>  **AdventureWorks**示例数据库未安装默认情况下，当你安装时[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 可以通过运行 SQL Server 安装程序来安装。  
   
- 示例准备一个 <xref:System.Data.SqlClient.SqlCommand> 对象，用于在新表中插入行。  保存的文件为 **SalesInfo** 列提供所需的 XML 数据。  
+ 示例准备一个 <xref:System.Data.SqlClient.SqlCommand> 对象，用于在新表中插入行。 保存的文件提供所需的 XML 数据**SalesInfo**列。  
   
- 要创建运行示例所需的文件，在项目所处的相同文件夹中新建一个文本文件。  将文件命名为 MyTestStoreData.xml。  在记事本中打开该文件，然后复制并粘贴以下文本：  
+ 要创建运行示例所需的文件，在项目所处的相同文件夹中新建一个文本文件。 将文件命名为 MyTestStoreData.xml。 在记事本中打开该文件，然后复制并粘贴以下文本：  
   
-```  
+```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
@@ -44,9 +50,7 @@ caps.handback.revision: 5
 </StoreSurvey>  
 ```  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
 Imports System.Data.SqlTypes  
@@ -104,9 +108,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -167,7 +169,7 @@ class Class1
 }  
 ```  
   
-## 请参阅  
- <xref:System.Data.SqlTypes.SqlXml>   
- [SQL Server 中的 XML 数据](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.SqlTypes.SqlXml>  
+ [SQL Server 中的 XML 数据](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

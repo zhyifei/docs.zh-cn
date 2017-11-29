@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1e23b0261625efb1e6da070e4b5f8334b1ef7488
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 312324553333427c08acf7ef3eb11059f2224d06
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 概述
 Windows Identity Foundation 4.5 是一组用于在您的应用程序中实施基于声明的标识的 .NET Framework 类。 利用 Windows Identity Foundation 4.5，您可以轻松获得声明感知应用程序和服务的好处。 WIF 4.5 可在使用 .NET Framework 4.5 版或更高版本的所有 Web 应用程序或 Web 服务中使用。 WIF 只是 Microsoft 的联合身份软件系列的一部分，它实现了基于开放式标准的共享行业愿景。 联合身份包含三个组件：[Active Directory® 联合身份验证服务](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0、[Microsoft Azure 访问控制服务](http://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 和 WIF。 这三个组件共同构成了 Microsoft 的新的基于声明的云标识和访问平台的核心。  
@@ -49,5 +47,4 @@ Windows Identity Foundation 4.5 是一组用于在您的应用程序中实施基
   
 -   升级身份验证。 应用程序中不同资源的身份验证要求可能有所不同。 WIF 使开发人员能够生成具有逐渐提高的身份验证（例如：使用用户名/密码身份验证进行初始登录，然后升级到智能卡身份验证）要求的应用程序。  
   
- 通过使用 WIF，您可以更轻松地获得基于声明的标识模型的好处。 有关详细信息，请参阅[面向开发人员的 Windows Identity Foundation 白皮书](http://go.microsoft.com/fwlink/?LinkId=122266)。
-
+ 通过使用 WIF，您可以更轻松地获得基于声明的标识模型的好处。 有关详细信息，请参阅[面向开发人员的 Windows Identity Foundation 白皮书](http://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf)。

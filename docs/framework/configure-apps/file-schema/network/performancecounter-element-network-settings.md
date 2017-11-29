@@ -1,74 +1,77 @@
 ---
-title: "&lt;performanceCounter&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<performanceCounter> 元素"
-  - "performanceCounter 元素"
+title: "&lt;performanceCounter&gt;元素 （网络设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
+helpviewer_keywords:
+- performanceCounter element
+- <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ca6debc4458c34e9f76b0bfaa0e2047ce0be2cae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;performanceCounter&gt; 元素（网络设置）
+# <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt;元素 （网络设置）
 启用或禁用网络性能计数器。  
   
-## 语法  
+ \<configuration>  
+\<system.net >  
+\<设置 >  
+\<performanceCounters >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <performanceCounters  
   enabled="true|false"  
 />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|`enabled`|指定是否启用网络性能计数器。  默认值为 `false`。|  
+|特性|描述|  
+|---------------|-----------------|  
+|`enabled`|指定是否启用网络性能计数器。 默认值为 `false`。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
-## 备注  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="remarks"></a>备注  
+ 此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
- 需要在要使用的配置文件中启用网络性能计数器。  使用配置文件中的单个设置启用或禁用所有网络性能计数器。  无法启用或禁用单个网络性能计数器。  有关特定网络性能计数器的更多信息，请参见[Networking Performance Counters](http://msdn.microsoft.com/zh-cn/d1860235-f643-46ae-846c-ff0ed8b0e3cd)。  
+ 需要在要使用的配置文件中启用网络性能计数器。 通过配置文件中的单个设置即可启用或禁用所有网络性能计数器。 不能启用或禁用单个网络性能计数器。 有关特定的网络性能计数器的详细信息，请参阅[网络性能计数器](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)。  
   
- 默认值是禁用网络性能计数器。  
+ 默认值为该网络的性能计数器已禁用。  
   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=fullName> 属性可用于从适用的配置文件获取 **enabled** 特性的当前值。  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>属性可以用于获取的当前值**启用**从适用的配置文件的属性。  
   
-## 示例  
- 下面的代码示例演示如何配置 <xref:System.Net> 和相关命名空间以启用网络性能计数器。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何配置<xref:System.Net>和相关命名空间以启用网络性能计数器。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -80,8 +83,8 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=fullName>   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=fullName>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [Networking Performance Counters](http://msdn.microsoft.com/zh-cn/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+ [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [网络性能计数器](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

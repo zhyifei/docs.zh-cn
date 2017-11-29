@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3ea3a4233ca0b01cd4b6ebd328387fea1dd189de
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: dabb780e24d1316a3d736f7d1f3da249704a4ff4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lteventgt-element-net-native"></a>&lt;事件&gt;元素 (.NET Native)
 将运行时反射策略应用到一个事件。  
@@ -69,7 +67,6 @@ ms.lasthandoff: 08/21/2017
  如果一个事件的策略没有得到显式定义，它将继承其父元素的运行时策略。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

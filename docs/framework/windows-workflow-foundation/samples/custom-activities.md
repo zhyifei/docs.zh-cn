@@ -1,24 +1,28 @@
 ---
-title: "自定义活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cde06b3-51b2-4e46-900d-11140bae77f4
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b62275e6dd5977fbf789d32a7c89d5f1c99cf567
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 自定义活动
+# <a name="custom-activities"></a>自定义活动
 本节包含演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中创建自定义活动的示例。  
   
-## 本节内容  
- [Code\-Bodied](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
+## <a name="in-this-section"></a>本节内容  
+ [代码正文](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
  包含使用代码以声明方式创建的自定义活动示例。  
   
  [复合](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  

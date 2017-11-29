@@ -1,36 +1,38 @@
 ---
-title: "GROUPPARTITION (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: GROUPPARTITION (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ceadd193784a2c1936b0dcc2d634ae87b513e57e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# GROUPPARTITION (Entity SQL)
-返回从聚合与之相关的当前组分区提取的参数值集合。`GroupPartition` 聚合是基于组的聚合，没有基于集合的形式。  
+# <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
+返回从聚合与之相关的当前组分区提取的参数值集合。 `GroupPartition` 聚合是基于组的聚合，没有基于集合的形式。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
 GROUPPARTITION( [ALL|DISTINCT] expression )  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  `expression`  
  任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 表达式。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  以下查询生成产品列表以及每个产品的订单行数量的集合。  
   
 ```  
@@ -77,7 +79,7 @@ select groupkey, GroupPartition({42}) from {1,2,3} as a inner join {4,5,6} as b 
 select groupkey, GroupPartition(b > a) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
 ```  
   
-## 示例  
- 下面的示例演示如何将 GROUPPARTITION 子句与 GROUP BY 子句一起使用。 GROUP BY 子句按照 `SalesOrderHeader` 实体的 `Contact` 对这些实体进行分组。 然后，GROUPPARTITION 子句投影每个组的 `TotalDue` 属性，而生成一个十进制值集合。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何将 GROUPPARTITION 子句与 GROUP BY 子句一起使用。 GROUP BY 子句按照 `SalesOrderHeader` 实体的 `Contact`对这些实体进行分组。 然后，GROUPPARTITION 子句投影每个组的 `TotalDue` 属性，而生成一个十进制值集合。  
   
  [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]

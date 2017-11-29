@@ -1,39 +1,42 @@
 ---
-title: "TCP 激活 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TCP 激活"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f02528828c3751b2f8e34bd7ebb8a1a789feeb2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# TCP 激活
-本示例演示承载一个服务，该服务使用 Windows 进程激活服务 \(WAS\) 的服务来激活通过 net.tcp 协议通信的服务。  此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+# <a name="tcp-activation"></a>TCP 激活
+本示例演示承载一个服务，该服务使用 Windows 进程激活服务 (WAS) 的服务来激活通过 net.tcp 协议通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
- 本示例由客户端控制台程序 \(.exe\) 和用 WAS 激活的工作进程中承载的服务库 \(.dll\) 组成。  客户端活动显示在控制台窗口中。  
+ 本示例由客户端控制台程序 (.exe) 和用 WAS 激活的工作进程中承载的服务库 (.dll) 组成。 客户端活动显示在控制台窗口中。  
   
- 该服务实现定义“请求\-答复”通信模式的协定。  该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：  
+ 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -75,11 +78,11 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- 本示例使用 net.tcp 绑定的变体，该绑定启用 TCP 端口共享并关闭安全。  如果您想使用安全的 TCP 绑定，请将服务器的安全模式更改为所需的设置，并在客户端上重新运行 Svcutil.exe 以生成更新客户端配置文件。  
+ 本示例使用 net.tcp 绑定的变体，该绑定启用 TCP 端口共享并关闭安全。 如果您想使用安全的 TCP 绑定，请将服务器的安全模式更改为所需的设置，并在客户端上重新运行 Svcutil.exe 以生成更新客户端配置文件。  
   
  下面的示例显示服务的配置：  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <services>  
@@ -117,7 +120,7 @@ public class CalculatorService : ICalculator
   
  客户端的终结点按如下所示的示例代码进行配置：  
   
-```  
+```xml  
 <system.serviceModel>  
     <bindings>  
         <netTcpBinding>  
@@ -134,7 +137,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。  在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -145,36 +148,36 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
+1.  确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
   
-2.  请确保已执行 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  请确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
      此外，必须安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 激活组件：  
   
-    1.  从**“开始”**菜单中，选择**“控制面板”**。  
+    1.  从**启动**菜单上，选择**控制面板**。  
   
-    2.  选择**“程序和功能”**。  
+    2.  选择**程序和功能**。  
   
-    3.  单击**“打开或关闭 Windows 组件”**。  
+    3.  单击**打开或关闭 Windows 组件**。  
   
-    4.  展开**“Microsoft .NET Framework 3.0”**节点并选中**“Windows Communication Foundation 非 HTTP 激活”**功能。  
+    4.  展开**Microsoft.NET Framework 3.0**节点并选中**Windows Communication Foundation 非 HTTP 激活**功能。  
   
 3.  配置 WAS 以支持 TCP 激活。  
   
      为方便起见，在位于示例目录中名为 AddNetTcpSiteBinding.cmd 的批处理文件中实现以下两个步骤。  
   
-    1.  若要支持 net.tcp 激活，必须首先将默认的网站绑定到一个 net.tcp 端口。  可以使用随 Internet 信息服务 7.0 \(IIS\) 管理工具集一起安装的 Appcmd.exe 来完成此操作。  在管理员级别命令提示符处，运行以下命令：  
+    1.  若要支持 net.tcp 激活，必须首先将默认的网站绑定到一个 net.tcp 端口。 可以使用随 Internet 信息服务 7.0 (IIS) 管理工具集一起安装的 Appcmd.exe 来完成此操作。 在管理员级别命令提示符处，运行以下命令：  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
         > [!TIP]
-        >  此命令是单行文本。  此命令将 net.tcp 网站绑定添加到以任何主机名侦听 TCP 端口 808 的默认网站。  
+        >  此命令是单行文本。 此命令将 net.tcp 网站绑定添加到以任何主机名侦听 TCP 端口 808 的默认网站。  
   
-    2.  尽管网站内的所有应用程序共享一个公共 net.tcp 绑定，但是每个应用程序可以单独启用 net.tcp 支持。  若要启用 \/servicemodelsamples 应用程序的 net.tcp，请在管理员级别命令提示符处运行以下命令：  
+    2.  尽管网站内的所有应用程序共享一个公共 net.tcp 绑定，但是每个应用程序可以单独启用 net.tcp 支持。 若要启用 /servicemodelsamples 应用程序的 net.tcp，请在管理员级别命令提示符处运行以下命令：  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -182,11 +185,11 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  此命令是单行文本。  执行此命令可以使用 http:\/\/localhost\/servicemodelsamples 和 net.tcp:\/\/localhost\/servicemodelsamples 来访问 \/servicemodelsamples 应用程序。  
+        >  此命令是单行文本。 执行此命令可以使用 http://localhost/servicemodelsamples 和 net.tcp://localhost/servicemodelsamples 来访问 /servicemodelsamples 应用程序。  
   
-4.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+4.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-5.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+5.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
      移除为此示例添加的 net.tcp 网站绑定。  
   
@@ -212,5 +215,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  必须以单行文本的形式键入此命令。  
   
-## 请参阅  
- [AppFabric 承载和持久性示例 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>另请参阅  
+ [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

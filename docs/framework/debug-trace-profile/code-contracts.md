@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Code contracts
+- csharp
+- vb
+helpviewer_keywords: Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 78553d77ea9a669f7cebdd9187e2436d3b095a75
-ms.openlocfilehash: c0eca978f32c4f96ad976718584c0bf92bf638ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 08/21/2017
  有关使用代码协定的工具和详细说明，请参阅 MSDN DevLabs 网站上的[代码协定](http://go.microsoft.com/fwlink/?LinkId=152461)。  
   
 ## <a name="preconditions"></a>前置条件  
- 可使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=fullName> 方法表达前置条件。 前置条件在方法被调用时指定状态。 它们通常用于指定有效的参数值。 前置条件中提到的所有成员至少都必须与方法本身一样可以访问；否则，方法的调用方可能无法理解此前置条件。 条件必须无副作用。 运行时分析器确定前置条件失败时的运行时行为。  
+ 可使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 方法表达前置条件。 前置条件在方法被调用时指定状态。 它们通常用于指定有效的参数值。 前置条件中提到的所有成员至少都必须与方法本身一样可以访问；否则，方法的调用方可能无法理解此前置条件。 条件必须无副作用。 运行时分析器确定前置条件失败时的运行时行为。  
   
  例如，以下前置条件表示参数 `x` 必须为非 null。  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 08/21/2017
   
 -   整组此类语句后面接显式 <xref:System.Diagnostics.Contracts.Contract> 方法调用，如对 <xref:System.Diagnostics.Contracts.Contract.Requires%2A>、<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>、<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> 或 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> 方法的调用。  
   
- `if`-`then`-`throw` 语句显示为此形式时，工具会将其识别为旧的 `requires` 语句。 如果 `if`-`then`-`throw` 序列后未接其他协定，则代码以 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=fullName> 方法结束。  
+ `if`-`then`-`throw` 语句显示为此形式时，工具会将其识别为旧的 `requires` 语句。 如果 `if`-`then`-`throw` 序列后未接其他协定，则代码以 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> 方法结束。  
   
 ```  
 if ( x == null ) throw new ...  
@@ -87,7 +82,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
  `Contract.Ensures( this.F > 0 );`  
   
 ### <a name="exceptional-postconditions"></a>异常后置条件  
- 异常后置条件是在方法引发特定异常时应为 `true` 的后置条件。 可使用 <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=fullName> 方法来指定这些后置条件，如下例所示。  
+ 异常后置条件是在方法引发特定异常时应为 `true` 的后置条件。 可使用 <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType> 方法来指定这些后置条件，如下例所示。  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
@@ -193,7 +188,7 @@ Contract.Invariant(this.x > this.y);
   
 -   完全限定名以“System.Diagnostics.Contracts.Contract”、“System.String”、“System.IO.Path”或“System.Type”开头的所有方法。  
   
--   任何调用的委托，前提条件是委托类型本身具有 <xref:System.Diagnostics.Contracts.PureAttribute> 属性。 委托类型 <xref:System.Predicate%601?displayProperty=fullName> 和 <xref:System.Comparison%601?displayProperty=fullName> 被视为纯类型。  
+-   任何调用的委托，前提条件是委托类型本身具有 <xref:System.Diagnostics.Contracts.PureAttribute> 属性。 委托类型 <xref:System.Predicate%601?displayProperty=nameWithType> 和 <xref:System.Comparison%601?displayProperty=nameWithType> 被视为纯类型。  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>可见性  
@@ -202,5 +197,5 @@ Contract.Invariant(this.x > this.y);
 ## <a name="example"></a>示例  
  下面的示例显示了代码协定的用法。  
   
- [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)] [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]
-
+ [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
+ [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

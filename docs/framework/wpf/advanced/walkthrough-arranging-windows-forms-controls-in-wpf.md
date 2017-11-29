@@ -1,26 +1,32 @@
 ---
-title: "演练：在 WPF 中排列 Windows 窗体控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "排列控件"
-  - "混合应用程序 [WPF 互操作性]"
+title: "演练：在 WPF 中排列 Windows 窗体控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f78da83657c4c1bd913f67c9e612264cc5dbdf99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：在 WPF 中排列 Windows 窗体控件
-本演练演示如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局功能在混合应用程序中排列 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>演练：在 WPF 中排列 Windows 窗体控件
+本演练演示如何使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局功能来排列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]混合应用程序中的控件。  
   
  本演练涉及以下任务：  
   
@@ -48,26 +54,26 @@ caps.handback.revision: 28
   
 -   旋转。  
   
--   设置空白和边距。  
+-   设置填充和边距。  
   
 -   使用动态布局容器。  
   
- 有关本演练中所阐释任务的完整代码清单，请参见 [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971)（在 WPF 中排列 Windows 窗体控件示例）。  
+ 本演练的任务的完整代码清单，请参阅[排列 Windows 窗体控件在 WPF 示例](http://go.microsoft.com/fwlink/?LinkID=159971)。  
   
- 在完成本演练后，您将对基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的应用程序中的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]布局功能有一定了解。  
+ 完成后，你将会了解的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]布局中的功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。  
   
-## 系统必备  
- 您需要以下组件来完成本演练：  
+## <a name="prerequisites"></a>先决条件  
+ 你需要以下组件来完成本演练：  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]。  
   
-## 创建项目  
+## <a name="creating-the-project"></a>创建项目  
   
-#### 创建和设置项目  
+#### <a name="to-create-and-set-up-the-project"></a>创建并设置项目  
   
-1.  创建一个名为 `WpfLayoutHostingWf` 的 WPF 应用程序项目。  
+1.  创建一个名为的 WPF 应用程序项目`WpfLayoutHostingWf`。  
   
-2.  在解决方案资源管理器中，添加对以下程序集的引用。  
+2.  在解决方案资源管理器中，添加对下列程序集的引用。  
   
     -   WindowsFormsIntegration  
   
@@ -75,221 +81,221 @@ caps.handback.revision: 28
   
     -   System.Drawing  
   
-3.  双击 MainWindow.xaml 将其在 XAML 视图中打开。  
+3.  双击 MainWindow.xaml，在 XAML 视图中将其打开。  
   
-4.  在 <xref:System.Windows.Window> 元素中，添加以下 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命名空间映射。  
+4.  在<xref:System.Windows.Window>元素中，添加以下[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命名空间映射。  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  在 <xref:System.Windows.Controls.Grid> 元素中，将 <xref:System.Windows.Controls.Grid.ShowGridLines%2A> 属性设置为 `true`，并定义五行和三列。  
+5.  在<xref:System.Windows.Controls.Grid>元素集<xref:System.Windows.Controls.Grid.ShowGridLines%2A>属性`true`并定义 5 行和三个列。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
-## 使用默认布局设置  
- 默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素处理所承载的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件的布局。  
+## <a name="using-default-layout-settings"></a>使用默认布局设置  
+ 默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素独立处理的布局将托管的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
   
-#### 使用默认布局设置  
+#### <a name="to-use-default-layout-settings"></a>使用默认布局设置  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  按 F5 生成并运行该应用程序。  此时 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=fullName> 控件将出现在 <xref:System.Windows.Controls.Canvas> 中。  所承载的控件根据其内容调整大小，并且 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素也会根据所承载的控件调整大小。  
+2.  按 F5 生成并运行该应用程序。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType>控件会出现在<xref:System.Windows.Controls.Canvas>。 托管的控件根据其内容调整大小和<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素大小以适应所承载的控件。  
   
-## 根据内容调整大小  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素确保调整所承载的控件的大小，以正确地显示其内容。  
+## <a name="sizing-to-content"></a>按内容调整大小  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素可确保托管的控件调整大小以正确显示其内容。  
   
-#### 根据内容调整大小  
+#### <a name="to-size-to-content"></a>按内容调整大小  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
-2.  按 F5 生成并运行该应用程序。  两个新按钮控件会调整大小以正确地显示较长的文本字符串和较大的字号，并且 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素也会根据所承载的控件调整大小。  
+2.  按 F5 生成并运行该应用程序。 两个新的按钮控件可以调整大小，以正确，显示的较长的文本字符串和更大的字体大小和<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的大小以适应所承载的控件。  
   
-## 使用绝对定位  
- 您可以使用绝对定位将 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素放在用户界面 \(UI\) 中的任意位置。  
+## <a name="using-absolute-positioning"></a>使用绝对定位  
+ 你可以使用绝对定位将放置<xref:System.Windows.Forms.Integration.WindowsFormsHost>任意位置中的用户界面 (UI) 元素。  
   
-#### 使用绝对定位  
+#### <a name="to-use-absolute-positioning"></a>使用绝对定位  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
-2.  按 F5 生成并运行该应用程序。  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素置于网格单元格中距离顶部 20 像素、距离左侧 20 像素的位置。  
+2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素位于顶部的网格单元格从 20 像素和从左侧起的 20 像素。  
   
-## 显式指定大小  
- 可以使用 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A> 属性指定 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的大小。  
+## <a name="specifying-size-explicitly"></a>显式指定大小  
+ 你可以指定的大小<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性。  
   
-#### 显式指定大小  
+#### <a name="to-specify-size-explicitly"></a>显式指定大小  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
-2.  按 F5 生成并运行该应用程序。  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的大小设置为 50 像素宽、70 像素高，这比默认布局设置小。  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件的内容相应地重新排列。  
+2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素设置为的大小为 50 像素宽乘 70 像素高，则该值小于默认布局设置。 内容[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]相应地重新排列控件。  
   
-## 设置布局属性  
- 应始终使用 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的属性对所承载的控件设置与布局有关的属性。  直接对所承载的控件设置布局属性会产生意外的结果。  
+## <a name="setting-layout-properties"></a>设置布局属性  
+ 始终使用的属性在托管控件上设置布局相关属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。 直接对承载控件设置布局属性会产生意外结果。  
   
- 以 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 对所承载的控件设置与布局有关的属性无效。  
+ 设置托管控件中的布局相关属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]不起作用。  
   
-#### 查看对所承载的控件设置属性的效果  
+#### <a name="to-see-the-effects-of-setting-properties-on-the-hosted-control"></a>查看对承载控件设置属性的效果  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
-2.  在“解决方案资源管理器”中，双击 MainWindow.xaml.  vb 或 MainWindow.xaml.cs 以在代码编辑器中将其打开。  
+2.  在“解决方案资源管理器”中，双击 MainWindow.xaml. vb 或 MainWindow.xaml.cs 在代码编辑器中将其打开。  
   
-3.  将下面的代码复制到 `MainWindow` 类定义中。  
+3.  下面的代码复制到`MainWindow`类定义。  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]  
   
 4.  按 F5 生成并运行该应用程序。  
   
-5.  单击**“Click me”（单击这里）**按钮。  `button1_Click` 事件处理程序设置所承载的控件的 <xref:System.Windows.Forms.Control.Top%2A> 和 <xref:System.Windows.Forms.Control.Left%2A> 属性。  这导致所承载的控件在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中重新定位。  宿主占据相同的屏幕区域，但所承载的控件被剪辑。  所承载的控件应总是填充 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。  
+5.  单击**Click me**按钮。 `button1_Click`事件处理程序将设置<xref:System.Windows.Forms.Control.Top%2A>和<xref:System.Windows.Forms.Control.Left%2A>托管控件的属性。 这将导致托管的控件中被重新定位<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。 宿主保持相同的屏幕区域，但承载控件被剪裁。 相反，应始终填充托管的控件<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
   
-## 了解 Z 顺序限制  
- 默认情况下，可见 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素始终绘制在其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的顶部，并且，它们按 z 顺序不受影响。  若要启用 z 顺序，请设置 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 的 <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> 属性设置为 true 和 <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> 属性设置为 <xref:System.Windows.Interop.CompositionMode.Full> 或 <xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
+## <a name="understanding-z-order-limitations"></a>了解 Z 顺序限制  
+ 默认情况下，可见<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素始终绘制堆积一起[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素，并且它们不会受到 z 顺序。 若要启用 z 顺序，设置<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>为 true 和<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>属性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
   
-#### 查看默认 z 顺序行为  
+#### <a name="to-see-the-default-z-order-behavior"></a>查看默认 Z 顺序行为  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
   
-2.  按 F5 生成并运行该应用程序。  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素绘制在标签元素的上面。  
+2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素绘制通过 label 元素。  
   
-#### 查看 z 顺序行为，当 IsRedirected 为 true  
+#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>IsRedirected 为 true 时查看 Z 顺序行为  
   
-1.  用下面的 XAML 替换以前的 z 顺序示例。  
+1.  前面的 z 顺序示例替换为以下 XAML。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
   
-     按 F5 生成并运行该应用程序。  label 元素绘制在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。  
+     按 F5 生成并运行该应用程序。 通过绘制 label 元素<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
   
-## 停靠  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 停靠。  设置 <xref:System.Windows.Controls.DockPanel.Dock%2A> 附加属性，以便将所承载的控件停靠在 <xref:System.Windows.Controls.DockPanel> 元素中。  
+## <a name="docking"></a>停靠  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]停靠。 设置<xref:System.Windows.Controls.DockPanel.Dock%2A>附加属性停靠在托管的控件<xref:System.Windows.Controls.DockPanel>元素。  
   
-#### 停靠所承载的控件  
+#### <a name="to-dock-a-hosted-control"></a>停靠承载控件  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
   
-2.  按 F5 生成并运行该应用程序。  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素停靠在 <xref:System.Windows.Controls.DockPanel> 元素的右侧。  
+2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素沿停靠的右侧<xref:System.Windows.Controls.DockPanel>元素。  
   
-## 设置可见性  
- 通过在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.UIElement.Visibility%2A> 属性，可以使 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件不可见或将它折叠。  当控件不可见时，它不会显示，但会占据布局空间。  当控件折叠时，它不会显示，也不会占据布局控件。  
+## <a name="setting-visibility"></a>设置可见性  
+ 你可以进行你[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件不可见，或通过设置其折叠起来<xref:System.Windows.UIElement.Visibility%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。 当控件不可见时，控件不会显示，但会占据布局空间。 当控件处于折叠状态时，控件不会显示，也不会占据布局空间。  
   
-#### 设置所承载控件的可见性  
+#### <a name="to-set-the-visibility-of-a-hosted-control"></a>设置承载控件的可见性  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
   
-2.  在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，将以下代码复制到类定义中。  
+2.  在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，将以下代码复制到类定义。  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
      [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]  
   
 3.  按 F5 生成并运行该应用程序。  
   
-4.  单击**“Click to make invisible”（单击隐藏）**按钮使 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素不可见。  
+4.  单击**单击此项可使不可见**按钮来制作<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素不可见。  
   
-5.  单击**“Click to collapse”（单击折叠）**按钮使 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素完全从布局中隐藏。  当 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件折叠时，周围的元素会重新排列以占据它的空间。  
+5.  单击**单击此项可折叠**按钮以隐藏<xref:System.Windows.Forms.Integration.WindowsFormsHost>从布局元素完全。 当[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件处于折叠状态，周围元素排列以占据其空间。  
   
-## 承载不拉伸的控件  
- 一些 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件具有固定的大小，不会拉伸以填满布局中的可用空间。  例如，<xref:System.Windows.Forms.MonthCalendar> 控件在固定的空间中显示月份。  
+## <a name="hosting-a-control-that-does-not-stretch"></a>承载不拉伸的控件  
+ 某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件具有固定的大小，而且不会拉伸以填充在布局中的可用空间。 例如，<xref:System.Windows.Forms.MonthCalendar>控件可以显示固定空间中的每个月。  
   
-#### 承载不拉伸的控件  
+#### <a name="to-host-a-control-that-does-not-stretch"></a>承载不拉伸的控件  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
   
-2.  按 F5 生成并运行该应用程序。  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素在网格行中居中，但它不会拉伸以填满可用空间。  如果窗口足够大，您可能会看到所承载的 <xref:System.Windows.Forms.MonthCalendar> 控件显示两个或更多个月份，但这些月份在一行中居中。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局引擎使不能调整大小以填满可用空间的元素居中。  
+2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素居中在网格行中，但它不会拉伸以填充可用空间。 如果该窗口是足够大，可能会看到显示由所承载的两个或多个月<xref:System.Windows.Forms.MonthCalendar>控件，但这些为中心的行中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局引擎中心不能调整大小以填充可用空间的元素。  
   
-## 缩放  
- 与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素不同，大多数 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件都不是可连续缩放的。  默认情况下， <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素调用其承载的控件，如果可能。  若要启用完整的缩放，请设置 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 的 <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> 属性设置为 true 和 <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> 属性设置为 <xref:System.Windows.Interop.CompositionMode.Full> 或 <xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
+## <a name="scaling"></a>缩放  
+ 与不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素、 大多数[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]都不能持续缩放控件。 默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素只能缩放其托管的控件在可能的情况。  若要启用完备缩放，设置<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>为 true 和<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>属性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
   
-#### 通过使用默认行为，对所承载的控件进行缩放  
+#### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>使用默认行为缩放承载控件  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  按 F5 生成并运行该应用程序。  所承载的控件及其周围元素按 0.5 的比例进行缩放。  但是，所承载控件的字体不缩放。  
+2.  按 F5 生成并运行该应用程序。 承载控件及其周围元素按 0.5 的比例进行缩放。 但是，承载控件的字体不缩放。  
   
-#### 通过设置为 true IsRedirected 对所承载的控件进行缩放  
+#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>通过将 IsRedirected 设置为 true 缩放承载控件  
   
-1.  用下面的 XAML 替换以前缩放示例。  
+1.  用下面的 XAML 替换上一个缩放示例。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
   
-2.  按 F5 生成并运行该应用程序。  所承载的控件、它周围的元素和承载控件的字体按 0.5 的比例缩放。  
+2.  按 F5 生成并运行该应用程序。 承载控件、其周围的元素和承载控件的字体按 0.5 的比例缩放。  
   
-## 旋转  
- 与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素不同，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件不支持旋转。  默认情况下，那么，当应用旋转变换时， <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素不旋转与其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。  180 度以外的任何旋转值都会引发 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 事件。  若要启用对所有旋转角度来看，请设置 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 的 <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> 属性设置为 true 和 <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> 属性设置为 <xref:System.Windows.Interop.CompositionMode.Full> 或 <xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
+## <a name="rotating"></a>旋转  
+ 与不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件不支持旋转。 默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素不与其他旋转[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素时应用的旋转转换。 非 180 度引发的任何旋转值<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件。  若要启用到任何角度轮换，设置<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>为 true 和<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>属性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
   
-#### 查看混合应用程序中的旋转效果  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>查看混合应用程序中的旋转效果  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
-2.  按 F5 生成并运行该应用程序。  所承载的控件不旋转，但是它周围的元素旋转 180 度。  您可能必须调整窗口大小才能看到这些元素。  
+2.  按 F5 生成并运行该应用程序。 承载控件不旋转，但是它周围的元素旋转 180 度。 可能必须调整窗口大小才能看到这些元素。  
   
-#### 看到的旋转效果在混合应用程序中，当 IsRedirected 为 true  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>IsRedirected 为 true 时查看混合应用程序中的旋转效果  
   
-1.  用下面的 XAML 替换以前的旋转示例。  
+1.  用下面的 XAML 替换上一个旋转示例。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
   
-2.  按 F5 生成并运行该应用程序。  所承载的控件上旋转。  请注意 <xref:System.Windows.Media.RotateTransform.Angle%2A> 属性可设置为任何值。  您可能必须调整窗口大小才能看到这些元素。  
+2.  按 F5 生成并运行该应用程序。 旋转承载控件。  请注意，<xref:System.Windows.Media.RotateTransform.Angle%2A>属性可以设置为任何值。 可能必须调整窗口大小才能看到这些元素。  
   
-## 设置空白和边距  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局中的空白和边距与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中的空白和边距类似。  只需在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上设置 <xref:System.Windows.Controls.Control.Padding%2A> 和 <xref:System.Windows.FrameworkElement.Margin%2A> 属性。  
+## <a name="setting-padding-and-margins"></a>设置填充和边距  
+ 填充和边距中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局是类似于填充和边距中的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]。 只需设置<xref:System.Windows.Controls.Control.Padding%2A>和<xref:System.Windows.FrameworkElement.Margin%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
   
-#### 为承载的控件设置空白和边距  
+#### <a name="to-set-padding-and-margins-for-a-hosted-control"></a>为承载控件设置填充和边距  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
-    [!code-xml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
   
-2.  按 F5 生成并运行该应用程序。  空白和边距设置应用于承载的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件，就像在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中应用一样。  
+2.  按 F5 生成并运行该应用程序。 填充和边距设置适用于承载[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]与它们将按应用相同的方式控件[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]。  
   
-## 使用动态布局容器  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]提供两个动态布局容器，即 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。  您还可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局中使用这些容器。  
+## <a name="using-dynamic-layout-containers"></a>使用动态布局容器  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]提供两个动态布局容器，<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。 你还可以使用这些容器中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局。  
   
-#### 使用动态布局容器  
+#### <a name="to-use-a-dynamic-layout-container"></a>使用动态布局容器  
   
-1.  将下面的 XAML 复制到 <xref:System.Windows.Controls.Grid> 元素中。  
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
   
-2.  在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，将以下代码复制到类定义中。  
+2.  在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，将以下代码复制到类定义。  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]  
   
-3.  在构造函数中添加对 `InitializeFlowLayoutPanel` 方法的调用。  
+3.  添加对的调用`InitializeFlowLayoutPanel`构造函数中的方法。  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
-4.  按 F5 生成并运行该应用程序。  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素填充 <xref:System.Windows.Controls.DockPanel>，<xref:System.Windows.Forms.FlowLayoutPanel> 按默认 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 排列它的子控件。  
+4.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素填充<xref:System.Windows.Controls.DockPanel>，和<xref:System.Windows.Forms.FlowLayoutPanel>排列其子控件在默认<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>。  
   
-## 请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [WPF 设计器](http://msdn.microsoft.com/zh-cn/c6c65214-8411-4e16-b254-163ed4099c26)   
- [WindowsFormsHost 元素的布局注意事项](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)   
- [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971)   
- [演练：在 WPF 中承载 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WindowsFormsHost 元素的布局注意事项](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [排列 Windows 窗体控件在 WPF 示例](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [演练：在 WPF 中托管 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [演练：在 Windows 窗体中承载 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -1,33 +1,39 @@
 ---
-title: "DataTable 编辑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据表编辑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d33bd8900c48222142a46ed2c5bd64412d2eaab5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataTable 编辑
-当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。  然后，<xref:System.Data.DataRowState> 会设置为 **Modified**，并使用 **DataRow** 的 <xref:System.Data.DataRow.AcceptChanges%2A> 或 <xref:System.Data.DataRow.RejectChanges%2A> 方法来接受或拒绝所做更改。  **DataRow** 还提供了三种可用于在编辑行时将行的状态挂起的方法。  这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
+# <a name="datatable-edits"></a>数据表编辑
+当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 <xref:System.Data.DataRowState>然后将设置为**已修改**，并接受或拒绝使用更改<xref:System.Data.DataRow.AcceptChanges%2A>或<xref:System.Data.DataRow.RejectChanges%2A>方法**DataRow**。 **DataRow**还提供了可用于进行编辑时挂起的行状态的三种方法。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
   
- 当您直接在 **DataRow** 中修改列值时，**DataRow** 会使用 **Current**、**Default** 和 **Original** 行版本来管理列值。  除了这些行版本之外，**BeginEdit**、**EndEdit** 和 **CancelEdit** 方法使用第四种行版本：**Proposed**。  有关行版本的更多信息，请参见[行状态与行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ 当您修改列中的值**DataRow**直接， **DataRow**管理使用的列的值**当前**，**默认**，和**原始**行版本。 除了这些行版本中， **BeginEdit**， **EndEdit**，和**CancelEdit**方法使用第四个行版本：**建议**。 有关行版本的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
- 在执行编辑操作（通过调用 **BeginEdit** 开始，并且通过使用 **EndEdit** 或 **CancelEdit** 或者通过调用 **AcceptChanges** 或 **RejectChanges** 结束）的过程中，**Proposed** 行版本会存在。  
+ **建议**行版本在通过调用开始编辑操作过程中存在**BeginEdit**和用于结束通过使用**EndEdit**或**CancelEdit，**或通过调用**AcceptChanges**或**RejectChanges**。  
   
- 在编辑操作过程中，您可以通过计算 **DataTable** 的 **ColumnChanged** 事件中的 **ProposedValue** 来将验证逻辑应用于各列。  **ColumnChanged** 事件保存 **DataColumnChangeEventArgs**，可保持对正在更改的列和 **ProposedValue** 的引用。  计算了建议值后，可以对其进行修改或取消编辑。  编辑结束时，行从 **Proposed** 状态中移出。  
+ 在编辑操作时，你可以将验证逻辑应用于各列通过评估来评估**ProposedValue**中**ColumnChanged**事件**DataTable**。 **ColumnChanged**事件保存**DataColumnChangeEventArgs** ，保留的引用，到正在更改的列和**ProposedValue**。 计算了建议值后，可以对其进行修改或取消编辑。 当编辑结束时，行移出**建议**状态。  
   
- 您可以通过调用 **EndEdit** 来确认编辑，也可以通过调用 **CancelEdit** 来取消编辑。  请注意，尽管 **EndEdit** 确实已确认您所做的编辑，但在调用 **AcceptChanges** 之前，**DataSet** 并没有实际接受更改。  另外请注意，如果在使用 **EndEdit** 或 **CancelEdit** 结束编辑之前调用 **AcceptChanges**，编辑将会结束，并接受 **Current** 和 **Original** 行版本的 **Proposed** 行值。  同样，调用 **RejectChanges** 也会结束编辑，并放弃 **Current** 和 **Proposed** 行版本。  在调用 **AcceptChanges** 或 **RejectChanges** 之后调用 **EndEdit** 或 **CancelEdit** 不会起作用，因为编辑已经结束。  
+ 可以通过调用来确认编辑**EndEdit**，也可以通过调用取消它们**CancelEdit**。 请注意，当**EndEdit**确实已确认所做的编辑，**数据集**没有实际接受更改直至**AcceptChanges**调用。 另请注意，如果调用**AcceptChanges**已结束编辑之前**EndEdit**或**CancelEdit**，编辑将会结束和**建议**行值接受**当前**和**原始**行版本。 在同样的方式调用**RejectChanges**结束编辑并放弃**当前**和**建议**行版本。 调用**EndEdit**或**CancelEdit**之后调用**AcceptChanges**或**RejectChanges**不起任何作用，因为编辑已经结束。  
   
- 以下示例演示了如何将 **BeginEdit** 与 **EndEdit** 和 **CancelEdit** 一起使用。  本示例还会检查 **ColumnChanged** 事件中的 **ProposedValue**，并决定是否取消编辑。  
+ 下面的示例演示如何使用**BeginEdit**与**EndEdit**和**CancelEdit**。 该示例还将检查**ProposedValue**中**ColumnChanged**事件并决定是否取消编辑。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -57,7 +63,6 @@ Private Shared Sub OnColumnChanged( _
     End If  
   End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -91,10 +96,10 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataRowVersion>   
- [在 DataTable 中处理数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [处理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataRowVersion>  
+ [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [处理数据表事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

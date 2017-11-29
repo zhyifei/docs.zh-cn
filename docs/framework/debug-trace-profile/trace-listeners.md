@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Listener object types
 - listeners
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7dc94602a4bd66d74e7135b03a5d851a0a22754f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56cbde16eff89d25960e510e7eec2424f15e51b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="trace-listeners"></a>跟踪侦听器
 使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。 跟踪消息可由侦听器接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
@@ -89,10 +85,9 @@ System.Diagnostics.Trace.Listeners.Add(
  可以通过从 TraceListener 基类继承并用自定义方法重写其方法来定义侦听器。 有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TraceListener>   
- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TraceListener>  
+ [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

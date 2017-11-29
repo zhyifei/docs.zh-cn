@@ -7,24 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- cache [.NET Framework], configuring
+helpviewer_keywords: cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ea36db46b79c890b0b26cfc39e2aab5bc0e88e03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3c06c05f2d5102d1822aa11c81f2814090e10ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="configuring-caching-in-network-applications"></a>配置网络应用程序中的缓存
 若要配置缓存，需要在应用程序级别或 <xref:System.Net.WebRequest> 级别指定缓存策略。 以下主题提供代码示例，演示如何配置应用程序和请求来使用缓存。  
@@ -40,8 +33,7 @@ ms.lasthandoff: 08/21/2017
  也可使用应用程序或计算机配置文件配置缓存策略。 有关详细信息，请参阅 &#124; [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)   
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
+ [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
-

@@ -1,29 +1,35 @@
 ---
-title: "查询结果分页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通过查询结果分页"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b4a51eec840b74d04aaab97226191b2ed30d8826
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 查询结果分页
-查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。  它通常用于以易于管理的小块形式向用户显示结果。  
+# <a name="paging-through-a-query-result"></a>通过查询结果分页
+查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。 它通常用于以易于管理的小块形式向用户显示结果。  
   
- **DataAdapter** 提供了通过 **Fill** 方法的重载来仅返回一页数据的功能。  但是，对于大量的查询结果，它可能并不是首选的分页方法，因为 **DataAdapter** 虽然仅使用所请求的记录来填充目标 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet>，但仍会使用返回整个查询的资源。  若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
+ **DataAdapter**为仅返回一页的数据，通过重载提供工具**填充**方法。 但是，这可能不是最适合进行大型查询结果分页，因为，虽然**DataAdapter**填充目标<xref:System.Data.DataTable>或<xref:System.Data.DataSet>仅的请求记录，若要返回的资源仍然用于将整个查询。 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
   
- 若要使用 **Fill** 方法返回一页数据，请指定 **startRecord** 参数（代表该数据页中的第一个记录），并指定 **maxRecords** 参数（代表该数据页中的记录数）。  
+ 若要使用**填充**方法以返回一页数据，指定**startRecord**参数，第一条记录的页中的数据，和一个**maxRecords**参数的数目中的数据页的记录。  
   
- 以下代码示例显示如何使用 **Fill** 方法来返回查询结果（页大小为 5 个记录）的第一页。  
+ 下面的代码示例演示如何使用**填充**方法以返回查询结果的第一页的页大小为 5 个记录的位置。  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -50,7 +56,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 在上例中，**DataSet** 只填充了 5 个记录，但却返回了整个 **Orders** 表。  若要用相同的 5 个记录填充 **DataSet** 但仅返回这 5 个记录，请在 SQL 语句中使用 TOP 和 WHERE 子句，如以下代码示例所示。  
+ 在前面的示例中，**数据集**只填充了 5 个记录，但整个**订单**返回表。 若要填充**数据集**具有相同的五个记录，但仅返回这 5 个记录，使用 TOP 和 WHERE 子句在 SQL 语句，如下面的代码示例所示。  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -87,7 +93,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- 若要使用接受 **startRecord** 和 **maxRecords** 参数的 **Fill** 方法的重载来返回下一页记录，请使当前记录索引按页大小递增，并填充该表。  请记住，即使仅在 **DataSet** 中添加一页记录，数据库服务器仍会返回全部查询结果。  在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。  您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
+ 若要返回下一页记录使用的重载**填充**采用的方法**startRecord**和**maxRecords**参数，递增的当前记录索引页大小和填充表。 请记住，数据库服务器将返回整个查询结果，即使只有一个页的记录添加到**数据集**。 在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。 您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -105,7 +111,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 若要返回下一页记录而不让数据库服务器返回整个查询，请指定对 SQL SELECT 语句的限制条件。  由于上例保留了返回的最后一个记录，因此可以在 WHERE 子句中使用它来指定查询的起点，如以下代码示例所示。  
+ 若要返回下一页记录而不让数据库服务器返回整个查询，请指定对 SQL SELECT 语句的限制条件。 由于上例保留了返回的最后一个记录，因此可以在 WHERE 子句中使用它来指定查询的起点，如以下代码示例所示。  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -127,6 +133,6 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## 请参阅  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
+## <a name="see-also"></a>另请参阅  
+ [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

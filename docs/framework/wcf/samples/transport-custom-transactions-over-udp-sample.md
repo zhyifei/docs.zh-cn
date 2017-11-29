@@ -1,26 +1,29 @@
 ---
-title: "传输：UDP 示例上的自定义事务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "传输：UDP 示例上的自定义事务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c1586b763d98776468322144019407c7c6cc27a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 传输：UDP 示例上的自定义事务
-本示例基于 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)中的[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例。它将扩展 UDP 传输示例以支持自定义事务流，并演示如何使用 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性。  
+# <a name="transport-custom-transactions-over-udp-sample"></a>传输：UDP 示例上的自定义事务
+此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
   
-## UDP 传输示例中的代码更改  
- 为了演示事务流，该示例对 `ICalculatorContract` 的服务协定进行了更改，以要求 `CalculatorService.Add()` 的一个事务范围。本示例还向 `Add` 操作的协定另外添加了一个 `System.Guid` 参数。此参数用于将客户端事务的标识符传递给服务。  
+## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 传输示例中的代码更改  
+ 为了演示事务流，示例对 `ICalculatorContract` 的服务协定进行了更改，用于为 `CalculatorService.Add()` 设定一个事务范围。 本示例还向 `System.Guid` 操作的协定另外添加了一个 `Add` 参数。 此参数用于将客户端事务的标识符传递给服务。  
   
 ```  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -45,7 +48,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例使用 UDP 数据包在客户端和服务之间传递消息。[Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)使用相同的机制传输消息，但在对事务进行流处理时，该事务和编码消息将一起插入 UDP 数据包。  
+ [传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例使用 UDP 数据包来将消息传递客户端和服务之间。 [传输： 自定义传输示例](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)使用相同的机制以传输消息的但当事务进行流处理，则将该项插入到编码的消息以及将 UDP 数据包。  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -55,11 +58,11 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是一个帮助器方法，包含用于将当前事务的传播程序令牌与消息实体合并，并将合并结果放入缓冲区中的新功能。  
   
- 对于自定义事务流传输，客户端实现必须了解哪些服务操作要求事务流并将此信息传递给 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。还应存在用于将用户事务传递到传输层的机制。本示例使用“[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息检查器”获取此信息。此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
+ 对于自定义事务流传输，客户端实现必须了解哪些服务操作要求事务流并将此信息传递给 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 还应存在用于将用户事务传递到传输层的机制。 本示例使用“[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息检查器”获取此信息。 此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
   
 -   确定对于给定的消息操作，事务是否必须进行流处理（这发生在 `IsTxFlowRequiredForThisOperation()` 中）。  
   
--   如果需要对事务进行流处理（这在 `BeforeSendRequest()` 中完成），则使用 `TransactionFlowProperty` 将当前环境事务附加到消息。  
+-   如果需要对事务进行流处理（这在 `TransactionFlowProperty` 中完成），则使用 `BeforeSendRequest()` 将当前环境事务附加到消息。  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -97,10 +100,9 @@ public class TransactionFlowInspector : IClientMessageInspector
       [...]  
  }  
 }  
-  
 ```  
   
- 使用自定义行为 `TransactionFlowBehavior` 将 `TransactionFlowInspector` 本身传递到框架。  
+ 使用自定义行为 `TransactionFlowInspector` 将 `TransactionFlowBehavior` 本身传递到框架。  
   
 ```  
 public class TransactionFlowBehavior : IEndpointBehavior  
@@ -125,7 +127,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- 根据前面的机制，用户代码在调用服务操作之前创建 `TransactionScope`。消息检查器确保将事务传递到传输，以防需要将事务流动到服务操作。  
+ 根据前面的机制，用户代码在调用服务操作之前创建 `TransactionScope`。 消息检查器确保将事务传递到传输，以防需要将事务流动到服务操作。  
   
 ```  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -182,11 +184,11 @@ if (transaction != null)
   
  这可以确保调度程序在调度时选择事务，并在调用由消息处理的服务操作时使用该事务。  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  当前示例的运行方式应与[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 相似。若要运行该示例，请使用 UdpTestService.exe 启动服务。如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。为此，应在[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]中右击 UdpTestService.exe，再单击**“以管理员身份运行”**。  
+2.  当前的示例应类似于运行[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。 为此，请右键单击 UdpTestService.exe 中的[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]单击**以管理员身份运行**。  
   
 3.  将生成以下输出。  
   
@@ -196,7 +198,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4.  此时可以通过运行 UdpTestClient.exe 启动客户端。客户端生成的输出如下所示。  
+4.  此时可以通过运行 UdpTestClient.exe 启动客户端。 客户端生成的输出如下所示。  
   
     ```  
     0  
@@ -227,9 +229,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  如果服务应用程序可以将 `CalculatorService.Add()` 操作的 `clientTransactionId` 参数中的客户端发送的事务标识符与服务事务的标识符进行匹配，则服务应用程序会显示消息 `The client transaction has flowed to the service`。仅当客户端事务已经流动到服务时才可以获得匹配。  
+6.  如果服务应用程序可以将 `The client transaction has flowed to the service` 操作的 `clientTransactionId` 参数中的客户端发送的事务标识符与服务事务的标识符进行匹配，则服务应用程序会显示消息 `CalculatorService.Add()`。 仅当客户端事务已经流动到服务时才可以获得匹配。  
   
-7.  若要对使用配置发布的终结点运行客户端应用程序，请在服务应用程序窗口中按 Enter，并再次运行测试客户端。您将在服务上看到如下输出。  
+7.  若要对使用配置发布的终结点运行客户端应用程序，请在服务应用程序窗口中按 Enter，并再次运行测试客户端。 您将在服务上看到如下输出。  
   
     ```  
     Testing Udp From Config.  
@@ -247,7 +249,7 @@ if (transaction != null)
   
 10. 注意，Svcutil.exe 不会为 `sampleProfileUdpBinding` 生成绑定扩展配置；必须手动添加它。  
   
-    ```  
+    ```xml  
     <configuration>  
         <system.serviceModel>      
             …  
@@ -262,13 +264,13 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## 请参阅  
- [传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>另请参阅  
+ [传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

@@ -1,25 +1,28 @@
 ---
-title: "ServiceCredentials | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceCredentials
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e4cc9d7d7d46157b7df202c6daffb31b90fa98c1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceCredentials
+# <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class ServiceCredentials : Behavior  
@@ -34,66 +37,66 @@ class ServiceCredentials : Behavior
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  ServiceCredentials 类不定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  ServiceCredentials 类具有下列属性：  
   
-### ClientCertificate  
+### <a name="clientcertificate"></a>ClientCertificate  
  数据类型：String  
   
  访问类型：只读  
   
  此服务的客户端证书身份验证和配置设置。  
   
-### IssuedTokenAuthentication  
+### <a name="issuedtokenauthentication"></a>IssuedTokenAuthentication  
  数据类型：String  
   
  访问类型：只读  
   
  当前颁发的此服务的令牌身份验证设置。  
   
-### 对等  
+### <a name="peer"></a>对等  
  数据类型：String  
   
  访问类型：只读  
   
  对等传输终结点要使用的当前凭据身份验证和配置设置。  
   
-### SecureConversationAuthentication  
+### <a name="secureconversationauthentication"></a>SecureConversationAuthentication  
  数据类型：String  
   
  访问类型：只读  
   
  指定当前安全对话设置。  
   
-### ServiceCertificate  
+### <a name="servicecertificate"></a>ServiceCertificate  
  数据类型：String  
   
  访问类型：只读  
   
  与此服务关联的证书。  
   
-### UserNameAuthentication  
+### <a name="usernameauthentication"></a>UserNameAuthentication  
  数据类型：String  
   
  访问类型：只读  
   
- 此服务的用户名\/密码设置。  
+ 此服务的用户名/密码设置。  
   
-### WindowsAuthentication  
+### <a name="windowsauthentication"></a>WindowsAuthentication  
  数据类型：String  
   
  访问类型：只读  
   
  此服务的 Windows 身份验证设置。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Description.ServiceCredentials>

@@ -1,28 +1,37 @@
 ---
-title: "&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 32361347665ee506b13d3be8a4257ca71e2629f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 元素
-定义 [\<ws2007FederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) 元素的消息级安全性设置。  
+# <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 元素
+定义的消息级安全性设置[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)元素。  
   
-## 语法  
+ \<系统。ServiceModel >  
+\<绑定 >  
+\<ws2007FederationHttpBinding >  
+\<绑定 >  
+\<安全 >  
+\<消息 >  
   
-```  
+## <a name="syntax"></a>语法  
   
+```xml  
 <ws2007FederationBinding>  
    <binding >  
       <security>  
@@ -81,61 +90,60 @@ caps.handback.revision: 11
 </ws2007FederationBinding>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
 |特性|描述|  
-|--------|--------|  
-|`algorithmSuite`|可选。  设置消息加密、签名和密钥包装算法。  算法和密钥大小由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 类确定。  这些算法映射到安全策略语言 \(WS\-SecurityPolicy\) 规范中指定的算法。<br /><br /> 有关可能的值，请参见下表。  默认值为 Basic256。|  
-|`issuedKeyType`|指定要颁发的密钥类型。  包括以下有效值：<br /><br /> -   SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> 默认值为 SymmetricKey。  此属性的类型为 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
-|`issuedTokenType`|一个 URI，指定要颁发的令牌的类型。  默认值为 `null`。|  
-|`negotiateServiceCredential`|一个值，指定是否应在协商过程中交换服务凭据，或者是否可在带外使用服务凭据。  默认值为 `true`，这意味着对服务凭据进行协商。|  
+|---------------|-----------------|  
+|`algorithmSuite`|可选。 设置消息加密、签名和密钥包装算法。 算法和密钥大小由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 类确定。 这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。<br /><br /> 有关可能的值，请参见下表。 默认值为 Basic256。|  
+|`issuedKeyType`|指定要颁发的密钥类型。 包括以下有效值：<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> 默认值为 SymmetricKey。 此属性的类型为 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|`issuedTokenType`|一个 URI，指定要颁发的令牌的类型。 默认值为 `null`。|  
+|`negotiateServiceCredential`|一个值，指定是否应在协商过程中交换服务凭据，或者是否可在带外使用服务凭据。 默认值为 `true`，这意味着对服务凭据进行协商。|  
   
-## algorithmSuite 属性  
+## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
 |值|描述|  
-|-------|--------|  
-|Basic128|使用 Aes128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic192|使用 Aes192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic256|使用 Aes256 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
+|-----------|-----------------|  
+|Basic128|使用 Aes128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
+|Basic192|使用 Aes192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
+|Basic256|使用 Aes256 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic256Rsa15|对消息加密使用 Aes256，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
 |Basic192Rsa15|对消息加密使用 Aes192，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
-|TripleDes|使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
+|TripleDes|使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic128Rsa15|对消息加密使用 Aes128，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
 |TripleDesRsa15|使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
-|Basic128Sha256|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic192Sha256|对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic256Sha256|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|TripleDesSha256|对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
+|Basic128Sha256|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。|  
+|Basic192Sha256|对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。|  
+|Basic256Sha256|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。|  
+|TripleDesSha256|对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic128Sha256Rsa15|对消息加密使用 Aes128，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
 |Basic192Sha256Rsa15|对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
 |Basic256Sha256Rsa15|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
 |TripleDesSha256Rsa15|对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<claimTypeRequirements\>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定此绑定的声明类型集合。  每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
-|[\<issuer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定颁发安全令牌的终结点。  此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
-|[\<issuerMetadata\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定颁发者的终结点地址。|  
-|[\<tokenRequestParameters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|令牌请求参数的集合。  每个参数都是一个 XML 元素。|  
+|-------------|-----------------|  
+|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定此绑定的声明类型集合。 每个元素的类型都为 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
+|[\<颁发者 >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定颁发安全令牌的终结点。 此元素的类型为 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
+|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定颁发者的终结点地址。|  
+|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|令牌请求参数的集合。 每个参数都是一个 XML 元素。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|定义绑定的安全设置。|  
+|-------------|-----------------|  
+|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|定义绑定的安全设置。|  
   
-## 请参阅  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityElement>   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [绑定](../../../../../docs/framework/wcf/bindings.md)  
+ [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<绑定 >](../../../../../docs/framework/misc/binding.md)
