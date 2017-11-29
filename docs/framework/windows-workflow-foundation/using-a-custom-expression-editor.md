@@ -1,39 +1,42 @@
 ---
-title: "使用自定义表达式编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用自定义表达式编辑器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dcf9970b2b4986c3948704d848c67d8a3c6f7d9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用自定义表达式编辑器
-可以实现自定义表达式编辑器，以提供更丰富且更简单的表达式编辑体验。在以下几种情况下，您可能需要使用自定义表达式编辑器：  
+# <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
+可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  
   
--   为 IntelliSense 和重新承载的工作流设计器中的其他丰富的编辑功能提供支持。必须提供此功能，因为无法在重新承载的应用程序中使用默认的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 表达式编辑器。  
+-   为 IntelliSense 和重新承载的工作流设计器中的其他丰富的编辑功能提供支持。 必须提供此功能，因为无法在重新承载的应用程序中使用默认的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 表达式编辑器。  
   
 -   简化业务分析用户的表达式编辑体验，使他们无需了解 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或处理 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 表达式。  
   
  实现自定义表达式编辑器需要执行以下三个基本步骤：  
   
-1.  实现 <xref:System.Activities.Presentation.View.IExpressionEditorService> 接口。此接口可管理表达式编辑器的创建和析构。  
+1.  实现 <xref:System.Activities.Presentation.View.IExpressionEditorService> 接口。 此接口可管理表达式编辑器的创建和析构。  
   
-2.  实现 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 接口。此接口针对编辑 UI 的表达式实现 UI。  
+2.  实现 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 接口。 此接口实现针对表达式编辑 UI 的 UI。  
   
 3.  在重新承载的工作流应用程序中发布 <xref:System.Activities.Presentation.View.IExpressionEditorService>。  
   
-## 在类库中实现自定义表达式编辑器  
- 以下是实现 MyExpressionEditorService 库项目中包含的 <xref:System.Activities.Presentation.View.IExpressionEditorService> 接口的（概念证明）`MyEditorService` 类的代码示例。  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>在类库中实现自定义表达式编辑器  
+ 以下是实现 MyExpressionEditorService 库项目中包含的 `MyEditorService` 接口的（概念证明）<xref:System.Activities.Presentation.View.IExpressionEditorService> 类的代码示例。  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Activities.Presentation.View;  
@@ -75,13 +78,11 @@ namespace MyExpressionEditorService
   
     }  
 }  
-  
 ```  
   
- 以下是实现 MyExpressionEditorService 库项目中 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 接口的 `MyExpressionEditorInstance` 类的代码。  
+ 下面是实现 MyExpressionEditorService 库项目中 `MyExpressionEditorInstance` 接口的 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 类的代码。  
   
 ```  
-  
 using System;  
 using System.Activities.Presentation.View;  
 using System.Windows;  
@@ -227,14 +228,12 @@ namespace MyExpressionEditorService
         }  
     }  
 }  
-  
 ```  
   
-### 在 WPF 项目中发布自定义表达式编辑器  
- 以下的代码显示如何在 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 应用程序中重新承载设计器以及如何创建和发布 `MyEditorService` 服务。使用此代码之前, 从包含 avalon2 应用程序的项目将引用添加到 MyExpressionEditorService 库项目。  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>在 WPF 项目中发布自定义表达式编辑器  
+ 以下的代码显示如何在 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 应用程序中重新承载设计器以及如何创建和发布 `MyEditorService` 服务。 使用此代码之前, 从包含 avalon2 应用程序的项目将引用添加到 MyExpressionEditorService 库项目。   
   
 ```  
-  
 using System.Windows;  
 using System.Windows.Controls;  
 using System.Activities.Presentation;  
@@ -283,13 +282,12 @@ namespace WpfApplication1
         }  
     }  
 }  
-  
 ```  
   
-### 说明  
- 如果在自定义活动设计器中使用了 **ExpressionTextBox** 控件，则无需使用 <xref:System.Activities.Presentation.View.IExpressionEditorService> 接口的 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> 和 <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> 方法来创建和销毁表达式编辑器。<xref:System.Activities.Presentation.View.ExpressionTextBox> 类可为您管理此过程。  
+### <a name="notes"></a>说明  
+ 如果你使用**ExpressionTextBox**控件在自定义活动设计器中，它不需要创建和销毁表达式编辑器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>和<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法<xref:System.Activities.Presentation.View.IExpressionEditorService>接口。 <xref:System.Activities.Presentation.View.ExpressionTextBox> 类可为您管理此过程。  
   
-## 请参阅  
- <xref:System.Activities.Presentation.View.IExpressionEditorService>   
- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>   
- [在自定义设计器中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Activities.Presentation.View.IExpressionEditorService>  
+ <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
+ [在自定义活动设计器中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

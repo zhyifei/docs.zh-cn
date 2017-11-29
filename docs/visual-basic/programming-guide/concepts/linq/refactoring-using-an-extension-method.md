@@ -1,40 +1,36 @@
 ---
-title: "使用扩展方法 (Visual Basic) 重构 |Microsoft 文档"
+title: "重构使用扩展方法 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 83934292a57b5830cc6a3b002b61c6ad657d4eb7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>使用扩展方法 (Visual Basic) 重构
-此示例基于上一示例中，[检索段落 (Visual Basic 中) 的文本](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)，通过将重构作为扩展方法使用纯函数实现的字符串的串联。  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>重构使用扩展方法 (Visual Basic)
+此示例基于前面的示例中，[检索段落 (Visual Basic 中) 的文本](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)，通过重构使用作为扩展方法实现一个纯函数的字符串的串联。  
   
- 前面的示例使用<xref:System.Linq.Enumerable.Aggregate%2A>标准查询运算符将多个字符串串联为一个字符串。</xref:System.Linq.Enumerable.Aggregate%2A> 不过，编写一个扩展方法来执行此操作会更方便，因为这样实现的查询会更小、更简单。  
+ 前面的示例使用 <xref:System.Linq.Enumerable.Aggregate%2A> 标准查询运算符将多个字符串串联为一个字符串。 不过，编写一个扩展方法来执行此操作会更方便，因为这样实现的查询会更小、更简单。  
   
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，检索段落、每个段落的样式以及每个段落的文本。 本示例以本教程中前面的一些示例为基础构建。  
   
  本示例包含 `StringConcatenate` 方法的多个重载。  
   
- 您可以找到用于创建在本示例的源文档的说明[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 你可以找到用于创建此示例中的源文档的说明[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName>  
+ 本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -229,7 +225,7 @@ Module Module1
 End Module  
 ```  
   
- 该示例产生下面的输出应用于文档中所述[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 该示例产生以下输出时应用于文档中所述[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -254,8 +250,8 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>后续步骤  
  下一示例演示如何使用纯函数以其他方式重构此代码：  
   
--   [使用纯函数 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [使用纯函数重构 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [教程︰ 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [重构为纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+ [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [重构到纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

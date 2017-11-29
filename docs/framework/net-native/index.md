@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +15,22 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 76645ae43ce6754ffdf505729ec1198785a71561
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: a79744d99571fa1428da1fade8f63c4c80ae7b6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 编译引用
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 是一项预编译技术，用于构建和部署 [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]附带的 Windows 应用。 它自动将以托管代码（C# 或 Visual Basic）编写并面向 .NET Framework 和 Windows 10 的发布版本的应用编译为本机代码。  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)]是包含在 Visual Studio 2015 和更高版本的预编译技术用于生成和部署 Windows 应用程序。 它自动将以托管代码（C# 或 Visual Basic）编写并面向 .NET Framework 和 Windows 10 的发布版本的应用编译为本机代码。  
   
  通常，定位于 .NET Framework 的应用会被编译到中间语言 (IL) 中。 在运行时间，及时生成 (JIT) 编译器将 IL 翻译为本机代码。 与此相反， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 将 Windows 商店应用直接编译为本机代码。 对于开发者，这意味着：  
   
--   你的应用将提供本机代码的优越性能。  
+-   你的应用程序功能的本机代码的性能。 通常情况下，性能将优于第一次编译到 IL，然后由 JIT 编译器编译为本机代码的代码。 
   
 -   你可以继续用 C# 或 Visual Basic 进行编程。  
   
@@ -40,19 +38,22 @@ ms.lasthandoff: 09/07/2017
   
  对于你的应用用户， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 提供以下优势：  
   
--   快速的执行时间  
+-   对于大多数应用程序和方案的更快的执行时间。
   
--   持续快速的启动时间  
+-   对于大多数应用程序和方案的更快的启动时间。 
   
--   较低的部署和更新成本  
+-   部署和更新的低成本。  
   
--   优化过的应用内存使用  
-  
- 但是 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 涉及的本机代码编译不止一个。 它会改变 .NET Framework 应用的创建和执行方式。 具体而言：  
+-   优化应用内存使用情况。  
+
+> [!IMPORTANT]
+> 对于大多数应用程序和方案，.NET 本机提供显著更快的启动时间和相比编译到 IL 或 NGEN 映像的应用时的优越性能。 但是，你的结果可能有所不同。 若要确保你的应用程序具有受益的.NET Native 的性能增强功能，您应比较其性能，与你的应用程序的非.NET 本机版本。 有关详细信息，请参阅[性能会话概述](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
+ 
+但是 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 涉及的本机代码编译不止一个。 它会改变 .NET Framework 应用的创建和执行方式。 具体而言：  
   
 -   在预编译期间，所需的 .NET Framework 部分会静态连接到你的应用。 这允许应用同 .NET Framework 的应用本地库一起运行，并且允许编译器执行全局分析，从而提供性能优势。 因此，应用甚至在 .NET Framework 更新后会启动得更快。  
   
--   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 运行时得到了优化用于动态预编程，因此能够提供优越性能。 同时，它保留了开发者认为非常高效的核心反射特性。  
+-   [!INCLUDE[net_native](../../../includes/net-native-md.md)]运行时优化用于动态预编程，并且在大多数情况下提供优异的性能。 同时，它保留了开发者认为非常高效的核心反射特性。  
   
 -   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 使用了同 C++ 编译器（已为静态预编译方案进行过优化）相同的后端。  
   
@@ -90,4 +91,3 @@ ms.lasthandoff: 09/07/2017
   
 ## <a name="see-also"></a>另请参阅  
  [.NET Native 常见问题](http://msdn.microsoft.com/vstudio/dn642499.aspx)
-

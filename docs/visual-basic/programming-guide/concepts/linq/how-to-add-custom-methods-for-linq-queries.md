@@ -1,40 +1,32 @@
 ---
-title: "如何︰ 为 LINQ 查询 (Visual Basic 中) 添加自定义方法 |Microsoft 文档"
+title: "如何： 为 LINQ 查询 (Visual Basic 中) 添加自定义方法"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 166eb731d41e009c374ba55f929eed302793ecd0
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c94973bf9eae0feb2f7690dcc10e839b6b7c060c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>如何︰ 为 LINQ 查询 (Visual Basic 中) 添加自定义方法
-您可以扩展，可以通过添加的扩展方法使用 LINQ 查询方法的一套<xref:System.Collections.Generic.IEnumerable%601>接口。</xref:System.Collections.Generic.IEnumerable%601> 例如，除了标准平均值或最大操作数中，可以创建自定义的聚合方法来计算单个值序列中的值。 此外可以创建一个方法，用作自定义筛选器或特定数据转换为一系列的值并返回新的序列。 此类方法的示例包括<xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Skip%2A>，和<xref:System.Linq.Enumerable.Reverse%2A>。</xref:System.Linq.Enumerable.Reverse%2A> </xref:System.Linq.Enumerable.Skip%2A> </xref:System.Linq.Enumerable.Distinct%2A>  
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>如何： 为 LINQ 查询 (Visual Basic 中) 添加自定义方法
+可通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口添加扩展方法扩展可用于 LINQ 查询的方法集。 例如，除了标准平均值或最大值运算，还可以创建自定义聚合方法，从一系列值计算单个值。 此外可以创建一个方法，用作一个值序列的自定义筛选器或用于对其进行特定数据转换，并返回新的序列。 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A> 就是此类方法的示例。  
   
- 在扩展<xref:System.Collections.Generic.IEnumerable%601>接口，可以将自定义方法应用于任何可枚举集合。</xref:System.Collections.Generic.IEnumerable%601> 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
+ 扩展 <xref:System.Collections.Generic.IEnumerable%601> 接口时，可以将自定义方法应用于任何可枚举集合。 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
   
-## <a name="adding-an-aggregate-method"></a>添加聚合方法  
- 聚合方法计算出单个值从一组值。 LINQ 提供了几种聚合方法，包括<xref:System.Linq.Enumerable.Average%2A>， <xref:System.Linq.Enumerable.Min%2A>，和<xref:System.Linq.Enumerable.Max%2A>。</xref:System.Linq.Enumerable.Max%2A> </xref:System.Linq.Enumerable.Min%2A> </xref:System.Linq.Enumerable.Average%2A> 可以通过添加到扩展方法来创建您自己的聚合方法<xref:System.Collections.Generic.IEnumerable%601>接口。</xref:System.Collections.Generic.IEnumerable%601>  
+## <a name="adding-an-aggregate-method"></a>添加聚合对象  
+ 聚合方法可从一组值计算单个值。 LINQ 提供多个聚合方法，包括 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Min%2A> 和 <xref:System.Linq.Enumerable.Max%2A>。 可以通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口添加扩展方法来创建自己的聚合方法。  
   
- 下面的代码示例演示如何创建扩展方法调用`Median`来计算的类型的数字序列中的中间值`double`。  
+ 下面的代码示例演示如何创建名为 `Median` 的扩展方法来计算类型为 `double` 的数字序列的中间值。  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -65,31 +57,72 @@ Module LINQExtension
 End Module  
 ```  
   
- 与调用从其他聚合方法相同的方式，为任何可枚举集合调用此扩展方法<xref:System.Collections.Generic.IEnumerable%601>接口。</xref:System.Collections.Generic.IEnumerable%601>  
+ 使用从 <xref:System.Collections.Generic.IEnumerable%601> 接口调用其他聚合方法的方式为任何可枚举集合调用此扩展方法。  
   
 > [!NOTE]
->  在 Visual Basic 中，您可以使用方法调用或标准的查询语法`Aggregate`或`Group By`子句。 有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)和[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
+>  在 Visual Basic 中，你可以使用方法调用或标准查询语法`Aggregate`或`Group By`子句。 有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)和[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   
- 下面的代码示例演示如何使用`Median`类型的数组的方法`double`。  
+ 下面的代码示例说明如何为类型 `double` 的数组使用 `Median` 方法。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>重载以接受各种类型的聚合方法  
- 您可以重载聚合方法，以便它接受各种类型的序列。 标准的方法是创建每种类型的重载。 另一种方法是创建一个重载，它将采用泛型类型，并将其转换为特定类型使用委托。 此外可以结合这两种方法。  
+```vb  
+Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}  
   
-#### <a name="to-create-an-overload-for-each-type"></a>若要创建每种类型的重载  
- 您可以创建您想要支持每种类型的特定重载。 下面的代码示例演示的重载`Median`方法`integer`类型。  
+Dim query1 = Aggregate num In numbers1 Into Median()  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
- 现在，您可以调用`Median`两个重载`integer`和`double`类型，如下面的代码中所示︰  
+Console.WriteLine("Double: Median = " & query1)  
+```  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
-#### <a name="to-create-a-generic-overload"></a>若要创建的泛型重载  
- 此外可以创建一个重载，它接受泛型对象的序列。 此重载采用委托作为参数，并使用它来将泛型类型的对象的序列转换为特定类型。  
+```vb  
+' This code produces the following output:  
+'  
+' Double: Median = 4.85  
+```  
   
- 下面的代码演示的重载`Median`采用的方法<xref:System.Func%602>委托作为参数。</xref:System.Func%602> 此委托采用泛型类型 T 的对象，并返回类型的对象`double`。  
+
+### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>重载聚合方法以接受各种类型  
+ 可以重载聚合方法，以便其接受各种类型的序列。 标准做法是为每种类型都创建一个重载。 另一种方法是创建一个采用泛型类型的重载，并使用委托将其转换为特定类型。 还可以将两种方法结合。  
+  
+#### <a name="to-create-an-overload-for-each-type"></a>为每种类型创建重载  
+ 可以为要支持的每种类型创建特定重载。 下面的代码示例演示 `integer` 类型的 `Median` 方法的重载。  
+  
+```vb  
+' Integer overload  
+  
+<Extension()>   
+Function Median(ByVal source As IEnumerable(Of Integer)) As Double  
+    Return Aggregate num In source Select CDbl(num) Into med = Median()  
+End Function  
+```  
+ 现在便可以为 `integer` 和 `double` 类型调用 `Median` 重载了，如以下代码中所示：  
+  
+```vb  
+Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}  
+  
+Dim query1 = Aggregate num In numbers1 Into Median()  
+  
+Console.WriteLine("Double: Median = " & query1)  
+```  
+  
+```vb  
+Dim numbers2() As Integer = {1, 2, 3, 4, 5}  
+  
+Dim query2 = Aggregate num In numbers2 Into Median()  
+  
+Console.WriteLine("Integer: Median = " & query2)  
+```  
+  
+```vb  
+' This code produces the following output:  
+'  
+' Double: Median = 4.85  
+' Integer: Median = 3  
+```  
+  
+ 
+#### <a name="to-create-a-generic-overload"></a>创建一般重载  
+ 还可以创建接受泛型对象序列的重载。 此重载采用委托作为参数，并使用该参数将泛型类型的对象序列转换为特定类型。  
+  
+ 下面的代码展示 `Median` 方法的重载，该重载将 <xref:System.Func%602> 委托作为参数。 此委托采用泛型类型 T 的对象，并返回类型 `double` 的对象。  
   
 ```vb  
 ' Generic overload.  
@@ -101,18 +134,61 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- 现在，您可以调用`Median`为一系列的任何类型的对象的方法。 如果类型不具有其自己的方法重载，您必须将传递委托参数。 在 Visual Basic 中，您可以实现此目的使用 lambda 表达式。 此外，如果您使用`Aggregate`或`Group By`子句而不是方法调用中的，您可以传递任何值或处于范围内，此子句的表达式。  
+ 现在，可以为任何类型的对象序列调用 `Median` 方法。 如果类型不具有自己的方法重载，必须手动传递委托参数。 在 Visual Basic 中，你可以为此目的使用 lambda 表达式。 此外，如果你使用`Aggregate`或`Group By`子句而不是方法调用中的，可以传递任何值或处于范围内，此子句的表达式。  
   
- 下面的代码示例演示如何调用`Median`为整数的数组和一个字符串数组的方法。 对于字符串，字符串长度的数组中的中值被计算。 该示例演示如何将传递<xref:System.Func%602>委托到的参数`Median`每个用例的方法。</xref:System.Func%602>  
+ 下面的代码示例演示如何为整数数组和字符串数组调用 `Median` 方法。 对于字符串，将计算数组中字符串长度的中值。 该示例演示如何将 <xref:System.Func%602> 委托参数传递给每个用例的 `Median` 方法。  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
-## <a name="adding-a-method-that-returns-a-collection"></a>添加返回的集合的方法  
- 您可以扩展<xref:System.Collections.Generic.IEnumerable%601>与返回一系列值的自定义查询方法的接口。</xref:System.Collections.Generic.IEnumerable%601> 在这种情况下，该方法必须返回类型<xref:System.Collections.Generic.IEnumerable%601>。</xref:System.Collections.Generic.IEnumerable%601>的集合 这种方法可以用于将筛选器或数据转换应用于一系列值。  
+```vb  
+Dim numbers3() As Integer = {1, 2, 3, 4, 5}  
   
- 下面的示例演示如何创建名为的扩展方法`AlternateElements`返回每个其他元素在集合中，从第一个元素开始。  
+' You can use num as a parameter for the Median method   
+' so that the compiler will implicitly convert its value to double.  
+' If there is no implicit conversion, the compiler will  
+' display an error message.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
- 可以为任何可枚举集合调用此扩展方法，就像将调用其他方法从<xref:System.Collections.Generic.IEnumerable%601>接口，如下面的代码中所示︰</xref:System.Collections.Generic.IEnumerable%601>  
+Dim query3 = Aggregate num In numbers3 Into Median(num)  
+  
+Console.WriteLine("Integer: Median = " & query3)  
+  
+Dim numbers4() As String = {"one", "two", "three", "four", "five"}  
+  
+' With the generic overload, you can also use numeric properties of objects.  
+  
+Dim query4 = Aggregate str In numbers4 Into Median(str.Length)  
+  
+Console.WriteLine("String: Median = " & query4)  
+  
+' This code produces the following output:  
+'  
+' Integer: Median = 3  
+' String: Median = 4  
+```  
+## <a name="adding-a-method-that-returns-a-collection"></a>添加返回集合的方法  
+ 可以使用会返回值序列的自定义查询方法来扩展 <xref:System.Collections.Generic.IEnumerable%601> 接口。 在这种情况下，该方法必须返回类型 <xref:System.Collections.Generic.IEnumerable%601> 的集合。 此类方法可用于将筛选器或数据转换应用于值序列。  
+  
+ 下面的示例演示如何创建名为 `AlternateElements` 的扩展方法，该方法从集合中第一个元素开始按相隔一个元素的方式返回集合中的元素。  
+  
+```vb  
+' Extension method for the IEnumerable(of T) interface.   
+' The method returns every other element of a sequence.  
+  
+<Extension()>   
+Function AlternateElements(Of T)(  
+    ByVal source As IEnumerable(Of T)  
+    ) As IEnumerable(Of T)  
+  
+    Dim list As New List(Of T)  
+    Dim i = 0  
+    For Each element In source  
+        If (i Mod 2 = 0) Then  
+            list.Add(element)  
+        End If  
+        i = i + 1  
+    Next  
+    Return list  
+End Function  
+```  
+ 可使用从 <xref:System.Collections.Generic.IEnumerable%601> 接口调用其他方法的方式对任何可枚举集合调用此扩展方法，如下面的代码中所示：  
   
 ```vb  
 Dim strings() As String = {"a", "b", "c", "d", "e"}  
@@ -130,6 +206,6 @@ Next
 ' e  
 ```  
   
-## <a name="see-also"></a>请参见  
- <xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Collections.Generic.IEnumerable%601>  
  [扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

@@ -1,161 +1,166 @@
 ---
-title: "演示图板概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "演示图板语法"
-  - "语法, Storyboard"
-  - "时间线"
+title: "演示图板概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Storyboard syntax [WPF]
+- syntax [WPF], Storyboard
+- timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c90fb49a8fb5c63a3bf680bbbe5347db881d500b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演示图板概述
-本主题演示如何使用 <xref:System.Windows.Media.Animation.Storyboard> 对象来组织和应用动画，  还描述了如何交互操作 <xref:System.Windows.Media.Animation.Storyboard> 对象，并介绍了间接属性目标语法。  
+# <a name="storyboards-overview"></a>演示图板概述
+本主题演示如何使用<xref:System.Windows.Media.Animation.Storyboard>对象来组织和应用动画。 它描述如何以交互方式操作<xref:System.Windows.Media.Animation.Storyboard>对象，并说明间接属性目标语法。  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 必备组件  
- 要了解本主题，您应当熟悉不同的动画类型及其基本功能。  有关动画的简介，请参见[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  您还应当了解如何使用附加属性。  有关附加属性的更多信息，请参见[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 若要了解本主题，应熟悉不同的动画类型及其基本功能。 有关动画的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 还应了解如何使用附加属性。 有关附加属性的详细信息，请参阅[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
   
 <a name="whatisatimeline"></a>   
-## 什么是 Storyboard？  
- 动画不是唯一有用的时间线类型。  还提供了其他时间线类来帮助您组织时间线集合，并将时间线应用于属性。  容器时间线派生自 <xref:System.Windows.Media.Animation.TimelineGroup> 类，包括 <xref:System.Windows.Media.Animation.ParallelTimeline> 和 <xref:System.Windows.Media.Animation.Storyboard>。  
+## <a name="what-is-a-storyboard"></a>什么是情节提要？  
+ 动画并非唯一有用的时间线类型。 还提供了其他时间线类来帮助组织时间线集，并将时间线应用于属性。 容器时间线派生自<xref:System.Windows.Media.Animation.TimelineGroup>类，并包含<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.Storyboard>。  
   
- <xref:System.Windows.Media.Animation.Storyboard> 是一种为其所包含的时间线提供目标信息的容器时间线。  演示图板可以包含任意类型的 <xref:System.Windows.Media.Animation.Timeline>，包括其他容器时间线和动画。  可以使用 <xref:System.Windows.Media.Animation.Storyboard> 对象将影响各种对象和属性的时间线组合成一个时间线树，以便于组织和控制复杂的计时行为。  例如，假设您需要一个执行以下三个操作的按钮。  
+ A<xref:System.Windows.Media.Animation.Storyboard>是一种为它包含的时间线提供目标信息的容器时间线。 情节提要可以包含任何类型的<xref:System.Windows.Media.Animation.Timeline>，包括其他容器时间线和动画。 <xref:System.Windows.Media.Animation.Storyboard>对象使您能够合并影响各种对象和属性条时间线树，就可以更轻松来组织和控制复杂计时行为的时间线。 例如，假设需要一个执行以下三个操作的按钮。  
   
--   当用户选择该按钮时，该按钮增大并更改颜色。  
+-   当用户选择该按钮时，按钮增大并更改颜色。  
   
--   当单击该按钮时，该按钮缩小并恢复其原始大小。  
+-   当用户单击该按钮时，按钮缩小并恢复其原始大小。  
   
--   当该按钮变成禁用时，缩小且不透明度缩减到 50%。  
+-   当该按钮变为禁用状态时，按钮缩小且不透明度缩减到 50%。  
   
- 在此例中，您具有适用于同一对象的多组动画，并且需要根据按钮的状态在不同的时间播放。  可以使用 <xref:System.Windows.Media.Animation.Storyboard> 对象来组织动画，并将它们成组地应用于一个或多个对象。  
+ 在此情况下，有多组动画适用于同一对象，并且需要根据按钮的状态在不同的时间播放它们。 <xref:System.Windows.Media.Animation.Storyboard>对象可用于组织动画和组中将其应用到一个或多个对象。  
   
 <a name="wherecanyouuseastoryboard"></a>   
-## 在什么情况下使用 Storyboard？  
- 可以使用 <xref:System.Windows.Media.Animation.Storyboard> 对可动画处理的类的[依赖项属性](GTMT)进行动画处理（有关如何使类成为可动画处理的类的更多信息，请参见[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)）。  不过，由于图板演示是框架级别的功能，该对象必须属于 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 的 <xref:System.Windows.NameScope>。  
+## <a name="where-can-you-use-a-storyboard"></a>何处可以使用情节提要？  
+ A<xref:System.Windows.Media.Animation.Storyboard>可用来进行动画处理的可进行动画处理的类的依赖项属性 (有关如何使类可进行动画处理的详细信息，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md))。 但是，由于情节提要是框架级功能，该对象必须属于<xref:System.Windows.NameScope>的<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
   
- 例如，您可以使用 <xref:System.Windows.Media.Animation.Storyboard> 执行以下操作：  
+ 例如，可以使用<xref:System.Windows.Media.Animation.Storyboard>以执行以下操作：  
   
--   对用于绘制按钮（一种 <xref:System.Windows.FrameworkElement>）背景的 <xref:System.Windows.Media.SolidColorBrush>（非框架元素）进行动画处理，  
+-   进行动画处理<xref:System.Windows.Media.SolidColorBrush>（非 framework 元素） 绘制背景的按钮 (一种<xref:System.Windows.FrameworkElement>)，  
   
--   对用于绘制使用 <xref:System.Windows.Controls.Image> \(<xref:System.Windows.FrameworkElement>\) 显示的 <xref:System.Windows.Media.GeometryDrawing>（非框架元素）的填充的 <xref:System.Windows.Media.SolidColorBrush>（非框架元素）进行动画处理，  
+-   进行动画处理<xref:System.Windows.Media.SolidColorBrush>（非 framework 元素） 绘制的填充<xref:System.Windows.Media.GeometryDrawing>（非 framework 元素） 显示使用<xref:System.Windows.Controls.Image>(<xref:System.Windows.FrameworkElement>)。  
   
--   在代码中，如果 <xref:System.Windows.Media.SolidColorBrush> 向 <xref:System.Windows.FrameworkElement> 注册其名称，则对包含该 <xref:System.Windows.FrameworkElement> 的类所声明的 <xref:System.Windows.Media.SolidColorBrush> 进行动画处理。  
+-   在代码中，进行动画处理<xref:System.Windows.Media.SolidColorBrush>声明由类还包含<xref:System.Windows.FrameworkElement>，如果<xref:System.Windows.Media.SolidColorBrush>注册其名称与该<xref:System.Windows.FrameworkElement>。  
   
- 但是，不能使用 <xref:System.Windows.Media.Animation.Storyboard> 来对未向 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 注册其名称或未用于设置 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 的属性的 <xref:System.Windows.Media.SolidColorBrush> 进行动画处理。  
+ 但是，你无法使用<xref:System.Windows.Media.Animation.Storyboard>要进行动画处理<xref:System.Windows.Media.SolidColorBrush>，没有注册其名称前的使用<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>，或未使用设置的属性<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
   
 <a name="applyanimationswithastoryboard"></a>   
-## 如何使用 Storyboard 应用动画  
- 若要使用 <xref:System.Windows.Media.Animation.Storyboard> 来组织和应用动画，可以将动画添加为 <xref:System.Windows.Media.Animation.Storyboard> 的子时间线。  <xref:System.Windows.Media.Animation.Storyboard> 类提供 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=fullName> 和 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=fullName> 附加属性。  您可以在动画上设置这些属性以指定其目标对象和属性。  
+## <a name="how-to-apply-animations-with-a-storyboard"></a>如何使用情节提要应用动画  
+ 若要使用<xref:System.Windows.Media.Animation.Storyboard>来组织和应用动画，您将动画添加为子时间线的<xref:System.Windows.Media.Animation.Storyboard>。 <xref:System.Windows.Media.Animation.Storyboard>类提供<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType>附加属性。 可以在动画上设置这些属性以指定其目标对象和属性。  
   
- 若要将动画应用于其目标，您可以使用触发器操作或方法来开始 <xref:System.Windows.Media.Animation.Storyboard>。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，将 <xref:System.Windows.Media.Animation.BeginStoryboard> 对象与 <xref:System.Windows.EventTrigger>、<xref:System.Windows.Trigger> 或 <xref:System.Windows.DataTrigger> 一起使用。  在代码中，还可以使用 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法。  
+ 若要将动画应用于它们的目标，应先<xref:System.Windows.Media.Animation.Storyboard>使用的触发器操作或方法。 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你使用<xref:System.Windows.Media.Animation.BeginStoryboard>对象<xref:System.Windows.EventTrigger>， <xref:System.Windows.Trigger>，或<xref:System.Windows.DataTrigger>。 在代码中，你可以使用<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法。  
   
- 下表列出了支持每个 <xref:System.Windows.Media.Animation.Storyboard> 开始技术的不同方面：基于实例、样式、控件模板和数据模板。"  基于实例”指的是直接将动画或演示图板应用于对象实例（而不是在样式、控件模板或数据模板中应用）的技术。  
+ 下表显示不同的位置其中每个<xref:System.Windows.Media.Animation.Storyboard>开始支持技术： 每个实例、 样式、 控件模板和数据模板。 “基于实例”是指直接将动画或情节提要应用于对象实例（而不是在样式、控件模板或数据模板中应用）的技术。  
   
-|开始演示图板时使用…|基于实例|样式|控件模板|数据模板|示例|  
-|----------------|----------|--------|----------|----------|--------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用演示图板对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和属性 <xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[How to: Trigger an Animation When Data Changes](http://msdn.microsoft.com/zh-cn/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|否|否|否|[使用演示图板对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|情节提要开始时使用…|基于实例|样式|控件模板|数据模板|示例|  
+|--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>和属性<xref:System.Windows.Trigger>|No|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.DataTrigger>|No|是|是|是|[如何：在数据更改时触发动画](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|No|No|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- 下面的示例使用 <xref:System.Windows.Media.Animation.Storyboard> 对 <xref:System.Windows.Shapes.Rectangle> 元素的 <xref:System.Windows.FrameworkElement.Width%2A> 和用于绘制该 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 进行动画处理。  
+ 下面的示例使用<xref:System.Windows.Media.Animation.Storyboard>要进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>元素和<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于进行绘制， <xref:System.Windows.Shapes.Rectangle>。  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#1)]  
   
  [!code-csharp[storyboards_ovw_snip#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#100)]  
   
- 以下几节更详细地描述了 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 和 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 附加属性。  
+ 以下各节描述了<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>附加更多详细信息中的属性。  
   
 <a name="targetingelementsandfreezables"></a>   
-## 以框架元素、框架内容元素和 Freezable 元素为目标  
- 上面一节提到对于动画，要查找其目标，必须知道目标的名称和要进行动画处理的属性。  指定要进行动画处理的属性非常直接：只需用要进行动画处理的属性的名称来设置 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=fullName> 即可。  通过在动画上设置 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=fullName> 属性来指定具有要进行动画处理的属性的对象的名称。  
+## <a name="targeting-framework-elements-framework-content-elements-and-freezables"></a>以框架元素、框架内容元素和 Freezable 元素为目标  
+ 上一节提到过，对于要查找其目标的动画，必须知道目标的名称和要进行动画处理的属性。 指定要进行动画处理的属性也是非常简单： 只需设置<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType>替换为要进行动画处理的属性的名称。  指定对象要进行动画处理通过设置其属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>上动画的属性。  
   
- 为了使 <xref:System.Windows.Setter.TargetName%2A> 属性起作用，目标对象必须有名称。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 分配名称不同于为 <xref:System.Windows.Freezable> 对象分配名称。  
+ 有关<xref:System.Windows.Setter.TargetName%2A>属性起作用，目标的对象必须具有名称。 分配到名称<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]不同于分配到名称<xref:System.Windows.Freezable>对象。  
   
- 框架元素是从 <xref:System.Windows.FrameworkElement> 类继承的类。  框架元素的示例包括 <xref:System.Windows.Window>、<xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.Button> 和 <xref:System.Windows.Shapes.Rectangle>。  从本质上而言，所有窗口、面板和控件都是元素。  框架内容元素是从 <xref:System.Windows.FrameworkContentElement> 类继承的类。  框架内容元素的示例包括 <xref:System.Windows.Documents.FlowDocument> 和 <xref:System.Windows.Documents.Paragraph>。  如果您不确定某类型是否是框架元素或框架内容元素，请查看它是否具有 Name 属性。  如果它具有 Name 属性，则可能是框架元素或框架内容元素。  若要进一步确定，请检查其类型页面的“继承层次结构”部分。  
+ 框架元素是继承自这些类<xref:System.Windows.FrameworkElement>类。 框架元素的示例包括<xref:System.Windows.Window>， <xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.Button>，和<xref:System.Windows.Shapes.Rectangle>。 实质上，所有窗口、面板和控件都是元素。 Framework 内容元素都是继承自这些类<xref:System.Windows.FrameworkContentElement>类。 Framework 内容元素的示例包括<xref:System.Windows.Documents.FlowDocument>和<xref:System.Windows.Documents.Paragraph>。 如果不确定某个类型是框架元素还是框架内容元素，请查看它是否具有 Name 属性。 如果具有 Name 属性，则可能是框架元素或框架内容元素。 若要进一步确定，请检查其类型页面的“继承性分层”部分。  
   
- 若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中以框架元素或框架内容元素为目标，请设置其 <xref:System.Windows.FrameworkElement.Name%2A> 属性。  在代码中，还需要使用 <xref:System.Windows.NameScope.RegisterName%2A> 方法向为其创建了 <xref:System.Windows.NameScope> 的元素注册该元素名称。  
+ 若要启用的框架元素或框架中的内容元素的目标[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你将设置其<xref:System.Windows.FrameworkElement.Name%2A>属性。 在代码中，你还需要使用<xref:System.Windows.NameScope.RegisterName%2A>方法以将元素的名称注册为其已创建的元素<xref:System.Windows.NameScope>。  
   
- 下面的示例摘自上一个示例，它为一个 <xref:System.Windows.Shapes.Rectangle>（一种 <xref:System.Windows.FrameworkElement>）分配名称 `MyRectangle`。  
+ 以下示例中，来自前面的示例中，将名称分配`MyRectangle` <xref:System.Windows.Shapes.Rectangle>，一种<xref:System.Windows.FrameworkElement>。  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#2)]  
   
  [!code-csharp[storyboards_ovw_snip#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#102)]  
   
  在该元素具有名称后，可以对其属性进行动画处理。  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#5)]  
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable> 类型是从 <xref:System.Windows.Freezable> 类继承的类。  <xref:System.Windows.Freezable> 的示例包括 <xref:System.Windows.Media.SolidColorBrush>、<xref:System.Windows.Media.RotateTransform> 和 <xref:System.Windows.Media.GradientStop>。  
+ <xref:System.Windows.Freezable>类型是继承自这些类<xref:System.Windows.Freezable>类。 示例<xref:System.Windows.Freezable>包括<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.RotateTransform>，和<xref:System.Windows.Media.GradientStop>。  
   
- 若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中以 <xref:System.Windows.Freezable> 作为动画的目标，可以使用 [x:Name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)为其分配名称。  在代码中，可以使用 <xref:System.Windows.NameScope.RegisterName%2A> 方法向已为其创建了 <xref:System.Windows.NameScope> 的元素注册其名称。  
+ 若要启用的目标<xref:System.Windows.Freezable>通过在动画[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你使用[X:name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)以将其分配一个名称。 在代码中，你使用<xref:System.Windows.NameScope.RegisterName%2A>方法以将其名称注册为其已创建的元素<xref:System.Windows.NameScope>。  
   
- 下面的示例为 <xref:System.Windows.Freezable> 对象分配名称。  
+ 以下示例将分配一个名称与<xref:System.Windows.Freezable>对象。  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#3)]  
   
  [!code-csharp[storyboards_ovw_snip#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#103)]  
   
- 然后动画可以以该对象为目标。  
+ 然后动画便可以该对象为目标。  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#7)]  
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard> 对象使用名称范围解析 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 属性。  有关 WPF 名称范围的更多信息，请参见 [WPF XAML 名称范围](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  如果忽略 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 属性，动画则以定义该属性时所在的元素为目标（如果存在样式，则以带样式的元素为目标）。  
+ <xref:System.Windows.Media.Animation.Storyboard>对象使用名称作用域来解决<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>属性。 有关 WPF 名称范围的详细信息，请参阅 [WPF XAML 名称范围](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。 如果<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>省略属性、 动画目标元素上定义的或者，对于样式的样式元素。  
   
- 有时，不能为 <xref:System.Windows.Freezable> 对象分配名称。  例如，如果 <xref:System.Windows.Freezable> 声明为资源，或者用于设置样式中的属性值，则不能为该对象分配名称。  由于它没有名称，因此不能直接以它为目标 \- 但是可以间接以它为目标。  下面几节描述如何使用间接目标。  
+ 有时，名称不能分配给<xref:System.Windows.Freezable>对象。 例如，如果<xref:System.Windows.Freezable>声明作为资源或用于设置属性值中一种样式，它不能为指定的名称。 由于该对象没有名称，因此不能直接以它为目标，但可以间接以它为目标。 下面几节描述如何使用间接目标。  
   
 <a name="pathsyntaxforchangeable"></a>   
-## 间接目标  
- 有时动画不能直接以 <xref:System.Windows.Freezable> 为目标，例如当 <xref:System.Windows.Freezable> 声明为资源或者用于设置样式中的属性值时。  在这些情况下，即使不能直接将 <xref:System.Windows.Freezable> 对象作为目标，您仍可以对其进行动画处理。  您可以为 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 属性分配 <xref:System.Windows.Freezable>“所属”的元素的名称，而不是使用 <xref:System.Windows.Freezable> 的名称来设置该属性。例如，<xref:System.Windows.Media.SolidColorBrush> 用于设置矩形元素的 <xref:System.Windows.Shapes.Shape.Fill%2A> 属于该矩形。  若要对该画笔进行动画处理，您需要使用一个属性链来设置动画的 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>，这些属性起始于使用 <xref:System.Windows.Freezable> 设置的框架元素或框架内容元素的属性，结束于要进行动画处理的 <xref:System.Windows.Freezable> 属性。  
+## <a name="indirect-targeting"></a>间接目标  
+ 有时<xref:System.Windows.Freezable>动画，例如，当不能直接针对<xref:System.Windows.Freezable>声明作为资源或用于在样式中设置属性值。 在这些情况下，即使你不能将其作为目标直接，也可以仍具有动画效果<xref:System.Windows.Freezable>对象。 而不是设置<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>属性的同名<xref:System.Windows.Freezable>，你赋予它的元素的名称与其<xref:System.Windows.Freezable>"所属。" 例如，<xref:System.Windows.Media.SolidColorBrush>用于设置<xref:System.Windows.Shapes.Shape.Fill%2A>元素属于该矩形的矩形。 若要进行动画处理画笔，将设置动画的<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>与开始框架元素或 framework 内容元素的属性的属性的链<xref:System.Windows.Freezable>用于设置和结束的<xref:System.Windows.Freezable>属性进行动画处理。  
   
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#33](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#33)]  
   
  [!code-csharp[storyboards_ovw_snip#134](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#134)]  
   
- 请注意，如果 <xref:System.Windows.Freezable> 被冻结，则将进行克隆，并且将对该克隆进行动画处理。  如果发生这种情况，原始对象的 <xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A> 属性会继续返回 `false`，因为实际上并不会对原始对象进行动画处理。  有关克隆的更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 请注意，如果<xref:System.Windows.Freezable>是冻结，则将进行克隆，并且该克隆将进行动画处理。 当发生这种情况，原始对象的<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>属性会继续返回`false`，因为不实际动画处理的原始对象。 有关克隆的详细信息，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
- 另请注意，当使用间接属性目标时，可能会以不存在的对象为目标。  例如，您可能假设使用 <xref:System.Windows.Media.SolidColorBrush> 设置了特定按钮的 <xref:System.Windows.Controls.Control.Background%2A> 并尝试对其颜色进行动画处理，而实际上该按钮的 Background 是使用 <xref:System.Windows.Media.LinearGradientBrush> 设置的。  在这种情况下，不会引发异常；由于 <xref:System.Windows.Media.LinearGradientBrush> 不对 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 属性的更改做出反应，因此动画不会具有可视效果。  
+ 另请注意，当使用间接属性目标时，可能会以不存在的对象为目标。 例如，您可能会假定<xref:System.Windows.Controls.Control.Background%2A>特定按钮的设置与<xref:System.Windows.Media.SolidColorBrush>并尝试进行动画处理的颜色时实际上<xref:System.Windows.Media.LinearGradientBrush>用于设置按钮的背景。 在这些情况下，不会引发异常;动画无法具有明显的效果，因为<xref:System.Windows.Media.LinearGradientBrush>没有反应以便将更改到<xref:System.Windows.Media.SolidColorBrush.Color%2A>属性。  
   
- 下面几节更详细地描述了间接属性目标语法。  
+ 下面几节详细介绍间接属性目标语法。  
   
 <a name="xamlsyntaxchangeableproperty"></a>   
-### 在 XAML 中间接以 Freezable 的属性为目标  
- 若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中以 Freezable 的属性为目标，请使用以下语法。  
+### <a name="indirectly-targeting-a-property-of-a-freezable-in-xaml"></a>在 XAML 中间接以 Freezable 的属性为目标  
+ 目标属性中的可冻结[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用以下语法。  
   
 ||  
 |-|  
-|*ElementPropertyName*`.`*FreezablePropertyName*|  
+|*ElementPropertyName* `.` *FreezablePropertyName*|  
   
  Where  
   
--   *ElementPropertyName* 是使用 <xref:System.Windows.Freezable> 设置的 <xref:System.Windows.FrameworkElement> 的属性，  
+-   *ElementPropertyName*是的属性<xref:System.Windows.FrameworkElement>其中<xref:System.Windows.Freezable>用于设置，并  
   
--   *FreezablePropertyName* 是要进行动画处理的 <xref:System.Windows.Freezable> 的属性。  
+-   *FreezablePropertyName*是的属性<xref:System.Windows.Freezable>要进行动画处理。  
   
- 下面的代码演示如何对用于设置矩形元素的 <xref:System.Windows.Shapes.Shape.Fill%2A> 的  <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 进行  
+ 下面的代码演示如何进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于设置  
   
- 动画处理。  
+ <xref:System.Windows.Shapes.Shape.Fill%2A>一个矩形元素。  
   
+ [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
-  
- 有时，您需要以集合或数组中包含的 Freezable 为目标。  
+ 有时，需要以集合或数组中包含的 Freezable 为目标。  
   
  若要以集合中包含的 Freezable 为目标，可以使用以下路径语法。  
   
@@ -163,94 +168,94 @@ caps.handback.revision: 26
 |-|  
 |*ElementPropertyName* `.Children[` *CollectionIndex* `].` *FreezablePropertyName*|  
   
- 其中 *CollectionIndex* 是对象在对象数组或集合中的索引。  
+ 其中*CollectionIndex*是其数组或集合中对象的索引。  
   
- 例如，假设矩形具有应用于其 <xref:System.Windows.UIElement.RenderTransform%2A> 属性的 <xref:System.Windows.Media.TransformGroup> 资源，您希望对它包含的变换之一进行动画处理。  
+ 例如，假设矩形具有<xref:System.Windows.Media.TransformGroup>资源应用于其<xref:System.Windows.UIElement.RenderTransform%2A>属性，并且想要进行动画处理它包含转换之一。  
   
+ [!code-xaml[storyboards_ovw_snip_XAML#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#34)]  
   
+ 下面的代码演示如何进行动画处理<xref:System.Windows.Media.RotateTransform.Angle%2A>属性<xref:System.Windows.Media.RotateTransform>中前面的示例所示。  
   
- 下面的代码演示如何对上例中演示的 <xref:System.Windows.Media.RotateTransform> 的 <xref:System.Windows.Media.RotateTransform.Angle%2A> 属性进行动画处理。  
-  
-  
+ [!code-xaml[storyboards_ovw_snip_XAML#35](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#35)]  
   
 <a name="targetingpropertyofchangeableincode"></a>   
-### 在代码中间接以 Freezable 的属性为目标  
- 在代码中，创建一个 <xref:System.Windows.PropertyPath> 对象。  当创建 <xref:System.Windows.PropertyPath> 时，请指定 <xref:System.Windows.PropertyPath.Path%2A> 和 <xref:System.Windows.PropertyPath.PathParameters%2A>。  
+### <a name="indirectly-targeting-a-property-of-a-freezable-in-code"></a>在代码中间接以 Freezable 的属性为目标  
+ 在代码中，你创建<xref:System.Windows.PropertyPath>对象。 当你创建<xref:System.Windows.PropertyPath>，你指定<xref:System.Windows.PropertyPath.Path%2A>和<xref:System.Windows.PropertyPath.PathParameters%2A>。  
   
- 若要创建 <xref:System.Windows.PropertyPath.PathParameters%2A>，需要创建 <xref:System.Windows.DependencyProperty> 类型的数组，其中包含依赖项属性标识符字段的列表。  第一个标识符字段用于使用 <xref:System.Windows.Freezable> 设置的 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 的属性。  下一个标识符字段表示目标 <xref:System.Windows.Freezable> 的属性。  将其看作一个属性链，该属性链将 <xref:System.Windows.Freezable> 连接到 <xref:System.Windows.FrameworkElement> 对象。  
+ 若要创建<xref:System.Windows.PropertyPath.PathParameters%2A>，创建类型的数组<xref:System.Windows.DependencyProperty>包含依赖项属性标识符字段的列表。 第一个标识符字段的属性是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>，<xref:System.Windows.Freezable>用于设置。 下一步的标识符字段所代表的属性<xref:System.Windows.Freezable>到目标。 它看作连接的属性的链<xref:System.Windows.Freezable>到<xref:System.Windows.FrameworkElement>对象。  
   
- 下面的示例是一个依赖项属性链，这些属性以用于设置矩形元素的 <xref:System.Windows.Shapes.Shape.Fill%2A> 的 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 为目标。  
+ 以下是一种面向的依赖项属性链<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于设置<xref:System.Windows.Shapes.Shape.Fill%2A>的矩形元素。  
   
  [!code-csharp[storyboards_ovw_snip#135](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#135)]  
   
- 您还需要指定 <xref:System.Windows.PropertyPath.Path%2A>。  <xref:System.Windows.PropertyPath.Path%2A> 是一个 <xref:System.String>，用于告知 <xref:System.Windows.PropertyPath.Path%2A> 如何解释其 <xref:System.Windows.PropertyPath.PathParameters%2A>。  它使用以下语法。  
+ 你还需要指定<xref:System.Windows.PropertyPath.Path%2A>。 A<xref:System.Windows.PropertyPath.Path%2A>是<xref:System.String>，告知<xref:System.Windows.PropertyPath.Path%2A>如何解释其<xref:System.Windows.PropertyPath.PathParameters%2A>。 它使用以下语法。  
   
 ||  
 |-|  
-|`(`*OwnerPropertyArrayIndex*`).(`*FreezablePropertyArrayIndex*`)`|  
+|`(` *OwnerPropertyArrayIndex* `).(` *FreezablePropertyArrayIndex* `)`|  
   
  Where  
   
--   *OwnerPropertyArrayIndex* 是 <xref:System.Windows.DependencyProperty> 数组的索引，该数组包含使用 <xref:System.Windows.Freezable> 设置的 <xref:System.Windows.FrameworkElement> 对象属性的标识符，  
+-   *OwnerPropertyArrayIndex*是索引<xref:System.Windows.DependencyProperty>数组，其中包含的标识符<xref:System.Windows.FrameworkElement>对象的属性，<xref:System.Windows.Freezable>用于设置，并  
   
--   *FreezablePropertyArrayIndex* 是 <xref:System.Windows.DependencyProperty> 数组的索引，该数组包含目标属性的标识符。  
+-   *FreezablePropertyArrayIndex*是索引<xref:System.Windows.DependencyProperty>数组，其中包含到目标属性的标识符。  
   
- 下面的示例演示上例中定义的 <xref:System.Windows.PropertyPath.PathParameters%2A> 所附带的 <xref:System.Windows.PropertyPath.Path%2A>。  
+ 下面的示例演示<xref:System.Windows.PropertyPath.Path%2A>所附带<xref:System.Windows.PropertyPath.PathParameters%2A>在前面的示例中定义。
   
  [!code-csharp[storyboards_ovw_snip#PropertyChainAndPath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#propertychainandpath)]  
   
- 下面的示例将上例中的代码进行合并，以便对用于设置矩形元素的 <xref:System.Windows.Shapes.Shape.Fill%2A> 的 <xref:System.Windows.Media.SolidColorBrush> 的 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 进行动画处理。  
+ 下面的示例结合要进行动画处理的前一示例中的代码<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于设置<xref:System.Windows.Shapes.Shape.Fill%2A>的矩形元素。  
   
  [!code-csharp[storyboards_ovw_snip#137](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#137)]  
   
- 有时，您需要以集合或数组中包含的 Freezable 为目标。  例如，假设矩形具有应用于其 <xref:System.Windows.UIElement.RenderTransform%2A> 属性的 <xref:System.Windows.Media.TransformGroup> 资源，您希望对它包含的变换之一进行动画处理。  
+ 有时，需要以集合或数组中包含的 Freezable 为目标。 例如，假设矩形具有<xref:System.Windows.Media.TransformGroup>资源应用于其<xref:System.Windows.UIElement.RenderTransform%2A>属性，并且想要进行动画处理它包含转换之一。  
   
- [!code-xml[storyboards_ovw_snip#142](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml#142)]  
+ [!code-xaml[storyboards_ovw_snip#142](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml#142)]  
   
- 若要以集合中包含的 <xref:System.Windows.Freezable> 为目标，可以使用以下路径语法。  
+ 到目标<xref:System.Windows.Freezable>包含在集合中，你使用以下路径语法。  
   
 ||  
 |-|  
-|`(`*OwnerPropertyArrayIndex*`).(` *CollectionChildrenPropertyArrayIndex*`)` `[`*CollectionIndex* `].(`*FreezablePropertyArrayIndex*`)`|  
+|`(` *OwnerPropertyArrayIndex* `).(` *CollectionChildrenPropertyArrayIndex* `)` `[` *CollectionIndex* `].(` *FreezablePropertyArrayIndex* `)`|  
   
- 其中 *CollectionIndex* 是对象在对象数组或集合中的索引。  
+ 其中*CollectionIndex*是其数组或集合中对象的索引。  
   
- 若要以 <xref:System.Windows.Media.RotateTransform>（<xref:System.Windows.Media.TransformGroup> 中的第二个变换）的 <xref:System.Windows.Media.RotateTransform.Angle%2A> 属性为目标，请使用以下 <xref:System.Windows.PropertyPath.Path%2A> 和 <xref:System.Windows.PropertyPath.PathParameters%2A>。  
+ 到目标<xref:System.Windows.Media.RotateTransform.Angle%2A>属性<xref:System.Windows.Media.RotateTransform>中的第二个转换<xref:System.Windows.Media.TransformGroup>，会使用以下<xref:System.Windows.PropertyPath.Path%2A>和<xref:System.Windows.PropertyPath.PathParameters%2A>。  
   
  [!code-csharp[storyboards_ovw_snip#139](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#139)]  
   
- 下面的示例演示用于对 <xref:System.Windows.Media.TransformGroup> 中包含的 <xref:System.Windows.Media.RotateTransform> 的 <xref:System.Windows.Media.RotateTransform.Angle%2A> 进行动画处理的完整代码。  
+ 下面的示例演示对进行动画处理的完整代码<xref:System.Windows.Media.RotateTransform.Angle%2A>的<xref:System.Windows.Media.RotateTransform>中包含<xref:System.Windows.Media.TransformGroup>。  
   
  [!code-csharp[storyboards_ovw_snip#138](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#138)]  
   
-### 间接以 Freezable 为目标并将其作为开始点  
- 上面几节描述了如何通过从 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 开始为 <xref:System.Windows.Freezable> 子属性创建属性链，来间接以 <xref:System.Windows.Freezable> 为目标。  您还可以使用 <xref:System.Windows.Freezable> 作为开始点，并间接以其 <xref:System.Windows.Freezable> 子属性之一为目标。  如果使用 <xref:System.Windows.Freezable> 作为间接目标的开始点，则存在一个附加限制：起始 <xref:System.Windows.Freezable> 以及它与子属性间接目标之间的每个 <xref:System.Windows.Freezable> 都不能冻结。  
+### <a name="indirectly-targeting-with-a-freezable-as-the-starting-point"></a>间接以 Freezable 为目标并将其作为起点  
+ 前面几节描述了如何间接面向<xref:System.Windows.Freezable>利用<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>和创建到的属性链<xref:System.Windows.Freezable>子属性。 你还可以使用<xref:System.Windows.Freezable>作为起始点和间接目标之一其<xref:System.Windows.Freezable>子属性。 一条附加限制适用时使用<xref:System.Windows.Freezable>作为起点间接目标： 起始<xref:System.Windows.Freezable>和每个<xref:System.Windows.Freezable>它和间接目标的子属性之间必须未被冻结。  
   
 <a name="controllable_storyboards"></a>   
-## 在 XAML 中以交互方式控制 Storyboard  
- 若要在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中启动演示图板，可使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 触发器操作。  <xref:System.Windows.Media.Animation.BeginStoryboard> 会将动画分发到要进行动画处理的对象和属性，然后启动演示图板。  （有关此过程的详细信息，请参见[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)）。如果通过指定 <xref:System.Windows.Media.Animation.BeginStoryboard> 的 <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 属性为它提供一个名称，则它将成为可控制的 Storyboard。  然后，可以在 Storyboard 启动后以交互方式对它进行控制。  下面列出与事件触发器一起用来控制 Storyboard 的可控制 Storyboard 操作。  
+## <a name="interactively-controlling-a-storyboard-in-xaml"></a>在 XAML 中以交互方式控制情节提要  
+ 若要在中启动情节提要[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，你使用<xref:System.Windows.Media.Animation.BeginStoryboard>触发操作。 <xref:System.Windows.Media.Animation.BeginStoryboard>将分发到的对象和属性，它们进行动画处理，并启动情节提要的动画。 (有关此过程的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)如果你向提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，你可以让它从此情节提要。 然后，可以在情节提要启动后以交互方式对它进行控制。 下面列出了可与事件触发器一起使用来控制情节提要的可控制情节提要操作。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>：暂停 Storyboard。  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>： 暂停情节提要。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>：继续暂停的 Storyboard。  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>： 将恢复暂停的情节提要。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：更改 Storyboard 速度。  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>： 更改情节提要的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：使 Storyboard 前进到其填充期的末尾（如果有填充期）。  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>： 如果有的话，请转到其填充期间，末尾情节提要。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>：停止 Storyboard。  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>： 停止情节提要。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除 Storyboard。  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>： 移除情节提要。  
   
- 在下面的示例中，使用可控制的 Storyboard 操作来以交互方式控制 Storyboard。  
+ 在下面的示例中，使用可控制的情节提要操作来以交互方式控制情节提要。  
   
- [!code-xml[animation_ovws_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snip/CS/ControllableStoryboardExample.xaml#controllablestoryboardexamplewholepage)]  
+ [!code-xaml[animation_ovws_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snip/CS/ControllableStoryboardExample.xaml#controllablestoryboardexamplewholepage)]  
   
 <a name="controllable_storyboards_procedural"></a>   
-## 使用代码以交互方式控制 Storyboard  
- 上一示例已经演示了如何使用触发器操作进行动画处理。  在代码中，还可以使用 <xref:System.Windows.Media.Animation.Storyboard> 类的交互方法来控制 Storyboard。  若要使 <xref:System.Windows.Media.Animation.Storyboard> 在代码中可交互，必须使用该 Storyboard 的 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法的适当重载并指定 `true` 使之可以控制。  有关更多信息，请参见 <xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29> 页。  
+## <a name="interactively-controlling-a-storyboard-by-using-code"></a>使用代码以交互方式控制情节提要  
+ 前面的示例已演示了如何使用触发器操作进行动画处理。 在代码中，您也可以控制使用交互式方法的情节提要<xref:System.Windows.Media.Animation.Storyboard>类。 有关<xref:System.Windows.Media.Animation.Storyboard>进行交互式在代码中，你必须使用适当的重载的情节提要的<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法并指定`true`使之可以控制。 请参阅<xref:System.Windows.Media.Animation.Storyboard.Begin%28System.Windows.FrameworkElement%2CSystem.Boolean%29>有关详细信息页。  
   
- 下面的列表显示了在 <xref:System.Windows.Media.Animation.Storyboard> 启动之后可用来对其进行操作的方法：  
+ 以下列表显示可用于操作的方法<xref:System.Windows.Media.Animation.Storyboard>它启动后：  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
@@ -264,50 +269,50 @@ caps.handback.revision: 26
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
- 使用这些方法的优点是您不需要创建 <xref:System.Windows.Trigger> 或 <xref:System.Windows.TriggerAction> 对象，只需要一个对要操作的可控制 <xref:System.Windows.Media.Animation.Storyboard> 的引用。  
+ 使用这些方法的优点是不需要创建<xref:System.Windows.Trigger>或<xref:System.Windows.TriggerAction>对象; 你只需对可控制的引用<xref:System.Windows.Media.Animation.Storyboard>你想要操作。  
   
- **注意：**对 <xref:System.Windows.Media.Animation.Clock> 采取的所有交互操作（因而也会对 <xref:System.Windows.Media.Animation.Storyboard> 采取这些操作）将在计时引擎下次滴答时执行，也就是在快要进行下次呈现时执行。  例如，如果使用 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 方法跳到动画中的另一点，属性值不会立即更改，而是在计时引擎下次滴答时更改。  
+ **注意：**采取的所有交互操作<xref:System.Windows.Media.Animation.Clock>，因此同样，在<xref:System.Windows.Media.Animation.Storyboard>将发生的也会很快在下一步呈现之前的计时引擎的下一步刻度线上。 例如，如果你使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法来跳转到在动画，属性值中的另一个点不会立即更改、 的值而不是，计时引擎的下一步刻度线上发生更改。  
   
- 下面的示例演示如何使用 <xref:System.Windows.Media.Animation.Storyboard> 类的交互方法来应用和控制动画。  
+ 下面的示例演示如何应用和控制使用的交互式方法的动画<xref:System.Windows.Media.Animation.Storyboard>类。  
   
  [!code-csharp[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/ControllableStoryboardExample.cs#controllablestoryboardexamplewholepage)]
  [!code-vb[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/controllablestoryboardexample.vb#controllablestoryboardexamplewholepage)]  
   
 <a name="usingstoryboardsinstyles"></a>   
-## 在样式中进行动画处理  
- 可以使用 <xref:System.Windows.Media.Animation.Storyboard> 对象在 <xref:System.Windows.Style> 中定义动画。  在 <xref:System.Windows.Style> 中使用 <xref:System.Windows.Media.Animation.Storyboard> 进行动画处理与在别处使用 <xref:System.Windows.Media.Animation.Storyboard> 类似，不过，有以下三个例外：  
+## <a name="animate-in-a-style"></a>在样式中进行动画处理  
+ 你可以使用<xref:System.Windows.Media.Animation.Storyboard>对象定义中的动画<xref:System.Windows.Style>。 动画处理与<xref:System.Windows.Media.Animation.Storyboard>中<xref:System.Windows.Style>类似于使用<xref:System.Windows.Media.Animation.Storyboard>在其他位置，有以下三个例外：  
   
--   您不必指定 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>；<xref:System.Windows.Media.Animation.Storyboard> 始终以 <xref:System.Windows.Style> 应用到的元素为目标。  若要以 <xref:System.Windows.Freezable> 为目标，必须使用间接目标。  有关间接目标的更多信息，请参见[间接目标](#pathsyntaxforchangeable)部分。  
+-   未指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>;<xref:System.Windows.Media.Animation.Storyboard>始终以向其元素为目标<xref:System.Windows.Style>应用。 到目标<xref:System.Windows.Freezable>对象，你必须使用间接的目标。 有关间接目标的详细信息，请参阅[间接目标](#pathsyntaxforchangeable)部分。  
   
--   您不能指定 <xref:System.Windows.EventTrigger> 或 <xref:System.Windows.Trigger> 的 <xref:System.Windows.EventTrigger.SourceName%2A>。  
+-   不能指定<xref:System.Windows.EventTrigger.SourceName%2A>为<xref:System.Windows.EventTrigger>或<xref:System.Windows.Trigger>。  
   
--   您不能使用动态资源引用或数据绑定表达式来设置 <xref:System.Windows.Media.Animation.Storyboard> 或动画属性值。  这是因为 <xref:System.Windows.Style> 中的任何内容都必须是线程安全的，计时系统必须 <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> 对象以使其变为线程安全。  如果 <xref:System.Windows.Media.Animation.Storyboard> 或其子时间线包含动态资源引用或数据绑定表达式，则不能将其冻结。  有关冻结和其他 <xref:System.Windows.Freezable> 功能的更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+-   你无法使用动态资源引用或数据绑定表达式将设置<xref:System.Windows.Media.Animation.Storyboard>或动画属性值。 这是因为内的所有内容<xref:System.Windows.Style>必须是线程安全的并且计时系统必须<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>对象，以使其线程安全。 A<xref:System.Windows.Media.Animation.Storyboard>如果它或其子时间线包含动态资源引用或数据绑定表达式不能冻结。 有关冻结和其他详细信息<xref:System.Windows.Freezable>功能，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
--   在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，不能为 <xref:System.Windows.Media.Animation.Storyboard> 或动画事件声明事件处理程序。  
+-   在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您無法宣告事件处理程序<xref:System.Windows.Media.Animation.Storyboard>或动画事件。  
   
- 有关演示如何在样式中定义 Storyboard 的示例，请参见[在样式中进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)示例。  
+ 有关演示如何在样式中定义情节提要的示例，请参阅[动画样式](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)示例。  
   
 <a name="defineAStoryboardInAControlTemplateSection"></a>   
-## 在 ControlTemplate 中进行动画处理  
- 可以使用 <xref:System.Windows.Media.Animation.Storyboard> 对象在 <xref:System.Windows.Controls.ControlTemplate> 中定义动画。  在 <xref:System.Windows.Controls.ControlTemplate> 中使用 <xref:System.Windows.Media.Animation.Storyboard> 进行动画处理与在别处使用 <xref:System.Windows.Media.Animation.Storyboard> 类似，不过，有以下四个例外：  
+## <a name="animate-in-a-controltemplate"></a>在 ControlTemplate 中进行动画处理  
+ 你可以使用<xref:System.Windows.Media.Animation.Storyboard>对象定义中的动画<xref:System.Windows.Controls.ControlTemplate>。 动画处理与<xref:System.Windows.Media.Animation.Storyboard>中<xref:System.Windows.Controls.ControlTemplate>类似于使用<xref:System.Windows.Media.Animation.Storyboard>在其他位置，有以下两个例外：  
   
--   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 只能引用 <xref:System.Windows.Controls.ControlTemplate> 的子对象。  如果未指定 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>，则动画以 <xref:System.Windows.Controls.ControlTemplate> 所应用到的元素为目标。  
+-   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>只能引用与子对象的<xref:System.Windows.Controls.ControlTemplate>。 如果<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>未指定，则动画目标的元素<xref:System.Windows.Controls.ControlTemplate>应用。  
   
--   <xref:System.Windows.EventTrigger> 或 <xref:System.Windows.Trigger> 的 <xref:System.Windows.EventTrigger.SourceName%2A> 只能引用 <xref:System.Windows.Controls.ControlTemplate> 的子对象。  
+-   <xref:System.Windows.EventTrigger.SourceName%2A>为<xref:System.Windows.EventTrigger>或<xref:System.Windows.Trigger>只能引用与子对象的<xref:System.Windows.Controls.ControlTemplate>。  
   
--   您不能使用动态资源引用或数据绑定表达式来设置 <xref:System.Windows.Media.Animation.Storyboard> 或动画属性值。  这是因为 <xref:System.Windows.Controls.ControlTemplate> 中的任何内容都必须是线程安全的，计时系统必须 <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> 对象以使其变为线程安全。  如果 <xref:System.Windows.Media.Animation.Storyboard> 或其子时间线包含动态资源引用或数据绑定表达式，则不能将其冻结。  有关冻结和其他 <xref:System.Windows.Freezable> 功能的更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+-   你无法使用动态资源引用或数据绑定表达式将设置<xref:System.Windows.Media.Animation.Storyboard>或动画属性值。 这是因为内的所有内容<xref:System.Windows.Controls.ControlTemplate>必须是线程安全的并且计时系统必须<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>对象，以使其线程安全。 A<xref:System.Windows.Media.Animation.Storyboard>如果它或其子时间线包含动态资源引用或数据绑定表达式不能冻结。 有关冻结和其他详细信息<xref:System.Windows.Freezable>功能，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
--   在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，不能为 <xref:System.Windows.Media.Animation.Storyboard> 或动画事件声明事件处理程序。  
+-   在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您無法宣告事件处理程序<xref:System.Windows.Media.Animation.Storyboard>或动画事件。  
   
- 有关演示如何在 <xref:System.Windows.Controls.ControlTemplate> 中定义 Storyboard 的示例，请参见[在 ControlTemplate 中进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)示例。  
+ 有关演示如何定义中的将情节提要的示例<xref:System.Windows.Controls.ControlTemplate>，请参阅[动画中 ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)示例。  
   
 <a name="animateWhenAPropertyValueChanges"></a>   
-## 在属性值更改时进行动画处理  
- 在样式和控件模板中，当属性更改时，可以使用 Trigger 对象来启动 Storyboard。  有关示例，请参见[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)和[在 ControlTemplate 中进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)。  
+## <a name="animate-when-a-property-value-changes"></a>在属性值更改时进行动画处理  
+ 在样式和控件模板中，当属性更改时，可以使用 Trigger 对象来启动情节提要。 有关示例，请参阅[触发动画时属性值更改](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)和[动画中 ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)。  
   
- 属性 <xref:System.Windows.Trigger> 对象所应用的动画的行为比 <xref:System.Windows.EventTrigger> 动画或使用 <xref:System.Windows.Media.Animation.Storyboard> 方法启动的动画的行为更复杂一些。  它们在“提交”时使用的是其他 <xref:System.Windows.Trigger> 对象定义的动画，但是在编写时使用 <xref:System.Windows.EventTrigger> 和方法触发的动画。  
+ 属性应用动画<xref:System.Windows.Trigger>的对象行为比更复杂的方式<xref:System.Windows.EventTrigger>动画开始使用<xref:System.Windows.Media.Animation.Storyboard>方法。  它们"提交"时使用动画定义由其他<xref:System.Windows.Trigger>对象，但 compose 与<xref:System.Windows.EventTrigger>和方法，触发动画。  
   
-## 请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
+## <a name="see-also"></a>另请参阅  
+ [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
  [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

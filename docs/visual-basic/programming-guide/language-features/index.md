@@ -1,42 +1,24 @@
 ---
 title: "Visual Basic 语言功能"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3594e6622e8bc76839a15739a31ad27d17de8455
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 语言功能
 下面各主题介绍并讨论了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]（面向对象的编程语言）的基本组成部分。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与所有新式编程语言一样，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支持许多常见的编程构造和语言元素。  
@@ -109,4 +91,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  
  收录了有关 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编程的各方面参考信息。
-

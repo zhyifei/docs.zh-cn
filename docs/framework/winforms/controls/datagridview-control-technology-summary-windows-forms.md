@@ -1,75 +1,76 @@
 ---
-title: "DataGridView 控件技术摘要（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据网格, 关于数据网格"
-  - "DataGridView 控件 [Windows 窗体], 关于 DataGridView 控件"
+title: "DataGridView 控件技术摘要（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], about DataGridView control
+- data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataGridView 控件技术摘要（Windows 窗体）
-本主题概括介绍 `DataGridView` 控件以及支持使用该控件的类的相关信息。  
+# <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控件技术摘要（Windows 窗体）
+本主题概述了 `DataGridView` 控件及支持其使用的类的相关信息。  
   
- 以表格格式显示数据是一项可能需要频繁执行的任务。  `DataGridView` 控件是专门用于以网格形式显示数据的完整解决方案。  
+ 以表格格式显示数据是一项任务，则可能需要频繁执行。 `DataGridView`控件可用于在网格中显示数据的完整解决方案。  
   
-## 关键字  
- DataGridView、BindingSource、表、单元格、数据绑定、虚拟模式  
+## <a name="keywords"></a>关键字  
+ DataGridView、 BindingSource、 表、 单元格、 数据绑定、 虚拟模式  
   
-## 命名空间  
- <xref:System.Windows.Forms?displayProperty=fullName>  
+## <a name="namespaces"></a>命名空间  
+ <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
- <xref:System.Data?displayProperty=fullName>  
+ <xref:System.Data?displayProperty=nameWithType>  
   
-## 相关技术  
+## <a name="related-technologies"></a>相关技术  
  `BindingSource`  
   
-## 背景  
- 用户界面 \(UI\) 设计人员经常会发现需要向用户显示表格数据。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供了多种以表或网格形式显示数据的方式。  `DataGridView` 控件代表着此技术在 Windows 窗体应用程序中的最新进展。  
+## <a name="background"></a>背景  
+ 用户界面 (UI) 设计器经常发现需要向用户显示表格数据。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供多种方式来在表或网格中显示数据。 `DataGridView`控件表示此项技术的 Windows 窗体应用程序的最新的变化情况。  
   
- `DataGridView` 控件可以显示数据存储区中的数据行。  支持多种类型的数据存储区。  数据存储区可以保存简单的非类型化数据（例如一维数组），也可以保存类型化数据（例如 <xref:System.Data.DataSet>）。  有关更多信息，请参见 [如何：将数据绑定到 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
+ `DataGridView`控件可以显示的数据存储区中的数据行。 支持许多类型的数据存储区。 数据存储区可以容纳简单、 非类型化数据，如一维数组，或它可以存放类型化的数据，如<xref:System.Data.DataSet>。 有关详细信息，请参阅[如何： 将数据绑定到 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   
- `DataGridView` 控件提供一种以表格格式显示数据的强大且灵活的方式。  您可以使用该控件显示小型到大型数据集的只读或可编辑视图。  
+ `DataGridView` 控件提供一种以表格格式显示数据的功能强大且灵活的方法。 你可以使用控件显示的小型到大型数据集的只读或可编辑视图。  
   
- 可以采用多种方法对 `DataGridView` 控件进行扩展，以将自定义行为内置在应用程序中。  例如，可以采用编程方式指定自己的排序算法，以及创建自己的单元格类型。  通过选择一些属性，可以轻松地自定义 `DataGridView` 控件的外观。  可以将许多类型的数据存储区用作数据源，也可以在没有绑定数据源的情况下操作 `DataGridView` 控件。  
+ 你可以扩展`DataGridView`通过多种方式在你的应用程序中构建自定义行为的控件。 例如，可以以编程方式指定自己的排序算法，并且可以创建自己的单元格类型。 可以通过在多个属性之间进行选择来轻松地自定义 `DataGridView` 控件的外观。 许多类型的数据存储区可以用作数据源，或`DataGridView`控件可以操作不使用绑定到该数据源。  
   
-## 实现 DataGridView 类  
- 可以通过多种方法利用 `DataGridView` 控件的扩展性功能。  通过事件和属性可以对该控件的许多方面进行自定义，但是一些自定义需要创建从现有的 `DataGridView` 类派生的新类。  
+## <a name="implementing-datagridview-classes"></a>实现 DataGridView 类  
+ 有几种方法供你充分利用`DataGridView`控件的可扩展性功能。 你可以自定义通过事件和属性，该控件的许多方面，但某些自定义要求你创建新的类派生自现有`DataGridView`类。  
   
- 最常用的基类为 `DataGridViewCell` 和 `DataGridViewColumn`。  可以从 `DataGridViewCell` 或其任意子类派生自己的单元格类。  尽管可以向任何列添加任意单元格类型，但您通常还是会从 `DataGridViewColumn` 派生一个伴生列类，用于在默认情况下承载自定义单元格类型的单元格。  
+ 最常用的基类`DataGridViewCell`和`DataGridViewColumn`。 可以派生您自己的单元格类从`DataGridViewCell`或任何其子类别。 尽管可以将任何单元格类型添加到任何列中，你将通常还派生从伴生列类`DataGridViewColumn`默认情况下承载自定义单元格类型的单元格。  
   
- 您可以在派生的单元格类中实现 `IDataGridViewEditingCell` 接口，以创建具有编辑功能但不能在编辑模式下承载控件的单元格类型。  若要创建可在编辑模式下在单元格中承载的控件，可以在从 <xref:System.Windows.Forms.Control> 派生的类中实现 `IDataGridViewEditingControl` 接口。  
+ 你可以实现`IDataGridViewEditingCell`接口派生的单元格类创建具有编辑功能，但未承载在编辑模式的控件的单元格类型中。 若要创建可以在单元格处于编辑模式中承载的控件，则可以实现`IDataGridViewEditingControl`类中的接口派生自<xref:System.Windows.Forms.Control>。  
   
- 有关更多信息，请参见 [如何：通过扩展 Windows 窗体 DataGridView 控件中单元格和列的行为和外观对其进行自定义](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) 和 [如何：在 Windows 窗体 DataGridView 单元格中承载控件](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
+ 有关详细信息，请参阅[如何： 自定义单元格和扩展他们行为和外观由 Windows 窗体 DataGridView 控件中的列](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)和[如何： 在 Windows 窗体 DataGridView 单元格中承载控件](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## DataGridView 类概览  
+## <a name="datagridview-classes-at-a-glance"></a>DataGridView 类简介  
  <xref:System.Windows.Forms>  
   
-|技术领域|类\/接口\/配置元素|  
-|----------|-----------------|  
+|技术范围|类/接口/配置元素|  
+|---------------------|-------------------------------------------------|  
 |数据绑定|<xref:System.Windows.Forms.BindingSource>|  
-|数据表示|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> 扩展性|<xref:System.Windows.Forms.DataGridViewCell> 和派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 和派生类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|数据表示|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewRow>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
+|<xref:System.Windows.Forms.DataGridView>扩展性|<xref:System.Windows.Forms.DataGridViewCell>和派生的类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn>和派生的类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## 新增功能  
- <xref:System.Windows.Forms.DataGridView> 控件是专门用于在 Windows 窗体中显示表格数据的完整解决方案。  在创作新的应用程序时，应首先考虑使用 <xref:System.Windows.Forms.DataGridView> 控件，然后再考虑采用其他解决方案（例如 <xref:System.Windows.Forms.DataGrid>）。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+## <a name="whats-new"></a>新增功能  
+ <xref:System.Windows.Forms.DataGridView>控件旨在作为有关显示 Windows 窗体的表格数据的完整解决方案。 你应考虑使用<xref:System.Windows.Forms.DataGridView>控件之前其他解决方案中，如<xref:System.Windows.Forms.DataGrid>、 创作新的应用程序时。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- <xref:System.Windows.Forms.DataGridView> 控件可以与 <xref:System.Windows.Forms.BindingSource> 组件紧密地结合使用。  此组件旨在用作窗体的主要数据源。  无论数据源采用何种类型，它都可以管理 <xref:System.Windows.Forms.DataGridView> 控件与其数据源之间的交互。  
+ <xref:System.Windows.Forms.DataGridView>控件可在关闭结合工作<xref:System.Windows.Forms.BindingSource>组件。 此组件设计为窗体的主数据源。 它可以管理之间的交互<xref:System.Windows.Forms.DataGridView>控件和其数据源，而不考虑数据源类型。  
   
-## 请参阅  
- [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)   
- [DataGridView 控件体系结构](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [DataGridView 控件体系结构](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
  [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)

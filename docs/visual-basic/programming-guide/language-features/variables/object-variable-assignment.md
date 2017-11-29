@@ -1,37 +1,36 @@
 ---
-title: "对象变量赋值 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "赋值语句, 对象变量赋值"
-  - "当前实例, 已定义"
-  - "Me 关键字, 作为对象变量"
-  - "Nothing 关键字, 对象变量赋值"
-  - "对象变量, 分配"
-  - "对象变量, 初始化"
-  - "对象 [Visual Basic], 当前实例"
-  - "变量 [Visual Basic], 分配"
-  - "变量 [Visual Basic], 初始化"
-  - "变量 [Visual Basic], 对象变量"
+title: "对象变量赋值 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Nothing keyword [Visual Basic], object variable assignment
+- object variables [Visual Basic], initializing
+- variables [Visual Basic], initializing
+- objects [Visual Basic], current instance
+- object variables [Visual Basic], assigning
+- variables [Visual Basic], object variables
+- current instance [Visual Basic], defined
+- variables [Visual Basic], assigning
+- assignment statements [Visual Basic], object variable assignment
+- Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 对象变量赋值 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-使用标准赋值语句将对象分配给对象变量。  您可以分配对象表达式或 [Nothing](../../../../visual-basic/language-reference/nothing.md) 关键字，如下例所示。  
+# <a name="object-variable-assignment-visual-basic"></a>对象变量赋值 (Visual Basic)
+你可以使用普通赋值语句将对象分配给对象变量。 你可以分配对象表达式或[执行任何操作](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例演示。  
   
 ```  
 Dim thisObject As Object  
@@ -41,20 +40,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` 表示当前没有对象分配给变量。  
+ `Nothing`意味着没有当前分配给变量对象。  
   
-## 初始化  
- 当您的代码开始运行时，会将您的对象变量初始化为 `Nothing`。  其声明包含初始化的对象变量会被重新初始化为您在执行声明语句时指定的值。  
+## <a name="initialization"></a>初始化  
+ 当你的代码开始运行，你的对象变量将初始化为`Nothing`。 这些声明中包含的初始化被重新初始化为指定的声明语句执行时的值。  
   
- 您可以通过使用 [New](../../../../visual-basic/language-reference/operators/new-operator.md) 关键字在声明中包括初始化。  下面的声明语句声明对象变量 `testUri` 和 `ver` 并将特定的对象分配给它们。  每个声明语句使用适当类的其中一个重载构造函数来初始化对象。  
+ 您可以通过使用包括的声明初始化[新建](../../../../visual-basic/language-reference/operators/new-operator.md)关键字。 下面的声明语句声明对象变量`testUri`和`ver`并向它们分配特定的对象。 每个可以使用一种适当的类的重载构造函数来初始化对象。  
   
 ```  
 Dim testUri As New System.Uri("http://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## 取消关联  
- 将对象变量设置为 `Nothing` 会中断变量同任何特定对象的关联。  这样可防止您因意外更改变量而更改对象。  还使您可以测试对象变量是否指向有效对象，如下例所示。  
+## <a name="disassociation"></a>解除关联  
+ 将对象变量设置为`Nothing`终止与任何特定的对象变量的关联。 这会防止意外更改通过更改变量的对象。 它还允许你可以测试是否对象变量指向有效的对象，如以下示例所示。  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -62,16 +61,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- 如果变量引用的对象在另一个应用程序中，此测试无法确定该应用程序是已经终止对象还是只是使对象无效。  
+ 如果你变量引用的对象是在另一个应用程序中，无法确定此测试，该应用程序是否已终止或只需失效的对象。  
   
- 值为 `Nothing` 的对象变量也称为“空引用”。  
+ 对象变量值为`Nothing`也被称为*null 引用*。  
   
-## 当前实例  
- 对象的“当前实例”是代码当前正在其中执行的实例。  由于所有的代码都在过程的内部执行，因此当前实例是调用过程的实例。  
+## <a name="current-instance"></a>当前实例  
+ *当前实例*的对象是当前在其中执行代码。 由于所有代码的都执行过程内，当前实例是在其中调用此过程。  
   
- `Me` 关键字作为引用当前实例的对象变量。  如果过程不是 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)，它可以使用 `Me` 关键字获得指向当前实例的指针。  共享过程不能同特定类实例关联。  
+ `Me`关键字作为引用的当前实例的对象变量。 如果不是一个过程[共享](../../../../visual-basic/language-reference/modifiers/shared.md)，它可以使用`Me`关键字用于获取指向当前实例。 共享的过程不能与类的特定实例关联。  
   
- 将当前实例传递到另一模块中的过程时，使用 `Me` 尤其有用。  例如，假设您具有许多 XML 文档并且想要在所有这些文档中添加一些标准文本。  下面的示例定义用于实现此目的的过程。  
+ 使用`Me`很适合用于将当前实例传递给另一个模块中的过程。 例如，假设你有大量的 XML 文档，想要将一些标准的文本添加到所有这些。 下面的示例定义一个过程来执行此操作。  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -79,16 +78,16 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- 然后，每个 XML 文档对象可以调用该过程并将它的当前实例作为参数传递。  下面的示例说明了这一点。  
+ 然后，每个 XML 文档对象无法调用的过程，并将它的当前实例作为参数传递。 下面的示例演示这一操作。  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## 请参阅  
- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [如何：在 Visual Basic 中声明对象变量并为它分配对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)   
- [如何：使对象变量不引用任何实例](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)   
+## <a name="see-also"></a>另请参阅  
+ [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [如何： 声明对象变量并在 Visual Basic 中为其分配一个对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [如何：使对象变量不引用任何实例](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
  [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
